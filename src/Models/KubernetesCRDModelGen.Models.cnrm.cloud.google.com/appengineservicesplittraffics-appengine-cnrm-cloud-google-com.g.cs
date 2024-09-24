@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appengine.cnrm.cloud.google.com;
+/// <summary>Mapping that defines fractional HTTP traffic diversion to different versions within the service.</summary>
 public partial class V1alpha1AppEngineServiceSplitTrafficSpecSplit
 {
     /// <summary>Mapping from version IDs within the service to fractional (0.000, 1] allocations of traffic for that version. Each version can be specified only once, but some versions in the service may not have any traffic allocation. Services that have traffic allocated cannot be deleted until either the service is deleted or their traffic allocation is removed. Allocations must sum to 1. Up to two decimal place precision is supported for IP-based splits and up to three decimal places is supported for cookie-based splits.</summary>
@@ -19,6 +20,7 @@ public partial class V1alpha1AppEngineServiceSplitTrafficSpecSplit
     public string? ShardBy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AppEngineServiceSplitTrafficSpec
 {
     /// <summary>If set to true traffic will be migrated to this version.</summary>
@@ -38,6 +40,7 @@ public partial class V1alpha1AppEngineServiceSplitTrafficSpec
     public V1alpha1AppEngineServiceSplitTrafficSpecSplit Split { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AppEngineServiceSplitTrafficStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -61,6 +64,7 @@ public partial class V1alpha1AppEngineServiceSplitTrafficStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AppEngineServiceSplitTrafficStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -73,6 +77,7 @@ public partial class V1alpha1AppEngineServiceSplitTrafficStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1AppEngineServiceSplitTraffic : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1AppEngineServiceSplitTrafficSpec>, IStatus<V1alpha1AppEngineServiceSplitTrafficStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

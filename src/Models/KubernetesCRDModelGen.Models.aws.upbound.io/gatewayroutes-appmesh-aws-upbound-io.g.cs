@@ -18,6 +18,7 @@ public enum V1beta1GatewayRouteSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecGrpcRouteActionTargetVirtualService
 {
     /// <summary>Name of the virtual service that traffic is routed to. Must be between 1 and 255 characters in length.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecGrpcRouteActionTarget
     public string? VirtualServiceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecGrpcRouteActionTarget
 {
     /// <summary>The port number that corresponds to the target for Virtual Service provider port. This is required when the provider (router or node) of the Virtual Service has multiple listeners.</summary>
@@ -36,6 +38,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecGrpcRouteActionTarget
     public IList<V1beta1GatewayRouteSpecForProviderSpecGrpcRouteActionTargetVirtualService>? VirtualService { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecGrpcRouteAction
 {
     /// <summary>Target that traffic is routed to when a request matches the gateway route.</summary>
@@ -43,6 +46,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecGrpcRouteAction
     public IList<V1beta1GatewayRouteSpecForProviderSpecGrpcRouteActionTarget>? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecGrpcRouteMatch
 {
     /// <summary>The port number that corresponds to the target for Virtual Service provider port. This is required when the provider (router or node) of the Virtual Service has multiple listeners.</summary>
@@ -54,6 +58,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecGrpcRouteMatch
     public string? ServiceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecGrpcRoute
 {
     /// <summary>Action to take if a match is determined.</summary>
@@ -65,6 +70,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecGrpcRoute
     public IList<V1beta1GatewayRouteSpecForProviderSpecGrpcRouteMatch>? Match { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteActionRewriteHostname
 {
     /// <summary>Default target host name to write to. Valid values: ENABLED, DISABLED.</summary>
@@ -72,6 +78,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteActionRewri
     public string? DefaultTargetHostname { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteActionRewritePath
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -79,6 +86,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteActionRewri
     public string? Exact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteActionRewritePrefix
 {
     /// <summary>Default prefix used to replace the incoming route prefix when rewritten. Valid values: ENABLED, DISABLED.</summary>
@@ -90,6 +98,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteActionRewri
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteActionRewrite
 {
     /// <summary>Host name to rewrite.</summary>
@@ -105,6 +114,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteActionRewri
     public IList<V1beta1GatewayRouteSpecForProviderSpecHttp2RouteActionRewritePrefix>? Prefix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteActionTargetVirtualService
 {
     /// <summary>Name of the virtual service that traffic is routed to. Must be between 1 and 255 characters in length.</summary>
@@ -112,6 +122,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteActionTarge
     public string? VirtualServiceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteActionTarget
 {
     /// <summary>The port number that corresponds to the target for Virtual Service provider port. This is required when the provider (router or node) of the Virtual Service has multiple listeners.</summary>
@@ -123,6 +134,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteActionTarge
     public IList<V1beta1GatewayRouteSpecForProviderSpecHttp2RouteActionTargetVirtualService>? VirtualService { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteAction
 {
     /// <summary>Gateway route action to rewrite.</summary>
@@ -134,6 +146,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteAction
     public IList<V1beta1GatewayRouteSpecForProviderSpecHttp2RouteActionTarget>? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteMatchHeaderMatchRange
 {
     /// <summary>End of the range.</summary>
@@ -145,6 +158,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteMatchHeader
     public double? Start { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteMatchHeaderMatch
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -168,6 +182,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteMatchHeader
     public string? Suffix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteMatchHeader
 {
     /// <summary>If true, the match is on the opposite of the match method and value. Default is false.</summary>
@@ -183,6 +198,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteMatchHeader
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteMatchHostname
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -194,6 +210,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteMatchHostna
     public string? Suffix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteMatchPath
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -205,6 +222,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteMatchPath
     public string? Regex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteMatchQueryParameterMatch
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -212,6 +230,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteMatchQueryP
     public string? Exact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteMatchQueryParameter
 {
     /// <summary>Criteria for determining a request match.</summary>
@@ -223,6 +242,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteMatchQueryP
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteMatch
 {
     /// <summary>Client request headers to match on.</summary>
@@ -250,6 +270,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2RouteMatch
     public IList<V1beta1GatewayRouteSpecForProviderSpecHttp2RouteMatchQueryParameter>? QueryParameter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2Route
 {
     /// <summary>Action to take if a match is determined.</summary>
@@ -261,6 +282,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttp2Route
     public IList<V1beta1GatewayRouteSpecForProviderSpecHttp2RouteMatch>? Match { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionRewriteHostname
 {
     /// <summary>Default target host name to write to. Valid values: ENABLED, DISABLED.</summary>
@@ -268,6 +290,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionRewrit
     public string? DefaultTargetHostname { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionRewritePath
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -275,6 +298,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionRewrit
     public string? Exact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionRewritePrefix
 {
     /// <summary>Default prefix used to replace the incoming route prefix when rewritten. Valid values: ENABLED, DISABLED.</summary>
@@ -286,6 +310,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionRewrit
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionRewrite
 {
     /// <summary>Host name to rewrite.</summary>
@@ -321,6 +346,7 @@ public enum V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTargetVirtualSe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTargetVirtualServiceVirtualServiceNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -334,6 +360,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTarget
     public V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTargetVirtualServiceVirtualServiceNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VirtualService in appmesh to populate virtualServiceName.</summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTargetVirtualServiceVirtualServiceNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -365,6 +392,7 @@ public enum V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTargetVirtualSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTargetVirtualServiceVirtualServiceNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -378,6 +406,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTarget
     public V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTargetVirtualServiceVirtualServiceNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VirtualService in appmesh to populate virtualServiceName.</summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTargetVirtualServiceVirtualServiceNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -393,6 +422,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTarget
     public V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTargetVirtualServiceVirtualServiceNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTargetVirtualService
 {
     /// <summary>Name of the virtual service that traffic is routed to. Must be between 1 and 255 characters in length.</summary>
@@ -408,6 +438,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTarget
     public V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTargetVirtualServiceVirtualServiceNameSelector? VirtualServiceNameSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTarget
 {
     /// <summary>The port number that corresponds to the target for Virtual Service provider port. This is required when the provider (router or node) of the Virtual Service has multiple listeners.</summary>
@@ -419,6 +450,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTarget
     public IList<V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTargetVirtualService>? VirtualService { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteAction
 {
     /// <summary>Gateway route action to rewrite.</summary>
@@ -430,6 +462,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteAction
     public IList<V1beta1GatewayRouteSpecForProviderSpecHttpRouteActionTarget>? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteMatchHeaderMatchRange
 {
     /// <summary>End of the range.</summary>
@@ -441,6 +474,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteMatchHeaderM
     public double? Start { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteMatchHeaderMatch
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -464,6 +498,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteMatchHeaderM
     public string? Suffix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteMatchHeader
 {
     /// <summary>If true, the match is on the opposite of the match method and value. Default is false.</summary>
@@ -479,6 +514,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteMatchHeader
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteMatchHostname
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -490,6 +526,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteMatchHostnam
     public string? Suffix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteMatchPath
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -501,6 +538,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteMatchPath
     public string? Regex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteMatchQueryParameterMatch
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -508,6 +546,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteMatchQueryPa
     public string? Exact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteMatchQueryParameter
 {
     /// <summary>Criteria for determining a request match.</summary>
@@ -519,6 +558,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteMatchQueryPa
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteMatch
 {
     /// <summary>Client request headers to match on.</summary>
@@ -546,6 +586,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRouteMatch
     public IList<V1beta1GatewayRouteSpecForProviderSpecHttpRouteMatchQueryParameter>? QueryParameter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRoute
 {
     /// <summary>Action to take if a match is determined.</summary>
@@ -557,6 +598,7 @@ public partial class V1beta1GatewayRouteSpecForProviderSpecHttpRoute
     public IList<V1beta1GatewayRouteSpecForProviderSpecHttpRouteMatch>? Match { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProviderSpec
 {
     /// <summary>Specification of a gRPC gateway route.</summary>
@@ -596,6 +638,7 @@ public enum V1beta1GatewayRouteSpecForProviderVirtualGatewayNameRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GatewayRouteSpecForProviderVirtualGatewayNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -609,6 +652,7 @@ public partial class V1beta1GatewayRouteSpecForProviderVirtualGatewayNameRefPoli
     public V1beta1GatewayRouteSpecForProviderVirtualGatewayNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VirtualGateway in appmesh to populate virtualGatewayName.</summary>
 public partial class V1beta1GatewayRouteSpecForProviderVirtualGatewayNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -640,6 +684,7 @@ public enum V1beta1GatewayRouteSpecForProviderVirtualGatewayNameSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GatewayRouteSpecForProviderVirtualGatewayNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -653,6 +698,7 @@ public partial class V1beta1GatewayRouteSpecForProviderVirtualGatewayNameSelecto
     public V1beta1GatewayRouteSpecForProviderVirtualGatewayNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VirtualGateway in appmesh to populate virtualGatewayName.</summary>
 public partial class V1beta1GatewayRouteSpecForProviderVirtualGatewayNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -668,6 +714,7 @@ public partial class V1beta1GatewayRouteSpecForProviderVirtualGatewayNameSelecto
     public V1beta1GatewayRouteSpecForProviderVirtualGatewayNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecForProvider
 {
     /// <summary>Name of the service mesh in which to create the gateway route. Must be between 1 and 255 characters in length.</summary>
@@ -707,6 +754,7 @@ public partial class V1beta1GatewayRouteSpecForProvider
     public V1beta1GatewayRouteSpecForProviderVirtualGatewayNameSelector? VirtualGatewayNameSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecGrpcRouteActionTargetVirtualService
 {
     /// <summary>Name of the virtual service that traffic is routed to. Must be between 1 and 255 characters in length.</summary>
@@ -714,6 +762,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecGrpcRouteActionTarge
     public string? VirtualServiceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecGrpcRouteActionTarget
 {
     /// <summary>The port number that corresponds to the target for Virtual Service provider port. This is required when the provider (router or node) of the Virtual Service has multiple listeners.</summary>
@@ -725,6 +774,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecGrpcRouteActionTarge
     public IList<V1beta1GatewayRouteSpecInitProviderSpecGrpcRouteActionTargetVirtualService>? VirtualService { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecGrpcRouteAction
 {
     /// <summary>Target that traffic is routed to when a request matches the gateway route.</summary>
@@ -732,6 +782,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecGrpcRouteAction
     public IList<V1beta1GatewayRouteSpecInitProviderSpecGrpcRouteActionTarget>? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecGrpcRouteMatch
 {
     /// <summary>The port number that corresponds to the target for Virtual Service provider port. This is required when the provider (router or node) of the Virtual Service has multiple listeners.</summary>
@@ -743,6 +794,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecGrpcRouteMatch
     public string? ServiceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecGrpcRoute
 {
     /// <summary>Action to take if a match is determined.</summary>
@@ -754,6 +806,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecGrpcRoute
     public IList<V1beta1GatewayRouteSpecInitProviderSpecGrpcRouteMatch>? Match { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteActionRewriteHostname
 {
     /// <summary>Default target host name to write to. Valid values: ENABLED, DISABLED.</summary>
@@ -761,6 +814,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteActionRewr
     public string? DefaultTargetHostname { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteActionRewritePath
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -768,6 +822,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteActionRewr
     public string? Exact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteActionRewritePrefix
 {
     /// <summary>Default prefix used to replace the incoming route prefix when rewritten. Valid values: ENABLED, DISABLED.</summary>
@@ -779,6 +834,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteActionRewr
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteActionRewrite
 {
     /// <summary>Host name to rewrite.</summary>
@@ -794,6 +850,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteActionRewr
     public IList<V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteActionRewritePrefix>? Prefix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteActionTargetVirtualService
 {
     /// <summary>Name of the virtual service that traffic is routed to. Must be between 1 and 255 characters in length.</summary>
@@ -801,6 +858,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteActionTarg
     public string? VirtualServiceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteActionTarget
 {
     /// <summary>The port number that corresponds to the target for Virtual Service provider port. This is required when the provider (router or node) of the Virtual Service has multiple listeners.</summary>
@@ -812,6 +870,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteActionTarg
     public IList<V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteActionTargetVirtualService>? VirtualService { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteAction
 {
     /// <summary>Gateway route action to rewrite.</summary>
@@ -823,6 +882,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteAction
     public IList<V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteActionTarget>? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteMatchHeaderMatchRange
 {
     /// <summary>End of the range.</summary>
@@ -834,6 +894,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteMatchHeade
     public double? Start { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteMatchHeaderMatch
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -857,6 +918,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteMatchHeade
     public string? Suffix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteMatchHeader
 {
     /// <summary>If true, the match is on the opposite of the match method and value. Default is false.</summary>
@@ -872,6 +934,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteMatchHeade
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteMatchHostname
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -883,6 +946,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteMatchHostn
     public string? Suffix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteMatchPath
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -894,6 +958,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteMatchPath
     public string? Regex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteMatchQueryParameterMatch
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -901,6 +966,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteMatchQuery
     public string? Exact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteMatchQueryParameter
 {
     /// <summary>Criteria for determining a request match.</summary>
@@ -912,6 +978,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteMatchQuery
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteMatch
 {
     /// <summary>Client request headers to match on.</summary>
@@ -939,6 +1006,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteMatch
     public IList<V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteMatchQueryParameter>? QueryParameter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2Route
 {
     /// <summary>Action to take if a match is determined.</summary>
@@ -950,6 +1018,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttp2Route
     public IList<V1beta1GatewayRouteSpecInitProviderSpecHttp2RouteMatch>? Match { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionRewriteHostname
 {
     /// <summary>Default target host name to write to. Valid values: ENABLED, DISABLED.</summary>
@@ -957,6 +1026,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionRewri
     public string? DefaultTargetHostname { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionRewritePath
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -964,6 +1034,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionRewri
     public string? Exact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionRewritePrefix
 {
     /// <summary>Default prefix used to replace the incoming route prefix when rewritten. Valid values: ENABLED, DISABLED.</summary>
@@ -975,6 +1046,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionRewri
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionRewrite
 {
     /// <summary>Host name to rewrite.</summary>
@@ -1010,6 +1082,7 @@ public enum V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTargetVirtualS
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTargetVirtualServiceVirtualServiceNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1023,6 +1096,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTarge
     public V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTargetVirtualServiceVirtualServiceNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VirtualService in appmesh to populate virtualServiceName.</summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTargetVirtualServiceVirtualServiceNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1054,6 +1128,7 @@ public enum V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTargetVirtualS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTargetVirtualServiceVirtualServiceNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1067,6 +1142,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTarge
     public V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTargetVirtualServiceVirtualServiceNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VirtualService in appmesh to populate virtualServiceName.</summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTargetVirtualServiceVirtualServiceNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1082,6 +1158,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTarge
     public V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTargetVirtualServiceVirtualServiceNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTargetVirtualService
 {
     /// <summary>Name of the virtual service that traffic is routed to. Must be between 1 and 255 characters in length.</summary>
@@ -1097,6 +1174,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTarge
     public V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTargetVirtualServiceVirtualServiceNameSelector? VirtualServiceNameSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTarget
 {
     /// <summary>The port number that corresponds to the target for Virtual Service provider port. This is required when the provider (router or node) of the Virtual Service has multiple listeners.</summary>
@@ -1108,6 +1186,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTarge
     public IList<V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTargetVirtualService>? VirtualService { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteAction
 {
     /// <summary>Gateway route action to rewrite.</summary>
@@ -1119,6 +1198,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteAction
     public IList<V1beta1GatewayRouteSpecInitProviderSpecHttpRouteActionTarget>? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteMatchHeaderMatchRange
 {
     /// <summary>End of the range.</summary>
@@ -1130,6 +1210,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteMatchHeader
     public double? Start { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteMatchHeaderMatch
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -1153,6 +1234,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteMatchHeader
     public string? Suffix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteMatchHeader
 {
     /// <summary>If true, the match is on the opposite of the match method and value. Default is false.</summary>
@@ -1168,6 +1250,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteMatchHeader
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteMatchHostname
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -1179,6 +1262,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteMatchHostna
     public string? Suffix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteMatchPath
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -1190,6 +1274,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteMatchPath
     public string? Regex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteMatchQueryParameterMatch
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -1197,6 +1282,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteMatchQueryP
     public string? Exact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteMatchQueryParameter
 {
     /// <summary>Criteria for determining a request match.</summary>
@@ -1208,6 +1294,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteMatchQueryP
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteMatch
 {
     /// <summary>Client request headers to match on.</summary>
@@ -1235,6 +1322,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRouteMatch
     public IList<V1beta1GatewayRouteSpecInitProviderSpecHttpRouteMatchQueryParameter>? QueryParameter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRoute
 {
     /// <summary>Action to take if a match is determined.</summary>
@@ -1246,6 +1334,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderSpecHttpRoute
     public IList<V1beta1GatewayRouteSpecInitProviderSpecHttpRouteMatch>? Match { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteSpecInitProviderSpec
 {
     /// <summary>Specification of a gRPC gateway route.</summary>
@@ -1285,6 +1374,7 @@ public enum V1beta1GatewayRouteSpecInitProviderVirtualGatewayNameRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GatewayRouteSpecInitProviderVirtualGatewayNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1298,6 +1388,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderVirtualGatewayNameRefPol
     public V1beta1GatewayRouteSpecInitProviderVirtualGatewayNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VirtualGateway in appmesh to populate virtualGatewayName.</summary>
 public partial class V1beta1GatewayRouteSpecInitProviderVirtualGatewayNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1329,6 +1420,7 @@ public enum V1beta1GatewayRouteSpecInitProviderVirtualGatewayNameSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GatewayRouteSpecInitProviderVirtualGatewayNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1342,6 +1434,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderVirtualGatewayNameSelect
     public V1beta1GatewayRouteSpecInitProviderVirtualGatewayNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VirtualGateway in appmesh to populate virtualGatewayName.</summary>
 public partial class V1beta1GatewayRouteSpecInitProviderVirtualGatewayNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1357,6 +1450,7 @@ public partial class V1beta1GatewayRouteSpecInitProviderVirtualGatewayNameSelect
     public V1beta1GatewayRouteSpecInitProviderVirtualGatewayNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1GatewayRouteSpecInitProvider
 {
     /// <summary>Name of the service mesh in which to create the gateway route. Must be between 1 and 255 characters in length.</summary>
@@ -1434,6 +1528,7 @@ public enum V1beta1GatewayRouteSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GatewayRouteSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1447,6 +1542,7 @@ public partial class V1beta1GatewayRouteSpecProviderConfigRefPolicy
     public V1beta1GatewayRouteSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1GatewayRouteSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1478,6 +1574,7 @@ public enum V1beta1GatewayRouteSpecPublishConnectionDetailsToConfigRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GatewayRouteSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1491,6 +1588,7 @@ public partial class V1beta1GatewayRouteSpecPublishConnectionDetailsToConfigRefP
     public V1beta1GatewayRouteSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1GatewayRouteSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1502,6 +1600,7 @@ public partial class V1beta1GatewayRouteSpecPublishConnectionDetailsToConfigRef
     public V1beta1GatewayRouteSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1GatewayRouteSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1517,6 +1616,7 @@ public partial class V1beta1GatewayRouteSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1GatewayRouteSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1532,6 +1632,7 @@ public partial class V1beta1GatewayRouteSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1GatewayRouteSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1543,6 +1644,7 @@ public partial class V1beta1GatewayRouteSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>GatewayRouteSpec defines the desired state of GatewayRoute</summary>
 public partial class V1beta1GatewayRouteSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1575,6 +1677,7 @@ public partial class V1beta1GatewayRouteSpec
     public V1beta1GatewayRouteSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProviderSpecGrpcRouteActionTargetVirtualService
 {
     /// <summary>Name of the virtual service that traffic is routed to. Must be between 1 and 255 characters in length.</summary>
@@ -1582,6 +1685,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecGrpcRouteActionTarge
     public string? VirtualServiceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProviderSpecGrpcRouteActionTarget
 {
     /// <summary>The port number that corresponds to the target for Virtual Service provider port. This is required when the provider (router or node) of the Virtual Service has multiple listeners.</summary>
@@ -1593,6 +1697,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecGrpcRouteActionTarge
     public IList<V1beta1GatewayRouteStatusAtProviderSpecGrpcRouteActionTargetVirtualService>? VirtualService { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProviderSpecGrpcRouteAction
 {
     /// <summary>Target that traffic is routed to when a request matches the gateway route.</summary>
@@ -1600,6 +1705,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecGrpcRouteAction
     public IList<V1beta1GatewayRouteStatusAtProviderSpecGrpcRouteActionTarget>? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProviderSpecGrpcRouteMatch
 {
     /// <summary>The port number that corresponds to the target for Virtual Service provider port. This is required when the provider (router or node) of the Virtual Service has multiple listeners.</summary>
@@ -1611,6 +1717,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecGrpcRouteMatch
     public string? ServiceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProviderSpecGrpcRoute
 {
     /// <summary>Action to take if a match is determined.</summary>
@@ -1622,6 +1729,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecGrpcRoute
     public IList<V1beta1GatewayRouteStatusAtProviderSpecGrpcRouteMatch>? Match { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteActionRewriteHostname
 {
     /// <summary>Default target host name to write to. Valid values: ENABLED, DISABLED.</summary>
@@ -1629,6 +1737,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteActionRewr
     public string? DefaultTargetHostname { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteActionRewritePath
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -1636,6 +1745,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteActionRewr
     public string? Exact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteActionRewritePrefix
 {
     /// <summary>Default prefix used to replace the incoming route prefix when rewritten. Valid values: ENABLED, DISABLED.</summary>
@@ -1647,6 +1757,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteActionRewr
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteActionRewrite
 {
     /// <summary>Host name to rewrite.</summary>
@@ -1662,6 +1773,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteActionRewr
     public IList<V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteActionRewritePrefix>? Prefix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteActionTargetVirtualService
 {
     /// <summary>Name of the virtual service that traffic is routed to. Must be between 1 and 255 characters in length.</summary>
@@ -1669,6 +1781,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteActionTarg
     public string? VirtualServiceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteActionTarget
 {
     /// <summary>The port number that corresponds to the target for Virtual Service provider port. This is required when the provider (router or node) of the Virtual Service has multiple listeners.</summary>
@@ -1680,6 +1793,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteActionTarg
     public IList<V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteActionTargetVirtualService>? VirtualService { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteAction
 {
     /// <summary>Gateway route action to rewrite.</summary>
@@ -1691,6 +1805,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteAction
     public IList<V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteActionTarget>? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteMatchHeaderMatchRange
 {
     /// <summary>End of the range.</summary>
@@ -1702,6 +1817,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteMatchHeade
     public double? Start { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteMatchHeaderMatch
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -1725,6 +1841,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteMatchHeade
     public string? Suffix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteMatchHeader
 {
     /// <summary>If true, the match is on the opposite of the match method and value. Default is false.</summary>
@@ -1740,6 +1857,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteMatchHeade
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteMatchHostname
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -1751,6 +1869,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteMatchHostn
     public string? Suffix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteMatchPath
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -1762,6 +1881,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteMatchPath
     public string? Regex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteMatchQueryParameterMatch
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -1769,6 +1889,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteMatchQuery
     public string? Exact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteMatchQueryParameter
 {
     /// <summary>Criteria for determining a request match.</summary>
@@ -1780,6 +1901,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteMatchQuery
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteMatch
 {
     /// <summary>Client request headers to match on.</summary>
@@ -1807,6 +1929,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteMatch
     public IList<V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteMatchQueryParameter>? QueryParameter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2Route
 {
     /// <summary>Action to take if a match is determined.</summary>
@@ -1818,6 +1941,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttp2Route
     public IList<V1beta1GatewayRouteStatusAtProviderSpecHttp2RouteMatch>? Match { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteActionRewriteHostname
 {
     /// <summary>Default target host name to write to. Valid values: ENABLED, DISABLED.</summary>
@@ -1825,6 +1949,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteActionRewri
     public string? DefaultTargetHostname { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteActionRewritePath
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -1832,6 +1957,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteActionRewri
     public string? Exact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteActionRewritePrefix
 {
     /// <summary>Default prefix used to replace the incoming route prefix when rewritten. Valid values: ENABLED, DISABLED.</summary>
@@ -1843,6 +1969,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteActionRewri
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteActionRewrite
 {
     /// <summary>Host name to rewrite.</summary>
@@ -1858,6 +1985,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteActionRewri
     public IList<V1beta1GatewayRouteStatusAtProviderSpecHttpRouteActionRewritePrefix>? Prefix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteActionTargetVirtualService
 {
     /// <summary>Name of the virtual service that traffic is routed to. Must be between 1 and 255 characters in length.</summary>
@@ -1865,6 +1993,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteActionTarge
     public string? VirtualServiceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteActionTarget
 {
     /// <summary>The port number that corresponds to the target for Virtual Service provider port. This is required when the provider (router or node) of the Virtual Service has multiple listeners.</summary>
@@ -1876,6 +2005,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteActionTarge
     public IList<V1beta1GatewayRouteStatusAtProviderSpecHttpRouteActionTargetVirtualService>? VirtualService { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteAction
 {
     /// <summary>Gateway route action to rewrite.</summary>
@@ -1887,6 +2017,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteAction
     public IList<V1beta1GatewayRouteStatusAtProviderSpecHttpRouteActionTarget>? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteMatchHeaderMatchRange
 {
     /// <summary>End of the range.</summary>
@@ -1898,6 +2029,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteMatchHeader
     public double? Start { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteMatchHeaderMatch
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -1921,6 +2053,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteMatchHeader
     public string? Suffix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteMatchHeader
 {
     /// <summary>If true, the match is on the opposite of the match method and value. Default is false.</summary>
@@ -1936,6 +2069,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteMatchHeader
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteMatchHostname
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -1947,6 +2081,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteMatchHostna
     public string? Suffix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteMatchPath
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -1958,6 +2093,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteMatchPath
     public string? Regex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteMatchQueryParameterMatch
 {
     /// <summary>Value used to replace matched path.</summary>
@@ -1965,6 +2101,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteMatchQueryP
     public string? Exact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteMatchQueryParameter
 {
     /// <summary>Criteria for determining a request match.</summary>
@@ -1976,6 +2113,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteMatchQueryP
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteMatch
 {
     /// <summary>Client request headers to match on.</summary>
@@ -2003,6 +2141,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRouteMatch
     public IList<V1beta1GatewayRouteStatusAtProviderSpecHttpRouteMatchQueryParameter>? QueryParameter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRoute
 {
     /// <summary>Action to take if a match is determined.</summary>
@@ -2014,6 +2153,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpecHttpRoute
     public IList<V1beta1GatewayRouteStatusAtProviderSpecHttpRouteMatch>? Match { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProviderSpec
 {
     /// <summary>Specification of a gRPC gateway route.</summary>
@@ -2033,6 +2173,7 @@ public partial class V1beta1GatewayRouteStatusAtProviderSpec
     public double? Priority { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayRouteStatusAtProvider
 {
     /// <summary>ARN of the gateway route.</summary>
@@ -2084,6 +2225,7 @@ public partial class V1beta1GatewayRouteStatusAtProvider
     public string? VirtualGatewayName { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1GatewayRouteStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2111,6 +2253,7 @@ public partial class V1beta1GatewayRouteStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>GatewayRouteStatus defines the observed state of GatewayRoute.</summary>
 public partial class V1beta1GatewayRouteStatus
 {
     /// <summary></summary>
@@ -2127,6 +2270,7 @@ public partial class V1beta1GatewayRouteStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>GatewayRoute is the Schema for the GatewayRoutes API. Provides an AWS App Mesh gateway route resource.</summary>
 public partial class V1beta1GatewayRoute : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1GatewayRouteSpec>, IStatus<V1beta1GatewayRouteStatus>
 {
     public const string KubeApiVersion = "v1beta1";

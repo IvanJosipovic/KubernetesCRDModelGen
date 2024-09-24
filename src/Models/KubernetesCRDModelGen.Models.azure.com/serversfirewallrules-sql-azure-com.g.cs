@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.azure.com;
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a sql.azure.com/Server resource</summary>
 public partial class V1api20211101storageServersFirewallRuleSpecOwner
 {
     /// <summary></summary>
@@ -19,6 +20,7 @@ public partial class V1api20211101storageServersFirewallRuleSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.Servers_FirewallRule_Spec</summary>
 public partial class V1api20211101storageServersFirewallRuleSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -46,6 +48,7 @@ public partial class V1api20211101storageServersFirewallRuleSpec
     public string? StartIpAddress { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20211101storageServersFirewallRuleStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -77,6 +80,7 @@ public partial class V1api20211101storageServersFirewallRuleStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.Servers_FirewallRule_STATUS</summary>
 public partial class V1api20211101storageServersFirewallRuleStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -109,6 +113,7 @@ public partial class V1api20211101storageServersFirewallRuleStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20211101.ServersFirewallRule Generator information: - Generated from: /sql/resource-manager/Microsoft.Sql/stable/2021-11-01/FirewallRules.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/firewallRules/{firewallRuleName}</summary>
 public partial class V1api20211101storageServersFirewallRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20211101storageServersFirewallRuleSpec>, IStatus<V1api20211101storageServersFirewallRuleStatus>
 {
     public const string KubeApiVersion = "v1api20211101storage";

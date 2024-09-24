@@ -18,6 +18,7 @@ public enum V1beta1NotificationHubSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>The Push Token associated with the Apple Developer Account. This is the contents of the key downloaded from the Apple Developer Portal between the -----BEGIN PRIVATE KEY----- and -----END PRIVATE KEY----- blocks.</summary>
 public partial class V1beta1NotificationHubSpecForProviderApnsCredentialTokenSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1NotificationHubSpecForProviderApnsCredentialTokenSec
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NotificationHubSpecForProviderApnsCredential
 {
     /// <summary>The Application Mode which defines which server the APNS Messages should be sent to. Possible values are Production and Sandbox.</summary>
@@ -56,6 +58,7 @@ public partial class V1beta1NotificationHubSpecForProviderApnsCredential
     public V1beta1NotificationHubSpecForProviderApnsCredentialTokenSecretRef TokenSecretRef { get; set; }
 }
 
+/// <summary>The API Key associated with the Google Cloud Messaging service.</summary>
 public partial class V1beta1NotificationHubSpecForProviderGcmCredentialApiKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -71,6 +74,7 @@ public partial class V1beta1NotificationHubSpecForProviderGcmCredentialApiKeySec
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NotificationHubSpecForProviderGcmCredential
 {
     /// <summary>The API Key associated with the Google Cloud Messaging service.</summary>
@@ -98,6 +102,7 @@ public enum V1beta1NotificationHubSpecForProviderNamespaceNameRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NotificationHubSpecForProviderNamespaceNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -111,6 +116,7 @@ public partial class V1beta1NotificationHubSpecForProviderNamespaceNameRefPolicy
     public V1beta1NotificationHubSpecForProviderNamespaceNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a NotificationHubNamespace in notificationhubs to populate namespaceName.</summary>
 public partial class V1beta1NotificationHubSpecForProviderNamespaceNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -142,6 +148,7 @@ public enum V1beta1NotificationHubSpecForProviderNamespaceNameSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NotificationHubSpecForProviderNamespaceNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -155,6 +162,7 @@ public partial class V1beta1NotificationHubSpecForProviderNamespaceNameSelectorP
     public V1beta1NotificationHubSpecForProviderNamespaceNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a NotificationHubNamespace in notificationhubs to populate namespaceName.</summary>
 public partial class V1beta1NotificationHubSpecForProviderNamespaceNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -190,6 +198,7 @@ public enum V1beta1NotificationHubSpecForProviderResourceGroupNameRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NotificationHubSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -203,6 +212,7 @@ public partial class V1beta1NotificationHubSpecForProviderResourceGroupNameRefPo
     public V1beta1NotificationHubSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1NotificationHubSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -234,6 +244,7 @@ public enum V1beta1NotificationHubSpecForProviderResourceGroupNameSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NotificationHubSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -247,6 +258,7 @@ public partial class V1beta1NotificationHubSpecForProviderResourceGroupNameSelec
     public V1beta1NotificationHubSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1NotificationHubSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -262,6 +274,7 @@ public partial class V1beta1NotificationHubSpecForProviderResourceGroupNameSelec
     public V1beta1NotificationHubSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NotificationHubSpecForProvider
 {
     /// <summary>A apns_credential block as defined below.</summary>
@@ -305,6 +318,7 @@ public partial class V1beta1NotificationHubSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NotificationHubSpecInitProviderApnsCredential
 {
     /// <summary>The Application Mode which defines which server the APNS Messages should be sent to. Possible values are Production and Sandbox.</summary>
@@ -324,10 +338,12 @@ public partial class V1beta1NotificationHubSpecInitProviderApnsCredential
     public string? TeamId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NotificationHubSpecInitProviderGcmCredential
 {
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1NotificationHubSpecInitProvider
 {
     /// <summary>A apns_credential block as defined below.</summary>
@@ -389,6 +405,7 @@ public enum V1beta1NotificationHubSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NotificationHubSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -402,6 +419,7 @@ public partial class V1beta1NotificationHubSpecProviderConfigRefPolicy
     public V1beta1NotificationHubSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1NotificationHubSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -433,6 +451,7 @@ public enum V1beta1NotificationHubSpecPublishConnectionDetailsToConfigRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NotificationHubSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -446,6 +465,7 @@ public partial class V1beta1NotificationHubSpecPublishConnectionDetailsToConfigR
     public V1beta1NotificationHubSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1NotificationHubSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -457,6 +477,7 @@ public partial class V1beta1NotificationHubSpecPublishConnectionDetailsToConfigR
     public V1beta1NotificationHubSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1NotificationHubSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -472,6 +493,7 @@ public partial class V1beta1NotificationHubSpecPublishConnectionDetailsToMetadat
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1NotificationHubSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -487,6 +509,7 @@ public partial class V1beta1NotificationHubSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1NotificationHubSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -498,6 +521,7 @@ public partial class V1beta1NotificationHubSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>NotificationHubSpec defines the desired state of NotificationHub</summary>
 public partial class V1beta1NotificationHubSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -530,6 +554,7 @@ public partial class V1beta1NotificationHubSpec
     public V1beta1NotificationHubSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NotificationHubStatusAtProviderApnsCredential
 {
     /// <summary>The Application Mode which defines which server the APNS Messages should be sent to. Possible values are Production and Sandbox.</summary>
@@ -549,6 +574,7 @@ public partial class V1beta1NotificationHubStatusAtProviderApnsCredential
     public string? TeamId { get; set; }
 }
 
+/// <summary>The API Key associated with the Google Cloud Messaging service.</summary>
 public partial class V1beta1NotificationHubStatusAtProviderGcmCredentialApiKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -564,6 +590,7 @@ public partial class V1beta1NotificationHubStatusAtProviderGcmCredentialApiKeySe
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NotificationHubStatusAtProviderGcmCredential
 {
     /// <summary>The API Key associated with the Google Cloud Messaging service.</summary>
@@ -571,6 +598,7 @@ public partial class V1beta1NotificationHubStatusAtProviderGcmCredential
     public V1beta1NotificationHubStatusAtProviderGcmCredentialApiKeySecretRef ApiKeySecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NotificationHubStatusAtProvider
 {
     /// <summary>A apns_credential block as defined below.</summary>
@@ -602,6 +630,7 @@ public partial class V1beta1NotificationHubStatusAtProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1NotificationHubStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -629,6 +658,7 @@ public partial class V1beta1NotificationHubStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>NotificationHubStatus defines the observed state of NotificationHub.</summary>
 public partial class V1beta1NotificationHubStatus
 {
     /// <summary></summary>
@@ -645,6 +675,7 @@ public partial class V1beta1NotificationHubStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>NotificationHub is the Schema for the NotificationHubs API. Manages a Notification Hub within a Notification Hub Namespace.</summary>
 public partial class V1beta1NotificationHub : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1NotificationHubSpec>, IStatus<V1beta1NotificationHubStatus>
 {
     public const string KubeApiVersion = "v1beta1";

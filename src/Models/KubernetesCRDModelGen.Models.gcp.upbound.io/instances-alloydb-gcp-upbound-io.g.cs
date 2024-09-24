@@ -18,6 +18,7 @@ public enum V1beta1InstanceSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderClientConnectionConfigSslConfig
 {
     /// <summary>SSL mode. Specifies client-server SSL/TLS connection behavior. Possible values are: ENCRYPTED_ONLY, ALLOW_UNENCRYPTED_AND_ENCRYPTED.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1InstanceSpecForProviderClientConnectionConfigSslConf
     public string? SslMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderClientConnectionConfig
 {
     /// <summary>Configuration to enforce connectors only (ex: AuthProxy) connections to the database.</summary>
@@ -56,6 +58,7 @@ public enum V1beta1InstanceSpecForProviderClusterRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecForProviderClusterRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -69,6 +72,7 @@ public partial class V1beta1InstanceSpecForProviderClusterRefPolicy
     public V1beta1InstanceSpecForProviderClusterRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in alloydb to populate cluster.</summary>
 public partial class V1beta1InstanceSpecForProviderClusterRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -100,6 +104,7 @@ public enum V1beta1InstanceSpecForProviderClusterSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecForProviderClusterSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -113,6 +118,7 @@ public partial class V1beta1InstanceSpecForProviderClusterSelectorPolicy
     public V1beta1InstanceSpecForProviderClusterSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in alloydb to populate cluster.</summary>
 public partial class V1beta1InstanceSpecForProviderClusterSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -148,6 +154,7 @@ public enum V1beta1InstanceSpecForProviderInstanceTypeRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecForProviderInstanceTypeRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -161,6 +168,7 @@ public partial class V1beta1InstanceSpecForProviderInstanceTypeRefPolicy
     public V1beta1InstanceSpecForProviderInstanceTypeRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in alloydb to populate instanceType.</summary>
 public partial class V1beta1InstanceSpecForProviderInstanceTypeRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -192,6 +200,7 @@ public enum V1beta1InstanceSpecForProviderInstanceTypeSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecForProviderInstanceTypeSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -205,6 +214,7 @@ public partial class V1beta1InstanceSpecForProviderInstanceTypeSelectorPolicy
     public V1beta1InstanceSpecForProviderInstanceTypeSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in alloydb to populate instanceType.</summary>
 public partial class V1beta1InstanceSpecForProviderInstanceTypeSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -220,6 +230,7 @@ public partial class V1beta1InstanceSpecForProviderInstanceTypeSelector
     public V1beta1InstanceSpecForProviderInstanceTypeSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderMachineConfig
 {
     /// <summary>The number of CPU's in the VM instance.</summary>
@@ -227,6 +238,7 @@ public partial class V1beta1InstanceSpecForProviderMachineConfig
     public double? CpuCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderNetworkConfigAuthorizedExternalNetworks
 {
     /// <summary>CIDR range for one authorized network of the instance.</summary>
@@ -234,6 +246,7 @@ public partial class V1beta1InstanceSpecForProviderNetworkConfigAuthorizedExtern
     public string? CidrRange { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderNetworkConfig
 {
     /// <summary>A list of external networks authorized to access this instance. This field is only allowed to be set when enable_public_ip is set to true. Structure is documented below.</summary>
@@ -245,6 +258,7 @@ public partial class V1beta1InstanceSpecForProviderNetworkConfig
     public bool? EnablePublicIp { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderPscInstanceConfig
 {
     /// <summary>List of consumer projects that are allowed to create PSC endpoints to service-attachments to this instance. These should be specified as project numbers only.</summary>
@@ -252,6 +266,7 @@ public partial class V1beta1InstanceSpecForProviderPscInstanceConfig
     public IList<string>? AllowedConsumerProjects { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderQueryInsightsConfig
 {
     /// <summary>Number of query execution plans captured by Insights per minute for all queries combined. The default value is 5. Any integer between 0 and 20 is considered valid.</summary>
@@ -271,6 +286,7 @@ public partial class V1beta1InstanceSpecForProviderQueryInsightsConfig
     public bool? RecordClientAddress { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderReadPoolConfig
 {
     /// <summary>Read capacity, i.e. number of nodes in a read pool instance.</summary>
@@ -278,6 +294,7 @@ public partial class V1beta1InstanceSpecForProviderReadPoolConfig
     public double? NodeCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProvider
 {
     /// <summary>Annotations to allow client tools to store small amount of arbitrary data. This is distinct from labels. Note: This field is non-authoritative, and will only manage the annotations present in your configuration. Please refer to the field effective_annotations for all of the annotations present on the resource.</summary>
@@ -353,6 +370,7 @@ public partial class V1beta1InstanceSpecForProvider
     public IList<V1beta1InstanceSpecForProviderReadPoolConfig>? ReadPoolConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderClientConnectionConfigSslConfig
 {
     /// <summary>SSL mode. Specifies client-server SSL/TLS connection behavior. Possible values are: ENCRYPTED_ONLY, ALLOW_UNENCRYPTED_AND_ENCRYPTED.</summary>
@@ -360,6 +378,7 @@ public partial class V1beta1InstanceSpecInitProviderClientConnectionConfigSslCon
     public string? SslMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderClientConnectionConfig
 {
     /// <summary>Configuration to enforce connectors only (ex: AuthProxy) connections to the database.</summary>
@@ -391,6 +410,7 @@ public enum V1beta1InstanceSpecInitProviderInstanceTypeRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecInitProviderInstanceTypeRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -404,6 +424,7 @@ public partial class V1beta1InstanceSpecInitProviderInstanceTypeRefPolicy
     public V1beta1InstanceSpecInitProviderInstanceTypeRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in alloydb to populate instanceType.</summary>
 public partial class V1beta1InstanceSpecInitProviderInstanceTypeRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -435,6 +456,7 @@ public enum V1beta1InstanceSpecInitProviderInstanceTypeSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecInitProviderInstanceTypeSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -448,6 +470,7 @@ public partial class V1beta1InstanceSpecInitProviderInstanceTypeSelectorPolicy
     public V1beta1InstanceSpecInitProviderInstanceTypeSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in alloydb to populate instanceType.</summary>
 public partial class V1beta1InstanceSpecInitProviderInstanceTypeSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -463,6 +486,7 @@ public partial class V1beta1InstanceSpecInitProviderInstanceTypeSelector
     public V1beta1InstanceSpecInitProviderInstanceTypeSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderMachineConfig
 {
     /// <summary>The number of CPU's in the VM instance.</summary>
@@ -470,6 +494,7 @@ public partial class V1beta1InstanceSpecInitProviderMachineConfig
     public double? CpuCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderNetworkConfigAuthorizedExternalNetworks
 {
     /// <summary>CIDR range for one authorized network of the instance.</summary>
@@ -477,6 +502,7 @@ public partial class V1beta1InstanceSpecInitProviderNetworkConfigAuthorizedExter
     public string? CidrRange { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderNetworkConfig
 {
     /// <summary>A list of external networks authorized to access this instance. This field is only allowed to be set when enable_public_ip is set to true. Structure is documented below.</summary>
@@ -488,6 +514,7 @@ public partial class V1beta1InstanceSpecInitProviderNetworkConfig
     public bool? EnablePublicIp { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderPscInstanceConfig
 {
     /// <summary>List of consumer projects that are allowed to create PSC endpoints to service-attachments to this instance. These should be specified as project numbers only.</summary>
@@ -495,6 +522,7 @@ public partial class V1beta1InstanceSpecInitProviderPscInstanceConfig
     public IList<string>? AllowedConsumerProjects { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderQueryInsightsConfig
 {
     /// <summary>Number of query execution plans captured by Insights per minute for all queries combined. The default value is 5. Any integer between 0 and 20 is considered valid.</summary>
@@ -514,6 +542,7 @@ public partial class V1beta1InstanceSpecInitProviderQueryInsightsConfig
     public bool? RecordClientAddress { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderReadPoolConfig
 {
     /// <summary>Read capacity, i.e. number of nodes in a read pool instance.</summary>
@@ -521,6 +550,7 @@ public partial class V1beta1InstanceSpecInitProviderReadPoolConfig
     public double? NodeCount { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1InstanceSpecInitProvider
 {
     /// <summary>Annotations to allow client tools to store small amount of arbitrary data. This is distinct from labels. Note: This field is non-authoritative, and will only manage the annotations present in your configuration. Please refer to the field effective_annotations for all of the annotations present on the resource.</summary>
@@ -626,6 +656,7 @@ public enum V1beta1InstanceSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -639,6 +670,7 @@ public partial class V1beta1InstanceSpecProviderConfigRefPolicy
     public V1beta1InstanceSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1InstanceSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -670,6 +702,7 @@ public enum V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -683,6 +716,7 @@ public partial class V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolic
     public V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1InstanceSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -694,6 +728,7 @@ public partial class V1beta1InstanceSpecPublishConnectionDetailsToConfigRef
     public V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1InstanceSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -709,6 +744,7 @@ public partial class V1beta1InstanceSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1InstanceSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -724,6 +760,7 @@ public partial class V1beta1InstanceSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1InstanceSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -735,6 +772,7 @@ public partial class V1beta1InstanceSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>InstanceSpec defines the desired state of Instance</summary>
 public partial class V1beta1InstanceSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -767,6 +805,7 @@ public partial class V1beta1InstanceSpec
     public V1beta1InstanceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderClientConnectionConfigSslConfig
 {
     /// <summary>SSL mode. Specifies client-server SSL/TLS connection behavior. Possible values are: ENCRYPTED_ONLY, ALLOW_UNENCRYPTED_AND_ENCRYPTED.</summary>
@@ -774,6 +813,7 @@ public partial class V1beta1InstanceStatusAtProviderClientConnectionConfigSslCon
     public string? SslMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderClientConnectionConfig
 {
     /// <summary>Configuration to enforce connectors only (ex: AuthProxy) connections to the database.</summary>
@@ -785,6 +825,7 @@ public partial class V1beta1InstanceStatusAtProviderClientConnectionConfig
     public IList<V1beta1InstanceStatusAtProviderClientConnectionConfigSslConfig>? SslConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderMachineConfig
 {
     /// <summary>The number of CPU's in the VM instance.</summary>
@@ -792,6 +833,7 @@ public partial class V1beta1InstanceStatusAtProviderMachineConfig
     public double? CpuCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderNetworkConfigAuthorizedExternalNetworks
 {
     /// <summary>CIDR range for one authorized network of the instance.</summary>
@@ -799,6 +841,7 @@ public partial class V1beta1InstanceStatusAtProviderNetworkConfigAuthorizedExter
     public string? CidrRange { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderNetworkConfig
 {
     /// <summary>A list of external networks authorized to access this instance. This field is only allowed to be set when enable_public_ip is set to true. Structure is documented below.</summary>
@@ -810,6 +853,7 @@ public partial class V1beta1InstanceStatusAtProviderNetworkConfig
     public bool? EnablePublicIp { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderPscInstanceConfig
 {
     /// <summary>List of consumer projects that are allowed to create PSC endpoints to service-attachments to this instance. These should be specified as project numbers only.</summary>
@@ -825,6 +869,7 @@ public partial class V1beta1InstanceStatusAtProviderPscInstanceConfig
     public string? ServiceAttachmentLink { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderQueryInsightsConfig
 {
     /// <summary>Number of query execution plans captured by Insights per minute for all queries combined. The default value is 5. Any integer between 0 and 20 is considered valid.</summary>
@@ -844,6 +889,7 @@ public partial class V1beta1InstanceStatusAtProviderQueryInsightsConfig
     public bool? RecordClientAddress { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderReadPoolConfig
 {
     /// <summary>Read capacity, i.e. number of nodes in a read pool instance.</summary>
@@ -851,6 +897,7 @@ public partial class V1beta1InstanceStatusAtProviderReadPoolConfig
     public double? NodeCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProvider
 {
     /// <summary>Annotations to allow client tools to store small amount of arbitrary data. This is distinct from labels. Note: This field is non-authoritative, and will only manage the annotations present in your configuration. Please refer to the field effective_annotations for all of the annotations present on the resource.</summary>
@@ -958,6 +1005,7 @@ public partial class V1beta1InstanceStatusAtProvider
     public string? UpdateTime { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1InstanceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -985,6 +1033,7 @@ public partial class V1beta1InstanceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>InstanceStatus defines the observed state of Instance.</summary>
 public partial class V1beta1InstanceStatus
 {
     /// <summary></summary>
@@ -1001,6 +1050,7 @@ public partial class V1beta1InstanceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Instance is the Schema for the Instances API. A managed alloydb cluster instance.</summary>
 public partial class V1beta1Instance : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1InstanceSpec>, IStatus<V1beta1InstanceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

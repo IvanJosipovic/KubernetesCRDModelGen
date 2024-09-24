@@ -18,6 +18,7 @@ public enum V1beta1FirewallPolicyRuleCollectionGroupSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecForProviderApplicationRuleCollectionRuleHttpHeaders
 {
     /// <summary>The name which should be used for this network rule collection.</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecForProviderAppl
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecForProviderApplicationRuleCollectionRuleProtocols
 {
     /// <summary>Port number of the protocol. Range is 0-64000.</summary>
@@ -40,6 +42,7 @@ public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecForProviderAppl
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecForProviderApplicationRuleCollectionRule
 {
     /// <summary>The description which should be used for this rule.</summary>
@@ -91,6 +94,7 @@ public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecForProviderAppl
     public IList<string>? WebCategories { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecForProviderApplicationRuleCollection
 {
     /// <summary>The action to take for the application rules in this collection. Possible values are Allow and Deny.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1FirewallPolicyRuleCollectionGroupSpecForProviderFirewallPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecForProviderFirewallPolicyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecForProviderFire
     public V1beta1FirewallPolicyRuleCollectionGroupSpecForProviderFirewallPolicyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a FirewallPolicy in network to populate firewallPolicyId.</summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecForProviderFirewallPolicyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1FirewallPolicyRuleCollectionGroupSpecForProviderFirewallPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecForProviderFirewallPolicyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecForProviderFire
     public V1beta1FirewallPolicyRuleCollectionGroupSpecForProviderFirewallPolicyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a FirewallPolicy in network to populate firewallPolicyId.</summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecForProviderFirewallPolicyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecForProviderFire
     public V1beta1FirewallPolicyRuleCollectionGroupSpecForProviderFirewallPolicyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecForProviderNatRuleCollectionRule
 {
     /// <summary>The description which should be used for this rule.</summary>
@@ -245,6 +254,7 @@ public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecForProviderNatR
     public double? TranslatedPort { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecForProviderNatRuleCollection
 {
     /// <summary>The action to take for the NAT rules in this collection. Currently, the only possible value is Dnat.</summary>
@@ -264,6 +274,7 @@ public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecForProviderNatR
     public IList<V1beta1FirewallPolicyRuleCollectionGroupSpecForProviderNatRuleCollectionRule>? Rule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecForProviderNetworkRuleCollectionRule
 {
     /// <summary>The description which should be used for this rule.</summary>
@@ -303,6 +314,7 @@ public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecForProviderNetw
     public IList<string>? SourceIpGroups { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecForProviderNetworkRuleCollection
 {
     /// <summary>The action to take for the network rules in this collection. Possible values are Allow and Deny.</summary>
@@ -322,6 +334,7 @@ public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecForProviderNetw
     public IList<V1beta1FirewallPolicyRuleCollectionGroupSpecForProviderNetworkRuleCollectionRule>? Rule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecForProvider
 {
     /// <summary>One or more application_rule_collection blocks as defined below.</summary>
@@ -353,6 +366,7 @@ public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecForProvider
     public double? Priority { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecInitProviderApplicationRuleCollectionRuleHttpHeaders
 {
     /// <summary>The name which should be used for this network rule collection.</summary>
@@ -364,6 +378,7 @@ public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecInitProviderApp
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecInitProviderApplicationRuleCollectionRuleProtocols
 {
     /// <summary>Port number of the protocol. Range is 0-64000.</summary>
@@ -375,6 +390,7 @@ public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecInitProviderApp
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecInitProviderApplicationRuleCollectionRule
 {
     /// <summary>The description which should be used for this rule.</summary>
@@ -426,6 +442,7 @@ public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecInitProviderApp
     public IList<string>? WebCategories { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecInitProviderApplicationRuleCollection
 {
     /// <summary>The action to take for the application rules in this collection. Possible values are Allow and Deny.</summary>
@@ -445,6 +462,7 @@ public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecInitProviderApp
     public IList<V1beta1FirewallPolicyRuleCollectionGroupSpecInitProviderApplicationRuleCollectionRule>? Rule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecInitProviderNatRuleCollectionRule
 {
     /// <summary>The description which should be used for this rule.</summary>
@@ -488,6 +506,7 @@ public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecInitProviderNat
     public double? TranslatedPort { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecInitProviderNatRuleCollection
 {
     /// <summary>The action to take for the NAT rules in this collection. Currently, the only possible value is Dnat.</summary>
@@ -507,6 +526,7 @@ public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecInitProviderNat
     public IList<V1beta1FirewallPolicyRuleCollectionGroupSpecInitProviderNatRuleCollectionRule>? Rule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecInitProviderNetworkRuleCollectionRule
 {
     /// <summary>The description which should be used for this rule.</summary>
@@ -546,6 +566,7 @@ public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecInitProviderNet
     public IList<string>? SourceIpGroups { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecInitProviderNetworkRuleCollection
 {
     /// <summary>The action to take for the network rules in this collection. Possible values are Allow and Deny.</summary>
@@ -565,6 +586,7 @@ public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecInitProviderNet
     public IList<V1beta1FirewallPolicyRuleCollectionGroupSpecInitProviderNetworkRuleCollectionRule>? Rule { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecInitProvider
 {
     /// <summary>One or more application_rule_collection blocks as defined below.</summary>
@@ -626,6 +648,7 @@ public enum V1beta1FirewallPolicyRuleCollectionGroupSpecProviderConfigRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -639,6 +662,7 @@ public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecProviderConfigR
     public V1beta1FirewallPolicyRuleCollectionGroupSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -670,6 +694,7 @@ public enum V1beta1FirewallPolicyRuleCollectionGroupSpecPublishConnectionDetails
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -683,6 +708,7 @@ public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecPublishConnecti
     public V1beta1FirewallPolicyRuleCollectionGroupSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -694,6 +720,7 @@ public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecPublishConnecti
     public V1beta1FirewallPolicyRuleCollectionGroupSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -709,6 +736,7 @@ public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecPublishConnecti
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -724,6 +752,7 @@ public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecPublishConnecti
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -735,6 +764,7 @@ public partial class V1beta1FirewallPolicyRuleCollectionGroupSpecWriteConnection
     public string Namespace { get; set; }
 }
 
+/// <summary>FirewallPolicyRuleCollectionGroupSpec defines the desired state of FirewallPolicyRuleCollectionGroup</summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -767,6 +797,7 @@ public partial class V1beta1FirewallPolicyRuleCollectionGroupSpec
     public V1beta1FirewallPolicyRuleCollectionGroupSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupStatusAtProviderApplicationRuleCollectionRuleHttpHeaders
 {
     /// <summary>The name which should be used for this network rule collection.</summary>
@@ -778,6 +809,7 @@ public partial class V1beta1FirewallPolicyRuleCollectionGroupStatusAtProviderApp
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupStatusAtProviderApplicationRuleCollectionRuleProtocols
 {
     /// <summary>Port number of the protocol. Range is 0-64000.</summary>
@@ -789,6 +821,7 @@ public partial class V1beta1FirewallPolicyRuleCollectionGroupStatusAtProviderApp
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupStatusAtProviderApplicationRuleCollectionRule
 {
     /// <summary>The description which should be used for this rule.</summary>
@@ -840,6 +873,7 @@ public partial class V1beta1FirewallPolicyRuleCollectionGroupStatusAtProviderApp
     public IList<string>? WebCategories { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupStatusAtProviderApplicationRuleCollection
 {
     /// <summary>The action to take for the application rules in this collection. Possible values are Allow and Deny.</summary>
@@ -859,6 +893,7 @@ public partial class V1beta1FirewallPolicyRuleCollectionGroupStatusAtProviderApp
     public IList<V1beta1FirewallPolicyRuleCollectionGroupStatusAtProviderApplicationRuleCollectionRule>? Rule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupStatusAtProviderNatRuleCollectionRule
 {
     /// <summary>The description which should be used for this rule.</summary>
@@ -902,6 +937,7 @@ public partial class V1beta1FirewallPolicyRuleCollectionGroupStatusAtProviderNat
     public double? TranslatedPort { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupStatusAtProviderNatRuleCollection
 {
     /// <summary>The action to take for the NAT rules in this collection. Currently, the only possible value is Dnat.</summary>
@@ -921,6 +957,7 @@ public partial class V1beta1FirewallPolicyRuleCollectionGroupStatusAtProviderNat
     public IList<V1beta1FirewallPolicyRuleCollectionGroupStatusAtProviderNatRuleCollectionRule>? Rule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupStatusAtProviderNetworkRuleCollectionRule
 {
     /// <summary>The description which should be used for this rule.</summary>
@@ -960,6 +997,7 @@ public partial class V1beta1FirewallPolicyRuleCollectionGroupStatusAtProviderNet
     public IList<string>? SourceIpGroups { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupStatusAtProviderNetworkRuleCollection
 {
     /// <summary>The action to take for the network rules in this collection. Possible values are Allow and Deny.</summary>
@@ -979,6 +1017,7 @@ public partial class V1beta1FirewallPolicyRuleCollectionGroupStatusAtProviderNet
     public IList<V1beta1FirewallPolicyRuleCollectionGroupStatusAtProviderNetworkRuleCollectionRule>? Rule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupStatusAtProvider
 {
     /// <summary>One or more application_rule_collection blocks as defined below.</summary>
@@ -1006,6 +1045,7 @@ public partial class V1beta1FirewallPolicyRuleCollectionGroupStatusAtProvider
     public double? Priority { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1033,6 +1073,7 @@ public partial class V1beta1FirewallPolicyRuleCollectionGroupStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>FirewallPolicyRuleCollectionGroupStatus defines the observed state of FirewallPolicyRuleCollectionGroup.</summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroupStatus
 {
     /// <summary></summary>
@@ -1049,6 +1090,7 @@ public partial class V1beta1FirewallPolicyRuleCollectionGroupStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>FirewallPolicyRuleCollectionGroup is the Schema for the FirewallPolicyRuleCollectionGroups API. Manages a Firewall Policy Rule Collection Group.</summary>
 public partial class V1beta1FirewallPolicyRuleCollectionGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FirewallPolicyRuleCollectionGroupSpec>, IStatus<V1beta1FirewallPolicyRuleCollectionGroupStatus>
 {
     public const string KubeApiVersion = "v1beta1";

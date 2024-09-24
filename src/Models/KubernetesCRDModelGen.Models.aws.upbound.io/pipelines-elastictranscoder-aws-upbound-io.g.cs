@@ -38,6 +38,7 @@ public enum V1beta1PipelineSpecForProviderContentConfigBucketRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PipelineSpecForProviderContentConfigBucketRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1PipelineSpecForProviderContentConfigBucketRefPolicy
     public V1beta1PipelineSpecForProviderContentConfigBucketRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1PipelineSpecForProviderContentConfigBucketRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1PipelineSpecForProviderContentConfigBucketSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PipelineSpecForProviderContentConfigBucketSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1PipelineSpecForProviderContentConfigBucketSelectorPo
     public V1beta1PipelineSpecForProviderContentConfigBucketSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1PipelineSpecForProviderContentConfigBucketSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1PipelineSpecForProviderContentConfigBucketSelector
     public V1beta1PipelineSpecForProviderContentConfigBucketSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipelineSpecForProviderContentConfig
 {
     /// <summary>The Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists.</summary>
@@ -129,6 +134,7 @@ public partial class V1beta1PipelineSpecForProviderContentConfig
     public string? StorageClass { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipelineSpecForProviderContentConfigPermissions
 {
     /// <summary>The permission that you want to give to the AWS user that you specified in content_config_permissions.grantee. Valid values are Read, ReadAcp, WriteAcp or FullControl.</summary>
@@ -164,6 +170,7 @@ public enum V1beta1PipelineSpecForProviderInputBucketRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PipelineSpecForProviderInputBucketRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -177,6 +184,7 @@ public partial class V1beta1PipelineSpecForProviderInputBucketRefPolicy
     public V1beta1PipelineSpecForProviderInputBucketRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate inputBucket.</summary>
 public partial class V1beta1PipelineSpecForProviderInputBucketRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -208,6 +216,7 @@ public enum V1beta1PipelineSpecForProviderInputBucketSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PipelineSpecForProviderInputBucketSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -221,6 +230,7 @@ public partial class V1beta1PipelineSpecForProviderInputBucketSelectorPolicy
     public V1beta1PipelineSpecForProviderInputBucketSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate inputBucket.</summary>
 public partial class V1beta1PipelineSpecForProviderInputBucketSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -236,6 +246,7 @@ public partial class V1beta1PipelineSpecForProviderInputBucketSelector
     public V1beta1PipelineSpecForProviderInputBucketSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipelineSpecForProviderNotifications
 {
     /// <summary>The topic ARN for the Amazon SNS topic that you want to notify when Elastic Transcoder has finished processing a job in this pipeline.</summary>
@@ -275,6 +286,7 @@ public enum V1beta1PipelineSpecForProviderRoleRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PipelineSpecForProviderRoleRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -288,6 +300,7 @@ public partial class V1beta1PipelineSpecForProviderRoleRefPolicy
     public V1beta1PipelineSpecForProviderRoleRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate role.</summary>
 public partial class V1beta1PipelineSpecForProviderRoleRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -319,6 +332,7 @@ public enum V1beta1PipelineSpecForProviderRoleSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PipelineSpecForProviderRoleSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -332,6 +346,7 @@ public partial class V1beta1PipelineSpecForProviderRoleSelectorPolicy
     public V1beta1PipelineSpecForProviderRoleSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate role.</summary>
 public partial class V1beta1PipelineSpecForProviderRoleSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -367,6 +382,7 @@ public enum V1beta1PipelineSpecForProviderThumbnailConfigBucketRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PipelineSpecForProviderThumbnailConfigBucketRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -380,6 +396,7 @@ public partial class V1beta1PipelineSpecForProviderThumbnailConfigBucketRefPolic
     public V1beta1PipelineSpecForProviderThumbnailConfigBucketRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1PipelineSpecForProviderThumbnailConfigBucketRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -411,6 +428,7 @@ public enum V1beta1PipelineSpecForProviderThumbnailConfigBucketSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PipelineSpecForProviderThumbnailConfigBucketSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -424,6 +442,7 @@ public partial class V1beta1PipelineSpecForProviderThumbnailConfigBucketSelector
     public V1beta1PipelineSpecForProviderThumbnailConfigBucketSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1PipelineSpecForProviderThumbnailConfigBucketSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -439,6 +458,7 @@ public partial class V1beta1PipelineSpecForProviderThumbnailConfigBucketSelector
     public V1beta1PipelineSpecForProviderThumbnailConfigBucketSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipelineSpecForProviderThumbnailConfig
 {
     /// <summary>The Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists.</summary>
@@ -458,6 +478,7 @@ public partial class V1beta1PipelineSpecForProviderThumbnailConfig
     public string? StorageClass { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipelineSpecForProviderThumbnailConfigPermissions
 {
     /// <summary>The permission that you want to give to the AWS user that you specified in content_config_permissions.grantee. Valid values are Read, ReadAcp, WriteAcp or FullControl.</summary>
@@ -473,6 +494,7 @@ public partial class V1beta1PipelineSpecForProviderThumbnailConfigPermissions
     public string? GranteeType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipelineSpecForProvider
 {
     /// <summary>The AWS Key Management Service (AWS KMS) key that you want to use with this pipeline.</summary>
@@ -556,6 +578,7 @@ public enum V1beta1PipelineSpecInitProviderContentConfigBucketRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PipelineSpecInitProviderContentConfigBucketRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -569,6 +592,7 @@ public partial class V1beta1PipelineSpecInitProviderContentConfigBucketRefPolicy
     public V1beta1PipelineSpecInitProviderContentConfigBucketRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1PipelineSpecInitProviderContentConfigBucketRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -600,6 +624,7 @@ public enum V1beta1PipelineSpecInitProviderContentConfigBucketSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PipelineSpecInitProviderContentConfigBucketSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -613,6 +638,7 @@ public partial class V1beta1PipelineSpecInitProviderContentConfigBucketSelectorP
     public V1beta1PipelineSpecInitProviderContentConfigBucketSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1PipelineSpecInitProviderContentConfigBucketSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -628,6 +654,7 @@ public partial class V1beta1PipelineSpecInitProviderContentConfigBucketSelector
     public V1beta1PipelineSpecInitProviderContentConfigBucketSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipelineSpecInitProviderContentConfig
 {
     /// <summary>The Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists.</summary>
@@ -647,6 +674,7 @@ public partial class V1beta1PipelineSpecInitProviderContentConfig
     public string? StorageClass { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipelineSpecInitProviderContentConfigPermissions
 {
     /// <summary>The permission that you want to give to the AWS user that you specified in content_config_permissions.grantee. Valid values are Read, ReadAcp, WriteAcp or FullControl.</summary>
@@ -682,6 +710,7 @@ public enum V1beta1PipelineSpecInitProviderInputBucketRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PipelineSpecInitProviderInputBucketRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -695,6 +724,7 @@ public partial class V1beta1PipelineSpecInitProviderInputBucketRefPolicy
     public V1beta1PipelineSpecInitProviderInputBucketRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate inputBucket.</summary>
 public partial class V1beta1PipelineSpecInitProviderInputBucketRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -726,6 +756,7 @@ public enum V1beta1PipelineSpecInitProviderInputBucketSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PipelineSpecInitProviderInputBucketSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -739,6 +770,7 @@ public partial class V1beta1PipelineSpecInitProviderInputBucketSelectorPolicy
     public V1beta1PipelineSpecInitProviderInputBucketSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate inputBucket.</summary>
 public partial class V1beta1PipelineSpecInitProviderInputBucketSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -754,6 +786,7 @@ public partial class V1beta1PipelineSpecInitProviderInputBucketSelector
     public V1beta1PipelineSpecInitProviderInputBucketSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipelineSpecInitProviderNotifications
 {
     /// <summary>The topic ARN for the Amazon SNS topic that you want to notify when Elastic Transcoder has finished processing a job in this pipeline.</summary>
@@ -793,6 +826,7 @@ public enum V1beta1PipelineSpecInitProviderRoleRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PipelineSpecInitProviderRoleRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -806,6 +840,7 @@ public partial class V1beta1PipelineSpecInitProviderRoleRefPolicy
     public V1beta1PipelineSpecInitProviderRoleRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate role.</summary>
 public partial class V1beta1PipelineSpecInitProviderRoleRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -837,6 +872,7 @@ public enum V1beta1PipelineSpecInitProviderRoleSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PipelineSpecInitProviderRoleSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -850,6 +886,7 @@ public partial class V1beta1PipelineSpecInitProviderRoleSelectorPolicy
     public V1beta1PipelineSpecInitProviderRoleSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate role.</summary>
 public partial class V1beta1PipelineSpecInitProviderRoleSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -885,6 +922,7 @@ public enum V1beta1PipelineSpecInitProviderThumbnailConfigBucketRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PipelineSpecInitProviderThumbnailConfigBucketRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -898,6 +936,7 @@ public partial class V1beta1PipelineSpecInitProviderThumbnailConfigBucketRefPoli
     public V1beta1PipelineSpecInitProviderThumbnailConfigBucketRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1PipelineSpecInitProviderThumbnailConfigBucketRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -929,6 +968,7 @@ public enum V1beta1PipelineSpecInitProviderThumbnailConfigBucketSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PipelineSpecInitProviderThumbnailConfigBucketSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -942,6 +982,7 @@ public partial class V1beta1PipelineSpecInitProviderThumbnailConfigBucketSelecto
     public V1beta1PipelineSpecInitProviderThumbnailConfigBucketSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1PipelineSpecInitProviderThumbnailConfigBucketSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -957,6 +998,7 @@ public partial class V1beta1PipelineSpecInitProviderThumbnailConfigBucketSelecto
     public V1beta1PipelineSpecInitProviderThumbnailConfigBucketSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipelineSpecInitProviderThumbnailConfig
 {
     /// <summary>The Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists.</summary>
@@ -976,6 +1018,7 @@ public partial class V1beta1PipelineSpecInitProviderThumbnailConfig
     public string? StorageClass { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipelineSpecInitProviderThumbnailConfigPermissions
 {
     /// <summary>The permission that you want to give to the AWS user that you specified in content_config_permissions.grantee. Valid values are Read, ReadAcp, WriteAcp or FullControl.</summary>
@@ -991,6 +1034,7 @@ public partial class V1beta1PipelineSpecInitProviderThumbnailConfigPermissions
     public string? GranteeType { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1PipelineSpecInitProvider
 {
     /// <summary>The AWS Key Management Service (AWS KMS) key that you want to use with this pipeline.</summary>
@@ -1092,6 +1136,7 @@ public enum V1beta1PipelineSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PipelineSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1105,6 +1150,7 @@ public partial class V1beta1PipelineSpecProviderConfigRefPolicy
     public V1beta1PipelineSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1PipelineSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1136,6 +1182,7 @@ public enum V1beta1PipelineSpecPublishConnectionDetailsToConfigRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PipelineSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1149,6 +1196,7 @@ public partial class V1beta1PipelineSpecPublishConnectionDetailsToConfigRefPolic
     public V1beta1PipelineSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1PipelineSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1160,6 +1208,7 @@ public partial class V1beta1PipelineSpecPublishConnectionDetailsToConfigRef
     public V1beta1PipelineSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1PipelineSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1175,6 +1224,7 @@ public partial class V1beta1PipelineSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1PipelineSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1190,6 +1240,7 @@ public partial class V1beta1PipelineSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1PipelineSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1201,6 +1252,7 @@ public partial class V1beta1PipelineSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>PipelineSpec defines the desired state of Pipeline</summary>
 public partial class V1beta1PipelineSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1233,6 +1285,7 @@ public partial class V1beta1PipelineSpec
     public V1beta1PipelineSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipelineStatusAtProviderContentConfig
 {
     /// <summary>The Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists.</summary>
@@ -1244,6 +1297,7 @@ public partial class V1beta1PipelineStatusAtProviderContentConfig
     public string? StorageClass { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipelineStatusAtProviderContentConfigPermissions
 {
     /// <summary>The permission that you want to give to the AWS user that you specified in content_config_permissions.grantee. Valid values are Read, ReadAcp, WriteAcp or FullControl.</summary>
@@ -1259,6 +1313,7 @@ public partial class V1beta1PipelineStatusAtProviderContentConfigPermissions
     public string? GranteeType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipelineStatusAtProviderNotifications
 {
     /// <summary>The topic ARN for the Amazon SNS topic that you want to notify when Elastic Transcoder has finished processing a job in this pipeline.</summary>
@@ -1278,6 +1333,7 @@ public partial class V1beta1PipelineStatusAtProviderNotifications
     public string? Warning { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipelineStatusAtProviderThumbnailConfig
 {
     /// <summary>The Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists.</summary>
@@ -1289,6 +1345,7 @@ public partial class V1beta1PipelineStatusAtProviderThumbnailConfig
     public string? StorageClass { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipelineStatusAtProviderThumbnailConfigPermissions
 {
     /// <summary>The permission that you want to give to the AWS user that you specified in content_config_permissions.grantee. Valid values are Read, ReadAcp, WriteAcp or FullControl.</summary>
@@ -1304,6 +1361,7 @@ public partial class V1beta1PipelineStatusAtProviderThumbnailConfigPermissions
     public string? GranteeType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipelineStatusAtProvider
 {
     /// <summary>The ARN of the Elastictranscoder pipeline.</summary>
@@ -1355,6 +1413,7 @@ public partial class V1beta1PipelineStatusAtProvider
     public IList<V1beta1PipelineStatusAtProviderThumbnailConfigPermissions>? ThumbnailConfigPermissions { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1PipelineStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1382,6 +1441,7 @@ public partial class V1beta1PipelineStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>PipelineStatus defines the observed state of Pipeline.</summary>
 public partial class V1beta1PipelineStatus
 {
     /// <summary></summary>
@@ -1398,6 +1458,7 @@ public partial class V1beta1PipelineStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Pipeline is the Schema for the Pipelines API. Provides an Elastic Transcoder pipeline resource.</summary>
 public partial class V1beta1Pipeline : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1PipelineSpec>, IStatus<V1beta1PipelineStatus>
 {
     public const string KubeApiVersion = "v1beta1";

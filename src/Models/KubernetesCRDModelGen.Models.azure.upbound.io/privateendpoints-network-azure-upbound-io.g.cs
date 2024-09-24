@@ -18,6 +18,7 @@ public enum V1beta1PrivateEndpointSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateEndpointSpecForProviderIpConfiguration
 {
     /// <summary>Specifies the member name this IP address applies to. If it is not specified, it will use the value of subresource_name. Changing this forces a new resource to be created.</summary>
@@ -57,6 +58,7 @@ public enum V1beta1PrivateEndpointSpecForProviderPrivateDnsZoneGroupPrivateDnsZo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PrivateEndpointSpecForProviderPrivateDnsZoneGroupPrivateDnsZoneIdsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -70,6 +72,7 @@ public partial class V1beta1PrivateEndpointSpecForProviderPrivateDnsZoneGroupPri
     public V1beta1PrivateEndpointSpecForProviderPrivateDnsZoneGroupPrivateDnsZoneIdsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1PrivateEndpointSpecForProviderPrivateDnsZoneGroupPrivateDnsZoneIdsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -101,6 +104,7 @@ public enum V1beta1PrivateEndpointSpecForProviderPrivateDnsZoneGroupPrivateDnsZo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PrivateEndpointSpecForProviderPrivateDnsZoneGroupPrivateDnsZoneIdsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -114,6 +118,7 @@ public partial class V1beta1PrivateEndpointSpecForProviderPrivateDnsZoneGroupPri
     public V1beta1PrivateEndpointSpecForProviderPrivateDnsZoneGroupPrivateDnsZoneIdsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of PrivateDNSZone in network to populate privateDnsZoneIds.</summary>
 public partial class V1beta1PrivateEndpointSpecForProviderPrivateDnsZoneGroupPrivateDnsZoneIdsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -129,6 +134,7 @@ public partial class V1beta1PrivateEndpointSpecForProviderPrivateDnsZoneGroupPri
     public V1beta1PrivateEndpointSpecForProviderPrivateDnsZoneGroupPrivateDnsZoneIdsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateEndpointSpecForProviderPrivateDnsZoneGroup
 {
     /// <summary>Specifies the Name of the Private DNS Zone Group.</summary>
@@ -148,6 +154,7 @@ public partial class V1beta1PrivateEndpointSpecForProviderPrivateDnsZoneGroup
     public V1beta1PrivateEndpointSpecForProviderPrivateDnsZoneGroupPrivateDnsZoneIdsSelector? PrivateDnsZoneIdsSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateEndpointSpecForProviderPrivateServiceConnection
 {
     /// <summary>Does the Private Endpoint require Manual Approval from the remote resource owner? Changing this forces a new resource to be created.</summary>
@@ -195,6 +202,7 @@ public enum V1beta1PrivateEndpointSpecForProviderResourceGroupNameRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PrivateEndpointSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -208,6 +216,7 @@ public partial class V1beta1PrivateEndpointSpecForProviderResourceGroupNameRefPo
     public V1beta1PrivateEndpointSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1PrivateEndpointSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -239,6 +248,7 @@ public enum V1beta1PrivateEndpointSpecForProviderResourceGroupNameSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PrivateEndpointSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -252,6 +262,7 @@ public partial class V1beta1PrivateEndpointSpecForProviderResourceGroupNameSelec
     public V1beta1PrivateEndpointSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1PrivateEndpointSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -287,6 +298,7 @@ public enum V1beta1PrivateEndpointSpecForProviderSubnetIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PrivateEndpointSpecForProviderSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -300,6 +312,7 @@ public partial class V1beta1PrivateEndpointSpecForProviderSubnetIdRefPolicy
     public V1beta1PrivateEndpointSpecForProviderSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1PrivateEndpointSpecForProviderSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -331,6 +344,7 @@ public enum V1beta1PrivateEndpointSpecForProviderSubnetIdSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PrivateEndpointSpecForProviderSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -344,6 +358,7 @@ public partial class V1beta1PrivateEndpointSpecForProviderSubnetIdSelectorPolicy
     public V1beta1PrivateEndpointSpecForProviderSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1PrivateEndpointSpecForProviderSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -359,6 +374,7 @@ public partial class V1beta1PrivateEndpointSpecForProviderSubnetIdSelector
     public V1beta1PrivateEndpointSpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateEndpointSpecForProvider
 {
     /// <summary>The custom name of the network interface attached to the private endpoint. Changing this forces a new resource to be created.</summary>
@@ -410,6 +426,7 @@ public partial class V1beta1PrivateEndpointSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateEndpointSpecInitProviderIpConfiguration
 {
     /// <summary>Specifies the member name this IP address applies to. If it is not specified, it will use the value of subresource_name. Changing this forces a new resource to be created.</summary>
@@ -449,6 +466,7 @@ public enum V1beta1PrivateEndpointSpecInitProviderPrivateDnsZoneGroupPrivateDnsZ
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PrivateEndpointSpecInitProviderPrivateDnsZoneGroupPrivateDnsZoneIdsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -462,6 +480,7 @@ public partial class V1beta1PrivateEndpointSpecInitProviderPrivateDnsZoneGroupPr
     public V1beta1PrivateEndpointSpecInitProviderPrivateDnsZoneGroupPrivateDnsZoneIdsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1PrivateEndpointSpecInitProviderPrivateDnsZoneGroupPrivateDnsZoneIdsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -493,6 +512,7 @@ public enum V1beta1PrivateEndpointSpecInitProviderPrivateDnsZoneGroupPrivateDnsZ
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PrivateEndpointSpecInitProviderPrivateDnsZoneGroupPrivateDnsZoneIdsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -506,6 +526,7 @@ public partial class V1beta1PrivateEndpointSpecInitProviderPrivateDnsZoneGroupPr
     public V1beta1PrivateEndpointSpecInitProviderPrivateDnsZoneGroupPrivateDnsZoneIdsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of PrivateDNSZone in network to populate privateDnsZoneIds.</summary>
 public partial class V1beta1PrivateEndpointSpecInitProviderPrivateDnsZoneGroupPrivateDnsZoneIdsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -521,6 +542,7 @@ public partial class V1beta1PrivateEndpointSpecInitProviderPrivateDnsZoneGroupPr
     public V1beta1PrivateEndpointSpecInitProviderPrivateDnsZoneGroupPrivateDnsZoneIdsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateEndpointSpecInitProviderPrivateDnsZoneGroup
 {
     /// <summary>Specifies the Name of the Private DNS Zone Group.</summary>
@@ -540,6 +562,7 @@ public partial class V1beta1PrivateEndpointSpecInitProviderPrivateDnsZoneGroup
     public V1beta1PrivateEndpointSpecInitProviderPrivateDnsZoneGroupPrivateDnsZoneIdsSelector? PrivateDnsZoneIdsSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateEndpointSpecInitProviderPrivateServiceConnection
 {
     /// <summary>Does the Private Endpoint require Manual Approval from the remote resource owner? Changing this forces a new resource to be created.</summary>
@@ -587,6 +610,7 @@ public enum V1beta1PrivateEndpointSpecInitProviderSubnetIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PrivateEndpointSpecInitProviderSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -600,6 +624,7 @@ public partial class V1beta1PrivateEndpointSpecInitProviderSubnetIdRefPolicy
     public V1beta1PrivateEndpointSpecInitProviderSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1PrivateEndpointSpecInitProviderSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -631,6 +656,7 @@ public enum V1beta1PrivateEndpointSpecInitProviderSubnetIdSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PrivateEndpointSpecInitProviderSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -644,6 +670,7 @@ public partial class V1beta1PrivateEndpointSpecInitProviderSubnetIdSelectorPolic
     public V1beta1PrivateEndpointSpecInitProviderSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1PrivateEndpointSpecInitProviderSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -659,6 +686,7 @@ public partial class V1beta1PrivateEndpointSpecInitProviderSubnetIdSelector
     public V1beta1PrivateEndpointSpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1PrivateEndpointSpecInitProvider
 {
     /// <summary>The custom name of the network interface attached to the private endpoint. Changing this forces a new resource to be created.</summary>
@@ -740,6 +768,7 @@ public enum V1beta1PrivateEndpointSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PrivateEndpointSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -753,6 +782,7 @@ public partial class V1beta1PrivateEndpointSpecProviderConfigRefPolicy
     public V1beta1PrivateEndpointSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1PrivateEndpointSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -784,6 +814,7 @@ public enum V1beta1PrivateEndpointSpecPublishConnectionDetailsToConfigRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PrivateEndpointSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -797,6 +828,7 @@ public partial class V1beta1PrivateEndpointSpecPublishConnectionDetailsToConfigR
     public V1beta1PrivateEndpointSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1PrivateEndpointSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -808,6 +840,7 @@ public partial class V1beta1PrivateEndpointSpecPublishConnectionDetailsToConfigR
     public V1beta1PrivateEndpointSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1PrivateEndpointSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -823,6 +856,7 @@ public partial class V1beta1PrivateEndpointSpecPublishConnectionDetailsToMetadat
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1PrivateEndpointSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -838,6 +872,7 @@ public partial class V1beta1PrivateEndpointSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1PrivateEndpointSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -849,6 +884,7 @@ public partial class V1beta1PrivateEndpointSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>PrivateEndpointSpec defines the desired state of PrivateEndpoint</summary>
 public partial class V1beta1PrivateEndpointSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -881,6 +917,7 @@ public partial class V1beta1PrivateEndpointSpec
     public V1beta1PrivateEndpointSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateEndpointStatusAtProviderCustomDnsConfigs
 {
     /// <summary>The fully qualified domain name to the private_endpoint.</summary>
@@ -892,6 +929,7 @@ public partial class V1beta1PrivateEndpointStatusAtProviderCustomDnsConfigs
     public IList<string>? IpAddresses { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateEndpointStatusAtProviderIpConfiguration
 {
     /// <summary>Specifies the member name this IP address applies to. If it is not specified, it will use the value of subresource_name. Changing this forces a new resource to be created.</summary>
@@ -911,6 +949,7 @@ public partial class V1beta1PrivateEndpointStatusAtProviderIpConfiguration
     public string? SubresourceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateEndpointStatusAtProviderNetworkInterface
 {
     /// <summary>The ID of the network interface associated with the private_endpoint.</summary>
@@ -922,6 +961,7 @@ public partial class V1beta1PrivateEndpointStatusAtProviderNetworkInterface
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateEndpointStatusAtProviderPrivateDnsZoneConfigsRecordSets
 {
     /// <summary>The fully qualified domain name to the private_dns_zone.</summary>
@@ -945,6 +985,7 @@ public partial class V1beta1PrivateEndpointStatusAtProviderPrivateDnsZoneConfigs
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateEndpointStatusAtProviderPrivateDnsZoneConfigs
 {
     /// <summary>The ID of the Private DNS Zone Config.</summary>
@@ -964,6 +1005,7 @@ public partial class V1beta1PrivateEndpointStatusAtProviderPrivateDnsZoneConfigs
     public IList<V1beta1PrivateEndpointStatusAtProviderPrivateDnsZoneConfigsRecordSets>? RecordSets { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateEndpointStatusAtProviderPrivateDnsZoneGroup
 {
     /// <summary>The ID of the Private DNS Zone Group.</summary>
@@ -979,6 +1021,7 @@ public partial class V1beta1PrivateEndpointStatusAtProviderPrivateDnsZoneGroup
     public IList<string>? PrivateDnsZoneIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateEndpointStatusAtProviderPrivateServiceConnection
 {
     /// <summary>Does the Private Endpoint require Manual Approval from the remote resource owner? Changing this forces a new resource to be created.</summary>
@@ -1010,6 +1053,7 @@ public partial class V1beta1PrivateEndpointStatusAtProviderPrivateServiceConnect
     public IList<string>? SubresourceNames { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateEndpointStatusAtProvider
 {
     /// <summary>A custom_dns_configs block as defined below.</summary>
@@ -1061,6 +1105,7 @@ public partial class V1beta1PrivateEndpointStatusAtProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1PrivateEndpointStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1088,6 +1133,7 @@ public partial class V1beta1PrivateEndpointStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>PrivateEndpointStatus defines the observed state of PrivateEndpoint.</summary>
 public partial class V1beta1PrivateEndpointStatus
 {
     /// <summary></summary>
@@ -1104,6 +1150,7 @@ public partial class V1beta1PrivateEndpointStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>PrivateEndpoint is the Schema for the PrivateEndpoints API. Manages a Private Endpoint.</summary>
 public partial class V1beta1PrivateEndpoint : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1PrivateEndpointSpec>, IStatus<V1beta1PrivateEndpointStatus>
 {
     public const string KubeApiVersion = "v1beta1";

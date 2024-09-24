@@ -18,6 +18,7 @@ public enum V1beta1DomainSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Main user's password, which is stored in the Amazon OpenSearch Service domain's internal database. Only specify if internal_user_database_enabled is set to true.</summary>
 public partial class V1beta1DomainSpecForProviderAdvancedSecurityOptionsMasterUserOptionsMasterUserPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1DomainSpecForProviderAdvancedSecurityOptionsMasterUs
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderAdvancedSecurityOptionsMasterUserOptions
 {
     /// <summary>ARN for the main user. Only specify if internal_user_database_enabled is not set or set to false.</summary>
@@ -48,6 +50,7 @@ public partial class V1beta1DomainSpecForProviderAdvancedSecurityOptionsMasterUs
     public V1beta1DomainSpecForProviderAdvancedSecurityOptionsMasterUserOptionsMasterUserPasswordSecretRef? MasterUserPasswordSecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderAdvancedSecurityOptions
 {
     /// <summary>Whether Anonymous auth is enabled. Enables fine-grained access control on an existing domain. Ignored unless advanced_security_options are enabled. Can only be enabled on an existing domain.</summary>
@@ -67,6 +70,7 @@ public partial class V1beta1DomainSpecForProviderAdvancedSecurityOptions
     public IList<V1beta1DomainSpecForProviderAdvancedSecurityOptionsMasterUserOptions>? MasterUserOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderAutoTuneOptionsMaintenanceScheduleDuration
 {
     /// <summary>Unit of time specifying the duration of an Auto-Tune maintenance window. Valid values: HOURS.</summary>
@@ -78,6 +82,7 @@ public partial class V1beta1DomainSpecForProviderAutoTuneOptionsMaintenanceSched
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderAutoTuneOptionsMaintenanceSchedule
 {
     /// <summary>A cron expression specifying the recurrence pattern for an Auto-Tune maintenance schedule.</summary>
@@ -93,6 +98,7 @@ public partial class V1beta1DomainSpecForProviderAutoTuneOptionsMaintenanceSched
     public string? StartAt { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderAutoTuneOptions
 {
     /// <summary>Auto-Tune desired state for the domain. Valid values: ENABLED or DISABLED.</summary>
@@ -112,6 +118,7 @@ public partial class V1beta1DomainSpecForProviderAutoTuneOptions
     public bool? UseOffPeakWindow { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderClusterConfigColdStorageOptions
 {
     /// <summary>Boolean to enable cold storage for an OpenSearch domain. Defaults to false. Master and ultrawarm nodes must be enabled for cold storage.</summary>
@@ -119,6 +126,7 @@ public partial class V1beta1DomainSpecForProviderClusterConfigColdStorageOptions
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderClusterConfigZoneAwarenessConfig
 {
     /// <summary>Number of Availability Zones for the domain to use with zone_awareness_enabled. Defaults to 2. Valid values: 2 or 3.</summary>
@@ -126,6 +134,7 @@ public partial class V1beta1DomainSpecForProviderClusterConfigZoneAwarenessConfi
     public double? AvailabilityZoneCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderClusterConfig
 {
     /// <summary>Configuration block containing cold storage configuration. Detailed below.</summary>
@@ -177,6 +186,7 @@ public partial class V1beta1DomainSpecForProviderClusterConfig
     public bool? ZoneAwarenessEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderCognitoOptions
 {
     /// <summary>Whether Amazon Cognito authentication with Dashboard is enabled or not. Default is false.</summary>
@@ -196,6 +206,7 @@ public partial class V1beta1DomainSpecForProviderCognitoOptions
     public string? UserPoolId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDomainEndpointOptions
 {
     /// <summary>Fully qualified domain for your custom endpoint.</summary>
@@ -219,6 +230,7 @@ public partial class V1beta1DomainSpecForProviderDomainEndpointOptions
     public string? TlsSecurityPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderEbsOptions
 {
     /// <summary>Whether EBS volumes are attached to data nodes in the domain.</summary>
@@ -262,6 +274,7 @@ public enum V1beta1DomainSpecForProviderEncryptAtRestKmsKeyIdRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DomainSpecForProviderEncryptAtRestKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -275,6 +288,7 @@ public partial class V1beta1DomainSpecForProviderEncryptAtRestKmsKeyIdRefPolicy
     public V1beta1DomainSpecForProviderEncryptAtRestKmsKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1DomainSpecForProviderEncryptAtRestKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -306,6 +320,7 @@ public enum V1beta1DomainSpecForProviderEncryptAtRestKmsKeyIdSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DomainSpecForProviderEncryptAtRestKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -319,6 +334,7 @@ public partial class V1beta1DomainSpecForProviderEncryptAtRestKmsKeyIdSelectorPo
     public V1beta1DomainSpecForProviderEncryptAtRestKmsKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1DomainSpecForProviderEncryptAtRestKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -334,6 +350,7 @@ public partial class V1beta1DomainSpecForProviderEncryptAtRestKmsKeyIdSelector
     public V1beta1DomainSpecForProviderEncryptAtRestKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderEncryptAtRest
 {
     /// <summary>Whether to enable encryption at rest. If the encrypt_at_rest block is not provided then this defaults to false. Enabling encryption on new domains requires an engine_version of OpenSearch_X.Y or Elasticsearch_5.1 or greater.</summary>
@@ -373,6 +390,7 @@ public enum V1beta1DomainSpecForProviderLogPublishingOptionsCloudwatchLogGroupAr
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DomainSpecForProviderLogPublishingOptionsCloudwatchLogGroupArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -386,6 +404,7 @@ public partial class V1beta1DomainSpecForProviderLogPublishingOptionsCloudwatchL
     public V1beta1DomainSpecForProviderLogPublishingOptionsCloudwatchLogGroupArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Group in cloudwatchlogs to populate cloudwatchLogGroupArn.</summary>
 public partial class V1beta1DomainSpecForProviderLogPublishingOptionsCloudwatchLogGroupArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -417,6 +436,7 @@ public enum V1beta1DomainSpecForProviderLogPublishingOptionsCloudwatchLogGroupAr
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DomainSpecForProviderLogPublishingOptionsCloudwatchLogGroupArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -430,6 +450,7 @@ public partial class V1beta1DomainSpecForProviderLogPublishingOptionsCloudwatchL
     public V1beta1DomainSpecForProviderLogPublishingOptionsCloudwatchLogGroupArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Group in cloudwatchlogs to populate cloudwatchLogGroupArn.</summary>
 public partial class V1beta1DomainSpecForProviderLogPublishingOptionsCloudwatchLogGroupArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -445,6 +466,7 @@ public partial class V1beta1DomainSpecForProviderLogPublishingOptionsCloudwatchL
     public V1beta1DomainSpecForProviderLogPublishingOptionsCloudwatchLogGroupArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderLogPublishingOptions
 {
     /// <summary>ARN of the Cloudwatch log group to which log needs to be published.</summary>
@@ -468,6 +490,7 @@ public partial class V1beta1DomainSpecForProviderLogPublishingOptions
     public string? LogType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderNodeToNodeEncryption
 {
     /// <summary>Whether to enable node-to-node encryption. If the node_to_node_encryption block is not provided then this defaults to false. Enabling node-to-node encryption of a new domain requires an engine_version of OpenSearch_X.Y or Elasticsearch_6.0 or greater.</summary>
@@ -475,6 +498,7 @@ public partial class V1beta1DomainSpecForProviderNodeToNodeEncryption
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderOffPeakWindowOptionsOffPeakWindowWindowStartTime
 {
     /// <summary>Starting hour of the 10-hour window for updates</summary>
@@ -486,6 +510,7 @@ public partial class V1beta1DomainSpecForProviderOffPeakWindowOptionsOffPeakWind
     public double? Minutes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderOffPeakWindowOptionsOffPeakWindow
 {
     /// <summary>10h window for updates</summary>
@@ -493,6 +518,7 @@ public partial class V1beta1DomainSpecForProviderOffPeakWindowOptionsOffPeakWind
     public IList<V1beta1DomainSpecForProviderOffPeakWindowOptionsOffPeakWindowWindowStartTime>? WindowStartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderOffPeakWindowOptions
 {
     /// <summary>Enabled disabled toggle for off-peak update window.</summary>
@@ -504,6 +530,7 @@ public partial class V1beta1DomainSpecForProviderOffPeakWindowOptions
     public IList<V1beta1DomainSpecForProviderOffPeakWindowOptionsOffPeakWindow>? OffPeakWindow { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderSnapshotOptions
 {
     /// <summary>Hour during which the service takes an automated daily snapshot of the indices in the domain.</summary>
@@ -511,6 +538,7 @@ public partial class V1beta1DomainSpecForProviderSnapshotOptions
     public double? AutomatedSnapshotStartHour { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderSoftwareUpdateOptions
 {
     /// <summary>Whether automatic service software updates are enabled for the domain. Defaults to false.</summary>
@@ -538,6 +566,7 @@ public enum V1beta1DomainSpecForProviderVpcOptionsSecurityGroupIdRefsPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DomainSpecForProviderVpcOptionsSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -551,6 +580,7 @@ public partial class V1beta1DomainSpecForProviderVpcOptionsSecurityGroupIdRefsPo
     public V1beta1DomainSpecForProviderVpcOptionsSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1DomainSpecForProviderVpcOptionsSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -582,6 +612,7 @@ public enum V1beta1DomainSpecForProviderVpcOptionsSecurityGroupIdSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DomainSpecForProviderVpcOptionsSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -595,6 +626,7 @@ public partial class V1beta1DomainSpecForProviderVpcOptionsSecurityGroupIdSelect
     public V1beta1DomainSpecForProviderVpcOptionsSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 public partial class V1beta1DomainSpecForProviderVpcOptionsSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -630,6 +662,7 @@ public enum V1beta1DomainSpecForProviderVpcOptionsSubnetIdRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DomainSpecForProviderVpcOptionsSubnetIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -643,6 +676,7 @@ public partial class V1beta1DomainSpecForProviderVpcOptionsSubnetIdRefsPolicy
     public V1beta1DomainSpecForProviderVpcOptionsSubnetIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1DomainSpecForProviderVpcOptionsSubnetIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -674,6 +708,7 @@ public enum V1beta1DomainSpecForProviderVpcOptionsSubnetIdSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DomainSpecForProviderVpcOptionsSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -687,6 +722,7 @@ public partial class V1beta1DomainSpecForProviderVpcOptionsSubnetIdSelectorPolic
     public V1beta1DomainSpecForProviderVpcOptionsSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 public partial class V1beta1DomainSpecForProviderVpcOptionsSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -702,6 +738,7 @@ public partial class V1beta1DomainSpecForProviderVpcOptionsSubnetIdSelector
     public V1beta1DomainSpecForProviderVpcOptionsSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderVpcOptions
 {
     /// <summary>References to SecurityGroup in ec2 to populate securityGroupIds.</summary>
@@ -729,6 +766,7 @@ public partial class V1beta1DomainSpecForProviderVpcOptions
     public IList<string>? SubnetIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProvider
 {
     /// <summary>Key-value string pairs to specify advanced configuration options.</summary>
@@ -808,6 +846,7 @@ public partial class V1beta1DomainSpecForProvider
     public IList<V1beta1DomainSpecForProviderVpcOptions>? VpcOptions { get; set; }
 }
 
+/// <summary>Main user's password, which is stored in the Amazon OpenSearch Service domain's internal database. Only specify if internal_user_database_enabled is set to true.</summary>
 public partial class V1beta1DomainSpecInitProviderAdvancedSecurityOptionsMasterUserOptionsMasterUserPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -823,6 +862,7 @@ public partial class V1beta1DomainSpecInitProviderAdvancedSecurityOptionsMasterU
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderAdvancedSecurityOptionsMasterUserOptions
 {
     /// <summary>ARN for the main user. Only specify if internal_user_database_enabled is not set or set to false.</summary>
@@ -838,6 +878,7 @@ public partial class V1beta1DomainSpecInitProviderAdvancedSecurityOptionsMasterU
     public V1beta1DomainSpecInitProviderAdvancedSecurityOptionsMasterUserOptionsMasterUserPasswordSecretRef? MasterUserPasswordSecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderAdvancedSecurityOptions
 {
     /// <summary>Whether Anonymous auth is enabled. Enables fine-grained access control on an existing domain. Ignored unless advanced_security_options are enabled. Can only be enabled on an existing domain.</summary>
@@ -857,6 +898,7 @@ public partial class V1beta1DomainSpecInitProviderAdvancedSecurityOptions
     public IList<V1beta1DomainSpecInitProviderAdvancedSecurityOptionsMasterUserOptions>? MasterUserOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderAutoTuneOptionsMaintenanceScheduleDuration
 {
     /// <summary>Unit of time specifying the duration of an Auto-Tune maintenance window. Valid values: HOURS.</summary>
@@ -868,6 +910,7 @@ public partial class V1beta1DomainSpecInitProviderAutoTuneOptionsMaintenanceSche
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderAutoTuneOptionsMaintenanceSchedule
 {
     /// <summary>A cron expression specifying the recurrence pattern for an Auto-Tune maintenance schedule.</summary>
@@ -883,6 +926,7 @@ public partial class V1beta1DomainSpecInitProviderAutoTuneOptionsMaintenanceSche
     public string? StartAt { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderAutoTuneOptions
 {
     /// <summary>Auto-Tune desired state for the domain. Valid values: ENABLED or DISABLED.</summary>
@@ -902,6 +946,7 @@ public partial class V1beta1DomainSpecInitProviderAutoTuneOptions
     public bool? UseOffPeakWindow { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderClusterConfigColdStorageOptions
 {
     /// <summary>Boolean to enable cold storage for an OpenSearch domain. Defaults to false. Master and ultrawarm nodes must be enabled for cold storage.</summary>
@@ -909,6 +954,7 @@ public partial class V1beta1DomainSpecInitProviderClusterConfigColdStorageOption
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderClusterConfigZoneAwarenessConfig
 {
     /// <summary>Number of Availability Zones for the domain to use with zone_awareness_enabled. Defaults to 2. Valid values: 2 or 3.</summary>
@@ -916,6 +962,7 @@ public partial class V1beta1DomainSpecInitProviderClusterConfigZoneAwarenessConf
     public double? AvailabilityZoneCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderClusterConfig
 {
     /// <summary>Configuration block containing cold storage configuration. Detailed below.</summary>
@@ -967,6 +1014,7 @@ public partial class V1beta1DomainSpecInitProviderClusterConfig
     public bool? ZoneAwarenessEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderCognitoOptions
 {
     /// <summary>Whether Amazon Cognito authentication with Dashboard is enabled or not. Default is false.</summary>
@@ -986,6 +1034,7 @@ public partial class V1beta1DomainSpecInitProviderCognitoOptions
     public string? UserPoolId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDomainEndpointOptions
 {
     /// <summary>Fully qualified domain for your custom endpoint.</summary>
@@ -1009,6 +1058,7 @@ public partial class V1beta1DomainSpecInitProviderDomainEndpointOptions
     public string? TlsSecurityPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderEbsOptions
 {
     /// <summary>Whether EBS volumes are attached to data nodes in the domain.</summary>
@@ -1052,6 +1102,7 @@ public enum V1beta1DomainSpecInitProviderEncryptAtRestKmsKeyIdRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DomainSpecInitProviderEncryptAtRestKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1065,6 +1116,7 @@ public partial class V1beta1DomainSpecInitProviderEncryptAtRestKmsKeyIdRefPolicy
     public V1beta1DomainSpecInitProviderEncryptAtRestKmsKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1DomainSpecInitProviderEncryptAtRestKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1096,6 +1148,7 @@ public enum V1beta1DomainSpecInitProviderEncryptAtRestKmsKeyIdSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DomainSpecInitProviderEncryptAtRestKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1109,6 +1162,7 @@ public partial class V1beta1DomainSpecInitProviderEncryptAtRestKmsKeyIdSelectorP
     public V1beta1DomainSpecInitProviderEncryptAtRestKmsKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1DomainSpecInitProviderEncryptAtRestKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1124,6 +1178,7 @@ public partial class V1beta1DomainSpecInitProviderEncryptAtRestKmsKeyIdSelector
     public V1beta1DomainSpecInitProviderEncryptAtRestKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderEncryptAtRest
 {
     /// <summary>Whether to enable encryption at rest. If the encrypt_at_rest block is not provided then this defaults to false. Enabling encryption on new domains requires an engine_version of OpenSearch_X.Y or Elasticsearch_5.1 or greater.</summary>
@@ -1163,6 +1218,7 @@ public enum V1beta1DomainSpecInitProviderLogPublishingOptionsCloudwatchLogGroupA
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DomainSpecInitProviderLogPublishingOptionsCloudwatchLogGroupArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1176,6 +1232,7 @@ public partial class V1beta1DomainSpecInitProviderLogPublishingOptionsCloudwatch
     public V1beta1DomainSpecInitProviderLogPublishingOptionsCloudwatchLogGroupArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Group in cloudwatchlogs to populate cloudwatchLogGroupArn.</summary>
 public partial class V1beta1DomainSpecInitProviderLogPublishingOptionsCloudwatchLogGroupArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1207,6 +1264,7 @@ public enum V1beta1DomainSpecInitProviderLogPublishingOptionsCloudwatchLogGroupA
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DomainSpecInitProviderLogPublishingOptionsCloudwatchLogGroupArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1220,6 +1278,7 @@ public partial class V1beta1DomainSpecInitProviderLogPublishingOptionsCloudwatch
     public V1beta1DomainSpecInitProviderLogPublishingOptionsCloudwatchLogGroupArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Group in cloudwatchlogs to populate cloudwatchLogGroupArn.</summary>
 public partial class V1beta1DomainSpecInitProviderLogPublishingOptionsCloudwatchLogGroupArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1235,6 +1294,7 @@ public partial class V1beta1DomainSpecInitProviderLogPublishingOptionsCloudwatch
     public V1beta1DomainSpecInitProviderLogPublishingOptionsCloudwatchLogGroupArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderLogPublishingOptions
 {
     /// <summary>ARN of the Cloudwatch log group to which log needs to be published.</summary>
@@ -1258,6 +1318,7 @@ public partial class V1beta1DomainSpecInitProviderLogPublishingOptions
     public string? LogType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderNodeToNodeEncryption
 {
     /// <summary>Whether to enable node-to-node encryption. If the node_to_node_encryption block is not provided then this defaults to false. Enabling node-to-node encryption of a new domain requires an engine_version of OpenSearch_X.Y or Elasticsearch_6.0 or greater.</summary>
@@ -1265,6 +1326,7 @@ public partial class V1beta1DomainSpecInitProviderNodeToNodeEncryption
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderOffPeakWindowOptionsOffPeakWindowWindowStartTime
 {
     /// <summary>Starting hour of the 10-hour window for updates</summary>
@@ -1276,6 +1338,7 @@ public partial class V1beta1DomainSpecInitProviderOffPeakWindowOptionsOffPeakWin
     public double? Minutes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderOffPeakWindowOptionsOffPeakWindow
 {
     /// <summary>10h window for updates</summary>
@@ -1283,6 +1346,7 @@ public partial class V1beta1DomainSpecInitProviderOffPeakWindowOptionsOffPeakWin
     public IList<V1beta1DomainSpecInitProviderOffPeakWindowOptionsOffPeakWindowWindowStartTime>? WindowStartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderOffPeakWindowOptions
 {
     /// <summary>Enabled disabled toggle for off-peak update window.</summary>
@@ -1294,6 +1358,7 @@ public partial class V1beta1DomainSpecInitProviderOffPeakWindowOptions
     public IList<V1beta1DomainSpecInitProviderOffPeakWindowOptionsOffPeakWindow>? OffPeakWindow { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderSnapshotOptions
 {
     /// <summary>Hour during which the service takes an automated daily snapshot of the indices in the domain.</summary>
@@ -1301,6 +1366,7 @@ public partial class V1beta1DomainSpecInitProviderSnapshotOptions
     public double? AutomatedSnapshotStartHour { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderSoftwareUpdateOptions
 {
     /// <summary>Whether automatic service software updates are enabled for the domain. Defaults to false.</summary>
@@ -1328,6 +1394,7 @@ public enum V1beta1DomainSpecInitProviderVpcOptionsSecurityGroupIdRefsPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DomainSpecInitProviderVpcOptionsSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1341,6 +1408,7 @@ public partial class V1beta1DomainSpecInitProviderVpcOptionsSecurityGroupIdRefsP
     public V1beta1DomainSpecInitProviderVpcOptionsSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1DomainSpecInitProviderVpcOptionsSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1372,6 +1440,7 @@ public enum V1beta1DomainSpecInitProviderVpcOptionsSecurityGroupIdSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DomainSpecInitProviderVpcOptionsSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1385,6 +1454,7 @@ public partial class V1beta1DomainSpecInitProviderVpcOptionsSecurityGroupIdSelec
     public V1beta1DomainSpecInitProviderVpcOptionsSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 public partial class V1beta1DomainSpecInitProviderVpcOptionsSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1420,6 +1490,7 @@ public enum V1beta1DomainSpecInitProviderVpcOptionsSubnetIdRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DomainSpecInitProviderVpcOptionsSubnetIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1433,6 +1504,7 @@ public partial class V1beta1DomainSpecInitProviderVpcOptionsSubnetIdRefsPolicy
     public V1beta1DomainSpecInitProviderVpcOptionsSubnetIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1DomainSpecInitProviderVpcOptionsSubnetIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1464,6 +1536,7 @@ public enum V1beta1DomainSpecInitProviderVpcOptionsSubnetIdSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DomainSpecInitProviderVpcOptionsSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1477,6 +1550,7 @@ public partial class V1beta1DomainSpecInitProviderVpcOptionsSubnetIdSelectorPoli
     public V1beta1DomainSpecInitProviderVpcOptionsSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 public partial class V1beta1DomainSpecInitProviderVpcOptionsSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1492,6 +1566,7 @@ public partial class V1beta1DomainSpecInitProviderVpcOptionsSubnetIdSelector
     public V1beta1DomainSpecInitProviderVpcOptionsSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderVpcOptions
 {
     /// <summary>References to SecurityGroup in ec2 to populate securityGroupIds.</summary>
@@ -1519,6 +1594,7 @@ public partial class V1beta1DomainSpecInitProviderVpcOptions
     public IList<string>? SubnetIds { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1DomainSpecInitProvider
 {
     /// <summary>Key-value string pairs to specify advanced configuration options.</summary>
@@ -1636,6 +1712,7 @@ public enum V1beta1DomainSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DomainSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1649,6 +1726,7 @@ public partial class V1beta1DomainSpecProviderConfigRefPolicy
     public V1beta1DomainSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1DomainSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1680,6 +1758,7 @@ public enum V1beta1DomainSpecPublishConnectionDetailsToConfigRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DomainSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1693,6 +1772,7 @@ public partial class V1beta1DomainSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1DomainSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1DomainSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1704,6 +1784,7 @@ public partial class V1beta1DomainSpecPublishConnectionDetailsToConfigRef
     public V1beta1DomainSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1DomainSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1719,6 +1800,7 @@ public partial class V1beta1DomainSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1DomainSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1734,6 +1816,7 @@ public partial class V1beta1DomainSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1DomainSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1745,6 +1828,7 @@ public partial class V1beta1DomainSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>DomainSpec defines the desired state of Domain</summary>
 public partial class V1beta1DomainSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1777,6 +1861,7 @@ public partial class V1beta1DomainSpec
     public V1beta1DomainSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderAdvancedSecurityOptionsMasterUserOptions
 {
     /// <summary>ARN for the main user. Only specify if internal_user_database_enabled is not set or set to false.</summary>
@@ -1788,6 +1873,7 @@ public partial class V1beta1DomainStatusAtProviderAdvancedSecurityOptionsMasterU
     public string? MasterUserName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderAdvancedSecurityOptions
 {
     /// <summary>Whether Anonymous auth is enabled. Enables fine-grained access control on an existing domain. Ignored unless advanced_security_options are enabled. Can only be enabled on an existing domain.</summary>
@@ -1807,6 +1893,7 @@ public partial class V1beta1DomainStatusAtProviderAdvancedSecurityOptions
     public IList<V1beta1DomainStatusAtProviderAdvancedSecurityOptionsMasterUserOptions>? MasterUserOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderAutoTuneOptionsMaintenanceScheduleDuration
 {
     /// <summary>Unit of time specifying the duration of an Auto-Tune maintenance window. Valid values: HOURS.</summary>
@@ -1818,6 +1905,7 @@ public partial class V1beta1DomainStatusAtProviderAutoTuneOptionsMaintenanceSche
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderAutoTuneOptionsMaintenanceSchedule
 {
     /// <summary>A cron expression specifying the recurrence pattern for an Auto-Tune maintenance schedule.</summary>
@@ -1833,6 +1921,7 @@ public partial class V1beta1DomainStatusAtProviderAutoTuneOptionsMaintenanceSche
     public string? StartAt { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderAutoTuneOptions
 {
     /// <summary>Auto-Tune desired state for the domain. Valid values: ENABLED or DISABLED.</summary>
@@ -1852,6 +1941,7 @@ public partial class V1beta1DomainStatusAtProviderAutoTuneOptions
     public bool? UseOffPeakWindow { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderClusterConfigColdStorageOptions
 {
     /// <summary>Boolean to enable cold storage for an OpenSearch domain. Defaults to false. Master and ultrawarm nodes must be enabled for cold storage.</summary>
@@ -1859,6 +1949,7 @@ public partial class V1beta1DomainStatusAtProviderClusterConfigColdStorageOption
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderClusterConfigZoneAwarenessConfig
 {
     /// <summary>Number of Availability Zones for the domain to use with zone_awareness_enabled. Defaults to 2. Valid values: 2 or 3.</summary>
@@ -1866,6 +1957,7 @@ public partial class V1beta1DomainStatusAtProviderClusterConfigZoneAwarenessConf
     public double? AvailabilityZoneCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderClusterConfig
 {
     /// <summary>Configuration block containing cold storage configuration. Detailed below.</summary>
@@ -1917,6 +2009,7 @@ public partial class V1beta1DomainStatusAtProviderClusterConfig
     public bool? ZoneAwarenessEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderCognitoOptions
 {
     /// <summary>Whether Amazon Cognito authentication with Dashboard is enabled or not. Default is false.</summary>
@@ -1936,6 +2029,7 @@ public partial class V1beta1DomainStatusAtProviderCognitoOptions
     public string? UserPoolId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDomainEndpointOptions
 {
     /// <summary>Fully qualified domain for your custom endpoint.</summary>
@@ -1959,6 +2053,7 @@ public partial class V1beta1DomainStatusAtProviderDomainEndpointOptions
     public string? TlsSecurityPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderEbsOptions
 {
     /// <summary>Whether EBS volumes are attached to data nodes in the domain.</summary>
@@ -1982,6 +2077,7 @@ public partial class V1beta1DomainStatusAtProviderEbsOptions
     public string? VolumeType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderEncryptAtRest
 {
     /// <summary>Whether to enable encryption at rest. If the encrypt_at_rest block is not provided then this defaults to false. Enabling encryption on new domains requires an engine_version of OpenSearch_X.Y or Elasticsearch_5.1 or greater.</summary>
@@ -1993,6 +2089,7 @@ public partial class V1beta1DomainStatusAtProviderEncryptAtRest
     public string? KmsKeyId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderLogPublishingOptions
 {
     /// <summary>ARN of the Cloudwatch log group to which log needs to be published.</summary>
@@ -2008,6 +2105,7 @@ public partial class V1beta1DomainStatusAtProviderLogPublishingOptions
     public string? LogType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderNodeToNodeEncryption
 {
     /// <summary>Whether to enable node-to-node encryption. If the node_to_node_encryption block is not provided then this defaults to false. Enabling node-to-node encryption of a new domain requires an engine_version of OpenSearch_X.Y or Elasticsearch_6.0 or greater.</summary>
@@ -2015,6 +2113,7 @@ public partial class V1beta1DomainStatusAtProviderNodeToNodeEncryption
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderOffPeakWindowOptionsOffPeakWindowWindowStartTime
 {
     /// <summary>Starting hour of the 10-hour window for updates</summary>
@@ -2026,6 +2125,7 @@ public partial class V1beta1DomainStatusAtProviderOffPeakWindowOptionsOffPeakWin
     public double? Minutes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderOffPeakWindowOptionsOffPeakWindow
 {
     /// <summary>10h window for updates</summary>
@@ -2033,6 +2133,7 @@ public partial class V1beta1DomainStatusAtProviderOffPeakWindowOptionsOffPeakWin
     public IList<V1beta1DomainStatusAtProviderOffPeakWindowOptionsOffPeakWindowWindowStartTime>? WindowStartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderOffPeakWindowOptions
 {
     /// <summary>Enabled disabled toggle for off-peak update window.</summary>
@@ -2044,6 +2145,7 @@ public partial class V1beta1DomainStatusAtProviderOffPeakWindowOptions
     public IList<V1beta1DomainStatusAtProviderOffPeakWindowOptionsOffPeakWindow>? OffPeakWindow { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderSnapshotOptions
 {
     /// <summary>Hour during which the service takes an automated daily snapshot of the indices in the domain.</summary>
@@ -2051,6 +2153,7 @@ public partial class V1beta1DomainStatusAtProviderSnapshotOptions
     public double? AutomatedSnapshotStartHour { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderSoftwareUpdateOptions
 {
     /// <summary>Whether automatic service software updates are enabled for the domain. Defaults to false.</summary>
@@ -2058,6 +2161,7 @@ public partial class V1beta1DomainStatusAtProviderSoftwareUpdateOptions
     public bool? AutoSoftwareUpdateEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderVpcOptions
 {
     /// <summary>If the domain was created inside a VPC, the names of the availability zones the configured subnet_ids were created inside.</summary>
@@ -2077,6 +2181,7 @@ public partial class V1beta1DomainStatusAtProviderVpcOptions
     public string? VpcId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProvider
 {
     /// <summary>, are prefaced with es: for both.</summary>
@@ -2184,6 +2289,7 @@ public partial class V1beta1DomainStatusAtProvider
     public IList<V1beta1DomainStatusAtProviderVpcOptions>? VpcOptions { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1DomainStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2211,6 +2317,7 @@ public partial class V1beta1DomainStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>DomainStatus defines the observed state of Domain.</summary>
 public partial class V1beta1DomainStatus
 {
     /// <summary></summary>
@@ -2227,6 +2334,7 @@ public partial class V1beta1DomainStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Domain is the Schema for the Domains API.</summary>
 public partial class V1beta1Domain : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DomainSpec>, IStatus<V1beta1DomainStatus>
 {
     public const string KubeApiVersion = "v1beta1";

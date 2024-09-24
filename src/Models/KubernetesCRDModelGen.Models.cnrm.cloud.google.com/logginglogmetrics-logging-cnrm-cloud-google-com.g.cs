@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.logging.cnrm.cloud.google.com;
+/// <summary>The explicit buckets.</summary>
 public partial class V1beta1LoggingLogMetricSpecBucketOptionsExplicitBuckets
 {
     /// <summary>The values must be monotonically increasing.</summary>
@@ -15,6 +16,7 @@ public partial class V1beta1LoggingLogMetricSpecBucketOptionsExplicitBuckets
     public IList<double>? Bounds { get; set; }
 }
 
+/// <summary>The exponential buckets.</summary>
 public partial class V1beta1LoggingLogMetricSpecBucketOptionsExponentialBuckets
 {
     /// <summary>Must be greater than 1.</summary>
@@ -30,6 +32,7 @@ public partial class V1beta1LoggingLogMetricSpecBucketOptionsExponentialBuckets
     public double? Scale { get; set; }
 }
 
+/// <summary>The linear bucket.</summary>
 public partial class V1beta1LoggingLogMetricSpecBucketOptionsLinearBuckets
 {
     /// <summary>Must be greater than 0.</summary>
@@ -45,6 +48,7 @@ public partial class V1beta1LoggingLogMetricSpecBucketOptionsLinearBuckets
     public double? Width { get; set; }
 }
 
+/// <summary>Optional. The `bucket_options` are required when the logs-based metric is using a DISTRIBUTION value type and it describes the bucket boundaries used to create a histogram of the extracted values.</summary>
 public partial class V1beta1LoggingLogMetricSpecBucketOptions
 {
     /// <summary>The explicit buckets.</summary>
@@ -60,6 +64,7 @@ public partial class V1beta1LoggingLogMetricSpecBucketOptions
     public V1beta1LoggingLogMetricSpecBucketOptionsLinearBuckets? LinearBuckets { get; set; }
 }
 
+/// <summary>The reference to the Log Bucket that owns the Log Metric. Only Log Buckets in projects are supported. The bucket has to be in the same project as the metric. For example:projects/my-project/locations/global/buckets/my-bucket If empty, then the Log Metric is considered a non-Bucket Log Metric. Only `external` field is supported to configure the reference for now.</summary>
 public partial class V1beta1LoggingLogMetricSpecLoggingLogBucketRef
 {
     /// <summary>The external name of the referenced resource</summary>
@@ -79,6 +84,7 @@ public partial class V1beta1LoggingLogMetricSpecLoggingLogBucketRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LoggingLogMetricSpecMetricDescriptorLabels
 {
     /// <summary>Immutable. A human-readable description for the label.</summary>
@@ -94,6 +100,7 @@ public partial class V1beta1LoggingLogMetricSpecMetricDescriptorLabels
     public string? ValueType { get; set; }
 }
 
+/// <summary>Optional. Metadata which can be used to guide usage of the metric.</summary>
 public partial class V1beta1LoggingLogMetricSpecMetricDescriptorMetadata
 {
     /// <summary>The delay of data points caused by ingestion. Data points older than this age are guaranteed to be ingested and available to be read, excluding data loss due to errors.</summary>
@@ -105,6 +112,7 @@ public partial class V1beta1LoggingLogMetricSpecMetricDescriptorMetadata
     public string? SamplePeriod { get; set; }
 }
 
+/// <summary>Optional. The metric descriptor associated with the logs-based metric. If unspecified, it uses a default metric descriptor with a DELTA metric kind, INT64 value type, with no labels and a unit of "1". Such a metric counts the number of log entries matching the `filter` expression. The `name`, `type`, and `description` fields in the `metric_descriptor` are output only, and is constructed using the `name` and `description` field in the LogMetric. To create a logs-based metric that records a distribution of log values, a DELTA metric kind with a DISTRIBUTION value type must be used along with a `value_extractor` expression in the LogMetric. Each label in the metric descriptor must have a matching label name as the key and an extractor expression as the value in the `label_extractors` map. The `metric_kind` and `value_type` fields in the `metric_descriptor` cannot be updated once initially configured. New labels can be added in the `metric_descriptor`, but existing labels cannot be modified except for their description.</summary>
 public partial class V1beta1LoggingLogMetricSpecMetricDescriptor
 {
     /// <summary>A concise name for the metric, which can be displayed in user interfaces. Use sentence case without an ending period, for example "Request count". This field is optional but it is recommended to be set for any metrics associated with user-visible concepts, such as Quota.</summary>
@@ -136,6 +144,7 @@ public partial class V1beta1LoggingLogMetricSpecMetricDescriptor
     public string? ValueType { get; set; }
 }
 
+/// <summary>Immutable. The Project that this resource belongs to.</summary>
 public partial class V1beta1LoggingLogMetricSpecProjectRef
 {
     /// <summary>The `projectID` field of a project, when not managed by Config Connector.</summary>
@@ -155,6 +164,7 @@ public partial class V1beta1LoggingLogMetricSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LoggingLogMetricSpec
 {
     /// <summary>Optional. The `bucket_options` are required when the logs-based metric is using a DISTRIBUTION value type and it describes the bucket boundaries used to create a histogram of the extracted values.</summary>
@@ -198,6 +208,7 @@ public partial class V1beta1LoggingLogMetricSpec
     public string? ValueExtractor { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LoggingLogMetricStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -221,6 +232,7 @@ public partial class V1beta1LoggingLogMetricStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LoggingLogMetricStatusMetricDescriptor
 {
     /// <summary>A detailed description of the metric, which can be used in documentation.</summary>
@@ -240,6 +252,7 @@ public partial class V1beta1LoggingLogMetricStatusMetricDescriptor
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LoggingLogMetricStatus
 {
     /// <summary>Conditions represent the latest available observations of the LoggingLogMetric's current state.</summary>
@@ -264,6 +277,7 @@ public partial class V1beta1LoggingLogMetricStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>LoggingLogMetric is the Schema for the logging API</summary>
 public partial class V1beta1LoggingLogMetric : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LoggingLogMetricSpec>, IStatus<V1beta1LoggingLogMetricStatus>
 {
     public const string KubeApiVersion = "v1beta1";

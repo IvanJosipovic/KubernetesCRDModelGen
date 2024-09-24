@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containeranalysis.cnrm.cloud.google.com;
+/// <summary>Hint hints at the purpose of the attestation authority.</summary>
 public partial class V1beta1ContainerAnalysisNoteSpecAttestationHint
 {
     /// <summary>Required. The human readable name of this attestation authority, for example "qa".</summary>
@@ -15,6 +16,7 @@ public partial class V1beta1ContainerAnalysisNoteSpecAttestationHint
     public string HumanReadableName { get; set; }
 }
 
+/// <summary>A note describing an attestation role.</summary>
 public partial class V1beta1ContainerAnalysisNoteSpecAttestation
 {
     /// <summary>Hint hints at the purpose of the attestation authority.</summary>
@@ -22,6 +24,7 @@ public partial class V1beta1ContainerAnalysisNoteSpecAttestation
     public V1beta1ContainerAnalysisNoteSpecAttestationHint? Hint { get; set; }
 }
 
+/// <summary>A note describing build provenance for a verifiable build.</summary>
 public partial class V1beta1ContainerAnalysisNoteSpecBuild
 {
     /// <summary>Required. Immutable. Version of the builder which produced this build.</summary>
@@ -29,6 +32,7 @@ public partial class V1beta1ContainerAnalysisNoteSpecBuild
     public string BuilderVersion { get; set; }
 }
 
+/// <summary>A note describing something that can be deployed.</summary>
 public partial class V1beta1ContainerAnalysisNoteSpecDeployment
 {
     /// <summary>Required. Resource URI for the artifact being deployed.</summary>
@@ -36,6 +40,7 @@ public partial class V1beta1ContainerAnalysisNoteSpecDeployment
     public IList<string> ResourceUri { get; set; }
 }
 
+/// <summary>A note describing the initial analysis of a resource.</summary>
 public partial class V1beta1ContainerAnalysisNoteSpecDiscovery
 {
     /// <summary>The kind of analysis that is handled by this discovery. Possible values: NOTE_KIND_UNSPECIFIED, VULNERABILITY, BUILD, IMAGE, PACKAGE, DEPLOYMENT, DISCOVERY, ATTESTATION, UPGRADE</summary>
@@ -43,6 +48,7 @@ public partial class V1beta1ContainerAnalysisNoteSpecDiscovery
     public string AnalysisKind { get; set; }
 }
 
+/// <summary>Required. Immutable. The fingerprint of the base image.</summary>
 public partial class V1beta1ContainerAnalysisNoteSpecImageFingerprint
 {
     /// <summary>Required. The layer ID of the final layer in the Docker image's v1 representation.</summary>
@@ -54,6 +60,7 @@ public partial class V1beta1ContainerAnalysisNoteSpecImageFingerprint
     public IList<string> V2Blob { get; set; }
 }
 
+/// <summary>A note describing a base image.</summary>
 public partial class V1beta1ContainerAnalysisNoteSpecImage
 {
     /// <summary>Required. Immutable. The fingerprint of the base image.</summary>
@@ -65,6 +72,7 @@ public partial class V1beta1ContainerAnalysisNoteSpecImage
     public string ResourceUrl { get; set; }
 }
 
+/// <summary>The latest available version of this package in this distribution channel.</summary>
 public partial class V1beta1ContainerAnalysisNoteSpecPackageDistributionLatestVersion
 {
     /// <summary>Used to correct mistakes in the version numbering scheme.</summary>
@@ -88,6 +96,7 @@ public partial class V1beta1ContainerAnalysisNoteSpecPackageDistributionLatestVe
     public string? Revision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAnalysisNoteSpecPackageDistribution
 {
     /// <summary>The CPU architecture for which packages in this distribution channel were built Possible values: ARCHITECTURE_UNSPECIFIED, X86, X64</summary>
@@ -115,6 +124,7 @@ public partial class V1beta1ContainerAnalysisNoteSpecPackageDistribution
     public string? Url { get; set; }
 }
 
+/// <summary>Required for non-Windows OS. The package this Upgrade is for.</summary>
 public partial class V1beta1ContainerAnalysisNoteSpecPackage
 {
     /// <summary>The various channels by which a package is distributed.</summary>
@@ -126,6 +136,7 @@ public partial class V1beta1ContainerAnalysisNoteSpecPackage
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAnalysisNoteSpecRelatedNoteNames
 {
     /// <summary>Allowed value: The Google Cloud resource name of a `ContainerAnalysisNote` resource (format: `projects/{{project}}/notes/{{name}}`).</summary>
@@ -141,6 +152,7 @@ public partial class V1beta1ContainerAnalysisNoteSpecRelatedNoteNames
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAnalysisNoteSpecRelatedUrl
 {
     /// <summary>Label to describe usage of the URL</summary>
@@ -152,6 +164,7 @@ public partial class V1beta1ContainerAnalysisNoteSpecRelatedUrl
     public string? Url { get; set; }
 }
 
+/// <summary>The full description of the CVSSv3 for this vulnerability.</summary>
 public partial class V1beta1ContainerAnalysisNoteSpecVulnerabilityCvssV3
 {
     /// <summary> Possible values: ATTACK_COMPLEXITY_UNSPECIFIED, ATTACK_COMPLEXITY_LOW, ATTACK_COMPLEXITY_HIGH</summary>
@@ -199,6 +212,7 @@ public partial class V1beta1ContainerAnalysisNoteSpecVulnerabilityCvssV3
     public string? UserInteraction { get; set; }
 }
 
+/// <summary>The version number at the end of an interval in which this vulnerability exists. A vulnerability can affect a package between version numbers that are disjoint sets of intervals (example: ) each of which will be represented in its own Detail. If a specific affected version is provided by a vulnerability database, affected_version_start and affected_version_end will be the same in that Detail.</summary>
 public partial class V1beta1ContainerAnalysisNoteSpecVulnerabilityDetailsAffectedVersionEnd
 {
     /// <summary>Used to correct mistakes in the version numbering scheme.</summary>
@@ -222,6 +236,7 @@ public partial class V1beta1ContainerAnalysisNoteSpecVulnerabilityDetailsAffecte
     public string? Revision { get; set; }
 }
 
+/// <summary>The version number at the start of an interval in which this vulnerability exists. A vulnerability can affect a package between version numbers that are disjoint sets of intervals (example: ) each of which will be represented in its own Detail. If a specific affected version is provided by a vulnerability database, affected_version_start and affected_version_end will be the same in that Detail.</summary>
 public partial class V1beta1ContainerAnalysisNoteSpecVulnerabilityDetailsAffectedVersionStart
 {
     /// <summary>Used to correct mistakes in the version numbering scheme.</summary>
@@ -245,6 +260,7 @@ public partial class V1beta1ContainerAnalysisNoteSpecVulnerabilityDetailsAffecte
     public string? Revision { get; set; }
 }
 
+/// <summary>The distro recommended version to update to that contains a fix for this vulnerability. Setting this to VersionKind.MAXIMUM means no such version is yet available.</summary>
 public partial class V1beta1ContainerAnalysisNoteSpecVulnerabilityDetailsFixedVersion
 {
     /// <summary>Used to correct mistakes in the version numbering scheme.</summary>
@@ -268,6 +284,7 @@ public partial class V1beta1ContainerAnalysisNoteSpecVulnerabilityDetailsFixedVe
     public string? Revision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAnalysisNoteSpecVulnerabilityDetails
 {
     /// <summary>Required. The (https://cpe.mitre.org/specification/) this vulnerability affects.</summary>
@@ -319,6 +336,7 @@ public partial class V1beta1ContainerAnalysisNoteSpecVulnerabilityDetails
     public string? SourceUpdateTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAnalysisNoteSpecVulnerabilityWindowsDetailsFixingKbs
 {
     /// <summary>The KB name (generally of the form KB+ (e.g., KB123456)).</summary>
@@ -330,6 +348,7 @@ public partial class V1beta1ContainerAnalysisNoteSpecVulnerabilityWindowsDetails
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAnalysisNoteSpecVulnerabilityWindowsDetails
 {
     /// <summary>Required. The (https://cpe.mitre.org/specification/) this vulnerability affects.</summary>
@@ -349,6 +368,7 @@ public partial class V1beta1ContainerAnalysisNoteSpecVulnerabilityWindowsDetails
     public string Name { get; set; }
 }
 
+/// <summary>A note describing a package vulnerability.</summary>
 public partial class V1beta1ContainerAnalysisNoteSpecVulnerability
 {
     /// <summary>The CVSS score of this vulnerability. CVSS score is on a scale of 0 - 10 where 0 indicates low severity and 10 indicates high severity.</summary>
@@ -376,6 +396,7 @@ public partial class V1beta1ContainerAnalysisNoteSpecVulnerability
     public IList<V1beta1ContainerAnalysisNoteSpecVulnerabilityWindowsDetails>? WindowsDetails { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAnalysisNoteSpec
 {
     /// <summary>A note describing an attestation role.</summary>
@@ -431,6 +452,7 @@ public partial class V1beta1ContainerAnalysisNoteSpec
     public V1beta1ContainerAnalysisNoteSpecVulnerability? Vulnerability { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAnalysisNoteStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -454,6 +476,7 @@ public partial class V1beta1ContainerAnalysisNoteStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAnalysisNoteStatusImageFingerprint
 {
     /// <summary>Output only. The name of the image's v2 blobs computed via: ) Only the name of the final blob is kept.</summary>
@@ -461,6 +484,7 @@ public partial class V1beta1ContainerAnalysisNoteStatusImageFingerprint
     public string? V2Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAnalysisNoteStatusImage
 {
     /// <summary></summary>
@@ -468,6 +492,7 @@ public partial class V1beta1ContainerAnalysisNoteStatusImage
     public V1beta1ContainerAnalysisNoteStatusImageFingerprint? Fingerprint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAnalysisNoteStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -492,6 +517,7 @@ public partial class V1beta1ContainerAnalysisNoteStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ContainerAnalysisNote : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ContainerAnalysisNoteSpec>, IStatus<V1beta1ContainerAnalysisNoteStatus>
 {
     public const string KubeApiVersion = "v1beta1";

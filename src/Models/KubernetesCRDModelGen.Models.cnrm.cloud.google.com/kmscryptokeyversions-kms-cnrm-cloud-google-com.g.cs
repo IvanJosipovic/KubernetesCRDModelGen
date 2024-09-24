@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kms.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1alpha1KMSCryptoKeyVersionSpec
 {
     /// <summary>Immutable. The name of the cryptoKey associated with the CryptoKeyVersions. Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyring}}/cryptoKeys/{{cryptoKey}}''.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1KMSCryptoKeyVersionSpec
     public string? State { get; set; }
 }
 
+/// <summary>The certificate chains needed to validate the attestation.</summary>
 public partial class V1alpha1KMSCryptoKeyVersionStatusAttestationCertChains
 {
     /// <summary>Cavium certificate chain corresponding to the attestation.</summary>
@@ -38,6 +40,7 @@ public partial class V1alpha1KMSCryptoKeyVersionStatusAttestationCertChains
     public string? GooglePartitionCerts { get; set; }
 }
 
+/// <summary>ExternalProtectionLevelOptions stores a group of additional fields for configuring a CryptoKeyVersion that are specific to the EXTERNAL protection level and EXTERNAL_VPC protection levels.</summary>
 public partial class V1alpha1KMSCryptoKeyVersionStatusAttestationExternalProtectionLevelOptions
 {
     /// <summary>The path to the external key material on the EKM when using EkmConnection e.g., "v0/my/key". Set this field instead of externalKeyUri when using an EkmConnection.</summary>
@@ -49,6 +52,7 @@ public partial class V1alpha1KMSCryptoKeyVersionStatusAttestationExternalProtect
     public string? ExternalKeyUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1KMSCryptoKeyVersionStatusAttestation
 {
     /// <summary>The certificate chains needed to validate the attestation.</summary>
@@ -68,6 +72,7 @@ public partial class V1alpha1KMSCryptoKeyVersionStatusAttestation
     public string? Format { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1KMSCryptoKeyVersionStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -91,6 +96,7 @@ public partial class V1alpha1KMSCryptoKeyVersionStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1KMSCryptoKeyVersionStatus
 {
     /// <summary>The CryptoKeyVersionAlgorithm that this CryptoKeyVersion supports.</summary>
@@ -123,6 +129,7 @@ public partial class V1alpha1KMSCryptoKeyVersionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1KMSCryptoKeyVersion : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1KMSCryptoKeyVersionSpec>, IStatus<V1alpha1KMSCryptoKeyVersionStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

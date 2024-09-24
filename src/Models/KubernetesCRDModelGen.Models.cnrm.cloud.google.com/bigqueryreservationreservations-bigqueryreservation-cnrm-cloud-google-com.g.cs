@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigqueryreservation.cnrm.cloud.google.com;
+/// <summary>The configuration parameters for the auto scaling feature.</summary>
 public partial class V1alpha1BigQueryReservationReservationSpecAutoscale
 {
     /// <summary>The slot capacity added to this reservation when autoscale happens. Will be between [0, max_slots].</summary>
@@ -19,6 +20,7 @@ public partial class V1alpha1BigQueryReservationReservationSpecAutoscale
     public int? MaxSlots { get; set; }
 }
 
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1BigQueryReservationReservationSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -34,6 +36,7 @@ public partial class V1alpha1BigQueryReservationReservationSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1BigQueryReservationReservationSpec
 {
     /// <summary>The configuration parameters for the auto scaling feature.</summary>
@@ -73,6 +76,7 @@ public partial class V1alpha1BigQueryReservationReservationSpec
     public int SlotCapacity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1BigQueryReservationReservationStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -96,6 +100,7 @@ public partial class V1alpha1BigQueryReservationReservationStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1BigQueryReservationReservationStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -108,6 +113,7 @@ public partial class V1alpha1BigQueryReservationReservationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1BigQueryReservationReservation : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1BigQueryReservationReservationSpec>, IStatus<V1alpha1BigQueryReservationReservationStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

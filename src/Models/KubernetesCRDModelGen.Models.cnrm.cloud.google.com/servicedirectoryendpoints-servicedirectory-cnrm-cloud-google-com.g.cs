@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.servicedirectory.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1ServiceDirectoryEndpointSpecAddressRef
 {
     /// <summary>Allowed value: The `address` field of a `ComputeAddress` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1ServiceDirectoryEndpointSpecAddressRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Only the `external` field is supported to configure the reference.  Immutable. The Google Compute Engine network (VPC) of the endpoint in the format projects/&lt;project number&gt;/locations/global/networks/*.  The project must be specified by project number (project id is rejected). Incorrectly formatted networks are rejected, but no other validation is performed on this field (ex. network or project existence, reachability, or permissions).</summary>
 public partial class V1beta1ServiceDirectoryEndpointSpecNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1ServiceDirectoryEndpointSpecNetworkRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The ServiceDirectoryService that this endpoint belongs to.</summary>
 public partial class V1beta1ServiceDirectoryEndpointSpecServiceRef
 {
     /// <summary>Allowed value: The `name` field of a `ServiceDirectoryService` resource.</summary>
@@ -53,6 +56,7 @@ public partial class V1beta1ServiceDirectoryEndpointSpecServiceRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceDirectoryEndpointSpec
 {
     /// <summary></summary>
@@ -76,6 +80,7 @@ public partial class V1beta1ServiceDirectoryEndpointSpec
     public V1beta1ServiceDirectoryEndpointSpecServiceRef ServiceRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceDirectoryEndpointStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -99,6 +104,7 @@ public partial class V1beta1ServiceDirectoryEndpointStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceDirectoryEndpointStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -115,6 +121,7 @@ public partial class V1beta1ServiceDirectoryEndpointStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ServiceDirectoryEndpoint : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ServiceDirectoryEndpointSpec>, IStatus<V1beta1ServiceDirectoryEndpointStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.frontdoor.azure.com;
+/// <summary>Storage version of v1api20220501.MatchCondition Define a match condition.</summary>
 public partial class V1api20220501storageWebApplicationFirewallPolicySpecCustomRulesRulesMatchConditions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -39,6 +40,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicySpecCustomR
     public IList<string>? Transforms { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.CustomRule Defines contents of a web application rule</summary>
 public partial class V1api20220501storageWebApplicationFirewallPolicySpecCustomRulesRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -78,6 +80,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicySpecCustomR
     public string? RuleType { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.CustomRuleList Defines contents of custom rules</summary>
 public partial class V1api20220501storageWebApplicationFirewallPolicySpecCustomRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -89,6 +92,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicySpecCustomR
     public IList<V1api20220501storageWebApplicationFirewallPolicySpecCustomRulesRules>? Rules { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.ManagedRuleExclusion Exclude variables from managed rule evaluation.</summary>
 public partial class V1api20220501storageWebApplicationFirewallPolicySpecManagedRulesManagedRuleSetsExclusions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -108,6 +112,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicySpecManaged
     public string? SelectorMatchOperator { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.ManagedRuleExclusion Exclude variables from managed rule evaluation.</summary>
 public partial class V1api20220501storageWebApplicationFirewallPolicySpecManagedRulesManagedRuleSetsRuleGroupOverridesExclusions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -127,6 +132,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicySpecManaged
     public string? SelectorMatchOperator { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.ManagedRuleExclusion Exclude variables from managed rule evaluation.</summary>
 public partial class V1api20220501storageWebApplicationFirewallPolicySpecManagedRulesManagedRuleSetsRuleGroupOverridesRulesExclusions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -146,6 +152,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicySpecManaged
     public string? SelectorMatchOperator { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.ManagedRuleOverride Defines a managed rule group override setting.</summary>
 public partial class V1api20220501storageWebApplicationFirewallPolicySpecManagedRulesManagedRuleSetsRuleGroupOverridesRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -169,6 +176,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicySpecManaged
     public string? RuleId { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.ManagedRuleGroupOverride Defines a managed rule group override setting.</summary>
 public partial class V1api20220501storageWebApplicationFirewallPolicySpecManagedRulesManagedRuleSetsRuleGroupOverrides
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -188,6 +196,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicySpecManaged
     public IList<V1api20220501storageWebApplicationFirewallPolicySpecManagedRulesManagedRuleSetsRuleGroupOverridesRules>? Rules { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.ManagedRuleSet Defines a managed rule set.</summary>
 public partial class V1api20220501storageWebApplicationFirewallPolicySpecManagedRulesManagedRuleSets
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -215,6 +224,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicySpecManaged
     public string? RuleSetVersion { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.ManagedRuleSetList Defines the list of managed rule sets for the policy.</summary>
 public partial class V1api20220501storageWebApplicationFirewallPolicySpecManagedRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -226,6 +236,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicySpecManaged
     public IList<V1api20220501storageWebApplicationFirewallPolicySpecManagedRulesManagedRuleSets>? ManagedRuleSets { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20220501storageWebApplicationFirewallPolicySpecOwner
 {
     /// <summary></summary>
@@ -237,6 +248,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicySpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.PolicySettings Defines top-level WebApplicationFirewallPolicy configuration settings.</summary>
 public partial class V1api20220501storageWebApplicationFirewallPolicySpecPolicySettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -268,6 +280,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicySpecPolicyS
     public string? RequestBodyCheck { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.Sku The pricing tier of the web application firewall policy.</summary>
 public partial class V1api20220501storageWebApplicationFirewallPolicySpecSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -279,6 +292,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicySpecSku
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.FrontDoorWebApplicationFirewallPolicy_Spec</summary>
 public partial class V1api20220501storageWebApplicationFirewallPolicySpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -326,6 +340,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicySpec
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20220501storageWebApplicationFirewallPolicyStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -357,6 +372,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicyStatusCondi
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.MatchCondition_STATUS Define a match condition.</summary>
 public partial class V1api20220501storageWebApplicationFirewallPolicyStatusCustomRulesRulesMatchConditions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -388,6 +404,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicyStatusCusto
     public IList<string>? Transforms { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.CustomRule_STATUS Defines contents of a web application rule</summary>
 public partial class V1api20220501storageWebApplicationFirewallPolicyStatusCustomRulesRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -427,6 +444,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicyStatusCusto
     public string? RuleType { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.CustomRuleList_STATUS Defines contents of custom rules</summary>
 public partial class V1api20220501storageWebApplicationFirewallPolicyStatusCustomRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -438,6 +456,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicyStatusCusto
     public IList<V1api20220501storageWebApplicationFirewallPolicyStatusCustomRulesRules>? Rules { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.FrontendEndpointLink_STATUS Defines the Resource ID for a Frontend Endpoint.</summary>
 public partial class V1api20220501storageWebApplicationFirewallPolicyStatusFrontendEndpointLinks
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -449,6 +468,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicyStatusFront
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.ManagedRuleExclusion_STATUS Exclude variables from managed rule evaluation.</summary>
 public partial class V1api20220501storageWebApplicationFirewallPolicyStatusManagedRulesManagedRuleSetsExclusions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -468,6 +488,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicyStatusManag
     public string? SelectorMatchOperator { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.ManagedRuleExclusion_STATUS Exclude variables from managed rule evaluation.</summary>
 public partial class V1api20220501storageWebApplicationFirewallPolicyStatusManagedRulesManagedRuleSetsRuleGroupOverridesExclusions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -487,6 +508,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicyStatusManag
     public string? SelectorMatchOperator { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.ManagedRuleExclusion_STATUS Exclude variables from managed rule evaluation.</summary>
 public partial class V1api20220501storageWebApplicationFirewallPolicyStatusManagedRulesManagedRuleSetsRuleGroupOverridesRulesExclusions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -506,6 +528,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicyStatusManag
     public string? SelectorMatchOperator { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.ManagedRuleOverride_STATUS Defines a managed rule group override setting.</summary>
 public partial class V1api20220501storageWebApplicationFirewallPolicyStatusManagedRulesManagedRuleSetsRuleGroupOverridesRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -529,6 +552,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicyStatusManag
     public string? RuleId { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.ManagedRuleGroupOverride_STATUS Defines a managed rule group override setting.</summary>
 public partial class V1api20220501storageWebApplicationFirewallPolicyStatusManagedRulesManagedRuleSetsRuleGroupOverrides
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -548,6 +572,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicyStatusManag
     public IList<V1api20220501storageWebApplicationFirewallPolicyStatusManagedRulesManagedRuleSetsRuleGroupOverridesRules>? Rules { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.ManagedRuleSet_STATUS Defines a managed rule set.</summary>
 public partial class V1api20220501storageWebApplicationFirewallPolicyStatusManagedRulesManagedRuleSets
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -575,6 +600,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicyStatusManag
     public string? RuleSetVersion { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.ManagedRuleSetList_STATUS Defines the list of managed rule sets for the policy.</summary>
 public partial class V1api20220501storageWebApplicationFirewallPolicyStatusManagedRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -586,6 +612,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicyStatusManag
     public IList<V1api20220501storageWebApplicationFirewallPolicyStatusManagedRulesManagedRuleSets>? ManagedRuleSets { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.PolicySettings_STATUS Defines top-level WebApplicationFirewallPolicy configuration settings.</summary>
 public partial class V1api20220501storageWebApplicationFirewallPolicyStatusPolicySettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -617,6 +644,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicyStatusPolic
     public string? RequestBodyCheck { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.RoutingRuleLink_STATUS Defines the Resource ID for a Routing Rule.</summary>
 public partial class V1api20220501storageWebApplicationFirewallPolicyStatusRoutingRuleLinks
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -628,6 +656,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicyStatusRouti
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.SecurityPolicyLink_STATUS Defines the Resource ID for a Security Policy.</summary>
 public partial class V1api20220501storageWebApplicationFirewallPolicyStatusSecurityPolicyLinks
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -639,6 +668,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicyStatusSecur
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.Sku_STATUS The pricing tier of the web application firewall policy.</summary>
 public partial class V1api20220501storageWebApplicationFirewallPolicyStatusSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -650,6 +680,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicyStatusSku
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.FrontDoorWebApplicationFirewallPolicy_STATUS</summary>
 public partial class V1api20220501storageWebApplicationFirewallPolicyStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -722,6 +753,7 @@ public partial class V1api20220501storageWebApplicationFirewallPolicyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20220501.WebApplicationFirewallPolicy Generator information: - Generated from: /frontdoor/resource-manager/Microsoft.Network/stable/2022-05-01/webapplicationfirewall.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/FrontDoorWebApplicationFirewallPolicies/{policyName}</summary>
 public partial class V1api20220501storageWebApplicationFirewallPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20220501storageWebApplicationFirewallPolicySpec>, IStatus<V1api20220501storageWebApplicationFirewallPolicyStatus>
 {
     public const string KubeApiVersion = "v1api20220501storage";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary>A nested object resource.</summary>
 public partial class V1beta1ComputeHealthCheckSpecGrpcHealthCheck
 {
     /// <summary>The gRPC service name for the health check. The value of grpcServiceName has the following meanings by convention:   - Empty serviceName means the overall status of all services at the backend.   - Non-empty serviceName means the health of that gRPC service, as defined by the owner of the service. The grpcServiceName can only be ASCII.</summary>
@@ -27,6 +28,7 @@ public partial class V1beta1ComputeHealthCheckSpecGrpcHealthCheck
     public string? PortSpecification { get; set; }
 }
 
+/// <summary>A nested object resource.</summary>
 public partial class V1beta1ComputeHealthCheckSpecHttp2HealthCheck
 {
     /// <summary>The value of the host header in the HTTP2 health check request. If left empty (default value), the public IP on behalf of which this health check is performed will be used.</summary>
@@ -58,6 +60,7 @@ public partial class V1beta1ComputeHealthCheckSpecHttp2HealthCheck
     public string? Response { get; set; }
 }
 
+/// <summary>A nested object resource.</summary>
 public partial class V1beta1ComputeHealthCheckSpecHttpHealthCheck
 {
     /// <summary>The value of the host header in the HTTP health check request. If left empty (default value), the public IP on behalf of which this health check is performed will be used.</summary>
@@ -89,6 +92,7 @@ public partial class V1beta1ComputeHealthCheckSpecHttpHealthCheck
     public string? Response { get; set; }
 }
 
+/// <summary>A nested object resource.</summary>
 public partial class V1beta1ComputeHealthCheckSpecHttpsHealthCheck
 {
     /// <summary>The value of the host header in the HTTPS health check request. If left empty (default value), the public IP on behalf of which this health check is performed will be used.</summary>
@@ -120,6 +124,7 @@ public partial class V1beta1ComputeHealthCheckSpecHttpsHealthCheck
     public string? Response { get; set; }
 }
 
+/// <summary>Configure logging on this health check.</summary>
 public partial class V1beta1ComputeHealthCheckSpecLogConfig
 {
     /// <summary>Indicates whether or not to export logs. This is false by default, which means no health check logging will be done.</summary>
@@ -127,6 +132,7 @@ public partial class V1beta1ComputeHealthCheckSpecLogConfig
     public bool? Enable { get; set; }
 }
 
+/// <summary>A nested object resource.</summary>
 public partial class V1beta1ComputeHealthCheckSpecSslHealthCheck
 {
     /// <summary>The TCP port number for the SSL health check request. The default value is 443.</summary>
@@ -154,6 +160,7 @@ public partial class V1beta1ComputeHealthCheckSpecSslHealthCheck
     public string? Response { get; set; }
 }
 
+/// <summary>A nested object resource.</summary>
 public partial class V1beta1ComputeHealthCheckSpecTcpHealthCheck
 {
     /// <summary>The TCP port number for the TCP health check request. The default value is 443.</summary>
@@ -181,6 +188,7 @@ public partial class V1beta1ComputeHealthCheckSpecTcpHealthCheck
     public string? Response { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeHealthCheckSpec
 {
     /// <summary>How often (in seconds) to send a health check. The default value is 5 seconds.</summary>
@@ -240,6 +248,7 @@ public partial class V1beta1ComputeHealthCheckSpec
     public int? UnhealthyThreshold { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeHealthCheckStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -263,6 +272,7 @@ public partial class V1beta1ComputeHealthCheckStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeHealthCheckStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -287,6 +297,7 @@ public partial class V1beta1ComputeHealthCheckStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ComputeHealthCheck : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeHealthCheckSpec>, IStatus<V1beta1ComputeHealthCheckStatus>
 {
     public const string KubeApiVersion = "v1beta1";

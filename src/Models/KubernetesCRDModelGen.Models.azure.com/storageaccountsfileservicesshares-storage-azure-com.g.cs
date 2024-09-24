@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.azure.com;
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a storage.azure.com/StorageAccountsFileService resource</summary>
 public partial class V1api20230101storageStorageAccountsFileServicesShareSpecOwner
 {
     /// <summary></summary>
@@ -19,6 +20,7 @@ public partial class V1api20230101storageStorageAccountsFileServicesShareSpecOwn
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.AccessPolicy</summary>
 public partial class V1api20230101storageStorageAccountsFileServicesShareSpecSignedIdentifiersAccessPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -38,6 +40,7 @@ public partial class V1api20230101storageStorageAccountsFileServicesShareSpecSig
     public string? StartTime { get; set; }
 }
 
+/// <summary>Reference: An unique identifier of the stored access policy.</summary>
 public partial class V1api20230101storageStorageAccountsFileServicesShareSpecSignedIdentifiersReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -57,6 +60,7 @@ public partial class V1api20230101storageStorageAccountsFileServicesShareSpecSig
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.SignedIdentifier</summary>
 public partial class V1api20230101storageStorageAccountsFileServicesShareSpecSignedIdentifiers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -72,6 +76,7 @@ public partial class V1api20230101storageStorageAccountsFileServicesShareSpecSig
     public V1api20230101storageStorageAccountsFileServicesShareSpecSignedIdentifiersReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.StorageAccounts_FileServices_Share_Spec</summary>
 public partial class V1api20230101storageStorageAccountsFileServicesShareSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -115,6 +120,7 @@ public partial class V1api20230101storageStorageAccountsFileServicesShareSpec
     public IList<V1api20230101storageStorageAccountsFileServicesShareSpecSignedIdentifiers>? SignedIdentifiers { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20230101storageStorageAccountsFileServicesShareStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -146,6 +152,7 @@ public partial class V1api20230101storageStorageAccountsFileServicesShareStatusC
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.AccessPolicy_STATUS</summary>
 public partial class V1api20230101storageStorageAccountsFileServicesShareStatusSignedIdentifiersAccessPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -165,6 +172,7 @@ public partial class V1api20230101storageStorageAccountsFileServicesShareStatusS
     public string? StartTime { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.SignedIdentifier_STATUS</summary>
 public partial class V1api20230101storageStorageAccountsFileServicesShareStatusSignedIdentifiers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -180,6 +188,7 @@ public partial class V1api20230101storageStorageAccountsFileServicesShareStatusS
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.StorageAccounts_FileServices_Share_STATUS</summary>
 public partial class V1api20230101storageStorageAccountsFileServicesShareStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -280,6 +289,7 @@ public partial class V1api20230101storageStorageAccountsFileServicesShareStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20230101.StorageAccountsFileServicesShare Generator information: - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2023-01-01/file.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/fileServices/default/shares/{shareName}</summary>
 public partial class V1api20230101storageStorageAccountsFileServicesShare : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230101storageStorageAccountsFileServicesShareSpec>, IStatus<V1api20230101storageStorageAccountsFileServicesShareStatus>
 {
     public const string KubeApiVersion = "v1api20230101storage";

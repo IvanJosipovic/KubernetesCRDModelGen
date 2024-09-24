@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.argoproj.io;
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecArgsValueFromFieldRef
 {
     /// <summary></summary>
@@ -15,6 +16,7 @@ public partial class V1alpha1AnalysisRunSpecArgsValueFromFieldRef
     public string FieldPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecArgsValueFromSecretKeyRef
 {
     /// <summary></summary>
@@ -26,6 +28,7 @@ public partial class V1alpha1AnalysisRunSpecArgsValueFromSecretKeyRef
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecArgsValueFrom
 {
     /// <summary></summary>
@@ -37,6 +40,7 @@ public partial class V1alpha1AnalysisRunSpecArgsValueFrom
     public V1alpha1AnalysisRunSpecArgsValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecArgs
 {
     /// <summary></summary>
@@ -52,6 +56,7 @@ public partial class V1alpha1AnalysisRunSpecArgs
     public V1alpha1AnalysisRunSpecArgsValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecDryRun
 {
     /// <summary></summary>
@@ -59,6 +64,7 @@ public partial class V1alpha1AnalysisRunSpecDryRun
     public string MetricName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMeasurementRetention
 {
     /// <summary></summary>
@@ -70,6 +76,7 @@ public partial class V1alpha1AnalysisRunSpecMeasurementRetention
     public string MetricName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderCloudWatchMetricDataQueriesMetricStatMetricDimensions
 {
     /// <summary></summary>
@@ -81,6 +88,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderCloudWatchMetricDataQ
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderCloudWatchMetricDataQueriesMetricStatMetric
 {
     /// <summary></summary>
@@ -96,6 +104,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderCloudWatchMetricDataQ
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderCloudWatchMetricDataQueriesMetricStat
 {
     /// <summary></summary>
@@ -115,6 +124,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderCloudWatchMetricDataQ
     public string? Unit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderCloudWatchMetricDataQueries
 {
     /// <summary></summary>
@@ -142,6 +152,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderCloudWatchMetricDataQ
     public bool? ReturnData { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderCloudWatch
 {
     /// <summary></summary>
@@ -194,6 +205,7 @@ public enum V1alpha1AnalysisRunSpecMetricsProviderDatadogApiVersionEnum
     V2
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderDatadog
 {
     /// <summary></summary>
@@ -223,6 +235,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderDatadog
     public string? Query { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderGraphite
 {
     /// <summary></summary>
@@ -234,6 +247,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderGraphite
     public string? Query { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderInfluxdb
 {
     /// <summary></summary>
@@ -245,6 +259,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderInfluxdb
     public string? Query { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobMetadata
 {
     /// <summary></summary>
@@ -256,6 +271,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobMetadata
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecPodFailurePolicyRulesOnExitCodes
 {
     /// <summary></summary>
@@ -271,6 +287,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecPodFailurePoli
     public IList<int> Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecPodFailurePolicyRulesOnPodConditions
 {
     /// <summary></summary>
@@ -282,6 +299,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecPodFailurePoli
     public string Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecPodFailurePolicyRules
 {
     /// <summary></summary>
@@ -297,6 +315,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecPodFailurePoli
     public IList<V1alpha1AnalysisRunSpecMetricsProviderJobSpecPodFailurePolicyRulesOnPodConditions>? OnPodConditions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecPodFailurePolicy
 {
     /// <summary></summary>
@@ -304,6 +323,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecPodFailurePoli
     public IList<V1alpha1AnalysisRunSpecMetricsProviderJobSpecPodFailurePolicyRules> Rules { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -319,6 +339,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecSelectorMatchE
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecSelector
 {
     /// <summary></summary>
@@ -330,6 +351,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecSelector
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateMetadata
 {
     /// <summary></summary>
@@ -341,6 +363,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateMetada
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchExpressions
 {
     /// <summary></summary>
@@ -356,6 +379,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAf
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchFields
 {
     /// <summary></summary>
@@ -371,6 +395,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAf
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreference
 {
     /// <summary></summary>
@@ -382,6 +407,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAf
     public IList<V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchFields>? MatchFields { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary></summary>
@@ -393,6 +419,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAf
     public int Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchExpressions
 {
     /// <summary></summary>
@@ -408,6 +435,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAf
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchFields
 {
     /// <summary></summary>
@@ -423,6 +451,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAf
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTerms
 {
     /// <summary></summary>
@@ -434,6 +463,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAf
     public IList<V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchFields>? MatchFields { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary></summary>
@@ -441,6 +471,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAf
     public IList<V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTerms> NodeSelectorTerms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityNodeAffinity
 {
     /// <summary></summary>
@@ -452,6 +483,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAf
     public V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecution? RequiredDuringSchedulingIgnoredDuringExecution { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -467,6 +499,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAf
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector
 {
     /// <summary></summary>
@@ -478,6 +511,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAf
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -493,6 +527,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAf
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector
 {
     /// <summary></summary>
@@ -504,6 +539,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAf
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm
 {
     /// <summary></summary>
@@ -531,6 +567,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAf
     public string TopologyKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary></summary>
@@ -542,6 +579,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAf
     public int Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -557,6 +595,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAf
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector
 {
     /// <summary></summary>
@@ -568,6 +607,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAf
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -583,6 +623,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAf
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector
 {
     /// <summary></summary>
@@ -594,6 +635,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAf
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary></summary>
@@ -621,6 +663,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAf
     public string TopologyKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityPodAffinity
 {
     /// <summary></summary>
@@ -632,6 +675,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAf
     public IList<V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecution>? RequiredDuringSchedulingIgnoredDuringExecution { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -647,6 +691,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAf
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector
 {
     /// <summary></summary>
@@ -658,6 +703,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAf
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -673,6 +719,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAf
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector
 {
     /// <summary></summary>
@@ -684,6 +731,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAf
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm
 {
     /// <summary></summary>
@@ -711,6 +759,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAf
     public string TopologyKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary></summary>
@@ -722,6 +771,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAf
     public int Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -737,6 +787,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAf
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector
 {
     /// <summary></summary>
@@ -748,6 +799,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAf
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -763,6 +815,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAf
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector
 {
     /// <summary></summary>
@@ -774,6 +827,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAf
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary></summary>
@@ -801,6 +855,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAf
     public string TopologyKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityPodAntiAffinity
 {
     /// <summary></summary>
@@ -812,6 +867,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAf
     public IList<V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecution>? RequiredDuringSchedulingIgnoredDuringExecution { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinity
 {
     /// <summary></summary>
@@ -827,6 +883,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAf
     public V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecAffinityPodAntiAffinity? PodAntiAffinity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersEnvValueFromConfigMapKeyRef
 {
     /// <summary></summary>
@@ -842,6 +899,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersEnvValueFromFieldRef
 {
     /// <summary></summary>
@@ -853,6 +911,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public string FieldPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersEnvValueFromResourceFieldRef
 {
     /// <summary></summary>
@@ -868,6 +927,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public string Resource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersEnvValueFromSecretKeyRef
 {
     /// <summary></summary>
@@ -883,6 +943,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersEnvValueFrom
 {
     /// <summary></summary>
@@ -902,6 +963,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersEnvValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersEnv
 {
     /// <summary></summary>
@@ -917,6 +979,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersEnvValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersEnvFromConfigMapRef
 {
     /// <summary></summary>
@@ -928,6 +991,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersEnvFromSecretRef
 {
     /// <summary></summary>
@@ -939,6 +1003,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersEnvFrom
 {
     /// <summary></summary>
@@ -954,6 +1019,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersEnvFromSecretRef? SecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersLifecyclePostStartExec
 {
     /// <summary></summary>
@@ -961,6 +1027,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public IList<string>? Command { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersLifecyclePostStartHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -972,6 +1039,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersLifecyclePostStartHttpGet
 {
     /// <summary></summary>
@@ -995,6 +1063,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersLifecyclePostStartSleep
 {
     /// <summary></summary>
@@ -1002,6 +1071,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public long Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersLifecyclePostStartTcpSocket
 {
     /// <summary></summary>
@@ -1013,6 +1083,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersLifecyclePostStart
 {
     /// <summary></summary>
@@ -1032,6 +1103,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersLifecyclePostStartTcpSocket? TcpSocket { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersLifecyclePreStopExec
 {
     /// <summary></summary>
@@ -1039,6 +1111,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public IList<string>? Command { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersLifecyclePreStopHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -1050,6 +1123,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersLifecyclePreStopHttpGet
 {
     /// <summary></summary>
@@ -1073,6 +1147,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersLifecyclePreStopSleep
 {
     /// <summary></summary>
@@ -1080,6 +1155,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public long Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersLifecyclePreStopTcpSocket
 {
     /// <summary></summary>
@@ -1091,6 +1167,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersLifecyclePreStop
 {
     /// <summary></summary>
@@ -1110,6 +1187,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersLifecyclePreStopTcpSocket? TcpSocket { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersLifecycle
 {
     /// <summary></summary>
@@ -1121,6 +1199,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersLifecyclePreStop? PreStop { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersLivenessProbeExec
 {
     /// <summary></summary>
@@ -1128,6 +1207,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public IList<string>? Command { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersLivenessProbeGrpc
 {
     /// <summary></summary>
@@ -1139,6 +1219,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public string? Service { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersLivenessProbeHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -1150,6 +1231,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersLivenessProbeHttpGet
 {
     /// <summary></summary>
@@ -1173,6 +1255,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersLivenessProbeTcpSocket
 {
     /// <summary></summary>
@@ -1184,6 +1267,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersLivenessProbe
 {
     /// <summary></summary>
@@ -1227,6 +1311,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public int? TimeoutSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersPorts
 {
     /// <summary></summary>
@@ -1250,6 +1335,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public string? Protocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersReadinessProbeExec
 {
     /// <summary></summary>
@@ -1257,6 +1343,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public IList<string>? Command { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersReadinessProbeGrpc
 {
     /// <summary></summary>
@@ -1268,6 +1355,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public string? Service { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersReadinessProbeHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -1279,6 +1367,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersReadinessProbeHttpGet
 {
     /// <summary></summary>
@@ -1302,6 +1391,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersReadinessProbeTcpSocket
 {
     /// <summary></summary>
@@ -1313,6 +1403,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersReadinessProbe
 {
     /// <summary></summary>
@@ -1356,6 +1447,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public int? TimeoutSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersResizePolicy
 {
     /// <summary></summary>
@@ -1367,6 +1459,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public string RestartPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersResourcesClaims
 {
     /// <summary></summary>
@@ -1374,6 +1467,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersResources
 {
     /// <summary></summary>
@@ -1389,6 +1483,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public JsonNode? Requests { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersSecurityContextCapabilities
 {
     /// <summary></summary>
@@ -1400,6 +1495,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public IList<string>? Drop { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersSecurityContextSeLinuxOptions
 {
     /// <summary></summary>
@@ -1419,6 +1515,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public string? User { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersSecurityContextSeccompProfile
 {
     /// <summary></summary>
@@ -1430,6 +1527,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public string Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersSecurityContextWindowsOptions
 {
     /// <summary></summary>
@@ -1449,6 +1547,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public string? RunAsUserName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersSecurityContext
 {
     /// <summary></summary>
@@ -1496,6 +1595,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersSecurityContextWindowsOptions? WindowsOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersStartupProbeExec
 {
     /// <summary></summary>
@@ -1503,6 +1603,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public IList<string>? Command { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersStartupProbeGrpc
 {
     /// <summary></summary>
@@ -1514,6 +1615,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public string? Service { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersStartupProbeHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -1525,6 +1627,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersStartupProbeHttpGet
 {
     /// <summary></summary>
@@ -1548,6 +1651,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersStartupProbeTcpSocket
 {
     /// <summary></summary>
@@ -1559,6 +1663,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersStartupProbe
 {
     /// <summary></summary>
@@ -1602,6 +1707,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public int? TimeoutSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersVolumeDevices
 {
     /// <summary></summary>
@@ -1613,6 +1719,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainersVolumeMounts
 {
     /// <summary></summary>
@@ -1640,6 +1747,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public string? SubPathExpr { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecContainers
 {
     /// <summary></summary>
@@ -1739,6 +1847,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecCo
     public string? WorkingDir { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecDnsConfigOptions
 {
     /// <summary></summary>
@@ -1750,6 +1859,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecDn
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecDnsConfig
 {
     /// <summary></summary>
@@ -1765,6 +1875,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecDn
     public IList<string>? Searches { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersEnvValueFromConfigMapKeyRef
 {
     /// <summary></summary>
@@ -1780,6 +1891,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersEnvValueFromFieldRef
 {
     /// <summary></summary>
@@ -1791,6 +1903,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public string FieldPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersEnvValueFromResourceFieldRef
 {
     /// <summary></summary>
@@ -1806,6 +1919,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public string Resource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersEnvValueFromSecretKeyRef
 {
     /// <summary></summary>
@@ -1821,6 +1935,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersEnvValueFrom
 {
     /// <summary></summary>
@@ -1840,6 +1955,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersEnvValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersEnv
 {
     /// <summary></summary>
@@ -1855,6 +1971,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersEnvValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersEnvFromConfigMapRef
 {
     /// <summary></summary>
@@ -1866,6 +1983,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersEnvFromSecretRef
 {
     /// <summary></summary>
@@ -1877,6 +1995,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersEnvFrom
 {
     /// <summary></summary>
@@ -1892,6 +2011,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersEnvFromSecretRef? SecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLifecyclePostStartExec
 {
     /// <summary></summary>
@@ -1899,6 +2019,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public IList<string>? Command { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLifecyclePostStartHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -1910,6 +2031,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLifecyclePostStartHttpGet
 {
     /// <summary></summary>
@@ -1933,6 +2055,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLifecyclePostStartSleep
 {
     /// <summary></summary>
@@ -1940,6 +2063,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public long Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLifecyclePostStartTcpSocket
 {
     /// <summary></summary>
@@ -1951,6 +2075,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLifecyclePostStart
 {
     /// <summary></summary>
@@ -1970,6 +2095,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLifecyclePostStartTcpSocket? TcpSocket { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLifecyclePreStopExec
 {
     /// <summary></summary>
@@ -1977,6 +2103,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public IList<string>? Command { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLifecyclePreStopHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -1988,6 +2115,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLifecyclePreStopHttpGet
 {
     /// <summary></summary>
@@ -2011,6 +2139,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLifecyclePreStopSleep
 {
     /// <summary></summary>
@@ -2018,6 +2147,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public long Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLifecyclePreStopTcpSocket
 {
     /// <summary></summary>
@@ -2029,6 +2159,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLifecyclePreStop
 {
     /// <summary></summary>
@@ -2048,6 +2179,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLifecyclePreStopTcpSocket? TcpSocket { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLifecycle
 {
     /// <summary></summary>
@@ -2059,6 +2191,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLifecyclePreStop? PreStop { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLivenessProbeExec
 {
     /// <summary></summary>
@@ -2066,6 +2199,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public IList<string>? Command { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLivenessProbeGrpc
 {
     /// <summary></summary>
@@ -2077,6 +2211,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public string? Service { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLivenessProbeHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -2088,6 +2223,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLivenessProbeHttpGet
 {
     /// <summary></summary>
@@ -2111,6 +2247,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLivenessProbeTcpSocket
 {
     /// <summary></summary>
@@ -2122,6 +2259,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersLivenessProbe
 {
     /// <summary></summary>
@@ -2165,6 +2303,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public int? TimeoutSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersPorts
 {
     /// <summary></summary>
@@ -2188,6 +2327,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public string? Protocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersReadinessProbeExec
 {
     /// <summary></summary>
@@ -2195,6 +2335,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public IList<string>? Command { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersReadinessProbeGrpc
 {
     /// <summary></summary>
@@ -2206,6 +2347,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public string? Service { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersReadinessProbeHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -2217,6 +2359,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersReadinessProbeHttpGet
 {
     /// <summary></summary>
@@ -2240,6 +2383,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersReadinessProbeTcpSocket
 {
     /// <summary></summary>
@@ -2251,6 +2395,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersReadinessProbe
 {
     /// <summary></summary>
@@ -2294,6 +2439,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public int? TimeoutSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersResizePolicy
 {
     /// <summary></summary>
@@ -2305,6 +2451,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public string RestartPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersResourcesClaims
 {
     /// <summary></summary>
@@ -2312,6 +2459,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersResources
 {
     /// <summary></summary>
@@ -2327,6 +2475,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public JsonNode? Requests { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersSecurityContextCapabilities
 {
     /// <summary></summary>
@@ -2338,6 +2487,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public IList<string>? Drop { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersSecurityContextSeLinuxOptions
 {
     /// <summary></summary>
@@ -2357,6 +2507,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public string? User { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersSecurityContextSeccompProfile
 {
     /// <summary></summary>
@@ -2368,6 +2519,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public string Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersSecurityContextWindowsOptions
 {
     /// <summary></summary>
@@ -2387,6 +2539,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public string? RunAsUserName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersSecurityContext
 {
     /// <summary></summary>
@@ -2434,6 +2587,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersSecurityContextWindowsOptions? WindowsOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersStartupProbeExec
 {
     /// <summary></summary>
@@ -2441,6 +2595,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public IList<string>? Command { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersStartupProbeGrpc
 {
     /// <summary></summary>
@@ -2452,6 +2607,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public string? Service { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersStartupProbeHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -2463,6 +2619,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersStartupProbeHttpGet
 {
     /// <summary></summary>
@@ -2486,6 +2643,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersStartupProbeTcpSocket
 {
     /// <summary></summary>
@@ -2497,6 +2655,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersStartupProbe
 {
     /// <summary></summary>
@@ -2540,6 +2699,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public int? TimeoutSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersVolumeDevices
 {
     /// <summary></summary>
@@ -2551,6 +2711,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainersVolumeMounts
 {
     /// <summary></summary>
@@ -2578,6 +2739,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public string? SubPathExpr { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEphemeralContainers
 {
     /// <summary></summary>
@@ -2681,6 +2843,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecEp
     public string? WorkingDir { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecHostAliases
 {
     /// <summary></summary>
@@ -2692,6 +2855,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecHo
     public string? Ip { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecImagePullSecrets
 {
     /// <summary></summary>
@@ -2699,6 +2863,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIm
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersEnvValueFromConfigMapKeyRef
 {
     /// <summary></summary>
@@ -2714,6 +2879,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersEnvValueFromFieldRef
 {
     /// <summary></summary>
@@ -2725,6 +2891,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public string FieldPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersEnvValueFromResourceFieldRef
 {
     /// <summary></summary>
@@ -2740,6 +2907,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public string Resource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersEnvValueFromSecretKeyRef
 {
     /// <summary></summary>
@@ -2755,6 +2923,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersEnvValueFrom
 {
     /// <summary></summary>
@@ -2774,6 +2943,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersEnvValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersEnv
 {
     /// <summary></summary>
@@ -2789,6 +2959,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersEnvValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersEnvFromConfigMapRef
 {
     /// <summary></summary>
@@ -2800,6 +2971,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersEnvFromSecretRef
 {
     /// <summary></summary>
@@ -2811,6 +2983,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersEnvFrom
 {
     /// <summary></summary>
@@ -2826,6 +2999,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersEnvFromSecretRef? SecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersLifecyclePostStartExec
 {
     /// <summary></summary>
@@ -2833,6 +3007,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public IList<string>? Command { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersLifecyclePostStartHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -2844,6 +3019,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersLifecyclePostStartHttpGet
 {
     /// <summary></summary>
@@ -2867,6 +3043,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersLifecyclePostStartSleep
 {
     /// <summary></summary>
@@ -2874,6 +3051,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public long Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersLifecyclePostStartTcpSocket
 {
     /// <summary></summary>
@@ -2885,6 +3063,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersLifecyclePostStart
 {
     /// <summary></summary>
@@ -2904,6 +3083,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersLifecyclePostStartTcpSocket? TcpSocket { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersLifecyclePreStopExec
 {
     /// <summary></summary>
@@ -2911,6 +3091,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public IList<string>? Command { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersLifecyclePreStopHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -2922,6 +3103,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersLifecyclePreStopHttpGet
 {
     /// <summary></summary>
@@ -2945,6 +3127,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersLifecyclePreStopSleep
 {
     /// <summary></summary>
@@ -2952,6 +3135,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public long Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersLifecyclePreStopTcpSocket
 {
     /// <summary></summary>
@@ -2963,6 +3147,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersLifecyclePreStop
 {
     /// <summary></summary>
@@ -2982,6 +3167,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersLifecyclePreStopTcpSocket? TcpSocket { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersLifecycle
 {
     /// <summary></summary>
@@ -2993,6 +3179,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersLifecyclePreStop? PreStop { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersLivenessProbeExec
 {
     /// <summary></summary>
@@ -3000,6 +3187,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public IList<string>? Command { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersLivenessProbeGrpc
 {
     /// <summary></summary>
@@ -3011,6 +3199,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public string? Service { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersLivenessProbeHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -3022,6 +3211,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersLivenessProbeHttpGet
 {
     /// <summary></summary>
@@ -3045,6 +3235,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersLivenessProbeTcpSocket
 {
     /// <summary></summary>
@@ -3056,6 +3247,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersLivenessProbe
 {
     /// <summary></summary>
@@ -3099,6 +3291,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public int? TimeoutSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersPorts
 {
     /// <summary></summary>
@@ -3122,6 +3315,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public string? Protocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersReadinessProbeExec
 {
     /// <summary></summary>
@@ -3129,6 +3323,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public IList<string>? Command { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersReadinessProbeGrpc
 {
     /// <summary></summary>
@@ -3140,6 +3335,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public string? Service { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersReadinessProbeHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -3151,6 +3347,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersReadinessProbeHttpGet
 {
     /// <summary></summary>
@@ -3174,6 +3371,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersReadinessProbeTcpSocket
 {
     /// <summary></summary>
@@ -3185,6 +3383,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersReadinessProbe
 {
     /// <summary></summary>
@@ -3228,6 +3427,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public int? TimeoutSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersResizePolicy
 {
     /// <summary></summary>
@@ -3239,6 +3439,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public string RestartPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersResourcesClaims
 {
     /// <summary></summary>
@@ -3246,6 +3447,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersResources
 {
     /// <summary></summary>
@@ -3261,6 +3463,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public JsonNode? Requests { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersSecurityContextCapabilities
 {
     /// <summary></summary>
@@ -3272,6 +3475,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public IList<string>? Drop { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersSecurityContextSeLinuxOptions
 {
     /// <summary></summary>
@@ -3291,6 +3495,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public string? User { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersSecurityContextSeccompProfile
 {
     /// <summary></summary>
@@ -3302,6 +3507,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public string Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersSecurityContextWindowsOptions
 {
     /// <summary></summary>
@@ -3321,6 +3527,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public string? RunAsUserName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersSecurityContext
 {
     /// <summary></summary>
@@ -3368,6 +3575,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersSecurityContextWindowsOptions? WindowsOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersStartupProbeExec
 {
     /// <summary></summary>
@@ -3375,6 +3583,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public IList<string>? Command { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersStartupProbeGrpc
 {
     /// <summary></summary>
@@ -3386,6 +3595,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public string? Service { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersStartupProbeHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -3397,6 +3607,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersStartupProbeHttpGet
 {
     /// <summary></summary>
@@ -3420,6 +3631,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersStartupProbeTcpSocket
 {
     /// <summary></summary>
@@ -3431,6 +3643,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersStartupProbe
 {
     /// <summary></summary>
@@ -3474,6 +3687,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public int? TimeoutSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersVolumeDevices
 {
     /// <summary></summary>
@@ -3485,6 +3699,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainersVolumeMounts
 {
     /// <summary></summary>
@@ -3512,6 +3727,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public string? SubPathExpr { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecInitContainers
 {
     /// <summary></summary>
@@ -3611,6 +3827,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecIn
     public string? WorkingDir { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecOs
 {
     /// <summary></summary>
@@ -3618,6 +3835,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecOs
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecReadinessGates
 {
     /// <summary></summary>
@@ -3625,6 +3843,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecRe
     public string ConditionType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecResourceClaimsSource
 {
     /// <summary></summary>
@@ -3636,6 +3855,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecRe
     public string? ResourceClaimTemplateName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecResourceClaims
 {
     /// <summary></summary>
@@ -3647,6 +3867,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecRe
     public V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecResourceClaimsSource? Source { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecSchedulingGates
 {
     /// <summary></summary>
@@ -3654,6 +3875,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecSc
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecSecurityContextSeLinuxOptions
 {
     /// <summary></summary>
@@ -3673,6 +3895,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecSe
     public string? User { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecSecurityContextSeccompProfile
 {
     /// <summary></summary>
@@ -3684,6 +3907,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecSe
     public string Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecSecurityContextSysctls
 {
     /// <summary></summary>
@@ -3695,6 +3919,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecSe
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecSecurityContextWindowsOptions
 {
     /// <summary></summary>
@@ -3714,6 +3939,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecSe
     public string? RunAsUserName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecSecurityContext
 {
     /// <summary></summary>
@@ -3757,6 +3983,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecSe
     public V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecSecurityContextWindowsOptions? WindowsOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecTolerations
 {
     /// <summary></summary>
@@ -3780,6 +4007,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecTo
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecTopologySpreadConstraintsLabelSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -3795,6 +4023,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecTo
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecTopologySpreadConstraintsLabelSelector
 {
     /// <summary></summary>
@@ -3806,6 +4035,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecTo
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecTopologySpreadConstraints
 {
     /// <summary></summary>
@@ -3841,6 +4071,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpecTo
     public string WhenUnsatisfiable { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpec
 {
     /// <summary></summary>
@@ -4000,6 +4231,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpec
     public JsonNode? Volumes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplate
 {
     /// <summary></summary>
@@ -4011,6 +4243,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplate
     public V1alpha1AnalysisRunSpecMetricsProviderJobSpecTemplateSpec? Spec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpec
 {
     /// <summary></summary>
@@ -4070,6 +4303,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJobSpec
     public int? TtlSecondsAfterFinished { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderJob
 {
     /// <summary></summary>
@@ -4081,6 +4315,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderJob
     public V1alpha1AnalysisRunSpecMetricsProviderJobSpec Spec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderKayentaScopesControlScope
 {
     /// <summary></summary>
@@ -4104,6 +4339,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderKayentaScopesControlS
     public long Step { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderKayentaScopesExperimentScope
 {
     /// <summary></summary>
@@ -4127,6 +4363,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderKayentaScopesExperime
     public long Step { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderKayentaScopes
 {
     /// <summary></summary>
@@ -4142,6 +4379,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderKayentaScopes
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderKayentaThreshold
 {
     /// <summary></summary>
@@ -4153,6 +4391,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderKayentaThreshold
     public long Pass { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderKayenta
 {
     /// <summary></summary>
@@ -4188,6 +4427,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderKayenta
     public V1alpha1AnalysisRunSpecMetricsProviderKayentaThreshold Threshold { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderNewRelic
 {
     /// <summary></summary>
@@ -4199,6 +4439,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderNewRelic
     public string Query { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderPrometheusAuthenticationOauth2
 {
     /// <summary></summary>
@@ -4218,6 +4459,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderPrometheusAuthenticat
     public string? TokenUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderPrometheusAuthenticationSigv4
 {
     /// <summary></summary>
@@ -4233,6 +4475,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderPrometheusAuthenticat
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderPrometheusAuthentication
 {
     /// <summary></summary>
@@ -4244,6 +4487,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderPrometheusAuthenticat
     public V1alpha1AnalysisRunSpecMetricsProviderPrometheusAuthenticationSigv4? Sigv4 { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderPrometheusHeaders
 {
     /// <summary></summary>
@@ -4255,6 +4499,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderPrometheusHeaders
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderPrometheus
 {
     /// <summary></summary>
@@ -4282,6 +4527,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderPrometheus
     public long? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderSkywalking
 {
     /// <summary></summary>
@@ -4297,6 +4543,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderSkywalking
     public string? Query { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderWavefront
 {
     /// <summary></summary>
@@ -4308,6 +4555,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderWavefront
     public string? Query { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderWebAuthenticationOauth2
 {
     /// <summary></summary>
@@ -4327,6 +4575,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderWebAuthenticationOaut
     public string? TokenUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderWebAuthenticationSigv4
 {
     /// <summary></summary>
@@ -4342,6 +4591,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderWebAuthenticationSigv
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderWebAuthentication
 {
     /// <summary></summary>
@@ -4353,6 +4603,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderWebAuthentication
     public V1alpha1AnalysisRunSpecMetricsProviderWebAuthenticationSigv4? Sigv4 { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderWebHeaders
 {
     /// <summary></summary>
@@ -4364,6 +4615,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderWebHeaders
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProviderWeb
 {
     /// <summary></summary>
@@ -4403,6 +4655,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderWeb
     public string Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetricsProvider
 {
     /// <summary></summary>
@@ -4454,6 +4707,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProvider
     public V1alpha1AnalysisRunSpecMetricsProviderWeb? Web { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecMetrics
 {
     /// <summary></summary>
@@ -4497,6 +4751,7 @@ public partial class V1alpha1AnalysisRunSpecMetrics
     public string? SuccessCondition { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpecTtlStrategy
 {
     /// <summary></summary>
@@ -4512,6 +4767,7 @@ public partial class V1alpha1AnalysisRunSpecTtlStrategy
     public int? SecondsAfterSuccess { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunSpec
 {
     /// <summary></summary>
@@ -4539,6 +4795,7 @@ public partial class V1alpha1AnalysisRunSpec
     public V1alpha1AnalysisRunSpecTtlStrategy? TtlStrategy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunStatusDryRunSummary
 {
     /// <summary></summary>
@@ -4562,6 +4819,7 @@ public partial class V1alpha1AnalysisRunStatusDryRunSummary
     public int? Successful { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunStatusMetricResultsMeasurements
 {
     /// <summary></summary>
@@ -4593,6 +4851,7 @@ public partial class V1alpha1AnalysisRunStatusMetricResultsMeasurements
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunStatusMetricResults
 {
     /// <summary></summary>
@@ -4644,6 +4903,7 @@ public partial class V1alpha1AnalysisRunStatusMetricResults
     public int? Successful { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunStatusRunSummary
 {
     /// <summary></summary>
@@ -4667,6 +4927,7 @@ public partial class V1alpha1AnalysisRunStatusRunSummary
     public int? Successful { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AnalysisRunStatus
 {
     /// <summary></summary>
@@ -4699,6 +4960,7 @@ public partial class V1alpha1AnalysisRunStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1AnalysisRun : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1AnalysisRunSpec>, IStatus<V1alpha1AnalysisRunStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

@@ -38,6 +38,7 @@ public enum V1beta1RegionTargetHTTPSProxySpecForProviderSslCertificatesRefsPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionTargetHTTPSProxySpecForProviderSslCertificatesRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1RegionTargetHTTPSProxySpecForProviderSslCertificates
     public V1beta1RegionTargetHTTPSProxySpecForProviderSslCertificatesRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1RegionTargetHTTPSProxySpecForProviderSslCertificatesRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1RegionTargetHTTPSProxySpecForProviderSslCertificatesSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionTargetHTTPSProxySpecForProviderSslCertificatesSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1RegionTargetHTTPSProxySpecForProviderSslCertificates
     public V1beta1RegionTargetHTTPSProxySpecForProviderSslCertificatesSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of RegionSSLCertificate in compute to populate sslCertificates.</summary>
 public partial class V1beta1RegionTargetHTTPSProxySpecForProviderSslCertificatesSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1RegionTargetHTTPSProxySpecForProviderUrlMapRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionTargetHTTPSProxySpecForProviderUrlMapRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1RegionTargetHTTPSProxySpecForProviderUrlMapRefPolicy
     public V1beta1RegionTargetHTTPSProxySpecForProviderUrlMapRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RegionURLMap in compute to populate urlMap.</summary>
 public partial class V1beta1RegionTargetHTTPSProxySpecForProviderUrlMapRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1RegionTargetHTTPSProxySpecForProviderUrlMapSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionTargetHTTPSProxySpecForProviderUrlMapSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1RegionTargetHTTPSProxySpecForProviderUrlMapSelectorP
     public V1beta1RegionTargetHTTPSProxySpecForProviderUrlMapSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RegionURLMap in compute to populate urlMap.</summary>
 public partial class V1beta1RegionTargetHTTPSProxySpecForProviderUrlMapSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1RegionTargetHTTPSProxySpecForProviderUrlMapSelector
     public V1beta1RegionTargetHTTPSProxySpecForProviderUrlMapSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionTargetHTTPSProxySpecForProvider
 {
     /// <summary>URLs to certificate manager certificate resources that are used to authenticate connections between users and the load balancer. sslCertificates and certificateManagerCertificates can't be defined together. Accepted format is //certificatemanager.googleapis.com/projects/{project}/locations/{location}/certificates/{resourceName} or just the self_link projects/{project}/locations/{location}/certificates/{resourceName}</summary>
@@ -273,6 +282,7 @@ public enum V1beta1RegionTargetHTTPSProxySpecInitProviderSslCertificatesRefsPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionTargetHTTPSProxySpecInitProviderSslCertificatesRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -286,6 +296,7 @@ public partial class V1beta1RegionTargetHTTPSProxySpecInitProviderSslCertificate
     public V1beta1RegionTargetHTTPSProxySpecInitProviderSslCertificatesRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1RegionTargetHTTPSProxySpecInitProviderSslCertificatesRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -317,6 +328,7 @@ public enum V1beta1RegionTargetHTTPSProxySpecInitProviderSslCertificatesSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionTargetHTTPSProxySpecInitProviderSslCertificatesSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -330,6 +342,7 @@ public partial class V1beta1RegionTargetHTTPSProxySpecInitProviderSslCertificate
     public V1beta1RegionTargetHTTPSProxySpecInitProviderSslCertificatesSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of RegionSSLCertificate in compute to populate sslCertificates.</summary>
 public partial class V1beta1RegionTargetHTTPSProxySpecInitProviderSslCertificatesSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -365,6 +378,7 @@ public enum V1beta1RegionTargetHTTPSProxySpecInitProviderUrlMapRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionTargetHTTPSProxySpecInitProviderUrlMapRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -378,6 +392,7 @@ public partial class V1beta1RegionTargetHTTPSProxySpecInitProviderUrlMapRefPolic
     public V1beta1RegionTargetHTTPSProxySpecInitProviderUrlMapRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RegionURLMap in compute to populate urlMap.</summary>
 public partial class V1beta1RegionTargetHTTPSProxySpecInitProviderUrlMapRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -409,6 +424,7 @@ public enum V1beta1RegionTargetHTTPSProxySpecInitProviderUrlMapSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionTargetHTTPSProxySpecInitProviderUrlMapSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -422,6 +438,7 @@ public partial class V1beta1RegionTargetHTTPSProxySpecInitProviderUrlMapSelector
     public V1beta1RegionTargetHTTPSProxySpecInitProviderUrlMapSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RegionURLMap in compute to populate urlMap.</summary>
 public partial class V1beta1RegionTargetHTTPSProxySpecInitProviderUrlMapSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -437,6 +454,7 @@ public partial class V1beta1RegionTargetHTTPSProxySpecInitProviderUrlMapSelector
     public V1beta1RegionTargetHTTPSProxySpecInitProviderUrlMapSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1RegionTargetHTTPSProxySpecInitProvider
 {
     /// <summary>URLs to certificate manager certificate resources that are used to authenticate connections between users and the load balancer. sslCertificates and certificateManagerCertificates can't be defined together. Accepted format is //certificatemanager.googleapis.com/projects/{project}/locations/{location}/certificates/{resourceName} or just the self_link projects/{project}/locations/{location}/certificates/{resourceName}</summary>
@@ -526,6 +544,7 @@ public enum V1beta1RegionTargetHTTPSProxySpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionTargetHTTPSProxySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -539,6 +558,7 @@ public partial class V1beta1RegionTargetHTTPSProxySpecProviderConfigRefPolicy
     public V1beta1RegionTargetHTTPSProxySpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1RegionTargetHTTPSProxySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -570,6 +590,7 @@ public enum V1beta1RegionTargetHTTPSProxySpecPublishConnectionDetailsToConfigRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionTargetHTTPSProxySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -583,6 +604,7 @@ public partial class V1beta1RegionTargetHTTPSProxySpecPublishConnectionDetailsTo
     public V1beta1RegionTargetHTTPSProxySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1RegionTargetHTTPSProxySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -594,6 +616,7 @@ public partial class V1beta1RegionTargetHTTPSProxySpecPublishConnectionDetailsTo
     public V1beta1RegionTargetHTTPSProxySpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1RegionTargetHTTPSProxySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -609,6 +632,7 @@ public partial class V1beta1RegionTargetHTTPSProxySpecPublishConnectionDetailsTo
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1RegionTargetHTTPSProxySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -624,6 +648,7 @@ public partial class V1beta1RegionTargetHTTPSProxySpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1RegionTargetHTTPSProxySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -635,6 +660,7 @@ public partial class V1beta1RegionTargetHTTPSProxySpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>RegionTargetHTTPSProxySpec defines the desired state of RegionTargetHTTPSProxy</summary>
 public partial class V1beta1RegionTargetHTTPSProxySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -667,6 +693,7 @@ public partial class V1beta1RegionTargetHTTPSProxySpec
     public V1beta1RegionTargetHTTPSProxySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionTargetHTTPSProxyStatusAtProvider
 {
     /// <summary>URLs to certificate manager certificate resources that are used to authenticate connections between users and the load balancer. sslCertificates and certificateManagerCertificates can't be defined together. Accepted format is //certificatemanager.googleapis.com/projects/{project}/locations/{location}/certificates/{resourceName} or just the self_link projects/{project}/locations/{location}/certificates/{resourceName}</summary>
@@ -718,6 +745,7 @@ public partial class V1beta1RegionTargetHTTPSProxyStatusAtProvider
     public string? UrlMap { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1RegionTargetHTTPSProxyStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -745,6 +773,7 @@ public partial class V1beta1RegionTargetHTTPSProxyStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>RegionTargetHTTPSProxyStatus defines the observed state of RegionTargetHTTPSProxy.</summary>
 public partial class V1beta1RegionTargetHTTPSProxyStatus
 {
     /// <summary></summary>
@@ -761,6 +790,7 @@ public partial class V1beta1RegionTargetHTTPSProxyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>RegionTargetHTTPSProxy is the Schema for the RegionTargetHTTPSProxys API. Represents a RegionTargetHttpsProxy resource, which is used by one or more forwarding rules to route incoming HTTPS requests to a URL map.</summary>
 public partial class V1beta1RegionTargetHTTPSProxy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1RegionTargetHTTPSProxySpec>, IStatus<V1beta1RegionTargetHTTPSProxyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containerservice.azure.com;
+/// <summary>ClusterResourceReference: The ARM resource id of the cluster that joins the Fleet. Must be a valid Azure resource id. e.g.: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/managedClusters/{clusterName}'.</summary>
 public partial class V1api20230315previewstorageFleetsMemberSpecClusterResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -27,6 +28,7 @@ public partial class V1api20230315previewstorageFleetsMemberSpecClusterResourceR
     public string? Name { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a containerservice.azure.com/Fleet resource</summary>
 public partial class V1api20230315previewstorageFleetsMemberSpecOwner
 {
     /// <summary></summary>
@@ -38,6 +40,7 @@ public partial class V1api20230315previewstorageFleetsMemberSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.Fleets_Member_Spec</summary>
 public partial class V1api20230315previewstorageFleetsMemberSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -65,6 +68,7 @@ public partial class V1api20230315previewstorageFleetsMemberSpec
     public V1api20230315previewstorageFleetsMemberSpecOwner Owner { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20230315previewstorageFleetsMemberStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -96,6 +100,7 @@ public partial class V1api20230315previewstorageFleetsMemberStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 public partial class V1api20230315previewstorageFleetsMemberStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -127,6 +132,7 @@ public partial class V1api20230315previewstorageFleetsMemberStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.Fleets_Member_STATUS</summary>
 public partial class V1api20230315previewstorageFleetsMemberStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -171,6 +177,7 @@ public partial class V1api20230315previewstorageFleetsMemberStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20230315preview.FleetsMember Generator information: - Generated from: /containerservice/resource-manager/Microsoft.ContainerService/fleet/preview/2023-03-15-preview/fleets.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/fleets/{fleetName}/members/{fleetMemberName}</summary>
 public partial class V1api20230315previewstorageFleetsMember : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230315previewstorageFleetsMemberSpec>, IStatus<V1api20230315previewstorageFleetsMemberStatus>
 {
     public const string KubeApiVersion = "v1api20230315previewstorage";

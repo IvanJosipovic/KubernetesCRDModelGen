@@ -38,6 +38,7 @@ public enum V1beta1ObjectSpecForProviderBucketRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ObjectSpecForProviderBucketRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ObjectSpecForProviderBucketRefPolicy
     public V1beta1ObjectSpecForProviderBucketRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1ObjectSpecForProviderBucketRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ObjectSpecForProviderBucketSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ObjectSpecForProviderBucketSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ObjectSpecForProviderBucketSelectorPolicy
     public V1beta1ObjectSpecForProviderBucketSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1ObjectSpecForProviderBucketSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1ObjectSpecForProviderKmsKeyIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ObjectSpecForProviderKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1ObjectSpecForProviderKmsKeyIdRefPolicy
     public V1beta1ObjectSpecForProviderKmsKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1ObjectSpecForProviderKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1ObjectSpecForProviderKmsKeyIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ObjectSpecForProviderKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1ObjectSpecForProviderKmsKeyIdSelectorPolicy
     public V1beta1ObjectSpecForProviderKmsKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1ObjectSpecForProviderKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1ObjectSpecForProviderKmsKeyIdSelector
     public V1beta1ObjectSpecForProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ObjectSpecForProviderOverrideProviderDefaultTags
 {
     /// <summary>Key-value map of resource tags.</summary>
@@ -209,6 +218,7 @@ public partial class V1beta1ObjectSpecForProviderOverrideProviderDefaultTags
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ObjectSpecForProviderOverrideProvider
 {
     /// <summary>Override the provider default_tags configuration block.</summary>
@@ -216,6 +226,7 @@ public partial class V1beta1ObjectSpecForProviderOverrideProvider
     public IList<V1beta1ObjectSpecForProviderOverrideProviderDefaultTags>? DefaultTags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ObjectSpecForProvider
 {
     /// <summary>Canned ACL to apply. Valid values are private, public-read, public-read-write, aws-exec-read, authenticated-read, bucket-owner-read, and bucket-owner-full-control.</summary>
@@ -363,6 +374,7 @@ public enum V1beta1ObjectSpecInitProviderBucketRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ObjectSpecInitProviderBucketRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -376,6 +388,7 @@ public partial class V1beta1ObjectSpecInitProviderBucketRefPolicy
     public V1beta1ObjectSpecInitProviderBucketRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1ObjectSpecInitProviderBucketRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -407,6 +420,7 @@ public enum V1beta1ObjectSpecInitProviderBucketSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ObjectSpecInitProviderBucketSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -420,6 +434,7 @@ public partial class V1beta1ObjectSpecInitProviderBucketSelectorPolicy
     public V1beta1ObjectSpecInitProviderBucketSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1ObjectSpecInitProviderBucketSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -455,6 +470,7 @@ public enum V1beta1ObjectSpecInitProviderKmsKeyIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ObjectSpecInitProviderKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -468,6 +484,7 @@ public partial class V1beta1ObjectSpecInitProviderKmsKeyIdRefPolicy
     public V1beta1ObjectSpecInitProviderKmsKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1ObjectSpecInitProviderKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -499,6 +516,7 @@ public enum V1beta1ObjectSpecInitProviderKmsKeyIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ObjectSpecInitProviderKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -512,6 +530,7 @@ public partial class V1beta1ObjectSpecInitProviderKmsKeyIdSelectorPolicy
     public V1beta1ObjectSpecInitProviderKmsKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1ObjectSpecInitProviderKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -527,6 +546,7 @@ public partial class V1beta1ObjectSpecInitProviderKmsKeyIdSelector
     public V1beta1ObjectSpecInitProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ObjectSpecInitProviderOverrideProviderDefaultTags
 {
     /// <summary>Key-value map of resource tags.</summary>
@@ -534,6 +554,7 @@ public partial class V1beta1ObjectSpecInitProviderOverrideProviderDefaultTags
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ObjectSpecInitProviderOverrideProvider
 {
     /// <summary>Override the provider default_tags configuration block.</summary>
@@ -541,6 +562,7 @@ public partial class V1beta1ObjectSpecInitProviderOverrideProvider
     public IList<V1beta1ObjectSpecInitProviderOverrideProviderDefaultTags>? DefaultTags { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ObjectSpecInitProvider
 {
     /// <summary>Canned ACL to apply. Valid values are private, public-read, public-read-write, aws-exec-read, authenticated-read, bucket-owner-read, and bucket-owner-full-control.</summary>
@@ -706,6 +728,7 @@ public enum V1beta1ObjectSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ObjectSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -719,6 +742,7 @@ public partial class V1beta1ObjectSpecProviderConfigRefPolicy
     public V1beta1ObjectSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ObjectSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -750,6 +774,7 @@ public enum V1beta1ObjectSpecPublishConnectionDetailsToConfigRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ObjectSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -763,6 +788,7 @@ public partial class V1beta1ObjectSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1ObjectSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ObjectSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -774,6 +800,7 @@ public partial class V1beta1ObjectSpecPublishConnectionDetailsToConfigRef
     public V1beta1ObjectSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ObjectSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -789,6 +816,7 @@ public partial class V1beta1ObjectSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ObjectSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -804,6 +832,7 @@ public partial class V1beta1ObjectSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ObjectSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -815,6 +844,7 @@ public partial class V1beta1ObjectSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ObjectSpec defines the desired state of Object</summary>
 public partial class V1beta1ObjectSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -847,6 +877,7 @@ public partial class V1beta1ObjectSpec
     public V1beta1ObjectSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ObjectStatusAtProviderOverrideProviderDefaultTags
 {
     /// <summary>Key-value map of resource tags.</summary>
@@ -854,6 +885,7 @@ public partial class V1beta1ObjectStatusAtProviderOverrideProviderDefaultTags
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ObjectStatusAtProviderOverrideProvider
 {
     /// <summary>Override the provider default_tags configuration block.</summary>
@@ -861,6 +893,7 @@ public partial class V1beta1ObjectStatusAtProviderOverrideProvider
     public IList<V1beta1ObjectStatusAtProviderOverrideProviderDefaultTags>? DefaultTags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ObjectStatusAtProvider
 {
     /// <summary>Canned ACL to apply. Valid values are private, public-read, public-read-write, aws-exec-read, authenticated-read, bucket-owner-read, and bucket-owner-full-control.</summary>
@@ -1000,6 +1033,7 @@ public partial class V1beta1ObjectStatusAtProvider
     public string? WebsiteRedirect { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ObjectStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1027,6 +1061,7 @@ public partial class V1beta1ObjectStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ObjectStatus defines the observed state of Object.</summary>
 public partial class V1beta1ObjectStatus
 {
     /// <summary></summary>
@@ -1043,6 +1078,7 @@ public partial class V1beta1ObjectStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Object is the Schema for the Objects API. Provides an S3 object resource.</summary>
 public partial class V1beta1Object : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ObjectSpec>, IStatus<V1beta1ObjectStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.alertsmanagement.azure.com;
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20230301storagePrometheusRuleGroupSpecOwner
 {
     /// <summary></summary>
@@ -19,6 +20,7 @@ public partial class V1api20230301storagePrometheusRuleGroupSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>ActionGroupReference: The resource id of the action group to use.</summary>
 public partial class V1api20230301storagePrometheusRuleGroupSpecRulesActionsActionGroupReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -38,6 +40,7 @@ public partial class V1api20230301storagePrometheusRuleGroupSpecRulesActionsActi
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230301.PrometheusRuleGroupAction An alert action. Only relevant for alerts.</summary>
 public partial class V1api20230301storagePrometheusRuleGroupSpecRulesActions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -53,6 +56,7 @@ public partial class V1api20230301storagePrometheusRuleGroupSpecRulesActions
     public IDictionary<string, string>? ActionProperties { get; set; }
 }
 
+/// <summary>Storage version of v1api20230301.PrometheusRuleResolveConfiguration Specifies the Prometheus alert rule configuration.</summary>
 public partial class V1api20230301storagePrometheusRuleGroupSpecRulesResolveConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -68,6 +72,7 @@ public partial class V1api20230301storagePrometheusRuleGroupSpecRulesResolveConf
     public string? TimeToResolve { get; set; }
 }
 
+/// <summary>Storage version of v1api20230301.PrometheusRule An Azure Prometheus alerting or recording rule.</summary>
 public partial class V1api20230301storagePrometheusRuleGroupSpecRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -115,6 +120,7 @@ public partial class V1api20230301storagePrometheusRuleGroupSpecRules
     public int? Severity { get; set; }
 }
 
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 public partial class V1api20230301storagePrometheusRuleGroupSpecScopesReferences
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -134,6 +140,7 @@ public partial class V1api20230301storagePrometheusRuleGroupSpecScopesReferences
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230301.PrometheusRuleGroup_Spec</summary>
 public partial class V1api20230301storagePrometheusRuleGroupSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -185,6 +192,7 @@ public partial class V1api20230301storagePrometheusRuleGroupSpec
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20230301storagePrometheusRuleGroupStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -216,6 +224,7 @@ public partial class V1api20230301storagePrometheusRuleGroupStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230301.PrometheusRuleGroupAction_STATUS An alert action. Only relevant for alerts.</summary>
 public partial class V1api20230301storagePrometheusRuleGroupStatusRulesActions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -231,6 +240,7 @@ public partial class V1api20230301storagePrometheusRuleGroupStatusRulesActions
     public IDictionary<string, string>? ActionProperties { get; set; }
 }
 
+/// <summary>Storage version of v1api20230301.PrometheusRuleResolveConfiguration_STATUS Specifies the Prometheus alert rule configuration.</summary>
 public partial class V1api20230301storagePrometheusRuleGroupStatusRulesResolveConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -246,6 +256,7 @@ public partial class V1api20230301storagePrometheusRuleGroupStatusRulesResolveCo
     public string? TimeToResolve { get; set; }
 }
 
+/// <summary>Storage version of v1api20230301.PrometheusRule_STATUS An Azure Prometheus alerting or recording rule.</summary>
 public partial class V1api20230301storagePrometheusRuleGroupStatusRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -293,6 +304,7 @@ public partial class V1api20230301storagePrometheusRuleGroupStatusRules
     public int? Severity { get; set; }
 }
 
+/// <summary>Storage version of v1api20230301.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 public partial class V1api20230301storagePrometheusRuleGroupStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -324,6 +336,7 @@ public partial class V1api20230301storagePrometheusRuleGroupStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
+/// <summary>Storage version of v1api20230301.PrometheusRuleGroup_STATUS</summary>
 public partial class V1api20230301storagePrometheusRuleGroupStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -384,6 +397,7 @@ public partial class V1api20230301storagePrometheusRuleGroupStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20230301.PrometheusRuleGroup Generator information: - Generated from: /alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2023-03-01/PrometheusRuleGroups.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AlertsManagement/prometheusRuleGroups/{ruleGroupName}</summary>
 public partial class V1api20230301storagePrometheusRuleGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230301storagePrometheusRuleGroupSpec>, IStatus<V1api20230301storagePrometheusRuleGroupStatus>
 {
     public const string KubeApiVersion = "v1api20230301storage";

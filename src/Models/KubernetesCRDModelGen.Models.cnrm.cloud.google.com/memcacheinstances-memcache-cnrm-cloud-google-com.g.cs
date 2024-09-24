@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.memcache.cnrm.cloud.google.com;
+/// <summary>Required. Start time of the window in UTC time.</summary>
 public partial class V1beta1MemcacheInstanceSpecMaintenancePolicyWeeklyMaintenanceWindowStartTime
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
@@ -27,6 +28,7 @@ public partial class V1beta1MemcacheInstanceSpecMaintenancePolicyWeeklyMaintenan
     public int? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MemcacheInstanceSpecMaintenancePolicyWeeklyMaintenanceWindow
 {
     /// <summary>Required. The day of week that maintenance updates occur. - DAY_OF_WEEK_UNSPECIFIED: The day of the week is unspecified. - MONDAY: Monday - TUESDAY: Tuesday - WEDNESDAY: Wednesday - THURSDAY: Thursday - FRIDAY: Friday - SATURDAY: Saturday - SUNDAY: Sunday Possible values: ["DAY_OF_WEEK_UNSPECIFIED", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"].</summary>
@@ -42,6 +44,7 @@ public partial class V1beta1MemcacheInstanceSpecMaintenancePolicyWeeklyMaintenan
     public V1beta1MemcacheInstanceSpecMaintenancePolicyWeeklyMaintenanceWindowStartTime StartTime { get; set; }
 }
 
+/// <summary>Maintenance policy for an instance.</summary>
 public partial class V1beta1MemcacheInstanceSpecMaintenancePolicy
 {
     /// <summary>Output only. The time when the policy was created. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.</summary>
@@ -61,6 +64,7 @@ public partial class V1beta1MemcacheInstanceSpecMaintenancePolicy
     public IList<V1beta1MemcacheInstanceSpecMaintenancePolicyWeeklyMaintenanceWindow> WeeklyMaintenanceWindow { get; set; }
 }
 
+/// <summary>Immutable. User-specified parameters for this memcache instance.</summary>
 public partial class V1beta1MemcacheInstanceSpecMemcacheParameters
 {
     /// <summary>This is a unique ID associated with this set of parameters.</summary>
@@ -72,6 +76,7 @@ public partial class V1beta1MemcacheInstanceSpecMemcacheParameters
     public IDictionary<string, string>? Params { get; set; }
 }
 
+/// <summary>The full name of the network to connect the instance to.</summary>
 public partial class V1beta1MemcacheInstanceSpecNetworkRef
 {
     /// <summary>Allowed value: string of the format `projects/{{project}}/global/networks/{{value}}`, where {{value}} is the `name` field of a `ComputeNetwork` resource.</summary>
@@ -87,6 +92,7 @@ public partial class V1beta1MemcacheInstanceSpecNetworkRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. Configuration for memcache nodes.</summary>
 public partial class V1beta1MemcacheInstanceSpecNodeConfig
 {
     /// <summary>Number of CPUs per node.</summary>
@@ -98,6 +104,7 @@ public partial class V1beta1MemcacheInstanceSpecNodeConfig
     public int MemorySizeMb { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MemcacheInstanceSpec
 {
     /// <summary>A user-visible name for the instance.</summary>
@@ -141,6 +148,7 @@ public partial class V1beta1MemcacheInstanceSpec
     public IList<string>? Zones { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MemcacheInstanceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -164,6 +172,7 @@ public partial class V1beta1MemcacheInstanceStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MemcacheInstanceStatusMaintenanceSchedule
 {
     /// <summary>Output only. The end time of any upcoming scheduled maintenance for this instance. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.</summary>
@@ -179,6 +188,7 @@ public partial class V1beta1MemcacheInstanceStatusMaintenanceSchedule
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MemcacheInstanceStatusMemcacheNodes
 {
     /// <summary>Hostname or IP address of the Memcached node used by the clients to connect to the Memcached server on this node.</summary>
@@ -202,6 +212,7 @@ public partial class V1beta1MemcacheInstanceStatusMemcacheNodes
     public string? Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MemcacheInstanceStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -234,6 +245,7 @@ public partial class V1beta1MemcacheInstanceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1MemcacheInstance : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MemcacheInstanceSpec>, IStatus<V1beta1MemcacheInstanceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

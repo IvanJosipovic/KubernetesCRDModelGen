@@ -18,6 +18,7 @@ public enum V1beta1AccessPolicySpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicySpecForProviderConditionsApplications
 {
     /// <summary>A list of application IDs explicitly excluded from the policy. Can also be set to Office365.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1AccessPolicySpecForProviderConditionsApplications
     public IList<string>? IncludedUserActions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicySpecForProviderConditionsClientApplications
 {
     /// <summary>A list of service principal IDs explicitly excluded in the policy.</summary>
@@ -44,6 +46,7 @@ public partial class V1beta1AccessPolicySpecForProviderConditionsClientApplicati
     public IList<string>? IncludedServicePrincipals { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicySpecForProviderConditionsDevicesFilter
 {
     /// <summary>Whether to include in, or exclude from, matching devices from the policy. Supported values are include or exclude.</summary>
@@ -55,6 +58,7 @@ public partial class V1beta1AccessPolicySpecForProviderConditionsDevicesFilter
     public string? Rule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicySpecForProviderConditionsDevices
 {
     /// <summary>A filter block as described below.</summary>
@@ -62,6 +66,7 @@ public partial class V1beta1AccessPolicySpecForProviderConditionsDevices
     public IList<V1beta1AccessPolicySpecForProviderConditionsDevicesFilter>? Filter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicySpecForProviderConditionsLocations
 {
     /// <summary>A list of location IDs excluded from scope of policy. Can also be set to AllTrusted.</summary>
@@ -73,6 +78,7 @@ public partial class V1beta1AccessPolicySpecForProviderConditionsLocations
     public IList<string>? IncludedLocations { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicySpecForProviderConditionsPlatforms
 {
     /// <summary>A list of platforms explicitly excluded from the policy. Possible values are: all, android, iOS, linux, macOS, windows, windowsPhone or unknownFutureValue.</summary>
@@ -84,6 +90,7 @@ public partial class V1beta1AccessPolicySpecForProviderConditionsPlatforms
     public IList<string>? IncludedPlatforms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicySpecForProviderConditionsUsersExcludedGuestsOrExternalUsersExternalTenants
 {
     /// <summary>A list tenant IDs. Can only be specified if membership_kind is enumerated.</summary>
@@ -95,6 +102,7 @@ public partial class V1beta1AccessPolicySpecForProviderConditionsUsersExcludedGu
     public string? MembershipKind { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicySpecForProviderConditionsUsersExcludedGuestsOrExternalUsers
 {
     /// <summary>An external_tenants block as documented below, which specifies external tenants in a policy scope.</summary>
@@ -106,6 +114,7 @@ public partial class V1beta1AccessPolicySpecForProviderConditionsUsersExcludedGu
     public IList<string>? GuestOrExternalUserTypes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicySpecForProviderConditionsUsersIncludedGuestsOrExternalUsersExternalTenants
 {
     /// <summary>A list tenant IDs. Can only be specified if membership_kind is enumerated.</summary>
@@ -117,6 +126,7 @@ public partial class V1beta1AccessPolicySpecForProviderConditionsUsersIncludedGu
     public string? MembershipKind { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicySpecForProviderConditionsUsersIncludedGuestsOrExternalUsers
 {
     /// <summary>An external_tenants block as documented below, which specifies external tenants in a policy scope.</summary>
@@ -128,6 +138,7 @@ public partial class V1beta1AccessPolicySpecForProviderConditionsUsersIncludedGu
     public IList<string>? GuestOrExternalUserTypes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicySpecForProviderConditionsUsers
 {
     /// <summary>A list of group IDs excluded from scope of policy.</summary>
@@ -163,6 +174,7 @@ public partial class V1beta1AccessPolicySpecForProviderConditionsUsers
     public IList<string>? IncludedUsers { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicySpecForProviderConditions
 {
     /// <summary>An applications block as documented below, which specifies applications and user actions included in and excluded from the policy.</summary>
@@ -206,6 +218,7 @@ public partial class V1beta1AccessPolicySpecForProviderConditions
     public IList<V1beta1AccessPolicySpecForProviderConditionsUsers>? Users { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicySpecForProviderGrantControls
 {
     /// <summary>ID of an Authentication Strength Policy to use in this policy.</summary>
@@ -229,6 +242,7 @@ public partial class V1beta1AccessPolicySpecForProviderGrantControls
     public IList<string>? TermsOfUse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicySpecForProviderSessionControls
 {
     /// <summary>Whether application enforced restrictions are enabled. Defaults to false.</summary>
@@ -264,6 +278,7 @@ public partial class V1beta1AccessPolicySpecForProviderSessionControls
     public string? SignInFrequencyPeriod { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicySpecForProvider
 {
     /// <summary>A conditions block as documented below, which specifies the rules that must be met for the policy to apply.</summary>
@@ -287,6 +302,7 @@ public partial class V1beta1AccessPolicySpecForProvider
     public string? State { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicySpecInitProviderConditionsApplications
 {
     /// <summary>A list of application IDs explicitly excluded from the policy. Can also be set to Office365.</summary>
@@ -302,6 +318,7 @@ public partial class V1beta1AccessPolicySpecInitProviderConditionsApplications
     public IList<string>? IncludedUserActions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicySpecInitProviderConditionsClientApplications
 {
     /// <summary>A list of service principal IDs explicitly excluded in the policy.</summary>
@@ -313,6 +330,7 @@ public partial class V1beta1AccessPolicySpecInitProviderConditionsClientApplicat
     public IList<string>? IncludedServicePrincipals { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicySpecInitProviderConditionsDevicesFilter
 {
     /// <summary>Whether to include in, or exclude from, matching devices from the policy. Supported values are include or exclude.</summary>
@@ -324,6 +342,7 @@ public partial class V1beta1AccessPolicySpecInitProviderConditionsDevicesFilter
     public string? Rule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicySpecInitProviderConditionsDevices
 {
     /// <summary>A filter block as described below.</summary>
@@ -331,6 +350,7 @@ public partial class V1beta1AccessPolicySpecInitProviderConditionsDevices
     public IList<V1beta1AccessPolicySpecInitProviderConditionsDevicesFilter>? Filter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicySpecInitProviderConditionsLocations
 {
     /// <summary>A list of location IDs excluded from scope of policy. Can also be set to AllTrusted.</summary>
@@ -342,6 +362,7 @@ public partial class V1beta1AccessPolicySpecInitProviderConditionsLocations
     public IList<string>? IncludedLocations { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicySpecInitProviderConditionsPlatforms
 {
     /// <summary>A list of platforms explicitly excluded from the policy. Possible values are: all, android, iOS, linux, macOS, windows, windowsPhone or unknownFutureValue.</summary>
@@ -353,6 +374,7 @@ public partial class V1beta1AccessPolicySpecInitProviderConditionsPlatforms
     public IList<string>? IncludedPlatforms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicySpecInitProviderConditionsUsersExcludedGuestsOrExternalUsersExternalTenants
 {
     /// <summary>A list tenant IDs. Can only be specified if membership_kind is enumerated.</summary>
@@ -364,6 +386,7 @@ public partial class V1beta1AccessPolicySpecInitProviderConditionsUsersExcludedG
     public string? MembershipKind { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicySpecInitProviderConditionsUsersExcludedGuestsOrExternalUsers
 {
     /// <summary>An external_tenants block as documented below, which specifies external tenants in a policy scope.</summary>
@@ -375,6 +398,7 @@ public partial class V1beta1AccessPolicySpecInitProviderConditionsUsersExcludedG
     public IList<string>? GuestOrExternalUserTypes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicySpecInitProviderConditionsUsersIncludedGuestsOrExternalUsersExternalTenants
 {
     /// <summary>A list tenant IDs. Can only be specified if membership_kind is enumerated.</summary>
@@ -386,6 +410,7 @@ public partial class V1beta1AccessPolicySpecInitProviderConditionsUsersIncludedG
     public string? MembershipKind { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicySpecInitProviderConditionsUsersIncludedGuestsOrExternalUsers
 {
     /// <summary>An external_tenants block as documented below, which specifies external tenants in a policy scope.</summary>
@@ -397,6 +422,7 @@ public partial class V1beta1AccessPolicySpecInitProviderConditionsUsersIncludedG
     public IList<string>? GuestOrExternalUserTypes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicySpecInitProviderConditionsUsers
 {
     /// <summary>A list of group IDs excluded from scope of policy.</summary>
@@ -432,6 +458,7 @@ public partial class V1beta1AccessPolicySpecInitProviderConditionsUsers
     public IList<string>? IncludedUsers { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicySpecInitProviderConditions
 {
     /// <summary>An applications block as documented below, which specifies applications and user actions included in and excluded from the policy.</summary>
@@ -475,6 +502,7 @@ public partial class V1beta1AccessPolicySpecInitProviderConditions
     public IList<V1beta1AccessPolicySpecInitProviderConditionsUsers>? Users { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicySpecInitProviderGrantControls
 {
     /// <summary>ID of an Authentication Strength Policy to use in this policy.</summary>
@@ -498,6 +526,7 @@ public partial class V1beta1AccessPolicySpecInitProviderGrantControls
     public IList<string>? TermsOfUse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicySpecInitProviderSessionControls
 {
     /// <summary>Whether application enforced restrictions are enabled. Defaults to false.</summary>
@@ -533,6 +562,7 @@ public partial class V1beta1AccessPolicySpecInitProviderSessionControls
     public string? SignInFrequencyPeriod { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1AccessPolicySpecInitProvider
 {
     /// <summary>A conditions block as documented below, which specifies the rules that must be met for the policy to apply.</summary>
@@ -598,6 +628,7 @@ public enum V1beta1AccessPolicySpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AccessPolicySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -611,6 +642,7 @@ public partial class V1beta1AccessPolicySpecProviderConfigRefPolicy
     public V1beta1AccessPolicySpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1AccessPolicySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -642,6 +674,7 @@ public enum V1beta1AccessPolicySpecPublishConnectionDetailsToConfigRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AccessPolicySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -655,6 +688,7 @@ public partial class V1beta1AccessPolicySpecPublishConnectionDetailsToConfigRefP
     public V1beta1AccessPolicySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1AccessPolicySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -666,6 +700,7 @@ public partial class V1beta1AccessPolicySpecPublishConnectionDetailsToConfigRef
     public V1beta1AccessPolicySpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1AccessPolicySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -681,6 +716,7 @@ public partial class V1beta1AccessPolicySpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1AccessPolicySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -696,6 +732,7 @@ public partial class V1beta1AccessPolicySpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1AccessPolicySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -707,6 +744,7 @@ public partial class V1beta1AccessPolicySpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>AccessPolicySpec defines the desired state of AccessPolicy</summary>
 public partial class V1beta1AccessPolicySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -739,6 +777,7 @@ public partial class V1beta1AccessPolicySpec
     public V1beta1AccessPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicyStatusAtProviderConditionsApplications
 {
     /// <summary>A list of application IDs explicitly excluded from the policy. Can also be set to Office365.</summary>
@@ -754,6 +793,7 @@ public partial class V1beta1AccessPolicyStatusAtProviderConditionsApplications
     public IList<string>? IncludedUserActions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicyStatusAtProviderConditionsClientApplications
 {
     /// <summary>A list of service principal IDs explicitly excluded in the policy.</summary>
@@ -765,6 +805,7 @@ public partial class V1beta1AccessPolicyStatusAtProviderConditionsClientApplicat
     public IList<string>? IncludedServicePrincipals { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicyStatusAtProviderConditionsDevicesFilter
 {
     /// <summary>Whether to include in, or exclude from, matching devices from the policy. Supported values are include or exclude.</summary>
@@ -776,6 +817,7 @@ public partial class V1beta1AccessPolicyStatusAtProviderConditionsDevicesFilter
     public string? Rule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicyStatusAtProviderConditionsDevices
 {
     /// <summary>A filter block as described below.</summary>
@@ -783,6 +825,7 @@ public partial class V1beta1AccessPolicyStatusAtProviderConditionsDevices
     public IList<V1beta1AccessPolicyStatusAtProviderConditionsDevicesFilter>? Filter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicyStatusAtProviderConditionsLocations
 {
     /// <summary>A list of location IDs excluded from scope of policy. Can also be set to AllTrusted.</summary>
@@ -794,6 +837,7 @@ public partial class V1beta1AccessPolicyStatusAtProviderConditionsLocations
     public IList<string>? IncludedLocations { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicyStatusAtProviderConditionsPlatforms
 {
     /// <summary>A list of platforms explicitly excluded from the policy. Possible values are: all, android, iOS, linux, macOS, windows, windowsPhone or unknownFutureValue.</summary>
@@ -805,6 +849,7 @@ public partial class V1beta1AccessPolicyStatusAtProviderConditionsPlatforms
     public IList<string>? IncludedPlatforms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicyStatusAtProviderConditionsUsersExcludedGuestsOrExternalUsersExternalTenants
 {
     /// <summary>A list tenant IDs. Can only be specified if membership_kind is enumerated.</summary>
@@ -816,6 +861,7 @@ public partial class V1beta1AccessPolicyStatusAtProviderConditionsUsersExcludedG
     public string? MembershipKind { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicyStatusAtProviderConditionsUsersExcludedGuestsOrExternalUsers
 {
     /// <summary>An external_tenants block as documented below, which specifies external tenants in a policy scope.</summary>
@@ -827,6 +873,7 @@ public partial class V1beta1AccessPolicyStatusAtProviderConditionsUsersExcludedG
     public IList<string>? GuestOrExternalUserTypes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicyStatusAtProviderConditionsUsersIncludedGuestsOrExternalUsersExternalTenants
 {
     /// <summary>A list tenant IDs. Can only be specified if membership_kind is enumerated.</summary>
@@ -838,6 +885,7 @@ public partial class V1beta1AccessPolicyStatusAtProviderConditionsUsersIncludedG
     public string? MembershipKind { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicyStatusAtProviderConditionsUsersIncludedGuestsOrExternalUsers
 {
     /// <summary>An external_tenants block as documented below, which specifies external tenants in a policy scope.</summary>
@@ -849,6 +897,7 @@ public partial class V1beta1AccessPolicyStatusAtProviderConditionsUsersIncludedG
     public IList<string>? GuestOrExternalUserTypes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicyStatusAtProviderConditionsUsers
 {
     /// <summary>A list of group IDs excluded from scope of policy.</summary>
@@ -884,6 +933,7 @@ public partial class V1beta1AccessPolicyStatusAtProviderConditionsUsers
     public IList<string>? IncludedUsers { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicyStatusAtProviderConditions
 {
     /// <summary>An applications block as documented below, which specifies applications and user actions included in and excluded from the policy.</summary>
@@ -927,6 +977,7 @@ public partial class V1beta1AccessPolicyStatusAtProviderConditions
     public IList<V1beta1AccessPolicyStatusAtProviderConditionsUsers>? Users { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicyStatusAtProviderGrantControls
 {
     /// <summary>ID of an Authentication Strength Policy to use in this policy.</summary>
@@ -950,6 +1001,7 @@ public partial class V1beta1AccessPolicyStatusAtProviderGrantControls
     public IList<string>? TermsOfUse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicyStatusAtProviderSessionControls
 {
     /// <summary>Whether application enforced restrictions are enabled. Defaults to false.</summary>
@@ -985,6 +1037,7 @@ public partial class V1beta1AccessPolicyStatusAtProviderSessionControls
     public string? SignInFrequencyPeriod { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPolicyStatusAtProvider
 {
     /// <summary>A conditions block as documented below, which specifies the rules that must be met for the policy to apply.</summary>
@@ -1012,6 +1065,7 @@ public partial class V1beta1AccessPolicyStatusAtProvider
     public string? State { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1AccessPolicyStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1039,6 +1093,7 @@ public partial class V1beta1AccessPolicyStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>AccessPolicyStatus defines the observed state of AccessPolicy.</summary>
 public partial class V1beta1AccessPolicyStatus
 {
     /// <summary></summary>
@@ -1055,6 +1110,7 @@ public partial class V1beta1AccessPolicyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>AccessPolicy is the Schema for the AccessPolicys API.</summary>
 public partial class V1beta1AccessPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AccessPolicySpec>, IStatus<V1beta1AccessPolicyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

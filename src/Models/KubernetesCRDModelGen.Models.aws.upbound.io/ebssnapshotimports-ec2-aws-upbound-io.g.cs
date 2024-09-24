@@ -18,6 +18,7 @@ public enum V1beta1EBSSnapshotImportSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1EBSSnapshotImportSpecForProviderClientData
 {
     /// <summary>A user-defined comment about the disk upload.</summary>
@@ -37,6 +38,7 @@ public partial class V1beta1EBSSnapshotImportSpecForProviderClientData
     public string? UploadStart { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EBSSnapshotImportSpecForProviderDiskContainerUserBucket
 {
     /// <summary>The name of the Amazon S3 bucket where the disk image is located.</summary>
@@ -48,6 +50,7 @@ public partial class V1beta1EBSSnapshotImportSpecForProviderDiskContainerUserBuc
     public string? S3Key { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EBSSnapshotImportSpecForProviderDiskContainer
 {
     /// <summary>The description of the disk image being imported.</summary>
@@ -87,6 +90,7 @@ public enum V1beta1EBSSnapshotImportSpecForProviderKmsKeyIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EBSSnapshotImportSpecForProviderKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -100,6 +104,7 @@ public partial class V1beta1EBSSnapshotImportSpecForProviderKmsKeyIdRefPolicy
     public V1beta1EBSSnapshotImportSpecForProviderKmsKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1EBSSnapshotImportSpecForProviderKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -131,6 +136,7 @@ public enum V1beta1EBSSnapshotImportSpecForProviderKmsKeyIdSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EBSSnapshotImportSpecForProviderKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -144,6 +150,7 @@ public partial class V1beta1EBSSnapshotImportSpecForProviderKmsKeyIdSelectorPoli
     public V1beta1EBSSnapshotImportSpecForProviderKmsKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1EBSSnapshotImportSpecForProviderKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -159,6 +166,7 @@ public partial class V1beta1EBSSnapshotImportSpecForProviderKmsKeyIdSelector
     public V1beta1EBSSnapshotImportSpecForProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EBSSnapshotImportSpecForProvider
 {
     /// <summary>The client-specific data. Detailed below.</summary>
@@ -214,6 +222,7 @@ public partial class V1beta1EBSSnapshotImportSpecForProvider
     public double? TemporaryRestoreDays { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EBSSnapshotImportSpecInitProviderClientData
 {
     /// <summary>A user-defined comment about the disk upload.</summary>
@@ -233,6 +242,7 @@ public partial class V1beta1EBSSnapshotImportSpecInitProviderClientData
     public string? UploadStart { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EBSSnapshotImportSpecInitProviderDiskContainerUserBucket
 {
     /// <summary>The name of the Amazon S3 bucket where the disk image is located.</summary>
@@ -244,6 +254,7 @@ public partial class V1beta1EBSSnapshotImportSpecInitProviderDiskContainerUserBu
     public string? S3Key { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EBSSnapshotImportSpecInitProviderDiskContainer
 {
     /// <summary>The description of the disk image being imported.</summary>
@@ -283,6 +294,7 @@ public enum V1beta1EBSSnapshotImportSpecInitProviderKmsKeyIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EBSSnapshotImportSpecInitProviderKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -296,6 +308,7 @@ public partial class V1beta1EBSSnapshotImportSpecInitProviderKmsKeyIdRefPolicy
     public V1beta1EBSSnapshotImportSpecInitProviderKmsKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1EBSSnapshotImportSpecInitProviderKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -327,6 +340,7 @@ public enum V1beta1EBSSnapshotImportSpecInitProviderKmsKeyIdSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EBSSnapshotImportSpecInitProviderKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -340,6 +354,7 @@ public partial class V1beta1EBSSnapshotImportSpecInitProviderKmsKeyIdSelectorPol
     public V1beta1EBSSnapshotImportSpecInitProviderKmsKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1EBSSnapshotImportSpecInitProviderKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -355,6 +370,7 @@ public partial class V1beta1EBSSnapshotImportSpecInitProviderKmsKeyIdSelector
     public V1beta1EBSSnapshotImportSpecInitProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1EBSSnapshotImportSpecInitProvider
 {
     /// <summary>The client-specific data. Detailed below.</summary>
@@ -448,6 +464,7 @@ public enum V1beta1EBSSnapshotImportSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EBSSnapshotImportSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -461,6 +478,7 @@ public partial class V1beta1EBSSnapshotImportSpecProviderConfigRefPolicy
     public V1beta1EBSSnapshotImportSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1EBSSnapshotImportSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -492,6 +510,7 @@ public enum V1beta1EBSSnapshotImportSpecPublishConnectionDetailsToConfigRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EBSSnapshotImportSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -505,6 +524,7 @@ public partial class V1beta1EBSSnapshotImportSpecPublishConnectionDetailsToConfi
     public V1beta1EBSSnapshotImportSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1EBSSnapshotImportSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -516,6 +536,7 @@ public partial class V1beta1EBSSnapshotImportSpecPublishConnectionDetailsToConfi
     public V1beta1EBSSnapshotImportSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1EBSSnapshotImportSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -531,6 +552,7 @@ public partial class V1beta1EBSSnapshotImportSpecPublishConnectionDetailsToMetad
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1EBSSnapshotImportSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -546,6 +568,7 @@ public partial class V1beta1EBSSnapshotImportSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1EBSSnapshotImportSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -557,6 +580,7 @@ public partial class V1beta1EBSSnapshotImportSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>EBSSnapshotImportSpec defines the desired state of EBSSnapshotImport</summary>
 public partial class V1beta1EBSSnapshotImportSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -589,6 +613,7 @@ public partial class V1beta1EBSSnapshotImportSpec
     public V1beta1EBSSnapshotImportSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EBSSnapshotImportStatusAtProviderClientData
 {
     /// <summary>A user-defined comment about the disk upload.</summary>
@@ -608,6 +633,7 @@ public partial class V1beta1EBSSnapshotImportStatusAtProviderClientData
     public string? UploadStart { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EBSSnapshotImportStatusAtProviderDiskContainerUserBucket
 {
     /// <summary>The name of the Amazon S3 bucket where the disk image is located.</summary>
@@ -619,6 +645,7 @@ public partial class V1beta1EBSSnapshotImportStatusAtProviderDiskContainerUserBu
     public string? S3Key { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EBSSnapshotImportStatusAtProviderDiskContainer
 {
     /// <summary>The description of the disk image being imported.</summary>
@@ -638,6 +665,7 @@ public partial class V1beta1EBSSnapshotImportStatusAtProviderDiskContainer
     public IList<V1beta1EBSSnapshotImportStatusAtProviderDiskContainerUserBucket>? UserBucket { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EBSSnapshotImportStatusAtProvider
 {
     /// <summary>Amazon Resource Name (ARN) of the EBS Snapshot.</summary>
@@ -717,6 +745,7 @@ public partial class V1beta1EBSSnapshotImportStatusAtProvider
     public double? VolumeSize { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1EBSSnapshotImportStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -744,6 +773,7 @@ public partial class V1beta1EBSSnapshotImportStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>EBSSnapshotImportStatus defines the observed state of EBSSnapshotImport.</summary>
 public partial class V1beta1EBSSnapshotImportStatus
 {
     /// <summary></summary>
@@ -760,6 +790,7 @@ public partial class V1beta1EBSSnapshotImportStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>EBSSnapshotImport is the Schema for the EBSSnapshotImports API. Provides an elastic block storage snapshot import resource.</summary>
 public partial class V1beta1EBSSnapshotImport : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1EBSSnapshotImportSpec>, IStatus<V1beta1EBSSnapshotImportStatus>
 {
     public const string KubeApiVersion = "v1beta1";

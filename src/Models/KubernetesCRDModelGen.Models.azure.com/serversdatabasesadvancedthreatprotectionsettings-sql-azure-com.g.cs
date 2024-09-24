@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.azure.com;
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a sql.azure.com/ServersDatabase resource</summary>
 public partial class V1api20211101storageServersDatabasesAdvancedThreatProtectionSettingSpecOwner
 {
     /// <summary></summary>
@@ -19,6 +20,7 @@ public partial class V1api20211101storageServersDatabasesAdvancedThreatProtectio
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.Servers_Databases_AdvancedThreatProtectionSetting_Spec</summary>
 public partial class V1api20211101storageServersDatabasesAdvancedThreatProtectionSettingSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -38,6 +40,7 @@ public partial class V1api20211101storageServersDatabasesAdvancedThreatProtectio
     public string? State { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20211101storageServersDatabasesAdvancedThreatProtectionSettingStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -69,6 +72,7 @@ public partial class V1api20211101storageServersDatabasesAdvancedThreatProtectio
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 public partial class V1api20211101storageServersDatabasesAdvancedThreatProtectionSettingStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -100,6 +104,7 @@ public partial class V1api20211101storageServersDatabasesAdvancedThreatProtectio
     public string? LastModifiedByType { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.Servers_Databases_AdvancedThreatProtectionSetting_STATUS</summary>
 public partial class V1api20211101storageServersDatabasesAdvancedThreatProtectionSettingStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -136,6 +141,7 @@ public partial class V1api20211101storageServersDatabasesAdvancedThreatProtectio
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20211101.ServersDatabasesAdvancedThreatProtectionSetting Generator information: - Generated from: /sql/resource-manager/Microsoft.Sql/stable/2021-11-01/DatabaseAdvancedThreatProtectionSettings.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/advancedThreatProtectionSettings/Default</summary>
 public partial class V1api20211101storageServersDatabasesAdvancedThreatProtectionSetting : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20211101storageServersDatabasesAdvancedThreatProtectionSettingSpec>, IStatus<V1api20211101storageServersDatabasesAdvancedThreatProtectionSettingStatus>
 {
     public const string KubeApiVersion = "v1api20211101storage";

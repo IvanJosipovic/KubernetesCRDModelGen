@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iam.cnrm.cloud.google.com;
+/// <summary>Immutable. Optional. The condition under which the binding applies.</summary>
 public partial class V1beta1IAMPolicyMemberSpecCondition
 {
     /// <summary></summary>
@@ -23,6 +24,7 @@ public partial class V1beta1IAMPolicyMemberSpecCondition
     public string Title { get; set; }
 }
 
+/// <summary>The LoggingLogSink whose writer identity (i.e. its 'status.writerIdentity') is to be bound to the role.</summary>
 public partial class V1beta1IAMPolicyMemberSpecMemberFromLogSinkRef
 {
     /// <summary></summary>
@@ -34,6 +36,7 @@ public partial class V1beta1IAMPolicyMemberSpecMemberFromLogSinkRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The IAMServiceAccount to be bound to the role.</summary>
 public partial class V1beta1IAMPolicyMemberSpecMemberFromServiceAccountRef
 {
     /// <summary></summary>
@@ -45,6 +48,7 @@ public partial class V1beta1IAMPolicyMemberSpecMemberFromServiceAccountRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The ServiceIdentity whose service account (i.e., its 'status.email') is to be bound to the role.</summary>
 public partial class V1beta1IAMPolicyMemberSpecMemberFromServiceIdentityRef
 {
     /// <summary></summary>
@@ -56,6 +60,7 @@ public partial class V1beta1IAMPolicyMemberSpecMemberFromServiceIdentityRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The SQLInstance whose service account (i.e. its 'status.serviceAccountEmailAddress') is to be bound to the role.</summary>
 public partial class V1beta1IAMPolicyMemberSpecMemberFromSqlInstanceRef
 {
     /// <summary></summary>
@@ -67,6 +72,7 @@ public partial class V1beta1IAMPolicyMemberSpecMemberFromSqlInstanceRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. The IAM identity to be bound to the role. Exactly one of 'member' or 'memberFrom' must be used, and only one subfield within 'memberFrom' can be used.</summary>
 public partial class V1beta1IAMPolicyMemberSpecMemberFrom
 {
     /// <summary>The LoggingLogSink whose writer identity (i.e. its 'status.writerIdentity') is to be bound to the role.</summary>
@@ -86,6 +92,7 @@ public partial class V1beta1IAMPolicyMemberSpecMemberFrom
     public V1beta1IAMPolicyMemberSpecMemberFromSqlInstanceRef? SqlInstanceRef { get; set; }
 }
 
+/// <summary>Immutable. Required. The GCP resource to set the IAM policy on.</summary>
 public partial class V1beta1IAMPolicyMemberSpecResourceRef
 {
     /// <summary></summary>
@@ -109,6 +116,7 @@ public partial class V1beta1IAMPolicyMemberSpecResourceRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>IAMPolicyMemberSpec defines the desired state of IAMPolicyMember</summary>
 public partial class V1beta1IAMPolicyMemberSpec
 {
     /// <summary>Immutable. Optional. The condition under which the binding applies.</summary>
@@ -132,6 +140,7 @@ public partial class V1beta1IAMPolicyMemberSpec
     public string Role { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IAMPolicyMemberStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -155,6 +164,7 @@ public partial class V1beta1IAMPolicyMemberStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary>IAMPolicyMemberStatus defines the observed state of IAMPolicyMember</summary>
 public partial class V1beta1IAMPolicyMemberStatus
 {
     /// <summary>Conditions represent the latest available observations of the IAM policy's current state.</summary>
@@ -167,6 +177,7 @@ public partial class V1beta1IAMPolicyMemberStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>IAMPolicyMember is the Schema for the iampolicies API</summary>
 public partial class V1beta1IAMPolicyMember : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IAMPolicyMemberSpec>, IStatus<V1beta1IAMPolicyMemberStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iam.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1IAMCustomRoleSpec
 {
     /// <summary>A human-readable description for the role.</summary>
@@ -31,6 +32,7 @@ public partial class V1beta1IAMCustomRoleSpec
     public string Title { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IAMCustomRoleStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -54,6 +56,7 @@ public partial class V1beta1IAMCustomRoleStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IAMCustomRoleStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -74,6 +77,7 @@ public partial class V1beta1IAMCustomRoleStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1IAMCustomRole : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IAMCustomRoleSpec>, IStatus<V1beta1IAMCustomRoleStatus>
 {
     public const string KubeApiVersion = "v1beta1";

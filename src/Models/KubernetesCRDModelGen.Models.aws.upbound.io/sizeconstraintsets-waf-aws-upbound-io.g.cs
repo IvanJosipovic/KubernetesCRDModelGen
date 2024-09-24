@@ -18,6 +18,7 @@ public enum V1beta1SizeConstraintSetSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1SizeConstraintSetSpecForProviderSizeConstraintsFieldToMatch
 {
     /// <summary>When the type is HEADER, specify the name of the header that you want to search using the data field, for example, User-Agent or Referer. If the type is any other value, you can omit this field.</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1SizeConstraintSetSpecForProviderSizeConstraintsField
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SizeConstraintSetSpecForProviderSizeConstraints
 {
     /// <summary>Type of comparison you want to perform, such as EQ, NE, LT, or GT. Please refer to the documentation for a complete list of supported values.</summary>
@@ -48,6 +50,7 @@ public partial class V1beta1SizeConstraintSetSpecForProviderSizeConstraints
     public string? TextTransformation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SizeConstraintSetSpecForProvider
 {
     /// <summary>Name or description of the Size Constraint Set.</summary>
@@ -63,6 +66,7 @@ public partial class V1beta1SizeConstraintSetSpecForProvider
     public IList<V1beta1SizeConstraintSetSpecForProviderSizeConstraints>? SizeConstraints { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SizeConstraintSetSpecInitProviderSizeConstraintsFieldToMatch
 {
     /// <summary>When the type is HEADER, specify the name of the header that you want to search using the data field, for example, User-Agent or Referer. If the type is any other value, you can omit this field.</summary>
@@ -74,6 +78,7 @@ public partial class V1beta1SizeConstraintSetSpecInitProviderSizeConstraintsFiel
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SizeConstraintSetSpecInitProviderSizeConstraints
 {
     /// <summary>Type of comparison you want to perform, such as EQ, NE, LT, or GT. Please refer to the documentation for a complete list of supported values.</summary>
@@ -93,6 +98,7 @@ public partial class V1beta1SizeConstraintSetSpecInitProviderSizeConstraints
     public string? TextTransformation { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1SizeConstraintSetSpecInitProvider
 {
     /// <summary>Name or description of the Size Constraint Set.</summary>
@@ -146,6 +152,7 @@ public enum V1beta1SizeConstraintSetSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SizeConstraintSetSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -159,6 +166,7 @@ public partial class V1beta1SizeConstraintSetSpecProviderConfigRefPolicy
     public V1beta1SizeConstraintSetSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1SizeConstraintSetSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -190,6 +198,7 @@ public enum V1beta1SizeConstraintSetSpecPublishConnectionDetailsToConfigRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SizeConstraintSetSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -203,6 +212,7 @@ public partial class V1beta1SizeConstraintSetSpecPublishConnectionDetailsToConfi
     public V1beta1SizeConstraintSetSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1SizeConstraintSetSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -214,6 +224,7 @@ public partial class V1beta1SizeConstraintSetSpecPublishConnectionDetailsToConfi
     public V1beta1SizeConstraintSetSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1SizeConstraintSetSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -229,6 +240,7 @@ public partial class V1beta1SizeConstraintSetSpecPublishConnectionDetailsToMetad
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1SizeConstraintSetSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -244,6 +256,7 @@ public partial class V1beta1SizeConstraintSetSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1SizeConstraintSetSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -255,6 +268,7 @@ public partial class V1beta1SizeConstraintSetSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>SizeConstraintSetSpec defines the desired state of SizeConstraintSet</summary>
 public partial class V1beta1SizeConstraintSetSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -287,6 +301,7 @@ public partial class V1beta1SizeConstraintSetSpec
     public V1beta1SizeConstraintSetSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SizeConstraintSetStatusAtProviderSizeConstraintsFieldToMatch
 {
     /// <summary>When the type is HEADER, specify the name of the header that you want to search using the data field, for example, User-Agent or Referer. If the type is any other value, you can omit this field.</summary>
@@ -298,6 +313,7 @@ public partial class V1beta1SizeConstraintSetStatusAtProviderSizeConstraintsFiel
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SizeConstraintSetStatusAtProviderSizeConstraints
 {
     /// <summary>Type of comparison you want to perform, such as EQ, NE, LT, or GT. Please refer to the documentation for a complete list of supported values.</summary>
@@ -317,6 +333,7 @@ public partial class V1beta1SizeConstraintSetStatusAtProviderSizeConstraints
     public string? TextTransformation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SizeConstraintSetStatusAtProvider
 {
     /// <summary>Amazon Resource Name (ARN).</summary>
@@ -336,6 +353,7 @@ public partial class V1beta1SizeConstraintSetStatusAtProvider
     public IList<V1beta1SizeConstraintSetStatusAtProviderSizeConstraints>? SizeConstraints { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1SizeConstraintSetStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -363,6 +381,7 @@ public partial class V1beta1SizeConstraintSetStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>SizeConstraintSetStatus defines the observed state of SizeConstraintSet.</summary>
 public partial class V1beta1SizeConstraintSetStatus
 {
     /// <summary></summary>
@@ -379,6 +398,7 @@ public partial class V1beta1SizeConstraintSetStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>SizeConstraintSet is the Schema for the SizeConstraintSets API. The</summary>
 public partial class V1beta1SizeConstraintSet : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SizeConstraintSetSpec>, IStatus<V1beta1SizeConstraintSetStatus>
 {
     public const string KubeApiVersion = "v1beta1";

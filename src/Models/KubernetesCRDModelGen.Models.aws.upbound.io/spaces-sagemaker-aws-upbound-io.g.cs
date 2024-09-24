@@ -38,6 +38,7 @@ public enum V1beta1SpaceSpecForProviderDomainIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpaceSpecForProviderDomainIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1SpaceSpecForProviderDomainIdRefPolicy
     public V1beta1SpaceSpecForProviderDomainIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Domain in sagemaker to populate domainId.</summary>
 public partial class V1beta1SpaceSpecForProviderDomainIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1SpaceSpecForProviderDomainIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SpaceSpecForProviderDomainIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1SpaceSpecForProviderDomainIdSelectorPolicy
     public V1beta1SpaceSpecForProviderDomainIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Domain in sagemaker to populate domainId.</summary>
 public partial class V1beta1SpaceSpecForProviderDomainIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1SpaceSpecForProviderDomainIdSelector
     public V1beta1SpaceSpecForProviderDomainIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceSpecForProviderOwnershipSettings
 {
     /// <summary>The user profile who is the owner of the private space.</summary>
@@ -117,6 +122,7 @@ public partial class V1beta1SpaceSpecForProviderOwnershipSettings
     public string? OwnerUserProfileName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsCodeEditorAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type.</summary>
@@ -140,6 +146,7 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsCodeEditorAppSettin
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsCodeEditorAppSettings
 {
     /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.</summary>
@@ -147,6 +154,7 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsCodeEditorAppSettin
     public IList<V1beta1SpaceSpecForProviderSpaceSettingsCodeEditorAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsCustomFileSystemEfsFileSystem
 {
     /// <summary>The ID of your Amazon EFS file system.</summary>
@@ -154,6 +162,7 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsCustomFileSystemEfs
     public string? FileSystemId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsCustomFileSystem
 {
     /// <summary>A custom file system in Amazon EFS. see EFS File System below.</summary>
@@ -161,6 +170,7 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsCustomFileSystem
     public IList<V1beta1SpaceSpecForProviderSpaceSettingsCustomFileSystemEfsFileSystem>? EfsFileSystem { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsJupyterLabAppSettingsCodeRepository
 {
     /// <summary>The URL of the Git repository.</summary>
@@ -168,6 +178,7 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsJupyterLabAppSettin
     public string? RepositoryUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsJupyterLabAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type.</summary>
@@ -191,6 +202,7 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsJupyterLabAppSettin
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsJupyterLabAppSettings
 {
     /// <summary>A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see Code Repository below.</summary>
@@ -202,6 +214,7 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsJupyterLabAppSettin
     public IList<V1beta1SpaceSpecForProviderSpaceSettingsJupyterLabAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsJupyterServerAppSettingsCodeRepository
 {
     /// <summary>The URL of the Git repository.</summary>
@@ -209,6 +222,7 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsJupyterServerAppSet
     public string? RepositoryUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsJupyterServerAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type.</summary>
@@ -232,6 +246,7 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsJupyterServerAppSet
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsJupyterServerAppSettings
 {
     /// <summary>A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see Code Repository below.</summary>
@@ -247,6 +262,7 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsJupyterServerAppSet
     public IList<string>? LifecycleConfigArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsKernelGatewayAppSettingsCustomImage
 {
     /// <summary>The name of the App Image Config.</summary>
@@ -262,6 +278,7 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsKernelGatewayAppSet
     public double? ImageVersionNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsKernelGatewayAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type.</summary>
@@ -285,6 +302,7 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsKernelGatewayAppSet
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsKernelGatewayAppSettings
 {
     /// <summary>A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.</summary>
@@ -300,6 +318,7 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsKernelGatewayAppSet
     public IList<string>? LifecycleConfigArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsSpaceStorageSettingsEbsStorageSettings
 {
     /// <summary></summary>
@@ -307,6 +326,7 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsSpaceStorageSetting
     public double? EbsVolumeSizeInGb { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsSpaceStorageSettings
 {
     /// <summary></summary>
@@ -314,6 +334,7 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsSpaceStorageSetting
     public IList<V1beta1SpaceSpecForProviderSpaceSettingsSpaceStorageSettingsEbsStorageSettings>? EbsStorageSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceSpecForProviderSpaceSettings
 {
     /// <summary>The type of app created within the space.</summary>
@@ -345,6 +366,7 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettings
     public IList<V1beta1SpaceSpecForProviderSpaceSettingsSpaceStorageSettings>? SpaceStorageSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceSpecForProviderSpaceSharingSettings
 {
     /// <summary>Specifies the sharing type of the space. Valid values are Private and Shared.</summary>
@@ -352,6 +374,7 @@ public partial class V1beta1SpaceSpecForProviderSpaceSharingSettings
     public string? SharingType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceSpecForProvider
 {
     /// <summary>The ID of the associated Domain.</summary>
@@ -415,6 +438,7 @@ public enum V1beta1SpaceSpecInitProviderDomainIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpaceSpecInitProviderDomainIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -428,6 +452,7 @@ public partial class V1beta1SpaceSpecInitProviderDomainIdRefPolicy
     public V1beta1SpaceSpecInitProviderDomainIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Domain in sagemaker to populate domainId.</summary>
 public partial class V1beta1SpaceSpecInitProviderDomainIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -459,6 +484,7 @@ public enum V1beta1SpaceSpecInitProviderDomainIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SpaceSpecInitProviderDomainIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -472,6 +498,7 @@ public partial class V1beta1SpaceSpecInitProviderDomainIdSelectorPolicy
     public V1beta1SpaceSpecInitProviderDomainIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Domain in sagemaker to populate domainId.</summary>
 public partial class V1beta1SpaceSpecInitProviderDomainIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -487,6 +514,7 @@ public partial class V1beta1SpaceSpecInitProviderDomainIdSelector
     public V1beta1SpaceSpecInitProviderDomainIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceSpecInitProviderOwnershipSettings
 {
     /// <summary>The user profile who is the owner of the private space.</summary>
@@ -494,6 +522,7 @@ public partial class V1beta1SpaceSpecInitProviderOwnershipSettings
     public string? OwnerUserProfileName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsCodeEditorAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type.</summary>
@@ -517,6 +546,7 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsCodeEditorAppSetti
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsCodeEditorAppSettings
 {
     /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.</summary>
@@ -524,6 +554,7 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsCodeEditorAppSetti
     public IList<V1beta1SpaceSpecInitProviderSpaceSettingsCodeEditorAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsCustomFileSystemEfsFileSystem
 {
     /// <summary>The ID of your Amazon EFS file system.</summary>
@@ -531,6 +562,7 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsCustomFileSystemEf
     public string? FileSystemId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsCustomFileSystem
 {
     /// <summary>A custom file system in Amazon EFS. see EFS File System below.</summary>
@@ -538,6 +570,7 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsCustomFileSystem
     public IList<V1beta1SpaceSpecInitProviderSpaceSettingsCustomFileSystemEfsFileSystem>? EfsFileSystem { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsJupyterLabAppSettingsCodeRepository
 {
     /// <summary>The URL of the Git repository.</summary>
@@ -545,6 +578,7 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsJupyterLabAppSetti
     public string? RepositoryUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsJupyterLabAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type.</summary>
@@ -568,6 +602,7 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsJupyterLabAppSetti
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsJupyterLabAppSettings
 {
     /// <summary>A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see Code Repository below.</summary>
@@ -579,6 +614,7 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsJupyterLabAppSetti
     public IList<V1beta1SpaceSpecInitProviderSpaceSettingsJupyterLabAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsJupyterServerAppSettingsCodeRepository
 {
     /// <summary>The URL of the Git repository.</summary>
@@ -586,6 +622,7 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsJupyterServerAppSe
     public string? RepositoryUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsJupyterServerAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type.</summary>
@@ -609,6 +646,7 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsJupyterServerAppSe
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsJupyterServerAppSettings
 {
     /// <summary>A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see Code Repository below.</summary>
@@ -624,6 +662,7 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsJupyterServerAppSe
     public IList<string>? LifecycleConfigArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsKernelGatewayAppSettingsCustomImage
 {
     /// <summary>The name of the App Image Config.</summary>
@@ -639,6 +678,7 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsKernelGatewayAppSe
     public double? ImageVersionNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsKernelGatewayAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type.</summary>
@@ -662,6 +702,7 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsKernelGatewayAppSe
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsKernelGatewayAppSettings
 {
     /// <summary>A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.</summary>
@@ -677,6 +718,7 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsKernelGatewayAppSe
     public IList<string>? LifecycleConfigArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsSpaceStorageSettingsEbsStorageSettings
 {
     /// <summary></summary>
@@ -684,6 +726,7 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsSpaceStorageSettin
     public double? EbsVolumeSizeInGb { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsSpaceStorageSettings
 {
     /// <summary></summary>
@@ -691,6 +734,7 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsSpaceStorageSettin
     public IList<V1beta1SpaceSpecInitProviderSpaceSettingsSpaceStorageSettingsEbsStorageSettings>? EbsStorageSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceSpecInitProviderSpaceSettings
 {
     /// <summary>The type of app created within the space.</summary>
@@ -722,6 +766,7 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettings
     public IList<V1beta1SpaceSpecInitProviderSpaceSettingsSpaceStorageSettings>? SpaceStorageSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceSpecInitProviderSpaceSharingSettings
 {
     /// <summary>Specifies the sharing type of the space. Valid values are Private and Shared.</summary>
@@ -729,6 +774,7 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSharingSettings
     public string? SharingType { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1SpaceSpecInitProvider
 {
     /// <summary>The ID of the associated Domain.</summary>
@@ -810,6 +856,7 @@ public enum V1beta1SpaceSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpaceSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -823,6 +870,7 @@ public partial class V1beta1SpaceSpecProviderConfigRefPolicy
     public V1beta1SpaceSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1SpaceSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -854,6 +902,7 @@ public enum V1beta1SpaceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpaceSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -867,6 +916,7 @@ public partial class V1beta1SpaceSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1SpaceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1SpaceSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -878,6 +928,7 @@ public partial class V1beta1SpaceSpecPublishConnectionDetailsToConfigRef
     public V1beta1SpaceSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1SpaceSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -893,6 +944,7 @@ public partial class V1beta1SpaceSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1SpaceSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -908,6 +960,7 @@ public partial class V1beta1SpaceSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1SpaceSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -919,6 +972,7 @@ public partial class V1beta1SpaceSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>SpaceSpec defines the desired state of Space</summary>
 public partial class V1beta1SpaceSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -951,6 +1005,7 @@ public partial class V1beta1SpaceSpec
     public V1beta1SpaceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceStatusAtProviderOwnershipSettings
 {
     /// <summary>The user profile who is the owner of the private space.</summary>
@@ -958,6 +1013,7 @@ public partial class V1beta1SpaceStatusAtProviderOwnershipSettings
     public string? OwnerUserProfileName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsCodeEditorAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type.</summary>
@@ -981,6 +1037,7 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsCodeEditorAppSetti
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsCodeEditorAppSettings
 {
     /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.</summary>
@@ -988,6 +1045,7 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsCodeEditorAppSetti
     public IList<V1beta1SpaceStatusAtProviderSpaceSettingsCodeEditorAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsCustomFileSystemEfsFileSystem
 {
     /// <summary>The ID of your Amazon EFS file system.</summary>
@@ -995,6 +1053,7 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsCustomFileSystemEf
     public string? FileSystemId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsCustomFileSystem
 {
     /// <summary>A custom file system in Amazon EFS. see EFS File System below.</summary>
@@ -1002,6 +1061,7 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsCustomFileSystem
     public IList<V1beta1SpaceStatusAtProviderSpaceSettingsCustomFileSystemEfsFileSystem>? EfsFileSystem { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsJupyterLabAppSettingsCodeRepository
 {
     /// <summary>The URL of the Git repository.</summary>
@@ -1009,6 +1069,7 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsJupyterLabAppSetti
     public string? RepositoryUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsJupyterLabAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type.</summary>
@@ -1032,6 +1093,7 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsJupyterLabAppSetti
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsJupyterLabAppSettings
 {
     /// <summary>A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see Code Repository below.</summary>
@@ -1043,6 +1105,7 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsJupyterLabAppSetti
     public IList<V1beta1SpaceStatusAtProviderSpaceSettingsJupyterLabAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsJupyterServerAppSettingsCodeRepository
 {
     /// <summary>The URL of the Git repository.</summary>
@@ -1050,6 +1113,7 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsJupyterServerAppSe
     public string? RepositoryUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsJupyterServerAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type.</summary>
@@ -1073,6 +1137,7 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsJupyterServerAppSe
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsJupyterServerAppSettings
 {
     /// <summary>A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see Code Repository below.</summary>
@@ -1088,6 +1153,7 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsJupyterServerAppSe
     public IList<string>? LifecycleConfigArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsKernelGatewayAppSettingsCustomImage
 {
     /// <summary>The name of the App Image Config.</summary>
@@ -1103,6 +1169,7 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsKernelGatewayAppSe
     public double? ImageVersionNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsKernelGatewayAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type.</summary>
@@ -1126,6 +1193,7 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsKernelGatewayAppSe
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsKernelGatewayAppSettings
 {
     /// <summary>A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.</summary>
@@ -1141,6 +1209,7 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsKernelGatewayAppSe
     public IList<string>? LifecycleConfigArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsSpaceStorageSettingsEbsStorageSettings
 {
     /// <summary></summary>
@@ -1148,6 +1217,7 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsSpaceStorageSettin
     public double? EbsVolumeSizeInGb { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsSpaceStorageSettings
 {
     /// <summary></summary>
@@ -1155,6 +1225,7 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsSpaceStorageSettin
     public IList<V1beta1SpaceStatusAtProviderSpaceSettingsSpaceStorageSettingsEbsStorageSettings>? EbsStorageSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceStatusAtProviderSpaceSettings
 {
     /// <summary>The type of app created within the space.</summary>
@@ -1186,6 +1257,7 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettings
     public IList<V1beta1SpaceStatusAtProviderSpaceSettingsSpaceStorageSettings>? SpaceStorageSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceStatusAtProviderSpaceSharingSettings
 {
     /// <summary>Specifies the sharing type of the space. Valid values are Private and Shared.</summary>
@@ -1193,6 +1265,7 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSharingSettings
     public string? SharingType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpaceStatusAtProvider
 {
     /// <summary>The space's Amazon Resource Name (ARN).</summary>
@@ -1244,6 +1317,7 @@ public partial class V1beta1SpaceStatusAtProvider
     public string? Url { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1SpaceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1271,6 +1345,7 @@ public partial class V1beta1SpaceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>SpaceStatus defines the observed state of Space.</summary>
 public partial class V1beta1SpaceStatus
 {
     /// <summary></summary>
@@ -1287,6 +1362,7 @@ public partial class V1beta1SpaceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Space is the Schema for the Spaces API. Provides a SageMaker Space resource.</summary>
 public partial class V1beta1Space : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SpaceSpec>, IStatus<V1beta1SpaceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

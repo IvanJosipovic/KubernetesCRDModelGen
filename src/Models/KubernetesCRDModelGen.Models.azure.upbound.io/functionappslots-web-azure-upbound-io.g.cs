@@ -38,6 +38,7 @@ public enum V1beta1FunctionAppSlotSpecForProviderAppServicePlanIdRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderAppServicePlanIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1FunctionAppSlotSpecForProviderAppServicePlanIdRefPol
     public V1beta1FunctionAppSlotSpecForProviderAppServicePlanIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a AppServicePlan in web to populate appServicePlanId.</summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderAppServicePlanIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1FunctionAppSlotSpecForProviderAppServicePlanIdSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderAppServicePlanIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1FunctionAppSlotSpecForProviderAppServicePlanIdSelect
     public V1beta1FunctionAppSlotSpecForProviderAppServicePlanIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a AppServicePlan in web to populate appServicePlanId.</summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderAppServicePlanIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1FunctionAppSlotSpecForProviderAppServicePlanIdSelect
     public V1beta1FunctionAppSlotSpecForProviderAppServicePlanIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>The OAuth 2.0 client secret that was created for the app used for authentication.</summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderAuthSettingsActiveDirectoryClientSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1FunctionAppSlotSpecForProviderAuthSettingsActiveDire
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderAuthSettingsActiveDirectory
 {
     /// <summary>Allowed audience values to consider when validating JWTs issued by Azure Active Directory.</summary>
@@ -140,6 +146,7 @@ public partial class V1beta1FunctionAppSlotSpecForProviderAuthSettingsActiveDire
     public V1beta1FunctionAppSlotSpecForProviderAuthSettingsActiveDirectoryClientSecretSecretRef? ClientSecretSecretRef { get; set; }
 }
 
+/// <summary>The App Secret of the Facebook app used for Facebook login.</summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderAuthSettingsFacebookAppSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -155,6 +162,7 @@ public partial class V1beta1FunctionAppSlotSpecForProviderAuthSettingsFacebookAp
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderAuthSettingsFacebook
 {
     /// <summary>The App ID of the Facebook app used for login</summary>
@@ -170,6 +178,7 @@ public partial class V1beta1FunctionAppSlotSpecForProviderAuthSettingsFacebook
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary>The OAuth 2.0 client secret that was created for the app used for authentication.</summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderAuthSettingsGoogleClientSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -185,6 +194,7 @@ public partial class V1beta1FunctionAppSlotSpecForProviderAuthSettingsGoogleClie
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderAuthSettingsGoogle
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication.</summary>
@@ -200,6 +210,7 @@ public partial class V1beta1FunctionAppSlotSpecForProviderAuthSettingsGoogle
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary>The OAuth 2.0 client secret that was created for the app used for authentication.</summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderAuthSettingsMicrosoftClientSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -215,6 +226,7 @@ public partial class V1beta1FunctionAppSlotSpecForProviderAuthSettingsMicrosoftC
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderAuthSettingsMicrosoft
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication.</summary>
@@ -230,6 +242,7 @@ public partial class V1beta1FunctionAppSlotSpecForProviderAuthSettingsMicrosoft
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary>The OAuth 1.0a consumer secret of the Twitter application used for sign-in.</summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderAuthSettingsTwitterConsumerSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -245,6 +258,7 @@ public partial class V1beta1FunctionAppSlotSpecForProviderAuthSettingsTwitterCon
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderAuthSettingsTwitter
 {
     /// <summary>The OAuth 1.0a consumer key of the Twitter application used for sign-in.</summary>
@@ -256,6 +270,7 @@ public partial class V1beta1FunctionAppSlotSpecForProviderAuthSettingsTwitter
     public V1beta1FunctionAppSlotSpecForProviderAuthSettingsTwitterConsumerSecretSecretRef ConsumerSecretSecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderAuthSettings
 {
     /// <summary>An active_directory block as defined below.</summary>
@@ -315,6 +330,7 @@ public partial class V1beta1FunctionAppSlotSpecForProviderAuthSettings
     public string? UnauthenticatedClientAction { get; set; }
 }
 
+/// <summary>The value for the Connection String.</summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderConnectionStringValueSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -330,6 +346,7 @@ public partial class V1beta1FunctionAppSlotSpecForProviderConnectionStringValueS
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderConnectionString
 {
     /// <summary>The name of the Connection String.</summary>
@@ -365,6 +382,7 @@ public enum V1beta1FunctionAppSlotSpecForProviderFunctionAppNameRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderFunctionAppNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -378,6 +396,7 @@ public partial class V1beta1FunctionAppSlotSpecForProviderFunctionAppNameRefPoli
     public V1beta1FunctionAppSlotSpecForProviderFunctionAppNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a FunctionApp in web to populate functionAppName.</summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderFunctionAppNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -409,6 +428,7 @@ public enum V1beta1FunctionAppSlotSpecForProviderFunctionAppNameSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderFunctionAppNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -422,6 +442,7 @@ public partial class V1beta1FunctionAppSlotSpecForProviderFunctionAppNameSelecto
     public V1beta1FunctionAppSlotSpecForProviderFunctionAppNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a FunctionApp in web to populate functionAppName.</summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderFunctionAppNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -437,6 +458,7 @@ public partial class V1beta1FunctionAppSlotSpecForProviderFunctionAppNameSelecto
     public V1beta1FunctionAppSlotSpecForProviderFunctionAppNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderIdentity
 {
     /// <summary>Specifies a list of user managed identity ids to be assigned. Required if type is UserAssigned.</summary>
@@ -468,6 +490,7 @@ public enum V1beta1FunctionAppSlotSpecForProviderResourceGroupNameRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -481,6 +504,7 @@ public partial class V1beta1FunctionAppSlotSpecForProviderResourceGroupNameRefPo
     public V1beta1FunctionAppSlotSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -512,6 +536,7 @@ public enum V1beta1FunctionAppSlotSpecForProviderResourceGroupNameSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -525,6 +550,7 @@ public partial class V1beta1FunctionAppSlotSpecForProviderResourceGroupNameSelec
     public V1beta1FunctionAppSlotSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -540,6 +566,7 @@ public partial class V1beta1FunctionAppSlotSpecForProviderResourceGroupNameSelec
     public V1beta1FunctionAppSlotSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderSiteConfigCors
 {
     /// <summary>A list of origins which should be able to make cross-origin calls. * can be used to allow all calls.</summary>
@@ -551,6 +578,7 @@ public partial class V1beta1FunctionAppSlotSpecForProviderSiteConfigCors
     public bool? SupportCredentials { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderSiteConfigIpRestrictionHeaders
 {
     /// <summary>A list of allowed Azure FrontDoor IDs in UUID notation with a maximum of 8.</summary>
@@ -590,6 +618,7 @@ public enum V1beta1FunctionAppSlotSpecForProviderSiteConfigIpRestrictionVirtualN
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -603,6 +632,7 @@ public partial class V1beta1FunctionAppSlotSpecForProviderSiteConfigIpRestrictio
     public V1beta1FunctionAppSlotSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -634,6 +664,7 @@ public enum V1beta1FunctionAppSlotSpecForProviderSiteConfigIpRestrictionVirtualN
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -647,6 +678,7 @@ public partial class V1beta1FunctionAppSlotSpecForProviderSiteConfigIpRestrictio
     public V1beta1FunctionAppSlotSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -662,6 +694,7 @@ public partial class V1beta1FunctionAppSlotSpecForProviderSiteConfigIpRestrictio
     public V1beta1FunctionAppSlotSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderSiteConfigIpRestriction
 {
     /// <summary>Allow or Deny access for this IP range. Defaults to Allow.</summary>
@@ -701,6 +734,7 @@ public partial class V1beta1FunctionAppSlotSpecForProviderSiteConfigIpRestrictio
     public V1beta1FunctionAppSlotSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelector? VirtualNetworkSubnetIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderSiteConfigScmIpRestrictionHeaders
 {
     /// <summary>A list of allowed Azure FrontDoor IDs in UUID notation with a maximum of 8.</summary>
@@ -740,6 +774,7 @@ public enum V1beta1FunctionAppSlotSpecForProviderSiteConfigScmIpRestrictionVirtu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -753,6 +788,7 @@ public partial class V1beta1FunctionAppSlotSpecForProviderSiteConfigScmIpRestric
     public V1beta1FunctionAppSlotSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -784,6 +820,7 @@ public enum V1beta1FunctionAppSlotSpecForProviderSiteConfigScmIpRestrictionVirtu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -797,6 +834,7 @@ public partial class V1beta1FunctionAppSlotSpecForProviderSiteConfigScmIpRestric
     public V1beta1FunctionAppSlotSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -812,6 +850,7 @@ public partial class V1beta1FunctionAppSlotSpecForProviderSiteConfigScmIpRestric
     public V1beta1FunctionAppSlotSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderSiteConfigScmIpRestriction
 {
     /// <summary>Allow or Deny access for this IP range. Defaults to Allow.</summary>
@@ -851,6 +890,7 @@ public partial class V1beta1FunctionAppSlotSpecForProviderSiteConfigScmIpRestric
     public V1beta1FunctionAppSlotSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelector? VirtualNetworkSubnetIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderSiteConfig
 {
     /// <summary>Should the Function App be loaded at all times? Defaults to false.</summary>
@@ -938,6 +978,7 @@ public partial class V1beta1FunctionAppSlotSpecForProviderSiteConfig
     public bool? WebsocketsEnabled { get; set; }
 }
 
+/// <summary>The access key which will be used to access the backend storage account for the Function App.</summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderStorageAccountAccessKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -973,6 +1014,7 @@ public enum V1beta1FunctionAppSlotSpecForProviderStorageAccountNameRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderStorageAccountNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -986,6 +1028,7 @@ public partial class V1beta1FunctionAppSlotSpecForProviderStorageAccountNameRefP
     public V1beta1FunctionAppSlotSpecForProviderStorageAccountNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in storage to populate storageAccountName.</summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderStorageAccountNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1017,6 +1060,7 @@ public enum V1beta1FunctionAppSlotSpecForProviderStorageAccountNameSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderStorageAccountNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1030,6 +1074,7 @@ public partial class V1beta1FunctionAppSlotSpecForProviderStorageAccountNameSele
     public V1beta1FunctionAppSlotSpecForProviderStorageAccountNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in storage to populate storageAccountName.</summary>
 public partial class V1beta1FunctionAppSlotSpecForProviderStorageAccountNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1045,6 +1090,7 @@ public partial class V1beta1FunctionAppSlotSpecForProviderStorageAccountNameSele
     public V1beta1FunctionAppSlotSpecForProviderStorageAccountNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotSpecForProvider
 {
     /// <summary>The ID of the App Service Plan within which to create this Function App Slot. Changing this forces a new resource to be created.</summary>
@@ -1172,6 +1218,7 @@ public enum V1beta1FunctionAppSlotSpecInitProviderAppServicePlanIdRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionAppSlotSpecInitProviderAppServicePlanIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1185,6 +1232,7 @@ public partial class V1beta1FunctionAppSlotSpecInitProviderAppServicePlanIdRefPo
     public V1beta1FunctionAppSlotSpecInitProviderAppServicePlanIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a AppServicePlan in web to populate appServicePlanId.</summary>
 public partial class V1beta1FunctionAppSlotSpecInitProviderAppServicePlanIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1216,6 +1264,7 @@ public enum V1beta1FunctionAppSlotSpecInitProviderAppServicePlanIdSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionAppSlotSpecInitProviderAppServicePlanIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1229,6 +1278,7 @@ public partial class V1beta1FunctionAppSlotSpecInitProviderAppServicePlanIdSelec
     public V1beta1FunctionAppSlotSpecInitProviderAppServicePlanIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a AppServicePlan in web to populate appServicePlanId.</summary>
 public partial class V1beta1FunctionAppSlotSpecInitProviderAppServicePlanIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1244,6 +1294,7 @@ public partial class V1beta1FunctionAppSlotSpecInitProviderAppServicePlanIdSelec
     public V1beta1FunctionAppSlotSpecInitProviderAppServicePlanIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotSpecInitProviderAuthSettingsActiveDirectory
 {
     /// <summary>Allowed audience values to consider when validating JWTs issued by Azure Active Directory.</summary>
@@ -1255,6 +1306,7 @@ public partial class V1beta1FunctionAppSlotSpecInitProviderAuthSettingsActiveDir
     public string? ClientId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotSpecInitProviderAuthSettingsFacebook
 {
     /// <summary>The App ID of the Facebook app used for login</summary>
@@ -1266,6 +1318,7 @@ public partial class V1beta1FunctionAppSlotSpecInitProviderAuthSettingsFacebook
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotSpecInitProviderAuthSettingsGoogle
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication.</summary>
@@ -1277,6 +1330,7 @@ public partial class V1beta1FunctionAppSlotSpecInitProviderAuthSettingsGoogle
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotSpecInitProviderAuthSettingsMicrosoft
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication.</summary>
@@ -1288,6 +1342,7 @@ public partial class V1beta1FunctionAppSlotSpecInitProviderAuthSettingsMicrosoft
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotSpecInitProviderAuthSettingsTwitter
 {
     /// <summary>The OAuth 1.0a consumer key of the Twitter application used for sign-in.</summary>
@@ -1295,6 +1350,7 @@ public partial class V1beta1FunctionAppSlotSpecInitProviderAuthSettingsTwitter
     public string? ConsumerKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotSpecInitProviderAuthSettings
 {
     /// <summary>An active_directory block as defined below.</summary>
@@ -1354,6 +1410,7 @@ public partial class V1beta1FunctionAppSlotSpecInitProviderAuthSettings
     public string? UnauthenticatedClientAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotSpecInitProviderConnectionString
 {
     /// <summary>The name of the Connection String.</summary>
@@ -1365,6 +1422,7 @@ public partial class V1beta1FunctionAppSlotSpecInitProviderConnectionString
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotSpecInitProviderIdentity
 {
     /// <summary>Specifies a list of user managed identity ids to be assigned. Required if type is UserAssigned.</summary>
@@ -1376,6 +1434,7 @@ public partial class V1beta1FunctionAppSlotSpecInitProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotSpecInitProviderSiteConfigCors
 {
     /// <summary>A list of origins which should be able to make cross-origin calls. * can be used to allow all calls.</summary>
@@ -1387,6 +1446,7 @@ public partial class V1beta1FunctionAppSlotSpecInitProviderSiteConfigCors
     public bool? SupportCredentials { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotSpecInitProviderSiteConfigIpRestrictionHeaders
 {
     /// <summary>A list of allowed Azure FrontDoor IDs in UUID notation with a maximum of 8.</summary>
@@ -1426,6 +1486,7 @@ public enum V1beta1FunctionAppSlotSpecInitProviderSiteConfigIpRestrictionVirtual
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionAppSlotSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1439,6 +1500,7 @@ public partial class V1beta1FunctionAppSlotSpecInitProviderSiteConfigIpRestricti
     public V1beta1FunctionAppSlotSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1FunctionAppSlotSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1470,6 +1532,7 @@ public enum V1beta1FunctionAppSlotSpecInitProviderSiteConfigIpRestrictionVirtual
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionAppSlotSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1483,6 +1546,7 @@ public partial class V1beta1FunctionAppSlotSpecInitProviderSiteConfigIpRestricti
     public V1beta1FunctionAppSlotSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1FunctionAppSlotSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1498,6 +1562,7 @@ public partial class V1beta1FunctionAppSlotSpecInitProviderSiteConfigIpRestricti
     public V1beta1FunctionAppSlotSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotSpecInitProviderSiteConfigIpRestriction
 {
     /// <summary>Allow or Deny access for this IP range. Defaults to Allow.</summary>
@@ -1537,6 +1602,7 @@ public partial class V1beta1FunctionAppSlotSpecInitProviderSiteConfigIpRestricti
     public V1beta1FunctionAppSlotSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelector? VirtualNetworkSubnetIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotSpecInitProviderSiteConfigScmIpRestrictionHeaders
 {
     /// <summary>A list of allowed Azure FrontDoor IDs in UUID notation with a maximum of 8.</summary>
@@ -1576,6 +1642,7 @@ public enum V1beta1FunctionAppSlotSpecInitProviderSiteConfigScmIpRestrictionVirt
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionAppSlotSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1589,6 +1656,7 @@ public partial class V1beta1FunctionAppSlotSpecInitProviderSiteConfigScmIpRestri
     public V1beta1FunctionAppSlotSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1FunctionAppSlotSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1620,6 +1688,7 @@ public enum V1beta1FunctionAppSlotSpecInitProviderSiteConfigScmIpRestrictionVirt
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionAppSlotSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1633,6 +1702,7 @@ public partial class V1beta1FunctionAppSlotSpecInitProviderSiteConfigScmIpRestri
     public V1beta1FunctionAppSlotSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1FunctionAppSlotSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1648,6 +1718,7 @@ public partial class V1beta1FunctionAppSlotSpecInitProviderSiteConfigScmIpRestri
     public V1beta1FunctionAppSlotSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotSpecInitProviderSiteConfigScmIpRestriction
 {
     /// <summary>Allow or Deny access for this IP range. Defaults to Allow.</summary>
@@ -1687,6 +1758,7 @@ public partial class V1beta1FunctionAppSlotSpecInitProviderSiteConfigScmIpRestri
     public V1beta1FunctionAppSlotSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelector? VirtualNetworkSubnetIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotSpecInitProviderSiteConfig
 {
     /// <summary>Should the Function App be loaded at all times? Defaults to false.</summary>
@@ -1794,6 +1866,7 @@ public enum V1beta1FunctionAppSlotSpecInitProviderStorageAccountNameRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionAppSlotSpecInitProviderStorageAccountNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1807,6 +1880,7 @@ public partial class V1beta1FunctionAppSlotSpecInitProviderStorageAccountNameRef
     public V1beta1FunctionAppSlotSpecInitProviderStorageAccountNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in storage to populate storageAccountName.</summary>
 public partial class V1beta1FunctionAppSlotSpecInitProviderStorageAccountNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1838,6 +1912,7 @@ public enum V1beta1FunctionAppSlotSpecInitProviderStorageAccountNameSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionAppSlotSpecInitProviderStorageAccountNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1851,6 +1926,7 @@ public partial class V1beta1FunctionAppSlotSpecInitProviderStorageAccountNameSel
     public V1beta1FunctionAppSlotSpecInitProviderStorageAccountNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in storage to populate storageAccountName.</summary>
 public partial class V1beta1FunctionAppSlotSpecInitProviderStorageAccountNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1866,6 +1942,7 @@ public partial class V1beta1FunctionAppSlotSpecInitProviderStorageAccountNameSel
     public V1beta1FunctionAppSlotSpecInitProviderStorageAccountNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1FunctionAppSlotSpecInitProvider
 {
     /// <summary>The ID of the App Service Plan within which to create this Function App Slot. Changing this forces a new resource to be created.</summary>
@@ -1987,6 +2064,7 @@ public enum V1beta1FunctionAppSlotSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionAppSlotSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2000,6 +2078,7 @@ public partial class V1beta1FunctionAppSlotSpecProviderConfigRefPolicy
     public V1beta1FunctionAppSlotSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1FunctionAppSlotSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2031,6 +2110,7 @@ public enum V1beta1FunctionAppSlotSpecPublishConnectionDetailsToConfigRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionAppSlotSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2044,6 +2124,7 @@ public partial class V1beta1FunctionAppSlotSpecPublishConnectionDetailsToConfigR
     public V1beta1FunctionAppSlotSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1FunctionAppSlotSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2055,6 +2136,7 @@ public partial class V1beta1FunctionAppSlotSpecPublishConnectionDetailsToConfigR
     public V1beta1FunctionAppSlotSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1FunctionAppSlotSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -2070,6 +2152,7 @@ public partial class V1beta1FunctionAppSlotSpecPublishConnectionDetailsToMetadat
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1FunctionAppSlotSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -2085,6 +2168,7 @@ public partial class V1beta1FunctionAppSlotSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1FunctionAppSlotSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -2096,6 +2180,7 @@ public partial class V1beta1FunctionAppSlotSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>FunctionAppSlotSpec defines the desired state of FunctionAppSlot</summary>
 public partial class V1beta1FunctionAppSlotSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -2128,6 +2213,7 @@ public partial class V1beta1FunctionAppSlotSpec
     public V1beta1FunctionAppSlotSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotStatusAtProviderAuthSettingsActiveDirectory
 {
     /// <summary>Allowed audience values to consider when validating JWTs issued by Azure Active Directory.</summary>
@@ -2139,6 +2225,7 @@ public partial class V1beta1FunctionAppSlotStatusAtProviderAuthSettingsActiveDir
     public string? ClientId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotStatusAtProviderAuthSettingsFacebook
 {
     /// <summary>The App ID of the Facebook app used for login</summary>
@@ -2150,6 +2237,7 @@ public partial class V1beta1FunctionAppSlotStatusAtProviderAuthSettingsFacebook
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotStatusAtProviderAuthSettingsGoogle
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication.</summary>
@@ -2161,6 +2249,7 @@ public partial class V1beta1FunctionAppSlotStatusAtProviderAuthSettingsGoogle
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotStatusAtProviderAuthSettingsMicrosoft
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication.</summary>
@@ -2172,6 +2261,7 @@ public partial class V1beta1FunctionAppSlotStatusAtProviderAuthSettingsMicrosoft
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotStatusAtProviderAuthSettingsTwitter
 {
     /// <summary>The OAuth 1.0a consumer key of the Twitter application used for sign-in.</summary>
@@ -2179,6 +2269,7 @@ public partial class V1beta1FunctionAppSlotStatusAtProviderAuthSettingsTwitter
     public string? ConsumerKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotStatusAtProviderAuthSettings
 {
     /// <summary>An active_directory block as defined below.</summary>
@@ -2238,6 +2329,7 @@ public partial class V1beta1FunctionAppSlotStatusAtProviderAuthSettings
     public string? UnauthenticatedClientAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotStatusAtProviderConnectionString
 {
     /// <summary>The name of the Connection String.</summary>
@@ -2249,6 +2341,7 @@ public partial class V1beta1FunctionAppSlotStatusAtProviderConnectionString
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotStatusAtProviderIdentity
 {
     /// <summary>Specifies a list of user managed identity ids to be assigned. Required if type is UserAssigned.</summary>
@@ -2268,6 +2361,7 @@ public partial class V1beta1FunctionAppSlotStatusAtProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotStatusAtProviderSiteConfigCors
 {
     /// <summary>A list of origins which should be able to make cross-origin calls. * can be used to allow all calls.</summary>
@@ -2279,6 +2373,7 @@ public partial class V1beta1FunctionAppSlotStatusAtProviderSiteConfigCors
     public bool? SupportCredentials { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotStatusAtProviderSiteConfigIpRestrictionHeaders
 {
     /// <summary>A list of allowed Azure FrontDoor IDs in UUID notation with a maximum of 8.</summary>
@@ -2298,6 +2393,7 @@ public partial class V1beta1FunctionAppSlotStatusAtProviderSiteConfigIpRestricti
     public IList<string>? XForwardedHost { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotStatusAtProviderSiteConfigIpRestriction
 {
     /// <summary>Allow or Deny access for this IP range. Defaults to Allow.</summary>
@@ -2329,6 +2425,7 @@ public partial class V1beta1FunctionAppSlotStatusAtProviderSiteConfigIpRestricti
     public string? VirtualNetworkSubnetId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotStatusAtProviderSiteConfigScmIpRestrictionHeaders
 {
     /// <summary>A list of allowed Azure FrontDoor IDs in UUID notation with a maximum of 8.</summary>
@@ -2348,6 +2445,7 @@ public partial class V1beta1FunctionAppSlotStatusAtProviderSiteConfigScmIpRestri
     public IList<string>? XForwardedHost { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotStatusAtProviderSiteConfigScmIpRestriction
 {
     /// <summary>Allow or Deny access for this IP range. Defaults to Allow.</summary>
@@ -2379,6 +2477,7 @@ public partial class V1beta1FunctionAppSlotStatusAtProviderSiteConfigScmIpRestri
     public string? VirtualNetworkSubnetId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotStatusAtProviderSiteConfig
 {
     /// <summary>Should the Function App be loaded at all times? Defaults to false.</summary>
@@ -2466,6 +2565,7 @@ public partial class V1beta1FunctionAppSlotStatusAtProviderSiteConfig
     public bool? WebsocketsEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotStatusAtProviderSiteCredential
 {
     /// <summary>The password associated with the username, which can be used to publish to this App Service.</summary>
@@ -2477,6 +2577,7 @@ public partial class V1beta1FunctionAppSlotStatusAtProviderSiteCredential
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppSlotStatusAtProvider
 {
     /// <summary>The ID of the App Service Plan within which to create this Function App Slot. Changing this forces a new resource to be created.</summary>
@@ -2572,6 +2673,7 @@ public partial class V1beta1FunctionAppSlotStatusAtProvider
     public string? Version { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1FunctionAppSlotStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2599,6 +2701,7 @@ public partial class V1beta1FunctionAppSlotStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>FunctionAppSlotStatus defines the observed state of FunctionAppSlot.</summary>
 public partial class V1beta1FunctionAppSlotStatus
 {
     /// <summary></summary>
@@ -2615,6 +2718,7 @@ public partial class V1beta1FunctionAppSlotStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>FunctionAppSlot is the Schema for the FunctionAppSlots API. Manages a Function App Deployment Slot.</summary>
 public partial class V1beta1FunctionAppSlot : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FunctionAppSlotSpec>, IStatus<V1beta1FunctionAppSlotStatus>
 {
     public const string KubeApiVersion = "v1beta1";

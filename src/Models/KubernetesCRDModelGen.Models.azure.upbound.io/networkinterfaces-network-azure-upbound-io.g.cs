@@ -38,6 +38,7 @@ public enum V1beta1NetworkInterfaceSpecForProviderIpConfigurationPublicIpAddress
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NetworkInterfaceSpecForProviderIpConfigurationPublicIpAddressIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1NetworkInterfaceSpecForProviderIpConfigurationPublic
     public V1beta1NetworkInterfaceSpecForProviderIpConfigurationPublicIpAddressIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a PublicIP in network to populate publicIpAddressId.</summary>
 public partial class V1beta1NetworkInterfaceSpecForProviderIpConfigurationPublicIpAddressIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1NetworkInterfaceSpecForProviderIpConfigurationPublicIpAddress
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NetworkInterfaceSpecForProviderIpConfigurationPublicIpAddressIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1NetworkInterfaceSpecForProviderIpConfigurationPublic
     public V1beta1NetworkInterfaceSpecForProviderIpConfigurationPublicIpAddressIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a PublicIP in network to populate publicIpAddressId.</summary>
 public partial class V1beta1NetworkInterfaceSpecForProviderIpConfigurationPublicIpAddressIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1NetworkInterfaceSpecForProviderIpConfigurationSubnetIdRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NetworkInterfaceSpecForProviderIpConfigurationSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1NetworkInterfaceSpecForProviderIpConfigurationSubnet
     public V1beta1NetworkInterfaceSpecForProviderIpConfigurationSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1NetworkInterfaceSpecForProviderIpConfigurationSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1NetworkInterfaceSpecForProviderIpConfigurationSubnetIdSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NetworkInterfaceSpecForProviderIpConfigurationSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1NetworkInterfaceSpecForProviderIpConfigurationSubnet
     public V1beta1NetworkInterfaceSpecForProviderIpConfigurationSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1NetworkInterfaceSpecForProviderIpConfigurationSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1NetworkInterfaceSpecForProviderIpConfigurationSubnet
     public V1beta1NetworkInterfaceSpecForProviderIpConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInterfaceSpecForProviderIpConfiguration
 {
     /// <summary>The Frontend IP Configuration ID of a Gateway SKU Load Balancer.</summary>
@@ -273,6 +282,7 @@ public enum V1beta1NetworkInterfaceSpecForProviderResourceGroupNameRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NetworkInterfaceSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -286,6 +296,7 @@ public partial class V1beta1NetworkInterfaceSpecForProviderResourceGroupNameRefP
     public V1beta1NetworkInterfaceSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1NetworkInterfaceSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -317,6 +328,7 @@ public enum V1beta1NetworkInterfaceSpecForProviderResourceGroupNameSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NetworkInterfaceSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -330,6 +342,7 @@ public partial class V1beta1NetworkInterfaceSpecForProviderResourceGroupNameSele
     public V1beta1NetworkInterfaceSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1NetworkInterfaceSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -345,6 +358,7 @@ public partial class V1beta1NetworkInterfaceSpecForProviderResourceGroupNameSele
     public V1beta1NetworkInterfaceSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInterfaceSpecForProvider
 {
     /// <summary>Specifies the auxiliary mode used to enable network high-performance feature on Network Virtual Appliances (NVAs). This feature offers competitive performance in Connections Per Second (CPS) optimization, along with improvements to handling large amounts of simultaneous connections. Possible values are AcceleratedConnections, Floating, MaxConnections and None.</summary>
@@ -420,6 +434,7 @@ public enum V1beta1NetworkInterfaceSpecInitProviderIpConfigurationPublicIpAddres
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NetworkInterfaceSpecInitProviderIpConfigurationPublicIpAddressIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -433,6 +448,7 @@ public partial class V1beta1NetworkInterfaceSpecInitProviderIpConfigurationPubli
     public V1beta1NetworkInterfaceSpecInitProviderIpConfigurationPublicIpAddressIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a PublicIP in network to populate publicIpAddressId.</summary>
 public partial class V1beta1NetworkInterfaceSpecInitProviderIpConfigurationPublicIpAddressIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -464,6 +480,7 @@ public enum V1beta1NetworkInterfaceSpecInitProviderIpConfigurationPublicIpAddres
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NetworkInterfaceSpecInitProviderIpConfigurationPublicIpAddressIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -477,6 +494,7 @@ public partial class V1beta1NetworkInterfaceSpecInitProviderIpConfigurationPubli
     public V1beta1NetworkInterfaceSpecInitProviderIpConfigurationPublicIpAddressIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a PublicIP in network to populate publicIpAddressId.</summary>
 public partial class V1beta1NetworkInterfaceSpecInitProviderIpConfigurationPublicIpAddressIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -512,6 +530,7 @@ public enum V1beta1NetworkInterfaceSpecInitProviderIpConfigurationSubnetIdRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NetworkInterfaceSpecInitProviderIpConfigurationSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -525,6 +544,7 @@ public partial class V1beta1NetworkInterfaceSpecInitProviderIpConfigurationSubne
     public V1beta1NetworkInterfaceSpecInitProviderIpConfigurationSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1NetworkInterfaceSpecInitProviderIpConfigurationSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -556,6 +576,7 @@ public enum V1beta1NetworkInterfaceSpecInitProviderIpConfigurationSubnetIdSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NetworkInterfaceSpecInitProviderIpConfigurationSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -569,6 +590,7 @@ public partial class V1beta1NetworkInterfaceSpecInitProviderIpConfigurationSubne
     public V1beta1NetworkInterfaceSpecInitProviderIpConfigurationSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1NetworkInterfaceSpecInitProviderIpConfigurationSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -584,6 +606,7 @@ public partial class V1beta1NetworkInterfaceSpecInitProviderIpConfigurationSubne
     public V1beta1NetworkInterfaceSpecInitProviderIpConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInterfaceSpecInitProviderIpConfiguration
 {
     /// <summary>The Frontend IP Configuration ID of a Gateway SKU Load Balancer.</summary>
@@ -635,6 +658,7 @@ public partial class V1beta1NetworkInterfaceSpecInitProviderIpConfiguration
     public V1beta1NetworkInterfaceSpecInitProviderIpConfigurationSubnetIdSelector? SubnetIdSelector { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1NetworkInterfaceSpecInitProvider
 {
     /// <summary>Specifies the auxiliary mode used to enable network high-performance feature on Network Virtual Appliances (NVAs). This feature offers competitive performance in Connections Per Second (CPS) optimization, along with improvements to handling large amounts of simultaneous connections. Possible values are AcceleratedConnections, Floating, MaxConnections and None.</summary>
@@ -720,6 +744,7 @@ public enum V1beta1NetworkInterfaceSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NetworkInterfaceSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -733,6 +758,7 @@ public partial class V1beta1NetworkInterfaceSpecProviderConfigRefPolicy
     public V1beta1NetworkInterfaceSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1NetworkInterfaceSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -764,6 +790,7 @@ public enum V1beta1NetworkInterfaceSpecPublishConnectionDetailsToConfigRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NetworkInterfaceSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -777,6 +804,7 @@ public partial class V1beta1NetworkInterfaceSpecPublishConnectionDetailsToConfig
     public V1beta1NetworkInterfaceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1NetworkInterfaceSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -788,6 +816,7 @@ public partial class V1beta1NetworkInterfaceSpecPublishConnectionDetailsToConfig
     public V1beta1NetworkInterfaceSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1NetworkInterfaceSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -803,6 +832,7 @@ public partial class V1beta1NetworkInterfaceSpecPublishConnectionDetailsToMetada
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1NetworkInterfaceSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -818,6 +848,7 @@ public partial class V1beta1NetworkInterfaceSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1NetworkInterfaceSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -829,6 +860,7 @@ public partial class V1beta1NetworkInterfaceSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>NetworkInterfaceSpec defines the desired state of NetworkInterface</summary>
 public partial class V1beta1NetworkInterfaceSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -861,6 +893,7 @@ public partial class V1beta1NetworkInterfaceSpec
     public V1beta1NetworkInterfaceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInterfaceStatusAtProviderIpConfiguration
 {
     /// <summary>The Frontend IP Configuration ID of a Gateway SKU Load Balancer.</summary>
@@ -896,6 +929,7 @@ public partial class V1beta1NetworkInterfaceStatusAtProviderIpConfiguration
     public string? SubnetId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInterfaceStatusAtProvider
 {
     /// <summary>If the Virtual Machine using this Network Interface is part of an Availability Set, then this list will have the union of all DNS servers from all Network Interfaces that are part of the Availability Set.</summary>
@@ -971,6 +1005,7 @@ public partial class V1beta1NetworkInterfaceStatusAtProvider
     public string? VirtualMachineId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1NetworkInterfaceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -998,6 +1033,7 @@ public partial class V1beta1NetworkInterfaceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>NetworkInterfaceStatus defines the observed state of NetworkInterface.</summary>
 public partial class V1beta1NetworkInterfaceStatus
 {
     /// <summary></summary>
@@ -1014,6 +1050,7 @@ public partial class V1beta1NetworkInterfaceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>NetworkInterface is the Schema for the NetworkInterfaces API. Manages a Network Interface.</summary>
 public partial class V1beta1NetworkInterface : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1NetworkInterfaceSpec>, IStatus<V1beta1NetworkInterfaceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

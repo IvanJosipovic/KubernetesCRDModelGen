@@ -38,6 +38,7 @@ public enum V1beta1BackendBucketSpecForProviderBucketNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackendBucketSpecForProviderBucketNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1BackendBucketSpecForProviderBucketNameRefPolicy
     public V1beta1BackendBucketSpecForProviderBucketNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in storage to populate bucketName.</summary>
 public partial class V1beta1BackendBucketSpecForProviderBucketNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1BackendBucketSpecForProviderBucketNameSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackendBucketSpecForProviderBucketNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1BackendBucketSpecForProviderBucketNameSelectorPolicy
     public V1beta1BackendBucketSpecForProviderBucketNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in storage to populate bucketName.</summary>
 public partial class V1beta1BackendBucketSpecForProviderBucketNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1BackendBucketSpecForProviderBucketNameSelector
     public V1beta1BackendBucketSpecForProviderBucketNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendBucketSpecForProviderCdnPolicyBypassCacheOnRequestHeaders
 {
     /// <summary>The header field name to match on when bypassing cache. Values are case-insensitive.</summary>
@@ -117,6 +122,7 @@ public partial class V1beta1BackendBucketSpecForProviderCdnPolicyBypassCacheOnRe
     public string? HeaderName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendBucketSpecForProviderCdnPolicyCacheKeyPolicy
 {
     /// <summary>Allows HTTP request headers (by name) to be used in the cache key.</summary>
@@ -128,6 +134,7 @@ public partial class V1beta1BackendBucketSpecForProviderCdnPolicyCacheKeyPolicy
     public IList<string>? QueryStringWhitelist { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendBucketSpecForProviderCdnPolicyNegativeCachingPolicy
 {
     /// <summary>The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 308, 404, 405, 410, 421, 451 and 501 can be specified as values, and you cannot specify a status code more than once.</summary>
@@ -139,6 +146,7 @@ public partial class V1beta1BackendBucketSpecForProviderCdnPolicyNegativeCaching
     public double? Ttl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendBucketSpecForProviderCdnPolicy
 {
     /// <summary>Bypass the cache when the specified request headers are matched - e.g. Pragma or Authorization headers. Up to 5 headers can be specified. The cache is bypassed for all cdnPolicy.cacheMode settings. Structure is documented below.</summary>
@@ -206,6 +214,7 @@ public enum V1beta1BackendBucketSpecForProviderEdgeSecurityPolicyRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackendBucketSpecForProviderEdgeSecurityPolicyRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -219,6 +228,7 @@ public partial class V1beta1BackendBucketSpecForProviderEdgeSecurityPolicyRefPol
     public V1beta1BackendBucketSpecForProviderEdgeSecurityPolicyRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SecurityPolicy in compute to populate edgeSecurityPolicy.</summary>
 public partial class V1beta1BackendBucketSpecForProviderEdgeSecurityPolicyRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -250,6 +260,7 @@ public enum V1beta1BackendBucketSpecForProviderEdgeSecurityPolicySelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackendBucketSpecForProviderEdgeSecurityPolicySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -263,6 +274,7 @@ public partial class V1beta1BackendBucketSpecForProviderEdgeSecurityPolicySelect
     public V1beta1BackendBucketSpecForProviderEdgeSecurityPolicySelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SecurityPolicy in compute to populate edgeSecurityPolicy.</summary>
 public partial class V1beta1BackendBucketSpecForProviderEdgeSecurityPolicySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -278,6 +290,7 @@ public partial class V1beta1BackendBucketSpecForProviderEdgeSecurityPolicySelect
     public V1beta1BackendBucketSpecForProviderEdgeSecurityPolicySelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendBucketSpecForProvider
 {
     /// <summary>Cloud Storage bucket name.</summary>
@@ -349,6 +362,7 @@ public enum V1beta1BackendBucketSpecInitProviderBucketNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackendBucketSpecInitProviderBucketNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -362,6 +376,7 @@ public partial class V1beta1BackendBucketSpecInitProviderBucketNameRefPolicy
     public V1beta1BackendBucketSpecInitProviderBucketNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in storage to populate bucketName.</summary>
 public partial class V1beta1BackendBucketSpecInitProviderBucketNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -393,6 +408,7 @@ public enum V1beta1BackendBucketSpecInitProviderBucketNameSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackendBucketSpecInitProviderBucketNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -406,6 +422,7 @@ public partial class V1beta1BackendBucketSpecInitProviderBucketNameSelectorPolic
     public V1beta1BackendBucketSpecInitProviderBucketNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in storage to populate bucketName.</summary>
 public partial class V1beta1BackendBucketSpecInitProviderBucketNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -421,6 +438,7 @@ public partial class V1beta1BackendBucketSpecInitProviderBucketNameSelector
     public V1beta1BackendBucketSpecInitProviderBucketNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendBucketSpecInitProviderCdnPolicyBypassCacheOnRequestHeaders
 {
     /// <summary>The header field name to match on when bypassing cache. Values are case-insensitive.</summary>
@@ -428,6 +446,7 @@ public partial class V1beta1BackendBucketSpecInitProviderCdnPolicyBypassCacheOnR
     public string? HeaderName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendBucketSpecInitProviderCdnPolicyCacheKeyPolicy
 {
     /// <summary>Allows HTTP request headers (by name) to be used in the cache key.</summary>
@@ -439,6 +458,7 @@ public partial class V1beta1BackendBucketSpecInitProviderCdnPolicyCacheKeyPolicy
     public IList<string>? QueryStringWhitelist { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendBucketSpecInitProviderCdnPolicyNegativeCachingPolicy
 {
     /// <summary>The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 308, 404, 405, 410, 421, 451 and 501 can be specified as values, and you cannot specify a status code more than once.</summary>
@@ -450,6 +470,7 @@ public partial class V1beta1BackendBucketSpecInitProviderCdnPolicyNegativeCachin
     public double? Ttl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendBucketSpecInitProviderCdnPolicy
 {
     /// <summary>Bypass the cache when the specified request headers are matched - e.g. Pragma or Authorization headers. Up to 5 headers can be specified. The cache is bypassed for all cdnPolicy.cacheMode settings. Structure is documented below.</summary>
@@ -517,6 +538,7 @@ public enum V1beta1BackendBucketSpecInitProviderEdgeSecurityPolicyRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackendBucketSpecInitProviderEdgeSecurityPolicyRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -530,6 +552,7 @@ public partial class V1beta1BackendBucketSpecInitProviderEdgeSecurityPolicyRefPo
     public V1beta1BackendBucketSpecInitProviderEdgeSecurityPolicyRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SecurityPolicy in compute to populate edgeSecurityPolicy.</summary>
 public partial class V1beta1BackendBucketSpecInitProviderEdgeSecurityPolicyRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -561,6 +584,7 @@ public enum V1beta1BackendBucketSpecInitProviderEdgeSecurityPolicySelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackendBucketSpecInitProviderEdgeSecurityPolicySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -574,6 +598,7 @@ public partial class V1beta1BackendBucketSpecInitProviderEdgeSecurityPolicySelec
     public V1beta1BackendBucketSpecInitProviderEdgeSecurityPolicySelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SecurityPolicy in compute to populate edgeSecurityPolicy.</summary>
 public partial class V1beta1BackendBucketSpecInitProviderEdgeSecurityPolicySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -589,6 +614,7 @@ public partial class V1beta1BackendBucketSpecInitProviderEdgeSecurityPolicySelec
     public V1beta1BackendBucketSpecInitProviderEdgeSecurityPolicySelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1BackendBucketSpecInitProvider
 {
     /// <summary>Cloud Storage bucket name.</summary>
@@ -682,6 +708,7 @@ public enum V1beta1BackendBucketSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackendBucketSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -695,6 +722,7 @@ public partial class V1beta1BackendBucketSpecProviderConfigRefPolicy
     public V1beta1BackendBucketSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1BackendBucketSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -726,6 +754,7 @@ public enum V1beta1BackendBucketSpecPublishConnectionDetailsToConfigRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackendBucketSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -739,6 +768,7 @@ public partial class V1beta1BackendBucketSpecPublishConnectionDetailsToConfigRef
     public V1beta1BackendBucketSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1BackendBucketSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -750,6 +780,7 @@ public partial class V1beta1BackendBucketSpecPublishConnectionDetailsToConfigRef
     public V1beta1BackendBucketSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1BackendBucketSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -765,6 +796,7 @@ public partial class V1beta1BackendBucketSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1BackendBucketSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -780,6 +812,7 @@ public partial class V1beta1BackendBucketSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1BackendBucketSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -791,6 +824,7 @@ public partial class V1beta1BackendBucketSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>BackendBucketSpec defines the desired state of BackendBucket</summary>
 public partial class V1beta1BackendBucketSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -823,6 +857,7 @@ public partial class V1beta1BackendBucketSpec
     public V1beta1BackendBucketSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendBucketStatusAtProviderCdnPolicyBypassCacheOnRequestHeaders
 {
     /// <summary>The header field name to match on when bypassing cache. Values are case-insensitive.</summary>
@@ -830,6 +865,7 @@ public partial class V1beta1BackendBucketStatusAtProviderCdnPolicyBypassCacheOnR
     public string? HeaderName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendBucketStatusAtProviderCdnPolicyCacheKeyPolicy
 {
     /// <summary>Allows HTTP request headers (by name) to be used in the cache key.</summary>
@@ -841,6 +877,7 @@ public partial class V1beta1BackendBucketStatusAtProviderCdnPolicyCacheKeyPolicy
     public IList<string>? QueryStringWhitelist { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendBucketStatusAtProviderCdnPolicyNegativeCachingPolicy
 {
     /// <summary>The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 308, 404, 405, 410, 421, 451 and 501 can be specified as values, and you cannot specify a status code more than once.</summary>
@@ -852,6 +889,7 @@ public partial class V1beta1BackendBucketStatusAtProviderCdnPolicyNegativeCachin
     public double? Ttl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendBucketStatusAtProviderCdnPolicy
 {
     /// <summary>Bypass the cache when the specified request headers are matched - e.g. Pragma or Authorization headers. Up to 5 headers can be specified. The cache is bypassed for all cdnPolicy.cacheMode settings. Structure is documented below.</summary>
@@ -899,6 +937,7 @@ public partial class V1beta1BackendBucketStatusAtProviderCdnPolicy
     public double? SignedUrlCacheMaxAgeSec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendBucketStatusAtProvider
 {
     /// <summary>Cloud Storage bucket name.</summary>
@@ -946,6 +985,7 @@ public partial class V1beta1BackendBucketStatusAtProvider
     public string? SelfLink { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1BackendBucketStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -973,6 +1013,7 @@ public partial class V1beta1BackendBucketStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>BackendBucketStatus defines the observed state of BackendBucket.</summary>
 public partial class V1beta1BackendBucketStatus
 {
     /// <summary></summary>
@@ -989,6 +1030,7 @@ public partial class V1beta1BackendBucketStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>BackendBucket is the Schema for the BackendBuckets API. Backend buckets allow you to use Google Cloud Storage buckets with HTTP(S) load balancing.</summary>
 public partial class V1beta1BackendBucket : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BackendBucketSpec>, IStatus<V1beta1BackendBucketStatus>
 {
     public const string KubeApiVersion = "v1beta1";

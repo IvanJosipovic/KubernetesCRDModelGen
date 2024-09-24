@@ -18,6 +18,7 @@ public enum V1beta1CustomLayerSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomLayerSpecForProviderCloudwatchConfigurationLogStreams
 {
     /// <summary>Specifies the max number of log events in a batch, up to 10000. The default value is 1000.</summary>
@@ -65,6 +66,7 @@ public partial class V1beta1CustomLayerSpecForProviderCloudwatchConfigurationLog
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomLayerSpecForProviderCloudwatchConfiguration
 {
     /// <summary></summary>
@@ -96,6 +98,7 @@ public enum V1beta1CustomLayerSpecForProviderCustomSecurityGroupIdRefsPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CustomLayerSpecForProviderCustomSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -109,6 +112,7 @@ public partial class V1beta1CustomLayerSpecForProviderCustomSecurityGroupIdRefsP
     public V1beta1CustomLayerSpecForProviderCustomSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1CustomLayerSpecForProviderCustomSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -140,6 +144,7 @@ public enum V1beta1CustomLayerSpecForProviderCustomSecurityGroupIdSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CustomLayerSpecForProviderCustomSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -153,6 +158,7 @@ public partial class V1beta1CustomLayerSpecForProviderCustomSecurityGroupIdSelec
     public V1beta1CustomLayerSpecForProviderCustomSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate customSecurityGroupIds.</summary>
 public partial class V1beta1CustomLayerSpecForProviderCustomSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -168,6 +174,7 @@ public partial class V1beta1CustomLayerSpecForProviderCustomSecurityGroupIdSelec
     public V1beta1CustomLayerSpecForProviderCustomSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomLayerSpecForProviderEbsVolume
 {
     /// <summary>Encrypt the volume.</summary>
@@ -199,6 +206,7 @@ public partial class V1beta1CustomLayerSpecForProviderEbsVolume
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomLayerSpecForProviderLoadBasedAutoScalingDownscaling
 {
     /// <summary>Custom Cloudwatch auto scaling alarms, to be used as thresholds. This parameter takes a list of up to five alarm names, which are case sensitive and must be in the same region as the stack.</summary>
@@ -230,6 +238,7 @@ public partial class V1beta1CustomLayerSpecForProviderLoadBasedAutoScalingDownsc
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomLayerSpecForProviderLoadBasedAutoScalingUpscaling
 {
     /// <summary>Custom Cloudwatch auto scaling alarms, to be used as thresholds. This parameter takes a list of up to five alarm names, which are case sensitive and must be in the same region as the stack.</summary>
@@ -261,6 +270,7 @@ public partial class V1beta1CustomLayerSpecForProviderLoadBasedAutoScalingUpscal
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomLayerSpecForProviderLoadBasedAutoScaling
 {
     /// <summary>The downscaling settings, as defined below, used for load-based autoscaling</summary>
@@ -296,6 +306,7 @@ public enum V1beta1CustomLayerSpecForProviderStackIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CustomLayerSpecForProviderStackIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -309,6 +320,7 @@ public partial class V1beta1CustomLayerSpecForProviderStackIdRefPolicy
     public V1beta1CustomLayerSpecForProviderStackIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Stack in opsworks to populate stackId.</summary>
 public partial class V1beta1CustomLayerSpecForProviderStackIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -340,6 +352,7 @@ public enum V1beta1CustomLayerSpecForProviderStackIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CustomLayerSpecForProviderStackIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -353,6 +366,7 @@ public partial class V1beta1CustomLayerSpecForProviderStackIdSelectorPolicy
     public V1beta1CustomLayerSpecForProviderStackIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Stack in opsworks to populate stackId.</summary>
 public partial class V1beta1CustomLayerSpecForProviderStackIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -368,6 +382,7 @@ public partial class V1beta1CustomLayerSpecForProviderStackIdSelector
     public V1beta1CustomLayerSpecForProviderStackIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomLayerSpecForProvider
 {
     /// <summary>Whether to automatically assign an elastic IP address to the layer's instances.</summary>
@@ -483,6 +498,7 @@ public partial class V1beta1CustomLayerSpecForProvider
     public bool? UseEbsOptimizedInstances { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomLayerSpecInitProviderCloudwatchConfigurationLogStreams
 {
     /// <summary>Specifies the max number of log events in a batch, up to 10000. The default value is 1000.</summary>
@@ -530,6 +546,7 @@ public partial class V1beta1CustomLayerSpecInitProviderCloudwatchConfigurationLo
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomLayerSpecInitProviderCloudwatchConfiguration
 {
     /// <summary></summary>
@@ -561,6 +578,7 @@ public enum V1beta1CustomLayerSpecInitProviderCustomSecurityGroupIdRefsPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CustomLayerSpecInitProviderCustomSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -574,6 +592,7 @@ public partial class V1beta1CustomLayerSpecInitProviderCustomSecurityGroupIdRefs
     public V1beta1CustomLayerSpecInitProviderCustomSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1CustomLayerSpecInitProviderCustomSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -605,6 +624,7 @@ public enum V1beta1CustomLayerSpecInitProviderCustomSecurityGroupIdSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CustomLayerSpecInitProviderCustomSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -618,6 +638,7 @@ public partial class V1beta1CustomLayerSpecInitProviderCustomSecurityGroupIdSele
     public V1beta1CustomLayerSpecInitProviderCustomSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate customSecurityGroupIds.</summary>
 public partial class V1beta1CustomLayerSpecInitProviderCustomSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -633,6 +654,7 @@ public partial class V1beta1CustomLayerSpecInitProviderCustomSecurityGroupIdSele
     public V1beta1CustomLayerSpecInitProviderCustomSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomLayerSpecInitProviderEbsVolume
 {
     /// <summary>Encrypt the volume.</summary>
@@ -664,6 +686,7 @@ public partial class V1beta1CustomLayerSpecInitProviderEbsVolume
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomLayerSpecInitProviderLoadBasedAutoScalingDownscaling
 {
     /// <summary>Custom Cloudwatch auto scaling alarms, to be used as thresholds. This parameter takes a list of up to five alarm names, which are case sensitive and must be in the same region as the stack.</summary>
@@ -695,6 +718,7 @@ public partial class V1beta1CustomLayerSpecInitProviderLoadBasedAutoScalingDowns
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomLayerSpecInitProviderLoadBasedAutoScalingUpscaling
 {
     /// <summary>Custom Cloudwatch auto scaling alarms, to be used as thresholds. This parameter takes a list of up to five alarm names, which are case sensitive and must be in the same region as the stack.</summary>
@@ -726,6 +750,7 @@ public partial class V1beta1CustomLayerSpecInitProviderLoadBasedAutoScalingUpsca
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomLayerSpecInitProviderLoadBasedAutoScaling
 {
     /// <summary>The downscaling settings, as defined below, used for load-based autoscaling</summary>
@@ -761,6 +786,7 @@ public enum V1beta1CustomLayerSpecInitProviderStackIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CustomLayerSpecInitProviderStackIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -774,6 +800,7 @@ public partial class V1beta1CustomLayerSpecInitProviderStackIdRefPolicy
     public V1beta1CustomLayerSpecInitProviderStackIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Stack in opsworks to populate stackId.</summary>
 public partial class V1beta1CustomLayerSpecInitProviderStackIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -805,6 +832,7 @@ public enum V1beta1CustomLayerSpecInitProviderStackIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CustomLayerSpecInitProviderStackIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -818,6 +846,7 @@ public partial class V1beta1CustomLayerSpecInitProviderStackIdSelectorPolicy
     public V1beta1CustomLayerSpecInitProviderStackIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Stack in opsworks to populate stackId.</summary>
 public partial class V1beta1CustomLayerSpecInitProviderStackIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -833,6 +862,7 @@ public partial class V1beta1CustomLayerSpecInitProviderStackIdSelector
     public V1beta1CustomLayerSpecInitProviderStackIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1CustomLayerSpecInitProvider
 {
     /// <summary>Whether to automatically assign an elastic IP address to the layer's instances.</summary>
@@ -990,6 +1020,7 @@ public enum V1beta1CustomLayerSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CustomLayerSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1003,6 +1034,7 @@ public partial class V1beta1CustomLayerSpecProviderConfigRefPolicy
     public V1beta1CustomLayerSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1CustomLayerSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1034,6 +1066,7 @@ public enum V1beta1CustomLayerSpecPublishConnectionDetailsToConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CustomLayerSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1047,6 +1080,7 @@ public partial class V1beta1CustomLayerSpecPublishConnectionDetailsToConfigRefPo
     public V1beta1CustomLayerSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1CustomLayerSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1058,6 +1092,7 @@ public partial class V1beta1CustomLayerSpecPublishConnectionDetailsToConfigRef
     public V1beta1CustomLayerSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1CustomLayerSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1073,6 +1108,7 @@ public partial class V1beta1CustomLayerSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1CustomLayerSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1088,6 +1124,7 @@ public partial class V1beta1CustomLayerSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1CustomLayerSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1099,6 +1136,7 @@ public partial class V1beta1CustomLayerSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>CustomLayerSpec defines the desired state of CustomLayer</summary>
 public partial class V1beta1CustomLayerSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1131,6 +1169,7 @@ public partial class V1beta1CustomLayerSpec
     public V1beta1CustomLayerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomLayerStatusAtProviderCloudwatchConfigurationLogStreams
 {
     /// <summary>Specifies the max number of log events in a batch, up to 10000. The default value is 1000.</summary>
@@ -1178,6 +1217,7 @@ public partial class V1beta1CustomLayerStatusAtProviderCloudwatchConfigurationLo
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomLayerStatusAtProviderCloudwatchConfiguration
 {
     /// <summary></summary>
@@ -1189,6 +1229,7 @@ public partial class V1beta1CustomLayerStatusAtProviderCloudwatchConfiguration
     public IList<V1beta1CustomLayerStatusAtProviderCloudwatchConfigurationLogStreams>? LogStreams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomLayerStatusAtProviderEbsVolume
 {
     /// <summary>Encrypt the volume.</summary>
@@ -1220,6 +1261,7 @@ public partial class V1beta1CustomLayerStatusAtProviderEbsVolume
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomLayerStatusAtProviderLoadBasedAutoScalingDownscaling
 {
     /// <summary>Custom Cloudwatch auto scaling alarms, to be used as thresholds. This parameter takes a list of up to five alarm names, which are case sensitive and must be in the same region as the stack.</summary>
@@ -1251,6 +1293,7 @@ public partial class V1beta1CustomLayerStatusAtProviderLoadBasedAutoScalingDowns
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomLayerStatusAtProviderLoadBasedAutoScalingUpscaling
 {
     /// <summary>Custom Cloudwatch auto scaling alarms, to be used as thresholds. This parameter takes a list of up to five alarm names, which are case sensitive and must be in the same region as the stack.</summary>
@@ -1282,6 +1325,7 @@ public partial class V1beta1CustomLayerStatusAtProviderLoadBasedAutoScalingUpsca
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomLayerStatusAtProviderLoadBasedAutoScaling
 {
     /// <summary>The downscaling settings, as defined below, used for load-based autoscaling</summary>
@@ -1297,6 +1341,7 @@ public partial class V1beta1CustomLayerStatusAtProviderLoadBasedAutoScaling
     public IList<V1beta1CustomLayerStatusAtProviderLoadBasedAutoScalingUpscaling>? Upscaling { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomLayerStatusAtProvider
 {
     /// <summary>The Amazon Resource Name(ARN) of the layer.</summary>
@@ -1408,6 +1453,7 @@ public partial class V1beta1CustomLayerStatusAtProvider
     public bool? UseEbsOptimizedInstances { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1CustomLayerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1435,6 +1481,7 @@ public partial class V1beta1CustomLayerStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>CustomLayerStatus defines the observed state of CustomLayer.</summary>
 public partial class V1beta1CustomLayerStatus
 {
     /// <summary></summary>
@@ -1451,6 +1498,7 @@ public partial class V1beta1CustomLayerStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>CustomLayer is the Schema for the CustomLayers API. Provides an OpsWorks custom layer resource.</summary>
 public partial class V1beta1CustomLayer : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1CustomLayerSpec>, IStatus<V1beta1CustomLayerStatus>
 {
     public const string KubeApiVersion = "v1beta1";

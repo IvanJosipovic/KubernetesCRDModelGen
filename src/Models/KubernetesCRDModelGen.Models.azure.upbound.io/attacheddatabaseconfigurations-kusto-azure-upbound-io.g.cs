@@ -38,6 +38,7 @@ public enum V1beta1AttachedDatabaseConfigurationSpecForProviderClusterNameRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecForProviderClusterNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1AttachedDatabaseConfigurationSpecForProviderClusterN
     public V1beta1AttachedDatabaseConfigurationSpecForProviderClusterNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in kusto to populate clusterName.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecForProviderClusterNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1AttachedDatabaseConfigurationSpecForProviderClusterNameSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecForProviderClusterNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1AttachedDatabaseConfigurationSpecForProviderClusterN
     public V1beta1AttachedDatabaseConfigurationSpecForProviderClusterNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in kusto to populate clusterName.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecForProviderClusterNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1AttachedDatabaseConfigurationSpecForProviderClusterResourceId
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecForProviderClusterResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1AttachedDatabaseConfigurationSpecForProviderClusterR
     public V1beta1AttachedDatabaseConfigurationSpecForProviderClusterResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in kusto to populate clusterResourceId.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecForProviderClusterResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1AttachedDatabaseConfigurationSpecForProviderClusterResourceId
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecForProviderClusterResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1AttachedDatabaseConfigurationSpecForProviderClusterR
     public V1beta1AttachedDatabaseConfigurationSpecForProviderClusterResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in kusto to populate clusterResourceId.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecForProviderClusterResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1AttachedDatabaseConfigurationSpecForProviderDatabaseNameRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecForProviderDatabaseNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1AttachedDatabaseConfigurationSpecForProviderDatabase
     public V1beta1AttachedDatabaseConfigurationSpecForProviderDatabaseNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Database in kusto to populate databaseName.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecForProviderDatabaseNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1AttachedDatabaseConfigurationSpecForProviderDatabaseNameSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecForProviderDatabaseNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1AttachedDatabaseConfigurationSpecForProviderDatabase
     public V1beta1AttachedDatabaseConfigurationSpecForProviderDatabaseNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Database in kusto to populate databaseName.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecForProviderDatabaseNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -314,6 +326,7 @@ public enum V1beta1AttachedDatabaseConfigurationSpecForProviderResourceGroupName
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -327,6 +340,7 @@ public partial class V1beta1AttachedDatabaseConfigurationSpecForProviderResource
     public V1beta1AttachedDatabaseConfigurationSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -358,6 +372,7 @@ public enum V1beta1AttachedDatabaseConfigurationSpecForProviderResourceGroupName
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -371,6 +386,7 @@ public partial class V1beta1AttachedDatabaseConfigurationSpecForProviderResource
     public V1beta1AttachedDatabaseConfigurationSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -386,6 +402,7 @@ public partial class V1beta1AttachedDatabaseConfigurationSpecForProviderResource
     public V1beta1AttachedDatabaseConfigurationSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecForProviderSharing
 {
     /// <summary>List of external tables exclude from the follower database.</summary>
@@ -413,6 +430,7 @@ public partial class V1beta1AttachedDatabaseConfigurationSpecForProviderSharing
     public IList<string>? TablesToInclude { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecForProvider
 {
     /// <summary>Specifies the name of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.</summary>
@@ -500,6 +518,7 @@ public enum V1beta1AttachedDatabaseConfigurationSpecInitProviderClusterNameRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecInitProviderClusterNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -513,6 +532,7 @@ public partial class V1beta1AttachedDatabaseConfigurationSpecInitProviderCluster
     public V1beta1AttachedDatabaseConfigurationSpecInitProviderClusterNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in kusto to populate clusterName.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecInitProviderClusterNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -544,6 +564,7 @@ public enum V1beta1AttachedDatabaseConfigurationSpecInitProviderClusterNameSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecInitProviderClusterNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -557,6 +578,7 @@ public partial class V1beta1AttachedDatabaseConfigurationSpecInitProviderCluster
     public V1beta1AttachedDatabaseConfigurationSpecInitProviderClusterNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in kusto to populate clusterName.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecInitProviderClusterNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -592,6 +614,7 @@ public enum V1beta1AttachedDatabaseConfigurationSpecInitProviderClusterResourceI
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecInitProviderClusterResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -605,6 +628,7 @@ public partial class V1beta1AttachedDatabaseConfigurationSpecInitProviderCluster
     public V1beta1AttachedDatabaseConfigurationSpecInitProviderClusterResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in kusto to populate clusterResourceId.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecInitProviderClusterResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -636,6 +660,7 @@ public enum V1beta1AttachedDatabaseConfigurationSpecInitProviderClusterResourceI
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecInitProviderClusterResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -649,6 +674,7 @@ public partial class V1beta1AttachedDatabaseConfigurationSpecInitProviderCluster
     public V1beta1AttachedDatabaseConfigurationSpecInitProviderClusterResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in kusto to populate clusterResourceId.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecInitProviderClusterResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -684,6 +710,7 @@ public enum V1beta1AttachedDatabaseConfigurationSpecInitProviderDatabaseNameRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecInitProviderDatabaseNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -697,6 +724,7 @@ public partial class V1beta1AttachedDatabaseConfigurationSpecInitProviderDatabas
     public V1beta1AttachedDatabaseConfigurationSpecInitProviderDatabaseNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Database in kusto to populate databaseName.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecInitProviderDatabaseNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -728,6 +756,7 @@ public enum V1beta1AttachedDatabaseConfigurationSpecInitProviderDatabaseNameSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecInitProviderDatabaseNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -741,6 +770,7 @@ public partial class V1beta1AttachedDatabaseConfigurationSpecInitProviderDatabas
     public V1beta1AttachedDatabaseConfigurationSpecInitProviderDatabaseNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Database in kusto to populate databaseName.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecInitProviderDatabaseNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -776,6 +806,7 @@ public enum V1beta1AttachedDatabaseConfigurationSpecInitProviderResourceGroupNam
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecInitProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -789,6 +820,7 @@ public partial class V1beta1AttachedDatabaseConfigurationSpecInitProviderResourc
     public V1beta1AttachedDatabaseConfigurationSpecInitProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecInitProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -820,6 +852,7 @@ public enum V1beta1AttachedDatabaseConfigurationSpecInitProviderResourceGroupNam
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecInitProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -833,6 +866,7 @@ public partial class V1beta1AttachedDatabaseConfigurationSpecInitProviderResourc
     public V1beta1AttachedDatabaseConfigurationSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecInitProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -848,6 +882,7 @@ public partial class V1beta1AttachedDatabaseConfigurationSpecInitProviderResourc
     public V1beta1AttachedDatabaseConfigurationSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecInitProviderSharing
 {
     /// <summary>List of external tables exclude from the follower database.</summary>
@@ -875,6 +910,7 @@ public partial class V1beta1AttachedDatabaseConfigurationSpecInitProviderSharing
     public IList<string>? TablesToInclude { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecInitProvider
 {
     /// <summary>Specifies the name of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.</summary>
@@ -984,6 +1020,7 @@ public enum V1beta1AttachedDatabaseConfigurationSpecProviderConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -997,6 +1034,7 @@ public partial class V1beta1AttachedDatabaseConfigurationSpecProviderConfigRefPo
     public V1beta1AttachedDatabaseConfigurationSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1028,6 +1066,7 @@ public enum V1beta1AttachedDatabaseConfigurationSpecPublishConnectionDetailsToCo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1041,6 +1080,7 @@ public partial class V1beta1AttachedDatabaseConfigurationSpecPublishConnectionDe
     public V1beta1AttachedDatabaseConfigurationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1052,6 +1092,7 @@ public partial class V1beta1AttachedDatabaseConfigurationSpecPublishConnectionDe
     public V1beta1AttachedDatabaseConfigurationSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1067,6 +1108,7 @@ public partial class V1beta1AttachedDatabaseConfigurationSpecPublishConnectionDe
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1082,6 +1124,7 @@ public partial class V1beta1AttachedDatabaseConfigurationSpecPublishConnectionDe
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1093,6 +1136,7 @@ public partial class V1beta1AttachedDatabaseConfigurationSpecWriteConnectionSecr
     public string Namespace { get; set; }
 }
 
+/// <summary>AttachedDatabaseConfigurationSpec defines the desired state of AttachedDatabaseConfiguration</summary>
 public partial class V1beta1AttachedDatabaseConfigurationSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1125,6 +1169,7 @@ public partial class V1beta1AttachedDatabaseConfigurationSpec
     public V1beta1AttachedDatabaseConfigurationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AttachedDatabaseConfigurationStatusAtProviderSharing
 {
     /// <summary>List of external tables exclude from the follower database.</summary>
@@ -1152,6 +1197,7 @@ public partial class V1beta1AttachedDatabaseConfigurationStatusAtProviderSharing
     public IList<string>? TablesToInclude { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AttachedDatabaseConfigurationStatusAtProvider
 {
     /// <summary>The list of databases from the cluster_resource_id which are currently attached to the cluster.</summary>
@@ -1195,6 +1241,7 @@ public partial class V1beta1AttachedDatabaseConfigurationStatusAtProvider
     public IList<V1beta1AttachedDatabaseConfigurationStatusAtProviderSharing>? Sharing { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1222,6 +1269,7 @@ public partial class V1beta1AttachedDatabaseConfigurationStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>AttachedDatabaseConfigurationStatus defines the observed state of AttachedDatabaseConfiguration.</summary>
 public partial class V1beta1AttachedDatabaseConfigurationStatus
 {
     /// <summary></summary>
@@ -1238,6 +1286,7 @@ public partial class V1beta1AttachedDatabaseConfigurationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>AttachedDatabaseConfiguration is the Schema for the AttachedDatabaseConfigurations API. Manages Kusto / Data Explorer Attached Database Configuration</summary>
 public partial class V1beta1AttachedDatabaseConfiguration : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AttachedDatabaseConfigurationSpec>, IStatus<V1beta1AttachedDatabaseConfigurationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

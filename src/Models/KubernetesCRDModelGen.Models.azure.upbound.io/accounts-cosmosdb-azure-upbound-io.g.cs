@@ -18,6 +18,7 @@ public enum V1beta1AccountSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountSpecForProviderAnalyticalStorage
 {
     /// <summary>The schema type of the Analytical Storage for this Cosmos DB account. Possible values are FullFidelity and WellDefined.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1AccountSpecForProviderAnalyticalStorage
     public string? SchemaType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountSpecForProviderBackup
 {
     /// <summary>The interval in minutes between two backups. Possible values are between 60 and 1440. Defaults to 240.</summary>
@@ -48,6 +50,7 @@ public partial class V1beta1AccountSpecForProviderBackup
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountSpecForProviderCapabilities
 {
     /// <summary>The capability to enable - Possible values are AllowSelfServeUpgradeToMongo36, DisableRateLimitingResponses, EnableAggregationPipeline, EnableCassandra, EnableGremlin, EnableMongo, EnableMongo16MBDocumentSupport, EnableMongoRetryableWrites, EnableMongoRoleBasedAccessControl, EnablePartialUniqueIndex, EnableServerless, EnableTable, EnableTtlOnCustomPath, EnableUniqueCompoundNestedDocs, MongoDBv3.4 and mongoEnableDocLevelTTL.</summary>
@@ -55,6 +58,7 @@ public partial class V1beta1AccountSpecForProviderCapabilities
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountSpecForProviderCapacity
 {
     /// <summary>The total throughput limit imposed on this Cosmos DB account (RU/s). Possible values are at least -1. -1 means no limit.</summary>
@@ -62,6 +66,7 @@ public partial class V1beta1AccountSpecForProviderCapacity
     public double? TotalThroughputLimit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountSpecForProviderConsistencyPolicy
 {
     /// <summary>The Consistency Level to use for this CosmosDB Account - can be either BoundedStaleness, Eventual, Session, Strong or ConsistentPrefix.</summary>
@@ -77,6 +82,7 @@ public partial class V1beta1AccountSpecForProviderConsistencyPolicy
     public double? MaxStalenessPrefix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountSpecForProviderCorsRule
 {
     /// <summary>A list of headers that are allowed to be a part of the cross-origin request.</summary>
@@ -100,6 +106,7 @@ public partial class V1beta1AccountSpecForProviderCorsRule
     public double? MaxAgeInSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountSpecForProviderGeoLocation
 {
     /// <summary>The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists. Changing this causes the location to be re-provisioned and cannot be changed for the location with failover priority 0.</summary>
@@ -115,6 +122,7 @@ public partial class V1beta1AccountSpecForProviderGeoLocation
     public bool? ZoneRedundant { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountSpecForProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Cosmos Account.</summary>
@@ -146,6 +154,7 @@ public enum V1beta1AccountSpecForProviderResourceGroupNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AccountSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -159,6 +168,7 @@ public partial class V1beta1AccountSpecForProviderResourceGroupNameRefPolicy
     public V1beta1AccountSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1AccountSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -190,6 +200,7 @@ public enum V1beta1AccountSpecForProviderResourceGroupNameSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AccountSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -203,6 +214,7 @@ public partial class V1beta1AccountSpecForProviderResourceGroupNameSelectorPolic
     public V1beta1AccountSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1AccountSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -218,6 +230,7 @@ public partial class V1beta1AccountSpecForProviderResourceGroupNameSelector
     public V1beta1AccountSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountSpecForProviderRestoreDatabase
 {
     /// <summary>A list of the collection names for the restore request. Changing this forces a new resource to be created.</summary>
@@ -229,6 +242,7 @@ public partial class V1beta1AccountSpecForProviderRestoreDatabase
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountSpecForProviderRestoreGremlinDatabase
 {
     /// <summary>A list of the Graph names for the restore request. Changing this forces a new resource to be created.</summary>
@@ -260,6 +274,7 @@ public enum V1beta1AccountSpecForProviderRestoreSourceCosmosdbAccountIdRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AccountSpecForProviderRestoreSourceCosmosdbAccountIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -273,6 +288,7 @@ public partial class V1beta1AccountSpecForProviderRestoreSourceCosmosdbAccountId
     public V1beta1AccountSpecForProviderRestoreSourceCosmosdbAccountIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in cosmosdb to populate sourceCosmosdbAccountId.</summary>
 public partial class V1beta1AccountSpecForProviderRestoreSourceCosmosdbAccountIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -304,6 +320,7 @@ public enum V1beta1AccountSpecForProviderRestoreSourceCosmosdbAccountIdSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AccountSpecForProviderRestoreSourceCosmosdbAccountIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -317,6 +334,7 @@ public partial class V1beta1AccountSpecForProviderRestoreSourceCosmosdbAccountId
     public V1beta1AccountSpecForProviderRestoreSourceCosmosdbAccountIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in cosmosdb to populate sourceCosmosdbAccountId.</summary>
 public partial class V1beta1AccountSpecForProviderRestoreSourceCosmosdbAccountIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -332,6 +350,7 @@ public partial class V1beta1AccountSpecForProviderRestoreSourceCosmosdbAccountId
     public V1beta1AccountSpecForProviderRestoreSourceCosmosdbAccountIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountSpecForProviderRestore
 {
     /// <summary>A database block as defined below. Changing this forces a new resource to be created.</summary>
@@ -363,6 +382,7 @@ public partial class V1beta1AccountSpecForProviderRestore
     public IList<string>? TablesToRestore { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountSpecForProviderVirtualNetworkRule
 {
     /// <summary>The ID of the virtual network subnet.</summary>
@@ -374,6 +394,7 @@ public partial class V1beta1AccountSpecForProviderVirtualNetworkRule
     public bool? IgnoreMissingVnetServiceEndpoint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountSpecForProvider
 {
     /// <summary>Is write operations on metadata resources (databases, containers, throughput) via account keys enabled? Defaults to true.</summary>
@@ -513,6 +534,7 @@ public partial class V1beta1AccountSpecForProvider
     public IList<V1beta1AccountSpecForProviderVirtualNetworkRule>? VirtualNetworkRule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountSpecInitProviderAnalyticalStorage
 {
     /// <summary>The schema type of the Analytical Storage for this Cosmos DB account. Possible values are FullFidelity and WellDefined.</summary>
@@ -520,6 +542,7 @@ public partial class V1beta1AccountSpecInitProviderAnalyticalStorage
     public string? SchemaType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountSpecInitProviderBackup
 {
     /// <summary>The interval in minutes between two backups. Possible values are between 60 and 1440. Defaults to 240.</summary>
@@ -543,6 +566,7 @@ public partial class V1beta1AccountSpecInitProviderBackup
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountSpecInitProviderCapabilities
 {
     /// <summary>The capability to enable - Possible values are AllowSelfServeUpgradeToMongo36, DisableRateLimitingResponses, EnableAggregationPipeline, EnableCassandra, EnableGremlin, EnableMongo, EnableMongo16MBDocumentSupport, EnableMongoRetryableWrites, EnableMongoRoleBasedAccessControl, EnablePartialUniqueIndex, EnableServerless, EnableTable, EnableTtlOnCustomPath, EnableUniqueCompoundNestedDocs, MongoDBv3.4 and mongoEnableDocLevelTTL.</summary>
@@ -550,6 +574,7 @@ public partial class V1beta1AccountSpecInitProviderCapabilities
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountSpecInitProviderCapacity
 {
     /// <summary>The total throughput limit imposed on this Cosmos DB account (RU/s). Possible values are at least -1. -1 means no limit.</summary>
@@ -557,6 +582,7 @@ public partial class V1beta1AccountSpecInitProviderCapacity
     public double? TotalThroughputLimit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountSpecInitProviderConsistencyPolicy
 {
     /// <summary>The Consistency Level to use for this CosmosDB Account - can be either BoundedStaleness, Eventual, Session, Strong or ConsistentPrefix.</summary>
@@ -572,6 +598,7 @@ public partial class V1beta1AccountSpecInitProviderConsistencyPolicy
     public double? MaxStalenessPrefix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountSpecInitProviderCorsRule
 {
     /// <summary>A list of headers that are allowed to be a part of the cross-origin request.</summary>
@@ -595,6 +622,7 @@ public partial class V1beta1AccountSpecInitProviderCorsRule
     public double? MaxAgeInSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountSpecInitProviderGeoLocation
 {
     /// <summary>The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists. Changing this causes the location to be re-provisioned and cannot be changed for the location with failover priority 0.</summary>
@@ -610,6 +638,7 @@ public partial class V1beta1AccountSpecInitProviderGeoLocation
     public bool? ZoneRedundant { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountSpecInitProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Cosmos Account.</summary>
@@ -621,6 +650,7 @@ public partial class V1beta1AccountSpecInitProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountSpecInitProviderRestoreDatabase
 {
     /// <summary>A list of the collection names for the restore request. Changing this forces a new resource to be created.</summary>
@@ -632,6 +662,7 @@ public partial class V1beta1AccountSpecInitProviderRestoreDatabase
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountSpecInitProviderRestoreGremlinDatabase
 {
     /// <summary>A list of the Graph names for the restore request. Changing this forces a new resource to be created.</summary>
@@ -663,6 +694,7 @@ public enum V1beta1AccountSpecInitProviderRestoreSourceCosmosdbAccountIdRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AccountSpecInitProviderRestoreSourceCosmosdbAccountIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -676,6 +708,7 @@ public partial class V1beta1AccountSpecInitProviderRestoreSourceCosmosdbAccountI
     public V1beta1AccountSpecInitProviderRestoreSourceCosmosdbAccountIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in cosmosdb to populate sourceCosmosdbAccountId.</summary>
 public partial class V1beta1AccountSpecInitProviderRestoreSourceCosmosdbAccountIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -707,6 +740,7 @@ public enum V1beta1AccountSpecInitProviderRestoreSourceCosmosdbAccountIdSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AccountSpecInitProviderRestoreSourceCosmosdbAccountIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -720,6 +754,7 @@ public partial class V1beta1AccountSpecInitProviderRestoreSourceCosmosdbAccountI
     public V1beta1AccountSpecInitProviderRestoreSourceCosmosdbAccountIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in cosmosdb to populate sourceCosmosdbAccountId.</summary>
 public partial class V1beta1AccountSpecInitProviderRestoreSourceCosmosdbAccountIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -735,6 +770,7 @@ public partial class V1beta1AccountSpecInitProviderRestoreSourceCosmosdbAccountI
     public V1beta1AccountSpecInitProviderRestoreSourceCosmosdbAccountIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountSpecInitProviderRestore
 {
     /// <summary>A database block as defined below. Changing this forces a new resource to be created.</summary>
@@ -766,6 +802,7 @@ public partial class V1beta1AccountSpecInitProviderRestore
     public IList<string>? TablesToRestore { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountSpecInitProviderVirtualNetworkRule
 {
     /// <summary>The ID of the virtual network subnet.</summary>
@@ -777,6 +814,7 @@ public partial class V1beta1AccountSpecInitProviderVirtualNetworkRule
     public bool? IgnoreMissingVnetServiceEndpoint { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1AccountSpecInitProvider
 {
     /// <summary>Is write operations on metadata resources (databases, containers, throughput) via account keys enabled? Defaults to true.</summary>
@@ -946,6 +984,7 @@ public enum V1beta1AccountSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AccountSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -959,6 +998,7 @@ public partial class V1beta1AccountSpecProviderConfigRefPolicy
     public V1beta1AccountSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1AccountSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -990,6 +1030,7 @@ public enum V1beta1AccountSpecPublishConnectionDetailsToConfigRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AccountSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1003,6 +1044,7 @@ public partial class V1beta1AccountSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1AccountSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1AccountSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1014,6 +1056,7 @@ public partial class V1beta1AccountSpecPublishConnectionDetailsToConfigRef
     public V1beta1AccountSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1AccountSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1029,6 +1072,7 @@ public partial class V1beta1AccountSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1AccountSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1044,6 +1088,7 @@ public partial class V1beta1AccountSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1AccountSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1055,6 +1100,7 @@ public partial class V1beta1AccountSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>AccountSpec defines the desired state of Account</summary>
 public partial class V1beta1AccountSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1087,6 +1133,7 @@ public partial class V1beta1AccountSpec
     public V1beta1AccountSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountStatusAtProviderAnalyticalStorage
 {
     /// <summary>The schema type of the Analytical Storage for this Cosmos DB account. Possible values are FullFidelity and WellDefined.</summary>
@@ -1094,6 +1141,7 @@ public partial class V1beta1AccountStatusAtProviderAnalyticalStorage
     public string? SchemaType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountStatusAtProviderBackup
 {
     /// <summary>The interval in minutes between two backups. Possible values are between 60 and 1440. Defaults to 240.</summary>
@@ -1117,6 +1165,7 @@ public partial class V1beta1AccountStatusAtProviderBackup
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountStatusAtProviderCapabilities
 {
     /// <summary>The capability to enable - Possible values are AllowSelfServeUpgradeToMongo36, DisableRateLimitingResponses, EnableAggregationPipeline, EnableCassandra, EnableGremlin, EnableMongo, EnableMongo16MBDocumentSupport, EnableMongoRetryableWrites, EnableMongoRoleBasedAccessControl, EnablePartialUniqueIndex, EnableServerless, EnableTable, EnableTtlOnCustomPath, EnableUniqueCompoundNestedDocs, MongoDBv3.4 and mongoEnableDocLevelTTL.</summary>
@@ -1124,6 +1173,7 @@ public partial class V1beta1AccountStatusAtProviderCapabilities
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountStatusAtProviderCapacity
 {
     /// <summary>The total throughput limit imposed on this Cosmos DB account (RU/s). Possible values are at least -1. -1 means no limit.</summary>
@@ -1131,6 +1181,7 @@ public partial class V1beta1AccountStatusAtProviderCapacity
     public double? TotalThroughputLimit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountStatusAtProviderConsistencyPolicy
 {
     /// <summary>The Consistency Level to use for this CosmosDB Account - can be either BoundedStaleness, Eventual, Session, Strong or ConsistentPrefix.</summary>
@@ -1146,6 +1197,7 @@ public partial class V1beta1AccountStatusAtProviderConsistencyPolicy
     public double? MaxStalenessPrefix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountStatusAtProviderCorsRule
 {
     /// <summary>A list of headers that are allowed to be a part of the cross-origin request.</summary>
@@ -1169,6 +1221,7 @@ public partial class V1beta1AccountStatusAtProviderCorsRule
     public double? MaxAgeInSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountStatusAtProviderGeoLocation
 {
     /// <summary>The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists. Changing this causes the location to be re-provisioned and cannot be changed for the location with failover priority 0.</summary>
@@ -1188,6 +1241,7 @@ public partial class V1beta1AccountStatusAtProviderGeoLocation
     public bool? ZoneRedundant { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountStatusAtProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Cosmos Account.</summary>
@@ -1207,6 +1261,7 @@ public partial class V1beta1AccountStatusAtProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountStatusAtProviderRestoreDatabase
 {
     /// <summary>A list of the collection names for the restore request. Changing this forces a new resource to be created.</summary>
@@ -1218,6 +1273,7 @@ public partial class V1beta1AccountStatusAtProviderRestoreDatabase
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountStatusAtProviderRestoreGremlinDatabase
 {
     /// <summary>A list of the Graph names for the restore request. Changing this forces a new resource to be created.</summary>
@@ -1229,6 +1285,7 @@ public partial class V1beta1AccountStatusAtProviderRestoreGremlinDatabase
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountStatusAtProviderRestore
 {
     /// <summary>A database block as defined below. Changing this forces a new resource to be created.</summary>
@@ -1252,6 +1309,7 @@ public partial class V1beta1AccountStatusAtProviderRestore
     public IList<string>? TablesToRestore { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountStatusAtProviderVirtualNetworkRule
 {
     /// <summary>The ID of the virtual network subnet.</summary>
@@ -1263,6 +1321,7 @@ public partial class V1beta1AccountStatusAtProviderVirtualNetworkRule
     public bool? IgnoreMissingVnetServiceEndpoint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountStatusAtProvider
 {
     /// <summary>Is write operations on metadata resources (databases, containers, throughput) via account keys enabled? Defaults to true.</summary>
@@ -1410,6 +1469,7 @@ public partial class V1beta1AccountStatusAtProvider
     public IList<string>? WriteEndpoints { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1AccountStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1437,6 +1497,7 @@ public partial class V1beta1AccountStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>AccountStatus defines the observed state of Account.</summary>
 public partial class V1beta1AccountStatus
 {
     /// <summary></summary>
@@ -1453,6 +1514,7 @@ public partial class V1beta1AccountStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Account is the Schema for the Accounts API. Manages a CosmosDB (formally DocumentDB) Account.</summary>
 public partial class V1beta1Account : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AccountSpec>, IStatus<V1beta1AccountStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.cnrm.cloud.google.com;
+/// <summary>The Cloud SQL instance.</summary>
 public partial class V1beta1SQLDatabaseSpecInstanceRef
 {
     /// <summary>Allowed value: The `name` field of a `SQLInstance` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1SQLDatabaseSpecInstanceRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLDatabaseSpec
 {
     /// <summary>The charset value. See MySQL's [Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html) and Postgres' [Character Set Support](https://www.postgresql.org/docs/9.6/static/multibyte.html) for more details and supported values. Postgres databases only support a value of 'UTF8' at creation time.</summary>
@@ -46,6 +48,7 @@ public partial class V1beta1SQLDatabaseSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLDatabaseStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -69,6 +72,7 @@ public partial class V1beta1SQLDatabaseStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLDatabaseStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -85,6 +89,7 @@ public partial class V1beta1SQLDatabaseStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1SQLDatabase : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SQLDatabaseSpec>, IStatus<V1beta1SQLDatabaseStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -18,6 +18,7 @@ public enum V1beta1LabServiceLabSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServiceLabSpecForProviderAutoShutdown
 {
     /// <summary>The amount of time a VM will stay running after a user disconnects if this behavior is enabled. This value must be formatted as an ISO 8601 string.</summary>
@@ -37,6 +38,7 @@ public partial class V1beta1LabServiceLabSpecForProviderAutoShutdown
     public string? ShutdownOnIdle { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServiceLabSpecForProviderConnectionSetting
 {
     /// <summary>The enabled access level for Client Access over RDP. Possible value is Public.</summary>
@@ -68,6 +70,7 @@ public enum V1beta1LabServiceLabSpecForProviderNetworkSubnetIdRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LabServiceLabSpecForProviderNetworkSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -81,6 +84,7 @@ public partial class V1beta1LabServiceLabSpecForProviderNetworkSubnetIdRefPolicy
     public V1beta1LabServiceLabSpecForProviderNetworkSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1LabServiceLabSpecForProviderNetworkSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -112,6 +116,7 @@ public enum V1beta1LabServiceLabSpecForProviderNetworkSubnetIdSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LabServiceLabSpecForProviderNetworkSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1LabServiceLabSpecForProviderNetworkSubnetIdSelectorP
     public V1beta1LabServiceLabSpecForProviderNetworkSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1LabServiceLabSpecForProviderNetworkSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -140,6 +146,7 @@ public partial class V1beta1LabServiceLabSpecForProviderNetworkSubnetIdSelector
     public V1beta1LabServiceLabSpecForProviderNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServiceLabSpecForProviderNetwork
 {
     /// <summary>The resource ID of the Subnet for the network profile of the Lab Service Lab.</summary>
@@ -175,6 +182,7 @@ public enum V1beta1LabServiceLabSpecForProviderResourceGroupNameRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LabServiceLabSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -188,6 +196,7 @@ public partial class V1beta1LabServiceLabSpecForProviderResourceGroupNameRefPoli
     public V1beta1LabServiceLabSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1LabServiceLabSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -219,6 +228,7 @@ public enum V1beta1LabServiceLabSpecForProviderResourceGroupNameSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LabServiceLabSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -232,6 +242,7 @@ public partial class V1beta1LabServiceLabSpecForProviderResourceGroupNameSelecto
     public V1beta1LabServiceLabSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1LabServiceLabSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -247,6 +258,7 @@ public partial class V1beta1LabServiceLabSpecForProviderResourceGroupNameSelecto
     public V1beta1LabServiceLabSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServiceLabSpecForProviderRoster
 {
     /// <summary>The AAD group ID which this Lab Service Lab roster is populated from.</summary>
@@ -270,6 +282,7 @@ public partial class V1beta1LabServiceLabSpecForProviderRoster
     public string? LtiRosterEndpoint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServiceLabSpecForProviderSecurity
 {
     /// <summary>Is open access enabled to allow any user or only specified users to register to a Lab Service Lab?</summary>
@@ -277,6 +290,7 @@ public partial class V1beta1LabServiceLabSpecForProviderSecurity
     public bool? OpenAccessEnabled { get; set; }
 }
 
+/// <summary>The password for the user.</summary>
 public partial class V1beta1LabServiceLabSpecForProviderVirtualMachineAdminUserPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -292,6 +306,7 @@ public partial class V1beta1LabServiceLabSpecForProviderVirtualMachineAdminUserP
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServiceLabSpecForProviderVirtualMachineAdminUser
 {
     /// <summary>The password for the user.</summary>
@@ -303,6 +318,7 @@ public partial class V1beta1LabServiceLabSpecForProviderVirtualMachineAdminUser
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServiceLabSpecForProviderVirtualMachineImageReference
 {
     /// <summary>The resource ID of the image. Changing this forces a new resource to be created.</summary>
@@ -326,6 +342,7 @@ public partial class V1beta1LabServiceLabSpecForProviderVirtualMachineImageRefer
     public string? Version { get; set; }
 }
 
+/// <summary>The password for the user.</summary>
 public partial class V1beta1LabServiceLabSpecForProviderVirtualMachineNonAdminUserPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -341,6 +358,7 @@ public partial class V1beta1LabServiceLabSpecForProviderVirtualMachineNonAdminUs
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServiceLabSpecForProviderVirtualMachineNonAdminUser
 {
     /// <summary>The password for the user.</summary>
@@ -352,6 +370,7 @@ public partial class V1beta1LabServiceLabSpecForProviderVirtualMachineNonAdminUs
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServiceLabSpecForProviderVirtualMachineSku
 {
     /// <summary>The capacity for the SKU. Possible values are between 0 and 400.</summary>
@@ -363,6 +382,7 @@ public partial class V1beta1LabServiceLabSpecForProviderVirtualMachineSku
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServiceLabSpecForProviderVirtualMachine
 {
     /// <summary>Is flagged to pre-install dedicated GPU drivers? Defaults to false. Changing this forces a new resource to be created.</summary>
@@ -398,6 +418,7 @@ public partial class V1beta1LabServiceLabSpecForProviderVirtualMachine
     public string? UsageQuota { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServiceLabSpecForProvider
 {
     /// <summary>An auto_shutdown block as defined below.</summary>
@@ -457,6 +478,7 @@ public partial class V1beta1LabServiceLabSpecForProvider
     public IList<V1beta1LabServiceLabSpecForProviderVirtualMachine>? VirtualMachine { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServiceLabSpecInitProviderAutoShutdown
 {
     /// <summary>The amount of time a VM will stay running after a user disconnects if this behavior is enabled. This value must be formatted as an ISO 8601 string.</summary>
@@ -476,6 +498,7 @@ public partial class V1beta1LabServiceLabSpecInitProviderAutoShutdown
     public string? ShutdownOnIdle { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServiceLabSpecInitProviderConnectionSetting
 {
     /// <summary>The enabled access level for Client Access over RDP. Possible value is Public.</summary>
@@ -507,6 +530,7 @@ public enum V1beta1LabServiceLabSpecInitProviderNetworkSubnetIdRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LabServiceLabSpecInitProviderNetworkSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -520,6 +544,7 @@ public partial class V1beta1LabServiceLabSpecInitProviderNetworkSubnetIdRefPolic
     public V1beta1LabServiceLabSpecInitProviderNetworkSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1LabServiceLabSpecInitProviderNetworkSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -551,6 +576,7 @@ public enum V1beta1LabServiceLabSpecInitProviderNetworkSubnetIdSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LabServiceLabSpecInitProviderNetworkSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -564,6 +590,7 @@ public partial class V1beta1LabServiceLabSpecInitProviderNetworkSubnetIdSelector
     public V1beta1LabServiceLabSpecInitProviderNetworkSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1LabServiceLabSpecInitProviderNetworkSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -579,6 +606,7 @@ public partial class V1beta1LabServiceLabSpecInitProviderNetworkSubnetIdSelector
     public V1beta1LabServiceLabSpecInitProviderNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServiceLabSpecInitProviderNetwork
 {
     /// <summary>The resource ID of the Subnet for the network profile of the Lab Service Lab.</summary>
@@ -594,6 +622,7 @@ public partial class V1beta1LabServiceLabSpecInitProviderNetwork
     public V1beta1LabServiceLabSpecInitProviderNetworkSubnetIdSelector? SubnetIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServiceLabSpecInitProviderRoster
 {
     /// <summary>The AAD group ID which this Lab Service Lab roster is populated from.</summary>
@@ -617,6 +646,7 @@ public partial class V1beta1LabServiceLabSpecInitProviderRoster
     public string? LtiRosterEndpoint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServiceLabSpecInitProviderSecurity
 {
     /// <summary>Is open access enabled to allow any user or only specified users to register to a Lab Service Lab?</summary>
@@ -624,6 +654,7 @@ public partial class V1beta1LabServiceLabSpecInitProviderSecurity
     public bool? OpenAccessEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServiceLabSpecInitProviderVirtualMachineAdminUser
 {
     /// <summary>The username to use when signing in to Lab Service Lab VMs.</summary>
@@ -631,6 +662,7 @@ public partial class V1beta1LabServiceLabSpecInitProviderVirtualMachineAdminUser
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServiceLabSpecInitProviderVirtualMachineImageReference
 {
     /// <summary>The resource ID of the image. Changing this forces a new resource to be created.</summary>
@@ -654,6 +686,7 @@ public partial class V1beta1LabServiceLabSpecInitProviderVirtualMachineImageRefe
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServiceLabSpecInitProviderVirtualMachineNonAdminUser
 {
     /// <summary>The username to use when signing in to Lab Service Lab VMs.</summary>
@@ -661,6 +694,7 @@ public partial class V1beta1LabServiceLabSpecInitProviderVirtualMachineNonAdminU
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServiceLabSpecInitProviderVirtualMachineSku
 {
     /// <summary>The capacity for the SKU. Possible values are between 0 and 400.</summary>
@@ -672,6 +706,7 @@ public partial class V1beta1LabServiceLabSpecInitProviderVirtualMachineSku
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServiceLabSpecInitProviderVirtualMachine
 {
     /// <summary>Is flagged to pre-install dedicated GPU drivers? Defaults to false. Changing this forces a new resource to be created.</summary>
@@ -707,6 +742,7 @@ public partial class V1beta1LabServiceLabSpecInitProviderVirtualMachine
     public string? UsageQuota { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1LabServiceLabSpecInitProvider
 {
     /// <summary>An auto_shutdown block as defined below.</summary>
@@ -796,6 +832,7 @@ public enum V1beta1LabServiceLabSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LabServiceLabSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -809,6 +846,7 @@ public partial class V1beta1LabServiceLabSpecProviderConfigRefPolicy
     public V1beta1LabServiceLabSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1LabServiceLabSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -840,6 +878,7 @@ public enum V1beta1LabServiceLabSpecPublishConnectionDetailsToConfigRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LabServiceLabSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -853,6 +892,7 @@ public partial class V1beta1LabServiceLabSpecPublishConnectionDetailsToConfigRef
     public V1beta1LabServiceLabSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1LabServiceLabSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -864,6 +904,7 @@ public partial class V1beta1LabServiceLabSpecPublishConnectionDetailsToConfigRef
     public V1beta1LabServiceLabSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1LabServiceLabSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -879,6 +920,7 @@ public partial class V1beta1LabServiceLabSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1LabServiceLabSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -894,6 +936,7 @@ public partial class V1beta1LabServiceLabSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1LabServiceLabSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -905,6 +948,7 @@ public partial class V1beta1LabServiceLabSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>LabServiceLabSpec defines the desired state of LabServiceLab</summary>
 public partial class V1beta1LabServiceLabSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -937,6 +981,7 @@ public partial class V1beta1LabServiceLabSpec
     public V1beta1LabServiceLabSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServiceLabStatusAtProviderAutoShutdown
 {
     /// <summary>The amount of time a VM will stay running after a user disconnects if this behavior is enabled. This value must be formatted as an ISO 8601 string.</summary>
@@ -956,6 +1001,7 @@ public partial class V1beta1LabServiceLabStatusAtProviderAutoShutdown
     public string? ShutdownOnIdle { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServiceLabStatusAtProviderConnectionSetting
 {
     /// <summary>The enabled access level for Client Access over RDP. Possible value is Public.</summary>
@@ -967,6 +1013,7 @@ public partial class V1beta1LabServiceLabStatusAtProviderConnectionSetting
     public string? ClientSshAccess { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServiceLabStatusAtProviderNetwork
 {
     /// <summary>The resource ID of the Load Balancer for the network profile of the Lab Service Lab.</summary>
@@ -982,6 +1029,7 @@ public partial class V1beta1LabServiceLabStatusAtProviderNetwork
     public string? SubnetId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServiceLabStatusAtProviderRoster
 {
     /// <summary>The AAD group ID which this Lab Service Lab roster is populated from.</summary>
@@ -1005,6 +1053,7 @@ public partial class V1beta1LabServiceLabStatusAtProviderRoster
     public string? LtiRosterEndpoint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServiceLabStatusAtProviderSecurity
 {
     /// <summary>Is open access enabled to allow any user or only specified users to register to a Lab Service Lab?</summary>
@@ -1016,6 +1065,7 @@ public partial class V1beta1LabServiceLabStatusAtProviderSecurity
     public string? RegistrationCode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServiceLabStatusAtProviderVirtualMachineAdminUser
 {
     /// <summary>The username to use when signing in to Lab Service Lab VMs.</summary>
@@ -1023,6 +1073,7 @@ public partial class V1beta1LabServiceLabStatusAtProviderVirtualMachineAdminUser
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServiceLabStatusAtProviderVirtualMachineImageReference
 {
     /// <summary>The resource ID of the image. Changing this forces a new resource to be created.</summary>
@@ -1046,6 +1097,7 @@ public partial class V1beta1LabServiceLabStatusAtProviderVirtualMachineImageRefe
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServiceLabStatusAtProviderVirtualMachineNonAdminUser
 {
     /// <summary>The username to use when signing in to Lab Service Lab VMs.</summary>
@@ -1053,6 +1105,7 @@ public partial class V1beta1LabServiceLabStatusAtProviderVirtualMachineNonAdminU
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServiceLabStatusAtProviderVirtualMachineSku
 {
     /// <summary>The capacity for the SKU. Possible values are between 0 and 400.</summary>
@@ -1064,6 +1117,7 @@ public partial class V1beta1LabServiceLabStatusAtProviderVirtualMachineSku
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServiceLabStatusAtProviderVirtualMachine
 {
     /// <summary>Is flagged to pre-install dedicated GPU drivers? Defaults to false. Changing this forces a new resource to be created.</summary>
@@ -1099,6 +1153,7 @@ public partial class V1beta1LabServiceLabStatusAtProviderVirtualMachine
     public string? UsageQuota { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServiceLabStatusAtProvider
 {
     /// <summary>An auto_shutdown block as defined below.</summary>
@@ -1154,6 +1209,7 @@ public partial class V1beta1LabServiceLabStatusAtProvider
     public IList<V1beta1LabServiceLabStatusAtProviderVirtualMachine>? VirtualMachine { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1LabServiceLabStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1181,6 +1237,7 @@ public partial class V1beta1LabServiceLabStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>LabServiceLabStatus defines the observed state of LabServiceLab.</summary>
 public partial class V1beta1LabServiceLabStatus
 {
     /// <summary></summary>
@@ -1197,6 +1254,7 @@ public partial class V1beta1LabServiceLabStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>LabServiceLab is the Schema for the LabServiceLabs API. Manages a Lab Service Lab.</summary>
 public partial class V1beta1LabServiceLab : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LabServiceLabSpec>, IStatus<V1beta1LabServiceLabStatus>
 {
     public const string KubeApiVersion = "v1beta1";

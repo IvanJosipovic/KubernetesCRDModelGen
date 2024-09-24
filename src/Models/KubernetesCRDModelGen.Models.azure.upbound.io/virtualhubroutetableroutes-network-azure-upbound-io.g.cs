@@ -38,6 +38,7 @@ public enum V1beta1VirtualHubRouteTableRouteSpecForProviderNextHopRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualHubRouteTableRouteSpecForProviderNextHopRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1VirtualHubRouteTableRouteSpecForProviderNextHopRefPo
     public V1beta1VirtualHubRouteTableRouteSpecForProviderNextHopRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VirtualHubConnection in network to populate nextHop.</summary>
 public partial class V1beta1VirtualHubRouteTableRouteSpecForProviderNextHopRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1VirtualHubRouteTableRouteSpecForProviderNextHopSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VirtualHubRouteTableRouteSpecForProviderNextHopSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1VirtualHubRouteTableRouteSpecForProviderNextHopSelec
     public V1beta1VirtualHubRouteTableRouteSpecForProviderNextHopSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VirtualHubConnection in network to populate nextHop.</summary>
 public partial class V1beta1VirtualHubRouteTableRouteSpecForProviderNextHopSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1VirtualHubRouteTableRouteSpecForProviderRouteTableIdRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualHubRouteTableRouteSpecForProviderRouteTableIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1VirtualHubRouteTableRouteSpecForProviderRouteTableId
     public V1beta1VirtualHubRouteTableRouteSpecForProviderRouteTableIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VirtualHubRouteTable in network to populate routeTableId.</summary>
 public partial class V1beta1VirtualHubRouteTableRouteSpecForProviderRouteTableIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1VirtualHubRouteTableRouteSpecForProviderRouteTableIdSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VirtualHubRouteTableRouteSpecForProviderRouteTableIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1VirtualHubRouteTableRouteSpecForProviderRouteTableId
     public V1beta1VirtualHubRouteTableRouteSpecForProviderRouteTableIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VirtualHubRouteTable in network to populate routeTableId.</summary>
 public partial class V1beta1VirtualHubRouteTableRouteSpecForProviderRouteTableIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1VirtualHubRouteTableRouteSpecForProviderRouteTableId
     public V1beta1VirtualHubRouteTableRouteSpecForProviderRouteTableIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualHubRouteTableRouteSpecForProvider
 {
     /// <summary>A list of destination addresses for this route.</summary>
@@ -261,6 +270,7 @@ public enum V1beta1VirtualHubRouteTableRouteSpecInitProviderNextHopRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualHubRouteTableRouteSpecInitProviderNextHopRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -274,6 +284,7 @@ public partial class V1beta1VirtualHubRouteTableRouteSpecInitProviderNextHopRefP
     public V1beta1VirtualHubRouteTableRouteSpecInitProviderNextHopRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VirtualHubConnection in network to populate nextHop.</summary>
 public partial class V1beta1VirtualHubRouteTableRouteSpecInitProviderNextHopRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -305,6 +316,7 @@ public enum V1beta1VirtualHubRouteTableRouteSpecInitProviderNextHopSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VirtualHubRouteTableRouteSpecInitProviderNextHopSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -318,6 +330,7 @@ public partial class V1beta1VirtualHubRouteTableRouteSpecInitProviderNextHopSele
     public V1beta1VirtualHubRouteTableRouteSpecInitProviderNextHopSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VirtualHubConnection in network to populate nextHop.</summary>
 public partial class V1beta1VirtualHubRouteTableRouteSpecInitProviderNextHopSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -333,6 +346,7 @@ public partial class V1beta1VirtualHubRouteTableRouteSpecInitProviderNextHopSele
     public V1beta1VirtualHubRouteTableRouteSpecInitProviderNextHopSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1VirtualHubRouteTableRouteSpecInitProvider
 {
     /// <summary>A list of destination addresses for this route.</summary>
@@ -402,6 +416,7 @@ public enum V1beta1VirtualHubRouteTableRouteSpecProviderConfigRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualHubRouteTableRouteSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -415,6 +430,7 @@ public partial class V1beta1VirtualHubRouteTableRouteSpecProviderConfigRefPolicy
     public V1beta1VirtualHubRouteTableRouteSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1VirtualHubRouteTableRouteSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -446,6 +462,7 @@ public enum V1beta1VirtualHubRouteTableRouteSpecPublishConnectionDetailsToConfig
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualHubRouteTableRouteSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -459,6 +476,7 @@ public partial class V1beta1VirtualHubRouteTableRouteSpecPublishConnectionDetail
     public V1beta1VirtualHubRouteTableRouteSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1VirtualHubRouteTableRouteSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -470,6 +488,7 @@ public partial class V1beta1VirtualHubRouteTableRouteSpecPublishConnectionDetail
     public V1beta1VirtualHubRouteTableRouteSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1VirtualHubRouteTableRouteSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -485,6 +504,7 @@ public partial class V1beta1VirtualHubRouteTableRouteSpecPublishConnectionDetail
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1VirtualHubRouteTableRouteSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -500,6 +520,7 @@ public partial class V1beta1VirtualHubRouteTableRouteSpecPublishConnectionDetail
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1VirtualHubRouteTableRouteSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -511,6 +532,7 @@ public partial class V1beta1VirtualHubRouteTableRouteSpecWriteConnectionSecretTo
     public string Namespace { get; set; }
 }
 
+/// <summary>VirtualHubRouteTableRouteSpec defines the desired state of VirtualHubRouteTableRoute</summary>
 public partial class V1beta1VirtualHubRouteTableRouteSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -543,6 +565,7 @@ public partial class V1beta1VirtualHubRouteTableRouteSpec
     public V1beta1VirtualHubRouteTableRouteSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualHubRouteTableRouteStatusAtProvider
 {
     /// <summary>A list of destination addresses for this route.</summary>
@@ -570,6 +593,7 @@ public partial class V1beta1VirtualHubRouteTableRouteStatusAtProvider
     public string? RouteTableId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1VirtualHubRouteTableRouteStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -597,6 +621,7 @@ public partial class V1beta1VirtualHubRouteTableRouteStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>VirtualHubRouteTableRouteStatus defines the observed state of VirtualHubRouteTableRoute.</summary>
 public partial class V1beta1VirtualHubRouteTableRouteStatus
 {
     /// <summary></summary>
@@ -613,6 +638,7 @@ public partial class V1beta1VirtualHubRouteTableRouteStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>VirtualHubRouteTableRoute is the Schema for the VirtualHubRouteTableRoutes API. Manages a Route in a Virtual Hub Route Table.</summary>
 public partial class V1beta1VirtualHubRouteTableRoute : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1VirtualHubRouteTableRouteSpec>, IStatus<V1beta1VirtualHubRouteTableRouteStatus>
 {
     public const string KubeApiVersion = "v1beta1";

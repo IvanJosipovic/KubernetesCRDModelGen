@@ -38,6 +38,7 @@ public enum V1beta1TestGridProjectSpecForProviderVpcConfigSecurityGroupIdRefsPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TestGridProjectSpecForProviderVpcConfigSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1TestGridProjectSpecForProviderVpcConfigSecurityGroup
     public V1beta1TestGridProjectSpecForProviderVpcConfigSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1TestGridProjectSpecForProviderVpcConfigSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1TestGridProjectSpecForProviderVpcConfigSecurityGroupIdSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TestGridProjectSpecForProviderVpcConfigSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1TestGridProjectSpecForProviderVpcConfigSecurityGroup
     public V1beta1TestGridProjectSpecForProviderVpcConfigSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 public partial class V1beta1TestGridProjectSpecForProviderVpcConfigSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1TestGridProjectSpecForProviderVpcConfigSubnetIdRefsPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TestGridProjectSpecForProviderVpcConfigSubnetIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1TestGridProjectSpecForProviderVpcConfigSubnetIdRefsP
     public V1beta1TestGridProjectSpecForProviderVpcConfigSubnetIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1TestGridProjectSpecForProviderVpcConfigSubnetIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1TestGridProjectSpecForProviderVpcConfigSubnetIdSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TestGridProjectSpecForProviderVpcConfigSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1TestGridProjectSpecForProviderVpcConfigSubnetIdSelec
     public V1beta1TestGridProjectSpecForProviderVpcConfigSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 public partial class V1beta1TestGridProjectSpecForProviderVpcConfigSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1TestGridProjectSpecForProviderVpcConfigVpcIdRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TestGridProjectSpecForProviderVpcConfigVpcIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1TestGridProjectSpecForProviderVpcConfigVpcIdRefPolic
     public V1beta1TestGridProjectSpecForProviderVpcConfigVpcIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1TestGridProjectSpecForProviderVpcConfigVpcIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1TestGridProjectSpecForProviderVpcConfigVpcIdSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TestGridProjectSpecForProviderVpcConfigVpcIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1TestGridProjectSpecForProviderVpcConfigVpcIdSelector
     public V1beta1TestGridProjectSpecForProviderVpcConfigVpcIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1TestGridProjectSpecForProviderVpcConfigVpcIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1TestGridProjectSpecForProviderVpcConfigVpcIdSelector
     public V1beta1TestGridProjectSpecForProviderVpcConfigVpcIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TestGridProjectSpecForProviderVpcConfig
 {
     /// <summary>References to SecurityGroup in ec2 to populate securityGroupIds.</summary>
@@ -333,6 +346,7 @@ public partial class V1beta1TestGridProjectSpecForProviderVpcConfig
     public V1beta1TestGridProjectSpecForProviderVpcConfigVpcIdSelector? VpcIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TestGridProjectSpecForProvider
 {
     /// <summary>Human-readable description of the project.</summary>
@@ -376,6 +390,7 @@ public enum V1beta1TestGridProjectSpecInitProviderVpcConfigSecurityGroupIdRefsPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -389,6 +404,7 @@ public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigSecurityGrou
     public V1beta1TestGridProjectSpecInitProviderVpcConfigSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -420,6 +436,7 @@ public enum V1beta1TestGridProjectSpecInitProviderVpcConfigSecurityGroupIdSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -433,6 +450,7 @@ public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigSecurityGrou
     public V1beta1TestGridProjectSpecInitProviderVpcConfigSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -468,6 +486,7 @@ public enum V1beta1TestGridProjectSpecInitProviderVpcConfigSubnetIdRefsPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigSubnetIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -481,6 +500,7 @@ public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigSubnetIdRefs
     public V1beta1TestGridProjectSpecInitProviderVpcConfigSubnetIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigSubnetIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -512,6 +532,7 @@ public enum V1beta1TestGridProjectSpecInitProviderVpcConfigSubnetIdSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -525,6 +546,7 @@ public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigSubnetIdSele
     public V1beta1TestGridProjectSpecInitProviderVpcConfigSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -560,6 +582,7 @@ public enum V1beta1TestGridProjectSpecInitProviderVpcConfigVpcIdRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigVpcIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -573,6 +596,7 @@ public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigVpcIdRefPoli
     public V1beta1TestGridProjectSpecInitProviderVpcConfigVpcIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigVpcIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -604,6 +628,7 @@ public enum V1beta1TestGridProjectSpecInitProviderVpcConfigVpcIdSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigVpcIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -617,6 +642,7 @@ public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigVpcIdSelecto
     public V1beta1TestGridProjectSpecInitProviderVpcConfigVpcIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigVpcIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -632,6 +658,7 @@ public partial class V1beta1TestGridProjectSpecInitProviderVpcConfigVpcIdSelecto
     public V1beta1TestGridProjectSpecInitProviderVpcConfigVpcIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TestGridProjectSpecInitProviderVpcConfig
 {
     /// <summary>References to SecurityGroup in ec2 to populate securityGroupIds.</summary>
@@ -671,6 +698,7 @@ public partial class V1beta1TestGridProjectSpecInitProviderVpcConfig
     public V1beta1TestGridProjectSpecInitProviderVpcConfigVpcIdSelector? VpcIdSelector { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1TestGridProjectSpecInitProvider
 {
     /// <summary>Human-readable description of the project.</summary>
@@ -732,6 +760,7 @@ public enum V1beta1TestGridProjectSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TestGridProjectSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -745,6 +774,7 @@ public partial class V1beta1TestGridProjectSpecProviderConfigRefPolicy
     public V1beta1TestGridProjectSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1TestGridProjectSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -776,6 +806,7 @@ public enum V1beta1TestGridProjectSpecPublishConnectionDetailsToConfigRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TestGridProjectSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -789,6 +820,7 @@ public partial class V1beta1TestGridProjectSpecPublishConnectionDetailsToConfigR
     public V1beta1TestGridProjectSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1TestGridProjectSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -800,6 +832,7 @@ public partial class V1beta1TestGridProjectSpecPublishConnectionDetailsToConfigR
     public V1beta1TestGridProjectSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1TestGridProjectSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -815,6 +848,7 @@ public partial class V1beta1TestGridProjectSpecPublishConnectionDetailsToMetadat
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1TestGridProjectSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -830,6 +864,7 @@ public partial class V1beta1TestGridProjectSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1TestGridProjectSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -841,6 +876,7 @@ public partial class V1beta1TestGridProjectSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>TestGridProjectSpec defines the desired state of TestGridProject</summary>
 public partial class V1beta1TestGridProjectSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -873,6 +909,7 @@ public partial class V1beta1TestGridProjectSpec
     public V1beta1TestGridProjectSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TestGridProjectStatusAtProviderVpcConfig
 {
     /// <summary>A list of VPC security group IDs in your Amazon VPC.</summary>
@@ -888,6 +925,7 @@ public partial class V1beta1TestGridProjectStatusAtProviderVpcConfig
     public string? VpcId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TestGridProjectStatusAtProvider
 {
     /// <summary>The Amazon Resource Name of this Test Grid Project.</summary>
@@ -919,6 +957,7 @@ public partial class V1beta1TestGridProjectStatusAtProvider
     public IList<V1beta1TestGridProjectStatusAtProviderVpcConfig>? VpcConfig { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1TestGridProjectStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -946,6 +985,7 @@ public partial class V1beta1TestGridProjectStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>TestGridProjectStatus defines the observed state of TestGridProject.</summary>
 public partial class V1beta1TestGridProjectStatus
 {
     /// <summary></summary>
@@ -962,6 +1002,7 @@ public partial class V1beta1TestGridProjectStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>TestGridProject is the Schema for the TestGridProjects API. Provides a Devicefarm test_grid_project</summary>
 public partial class V1beta1TestGridProject : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1TestGridProjectSpec>, IStatus<V1beta1TestGridProjectStatus>
 {
     public const string KubeApiVersion = "v1beta1";

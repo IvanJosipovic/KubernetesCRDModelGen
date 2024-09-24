@@ -38,6 +38,7 @@ public enum V1beta1InstanceSpecForProviderDiskEncryptionKeyNameRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecForProviderDiskEncryptionKeyNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1InstanceSpecForProviderDiskEncryptionKeyNameRefPolic
     public V1beta1InstanceSpecForProviderDiskEncryptionKeyNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a CryptoKey in kms to populate diskEncryptionKeyName.</summary>
 public partial class V1beta1InstanceSpecForProviderDiskEncryptionKeyNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1InstanceSpecForProviderDiskEncryptionKeyNameSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecForProviderDiskEncryptionKeyNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1InstanceSpecForProviderDiskEncryptionKeyNameSelector
     public V1beta1InstanceSpecForProviderDiskEncryptionKeyNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a CryptoKey in kms to populate diskEncryptionKeyName.</summary>
 public partial class V1beta1InstanceSpecForProviderDiskEncryptionKeyNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1InstanceSpecForProviderOrgIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecForProviderOrgIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1InstanceSpecForProviderOrgIdRefPolicy
     public V1beta1InstanceSpecForProviderOrgIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Organization in apigee to populate orgId.</summary>
 public partial class V1beta1InstanceSpecForProviderOrgIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1InstanceSpecForProviderOrgIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecForProviderOrgIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1InstanceSpecForProviderOrgIdSelectorPolicy
     public V1beta1InstanceSpecForProviderOrgIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Organization in apigee to populate orgId.</summary>
 public partial class V1beta1InstanceSpecForProviderOrgIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1InstanceSpecForProviderOrgIdSelector
     public V1beta1InstanceSpecForProviderOrgIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProvider
 {
     /// <summary>Optional. Customer accept list represents the list of projects (id/number) on customer side that can privately connect to the service attachment. It is an optional field which the customers can provide during the instance creation. By default, the customer project associated with the Apigee organization will be included to the list.</summary>
@@ -273,6 +282,7 @@ public enum V1beta1InstanceSpecInitProviderDiskEncryptionKeyNameRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecInitProviderDiskEncryptionKeyNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -286,6 +296,7 @@ public partial class V1beta1InstanceSpecInitProviderDiskEncryptionKeyNameRefPoli
     public V1beta1InstanceSpecInitProviderDiskEncryptionKeyNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a CryptoKey in kms to populate diskEncryptionKeyName.</summary>
 public partial class V1beta1InstanceSpecInitProviderDiskEncryptionKeyNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -317,6 +328,7 @@ public enum V1beta1InstanceSpecInitProviderDiskEncryptionKeyNameSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecInitProviderDiskEncryptionKeyNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -330,6 +342,7 @@ public partial class V1beta1InstanceSpecInitProviderDiskEncryptionKeyNameSelecto
     public V1beta1InstanceSpecInitProviderDiskEncryptionKeyNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a CryptoKey in kms to populate diskEncryptionKeyName.</summary>
 public partial class V1beta1InstanceSpecInitProviderDiskEncryptionKeyNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -345,6 +358,7 @@ public partial class V1beta1InstanceSpecInitProviderDiskEncryptionKeyNameSelecto
     public V1beta1InstanceSpecInitProviderDiskEncryptionKeyNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1InstanceSpecInitProvider
 {
     /// <summary>Optional. Customer accept list represents the list of projects (id/number) on customer side that can privately connect to the service attachment. It is an optional field which the customers can provide during the instance creation. By default, the customer project associated with the Apigee organization will be included to the list.</summary>
@@ -426,6 +440,7 @@ public enum V1beta1InstanceSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -439,6 +454,7 @@ public partial class V1beta1InstanceSpecProviderConfigRefPolicy
     public V1beta1InstanceSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1InstanceSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -470,6 +486,7 @@ public enum V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -483,6 +500,7 @@ public partial class V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolic
     public V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1InstanceSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -494,6 +512,7 @@ public partial class V1beta1InstanceSpecPublishConnectionDetailsToConfigRef
     public V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1InstanceSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -509,6 +528,7 @@ public partial class V1beta1InstanceSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1InstanceSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -524,6 +544,7 @@ public partial class V1beta1InstanceSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1InstanceSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -535,6 +556,7 @@ public partial class V1beta1InstanceSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>InstanceSpec defines the desired state of Instance</summary>
 public partial class V1beta1InstanceSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -567,6 +589,7 @@ public partial class V1beta1InstanceSpec
     public V1beta1InstanceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProvider
 {
     /// <summary>Optional. Customer accept list represents the list of projects (id/number) on customer side that can privately connect to the service attachment. It is an optional field which the customers can provide during the instance creation. By default, the customer project associated with the Apigee organization will be included to the list.</summary>
@@ -618,6 +641,7 @@ public partial class V1beta1InstanceStatusAtProvider
     public string? ServiceAttachment { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1InstanceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -645,6 +669,7 @@ public partial class V1beta1InstanceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>InstanceStatus defines the observed state of Instance.</summary>
 public partial class V1beta1InstanceStatus
 {
     /// <summary></summary>
@@ -661,6 +686,7 @@ public partial class V1beta1InstanceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Instance is the Schema for the Instances API. An</summary>
 public partial class V1beta1Instance : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1InstanceSpec>, IStatus<V1beta1InstanceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

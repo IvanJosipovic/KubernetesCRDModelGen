@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.azure.com;
+/// <summary>Storage version of v1api20240302.CopyCompletionError Indicates the error details if the background copy of a resource created via the CopyStart operation fails.</summary>
 public partial class V1api20240302storageSnapshotSpecCopyCompletionError
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -23,6 +24,7 @@ public partial class V1api20240302storageSnapshotSpecCopyCompletionError
     public string? ErrorMessage { get; set; }
 }
 
+/// <summary>ElasticSanResourceReference: Required if createOption is CopyFromSanSnapshot. This is the ARM id of the source elastic san volume snapshot.</summary>
 public partial class V1api20240302storageSnapshotSpecCreationDataElasticSanResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -42,6 +44,7 @@ public partial class V1api20240302storageSnapshotSpecCreationDataElasticSanResou
     public string? Name { get; set; }
 }
 
+/// <summary>Reference: A relative uri containing either a Platform Image Repository, user image, or Azure Compute Gallery image reference.</summary>
 public partial class V1api20240302storageSnapshotSpecCreationDataGalleryImageReferenceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -61,6 +64,7 @@ public partial class V1api20240302storageSnapshotSpecCreationDataGalleryImageRef
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.ImageDiskReference The source image used for creating the disk.</summary>
 public partial class V1api20240302storageSnapshotSpecCreationDataGalleryImageReference
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -84,6 +88,7 @@ public partial class V1api20240302storageSnapshotSpecCreationDataGalleryImageRef
     public string? SharedGalleryImageId { get; set; }
 }
 
+/// <summary>Reference: A relative uri containing either a Platform Image Repository, user image, or Azure Compute Gallery image reference.</summary>
 public partial class V1api20240302storageSnapshotSpecCreationDataImageReferenceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -103,6 +108,7 @@ public partial class V1api20240302storageSnapshotSpecCreationDataImageReferenceR
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.ImageDiskReference The source image used for creating the disk.</summary>
 public partial class V1api20240302storageSnapshotSpecCreationDataImageReference
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -126,6 +132,7 @@ public partial class V1api20240302storageSnapshotSpecCreationDataImageReference
     public string? SharedGalleryImageId { get; set; }
 }
 
+/// <summary>SourceResourceReference: If createOption is Copy, this is the ARM id of the source snapshot or disk.</summary>
 public partial class V1api20240302storageSnapshotSpecCreationDataSourceResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -145,6 +152,7 @@ public partial class V1api20240302storageSnapshotSpecCreationDataSourceResourceR
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.CreationData Data used when creating a disk.</summary>
 public partial class V1api20240302storageSnapshotSpecCreationData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -200,6 +208,7 @@ public partial class V1api20240302storageSnapshotSpecCreationData
     public int? UploadSizeBytes { get; set; }
 }
 
+/// <summary>DiskAccessReference: ARM id of the DiskAccess resource for using private endpoints on disks.</summary>
 public partial class V1api20240302storageSnapshotSpecDiskAccessReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -219,6 +228,7 @@ public partial class V1api20240302storageSnapshotSpecDiskAccessReference
     public string? Name { get; set; }
 }
 
+/// <summary>DiskEncryptionSetReference: ResourceId of the disk encryption set to use for enabling encryption at rest.</summary>
 public partial class V1api20240302storageSnapshotSpecEncryptionDiskEncryptionSetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -238,6 +248,7 @@ public partial class V1api20240302storageSnapshotSpecEncryptionDiskEncryptionSet
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.Encryption Encryption at rest settings for disk or snapshot</summary>
 public partial class V1api20240302storageSnapshotSpecEncryption
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -253,6 +264,7 @@ public partial class V1api20240302storageSnapshotSpecEncryption
     public string? Type { get; set; }
 }
 
+/// <summary>Reference: Resource Id</summary>
 public partial class V1api20240302storageSnapshotSpecEncryptionSettingsCollectionEncryptionSettingsDiskEncryptionKeySourceVaultReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -272,6 +284,7 @@ public partial class V1api20240302storageSnapshotSpecEncryptionSettingsCollectio
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.SourceVault The vault id is an Azure Resource Manager Resource id in the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}</summary>
 public partial class V1api20240302storageSnapshotSpecEncryptionSettingsCollectionEncryptionSettingsDiskEncryptionKeySourceVault
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -283,6 +296,7 @@ public partial class V1api20240302storageSnapshotSpecEncryptionSettingsCollectio
     public V1api20240302storageSnapshotSpecEncryptionSettingsCollectionEncryptionSettingsDiskEncryptionKeySourceVaultReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.KeyVaultAndSecretReference Key Vault Secret Url and vault id of the encryption key</summary>
 public partial class V1api20240302storageSnapshotSpecEncryptionSettingsCollectionEncryptionSettingsDiskEncryptionKey
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -298,6 +312,7 @@ public partial class V1api20240302storageSnapshotSpecEncryptionSettingsCollectio
     public V1api20240302storageSnapshotSpecEncryptionSettingsCollectionEncryptionSettingsDiskEncryptionKeySourceVault? SourceVault { get; set; }
 }
 
+/// <summary>Reference: Resource Id</summary>
 public partial class V1api20240302storageSnapshotSpecEncryptionSettingsCollectionEncryptionSettingsKeyEncryptionKeySourceVaultReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -317,6 +332,7 @@ public partial class V1api20240302storageSnapshotSpecEncryptionSettingsCollectio
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.SourceVault The vault id is an Azure Resource Manager Resource id in the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}</summary>
 public partial class V1api20240302storageSnapshotSpecEncryptionSettingsCollectionEncryptionSettingsKeyEncryptionKeySourceVault
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -328,6 +344,7 @@ public partial class V1api20240302storageSnapshotSpecEncryptionSettingsCollectio
     public V1api20240302storageSnapshotSpecEncryptionSettingsCollectionEncryptionSettingsKeyEncryptionKeySourceVaultReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.KeyVaultAndKeyReference Key Vault Key Url and vault id of KeK, KeK is optional and when provided is used to unwrap the encryptionKey</summary>
 public partial class V1api20240302storageSnapshotSpecEncryptionSettingsCollectionEncryptionSettingsKeyEncryptionKey
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -343,6 +360,7 @@ public partial class V1api20240302storageSnapshotSpecEncryptionSettingsCollectio
     public V1api20240302storageSnapshotSpecEncryptionSettingsCollectionEncryptionSettingsKeyEncryptionKeySourceVault? SourceVault { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.EncryptionSettingsElement Encryption settings for one disk volume.</summary>
 public partial class V1api20240302storageSnapshotSpecEncryptionSettingsCollectionEncryptionSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -358,6 +376,7 @@ public partial class V1api20240302storageSnapshotSpecEncryptionSettingsCollectio
     public V1api20240302storageSnapshotSpecEncryptionSettingsCollectionEncryptionSettingsKeyEncryptionKey? KeyEncryptionKey { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.EncryptionSettingsCollection Encryption settings for disk or snapshot</summary>
 public partial class V1api20240302storageSnapshotSpecEncryptionSettingsCollection
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -377,6 +396,7 @@ public partial class V1api20240302storageSnapshotSpecEncryptionSettingsCollectio
     public string? EncryptionSettingsVersion { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.ExtendedLocation The complex type of the extended location.</summary>
 public partial class V1api20240302storageSnapshotSpecExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -392,6 +412,7 @@ public partial class V1api20240302storageSnapshotSpecExtendedLocation
     public string? Type { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20240302storageSnapshotSpecOwner
 {
     /// <summary></summary>
@@ -403,6 +424,7 @@ public partial class V1api20240302storageSnapshotSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.PurchasePlan Used for establishing the purchase context of any 3rd Party artifact through MarketPlace.</summary>
 public partial class V1api20240302storageSnapshotSpecPurchasePlan
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -426,6 +448,7 @@ public partial class V1api20240302storageSnapshotSpecPurchasePlan
     public string? Publisher { get; set; }
 }
 
+/// <summary>SecureVMDiskEncryptionSetReference: ResourceId of the disk encryption set associated to Confidential VM supported disk encrypted with customer managed key</summary>
 public partial class V1api20240302storageSnapshotSpecSecurityProfileSecureVMDiskEncryptionSetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -445,6 +468,7 @@ public partial class V1api20240302storageSnapshotSpecSecurityProfileSecureVMDisk
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.DiskSecurityProfile Contains the security related information for the resource.</summary>
 public partial class V1api20240302storageSnapshotSpecSecurityProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -460,6 +484,7 @@ public partial class V1api20240302storageSnapshotSpecSecurityProfile
     public string? SecurityType { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.SnapshotSku The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot</summary>
 public partial class V1api20240302storageSnapshotSpecSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -471,6 +496,7 @@ public partial class V1api20240302storageSnapshotSpecSku
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.SupportedCapabilities List of supported capabilities persisted on the disk resource for VM use.</summary>
 public partial class V1api20240302storageSnapshotSpecSupportedCapabilities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -490,6 +516,7 @@ public partial class V1api20240302storageSnapshotSpecSupportedCapabilities
     public string? DiskControllerTypes { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.Snapshot_Spec</summary>
 public partial class V1api20240302storageSnapshotSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -597,6 +624,7 @@ public partial class V1api20240302storageSnapshotSpec
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20240302storageSnapshotStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -628,6 +656,7 @@ public partial class V1api20240302storageSnapshotStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.CopyCompletionError_STATUS Indicates the error details if the background copy of a resource created via the CopyStart operation fails.</summary>
 public partial class V1api20240302storageSnapshotStatusCopyCompletionError
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -643,6 +672,7 @@ public partial class V1api20240302storageSnapshotStatusCopyCompletionError
     public string? ErrorMessage { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.ImageDiskReference_STATUS The source image used for creating the disk.</summary>
 public partial class V1api20240302storageSnapshotStatusCreationDataGalleryImageReference
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -666,6 +696,7 @@ public partial class V1api20240302storageSnapshotStatusCreationDataGalleryImageR
     public string? SharedGalleryImageId { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.ImageDiskReference_STATUS The source image used for creating the disk.</summary>
 public partial class V1api20240302storageSnapshotStatusCreationDataImageReference
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -689,6 +720,7 @@ public partial class V1api20240302storageSnapshotStatusCreationDataImageReferenc
     public string? SharedGalleryImageId { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.CreationData_STATUS Data used when creating a disk.</summary>
 public partial class V1api20240302storageSnapshotStatusCreationData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -748,6 +780,7 @@ public partial class V1api20240302storageSnapshotStatusCreationData
     public int? UploadSizeBytes { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.Encryption_STATUS Encryption at rest settings for disk or snapshot</summary>
 public partial class V1api20240302storageSnapshotStatusEncryption
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -763,6 +796,7 @@ public partial class V1api20240302storageSnapshotStatusEncryption
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.SourceVault_STATUS The vault id is an Azure Resource Manager Resource id in the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}</summary>
 public partial class V1api20240302storageSnapshotStatusEncryptionSettingsCollectionEncryptionSettingsDiskEncryptionKeySourceVault
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -774,6 +808,7 @@ public partial class V1api20240302storageSnapshotStatusEncryptionSettingsCollect
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.KeyVaultAndSecretReference_STATUS Key Vault Secret Url and vault id of the encryption key</summary>
 public partial class V1api20240302storageSnapshotStatusEncryptionSettingsCollectionEncryptionSettingsDiskEncryptionKey
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -789,6 +824,7 @@ public partial class V1api20240302storageSnapshotStatusEncryptionSettingsCollect
     public V1api20240302storageSnapshotStatusEncryptionSettingsCollectionEncryptionSettingsDiskEncryptionKeySourceVault? SourceVault { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.SourceVault_STATUS The vault id is an Azure Resource Manager Resource id in the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}</summary>
 public partial class V1api20240302storageSnapshotStatusEncryptionSettingsCollectionEncryptionSettingsKeyEncryptionKeySourceVault
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -800,6 +836,7 @@ public partial class V1api20240302storageSnapshotStatusEncryptionSettingsCollect
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.KeyVaultAndKeyReference_STATUS Key Vault Key Url and vault id of KeK, KeK is optional and when provided is used to unwrap the encryptionKey</summary>
 public partial class V1api20240302storageSnapshotStatusEncryptionSettingsCollectionEncryptionSettingsKeyEncryptionKey
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -815,6 +852,7 @@ public partial class V1api20240302storageSnapshotStatusEncryptionSettingsCollect
     public V1api20240302storageSnapshotStatusEncryptionSettingsCollectionEncryptionSettingsKeyEncryptionKeySourceVault? SourceVault { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.EncryptionSettingsElement_STATUS Encryption settings for one disk volume.</summary>
 public partial class V1api20240302storageSnapshotStatusEncryptionSettingsCollectionEncryptionSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -830,6 +868,7 @@ public partial class V1api20240302storageSnapshotStatusEncryptionSettingsCollect
     public V1api20240302storageSnapshotStatusEncryptionSettingsCollectionEncryptionSettingsKeyEncryptionKey? KeyEncryptionKey { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.EncryptionSettingsCollection_STATUS Encryption settings for disk or snapshot</summary>
 public partial class V1api20240302storageSnapshotStatusEncryptionSettingsCollection
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -849,6 +888,7 @@ public partial class V1api20240302storageSnapshotStatusEncryptionSettingsCollect
     public string? EncryptionSettingsVersion { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.ExtendedLocation_STATUS The complex type of the extended location.</summary>
 public partial class V1api20240302storageSnapshotStatusExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -864,6 +904,7 @@ public partial class V1api20240302storageSnapshotStatusExtendedLocation
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.PurchasePlan_STATUS Used for establishing the purchase context of any 3rd Party artifact through MarketPlace.</summary>
 public partial class V1api20240302storageSnapshotStatusPurchasePlan
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -887,6 +928,7 @@ public partial class V1api20240302storageSnapshotStatusPurchasePlan
     public string? Publisher { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.DiskSecurityProfile_STATUS Contains the security related information for the resource.</summary>
 public partial class V1api20240302storageSnapshotStatusSecurityProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -902,6 +944,7 @@ public partial class V1api20240302storageSnapshotStatusSecurityProfile
     public string? SecurityType { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.SnapshotSku_STATUS The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot</summary>
 public partial class V1api20240302storageSnapshotStatusSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -917,6 +960,7 @@ public partial class V1api20240302storageSnapshotStatusSku
     public string? Tier { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.SupportedCapabilities_STATUS List of supported capabilities persisted on the disk resource for VM use.</summary>
 public partial class V1api20240302storageSnapshotStatusSupportedCapabilities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -936,6 +980,7 @@ public partial class V1api20240302storageSnapshotStatusSupportedCapabilities
     public string? DiskControllerTypes { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.Snapshot_STATUS Snapshot resource.</summary>
 public partial class V1api20240302storageSnapshotStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1072,6 +1117,7 @@ public partial class V1api20240302storageSnapshotStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20240302.Snapshot Generator information: - Generated from: /compute/resource-manager/Microsoft.Compute/DiskRP/stable/2024-03-02/snapshot.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/snapshots/{snapshotName}</summary>
 public partial class V1api20240302storageSnapshot : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20240302storageSnapshotSpec>, IStatus<V1api20240302storageSnapshotStatus>
 {
     public const string KubeApiVersion = "v1api20240302storage";

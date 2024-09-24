@@ -18,6 +18,7 @@ public enum V1beta1ManagedDiskSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedDiskSpecForProviderEncryptionSettingsDiskEncryptionKey
 {
     /// <summary>The URL to the Key Vault Secret used as the Disk Encryption Key. This can be found as id on the azurerm_key_vault_secret resource.</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1ManagedDiskSpecForProviderEncryptionSettingsDiskEncr
     public string? SourceVaultId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedDiskSpecForProviderEncryptionSettingsKeyEncryptionKey
 {
     /// <summary>The URL to the Key Vault Key used as the Key Encryption Key. This can be found as id on the azurerm_key_vault_key resource.</summary>
@@ -40,6 +42,7 @@ public partial class V1beta1ManagedDiskSpecForProviderEncryptionSettingsKeyEncry
     public string? SourceVaultId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedDiskSpecForProviderEncryptionSettings
 {
     /// <summary>A disk_encryption_key block as defined above.</summary>
@@ -75,6 +78,7 @@ public enum V1beta1ManagedDiskSpecForProviderResourceGroupNameRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ManagedDiskSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -88,6 +92,7 @@ public partial class V1beta1ManagedDiskSpecForProviderResourceGroupNameRefPolicy
     public V1beta1ManagedDiskSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1ManagedDiskSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -119,6 +124,7 @@ public enum V1beta1ManagedDiskSpecForProviderResourceGroupNameSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ManagedDiskSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -132,6 +138,7 @@ public partial class V1beta1ManagedDiskSpecForProviderResourceGroupNameSelectorP
     public V1beta1ManagedDiskSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1ManagedDiskSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -167,6 +174,7 @@ public enum V1beta1ManagedDiskSpecForProviderSourceResourceIdRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ManagedDiskSpecForProviderSourceResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -180,6 +188,7 @@ public partial class V1beta1ManagedDiskSpecForProviderSourceResourceIdRefPolicy
     public V1beta1ManagedDiskSpecForProviderSourceResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ManagedDisk in compute to populate sourceResourceId.</summary>
 public partial class V1beta1ManagedDiskSpecForProviderSourceResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -211,6 +220,7 @@ public enum V1beta1ManagedDiskSpecForProviderSourceResourceIdSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ManagedDiskSpecForProviderSourceResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -224,6 +234,7 @@ public partial class V1beta1ManagedDiskSpecForProviderSourceResourceIdSelectorPo
     public V1beta1ManagedDiskSpecForProviderSourceResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ManagedDisk in compute to populate sourceResourceId.</summary>
 public partial class V1beta1ManagedDiskSpecForProviderSourceResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -239,6 +250,7 @@ public partial class V1beta1ManagedDiskSpecForProviderSourceResourceIdSelector
     public V1beta1ManagedDiskSpecForProviderSourceResourceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedDiskSpecForProvider
 {
     /// <summary>The method to use when creating the managed disk. Changing this forces a new resource to be created. Possible values include: * Import - Import a VHD file in to the managed disk (VHD specified with source_uri). * ImportSecure - Securely import a VHD file in to the managed disk (VHD specified with source_uri). * Empty - Create an empty managed disk. * Copy - Copy an existing managed disk or snapshot (specified with source_resource_id). * FromImage - Copy a Platform Image (specified with image_reference_id) * Restore - Set by Azure Backup or Site Recovery on a restored disk (specified with source_resource_id). * Upload - Upload a VHD disk with the help of SAS URL (to be used with upload_size_bytes).</summary>
@@ -394,6 +406,7 @@ public partial class V1beta1ManagedDiskSpecForProvider
     public string? Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedDiskSpecInitProviderEncryptionSettingsDiskEncryptionKey
 {
     /// <summary>The URL to the Key Vault Secret used as the Disk Encryption Key. This can be found as id on the azurerm_key_vault_secret resource.</summary>
@@ -405,6 +418,7 @@ public partial class V1beta1ManagedDiskSpecInitProviderEncryptionSettingsDiskEnc
     public string? SourceVaultId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedDiskSpecInitProviderEncryptionSettingsKeyEncryptionKey
 {
     /// <summary>The URL to the Key Vault Key used as the Key Encryption Key. This can be found as id on the azurerm_key_vault_key resource.</summary>
@@ -416,6 +430,7 @@ public partial class V1beta1ManagedDiskSpecInitProviderEncryptionSettingsKeyEncr
     public string? SourceVaultId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedDiskSpecInitProviderEncryptionSettings
 {
     /// <summary>A disk_encryption_key block as defined above.</summary>
@@ -451,6 +466,7 @@ public enum V1beta1ManagedDiskSpecInitProviderSourceResourceIdRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ManagedDiskSpecInitProviderSourceResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -464,6 +480,7 @@ public partial class V1beta1ManagedDiskSpecInitProviderSourceResourceIdRefPolicy
     public V1beta1ManagedDiskSpecInitProviderSourceResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ManagedDisk in compute to populate sourceResourceId.</summary>
 public partial class V1beta1ManagedDiskSpecInitProviderSourceResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -495,6 +512,7 @@ public enum V1beta1ManagedDiskSpecInitProviderSourceResourceIdSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ManagedDiskSpecInitProviderSourceResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -508,6 +526,7 @@ public partial class V1beta1ManagedDiskSpecInitProviderSourceResourceIdSelectorP
     public V1beta1ManagedDiskSpecInitProviderSourceResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ManagedDisk in compute to populate sourceResourceId.</summary>
 public partial class V1beta1ManagedDiskSpecInitProviderSourceResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -523,6 +542,7 @@ public partial class V1beta1ManagedDiskSpecInitProviderSourceResourceIdSelector
     public V1beta1ManagedDiskSpecInitProviderSourceResourceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ManagedDiskSpecInitProvider
 {
     /// <summary>The method to use when creating the managed disk. Changing this forces a new resource to be created. Possible values include: * Import - Import a VHD file in to the managed disk (VHD specified with source_uri). * ImportSecure - Securely import a VHD file in to the managed disk (VHD specified with source_uri). * Empty - Create an empty managed disk. * Copy - Copy an existing managed disk or snapshot (specified with source_resource_id). * FromImage - Copy a Platform Image (specified with image_reference_id) * Restore - Set by Azure Backup or Site Recovery on a restored disk (specified with source_resource_id). * Upload - Upload a VHD disk with the help of SAS URL (to be used with upload_size_bytes).</summary>
@@ -708,6 +728,7 @@ public enum V1beta1ManagedDiskSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ManagedDiskSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -721,6 +742,7 @@ public partial class V1beta1ManagedDiskSpecProviderConfigRefPolicy
     public V1beta1ManagedDiskSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ManagedDiskSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -752,6 +774,7 @@ public enum V1beta1ManagedDiskSpecPublishConnectionDetailsToConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ManagedDiskSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -765,6 +788,7 @@ public partial class V1beta1ManagedDiskSpecPublishConnectionDetailsToConfigRefPo
     public V1beta1ManagedDiskSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ManagedDiskSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -776,6 +800,7 @@ public partial class V1beta1ManagedDiskSpecPublishConnectionDetailsToConfigRef
     public V1beta1ManagedDiskSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ManagedDiskSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -791,6 +816,7 @@ public partial class V1beta1ManagedDiskSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ManagedDiskSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -806,6 +832,7 @@ public partial class V1beta1ManagedDiskSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ManagedDiskSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -817,6 +844,7 @@ public partial class V1beta1ManagedDiskSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ManagedDiskSpec defines the desired state of ManagedDisk</summary>
 public partial class V1beta1ManagedDiskSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -849,6 +877,7 @@ public partial class V1beta1ManagedDiskSpec
     public V1beta1ManagedDiskSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedDiskStatusAtProviderEncryptionSettingsDiskEncryptionKey
 {
     /// <summary>The URL to the Key Vault Secret used as the Disk Encryption Key. This can be found as id on the azurerm_key_vault_secret resource.</summary>
@@ -860,6 +889,7 @@ public partial class V1beta1ManagedDiskStatusAtProviderEncryptionSettingsDiskEnc
     public string? SourceVaultId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedDiskStatusAtProviderEncryptionSettingsKeyEncryptionKey
 {
     /// <summary>The URL to the Key Vault Key used as the Key Encryption Key. This can be found as id on the azurerm_key_vault_key resource.</summary>
@@ -871,6 +901,7 @@ public partial class V1beta1ManagedDiskStatusAtProviderEncryptionSettingsKeyEncr
     public string? SourceVaultId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedDiskStatusAtProviderEncryptionSettings
 {
     /// <summary>A disk_encryption_key block as defined above.</summary>
@@ -886,6 +917,7 @@ public partial class V1beta1ManagedDiskStatusAtProviderEncryptionSettings
     public IList<V1beta1ManagedDiskStatusAtProviderEncryptionSettingsKeyEncryptionKey>? KeyEncryptionKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedDiskStatusAtProvider
 {
     /// <summary>The method to use when creating the managed disk. Changing this forces a new resource to be created. Possible values include: * Import - Import a VHD file in to the managed disk (VHD specified with source_uri). * ImportSecure - Securely import a VHD file in to the managed disk (VHD specified with source_uri). * Empty - Create an empty managed disk. * Copy - Copy an existing managed disk or snapshot (specified with source_resource_id). * FromImage - Copy a Platform Image (specified with image_reference_id) * Restore - Set by Azure Backup or Site Recovery on a restored disk (specified with source_resource_id). * Upload - Upload a VHD disk with the help of SAS URL (to be used with upload_size_bytes).</summary>
@@ -1029,6 +1061,7 @@ public partial class V1beta1ManagedDiskStatusAtProvider
     public string? Zone { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ManagedDiskStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1056,6 +1089,7 @@ public partial class V1beta1ManagedDiskStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ManagedDiskStatus defines the observed state of ManagedDisk.</summary>
 public partial class V1beta1ManagedDiskStatus
 {
     /// <summary></summary>
@@ -1072,6 +1106,7 @@ public partial class V1beta1ManagedDiskStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ManagedDisk is the Schema for the ManagedDisks API. Manages a Managed Disk.</summary>
 public partial class V1beta1ManagedDisk : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ManagedDiskSpec>, IStatus<V1beta1ManagedDiskStatus>
 {
     public const string KubeApiVersion = "v1beta1";

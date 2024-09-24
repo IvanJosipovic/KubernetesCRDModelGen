@@ -18,6 +18,7 @@ public enum V1beta1DataSetParquetSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSetParquetSpecForProviderAzureBlobFsLocation
 {
     /// <summary>Is the file_system using dynamic expression, function or system variables? Defaults to false.</summary>
@@ -45,6 +46,7 @@ public partial class V1beta1DataSetParquetSpecForProviderAzureBlobFsLocation
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSetParquetSpecForProviderAzureBlobStorageLocation
 {
     /// <summary>The container on the Azure Blob Storage Account hosting the file.</summary>
@@ -92,6 +94,7 @@ public enum V1beta1DataSetParquetSpecForProviderDataFactoryIdRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DataSetParquetSpecForProviderDataFactoryIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -105,6 +108,7 @@ public partial class V1beta1DataSetParquetSpecForProviderDataFactoryIdRefPolicy
     public V1beta1DataSetParquetSpecForProviderDataFactoryIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Factory in datafactory to populate dataFactoryId.</summary>
 public partial class V1beta1DataSetParquetSpecForProviderDataFactoryIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -136,6 +140,7 @@ public enum V1beta1DataSetParquetSpecForProviderDataFactoryIdSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DataSetParquetSpecForProviderDataFactoryIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -149,6 +154,7 @@ public partial class V1beta1DataSetParquetSpecForProviderDataFactoryIdSelectorPo
     public V1beta1DataSetParquetSpecForProviderDataFactoryIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Factory in datafactory to populate dataFactoryId.</summary>
 public partial class V1beta1DataSetParquetSpecForProviderDataFactoryIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -164,6 +170,7 @@ public partial class V1beta1DataSetParquetSpecForProviderDataFactoryIdSelector
     public V1beta1DataSetParquetSpecForProviderDataFactoryIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSetParquetSpecForProviderHttpServerLocation
 {
     /// <summary>Is the filename using dynamic expression, function or system variables? Defaults to false.</summary>
@@ -207,6 +214,7 @@ public enum V1beta1DataSetParquetSpecForProviderLinkedServiceNameRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DataSetParquetSpecForProviderLinkedServiceNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -220,6 +228,7 @@ public partial class V1beta1DataSetParquetSpecForProviderLinkedServiceNameRefPol
     public V1beta1DataSetParquetSpecForProviderLinkedServiceNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LinkedServiceWeb in datafactory to populate linkedServiceName.</summary>
 public partial class V1beta1DataSetParquetSpecForProviderLinkedServiceNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -251,6 +260,7 @@ public enum V1beta1DataSetParquetSpecForProviderLinkedServiceNameSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DataSetParquetSpecForProviderLinkedServiceNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -264,6 +274,7 @@ public partial class V1beta1DataSetParquetSpecForProviderLinkedServiceNameSelect
     public V1beta1DataSetParquetSpecForProviderLinkedServiceNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LinkedServiceWeb in datafactory to populate linkedServiceName.</summary>
 public partial class V1beta1DataSetParquetSpecForProviderLinkedServiceNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1DataSetParquetSpecForProviderLinkedServiceNameSelect
     public V1beta1DataSetParquetSpecForProviderLinkedServiceNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSetParquetSpecForProviderSchemaColumn
 {
     /// <summary>The description of the column.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1DataSetParquetSpecForProviderSchemaColumn
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSetParquetSpecForProvider
 {
     /// <summary>A map of additional properties to associate with the Data Factory Dataset.</summary>
@@ -365,6 +378,7 @@ public partial class V1beta1DataSetParquetSpecForProvider
     public IList<V1beta1DataSetParquetSpecForProviderSchemaColumn>? SchemaColumn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSetParquetSpecInitProviderAzureBlobFsLocation
 {
     /// <summary>Is the file_system using dynamic expression, function or system variables? Defaults to false.</summary>
@@ -392,6 +406,7 @@ public partial class V1beta1DataSetParquetSpecInitProviderAzureBlobFsLocation
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSetParquetSpecInitProviderAzureBlobStorageLocation
 {
     /// <summary>The container on the Azure Blob Storage Account hosting the file.</summary>
@@ -419,6 +434,7 @@ public partial class V1beta1DataSetParquetSpecInitProviderAzureBlobStorageLocati
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSetParquetSpecInitProviderHttpServerLocation
 {
     /// <summary>Is the filename using dynamic expression, function or system variables? Defaults to false.</summary>
@@ -462,6 +478,7 @@ public enum V1beta1DataSetParquetSpecInitProviderLinkedServiceNameRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DataSetParquetSpecInitProviderLinkedServiceNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -475,6 +492,7 @@ public partial class V1beta1DataSetParquetSpecInitProviderLinkedServiceNameRefPo
     public V1beta1DataSetParquetSpecInitProviderLinkedServiceNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LinkedServiceWeb in datafactory to populate linkedServiceName.</summary>
 public partial class V1beta1DataSetParquetSpecInitProviderLinkedServiceNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -506,6 +524,7 @@ public enum V1beta1DataSetParquetSpecInitProviderLinkedServiceNameSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DataSetParquetSpecInitProviderLinkedServiceNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -519,6 +538,7 @@ public partial class V1beta1DataSetParquetSpecInitProviderLinkedServiceNameSelec
     public V1beta1DataSetParquetSpecInitProviderLinkedServiceNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LinkedServiceWeb in datafactory to populate linkedServiceName.</summary>
 public partial class V1beta1DataSetParquetSpecInitProviderLinkedServiceNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -534,6 +554,7 @@ public partial class V1beta1DataSetParquetSpecInitProviderLinkedServiceNameSelec
     public V1beta1DataSetParquetSpecInitProviderLinkedServiceNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSetParquetSpecInitProviderSchemaColumn
 {
     /// <summary>The description of the column.</summary>
@@ -549,6 +570,7 @@ public partial class V1beta1DataSetParquetSpecInitProviderSchemaColumn
     public string? Type { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1DataSetParquetSpecInitProvider
 {
     /// <summary>A map of additional properties to associate with the Data Factory Dataset.</summary>
@@ -650,6 +672,7 @@ public enum V1beta1DataSetParquetSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DataSetParquetSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -663,6 +686,7 @@ public partial class V1beta1DataSetParquetSpecProviderConfigRefPolicy
     public V1beta1DataSetParquetSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1DataSetParquetSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -694,6 +718,7 @@ public enum V1beta1DataSetParquetSpecPublishConnectionDetailsToConfigRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DataSetParquetSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -707,6 +732,7 @@ public partial class V1beta1DataSetParquetSpecPublishConnectionDetailsToConfigRe
     public V1beta1DataSetParquetSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1DataSetParquetSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -718,6 +744,7 @@ public partial class V1beta1DataSetParquetSpecPublishConnectionDetailsToConfigRe
     public V1beta1DataSetParquetSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1DataSetParquetSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -733,6 +760,7 @@ public partial class V1beta1DataSetParquetSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1DataSetParquetSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -748,6 +776,7 @@ public partial class V1beta1DataSetParquetSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1DataSetParquetSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -759,6 +788,7 @@ public partial class V1beta1DataSetParquetSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>DataSetParquetSpec defines the desired state of DataSetParquet</summary>
 public partial class V1beta1DataSetParquetSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -791,6 +821,7 @@ public partial class V1beta1DataSetParquetSpec
     public V1beta1DataSetParquetSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSetParquetStatusAtProviderAzureBlobFsLocation
 {
     /// <summary>Is the file_system using dynamic expression, function or system variables? Defaults to false.</summary>
@@ -818,6 +849,7 @@ public partial class V1beta1DataSetParquetStatusAtProviderAzureBlobFsLocation
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSetParquetStatusAtProviderAzureBlobStorageLocation
 {
     /// <summary>The container on the Azure Blob Storage Account hosting the file.</summary>
@@ -845,6 +877,7 @@ public partial class V1beta1DataSetParquetStatusAtProviderAzureBlobStorageLocati
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSetParquetStatusAtProviderHttpServerLocation
 {
     /// <summary>Is the filename using dynamic expression, function or system variables? Defaults to false.</summary>
@@ -868,6 +901,7 @@ public partial class V1beta1DataSetParquetStatusAtProviderHttpServerLocation
     public string? RelativeUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSetParquetStatusAtProviderSchemaColumn
 {
     /// <summary>The description of the column.</summary>
@@ -883,6 +917,7 @@ public partial class V1beta1DataSetParquetStatusAtProviderSchemaColumn
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSetParquetStatusAtProvider
 {
     /// <summary>A map of additional properties to associate with the Data Factory Dataset.</summary>
@@ -942,6 +977,7 @@ public partial class V1beta1DataSetParquetStatusAtProvider
     public IList<V1beta1DataSetParquetStatusAtProviderSchemaColumn>? SchemaColumn { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1DataSetParquetStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -969,6 +1005,7 @@ public partial class V1beta1DataSetParquetStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>DataSetParquetStatus defines the observed state of DataSetParquet.</summary>
 public partial class V1beta1DataSetParquetStatus
 {
     /// <summary></summary>
@@ -985,6 +1022,7 @@ public partial class V1beta1DataSetParquetStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>DataSetParquet is the Schema for the DataSetParquets API. Manages an Azure Parquet Dataset inside an Azure Data Factory.</summary>
 public partial class V1beta1DataSetParquet : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DataSetParquetSpec>, IStatus<V1beta1DataSetParquetStatus>
 {
     public const string KubeApiVersion = "v1beta1";

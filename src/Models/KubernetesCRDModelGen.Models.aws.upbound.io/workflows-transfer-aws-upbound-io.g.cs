@@ -18,6 +18,7 @@ public enum V1beta1WorkflowSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsCopyStepDetailsDestinationFileLocationEfsFileLocation
 {
     /// <summary>The ID of the file system, assigned by Amazon EFS.</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsCopyStepDetai
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsCopyStepDetailsDestinationFileLocationS3FileLocation
 {
     /// <summary>Specifies the S3 bucket for the customer input file.</summary>
@@ -40,6 +42,7 @@ public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsCopyStepDetai
     public string? Key { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsCopyStepDetailsDestinationFileLocation
 {
     /// <summary>Specifies the details for the EFS file being copied.</summary>
@@ -51,6 +54,7 @@ public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsCopyStepDetai
     public IList<V1beta1WorkflowSpecForProviderOnExceptionStepsCopyStepDetailsDestinationFileLocationS3FileLocation>? S3FileLocation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsCopyStepDetails
 {
     /// <summary>Specifies the location for the file being copied. Use ${Transfer:username} in this field to parametrize the destination prefix by username.</summary>
@@ -70,6 +74,7 @@ public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsCopyStepDetai
     public string? SourceFileLocation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsCustomStepDetails
 {
     /// <summary>The name of the step, used as an identifier.</summary>
@@ -89,6 +94,7 @@ public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsCustomStepDet
     public double? TimeoutSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsDecryptStepDetailsDestinationFileLocationEfsFileLocation
 {
     /// <summary>The ID of the file system, assigned by Amazon EFS.</summary>
@@ -100,6 +106,7 @@ public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsDecryptStepDe
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsDecryptStepDetailsDestinationFileLocationS3FileLocation
 {
     /// <summary>Specifies the S3 bucket for the customer input file.</summary>
@@ -111,6 +118,7 @@ public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsDecryptStepDe
     public string? Key { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsDecryptStepDetailsDestinationFileLocation
 {
     /// <summary>Specifies the details for the EFS file being copied.</summary>
@@ -122,6 +130,7 @@ public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsDecryptStepDe
     public IList<V1beta1WorkflowSpecForProviderOnExceptionStepsDecryptStepDetailsDestinationFileLocationS3FileLocation>? S3FileLocation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsDecryptStepDetails
 {
     /// <summary>Specifies the location for the file being copied. Use ${Transfer:username} in this field to parametrize the destination prefix by username.</summary>
@@ -145,6 +154,7 @@ public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsDecryptStepDe
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsDeleteStepDetails
 {
     /// <summary>The name of the step, used as an identifier.</summary>
@@ -156,6 +166,7 @@ public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsDeleteStepDet
     public string? SourceFileLocation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsTagStepDetailsTags
 {
     /// <summary>The name assigned to the file when it was created in S3. You use the object key to retrieve the object.</summary>
@@ -167,6 +178,7 @@ public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsTagStepDetail
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsTagStepDetails
 {
     /// <summary>The name of the step, used as an identifier.</summary>
@@ -182,6 +194,7 @@ public partial class V1beta1WorkflowSpecForProviderOnExceptionStepsTagStepDetail
     public IList<V1beta1WorkflowSpecForProviderOnExceptionStepsTagStepDetailsTags>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecForProviderOnExceptionSteps
 {
     /// <summary>Details for a step that performs a file copy. See Copy Step Details below.</summary>
@@ -209,6 +222,7 @@ public partial class V1beta1WorkflowSpecForProviderOnExceptionSteps
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecForProviderStepsCopyStepDetailsDestinationFileLocationEfsFileLocation
 {
     /// <summary>The ID of the file system, assigned by Amazon EFS.</summary>
@@ -220,6 +234,7 @@ public partial class V1beta1WorkflowSpecForProviderStepsCopyStepDetailsDestinati
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecForProviderStepsCopyStepDetailsDestinationFileLocationS3FileLocation
 {
     /// <summary>Specifies the S3 bucket for the customer input file.</summary>
@@ -231,6 +246,7 @@ public partial class V1beta1WorkflowSpecForProviderStepsCopyStepDetailsDestinati
     public string? Key { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecForProviderStepsCopyStepDetailsDestinationFileLocation
 {
     /// <summary>Specifies the details for the EFS file being copied.</summary>
@@ -242,6 +258,7 @@ public partial class V1beta1WorkflowSpecForProviderStepsCopyStepDetailsDestinati
     public IList<V1beta1WorkflowSpecForProviderStepsCopyStepDetailsDestinationFileLocationS3FileLocation>? S3FileLocation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecForProviderStepsCopyStepDetails
 {
     /// <summary>Specifies the location for the file being copied. Use ${Transfer:username} in this field to parametrize the destination prefix by username.</summary>
@@ -281,6 +298,7 @@ public enum V1beta1WorkflowSpecForProviderStepsCustomStepDetailsTargetRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkflowSpecForProviderStepsCustomStepDetailsTargetRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -294,6 +312,7 @@ public partial class V1beta1WorkflowSpecForProviderStepsCustomStepDetailsTargetR
     public V1beta1WorkflowSpecForProviderStepsCustomStepDetailsTargetRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in lambda to populate target.</summary>
 public partial class V1beta1WorkflowSpecForProviderStepsCustomStepDetailsTargetRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -325,6 +344,7 @@ public enum V1beta1WorkflowSpecForProviderStepsCustomStepDetailsTargetSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkflowSpecForProviderStepsCustomStepDetailsTargetSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -338,6 +358,7 @@ public partial class V1beta1WorkflowSpecForProviderStepsCustomStepDetailsTargetS
     public V1beta1WorkflowSpecForProviderStepsCustomStepDetailsTargetSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in lambda to populate target.</summary>
 public partial class V1beta1WorkflowSpecForProviderStepsCustomStepDetailsTargetSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -353,6 +374,7 @@ public partial class V1beta1WorkflowSpecForProviderStepsCustomStepDetailsTargetS
     public V1beta1WorkflowSpecForProviderStepsCustomStepDetailsTargetSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecForProviderStepsCustomStepDetails
 {
     /// <summary>The name of the step, used as an identifier.</summary>
@@ -380,6 +402,7 @@ public partial class V1beta1WorkflowSpecForProviderStepsCustomStepDetails
     public double? TimeoutSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecForProviderStepsDecryptStepDetailsDestinationFileLocationEfsFileLocation
 {
     /// <summary>The ID of the file system, assigned by Amazon EFS.</summary>
@@ -391,6 +414,7 @@ public partial class V1beta1WorkflowSpecForProviderStepsDecryptStepDetailsDestin
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecForProviderStepsDecryptStepDetailsDestinationFileLocationS3FileLocation
 {
     /// <summary>Specifies the S3 bucket for the customer input file.</summary>
@@ -402,6 +426,7 @@ public partial class V1beta1WorkflowSpecForProviderStepsDecryptStepDetailsDestin
     public string? Key { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecForProviderStepsDecryptStepDetailsDestinationFileLocation
 {
     /// <summary>Specifies the details for the EFS file being copied.</summary>
@@ -413,6 +438,7 @@ public partial class V1beta1WorkflowSpecForProviderStepsDecryptStepDetailsDestin
     public IList<V1beta1WorkflowSpecForProviderStepsDecryptStepDetailsDestinationFileLocationS3FileLocation>? S3FileLocation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecForProviderStepsDecryptStepDetails
 {
     /// <summary>Specifies the location for the file being copied. Use ${Transfer:username} in this field to parametrize the destination prefix by username.</summary>
@@ -436,6 +462,7 @@ public partial class V1beta1WorkflowSpecForProviderStepsDecryptStepDetails
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecForProviderStepsDeleteStepDetails
 {
     /// <summary>The name of the step, used as an identifier.</summary>
@@ -447,6 +474,7 @@ public partial class V1beta1WorkflowSpecForProviderStepsDeleteStepDetails
     public string? SourceFileLocation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecForProviderStepsTagStepDetailsTags
 {
     /// <summary>The name assigned to the file when it was created in S3. You use the object key to retrieve the object.</summary>
@@ -458,6 +486,7 @@ public partial class V1beta1WorkflowSpecForProviderStepsTagStepDetailsTags
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecForProviderStepsTagStepDetails
 {
     /// <summary>The name of the step, used as an identifier.</summary>
@@ -473,6 +502,7 @@ public partial class V1beta1WorkflowSpecForProviderStepsTagStepDetails
     public IList<V1beta1WorkflowSpecForProviderStepsTagStepDetailsTags>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecForProviderSteps
 {
     /// <summary>Details for a step that performs a file copy. See Copy Step Details below.</summary>
@@ -500,6 +530,7 @@ public partial class V1beta1WorkflowSpecForProviderSteps
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecForProvider
 {
     /// <summary>A textual description for the workflow.</summary>
@@ -523,6 +554,7 @@ public partial class V1beta1WorkflowSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsCopyStepDetailsDestinationFileLocationEfsFileLocation
 {
     /// <summary>The ID of the file system, assigned by Amazon EFS.</summary>
@@ -534,6 +566,7 @@ public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsCopyStepDeta
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsCopyStepDetailsDestinationFileLocationS3FileLocation
 {
     /// <summary>Specifies the S3 bucket for the customer input file.</summary>
@@ -545,6 +578,7 @@ public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsCopyStepDeta
     public string? Key { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsCopyStepDetailsDestinationFileLocation
 {
     /// <summary>Specifies the details for the EFS file being copied.</summary>
@@ -556,6 +590,7 @@ public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsCopyStepDeta
     public IList<V1beta1WorkflowSpecInitProviderOnExceptionStepsCopyStepDetailsDestinationFileLocationS3FileLocation>? S3FileLocation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsCopyStepDetails
 {
     /// <summary>Specifies the location for the file being copied. Use ${Transfer:username} in this field to parametrize the destination prefix by username.</summary>
@@ -575,6 +610,7 @@ public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsCopyStepDeta
     public string? SourceFileLocation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsCustomStepDetails
 {
     /// <summary>The name of the step, used as an identifier.</summary>
@@ -594,6 +630,7 @@ public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsCustomStepDe
     public double? TimeoutSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsDecryptStepDetailsDestinationFileLocationEfsFileLocation
 {
     /// <summary>The ID of the file system, assigned by Amazon EFS.</summary>
@@ -605,6 +642,7 @@ public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsDecryptStepD
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsDecryptStepDetailsDestinationFileLocationS3FileLocation
 {
     /// <summary>Specifies the S3 bucket for the customer input file.</summary>
@@ -616,6 +654,7 @@ public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsDecryptStepD
     public string? Key { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsDecryptStepDetailsDestinationFileLocation
 {
     /// <summary>Specifies the details for the EFS file being copied.</summary>
@@ -627,6 +666,7 @@ public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsDecryptStepD
     public IList<V1beta1WorkflowSpecInitProviderOnExceptionStepsDecryptStepDetailsDestinationFileLocationS3FileLocation>? S3FileLocation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsDecryptStepDetails
 {
     /// <summary>Specifies the location for the file being copied. Use ${Transfer:username} in this field to parametrize the destination prefix by username.</summary>
@@ -650,6 +690,7 @@ public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsDecryptStepD
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsDeleteStepDetails
 {
     /// <summary>The name of the step, used as an identifier.</summary>
@@ -661,6 +702,7 @@ public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsDeleteStepDe
     public string? SourceFileLocation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsTagStepDetailsTags
 {
     /// <summary>The name assigned to the file when it was created in S3. You use the object key to retrieve the object.</summary>
@@ -672,6 +714,7 @@ public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsTagStepDetai
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsTagStepDetails
 {
     /// <summary>The name of the step, used as an identifier.</summary>
@@ -687,6 +730,7 @@ public partial class V1beta1WorkflowSpecInitProviderOnExceptionStepsTagStepDetai
     public IList<V1beta1WorkflowSpecInitProviderOnExceptionStepsTagStepDetailsTags>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecInitProviderOnExceptionSteps
 {
     /// <summary>Details for a step that performs a file copy. See Copy Step Details below.</summary>
@@ -714,6 +758,7 @@ public partial class V1beta1WorkflowSpecInitProviderOnExceptionSteps
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecInitProviderStepsCopyStepDetailsDestinationFileLocationEfsFileLocation
 {
     /// <summary>The ID of the file system, assigned by Amazon EFS.</summary>
@@ -725,6 +770,7 @@ public partial class V1beta1WorkflowSpecInitProviderStepsCopyStepDetailsDestinat
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecInitProviderStepsCopyStepDetailsDestinationFileLocationS3FileLocation
 {
     /// <summary>Specifies the S3 bucket for the customer input file.</summary>
@@ -736,6 +782,7 @@ public partial class V1beta1WorkflowSpecInitProviderStepsCopyStepDetailsDestinat
     public string? Key { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecInitProviderStepsCopyStepDetailsDestinationFileLocation
 {
     /// <summary>Specifies the details for the EFS file being copied.</summary>
@@ -747,6 +794,7 @@ public partial class V1beta1WorkflowSpecInitProviderStepsCopyStepDetailsDestinat
     public IList<V1beta1WorkflowSpecInitProviderStepsCopyStepDetailsDestinationFileLocationS3FileLocation>? S3FileLocation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecInitProviderStepsCopyStepDetails
 {
     /// <summary>Specifies the location for the file being copied. Use ${Transfer:username} in this field to parametrize the destination prefix by username.</summary>
@@ -786,6 +834,7 @@ public enum V1beta1WorkflowSpecInitProviderStepsCustomStepDetailsTargetRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkflowSpecInitProviderStepsCustomStepDetailsTargetRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -799,6 +848,7 @@ public partial class V1beta1WorkflowSpecInitProviderStepsCustomStepDetailsTarget
     public V1beta1WorkflowSpecInitProviderStepsCustomStepDetailsTargetRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in lambda to populate target.</summary>
 public partial class V1beta1WorkflowSpecInitProviderStepsCustomStepDetailsTargetRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -830,6 +880,7 @@ public enum V1beta1WorkflowSpecInitProviderStepsCustomStepDetailsTargetSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkflowSpecInitProviderStepsCustomStepDetailsTargetSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -843,6 +894,7 @@ public partial class V1beta1WorkflowSpecInitProviderStepsCustomStepDetailsTarget
     public V1beta1WorkflowSpecInitProviderStepsCustomStepDetailsTargetSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in lambda to populate target.</summary>
 public partial class V1beta1WorkflowSpecInitProviderStepsCustomStepDetailsTargetSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -858,6 +910,7 @@ public partial class V1beta1WorkflowSpecInitProviderStepsCustomStepDetailsTarget
     public V1beta1WorkflowSpecInitProviderStepsCustomStepDetailsTargetSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecInitProviderStepsCustomStepDetails
 {
     /// <summary>The name of the step, used as an identifier.</summary>
@@ -885,6 +938,7 @@ public partial class V1beta1WorkflowSpecInitProviderStepsCustomStepDetails
     public double? TimeoutSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecInitProviderStepsDecryptStepDetailsDestinationFileLocationEfsFileLocation
 {
     /// <summary>The ID of the file system, assigned by Amazon EFS.</summary>
@@ -896,6 +950,7 @@ public partial class V1beta1WorkflowSpecInitProviderStepsDecryptStepDetailsDesti
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecInitProviderStepsDecryptStepDetailsDestinationFileLocationS3FileLocation
 {
     /// <summary>Specifies the S3 bucket for the customer input file.</summary>
@@ -907,6 +962,7 @@ public partial class V1beta1WorkflowSpecInitProviderStepsDecryptStepDetailsDesti
     public string? Key { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecInitProviderStepsDecryptStepDetailsDestinationFileLocation
 {
     /// <summary>Specifies the details for the EFS file being copied.</summary>
@@ -918,6 +974,7 @@ public partial class V1beta1WorkflowSpecInitProviderStepsDecryptStepDetailsDesti
     public IList<V1beta1WorkflowSpecInitProviderStepsDecryptStepDetailsDestinationFileLocationS3FileLocation>? S3FileLocation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecInitProviderStepsDecryptStepDetails
 {
     /// <summary>Specifies the location for the file being copied. Use ${Transfer:username} in this field to parametrize the destination prefix by username.</summary>
@@ -941,6 +998,7 @@ public partial class V1beta1WorkflowSpecInitProviderStepsDecryptStepDetails
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecInitProviderStepsDeleteStepDetails
 {
     /// <summary>The name of the step, used as an identifier.</summary>
@@ -952,6 +1010,7 @@ public partial class V1beta1WorkflowSpecInitProviderStepsDeleteStepDetails
     public string? SourceFileLocation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecInitProviderStepsTagStepDetailsTags
 {
     /// <summary>The name assigned to the file when it was created in S3. You use the object key to retrieve the object.</summary>
@@ -963,6 +1022,7 @@ public partial class V1beta1WorkflowSpecInitProviderStepsTagStepDetailsTags
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecInitProviderStepsTagStepDetails
 {
     /// <summary>The name of the step, used as an identifier.</summary>
@@ -978,6 +1038,7 @@ public partial class V1beta1WorkflowSpecInitProviderStepsTagStepDetails
     public IList<V1beta1WorkflowSpecInitProviderStepsTagStepDetailsTags>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowSpecInitProviderSteps
 {
     /// <summary>Details for a step that performs a file copy. See Copy Step Details below.</summary>
@@ -1005,6 +1066,7 @@ public partial class V1beta1WorkflowSpecInitProviderSteps
     public string? Type { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1WorkflowSpecInitProvider
 {
     /// <summary>A textual description for the workflow.</summary>
@@ -1066,6 +1128,7 @@ public enum V1beta1WorkflowSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkflowSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1079,6 +1142,7 @@ public partial class V1beta1WorkflowSpecProviderConfigRefPolicy
     public V1beta1WorkflowSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1WorkflowSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1110,6 +1174,7 @@ public enum V1beta1WorkflowSpecPublishConnectionDetailsToConfigRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkflowSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1123,6 +1188,7 @@ public partial class V1beta1WorkflowSpecPublishConnectionDetailsToConfigRefPolic
     public V1beta1WorkflowSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1WorkflowSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1134,6 +1200,7 @@ public partial class V1beta1WorkflowSpecPublishConnectionDetailsToConfigRef
     public V1beta1WorkflowSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1WorkflowSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1149,6 +1216,7 @@ public partial class V1beta1WorkflowSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1WorkflowSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1164,6 +1232,7 @@ public partial class V1beta1WorkflowSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1WorkflowSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1175,6 +1244,7 @@ public partial class V1beta1WorkflowSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>WorkflowSpec defines the desired state of Workflow</summary>
 public partial class V1beta1WorkflowSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1207,6 +1277,7 @@ public partial class V1beta1WorkflowSpec
     public V1beta1WorkflowSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsCopyStepDetailsDestinationFileLocationEfsFileLocation
 {
     /// <summary>The ID of the file system, assigned by Amazon EFS.</summary>
@@ -1218,6 +1289,7 @@ public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsCopyStepDeta
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsCopyStepDetailsDestinationFileLocationS3FileLocation
 {
     /// <summary>Specifies the S3 bucket for the customer input file.</summary>
@@ -1229,6 +1301,7 @@ public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsCopyStepDeta
     public string? Key { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsCopyStepDetailsDestinationFileLocation
 {
     /// <summary>Specifies the details for the EFS file being copied.</summary>
@@ -1240,6 +1313,7 @@ public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsCopyStepDeta
     public IList<V1beta1WorkflowStatusAtProviderOnExceptionStepsCopyStepDetailsDestinationFileLocationS3FileLocation>? S3FileLocation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsCopyStepDetails
 {
     /// <summary>Specifies the location for the file being copied. Use ${Transfer:username} in this field to parametrize the destination prefix by username.</summary>
@@ -1259,6 +1333,7 @@ public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsCopyStepDeta
     public string? SourceFileLocation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsCustomStepDetails
 {
     /// <summary>The name of the step, used as an identifier.</summary>
@@ -1278,6 +1353,7 @@ public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsCustomStepDe
     public double? TimeoutSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsDecryptStepDetailsDestinationFileLocationEfsFileLocation
 {
     /// <summary>The ID of the file system, assigned by Amazon EFS.</summary>
@@ -1289,6 +1365,7 @@ public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsDecryptStepD
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsDecryptStepDetailsDestinationFileLocationS3FileLocation
 {
     /// <summary>Specifies the S3 bucket for the customer input file.</summary>
@@ -1300,6 +1377,7 @@ public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsDecryptStepD
     public string? Key { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsDecryptStepDetailsDestinationFileLocation
 {
     /// <summary>Specifies the details for the EFS file being copied.</summary>
@@ -1311,6 +1389,7 @@ public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsDecryptStepD
     public IList<V1beta1WorkflowStatusAtProviderOnExceptionStepsDecryptStepDetailsDestinationFileLocationS3FileLocation>? S3FileLocation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsDecryptStepDetails
 {
     /// <summary>Specifies the location for the file being copied. Use ${Transfer:username} in this field to parametrize the destination prefix by username.</summary>
@@ -1334,6 +1413,7 @@ public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsDecryptStepD
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsDeleteStepDetails
 {
     /// <summary>The name of the step, used as an identifier.</summary>
@@ -1345,6 +1425,7 @@ public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsDeleteStepDe
     public string? SourceFileLocation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsTagStepDetailsTags
 {
     /// <summary>The name assigned to the file when it was created in S3. You use the object key to retrieve the object.</summary>
@@ -1356,6 +1437,7 @@ public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsTagStepDetai
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsTagStepDetails
 {
     /// <summary>The name of the step, used as an identifier.</summary>
@@ -1371,6 +1453,7 @@ public partial class V1beta1WorkflowStatusAtProviderOnExceptionStepsTagStepDetai
     public IList<V1beta1WorkflowStatusAtProviderOnExceptionStepsTagStepDetailsTags>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowStatusAtProviderOnExceptionSteps
 {
     /// <summary>Details for a step that performs a file copy. See Copy Step Details below.</summary>
@@ -1398,6 +1481,7 @@ public partial class V1beta1WorkflowStatusAtProviderOnExceptionSteps
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowStatusAtProviderStepsCopyStepDetailsDestinationFileLocationEfsFileLocation
 {
     /// <summary>The ID of the file system, assigned by Amazon EFS.</summary>
@@ -1409,6 +1493,7 @@ public partial class V1beta1WorkflowStatusAtProviderStepsCopyStepDetailsDestinat
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowStatusAtProviderStepsCopyStepDetailsDestinationFileLocationS3FileLocation
 {
     /// <summary>Specifies the S3 bucket for the customer input file.</summary>
@@ -1420,6 +1505,7 @@ public partial class V1beta1WorkflowStatusAtProviderStepsCopyStepDetailsDestinat
     public string? Key { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowStatusAtProviderStepsCopyStepDetailsDestinationFileLocation
 {
     /// <summary>Specifies the details for the EFS file being copied.</summary>
@@ -1431,6 +1517,7 @@ public partial class V1beta1WorkflowStatusAtProviderStepsCopyStepDetailsDestinat
     public IList<V1beta1WorkflowStatusAtProviderStepsCopyStepDetailsDestinationFileLocationS3FileLocation>? S3FileLocation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowStatusAtProviderStepsCopyStepDetails
 {
     /// <summary>Specifies the location for the file being copied. Use ${Transfer:username} in this field to parametrize the destination prefix by username.</summary>
@@ -1450,6 +1537,7 @@ public partial class V1beta1WorkflowStatusAtProviderStepsCopyStepDetails
     public string? SourceFileLocation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowStatusAtProviderStepsCustomStepDetails
 {
     /// <summary>The name of the step, used as an identifier.</summary>
@@ -1469,6 +1557,7 @@ public partial class V1beta1WorkflowStatusAtProviderStepsCustomStepDetails
     public double? TimeoutSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowStatusAtProviderStepsDecryptStepDetailsDestinationFileLocationEfsFileLocation
 {
     /// <summary>The ID of the file system, assigned by Amazon EFS.</summary>
@@ -1480,6 +1569,7 @@ public partial class V1beta1WorkflowStatusAtProviderStepsDecryptStepDetailsDesti
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowStatusAtProviderStepsDecryptStepDetailsDestinationFileLocationS3FileLocation
 {
     /// <summary>Specifies the S3 bucket for the customer input file.</summary>
@@ -1491,6 +1581,7 @@ public partial class V1beta1WorkflowStatusAtProviderStepsDecryptStepDetailsDesti
     public string? Key { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowStatusAtProviderStepsDecryptStepDetailsDestinationFileLocation
 {
     /// <summary>Specifies the details for the EFS file being copied.</summary>
@@ -1502,6 +1593,7 @@ public partial class V1beta1WorkflowStatusAtProviderStepsDecryptStepDetailsDesti
     public IList<V1beta1WorkflowStatusAtProviderStepsDecryptStepDetailsDestinationFileLocationS3FileLocation>? S3FileLocation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowStatusAtProviderStepsDecryptStepDetails
 {
     /// <summary>Specifies the location for the file being copied. Use ${Transfer:username} in this field to parametrize the destination prefix by username.</summary>
@@ -1525,6 +1617,7 @@ public partial class V1beta1WorkflowStatusAtProviderStepsDecryptStepDetails
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowStatusAtProviderStepsDeleteStepDetails
 {
     /// <summary>The name of the step, used as an identifier.</summary>
@@ -1536,6 +1629,7 @@ public partial class V1beta1WorkflowStatusAtProviderStepsDeleteStepDetails
     public string? SourceFileLocation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowStatusAtProviderStepsTagStepDetailsTags
 {
     /// <summary>The name assigned to the file when it was created in S3. You use the object key to retrieve the object.</summary>
@@ -1547,6 +1641,7 @@ public partial class V1beta1WorkflowStatusAtProviderStepsTagStepDetailsTags
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowStatusAtProviderStepsTagStepDetails
 {
     /// <summary>The name of the step, used as an identifier.</summary>
@@ -1562,6 +1657,7 @@ public partial class V1beta1WorkflowStatusAtProviderStepsTagStepDetails
     public IList<V1beta1WorkflowStatusAtProviderStepsTagStepDetailsTags>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowStatusAtProviderSteps
 {
     /// <summary>Details for a step that performs a file copy. See Copy Step Details below.</summary>
@@ -1589,6 +1685,7 @@ public partial class V1beta1WorkflowStatusAtProviderSteps
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkflowStatusAtProvider
 {
     /// <summary>The Workflow ARN.</summary>
@@ -1620,6 +1717,7 @@ public partial class V1beta1WorkflowStatusAtProvider
     public IDictionary<string, string>? TagsAll { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1WorkflowStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1647,6 +1745,7 @@ public partial class V1beta1WorkflowStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>WorkflowStatus defines the observed state of Workflow.</summary>
 public partial class V1beta1WorkflowStatus
 {
     /// <summary></summary>
@@ -1663,6 +1762,7 @@ public partial class V1beta1WorkflowStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Workflow is the Schema for the Workflows API. Provides a AWS Transfer Workflow resource.</summary>
 public partial class V1beta1Workflow : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1WorkflowSpec>, IStatus<V1beta1WorkflowStatus>
 {
     public const string KubeApiVersion = "v1beta1";

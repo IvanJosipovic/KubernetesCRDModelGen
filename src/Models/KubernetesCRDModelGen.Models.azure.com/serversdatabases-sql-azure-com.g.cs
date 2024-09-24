@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.azure.com;
+/// <summary>ElasticPoolReference: The resource identifier of the elastic pool containing this database.</summary>
 public partial class V1api20211101storageServersDatabaseSpecElasticPoolReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -27,6 +28,7 @@ public partial class V1api20211101storageServersDatabaseSpecElasticPoolReference
     public string? Name { get; set; }
 }
 
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 public partial class V1api20211101storageServersDatabaseSpecIdentityUserAssignedIdentitiesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -46,6 +48,7 @@ public partial class V1api20211101storageServersDatabaseSpecIdentityUserAssigned
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
 public partial class V1api20211101storageServersDatabaseSpecIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -57,6 +60,7 @@ public partial class V1api20211101storageServersDatabaseSpecIdentityUserAssigned
     public V1api20211101storageServersDatabaseSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.DatabaseIdentity Azure Active Directory identity configuration for a resource.</summary>
 public partial class V1api20211101storageServersDatabaseSpecIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -72,6 +76,7 @@ public partial class V1api20211101storageServersDatabaseSpecIdentity
     public IList<V1api20211101storageServersDatabaseSpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
+/// <summary>LongTermRetentionBackupResourceReference: The resource identifier of the long term retention backup associated with create operation of this database.</summary>
 public partial class V1api20211101storageServersDatabaseSpecLongTermRetentionBackupResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -91,6 +96,7 @@ public partial class V1api20211101storageServersDatabaseSpecLongTermRetentionBac
     public string? Name { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a sql.azure.com/Server resource</summary>
 public partial class V1api20211101storageServersDatabaseSpecOwner
 {
     /// <summary></summary>
@@ -102,6 +108,7 @@ public partial class V1api20211101storageServersDatabaseSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>RecoverableDatabaseReference: The resource identifier of the recoverable database associated with create operation of this database.</summary>
 public partial class V1api20211101storageServersDatabaseSpecRecoverableDatabaseReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -121,6 +128,7 @@ public partial class V1api20211101storageServersDatabaseSpecRecoverableDatabaseR
     public string? Name { get; set; }
 }
 
+/// <summary>RecoveryServicesRecoveryPointReference: The resource identifier of the recovery point associated with create operation of this database.</summary>
 public partial class V1api20211101storageServersDatabaseSpecRecoveryServicesRecoveryPointReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -140,6 +148,7 @@ public partial class V1api20211101storageServersDatabaseSpecRecoveryServicesReco
     public string? Name { get; set; }
 }
 
+/// <summary>RestorableDroppedDatabaseReference: The resource identifier of the restorable dropped database associated with create operation of this database.</summary>
 public partial class V1api20211101storageServersDatabaseSpecRestorableDroppedDatabaseReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -159,6 +168,7 @@ public partial class V1api20211101storageServersDatabaseSpecRestorableDroppedDat
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.Sku An ARM Resource SKU.</summary>
 public partial class V1api20211101storageServersDatabaseSpecSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -186,6 +196,7 @@ public partial class V1api20211101storageServersDatabaseSpecSku
     public string? Tier { get; set; }
 }
 
+/// <summary>SourceDatabaseReference: The resource identifier of the source database associated with create operation of this database.</summary>
 public partial class V1api20211101storageServersDatabaseSpecSourceDatabaseReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -205,6 +216,7 @@ public partial class V1api20211101storageServersDatabaseSpecSourceDatabaseRefere
     public string? Name { get; set; }
 }
 
+/// <summary>SourceResourceReference: The resource identifier of the source associated with the create operation of this database. This property is only supported for DataWarehouse edition and allows to restore across subscriptions. When sourceResourceId is specified, sourceDatabaseId, recoverableDatabaseId, restorableDroppedDatabaseId and sourceDatabaseDeletionDate must not be specified and CreateMode must be PointInTimeRestore, Restore or Recover. When createMode is PointInTimeRestore, sourceResourceId must be the resource ID of the existing database or existing sql pool, and restorePointInTime must be specified. When createMode is Restore, sourceResourceId must be the resource ID of restorable dropped database or restorable dropped sql pool. When createMode is Recover, sourceResourceId must be the resource ID of recoverable database or recoverable sql pool. When source subscription belongs to a different tenant than target subscription, “x-ms-authorization-auxiliary” header must contain authentication token for the source tenant. For more details about “x-ms-authorization-auxiliary” header see https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/authenticate-multi-tenant</summary>
 public partial class V1api20211101storageServersDatabaseSpecSourceResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -224,6 +236,7 @@ public partial class V1api20211101storageServersDatabaseSpecSourceResourceRefere
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.Servers_Database_Spec</summary>
 public partial class V1api20211101storageServersDatabaseSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -359,6 +372,7 @@ public partial class V1api20211101storageServersDatabaseSpec
     public bool? ZoneRedundant { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20211101storageServersDatabaseStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -390,6 +404,7 @@ public partial class V1api20211101storageServersDatabaseStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.Sku_STATUS An ARM Resource SKU.</summary>
 public partial class V1api20211101storageServersDatabaseStatusCurrentSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -417,6 +432,7 @@ public partial class V1api20211101storageServersDatabaseStatusCurrentSku
     public string? Tier { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.DatabaseUserIdentity_STATUS Azure Active Directory identity configuration for a resource.</summary>
 public partial class V1api20211101storageServersDatabaseStatusIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -432,6 +448,7 @@ public partial class V1api20211101storageServersDatabaseStatusIdentityUserAssign
     public string? PrincipalId { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.DatabaseIdentity_STATUS Azure Active Directory identity configuration for a resource.</summary>
 public partial class V1api20211101storageServersDatabaseStatusIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -451,6 +468,7 @@ public partial class V1api20211101storageServersDatabaseStatusIdentity
     public IDictionary<string, V1api20211101storageServersDatabaseStatusIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.Sku_STATUS An ARM Resource SKU.</summary>
 public partial class V1api20211101storageServersDatabaseStatusSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -478,6 +496,7 @@ public partial class V1api20211101storageServersDatabaseStatusSku
     public string? Tier { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.Servers_Database_STATUS</summary>
 public partial class V1api20211101storageServersDatabaseStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -682,6 +701,7 @@ public partial class V1api20211101storageServersDatabaseStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20211101.ServersDatabase Generator information: - Generated from: /sql/resource-manager/Microsoft.Sql/stable/2021-11-01/Databases.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}</summary>
 public partial class V1api20211101storageServersDatabase : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20211101storageServersDatabaseSpec>, IStatus<V1api20211101storageServersDatabaseStatus>
 {
     public const string KubeApiVersion = "v1api20211101storage";

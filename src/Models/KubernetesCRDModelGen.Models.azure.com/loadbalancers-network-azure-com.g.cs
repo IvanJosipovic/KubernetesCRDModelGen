@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesLoadBalancerFrontendIPConfigurationReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -27,6 +28,7 @@ public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoad
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
 public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesLoadBalancerFrontendIPConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -38,6 +40,7 @@ public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoad
     public V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesLoadBalancerFrontendIPConfigurationReference? Reference { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesSubnetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -57,6 +60,7 @@ public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoad
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
 public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesSubnet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -68,6 +72,7 @@ public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoad
     public V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesSubnetReference? Reference { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesVirtualNetworkReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -87,6 +92,7 @@ public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoad
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
 public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesVirtualNetwork
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -98,6 +104,7 @@ public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoad
     public V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesVirtualNetworkReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.LoadBalancerBackendAddress Load balancer backend addresses.</summary>
 public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddresses
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -125,6 +132,7 @@ public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoad
     public V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesVirtualNetwork? VirtualNetwork { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.BackendAddressPool_LoadBalancer_SubResourceEmbedded Pool of backend IP addresses.</summary>
 public partial class V1api20201101storageLoadBalancerSpecBackendAddressPools
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -140,6 +148,7 @@ public partial class V1api20201101storageLoadBalancerSpecBackendAddressPools
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.ExtendedLocation ExtendedLocation complex type.</summary>
 public partial class V1api20201101storageLoadBalancerSpecExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -155,6 +164,7 @@ public partial class V1api20201101storageLoadBalancerSpecExtendedLocation
     public string? Type { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfigurationsPublicIPAddressReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -174,6 +184,7 @@ public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfiguration
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.PublicIPAddressSpec_LoadBalancer_SubResourceEmbedded Public IP address resource.</summary>
 public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfigurationsPublicIPAddress
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -185,6 +196,7 @@ public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfiguration
     public V1api20201101storageLoadBalancerSpecFrontendIPConfigurationsPublicIPAddressReference? Reference { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfigurationsPublicIPPrefixReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -204,6 +216,7 @@ public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfiguration
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
 public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfigurationsPublicIPPrefix
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -215,6 +228,7 @@ public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfiguration
     public V1api20201101storageLoadBalancerSpecFrontendIPConfigurationsPublicIPPrefixReference? Reference { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfigurationsSubnetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -234,6 +248,7 @@ public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfiguration
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.Subnet_LoadBalancer_SubResourceEmbedded Subnet in a virtual network resource.</summary>
 public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfigurationsSubnet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -245,6 +260,7 @@ public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfiguration
     public V1api20201101storageLoadBalancerSpecFrontendIPConfigurationsSubnetReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.FrontendIPConfiguration_LoadBalancer_SubResourceEmbedded Frontend IP address of the load balancer.</summary>
 public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -284,6 +300,7 @@ public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfiguration
     public IList<string>? Zones { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20201101storageLoadBalancerSpecInboundNatPoolsFrontendIPConfigurationReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -303,6 +320,7 @@ public partial class V1api20201101storageLoadBalancerSpecInboundNatPoolsFrontend
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
 public partial class V1api20201101storageLoadBalancerSpecInboundNatPoolsFrontendIPConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -314,6 +332,7 @@ public partial class V1api20201101storageLoadBalancerSpecInboundNatPoolsFrontend
     public V1api20201101storageLoadBalancerSpecInboundNatPoolsFrontendIPConfigurationReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.InboundNatPool Inbound NAT pool of the load balancer.</summary>
 public partial class V1api20201101storageLoadBalancerSpecInboundNatPools
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -357,6 +376,7 @@ public partial class V1api20201101storageLoadBalancerSpecInboundNatPools
     public string? Protocol { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20201101storageLoadBalancerSpecInboundNatRulesFrontendIPConfigurationReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -376,6 +396,7 @@ public partial class V1api20201101storageLoadBalancerSpecInboundNatRulesFrontend
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
 public partial class V1api20201101storageLoadBalancerSpecInboundNatRulesFrontendIPConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -387,6 +408,7 @@ public partial class V1api20201101storageLoadBalancerSpecInboundNatRulesFrontend
     public V1api20201101storageLoadBalancerSpecInboundNatRulesFrontendIPConfigurationReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.InboundNatRule_LoadBalancer_SubResourceEmbedded Inbound NAT rule of the load balancer.</summary>
 public partial class V1api20201101storageLoadBalancerSpecInboundNatRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -426,6 +448,7 @@ public partial class V1api20201101storageLoadBalancerSpecInboundNatRules
     public string? Protocol { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRulesBackendAddressPoolReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -445,6 +468,7 @@ public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRulesBacke
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
 public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRulesBackendAddressPool
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -456,6 +480,7 @@ public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRulesBacke
     public V1api20201101storageLoadBalancerSpecLoadBalancingRulesBackendAddressPoolReference? Reference { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRulesFrontendIPConfigurationReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -475,6 +500,7 @@ public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRulesFront
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
 public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRulesFrontendIPConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -486,6 +512,7 @@ public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRulesFront
     public V1api20201101storageLoadBalancerSpecLoadBalancingRulesFrontendIPConfigurationReference? Reference { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRulesProbeReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -505,6 +532,7 @@ public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRulesProbe
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
 public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRulesProbe
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -516,6 +544,7 @@ public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRulesProbe
     public V1api20201101storageLoadBalancerSpecLoadBalancingRulesProbeReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.LoadBalancingRule A load balancing rule for a load balancer.</summary>
 public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -571,6 +600,7 @@ public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRules
     public string? Protocol { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20201101storageLoadBalancerSpecOutboundRulesBackendAddressPoolReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -590,6 +620,7 @@ public partial class V1api20201101storageLoadBalancerSpecOutboundRulesBackendAdd
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
 public partial class V1api20201101storageLoadBalancerSpecOutboundRulesBackendAddressPool
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -601,6 +632,7 @@ public partial class V1api20201101storageLoadBalancerSpecOutboundRulesBackendAdd
     public V1api20201101storageLoadBalancerSpecOutboundRulesBackendAddressPoolReference? Reference { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20201101storageLoadBalancerSpecOutboundRulesFrontendIPConfigurationsReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -620,6 +652,7 @@ public partial class V1api20201101storageLoadBalancerSpecOutboundRulesFrontendIP
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
 public partial class V1api20201101storageLoadBalancerSpecOutboundRulesFrontendIPConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -631,6 +664,7 @@ public partial class V1api20201101storageLoadBalancerSpecOutboundRulesFrontendIP
     public V1api20201101storageLoadBalancerSpecOutboundRulesFrontendIPConfigurationsReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.OutboundRule Outbound rule of the load balancer.</summary>
 public partial class V1api20201101storageLoadBalancerSpecOutboundRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -666,6 +700,7 @@ public partial class V1api20201101storageLoadBalancerSpecOutboundRules
     public string? Protocol { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20201101storageLoadBalancerSpecOwner
 {
     /// <summary></summary>
@@ -677,6 +712,7 @@ public partial class V1api20201101storageLoadBalancerSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.Probe A load balancer probe.</summary>
 public partial class V1api20201101storageLoadBalancerSpecProbes
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -708,6 +744,7 @@ public partial class V1api20201101storageLoadBalancerSpecProbes
     public string? RequestPath { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.LoadBalancerSku SKU of a load balancer.</summary>
 public partial class V1api20201101storageLoadBalancerSpecSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -723,6 +760,7 @@ public partial class V1api20201101storageLoadBalancerSpecSku
     public string? Tier { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.LoadBalancer_Spec</summary>
 public partial class V1api20201101storageLoadBalancerSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -786,6 +824,7 @@ public partial class V1api20201101storageLoadBalancerSpec
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.NetworkInterfaceIPConfiguration_STATUS_LoadBalancer_SubResourceEmbedded IPConfiguration in a network interface.</summary>
 public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsBackendIPConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -797,6 +836,7 @@ public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsBa
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
 public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddressesLoadBalancerFrontendIPConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -808,6 +848,7 @@ public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsLo
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
 public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddressesNetworkInterfaceIPConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -819,6 +860,7 @@ public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsLo
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
 public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddressesSubnet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -830,6 +872,7 @@ public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsLo
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
 public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddressesVirtualNetwork
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -841,6 +884,7 @@ public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsLo
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.LoadBalancerBackendAddress_STATUS Load balancer backend addresses.</summary>
 public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddresses
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -872,6 +916,7 @@ public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsLo
     public V1api20201101storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddressesVirtualNetwork? VirtualNetwork { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
 public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsLoadBalancingRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -883,6 +928,7 @@ public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsLo
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
 public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsOutboundRule
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -894,6 +940,7 @@ public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsOu
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
 public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsOutboundRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -905,6 +952,7 @@ public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsOu
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.BackendAddressPool_STATUS_LoadBalancer_SubResourceEmbedded Pool of backend IP addresses.</summary>
 public partial class V1api20201101storageLoadBalancerStatusBackendAddressPools
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -952,6 +1000,7 @@ public partial class V1api20201101storageLoadBalancerStatusBackendAddressPools
     public string? Type { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20201101storageLoadBalancerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -983,6 +1032,7 @@ public partial class V1api20201101storageLoadBalancerStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.ExtendedLocation_STATUS ExtendedLocation complex type.</summary>
 public partial class V1api20201101storageLoadBalancerStatusExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -998,6 +1048,7 @@ public partial class V1api20201101storageLoadBalancerStatusExtendedLocation
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
 public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurationsInboundNatPools
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1009,6 +1060,7 @@ public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurati
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
 public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurationsInboundNatRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1020,6 +1072,7 @@ public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurati
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
 public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurationsLoadBalancingRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1031,6 +1084,7 @@ public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurati
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
 public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurationsOutboundRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1042,6 +1096,7 @@ public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurati
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.PublicIPAddress_STATUS_LoadBalancer_SubResourceEmbedded Public IP address resource.</summary>
 public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurationsPublicIPAddress
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1053,6 +1108,7 @@ public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurati
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
 public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurationsPublicIPPrefix
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1064,6 +1120,7 @@ public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurati
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.Subnet_STATUS_LoadBalancer_SubResourceEmbedded Subnet in a virtual network resource.</summary>
 public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurationsSubnet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1075,6 +1132,7 @@ public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurati
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.FrontendIPConfiguration_STATUS_LoadBalancer_SubResourceEmbedded Frontend IP address of the load balancer.</summary>
 public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1146,6 +1204,7 @@ public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurati
     public IList<string>? Zones { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
 public partial class V1api20201101storageLoadBalancerStatusInboundNatPoolsFrontendIPConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1157,6 +1216,7 @@ public partial class V1api20201101storageLoadBalancerStatusInboundNatPoolsFronte
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.InboundNatPool_STATUS Inbound NAT pool of the load balancer.</summary>
 public partial class V1api20201101storageLoadBalancerStatusInboundNatPools
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1216,6 +1276,7 @@ public partial class V1api20201101storageLoadBalancerStatusInboundNatPools
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.NetworkInterfaceIPConfiguration_STATUS_LoadBalancer_SubResourceEmbedded IPConfiguration in a network interface.</summary>
 public partial class V1api20201101storageLoadBalancerStatusInboundNatRulesBackendIPConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1227,6 +1288,7 @@ public partial class V1api20201101storageLoadBalancerStatusInboundNatRulesBacken
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
 public partial class V1api20201101storageLoadBalancerStatusInboundNatRulesFrontendIPConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1238,6 +1300,7 @@ public partial class V1api20201101storageLoadBalancerStatusInboundNatRulesFronte
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.InboundNatRule_STATUS_LoadBalancer_SubResourceEmbedded Inbound NAT rule of the load balancer.</summary>
 public partial class V1api20201101storageLoadBalancerStatusInboundNatRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1297,6 +1360,7 @@ public partial class V1api20201101storageLoadBalancerStatusInboundNatRules
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
 public partial class V1api20201101storageLoadBalancerStatusLoadBalancingRulesBackendAddressPool
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1308,6 +1372,7 @@ public partial class V1api20201101storageLoadBalancerStatusLoadBalancingRulesBac
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
 public partial class V1api20201101storageLoadBalancerStatusLoadBalancingRulesFrontendIPConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1319,6 +1384,7 @@ public partial class V1api20201101storageLoadBalancerStatusLoadBalancingRulesFro
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
 public partial class V1api20201101storageLoadBalancerStatusLoadBalancingRulesProbe
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1330,6 +1396,7 @@ public partial class V1api20201101storageLoadBalancerStatusLoadBalancingRulesPro
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.LoadBalancingRule_STATUS A load balancing rule for a load balancer.</summary>
 public partial class V1api20201101storageLoadBalancerStatusLoadBalancingRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1401,6 +1468,7 @@ public partial class V1api20201101storageLoadBalancerStatusLoadBalancingRules
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
 public partial class V1api20201101storageLoadBalancerStatusOutboundRulesBackendAddressPool
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1412,6 +1480,7 @@ public partial class V1api20201101storageLoadBalancerStatusOutboundRulesBackendA
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
 public partial class V1api20201101storageLoadBalancerStatusOutboundRulesFrontendIPConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1423,6 +1492,7 @@ public partial class V1api20201101storageLoadBalancerStatusOutboundRulesFrontend
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.OutboundRule_STATUS Outbound rule of the load balancer.</summary>
 public partial class V1api20201101storageLoadBalancerStatusOutboundRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1474,6 +1544,7 @@ public partial class V1api20201101storageLoadBalancerStatusOutboundRules
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
 public partial class V1api20201101storageLoadBalancerStatusProbesLoadBalancingRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1485,6 +1556,7 @@ public partial class V1api20201101storageLoadBalancerStatusProbesLoadBalancingRu
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.Probe_STATUS A load balancer probe.</summary>
 public partial class V1api20201101storageLoadBalancerStatusProbes
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1536,6 +1608,7 @@ public partial class V1api20201101storageLoadBalancerStatusProbes
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.LoadBalancerSku_STATUS SKU of a load balancer.</summary>
 public partial class V1api20201101storageLoadBalancerStatusSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1551,6 +1624,7 @@ public partial class V1api20201101storageLoadBalancerStatusSku
     public string? Tier { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.LoadBalancer_STATUS LoadBalancer resource.</summary>
 public partial class V1api20201101storageLoadBalancerStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1631,6 +1705,7 @@ public partial class V1api20201101storageLoadBalancerStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20201101.LoadBalancer Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/loadBalancer.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}</summary>
 public partial class V1api20201101storageLoadBalancer : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20201101storageLoadBalancerSpec>, IStatus<V1api20201101storageLoadBalancerStatus>
 {
     public const string KubeApiVersion = "v1api20201101storage";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1StorageNotificationSpecBucketRef
 {
     /// <summary>Allowed value: The `name` field of a `StorageBucket` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1StorageNotificationSpecBucketRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StorageNotificationSpecTopicRef
 {
     /// <summary>Allowed value: string of the format `projects/{{project}}/topics/{{value}}`, where {{value}} is the `name` field of a `PubSubTopic` resource.</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1StorageNotificationSpecTopicRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StorageNotificationSpec
 {
     /// <summary></summary>
@@ -69,6 +72,7 @@ public partial class V1beta1StorageNotificationSpec
     public V1beta1StorageNotificationSpecTopicRef TopicRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StorageNotificationStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -92,6 +96,7 @@ public partial class V1beta1StorageNotificationStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StorageNotificationStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -112,6 +117,7 @@ public partial class V1beta1StorageNotificationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1StorageNotification : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1StorageNotificationSpec>, IStatus<V1beta1StorageNotificationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

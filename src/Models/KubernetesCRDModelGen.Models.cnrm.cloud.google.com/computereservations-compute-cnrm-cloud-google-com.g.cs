@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1ComputeReservationSpecSpecificReservationInstancePropertiesGuestAccelerators
 {
     /// <summary>Immutable. The number of the guest accelerator cards exposed to this instance.</summary>
@@ -19,6 +20,7 @@ public partial class V1beta1ComputeReservationSpecSpecificReservationInstancePro
     public string AcceleratorType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeReservationSpecSpecificReservationInstancePropertiesLocalSsds
 {
     /// <summary>Immutable. The size of the disk in base-2 GB.</summary>
@@ -30,6 +32,7 @@ public partial class V1beta1ComputeReservationSpecSpecificReservationInstancePro
     public string? Interface { get; set; }
 }
 
+/// <summary>Immutable. The instance properties for the reservation.</summary>
 public partial class V1beta1ComputeReservationSpecSpecificReservationInstanceProperties
 {
     /// <summary>Immutable. Guest accelerator type and count.</summary>
@@ -49,6 +52,7 @@ public partial class V1beta1ComputeReservationSpecSpecificReservationInstancePro
     public string? MinCpuPlatform { get; set; }
 }
 
+/// <summary>Reservation for instances with specific machine shapes.</summary>
 public partial class V1beta1ComputeReservationSpecSpecificReservation
 {
     /// <summary>The number of resources that are allocated.</summary>
@@ -64,6 +68,7 @@ public partial class V1beta1ComputeReservationSpecSpecificReservation
     public V1beta1ComputeReservationSpecSpecificReservationInstanceProperties InstanceProperties { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeReservationSpec
 {
     /// <summary>Immutable. An optional description of this resource.</summary>
@@ -87,6 +92,7 @@ public partial class V1beta1ComputeReservationSpec
     public string Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeReservationStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -110,6 +116,7 @@ public partial class V1beta1ComputeReservationStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeReservationStatus
 {
     /// <summary>Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.</summary>
@@ -138,6 +145,7 @@ public partial class V1beta1ComputeReservationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ComputeReservation : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeReservationSpec>, IStatus<V1beta1ComputeReservationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

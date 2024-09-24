@@ -38,6 +38,7 @@ public enum V1beta1NetworkACLSpecForProviderPrivateEndpointIdRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NetworkACLSpecForProviderPrivateEndpointIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1NetworkACLSpecForProviderPrivateEndpointIdRefPolicy
     public V1beta1NetworkACLSpecForProviderPrivateEndpointIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a PrivateEndpoint in network to populate id.</summary>
 public partial class V1beta1NetworkACLSpecForProviderPrivateEndpointIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1NetworkACLSpecForProviderPrivateEndpointIdSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NetworkACLSpecForProviderPrivateEndpointIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1NetworkACLSpecForProviderPrivateEndpointIdSelectorPo
     public V1beta1NetworkACLSpecForProviderPrivateEndpointIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a PrivateEndpoint in network to populate id.</summary>
 public partial class V1beta1NetworkACLSpecForProviderPrivateEndpointIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1NetworkACLSpecForProviderPrivateEndpointIdSelector
     public V1beta1NetworkACLSpecForProviderPrivateEndpointIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkACLSpecForProviderPrivateEndpoint
 {
     /// <summary>The allowed request types for the Private Endpoint Connection. Possible values are ClientConnection, ServerConnection, RESTAPI and Trace.</summary>
@@ -133,6 +138,7 @@ public partial class V1beta1NetworkACLSpecForProviderPrivateEndpoint
     public V1beta1NetworkACLSpecForProviderPrivateEndpointIdSelector? IdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkACLSpecForProviderPublicNetwork
 {
     /// <summary>The allowed request types for the public network. Possible values are ClientConnection, ServerConnection, RESTAPI and Trace.</summary>
@@ -164,6 +170,7 @@ public enum V1beta1NetworkACLSpecForProviderSignalrServiceIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NetworkACLSpecForProviderSignalrServiceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -177,6 +184,7 @@ public partial class V1beta1NetworkACLSpecForProviderSignalrServiceIdRefPolicy
     public V1beta1NetworkACLSpecForProviderSignalrServiceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Service in signalrservice to populate signalrServiceId.</summary>
 public partial class V1beta1NetworkACLSpecForProviderSignalrServiceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -208,6 +216,7 @@ public enum V1beta1NetworkACLSpecForProviderSignalrServiceIdSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NetworkACLSpecForProviderSignalrServiceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -221,6 +230,7 @@ public partial class V1beta1NetworkACLSpecForProviderSignalrServiceIdSelectorPol
     public V1beta1NetworkACLSpecForProviderSignalrServiceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Service in signalrservice to populate signalrServiceId.</summary>
 public partial class V1beta1NetworkACLSpecForProviderSignalrServiceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -236,6 +246,7 @@ public partial class V1beta1NetworkACLSpecForProviderSignalrServiceIdSelector
     public V1beta1NetworkACLSpecForProviderSignalrServiceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkACLSpecForProvider
 {
     /// <summary>The default action to control the network access when no other rule matches. Possible values are Allow and Deny.</summary>
@@ -283,6 +294,7 @@ public enum V1beta1NetworkACLSpecInitProviderPrivateEndpointIdRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NetworkACLSpecInitProviderPrivateEndpointIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -296,6 +308,7 @@ public partial class V1beta1NetworkACLSpecInitProviderPrivateEndpointIdRefPolicy
     public V1beta1NetworkACLSpecInitProviderPrivateEndpointIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a PrivateEndpoint in network to populate id.</summary>
 public partial class V1beta1NetworkACLSpecInitProviderPrivateEndpointIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -327,6 +340,7 @@ public enum V1beta1NetworkACLSpecInitProviderPrivateEndpointIdSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NetworkACLSpecInitProviderPrivateEndpointIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -340,6 +354,7 @@ public partial class V1beta1NetworkACLSpecInitProviderPrivateEndpointIdSelectorP
     public V1beta1NetworkACLSpecInitProviderPrivateEndpointIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a PrivateEndpoint in network to populate id.</summary>
 public partial class V1beta1NetworkACLSpecInitProviderPrivateEndpointIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -355,6 +370,7 @@ public partial class V1beta1NetworkACLSpecInitProviderPrivateEndpointIdSelector
     public V1beta1NetworkACLSpecInitProviderPrivateEndpointIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkACLSpecInitProviderPrivateEndpoint
 {
     /// <summary>The allowed request types for the Private Endpoint Connection. Possible values are ClientConnection, ServerConnection, RESTAPI and Trace.</summary>
@@ -378,6 +394,7 @@ public partial class V1beta1NetworkACLSpecInitProviderPrivateEndpoint
     public V1beta1NetworkACLSpecInitProviderPrivateEndpointIdSelector? IdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkACLSpecInitProviderPublicNetwork
 {
     /// <summary>The allowed request types for the public network. Possible values are ClientConnection, ServerConnection, RESTAPI and Trace.</summary>
@@ -409,6 +426,7 @@ public enum V1beta1NetworkACLSpecInitProviderSignalrServiceIdRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NetworkACLSpecInitProviderSignalrServiceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -422,6 +440,7 @@ public partial class V1beta1NetworkACLSpecInitProviderSignalrServiceIdRefPolicy
     public V1beta1NetworkACLSpecInitProviderSignalrServiceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Service in signalrservice to populate signalrServiceId.</summary>
 public partial class V1beta1NetworkACLSpecInitProviderSignalrServiceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -453,6 +472,7 @@ public enum V1beta1NetworkACLSpecInitProviderSignalrServiceIdSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NetworkACLSpecInitProviderSignalrServiceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -466,6 +486,7 @@ public partial class V1beta1NetworkACLSpecInitProviderSignalrServiceIdSelectorPo
     public V1beta1NetworkACLSpecInitProviderSignalrServiceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Service in signalrservice to populate signalrServiceId.</summary>
 public partial class V1beta1NetworkACLSpecInitProviderSignalrServiceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -481,6 +502,7 @@ public partial class V1beta1NetworkACLSpecInitProviderSignalrServiceIdSelector
     public V1beta1NetworkACLSpecInitProviderSignalrServiceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1NetworkACLSpecInitProvider
 {
     /// <summary>The default action to control the network access when no other rule matches. Possible values are Allow and Deny.</summary>
@@ -550,6 +572,7 @@ public enum V1beta1NetworkACLSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NetworkACLSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -563,6 +586,7 @@ public partial class V1beta1NetworkACLSpecProviderConfigRefPolicy
     public V1beta1NetworkACLSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1NetworkACLSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -594,6 +618,7 @@ public enum V1beta1NetworkACLSpecPublishConnectionDetailsToConfigRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NetworkACLSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -607,6 +632,7 @@ public partial class V1beta1NetworkACLSpecPublishConnectionDetailsToConfigRefPol
     public V1beta1NetworkACLSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1NetworkACLSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -618,6 +644,7 @@ public partial class V1beta1NetworkACLSpecPublishConnectionDetailsToConfigRef
     public V1beta1NetworkACLSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1NetworkACLSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -633,6 +660,7 @@ public partial class V1beta1NetworkACLSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1NetworkACLSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -648,6 +676,7 @@ public partial class V1beta1NetworkACLSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1NetworkACLSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -659,6 +688,7 @@ public partial class V1beta1NetworkACLSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>NetworkACLSpec defines the desired state of NetworkACL</summary>
 public partial class V1beta1NetworkACLSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -691,6 +721,7 @@ public partial class V1beta1NetworkACLSpec
     public V1beta1NetworkACLSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkACLStatusAtProviderPrivateEndpoint
 {
     /// <summary>The allowed request types for the Private Endpoint Connection. Possible values are ClientConnection, ServerConnection, RESTAPI and Trace.</summary>
@@ -706,6 +737,7 @@ public partial class V1beta1NetworkACLStatusAtProviderPrivateEndpoint
     public string? Id { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkACLStatusAtProviderPublicNetwork
 {
     /// <summary>The allowed request types for the public network. Possible values are ClientConnection, ServerConnection, RESTAPI and Trace.</summary>
@@ -717,6 +749,7 @@ public partial class V1beta1NetworkACLStatusAtProviderPublicNetwork
     public IList<string>? DeniedRequestTypes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkACLStatusAtProvider
 {
     /// <summary>The default action to control the network access when no other rule matches. Possible values are Allow and Deny.</summary>
@@ -740,6 +773,7 @@ public partial class V1beta1NetworkACLStatusAtProvider
     public string? SignalrServiceId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1NetworkACLStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -767,6 +801,7 @@ public partial class V1beta1NetworkACLStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>NetworkACLStatus defines the observed state of NetworkACL.</summary>
 public partial class V1beta1NetworkACLStatus
 {
     /// <summary></summary>
@@ -783,6 +818,7 @@ public partial class V1beta1NetworkACLStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>NetworkACL is the Schema for the NetworkACLs API. Manages the Network ACL for a SignalR service.</summary>
 public partial class V1beta1NetworkACL : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1NetworkACLSpec>, IStatus<V1beta1NetworkACLStatus>
 {
     public const string KubeApiVersion = "v1beta1";

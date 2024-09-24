@@ -18,6 +18,7 @@ public enum V1beta1HubSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1HubSpecForProvider
 {
     /// <summary>An optional description of the hub.</summary>
@@ -37,6 +38,7 @@ public partial class V1beta1HubSpecForProvider
     public string? Project { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1HubSpecInitProvider
 {
     /// <summary>An optional description of the hub.</summary>
@@ -98,6 +100,7 @@ public enum V1beta1HubSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HubSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -111,6 +114,7 @@ public partial class V1beta1HubSpecProviderConfigRefPolicy
     public V1beta1HubSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1HubSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -142,6 +146,7 @@ public enum V1beta1HubSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HubSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -155,6 +160,7 @@ public partial class V1beta1HubSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1HubSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1HubSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -166,6 +172,7 @@ public partial class V1beta1HubSpecPublishConnectionDetailsToConfigRef
     public V1beta1HubSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1HubSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -181,6 +188,7 @@ public partial class V1beta1HubSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1HubSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -196,6 +204,7 @@ public partial class V1beta1HubSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1HubSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -207,6 +216,7 @@ public partial class V1beta1HubSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>HubSpec defines the desired state of Hub</summary>
 public partial class V1beta1HubSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -239,6 +249,7 @@ public partial class V1beta1HubSpec
     public V1beta1HubSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HubStatusAtProviderRoutingVpcs
 {
     /// <summary>The URI of the VPC network.</summary>
@@ -246,6 +257,7 @@ public partial class V1beta1HubStatusAtProviderRoutingVpcs
     public string? Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HubStatusAtProvider
 {
     /// <summary>Output only. The time the hub was created.</summary>
@@ -297,6 +309,7 @@ public partial class V1beta1HubStatusAtProvider
     public string? UpdateTime { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1HubStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -324,6 +337,7 @@ public partial class V1beta1HubStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>HubStatus defines the observed state of Hub.</summary>
 public partial class V1beta1HubStatus
 {
     /// <summary></summary>
@@ -340,6 +354,7 @@ public partial class V1beta1HubStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Hub is the Schema for the Hubs API. The NetworkConnectivity Hub resource</summary>
 public partial class V1beta1Hub : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1HubSpec>, IStatus<V1beta1HubStatus>
 {
     public const string KubeApiVersion = "v1beta1";

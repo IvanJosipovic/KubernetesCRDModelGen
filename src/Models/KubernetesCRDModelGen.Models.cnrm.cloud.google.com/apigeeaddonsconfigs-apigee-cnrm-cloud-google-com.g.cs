@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigee.cnrm.cloud.google.com;
+/// <summary>Configuration for the Monetization add-on.</summary>
 public partial class V1alpha1ApigeeAddonsConfigSpecAddonsConfigAdvancedApiOpsConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -15,6 +16,7 @@ public partial class V1alpha1ApigeeAddonsConfigSpecAddonsConfigAdvancedApiOpsCon
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Configuration for the Monetization add-on.</summary>
 public partial class V1alpha1ApigeeAddonsConfigSpecAddonsConfigApiSecurityConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -26,6 +28,7 @@ public partial class V1alpha1ApigeeAddonsConfigSpecAddonsConfigApiSecurityConfig
     public string? ExpiresAt { get; set; }
 }
 
+/// <summary>Configuration for the Monetization add-on.</summary>
 public partial class V1alpha1ApigeeAddonsConfigSpecAddonsConfigConnectorsPlatformConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -37,6 +40,7 @@ public partial class V1alpha1ApigeeAddonsConfigSpecAddonsConfigConnectorsPlatfor
     public string? ExpiresAt { get; set; }
 }
 
+/// <summary>Configuration for the Monetization add-on.</summary>
 public partial class V1alpha1ApigeeAddonsConfigSpecAddonsConfigIntegrationConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -44,6 +48,7 @@ public partial class V1alpha1ApigeeAddonsConfigSpecAddonsConfigIntegrationConfig
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Configuration for the Monetization add-on.</summary>
 public partial class V1alpha1ApigeeAddonsConfigSpecAddonsConfigMonetizationConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -51,6 +56,7 @@ public partial class V1alpha1ApigeeAddonsConfigSpecAddonsConfigMonetizationConfi
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Addon configurations of the Apigee organization.</summary>
 public partial class V1alpha1ApigeeAddonsConfigSpecAddonsConfig
 {
     /// <summary>Configuration for the Monetization add-on.</summary>
@@ -74,6 +80,7 @@ public partial class V1alpha1ApigeeAddonsConfigSpecAddonsConfig
     public V1alpha1ApigeeAddonsConfigSpecAddonsConfigMonetizationConfig? MonetizationConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApigeeAddonsConfigSpec
 {
     /// <summary>Addon configurations of the Apigee organization.</summary>
@@ -89,6 +96,7 @@ public partial class V1alpha1ApigeeAddonsConfigSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApigeeAddonsConfigStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -112,6 +120,7 @@ public partial class V1alpha1ApigeeAddonsConfigStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApigeeAddonsConfigStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -124,6 +133,7 @@ public partial class V1alpha1ApigeeAddonsConfigStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1ApigeeAddonsConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ApigeeAddonsConfigSpec>, IStatus<V1alpha1ApigeeAddonsConfigStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

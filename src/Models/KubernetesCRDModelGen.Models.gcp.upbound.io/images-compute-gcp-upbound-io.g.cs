@@ -18,6 +18,7 @@ public enum V1beta1ImageSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageSpecForProviderGuestOsFeatures
 {
     /// <summary>The type of supported feature. Read Enabling guest operating system features to see a list of available options. Possible values are: MULTI_IP_SUBNET, SECURE_BOOT, SEV_CAPABLE, UEFI_COMPATIBLE, VIRTIO_SCSI_MULTIQUEUE, WINDOWS, GVNIC, SEV_LIVE_MIGRATABLE, SEV_SNP_CAPABLE, SUSPEND_RESUME_COMPATIBLE, TDX_CAPABLE, SEV_LIVE_MIGRATABLE_V2.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1ImageSpecForProviderGuestOsFeatures
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageSpecForProviderImageEncryptionKey
 {
     /// <summary>The self link of the encryption key that is stored in Google Cloud KMS.</summary>
@@ -36,6 +38,7 @@ public partial class V1beta1ImageSpecForProviderImageEncryptionKey
     public string? KmsKeyServiceAccount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageSpecForProviderRawDisk
 {
     /// <summary>The format used to encode and transmit the block device, which should be TAR. This is just a container and transmission format and not a runtime format. Provided by the client when the disk image is created. Default value is TAR. Possible values are: TAR.</summary>
@@ -51,6 +54,7 @@ public partial class V1beta1ImageSpecForProviderRawDisk
     public string? Source { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageSpecForProvider
 {
     /// <summary>An optional description of this resource. Provide this property when you create the resource.</summary>
@@ -106,6 +110,7 @@ public partial class V1beta1ImageSpecForProvider
     public IList<string>? StorageLocations { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageSpecInitProviderGuestOsFeatures
 {
     /// <summary>The type of supported feature. Read Enabling guest operating system features to see a list of available options. Possible values are: MULTI_IP_SUBNET, SECURE_BOOT, SEV_CAPABLE, UEFI_COMPATIBLE, VIRTIO_SCSI_MULTIQUEUE, WINDOWS, GVNIC, SEV_LIVE_MIGRATABLE, SEV_SNP_CAPABLE, SUSPEND_RESUME_COMPATIBLE, TDX_CAPABLE, SEV_LIVE_MIGRATABLE_V2.</summary>
@@ -113,6 +118,7 @@ public partial class V1beta1ImageSpecInitProviderGuestOsFeatures
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageSpecInitProviderImageEncryptionKey
 {
     /// <summary>The self link of the encryption key that is stored in Google Cloud KMS.</summary>
@@ -124,6 +130,7 @@ public partial class V1beta1ImageSpecInitProviderImageEncryptionKey
     public string? KmsKeyServiceAccount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageSpecInitProviderRawDisk
 {
     /// <summary>The format used to encode and transmit the block device, which should be TAR. This is just a container and transmission format and not a runtime format. Provided by the client when the disk image is created. Default value is TAR. Possible values are: TAR.</summary>
@@ -139,6 +146,7 @@ public partial class V1beta1ImageSpecInitProviderRawDisk
     public string? Source { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ImageSpecInitProvider
 {
     /// <summary>An optional description of this resource. Provide this property when you create the resource.</summary>
@@ -236,6 +244,7 @@ public enum V1beta1ImageSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ImageSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -249,6 +258,7 @@ public partial class V1beta1ImageSpecProviderConfigRefPolicy
     public V1beta1ImageSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ImageSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -280,6 +290,7 @@ public enum V1beta1ImageSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ImageSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -293,6 +304,7 @@ public partial class V1beta1ImageSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1ImageSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ImageSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -304,6 +316,7 @@ public partial class V1beta1ImageSpecPublishConnectionDetailsToConfigRef
     public V1beta1ImageSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ImageSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -319,6 +332,7 @@ public partial class V1beta1ImageSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ImageSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -334,6 +348,7 @@ public partial class V1beta1ImageSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ImageSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -345,6 +360,7 @@ public partial class V1beta1ImageSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ImageSpec defines the desired state of Image</summary>
 public partial class V1beta1ImageSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -377,6 +393,7 @@ public partial class V1beta1ImageSpec
     public V1beta1ImageSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageStatusAtProviderGuestOsFeatures
 {
     /// <summary>The type of supported feature. Read Enabling guest operating system features to see a list of available options. Possible values are: MULTI_IP_SUBNET, SECURE_BOOT, SEV_CAPABLE, UEFI_COMPATIBLE, VIRTIO_SCSI_MULTIQUEUE, WINDOWS, GVNIC, SEV_LIVE_MIGRATABLE, SEV_SNP_CAPABLE, SUSPEND_RESUME_COMPATIBLE, TDX_CAPABLE, SEV_LIVE_MIGRATABLE_V2.</summary>
@@ -384,6 +401,7 @@ public partial class V1beta1ImageStatusAtProviderGuestOsFeatures
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageStatusAtProviderImageEncryptionKey
 {
     /// <summary>The self link of the encryption key that is stored in Google Cloud KMS.</summary>
@@ -395,6 +413,7 @@ public partial class V1beta1ImageStatusAtProviderImageEncryptionKey
     public string? KmsKeyServiceAccount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageStatusAtProviderRawDisk
 {
     /// <summary>The format used to encode and transmit the block device, which should be TAR. This is just a container and transmission format and not a runtime format. Provided by the client when the disk image is created. Default value is TAR. Possible values are: TAR.</summary>
@@ -410,6 +429,7 @@ public partial class V1beta1ImageStatusAtProviderRawDisk
     public string? Source { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageStatusAtProvider
 {
     /// <summary>Size of the image tar.gz archive stored in Google Cloud Storage (in bytes).</summary>
@@ -493,6 +513,7 @@ public partial class V1beta1ImageStatusAtProvider
     public IDictionary<string, string>? TerraformLabels { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ImageStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -520,6 +541,7 @@ public partial class V1beta1ImageStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ImageStatus defines the observed state of Image.</summary>
 public partial class V1beta1ImageStatus
 {
     /// <summary></summary>
@@ -536,6 +558,7 @@ public partial class V1beta1ImageStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Image is the Schema for the Images API. Represents an Image resource.</summary>
 public partial class V1beta1Image : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ImageSpec>, IStatus<V1beta1ImageStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.insights.azure.com;
+/// <summary>Storage version of v1api20220615.WebTestProperties_Configuration</summary>
 public partial class V1api20220615storageWebtestSpecConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -19,6 +20,7 @@ public partial class V1api20220615storageWebtestSpecConfiguration
     public string? WebTest { get; set; }
 }
 
+/// <summary>Storage version of v1api20220615.WebTestGeolocation Geo-physical location to run a WebTest from. You must specify one or more locations for the test to run from.</summary>
 public partial class V1api20220615storageWebtestSpecLocations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -30,6 +32,7 @@ public partial class V1api20220615storageWebtestSpecLocations
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220615.HeaderField A header to add to the WebTest.</summary>
 public partial class V1api20220615storageWebtestSpecRequestHeaders
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -45,6 +48,7 @@ public partial class V1api20220615storageWebtestSpecRequestHeaders
     public string? Value { get; set; }
 }
 
+/// <summary>Storage version of v1api20220615.WebTestProperties_Request</summary>
 public partial class V1api20220615storageWebtestSpecRequest
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -76,6 +80,7 @@ public partial class V1api20220615storageWebtestSpecRequest
     public string? RequestUrl { get; set; }
 }
 
+/// <summary>Storage version of v1api20220615.WebTestProperties_ValidationRules_ContentValidation</summary>
 public partial class V1api20220615storageWebtestSpecValidationRulesContentValidation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -95,6 +100,7 @@ public partial class V1api20220615storageWebtestSpecValidationRulesContentValida
     public bool? PassIfTextFound { get; set; }
 }
 
+/// <summary>Storage version of v1api20220615.WebTestProperties_ValidationRules</summary>
 public partial class V1api20220615storageWebtestSpecValidationRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -122,6 +128,7 @@ public partial class V1api20220615storageWebtestSpecValidationRules
     public bool? SSLCheck { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20220615storageWebtestSpecOwner
 {
     /// <summary></summary>
@@ -133,6 +140,7 @@ public partial class V1api20220615storageWebtestSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220615.Webtest_Spec</summary>
 public partial class V1api20220615storageWebtestSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -208,6 +216,7 @@ public partial class V1api20220615storageWebtestSpec
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>Storage version of v1api20220615.WebTestProperties_Configuration_STATUS</summary>
 public partial class V1api20220615storageWebtestStatusConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -219,6 +228,7 @@ public partial class V1api20220615storageWebtestStatusConfiguration
     public string? WebTest { get; set; }
 }
 
+/// <summary>Storage version of v1api20220615.WebTestGeolocation_STATUS Geo-physical location to run a WebTest from. You must specify one or more locations for the test to run from.</summary>
 public partial class V1api20220615storageWebtestStatusLocations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -230,6 +240,7 @@ public partial class V1api20220615storageWebtestStatusLocations
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220615.HeaderField_STATUS A header to add to the WebTest.</summary>
 public partial class V1api20220615storageWebtestStatusRequestHeaders
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -245,6 +256,7 @@ public partial class V1api20220615storageWebtestStatusRequestHeaders
     public string? Value { get; set; }
 }
 
+/// <summary>Storage version of v1api20220615.WebTestProperties_Request_STATUS</summary>
 public partial class V1api20220615storageWebtestStatusRequest
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -276,6 +288,7 @@ public partial class V1api20220615storageWebtestStatusRequest
     public string? RequestUrl { get; set; }
 }
 
+/// <summary>Storage version of v1api20220615.WebTestProperties_ValidationRules_ContentValidation_STATUS</summary>
 public partial class V1api20220615storageWebtestStatusValidationRulesContentValidation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -295,6 +308,7 @@ public partial class V1api20220615storageWebtestStatusValidationRulesContentVali
     public bool? PassIfTextFound { get; set; }
 }
 
+/// <summary>Storage version of v1api20220615.WebTestProperties_ValidationRules_STATUS</summary>
 public partial class V1api20220615storageWebtestStatusValidationRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -322,6 +336,7 @@ public partial class V1api20220615storageWebtestStatusValidationRules
     public bool? SSLCheck { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20220615storageWebtestStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -353,6 +368,7 @@ public partial class V1api20220615storageWebtestStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20220615.Webtest_STATUS</summary>
 public partial class V1api20220615storageWebtestStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -437,6 +453,7 @@ public partial class V1api20220615storageWebtestStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20220615.Webtest Generator information: - Generated from: /applicationinsights/resource-manager/Microsoft.Insights/stable/2022-06-15/webTests_API.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/webtests/{webTestName}</summary>
 public partial class V1api20220615storageWebtest : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20220615storageWebtestSpec>, IStatus<V1api20220615storageWebtestStatus>
 {
     public const string KubeApiVersion = "v1api20220615storage";

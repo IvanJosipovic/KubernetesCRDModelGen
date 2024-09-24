@@ -38,6 +38,7 @@ public enum V1beta1BucketIntelligentTieringConfigurationSpecForProviderBucketRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketIntelligentTieringConfigurationSpecForProviderBucketRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpecForProvider
     public V1beta1BucketIntelligentTieringConfigurationSpecForProviderBucketRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1BucketIntelligentTieringConfigurationSpecForProviderBucketRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1BucketIntelligentTieringConfigurationSpecForProviderBucketSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BucketIntelligentTieringConfigurationSpecForProviderBucketSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpecForProvider
     public V1beta1BucketIntelligentTieringConfigurationSpecForProviderBucketSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1BucketIntelligentTieringConfigurationSpecForProviderBucketSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpecForProvider
     public V1beta1BucketIntelligentTieringConfigurationSpecForProviderBucketSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketIntelligentTieringConfigurationSpecForProviderFilter
 {
     /// <summary>Object key name prefix that identifies the subset of objects to which the configuration applies.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketIntelligentTieringConfigurationSpecForProviderTiering
 {
     /// <summary>S3 Intelligent-Tiering access tier. Valid values: ARCHIVE_ACCESS, DEEP_ARCHIVE_ACCESS.</summary>
@@ -132,6 +138,7 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpecForProvider
     public double? Days { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketIntelligentTieringConfigurationSpecForProvider
 {
     /// <summary>Name of the bucket this intelligent tiering configuration is associated with.</summary>
@@ -187,6 +194,7 @@ public enum V1beta1BucketIntelligentTieringConfigurationSpecInitProviderBucketRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketIntelligentTieringConfigurationSpecInitProviderBucketRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -200,6 +208,7 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpecInitProvide
     public V1beta1BucketIntelligentTieringConfigurationSpecInitProviderBucketRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1BucketIntelligentTieringConfigurationSpecInitProviderBucketRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -231,6 +240,7 @@ public enum V1beta1BucketIntelligentTieringConfigurationSpecInitProviderBucketSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BucketIntelligentTieringConfigurationSpecInitProviderBucketSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -244,6 +254,7 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpecInitProvide
     public V1beta1BucketIntelligentTieringConfigurationSpecInitProviderBucketSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1BucketIntelligentTieringConfigurationSpecInitProviderBucketSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -259,6 +270,7 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpecInitProvide
     public V1beta1BucketIntelligentTieringConfigurationSpecInitProviderBucketSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketIntelligentTieringConfigurationSpecInitProviderFilter
 {
     /// <summary>Object key name prefix that identifies the subset of objects to which the configuration applies.</summary>
@@ -270,6 +282,7 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpecInitProvide
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketIntelligentTieringConfigurationSpecInitProviderTiering
 {
     /// <summary>S3 Intelligent-Tiering access tier. Valid values: ARCHIVE_ACCESS, DEEP_ARCHIVE_ACCESS.</summary>
@@ -281,6 +294,7 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpecInitProvide
     public double? Days { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1BucketIntelligentTieringConfigurationSpecInitProvider
 {
     /// <summary>Name of the bucket this intelligent tiering configuration is associated with.</summary>
@@ -354,6 +368,7 @@ public enum V1beta1BucketIntelligentTieringConfigurationSpecProviderConfigRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketIntelligentTieringConfigurationSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -367,6 +382,7 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpecProviderCon
     public V1beta1BucketIntelligentTieringConfigurationSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1BucketIntelligentTieringConfigurationSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -398,6 +414,7 @@ public enum V1beta1BucketIntelligentTieringConfigurationSpecPublishConnectionDet
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketIntelligentTieringConfigurationSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -411,6 +428,7 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpecPublishConn
     public V1beta1BucketIntelligentTieringConfigurationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1BucketIntelligentTieringConfigurationSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -422,6 +440,7 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpecPublishConn
     public V1beta1BucketIntelligentTieringConfigurationSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1BucketIntelligentTieringConfigurationSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -437,6 +456,7 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpecPublishConn
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1BucketIntelligentTieringConfigurationSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -452,6 +472,7 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpecPublishConn
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1BucketIntelligentTieringConfigurationSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -463,6 +484,7 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpecWriteConnec
     public string Namespace { get; set; }
 }
 
+/// <summary>BucketIntelligentTieringConfigurationSpec defines the desired state of BucketIntelligentTieringConfiguration</summary>
 public partial class V1beta1BucketIntelligentTieringConfigurationSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -495,6 +517,7 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpec
     public V1beta1BucketIntelligentTieringConfigurationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketIntelligentTieringConfigurationStatusAtProviderFilter
 {
     /// <summary>Object key name prefix that identifies the subset of objects to which the configuration applies.</summary>
@@ -506,6 +529,7 @@ public partial class V1beta1BucketIntelligentTieringConfigurationStatusAtProvide
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketIntelligentTieringConfigurationStatusAtProviderTiering
 {
     /// <summary>S3 Intelligent-Tiering access tier. Valid values: ARCHIVE_ACCESS, DEEP_ARCHIVE_ACCESS.</summary>
@@ -517,6 +541,7 @@ public partial class V1beta1BucketIntelligentTieringConfigurationStatusAtProvide
     public double? Days { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketIntelligentTieringConfigurationStatusAtProvider
 {
     /// <summary>Name of the bucket this intelligent tiering configuration is associated with.</summary>
@@ -544,6 +569,7 @@ public partial class V1beta1BucketIntelligentTieringConfigurationStatusAtProvide
     public IList<V1beta1BucketIntelligentTieringConfigurationStatusAtProviderTiering>? Tiering { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1BucketIntelligentTieringConfigurationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -571,6 +597,7 @@ public partial class V1beta1BucketIntelligentTieringConfigurationStatusCondition
     public string Type { get; set; }
 }
 
+/// <summary>BucketIntelligentTieringConfigurationStatus defines the observed state of BucketIntelligentTieringConfiguration.</summary>
 public partial class V1beta1BucketIntelligentTieringConfigurationStatus
 {
     /// <summary></summary>
@@ -587,6 +614,7 @@ public partial class V1beta1BucketIntelligentTieringConfigurationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>BucketIntelligentTieringConfiguration is the Schema for the BucketIntelligentTieringConfigurations API. Provides an S3 Intelligent-Tiering configuration resource.</summary>
 public partial class V1beta1BucketIntelligentTieringConfiguration : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BucketIntelligentTieringConfigurationSpec>, IStatus<V1beta1BucketIntelligentTieringConfigurationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

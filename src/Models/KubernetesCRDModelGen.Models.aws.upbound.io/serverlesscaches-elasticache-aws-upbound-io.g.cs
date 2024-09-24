@@ -18,6 +18,7 @@ public enum V1beta1ServerlessCacheSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1ServerlessCacheSpecForProviderCacheUsageLimitsDataStorage
 {
     /// <summary>The upper limit for data storage the cache is set to use. Must be between 1 and 5,000.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1ServerlessCacheSpecForProviderCacheUsageLimitsDataSt
     public string? Unit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServerlessCacheSpecForProviderCacheUsageLimitsEcpuPerSecond
 {
     /// <summary>The upper limit for data storage the cache is set to use. Must be between 1 and 5,000.</summary>
@@ -44,6 +46,7 @@ public partial class V1beta1ServerlessCacheSpecForProviderCacheUsageLimitsEcpuPe
     public double? Minimum { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServerlessCacheSpecForProviderCacheUsageLimits
 {
     /// <summary>The maximum data storage limit in the cache, expressed in Gigabytes. See Data Storage config for more details.</summary>
@@ -75,6 +78,7 @@ public enum V1beta1ServerlessCacheSpecForProviderKmsKeyIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServerlessCacheSpecForProviderKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -88,6 +92,7 @@ public partial class V1beta1ServerlessCacheSpecForProviderKmsKeyIdRefPolicy
     public V1beta1ServerlessCacheSpecForProviderKmsKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1ServerlessCacheSpecForProviderKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -119,6 +124,7 @@ public enum V1beta1ServerlessCacheSpecForProviderKmsKeyIdSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServerlessCacheSpecForProviderKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -132,6 +138,7 @@ public partial class V1beta1ServerlessCacheSpecForProviderKmsKeyIdSelectorPolicy
     public V1beta1ServerlessCacheSpecForProviderKmsKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1ServerlessCacheSpecForProviderKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -167,6 +174,7 @@ public enum V1beta1ServerlessCacheSpecForProviderSecurityGroupIdRefsPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServerlessCacheSpecForProviderSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -180,6 +188,7 @@ public partial class V1beta1ServerlessCacheSpecForProviderSecurityGroupIdRefsPol
     public V1beta1ServerlessCacheSpecForProviderSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1ServerlessCacheSpecForProviderSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -211,6 +220,7 @@ public enum V1beta1ServerlessCacheSpecForProviderSecurityGroupIdSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServerlessCacheSpecForProviderSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -224,6 +234,7 @@ public partial class V1beta1ServerlessCacheSpecForProviderSecurityGroupIdSelecto
     public V1beta1ServerlessCacheSpecForProviderSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 public partial class V1beta1ServerlessCacheSpecForProviderSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -259,6 +270,7 @@ public enum V1beta1ServerlessCacheSpecForProviderSubnetIdRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServerlessCacheSpecForProviderSubnetIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -272,6 +284,7 @@ public partial class V1beta1ServerlessCacheSpecForProviderSubnetIdRefsPolicy
     public V1beta1ServerlessCacheSpecForProviderSubnetIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1ServerlessCacheSpecForProviderSubnetIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -303,6 +316,7 @@ public enum V1beta1ServerlessCacheSpecForProviderSubnetIdSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServerlessCacheSpecForProviderSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -316,6 +330,7 @@ public partial class V1beta1ServerlessCacheSpecForProviderSubnetIdSelectorPolicy
     public V1beta1ServerlessCacheSpecForProviderSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 public partial class V1beta1ServerlessCacheSpecForProviderSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -331,6 +346,7 @@ public partial class V1beta1ServerlessCacheSpecForProviderSubnetIdSelector
     public V1beta1ServerlessCacheSpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServerlessCacheSpecForProvider
 {
     /// <summary>Sets the cache usage limits for storage and ElastiCache Processing Units for the cache. See configuration below.</summary>
@@ -410,6 +426,7 @@ public partial class V1beta1ServerlessCacheSpecForProvider
     public string? UserGroupId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServerlessCacheSpecInitProviderCacheUsageLimitsDataStorage
 {
     /// <summary>The upper limit for data storage the cache is set to use. Must be between 1 and 5,000.</summary>
@@ -425,6 +442,7 @@ public partial class V1beta1ServerlessCacheSpecInitProviderCacheUsageLimitsDataS
     public string? Unit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServerlessCacheSpecInitProviderCacheUsageLimitsEcpuPerSecond
 {
     /// <summary>The upper limit for data storage the cache is set to use. Must be between 1 and 5,000.</summary>
@@ -436,6 +454,7 @@ public partial class V1beta1ServerlessCacheSpecInitProviderCacheUsageLimitsEcpuP
     public double? Minimum { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServerlessCacheSpecInitProviderCacheUsageLimits
 {
     /// <summary>The maximum data storage limit in the cache, expressed in Gigabytes. See Data Storage config for more details.</summary>
@@ -467,6 +486,7 @@ public enum V1beta1ServerlessCacheSpecInitProviderKmsKeyIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServerlessCacheSpecInitProviderKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -480,6 +500,7 @@ public partial class V1beta1ServerlessCacheSpecInitProviderKmsKeyIdRefPolicy
     public V1beta1ServerlessCacheSpecInitProviderKmsKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1ServerlessCacheSpecInitProviderKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -511,6 +532,7 @@ public enum V1beta1ServerlessCacheSpecInitProviderKmsKeyIdSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServerlessCacheSpecInitProviderKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -524,6 +546,7 @@ public partial class V1beta1ServerlessCacheSpecInitProviderKmsKeyIdSelectorPolic
     public V1beta1ServerlessCacheSpecInitProviderKmsKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1ServerlessCacheSpecInitProviderKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -559,6 +582,7 @@ public enum V1beta1ServerlessCacheSpecInitProviderSecurityGroupIdRefsPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServerlessCacheSpecInitProviderSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -572,6 +596,7 @@ public partial class V1beta1ServerlessCacheSpecInitProviderSecurityGroupIdRefsPo
     public V1beta1ServerlessCacheSpecInitProviderSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1ServerlessCacheSpecInitProviderSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -603,6 +628,7 @@ public enum V1beta1ServerlessCacheSpecInitProviderSecurityGroupIdSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServerlessCacheSpecInitProviderSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -616,6 +642,7 @@ public partial class V1beta1ServerlessCacheSpecInitProviderSecurityGroupIdSelect
     public V1beta1ServerlessCacheSpecInitProviderSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 public partial class V1beta1ServerlessCacheSpecInitProviderSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -651,6 +678,7 @@ public enum V1beta1ServerlessCacheSpecInitProviderSubnetIdRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServerlessCacheSpecInitProviderSubnetIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -664,6 +692,7 @@ public partial class V1beta1ServerlessCacheSpecInitProviderSubnetIdRefsPolicy
     public V1beta1ServerlessCacheSpecInitProviderSubnetIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1ServerlessCacheSpecInitProviderSubnetIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -695,6 +724,7 @@ public enum V1beta1ServerlessCacheSpecInitProviderSubnetIdSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServerlessCacheSpecInitProviderSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -708,6 +738,7 @@ public partial class V1beta1ServerlessCacheSpecInitProviderSubnetIdSelectorPolic
     public V1beta1ServerlessCacheSpecInitProviderSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 public partial class V1beta1ServerlessCacheSpecInitProviderSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -723,6 +754,7 @@ public partial class V1beta1ServerlessCacheSpecInitProviderSubnetIdSelector
     public V1beta1ServerlessCacheSpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ServerlessCacheSpecInitProvider
 {
     /// <summary>Sets the cache usage limits for storage and ElastiCache Processing Units for the cache. See configuration below.</summary>
@@ -840,6 +872,7 @@ public enum V1beta1ServerlessCacheSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServerlessCacheSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -853,6 +886,7 @@ public partial class V1beta1ServerlessCacheSpecProviderConfigRefPolicy
     public V1beta1ServerlessCacheSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ServerlessCacheSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -884,6 +918,7 @@ public enum V1beta1ServerlessCacheSpecPublishConnectionDetailsToConfigRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServerlessCacheSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -897,6 +932,7 @@ public partial class V1beta1ServerlessCacheSpecPublishConnectionDetailsToConfigR
     public V1beta1ServerlessCacheSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ServerlessCacheSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -908,6 +944,7 @@ public partial class V1beta1ServerlessCacheSpecPublishConnectionDetailsToConfigR
     public V1beta1ServerlessCacheSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ServerlessCacheSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -923,6 +960,7 @@ public partial class V1beta1ServerlessCacheSpecPublishConnectionDetailsToMetadat
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ServerlessCacheSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -938,6 +976,7 @@ public partial class V1beta1ServerlessCacheSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ServerlessCacheSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -949,6 +988,7 @@ public partial class V1beta1ServerlessCacheSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ServerlessCacheSpec defines the desired state of ServerlessCache</summary>
 public partial class V1beta1ServerlessCacheSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -981,6 +1021,7 @@ public partial class V1beta1ServerlessCacheSpec
     public V1beta1ServerlessCacheSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServerlessCacheStatusAtProviderCacheUsageLimitsDataStorage
 {
     /// <summary>The upper limit for data storage the cache is set to use. Must be between 1 and 5,000.</summary>
@@ -996,6 +1037,7 @@ public partial class V1beta1ServerlessCacheStatusAtProviderCacheUsageLimitsDataS
     public string? Unit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServerlessCacheStatusAtProviderCacheUsageLimitsEcpuPerSecond
 {
     /// <summary>The upper limit for data storage the cache is set to use. Must be between 1 and 5,000.</summary>
@@ -1007,6 +1049,7 @@ public partial class V1beta1ServerlessCacheStatusAtProviderCacheUsageLimitsEcpuP
     public double? Minimum { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServerlessCacheStatusAtProviderCacheUsageLimits
 {
     /// <summary>The maximum data storage limit in the cache, expressed in Gigabytes. See Data Storage config for more details.</summary>
@@ -1018,6 +1061,7 @@ public partial class V1beta1ServerlessCacheStatusAtProviderCacheUsageLimits
     public IList<V1beta1ServerlessCacheStatusAtProviderCacheUsageLimitsEcpuPerSecond>? EcpuPerSecond { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServerlessCacheStatusAtProviderEndpoint
 {
     /// <summary>The DNS hostname of the cache node.</summary>
@@ -1029,6 +1073,7 @@ public partial class V1beta1ServerlessCacheStatusAtProviderEndpoint
     public double? Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServerlessCacheStatusAtProviderReaderEndpoint
 {
     /// <summary>The DNS hostname of the cache node.</summary>
@@ -1040,6 +1085,7 @@ public partial class V1beta1ServerlessCacheStatusAtProviderReaderEndpoint
     public double? Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServerlessCacheStatusAtProvider
 {
     /// <summary>The Amazon Resource Name (ARN) of the serverless cache.</summary>
@@ -1123,6 +1169,7 @@ public partial class V1beta1ServerlessCacheStatusAtProvider
     public string? UserGroupId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ServerlessCacheStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1150,6 +1197,7 @@ public partial class V1beta1ServerlessCacheStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ServerlessCacheStatus defines the observed state of ServerlessCache.</summary>
 public partial class V1beta1ServerlessCacheStatus
 {
     /// <summary></summary>
@@ -1166,6 +1214,7 @@ public partial class V1beta1ServerlessCacheStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ServerlessCache is the Schema for the ServerlessCaches API. Provides an ElastiCache Serverless Cache resource.</summary>
 public partial class V1beta1ServerlessCache : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ServerlessCacheSpec>, IStatus<V1beta1ServerlessCacheStatus>
 {
     public const string KubeApiVersion = "v1beta1";

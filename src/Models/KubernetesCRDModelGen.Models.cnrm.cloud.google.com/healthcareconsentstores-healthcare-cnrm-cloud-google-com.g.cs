@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.healthcare.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1alpha1HealthcareConsentStoreSpec
 {
     /// <summary>Immutable. Identifies the dataset addressed by this request. Must be in the format 'projects/{project}/locations/{location}/datasets/{dataset}'.</summary>
@@ -27,6 +28,7 @@ public partial class V1alpha1HealthcareConsentStoreSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1HealthcareConsentStoreStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -50,6 +52,7 @@ public partial class V1alpha1HealthcareConsentStoreStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1HealthcareConsentStoreStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -62,6 +65,7 @@ public partial class V1alpha1HealthcareConsentStoreStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1HealthcareConsentStore : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1HealthcareConsentStoreSpec>, IStatus<V1alpha1HealthcareConsentStoreStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.insights.azure.com;
+/// <summary>Storage version of v1api20230101.ArmRoleReceiver An arm role receiver.</summary>
 public partial class V1api20230101storageActionGroupSpecArmRoleReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -27,6 +28,7 @@ public partial class V1api20230101storageActionGroupSpecArmRoleReceivers
     public bool? UseCommonAlertSchema { get; set; }
 }
 
+/// <summary>WebhookResourceReference: The resource id for webhook linked to this runbook.</summary>
 public partial class V1api20230101storageActionGroupSpecAutomationRunbookReceiversWebhookResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -46,6 +48,7 @@ public partial class V1api20230101storageActionGroupSpecAutomationRunbookReceive
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.AutomationRunbookReceiver The Azure Automation Runbook notification receiver.</summary>
 public partial class V1api20230101storageActionGroupSpecAutomationRunbookReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -81,6 +84,7 @@ public partial class V1api20230101storageActionGroupSpecAutomationRunbookReceive
     public V1api20230101storageActionGroupSpecAutomationRunbookReceiversWebhookResourceReference WebhookResourceReference { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.AzureAppPushReceiver The Azure mobile App push notification receiver.</summary>
 public partial class V1api20230101storageActionGroupSpecAzureAppPushReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -96,6 +100,7 @@ public partial class V1api20230101storageActionGroupSpecAzureAppPushReceivers
     public string? Name { get; set; }
 }
 
+/// <summary>FunctionAppResourceReference: The azure resource id of the function app.</summary>
 public partial class V1api20230101storageActionGroupSpecAzureFunctionReceiversFunctionAppResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -115,6 +120,7 @@ public partial class V1api20230101storageActionGroupSpecAzureFunctionReceiversFu
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.AzureFunctionReceiver An azure function receiver.</summary>
 public partial class V1api20230101storageActionGroupSpecAzureFunctionReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -142,6 +148,7 @@ public partial class V1api20230101storageActionGroupSpecAzureFunctionReceivers
     public bool? UseCommonAlertSchema { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.EmailReceiver An email receiver.</summary>
 public partial class V1api20230101storageActionGroupSpecEmailReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -161,6 +168,7 @@ public partial class V1api20230101storageActionGroupSpecEmailReceivers
     public bool? UseCommonAlertSchema { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.EventHubReceiver An Event hub receiver.</summary>
 public partial class V1api20230101storageActionGroupSpecEventHubReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -192,6 +200,7 @@ public partial class V1api20230101storageActionGroupSpecEventHubReceivers
     public bool? UseCommonAlertSchema { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.ItsmReceiver An Itsm receiver.</summary>
 public partial class V1api20230101storageActionGroupSpecItsmReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -219,6 +228,7 @@ public partial class V1api20230101storageActionGroupSpecItsmReceivers
     public string? WorkspaceId { get; set; }
 }
 
+/// <summary>ResourceReference: The azure resource id of the logic app receiver.</summary>
 public partial class V1api20230101storageActionGroupSpecLogicAppReceiversResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -238,6 +248,7 @@ public partial class V1api20230101storageActionGroupSpecLogicAppReceiversResourc
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.LogicAppReceiver A logic app receiver.</summary>
 public partial class V1api20230101storageActionGroupSpecLogicAppReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -261,6 +272,7 @@ public partial class V1api20230101storageActionGroupSpecLogicAppReceivers
     public bool? UseCommonAlertSchema { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20230101storageActionGroupSpecOwner
 {
     /// <summary></summary>
@@ -272,6 +284,7 @@ public partial class V1api20230101storageActionGroupSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.SmsReceiver An SMS receiver.</summary>
 public partial class V1api20230101storageActionGroupSpecSmsReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -291,6 +304,7 @@ public partial class V1api20230101storageActionGroupSpecSmsReceivers
     public string? PhoneNumber { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.VoiceReceiver A voice receiver.</summary>
 public partial class V1api20230101storageActionGroupSpecVoiceReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -310,6 +324,7 @@ public partial class V1api20230101storageActionGroupSpecVoiceReceivers
     public string? PhoneNumber { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.WebhookReceiver A webhook receiver.</summary>
 public partial class V1api20230101storageActionGroupSpecWebhookReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -345,6 +360,7 @@ public partial class V1api20230101storageActionGroupSpecWebhookReceivers
     public bool? UseCommonAlertSchema { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.ActionGroup_Spec</summary>
 public partial class V1api20230101storageActionGroupSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -424,6 +440,7 @@ public partial class V1api20230101storageActionGroupSpec
     public IList<V1api20230101storageActionGroupSpecWebhookReceivers>? WebhookReceivers { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.ArmRoleReceiver_STATUS An arm role receiver.</summary>
 public partial class V1api20230101storageActionGroupStatusArmRoleReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -443,6 +460,7 @@ public partial class V1api20230101storageActionGroupStatusArmRoleReceivers
     public bool? UseCommonAlertSchema { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.AutomationRunbookReceiver_STATUS The Azure Automation Runbook notification receiver.</summary>
 public partial class V1api20230101storageActionGroupStatusAutomationRunbookReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -478,6 +496,7 @@ public partial class V1api20230101storageActionGroupStatusAutomationRunbookRecei
     public string? WebhookResourceId { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.AzureAppPushReceiver_STATUS The Azure mobile App push notification receiver.</summary>
 public partial class V1api20230101storageActionGroupStatusAzureAppPushReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -493,6 +512,7 @@ public partial class V1api20230101storageActionGroupStatusAzureAppPushReceivers
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.AzureFunctionReceiver_STATUS An azure function receiver.</summary>
 public partial class V1api20230101storageActionGroupStatusAzureFunctionReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -520,6 +540,7 @@ public partial class V1api20230101storageActionGroupStatusAzureFunctionReceivers
     public bool? UseCommonAlertSchema { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20230101storageActionGroupStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -551,6 +572,7 @@ public partial class V1api20230101storageActionGroupStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.EmailReceiver_STATUS An email receiver.</summary>
 public partial class V1api20230101storageActionGroupStatusEmailReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -574,6 +596,7 @@ public partial class V1api20230101storageActionGroupStatusEmailReceivers
     public bool? UseCommonAlertSchema { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.EventHubReceiver_STATUS An Event hub receiver.</summary>
 public partial class V1api20230101storageActionGroupStatusEventHubReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -605,6 +628,7 @@ public partial class V1api20230101storageActionGroupStatusEventHubReceivers
     public bool? UseCommonAlertSchema { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.ItsmReceiver_STATUS An Itsm receiver.</summary>
 public partial class V1api20230101storageActionGroupStatusItsmReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -632,6 +656,7 @@ public partial class V1api20230101storageActionGroupStatusItsmReceivers
     public string? WorkspaceId { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.LogicAppReceiver_STATUS A logic app receiver.</summary>
 public partial class V1api20230101storageActionGroupStatusLogicAppReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -655,6 +680,7 @@ public partial class V1api20230101storageActionGroupStatusLogicAppReceivers
     public bool? UseCommonAlertSchema { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.SmsReceiver_STATUS An SMS receiver.</summary>
 public partial class V1api20230101storageActionGroupStatusSmsReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -678,6 +704,7 @@ public partial class V1api20230101storageActionGroupStatusSmsReceivers
     public string? Status { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.VoiceReceiver_STATUS A voice receiver.</summary>
 public partial class V1api20230101storageActionGroupStatusVoiceReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -697,6 +724,7 @@ public partial class V1api20230101storageActionGroupStatusVoiceReceivers
     public string? PhoneNumber { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.WebhookReceiver_STATUS A webhook receiver.</summary>
 public partial class V1api20230101storageActionGroupStatusWebhookReceivers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -732,6 +760,7 @@ public partial class V1api20230101storageActionGroupStatusWebhookReceivers
     public bool? UseCommonAlertSchema { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.ActionGroupResource_STATUS An action group resource.</summary>
 public partial class V1api20230101storageActionGroupStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -816,6 +845,7 @@ public partial class V1api20230101storageActionGroupStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20230101.ActionGroup Generator information: - Generated from: /monitor/resource-manager/Microsoft.Insights/stable/2023-01-01/actionGroups_API.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/actionGroups/{actionGroupName}</summary>
 public partial class V1api20230101storageActionGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230101storageActionGroupSpec>, IStatus<V1api20230101storageActionGroupStatus>
 {
     public const string KubeApiVersion = "v1api20230101storage";

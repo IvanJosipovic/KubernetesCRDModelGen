@@ -18,6 +18,7 @@ public enum V1beta1RailsAppLayerSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1RailsAppLayerSpecForProviderCloudwatchConfigurationLogStreams
 {
     /// <summary></summary>
@@ -65,6 +66,7 @@ public partial class V1beta1RailsAppLayerSpecForProviderCloudwatchConfigurationL
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RailsAppLayerSpecForProviderCloudwatchConfiguration
 {
     /// <summary></summary>
@@ -96,6 +98,7 @@ public enum V1beta1RailsAppLayerSpecForProviderCustomSecurityGroupIdRefsPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RailsAppLayerSpecForProviderCustomSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -109,6 +112,7 @@ public partial class V1beta1RailsAppLayerSpecForProviderCustomSecurityGroupIdRef
     public V1beta1RailsAppLayerSpecForProviderCustomSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1RailsAppLayerSpecForProviderCustomSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -140,6 +144,7 @@ public enum V1beta1RailsAppLayerSpecForProviderCustomSecurityGroupIdSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RailsAppLayerSpecForProviderCustomSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -153,6 +158,7 @@ public partial class V1beta1RailsAppLayerSpecForProviderCustomSecurityGroupIdSel
     public V1beta1RailsAppLayerSpecForProviderCustomSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate customSecurityGroupIds.</summary>
 public partial class V1beta1RailsAppLayerSpecForProviderCustomSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -168,6 +174,7 @@ public partial class V1beta1RailsAppLayerSpecForProviderCustomSecurityGroupIdSel
     public V1beta1RailsAppLayerSpecForProviderCustomSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RailsAppLayerSpecForProviderEbsVolume
 {
     /// <summary></summary>
@@ -199,6 +206,7 @@ public partial class V1beta1RailsAppLayerSpecForProviderEbsVolume
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RailsAppLayerSpecForProviderLoadBasedAutoScalingDownscaling
 {
     /// <summary></summary>
@@ -230,6 +238,7 @@ public partial class V1beta1RailsAppLayerSpecForProviderLoadBasedAutoScalingDown
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RailsAppLayerSpecForProviderLoadBasedAutoScalingUpscaling
 {
     /// <summary></summary>
@@ -261,6 +270,7 @@ public partial class V1beta1RailsAppLayerSpecForProviderLoadBasedAutoScalingUpsc
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RailsAppLayerSpecForProviderLoadBasedAutoScaling
 {
     /// <summary></summary>
@@ -296,6 +306,7 @@ public enum V1beta1RailsAppLayerSpecForProviderStackIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RailsAppLayerSpecForProviderStackIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -309,6 +320,7 @@ public partial class V1beta1RailsAppLayerSpecForProviderStackIdRefPolicy
     public V1beta1RailsAppLayerSpecForProviderStackIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Stack in opsworks to populate stackId.</summary>
 public partial class V1beta1RailsAppLayerSpecForProviderStackIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -340,6 +352,7 @@ public enum V1beta1RailsAppLayerSpecForProviderStackIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RailsAppLayerSpecForProviderStackIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -353,6 +366,7 @@ public partial class V1beta1RailsAppLayerSpecForProviderStackIdSelectorPolicy
     public V1beta1RailsAppLayerSpecForProviderStackIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Stack in opsworks to populate stackId.</summary>
 public partial class V1beta1RailsAppLayerSpecForProviderStackIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -368,6 +382,7 @@ public partial class V1beta1RailsAppLayerSpecForProviderStackIdSelector
     public V1beta1RailsAppLayerSpecForProviderStackIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RailsAppLayerSpecForProvider
 {
     /// <summary>Keyword for the app server to use. Defaults to "apache_passenger".</summary>
@@ -503,6 +518,7 @@ public partial class V1beta1RailsAppLayerSpecForProvider
     public bool? UseEbsOptimizedInstances { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RailsAppLayerSpecInitProviderCloudwatchConfigurationLogStreams
 {
     /// <summary></summary>
@@ -550,6 +566,7 @@ public partial class V1beta1RailsAppLayerSpecInitProviderCloudwatchConfiguration
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RailsAppLayerSpecInitProviderCloudwatchConfiguration
 {
     /// <summary></summary>
@@ -581,6 +598,7 @@ public enum V1beta1RailsAppLayerSpecInitProviderCustomSecurityGroupIdRefsPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RailsAppLayerSpecInitProviderCustomSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -594,6 +612,7 @@ public partial class V1beta1RailsAppLayerSpecInitProviderCustomSecurityGroupIdRe
     public V1beta1RailsAppLayerSpecInitProviderCustomSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1RailsAppLayerSpecInitProviderCustomSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -625,6 +644,7 @@ public enum V1beta1RailsAppLayerSpecInitProviderCustomSecurityGroupIdSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RailsAppLayerSpecInitProviderCustomSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -638,6 +658,7 @@ public partial class V1beta1RailsAppLayerSpecInitProviderCustomSecurityGroupIdSe
     public V1beta1RailsAppLayerSpecInitProviderCustomSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate customSecurityGroupIds.</summary>
 public partial class V1beta1RailsAppLayerSpecInitProviderCustomSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -653,6 +674,7 @@ public partial class V1beta1RailsAppLayerSpecInitProviderCustomSecurityGroupIdSe
     public V1beta1RailsAppLayerSpecInitProviderCustomSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RailsAppLayerSpecInitProviderEbsVolume
 {
     /// <summary></summary>
@@ -684,6 +706,7 @@ public partial class V1beta1RailsAppLayerSpecInitProviderEbsVolume
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RailsAppLayerSpecInitProviderLoadBasedAutoScalingDownscaling
 {
     /// <summary></summary>
@@ -715,6 +738,7 @@ public partial class V1beta1RailsAppLayerSpecInitProviderLoadBasedAutoScalingDow
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RailsAppLayerSpecInitProviderLoadBasedAutoScalingUpscaling
 {
     /// <summary></summary>
@@ -746,6 +770,7 @@ public partial class V1beta1RailsAppLayerSpecInitProviderLoadBasedAutoScalingUps
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RailsAppLayerSpecInitProviderLoadBasedAutoScaling
 {
     /// <summary></summary>
@@ -781,6 +806,7 @@ public enum V1beta1RailsAppLayerSpecInitProviderStackIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RailsAppLayerSpecInitProviderStackIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -794,6 +820,7 @@ public partial class V1beta1RailsAppLayerSpecInitProviderStackIdRefPolicy
     public V1beta1RailsAppLayerSpecInitProviderStackIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Stack in opsworks to populate stackId.</summary>
 public partial class V1beta1RailsAppLayerSpecInitProviderStackIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -825,6 +852,7 @@ public enum V1beta1RailsAppLayerSpecInitProviderStackIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RailsAppLayerSpecInitProviderStackIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -838,6 +866,7 @@ public partial class V1beta1RailsAppLayerSpecInitProviderStackIdSelectorPolicy
     public V1beta1RailsAppLayerSpecInitProviderStackIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Stack in opsworks to populate stackId.</summary>
 public partial class V1beta1RailsAppLayerSpecInitProviderStackIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -853,6 +882,7 @@ public partial class V1beta1RailsAppLayerSpecInitProviderStackIdSelector
     public V1beta1RailsAppLayerSpecInitProviderStackIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1RailsAppLayerSpecInitProvider
 {
     /// <summary>Keyword for the app server to use. Defaults to "apache_passenger".</summary>
@@ -1030,6 +1060,7 @@ public enum V1beta1RailsAppLayerSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RailsAppLayerSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1043,6 +1074,7 @@ public partial class V1beta1RailsAppLayerSpecProviderConfigRefPolicy
     public V1beta1RailsAppLayerSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1RailsAppLayerSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1074,6 +1106,7 @@ public enum V1beta1RailsAppLayerSpecPublishConnectionDetailsToConfigRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RailsAppLayerSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1087,6 +1120,7 @@ public partial class V1beta1RailsAppLayerSpecPublishConnectionDetailsToConfigRef
     public V1beta1RailsAppLayerSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1RailsAppLayerSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1098,6 +1132,7 @@ public partial class V1beta1RailsAppLayerSpecPublishConnectionDetailsToConfigRef
     public V1beta1RailsAppLayerSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1RailsAppLayerSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1113,6 +1148,7 @@ public partial class V1beta1RailsAppLayerSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1RailsAppLayerSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1128,6 +1164,7 @@ public partial class V1beta1RailsAppLayerSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1RailsAppLayerSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1139,6 +1176,7 @@ public partial class V1beta1RailsAppLayerSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>RailsAppLayerSpec defines the desired state of RailsAppLayer</summary>
 public partial class V1beta1RailsAppLayerSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1171,6 +1209,7 @@ public partial class V1beta1RailsAppLayerSpec
     public V1beta1RailsAppLayerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RailsAppLayerStatusAtProviderCloudwatchConfigurationLogStreams
 {
     /// <summary></summary>
@@ -1218,6 +1257,7 @@ public partial class V1beta1RailsAppLayerStatusAtProviderCloudwatchConfiguration
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RailsAppLayerStatusAtProviderCloudwatchConfiguration
 {
     /// <summary></summary>
@@ -1229,6 +1269,7 @@ public partial class V1beta1RailsAppLayerStatusAtProviderCloudwatchConfiguration
     public IList<V1beta1RailsAppLayerStatusAtProviderCloudwatchConfigurationLogStreams>? LogStreams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RailsAppLayerStatusAtProviderEbsVolume
 {
     /// <summary></summary>
@@ -1260,6 +1301,7 @@ public partial class V1beta1RailsAppLayerStatusAtProviderEbsVolume
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RailsAppLayerStatusAtProviderLoadBasedAutoScalingDownscaling
 {
     /// <summary></summary>
@@ -1291,6 +1333,7 @@ public partial class V1beta1RailsAppLayerStatusAtProviderLoadBasedAutoScalingDow
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RailsAppLayerStatusAtProviderLoadBasedAutoScalingUpscaling
 {
     /// <summary></summary>
@@ -1322,6 +1365,7 @@ public partial class V1beta1RailsAppLayerStatusAtProviderLoadBasedAutoScalingUps
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RailsAppLayerStatusAtProviderLoadBasedAutoScaling
 {
     /// <summary></summary>
@@ -1337,6 +1381,7 @@ public partial class V1beta1RailsAppLayerStatusAtProviderLoadBasedAutoScaling
     public IList<V1beta1RailsAppLayerStatusAtProviderLoadBasedAutoScalingUpscaling>? Upscaling { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RailsAppLayerStatusAtProvider
 {
     /// <summary>Keyword for the app server to use. Defaults to "apache_passenger".</summary>
@@ -1468,6 +1513,7 @@ public partial class V1beta1RailsAppLayerStatusAtProvider
     public bool? UseEbsOptimizedInstances { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1RailsAppLayerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1495,6 +1541,7 @@ public partial class V1beta1RailsAppLayerStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>RailsAppLayerStatus defines the observed state of RailsAppLayer.</summary>
 public partial class V1beta1RailsAppLayerStatus
 {
     /// <summary></summary>
@@ -1511,6 +1558,7 @@ public partial class V1beta1RailsAppLayerStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>RailsAppLayer is the Schema for the RailsAppLayers API. Provides an OpsWorks Ruby on Rails application layer resource.</summary>
 public partial class V1beta1RailsAppLayer : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1RailsAppLayerSpec>, IStatus<V1beta1RailsAppLayerStatus>
 {
     public const string KubeApiVersion = "v1beta1";

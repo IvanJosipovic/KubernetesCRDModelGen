@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceGroupSpecInstances
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeInstance` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1ComputeInstanceGroupSpecInstances
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceGroupSpecNamedPort
 {
     /// <summary>The name which the port will be mapped to.</summary>
@@ -34,6 +36,7 @@ public partial class V1beta1ComputeInstanceGroupSpecNamedPort
     public int Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceGroupSpecNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
@@ -49,6 +52,7 @@ public partial class V1beta1ComputeInstanceGroupSpecNetworkRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceGroupSpec
 {
     /// <summary>Immutable. An optional textual description of the instance group.</summary>
@@ -76,6 +80,7 @@ public partial class V1beta1ComputeInstanceGroupSpec
     public string Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceGroupStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -99,6 +104,7 @@ public partial class V1beta1ComputeInstanceGroupStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceGroupStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -119,6 +125,7 @@ public partial class V1beta1ComputeInstanceGroupStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeInstanceGroupSpec>, IStatus<V1beta1ComputeInstanceGroupStatus>
 {
     public const string KubeApiVersion = "v1beta1";

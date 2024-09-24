@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1alpha1ComputeInstanceGroupNamedPortSpecGroupRef
 {
     /// <summary>Allowed value: The `name` field of a `ComputeInstanceGroup` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1ComputeInstanceGroupNamedPortSpecGroupRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1ComputeInstanceGroupNamedPortSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -38,6 +40,7 @@ public partial class V1alpha1ComputeInstanceGroupNamedPortSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputeInstanceGroupNamedPortSpec
 {
     /// <summary></summary>
@@ -61,6 +64,7 @@ public partial class V1alpha1ComputeInstanceGroupNamedPortSpec
     public string Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputeInstanceGroupNamedPortStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -84,6 +88,7 @@ public partial class V1alpha1ComputeInstanceGroupNamedPortStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputeInstanceGroupNamedPortStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -96,6 +101,7 @@ public partial class V1alpha1ComputeInstanceGroupNamedPortStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1ComputeInstanceGroupNamedPort : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ComputeInstanceGroupNamedPortSpec>, IStatus<V1alpha1ComputeInstanceGroupNamedPortStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

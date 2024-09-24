@@ -18,6 +18,7 @@ public enum V1beta1InstanceSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderCapacityReservationSpecificationCapacityReservationTarget
 {
     /// <summary>ID of the Capacity Reservation in which to run the instance.</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1InstanceSpecForProviderCapacityReservationSpecificat
     public string? CapacityReservationResourceGroupArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderCapacityReservationSpecification
 {
     /// <summary>Indicates the instance's Capacity Reservation preferences. Can be "open" or "none". (Default: "open").</summary>
@@ -40,6 +42,7 @@ public partial class V1beta1InstanceSpecForProviderCapacityReservationSpecificat
     public IList<V1beta1InstanceSpecForProviderCapacityReservationSpecificationCapacityReservationTarget>? CapacityReservationTarget { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderCpuOptions
 {
     /// <summary>Indicates whether to enable the instance for AMD SEV-SNP. AMD SEV-SNP is supported with M6a, R6a, and C6a instance types only. Valid values are enabled and disabled.</summary>
@@ -55,6 +58,7 @@ public partial class V1beta1InstanceSpecForProviderCpuOptions
     public double? ThreadsPerCore { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderCreditSpecification
 {
     /// <summary>Credit option for CPU usage. Valid values include standard or unlimited. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.</summary>
@@ -82,6 +86,7 @@ public enum V1beta1InstanceSpecForProviderEbsBlockDeviceKmsKeyIdRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecForProviderEbsBlockDeviceKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +100,7 @@ public partial class V1beta1InstanceSpecForProviderEbsBlockDeviceKmsKeyIdRefPoli
     public V1beta1InstanceSpecForProviderEbsBlockDeviceKmsKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1InstanceSpecForProviderEbsBlockDeviceKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -126,6 +132,7 @@ public enum V1beta1InstanceSpecForProviderEbsBlockDeviceKmsKeyIdSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecForProviderEbsBlockDeviceKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -139,6 +146,7 @@ public partial class V1beta1InstanceSpecForProviderEbsBlockDeviceKmsKeyIdSelecto
     public V1beta1InstanceSpecForProviderEbsBlockDeviceKmsKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1InstanceSpecForProviderEbsBlockDeviceKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -154,6 +162,7 @@ public partial class V1beta1InstanceSpecForProviderEbsBlockDeviceKmsKeyIdSelecto
     public V1beta1InstanceSpecForProviderEbsBlockDeviceKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderEbsBlockDevice
 {
     /// <summary>Whether the volume should be destroyed on instance termination. Defaults to true.</summary>
@@ -209,6 +218,7 @@ public partial class V1beta1InstanceSpecForProviderEbsBlockDevice
     public string? VolumeType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderEnclaveOptions
 {
     /// <summary>Whether Nitro Enclaves will be enabled on the instance. Defaults to false.</summary>
@@ -216,6 +226,7 @@ public partial class V1beta1InstanceSpecForProviderEnclaveOptions
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderEphemeralBlockDevice
 {
     /// <summary>Name of the block device to mount on the instance.</summary>
@@ -231,6 +242,7 @@ public partial class V1beta1InstanceSpecForProviderEphemeralBlockDevice
     public string? VirtualName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderInstanceMarketOptionsSpotOptions
 {
     /// <summary>The behavior when a Spot Instance is interrupted. Valid values include hibernate, stop, terminate . The default is terminate.</summary>
@@ -250,6 +262,7 @@ public partial class V1beta1InstanceSpecForProviderInstanceMarketOptionsSpotOpti
     public string? ValidUntil { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderInstanceMarketOptions
 {
     /// <summary>Type of market for the instance. Valid value is spot. Defaults to spot. Required if spot_options is specified.</summary>
@@ -261,6 +274,7 @@ public partial class V1beta1InstanceSpecForProviderInstanceMarketOptions
     public IList<V1beta1InstanceSpecForProviderInstanceMarketOptionsSpotOptions>? SpotOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderLaunchTemplate
 {
     /// <summary>ID of the launch template. Conflicts with name.</summary>
@@ -276,6 +290,7 @@ public partial class V1beta1InstanceSpecForProviderLaunchTemplate
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderMaintenanceOptions
 {
     /// <summary>Automatic recovery behavior of the Instance. Can be "default" or "disabled". See Recover your instance for more details.</summary>
@@ -283,6 +298,7 @@ public partial class V1beta1InstanceSpecForProviderMaintenanceOptions
     public string? AutoRecovery { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderMetadataOptions
 {
     /// <summary>Whether the metadata service is available. Valid values include enabled or disabled. Defaults to enabled.</summary>
@@ -326,6 +342,7 @@ public enum V1beta1InstanceSpecForProviderNetworkInterfaceNetworkInterfaceIdRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecForProviderNetworkInterfaceNetworkInterfaceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -339,6 +356,7 @@ public partial class V1beta1InstanceSpecForProviderNetworkInterfaceNetworkInterf
     public V1beta1InstanceSpecForProviderNetworkInterfaceNetworkInterfaceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a NetworkInterface in ec2 to populate networkInterfaceId.</summary>
 public partial class V1beta1InstanceSpecForProviderNetworkInterfaceNetworkInterfaceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -370,6 +388,7 @@ public enum V1beta1InstanceSpecForProviderNetworkInterfaceNetworkInterfaceIdSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecForProviderNetworkInterfaceNetworkInterfaceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -383,6 +402,7 @@ public partial class V1beta1InstanceSpecForProviderNetworkInterfaceNetworkInterf
     public V1beta1InstanceSpecForProviderNetworkInterfaceNetworkInterfaceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a NetworkInterface in ec2 to populate networkInterfaceId.</summary>
 public partial class V1beta1InstanceSpecForProviderNetworkInterfaceNetworkInterfaceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -398,6 +418,7 @@ public partial class V1beta1InstanceSpecForProviderNetworkInterfaceNetworkInterf
     public V1beta1InstanceSpecForProviderNetworkInterfaceNetworkInterfaceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderNetworkInterface
 {
     /// <summary>Whether or not to delete the network interface on instance termination. Defaults to false. Currently, the only valid value is false, as this is only supported when creating new network interfaces when launching an instance.</summary>
@@ -425,6 +446,7 @@ public partial class V1beta1InstanceSpecForProviderNetworkInterface
     public V1beta1InstanceSpecForProviderNetworkInterfaceNetworkInterfaceIdSelector? NetworkInterfaceIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderPrivateDnsNameOptions
 {
     /// <summary>Indicates whether to respond to DNS queries for instance hostnames with DNS A records.</summary>
@@ -460,6 +482,7 @@ public enum V1beta1InstanceSpecForProviderRootBlockDeviceKmsKeyIdRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecForProviderRootBlockDeviceKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -473,6 +496,7 @@ public partial class V1beta1InstanceSpecForProviderRootBlockDeviceKmsKeyIdRefPol
     public V1beta1InstanceSpecForProviderRootBlockDeviceKmsKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1InstanceSpecForProviderRootBlockDeviceKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -504,6 +528,7 @@ public enum V1beta1InstanceSpecForProviderRootBlockDeviceKmsKeyIdSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecForProviderRootBlockDeviceKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -517,6 +542,7 @@ public partial class V1beta1InstanceSpecForProviderRootBlockDeviceKmsKeyIdSelect
     public V1beta1InstanceSpecForProviderRootBlockDeviceKmsKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1InstanceSpecForProviderRootBlockDeviceKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -532,6 +558,7 @@ public partial class V1beta1InstanceSpecForProviderRootBlockDeviceKmsKeyIdSelect
     public V1beta1InstanceSpecForProviderRootBlockDeviceKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderRootBlockDevice
 {
     /// <summary>Whether the volume should be destroyed on instance termination. Defaults to true.</summary>
@@ -599,6 +626,7 @@ public enum V1beta1InstanceSpecForProviderSubnetIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecForProviderSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -612,6 +640,7 @@ public partial class V1beta1InstanceSpecForProviderSubnetIdRefPolicy
     public V1beta1InstanceSpecForProviderSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
 public partial class V1beta1InstanceSpecForProviderSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -643,6 +672,7 @@ public enum V1beta1InstanceSpecForProviderSubnetIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecForProviderSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -656,6 +686,7 @@ public partial class V1beta1InstanceSpecForProviderSubnetIdSelectorPolicy
     public V1beta1InstanceSpecForProviderSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
 public partial class V1beta1InstanceSpecForProviderSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -691,6 +722,7 @@ public enum V1beta1InstanceSpecForProviderVpcSecurityGroupIdRefsPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecForProviderVpcSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -704,6 +736,7 @@ public partial class V1beta1InstanceSpecForProviderVpcSecurityGroupIdRefsPolicy
     public V1beta1InstanceSpecForProviderVpcSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1InstanceSpecForProviderVpcSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -735,6 +768,7 @@ public enum V1beta1InstanceSpecForProviderVpcSecurityGroupIdSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecForProviderVpcSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -748,6 +782,7 @@ public partial class V1beta1InstanceSpecForProviderVpcSecurityGroupIdSelectorPol
     public V1beta1InstanceSpecForProviderVpcSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate vpcSecurityGroupIds.</summary>
 public partial class V1beta1InstanceSpecForProviderVpcSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -763,6 +798,7 @@ public partial class V1beta1InstanceSpecForProviderVpcSecurityGroupIdSelector
     public V1beta1InstanceSpecForProviderVpcSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProvider
 {
     /// <summary>AMI to use for the instance. Required unless launch_template is specified and the Launch Template specifes an AMI. If an AMI is specified in the Launch Template, setting ami will override the AMI specified in the Launch Template.</summary>
@@ -966,6 +1002,7 @@ public partial class V1beta1InstanceSpecForProvider
     public IList<string>? VpcSecurityGroupIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderCapacityReservationSpecificationCapacityReservationTarget
 {
     /// <summary>ID of the Capacity Reservation in which to run the instance.</summary>
@@ -977,6 +1014,7 @@ public partial class V1beta1InstanceSpecInitProviderCapacityReservationSpecifica
     public string? CapacityReservationResourceGroupArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderCapacityReservationSpecification
 {
     /// <summary>Indicates the instance's Capacity Reservation preferences. Can be "open" or "none". (Default: "open").</summary>
@@ -988,6 +1026,7 @@ public partial class V1beta1InstanceSpecInitProviderCapacityReservationSpecifica
     public IList<V1beta1InstanceSpecInitProviderCapacityReservationSpecificationCapacityReservationTarget>? CapacityReservationTarget { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderCpuOptions
 {
     /// <summary>Indicates whether to enable the instance for AMD SEV-SNP. AMD SEV-SNP is supported with M6a, R6a, and C6a instance types only. Valid values are enabled and disabled.</summary>
@@ -1003,6 +1042,7 @@ public partial class V1beta1InstanceSpecInitProviderCpuOptions
     public double? ThreadsPerCore { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderCreditSpecification
 {
     /// <summary>Credit option for CPU usage. Valid values include standard or unlimited. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.</summary>
@@ -1030,6 +1070,7 @@ public enum V1beta1InstanceSpecInitProviderEbsBlockDeviceKmsKeyIdRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecInitProviderEbsBlockDeviceKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1043,6 +1084,7 @@ public partial class V1beta1InstanceSpecInitProviderEbsBlockDeviceKmsKeyIdRefPol
     public V1beta1InstanceSpecInitProviderEbsBlockDeviceKmsKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1InstanceSpecInitProviderEbsBlockDeviceKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1074,6 +1116,7 @@ public enum V1beta1InstanceSpecInitProviderEbsBlockDeviceKmsKeyIdSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecInitProviderEbsBlockDeviceKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1087,6 +1130,7 @@ public partial class V1beta1InstanceSpecInitProviderEbsBlockDeviceKmsKeyIdSelect
     public V1beta1InstanceSpecInitProviderEbsBlockDeviceKmsKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1InstanceSpecInitProviderEbsBlockDeviceKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1102,6 +1146,7 @@ public partial class V1beta1InstanceSpecInitProviderEbsBlockDeviceKmsKeyIdSelect
     public V1beta1InstanceSpecInitProviderEbsBlockDeviceKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderEbsBlockDevice
 {
     /// <summary>Whether the volume should be destroyed on instance termination. Defaults to true.</summary>
@@ -1157,6 +1202,7 @@ public partial class V1beta1InstanceSpecInitProviderEbsBlockDevice
     public string? VolumeType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderEnclaveOptions
 {
     /// <summary>Whether Nitro Enclaves will be enabled on the instance. Defaults to false.</summary>
@@ -1164,6 +1210,7 @@ public partial class V1beta1InstanceSpecInitProviderEnclaveOptions
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderEphemeralBlockDevice
 {
     /// <summary>Name of the block device to mount on the instance.</summary>
@@ -1179,6 +1226,7 @@ public partial class V1beta1InstanceSpecInitProviderEphemeralBlockDevice
     public string? VirtualName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderInstanceMarketOptionsSpotOptions
 {
     /// <summary>The behavior when a Spot Instance is interrupted. Valid values include hibernate, stop, terminate . The default is terminate.</summary>
@@ -1198,6 +1246,7 @@ public partial class V1beta1InstanceSpecInitProviderInstanceMarketOptionsSpotOpt
     public string? ValidUntil { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderInstanceMarketOptions
 {
     /// <summary>Type of market for the instance. Valid value is spot. Defaults to spot. Required if spot_options is specified.</summary>
@@ -1209,6 +1258,7 @@ public partial class V1beta1InstanceSpecInitProviderInstanceMarketOptions
     public IList<V1beta1InstanceSpecInitProviderInstanceMarketOptionsSpotOptions>? SpotOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderLaunchTemplate
 {
     /// <summary>ID of the launch template. Conflicts with name.</summary>
@@ -1224,6 +1274,7 @@ public partial class V1beta1InstanceSpecInitProviderLaunchTemplate
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderMaintenanceOptions
 {
     /// <summary>Automatic recovery behavior of the Instance. Can be "default" or "disabled". See Recover your instance for more details.</summary>
@@ -1231,6 +1282,7 @@ public partial class V1beta1InstanceSpecInitProviderMaintenanceOptions
     public string? AutoRecovery { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderMetadataOptions
 {
     /// <summary>Whether the metadata service is available. Valid values include enabled or disabled. Defaults to enabled.</summary>
@@ -1274,6 +1326,7 @@ public enum V1beta1InstanceSpecInitProviderNetworkInterfaceNetworkInterfaceIdRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecInitProviderNetworkInterfaceNetworkInterfaceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1287,6 +1340,7 @@ public partial class V1beta1InstanceSpecInitProviderNetworkInterfaceNetworkInter
     public V1beta1InstanceSpecInitProviderNetworkInterfaceNetworkInterfaceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a NetworkInterface in ec2 to populate networkInterfaceId.</summary>
 public partial class V1beta1InstanceSpecInitProviderNetworkInterfaceNetworkInterfaceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1318,6 +1372,7 @@ public enum V1beta1InstanceSpecInitProviderNetworkInterfaceNetworkInterfaceIdSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecInitProviderNetworkInterfaceNetworkInterfaceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1331,6 +1386,7 @@ public partial class V1beta1InstanceSpecInitProviderNetworkInterfaceNetworkInter
     public V1beta1InstanceSpecInitProviderNetworkInterfaceNetworkInterfaceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a NetworkInterface in ec2 to populate networkInterfaceId.</summary>
 public partial class V1beta1InstanceSpecInitProviderNetworkInterfaceNetworkInterfaceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1346,6 +1402,7 @@ public partial class V1beta1InstanceSpecInitProviderNetworkInterfaceNetworkInter
     public V1beta1InstanceSpecInitProviderNetworkInterfaceNetworkInterfaceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderNetworkInterface
 {
     /// <summary>Whether or not to delete the network interface on instance termination. Defaults to false. Currently, the only valid value is false, as this is only supported when creating new network interfaces when launching an instance.</summary>
@@ -1373,6 +1430,7 @@ public partial class V1beta1InstanceSpecInitProviderNetworkInterface
     public V1beta1InstanceSpecInitProviderNetworkInterfaceNetworkInterfaceIdSelector? NetworkInterfaceIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderPrivateDnsNameOptions
 {
     /// <summary>Indicates whether to respond to DNS queries for instance hostnames with DNS A records.</summary>
@@ -1408,6 +1466,7 @@ public enum V1beta1InstanceSpecInitProviderRootBlockDeviceKmsKeyIdRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecInitProviderRootBlockDeviceKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1421,6 +1480,7 @@ public partial class V1beta1InstanceSpecInitProviderRootBlockDeviceKmsKeyIdRefPo
     public V1beta1InstanceSpecInitProviderRootBlockDeviceKmsKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1InstanceSpecInitProviderRootBlockDeviceKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1452,6 +1512,7 @@ public enum V1beta1InstanceSpecInitProviderRootBlockDeviceKmsKeyIdSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecInitProviderRootBlockDeviceKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1465,6 +1526,7 @@ public partial class V1beta1InstanceSpecInitProviderRootBlockDeviceKmsKeyIdSelec
     public V1beta1InstanceSpecInitProviderRootBlockDeviceKmsKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1InstanceSpecInitProviderRootBlockDeviceKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1480,6 +1542,7 @@ public partial class V1beta1InstanceSpecInitProviderRootBlockDeviceKmsKeyIdSelec
     public V1beta1InstanceSpecInitProviderRootBlockDeviceKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderRootBlockDevice
 {
     /// <summary>Whether the volume should be destroyed on instance termination. Defaults to true.</summary>
@@ -1547,6 +1610,7 @@ public enum V1beta1InstanceSpecInitProviderSubnetIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecInitProviderSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1560,6 +1624,7 @@ public partial class V1beta1InstanceSpecInitProviderSubnetIdRefPolicy
     public V1beta1InstanceSpecInitProviderSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
 public partial class V1beta1InstanceSpecInitProviderSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1591,6 +1656,7 @@ public enum V1beta1InstanceSpecInitProviderSubnetIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecInitProviderSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1604,6 +1670,7 @@ public partial class V1beta1InstanceSpecInitProviderSubnetIdSelectorPolicy
     public V1beta1InstanceSpecInitProviderSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
 public partial class V1beta1InstanceSpecInitProviderSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1639,6 +1706,7 @@ public enum V1beta1InstanceSpecInitProviderVpcSecurityGroupIdRefsPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecInitProviderVpcSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1652,6 +1720,7 @@ public partial class V1beta1InstanceSpecInitProviderVpcSecurityGroupIdRefsPolicy
     public V1beta1InstanceSpecInitProviderVpcSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1InstanceSpecInitProviderVpcSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1683,6 +1752,7 @@ public enum V1beta1InstanceSpecInitProviderVpcSecurityGroupIdSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecInitProviderVpcSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1696,6 +1766,7 @@ public partial class V1beta1InstanceSpecInitProviderVpcSecurityGroupIdSelectorPo
     public V1beta1InstanceSpecInitProviderVpcSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate vpcSecurityGroupIds.</summary>
 public partial class V1beta1InstanceSpecInitProviderVpcSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1711,6 +1782,7 @@ public partial class V1beta1InstanceSpecInitProviderVpcSecurityGroupIdSelector
     public V1beta1InstanceSpecInitProviderVpcSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1InstanceSpecInitProvider
 {
     /// <summary>AMI to use for the instance. Required unless launch_template is specified and the Launch Template specifes an AMI. If an AMI is specified in the Launch Template, setting ami will override the AMI specified in the Launch Template.</summary>
@@ -1952,6 +2024,7 @@ public enum V1beta1InstanceSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1965,6 +2038,7 @@ public partial class V1beta1InstanceSpecProviderConfigRefPolicy
     public V1beta1InstanceSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1InstanceSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1996,6 +2070,7 @@ public enum V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2009,6 +2084,7 @@ public partial class V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolic
     public V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1InstanceSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2020,6 +2096,7 @@ public partial class V1beta1InstanceSpecPublishConnectionDetailsToConfigRef
     public V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1InstanceSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -2035,6 +2112,7 @@ public partial class V1beta1InstanceSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1InstanceSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -2050,6 +2128,7 @@ public partial class V1beta1InstanceSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1InstanceSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -2061,6 +2140,7 @@ public partial class V1beta1InstanceSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>InstanceSpec defines the desired state of Instance</summary>
 public partial class V1beta1InstanceSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -2093,6 +2173,7 @@ public partial class V1beta1InstanceSpec
     public V1beta1InstanceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderCapacityReservationSpecificationCapacityReservationTarget
 {
     /// <summary>ID of the Capacity Reservation in which to run the instance.</summary>
@@ -2104,6 +2185,7 @@ public partial class V1beta1InstanceStatusAtProviderCapacityReservationSpecifica
     public string? CapacityReservationResourceGroupArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderCapacityReservationSpecification
 {
     /// <summary>Indicates the instance's Capacity Reservation preferences. Can be "open" or "none". (Default: "open").</summary>
@@ -2115,6 +2197,7 @@ public partial class V1beta1InstanceStatusAtProviderCapacityReservationSpecifica
     public IList<V1beta1InstanceStatusAtProviderCapacityReservationSpecificationCapacityReservationTarget>? CapacityReservationTarget { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderCpuOptions
 {
     /// <summary>Indicates whether to enable the instance for AMD SEV-SNP. AMD SEV-SNP is supported with M6a, R6a, and C6a instance types only. Valid values are enabled and disabled.</summary>
@@ -2130,6 +2213,7 @@ public partial class V1beta1InstanceStatusAtProviderCpuOptions
     public double? ThreadsPerCore { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderCreditSpecification
 {
     /// <summary>Credit option for CPU usage. Valid values include standard or unlimited. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.</summary>
@@ -2137,6 +2221,7 @@ public partial class V1beta1InstanceStatusAtProviderCreditSpecification
     public string? CpuCredits { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderEbsBlockDevice
 {
     /// <summary>Whether the volume should be destroyed on instance termination. Defaults to true.</summary>
@@ -2188,6 +2273,7 @@ public partial class V1beta1InstanceStatusAtProviderEbsBlockDevice
     public string? VolumeType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderEnclaveOptions
 {
     /// <summary>Whether Nitro Enclaves will be enabled on the instance. Defaults to false.</summary>
@@ -2195,6 +2281,7 @@ public partial class V1beta1InstanceStatusAtProviderEnclaveOptions
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderEphemeralBlockDevice
 {
     /// <summary>Name of the block device to mount on the instance.</summary>
@@ -2210,6 +2297,7 @@ public partial class V1beta1InstanceStatusAtProviderEphemeralBlockDevice
     public string? VirtualName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderInstanceMarketOptionsSpotOptions
 {
     /// <summary>The behavior when a Spot Instance is interrupted. Valid values include hibernate, stop, terminate . The default is terminate.</summary>
@@ -2229,6 +2317,7 @@ public partial class V1beta1InstanceStatusAtProviderInstanceMarketOptionsSpotOpt
     public string? ValidUntil { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderInstanceMarketOptions
 {
     /// <summary>Type of market for the instance. Valid value is spot. Defaults to spot. Required if spot_options is specified.</summary>
@@ -2240,6 +2329,7 @@ public partial class V1beta1InstanceStatusAtProviderInstanceMarketOptions
     public IList<V1beta1InstanceStatusAtProviderInstanceMarketOptionsSpotOptions>? SpotOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderLaunchTemplate
 {
     /// <summary>ID of the launch template. Conflicts with name.</summary>
@@ -2255,6 +2345,7 @@ public partial class V1beta1InstanceStatusAtProviderLaunchTemplate
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderMaintenanceOptions
 {
     /// <summary>Automatic recovery behavior of the Instance. Can be "default" or "disabled". See Recover your instance for more details.</summary>
@@ -2262,6 +2353,7 @@ public partial class V1beta1InstanceStatusAtProviderMaintenanceOptions
     public string? AutoRecovery { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderMetadataOptions
 {
     /// <summary>Whether the metadata service is available. Valid values include enabled or disabled. Defaults to enabled.</summary>
@@ -2285,6 +2377,7 @@ public partial class V1beta1InstanceStatusAtProviderMetadataOptions
     public string? InstanceMetadataTags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderNetworkInterface
 {
     /// <summary>Whether or not to delete the network interface on instance termination. Defaults to false. Currently, the only valid value is false, as this is only supported when creating new network interfaces when launching an instance.</summary>
@@ -2304,6 +2397,7 @@ public partial class V1beta1InstanceStatusAtProviderNetworkInterface
     public string? NetworkInterfaceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderPrivateDnsNameOptions
 {
     /// <summary>Indicates whether to respond to DNS queries for instance hostnames with DNS A records.</summary>
@@ -2319,6 +2413,7 @@ public partial class V1beta1InstanceStatusAtProviderPrivateDnsNameOptions
     public string? HostnameType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderRootBlockDevice
 {
     /// <summary>Whether the volume should be destroyed on instance termination. Defaults to true.</summary>
@@ -2366,6 +2461,7 @@ public partial class V1beta1InstanceStatusAtProviderRootBlockDevice
     public string? VolumeType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProvider
 {
     /// <summary>AMI to use for the instance. Required unless launch_template is specified and the Launch Template specifes an AMI. If an AMI is specified in the Launch Template, setting ami will override the AMI specified in the Launch Template.</summary>
@@ -2601,6 +2697,7 @@ public partial class V1beta1InstanceStatusAtProvider
     public IList<string>? VpcSecurityGroupIds { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1InstanceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2628,6 +2725,7 @@ public partial class V1beta1InstanceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>InstanceStatus defines the observed state of Instance.</summary>
 public partial class V1beta1InstanceStatus
 {
     /// <summary></summary>
@@ -2644,6 +2742,7 @@ public partial class V1beta1InstanceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Instance is the Schema for the Instances API. Provides an EC2 instance resource. This allows instances to be created, updated, and deleted. Instances also support provisioning.</summary>
 public partial class V1beta1Instance : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1InstanceSpec>, IStatus<V1beta1InstanceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigee.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1alpha1ApigeeEndpointAttachmentSpec
 {
     /// <summary>Immutable. Location of the endpoint attachment.</summary>
@@ -27,6 +28,7 @@ public partial class V1alpha1ApigeeEndpointAttachmentSpec
     public string ServiceAttachment { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApigeeEndpointAttachmentStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -50,6 +52,7 @@ public partial class V1alpha1ApigeeEndpointAttachmentStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApigeeEndpointAttachmentStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -74,6 +77,7 @@ public partial class V1alpha1ApigeeEndpointAttachmentStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1ApigeeEndpointAttachment : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ApigeeEndpointAttachmentSpec>, IStatus<V1alpha1ApigeeEndpointAttachmentStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

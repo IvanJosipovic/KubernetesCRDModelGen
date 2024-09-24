@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary>Immutable.</summary>
 public partial class V1beta1ComputeFirewallPolicyRuleSpecFirewallPolicyRef
 {
     /// <summary>The firewall policy of the resource.  Allowed value: The Google Cloud resource name of a `ComputeFirewallPolicy` resource (format: `locations/global/firewallPolicies/{{name}}`).</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1ComputeFirewallPolicyRuleSpecFirewallPolicyRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeFirewallPolicyRuleSpecMatchLayer4Configs
 {
     /// <summary>The IP protocol to which this rule applies. The protocol type is required when creating a firewall rule. This value can either be one of the following well known protocol strings (`tcp`, `udp`, `icmp`, `esp`, `ah`, `ipip`, `sctp`), or the IP protocol number.</summary>
@@ -34,6 +36,7 @@ public partial class V1beta1ComputeFirewallPolicyRuleSpecMatchLayer4Configs
     public IList<string>? Ports { get; set; }
 }
 
+/// <summary>A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.</summary>
 public partial class V1beta1ComputeFirewallPolicyRuleSpecMatch
 {
     /// <summary>Address groups which should be matched against the traffic destination. Maximum number of destination address groups is 10. Destination address groups is only supported in Egress rules.</summary>
@@ -81,6 +84,7 @@ public partial class V1beta1ComputeFirewallPolicyRuleSpecMatch
     public IList<string>? SrcThreatIntelligences { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeFirewallPolicyRuleSpecTargetResources
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
@@ -96,6 +100,7 @@ public partial class V1beta1ComputeFirewallPolicyRuleSpecTargetResources
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeFirewallPolicyRuleSpecTargetServiceAccounts
 {
     /// <summary>Allowed value: The Google Cloud resource name of an `IAMServiceAccount` resource (format: `projects/{{project}}/serviceAccounts/{{name}}@{{project}}.iam.gserviceaccount.com`).</summary>
@@ -111,6 +116,7 @@ public partial class V1beta1ComputeFirewallPolicyRuleSpecTargetServiceAccounts
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeFirewallPolicyRuleSpec
 {
     /// <summary>The Action to perform when the client connection triggers the rule. Valid actions are "allow", "deny" and "goto_next".</summary>
@@ -154,6 +160,7 @@ public partial class V1beta1ComputeFirewallPolicyRuleSpec
     public IList<V1beta1ComputeFirewallPolicyRuleSpecTargetServiceAccounts>? TargetServiceAccounts { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeFirewallPolicyRuleStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -177,6 +184,7 @@ public partial class V1beta1ComputeFirewallPolicyRuleStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeFirewallPolicyRuleStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -197,6 +205,7 @@ public partial class V1beta1ComputeFirewallPolicyRuleStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ComputeFirewallPolicyRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeFirewallPolicyRuleSpec>, IStatus<V1beta1ComputeFirewallPolicyRuleStatus>
 {
     public const string KubeApiVersion = "v1beta1";

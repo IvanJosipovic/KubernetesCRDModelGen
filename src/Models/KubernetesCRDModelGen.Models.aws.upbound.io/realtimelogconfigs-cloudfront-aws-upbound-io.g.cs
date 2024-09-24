@@ -38,6 +38,7 @@ public enum V1beta1RealtimeLogConfigSpecForProviderEndpointKinesisStreamConfigRo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RealtimeLogConfigSpecForProviderEndpointKinesisStreamConfigRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1RealtimeLogConfigSpecForProviderEndpointKinesisStrea
     public V1beta1RealtimeLogConfigSpecForProviderEndpointKinesisStreamConfigRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1RealtimeLogConfigSpecForProviderEndpointKinesisStreamConfigRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1RealtimeLogConfigSpecForProviderEndpointKinesisStreamConfigRo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RealtimeLogConfigSpecForProviderEndpointKinesisStreamConfigRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1RealtimeLogConfigSpecForProviderEndpointKinesisStrea
     public V1beta1RealtimeLogConfigSpecForProviderEndpointKinesisStreamConfigRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1RealtimeLogConfigSpecForProviderEndpointKinesisStreamConfigRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1RealtimeLogConfigSpecForProviderEndpointKinesisStreamConfigSt
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RealtimeLogConfigSpecForProviderEndpointKinesisStreamConfigStreamArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1RealtimeLogConfigSpecForProviderEndpointKinesisStrea
     public V1beta1RealtimeLogConfigSpecForProviderEndpointKinesisStreamConfigStreamArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Stream in kinesis to populate streamArn.</summary>
 public partial class V1beta1RealtimeLogConfigSpecForProviderEndpointKinesisStreamConfigStreamArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1RealtimeLogConfigSpecForProviderEndpointKinesisStreamConfigSt
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RealtimeLogConfigSpecForProviderEndpointKinesisStreamConfigStreamArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1RealtimeLogConfigSpecForProviderEndpointKinesisStrea
     public V1beta1RealtimeLogConfigSpecForProviderEndpointKinesisStreamConfigStreamArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Stream in kinesis to populate streamArn.</summary>
 public partial class V1beta1RealtimeLogConfigSpecForProviderEndpointKinesisStreamConfigStreamArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1RealtimeLogConfigSpecForProviderEndpointKinesisStrea
     public V1beta1RealtimeLogConfigSpecForProviderEndpointKinesisStreamConfigStreamArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RealtimeLogConfigSpecForProviderEndpointKinesisStreamConfig
 {
     /// <summary>The ARN of an IAM role that CloudFront can use to send real-time log data to the Kinesis data stream. See the AWS documentation for more information.</summary>
@@ -229,6 +238,7 @@ public partial class V1beta1RealtimeLogConfigSpecForProviderEndpointKinesisStrea
     public V1beta1RealtimeLogConfigSpecForProviderEndpointKinesisStreamConfigStreamArnSelector? StreamArnSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RealtimeLogConfigSpecForProviderEndpoint
 {
     /// <summary>The Amazon Kinesis data stream configuration.</summary>
@@ -240,6 +250,7 @@ public partial class V1beta1RealtimeLogConfigSpecForProviderEndpoint
     public string? StreamType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RealtimeLogConfigSpecForProvider
 {
     /// <summary>The Amazon Kinesis data streams where real-time log data is sent.</summary>
@@ -283,6 +294,7 @@ public enum V1beta1RealtimeLogConfigSpecInitProviderEndpointKinesisStreamConfigR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RealtimeLogConfigSpecInitProviderEndpointKinesisStreamConfigRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -296,6 +308,7 @@ public partial class V1beta1RealtimeLogConfigSpecInitProviderEndpointKinesisStre
     public V1beta1RealtimeLogConfigSpecInitProviderEndpointKinesisStreamConfigRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1RealtimeLogConfigSpecInitProviderEndpointKinesisStreamConfigRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -327,6 +340,7 @@ public enum V1beta1RealtimeLogConfigSpecInitProviderEndpointKinesisStreamConfigR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RealtimeLogConfigSpecInitProviderEndpointKinesisStreamConfigRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -340,6 +354,7 @@ public partial class V1beta1RealtimeLogConfigSpecInitProviderEndpointKinesisStre
     public V1beta1RealtimeLogConfigSpecInitProviderEndpointKinesisStreamConfigRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1RealtimeLogConfigSpecInitProviderEndpointKinesisStreamConfigRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -375,6 +390,7 @@ public enum V1beta1RealtimeLogConfigSpecInitProviderEndpointKinesisStreamConfigS
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RealtimeLogConfigSpecInitProviderEndpointKinesisStreamConfigStreamArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -388,6 +404,7 @@ public partial class V1beta1RealtimeLogConfigSpecInitProviderEndpointKinesisStre
     public V1beta1RealtimeLogConfigSpecInitProviderEndpointKinesisStreamConfigStreamArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Stream in kinesis to populate streamArn.</summary>
 public partial class V1beta1RealtimeLogConfigSpecInitProviderEndpointKinesisStreamConfigStreamArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -419,6 +436,7 @@ public enum V1beta1RealtimeLogConfigSpecInitProviderEndpointKinesisStreamConfigS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RealtimeLogConfigSpecInitProviderEndpointKinesisStreamConfigStreamArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -432,6 +450,7 @@ public partial class V1beta1RealtimeLogConfigSpecInitProviderEndpointKinesisStre
     public V1beta1RealtimeLogConfigSpecInitProviderEndpointKinesisStreamConfigStreamArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Stream in kinesis to populate streamArn.</summary>
 public partial class V1beta1RealtimeLogConfigSpecInitProviderEndpointKinesisStreamConfigStreamArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -447,6 +466,7 @@ public partial class V1beta1RealtimeLogConfigSpecInitProviderEndpointKinesisStre
     public V1beta1RealtimeLogConfigSpecInitProviderEndpointKinesisStreamConfigStreamArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RealtimeLogConfigSpecInitProviderEndpointKinesisStreamConfig
 {
     /// <summary>The ARN of an IAM role that CloudFront can use to send real-time log data to the Kinesis data stream. See the AWS documentation for more information.</summary>
@@ -474,6 +494,7 @@ public partial class V1beta1RealtimeLogConfigSpecInitProviderEndpointKinesisStre
     public V1beta1RealtimeLogConfigSpecInitProviderEndpointKinesisStreamConfigStreamArnSelector? StreamArnSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RealtimeLogConfigSpecInitProviderEndpoint
 {
     /// <summary>The Amazon Kinesis data stream configuration.</summary>
@@ -485,6 +506,7 @@ public partial class V1beta1RealtimeLogConfigSpecInitProviderEndpoint
     public string? StreamType { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1RealtimeLogConfigSpecInitProvider
 {
     /// <summary>The Amazon Kinesis data streams where real-time log data is sent.</summary>
@@ -546,6 +568,7 @@ public enum V1beta1RealtimeLogConfigSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RealtimeLogConfigSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -559,6 +582,7 @@ public partial class V1beta1RealtimeLogConfigSpecProviderConfigRefPolicy
     public V1beta1RealtimeLogConfigSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1RealtimeLogConfigSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -590,6 +614,7 @@ public enum V1beta1RealtimeLogConfigSpecPublishConnectionDetailsToConfigRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RealtimeLogConfigSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -603,6 +628,7 @@ public partial class V1beta1RealtimeLogConfigSpecPublishConnectionDetailsToConfi
     public V1beta1RealtimeLogConfigSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1RealtimeLogConfigSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -614,6 +640,7 @@ public partial class V1beta1RealtimeLogConfigSpecPublishConnectionDetailsToConfi
     public V1beta1RealtimeLogConfigSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1RealtimeLogConfigSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -629,6 +656,7 @@ public partial class V1beta1RealtimeLogConfigSpecPublishConnectionDetailsToMetad
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1RealtimeLogConfigSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -644,6 +672,7 @@ public partial class V1beta1RealtimeLogConfigSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1RealtimeLogConfigSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -655,6 +684,7 @@ public partial class V1beta1RealtimeLogConfigSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>RealtimeLogConfigSpec defines the desired state of RealtimeLogConfig</summary>
 public partial class V1beta1RealtimeLogConfigSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -687,6 +717,7 @@ public partial class V1beta1RealtimeLogConfigSpec
     public V1beta1RealtimeLogConfigSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RealtimeLogConfigStatusAtProviderEndpointKinesisStreamConfig
 {
     /// <summary>The ARN of an IAM role that CloudFront can use to send real-time log data to the Kinesis data stream. See the AWS documentation for more information.</summary>
@@ -698,6 +729,7 @@ public partial class V1beta1RealtimeLogConfigStatusAtProviderEndpointKinesisStre
     public string? StreamArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RealtimeLogConfigStatusAtProviderEndpoint
 {
     /// <summary>The Amazon Kinesis data stream configuration.</summary>
@@ -709,6 +741,7 @@ public partial class V1beta1RealtimeLogConfigStatusAtProviderEndpoint
     public string? StreamType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RealtimeLogConfigStatusAtProvider
 {
     /// <summary>The ARN (Amazon Resource Name) of the CloudFront real-time log configuration.</summary>
@@ -736,6 +769,7 @@ public partial class V1beta1RealtimeLogConfigStatusAtProvider
     public double? SamplingRate { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1RealtimeLogConfigStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -763,6 +797,7 @@ public partial class V1beta1RealtimeLogConfigStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>RealtimeLogConfigStatus defines the observed state of RealtimeLogConfig.</summary>
 public partial class V1beta1RealtimeLogConfigStatus
 {
     /// <summary></summary>
@@ -779,6 +814,7 @@ public partial class V1beta1RealtimeLogConfigStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>RealtimeLogConfig is the Schema for the RealtimeLogConfigs API. Provides a CloudFront real-time log configuration resource.</summary>
 public partial class V1beta1RealtimeLogConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1RealtimeLogConfigSpec>, IStatus<V1beta1RealtimeLogConfigStatus>
 {
     public const string KubeApiVersion = "v1beta1";

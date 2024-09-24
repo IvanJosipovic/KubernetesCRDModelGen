@@ -38,6 +38,7 @@ public enum V1beta1AssociationSpecForProviderLicenseConfigurationArnRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AssociationSpecForProviderLicenseConfigurationArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1AssociationSpecForProviderLicenseConfigurationArnRef
     public V1beta1AssociationSpecForProviderLicenseConfigurationArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LicenseConfiguration in licensemanager to populate licenseConfigurationArn.</summary>
 public partial class V1beta1AssociationSpecForProviderLicenseConfigurationArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1AssociationSpecForProviderLicenseConfigurationArnSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AssociationSpecForProviderLicenseConfigurationArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1AssociationSpecForProviderLicenseConfigurationArnSel
     public V1beta1AssociationSpecForProviderLicenseConfigurationArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LicenseConfiguration in licensemanager to populate licenseConfigurationArn.</summary>
 public partial class V1beta1AssociationSpecForProviderLicenseConfigurationArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1AssociationSpecForProviderResourceArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AssociationSpecForProviderResourceArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1AssociationSpecForProviderResourceArnRefPolicy
     public V1beta1AssociationSpecForProviderResourceArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Instance in ec2 to populate resourceArn.</summary>
 public partial class V1beta1AssociationSpecForProviderResourceArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1AssociationSpecForProviderResourceArnSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AssociationSpecForProviderResourceArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1AssociationSpecForProviderResourceArnSelectorPolicy
     public V1beta1AssociationSpecForProviderResourceArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Instance in ec2 to populate resourceArn.</summary>
 public partial class V1beta1AssociationSpecForProviderResourceArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1AssociationSpecForProviderResourceArnSelector
     public V1beta1AssociationSpecForProviderResourceArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AssociationSpecForProvider
 {
     /// <summary>ARN of the license configuration.</summary>
@@ -253,6 +262,7 @@ public enum V1beta1AssociationSpecInitProviderLicenseConfigurationArnRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AssociationSpecInitProviderLicenseConfigurationArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -266,6 +276,7 @@ public partial class V1beta1AssociationSpecInitProviderLicenseConfigurationArnRe
     public V1beta1AssociationSpecInitProviderLicenseConfigurationArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LicenseConfiguration in licensemanager to populate licenseConfigurationArn.</summary>
 public partial class V1beta1AssociationSpecInitProviderLicenseConfigurationArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -297,6 +308,7 @@ public enum V1beta1AssociationSpecInitProviderLicenseConfigurationArnSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AssociationSpecInitProviderLicenseConfigurationArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -310,6 +322,7 @@ public partial class V1beta1AssociationSpecInitProviderLicenseConfigurationArnSe
     public V1beta1AssociationSpecInitProviderLicenseConfigurationArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LicenseConfiguration in licensemanager to populate licenseConfigurationArn.</summary>
 public partial class V1beta1AssociationSpecInitProviderLicenseConfigurationArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -345,6 +358,7 @@ public enum V1beta1AssociationSpecInitProviderResourceArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AssociationSpecInitProviderResourceArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -358,6 +372,7 @@ public partial class V1beta1AssociationSpecInitProviderResourceArnRefPolicy
     public V1beta1AssociationSpecInitProviderResourceArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Instance in ec2 to populate resourceArn.</summary>
 public partial class V1beta1AssociationSpecInitProviderResourceArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -389,6 +404,7 @@ public enum V1beta1AssociationSpecInitProviderResourceArnSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AssociationSpecInitProviderResourceArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -402,6 +418,7 @@ public partial class V1beta1AssociationSpecInitProviderResourceArnSelectorPolicy
     public V1beta1AssociationSpecInitProviderResourceArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Instance in ec2 to populate resourceArn.</summary>
 public partial class V1beta1AssociationSpecInitProviderResourceArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -417,6 +434,7 @@ public partial class V1beta1AssociationSpecInitProviderResourceArnSelector
     public V1beta1AssociationSpecInitProviderResourceArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1AssociationSpecInitProvider
 {
     /// <summary>ARN of the license configuration.</summary>
@@ -486,6 +504,7 @@ public enum V1beta1AssociationSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AssociationSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -499,6 +518,7 @@ public partial class V1beta1AssociationSpecProviderConfigRefPolicy
     public V1beta1AssociationSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1AssociationSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -530,6 +550,7 @@ public enum V1beta1AssociationSpecPublishConnectionDetailsToConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AssociationSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -543,6 +564,7 @@ public partial class V1beta1AssociationSpecPublishConnectionDetailsToConfigRefPo
     public V1beta1AssociationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1AssociationSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -554,6 +576,7 @@ public partial class V1beta1AssociationSpecPublishConnectionDetailsToConfigRef
     public V1beta1AssociationSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1AssociationSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -569,6 +592,7 @@ public partial class V1beta1AssociationSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1AssociationSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -584,6 +608,7 @@ public partial class V1beta1AssociationSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1AssociationSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -595,6 +620,7 @@ public partial class V1beta1AssociationSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>AssociationSpec defines the desired state of Association</summary>
 public partial class V1beta1AssociationSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -627,6 +653,7 @@ public partial class V1beta1AssociationSpec
     public V1beta1AssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AssociationStatusAtProvider
 {
     /// <summary>The license configuration ARN.</summary>
@@ -642,6 +669,7 @@ public partial class V1beta1AssociationStatusAtProvider
     public string? ResourceArn { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1AssociationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -669,6 +697,7 @@ public partial class V1beta1AssociationStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>AssociationStatus defines the observed state of Association.</summary>
 public partial class V1beta1AssociationStatus
 {
     /// <summary></summary>
@@ -685,6 +714,7 @@ public partial class V1beta1AssociationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Association is the Schema for the Associations API. Provides a License Manager association resource.</summary>
 public partial class V1beta1Association : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AssociationSpec>, IStatus<V1beta1AssociationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

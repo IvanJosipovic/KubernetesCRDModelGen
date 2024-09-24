@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.vertexai.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1alpha1VertexAIFeaturestoreEntityTypeFeatureSpec
 {
     /// <summary>Description of the feature.</summary>
@@ -27,6 +28,7 @@ public partial class V1alpha1VertexAIFeaturestoreEntityTypeFeatureSpec
     public string ValueType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1VertexAIFeaturestoreEntityTypeFeatureStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -50,6 +52,7 @@ public partial class V1alpha1VertexAIFeaturestoreEntityTypeFeatureStatusConditio
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1VertexAIFeaturestoreEntityTypeFeatureStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -78,6 +81,7 @@ public partial class V1alpha1VertexAIFeaturestoreEntityTypeFeatureStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1VertexAIFeaturestoreEntityTypeFeature : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1VertexAIFeaturestoreEntityTypeFeatureSpec>, IStatus<V1alpha1VertexAIFeaturestoreEntityTypeFeatureStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

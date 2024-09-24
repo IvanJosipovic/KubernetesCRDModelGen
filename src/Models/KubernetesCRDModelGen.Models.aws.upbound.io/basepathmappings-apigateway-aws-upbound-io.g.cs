@@ -38,6 +38,7 @@ public enum V1beta1BasePathMappingSpecForProviderApiIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BasePathMappingSpecForProviderApiIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1BasePathMappingSpecForProviderApiIdRefPolicy
     public V1beta1BasePathMappingSpecForProviderApiIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RestAPI in apigateway to populate apiId.</summary>
 public partial class V1beta1BasePathMappingSpecForProviderApiIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1BasePathMappingSpecForProviderApiIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BasePathMappingSpecForProviderApiIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1BasePathMappingSpecForProviderApiIdSelectorPolicy
     public V1beta1BasePathMappingSpecForProviderApiIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RestAPI in apigateway to populate apiId.</summary>
 public partial class V1beta1BasePathMappingSpecForProviderApiIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1BasePathMappingSpecForProviderDomainNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BasePathMappingSpecForProviderDomainNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1BasePathMappingSpecForProviderDomainNameRefPolicy
     public V1beta1BasePathMappingSpecForProviderDomainNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a DomainName in apigateway to populate domainName.</summary>
 public partial class V1beta1BasePathMappingSpecForProviderDomainNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1BasePathMappingSpecForProviderDomainNameSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BasePathMappingSpecForProviderDomainNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1BasePathMappingSpecForProviderDomainNameSelectorPoli
     public V1beta1BasePathMappingSpecForProviderDomainNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a DomainName in apigateway to populate domainName.</summary>
 public partial class V1beta1BasePathMappingSpecForProviderDomainNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1BasePathMappingSpecForProviderStageNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BasePathMappingSpecForProviderStageNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1BasePathMappingSpecForProviderStageNameRefPolicy
     public V1beta1BasePathMappingSpecForProviderStageNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Stage in apigateway to populate stageName.</summary>
 public partial class V1beta1BasePathMappingSpecForProviderStageNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1BasePathMappingSpecForProviderStageNameSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BasePathMappingSpecForProviderStageNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1BasePathMappingSpecForProviderStageNameSelectorPolic
     public V1beta1BasePathMappingSpecForProviderStageNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Stage in apigateway to populate stageName.</summary>
 public partial class V1beta1BasePathMappingSpecForProviderStageNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1BasePathMappingSpecForProviderStageNameSelector
     public V1beta1BasePathMappingSpecForProviderStageNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BasePathMappingSpecForProvider
 {
     /// <summary>ID of the API to connect.</summary>
@@ -361,6 +374,7 @@ public enum V1beta1BasePathMappingSpecInitProviderApiIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BasePathMappingSpecInitProviderApiIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -374,6 +388,7 @@ public partial class V1beta1BasePathMappingSpecInitProviderApiIdRefPolicy
     public V1beta1BasePathMappingSpecInitProviderApiIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RestAPI in apigateway to populate apiId.</summary>
 public partial class V1beta1BasePathMappingSpecInitProviderApiIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -405,6 +420,7 @@ public enum V1beta1BasePathMappingSpecInitProviderApiIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BasePathMappingSpecInitProviderApiIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -418,6 +434,7 @@ public partial class V1beta1BasePathMappingSpecInitProviderApiIdSelectorPolicy
     public V1beta1BasePathMappingSpecInitProviderApiIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RestAPI in apigateway to populate apiId.</summary>
 public partial class V1beta1BasePathMappingSpecInitProviderApiIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -453,6 +470,7 @@ public enum V1beta1BasePathMappingSpecInitProviderDomainNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BasePathMappingSpecInitProviderDomainNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -466,6 +484,7 @@ public partial class V1beta1BasePathMappingSpecInitProviderDomainNameRefPolicy
     public V1beta1BasePathMappingSpecInitProviderDomainNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a DomainName in apigateway to populate domainName.</summary>
 public partial class V1beta1BasePathMappingSpecInitProviderDomainNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -497,6 +516,7 @@ public enum V1beta1BasePathMappingSpecInitProviderDomainNameSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BasePathMappingSpecInitProviderDomainNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -510,6 +530,7 @@ public partial class V1beta1BasePathMappingSpecInitProviderDomainNameSelectorPol
     public V1beta1BasePathMappingSpecInitProviderDomainNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a DomainName in apigateway to populate domainName.</summary>
 public partial class V1beta1BasePathMappingSpecInitProviderDomainNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -545,6 +566,7 @@ public enum V1beta1BasePathMappingSpecInitProviderStageNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BasePathMappingSpecInitProviderStageNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -558,6 +580,7 @@ public partial class V1beta1BasePathMappingSpecInitProviderStageNameRefPolicy
     public V1beta1BasePathMappingSpecInitProviderStageNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Stage in apigateway to populate stageName.</summary>
 public partial class V1beta1BasePathMappingSpecInitProviderStageNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -589,6 +612,7 @@ public enum V1beta1BasePathMappingSpecInitProviderStageNameSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BasePathMappingSpecInitProviderStageNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -602,6 +626,7 @@ public partial class V1beta1BasePathMappingSpecInitProviderStageNameSelectorPoli
     public V1beta1BasePathMappingSpecInitProviderStageNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Stage in apigateway to populate stageName.</summary>
 public partial class V1beta1BasePathMappingSpecInitProviderStageNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -617,6 +642,7 @@ public partial class V1beta1BasePathMappingSpecInitProviderStageNameSelector
     public V1beta1BasePathMappingSpecInitProviderStageNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1BasePathMappingSpecInitProvider
 {
     /// <summary>ID of the API to connect.</summary>
@@ -702,6 +728,7 @@ public enum V1beta1BasePathMappingSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BasePathMappingSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -715,6 +742,7 @@ public partial class V1beta1BasePathMappingSpecProviderConfigRefPolicy
     public V1beta1BasePathMappingSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1BasePathMappingSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -746,6 +774,7 @@ public enum V1beta1BasePathMappingSpecPublishConnectionDetailsToConfigRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BasePathMappingSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -759,6 +788,7 @@ public partial class V1beta1BasePathMappingSpecPublishConnectionDetailsToConfigR
     public V1beta1BasePathMappingSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1BasePathMappingSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -770,6 +800,7 @@ public partial class V1beta1BasePathMappingSpecPublishConnectionDetailsToConfigR
     public V1beta1BasePathMappingSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1BasePathMappingSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -785,6 +816,7 @@ public partial class V1beta1BasePathMappingSpecPublishConnectionDetailsToMetadat
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1BasePathMappingSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -800,6 +832,7 @@ public partial class V1beta1BasePathMappingSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1BasePathMappingSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -811,6 +844,7 @@ public partial class V1beta1BasePathMappingSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>BasePathMappingSpec defines the desired state of BasePathMapping</summary>
 public partial class V1beta1BasePathMappingSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -843,6 +877,7 @@ public partial class V1beta1BasePathMappingSpec
     public V1beta1BasePathMappingSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BasePathMappingStatusAtProvider
 {
     /// <summary>ID of the API to connect.</summary>
@@ -866,6 +901,7 @@ public partial class V1beta1BasePathMappingStatusAtProvider
     public string? StageName { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1BasePathMappingStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -893,6 +929,7 @@ public partial class V1beta1BasePathMappingStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>BasePathMappingStatus defines the observed state of BasePathMapping.</summary>
 public partial class V1beta1BasePathMappingStatus
 {
     /// <summary></summary>
@@ -909,6 +946,7 @@ public partial class V1beta1BasePathMappingStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>BasePathMapping is the Schema for the BasePathMappings API. Connects a custom domain with a deployed API</summary>
 public partial class V1beta1BasePathMapping : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BasePathMappingSpec>, IStatus<V1beta1BasePathMappingStatus>
 {
     public const string KubeApiVersion = "v1beta1";

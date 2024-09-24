@@ -38,6 +38,7 @@ public enum V1beta1PortfolioShareSpecForProviderPortfolioIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PortfolioShareSpecForProviderPortfolioIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1PortfolioShareSpecForProviderPortfolioIdRefPolicy
     public V1beta1PortfolioShareSpecForProviderPortfolioIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Portfolio in servicecatalog to populate portfolioId.</summary>
 public partial class V1beta1PortfolioShareSpecForProviderPortfolioIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1PortfolioShareSpecForProviderPortfolioIdSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PortfolioShareSpecForProviderPortfolioIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1PortfolioShareSpecForProviderPortfolioIdSelectorPoli
     public V1beta1PortfolioShareSpecForProviderPortfolioIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Portfolio in servicecatalog to populate portfolioId.</summary>
 public partial class V1beta1PortfolioShareSpecForProviderPortfolioIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1PortfolioShareSpecForProviderPortfolioIdSelector
     public V1beta1PortfolioShareSpecForProviderPortfolioIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PortfolioShareSpecForProvider
 {
     /// <summary>Language code. Valid values: en (English), jp (Japanese), zh (Chinese). Default value is en.</summary>
@@ -173,6 +178,7 @@ public enum V1beta1PortfolioShareSpecInitProviderPortfolioIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PortfolioShareSpecInitProviderPortfolioIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -186,6 +192,7 @@ public partial class V1beta1PortfolioShareSpecInitProviderPortfolioIdRefPolicy
     public V1beta1PortfolioShareSpecInitProviderPortfolioIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Portfolio in servicecatalog to populate portfolioId.</summary>
 public partial class V1beta1PortfolioShareSpecInitProviderPortfolioIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -217,6 +224,7 @@ public enum V1beta1PortfolioShareSpecInitProviderPortfolioIdSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PortfolioShareSpecInitProviderPortfolioIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -230,6 +238,7 @@ public partial class V1beta1PortfolioShareSpecInitProviderPortfolioIdSelectorPol
     public V1beta1PortfolioShareSpecInitProviderPortfolioIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Portfolio in servicecatalog to populate portfolioId.</summary>
 public partial class V1beta1PortfolioShareSpecInitProviderPortfolioIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -245,6 +254,7 @@ public partial class V1beta1PortfolioShareSpecInitProviderPortfolioIdSelector
     public V1beta1PortfolioShareSpecInitProviderPortfolioIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1PortfolioShareSpecInitProvider
 {
     /// <summary>Language code. Valid values: en (English), jp (Japanese), zh (Chinese). Default value is en.</summary>
@@ -326,6 +336,7 @@ public enum V1beta1PortfolioShareSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PortfolioShareSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -339,6 +350,7 @@ public partial class V1beta1PortfolioShareSpecProviderConfigRefPolicy
     public V1beta1PortfolioShareSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1PortfolioShareSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -370,6 +382,7 @@ public enum V1beta1PortfolioShareSpecPublishConnectionDetailsToConfigRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PortfolioShareSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -383,6 +396,7 @@ public partial class V1beta1PortfolioShareSpecPublishConnectionDetailsToConfigRe
     public V1beta1PortfolioShareSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1PortfolioShareSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -394,6 +408,7 @@ public partial class V1beta1PortfolioShareSpecPublishConnectionDetailsToConfigRe
     public V1beta1PortfolioShareSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1PortfolioShareSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -409,6 +424,7 @@ public partial class V1beta1PortfolioShareSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1PortfolioShareSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -424,6 +440,7 @@ public partial class V1beta1PortfolioShareSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1PortfolioShareSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -435,6 +452,7 @@ public partial class V1beta1PortfolioShareSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>PortfolioShareSpec defines the desired state of PortfolioShare</summary>
 public partial class V1beta1PortfolioShareSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -467,6 +485,7 @@ public partial class V1beta1PortfolioShareSpec
     public V1beta1PortfolioShareSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PortfolioShareStatusAtProvider
 {
     /// <summary>Language code. Valid values: en (English), jp (Japanese), zh (Chinese). Default value is en.</summary>
@@ -506,6 +525,7 @@ public partial class V1beta1PortfolioShareStatusAtProvider
     public bool? WaitForAcceptance { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1PortfolioShareStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -533,6 +553,7 @@ public partial class V1beta1PortfolioShareStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>PortfolioShareStatus defines the observed state of PortfolioShare.</summary>
 public partial class V1beta1PortfolioShareStatus
 {
     /// <summary></summary>
@@ -549,6 +570,7 @@ public partial class V1beta1PortfolioShareStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>PortfolioShare is the Schema for the PortfolioShares API. Manages a Service Catalog Portfolio Share</summary>
 public partial class V1beta1PortfolioShare : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1PortfolioShareSpec>, IStatus<V1beta1PortfolioShareStatus>
 {
     public const string KubeApiVersion = "v1beta1";

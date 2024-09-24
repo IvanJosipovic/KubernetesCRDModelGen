@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.firebase.cnrm.cloud.google.com;
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1FirebaseAndroidAppSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1FirebaseAndroidAppSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1FirebaseAndroidAppSpec
 {
     /// <summary>The globally unique, Google-assigned identifier (UID) for the Firebase API key associated with the AndroidApp. If apiKeyId is not set during creation, then Firebase automatically associates an apiKeyId with the AndroidApp. This auto-associated key may be an existing valid key or, if no valid key exists, a new one will be provisioned.</summary>
@@ -58,6 +60,7 @@ public partial class V1alpha1FirebaseAndroidAppSpec
     public IList<string>? Sha256Hashes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1FirebaseAndroidAppStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -81,6 +84,7 @@ public partial class V1alpha1FirebaseAndroidAppStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1FirebaseAndroidAppStatus
 {
     /// <summary>The globally unique, Firebase-assigned identifier of the AndroidApp. This identifier should be treated as an opaque token, as the data format is not specified.</summary>
@@ -105,6 +109,7 @@ public partial class V1alpha1FirebaseAndroidAppStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1FirebaseAndroidApp : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1FirebaseAndroidAppSpec>, IStatus<V1alpha1FirebaseAndroidAppStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

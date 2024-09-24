@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.tags.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1alpha1TagsLocationTagBindingSpecParentRef
 {
     /// <summary>Allowed value: string of the format `//cloudresourcemanager.googleapis.com/projects/{{value}}`, where {{value}} is the `number` field of a `Project` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1TagsLocationTagBindingSpecParentRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1TagsLocationTagBindingSpecTagValueRef
 {
     /// <summary>Allowed value: string of the format `tagValues/{{value}}`, where {{value}} is the `name` field of a `TagsTagValue` resource.</summary>
@@ -38,6 +40,7 @@ public partial class V1alpha1TagsLocationTagBindingSpecTagValueRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1TagsLocationTagBindingSpec
 {
     /// <summary>Immutable. The geographic location where the transfer config should reside. Examples: US, EU, asia-northeast1. The default value is US.</summary>
@@ -57,6 +60,7 @@ public partial class V1alpha1TagsLocationTagBindingSpec
     public V1alpha1TagsLocationTagBindingSpecTagValueRef TagValueRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1TagsLocationTagBindingStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -80,6 +84,7 @@ public partial class V1alpha1TagsLocationTagBindingStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1TagsLocationTagBindingStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -96,6 +101,7 @@ public partial class V1alpha1TagsLocationTagBindingStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1TagsLocationTagBinding : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1TagsLocationTagBindingSpec>, IStatus<V1alpha1TagsLocationTagBindingStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

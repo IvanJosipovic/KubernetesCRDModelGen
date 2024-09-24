@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+/// <summary>Storage version of v1api20201101.IPConfigurationBgpPeeringAddress Properties of IPConfigurationBgpPeeringAddress.</summary>
 public partial class V1api20201101storageVirtualNetworkGatewaySpecBgpSettingsBgpPeeringAddresses
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -23,6 +24,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecBgpSettingsBgp
     public string? IpconfigurationId { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.BgpSettings BGP settings details.</summary>
 public partial class V1api20201101storageVirtualNetworkGatewaySpecBgpSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -46,6 +48,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecBgpSettings
     public int? PeerWeight { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.AddressSpace AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.</summary>
 public partial class V1api20201101storageVirtualNetworkGatewaySpecCustomRoutes
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -57,6 +60,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecCustomRoutes
     public IList<string>? AddressPrefixes { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.ExtendedLocation ExtendedLocation complex type.</summary>
 public partial class V1api20201101storageVirtualNetworkGatewaySpecExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -72,6 +76,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecExtendedLocati
     public string? Type { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20201101storageVirtualNetworkGatewaySpecGatewayDefaultSiteReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -91,6 +96,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecGatewayDefault
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
 public partial class V1api20201101storageVirtualNetworkGatewaySpecGatewayDefaultSite
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -102,6 +108,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecGatewayDefault
     public V1api20201101storageVirtualNetworkGatewaySpecGatewayDefaultSiteReference? Reference { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20201101storageVirtualNetworkGatewaySpecIpConfigurationsPublicIPAddressReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -121,6 +128,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecIpConfiguratio
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
 public partial class V1api20201101storageVirtualNetworkGatewaySpecIpConfigurationsPublicIPAddress
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -132,6 +140,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecIpConfiguratio
     public V1api20201101storageVirtualNetworkGatewaySpecIpConfigurationsPublicIPAddressReference? Reference { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20201101storageVirtualNetworkGatewaySpecIpConfigurationsSubnetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -151,6 +160,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecIpConfiguratio
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
 public partial class V1api20201101storageVirtualNetworkGatewaySpecIpConfigurationsSubnet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -162,6 +172,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecIpConfiguratio
     public V1api20201101storageVirtualNetworkGatewaySpecIpConfigurationsSubnetReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.VirtualNetworkGatewayIPConfiguration IP configuration for virtual network gateway.</summary>
 public partial class V1api20201101storageVirtualNetworkGatewaySpecIpConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -185,6 +196,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecIpConfiguratio
     public V1api20201101storageVirtualNetworkGatewaySpecIpConfigurationsSubnet? Subnet { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20201101storageVirtualNetworkGatewaySpecOwner
 {
     /// <summary></summary>
@@ -196,6 +208,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.VirtualNetworkGatewaySku VirtualNetworkGatewaySku details.</summary>
 public partial class V1api20201101storageVirtualNetworkGatewaySpecSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -211,6 +224,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecSku
     public string? Tier { get; set; }
 }
 
+/// <summary>VNetExtendedLocationResourceReference: Customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.</summary>
 public partial class V1api20201101storageVirtualNetworkGatewaySpecVNetExtendedLocationResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -230,6 +244,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecVNetExtendedLo
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.RadiusServer Radius Server Settings.</summary>
 public partial class V1api20201101storageVirtualNetworkGatewaySpecVpnClientConfigurationRadiusServers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -249,6 +264,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecVpnClientConfi
     public string? RadiusServerSecret { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.AddressSpace AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.</summary>
 public partial class V1api20201101storageVirtualNetworkGatewaySpecVpnClientConfigurationVpnClientAddressPool
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -260,6 +276,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecVpnClientConfi
     public IList<string>? AddressPrefixes { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.IpsecPolicy An IPSec Policy configuration for a virtual network gateway connection.</summary>
 public partial class V1api20201101storageVirtualNetworkGatewaySpecVpnClientConfigurationVpnClientIpsecPolicies
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -299,6 +316,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecVpnClientConfi
     public int? SaLifeTimeSeconds { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.VpnClientRevokedCertificate VPN client revoked certificate of virtual network gateway.</summary>
 public partial class V1api20201101storageVirtualNetworkGatewaySpecVpnClientConfigurationVpnClientRevokedCertificates
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -314,6 +332,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecVpnClientConfi
     public string? Thumbprint { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.VpnClientRootCertificate VPN client root certificate of virtual network gateway.</summary>
 public partial class V1api20201101storageVirtualNetworkGatewaySpecVpnClientConfigurationVpnClientRootCertificates
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -329,6 +348,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecVpnClientConfi
     public string? PublicCertData { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.VpnClientConfiguration VpnClientConfiguration for P2S client.</summary>
 public partial class V1api20201101storageVirtualNetworkGatewaySpecVpnClientConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -384,6 +404,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpecVpnClientConfi
     public IList<V1api20201101storageVirtualNetworkGatewaySpecVpnClientConfigurationVpnClientRootCertificates>? VpnClientRootCertificates { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.VirtualNetworkGateway_Spec</summary>
 public partial class V1api20201101storageVirtualNetworkGatewaySpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -471,6 +492,7 @@ public partial class V1api20201101storageVirtualNetworkGatewaySpec
     public string? VpnType { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.IPConfigurationBgpPeeringAddress_STATUS Properties of IPConfigurationBgpPeeringAddress.</summary>
 public partial class V1api20201101storageVirtualNetworkGatewayStatusBgpSettingsBgpPeeringAddresses
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -494,6 +516,7 @@ public partial class V1api20201101storageVirtualNetworkGatewayStatusBgpSettingsB
     public IList<string>? TunnelIpAddresses { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.BgpSettings_STATUS BGP settings details.</summary>
 public partial class V1api20201101storageVirtualNetworkGatewayStatusBgpSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -517,6 +540,7 @@ public partial class V1api20201101storageVirtualNetworkGatewayStatusBgpSettings
     public int? PeerWeight { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20201101storageVirtualNetworkGatewayStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -548,6 +572,7 @@ public partial class V1api20201101storageVirtualNetworkGatewayStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.AddressSpace_STATUS AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.</summary>
 public partial class V1api20201101storageVirtualNetworkGatewayStatusCustomRoutes
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -559,6 +584,7 @@ public partial class V1api20201101storageVirtualNetworkGatewayStatusCustomRoutes
     public IList<string>? AddressPrefixes { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.ExtendedLocation_STATUS ExtendedLocation complex type.</summary>
 public partial class V1api20201101storageVirtualNetworkGatewayStatusExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -574,6 +600,7 @@ public partial class V1api20201101storageVirtualNetworkGatewayStatusExtendedLoca
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
 public partial class V1api20201101storageVirtualNetworkGatewayStatusGatewayDefaultSite
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -585,6 +612,7 @@ public partial class V1api20201101storageVirtualNetworkGatewayStatusGatewayDefau
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
 public partial class V1api20201101storageVirtualNetworkGatewayStatusIpConfigurationsPublicIPAddress
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -596,6 +624,7 @@ public partial class V1api20201101storageVirtualNetworkGatewayStatusIpConfigurat
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
 public partial class V1api20201101storageVirtualNetworkGatewayStatusIpConfigurationsSubnet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -607,6 +636,7 @@ public partial class V1api20201101storageVirtualNetworkGatewayStatusIpConfigurat
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.VirtualNetworkGatewayIPConfiguration_STATUS IP configuration for virtual network gateway.</summary>
 public partial class V1api20201101storageVirtualNetworkGatewayStatusIpConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -646,6 +676,7 @@ public partial class V1api20201101storageVirtualNetworkGatewayStatusIpConfigurat
     public V1api20201101storageVirtualNetworkGatewayStatusIpConfigurationsSubnet? Subnet { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.VirtualNetworkGatewaySku_STATUS VirtualNetworkGatewaySku details.</summary>
 public partial class V1api20201101storageVirtualNetworkGatewayStatusSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -665,6 +696,7 @@ public partial class V1api20201101storageVirtualNetworkGatewayStatusSku
     public string? Tier { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.RadiusServer_STATUS Radius Server Settings.</summary>
 public partial class V1api20201101storageVirtualNetworkGatewayStatusVpnClientConfigurationRadiusServers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -684,6 +716,7 @@ public partial class V1api20201101storageVirtualNetworkGatewayStatusVpnClientCon
     public string? RadiusServerSecret { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.AddressSpace_STATUS AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.</summary>
 public partial class V1api20201101storageVirtualNetworkGatewayStatusVpnClientConfigurationVpnClientAddressPool
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -695,6 +728,7 @@ public partial class V1api20201101storageVirtualNetworkGatewayStatusVpnClientCon
     public IList<string>? AddressPrefixes { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.IpsecPolicy_STATUS An IPSec Policy configuration for a virtual network gateway connection.</summary>
 public partial class V1api20201101storageVirtualNetworkGatewayStatusVpnClientConfigurationVpnClientIpsecPolicies
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -734,6 +768,7 @@ public partial class V1api20201101storageVirtualNetworkGatewayStatusVpnClientCon
     public int? SaLifeTimeSeconds { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.VpnClientRevokedCertificate_STATUS VPN client revoked certificate of virtual network gateway.</summary>
 public partial class V1api20201101storageVirtualNetworkGatewayStatusVpnClientConfigurationVpnClientRevokedCertificates
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -761,6 +796,7 @@ public partial class V1api20201101storageVirtualNetworkGatewayStatusVpnClientCon
     public string? Thumbprint { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.VpnClientRootCertificate_STATUS VPN client root certificate of virtual network gateway.</summary>
 public partial class V1api20201101storageVirtualNetworkGatewayStatusVpnClientConfigurationVpnClientRootCertificates
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -788,6 +824,7 @@ public partial class V1api20201101storageVirtualNetworkGatewayStatusVpnClientCon
     public string? PublicCertData { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.VpnClientConfiguration_STATUS VpnClientConfiguration for P2S client.</summary>
 public partial class V1api20201101storageVirtualNetworkGatewayStatusVpnClientConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -843,6 +880,7 @@ public partial class V1api20201101storageVirtualNetworkGatewayStatusVpnClientCon
     public IList<V1api20201101storageVirtualNetworkGatewayStatusVpnClientConfigurationVpnClientRootCertificates>? VpnClientRootCertificates { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.VirtualNetworkGateway_STATUS A common class for general resource information.</summary>
 public partial class V1api20201101storageVirtualNetworkGatewayStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -951,6 +989,7 @@ public partial class V1api20201101storageVirtualNetworkGatewayStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20201101.VirtualNetworkGateway Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/virtualNetworkGateway.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworkGateways/{virtualNetworkGatewayName}</summary>
 public partial class V1api20201101storageVirtualNetworkGateway : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20201101storageVirtualNetworkGatewaySpec>, IStatus<V1api20201101storageVirtualNetworkGatewayStatus>
 {
     public const string KubeApiVersion = "v1api20201101storage";

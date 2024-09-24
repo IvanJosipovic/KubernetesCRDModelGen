@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.messaging.knative.dev;
+/// <summary>Ref points to an Addressable.</summary>
 public partial class V1SubscriptionSpecReplyRef
 {
     /// <summary>API version of the referent.</summary>
@@ -27,6 +28,7 @@ public partial class V1SubscriptionSpecReplyRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Reply specifies (optionally) how to handle events returned from the Subscriber target.</summary>
 public partial class V1SubscriptionSpecReply
 {
     /// <summary>Ref points to an Addressable.</summary>
@@ -46,6 +48,7 @@ public partial class V1SubscriptionSpecReply
     public string? Audience { get; set; }
 }
 
+/// <summary>Subscriber is reference to (optional) function for processing events. Events from the Channel will be delivered here and replies are sent to a Destination as specified by the Reply.</summary>
 public partial class V1SubscriptionSpecSubscriber
 {
     /// <summary>Ref points to an Addressable.</summary>
@@ -65,6 +68,7 @@ public partial class V1SubscriptionSpecSubscriber
     public string? Audience { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1SubscriptionSpec
 {
     /// <summary>Reference to a channel that will be used to create the subscription. You can specify only the following fields of the KReference: kind, apiVersion, name and namespace. The resource pointed by this KReference must meet the contract to the ChannelableSpec duck type. If the resource does not meet this contract it will be reflected in the Subscription's status.  This field is immutable. We have no good answer on what happens to the events that are currently in the channel being consumed from and what the semantics there should be. For now, you can always delete the Subscription and recreate it to point to a different channel, giving the user more control over what semantics should be used (drain the channel first, possibly have events dropped, etc.)</summary>
@@ -84,6 +88,7 @@ public partial class V1SubscriptionSpec
     public V1SubscriptionSpecSubscriber? Subscriber { get; set; }
 }
 
+/// <summary>Auth provides the relevant information for OIDC authentication.</summary>
 public partial class V1SubscriptionStatusAuth
 {
     /// <summary>ServiceAccountName is the name of the generated service account used for this components OIDC authentication.</summary>
@@ -95,6 +100,7 @@ public partial class V1SubscriptionStatusAuth
     public IList<string>? ServiceAccountNames { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1SubscriptionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another. We use VolatileTime in place of metav1.Time to exclude this from creating equality.Semantic differences (all other things held constant).</summary>
@@ -122,6 +128,7 @@ public partial class V1SubscriptionStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>PhysicalSubscription is the fully resolved values that this Subscription represents.</summary>
 public partial class V1SubscriptionStatusPhysicalSubscription
 {
     /// <summary>ReplyURI is the fully resolved URI for the spec.delivery.deadLetterSink.</summary>
@@ -161,6 +168,7 @@ public partial class V1SubscriptionStatusPhysicalSubscription
     public string? SubscriberAudience { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1SubscriptionStatus
 {
     /// <summary>Annotations is additional Status fields for the Resource to save some additional State as well as convey more information to the user. This is roughly akin to Annotations on any k8s resource, just the reconciler conveying richer information outwards.</summary>
@@ -185,6 +193,7 @@ public partial class V1SubscriptionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Subscription routes events received on a Channel to a DNS name and corresponds to the subscriptions.channels.knative.dev CRD.</summary>
 public partial class V1Subscription : IKubernetesObject<V1ObjectMeta>, ISpec<V1SubscriptionSpec>, IStatus<V1SubscriptionStatus>
 {
     public const string KubeApiVersion = "v1";

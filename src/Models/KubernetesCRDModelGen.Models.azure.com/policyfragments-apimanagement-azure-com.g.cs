@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apimanagement.azure.com;
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a apimanagement.azure.com/Service resource</summary>
 public partial class V1api20220801storagePolicyFragmentSpecOwner
 {
     /// <summary></summary>
@@ -19,6 +20,7 @@ public partial class V1api20220801storagePolicyFragmentSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.Service_PolicyFragment_Spec</summary>
 public partial class V1api20220801storagePolicyFragmentSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -50,6 +52,7 @@ public partial class V1api20220801storagePolicyFragmentSpec
     public string? Value { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20220801storagePolicyFragmentStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -81,6 +84,7 @@ public partial class V1api20220801storagePolicyFragmentStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.Service_PolicyFragment_STATUS</summary>
 public partial class V1api20220801storagePolicyFragmentStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -117,6 +121,7 @@ public partial class V1api20220801storagePolicyFragmentStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20220801.PolicyFragment Generator information: - Generated from: /apimanagement/resource-manager/Microsoft.ApiManagement/stable/2022-08-01/apimpolicyfragments.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/policyFragments/{id}</summary>
 public partial class V1api20220801storagePolicyFragment : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20220801storagePolicyFragmentSpec>, IStatus<V1api20220801storagePolicyFragmentStatus>
 {
     public const string KubeApiVersion = "v1api20220801storage";

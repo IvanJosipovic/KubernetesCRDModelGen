@@ -18,6 +18,7 @@ public enum V1beta1BudgetManagementGroupSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetManagementGroupSpecForProviderFilterDimension
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1BudgetManagementGroupSpecForProviderFilterDimension
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetManagementGroupSpecForProviderFilterNotDimension
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -48,6 +50,7 @@ public partial class V1beta1BudgetManagementGroupSpecForProviderFilterNotDimensi
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetManagementGroupSpecForProviderFilterNotTag
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -63,6 +66,7 @@ public partial class V1beta1BudgetManagementGroupSpecForProviderFilterNotTag
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetManagementGroupSpecForProviderFilterNot
 {
     /// <summary>One dimension block as defined below to filter the budget on. Conflicts with tag.</summary>
@@ -74,6 +78,7 @@ public partial class V1beta1BudgetManagementGroupSpecForProviderFilterNot
     public IList<V1beta1BudgetManagementGroupSpecForProviderFilterNotTag>? Tag { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetManagementGroupSpecForProviderFilterTag
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -89,6 +94,7 @@ public partial class V1beta1BudgetManagementGroupSpecForProviderFilterTag
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetManagementGroupSpecForProviderFilter
 {
     /// <summary>One or more dimension blocks as defined below to filter the budget on.</summary>
@@ -124,6 +130,7 @@ public enum V1beta1BudgetManagementGroupSpecForProviderManagementGroupIdRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BudgetManagementGroupSpecForProviderManagementGroupIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -137,6 +144,7 @@ public partial class V1beta1BudgetManagementGroupSpecForProviderManagementGroupI
     public V1beta1BudgetManagementGroupSpecForProviderManagementGroupIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ManagementGroup in management to populate managementGroupId.</summary>
 public partial class V1beta1BudgetManagementGroupSpecForProviderManagementGroupIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -168,6 +176,7 @@ public enum V1beta1BudgetManagementGroupSpecForProviderManagementGroupIdSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BudgetManagementGroupSpecForProviderManagementGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -181,6 +190,7 @@ public partial class V1beta1BudgetManagementGroupSpecForProviderManagementGroupI
     public V1beta1BudgetManagementGroupSpecForProviderManagementGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ManagementGroup in management to populate managementGroupId.</summary>
 public partial class V1beta1BudgetManagementGroupSpecForProviderManagementGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -196,6 +206,7 @@ public partial class V1beta1BudgetManagementGroupSpecForProviderManagementGroupI
     public V1beta1BudgetManagementGroupSpecForProviderManagementGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetManagementGroupSpecForProviderNotification
 {
     /// <summary>Specifies a list of email addresses to send the budget notification to when the threshold is exceeded.</summary>
@@ -219,6 +230,7 @@ public partial class V1beta1BudgetManagementGroupSpecForProviderNotification
     public string? ThresholdType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetManagementGroupSpecForProviderTimePeriod
 {
     /// <summary>The end date for the budget. If not set this will be 10 years after the start date.</summary>
@@ -230,6 +242,7 @@ public partial class V1beta1BudgetManagementGroupSpecForProviderTimePeriod
     public string? StartDate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetManagementGroupSpecForProvider
 {
     /// <summary>The total amount of cost to track with the budget.</summary>
@@ -273,6 +286,7 @@ public partial class V1beta1BudgetManagementGroupSpecForProvider
     public IList<V1beta1BudgetManagementGroupSpecForProviderTimePeriod>? TimePeriod { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetManagementGroupSpecInitProviderFilterDimension
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -288,6 +302,7 @@ public partial class V1beta1BudgetManagementGroupSpecInitProviderFilterDimension
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetManagementGroupSpecInitProviderFilterNotDimension
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -303,6 +318,7 @@ public partial class V1beta1BudgetManagementGroupSpecInitProviderFilterNotDimens
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetManagementGroupSpecInitProviderFilterNotTag
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -318,6 +334,7 @@ public partial class V1beta1BudgetManagementGroupSpecInitProviderFilterNotTag
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetManagementGroupSpecInitProviderFilterNot
 {
     /// <summary>One dimension block as defined below to filter the budget on. Conflicts with tag.</summary>
@@ -329,6 +346,7 @@ public partial class V1beta1BudgetManagementGroupSpecInitProviderFilterNot
     public IList<V1beta1BudgetManagementGroupSpecInitProviderFilterNotTag>? Tag { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetManagementGroupSpecInitProviderFilterTag
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -344,6 +362,7 @@ public partial class V1beta1BudgetManagementGroupSpecInitProviderFilterTag
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetManagementGroupSpecInitProviderFilter
 {
     /// <summary>One or more dimension blocks as defined below to filter the budget on.</summary>
@@ -379,6 +398,7 @@ public enum V1beta1BudgetManagementGroupSpecInitProviderManagementGroupIdRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BudgetManagementGroupSpecInitProviderManagementGroupIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -392,6 +412,7 @@ public partial class V1beta1BudgetManagementGroupSpecInitProviderManagementGroup
     public V1beta1BudgetManagementGroupSpecInitProviderManagementGroupIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ManagementGroup in management to populate managementGroupId.</summary>
 public partial class V1beta1BudgetManagementGroupSpecInitProviderManagementGroupIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -423,6 +444,7 @@ public enum V1beta1BudgetManagementGroupSpecInitProviderManagementGroupIdSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BudgetManagementGroupSpecInitProviderManagementGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -436,6 +458,7 @@ public partial class V1beta1BudgetManagementGroupSpecInitProviderManagementGroup
     public V1beta1BudgetManagementGroupSpecInitProviderManagementGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ManagementGroup in management to populate managementGroupId.</summary>
 public partial class V1beta1BudgetManagementGroupSpecInitProviderManagementGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -451,6 +474,7 @@ public partial class V1beta1BudgetManagementGroupSpecInitProviderManagementGroup
     public V1beta1BudgetManagementGroupSpecInitProviderManagementGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetManagementGroupSpecInitProviderNotification
 {
     /// <summary>Specifies a list of email addresses to send the budget notification to when the threshold is exceeded.</summary>
@@ -474,6 +498,7 @@ public partial class V1beta1BudgetManagementGroupSpecInitProviderNotification
     public string? ThresholdType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetManagementGroupSpecInitProviderTimePeriod
 {
     /// <summary>The end date for the budget. If not set this will be 10 years after the start date.</summary>
@@ -485,6 +510,7 @@ public partial class V1beta1BudgetManagementGroupSpecInitProviderTimePeriod
     public string? StartDate { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1BudgetManagementGroupSpecInitProvider
 {
     /// <summary>The total amount of cost to track with the budget.</summary>
@@ -570,6 +596,7 @@ public enum V1beta1BudgetManagementGroupSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BudgetManagementGroupSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -583,6 +610,7 @@ public partial class V1beta1BudgetManagementGroupSpecProviderConfigRefPolicy
     public V1beta1BudgetManagementGroupSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1BudgetManagementGroupSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -614,6 +642,7 @@ public enum V1beta1BudgetManagementGroupSpecPublishConnectionDetailsToConfigRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BudgetManagementGroupSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -627,6 +656,7 @@ public partial class V1beta1BudgetManagementGroupSpecPublishConnectionDetailsToC
     public V1beta1BudgetManagementGroupSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1BudgetManagementGroupSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -638,6 +668,7 @@ public partial class V1beta1BudgetManagementGroupSpecPublishConnectionDetailsToC
     public V1beta1BudgetManagementGroupSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1BudgetManagementGroupSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -653,6 +684,7 @@ public partial class V1beta1BudgetManagementGroupSpecPublishConnectionDetailsToM
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1BudgetManagementGroupSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -668,6 +700,7 @@ public partial class V1beta1BudgetManagementGroupSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1BudgetManagementGroupSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -679,6 +712,7 @@ public partial class V1beta1BudgetManagementGroupSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>BudgetManagementGroupSpec defines the desired state of BudgetManagementGroup</summary>
 public partial class V1beta1BudgetManagementGroupSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -711,6 +745,7 @@ public partial class V1beta1BudgetManagementGroupSpec
     public V1beta1BudgetManagementGroupSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetManagementGroupStatusAtProviderFilterDimension
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -726,6 +761,7 @@ public partial class V1beta1BudgetManagementGroupStatusAtProviderFilterDimension
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetManagementGroupStatusAtProviderFilterNotDimension
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -741,6 +777,7 @@ public partial class V1beta1BudgetManagementGroupStatusAtProviderFilterNotDimens
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetManagementGroupStatusAtProviderFilterNotTag
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -756,6 +793,7 @@ public partial class V1beta1BudgetManagementGroupStatusAtProviderFilterNotTag
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetManagementGroupStatusAtProviderFilterNot
 {
     /// <summary>One dimension block as defined below to filter the budget on. Conflicts with tag.</summary>
@@ -767,6 +805,7 @@ public partial class V1beta1BudgetManagementGroupStatusAtProviderFilterNot
     public IList<V1beta1BudgetManagementGroupStatusAtProviderFilterNotTag>? Tag { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetManagementGroupStatusAtProviderFilterTag
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -782,6 +821,7 @@ public partial class V1beta1BudgetManagementGroupStatusAtProviderFilterTag
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetManagementGroupStatusAtProviderFilter
 {
     /// <summary>One or more dimension blocks as defined below to filter the budget on.</summary>
@@ -797,6 +837,7 @@ public partial class V1beta1BudgetManagementGroupStatusAtProviderFilter
     public IList<V1beta1BudgetManagementGroupStatusAtProviderFilterTag>? Tag { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetManagementGroupStatusAtProviderNotification
 {
     /// <summary>Specifies a list of email addresses to send the budget notification to when the threshold is exceeded.</summary>
@@ -820,6 +861,7 @@ public partial class V1beta1BudgetManagementGroupStatusAtProviderNotification
     public string? ThresholdType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetManagementGroupStatusAtProviderTimePeriod
 {
     /// <summary>The end date for the budget. If not set this will be 10 years after the start date.</summary>
@@ -831,6 +873,7 @@ public partial class V1beta1BudgetManagementGroupStatusAtProviderTimePeriod
     public string? StartDate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetManagementGroupStatusAtProvider
 {
     /// <summary>The total amount of cost to track with the budget.</summary>
@@ -870,6 +913,7 @@ public partial class V1beta1BudgetManagementGroupStatusAtProvider
     public IList<V1beta1BudgetManagementGroupStatusAtProviderTimePeriod>? TimePeriod { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1BudgetManagementGroupStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -897,6 +941,7 @@ public partial class V1beta1BudgetManagementGroupStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>BudgetManagementGroupStatus defines the observed state of BudgetManagementGroup.</summary>
 public partial class V1beta1BudgetManagementGroupStatus
 {
     /// <summary></summary>
@@ -913,6 +958,7 @@ public partial class V1beta1BudgetManagementGroupStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>BudgetManagementGroup is the Schema for the BudgetManagementGroups API. Manages a Consumption Budget for a Management Group.</summary>
 public partial class V1beta1BudgetManagementGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BudgetManagementGroupSpec>, IStatus<V1beta1BudgetManagementGroupStatus>
 {
     public const string KubeApiVersion = "v1beta1";

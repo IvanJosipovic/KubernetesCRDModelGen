@@ -38,6 +38,7 @@ public enum V1beta1BackendServiceSpecForProviderBackendGroupRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackendServiceSpecForProviderBackendGroupRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1BackendServiceSpecForProviderBackendGroupRefPolicy
     public V1beta1BackendServiceSpecForProviderBackendGroupRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a InstanceGroupManager in compute to populate group.</summary>
 public partial class V1beta1BackendServiceSpecForProviderBackendGroupRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1BackendServiceSpecForProviderBackendGroupSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackendServiceSpecForProviderBackendGroupSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1BackendServiceSpecForProviderBackendGroupSelectorPol
     public V1beta1BackendServiceSpecForProviderBackendGroupSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a InstanceGroupManager in compute to populate group.</summary>
 public partial class V1beta1BackendServiceSpecForProviderBackendGroupSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1BackendServiceSpecForProviderBackendGroupSelector
     public V1beta1BackendServiceSpecForProviderBackendGroupSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecForProviderBackend
 {
     /// <summary>Specifies the balancing mode for this backend. For global HTTP(S) or TCP/SSL load balancing, the default is UTILIZATION. Valid values are UTILIZATION, RATE (for HTTP(S)) and CONNECTION (for TCP/SSL). See the Backend Services Overview for an explanation of load balancing modes. Default value is UTILIZATION. Possible values are: UTILIZATION, RATE, CONNECTION.</summary>
@@ -165,6 +170,7 @@ public partial class V1beta1BackendServiceSpecForProviderBackend
     public double? MaxUtilization { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecForProviderCdnPolicyBypassCacheOnRequestHeaders
 {
     /// <summary>The header field name to match on when bypassing cache. Values are case-insensitive.</summary>
@@ -172,6 +178,7 @@ public partial class V1beta1BackendServiceSpecForProviderCdnPolicyBypassCacheOnR
     public string? HeaderName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecForProviderCdnPolicyCacheKeyPolicy
 {
     /// <summary>If true requests to different hosts will be cached separately.</summary>
@@ -203,6 +210,7 @@ public partial class V1beta1BackendServiceSpecForProviderCdnPolicyCacheKeyPolicy
     public IList<string>? QueryStringWhitelist { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecForProviderCdnPolicyNegativeCachingPolicy
 {
     /// <summary>The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 308, 404, 405, 410, 421, 451 and 501 can be specified as values, and you cannot specify a status code more than once.</summary>
@@ -214,6 +222,7 @@ public partial class V1beta1BackendServiceSpecForProviderCdnPolicyNegativeCachin
     public double? Ttl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecForProviderCdnPolicy
 {
     /// <summary>Bypass the cache when the specified request headers are matched - e.g. Pragma or Authorization headers. Up to 5 headers can be specified. The cache is bypassed for all cdnPolicy.cacheMode settings. Structure is documented below.</summary>
@@ -257,6 +266,7 @@ public partial class V1beta1BackendServiceSpecForProviderCdnPolicy
     public double? SignedUrlCacheMaxAgeSec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecForProviderCircuitBreakers
 {
     /// <summary>The maximum number of connections to the backend cluster. Defaults to 1024.</summary>
@@ -280,6 +290,7 @@ public partial class V1beta1BackendServiceSpecForProviderCircuitBreakers
     public double? MaxRetries { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecForProviderConsistentHashHttpCookieTtl
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -291,6 +302,7 @@ public partial class V1beta1BackendServiceSpecForProviderConsistentHashHttpCooki
     public double? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecForProviderConsistentHashHttpCookie
 {
     /// <summary>The name of a locality load balancer policy to be used. The value should be one of the predefined ones as supported by localityLbPolicy, although at the moment only ROUND_ROBIN is supported. This field should only be populated when the customPolicy field is not used. Note that specifying the same policy more than once for a backend is not a valid configuration and will be rejected. The possible values are:</summary>
@@ -306,6 +318,7 @@ public partial class V1beta1BackendServiceSpecForProviderConsistentHashHttpCooki
     public IList<V1beta1BackendServiceSpecForProviderConsistentHashHttpCookieTtl>? Ttl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecForProviderConsistentHash
 {
     /// <summary>Hash is based on HTTP Cookie. This field describes a HTTP cookie that will be used as the hash key for the consistent hash load balancer. If the cookie is not present, it will be generated. This field is applicable if the sessionAffinity is set to HTTP_COOKIE. Structure is documented below.</summary>
@@ -341,6 +354,7 @@ public enum V1beta1BackendServiceSpecForProviderHealthChecksRefsPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackendServiceSpecForProviderHealthChecksRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -354,6 +368,7 @@ public partial class V1beta1BackendServiceSpecForProviderHealthChecksRefsPolicy
     public V1beta1BackendServiceSpecForProviderHealthChecksRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1BackendServiceSpecForProviderHealthChecksRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -385,6 +400,7 @@ public enum V1beta1BackendServiceSpecForProviderHealthChecksSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackendServiceSpecForProviderHealthChecksSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -398,6 +414,7 @@ public partial class V1beta1BackendServiceSpecForProviderHealthChecksSelectorPol
     public V1beta1BackendServiceSpecForProviderHealthChecksSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of HealthCheck in compute to populate healthChecks.</summary>
 public partial class V1beta1BackendServiceSpecForProviderHealthChecksSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -413,6 +430,7 @@ public partial class V1beta1BackendServiceSpecForProviderHealthChecksSelector
     public V1beta1BackendServiceSpecForProviderHealthChecksSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>OAuth2 Client Secret for IAP Note: This property is sensitive and will not be displayed in the plan.</summary>
 public partial class V1beta1BackendServiceSpecForProviderIapOauth2ClientSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -428,6 +446,7 @@ public partial class V1beta1BackendServiceSpecForProviderIapOauth2ClientSecretSe
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecForProviderIap
 {
     /// <summary>OAuth2 Client ID for IAP</summary>
@@ -439,6 +458,7 @@ public partial class V1beta1BackendServiceSpecForProviderIap
     public V1beta1BackendServiceSpecForProviderIapOauth2ClientSecretSecretRef Oauth2ClientSecretSecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecForProviderLocalityLbPoliciesCustomPolicy
 {
     /// <summary>An optional, arbitrary JSON object with configuration data, understood by a locally installed custom policy implementation.</summary>
@@ -450,6 +470,7 @@ public partial class V1beta1BackendServiceSpecForProviderLocalityLbPoliciesCusto
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecForProviderLocalityLbPoliciesPolicy
 {
     /// <summary>The name of a locality load balancer policy to be used. The value should be one of the predefined ones as supported by localityLbPolicy, although at the moment only ROUND_ROBIN is supported. This field should only be populated when the customPolicy field is not used. Note that specifying the same policy more than once for a backend is not a valid configuration and will be rejected. The possible values are:</summary>
@@ -457,6 +478,7 @@ public partial class V1beta1BackendServiceSpecForProviderLocalityLbPoliciesPolic
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecForProviderLocalityLbPolicies
 {
     /// <summary>The configuration for a custom policy implemented by the user and deployed with the client. Structure is documented below.</summary>
@@ -468,6 +490,7 @@ public partial class V1beta1BackendServiceSpecForProviderLocalityLbPolicies
     public IList<V1beta1BackendServiceSpecForProviderLocalityLbPoliciesPolicy>? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecForProviderLogConfig
 {
     /// <summary>Whether to enable logging for the load balancer traffic served by this backend service.</summary>
@@ -479,6 +502,7 @@ public partial class V1beta1BackendServiceSpecForProviderLogConfig
     public double? SampleRate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecForProviderOutlierDetectionBaseEjectionTime
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -490,6 +514,7 @@ public partial class V1beta1BackendServiceSpecForProviderOutlierDetectionBaseEje
     public double? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecForProviderOutlierDetectionInterval
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -501,6 +526,7 @@ public partial class V1beta1BackendServiceSpecForProviderOutlierDetectionInterva
     public double? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecForProviderOutlierDetection
 {
     /// <summary>The base time that a host is ejected for. The real time is equal to the base time multiplied by the number of times the host has been ejected. Defaults to 30000ms or 30s. Structure is documented below.</summary>
@@ -548,6 +574,7 @@ public partial class V1beta1BackendServiceSpecForProviderOutlierDetection
     public double? SuccessRateStdevFactor { get; set; }
 }
 
+/// <summary>The access key used for s3 bucket authentication. Required for updating or creating a backend that uses AWS v4 signature authentication, but will not be returned as part of the configuration when queried with a REST API GET request. Note: This property is sensitive and will not be displayed in the plan.</summary>
 public partial class V1beta1BackendServiceSpecForProviderSecuritySettingsAwsV4AuthenticationAccessKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -563,6 +590,7 @@ public partial class V1beta1BackendServiceSpecForProviderSecuritySettingsAwsV4Au
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecForProviderSecuritySettingsAwsV4Authentication
 {
     /// <summary>The identifier of an access key used for s3 bucket authentication.</summary>
@@ -582,6 +610,7 @@ public partial class V1beta1BackendServiceSpecForProviderSecuritySettingsAwsV4Au
     public string? OriginRegion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecForProviderSecuritySettings
 {
     /// <summary>The configuration needed to generate a signature for access to private storage buckets that support AWS's Signature Version 4 for authentication. Allowed only for INTERNET_IP_PORT and INTERNET_FQDN_PORT NEG backends. Structure is documented below.</summary>
@@ -597,6 +626,7 @@ public partial class V1beta1BackendServiceSpecForProviderSecuritySettings
     public IList<string>? SubjectAltNames { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecForProvider
 {
     /// <summary>Lifetime of cookies in seconds if session_affinity is GENERATED_COOKIE. If set to 0, the cookie is non-persistent and lasts only until the end of the browser session (or equivalent). The maximum allowed value for TTL is one day. When the load balancing scheme is INTERNAL, this field is not used.</summary>
@@ -736,6 +766,7 @@ public enum V1beta1BackendServiceSpecInitProviderBackendGroupRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackendServiceSpecInitProviderBackendGroupRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -749,6 +780,7 @@ public partial class V1beta1BackendServiceSpecInitProviderBackendGroupRefPolicy
     public V1beta1BackendServiceSpecInitProviderBackendGroupRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a InstanceGroupManager in compute to populate group.</summary>
 public partial class V1beta1BackendServiceSpecInitProviderBackendGroupRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -780,6 +812,7 @@ public enum V1beta1BackendServiceSpecInitProviderBackendGroupSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackendServiceSpecInitProviderBackendGroupSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -793,6 +826,7 @@ public partial class V1beta1BackendServiceSpecInitProviderBackendGroupSelectorPo
     public V1beta1BackendServiceSpecInitProviderBackendGroupSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a InstanceGroupManager in compute to populate group.</summary>
 public partial class V1beta1BackendServiceSpecInitProviderBackendGroupSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -808,6 +842,7 @@ public partial class V1beta1BackendServiceSpecInitProviderBackendGroupSelector
     public V1beta1BackendServiceSpecInitProviderBackendGroupSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecInitProviderBackend
 {
     /// <summary>Specifies the balancing mode for this backend. For global HTTP(S) or TCP/SSL load balancing, the default is UTILIZATION. Valid values are UTILIZATION, RATE (for HTTP(S)) and CONNECTION (for TCP/SSL). See the Backend Services Overview for an explanation of load balancing modes. Default value is UTILIZATION. Possible values are: UTILIZATION, RATE, CONNECTION.</summary>
@@ -863,6 +898,7 @@ public partial class V1beta1BackendServiceSpecInitProviderBackend
     public double? MaxUtilization { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecInitProviderCdnPolicyBypassCacheOnRequestHeaders
 {
     /// <summary>The header field name to match on when bypassing cache. Values are case-insensitive.</summary>
@@ -870,6 +906,7 @@ public partial class V1beta1BackendServiceSpecInitProviderCdnPolicyBypassCacheOn
     public string? HeaderName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecInitProviderCdnPolicyCacheKeyPolicy
 {
     /// <summary>If true requests to different hosts will be cached separately.</summary>
@@ -901,6 +938,7 @@ public partial class V1beta1BackendServiceSpecInitProviderCdnPolicyCacheKeyPolic
     public IList<string>? QueryStringWhitelist { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecInitProviderCdnPolicyNegativeCachingPolicy
 {
     /// <summary>The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 308, 404, 405, 410, 421, 451 and 501 can be specified as values, and you cannot specify a status code more than once.</summary>
@@ -912,6 +950,7 @@ public partial class V1beta1BackendServiceSpecInitProviderCdnPolicyNegativeCachi
     public double? Ttl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecInitProviderCdnPolicy
 {
     /// <summary>Bypass the cache when the specified request headers are matched - e.g. Pragma or Authorization headers. Up to 5 headers can be specified. The cache is bypassed for all cdnPolicy.cacheMode settings. Structure is documented below.</summary>
@@ -955,6 +994,7 @@ public partial class V1beta1BackendServiceSpecInitProviderCdnPolicy
     public double? SignedUrlCacheMaxAgeSec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecInitProviderCircuitBreakers
 {
     /// <summary>The maximum number of connections to the backend cluster. Defaults to 1024.</summary>
@@ -978,6 +1018,7 @@ public partial class V1beta1BackendServiceSpecInitProviderCircuitBreakers
     public double? MaxRetries { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecInitProviderConsistentHashHttpCookieTtl
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -989,6 +1030,7 @@ public partial class V1beta1BackendServiceSpecInitProviderConsistentHashHttpCook
     public double? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecInitProviderConsistentHashHttpCookie
 {
     /// <summary>The name of a locality load balancer policy to be used. The value should be one of the predefined ones as supported by localityLbPolicy, although at the moment only ROUND_ROBIN is supported. This field should only be populated when the customPolicy field is not used. Note that specifying the same policy more than once for a backend is not a valid configuration and will be rejected. The possible values are:</summary>
@@ -1004,6 +1046,7 @@ public partial class V1beta1BackendServiceSpecInitProviderConsistentHashHttpCook
     public IList<V1beta1BackendServiceSpecInitProviderConsistentHashHttpCookieTtl>? Ttl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecInitProviderConsistentHash
 {
     /// <summary>Hash is based on HTTP Cookie. This field describes a HTTP cookie that will be used as the hash key for the consistent hash load balancer. If the cookie is not present, it will be generated. This field is applicable if the sessionAffinity is set to HTTP_COOKIE. Structure is documented below.</summary>
@@ -1039,6 +1082,7 @@ public enum V1beta1BackendServiceSpecInitProviderHealthChecksRefsPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackendServiceSpecInitProviderHealthChecksRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1052,6 +1096,7 @@ public partial class V1beta1BackendServiceSpecInitProviderHealthChecksRefsPolicy
     public V1beta1BackendServiceSpecInitProviderHealthChecksRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1BackendServiceSpecInitProviderHealthChecksRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1083,6 +1128,7 @@ public enum V1beta1BackendServiceSpecInitProviderHealthChecksSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackendServiceSpecInitProviderHealthChecksSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1096,6 +1142,7 @@ public partial class V1beta1BackendServiceSpecInitProviderHealthChecksSelectorPo
     public V1beta1BackendServiceSpecInitProviderHealthChecksSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of HealthCheck in compute to populate healthChecks.</summary>
 public partial class V1beta1BackendServiceSpecInitProviderHealthChecksSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1111,6 +1158,7 @@ public partial class V1beta1BackendServiceSpecInitProviderHealthChecksSelector
     public V1beta1BackendServiceSpecInitProviderHealthChecksSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecInitProviderIap
 {
     /// <summary>OAuth2 Client ID for IAP</summary>
@@ -1118,6 +1166,7 @@ public partial class V1beta1BackendServiceSpecInitProviderIap
     public string? Oauth2ClientId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecInitProviderLocalityLbPoliciesCustomPolicy
 {
     /// <summary>An optional, arbitrary JSON object with configuration data, understood by a locally installed custom policy implementation.</summary>
@@ -1129,6 +1178,7 @@ public partial class V1beta1BackendServiceSpecInitProviderLocalityLbPoliciesCust
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecInitProviderLocalityLbPoliciesPolicy
 {
     /// <summary>The name of a locality load balancer policy to be used. The value should be one of the predefined ones as supported by localityLbPolicy, although at the moment only ROUND_ROBIN is supported. This field should only be populated when the customPolicy field is not used. Note that specifying the same policy more than once for a backend is not a valid configuration and will be rejected. The possible values are:</summary>
@@ -1136,6 +1186,7 @@ public partial class V1beta1BackendServiceSpecInitProviderLocalityLbPoliciesPoli
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecInitProviderLocalityLbPolicies
 {
     /// <summary>The configuration for a custom policy implemented by the user and deployed with the client. Structure is documented below.</summary>
@@ -1147,6 +1198,7 @@ public partial class V1beta1BackendServiceSpecInitProviderLocalityLbPolicies
     public IList<V1beta1BackendServiceSpecInitProviderLocalityLbPoliciesPolicy>? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecInitProviderLogConfig
 {
     /// <summary>Whether to enable logging for the load balancer traffic served by this backend service.</summary>
@@ -1158,6 +1210,7 @@ public partial class V1beta1BackendServiceSpecInitProviderLogConfig
     public double? SampleRate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecInitProviderOutlierDetectionBaseEjectionTime
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -1169,6 +1222,7 @@ public partial class V1beta1BackendServiceSpecInitProviderOutlierDetectionBaseEj
     public double? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecInitProviderOutlierDetectionInterval
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -1180,6 +1234,7 @@ public partial class V1beta1BackendServiceSpecInitProviderOutlierDetectionInterv
     public double? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecInitProviderOutlierDetection
 {
     /// <summary>The base time that a host is ejected for. The real time is equal to the base time multiplied by the number of times the host has been ejected. Defaults to 30000ms or 30s. Structure is documented below.</summary>
@@ -1227,6 +1282,7 @@ public partial class V1beta1BackendServiceSpecInitProviderOutlierDetection
     public double? SuccessRateStdevFactor { get; set; }
 }
 
+/// <summary>The access key used for s3 bucket authentication. Required for updating or creating a backend that uses AWS v4 signature authentication, but will not be returned as part of the configuration when queried with a REST API GET request. Note: This property is sensitive and will not be displayed in the plan.</summary>
 public partial class V1beta1BackendServiceSpecInitProviderSecuritySettingsAwsV4AuthenticationAccessKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1242,6 +1298,7 @@ public partial class V1beta1BackendServiceSpecInitProviderSecuritySettingsAwsV4A
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecInitProviderSecuritySettingsAwsV4Authentication
 {
     /// <summary>The identifier of an access key used for s3 bucket authentication.</summary>
@@ -1261,6 +1318,7 @@ public partial class V1beta1BackendServiceSpecInitProviderSecuritySettingsAwsV4A
     public string? OriginRegion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSpecInitProviderSecuritySettings
 {
     /// <summary>The configuration needed to generate a signature for access to private storage buckets that support AWS's Signature Version 4 for authentication. Allowed only for INTERNET_IP_PORT and INTERNET_FQDN_PORT NEG backends. Structure is documented below.</summary>
@@ -1276,6 +1334,7 @@ public partial class V1beta1BackendServiceSpecInitProviderSecuritySettings
     public IList<string>? SubjectAltNames { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1BackendServiceSpecInitProvider
 {
     /// <summary>Lifetime of cookies in seconds if session_affinity is GENERATED_COOKIE. If set to 0, the cookie is non-persistent and lasts only until the end of the browser session (or equivalent). The maximum allowed value for TTL is one day. When the load balancing scheme is INTERNAL, this field is not used.</summary>
@@ -1437,6 +1496,7 @@ public enum V1beta1BackendServiceSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackendServiceSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1450,6 +1510,7 @@ public partial class V1beta1BackendServiceSpecProviderConfigRefPolicy
     public V1beta1BackendServiceSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1BackendServiceSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1481,6 +1542,7 @@ public enum V1beta1BackendServiceSpecPublishConnectionDetailsToConfigRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackendServiceSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1494,6 +1556,7 @@ public partial class V1beta1BackendServiceSpecPublishConnectionDetailsToConfigRe
     public V1beta1BackendServiceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1BackendServiceSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1505,6 +1568,7 @@ public partial class V1beta1BackendServiceSpecPublishConnectionDetailsToConfigRe
     public V1beta1BackendServiceSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1BackendServiceSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1520,6 +1584,7 @@ public partial class V1beta1BackendServiceSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1BackendServiceSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1535,6 +1600,7 @@ public partial class V1beta1BackendServiceSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1BackendServiceSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1546,6 +1612,7 @@ public partial class V1beta1BackendServiceSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>BackendServiceSpec defines the desired state of BackendService</summary>
 public partial class V1beta1BackendServiceSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1578,6 +1645,7 @@ public partial class V1beta1BackendServiceSpec
     public V1beta1BackendServiceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceStatusAtProviderBackend
 {
     /// <summary>Specifies the balancing mode for this backend. For global HTTP(S) or TCP/SSL load balancing, the default is UTILIZATION. Valid values are UTILIZATION, RATE (for HTTP(S)) and CONNECTION (for TCP/SSL). See the Backend Services Overview for an explanation of load balancing modes. Default value is UTILIZATION. Possible values are: UTILIZATION, RATE, CONNECTION.</summary>
@@ -1625,6 +1693,7 @@ public partial class V1beta1BackendServiceStatusAtProviderBackend
     public double? MaxUtilization { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceStatusAtProviderCdnPolicyBypassCacheOnRequestHeaders
 {
     /// <summary>The header field name to match on when bypassing cache. Values are case-insensitive.</summary>
@@ -1632,6 +1701,7 @@ public partial class V1beta1BackendServiceStatusAtProviderCdnPolicyBypassCacheOn
     public string? HeaderName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceStatusAtProviderCdnPolicyCacheKeyPolicy
 {
     /// <summary>If true requests to different hosts will be cached separately.</summary>
@@ -1663,6 +1733,7 @@ public partial class V1beta1BackendServiceStatusAtProviderCdnPolicyCacheKeyPolic
     public IList<string>? QueryStringWhitelist { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceStatusAtProviderCdnPolicyNegativeCachingPolicy
 {
     /// <summary>The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 308, 404, 405, 410, 421, 451 and 501 can be specified as values, and you cannot specify a status code more than once.</summary>
@@ -1674,6 +1745,7 @@ public partial class V1beta1BackendServiceStatusAtProviderCdnPolicyNegativeCachi
     public double? Ttl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceStatusAtProviderCdnPolicy
 {
     /// <summary>Bypass the cache when the specified request headers are matched - e.g. Pragma or Authorization headers. Up to 5 headers can be specified. The cache is bypassed for all cdnPolicy.cacheMode settings. Structure is documented below.</summary>
@@ -1717,6 +1789,7 @@ public partial class V1beta1BackendServiceStatusAtProviderCdnPolicy
     public double? SignedUrlCacheMaxAgeSec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceStatusAtProviderCircuitBreakers
 {
     /// <summary>The maximum number of connections to the backend cluster. Defaults to 1024.</summary>
@@ -1740,6 +1813,7 @@ public partial class V1beta1BackendServiceStatusAtProviderCircuitBreakers
     public double? MaxRetries { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceStatusAtProviderConsistentHashHttpCookieTtl
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -1751,6 +1825,7 @@ public partial class V1beta1BackendServiceStatusAtProviderConsistentHashHttpCook
     public double? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceStatusAtProviderConsistentHashHttpCookie
 {
     /// <summary>The name of a locality load balancer policy to be used. The value should be one of the predefined ones as supported by localityLbPolicy, although at the moment only ROUND_ROBIN is supported. This field should only be populated when the customPolicy field is not used. Note that specifying the same policy more than once for a backend is not a valid configuration and will be rejected. The possible values are:</summary>
@@ -1766,6 +1841,7 @@ public partial class V1beta1BackendServiceStatusAtProviderConsistentHashHttpCook
     public IList<V1beta1BackendServiceStatusAtProviderConsistentHashHttpCookieTtl>? Ttl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceStatusAtProviderConsistentHash
 {
     /// <summary>Hash is based on HTTP Cookie. This field describes a HTTP cookie that will be used as the hash key for the consistent hash load balancer. If the cookie is not present, it will be generated. This field is applicable if the sessionAffinity is set to HTTP_COOKIE. Structure is documented below.</summary>
@@ -1781,6 +1857,7 @@ public partial class V1beta1BackendServiceStatusAtProviderConsistentHash
     public double? MinimumRingSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceStatusAtProviderIap
 {
     /// <summary>OAuth2 Client ID for IAP</summary>
@@ -1788,6 +1865,7 @@ public partial class V1beta1BackendServiceStatusAtProviderIap
     public string? Oauth2ClientId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceStatusAtProviderLocalityLbPoliciesCustomPolicy
 {
     /// <summary>An optional, arbitrary JSON object with configuration data, understood by a locally installed custom policy implementation.</summary>
@@ -1799,6 +1877,7 @@ public partial class V1beta1BackendServiceStatusAtProviderLocalityLbPoliciesCust
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceStatusAtProviderLocalityLbPoliciesPolicy
 {
     /// <summary>The name of a locality load balancer policy to be used. The value should be one of the predefined ones as supported by localityLbPolicy, although at the moment only ROUND_ROBIN is supported. This field should only be populated when the customPolicy field is not used. Note that specifying the same policy more than once for a backend is not a valid configuration and will be rejected. The possible values are:</summary>
@@ -1806,6 +1885,7 @@ public partial class V1beta1BackendServiceStatusAtProviderLocalityLbPoliciesPoli
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceStatusAtProviderLocalityLbPolicies
 {
     /// <summary>The configuration for a custom policy implemented by the user and deployed with the client. Structure is documented below.</summary>
@@ -1817,6 +1897,7 @@ public partial class V1beta1BackendServiceStatusAtProviderLocalityLbPolicies
     public IList<V1beta1BackendServiceStatusAtProviderLocalityLbPoliciesPolicy>? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceStatusAtProviderLogConfig
 {
     /// <summary>Whether to enable logging for the load balancer traffic served by this backend service.</summary>
@@ -1828,6 +1909,7 @@ public partial class V1beta1BackendServiceStatusAtProviderLogConfig
     public double? SampleRate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceStatusAtProviderOutlierDetectionBaseEjectionTime
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -1839,6 +1921,7 @@ public partial class V1beta1BackendServiceStatusAtProviderOutlierDetectionBaseEj
     public double? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceStatusAtProviderOutlierDetectionInterval
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -1850,6 +1933,7 @@ public partial class V1beta1BackendServiceStatusAtProviderOutlierDetectionInterv
     public double? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceStatusAtProviderOutlierDetection
 {
     /// <summary>The base time that a host is ejected for. The real time is equal to the base time multiplied by the number of times the host has been ejected. Defaults to 30000ms or 30s. Structure is documented below.</summary>
@@ -1897,6 +1981,7 @@ public partial class V1beta1BackendServiceStatusAtProviderOutlierDetection
     public double? SuccessRateStdevFactor { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceStatusAtProviderSecuritySettingsAwsV4Authentication
 {
     /// <summary>The identifier of an access key used for s3 bucket authentication.</summary>
@@ -1912,6 +1997,7 @@ public partial class V1beta1BackendServiceStatusAtProviderSecuritySettingsAwsV4A
     public string? OriginRegion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceStatusAtProviderSecuritySettings
 {
     /// <summary>The configuration needed to generate a signature for access to private storage buckets that support AWS's Signature Version 4 for authentication. Allowed only for INTERNET_IP_PORT and INTERNET_FQDN_PORT NEG backends. Structure is documented below.</summary>
@@ -1927,6 +2013,7 @@ public partial class V1beta1BackendServiceStatusAtProviderSecuritySettings
     public IList<string>? SubjectAltNames { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceStatusAtProvider
 {
     /// <summary>Lifetime of cookies in seconds if session_affinity is GENERATED_COOKIE. If set to 0, the cookie is non-persistent and lasts only until the end of the browser session (or equivalent). The maximum allowed value for TTL is one day. When the load balancing scheme is INTERNAL, this field is not used.</summary>
@@ -2058,6 +2145,7 @@ public partial class V1beta1BackendServiceStatusAtProvider
     public double? TimeoutSec { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1BackendServiceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2085,6 +2173,7 @@ public partial class V1beta1BackendServiceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>BackendServiceStatus defines the observed state of BackendService.</summary>
 public partial class V1beta1BackendServiceStatus
 {
     /// <summary></summary>
@@ -2101,6 +2190,7 @@ public partial class V1beta1BackendServiceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>BackendService is the Schema for the BackendServices API. A Backend Service defines a group of virtual machines that will serve traffic for load balancing.</summary>
 public partial class V1beta1BackendService : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BackendServiceSpec>, IStatus<V1beta1BackendServiceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -18,6 +18,7 @@ public enum V1beta1ContactProfileSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1ContactProfileSpecForProviderLinksChannelsEndPoint
 {
     /// <summary>Name of an end point.</summary>
@@ -37,6 +38,7 @@ public partial class V1beta1ContactProfileSpecForProviderLinksChannelsEndPoint
     public string? Protocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContactProfileSpecForProviderLinksChannels
 {
     /// <summary>Bandwidth in MHz.</summary>
@@ -64,6 +66,7 @@ public partial class V1beta1ContactProfileSpecForProviderLinksChannels
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContactProfileSpecForProviderLinks
 {
     /// <summary>A list of contact profile link channels. A channels block as defined below.</summary>
@@ -103,6 +106,7 @@ public enum V1beta1ContactProfileSpecForProviderNetworkConfigurationSubnetIdRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ContactProfileSpecForProviderNetworkConfigurationSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -116,6 +120,7 @@ public partial class V1beta1ContactProfileSpecForProviderNetworkConfigurationSub
     public V1beta1ContactProfileSpecForProviderNetworkConfigurationSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate networkConfigurationSubnetId.</summary>
 public partial class V1beta1ContactProfileSpecForProviderNetworkConfigurationSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -147,6 +152,7 @@ public enum V1beta1ContactProfileSpecForProviderNetworkConfigurationSubnetIdSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ContactProfileSpecForProviderNetworkConfigurationSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -160,6 +166,7 @@ public partial class V1beta1ContactProfileSpecForProviderNetworkConfigurationSub
     public V1beta1ContactProfileSpecForProviderNetworkConfigurationSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate networkConfigurationSubnetId.</summary>
 public partial class V1beta1ContactProfileSpecForProviderNetworkConfigurationSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -195,6 +202,7 @@ public enum V1beta1ContactProfileSpecForProviderResourceGroupNameRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ContactProfileSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -208,6 +216,7 @@ public partial class V1beta1ContactProfileSpecForProviderResourceGroupNameRefPol
     public V1beta1ContactProfileSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1ContactProfileSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -239,6 +248,7 @@ public enum V1beta1ContactProfileSpecForProviderResourceGroupNameSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ContactProfileSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -252,6 +262,7 @@ public partial class V1beta1ContactProfileSpecForProviderResourceGroupNameSelect
     public V1beta1ContactProfileSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1ContactProfileSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -267,6 +278,7 @@ public partial class V1beta1ContactProfileSpecForProviderResourceGroupNameSelect
     public V1beta1ContactProfileSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContactProfileSpecForProvider
 {
     /// <summary>Auto-tracking configurations for a spacecraft. Possible values are disabled, xBand and sBand.</summary>
@@ -322,6 +334,7 @@ public partial class V1beta1ContactProfileSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContactProfileSpecInitProviderLinksChannelsEndPoint
 {
     /// <summary>Name of an end point.</summary>
@@ -341,6 +354,7 @@ public partial class V1beta1ContactProfileSpecInitProviderLinksChannelsEndPoint
     public string? Protocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContactProfileSpecInitProviderLinksChannels
 {
     /// <summary>Bandwidth in MHz.</summary>
@@ -368,6 +382,7 @@ public partial class V1beta1ContactProfileSpecInitProviderLinksChannels
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContactProfileSpecInitProviderLinks
 {
     /// <summary>A list of contact profile link channels. A channels block as defined below.</summary>
@@ -407,6 +422,7 @@ public enum V1beta1ContactProfileSpecInitProviderNetworkConfigurationSubnetIdRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ContactProfileSpecInitProviderNetworkConfigurationSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -420,6 +436,7 @@ public partial class V1beta1ContactProfileSpecInitProviderNetworkConfigurationSu
     public V1beta1ContactProfileSpecInitProviderNetworkConfigurationSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate networkConfigurationSubnetId.</summary>
 public partial class V1beta1ContactProfileSpecInitProviderNetworkConfigurationSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -451,6 +468,7 @@ public enum V1beta1ContactProfileSpecInitProviderNetworkConfigurationSubnetIdSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ContactProfileSpecInitProviderNetworkConfigurationSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -464,6 +482,7 @@ public partial class V1beta1ContactProfileSpecInitProviderNetworkConfigurationSu
     public V1beta1ContactProfileSpecInitProviderNetworkConfigurationSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate networkConfigurationSubnetId.</summary>
 public partial class V1beta1ContactProfileSpecInitProviderNetworkConfigurationSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -479,6 +498,7 @@ public partial class V1beta1ContactProfileSpecInitProviderNetworkConfigurationSu
     public V1beta1ContactProfileSpecInitProviderNetworkConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ContactProfileSpecInitProvider
 {
     /// <summary>Auto-tracking configurations for a spacecraft. Possible values are disabled, xBand and sBand.</summary>
@@ -564,6 +584,7 @@ public enum V1beta1ContactProfileSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ContactProfileSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -577,6 +598,7 @@ public partial class V1beta1ContactProfileSpecProviderConfigRefPolicy
     public V1beta1ContactProfileSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ContactProfileSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -608,6 +630,7 @@ public enum V1beta1ContactProfileSpecPublishConnectionDetailsToConfigRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ContactProfileSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -621,6 +644,7 @@ public partial class V1beta1ContactProfileSpecPublishConnectionDetailsToConfigRe
     public V1beta1ContactProfileSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ContactProfileSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -632,6 +656,7 @@ public partial class V1beta1ContactProfileSpecPublishConnectionDetailsToConfigRe
     public V1beta1ContactProfileSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ContactProfileSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -647,6 +672,7 @@ public partial class V1beta1ContactProfileSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ContactProfileSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -662,6 +688,7 @@ public partial class V1beta1ContactProfileSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ContactProfileSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -673,6 +700,7 @@ public partial class V1beta1ContactProfileSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ContactProfileSpec defines the desired state of ContactProfile</summary>
 public partial class V1beta1ContactProfileSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -705,6 +733,7 @@ public partial class V1beta1ContactProfileSpec
     public V1beta1ContactProfileSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContactProfileStatusAtProviderLinksChannelsEndPoint
 {
     /// <summary>Name of an end point.</summary>
@@ -724,6 +753,7 @@ public partial class V1beta1ContactProfileStatusAtProviderLinksChannelsEndPoint
     public string? Protocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContactProfileStatusAtProviderLinksChannels
 {
     /// <summary>Bandwidth in MHz.</summary>
@@ -751,6 +781,7 @@ public partial class V1beta1ContactProfileStatusAtProviderLinksChannels
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContactProfileStatusAtProviderLinks
 {
     /// <summary>A list of contact profile link channels. A channels block as defined below.</summary>
@@ -770,6 +801,7 @@ public partial class V1beta1ContactProfileStatusAtProviderLinks
     public string? Polarization { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContactProfileStatusAtProvider
 {
     /// <summary>Auto-tracking configurations for a spacecraft. Possible values are disabled, xBand and sBand.</summary>
@@ -813,6 +845,7 @@ public partial class V1beta1ContactProfileStatusAtProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ContactProfileStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -840,6 +873,7 @@ public partial class V1beta1ContactProfileStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ContactProfileStatus defines the observed state of ContactProfile.</summary>
 public partial class V1beta1ContactProfileStatus
 {
     /// <summary></summary>
@@ -856,6 +890,7 @@ public partial class V1beta1ContactProfileStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ContactProfile is the Schema for the ContactProfiles API. Manages a orbital contact profile resource.</summary>
 public partial class V1beta1ContactProfile : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ContactProfileSpec>, IStatus<V1beta1ContactProfileStatus>
 {
     public const string KubeApiVersion = "v1beta1";

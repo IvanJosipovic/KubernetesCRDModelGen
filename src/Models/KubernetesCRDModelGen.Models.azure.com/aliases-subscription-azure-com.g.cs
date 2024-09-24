@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.subscription.azure.com;
+/// <summary>Storage version of v1api20211001.PutAliasRequestAdditionalProperties Put subscription additional properties.</summary>
 public partial class V1api20211001storageAliasSpecPropertiesAdditionalProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -31,6 +32,7 @@ public partial class V1api20211001storageAliasSpecPropertiesAdditionalProperties
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.PutAliasRequestProperties Put subscription properties.</summary>
 public partial class V1api20211001storageAliasSpecProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -62,6 +64,7 @@ public partial class V1api20211001storageAliasSpecProperties
     public string? Workload { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.Alias_Spec</summary>
 public partial class V1api20211001storageAliasSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -81,6 +84,7 @@ public partial class V1api20211001storageAliasSpec
     public V1api20211001storageAliasSpecProperties? Properties { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20211001storageAliasStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -112,6 +116,7 @@ public partial class V1api20211001storageAliasStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.SubscriptionAliasResponseProperties_STATUS Put subscription creation result properties.</summary>
 public partial class V1api20211001storageAliasStatusProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -167,6 +172,7 @@ public partial class V1api20211001storageAliasStatusProperties
     public string? Workload { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 public partial class V1api20211001storageAliasStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -198,6 +204,7 @@ public partial class V1api20211001storageAliasStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.Alias_STATUS</summary>
 public partial class V1api20211001storageAliasStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -230,6 +237,7 @@ public partial class V1api20211001storageAliasStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20211001.Alias Generator information: - Generated from: /subscription/resource-manager/Microsoft.Subscription/stable/2021-10-01/subscriptions.json - ARM URI: /providers/Microsoft.Subscription/aliases/{aliasName}</summary>
 public partial class V1api20211001storageAlias : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20211001storageAliasSpec>, IStatus<V1api20211001storageAliasStatus>
 {
     public const string KubeApiVersion = "v1api20211001storage";

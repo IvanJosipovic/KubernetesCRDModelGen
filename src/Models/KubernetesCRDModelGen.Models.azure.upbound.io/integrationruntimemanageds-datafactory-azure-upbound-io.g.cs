@@ -18,6 +18,7 @@ public enum V1beta1IntegrationRuntimeManagedSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Administrator login password for the SQL Server.</summary>
 public partial class V1beta1IntegrationRuntimeManagedSpecForProviderCatalogInfoAdministratorPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1IntegrationRuntimeManagedSpecForProviderCatalogInfoA
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntegrationRuntimeManagedSpecForProviderCatalogInfo
 {
     /// <summary>Administrator login name for the SQL Server.</summary>
@@ -52,6 +54,7 @@ public partial class V1beta1IntegrationRuntimeManagedSpecForProviderCatalogInfo
     public string? ServerEndpoint { get; set; }
 }
 
+/// <summary>A container SAS token that gives access to the files. See https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup for more information.</summary>
 public partial class V1beta1IntegrationRuntimeManagedSpecForProviderCustomSetupScriptSasTokenSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -67,6 +70,7 @@ public partial class V1beta1IntegrationRuntimeManagedSpecForProviderCustomSetupS
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntegrationRuntimeManagedSpecForProviderCustomSetupScript
 {
     /// <summary>The blob endpoint for the container which contains a custom setup script that will be run on every node on startup. See https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup for more information.</summary>
@@ -98,6 +102,7 @@ public enum V1beta1IntegrationRuntimeManagedSpecForProviderDataFactoryIdRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IntegrationRuntimeManagedSpecForProviderDataFactoryIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -111,6 +116,7 @@ public partial class V1beta1IntegrationRuntimeManagedSpecForProviderDataFactoryI
     public V1beta1IntegrationRuntimeManagedSpecForProviderDataFactoryIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Factory in datafactory to populate dataFactoryId.</summary>
 public partial class V1beta1IntegrationRuntimeManagedSpecForProviderDataFactoryIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -142,6 +148,7 @@ public enum V1beta1IntegrationRuntimeManagedSpecForProviderDataFactoryIdSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IntegrationRuntimeManagedSpecForProviderDataFactoryIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -155,6 +162,7 @@ public partial class V1beta1IntegrationRuntimeManagedSpecForProviderDataFactoryI
     public V1beta1IntegrationRuntimeManagedSpecForProviderDataFactoryIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Factory in datafactory to populate dataFactoryId.</summary>
 public partial class V1beta1IntegrationRuntimeManagedSpecForProviderDataFactoryIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -190,6 +198,7 @@ public enum V1beta1IntegrationRuntimeManagedSpecForProviderVnetIntegrationSubnet
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IntegrationRuntimeManagedSpecForProviderVnetIntegrationSubnetNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -203,6 +212,7 @@ public partial class V1beta1IntegrationRuntimeManagedSpecForProviderVnetIntegrat
     public V1beta1IntegrationRuntimeManagedSpecForProviderVnetIntegrationSubnetNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetName.</summary>
 public partial class V1beta1IntegrationRuntimeManagedSpecForProviderVnetIntegrationSubnetNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -234,6 +244,7 @@ public enum V1beta1IntegrationRuntimeManagedSpecForProviderVnetIntegrationSubnet
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IntegrationRuntimeManagedSpecForProviderVnetIntegrationSubnetNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -247,6 +258,7 @@ public partial class V1beta1IntegrationRuntimeManagedSpecForProviderVnetIntegrat
     public V1beta1IntegrationRuntimeManagedSpecForProviderVnetIntegrationSubnetNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetName.</summary>
 public partial class V1beta1IntegrationRuntimeManagedSpecForProviderVnetIntegrationSubnetNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -262,6 +274,7 @@ public partial class V1beta1IntegrationRuntimeManagedSpecForProviderVnetIntegrat
     public V1beta1IntegrationRuntimeManagedSpecForProviderVnetIntegrationSubnetNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntegrationRuntimeManagedSpecForProviderVnetIntegration
 {
     /// <summary>Name of the subnet to which the nodes of the Managed Integration Runtime will be added.</summary>
@@ -281,6 +294,7 @@ public partial class V1beta1IntegrationRuntimeManagedSpecForProviderVnetIntegrat
     public string? VnetId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntegrationRuntimeManagedSpecForProvider
 {
     /// <summary>A catalog_info block as defined below.</summary>
@@ -340,6 +354,7 @@ public partial class V1beta1IntegrationRuntimeManagedSpecForProvider
     public IList<V1beta1IntegrationRuntimeManagedSpecForProviderVnetIntegration>? VnetIntegration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntegrationRuntimeManagedSpecInitProviderCatalogInfo
 {
     /// <summary>Administrator login name for the SQL Server.</summary>
@@ -355,6 +370,7 @@ public partial class V1beta1IntegrationRuntimeManagedSpecInitProviderCatalogInfo
     public string? ServerEndpoint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntegrationRuntimeManagedSpecInitProviderCustomSetupScript
 {
     /// <summary>The blob endpoint for the container which contains a custom setup script that will be run on every node on startup. See https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup for more information.</summary>
@@ -382,6 +398,7 @@ public enum V1beta1IntegrationRuntimeManagedSpecInitProviderVnetIntegrationSubne
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IntegrationRuntimeManagedSpecInitProviderVnetIntegrationSubnetNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -395,6 +412,7 @@ public partial class V1beta1IntegrationRuntimeManagedSpecInitProviderVnetIntegra
     public V1beta1IntegrationRuntimeManagedSpecInitProviderVnetIntegrationSubnetNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetName.</summary>
 public partial class V1beta1IntegrationRuntimeManagedSpecInitProviderVnetIntegrationSubnetNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -426,6 +444,7 @@ public enum V1beta1IntegrationRuntimeManagedSpecInitProviderVnetIntegrationSubne
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IntegrationRuntimeManagedSpecInitProviderVnetIntegrationSubnetNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -439,6 +458,7 @@ public partial class V1beta1IntegrationRuntimeManagedSpecInitProviderVnetIntegra
     public V1beta1IntegrationRuntimeManagedSpecInitProviderVnetIntegrationSubnetNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetName.</summary>
 public partial class V1beta1IntegrationRuntimeManagedSpecInitProviderVnetIntegrationSubnetNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -454,6 +474,7 @@ public partial class V1beta1IntegrationRuntimeManagedSpecInitProviderVnetIntegra
     public V1beta1IntegrationRuntimeManagedSpecInitProviderVnetIntegrationSubnetNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntegrationRuntimeManagedSpecInitProviderVnetIntegration
 {
     /// <summary>Name of the subnet to which the nodes of the Managed Integration Runtime will be added.</summary>
@@ -473,6 +494,7 @@ public partial class V1beta1IntegrationRuntimeManagedSpecInitProviderVnetIntegra
     public string? VnetId { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1IntegrationRuntimeManagedSpecInitProvider
 {
     /// <summary>A catalog_info block as defined below.</summary>
@@ -562,6 +584,7 @@ public enum V1beta1IntegrationRuntimeManagedSpecProviderConfigRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IntegrationRuntimeManagedSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -575,6 +598,7 @@ public partial class V1beta1IntegrationRuntimeManagedSpecProviderConfigRefPolicy
     public V1beta1IntegrationRuntimeManagedSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1IntegrationRuntimeManagedSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -606,6 +630,7 @@ public enum V1beta1IntegrationRuntimeManagedSpecPublishConnectionDetailsToConfig
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IntegrationRuntimeManagedSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -619,6 +644,7 @@ public partial class V1beta1IntegrationRuntimeManagedSpecPublishConnectionDetail
     public V1beta1IntegrationRuntimeManagedSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1IntegrationRuntimeManagedSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -630,6 +656,7 @@ public partial class V1beta1IntegrationRuntimeManagedSpecPublishConnectionDetail
     public V1beta1IntegrationRuntimeManagedSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1IntegrationRuntimeManagedSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -645,6 +672,7 @@ public partial class V1beta1IntegrationRuntimeManagedSpecPublishConnectionDetail
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1IntegrationRuntimeManagedSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -660,6 +688,7 @@ public partial class V1beta1IntegrationRuntimeManagedSpecPublishConnectionDetail
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1IntegrationRuntimeManagedSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -671,6 +700,7 @@ public partial class V1beta1IntegrationRuntimeManagedSpecWriteConnectionSecretTo
     public string Namespace { get; set; }
 }
 
+/// <summary>IntegrationRuntimeManagedSpec defines the desired state of IntegrationRuntimeManaged</summary>
 public partial class V1beta1IntegrationRuntimeManagedSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -703,6 +733,7 @@ public partial class V1beta1IntegrationRuntimeManagedSpec
     public V1beta1IntegrationRuntimeManagedSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntegrationRuntimeManagedStatusAtProviderCatalogInfo
 {
     /// <summary>Administrator login name for the SQL Server.</summary>
@@ -718,6 +749,7 @@ public partial class V1beta1IntegrationRuntimeManagedStatusAtProviderCatalogInfo
     public string? ServerEndpoint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntegrationRuntimeManagedStatusAtProviderCustomSetupScript
 {
     /// <summary>The blob endpoint for the container which contains a custom setup script that will be run on every node on startup. See https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup for more information.</summary>
@@ -725,6 +757,7 @@ public partial class V1beta1IntegrationRuntimeManagedStatusAtProviderCustomSetup
     public string? BlobContainerUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntegrationRuntimeManagedStatusAtProviderVnetIntegration
 {
     /// <summary>Name of the subnet to which the nodes of the Managed Integration Runtime will be added.</summary>
@@ -736,6 +769,7 @@ public partial class V1beta1IntegrationRuntimeManagedStatusAtProviderVnetIntegra
     public string? VnetId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntegrationRuntimeManagedStatusAtProvider
 {
     /// <summary>A catalog_info block as defined below.</summary>
@@ -791,6 +825,7 @@ public partial class V1beta1IntegrationRuntimeManagedStatusAtProvider
     public IList<V1beta1IntegrationRuntimeManagedStatusAtProviderVnetIntegration>? VnetIntegration { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1IntegrationRuntimeManagedStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -818,6 +853,7 @@ public partial class V1beta1IntegrationRuntimeManagedStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>IntegrationRuntimeManagedStatus defines the observed state of IntegrationRuntimeManaged.</summary>
 public partial class V1beta1IntegrationRuntimeManagedStatus
 {
     /// <summary></summary>
@@ -834,6 +870,7 @@ public partial class V1beta1IntegrationRuntimeManagedStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>IntegrationRuntimeManaged is the Schema for the IntegrationRuntimeManageds API. Manages an Azure Data Factory Managed Integration Runtime.</summary>
 public partial class V1beta1IntegrationRuntimeManaged : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IntegrationRuntimeManagedSpec>, IStatus<V1beta1IntegrationRuntimeManagedStatus>
 {
     public const string KubeApiVersion = "v1beta1";

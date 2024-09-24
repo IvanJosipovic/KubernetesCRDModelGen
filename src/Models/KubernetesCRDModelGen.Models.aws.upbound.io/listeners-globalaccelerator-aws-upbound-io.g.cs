@@ -38,6 +38,7 @@ public enum V1beta1ListenerSpecForProviderAcceleratorArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ListenerSpecForProviderAcceleratorArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ListenerSpecForProviderAcceleratorArnRefPolicy
     public V1beta1ListenerSpecForProviderAcceleratorArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Accelerator in globalaccelerator to populate acceleratorArn.</summary>
 public partial class V1beta1ListenerSpecForProviderAcceleratorArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ListenerSpecForProviderAcceleratorArnSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ListenerSpecForProviderAcceleratorArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ListenerSpecForProviderAcceleratorArnSelectorPolicy
     public V1beta1ListenerSpecForProviderAcceleratorArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Accelerator in globalaccelerator to populate acceleratorArn.</summary>
 public partial class V1beta1ListenerSpecForProviderAcceleratorArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1ListenerSpecForProviderAcceleratorArnSelector
     public V1beta1ListenerSpecForProviderAcceleratorArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ListenerSpecForProviderPortRange
 {
     /// <summary>The first port in the range of ports, inclusive.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1ListenerSpecForProviderPortRange
     public double? ToPort { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ListenerSpecForProvider
 {
     /// <summary>The Amazon Resource Name (ARN) of your accelerator.</summary>
@@ -172,6 +178,7 @@ public enum V1beta1ListenerSpecInitProviderAcceleratorArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ListenerSpecInitProviderAcceleratorArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -185,6 +192,7 @@ public partial class V1beta1ListenerSpecInitProviderAcceleratorArnRefPolicy
     public V1beta1ListenerSpecInitProviderAcceleratorArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Accelerator in globalaccelerator to populate acceleratorArn.</summary>
 public partial class V1beta1ListenerSpecInitProviderAcceleratorArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -216,6 +224,7 @@ public enum V1beta1ListenerSpecInitProviderAcceleratorArnSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ListenerSpecInitProviderAcceleratorArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -229,6 +238,7 @@ public partial class V1beta1ListenerSpecInitProviderAcceleratorArnSelectorPolicy
     public V1beta1ListenerSpecInitProviderAcceleratorArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Accelerator in globalaccelerator to populate acceleratorArn.</summary>
 public partial class V1beta1ListenerSpecInitProviderAcceleratorArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -244,6 +254,7 @@ public partial class V1beta1ListenerSpecInitProviderAcceleratorArnSelector
     public V1beta1ListenerSpecInitProviderAcceleratorArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ListenerSpecInitProviderPortRange
 {
     /// <summary>The first port in the range of ports, inclusive.</summary>
@@ -255,6 +266,7 @@ public partial class V1beta1ListenerSpecInitProviderPortRange
     public double? ToPort { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ListenerSpecInitProvider
 {
     /// <summary>The Amazon Resource Name (ARN) of your accelerator.</summary>
@@ -324,6 +336,7 @@ public enum V1beta1ListenerSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ListenerSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -337,6 +350,7 @@ public partial class V1beta1ListenerSpecProviderConfigRefPolicy
     public V1beta1ListenerSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ListenerSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -368,6 +382,7 @@ public enum V1beta1ListenerSpecPublishConnectionDetailsToConfigRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ListenerSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -381,6 +396,7 @@ public partial class V1beta1ListenerSpecPublishConnectionDetailsToConfigRefPolic
     public V1beta1ListenerSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ListenerSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -392,6 +408,7 @@ public partial class V1beta1ListenerSpecPublishConnectionDetailsToConfigRef
     public V1beta1ListenerSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ListenerSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -407,6 +424,7 @@ public partial class V1beta1ListenerSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ListenerSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -422,6 +440,7 @@ public partial class V1beta1ListenerSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ListenerSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -433,6 +452,7 @@ public partial class V1beta1ListenerSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ListenerSpec defines the desired state of Listener</summary>
 public partial class V1beta1ListenerSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -465,6 +485,7 @@ public partial class V1beta1ListenerSpec
     public V1beta1ListenerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ListenerStatusAtProviderPortRange
 {
     /// <summary>The first port in the range of ports, inclusive.</summary>
@@ -476,6 +497,7 @@ public partial class V1beta1ListenerStatusAtProviderPortRange
     public double? ToPort { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ListenerStatusAtProvider
 {
     /// <summary>The Amazon Resource Name (ARN) of your accelerator.</summary>
@@ -499,6 +521,7 @@ public partial class V1beta1ListenerStatusAtProvider
     public string? Protocol { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ListenerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -526,6 +549,7 @@ public partial class V1beta1ListenerStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ListenerStatus defines the observed state of Listener.</summary>
 public partial class V1beta1ListenerStatus
 {
     /// <summary></summary>
@@ -542,6 +566,7 @@ public partial class V1beta1ListenerStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Listener is the Schema for the Listeners API. Provides a Global Accelerator listener.</summary>
 public partial class V1beta1Listener : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ListenerSpec>, IStatus<V1beta1ListenerStatus>
 {
     public const string KubeApiVersion = "v1beta1";

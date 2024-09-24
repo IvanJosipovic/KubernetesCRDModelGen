@@ -38,6 +38,7 @@ public enum V1beta1DefaultNetworkACLSpecForProviderDefaultNetworkAclIdRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DefaultNetworkACLSpecForProviderDefaultNetworkAclIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1DefaultNetworkACLSpecForProviderDefaultNetworkAclIdR
     public V1beta1DefaultNetworkACLSpecForProviderDefaultNetworkAclIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPC in ec2 to populate defaultNetworkAclId.</summary>
 public partial class V1beta1DefaultNetworkACLSpecForProviderDefaultNetworkAclIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1DefaultNetworkACLSpecForProviderDefaultNetworkAclIdSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DefaultNetworkACLSpecForProviderDefaultNetworkAclIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1DefaultNetworkACLSpecForProviderDefaultNetworkAclIdS
     public V1beta1DefaultNetworkACLSpecForProviderDefaultNetworkAclIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPC in ec2 to populate defaultNetworkAclId.</summary>
 public partial class V1beta1DefaultNetworkACLSpecForProviderDefaultNetworkAclIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1DefaultNetworkACLSpecForProviderDefaultNetworkAclIdS
     public V1beta1DefaultNetworkACLSpecForProviderDefaultNetworkAclIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DefaultNetworkACLSpecForProviderEgress
 {
     /// <summary>The action to take.</summary>
@@ -169,6 +174,7 @@ public enum V1beta1DefaultNetworkACLSpecForProviderIngressCidrBlockRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DefaultNetworkACLSpecForProviderIngressCidrBlockRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -182,6 +188,7 @@ public partial class V1beta1DefaultNetworkACLSpecForProviderIngressCidrBlockRefP
     public V1beta1DefaultNetworkACLSpecForProviderIngressCidrBlockRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a DefaultVPC in ec2 to populate cidrBlock.</summary>
 public partial class V1beta1DefaultNetworkACLSpecForProviderIngressCidrBlockRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -213,6 +220,7 @@ public enum V1beta1DefaultNetworkACLSpecForProviderIngressCidrBlockSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DefaultNetworkACLSpecForProviderIngressCidrBlockSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -226,6 +234,7 @@ public partial class V1beta1DefaultNetworkACLSpecForProviderIngressCidrBlockSele
     public V1beta1DefaultNetworkACLSpecForProviderIngressCidrBlockSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a DefaultVPC in ec2 to populate cidrBlock.</summary>
 public partial class V1beta1DefaultNetworkACLSpecForProviderIngressCidrBlockSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -241,6 +250,7 @@ public partial class V1beta1DefaultNetworkACLSpecForProviderIngressCidrBlockSele
     public V1beta1DefaultNetworkACLSpecForProviderIngressCidrBlockSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DefaultNetworkACLSpecForProviderIngress
 {
     /// <summary>The action to take.</summary>
@@ -308,6 +318,7 @@ public enum V1beta1DefaultNetworkACLSpecForProviderSubnetIdRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DefaultNetworkACLSpecForProviderSubnetIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -321,6 +332,7 @@ public partial class V1beta1DefaultNetworkACLSpecForProviderSubnetIdRefsPolicy
     public V1beta1DefaultNetworkACLSpecForProviderSubnetIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1DefaultNetworkACLSpecForProviderSubnetIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -352,6 +364,7 @@ public enum V1beta1DefaultNetworkACLSpecForProviderSubnetIdSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DefaultNetworkACLSpecForProviderSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -365,6 +378,7 @@ public partial class V1beta1DefaultNetworkACLSpecForProviderSubnetIdSelectorPoli
     public V1beta1DefaultNetworkACLSpecForProviderSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 public partial class V1beta1DefaultNetworkACLSpecForProviderSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -380,6 +394,7 @@ public partial class V1beta1DefaultNetworkACLSpecForProviderSubnetIdSelector
     public V1beta1DefaultNetworkACLSpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DefaultNetworkACLSpecForProvider
 {
     /// <summary>Network ACL ID to manage. This attribute is exported from aws_vpc, or manually found via the AWS Console.</summary>
@@ -443,6 +458,7 @@ public enum V1beta1DefaultNetworkACLSpecInitProviderDefaultNetworkAclIdRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DefaultNetworkACLSpecInitProviderDefaultNetworkAclIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -456,6 +472,7 @@ public partial class V1beta1DefaultNetworkACLSpecInitProviderDefaultNetworkAclId
     public V1beta1DefaultNetworkACLSpecInitProviderDefaultNetworkAclIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPC in ec2 to populate defaultNetworkAclId.</summary>
 public partial class V1beta1DefaultNetworkACLSpecInitProviderDefaultNetworkAclIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -487,6 +504,7 @@ public enum V1beta1DefaultNetworkACLSpecInitProviderDefaultNetworkAclIdSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DefaultNetworkACLSpecInitProviderDefaultNetworkAclIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -500,6 +518,7 @@ public partial class V1beta1DefaultNetworkACLSpecInitProviderDefaultNetworkAclId
     public V1beta1DefaultNetworkACLSpecInitProviderDefaultNetworkAclIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPC in ec2 to populate defaultNetworkAclId.</summary>
 public partial class V1beta1DefaultNetworkACLSpecInitProviderDefaultNetworkAclIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -515,6 +534,7 @@ public partial class V1beta1DefaultNetworkACLSpecInitProviderDefaultNetworkAclId
     public V1beta1DefaultNetworkACLSpecInitProviderDefaultNetworkAclIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DefaultNetworkACLSpecInitProviderEgress
 {
     /// <summary>The action to take.</summary>
@@ -574,6 +594,7 @@ public enum V1beta1DefaultNetworkACLSpecInitProviderIngressCidrBlockRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DefaultNetworkACLSpecInitProviderIngressCidrBlockRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -587,6 +608,7 @@ public partial class V1beta1DefaultNetworkACLSpecInitProviderIngressCidrBlockRef
     public V1beta1DefaultNetworkACLSpecInitProviderIngressCidrBlockRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a DefaultVPC in ec2 to populate cidrBlock.</summary>
 public partial class V1beta1DefaultNetworkACLSpecInitProviderIngressCidrBlockRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -618,6 +640,7 @@ public enum V1beta1DefaultNetworkACLSpecInitProviderIngressCidrBlockSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DefaultNetworkACLSpecInitProviderIngressCidrBlockSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -631,6 +654,7 @@ public partial class V1beta1DefaultNetworkACLSpecInitProviderIngressCidrBlockSel
     public V1beta1DefaultNetworkACLSpecInitProviderIngressCidrBlockSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a DefaultVPC in ec2 to populate cidrBlock.</summary>
 public partial class V1beta1DefaultNetworkACLSpecInitProviderIngressCidrBlockSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -646,6 +670,7 @@ public partial class V1beta1DefaultNetworkACLSpecInitProviderIngressCidrBlockSel
     public V1beta1DefaultNetworkACLSpecInitProviderIngressCidrBlockSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DefaultNetworkACLSpecInitProviderIngress
 {
     /// <summary>The action to take.</summary>
@@ -713,6 +738,7 @@ public enum V1beta1DefaultNetworkACLSpecInitProviderSubnetIdRefsPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DefaultNetworkACLSpecInitProviderSubnetIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -726,6 +752,7 @@ public partial class V1beta1DefaultNetworkACLSpecInitProviderSubnetIdRefsPolicy
     public V1beta1DefaultNetworkACLSpecInitProviderSubnetIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1DefaultNetworkACLSpecInitProviderSubnetIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -757,6 +784,7 @@ public enum V1beta1DefaultNetworkACLSpecInitProviderSubnetIdSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DefaultNetworkACLSpecInitProviderSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -770,6 +798,7 @@ public partial class V1beta1DefaultNetworkACLSpecInitProviderSubnetIdSelectorPol
     public V1beta1DefaultNetworkACLSpecInitProviderSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 public partial class V1beta1DefaultNetworkACLSpecInitProviderSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -785,6 +814,7 @@ public partial class V1beta1DefaultNetworkACLSpecInitProviderSubnetIdSelector
     public V1beta1DefaultNetworkACLSpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1DefaultNetworkACLSpecInitProvider
 {
     /// <summary>Network ACL ID to manage. This attribute is exported from aws_vpc, or manually found via the AWS Console.</summary>
@@ -866,6 +896,7 @@ public enum V1beta1DefaultNetworkACLSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DefaultNetworkACLSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -879,6 +910,7 @@ public partial class V1beta1DefaultNetworkACLSpecProviderConfigRefPolicy
     public V1beta1DefaultNetworkACLSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1DefaultNetworkACLSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -910,6 +942,7 @@ public enum V1beta1DefaultNetworkACLSpecPublishConnectionDetailsToConfigRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DefaultNetworkACLSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -923,6 +956,7 @@ public partial class V1beta1DefaultNetworkACLSpecPublishConnectionDetailsToConfi
     public V1beta1DefaultNetworkACLSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1DefaultNetworkACLSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -934,6 +968,7 @@ public partial class V1beta1DefaultNetworkACLSpecPublishConnectionDetailsToConfi
     public V1beta1DefaultNetworkACLSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1DefaultNetworkACLSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -949,6 +984,7 @@ public partial class V1beta1DefaultNetworkACLSpecPublishConnectionDetailsToMetad
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1DefaultNetworkACLSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -964,6 +1000,7 @@ public partial class V1beta1DefaultNetworkACLSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1DefaultNetworkACLSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -975,6 +1012,7 @@ public partial class V1beta1DefaultNetworkACLSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>DefaultNetworkACLSpec defines the desired state of DefaultNetworkACL</summary>
 public partial class V1beta1DefaultNetworkACLSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1007,6 +1045,7 @@ public partial class V1beta1DefaultNetworkACLSpec
     public V1beta1DefaultNetworkACLSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DefaultNetworkACLStatusAtProviderEgress
 {
     /// <summary>The action to take.</summary>
@@ -1046,6 +1085,7 @@ public partial class V1beta1DefaultNetworkACLStatusAtProviderEgress
     public double? ToPort { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DefaultNetworkACLStatusAtProviderIngress
 {
     /// <summary>The action to take.</summary>
@@ -1085,6 +1125,7 @@ public partial class V1beta1DefaultNetworkACLStatusAtProviderIngress
     public double? ToPort { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DefaultNetworkACLStatusAtProvider
 {
     /// <summary>ARN of the Default Network ACL</summary>
@@ -1128,6 +1169,7 @@ public partial class V1beta1DefaultNetworkACLStatusAtProvider
     public string? VpcId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1DefaultNetworkACLStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1155,6 +1197,7 @@ public partial class V1beta1DefaultNetworkACLStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>DefaultNetworkACLStatus defines the observed state of DefaultNetworkACL.</summary>
 public partial class V1beta1DefaultNetworkACLStatus
 {
     /// <summary></summary>
@@ -1171,6 +1214,7 @@ public partial class V1beta1DefaultNetworkACLStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>DefaultNetworkACL is the Schema for the DefaultNetworkACLs API. Manage a default network ACL.</summary>
 public partial class V1beta1DefaultNetworkACL : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DefaultNetworkACLSpec>, IStatus<V1beta1DefaultNetworkACLStatus>
 {
     public const string KubeApiVersion = "v1beta1";

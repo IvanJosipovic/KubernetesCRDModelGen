@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.argoproj.io;
+/// <summary>GroupKind specifies a Group and a Kind, but does not force a version.  This is useful for identifying concepts during lookup stages without having partially valid types</summary>
 public partial class V1alpha1AppProjectSpecClusterResourceBlacklist
 {
     /// <summary></summary>
@@ -19,6 +20,7 @@ public partial class V1alpha1AppProjectSpecClusterResourceBlacklist
     public string Kind { get; set; }
 }
 
+/// <summary>GroupKind specifies a Group and a Kind, but does not force a version.  This is useful for identifying concepts during lookup stages without having partially valid types</summary>
 public partial class V1alpha1AppProjectSpecClusterResourceWhitelist
 {
     /// <summary></summary>
@@ -30,6 +32,7 @@ public partial class V1alpha1AppProjectSpecClusterResourceWhitelist
     public string Kind { get; set; }
 }
 
+/// <summary>ApplicationDestination holds information about the application's destination</summary>
 public partial class V1alpha1AppProjectSpecDestinations
 {
     /// <summary>Name is an alternate way of specifying the target cluster by its symbolic name. This must be set if Server is not set.</summary>
@@ -45,6 +48,7 @@ public partial class V1alpha1AppProjectSpecDestinations
     public string? Server { get; set; }
 }
 
+/// <summary>GroupKind specifies a Group and a Kind, but does not force a version.  This is useful for identifying concepts during lookup stages without having partially valid types</summary>
 public partial class V1alpha1AppProjectSpecNamespaceResourceBlacklist
 {
     /// <summary></summary>
@@ -56,6 +60,7 @@ public partial class V1alpha1AppProjectSpecNamespaceResourceBlacklist
     public string Kind { get; set; }
 }
 
+/// <summary>GroupKind specifies a Group and a Kind, but does not force a version.  This is useful for identifying concepts during lookup stages without having partially valid types</summary>
 public partial class V1alpha1AppProjectSpecNamespaceResourceWhitelist
 {
     /// <summary></summary>
@@ -67,6 +72,7 @@ public partial class V1alpha1AppProjectSpecNamespaceResourceWhitelist
     public string Kind { get; set; }
 }
 
+/// <summary>OrphanedResourceKey is a reference to a resource to be ignored from</summary>
 public partial class V1alpha1AppProjectSpecOrphanedResourcesIgnore
 {
     /// <summary></summary>
@@ -82,6 +88,7 @@ public partial class V1alpha1AppProjectSpecOrphanedResourcesIgnore
     public string? Name { get; set; }
 }
 
+/// <summary>OrphanedResources specifies if controller should monitor orphaned resources of apps in this project</summary>
 public partial class V1alpha1AppProjectSpecOrphanedResources
 {
     /// <summary>Ignore contains a list of resources that are to be excluded from orphaned resources monitoring</summary>
@@ -93,6 +100,7 @@ public partial class V1alpha1AppProjectSpecOrphanedResources
     public bool? Warn { get; set; }
 }
 
+/// <summary>JWTToken holds the issuedAt and expiresAt values of a token</summary>
 public partial class V1alpha1AppProjectSpecRolesJwtTokens
 {
     /// <summary></summary>
@@ -108,6 +116,7 @@ public partial class V1alpha1AppProjectSpecRolesJwtTokens
     public string? Id { get; set; }
 }
 
+/// <summary>ProjectRole represents a role that has access to a project</summary>
 public partial class V1alpha1AppProjectSpecRoles
 {
     /// <summary>Description is a description of the role</summary>
@@ -131,6 +140,7 @@ public partial class V1alpha1AppProjectSpecRoles
     public IList<string>? Policies { get; set; }
 }
 
+/// <summary>SignatureKey is the specification of a key required to verify commit signatures with</summary>
 public partial class V1alpha1AppProjectSpecSignatureKeys
 {
     /// <summary>The ID of the key in hexadecimal notation</summary>
@@ -138,6 +148,7 @@ public partial class V1alpha1AppProjectSpecSignatureKeys
     public string KeyID { get; set; }
 }
 
+/// <summary>SyncWindow contains the kind, time, duration and attributes that are used to assign the syncWindows to apps</summary>
 public partial class V1alpha1AppProjectSpecSyncWindows
 {
     /// <summary>Applications contains a list of applications that the window will apply to</summary>
@@ -173,6 +184,7 @@ public partial class V1alpha1AppProjectSpecSyncWindows
     public string? TimeZone { get; set; }
 }
 
+/// <summary>AppProjectSpec is the specification of an AppProject</summary>
 public partial class V1alpha1AppProjectSpec
 {
     /// <summary>ClusterResourceBlacklist contains list of blacklisted cluster level resources</summary>
@@ -228,6 +240,7 @@ public partial class V1alpha1AppProjectSpec
     public IList<V1alpha1AppProjectSpecSyncWindows>? SyncWindows { get; set; }
 }
 
+/// <summary>JWTToken holds the issuedAt and expiresAt values of a token</summary>
 public partial class V1alpha1AppProjectStatusJwtTokensByRoleItems
 {
     /// <summary></summary>
@@ -243,6 +256,7 @@ public partial class V1alpha1AppProjectStatusJwtTokensByRoleItems
     public string? Id { get; set; }
 }
 
+/// <summary>JWTTokens represents a list of JWT tokens</summary>
 public partial class V1alpha1AppProjectStatusJwtTokensByRole
 {
     /// <summary></summary>
@@ -250,6 +264,7 @@ public partial class V1alpha1AppProjectStatusJwtTokensByRole
     public IList<V1alpha1AppProjectStatusJwtTokensByRoleItems>? Items { get; set; }
 }
 
+/// <summary>AppProjectStatus contains status information for AppProject CRs</summary>
 public partial class V1alpha1AppProjectStatus
 {
     /// <summary>JWTTokensByRole contains a list of JWT tokens issued for a given role</summary>
@@ -258,6 +273,7 @@ public partial class V1alpha1AppProjectStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>AppProject provides a logical grouping of applications, providing controls for: * where the apps may deploy to (cluster whitelist) * what may be deployed (repository whitelist, resource whitelist/blacklist) * who can access these applications (roles, OIDC group claims bindings) * and what they can do (RBAC policies) * automation access to these roles (JWT tokens)</summary>
 public partial class V1alpha1AppProject : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1AppProjectSpec>, IStatus<V1alpha1AppProjectStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.redis.cnrm.cloud.google.com;
+/// <summary>The network to which the instance is connected. If left unspecified, the default network will be used.</summary>
 public partial class V1beta1RedisInstanceSpecAuthorizedNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1RedisInstanceSpecAuthorizedNetworkRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. Optional. The KMS key reference that you want to use to encrypt the data at rest for this Redis instance. If this is provided, CMEK is enabled.</summary>
 public partial class V1beta1RedisInstanceSpecCustomerManagedKeyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1RedisInstanceSpecCustomerManagedKeyRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Required. Start time of the window in UTC time.</summary>
 public partial class V1beta1RedisInstanceSpecMaintenancePolicyWeeklyMaintenanceWindowStartTime
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
@@ -57,6 +60,7 @@ public partial class V1beta1RedisInstanceSpecMaintenancePolicyWeeklyMaintenanceW
     public int? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RedisInstanceSpecMaintenancePolicyWeeklyMaintenanceWindow
 {
     /// <summary>Required. The day of week that maintenance updates occur.  - DAY_OF_WEEK_UNSPECIFIED: The day of the week is unspecified. - MONDAY: Monday - TUESDAY: Tuesday - WEDNESDAY: Wednesday - THURSDAY: Thursday - FRIDAY: Friday - SATURDAY: Saturday - SUNDAY: Sunday Possible values: ["DAY_OF_WEEK_UNSPECIFIED", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"].</summary>
@@ -72,6 +76,7 @@ public partial class V1beta1RedisInstanceSpecMaintenancePolicyWeeklyMaintenanceW
     public V1beta1RedisInstanceSpecMaintenancePolicyWeeklyMaintenanceWindowStartTime StartTime { get; set; }
 }
 
+/// <summary>Maintenance policy for an instance.</summary>
 public partial class V1beta1RedisInstanceSpecMaintenancePolicy
 {
     /// <summary>Output only. The time when the policy was created. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.</summary>
@@ -91,6 +96,7 @@ public partial class V1beta1RedisInstanceSpecMaintenancePolicy
     public IList<V1beta1RedisInstanceSpecMaintenancePolicyWeeklyMaintenanceWindow>? WeeklyMaintenanceWindow { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RedisInstanceSpecMaintenanceSchedule
 {
     /// <summary>Output only. The end time of any upcoming scheduled maintenance for this instance. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.</summary>
@@ -106,6 +112,7 @@ public partial class V1beta1RedisInstanceSpecMaintenanceSchedule
     public string? StartTime { get; set; }
 }
 
+/// <summary>Persistence configuration for an instance.</summary>
 public partial class V1beta1RedisInstanceSpecPersistenceConfig
 {
     /// <summary>Optional. Controls whether Persistence features are enabled. If not provided, the existing value will be used.  - DISABLED: 	Persistence is disabled for the instance, and any existing snapshots are deleted. - RDB: RDB based Persistence is enabled. Possible values: ["DISABLED", "RDB"].</summary>
@@ -125,6 +132,7 @@ public partial class V1beta1RedisInstanceSpecPersistenceConfig
     public string? RdbSnapshotStartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RedisInstanceSpec
 {
     /// <summary>Immutable. Only applicable to STANDARD_HA tier which protects the instance against zonal failures by provisioning it across two zones. If provided, it must be a different zone from the one provided in [locationId].</summary>
@@ -216,6 +224,7 @@ public partial class V1beta1RedisInstanceSpec
     public string? TransitEncryptionMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RedisInstanceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -239,6 +248,7 @@ public partial class V1beta1RedisInstanceStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RedisInstanceStatusMaintenanceSchedule
 {
     /// <summary>Output only. The end time of any upcoming scheduled maintenance for this instance. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.</summary>
@@ -254,6 +264,7 @@ public partial class V1beta1RedisInstanceStatusMaintenanceSchedule
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RedisInstanceStatusNodes
 {
     /// <summary>Node identifying string. e.g. 'node-0', 'node-1'.</summary>
@@ -265,6 +276,7 @@ public partial class V1beta1RedisInstanceStatusNodes
     public string? Zone { get; set; }
 }
 
+/// <summary>The observed state of the underlying GCP resource.</summary>
 public partial class V1beta1RedisInstanceStatusObservedState
 {
     /// <summary>Output only. AUTH String set on the instance. This field will only be populated if auth_enabled is true.</summary>
@@ -272,6 +284,7 @@ public partial class V1beta1RedisInstanceStatusObservedState
     public string? AuthString { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RedisInstanceStatusServerCaCerts
 {
     /// <summary>The certificate data in PEM format.</summary>
@@ -295,6 +308,7 @@ public partial class V1beta1RedisInstanceStatusServerCaCerts
     public string? Sha1Fingerprint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RedisInstanceStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -351,6 +365,7 @@ public partial class V1beta1RedisInstanceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1RedisInstance : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1RedisInstanceSpec>, IStatus<V1beta1RedisInstanceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

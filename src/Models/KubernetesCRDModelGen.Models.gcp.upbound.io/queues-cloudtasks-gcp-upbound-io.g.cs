@@ -18,6 +18,7 @@ public enum V1beta1QueueSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1QueueSpecForProviderAppEngineRoutingOverride
 {
     /// <summary>App instance. By default, the task is sent to an instance which is available when the task is attempted.</summary>
@@ -53,6 +54,7 @@ public enum V1beta1QueueSpecForProviderProjectRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1QueueSpecForProviderProjectRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -66,6 +68,7 @@ public partial class V1beta1QueueSpecForProviderProjectRefPolicy
     public V1beta1QueueSpecForProviderProjectRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Project in cloudplatform to populate project.</summary>
 public partial class V1beta1QueueSpecForProviderProjectRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -97,6 +100,7 @@ public enum V1beta1QueueSpecForProviderProjectSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1QueueSpecForProviderProjectSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1QueueSpecForProviderProjectSelectorPolicy
     public V1beta1QueueSpecForProviderProjectSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Project in cloudplatform to populate project.</summary>
 public partial class V1beta1QueueSpecForProviderProjectSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1QueueSpecForProviderProjectSelector
     public V1beta1QueueSpecForProviderProjectSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1QueueSpecForProviderRateLimits
 {
     /// <summary>The maximum number of concurrent tasks that Cloud Tasks allows to be dispatched for this queue. After this threshold has been reached, Cloud Tasks stops dispatching tasks until the number of concurrent requests decreases.</summary>
@@ -136,6 +142,7 @@ public partial class V1beta1QueueSpecForProviderRateLimits
     public double? MaxDispatchesPerSecond { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1QueueSpecForProviderRetryConfig
 {
     /// <summary>Number of attempts per task. Cloud Tasks will attempt the task maxAttempts times (that is, if the first attempt fails, then there will be maxAttempts - 1 retries). Must be &gt;= -1. If unspecified when the queue is created, Cloud Tasks will pick the default. -1 indicates unlimited attempts.</summary>
@@ -159,6 +166,7 @@ public partial class V1beta1QueueSpecForProviderRetryConfig
     public string? MinBackoff { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1QueueSpecForProviderStackdriverLoggingConfig
 {
     /// <summary>Specifies the fraction of operations to write to Stackdriver Logging. This field may contain any value between 0.0 and 1.0, inclusive. 0.0 is the default and means that no operations are logged.</summary>
@@ -166,6 +174,7 @@ public partial class V1beta1QueueSpecForProviderStackdriverLoggingConfig
     public double? SamplingRatio { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1QueueSpecForProvider
 {
     /// <summary>Overrides for task-level appEngineRouting. These settings apply only to App Engine tasks in this queue Structure is documented below.</summary>
@@ -201,6 +210,7 @@ public partial class V1beta1QueueSpecForProvider
     public IList<V1beta1QueueSpecForProviderStackdriverLoggingConfig>? StackdriverLoggingConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1QueueSpecInitProviderAppEngineRoutingOverride
 {
     /// <summary>App instance. By default, the task is sent to an instance which is available when the task is attempted.</summary>
@@ -236,6 +246,7 @@ public enum V1beta1QueueSpecInitProviderProjectRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1QueueSpecInitProviderProjectRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -249,6 +260,7 @@ public partial class V1beta1QueueSpecInitProviderProjectRefPolicy
     public V1beta1QueueSpecInitProviderProjectRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Project in cloudplatform to populate project.</summary>
 public partial class V1beta1QueueSpecInitProviderProjectRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -280,6 +292,7 @@ public enum V1beta1QueueSpecInitProviderProjectSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1QueueSpecInitProviderProjectSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -293,6 +306,7 @@ public partial class V1beta1QueueSpecInitProviderProjectSelectorPolicy
     public V1beta1QueueSpecInitProviderProjectSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Project in cloudplatform to populate project.</summary>
 public partial class V1beta1QueueSpecInitProviderProjectSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -308,6 +322,7 @@ public partial class V1beta1QueueSpecInitProviderProjectSelector
     public V1beta1QueueSpecInitProviderProjectSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1QueueSpecInitProviderRateLimits
 {
     /// <summary>The maximum number of concurrent tasks that Cloud Tasks allows to be dispatched for this queue. After this threshold has been reached, Cloud Tasks stops dispatching tasks until the number of concurrent requests decreases.</summary>
@@ -319,6 +334,7 @@ public partial class V1beta1QueueSpecInitProviderRateLimits
     public double? MaxDispatchesPerSecond { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1QueueSpecInitProviderRetryConfig
 {
     /// <summary>Number of attempts per task. Cloud Tasks will attempt the task maxAttempts times (that is, if the first attempt fails, then there will be maxAttempts - 1 retries). Must be &gt;= -1. If unspecified when the queue is created, Cloud Tasks will pick the default. -1 indicates unlimited attempts.</summary>
@@ -342,6 +358,7 @@ public partial class V1beta1QueueSpecInitProviderRetryConfig
     public string? MinBackoff { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1QueueSpecInitProviderStackdriverLoggingConfig
 {
     /// <summary>Specifies the fraction of operations to write to Stackdriver Logging. This field may contain any value between 0.0 and 1.0, inclusive. 0.0 is the default and means that no operations are logged.</summary>
@@ -349,6 +366,7 @@ public partial class V1beta1QueueSpecInitProviderStackdriverLoggingConfig
     public double? SamplingRatio { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1QueueSpecInitProvider
 {
     /// <summary>Overrides for task-level appEngineRouting. These settings apply only to App Engine tasks in this queue Structure is documented below.</summary>
@@ -422,6 +440,7 @@ public enum V1beta1QueueSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1QueueSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -435,6 +454,7 @@ public partial class V1beta1QueueSpecProviderConfigRefPolicy
     public V1beta1QueueSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1QueueSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -466,6 +486,7 @@ public enum V1beta1QueueSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1QueueSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -479,6 +500,7 @@ public partial class V1beta1QueueSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1QueueSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1QueueSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -490,6 +512,7 @@ public partial class V1beta1QueueSpecPublishConnectionDetailsToConfigRef
     public V1beta1QueueSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1QueueSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -505,6 +528,7 @@ public partial class V1beta1QueueSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1QueueSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -520,6 +544,7 @@ public partial class V1beta1QueueSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1QueueSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -531,6 +556,7 @@ public partial class V1beta1QueueSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>QueueSpec defines the desired state of Queue</summary>
 public partial class V1beta1QueueSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -563,6 +589,7 @@ public partial class V1beta1QueueSpec
     public V1beta1QueueSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1QueueStatusAtProviderAppEngineRoutingOverride
 {
     /// <summary>(Output) The host that the task is sent to.</summary>
@@ -582,6 +609,7 @@ public partial class V1beta1QueueStatusAtProviderAppEngineRoutingOverride
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1QueueStatusAtProviderRateLimits
 {
     /// <summary>(Output) The max burst size. Max burst size limits how fast tasks in queue are processed when many tasks are in the queue and the rate is high. This field allows the queue to have a high rate so processing starts shortly after a task is enqueued, but still limits resource usage when many tasks are enqueued in a short period of time.</summary>
@@ -597,6 +625,7 @@ public partial class V1beta1QueueStatusAtProviderRateLimits
     public double? MaxDispatchesPerSecond { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1QueueStatusAtProviderRetryConfig
 {
     /// <summary>Number of attempts per task. Cloud Tasks will attempt the task maxAttempts times (that is, if the first attempt fails, then there will be maxAttempts - 1 retries). Must be &gt;= -1. If unspecified when the queue is created, Cloud Tasks will pick the default. -1 indicates unlimited attempts.</summary>
@@ -620,6 +649,7 @@ public partial class V1beta1QueueStatusAtProviderRetryConfig
     public string? MinBackoff { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1QueueStatusAtProviderStackdriverLoggingConfig
 {
     /// <summary>Specifies the fraction of operations to write to Stackdriver Logging. This field may contain any value between 0.0 and 1.0, inclusive. 0.0 is the default and means that no operations are logged.</summary>
@@ -627,6 +657,7 @@ public partial class V1beta1QueueStatusAtProviderStackdriverLoggingConfig
     public double? SamplingRatio { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1QueueStatusAtProvider
 {
     /// <summary>Overrides for task-level appEngineRouting. These settings apply only to App Engine tasks in this queue Structure is documented below.</summary>
@@ -658,6 +689,7 @@ public partial class V1beta1QueueStatusAtProvider
     public IList<V1beta1QueueStatusAtProviderStackdriverLoggingConfig>? StackdriverLoggingConfig { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1QueueStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -685,6 +717,7 @@ public partial class V1beta1QueueStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>QueueStatus defines the observed state of Queue.</summary>
 public partial class V1beta1QueueStatus
 {
     /// <summary></summary>
@@ -701,6 +734,7 @@ public partial class V1beta1QueueStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Queue is the Schema for the Queues API. A named resource to which messages are sent by publishers.</summary>
 public partial class V1beta1Queue : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1QueueSpec>, IStatus<V1beta1QueueStatus>
 {
     public const string KubeApiVersion = "v1beta1";

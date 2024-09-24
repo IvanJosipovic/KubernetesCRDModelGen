@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary>A list of IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT.</summary>
 public partial class V1beta1ComputeRouterNATSpecDrainNatIps
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeAddress` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1ComputeRouterNATSpecDrainNatIps
     public string? Namespace { get; set; }
 }
 
+/// <summary>Configuration for logging on NAT.</summary>
 public partial class V1beta1ComputeRouterNATSpecLogConfig
 {
     /// <summary>Indicates whether or not to export logs.</summary>
@@ -34,6 +36,7 @@ public partial class V1beta1ComputeRouterNATSpecLogConfig
     public string Filter { get; set; }
 }
 
+/// <summary>NAT IPs. Only valid if natIpAllocateOption is set to MANUAL_ONLY.</summary>
 public partial class V1beta1ComputeRouterNATSpecNatIps
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeAddress` resource.</summary>
@@ -49,6 +52,7 @@ public partial class V1beta1ComputeRouterNATSpecNatIps
     public string? Namespace { get; set; }
 }
 
+/// <summary>The Cloud Router in which this NAT will be configured.</summary>
 public partial class V1beta1ComputeRouterNATSpecRouterRef
 {
     /// <summary>Allowed value: The `name` field of a `ComputeRouter` resource.</summary>
@@ -64,6 +68,7 @@ public partial class V1beta1ComputeRouterNATSpecRouterRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>A list of URLs of the IP resources used for this NAT rule. These IP addresses must be valid static external IP addresses assigned to the project. This field is used for public NAT.</summary>
 public partial class V1beta1ComputeRouterNATSpecRulesActionSourceNatActiveIpsRefs
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeAddress` resource.</summary>
@@ -79,6 +84,7 @@ public partial class V1beta1ComputeRouterNATSpecRulesActionSourceNatActiveIpsRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule only. This field is used for public NAT.</summary>
 public partial class V1beta1ComputeRouterNATSpecRulesActionSourceNatDrainIpsRefs
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeAddress` resource.</summary>
@@ -94,6 +100,7 @@ public partial class V1beta1ComputeRouterNATSpecRulesActionSourceNatDrainIpsRefs
     public string? Namespace { get; set; }
 }
 
+/// <summary>The action to be enforced for traffic that matches this rule.</summary>
 public partial class V1beta1ComputeRouterNATSpecRulesAction
 {
     /// <summary></summary>
@@ -105,6 +112,7 @@ public partial class V1beta1ComputeRouterNATSpecRulesAction
     public IList<V1beta1ComputeRouterNATSpecRulesActionSourceNatDrainIpsRefs>? SourceNatDrainIpsRefs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeRouterNATSpecRules
 {
     /// <summary>The action to be enforced for traffic that matches this rule.</summary>
@@ -124,6 +132,7 @@ public partial class V1beta1ComputeRouterNATSpecRules
     public int RuleNumber { get; set; }
 }
 
+/// <summary>The subnetwork to NAT.</summary>
 public partial class V1beta1ComputeRouterNATSpecSubnetworkSubnetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeSubnetwork` resource.</summary>
@@ -139,6 +148,7 @@ public partial class V1beta1ComputeRouterNATSpecSubnetworkSubnetworkRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeRouterNATSpecSubnetwork
 {
     /// <summary>List of the secondary ranges of the subnetwork that are allowed to use NAT. This can be populated only if 'LIST_OF_SECONDARY_IP_RANGES' is one of the values in sourceIpRangesToNat.</summary>
@@ -154,6 +164,7 @@ public partial class V1beta1ComputeRouterNATSpecSubnetwork
     public V1beta1ComputeRouterNATSpecSubnetworkSubnetworkRef SubnetworkRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeRouterNATSpec
 {
     /// <summary></summary>
@@ -233,6 +244,7 @@ public partial class V1beta1ComputeRouterNATSpec
     public int? UdpIdleTimeoutSec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeRouterNATStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -256,6 +268,7 @@ public partial class V1beta1ComputeRouterNATStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeRouterNATStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -268,6 +281,7 @@ public partial class V1beta1ComputeRouterNATStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ComputeRouterNAT : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeRouterNATSpec>, IStatus<V1beta1ComputeRouterNATStatus>
 {
     public const string KubeApiVersion = "v1beta1";

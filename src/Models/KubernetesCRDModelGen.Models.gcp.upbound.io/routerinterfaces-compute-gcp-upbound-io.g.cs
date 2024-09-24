@@ -38,6 +38,7 @@ public enum V1beta1RouterInterfaceSpecForProviderRouterRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RouterInterfaceSpecForProviderRouterRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1RouterInterfaceSpecForProviderRouterRefPolicy
     public V1beta1RouterInterfaceSpecForProviderRouterRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Router in compute to populate router.</summary>
 public partial class V1beta1RouterInterfaceSpecForProviderRouterRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1RouterInterfaceSpecForProviderRouterSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RouterInterfaceSpecForProviderRouterSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1RouterInterfaceSpecForProviderRouterSelectorPolicy
     public V1beta1RouterInterfaceSpecForProviderRouterSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Router in compute to populate router.</summary>
 public partial class V1beta1RouterInterfaceSpecForProviderRouterSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1RouterInterfaceSpecForProviderVpnTunnelRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RouterInterfaceSpecForProviderVpnTunnelRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1RouterInterfaceSpecForProviderVpnTunnelRefPolicy
     public V1beta1RouterInterfaceSpecForProviderVpnTunnelRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPNTunnel in compute to populate vpnTunnel.</summary>
 public partial class V1beta1RouterInterfaceSpecForProviderVpnTunnelRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1RouterInterfaceSpecForProviderVpnTunnelSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RouterInterfaceSpecForProviderVpnTunnelSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1RouterInterfaceSpecForProviderVpnTunnelSelectorPolic
     public V1beta1RouterInterfaceSpecForProviderVpnTunnelSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPNTunnel in compute to populate vpnTunnel.</summary>
 public partial class V1beta1RouterInterfaceSpecForProviderVpnTunnelSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1RouterInterfaceSpecForProviderVpnTunnelSelector
     public V1beta1RouterInterfaceSpecForProviderVpnTunnelSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouterInterfaceSpecForProvider
 {
     /// <summary>The name or resource link to the VLAN interconnect for this interface. Changing this forces a new interface to be created. Only one of vpn_tunnel, interconnect_attachment or subnetwork can be specified.</summary>
@@ -285,6 +294,7 @@ public enum V1beta1RouterInterfaceSpecInitProviderRouterRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RouterInterfaceSpecInitProviderRouterRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -298,6 +308,7 @@ public partial class V1beta1RouterInterfaceSpecInitProviderRouterRefPolicy
     public V1beta1RouterInterfaceSpecInitProviderRouterRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Router in compute to populate router.</summary>
 public partial class V1beta1RouterInterfaceSpecInitProviderRouterRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -329,6 +340,7 @@ public enum V1beta1RouterInterfaceSpecInitProviderRouterSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RouterInterfaceSpecInitProviderRouterSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -342,6 +354,7 @@ public partial class V1beta1RouterInterfaceSpecInitProviderRouterSelectorPolicy
     public V1beta1RouterInterfaceSpecInitProviderRouterSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Router in compute to populate router.</summary>
 public partial class V1beta1RouterInterfaceSpecInitProviderRouterSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -377,6 +390,7 @@ public enum V1beta1RouterInterfaceSpecInitProviderVpnTunnelRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RouterInterfaceSpecInitProviderVpnTunnelRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -390,6 +404,7 @@ public partial class V1beta1RouterInterfaceSpecInitProviderVpnTunnelRefPolicy
     public V1beta1RouterInterfaceSpecInitProviderVpnTunnelRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPNTunnel in compute to populate vpnTunnel.</summary>
 public partial class V1beta1RouterInterfaceSpecInitProviderVpnTunnelRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -421,6 +436,7 @@ public enum V1beta1RouterInterfaceSpecInitProviderVpnTunnelSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RouterInterfaceSpecInitProviderVpnTunnelSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -434,6 +450,7 @@ public partial class V1beta1RouterInterfaceSpecInitProviderVpnTunnelSelectorPoli
     public V1beta1RouterInterfaceSpecInitProviderVpnTunnelSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPNTunnel in compute to populate vpnTunnel.</summary>
 public partial class V1beta1RouterInterfaceSpecInitProviderVpnTunnelSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -449,6 +466,7 @@ public partial class V1beta1RouterInterfaceSpecInitProviderVpnTunnelSelector
     public V1beta1RouterInterfaceSpecInitProviderVpnTunnelSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1RouterInterfaceSpecInitProvider
 {
     /// <summary>The name or resource link to the VLAN interconnect for this interface. Changing this forces a new interface to be created. Only one of vpn_tunnel, interconnect_attachment or subnetwork can be specified.</summary>
@@ -554,6 +572,7 @@ public enum V1beta1RouterInterfaceSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RouterInterfaceSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -567,6 +586,7 @@ public partial class V1beta1RouterInterfaceSpecProviderConfigRefPolicy
     public V1beta1RouterInterfaceSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1RouterInterfaceSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -598,6 +618,7 @@ public enum V1beta1RouterInterfaceSpecPublishConnectionDetailsToConfigRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RouterInterfaceSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -611,6 +632,7 @@ public partial class V1beta1RouterInterfaceSpecPublishConnectionDetailsToConfigR
     public V1beta1RouterInterfaceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1RouterInterfaceSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -622,6 +644,7 @@ public partial class V1beta1RouterInterfaceSpecPublishConnectionDetailsToConfigR
     public V1beta1RouterInterfaceSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1RouterInterfaceSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -637,6 +660,7 @@ public partial class V1beta1RouterInterfaceSpecPublishConnectionDetailsToMetadat
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1RouterInterfaceSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -652,6 +676,7 @@ public partial class V1beta1RouterInterfaceSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1RouterInterfaceSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -663,6 +688,7 @@ public partial class V1beta1RouterInterfaceSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>RouterInterfaceSpec defines the desired state of RouterInterface</summary>
 public partial class V1beta1RouterInterfaceSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -695,6 +721,7 @@ public partial class V1beta1RouterInterfaceSpec
     public V1beta1RouterInterfaceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouterInterfaceStatusAtProvider
 {
     /// <summary>an identifier for the resource with format {{region}}/{{router}}/{{name}}</summary>
@@ -746,6 +773,7 @@ public partial class V1beta1RouterInterfaceStatusAtProvider
     public string? VpnTunnel { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1RouterInterfaceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -773,6 +801,7 @@ public partial class V1beta1RouterInterfaceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>RouterInterfaceStatus defines the observed state of RouterInterface.</summary>
 public partial class V1beta1RouterInterfaceStatus
 {
     /// <summary></summary>
@@ -789,6 +818,7 @@ public partial class V1beta1RouterInterfaceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>RouterInterface is the Schema for the RouterInterfaces API. Manages a Cloud Router interface.</summary>
 public partial class V1beta1RouterInterface : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1RouterInterfaceSpec>, IStatus<V1beta1RouterInterfaceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

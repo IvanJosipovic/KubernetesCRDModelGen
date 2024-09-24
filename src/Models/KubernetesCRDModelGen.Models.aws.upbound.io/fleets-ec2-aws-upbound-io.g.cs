@@ -18,6 +18,7 @@ public enum V1beta1FleetSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1FleetSpecForProviderFleetInstanceSet
 {
     /// <summary>The IDs of the instances.</summary>
@@ -57,6 +58,7 @@ public enum V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTemplateSpecifi
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationLaunchTemplateIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -70,6 +72,7 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTempla
     public V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationLaunchTemplateIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LaunchTemplate in ec2 to populate launchTemplateId.</summary>
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationLaunchTemplateIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -101,6 +104,7 @@ public enum V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTemplateSpecifi
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationLaunchTemplateIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -114,6 +118,7 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTempla
     public V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationLaunchTemplateIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LaunchTemplate in ec2 to populate launchTemplateId.</summary>
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationLaunchTemplateIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -149,6 +154,7 @@ public enum V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTemplateSpecifi
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -162,6 +168,7 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTempla
     public V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LaunchTemplate in ec2 to populate version.</summary>
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -193,6 +200,7 @@ public enum V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTemplateSpecifi
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -206,6 +214,7 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTempla
     public V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LaunchTemplate in ec2 to populate version.</summary>
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -221,6 +230,7 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTempla
     public V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Nested argument containing EC2 Launch Template to use. Defined below.</summary>
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTemplateSpecification
 {
     /// <summary>The ID of the launch template.</summary>
@@ -252,6 +262,7 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTempla
     public V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionSelector? VersionSelector { get; set; }
 }
 
+/// <summary>Block describing the minimum and maximum number of accelerators (GPUs, FPGAs, or AWS Inferentia chips). Default is no minimum or maximum limits.</summary>
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInstanceRequirementsAcceleratorCount
 {
     /// <summary>The maximum number of vCPUs. To specify no maximum limit, omit this parameter.</summary>
@@ -263,6 +274,7 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInst
     public double? Min { get; set; }
 }
 
+/// <summary>Block describing the minimum and maximum total memory of the accelerators. Default is no minimum or maximum.</summary>
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInstanceRequirementsAcceleratorTotalMemoryMib
 {
     /// <summary>The maximum number of vCPUs. To specify no maximum limit, omit this parameter.</summary>
@@ -274,6 +286,7 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInst
     public double? Min { get; set; }
 }
 
+/// <summary>Block describing the minimum and maximum baseline EBS bandwidth, in Mbps. Default is no minimum or maximum.</summary>
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInstanceRequirementsBaselineEbsBandwidthMbps
 {
     /// <summary>The maximum number of vCPUs. To specify no maximum limit, omit this parameter.</summary>
@@ -285,6 +298,7 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInst
     public double? Min { get; set; }
 }
 
+/// <summary>Block describing the minimum and maximum amount of memory (GiB) per vCPU. Default is no minimum or maximum.</summary>
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInstanceRequirementsMemoryGibPerVcpu
 {
     /// <summary>The maximum number of vCPUs. To specify no maximum limit, omit this parameter.</summary>
@@ -296,6 +310,7 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInst
     public double? Min { get; set; }
 }
 
+/// <summary>The minimum and maximum amount of memory per vCPU, in GiB. Default is no minimum or maximum limits.</summary>
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInstanceRequirementsMemoryMib
 {
     /// <summary>The maximum number of vCPUs. To specify no maximum limit, omit this parameter.</summary>
@@ -307,6 +322,7 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInst
     public double? Min { get; set; }
 }
 
+/// <summary>The minimum and maximum amount of network bandwidth, in gigabits per second (Gbps). Default is No minimum or maximum.</summary>
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInstanceRequirementsNetworkBandwidthGbps
 {
     /// <summary>The maximum number of vCPUs. To specify no maximum limit, omit this parameter.</summary>
@@ -318,6 +334,7 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInst
     public double? Min { get; set; }
 }
 
+/// <summary>Block describing the minimum and maximum number of network interfaces. Default is no minimum or maximum.</summary>
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInstanceRequirementsNetworkInterfaceCount
 {
     /// <summary>The maximum number of vCPUs. To specify no maximum limit, omit this parameter.</summary>
@@ -329,6 +346,7 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInst
     public double? Min { get; set; }
 }
 
+/// <summary>Block describing the minimum and maximum total local storage (GB). Default is no minimum or maximum.</summary>
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInstanceRequirementsTotalLocalStorageGb
 {
     /// <summary>The maximum number of vCPUs. To specify no maximum limit, omit this parameter.</summary>
@@ -340,6 +358,7 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInst
     public double? Min { get; set; }
 }
 
+/// <summary>Block describing the minimum and maximum number of vCPUs. Default is no maximum.</summary>
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInstanceRequirementsVcpuCount
 {
     /// <summary>The maximum number of vCPUs. To specify no maximum limit, omit this parameter.</summary>
@@ -351,6 +370,7 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInst
     public double? Min { get; set; }
 }
 
+/// <summary>Override the instance type in the Launch Template with instance types that satisfy the requirements.</summary>
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInstanceRequirements
 {
     /// <summary>Block describing the minimum and maximum number of accelerators (GPUs, FPGAs, or AWS Inferentia chips). Default is no minimum or maximum limits.</summary>
@@ -450,6 +470,7 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInst
     public V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInstanceRequirementsVcpuCount? VcpuCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverride
 {
     /// <summary>Availability Zone in which to launch the instances.</summary>
@@ -481,6 +502,7 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverride
     public double? WeightedCapacity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfig
 {
     /// <summary>Nested argument containing EC2 Launch Template to use. Defined below.</summary>
@@ -492,6 +514,7 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfig
     public IList<V1beta1FleetSpecForProviderLaunchTemplateConfigOverride>? Override { get; set; }
 }
 
+/// <summary>Demand capacity. Supported only for fleets of type instant.</summary>
 public partial class V1beta1FleetSpecForProviderOnDemandOptionsCapacityReservationOptions
 {
     /// <summary>Indicates whether to use unused Capacity Reservations for fulfilling On-Demand capacity. Valid values: use-capacity-reservations-first.</summary>
@@ -499,6 +522,7 @@ public partial class V1beta1FleetSpecForProviderOnDemandOptionsCapacityReservati
     public string? UsageStrategy { get; set; }
 }
 
+/// <summary>Nested argument containing On-Demand configurations. Defined below.</summary>
 public partial class V1beta1FleetSpecForProviderOnDemandOptions
 {
     /// <summary>The order of the launch template overrides to use in fulfilling On-Demand capacity. Valid values: lowestPrice, prioritized. Default: lowestPrice.</summary>
@@ -526,6 +550,7 @@ public partial class V1beta1FleetSpecForProviderOnDemandOptions
     public bool? SingleInstanceType { get; set; }
 }
 
+/// <summary>Nested argument containing the capacity rebalance for your fleet request. Defined below.</summary>
 public partial class V1beta1FleetSpecForProviderSpotOptionsMaintenanceStrategiesCapacityRebalance
 {
     /// <summary>The replacement strategy to use. Only available for fleets of type set to maintain. Valid values: launch.</summary>
@@ -537,6 +562,7 @@ public partial class V1beta1FleetSpecForProviderSpotOptionsMaintenanceStrategies
     public double? TerminationDelay { get; set; }
 }
 
+/// <summary>Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.</summary>
 public partial class V1beta1FleetSpecForProviderSpotOptionsMaintenanceStrategies
 {
     /// <summary>Nested argument containing the capacity rebalance for your fleet request. Defined below.</summary>
@@ -544,6 +570,7 @@ public partial class V1beta1FleetSpecForProviderSpotOptionsMaintenanceStrategies
     public V1beta1FleetSpecForProviderSpotOptionsMaintenanceStrategiesCapacityRebalance? CapacityRebalance { get; set; }
 }
 
+/// <summary>Nested argument containing Spot configurations. Defined below.</summary>
 public partial class V1beta1FleetSpecForProviderSpotOptions
 {
     /// <summary>How to allocate the target capacity across the Spot pools. Valid values: diversified, lowestPrice, capacity-optimized, capacity-optimized-prioritized and price-capacity-optimized. Default: lowestPrice.</summary>
@@ -563,6 +590,7 @@ public partial class V1beta1FleetSpecForProviderSpotOptions
     public V1beta1FleetSpecForProviderSpotOptionsMaintenanceStrategies? MaintenanceStrategies { get; set; }
 }
 
+/// <summary>Nested argument containing target capacity configurations. Defined below.</summary>
 public partial class V1beta1FleetSpecForProviderTargetCapacitySpecification
 {
     /// <summary>Default target capacity type. Valid values: on-demand, spot.</summary>
@@ -586,6 +614,7 @@ public partial class V1beta1FleetSpecForProviderTargetCapacitySpecification
     public double? TotalTargetCapacity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FleetSpecForProvider
 {
     /// <summary>Reserved.</summary>
@@ -661,6 +690,7 @@ public partial class V1beta1FleetSpecForProvider
     public string? ValidUntil { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FleetSpecInitProviderFleetInstanceSet
 {
     /// <summary>The IDs of the instances.</summary>
@@ -700,6 +730,7 @@ public enum V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecif
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationLaunchTemplateIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -713,6 +744,7 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTempl
     public V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationLaunchTemplateIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LaunchTemplate in ec2 to populate launchTemplateId.</summary>
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationLaunchTemplateIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -744,6 +776,7 @@ public enum V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecif
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationLaunchTemplateIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -757,6 +790,7 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTempl
     public V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationLaunchTemplateIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LaunchTemplate in ec2 to populate launchTemplateId.</summary>
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationLaunchTemplateIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -792,6 +826,7 @@ public enum V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecif
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -805,6 +840,7 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTempl
     public V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LaunchTemplate in ec2 to populate version.</summary>
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -836,6 +872,7 @@ public enum V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecif
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -849,6 +886,7 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTempl
     public V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LaunchTemplate in ec2 to populate version.</summary>
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -864,6 +902,7 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTempl
     public V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Nested argument containing EC2 Launch Template to use. Defined below.</summary>
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecification
 {
     /// <summary>The ID of the launch template.</summary>
@@ -895,6 +934,7 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTempl
     public V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionSelector? VersionSelector { get; set; }
 }
 
+/// <summary>Block describing the minimum and maximum number of accelerators (GPUs, FPGAs, or AWS Inferentia chips). Default is no minimum or maximum limits.</summary>
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideInstanceRequirementsAcceleratorCount
 {
     /// <summary>The maximum number of vCPUs. To specify no maximum limit, omit this parameter.</summary>
@@ -906,6 +946,7 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideIns
     public double? Min { get; set; }
 }
 
+/// <summary>Block describing the minimum and maximum total memory of the accelerators. Default is no minimum or maximum.</summary>
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideInstanceRequirementsAcceleratorTotalMemoryMib
 {
     /// <summary>The maximum number of vCPUs. To specify no maximum limit, omit this parameter.</summary>
@@ -917,6 +958,7 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideIns
     public double? Min { get; set; }
 }
 
+/// <summary>Block describing the minimum and maximum baseline EBS bandwidth, in Mbps. Default is no minimum or maximum.</summary>
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideInstanceRequirementsBaselineEbsBandwidthMbps
 {
     /// <summary>The maximum number of vCPUs. To specify no maximum limit, omit this parameter.</summary>
@@ -928,6 +970,7 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideIns
     public double? Min { get; set; }
 }
 
+/// <summary>Block describing the minimum and maximum amount of memory (GiB) per vCPU. Default is no minimum or maximum.</summary>
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideInstanceRequirementsMemoryGibPerVcpu
 {
     /// <summary>The maximum number of vCPUs. To specify no maximum limit, omit this parameter.</summary>
@@ -939,6 +982,7 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideIns
     public double? Min { get; set; }
 }
 
+/// <summary>The minimum and maximum amount of memory per vCPU, in GiB. Default is no minimum or maximum limits.</summary>
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideInstanceRequirementsMemoryMib
 {
     /// <summary>The maximum number of vCPUs. To specify no maximum limit, omit this parameter.</summary>
@@ -950,6 +994,7 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideIns
     public double? Min { get; set; }
 }
 
+/// <summary>The minimum and maximum amount of network bandwidth, in gigabits per second (Gbps). Default is No minimum or maximum.</summary>
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideInstanceRequirementsNetworkBandwidthGbps
 {
     /// <summary>The maximum number of vCPUs. To specify no maximum limit, omit this parameter.</summary>
@@ -961,6 +1006,7 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideIns
     public double? Min { get; set; }
 }
 
+/// <summary>Block describing the minimum and maximum number of network interfaces. Default is no minimum or maximum.</summary>
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideInstanceRequirementsNetworkInterfaceCount
 {
     /// <summary>The maximum number of vCPUs. To specify no maximum limit, omit this parameter.</summary>
@@ -972,6 +1018,7 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideIns
     public double? Min { get; set; }
 }
 
+/// <summary>Block describing the minimum and maximum total local storage (GB). Default is no minimum or maximum.</summary>
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideInstanceRequirementsTotalLocalStorageGb
 {
     /// <summary>The maximum number of vCPUs. To specify no maximum limit, omit this parameter.</summary>
@@ -983,6 +1030,7 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideIns
     public double? Min { get; set; }
 }
 
+/// <summary>Block describing the minimum and maximum number of vCPUs. Default is no maximum.</summary>
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideInstanceRequirementsVcpuCount
 {
     /// <summary>The maximum number of vCPUs. To specify no maximum limit, omit this parameter.</summary>
@@ -994,6 +1042,7 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideIns
     public double? Min { get; set; }
 }
 
+/// <summary>Override the instance type in the Launch Template with instance types that satisfy the requirements.</summary>
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideInstanceRequirements
 {
     /// <summary>Block describing the minimum and maximum number of accelerators (GPUs, FPGAs, or AWS Inferentia chips). Default is no minimum or maximum limits.</summary>
@@ -1093,6 +1142,7 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideIns
     public V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideInstanceRequirementsVcpuCount? VcpuCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverride
 {
     /// <summary>Availability Zone in which to launch the instances.</summary>
@@ -1124,6 +1174,7 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverride
     public double? WeightedCapacity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfig
 {
     /// <summary>Nested argument containing EC2 Launch Template to use. Defined below.</summary>
@@ -1135,6 +1186,7 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfig
     public IList<V1beta1FleetSpecInitProviderLaunchTemplateConfigOverride>? Override { get; set; }
 }
 
+/// <summary>Demand capacity. Supported only for fleets of type instant.</summary>
 public partial class V1beta1FleetSpecInitProviderOnDemandOptionsCapacityReservationOptions
 {
     /// <summary>Indicates whether to use unused Capacity Reservations for fulfilling On-Demand capacity. Valid values: use-capacity-reservations-first.</summary>
@@ -1142,6 +1194,7 @@ public partial class V1beta1FleetSpecInitProviderOnDemandOptionsCapacityReservat
     public string? UsageStrategy { get; set; }
 }
 
+/// <summary>Nested argument containing On-Demand configurations. Defined below.</summary>
 public partial class V1beta1FleetSpecInitProviderOnDemandOptions
 {
     /// <summary>The order of the launch template overrides to use in fulfilling On-Demand capacity. Valid values: lowestPrice, prioritized. Default: lowestPrice.</summary>
@@ -1169,6 +1222,7 @@ public partial class V1beta1FleetSpecInitProviderOnDemandOptions
     public bool? SingleInstanceType { get; set; }
 }
 
+/// <summary>Nested argument containing the capacity rebalance for your fleet request. Defined below.</summary>
 public partial class V1beta1FleetSpecInitProviderSpotOptionsMaintenanceStrategiesCapacityRebalance
 {
     /// <summary>The replacement strategy to use. Only available for fleets of type set to maintain. Valid values: launch.</summary>
@@ -1180,6 +1234,7 @@ public partial class V1beta1FleetSpecInitProviderSpotOptionsMaintenanceStrategie
     public double? TerminationDelay { get; set; }
 }
 
+/// <summary>Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.</summary>
 public partial class V1beta1FleetSpecInitProviderSpotOptionsMaintenanceStrategies
 {
     /// <summary>Nested argument containing the capacity rebalance for your fleet request. Defined below.</summary>
@@ -1187,6 +1242,7 @@ public partial class V1beta1FleetSpecInitProviderSpotOptionsMaintenanceStrategie
     public V1beta1FleetSpecInitProviderSpotOptionsMaintenanceStrategiesCapacityRebalance? CapacityRebalance { get; set; }
 }
 
+/// <summary>Nested argument containing Spot configurations. Defined below.</summary>
 public partial class V1beta1FleetSpecInitProviderSpotOptions
 {
     /// <summary>How to allocate the target capacity across the Spot pools. Valid values: diversified, lowestPrice, capacity-optimized, capacity-optimized-prioritized and price-capacity-optimized. Default: lowestPrice.</summary>
@@ -1206,6 +1262,7 @@ public partial class V1beta1FleetSpecInitProviderSpotOptions
     public V1beta1FleetSpecInitProviderSpotOptionsMaintenanceStrategies? MaintenanceStrategies { get; set; }
 }
 
+/// <summary>Nested argument containing target capacity configurations. Defined below.</summary>
 public partial class V1beta1FleetSpecInitProviderTargetCapacitySpecification
 {
     /// <summary>Default target capacity type. Valid values: on-demand, spot.</summary>
@@ -1229,6 +1286,7 @@ public partial class V1beta1FleetSpecInitProviderTargetCapacitySpecification
     public double? TotalTargetCapacity { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1FleetSpecInitProvider
 {
     /// <summary>Reserved.</summary>
@@ -1342,6 +1400,7 @@ public enum V1beta1FleetSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FleetSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1355,6 +1414,7 @@ public partial class V1beta1FleetSpecProviderConfigRefPolicy
     public V1beta1FleetSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1FleetSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1386,6 +1446,7 @@ public enum V1beta1FleetSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FleetSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1399,6 +1460,7 @@ public partial class V1beta1FleetSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1FleetSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1FleetSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1410,6 +1472,7 @@ public partial class V1beta1FleetSpecPublishConnectionDetailsToConfigRef
     public V1beta1FleetSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1FleetSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1425,6 +1488,7 @@ public partial class V1beta1FleetSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1FleetSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1440,6 +1504,7 @@ public partial class V1beta1FleetSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1FleetSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1451,6 +1516,7 @@ public partial class V1beta1FleetSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>FleetSpec defines the desired state of Fleet</summary>
 public partial class V1beta1FleetSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1483,6 +1549,7 @@ public partial class V1beta1FleetSpec
     public V1beta1FleetSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FleetStatusAtProviderFleetInstanceSet
 {
     /// <summary>The IDs of the instances.</summary>
@@ -1502,6 +1569,7 @@ public partial class V1beta1FleetStatusAtProviderFleetInstanceSet
     public string? Platform { get; set; }
 }
 
+/// <summary>Nested argument containing EC2 Launch Template to use. Defined below.</summary>
 public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigLaunchTemplateSpecification
 {
     /// <summary>The ID of the launch template.</summary>
@@ -1517,6 +1585,7 @@ public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigLaunchTempl
     public string? Version { get; set; }
 }
 
+/// <summary>Block describing the minimum and maximum number of accelerators (GPUs, FPGAs, or AWS Inferentia chips). Default is no minimum or maximum limits.</summary>
 public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideInstanceRequirementsAcceleratorCount
 {
     /// <summary>The maximum number of vCPUs. To specify no maximum limit, omit this parameter.</summary>
@@ -1528,6 +1597,7 @@ public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideIns
     public double? Min { get; set; }
 }
 
+/// <summary>Block describing the minimum and maximum total memory of the accelerators. Default is no minimum or maximum.</summary>
 public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideInstanceRequirementsAcceleratorTotalMemoryMib
 {
     /// <summary>The maximum number of vCPUs. To specify no maximum limit, omit this parameter.</summary>
@@ -1539,6 +1609,7 @@ public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideIns
     public double? Min { get; set; }
 }
 
+/// <summary>Block describing the minimum and maximum baseline EBS bandwidth, in Mbps. Default is no minimum or maximum.</summary>
 public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideInstanceRequirementsBaselineEbsBandwidthMbps
 {
     /// <summary>The maximum number of vCPUs. To specify no maximum limit, omit this parameter.</summary>
@@ -1550,6 +1621,7 @@ public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideIns
     public double? Min { get; set; }
 }
 
+/// <summary>Block describing the minimum and maximum amount of memory (GiB) per vCPU. Default is no minimum or maximum.</summary>
 public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideInstanceRequirementsMemoryGibPerVcpu
 {
     /// <summary>The maximum number of vCPUs. To specify no maximum limit, omit this parameter.</summary>
@@ -1561,6 +1633,7 @@ public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideIns
     public double? Min { get; set; }
 }
 
+/// <summary>The minimum and maximum amount of memory per vCPU, in GiB. Default is no minimum or maximum limits.</summary>
 public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideInstanceRequirementsMemoryMib
 {
     /// <summary>The maximum number of vCPUs. To specify no maximum limit, omit this parameter.</summary>
@@ -1572,6 +1645,7 @@ public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideIns
     public double? Min { get; set; }
 }
 
+/// <summary>The minimum and maximum amount of network bandwidth, in gigabits per second (Gbps). Default is No minimum or maximum.</summary>
 public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideInstanceRequirementsNetworkBandwidthGbps
 {
     /// <summary>The maximum number of vCPUs. To specify no maximum limit, omit this parameter.</summary>
@@ -1583,6 +1657,7 @@ public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideIns
     public double? Min { get; set; }
 }
 
+/// <summary>Block describing the minimum and maximum number of network interfaces. Default is no minimum or maximum.</summary>
 public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideInstanceRequirementsNetworkInterfaceCount
 {
     /// <summary>The maximum number of vCPUs. To specify no maximum limit, omit this parameter.</summary>
@@ -1594,6 +1669,7 @@ public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideIns
     public double? Min { get; set; }
 }
 
+/// <summary>Block describing the minimum and maximum total local storage (GB). Default is no minimum or maximum.</summary>
 public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideInstanceRequirementsTotalLocalStorageGb
 {
     /// <summary>The maximum number of vCPUs. To specify no maximum limit, omit this parameter.</summary>
@@ -1605,6 +1681,7 @@ public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideIns
     public double? Min { get; set; }
 }
 
+/// <summary>Block describing the minimum and maximum number of vCPUs. Default is no maximum.</summary>
 public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideInstanceRequirementsVcpuCount
 {
     /// <summary>The maximum number of vCPUs. To specify no maximum limit, omit this parameter.</summary>
@@ -1616,6 +1693,7 @@ public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideIns
     public double? Min { get; set; }
 }
 
+/// <summary>Override the instance type in the Launch Template with instance types that satisfy the requirements.</summary>
 public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideInstanceRequirements
 {
     /// <summary>Block describing the minimum and maximum number of accelerators (GPUs, FPGAs, or AWS Inferentia chips). Default is no minimum or maximum limits.</summary>
@@ -1715,6 +1793,7 @@ public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideIns
     public V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideInstanceRequirementsVcpuCount? VcpuCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverride
 {
     /// <summary>Availability Zone in which to launch the instances.</summary>
@@ -1746,6 +1825,7 @@ public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverride
     public double? WeightedCapacity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfig
 {
     /// <summary>Nested argument containing EC2 Launch Template to use. Defined below.</summary>
@@ -1757,6 +1837,7 @@ public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfig
     public IList<V1beta1FleetStatusAtProviderLaunchTemplateConfigOverride>? Override { get; set; }
 }
 
+/// <summary>Demand capacity. Supported only for fleets of type instant.</summary>
 public partial class V1beta1FleetStatusAtProviderOnDemandOptionsCapacityReservationOptions
 {
     /// <summary>Indicates whether to use unused Capacity Reservations for fulfilling On-Demand capacity. Valid values: use-capacity-reservations-first.</summary>
@@ -1764,6 +1845,7 @@ public partial class V1beta1FleetStatusAtProviderOnDemandOptionsCapacityReservat
     public string? UsageStrategy { get; set; }
 }
 
+/// <summary>Nested argument containing On-Demand configurations. Defined below.</summary>
 public partial class V1beta1FleetStatusAtProviderOnDemandOptions
 {
     /// <summary>The order of the launch template overrides to use in fulfilling On-Demand capacity. Valid values: lowestPrice, prioritized. Default: lowestPrice.</summary>
@@ -1791,6 +1873,7 @@ public partial class V1beta1FleetStatusAtProviderOnDemandOptions
     public bool? SingleInstanceType { get; set; }
 }
 
+/// <summary>Nested argument containing the capacity rebalance for your fleet request. Defined below.</summary>
 public partial class V1beta1FleetStatusAtProviderSpotOptionsMaintenanceStrategiesCapacityRebalance
 {
     /// <summary>The replacement strategy to use. Only available for fleets of type set to maintain. Valid values: launch.</summary>
@@ -1802,6 +1885,7 @@ public partial class V1beta1FleetStatusAtProviderSpotOptionsMaintenanceStrategie
     public double? TerminationDelay { get; set; }
 }
 
+/// <summary>Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.</summary>
 public partial class V1beta1FleetStatusAtProviderSpotOptionsMaintenanceStrategies
 {
     /// <summary>Nested argument containing the capacity rebalance for your fleet request. Defined below.</summary>
@@ -1809,6 +1893,7 @@ public partial class V1beta1FleetStatusAtProviderSpotOptionsMaintenanceStrategie
     public V1beta1FleetStatusAtProviderSpotOptionsMaintenanceStrategiesCapacityRebalance? CapacityRebalance { get; set; }
 }
 
+/// <summary>Nested argument containing Spot configurations. Defined below.</summary>
 public partial class V1beta1FleetStatusAtProviderSpotOptions
 {
     /// <summary>How to allocate the target capacity across the Spot pools. Valid values: diversified, lowestPrice, capacity-optimized, capacity-optimized-prioritized and price-capacity-optimized. Default: lowestPrice.</summary>
@@ -1828,6 +1913,7 @@ public partial class V1beta1FleetStatusAtProviderSpotOptions
     public V1beta1FleetStatusAtProviderSpotOptionsMaintenanceStrategies? MaintenanceStrategies { get; set; }
 }
 
+/// <summary>Nested argument containing target capacity configurations. Defined below.</summary>
 public partial class V1beta1FleetStatusAtProviderTargetCapacitySpecification
 {
     /// <summary>Default target capacity type. Valid values: on-demand, spot.</summary>
@@ -1851,6 +1937,7 @@ public partial class V1beta1FleetStatusAtProviderTargetCapacitySpecification
     public double? TotalTargetCapacity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FleetStatusAtProvider
 {
     /// <summary>The ARN of the fleet</summary>
@@ -1934,6 +2021,7 @@ public partial class V1beta1FleetStatusAtProvider
     public string? ValidUntil { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1FleetStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1961,6 +2049,7 @@ public partial class V1beta1FleetStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>FleetStatus defines the observed state of Fleet.</summary>
 public partial class V1beta1FleetStatus
 {
     /// <summary></summary>
@@ -1977,6 +2066,7 @@ public partial class V1beta1FleetStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Fleet is the Schema for the Fleets API. Provides a resource to manage EC2 Fleets</summary>
 public partial class V1beta1Fleet : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FleetSpec>, IStatus<V1beta1FleetStatus>
 {
     public const string KubeApiVersion = "v1beta1";

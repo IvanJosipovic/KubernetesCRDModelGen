@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cdn.azure.com;
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a cdn.azure.com/Profile resource</summary>
 public partial class V1api20230501storageSecurityPolicySpecOwner
 {
     /// <summary></summary>
@@ -19,6 +20,7 @@ public partial class V1api20230501storageSecurityPolicySpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20230501storageSecurityPolicySpecParametersWebApplicationFirewallAssociationsDomainsReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -38,6 +40,7 @@ public partial class V1api20230501storageSecurityPolicySpecParametersWebApplicat
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.ActivatedResourceReference Reference to another resource along with its state.</summary>
 public partial class V1api20230501storageSecurityPolicySpecParametersWebApplicationFirewallAssociationsDomains
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -49,6 +52,7 @@ public partial class V1api20230501storageSecurityPolicySpecParametersWebApplicat
     public V1api20230501storageSecurityPolicySpecParametersWebApplicationFirewallAssociationsDomainsReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.SecurityPolicyWebApplicationFirewallAssociation settings for security policy patterns to match</summary>
 public partial class V1api20230501storageSecurityPolicySpecParametersWebApplicationFirewallAssociations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -64,6 +68,7 @@ public partial class V1api20230501storageSecurityPolicySpecParametersWebApplicat
     public IList<string>? PatternsToMatch { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20230501storageSecurityPolicySpecParametersWebApplicationFirewallWafPolicyReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -83,6 +88,7 @@ public partial class V1api20230501storageSecurityPolicySpecParametersWebApplicat
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.ResourceReference Reference to another resource.</summary>
 public partial class V1api20230501storageSecurityPolicySpecParametersWebApplicationFirewallWafPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -94,6 +100,7 @@ public partial class V1api20230501storageSecurityPolicySpecParametersWebApplicat
     public V1api20230501storageSecurityPolicySpecParametersWebApplicationFirewallWafPolicyReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.SecurityPolicyWebApplicationFirewallParameters</summary>
 public partial class V1api20230501storageSecurityPolicySpecParametersWebApplicationFirewall
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -113,6 +120,7 @@ public partial class V1api20230501storageSecurityPolicySpecParametersWebApplicat
     public V1api20230501storageSecurityPolicySpecParametersWebApplicationFirewallWafPolicy? WafPolicy { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.SecurityPolicyPropertiesParameters</summary>
 public partial class V1api20230501storageSecurityPolicySpecParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -124,6 +132,7 @@ public partial class V1api20230501storageSecurityPolicySpecParameters
     public V1api20230501storageSecurityPolicySpecParametersWebApplicationFirewall? WebApplicationFirewall { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.Profiles_SecurityPolicy_Spec</summary>
 public partial class V1api20230501storageSecurityPolicySpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -147,6 +156,7 @@ public partial class V1api20230501storageSecurityPolicySpec
     public V1api20230501storageSecurityPolicySpecParameters? Parameters { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20230501storageSecurityPolicyStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -178,6 +188,7 @@ public partial class V1api20230501storageSecurityPolicyStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.ActivatedResourceReference_STATUS_Profiles_SecurityPolicy_SubResourceEmbedded Reference to another resource along with its state.</summary>
 public partial class V1api20230501storageSecurityPolicyStatusParametersWebApplicationFirewallAssociationsDomains
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -189,6 +200,7 @@ public partial class V1api20230501storageSecurityPolicyStatusParametersWebApplic
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.SecurityPolicyWebApplicationFirewallAssociation_STATUS settings for security policy patterns to match</summary>
 public partial class V1api20230501storageSecurityPolicyStatusParametersWebApplicationFirewallAssociations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -204,6 +216,7 @@ public partial class V1api20230501storageSecurityPolicyStatusParametersWebApplic
     public IList<string>? PatternsToMatch { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.ResourceReference_STATUS Reference to another resource.</summary>
 public partial class V1api20230501storageSecurityPolicyStatusParametersWebApplicationFirewallWafPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -215,6 +228,7 @@ public partial class V1api20230501storageSecurityPolicyStatusParametersWebApplic
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.SecurityPolicyWebApplicationFirewallParameters_STATUS</summary>
 public partial class V1api20230501storageSecurityPolicyStatusParametersWebApplicationFirewall
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -234,6 +248,7 @@ public partial class V1api20230501storageSecurityPolicyStatusParametersWebApplic
     public V1api20230501storageSecurityPolicyStatusParametersWebApplicationFirewallWafPolicy? WafPolicy { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.SecurityPolicyPropertiesParameters_STATUS</summary>
 public partial class V1api20230501storageSecurityPolicyStatusParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -245,6 +260,7 @@ public partial class V1api20230501storageSecurityPolicyStatusParameters
     public V1api20230501storageSecurityPolicyStatusParametersWebApplicationFirewall? WebApplicationFirewall { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.SystemData_STATUS Read only system data</summary>
 public partial class V1api20230501storageSecurityPolicyStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -276,6 +292,7 @@ public partial class V1api20230501storageSecurityPolicyStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.Profiles_SecurityPolicy_STATUS</summary>
 public partial class V1api20230501storageSecurityPolicyStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -320,6 +337,7 @@ public partial class V1api20230501storageSecurityPolicyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20230501.SecurityPolicy Generator information: - Generated from: /cdn/resource-manager/Microsoft.Cdn/stable/2023-05-01/afdx.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/securityPolicies/{securityPolicyName}</summary>
 public partial class V1api20230501storageSecurityPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230501storageSecurityPolicySpec>, IStatus<V1api20230501storageSecurityPolicyStatus>
 {
     public const string KubeApiVersion = "v1api20230501storage";

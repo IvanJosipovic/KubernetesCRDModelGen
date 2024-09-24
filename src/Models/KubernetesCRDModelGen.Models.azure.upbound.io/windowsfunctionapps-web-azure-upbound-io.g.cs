@@ -18,6 +18,7 @@ public enum V1beta1WindowsFunctionAppSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The Client Secret for the Client ID. Cannot be used with `client_secret_setting_name`.</summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsActiveDirectoryClientSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsActiveD
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsActiveDirectory
 {
     /// <summary>Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. Specifies a list of Allowed audience values to consider when validating JWTs issued by Azure Active Directory.</summary>
@@ -52,6 +54,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsActiveD
     public string? ClientSecretSettingName { get; set; }
 }
 
+/// <summary>The App Secret of the Facebook app used for Facebook login. Cannot be specified with app_secret_setting_name. The App Secret of the Facebook app used for Facebook Login. Cannot be specified with `app_secret_setting_name`.</summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsFacebookAppSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -67,6 +70,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsFaceboo
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsFacebook
 {
     /// <summary>The App ID of the Facebook app used for login. The App ID of the Facebook app used for login.</summary>
@@ -86,6 +90,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsFaceboo
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The Client Secret of the GitHub app used for GitHub Login. Cannot be specified with `client_secret_setting_name`.</summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsGithubClientSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -101,6 +106,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsGithubC
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsGithub
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the GitHub app used for login.</summary>
@@ -120,6 +126,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsGithub
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The client secret associated with the Google web application.  Cannot be specified with `client_secret_setting_name`.</summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsGoogleClientSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -135,6 +142,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsGoogleC
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsGoogle
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The OpenID Connect Client ID for the Google web application.</summary>
@@ -154,6 +162,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsGoogle
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with `client_secret_setting_name`.</summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsMicrosoftClientSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -169,6 +178,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsMicroso
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsMicrosoft
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The OAuth 2.0 client ID that was created for the app used for authentication.</summary>
@@ -188,6 +198,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsMicroso
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary>The OAuth 1.0a consumer secret of the Twitter application used for sign-in. Cannot be specified with consumer_secret_setting_name. The OAuth 1.0a consumer secret of the Twitter application used for sign-in. Cannot be specified with `consumer_secret_setting_name`.</summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsTwitterConsumerSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -203,6 +214,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsTwitter
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsTwitter
 {
     /// <summary>The OAuth 1.0a consumer key of the Twitter application used for sign-in. The OAuth 1.0a consumer key of the Twitter application used for sign-in.</summary>
@@ -218,6 +230,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsTwitter
     public string? ConsumerSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettings
 {
     /// <summary>An active_directory block as defined above.</summary>
@@ -281,6 +294,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettings
     public string? UnauthenticatedClientAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsV2ActiveDirectoryV2
 {
     /// <summary>The list of allowed Applications for the Default Authorisation Policy. The list of allowed Applications for the Default Authorisation Policy.</summary>
@@ -332,6 +346,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsV2Activ
     public bool? WwwAuthenticationDisabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsV2AppleV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The OpenID Connect Client ID for the Apple web application.</summary>
@@ -343,6 +358,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsV2Apple
     public string? ClientSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsV2AzureStaticWebAppV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the Client to use to authenticate with Azure Static Web App Authentication.</summary>
@@ -350,6 +366,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsV2Azure
     public string? ClientId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsV2CustomOidcV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the Client to use to authenticate with this Custom OIDC.</summary>
@@ -373,6 +390,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsV2Custo
     public IList<string>? Scopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsV2FacebookV2
 {
     /// <summary>The App ID of the Facebook app used for login. The App ID of the Facebook app used for login.</summary>
@@ -392,6 +410,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsV2Faceb
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsV2GithubV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the GitHub app used for login.</summary>
@@ -407,6 +426,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsV2Githu
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsV2GoogleV2
 {
     /// <summary>Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. Specifies a list of Allowed Audiences that will be requested as part of Google Sign-In authentication.</summary>
@@ -426,6 +446,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsV2Googl
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsV2Login
 {
     /// <summary>External URLs that can be redirected to as part of logging in or logging out of the app. This is an advanced setting typically only needed by Windows Store application backends. External URLs that can be redirected to as part of logging in or logging out of the app. This is an advanced setting typically only needed by Windows Store application backends. **Note:** URLs within the current domain are always implicitly allowed.</summary>
@@ -473,6 +494,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsV2Login
     public bool? ValidateNonce { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsV2MicrosoftV2
 {
     /// <summary>Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication.</summary>
@@ -492,6 +514,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsV2Micro
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsV2TwitterV2
 {
     /// <summary>The OAuth 1.0a consumer key of the Twitter application used for sign-in. The OAuth 1.0a consumer key of the Twitter application used for sign-in.</summary>
@@ -503,6 +526,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsV2Twitt
     public string? ConsumerSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsV2
 {
     /// <summary>An active_directory_v2 block as defined below.</summary>
@@ -594,6 +618,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsV2
     public string? UnauthenticatedAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderBackupSchedule
 {
     /// <summary>How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and frequency_unit should be set to Day). How often the backup should be executed (e.g. for weekly backup, this should be set to `7` and `frequency_unit` should be set to `Day`).</summary>
@@ -617,6 +642,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderBackupSchedule
     public string? StartTime { get; set; }
 }
 
+/// <summary>The SAS URL to the container. The SAS URL to the container.</summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderBackupStorageAccountUrlSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -632,6 +658,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderBackupStorageAccoun
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderBackup
 {
     /// <summary>Should this backup job be enabled? Defaults to true. Should this backup job be enabled?</summary>
@@ -651,6 +678,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderBackup
     public V1beta1WindowsFunctionAppSpecForProviderBackupStorageAccountUrlSecretRef StorageAccountUrlSecretRef { get; set; }
 }
 
+/// <summary>The connection string value. The connection string value.</summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderConnectionStringValueSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -666,6 +694,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderConnectionStringVal
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderConnectionString
 {
     /// <summary>The name which should be used for this Connection. The name which should be used for this Connection.</summary>
@@ -681,6 +710,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderConnectionString
     public V1beta1WindowsFunctionAppSpecForProviderConnectionStringValueSecretRef ValueSecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderIdentity
 {
     /// <summary>A list of User Assigned Managed Identity IDs to be assigned to this Windows Function App.</summary>
@@ -712,6 +742,7 @@ public enum V1beta1WindowsFunctionAppSpecForProviderResourceGroupNameRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -725,6 +756,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderResourceGroupNameRe
     public V1beta1WindowsFunctionAppSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -756,6 +788,7 @@ public enum V1beta1WindowsFunctionAppSpecForProviderResourceGroupNameSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -769,6 +802,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderResourceGroupNameSe
     public V1beta1WindowsFunctionAppSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -804,6 +838,7 @@ public enum V1beta1WindowsFunctionAppSpecForProviderServicePlanIdRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderServicePlanIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -817,6 +852,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderServicePlanIdRefPol
     public V1beta1WindowsFunctionAppSpecForProviderServicePlanIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ServicePlan in web to populate servicePlanId.</summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderServicePlanIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -848,6 +884,7 @@ public enum V1beta1WindowsFunctionAppSpecForProviderServicePlanIdSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderServicePlanIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -861,6 +898,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderServicePlanIdSelect
     public V1beta1WindowsFunctionAppSpecForProviderServicePlanIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ServicePlan in web to populate servicePlanId.</summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderServicePlanIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -876,6 +914,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderServicePlanIdSelect
     public V1beta1WindowsFunctionAppSpecForProviderServicePlanIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderSiteConfigAppServiceLogs
 {
     /// <summary>The amount of disk space to use for logs. Valid values are between 25 and 100. Defaults to 35. The amount of disk space to use for logs. Valid values are between `25` and `100`.</summary>
@@ -887,6 +926,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderSiteConfigAppServic
     public double? RetentionPeriodDays { get; set; }
 }
 
+/// <summary>The Connection String for linking the Windows Function App to Application Insights. The Connection String for linking the Windows Function App to Application Insights.</summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderSiteConfigApplicationInsightsConnectionStringSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -902,6 +942,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderSiteConfigApplicati
     public string Namespace { get; set; }
 }
 
+/// <summary>The Instrumentation Key for connecting the Windows Function App to Application Insights. The Instrumentation Key for connecting the Windows Function App to Application Insights.</summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderSiteConfigApplicationInsightsKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -917,6 +958,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderSiteConfigApplicati
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderSiteConfigApplicationStack
 {
     /// <summary>The version of .NET to use. Possible values include v3.0, v4.0 v6.0, v7.0 and v8.0. Defaults to v4.0. The version of .Net. Possible values are `v3.0`, `v4.0`, `v6.0` and `v7.0`</summary>
@@ -944,6 +986,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderSiteConfigApplicati
     public bool? UseDotnetIsolatedRuntime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderSiteConfigCors
 {
     /// <summary>Specifies a list of origins that should be allowed to make cross-origin calls. Specifies a list of origins that should be allowed to make cross-origin calls.</summary>
@@ -955,6 +998,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderSiteConfigCors
     public bool? SupportCredentials { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderSiteConfigIpRestrictionHeaders
 {
     /// <summary>Specifies a list of Azure Front Door IDs.</summary>
@@ -994,6 +1038,7 @@ public enum V1beta1WindowsFunctionAppSpecForProviderSiteConfigIpRestrictionVirtu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1007,6 +1052,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderSiteConfigIpRestric
     public V1beta1WindowsFunctionAppSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1038,6 +1084,7 @@ public enum V1beta1WindowsFunctionAppSpecForProviderSiteConfigIpRestrictionVirtu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1051,6 +1098,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderSiteConfigIpRestric
     public V1beta1WindowsFunctionAppSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1066,6 +1114,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderSiteConfigIpRestric
     public V1beta1WindowsFunctionAppSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderSiteConfigIpRestriction
 {
     /// <summary>The action to take. Possible values are Allow or Deny. Defaults to Allow. The action to take. Possible values are `Allow` or `Deny`.</summary>
@@ -1109,6 +1158,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderSiteConfigIpRestric
     public V1beta1WindowsFunctionAppSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelector? VirtualNetworkSubnetIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderSiteConfigScmIpRestrictionHeaders
 {
     /// <summary>Specifies a list of Azure Front Door IDs.</summary>
@@ -1148,6 +1198,7 @@ public enum V1beta1WindowsFunctionAppSpecForProviderSiteConfigScmIpRestrictionVi
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1161,6 +1212,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderSiteConfigScmIpRest
     public V1beta1WindowsFunctionAppSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1192,6 +1244,7 @@ public enum V1beta1WindowsFunctionAppSpecForProviderSiteConfigScmIpRestrictionVi
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1205,6 +1258,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderSiteConfigScmIpRest
     public V1beta1WindowsFunctionAppSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1220,6 +1274,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderSiteConfigScmIpRest
     public V1beta1WindowsFunctionAppSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderSiteConfigScmIpRestriction
 {
     /// <summary>The action to take. Possible values are Allow or Deny. Defaults to Allow. The action to take. Possible values are `Allow` or `Deny`.</summary>
@@ -1263,6 +1318,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderSiteConfigScmIpRest
     public V1beta1WindowsFunctionAppSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelector? VirtualNetworkSubnetIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderSiteConfig
 {
     /// <summary>If this Windows Function App is Always On enabled. Defaults to false. If this Windows Web App is Always On enabled. Defaults to `false`.</summary>
@@ -1398,6 +1454,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderSiteConfig
     public double? WorkerCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderStickySettings
 {
     /// <summary>A list of app_setting names that the Windows Function App will not swap between Slots when a swap operation is triggered.</summary>
@@ -1409,6 +1466,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderStickySettings
     public IList<string>? ConnectionStringNames { get; set; }
 }
 
+/// <summary>The Access key for the storage account.</summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderStorageAccountAccessKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1424,6 +1482,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderStorageAccountAcces
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderStorageAccount
 {
     /// <summary>The Access key for the storage account.</summary>
@@ -1471,6 +1530,7 @@ public enum V1beta1WindowsFunctionAppSpecForProviderStorageAccountNameRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderStorageAccountNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1484,6 +1544,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderStorageAccountNameR
     public V1beta1WindowsFunctionAppSpecForProviderStorageAccountNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in storage to populate storageAccountName.</summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderStorageAccountNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1515,6 +1576,7 @@ public enum V1beta1WindowsFunctionAppSpecForProviderStorageAccountNameSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderStorageAccountNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1528,6 +1590,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderStorageAccountNameS
     public V1beta1WindowsFunctionAppSpecForProviderStorageAccountNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in storage to populate storageAccountName.</summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderStorageAccountNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1563,6 +1626,7 @@ public enum V1beta1WindowsFunctionAppSpecForProviderVirtualNetworkSubnetIdRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderVirtualNetworkSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1576,6 +1640,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderVirtualNetworkSubne
     public V1beta1WindowsFunctionAppSpecForProviderVirtualNetworkSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderVirtualNetworkSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1607,6 +1672,7 @@ public enum V1beta1WindowsFunctionAppSpecForProviderVirtualNetworkSubnetIdSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderVirtualNetworkSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1620,6 +1686,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderVirtualNetworkSubne
     public V1beta1WindowsFunctionAppSpecForProviderVirtualNetworkSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1WindowsFunctionAppSpecForProviderVirtualNetworkSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1635,6 +1702,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProviderVirtualNetworkSubne
     public V1beta1WindowsFunctionAppSpecForProviderVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecForProvider
 {
     /// <summary>A map of key-value pairs for App Settings and custom values. A map of key-value pairs for [App Settings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-app-settings) and custom values.</summary>
@@ -1798,6 +1866,7 @@ public partial class V1beta1WindowsFunctionAppSpecForProvider
     public string? ZipDeployFile { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsActiveDirectory
 {
     /// <summary>Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. Specifies a list of Allowed audience values to consider when validating JWTs issued by Azure Active Directory.</summary>
@@ -1813,6 +1882,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsActive
     public string? ClientSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsFacebook
 {
     /// <summary>The App ID of the Facebook app used for login. The App ID of the Facebook app used for login.</summary>
@@ -1828,6 +1898,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsFacebo
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsGithub
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the GitHub app used for login.</summary>
@@ -1843,6 +1914,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsGithub
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsGoogle
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The OpenID Connect Client ID for the Google web application.</summary>
@@ -1858,6 +1930,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsGoogle
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsMicrosoft
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The OAuth 2.0 client ID that was created for the app used for authentication.</summary>
@@ -1873,6 +1946,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsMicros
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsTwitter
 {
     /// <summary>The OAuth 1.0a consumer key of the Twitter application used for sign-in. The OAuth 1.0a consumer key of the Twitter application used for sign-in.</summary>
@@ -1884,6 +1958,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsTwitte
     public string? ConsumerSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettings
 {
     /// <summary>An active_directory block as defined above.</summary>
@@ -1947,6 +2022,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettings
     public string? UnauthenticatedClientAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsV2ActiveDirectoryV2
 {
     /// <summary>The list of allowed Applications for the Default Authorisation Policy. The list of allowed Applications for the Default Authorisation Policy.</summary>
@@ -1998,6 +2074,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsV2Acti
     public bool? WwwAuthenticationDisabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsV2AppleV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The OpenID Connect Client ID for the Apple web application.</summary>
@@ -2009,6 +2086,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsV2Appl
     public string? ClientSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsV2AzureStaticWebAppV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the Client to use to authenticate with Azure Static Web App Authentication.</summary>
@@ -2016,6 +2094,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsV2Azur
     public string? ClientId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsV2CustomOidcV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the Client to use to authenticate with this Custom OIDC.</summary>
@@ -2039,6 +2118,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsV2Cust
     public IList<string>? Scopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsV2FacebookV2
 {
     /// <summary>The App ID of the Facebook app used for login. The App ID of the Facebook app used for login.</summary>
@@ -2058,6 +2138,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsV2Face
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsV2GithubV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the GitHub app used for login.</summary>
@@ -2073,6 +2154,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsV2Gith
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsV2GoogleV2
 {
     /// <summary>Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. Specifies a list of Allowed Audiences that will be requested as part of Google Sign-In authentication.</summary>
@@ -2092,6 +2174,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsV2Goog
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsV2Login
 {
     /// <summary>External URLs that can be redirected to as part of logging in or logging out of the app. This is an advanced setting typically only needed by Windows Store application backends. External URLs that can be redirected to as part of logging in or logging out of the app. This is an advanced setting typically only needed by Windows Store application backends. **Note:** URLs within the current domain are always implicitly allowed.</summary>
@@ -2139,6 +2222,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsV2Logi
     public bool? ValidateNonce { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsV2MicrosoftV2
 {
     /// <summary>Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication.</summary>
@@ -2158,6 +2242,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsV2Micr
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsV2TwitterV2
 {
     /// <summary>The OAuth 1.0a consumer key of the Twitter application used for sign-in. The OAuth 1.0a consumer key of the Twitter application used for sign-in.</summary>
@@ -2169,6 +2254,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsV2Twit
     public string? ConsumerSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsV2
 {
     /// <summary>An active_directory_v2 block as defined below.</summary>
@@ -2260,6 +2346,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsV2
     public string? UnauthenticatedAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderBackupSchedule
 {
     /// <summary>How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and frequency_unit should be set to Day). How often the backup should be executed (e.g. for weekly backup, this should be set to `7` and `frequency_unit` should be set to `Day`).</summary>
@@ -2283,6 +2370,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderBackupSchedule
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderBackup
 {
     /// <summary>Should this backup job be enabled? Defaults to true. Should this backup job be enabled?</summary>
@@ -2298,6 +2386,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderBackup
     public IList<V1beta1WindowsFunctionAppSpecInitProviderBackupSchedule>? Schedule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderConnectionString
 {
     /// <summary>The name which should be used for this Connection. The name which should be used for this Connection.</summary>
@@ -2309,6 +2398,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderConnectionString
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderIdentity
 {
     /// <summary>A list of User Assigned Managed Identity IDs to be assigned to this Windows Function App.</summary>
@@ -2340,6 +2430,7 @@ public enum V1beta1WindowsFunctionAppSpecInitProviderServicePlanIdRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderServicePlanIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2353,6 +2444,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderServicePlanIdRefPo
     public V1beta1WindowsFunctionAppSpecInitProviderServicePlanIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ServicePlan in web to populate servicePlanId.</summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderServicePlanIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2384,6 +2476,7 @@ public enum V1beta1WindowsFunctionAppSpecInitProviderServicePlanIdSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderServicePlanIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2397,6 +2490,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderServicePlanIdSelec
     public V1beta1WindowsFunctionAppSpecInitProviderServicePlanIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ServicePlan in web to populate servicePlanId.</summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderServicePlanIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2412,6 +2506,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderServicePlanIdSelec
     public V1beta1WindowsFunctionAppSpecInitProviderServicePlanIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderSiteConfigAppServiceLogs
 {
     /// <summary>The amount of disk space to use for logs. Valid values are between 25 and 100. Defaults to 35. The amount of disk space to use for logs. Valid values are between `25` and `100`.</summary>
@@ -2423,6 +2518,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderSiteConfigAppServi
     public double? RetentionPeriodDays { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderSiteConfigApplicationStack
 {
     /// <summary>The version of .NET to use. Possible values include v3.0, v4.0 v6.0, v7.0 and v8.0. Defaults to v4.0. The version of .Net. Possible values are `v3.0`, `v4.0`, `v6.0` and `v7.0`</summary>
@@ -2450,6 +2546,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderSiteConfigApplicat
     public bool? UseDotnetIsolatedRuntime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderSiteConfigCors
 {
     /// <summary>Specifies a list of origins that should be allowed to make cross-origin calls. Specifies a list of origins that should be allowed to make cross-origin calls.</summary>
@@ -2461,6 +2558,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderSiteConfigCors
     public bool? SupportCredentials { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderSiteConfigIpRestrictionHeaders
 {
     /// <summary>Specifies a list of Azure Front Door IDs.</summary>
@@ -2500,6 +2598,7 @@ public enum V1beta1WindowsFunctionAppSpecInitProviderSiteConfigIpRestrictionVirt
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2513,6 +2612,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderSiteConfigIpRestri
     public V1beta1WindowsFunctionAppSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2544,6 +2644,7 @@ public enum V1beta1WindowsFunctionAppSpecInitProviderSiteConfigIpRestrictionVirt
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2557,6 +2658,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderSiteConfigIpRestri
     public V1beta1WindowsFunctionAppSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2572,6 +2674,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderSiteConfigIpRestri
     public V1beta1WindowsFunctionAppSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderSiteConfigIpRestriction
 {
     /// <summary>The action to take. Possible values are Allow or Deny. Defaults to Allow. The action to take. Possible values are `Allow` or `Deny`.</summary>
@@ -2615,6 +2718,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderSiteConfigIpRestri
     public V1beta1WindowsFunctionAppSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelector? VirtualNetworkSubnetIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderSiteConfigScmIpRestrictionHeaders
 {
     /// <summary>Specifies a list of Azure Front Door IDs.</summary>
@@ -2654,6 +2758,7 @@ public enum V1beta1WindowsFunctionAppSpecInitProviderSiteConfigScmIpRestrictionV
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2667,6 +2772,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderSiteConfigScmIpRes
     public V1beta1WindowsFunctionAppSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2698,6 +2804,7 @@ public enum V1beta1WindowsFunctionAppSpecInitProviderSiteConfigScmIpRestrictionV
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2711,6 +2818,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderSiteConfigScmIpRes
     public V1beta1WindowsFunctionAppSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2726,6 +2834,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderSiteConfigScmIpRes
     public V1beta1WindowsFunctionAppSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderSiteConfigScmIpRestriction
 {
     /// <summary>The action to take. Possible values are Allow or Deny. Defaults to Allow. The action to take. Possible values are `Allow` or `Deny`.</summary>
@@ -2769,6 +2878,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderSiteConfigScmIpRes
     public V1beta1WindowsFunctionAppSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelector? VirtualNetworkSubnetIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderSiteConfig
 {
     /// <summary>If this Windows Function App is Always On enabled. Defaults to false. If this Windows Web App is Always On enabled. Defaults to `false`.</summary>
@@ -2896,6 +3006,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderSiteConfig
     public double? WorkerCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderStickySettings
 {
     /// <summary>A list of app_setting names that the Windows Function App will not swap between Slots when a swap operation is triggered.</summary>
@@ -2907,6 +3018,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderStickySettings
     public IList<string>? ConnectionStringNames { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderStorageAccount
 {
     /// <summary>The Name of the Storage Account.</summary>
@@ -2950,6 +3062,7 @@ public enum V1beta1WindowsFunctionAppSpecInitProviderStorageAccountNameRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderStorageAccountNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2963,6 +3076,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderStorageAccountName
     public V1beta1WindowsFunctionAppSpecInitProviderStorageAccountNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in storage to populate storageAccountName.</summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderStorageAccountNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2994,6 +3108,7 @@ public enum V1beta1WindowsFunctionAppSpecInitProviderStorageAccountNameSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderStorageAccountNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3007,6 +3122,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderStorageAccountName
     public V1beta1WindowsFunctionAppSpecInitProviderStorageAccountNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in storage to populate storageAccountName.</summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderStorageAccountNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -3042,6 +3158,7 @@ public enum V1beta1WindowsFunctionAppSpecInitProviderVirtualNetworkSubnetIdRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderVirtualNetworkSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3055,6 +3172,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderVirtualNetworkSubn
     public V1beta1WindowsFunctionAppSpecInitProviderVirtualNetworkSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderVirtualNetworkSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3086,6 +3204,7 @@ public enum V1beta1WindowsFunctionAppSpecInitProviderVirtualNetworkSubnetIdSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderVirtualNetworkSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3099,6 +3218,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderVirtualNetworkSubn
     public V1beta1WindowsFunctionAppSpecInitProviderVirtualNetworkSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProviderVirtualNetworkSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -3114,6 +3234,7 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderVirtualNetworkSubn
     public V1beta1WindowsFunctionAppSpecInitProviderVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1WindowsFunctionAppSpecInitProvider
 {
     /// <summary>A map of key-value pairs for App Settings and custom values. A map of key-value pairs for [App Settings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-app-settings) and custom values.</summary>
@@ -3303,6 +3424,7 @@ public enum V1beta1WindowsFunctionAppSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsFunctionAppSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3316,6 +3438,7 @@ public partial class V1beta1WindowsFunctionAppSpecProviderConfigRefPolicy
     public V1beta1WindowsFunctionAppSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1WindowsFunctionAppSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3347,6 +3470,7 @@ public enum V1beta1WindowsFunctionAppSpecPublishConnectionDetailsToConfigRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsFunctionAppSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3360,6 +3484,7 @@ public partial class V1beta1WindowsFunctionAppSpecPublishConnectionDetailsToConf
     public V1beta1WindowsFunctionAppSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1WindowsFunctionAppSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3371,6 +3496,7 @@ public partial class V1beta1WindowsFunctionAppSpecPublishConnectionDetailsToConf
     public V1beta1WindowsFunctionAppSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1WindowsFunctionAppSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -3386,6 +3512,7 @@ public partial class V1beta1WindowsFunctionAppSpecPublishConnectionDetailsToMeta
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1WindowsFunctionAppSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -3401,6 +3528,7 @@ public partial class V1beta1WindowsFunctionAppSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1WindowsFunctionAppSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -3412,6 +3540,7 @@ public partial class V1beta1WindowsFunctionAppSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>WindowsFunctionAppSpec defines the desired state of WindowsFunctionApp</summary>
 public partial class V1beta1WindowsFunctionAppSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -3444,6 +3573,7 @@ public partial class V1beta1WindowsFunctionAppSpec
     public V1beta1WindowsFunctionAppSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppStatusAtProviderAuthSettingsActiveDirectory
 {
     /// <summary>Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. Specifies a list of Allowed audience values to consider when validating JWTs issued by Azure Active Directory.</summary>
@@ -3459,6 +3589,7 @@ public partial class V1beta1WindowsFunctionAppStatusAtProviderAuthSettingsActive
     public string? ClientSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppStatusAtProviderAuthSettingsFacebook
 {
     /// <summary>The App ID of the Facebook app used for login. The App ID of the Facebook app used for login.</summary>
@@ -3474,6 +3605,7 @@ public partial class V1beta1WindowsFunctionAppStatusAtProviderAuthSettingsFacebo
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppStatusAtProviderAuthSettingsGithub
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the GitHub app used for login.</summary>
@@ -3489,6 +3621,7 @@ public partial class V1beta1WindowsFunctionAppStatusAtProviderAuthSettingsGithub
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppStatusAtProviderAuthSettingsGoogle
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The OpenID Connect Client ID for the Google web application.</summary>
@@ -3504,6 +3637,7 @@ public partial class V1beta1WindowsFunctionAppStatusAtProviderAuthSettingsGoogle
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppStatusAtProviderAuthSettingsMicrosoft
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The OAuth 2.0 client ID that was created for the app used for authentication.</summary>
@@ -3519,6 +3653,7 @@ public partial class V1beta1WindowsFunctionAppStatusAtProviderAuthSettingsMicros
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppStatusAtProviderAuthSettingsTwitter
 {
     /// <summary>The OAuth 1.0a consumer key of the Twitter application used for sign-in. The OAuth 1.0a consumer key of the Twitter application used for sign-in.</summary>
@@ -3530,6 +3665,7 @@ public partial class V1beta1WindowsFunctionAppStatusAtProviderAuthSettingsTwitte
     public string? ConsumerSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppStatusAtProviderAuthSettings
 {
     /// <summary>An active_directory block as defined above.</summary>
@@ -3593,6 +3729,7 @@ public partial class V1beta1WindowsFunctionAppStatusAtProviderAuthSettings
     public string? UnauthenticatedClientAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppStatusAtProviderAuthSettingsV2ActiveDirectoryV2
 {
     /// <summary>The list of allowed Applications for the Default Authorisation Policy. The list of allowed Applications for the Default Authorisation Policy.</summary>
@@ -3644,6 +3781,7 @@ public partial class V1beta1WindowsFunctionAppStatusAtProviderAuthSettingsV2Acti
     public bool? WwwAuthenticationDisabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppStatusAtProviderAuthSettingsV2AppleV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The OpenID Connect Client ID for the Apple web application.</summary>
@@ -3659,6 +3797,7 @@ public partial class V1beta1WindowsFunctionAppStatusAtProviderAuthSettingsV2Appl
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppStatusAtProviderAuthSettingsV2AzureStaticWebAppV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the Client to use to authenticate with Azure Static Web App Authentication.</summary>
@@ -3666,6 +3805,7 @@ public partial class V1beta1WindowsFunctionAppStatusAtProviderAuthSettingsV2Azur
     public string? ClientId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppStatusAtProviderAuthSettingsV2CustomOidcV2
 {
     /// <summary>The endpoint to make the Authorisation Request as supplied by openid_configuration_endpoint response. The endpoint to make the Authorisation Request.</summary>
@@ -3713,6 +3853,7 @@ public partial class V1beta1WindowsFunctionAppStatusAtProviderAuthSettingsV2Cust
     public string? TokenEndpoint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppStatusAtProviderAuthSettingsV2FacebookV2
 {
     /// <summary>The App ID of the Facebook app used for login. The App ID of the Facebook app used for login.</summary>
@@ -3732,6 +3873,7 @@ public partial class V1beta1WindowsFunctionAppStatusAtProviderAuthSettingsV2Face
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppStatusAtProviderAuthSettingsV2GithubV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the GitHub app used for login.</summary>
@@ -3747,6 +3889,7 @@ public partial class V1beta1WindowsFunctionAppStatusAtProviderAuthSettingsV2Gith
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppStatusAtProviderAuthSettingsV2GoogleV2
 {
     /// <summary>Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. Specifies a list of Allowed Audiences that will be requested as part of Google Sign-In authentication.</summary>
@@ -3766,6 +3909,7 @@ public partial class V1beta1WindowsFunctionAppStatusAtProviderAuthSettingsV2Goog
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppStatusAtProviderAuthSettingsV2Login
 {
     /// <summary>External URLs that can be redirected to as part of logging in or logging out of the app. This is an advanced setting typically only needed by Windows Store application backends. External URLs that can be redirected to as part of logging in or logging out of the app. This is an advanced setting typically only needed by Windows Store application backends. **Note:** URLs within the current domain are always implicitly allowed.</summary>
@@ -3813,6 +3957,7 @@ public partial class V1beta1WindowsFunctionAppStatusAtProviderAuthSettingsV2Logi
     public bool? ValidateNonce { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppStatusAtProviderAuthSettingsV2MicrosoftV2
 {
     /// <summary>Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication.</summary>
@@ -3832,6 +3977,7 @@ public partial class V1beta1WindowsFunctionAppStatusAtProviderAuthSettingsV2Micr
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppStatusAtProviderAuthSettingsV2TwitterV2
 {
     /// <summary>The OAuth 1.0a consumer key of the Twitter application used for sign-in. The OAuth 1.0a consumer key of the Twitter application used for sign-in.</summary>
@@ -3843,6 +3989,7 @@ public partial class V1beta1WindowsFunctionAppStatusAtProviderAuthSettingsV2Twit
     public string? ConsumerSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppStatusAtProviderAuthSettingsV2
 {
     /// <summary>An active_directory_v2 block as defined below.</summary>
@@ -3934,6 +4081,7 @@ public partial class V1beta1WindowsFunctionAppStatusAtProviderAuthSettingsV2
     public string? UnauthenticatedAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppStatusAtProviderBackupSchedule
 {
     /// <summary>How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and frequency_unit should be set to Day). How often the backup should be executed (e.g. for weekly backup, this should be set to `7` and `frequency_unit` should be set to `Day`).</summary>
@@ -3961,6 +4109,7 @@ public partial class V1beta1WindowsFunctionAppStatusAtProviderBackupSchedule
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppStatusAtProviderBackup
 {
     /// <summary>Should this backup job be enabled? Defaults to true. Should this backup job be enabled?</summary>
@@ -3976,6 +4125,7 @@ public partial class V1beta1WindowsFunctionAppStatusAtProviderBackup
     public IList<V1beta1WindowsFunctionAppStatusAtProviderBackupSchedule>? Schedule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppStatusAtProviderConnectionString
 {
     /// <summary>The name which should be used for this Connection. The name which should be used for this Connection.</summary>
@@ -3987,6 +4137,7 @@ public partial class V1beta1WindowsFunctionAppStatusAtProviderConnectionString
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppStatusAtProviderIdentity
 {
     /// <summary>A list of User Assigned Managed Identity IDs to be assigned to this Windows Function App.</summary>
@@ -4006,6 +4157,7 @@ public partial class V1beta1WindowsFunctionAppStatusAtProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppStatusAtProviderSiteConfigAppServiceLogs
 {
     /// <summary>The amount of disk space to use for logs. Valid values are between 25 and 100. Defaults to 35. The amount of disk space to use for logs. Valid values are between `25` and `100`.</summary>
@@ -4017,6 +4169,7 @@ public partial class V1beta1WindowsFunctionAppStatusAtProviderSiteConfigAppServi
     public double? RetentionPeriodDays { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppStatusAtProviderSiteConfigApplicationStack
 {
     /// <summary>The version of .NET to use. Possible values include v3.0, v4.0 v6.0, v7.0 and v8.0. Defaults to v4.0. The version of .Net. Possible values are `v3.0`, `v4.0`, `v6.0` and `v7.0`</summary>
@@ -4044,6 +4197,7 @@ public partial class V1beta1WindowsFunctionAppStatusAtProviderSiteConfigApplicat
     public bool? UseDotnetIsolatedRuntime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppStatusAtProviderSiteConfigCors
 {
     /// <summary>Specifies a list of origins that should be allowed to make cross-origin calls. Specifies a list of origins that should be allowed to make cross-origin calls.</summary>
@@ -4055,6 +4209,7 @@ public partial class V1beta1WindowsFunctionAppStatusAtProviderSiteConfigCors
     public bool? SupportCredentials { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppStatusAtProviderSiteConfigIpRestrictionHeaders
 {
     /// <summary>Specifies a list of Azure Front Door IDs.</summary>
@@ -4074,6 +4229,7 @@ public partial class V1beta1WindowsFunctionAppStatusAtProviderSiteConfigIpRestri
     public IList<string>? XForwardedHost { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppStatusAtProviderSiteConfigIpRestriction
 {
     /// <summary>The action to take. Possible values are Allow or Deny. Defaults to Allow. The action to take. Possible values are `Allow` or `Deny`.</summary>
@@ -4109,6 +4265,7 @@ public partial class V1beta1WindowsFunctionAppStatusAtProviderSiteConfigIpRestri
     public string? VirtualNetworkSubnetId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppStatusAtProviderSiteConfigScmIpRestrictionHeaders
 {
     /// <summary>Specifies a list of Azure Front Door IDs.</summary>
@@ -4128,6 +4285,7 @@ public partial class V1beta1WindowsFunctionAppStatusAtProviderSiteConfigScmIpRes
     public IList<string>? XForwardedHost { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppStatusAtProviderSiteConfigScmIpRestriction
 {
     /// <summary>The action to take. Possible values are Allow or Deny. Defaults to Allow. The action to take. Possible values are `Allow` or `Deny`.</summary>
@@ -4163,6 +4321,7 @@ public partial class V1beta1WindowsFunctionAppStatusAtProviderSiteConfigScmIpRes
     public string? VirtualNetworkSubnetId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppStatusAtProviderSiteConfig
 {
     /// <summary>If this Windows Function App is Always On enabled. Defaults to false. If this Windows Web App is Always On enabled. Defaults to `false`.</summary>
@@ -4302,6 +4461,7 @@ public partial class V1beta1WindowsFunctionAppStatusAtProviderSiteConfig
     public double? WorkerCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppStatusAtProviderStickySettings
 {
     /// <summary>A list of app_setting names that the Windows Function App will not swap between Slots when a swap operation is triggered.</summary>
@@ -4313,6 +4473,7 @@ public partial class V1beta1WindowsFunctionAppStatusAtProviderStickySettings
     public IList<string>? ConnectionStringNames { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppStatusAtProviderStorageAccount
 {
     /// <summary>The Name of the Storage Account.</summary>
@@ -4336,6 +4497,7 @@ public partial class V1beta1WindowsFunctionAppStatusAtProviderStorageAccount
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFunctionAppStatusAtProvider
 {
     /// <summary>A map of key-value pairs for App Settings and custom values. A map of key-value pairs for [App Settings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-app-settings) and custom values.</summary>
@@ -4495,6 +4657,7 @@ public partial class V1beta1WindowsFunctionAppStatusAtProvider
     public string? ZipDeployFile { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1WindowsFunctionAppStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -4522,6 +4685,7 @@ public partial class V1beta1WindowsFunctionAppStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>WindowsFunctionAppStatus defines the observed state of WindowsFunctionApp.</summary>
 public partial class V1beta1WindowsFunctionAppStatus
 {
     /// <summary></summary>
@@ -4538,6 +4702,7 @@ public partial class V1beta1WindowsFunctionAppStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>WindowsFunctionApp is the Schema for the WindowsFunctionApps API. Manages a Windows Function App.</summary>
 public partial class V1beta1WindowsFunctionApp : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1WindowsFunctionAppSpec>, IStatus<V1beta1WindowsFunctionAppStatus>
 {
     public const string KubeApiVersion = "v1beta1";

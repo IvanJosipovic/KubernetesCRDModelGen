@@ -18,6 +18,7 @@ public enum V1beta1UptimeCheckConfigSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigSpecForProviderContentMatchersJsonPathMatcher
 {
     /// <summary>Options to perform JSONPath content matching. Default value is EXACT_MATCH. Possible values are: EXACT_MATCH, REGEX_MATCH.</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderContentMatchersJsonP
     public string? JsonPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigSpecForProviderContentMatchers
 {
     /// <summary>String or regex content to match (max 1024 bytes)</summary>
@@ -44,6 +46,7 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderContentMatchers
     public string? Matcher { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigSpecForProviderHttpCheckAcceptedResponseStatusCodes
 {
     /// <summary>A class of status codes to accept. Possible values are: STATUS_CLASS_1XX, STATUS_CLASS_2XX, STATUS_CLASS_3XX, STATUS_CLASS_4XX, STATUS_CLASS_5XX, STATUS_CLASS_ANY.</summary>
@@ -55,6 +58,7 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderHttpCheckAcceptedRes
     public double? StatusValue { get; set; }
 }
 
+/// <summary>The password to authenticate. Note: This property is sensitive and will not be displayed in the plan.</summary>
 public partial class V1beta1UptimeCheckConfigSpecForProviderHttpCheckAuthInfoPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -70,6 +74,7 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderHttpCheckAuthInfoPas
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigSpecForProviderHttpCheckAuthInfo
 {
     /// <summary>The password to authenticate. Note: This property is sensitive and will not be displayed in the plan.</summary>
@@ -81,6 +86,7 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderHttpCheckAuthInfo
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigSpecForProviderHttpCheckPingConfig
 {
     /// <summary>Number of ICMP pings. A maximum of 3 ICMP pings is currently supported.</summary>
@@ -88,6 +94,7 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderHttpCheckPingConfig
     public double? PingsCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigSpecForProviderHttpCheckServiceAgentAuthentication
 {
     /// <summary>The type of authentication to use. Possible values are: SERVICE_AGENT_AUTHENTICATION_TYPE_UNSPECIFIED, OIDC_TOKEN.</summary>
@@ -95,6 +102,7 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderHttpCheckServiceAgen
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigSpecForProviderHttpCheck
 {
     /// <summary>If present, the check will only pass if the HTTP response status code is in this set of status codes. If empty, the HTTP status code will only pass if the HTTP status code is 200-299. Structure is documented below.</summary>
@@ -154,6 +162,7 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderHttpCheck
     public bool? ValidateSsl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigSpecForProviderMonitoredResource
 {
     /// <summary>Values for all of the labels listed in the associated monitored resource descriptor. For example, Compute Engine VM instances use the labels project_id, instance_id, and zone.</summary>
@@ -185,6 +194,7 @@ public enum V1beta1UptimeCheckConfigSpecForProviderResourceGroupGroupIdRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UptimeCheckConfigSpecForProviderResourceGroupGroupIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -198,6 +208,7 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderResourceGroupGroupId
     public V1beta1UptimeCheckConfigSpecForProviderResourceGroupGroupIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Group in monitoring to populate groupId.</summary>
 public partial class V1beta1UptimeCheckConfigSpecForProviderResourceGroupGroupIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -229,6 +240,7 @@ public enum V1beta1UptimeCheckConfigSpecForProviderResourceGroupGroupIdSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UptimeCheckConfigSpecForProviderResourceGroupGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -242,6 +254,7 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderResourceGroupGroupId
     public V1beta1UptimeCheckConfigSpecForProviderResourceGroupGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Group in monitoring to populate groupId.</summary>
 public partial class V1beta1UptimeCheckConfigSpecForProviderResourceGroupGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -257,6 +270,7 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderResourceGroupGroupId
     public V1beta1UptimeCheckConfigSpecForProviderResourceGroupGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigSpecForProviderResourceGroup
 {
     /// <summary>The group of resources being monitored. Should be the name of a group</summary>
@@ -296,6 +310,7 @@ public enum V1beta1UptimeCheckConfigSpecForProviderSyntheticMonitorCloudFunction
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UptimeCheckConfigSpecForProviderSyntheticMonitorCloudFunctionV2NameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -309,6 +324,7 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderSyntheticMonitorClou
     public V1beta1UptimeCheckConfigSpecForProviderSyntheticMonitorCloudFunctionV2NameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in cloudfunctions2 to populate name.</summary>
 public partial class V1beta1UptimeCheckConfigSpecForProviderSyntheticMonitorCloudFunctionV2NameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -340,6 +356,7 @@ public enum V1beta1UptimeCheckConfigSpecForProviderSyntheticMonitorCloudFunction
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UptimeCheckConfigSpecForProviderSyntheticMonitorCloudFunctionV2NameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -353,6 +370,7 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderSyntheticMonitorClou
     public V1beta1UptimeCheckConfigSpecForProviderSyntheticMonitorCloudFunctionV2NameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in cloudfunctions2 to populate name.</summary>
 public partial class V1beta1UptimeCheckConfigSpecForProviderSyntheticMonitorCloudFunctionV2NameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -368,6 +386,7 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderSyntheticMonitorClou
     public V1beta1UptimeCheckConfigSpecForProviderSyntheticMonitorCloudFunctionV2NameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigSpecForProviderSyntheticMonitorCloudFunctionV2
 {
     /// <summary>The fully qualified name of the cloud function resource.</summary>
@@ -383,6 +402,7 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderSyntheticMonitorClou
     public V1beta1UptimeCheckConfigSpecForProviderSyntheticMonitorCloudFunctionV2NameSelector? NameSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigSpecForProviderSyntheticMonitor
 {
     /// <summary>Target a Synthetic Monitor GCFv2 Instance Structure is documented below.</summary>
@@ -390,6 +410,7 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderSyntheticMonitor
     public IList<V1beta1UptimeCheckConfigSpecForProviderSyntheticMonitorCloudFunctionV2>? CloudFunctionV2 { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigSpecForProviderTcpCheckPingConfig
 {
     /// <summary>Number of ICMP pings. A maximum of 3 ICMP pings is currently supported.</summary>
@@ -397,6 +418,7 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderTcpCheckPingConfig
     public double? PingsCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigSpecForProviderTcpCheck
 {
     /// <summary>Contains information needed to add pings to a TCP check. Structure is documented below.</summary>
@@ -408,6 +430,7 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderTcpCheck
     public double? Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigSpecForProvider
 {
     /// <summary>The checker type to use for the check. If the monitored resource type is servicedirectory_service, checker_type must be set to VPC_CHECKERS. Possible values are: STATIC_IP_CHECKERS, VPC_CHECKERS.</summary>
@@ -463,6 +486,7 @@ public partial class V1beta1UptimeCheckConfigSpecForProvider
     public IDictionary<string, string>? UserLabels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigSpecInitProviderContentMatchersJsonPathMatcher
 {
     /// <summary>Options to perform JSONPath content matching. Default value is EXACT_MATCH. Possible values are: EXACT_MATCH, REGEX_MATCH.</summary>
@@ -474,6 +498,7 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderContentMatchersJson
     public string? JsonPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigSpecInitProviderContentMatchers
 {
     /// <summary>String or regex content to match (max 1024 bytes)</summary>
@@ -489,6 +514,7 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderContentMatchers
     public string? Matcher { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigSpecInitProviderHttpCheckAcceptedResponseStatusCodes
 {
     /// <summary>A class of status codes to accept. Possible values are: STATUS_CLASS_1XX, STATUS_CLASS_2XX, STATUS_CLASS_3XX, STATUS_CLASS_4XX, STATUS_CLASS_5XX, STATUS_CLASS_ANY.</summary>
@@ -500,6 +526,7 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderHttpCheckAcceptedRe
     public double? StatusValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigSpecInitProviderHttpCheckAuthInfo
 {
     /// <summary>The username to authenticate.</summary>
@@ -507,6 +534,7 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderHttpCheckAuthInfo
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigSpecInitProviderHttpCheckPingConfig
 {
     /// <summary>Number of ICMP pings. A maximum of 3 ICMP pings is currently supported.</summary>
@@ -514,6 +542,7 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderHttpCheckPingConfig
     public double? PingsCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigSpecInitProviderHttpCheckServiceAgentAuthentication
 {
     /// <summary>The type of authentication to use. Possible values are: SERVICE_AGENT_AUTHENTICATION_TYPE_UNSPECIFIED, OIDC_TOKEN.</summary>
@@ -521,6 +550,7 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderHttpCheckServiceAge
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigSpecInitProviderHttpCheck
 {
     /// <summary>If present, the check will only pass if the HTTP response status code is in this set of status codes. If empty, the HTTP status code will only pass if the HTTP status code is 200-299. Structure is documented below.</summary>
@@ -580,6 +610,7 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderHttpCheck
     public bool? ValidateSsl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigSpecInitProviderMonitoredResource
 {
     /// <summary>Values for all of the labels listed in the associated monitored resource descriptor. For example, Compute Engine VM instances use the labels project_id, instance_id, and zone.</summary>
@@ -611,6 +642,7 @@ public enum V1beta1UptimeCheckConfigSpecInitProviderResourceGroupGroupIdRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UptimeCheckConfigSpecInitProviderResourceGroupGroupIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -624,6 +656,7 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderResourceGroupGroupI
     public V1beta1UptimeCheckConfigSpecInitProviderResourceGroupGroupIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Group in monitoring to populate groupId.</summary>
 public partial class V1beta1UptimeCheckConfigSpecInitProviderResourceGroupGroupIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -655,6 +688,7 @@ public enum V1beta1UptimeCheckConfigSpecInitProviderResourceGroupGroupIdSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UptimeCheckConfigSpecInitProviderResourceGroupGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -668,6 +702,7 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderResourceGroupGroupI
     public V1beta1UptimeCheckConfigSpecInitProviderResourceGroupGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Group in monitoring to populate groupId.</summary>
 public partial class V1beta1UptimeCheckConfigSpecInitProviderResourceGroupGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -683,6 +718,7 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderResourceGroupGroupI
     public V1beta1UptimeCheckConfigSpecInitProviderResourceGroupGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigSpecInitProviderResourceGroup
 {
     /// <summary>The group of resources being monitored. Should be the name of a group</summary>
@@ -722,6 +758,7 @@ public enum V1beta1UptimeCheckConfigSpecInitProviderSyntheticMonitorCloudFunctio
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UptimeCheckConfigSpecInitProviderSyntheticMonitorCloudFunctionV2NameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -735,6 +772,7 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderSyntheticMonitorClo
     public V1beta1UptimeCheckConfigSpecInitProviderSyntheticMonitorCloudFunctionV2NameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in cloudfunctions2 to populate name.</summary>
 public partial class V1beta1UptimeCheckConfigSpecInitProviderSyntheticMonitorCloudFunctionV2NameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -766,6 +804,7 @@ public enum V1beta1UptimeCheckConfigSpecInitProviderSyntheticMonitorCloudFunctio
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UptimeCheckConfigSpecInitProviderSyntheticMonitorCloudFunctionV2NameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -779,6 +818,7 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderSyntheticMonitorClo
     public V1beta1UptimeCheckConfigSpecInitProviderSyntheticMonitorCloudFunctionV2NameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in cloudfunctions2 to populate name.</summary>
 public partial class V1beta1UptimeCheckConfigSpecInitProviderSyntheticMonitorCloudFunctionV2NameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -794,6 +834,7 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderSyntheticMonitorClo
     public V1beta1UptimeCheckConfigSpecInitProviderSyntheticMonitorCloudFunctionV2NameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigSpecInitProviderSyntheticMonitorCloudFunctionV2
 {
     /// <summary>The fully qualified name of the cloud function resource.</summary>
@@ -809,6 +850,7 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderSyntheticMonitorClo
     public V1beta1UptimeCheckConfigSpecInitProviderSyntheticMonitorCloudFunctionV2NameSelector? NameSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigSpecInitProviderSyntheticMonitor
 {
     /// <summary>Target a Synthetic Monitor GCFv2 Instance Structure is documented below.</summary>
@@ -816,6 +858,7 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderSyntheticMonitor
     public IList<V1beta1UptimeCheckConfigSpecInitProviderSyntheticMonitorCloudFunctionV2>? CloudFunctionV2 { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigSpecInitProviderTcpCheckPingConfig
 {
     /// <summary>Number of ICMP pings. A maximum of 3 ICMP pings is currently supported.</summary>
@@ -823,6 +866,7 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderTcpCheckPingConfig
     public double? PingsCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigSpecInitProviderTcpCheck
 {
     /// <summary>Contains information needed to add pings to a TCP check. Structure is documented below.</summary>
@@ -834,6 +878,7 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderTcpCheck
     public double? Port { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1UptimeCheckConfigSpecInitProvider
 {
     /// <summary>The checker type to use for the check. If the monitored resource type is servicedirectory_service, checker_type must be set to VPC_CHECKERS. Possible values are: STATIC_IP_CHECKERS, VPC_CHECKERS.</summary>
@@ -931,6 +976,7 @@ public enum V1beta1UptimeCheckConfigSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UptimeCheckConfigSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -944,6 +990,7 @@ public partial class V1beta1UptimeCheckConfigSpecProviderConfigRefPolicy
     public V1beta1UptimeCheckConfigSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1UptimeCheckConfigSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -975,6 +1022,7 @@ public enum V1beta1UptimeCheckConfigSpecPublishConnectionDetailsToConfigRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UptimeCheckConfigSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -988,6 +1036,7 @@ public partial class V1beta1UptimeCheckConfigSpecPublishConnectionDetailsToConfi
     public V1beta1UptimeCheckConfigSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1UptimeCheckConfigSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -999,6 +1048,7 @@ public partial class V1beta1UptimeCheckConfigSpecPublishConnectionDetailsToConfi
     public V1beta1UptimeCheckConfigSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1UptimeCheckConfigSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1014,6 +1064,7 @@ public partial class V1beta1UptimeCheckConfigSpecPublishConnectionDetailsToMetad
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1UptimeCheckConfigSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1029,6 +1080,7 @@ public partial class V1beta1UptimeCheckConfigSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1UptimeCheckConfigSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1040,6 +1092,7 @@ public partial class V1beta1UptimeCheckConfigSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>UptimeCheckConfigSpec defines the desired state of UptimeCheckConfig</summary>
 public partial class V1beta1UptimeCheckConfigSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1072,6 +1125,7 @@ public partial class V1beta1UptimeCheckConfigSpec
     public V1beta1UptimeCheckConfigSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigStatusAtProviderContentMatchersJsonPathMatcher
 {
     /// <summary>Options to perform JSONPath content matching. Default value is EXACT_MATCH. Possible values are: EXACT_MATCH, REGEX_MATCH.</summary>
@@ -1083,6 +1137,7 @@ public partial class V1beta1UptimeCheckConfigStatusAtProviderContentMatchersJson
     public string? JsonPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigStatusAtProviderContentMatchers
 {
     /// <summary>String or regex content to match (max 1024 bytes)</summary>
@@ -1098,6 +1153,7 @@ public partial class V1beta1UptimeCheckConfigStatusAtProviderContentMatchers
     public string? Matcher { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigStatusAtProviderHttpCheckAcceptedResponseStatusCodes
 {
     /// <summary>A class of status codes to accept. Possible values are: STATUS_CLASS_1XX, STATUS_CLASS_2XX, STATUS_CLASS_3XX, STATUS_CLASS_4XX, STATUS_CLASS_5XX, STATUS_CLASS_ANY.</summary>
@@ -1109,6 +1165,7 @@ public partial class V1beta1UptimeCheckConfigStatusAtProviderHttpCheckAcceptedRe
     public double? StatusValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigStatusAtProviderHttpCheckAuthInfo
 {
     /// <summary>The username to authenticate.</summary>
@@ -1116,6 +1173,7 @@ public partial class V1beta1UptimeCheckConfigStatusAtProviderHttpCheckAuthInfo
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigStatusAtProviderHttpCheckPingConfig
 {
     /// <summary>Number of ICMP pings. A maximum of 3 ICMP pings is currently supported.</summary>
@@ -1123,6 +1181,7 @@ public partial class V1beta1UptimeCheckConfigStatusAtProviderHttpCheckPingConfig
     public double? PingsCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigStatusAtProviderHttpCheckServiceAgentAuthentication
 {
     /// <summary>The type of authentication to use. Possible values are: SERVICE_AGENT_AUTHENTICATION_TYPE_UNSPECIFIED, OIDC_TOKEN.</summary>
@@ -1130,6 +1189,7 @@ public partial class V1beta1UptimeCheckConfigStatusAtProviderHttpCheckServiceAge
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigStatusAtProviderHttpCheck
 {
     /// <summary>If present, the check will only pass if the HTTP response status code is in this set of status codes. If empty, the HTTP status code will only pass if the HTTP status code is 200-299. Structure is documented below.</summary>
@@ -1189,6 +1249,7 @@ public partial class V1beta1UptimeCheckConfigStatusAtProviderHttpCheck
     public bool? ValidateSsl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigStatusAtProviderMonitoredResource
 {
     /// <summary>Values for all of the labels listed in the associated monitored resource descriptor. For example, Compute Engine VM instances use the labels project_id, instance_id, and zone.</summary>
@@ -1200,6 +1261,7 @@ public partial class V1beta1UptimeCheckConfigStatusAtProviderMonitoredResource
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigStatusAtProviderResourceGroup
 {
     /// <summary>The group of resources being monitored. Should be the name of a group</summary>
@@ -1211,6 +1273,7 @@ public partial class V1beta1UptimeCheckConfigStatusAtProviderResourceGroup
     public string? ResourceType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigStatusAtProviderSyntheticMonitorCloudFunctionV2
 {
     /// <summary>The fully qualified name of the cloud function resource.</summary>
@@ -1218,6 +1281,7 @@ public partial class V1beta1UptimeCheckConfigStatusAtProviderSyntheticMonitorClo
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigStatusAtProviderSyntheticMonitor
 {
     /// <summary>Target a Synthetic Monitor GCFv2 Instance Structure is documented below.</summary>
@@ -1225,6 +1289,7 @@ public partial class V1beta1UptimeCheckConfigStatusAtProviderSyntheticMonitor
     public IList<V1beta1UptimeCheckConfigStatusAtProviderSyntheticMonitorCloudFunctionV2>? CloudFunctionV2 { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigStatusAtProviderTcpCheckPingConfig
 {
     /// <summary>Number of ICMP pings. A maximum of 3 ICMP pings is currently supported.</summary>
@@ -1232,6 +1297,7 @@ public partial class V1beta1UptimeCheckConfigStatusAtProviderTcpCheckPingConfig
     public double? PingsCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigStatusAtProviderTcpCheck
 {
     /// <summary>Contains information needed to add pings to a TCP check. Structure is documented below.</summary>
@@ -1243,6 +1309,7 @@ public partial class V1beta1UptimeCheckConfigStatusAtProviderTcpCheck
     public double? Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UptimeCheckConfigStatusAtProvider
 {
     /// <summary>The checker type to use for the check. If the monitored resource type is servicedirectory_service, checker_type must be set to VPC_CHECKERS. Possible values are: STATIC_IP_CHECKERS, VPC_CHECKERS.</summary>
@@ -1310,6 +1377,7 @@ public partial class V1beta1UptimeCheckConfigStatusAtProvider
     public IDictionary<string, string>? UserLabels { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1UptimeCheckConfigStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1337,6 +1405,7 @@ public partial class V1beta1UptimeCheckConfigStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>UptimeCheckConfigStatus defines the observed state of UptimeCheckConfig.</summary>
 public partial class V1beta1UptimeCheckConfigStatus
 {
     /// <summary></summary>
@@ -1353,6 +1422,7 @@ public partial class V1beta1UptimeCheckConfigStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>UptimeCheckConfig is the Schema for the UptimeCheckConfigs API. This message configures which resources and services to monitor for availability.</summary>
 public partial class V1beta1UptimeCheckConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1UptimeCheckConfigSpec>, IStatus<V1beta1UptimeCheckConfigStatus>
 {
     public const string KubeApiVersion = "v1beta1";

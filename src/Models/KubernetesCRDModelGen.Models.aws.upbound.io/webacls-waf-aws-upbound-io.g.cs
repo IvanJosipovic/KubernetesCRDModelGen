@@ -18,6 +18,7 @@ public enum V1beta1WebACLSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1WebACLSpecForProviderDefaultAction
 {
     /// <summary>Specifies how you want AWS WAF to respond to requests that don't match the criteria in any of the rules. e.g., ALLOW or BLOCK</summary>
@@ -45,6 +46,7 @@ public enum V1beta1WebACLSpecForProviderLoggingConfigurationLogDestinationRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WebACLSpecForProviderLoggingConfigurationLogDestinationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -58,6 +60,7 @@ public partial class V1beta1WebACLSpecForProviderLoggingConfigurationLogDestinat
     public V1beta1WebACLSpecForProviderLoggingConfigurationLogDestinationRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a DeliveryStream in firehose to populate logDestination.</summary>
 public partial class V1beta1WebACLSpecForProviderLoggingConfigurationLogDestinationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -89,6 +92,7 @@ public enum V1beta1WebACLSpecForProviderLoggingConfigurationLogDestinationSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WebACLSpecForProviderLoggingConfigurationLogDestinationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -102,6 +106,7 @@ public partial class V1beta1WebACLSpecForProviderLoggingConfigurationLogDestinat
     public V1beta1WebACLSpecForProviderLoggingConfigurationLogDestinationSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a DeliveryStream in firehose to populate logDestination.</summary>
 public partial class V1beta1WebACLSpecForProviderLoggingConfigurationLogDestinationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -117,6 +122,7 @@ public partial class V1beta1WebACLSpecForProviderLoggingConfigurationLogDestinat
     public V1beta1WebACLSpecForProviderLoggingConfigurationLogDestinationSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WebACLSpecForProviderLoggingConfigurationRedactedFieldsFieldToMatch
 {
     /// <summary>When the value of type is HEADER, enter the name of the header that you want the WAF to search, for example, User-Agent or Referer. If the value of type is any other value, omit data.</summary>
@@ -128,6 +134,7 @@ public partial class V1beta1WebACLSpecForProviderLoggingConfigurationRedactedFie
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WebACLSpecForProviderLoggingConfigurationRedactedFields
 {
     /// <summary>Set of configuration blocks for fields to redact. Detailed below.</summary>
@@ -135,6 +142,7 @@ public partial class V1beta1WebACLSpecForProviderLoggingConfigurationRedactedFie
     public IList<V1beta1WebACLSpecForProviderLoggingConfigurationRedactedFieldsFieldToMatch>? FieldToMatch { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WebACLSpecForProviderLoggingConfiguration
 {
     /// <summary>Amazon Resource Name (ARN) of Kinesis Firehose Delivery Stream</summary>
@@ -154,6 +162,7 @@ public partial class V1beta1WebACLSpecForProviderLoggingConfiguration
     public IList<V1beta1WebACLSpecForProviderLoggingConfigurationRedactedFields>? RedactedFields { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WebACLSpecForProviderRulesAction
 {
     /// <summary>valid values are: BLOCK, ALLOW, or COUNT</summary>
@@ -161,6 +170,7 @@ public partial class V1beta1WebACLSpecForProviderRulesAction
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WebACLSpecForProviderRulesOverrideAction
 {
     /// <summary>valid values are: BLOCK, ALLOW, or COUNT</summary>
@@ -188,6 +198,7 @@ public enum V1beta1WebACLSpecForProviderRulesRuleIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WebACLSpecForProviderRulesRuleIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -201,6 +212,7 @@ public partial class V1beta1WebACLSpecForProviderRulesRuleIdRefPolicy
     public V1beta1WebACLSpecForProviderRulesRuleIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Rule in waf to populate ruleId.</summary>
 public partial class V1beta1WebACLSpecForProviderRulesRuleIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -232,6 +244,7 @@ public enum V1beta1WebACLSpecForProviderRulesRuleIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WebACLSpecForProviderRulesRuleIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -245,6 +258,7 @@ public partial class V1beta1WebACLSpecForProviderRulesRuleIdSelectorPolicy
     public V1beta1WebACLSpecForProviderRulesRuleIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Rule in waf to populate ruleId.</summary>
 public partial class V1beta1WebACLSpecForProviderRulesRuleIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -260,6 +274,7 @@ public partial class V1beta1WebACLSpecForProviderRulesRuleIdSelector
     public V1beta1WebACLSpecForProviderRulesRuleIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WebACLSpecForProviderRules
 {
     /// <summary>The action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule. Not used if type is GROUP.</summary>
@@ -291,6 +306,7 @@ public partial class V1beta1WebACLSpecForProviderRules
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WebACLSpecForProvider
 {
     /// <summary>Configuration block with action that you want AWS WAF to take when a request doesn't match the criteria in any of the rules that are associated with the web ACL. Detailed below.</summary>
@@ -322,6 +338,7 @@ public partial class V1beta1WebACLSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WebACLSpecInitProviderDefaultAction
 {
     /// <summary>Specifies how you want AWS WAF to respond to requests that don't match the criteria in any of the rules. e.g., ALLOW or BLOCK</summary>
@@ -349,6 +366,7 @@ public enum V1beta1WebACLSpecInitProviderLoggingConfigurationLogDestinationRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WebACLSpecInitProviderLoggingConfigurationLogDestinationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -362,6 +380,7 @@ public partial class V1beta1WebACLSpecInitProviderLoggingConfigurationLogDestina
     public V1beta1WebACLSpecInitProviderLoggingConfigurationLogDestinationRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a DeliveryStream in firehose to populate logDestination.</summary>
 public partial class V1beta1WebACLSpecInitProviderLoggingConfigurationLogDestinationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -393,6 +412,7 @@ public enum V1beta1WebACLSpecInitProviderLoggingConfigurationLogDestinationSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WebACLSpecInitProviderLoggingConfigurationLogDestinationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -406,6 +426,7 @@ public partial class V1beta1WebACLSpecInitProviderLoggingConfigurationLogDestina
     public V1beta1WebACLSpecInitProviderLoggingConfigurationLogDestinationSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a DeliveryStream in firehose to populate logDestination.</summary>
 public partial class V1beta1WebACLSpecInitProviderLoggingConfigurationLogDestinationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -421,6 +442,7 @@ public partial class V1beta1WebACLSpecInitProviderLoggingConfigurationLogDestina
     public V1beta1WebACLSpecInitProviderLoggingConfigurationLogDestinationSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WebACLSpecInitProviderLoggingConfigurationRedactedFieldsFieldToMatch
 {
     /// <summary>When the value of type is HEADER, enter the name of the header that you want the WAF to search, for example, User-Agent or Referer. If the value of type is any other value, omit data.</summary>
@@ -432,6 +454,7 @@ public partial class V1beta1WebACLSpecInitProviderLoggingConfigurationRedactedFi
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WebACLSpecInitProviderLoggingConfigurationRedactedFields
 {
     /// <summary>Set of configuration blocks for fields to redact. Detailed below.</summary>
@@ -439,6 +462,7 @@ public partial class V1beta1WebACLSpecInitProviderLoggingConfigurationRedactedFi
     public IList<V1beta1WebACLSpecInitProviderLoggingConfigurationRedactedFieldsFieldToMatch>? FieldToMatch { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WebACLSpecInitProviderLoggingConfiguration
 {
     /// <summary>Amazon Resource Name (ARN) of Kinesis Firehose Delivery Stream</summary>
@@ -458,6 +482,7 @@ public partial class V1beta1WebACLSpecInitProviderLoggingConfiguration
     public IList<V1beta1WebACLSpecInitProviderLoggingConfigurationRedactedFields>? RedactedFields { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WebACLSpecInitProviderRulesAction
 {
     /// <summary>valid values are: BLOCK, ALLOW, or COUNT</summary>
@@ -465,6 +490,7 @@ public partial class V1beta1WebACLSpecInitProviderRulesAction
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WebACLSpecInitProviderRulesOverrideAction
 {
     /// <summary>valid values are: BLOCK, ALLOW, or COUNT</summary>
@@ -492,6 +518,7 @@ public enum V1beta1WebACLSpecInitProviderRulesRuleIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WebACLSpecInitProviderRulesRuleIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -505,6 +532,7 @@ public partial class V1beta1WebACLSpecInitProviderRulesRuleIdRefPolicy
     public V1beta1WebACLSpecInitProviderRulesRuleIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Rule in waf to populate ruleId.</summary>
 public partial class V1beta1WebACLSpecInitProviderRulesRuleIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -536,6 +564,7 @@ public enum V1beta1WebACLSpecInitProviderRulesRuleIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WebACLSpecInitProviderRulesRuleIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -549,6 +578,7 @@ public partial class V1beta1WebACLSpecInitProviderRulesRuleIdSelectorPolicy
     public V1beta1WebACLSpecInitProviderRulesRuleIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Rule in waf to populate ruleId.</summary>
 public partial class V1beta1WebACLSpecInitProviderRulesRuleIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -564,6 +594,7 @@ public partial class V1beta1WebACLSpecInitProviderRulesRuleIdSelector
     public V1beta1WebACLSpecInitProviderRulesRuleIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WebACLSpecInitProviderRules
 {
     /// <summary>The action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule. Not used if type is GROUP.</summary>
@@ -595,6 +626,7 @@ public partial class V1beta1WebACLSpecInitProviderRules
     public string? Type { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1WebACLSpecInitProvider
 {
     /// <summary>Configuration block with action that you want AWS WAF to take when a request doesn't match the criteria in any of the rules that are associated with the web ACL. Detailed below.</summary>
@@ -664,6 +696,7 @@ public enum V1beta1WebACLSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WebACLSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -677,6 +710,7 @@ public partial class V1beta1WebACLSpecProviderConfigRefPolicy
     public V1beta1WebACLSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1WebACLSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -708,6 +742,7 @@ public enum V1beta1WebACLSpecPublishConnectionDetailsToConfigRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WebACLSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -721,6 +756,7 @@ public partial class V1beta1WebACLSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1WebACLSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1WebACLSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -732,6 +768,7 @@ public partial class V1beta1WebACLSpecPublishConnectionDetailsToConfigRef
     public V1beta1WebACLSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1WebACLSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -747,6 +784,7 @@ public partial class V1beta1WebACLSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1WebACLSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -762,6 +800,7 @@ public partial class V1beta1WebACLSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1WebACLSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -773,6 +812,7 @@ public partial class V1beta1WebACLSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>WebACLSpec defines the desired state of WebACL</summary>
 public partial class V1beta1WebACLSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -805,6 +845,7 @@ public partial class V1beta1WebACLSpec
     public V1beta1WebACLSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WebACLStatusAtProviderDefaultAction
 {
     /// <summary>Specifies how you want AWS WAF to respond to requests that don't match the criteria in any of the rules. e.g., ALLOW or BLOCK</summary>
@@ -812,6 +853,7 @@ public partial class V1beta1WebACLStatusAtProviderDefaultAction
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WebACLStatusAtProviderLoggingConfigurationRedactedFieldsFieldToMatch
 {
     /// <summary>When the value of type is HEADER, enter the name of the header that you want the WAF to search, for example, User-Agent or Referer. If the value of type is any other value, omit data.</summary>
@@ -823,6 +865,7 @@ public partial class V1beta1WebACLStatusAtProviderLoggingConfigurationRedactedFi
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WebACLStatusAtProviderLoggingConfigurationRedactedFields
 {
     /// <summary>Set of configuration blocks for fields to redact. Detailed below.</summary>
@@ -830,6 +873,7 @@ public partial class V1beta1WebACLStatusAtProviderLoggingConfigurationRedactedFi
     public IList<V1beta1WebACLStatusAtProviderLoggingConfigurationRedactedFieldsFieldToMatch>? FieldToMatch { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WebACLStatusAtProviderLoggingConfiguration
 {
     /// <summary>Amazon Resource Name (ARN) of Kinesis Firehose Delivery Stream</summary>
@@ -841,6 +885,7 @@ public partial class V1beta1WebACLStatusAtProviderLoggingConfiguration
     public IList<V1beta1WebACLStatusAtProviderLoggingConfigurationRedactedFields>? RedactedFields { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WebACLStatusAtProviderRulesAction
 {
     /// <summary>valid values are: BLOCK, ALLOW, or COUNT</summary>
@@ -848,6 +893,7 @@ public partial class V1beta1WebACLStatusAtProviderRulesAction
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WebACLStatusAtProviderRulesOverrideAction
 {
     /// <summary>valid values are: BLOCK, ALLOW, or COUNT</summary>
@@ -855,6 +901,7 @@ public partial class V1beta1WebACLStatusAtProviderRulesOverrideAction
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WebACLStatusAtProviderRules
 {
     /// <summary>The action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule. Not used if type is GROUP.</summary>
@@ -878,6 +925,7 @@ public partial class V1beta1WebACLStatusAtProviderRules
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WebACLStatusAtProvider
 {
     /// <summary>The ARN of the WAF WebACL.</summary>
@@ -917,6 +965,7 @@ public partial class V1beta1WebACLStatusAtProvider
     public IDictionary<string, string>? TagsAll { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1WebACLStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -944,6 +993,7 @@ public partial class V1beta1WebACLStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>WebACLStatus defines the observed state of WebACL.</summary>
 public partial class V1beta1WebACLStatus
 {
     /// <summary></summary>
@@ -960,6 +1010,7 @@ public partial class V1beta1WebACLStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>WebACL is the Schema for the WebACLs API. Provides a AWS WAF web access control group (ACL) resource.</summary>
 public partial class V1beta1WebACL : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1WebACLSpec>, IStatus<V1beta1WebACLStatus>
 {
     public const string KubeApiVersion = "v1beta1";

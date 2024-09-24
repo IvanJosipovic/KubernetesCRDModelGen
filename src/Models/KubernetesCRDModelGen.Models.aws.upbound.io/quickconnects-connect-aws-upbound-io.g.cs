@@ -38,6 +38,7 @@ public enum V1beta1QuickConnectSpecForProviderInstanceIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1QuickConnectSpecForProviderInstanceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1QuickConnectSpecForProviderInstanceIdRefPolicy
     public V1beta1QuickConnectSpecForProviderInstanceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Instance in connect to populate instanceId.</summary>
 public partial class V1beta1QuickConnectSpecForProviderInstanceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1QuickConnectSpecForProviderInstanceIdSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1QuickConnectSpecForProviderInstanceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1QuickConnectSpecForProviderInstanceIdSelectorPolicy
     public V1beta1QuickConnectSpecForProviderInstanceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Instance in connect to populate instanceId.</summary>
 public partial class V1beta1QuickConnectSpecForProviderInstanceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1QuickConnectSpecForProviderInstanceIdSelector
     public V1beta1QuickConnectSpecForProviderInstanceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1QuickConnectSpecForProviderQuickConnectConfigPhoneConfig
 {
     /// <summary>Specifies the phone number in in E.164 format.</summary>
@@ -117,6 +122,7 @@ public partial class V1beta1QuickConnectSpecForProviderQuickConnectConfigPhoneCo
     public string? PhoneNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1QuickConnectSpecForProviderQuickConnectConfigQueueConfig
 {
     /// <summary>Specifies the identifier of the contact flow.</summary>
@@ -128,6 +134,7 @@ public partial class V1beta1QuickConnectSpecForProviderQuickConnectConfigQueueCo
     public string? QueueId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1QuickConnectSpecForProviderQuickConnectConfigUserConfig
 {
     /// <summary>Specifies the identifier of the contact flow.</summary>
@@ -139,6 +146,7 @@ public partial class V1beta1QuickConnectSpecForProviderQuickConnectConfigUserCon
     public string? UserId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1QuickConnectSpecForProviderQuickConnectConfig
 {
     /// <summary>Specifies the phone configuration of the Quick Connect. This is required only if quick_connect_type is PHONE_NUMBER. The phone_config block is documented below.</summary>
@@ -158,6 +166,7 @@ public partial class V1beta1QuickConnectSpecForProviderQuickConnectConfig
     public IList<V1beta1QuickConnectSpecForProviderQuickConnectConfigUserConfig>? UserConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1QuickConnectSpecForProvider
 {
     /// <summary>Specifies the description of the Quick Connect.</summary>
@@ -213,6 +222,7 @@ public enum V1beta1QuickConnectSpecInitProviderInstanceIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1QuickConnectSpecInitProviderInstanceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -226,6 +236,7 @@ public partial class V1beta1QuickConnectSpecInitProviderInstanceIdRefPolicy
     public V1beta1QuickConnectSpecInitProviderInstanceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Instance in connect to populate instanceId.</summary>
 public partial class V1beta1QuickConnectSpecInitProviderInstanceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -257,6 +268,7 @@ public enum V1beta1QuickConnectSpecInitProviderInstanceIdSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1QuickConnectSpecInitProviderInstanceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -270,6 +282,7 @@ public partial class V1beta1QuickConnectSpecInitProviderInstanceIdSelectorPolicy
     public V1beta1QuickConnectSpecInitProviderInstanceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Instance in connect to populate instanceId.</summary>
 public partial class V1beta1QuickConnectSpecInitProviderInstanceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -285,6 +298,7 @@ public partial class V1beta1QuickConnectSpecInitProviderInstanceIdSelector
     public V1beta1QuickConnectSpecInitProviderInstanceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1QuickConnectSpecInitProviderQuickConnectConfigPhoneConfig
 {
     /// <summary>Specifies the phone number in in E.164 format.</summary>
@@ -292,6 +306,7 @@ public partial class V1beta1QuickConnectSpecInitProviderQuickConnectConfigPhoneC
     public string? PhoneNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1QuickConnectSpecInitProviderQuickConnectConfigQueueConfig
 {
     /// <summary>Specifies the identifier of the contact flow.</summary>
@@ -303,6 +318,7 @@ public partial class V1beta1QuickConnectSpecInitProviderQuickConnectConfigQueueC
     public string? QueueId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1QuickConnectSpecInitProviderQuickConnectConfigUserConfig
 {
     /// <summary>Specifies the identifier of the contact flow.</summary>
@@ -314,6 +330,7 @@ public partial class V1beta1QuickConnectSpecInitProviderQuickConnectConfigUserCo
     public string? UserId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1QuickConnectSpecInitProviderQuickConnectConfig
 {
     /// <summary>Specifies the phone configuration of the Quick Connect. This is required only if quick_connect_type is PHONE_NUMBER. The phone_config block is documented below.</summary>
@@ -333,6 +350,7 @@ public partial class V1beta1QuickConnectSpecInitProviderQuickConnectConfig
     public IList<V1beta1QuickConnectSpecInitProviderQuickConnectConfigUserConfig>? UserConfig { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1QuickConnectSpecInitProvider
 {
     /// <summary>Specifies the description of the Quick Connect.</summary>
@@ -406,6 +424,7 @@ public enum V1beta1QuickConnectSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1QuickConnectSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -419,6 +438,7 @@ public partial class V1beta1QuickConnectSpecProviderConfigRefPolicy
     public V1beta1QuickConnectSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1QuickConnectSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -450,6 +470,7 @@ public enum V1beta1QuickConnectSpecPublishConnectionDetailsToConfigRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1QuickConnectSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -463,6 +484,7 @@ public partial class V1beta1QuickConnectSpecPublishConnectionDetailsToConfigRefP
     public V1beta1QuickConnectSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1QuickConnectSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -474,6 +496,7 @@ public partial class V1beta1QuickConnectSpecPublishConnectionDetailsToConfigRef
     public V1beta1QuickConnectSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1QuickConnectSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -489,6 +512,7 @@ public partial class V1beta1QuickConnectSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1QuickConnectSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -504,6 +528,7 @@ public partial class V1beta1QuickConnectSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1QuickConnectSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -515,6 +540,7 @@ public partial class V1beta1QuickConnectSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>QuickConnectSpec defines the desired state of QuickConnect</summary>
 public partial class V1beta1QuickConnectSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -547,6 +573,7 @@ public partial class V1beta1QuickConnectSpec
     public V1beta1QuickConnectSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1QuickConnectStatusAtProviderQuickConnectConfigPhoneConfig
 {
     /// <summary>Specifies the phone number in in E.164 format.</summary>
@@ -554,6 +581,7 @@ public partial class V1beta1QuickConnectStatusAtProviderQuickConnectConfigPhoneC
     public string? PhoneNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1QuickConnectStatusAtProviderQuickConnectConfigQueueConfig
 {
     /// <summary>Specifies the identifier of the contact flow.</summary>
@@ -565,6 +593,7 @@ public partial class V1beta1QuickConnectStatusAtProviderQuickConnectConfigQueueC
     public string? QueueId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1QuickConnectStatusAtProviderQuickConnectConfigUserConfig
 {
     /// <summary>Specifies the identifier of the contact flow.</summary>
@@ -576,6 +605,7 @@ public partial class V1beta1QuickConnectStatusAtProviderQuickConnectConfigUserCo
     public string? UserId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1QuickConnectStatusAtProviderQuickConnectConfig
 {
     /// <summary>Specifies the phone configuration of the Quick Connect. This is required only if quick_connect_type is PHONE_NUMBER. The phone_config block is documented below.</summary>
@@ -595,6 +625,7 @@ public partial class V1beta1QuickConnectStatusAtProviderQuickConnectConfig
     public IList<V1beta1QuickConnectStatusAtProviderQuickConnectConfigUserConfig>? UserConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1QuickConnectStatusAtProvider
 {
     /// <summary>The Amazon Resource Name (ARN) of the Quick Connect.</summary>
@@ -634,6 +665,7 @@ public partial class V1beta1QuickConnectStatusAtProvider
     public IDictionary<string, string>? TagsAll { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1QuickConnectStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -661,6 +693,7 @@ public partial class V1beta1QuickConnectStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>QuickConnectStatus defines the observed state of QuickConnect.</summary>
 public partial class V1beta1QuickConnectStatus
 {
     /// <summary></summary>
@@ -677,6 +710,7 @@ public partial class V1beta1QuickConnectStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>QuickConnect is the Schema for the QuickConnects API. Provides details about a specific Amazon Quick Connect</summary>
 public partial class V1beta1QuickConnect : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1QuickConnectSpec>, IStatus<V1beta1QuickConnectStatus>
 {
     public const string KubeApiVersion = "v1beta1";

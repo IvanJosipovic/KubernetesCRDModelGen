@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dialogflowcx.cnrm.cloud.google.com;
+/// <summary>Configuration for a generic web service.</summary>
 public partial class V1alpha1DialogflowCXWebhookSpecGenericWebService
 {
     /// <summary>Specifies a list of allowed custom CA certificates (in DER format) for HTTPS verification.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1DialogflowCXWebhookSpecGenericWebService
     public string Uri { get; set; }
 }
 
+/// <summary>The name of Service Directory service.</summary>
 public partial class V1alpha1DialogflowCXWebhookSpecServiceDirectoryGenericWebService
 {
     /// <summary>Specifies a list of allowed custom CA certificates (in DER format) for HTTPS verification.</summary>
@@ -38,6 +40,7 @@ public partial class V1alpha1DialogflowCXWebhookSpecServiceDirectoryGenericWebSe
     public string Uri { get; set; }
 }
 
+/// <summary>Configuration for a Service Directory service.</summary>
 public partial class V1alpha1DialogflowCXWebhookSpecServiceDirectory
 {
     /// <summary>The name of Service Directory service.</summary>
@@ -49,6 +52,7 @@ public partial class V1alpha1DialogflowCXWebhookSpecServiceDirectory
     public string Service { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DialogflowCXWebhookSpec
 {
     /// <summary>Indicates whether the webhook is disabled.</summary>
@@ -92,6 +96,7 @@ public partial class V1alpha1DialogflowCXWebhookSpec
     public string? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DialogflowCXWebhookStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -115,6 +120,7 @@ public partial class V1alpha1DialogflowCXWebhookStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DialogflowCXWebhookStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -135,6 +141,7 @@ public partial class V1alpha1DialogflowCXWebhookStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1DialogflowCXWebhook : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DialogflowCXWebhookSpec>, IStatus<V1alpha1DialogflowCXWebhookStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

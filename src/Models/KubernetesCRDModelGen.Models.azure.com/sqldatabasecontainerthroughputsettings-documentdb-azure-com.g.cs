@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.documentdb.azure.com;
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a documentdb.azure.com/SqlDatabaseContainer resource</summary>
 public partial class V1api20231115storageSqlDatabaseContainerThroughputSettingSpecOwner
 {
     /// <summary></summary>
@@ -19,6 +20,7 @@ public partial class V1api20231115storageSqlDatabaseContainerThroughputSettingSp
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.ThroughputPolicyResource Cosmos DB resource throughput policy</summary>
 public partial class V1api20231115storageSqlDatabaseContainerThroughputSettingSpecResourceAutoscaleSettingsAutoUpgradePolicyThroughputPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -34,6 +36,7 @@ public partial class V1api20231115storageSqlDatabaseContainerThroughputSettingSp
     public bool? IsEnabled { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.AutoUpgradePolicyResource Cosmos DB resource auto-upgrade policy</summary>
 public partial class V1api20231115storageSqlDatabaseContainerThroughputSettingSpecResourceAutoscaleSettingsAutoUpgradePolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -45,6 +48,7 @@ public partial class V1api20231115storageSqlDatabaseContainerThroughputSettingSp
     public V1api20231115storageSqlDatabaseContainerThroughputSettingSpecResourceAutoscaleSettingsAutoUpgradePolicyThroughputPolicy? ThroughputPolicy { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.AutoscaleSettingsResource Cosmos DB provisioned throughput settings object</summary>
 public partial class V1api20231115storageSqlDatabaseContainerThroughputSettingSpecResourceAutoscaleSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -60,6 +64,7 @@ public partial class V1api20231115storageSqlDatabaseContainerThroughputSettingSp
     public int? MaxThroughput { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.ThroughputSettingsResource Cosmos DB resource throughput object. Either throughput is required or autoscaleSettings is required, but not both.</summary>
 public partial class V1api20231115storageSqlDatabaseContainerThroughputSettingSpecResource
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -75,6 +80,7 @@ public partial class V1api20231115storageSqlDatabaseContainerThroughputSettingSp
     public int? Throughput { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.DatabaseAccounts_SqlDatabases_Containers_ThroughputSetting_Spec</summary>
 public partial class V1api20231115storageSqlDatabaseContainerThroughputSettingSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -102,6 +108,7 @@ public partial class V1api20231115storageSqlDatabaseContainerThroughputSettingSp
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20231115storageSqlDatabaseContainerThroughputSettingStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -133,6 +140,7 @@ public partial class V1api20231115storageSqlDatabaseContainerThroughputSettingSt
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.ThroughputPolicyResource_STATUS Cosmos DB resource throughput policy</summary>
 public partial class V1api20231115storageSqlDatabaseContainerThroughputSettingStatusResourceAutoscaleSettingsAutoUpgradePolicyThroughputPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -148,6 +156,7 @@ public partial class V1api20231115storageSqlDatabaseContainerThroughputSettingSt
     public bool? IsEnabled { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.AutoUpgradePolicyResource_STATUS Cosmos DB resource auto-upgrade policy</summary>
 public partial class V1api20231115storageSqlDatabaseContainerThroughputSettingStatusResourceAutoscaleSettingsAutoUpgradePolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -159,6 +168,7 @@ public partial class V1api20231115storageSqlDatabaseContainerThroughputSettingSt
     public V1api20231115storageSqlDatabaseContainerThroughputSettingStatusResourceAutoscaleSettingsAutoUpgradePolicyThroughputPolicy? ThroughputPolicy { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.AutoscaleSettingsResource_STATUS Cosmos DB provisioned throughput settings object</summary>
 public partial class V1api20231115storageSqlDatabaseContainerThroughputSettingStatusResourceAutoscaleSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -178,6 +188,7 @@ public partial class V1api20231115storageSqlDatabaseContainerThroughputSettingSt
     public int? TargetMaxThroughput { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.ThroughputSettingsGetProperties_Resource_STATUS</summary>
 public partial class V1api20231115storageSqlDatabaseContainerThroughputSettingStatusResource
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -221,6 +232,7 @@ public partial class V1api20231115storageSqlDatabaseContainerThroughputSettingSt
     public int? Throughput { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.DatabaseAccounts_SqlDatabases_Containers_ThroughputSetting_STATUS</summary>
 public partial class V1api20231115storageSqlDatabaseContainerThroughputSettingStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -257,6 +269,7 @@ public partial class V1api20231115storageSqlDatabaseContainerThroughputSettingSt
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20231115.SqlDatabaseContainerThroughputSetting Generator information: - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2023-11-15/cosmos-db.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/containers/{containerName}/throughputSettings/default</summary>
 public partial class V1api20231115storageSqlDatabaseContainerThroughputSetting : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20231115storageSqlDatabaseContainerThroughputSettingSpec>, IStatus<V1api20231115storageSqlDatabaseContainerThroughputSettingStatus>
 {
     public const string KubeApiVersion = "v1api20231115storage";

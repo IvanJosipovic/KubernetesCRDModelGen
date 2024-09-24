@@ -18,6 +18,7 @@ public enum V1beta1FlowSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesCustomConnectorErrorHandlingConfig
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationC
     public bool? FailOnFirstDestinationError { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesCustomConnector
 {
     /// <summary>Custom properties that are specific to the connector when it's used as a destination in the flow. Maximum of 50 items.</summary>
@@ -56,6 +58,7 @@ public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationC
     public string? WriteOperationType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesCustomerProfiles
 {
     /// <summary>Unique name of the Amazon Connect Customer Profiles domain.</summary>
@@ -67,6 +70,7 @@ public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationC
     public string? ObjectTypeName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesEventBridgeErrorHandlingConfig
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -82,6 +86,7 @@ public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationC
     public bool? FailOnFirstDestinationError { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesEventBridge
 {
     /// <summary>Settings that determine how Amazon AppFlow handles an error when placing data in the destination. See Error Handling Config for more details.</summary>
@@ -93,6 +98,7 @@ public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationC
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesHoneycodeErrorHandlingConfig
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -108,6 +114,7 @@ public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationC
     public bool? FailOnFirstDestinationError { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesHoneycode
 {
     /// <summary>Settings that determine how Amazon AppFlow handles an error when placing data in the destination. See Error Handling Config for more details.</summary>
@@ -119,10 +126,12 @@ public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationC
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesLookoutMetrics
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesMarketoErrorHandlingConfig
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -138,6 +147,7 @@ public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationC
     public bool? FailOnFirstDestinationError { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesMarketo
 {
     /// <summary>Settings that determine how Amazon AppFlow handles an error when placing data in the destination. See Error Handling Config for more details.</summary>
@@ -149,6 +159,7 @@ public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationC
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesRedshiftErrorHandlingConfig
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -164,6 +175,7 @@ public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationC
     public bool? FailOnFirstDestinationError { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesRedshift
 {
     /// <summary>Object key for the bucket in which Amazon AppFlow places the destination files.</summary>
@@ -203,6 +215,7 @@ public enum V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesS3BucketNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -216,6 +229,7 @@ public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationC
     public V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesS3BucketNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a BucketPolicy in s3 to populate bucketName.</summary>
 public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesS3BucketNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -247,6 +261,7 @@ public enum V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesS3BucketNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -260,6 +275,7 @@ public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationC
     public V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesS3BucketNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a BucketPolicy in s3 to populate bucketName.</summary>
 public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesS3BucketNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -275,6 +291,7 @@ public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationC
     public V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesS3BucketNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigAggregationConfig
 {
     /// <summary>Whether Amazon AppFlow aggregates the flow records into a single file, or leave them unaggregated. Valid values are None and SingleFile.</summary>
@@ -286,6 +303,7 @@ public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationC
     public double? TargetFileSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPrefixConfig
 {
     /// <summary>Determines the level of granularity that's included in the prefix. Valid values are YEAR, MONTH, DAY, HOUR, and MINUTE.</summary>
@@ -297,6 +315,7 @@ public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationC
     public string? PrefixType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfig
 {
     /// <summary>Aggregation settings that you can use to customize the output format of your flow data. See Aggregation Config for more details.</summary>
@@ -316,6 +335,7 @@ public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationC
     public bool? PreserveSourceDataTyping { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesS3
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -339,6 +359,7 @@ public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationC
     public IList<V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfig>? S3OutputFormatConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesSalesforceErrorHandlingConfig
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -354,6 +375,7 @@ public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationC
     public bool? FailOnFirstDestinationError { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesSalesforce
 {
     /// <summary>Settings that determine how Amazon AppFlow handles an error when placing data in the destination. See Error Handling Config for more details.</summary>
@@ -373,6 +395,7 @@ public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationC
     public string? WriteOperationType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesSapoDataErrorHandlingConfig
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -388,6 +411,7 @@ public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationC
     public bool? FailOnFirstDestinationError { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesSapoDataSuccessResponseHandlingConfig
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -399,6 +423,7 @@ public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationC
     public string? BucketPrefix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesSapoData
 {
     /// <summary>Settings that determine how Amazon AppFlow handles an error when placing data in the destination. See Error Handling Config for more details.</summary>
@@ -422,6 +447,7 @@ public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationC
     public string? WriteOperationType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesSnowflakeErrorHandlingConfig
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -437,6 +463,7 @@ public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationC
     public bool? FailOnFirstDestinationError { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesSnowflake
 {
     /// <summary>Object key for the bucket in which Amazon AppFlow places the destination files.</summary>
@@ -456,6 +483,7 @@ public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationC
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigAggregationConfig
 {
     /// <summary>Whether Amazon AppFlow aggregates the flow records into a single file, or leave them unaggregated. Valid values are None and SingleFile.</summary>
@@ -463,6 +491,7 @@ public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationC
     public string? AggregationType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfig
 {
     /// <summary>Determines the level of granularity that's included in the prefix. Valid values are YEAR, MONTH, DAY, HOUR, and MINUTE.</summary>
@@ -474,6 +503,7 @@ public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationC
     public string? PrefixType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfig
 {
     /// <summary>Aggregation settings that you can use to customize the output format of your flow data. See Aggregation Config for more details.</summary>
@@ -489,6 +519,7 @@ public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationC
     public IList<V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfig>? PrefixConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesUpsolver
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -504,6 +535,7 @@ public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationC
     public IList<V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfig>? S3OutputFormatConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesZendeskErrorHandlingConfig
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -519,6 +551,7 @@ public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationC
     public bool? FailOnFirstDestinationError { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesZendesk
 {
     /// <summary>Settings that determine how Amazon AppFlow handles an error when placing data in the destination. See Error Handling Config for more details.</summary>
@@ -538,6 +571,7 @@ public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationC
     public string? WriteOperationType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorProperties
 {
     /// <summary>Properties that are required to query the custom Connector. See Custom Connector Destination Properties for more details.</summary>
@@ -593,6 +627,7 @@ public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationC
     public IList<V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesZendesk>? Zendesk { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderDestinationFlowConfig
 {
     /// <summary>API version that the destination connector uses.</summary>
@@ -612,6 +647,7 @@ public partial class V1beta1FlowSpecForProviderDestinationFlowConfig
     public IList<V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorProperties>? DestinationConnectorProperties { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderSourceFlowConfigIncrementalPullConfig
 {
     /// <summary>Field that specifies the date time or timestamp field as the criteria to use when importing incremental records from the source.</summary>
@@ -619,6 +655,7 @@ public partial class V1beta1FlowSpecForProviderSourceFlowConfigIncrementalPullCo
     public string? DatetimeTypeFieldName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPropertiesAmplitude
 {
     /// <summary>Object specified in the flow destination.</summary>
@@ -626,6 +663,7 @@ public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPr
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPropertiesCustomConnector
 {
     /// <summary>Custom properties that are specific to the connector when it's used as a destination in the flow. Maximum of 50 items.</summary>
@@ -637,6 +675,7 @@ public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPr
     public string? EntityName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPropertiesDatadog
 {
     /// <summary>Object specified in the flow destination.</summary>
@@ -644,6 +683,7 @@ public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPr
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPropertiesDynatrace
 {
     /// <summary>Object specified in the flow destination.</summary>
@@ -651,6 +691,7 @@ public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPr
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPropertiesGoogleAnalytics
 {
     /// <summary>Object specified in the flow destination.</summary>
@@ -658,6 +699,7 @@ public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPr
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPropertiesInforNexus
 {
     /// <summary>Object specified in the flow destination.</summary>
@@ -665,6 +707,7 @@ public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPr
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPropertiesMarketo
 {
     /// <summary>Object specified in the flow destination.</summary>
@@ -692,6 +735,7 @@ public enum V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPropertiesS
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPropertiesS3BucketNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -705,6 +749,7 @@ public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPr
     public V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPropertiesS3BucketNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a BucketPolicy in s3 to populate bucketName.</summary>
 public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPropertiesS3BucketNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -736,6 +781,7 @@ public enum V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPropertiesS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPropertiesS3BucketNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -749,6 +795,7 @@ public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPr
     public V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPropertiesS3BucketNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a BucketPolicy in s3 to populate bucketName.</summary>
 public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPropertiesS3BucketNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -764,6 +811,7 @@ public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPr
     public V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPropertiesS3BucketNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPropertiesS3S3InputFormatConfig
 {
     /// <summary>File type that Amazon AppFlow gets from your Amazon S3 bucket. Valid values are CSV and JSON.</summary>
@@ -771,6 +819,7 @@ public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPr
     public string? S3InputFileType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPropertiesS3
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -794,6 +843,7 @@ public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPr
     public IList<V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPropertiesS3S3InputFormatConfig>? S3InputFormatConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPropertiesSalesforce
 {
     /// <summary>Flag that enables dynamic fetching of new (recently added) fields in the Salesforce objects while running a flow.</summary>
@@ -809,6 +859,7 @@ public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPr
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPropertiesSapoData
 {
     /// <summary>Object path specified in the SAPOData flow destination.</summary>
@@ -816,6 +867,7 @@ public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPr
     public string? ObjectPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPropertiesServiceNow
 {
     /// <summary>Object specified in the flow destination.</summary>
@@ -823,6 +875,7 @@ public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPr
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPropertiesSingular
 {
     /// <summary>Object specified in the flow destination.</summary>
@@ -830,6 +883,7 @@ public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPr
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPropertiesSlack
 {
     /// <summary>Object specified in the flow destination.</summary>
@@ -837,6 +891,7 @@ public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPr
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPropertiesTrendmicro
 {
     /// <summary>Object specified in the flow destination.</summary>
@@ -844,6 +899,7 @@ public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPr
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPropertiesVeeva
 {
     /// <summary>Document type specified in the Veeva document extract flow.</summary>
@@ -867,6 +923,7 @@ public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPr
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPropertiesZendesk
 {
     /// <summary>Object specified in the flow destination.</summary>
@@ -874,6 +931,7 @@ public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPr
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorProperties
 {
     /// <summary>Information that is required for querying Amplitude. See Generic Source Properties for more details.</summary>
@@ -941,6 +999,7 @@ public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPr
     public IList<V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPropertiesZendesk>? Zendesk { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderSourceFlowConfig
 {
     /// <summary>API version that the destination connector uses.</summary>
@@ -964,6 +1023,7 @@ public partial class V1beta1FlowSpecForProviderSourceFlowConfig
     public IList<V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorProperties>? SourceConnectorProperties { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderTaskConnectorOperator
 {
     /// <summary>Information that is required for querying Amplitude. See Generic Source Properties for more details.</summary>
@@ -1031,6 +1091,7 @@ public partial class V1beta1FlowSpecForProviderTaskConnectorOperator
     public string? Zendesk { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderTask
 {
     /// <summary>Operation to be performed on the provided source fields. See Connector Operator for details.</summary>
@@ -1054,6 +1115,7 @@ public partial class V1beta1FlowSpecForProviderTask
     public string? TaskType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderTriggerConfigTriggerPropertiesScheduled
 {
     /// <summary>Whether a scheduled flow has an incremental data transfer or a complete data transfer for each flow run. Valid values are Incremental and Complete.</summary>
@@ -1085,6 +1147,7 @@ public partial class V1beta1FlowSpecForProviderTriggerConfigTriggerPropertiesSch
     public string? Timezone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderTriggerConfigTriggerProperties
 {
     /// <summary></summary>
@@ -1092,6 +1155,7 @@ public partial class V1beta1FlowSpecForProviderTriggerConfigTriggerProperties
     public IList<V1beta1FlowSpecForProviderTriggerConfigTriggerPropertiesScheduled>? Scheduled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderTriggerConfig
 {
     /// <summary>Configuration details of a schedule-triggered flow as defined by the user. Currently, these settings only apply to the Scheduled trigger type. See Scheduled Trigger Properties for details.</summary>
@@ -1103,6 +1167,7 @@ public partial class V1beta1FlowSpecForProviderTriggerConfig
     public string? TriggerType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProvider
 {
     /// <summary>Description of the flow you want to create.</summary>
@@ -1138,6 +1203,7 @@ public partial class V1beta1FlowSpecForProvider
     public IList<V1beta1FlowSpecForProviderTriggerConfig>? TriggerConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesCustomConnectorErrorHandlingConfig
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -1153,6 +1219,7 @@ public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestination
     public bool? FailOnFirstDestinationError { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesCustomConnector
 {
     /// <summary>Custom properties that are specific to the connector when it's used as a destination in the flow. Maximum of 50 items.</summary>
@@ -1176,6 +1243,7 @@ public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestination
     public string? WriteOperationType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesCustomerProfiles
 {
     /// <summary>Unique name of the Amazon Connect Customer Profiles domain.</summary>
@@ -1187,6 +1255,7 @@ public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestination
     public string? ObjectTypeName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesEventBridgeErrorHandlingConfig
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -1202,6 +1271,7 @@ public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestination
     public bool? FailOnFirstDestinationError { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesEventBridge
 {
     /// <summary>Settings that determine how Amazon AppFlow handles an error when placing data in the destination. See Error Handling Config for more details.</summary>
@@ -1213,6 +1283,7 @@ public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestination
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesHoneycodeErrorHandlingConfig
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -1228,6 +1299,7 @@ public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestination
     public bool? FailOnFirstDestinationError { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesHoneycode
 {
     /// <summary>Settings that determine how Amazon AppFlow handles an error when placing data in the destination. See Error Handling Config for more details.</summary>
@@ -1239,10 +1311,12 @@ public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestination
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesLookoutMetrics
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesMarketoErrorHandlingConfig
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -1258,6 +1332,7 @@ public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestination
     public bool? FailOnFirstDestinationError { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesMarketo
 {
     /// <summary>Settings that determine how Amazon AppFlow handles an error when placing data in the destination. See Error Handling Config for more details.</summary>
@@ -1269,6 +1344,7 @@ public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestination
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesRedshiftErrorHandlingConfig
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -1284,6 +1360,7 @@ public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestination
     public bool? FailOnFirstDestinationError { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesRedshift
 {
     /// <summary>Object key for the bucket in which Amazon AppFlow places the destination files.</summary>
@@ -1323,6 +1400,7 @@ public enum V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnector
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesS3BucketNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1336,6 +1414,7 @@ public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestination
     public V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesS3BucketNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a BucketPolicy in s3 to populate bucketName.</summary>
 public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesS3BucketNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1367,6 +1446,7 @@ public enum V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesS3BucketNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1380,6 +1460,7 @@ public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestination
     public V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesS3BucketNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a BucketPolicy in s3 to populate bucketName.</summary>
 public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesS3BucketNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1395,6 +1476,7 @@ public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestination
     public V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesS3BucketNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigAggregationConfig
 {
     /// <summary>Whether Amazon AppFlow aggregates the flow records into a single file, or leave them unaggregated. Valid values are None and SingleFile.</summary>
@@ -1406,6 +1488,7 @@ public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestination
     public double? TargetFileSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPrefixConfig
 {
     /// <summary>Determines the level of granularity that's included in the prefix. Valid values are YEAR, MONTH, DAY, HOUR, and MINUTE.</summary>
@@ -1417,6 +1500,7 @@ public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestination
     public string? PrefixType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfig
 {
     /// <summary>Aggregation settings that you can use to customize the output format of your flow data. See Aggregation Config for more details.</summary>
@@ -1436,6 +1520,7 @@ public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestination
     public bool? PreserveSourceDataTyping { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesS3
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -1459,6 +1544,7 @@ public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestination
     public IList<V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfig>? S3OutputFormatConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesSalesforceErrorHandlingConfig
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -1474,6 +1560,7 @@ public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestination
     public bool? FailOnFirstDestinationError { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesSalesforce
 {
     /// <summary>Settings that determine how Amazon AppFlow handles an error when placing data in the destination. See Error Handling Config for more details.</summary>
@@ -1493,6 +1580,7 @@ public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestination
     public string? WriteOperationType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesSapoDataErrorHandlingConfig
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -1508,6 +1596,7 @@ public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestination
     public bool? FailOnFirstDestinationError { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesSapoDataSuccessResponseHandlingConfig
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -1519,6 +1608,7 @@ public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestination
     public string? BucketPrefix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesSapoData
 {
     /// <summary>Settings that determine how Amazon AppFlow handles an error when placing data in the destination. See Error Handling Config for more details.</summary>
@@ -1542,6 +1632,7 @@ public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestination
     public string? WriteOperationType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesSnowflakeErrorHandlingConfig
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -1557,6 +1648,7 @@ public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestination
     public bool? FailOnFirstDestinationError { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesSnowflake
 {
     /// <summary>Object key for the bucket in which Amazon AppFlow places the destination files.</summary>
@@ -1576,6 +1668,7 @@ public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestination
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigAggregationConfig
 {
     /// <summary>Whether Amazon AppFlow aggregates the flow records into a single file, or leave them unaggregated. Valid values are None and SingleFile.</summary>
@@ -1583,6 +1676,7 @@ public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestination
     public string? AggregationType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfig
 {
     /// <summary>Determines the level of granularity that's included in the prefix. Valid values are YEAR, MONTH, DAY, HOUR, and MINUTE.</summary>
@@ -1594,6 +1688,7 @@ public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestination
     public string? PrefixType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfig
 {
     /// <summary>Aggregation settings that you can use to customize the output format of your flow data. See Aggregation Config for more details.</summary>
@@ -1609,6 +1704,7 @@ public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestination
     public IList<V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfig>? PrefixConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesUpsolver
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -1624,6 +1720,7 @@ public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestination
     public IList<V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfig>? S3OutputFormatConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesZendeskErrorHandlingConfig
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -1639,6 +1736,7 @@ public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestination
     public bool? FailOnFirstDestinationError { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesZendesk
 {
     /// <summary>Settings that determine how Amazon AppFlow handles an error when placing data in the destination. See Error Handling Config for more details.</summary>
@@ -1658,6 +1756,7 @@ public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestination
     public string? WriteOperationType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorProperties
 {
     /// <summary>Properties that are required to query the custom Connector. See Custom Connector Destination Properties for more details.</summary>
@@ -1713,6 +1812,7 @@ public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestination
     public IList<V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesZendesk>? Zendesk { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderDestinationFlowConfig
 {
     /// <summary>API version that the destination connector uses.</summary>
@@ -1732,6 +1832,7 @@ public partial class V1beta1FlowSpecInitProviderDestinationFlowConfig
     public IList<V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorProperties>? DestinationConnectorProperties { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderSourceFlowConfigIncrementalPullConfig
 {
     /// <summary>Field that specifies the date time or timestamp field as the criteria to use when importing incremental records from the source.</summary>
@@ -1739,6 +1840,7 @@ public partial class V1beta1FlowSpecInitProviderSourceFlowConfigIncrementalPullC
     public string? DatetimeTypeFieldName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorPropertiesAmplitude
 {
     /// <summary>Object specified in the flow destination.</summary>
@@ -1746,6 +1848,7 @@ public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorP
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorPropertiesCustomConnector
 {
     /// <summary>Custom properties that are specific to the connector when it's used as a destination in the flow. Maximum of 50 items.</summary>
@@ -1757,6 +1860,7 @@ public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorP
     public string? EntityName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorPropertiesDatadog
 {
     /// <summary>Object specified in the flow destination.</summary>
@@ -1764,6 +1868,7 @@ public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorP
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorPropertiesDynatrace
 {
     /// <summary>Object specified in the flow destination.</summary>
@@ -1771,6 +1876,7 @@ public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorP
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorPropertiesGoogleAnalytics
 {
     /// <summary>Object specified in the flow destination.</summary>
@@ -1778,6 +1884,7 @@ public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorP
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorPropertiesInforNexus
 {
     /// <summary>Object specified in the flow destination.</summary>
@@ -1785,6 +1892,7 @@ public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorP
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorPropertiesMarketo
 {
     /// <summary>Object specified in the flow destination.</summary>
@@ -1812,6 +1920,7 @@ public enum V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorProperties
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorPropertiesS3BucketNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1825,6 +1934,7 @@ public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorP
     public V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorPropertiesS3BucketNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a BucketPolicy in s3 to populate bucketName.</summary>
 public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorPropertiesS3BucketNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1856,6 +1966,7 @@ public enum V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorProperties
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorPropertiesS3BucketNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1869,6 +1980,7 @@ public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorP
     public V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorPropertiesS3BucketNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a BucketPolicy in s3 to populate bucketName.</summary>
 public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorPropertiesS3BucketNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1884,6 +1996,7 @@ public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorP
     public V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorPropertiesS3BucketNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorPropertiesS3S3InputFormatConfig
 {
     /// <summary>File type that Amazon AppFlow gets from your Amazon S3 bucket. Valid values are CSV and JSON.</summary>
@@ -1891,6 +2004,7 @@ public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorP
     public string? S3InputFileType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorPropertiesS3
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -1914,6 +2028,7 @@ public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorP
     public IList<V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorPropertiesS3S3InputFormatConfig>? S3InputFormatConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorPropertiesSalesforce
 {
     /// <summary>Flag that enables dynamic fetching of new (recently added) fields in the Salesforce objects while running a flow.</summary>
@@ -1929,6 +2044,7 @@ public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorP
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorPropertiesSapoData
 {
     /// <summary>Object path specified in the SAPOData flow destination.</summary>
@@ -1936,6 +2052,7 @@ public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorP
     public string? ObjectPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorPropertiesServiceNow
 {
     /// <summary>Object specified in the flow destination.</summary>
@@ -1943,6 +2060,7 @@ public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorP
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorPropertiesSingular
 {
     /// <summary>Object specified in the flow destination.</summary>
@@ -1950,6 +2068,7 @@ public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorP
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorPropertiesSlack
 {
     /// <summary>Object specified in the flow destination.</summary>
@@ -1957,6 +2076,7 @@ public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorP
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorPropertiesTrendmicro
 {
     /// <summary>Object specified in the flow destination.</summary>
@@ -1964,6 +2084,7 @@ public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorP
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorPropertiesVeeva
 {
     /// <summary>Document type specified in the Veeva document extract flow.</summary>
@@ -1987,6 +2108,7 @@ public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorP
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorPropertiesZendesk
 {
     /// <summary>Object specified in the flow destination.</summary>
@@ -1994,6 +2116,7 @@ public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorP
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorProperties
 {
     /// <summary>Information that is required for querying Amplitude. See Generic Source Properties for more details.</summary>
@@ -2061,6 +2184,7 @@ public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorP
     public IList<V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorPropertiesZendesk>? Zendesk { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderSourceFlowConfig
 {
     /// <summary>API version that the destination connector uses.</summary>
@@ -2084,6 +2208,7 @@ public partial class V1beta1FlowSpecInitProviderSourceFlowConfig
     public IList<V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorProperties>? SourceConnectorProperties { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderTaskConnectorOperator
 {
     /// <summary>Information that is required for querying Amplitude. See Generic Source Properties for more details.</summary>
@@ -2151,6 +2276,7 @@ public partial class V1beta1FlowSpecInitProviderTaskConnectorOperator
     public string? Zendesk { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderTask
 {
     /// <summary>Operation to be performed on the provided source fields. See Connector Operator for details.</summary>
@@ -2174,6 +2300,7 @@ public partial class V1beta1FlowSpecInitProviderTask
     public string? TaskType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderTriggerConfigTriggerPropertiesScheduled
 {
     /// <summary>Whether a scheduled flow has an incremental data transfer or a complete data transfer for each flow run. Valid values are Incremental and Complete.</summary>
@@ -2205,6 +2332,7 @@ public partial class V1beta1FlowSpecInitProviderTriggerConfigTriggerPropertiesSc
     public string? Timezone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderTriggerConfigTriggerProperties
 {
     /// <summary></summary>
@@ -2212,6 +2340,7 @@ public partial class V1beta1FlowSpecInitProviderTriggerConfigTriggerProperties
     public IList<V1beta1FlowSpecInitProviderTriggerConfigTriggerPropertiesScheduled>? Scheduled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderTriggerConfig
 {
     /// <summary>Configuration details of a schedule-triggered flow as defined by the user. Currently, these settings only apply to the Scheduled trigger type. See Scheduled Trigger Properties for details.</summary>
@@ -2223,6 +2352,7 @@ public partial class V1beta1FlowSpecInitProviderTriggerConfig
     public string? TriggerType { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1FlowSpecInitProvider
 {
     /// <summary>Description of the flow you want to create.</summary>
@@ -2296,6 +2426,7 @@ public enum V1beta1FlowSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FlowSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2309,6 +2440,7 @@ public partial class V1beta1FlowSpecProviderConfigRefPolicy
     public V1beta1FlowSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1FlowSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2340,6 +2472,7 @@ public enum V1beta1FlowSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FlowSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2353,6 +2486,7 @@ public partial class V1beta1FlowSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1FlowSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1FlowSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2364,6 +2498,7 @@ public partial class V1beta1FlowSpecPublishConnectionDetailsToConfigRef
     public V1beta1FlowSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1FlowSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -2379,6 +2514,7 @@ public partial class V1beta1FlowSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1FlowSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -2394,6 +2530,7 @@ public partial class V1beta1FlowSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1FlowSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -2405,6 +2542,7 @@ public partial class V1beta1FlowSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>FlowSpec defines the desired state of Flow</summary>
 public partial class V1beta1FlowSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -2437,6 +2575,7 @@ public partial class V1beta1FlowSpec
     public V1beta1FlowSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestinationConnectorPropertiesCustomConnectorErrorHandlingConfig
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -2452,6 +2591,7 @@ public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestination
     public bool? FailOnFirstDestinationError { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestinationConnectorPropertiesCustomConnector
 {
     /// <summary>Custom properties that are specific to the connector when it's used as a destination in the flow. Maximum of 50 items.</summary>
@@ -2475,6 +2615,7 @@ public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestination
     public string? WriteOperationType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestinationConnectorPropertiesCustomerProfiles
 {
     /// <summary>Unique name of the Amazon Connect Customer Profiles domain.</summary>
@@ -2486,6 +2627,7 @@ public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestination
     public string? ObjectTypeName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestinationConnectorPropertiesEventBridgeErrorHandlingConfig
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -2501,6 +2643,7 @@ public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestination
     public bool? FailOnFirstDestinationError { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestinationConnectorPropertiesEventBridge
 {
     /// <summary>Settings that determine how Amazon AppFlow handles an error when placing data in the destination. See Error Handling Config for more details.</summary>
@@ -2512,6 +2655,7 @@ public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestination
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestinationConnectorPropertiesHoneycodeErrorHandlingConfig
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -2527,6 +2671,7 @@ public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestination
     public bool? FailOnFirstDestinationError { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestinationConnectorPropertiesHoneycode
 {
     /// <summary>Settings that determine how Amazon AppFlow handles an error when placing data in the destination. See Error Handling Config for more details.</summary>
@@ -2538,10 +2683,12 @@ public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestination
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestinationConnectorPropertiesLookoutMetrics
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestinationConnectorPropertiesMarketoErrorHandlingConfig
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -2557,6 +2704,7 @@ public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestination
     public bool? FailOnFirstDestinationError { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestinationConnectorPropertiesMarketo
 {
     /// <summary>Settings that determine how Amazon AppFlow handles an error when placing data in the destination. See Error Handling Config for more details.</summary>
@@ -2568,6 +2716,7 @@ public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestination
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestinationConnectorPropertiesRedshiftErrorHandlingConfig
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -2583,6 +2732,7 @@ public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestination
     public bool? FailOnFirstDestinationError { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestinationConnectorPropertiesRedshift
 {
     /// <summary>Object key for the bucket in which Amazon AppFlow places the destination files.</summary>
@@ -2602,6 +2752,7 @@ public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestination
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigAggregationConfig
 {
     /// <summary>Whether Amazon AppFlow aggregates the flow records into a single file, or leave them unaggregated. Valid values are None and SingleFile.</summary>
@@ -2613,6 +2764,7 @@ public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestination
     public double? TargetFileSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPrefixConfig
 {
     /// <summary>Determines the level of granularity that's included in the prefix. Valid values are YEAR, MONTH, DAY, HOUR, and MINUTE.</summary>
@@ -2624,6 +2776,7 @@ public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestination
     public string? PrefixType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfig
 {
     /// <summary>Aggregation settings that you can use to customize the output format of your flow data. See Aggregation Config for more details.</summary>
@@ -2643,6 +2796,7 @@ public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestination
     public bool? PreserveSourceDataTyping { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestinationConnectorPropertiesS3
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -2658,6 +2812,7 @@ public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestination
     public IList<V1beta1FlowStatusAtProviderDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfig>? S3OutputFormatConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestinationConnectorPropertiesSalesforceErrorHandlingConfig
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -2673,6 +2828,7 @@ public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestination
     public bool? FailOnFirstDestinationError { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestinationConnectorPropertiesSalesforce
 {
     /// <summary>Settings that determine how Amazon AppFlow handles an error when placing data in the destination. See Error Handling Config for more details.</summary>
@@ -2692,6 +2848,7 @@ public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestination
     public string? WriteOperationType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestinationConnectorPropertiesSapoDataErrorHandlingConfig
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -2707,6 +2864,7 @@ public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestination
     public bool? FailOnFirstDestinationError { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestinationConnectorPropertiesSapoDataSuccessResponseHandlingConfig
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -2718,6 +2876,7 @@ public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestination
     public string? BucketPrefix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestinationConnectorPropertiesSapoData
 {
     /// <summary>Settings that determine how Amazon AppFlow handles an error when placing data in the destination. See Error Handling Config for more details.</summary>
@@ -2741,6 +2900,7 @@ public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestination
     public string? WriteOperationType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestinationConnectorPropertiesSnowflakeErrorHandlingConfig
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -2756,6 +2916,7 @@ public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestination
     public bool? FailOnFirstDestinationError { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestinationConnectorPropertiesSnowflake
 {
     /// <summary>Object key for the bucket in which Amazon AppFlow places the destination files.</summary>
@@ -2775,6 +2936,7 @@ public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestination
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigAggregationConfig
 {
     /// <summary>Whether Amazon AppFlow aggregates the flow records into a single file, or leave them unaggregated. Valid values are None and SingleFile.</summary>
@@ -2782,6 +2944,7 @@ public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestination
     public string? AggregationType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfig
 {
     /// <summary>Determines the level of granularity that's included in the prefix. Valid values are YEAR, MONTH, DAY, HOUR, and MINUTE.</summary>
@@ -2793,6 +2956,7 @@ public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestination
     public string? PrefixType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfig
 {
     /// <summary>Aggregation settings that you can use to customize the output format of your flow data. See Aggregation Config for more details.</summary>
@@ -2808,6 +2972,7 @@ public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestination
     public IList<V1beta1FlowStatusAtProviderDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfig>? PrefixConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestinationConnectorPropertiesUpsolver
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -2823,6 +2988,7 @@ public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestination
     public IList<V1beta1FlowStatusAtProviderDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfig>? S3OutputFormatConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestinationConnectorPropertiesZendeskErrorHandlingConfig
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -2838,6 +3004,7 @@ public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestination
     public bool? FailOnFirstDestinationError { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestinationConnectorPropertiesZendesk
 {
     /// <summary>Settings that determine how Amazon AppFlow handles an error when placing data in the destination. See Error Handling Config for more details.</summary>
@@ -2857,6 +3024,7 @@ public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestination
     public string? WriteOperationType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestinationConnectorProperties
 {
     /// <summary>Properties that are required to query the custom Connector. See Custom Connector Destination Properties for more details.</summary>
@@ -2912,6 +3080,7 @@ public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestination
     public IList<V1beta1FlowStatusAtProviderDestinationFlowConfigDestinationConnectorPropertiesZendesk>? Zendesk { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderDestinationFlowConfig
 {
     /// <summary>API version that the destination connector uses.</summary>
@@ -2931,6 +3100,7 @@ public partial class V1beta1FlowStatusAtProviderDestinationFlowConfig
     public IList<V1beta1FlowStatusAtProviderDestinationFlowConfigDestinationConnectorProperties>? DestinationConnectorProperties { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderSourceFlowConfigIncrementalPullConfig
 {
     /// <summary>Field that specifies the date time or timestamp field as the criteria to use when importing incremental records from the source.</summary>
@@ -2938,6 +3108,7 @@ public partial class V1beta1FlowStatusAtProviderSourceFlowConfigIncrementalPullC
     public string? DatetimeTypeFieldName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorPropertiesAmplitude
 {
     /// <summary>Object specified in the flow destination.</summary>
@@ -2945,6 +3116,7 @@ public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorP
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorPropertiesCustomConnector
 {
     /// <summary>Custom properties that are specific to the connector when it's used as a destination in the flow. Maximum of 50 items.</summary>
@@ -2956,6 +3128,7 @@ public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorP
     public string? EntityName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorPropertiesDatadog
 {
     /// <summary>Object specified in the flow destination.</summary>
@@ -2963,6 +3136,7 @@ public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorP
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorPropertiesDynatrace
 {
     /// <summary>Object specified in the flow destination.</summary>
@@ -2970,6 +3144,7 @@ public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorP
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorPropertiesGoogleAnalytics
 {
     /// <summary>Object specified in the flow destination.</summary>
@@ -2977,6 +3152,7 @@ public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorP
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorPropertiesInforNexus
 {
     /// <summary>Object specified in the flow destination.</summary>
@@ -2984,6 +3160,7 @@ public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorP
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorPropertiesMarketo
 {
     /// <summary>Object specified in the flow destination.</summary>
@@ -2991,6 +3168,7 @@ public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorP
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorPropertiesS3S3InputFormatConfig
 {
     /// <summary>File type that Amazon AppFlow gets from your Amazon S3 bucket. Valid values are CSV and JSON.</summary>
@@ -2998,6 +3176,7 @@ public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorP
     public string? S3InputFileType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorPropertiesS3
 {
     /// <summary>Amazon S3 bucket name in which Amazon AppFlow places the transferred data.</summary>
@@ -3013,6 +3192,7 @@ public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorP
     public IList<V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorPropertiesS3S3InputFormatConfig>? S3InputFormatConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorPropertiesSalesforce
 {
     /// <summary>Flag that enables dynamic fetching of new (recently added) fields in the Salesforce objects while running a flow.</summary>
@@ -3028,6 +3208,7 @@ public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorP
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorPropertiesSapoData
 {
     /// <summary>Object path specified in the SAPOData flow destination.</summary>
@@ -3035,6 +3216,7 @@ public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorP
     public string? ObjectPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorPropertiesServiceNow
 {
     /// <summary>Object specified in the flow destination.</summary>
@@ -3042,6 +3224,7 @@ public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorP
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorPropertiesSingular
 {
     /// <summary>Object specified in the flow destination.</summary>
@@ -3049,6 +3232,7 @@ public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorP
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorPropertiesSlack
 {
     /// <summary>Object specified in the flow destination.</summary>
@@ -3056,6 +3240,7 @@ public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorP
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorPropertiesTrendmicro
 {
     /// <summary>Object specified in the flow destination.</summary>
@@ -3063,6 +3248,7 @@ public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorP
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorPropertiesVeeva
 {
     /// <summary>Document type specified in the Veeva document extract flow.</summary>
@@ -3086,6 +3272,7 @@ public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorP
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorPropertiesZendesk
 {
     /// <summary>Object specified in the flow destination.</summary>
@@ -3093,6 +3280,7 @@ public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorP
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorProperties
 {
     /// <summary>Information that is required for querying Amplitude. See Generic Source Properties for more details.</summary>
@@ -3160,6 +3348,7 @@ public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorP
     public IList<V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorPropertiesZendesk>? Zendesk { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderSourceFlowConfig
 {
     /// <summary>API version that the destination connector uses.</summary>
@@ -3183,6 +3372,7 @@ public partial class V1beta1FlowStatusAtProviderSourceFlowConfig
     public IList<V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorProperties>? SourceConnectorProperties { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderTaskConnectorOperator
 {
     /// <summary>Information that is required for querying Amplitude. See Generic Source Properties for more details.</summary>
@@ -3250,6 +3440,7 @@ public partial class V1beta1FlowStatusAtProviderTaskConnectorOperator
     public string? Zendesk { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderTask
 {
     /// <summary>Operation to be performed on the provided source fields. See Connector Operator for details.</summary>
@@ -3273,6 +3464,7 @@ public partial class V1beta1FlowStatusAtProviderTask
     public string? TaskType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderTriggerConfigTriggerPropertiesScheduled
 {
     /// <summary>Whether a scheduled flow has an incremental data transfer or a complete data transfer for each flow run. Valid values are Incremental and Complete.</summary>
@@ -3304,6 +3496,7 @@ public partial class V1beta1FlowStatusAtProviderTriggerConfigTriggerPropertiesSc
     public string? Timezone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderTriggerConfigTriggerProperties
 {
     /// <summary></summary>
@@ -3311,6 +3504,7 @@ public partial class V1beta1FlowStatusAtProviderTriggerConfigTriggerProperties
     public IList<V1beta1FlowStatusAtProviderTriggerConfigTriggerPropertiesScheduled>? Scheduled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderTriggerConfig
 {
     /// <summary>Configuration details of a schedule-triggered flow as defined by the user. Currently, these settings only apply to the Scheduled trigger type. See Scheduled Trigger Properties for details.</summary>
@@ -3322,6 +3516,7 @@ public partial class V1beta1FlowStatusAtProviderTriggerConfig
     public string? TriggerType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProvider
 {
     /// <summary>Flow's ARN.</summary>
@@ -3369,6 +3564,7 @@ public partial class V1beta1FlowStatusAtProvider
     public IList<V1beta1FlowStatusAtProviderTriggerConfig>? TriggerConfig { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1FlowStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -3396,6 +3592,7 @@ public partial class V1beta1FlowStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>FlowStatus defines the observed state of Flow.</summary>
 public partial class V1beta1FlowStatus
 {
     /// <summary></summary>
@@ -3412,6 +3609,7 @@ public partial class V1beta1FlowStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Flow is the Schema for the Flows API. Provides an AppFlow Flow resource.</summary>
 public partial class V1beta1Flow : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FlowSpec>, IStatus<V1beta1FlowStatus>
 {
     public const string KubeApiVersion = "v1beta1";

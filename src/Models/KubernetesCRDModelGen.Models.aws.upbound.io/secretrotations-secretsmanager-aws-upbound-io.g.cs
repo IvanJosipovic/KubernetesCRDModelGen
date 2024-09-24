@@ -38,6 +38,7 @@ public enum V1beta1SecretRotationSpecForProviderRotationLambdaArnRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SecretRotationSpecForProviderRotationLambdaArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1SecretRotationSpecForProviderRotationLambdaArnRefPol
     public V1beta1SecretRotationSpecForProviderRotationLambdaArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in lambda to populate rotationLambdaArn.</summary>
 public partial class V1beta1SecretRotationSpecForProviderRotationLambdaArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1SecretRotationSpecForProviderRotationLambdaArnSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SecretRotationSpecForProviderRotationLambdaArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1SecretRotationSpecForProviderRotationLambdaArnSelect
     public V1beta1SecretRotationSpecForProviderRotationLambdaArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in lambda to populate rotationLambdaArn.</summary>
 public partial class V1beta1SecretRotationSpecForProviderRotationLambdaArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1SecretRotationSpecForProviderRotationLambdaArnSelect
     public V1beta1SecretRotationSpecForProviderRotationLambdaArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SecretRotationSpecForProviderRotationRules
 {
     /// <summary>Specifies the number of days between automatic scheduled rotations of the secret. Either automatically_after_days or schedule_expression must be specified.</summary>
@@ -145,6 +150,7 @@ public enum V1beta1SecretRotationSpecForProviderSecretIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SecretRotationSpecForProviderSecretIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -158,6 +164,7 @@ public partial class V1beta1SecretRotationSpecForProviderSecretIdRefPolicy
     public V1beta1SecretRotationSpecForProviderSecretIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Secret in secretsmanager to populate secretId.</summary>
 public partial class V1beta1SecretRotationSpecForProviderSecretIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -189,6 +196,7 @@ public enum V1beta1SecretRotationSpecForProviderSecretIdSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SecretRotationSpecForProviderSecretIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1SecretRotationSpecForProviderSecretIdSelectorPolicy
     public V1beta1SecretRotationSpecForProviderSecretIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Secret in secretsmanager to populate secretId.</summary>
 public partial class V1beta1SecretRotationSpecForProviderSecretIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -217,6 +226,7 @@ public partial class V1beta1SecretRotationSpecForProviderSecretIdSelector
     public V1beta1SecretRotationSpecForProviderSecretIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SecretRotationSpecForProvider
 {
     /// <summary>Region is the region you'd like your resource to be created in.</summary>
@@ -276,6 +286,7 @@ public enum V1beta1SecretRotationSpecInitProviderRotationLambdaArnRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SecretRotationSpecInitProviderRotationLambdaArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -289,6 +300,7 @@ public partial class V1beta1SecretRotationSpecInitProviderRotationLambdaArnRefPo
     public V1beta1SecretRotationSpecInitProviderRotationLambdaArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in lambda to populate rotationLambdaArn.</summary>
 public partial class V1beta1SecretRotationSpecInitProviderRotationLambdaArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -320,6 +332,7 @@ public enum V1beta1SecretRotationSpecInitProviderRotationLambdaArnSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SecretRotationSpecInitProviderRotationLambdaArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -333,6 +346,7 @@ public partial class V1beta1SecretRotationSpecInitProviderRotationLambdaArnSelec
     public V1beta1SecretRotationSpecInitProviderRotationLambdaArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in lambda to populate rotationLambdaArn.</summary>
 public partial class V1beta1SecretRotationSpecInitProviderRotationLambdaArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -348,6 +362,7 @@ public partial class V1beta1SecretRotationSpecInitProviderRotationLambdaArnSelec
     public V1beta1SecretRotationSpecInitProviderRotationLambdaArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SecretRotationSpecInitProviderRotationRules
 {
     /// <summary>Specifies the number of days between automatic scheduled rotations of the secret. Either automatically_after_days or schedule_expression must be specified.</summary>
@@ -383,6 +398,7 @@ public enum V1beta1SecretRotationSpecInitProviderSecretIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SecretRotationSpecInitProviderSecretIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -396,6 +412,7 @@ public partial class V1beta1SecretRotationSpecInitProviderSecretIdRefPolicy
     public V1beta1SecretRotationSpecInitProviderSecretIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Secret in secretsmanager to populate secretId.</summary>
 public partial class V1beta1SecretRotationSpecInitProviderSecretIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -427,6 +444,7 @@ public enum V1beta1SecretRotationSpecInitProviderSecretIdSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SecretRotationSpecInitProviderSecretIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -440,6 +458,7 @@ public partial class V1beta1SecretRotationSpecInitProviderSecretIdSelectorPolicy
     public V1beta1SecretRotationSpecInitProviderSecretIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Secret in secretsmanager to populate secretId.</summary>
 public partial class V1beta1SecretRotationSpecInitProviderSecretIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -455,6 +474,7 @@ public partial class V1beta1SecretRotationSpecInitProviderSecretIdSelector
     public V1beta1SecretRotationSpecInitProviderSecretIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1SecretRotationSpecInitProvider
 {
     /// <summary>Specifies whether to rotate the secret immediately or wait until the next scheduled rotation window. The rotation schedule is defined in rotation_rules. For secrets that use a Lambda rotation function to rotate, if you don't immediately rotate the secret, Secrets Manager tests the rotation configuration by running the testSecret step (https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html) of the Lambda rotation function. The test creates an AWSPENDING version of the secret and then removes it. Defaults to true.</summary>
@@ -532,6 +552,7 @@ public enum V1beta1SecretRotationSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SecretRotationSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -545,6 +566,7 @@ public partial class V1beta1SecretRotationSpecProviderConfigRefPolicy
     public V1beta1SecretRotationSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1SecretRotationSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -576,6 +598,7 @@ public enum V1beta1SecretRotationSpecPublishConnectionDetailsToConfigRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SecretRotationSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -589,6 +612,7 @@ public partial class V1beta1SecretRotationSpecPublishConnectionDetailsToConfigRe
     public V1beta1SecretRotationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1SecretRotationSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -600,6 +624,7 @@ public partial class V1beta1SecretRotationSpecPublishConnectionDetailsToConfigRe
     public V1beta1SecretRotationSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1SecretRotationSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -615,6 +640,7 @@ public partial class V1beta1SecretRotationSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1SecretRotationSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -630,6 +656,7 @@ public partial class V1beta1SecretRotationSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1SecretRotationSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -641,6 +668,7 @@ public partial class V1beta1SecretRotationSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>SecretRotationSpec defines the desired state of SecretRotation</summary>
 public partial class V1beta1SecretRotationSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -673,6 +701,7 @@ public partial class V1beta1SecretRotationSpec
     public V1beta1SecretRotationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SecretRotationStatusAtProviderRotationRules
 {
     /// <summary>Specifies the number of days between automatic scheduled rotations of the secret. Either automatically_after_days or schedule_expression must be specified.</summary>
@@ -688,6 +717,7 @@ public partial class V1beta1SecretRotationStatusAtProviderRotationRules
     public string? ScheduleExpression { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SecretRotationStatusAtProvider
 {
     /// <summary>Amazon Resource Name (ARN) of the secret.</summary>
@@ -715,6 +745,7 @@ public partial class V1beta1SecretRotationStatusAtProvider
     public string? SecretId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1SecretRotationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -742,6 +773,7 @@ public partial class V1beta1SecretRotationStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>SecretRotationStatus defines the observed state of SecretRotation.</summary>
 public partial class V1beta1SecretRotationStatus
 {
     /// <summary></summary>
@@ -758,6 +790,7 @@ public partial class V1beta1SecretRotationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>SecretRotation is the Schema for the SecretRotations API. Provides a resource to manage AWS Secrets Manager secret rotation</summary>
 public partial class V1beta1SecretRotation : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SecretRotationSpec>, IStatus<V1beta1SecretRotationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -38,6 +38,7 @@ public enum V1beta1TriggerCustomEventSpecForProviderDataFactoryIdRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TriggerCustomEventSpecForProviderDataFactoryIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1TriggerCustomEventSpecForProviderDataFactoryIdRefPol
     public V1beta1TriggerCustomEventSpecForProviderDataFactoryIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Factory in datafactory to populate dataFactoryId.</summary>
 public partial class V1beta1TriggerCustomEventSpecForProviderDataFactoryIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1TriggerCustomEventSpecForProviderDataFactoryIdSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TriggerCustomEventSpecForProviderDataFactoryIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1TriggerCustomEventSpecForProviderDataFactoryIdSelect
     public V1beta1TriggerCustomEventSpecForProviderDataFactoryIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Factory in datafactory to populate dataFactoryId.</summary>
 public partial class V1beta1TriggerCustomEventSpecForProviderDataFactoryIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1TriggerCustomEventSpecForProviderEventgridTopicIdRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TriggerCustomEventSpecForProviderEventgridTopicIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1TriggerCustomEventSpecForProviderEventgridTopicIdRef
     public V1beta1TriggerCustomEventSpecForProviderEventgridTopicIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Topic in eventgrid to populate eventgridTopicId.</summary>
 public partial class V1beta1TriggerCustomEventSpecForProviderEventgridTopicIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1TriggerCustomEventSpecForProviderEventgridTopicIdSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TriggerCustomEventSpecForProviderEventgridTopicIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1TriggerCustomEventSpecForProviderEventgridTopicIdSel
     public V1beta1TriggerCustomEventSpecForProviderEventgridTopicIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Topic in eventgrid to populate eventgridTopicId.</summary>
 public partial class V1beta1TriggerCustomEventSpecForProviderEventgridTopicIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1TriggerCustomEventSpecForProviderPipelineNameRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TriggerCustomEventSpecForProviderPipelineNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1TriggerCustomEventSpecForProviderPipelineNameRefPoli
     public V1beta1TriggerCustomEventSpecForProviderPipelineNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Pipeline in datafactory to populate name.</summary>
 public partial class V1beta1TriggerCustomEventSpecForProviderPipelineNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1TriggerCustomEventSpecForProviderPipelineNameSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TriggerCustomEventSpecForProviderPipelineNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1TriggerCustomEventSpecForProviderPipelineNameSelecto
     public V1beta1TriggerCustomEventSpecForProviderPipelineNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Pipeline in datafactory to populate name.</summary>
 public partial class V1beta1TriggerCustomEventSpecForProviderPipelineNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1TriggerCustomEventSpecForProviderPipelineNameSelecto
     public V1beta1TriggerCustomEventSpecForProviderPipelineNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerCustomEventSpecForProviderPipeline
 {
     /// <summary>The Data Factory Pipeline name that the trigger will act on.</summary>
@@ -313,6 +326,7 @@ public partial class V1beta1TriggerCustomEventSpecForProviderPipeline
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerCustomEventSpecForProvider
 {
     /// <summary>Specifies if the Data Factory Custom Event Trigger is activated. Defaults to true.</summary>
@@ -392,6 +406,7 @@ public enum V1beta1TriggerCustomEventSpecInitProviderEventgridTopicIdRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TriggerCustomEventSpecInitProviderEventgridTopicIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -405,6 +420,7 @@ public partial class V1beta1TriggerCustomEventSpecInitProviderEventgridTopicIdRe
     public V1beta1TriggerCustomEventSpecInitProviderEventgridTopicIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Topic in eventgrid to populate eventgridTopicId.</summary>
 public partial class V1beta1TriggerCustomEventSpecInitProviderEventgridTopicIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -436,6 +452,7 @@ public enum V1beta1TriggerCustomEventSpecInitProviderEventgridTopicIdSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TriggerCustomEventSpecInitProviderEventgridTopicIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -449,6 +466,7 @@ public partial class V1beta1TriggerCustomEventSpecInitProviderEventgridTopicIdSe
     public V1beta1TriggerCustomEventSpecInitProviderEventgridTopicIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Topic in eventgrid to populate eventgridTopicId.</summary>
 public partial class V1beta1TriggerCustomEventSpecInitProviderEventgridTopicIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -484,6 +502,7 @@ public enum V1beta1TriggerCustomEventSpecInitProviderPipelineNameRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TriggerCustomEventSpecInitProviderPipelineNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -497,6 +516,7 @@ public partial class V1beta1TriggerCustomEventSpecInitProviderPipelineNameRefPol
     public V1beta1TriggerCustomEventSpecInitProviderPipelineNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Pipeline in datafactory to populate name.</summary>
 public partial class V1beta1TriggerCustomEventSpecInitProviderPipelineNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -528,6 +548,7 @@ public enum V1beta1TriggerCustomEventSpecInitProviderPipelineNameSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TriggerCustomEventSpecInitProviderPipelineNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -541,6 +562,7 @@ public partial class V1beta1TriggerCustomEventSpecInitProviderPipelineNameSelect
     public V1beta1TriggerCustomEventSpecInitProviderPipelineNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Pipeline in datafactory to populate name.</summary>
 public partial class V1beta1TriggerCustomEventSpecInitProviderPipelineNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -556,6 +578,7 @@ public partial class V1beta1TriggerCustomEventSpecInitProviderPipelineNameSelect
     public V1beta1TriggerCustomEventSpecInitProviderPipelineNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerCustomEventSpecInitProviderPipeline
 {
     /// <summary>The Data Factory Pipeline name that the trigger will act on.</summary>
@@ -575,6 +598,7 @@ public partial class V1beta1TriggerCustomEventSpecInitProviderPipeline
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1TriggerCustomEventSpecInitProvider
 {
     /// <summary>Specifies if the Data Factory Custom Event Trigger is activated. Defaults to true.</summary>
@@ -664,6 +688,7 @@ public enum V1beta1TriggerCustomEventSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TriggerCustomEventSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -677,6 +702,7 @@ public partial class V1beta1TriggerCustomEventSpecProviderConfigRefPolicy
     public V1beta1TriggerCustomEventSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1TriggerCustomEventSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -708,6 +734,7 @@ public enum V1beta1TriggerCustomEventSpecPublishConnectionDetailsToConfigRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TriggerCustomEventSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -721,6 +748,7 @@ public partial class V1beta1TriggerCustomEventSpecPublishConnectionDetailsToConf
     public V1beta1TriggerCustomEventSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1TriggerCustomEventSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -732,6 +760,7 @@ public partial class V1beta1TriggerCustomEventSpecPublishConnectionDetailsToConf
     public V1beta1TriggerCustomEventSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1TriggerCustomEventSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -747,6 +776,7 @@ public partial class V1beta1TriggerCustomEventSpecPublishConnectionDetailsToMeta
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1TriggerCustomEventSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -762,6 +792,7 @@ public partial class V1beta1TriggerCustomEventSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1TriggerCustomEventSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -773,6 +804,7 @@ public partial class V1beta1TriggerCustomEventSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>TriggerCustomEventSpec defines the desired state of TriggerCustomEvent</summary>
 public partial class V1beta1TriggerCustomEventSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -805,6 +837,7 @@ public partial class V1beta1TriggerCustomEventSpec
     public V1beta1TriggerCustomEventSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerCustomEventStatusAtProviderPipeline
 {
     /// <summary>The Data Factory Pipeline name that the trigger will act on.</summary>
@@ -816,6 +849,7 @@ public partial class V1beta1TriggerCustomEventStatusAtProviderPipeline
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerCustomEventStatusAtProvider
 {
     /// <summary>Specifies if the Data Factory Custom Event Trigger is activated. Defaults to true.</summary>
@@ -863,6 +897,7 @@ public partial class V1beta1TriggerCustomEventStatusAtProvider
     public string? SubjectEndsWith { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1TriggerCustomEventStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -890,6 +925,7 @@ public partial class V1beta1TriggerCustomEventStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>TriggerCustomEventStatus defines the observed state of TriggerCustomEvent.</summary>
 public partial class V1beta1TriggerCustomEventStatus
 {
     /// <summary></summary>
@@ -906,6 +942,7 @@ public partial class V1beta1TriggerCustomEventStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>TriggerCustomEvent is the Schema for the TriggerCustomEvents API. Manages a Custom Event Trigger inside an Azure Data Factory.</summary>
 public partial class V1beta1TriggerCustomEvent : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1TriggerCustomEventSpec>, IStatus<V1beta1TriggerCustomEventStatus>
 {
     public const string KubeApiVersion = "v1beta1";

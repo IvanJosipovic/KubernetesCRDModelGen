@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.messaging.knative.dev;
+/// <summary>ChannelTemplate specifies which Channel CRD to use to create the CRD Channel backing this Channel. This is immutable after creation. Normally this is set by the Channel defaulter, not directly by the user.</summary>
 public partial class V1ChannelSpecChannelTemplate
 {
     /// <summary>APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources</summary>
@@ -23,6 +24,7 @@ public partial class V1ChannelSpecChannelTemplate
     public JsonNode? Spec { get; set; }
 }
 
+/// <summary>Auth provides the relevant information for OIDC authentication.</summary>
 public partial class V1ChannelSpecSubscribersAuth
 {
     /// <summary>ServiceAccountName is the name of the generated service account used for this components OIDC authentication.</summary>
@@ -34,6 +36,7 @@ public partial class V1ChannelSpecSubscribersAuth
     public IList<string>? ServiceAccountNames { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1ChannelSpecSubscribers
 {
     /// <summary>DeliverySpec contains options controlling the event delivery</summary>
@@ -81,6 +84,7 @@ public partial class V1ChannelSpecSubscribers
     public V1ChannelSpecSubscribersAuth? Auth { get; set; }
 }
 
+/// <summary>Spec defines the desired state of the Channel.</summary>
 public partial class V1ChannelSpec
 {
     /// <summary>ChannelTemplate specifies which Channel CRD to use to create the CRD Channel backing this Channel. This is immutable after creation. Normally this is set by the Channel defaulter, not directly by the user.</summary>
@@ -96,6 +100,7 @@ public partial class V1ChannelSpec
     public IList<V1ChannelSpecSubscribers>? Subscribers { get; set; }
 }
 
+/// <summary>Channel is Addressable. It exposes the endpoint as an URI to get events delivered into the Channel mesh.</summary>
 public partial class V1ChannelStatusAddress
 {
     /// <summary></summary>
@@ -115,6 +120,7 @@ public partial class V1ChannelStatusAddress
     public string? Audience { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1ChannelStatusAddresses
 {
     /// <summary></summary>
@@ -134,6 +140,7 @@ public partial class V1ChannelStatusAddresses
     public string? Audience { get; set; }
 }
 
+/// <summary>Channel is an KReference to the Channel CRD backing this Channel.</summary>
 public partial class V1ChannelStatusChannel
 {
     /// <summary>API version of the referent.</summary>
@@ -153,6 +160,7 @@ public partial class V1ChannelStatusChannel
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1ChannelStatusPolicies
 {
     /// <summary>The API version of the applied EventPolicy. This indicates, which version of EventPolicy is supported by the resource.</summary>
@@ -164,6 +172,7 @@ public partial class V1ChannelStatusPolicies
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1ChannelStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another. We use VolatileTime in place of metav1.Time to exclude this from creating equality.Semantic differences (all other things held constant).</summary>
@@ -191,6 +200,7 @@ public partial class V1ChannelStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>DeadLetterChannel is a KReference and is set by the channel when it supports native error handling via a channel Failed messages are delivered here.</summary>
 public partial class V1ChannelStatusDeadLetterChannel
 {
     /// <summary>API version of the referent.</summary>
@@ -210,6 +220,7 @@ public partial class V1ChannelStatusDeadLetterChannel
     public string? Namespace { get; set; }
 }
 
+/// <summary>Auth provides the relevant information for OIDC authentication.</summary>
 public partial class V1ChannelStatusSubscribersAuth
 {
     /// <summary>ServiceAccountName is the name of the generated service account used for this components OIDC authentication.</summary>
@@ -221,6 +232,7 @@ public partial class V1ChannelStatusSubscribersAuth
     public IList<string>? ServiceAccountNames { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1ChannelStatusSubscribers
 {
     /// <summary>A human readable message indicating details of Ready status.</summary>
@@ -244,6 +256,7 @@ public partial class V1ChannelStatusSubscribers
     public V1ChannelStatusSubscribersAuth? Auth { get; set; }
 }
 
+/// <summary>Status represents the current state of the Channel. This data may be out of date.</summary>
 public partial class V1ChannelStatus
 {
     /// <summary>Channel is Addressable. It exposes the endpoint as an URI to get events delivered into the Channel mesh.</summary>
@@ -296,6 +309,7 @@ public partial class V1ChannelStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Channel represents a generic Channel. It is normally used when we want a Channel, but do not need a specific Channel implementation.</summary>
 public partial class V1Channel : IKubernetesObject<V1ObjectMeta>, ISpec<V1ChannelSpec>, IStatus<V1ChannelStatus>
 {
     public const string KubeApiVersion = "v1";

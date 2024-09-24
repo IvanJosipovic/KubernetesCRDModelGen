@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datastream.cnrm.cloud.google.com;
+/// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 public partial class V1alpha1DatastreamConnectionProfileSpecForwardSshConnectivityPasswordValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -19,6 +20,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecForwardSshConnectivi
     public string Name { get; set; }
 }
 
+/// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 public partial class V1alpha1DatastreamConnectionProfileSpecForwardSshConnectivityPasswordValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -26,6 +28,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecForwardSshConnectivi
     public V1alpha1DatastreamConnectionProfileSpecForwardSshConnectivityPasswordValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary>Immutable. SSH password.</summary>
 public partial class V1alpha1DatastreamConnectionProfileSpecForwardSshConnectivityPassword
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -37,6 +40,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecForwardSshConnectivi
     public V1alpha1DatastreamConnectionProfileSpecForwardSshConnectivityPasswordValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 public partial class V1alpha1DatastreamConnectionProfileSpecForwardSshConnectivityPrivateKeyValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -48,6 +52,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecForwardSshConnectivi
     public string Name { get; set; }
 }
 
+/// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 public partial class V1alpha1DatastreamConnectionProfileSpecForwardSshConnectivityPrivateKeyValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -55,6 +60,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecForwardSshConnectivi
     public V1alpha1DatastreamConnectionProfileSpecForwardSshConnectivityPrivateKeyValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary>Immutable. SSH private key.</summary>
 public partial class V1alpha1DatastreamConnectionProfileSpecForwardSshConnectivityPrivateKey
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -66,6 +72,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecForwardSshConnectivi
     public V1alpha1DatastreamConnectionProfileSpecForwardSshConnectivityPrivateKeyValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary>Forward SSH tunnel connectivity.</summary>
 public partial class V1alpha1DatastreamConnectionProfileSpecForwardSshConnectivity
 {
     /// <summary>Hostname for the SSH tunnel.</summary>
@@ -89,6 +96,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecForwardSshConnectivi
     public string Username { get; set; }
 }
 
+/// <summary>Cloud Storage bucket profile.</summary>
 public partial class V1alpha1DatastreamConnectionProfileSpecGcsProfile
 {
     /// <summary>The Cloud Storage bucket name.</summary>
@@ -100,6 +108,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecGcsProfile
     public string? RootPath { get; set; }
 }
 
+/// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfilePasswordValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -111,6 +120,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfilePassword
     public string Name { get; set; }
 }
 
+/// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfilePasswordValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -118,6 +128,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfilePassword
     public V1alpha1DatastreamConnectionProfileSpecMysqlProfilePasswordValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary>Password for the MySQL connection.</summary>
 public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfilePassword
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -129,6 +140,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfilePassword
     public V1alpha1DatastreamConnectionProfileSpecMysqlProfilePasswordValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfigCaCertificateValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -140,6 +152,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfi
     public string Name { get; set; }
 }
 
+/// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfigCaCertificateValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -147,6 +160,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfi
     public V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfigCaCertificateValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary>Immutable. PEM-encoded certificate of the CA that signed the source database server's certificate.</summary>
 public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfigCaCertificate
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -158,6 +172,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfi
     public V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfigCaCertificateValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfigClientCertificateValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -169,6 +184,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfi
     public string Name { get; set; }
 }
 
+/// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfigClientCertificateValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -176,6 +192,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfi
     public V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfigClientCertificateValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary>Immutable. PEM-encoded certificate that will be used by the replica to authenticate against the source database server. If this field is used then the 'clientKey' and the 'caCertificate' fields are mandatory.</summary>
 public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfigClientCertificate
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -187,6 +204,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfi
     public V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfigClientCertificateValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfigClientKeyValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -198,6 +216,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfi
     public string Name { get; set; }
 }
 
+/// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfigClientKeyValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -205,6 +224,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfi
     public V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfigClientKeyValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary>Immutable. PEM-encoded private key associated with the Client Certificate. If this field is used then the 'client_certificate' and the 'ca_certificate' fields are mandatory.</summary>
 public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfigClientKey
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -216,6 +236,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfi
     public V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfigClientKeyValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary>SSL configuration for the MySQL connection.</summary>
 public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfig
 {
     /// <summary>Immutable. PEM-encoded certificate of the CA that signed the source database server's certificate.</summary>
@@ -243,6 +264,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfileSslConfi
     public bool? ClientKeySet { get; set; }
 }
 
+/// <summary>MySQL database profile.</summary>
 public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfile
 {
     /// <summary>Hostname for the MySQL connection.</summary>
@@ -266,6 +288,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecMysqlProfile
     public string Username { get; set; }
 }
 
+/// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 public partial class V1alpha1DatastreamConnectionProfileSpecOracleProfilePasswordValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -277,6 +300,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecOracleProfilePasswor
     public string Name { get; set; }
 }
 
+/// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 public partial class V1alpha1DatastreamConnectionProfileSpecOracleProfilePasswordValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -284,6 +308,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecOracleProfilePasswor
     public V1alpha1DatastreamConnectionProfileSpecOracleProfilePasswordValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary>Password for the Oracle connection.</summary>
 public partial class V1alpha1DatastreamConnectionProfileSpecOracleProfilePassword
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -295,6 +320,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecOracleProfilePasswor
     public V1alpha1DatastreamConnectionProfileSpecOracleProfilePasswordValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary>Oracle database profile.</summary>
 public partial class V1alpha1DatastreamConnectionProfileSpecOracleProfile
 {
     /// <summary>Connection string attributes.</summary>
@@ -322,6 +348,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecOracleProfile
     public string Username { get; set; }
 }
 
+/// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 public partial class V1alpha1DatastreamConnectionProfileSpecPostgresqlProfilePasswordValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -333,6 +360,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecPostgresqlProfilePas
     public string Name { get; set; }
 }
 
+/// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 public partial class V1alpha1DatastreamConnectionProfileSpecPostgresqlProfilePasswordValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -340,6 +368,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecPostgresqlProfilePas
     public V1alpha1DatastreamConnectionProfileSpecPostgresqlProfilePasswordValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary>Password for the PostgreSQL connection.</summary>
 public partial class V1alpha1DatastreamConnectionProfileSpecPostgresqlProfilePassword
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -351,6 +380,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecPostgresqlProfilePas
     public V1alpha1DatastreamConnectionProfileSpecPostgresqlProfilePasswordValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary>PostgreSQL database profile.</summary>
 public partial class V1alpha1DatastreamConnectionProfileSpecPostgresqlProfile
 {
     /// <summary>Database for the PostgreSQL connection.</summary>
@@ -374,6 +404,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecPostgresqlProfile
     public string Username { get; set; }
 }
 
+/// <summary>Private connectivity.</summary>
 public partial class V1alpha1DatastreamConnectionProfileSpecPrivateConnectivity
 {
     /// <summary>A reference to a private connection resource. Format: 'projects/{project}/locations/{location}/privateConnections/{name}'.</summary>
@@ -381,6 +412,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecPrivateConnectivity
     public string PrivateConnection { get; set; }
 }
 
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1DatastreamConnectionProfileSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -396,6 +428,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DatastreamConnectionProfileSpec
 {
     /// <summary>BigQuery warehouse profile.</summary>
@@ -443,6 +476,7 @@ public partial class V1alpha1DatastreamConnectionProfileSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DatastreamConnectionProfileStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -466,6 +500,7 @@ public partial class V1alpha1DatastreamConnectionProfileStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DatastreamConnectionProfileStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -482,6 +517,7 @@ public partial class V1alpha1DatastreamConnectionProfileStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1DatastreamConnectionProfile : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DatastreamConnectionProfileSpec>, IStatus<V1alpha1DatastreamConnectionProfileStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

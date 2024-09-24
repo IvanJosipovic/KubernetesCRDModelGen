@@ -38,6 +38,7 @@ public enum V1beta1HPCCacheNFSTargetSpecForProviderCacheNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HPCCacheNFSTargetSpecForProviderCacheNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1HPCCacheNFSTargetSpecForProviderCacheNameRefPolicy
     public V1beta1HPCCacheNFSTargetSpecForProviderCacheNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a HPCCache in storagecache to populate cacheName.</summary>
 public partial class V1beta1HPCCacheNFSTargetSpecForProviderCacheNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1HPCCacheNFSTargetSpecForProviderCacheNameSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1HPCCacheNFSTargetSpecForProviderCacheNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1HPCCacheNFSTargetSpecForProviderCacheNameSelectorPol
     public V1beta1HPCCacheNFSTargetSpecForProviderCacheNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a HPCCache in storagecache to populate cacheName.</summary>
 public partial class V1beta1HPCCacheNFSTargetSpecForProviderCacheNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1HPCCacheNFSTargetSpecForProviderCacheNameSelector
     public V1beta1HPCCacheNFSTargetSpecForProviderCacheNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HPCCacheNFSTargetSpecForProviderNamespaceJunction
 {
     /// <summary>The name of the access policy applied to this target. Defaults to default.</summary>
@@ -149,6 +154,7 @@ public enum V1beta1HPCCacheNFSTargetSpecForProviderResourceGroupNameRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HPCCacheNFSTargetSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -162,6 +168,7 @@ public partial class V1beta1HPCCacheNFSTargetSpecForProviderResourceGroupNameRef
     public V1beta1HPCCacheNFSTargetSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1HPCCacheNFSTargetSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -193,6 +200,7 @@ public enum V1beta1HPCCacheNFSTargetSpecForProviderResourceGroupNameSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1HPCCacheNFSTargetSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -206,6 +214,7 @@ public partial class V1beta1HPCCacheNFSTargetSpecForProviderResourceGroupNameSel
     public V1beta1HPCCacheNFSTargetSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1HPCCacheNFSTargetSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -221,6 +230,7 @@ public partial class V1beta1HPCCacheNFSTargetSpecForProviderResourceGroupNameSel
     public V1beta1HPCCacheNFSTargetSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HPCCacheNFSTargetSpecForProvider
 {
     /// <summary>The name HPC Cache, which the HPC Cache NFS Target will be added to. Changing this forces a new resource to be created.</summary>
@@ -288,6 +298,7 @@ public enum V1beta1HPCCacheNFSTargetSpecInitProviderCacheNameRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HPCCacheNFSTargetSpecInitProviderCacheNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -301,6 +312,7 @@ public partial class V1beta1HPCCacheNFSTargetSpecInitProviderCacheNameRefPolicy
     public V1beta1HPCCacheNFSTargetSpecInitProviderCacheNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a HPCCache in storagecache to populate cacheName.</summary>
 public partial class V1beta1HPCCacheNFSTargetSpecInitProviderCacheNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -332,6 +344,7 @@ public enum V1beta1HPCCacheNFSTargetSpecInitProviderCacheNameSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1HPCCacheNFSTargetSpecInitProviderCacheNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -345,6 +358,7 @@ public partial class V1beta1HPCCacheNFSTargetSpecInitProviderCacheNameSelectorPo
     public V1beta1HPCCacheNFSTargetSpecInitProviderCacheNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a HPCCache in storagecache to populate cacheName.</summary>
 public partial class V1beta1HPCCacheNFSTargetSpecInitProviderCacheNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -360,6 +374,7 @@ public partial class V1beta1HPCCacheNFSTargetSpecInitProviderCacheNameSelector
     public V1beta1HPCCacheNFSTargetSpecInitProviderCacheNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HPCCacheNFSTargetSpecInitProviderNamespaceJunction
 {
     /// <summary>The name of the access policy applied to this target. Defaults to default.</summary>
@@ -379,6 +394,7 @@ public partial class V1beta1HPCCacheNFSTargetSpecInitProviderNamespaceJunction
     public string? TargetPath { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1HPCCacheNFSTargetSpecInitProvider
 {
     /// <summary>The name HPC Cache, which the HPC Cache NFS Target will be added to. Changing this forces a new resource to be created.</summary>
@@ -456,6 +472,7 @@ public enum V1beta1HPCCacheNFSTargetSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HPCCacheNFSTargetSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -469,6 +486,7 @@ public partial class V1beta1HPCCacheNFSTargetSpecProviderConfigRefPolicy
     public V1beta1HPCCacheNFSTargetSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1HPCCacheNFSTargetSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -500,6 +518,7 @@ public enum V1beta1HPCCacheNFSTargetSpecPublishConnectionDetailsToConfigRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HPCCacheNFSTargetSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -513,6 +532,7 @@ public partial class V1beta1HPCCacheNFSTargetSpecPublishConnectionDetailsToConfi
     public V1beta1HPCCacheNFSTargetSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1HPCCacheNFSTargetSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -524,6 +544,7 @@ public partial class V1beta1HPCCacheNFSTargetSpecPublishConnectionDetailsToConfi
     public V1beta1HPCCacheNFSTargetSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1HPCCacheNFSTargetSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -539,6 +560,7 @@ public partial class V1beta1HPCCacheNFSTargetSpecPublishConnectionDetailsToMetad
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1HPCCacheNFSTargetSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -554,6 +576,7 @@ public partial class V1beta1HPCCacheNFSTargetSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1HPCCacheNFSTargetSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -565,6 +588,7 @@ public partial class V1beta1HPCCacheNFSTargetSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>HPCCacheNFSTargetSpec defines the desired state of HPCCacheNFSTarget</summary>
 public partial class V1beta1HPCCacheNFSTargetSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -597,6 +621,7 @@ public partial class V1beta1HPCCacheNFSTargetSpec
     public V1beta1HPCCacheNFSTargetSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HPCCacheNFSTargetStatusAtProviderNamespaceJunction
 {
     /// <summary>The name of the access policy applied to this target. Defaults to default.</summary>
@@ -616,6 +641,7 @@ public partial class V1beta1HPCCacheNFSTargetStatusAtProviderNamespaceJunction
     public string? TargetPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HPCCacheNFSTargetStatusAtProvider
 {
     /// <summary>The name HPC Cache, which the HPC Cache NFS Target will be added to. Changing this forces a new resource to be created.</summary>
@@ -651,6 +677,7 @@ public partial class V1beta1HPCCacheNFSTargetStatusAtProvider
     public double? WriteBackTimerInSeconds { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1HPCCacheNFSTargetStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -678,6 +705,7 @@ public partial class V1beta1HPCCacheNFSTargetStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>HPCCacheNFSTargetStatus defines the observed state of HPCCacheNFSTarget.</summary>
 public partial class V1beta1HPCCacheNFSTargetStatus
 {
     /// <summary></summary>
@@ -694,6 +722,7 @@ public partial class V1beta1HPCCacheNFSTargetStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>HPCCacheNFSTarget is the Schema for the HPCCacheNFSTargets API. Manages a NFS Target within a HPC Cache.</summary>
 public partial class V1beta1HPCCacheNFSTarget : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1HPCCacheNFSTargetSpec>, IStatus<V1beta1HPCCacheNFSTargetStatus>
 {
     public const string KubeApiVersion = "v1beta1";

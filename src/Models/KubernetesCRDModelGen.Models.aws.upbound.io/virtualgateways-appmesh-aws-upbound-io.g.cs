@@ -18,6 +18,7 @@ public enum V1beta1VirtualGatewaySpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClientPolicyTlsCertificateFile
 {
     /// <summary>Certificate chain for the certificate.</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClie
     public string? PrivateKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClientPolicyTlsCertificateSds
 {
     /// <summary>Name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.</summary>
@@ -36,6 +38,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClie
     public string? SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClientPolicyTlsCertificate
 {
     /// <summary>Local file certificate.</summary>
@@ -47,6 +50,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClie
     public IList<V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClientPolicyTlsCertificateSds>? Sds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch
 {
     /// <summary>Values sent must match the specified values exactly.</summary>
@@ -54,6 +58,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClie
     public IList<string>? Exact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNames
 {
     /// <summary>Criteria for determining a SAN's match.</summary>
@@ -61,6 +66,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClie
     public IList<V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch>? Match { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClientPolicyTlsValidationTrustAcm
 {
     /// <summary>One or more ACM ARNs.</summary>
@@ -68,6 +74,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClie
     public IList<string>? CertificateAuthorityArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClientPolicyTlsValidationTrustFile
 {
     /// <summary>Certificate chain for the certificate.</summary>
@@ -75,6 +82,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClie
     public string? CertificateChain { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClientPolicyTlsValidationTrustSds
 {
     /// <summary>Name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.</summary>
@@ -82,6 +90,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClie
     public string? SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClientPolicyTlsValidationTrust
 {
     /// <summary>TLS validation context trust for an AWS Certificate Manager (ACM) certificate.</summary>
@@ -97,6 +106,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClie
     public IList<V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClientPolicyTlsValidationTrustSds>? Sds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClientPolicyTlsValidation
 {
     /// <summary>SANs for a virtual gateway's listener's Transport Layer Security (TLS) validation context.</summary>
@@ -108,6 +118,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClie
     public IList<V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClientPolicyTlsValidationTrust>? Trust { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClientPolicyTls
 {
     /// <summary>Virtual gateway's client's Transport Layer Security (TLS) certificate.</summary>
@@ -127,6 +138,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClie
     public IList<V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClientPolicyTlsValidation>? Validation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClientPolicy
 {
     /// <summary>Transport Layer Security (TLS) client policy.</summary>
@@ -134,6 +146,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClie
     public IList<V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClientPolicyTls>? Tls { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaults
 {
     /// <summary>Default client policy for virtual gateway backends.</summary>
@@ -141,6 +154,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaults
     public IList<V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClientPolicy>? ClientPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerConnectionPoolGrpc
 {
     /// <summary>Maximum number of inflight requests Envoy can concurrently support across hosts in upstream cluster. Minimum value of 1.</summary>
@@ -148,6 +162,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerConnectionP
     public double? MaxRequests { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerConnectionPoolHttp
 {
     /// <summary>Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts in upstream cluster. Minimum value of 1.</summary>
@@ -159,6 +174,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerConnectionP
     public double? MaxPendingRequests { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerConnectionPoolHttp2
 {
     /// <summary>Maximum number of inflight requests Envoy can concurrently support across hosts in upstream cluster. Minimum value of 1.</summary>
@@ -166,6 +182,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerConnectionP
     public double? MaxRequests { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerConnectionPool
 {
     /// <summary>Connection pool information for gRPC listeners.</summary>
@@ -181,6 +198,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerConnectionP
     public IList<V1beta1VirtualGatewaySpecForProviderSpecListenerConnectionPoolHttp2>? Http2 { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerHealthCheck
 {
     /// <summary>Number of consecutive successful health checks that must occur before declaring listener healthy.</summary>
@@ -212,6 +230,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerHealthCheck
     public double? UnhealthyThreshold { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerPortMapping
 {
     /// <summary>Port used for the port mapping.</summary>
@@ -243,6 +262,7 @@ public enum V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertificateAcmCer
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertificateAcmCertificateArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -256,6 +276,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertific
     public V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertificateAcmCertificateArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Certificate in acm to populate certificateArn.</summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertificateAcmCertificateArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -287,6 +308,7 @@ public enum V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertificateAcmCer
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertificateAcmCertificateArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -300,6 +322,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertific
     public V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertificateAcmCertificateArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Certificate in acm to populate certificateArn.</summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertificateAcmCertificateArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -315,6 +338,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertific
     public V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertificateAcmCertificateArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertificateAcm
 {
     /// <summary>ARN for the certificate.</summary>
@@ -330,6 +354,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertific
     public V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertificateAcmCertificateArnSelector? CertificateArnSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertificateFile
 {
     /// <summary>Certificate chain for the certificate.</summary>
@@ -341,6 +366,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertific
     public string? PrivateKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertificateSds
 {
     /// <summary>Name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.</summary>
@@ -348,6 +374,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertific
     public string? SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertificate
 {
     /// <summary>TLS validation context trust for an AWS Certificate Manager (ACM) certificate.</summary>
@@ -363,6 +390,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertific
     public IList<V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertificateSds>? Sds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsValidationSubjectAlternativeNamesMatch
 {
     /// <summary>Values sent must match the specified values exactly.</summary>
@@ -370,6 +398,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsValidati
     public IList<string>? Exact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsValidationSubjectAlternativeNames
 {
     /// <summary>Criteria for determining a SAN's match.</summary>
@@ -377,6 +406,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsValidati
     public IList<V1beta1VirtualGatewaySpecForProviderSpecListenerTlsValidationSubjectAlternativeNamesMatch>? Match { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsValidationTrustFile
 {
     /// <summary>Certificate chain for the certificate.</summary>
@@ -384,6 +414,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsValidati
     public string? CertificateChain { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsValidationTrustSds
 {
     /// <summary>Name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.</summary>
@@ -391,6 +422,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsValidati
     public string? SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsValidationTrust
 {
     /// <summary>Local file certificate.</summary>
@@ -402,6 +434,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsValidati
     public IList<V1beta1VirtualGatewaySpecForProviderSpecListenerTlsValidationTrustSds>? Sds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsValidation
 {
     /// <summary>SANs for a virtual gateway's listener's Transport Layer Security (TLS) validation context.</summary>
@@ -413,6 +446,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsValidati
     public IList<V1beta1VirtualGatewaySpecForProviderSpecListenerTlsValidationTrust>? Trust { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTls
 {
     /// <summary>Virtual gateway's client's Transport Layer Security (TLS) certificate.</summary>
@@ -428,6 +462,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTls
     public IList<V1beta1VirtualGatewaySpecForProviderSpecListenerTlsValidation>? Validation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListener
 {
     /// <summary>Connection pool information for the listener.</summary>
@@ -447,6 +482,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListener
     public IList<V1beta1VirtualGatewaySpecForProviderSpecListenerTls>? Tls { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecLoggingAccessLogFileFormatJson
 {
     /// <summary>The specified key for the JSON. Must be between 1 and 100 characters in length.</summary>
@@ -458,6 +494,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecLoggingAccessLogFil
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecLoggingAccessLogFileFormat
 {
     /// <summary>The logging format for JSON.</summary>
@@ -469,6 +506,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecLoggingAccessLogFil
     public string? Text { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecLoggingAccessLogFile
 {
     /// <summary>The specified format for the logs.</summary>
@@ -480,6 +518,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecLoggingAccessLogFil
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecLoggingAccessLog
 {
     /// <summary>Local file certificate.</summary>
@@ -487,6 +526,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecLoggingAccessLog
     public IList<V1beta1VirtualGatewaySpecForProviderSpecLoggingAccessLogFile>? File { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpecLogging
 {
     /// <summary>Access log configuration for a virtual gateway.</summary>
@@ -494,6 +534,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecLogging
     public IList<V1beta1VirtualGatewaySpecForProviderSpecLoggingAccessLog>? AccessLog { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecForProviderSpec
 {
     /// <summary>Defaults for backends.</summary>
@@ -509,6 +550,7 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpec
     public IList<V1beta1VirtualGatewaySpecForProviderSpecLogging>? Logging { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecForProvider
 {
     /// <summary>Name of the service mesh in which to create the virtual gateway. Must be between 1 and 255 characters in length.</summary>
@@ -536,6 +578,7 @@ public partial class V1beta1VirtualGatewaySpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsClientPolicyTlsCertificateFile
 {
     /// <summary>Certificate chain for the certificate.</summary>
@@ -547,6 +590,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsCli
     public string? PrivateKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsClientPolicyTlsCertificateSds
 {
     /// <summary>Name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.</summary>
@@ -554,6 +598,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsCli
     public string? SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsClientPolicyTlsCertificate
 {
     /// <summary>Local file certificate.</summary>
@@ -565,6 +610,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsCli
     public IList<V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsClientPolicyTlsCertificateSds>? Sds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch
 {
     /// <summary>Values sent must match the specified values exactly.</summary>
@@ -572,6 +618,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsCli
     public IList<string>? Exact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNames
 {
     /// <summary>Criteria for determining a SAN's match.</summary>
@@ -579,6 +626,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsCli
     public IList<V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch>? Match { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsClientPolicyTlsValidationTrustAcm
 {
     /// <summary>One or more ACM ARNs.</summary>
@@ -586,6 +634,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsCli
     public IList<string>? CertificateAuthorityArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsClientPolicyTlsValidationTrustFile
 {
     /// <summary>Certificate chain for the certificate.</summary>
@@ -593,6 +642,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsCli
     public string? CertificateChain { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsClientPolicyTlsValidationTrustSds
 {
     /// <summary>Name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.</summary>
@@ -600,6 +650,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsCli
     public string? SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsClientPolicyTlsValidationTrust
 {
     /// <summary>TLS validation context trust for an AWS Certificate Manager (ACM) certificate.</summary>
@@ -615,6 +666,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsCli
     public IList<V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsClientPolicyTlsValidationTrustSds>? Sds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsClientPolicyTlsValidation
 {
     /// <summary>SANs for a virtual gateway's listener's Transport Layer Security (TLS) validation context.</summary>
@@ -626,6 +678,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsCli
     public IList<V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsClientPolicyTlsValidationTrust>? Trust { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsClientPolicyTls
 {
     /// <summary>Virtual gateway's client's Transport Layer Security (TLS) certificate.</summary>
@@ -645,6 +698,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsCli
     public IList<V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsClientPolicyTlsValidation>? Validation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsClientPolicy
 {
     /// <summary>Transport Layer Security (TLS) client policy.</summary>
@@ -652,6 +706,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsCli
     public IList<V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsClientPolicyTls>? Tls { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaults
 {
     /// <summary>Default client policy for virtual gateway backends.</summary>
@@ -659,6 +714,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaults
     public IList<V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsClientPolicy>? ClientPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerConnectionPoolGrpc
 {
     /// <summary>Maximum number of inflight requests Envoy can concurrently support across hosts in upstream cluster. Minimum value of 1.</summary>
@@ -666,6 +722,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerConnection
     public double? MaxRequests { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerConnectionPoolHttp
 {
     /// <summary>Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts in upstream cluster. Minimum value of 1.</summary>
@@ -677,6 +734,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerConnection
     public double? MaxPendingRequests { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerConnectionPoolHttp2
 {
     /// <summary>Maximum number of inflight requests Envoy can concurrently support across hosts in upstream cluster. Minimum value of 1.</summary>
@@ -684,6 +742,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerConnection
     public double? MaxRequests { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerConnectionPool
 {
     /// <summary>Connection pool information for gRPC listeners.</summary>
@@ -699,6 +758,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerConnection
     public IList<V1beta1VirtualGatewaySpecInitProviderSpecListenerConnectionPoolHttp2>? Http2 { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerHealthCheck
 {
     /// <summary>Number of consecutive successful health checks that must occur before declaring listener healthy.</summary>
@@ -730,6 +790,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerHealthChec
     public double? UnhealthyThreshold { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerPortMapping
 {
     /// <summary>Port used for the port mapping.</summary>
@@ -761,6 +822,7 @@ public enum V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertificateAcmCe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertificateAcmCertificateArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -774,6 +836,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertifi
     public V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertificateAcmCertificateArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Certificate in acm to populate certificateArn.</summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertificateAcmCertificateArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -805,6 +868,7 @@ public enum V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertificateAcmCe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertificateAcmCertificateArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -818,6 +882,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertifi
     public V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertificateAcmCertificateArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Certificate in acm to populate certificateArn.</summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertificateAcmCertificateArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -833,6 +898,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertifi
     public V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertificateAcmCertificateArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertificateAcm
 {
     /// <summary>ARN for the certificate.</summary>
@@ -848,6 +914,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertifi
     public V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertificateAcmCertificateArnSelector? CertificateArnSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertificateFile
 {
     /// <summary>Certificate chain for the certificate.</summary>
@@ -859,6 +926,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertifi
     public string? PrivateKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertificateSds
 {
     /// <summary>Name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.</summary>
@@ -866,6 +934,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertifi
     public string? SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertificate
 {
     /// <summary>TLS validation context trust for an AWS Certificate Manager (ACM) certificate.</summary>
@@ -881,6 +950,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertifi
     public IList<V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertificateSds>? Sds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsValidationSubjectAlternativeNamesMatch
 {
     /// <summary>Values sent must match the specified values exactly.</summary>
@@ -888,6 +958,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsValidat
     public IList<string>? Exact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsValidationSubjectAlternativeNames
 {
     /// <summary>Criteria for determining a SAN's match.</summary>
@@ -895,6 +966,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsValidat
     public IList<V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsValidationSubjectAlternativeNamesMatch>? Match { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsValidationTrustFile
 {
     /// <summary>Certificate chain for the certificate.</summary>
@@ -902,6 +974,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsValidat
     public string? CertificateChain { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsValidationTrustSds
 {
     /// <summary>Name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.</summary>
@@ -909,6 +982,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsValidat
     public string? SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsValidationTrust
 {
     /// <summary>Local file certificate.</summary>
@@ -920,6 +994,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsValidat
     public IList<V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsValidationTrustSds>? Sds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsValidation
 {
     /// <summary>SANs for a virtual gateway's listener's Transport Layer Security (TLS) validation context.</summary>
@@ -931,6 +1006,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsValidat
     public IList<V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsValidationTrust>? Trust { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTls
 {
     /// <summary>Virtual gateway's client's Transport Layer Security (TLS) certificate.</summary>
@@ -946,6 +1022,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTls
     public IList<V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsValidation>? Validation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListener
 {
     /// <summary>Connection pool information for the listener.</summary>
@@ -965,6 +1042,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListener
     public IList<V1beta1VirtualGatewaySpecInitProviderSpecListenerTls>? Tls { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecLoggingAccessLogFileFormatJson
 {
     /// <summary>The specified key for the JSON. Must be between 1 and 100 characters in length.</summary>
@@ -976,6 +1054,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecLoggingAccessLogFi
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecLoggingAccessLogFileFormat
 {
     /// <summary>The logging format for JSON.</summary>
@@ -987,6 +1066,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecLoggingAccessLogFi
     public string? Text { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecLoggingAccessLogFile
 {
     /// <summary>The specified format for the logs.</summary>
@@ -998,6 +1078,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecLoggingAccessLogFi
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecLoggingAccessLog
 {
     /// <summary>Local file certificate.</summary>
@@ -1005,6 +1086,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecLoggingAccessLog
     public IList<V1beta1VirtualGatewaySpecInitProviderSpecLoggingAccessLogFile>? File { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecLogging
 {
     /// <summary>Access log configuration for a virtual gateway.</summary>
@@ -1012,6 +1094,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecLogging
     public IList<V1beta1VirtualGatewaySpecInitProviderSpecLoggingAccessLog>? AccessLog { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewaySpecInitProviderSpec
 {
     /// <summary>Defaults for backends.</summary>
@@ -1027,6 +1110,7 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpec
     public IList<V1beta1VirtualGatewaySpecInitProviderSpecLogging>? Logging { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1VirtualGatewaySpecInitProvider
 {
     /// <summary>Name of the service mesh in which to create the virtual gateway. Must be between 1 and 255 characters in length.</summary>
@@ -1092,6 +1176,7 @@ public enum V1beta1VirtualGatewaySpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualGatewaySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1105,6 +1190,7 @@ public partial class V1beta1VirtualGatewaySpecProviderConfigRefPolicy
     public V1beta1VirtualGatewaySpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1VirtualGatewaySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1136,6 +1222,7 @@ public enum V1beta1VirtualGatewaySpecPublishConnectionDetailsToConfigRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualGatewaySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1149,6 +1236,7 @@ public partial class V1beta1VirtualGatewaySpecPublishConnectionDetailsToConfigRe
     public V1beta1VirtualGatewaySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1VirtualGatewaySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1160,6 +1248,7 @@ public partial class V1beta1VirtualGatewaySpecPublishConnectionDetailsToConfigRe
     public V1beta1VirtualGatewaySpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1VirtualGatewaySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1175,6 +1264,7 @@ public partial class V1beta1VirtualGatewaySpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1VirtualGatewaySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1190,6 +1280,7 @@ public partial class V1beta1VirtualGatewaySpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1VirtualGatewaySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1201,6 +1292,7 @@ public partial class V1beta1VirtualGatewaySpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>VirtualGatewaySpec defines the desired state of VirtualGateway</summary>
 public partial class V1beta1VirtualGatewaySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1233,6 +1325,7 @@ public partial class V1beta1VirtualGatewaySpec
     public V1beta1VirtualGatewaySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsClientPolicyTlsCertificateFile
 {
     /// <summary>Certificate chain for the certificate.</summary>
@@ -1244,6 +1337,7 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsCli
     public string? PrivateKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsClientPolicyTlsCertificateSds
 {
     /// <summary>Name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.</summary>
@@ -1251,6 +1345,7 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsCli
     public string? SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsClientPolicyTlsCertificate
 {
     /// <summary>Local file certificate.</summary>
@@ -1262,6 +1357,7 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsCli
     public IList<V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsClientPolicyTlsCertificateSds>? Sds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch
 {
     /// <summary>Values sent must match the specified values exactly.</summary>
@@ -1269,6 +1365,7 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsCli
     public IList<string>? Exact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNames
 {
     /// <summary>Criteria for determining a SAN's match.</summary>
@@ -1276,6 +1373,7 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsCli
     public IList<V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch>? Match { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidationTrustAcm
 {
     /// <summary>One or more ACM ARNs.</summary>
@@ -1283,6 +1381,7 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsCli
     public IList<string>? CertificateAuthorityArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidationTrustFile
 {
     /// <summary>Certificate chain for the certificate.</summary>
@@ -1290,6 +1389,7 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsCli
     public string? CertificateChain { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidationTrustSds
 {
     /// <summary>Name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.</summary>
@@ -1297,6 +1397,7 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsCli
     public string? SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidationTrust
 {
     /// <summary>TLS validation context trust for an AWS Certificate Manager (ACM) certificate.</summary>
@@ -1312,6 +1413,7 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsCli
     public IList<V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidationTrustSds>? Sds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidation
 {
     /// <summary>SANs for a virtual gateway's listener's Transport Layer Security (TLS) validation context.</summary>
@@ -1323,6 +1425,7 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsCli
     public IList<V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidationTrust>? Trust { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsClientPolicyTls
 {
     /// <summary>Virtual gateway's client's Transport Layer Security (TLS) certificate.</summary>
@@ -1342,6 +1445,7 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsCli
     public IList<V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidation>? Validation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsClientPolicy
 {
     /// <summary>Transport Layer Security (TLS) client policy.</summary>
@@ -1349,6 +1453,7 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsCli
     public IList<V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsClientPolicyTls>? Tls { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaults
 {
     /// <summary>Default client policy for virtual gateway backends.</summary>
@@ -1356,6 +1461,7 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaults
     public IList<V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsClientPolicy>? ClientPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerConnectionPoolGrpc
 {
     /// <summary>Maximum number of inflight requests Envoy can concurrently support across hosts in upstream cluster. Minimum value of 1.</summary>
@@ -1363,6 +1469,7 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerConnection
     public double? MaxRequests { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerConnectionPoolHttp
 {
     /// <summary>Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts in upstream cluster. Minimum value of 1.</summary>
@@ -1374,6 +1481,7 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerConnection
     public double? MaxPendingRequests { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerConnectionPoolHttp2
 {
     /// <summary>Maximum number of inflight requests Envoy can concurrently support across hosts in upstream cluster. Minimum value of 1.</summary>
@@ -1381,6 +1489,7 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerConnection
     public double? MaxRequests { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerConnectionPool
 {
     /// <summary>Connection pool information for gRPC listeners.</summary>
@@ -1396,6 +1505,7 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerConnection
     public IList<V1beta1VirtualGatewayStatusAtProviderSpecListenerConnectionPoolHttp2>? Http2 { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerHealthCheck
 {
     /// <summary>Number of consecutive successful health checks that must occur before declaring listener healthy.</summary>
@@ -1427,6 +1537,7 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerHealthChec
     public double? UnhealthyThreshold { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerPortMapping
 {
     /// <summary>Port used for the port mapping.</summary>
@@ -1438,6 +1549,7 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerPortMappin
     public string? Protocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsCertificateAcm
 {
     /// <summary>ARN for the certificate.</summary>
@@ -1445,6 +1557,7 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsCertifi
     public string? CertificateArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsCertificateFile
 {
     /// <summary>Certificate chain for the certificate.</summary>
@@ -1456,6 +1569,7 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsCertifi
     public string? PrivateKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsCertificateSds
 {
     /// <summary>Name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.</summary>
@@ -1463,6 +1577,7 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsCertifi
     public string? SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsCertificate
 {
     /// <summary>TLS validation context trust for an AWS Certificate Manager (ACM) certificate.</summary>
@@ -1478,6 +1593,7 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsCertifi
     public IList<V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsCertificateSds>? Sds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsValidationSubjectAlternativeNamesMatch
 {
     /// <summary>Values sent must match the specified values exactly.</summary>
@@ -1485,6 +1601,7 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsValidat
     public IList<string>? Exact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsValidationSubjectAlternativeNames
 {
     /// <summary>Criteria for determining a SAN's match.</summary>
@@ -1492,6 +1609,7 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsValidat
     public IList<V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsValidationSubjectAlternativeNamesMatch>? Match { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsValidationTrustFile
 {
     /// <summary>Certificate chain for the certificate.</summary>
@@ -1499,6 +1617,7 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsValidat
     public string? CertificateChain { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsValidationTrustSds
 {
     /// <summary>Name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.</summary>
@@ -1506,6 +1625,7 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsValidat
     public string? SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsValidationTrust
 {
     /// <summary>Local file certificate.</summary>
@@ -1517,6 +1637,7 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsValidat
     public IList<V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsValidationTrustSds>? Sds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsValidation
 {
     /// <summary>SANs for a virtual gateway's listener's Transport Layer Security (TLS) validation context.</summary>
@@ -1528,6 +1649,7 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsValidat
     public IList<V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsValidationTrust>? Trust { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTls
 {
     /// <summary>Virtual gateway's client's Transport Layer Security (TLS) certificate.</summary>
@@ -1543,6 +1665,7 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTls
     public IList<V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsValidation>? Validation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecListener
 {
     /// <summary>Connection pool information for the listener.</summary>
@@ -1562,6 +1685,7 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecListener
     public IList<V1beta1VirtualGatewayStatusAtProviderSpecListenerTls>? Tls { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecLoggingAccessLogFileFormatJson
 {
     /// <summary>The specified key for the JSON. Must be between 1 and 100 characters in length.</summary>
@@ -1573,6 +1697,7 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecLoggingAccessLogFi
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecLoggingAccessLogFileFormat
 {
     /// <summary>The logging format for JSON.</summary>
@@ -1584,6 +1709,7 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecLoggingAccessLogFi
     public string? Text { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecLoggingAccessLogFile
 {
     /// <summary>The specified format for the logs.</summary>
@@ -1595,6 +1721,7 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecLoggingAccessLogFi
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecLoggingAccessLog
 {
     /// <summary>Local file certificate.</summary>
@@ -1602,6 +1729,7 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecLoggingAccessLog
     public IList<V1beta1VirtualGatewayStatusAtProviderSpecLoggingAccessLogFile>? File { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecLogging
 {
     /// <summary>Access log configuration for a virtual gateway.</summary>
@@ -1609,6 +1737,7 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecLogging
     public IList<V1beta1VirtualGatewayStatusAtProviderSpecLoggingAccessLog>? AccessLog { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewayStatusAtProviderSpec
 {
     /// <summary>Defaults for backends.</summary>
@@ -1624,6 +1753,7 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpec
     public IList<V1beta1VirtualGatewayStatusAtProviderSpecLogging>? Logging { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualGatewayStatusAtProvider
 {
     /// <summary>ARN of the virtual gateway.</summary>
@@ -1671,6 +1801,7 @@ public partial class V1beta1VirtualGatewayStatusAtProvider
     public IDictionary<string, string>? TagsAll { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1VirtualGatewayStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1698,6 +1829,7 @@ public partial class V1beta1VirtualGatewayStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>VirtualGatewayStatus defines the observed state of VirtualGateway.</summary>
 public partial class V1beta1VirtualGatewayStatus
 {
     /// <summary></summary>
@@ -1714,6 +1846,7 @@ public partial class V1beta1VirtualGatewayStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>VirtualGateway is the Schema for the VirtualGateways API. Provides an AWS App Mesh virtual gateway resource.</summary>
 public partial class V1beta1VirtualGateway : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1VirtualGatewaySpec>, IStatus<V1beta1VirtualGatewayStatus>
 {
     public const string KubeApiVersion = "v1beta1";

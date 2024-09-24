@@ -38,6 +38,7 @@ public enum V1beta1TransitGatewayRouteTableSpecForProviderTransitGatewayIdRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TransitGatewayRouteTableSpecForProviderTransitGatewayIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1TransitGatewayRouteTableSpecForProviderTransitGatewa
     public V1beta1TransitGatewayRouteTableSpecForProviderTransitGatewayIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a TransitGateway in ec2 to populate transitGatewayId.</summary>
 public partial class V1beta1TransitGatewayRouteTableSpecForProviderTransitGatewayIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1TransitGatewayRouteTableSpecForProviderTransitGatewayIdSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TransitGatewayRouteTableSpecForProviderTransitGatewayIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1TransitGatewayRouteTableSpecForProviderTransitGatewa
     public V1beta1TransitGatewayRouteTableSpecForProviderTransitGatewayIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a TransitGateway in ec2 to populate transitGatewayId.</summary>
 public partial class V1beta1TransitGatewayRouteTableSpecForProviderTransitGatewayIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1TransitGatewayRouteTableSpecForProviderTransitGatewa
     public V1beta1TransitGatewayRouteTableSpecForProviderTransitGatewayIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TransitGatewayRouteTableSpecForProvider
 {
     /// <summary>Region is the region you'd like your resource to be created in.</summary>
@@ -153,6 +158,7 @@ public enum V1beta1TransitGatewayRouteTableSpecInitProviderTransitGatewayIdRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TransitGatewayRouteTableSpecInitProviderTransitGatewayIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -166,6 +172,7 @@ public partial class V1beta1TransitGatewayRouteTableSpecInitProviderTransitGatew
     public V1beta1TransitGatewayRouteTableSpecInitProviderTransitGatewayIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a TransitGateway in ec2 to populate transitGatewayId.</summary>
 public partial class V1beta1TransitGatewayRouteTableSpecInitProviderTransitGatewayIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -197,6 +204,7 @@ public enum V1beta1TransitGatewayRouteTableSpecInitProviderTransitGatewayIdSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TransitGatewayRouteTableSpecInitProviderTransitGatewayIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -210,6 +218,7 @@ public partial class V1beta1TransitGatewayRouteTableSpecInitProviderTransitGatew
     public V1beta1TransitGatewayRouteTableSpecInitProviderTransitGatewayIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a TransitGateway in ec2 to populate transitGatewayId.</summary>
 public partial class V1beta1TransitGatewayRouteTableSpecInitProviderTransitGatewayIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -225,6 +234,7 @@ public partial class V1beta1TransitGatewayRouteTableSpecInitProviderTransitGatew
     public V1beta1TransitGatewayRouteTableSpecInitProviderTransitGatewayIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1TransitGatewayRouteTableSpecInitProvider
 {
     /// <summary>Key-value map of resource tags.</summary>
@@ -286,6 +296,7 @@ public enum V1beta1TransitGatewayRouteTableSpecProviderConfigRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TransitGatewayRouteTableSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -299,6 +310,7 @@ public partial class V1beta1TransitGatewayRouteTableSpecProviderConfigRefPolicy
     public V1beta1TransitGatewayRouteTableSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1TransitGatewayRouteTableSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -330,6 +342,7 @@ public enum V1beta1TransitGatewayRouteTableSpecPublishConnectionDetailsToConfigR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TransitGatewayRouteTableSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -343,6 +356,7 @@ public partial class V1beta1TransitGatewayRouteTableSpecPublishConnectionDetails
     public V1beta1TransitGatewayRouteTableSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1TransitGatewayRouteTableSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -354,6 +368,7 @@ public partial class V1beta1TransitGatewayRouteTableSpecPublishConnectionDetails
     public V1beta1TransitGatewayRouteTableSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1TransitGatewayRouteTableSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -369,6 +384,7 @@ public partial class V1beta1TransitGatewayRouteTableSpecPublishConnectionDetails
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1TransitGatewayRouteTableSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -384,6 +400,7 @@ public partial class V1beta1TransitGatewayRouteTableSpecPublishConnectionDetails
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1TransitGatewayRouteTableSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -395,6 +412,7 @@ public partial class V1beta1TransitGatewayRouteTableSpecWriteConnectionSecretToR
     public string Namespace { get; set; }
 }
 
+/// <summary>TransitGatewayRouteTableSpec defines the desired state of TransitGatewayRouteTable</summary>
 public partial class V1beta1TransitGatewayRouteTableSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -427,6 +445,7 @@ public partial class V1beta1TransitGatewayRouteTableSpec
     public V1beta1TransitGatewayRouteTableSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TransitGatewayRouteTableStatusAtProvider
 {
     /// <summary>EC2 Transit Gateway Route Table Amazon Resource Name (ARN).</summary>
@@ -458,6 +477,7 @@ public partial class V1beta1TransitGatewayRouteTableStatusAtProvider
     public string? TransitGatewayId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1TransitGatewayRouteTableStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -485,6 +505,7 @@ public partial class V1beta1TransitGatewayRouteTableStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>TransitGatewayRouteTableStatus defines the observed state of TransitGatewayRouteTable.</summary>
 public partial class V1beta1TransitGatewayRouteTableStatus
 {
     /// <summary></summary>
@@ -501,6 +522,7 @@ public partial class V1beta1TransitGatewayRouteTableStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>TransitGatewayRouteTable is the Schema for the TransitGatewayRouteTables API. Manages an EC2 Transit Gateway Route Table</summary>
 public partial class V1beta1TransitGatewayRouteTable : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1TransitGatewayRouteTableSpec>, IStatus<V1beta1TransitGatewayRouteTableStatus>
 {
     public const string KubeApiVersion = "v1beta1";

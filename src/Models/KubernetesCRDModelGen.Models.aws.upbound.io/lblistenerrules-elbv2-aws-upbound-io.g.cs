@@ -38,6 +38,7 @@ public enum V1beta1LBListenerRuleSpecForProviderActionAuthenticateCognitoUserPoo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LBListenerRuleSpecForProviderActionAuthenticateCognitoUserPoolArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1LBListenerRuleSpecForProviderActionAuthenticateCogni
     public V1beta1LBListenerRuleSpecForProviderActionAuthenticateCognitoUserPoolArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserPool in cognitoidp to populate userPoolArn.</summary>
 public partial class V1beta1LBListenerRuleSpecForProviderActionAuthenticateCognitoUserPoolArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1LBListenerRuleSpecForProviderActionAuthenticateCognitoUserPoo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LBListenerRuleSpecForProviderActionAuthenticateCognitoUserPoolArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1LBListenerRuleSpecForProviderActionAuthenticateCogni
     public V1beta1LBListenerRuleSpecForProviderActionAuthenticateCognitoUserPoolArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserPool in cognitoidp to populate userPoolArn.</summary>
 public partial class V1beta1LBListenerRuleSpecForProviderActionAuthenticateCognitoUserPoolArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1LBListenerRuleSpecForProviderActionAuthenticateCognitoUserPoo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LBListenerRuleSpecForProviderActionAuthenticateCognitoUserPoolClientIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1LBListenerRuleSpecForProviderActionAuthenticateCogni
     public V1beta1LBListenerRuleSpecForProviderActionAuthenticateCognitoUserPoolClientIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserPoolClient in cognitoidp to populate userPoolClientId.</summary>
 public partial class V1beta1LBListenerRuleSpecForProviderActionAuthenticateCognitoUserPoolClientIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1LBListenerRuleSpecForProviderActionAuthenticateCognitoUserPoo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LBListenerRuleSpecForProviderActionAuthenticateCognitoUserPoolClientIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1LBListenerRuleSpecForProviderActionAuthenticateCogni
     public V1beta1LBListenerRuleSpecForProviderActionAuthenticateCognitoUserPoolClientIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserPoolClient in cognitoidp to populate userPoolClientId.</summary>
 public partial class V1beta1LBListenerRuleSpecForProviderActionAuthenticateCognitoUserPoolClientIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1LBListenerRuleSpecForProviderActionAuthenticateCognitoUserPoo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LBListenerRuleSpecForProviderActionAuthenticateCognitoUserPoolDomainRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1LBListenerRuleSpecForProviderActionAuthenticateCogni
     public V1beta1LBListenerRuleSpecForProviderActionAuthenticateCognitoUserPoolDomainRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserPoolDomain in cognitoidp to populate userPoolDomain.</summary>
 public partial class V1beta1LBListenerRuleSpecForProviderActionAuthenticateCognitoUserPoolDomainRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1LBListenerRuleSpecForProviderActionAuthenticateCognitoUserPoo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LBListenerRuleSpecForProviderActionAuthenticateCognitoUserPoolDomainSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1LBListenerRuleSpecForProviderActionAuthenticateCogni
     public V1beta1LBListenerRuleSpecForProviderActionAuthenticateCognitoUserPoolDomainSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserPoolDomain in cognitoidp to populate userPoolDomain.</summary>
 public partial class V1beta1LBListenerRuleSpecForProviderActionAuthenticateCognitoUserPoolDomainSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1LBListenerRuleSpecForProviderActionAuthenticateCogni
     public V1beta1LBListenerRuleSpecForProviderActionAuthenticateCognitoUserPoolDomainSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleSpecForProviderActionAuthenticateCognito
 {
     /// <summary>The query parameters to include in the redirect request to the authorization endpoint. Max: 10.</summary>
@@ -353,6 +366,7 @@ public partial class V1beta1LBListenerRuleSpecForProviderActionAuthenticateCogni
     public V1beta1LBListenerRuleSpecForProviderActionAuthenticateCognitoUserPoolDomainSelector? UserPoolDomainSelector { get; set; }
 }
 
+/// <summary>The OAuth 2.0 client secret.</summary>
 public partial class V1beta1LBListenerRuleSpecForProviderActionAuthenticateOidcClientSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -368,6 +382,7 @@ public partial class V1beta1LBListenerRuleSpecForProviderActionAuthenticateOidcC
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleSpecForProviderActionAuthenticateOidc
 {
     /// <summary>The query parameters to include in the redirect request to the authorization endpoint. Max: 10.</summary>
@@ -415,6 +430,7 @@ public partial class V1beta1LBListenerRuleSpecForProviderActionAuthenticateOidc
     public string? UserInfoEndpoint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleSpecForProviderActionFixedResponse
 {
     /// <summary>The content type. Valid values are text/plain, text/css, text/html, application/javascript and application/json.</summary>
@@ -430,6 +446,7 @@ public partial class V1beta1LBListenerRuleSpecForProviderActionFixedResponse
     public string? StatusCode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleSpecForProviderActionForwardStickiness
 {
     /// <summary>The time period, in seconds, during which requests from a client should be routed to the same target group. The range is 1-604800 seconds (7 days).</summary>
@@ -461,6 +478,7 @@ public enum V1beta1LBListenerRuleSpecForProviderActionForwardTargetGroupArnRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LBListenerRuleSpecForProviderActionForwardTargetGroupArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -474,6 +492,7 @@ public partial class V1beta1LBListenerRuleSpecForProviderActionForwardTargetGrou
     public V1beta1LBListenerRuleSpecForProviderActionForwardTargetGroupArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LBTargetGroup in elbv2 to populate arn.</summary>
 public partial class V1beta1LBListenerRuleSpecForProviderActionForwardTargetGroupArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -505,6 +524,7 @@ public enum V1beta1LBListenerRuleSpecForProviderActionForwardTargetGroupArnSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LBListenerRuleSpecForProviderActionForwardTargetGroupArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -518,6 +538,7 @@ public partial class V1beta1LBListenerRuleSpecForProviderActionForwardTargetGrou
     public V1beta1LBListenerRuleSpecForProviderActionForwardTargetGroupArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LBTargetGroup in elbv2 to populate arn.</summary>
 public partial class V1beta1LBListenerRuleSpecForProviderActionForwardTargetGroupArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -533,6 +554,7 @@ public partial class V1beta1LBListenerRuleSpecForProviderActionForwardTargetGrou
     public V1beta1LBListenerRuleSpecForProviderActionForwardTargetGroupArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleSpecForProviderActionForwardTargetGroup
 {
     /// <summary>The Amazon Resource Name (ARN) of the target group.</summary>
@@ -552,6 +574,7 @@ public partial class V1beta1LBListenerRuleSpecForProviderActionForwardTargetGrou
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleSpecForProviderActionForward
 {
     /// <summary>The target group stickiness for the rule.</summary>
@@ -563,6 +586,7 @@ public partial class V1beta1LBListenerRuleSpecForProviderActionForward
     public IList<V1beta1LBListenerRuleSpecForProviderActionForwardTargetGroup>? TargetGroup { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleSpecForProviderActionRedirect
 {
     /// <summary>The hostname. This component is not percent-encoded. The hostname can contain #{host}. Defaults to #{host}.</summary>
@@ -610,6 +634,7 @@ public enum V1beta1LBListenerRuleSpecForProviderActionTargetGroupArnRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LBListenerRuleSpecForProviderActionTargetGroupArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -623,6 +648,7 @@ public partial class V1beta1LBListenerRuleSpecForProviderActionTargetGroupArnRef
     public V1beta1LBListenerRuleSpecForProviderActionTargetGroupArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LBTargetGroup in elbv2 to populate targetGroupArn.</summary>
 public partial class V1beta1LBListenerRuleSpecForProviderActionTargetGroupArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -654,6 +680,7 @@ public enum V1beta1LBListenerRuleSpecForProviderActionTargetGroupArnSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LBListenerRuleSpecForProviderActionTargetGroupArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -667,6 +694,7 @@ public partial class V1beta1LBListenerRuleSpecForProviderActionTargetGroupArnSel
     public V1beta1LBListenerRuleSpecForProviderActionTargetGroupArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LBTargetGroup in elbv2 to populate targetGroupArn.</summary>
 public partial class V1beta1LBListenerRuleSpecForProviderActionTargetGroupArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -682,6 +710,7 @@ public partial class V1beta1LBListenerRuleSpecForProviderActionTargetGroupArnSel
     public V1beta1LBListenerRuleSpecForProviderActionTargetGroupArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleSpecForProviderAction
 {
     /// <summary>Information for creating an authenticate action using Cognito. Required if type is authenticate-cognito.</summary>
@@ -725,6 +754,7 @@ public partial class V1beta1LBListenerRuleSpecForProviderAction
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleSpecForProviderConditionHostHeader
 {
     /// <summary>Query string pairs or values to match. Query String Value blocks documented below. Multiple values blocks can be specified, see example above. Maximum size of each string is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). To search for a literal '*' or '?' character in a query string, escape the character with a backslash (\). Only one pair needs to match for the condition to be satisfied.</summary>
@@ -732,6 +762,7 @@ public partial class V1beta1LBListenerRuleSpecForProviderConditionHostHeader
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleSpecForProviderConditionHttpHeader
 {
     /// <summary>Name of HTTP header to search. The maximum size is 40 characters. Comparison is case insensitive. Only RFC7240 characters are supported. Wildcards are not supported. You cannot use HTTP header condition to specify the host header, use a host-header condition instead.</summary>
@@ -743,6 +774,7 @@ public partial class V1beta1LBListenerRuleSpecForProviderConditionHttpHeader
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleSpecForProviderConditionHttpRequestMethod
 {
     /// <summary>Query string pairs or values to match. Query String Value blocks documented below. Multiple values blocks can be specified, see example above. Maximum size of each string is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). To search for a literal '*' or '?' character in a query string, escape the character with a backslash (\). Only one pair needs to match for the condition to be satisfied.</summary>
@@ -750,6 +782,7 @@ public partial class V1beta1LBListenerRuleSpecForProviderConditionHttpRequestMet
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleSpecForProviderConditionPathPattern
 {
     /// <summary>Query string pairs or values to match. Query String Value blocks documented below. Multiple values blocks can be specified, see example above. Maximum size of each string is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). To search for a literal '*' or '?' character in a query string, escape the character with a backslash (\). Only one pair needs to match for the condition to be satisfied.</summary>
@@ -757,6 +790,7 @@ public partial class V1beta1LBListenerRuleSpecForProviderConditionPathPattern
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleSpecForProviderConditionQueryString
 {
     /// <summary>Query string key pattern to match.</summary>
@@ -768,6 +802,7 @@ public partial class V1beta1LBListenerRuleSpecForProviderConditionQueryString
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleSpecForProviderConditionSourceIp
 {
     /// <summary>Query string pairs or values to match. Query String Value blocks documented below. Multiple values blocks can be specified, see example above. Maximum size of each string is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). To search for a literal '*' or '?' character in a query string, escape the character with a backslash (\). Only one pair needs to match for the condition to be satisfied.</summary>
@@ -775,6 +810,7 @@ public partial class V1beta1LBListenerRuleSpecForProviderConditionSourceIp
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleSpecForProviderCondition
 {
     /// <summary>Contains a single values item which is a list of host header patterns to match. The maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied.</summary>
@@ -822,6 +858,7 @@ public enum V1beta1LBListenerRuleSpecForProviderListenerArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LBListenerRuleSpecForProviderListenerArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -835,6 +872,7 @@ public partial class V1beta1LBListenerRuleSpecForProviderListenerArnRefPolicy
     public V1beta1LBListenerRuleSpecForProviderListenerArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LBListener in elbv2 to populate listenerArn.</summary>
 public partial class V1beta1LBListenerRuleSpecForProviderListenerArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -866,6 +904,7 @@ public enum V1beta1LBListenerRuleSpecForProviderListenerArnSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LBListenerRuleSpecForProviderListenerArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -879,6 +918,7 @@ public partial class V1beta1LBListenerRuleSpecForProviderListenerArnSelectorPoli
     public V1beta1LBListenerRuleSpecForProviderListenerArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LBListener in elbv2 to populate listenerArn.</summary>
 public partial class V1beta1LBListenerRuleSpecForProviderListenerArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -894,6 +934,7 @@ public partial class V1beta1LBListenerRuleSpecForProviderListenerArnSelector
     public V1beta1LBListenerRuleSpecForProviderListenerArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleSpecForProvider
 {
     /// <summary>An Action block. Action blocks are documented below.</summary>
@@ -949,6 +990,7 @@ public enum V1beta1LBListenerRuleSpecInitProviderActionAuthenticateCognitoUserPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderActionAuthenticateCognitoUserPoolArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -962,6 +1004,7 @@ public partial class V1beta1LBListenerRuleSpecInitProviderActionAuthenticateCogn
     public V1beta1LBListenerRuleSpecInitProviderActionAuthenticateCognitoUserPoolArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserPool in cognitoidp to populate userPoolArn.</summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderActionAuthenticateCognitoUserPoolArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -993,6 +1036,7 @@ public enum V1beta1LBListenerRuleSpecInitProviderActionAuthenticateCognitoUserPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderActionAuthenticateCognitoUserPoolArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1006,6 +1050,7 @@ public partial class V1beta1LBListenerRuleSpecInitProviderActionAuthenticateCogn
     public V1beta1LBListenerRuleSpecInitProviderActionAuthenticateCognitoUserPoolArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserPool in cognitoidp to populate userPoolArn.</summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderActionAuthenticateCognitoUserPoolArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1041,6 +1086,7 @@ public enum V1beta1LBListenerRuleSpecInitProviderActionAuthenticateCognitoUserPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderActionAuthenticateCognitoUserPoolClientIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1054,6 +1100,7 @@ public partial class V1beta1LBListenerRuleSpecInitProviderActionAuthenticateCogn
     public V1beta1LBListenerRuleSpecInitProviderActionAuthenticateCognitoUserPoolClientIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserPoolClient in cognitoidp to populate userPoolClientId.</summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderActionAuthenticateCognitoUserPoolClientIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1085,6 +1132,7 @@ public enum V1beta1LBListenerRuleSpecInitProviderActionAuthenticateCognitoUserPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderActionAuthenticateCognitoUserPoolClientIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1098,6 +1146,7 @@ public partial class V1beta1LBListenerRuleSpecInitProviderActionAuthenticateCogn
     public V1beta1LBListenerRuleSpecInitProviderActionAuthenticateCognitoUserPoolClientIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserPoolClient in cognitoidp to populate userPoolClientId.</summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderActionAuthenticateCognitoUserPoolClientIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1133,6 +1182,7 @@ public enum V1beta1LBListenerRuleSpecInitProviderActionAuthenticateCognitoUserPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderActionAuthenticateCognitoUserPoolDomainRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1146,6 +1196,7 @@ public partial class V1beta1LBListenerRuleSpecInitProviderActionAuthenticateCogn
     public V1beta1LBListenerRuleSpecInitProviderActionAuthenticateCognitoUserPoolDomainRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserPoolDomain in cognitoidp to populate userPoolDomain.</summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderActionAuthenticateCognitoUserPoolDomainRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1177,6 +1228,7 @@ public enum V1beta1LBListenerRuleSpecInitProviderActionAuthenticateCognitoUserPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderActionAuthenticateCognitoUserPoolDomainSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1190,6 +1242,7 @@ public partial class V1beta1LBListenerRuleSpecInitProviderActionAuthenticateCogn
     public V1beta1LBListenerRuleSpecInitProviderActionAuthenticateCognitoUserPoolDomainSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserPoolDomain in cognitoidp to populate userPoolDomain.</summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderActionAuthenticateCognitoUserPoolDomainSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1205,6 +1258,7 @@ public partial class V1beta1LBListenerRuleSpecInitProviderActionAuthenticateCogn
     public V1beta1LBListenerRuleSpecInitProviderActionAuthenticateCognitoUserPoolDomainSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderActionAuthenticateCognito
 {
     /// <summary>The query parameters to include in the redirect request to the authorization endpoint. Max: 10.</summary>
@@ -1264,6 +1318,7 @@ public partial class V1beta1LBListenerRuleSpecInitProviderActionAuthenticateCogn
     public V1beta1LBListenerRuleSpecInitProviderActionAuthenticateCognitoUserPoolDomainSelector? UserPoolDomainSelector { get; set; }
 }
 
+/// <summary>The OAuth 2.0 client secret.</summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderActionAuthenticateOidcClientSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1279,6 +1334,7 @@ public partial class V1beta1LBListenerRuleSpecInitProviderActionAuthenticateOidc
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderActionAuthenticateOidc
 {
     /// <summary>The query parameters to include in the redirect request to the authorization endpoint. Max: 10.</summary>
@@ -1326,6 +1382,7 @@ public partial class V1beta1LBListenerRuleSpecInitProviderActionAuthenticateOidc
     public string? UserInfoEndpoint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderActionFixedResponse
 {
     /// <summary>The content type. Valid values are text/plain, text/css, text/html, application/javascript and application/json.</summary>
@@ -1341,6 +1398,7 @@ public partial class V1beta1LBListenerRuleSpecInitProviderActionFixedResponse
     public string? StatusCode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderActionForwardStickiness
 {
     /// <summary>The time period, in seconds, during which requests from a client should be routed to the same target group. The range is 1-604800 seconds (7 days).</summary>
@@ -1372,6 +1430,7 @@ public enum V1beta1LBListenerRuleSpecInitProviderActionForwardTargetGroupArnRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderActionForwardTargetGroupArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1385,6 +1444,7 @@ public partial class V1beta1LBListenerRuleSpecInitProviderActionForwardTargetGro
     public V1beta1LBListenerRuleSpecInitProviderActionForwardTargetGroupArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LBTargetGroup in elbv2 to populate arn.</summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderActionForwardTargetGroupArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1416,6 +1476,7 @@ public enum V1beta1LBListenerRuleSpecInitProviderActionForwardTargetGroupArnSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderActionForwardTargetGroupArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1429,6 +1490,7 @@ public partial class V1beta1LBListenerRuleSpecInitProviderActionForwardTargetGro
     public V1beta1LBListenerRuleSpecInitProviderActionForwardTargetGroupArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LBTargetGroup in elbv2 to populate arn.</summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderActionForwardTargetGroupArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1444,6 +1506,7 @@ public partial class V1beta1LBListenerRuleSpecInitProviderActionForwardTargetGro
     public V1beta1LBListenerRuleSpecInitProviderActionForwardTargetGroupArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderActionForwardTargetGroup
 {
     /// <summary>The Amazon Resource Name (ARN) of the target group.</summary>
@@ -1463,6 +1526,7 @@ public partial class V1beta1LBListenerRuleSpecInitProviderActionForwardTargetGro
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderActionForward
 {
     /// <summary>The target group stickiness for the rule.</summary>
@@ -1474,6 +1538,7 @@ public partial class V1beta1LBListenerRuleSpecInitProviderActionForward
     public IList<V1beta1LBListenerRuleSpecInitProviderActionForwardTargetGroup>? TargetGroup { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderActionRedirect
 {
     /// <summary>The hostname. This component is not percent-encoded. The hostname can contain #{host}. Defaults to #{host}.</summary>
@@ -1521,6 +1586,7 @@ public enum V1beta1LBListenerRuleSpecInitProviderActionTargetGroupArnRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderActionTargetGroupArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1534,6 +1600,7 @@ public partial class V1beta1LBListenerRuleSpecInitProviderActionTargetGroupArnRe
     public V1beta1LBListenerRuleSpecInitProviderActionTargetGroupArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LBTargetGroup in elbv2 to populate targetGroupArn.</summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderActionTargetGroupArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1565,6 +1632,7 @@ public enum V1beta1LBListenerRuleSpecInitProviderActionTargetGroupArnSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderActionTargetGroupArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1578,6 +1646,7 @@ public partial class V1beta1LBListenerRuleSpecInitProviderActionTargetGroupArnSe
     public V1beta1LBListenerRuleSpecInitProviderActionTargetGroupArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LBTargetGroup in elbv2 to populate targetGroupArn.</summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderActionTargetGroupArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1593,6 +1662,7 @@ public partial class V1beta1LBListenerRuleSpecInitProviderActionTargetGroupArnSe
     public V1beta1LBListenerRuleSpecInitProviderActionTargetGroupArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderAction
 {
     /// <summary>Information for creating an authenticate action using Cognito. Required if type is authenticate-cognito.</summary>
@@ -1636,6 +1706,7 @@ public partial class V1beta1LBListenerRuleSpecInitProviderAction
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderConditionHostHeader
 {
     /// <summary>Query string pairs or values to match. Query String Value blocks documented below. Multiple values blocks can be specified, see example above. Maximum size of each string is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). To search for a literal '*' or '?' character in a query string, escape the character with a backslash (\). Only one pair needs to match for the condition to be satisfied.</summary>
@@ -1643,6 +1714,7 @@ public partial class V1beta1LBListenerRuleSpecInitProviderConditionHostHeader
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderConditionHttpHeader
 {
     /// <summary>Name of HTTP header to search. The maximum size is 40 characters. Comparison is case insensitive. Only RFC7240 characters are supported. Wildcards are not supported. You cannot use HTTP header condition to specify the host header, use a host-header condition instead.</summary>
@@ -1654,6 +1726,7 @@ public partial class V1beta1LBListenerRuleSpecInitProviderConditionHttpHeader
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderConditionHttpRequestMethod
 {
     /// <summary>Query string pairs or values to match. Query String Value blocks documented below. Multiple values blocks can be specified, see example above. Maximum size of each string is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). To search for a literal '*' or '?' character in a query string, escape the character with a backslash (\). Only one pair needs to match for the condition to be satisfied.</summary>
@@ -1661,6 +1734,7 @@ public partial class V1beta1LBListenerRuleSpecInitProviderConditionHttpRequestMe
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderConditionPathPattern
 {
     /// <summary>Query string pairs or values to match. Query String Value blocks documented below. Multiple values blocks can be specified, see example above. Maximum size of each string is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). To search for a literal '*' or '?' character in a query string, escape the character with a backslash (\). Only one pair needs to match for the condition to be satisfied.</summary>
@@ -1668,6 +1742,7 @@ public partial class V1beta1LBListenerRuleSpecInitProviderConditionPathPattern
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderConditionQueryString
 {
     /// <summary>Query string key pattern to match.</summary>
@@ -1679,6 +1754,7 @@ public partial class V1beta1LBListenerRuleSpecInitProviderConditionQueryString
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderConditionSourceIp
 {
     /// <summary>Query string pairs or values to match. Query String Value blocks documented below. Multiple values blocks can be specified, see example above. Maximum size of each string is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). To search for a literal '*' or '?' character in a query string, escape the character with a backslash (\). Only one pair needs to match for the condition to be satisfied.</summary>
@@ -1686,6 +1762,7 @@ public partial class V1beta1LBListenerRuleSpecInitProviderConditionSourceIp
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderCondition
 {
     /// <summary>Contains a single values item which is a list of host header patterns to match. The maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied.</summary>
@@ -1733,6 +1810,7 @@ public enum V1beta1LBListenerRuleSpecInitProviderListenerArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderListenerArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1746,6 +1824,7 @@ public partial class V1beta1LBListenerRuleSpecInitProviderListenerArnRefPolicy
     public V1beta1LBListenerRuleSpecInitProviderListenerArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LBListener in elbv2 to populate listenerArn.</summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderListenerArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1777,6 +1856,7 @@ public enum V1beta1LBListenerRuleSpecInitProviderListenerArnSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderListenerArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1790,6 +1870,7 @@ public partial class V1beta1LBListenerRuleSpecInitProviderListenerArnSelectorPol
     public V1beta1LBListenerRuleSpecInitProviderListenerArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LBListener in elbv2 to populate listenerArn.</summary>
 public partial class V1beta1LBListenerRuleSpecInitProviderListenerArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1805,6 +1886,7 @@ public partial class V1beta1LBListenerRuleSpecInitProviderListenerArnSelector
     public V1beta1LBListenerRuleSpecInitProviderListenerArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1LBListenerRuleSpecInitProvider
 {
     /// <summary>An Action block. Action blocks are documented below.</summary>
@@ -1878,6 +1960,7 @@ public enum V1beta1LBListenerRuleSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LBListenerRuleSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1891,6 +1974,7 @@ public partial class V1beta1LBListenerRuleSpecProviderConfigRefPolicy
     public V1beta1LBListenerRuleSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1LBListenerRuleSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1922,6 +2006,7 @@ public enum V1beta1LBListenerRuleSpecPublishConnectionDetailsToConfigRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LBListenerRuleSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1935,6 +2020,7 @@ public partial class V1beta1LBListenerRuleSpecPublishConnectionDetailsToConfigRe
     public V1beta1LBListenerRuleSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1LBListenerRuleSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1946,6 +2032,7 @@ public partial class V1beta1LBListenerRuleSpecPublishConnectionDetailsToConfigRe
     public V1beta1LBListenerRuleSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1LBListenerRuleSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1961,6 +2048,7 @@ public partial class V1beta1LBListenerRuleSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1LBListenerRuleSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1976,6 +2064,7 @@ public partial class V1beta1LBListenerRuleSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1LBListenerRuleSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1987,6 +2076,7 @@ public partial class V1beta1LBListenerRuleSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>LBListenerRuleSpec defines the desired state of LBListenerRule</summary>
 public partial class V1beta1LBListenerRuleSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -2019,6 +2109,7 @@ public partial class V1beta1LBListenerRuleSpec
     public V1beta1LBListenerRuleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleStatusAtProviderActionAuthenticateCognito
 {
     /// <summary>The query parameters to include in the redirect request to the authorization endpoint. Max: 10.</summary>
@@ -2054,6 +2145,7 @@ public partial class V1beta1LBListenerRuleStatusAtProviderActionAuthenticateCogn
     public string? UserPoolDomain { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleStatusAtProviderActionAuthenticateOidc
 {
     /// <summary>The query parameters to include in the redirect request to the authorization endpoint. Max: 10.</summary>
@@ -2097,6 +2189,7 @@ public partial class V1beta1LBListenerRuleStatusAtProviderActionAuthenticateOidc
     public string? UserInfoEndpoint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleStatusAtProviderActionFixedResponse
 {
     /// <summary>The content type. Valid values are text/plain, text/css, text/html, application/javascript and application/json.</summary>
@@ -2112,6 +2205,7 @@ public partial class V1beta1LBListenerRuleStatusAtProviderActionFixedResponse
     public string? StatusCode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleStatusAtProviderActionForwardStickiness
 {
     /// <summary>The time period, in seconds, during which requests from a client should be routed to the same target group. The range is 1-604800 seconds (7 days).</summary>
@@ -2123,6 +2217,7 @@ public partial class V1beta1LBListenerRuleStatusAtProviderActionForwardStickines
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleStatusAtProviderActionForwardTargetGroup
 {
     /// <summary>The Amazon Resource Name (ARN) of the target group.</summary>
@@ -2134,6 +2229,7 @@ public partial class V1beta1LBListenerRuleStatusAtProviderActionForwardTargetGro
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleStatusAtProviderActionForward
 {
     /// <summary>The target group stickiness for the rule.</summary>
@@ -2145,6 +2241,7 @@ public partial class V1beta1LBListenerRuleStatusAtProviderActionForward
     public IList<V1beta1LBListenerRuleStatusAtProviderActionForwardTargetGroup>? TargetGroup { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleStatusAtProviderActionRedirect
 {
     /// <summary>The hostname. This component is not percent-encoded. The hostname can contain #{host}. Defaults to #{host}.</summary>
@@ -2172,6 +2269,7 @@ public partial class V1beta1LBListenerRuleStatusAtProviderActionRedirect
     public string? StatusCode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleStatusAtProviderAction
 {
     /// <summary>Information for creating an authenticate action using Cognito. Required if type is authenticate-cognito.</summary>
@@ -2207,6 +2305,7 @@ public partial class V1beta1LBListenerRuleStatusAtProviderAction
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleStatusAtProviderConditionHostHeader
 {
     /// <summary>Query string pairs or values to match. Query String Value blocks documented below. Multiple values blocks can be specified, see example above. Maximum size of each string is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). To search for a literal '*' or '?' character in a query string, escape the character with a backslash (\). Only one pair needs to match for the condition to be satisfied.</summary>
@@ -2214,6 +2313,7 @@ public partial class V1beta1LBListenerRuleStatusAtProviderConditionHostHeader
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleStatusAtProviderConditionHttpHeader
 {
     /// <summary>Name of HTTP header to search. The maximum size is 40 characters. Comparison is case insensitive. Only RFC7240 characters are supported. Wildcards are not supported. You cannot use HTTP header condition to specify the host header, use a host-header condition instead.</summary>
@@ -2225,6 +2325,7 @@ public partial class V1beta1LBListenerRuleStatusAtProviderConditionHttpHeader
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleStatusAtProviderConditionHttpRequestMethod
 {
     /// <summary>Query string pairs or values to match. Query String Value blocks documented below. Multiple values blocks can be specified, see example above. Maximum size of each string is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). To search for a literal '*' or '?' character in a query string, escape the character with a backslash (\). Only one pair needs to match for the condition to be satisfied.</summary>
@@ -2232,6 +2333,7 @@ public partial class V1beta1LBListenerRuleStatusAtProviderConditionHttpRequestMe
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleStatusAtProviderConditionPathPattern
 {
     /// <summary>Query string pairs or values to match. Query String Value blocks documented below. Multiple values blocks can be specified, see example above. Maximum size of each string is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). To search for a literal '*' or '?' character in a query string, escape the character with a backslash (\). Only one pair needs to match for the condition to be satisfied.</summary>
@@ -2239,6 +2341,7 @@ public partial class V1beta1LBListenerRuleStatusAtProviderConditionPathPattern
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleStatusAtProviderConditionQueryString
 {
     /// <summary>Query string key pattern to match.</summary>
@@ -2250,6 +2353,7 @@ public partial class V1beta1LBListenerRuleStatusAtProviderConditionQueryString
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleStatusAtProviderConditionSourceIp
 {
     /// <summary>Query string pairs or values to match. Query String Value blocks documented below. Multiple values blocks can be specified, see example above. Maximum size of each string is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). To search for a literal '*' or '?' character in a query string, escape the character with a backslash (\). Only one pair needs to match for the condition to be satisfied.</summary>
@@ -2257,6 +2361,7 @@ public partial class V1beta1LBListenerRuleStatusAtProviderConditionSourceIp
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleStatusAtProviderCondition
 {
     /// <summary>Contains a single values item which is a list of host header patterns to match. The maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied.</summary>
@@ -2284,6 +2389,7 @@ public partial class V1beta1LBListenerRuleStatusAtProviderCondition
     public IList<V1beta1LBListenerRuleStatusAtProviderConditionSourceIp>? SourceIp { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBListenerRuleStatusAtProvider
 {
     /// <summary>An Action block. Action blocks are documented below.</summary>
@@ -2319,6 +2425,7 @@ public partial class V1beta1LBListenerRuleStatusAtProvider
     public IDictionary<string, string>? TagsAll { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1LBListenerRuleStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2346,6 +2453,7 @@ public partial class V1beta1LBListenerRuleStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>LBListenerRuleStatus defines the observed state of LBListenerRule.</summary>
 public partial class V1beta1LBListenerRuleStatus
 {
     /// <summary></summary>
@@ -2362,6 +2470,7 @@ public partial class V1beta1LBListenerRuleStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>LBListenerRule is the Schema for the LBListenerRules API. Provides a Load Balancer Listener Rule resource.</summary>
 public partial class V1beta1LBListenerRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LBListenerRuleSpec>, IStatus<V1beta1LBListenerRuleStatus>
 {
     public const string KubeApiVersion = "v1beta1";

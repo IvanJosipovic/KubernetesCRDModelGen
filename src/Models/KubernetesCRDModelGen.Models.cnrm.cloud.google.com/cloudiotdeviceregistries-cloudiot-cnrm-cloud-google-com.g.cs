@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudiot.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1alpha1CloudIOTDeviceRegistrySpecCredentials
 {
     /// <summary>A public key certificate format and data.</summary>
@@ -15,6 +16,7 @@ public partial class V1alpha1CloudIOTDeviceRegistrySpecCredentials
     public JsonNode PublicKeyCertificate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1CloudIOTDeviceRegistrySpecEventNotificationConfigs
 {
     /// <summary>PubSub topic name to publish device events.</summary>
@@ -26,6 +28,7 @@ public partial class V1alpha1CloudIOTDeviceRegistrySpecEventNotificationConfigs
     public string? SubfolderMatches { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1CloudIOTDeviceRegistrySpec
 {
     /// <summary>List of public key certificates to authenticate devices.</summary>
@@ -65,6 +68,7 @@ public partial class V1alpha1CloudIOTDeviceRegistrySpec
     public JsonNode? StateNotificationConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1CloudIOTDeviceRegistryStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -88,6 +92,7 @@ public partial class V1alpha1CloudIOTDeviceRegistryStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1CloudIOTDeviceRegistryStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -100,6 +105,7 @@ public partial class V1alpha1CloudIOTDeviceRegistryStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1CloudIOTDeviceRegistry : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1CloudIOTDeviceRegistrySpec>, IStatus<V1alpha1CloudIOTDeviceRegistryStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

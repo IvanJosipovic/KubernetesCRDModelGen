@@ -18,6 +18,7 @@ public enum V1beta1RegionNetworkEndpointGroupSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderAppEngine
 {
     /// <summary>Optional serving service. The service name must be 1-63 characters long, and comply with RFC1035. Example value: "default", "my-service".</summary>
@@ -53,6 +54,7 @@ public enum V1beta1RegionNetworkEndpointGroupSpecForProviderCloudFunctionFunctio
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderCloudFunctionFunctionRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -66,6 +68,7 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderCloudFuncti
     public V1beta1RegionNetworkEndpointGroupSpecForProviderCloudFunctionFunctionRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in cloudfunctions to populate function.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderCloudFunctionFunctionRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -97,6 +100,7 @@ public enum V1beta1RegionNetworkEndpointGroupSpecForProviderCloudFunctionFunctio
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderCloudFunctionFunctionSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderCloudFuncti
     public V1beta1RegionNetworkEndpointGroupSpecForProviderCloudFunctionFunctionSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in cloudfunctions to populate function.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderCloudFunctionFunctionSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderCloudFuncti
     public V1beta1RegionNetworkEndpointGroupSpecForProviderCloudFunctionFunctionSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderCloudFunction
 {
     /// <summary>A user-defined name of the Cloud Function. The function name is case-sensitive and must be 1-63 characters long. Example value: "func1".</summary>
@@ -164,6 +170,7 @@ public enum V1beta1RegionNetworkEndpointGroupSpecForProviderCloudRunServiceRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderCloudRunServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -177,6 +184,7 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderCloudRunSer
     public V1beta1RegionNetworkEndpointGroupSpecForProviderCloudRunServiceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Service in cloudrun to populate service.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderCloudRunServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -208,6 +216,7 @@ public enum V1beta1RegionNetworkEndpointGroupSpecForProviderCloudRunServiceSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderCloudRunServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -221,6 +230,7 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderCloudRunSer
     public V1beta1RegionNetworkEndpointGroupSpecForProviderCloudRunServiceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Service in cloudrun to populate service.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderCloudRunServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -236,6 +246,7 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderCloudRunSer
     public V1beta1RegionNetworkEndpointGroupSpecForProviderCloudRunServiceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderCloudRun
 {
     /// <summary>Cloud Run service is the main resource of Cloud Run. The service must be 1-63 characters long, and comply with RFC1035. Example value: "run-service".</summary>
@@ -279,6 +290,7 @@ public enum V1beta1RegionNetworkEndpointGroupSpecForProviderNetworkRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderNetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -292,6 +304,7 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderNetworkRefP
     public V1beta1RegionNetworkEndpointGroupSpecForProviderNetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate network.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderNetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -323,6 +336,7 @@ public enum V1beta1RegionNetworkEndpointGroupSpecForProviderNetworkSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderNetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -336,6 +350,7 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderNetworkSele
     public V1beta1RegionNetworkEndpointGroupSpecForProviderNetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate network.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderNetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -371,6 +386,7 @@ public enum V1beta1RegionNetworkEndpointGroupSpecForProviderPscTargetServiceRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderPscTargetServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -384,6 +400,7 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderPscTargetSe
     public V1beta1RegionNetworkEndpointGroupSpecForProviderPscTargetServiceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ServiceAttachment in compute to populate pscTargetService.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderPscTargetServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -415,6 +432,7 @@ public enum V1beta1RegionNetworkEndpointGroupSpecForProviderPscTargetServiceSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderPscTargetServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -428,6 +446,7 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderPscTargetSe
     public V1beta1RegionNetworkEndpointGroupSpecForProviderPscTargetServiceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ServiceAttachment in compute to populate pscTargetService.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderPscTargetServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -463,6 +482,7 @@ public enum V1beta1RegionNetworkEndpointGroupSpecForProviderSubnetworkRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderSubnetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -476,6 +496,7 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderSubnetworkR
     public V1beta1RegionNetworkEndpointGroupSpecForProviderSubnetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnetwork in compute to populate subnetwork.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderSubnetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -507,6 +528,7 @@ public enum V1beta1RegionNetworkEndpointGroupSpecForProviderSubnetworkSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderSubnetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -520,6 +542,7 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderSubnetworkS
     public V1beta1RegionNetworkEndpointGroupSpecForProviderSubnetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnetwork in compute to populate subnetwork.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderSubnetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -535,6 +558,7 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderSubnetworkS
     public V1beta1RegionNetworkEndpointGroupSpecForProviderSubnetworkSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProvider
 {
     /// <summary>This field is only used for SERVERLESS NEGs. Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set. Structure is documented below.</summary>
@@ -602,6 +626,7 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProvider
     public V1beta1RegionNetworkEndpointGroupSpecForProviderSubnetworkSelector? SubnetworkSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderAppEngine
 {
     /// <summary>Optional serving service. The service name must be 1-63 characters long, and comply with RFC1035. Example value: "default", "my-service".</summary>
@@ -637,6 +662,7 @@ public enum V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudFunctionFuncti
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudFunctionFunctionRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -650,6 +676,7 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudFunct
     public V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudFunctionFunctionRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in cloudfunctions to populate function.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudFunctionFunctionRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -681,6 +708,7 @@ public enum V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudFunctionFuncti
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudFunctionFunctionSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -694,6 +722,7 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudFunct
     public V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudFunctionFunctionSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in cloudfunctions to populate function.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudFunctionFunctionSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -709,6 +738,7 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudFunct
     public V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudFunctionFunctionSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudFunction
 {
     /// <summary>A user-defined name of the Cloud Function. The function name is case-sensitive and must be 1-63 characters long. Example value: "func1".</summary>
@@ -748,6 +778,7 @@ public enum V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudRunServiceRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudRunServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -761,6 +792,7 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudRunSe
     public V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudRunServiceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Service in cloudrun to populate service.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudRunServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -792,6 +824,7 @@ public enum V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudRunServiceSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudRunServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -805,6 +838,7 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudRunSe
     public V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudRunServiceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Service in cloudrun to populate service.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudRunServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -820,6 +854,7 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudRunSe
     public V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudRunServiceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudRun
 {
     /// <summary>Cloud Run service is the main resource of Cloud Run. The service must be 1-63 characters long, and comply with RFC1035. Example value: "run-service".</summary>
@@ -863,6 +898,7 @@ public enum V1beta1RegionNetworkEndpointGroupSpecInitProviderNetworkRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderNetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -876,6 +912,7 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderNetworkRef
     public V1beta1RegionNetworkEndpointGroupSpecInitProviderNetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate network.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderNetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -907,6 +944,7 @@ public enum V1beta1RegionNetworkEndpointGroupSpecInitProviderNetworkSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderNetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -920,6 +958,7 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderNetworkSel
     public V1beta1RegionNetworkEndpointGroupSpecInitProviderNetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate network.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderNetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -955,6 +994,7 @@ public enum V1beta1RegionNetworkEndpointGroupSpecInitProviderPscTargetServiceRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderPscTargetServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -968,6 +1008,7 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderPscTargetS
     public V1beta1RegionNetworkEndpointGroupSpecInitProviderPscTargetServiceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ServiceAttachment in compute to populate pscTargetService.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderPscTargetServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -999,6 +1040,7 @@ public enum V1beta1RegionNetworkEndpointGroupSpecInitProviderPscTargetServiceSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderPscTargetServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1012,6 +1054,7 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderPscTargetS
     public V1beta1RegionNetworkEndpointGroupSpecInitProviderPscTargetServiceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ServiceAttachment in compute to populate pscTargetService.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderPscTargetServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1047,6 +1090,7 @@ public enum V1beta1RegionNetworkEndpointGroupSpecInitProviderSubnetworkRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderSubnetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1060,6 +1104,7 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderSubnetwork
     public V1beta1RegionNetworkEndpointGroupSpecInitProviderSubnetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnetwork in compute to populate subnetwork.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderSubnetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1091,6 +1136,7 @@ public enum V1beta1RegionNetworkEndpointGroupSpecInitProviderSubnetworkSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderSubnetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1104,6 +1150,7 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderSubnetwork
     public V1beta1RegionNetworkEndpointGroupSpecInitProviderSubnetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnetwork in compute to populate subnetwork.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderSubnetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1119,6 +1166,7 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderSubnetwork
     public V1beta1RegionNetworkEndpointGroupSpecInitProviderSubnetworkSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProvider
 {
     /// <summary>This field is only used for SERVERLESS NEGs. Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set. Structure is documented below.</summary>
@@ -1224,6 +1272,7 @@ public enum V1beta1RegionNetworkEndpointGroupSpecProviderConfigRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1237,6 +1286,7 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecProviderConfigRefPolic
     public V1beta1RegionNetworkEndpointGroupSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1268,6 +1318,7 @@ public enum V1beta1RegionNetworkEndpointGroupSpecPublishConnectionDetailsToConfi
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1281,6 +1332,7 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecPublishConnectionDetai
     public V1beta1RegionNetworkEndpointGroupSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1292,6 +1344,7 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecPublishConnectionDetai
     public V1beta1RegionNetworkEndpointGroupSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1307,6 +1360,7 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecPublishConnectionDetai
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1322,6 +1376,7 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecPublishConnectionDetai
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1333,6 +1388,7 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecWriteConnectionSecretT
     public string Namespace { get; set; }
 }
 
+/// <summary>RegionNetworkEndpointGroupSpec defines the desired state of RegionNetworkEndpointGroup</summary>
 public partial class V1beta1RegionNetworkEndpointGroupSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1365,6 +1421,7 @@ public partial class V1beta1RegionNetworkEndpointGroupSpec
     public V1beta1RegionNetworkEndpointGroupSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionNetworkEndpointGroupStatusAtProviderAppEngine
 {
     /// <summary>Optional serving service. The service name must be 1-63 characters long, and comply with RFC1035. Example value: "default", "my-service".</summary>
@@ -1380,6 +1437,7 @@ public partial class V1beta1RegionNetworkEndpointGroupStatusAtProviderAppEngine
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionNetworkEndpointGroupStatusAtProviderCloudFunction
 {
     /// <summary>A user-defined name of the Cloud Function. The function name is case-sensitive and must be 1-63 characters long. Example value: "func1".</summary>
@@ -1391,6 +1449,7 @@ public partial class V1beta1RegionNetworkEndpointGroupStatusAtProviderCloudFunct
     public string? UrlMask { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionNetworkEndpointGroupStatusAtProviderCloudRun
 {
     /// <summary>Cloud Run service is the main resource of Cloud Run. The service must be 1-63 characters long, and comply with RFC1035. Example value: "run-service".</summary>
@@ -1406,6 +1465,7 @@ public partial class V1beta1RegionNetworkEndpointGroupStatusAtProviderCloudRun
     public string? UrlMask { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionNetworkEndpointGroupStatusAtProvider
 {
     /// <summary>This field is only used for SERVERLESS NEGs. Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set. Structure is documented below.</summary>
@@ -1457,6 +1517,7 @@ public partial class V1beta1RegionNetworkEndpointGroupStatusAtProvider
     public string? Subnetwork { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1484,6 +1545,7 @@ public partial class V1beta1RegionNetworkEndpointGroupStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>RegionNetworkEndpointGroupStatus defines the observed state of RegionNetworkEndpointGroup.</summary>
 public partial class V1beta1RegionNetworkEndpointGroupStatus
 {
     /// <summary></summary>
@@ -1500,6 +1562,7 @@ public partial class V1beta1RegionNetworkEndpointGroupStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>RegionNetworkEndpointGroup is the Schema for the RegionNetworkEndpointGroups API. A regional NEG that can support Serverless Products and proxying traffic to external backends.</summary>
 public partial class V1beta1RegionNetworkEndpointGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1RegionNetworkEndpointGroupSpec>, IStatus<V1beta1RegionNetworkEndpointGroupStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.recaptchaenterprise.cnrm.cloud.google.com;
+/// <summary>Settings for keys that can be used by Android apps.</summary>
 public partial class V1beta1RecaptchaEnterpriseKeySpecAndroidSettings
 {
     /// <summary>If set to true, it means allowed_package_names will not be enforced.</summary>
@@ -19,6 +20,7 @@ public partial class V1beta1RecaptchaEnterpriseKeySpecAndroidSettings
     public IList<string>? AllowedPackageNames { get; set; }
 }
 
+/// <summary>Settings for keys that can be used by iOS apps.</summary>
 public partial class V1beta1RecaptchaEnterpriseKeySpecIosSettings
 {
     /// <summary>If set to true, it means allowed_bundle_ids will not be enforced.</summary>
@@ -30,6 +32,7 @@ public partial class V1beta1RecaptchaEnterpriseKeySpecIosSettings
     public IList<string>? AllowedBundleIds { get; set; }
 }
 
+/// <summary>Immutable. The Project that this resource belongs to.</summary>
 public partial class V1beta1RecaptchaEnterpriseKeySpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -45,6 +48,7 @@ public partial class V1beta1RecaptchaEnterpriseKeySpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. Options for user acceptance testing.</summary>
 public partial class V1beta1RecaptchaEnterpriseKeySpecTestingOptions
 {
     /// <summary>Immutable. For challenge-based keys only (CHECKBOX, INVISIBLE), all challenge requests for this site will return nocaptcha if NOCAPTCHA, or an unsolvable challenge if UNSOLVABLE_CHALLENGE. Possible values: TESTING_CHALLENGE_UNSPECIFIED, NOCAPTCHA, UNSOLVABLE_CHALLENGE</summary>
@@ -56,6 +60,7 @@ public partial class V1beta1RecaptchaEnterpriseKeySpecTestingOptions
     public double? TestingScore { get; set; }
 }
 
+/// <summary>Immutable. Settings specific to keys that can be used for WAF (Web Application Firewall).</summary>
 public partial class V1beta1RecaptchaEnterpriseKeySpecWafSettings
 {
     /// <summary>Immutable. Supported WAF features. For more information, see https://cloud.google.com/recaptcha-enterprise/docs/usecase#comparison_of_features. Possible values: CHALLENGE_PAGE, SESSION_TOKEN, ACTION_TOKEN, EXPRESS</summary>
@@ -67,6 +72,7 @@ public partial class V1beta1RecaptchaEnterpriseKeySpecWafSettings
     public string WafService { get; set; }
 }
 
+/// <summary>Settings for keys that can be used by websites.</summary>
 public partial class V1beta1RecaptchaEnterpriseKeySpecWebSettings
 {
     /// <summary>If set to true, it means allowed_domains will not be enforced.</summary>
@@ -90,6 +96,7 @@ public partial class V1beta1RecaptchaEnterpriseKeySpecWebSettings
     public string IntegrationType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecaptchaEnterpriseKeySpec
 {
     /// <summary>Settings for keys that can be used by Android apps.</summary>
@@ -125,6 +132,7 @@ public partial class V1beta1RecaptchaEnterpriseKeySpec
     public V1beta1RecaptchaEnterpriseKeySpecWebSettings? WebSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecaptchaEnterpriseKeyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -148,6 +156,7 @@ public partial class V1beta1RecaptchaEnterpriseKeyStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecaptchaEnterpriseKeyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -164,6 +173,7 @@ public partial class V1beta1RecaptchaEnterpriseKeyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1RecaptchaEnterpriseKey : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1RecaptchaEnterpriseKeySpec>, IStatus<V1beta1RecaptchaEnterpriseKeyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

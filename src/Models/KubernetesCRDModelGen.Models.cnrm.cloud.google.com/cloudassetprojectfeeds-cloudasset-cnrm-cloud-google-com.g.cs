@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudasset.cnrm.cloud.google.com;
+/// <summary>A condition which determines whether an asset update should be published. If specified, an asset will be returned only when the expression evaluates to true. When set, expression field must be a valid CEL expression on a TemporalAsset with name temporal_asset. Example: a Feed with expression "temporal_asset.deleted == true" will only publish Asset deletions. Other fields of condition are optional.</summary>
 public partial class V1alpha1CloudAssetProjectFeedSpecCondition
 {
     /// <summary>Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.</summary>
@@ -27,6 +28,7 @@ public partial class V1alpha1CloudAssetProjectFeedSpecCondition
     public string? Title { get; set; }
 }
 
+/// <summary>Destination on Cloud Pubsub.</summary>
 public partial class V1alpha1CloudAssetProjectFeedSpecFeedOutputConfigPubsubDestination
 {
     /// <summary>Destination on Cloud Pubsub topic.</summary>
@@ -34,6 +36,7 @@ public partial class V1alpha1CloudAssetProjectFeedSpecFeedOutputConfigPubsubDest
     public string Topic { get; set; }
 }
 
+/// <summary>Output configuration for asset feed destination.</summary>
 public partial class V1alpha1CloudAssetProjectFeedSpecFeedOutputConfig
 {
     /// <summary>Destination on Cloud Pubsub.</summary>
@@ -41,6 +44,7 @@ public partial class V1alpha1CloudAssetProjectFeedSpecFeedOutputConfig
     public V1alpha1CloudAssetProjectFeedSpecFeedOutputConfigPubsubDestination PubsubDestination { get; set; }
 }
 
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1CloudAssetProjectFeedSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -56,6 +60,7 @@ public partial class V1alpha1CloudAssetProjectFeedSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1CloudAssetProjectFeedSpec
 {
     /// <summary>A list of the full names of the assets to receive updates. You must specify either or both of assetNames and assetTypes. Only asset updates matching specified assetNames and assetTypes are exported to the feed. For example: //compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1. See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.</summary>
@@ -95,6 +100,7 @@ public partial class V1alpha1CloudAssetProjectFeedSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1CloudAssetProjectFeedStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -118,6 +124,7 @@ public partial class V1alpha1CloudAssetProjectFeedStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1CloudAssetProjectFeedStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -134,6 +141,7 @@ public partial class V1alpha1CloudAssetProjectFeedStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1CloudAssetProjectFeed : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1CloudAssetProjectFeedSpec>, IStatus<V1alpha1CloudAssetProjectFeedStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

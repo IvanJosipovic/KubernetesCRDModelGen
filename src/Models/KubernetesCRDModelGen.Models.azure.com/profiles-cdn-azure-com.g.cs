@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cdn.azure.com;
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 public partial class V1api20230501storageProfileSpecIdentityUserAssignedIdentitiesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -27,6 +28,7 @@ public partial class V1api20230501storageProfileSpecIdentityUserAssignedIdentiti
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
 public partial class V1api20230501storageProfileSpecIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -38,6 +40,7 @@ public partial class V1api20230501storageProfileSpecIdentityUserAssignedIdentiti
     public V1api20230501storageProfileSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.ManagedServiceIdentity Managed service identity (system assigned and/or user assigned identities)</summary>
 public partial class V1api20230501storageProfileSpecIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -53,6 +56,7 @@ public partial class V1api20230501storageProfileSpecIdentity
     public IList<V1api20230501storageProfileSpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20230501storageProfileSpecOwner
 {
     /// <summary></summary>
@@ -64,6 +68,7 @@ public partial class V1api20230501storageProfileSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.Sku Standard_Verizon = The SKU name for a Standard Verizon CDN profile. Premium_Verizon = The SKU name for a Premium Verizon CDN profile. Custom_Verizon = The SKU name for a Custom Verizon CDN profile. Standard_Akamai = The SKU name for an Akamai CDN profile. Standard_ChinaCdn = The SKU name for a China CDN profile for VOD, Web and download scenarios using GB based billing model. Standard_Microsoft = The SKU name for a Standard Microsoft CDN profile. Standard_AzureFrontDoor =  The SKU name for an Azure Front Door Standard profile. Premium_AzureFrontDoor = The SKU name for an Azure Front Door Premium profile. Standard_955BandWidth_ChinaCdn = The SKU name for a China CDN profile for VOD, Web and download scenarios using 95-5 peak bandwidth billing model. Standard_AvgBandWidth_ChinaCdn = The SKU name for a China CDN profile for VOD, Web and download scenarios using monthly average peak bandwidth billing model. StandardPlus_ChinaCdn = The SKU name for a China CDN profile for live-streaming using GB based billing model. StandardPlus_955BandWidth_ChinaCdn = The SKU name for a China CDN live-streaming profile using 95-5 peak bandwidth billing model. StandardPlus_AvgBandWidth_ChinaCdn = The SKU name for a China CDN live-streaming profile using monthly average peak bandwidth billing model.</summary>
 public partial class V1api20230501storageProfileSpecSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -75,6 +80,7 @@ public partial class V1api20230501storageProfileSpecSku
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.Profile_Spec</summary>
 public partial class V1api20230501storageProfileSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -114,6 +120,7 @@ public partial class V1api20230501storageProfileSpec
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20230501storageProfileStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -145,6 +152,7 @@ public partial class V1api20230501storageProfileStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.UserAssignedIdentity_STATUS User assigned identity properties</summary>
 public partial class V1api20230501storageProfileStatusIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -160,6 +168,7 @@ public partial class V1api20230501storageProfileStatusIdentityUserAssignedIdenti
     public string? PrincipalId { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.ManagedServiceIdentity_STATUS Managed service identity (system assigned and/or user assigned identities)</summary>
 public partial class V1api20230501storageProfileStatusIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -183,6 +192,7 @@ public partial class V1api20230501storageProfileStatusIdentity
     public IDictionary<string, V1api20230501storageProfileStatusIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.Sku_STATUS Standard_Verizon = The SKU name for a Standard Verizon CDN profile. Premium_Verizon = The SKU name for a Premium Verizon CDN profile. Custom_Verizon = The SKU name for a Custom Verizon CDN profile. Standard_Akamai = The SKU name for an Akamai CDN profile. Standard_ChinaCdn = The SKU name for a China CDN profile for VOD, Web and download scenarios using GB based billing model. Standard_Microsoft = The SKU name for a Standard Microsoft CDN profile. Standard_AzureFrontDoor =  The SKU name for an Azure Front Door Standard profile. Premium_AzureFrontDoor = The SKU name for an Azure Front Door Premium profile. Standard_955BandWidth_ChinaCdn = The SKU name for a China CDN profile for VOD, Web and download scenarios using 95-5 peak bandwidth billing model. Standard_AvgBandWidth_ChinaCdn = The SKU name for a China CDN profile for VOD, Web and download scenarios using monthly average peak bandwidth billing model. StandardPlus_ChinaCdn = The SKU name for a China CDN profile for live-streaming using GB based billing model. StandardPlus_955BandWidth_ChinaCdn = The SKU name for a China CDN live-streaming profile using 95-5 peak bandwidth billing model. StandardPlus_AvgBandWidth_ChinaCdn = The SKU name for a China CDN live-streaming profile using monthly average peak bandwidth billing model.</summary>
 public partial class V1api20230501storageProfileStatusSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -194,6 +204,7 @@ public partial class V1api20230501storageProfileStatusSku
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.SystemData_STATUS Read only system data</summary>
 public partial class V1api20230501storageProfileStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -225,6 +236,7 @@ public partial class V1api20230501storageProfileStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.Profile_STATUS A profile is a logical grouping of endpoints that share the same settings.</summary>
 public partial class V1api20230501storageProfileStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -293,6 +305,7 @@ public partial class V1api20230501storageProfileStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20230501.Profile Generator information: - Generated from: /cdn/resource-manager/Microsoft.Cdn/stable/2023-05-01/cdn.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}</summary>
 public partial class V1api20230501storageProfile : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230501storageProfileSpec>, IStatus<V1api20230501storageProfileStatus>
 {
     public const string KubeApiVersion = "v1api20230501storage";

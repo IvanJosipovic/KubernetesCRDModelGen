@@ -18,6 +18,7 @@ public enum V1beta1FieldLevelEncryptionProfileSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1FieldLevelEncryptionProfileSpecForProviderEncryptionEntitiesItemsFieldPatterns
 {
     /// <summary></summary>
@@ -45,6 +46,7 @@ public enum V1beta1FieldLevelEncryptionProfileSpecForProviderEncryptionEntitiesI
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FieldLevelEncryptionProfileSpecForProviderEncryptionEntitiesItemsPublicKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -58,6 +60,7 @@ public partial class V1beta1FieldLevelEncryptionProfileSpecForProviderEncryption
     public V1beta1FieldLevelEncryptionProfileSpecForProviderEncryptionEntitiesItemsPublicKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a PublicKey in cloudfront to populate publicKeyId.</summary>
 public partial class V1beta1FieldLevelEncryptionProfileSpecForProviderEncryptionEntitiesItemsPublicKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -89,6 +92,7 @@ public enum V1beta1FieldLevelEncryptionProfileSpecForProviderEncryptionEntitiesI
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FieldLevelEncryptionProfileSpecForProviderEncryptionEntitiesItemsPublicKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -102,6 +106,7 @@ public partial class V1beta1FieldLevelEncryptionProfileSpecForProviderEncryption
     public V1beta1FieldLevelEncryptionProfileSpecForProviderEncryptionEntitiesItemsPublicKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a PublicKey in cloudfront to populate publicKeyId.</summary>
 public partial class V1beta1FieldLevelEncryptionProfileSpecForProviderEncryptionEntitiesItemsPublicKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -117,6 +122,7 @@ public partial class V1beta1FieldLevelEncryptionProfileSpecForProviderEncryption
     public V1beta1FieldLevelEncryptionProfileSpecForProviderEncryptionEntitiesItemsPublicKeyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FieldLevelEncryptionProfileSpecForProviderEncryptionEntitiesItems
 {
     /// <summary>Object that contains an attribute items that contains the list of field patterns in a field-level encryption content type profile specify the fields that you want to be encrypted.</summary>
@@ -140,6 +146,7 @@ public partial class V1beta1FieldLevelEncryptionProfileSpecForProviderEncryption
     public V1beta1FieldLevelEncryptionProfileSpecForProviderEncryptionEntitiesItemsPublicKeyIdSelector? PublicKeyIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FieldLevelEncryptionProfileSpecForProviderEncryptionEntities
 {
     /// <summary></summary>
@@ -147,6 +154,7 @@ public partial class V1beta1FieldLevelEncryptionProfileSpecForProviderEncryption
     public IList<V1beta1FieldLevelEncryptionProfileSpecForProviderEncryptionEntitiesItems>? Items { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FieldLevelEncryptionProfileSpecForProvider
 {
     /// <summary>An optional comment about the Field Level Encryption Profile.</summary>
@@ -166,6 +174,7 @@ public partial class V1beta1FieldLevelEncryptionProfileSpecForProvider
     public string Region { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FieldLevelEncryptionProfileSpecInitProviderEncryptionEntitiesItemsFieldPatterns
 {
     /// <summary></summary>
@@ -193,6 +202,7 @@ public enum V1beta1FieldLevelEncryptionProfileSpecInitProviderEncryptionEntities
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FieldLevelEncryptionProfileSpecInitProviderEncryptionEntitiesItemsPublicKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -206,6 +216,7 @@ public partial class V1beta1FieldLevelEncryptionProfileSpecInitProviderEncryptio
     public V1beta1FieldLevelEncryptionProfileSpecInitProviderEncryptionEntitiesItemsPublicKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a PublicKey in cloudfront to populate publicKeyId.</summary>
 public partial class V1beta1FieldLevelEncryptionProfileSpecInitProviderEncryptionEntitiesItemsPublicKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -237,6 +248,7 @@ public enum V1beta1FieldLevelEncryptionProfileSpecInitProviderEncryptionEntities
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FieldLevelEncryptionProfileSpecInitProviderEncryptionEntitiesItemsPublicKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -250,6 +262,7 @@ public partial class V1beta1FieldLevelEncryptionProfileSpecInitProviderEncryptio
     public V1beta1FieldLevelEncryptionProfileSpecInitProviderEncryptionEntitiesItemsPublicKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a PublicKey in cloudfront to populate publicKeyId.</summary>
 public partial class V1beta1FieldLevelEncryptionProfileSpecInitProviderEncryptionEntitiesItemsPublicKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -265,6 +278,7 @@ public partial class V1beta1FieldLevelEncryptionProfileSpecInitProviderEncryptio
     public V1beta1FieldLevelEncryptionProfileSpecInitProviderEncryptionEntitiesItemsPublicKeyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FieldLevelEncryptionProfileSpecInitProviderEncryptionEntitiesItems
 {
     /// <summary>Object that contains an attribute items that contains the list of field patterns in a field-level encryption content type profile specify the fields that you want to be encrypted.</summary>
@@ -288,6 +302,7 @@ public partial class V1beta1FieldLevelEncryptionProfileSpecInitProviderEncryptio
     public V1beta1FieldLevelEncryptionProfileSpecInitProviderEncryptionEntitiesItemsPublicKeyIdSelector? PublicKeyIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FieldLevelEncryptionProfileSpecInitProviderEncryptionEntities
 {
     /// <summary></summary>
@@ -295,6 +310,7 @@ public partial class V1beta1FieldLevelEncryptionProfileSpecInitProviderEncryptio
     public IList<V1beta1FieldLevelEncryptionProfileSpecInitProviderEncryptionEntitiesItems>? Items { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1FieldLevelEncryptionProfileSpecInitProvider
 {
     /// <summary>An optional comment about the Field Level Encryption Profile.</summary>
@@ -352,6 +368,7 @@ public enum V1beta1FieldLevelEncryptionProfileSpecProviderConfigRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FieldLevelEncryptionProfileSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -365,6 +382,7 @@ public partial class V1beta1FieldLevelEncryptionProfileSpecProviderConfigRefPoli
     public V1beta1FieldLevelEncryptionProfileSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1FieldLevelEncryptionProfileSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -396,6 +414,7 @@ public enum V1beta1FieldLevelEncryptionProfileSpecPublishConnectionDetailsToConf
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FieldLevelEncryptionProfileSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -409,6 +428,7 @@ public partial class V1beta1FieldLevelEncryptionProfileSpecPublishConnectionDeta
     public V1beta1FieldLevelEncryptionProfileSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1FieldLevelEncryptionProfileSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -420,6 +440,7 @@ public partial class V1beta1FieldLevelEncryptionProfileSpecPublishConnectionDeta
     public V1beta1FieldLevelEncryptionProfileSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1FieldLevelEncryptionProfileSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -435,6 +456,7 @@ public partial class V1beta1FieldLevelEncryptionProfileSpecPublishConnectionDeta
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1FieldLevelEncryptionProfileSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -450,6 +472,7 @@ public partial class V1beta1FieldLevelEncryptionProfileSpecPublishConnectionDeta
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1FieldLevelEncryptionProfileSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -461,6 +484,7 @@ public partial class V1beta1FieldLevelEncryptionProfileSpecWriteConnectionSecret
     public string Namespace { get; set; }
 }
 
+/// <summary>FieldLevelEncryptionProfileSpec defines the desired state of FieldLevelEncryptionProfile</summary>
 public partial class V1beta1FieldLevelEncryptionProfileSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -493,6 +517,7 @@ public partial class V1beta1FieldLevelEncryptionProfileSpec
     public V1beta1FieldLevelEncryptionProfileSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FieldLevelEncryptionProfileStatusAtProviderEncryptionEntitiesItemsFieldPatterns
 {
     /// <summary></summary>
@@ -500,6 +525,7 @@ public partial class V1beta1FieldLevelEncryptionProfileStatusAtProviderEncryptio
     public IList<string>? Items { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FieldLevelEncryptionProfileStatusAtProviderEncryptionEntitiesItems
 {
     /// <summary>Object that contains an attribute items that contains the list of field patterns in a field-level encryption content type profile specify the fields that you want to be encrypted.</summary>
@@ -515,6 +541,7 @@ public partial class V1beta1FieldLevelEncryptionProfileStatusAtProviderEncryptio
     public string? PublicKeyId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FieldLevelEncryptionProfileStatusAtProviderEncryptionEntities
 {
     /// <summary></summary>
@@ -522,6 +549,7 @@ public partial class V1beta1FieldLevelEncryptionProfileStatusAtProviderEncryptio
     public IList<V1beta1FieldLevelEncryptionProfileStatusAtProviderEncryptionEntitiesItems>? Items { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FieldLevelEncryptionProfileStatusAtProvider
 {
     /// <summary>Internal value used by CloudFront to allow future updates to the Field Level Encryption Profile.</summary>
@@ -549,6 +577,7 @@ public partial class V1beta1FieldLevelEncryptionProfileStatusAtProvider
     public string? Name { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1FieldLevelEncryptionProfileStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -576,6 +605,7 @@ public partial class V1beta1FieldLevelEncryptionProfileStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>FieldLevelEncryptionProfileStatus defines the observed state of FieldLevelEncryptionProfile.</summary>
 public partial class V1beta1FieldLevelEncryptionProfileStatus
 {
     /// <summary></summary>
@@ -592,6 +622,7 @@ public partial class V1beta1FieldLevelEncryptionProfileStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>FieldLevelEncryptionProfile is the Schema for the FieldLevelEncryptionProfiles API. Provides a CloudFront Field-level Encryption Profile resource.</summary>
 public partial class V1beta1FieldLevelEncryptionProfile : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FieldLevelEncryptionProfileSpec>, IStatus<V1beta1FieldLevelEncryptionProfileStatus>
 {
     public const string KubeApiVersion = "v1beta1";

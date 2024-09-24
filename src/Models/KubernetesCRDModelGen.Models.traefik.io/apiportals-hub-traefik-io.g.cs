@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.hub.traefik.io;
+/// <summary>UI holds the UI customization options.</summary>
 public partial class V1alpha1APIPortalSpecUi
 {
     /// <summary>LogoURL is the public URL of the logo.</summary>
@@ -15,6 +16,7 @@ public partial class V1alpha1APIPortalSpecUi
     public string? LogoUrl { get; set; }
 }
 
+/// <summary>The desired behavior of this APIPortal.</summary>
 public partial class V1alpha1APIPortalSpec
 {
     /// <summary>Description of the APIPortal.</summary>
@@ -34,6 +36,7 @@ public partial class V1alpha1APIPortalSpec
     public V1alpha1APIPortalSpecUi? Ui { get; set; }
 }
 
+/// <summary>OIDC is the OIDC configuration for accessing the exposed APIPortal WebUI.</summary>
 public partial class V1alpha1APIPortalStatusOidc
 {
     /// <summary>ClientID is the OIDC ClientID for accessing the exposed APIPortal WebUI.</summary>
@@ -85,6 +88,7 @@ public partial class V1alpha1APIPortalStatusOidc
     public string? UserIdClaim { get; set; }
 }
 
+/// <summary>The current status of this APIPortal.</summary>
 public partial class V1alpha1APIPortalStatus
 {
     /// <summary>Hash is a hash representing the APIPortal.</summary>
@@ -105,6 +109,7 @@ public partial class V1alpha1APIPortalStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>APIPortal defines a developer portal for accessing the documentation of APIs.</summary>
 public partial class V1alpha1APIPortal : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1APIPortalSpec>, IStatus<V1alpha1APIPortalStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

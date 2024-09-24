@@ -38,6 +38,7 @@ public enum V1beta1GalleryApplicationVersionSpecForProviderGalleryApplicationIdR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GalleryApplicationVersionSpecForProviderGalleryApplicationIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1GalleryApplicationVersionSpecForProviderGalleryAppli
     public V1beta1GalleryApplicationVersionSpecForProviderGalleryApplicationIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a GalleryApplication in compute to populate galleryApplicationId.</summary>
 public partial class V1beta1GalleryApplicationVersionSpecForProviderGalleryApplicationIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1GalleryApplicationVersionSpecForProviderGalleryApplicationIdS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GalleryApplicationVersionSpecForProviderGalleryApplicationIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1GalleryApplicationVersionSpecForProviderGalleryAppli
     public V1beta1GalleryApplicationVersionSpecForProviderGalleryApplicationIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a GalleryApplication in compute to populate galleryApplicationId.</summary>
 public partial class V1beta1GalleryApplicationVersionSpecForProviderGalleryApplicationIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1GalleryApplicationVersionSpecForProviderGalleryAppli
     public V1beta1GalleryApplicationVersionSpecForProviderGalleryApplicationIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GalleryApplicationVersionSpecForProviderManageAction
 {
     /// <summary>The command to install the Gallery Application. Changing this forces a new resource to be created.</summary>
@@ -145,6 +150,7 @@ public enum V1beta1GalleryApplicationVersionSpecForProviderSourceMediaLinkRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GalleryApplicationVersionSpecForProviderSourceMediaLinkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -158,6 +164,7 @@ public partial class V1beta1GalleryApplicationVersionSpecForProviderSourceMediaL
     public V1beta1GalleryApplicationVersionSpecForProviderSourceMediaLinkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Blob in storage to populate mediaLink.</summary>
 public partial class V1beta1GalleryApplicationVersionSpecForProviderSourceMediaLinkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -189,6 +196,7 @@ public enum V1beta1GalleryApplicationVersionSpecForProviderSourceMediaLinkSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GalleryApplicationVersionSpecForProviderSourceMediaLinkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1GalleryApplicationVersionSpecForProviderSourceMediaL
     public V1beta1GalleryApplicationVersionSpecForProviderSourceMediaLinkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Blob in storage to populate mediaLink.</summary>
 public partial class V1beta1GalleryApplicationVersionSpecForProviderSourceMediaLinkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -217,6 +226,7 @@ public partial class V1beta1GalleryApplicationVersionSpecForProviderSourceMediaL
     public V1beta1GalleryApplicationVersionSpecForProviderSourceMediaLinkSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GalleryApplicationVersionSpecForProviderSource
 {
     /// <summary>The Storage Blob URI of the default configuration. Changing this forces a new resource to be created.</summary>
@@ -256,6 +266,7 @@ public enum V1beta1GalleryApplicationVersionSpecForProviderTargetRegionNameRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GalleryApplicationVersionSpecForProviderTargetRegionNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -269,6 +280,7 @@ public partial class V1beta1GalleryApplicationVersionSpecForProviderTargetRegion
     public V1beta1GalleryApplicationVersionSpecForProviderTargetRegionNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a GalleryApplication in compute to populate name.</summary>
 public partial class V1beta1GalleryApplicationVersionSpecForProviderTargetRegionNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -300,6 +312,7 @@ public enum V1beta1GalleryApplicationVersionSpecForProviderTargetRegionNameSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GalleryApplicationVersionSpecForProviderTargetRegionNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -313,6 +326,7 @@ public partial class V1beta1GalleryApplicationVersionSpecForProviderTargetRegion
     public V1beta1GalleryApplicationVersionSpecForProviderTargetRegionNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a GalleryApplication in compute to populate name.</summary>
 public partial class V1beta1GalleryApplicationVersionSpecForProviderTargetRegionNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -328,6 +342,7 @@ public partial class V1beta1GalleryApplicationVersionSpecForProviderTargetRegion
     public V1beta1GalleryApplicationVersionSpecForProviderTargetRegionNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GalleryApplicationVersionSpecForProviderTargetRegion
 {
     /// <summary>Specifies whether this Gallery Application Version should be excluded from the latest filter. If set to true, this Gallery Application Version won't be returned for the latest version. Defaults to false.</summary>
@@ -355,6 +370,7 @@ public partial class V1beta1GalleryApplicationVersionSpecForProviderTargetRegion
     public string? StorageAccountType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GalleryApplicationVersionSpecForProvider
 {
     /// <summary>Specifies the name of the config file on the VM. Changing this forces a new resource to be created.</summary>
@@ -434,6 +450,7 @@ public enum V1beta1GalleryApplicationVersionSpecInitProviderGalleryApplicationId
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GalleryApplicationVersionSpecInitProviderGalleryApplicationIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -447,6 +464,7 @@ public partial class V1beta1GalleryApplicationVersionSpecInitProviderGalleryAppl
     public V1beta1GalleryApplicationVersionSpecInitProviderGalleryApplicationIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a GalleryApplication in compute to populate galleryApplicationId.</summary>
 public partial class V1beta1GalleryApplicationVersionSpecInitProviderGalleryApplicationIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -478,6 +496,7 @@ public enum V1beta1GalleryApplicationVersionSpecInitProviderGalleryApplicationId
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GalleryApplicationVersionSpecInitProviderGalleryApplicationIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -491,6 +510,7 @@ public partial class V1beta1GalleryApplicationVersionSpecInitProviderGalleryAppl
     public V1beta1GalleryApplicationVersionSpecInitProviderGalleryApplicationIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a GalleryApplication in compute to populate galleryApplicationId.</summary>
 public partial class V1beta1GalleryApplicationVersionSpecInitProviderGalleryApplicationIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -506,6 +526,7 @@ public partial class V1beta1GalleryApplicationVersionSpecInitProviderGalleryAppl
     public V1beta1GalleryApplicationVersionSpecInitProviderGalleryApplicationIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GalleryApplicationVersionSpecInitProviderManageAction
 {
     /// <summary>The command to install the Gallery Application. Changing this forces a new resource to be created.</summary>
@@ -541,6 +562,7 @@ public enum V1beta1GalleryApplicationVersionSpecInitProviderSourceMediaLinkRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GalleryApplicationVersionSpecInitProviderSourceMediaLinkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -554,6 +576,7 @@ public partial class V1beta1GalleryApplicationVersionSpecInitProviderSourceMedia
     public V1beta1GalleryApplicationVersionSpecInitProviderSourceMediaLinkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Blob in storage to populate mediaLink.</summary>
 public partial class V1beta1GalleryApplicationVersionSpecInitProviderSourceMediaLinkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -585,6 +608,7 @@ public enum V1beta1GalleryApplicationVersionSpecInitProviderSourceMediaLinkSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GalleryApplicationVersionSpecInitProviderSourceMediaLinkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -598,6 +622,7 @@ public partial class V1beta1GalleryApplicationVersionSpecInitProviderSourceMedia
     public V1beta1GalleryApplicationVersionSpecInitProviderSourceMediaLinkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Blob in storage to populate mediaLink.</summary>
 public partial class V1beta1GalleryApplicationVersionSpecInitProviderSourceMediaLinkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -613,6 +638,7 @@ public partial class V1beta1GalleryApplicationVersionSpecInitProviderSourceMedia
     public V1beta1GalleryApplicationVersionSpecInitProviderSourceMediaLinkSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GalleryApplicationVersionSpecInitProviderSource
 {
     /// <summary>The Storage Blob URI of the default configuration. Changing this forces a new resource to be created.</summary>
@@ -652,6 +678,7 @@ public enum V1beta1GalleryApplicationVersionSpecInitProviderTargetRegionNameRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GalleryApplicationVersionSpecInitProviderTargetRegionNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -665,6 +692,7 @@ public partial class V1beta1GalleryApplicationVersionSpecInitProviderTargetRegio
     public V1beta1GalleryApplicationVersionSpecInitProviderTargetRegionNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a GalleryApplication in compute to populate name.</summary>
 public partial class V1beta1GalleryApplicationVersionSpecInitProviderTargetRegionNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -696,6 +724,7 @@ public enum V1beta1GalleryApplicationVersionSpecInitProviderTargetRegionNameSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GalleryApplicationVersionSpecInitProviderTargetRegionNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -709,6 +738,7 @@ public partial class V1beta1GalleryApplicationVersionSpecInitProviderTargetRegio
     public V1beta1GalleryApplicationVersionSpecInitProviderTargetRegionNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a GalleryApplication in compute to populate name.</summary>
 public partial class V1beta1GalleryApplicationVersionSpecInitProviderTargetRegionNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -724,6 +754,7 @@ public partial class V1beta1GalleryApplicationVersionSpecInitProviderTargetRegio
     public V1beta1GalleryApplicationVersionSpecInitProviderTargetRegionNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GalleryApplicationVersionSpecInitProviderTargetRegion
 {
     /// <summary>Specifies whether this Gallery Application Version should be excluded from the latest filter. If set to true, this Gallery Application Version won't be returned for the latest version. Defaults to false.</summary>
@@ -751,6 +782,7 @@ public partial class V1beta1GalleryApplicationVersionSpecInitProviderTargetRegio
     public string? StorageAccountType { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1GalleryApplicationVersionSpecInitProvider
 {
     /// <summary>Specifies the name of the config file on the VM. Changing this forces a new resource to be created.</summary>
@@ -852,6 +884,7 @@ public enum V1beta1GalleryApplicationVersionSpecProviderConfigRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GalleryApplicationVersionSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -865,6 +898,7 @@ public partial class V1beta1GalleryApplicationVersionSpecProviderConfigRefPolicy
     public V1beta1GalleryApplicationVersionSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1GalleryApplicationVersionSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -896,6 +930,7 @@ public enum V1beta1GalleryApplicationVersionSpecPublishConnectionDetailsToConfig
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GalleryApplicationVersionSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -909,6 +944,7 @@ public partial class V1beta1GalleryApplicationVersionSpecPublishConnectionDetail
     public V1beta1GalleryApplicationVersionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1GalleryApplicationVersionSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -920,6 +956,7 @@ public partial class V1beta1GalleryApplicationVersionSpecPublishConnectionDetail
     public V1beta1GalleryApplicationVersionSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1GalleryApplicationVersionSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -935,6 +972,7 @@ public partial class V1beta1GalleryApplicationVersionSpecPublishConnectionDetail
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1GalleryApplicationVersionSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -950,6 +988,7 @@ public partial class V1beta1GalleryApplicationVersionSpecPublishConnectionDetail
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1GalleryApplicationVersionSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -961,6 +1000,7 @@ public partial class V1beta1GalleryApplicationVersionSpecWriteConnectionSecretTo
     public string Namespace { get; set; }
 }
 
+/// <summary>GalleryApplicationVersionSpec defines the desired state of GalleryApplicationVersion</summary>
 public partial class V1beta1GalleryApplicationVersionSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -993,6 +1033,7 @@ public partial class V1beta1GalleryApplicationVersionSpec
     public V1beta1GalleryApplicationVersionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GalleryApplicationVersionStatusAtProviderManageAction
 {
     /// <summary>The command to install the Gallery Application. Changing this forces a new resource to be created.</summary>
@@ -1008,6 +1049,7 @@ public partial class V1beta1GalleryApplicationVersionStatusAtProviderManageActio
     public string? Update { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GalleryApplicationVersionStatusAtProviderSource
 {
     /// <summary>The Storage Blob URI of the default configuration. Changing this forces a new resource to be created.</summary>
@@ -1019,6 +1061,7 @@ public partial class V1beta1GalleryApplicationVersionStatusAtProviderSource
     public string? MediaLink { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GalleryApplicationVersionStatusAtProviderTargetRegion
 {
     /// <summary>Specifies whether this Gallery Application Version should be excluded from the latest filter. If set to true, this Gallery Application Version won't be returned for the latest version. Defaults to false.</summary>
@@ -1038,6 +1081,7 @@ public partial class V1beta1GalleryApplicationVersionStatusAtProviderTargetRegio
     public string? StorageAccountType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GalleryApplicationVersionStatusAtProvider
 {
     /// <summary>Specifies the name of the config file on the VM. Changing this forces a new resource to be created.</summary>
@@ -1093,6 +1137,7 @@ public partial class V1beta1GalleryApplicationVersionStatusAtProvider
     public IList<V1beta1GalleryApplicationVersionStatusAtProviderTargetRegion>? TargetRegion { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1GalleryApplicationVersionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1120,6 +1165,7 @@ public partial class V1beta1GalleryApplicationVersionStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>GalleryApplicationVersionStatus defines the observed state of GalleryApplicationVersion.</summary>
 public partial class V1beta1GalleryApplicationVersionStatus
 {
     /// <summary></summary>
@@ -1136,6 +1182,7 @@ public partial class V1beta1GalleryApplicationVersionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>GalleryApplicationVersion is the Schema for the GalleryApplicationVersions API. Manages a Gallery Application Version.</summary>
 public partial class V1beta1GalleryApplicationVersion : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1GalleryApplicationVersionSpec>, IStatus<V1beta1GalleryApplicationVersionStatus>
 {
     public const string KubeApiVersion = "v1beta1";

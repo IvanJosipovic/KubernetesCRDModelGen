@@ -18,6 +18,7 @@ public enum V1beta1CertificateTemplateSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateSpecForProviderIdentityConstraintsCelExpression
 {
     /// <summary>Optional. A human-readable description of scenarios this template is intended for.</summary>
@@ -37,6 +38,7 @@ public partial class V1beta1CertificateTemplateSpecForProviderIdentityConstraint
     public string? Title { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateSpecForProviderIdentityConstraints
 {
     /// <summary>Required. If this is true, the SubjectAltNames extension may be copied from a certificate request into the signed certificate. Otherwise, the requested SubjectAltNames will be discarded.</summary>
@@ -52,6 +54,7 @@ public partial class V1beta1CertificateTemplateSpecForProviderIdentityConstraint
     public IList<V1beta1CertificateTemplateSpecForProviderIdentityConstraintsCelExpression>? CelExpression { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateSpecForProviderPassthroughExtensionsAdditionalExtensions
 {
     /// <summary>Required. The parts of an OID path. The most significant parts of the path come first.</summary>
@@ -59,6 +62,7 @@ public partial class V1beta1CertificateTemplateSpecForProviderPassthroughExtensi
     public IList<double>? ObjectIdPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateSpecForProviderPassthroughExtensions
 {
     /// <summary>Optional. A set of ObjectIds identifying custom X.509 extensions. Will be combined with known_extensions to determine the full set of X.509 extensions.</summary>
@@ -70,6 +74,7 @@ public partial class V1beta1CertificateTemplateSpecForProviderPassthroughExtensi
     public IList<string>? KnownExtensions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesAdditionalExtensionsObjectId
 {
     /// <summary>Required. The parts of an OID path. The most significant parts of the path come first.</summary>
@@ -77,6 +82,7 @@ public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesAd
     public IList<double>? ObjectIdPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesAdditionalExtensions
 {
     /// <summary>Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).</summary>
@@ -92,6 +98,7 @@ public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesAd
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesCaOptions
 {
     /// <summary>Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.</summary>
@@ -103,6 +110,7 @@ public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesCa
     public double? MaxIssuerPathLength { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesKeyUsageBaseKeyUsage
 {
     /// <summary>The key may be used to sign certificates.</summary>
@@ -142,6 +150,7 @@ public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesKe
     public bool? KeyEncipherment { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesKeyUsageExtendedKeyUsage
 {
     /// <summary>Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.</summary>
@@ -169,6 +178,7 @@ public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesKe
     public bool? TimeStamping { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesKeyUsageUnknownExtendedKeyUsages
 {
     /// <summary>Required. The parts of an OID path. The most significant parts of the path come first.</summary>
@@ -176,6 +186,7 @@ public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesKe
     public IList<double>? ObjectIdPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesKeyUsage
 {
     /// <summary>Describes high-level ways in which a key may be used.</summary>
@@ -191,6 +202,7 @@ public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesKe
     public IList<V1beta1CertificateTemplateSpecForProviderPredefinedValuesKeyUsageUnknownExtendedKeyUsages>? UnknownExtendedKeyUsages { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesPolicyIds
 {
     /// <summary>Required. The parts of an OID path. The most significant parts of the path come first.</summary>
@@ -198,6 +210,7 @@ public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesPo
     public IList<double>? ObjectIdPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValues
 {
     /// <summary>Optional. Describes custom X.509 extensions.</summary>
@@ -221,6 +234,7 @@ public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValues
     public IList<V1beta1CertificateTemplateSpecForProviderPredefinedValuesPolicyIds>? PolicyIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateSpecForProvider
 {
     /// <summary>Optional. A human-readable description of scenarios this template is intended for.</summary>
@@ -256,6 +270,7 @@ public partial class V1beta1CertificateTemplateSpecForProvider
     public string? Project { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateSpecInitProviderIdentityConstraintsCelExpression
 {
     /// <summary>Optional. A human-readable description of scenarios this template is intended for.</summary>
@@ -271,6 +286,7 @@ public partial class V1beta1CertificateTemplateSpecInitProviderIdentityConstrain
     public string? Title { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateSpecInitProviderIdentityConstraints
 {
     /// <summary>Required. If this is true, the SubjectAltNames extension may be copied from a certificate request into the signed certificate. Otherwise, the requested SubjectAltNames will be discarded.</summary>
@@ -286,6 +302,7 @@ public partial class V1beta1CertificateTemplateSpecInitProviderIdentityConstrain
     public IList<V1beta1CertificateTemplateSpecInitProviderIdentityConstraintsCelExpression>? CelExpression { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateSpecInitProviderPassthroughExtensionsAdditionalExtensions
 {
     /// <summary>Required. The parts of an OID path. The most significant parts of the path come first.</summary>
@@ -293,6 +310,7 @@ public partial class V1beta1CertificateTemplateSpecInitProviderPassthroughExtens
     public IList<double>? ObjectIdPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateSpecInitProviderPassthroughExtensions
 {
     /// <summary>Optional. A set of ObjectIds identifying custom X.509 extensions. Will be combined with known_extensions to determine the full set of X.509 extensions.</summary>
@@ -304,6 +322,7 @@ public partial class V1beta1CertificateTemplateSpecInitProviderPassthroughExtens
     public IList<string>? KnownExtensions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesAdditionalExtensionsObjectId
 {
     /// <summary>Required. The parts of an OID path. The most significant parts of the path come first.</summary>
@@ -311,6 +330,7 @@ public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesA
     public IList<double>? ObjectIdPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesAdditionalExtensions
 {
     /// <summary>Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).</summary>
@@ -326,6 +346,7 @@ public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesA
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesCaOptions
 {
     /// <summary>Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.</summary>
@@ -337,6 +358,7 @@ public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesC
     public double? MaxIssuerPathLength { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesKeyUsageBaseKeyUsage
 {
     /// <summary>The key may be used to sign certificates.</summary>
@@ -376,6 +398,7 @@ public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesK
     public bool? KeyEncipherment { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesKeyUsageExtendedKeyUsage
 {
     /// <summary>Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.</summary>
@@ -403,6 +426,7 @@ public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesK
     public bool? TimeStamping { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesKeyUsageUnknownExtendedKeyUsages
 {
     /// <summary>Required. The parts of an OID path. The most significant parts of the path come first.</summary>
@@ -410,6 +434,7 @@ public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesK
     public IList<double>? ObjectIdPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesKeyUsage
 {
     /// <summary>Describes high-level ways in which a key may be used.</summary>
@@ -425,6 +450,7 @@ public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesK
     public IList<V1beta1CertificateTemplateSpecInitProviderPredefinedValuesKeyUsageUnknownExtendedKeyUsages>? UnknownExtendedKeyUsages { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesPolicyIds
 {
     /// <summary>Required. The parts of an OID path. The most significant parts of the path come first.</summary>
@@ -432,6 +458,7 @@ public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesP
     public IList<double>? ObjectIdPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValues
 {
     /// <summary>Optional. Describes custom X.509 extensions.</summary>
@@ -455,6 +482,7 @@ public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValues
     public IList<V1beta1CertificateTemplateSpecInitProviderPredefinedValuesPolicyIds>? PolicyIds { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1CertificateTemplateSpecInitProvider
 {
     /// <summary>Optional. A human-readable description of scenarios this template is intended for.</summary>
@@ -528,6 +556,7 @@ public enum V1beta1CertificateTemplateSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CertificateTemplateSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -541,6 +570,7 @@ public partial class V1beta1CertificateTemplateSpecProviderConfigRefPolicy
     public V1beta1CertificateTemplateSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1CertificateTemplateSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -572,6 +602,7 @@ public enum V1beta1CertificateTemplateSpecPublishConnectionDetailsToConfigRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CertificateTemplateSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -585,6 +616,7 @@ public partial class V1beta1CertificateTemplateSpecPublishConnectionDetailsToCon
     public V1beta1CertificateTemplateSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1CertificateTemplateSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -596,6 +628,7 @@ public partial class V1beta1CertificateTemplateSpecPublishConnectionDetailsToCon
     public V1beta1CertificateTemplateSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1CertificateTemplateSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -611,6 +644,7 @@ public partial class V1beta1CertificateTemplateSpecPublishConnectionDetailsToMet
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1CertificateTemplateSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -626,6 +660,7 @@ public partial class V1beta1CertificateTemplateSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1CertificateTemplateSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -637,6 +672,7 @@ public partial class V1beta1CertificateTemplateSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>CertificateTemplateSpec defines the desired state of CertificateTemplate</summary>
 public partial class V1beta1CertificateTemplateSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -669,6 +705,7 @@ public partial class V1beta1CertificateTemplateSpec
     public V1beta1CertificateTemplateSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateStatusAtProviderIdentityConstraintsCelExpression
 {
     /// <summary>Optional. A human-readable description of scenarios this template is intended for.</summary>
@@ -688,6 +725,7 @@ public partial class V1beta1CertificateTemplateStatusAtProviderIdentityConstrain
     public string? Title { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateStatusAtProviderIdentityConstraints
 {
     /// <summary>Required. If this is true, the SubjectAltNames extension may be copied from a certificate request into the signed certificate. Otherwise, the requested SubjectAltNames will be discarded.</summary>
@@ -703,6 +741,7 @@ public partial class V1beta1CertificateTemplateStatusAtProviderIdentityConstrain
     public IList<V1beta1CertificateTemplateStatusAtProviderIdentityConstraintsCelExpression>? CelExpression { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateStatusAtProviderPassthroughExtensionsAdditionalExtensions
 {
     /// <summary>Required. The parts of an OID path. The most significant parts of the path come first.</summary>
@@ -710,6 +749,7 @@ public partial class V1beta1CertificateTemplateStatusAtProviderPassthroughExtens
     public IList<double>? ObjectIdPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateStatusAtProviderPassthroughExtensions
 {
     /// <summary>Optional. A set of ObjectIds identifying custom X.509 extensions. Will be combined with known_extensions to determine the full set of X.509 extensions.</summary>
@@ -721,6 +761,7 @@ public partial class V1beta1CertificateTemplateStatusAtProviderPassthroughExtens
     public IList<string>? KnownExtensions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesAdditionalExtensionsObjectId
 {
     /// <summary>Required. The parts of an OID path. The most significant parts of the path come first.</summary>
@@ -728,6 +769,7 @@ public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesA
     public IList<double>? ObjectIdPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesAdditionalExtensions
 {
     /// <summary>Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).</summary>
@@ -743,6 +785,7 @@ public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesA
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesCaOptions
 {
     /// <summary>Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.</summary>
@@ -754,6 +797,7 @@ public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesC
     public double? MaxIssuerPathLength { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesKeyUsageBaseKeyUsage
 {
     /// <summary>The key may be used to sign certificates.</summary>
@@ -793,6 +837,7 @@ public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesK
     public bool? KeyEncipherment { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesKeyUsageExtendedKeyUsage
 {
     /// <summary>Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.</summary>
@@ -820,6 +865,7 @@ public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesK
     public bool? TimeStamping { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesKeyUsageUnknownExtendedKeyUsages
 {
     /// <summary>Required. The parts of an OID path. The most significant parts of the path come first.</summary>
@@ -827,6 +873,7 @@ public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesK
     public IList<double>? ObjectIdPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesKeyUsage
 {
     /// <summary>Describes high-level ways in which a key may be used.</summary>
@@ -842,6 +889,7 @@ public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesK
     public IList<V1beta1CertificateTemplateStatusAtProviderPredefinedValuesKeyUsageUnknownExtendedKeyUsages>? UnknownExtendedKeyUsages { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesPolicyIds
 {
     /// <summary>Required. The parts of an OID path. The most significant parts of the path come first.</summary>
@@ -849,6 +897,7 @@ public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesP
     public IList<double>? ObjectIdPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValues
 {
     /// <summary>Optional. Describes custom X.509 extensions.</summary>
@@ -872,6 +921,7 @@ public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValues
     public IList<V1beta1CertificateTemplateStatusAtProviderPredefinedValuesPolicyIds>? PolicyIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateTemplateStatusAtProvider
 {
     /// <summary>Output only. The time at which this CertificateTemplate was created.</summary>
@@ -927,6 +977,7 @@ public partial class V1beta1CertificateTemplateStatusAtProvider
     public string? UpdateTime { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1CertificateTemplateStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -954,6 +1005,7 @@ public partial class V1beta1CertificateTemplateStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>CertificateTemplateStatus defines the observed state of CertificateTemplate.</summary>
 public partial class V1beta1CertificateTemplateStatus
 {
     /// <summary></summary>
@@ -970,6 +1022,7 @@ public partial class V1beta1CertificateTemplateStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>CertificateTemplate is the Schema for the CertificateTemplates API. Certificate Authority Service provides reusable and parameterized templates that you can use for common certificate issuance scenarios. A certificate template represents a relatively static and well-defined certificate issuance schema within an organization.  A certificate template can essentially become a full-fledged vertical certificate issuance framework.</summary>
 public partial class V1beta1CertificateTemplate : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1CertificateTemplateSpec>, IStatus<V1beta1CertificateTemplateStatus>
 {
     public const string KubeApiVersion = "v1beta1";

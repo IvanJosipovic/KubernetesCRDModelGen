@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudiot.cnrm.cloud.google.com;
+/// <summary>A public key used to verify the signature of JSON Web Tokens (JWTs).</summary>
 public partial class V1alpha1CloudIOTDeviceSpecCredentialsPublicKey
 {
     /// <summary>The format of the key. Possible values: ["RSA_PEM", "RSA_X509_PEM", "ES256_PEM", "ES256_X509_PEM"].</summary>
@@ -19,6 +20,7 @@ public partial class V1alpha1CloudIOTDeviceSpecCredentialsPublicKey
     public string Key { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1CloudIOTDeviceSpecCredentials
 {
     /// <summary>The time at which this credential becomes invalid.</summary>
@@ -30,6 +32,7 @@ public partial class V1alpha1CloudIOTDeviceSpecCredentials
     public V1alpha1CloudIOTDeviceSpecCredentialsPublicKey PublicKey { get; set; }
 }
 
+/// <summary>Gateway-related configuration and state.</summary>
 public partial class V1alpha1CloudIOTDeviceSpecGatewayConfig
 {
     /// <summary>Indicates whether the device is a gateway. Possible values: ["ASSOCIATION_ONLY", "DEVICE_AUTH_TOKEN_ONLY", "ASSOCIATION_AND_DEVICE_AUTH_TOKEN"].</summary>
@@ -49,6 +52,7 @@ public partial class V1alpha1CloudIOTDeviceSpecGatewayConfig
     public string? LastAccessedGatewayTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1CloudIOTDeviceSpec
 {
     /// <summary>If a device is blocked, connections or requests from this device will fail.</summary>
@@ -80,6 +84,7 @@ public partial class V1alpha1CloudIOTDeviceSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1CloudIOTDeviceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -103,6 +108,7 @@ public partial class V1alpha1CloudIOTDeviceStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1CloudIOTDeviceStatusConfig
 {
     /// <summary>The device configuration data.</summary>
@@ -122,6 +128,7 @@ public partial class V1alpha1CloudIOTDeviceStatusConfig
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1CloudIOTDeviceStatusLastErrorStatus
 {
     /// <summary>A list of messages that carry the error details.</summary>
@@ -137,6 +144,7 @@ public partial class V1alpha1CloudIOTDeviceStatusLastErrorStatus
     public int? Number { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1CloudIOTDeviceStatusState
 {
     /// <summary>The device state data.</summary>
@@ -148,6 +156,7 @@ public partial class V1alpha1CloudIOTDeviceStatusState
     public string? UpdateTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1CloudIOTDeviceStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -200,6 +209,7 @@ public partial class V1alpha1CloudIOTDeviceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1CloudIOTDevice : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1CloudIOTDeviceSpec>, IStatus<V1alpha1CloudIOTDeviceStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

@@ -38,6 +38,7 @@ public enum V1beta1StreamInputIOTHubSpecForProviderEventhubConsumerGroupNameRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1StreamInputIOTHubSpecForProviderEventhubConsumerGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1StreamInputIOTHubSpecForProviderEventhubConsumerGrou
     public V1beta1StreamInputIOTHubSpecForProviderEventhubConsumerGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ConsumerGroup in eventhub to populate eventhubConsumerGroupName.</summary>
 public partial class V1beta1StreamInputIOTHubSpecForProviderEventhubConsumerGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1StreamInputIOTHubSpecForProviderEventhubConsumerGroupNameSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1StreamInputIOTHubSpecForProviderEventhubConsumerGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1StreamInputIOTHubSpecForProviderEventhubConsumerGrou
     public V1beta1StreamInputIOTHubSpecForProviderEventhubConsumerGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ConsumerGroup in eventhub to populate eventhubConsumerGroupName.</summary>
 public partial class V1beta1StreamInputIOTHubSpecForProviderEventhubConsumerGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1StreamInputIOTHubSpecForProviderIothubNamespaceRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1StreamInputIOTHubSpecForProviderIothubNamespaceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1StreamInputIOTHubSpecForProviderIothubNamespaceRefPo
     public V1beta1StreamInputIOTHubSpecForProviderIothubNamespaceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a IOTHub in devices to populate iothubNamespace.</summary>
 public partial class V1beta1StreamInputIOTHubSpecForProviderIothubNamespaceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1StreamInputIOTHubSpecForProviderIothubNamespaceSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1StreamInputIOTHubSpecForProviderIothubNamespaceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1StreamInputIOTHubSpecForProviderIothubNamespaceSelec
     public V1beta1StreamInputIOTHubSpecForProviderIothubNamespaceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a IOTHub in devices to populate iothubNamespace.</summary>
 public partial class V1beta1StreamInputIOTHubSpecForProviderIothubNamespaceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1StreamInputIOTHubSpecForProviderResourceGroupNameRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1StreamInputIOTHubSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1StreamInputIOTHubSpecForProviderResourceGroupNameRef
     public V1beta1StreamInputIOTHubSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1StreamInputIOTHubSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1StreamInputIOTHubSpecForProviderResourceGroupNameSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1StreamInputIOTHubSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1StreamInputIOTHubSpecForProviderResourceGroupNameSel
     public V1beta1StreamInputIOTHubSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1StreamInputIOTHubSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1StreamInputIOTHubSpecForProviderResourceGroupNameSel
     public V1beta1StreamInputIOTHubSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StreamInputIOTHubSpecForProviderSerialization
 {
     /// <summary>The encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. It currently can only be set to UTF8.</summary>
@@ -309,6 +322,7 @@ public partial class V1beta1StreamInputIOTHubSpecForProviderSerialization
     public string? Type { get; set; }
 }
 
+/// <summary>The shared access policy key for the specified shared access policy. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1StreamInputIOTHubSpecForProviderSharedAccessPolicyKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -344,6 +358,7 @@ public enum V1beta1StreamInputIOTHubSpecForProviderStreamAnalyticsJobNameRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1StreamInputIOTHubSpecForProviderStreamAnalyticsJobNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -357,6 +372,7 @@ public partial class V1beta1StreamInputIOTHubSpecForProviderStreamAnalyticsJobNa
     public V1beta1StreamInputIOTHubSpecForProviderStreamAnalyticsJobNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Job in streamanalytics to populate streamAnalyticsJobName.</summary>
 public partial class V1beta1StreamInputIOTHubSpecForProviderStreamAnalyticsJobNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -388,6 +404,7 @@ public enum V1beta1StreamInputIOTHubSpecForProviderStreamAnalyticsJobNameSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1StreamInputIOTHubSpecForProviderStreamAnalyticsJobNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -401,6 +418,7 @@ public partial class V1beta1StreamInputIOTHubSpecForProviderStreamAnalyticsJobNa
     public V1beta1StreamInputIOTHubSpecForProviderStreamAnalyticsJobNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Job in streamanalytics to populate streamAnalyticsJobName.</summary>
 public partial class V1beta1StreamInputIOTHubSpecForProviderStreamAnalyticsJobNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -416,6 +434,7 @@ public partial class V1beta1StreamInputIOTHubSpecForProviderStreamAnalyticsJobNa
     public V1beta1StreamInputIOTHubSpecForProviderStreamAnalyticsJobNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StreamInputIOTHubSpecForProvider
 {
     /// <summary>The IoT Hub endpoint to connect to (ie. messages/events, messages/operationsMonitoringEvents, etc.).</summary>
@@ -507,6 +526,7 @@ public enum V1beta1StreamInputIOTHubSpecInitProviderEventhubConsumerGroupNameRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1StreamInputIOTHubSpecInitProviderEventhubConsumerGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -520,6 +540,7 @@ public partial class V1beta1StreamInputIOTHubSpecInitProviderEventhubConsumerGro
     public V1beta1StreamInputIOTHubSpecInitProviderEventhubConsumerGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ConsumerGroup in eventhub to populate eventhubConsumerGroupName.</summary>
 public partial class V1beta1StreamInputIOTHubSpecInitProviderEventhubConsumerGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -551,6 +572,7 @@ public enum V1beta1StreamInputIOTHubSpecInitProviderEventhubConsumerGroupNameSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1StreamInputIOTHubSpecInitProviderEventhubConsumerGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -564,6 +586,7 @@ public partial class V1beta1StreamInputIOTHubSpecInitProviderEventhubConsumerGro
     public V1beta1StreamInputIOTHubSpecInitProviderEventhubConsumerGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ConsumerGroup in eventhub to populate eventhubConsumerGroupName.</summary>
 public partial class V1beta1StreamInputIOTHubSpecInitProviderEventhubConsumerGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -599,6 +622,7 @@ public enum V1beta1StreamInputIOTHubSpecInitProviderIothubNamespaceRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1StreamInputIOTHubSpecInitProviderIothubNamespaceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -612,6 +636,7 @@ public partial class V1beta1StreamInputIOTHubSpecInitProviderIothubNamespaceRefP
     public V1beta1StreamInputIOTHubSpecInitProviderIothubNamespaceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a IOTHub in devices to populate iothubNamespace.</summary>
 public partial class V1beta1StreamInputIOTHubSpecInitProviderIothubNamespaceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -643,6 +668,7 @@ public enum V1beta1StreamInputIOTHubSpecInitProviderIothubNamespaceSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1StreamInputIOTHubSpecInitProviderIothubNamespaceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -656,6 +682,7 @@ public partial class V1beta1StreamInputIOTHubSpecInitProviderIothubNamespaceSele
     public V1beta1StreamInputIOTHubSpecInitProviderIothubNamespaceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a IOTHub in devices to populate iothubNamespace.</summary>
 public partial class V1beta1StreamInputIOTHubSpecInitProviderIothubNamespaceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -691,6 +718,7 @@ public enum V1beta1StreamInputIOTHubSpecInitProviderResourceGroupNameRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1StreamInputIOTHubSpecInitProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -704,6 +732,7 @@ public partial class V1beta1StreamInputIOTHubSpecInitProviderResourceGroupNameRe
     public V1beta1StreamInputIOTHubSpecInitProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1StreamInputIOTHubSpecInitProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -735,6 +764,7 @@ public enum V1beta1StreamInputIOTHubSpecInitProviderResourceGroupNameSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1StreamInputIOTHubSpecInitProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -748,6 +778,7 @@ public partial class V1beta1StreamInputIOTHubSpecInitProviderResourceGroupNameSe
     public V1beta1StreamInputIOTHubSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1StreamInputIOTHubSpecInitProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -763,6 +794,7 @@ public partial class V1beta1StreamInputIOTHubSpecInitProviderResourceGroupNameSe
     public V1beta1StreamInputIOTHubSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StreamInputIOTHubSpecInitProviderSerialization
 {
     /// <summary>The encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. It currently can only be set to UTF8.</summary>
@@ -798,6 +830,7 @@ public enum V1beta1StreamInputIOTHubSpecInitProviderStreamAnalyticsJobNameRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1StreamInputIOTHubSpecInitProviderStreamAnalyticsJobNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -811,6 +844,7 @@ public partial class V1beta1StreamInputIOTHubSpecInitProviderStreamAnalyticsJobN
     public V1beta1StreamInputIOTHubSpecInitProviderStreamAnalyticsJobNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Job in streamanalytics to populate streamAnalyticsJobName.</summary>
 public partial class V1beta1StreamInputIOTHubSpecInitProviderStreamAnalyticsJobNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -842,6 +876,7 @@ public enum V1beta1StreamInputIOTHubSpecInitProviderStreamAnalyticsJobNameSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1StreamInputIOTHubSpecInitProviderStreamAnalyticsJobNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -855,6 +890,7 @@ public partial class V1beta1StreamInputIOTHubSpecInitProviderStreamAnalyticsJobN
     public V1beta1StreamInputIOTHubSpecInitProviderStreamAnalyticsJobNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Job in streamanalytics to populate streamAnalyticsJobName.</summary>
 public partial class V1beta1StreamInputIOTHubSpecInitProviderStreamAnalyticsJobNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -870,6 +906,7 @@ public partial class V1beta1StreamInputIOTHubSpecInitProviderStreamAnalyticsJobN
     public V1beta1StreamInputIOTHubSpecInitProviderStreamAnalyticsJobNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1StreamInputIOTHubSpecInitProvider
 {
     /// <summary>The IoT Hub endpoint to connect to (ie. messages/events, messages/operationsMonitoringEvents, etc.).</summary>
@@ -979,6 +1016,7 @@ public enum V1beta1StreamInputIOTHubSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1StreamInputIOTHubSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -992,6 +1030,7 @@ public partial class V1beta1StreamInputIOTHubSpecProviderConfigRefPolicy
     public V1beta1StreamInputIOTHubSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1StreamInputIOTHubSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1023,6 +1062,7 @@ public enum V1beta1StreamInputIOTHubSpecPublishConnectionDetailsToConfigRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1StreamInputIOTHubSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1036,6 +1076,7 @@ public partial class V1beta1StreamInputIOTHubSpecPublishConnectionDetailsToConfi
     public V1beta1StreamInputIOTHubSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1StreamInputIOTHubSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1047,6 +1088,7 @@ public partial class V1beta1StreamInputIOTHubSpecPublishConnectionDetailsToConfi
     public V1beta1StreamInputIOTHubSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1StreamInputIOTHubSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1062,6 +1104,7 @@ public partial class V1beta1StreamInputIOTHubSpecPublishConnectionDetailsToMetad
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1StreamInputIOTHubSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1077,6 +1120,7 @@ public partial class V1beta1StreamInputIOTHubSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1StreamInputIOTHubSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1088,6 +1132,7 @@ public partial class V1beta1StreamInputIOTHubSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>StreamInputIOTHubSpec defines the desired state of StreamInputIOTHub</summary>
 public partial class V1beta1StreamInputIOTHubSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1120,6 +1165,7 @@ public partial class V1beta1StreamInputIOTHubSpec
     public V1beta1StreamInputIOTHubSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StreamInputIOTHubStatusAtProviderSerialization
 {
     /// <summary>The encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. It currently can only be set to UTF8.</summary>
@@ -1135,6 +1181,7 @@ public partial class V1beta1StreamInputIOTHubStatusAtProviderSerialization
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StreamInputIOTHubStatusAtProvider
 {
     /// <summary>The IoT Hub endpoint to connect to (ie. messages/events, messages/operationsMonitoringEvents, etc.).</summary>
@@ -1174,6 +1221,7 @@ public partial class V1beta1StreamInputIOTHubStatusAtProvider
     public string? StreamAnalyticsJobName { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1StreamInputIOTHubStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1201,6 +1249,7 @@ public partial class V1beta1StreamInputIOTHubStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>StreamInputIOTHubStatus defines the observed state of StreamInputIOTHub.</summary>
 public partial class V1beta1StreamInputIOTHubStatus
 {
     /// <summary></summary>
@@ -1217,6 +1266,7 @@ public partial class V1beta1StreamInputIOTHubStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>StreamInputIOTHub is the Schema for the StreamInputIOTHubs API. Manages a Stream Analytics Stream Input IoTHub.</summary>
 public partial class V1beta1StreamInputIOTHub : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1StreamInputIOTHubSpec>, IStatus<V1beta1StreamInputIOTHubStatus>
 {
     public const string KubeApiVersion = "v1beta1";

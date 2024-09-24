@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.eventhub.azure.com;
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a eventhub.azure.com/NamespacesEventhub resource</summary>
 public partial class V1api20211101storageNamespacesEventhubsConsumerGroupSpecOwner
 {
     /// <summary></summary>
@@ -19,6 +20,7 @@ public partial class V1api20211101storageNamespacesEventhubsConsumerGroupSpecOwn
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.Namespaces_Eventhubs_Consumergroup_Spec</summary>
 public partial class V1api20211101storageNamespacesEventhubsConsumerGroupSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -42,6 +44,7 @@ public partial class V1api20211101storageNamespacesEventhubsConsumerGroupSpec
     public string? UserMetadata { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20211101storageNamespacesEventhubsConsumerGroupStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -73,6 +76,7 @@ public partial class V1api20211101storageNamespacesEventhubsConsumerGroupStatusC
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 public partial class V1api20211101storageNamespacesEventhubsConsumerGroupStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -104,6 +108,7 @@ public partial class V1api20211101storageNamespacesEventhubsConsumerGroupStatusS
     public string? LastModifiedByType { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.Namespaces_Eventhubs_Consumergroup_STATUS</summary>
 public partial class V1api20211101storageNamespacesEventhubsConsumerGroupStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -148,6 +153,7 @@ public partial class V1api20211101storageNamespacesEventhubsConsumerGroupStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20211101.NamespacesEventhubsConsumerGroup Generator information: - Generated from: /eventhub/resource-manager/Microsoft.EventHub/stable/2021-11-01/consumergroups.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}/eventhubs/{eventHubName}/consumergroups/{consumerGroupName}</summary>
 public partial class V1api20211101storageNamespacesEventhubsConsumerGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20211101storageNamespacesEventhubsConsumerGroupSpec>, IStatus<V1api20211101storageNamespacesEventhubsConsumerGroupStatus>
 {
     public const string KubeApiVersion = "v1api20211101storage";

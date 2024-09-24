@@ -18,6 +18,7 @@ public enum V1beta1RegionURLMapSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionCorsPolicy
 {
     /// <summary>In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This translates to the Access- Control-Allow-Credentials header. Defaults to false.</summary>
@@ -53,6 +54,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionCorsPol
     public double? MaxAge { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionFaultInjectionPolicyAbort
 {
     /// <summary>The HTTP status code used to abort the request. The value must be between 200 and 599 inclusive.</summary>
@@ -64,6 +66,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionFaultIn
     public double? Percentage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionFaultInjectionPolicyDelayFixedDelay
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -75,6 +78,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionFaultIn
     public string? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionFaultInjectionPolicyDelay
 {
     /// <summary>Specifies the value of the fixed delay interval. Structure is documented below.</summary>
@@ -86,6 +90,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionFaultIn
     public double? Percentage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionFaultInjectionPolicy
 {
     /// <summary>The specification for how client requests are aborted as part of fault injection. Structure is documented below.</summary>
@@ -117,6 +122,7 @@ public enum V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -130,6 +136,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequest
     public V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RegionBackendService in compute to populate backendService.</summary>
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -161,6 +168,7 @@ public enum V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -174,6 +182,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequest
     public V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RegionBackendService in compute to populate backendService.</summary>
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -189,6 +198,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequest
     public V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPolicy
 {
     /// <summary>The default RegionBackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -204,6 +214,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequest
     public V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelector? BackendServiceSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRetryPolicyPerTryTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -215,6 +226,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRetryPo
     public string? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRetryPolicy
 {
     /// <summary>Specifies the allowed number retries. This number must be &gt; 0.</summary>
@@ -230,6 +242,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRetryPo
     public IList<string>? RetryConditions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -241,6 +254,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionTimeout
     public string? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionUrlRewrite
 {
     /// <summary>Prior to forwarding the request to the selected service, the request's host header is replaced with contents of hostRewrite. The value must be between 1 and 255 characters.</summary>
@@ -272,6 +286,7 @@ public enum V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendS
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServicesBackendServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -285,6 +300,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeighte
     public V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServicesBackendServiceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RegionBackendService in compute to populate backendService.</summary>
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServicesBackendServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -316,6 +332,7 @@ public enum V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServicesBackendServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -329,6 +346,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeighte
     public V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServicesBackendServiceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RegionBackendService in compute to populate backendService.</summary>
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServicesBackendServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -344,6 +362,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeighte
     public V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServicesBackendServiceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -359,6 +378,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeighte
     public bool? Replace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -374,6 +394,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeighte
     public bool? Replace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServicesHeaderAction
 {
     /// <summary>Headers to add to a matching request prior to forwarding the request to the backendService. Structure is documented below.</summary>
@@ -393,6 +414,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeighte
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServices
 {
     /// <summary>The default RegionBackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -416,6 +438,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeighte
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteAction
 {
     /// <summary>The specification for allowing client side cross-origin requests. Please see W3C Recommendation for Cross Origin Resource Sharing Structure is documented below.</summary>
@@ -467,6 +490,7 @@ public enum V1beta1RegionURLMapSpecForProviderDefaultServiceRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionURLMapSpecForProviderDefaultServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -480,6 +504,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultServiceRefPolicy
     public V1beta1RegionURLMapSpecForProviderDefaultServiceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RegionBackendService in compute to populate defaultService.</summary>
 public partial class V1beta1RegionURLMapSpecForProviderDefaultServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -511,6 +536,7 @@ public enum V1beta1RegionURLMapSpecForProviderDefaultServiceSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionURLMapSpecForProviderDefaultServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -524,6 +550,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultServiceSelectorPol
     public V1beta1RegionURLMapSpecForProviderDefaultServiceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RegionBackendService in compute to populate defaultService.</summary>
 public partial class V1beta1RegionURLMapSpecForProviderDefaultServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -539,6 +566,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultServiceSelector
     public V1beta1RegionURLMapSpecForProviderDefaultServiceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderDefaultUrlRedirect
 {
     /// <summary>The host that will be used in the redirect response instead of the one that was supplied in the request. The value must be between 1 and 255 characters.</summary>
@@ -566,6 +594,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultUrlRedirect
     public bool? StripQuery { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderHostRule
 {
     /// <summary>An optional description of this HostRule. Provide this property when you create the resource.</summary>
@@ -601,6 +630,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherDefaultServiceRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -614,6 +644,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultService
     public V1beta1RegionURLMapSpecForProviderPathMatcherDefaultServiceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RegionBackendService in compute to populate defaultService.</summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -645,6 +676,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherDefaultServiceSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -658,6 +690,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultService
     public V1beta1RegionURLMapSpecForProviderPathMatcherDefaultServiceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RegionBackendService in compute to populate defaultService.</summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -673,6 +706,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultService
     public V1beta1RegionURLMapSpecForProviderPathMatcherDefaultServiceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultUrlRedirect
 {
     /// <summary>The host that will be used in the redirect response instead of the one that was supplied in the request. The value must be between 1 and 255 characters.</summary>
@@ -700,6 +734,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultUrlRedi
     public bool? StripQuery { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionCorsPolicy
 {
     /// <summary>In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This translates to the Access- Control-Allow-Credentials header. Defaults to false.</summary>
@@ -735,6 +770,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     public double? MaxAge { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort
 {
     /// <summary>The HTTP status code used to abort the request. The value must be between 200 and 599 inclusive.</summary>
@@ -746,6 +782,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     public double? Percentage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -757,6 +794,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     public string? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay
 {
     /// <summary>Specifies the value of the fixed delay interval. Structure is documented below.</summary>
@@ -768,6 +806,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     public double? Percentage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionFaultInjectionPolicy
 {
     /// <summary>The specification for how client requests are aborted as part of fault injection. Structure is documented below.</summary>
@@ -799,6 +838,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequ
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -812,6 +852,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     public V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RegionBackendService in compute to populate backendService.</summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -843,6 +884,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequ
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -856,6 +898,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     public V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RegionBackendService in compute to populate backendService.</summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -871,6 +914,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     public V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicy
 {
     /// <summary>The default RegionBackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -886,6 +930,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     public V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceSelector? BackendServiceSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -897,6 +942,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     public string? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRetryPolicy
 {
     /// <summary>Specifies the allowed number retries. This number must be &gt; 0.</summary>
@@ -912,6 +958,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     public IList<string>? RetryConditions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -923,6 +970,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     public string? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionUrlRewrite
 {
     /// <summary>Prior to forwarding the request to the selected service, the request's host header is replaced with contents of hostRewrite. The value must be between 1 and 255 characters.</summary>
@@ -954,6 +1002,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeig
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -967,6 +1016,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     public V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RegionBackendService in compute to populate backendService.</summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -998,6 +1048,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeig
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1011,6 +1062,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     public V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RegionBackendService in compute to populate backendService.</summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1026,6 +1078,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     public V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -1041,6 +1094,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     public bool? Replace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -1056,6 +1110,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     public bool? Replace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction
 {
     /// <summary>Headers to add to a matching request prior to forwarding the request to the backendService. Structure is documented below.</summary>
@@ -1075,6 +1130,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServices
 {
     /// <summary>The default RegionBackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -1098,6 +1154,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteAction
 {
     /// <summary>The specification for allowing client side cross-origin requests. Please see W3C Recommendation for Cross Origin Resource Sharing Structure is documented below.</summary>
@@ -1149,6 +1206,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServiceRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1162,6 +1220,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServic
     public V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServiceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RegionBackendService in compute to populate service.</summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1193,6 +1252,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServiceSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1206,6 +1266,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServic
     public V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServiceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RegionBackendService in compute to populate service.</summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1221,6 +1282,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServic
     public V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServiceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleUrlRedirect
 {
     /// <summary>The host that will be used in the redirect response instead of the one that was supplied in the request. The value must be between 1 and 255 characters.</summary>
@@ -1248,6 +1310,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleUrlRed
     public bool? StripQuery { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRule
 {
     /// <summary>The list of path patterns to match. Each must start with / and the only place a * is allowed is at the end following a /. The string fed to the path matcher does not include any text after the first ? or #, and those chars are not allowed here.</summary>
@@ -1275,6 +1338,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRule
     public IList<V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleUrlRedirect>? UrlRedirect { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesHeaderActionRequestHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -1290,6 +1354,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesHead
     public bool? Replace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesHeaderActionResponseHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -1305,6 +1370,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesHead
     public bool? Replace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesHeaderAction
 {
     /// <summary>Headers to add to a matching request prior to forwarding the request to the backendService. Structure is documented below.</summary>
@@ -1324,6 +1390,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesHead
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch
 {
     /// <summary>The end of the range (exclusive).</summary>
@@ -1335,6 +1402,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesMatc
     public double? RangeStart { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesMatchRulesHeaderMatches
 {
     /// <summary>The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch must be set.</summary>
@@ -1370,6 +1438,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesMatc
     public string? SuffixMatch { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels
 {
     /// <summary>The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.</summary>
@@ -1381,6 +1450,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesMatc
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesMatchRulesMetadataFilters
 {
     /// <summary>The list of label value pairs that must match labels in the provided metadata based on filterMatchCriteria  This list must not be empty and can have at the most 64 entries. Structure is documented below.</summary>
@@ -1392,6 +1462,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesMatc
     public string? FilterMatchCriteria { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesMatchRulesQueryParameterMatches
 {
     /// <summary>The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch must be set.</summary>
@@ -1411,6 +1482,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesMatc
     public string? RegexMatch { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesMatchRules
 {
     /// <summary>For satisfying the matchRule condition, the path of the request must exactly match the value specified in fullPathMatch after removing any query parameters and anchor that may be part of the original URL. FullPathMatch must be between 1 and 1024 characters. Only one of prefixMatch, fullPathMatch or regexMatch must be specified.</summary>
@@ -1446,6 +1518,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesMatc
     public string? RegexMatch { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionCorsPolicy
 {
     /// <summary>In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This translates to the Access- Control-Allow-Credentials header. Defaults to false.</summary>
@@ -1481,6 +1554,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
     public double? MaxAge { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort
 {
     /// <summary>The HTTP status code used to abort the request. The value must be between 200 and 599 inclusive.</summary>
@@ -1492,6 +1566,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
     public double? Percentage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -1503,6 +1578,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
     public string? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay
 {
     /// <summary>Specifies the value of the fixed delay interval. Structure is documented below.</summary>
@@ -1514,6 +1590,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
     public double? Percentage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicy
 {
     /// <summary>The specification for how client requests are aborted as part of fault injection. Structure is documented below.</summary>
@@ -1525,6 +1602,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
     public IList<V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay>? Delay { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionRequestMirrorPolicy
 {
     /// <summary>The default RegionBackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -1532,6 +1610,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
     public string? BackendService { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -1543,6 +1622,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
     public string? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionRetryPolicy
 {
     /// <summary>Specifies the allowed number retries. This number must be &gt; 0.</summary>
@@ -1558,6 +1638,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
     public IList<string>? RetryConditions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -1569,6 +1650,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
     public string? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionUrlRewrite
 {
     /// <summary>Prior to forwarding the request to the selected service, the request's host header is replaced with contents of hostRewrite. The value must be between 1 and 255 characters.</summary>
@@ -1584,6 +1666,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
     public string? PathTemplateRewrite { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -1599,6 +1682,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
     public bool? Replace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -1614,6 +1698,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
     public bool? Replace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction
 {
     /// <summary>Headers to add to a matching request prior to forwarding the request to the backendService. Structure is documented below.</summary>
@@ -1633,6 +1718,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionWeightedBackendServices
 {
     /// <summary>The default RegionBackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -1648,6 +1734,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteAction
 {
     /// <summary>The specification for allowing client side cross-origin requests. Please see W3C Recommendation for Cross Origin Resource Sharing Structure is documented below.</summary>
@@ -1699,6 +1786,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServiceRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1712,6 +1800,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServ
     public V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServiceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RegionBackendService in compute to populate service.</summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1743,6 +1832,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServiceSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1756,6 +1846,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServ
     public V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServiceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RegionBackendService in compute to populate service.</summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1771,6 +1862,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServ
     public V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServiceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesUrlRedirect
 {
     /// <summary>The host that will be used in the redirect response instead of the one that was supplied in the request. The value must be between 1 and 255 characters.</summary>
@@ -1798,6 +1890,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesUrlR
     public bool? StripQuery { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRules
 {
     /// <summary>Specifies changes to request and response headers that need to take effect for the selected backendService. headerAction specified here take effect before headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap. Structure is documented below.</summary>
@@ -1833,6 +1926,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRules
     public IList<V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesUrlRedirect>? UrlRedirect { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderPathMatcher
 {
     /// <summary>A reference to a RegionBackendService resource. This will be used if none of the pathRules defined by this PathMatcher is matched by the URL's path portion.</summary>
@@ -1888,6 +1982,7 @@ public enum V1beta1RegionURLMapSpecForProviderTestServiceRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionURLMapSpecForProviderTestServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1901,6 +1996,7 @@ public partial class V1beta1RegionURLMapSpecForProviderTestServiceRefPolicy
     public V1beta1RegionURLMapSpecForProviderTestServiceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RegionBackendService in compute to populate service.</summary>
 public partial class V1beta1RegionURLMapSpecForProviderTestServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1932,6 +2028,7 @@ public enum V1beta1RegionURLMapSpecForProviderTestServiceSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionURLMapSpecForProviderTestServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1945,6 +2042,7 @@ public partial class V1beta1RegionURLMapSpecForProviderTestServiceSelectorPolicy
     public V1beta1RegionURLMapSpecForProviderTestServiceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RegionBackendService in compute to populate service.</summary>
 public partial class V1beta1RegionURLMapSpecForProviderTestServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1960,6 +2058,7 @@ public partial class V1beta1RegionURLMapSpecForProviderTestServiceSelector
     public V1beta1RegionURLMapSpecForProviderTestServiceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProviderTest
 {
     /// <summary>Description of this test case.</summary>
@@ -1987,6 +2086,7 @@ public partial class V1beta1RegionURLMapSpecForProviderTest
     public V1beta1RegionURLMapSpecForProviderTestServiceSelector? ServiceSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecForProvider
 {
     /// <summary>defaultRouteAction takes effect when none of the hostRules match. The load balancer performs advanced routing actions, such as URL rewrites and header transformations, before forwarding the request to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set. Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices. Only one of defaultRouteAction or defaultUrlRedirect must be set. URL maps for Classic external HTTP(S) load balancers only support the urlRewrite action within defaultRouteAction. defaultRouteAction has no effect when the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to true. Structure is documented below.</summary>
@@ -2034,6 +2134,7 @@ public partial class V1beta1RegionURLMapSpecForProvider
     public IList<V1beta1RegionURLMapSpecForProviderTest>? Test { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionCorsPolicy
 {
     /// <summary>In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This translates to the Access- Control-Allow-Credentials header. Defaults to false.</summary>
@@ -2069,6 +2170,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionCorsPo
     public double? MaxAge { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionFaultInjectionPolicyAbort
 {
     /// <summary>The HTTP status code used to abort the request. The value must be between 200 and 599 inclusive.</summary>
@@ -2080,6 +2182,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionFaultI
     public double? Percentage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionFaultInjectionPolicyDelayFixedDelay
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -2091,6 +2194,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionFaultI
     public string? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionFaultInjectionPolicyDelay
 {
     /// <summary>Specifies the value of the fixed delay interval. Structure is documented below.</summary>
@@ -2102,6 +2206,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionFaultI
     public double? Percentage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionFaultInjectionPolicy
 {
     /// <summary>The specification for how client requests are aborted as part of fault injection. Structure is documented below.</summary>
@@ -2133,6 +2238,7 @@ public enum V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2146,6 +2252,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionReques
     public V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RegionBackendService in compute to populate backendService.</summary>
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2177,6 +2284,7 @@ public enum V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2190,6 +2298,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionReques
     public V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RegionBackendService in compute to populate backendService.</summary>
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2205,6 +2314,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionReques
     public V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicy
 {
     /// <summary>The default RegionBackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -2220,6 +2330,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionReques
     public V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelector? BackendServiceSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRetryPolicyPerTryTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -2231,6 +2342,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRetryP
     public string? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRetryPolicy
 {
     /// <summary>Specifies the allowed number retries. This number must be &gt; 0.</summary>
@@ -2246,6 +2358,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRetryP
     public IList<string>? RetryConditions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -2257,6 +2370,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionTimeou
     public string? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionUrlRewrite
 {
     /// <summary>Prior to forwarding the request to the selected service, the request's host header is replaced with contents of hostRewrite. The value must be between 1 and 255 characters.</summary>
@@ -2288,6 +2402,7 @@ public enum V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackend
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesBackendServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2301,6 +2416,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeight
     public V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesBackendServiceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RegionBackendService in compute to populate backendService.</summary>
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesBackendServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2332,6 +2448,7 @@ public enum V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackend
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesBackendServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2345,6 +2462,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeight
     public V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesBackendServiceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RegionBackendService in compute to populate backendService.</summary>
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesBackendServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2360,6 +2478,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeight
     public V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesBackendServiceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -2375,6 +2494,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeight
     public bool? Replace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -2390,6 +2510,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeight
     public bool? Replace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesHeaderAction
 {
     /// <summary>Headers to add to a matching request prior to forwarding the request to the backendService. Structure is documented below.</summary>
@@ -2409,6 +2530,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeight
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServices
 {
     /// <summary>The default RegionBackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -2432,6 +2554,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeight
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteAction
 {
     /// <summary>The specification for allowing client side cross-origin requests. Please see W3C Recommendation for Cross Origin Resource Sharing Structure is documented below.</summary>
@@ -2483,6 +2606,7 @@ public enum V1beta1RegionURLMapSpecInitProviderDefaultServiceRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2496,6 +2620,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultServiceRefPolicy
     public V1beta1RegionURLMapSpecInitProviderDefaultServiceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RegionBackendService in compute to populate defaultService.</summary>
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2527,6 +2652,7 @@ public enum V1beta1RegionURLMapSpecInitProviderDefaultServiceSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2540,6 +2666,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultServiceSelectorPo
     public V1beta1RegionURLMapSpecInitProviderDefaultServiceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RegionBackendService in compute to populate defaultService.</summary>
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2555,6 +2682,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultServiceSelector
     public V1beta1RegionURLMapSpecInitProviderDefaultServiceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderDefaultUrlRedirect
 {
     /// <summary>The host that will be used in the redirect response instead of the one that was supplied in the request. The value must be between 1 and 255 characters.</summary>
@@ -2582,6 +2710,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultUrlRedirect
     public bool? StripQuery { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderHostRule
 {
     /// <summary>An optional description of this HostRule. Provide this property when you create the resource.</summary>
@@ -2617,6 +2746,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServiceRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2630,6 +2760,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServic
     public V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServiceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RegionBackendService in compute to populate defaultService.</summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2661,6 +2792,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServiceSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2674,6 +2806,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServic
     public V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServiceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RegionBackendService in compute to populate defaultService.</summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2689,6 +2822,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServic
     public V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServiceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultUrlRedirect
 {
     /// <summary>The host that will be used in the redirect response instead of the one that was supplied in the request. The value must be between 1 and 255 characters.</summary>
@@ -2716,6 +2850,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultUrlRed
     public bool? StripQuery { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionCorsPolicy
 {
     /// <summary>In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This translates to the Access- Control-Allow-Credentials header. Defaults to false.</summary>
@@ -2751,6 +2886,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     public double? MaxAge { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort
 {
     /// <summary>The HTTP status code used to abort the request. The value must be between 200 and 599 inclusive.</summary>
@@ -2762,6 +2898,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     public double? Percentage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -2773,6 +2910,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     public string? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay
 {
     /// <summary>Specifies the value of the fixed delay interval. Structure is documented below.</summary>
@@ -2784,6 +2922,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     public double? Percentage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionFaultInjectionPolicy
 {
     /// <summary>The specification for how client requests are aborted as part of fault injection. Structure is documented below.</summary>
@@ -2815,6 +2954,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionReq
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2828,6 +2968,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     public V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RegionBackendService in compute to populate backendService.</summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2859,6 +3000,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionReq
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2872,6 +3014,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     public V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RegionBackendService in compute to populate backendService.</summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2887,6 +3030,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     public V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicy
 {
     /// <summary>The default RegionBackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -2902,6 +3046,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     public V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceSelector? BackendServiceSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -2913,6 +3058,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     public string? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRetryPolicy
 {
     /// <summary>Specifies the allowed number retries. This number must be &gt; 0.</summary>
@@ -2928,6 +3074,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     public IList<string>? RetryConditions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -2939,6 +3086,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     public string? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionUrlRewrite
 {
     /// <summary>Prior to forwarding the request to the selected service, the request's host header is replaced with contents of hostRewrite. The value must be between 1 and 255 characters.</summary>
@@ -2970,6 +3118,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWei
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2983,6 +3132,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     public V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RegionBackendService in compute to populate backendService.</summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3014,6 +3164,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWei
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3027,6 +3178,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     public V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RegionBackendService in compute to populate backendService.</summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -3042,6 +3194,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     public V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -3057,6 +3210,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     public bool? Replace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -3072,6 +3226,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     public bool? Replace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction
 {
     /// <summary>Headers to add to a matching request prior to forwarding the request to the backendService. Structure is documented below.</summary>
@@ -3091,6 +3246,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServices
 {
     /// <summary>The default RegionBackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -3114,6 +3270,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteAction
 {
     /// <summary>The specification for allowing client side cross-origin requests. Please see W3C Recommendation for Cross Origin Resource Sharing Structure is documented below.</summary>
@@ -3165,6 +3322,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServiceRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3178,6 +3336,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServi
     public V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServiceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RegionBackendService in compute to populate service.</summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3209,6 +3368,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServiceSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3222,6 +3382,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServi
     public V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServiceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RegionBackendService in compute to populate service.</summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -3237,6 +3398,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServi
     public V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServiceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleUrlRedirect
 {
     /// <summary>The host that will be used in the redirect response instead of the one that was supplied in the request. The value must be between 1 and 255 characters.</summary>
@@ -3264,6 +3426,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleUrlRe
     public bool? StripQuery { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRule
 {
     /// <summary>The list of path patterns to match. Each must start with / and the only place a * is allowed is at the end following a /. The string fed to the path matcher does not include any text after the first ? or #, and those chars are not allowed here.</summary>
@@ -3291,6 +3454,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRule
     public IList<V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleUrlRedirect>? UrlRedirect { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesHeaderActionRequestHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -3306,6 +3470,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesHea
     public bool? Replace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesHeaderActionResponseHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -3321,6 +3486,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesHea
     public bool? Replace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesHeaderAction
 {
     /// <summary>Headers to add to a matching request prior to forwarding the request to the backendService. Structure is documented below.</summary>
@@ -3340,6 +3506,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesHea
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch
 {
     /// <summary>The end of the range (exclusive).</summary>
@@ -3351,6 +3518,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesMat
     public double? RangeStart { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesMatchRulesHeaderMatches
 {
     /// <summary>The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch must be set.</summary>
@@ -3386,6 +3554,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesMat
     public string? SuffixMatch { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels
 {
     /// <summary>The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.</summary>
@@ -3397,6 +3566,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesMat
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesMatchRulesMetadataFilters
 {
     /// <summary>The list of label value pairs that must match labels in the provided metadata based on filterMatchCriteria  This list must not be empty and can have at the most 64 entries. Structure is documented below.</summary>
@@ -3408,6 +3578,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesMat
     public string? FilterMatchCriteria { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesMatchRulesQueryParameterMatches
 {
     /// <summary>The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch must be set.</summary>
@@ -3427,6 +3598,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesMat
     public string? RegexMatch { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesMatchRules
 {
     /// <summary>For satisfying the matchRule condition, the path of the request must exactly match the value specified in fullPathMatch after removing any query parameters and anchor that may be part of the original URL. FullPathMatch must be between 1 and 1024 characters. Only one of prefixMatch, fullPathMatch or regexMatch must be specified.</summary>
@@ -3462,6 +3634,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesMat
     public string? RegexMatch { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionCorsPolicy
 {
     /// <summary>In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This translates to the Access- Control-Allow-Credentials header. Defaults to false.</summary>
@@ -3497,6 +3670,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
     public double? MaxAge { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort
 {
     /// <summary>The HTTP status code used to abort the request. The value must be between 200 and 599 inclusive.</summary>
@@ -3508,6 +3682,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
     public double? Percentage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -3519,6 +3694,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
     public string? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay
 {
     /// <summary>Specifies the value of the fixed delay interval. Structure is documented below.</summary>
@@ -3530,6 +3706,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
     public double? Percentage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicy
 {
     /// <summary>The specification for how client requests are aborted as part of fault injection. Structure is documented below.</summary>
@@ -3541,6 +3718,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
     public IList<V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay>? Delay { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionRequestMirrorPolicy
 {
     /// <summary>The default RegionBackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -3548,6 +3726,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
     public string? BackendService { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -3559,6 +3738,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
     public string? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionRetryPolicy
 {
     /// <summary>Specifies the allowed number retries. This number must be &gt; 0.</summary>
@@ -3574,6 +3754,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
     public IList<string>? RetryConditions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -3585,6 +3766,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
     public string? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionUrlRewrite
 {
     /// <summary>Prior to forwarding the request to the selected service, the request's host header is replaced with contents of hostRewrite. The value must be between 1 and 255 characters.</summary>
@@ -3600,6 +3782,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
     public string? PathTemplateRewrite { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -3615,6 +3798,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
     public bool? Replace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -3630,6 +3814,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
     public bool? Replace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction
 {
     /// <summary>Headers to add to a matching request prior to forwarding the request to the backendService. Structure is documented below.</summary>
@@ -3649,6 +3834,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionWeightedBackendServices
 {
     /// <summary>The default RegionBackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -3664,6 +3850,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteAction
 {
     /// <summary>The specification for allowing client side cross-origin requests. Please see W3C Recommendation for Cross Origin Resource Sharing Structure is documented below.</summary>
@@ -3715,6 +3902,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesServiceRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3728,6 +3916,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesSer
     public V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesServiceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RegionBackendService in compute to populate service.</summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3759,6 +3948,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesServiceSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3772,6 +3962,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesSer
     public V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesServiceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RegionBackendService in compute to populate service.</summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -3787,6 +3978,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesSer
     public V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesServiceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesUrlRedirect
 {
     /// <summary>The host that will be used in the redirect response instead of the one that was supplied in the request. The value must be between 1 and 255 characters.</summary>
@@ -3814,6 +4006,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesUrl
     public bool? StripQuery { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRules
 {
     /// <summary>Specifies changes to request and response headers that need to take effect for the selected backendService. headerAction specified here take effect before headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap. Structure is documented below.</summary>
@@ -3849,6 +4042,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRules
     public IList<V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesUrlRedirect>? UrlRedirect { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderPathMatcher
 {
     /// <summary>A reference to a RegionBackendService resource. This will be used if none of the pathRules defined by this PathMatcher is matched by the URL's path portion.</summary>
@@ -3904,6 +4098,7 @@ public enum V1beta1RegionURLMapSpecInitProviderTestServiceRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionURLMapSpecInitProviderTestServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3917,6 +4112,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderTestServiceRefPolicy
     public V1beta1RegionURLMapSpecInitProviderTestServiceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RegionBackendService in compute to populate service.</summary>
 public partial class V1beta1RegionURLMapSpecInitProviderTestServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3948,6 +4144,7 @@ public enum V1beta1RegionURLMapSpecInitProviderTestServiceSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionURLMapSpecInitProviderTestServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3961,6 +4158,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderTestServiceSelectorPolic
     public V1beta1RegionURLMapSpecInitProviderTestServiceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RegionBackendService in compute to populate service.</summary>
 public partial class V1beta1RegionURLMapSpecInitProviderTestServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -3976,6 +4174,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderTestServiceSelector
     public V1beta1RegionURLMapSpecInitProviderTestServiceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapSpecInitProviderTest
 {
     /// <summary>Description of this test case.</summary>
@@ -4003,6 +4202,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderTest
     public V1beta1RegionURLMapSpecInitProviderTestServiceSelector? ServiceSelector { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1RegionURLMapSpecInitProvider
 {
     /// <summary>defaultRouteAction takes effect when none of the hostRules match. The load balancer performs advanced routing actions, such as URL rewrites and header transformations, before forwarding the request to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set. Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices. Only one of defaultRouteAction or defaultUrlRedirect must be set. URL maps for Classic external HTTP(S) load balancers only support the urlRewrite action within defaultRouteAction. defaultRouteAction has no effect when the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to true. Structure is documented below.</summary>
@@ -4088,6 +4288,7 @@ public enum V1beta1RegionURLMapSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionURLMapSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -4101,6 +4302,7 @@ public partial class V1beta1RegionURLMapSpecProviderConfigRefPolicy
     public V1beta1RegionURLMapSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1RegionURLMapSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -4132,6 +4334,7 @@ public enum V1beta1RegionURLMapSpecPublishConnectionDetailsToConfigRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionURLMapSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -4145,6 +4348,7 @@ public partial class V1beta1RegionURLMapSpecPublishConnectionDetailsToConfigRefP
     public V1beta1RegionURLMapSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1RegionURLMapSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -4156,6 +4360,7 @@ public partial class V1beta1RegionURLMapSpecPublishConnectionDetailsToConfigRef
     public V1beta1RegionURLMapSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1RegionURLMapSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -4171,6 +4376,7 @@ public partial class V1beta1RegionURLMapSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1RegionURLMapSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -4186,6 +4392,7 @@ public partial class V1beta1RegionURLMapSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1RegionURLMapSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -4197,6 +4404,7 @@ public partial class V1beta1RegionURLMapSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>RegionURLMapSpec defines the desired state of RegionURLMap</summary>
 public partial class V1beta1RegionURLMapSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -4229,6 +4437,7 @@ public partial class V1beta1RegionURLMapSpec
     public V1beta1RegionURLMapSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionCorsPolicy
 {
     /// <summary>In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This translates to the Access- Control-Allow-Credentials header. Defaults to false.</summary>
@@ -4264,6 +4473,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionCorsPo
     public double? MaxAge { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionFaultInjectionPolicyAbort
 {
     /// <summary>The HTTP status code used to abort the request. The value must be between 200 and 599 inclusive.</summary>
@@ -4275,6 +4485,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionFaultI
     public double? Percentage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionFaultInjectionPolicyDelayFixedDelay
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -4286,6 +4497,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionFaultI
     public string? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionFaultInjectionPolicyDelay
 {
     /// <summary>Specifies the value of the fixed delay interval. Structure is documented below.</summary>
@@ -4297,6 +4509,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionFaultI
     public double? Percentage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionFaultInjectionPolicy
 {
     /// <summary>The specification for how client requests are aborted as part of fault injection. Structure is documented below.</summary>
@@ -4308,6 +4521,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionFaultI
     public IList<V1beta1RegionURLMapStatusAtProviderDefaultRouteActionFaultInjectionPolicyDelay>? Delay { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionRequestMirrorPolicy
 {
     /// <summary>The default RegionBackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -4315,6 +4529,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionReques
     public string? BackendService { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionRetryPolicyPerTryTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -4326,6 +4541,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionRetryP
     public string? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionRetryPolicy
 {
     /// <summary>Specifies the allowed number retries. This number must be &gt; 0.</summary>
@@ -4341,6 +4557,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionRetryP
     public IList<string>? RetryConditions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -4352,6 +4569,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionTimeou
     public string? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionUrlRewrite
 {
     /// <summary>Prior to forwarding the request to the selected service, the request's host header is replaced with contents of hostRewrite. The value must be between 1 and 255 characters.</summary>
@@ -4363,6 +4581,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionUrlRew
     public string? PathPrefixRewrite { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -4378,6 +4597,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionWeight
     public bool? Replace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -4393,6 +4613,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionWeight
     public bool? Replace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionWeightedBackendServicesHeaderAction
 {
     /// <summary>Headers to add to a matching request prior to forwarding the request to the backendService. Structure is documented below.</summary>
@@ -4412,6 +4633,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionWeight
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionWeightedBackendServices
 {
     /// <summary>The default RegionBackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -4427,6 +4649,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteActionWeight
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteAction
 {
     /// <summary>The specification for allowing client side cross-origin requests. Please see W3C Recommendation for Cross Origin Resource Sharing Structure is documented below.</summary>
@@ -4458,6 +4681,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultRouteAction
     public IList<V1beta1RegionURLMapStatusAtProviderDefaultRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderDefaultUrlRedirect
 {
     /// <summary>The host that will be used in the redirect response instead of the one that was supplied in the request. The value must be between 1 and 255 characters.</summary>
@@ -4485,6 +4709,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderDefaultUrlRedirect
     public bool? StripQuery { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderHostRule
 {
     /// <summary>An optional description of this HostRule. Provide this property when you create the resource.</summary>
@@ -4500,6 +4725,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderHostRule
     public string? PathMatcher { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultUrlRedirect
 {
     /// <summary>The host that will be used in the redirect response instead of the one that was supplied in the request. The value must be between 1 and 255 characters.</summary>
@@ -4527,6 +4753,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherDefaultUrlRed
     public bool? StripQuery { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionCorsPolicy
 {
     /// <summary>In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This translates to the Access- Control-Allow-Credentials header. Defaults to false.</summary>
@@ -4562,6 +4789,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
     public double? MaxAge { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort
 {
     /// <summary>The HTTP status code used to abort the request. The value must be between 200 and 599 inclusive.</summary>
@@ -4573,6 +4801,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
     public double? Percentage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -4584,6 +4813,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
     public string? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay
 {
     /// <summary>Specifies the value of the fixed delay interval. Structure is documented below.</summary>
@@ -4595,6 +4825,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
     public double? Percentage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionFaultInjectionPolicy
 {
     /// <summary>The specification for how client requests are aborted as part of fault injection. Structure is documented below.</summary>
@@ -4606,6 +4837,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
     public IList<V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay>? Delay { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionRequestMirrorPolicy
 {
     /// <summary>The default RegionBackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -4613,6 +4845,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
     public string? BackendService { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -4624,6 +4857,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
     public string? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionRetryPolicy
 {
     /// <summary>Specifies the allowed number retries. This number must be &gt; 0.</summary>
@@ -4639,6 +4873,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
     public IList<string>? RetryConditions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -4650,6 +4885,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
     public string? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionUrlRewrite
 {
     /// <summary>Prior to forwarding the request to the selected service, the request's host header is replaced with contents of hostRewrite. The value must be between 1 and 255 characters.</summary>
@@ -4661,6 +4897,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
     public string? PathPrefixRewrite { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -4676,6 +4913,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
     public bool? Replace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -4691,6 +4929,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
     public bool? Replace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction
 {
     /// <summary>Headers to add to a matching request prior to forwarding the request to the backendService. Structure is documented below.</summary>
@@ -4710,6 +4949,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionWeightedBackendServices
 {
     /// <summary>The default RegionBackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -4725,6 +4965,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteAction
 {
     /// <summary>The specification for allowing client side cross-origin requests. Please see W3C Recommendation for Cross Origin Resource Sharing Structure is documented below.</summary>
@@ -4756,6 +4997,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRoute
     public IList<V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleUrlRedirect
 {
     /// <summary>The host that will be used in the redirect response instead of the one that was supplied in the request. The value must be between 1 and 255 characters.</summary>
@@ -4783,6 +5025,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleUrlRe
     public bool? StripQuery { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRule
 {
     /// <summary>The list of path patterns to match. Each must start with / and the only place a * is allowed is at the end following a /. The string fed to the path matcher does not include any text after the first ? or #, and those chars are not allowed here.</summary>
@@ -4802,6 +5045,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherPathRule
     public IList<V1beta1RegionURLMapStatusAtProviderPathMatcherPathRuleUrlRedirect>? UrlRedirect { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesHeaderActionRequestHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -4817,6 +5061,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesHea
     public bool? Replace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesHeaderActionResponseHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -4832,6 +5077,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesHea
     public bool? Replace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesHeaderAction
 {
     /// <summary>Headers to add to a matching request prior to forwarding the request to the backendService. Structure is documented below.</summary>
@@ -4851,6 +5097,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesHea
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch
 {
     /// <summary>The end of the range (exclusive).</summary>
@@ -4862,6 +5109,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesMat
     public double? RangeStart { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesMatchRulesHeaderMatches
 {
     /// <summary>The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch must be set.</summary>
@@ -4897,6 +5145,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesMat
     public string? SuffixMatch { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels
 {
     /// <summary>The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.</summary>
@@ -4908,6 +5157,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesMat
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesMatchRulesMetadataFilters
 {
     /// <summary>The list of label value pairs that must match labels in the provided metadata based on filterMatchCriteria  This list must not be empty and can have at the most 64 entries. Structure is documented below.</summary>
@@ -4919,6 +5169,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesMat
     public string? FilterMatchCriteria { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesMatchRulesQueryParameterMatches
 {
     /// <summary>The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch must be set.</summary>
@@ -4938,6 +5189,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesMat
     public string? RegexMatch { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesMatchRules
 {
     /// <summary>For satisfying the matchRule condition, the path of the request must exactly match the value specified in fullPathMatch after removing any query parameters and anchor that may be part of the original URL. FullPathMatch must be between 1 and 1024 characters. Only one of prefixMatch, fullPathMatch or regexMatch must be specified.</summary>
@@ -4973,6 +5225,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesMat
     public string? RegexMatch { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionCorsPolicy
 {
     /// <summary>In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This translates to the Access- Control-Allow-Credentials header. Defaults to false.</summary>
@@ -5008,6 +5261,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
     public double? MaxAge { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort
 {
     /// <summary>The HTTP status code used to abort the request. The value must be between 200 and 599 inclusive.</summary>
@@ -5019,6 +5273,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
     public double? Percentage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -5030,6 +5285,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
     public string? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay
 {
     /// <summary>Specifies the value of the fixed delay interval. Structure is documented below.</summary>
@@ -5041,6 +5297,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
     public double? Percentage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicy
 {
     /// <summary>The specification for how client requests are aborted as part of fault injection. Structure is documented below.</summary>
@@ -5052,6 +5309,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
     public IList<V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay>? Delay { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionRequestMirrorPolicy
 {
     /// <summary>The default RegionBackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -5059,6 +5317,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
     public string? BackendService { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -5070,6 +5329,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
     public string? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionRetryPolicy
 {
     /// <summary>Specifies the allowed number retries. This number must be &gt; 0.</summary>
@@ -5085,6 +5345,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
     public IList<string>? RetryConditions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -5096,6 +5357,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
     public string? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionUrlRewrite
 {
     /// <summary>Prior to forwarding the request to the selected service, the request's host header is replaced with contents of hostRewrite. The value must be between 1 and 255 characters.</summary>
@@ -5111,6 +5373,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
     public string? PathTemplateRewrite { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -5126,6 +5389,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
     public bool? Replace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
@@ -5141,6 +5405,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
     public bool? Replace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction
 {
     /// <summary>Headers to add to a matching request prior to forwarding the request to the backendService. Structure is documented below.</summary>
@@ -5160,6 +5425,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
     public IList<string>? ResponseHeadersToRemove { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionWeightedBackendServices
 {
     /// <summary>The default RegionBackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -5175,6 +5441,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteAction
 {
     /// <summary>The specification for allowing client side cross-origin requests. Please see W3C Recommendation for Cross Origin Resource Sharing Structure is documented below.</summary>
@@ -5206,6 +5473,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRou
     public IList<V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesUrlRedirect
 {
     /// <summary>The host that will be used in the redirect response instead of the one that was supplied in the request. The value must be between 1 and 255 characters.</summary>
@@ -5233,6 +5501,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesUrl
     public bool? StripQuery { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRules
 {
     /// <summary>Specifies changes to request and response headers that need to take effect for the selected backendService. headerAction specified here take effect before headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap. Structure is documented below.</summary>
@@ -5260,6 +5529,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRules
     public IList<V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRulesUrlRedirect>? UrlRedirect { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderPathMatcher
 {
     /// <summary>A reference to a RegionBackendService resource. This will be used if none of the pathRules defined by this PathMatcher is matched by the URL's path portion.</summary>
@@ -5287,6 +5557,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderPathMatcher
     public IList<V1beta1RegionURLMapStatusAtProviderPathMatcherRouteRules>? RouteRules { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProviderTest
 {
     /// <summary>Description of this test case.</summary>
@@ -5306,6 +5577,7 @@ public partial class V1beta1RegionURLMapStatusAtProviderTest
     public string? Service { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionURLMapStatusAtProvider
 {
     /// <summary>Creation timestamp in RFC3339 text format.</summary>
@@ -5365,6 +5637,7 @@ public partial class V1beta1RegionURLMapStatusAtProvider
     public IList<V1beta1RegionURLMapStatusAtProviderTest>? Test { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1RegionURLMapStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -5392,6 +5665,7 @@ public partial class V1beta1RegionURLMapStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>RegionURLMapStatus defines the observed state of RegionURLMap.</summary>
 public partial class V1beta1RegionURLMapStatus
 {
     /// <summary></summary>
@@ -5408,6 +5682,7 @@ public partial class V1beta1RegionURLMapStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>RegionURLMap is the Schema for the RegionURLMaps API. UrlMaps are used to route requests to a backend service based on rules that you define for the host and path of an incoming URL.</summary>
 public partial class V1beta1RegionURLMap : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1RegionURLMapSpec>, IStatus<V1beta1RegionURLMapStatus>
 {
     public const string KubeApiVersion = "v1beta1";

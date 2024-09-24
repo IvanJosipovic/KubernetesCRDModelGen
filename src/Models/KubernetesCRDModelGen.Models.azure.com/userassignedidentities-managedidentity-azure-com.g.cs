@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.managedidentity.azure.com;
+/// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20230131storageUserAssignedIdentitySpecOperatorSpecConfigMapsClientId
 {
     /// <summary>Key is the key in the ConfigMap being referenced</summary>
@@ -19,6 +20,7 @@ public partial class V1api20230131storageUserAssignedIdentitySpecOperatorSpecCon
     public string Name { get; set; }
 }
 
+/// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20230131storageUserAssignedIdentitySpecOperatorSpecConfigMapsPrincipalId
 {
     /// <summary>Key is the key in the ConfigMap being referenced</summary>
@@ -30,6 +32,7 @@ public partial class V1api20230131storageUserAssignedIdentitySpecOperatorSpecCon
     public string Name { get; set; }
 }
 
+/// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20230131storageUserAssignedIdentitySpecOperatorSpecConfigMapsTenantId
 {
     /// <summary>Key is the key in the ConfigMap being referenced</summary>
@@ -41,6 +44,7 @@ public partial class V1api20230131storageUserAssignedIdentitySpecOperatorSpecCon
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230131.UserAssignedIdentityOperatorConfigMaps</summary>
 public partial class V1api20230131storageUserAssignedIdentitySpecOperatorSpecConfigMaps
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -60,6 +64,7 @@ public partial class V1api20230131storageUserAssignedIdentitySpecOperatorSpecCon
     public V1api20230131storageUserAssignedIdentitySpecOperatorSpecConfigMapsTenantId? TenantId { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20230131storageUserAssignedIdentitySpecOperatorSpecSecretsClientId
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -71,6 +76,7 @@ public partial class V1api20230131storageUserAssignedIdentitySpecOperatorSpecSec
     public string Name { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20230131storageUserAssignedIdentitySpecOperatorSpecSecretsPrincipalId
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -82,6 +88,7 @@ public partial class V1api20230131storageUserAssignedIdentitySpecOperatorSpecSec
     public string Name { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20230131storageUserAssignedIdentitySpecOperatorSpecSecretsTenantId
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -93,6 +100,7 @@ public partial class V1api20230131storageUserAssignedIdentitySpecOperatorSpecSec
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230131.UserAssignedIdentityOperatorSecrets</summary>
 public partial class V1api20230131storageUserAssignedIdentitySpecOperatorSpecSecrets
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -112,6 +120,7 @@ public partial class V1api20230131storageUserAssignedIdentitySpecOperatorSpecSec
     public V1api20230131storageUserAssignedIdentitySpecOperatorSpecSecretsTenantId? TenantId { get; set; }
 }
 
+/// <summary>Storage version of v1api20230131.UserAssignedIdentityOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 public partial class V1api20230131storageUserAssignedIdentitySpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -127,6 +136,7 @@ public partial class V1api20230131storageUserAssignedIdentitySpecOperatorSpec
     public V1api20230131storageUserAssignedIdentitySpecOperatorSpecSecrets? Secrets { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20230131storageUserAssignedIdentitySpecOwner
 {
     /// <summary></summary>
@@ -138,6 +148,7 @@ public partial class V1api20230131storageUserAssignedIdentitySpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230131.UserAssignedIdentity_Spec</summary>
 public partial class V1api20230131storageUserAssignedIdentitySpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -169,6 +180,7 @@ public partial class V1api20230131storageUserAssignedIdentitySpec
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20230131storageUserAssignedIdentityStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -200,6 +212,7 @@ public partial class V1api20230131storageUserAssignedIdentityStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230131.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 public partial class V1api20230131storageUserAssignedIdentityStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -231,6 +244,7 @@ public partial class V1api20230131storageUserAssignedIdentityStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
+/// <summary>Storage version of v1api20230131.UserAssignedIdentity_STATUS</summary>
 public partial class V1api20230131storageUserAssignedIdentityStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -279,6 +293,7 @@ public partial class V1api20230131storageUserAssignedIdentityStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20230131.UserAssignedIdentity Generator information: - Generated from: /msi/resource-manager/Microsoft.ManagedIdentity/stable/2023-01-31/ManagedIdentity.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{resourceName}</summary>
 public partial class V1api20230131storageUserAssignedIdentity : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230131storageUserAssignedIdentitySpec>, IStatus<V1api20230131storageUserAssignedIdentityStatus>
 {
     public const string KubeApiVersion = "v1api20230131storage";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dbformysql.azure.com;
+/// <summary>IdentityResourceReference: The resource id of the identity used for AAD Authentication.</summary>
 public partial class V1api20230630storageFlexibleServersAdministratorSpecIdentityResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -27,6 +28,7 @@ public partial class V1api20230630storageFlexibleServersAdministratorSpecIdentit
     public string? Name { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a dbformysql.azure.com/FlexibleServer resource</summary>
 public partial class V1api20230630storageFlexibleServersAdministratorSpecOwner
 {
     /// <summary></summary>
@@ -38,6 +40,7 @@ public partial class V1api20230630storageFlexibleServersAdministratorSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20230630storageFlexibleServersAdministratorSpecSidFromConfig
 {
     /// <summary>Key is the key in the Kubernetes configmap being referenced</summary>
@@ -49,6 +52,7 @@ public partial class V1api20230630storageFlexibleServersAdministratorSpecSidFrom
     public string Name { get; set; }
 }
 
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20230630storageFlexibleServersAdministratorSpecTenantIdFromConfig
 {
     /// <summary>Key is the key in the Kubernetes configmap being referenced</summary>
@@ -60,6 +64,7 @@ public partial class V1api20230630storageFlexibleServersAdministratorSpecTenantI
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230630.FlexibleServers_Administrator_Spec</summary>
 public partial class V1api20230630storageFlexibleServersAdministratorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -103,6 +108,7 @@ public partial class V1api20230630storageFlexibleServersAdministratorSpec
     public V1api20230630storageFlexibleServersAdministratorSpecTenantIdFromConfig? TenantIdFromConfig { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20230630storageFlexibleServersAdministratorStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -134,6 +140,7 @@ public partial class V1api20230630storageFlexibleServersAdministratorStatusCondi
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230630.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 public partial class V1api20230630storageFlexibleServersAdministratorStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -165,6 +172,7 @@ public partial class V1api20230630storageFlexibleServersAdministratorStatusSyste
     public string? LastModifiedByType { get; set; }
 }
 
+/// <summary>Storage version of v1api20230630.FlexibleServers_Administrator_STATUS</summary>
 public partial class V1api20230630storageFlexibleServersAdministratorStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -213,6 +221,7 @@ public partial class V1api20230630storageFlexibleServersAdministratorStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20230630.FlexibleServersAdministrator Generator information: - Generated from: /mysql/resource-manager/Microsoft.DBforMySQL/AAD/stable/2023-06-30/AzureADAdministrator.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/administrators/{administratorName}</summary>
 public partial class V1api20230630storageFlexibleServersAdministrator : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230630storageFlexibleServersAdministratorSpec>, IStatus<V1api20230630storageFlexibleServersAdministratorStatus>
 {
     public const string KubeApiVersion = "v1api20230630storage";

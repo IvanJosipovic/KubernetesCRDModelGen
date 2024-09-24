@@ -38,6 +38,7 @@ public enum V1beta1KeySpecForProviderKeyVaultIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KeySpecForProviderKeyVaultIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1KeySpecForProviderKeyVaultIdRefPolicy
     public V1beta1KeySpecForProviderKeyVaultIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Vault in keyvault to populate keyVaultId.</summary>
 public partial class V1beta1KeySpecForProviderKeyVaultIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1KeySpecForProviderKeyVaultIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1KeySpecForProviderKeyVaultIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1KeySpecForProviderKeyVaultIdSelectorPolicy
     public V1beta1KeySpecForProviderKeyVaultIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Vault in keyvault to populate keyVaultId.</summary>
 public partial class V1beta1KeySpecForProviderKeyVaultIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1KeySpecForProviderKeyVaultIdSelector
     public V1beta1KeySpecForProviderKeyVaultIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KeySpecForProviderRotationPolicyAutomatic
 {
     /// <summary>Rotate automatically at a duration after create as an ISO 8601 duration.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1KeySpecForProviderRotationPolicyAutomatic
     public string? TimeBeforeExpiry { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KeySpecForProviderRotationPolicy
 {
     /// <summary>An automatic block as defined below.</summary>
@@ -136,6 +142,7 @@ public partial class V1beta1KeySpecForProviderRotationPolicy
     public string? NotifyBeforeExpiry { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KeySpecForProvider
 {
     /// <summary>Specifies the curve to use when creating an EC key. Possible values are P-256, P-256K, P-384, and P-521. This field will be required in a future release if key_type is EC or EC-HSM. The API will default to P-256 if nothing is specified. Changing this forces a new resource to be created.</summary>
@@ -207,6 +214,7 @@ public enum V1beta1KeySpecInitProviderKeyVaultIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KeySpecInitProviderKeyVaultIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -220,6 +228,7 @@ public partial class V1beta1KeySpecInitProviderKeyVaultIdRefPolicy
     public V1beta1KeySpecInitProviderKeyVaultIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Vault in keyvault to populate keyVaultId.</summary>
 public partial class V1beta1KeySpecInitProviderKeyVaultIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -251,6 +260,7 @@ public enum V1beta1KeySpecInitProviderKeyVaultIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1KeySpecInitProviderKeyVaultIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -264,6 +274,7 @@ public partial class V1beta1KeySpecInitProviderKeyVaultIdSelectorPolicy
     public V1beta1KeySpecInitProviderKeyVaultIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Vault in keyvault to populate keyVaultId.</summary>
 public partial class V1beta1KeySpecInitProviderKeyVaultIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1KeySpecInitProviderKeyVaultIdSelector
     public V1beta1KeySpecInitProviderKeyVaultIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KeySpecInitProviderRotationPolicyAutomatic
 {
     /// <summary>Rotate automatically at a duration after create as an ISO 8601 duration.</summary>
@@ -290,6 +302,7 @@ public partial class V1beta1KeySpecInitProviderRotationPolicyAutomatic
     public string? TimeBeforeExpiry { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KeySpecInitProviderRotationPolicy
 {
     /// <summary>An automatic block as defined below.</summary>
@@ -305,6 +318,7 @@ public partial class V1beta1KeySpecInitProviderRotationPolicy
     public string? NotifyBeforeExpiry { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1KeySpecInitProvider
 {
     /// <summary>Specifies the curve to use when creating an EC key. Possible values are P-256, P-256K, P-384, and P-521. This field will be required in a future release if key_type is EC or EC-HSM. The API will default to P-256 if nothing is specified. Changing this forces a new resource to be created.</summary>
@@ -398,6 +412,7 @@ public enum V1beta1KeySpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KeySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -411,6 +426,7 @@ public partial class V1beta1KeySpecProviderConfigRefPolicy
     public V1beta1KeySpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1KeySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -442,6 +458,7 @@ public enum V1beta1KeySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KeySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -455,6 +472,7 @@ public partial class V1beta1KeySpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1KeySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1KeySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -466,6 +484,7 @@ public partial class V1beta1KeySpecPublishConnectionDetailsToConfigRef
     public V1beta1KeySpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1KeySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -481,6 +500,7 @@ public partial class V1beta1KeySpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1KeySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -496,6 +516,7 @@ public partial class V1beta1KeySpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1KeySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -507,6 +528,7 @@ public partial class V1beta1KeySpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>KeySpec defines the desired state of Key</summary>
 public partial class V1beta1KeySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -539,6 +561,7 @@ public partial class V1beta1KeySpec
     public V1beta1KeySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KeyStatusAtProviderRotationPolicyAutomatic
 {
     /// <summary>Rotate automatically at a duration after create as an ISO 8601 duration.</summary>
@@ -550,6 +573,7 @@ public partial class V1beta1KeyStatusAtProviderRotationPolicyAutomatic
     public string? TimeBeforeExpiry { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KeyStatusAtProviderRotationPolicy
 {
     /// <summary>An automatic block as defined below.</summary>
@@ -565,6 +589,7 @@ public partial class V1beta1KeyStatusAtProviderRotationPolicy
     public string? NotifyBeforeExpiry { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KeyStatusAtProvider
 {
     /// <summary>Specifies the curve to use when creating an EC key. Possible values are P-256, P-256K, P-384, and P-521. This field will be required in a future release if key_type is EC or EC-HSM. The API will default to P-256 if nothing is specified. Changing this forces a new resource to be created.</summary>
@@ -652,6 +677,7 @@ public partial class V1beta1KeyStatusAtProvider
     public string? Y { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1KeyStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -679,6 +705,7 @@ public partial class V1beta1KeyStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>KeyStatus defines the observed state of Key.</summary>
 public partial class V1beta1KeyStatus
 {
     /// <summary></summary>
@@ -695,6 +722,7 @@ public partial class V1beta1KeyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Key is the Schema for the Keys API. Manages a Key Vault Key.</summary>
 public partial class V1beta1Key : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1KeySpec>, IStatus<V1beta1KeyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

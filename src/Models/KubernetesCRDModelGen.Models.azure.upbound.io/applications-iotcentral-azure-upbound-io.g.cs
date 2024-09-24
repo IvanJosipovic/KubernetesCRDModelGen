@@ -18,6 +18,7 @@ public enum V1beta1ApplicationSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecForProviderIdentity
 {
     /// <summary>Specifies the type of Managed Service Identity that should be configured on this IoT Central Application. The only possible value is SystemAssigned.</summary>
@@ -45,6 +46,7 @@ public enum V1beta1ApplicationSpecForProviderResourceGroupNameRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -58,6 +60,7 @@ public partial class V1beta1ApplicationSpecForProviderResourceGroupNameRefPolicy
     public V1beta1ApplicationSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1ApplicationSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -89,6 +92,7 @@ public enum V1beta1ApplicationSpecForProviderResourceGroupNameSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ApplicationSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -102,6 +106,7 @@ public partial class V1beta1ApplicationSpecForProviderResourceGroupNameSelectorP
     public V1beta1ApplicationSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1ApplicationSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -117,6 +122,7 @@ public partial class V1beta1ApplicationSpecForProviderResourceGroupNameSelector
     public V1beta1ApplicationSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecForProvider
 {
     /// <summary>A display_name name. Custom display name for the IoT Central application. Default is resource name.</summary>
@@ -168,6 +174,7 @@ public partial class V1beta1ApplicationSpecForProvider
     public string? Template { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecInitProviderIdentity
 {
     /// <summary>Specifies the type of Managed Service Identity that should be configured on this IoT Central Application. The only possible value is SystemAssigned.</summary>
@@ -195,6 +202,7 @@ public enum V1beta1ApplicationSpecInitProviderResourceGroupNameRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationSpecInitProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -208,6 +216,7 @@ public partial class V1beta1ApplicationSpecInitProviderResourceGroupNameRefPolic
     public V1beta1ApplicationSpecInitProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1ApplicationSpecInitProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -239,6 +248,7 @@ public enum V1beta1ApplicationSpecInitProviderResourceGroupNameSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ApplicationSpecInitProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -252,6 +262,7 @@ public partial class V1beta1ApplicationSpecInitProviderResourceGroupNameSelector
     public V1beta1ApplicationSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1ApplicationSpecInitProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -267,6 +278,7 @@ public partial class V1beta1ApplicationSpecInitProviderResourceGroupNameSelector
     public V1beta1ApplicationSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ApplicationSpecInitProvider
 {
     /// <summary>A display_name name. Custom display name for the IoT Central application. Default is resource name.</summary>
@@ -360,6 +372,7 @@ public enum V1beta1ApplicationSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -373,6 +386,7 @@ public partial class V1beta1ApplicationSpecProviderConfigRefPolicy
     public V1beta1ApplicationSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ApplicationSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -404,6 +418,7 @@ public enum V1beta1ApplicationSpecPublishConnectionDetailsToConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -417,6 +432,7 @@ public partial class V1beta1ApplicationSpecPublishConnectionDetailsToConfigRefPo
     public V1beta1ApplicationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ApplicationSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -428,6 +444,7 @@ public partial class V1beta1ApplicationSpecPublishConnectionDetailsToConfigRef
     public V1beta1ApplicationSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ApplicationSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -443,6 +460,7 @@ public partial class V1beta1ApplicationSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ApplicationSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -458,6 +476,7 @@ public partial class V1beta1ApplicationSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ApplicationSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -469,6 +488,7 @@ public partial class V1beta1ApplicationSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ApplicationSpec defines the desired state of Application</summary>
 public partial class V1beta1ApplicationSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -501,6 +521,7 @@ public partial class V1beta1ApplicationSpec
     public V1beta1ApplicationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationStatusAtProviderIdentity
 {
     /// <summary>The Principal ID associated with this Managed Service Identity.</summary>
@@ -516,6 +537,7 @@ public partial class V1beta1ApplicationStatusAtProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationStatusAtProvider
 {
     /// <summary>A display_name name. Custom display name for the IoT Central application. Default is resource name.</summary>
@@ -563,6 +585,7 @@ public partial class V1beta1ApplicationStatusAtProvider
     public string? Template { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ApplicationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -590,6 +613,7 @@ public partial class V1beta1ApplicationStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ApplicationStatus defines the observed state of Application.</summary>
 public partial class V1beta1ApplicationStatus
 {
     /// <summary></summary>
@@ -606,6 +630,7 @@ public partial class V1beta1ApplicationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Application is the Schema for the Applications API. Manages an IotCentral Application</summary>
 public partial class V1beta1Application : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ApplicationSpec>, IStatus<V1beta1ApplicationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -18,6 +18,7 @@ public enum V1beta1KafkaClusterSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecForProviderComponentVersion
 {
     /// <summary>The version of Kafka which should be used for this HDInsight Kafka Cluster. Changing this forces a new resource to be created.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1KafkaClusterSpecForProviderComponentVersion
     public string? Kafka { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecForProviderComputeIsolation
 {
     /// <summary>This field indicates whether enable compute isolation or not. Possible values are true or false.</summary>
@@ -36,6 +38,7 @@ public partial class V1beta1KafkaClusterSpecForProviderComputeIsolation
     public string? HostSku { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecForProviderDiskEncryption
 {
     /// <summary>This is an algorithm identifier for encryption. Possible values are RSA1_5, RSA-OAEP, RSA-OAEP-256.</summary>
@@ -55,6 +58,7 @@ public partial class V1beta1KafkaClusterSpecForProviderDiskEncryption
     public string? KeyVaultManagedIdentityId { get; set; }
 }
 
+/// <summary>The workspace key of the log analytics extension.</summary>
 public partial class V1beta1KafkaClusterSpecForProviderExtensionPrimaryKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -70,6 +74,7 @@ public partial class V1beta1KafkaClusterSpecForProviderExtensionPrimaryKeySecret
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecForProviderExtension
 {
     /// <summary>The workspace ID of the log analytics extension.</summary>
@@ -81,6 +86,7 @@ public partial class V1beta1KafkaClusterSpecForProviderExtension
     public V1beta1KafkaClusterSpecForProviderExtensionPrimaryKeySecretRef PrimaryKeySecretRef { get; set; }
 }
 
+/// <summary>The password used for the Ambari Portal.</summary>
 public partial class V1beta1KafkaClusterSpecForProviderGatewayPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -96,6 +102,7 @@ public partial class V1beta1KafkaClusterSpecForProviderGatewayPasswordSecretRef
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecForProviderGateway
 {
     /// <summary>The password used for the Ambari Portal.</summary>
@@ -107,6 +114,7 @@ public partial class V1beta1KafkaClusterSpecForProviderGateway
     public string? Username { get; set; }
 }
 
+/// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1KafkaClusterSpecForProviderMetastoresAmbariPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -122,6 +130,7 @@ public partial class V1beta1KafkaClusterSpecForProviderMetastoresAmbariPasswordS
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecForProviderMetastoresAmbari
 {
     /// <summary>The external Oozie metastore's existing SQL database. Changing this forces a new resource to be created.</summary>
@@ -141,6 +150,7 @@ public partial class V1beta1KafkaClusterSpecForProviderMetastoresAmbari
     public string? Username { get; set; }
 }
 
+/// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1KafkaClusterSpecForProviderMetastoresHivePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -156,6 +166,7 @@ public partial class V1beta1KafkaClusterSpecForProviderMetastoresHivePasswordSec
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecForProviderMetastoresHive
 {
     /// <summary>The external Oozie metastore's existing SQL database. Changing this forces a new resource to be created.</summary>
@@ -175,6 +186,7 @@ public partial class V1beta1KafkaClusterSpecForProviderMetastoresHive
     public string? Username { get; set; }
 }
 
+/// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1KafkaClusterSpecForProviderMetastoresOoziePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -190,6 +202,7 @@ public partial class V1beta1KafkaClusterSpecForProviderMetastoresOoziePasswordSe
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecForProviderMetastoresOozie
 {
     /// <summary>The external Oozie metastore's existing SQL database. Changing this forces a new resource to be created.</summary>
@@ -209,6 +222,7 @@ public partial class V1beta1KafkaClusterSpecForProviderMetastoresOozie
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecForProviderMetastores
 {
     /// <summary>An ambari block as defined below.</summary>
@@ -224,6 +238,7 @@ public partial class V1beta1KafkaClusterSpecForProviderMetastores
     public IList<V1beta1KafkaClusterSpecForProviderMetastoresOozie>? Oozie { get; set; }
 }
 
+/// <summary>The Operations Management Suite (OMS) workspace key.</summary>
 public partial class V1beta1KafkaClusterSpecForProviderMonitorPrimaryKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -239,6 +254,7 @@ public partial class V1beta1KafkaClusterSpecForProviderMonitorPrimaryKeySecretRe
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecForProviderMonitor
 {
     /// <summary>The Operations Management Suite (OMS) workspace ID.</summary>
@@ -250,6 +266,7 @@ public partial class V1beta1KafkaClusterSpecForProviderMonitor
     public V1beta1KafkaClusterSpecForProviderMonitorPrimaryKeySecretRef PrimaryKeySecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecForProviderNetwork
 {
     /// <summary>The direction of the resource provider connection. Possible values include Inbound or Outbound. Defaults to Inbound. Changing this forces a new resource to be created.</summary>
@@ -281,6 +298,7 @@ public enum V1beta1KafkaClusterSpecForProviderResourceGroupNameRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KafkaClusterSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -294,6 +312,7 @@ public partial class V1beta1KafkaClusterSpecForProviderResourceGroupNameRefPolic
     public V1beta1KafkaClusterSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1KafkaClusterSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -325,6 +344,7 @@ public enum V1beta1KafkaClusterSpecForProviderResourceGroupNameSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1KafkaClusterSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -338,6 +358,7 @@ public partial class V1beta1KafkaClusterSpecForProviderResourceGroupNameSelector
     public V1beta1KafkaClusterSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1KafkaClusterSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -353,6 +374,7 @@ public partial class V1beta1KafkaClusterSpecForProviderResourceGroupNameSelector
     public V1beta1KafkaClusterSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecForProviderRestProxy
 {
     /// <summary>The Azure Active Directory Security Group ID. Changing this forces a new resource to be created.</summary>
@@ -364,6 +386,7 @@ public partial class V1beta1KafkaClusterSpecForProviderRestProxy
     public string? SecurityGroupName { get; set; }
 }
 
+/// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1KafkaClusterSpecForProviderRolesHeadNodePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -379,6 +402,7 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesHeadNodePasswordSecr
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecForProviderRolesHeadNodeScriptActions
 {
     /// <summary>The name of the script action.</summary>
@@ -414,6 +438,7 @@ public enum V1beta1KafkaClusterSpecForProviderRolesHeadNodeSubnetIdRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KafkaClusterSpecForProviderRolesHeadNodeSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -427,6 +452,7 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesHeadNodeSubnetIdRefP
     public V1beta1KafkaClusterSpecForProviderRolesHeadNodeSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1KafkaClusterSpecForProviderRolesHeadNodeSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -458,6 +484,7 @@ public enum V1beta1KafkaClusterSpecForProviderRolesHeadNodeSubnetIdSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1KafkaClusterSpecForProviderRolesHeadNodeSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -471,6 +498,7 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesHeadNodeSubnetIdSele
     public V1beta1KafkaClusterSpecForProviderRolesHeadNodeSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1KafkaClusterSpecForProviderRolesHeadNodeSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -486,6 +514,7 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesHeadNodeSubnetIdSele
     public V1beta1KafkaClusterSpecForProviderRolesHeadNodeSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecForProviderRolesHeadNode
 {
     /// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
@@ -525,6 +554,7 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesHeadNode
     public string? VmSize { get; set; }
 }
 
+/// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1KafkaClusterSpecForProviderRolesKafkaManagementNodePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -540,6 +570,7 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesKafkaManagementNodeP
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecForProviderRolesKafkaManagementNodeScriptActions
 {
     /// <summary>The name of the script action.</summary>
@@ -575,6 +606,7 @@ public enum V1beta1KafkaClusterSpecForProviderRolesKafkaManagementNodeSubnetIdRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KafkaClusterSpecForProviderRolesKafkaManagementNodeSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -588,6 +620,7 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesKafkaManagementNodeS
     public V1beta1KafkaClusterSpecForProviderRolesKafkaManagementNodeSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1KafkaClusterSpecForProviderRolesKafkaManagementNodeSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -619,6 +652,7 @@ public enum V1beta1KafkaClusterSpecForProviderRolesKafkaManagementNodeSubnetIdSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1KafkaClusterSpecForProviderRolesKafkaManagementNodeSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -632,6 +666,7 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesKafkaManagementNodeS
     public V1beta1KafkaClusterSpecForProviderRolesKafkaManagementNodeSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1KafkaClusterSpecForProviderRolesKafkaManagementNodeSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -647,6 +682,7 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesKafkaManagementNodeS
     public V1beta1KafkaClusterSpecForProviderRolesKafkaManagementNodeSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecForProviderRolesKafkaManagementNode
 {
     /// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
@@ -686,6 +722,7 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesKafkaManagementNode
     public string? VmSize { get; set; }
 }
 
+/// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1KafkaClusterSpecForProviderRolesWorkerNodePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -701,6 +738,7 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesWorkerNodePasswordSe
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecForProviderRolesWorkerNodeScriptActions
 {
     /// <summary>The name of the script action.</summary>
@@ -736,6 +774,7 @@ public enum V1beta1KafkaClusterSpecForProviderRolesWorkerNodeSubnetIdRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KafkaClusterSpecForProviderRolesWorkerNodeSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -749,6 +788,7 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesWorkerNodeSubnetIdRe
     public V1beta1KafkaClusterSpecForProviderRolesWorkerNodeSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1KafkaClusterSpecForProviderRolesWorkerNodeSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -780,6 +820,7 @@ public enum V1beta1KafkaClusterSpecForProviderRolesWorkerNodeSubnetIdSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1KafkaClusterSpecForProviderRolesWorkerNodeSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -793,6 +834,7 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesWorkerNodeSubnetIdSe
     public V1beta1KafkaClusterSpecForProviderRolesWorkerNodeSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1KafkaClusterSpecForProviderRolesWorkerNodeSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -808,6 +850,7 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesWorkerNodeSubnetIdSe
     public V1beta1KafkaClusterSpecForProviderRolesWorkerNodeSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecForProviderRolesWorkerNode
 {
     /// <summary>The number of Data Disks which should be assigned to each Worker Node, which can be between 1 and 8. Changing this forces a new resource to be created.</summary>
@@ -855,6 +898,7 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesWorkerNode
     public string? VmSize { get; set; }
 }
 
+/// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1KafkaClusterSpecForProviderRolesZookeeperNodePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -870,6 +914,7 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesZookeeperNodePasswor
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecForProviderRolesZookeeperNodeScriptActions
 {
     /// <summary>The name of the script action.</summary>
@@ -905,6 +950,7 @@ public enum V1beta1KafkaClusterSpecForProviderRolesZookeeperNodeSubnetIdRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KafkaClusterSpecForProviderRolesZookeeperNodeSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -918,6 +964,7 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesZookeeperNodeSubnetI
     public V1beta1KafkaClusterSpecForProviderRolesZookeeperNodeSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1KafkaClusterSpecForProviderRolesZookeeperNodeSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -949,6 +996,7 @@ public enum V1beta1KafkaClusterSpecForProviderRolesZookeeperNodeSubnetIdSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1KafkaClusterSpecForProviderRolesZookeeperNodeSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -962,6 +1010,7 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesZookeeperNodeSubnetI
     public V1beta1KafkaClusterSpecForProviderRolesZookeeperNodeSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1KafkaClusterSpecForProviderRolesZookeeperNodeSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -977,6 +1026,7 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesZookeeperNodeSubnetI
     public V1beta1KafkaClusterSpecForProviderRolesZookeeperNodeSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecForProviderRolesZookeeperNode
 {
     /// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
@@ -1016,6 +1066,7 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesZookeeperNode
     public string? VmSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecForProviderRoles
 {
     /// <summary>A head_node block as defined above.</summary>
@@ -1035,6 +1086,7 @@ public partial class V1beta1KafkaClusterSpecForProviderRoles
     public IList<V1beta1KafkaClusterSpecForProviderRolesZookeeperNode>? ZookeeperNode { get; set; }
 }
 
+/// <summary>The user password of the Azure Active Directory Domain. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1KafkaClusterSpecForProviderSecurityProfileDomainUserPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1050,6 +1102,7 @@ public partial class V1beta1KafkaClusterSpecForProviderSecurityProfileDomainUser
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecForProviderSecurityProfile
 {
     /// <summary>The resource ID of the Azure Active Directory Domain Service. Changing this forces a new resource to be created.</summary>
@@ -1081,6 +1134,7 @@ public partial class V1beta1KafkaClusterSpecForProviderSecurityProfile
     public string? MsiResourceId { get; set; }
 }
 
+/// <summary>The Access Key which should be used to connect to the Storage Account. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1KafkaClusterSpecForProviderStorageAccountStorageAccountKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1116,6 +1170,7 @@ public enum V1beta1KafkaClusterSpecForProviderStorageAccountStorageContainerIdRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KafkaClusterSpecForProviderStorageAccountStorageContainerIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1129,6 +1184,7 @@ public partial class V1beta1KafkaClusterSpecForProviderStorageAccountStorageCont
     public V1beta1KafkaClusterSpecForProviderStorageAccountStorageContainerIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Container in storage to populate storageContainerId.</summary>
 public partial class V1beta1KafkaClusterSpecForProviderStorageAccountStorageContainerIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1160,6 +1216,7 @@ public enum V1beta1KafkaClusterSpecForProviderStorageAccountStorageContainerIdSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1KafkaClusterSpecForProviderStorageAccountStorageContainerIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1173,6 +1230,7 @@ public partial class V1beta1KafkaClusterSpecForProviderStorageAccountStorageCont
     public V1beta1KafkaClusterSpecForProviderStorageAccountStorageContainerIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Container in storage to populate storageContainerId.</summary>
 public partial class V1beta1KafkaClusterSpecForProviderStorageAccountStorageContainerIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1188,6 +1246,7 @@ public partial class V1beta1KafkaClusterSpecForProviderStorageAccountStorageCont
     public V1beta1KafkaClusterSpecForProviderStorageAccountStorageContainerIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecForProviderStorageAccount
 {
     /// <summary>Is this the Default Storage Account for the HDInsight Hadoop Cluster? Changing this forces a new resource to be created.</summary>
@@ -1215,6 +1274,7 @@ public partial class V1beta1KafkaClusterSpecForProviderStorageAccount
     public string? StorageResourceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecForProviderStorageAccountGen2
 {
     /// <summary>The ID of the Gen2 Filesystem. Changing this forces a new resource to be created.</summary>
@@ -1234,6 +1294,7 @@ public partial class V1beta1KafkaClusterSpecForProviderStorageAccountGen2
     public string? StorageResourceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecForProvider
 {
     /// <summary>Specifies the Version of HDInsights which should be used for this Cluster. Changing this forces a new resource to be created.</summary>
@@ -1325,6 +1386,7 @@ public partial class V1beta1KafkaClusterSpecForProvider
     public string? TlsMinVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecInitProviderComponentVersion
 {
     /// <summary>The version of Kafka which should be used for this HDInsight Kafka Cluster. Changing this forces a new resource to be created.</summary>
@@ -1332,6 +1394,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderComponentVersion
     public string? Kafka { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecInitProviderComputeIsolation
 {
     /// <summary>This field indicates whether enable compute isolation or not. Possible values are true or false.</summary>
@@ -1343,6 +1406,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderComputeIsolation
     public string? HostSku { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecInitProviderDiskEncryption
 {
     /// <summary>This is an algorithm identifier for encryption. Possible values are RSA1_5, RSA-OAEP, RSA-OAEP-256.</summary>
@@ -1362,6 +1426,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderDiskEncryption
     public string? KeyVaultManagedIdentityId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecInitProviderExtension
 {
     /// <summary>The workspace ID of the log analytics extension.</summary>
@@ -1369,6 +1434,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderExtension
     public string? LogAnalyticsWorkspaceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecInitProviderGateway
 {
     /// <summary>The username used for the Ambari Portal. Changing this forces a new resource to be created.</summary>
@@ -1376,6 +1442,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderGateway
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecInitProviderMetastoresAmbari
 {
     /// <summary>The external Oozie metastore's existing SQL database. Changing this forces a new resource to be created.</summary>
@@ -1391,6 +1458,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderMetastoresAmbari
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecInitProviderMetastoresHive
 {
     /// <summary>The external Oozie metastore's existing SQL database. Changing this forces a new resource to be created.</summary>
@@ -1406,6 +1474,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderMetastoresHive
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecInitProviderMetastoresOozie
 {
     /// <summary>The external Oozie metastore's existing SQL database. Changing this forces a new resource to be created.</summary>
@@ -1421,6 +1490,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderMetastoresOozie
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecInitProviderMetastores
 {
     /// <summary>An ambari block as defined below.</summary>
@@ -1436,6 +1506,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderMetastores
     public IList<V1beta1KafkaClusterSpecInitProviderMetastoresOozie>? Oozie { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecInitProviderMonitor
 {
     /// <summary>The Operations Management Suite (OMS) workspace ID.</summary>
@@ -1443,6 +1514,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderMonitor
     public string? LogAnalyticsWorkspaceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecInitProviderNetwork
 {
     /// <summary>The direction of the resource provider connection. Possible values include Inbound or Outbound. Defaults to Inbound. Changing this forces a new resource to be created.</summary>
@@ -1454,6 +1526,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderNetwork
     public bool? PrivateLinkEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecInitProviderRestProxy
 {
     /// <summary>The Azure Active Directory Security Group ID. Changing this forces a new resource to be created.</summary>
@@ -1465,6 +1538,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderRestProxy
     public string? SecurityGroupName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecInitProviderRolesHeadNodeScriptActions
 {
     /// <summary>The name of the script action.</summary>
@@ -1500,6 +1574,7 @@ public enum V1beta1KafkaClusterSpecInitProviderRolesHeadNodeSubnetIdRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KafkaClusterSpecInitProviderRolesHeadNodeSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1513,6 +1588,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesHeadNodeSubnetIdRef
     public V1beta1KafkaClusterSpecInitProviderRolesHeadNodeSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1KafkaClusterSpecInitProviderRolesHeadNodeSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1544,6 +1620,7 @@ public enum V1beta1KafkaClusterSpecInitProviderRolesHeadNodeSubnetIdSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1KafkaClusterSpecInitProviderRolesHeadNodeSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1557,6 +1634,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesHeadNodeSubnetIdSel
     public V1beta1KafkaClusterSpecInitProviderRolesHeadNodeSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1KafkaClusterSpecInitProviderRolesHeadNodeSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1572,6 +1650,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesHeadNodeSubnetIdSel
     public V1beta1KafkaClusterSpecInitProviderRolesHeadNodeSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecInitProviderRolesHeadNode
 {
     /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined below.</summary>
@@ -1607,6 +1686,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesHeadNode
     public string? VmSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecInitProviderRolesKafkaManagementNodeScriptActions
 {
     /// <summary>The name of the script action.</summary>
@@ -1642,6 +1722,7 @@ public enum V1beta1KafkaClusterSpecInitProviderRolesKafkaManagementNodeSubnetIdR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KafkaClusterSpecInitProviderRolesKafkaManagementNodeSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1655,6 +1736,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesKafkaManagementNode
     public V1beta1KafkaClusterSpecInitProviderRolesKafkaManagementNodeSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1KafkaClusterSpecInitProviderRolesKafkaManagementNodeSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1686,6 +1768,7 @@ public enum V1beta1KafkaClusterSpecInitProviderRolesKafkaManagementNodeSubnetIdS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1KafkaClusterSpecInitProviderRolesKafkaManagementNodeSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1699,6 +1782,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesKafkaManagementNode
     public V1beta1KafkaClusterSpecInitProviderRolesKafkaManagementNodeSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1KafkaClusterSpecInitProviderRolesKafkaManagementNodeSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1714,6 +1798,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesKafkaManagementNode
     public V1beta1KafkaClusterSpecInitProviderRolesKafkaManagementNodeSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecInitProviderRolesKafkaManagementNode
 {
     /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined below.</summary>
@@ -1749,6 +1834,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesKafkaManagementNode
     public string? VmSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecInitProviderRolesWorkerNodeScriptActions
 {
     /// <summary>The name of the script action.</summary>
@@ -1784,6 +1870,7 @@ public enum V1beta1KafkaClusterSpecInitProviderRolesWorkerNodeSubnetIdRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KafkaClusterSpecInitProviderRolesWorkerNodeSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1797,6 +1884,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesWorkerNodeSubnetIdR
     public V1beta1KafkaClusterSpecInitProviderRolesWorkerNodeSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1KafkaClusterSpecInitProviderRolesWorkerNodeSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1828,6 +1916,7 @@ public enum V1beta1KafkaClusterSpecInitProviderRolesWorkerNodeSubnetIdSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1KafkaClusterSpecInitProviderRolesWorkerNodeSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1841,6 +1930,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesWorkerNodeSubnetIdS
     public V1beta1KafkaClusterSpecInitProviderRolesWorkerNodeSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1KafkaClusterSpecInitProviderRolesWorkerNodeSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1856,6 +1946,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesWorkerNodeSubnetIdS
     public V1beta1KafkaClusterSpecInitProviderRolesWorkerNodeSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecInitProviderRolesWorkerNode
 {
     /// <summary>The number of Data Disks which should be assigned to each Worker Node, which can be between 1 and 8. Changing this forces a new resource to be created.</summary>
@@ -1899,6 +1990,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesWorkerNode
     public string? VmSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecInitProviderRolesZookeeperNodeScriptActions
 {
     /// <summary>The name of the script action.</summary>
@@ -1934,6 +2026,7 @@ public enum V1beta1KafkaClusterSpecInitProviderRolesZookeeperNodeSubnetIdRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KafkaClusterSpecInitProviderRolesZookeeperNodeSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1947,6 +2040,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesZookeeperNodeSubnet
     public V1beta1KafkaClusterSpecInitProviderRolesZookeeperNodeSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1KafkaClusterSpecInitProviderRolesZookeeperNodeSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1978,6 +2072,7 @@ public enum V1beta1KafkaClusterSpecInitProviderRolesZookeeperNodeSubnetIdSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1KafkaClusterSpecInitProviderRolesZookeeperNodeSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1991,6 +2086,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesZookeeperNodeSubnet
     public V1beta1KafkaClusterSpecInitProviderRolesZookeeperNodeSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1KafkaClusterSpecInitProviderRolesZookeeperNodeSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2006,6 +2102,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesZookeeperNodeSubnet
     public V1beta1KafkaClusterSpecInitProviderRolesZookeeperNodeSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecInitProviderRolesZookeeperNode
 {
     /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined below.</summary>
@@ -2041,6 +2138,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesZookeeperNode
     public string? VmSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecInitProviderRoles
 {
     /// <summary>A head_node block as defined above.</summary>
@@ -2060,6 +2158,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderRoles
     public IList<V1beta1KafkaClusterSpecInitProviderRolesZookeeperNode>? ZookeeperNode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecInitProviderSecurityProfile
 {
     /// <summary>The resource ID of the Azure Active Directory Domain Service. Changing this forces a new resource to be created.</summary>
@@ -2107,6 +2206,7 @@ public enum V1beta1KafkaClusterSpecInitProviderStorageAccountStorageContainerIdR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KafkaClusterSpecInitProviderStorageAccountStorageContainerIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2120,6 +2220,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderStorageAccountStorageCon
     public V1beta1KafkaClusterSpecInitProviderStorageAccountStorageContainerIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Container in storage to populate storageContainerId.</summary>
 public partial class V1beta1KafkaClusterSpecInitProviderStorageAccountStorageContainerIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2151,6 +2252,7 @@ public enum V1beta1KafkaClusterSpecInitProviderStorageAccountStorageContainerIdS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1KafkaClusterSpecInitProviderStorageAccountStorageContainerIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2164,6 +2266,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderStorageAccountStorageCon
     public V1beta1KafkaClusterSpecInitProviderStorageAccountStorageContainerIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Container in storage to populate storageContainerId.</summary>
 public partial class V1beta1KafkaClusterSpecInitProviderStorageAccountStorageContainerIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2179,6 +2282,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderStorageAccountStorageCon
     public V1beta1KafkaClusterSpecInitProviderStorageAccountStorageContainerIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecInitProviderStorageAccount
 {
     /// <summary>Is this the Default Storage Account for the HDInsight Hadoop Cluster? Changing this forces a new resource to be created.</summary>
@@ -2202,6 +2306,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderStorageAccount
     public string? StorageResourceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterSpecInitProviderStorageAccountGen2
 {
     /// <summary>The ID of the Gen2 Filesystem. Changing this forces a new resource to be created.</summary>
@@ -2221,6 +2326,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderStorageAccountGen2
     public string? StorageResourceId { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1KafkaClusterSpecInitProvider
 {
     /// <summary>Specifies the Version of HDInsights which should be used for this Cluster. Changing this forces a new resource to be created.</summary>
@@ -2342,6 +2448,7 @@ public enum V1beta1KafkaClusterSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KafkaClusterSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2355,6 +2462,7 @@ public partial class V1beta1KafkaClusterSpecProviderConfigRefPolicy
     public V1beta1KafkaClusterSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1KafkaClusterSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2386,6 +2494,7 @@ public enum V1beta1KafkaClusterSpecPublishConnectionDetailsToConfigRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KafkaClusterSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2399,6 +2508,7 @@ public partial class V1beta1KafkaClusterSpecPublishConnectionDetailsToConfigRefP
     public V1beta1KafkaClusterSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1KafkaClusterSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2410,6 +2520,7 @@ public partial class V1beta1KafkaClusterSpecPublishConnectionDetailsToConfigRef
     public V1beta1KafkaClusterSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1KafkaClusterSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -2425,6 +2536,7 @@ public partial class V1beta1KafkaClusterSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1KafkaClusterSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -2440,6 +2552,7 @@ public partial class V1beta1KafkaClusterSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1KafkaClusterSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -2451,6 +2564,7 @@ public partial class V1beta1KafkaClusterSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>KafkaClusterSpec defines the desired state of KafkaCluster</summary>
 public partial class V1beta1KafkaClusterSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -2483,6 +2597,7 @@ public partial class V1beta1KafkaClusterSpec
     public V1beta1KafkaClusterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterStatusAtProviderComponentVersion
 {
     /// <summary>The version of Kafka which should be used for this HDInsight Kafka Cluster. Changing this forces a new resource to be created.</summary>
@@ -2490,6 +2605,7 @@ public partial class V1beta1KafkaClusterStatusAtProviderComponentVersion
     public string? Kafka { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterStatusAtProviderComputeIsolation
 {
     /// <summary>This field indicates whether enable compute isolation or not. Possible values are true or false.</summary>
@@ -2501,6 +2617,7 @@ public partial class V1beta1KafkaClusterStatusAtProviderComputeIsolation
     public string? HostSku { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterStatusAtProviderDiskEncryption
 {
     /// <summary>This is an algorithm identifier for encryption. Possible values are RSA1_5, RSA-OAEP, RSA-OAEP-256.</summary>
@@ -2520,6 +2637,7 @@ public partial class V1beta1KafkaClusterStatusAtProviderDiskEncryption
     public string? KeyVaultManagedIdentityId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterStatusAtProviderExtension
 {
     /// <summary>The workspace ID of the log analytics extension.</summary>
@@ -2527,6 +2645,7 @@ public partial class V1beta1KafkaClusterStatusAtProviderExtension
     public string? LogAnalyticsWorkspaceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterStatusAtProviderGateway
 {
     /// <summary>The username used for the Ambari Portal. Changing this forces a new resource to be created.</summary>
@@ -2534,6 +2653,7 @@ public partial class V1beta1KafkaClusterStatusAtProviderGateway
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterStatusAtProviderMetastoresAmbari
 {
     /// <summary>The external Oozie metastore's existing SQL database. Changing this forces a new resource to be created.</summary>
@@ -2549,6 +2669,7 @@ public partial class V1beta1KafkaClusterStatusAtProviderMetastoresAmbari
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterStatusAtProviderMetastoresHive
 {
     /// <summary>The external Oozie metastore's existing SQL database. Changing this forces a new resource to be created.</summary>
@@ -2564,6 +2685,7 @@ public partial class V1beta1KafkaClusterStatusAtProviderMetastoresHive
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterStatusAtProviderMetastoresOozie
 {
     /// <summary>The external Oozie metastore's existing SQL database. Changing this forces a new resource to be created.</summary>
@@ -2579,6 +2701,7 @@ public partial class V1beta1KafkaClusterStatusAtProviderMetastoresOozie
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterStatusAtProviderMetastores
 {
     /// <summary>An ambari block as defined below.</summary>
@@ -2594,6 +2717,7 @@ public partial class V1beta1KafkaClusterStatusAtProviderMetastores
     public IList<V1beta1KafkaClusterStatusAtProviderMetastoresOozie>? Oozie { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterStatusAtProviderMonitor
 {
     /// <summary>The Operations Management Suite (OMS) workspace ID.</summary>
@@ -2601,6 +2725,7 @@ public partial class V1beta1KafkaClusterStatusAtProviderMonitor
     public string? LogAnalyticsWorkspaceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterStatusAtProviderNetwork
 {
     /// <summary>The direction of the resource provider connection. Possible values include Inbound or Outbound. Defaults to Inbound. Changing this forces a new resource to be created.</summary>
@@ -2612,6 +2737,7 @@ public partial class V1beta1KafkaClusterStatusAtProviderNetwork
     public bool? PrivateLinkEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterStatusAtProviderRestProxy
 {
     /// <summary>The Azure Active Directory Security Group ID. Changing this forces a new resource to be created.</summary>
@@ -2623,6 +2749,7 @@ public partial class V1beta1KafkaClusterStatusAtProviderRestProxy
     public string? SecurityGroupName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterStatusAtProviderRolesHeadNodeScriptActions
 {
     /// <summary>The name of the script action.</summary>
@@ -2638,6 +2765,7 @@ public partial class V1beta1KafkaClusterStatusAtProviderRolesHeadNodeScriptActio
     public string? Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterStatusAtProviderRolesHeadNode
 {
     /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined below.</summary>
@@ -2665,6 +2793,7 @@ public partial class V1beta1KafkaClusterStatusAtProviderRolesHeadNode
     public string? VmSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterStatusAtProviderRolesKafkaManagementNodeScriptActions
 {
     /// <summary>The name of the script action.</summary>
@@ -2680,6 +2809,7 @@ public partial class V1beta1KafkaClusterStatusAtProviderRolesKafkaManagementNode
     public string? Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterStatusAtProviderRolesKafkaManagementNode
 {
     /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined below.</summary>
@@ -2707,6 +2837,7 @@ public partial class V1beta1KafkaClusterStatusAtProviderRolesKafkaManagementNode
     public string? VmSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterStatusAtProviderRolesWorkerNodeScriptActions
 {
     /// <summary>The name of the script action.</summary>
@@ -2722,6 +2853,7 @@ public partial class V1beta1KafkaClusterStatusAtProviderRolesWorkerNodeScriptAct
     public string? Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterStatusAtProviderRolesWorkerNode
 {
     /// <summary>The number of Data Disks which should be assigned to each Worker Node, which can be between 1 and 8. Changing this forces a new resource to be created.</summary>
@@ -2757,6 +2889,7 @@ public partial class V1beta1KafkaClusterStatusAtProviderRolesWorkerNode
     public string? VmSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterStatusAtProviderRolesZookeeperNodeScriptActions
 {
     /// <summary>The name of the script action.</summary>
@@ -2772,6 +2905,7 @@ public partial class V1beta1KafkaClusterStatusAtProviderRolesZookeeperNodeScript
     public string? Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterStatusAtProviderRolesZookeeperNode
 {
     /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined below.</summary>
@@ -2799,6 +2933,7 @@ public partial class V1beta1KafkaClusterStatusAtProviderRolesZookeeperNode
     public string? VmSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterStatusAtProviderRoles
 {
     /// <summary>A head_node block as defined above.</summary>
@@ -2818,6 +2953,7 @@ public partial class V1beta1KafkaClusterStatusAtProviderRoles
     public IList<V1beta1KafkaClusterStatusAtProviderRolesZookeeperNode>? ZookeeperNode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterStatusAtProviderSecurityProfile
 {
     /// <summary>The resource ID of the Azure Active Directory Domain Service. Changing this forces a new resource to be created.</summary>
@@ -2845,6 +2981,7 @@ public partial class V1beta1KafkaClusterStatusAtProviderSecurityProfile
     public string? MsiResourceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterStatusAtProviderStorageAccount
 {
     /// <summary>Is this the Default Storage Account for the HDInsight Hadoop Cluster? Changing this forces a new resource to be created.</summary>
@@ -2860,6 +2997,7 @@ public partial class V1beta1KafkaClusterStatusAtProviderStorageAccount
     public string? StorageResourceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterStatusAtProviderStorageAccountGen2
 {
     /// <summary>The ID of the Gen2 Filesystem. Changing this forces a new resource to be created.</summary>
@@ -2879,6 +3017,7 @@ public partial class V1beta1KafkaClusterStatusAtProviderStorageAccountGen2
     public string? StorageResourceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KafkaClusterStatusAtProvider
 {
     /// <summary>Specifies the Version of HDInsights which should be used for this Cluster. Changing this forces a new resource to be created.</summary>
@@ -2978,6 +3117,7 @@ public partial class V1beta1KafkaClusterStatusAtProvider
     public string? TlsMinVersion { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1KafkaClusterStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -3005,6 +3145,7 @@ public partial class V1beta1KafkaClusterStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>KafkaClusterStatus defines the observed state of KafkaCluster.</summary>
 public partial class V1beta1KafkaClusterStatus
 {
     /// <summary></summary>
@@ -3021,6 +3162,7 @@ public partial class V1beta1KafkaClusterStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>KafkaCluster is the Schema for the KafkaClusters API. Manages a HDInsight Kafka Cluster.</summary>
 public partial class V1beta1KafkaCluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1KafkaClusterSpec>, IStatus<V1beta1KafkaClusterStatus>
 {
     public const string KubeApiVersion = "v1beta1";

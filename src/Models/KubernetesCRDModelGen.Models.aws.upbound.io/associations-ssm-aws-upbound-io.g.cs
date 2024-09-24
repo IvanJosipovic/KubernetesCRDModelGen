@@ -38,6 +38,7 @@ public enum V1beta1AssociationSpecForProviderNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AssociationSpecForProviderNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1AssociationSpecForProviderNameRefPolicy
     public V1beta1AssociationSpecForProviderNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Document in ssm to populate name.</summary>
 public partial class V1beta1AssociationSpecForProviderNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1AssociationSpecForProviderNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AssociationSpecForProviderNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1AssociationSpecForProviderNameSelectorPolicy
     public V1beta1AssociationSpecForProviderNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Document in ssm to populate name.</summary>
 public partial class V1beta1AssociationSpecForProviderNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1AssociationSpecForProviderNameSelector
     public V1beta1AssociationSpecForProviderNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AssociationSpecForProviderOutputLocation
 {
     /// <summary>The S3 bucket name.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1AssociationSpecForProviderOutputLocation
     public string? S3Region { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AssociationSpecForProviderTargets
 {
     /// <summary>Either InstanceIds or tag:Tag Name to specify an EC2 tag.</summary>
@@ -136,6 +142,7 @@ public partial class V1beta1AssociationSpecForProviderTargets
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AssociationSpecForProvider
 {
     /// <summary>By default, when you create a new or update associations, the system runs it immediately and then according to the schedule you specified. Enable this option if you do not want an association to run immediately after you create or update it. This parameter is not supported for rate expressions. Default: false.</summary>
@@ -235,6 +242,7 @@ public enum V1beta1AssociationSpecInitProviderNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AssociationSpecInitProviderNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -248,6 +256,7 @@ public partial class V1beta1AssociationSpecInitProviderNameRefPolicy
     public V1beta1AssociationSpecInitProviderNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Document in ssm to populate name.</summary>
 public partial class V1beta1AssociationSpecInitProviderNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -279,6 +288,7 @@ public enum V1beta1AssociationSpecInitProviderNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AssociationSpecInitProviderNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -292,6 +302,7 @@ public partial class V1beta1AssociationSpecInitProviderNameSelectorPolicy
     public V1beta1AssociationSpecInitProviderNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Document in ssm to populate name.</summary>
 public partial class V1beta1AssociationSpecInitProviderNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -307,6 +318,7 @@ public partial class V1beta1AssociationSpecInitProviderNameSelector
     public V1beta1AssociationSpecInitProviderNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AssociationSpecInitProviderOutputLocation
 {
     /// <summary>The S3 bucket name.</summary>
@@ -322,6 +334,7 @@ public partial class V1beta1AssociationSpecInitProviderOutputLocation
     public string? S3Region { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AssociationSpecInitProviderTargets
 {
     /// <summary>Either InstanceIds or tag:Tag Name to specify an EC2 tag.</summary>
@@ -333,6 +346,7 @@ public partial class V1beta1AssociationSpecInitProviderTargets
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1AssociationSpecInitProvider
 {
     /// <summary>By default, when you create a new or update associations, the system runs it immediately and then according to the schedule you specified. Enable this option if you do not want an association to run immediately after you create or update it. This parameter is not supported for rate expressions. Default: false.</summary>
@@ -450,6 +464,7 @@ public enum V1beta1AssociationSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AssociationSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -463,6 +478,7 @@ public partial class V1beta1AssociationSpecProviderConfigRefPolicy
     public V1beta1AssociationSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1AssociationSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -494,6 +510,7 @@ public enum V1beta1AssociationSpecPublishConnectionDetailsToConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AssociationSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -507,6 +524,7 @@ public partial class V1beta1AssociationSpecPublishConnectionDetailsToConfigRefPo
     public V1beta1AssociationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1AssociationSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -518,6 +536,7 @@ public partial class V1beta1AssociationSpecPublishConnectionDetailsToConfigRef
     public V1beta1AssociationSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1AssociationSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -533,6 +552,7 @@ public partial class V1beta1AssociationSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1AssociationSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -548,6 +568,7 @@ public partial class V1beta1AssociationSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1AssociationSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -559,6 +580,7 @@ public partial class V1beta1AssociationSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>AssociationSpec defines the desired state of Association</summary>
 public partial class V1beta1AssociationSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -591,6 +613,7 @@ public partial class V1beta1AssociationSpec
     public V1beta1AssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AssociationStatusAtProviderOutputLocation
 {
     /// <summary>The S3 bucket name.</summary>
@@ -606,6 +629,7 @@ public partial class V1beta1AssociationStatusAtProviderOutputLocation
     public string? S3Region { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AssociationStatusAtProviderTargets
 {
     /// <summary>Either InstanceIds or tag:Tag Name to specify an EC2 tag.</summary>
@@ -617,6 +641,7 @@ public partial class V1beta1AssociationStatusAtProviderTargets
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AssociationStatusAtProvider
 {
     /// <summary>By default, when you create a new or update associations, the system runs it immediately and then according to the schedule you specified. Enable this option if you do not want an association to run immediately after you create or update it. This parameter is not supported for rate expressions. Default: false.</summary>
@@ -700,6 +725,7 @@ public partial class V1beta1AssociationStatusAtProvider
     public double? WaitForSuccessTimeoutSeconds { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1AssociationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -727,6 +753,7 @@ public partial class V1beta1AssociationStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>AssociationStatus defines the observed state of Association.</summary>
 public partial class V1beta1AssociationStatus
 {
     /// <summary></summary>
@@ -743,6 +770,7 @@ public partial class V1beta1AssociationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Association is the Schema for the Associations API. Associates an SSM Document to an instance or EC2 tag.</summary>
 public partial class V1beta1Association : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AssociationSpec>, IStatus<V1beta1AssociationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -38,6 +38,7 @@ public enum V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptionKeyGcpKm
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeyRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptio
     public V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeyRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a CryptoKey in kms to populate gcpKmsEncryptionKey.</summary>
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeyRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptionKeyGcpKm
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptio
     public V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeySelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a CryptoKey in kms to populate gcpKmsEncryptionKey.</summary>
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptio
     public V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeySelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptionKey
 {
     /// <summary>Google Cloud KMS encryption key. Format: projects//locations//keyRings//cryptoKeys/</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptio
     public V1beta1BackupBackupPlanSpecForProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeySelector? GcpKmsEncryptionKeySelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigSelectedApplicationsNamespacedNames
 {
     /// <summary>The name of a Kubernetes Resource.</summary>
@@ -136,6 +142,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigSelectedA
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigSelectedApplications
 {
     /// <summary>A list of namespaced Kubernetes resources. Structure is documented below.</summary>
@@ -143,6 +150,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigSelectedA
     public IList<V1beta1BackupBackupPlanSpecForProviderBackupConfigSelectedApplicationsNamespacedNames>? NamespacedNames { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigSelectedNamespaces
 {
     /// <summary>A list of Kubernetes Namespaces.</summary>
@@ -150,6 +158,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfigSelectedN
     public IList<string>? Namespaces { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfig
 {
     /// <summary>If True, include all namespaced resources.</summary>
@@ -181,6 +190,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupConfig
     public IList<V1beta1BackupBackupPlanSpecForProviderBackupConfigSelectedNamespaces>? SelectedNamespaces { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupScheduleRpoConfigExclusionWindowsDaysOfWeek
 {
     /// <summary>The exclusion window occurs on these days of each week in UTC. Only one of singleOccurrenceDate, daily and daysOfWeek may be set. Structure is documented below.</summary>
@@ -188,6 +198,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupScheduleRpoConf
     public IList<string>? DaysOfWeek { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupScheduleRpoConfigExclusionWindowsSingleOccurrenceDate
 {
     /// <summary>Day of a month.</summary>
@@ -203,6 +214,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupScheduleRpoConf
     public double? Year { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupScheduleRpoConfigExclusionWindowsStartTime
 {
     /// <summary>Hours of day in 24 hour format.</summary>
@@ -222,6 +234,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupScheduleRpoConf
     public double? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupScheduleRpoConfigExclusionWindows
 {
     /// <summary>The exclusion window occurs every day if set to "True". Specifying this field to "False" is an error. Only one of singleOccurrenceDate, daily and daysOfWeek may be set.</summary>
@@ -245,6 +258,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupScheduleRpoConf
     public IList<V1beta1BackupBackupPlanSpecForProviderBackupScheduleRpoConfigExclusionWindowsStartTime>? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupScheduleRpoConfig
 {
     /// <summary>User specified time windows during which backup can NOT happen for this BackupPlan. Backups should start and finish outside of any given exclusion window. Note: backup jobs will be scheduled to start and finish outside the duration of the window as much as possible, but running jobs will not get canceled when it runs into the window. All the time and date values in exclusionWindows entry in the API are in UTC. We only allow &lt;=1 recurrence (daily or weekly) exclusion window for a BackupPlan while no restriction on number of single occurrence windows. Structure is documented below.</summary>
@@ -256,6 +270,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderBackupScheduleRpoConf
     public double? TargetRpoMinutes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupBackupPlanSpecForProviderBackupSchedule
 {
     /// <summary>A standard cron string that defines a repeating schedule for creating Backups via this BackupPlan. If this is defined, then backupRetainDays must also be defined.</summary>
@@ -291,6 +306,7 @@ public enum V1beta1BackupBackupPlanSpecForProviderClusterRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupBackupPlanSpecForProviderClusterRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -304,6 +320,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderClusterRefPolicy
     public V1beta1BackupBackupPlanSpecForProviderClusterRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in container to populate cluster.</summary>
 public partial class V1beta1BackupBackupPlanSpecForProviderClusterRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -335,6 +352,7 @@ public enum V1beta1BackupBackupPlanSpecForProviderClusterSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupBackupPlanSpecForProviderClusterSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -348,6 +366,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderClusterSelectorPolicy
     public V1beta1BackupBackupPlanSpecForProviderClusterSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in container to populate cluster.</summary>
 public partial class V1beta1BackupBackupPlanSpecForProviderClusterSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -363,6 +382,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderClusterSelector
     public V1beta1BackupBackupPlanSpecForProviderClusterSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupBackupPlanSpecForProviderRetentionPolicy
 {
     /// <summary>Minimum age for a Backup created via this BackupPlan (in days). Must be an integer value between 0-90 (inclusive). A Backup created under this BackupPlan will not be deletable until it reaches Backup's (create time + backup_delete_lock_days). Updating this field of a BackupPlan does not affect existing Backups. Backups created after a successful update will inherit this new value.</summary>
@@ -378,6 +398,7 @@ public partial class V1beta1BackupBackupPlanSpecForProviderRetentionPolicy
     public bool? Locked { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupBackupPlanSpecForProvider
 {
     /// <summary>Defines the configuration of Backups created via this BackupPlan. Structure is documented below.</summary>
@@ -445,6 +466,7 @@ public enum V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncryptionKeyGcpK
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeyRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -458,6 +480,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncrypti
     public V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeyRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a CryptoKey in kms to populate gcpKmsEncryptionKey.</summary>
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeyRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -489,6 +512,7 @@ public enum V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncryptionKeyGcpK
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -502,6 +526,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncrypti
     public V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeySelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a CryptoKey in kms to populate gcpKmsEncryptionKey.</summary>
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -517,6 +542,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncrypti
     public V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeySelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncryptionKey
 {
     /// <summary>Google Cloud KMS encryption key. Format: projects//locations//keyRings//cryptoKeys/</summary>
@@ -532,6 +558,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncrypti
     public V1beta1BackupBackupPlanSpecInitProviderBackupConfigEncryptionKeyGcpKmsEncryptionKeySelector? GcpKmsEncryptionKeySelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigSelectedApplicationsNamespacedNames
 {
     /// <summary>The name of a Kubernetes Resource.</summary>
@@ -543,6 +570,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigSelected
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigSelectedApplications
 {
     /// <summary>A list of namespaced Kubernetes resources. Structure is documented below.</summary>
@@ -550,6 +578,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigSelected
     public IList<V1beta1BackupBackupPlanSpecInitProviderBackupConfigSelectedApplicationsNamespacedNames>? NamespacedNames { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigSelectedNamespaces
 {
     /// <summary>A list of Kubernetes Namespaces.</summary>
@@ -557,6 +586,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfigSelected
     public IList<string>? Namespaces { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfig
 {
     /// <summary>If True, include all namespaced resources.</summary>
@@ -588,6 +618,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupConfig
     public IList<V1beta1BackupBackupPlanSpecInitProviderBackupConfigSelectedNamespaces>? SelectedNamespaces { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupScheduleRpoConfigExclusionWindowsDaysOfWeek
 {
     /// <summary>The exclusion window occurs on these days of each week in UTC. Only one of singleOccurrenceDate, daily and daysOfWeek may be set. Structure is documented below.</summary>
@@ -595,6 +626,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupScheduleRpoCon
     public IList<string>? DaysOfWeek { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupScheduleRpoConfigExclusionWindowsSingleOccurrenceDate
 {
     /// <summary>Day of a month.</summary>
@@ -610,6 +642,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupScheduleRpoCon
     public double? Year { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupScheduleRpoConfigExclusionWindowsStartTime
 {
     /// <summary>Hours of day in 24 hour format.</summary>
@@ -629,6 +662,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupScheduleRpoCon
     public double? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupScheduleRpoConfigExclusionWindows
 {
     /// <summary>The exclusion window occurs every day if set to "True". Specifying this field to "False" is an error. Only one of singleOccurrenceDate, daily and daysOfWeek may be set.</summary>
@@ -652,6 +686,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupScheduleRpoCon
     public IList<V1beta1BackupBackupPlanSpecInitProviderBackupScheduleRpoConfigExclusionWindowsStartTime>? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupScheduleRpoConfig
 {
     /// <summary>User specified time windows during which backup can NOT happen for this BackupPlan. Backups should start and finish outside of any given exclusion window. Note: backup jobs will be scheduled to start and finish outside the duration of the window as much as possible, but running jobs will not get canceled when it runs into the window. All the time and date values in exclusionWindows entry in the API are in UTC. We only allow &lt;=1 recurrence (daily or weekly) exclusion window for a BackupPlan while no restriction on number of single occurrence windows. Structure is documented below.</summary>
@@ -663,6 +698,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderBackupScheduleRpoCon
     public double? TargetRpoMinutes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupBackupPlanSpecInitProviderBackupSchedule
 {
     /// <summary>A standard cron string that defines a repeating schedule for creating Backups via this BackupPlan. If this is defined, then backupRetainDays must also be defined.</summary>
@@ -698,6 +734,7 @@ public enum V1beta1BackupBackupPlanSpecInitProviderClusterRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupBackupPlanSpecInitProviderClusterRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -711,6 +748,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderClusterRefPolicy
     public V1beta1BackupBackupPlanSpecInitProviderClusterRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in container to populate cluster.</summary>
 public partial class V1beta1BackupBackupPlanSpecInitProviderClusterRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -742,6 +780,7 @@ public enum V1beta1BackupBackupPlanSpecInitProviderClusterSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupBackupPlanSpecInitProviderClusterSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -755,6 +794,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderClusterSelectorPolic
     public V1beta1BackupBackupPlanSpecInitProviderClusterSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in container to populate cluster.</summary>
 public partial class V1beta1BackupBackupPlanSpecInitProviderClusterSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -770,6 +810,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderClusterSelector
     public V1beta1BackupBackupPlanSpecInitProviderClusterSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupBackupPlanSpecInitProviderRetentionPolicy
 {
     /// <summary>Minimum age for a Backup created via this BackupPlan (in days). Must be an integer value between 0-90 (inclusive). A Backup created under this BackupPlan will not be deletable until it reaches Backup's (create time + backup_delete_lock_days). Updating this field of a BackupPlan does not affect existing Backups. Backups created after a successful update will inherit this new value.</summary>
@@ -785,6 +826,7 @@ public partial class V1beta1BackupBackupPlanSpecInitProviderRetentionPolicy
     public bool? Locked { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1BackupBackupPlanSpecInitProvider
 {
     /// <summary>Defines the configuration of Backups created via this BackupPlan. Structure is documented below.</summary>
@@ -870,6 +912,7 @@ public enum V1beta1BackupBackupPlanSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupBackupPlanSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -883,6 +926,7 @@ public partial class V1beta1BackupBackupPlanSpecProviderConfigRefPolicy
     public V1beta1BackupBackupPlanSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1BackupBackupPlanSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -914,6 +958,7 @@ public enum V1beta1BackupBackupPlanSpecPublishConnectionDetailsToConfigRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupBackupPlanSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -927,6 +972,7 @@ public partial class V1beta1BackupBackupPlanSpecPublishConnectionDetailsToConfig
     public V1beta1BackupBackupPlanSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1BackupBackupPlanSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -938,6 +984,7 @@ public partial class V1beta1BackupBackupPlanSpecPublishConnectionDetailsToConfig
     public V1beta1BackupBackupPlanSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1BackupBackupPlanSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -953,6 +1000,7 @@ public partial class V1beta1BackupBackupPlanSpecPublishConnectionDetailsToMetada
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1BackupBackupPlanSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -968,6 +1016,7 @@ public partial class V1beta1BackupBackupPlanSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1BackupBackupPlanSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -979,6 +1028,7 @@ public partial class V1beta1BackupBackupPlanSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>BackupBackupPlanSpec defines the desired state of BackupBackupPlan</summary>
 public partial class V1beta1BackupBackupPlanSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1011,6 +1061,7 @@ public partial class V1beta1BackupBackupPlanSpec
     public V1beta1BackupBackupPlanSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupBackupPlanStatusAtProviderBackupConfigEncryptionKey
 {
     /// <summary>Google Cloud KMS encryption key. Format: projects//locations//keyRings//cryptoKeys/</summary>
@@ -1018,6 +1069,7 @@ public partial class V1beta1BackupBackupPlanStatusAtProviderBackupConfigEncrypti
     public string? GcpKmsEncryptionKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupBackupPlanStatusAtProviderBackupConfigSelectedApplicationsNamespacedNames
 {
     /// <summary>The name of a Kubernetes Resource.</summary>
@@ -1029,6 +1081,7 @@ public partial class V1beta1BackupBackupPlanStatusAtProviderBackupConfigSelected
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupBackupPlanStatusAtProviderBackupConfigSelectedApplications
 {
     /// <summary>A list of namespaced Kubernetes resources. Structure is documented below.</summary>
@@ -1036,6 +1089,7 @@ public partial class V1beta1BackupBackupPlanStatusAtProviderBackupConfigSelected
     public IList<V1beta1BackupBackupPlanStatusAtProviderBackupConfigSelectedApplicationsNamespacedNames>? NamespacedNames { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupBackupPlanStatusAtProviderBackupConfigSelectedNamespaces
 {
     /// <summary>A list of Kubernetes Namespaces.</summary>
@@ -1043,6 +1097,7 @@ public partial class V1beta1BackupBackupPlanStatusAtProviderBackupConfigSelected
     public IList<string>? Namespaces { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupBackupPlanStatusAtProviderBackupConfig
 {
     /// <summary>If True, include all namespaced resources.</summary>
@@ -1074,6 +1129,7 @@ public partial class V1beta1BackupBackupPlanStatusAtProviderBackupConfig
     public IList<V1beta1BackupBackupPlanStatusAtProviderBackupConfigSelectedNamespaces>? SelectedNamespaces { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupBackupPlanStatusAtProviderBackupScheduleRpoConfigExclusionWindowsDaysOfWeek
 {
     /// <summary>The exclusion window occurs on these days of each week in UTC. Only one of singleOccurrenceDate, daily and daysOfWeek may be set. Structure is documented below.</summary>
@@ -1081,6 +1137,7 @@ public partial class V1beta1BackupBackupPlanStatusAtProviderBackupScheduleRpoCon
     public IList<string>? DaysOfWeek { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupBackupPlanStatusAtProviderBackupScheduleRpoConfigExclusionWindowsSingleOccurrenceDate
 {
     /// <summary>Day of a month.</summary>
@@ -1096,6 +1153,7 @@ public partial class V1beta1BackupBackupPlanStatusAtProviderBackupScheduleRpoCon
     public double? Year { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupBackupPlanStatusAtProviderBackupScheduleRpoConfigExclusionWindowsStartTime
 {
     /// <summary>Hours of day in 24 hour format.</summary>
@@ -1115,6 +1173,7 @@ public partial class V1beta1BackupBackupPlanStatusAtProviderBackupScheduleRpoCon
     public double? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupBackupPlanStatusAtProviderBackupScheduleRpoConfigExclusionWindows
 {
     /// <summary>The exclusion window occurs every day if set to "True". Specifying this field to "False" is an error. Only one of singleOccurrenceDate, daily and daysOfWeek may be set.</summary>
@@ -1138,6 +1197,7 @@ public partial class V1beta1BackupBackupPlanStatusAtProviderBackupScheduleRpoCon
     public IList<V1beta1BackupBackupPlanStatusAtProviderBackupScheduleRpoConfigExclusionWindowsStartTime>? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupBackupPlanStatusAtProviderBackupScheduleRpoConfig
 {
     /// <summary>User specified time windows during which backup can NOT happen for this BackupPlan. Backups should start and finish outside of any given exclusion window. Note: backup jobs will be scheduled to start and finish outside the duration of the window as much as possible, but running jobs will not get canceled when it runs into the window. All the time and date values in exclusionWindows entry in the API are in UTC. We only allow &lt;=1 recurrence (daily or weekly) exclusion window for a BackupPlan while no restriction on number of single occurrence windows. Structure is documented below.</summary>
@@ -1149,6 +1209,7 @@ public partial class V1beta1BackupBackupPlanStatusAtProviderBackupScheduleRpoCon
     public double? TargetRpoMinutes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupBackupPlanStatusAtProviderBackupSchedule
 {
     /// <summary>A standard cron string that defines a repeating schedule for creating Backups via this BackupPlan. If this is defined, then backupRetainDays must also be defined.</summary>
@@ -1164,6 +1225,7 @@ public partial class V1beta1BackupBackupPlanStatusAtProviderBackupSchedule
     public IList<V1beta1BackupBackupPlanStatusAtProviderBackupScheduleRpoConfig>? RpoConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupBackupPlanStatusAtProviderRetentionPolicy
 {
     /// <summary>Minimum age for a Backup created via this BackupPlan (in days). Must be an integer value between 0-90 (inclusive). A Backup created under this BackupPlan will not be deletable until it reaches Backup's (create time + backup_delete_lock_days). Updating this field of a BackupPlan does not affect existing Backups. Backups created after a successful update will inherit this new value.</summary>
@@ -1179,6 +1241,7 @@ public partial class V1beta1BackupBackupPlanStatusAtProviderRetentionPolicy
     public bool? Locked { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupBackupPlanStatusAtProvider
 {
     /// <summary>Defines the configuration of Backups created via this BackupPlan. Structure is documented below.</summary>
@@ -1250,6 +1313,7 @@ public partial class V1beta1BackupBackupPlanStatusAtProvider
     public string? Uid { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1BackupBackupPlanStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1277,6 +1341,7 @@ public partial class V1beta1BackupBackupPlanStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>BackupBackupPlanStatus defines the observed state of BackupBackupPlan.</summary>
 public partial class V1beta1BackupBackupPlanStatus
 {
     /// <summary></summary>
@@ -1293,6 +1358,7 @@ public partial class V1beta1BackupBackupPlanStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>BackupBackupPlan is the Schema for the BackupBackupPlans API. Represents a Backup Plan instance.</summary>
 public partial class V1beta1BackupBackupPlan : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BackupBackupPlanSpec>, IStatus<V1beta1BackupBackupPlanStatus>
 {
     public const string KubeApiVersion = "v1beta1";

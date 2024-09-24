@@ -18,6 +18,7 @@ public enum V1beta1AppProfileSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1AppProfileSpecForProviderDataBoostIsolationReadOnly
 {
     /// <summary>The Compute Billing Owner for this Data Boost App Profile. Possible values are: HOST_PAYS.</summary>
@@ -45,6 +46,7 @@ public enum V1beta1AppProfileSpecForProviderInstanceRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AppProfileSpecForProviderInstanceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -58,6 +60,7 @@ public partial class V1beta1AppProfileSpecForProviderInstanceRefPolicy
     public V1beta1AppProfileSpecForProviderInstanceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Instance in bigtable to populate instance.</summary>
 public partial class V1beta1AppProfileSpecForProviderInstanceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -89,6 +92,7 @@ public enum V1beta1AppProfileSpecForProviderInstanceSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AppProfileSpecForProviderInstanceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -102,6 +106,7 @@ public partial class V1beta1AppProfileSpecForProviderInstanceSelectorPolicy
     public V1beta1AppProfileSpecForProviderInstanceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Instance in bigtable to populate instance.</summary>
 public partial class V1beta1AppProfileSpecForProviderInstanceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -117,6 +122,7 @@ public partial class V1beta1AppProfileSpecForProviderInstanceSelector
     public V1beta1AppProfileSpecForProviderInstanceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppProfileSpecForProviderSingleClusterRouting
 {
     /// <summary>If true, CheckAndMutateRow and ReadModifyWriteRow requests are allowed by this app profile. It is unsafe to send these requests to the same table/row/column in multiple clusters.</summary>
@@ -128,6 +134,7 @@ public partial class V1beta1AppProfileSpecForProviderSingleClusterRouting
     public string? ClusterId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppProfileSpecForProviderStandardIsolation
 {
     /// <summary>The priority of requests sent using this app profile. Possible values are: PRIORITY_LOW, PRIORITY_MEDIUM, PRIORITY_HIGH.</summary>
@@ -135,6 +142,7 @@ public partial class V1beta1AppProfileSpecForProviderStandardIsolation
     public string? Priority { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppProfileSpecForProvider
 {
     /// <summary>Specifies that this app profile is intended for read-only usage via the Data Boost feature. Structure is documented below.</summary>
@@ -182,6 +190,7 @@ public partial class V1beta1AppProfileSpecForProvider
     public IList<V1beta1AppProfileSpecForProviderStandardIsolation>? StandardIsolation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppProfileSpecInitProviderDataBoostIsolationReadOnly
 {
     /// <summary>The Compute Billing Owner for this Data Boost App Profile. Possible values are: HOST_PAYS.</summary>
@@ -189,6 +198,7 @@ public partial class V1beta1AppProfileSpecInitProviderDataBoostIsolationReadOnly
     public string? ComputeBillingOwner { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppProfileSpecInitProviderSingleClusterRouting
 {
     /// <summary>If true, CheckAndMutateRow and ReadModifyWriteRow requests are allowed by this app profile. It is unsafe to send these requests to the same table/row/column in multiple clusters.</summary>
@@ -200,6 +210,7 @@ public partial class V1beta1AppProfileSpecInitProviderSingleClusterRouting
     public string? ClusterId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppProfileSpecInitProviderStandardIsolation
 {
     /// <summary>The priority of requests sent using this app profile. Possible values are: PRIORITY_LOW, PRIORITY_MEDIUM, PRIORITY_HIGH.</summary>
@@ -207,6 +218,7 @@ public partial class V1beta1AppProfileSpecInitProviderStandardIsolation
     public string? Priority { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1AppProfileSpecInitProvider
 {
     /// <summary>Specifies that this app profile is intended for read-only usage via the Data Boost feature. Structure is documented below.</summary>
@@ -284,6 +296,7 @@ public enum V1beta1AppProfileSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AppProfileSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -297,6 +310,7 @@ public partial class V1beta1AppProfileSpecProviderConfigRefPolicy
     public V1beta1AppProfileSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1AppProfileSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -328,6 +342,7 @@ public enum V1beta1AppProfileSpecPublishConnectionDetailsToConfigRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AppProfileSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -341,6 +356,7 @@ public partial class V1beta1AppProfileSpecPublishConnectionDetailsToConfigRefPol
     public V1beta1AppProfileSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1AppProfileSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -352,6 +368,7 @@ public partial class V1beta1AppProfileSpecPublishConnectionDetailsToConfigRef
     public V1beta1AppProfileSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1AppProfileSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -367,6 +384,7 @@ public partial class V1beta1AppProfileSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1AppProfileSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -382,6 +400,7 @@ public partial class V1beta1AppProfileSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1AppProfileSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -393,6 +412,7 @@ public partial class V1beta1AppProfileSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>AppProfileSpec defines the desired state of AppProfile</summary>
 public partial class V1beta1AppProfileSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -425,6 +445,7 @@ public partial class V1beta1AppProfileSpec
     public V1beta1AppProfileSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppProfileStatusAtProviderDataBoostIsolationReadOnly
 {
     /// <summary>The Compute Billing Owner for this Data Boost App Profile. Possible values are: HOST_PAYS.</summary>
@@ -432,6 +453,7 @@ public partial class V1beta1AppProfileStatusAtProviderDataBoostIsolationReadOnly
     public string? ComputeBillingOwner { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppProfileStatusAtProviderSingleClusterRouting
 {
     /// <summary>If true, CheckAndMutateRow and ReadModifyWriteRow requests are allowed by this app profile. It is unsafe to send these requests to the same table/row/column in multiple clusters.</summary>
@@ -443,6 +465,7 @@ public partial class V1beta1AppProfileStatusAtProviderSingleClusterRouting
     public string? ClusterId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppProfileStatusAtProviderStandardIsolation
 {
     /// <summary>The priority of requests sent using this app profile. Possible values are: PRIORITY_LOW, PRIORITY_MEDIUM, PRIORITY_HIGH.</summary>
@@ -450,6 +473,7 @@ public partial class V1beta1AppProfileStatusAtProviderStandardIsolation
     public string? Priority { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppProfileStatusAtProvider
 {
     /// <summary>Specifies that this app profile is intended for read-only usage via the Data Boost feature. Structure is documented below.</summary>
@@ -497,6 +521,7 @@ public partial class V1beta1AppProfileStatusAtProvider
     public IList<V1beta1AppProfileStatusAtProviderStandardIsolation>? StandardIsolation { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1AppProfileStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -524,6 +549,7 @@ public partial class V1beta1AppProfileStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>AppProfileStatus defines the observed state of AppProfile.</summary>
 public partial class V1beta1AppProfileStatus
 {
     /// <summary></summary>
@@ -540,6 +566,7 @@ public partial class V1beta1AppProfileStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>AppProfile is the Schema for the AppProfiles API. App profile is a configuration object describing how Cloud Bigtable should treat traffic from a particular end user application.</summary>
 public partial class V1beta1AppProfile : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AppProfileSpec>, IStatus<V1beta1AppProfileStatus>
 {
     public const string KubeApiVersion = "v1beta1";

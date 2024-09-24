@@ -38,6 +38,7 @@ public enum V1beta1IntegrationResponseSpecForProviderHttpMethodRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IntegrationResponseSpecForProviderHttpMethodRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1IntegrationResponseSpecForProviderHttpMethodRefPolic
     public V1beta1IntegrationResponseSpecForProviderHttpMethodRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Method in apigateway to populate httpMethod.</summary>
 public partial class V1beta1IntegrationResponseSpecForProviderHttpMethodRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1IntegrationResponseSpecForProviderHttpMethodSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IntegrationResponseSpecForProviderHttpMethodSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1IntegrationResponseSpecForProviderHttpMethodSelector
     public V1beta1IntegrationResponseSpecForProviderHttpMethodSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Method in apigateway to populate httpMethod.</summary>
 public partial class V1beta1IntegrationResponseSpecForProviderHttpMethodSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1IntegrationResponseSpecForProviderResourceIdRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IntegrationResponseSpecForProviderResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1IntegrationResponseSpecForProviderResourceIdRefPolic
     public V1beta1IntegrationResponseSpecForProviderResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Resource in apigateway to populate resourceId.</summary>
 public partial class V1beta1IntegrationResponseSpecForProviderResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1IntegrationResponseSpecForProviderResourceIdSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IntegrationResponseSpecForProviderResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1IntegrationResponseSpecForProviderResourceIdSelector
     public V1beta1IntegrationResponseSpecForProviderResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Resource in apigateway to populate resourceId.</summary>
 public partial class V1beta1IntegrationResponseSpecForProviderResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1IntegrationResponseSpecForProviderRestApiIdRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IntegrationResponseSpecForProviderRestApiIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1IntegrationResponseSpecForProviderRestApiIdRefPolicy
     public V1beta1IntegrationResponseSpecForProviderRestApiIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RestAPI in apigateway to populate restApiId.</summary>
 public partial class V1beta1IntegrationResponseSpecForProviderRestApiIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1IntegrationResponseSpecForProviderRestApiIdSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IntegrationResponseSpecForProviderRestApiIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1IntegrationResponseSpecForProviderRestApiIdSelectorP
     public V1beta1IntegrationResponseSpecForProviderRestApiIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RestAPI in apigateway to populate restApiId.</summary>
 public partial class V1beta1IntegrationResponseSpecForProviderRestApiIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -314,6 +326,7 @@ public enum V1beta1IntegrationResponseSpecForProviderStatusCodeRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IntegrationResponseSpecForProviderStatusCodeRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -327,6 +340,7 @@ public partial class V1beta1IntegrationResponseSpecForProviderStatusCodeRefPolic
     public V1beta1IntegrationResponseSpecForProviderStatusCodeRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a MethodResponse in apigateway to populate statusCode.</summary>
 public partial class V1beta1IntegrationResponseSpecForProviderStatusCodeRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -358,6 +372,7 @@ public enum V1beta1IntegrationResponseSpecForProviderStatusCodeSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IntegrationResponseSpecForProviderStatusCodeSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -371,6 +386,7 @@ public partial class V1beta1IntegrationResponseSpecForProviderStatusCodeSelector
     public V1beta1IntegrationResponseSpecForProviderStatusCodeSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a MethodResponse in apigateway to populate statusCode.</summary>
 public partial class V1beta1IntegrationResponseSpecForProviderStatusCodeSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -386,6 +402,7 @@ public partial class V1beta1IntegrationResponseSpecForProviderStatusCodeSelector
     public V1beta1IntegrationResponseSpecForProviderStatusCodeSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntegrationResponseSpecForProvider
 {
     /// <summary>How to handle request payload content type conversions. Supported values are CONVERT_TO_BINARY and CONVERT_TO_TEXT. If this property is not defined, the response payload will be passed through from the integration response to the method response without modification.</summary>
@@ -477,6 +494,7 @@ public enum V1beta1IntegrationResponseSpecInitProviderHttpMethodRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IntegrationResponseSpecInitProviderHttpMethodRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -490,6 +508,7 @@ public partial class V1beta1IntegrationResponseSpecInitProviderHttpMethodRefPoli
     public V1beta1IntegrationResponseSpecInitProviderHttpMethodRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Method in apigateway to populate httpMethod.</summary>
 public partial class V1beta1IntegrationResponseSpecInitProviderHttpMethodRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -521,6 +540,7 @@ public enum V1beta1IntegrationResponseSpecInitProviderHttpMethodSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IntegrationResponseSpecInitProviderHttpMethodSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -534,6 +554,7 @@ public partial class V1beta1IntegrationResponseSpecInitProviderHttpMethodSelecto
     public V1beta1IntegrationResponseSpecInitProviderHttpMethodSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Method in apigateway to populate httpMethod.</summary>
 public partial class V1beta1IntegrationResponseSpecInitProviderHttpMethodSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -569,6 +590,7 @@ public enum V1beta1IntegrationResponseSpecInitProviderResourceIdRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IntegrationResponseSpecInitProviderResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -582,6 +604,7 @@ public partial class V1beta1IntegrationResponseSpecInitProviderResourceIdRefPoli
     public V1beta1IntegrationResponseSpecInitProviderResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Resource in apigateway to populate resourceId.</summary>
 public partial class V1beta1IntegrationResponseSpecInitProviderResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -613,6 +636,7 @@ public enum V1beta1IntegrationResponseSpecInitProviderResourceIdSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IntegrationResponseSpecInitProviderResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -626,6 +650,7 @@ public partial class V1beta1IntegrationResponseSpecInitProviderResourceIdSelecto
     public V1beta1IntegrationResponseSpecInitProviderResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Resource in apigateway to populate resourceId.</summary>
 public partial class V1beta1IntegrationResponseSpecInitProviderResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -661,6 +686,7 @@ public enum V1beta1IntegrationResponseSpecInitProviderRestApiIdRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IntegrationResponseSpecInitProviderRestApiIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -674,6 +700,7 @@ public partial class V1beta1IntegrationResponseSpecInitProviderRestApiIdRefPolic
     public V1beta1IntegrationResponseSpecInitProviderRestApiIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RestAPI in apigateway to populate restApiId.</summary>
 public partial class V1beta1IntegrationResponseSpecInitProviderRestApiIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -705,6 +732,7 @@ public enum V1beta1IntegrationResponseSpecInitProviderRestApiIdSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IntegrationResponseSpecInitProviderRestApiIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -718,6 +746,7 @@ public partial class V1beta1IntegrationResponseSpecInitProviderRestApiIdSelector
     public V1beta1IntegrationResponseSpecInitProviderRestApiIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RestAPI in apigateway to populate restApiId.</summary>
 public partial class V1beta1IntegrationResponseSpecInitProviderRestApiIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -753,6 +782,7 @@ public enum V1beta1IntegrationResponseSpecInitProviderStatusCodeRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IntegrationResponseSpecInitProviderStatusCodeRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -766,6 +796,7 @@ public partial class V1beta1IntegrationResponseSpecInitProviderStatusCodeRefPoli
     public V1beta1IntegrationResponseSpecInitProviderStatusCodeRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a MethodResponse in apigateway to populate statusCode.</summary>
 public partial class V1beta1IntegrationResponseSpecInitProviderStatusCodeRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -797,6 +828,7 @@ public enum V1beta1IntegrationResponseSpecInitProviderStatusCodeSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IntegrationResponseSpecInitProviderStatusCodeSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -810,6 +842,7 @@ public partial class V1beta1IntegrationResponseSpecInitProviderStatusCodeSelecto
     public V1beta1IntegrationResponseSpecInitProviderStatusCodeSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a MethodResponse in apigateway to populate statusCode.</summary>
 public partial class V1beta1IntegrationResponseSpecInitProviderStatusCodeSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -825,6 +858,7 @@ public partial class V1beta1IntegrationResponseSpecInitProviderStatusCodeSelecto
     public V1beta1IntegrationResponseSpecInitProviderStatusCodeSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1IntegrationResponseSpecInitProvider
 {
     /// <summary>How to handle request payload content type conversions. Supported values are CONVERT_TO_BINARY and CONVERT_TO_TEXT. If this property is not defined, the response payload will be passed through from the integration response to the method response without modification.</summary>
@@ -934,6 +968,7 @@ public enum V1beta1IntegrationResponseSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IntegrationResponseSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -947,6 +982,7 @@ public partial class V1beta1IntegrationResponseSpecProviderConfigRefPolicy
     public V1beta1IntegrationResponseSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1IntegrationResponseSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -978,6 +1014,7 @@ public enum V1beta1IntegrationResponseSpecPublishConnectionDetailsToConfigRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IntegrationResponseSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -991,6 +1028,7 @@ public partial class V1beta1IntegrationResponseSpecPublishConnectionDetailsToCon
     public V1beta1IntegrationResponseSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1IntegrationResponseSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1002,6 +1040,7 @@ public partial class V1beta1IntegrationResponseSpecPublishConnectionDetailsToCon
     public V1beta1IntegrationResponseSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1IntegrationResponseSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1017,6 +1056,7 @@ public partial class V1beta1IntegrationResponseSpecPublishConnectionDetailsToMet
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1IntegrationResponseSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1032,6 +1072,7 @@ public partial class V1beta1IntegrationResponseSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1IntegrationResponseSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1043,6 +1084,7 @@ public partial class V1beta1IntegrationResponseSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>IntegrationResponseSpec defines the desired state of IntegrationResponse</summary>
 public partial class V1beta1IntegrationResponseSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1075,6 +1117,7 @@ public partial class V1beta1IntegrationResponseSpec
     public V1beta1IntegrationResponseSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntegrationResponseStatusAtProvider
 {
     /// <summary>How to handle request payload content type conversions. Supported values are CONVERT_TO_BINARY and CONVERT_TO_TEXT. If this property is not defined, the response payload will be passed through from the integration response to the method response without modification.</summary>
@@ -1114,6 +1157,7 @@ public partial class V1beta1IntegrationResponseStatusAtProvider
     public string? StatusCode { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1IntegrationResponseStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1141,6 +1185,7 @@ public partial class V1beta1IntegrationResponseStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>IntegrationResponseStatus defines the observed state of IntegrationResponse.</summary>
 public partial class V1beta1IntegrationResponseStatus
 {
     /// <summary></summary>
@@ -1157,6 +1202,7 @@ public partial class V1beta1IntegrationResponseStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>IntegrationResponse is the Schema for the IntegrationResponses API. Provides an HTTP Method Integration Response for an API Gateway Resource.</summary>
 public partial class V1beta1IntegrationResponse : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IntegrationResponseSpec>, IStatus<V1beta1IntegrationResponseStatus>
 {
     public const string KubeApiVersion = "v1beta1";

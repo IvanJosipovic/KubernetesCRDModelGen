@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apiextensions.crossplane.io;
+/// <summary>CompositeTypeRef specifies the type of composite resource that this composition is compatible with.</summary>
 public partial class V1CompositionSpecCompositeTypeRef
 {
     /// <summary>APIVersion of the type.</summary>
@@ -19,6 +20,7 @@ public partial class V1CompositionSpecCompositeTypeRef
     public string Kind { get; set; }
 }
 
+/// <summary>Ref is a named reference to a single EnvironmentConfig. Either Ref or Selector is required.</summary>
 public partial class V1CompositionSpecEnvironmentEnvironmentConfigsRef
 {
     /// <summary>The name of the object.</summary>
@@ -46,6 +48,7 @@ public enum V1CompositionSpecEnvironmentEnvironmentConfigsSelectorMatchLabelsTyp
     Value
 }
 
+/// <summary>An EnvironmentSourceSelectorLabelMatcher acts like a k8s label selector but can draw the label value from a different path.</summary>
 public partial class V1CompositionSpecEnvironmentEnvironmentConfigsSelectorMatchLabels
 {
     /// <summary>FromFieldPathPolicy specifies the policy for the valueFromFieldPath. The default is Required, meaning that an error will be returned if the field is not found in the composite resource. Optional means that if the field is not found in the composite resource, that label pair will just be skipped. N.B. other specified label matchers will still be used to retrieve the desired environment config, if any.</summary>
@@ -81,6 +84,7 @@ public enum V1CompositionSpecEnvironmentEnvironmentConfigsSelectorModeEnum
     Multiple
 }
 
+/// <summary>Selector selects EnvironmentConfig(s) via labels.</summary>
 public partial class V1CompositionSpecEnvironmentEnvironmentConfigsSelector
 {
     /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
@@ -115,6 +119,7 @@ public enum V1CompositionSpecEnvironmentEnvironmentConfigsTypeEnum
     Selector
 }
 
+/// <summary>EnvironmentSource selects a EnvironmentConfig resource.</summary>
 public partial class V1CompositionSpecEnvironmentEnvironmentConfigs
 {
     /// <summary>Ref is a named reference to a single EnvironmentConfig. Either Ref or Selector is required.</summary>
@@ -138,6 +143,7 @@ public enum V1CompositionSpecEnvironmentPatchesCombineStrategyEnum
     String
 }
 
+/// <summary>String declares that input variables should be combined into a single string, using the relevant settings for formatting purposes.</summary>
 public partial class V1CompositionSpecEnvironmentPatchesCombineString
 {
     /// <summary>Format the input using a Go format string. See https://golang.org/pkg/fmt/ for details.</summary>
@@ -145,6 +151,7 @@ public partial class V1CompositionSpecEnvironmentPatchesCombineString
     public string Fmt { get; set; }
 }
 
+/// <summary>A CombineVariable defines the source of a value that is combined with others to form and patch an output value. Currently, this only supports retrieving values from a field path.</summary>
 public partial class V1CompositionSpecEnvironmentPatchesCombineVariables
 {
     /// <summary>FromFieldPath is the path of the field on the source whose value is to be used as input.</summary>
@@ -152,6 +159,7 @@ public partial class V1CompositionSpecEnvironmentPatchesCombineVariables
     public string FromFieldPath { get; set; }
 }
 
+/// <summary>Combine is the patch configuration for a CombineFromComposite or CombineToComposite patch.</summary>
 public partial class V1CompositionSpecEnvironmentPatchesCombine
 {
     /// <summary>Strategy defines the strategy to use to combine the input variable values. Currently only string is supported.</summary>
@@ -178,6 +186,7 @@ public enum V1CompositionSpecEnvironmentPatchesPolicyFromFieldPathEnum
     Required
 }
 
+/// <summary>MergeOptions Specifies merge options on a field path.</summary>
 public partial class V1CompositionSpecEnvironmentPatchesPolicyMergeOptions
 {
     /// <summary>Specifies that already existing elements in a merged slice should be preserved</summary>
@@ -189,6 +198,7 @@ public partial class V1CompositionSpecEnvironmentPatchesPolicyMergeOptions
     public bool? KeepMapValues { get; set; }
 }
 
+/// <summary>Policy configures the specifics of patching behaviour.</summary>
 public partial class V1CompositionSpecEnvironmentPatchesPolicy
 {
     /// <summary>FromFieldPath specifies how to patch from a field path. The default is 'Optional', which means the patch will be a no-op if the specified fromFieldPath does not exist. Use 'Required' if the patch should fail if the specified path does not exist.</summary>
@@ -239,6 +249,7 @@ public enum V1CompositionSpecEnvironmentPatchesTransformsConvertToTypeEnum
     Array
 }
 
+/// <summary>Convert is used to cast the input into the given output type.</summary>
 public partial class V1CompositionSpecEnvironmentPatchesTransformsConvert
 {
     /// <summary>The expected input format.   * `quantity` - parses the input as a K8s [`resource.Quantity`](https://pkg.go.dev/k8s.io/apimachinery/pkg/api/resource#Quantity). Only used during `string -&gt; float64` conversions. * `json` - parses the input as a JSON string. Only used during `string -&gt; object` or `string -&gt; list` conversions.   If this property is null, the default conversion is applied.</summary>
@@ -272,6 +283,7 @@ public enum V1CompositionSpecEnvironmentPatchesTransformsMatchPatternsTypeEnum
     Regexp
 }
 
+/// <summary>MatchTransformPattern is a transform that returns the value that matches a pattern.</summary>
 public partial class V1CompositionSpecEnvironmentPatchesTransformsMatchPatterns
 {
     /// <summary>Literal exactly matches the input string (case sensitive). Is required if `type` is `literal`.</summary>
@@ -292,6 +304,7 @@ public partial class V1CompositionSpecEnvironmentPatchesTransformsMatchPatterns
     public V1CompositionSpecEnvironmentPatchesTransformsMatchPatternsTypeEnum Type { get; set; }
 }
 
+/// <summary>Match is a more complex version of Map that matches a list of patterns.</summary>
 public partial class V1CompositionSpecEnvironmentPatchesTransformsMatch
 {
     /// <summary>Determines to what value the transform should fallback if no pattern matches.</summary>
@@ -321,6 +334,7 @@ public enum V1CompositionSpecEnvironmentPatchesTransformsMathTypeEnum
     ClampMax
 }
 
+/// <summary>Math is used to transform the input via mathematical operations such as multiplication.</summary>
 public partial class V1CompositionSpecEnvironmentPatchesTransformsMath
 {
     /// <summary>ClampMax makes sure that the value is not bigger than the given value.</summary>
@@ -372,6 +386,7 @@ public enum V1CompositionSpecEnvironmentPatchesTransformsStringConvertEnum
     ToAdler32
 }
 
+/// <summary>Join defines parameters to join a slice of values to a string.</summary>
 public partial class V1CompositionSpecEnvironmentPatchesTransformsStringJoin
 {
     /// <summary>Separator defines the character that should separate the values from each other in the joined string.</summary>
@@ -379,6 +394,7 @@ public partial class V1CompositionSpecEnvironmentPatchesTransformsStringJoin
     public string Separator { get; set; }
 }
 
+/// <summary>Extract a match from the input using a regular expression.</summary>
 public partial class V1CompositionSpecEnvironmentPatchesTransformsStringRegexp
 {
     /// <summary>Group number to match. 0 (the default) matches the entire expression.</summary>
@@ -412,6 +428,7 @@ public enum V1CompositionSpecEnvironmentPatchesTransformsStringTypeEnum
     Join
 }
 
+/// <summary>String is used to transform the input into a string or a different kind of string. Note that the input does not necessarily need to be a string.</summary>
 public partial class V1CompositionSpecEnvironmentPatchesTransformsString
 {
     /// <summary>Optional conversion method to be specified. `ToUpper` and `ToLower` change the letter case of the input string. `ToBase64` and `FromBase64` perform a base64 conversion based on the input string. `ToJson` converts any input value into its raw JSON representation. `ToSha1`, `ToSha256` and `ToSha512` generate a hash value based on the input converted to JSON. `ToAdler32` generate a addler32 hash based on the input string.</summary>
@@ -460,6 +477,7 @@ public enum V1CompositionSpecEnvironmentPatchesTransformsTypeEnum
     Convert
 }
 
+/// <summary>Transform is a unit of process whose input is transformed into an output with the supplied configuration.</summary>
 public partial class V1CompositionSpecEnvironmentPatchesTransforms
 {
     /// <summary>Convert is used to cast the input into the given output type.</summary>
@@ -504,6 +522,7 @@ public enum V1CompositionSpecEnvironmentPatchesTypeEnum
     CombineToComposite
 }
 
+/// <summary>EnvironmentPatch is a patch for a Composition environment.</summary>
 public partial class V1CompositionSpecEnvironmentPatches
 {
     /// <summary>Combine is the patch configuration for a CombineFromComposite or CombineToComposite patch.</summary>
@@ -552,6 +571,7 @@ public enum V1CompositionSpecEnvironmentPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policy represents the Resolve and Resolution policies which apply to all EnvironmentSourceReferences in EnvironmentConfigs list.</summary>
 public partial class V1CompositionSpecEnvironmentPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -565,6 +585,7 @@ public partial class V1CompositionSpecEnvironmentPolicy
     public V1CompositionSpecEnvironmentPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Environment configures the environment in which resources are rendered.   THIS IS AN ALPHA FIELD. Do not use it in production. It is not honored unless the relevant Crossplane feature flag is enabled, and may be changed or removed without notice.</summary>
 public partial class V1CompositionSpecEnvironment
 {
     /// <summary>DefaultData statically defines the initial state of the environment. It has the same schema-less structure as the data field in environment configs. It is overwritten by the selected environment configs.</summary>
@@ -601,6 +622,7 @@ public enum V1CompositionSpecPatchSetsPatchesCombineStrategyEnum
     String
 }
 
+/// <summary>String declares that input variables should be combined into a single string, using the relevant settings for formatting purposes.</summary>
 public partial class V1CompositionSpecPatchSetsPatchesCombineString
 {
     /// <summary>Format the input using a Go format string. See https://golang.org/pkg/fmt/ for details.</summary>
@@ -608,6 +630,7 @@ public partial class V1CompositionSpecPatchSetsPatchesCombineString
     public string Fmt { get; set; }
 }
 
+/// <summary>A CombineVariable defines the source of a value that is combined with others to form and patch an output value. Currently, this only supports retrieving values from a field path.</summary>
 public partial class V1CompositionSpecPatchSetsPatchesCombineVariables
 {
     /// <summary>FromFieldPath is the path of the field on the source whose value is to be used as input.</summary>
@@ -615,6 +638,7 @@ public partial class V1CompositionSpecPatchSetsPatchesCombineVariables
     public string FromFieldPath { get; set; }
 }
 
+/// <summary>Combine is the patch configuration for a CombineFromComposite, CombineFromEnvironment, CombineToComposite or CombineToEnvironment patch.</summary>
 public partial class V1CompositionSpecPatchSetsPatchesCombine
 {
     /// <summary>Strategy defines the strategy to use to combine the input variable values. Currently only string is supported.</summary>
@@ -641,6 +665,7 @@ public enum V1CompositionSpecPatchSetsPatchesPolicyFromFieldPathEnum
     Required
 }
 
+/// <summary>MergeOptions Specifies merge options on a field path.</summary>
 public partial class V1CompositionSpecPatchSetsPatchesPolicyMergeOptions
 {
     /// <summary>Specifies that already existing elements in a merged slice should be preserved</summary>
@@ -652,6 +677,7 @@ public partial class V1CompositionSpecPatchSetsPatchesPolicyMergeOptions
     public bool? KeepMapValues { get; set; }
 }
 
+/// <summary>Policy configures the specifics of patching behaviour.</summary>
 public partial class V1CompositionSpecPatchSetsPatchesPolicy
 {
     /// <summary>FromFieldPath specifies how to patch from a field path. The default is 'Optional', which means the patch will be a no-op if the specified fromFieldPath does not exist. Use 'Required' if the patch should fail if the specified path does not exist.</summary>
@@ -702,6 +728,7 @@ public enum V1CompositionSpecPatchSetsPatchesTransformsConvertToTypeEnum
     Array
 }
 
+/// <summary>Convert is used to cast the input into the given output type.</summary>
 public partial class V1CompositionSpecPatchSetsPatchesTransformsConvert
 {
     /// <summary>The expected input format.   * `quantity` - parses the input as a K8s [`resource.Quantity`](https://pkg.go.dev/k8s.io/apimachinery/pkg/api/resource#Quantity). Only used during `string -&gt; float64` conversions. * `json` - parses the input as a JSON string. Only used during `string -&gt; object` or `string -&gt; list` conversions.   If this property is null, the default conversion is applied.</summary>
@@ -735,6 +762,7 @@ public enum V1CompositionSpecPatchSetsPatchesTransformsMatchPatternsTypeEnum
     Regexp
 }
 
+/// <summary>MatchTransformPattern is a transform that returns the value that matches a pattern.</summary>
 public partial class V1CompositionSpecPatchSetsPatchesTransformsMatchPatterns
 {
     /// <summary>Literal exactly matches the input string (case sensitive). Is required if `type` is `literal`.</summary>
@@ -755,6 +783,7 @@ public partial class V1CompositionSpecPatchSetsPatchesTransformsMatchPatterns
     public V1CompositionSpecPatchSetsPatchesTransformsMatchPatternsTypeEnum Type { get; set; }
 }
 
+/// <summary>Match is a more complex version of Map that matches a list of patterns.</summary>
 public partial class V1CompositionSpecPatchSetsPatchesTransformsMatch
 {
     /// <summary>Determines to what value the transform should fallback if no pattern matches.</summary>
@@ -784,6 +813,7 @@ public enum V1CompositionSpecPatchSetsPatchesTransformsMathTypeEnum
     ClampMax
 }
 
+/// <summary>Math is used to transform the input via mathematical operations such as multiplication.</summary>
 public partial class V1CompositionSpecPatchSetsPatchesTransformsMath
 {
     /// <summary>ClampMax makes sure that the value is not bigger than the given value.</summary>
@@ -835,6 +865,7 @@ public enum V1CompositionSpecPatchSetsPatchesTransformsStringConvertEnum
     ToAdler32
 }
 
+/// <summary>Join defines parameters to join a slice of values to a string.</summary>
 public partial class V1CompositionSpecPatchSetsPatchesTransformsStringJoin
 {
     /// <summary>Separator defines the character that should separate the values from each other in the joined string.</summary>
@@ -842,6 +873,7 @@ public partial class V1CompositionSpecPatchSetsPatchesTransformsStringJoin
     public string Separator { get; set; }
 }
 
+/// <summary>Extract a match from the input using a regular expression.</summary>
 public partial class V1CompositionSpecPatchSetsPatchesTransformsStringRegexp
 {
     /// <summary>Group number to match. 0 (the default) matches the entire expression.</summary>
@@ -875,6 +907,7 @@ public enum V1CompositionSpecPatchSetsPatchesTransformsStringTypeEnum
     Join
 }
 
+/// <summary>String is used to transform the input into a string or a different kind of string. Note that the input does not necessarily need to be a string.</summary>
 public partial class V1CompositionSpecPatchSetsPatchesTransformsString
 {
     /// <summary>Optional conversion method to be specified. `ToUpper` and `ToLower` change the letter case of the input string. `ToBase64` and `FromBase64` perform a base64 conversion based on the input string. `ToJson` converts any input value into its raw JSON representation. `ToSha1`, `ToSha256` and `ToSha512` generate a hash value based on the input converted to JSON. `ToAdler32` generate a addler32 hash based on the input string.</summary>
@@ -923,6 +956,7 @@ public enum V1CompositionSpecPatchSetsPatchesTransformsTypeEnum
     Convert
 }
 
+/// <summary>Transform is a unit of process whose input is transformed into an output with the supplied configuration.</summary>
 public partial class V1CompositionSpecPatchSetsPatchesTransforms
 {
     /// <summary>Convert is used to cast the input into the given output type.</summary>
@@ -982,6 +1016,7 @@ public enum V1CompositionSpecPatchSetsPatchesTypeEnum
     CombineToEnvironment
 }
 
+/// <summary>Patch objects are applied between composite and composed resources. Their behaviour depends on the Type selected. The default Type, FromCompositeFieldPath, copies a value from the composite resource to the composed resource, applying any defined transformers.</summary>
 public partial class V1CompositionSpecPatchSetsPatches
 {
     /// <summary>Combine is the patch configuration for a CombineFromComposite, CombineFromEnvironment, CombineToComposite or CombineToEnvironment patch.</summary>
@@ -1014,6 +1049,7 @@ public partial class V1CompositionSpecPatchSetsPatches
     public V1CompositionSpecPatchSetsPatchesTypeEnum? Type { get; set; }
 }
 
+/// <summary>A PatchSet is a set of patches that can be reused from all resources within a Composition.</summary>
 public partial class V1CompositionSpecPatchSets
 {
     /// <summary>Name of this PatchSet.</summary>
@@ -1025,6 +1061,7 @@ public partial class V1CompositionSpecPatchSets
     public IList<V1CompositionSpecPatchSetsPatches> Patches { get; set; }
 }
 
+/// <summary>A SecretRef is a reference to a secret containing credentials that should be supplied to the function.</summary>
 public partial class V1CompositionSpecPipelineCredentialsSecretRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1046,6 +1083,7 @@ public enum V1CompositionSpecPipelineCredentialsSourceEnum
     Secret
 }
 
+/// <summary>FunctionCredentials are optional credentials that a Composition Function needs to run.</summary>
 public partial class V1CompositionSpecPipelineCredentials
 {
     /// <summary>Name of this set of credentials.</summary>
@@ -1062,6 +1100,7 @@ public partial class V1CompositionSpecPipelineCredentials
     public V1CompositionSpecPipelineCredentialsSourceEnum Source { get; set; }
 }
 
+/// <summary>FunctionRef is a reference to the Composition Function this step should execute.</summary>
 public partial class V1CompositionSpecPipelineFunctionRef
 {
     /// <summary>Name of the referenced Function.</summary>
@@ -1069,6 +1108,7 @@ public partial class V1CompositionSpecPipelineFunctionRef
     public string Name { get; set; }
 }
 
+/// <summary>A PipelineStep in a Composition Function pipeline.</summary>
 public partial class V1CompositionSpecPipeline
 {
     /// <summary>Credentials are optional credentials that the Composition Function needs.</summary>
@@ -1088,6 +1128,7 @@ public partial class V1CompositionSpecPipeline
     public string Step { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsWithStoreConfig specifies the secret store config with which the connection details of composite resources dynamically provisioned using this composition will be published.   THIS IS AN ALPHA FIELD. Do not use it in production. It is not honored unless the relevant Crossplane feature flag is enabled, and may be changed or removed without notice.</summary>
 public partial class V1CompositionSpecPublishConnectionDetailsWithStoreConfigRef
 {
     /// <summary>Name of the referenced StoreConfig.</summary>
@@ -1108,6 +1149,7 @@ public enum V1CompositionSpecResourcesConnectionDetailsTypeEnum
     FromValue
 }
 
+/// <summary>ConnectionDetail includes the information about the propagation of the connection information from one secret to another.</summary>
 public partial class V1CompositionSpecResourcesConnectionDetails
 {
     /// <summary>FromConnectionSecretKey is the key that will be used to fetch the value from the composed resource's connection secret.</summary>
@@ -1139,6 +1181,7 @@ public enum V1CompositionSpecResourcesPatchesCombineStrategyEnum
     String
 }
 
+/// <summary>String declares that input variables should be combined into a single string, using the relevant settings for formatting purposes.</summary>
 public partial class V1CompositionSpecResourcesPatchesCombineString
 {
     /// <summary>Format the input using a Go format string. See https://golang.org/pkg/fmt/ for details.</summary>
@@ -1146,6 +1189,7 @@ public partial class V1CompositionSpecResourcesPatchesCombineString
     public string Fmt { get; set; }
 }
 
+/// <summary>A CombineVariable defines the source of a value that is combined with others to form and patch an output value. Currently, this only supports retrieving values from a field path.</summary>
 public partial class V1CompositionSpecResourcesPatchesCombineVariables
 {
     /// <summary>FromFieldPath is the path of the field on the source whose value is to be used as input.</summary>
@@ -1153,6 +1197,7 @@ public partial class V1CompositionSpecResourcesPatchesCombineVariables
     public string FromFieldPath { get; set; }
 }
 
+/// <summary>Combine is the patch configuration for a CombineFromComposite, CombineFromEnvironment, CombineToComposite or CombineToEnvironment patch.</summary>
 public partial class V1CompositionSpecResourcesPatchesCombine
 {
     /// <summary>Strategy defines the strategy to use to combine the input variable values. Currently only string is supported.</summary>
@@ -1179,6 +1224,7 @@ public enum V1CompositionSpecResourcesPatchesPolicyFromFieldPathEnum
     Required
 }
 
+/// <summary>MergeOptions Specifies merge options on a field path.</summary>
 public partial class V1CompositionSpecResourcesPatchesPolicyMergeOptions
 {
     /// <summary>Specifies that already existing elements in a merged slice should be preserved</summary>
@@ -1190,6 +1236,7 @@ public partial class V1CompositionSpecResourcesPatchesPolicyMergeOptions
     public bool? KeepMapValues { get; set; }
 }
 
+/// <summary>Policy configures the specifics of patching behaviour.</summary>
 public partial class V1CompositionSpecResourcesPatchesPolicy
 {
     /// <summary>FromFieldPath specifies how to patch from a field path. The default is 'Optional', which means the patch will be a no-op if the specified fromFieldPath does not exist. Use 'Required' if the patch should fail if the specified path does not exist.</summary>
@@ -1240,6 +1287,7 @@ public enum V1CompositionSpecResourcesPatchesTransformsConvertToTypeEnum
     Array
 }
 
+/// <summary>Convert is used to cast the input into the given output type.</summary>
 public partial class V1CompositionSpecResourcesPatchesTransformsConvert
 {
     /// <summary>The expected input format.   * `quantity` - parses the input as a K8s [`resource.Quantity`](https://pkg.go.dev/k8s.io/apimachinery/pkg/api/resource#Quantity). Only used during `string -&gt; float64` conversions. * `json` - parses the input as a JSON string. Only used during `string -&gt; object` or `string -&gt; list` conversions.   If this property is null, the default conversion is applied.</summary>
@@ -1273,6 +1321,7 @@ public enum V1CompositionSpecResourcesPatchesTransformsMatchPatternsTypeEnum
     Regexp
 }
 
+/// <summary>MatchTransformPattern is a transform that returns the value that matches a pattern.</summary>
 public partial class V1CompositionSpecResourcesPatchesTransformsMatchPatterns
 {
     /// <summary>Literal exactly matches the input string (case sensitive). Is required if `type` is `literal`.</summary>
@@ -1293,6 +1342,7 @@ public partial class V1CompositionSpecResourcesPatchesTransformsMatchPatterns
     public V1CompositionSpecResourcesPatchesTransformsMatchPatternsTypeEnum Type { get; set; }
 }
 
+/// <summary>Match is a more complex version of Map that matches a list of patterns.</summary>
 public partial class V1CompositionSpecResourcesPatchesTransformsMatch
 {
     /// <summary>Determines to what value the transform should fallback if no pattern matches.</summary>
@@ -1322,6 +1372,7 @@ public enum V1CompositionSpecResourcesPatchesTransformsMathTypeEnum
     ClampMax
 }
 
+/// <summary>Math is used to transform the input via mathematical operations such as multiplication.</summary>
 public partial class V1CompositionSpecResourcesPatchesTransformsMath
 {
     /// <summary>ClampMax makes sure that the value is not bigger than the given value.</summary>
@@ -1373,6 +1424,7 @@ public enum V1CompositionSpecResourcesPatchesTransformsStringConvertEnum
     ToAdler32
 }
 
+/// <summary>Join defines parameters to join a slice of values to a string.</summary>
 public partial class V1CompositionSpecResourcesPatchesTransformsStringJoin
 {
     /// <summary>Separator defines the character that should separate the values from each other in the joined string.</summary>
@@ -1380,6 +1432,7 @@ public partial class V1CompositionSpecResourcesPatchesTransformsStringJoin
     public string Separator { get; set; }
 }
 
+/// <summary>Extract a match from the input using a regular expression.</summary>
 public partial class V1CompositionSpecResourcesPatchesTransformsStringRegexp
 {
     /// <summary>Group number to match. 0 (the default) matches the entire expression.</summary>
@@ -1413,6 +1466,7 @@ public enum V1CompositionSpecResourcesPatchesTransformsStringTypeEnum
     Join
 }
 
+/// <summary>String is used to transform the input into a string or a different kind of string. Note that the input does not necessarily need to be a string.</summary>
 public partial class V1CompositionSpecResourcesPatchesTransformsString
 {
     /// <summary>Optional conversion method to be specified. `ToUpper` and `ToLower` change the letter case of the input string. `ToBase64` and `FromBase64` perform a base64 conversion based on the input string. `ToJson` converts any input value into its raw JSON representation. `ToSha1`, `ToSha256` and `ToSha512` generate a hash value based on the input converted to JSON. `ToAdler32` generate a addler32 hash based on the input string.</summary>
@@ -1461,6 +1515,7 @@ public enum V1CompositionSpecResourcesPatchesTransformsTypeEnum
     Convert
 }
 
+/// <summary>Transform is a unit of process whose input is transformed into an output with the supplied configuration.</summary>
 public partial class V1CompositionSpecResourcesPatchesTransforms
 {
     /// <summary>Convert is used to cast the input into the given output type.</summary>
@@ -1520,6 +1575,7 @@ public enum V1CompositionSpecResourcesPatchesTypeEnum
     CombineToEnvironment
 }
 
+/// <summary>Patch objects are applied between composite and composed resources. Their behaviour depends on the Type selected. The default Type, FromCompositeFieldPath, copies a value from the composite resource to the composed resource, applying any defined transformers.</summary>
 public partial class V1CompositionSpecResourcesPatches
 {
     /// <summary>Combine is the patch configuration for a CombineFromComposite, CombineFromEnvironment, CombineToComposite or CombineToEnvironment patch.</summary>
@@ -1552,6 +1608,7 @@ public partial class V1CompositionSpecResourcesPatches
     public V1CompositionSpecResourcesPatchesTypeEnum? Type { get; set; }
 }
 
+/// <summary>MatchCondition specifies the condition you'd like to match if you're using "MatchCondition" type.</summary>
 public partial class V1CompositionSpecResourcesReadinessChecksMatchCondition
 {
     /// <summary>Status is the status of the condition you'd like to match.</summary>
@@ -1588,6 +1645,7 @@ public enum V1CompositionSpecResourcesReadinessChecksTypeEnum
     None
 }
 
+/// <summary>ReadinessCheck is used to indicate how to tell whether a resource is ready for consumption.</summary>
 public partial class V1CompositionSpecResourcesReadinessChecks
 {
     /// <summary>FieldPath shows the path of the field whose value will be used.</summary>
@@ -1612,6 +1670,7 @@ public partial class V1CompositionSpecResourcesReadinessChecks
     public V1CompositionSpecResourcesReadinessChecksTypeEnum Type { get; set; }
 }
 
+/// <summary>ComposedTemplate is used to provide information about how the composed resource should be processed.</summary>
 public partial class V1CompositionSpecResources
 {
     /// <summary>Base is the target resource that the patches will be applied on.</summary>
@@ -1635,6 +1694,7 @@ public partial class V1CompositionSpecResources
     public IList<V1CompositionSpecResourcesReadinessChecks>? ReadinessChecks { get; set; }
 }
 
+/// <summary>CompositionSpec specifies desired state of a composition.</summary>
 public partial class V1CompositionSpec
 {
     /// <summary>CompositeTypeRef specifies the type of composite resource that this composition is compatible with.</summary>
@@ -1672,6 +1732,7 @@ public partial class V1CompositionSpec
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>A Composition defines a collection of managed resources or functions that Crossplane uses to create and manage new composite resources.   Read the Crossplane documentation for [more information about Compositions](https://docs.crossplane.io/latest/concepts/compositions).</summary>
 public partial class V1Composition : IKubernetesObject<V1ObjectMeta>, ISpec<V1CompositionSpec>
 {
     public const string KubeApiVersion = "v1";

@@ -38,6 +38,7 @@ public enum V1beta1TransitGatewayPrefixListReferenceSpecForProviderPrefixListIdR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderPrefixListIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderPref
     public V1beta1TransitGatewayPrefixListReferenceSpecForProviderPrefixListIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ManagedPrefixList in ec2 to populate prefixListId.</summary>
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderPrefixListIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1TransitGatewayPrefixListReferenceSpecForProviderPrefixListIdS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderPrefixListIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderPref
     public V1beta1TransitGatewayPrefixListReferenceSpecForProviderPrefixListIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ManagedPrefixList in ec2 to populate prefixListId.</summary>
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderPrefixListIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1TransitGatewayPrefixListReferenceSpecForProviderTransitGatewa
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderTransitGatewayAttachmentIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderTran
     public V1beta1TransitGatewayPrefixListReferenceSpecForProviderTransitGatewayAttachmentIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a TransitGatewayVPCAttachment in ec2 to populate transitGatewayAttachmentId.</summary>
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderTransitGatewayAttachmentIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1TransitGatewayPrefixListReferenceSpecForProviderTransitGatewa
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderTransitGatewayAttachmentIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderTran
     public V1beta1TransitGatewayPrefixListReferenceSpecForProviderTransitGatewayAttachmentIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a TransitGatewayVPCAttachment in ec2 to populate transitGatewayAttachmentId.</summary>
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderTransitGatewayAttachmentIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1TransitGatewayPrefixListReferenceSpecForProviderTransitGatewa
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderTransitGatewayRouteTableIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderTran
     public V1beta1TransitGatewayPrefixListReferenceSpecForProviderTransitGatewayRouteTableIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a TransitGateway in ec2 to populate transitGatewayRouteTableId.</summary>
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderTransitGatewayRouteTableIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1TransitGatewayPrefixListReferenceSpecForProviderTransitGatewa
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderTransitGatewayRouteTableIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderTran
     public V1beta1TransitGatewayPrefixListReferenceSpecForProviderTransitGatewayRouteTableIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a TransitGateway in ec2 to populate transitGatewayRouteTableId.</summary>
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderTransitGatewayRouteTableIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProviderTran
     public V1beta1TransitGatewayPrefixListReferenceSpecForProviderTransitGatewayRouteTableIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProvider
 {
     /// <summary>Indicates whether to drop traffic that matches the Prefix List. Defaults to false.</summary>
@@ -361,6 +374,7 @@ public enum V1beta1TransitGatewayPrefixListReferenceSpecInitProviderPrefixListId
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderPrefixListIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -374,6 +388,7 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderPre
     public V1beta1TransitGatewayPrefixListReferenceSpecInitProviderPrefixListIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ManagedPrefixList in ec2 to populate prefixListId.</summary>
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderPrefixListIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -405,6 +420,7 @@ public enum V1beta1TransitGatewayPrefixListReferenceSpecInitProviderPrefixListId
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderPrefixListIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -418,6 +434,7 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderPre
     public V1beta1TransitGatewayPrefixListReferenceSpecInitProviderPrefixListIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ManagedPrefixList in ec2 to populate prefixListId.</summary>
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderPrefixListIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -453,6 +470,7 @@ public enum V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTransitGatew
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTransitGatewayAttachmentIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -466,6 +484,7 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTra
     public V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTransitGatewayAttachmentIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a TransitGatewayVPCAttachment in ec2 to populate transitGatewayAttachmentId.</summary>
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTransitGatewayAttachmentIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -497,6 +516,7 @@ public enum V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTransitGatew
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTransitGatewayAttachmentIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -510,6 +530,7 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTra
     public V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTransitGatewayAttachmentIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a TransitGatewayVPCAttachment in ec2 to populate transitGatewayAttachmentId.</summary>
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTransitGatewayAttachmentIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -545,6 +566,7 @@ public enum V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTransitGatew
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTransitGatewayRouteTableIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -558,6 +580,7 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTra
     public V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTransitGatewayRouteTableIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a TransitGateway in ec2 to populate transitGatewayRouteTableId.</summary>
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTransitGatewayRouteTableIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -589,6 +612,7 @@ public enum V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTransitGatew
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTransitGatewayRouteTableIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -602,6 +626,7 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTra
     public V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTransitGatewayRouteTableIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a TransitGateway in ec2 to populate transitGatewayRouteTableId.</summary>
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTransitGatewayRouteTableIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -617,6 +642,7 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTra
     public V1beta1TransitGatewayPrefixListReferenceSpecInitProviderTransitGatewayRouteTableIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecInitProvider
 {
     /// <summary>Indicates whether to drop traffic that matches the Prefix List. Defaults to false.</summary>
@@ -702,6 +728,7 @@ public enum V1beta1TransitGatewayPrefixListReferenceSpecProviderConfigRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -715,6 +742,7 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecProviderConfigR
     public V1beta1TransitGatewayPrefixListReferenceSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -746,6 +774,7 @@ public enum V1beta1TransitGatewayPrefixListReferenceSpecPublishConnectionDetails
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -759,6 +788,7 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecPublishConnecti
     public V1beta1TransitGatewayPrefixListReferenceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -770,6 +800,7 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecPublishConnecti
     public V1beta1TransitGatewayPrefixListReferenceSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -785,6 +816,7 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecPublishConnecti
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -800,6 +832,7 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecPublishConnecti
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1TransitGatewayPrefixListReferenceSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -811,6 +844,7 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecWriteConnection
     public string Namespace { get; set; }
 }
 
+/// <summary>TransitGatewayPrefixListReferenceSpec defines the desired state of TransitGatewayPrefixListReference</summary>
 public partial class V1beta1TransitGatewayPrefixListReferenceSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -843,6 +877,7 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpec
     public V1beta1TransitGatewayPrefixListReferenceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TransitGatewayPrefixListReferenceStatusAtProvider
 {
     /// <summary>Indicates whether to drop traffic that matches the Prefix List. Defaults to false.</summary>
@@ -870,6 +905,7 @@ public partial class V1beta1TransitGatewayPrefixListReferenceStatusAtProvider
     public string? TransitGatewayRouteTableId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1TransitGatewayPrefixListReferenceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -897,6 +933,7 @@ public partial class V1beta1TransitGatewayPrefixListReferenceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>TransitGatewayPrefixListReferenceStatus defines the observed state of TransitGatewayPrefixListReference.</summary>
 public partial class V1beta1TransitGatewayPrefixListReferenceStatus
 {
     /// <summary></summary>
@@ -913,6 +950,7 @@ public partial class V1beta1TransitGatewayPrefixListReferenceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>TransitGatewayPrefixListReference is the Schema for the TransitGatewayPrefixListReferences API. Manages an EC2 Transit Gateway Prefix List Reference</summary>
 public partial class V1beta1TransitGatewayPrefixListReference : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1TransitGatewayPrefixListReferenceSpec>, IStatus<V1beta1TransitGatewayPrefixListReferenceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

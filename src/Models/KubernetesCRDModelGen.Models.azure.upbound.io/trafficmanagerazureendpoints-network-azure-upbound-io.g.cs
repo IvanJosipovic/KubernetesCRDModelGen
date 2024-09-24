@@ -18,6 +18,7 @@ public enum V1beta1TrafficManagerAzureEndpointSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1TrafficManagerAzureEndpointSpecForProviderCustomHeader
 {
     /// <summary>The name of the custom header.</summary>
@@ -49,6 +50,7 @@ public enum V1beta1TrafficManagerAzureEndpointSpecForProviderProfileIdRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TrafficManagerAzureEndpointSpecForProviderProfileIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -62,6 +64,7 @@ public partial class V1beta1TrafficManagerAzureEndpointSpecForProviderProfileIdR
     public V1beta1TrafficManagerAzureEndpointSpecForProviderProfileIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a TrafficManagerProfile in network to populate profileId.</summary>
 public partial class V1beta1TrafficManagerAzureEndpointSpecForProviderProfileIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -93,6 +96,7 @@ public enum V1beta1TrafficManagerAzureEndpointSpecForProviderProfileIdSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TrafficManagerAzureEndpointSpecForProviderProfileIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -106,6 +110,7 @@ public partial class V1beta1TrafficManagerAzureEndpointSpecForProviderProfileIdS
     public V1beta1TrafficManagerAzureEndpointSpecForProviderProfileIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a TrafficManagerProfile in network to populate profileId.</summary>
 public partial class V1beta1TrafficManagerAzureEndpointSpecForProviderProfileIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1TrafficManagerAzureEndpointSpecForProviderProfileIdS
     public V1beta1TrafficManagerAzureEndpointSpecForProviderProfileIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TrafficManagerAzureEndpointSpecForProviderSubnet
 {
     /// <summary>The first IP Address in this subnet.</summary>
@@ -156,6 +162,7 @@ public enum V1beta1TrafficManagerAzureEndpointSpecForProviderTargetResourceIdRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TrafficManagerAzureEndpointSpecForProviderTargetResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -169,6 +176,7 @@ public partial class V1beta1TrafficManagerAzureEndpointSpecForProviderTargetReso
     public V1beta1TrafficManagerAzureEndpointSpecForProviderTargetResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a PublicIP in network to populate targetResourceId.</summary>
 public partial class V1beta1TrafficManagerAzureEndpointSpecForProviderTargetResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -200,6 +208,7 @@ public enum V1beta1TrafficManagerAzureEndpointSpecForProviderTargetResourceIdSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TrafficManagerAzureEndpointSpecForProviderTargetResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -213,6 +222,7 @@ public partial class V1beta1TrafficManagerAzureEndpointSpecForProviderTargetReso
     public V1beta1TrafficManagerAzureEndpointSpecForProviderTargetResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a PublicIP in network to populate targetResourceId.</summary>
 public partial class V1beta1TrafficManagerAzureEndpointSpecForProviderTargetResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -228,6 +238,7 @@ public partial class V1beta1TrafficManagerAzureEndpointSpecForProviderTargetReso
     public V1beta1TrafficManagerAzureEndpointSpecForProviderTargetResourceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TrafficManagerAzureEndpointSpecForProvider
 {
     /// <summary>If Always Serve is enabled, probing for endpoint health will be disabled and endpoints will be included in the traffic routing method. Defaults to false.</summary>
@@ -283,6 +294,7 @@ public partial class V1beta1TrafficManagerAzureEndpointSpecForProvider
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TrafficManagerAzureEndpointSpecInitProviderCustomHeader
 {
     /// <summary>The name of the custom header.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1TrafficManagerAzureEndpointSpecInitProviderCustomHea
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TrafficManagerAzureEndpointSpecInitProviderSubnet
 {
     /// <summary>The first IP Address in this subnet.</summary>
@@ -329,6 +342,7 @@ public enum V1beta1TrafficManagerAzureEndpointSpecInitProviderTargetResourceIdRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TrafficManagerAzureEndpointSpecInitProviderTargetResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -342,6 +356,7 @@ public partial class V1beta1TrafficManagerAzureEndpointSpecInitProviderTargetRes
     public V1beta1TrafficManagerAzureEndpointSpecInitProviderTargetResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a PublicIP in network to populate targetResourceId.</summary>
 public partial class V1beta1TrafficManagerAzureEndpointSpecInitProviderTargetResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -373,6 +388,7 @@ public enum V1beta1TrafficManagerAzureEndpointSpecInitProviderTargetResourceIdSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TrafficManagerAzureEndpointSpecInitProviderTargetResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -386,6 +402,7 @@ public partial class V1beta1TrafficManagerAzureEndpointSpecInitProviderTargetRes
     public V1beta1TrafficManagerAzureEndpointSpecInitProviderTargetResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a PublicIP in network to populate targetResourceId.</summary>
 public partial class V1beta1TrafficManagerAzureEndpointSpecInitProviderTargetResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -401,6 +418,7 @@ public partial class V1beta1TrafficManagerAzureEndpointSpecInitProviderTargetRes
     public V1beta1TrafficManagerAzureEndpointSpecInitProviderTargetResourceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1TrafficManagerAzureEndpointSpecInitProvider
 {
     /// <summary>If Always Serve is enabled, probing for endpoint health will be disabled and endpoints will be included in the traffic routing method. Defaults to false.</summary>
@@ -486,6 +504,7 @@ public enum V1beta1TrafficManagerAzureEndpointSpecProviderConfigRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TrafficManagerAzureEndpointSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -499,6 +518,7 @@ public partial class V1beta1TrafficManagerAzureEndpointSpecProviderConfigRefPoli
     public V1beta1TrafficManagerAzureEndpointSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1TrafficManagerAzureEndpointSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -530,6 +550,7 @@ public enum V1beta1TrafficManagerAzureEndpointSpecPublishConnectionDetailsToConf
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TrafficManagerAzureEndpointSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -543,6 +564,7 @@ public partial class V1beta1TrafficManagerAzureEndpointSpecPublishConnectionDeta
     public V1beta1TrafficManagerAzureEndpointSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1TrafficManagerAzureEndpointSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -554,6 +576,7 @@ public partial class V1beta1TrafficManagerAzureEndpointSpecPublishConnectionDeta
     public V1beta1TrafficManagerAzureEndpointSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1TrafficManagerAzureEndpointSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -569,6 +592,7 @@ public partial class V1beta1TrafficManagerAzureEndpointSpecPublishConnectionDeta
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1TrafficManagerAzureEndpointSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -584,6 +608,7 @@ public partial class V1beta1TrafficManagerAzureEndpointSpecPublishConnectionDeta
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1TrafficManagerAzureEndpointSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -595,6 +620,7 @@ public partial class V1beta1TrafficManagerAzureEndpointSpecWriteConnectionSecret
     public string Namespace { get; set; }
 }
 
+/// <summary>TrafficManagerAzureEndpointSpec defines the desired state of TrafficManagerAzureEndpoint</summary>
 public partial class V1beta1TrafficManagerAzureEndpointSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -627,6 +653,7 @@ public partial class V1beta1TrafficManagerAzureEndpointSpec
     public V1beta1TrafficManagerAzureEndpointSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TrafficManagerAzureEndpointStatusAtProviderCustomHeader
 {
     /// <summary>The name of the custom header.</summary>
@@ -638,6 +665,7 @@ public partial class V1beta1TrafficManagerAzureEndpointStatusAtProviderCustomHea
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TrafficManagerAzureEndpointStatusAtProviderSubnet
 {
     /// <summary>The first IP Address in this subnet.</summary>
@@ -653,6 +681,7 @@ public partial class V1beta1TrafficManagerAzureEndpointStatusAtProviderSubnet
     public double? Scope { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TrafficManagerAzureEndpointStatusAtProvider
 {
     /// <summary>If Always Serve is enabled, probing for endpoint health will be disabled and endpoints will be included in the traffic routing method. Defaults to false.</summary>
@@ -696,6 +725,7 @@ public partial class V1beta1TrafficManagerAzureEndpointStatusAtProvider
     public double? Weight { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1TrafficManagerAzureEndpointStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -723,6 +753,7 @@ public partial class V1beta1TrafficManagerAzureEndpointStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>TrafficManagerAzureEndpointStatus defines the observed state of TrafficManagerAzureEndpoint.</summary>
 public partial class V1beta1TrafficManagerAzureEndpointStatus
 {
     /// <summary></summary>
@@ -739,6 +770,7 @@ public partial class V1beta1TrafficManagerAzureEndpointStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>TrafficManagerAzureEndpoint is the Schema for the TrafficManagerAzureEndpoints API. Manages an Azure Endpoint within a Traffic Manager Profile..</summary>
 public partial class V1beta1TrafficManagerAzureEndpoint : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1TrafficManagerAzureEndpointSpec>, IStatus<V1beta1TrafficManagerAzureEndpointStatus>
 {
     public const string KubeApiVersion = "v1beta1";

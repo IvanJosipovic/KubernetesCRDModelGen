@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20201101storagePublicIPAddressSpecDdosSettingsDdosCustomPolicyReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -27,6 +28,7 @@ public partial class V1api20201101storagePublicIPAddressSpecDdosSettingsDdosCust
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
 public partial class V1api20201101storagePublicIPAddressSpecDdosSettingsDdosCustomPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -38,6 +40,7 @@ public partial class V1api20201101storagePublicIPAddressSpecDdosSettingsDdosCust
     public V1api20201101storagePublicIPAddressSpecDdosSettingsDdosCustomPolicyReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.DdosSettings Contains the DDoS protection settings of the public IP.</summary>
 public partial class V1api20201101storagePublicIPAddressSpecDdosSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -57,6 +60,7 @@ public partial class V1api20201101storagePublicIPAddressSpecDdosSettings
     public string? ProtectionCoverage { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.PublicIPAddressDnsSettings Contains FQDN of the DNS record associated with the public IP address.</summary>
 public partial class V1api20201101storagePublicIPAddressSpecDnsSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -76,6 +80,7 @@ public partial class V1api20201101storagePublicIPAddressSpecDnsSettings
     public string? ReverseFqdn { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.ExtendedLocation ExtendedLocation complex type.</summary>
 public partial class V1api20201101storagePublicIPAddressSpecExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -91,6 +96,7 @@ public partial class V1api20201101storagePublicIPAddressSpecExtendedLocation
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.IpTag Contains the IpTag associated with the object.</summary>
 public partial class V1api20201101storagePublicIPAddressSpecIpTags
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -106,6 +112,7 @@ public partial class V1api20201101storagePublicIPAddressSpecIpTags
     public string? Tag { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20201101storagePublicIPAddressSpecLinkedPublicIPAddressReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -125,6 +132,7 @@ public partial class V1api20201101storagePublicIPAddressSpecLinkedPublicIPAddres
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.PublicIPAddressSpec_PublicIPAddress_SubResourceEmbedded Public IP address resource.</summary>
 public partial class V1api20201101storagePublicIPAddressSpecLinkedPublicIPAddress
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -136,6 +144,7 @@ public partial class V1api20201101storagePublicIPAddressSpecLinkedPublicIPAddres
     public V1api20201101storagePublicIPAddressSpecLinkedPublicIPAddressReference? Reference { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20201101storagePublicIPAddressSpecNatGatewayReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -155,6 +164,7 @@ public partial class V1api20201101storagePublicIPAddressSpecNatGatewayReference
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.NatGatewaySpec_PublicIPAddress_SubResourceEmbedded Nat Gateway resource.</summary>
 public partial class V1api20201101storagePublicIPAddressSpecNatGateway
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -166,6 +176,7 @@ public partial class V1api20201101storagePublicIPAddressSpecNatGateway
     public V1api20201101storagePublicIPAddressSpecNatGatewayReference? Reference { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20201101storagePublicIPAddressSpecOwner
 {
     /// <summary></summary>
@@ -177,6 +188,7 @@ public partial class V1api20201101storagePublicIPAddressSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20201101storagePublicIPAddressSpecPublicIPPrefixReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -196,6 +208,7 @@ public partial class V1api20201101storagePublicIPAddressSpecPublicIPPrefixRefere
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
 public partial class V1api20201101storagePublicIPAddressSpecPublicIPPrefix
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -207,6 +220,7 @@ public partial class V1api20201101storagePublicIPAddressSpecPublicIPPrefix
     public V1api20201101storagePublicIPAddressSpecPublicIPPrefixReference? Reference { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20201101storagePublicIPAddressSpecServicePublicIPAddressReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -226,6 +240,7 @@ public partial class V1api20201101storagePublicIPAddressSpecServicePublicIPAddre
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.PublicIPAddressSpec_PublicIPAddress_SubResourceEmbedded Public IP address resource.</summary>
 public partial class V1api20201101storagePublicIPAddressSpecServicePublicIPAddress
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -237,6 +252,7 @@ public partial class V1api20201101storagePublicIPAddressSpecServicePublicIPAddre
     public V1api20201101storagePublicIPAddressSpecServicePublicIPAddressReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.PublicIPAddressSku SKU of a public IP address.</summary>
 public partial class V1api20201101storagePublicIPAddressSpecSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -252,6 +268,7 @@ public partial class V1api20201101storagePublicIPAddressSpecSku
     public string? Tier { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.PublicIPAddress_Spec</summary>
 public partial class V1api20201101storagePublicIPAddressSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -335,6 +352,7 @@ public partial class V1api20201101storagePublicIPAddressSpec
     public IList<string>? Zones { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20201101storagePublicIPAddressStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -366,6 +384,7 @@ public partial class V1api20201101storagePublicIPAddressStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
 public partial class V1api20201101storagePublicIPAddressStatusDdosSettingsDdosCustomPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -377,6 +396,7 @@ public partial class V1api20201101storagePublicIPAddressStatusDdosSettingsDdosCu
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.DdosSettings_STATUS Contains the DDoS protection settings of the public IP.</summary>
 public partial class V1api20201101storagePublicIPAddressStatusDdosSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -396,6 +416,7 @@ public partial class V1api20201101storagePublicIPAddressStatusDdosSettings
     public string? ProtectionCoverage { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.PublicIPAddressDnsSettings_STATUS Contains FQDN of the DNS record associated with the public IP address.</summary>
 public partial class V1api20201101storagePublicIPAddressStatusDnsSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -415,6 +436,7 @@ public partial class V1api20201101storagePublicIPAddressStatusDnsSettings
     public string? ReverseFqdn { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.ExtendedLocation_STATUS ExtendedLocation complex type.</summary>
 public partial class V1api20201101storagePublicIPAddressStatusExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -430,6 +452,7 @@ public partial class V1api20201101storagePublicIPAddressStatusExtendedLocation
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.IPConfiguration_STATUS_PublicIPAddress_SubResourceEmbedded IP configuration.</summary>
 public partial class V1api20201101storagePublicIPAddressStatusIpConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -441,6 +464,7 @@ public partial class V1api20201101storagePublicIPAddressStatusIpConfiguration
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.IpTag_STATUS Contains the IpTag associated with the object.</summary>
 public partial class V1api20201101storagePublicIPAddressStatusIpTags
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -456,6 +480,7 @@ public partial class V1api20201101storagePublicIPAddressStatusIpTags
     public string? Tag { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.NatGateway_STATUS_PublicIPAddress_SubResourceEmbedded Nat Gateway resource.</summary>
 public partial class V1api20201101storagePublicIPAddressStatusNatGateway
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -467,6 +492,7 @@ public partial class V1api20201101storagePublicIPAddressStatusNatGateway
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
 public partial class V1api20201101storagePublicIPAddressStatusPublicIPPrefix
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -478,6 +504,7 @@ public partial class V1api20201101storagePublicIPAddressStatusPublicIPPrefix
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.PublicIPAddressSku_STATUS SKU of a public IP address.</summary>
 public partial class V1api20201101storagePublicIPAddressStatusSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -493,6 +520,7 @@ public partial class V1api20201101storagePublicIPAddressStatusSku
     public string? Tier { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.PublicIPAddress_STATUS_PublicIPAddress_SubResourceEmbedded Public IP address resource.</summary>
 public partial class V1api20201101storagePublicIPAddressStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -593,6 +621,7 @@ public partial class V1api20201101storagePublicIPAddressStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20201101.PublicIPAddress Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/publicIpAddress.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPAddresses/{publicIpAddressName}</summary>
 public partial class V1api20201101storagePublicIPAddress : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20201101storagePublicIPAddressSpec>, IStatus<V1api20201101storagePublicIPAddressStatus>
 {
     public const string KubeApiVersion = "v1api20201101storage";

@@ -18,6 +18,7 @@ public enum V1beta1SubscriptionSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1SubscriptionSpecForProviderBigqueryConfig
 {
     /// <summary>When true and use_topic_schema or use_table_schema is true, any fields that are a part of the topic schema or message schema that are not part of the BigQuery table schema are dropped when writing to BigQuery. Otherwise, the schemas must be kept in sync and any messages with extra fields are not written and remain in the subscription's backlog.</summary>
@@ -41,6 +42,7 @@ public partial class V1beta1SubscriptionSpecForProviderBigqueryConfig
     public bool? WriteMetadata { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubscriptionSpecForProviderCloudStorageConfigAvroConfig
 {
     /// <summary>When true, writes the Pub/Sub message metadata to x-goog-pubsub-&lt;KEY&gt;:&lt;VAL&gt; headers of the HTTP request. Writes the Pub/Sub message attributes to &lt;KEY&gt;:&lt;VAL&gt; headers of the HTTP request.</summary>
@@ -48,6 +50,7 @@ public partial class V1beta1SubscriptionSpecForProviderCloudStorageConfigAvroCon
     public bool? WriteMetadata { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubscriptionSpecForProviderCloudStorageConfig
 {
     /// <summary>If set, message data will be written to Cloud Storage in Avro format. Structure is documented below.</summary>
@@ -99,6 +102,7 @@ public enum V1beta1SubscriptionSpecForProviderDeadLetterPolicyDeadLetterTopicRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SubscriptionSpecForProviderDeadLetterPolicyDeadLetterTopicRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -112,6 +116,7 @@ public partial class V1beta1SubscriptionSpecForProviderDeadLetterPolicyDeadLette
     public V1beta1SubscriptionSpecForProviderDeadLetterPolicyDeadLetterTopicRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Topic in pubsub to populate deadLetterTopic.</summary>
 public partial class V1beta1SubscriptionSpecForProviderDeadLetterPolicyDeadLetterTopicRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -143,6 +148,7 @@ public enum V1beta1SubscriptionSpecForProviderDeadLetterPolicyDeadLetterTopicSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SubscriptionSpecForProviderDeadLetterPolicyDeadLetterTopicSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -156,6 +162,7 @@ public partial class V1beta1SubscriptionSpecForProviderDeadLetterPolicyDeadLette
     public V1beta1SubscriptionSpecForProviderDeadLetterPolicyDeadLetterTopicSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Topic in pubsub to populate deadLetterTopic.</summary>
 public partial class V1beta1SubscriptionSpecForProviderDeadLetterPolicyDeadLetterTopicSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -171,6 +178,7 @@ public partial class V1beta1SubscriptionSpecForProviderDeadLetterPolicyDeadLette
     public V1beta1SubscriptionSpecForProviderDeadLetterPolicyDeadLetterTopicSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubscriptionSpecForProviderDeadLetterPolicy
 {
     /// <summary>The name of the topic to which dead letter messages should be published. Format is projects/{project}/topics/{topic}. The Cloud Pub/Sub service account associated with the enclosing subscription's parent project (i.e., service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to Publish() to this topic. The operation will fail if the topic does not exist. Users should ensure that there is a subscription attached to this topic since messages published to a topic with no subscriptions are lost.</summary>
@@ -190,6 +198,7 @@ public partial class V1beta1SubscriptionSpecForProviderDeadLetterPolicy
     public double? MaxDeliveryAttempts { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubscriptionSpecForProviderExpirationPolicy
 {
     /// <summary>Specifies the "time-to-live" duration for an associated resource. The resource expires if it is not active for a period of ttl. If ttl is set to "", the associated resource never expires. A duration in seconds with up to nine fractional digits, terminated by 's'. Example - "3.5s".</summary>
@@ -197,6 +206,7 @@ public partial class V1beta1SubscriptionSpecForProviderExpirationPolicy
     public string? Ttl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubscriptionSpecForProviderPushConfigNoWrapper
 {
     /// <summary>When true, writes the Pub/Sub message metadata to x-goog-pubsub-&lt;KEY&gt;:&lt;VAL&gt; headers of the HTTP request. Writes the Pub/Sub message attributes to &lt;KEY&gt;:&lt;VAL&gt; headers of the HTTP request.</summary>
@@ -204,6 +214,7 @@ public partial class V1beta1SubscriptionSpecForProviderPushConfigNoWrapper
     public bool? WriteMetadata { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubscriptionSpecForProviderPushConfigOidcToken
 {
     /// <summary>Audience to be used when generating OIDC token. The audience claim identifies the recipients that the JWT is intended for. The audience value is a single case-sensitive string. Having multiple values (array) for the audience field is not supported. More info about the OIDC JWT token audience here: https://tools.ietf.org/html/rfc7519#section-4.1.3 Note: if not specified, the Push endpoint URL will be used.</summary>
@@ -215,6 +226,7 @@ public partial class V1beta1SubscriptionSpecForProviderPushConfigOidcToken
     public string? ServiceAccountEmail { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubscriptionSpecForProviderPushConfig
 {
     /// <summary>Endpoint configuration attributes. Every endpoint has a set of API supported attributes that can be used to control different aspects of the message delivery. The currently supported attribute is x-goog-version, which you can use to change the format of the pushed message. This attribute indicates the version of the data expected by the endpoint. This controls the shape of the pushed message (i.e., its fields and metadata). The endpoint version is based on the version of the Pub/Sub API. If not present during the subscriptions.create call, it will default to the version of the API used to make such call. If not present during a subscriptions.modifyPushConfig call, its value will not be changed. subscriptions.get calls will always return a valid version, even if the subscription was created without this attribute. The possible values for this attribute are:</summary>
@@ -234,6 +246,7 @@ public partial class V1beta1SubscriptionSpecForProviderPushConfig
     public string? PushEndpoint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubscriptionSpecForProviderRetryPolicy
 {
     /// <summary>The maximum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 600 seconds. A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".</summary>
@@ -265,6 +278,7 @@ public enum V1beta1SubscriptionSpecForProviderTopicRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SubscriptionSpecForProviderTopicRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -278,6 +292,7 @@ public partial class V1beta1SubscriptionSpecForProviderTopicRefPolicy
     public V1beta1SubscriptionSpecForProviderTopicRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Topic in pubsub to populate topic.</summary>
 public partial class V1beta1SubscriptionSpecForProviderTopicRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -309,6 +324,7 @@ public enum V1beta1SubscriptionSpecForProviderTopicSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SubscriptionSpecForProviderTopicSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -322,6 +338,7 @@ public partial class V1beta1SubscriptionSpecForProviderTopicSelectorPolicy
     public V1beta1SubscriptionSpecForProviderTopicSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Topic in pubsub to populate topic.</summary>
 public partial class V1beta1SubscriptionSpecForProviderTopicSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -337,6 +354,7 @@ public partial class V1beta1SubscriptionSpecForProviderTopicSelector
     public V1beta1SubscriptionSpecForProviderTopicSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubscriptionSpecForProvider
 {
     /// <summary>This value is the maximum time after a subscriber receives a message before the subscriber should acknowledge the message. After message delivery but before the ack deadline expires and before the message is acknowledged, it is an outstanding message and will not be delivered again during that time (on a best-effort basis). For pull subscriptions, this value is used as the initial value for the ack deadline. To override this value for a given message, call subscriptions.modifyAckDeadline with the corresponding ackId if using pull. The minimum custom deadline you can specify is 10 seconds. The maximum custom deadline you can specify is 600 seconds (10 minutes). If this parameter is 0, a default value of 10 seconds is used. For push delivery, this value is also used to set the request timeout for the call to the push endpoint. If the subscriber never acknowledges the message, the Pub/Sub system will eventually redeliver the message.</summary>
@@ -408,6 +426,7 @@ public partial class V1beta1SubscriptionSpecForProvider
     public V1beta1SubscriptionSpecForProviderTopicSelector? TopicSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubscriptionSpecInitProviderBigqueryConfig
 {
     /// <summary>When true and use_topic_schema or use_table_schema is true, any fields that are a part of the topic schema or message schema that are not part of the BigQuery table schema are dropped when writing to BigQuery. Otherwise, the schemas must be kept in sync and any messages with extra fields are not written and remain in the subscription's backlog.</summary>
@@ -431,6 +450,7 @@ public partial class V1beta1SubscriptionSpecInitProviderBigqueryConfig
     public bool? WriteMetadata { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubscriptionSpecInitProviderCloudStorageConfigAvroConfig
 {
     /// <summary>When true, writes the Pub/Sub message metadata to x-goog-pubsub-&lt;KEY&gt;:&lt;VAL&gt; headers of the HTTP request. Writes the Pub/Sub message attributes to &lt;KEY&gt;:&lt;VAL&gt; headers of the HTTP request.</summary>
@@ -438,6 +458,7 @@ public partial class V1beta1SubscriptionSpecInitProviderCloudStorageConfigAvroCo
     public bool? WriteMetadata { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubscriptionSpecInitProviderCloudStorageConfig
 {
     /// <summary>If set, message data will be written to Cloud Storage in Avro format. Structure is documented below.</summary>
@@ -489,6 +510,7 @@ public enum V1beta1SubscriptionSpecInitProviderDeadLetterPolicyDeadLetterTopicRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SubscriptionSpecInitProviderDeadLetterPolicyDeadLetterTopicRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -502,6 +524,7 @@ public partial class V1beta1SubscriptionSpecInitProviderDeadLetterPolicyDeadLett
     public V1beta1SubscriptionSpecInitProviderDeadLetterPolicyDeadLetterTopicRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Topic in pubsub to populate deadLetterTopic.</summary>
 public partial class V1beta1SubscriptionSpecInitProviderDeadLetterPolicyDeadLetterTopicRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -533,6 +556,7 @@ public enum V1beta1SubscriptionSpecInitProviderDeadLetterPolicyDeadLetterTopicSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SubscriptionSpecInitProviderDeadLetterPolicyDeadLetterTopicSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -546,6 +570,7 @@ public partial class V1beta1SubscriptionSpecInitProviderDeadLetterPolicyDeadLett
     public V1beta1SubscriptionSpecInitProviderDeadLetterPolicyDeadLetterTopicSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Topic in pubsub to populate deadLetterTopic.</summary>
 public partial class V1beta1SubscriptionSpecInitProviderDeadLetterPolicyDeadLetterTopicSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -561,6 +586,7 @@ public partial class V1beta1SubscriptionSpecInitProviderDeadLetterPolicyDeadLett
     public V1beta1SubscriptionSpecInitProviderDeadLetterPolicyDeadLetterTopicSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubscriptionSpecInitProviderDeadLetterPolicy
 {
     /// <summary>The name of the topic to which dead letter messages should be published. Format is projects/{project}/topics/{topic}. The Cloud Pub/Sub service account associated with the enclosing subscription's parent project (i.e., service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to Publish() to this topic. The operation will fail if the topic does not exist. Users should ensure that there is a subscription attached to this topic since messages published to a topic with no subscriptions are lost.</summary>
@@ -580,6 +606,7 @@ public partial class V1beta1SubscriptionSpecInitProviderDeadLetterPolicy
     public double? MaxDeliveryAttempts { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubscriptionSpecInitProviderExpirationPolicy
 {
     /// <summary>Specifies the "time-to-live" duration for an associated resource. The resource expires if it is not active for a period of ttl. If ttl is set to "", the associated resource never expires. A duration in seconds with up to nine fractional digits, terminated by 's'. Example - "3.5s".</summary>
@@ -587,6 +614,7 @@ public partial class V1beta1SubscriptionSpecInitProviderExpirationPolicy
     public string? Ttl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubscriptionSpecInitProviderPushConfigNoWrapper
 {
     /// <summary>When true, writes the Pub/Sub message metadata to x-goog-pubsub-&lt;KEY&gt;:&lt;VAL&gt; headers of the HTTP request. Writes the Pub/Sub message attributes to &lt;KEY&gt;:&lt;VAL&gt; headers of the HTTP request.</summary>
@@ -594,6 +622,7 @@ public partial class V1beta1SubscriptionSpecInitProviderPushConfigNoWrapper
     public bool? WriteMetadata { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubscriptionSpecInitProviderPushConfigOidcToken
 {
     /// <summary>Audience to be used when generating OIDC token. The audience claim identifies the recipients that the JWT is intended for. The audience value is a single case-sensitive string. Having multiple values (array) for the audience field is not supported. More info about the OIDC JWT token audience here: https://tools.ietf.org/html/rfc7519#section-4.1.3 Note: if not specified, the Push endpoint URL will be used.</summary>
@@ -605,6 +634,7 @@ public partial class V1beta1SubscriptionSpecInitProviderPushConfigOidcToken
     public string? ServiceAccountEmail { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubscriptionSpecInitProviderPushConfig
 {
     /// <summary>Endpoint configuration attributes. Every endpoint has a set of API supported attributes that can be used to control different aspects of the message delivery. The currently supported attribute is x-goog-version, which you can use to change the format of the pushed message. This attribute indicates the version of the data expected by the endpoint. This controls the shape of the pushed message (i.e., its fields and metadata). The endpoint version is based on the version of the Pub/Sub API. If not present during the subscriptions.create call, it will default to the version of the API used to make such call. If not present during a subscriptions.modifyPushConfig call, its value will not be changed. subscriptions.get calls will always return a valid version, even if the subscription was created without this attribute. The possible values for this attribute are:</summary>
@@ -624,6 +654,7 @@ public partial class V1beta1SubscriptionSpecInitProviderPushConfig
     public string? PushEndpoint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubscriptionSpecInitProviderRetryPolicy
 {
     /// <summary>The maximum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 600 seconds. A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".</summary>
@@ -655,6 +686,7 @@ public enum V1beta1SubscriptionSpecInitProviderTopicRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SubscriptionSpecInitProviderTopicRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -668,6 +700,7 @@ public partial class V1beta1SubscriptionSpecInitProviderTopicRefPolicy
     public V1beta1SubscriptionSpecInitProviderTopicRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Topic in pubsub to populate topic.</summary>
 public partial class V1beta1SubscriptionSpecInitProviderTopicRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -699,6 +732,7 @@ public enum V1beta1SubscriptionSpecInitProviderTopicSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SubscriptionSpecInitProviderTopicSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -712,6 +746,7 @@ public partial class V1beta1SubscriptionSpecInitProviderTopicSelectorPolicy
     public V1beta1SubscriptionSpecInitProviderTopicSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Topic in pubsub to populate topic.</summary>
 public partial class V1beta1SubscriptionSpecInitProviderTopicSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -727,6 +762,7 @@ public partial class V1beta1SubscriptionSpecInitProviderTopicSelector
     public V1beta1SubscriptionSpecInitProviderTopicSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1SubscriptionSpecInitProvider
 {
     /// <summary>This value is the maximum time after a subscriber receives a message before the subscriber should acknowledge the message. After message delivery but before the ack deadline expires and before the message is acknowledged, it is an outstanding message and will not be delivered again during that time (on a best-effort basis). For pull subscriptions, this value is used as the initial value for the ack deadline. To override this value for a given message, call subscriptions.modifyAckDeadline with the corresponding ackId if using pull. The minimum custom deadline you can specify is 10 seconds. The maximum custom deadline you can specify is 600 seconds (10 minutes). If this parameter is 0, a default value of 10 seconds is used. For push delivery, this value is also used to set the request timeout for the call to the push endpoint. If the subscriber never acknowledges the message, the Pub/Sub system will eventually redeliver the message.</summary>
@@ -840,6 +876,7 @@ public enum V1beta1SubscriptionSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SubscriptionSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -853,6 +890,7 @@ public partial class V1beta1SubscriptionSpecProviderConfigRefPolicy
     public V1beta1SubscriptionSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1SubscriptionSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -884,6 +922,7 @@ public enum V1beta1SubscriptionSpecPublishConnectionDetailsToConfigRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SubscriptionSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -897,6 +936,7 @@ public partial class V1beta1SubscriptionSpecPublishConnectionDetailsToConfigRefP
     public V1beta1SubscriptionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1SubscriptionSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -908,6 +948,7 @@ public partial class V1beta1SubscriptionSpecPublishConnectionDetailsToConfigRef
     public V1beta1SubscriptionSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1SubscriptionSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -923,6 +964,7 @@ public partial class V1beta1SubscriptionSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1SubscriptionSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -938,6 +980,7 @@ public partial class V1beta1SubscriptionSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1SubscriptionSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -949,6 +992,7 @@ public partial class V1beta1SubscriptionSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>SubscriptionSpec defines the desired state of Subscription</summary>
 public partial class V1beta1SubscriptionSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -981,6 +1025,7 @@ public partial class V1beta1SubscriptionSpec
     public V1beta1SubscriptionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubscriptionStatusAtProviderBigqueryConfig
 {
     /// <summary>When true and use_topic_schema or use_table_schema is true, any fields that are a part of the topic schema or message schema that are not part of the BigQuery table schema are dropped when writing to BigQuery. Otherwise, the schemas must be kept in sync and any messages with extra fields are not written and remain in the subscription's backlog.</summary>
@@ -1004,6 +1049,7 @@ public partial class V1beta1SubscriptionStatusAtProviderBigqueryConfig
     public bool? WriteMetadata { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubscriptionStatusAtProviderCloudStorageConfigAvroConfig
 {
     /// <summary>When true, writes the Pub/Sub message metadata to x-goog-pubsub-&lt;KEY&gt;:&lt;VAL&gt; headers of the HTTP request. Writes the Pub/Sub message attributes to &lt;KEY&gt;:&lt;VAL&gt; headers of the HTTP request.</summary>
@@ -1011,6 +1057,7 @@ public partial class V1beta1SubscriptionStatusAtProviderCloudStorageConfigAvroCo
     public bool? WriteMetadata { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubscriptionStatusAtProviderCloudStorageConfig
 {
     /// <summary>If set, message data will be written to Cloud Storage in Avro format. Structure is documented below.</summary>
@@ -1046,6 +1093,7 @@ public partial class V1beta1SubscriptionStatusAtProviderCloudStorageConfig
     public string? State { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubscriptionStatusAtProviderDeadLetterPolicy
 {
     /// <summary>The name of the topic to which dead letter messages should be published. Format is projects/{project}/topics/{topic}. The Cloud Pub/Sub service account associated with the enclosing subscription's parent project (i.e., service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to Publish() to this topic. The operation will fail if the topic does not exist. Users should ensure that there is a subscription attached to this topic since messages published to a topic with no subscriptions are lost.</summary>
@@ -1057,6 +1105,7 @@ public partial class V1beta1SubscriptionStatusAtProviderDeadLetterPolicy
     public double? MaxDeliveryAttempts { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubscriptionStatusAtProviderExpirationPolicy
 {
     /// <summary>Specifies the "time-to-live" duration for an associated resource. The resource expires if it is not active for a period of ttl. If ttl is set to "", the associated resource never expires. A duration in seconds with up to nine fractional digits, terminated by 's'. Example - "3.5s".</summary>
@@ -1064,6 +1113,7 @@ public partial class V1beta1SubscriptionStatusAtProviderExpirationPolicy
     public string? Ttl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubscriptionStatusAtProviderPushConfigNoWrapper
 {
     /// <summary>When true, writes the Pub/Sub message metadata to x-goog-pubsub-&lt;KEY&gt;:&lt;VAL&gt; headers of the HTTP request. Writes the Pub/Sub message attributes to &lt;KEY&gt;:&lt;VAL&gt; headers of the HTTP request.</summary>
@@ -1071,6 +1121,7 @@ public partial class V1beta1SubscriptionStatusAtProviderPushConfigNoWrapper
     public bool? WriteMetadata { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubscriptionStatusAtProviderPushConfigOidcToken
 {
     /// <summary>Audience to be used when generating OIDC token. The audience claim identifies the recipients that the JWT is intended for. The audience value is a single case-sensitive string. Having multiple values (array) for the audience field is not supported. More info about the OIDC JWT token audience here: https://tools.ietf.org/html/rfc7519#section-4.1.3 Note: if not specified, the Push endpoint URL will be used.</summary>
@@ -1082,6 +1133,7 @@ public partial class V1beta1SubscriptionStatusAtProviderPushConfigOidcToken
     public string? ServiceAccountEmail { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubscriptionStatusAtProviderPushConfig
 {
     /// <summary>Endpoint configuration attributes. Every endpoint has a set of API supported attributes that can be used to control different aspects of the message delivery. The currently supported attribute is x-goog-version, which you can use to change the format of the pushed message. This attribute indicates the version of the data expected by the endpoint. This controls the shape of the pushed message (i.e., its fields and metadata). The endpoint version is based on the version of the Pub/Sub API. If not present during the subscriptions.create call, it will default to the version of the API used to make such call. If not present during a subscriptions.modifyPushConfig call, its value will not be changed. subscriptions.get calls will always return a valid version, even if the subscription was created without this attribute. The possible values for this attribute are:</summary>
@@ -1101,6 +1153,7 @@ public partial class V1beta1SubscriptionStatusAtProviderPushConfig
     public string? PushEndpoint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubscriptionStatusAtProviderRetryPolicy
 {
     /// <summary>The maximum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 600 seconds. A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".</summary>
@@ -1112,6 +1165,7 @@ public partial class V1beta1SubscriptionStatusAtProviderRetryPolicy
     public string? MinimumBackoff { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubscriptionStatusAtProvider
 {
     /// <summary>This value is the maximum time after a subscriber receives a message before the subscriber should acknowledge the message. After message delivery but before the ack deadline expires and before the message is acknowledged, it is an outstanding message and will not be delivered again during that time (on a best-effort basis). For pull subscriptions, this value is used as the initial value for the ack deadline. To override this value for a given message, call subscriptions.modifyAckDeadline with the corresponding ackId if using pull. The minimum custom deadline you can specify is 10 seconds. The maximum custom deadline you can specify is 600 seconds (10 minutes). If this parameter is 0, a default value of 10 seconds is used. For push delivery, this value is also used to set the request timeout for the call to the push endpoint. If the subscriber never acknowledges the message, the Pub/Sub system will eventually redeliver the message.</summary>
@@ -1187,6 +1241,7 @@ public partial class V1beta1SubscriptionStatusAtProvider
     public string? Topic { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1SubscriptionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1214,6 +1269,7 @@ public partial class V1beta1SubscriptionStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>SubscriptionStatus defines the observed state of Subscription.</summary>
 public partial class V1beta1SubscriptionStatus
 {
     /// <summary></summary>
@@ -1230,6 +1286,7 @@ public partial class V1beta1SubscriptionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Subscription is the Schema for the Subscriptions API. A named resource representing the stream of messages from a single, specific topic, to be delivered to the subscribing application.</summary>
 public partial class V1beta1Subscription : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SubscriptionSpec>, IStatus<V1beta1SubscriptionStatus>
 {
     public const string KubeApiVersion = "v1beta1";

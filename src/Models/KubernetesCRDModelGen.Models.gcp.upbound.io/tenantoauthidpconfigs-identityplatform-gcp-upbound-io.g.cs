@@ -18,6 +18,7 @@ public enum V1beta1TenantOAuthIdPConfigSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>The client id of an OAuth client.</summary>
 public partial class V1beta1TenantOAuthIdPConfigSpecForProviderClientIdSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1TenantOAuthIdPConfigSpecForProviderClientIdSecretRef
     public string Namespace { get; set; }
 }
 
+/// <summary>The client secret of the OAuth client, to enable OIDC code flow.</summary>
 public partial class V1beta1TenantOAuthIdPConfigSpecForProviderClientSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -68,6 +70,7 @@ public enum V1beta1TenantOAuthIdPConfigSpecForProviderTenantRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TenantOAuthIdPConfigSpecForProviderTenantRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -81,6 +84,7 @@ public partial class V1beta1TenantOAuthIdPConfigSpecForProviderTenantRefPolicy
     public V1beta1TenantOAuthIdPConfigSpecForProviderTenantRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Tenant in identityplatform to populate tenant.</summary>
 public partial class V1beta1TenantOAuthIdPConfigSpecForProviderTenantRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -112,6 +116,7 @@ public enum V1beta1TenantOAuthIdPConfigSpecForProviderTenantSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TenantOAuthIdPConfigSpecForProviderTenantSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1TenantOAuthIdPConfigSpecForProviderTenantSelectorPol
     public V1beta1TenantOAuthIdPConfigSpecForProviderTenantSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Tenant in identityplatform to populate tenant.</summary>
 public partial class V1beta1TenantOAuthIdPConfigSpecForProviderTenantSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -140,6 +146,7 @@ public partial class V1beta1TenantOAuthIdPConfigSpecForProviderTenantSelector
     public V1beta1TenantOAuthIdPConfigSpecForProviderTenantSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TenantOAuthIdPConfigSpecForProvider
 {
     /// <summary>The client id of an OAuth client.</summary>
@@ -183,6 +190,7 @@ public partial class V1beta1TenantOAuthIdPConfigSpecForProvider
     public V1beta1TenantOAuthIdPConfigSpecForProviderTenantSelector? TenantSelector { get; set; }
 }
 
+/// <summary>The client id of an OAuth client.</summary>
 public partial class V1beta1TenantOAuthIdPConfigSpecInitProviderClientIdSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -198,6 +206,7 @@ public partial class V1beta1TenantOAuthIdPConfigSpecInitProviderClientIdSecretRe
     public string Namespace { get; set; }
 }
 
+/// <summary>The client secret of the OAuth client, to enable OIDC code flow.</summary>
 public partial class V1beta1TenantOAuthIdPConfigSpecInitProviderClientSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -233,6 +242,7 @@ public enum V1beta1TenantOAuthIdPConfigSpecInitProviderTenantRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TenantOAuthIdPConfigSpecInitProviderTenantRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -246,6 +256,7 @@ public partial class V1beta1TenantOAuthIdPConfigSpecInitProviderTenantRefPolicy
     public V1beta1TenantOAuthIdPConfigSpecInitProviderTenantRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Tenant in identityplatform to populate tenant.</summary>
 public partial class V1beta1TenantOAuthIdPConfigSpecInitProviderTenantRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -277,6 +288,7 @@ public enum V1beta1TenantOAuthIdPConfigSpecInitProviderTenantSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TenantOAuthIdPConfigSpecInitProviderTenantSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -290,6 +302,7 @@ public partial class V1beta1TenantOAuthIdPConfigSpecInitProviderTenantSelectorPo
     public V1beta1TenantOAuthIdPConfigSpecInitProviderTenantSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Tenant in identityplatform to populate tenant.</summary>
 public partial class V1beta1TenantOAuthIdPConfigSpecInitProviderTenantSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -305,6 +318,7 @@ public partial class V1beta1TenantOAuthIdPConfigSpecInitProviderTenantSelector
     public V1beta1TenantOAuthIdPConfigSpecInitProviderTenantSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1TenantOAuthIdPConfigSpecInitProvider
 {
     /// <summary>The client id of an OAuth client.</summary>
@@ -390,6 +404,7 @@ public enum V1beta1TenantOAuthIdPConfigSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TenantOAuthIdPConfigSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -403,6 +418,7 @@ public partial class V1beta1TenantOAuthIdPConfigSpecProviderConfigRefPolicy
     public V1beta1TenantOAuthIdPConfigSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1TenantOAuthIdPConfigSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -434,6 +450,7 @@ public enum V1beta1TenantOAuthIdPConfigSpecPublishConnectionDetailsToConfigRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TenantOAuthIdPConfigSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -447,6 +464,7 @@ public partial class V1beta1TenantOAuthIdPConfigSpecPublishConnectionDetailsToCo
     public V1beta1TenantOAuthIdPConfigSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1TenantOAuthIdPConfigSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -458,6 +476,7 @@ public partial class V1beta1TenantOAuthIdPConfigSpecPublishConnectionDetailsToCo
     public V1beta1TenantOAuthIdPConfigSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1TenantOAuthIdPConfigSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -473,6 +492,7 @@ public partial class V1beta1TenantOAuthIdPConfigSpecPublishConnectionDetailsToMe
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1TenantOAuthIdPConfigSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -488,6 +508,7 @@ public partial class V1beta1TenantOAuthIdPConfigSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1TenantOAuthIdPConfigSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -499,6 +520,7 @@ public partial class V1beta1TenantOAuthIdPConfigSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>TenantOAuthIdPConfigSpec defines the desired state of TenantOAuthIdPConfig</summary>
 public partial class V1beta1TenantOAuthIdPConfigSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -531,6 +553,7 @@ public partial class V1beta1TenantOAuthIdPConfigSpec
     public V1beta1TenantOAuthIdPConfigSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TenantOAuthIdPConfigStatusAtProvider
 {
     /// <summary>Human friendly display name.</summary>
@@ -562,6 +585,7 @@ public partial class V1beta1TenantOAuthIdPConfigStatusAtProvider
     public string? Tenant { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1TenantOAuthIdPConfigStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -589,6 +613,7 @@ public partial class V1beta1TenantOAuthIdPConfigStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>TenantOAuthIdPConfigStatus defines the observed state of TenantOAuthIdPConfig.</summary>
 public partial class V1beta1TenantOAuthIdPConfigStatus
 {
     /// <summary></summary>
@@ -605,6 +630,7 @@ public partial class V1beta1TenantOAuthIdPConfigStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>TenantOAuthIdPConfig is the Schema for the TenantOAuthIdPConfigs API. OIDC IdP configuration for a Identity Toolkit project within a tenant.</summary>
 public partial class V1beta1TenantOAuthIdPConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1TenantOAuthIdPConfigSpec>, IStatus<V1beta1TenantOAuthIdPConfigStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cache.azure.com;
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a cache.azure.com/Redis resource</summary>
 public partial class V1api20230401storageRedisPatchScheduleSpecOwner
 {
     /// <summary></summary>
@@ -19,6 +20,7 @@ public partial class V1api20230401storageRedisPatchScheduleSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230401.ScheduleEntry Patch schedule entry for a Premium Redis Cache.</summary>
 public partial class V1api20230401storageRedisPatchScheduleSpecScheduleEntries
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -38,6 +40,7 @@ public partial class V1api20230401storageRedisPatchScheduleSpecScheduleEntries
     public int? StartHourUtc { get; set; }
 }
 
+/// <summary>Storage version of v1api20230401.Redis_PatchSchedule_Spec</summary>
 public partial class V1api20230401storageRedisPatchScheduleSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -57,6 +60,7 @@ public partial class V1api20230401storageRedisPatchScheduleSpec
     public IList<V1api20230401storageRedisPatchScheduleSpecScheduleEntries>? ScheduleEntries { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20230401storageRedisPatchScheduleStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -88,6 +92,7 @@ public partial class V1api20230401storageRedisPatchScheduleStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230401.ScheduleEntry_STATUS Patch schedule entry for a Premium Redis Cache.</summary>
 public partial class V1api20230401storageRedisPatchScheduleStatusScheduleEntries
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -107,6 +112,7 @@ public partial class V1api20230401storageRedisPatchScheduleStatusScheduleEntries
     public int? StartHourUtc { get; set; }
 }
 
+/// <summary>Storage version of v1api20230401.Redis_PatchSchedule_STATUS</summary>
 public partial class V1api20230401storageRedisPatchScheduleStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -139,6 +145,7 @@ public partial class V1api20230401storageRedisPatchScheduleStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20230401.RedisPatchSchedule Generator information: - Generated from: /redis/resource-manager/Microsoft.Cache/stable/2023-04-01/redis.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/patchSchedules/default</summary>
 public partial class V1api20230401storageRedisPatchSchedule : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230401storageRedisPatchScheduleSpec>, IStatus<V1api20230401storageRedisPatchScheduleStatus>
 {
     public const string KubeApiVersion = "v1api20230401storage";

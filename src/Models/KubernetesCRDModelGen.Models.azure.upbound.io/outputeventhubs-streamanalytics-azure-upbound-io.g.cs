@@ -38,6 +38,7 @@ public enum V1beta1OutputEventHubSpecForProviderEventhubNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OutputEventHubSpecForProviderEventhubNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1OutputEventHubSpecForProviderEventhubNameRefPolicy
     public V1beta1OutputEventHubSpecForProviderEventhubNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a EventHub in eventhub to populate eventhubName.</summary>
 public partial class V1beta1OutputEventHubSpecForProviderEventhubNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1OutputEventHubSpecForProviderEventhubNameSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1OutputEventHubSpecForProviderEventhubNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1OutputEventHubSpecForProviderEventhubNameSelectorPol
     public V1beta1OutputEventHubSpecForProviderEventhubNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a EventHub in eventhub to populate eventhubName.</summary>
 public partial class V1beta1OutputEventHubSpecForProviderEventhubNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1OutputEventHubSpecForProviderResourceGroupNameRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OutputEventHubSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1OutputEventHubSpecForProviderResourceGroupNameRefPol
     public V1beta1OutputEventHubSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1OutputEventHubSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1OutputEventHubSpecForProviderResourceGroupNameSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1OutputEventHubSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1OutputEventHubSpecForProviderResourceGroupNameSelect
     public V1beta1OutputEventHubSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1OutputEventHubSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1OutputEventHubSpecForProviderResourceGroupNameSelect
     public V1beta1OutputEventHubSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OutputEventHubSpecForProviderSerialization
 {
     /// <summary>The encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. It currently can only be set to UTF8.</summary>
@@ -241,6 +250,7 @@ public enum V1beta1OutputEventHubSpecForProviderServicebusNamespaceRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OutputEventHubSpecForProviderServicebusNamespaceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -254,6 +264,7 @@ public partial class V1beta1OutputEventHubSpecForProviderServicebusNamespaceRefP
     public V1beta1OutputEventHubSpecForProviderServicebusNamespaceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a EventHubNamespace in eventhub to populate servicebusNamespace.</summary>
 public partial class V1beta1OutputEventHubSpecForProviderServicebusNamespaceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -285,6 +296,7 @@ public enum V1beta1OutputEventHubSpecForProviderServicebusNamespaceSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1OutputEventHubSpecForProviderServicebusNamespaceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -298,6 +310,7 @@ public partial class V1beta1OutputEventHubSpecForProviderServicebusNamespaceSele
     public V1beta1OutputEventHubSpecForProviderServicebusNamespaceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a EventHubNamespace in eventhub to populate servicebusNamespace.</summary>
 public partial class V1beta1OutputEventHubSpecForProviderServicebusNamespaceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -313,6 +326,7 @@ public partial class V1beta1OutputEventHubSpecForProviderServicebusNamespaceSele
     public V1beta1OutputEventHubSpecForProviderServicebusNamespaceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>The shared access policy key for the specified shared access policy. Required when authentication_mode is set to ConnectionString.</summary>
 public partial class V1beta1OutputEventHubSpecForProviderSharedAccessPolicyKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -328,6 +342,7 @@ public partial class V1beta1OutputEventHubSpecForProviderSharedAccessPolicyKeySe
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OutputEventHubSpecForProvider
 {
     /// <summary>The authentication mode for the Stream Output. Possible values are Msi and ConnectionString. Defaults to ConnectionString.</summary>
@@ -415,6 +430,7 @@ public enum V1beta1OutputEventHubSpecInitProviderEventhubNameRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OutputEventHubSpecInitProviderEventhubNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -428,6 +444,7 @@ public partial class V1beta1OutputEventHubSpecInitProviderEventhubNameRefPolicy
     public V1beta1OutputEventHubSpecInitProviderEventhubNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a EventHub in eventhub to populate eventhubName.</summary>
 public partial class V1beta1OutputEventHubSpecInitProviderEventhubNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -459,6 +476,7 @@ public enum V1beta1OutputEventHubSpecInitProviderEventhubNameSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1OutputEventHubSpecInitProviderEventhubNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -472,6 +490,7 @@ public partial class V1beta1OutputEventHubSpecInitProviderEventhubNameSelectorPo
     public V1beta1OutputEventHubSpecInitProviderEventhubNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a EventHub in eventhub to populate eventhubName.</summary>
 public partial class V1beta1OutputEventHubSpecInitProviderEventhubNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -487,6 +506,7 @@ public partial class V1beta1OutputEventHubSpecInitProviderEventhubNameSelector
     public V1beta1OutputEventHubSpecInitProviderEventhubNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OutputEventHubSpecInitProviderSerialization
 {
     /// <summary>The encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. It currently can only be set to UTF8.</summary>
@@ -526,6 +546,7 @@ public enum V1beta1OutputEventHubSpecInitProviderServicebusNamespaceRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OutputEventHubSpecInitProviderServicebusNamespaceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -539,6 +560,7 @@ public partial class V1beta1OutputEventHubSpecInitProviderServicebusNamespaceRef
     public V1beta1OutputEventHubSpecInitProviderServicebusNamespaceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a EventHubNamespace in eventhub to populate servicebusNamespace.</summary>
 public partial class V1beta1OutputEventHubSpecInitProviderServicebusNamespaceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -570,6 +592,7 @@ public enum V1beta1OutputEventHubSpecInitProviderServicebusNamespaceSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1OutputEventHubSpecInitProviderServicebusNamespaceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -583,6 +606,7 @@ public partial class V1beta1OutputEventHubSpecInitProviderServicebusNamespaceSel
     public V1beta1OutputEventHubSpecInitProviderServicebusNamespaceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a EventHubNamespace in eventhub to populate servicebusNamespace.</summary>
 public partial class V1beta1OutputEventHubSpecInitProviderServicebusNamespaceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -598,6 +622,7 @@ public partial class V1beta1OutputEventHubSpecInitProviderServicebusNamespaceSel
     public V1beta1OutputEventHubSpecInitProviderServicebusNamespaceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1OutputEventHubSpecInitProvider
 {
     /// <summary>The authentication mode for the Stream Output. Possible values are Msi and ConnectionString. Defaults to ConnectionString.</summary>
@@ -687,6 +712,7 @@ public enum V1beta1OutputEventHubSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OutputEventHubSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -700,6 +726,7 @@ public partial class V1beta1OutputEventHubSpecProviderConfigRefPolicy
     public V1beta1OutputEventHubSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1OutputEventHubSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -731,6 +758,7 @@ public enum V1beta1OutputEventHubSpecPublishConnectionDetailsToConfigRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OutputEventHubSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -744,6 +772,7 @@ public partial class V1beta1OutputEventHubSpecPublishConnectionDetailsToConfigRe
     public V1beta1OutputEventHubSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1OutputEventHubSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -755,6 +784,7 @@ public partial class V1beta1OutputEventHubSpecPublishConnectionDetailsToConfigRe
     public V1beta1OutputEventHubSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1OutputEventHubSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -770,6 +800,7 @@ public partial class V1beta1OutputEventHubSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1OutputEventHubSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -785,6 +816,7 @@ public partial class V1beta1OutputEventHubSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1OutputEventHubSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -796,6 +828,7 @@ public partial class V1beta1OutputEventHubSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>OutputEventHubSpec defines the desired state of OutputEventHub</summary>
 public partial class V1beta1OutputEventHubSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -828,6 +861,7 @@ public partial class V1beta1OutputEventHubSpec
     public V1beta1OutputEventHubSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OutputEventHubStatusAtProviderSerialization
 {
     /// <summary>The encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. It currently can only be set to UTF8.</summary>
@@ -847,6 +881,7 @@ public partial class V1beta1OutputEventHubStatusAtProviderSerialization
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OutputEventHubStatusAtProvider
 {
     /// <summary>The authentication mode for the Stream Output. Possible values are Msi and ConnectionString. Defaults to ConnectionString.</summary>
@@ -890,6 +925,7 @@ public partial class V1beta1OutputEventHubStatusAtProvider
     public string? StreamAnalyticsJobName { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1OutputEventHubStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -917,6 +953,7 @@ public partial class V1beta1OutputEventHubStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>OutputEventHubStatus defines the observed state of OutputEventHub.</summary>
 public partial class V1beta1OutputEventHubStatus
 {
     /// <summary></summary>
@@ -933,6 +970,7 @@ public partial class V1beta1OutputEventHubStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>OutputEventHub is the Schema for the OutputEventHubs API. Manages a Stream Analytics Output to an EventHub.</summary>
 public partial class V1beta1OutputEventHub : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1OutputEventHubSpec>, IStatus<V1beta1OutputEventHubStatus>
 {
     public const string KubeApiVersion = "v1beta1";

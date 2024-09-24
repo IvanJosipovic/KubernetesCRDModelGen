@@ -18,6 +18,7 @@ public enum V1beta1PacketCaptureSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1PacketCaptureSpecForProviderFilter
 {
     /// <summary>The local IP Address to be filtered on. Notation: "127.0.0.1" for single address entry. "127.0.0.1-127.0.0.255" for range. "127.0.0.1;127.0.0.5" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Changing this forces a new resource to be created.</summary>
@@ -61,6 +62,7 @@ public enum V1beta1PacketCaptureSpecForProviderNetworkWatcherNameRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PacketCaptureSpecForProviderNetworkWatcherNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -74,6 +76,7 @@ public partial class V1beta1PacketCaptureSpecForProviderNetworkWatcherNameRefPol
     public V1beta1PacketCaptureSpecForProviderNetworkWatcherNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Watcher in network to populate networkWatcherName.</summary>
 public partial class V1beta1PacketCaptureSpecForProviderNetworkWatcherNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -105,6 +108,7 @@ public enum V1beta1PacketCaptureSpecForProviderNetworkWatcherNameSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PacketCaptureSpecForProviderNetworkWatcherNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -118,6 +122,7 @@ public partial class V1beta1PacketCaptureSpecForProviderNetworkWatcherNameSelect
     public V1beta1PacketCaptureSpecForProviderNetworkWatcherNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Watcher in network to populate networkWatcherName.</summary>
 public partial class V1beta1PacketCaptureSpecForProviderNetworkWatcherNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -153,6 +158,7 @@ public enum V1beta1PacketCaptureSpecForProviderResourceGroupNameRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PacketCaptureSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -166,6 +172,7 @@ public partial class V1beta1PacketCaptureSpecForProviderResourceGroupNameRefPoli
     public V1beta1PacketCaptureSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1PacketCaptureSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -197,6 +204,7 @@ public enum V1beta1PacketCaptureSpecForProviderResourceGroupNameSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PacketCaptureSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -210,6 +218,7 @@ public partial class V1beta1PacketCaptureSpecForProviderResourceGroupNameSelecto
     public V1beta1PacketCaptureSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1PacketCaptureSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -245,6 +254,7 @@ public enum V1beta1PacketCaptureSpecForProviderStorageLocationStorageAccountIdRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PacketCaptureSpecForProviderStorageLocationStorageAccountIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -258,6 +268,7 @@ public partial class V1beta1PacketCaptureSpecForProviderStorageLocationStorageAc
     public V1beta1PacketCaptureSpecForProviderStorageLocationStorageAccountIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
 public partial class V1beta1PacketCaptureSpecForProviderStorageLocationStorageAccountIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -289,6 +300,7 @@ public enum V1beta1PacketCaptureSpecForProviderStorageLocationStorageAccountIdSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PacketCaptureSpecForProviderStorageLocationStorageAccountIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -302,6 +314,7 @@ public partial class V1beta1PacketCaptureSpecForProviderStorageLocationStorageAc
     public V1beta1PacketCaptureSpecForProviderStorageLocationStorageAccountIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
 public partial class V1beta1PacketCaptureSpecForProviderStorageLocationStorageAccountIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -317,6 +330,7 @@ public partial class V1beta1PacketCaptureSpecForProviderStorageLocationStorageAc
     public V1beta1PacketCaptureSpecForProviderStorageLocationStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PacketCaptureSpecForProviderStorageLocation
 {
     /// <summary>A valid local path on the targeting VM. Must include the name of the capture file (*.cap). For Linux virtual machine it must start with /var/captures.</summary>
@@ -336,6 +350,7 @@ public partial class V1beta1PacketCaptureSpecForProviderStorageLocation
     public V1beta1PacketCaptureSpecForProviderStorageLocationStorageAccountIdSelector? StorageAccountIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PacketCaptureSpecForProvider
 {
     /// <summary>One or more filter blocks as defined below. Changing this forces a new resource to be created.</summary>
@@ -387,6 +402,7 @@ public partial class V1beta1PacketCaptureSpecForProvider
     public string? TargetResourceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PacketCaptureSpecInitProviderFilter
 {
     /// <summary>The local IP Address to be filtered on. Notation: "127.0.0.1" for single address entry. "127.0.0.1-127.0.0.255" for range. "127.0.0.1;127.0.0.5" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Changing this forces a new resource to be created.</summary>
@@ -430,6 +446,7 @@ public enum V1beta1PacketCaptureSpecInitProviderStorageLocationStorageAccountIdR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PacketCaptureSpecInitProviderStorageLocationStorageAccountIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -443,6 +460,7 @@ public partial class V1beta1PacketCaptureSpecInitProviderStorageLocationStorageA
     public V1beta1PacketCaptureSpecInitProviderStorageLocationStorageAccountIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
 public partial class V1beta1PacketCaptureSpecInitProviderStorageLocationStorageAccountIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -474,6 +492,7 @@ public enum V1beta1PacketCaptureSpecInitProviderStorageLocationStorageAccountIdS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PacketCaptureSpecInitProviderStorageLocationStorageAccountIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -487,6 +506,7 @@ public partial class V1beta1PacketCaptureSpecInitProviderStorageLocationStorageA
     public V1beta1PacketCaptureSpecInitProviderStorageLocationStorageAccountIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
 public partial class V1beta1PacketCaptureSpecInitProviderStorageLocationStorageAccountIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -502,6 +522,7 @@ public partial class V1beta1PacketCaptureSpecInitProviderStorageLocationStorageA
     public V1beta1PacketCaptureSpecInitProviderStorageLocationStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PacketCaptureSpecInitProviderStorageLocation
 {
     /// <summary>A valid local path on the targeting VM. Must include the name of the capture file (*.cap). For Linux virtual machine it must start with /var/captures.</summary>
@@ -521,6 +542,7 @@ public partial class V1beta1PacketCaptureSpecInitProviderStorageLocation
     public V1beta1PacketCaptureSpecInitProviderStorageLocationStorageAccountIdSelector? StorageAccountIdSelector { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1PacketCaptureSpecInitProvider
 {
     /// <summary>One or more filter blocks as defined below. Changing this forces a new resource to be created.</summary>
@@ -590,6 +612,7 @@ public enum V1beta1PacketCaptureSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PacketCaptureSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -603,6 +626,7 @@ public partial class V1beta1PacketCaptureSpecProviderConfigRefPolicy
     public V1beta1PacketCaptureSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1PacketCaptureSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -634,6 +658,7 @@ public enum V1beta1PacketCaptureSpecPublishConnectionDetailsToConfigRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PacketCaptureSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -647,6 +672,7 @@ public partial class V1beta1PacketCaptureSpecPublishConnectionDetailsToConfigRef
     public V1beta1PacketCaptureSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1PacketCaptureSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -658,6 +684,7 @@ public partial class V1beta1PacketCaptureSpecPublishConnectionDetailsToConfigRef
     public V1beta1PacketCaptureSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1PacketCaptureSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -673,6 +700,7 @@ public partial class V1beta1PacketCaptureSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1PacketCaptureSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -688,6 +716,7 @@ public partial class V1beta1PacketCaptureSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1PacketCaptureSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -699,6 +728,7 @@ public partial class V1beta1PacketCaptureSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>PacketCaptureSpec defines the desired state of PacketCapture</summary>
 public partial class V1beta1PacketCaptureSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -731,6 +761,7 @@ public partial class V1beta1PacketCaptureSpec
     public V1beta1PacketCaptureSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PacketCaptureStatusAtProviderFilter
 {
     /// <summary>The local IP Address to be filtered on. Notation: "127.0.0.1" for single address entry. "127.0.0.1-127.0.0.255" for range. "127.0.0.1;127.0.0.5" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Changing this forces a new resource to be created.</summary>
@@ -754,6 +785,7 @@ public partial class V1beta1PacketCaptureStatusAtProviderFilter
     public string? RemotePort { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PacketCaptureStatusAtProviderStorageLocation
 {
     /// <summary>A valid local path on the targeting VM. Must include the name of the capture file (*.cap). For Linux virtual machine it must start with /var/captures.</summary>
@@ -769,6 +801,7 @@ public partial class V1beta1PacketCaptureStatusAtProviderStorageLocation
     public string? StoragePath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PacketCaptureStatusAtProvider
 {
     /// <summary>One or more filter blocks as defined below. Changing this forces a new resource to be created.</summary>
@@ -808,6 +841,7 @@ public partial class V1beta1PacketCaptureStatusAtProvider
     public string? TargetResourceId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1PacketCaptureStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -835,6 +869,7 @@ public partial class V1beta1PacketCaptureStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>PacketCaptureStatus defines the observed state of PacketCapture.</summary>
 public partial class V1beta1PacketCaptureStatus
 {
     /// <summary></summary>
@@ -851,6 +886,7 @@ public partial class V1beta1PacketCaptureStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>PacketCapture is the Schema for the PacketCaptures API. Configures Packet Capturing against a Virtual Machine using a Network Watcher.</summary>
 public partial class V1beta1PacketCapture : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1PacketCaptureSpec>, IStatus<V1beta1PacketCaptureStatus>
 {
     public const string KubeApiVersion = "v1beta1";

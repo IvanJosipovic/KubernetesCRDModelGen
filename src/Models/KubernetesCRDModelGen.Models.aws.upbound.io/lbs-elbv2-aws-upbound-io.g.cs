@@ -38,6 +38,7 @@ public enum V1beta1LBSpecForProviderAccessLogsBucketRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LBSpecForProviderAccessLogsBucketRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1LBSpecForProviderAccessLogsBucketRefPolicy
     public V1beta1LBSpecForProviderAccessLogsBucketRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1LBSpecForProviderAccessLogsBucketRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1LBSpecForProviderAccessLogsBucketSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LBSpecForProviderAccessLogsBucketSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1LBSpecForProviderAccessLogsBucketSelectorPolicy
     public V1beta1LBSpecForProviderAccessLogsBucketSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1LBSpecForProviderAccessLogsBucketSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1LBSpecForProviderAccessLogsBucketSelector
     public V1beta1LBSpecForProviderAccessLogsBucketSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBSpecForProviderAccessLogs
 {
     /// <summary>S3 bucket name to store the logs in.</summary>
@@ -133,6 +138,7 @@ public partial class V1beta1LBSpecForProviderAccessLogs
     public string? Prefix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBSpecForProviderConnectionLogs
 {
     /// <summary>S3 bucket name to store the logs in.</summary>
@@ -168,6 +174,7 @@ public enum V1beta1LBSpecForProviderSecurityGroupRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LBSpecForProviderSecurityGroupRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -181,6 +188,7 @@ public partial class V1beta1LBSpecForProviderSecurityGroupRefsPolicy
     public V1beta1LBSpecForProviderSecurityGroupRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1LBSpecForProviderSecurityGroupRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -212,6 +220,7 @@ public enum V1beta1LBSpecForProviderSecurityGroupSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LBSpecForProviderSecurityGroupSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -225,6 +234,7 @@ public partial class V1beta1LBSpecForProviderSecurityGroupSelectorPolicy
     public V1beta1LBSpecForProviderSecurityGroupSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroups.</summary>
 public partial class V1beta1LBSpecForProviderSecurityGroupSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -260,6 +270,7 @@ public enum V1beta1LBSpecForProviderSubnetMappingSubnetIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LBSpecForProviderSubnetMappingSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -273,6 +284,7 @@ public partial class V1beta1LBSpecForProviderSubnetMappingSubnetIdRefPolicy
     public V1beta1LBSpecForProviderSubnetMappingSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
 public partial class V1beta1LBSpecForProviderSubnetMappingSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -304,6 +316,7 @@ public enum V1beta1LBSpecForProviderSubnetMappingSubnetIdSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LBSpecForProviderSubnetMappingSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -317,6 +330,7 @@ public partial class V1beta1LBSpecForProviderSubnetMappingSubnetIdSelectorPolicy
     public V1beta1LBSpecForProviderSubnetMappingSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
 public partial class V1beta1LBSpecForProviderSubnetMappingSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -332,6 +346,7 @@ public partial class V1beta1LBSpecForProviderSubnetMappingSubnetIdSelector
     public V1beta1LBSpecForProviderSubnetMappingSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBSpecForProviderSubnetMapping
 {
     /// <summary>Allocation ID of the Elastic IP address for an internet-facing load balancer.</summary>
@@ -379,6 +394,7 @@ public enum V1beta1LBSpecForProviderSubnetRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LBSpecForProviderSubnetRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -392,6 +408,7 @@ public partial class V1beta1LBSpecForProviderSubnetRefsPolicy
     public V1beta1LBSpecForProviderSubnetRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1LBSpecForProviderSubnetRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -423,6 +440,7 @@ public enum V1beta1LBSpecForProviderSubnetSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LBSpecForProviderSubnetSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -436,6 +454,7 @@ public partial class V1beta1LBSpecForProviderSubnetSelectorPolicy
     public V1beta1LBSpecForProviderSubnetSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnets.</summary>
 public partial class V1beta1LBSpecForProviderSubnetSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -451,6 +470,7 @@ public partial class V1beta1LBSpecForProviderSubnetSelector
     public V1beta1LBSpecForProviderSubnetSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBSpecForProvider
 {
     /// <summary>Access Logs block. See below.</summary>
@@ -594,6 +614,7 @@ public enum V1beta1LBSpecInitProviderAccessLogsBucketRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LBSpecInitProviderAccessLogsBucketRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -607,6 +628,7 @@ public partial class V1beta1LBSpecInitProviderAccessLogsBucketRefPolicy
     public V1beta1LBSpecInitProviderAccessLogsBucketRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1LBSpecInitProviderAccessLogsBucketRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -638,6 +660,7 @@ public enum V1beta1LBSpecInitProviderAccessLogsBucketSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LBSpecInitProviderAccessLogsBucketSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -651,6 +674,7 @@ public partial class V1beta1LBSpecInitProviderAccessLogsBucketSelectorPolicy
     public V1beta1LBSpecInitProviderAccessLogsBucketSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1LBSpecInitProviderAccessLogsBucketSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -666,6 +690,7 @@ public partial class V1beta1LBSpecInitProviderAccessLogsBucketSelector
     public V1beta1LBSpecInitProviderAccessLogsBucketSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBSpecInitProviderAccessLogs
 {
     /// <summary>S3 bucket name to store the logs in.</summary>
@@ -689,6 +714,7 @@ public partial class V1beta1LBSpecInitProviderAccessLogs
     public string? Prefix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBSpecInitProviderConnectionLogs
 {
     /// <summary>S3 bucket name to store the logs in.</summary>
@@ -724,6 +750,7 @@ public enum V1beta1LBSpecInitProviderSecurityGroupRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LBSpecInitProviderSecurityGroupRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -737,6 +764,7 @@ public partial class V1beta1LBSpecInitProviderSecurityGroupRefsPolicy
     public V1beta1LBSpecInitProviderSecurityGroupRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1LBSpecInitProviderSecurityGroupRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -768,6 +796,7 @@ public enum V1beta1LBSpecInitProviderSecurityGroupSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LBSpecInitProviderSecurityGroupSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -781,6 +810,7 @@ public partial class V1beta1LBSpecInitProviderSecurityGroupSelectorPolicy
     public V1beta1LBSpecInitProviderSecurityGroupSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroups.</summary>
 public partial class V1beta1LBSpecInitProviderSecurityGroupSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -816,6 +846,7 @@ public enum V1beta1LBSpecInitProviderSubnetMappingSubnetIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LBSpecInitProviderSubnetMappingSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -829,6 +860,7 @@ public partial class V1beta1LBSpecInitProviderSubnetMappingSubnetIdRefPolicy
     public V1beta1LBSpecInitProviderSubnetMappingSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
 public partial class V1beta1LBSpecInitProviderSubnetMappingSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -860,6 +892,7 @@ public enum V1beta1LBSpecInitProviderSubnetMappingSubnetIdSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LBSpecInitProviderSubnetMappingSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -873,6 +906,7 @@ public partial class V1beta1LBSpecInitProviderSubnetMappingSubnetIdSelectorPolic
     public V1beta1LBSpecInitProviderSubnetMappingSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
 public partial class V1beta1LBSpecInitProviderSubnetMappingSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -888,6 +922,7 @@ public partial class V1beta1LBSpecInitProviderSubnetMappingSubnetIdSelector
     public V1beta1LBSpecInitProviderSubnetMappingSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBSpecInitProviderSubnetMapping
 {
     /// <summary>Allocation ID of the Elastic IP address for an internet-facing load balancer.</summary>
@@ -935,6 +970,7 @@ public enum V1beta1LBSpecInitProviderSubnetRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LBSpecInitProviderSubnetRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -948,6 +984,7 @@ public partial class V1beta1LBSpecInitProviderSubnetRefsPolicy
     public V1beta1LBSpecInitProviderSubnetRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1LBSpecInitProviderSubnetRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -979,6 +1016,7 @@ public enum V1beta1LBSpecInitProviderSubnetSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LBSpecInitProviderSubnetSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -992,6 +1030,7 @@ public partial class V1beta1LBSpecInitProviderSubnetSelectorPolicy
     public V1beta1LBSpecInitProviderSubnetSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnets.</summary>
 public partial class V1beta1LBSpecInitProviderSubnetSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1007,6 +1046,7 @@ public partial class V1beta1LBSpecInitProviderSubnetSelector
     public V1beta1LBSpecInitProviderSubnetSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1LBSpecInitProvider
 {
     /// <summary>Access Logs block. See below.</summary>
@@ -1168,6 +1208,7 @@ public enum V1beta1LBSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LBSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1181,6 +1222,7 @@ public partial class V1beta1LBSpecProviderConfigRefPolicy
     public V1beta1LBSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1LBSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1212,6 +1254,7 @@ public enum V1beta1LBSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LBSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1225,6 +1268,7 @@ public partial class V1beta1LBSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1LBSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1LBSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1236,6 +1280,7 @@ public partial class V1beta1LBSpecPublishConnectionDetailsToConfigRef
     public V1beta1LBSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1LBSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1251,6 +1296,7 @@ public partial class V1beta1LBSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1LBSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1266,6 +1312,7 @@ public partial class V1beta1LBSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1LBSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1277,6 +1324,7 @@ public partial class V1beta1LBSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>LBSpec defines the desired state of LB</summary>
 public partial class V1beta1LBSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1309,6 +1357,7 @@ public partial class V1beta1LBSpec
     public V1beta1LBSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBStatusAtProviderAccessLogs
 {
     /// <summary>S3 bucket name to store the logs in.</summary>
@@ -1324,6 +1373,7 @@ public partial class V1beta1LBStatusAtProviderAccessLogs
     public string? Prefix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBStatusAtProviderConnectionLogs
 {
     /// <summary>S3 bucket name to store the logs in.</summary>
@@ -1339,6 +1389,7 @@ public partial class V1beta1LBStatusAtProviderConnectionLogs
     public string? Prefix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBStatusAtProviderSubnetMapping
 {
     /// <summary>Allocation ID of the Elastic IP address for an internet-facing load balancer.</summary>
@@ -1362,6 +1413,7 @@ public partial class V1beta1LBStatusAtProviderSubnetMapping
     public string? SubnetId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBStatusAtProvider
 {
     /// <summary>Access Logs block. See below.</summary>
@@ -1493,6 +1545,7 @@ public partial class V1beta1LBStatusAtProvider
     public string? ZoneId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1LBStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1520,6 +1573,7 @@ public partial class V1beta1LBStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>LBStatus defines the observed state of LB.</summary>
 public partial class V1beta1LBStatus
 {
     /// <summary></summary>
@@ -1536,6 +1590,7 @@ public partial class V1beta1LBStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>LB is the Schema for the LBs API. Provides a Load Balancer resource.</summary>
 public partial class V1beta1LB : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LBSpec>, IStatus<V1beta1LBStatus>
 {
     public const string KubeApiVersion = "v1beta1";

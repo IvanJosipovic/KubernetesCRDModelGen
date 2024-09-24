@@ -18,6 +18,7 @@ public enum V1beta1VirtualNetworkGatewaySpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkGatewaySpecForProviderBgpSettingsPeeringAddresses
 {
     /// <summary>A list of Azure custom APIPA addresses assigned to the BGP peer of the Virtual Network Gateway.</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecForProviderBgpSettingsPeeri
     public string? IpConfigurationName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkGatewaySpecForProviderBgpSettings
 {
     /// <summary>The Autonomous System Number (ASN) to use as part of the BGP.</summary>
@@ -44,6 +46,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecForProviderBgpSettings
     public IList<V1beta1VirtualNetworkGatewaySpecForProviderBgpSettingsPeeringAddresses>? PeeringAddresses { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkGatewaySpecForProviderCustomRoute
 {
     /// <summary>A list of address blocks reserved for this virtual network in CIDR notation.</summary>
@@ -71,6 +74,7 @@ public enum V1beta1VirtualNetworkGatewaySpecForProviderIpConfigurationPublicIpAd
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualNetworkGatewaySpecForProviderIpConfigurationPublicIpAddressIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -84,6 +88,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecForProviderIpConfigurationP
     public V1beta1VirtualNetworkGatewaySpecForProviderIpConfigurationPublicIpAddressIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a PublicIP in network to populate publicIpAddressId.</summary>
 public partial class V1beta1VirtualNetworkGatewaySpecForProviderIpConfigurationPublicIpAddressIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -115,6 +120,7 @@ public enum V1beta1VirtualNetworkGatewaySpecForProviderIpConfigurationPublicIpAd
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VirtualNetworkGatewaySpecForProviderIpConfigurationPublicIpAddressIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -128,6 +134,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecForProviderIpConfigurationP
     public V1beta1VirtualNetworkGatewaySpecForProviderIpConfigurationPublicIpAddressIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a PublicIP in network to populate publicIpAddressId.</summary>
 public partial class V1beta1VirtualNetworkGatewaySpecForProviderIpConfigurationPublicIpAddressIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -163,6 +170,7 @@ public enum V1beta1VirtualNetworkGatewaySpecForProviderIpConfigurationSubnetIdRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualNetworkGatewaySpecForProviderIpConfigurationSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -176,6 +184,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecForProviderIpConfigurationS
     public V1beta1VirtualNetworkGatewaySpecForProviderIpConfigurationSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1VirtualNetworkGatewaySpecForProviderIpConfigurationSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -207,6 +216,7 @@ public enum V1beta1VirtualNetworkGatewaySpecForProviderIpConfigurationSubnetIdSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VirtualNetworkGatewaySpecForProviderIpConfigurationSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -220,6 +230,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecForProviderIpConfigurationS
     public V1beta1VirtualNetworkGatewaySpecForProviderIpConfigurationSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1VirtualNetworkGatewaySpecForProviderIpConfigurationSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -235,6 +246,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecForProviderIpConfigurationS
     public V1beta1VirtualNetworkGatewaySpecForProviderIpConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkGatewaySpecForProviderIpConfiguration
 {
     /// <summary>A user-defined name of the IP configuration. Defaults to vnetGatewayConfig.</summary>
@@ -270,6 +282,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecForProviderIpConfiguration
     public V1beta1VirtualNetworkGatewaySpecForProviderIpConfigurationSubnetIdSelector? SubnetIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkGatewaySpecForProviderPolicyGroupPolicyMember
 {
     /// <summary>The name of the Virtual Network Gateway Client Connection.</summary>
@@ -285,6 +298,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecForProviderPolicyGroupPolic
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkGatewaySpecForProviderPolicyGroup
 {
     /// <summary>Is this a Default Virtual Network Gateway Policy Group? Defaults to false.</summary>
@@ -324,6 +338,7 @@ public enum V1beta1VirtualNetworkGatewaySpecForProviderResourceGroupNameRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualNetworkGatewaySpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -337,6 +352,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecForProviderResourceGroupNam
     public V1beta1VirtualNetworkGatewaySpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1VirtualNetworkGatewaySpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -368,6 +384,7 @@ public enum V1beta1VirtualNetworkGatewaySpecForProviderResourceGroupNameSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VirtualNetworkGatewaySpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -381,6 +398,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecForProviderResourceGroupNam
     public V1beta1VirtualNetworkGatewaySpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1VirtualNetworkGatewaySpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -396,6 +414,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecForProviderResourceGroupNam
     public V1beta1VirtualNetworkGatewaySpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkGatewaySpecForProviderVpnClientConfigurationIpsecPolicy
 {
     /// <summary>The DH Group, used in IKE Phase 1. Possible values are DHGroup1, DHGroup2, DHGroup14, DHGroup24, DHGroup2048, ECP256, ECP384 and None.</summary>
@@ -431,6 +450,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecForProviderVpnClientConfigu
     public double? SaLifetimeInSeconds { get; set; }
 }
 
+/// <summary>The secret that is used to communicate with the Radius Server.</summary>
 public partial class V1beta1VirtualNetworkGatewaySpecForProviderVpnClientConfigurationRadiusServerSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -446,6 +466,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecForProviderVpnClientConfigu
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkGatewaySpecForProviderVpnClientConfigurationRadiusServer
 {
     /// <summary>The address of the Radius Server.</summary>
@@ -461,6 +482,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecForProviderVpnClientConfigu
     public V1beta1VirtualNetworkGatewaySpecForProviderVpnClientConfigurationRadiusServerSecretSecretRef SecretSecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkGatewaySpecForProviderVpnClientConfigurationRevokedCertificate
 {
     /// <summary>The name of the Virtual Network Gateway Client Connection.</summary>
@@ -472,6 +494,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecForProviderVpnClientConfigu
     public string? Thumbprint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkGatewaySpecForProviderVpnClientConfigurationRootCertificate
 {
     /// <summary>The name of the Virtual Network Gateway Client Connection.</summary>
@@ -483,6 +506,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecForProviderVpnClientConfigu
     public string? PublicCertData { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkGatewaySpecForProviderVpnClientConfigurationVirtualNetworkGatewayClientConnection
 {
     /// <summary>A list of address prefixes for P2S VPN Client.</summary>
@@ -498,6 +522,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecForProviderVpnClientConfigu
     public IList<string>? PolicyGroupNames { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkGatewaySpecForProviderVpnClientConfiguration
 {
     /// <summary>The client id of the Azure VPN application. See Create an Active Directory (AD) tenant for P2S OpenVPN protocol connections for values</summary>
@@ -553,6 +578,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecForProviderVpnClientConfigu
     public IList<string>? VpnClientProtocols { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkGatewaySpecForProvider
 {
     /// <summary>If true, an active-active Virtual Network Gateway will be created. An active-active gateway requires a HighPerformance or an UltraPerformance SKU. If false, an active-standby gateway will be created. Defaults to false.</summary>
@@ -652,6 +678,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecForProvider
     public string? VpnType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkGatewaySpecInitProviderBgpSettingsPeeringAddresses
 {
     /// <summary>A list of Azure custom APIPA addresses assigned to the BGP peer of the Virtual Network Gateway.</summary>
@@ -663,6 +690,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecInitProviderBgpSettingsPeer
     public string? IpConfigurationName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkGatewaySpecInitProviderBgpSettings
 {
     /// <summary>The Autonomous System Number (ASN) to use as part of the BGP.</summary>
@@ -678,6 +706,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecInitProviderBgpSettings
     public IList<V1beta1VirtualNetworkGatewaySpecInitProviderBgpSettingsPeeringAddresses>? PeeringAddresses { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkGatewaySpecInitProviderCustomRoute
 {
     /// <summary>A list of address blocks reserved for this virtual network in CIDR notation.</summary>
@@ -705,6 +734,7 @@ public enum V1beta1VirtualNetworkGatewaySpecInitProviderIpConfigurationPublicIpA
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualNetworkGatewaySpecInitProviderIpConfigurationPublicIpAddressIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -718,6 +748,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecInitProviderIpConfiguration
     public V1beta1VirtualNetworkGatewaySpecInitProviderIpConfigurationPublicIpAddressIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a PublicIP in network to populate publicIpAddressId.</summary>
 public partial class V1beta1VirtualNetworkGatewaySpecInitProviderIpConfigurationPublicIpAddressIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -749,6 +780,7 @@ public enum V1beta1VirtualNetworkGatewaySpecInitProviderIpConfigurationPublicIpA
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VirtualNetworkGatewaySpecInitProviderIpConfigurationPublicIpAddressIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -762,6 +794,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecInitProviderIpConfiguration
     public V1beta1VirtualNetworkGatewaySpecInitProviderIpConfigurationPublicIpAddressIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a PublicIP in network to populate publicIpAddressId.</summary>
 public partial class V1beta1VirtualNetworkGatewaySpecInitProviderIpConfigurationPublicIpAddressIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -797,6 +830,7 @@ public enum V1beta1VirtualNetworkGatewaySpecInitProviderIpConfigurationSubnetIdR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualNetworkGatewaySpecInitProviderIpConfigurationSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -810,6 +844,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecInitProviderIpConfiguration
     public V1beta1VirtualNetworkGatewaySpecInitProviderIpConfigurationSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1VirtualNetworkGatewaySpecInitProviderIpConfigurationSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -841,6 +876,7 @@ public enum V1beta1VirtualNetworkGatewaySpecInitProviderIpConfigurationSubnetIdS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VirtualNetworkGatewaySpecInitProviderIpConfigurationSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -854,6 +890,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecInitProviderIpConfiguration
     public V1beta1VirtualNetworkGatewaySpecInitProviderIpConfigurationSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1VirtualNetworkGatewaySpecInitProviderIpConfigurationSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -869,6 +906,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecInitProviderIpConfiguration
     public V1beta1VirtualNetworkGatewaySpecInitProviderIpConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkGatewaySpecInitProviderIpConfiguration
 {
     /// <summary>A user-defined name of the IP configuration. Defaults to vnetGatewayConfig.</summary>
@@ -904,6 +942,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecInitProviderIpConfiguration
     public V1beta1VirtualNetworkGatewaySpecInitProviderIpConfigurationSubnetIdSelector? SubnetIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkGatewaySpecInitProviderPolicyGroupPolicyMember
 {
     /// <summary>The name of the Virtual Network Gateway Client Connection.</summary>
@@ -919,6 +958,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecInitProviderPolicyGroupPoli
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkGatewaySpecInitProviderPolicyGroup
 {
     /// <summary>Is this a Default Virtual Network Gateway Policy Group? Defaults to false.</summary>
@@ -938,6 +978,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecInitProviderPolicyGroup
     public double? Priority { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkGatewaySpecInitProviderVpnClientConfigurationIpsecPolicy
 {
     /// <summary>The DH Group, used in IKE Phase 1. Possible values are DHGroup1, DHGroup2, DHGroup14, DHGroup24, DHGroup2048, ECP256, ECP384 and None.</summary>
@@ -973,6 +1014,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecInitProviderVpnClientConfig
     public double? SaLifetimeInSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkGatewaySpecInitProviderVpnClientConfigurationRadiusServer
 {
     /// <summary>The address of the Radius Server.</summary>
@@ -984,6 +1026,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecInitProviderVpnClientConfig
     public double? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkGatewaySpecInitProviderVpnClientConfigurationRevokedCertificate
 {
     /// <summary>The name of the Virtual Network Gateway Client Connection.</summary>
@@ -995,6 +1038,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecInitProviderVpnClientConfig
     public string? Thumbprint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkGatewaySpecInitProviderVpnClientConfigurationRootCertificate
 {
     /// <summary>The name of the Virtual Network Gateway Client Connection.</summary>
@@ -1006,6 +1050,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecInitProviderVpnClientConfig
     public string? PublicCertData { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkGatewaySpecInitProviderVpnClientConfigurationVirtualNetworkGatewayClientConnection
 {
     /// <summary>A list of address prefixes for P2S VPN Client.</summary>
@@ -1021,6 +1066,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecInitProviderVpnClientConfig
     public IList<string>? PolicyGroupNames { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkGatewaySpecInitProviderVpnClientConfiguration
 {
     /// <summary>The client id of the Azure VPN application. See Create an Active Directory (AD) tenant for P2S OpenVPN protocol connections for values</summary>
@@ -1076,6 +1122,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecInitProviderVpnClientConfig
     public IList<string>? VpnClientProtocols { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1VirtualNetworkGatewaySpecInitProvider
 {
     /// <summary>If true, an active-active Virtual Network Gateway will be created. An active-active gateway requires a HighPerformance or an UltraPerformance SKU. If false, an active-standby gateway will be created. Defaults to false.</summary>
@@ -1205,6 +1252,7 @@ public enum V1beta1VirtualNetworkGatewaySpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualNetworkGatewaySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1218,6 +1266,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecProviderConfigRefPolicy
     public V1beta1VirtualNetworkGatewaySpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1VirtualNetworkGatewaySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1249,6 +1298,7 @@ public enum V1beta1VirtualNetworkGatewaySpecPublishConnectionDetailsToConfigRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualNetworkGatewaySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1262,6 +1312,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecPublishConnectionDetailsToC
     public V1beta1VirtualNetworkGatewaySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1VirtualNetworkGatewaySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1273,6 +1324,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecPublishConnectionDetailsToC
     public V1beta1VirtualNetworkGatewaySpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1VirtualNetworkGatewaySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1288,6 +1340,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecPublishConnectionDetailsToM
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1VirtualNetworkGatewaySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1303,6 +1356,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1VirtualNetworkGatewaySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1314,6 +1368,7 @@ public partial class V1beta1VirtualNetworkGatewaySpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>VirtualNetworkGatewaySpec defines the desired state of VirtualNetworkGateway</summary>
 public partial class V1beta1VirtualNetworkGatewaySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1346,6 +1401,7 @@ public partial class V1beta1VirtualNetworkGatewaySpec
     public V1beta1VirtualNetworkGatewaySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkGatewayStatusAtProviderBgpSettingsPeeringAddresses
 {
     /// <summary>A list of Azure custom APIPA addresses assigned to the BGP peer of the Virtual Network Gateway.</summary>
@@ -1365,6 +1421,7 @@ public partial class V1beta1VirtualNetworkGatewayStatusAtProviderBgpSettingsPeer
     public IList<string>? TunnelIpAddresses { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkGatewayStatusAtProviderBgpSettings
 {
     /// <summary>The Autonomous System Number (ASN) to use as part of the BGP.</summary>
@@ -1380,6 +1437,7 @@ public partial class V1beta1VirtualNetworkGatewayStatusAtProviderBgpSettings
     public IList<V1beta1VirtualNetworkGatewayStatusAtProviderBgpSettingsPeeringAddresses>? PeeringAddresses { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkGatewayStatusAtProviderCustomRoute
 {
     /// <summary>A list of address blocks reserved for this virtual network in CIDR notation.</summary>
@@ -1387,6 +1445,7 @@ public partial class V1beta1VirtualNetworkGatewayStatusAtProviderCustomRoute
     public IList<string>? AddressPrefixes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkGatewayStatusAtProviderIpConfiguration
 {
     /// <summary>A user-defined name of the IP configuration. Defaults to vnetGatewayConfig.</summary>
@@ -1406,6 +1465,7 @@ public partial class V1beta1VirtualNetworkGatewayStatusAtProviderIpConfiguration
     public string? SubnetId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkGatewayStatusAtProviderPolicyGroupPolicyMember
 {
     /// <summary>The name of the Virtual Network Gateway Client Connection.</summary>
@@ -1421,6 +1481,7 @@ public partial class V1beta1VirtualNetworkGatewayStatusAtProviderPolicyGroupPoli
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkGatewayStatusAtProviderPolicyGroup
 {
     /// <summary>Is this a Default Virtual Network Gateway Policy Group? Defaults to false.</summary>
@@ -1440,6 +1501,7 @@ public partial class V1beta1VirtualNetworkGatewayStatusAtProviderPolicyGroup
     public double? Priority { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkGatewayStatusAtProviderVpnClientConfigurationIpsecPolicy
 {
     /// <summary>The DH Group, used in IKE Phase 1. Possible values are DHGroup1, DHGroup2, DHGroup14, DHGroup24, DHGroup2048, ECP256, ECP384 and None.</summary>
@@ -1475,6 +1537,7 @@ public partial class V1beta1VirtualNetworkGatewayStatusAtProviderVpnClientConfig
     public double? SaLifetimeInSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkGatewayStatusAtProviderVpnClientConfigurationRadiusServer
 {
     /// <summary>The address of the Radius Server.</summary>
@@ -1486,6 +1549,7 @@ public partial class V1beta1VirtualNetworkGatewayStatusAtProviderVpnClientConfig
     public double? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkGatewayStatusAtProviderVpnClientConfigurationRevokedCertificate
 {
     /// <summary>The name of the Virtual Network Gateway Client Connection.</summary>
@@ -1497,6 +1561,7 @@ public partial class V1beta1VirtualNetworkGatewayStatusAtProviderVpnClientConfig
     public string? Thumbprint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkGatewayStatusAtProviderVpnClientConfigurationRootCertificate
 {
     /// <summary>The name of the Virtual Network Gateway Client Connection.</summary>
@@ -1508,6 +1573,7 @@ public partial class V1beta1VirtualNetworkGatewayStatusAtProviderVpnClientConfig
     public string? PublicCertData { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkGatewayStatusAtProviderVpnClientConfigurationVirtualNetworkGatewayClientConnection
 {
     /// <summary>A list of address prefixes for P2S VPN Client.</summary>
@@ -1523,6 +1589,7 @@ public partial class V1beta1VirtualNetworkGatewayStatusAtProviderVpnClientConfig
     public IList<string>? PolicyGroupNames { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkGatewayStatusAtProviderVpnClientConfiguration
 {
     /// <summary>The client id of the Azure VPN application. See Create an Active Directory (AD) tenant for P2S OpenVPN protocol connections for values</summary>
@@ -1578,6 +1645,7 @@ public partial class V1beta1VirtualNetworkGatewayStatusAtProviderVpnClientConfig
     public IList<string>? VpnClientProtocols { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkGatewayStatusAtProvider
 {
     /// <summary>If true, an active-active Virtual Network Gateway will be created. An active-active gateway requires a HighPerformance or an UltraPerformance SKU. If false, an active-standby gateway will be created. Defaults to false.</summary>
@@ -1673,6 +1741,7 @@ public partial class V1beta1VirtualNetworkGatewayStatusAtProvider
     public string? VpnType { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1VirtualNetworkGatewayStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1700,6 +1769,7 @@ public partial class V1beta1VirtualNetworkGatewayStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>VirtualNetworkGatewayStatus defines the observed state of VirtualNetworkGateway.</summary>
 public partial class V1beta1VirtualNetworkGatewayStatus
 {
     /// <summary></summary>
@@ -1716,6 +1786,7 @@ public partial class V1beta1VirtualNetworkGatewayStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>VirtualNetworkGateway is the Schema for the VirtualNetworkGateways API. Manages a virtual network gateway to establish secure, cross-premises connectivity.</summary>
 public partial class V1beta1VirtualNetworkGateway : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1VirtualNetworkGatewaySpec>, IStatus<V1beta1VirtualNetworkGatewayStatus>
 {
     public const string KubeApiVersion = "v1beta1";

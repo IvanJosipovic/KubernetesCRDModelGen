@@ -38,6 +38,7 @@ public enum V1beta1DataFlowSpecForProviderDataFactoryIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DataFlowSpecForProviderDataFactoryIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1DataFlowSpecForProviderDataFactoryIdRefPolicy
     public V1beta1DataFlowSpecForProviderDataFactoryIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Factory in datafactory to populate dataFactoryId.</summary>
 public partial class V1beta1DataFlowSpecForProviderDataFactoryIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1DataFlowSpecForProviderDataFactoryIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DataFlowSpecForProviderDataFactoryIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1DataFlowSpecForProviderDataFactoryIdSelectorPolicy
     public V1beta1DataFlowSpecForProviderDataFactoryIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Factory in datafactory to populate dataFactoryId.</summary>
 public partial class V1beta1DataFlowSpecForProviderDataFactoryIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1DataFlowSpecForProviderSinkDatasetNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DataFlowSpecForProviderSinkDatasetNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1DataFlowSpecForProviderSinkDatasetNameRefPolicy
     public V1beta1DataFlowSpecForProviderSinkDatasetNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a DataSetJSON in datafactory to populate name.</summary>
 public partial class V1beta1DataFlowSpecForProviderSinkDatasetNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1DataFlowSpecForProviderSinkDatasetNameSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DataFlowSpecForProviderSinkDatasetNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1DataFlowSpecForProviderSinkDatasetNameSelectorPolicy
     public V1beta1DataFlowSpecForProviderSinkDatasetNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a DataSetJSON in datafactory to populate name.</summary>
 public partial class V1beta1DataFlowSpecForProviderSinkDatasetNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1DataFlowSpecForProviderSinkDatasetNameSelector
     public V1beta1DataFlowSpecForProviderSinkDatasetNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowSpecForProviderSinkDataset
 {
     /// <summary>The name for the Data Flow transformation.</summary>
@@ -221,6 +230,7 @@ public partial class V1beta1DataFlowSpecForProviderSinkDataset
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowSpecForProviderSinkFlowlet
 {
     /// <summary>Specifies the reference data flow parameters from dataset.</summary>
@@ -236,6 +246,7 @@ public partial class V1beta1DataFlowSpecForProviderSinkFlowlet
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowSpecForProviderSinkLinkedService
 {
     /// <summary>The name for the Data Flow transformation.</summary>
@@ -247,6 +258,7 @@ public partial class V1beta1DataFlowSpecForProviderSinkLinkedService
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowSpecForProviderSinkRejectedLinkedService
 {
     /// <summary>The name for the Data Flow transformation.</summary>
@@ -258,6 +270,7 @@ public partial class V1beta1DataFlowSpecForProviderSinkRejectedLinkedService
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowSpecForProviderSinkSchemaLinkedService
 {
     /// <summary>The name for the Data Flow transformation.</summary>
@@ -269,6 +282,7 @@ public partial class V1beta1DataFlowSpecForProviderSinkSchemaLinkedService
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowSpecForProviderSink
 {
     /// <summary>A dataset block as defined below.</summary>
@@ -320,6 +334,7 @@ public enum V1beta1DataFlowSpecForProviderSourceDatasetNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DataFlowSpecForProviderSourceDatasetNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -333,6 +348,7 @@ public partial class V1beta1DataFlowSpecForProviderSourceDatasetNameRefPolicy
     public V1beta1DataFlowSpecForProviderSourceDatasetNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a DataSetJSON in datafactory to populate name.</summary>
 public partial class V1beta1DataFlowSpecForProviderSourceDatasetNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -364,6 +380,7 @@ public enum V1beta1DataFlowSpecForProviderSourceDatasetNameSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DataFlowSpecForProviderSourceDatasetNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -377,6 +394,7 @@ public partial class V1beta1DataFlowSpecForProviderSourceDatasetNameSelectorPoli
     public V1beta1DataFlowSpecForProviderSourceDatasetNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a DataSetJSON in datafactory to populate name.</summary>
 public partial class V1beta1DataFlowSpecForProviderSourceDatasetNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -392,6 +410,7 @@ public partial class V1beta1DataFlowSpecForProviderSourceDatasetNameSelector
     public V1beta1DataFlowSpecForProviderSourceDatasetNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowSpecForProviderSourceDataset
 {
     /// <summary>The name for the Data Flow transformation.</summary>
@@ -411,6 +430,7 @@ public partial class V1beta1DataFlowSpecForProviderSourceDataset
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowSpecForProviderSourceFlowlet
 {
     /// <summary>Specifies the reference data flow parameters from dataset.</summary>
@@ -426,6 +446,7 @@ public partial class V1beta1DataFlowSpecForProviderSourceFlowlet
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowSpecForProviderSourceLinkedService
 {
     /// <summary>The name for the Data Flow transformation.</summary>
@@ -437,6 +458,7 @@ public partial class V1beta1DataFlowSpecForProviderSourceLinkedService
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowSpecForProviderSourceRejectedLinkedService
 {
     /// <summary>The name for the Data Flow transformation.</summary>
@@ -448,6 +470,7 @@ public partial class V1beta1DataFlowSpecForProviderSourceRejectedLinkedService
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowSpecForProviderSourceSchemaLinkedService
 {
     /// <summary>The name for the Data Flow transformation.</summary>
@@ -459,6 +482,7 @@ public partial class V1beta1DataFlowSpecForProviderSourceSchemaLinkedService
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowSpecForProviderSource
 {
     /// <summary>A dataset block as defined below.</summary>
@@ -490,6 +514,7 @@ public partial class V1beta1DataFlowSpecForProviderSource
     public IList<V1beta1DataFlowSpecForProviderSourceSchemaLinkedService>? SchemaLinkedService { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowSpecForProviderTransformationDataset
 {
     /// <summary>The name for the Data Flow transformation.</summary>
@@ -501,6 +526,7 @@ public partial class V1beta1DataFlowSpecForProviderTransformationDataset
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowSpecForProviderTransformationFlowlet
 {
     /// <summary>Specifies the reference data flow parameters from dataset.</summary>
@@ -516,6 +542,7 @@ public partial class V1beta1DataFlowSpecForProviderTransformationFlowlet
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowSpecForProviderTransformationLinkedService
 {
     /// <summary>The name for the Data Flow transformation.</summary>
@@ -527,6 +554,7 @@ public partial class V1beta1DataFlowSpecForProviderTransformationLinkedService
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowSpecForProviderTransformation
 {
     /// <summary>A dataset block as defined below.</summary>
@@ -550,6 +578,7 @@ public partial class V1beta1DataFlowSpecForProviderTransformation
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowSpecForProvider
 {
     /// <summary>List of tags that can be used for describing the Data Factory Data Flow.</summary>
@@ -617,6 +646,7 @@ public enum V1beta1DataFlowSpecInitProviderSinkDatasetNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DataFlowSpecInitProviderSinkDatasetNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -630,6 +660,7 @@ public partial class V1beta1DataFlowSpecInitProviderSinkDatasetNameRefPolicy
     public V1beta1DataFlowSpecInitProviderSinkDatasetNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a DataSetJSON in datafactory to populate name.</summary>
 public partial class V1beta1DataFlowSpecInitProviderSinkDatasetNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -661,6 +692,7 @@ public enum V1beta1DataFlowSpecInitProviderSinkDatasetNameSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DataFlowSpecInitProviderSinkDatasetNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -674,6 +706,7 @@ public partial class V1beta1DataFlowSpecInitProviderSinkDatasetNameSelectorPolic
     public V1beta1DataFlowSpecInitProviderSinkDatasetNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a DataSetJSON in datafactory to populate name.</summary>
 public partial class V1beta1DataFlowSpecInitProviderSinkDatasetNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -689,6 +722,7 @@ public partial class V1beta1DataFlowSpecInitProviderSinkDatasetNameSelector
     public V1beta1DataFlowSpecInitProviderSinkDatasetNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowSpecInitProviderSinkDataset
 {
     /// <summary>The name for the Data Flow transformation.</summary>
@@ -708,6 +742,7 @@ public partial class V1beta1DataFlowSpecInitProviderSinkDataset
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowSpecInitProviderSinkFlowlet
 {
     /// <summary>Specifies the reference data flow parameters from dataset.</summary>
@@ -723,6 +758,7 @@ public partial class V1beta1DataFlowSpecInitProviderSinkFlowlet
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowSpecInitProviderSinkLinkedService
 {
     /// <summary>The name for the Data Flow transformation.</summary>
@@ -734,6 +770,7 @@ public partial class V1beta1DataFlowSpecInitProviderSinkLinkedService
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowSpecInitProviderSinkRejectedLinkedService
 {
     /// <summary>The name for the Data Flow transformation.</summary>
@@ -745,6 +782,7 @@ public partial class V1beta1DataFlowSpecInitProviderSinkRejectedLinkedService
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowSpecInitProviderSinkSchemaLinkedService
 {
     /// <summary>The name for the Data Flow transformation.</summary>
@@ -756,6 +794,7 @@ public partial class V1beta1DataFlowSpecInitProviderSinkSchemaLinkedService
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowSpecInitProviderSink
 {
     /// <summary>A dataset block as defined below.</summary>
@@ -807,6 +846,7 @@ public enum V1beta1DataFlowSpecInitProviderSourceDatasetNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DataFlowSpecInitProviderSourceDatasetNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -820,6 +860,7 @@ public partial class V1beta1DataFlowSpecInitProviderSourceDatasetNameRefPolicy
     public V1beta1DataFlowSpecInitProviderSourceDatasetNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a DataSetJSON in datafactory to populate name.</summary>
 public partial class V1beta1DataFlowSpecInitProviderSourceDatasetNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -851,6 +892,7 @@ public enum V1beta1DataFlowSpecInitProviderSourceDatasetNameSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DataFlowSpecInitProviderSourceDatasetNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -864,6 +906,7 @@ public partial class V1beta1DataFlowSpecInitProviderSourceDatasetNameSelectorPol
     public V1beta1DataFlowSpecInitProviderSourceDatasetNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a DataSetJSON in datafactory to populate name.</summary>
 public partial class V1beta1DataFlowSpecInitProviderSourceDatasetNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -879,6 +922,7 @@ public partial class V1beta1DataFlowSpecInitProviderSourceDatasetNameSelector
     public V1beta1DataFlowSpecInitProviderSourceDatasetNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowSpecInitProviderSourceDataset
 {
     /// <summary>The name for the Data Flow transformation.</summary>
@@ -898,6 +942,7 @@ public partial class V1beta1DataFlowSpecInitProviderSourceDataset
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowSpecInitProviderSourceFlowlet
 {
     /// <summary>Specifies the reference data flow parameters from dataset.</summary>
@@ -913,6 +958,7 @@ public partial class V1beta1DataFlowSpecInitProviderSourceFlowlet
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowSpecInitProviderSourceLinkedService
 {
     /// <summary>The name for the Data Flow transformation.</summary>
@@ -924,6 +970,7 @@ public partial class V1beta1DataFlowSpecInitProviderSourceLinkedService
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowSpecInitProviderSourceRejectedLinkedService
 {
     /// <summary>The name for the Data Flow transformation.</summary>
@@ -935,6 +982,7 @@ public partial class V1beta1DataFlowSpecInitProviderSourceRejectedLinkedService
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowSpecInitProviderSourceSchemaLinkedService
 {
     /// <summary>The name for the Data Flow transformation.</summary>
@@ -946,6 +994,7 @@ public partial class V1beta1DataFlowSpecInitProviderSourceSchemaLinkedService
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowSpecInitProviderSource
 {
     /// <summary>A dataset block as defined below.</summary>
@@ -977,6 +1026,7 @@ public partial class V1beta1DataFlowSpecInitProviderSource
     public IList<V1beta1DataFlowSpecInitProviderSourceSchemaLinkedService>? SchemaLinkedService { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowSpecInitProviderTransformationDataset
 {
     /// <summary>The name for the Data Flow transformation.</summary>
@@ -988,6 +1038,7 @@ public partial class V1beta1DataFlowSpecInitProviderTransformationDataset
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowSpecInitProviderTransformationFlowlet
 {
     /// <summary>Specifies the reference data flow parameters from dataset.</summary>
@@ -1003,6 +1054,7 @@ public partial class V1beta1DataFlowSpecInitProviderTransformationFlowlet
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowSpecInitProviderTransformationLinkedService
 {
     /// <summary>The name for the Data Flow transformation.</summary>
@@ -1014,6 +1066,7 @@ public partial class V1beta1DataFlowSpecInitProviderTransformationLinkedService
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowSpecInitProviderTransformation
 {
     /// <summary>A dataset block as defined below.</summary>
@@ -1037,6 +1090,7 @@ public partial class V1beta1DataFlowSpecInitProviderTransformation
     public string? Name { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1DataFlowSpecInitProvider
 {
     /// <summary>List of tags that can be used for describing the Data Factory Data Flow.</summary>
@@ -1114,6 +1168,7 @@ public enum V1beta1DataFlowSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DataFlowSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1127,6 +1182,7 @@ public partial class V1beta1DataFlowSpecProviderConfigRefPolicy
     public V1beta1DataFlowSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1DataFlowSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1158,6 +1214,7 @@ public enum V1beta1DataFlowSpecPublishConnectionDetailsToConfigRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DataFlowSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1171,6 +1228,7 @@ public partial class V1beta1DataFlowSpecPublishConnectionDetailsToConfigRefPolic
     public V1beta1DataFlowSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1DataFlowSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1182,6 +1240,7 @@ public partial class V1beta1DataFlowSpecPublishConnectionDetailsToConfigRef
     public V1beta1DataFlowSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1DataFlowSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1197,6 +1256,7 @@ public partial class V1beta1DataFlowSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1DataFlowSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1212,6 +1272,7 @@ public partial class V1beta1DataFlowSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1DataFlowSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1223,6 +1284,7 @@ public partial class V1beta1DataFlowSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>DataFlowSpec defines the desired state of DataFlow</summary>
 public partial class V1beta1DataFlowSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1255,6 +1317,7 @@ public partial class V1beta1DataFlowSpec
     public V1beta1DataFlowSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowStatusAtProviderSinkDataset
 {
     /// <summary>The name for the Data Flow transformation.</summary>
@@ -1266,6 +1329,7 @@ public partial class V1beta1DataFlowStatusAtProviderSinkDataset
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowStatusAtProviderSinkFlowlet
 {
     /// <summary>Specifies the reference data flow parameters from dataset.</summary>
@@ -1281,6 +1345,7 @@ public partial class V1beta1DataFlowStatusAtProviderSinkFlowlet
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowStatusAtProviderSinkLinkedService
 {
     /// <summary>The name for the Data Flow transformation.</summary>
@@ -1292,6 +1357,7 @@ public partial class V1beta1DataFlowStatusAtProviderSinkLinkedService
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowStatusAtProviderSinkRejectedLinkedService
 {
     /// <summary>The name for the Data Flow transformation.</summary>
@@ -1303,6 +1369,7 @@ public partial class V1beta1DataFlowStatusAtProviderSinkRejectedLinkedService
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowStatusAtProviderSinkSchemaLinkedService
 {
     /// <summary>The name for the Data Flow transformation.</summary>
@@ -1314,6 +1381,7 @@ public partial class V1beta1DataFlowStatusAtProviderSinkSchemaLinkedService
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowStatusAtProviderSink
 {
     /// <summary>A dataset block as defined below.</summary>
@@ -1345,6 +1413,7 @@ public partial class V1beta1DataFlowStatusAtProviderSink
     public IList<V1beta1DataFlowStatusAtProviderSinkSchemaLinkedService>? SchemaLinkedService { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowStatusAtProviderSourceDataset
 {
     /// <summary>The name for the Data Flow transformation.</summary>
@@ -1356,6 +1425,7 @@ public partial class V1beta1DataFlowStatusAtProviderSourceDataset
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowStatusAtProviderSourceFlowlet
 {
     /// <summary>Specifies the reference data flow parameters from dataset.</summary>
@@ -1371,6 +1441,7 @@ public partial class V1beta1DataFlowStatusAtProviderSourceFlowlet
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowStatusAtProviderSourceLinkedService
 {
     /// <summary>The name for the Data Flow transformation.</summary>
@@ -1382,6 +1453,7 @@ public partial class V1beta1DataFlowStatusAtProviderSourceLinkedService
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowStatusAtProviderSourceRejectedLinkedService
 {
     /// <summary>The name for the Data Flow transformation.</summary>
@@ -1393,6 +1465,7 @@ public partial class V1beta1DataFlowStatusAtProviderSourceRejectedLinkedService
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowStatusAtProviderSourceSchemaLinkedService
 {
     /// <summary>The name for the Data Flow transformation.</summary>
@@ -1404,6 +1477,7 @@ public partial class V1beta1DataFlowStatusAtProviderSourceSchemaLinkedService
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowStatusAtProviderSource
 {
     /// <summary>A dataset block as defined below.</summary>
@@ -1435,6 +1509,7 @@ public partial class V1beta1DataFlowStatusAtProviderSource
     public IList<V1beta1DataFlowStatusAtProviderSourceSchemaLinkedService>? SchemaLinkedService { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowStatusAtProviderTransformationDataset
 {
     /// <summary>The name for the Data Flow transformation.</summary>
@@ -1446,6 +1521,7 @@ public partial class V1beta1DataFlowStatusAtProviderTransformationDataset
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowStatusAtProviderTransformationFlowlet
 {
     /// <summary>Specifies the reference data flow parameters from dataset.</summary>
@@ -1461,6 +1537,7 @@ public partial class V1beta1DataFlowStatusAtProviderTransformationFlowlet
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowStatusAtProviderTransformationLinkedService
 {
     /// <summary>The name for the Data Flow transformation.</summary>
@@ -1472,6 +1549,7 @@ public partial class V1beta1DataFlowStatusAtProviderTransformationLinkedService
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowStatusAtProviderTransformation
 {
     /// <summary>A dataset block as defined below.</summary>
@@ -1495,6 +1573,7 @@ public partial class V1beta1DataFlowStatusAtProviderTransformation
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFlowStatusAtProvider
 {
     /// <summary>List of tags that can be used for describing the Data Factory Data Flow.</summary>
@@ -1538,6 +1617,7 @@ public partial class V1beta1DataFlowStatusAtProvider
     public IList<V1beta1DataFlowStatusAtProviderTransformation>? Transformation { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1DataFlowStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1565,6 +1645,7 @@ public partial class V1beta1DataFlowStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>DataFlowStatus defines the observed state of DataFlow.</summary>
 public partial class V1beta1DataFlowStatus
 {
     /// <summary></summary>
@@ -1581,6 +1662,7 @@ public partial class V1beta1DataFlowStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>DataFlow is the Schema for the DataFlows API. Manages a Data Flow inside an Azure Data Factory.</summary>
 public partial class V1beta1DataFlow : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DataFlowSpec>, IStatus<V1beta1DataFlowStatus>
 {
     public const string KubeApiVersion = "v1beta1";

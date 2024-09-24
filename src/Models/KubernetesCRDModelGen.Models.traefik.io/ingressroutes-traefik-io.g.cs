@@ -15,6 +15,7 @@ public enum V1alpha1IngressRouteSpecRoutesKindEnum
     Rule
 }
 
+/// <summary>MiddlewareRef is a reference to a Middleware resource.</summary>
 public partial class V1alpha1IngressRouteSpecRoutesMiddlewares
 {
     /// <summary>Name defines the name of the referenced Middleware resource.</summary>
@@ -26,6 +27,7 @@ public partial class V1alpha1IngressRouteSpecRoutesMiddlewares
     public string? Namespace { get; set; }
 }
 
+/// <summary>Healthcheck defines health checks for ExternalName services.</summary>
 public partial class V1alpha1IngressRouteSpecRoutesServicesHealthCheck
 {
     /// <summary>FollowRedirects defines whether redirects should be followed during the health check calls. Default: true</summary>
@@ -83,6 +85,7 @@ public enum V1alpha1IngressRouteSpecRoutesServicesKindEnum
     TraefikService
 }
 
+/// <summary>ResponseForwarding defines how Traefik forwards the response from the upstream Kubernetes Service to the client.</summary>
 public partial class V1alpha1IngressRouteSpecRoutesServicesResponseForwarding
 {
     /// <summary>FlushInterval defines the interval, in milliseconds, in between flushes to the client while copying the response body. A negative value means to flush immediately after each write to the client. This configuration is ignored when ReverseProxy recognizes a response as a streaming response; for such responses, writes are flushed to the client immediately. Default: 100ms</summary>
@@ -90,6 +93,7 @@ public partial class V1alpha1IngressRouteSpecRoutesServicesResponseForwarding
     public string? FlushInterval { get; set; }
 }
 
+/// <summary>Cookie defines the sticky cookie configuration.</summary>
 public partial class V1alpha1IngressRouteSpecRoutesServicesStickyCookie
 {
     /// <summary>HTTPOnly defines whether the cookie can be accessed by client-side APIs, such as JavaScript.</summary>
@@ -113,6 +117,7 @@ public partial class V1alpha1IngressRouteSpecRoutesServicesStickyCookie
     public bool? Secure { get; set; }
 }
 
+/// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.1/routing/services/#sticky-sessions</summary>
 public partial class V1alpha1IngressRouteSpecRoutesServicesSticky
 {
     /// <summary>Cookie defines the sticky cookie configuration.</summary>
@@ -120,6 +125,7 @@ public partial class V1alpha1IngressRouteSpecRoutesServicesSticky
     public V1alpha1IngressRouteSpecRoutesServicesStickyCookie? Cookie { get; set; }
 }
 
+/// <summary>Service defines an upstream HTTP service to proxy traffic to.</summary>
 public partial class V1alpha1IngressRouteSpecRoutesServices
 {
     /// <summary>Healthcheck defines health checks for ExternalName services.</summary>
@@ -180,6 +186,7 @@ public partial class V1alpha1IngressRouteSpecRoutesServices
     public int? Weight { get; set; }
 }
 
+/// <summary>Route holds the HTTP route configuration.</summary>
 public partial class V1alpha1IngressRouteSpecRoutes
 {
     /// <summary>Kind defines the kind of the route. Rule is the only supported kind.</summary>
@@ -208,6 +215,7 @@ public partial class V1alpha1IngressRouteSpecRoutes
     public string? Syntax { get; set; }
 }
 
+/// <summary>Domain holds a domain name with SANs.</summary>
 public partial class V1alpha1IngressRouteSpecTlsDomains
 {
     /// <summary>Main defines the main domain name.</summary>
@@ -219,6 +227,7 @@ public partial class V1alpha1IngressRouteSpecTlsDomains
     public IList<string>? Sans { get; set; }
 }
 
+/// <summary>Options defines the reference to a TLSOption, that specifies the parameters of the TLS connection. If not defined, the `default` TLSOption is used. More info: https://doc.traefik.io/traefik/v3.1/https/tls/#tls-options</summary>
 public partial class V1alpha1IngressRouteSpecTlsOptions
 {
     /// <summary>Name defines the name of the referenced TLSOption. More info: https://doc.traefik.io/traefik/v3.1/routing/providers/kubernetes-crd/#kind-tlsoption</summary>
@@ -230,6 +239,7 @@ public partial class V1alpha1IngressRouteSpecTlsOptions
     public string? Namespace { get; set; }
 }
 
+/// <summary>Store defines the reference to the TLSStore, that will be used to store certificates. Please note that only `default` TLSStore can be used.</summary>
 public partial class V1alpha1IngressRouteSpecTlsStore
 {
     /// <summary>Name defines the name of the referenced TLSStore. More info: https://doc.traefik.io/traefik/v3.1/routing/providers/kubernetes-crd/#kind-tlsstore</summary>
@@ -241,6 +251,7 @@ public partial class V1alpha1IngressRouteSpecTlsStore
     public string? Namespace { get; set; }
 }
 
+/// <summary>TLS defines the TLS configuration. More info: https://doc.traefik.io/traefik/v3.1/routing/routers/#tls</summary>
 public partial class V1alpha1IngressRouteSpecTls
 {
     /// <summary>CertResolver defines the name of the certificate resolver to use. Cert resolvers have to be configured in the static configuration. More info: https://doc.traefik.io/traefik/v3.1/https/acme/#certificate-resolvers</summary>
@@ -264,6 +275,7 @@ public partial class V1alpha1IngressRouteSpecTls
     public V1alpha1IngressRouteSpecTlsStore? Store { get; set; }
 }
 
+/// <summary>IngressRouteSpec defines the desired state of IngressRoute.</summary>
 public partial class V1alpha1IngressRouteSpec
 {
     /// <summary>EntryPoints defines the list of entry point names to bind to. Entry points have to be configured in the static configuration. More info: https://doc.traefik.io/traefik/v3.1/routing/entrypoints/ Default: all.</summary>
@@ -280,6 +292,7 @@ public partial class V1alpha1IngressRouteSpec
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>IngressRoute is the CRD implementation of a Traefik HTTP Router.</summary>
 public partial class V1alpha1IngressRoute : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1IngressRouteSpec>
 {
     public const string KubeApiVersion = "v1alpha1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary>The firewall policy of the resource.</summary>
 public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecFirewallPolicyRef
 {
     /// <summary>Allowed value: The `networkFirewallPolicyId` field of a `ComputeNetworkFirewallPolicy` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecFirewallPolicyR
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecMatchLayer4Configs
 {
     /// <summary>The IP protocol to which this rule applies. The protocol type is required when creating a firewall rule. This value can either be one of the following well known protocol strings (`tcp`, `udp`, `icmp`, `esp`, `ah`, `ipip`, `sctp`), or the IP protocol number.</summary>
@@ -34,6 +36,7 @@ public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecMatchLayer4Conf
     public IList<string>? Ports { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecMatchSrcSecureTags
 {
     /// <summary>Name of the secure tag, created with TagManager's TagValue API. @pattern tagValues/[0-9]+.</summary>
@@ -45,6 +48,7 @@ public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecMatchSrcSecureT
     public string? State { get; set; }
 }
 
+/// <summary>A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.</summary>
 public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecMatch
 {
     /// <summary>Address groups which should be matched against the traffic destination. Maximum number of destination address groups is 10. Destination address groups is only supported in Egress rules.</summary>
@@ -96,6 +100,7 @@ public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecMatch
     public IList<string>? SrcThreatIntelligences { get; set; }
 }
 
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -111,6 +116,7 @@ public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecTargetSecureTags
 {
     /// <summary>Name of the secure tag, created with TagManager's TagValue API. @pattern tagValues/[0-9]+.</summary>
@@ -122,6 +128,7 @@ public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecTargetSecureTag
     public string? State { get; set; }
 }
 
+/// <summary>A list of service accounts indicating the sets of instances that are applied with this rule</summary>
 public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecTargetServiceAccountRefs
 {
     /// <summary>Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
@@ -137,6 +144,7 @@ public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecTargetServiceAc
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpec
 {
     /// <summary>The Action to perform when the client connection triggers the rule. Valid actions are "allow", "deny" and "goto_next".</summary>
@@ -188,6 +196,7 @@ public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpec
     public IList<V1alpha1ComputeNetworkFirewallPolicyRuleSpecTargetServiceAccountRefs>? TargetServiceAccountRefs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputeNetworkFirewallPolicyRuleStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -211,6 +220,7 @@ public partial class V1alpha1ComputeNetworkFirewallPolicyRuleStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputeNetworkFirewallPolicyRuleStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -231,6 +241,7 @@ public partial class V1alpha1ComputeNetworkFirewallPolicyRuleStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1ComputeNetworkFirewallPolicyRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ComputeNetworkFirewallPolicyRuleSpec>, IStatus<V1alpha1ComputeNetworkFirewallPolicyRuleStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

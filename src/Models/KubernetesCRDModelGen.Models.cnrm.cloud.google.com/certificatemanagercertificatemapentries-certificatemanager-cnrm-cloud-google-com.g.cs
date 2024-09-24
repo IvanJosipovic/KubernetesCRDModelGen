@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.certificatemanager.cnrm.cloud.google.com;
+/// <summary>A set of Certificates defines for the given hostname. There can be defined up to fifteen certificates in each Certificate Map Entry. Each certificate must match pattern projects/*/locations/*/certificates/*.</summary>
 public partial class V1alpha1CertificateManagerCertificateMapEntrySpecCertificatesRefs
 {
     /// <summary>Allowed value: string of the format `projects/{{project}}/locations/{{location}}/certificates/{{value}}`, where {{value}} is the `name` field of a `CertificateManagerCertificate` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1CertificateManagerCertificateMapEntrySpecCertificat
     public string? Namespace { get; set; }
 }
 
+/// <summary>A map entry that is inputted into the certificate map.</summary>
 public partial class V1alpha1CertificateManagerCertificateMapEntrySpecMapRef
 {
     /// <summary>Allowed value: The `name` field of a `CertificateManagerCertificateMap` resource.</summary>
@@ -38,6 +40,7 @@ public partial class V1alpha1CertificateManagerCertificateMapEntrySpecMapRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1CertificateManagerCertificateMapEntrySpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -53,6 +56,7 @@ public partial class V1alpha1CertificateManagerCertificateMapEntrySpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1CertificateManagerCertificateMapEntrySpec
 {
     /// <summary></summary>
@@ -84,6 +88,7 @@ public partial class V1alpha1CertificateManagerCertificateMapEntrySpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1CertificateManagerCertificateMapEntryStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -107,6 +112,7 @@ public partial class V1alpha1CertificateManagerCertificateMapEntryStatusConditio
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1CertificateManagerCertificateMapEntryStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -131,6 +137,7 @@ public partial class V1alpha1CertificateManagerCertificateMapEntryStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1CertificateManagerCertificateMapEntry : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1CertificateManagerCertificateMapEntrySpec>, IStatus<V1alpha1CertificateManagerCertificateMapEntryStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

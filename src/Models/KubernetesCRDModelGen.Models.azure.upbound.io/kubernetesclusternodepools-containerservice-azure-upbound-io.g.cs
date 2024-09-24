@@ -18,6 +18,7 @@ public enum V1beta1KubernetesClusterNodePoolSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderKubeletConfig
 {
     /// <summary>Specifies the allow list of unsafe sysctls command or patterns (ending in *). Changing this forces a new resource to be created.</summary>
@@ -81,6 +82,7 @@ public enum V1beta1KubernetesClusterNodePoolSpecForProviderKubernetesClusterIdRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderKubernetesClusterIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -94,6 +96,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProviderKubernetesCl
     public V1beta1KubernetesClusterNodePoolSpecForProviderKubernetesClusterIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a KubernetesCluster in containerservice to populate kubernetesClusterId.</summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderKubernetesClusterIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -125,6 +128,7 @@ public enum V1beta1KubernetesClusterNodePoolSpecForProviderKubernetesClusterIdSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderKubernetesClusterIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -138,6 +142,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProviderKubernetesCl
     public V1beta1KubernetesClusterNodePoolSpecForProviderKubernetesClusterIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a KubernetesCluster in containerservice to populate kubernetesClusterId.</summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderKubernetesClusterIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -153,6 +158,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProviderKubernetesCl
     public V1beta1KubernetesClusterNodePoolSpecForProviderKubernetesClusterIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderLinuxOsConfigSysctlConfig
 {
     /// <summary>The sysctl setting fs.aio-max-nr. Must be between 65536 and 6553500. Changing this forces a new resource to be created.</summary>
@@ -272,6 +278,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProviderLinuxOsConfi
     public double? VmVfsCachePressure { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderLinuxOsConfig
 {
     /// <summary>Specifies the size of swap file on each node in MB. Changing this forces a new resource to be created.</summary>
@@ -291,6 +298,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProviderLinuxOsConfi
     public string? TransparentHugePageEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderNodeNetworkProfileAllowedHostPorts
 {
     /// <summary>Specifies the end of the port range.</summary>
@@ -306,6 +314,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProviderNodeNetworkP
     public string? Protocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderNodeNetworkProfile
 {
     /// <summary>One or more allowed_host_ports blocks as defined below.</summary>
@@ -341,6 +350,7 @@ public enum V1beta1KubernetesClusterNodePoolSpecForProviderPodSubnetIdRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderPodSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -354,6 +364,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProviderPodSubnetIdR
     public V1beta1KubernetesClusterNodePoolSpecForProviderPodSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate podSubnetId.</summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderPodSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -385,6 +396,7 @@ public enum V1beta1KubernetesClusterNodePoolSpecForProviderPodSubnetIdSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderPodSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -398,6 +410,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProviderPodSubnetIdS
     public V1beta1KubernetesClusterNodePoolSpecForProviderPodSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate podSubnetId.</summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderPodSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -413,6 +426,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProviderPodSubnetIdS
     public V1beta1KubernetesClusterNodePoolSpecForProviderPodSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderUpgradeSettings
 {
     /// <summary>The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.</summary>
@@ -440,6 +454,7 @@ public enum V1beta1KubernetesClusterNodePoolSpecForProviderVnetSubnetIdRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderVnetSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -453,6 +468,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProviderVnetSubnetId
     public V1beta1KubernetesClusterNodePoolSpecForProviderVnetSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate vnetSubnetId.</summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderVnetSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -484,6 +500,7 @@ public enum V1beta1KubernetesClusterNodePoolSpecForProviderVnetSubnetIdSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderVnetSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -497,6 +514,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProviderVnetSubnetId
     public V1beta1KubernetesClusterNodePoolSpecForProviderVnetSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate vnetSubnetId.</summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderVnetSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -512,6 +530,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProviderVnetSubnetId
     public V1beta1KubernetesClusterNodePoolSpecForProviderVnetSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderWindowsProfile
 {
     /// <summary>Should the Windows nodes in this Node Pool have outbound NAT enabled? Defaults to true. Changing this forces a new resource to be created.</summary>
@@ -519,6 +538,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProviderWindowsProfi
     public bool? OutboundNatEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecForProvider
 {
     /// <summary>Specifies the ID of the Capacity Reservation Group where this Node Pool should exist. Changing this forces a new resource to be created.</summary>
@@ -714,6 +734,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProvider
     public IList<string>? Zones { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderKubeletConfig
 {
     /// <summary>Specifies the allow list of unsafe sysctls command or patterns (ending in *). Changing this forces a new resource to be created.</summary>
@@ -757,6 +778,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderKubeletConf
     public string? TopologyManagerPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderLinuxOsConfigSysctlConfig
 {
     /// <summary>The sysctl setting fs.aio-max-nr. Must be between 65536 and 6553500. Changing this forces a new resource to be created.</summary>
@@ -876,6 +898,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderLinuxOsConf
     public double? VmVfsCachePressure { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderLinuxOsConfig
 {
     /// <summary>Specifies the size of swap file on each node in MB. Changing this forces a new resource to be created.</summary>
@@ -895,6 +918,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderLinuxOsConf
     public string? TransparentHugePageEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderNodeNetworkProfileAllowedHostPorts
 {
     /// <summary>Specifies the end of the port range.</summary>
@@ -910,6 +934,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderNodeNetwork
     public string? Protocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderNodeNetworkProfile
 {
     /// <summary>One or more allowed_host_ports blocks as defined below.</summary>
@@ -945,6 +970,7 @@ public enum V1beta1KubernetesClusterNodePoolSpecInitProviderPodSubnetIdRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderPodSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -958,6 +984,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderPodSubnetId
     public V1beta1KubernetesClusterNodePoolSpecInitProviderPodSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate podSubnetId.</summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderPodSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -989,6 +1016,7 @@ public enum V1beta1KubernetesClusterNodePoolSpecInitProviderPodSubnetIdSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderPodSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1002,6 +1030,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderPodSubnetId
     public V1beta1KubernetesClusterNodePoolSpecInitProviderPodSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate podSubnetId.</summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderPodSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1017,6 +1046,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderPodSubnetId
     public V1beta1KubernetesClusterNodePoolSpecInitProviderPodSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderUpgradeSettings
 {
     /// <summary>The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.</summary>
@@ -1044,6 +1074,7 @@ public enum V1beta1KubernetesClusterNodePoolSpecInitProviderVnetSubnetIdRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderVnetSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1057,6 +1088,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderVnetSubnetI
     public V1beta1KubernetesClusterNodePoolSpecInitProviderVnetSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate vnetSubnetId.</summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderVnetSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1088,6 +1120,7 @@ public enum V1beta1KubernetesClusterNodePoolSpecInitProviderVnetSubnetIdSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderVnetSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1101,6 +1134,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderVnetSubnetI
     public V1beta1KubernetesClusterNodePoolSpecInitProviderVnetSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate vnetSubnetId.</summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderVnetSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1116,6 +1150,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderVnetSubnetI
     public V1beta1KubernetesClusterNodePoolSpecInitProviderVnetSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderWindowsProfile
 {
     /// <summary>Should the Windows nodes in this Node Pool have outbound NAT enabled? Defaults to true. Changing this forces a new resource to be created.</summary>
@@ -1123,6 +1158,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderWindowsProf
     public bool? OutboundNatEnabled { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecInitProvider
 {
     /// <summary>Specifies the ID of the Capacity Reservation Group where this Node Pool should exist. Changing this forces a new resource to be created.</summary>
@@ -1348,6 +1384,7 @@ public enum V1beta1KubernetesClusterNodePoolSpecProviderConfigRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1361,6 +1398,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpecProviderConfigRefPolicy
     public V1beta1KubernetesClusterNodePoolSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1392,6 +1430,7 @@ public enum V1beta1KubernetesClusterNodePoolSpecPublishConnectionDetailsToConfig
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1405,6 +1444,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpecPublishConnectionDetail
     public V1beta1KubernetesClusterNodePoolSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1416,6 +1456,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpecPublishConnectionDetail
     public V1beta1KubernetesClusterNodePoolSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1431,6 +1472,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpecPublishConnectionDetail
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1446,6 +1488,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpecPublishConnectionDetail
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1KubernetesClusterNodePoolSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1457,6 +1500,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpecWriteConnectionSecretTo
     public string Namespace { get; set; }
 }
 
+/// <summary>KubernetesClusterNodePoolSpec defines the desired state of KubernetesClusterNodePool</summary>
 public partial class V1beta1KubernetesClusterNodePoolSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1489,6 +1533,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpec
     public V1beta1KubernetesClusterNodePoolSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterNodePoolStatusAtProviderKubeletConfig
 {
     /// <summary>Specifies the allow list of unsafe sysctls command or patterns (ending in *). Changing this forces a new resource to be created.</summary>
@@ -1532,6 +1577,7 @@ public partial class V1beta1KubernetesClusterNodePoolStatusAtProviderKubeletConf
     public string? TopologyManagerPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterNodePoolStatusAtProviderLinuxOsConfigSysctlConfig
 {
     /// <summary>The sysctl setting fs.aio-max-nr. Must be between 65536 and 6553500. Changing this forces a new resource to be created.</summary>
@@ -1651,6 +1697,7 @@ public partial class V1beta1KubernetesClusterNodePoolStatusAtProviderLinuxOsConf
     public double? VmVfsCachePressure { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterNodePoolStatusAtProviderLinuxOsConfig
 {
     /// <summary>Specifies the size of swap file on each node in MB. Changing this forces a new resource to be created.</summary>
@@ -1670,6 +1717,7 @@ public partial class V1beta1KubernetesClusterNodePoolStatusAtProviderLinuxOsConf
     public string? TransparentHugePageEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterNodePoolStatusAtProviderNodeNetworkProfileAllowedHostPorts
 {
     /// <summary>Specifies the end of the port range.</summary>
@@ -1685,6 +1733,7 @@ public partial class V1beta1KubernetesClusterNodePoolStatusAtProviderNodeNetwork
     public string? Protocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterNodePoolStatusAtProviderNodeNetworkProfile
 {
     /// <summary>One or more allowed_host_ports blocks as defined below.</summary>
@@ -1700,6 +1749,7 @@ public partial class V1beta1KubernetesClusterNodePoolStatusAtProviderNodeNetwork
     public IDictionary<string, string>? NodePublicIpTags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterNodePoolStatusAtProviderUpgradeSettings
 {
     /// <summary>The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.</summary>
@@ -1707,6 +1757,7 @@ public partial class V1beta1KubernetesClusterNodePoolStatusAtProviderUpgradeSett
     public string? MaxSurge { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterNodePoolStatusAtProviderWindowsProfile
 {
     /// <summary>Should the Windows nodes in this Node Pool have outbound NAT enabled? Defaults to true. Changing this forces a new resource to be created.</summary>
@@ -1714,6 +1765,7 @@ public partial class V1beta1KubernetesClusterNodePoolStatusAtProviderWindowsProf
     public bool? OutboundNatEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterNodePoolStatusAtProvider
 {
     /// <summary>Specifies the ID of the Capacity Reservation Group where this Node Pool should exist. Changing this forces a new resource to be created.</summary>
@@ -1889,6 +1941,7 @@ public partial class V1beta1KubernetesClusterNodePoolStatusAtProvider
     public IList<string>? Zones { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1KubernetesClusterNodePoolStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1916,6 +1969,7 @@ public partial class V1beta1KubernetesClusterNodePoolStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>KubernetesClusterNodePoolStatus defines the observed state of KubernetesClusterNodePool.</summary>
 public partial class V1beta1KubernetesClusterNodePoolStatus
 {
     /// <summary></summary>
@@ -1932,6 +1986,7 @@ public partial class V1beta1KubernetesClusterNodePoolStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>KubernetesClusterNodePool is the Schema for the KubernetesClusterNodePools API. Manages a Node Pool within a Kubernetes Cluster</summary>
 public partial class V1beta1KubernetesClusterNodePool : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1KubernetesClusterNodePoolSpec>, IStatus<V1beta1KubernetesClusterNodePoolStatus>
 {
     public const string KubeApiVersion = "v1beta1";

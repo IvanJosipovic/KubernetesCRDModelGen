@@ -18,6 +18,7 @@ public enum V1beta1TaskDefinitionSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskDefinitionSpecForProviderEphemeralStorage
 {
     /// <summary>The total amount, in GiB, of ephemeral storage to set for the task. The minimum supported value is 21 GiB and the maximum supported value is 200 GiB.</summary>
@@ -45,6 +46,7 @@ public enum V1beta1TaskDefinitionSpecForProviderExecutionRoleArnRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TaskDefinitionSpecForProviderExecutionRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -58,6 +60,7 @@ public partial class V1beta1TaskDefinitionSpecForProviderExecutionRoleArnRefPoli
     public V1beta1TaskDefinitionSpecForProviderExecutionRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate executionRoleArn.</summary>
 public partial class V1beta1TaskDefinitionSpecForProviderExecutionRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -89,6 +92,7 @@ public enum V1beta1TaskDefinitionSpecForProviderExecutionRoleArnSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TaskDefinitionSpecForProviderExecutionRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -102,6 +106,7 @@ public partial class V1beta1TaskDefinitionSpecForProviderExecutionRoleArnSelecto
     public V1beta1TaskDefinitionSpecForProviderExecutionRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate executionRoleArn.</summary>
 public partial class V1beta1TaskDefinitionSpecForProviderExecutionRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -117,6 +122,7 @@ public partial class V1beta1TaskDefinitionSpecForProviderExecutionRoleArnSelecto
     public V1beta1TaskDefinitionSpecForProviderExecutionRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskDefinitionSpecForProviderInferenceAccelerator
 {
     /// <summary>Elastic Inference accelerator device name. The deviceName must also be referenced in a container definition as a ResourceRequirement.</summary>
@@ -128,6 +134,7 @@ public partial class V1beta1TaskDefinitionSpecForProviderInferenceAccelerator
     public string? DeviceType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskDefinitionSpecForProviderPlacementConstraints
 {
     /// <summary>Cluster Query Language expression to apply to the constraint. For more information, see Cluster Query Language in the Amazon EC2 Container Service Developer Guide.</summary>
@@ -139,6 +146,7 @@ public partial class V1beta1TaskDefinitionSpecForProviderPlacementConstraints
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskDefinitionSpecForProviderProxyConfiguration
 {
     /// <summary>Name of the container that will serve as the App Mesh proxy.</summary>
@@ -154,6 +162,7 @@ public partial class V1beta1TaskDefinitionSpecForProviderProxyConfiguration
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskDefinitionSpecForProviderRuntimePlatform
 {
     /// <summary>Must be set to either X86_64 or ARM64; see cpu architecture</summary>
@@ -165,6 +174,7 @@ public partial class V1beta1TaskDefinitionSpecForProviderRuntimePlatform
     public string? OperatingSystemFamily { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskDefinitionSpecForProviderVolumeDockerVolumeConfiguration
 {
     /// <summary>If this value is true, the Docker volume is created if it does not already exist. Note: This field is only used if the scope is shared.</summary>
@@ -188,6 +198,7 @@ public partial class V1beta1TaskDefinitionSpecForProviderVolumeDockerVolumeConfi
     public string? Scope { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskDefinitionSpecForProviderVolumeEfsVolumeConfigurationAuthorizationConfig
 {
     /// <summary>Access point ID to use. If an access point is specified, the root directory value will be relative to the directory set for the access point. If specified, transit encryption must be enabled in the EFSVolumeConfiguration.</summary>
@@ -199,6 +210,7 @@ public partial class V1beta1TaskDefinitionSpecForProviderVolumeEfsVolumeConfigur
     public string? Iam { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskDefinitionSpecForProviderVolumeEfsVolumeConfiguration
 {
     /// <summary>Configuration block for authorization for the Amazon EFS file system. Detailed below.</summary>
@@ -222,6 +234,7 @@ public partial class V1beta1TaskDefinitionSpecForProviderVolumeEfsVolumeConfigur
     public double? TransitEncryptionPort { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskDefinitionSpecForProviderVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfig
 {
     /// <summary>The authorization credential option to use. The authorization credential options can be provided using either the Amazon Resource Name (ARN) of an AWS Secrets Manager secret or AWS Systems Manager Parameter Store parameter. The ARNs refer to the stored credentials.</summary>
@@ -233,6 +246,7 @@ public partial class V1beta1TaskDefinitionSpecForProviderVolumeFsxWindowsFileSer
     public string? Domain { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskDefinitionSpecForProviderVolumeFsxWindowsFileServerVolumeConfiguration
 {
     /// <summary>Configuration block for authorization for the Amazon FSx for Windows File Server file system detailed below.</summary>
@@ -248,6 +262,7 @@ public partial class V1beta1TaskDefinitionSpecForProviderVolumeFsxWindowsFileSer
     public string? RootDirectory { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskDefinitionSpecForProviderVolume
 {
     /// <summary>Whether the volume should be configured at launch time. This is used to create Amazon EBS volumes for standalone tasks or tasks created as part of a service. Each task definition revision may only have one volume configured at launch in the volume configuration.</summary>
@@ -275,6 +290,7 @@ public partial class V1beta1TaskDefinitionSpecForProviderVolume
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskDefinitionSpecForProvider
 {
     /// <summary>A list of valid container definitions provided as a single valid JSON document. Please note that you should only provide values that are part of the container definition document. For a detailed description of what parameters are available, see the Task Definition Parameters section from the official Developer Guide.</summary>
@@ -366,6 +382,7 @@ public partial class V1beta1TaskDefinitionSpecForProvider
     public IList<V1beta1TaskDefinitionSpecForProviderVolume>? Volume { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskDefinitionSpecInitProviderEphemeralStorage
 {
     /// <summary>The total amount, in GiB, of ephemeral storage to set for the task. The minimum supported value is 21 GiB and the maximum supported value is 200 GiB.</summary>
@@ -393,6 +410,7 @@ public enum V1beta1TaskDefinitionSpecInitProviderExecutionRoleArnRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TaskDefinitionSpecInitProviderExecutionRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -406,6 +424,7 @@ public partial class V1beta1TaskDefinitionSpecInitProviderExecutionRoleArnRefPol
     public V1beta1TaskDefinitionSpecInitProviderExecutionRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate executionRoleArn.</summary>
 public partial class V1beta1TaskDefinitionSpecInitProviderExecutionRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -437,6 +456,7 @@ public enum V1beta1TaskDefinitionSpecInitProviderExecutionRoleArnSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TaskDefinitionSpecInitProviderExecutionRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -450,6 +470,7 @@ public partial class V1beta1TaskDefinitionSpecInitProviderExecutionRoleArnSelect
     public V1beta1TaskDefinitionSpecInitProviderExecutionRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate executionRoleArn.</summary>
 public partial class V1beta1TaskDefinitionSpecInitProviderExecutionRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -465,6 +486,7 @@ public partial class V1beta1TaskDefinitionSpecInitProviderExecutionRoleArnSelect
     public V1beta1TaskDefinitionSpecInitProviderExecutionRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskDefinitionSpecInitProviderInferenceAccelerator
 {
     /// <summary>Elastic Inference accelerator device name. The deviceName must also be referenced in a container definition as a ResourceRequirement.</summary>
@@ -476,6 +498,7 @@ public partial class V1beta1TaskDefinitionSpecInitProviderInferenceAccelerator
     public string? DeviceType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskDefinitionSpecInitProviderPlacementConstraints
 {
     /// <summary>Cluster Query Language expression to apply to the constraint. For more information, see Cluster Query Language in the Amazon EC2 Container Service Developer Guide.</summary>
@@ -487,6 +510,7 @@ public partial class V1beta1TaskDefinitionSpecInitProviderPlacementConstraints
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskDefinitionSpecInitProviderProxyConfiguration
 {
     /// <summary>Name of the container that will serve as the App Mesh proxy.</summary>
@@ -502,6 +526,7 @@ public partial class V1beta1TaskDefinitionSpecInitProviderProxyConfiguration
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskDefinitionSpecInitProviderRuntimePlatform
 {
     /// <summary>Must be set to either X86_64 or ARM64; see cpu architecture</summary>
@@ -513,6 +538,7 @@ public partial class V1beta1TaskDefinitionSpecInitProviderRuntimePlatform
     public string? OperatingSystemFamily { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskDefinitionSpecInitProviderVolumeDockerVolumeConfiguration
 {
     /// <summary>If this value is true, the Docker volume is created if it does not already exist. Note: This field is only used if the scope is shared.</summary>
@@ -536,6 +562,7 @@ public partial class V1beta1TaskDefinitionSpecInitProviderVolumeDockerVolumeConf
     public string? Scope { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskDefinitionSpecInitProviderVolumeEfsVolumeConfigurationAuthorizationConfig
 {
     /// <summary>Access point ID to use. If an access point is specified, the root directory value will be relative to the directory set for the access point. If specified, transit encryption must be enabled in the EFSVolumeConfiguration.</summary>
@@ -547,6 +574,7 @@ public partial class V1beta1TaskDefinitionSpecInitProviderVolumeEfsVolumeConfigu
     public string? Iam { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskDefinitionSpecInitProviderVolumeEfsVolumeConfiguration
 {
     /// <summary>Configuration block for authorization for the Amazon EFS file system. Detailed below.</summary>
@@ -570,6 +598,7 @@ public partial class V1beta1TaskDefinitionSpecInitProviderVolumeEfsVolumeConfigu
     public double? TransitEncryptionPort { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskDefinitionSpecInitProviderVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfig
 {
     /// <summary>The authorization credential option to use. The authorization credential options can be provided using either the Amazon Resource Name (ARN) of an AWS Secrets Manager secret or AWS Systems Manager Parameter Store parameter. The ARNs refer to the stored credentials.</summary>
@@ -581,6 +610,7 @@ public partial class V1beta1TaskDefinitionSpecInitProviderVolumeFsxWindowsFileSe
     public string? Domain { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskDefinitionSpecInitProviderVolumeFsxWindowsFileServerVolumeConfiguration
 {
     /// <summary>Configuration block for authorization for the Amazon FSx for Windows File Server file system detailed below.</summary>
@@ -596,6 +626,7 @@ public partial class V1beta1TaskDefinitionSpecInitProviderVolumeFsxWindowsFileSe
     public string? RootDirectory { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskDefinitionSpecInitProviderVolume
 {
     /// <summary>Whether the volume should be configured at launch time. This is used to create Amazon EBS volumes for standalone tasks or tasks created as part of a service. Each task definition revision may only have one volume configured at launch in the volume configuration.</summary>
@@ -623,6 +654,7 @@ public partial class V1beta1TaskDefinitionSpecInitProviderVolume
     public string? Name { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1TaskDefinitionSpecInitProvider
 {
     /// <summary>A list of valid container definitions provided as a single valid JSON document. Please note that you should only provide values that are part of the container definition document. For a detailed description of what parameters are available, see the Task Definition Parameters section from the official Developer Guide.</summary>
@@ -752,6 +784,7 @@ public enum V1beta1TaskDefinitionSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TaskDefinitionSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -765,6 +798,7 @@ public partial class V1beta1TaskDefinitionSpecProviderConfigRefPolicy
     public V1beta1TaskDefinitionSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1TaskDefinitionSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -796,6 +830,7 @@ public enum V1beta1TaskDefinitionSpecPublishConnectionDetailsToConfigRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TaskDefinitionSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -809,6 +844,7 @@ public partial class V1beta1TaskDefinitionSpecPublishConnectionDetailsToConfigRe
     public V1beta1TaskDefinitionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1TaskDefinitionSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -820,6 +856,7 @@ public partial class V1beta1TaskDefinitionSpecPublishConnectionDetailsToConfigRe
     public V1beta1TaskDefinitionSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1TaskDefinitionSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -835,6 +872,7 @@ public partial class V1beta1TaskDefinitionSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1TaskDefinitionSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -850,6 +888,7 @@ public partial class V1beta1TaskDefinitionSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1TaskDefinitionSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -861,6 +900,7 @@ public partial class V1beta1TaskDefinitionSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>TaskDefinitionSpec defines the desired state of TaskDefinition</summary>
 public partial class V1beta1TaskDefinitionSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -893,6 +933,7 @@ public partial class V1beta1TaskDefinitionSpec
     public V1beta1TaskDefinitionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskDefinitionStatusAtProviderEphemeralStorage
 {
     /// <summary>The total amount, in GiB, of ephemeral storage to set for the task. The minimum supported value is 21 GiB and the maximum supported value is 200 GiB.</summary>
@@ -900,6 +941,7 @@ public partial class V1beta1TaskDefinitionStatusAtProviderEphemeralStorage
     public double? SizeInGib { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskDefinitionStatusAtProviderInferenceAccelerator
 {
     /// <summary>Elastic Inference accelerator device name. The deviceName must also be referenced in a container definition as a ResourceRequirement.</summary>
@@ -911,6 +953,7 @@ public partial class V1beta1TaskDefinitionStatusAtProviderInferenceAccelerator
     public string? DeviceType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskDefinitionStatusAtProviderPlacementConstraints
 {
     /// <summary>Cluster Query Language expression to apply to the constraint. For more information, see Cluster Query Language in the Amazon EC2 Container Service Developer Guide.</summary>
@@ -922,6 +965,7 @@ public partial class V1beta1TaskDefinitionStatusAtProviderPlacementConstraints
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskDefinitionStatusAtProviderProxyConfiguration
 {
     /// <summary>Name of the container that will serve as the App Mesh proxy.</summary>
@@ -937,6 +981,7 @@ public partial class V1beta1TaskDefinitionStatusAtProviderProxyConfiguration
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskDefinitionStatusAtProviderRuntimePlatform
 {
     /// <summary>Must be set to either X86_64 or ARM64; see cpu architecture</summary>
@@ -948,6 +993,7 @@ public partial class V1beta1TaskDefinitionStatusAtProviderRuntimePlatform
     public string? OperatingSystemFamily { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskDefinitionStatusAtProviderVolumeDockerVolumeConfiguration
 {
     /// <summary>If this value is true, the Docker volume is created if it does not already exist. Note: This field is only used if the scope is shared.</summary>
@@ -971,6 +1017,7 @@ public partial class V1beta1TaskDefinitionStatusAtProviderVolumeDockerVolumeConf
     public string? Scope { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskDefinitionStatusAtProviderVolumeEfsVolumeConfigurationAuthorizationConfig
 {
     /// <summary>Access point ID to use. If an access point is specified, the root directory value will be relative to the directory set for the access point. If specified, transit encryption must be enabled in the EFSVolumeConfiguration.</summary>
@@ -982,6 +1029,7 @@ public partial class V1beta1TaskDefinitionStatusAtProviderVolumeEfsVolumeConfigu
     public string? Iam { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskDefinitionStatusAtProviderVolumeEfsVolumeConfiguration
 {
     /// <summary>Configuration block for authorization for the Amazon EFS file system. Detailed below.</summary>
@@ -1005,6 +1053,7 @@ public partial class V1beta1TaskDefinitionStatusAtProviderVolumeEfsVolumeConfigu
     public double? TransitEncryptionPort { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskDefinitionStatusAtProviderVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfig
 {
     /// <summary>The authorization credential option to use. The authorization credential options can be provided using either the Amazon Resource Name (ARN) of an AWS Secrets Manager secret or AWS Systems Manager Parameter Store parameter. The ARNs refer to the stored credentials.</summary>
@@ -1016,6 +1065,7 @@ public partial class V1beta1TaskDefinitionStatusAtProviderVolumeFsxWindowsFileSe
     public string? Domain { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskDefinitionStatusAtProviderVolumeFsxWindowsFileServerVolumeConfiguration
 {
     /// <summary>Configuration block for authorization for the Amazon FSx for Windows File Server file system detailed below.</summary>
@@ -1031,6 +1081,7 @@ public partial class V1beta1TaskDefinitionStatusAtProviderVolumeFsxWindowsFileSe
     public string? RootDirectory { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskDefinitionStatusAtProviderVolume
 {
     /// <summary>Whether the volume should be configured at launch time. This is used to create Amazon EBS volumes for standalone tasks or tasks created as part of a service. Each task definition revision may only have one volume configured at launch in the volume configuration.</summary>
@@ -1058,6 +1109,7 @@ public partial class V1beta1TaskDefinitionStatusAtProviderVolume
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskDefinitionStatusAtProvider
 {
     /// <summary>Full ARN of the Task Definition (including both family and revision).</summary>
@@ -1157,6 +1209,7 @@ public partial class V1beta1TaskDefinitionStatusAtProvider
     public IList<V1beta1TaskDefinitionStatusAtProviderVolume>? Volume { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1TaskDefinitionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1184,6 +1237,7 @@ public partial class V1beta1TaskDefinitionStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>TaskDefinitionStatus defines the observed state of TaskDefinition.</summary>
 public partial class V1beta1TaskDefinitionStatus
 {
     /// <summary></summary>
@@ -1200,6 +1254,7 @@ public partial class V1beta1TaskDefinitionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>TaskDefinition is the Schema for the TaskDefinitions API. Manages a revision of an ECS task definition.</summary>
 public partial class V1beta1TaskDefinition : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1TaskDefinitionSpec>, IStatus<V1beta1TaskDefinitionStatus>
 {
     public const string KubeApiVersion = "v1beta1";

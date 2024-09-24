@@ -18,6 +18,7 @@ public enum V1beta1DomainDKIMSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainDKIMSpecForProvider
 {
     /// <summary>Region is the region you'd like your resource to be created in.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1DomainDKIMSpecForProvider
     public string Region { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1DomainDKIMSpecInitProvider
 {
 }
@@ -71,6 +73,7 @@ public enum V1beta1DomainDKIMSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DomainDKIMSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -84,6 +87,7 @@ public partial class V1beta1DomainDKIMSpecProviderConfigRefPolicy
     public V1beta1DomainDKIMSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1DomainDKIMSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -115,6 +119,7 @@ public enum V1beta1DomainDKIMSpecPublishConnectionDetailsToConfigRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DomainDKIMSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -128,6 +133,7 @@ public partial class V1beta1DomainDKIMSpecPublishConnectionDetailsToConfigRefPol
     public V1beta1DomainDKIMSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1DomainDKIMSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -139,6 +145,7 @@ public partial class V1beta1DomainDKIMSpecPublishConnectionDetailsToConfigRef
     public V1beta1DomainDKIMSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1DomainDKIMSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -154,6 +161,7 @@ public partial class V1beta1DomainDKIMSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1DomainDKIMSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -169,6 +177,7 @@ public partial class V1beta1DomainDKIMSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1DomainDKIMSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -180,6 +189,7 @@ public partial class V1beta1DomainDKIMSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>DomainDKIMSpec defines the desired state of DomainDKIM</summary>
 public partial class V1beta1DomainDKIMSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -212,6 +222,7 @@ public partial class V1beta1DomainDKIMSpec
     public V1beta1DomainDKIMSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainDKIMStatusAtProvider
 {
     /// <summary>DKIM tokens generated by SES. These tokens should be used to create CNAME records used to verify SES Easy DKIM. Find out more about verifying domains in Amazon SES in the AWS SES docs.</summary>
@@ -223,6 +234,7 @@ public partial class V1beta1DomainDKIMStatusAtProvider
     public string? Id { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1DomainDKIMStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -250,6 +262,7 @@ public partial class V1beta1DomainDKIMStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>DomainDKIMStatus defines the observed state of DomainDKIM.</summary>
 public partial class V1beta1DomainDKIMStatus
 {
     /// <summary></summary>
@@ -266,6 +279,7 @@ public partial class V1beta1DomainDKIMStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>DomainDKIM is the Schema for the DomainDKIMs API. Provides an SES domain DKIM generation resource</summary>
 public partial class V1beta1DomainDKIM : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DomainDKIMSpec>, IStatus<V1beta1DomainDKIMStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -38,6 +38,7 @@ public enum V1beta1EventHubDataConnectionSpecForProviderClusterNameRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EventHubDataConnectionSpecForProviderClusterNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1EventHubDataConnectionSpecForProviderClusterNameRefP
     public V1beta1EventHubDataConnectionSpecForProviderClusterNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in kusto to populate clusterName.</summary>
 public partial class V1beta1EventHubDataConnectionSpecForProviderClusterNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1EventHubDataConnectionSpecForProviderClusterNameSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EventHubDataConnectionSpecForProviderClusterNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1EventHubDataConnectionSpecForProviderClusterNameSele
     public V1beta1EventHubDataConnectionSpecForProviderClusterNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in kusto to populate clusterName.</summary>
 public partial class V1beta1EventHubDataConnectionSpecForProviderClusterNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1EventHubDataConnectionSpecForProviderConsumerGroupRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EventHubDataConnectionSpecForProviderConsumerGroupRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1EventHubDataConnectionSpecForProviderConsumerGroupRe
     public V1beta1EventHubDataConnectionSpecForProviderConsumerGroupRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ConsumerGroup in eventhub to populate consumerGroup.</summary>
 public partial class V1beta1EventHubDataConnectionSpecForProviderConsumerGroupRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1EventHubDataConnectionSpecForProviderConsumerGroupSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EventHubDataConnectionSpecForProviderConsumerGroupSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1EventHubDataConnectionSpecForProviderConsumerGroupSe
     public V1beta1EventHubDataConnectionSpecForProviderConsumerGroupSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ConsumerGroup in eventhub to populate consumerGroup.</summary>
 public partial class V1beta1EventHubDataConnectionSpecForProviderConsumerGroupSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1EventHubDataConnectionSpecForProviderDatabaseNameRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EventHubDataConnectionSpecForProviderDatabaseNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1EventHubDataConnectionSpecForProviderDatabaseNameRef
     public V1beta1EventHubDataConnectionSpecForProviderDatabaseNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Database in kusto to populate databaseName.</summary>
 public partial class V1beta1EventHubDataConnectionSpecForProviderDatabaseNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1EventHubDataConnectionSpecForProviderDatabaseNameSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EventHubDataConnectionSpecForProviderDatabaseNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1EventHubDataConnectionSpecForProviderDatabaseNameSel
     public V1beta1EventHubDataConnectionSpecForProviderDatabaseNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Database in kusto to populate databaseName.</summary>
 public partial class V1beta1EventHubDataConnectionSpecForProviderDatabaseNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -314,6 +326,7 @@ public enum V1beta1EventHubDataConnectionSpecForProviderEventhubIdRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EventHubDataConnectionSpecForProviderEventhubIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -327,6 +340,7 @@ public partial class V1beta1EventHubDataConnectionSpecForProviderEventhubIdRefPo
     public V1beta1EventHubDataConnectionSpecForProviderEventhubIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a EventHub in eventhub to populate eventhubId.</summary>
 public partial class V1beta1EventHubDataConnectionSpecForProviderEventhubIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -358,6 +372,7 @@ public enum V1beta1EventHubDataConnectionSpecForProviderEventhubIdSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EventHubDataConnectionSpecForProviderEventhubIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -371,6 +386,7 @@ public partial class V1beta1EventHubDataConnectionSpecForProviderEventhubIdSelec
     public V1beta1EventHubDataConnectionSpecForProviderEventhubIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a EventHub in eventhub to populate eventhubId.</summary>
 public partial class V1beta1EventHubDataConnectionSpecForProviderEventhubIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -406,6 +422,7 @@ public enum V1beta1EventHubDataConnectionSpecForProviderResourceGroupNameRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EventHubDataConnectionSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -419,6 +436,7 @@ public partial class V1beta1EventHubDataConnectionSpecForProviderResourceGroupNa
     public V1beta1EventHubDataConnectionSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1EventHubDataConnectionSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -450,6 +468,7 @@ public enum V1beta1EventHubDataConnectionSpecForProviderResourceGroupNameSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EventHubDataConnectionSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -463,6 +482,7 @@ public partial class V1beta1EventHubDataConnectionSpecForProviderResourceGroupNa
     public V1beta1EventHubDataConnectionSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1EventHubDataConnectionSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -478,6 +498,7 @@ public partial class V1beta1EventHubDataConnectionSpecForProviderResourceGroupNa
     public V1beta1EventHubDataConnectionSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EventHubDataConnectionSpecForProvider
 {
     /// <summary>Specifies the name of the Kusto Cluster this data connection will be added to. Changing this forces a new resource to be created.</summary>
@@ -593,6 +614,7 @@ public enum V1beta1EventHubDataConnectionSpecInitProviderConsumerGroupRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EventHubDataConnectionSpecInitProviderConsumerGroupRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -606,6 +628,7 @@ public partial class V1beta1EventHubDataConnectionSpecInitProviderConsumerGroupR
     public V1beta1EventHubDataConnectionSpecInitProviderConsumerGroupRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ConsumerGroup in eventhub to populate consumerGroup.</summary>
 public partial class V1beta1EventHubDataConnectionSpecInitProviderConsumerGroupRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -637,6 +660,7 @@ public enum V1beta1EventHubDataConnectionSpecInitProviderConsumerGroupSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EventHubDataConnectionSpecInitProviderConsumerGroupSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -650,6 +674,7 @@ public partial class V1beta1EventHubDataConnectionSpecInitProviderConsumerGroupS
     public V1beta1EventHubDataConnectionSpecInitProviderConsumerGroupSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ConsumerGroup in eventhub to populate consumerGroup.</summary>
 public partial class V1beta1EventHubDataConnectionSpecInitProviderConsumerGroupSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -685,6 +710,7 @@ public enum V1beta1EventHubDataConnectionSpecInitProviderEventhubIdRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EventHubDataConnectionSpecInitProviderEventhubIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -698,6 +724,7 @@ public partial class V1beta1EventHubDataConnectionSpecInitProviderEventhubIdRefP
     public V1beta1EventHubDataConnectionSpecInitProviderEventhubIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a EventHub in eventhub to populate eventhubId.</summary>
 public partial class V1beta1EventHubDataConnectionSpecInitProviderEventhubIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -729,6 +756,7 @@ public enum V1beta1EventHubDataConnectionSpecInitProviderEventhubIdSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EventHubDataConnectionSpecInitProviderEventhubIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -742,6 +770,7 @@ public partial class V1beta1EventHubDataConnectionSpecInitProviderEventhubIdSele
     public V1beta1EventHubDataConnectionSpecInitProviderEventhubIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a EventHub in eventhub to populate eventhubId.</summary>
 public partial class V1beta1EventHubDataConnectionSpecInitProviderEventhubIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -757,6 +786,7 @@ public partial class V1beta1EventHubDataConnectionSpecInitProviderEventhubIdSele
     public V1beta1EventHubDataConnectionSpecInitProviderEventhubIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1EventHubDataConnectionSpecInitProvider
 {
     /// <summary>Specifies compression type for the connection. Allowed values: GZip and None. Defaults to None. Changing this forces a new resource to be created.</summary>
@@ -858,6 +888,7 @@ public enum V1beta1EventHubDataConnectionSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EventHubDataConnectionSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -871,6 +902,7 @@ public partial class V1beta1EventHubDataConnectionSpecProviderConfigRefPolicy
     public V1beta1EventHubDataConnectionSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1EventHubDataConnectionSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -902,6 +934,7 @@ public enum V1beta1EventHubDataConnectionSpecPublishConnectionDetailsToConfigRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EventHubDataConnectionSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -915,6 +948,7 @@ public partial class V1beta1EventHubDataConnectionSpecPublishConnectionDetailsTo
     public V1beta1EventHubDataConnectionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1EventHubDataConnectionSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -926,6 +960,7 @@ public partial class V1beta1EventHubDataConnectionSpecPublishConnectionDetailsTo
     public V1beta1EventHubDataConnectionSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1EventHubDataConnectionSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -941,6 +976,7 @@ public partial class V1beta1EventHubDataConnectionSpecPublishConnectionDetailsTo
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1EventHubDataConnectionSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -956,6 +992,7 @@ public partial class V1beta1EventHubDataConnectionSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1EventHubDataConnectionSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -967,6 +1004,7 @@ public partial class V1beta1EventHubDataConnectionSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>EventHubDataConnectionSpec defines the desired state of EventHubDataConnection</summary>
 public partial class V1beta1EventHubDataConnectionSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -999,6 +1037,7 @@ public partial class V1beta1EventHubDataConnectionSpec
     public V1beta1EventHubDataConnectionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EventHubDataConnectionStatusAtProvider
 {
     /// <summary>Specifies the name of the Kusto Cluster this data connection will be added to. Changing this forces a new resource to be created.</summary>
@@ -1058,6 +1097,7 @@ public partial class V1beta1EventHubDataConnectionStatusAtProvider
     public string? TableName { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1EventHubDataConnectionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1085,6 +1125,7 @@ public partial class V1beta1EventHubDataConnectionStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>EventHubDataConnectionStatus defines the observed state of EventHubDataConnection.</summary>
 public partial class V1beta1EventHubDataConnectionStatus
 {
     /// <summary></summary>
@@ -1101,6 +1142,7 @@ public partial class V1beta1EventHubDataConnectionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>EventHubDataConnection is the Schema for the EventHubDataConnections API. Manages Kusto / Data Explorer EventHub Data Connection</summary>
 public partial class V1beta1EventHubDataConnection : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1EventHubDataConnectionSpec>, IStatus<V1beta1EventHubDataConnectionStatus>
 {
     public const string KubeApiVersion = "v1beta1";

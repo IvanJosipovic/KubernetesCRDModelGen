@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.gcp.upbound.io;
+/// <summary>Env is a reference to an environment variable that contains credentials that must be used to connect to the provider.</summary>
 public partial class V1beta1ProviderConfigSpecCredentialsEnv
 {
     /// <summary>Name is the name of an environment variable.</summary>
@@ -15,6 +16,7 @@ public partial class V1beta1ProviderConfigSpecCredentialsEnv
     public string Name { get; set; }
 }
 
+/// <summary>Fs is a reference to a filesystem location that contains credentials that must be used to connect to the provider.</summary>
 public partial class V1beta1ProviderConfigSpecCredentialsFs
 {
     /// <summary>Path is a filesystem path.</summary>
@@ -22,6 +24,7 @@ public partial class V1beta1ProviderConfigSpecCredentialsFs
     public string Path { get; set; }
 }
 
+/// <summary>Use GCP service account impersonation for authentication.</summary>
 public partial class V1beta1ProviderConfigSpecCredentialsImpersonateServiceAccount
 {
     /// <summary>GCP service account email address</summary>
@@ -29,6 +32,7 @@ public partial class V1beta1ProviderConfigSpecCredentialsImpersonateServiceAccou
     public string Name { get; set; }
 }
 
+/// <summary>A SecretRef is a reference to a secret key that contains the credentials that must be used to connect to the provider.</summary>
 public partial class V1beta1ProviderConfigSpecCredentialsSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -72,6 +76,7 @@ public enum V1beta1ProviderConfigSpecCredentialsSourceEnum
     Upbound
 }
 
+/// <summary>Federation is the configuration for federated identity.</summary>
 public partial class V1beta1ProviderConfigSpecCredentialsUpboundFederation
 {
     /// <summary>ProviderID is the fully-qualified identifier for the identity provider on GCP. The format is `projects/&lt;project-id&gt;/locations/global/workloadIdentityPools/&lt;identity-pool&gt;/providers/&lt;identity-provider&gt;`.</summary>
@@ -83,6 +88,7 @@ public partial class V1beta1ProviderConfigSpecCredentialsUpboundFederation
     public string ServiceAccount { get; set; }
 }
 
+/// <summary>Upbound defines the options for authenticating using Upbound as an identity provider.</summary>
 public partial class V1beta1ProviderConfigSpecCredentialsUpbound
 {
     /// <summary>Federation is the configuration for federated identity.</summary>
@@ -90,6 +96,7 @@ public partial class V1beta1ProviderConfigSpecCredentialsUpbound
     public V1beta1ProviderConfigSpecCredentialsUpboundFederation? Federation { get; set; }
 }
 
+/// <summary>Credentials required to authenticate to this provider.</summary>
 public partial class V1beta1ProviderConfigSpecCredentials
 {
     /// <summary>Env is a reference to an environment variable that contains credentials that must be used to connect to the provider.</summary>
@@ -118,6 +125,7 @@ public partial class V1beta1ProviderConfigSpecCredentials
     public V1beta1ProviderConfigSpecCredentialsUpbound? Upbound { get; set; }
 }
 
+/// <summary>A ProviderConfigSpec defines the desired state of a ProviderConfig.</summary>
 public partial class V1beta1ProviderConfigSpec
 {
     /// <summary>Credentials required to authenticate to this provider.</summary>
@@ -129,6 +137,7 @@ public partial class V1beta1ProviderConfigSpec
     public string ProjectID { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ProviderConfigStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -156,6 +165,7 @@ public partial class V1beta1ProviderConfigStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>A ProviderConfigStatus reflects the observed state of a ProviderConfig.</summary>
 public partial class V1beta1ProviderConfigStatus
 {
     /// <summary>Conditions of the resource.</summary>
@@ -168,6 +178,7 @@ public partial class V1beta1ProviderConfigStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>A ProviderConfig configures a GCP provider.</summary>
 public partial class V1beta1ProviderConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ProviderConfigSpec>, IStatus<V1beta1ProviderConfigStatus>
 {
     public const string KubeApiVersion = "v1beta1";

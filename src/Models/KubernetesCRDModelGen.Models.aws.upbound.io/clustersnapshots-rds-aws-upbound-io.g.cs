@@ -38,6 +38,7 @@ public enum V1beta1ClusterSnapshotSpecForProviderDbClusterIdentifierRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClusterSnapshotSpecForProviderDbClusterIdentifierRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ClusterSnapshotSpecForProviderDbClusterIdentifierRef
     public V1beta1ClusterSnapshotSpecForProviderDbClusterIdentifierRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in rds to populate dbClusterIdentifier.</summary>
 public partial class V1beta1ClusterSnapshotSpecForProviderDbClusterIdentifierRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ClusterSnapshotSpecForProviderDbClusterIdentifierSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ClusterSnapshotSpecForProviderDbClusterIdentifierSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ClusterSnapshotSpecForProviderDbClusterIdentifierSel
     public V1beta1ClusterSnapshotSpecForProviderDbClusterIdentifierSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in rds to populate dbClusterIdentifier.</summary>
 public partial class V1beta1ClusterSnapshotSpecForProviderDbClusterIdentifierSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1ClusterSnapshotSpecForProviderDbClusterIdentifierSel
     public V1beta1ClusterSnapshotSpecForProviderDbClusterIdentifierSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSnapshotSpecForProvider
 {
     /// <summary>The DB Cluster Identifier from which to take the snapshot.</summary>
@@ -157,6 +162,7 @@ public enum V1beta1ClusterSnapshotSpecInitProviderDbClusterIdentifierRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClusterSnapshotSpecInitProviderDbClusterIdentifierRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -170,6 +176,7 @@ public partial class V1beta1ClusterSnapshotSpecInitProviderDbClusterIdentifierRe
     public V1beta1ClusterSnapshotSpecInitProviderDbClusterIdentifierRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in rds to populate dbClusterIdentifier.</summary>
 public partial class V1beta1ClusterSnapshotSpecInitProviderDbClusterIdentifierRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -201,6 +208,7 @@ public enum V1beta1ClusterSnapshotSpecInitProviderDbClusterIdentifierSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ClusterSnapshotSpecInitProviderDbClusterIdentifierSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -214,6 +222,7 @@ public partial class V1beta1ClusterSnapshotSpecInitProviderDbClusterIdentifierSe
     public V1beta1ClusterSnapshotSpecInitProviderDbClusterIdentifierSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in rds to populate dbClusterIdentifier.</summary>
 public partial class V1beta1ClusterSnapshotSpecInitProviderDbClusterIdentifierSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -229,6 +238,7 @@ public partial class V1beta1ClusterSnapshotSpecInitProviderDbClusterIdentifierSe
     public V1beta1ClusterSnapshotSpecInitProviderDbClusterIdentifierSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ClusterSnapshotSpecInitProvider
 {
     /// <summary>The DB Cluster Identifier from which to take the snapshot.</summary>
@@ -294,6 +304,7 @@ public enum V1beta1ClusterSnapshotSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClusterSnapshotSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -307,6 +318,7 @@ public partial class V1beta1ClusterSnapshotSpecProviderConfigRefPolicy
     public V1beta1ClusterSnapshotSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ClusterSnapshotSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -338,6 +350,7 @@ public enum V1beta1ClusterSnapshotSpecPublishConnectionDetailsToConfigRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClusterSnapshotSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -351,6 +364,7 @@ public partial class V1beta1ClusterSnapshotSpecPublishConnectionDetailsToConfigR
     public V1beta1ClusterSnapshotSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ClusterSnapshotSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -362,6 +376,7 @@ public partial class V1beta1ClusterSnapshotSpecPublishConnectionDetailsToConfigR
     public V1beta1ClusterSnapshotSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ClusterSnapshotSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -377,6 +392,7 @@ public partial class V1beta1ClusterSnapshotSpecPublishConnectionDetailsToMetadat
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ClusterSnapshotSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -392,6 +408,7 @@ public partial class V1beta1ClusterSnapshotSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ClusterSnapshotSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -403,6 +420,7 @@ public partial class V1beta1ClusterSnapshotSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ClusterSnapshotSpec defines the desired state of ClusterSnapshot</summary>
 public partial class V1beta1ClusterSnapshotSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -435,6 +453,7 @@ public partial class V1beta1ClusterSnapshotSpec
     public V1beta1ClusterSnapshotSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSnapshotStatusAtProvider
 {
     /// <summary>Allocated storage size in gigabytes (GB).</summary>
@@ -510,6 +529,7 @@ public partial class V1beta1ClusterSnapshotStatusAtProvider
     public string? VpcId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ClusterSnapshotStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -537,6 +557,7 @@ public partial class V1beta1ClusterSnapshotStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ClusterSnapshotStatus defines the observed state of ClusterSnapshot.</summary>
 public partial class V1beta1ClusterSnapshotStatus
 {
     /// <summary></summary>
@@ -553,6 +574,7 @@ public partial class V1beta1ClusterSnapshotStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ClusterSnapshot is the Schema for the ClusterSnapshots API. Manages an RDS database cluster snapshot.</summary>
 public partial class V1beta1ClusterSnapshot : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ClusterSnapshotSpec>, IStatus<V1beta1ClusterSnapshotStatus>
 {
     public const string KubeApiVersion = "v1beta1";

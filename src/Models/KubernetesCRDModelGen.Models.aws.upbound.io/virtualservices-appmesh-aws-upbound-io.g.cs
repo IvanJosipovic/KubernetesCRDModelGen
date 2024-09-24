@@ -38,6 +38,7 @@ public enum V1beta1VirtualServiceSpecForProviderMeshNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualServiceSpecForProviderMeshNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1VirtualServiceSpecForProviderMeshNameRefPolicy
     public V1beta1VirtualServiceSpecForProviderMeshNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Mesh in appmesh to populate meshName.</summary>
 public partial class V1beta1VirtualServiceSpecForProviderMeshNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1VirtualServiceSpecForProviderMeshNameSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VirtualServiceSpecForProviderMeshNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1VirtualServiceSpecForProviderMeshNameSelectorPolicy
     public V1beta1VirtualServiceSpecForProviderMeshNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Mesh in appmesh to populate meshName.</summary>
 public partial class V1beta1VirtualServiceSpecForProviderMeshNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1VirtualServiceSpecForProviderSpecProviderVirtualNodeVirtualNo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualServiceSpecForProviderSpecProviderVirtualNodeVirtualNodeNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1VirtualServiceSpecForProviderSpecProviderVirtualNode
     public V1beta1VirtualServiceSpecForProviderSpecProviderVirtualNodeVirtualNodeNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VirtualNode in appmesh to populate virtualNodeName.</summary>
 public partial class V1beta1VirtualServiceSpecForProviderSpecProviderVirtualNodeVirtualNodeNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1VirtualServiceSpecForProviderSpecProviderVirtualNodeVirtualNo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VirtualServiceSpecForProviderSpecProviderVirtualNodeVirtualNodeNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1VirtualServiceSpecForProviderSpecProviderVirtualNode
     public V1beta1VirtualServiceSpecForProviderSpecProviderVirtualNodeVirtualNodeNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VirtualNode in appmesh to populate virtualNodeName.</summary>
 public partial class V1beta1VirtualServiceSpecForProviderSpecProviderVirtualNodeVirtualNodeNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1VirtualServiceSpecForProviderSpecProviderVirtualNode
     public V1beta1VirtualServiceSpecForProviderSpecProviderVirtualNodeVirtualNodeNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualServiceSpecForProviderSpecProviderVirtualNode
 {
     /// <summary>Name of the virtual node that is acting as a service provider. Must be between 1 and 255 characters in length.</summary>
@@ -237,6 +246,7 @@ public enum V1beta1VirtualServiceSpecForProviderSpecProviderVirtualRouterVirtual
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualServiceSpecForProviderSpecProviderVirtualRouterVirtualRouterNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -250,6 +260,7 @@ public partial class V1beta1VirtualServiceSpecForProviderSpecProviderVirtualRout
     public V1beta1VirtualServiceSpecForProviderSpecProviderVirtualRouterVirtualRouterNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VirtualRouter in appmesh to populate virtualRouterName.</summary>
 public partial class V1beta1VirtualServiceSpecForProviderSpecProviderVirtualRouterVirtualRouterNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -281,6 +292,7 @@ public enum V1beta1VirtualServiceSpecForProviderSpecProviderVirtualRouterVirtual
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VirtualServiceSpecForProviderSpecProviderVirtualRouterVirtualRouterNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1VirtualServiceSpecForProviderSpecProviderVirtualRout
     public V1beta1VirtualServiceSpecForProviderSpecProviderVirtualRouterVirtualRouterNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VirtualRouter in appmesh to populate virtualRouterName.</summary>
 public partial class V1beta1VirtualServiceSpecForProviderSpecProviderVirtualRouterVirtualRouterNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -309,6 +322,7 @@ public partial class V1beta1VirtualServiceSpecForProviderSpecProviderVirtualRout
     public V1beta1VirtualServiceSpecForProviderSpecProviderVirtualRouterVirtualRouterNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualServiceSpecForProviderSpecProviderVirtualRouter
 {
     /// <summary>Name of the virtual router that is acting as a service provider. Must be between 1 and 255 characters in length.</summary>
@@ -324,6 +338,7 @@ public partial class V1beta1VirtualServiceSpecForProviderSpecProviderVirtualRout
     public V1beta1VirtualServiceSpecForProviderSpecProviderVirtualRouterVirtualRouterNameSelector? VirtualRouterNameSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualServiceSpecForProviderSpecProvider
 {
     /// <summary>Virtual node associated with a virtual service.</summary>
@@ -335,6 +350,7 @@ public partial class V1beta1VirtualServiceSpecForProviderSpecProvider
     public IList<V1beta1VirtualServiceSpecForProviderSpecProviderVirtualRouter>? VirtualRouter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualServiceSpecForProviderSpec
 {
     /// <summary>App Mesh object that is acting as the provider for a virtual service. You can specify a single virtual node or virtual router.</summary>
@@ -342,6 +358,7 @@ public partial class V1beta1VirtualServiceSpecForProviderSpec
     public IList<V1beta1VirtualServiceSpecForProviderSpecProvider>? Provider { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualServiceSpecForProvider
 {
     /// <summary>Name of the service mesh in which to create the virtual service. Must be between 1 and 255 characters in length.</summary>
@@ -397,6 +414,7 @@ public enum V1beta1VirtualServiceSpecInitProviderMeshNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualServiceSpecInitProviderMeshNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -410,6 +428,7 @@ public partial class V1beta1VirtualServiceSpecInitProviderMeshNameRefPolicy
     public V1beta1VirtualServiceSpecInitProviderMeshNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Mesh in appmesh to populate meshName.</summary>
 public partial class V1beta1VirtualServiceSpecInitProviderMeshNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -441,6 +460,7 @@ public enum V1beta1VirtualServiceSpecInitProviderMeshNameSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VirtualServiceSpecInitProviderMeshNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -454,6 +474,7 @@ public partial class V1beta1VirtualServiceSpecInitProviderMeshNameSelectorPolicy
     public V1beta1VirtualServiceSpecInitProviderMeshNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Mesh in appmesh to populate meshName.</summary>
 public partial class V1beta1VirtualServiceSpecInitProviderMeshNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -489,6 +510,7 @@ public enum V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualNodeVirtualN
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualNodeVirtualNodeNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -502,6 +524,7 @@ public partial class V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualNod
     public V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualNodeVirtualNodeNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VirtualNode in appmesh to populate virtualNodeName.</summary>
 public partial class V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualNodeVirtualNodeNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -533,6 +556,7 @@ public enum V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualNodeVirtualN
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualNodeVirtualNodeNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -546,6 +570,7 @@ public partial class V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualNod
     public V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualNodeVirtualNodeNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VirtualNode in appmesh to populate virtualNodeName.</summary>
 public partial class V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualNodeVirtualNodeNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -561,6 +586,7 @@ public partial class V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualNod
     public V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualNodeVirtualNodeNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualNode
 {
     /// <summary>Name of the virtual node that is acting as a service provider. Must be between 1 and 255 characters in length.</summary>
@@ -596,6 +622,7 @@ public enum V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualRouterVirtua
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualRouterVirtualRouterNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -609,6 +636,7 @@ public partial class V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualRou
     public V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualRouterVirtualRouterNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VirtualRouter in appmesh to populate virtualRouterName.</summary>
 public partial class V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualRouterVirtualRouterNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -640,6 +668,7 @@ public enum V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualRouterVirtua
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualRouterVirtualRouterNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -653,6 +682,7 @@ public partial class V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualRou
     public V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualRouterVirtualRouterNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VirtualRouter in appmesh to populate virtualRouterName.</summary>
 public partial class V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualRouterVirtualRouterNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -668,6 +698,7 @@ public partial class V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualRou
     public V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualRouterVirtualRouterNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualRouter
 {
     /// <summary>Name of the virtual router that is acting as a service provider. Must be between 1 and 255 characters in length.</summary>
@@ -683,6 +714,7 @@ public partial class V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualRou
     public V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualRouterVirtualRouterNameSelector? VirtualRouterNameSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualServiceSpecInitProviderSpecProvider
 {
     /// <summary>Virtual node associated with a virtual service.</summary>
@@ -694,6 +726,7 @@ public partial class V1beta1VirtualServiceSpecInitProviderSpecProvider
     public IList<V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualRouter>? VirtualRouter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualServiceSpecInitProviderSpec
 {
     /// <summary>App Mesh object that is acting as the provider for a virtual service. You can specify a single virtual node or virtual router.</summary>
@@ -701,6 +734,7 @@ public partial class V1beta1VirtualServiceSpecInitProviderSpec
     public IList<V1beta1VirtualServiceSpecInitProviderSpecProvider>? Provider { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1VirtualServiceSpecInitProvider
 {
     /// <summary>Name of the service mesh in which to create the virtual service. Must be between 1 and 255 characters in length.</summary>
@@ -774,6 +808,7 @@ public enum V1beta1VirtualServiceSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualServiceSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -787,6 +822,7 @@ public partial class V1beta1VirtualServiceSpecProviderConfigRefPolicy
     public V1beta1VirtualServiceSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1VirtualServiceSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -818,6 +854,7 @@ public enum V1beta1VirtualServiceSpecPublishConnectionDetailsToConfigRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualServiceSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -831,6 +868,7 @@ public partial class V1beta1VirtualServiceSpecPublishConnectionDetailsToConfigRe
     public V1beta1VirtualServiceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1VirtualServiceSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -842,6 +880,7 @@ public partial class V1beta1VirtualServiceSpecPublishConnectionDetailsToConfigRe
     public V1beta1VirtualServiceSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1VirtualServiceSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -857,6 +896,7 @@ public partial class V1beta1VirtualServiceSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1VirtualServiceSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -872,6 +912,7 @@ public partial class V1beta1VirtualServiceSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1VirtualServiceSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -883,6 +924,7 @@ public partial class V1beta1VirtualServiceSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>VirtualServiceSpec defines the desired state of VirtualService</summary>
 public partial class V1beta1VirtualServiceSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -915,6 +957,7 @@ public partial class V1beta1VirtualServiceSpec
     public V1beta1VirtualServiceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualServiceStatusAtProviderSpecProviderVirtualNode
 {
     /// <summary>Name of the virtual node that is acting as a service provider. Must be between 1 and 255 characters in length.</summary>
@@ -922,6 +965,7 @@ public partial class V1beta1VirtualServiceStatusAtProviderSpecProviderVirtualNod
     public string? VirtualNodeName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualServiceStatusAtProviderSpecProviderVirtualRouter
 {
     /// <summary>Name of the virtual router that is acting as a service provider. Must be between 1 and 255 characters in length.</summary>
@@ -929,6 +973,7 @@ public partial class V1beta1VirtualServiceStatusAtProviderSpecProviderVirtualRou
     public string? VirtualRouterName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualServiceStatusAtProviderSpecProvider
 {
     /// <summary>Virtual node associated with a virtual service.</summary>
@@ -940,6 +985,7 @@ public partial class V1beta1VirtualServiceStatusAtProviderSpecProvider
     public IList<V1beta1VirtualServiceStatusAtProviderSpecProviderVirtualRouter>? VirtualRouter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualServiceStatusAtProviderSpec
 {
     /// <summary>App Mesh object that is acting as the provider for a virtual service. You can specify a single virtual node or virtual router.</summary>
@@ -947,6 +993,7 @@ public partial class V1beta1VirtualServiceStatusAtProviderSpec
     public IList<V1beta1VirtualServiceStatusAtProviderSpecProvider>? Provider { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualServiceStatusAtProvider
 {
     /// <summary>ARN of the virtual service.</summary>
@@ -994,6 +1041,7 @@ public partial class V1beta1VirtualServiceStatusAtProvider
     public IDictionary<string, string>? TagsAll { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1VirtualServiceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1021,6 +1069,7 @@ public partial class V1beta1VirtualServiceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>VirtualServiceStatus defines the observed state of VirtualService.</summary>
 public partial class V1beta1VirtualServiceStatus
 {
     /// <summary></summary>
@@ -1037,6 +1086,7 @@ public partial class V1beta1VirtualServiceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>VirtualService is the Schema for the VirtualServices API. Provides an AWS App Mesh virtual service resource.</summary>
 public partial class V1beta1VirtualService : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1VirtualServiceSpec>, IStatus<V1beta1VirtualServiceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

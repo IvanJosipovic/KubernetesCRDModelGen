@@ -38,6 +38,7 @@ public enum V1beta1DNSZoneSpecForProviderResourceGroupNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DNSZoneSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1DNSZoneSpecForProviderResourceGroupNameRefPolicy
     public V1beta1DNSZoneSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1DNSZoneSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1DNSZoneSpecForProviderResourceGroupNameSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DNSZoneSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1DNSZoneSpecForProviderResourceGroupNameSelectorPolic
     public V1beta1DNSZoneSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1DNSZoneSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1DNSZoneSpecForProviderResourceGroupNameSelector
     public V1beta1DNSZoneSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSZoneSpecForProviderSoaRecord
 {
     /// <summary>The email contact for the SOA record.</summary>
@@ -149,6 +154,7 @@ public partial class V1beta1DNSZoneSpecForProviderSoaRecord
     public double? Ttl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSZoneSpecForProvider
 {
     /// <summary>Specifies the resource group where the resource exists. Changing this forces a new resource to be created.</summary>
@@ -172,6 +178,7 @@ public partial class V1beta1DNSZoneSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSZoneSpecInitProviderSoaRecord
 {
     /// <summary>The email contact for the SOA record.</summary>
@@ -211,6 +218,7 @@ public partial class V1beta1DNSZoneSpecInitProviderSoaRecord
     public double? Ttl { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1DNSZoneSpecInitProvider
 {
     /// <summary>An soa_record block as defined below.</summary>
@@ -264,6 +272,7 @@ public enum V1beta1DNSZoneSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DNSZoneSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -277,6 +286,7 @@ public partial class V1beta1DNSZoneSpecProviderConfigRefPolicy
     public V1beta1DNSZoneSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1DNSZoneSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -308,6 +318,7 @@ public enum V1beta1DNSZoneSpecPublishConnectionDetailsToConfigRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DNSZoneSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -321,6 +332,7 @@ public partial class V1beta1DNSZoneSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1DNSZoneSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1DNSZoneSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -332,6 +344,7 @@ public partial class V1beta1DNSZoneSpecPublishConnectionDetailsToConfigRef
     public V1beta1DNSZoneSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1DNSZoneSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -347,6 +360,7 @@ public partial class V1beta1DNSZoneSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1DNSZoneSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -362,6 +376,7 @@ public partial class V1beta1DNSZoneSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1DNSZoneSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -373,6 +388,7 @@ public partial class V1beta1DNSZoneSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>DNSZoneSpec defines the desired state of DNSZone</summary>
 public partial class V1beta1DNSZoneSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -405,6 +421,7 @@ public partial class V1beta1DNSZoneSpec
     public V1beta1DNSZoneSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSZoneStatusAtProviderSoaRecord
 {
     /// <summary>The email contact for the SOA record.</summary>
@@ -448,6 +465,7 @@ public partial class V1beta1DNSZoneStatusAtProviderSoaRecord
     public double? Ttl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSZoneStatusAtProvider
 {
     /// <summary>The DNS Zone ID.</summary>
@@ -479,6 +497,7 @@ public partial class V1beta1DNSZoneStatusAtProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1DNSZoneStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -506,6 +525,7 @@ public partial class V1beta1DNSZoneStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>DNSZoneStatus defines the observed state of DNSZone.</summary>
 public partial class V1beta1DNSZoneStatus
 {
     /// <summary></summary>
@@ -522,6 +542,7 @@ public partial class V1beta1DNSZoneStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>DNSZone is the Schema for the DNSZones API. Manages a DNS Zone.</summary>
 public partial class V1beta1DNSZone : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DNSZoneSpec>, IStatus<V1beta1DNSZoneStatus>
 {
     public const string KubeApiVersion = "v1beta1";

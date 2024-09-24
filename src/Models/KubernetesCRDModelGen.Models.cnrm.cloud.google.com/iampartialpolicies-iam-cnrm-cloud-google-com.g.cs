@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iam.cnrm.cloud.google.com;
+/// <summary>Optional. The condition under which the binding applies.</summary>
 public partial class V1beta1IAMPartialPolicySpecBindingsCondition
 {
     /// <summary></summary>
@@ -23,6 +24,7 @@ public partial class V1beta1IAMPartialPolicySpecBindingsCondition
     public string Title { get; set; }
 }
 
+/// <summary>The LoggingLogSink whose writer identity (i.e. its 'status.writerIdentity') is to be bound to the role.</summary>
 public partial class V1beta1IAMPartialPolicySpecBindingsMembersMemberFromLogSinkRef
 {
     /// <summary></summary>
@@ -34,6 +36,7 @@ public partial class V1beta1IAMPartialPolicySpecBindingsMembersMemberFromLogSink
     public string? Namespace { get; set; }
 }
 
+/// <summary>The IAMServiceAccount to be bound to the role.</summary>
 public partial class V1beta1IAMPartialPolicySpecBindingsMembersMemberFromServiceAccountRef
 {
     /// <summary></summary>
@@ -45,6 +48,7 @@ public partial class V1beta1IAMPartialPolicySpecBindingsMembersMemberFromService
     public string? Namespace { get; set; }
 }
 
+/// <summary>The ServiceIdentity whose service account (i.e., its 'status.email') is to be bound to the role.</summary>
 public partial class V1beta1IAMPartialPolicySpecBindingsMembersMemberFromServiceIdentityRef
 {
     /// <summary></summary>
@@ -56,6 +60,7 @@ public partial class V1beta1IAMPartialPolicySpecBindingsMembersMemberFromService
     public string? Namespace { get; set; }
 }
 
+/// <summary>The SQLInstance whose service account (i.e. its 'status.serviceAccountEmailAddress') is to be bound to the role.</summary>
 public partial class V1beta1IAMPartialPolicySpecBindingsMembersMemberFromSqlInstanceRef
 {
     /// <summary></summary>
@@ -67,6 +72,7 @@ public partial class V1beta1IAMPartialPolicySpecBindingsMembersMemberFromSqlInst
     public string? Namespace { get; set; }
 }
 
+/// <summary>The IAM identity to be bound to the role. Exactly one of 'member' or 'memberFrom' must be used, and only one subfield within 'memberFrom' can be used.</summary>
 public partial class V1beta1IAMPartialPolicySpecBindingsMembersMemberFrom
 {
     /// <summary>The LoggingLogSink whose writer identity (i.e. its 'status.writerIdentity') is to be bound to the role.</summary>
@@ -86,6 +92,7 @@ public partial class V1beta1IAMPartialPolicySpecBindingsMembersMemberFrom
     public V1beta1IAMPartialPolicySpecBindingsMembersMemberFromSqlInstanceRef? SqlInstanceRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IAMPartialPolicySpecBindingsMembers
 {
     /// <summary>The IAM identity to be bound to the role. Exactly one of 'member' or 'memberFrom' must be used.</summary>
@@ -97,6 +104,7 @@ public partial class V1beta1IAMPartialPolicySpecBindingsMembers
     public V1beta1IAMPartialPolicySpecBindingsMembersMemberFrom? MemberFrom { get; set; }
 }
 
+/// <summary>Specifies the members to bind to an IAM role.</summary>
 public partial class V1beta1IAMPartialPolicySpecBindings
 {
     /// <summary>Optional. The condition under which the binding applies.</summary>
@@ -112,6 +120,7 @@ public partial class V1beta1IAMPartialPolicySpecBindings
     public string Role { get; set; }
 }
 
+/// <summary>Immutable. Required. The GCP resource to set the IAM policy on.</summary>
 public partial class V1beta1IAMPartialPolicySpecResourceRef
 {
     /// <summary></summary>
@@ -135,6 +144,7 @@ public partial class V1beta1IAMPartialPolicySpecResourceRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>IAMPartialPolicySpec defines the desired state of IAMPartialPolicy</summary>
 public partial class V1beta1IAMPartialPolicySpec
 {
     /// <summary>Optional. The list of IAM bindings managed by Config Connector.</summary>
@@ -146,6 +156,7 @@ public partial class V1beta1IAMPartialPolicySpec
     public V1beta1IAMPartialPolicySpecResourceRef ResourceRef { get; set; }
 }
 
+/// <summary>Optional. The condition under which the binding applies.</summary>
 public partial class V1beta1IAMPartialPolicyStatusAllBindingsCondition
 {
     /// <summary></summary>
@@ -161,6 +172,7 @@ public partial class V1beta1IAMPartialPolicyStatusAllBindingsCondition
     public string Title { get; set; }
 }
 
+/// <summary>Specifies the members to bind to an IAM role.</summary>
 public partial class V1beta1IAMPartialPolicyStatusAllBindings
 {
     /// <summary>Optional. The condition under which the binding applies.</summary>
@@ -176,6 +188,7 @@ public partial class V1beta1IAMPartialPolicyStatusAllBindings
     public string Role { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IAMPartialPolicyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -199,6 +212,7 @@ public partial class V1beta1IAMPartialPolicyStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary>Optional. The condition under which the binding applies.</summary>
 public partial class V1beta1IAMPartialPolicyStatusLastAppliedBindingsCondition
 {
     /// <summary></summary>
@@ -214,6 +228,7 @@ public partial class V1beta1IAMPartialPolicyStatusLastAppliedBindingsCondition
     public string Title { get; set; }
 }
 
+/// <summary>Specifies the members to bind to an IAM role.</summary>
 public partial class V1beta1IAMPartialPolicyStatusLastAppliedBindings
 {
     /// <summary>Optional. The condition under which the binding applies.</summary>
@@ -229,6 +244,7 @@ public partial class V1beta1IAMPartialPolicyStatusLastAppliedBindings
     public string Role { get; set; }
 }
 
+/// <summary>IAMPartialPolicyStatus defines the observed state of IAMPartialPolicy</summary>
 public partial class V1beta1IAMPartialPolicyStatus
 {
     /// <summary>AllBindings surfaces all IAM bindings for the referenced resource.</summary>
@@ -249,6 +265,7 @@ public partial class V1beta1IAMPartialPolicyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>IAMPartialPolicy is the Schema for the iampartialpolicy API</summary>
 public partial class V1beta1IAMPartialPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IAMPartialPolicySpec>, IStatus<V1beta1IAMPartialPolicyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

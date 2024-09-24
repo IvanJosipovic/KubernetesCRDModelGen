@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.pkg.crossplane.io;
+/// <summary>ControllerConfigRef references a ControllerConfig resource that will be used to configure the packaged controller Deployment. Deprecated: Use RuntimeConfigReference instead.</summary>
 public partial class V1FunctionRevisionSpecControllerConfigRef
 {
     /// <summary>Name of the ControllerConfig.</summary>
@@ -15,6 +16,7 @@ public partial class V1FunctionRevisionSpecControllerConfigRef
     public string Name { get; set; }
 }
 
+/// <summary>LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.</summary>
 public partial class V1FunctionRevisionSpecPackagePullSecrets
 {
     /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. TODO: Add other useful fields. apiVersion, kind, uid? More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Drop `kubebuilder:default` when controller-gen doesn't need it https://github.com/kubernetes-sigs/kubebuilder/issues/3896.</summary>
@@ -22,6 +24,7 @@ public partial class V1FunctionRevisionSpecPackagePullSecrets
     public string? Name { get; set; }
 }
 
+/// <summary>RuntimeConfigRef references a RuntimeConfig resource that will be used to configure the package runtime.</summary>
 public partial class V1FunctionRevisionSpecRuntimeConfigRef
 {
     /// <summary>API version of the referent.</summary>
@@ -37,6 +40,7 @@ public partial class V1FunctionRevisionSpecRuntimeConfigRef
     public string Name { get; set; }
 }
 
+/// <summary>FunctionRevisionSpec specifies configuration for a FunctionRevision.</summary>
 public partial class V1FunctionRevisionSpec
 {
     /// <summary>Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/</summary>
@@ -88,6 +92,7 @@ public partial class V1FunctionRevisionSpec
     public string? TlsServerSecretName { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1FunctionRevisionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -115,6 +120,7 @@ public partial class V1FunctionRevisionStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>A TypedReference refers to an object by Name, Kind, and APIVersion. It is commonly used to reference cluster-scoped objects or objects where the namespace is already known.</summary>
 public partial class V1FunctionRevisionStatusObjectRefs
 {
     /// <summary>APIVersion of the referenced object.</summary>
@@ -134,6 +140,7 @@ public partial class V1FunctionRevisionStatusObjectRefs
     public string? Uid { get; set; }
 }
 
+/// <summary>PolicyRule holds information that describes a policy rule, but does not contain information about who the rule applies to or which namespace the rule applies to.</summary>
 public partial class V1FunctionRevisionStatusPermissionRequests
 {
     /// <summary>APIGroups is the name of the APIGroup that contains the resources.  If multiple API groups are specified, any action requested against one of the enumerated resources in any API group will be allowed. "" represents the core API group and "*" represents all API groups.</summary>
@@ -157,6 +164,7 @@ public partial class V1FunctionRevisionStatusPermissionRequests
     public IList<string> Verbs { get; set; }
 }
 
+/// <summary>FunctionRevisionStatus represents the observed state of a FunctionRevision.</summary>
 public partial class V1FunctionRevisionStatus
 {
     /// <summary>Conditions of the resource.</summary>
@@ -189,6 +197,7 @@ public partial class V1FunctionRevisionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>A FunctionRevision represents a revision of a Function. Crossplane creates new revisions when there are changes to the Function.   Crossplane creates and manages FunctionRevisions. Don't directly edit FunctionRevisions.</summary>
 public partial class V1FunctionRevision : IKubernetesObject<V1ObjectMeta>, ISpec<V1FunctionRevisionSpec>, IStatus<V1FunctionRevisionStatus>
 {
     public const string KubeApiVersion = "v1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.monitoring.cnrm.cloud.google.com;
+/// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 public partial class V1beta1MonitoringNotificationChannelSpecSensitiveLabelsAuthTokenValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -19,6 +20,7 @@ public partial class V1beta1MonitoringNotificationChannelSpecSensitiveLabelsAuth
     public string Name { get; set; }
 }
 
+/// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 public partial class V1beta1MonitoringNotificationChannelSpecSensitiveLabelsAuthTokenValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -26,6 +28,7 @@ public partial class V1beta1MonitoringNotificationChannelSpecSensitiveLabelsAuth
     public V1beta1MonitoringNotificationChannelSpecSensitiveLabelsAuthTokenValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary>An authorization token for a notification channel. Channel types that support this field include: slack.</summary>
 public partial class V1beta1MonitoringNotificationChannelSpecSensitiveLabelsAuthToken
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -37,6 +40,7 @@ public partial class V1beta1MonitoringNotificationChannelSpecSensitiveLabelsAuth
     public V1beta1MonitoringNotificationChannelSpecSensitiveLabelsAuthTokenValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 public partial class V1beta1MonitoringNotificationChannelSpecSensitiveLabelsPasswordValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -48,6 +52,7 @@ public partial class V1beta1MonitoringNotificationChannelSpecSensitiveLabelsPass
     public string Name { get; set; }
 }
 
+/// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 public partial class V1beta1MonitoringNotificationChannelSpecSensitiveLabelsPasswordValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -55,6 +60,7 @@ public partial class V1beta1MonitoringNotificationChannelSpecSensitiveLabelsPass
     public V1beta1MonitoringNotificationChannelSpecSensitiveLabelsPasswordValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary>An password for a notification channel. Channel types that support this field include: webhook_basicauth.</summary>
 public partial class V1beta1MonitoringNotificationChannelSpecSensitiveLabelsPassword
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -66,6 +72,7 @@ public partial class V1beta1MonitoringNotificationChannelSpecSensitiveLabelsPass
     public V1beta1MonitoringNotificationChannelSpecSensitiveLabelsPasswordValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 public partial class V1beta1MonitoringNotificationChannelSpecSensitiveLabelsServiceKeyValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -77,6 +84,7 @@ public partial class V1beta1MonitoringNotificationChannelSpecSensitiveLabelsServ
     public string Name { get; set; }
 }
 
+/// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 public partial class V1beta1MonitoringNotificationChannelSpecSensitiveLabelsServiceKeyValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -84,6 +92,7 @@ public partial class V1beta1MonitoringNotificationChannelSpecSensitiveLabelsServ
     public V1beta1MonitoringNotificationChannelSpecSensitiveLabelsServiceKeyValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary>An servicekey token for a notification channel. Channel types that support this field include: pagerduty.</summary>
 public partial class V1beta1MonitoringNotificationChannelSpecSensitiveLabelsServiceKey
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -95,6 +104,7 @@ public partial class V1beta1MonitoringNotificationChannelSpecSensitiveLabelsServ
     public V1beta1MonitoringNotificationChannelSpecSensitiveLabelsServiceKeyValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary>Different notification type behaviors are configured primarily using the the 'labels' field on this resource. This block contains the labels which contain secrets or passwords so that they can be marked sensitive and hidden from plan output. The name of the field, eg: password, will be the key in the 'labels' map in the api request.  Credentials may not be specified in both locations and will cause an error. Changing from one location to a different credential configuration in the config will require an apply to update state.</summary>
 public partial class V1beta1MonitoringNotificationChannelSpecSensitiveLabels
 {
     /// <summary>An authorization token for a notification channel. Channel types that support this field include: slack.</summary>
@@ -110,6 +120,7 @@ public partial class V1beta1MonitoringNotificationChannelSpecSensitiveLabels
     public V1beta1MonitoringNotificationChannelSpecSensitiveLabelsServiceKey? ServiceKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringNotificationChannelSpec
 {
     /// <summary>An optional human-readable description of this notification channel. This description may provide additional details, beyond the display name, for the channel. This may not exceed 1024 Unicode characters.</summary>
@@ -141,6 +152,7 @@ public partial class V1beta1MonitoringNotificationChannelSpec
     public string Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringNotificationChannelStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -164,6 +176,7 @@ public partial class V1beta1MonitoringNotificationChannelStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringNotificationChannelStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -184,6 +197,7 @@ public partial class V1beta1MonitoringNotificationChannelStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1MonitoringNotificationChannel : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MonitoringNotificationChannelSpec>, IStatus<V1beta1MonitoringNotificationChannelStatus>
 {
     public const string KubeApiVersion = "v1beta1";

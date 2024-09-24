@@ -18,6 +18,7 @@ public enum V1beta1SLOSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecForProviderBasicSliAvailability
 {
     /// <summary>Whether an availability SLI is enabled or not. Must be set to true. Defaults to true.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1SLOSpecForProviderBasicSliAvailability
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecForProviderBasicSliLatency
 {
     /// <summary>A duration string, e.g. 10s. Good service is defined to be the count of requests made to this service that return in no more than threshold.</summary>
@@ -32,6 +34,7 @@ public partial class V1beta1SLOSpecForProviderBasicSliLatency
     public string? Threshold { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecForProviderBasicSli
 {
     /// <summary>Availability based SLI, dervied from count of requests made to this service that return successfully. Structure is documented below.</summary>
@@ -55,6 +58,7 @@ public partial class V1beta1SLOSpecForProviderBasicSli
     public IList<string>? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecForProviderRequestBasedSliDistributionCutRange
 {
     /// <summary>max value for the range (inclusive). If not given, will be set to 0</summary>
@@ -66,6 +70,7 @@ public partial class V1beta1SLOSpecForProviderRequestBasedSliDistributionCutRang
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecForProviderRequestBasedSliDistributionCut
 {
     /// <summary>A TimeSeries monitoring filter aggregating values to quantify the good service provided. Must have ValueType = DISTRIBUTION and MetricKind = DELTA or MetricKind = CUMULATIVE.</summary>
@@ -77,6 +82,7 @@ public partial class V1beta1SLOSpecForProviderRequestBasedSliDistributionCut
     public IList<V1beta1SLOSpecForProviderRequestBasedSliDistributionCutRange>? Range { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecForProviderRequestBasedSliGoodTotalRatio
 {
     /// <summary>A TimeSeries monitoring filter quantifying bad service provided, either demanded service that was not provided or demanded service that was of inadequate quality. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE. Exactly two of good_service_filter,bad_service_filter,total_service_filter must be set (good + bad = total is assumed).</summary>
@@ -92,6 +98,7 @@ public partial class V1beta1SLOSpecForProviderRequestBasedSliGoodTotalRatio
     public string? TotalServiceFilter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecForProviderRequestBasedSli
 {
     /// <summary>Used when good_service is defined by a count of values aggregated in a Distribution that fall into a good range. The total_service is the total count of all values aggregated in the Distribution. Defines a distribution TimeSeries filter and thresholds used for measuring good service and total service. Exactly one of distribution_cut or good_total_ratio can be set. Structure is documented below.</summary>
@@ -123,6 +130,7 @@ public enum V1beta1SLOSpecForProviderServiceRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SLOSpecForProviderServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -136,6 +144,7 @@ public partial class V1beta1SLOSpecForProviderServiceRefPolicy
     public V1beta1SLOSpecForProviderServiceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a CustomService in monitoring to populate service.</summary>
 public partial class V1beta1SLOSpecForProviderServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -167,6 +176,7 @@ public enum V1beta1SLOSpecForProviderServiceSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SLOSpecForProviderServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -180,6 +190,7 @@ public partial class V1beta1SLOSpecForProviderServiceSelectorPolicy
     public V1beta1SLOSpecForProviderServiceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a CustomService in monitoring to populate service.</summary>
 public partial class V1beta1SLOSpecForProviderServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -195,6 +206,7 @@ public partial class V1beta1SLOSpecForProviderServiceSelector
     public V1beta1SLOSpecForProviderServiceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability
 {
     /// <summary>Whether an availability SLI is enabled or not. Must be set to true. Defaults to true.</summary>
@@ -202,6 +214,7 @@ public partial class V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThres
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency
 {
     /// <summary>A duration string, e.g. 10s. Good service is defined to be the count of requests made to this service that return in no more than threshold.</summary>
@@ -209,6 +222,7 @@ public partial class V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThres
     public string? Threshold { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance
 {
     /// <summary>Availability based SLI, dervied from count of requests made to this service that return successfully. Structure is documented below.</summary>
@@ -232,6 +246,7 @@ public partial class V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThres
     public IList<string>? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange
 {
     /// <summary>max value for the range (inclusive). If not given, will be set to 0</summary>
@@ -243,6 +258,7 @@ public partial class V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThres
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut
 {
     /// <summary>A TimeSeries monitoring filter aggregating values to quantify the good service provided. Must have ValueType = DISTRIBUTION and MetricKind = DELTA or MetricKind = CUMULATIVE.</summary>
@@ -254,6 +270,7 @@ public partial class V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThres
     public IList<V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange>? Range { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio
 {
     /// <summary>A TimeSeries monitoring filter quantifying bad service provided, either demanded service that was not provided or demanded service that was of inadequate quality. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE. Exactly two of good_service_filter,bad_service_filter,total_service_filter must be set (good + bad = total is assumed).</summary>
@@ -269,6 +286,7 @@ public partial class V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThres
     public string? TotalServiceFilter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThresholdPerformance
 {
     /// <summary>Used when good_service is defined by a count of values aggregated in a Distribution that fall into a good range. The total_service is the total count of all values aggregated in the Distribution. Defines a distribution TimeSeries filter and thresholds used for measuring good service and total service. Exactly one of distribution_cut or good_total_ratio can be set. Structure is documented below.</summary>
@@ -280,6 +298,7 @@ public partial class V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThres
     public IList<V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio>? GoodTotalRatio { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThreshold
 {
     /// <summary>Basic SLI to evaluate to judge window quality. Structure is documented below.</summary>
@@ -295,6 +314,7 @@ public partial class V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThres
     public double? Threshold { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecForProviderWindowsBasedSliMetricMeanInRangeRange
 {
     /// <summary>max value for the range (inclusive). If not given, will be set to 0</summary>
@@ -306,6 +326,7 @@ public partial class V1beta1SLOSpecForProviderWindowsBasedSliMetricMeanInRangeRa
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecForProviderWindowsBasedSliMetricMeanInRange
 {
     /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min &lt;= x &lt;= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min &lt;= X &lt;= range.max for a good window. Structure is documented below.</summary>
@@ -317,6 +338,7 @@ public partial class V1beta1SLOSpecForProviderWindowsBasedSliMetricMeanInRange
     public string? TimeSeries { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecForProviderWindowsBasedSliMetricSumInRangeRange
 {
     /// <summary>max value for the range (inclusive). If not given, will be set to 0</summary>
@@ -328,6 +350,7 @@ public partial class V1beta1SLOSpecForProviderWindowsBasedSliMetricSumInRangeRan
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecForProviderWindowsBasedSliMetricSumInRange
 {
     /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min &lt;= x &lt;= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min &lt;= X &lt;= range.max for a good window. Structure is documented below.</summary>
@@ -339,6 +362,7 @@ public partial class V1beta1SLOSpecForProviderWindowsBasedSliMetricSumInRange
     public string? TimeSeries { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecForProviderWindowsBasedSli
 {
     /// <summary>A TimeSeries monitoring filter with ValueType = BOOL. The window is good if any true values appear in the window. One of good_bad_metric_filter, good_total_ratio_threshold, metric_mean_in_range, metric_sum_in_range must be set for windows_based_sli.</summary>
@@ -362,6 +386,7 @@ public partial class V1beta1SLOSpecForProviderWindowsBasedSli
     public string? WindowPeriod { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecForProvider
 {
     /// <summary>Basic Service-Level Indicator (SLI) on a well-known service type. Performance will be computed on the basis of pre-defined metrics. SLIs are used to measure and calculate the quality of the Service's performance with respect to a single aspect of service quality. Exactly one of the following must be set: basic_sli, request_based_sli, windows_based_sli Structure is documented below.</summary>
@@ -417,6 +442,7 @@ public partial class V1beta1SLOSpecForProvider
     public IList<V1beta1SLOSpecForProviderWindowsBasedSli>? WindowsBasedSli { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecInitProviderBasicSliAvailability
 {
     /// <summary>Whether an availability SLI is enabled or not. Must be set to true. Defaults to true.</summary>
@@ -424,6 +450,7 @@ public partial class V1beta1SLOSpecInitProviderBasicSliAvailability
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecInitProviderBasicSliLatency
 {
     /// <summary>A duration string, e.g. 10s. Good service is defined to be the count of requests made to this service that return in no more than threshold.</summary>
@@ -431,6 +458,7 @@ public partial class V1beta1SLOSpecInitProviderBasicSliLatency
     public string? Threshold { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecInitProviderBasicSli
 {
     /// <summary>Availability based SLI, dervied from count of requests made to this service that return successfully. Structure is documented below.</summary>
@@ -454,6 +482,7 @@ public partial class V1beta1SLOSpecInitProviderBasicSli
     public IList<string>? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecInitProviderRequestBasedSliDistributionCutRange
 {
     /// <summary>max value for the range (inclusive). If not given, will be set to 0</summary>
@@ -465,6 +494,7 @@ public partial class V1beta1SLOSpecInitProviderRequestBasedSliDistributionCutRan
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecInitProviderRequestBasedSliDistributionCut
 {
     /// <summary>A TimeSeries monitoring filter aggregating values to quantify the good service provided. Must have ValueType = DISTRIBUTION and MetricKind = DELTA or MetricKind = CUMULATIVE.</summary>
@@ -476,6 +506,7 @@ public partial class V1beta1SLOSpecInitProviderRequestBasedSliDistributionCut
     public IList<V1beta1SLOSpecInitProviderRequestBasedSliDistributionCutRange>? Range { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecInitProviderRequestBasedSliGoodTotalRatio
 {
     /// <summary>A TimeSeries monitoring filter quantifying bad service provided, either demanded service that was not provided or demanded service that was of inadequate quality. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE. Exactly two of good_service_filter,bad_service_filter,total_service_filter must be set (good + bad = total is assumed).</summary>
@@ -491,6 +522,7 @@ public partial class V1beta1SLOSpecInitProviderRequestBasedSliGoodTotalRatio
     public string? TotalServiceFilter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecInitProviderRequestBasedSli
 {
     /// <summary>Used when good_service is defined by a count of values aggregated in a Distribution that fall into a good range. The total_service is the total count of all values aggregated in the Distribution. Defines a distribution TimeSeries filter and thresholds used for measuring good service and total service. Exactly one of distribution_cut or good_total_ratio can be set. Structure is documented below.</summary>
@@ -522,6 +554,7 @@ public enum V1beta1SLOSpecInitProviderServiceRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SLOSpecInitProviderServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -535,6 +568,7 @@ public partial class V1beta1SLOSpecInitProviderServiceRefPolicy
     public V1beta1SLOSpecInitProviderServiceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a CustomService in monitoring to populate service.</summary>
 public partial class V1beta1SLOSpecInitProviderServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -566,6 +600,7 @@ public enum V1beta1SLOSpecInitProviderServiceSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SLOSpecInitProviderServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -579,6 +614,7 @@ public partial class V1beta1SLOSpecInitProviderServiceSelectorPolicy
     public V1beta1SLOSpecInitProviderServiceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a CustomService in monitoring to populate service.</summary>
 public partial class V1beta1SLOSpecInitProviderServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -594,6 +630,7 @@ public partial class V1beta1SLOSpecInitProviderServiceSelector
     public V1beta1SLOSpecInitProviderServiceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability
 {
     /// <summary>Whether an availability SLI is enabled or not. Must be set to true. Defaults to true.</summary>
@@ -601,6 +638,7 @@ public partial class V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThre
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency
 {
     /// <summary>A duration string, e.g. 10s. Good service is defined to be the count of requests made to this service that return in no more than threshold.</summary>
@@ -608,6 +646,7 @@ public partial class V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThre
     public string? Threshold { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance
 {
     /// <summary>Availability based SLI, dervied from count of requests made to this service that return successfully. Structure is documented below.</summary>
@@ -631,6 +670,7 @@ public partial class V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThre
     public IList<string>? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange
 {
     /// <summary>max value for the range (inclusive). If not given, will be set to 0</summary>
@@ -642,6 +682,7 @@ public partial class V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThre
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut
 {
     /// <summary>A TimeSeries monitoring filter aggregating values to quantify the good service provided. Must have ValueType = DISTRIBUTION and MetricKind = DELTA or MetricKind = CUMULATIVE.</summary>
@@ -653,6 +694,7 @@ public partial class V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThre
     public IList<V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange>? Range { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio
 {
     /// <summary>A TimeSeries monitoring filter quantifying bad service provided, either demanded service that was not provided or demanded service that was of inadequate quality. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE. Exactly two of good_service_filter,bad_service_filter,total_service_filter must be set (good + bad = total is assumed).</summary>
@@ -668,6 +710,7 @@ public partial class V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThre
     public string? TotalServiceFilter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThresholdPerformance
 {
     /// <summary>Used when good_service is defined by a count of values aggregated in a Distribution that fall into a good range. The total_service is the total count of all values aggregated in the Distribution. Defines a distribution TimeSeries filter and thresholds used for measuring good service and total service. Exactly one of distribution_cut or good_total_ratio can be set. Structure is documented below.</summary>
@@ -679,6 +722,7 @@ public partial class V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThre
     public IList<V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio>? GoodTotalRatio { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThreshold
 {
     /// <summary>Basic SLI to evaluate to judge window quality. Structure is documented below.</summary>
@@ -694,6 +738,7 @@ public partial class V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThre
     public double? Threshold { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecInitProviderWindowsBasedSliMetricMeanInRangeRange
 {
     /// <summary>max value for the range (inclusive). If not given, will be set to 0</summary>
@@ -705,6 +750,7 @@ public partial class V1beta1SLOSpecInitProviderWindowsBasedSliMetricMeanInRangeR
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecInitProviderWindowsBasedSliMetricMeanInRange
 {
     /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min &lt;= x &lt;= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min &lt;= X &lt;= range.max for a good window. Structure is documented below.</summary>
@@ -716,6 +762,7 @@ public partial class V1beta1SLOSpecInitProviderWindowsBasedSliMetricMeanInRange
     public string? TimeSeries { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecInitProviderWindowsBasedSliMetricSumInRangeRange
 {
     /// <summary>max value for the range (inclusive). If not given, will be set to 0</summary>
@@ -727,6 +774,7 @@ public partial class V1beta1SLOSpecInitProviderWindowsBasedSliMetricSumInRangeRa
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecInitProviderWindowsBasedSliMetricSumInRange
 {
     /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min &lt;= x &lt;= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min &lt;= X &lt;= range.max for a good window. Structure is documented below.</summary>
@@ -738,6 +786,7 @@ public partial class V1beta1SLOSpecInitProviderWindowsBasedSliMetricSumInRange
     public string? TimeSeries { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOSpecInitProviderWindowsBasedSli
 {
     /// <summary>A TimeSeries monitoring filter with ValueType = BOOL. The window is good if any true values appear in the window. One of good_bad_metric_filter, good_total_ratio_threshold, metric_mean_in_range, metric_sum_in_range must be set for windows_based_sli.</summary>
@@ -761,6 +810,7 @@ public partial class V1beta1SLOSpecInitProviderWindowsBasedSli
     public string? WindowPeriod { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1SLOSpecInitProvider
 {
     /// <summary>Basic Service-Level Indicator (SLI) on a well-known service type. Performance will be computed on the basis of pre-defined metrics. SLIs are used to measure and calculate the quality of the Service's performance with respect to a single aspect of service quality. Exactly one of the following must be set: basic_sli, request_based_sli, windows_based_sli Structure is documented below.</summary>
@@ -858,6 +908,7 @@ public enum V1beta1SLOSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SLOSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -871,6 +922,7 @@ public partial class V1beta1SLOSpecProviderConfigRefPolicy
     public V1beta1SLOSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1SLOSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -902,6 +954,7 @@ public enum V1beta1SLOSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SLOSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -915,6 +968,7 @@ public partial class V1beta1SLOSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1SLOSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1SLOSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -926,6 +980,7 @@ public partial class V1beta1SLOSpecPublishConnectionDetailsToConfigRef
     public V1beta1SLOSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1SLOSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -941,6 +996,7 @@ public partial class V1beta1SLOSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1SLOSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -956,6 +1012,7 @@ public partial class V1beta1SLOSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1SLOSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -967,6 +1024,7 @@ public partial class V1beta1SLOSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>SLOSpec defines the desired state of SLO</summary>
 public partial class V1beta1SLOSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -999,6 +1057,7 @@ public partial class V1beta1SLOSpec
     public V1beta1SLOSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOStatusAtProviderBasicSliAvailability
 {
     /// <summary>Whether an availability SLI is enabled or not. Must be set to true. Defaults to true.</summary>
@@ -1006,6 +1065,7 @@ public partial class V1beta1SLOStatusAtProviderBasicSliAvailability
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOStatusAtProviderBasicSliLatency
 {
     /// <summary>A duration string, e.g. 10s. Good service is defined to be the count of requests made to this service that return in no more than threshold.</summary>
@@ -1013,6 +1073,7 @@ public partial class V1beta1SLOStatusAtProviderBasicSliLatency
     public string? Threshold { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOStatusAtProviderBasicSli
 {
     /// <summary>Availability based SLI, dervied from count of requests made to this service that return successfully. Structure is documented below.</summary>
@@ -1036,6 +1097,7 @@ public partial class V1beta1SLOStatusAtProviderBasicSli
     public IList<string>? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOStatusAtProviderRequestBasedSliDistributionCutRange
 {
     /// <summary>max value for the range (inclusive). If not given, will be set to 0</summary>
@@ -1047,6 +1109,7 @@ public partial class V1beta1SLOStatusAtProviderRequestBasedSliDistributionCutRan
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOStatusAtProviderRequestBasedSliDistributionCut
 {
     /// <summary>A TimeSeries monitoring filter aggregating values to quantify the good service provided. Must have ValueType = DISTRIBUTION and MetricKind = DELTA or MetricKind = CUMULATIVE.</summary>
@@ -1058,6 +1121,7 @@ public partial class V1beta1SLOStatusAtProviderRequestBasedSliDistributionCut
     public IList<V1beta1SLOStatusAtProviderRequestBasedSliDistributionCutRange>? Range { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOStatusAtProviderRequestBasedSliGoodTotalRatio
 {
     /// <summary>A TimeSeries monitoring filter quantifying bad service provided, either demanded service that was not provided or demanded service that was of inadequate quality. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE. Exactly two of good_service_filter,bad_service_filter,total_service_filter must be set (good + bad = total is assumed).</summary>
@@ -1073,6 +1137,7 @@ public partial class V1beta1SLOStatusAtProviderRequestBasedSliGoodTotalRatio
     public string? TotalServiceFilter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOStatusAtProviderRequestBasedSli
 {
     /// <summary>Used when good_service is defined by a count of values aggregated in a Distribution that fall into a good range. The total_service is the total count of all values aggregated in the Distribution. Defines a distribution TimeSeries filter and thresholds used for measuring good service and total service. Exactly one of distribution_cut or good_total_ratio can be set. Structure is documented below.</summary>
@@ -1084,6 +1149,7 @@ public partial class V1beta1SLOStatusAtProviderRequestBasedSli
     public IList<V1beta1SLOStatusAtProviderRequestBasedSliGoodTotalRatio>? GoodTotalRatio { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability
 {
     /// <summary>Whether an availability SLI is enabled or not. Must be set to true. Defaults to true.</summary>
@@ -1091,6 +1157,7 @@ public partial class V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThre
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency
 {
     /// <summary>A duration string, e.g. 10s. Good service is defined to be the count of requests made to this service that return in no more than threshold.</summary>
@@ -1098,6 +1165,7 @@ public partial class V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThre
     public string? Threshold { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance
 {
     /// <summary>Availability based SLI, dervied from count of requests made to this service that return successfully. Structure is documented below.</summary>
@@ -1121,6 +1189,7 @@ public partial class V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThre
     public IList<string>? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange
 {
     /// <summary>max value for the range (inclusive). If not given, will be set to 0</summary>
@@ -1132,6 +1201,7 @@ public partial class V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThre
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut
 {
     /// <summary>A TimeSeries monitoring filter aggregating values to quantify the good service provided. Must have ValueType = DISTRIBUTION and MetricKind = DELTA or MetricKind = CUMULATIVE.</summary>
@@ -1143,6 +1213,7 @@ public partial class V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThre
     public IList<V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange>? Range { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio
 {
     /// <summary>A TimeSeries monitoring filter quantifying bad service provided, either demanded service that was not provided or demanded service that was of inadequate quality. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE. Exactly two of good_service_filter,bad_service_filter,total_service_filter must be set (good + bad = total is assumed).</summary>
@@ -1158,6 +1229,7 @@ public partial class V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThre
     public string? TotalServiceFilter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThresholdPerformance
 {
     /// <summary>Used when good_service is defined by a count of values aggregated in a Distribution that fall into a good range. The total_service is the total count of all values aggregated in the Distribution. Defines a distribution TimeSeries filter and thresholds used for measuring good service and total service. Exactly one of distribution_cut or good_total_ratio can be set. Structure is documented below.</summary>
@@ -1169,6 +1241,7 @@ public partial class V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThre
     public IList<V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio>? GoodTotalRatio { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThreshold
 {
     /// <summary>Basic SLI to evaluate to judge window quality. Structure is documented below.</summary>
@@ -1184,6 +1257,7 @@ public partial class V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThre
     public double? Threshold { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOStatusAtProviderWindowsBasedSliMetricMeanInRangeRange
 {
     /// <summary>max value for the range (inclusive). If not given, will be set to 0</summary>
@@ -1195,6 +1269,7 @@ public partial class V1beta1SLOStatusAtProviderWindowsBasedSliMetricMeanInRangeR
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOStatusAtProviderWindowsBasedSliMetricMeanInRange
 {
     /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min &lt;= x &lt;= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min &lt;= X &lt;= range.max for a good window. Structure is documented below.</summary>
@@ -1206,6 +1281,7 @@ public partial class V1beta1SLOStatusAtProviderWindowsBasedSliMetricMeanInRange
     public string? TimeSeries { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOStatusAtProviderWindowsBasedSliMetricSumInRangeRange
 {
     /// <summary>max value for the range (inclusive). If not given, will be set to 0</summary>
@@ -1217,6 +1293,7 @@ public partial class V1beta1SLOStatusAtProviderWindowsBasedSliMetricSumInRangeRa
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOStatusAtProviderWindowsBasedSliMetricSumInRange
 {
     /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min &lt;= x &lt;= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min &lt;= X &lt;= range.max for a good window. Structure is documented below.</summary>
@@ -1228,6 +1305,7 @@ public partial class V1beta1SLOStatusAtProviderWindowsBasedSliMetricSumInRange
     public string? TimeSeries { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOStatusAtProviderWindowsBasedSli
 {
     /// <summary>A TimeSeries monitoring filter with ValueType = BOOL. The window is good if any true values appear in the window. One of good_bad_metric_filter, good_total_ratio_threshold, metric_mean_in_range, metric_sum_in_range must be set for windows_based_sli.</summary>
@@ -1251,6 +1329,7 @@ public partial class V1beta1SLOStatusAtProviderWindowsBasedSli
     public string? WindowPeriod { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SLOStatusAtProvider
 {
     /// <summary>Basic Service-Level Indicator (SLI) on a well-known service type. Performance will be computed on the basis of pre-defined metrics. SLIs are used to measure and calculate the quality of the Service's performance with respect to a single aspect of service quality. Exactly one of the following must be set: basic_sli, request_based_sli, windows_based_sli Structure is documented below.</summary>
@@ -1306,6 +1385,7 @@ public partial class V1beta1SLOStatusAtProvider
     public IList<V1beta1SLOStatusAtProviderWindowsBasedSli>? WindowsBasedSli { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1SLOStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1333,6 +1413,7 @@ public partial class V1beta1SLOStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>SLOStatus defines the observed state of SLO.</summary>
 public partial class V1beta1SLOStatus
 {
     /// <summary></summary>
@@ -1349,6 +1430,7 @@ public partial class V1beta1SLOStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>SLO is the Schema for the SLOs API. A Service-Level Objective (SLO) describes the level of desired good service.</summary>
 public partial class V1beta1SLO : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SLOSpec>, IStatus<V1beta1SLOStatus>
 {
     public const string KubeApiVersion = "v1beta1";

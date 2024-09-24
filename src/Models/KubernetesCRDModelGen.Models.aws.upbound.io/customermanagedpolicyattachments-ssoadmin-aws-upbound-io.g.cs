@@ -38,6 +38,7 @@ public enum V1beta1CustomerManagedPolicyAttachmentSpecForProviderCustomerManaged
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecForProviderCustomerManagedPolicyReferencePolicyNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1CustomerManagedPolicyAttachmentSpecForProviderCustom
     public V1beta1CustomerManagedPolicyAttachmentSpecForProviderCustomerManagedPolicyReferencePolicyNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Policy in iam to populate name.</summary>
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecForProviderCustomerManagedPolicyReferencePolicyNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1CustomerManagedPolicyAttachmentSpecForProviderCustomerManaged
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecForProviderCustomerManagedPolicyReferencePolicyNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1CustomerManagedPolicyAttachmentSpecForProviderCustom
     public V1beta1CustomerManagedPolicyAttachmentSpecForProviderCustomerManagedPolicyReferencePolicyNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Policy in iam to populate name.</summary>
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecForProviderCustomerManagedPolicyReferencePolicyNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1CustomerManagedPolicyAttachmentSpecForProviderCustom
     public V1beta1CustomerManagedPolicyAttachmentSpecForProviderCustomerManagedPolicyReferencePolicyNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecForProviderCustomerManagedPolicyReference
 {
     /// <summary>Name of the customer managed IAM Policy to be attached.</summary>
@@ -149,6 +154,7 @@ public enum V1beta1CustomerManagedPolicyAttachmentSpecForProviderPermissionSetAr
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecForProviderPermissionSetArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -162,6 +168,7 @@ public partial class V1beta1CustomerManagedPolicyAttachmentSpecForProviderPermis
     public V1beta1CustomerManagedPolicyAttachmentSpecForProviderPermissionSetArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a PermissionSet in ssoadmin to populate permissionSetArn.</summary>
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecForProviderPermissionSetArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -193,6 +200,7 @@ public enum V1beta1CustomerManagedPolicyAttachmentSpecForProviderPermissionSetAr
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecForProviderPermissionSetArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -206,6 +214,7 @@ public partial class V1beta1CustomerManagedPolicyAttachmentSpecForProviderPermis
     public V1beta1CustomerManagedPolicyAttachmentSpecForProviderPermissionSetArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a PermissionSet in ssoadmin to populate permissionSetArn.</summary>
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecForProviderPermissionSetArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -221,6 +230,7 @@ public partial class V1beta1CustomerManagedPolicyAttachmentSpecForProviderPermis
     public V1beta1CustomerManagedPolicyAttachmentSpecForProviderPermissionSetArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecForProvider
 {
     /// <summary>Specifies the name and path of a customer managed policy. See below.</summary>
@@ -268,6 +278,7 @@ public enum V1beta1CustomerManagedPolicyAttachmentSpecInitProviderCustomerManage
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecInitProviderCustomerManagedPolicyReferencePolicyNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -281,6 +292,7 @@ public partial class V1beta1CustomerManagedPolicyAttachmentSpecInitProviderCusto
     public V1beta1CustomerManagedPolicyAttachmentSpecInitProviderCustomerManagedPolicyReferencePolicyNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Policy in iam to populate name.</summary>
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecInitProviderCustomerManagedPolicyReferencePolicyNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -312,6 +324,7 @@ public enum V1beta1CustomerManagedPolicyAttachmentSpecInitProviderCustomerManage
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecInitProviderCustomerManagedPolicyReferencePolicyNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -325,6 +338,7 @@ public partial class V1beta1CustomerManagedPolicyAttachmentSpecInitProviderCusto
     public V1beta1CustomerManagedPolicyAttachmentSpecInitProviderCustomerManagedPolicyReferencePolicyNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Policy in iam to populate name.</summary>
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecInitProviderCustomerManagedPolicyReferencePolicyNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -340,6 +354,7 @@ public partial class V1beta1CustomerManagedPolicyAttachmentSpecInitProviderCusto
     public V1beta1CustomerManagedPolicyAttachmentSpecInitProviderCustomerManagedPolicyReferencePolicyNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecInitProviderCustomerManagedPolicyReference
 {
     /// <summary>Name of the customer managed IAM Policy to be attached.</summary>
@@ -359,6 +374,7 @@ public partial class V1beta1CustomerManagedPolicyAttachmentSpecInitProviderCusto
     public V1beta1CustomerManagedPolicyAttachmentSpecInitProviderCustomerManagedPolicyReferencePolicyNameSelector? PolicyNameSelector { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecInitProvider
 {
     /// <summary>Specifies the name and path of a customer managed policy. See below.</summary>
@@ -408,6 +424,7 @@ public enum V1beta1CustomerManagedPolicyAttachmentSpecProviderConfigRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -421,6 +438,7 @@ public partial class V1beta1CustomerManagedPolicyAttachmentSpecProviderConfigRef
     public V1beta1CustomerManagedPolicyAttachmentSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -452,6 +470,7 @@ public enum V1beta1CustomerManagedPolicyAttachmentSpecPublishConnectionDetailsTo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -465,6 +484,7 @@ public partial class V1beta1CustomerManagedPolicyAttachmentSpecPublishConnection
     public V1beta1CustomerManagedPolicyAttachmentSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -476,6 +496,7 @@ public partial class V1beta1CustomerManagedPolicyAttachmentSpecPublishConnection
     public V1beta1CustomerManagedPolicyAttachmentSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -491,6 +512,7 @@ public partial class V1beta1CustomerManagedPolicyAttachmentSpecPublishConnection
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -506,6 +528,7 @@ public partial class V1beta1CustomerManagedPolicyAttachmentSpecPublishConnection
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -517,6 +540,7 @@ public partial class V1beta1CustomerManagedPolicyAttachmentSpecWriteConnectionSe
     public string Namespace { get; set; }
 }
 
+/// <summary>CustomerManagedPolicyAttachmentSpec defines the desired state of CustomerManagedPolicyAttachment</summary>
 public partial class V1beta1CustomerManagedPolicyAttachmentSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -549,6 +573,7 @@ public partial class V1beta1CustomerManagedPolicyAttachmentSpec
     public V1beta1CustomerManagedPolicyAttachmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomerManagedPolicyAttachmentStatusAtProviderCustomerManagedPolicyReference
 {
     /// <summary>Name of the customer managed IAM Policy to be attached.</summary>
@@ -560,6 +585,7 @@ public partial class V1beta1CustomerManagedPolicyAttachmentStatusAtProviderCusto
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomerManagedPolicyAttachmentStatusAtProvider
 {
     /// <summary>Specifies the name and path of a customer managed policy. See below.</summary>
@@ -579,6 +605,7 @@ public partial class V1beta1CustomerManagedPolicyAttachmentStatusAtProvider
     public string? PermissionSetArn { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1CustomerManagedPolicyAttachmentStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -606,6 +633,7 @@ public partial class V1beta1CustomerManagedPolicyAttachmentStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>CustomerManagedPolicyAttachmentStatus defines the observed state of CustomerManagedPolicyAttachment.</summary>
 public partial class V1beta1CustomerManagedPolicyAttachmentStatus
 {
     /// <summary></summary>
@@ -622,6 +650,7 @@ public partial class V1beta1CustomerManagedPolicyAttachmentStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>CustomerManagedPolicyAttachment is the Schema for the CustomerManagedPolicyAttachments API. Manages a customer managed policy for a Single Sign-On (SSO) Permission Set</summary>
 public partial class V1beta1CustomerManagedPolicyAttachment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1CustomerManagedPolicyAttachmentSpec>, IStatus<V1beta1CustomerManagedPolicyAttachmentStatus>
 {
     public const string KubeApiVersion = "v1beta1";

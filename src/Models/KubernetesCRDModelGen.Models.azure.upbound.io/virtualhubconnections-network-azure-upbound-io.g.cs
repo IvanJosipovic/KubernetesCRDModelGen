@@ -38,6 +38,7 @@ public enum V1beta1VirtualHubConnectionSpecForProviderRemoteVirtualNetworkIdRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualHubConnectionSpecForProviderRemoteVirtualNetworkIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1VirtualHubConnectionSpecForProviderRemoteVirtualNetw
     public V1beta1VirtualHubConnectionSpecForProviderRemoteVirtualNetworkIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VirtualNetwork in network to populate remoteVirtualNetworkId.</summary>
 public partial class V1beta1VirtualHubConnectionSpecForProviderRemoteVirtualNetworkIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1VirtualHubConnectionSpecForProviderRemoteVirtualNetworkIdSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VirtualHubConnectionSpecForProviderRemoteVirtualNetworkIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1VirtualHubConnectionSpecForProviderRemoteVirtualNetw
     public V1beta1VirtualHubConnectionSpecForProviderRemoteVirtualNetworkIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VirtualNetwork in network to populate remoteVirtualNetworkId.</summary>
 public partial class V1beta1VirtualHubConnectionSpecForProviderRemoteVirtualNetworkIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1VirtualHubConnectionSpecForProviderRoutingAssociatedRouteTabl
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualHubConnectionSpecForProviderRoutingAssociatedRouteTableIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1VirtualHubConnectionSpecForProviderRoutingAssociated
     public V1beta1VirtualHubConnectionSpecForProviderRoutingAssociatedRouteTableIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VirtualHubRouteTable in network to populate associatedRouteTableId.</summary>
 public partial class V1beta1VirtualHubConnectionSpecForProviderRoutingAssociatedRouteTableIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1VirtualHubConnectionSpecForProviderRoutingAssociatedRouteTabl
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VirtualHubConnectionSpecForProviderRoutingAssociatedRouteTableIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1VirtualHubConnectionSpecForProviderRoutingAssociated
     public V1beta1VirtualHubConnectionSpecForProviderRoutingAssociatedRouteTableIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VirtualHubRouteTable in network to populate associatedRouteTableId.</summary>
 public partial class V1beta1VirtualHubConnectionSpecForProviderRoutingAssociatedRouteTableIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1VirtualHubConnectionSpecForProviderRoutingAssociated
     public V1beta1VirtualHubConnectionSpecForProviderRoutingAssociatedRouteTableIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualHubConnectionSpecForProviderRoutingPropagatedRouteTable
 {
     /// <summary>The list of labels to assign to this route table.</summary>
@@ -213,6 +222,7 @@ public partial class V1beta1VirtualHubConnectionSpecForProviderRoutingPropagated
     public IList<string>? RouteTableIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualHubConnectionSpecForProviderRoutingStaticVnetRoute
 {
     /// <summary>A list of CIDR Ranges which should be used as Address Prefixes.</summary>
@@ -228,6 +238,7 @@ public partial class V1beta1VirtualHubConnectionSpecForProviderRoutingStaticVnet
     public string? NextHopIpAddress { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualHubConnectionSpecForProviderRouting
 {
     /// <summary>The ID of the route table associated with this Virtual Hub connection.</summary>
@@ -283,6 +294,7 @@ public enum V1beta1VirtualHubConnectionSpecForProviderVirtualHubIdRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualHubConnectionSpecForProviderVirtualHubIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -296,6 +308,7 @@ public partial class V1beta1VirtualHubConnectionSpecForProviderVirtualHubIdRefPo
     public V1beta1VirtualHubConnectionSpecForProviderVirtualHubIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VirtualHub in network to populate virtualHubId.</summary>
 public partial class V1beta1VirtualHubConnectionSpecForProviderVirtualHubIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -327,6 +340,7 @@ public enum V1beta1VirtualHubConnectionSpecForProviderVirtualHubIdSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VirtualHubConnectionSpecForProviderVirtualHubIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -340,6 +354,7 @@ public partial class V1beta1VirtualHubConnectionSpecForProviderVirtualHubIdSelec
     public V1beta1VirtualHubConnectionSpecForProviderVirtualHubIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VirtualHub in network to populate virtualHubId.</summary>
 public partial class V1beta1VirtualHubConnectionSpecForProviderVirtualHubIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -355,6 +370,7 @@ public partial class V1beta1VirtualHubConnectionSpecForProviderVirtualHubIdSelec
     public V1beta1VirtualHubConnectionSpecForProviderVirtualHubIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualHubConnectionSpecForProvider
 {
     /// <summary>Should Internet Security be enabled to secure internet traffic? Defaults to false.</summary>
@@ -410,6 +426,7 @@ public enum V1beta1VirtualHubConnectionSpecInitProviderRemoteVirtualNetworkIdRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualHubConnectionSpecInitProviderRemoteVirtualNetworkIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -423,6 +440,7 @@ public partial class V1beta1VirtualHubConnectionSpecInitProviderRemoteVirtualNet
     public V1beta1VirtualHubConnectionSpecInitProviderRemoteVirtualNetworkIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VirtualNetwork in network to populate remoteVirtualNetworkId.</summary>
 public partial class V1beta1VirtualHubConnectionSpecInitProviderRemoteVirtualNetworkIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -454,6 +472,7 @@ public enum V1beta1VirtualHubConnectionSpecInitProviderRemoteVirtualNetworkIdSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VirtualHubConnectionSpecInitProviderRemoteVirtualNetworkIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -467,6 +486,7 @@ public partial class V1beta1VirtualHubConnectionSpecInitProviderRemoteVirtualNet
     public V1beta1VirtualHubConnectionSpecInitProviderRemoteVirtualNetworkIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VirtualNetwork in network to populate remoteVirtualNetworkId.</summary>
 public partial class V1beta1VirtualHubConnectionSpecInitProviderRemoteVirtualNetworkIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -502,6 +522,7 @@ public enum V1beta1VirtualHubConnectionSpecInitProviderRoutingAssociatedRouteTab
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualHubConnectionSpecInitProviderRoutingAssociatedRouteTableIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -515,6 +536,7 @@ public partial class V1beta1VirtualHubConnectionSpecInitProviderRoutingAssociate
     public V1beta1VirtualHubConnectionSpecInitProviderRoutingAssociatedRouteTableIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VirtualHubRouteTable in network to populate associatedRouteTableId.</summary>
 public partial class V1beta1VirtualHubConnectionSpecInitProviderRoutingAssociatedRouteTableIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -546,6 +568,7 @@ public enum V1beta1VirtualHubConnectionSpecInitProviderRoutingAssociatedRouteTab
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VirtualHubConnectionSpecInitProviderRoutingAssociatedRouteTableIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -559,6 +582,7 @@ public partial class V1beta1VirtualHubConnectionSpecInitProviderRoutingAssociate
     public V1beta1VirtualHubConnectionSpecInitProviderRoutingAssociatedRouteTableIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VirtualHubRouteTable in network to populate associatedRouteTableId.</summary>
 public partial class V1beta1VirtualHubConnectionSpecInitProviderRoutingAssociatedRouteTableIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -574,6 +598,7 @@ public partial class V1beta1VirtualHubConnectionSpecInitProviderRoutingAssociate
     public V1beta1VirtualHubConnectionSpecInitProviderRoutingAssociatedRouteTableIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualHubConnectionSpecInitProviderRoutingPropagatedRouteTable
 {
     /// <summary>The list of labels to assign to this route table.</summary>
@@ -585,6 +610,7 @@ public partial class V1beta1VirtualHubConnectionSpecInitProviderRoutingPropagate
     public IList<string>? RouteTableIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualHubConnectionSpecInitProviderRoutingStaticVnetRoute
 {
     /// <summary>A list of CIDR Ranges which should be used as Address Prefixes.</summary>
@@ -600,6 +626,7 @@ public partial class V1beta1VirtualHubConnectionSpecInitProviderRoutingStaticVne
     public string? NextHopIpAddress { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualHubConnectionSpecInitProviderRouting
 {
     /// <summary>The ID of the route table associated with this Virtual Hub connection.</summary>
@@ -635,6 +662,7 @@ public partial class V1beta1VirtualHubConnectionSpecInitProviderRouting
     public IList<V1beta1VirtualHubConnectionSpecInitProviderRoutingStaticVnetRoute>? StaticVnetRoute { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1VirtualHubConnectionSpecInitProvider
 {
     /// <summary>Should Internet Security be enabled to secure internet traffic? Defaults to false.</summary>
@@ -700,6 +728,7 @@ public enum V1beta1VirtualHubConnectionSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualHubConnectionSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -713,6 +742,7 @@ public partial class V1beta1VirtualHubConnectionSpecProviderConfigRefPolicy
     public V1beta1VirtualHubConnectionSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1VirtualHubConnectionSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -744,6 +774,7 @@ public enum V1beta1VirtualHubConnectionSpecPublishConnectionDetailsToConfigRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualHubConnectionSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -757,6 +788,7 @@ public partial class V1beta1VirtualHubConnectionSpecPublishConnectionDetailsToCo
     public V1beta1VirtualHubConnectionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1VirtualHubConnectionSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -768,6 +800,7 @@ public partial class V1beta1VirtualHubConnectionSpecPublishConnectionDetailsToCo
     public V1beta1VirtualHubConnectionSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1VirtualHubConnectionSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -783,6 +816,7 @@ public partial class V1beta1VirtualHubConnectionSpecPublishConnectionDetailsToMe
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1VirtualHubConnectionSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -798,6 +832,7 @@ public partial class V1beta1VirtualHubConnectionSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1VirtualHubConnectionSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -809,6 +844,7 @@ public partial class V1beta1VirtualHubConnectionSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>VirtualHubConnectionSpec defines the desired state of VirtualHubConnection</summary>
 public partial class V1beta1VirtualHubConnectionSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -841,6 +877,7 @@ public partial class V1beta1VirtualHubConnectionSpec
     public V1beta1VirtualHubConnectionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualHubConnectionStatusAtProviderRoutingPropagatedRouteTable
 {
     /// <summary>The list of labels to assign to this route table.</summary>
@@ -852,6 +889,7 @@ public partial class V1beta1VirtualHubConnectionStatusAtProviderRoutingPropagate
     public IList<string>? RouteTableIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualHubConnectionStatusAtProviderRoutingStaticVnetRoute
 {
     /// <summary>A list of CIDR Ranges which should be used as Address Prefixes.</summary>
@@ -867,6 +905,7 @@ public partial class V1beta1VirtualHubConnectionStatusAtProviderRoutingStaticVne
     public string? NextHopIpAddress { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualHubConnectionStatusAtProviderRouting
 {
     /// <summary>The ID of the route table associated with this Virtual Hub connection.</summary>
@@ -894,6 +933,7 @@ public partial class V1beta1VirtualHubConnectionStatusAtProviderRouting
     public IList<V1beta1VirtualHubConnectionStatusAtProviderRoutingStaticVnetRoute>? StaticVnetRoute { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualHubConnectionStatusAtProvider
 {
     /// <summary>The ID of the Virtual Hub Connection.</summary>
@@ -917,6 +957,7 @@ public partial class V1beta1VirtualHubConnectionStatusAtProvider
     public string? VirtualHubId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1VirtualHubConnectionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -944,6 +985,7 @@ public partial class V1beta1VirtualHubConnectionStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>VirtualHubConnectionStatus defines the observed state of VirtualHubConnection.</summary>
 public partial class V1beta1VirtualHubConnectionStatus
 {
     /// <summary></summary>
@@ -960,6 +1002,7 @@ public partial class V1beta1VirtualHubConnectionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>VirtualHubConnection is the Schema for the VirtualHubConnections API. Manages a Connection for a Virtual Hub.</summary>
 public partial class V1beta1VirtualHubConnection : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1VirtualHubConnectionSpec>, IStatus<V1beta1VirtualHubConnectionStatus>
 {
     public const string KubeApiVersion = "v1beta1";

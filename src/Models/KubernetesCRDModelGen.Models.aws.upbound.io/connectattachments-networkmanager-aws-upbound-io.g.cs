@@ -38,6 +38,7 @@ public enum V1beta1ConnectAttachmentSpecForProviderCoreNetworkIdRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectAttachmentSpecForProviderCoreNetworkIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ConnectAttachmentSpecForProviderCoreNetworkIdRefPoli
     public V1beta1ConnectAttachmentSpecForProviderCoreNetworkIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a CoreNetwork in networkmanager to populate coreNetworkId.</summary>
 public partial class V1beta1ConnectAttachmentSpecForProviderCoreNetworkIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ConnectAttachmentSpecForProviderCoreNetworkIdSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectAttachmentSpecForProviderCoreNetworkIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ConnectAttachmentSpecForProviderCoreNetworkIdSelecto
     public V1beta1ConnectAttachmentSpecForProviderCoreNetworkIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a CoreNetwork in networkmanager to populate coreNetworkId.</summary>
 public partial class V1beta1ConnectAttachmentSpecForProviderCoreNetworkIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1ConnectAttachmentSpecForProviderEdgeLocationRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectAttachmentSpecForProviderEdgeLocationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1ConnectAttachmentSpecForProviderEdgeLocationRefPolic
     public V1beta1ConnectAttachmentSpecForProviderEdgeLocationRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPCAttachment in networkmanager to populate edgeLocation.</summary>
 public partial class V1beta1ConnectAttachmentSpecForProviderEdgeLocationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1ConnectAttachmentSpecForProviderEdgeLocationSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectAttachmentSpecForProviderEdgeLocationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1ConnectAttachmentSpecForProviderEdgeLocationSelector
     public V1beta1ConnectAttachmentSpecForProviderEdgeLocationSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPCAttachment in networkmanager to populate edgeLocation.</summary>
 public partial class V1beta1ConnectAttachmentSpecForProviderEdgeLocationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1ConnectAttachmentSpecForProviderEdgeLocationSelector
     public V1beta1ConnectAttachmentSpecForProviderEdgeLocationSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectAttachmentSpecForProviderOptions
 {
     /// <summary>The protocol used for the attachment connection. Possible values are GRE and NO_ENCAP.</summary>
@@ -229,6 +238,7 @@ public enum V1beta1ConnectAttachmentSpecForProviderTransportAttachmentIdRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectAttachmentSpecForProviderTransportAttachmentIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -242,6 +252,7 @@ public partial class V1beta1ConnectAttachmentSpecForProviderTransportAttachmentI
     public V1beta1ConnectAttachmentSpecForProviderTransportAttachmentIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPCAttachment in networkmanager to populate transportAttachmentId.</summary>
 public partial class V1beta1ConnectAttachmentSpecForProviderTransportAttachmentIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -273,6 +284,7 @@ public enum V1beta1ConnectAttachmentSpecForProviderTransportAttachmentIdSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectAttachmentSpecForProviderTransportAttachmentIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -286,6 +298,7 @@ public partial class V1beta1ConnectAttachmentSpecForProviderTransportAttachmentI
     public V1beta1ConnectAttachmentSpecForProviderTransportAttachmentIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPCAttachment in networkmanager to populate transportAttachmentId.</summary>
 public partial class V1beta1ConnectAttachmentSpecForProviderTransportAttachmentIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -301,6 +314,7 @@ public partial class V1beta1ConnectAttachmentSpecForProviderTransportAttachmentI
     public V1beta1ConnectAttachmentSpecForProviderTransportAttachmentIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectAttachmentSpecForProvider
 {
     /// <summary>The ID of a core network where you want to create the attachment.</summary>
@@ -372,6 +386,7 @@ public enum V1beta1ConnectAttachmentSpecInitProviderCoreNetworkIdRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectAttachmentSpecInitProviderCoreNetworkIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -385,6 +400,7 @@ public partial class V1beta1ConnectAttachmentSpecInitProviderCoreNetworkIdRefPol
     public V1beta1ConnectAttachmentSpecInitProviderCoreNetworkIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a CoreNetwork in networkmanager to populate coreNetworkId.</summary>
 public partial class V1beta1ConnectAttachmentSpecInitProviderCoreNetworkIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -416,6 +432,7 @@ public enum V1beta1ConnectAttachmentSpecInitProviderCoreNetworkIdSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectAttachmentSpecInitProviderCoreNetworkIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -429,6 +446,7 @@ public partial class V1beta1ConnectAttachmentSpecInitProviderCoreNetworkIdSelect
     public V1beta1ConnectAttachmentSpecInitProviderCoreNetworkIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a CoreNetwork in networkmanager to populate coreNetworkId.</summary>
 public partial class V1beta1ConnectAttachmentSpecInitProviderCoreNetworkIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -464,6 +482,7 @@ public enum V1beta1ConnectAttachmentSpecInitProviderEdgeLocationRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectAttachmentSpecInitProviderEdgeLocationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -477,6 +496,7 @@ public partial class V1beta1ConnectAttachmentSpecInitProviderEdgeLocationRefPoli
     public V1beta1ConnectAttachmentSpecInitProviderEdgeLocationRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPCAttachment in networkmanager to populate edgeLocation.</summary>
 public partial class V1beta1ConnectAttachmentSpecInitProviderEdgeLocationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -508,6 +528,7 @@ public enum V1beta1ConnectAttachmentSpecInitProviderEdgeLocationSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectAttachmentSpecInitProviderEdgeLocationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -521,6 +542,7 @@ public partial class V1beta1ConnectAttachmentSpecInitProviderEdgeLocationSelecto
     public V1beta1ConnectAttachmentSpecInitProviderEdgeLocationSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPCAttachment in networkmanager to populate edgeLocation.</summary>
 public partial class V1beta1ConnectAttachmentSpecInitProviderEdgeLocationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -536,6 +558,7 @@ public partial class V1beta1ConnectAttachmentSpecInitProviderEdgeLocationSelecto
     public V1beta1ConnectAttachmentSpecInitProviderEdgeLocationSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectAttachmentSpecInitProviderOptions
 {
     /// <summary>The protocol used for the attachment connection. Possible values are GRE and NO_ENCAP.</summary>
@@ -563,6 +586,7 @@ public enum V1beta1ConnectAttachmentSpecInitProviderTransportAttachmentIdRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectAttachmentSpecInitProviderTransportAttachmentIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -576,6 +600,7 @@ public partial class V1beta1ConnectAttachmentSpecInitProviderTransportAttachment
     public V1beta1ConnectAttachmentSpecInitProviderTransportAttachmentIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPCAttachment in networkmanager to populate transportAttachmentId.</summary>
 public partial class V1beta1ConnectAttachmentSpecInitProviderTransportAttachmentIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -607,6 +632,7 @@ public enum V1beta1ConnectAttachmentSpecInitProviderTransportAttachmentIdSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectAttachmentSpecInitProviderTransportAttachmentIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -620,6 +646,7 @@ public partial class V1beta1ConnectAttachmentSpecInitProviderTransportAttachment
     public V1beta1ConnectAttachmentSpecInitProviderTransportAttachmentIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPCAttachment in networkmanager to populate transportAttachmentId.</summary>
 public partial class V1beta1ConnectAttachmentSpecInitProviderTransportAttachmentIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -635,6 +662,7 @@ public partial class V1beta1ConnectAttachmentSpecInitProviderTransportAttachment
     public V1beta1ConnectAttachmentSpecInitProviderTransportAttachmentIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ConnectAttachmentSpecInitProvider
 {
     /// <summary>The ID of a core network where you want to create the attachment.</summary>
@@ -724,6 +752,7 @@ public enum V1beta1ConnectAttachmentSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectAttachmentSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -737,6 +766,7 @@ public partial class V1beta1ConnectAttachmentSpecProviderConfigRefPolicy
     public V1beta1ConnectAttachmentSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ConnectAttachmentSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -768,6 +798,7 @@ public enum V1beta1ConnectAttachmentSpecPublishConnectionDetailsToConfigRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectAttachmentSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -781,6 +812,7 @@ public partial class V1beta1ConnectAttachmentSpecPublishConnectionDetailsToConfi
     public V1beta1ConnectAttachmentSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ConnectAttachmentSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -792,6 +824,7 @@ public partial class V1beta1ConnectAttachmentSpecPublishConnectionDetailsToConfi
     public V1beta1ConnectAttachmentSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ConnectAttachmentSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -807,6 +840,7 @@ public partial class V1beta1ConnectAttachmentSpecPublishConnectionDetailsToMetad
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ConnectAttachmentSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -822,6 +856,7 @@ public partial class V1beta1ConnectAttachmentSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ConnectAttachmentSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -833,6 +868,7 @@ public partial class V1beta1ConnectAttachmentSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ConnectAttachmentSpec defines the desired state of ConnectAttachment</summary>
 public partial class V1beta1ConnectAttachmentSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -865,6 +901,7 @@ public partial class V1beta1ConnectAttachmentSpec
     public V1beta1ConnectAttachmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectAttachmentStatusAtProviderOptions
 {
     /// <summary>The protocol used for the attachment connection. Possible values are GRE and NO_ENCAP.</summary>
@@ -872,6 +909,7 @@ public partial class V1beta1ConnectAttachmentStatusAtProviderOptions
     public string? Protocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectAttachmentStatusAtProvider
 {
     /// <summary>The ARN of the attachment.</summary>
@@ -939,6 +977,7 @@ public partial class V1beta1ConnectAttachmentStatusAtProvider
     public string? TransportAttachmentId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ConnectAttachmentStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -966,6 +1005,7 @@ public partial class V1beta1ConnectAttachmentStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ConnectAttachmentStatus defines the observed state of ConnectAttachment.</summary>
 public partial class V1beta1ConnectAttachmentStatus
 {
     /// <summary></summary>
@@ -982,6 +1022,7 @@ public partial class V1beta1ConnectAttachmentStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ConnectAttachment is the Schema for the ConnectAttachments API.</summary>
 public partial class V1beta1ConnectAttachment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ConnectAttachmentSpec>, IStatus<V1beta1ConnectAttachmentStatus>
 {
     public const string KubeApiVersion = "v1beta1";

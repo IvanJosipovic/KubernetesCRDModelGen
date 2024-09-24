@@ -38,6 +38,7 @@ public enum V1beta1ResourcePolicyExemptionSpecForProviderPolicyAssignmentIdRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ResourcePolicyExemptionSpecForProviderPolicyAssignmentIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ResourcePolicyExemptionSpecForProviderPolicyAssignme
     public V1beta1ResourcePolicyExemptionSpecForProviderPolicyAssignmentIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourcePolicyAssignment in authorization to populate policyAssignmentId.</summary>
 public partial class V1beta1ResourcePolicyExemptionSpecForProviderPolicyAssignmentIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ResourcePolicyExemptionSpecForProviderPolicyAssignmentIdSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ResourcePolicyExemptionSpecForProviderPolicyAssignmentIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ResourcePolicyExemptionSpecForProviderPolicyAssignme
     public V1beta1ResourcePolicyExemptionSpecForProviderPolicyAssignmentIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourcePolicyAssignment in authorization to populate policyAssignmentId.</summary>
 public partial class V1beta1ResourcePolicyExemptionSpecForProviderPolicyAssignmentIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1ResourcePolicyExemptionSpecForProviderResourceIdRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ResourcePolicyExemptionSpecForProviderResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1ResourcePolicyExemptionSpecForProviderResourceIdRefP
     public V1beta1ResourcePolicyExemptionSpecForProviderResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourcePolicyAssignment in authorization to populate resourceId.</summary>
 public partial class V1beta1ResourcePolicyExemptionSpecForProviderResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1ResourcePolicyExemptionSpecForProviderResourceIdSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ResourcePolicyExemptionSpecForProviderResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1ResourcePolicyExemptionSpecForProviderResourceIdSele
     public V1beta1ResourcePolicyExemptionSpecForProviderResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourcePolicyAssignment in authorization to populate resourceId.</summary>
 public partial class V1beta1ResourcePolicyExemptionSpecForProviderResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1ResourcePolicyExemptionSpecForProviderResourceIdSele
     public V1beta1ResourcePolicyExemptionSpecForProviderResourceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourcePolicyExemptionSpecForProvider
 {
     /// <summary>A description to use for this Policy Exemption.</summary>
@@ -277,6 +286,7 @@ public enum V1beta1ResourcePolicyExemptionSpecInitProviderPolicyAssignmentIdRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ResourcePolicyExemptionSpecInitProviderPolicyAssignmentIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -290,6 +300,7 @@ public partial class V1beta1ResourcePolicyExemptionSpecInitProviderPolicyAssignm
     public V1beta1ResourcePolicyExemptionSpecInitProviderPolicyAssignmentIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourcePolicyAssignment in authorization to populate policyAssignmentId.</summary>
 public partial class V1beta1ResourcePolicyExemptionSpecInitProviderPolicyAssignmentIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -321,6 +332,7 @@ public enum V1beta1ResourcePolicyExemptionSpecInitProviderPolicyAssignmentIdSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ResourcePolicyExemptionSpecInitProviderPolicyAssignmentIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -334,6 +346,7 @@ public partial class V1beta1ResourcePolicyExemptionSpecInitProviderPolicyAssignm
     public V1beta1ResourcePolicyExemptionSpecInitProviderPolicyAssignmentIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourcePolicyAssignment in authorization to populate policyAssignmentId.</summary>
 public partial class V1beta1ResourcePolicyExemptionSpecInitProviderPolicyAssignmentIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -369,6 +382,7 @@ public enum V1beta1ResourcePolicyExemptionSpecInitProviderResourceIdRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ResourcePolicyExemptionSpecInitProviderResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -382,6 +396,7 @@ public partial class V1beta1ResourcePolicyExemptionSpecInitProviderResourceIdRef
     public V1beta1ResourcePolicyExemptionSpecInitProviderResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourcePolicyAssignment in authorization to populate resourceId.</summary>
 public partial class V1beta1ResourcePolicyExemptionSpecInitProviderResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -413,6 +428,7 @@ public enum V1beta1ResourcePolicyExemptionSpecInitProviderResourceIdSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ResourcePolicyExemptionSpecInitProviderResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -426,6 +442,7 @@ public partial class V1beta1ResourcePolicyExemptionSpecInitProviderResourceIdSel
     public V1beta1ResourcePolicyExemptionSpecInitProviderResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourcePolicyAssignment in authorization to populate resourceId.</summary>
 public partial class V1beta1ResourcePolicyExemptionSpecInitProviderResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -441,6 +458,7 @@ public partial class V1beta1ResourcePolicyExemptionSpecInitProviderResourceIdSel
     public V1beta1ResourcePolicyExemptionSpecInitProviderResourceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ResourcePolicyExemptionSpecInitProvider
 {
     /// <summary>A description to use for this Policy Exemption.</summary>
@@ -538,6 +556,7 @@ public enum V1beta1ResourcePolicyExemptionSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ResourcePolicyExemptionSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -551,6 +570,7 @@ public partial class V1beta1ResourcePolicyExemptionSpecProviderConfigRefPolicy
     public V1beta1ResourcePolicyExemptionSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ResourcePolicyExemptionSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -582,6 +602,7 @@ public enum V1beta1ResourcePolicyExemptionSpecPublishConnectionDetailsToConfigRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ResourcePolicyExemptionSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -595,6 +616,7 @@ public partial class V1beta1ResourcePolicyExemptionSpecPublishConnectionDetailsT
     public V1beta1ResourcePolicyExemptionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ResourcePolicyExemptionSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -606,6 +628,7 @@ public partial class V1beta1ResourcePolicyExemptionSpecPublishConnectionDetailsT
     public V1beta1ResourcePolicyExemptionSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ResourcePolicyExemptionSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -621,6 +644,7 @@ public partial class V1beta1ResourcePolicyExemptionSpecPublishConnectionDetailsT
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ResourcePolicyExemptionSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -636,6 +660,7 @@ public partial class V1beta1ResourcePolicyExemptionSpecPublishConnectionDetailsT
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ResourcePolicyExemptionSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -647,6 +672,7 @@ public partial class V1beta1ResourcePolicyExemptionSpecWriteConnectionSecretToRe
     public string Namespace { get; set; }
 }
 
+/// <summary>ResourcePolicyExemptionSpec defines the desired state of ResourcePolicyExemption</summary>
 public partial class V1beta1ResourcePolicyExemptionSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -679,6 +705,7 @@ public partial class V1beta1ResourcePolicyExemptionSpec
     public V1beta1ResourcePolicyExemptionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourcePolicyExemptionStatusAtProvider
 {
     /// <summary>A description to use for this Policy Exemption.</summary>
@@ -722,6 +749,7 @@ public partial class V1beta1ResourcePolicyExemptionStatusAtProvider
     public string? ResourceId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ResourcePolicyExemptionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -749,6 +777,7 @@ public partial class V1beta1ResourcePolicyExemptionStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ResourcePolicyExemptionStatus defines the observed state of ResourcePolicyExemption.</summary>
 public partial class V1beta1ResourcePolicyExemptionStatus
 {
     /// <summary></summary>
@@ -765,6 +794,7 @@ public partial class V1beta1ResourcePolicyExemptionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ResourcePolicyExemption is the Schema for the ResourcePolicyExemptions API. Manages a Resource Policy Exemption.</summary>
 public partial class V1beta1ResourcePolicyExemption : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ResourcePolicyExemptionSpec>, IStatus<V1beta1ResourcePolicyExemptionStatus>
 {
     public const string KubeApiVersion = "v1beta1";

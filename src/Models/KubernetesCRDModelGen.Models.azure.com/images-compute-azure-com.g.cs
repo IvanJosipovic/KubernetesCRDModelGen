@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.azure.com;
+/// <summary>Storage version of v1api20220301.ExtendedLocation The complex type of the extended location.</summary>
 public partial class V1api20220301storageImageSpecExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -23,6 +24,7 @@ public partial class V1api20220301storageImageSpecExtendedLocation
     public string? Type { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20220301storageImageSpecOwner
 {
     /// <summary></summary>
@@ -34,6 +36,7 @@ public partial class V1api20220301storageImageSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Reference: Resource Id</summary>
 public partial class V1api20220301storageImageSpecSourceVirtualMachineReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -53,6 +56,7 @@ public partial class V1api20220301storageImageSpecSourceVirtualMachineReference
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource</summary>
 public partial class V1api20220301storageImageSpecSourceVirtualMachine
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -64,6 +68,7 @@ public partial class V1api20220301storageImageSpecSourceVirtualMachine
     public V1api20220301storageImageSpecSourceVirtualMachineReference? Reference { get; set; }
 }
 
+/// <summary>Reference: Resource Id</summary>
 public partial class V1api20220301storageImageSpecStorageProfileDataDisksDiskEncryptionSetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -83,6 +88,7 @@ public partial class V1api20220301storageImageSpecStorageProfileDataDisksDiskEnc
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource</summary>
 public partial class V1api20220301storageImageSpecStorageProfileDataDisksDiskEncryptionSet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -94,6 +100,7 @@ public partial class V1api20220301storageImageSpecStorageProfileDataDisksDiskEnc
     public V1api20220301storageImageSpecStorageProfileDataDisksDiskEncryptionSetReference? Reference { get; set; }
 }
 
+/// <summary>Reference: Resource Id</summary>
 public partial class V1api20220301storageImageSpecStorageProfileDataDisksManagedDiskReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -113,6 +120,7 @@ public partial class V1api20220301storageImageSpecStorageProfileDataDisksManaged
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource</summary>
 public partial class V1api20220301storageImageSpecStorageProfileDataDisksManagedDisk
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -124,6 +132,7 @@ public partial class V1api20220301storageImageSpecStorageProfileDataDisksManaged
     public V1api20220301storageImageSpecStorageProfileDataDisksManagedDiskReference? Reference { get; set; }
 }
 
+/// <summary>Reference: Resource Id</summary>
 public partial class V1api20220301storageImageSpecStorageProfileDataDisksSnapshotReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -143,6 +152,7 @@ public partial class V1api20220301storageImageSpecStorageProfileDataDisksSnapsho
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource</summary>
 public partial class V1api20220301storageImageSpecStorageProfileDataDisksSnapshot
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -154,6 +164,7 @@ public partial class V1api20220301storageImageSpecStorageProfileDataDisksSnapsho
     public V1api20220301storageImageSpecStorageProfileDataDisksSnapshotReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.ImageDataDisk Describes a data disk.</summary>
 public partial class V1api20220301storageImageSpecStorageProfileDataDisks
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -193,6 +204,7 @@ public partial class V1api20220301storageImageSpecStorageProfileDataDisks
     public string? StorageAccountType { get; set; }
 }
 
+/// <summary>Reference: Resource Id</summary>
 public partial class V1api20220301storageImageSpecStorageProfileOsDiskDiskEncryptionSetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -212,6 +224,7 @@ public partial class V1api20220301storageImageSpecStorageProfileOsDiskDiskEncryp
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource</summary>
 public partial class V1api20220301storageImageSpecStorageProfileOsDiskDiskEncryptionSet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -223,6 +236,7 @@ public partial class V1api20220301storageImageSpecStorageProfileOsDiskDiskEncryp
     public V1api20220301storageImageSpecStorageProfileOsDiskDiskEncryptionSetReference? Reference { get; set; }
 }
 
+/// <summary>Reference: Resource Id</summary>
 public partial class V1api20220301storageImageSpecStorageProfileOsDiskManagedDiskReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -242,6 +256,7 @@ public partial class V1api20220301storageImageSpecStorageProfileOsDiskManagedDis
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource</summary>
 public partial class V1api20220301storageImageSpecStorageProfileOsDiskManagedDisk
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -253,6 +268,7 @@ public partial class V1api20220301storageImageSpecStorageProfileOsDiskManagedDis
     public V1api20220301storageImageSpecStorageProfileOsDiskManagedDiskReference? Reference { get; set; }
 }
 
+/// <summary>Reference: Resource Id</summary>
 public partial class V1api20220301storageImageSpecStorageProfileOsDiskSnapshotReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -272,6 +288,7 @@ public partial class V1api20220301storageImageSpecStorageProfileOsDiskSnapshotRe
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource</summary>
 public partial class V1api20220301storageImageSpecStorageProfileOsDiskSnapshot
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -283,6 +300,7 @@ public partial class V1api20220301storageImageSpecStorageProfileOsDiskSnapshot
     public V1api20220301storageImageSpecStorageProfileOsDiskSnapshotReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.ImageOSDisk Describes an Operating System disk.</summary>
 public partial class V1api20220301storageImageSpecStorageProfileOsDisk
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -326,6 +344,7 @@ public partial class V1api20220301storageImageSpecStorageProfileOsDisk
     public string? StorageAccountType { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.ImageStorageProfile Describes a storage profile.</summary>
 public partial class V1api20220301storageImageSpecStorageProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -345,6 +364,7 @@ public partial class V1api20220301storageImageSpecStorageProfile
     public bool? ZoneResilient { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.Image_Spec</summary>
 public partial class V1api20220301storageImageSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -388,6 +408,7 @@ public partial class V1api20220301storageImageSpec
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20220301storageImageStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -419,6 +440,7 @@ public partial class V1api20220301storageImageStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.ExtendedLocation_STATUS The complex type of the extended location.</summary>
 public partial class V1api20220301storageImageStatusExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -434,6 +456,7 @@ public partial class V1api20220301storageImageStatusExtendedLocation
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 public partial class V1api20220301storageImageStatusSourceVirtualMachine
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -445,6 +468,7 @@ public partial class V1api20220301storageImageStatusSourceVirtualMachine
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 public partial class V1api20220301storageImageStatusStorageProfileDataDisksDiskEncryptionSet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -456,6 +480,7 @@ public partial class V1api20220301storageImageStatusStorageProfileDataDisksDiskE
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 public partial class V1api20220301storageImageStatusStorageProfileDataDisksManagedDisk
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -467,6 +492,7 @@ public partial class V1api20220301storageImageStatusStorageProfileDataDisksManag
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 public partial class V1api20220301storageImageStatusStorageProfileDataDisksSnapshot
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -478,6 +504,7 @@ public partial class V1api20220301storageImageStatusStorageProfileDataDisksSnaps
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.ImageDataDisk_STATUS Describes a data disk.</summary>
 public partial class V1api20220301storageImageStatusStorageProfileDataDisks
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -517,6 +544,7 @@ public partial class V1api20220301storageImageStatusStorageProfileDataDisks
     public string? StorageAccountType { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 public partial class V1api20220301storageImageStatusStorageProfileOsDiskDiskEncryptionSet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -528,6 +556,7 @@ public partial class V1api20220301storageImageStatusStorageProfileOsDiskDiskEncr
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 public partial class V1api20220301storageImageStatusStorageProfileOsDiskManagedDisk
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -539,6 +568,7 @@ public partial class V1api20220301storageImageStatusStorageProfileOsDiskManagedD
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 public partial class V1api20220301storageImageStatusStorageProfileOsDiskSnapshot
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -550,6 +580,7 @@ public partial class V1api20220301storageImageStatusStorageProfileOsDiskSnapshot
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.ImageOSDisk_STATUS Describes an Operating System disk.</summary>
 public partial class V1api20220301storageImageStatusStorageProfileOsDisk
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -593,6 +624,7 @@ public partial class V1api20220301storageImageStatusStorageProfileOsDisk
     public string? StorageAccountType { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.ImageStorageProfile_STATUS Describes a storage profile.</summary>
 public partial class V1api20220301storageImageStatusStorageProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -612,6 +644,7 @@ public partial class V1api20220301storageImageStatusStorageProfile
     public bool? ZoneResilient { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.Image_STATUS The source user image virtual hard disk. The virtual hard disk will be copied before being attached to the virtual machine. If SourceImage is provided, the destination virtual hard drive must not exist.</summary>
 public partial class V1api20220301storageImageStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -664,6 +697,7 @@ public partial class V1api20220301storageImageStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20220301.Image Generator information: - Generated from: /compute/resource-manager/Microsoft.Compute/ComputeRP/stable/2022-03-01/image.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}</summary>
 public partial class V1api20220301storageImage : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20220301storageImageSpec>, IStatus<V1api20220301storageImageStatus>
 {
     public const string KubeApiVersion = "v1api20220301storage";

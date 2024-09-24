@@ -38,6 +38,7 @@ public enum V1beta1BrokerSpecForProviderConfigurationIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BrokerSpecForProviderConfigurationIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1BrokerSpecForProviderConfigurationIdRefPolicy
     public V1beta1BrokerSpecForProviderConfigurationIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Configuration in mq to populate id.</summary>
 public partial class V1beta1BrokerSpecForProviderConfigurationIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1BrokerSpecForProviderConfigurationIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BrokerSpecForProviderConfigurationIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1BrokerSpecForProviderConfigurationIdSelectorPolicy
     public V1beta1BrokerSpecForProviderConfigurationIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Configuration in mq to populate id.</summary>
 public partial class V1beta1BrokerSpecForProviderConfigurationIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1BrokerSpecForProviderConfigurationIdSelector
     public V1beta1BrokerSpecForProviderConfigurationIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BrokerSpecForProviderConfiguration
 {
     /// <summary>The Configuration ID.</summary>
@@ -149,6 +154,7 @@ public enum V1beta1BrokerSpecForProviderDataReplicationPrimaryBrokerArnRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BrokerSpecForProviderDataReplicationPrimaryBrokerArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -162,6 +168,7 @@ public partial class V1beta1BrokerSpecForProviderDataReplicationPrimaryBrokerArn
     public V1beta1BrokerSpecForProviderDataReplicationPrimaryBrokerArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Broker in mq to populate dataReplicationPrimaryBrokerArn.</summary>
 public partial class V1beta1BrokerSpecForProviderDataReplicationPrimaryBrokerArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -193,6 +200,7 @@ public enum V1beta1BrokerSpecForProviderDataReplicationPrimaryBrokerArnSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BrokerSpecForProviderDataReplicationPrimaryBrokerArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -206,6 +214,7 @@ public partial class V1beta1BrokerSpecForProviderDataReplicationPrimaryBrokerArn
     public V1beta1BrokerSpecForProviderDataReplicationPrimaryBrokerArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Broker in mq to populate dataReplicationPrimaryBrokerArn.</summary>
 public partial class V1beta1BrokerSpecForProviderDataReplicationPrimaryBrokerArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -221,6 +230,7 @@ public partial class V1beta1BrokerSpecForProviderDataReplicationPrimaryBrokerArn
     public V1beta1BrokerSpecForProviderDataReplicationPrimaryBrokerArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BrokerSpecForProviderEncryptionOptions
 {
     /// <summary>Amazon Resource Name (ARN) of Key Management Service (KMS) Customer Master Key (CMK) to use for encryption at rest. Requires setting use_aws_owned_key to false. To perform drift detection when AWS-managed CMKs or customer-managed CMKs are in use, this value must be configured.</summary>
@@ -232,6 +242,7 @@ public partial class V1beta1BrokerSpecForProviderEncryptionOptions
     public bool? UseAwsOwnedKey { get; set; }
 }
 
+/// <summary>Service account password.</summary>
 public partial class V1beta1BrokerSpecForProviderLdapServerMetadataServiceAccountPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -247,6 +258,7 @@ public partial class V1beta1BrokerSpecForProviderLdapServerMetadataServiceAccoun
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BrokerSpecForProviderLdapServerMetadata
 {
     /// <summary>List of a fully qualified domain name of the LDAP server and an optional failover server.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1BrokerSpecForProviderLdapServerMetadata
     public bool? UserSearchSubtree { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BrokerSpecForProviderLogs
 {
     /// <summary>Enables audit logging. Auditing is only possible for engine_type of ActiveMQ. User management action made using JMX or the ActiveMQ Web Console is logged. Defaults to false.</summary>
@@ -305,6 +318,7 @@ public partial class V1beta1BrokerSpecForProviderLogs
     public bool? General { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BrokerSpecForProviderMaintenanceWindowStartTime
 {
     /// <summary>Day of the week, e.g., MONDAY, TUESDAY, or WEDNESDAY.</summary>
@@ -340,6 +354,7 @@ public enum V1beta1BrokerSpecForProviderSecurityGroupRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BrokerSpecForProviderSecurityGroupRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -353,6 +368,7 @@ public partial class V1beta1BrokerSpecForProviderSecurityGroupRefsPolicy
     public V1beta1BrokerSpecForProviderSecurityGroupRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1BrokerSpecForProviderSecurityGroupRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -384,6 +400,7 @@ public enum V1beta1BrokerSpecForProviderSecurityGroupSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BrokerSpecForProviderSecurityGroupSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -397,6 +414,7 @@ public partial class V1beta1BrokerSpecForProviderSecurityGroupSelectorPolicy
     public V1beta1BrokerSpecForProviderSecurityGroupSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroups.</summary>
 public partial class V1beta1BrokerSpecForProviderSecurityGroupSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -432,6 +450,7 @@ public enum V1beta1BrokerSpecForProviderSubnetIdRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BrokerSpecForProviderSubnetIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -445,6 +464,7 @@ public partial class V1beta1BrokerSpecForProviderSubnetIdRefsPolicy
     public V1beta1BrokerSpecForProviderSubnetIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1BrokerSpecForProviderSubnetIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -476,6 +496,7 @@ public enum V1beta1BrokerSpecForProviderSubnetIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BrokerSpecForProviderSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -489,6 +510,7 @@ public partial class V1beta1BrokerSpecForProviderSubnetIdSelectorPolicy
     public V1beta1BrokerSpecForProviderSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 public partial class V1beta1BrokerSpecForProviderSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -504,6 +526,7 @@ public partial class V1beta1BrokerSpecForProviderSubnetIdSelector
     public V1beta1BrokerSpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Password of the user. It must be 12 to 250 characters long, at least 4 unique characters, and must not contain commas.</summary>
 public partial class V1beta1BrokerSpecForProviderUserPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -519,6 +542,7 @@ public partial class V1beta1BrokerSpecForProviderUserPasswordSecretRef
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BrokerSpecForProviderUser
 {
     /// <summary>Whether to enable access to the ActiveMQ Web Console for the user. Applies to engine_type of ActiveMQ only.</summary>
@@ -542,6 +566,7 @@ public partial class V1beta1BrokerSpecForProviderUser
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BrokerSpecForProvider
 {
     /// <summary>Specifies whether any broker modifications are applied immediately, or during the next maintenance window. Default is false.</summary>
@@ -677,6 +702,7 @@ public enum V1beta1BrokerSpecInitProviderConfigurationIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BrokerSpecInitProviderConfigurationIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -690,6 +716,7 @@ public partial class V1beta1BrokerSpecInitProviderConfigurationIdRefPolicy
     public V1beta1BrokerSpecInitProviderConfigurationIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Configuration in mq to populate id.</summary>
 public partial class V1beta1BrokerSpecInitProviderConfigurationIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -721,6 +748,7 @@ public enum V1beta1BrokerSpecInitProviderConfigurationIdSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BrokerSpecInitProviderConfigurationIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -734,6 +762,7 @@ public partial class V1beta1BrokerSpecInitProviderConfigurationIdSelectorPolicy
     public V1beta1BrokerSpecInitProviderConfigurationIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Configuration in mq to populate id.</summary>
 public partial class V1beta1BrokerSpecInitProviderConfigurationIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -749,6 +778,7 @@ public partial class V1beta1BrokerSpecInitProviderConfigurationIdSelector
     public V1beta1BrokerSpecInitProviderConfigurationIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BrokerSpecInitProviderConfiguration
 {
     /// <summary>The Configuration ID.</summary>
@@ -788,6 +818,7 @@ public enum V1beta1BrokerSpecInitProviderDataReplicationPrimaryBrokerArnRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BrokerSpecInitProviderDataReplicationPrimaryBrokerArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -801,6 +832,7 @@ public partial class V1beta1BrokerSpecInitProviderDataReplicationPrimaryBrokerAr
     public V1beta1BrokerSpecInitProviderDataReplicationPrimaryBrokerArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Broker in mq to populate dataReplicationPrimaryBrokerArn.</summary>
 public partial class V1beta1BrokerSpecInitProviderDataReplicationPrimaryBrokerArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -832,6 +864,7 @@ public enum V1beta1BrokerSpecInitProviderDataReplicationPrimaryBrokerArnSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BrokerSpecInitProviderDataReplicationPrimaryBrokerArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -845,6 +878,7 @@ public partial class V1beta1BrokerSpecInitProviderDataReplicationPrimaryBrokerAr
     public V1beta1BrokerSpecInitProviderDataReplicationPrimaryBrokerArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Broker in mq to populate dataReplicationPrimaryBrokerArn.</summary>
 public partial class V1beta1BrokerSpecInitProviderDataReplicationPrimaryBrokerArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -860,6 +894,7 @@ public partial class V1beta1BrokerSpecInitProviderDataReplicationPrimaryBrokerAr
     public V1beta1BrokerSpecInitProviderDataReplicationPrimaryBrokerArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BrokerSpecInitProviderEncryptionOptions
 {
     /// <summary>Amazon Resource Name (ARN) of Key Management Service (KMS) Customer Master Key (CMK) to use for encryption at rest. Requires setting use_aws_owned_key to false. To perform drift detection when AWS-managed CMKs or customer-managed CMKs are in use, this value must be configured.</summary>
@@ -871,6 +906,7 @@ public partial class V1beta1BrokerSpecInitProviderEncryptionOptions
     public bool? UseAwsOwnedKey { get; set; }
 }
 
+/// <summary>Service account password.</summary>
 public partial class V1beta1BrokerSpecInitProviderLdapServerMetadataServiceAccountPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -886,6 +922,7 @@ public partial class V1beta1BrokerSpecInitProviderLdapServerMetadataServiceAccou
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BrokerSpecInitProviderLdapServerMetadata
 {
     /// <summary>List of a fully qualified domain name of the LDAP server and an optional failover server.</summary>
@@ -933,6 +970,7 @@ public partial class V1beta1BrokerSpecInitProviderLdapServerMetadata
     public bool? UserSearchSubtree { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BrokerSpecInitProviderLogs
 {
     /// <summary>Enables audit logging. Auditing is only possible for engine_type of ActiveMQ. User management action made using JMX or the ActiveMQ Web Console is logged. Defaults to false.</summary>
@@ -944,6 +982,7 @@ public partial class V1beta1BrokerSpecInitProviderLogs
     public bool? General { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BrokerSpecInitProviderMaintenanceWindowStartTime
 {
     /// <summary>Day of the week, e.g., MONDAY, TUESDAY, or WEDNESDAY.</summary>
@@ -979,6 +1018,7 @@ public enum V1beta1BrokerSpecInitProviderSecurityGroupRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BrokerSpecInitProviderSecurityGroupRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -992,6 +1032,7 @@ public partial class V1beta1BrokerSpecInitProviderSecurityGroupRefsPolicy
     public V1beta1BrokerSpecInitProviderSecurityGroupRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1BrokerSpecInitProviderSecurityGroupRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1023,6 +1064,7 @@ public enum V1beta1BrokerSpecInitProviderSecurityGroupSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BrokerSpecInitProviderSecurityGroupSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1036,6 +1078,7 @@ public partial class V1beta1BrokerSpecInitProviderSecurityGroupSelectorPolicy
     public V1beta1BrokerSpecInitProviderSecurityGroupSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroups.</summary>
 public partial class V1beta1BrokerSpecInitProviderSecurityGroupSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1071,6 +1114,7 @@ public enum V1beta1BrokerSpecInitProviderSubnetIdRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BrokerSpecInitProviderSubnetIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1084,6 +1128,7 @@ public partial class V1beta1BrokerSpecInitProviderSubnetIdRefsPolicy
     public V1beta1BrokerSpecInitProviderSubnetIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1BrokerSpecInitProviderSubnetIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1115,6 +1160,7 @@ public enum V1beta1BrokerSpecInitProviderSubnetIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BrokerSpecInitProviderSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1128,6 +1174,7 @@ public partial class V1beta1BrokerSpecInitProviderSubnetIdSelectorPolicy
     public V1beta1BrokerSpecInitProviderSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 public partial class V1beta1BrokerSpecInitProviderSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1143,6 +1190,7 @@ public partial class V1beta1BrokerSpecInitProviderSubnetIdSelector
     public V1beta1BrokerSpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Password of the user. It must be 12 to 250 characters long, at least 4 unique characters, and must not contain commas.</summary>
 public partial class V1beta1BrokerSpecInitProviderUserPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1158,6 +1206,7 @@ public partial class V1beta1BrokerSpecInitProviderUserPasswordSecretRef
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BrokerSpecInitProviderUser
 {
     /// <summary>Whether to enable access to the ActiveMQ Web Console for the user. Applies to engine_type of ActiveMQ only.</summary>
@@ -1181,6 +1230,7 @@ public partial class V1beta1BrokerSpecInitProviderUser
     public string? Username { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1BrokerSpecInitProvider
 {
     /// <summary>Specifies whether any broker modifications are applied immediately, or during the next maintenance window. Default is false.</summary>
@@ -1334,6 +1384,7 @@ public enum V1beta1BrokerSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BrokerSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1347,6 +1398,7 @@ public partial class V1beta1BrokerSpecProviderConfigRefPolicy
     public V1beta1BrokerSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1BrokerSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1378,6 +1430,7 @@ public enum V1beta1BrokerSpecPublishConnectionDetailsToConfigRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BrokerSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1391,6 +1444,7 @@ public partial class V1beta1BrokerSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1BrokerSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1BrokerSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1402,6 +1456,7 @@ public partial class V1beta1BrokerSpecPublishConnectionDetailsToConfigRef
     public V1beta1BrokerSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1BrokerSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1417,6 +1472,7 @@ public partial class V1beta1BrokerSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1BrokerSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1432,6 +1488,7 @@ public partial class V1beta1BrokerSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1BrokerSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1443,6 +1500,7 @@ public partial class V1beta1BrokerSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>BrokerSpec defines the desired state of Broker</summary>
 public partial class V1beta1BrokerSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1475,6 +1533,7 @@ public partial class V1beta1BrokerSpec
     public V1beta1BrokerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BrokerStatusAtProviderConfiguration
 {
     /// <summary>The Configuration ID.</summary>
@@ -1486,6 +1545,7 @@ public partial class V1beta1BrokerStatusAtProviderConfiguration
     public double? Revision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BrokerStatusAtProviderEncryptionOptions
 {
     /// <summary>Amazon Resource Name (ARN) of Key Management Service (KMS) Customer Master Key (CMK) to use for encryption at rest. Requires setting use_aws_owned_key to false. To perform drift detection when AWS-managed CMKs or customer-managed CMKs are in use, this value must be configured.</summary>
@@ -1497,6 +1557,7 @@ public partial class V1beta1BrokerStatusAtProviderEncryptionOptions
     public bool? UseAwsOwnedKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BrokerStatusAtProviderInstances
 {
     /// <summary>The URL of the ActiveMQ Web Console or the RabbitMQ Management UI depending on engine_type.</summary>
@@ -1512,6 +1573,7 @@ public partial class V1beta1BrokerStatusAtProviderInstances
     public string? IpAddress { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BrokerStatusAtProviderLdapServerMetadata
 {
     /// <summary>List of a fully qualified domain name of the LDAP server and an optional failover server.</summary>
@@ -1555,6 +1617,7 @@ public partial class V1beta1BrokerStatusAtProviderLdapServerMetadata
     public bool? UserSearchSubtree { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BrokerStatusAtProviderLogs
 {
     /// <summary>Enables audit logging. Auditing is only possible for engine_type of ActiveMQ. User management action made using JMX or the ActiveMQ Web Console is logged. Defaults to false.</summary>
@@ -1566,6 +1629,7 @@ public partial class V1beta1BrokerStatusAtProviderLogs
     public bool? General { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BrokerStatusAtProviderMaintenanceWindowStartTime
 {
     /// <summary>Day of the week, e.g., MONDAY, TUESDAY, or WEDNESDAY.</summary>
@@ -1581,6 +1645,7 @@ public partial class V1beta1BrokerStatusAtProviderMaintenanceWindowStartTime
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BrokerStatusAtProviderUser
 {
     /// <summary>Whether to enable access to the ActiveMQ Web Console for the user. Applies to engine_type of ActiveMQ only.</summary>
@@ -1600,6 +1665,7 @@ public partial class V1beta1BrokerStatusAtProviderUser
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BrokerStatusAtProvider
 {
     /// <summary>Specifies whether any broker modifications are applied immediately, or during the next maintenance window. Default is false.</summary>
@@ -1707,6 +1773,7 @@ public partial class V1beta1BrokerStatusAtProvider
     public IList<V1beta1BrokerStatusAtProviderUser>? User { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1BrokerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1734,6 +1801,7 @@ public partial class V1beta1BrokerStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>BrokerStatus defines the observed state of Broker.</summary>
 public partial class V1beta1BrokerStatus
 {
     /// <summary></summary>
@@ -1750,6 +1818,7 @@ public partial class V1beta1BrokerStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Broker is the Schema for the Brokers API. Provides an MQ Broker Resource</summary>
 public partial class V1beta1Broker : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BrokerSpec>, IStatus<V1beta1BrokerStatus>
 {
     public const string KubeApiVersion = "v1beta1";

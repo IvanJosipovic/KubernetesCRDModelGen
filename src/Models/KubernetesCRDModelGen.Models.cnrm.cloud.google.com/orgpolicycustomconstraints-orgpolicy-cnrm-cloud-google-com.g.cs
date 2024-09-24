@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.orgpolicy.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1alpha1OrgPolicyCustomConstraintSpec
 {
     /// <summary>The action to take if the condition is met. Possible values: ["ALLOW", "DENY"].</summary>
@@ -43,6 +44,7 @@ public partial class V1alpha1OrgPolicyCustomConstraintSpec
     public IList<string> ResourceTypes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1OrgPolicyCustomConstraintStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -66,6 +68,7 @@ public partial class V1alpha1OrgPolicyCustomConstraintStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1OrgPolicyCustomConstraintStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -82,6 +85,7 @@ public partial class V1alpha1OrgPolicyCustomConstraintStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1OrgPolicyCustomConstraint : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1OrgPolicyCustomConstraintSpec>, IStatus<V1alpha1OrgPolicyCustomConstraintStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

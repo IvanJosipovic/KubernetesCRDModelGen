@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.edgenetwork.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1EdgeNetworkSubnetSpecNetworkRef
 {
     /// <summary>Allowed value: The `name` field of an `EdgeNetworkNetwork` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1EdgeNetworkSubnetSpecNetworkRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1beta1EdgeNetworkSubnetSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1EdgeNetworkSubnetSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EdgeNetworkSubnetSpec
 {
     /// <summary>Immutable. A free-text description of the resource. Max length 1024 characters.</summary>
@@ -77,6 +80,7 @@ public partial class V1beta1EdgeNetworkSubnetSpec
     public string Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EdgeNetworkSubnetStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -100,6 +104,7 @@ public partial class V1beta1EdgeNetworkSubnetStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EdgeNetworkSubnetStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -128,6 +133,7 @@ public partial class V1beta1EdgeNetworkSubnetStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1EdgeNetworkSubnet : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1EdgeNetworkSubnetSpec>, IStatus<V1beta1EdgeNetworkSubnetStatus>
 {
     public const string KubeApiVersion = "v1beta1";

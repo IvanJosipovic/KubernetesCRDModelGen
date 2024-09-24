@@ -38,6 +38,7 @@ public enum V1beta1CustomDomainSpecForProviderApiManagementIdRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CustomDomainSpecForProviderApiManagementIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1CustomDomainSpecForProviderApiManagementIdRefPolicy
     public V1beta1CustomDomainSpecForProviderApiManagementIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Management in apimanagement to populate apiManagementId.</summary>
 public partial class V1beta1CustomDomainSpecForProviderApiManagementIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1CustomDomainSpecForProviderApiManagementIdSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CustomDomainSpecForProviderApiManagementIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1CustomDomainSpecForProviderApiManagementIdSelectorPo
     public V1beta1CustomDomainSpecForProviderApiManagementIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Management in apimanagement to populate apiManagementId.</summary>
 public partial class V1beta1CustomDomainSpecForProviderApiManagementIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1CustomDomainSpecForProviderApiManagementIdSelector
     public V1beta1CustomDomainSpecForProviderApiManagementIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>The password associated with the certificate provided above.</summary>
 public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalCertificatePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalCertificat
     public string Namespace { get; set; }
 }
 
+/// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
 public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalCertificateSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -160,6 +166,7 @@ public enum V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultIdRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -173,6 +180,7 @@ public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultId
     public V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Certificate in keyvault to populate keyVaultId.</summary>
 public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -204,6 +212,7 @@ public enum V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultIdSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -217,6 +226,7 @@ public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultId
     public V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Certificate in keyvault to populate keyVaultId.</summary>
 public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -232,6 +242,7 @@ public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultId
     public V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomDomainSpecForProviderDeveloperPortal
 {
     /// <summary>The password associated with the certificate provided above.</summary>
@@ -267,6 +278,7 @@ public partial class V1beta1CustomDomainSpecForProviderDeveloperPortal
     public string? SslKeyvaultIdentityClientId { get; set; }
 }
 
+/// <summary>The password associated with the certificate provided above.</summary>
 public partial class V1beta1CustomDomainSpecForProviderGatewayCertificatePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -282,6 +294,7 @@ public partial class V1beta1CustomDomainSpecForProviderGatewayCertificatePasswor
     public string Namespace { get; set; }
 }
 
+/// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
 public partial class V1beta1CustomDomainSpecForProviderGatewayCertificateSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -317,6 +330,7 @@ public enum V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -330,6 +344,7 @@ public partial class V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdRefPolic
     public V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Certificate in keyvault to populate keyVaultId.</summary>
 public partial class V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -361,6 +376,7 @@ public enum V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -374,6 +390,7 @@ public partial class V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdSelector
     public V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Certificate in keyvault to populate keyVaultId.</summary>
 public partial class V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -389,6 +406,7 @@ public partial class V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdSelector
     public V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomDomainSpecForProviderGateway
 {
     /// <summary>The password associated with the certificate provided above.</summary>
@@ -428,6 +446,7 @@ public partial class V1beta1CustomDomainSpecForProviderGateway
     public string? SslKeyvaultIdentityClientId { get; set; }
 }
 
+/// <summary>The password associated with the certificate provided above.</summary>
 public partial class V1beta1CustomDomainSpecForProviderManagementCertificatePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -443,6 +462,7 @@ public partial class V1beta1CustomDomainSpecForProviderManagementCertificatePass
     public string Namespace { get; set; }
 }
 
+/// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
 public partial class V1beta1CustomDomainSpecForProviderManagementCertificateSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -458,6 +478,7 @@ public partial class V1beta1CustomDomainSpecForProviderManagementCertificateSecr
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomDomainSpecForProviderManagement
 {
     /// <summary>The password associated with the certificate provided above.</summary>
@@ -485,6 +506,7 @@ public partial class V1beta1CustomDomainSpecForProviderManagement
     public string? SslKeyvaultIdentityClientId { get; set; }
 }
 
+/// <summary>The password associated with the certificate provided above.</summary>
 public partial class V1beta1CustomDomainSpecForProviderPortalCertificatePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -500,6 +522,7 @@ public partial class V1beta1CustomDomainSpecForProviderPortalCertificatePassword
     public string Namespace { get; set; }
 }
 
+/// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
 public partial class V1beta1CustomDomainSpecForProviderPortalCertificateSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -515,6 +538,7 @@ public partial class V1beta1CustomDomainSpecForProviderPortalCertificateSecretRe
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomDomainSpecForProviderPortal
 {
     /// <summary>The password associated with the certificate provided above.</summary>
@@ -542,6 +566,7 @@ public partial class V1beta1CustomDomainSpecForProviderPortal
     public string? SslKeyvaultIdentityClientId { get; set; }
 }
 
+/// <summary>The password associated with the certificate provided above.</summary>
 public partial class V1beta1CustomDomainSpecForProviderScmCertificatePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -557,6 +582,7 @@ public partial class V1beta1CustomDomainSpecForProviderScmCertificatePasswordSec
     public string Namespace { get; set; }
 }
 
+/// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
 public partial class V1beta1CustomDomainSpecForProviderScmCertificateSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -572,6 +598,7 @@ public partial class V1beta1CustomDomainSpecForProviderScmCertificateSecretRef
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomDomainSpecForProviderScm
 {
     /// <summary>The password associated with the certificate provided above.</summary>
@@ -599,6 +626,7 @@ public partial class V1beta1CustomDomainSpecForProviderScm
     public string? SslKeyvaultIdentityClientId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomDomainSpecForProvider
 {
     /// <summary>The ID of the API Management service for which to configure Custom Domains. Changing this forces a new API Management Custom Domain resource to be created.</summary>
@@ -634,6 +662,7 @@ public partial class V1beta1CustomDomainSpecForProvider
     public IList<V1beta1CustomDomainSpecForProviderScm>? Scm { get; set; }
 }
 
+/// <summary>The password associated with the certificate provided above.</summary>
 public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalCertificatePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -649,6 +678,7 @@ public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalCertifica
     public string Namespace { get; set; }
 }
 
+/// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
 public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalCertificateSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -684,6 +714,7 @@ public enum V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultIdRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -697,6 +728,7 @@ public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultI
     public V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Certificate in keyvault to populate keyVaultId.</summary>
 public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -728,6 +760,7 @@ public enum V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultIdSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -741,6 +774,7 @@ public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultI
     public V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Certificate in keyvault to populate keyVaultId.</summary>
 public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -756,6 +790,7 @@ public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultI
     public V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortal
 {
     /// <summary>The password associated with the certificate provided above.</summary>
@@ -791,6 +826,7 @@ public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortal
     public string? SslKeyvaultIdentityClientId { get; set; }
 }
 
+/// <summary>The password associated with the certificate provided above.</summary>
 public partial class V1beta1CustomDomainSpecInitProviderGatewayCertificatePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -806,6 +842,7 @@ public partial class V1beta1CustomDomainSpecInitProviderGatewayCertificatePasswo
     public string Namespace { get; set; }
 }
 
+/// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
 public partial class V1beta1CustomDomainSpecInitProviderGatewayCertificateSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -841,6 +878,7 @@ public enum V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -854,6 +892,7 @@ public partial class V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdRefPoli
     public V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Certificate in keyvault to populate keyVaultId.</summary>
 public partial class V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -885,6 +924,7 @@ public enum V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -898,6 +938,7 @@ public partial class V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdSelecto
     public V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Certificate in keyvault to populate keyVaultId.</summary>
 public partial class V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -913,6 +954,7 @@ public partial class V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdSelecto
     public V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomDomainSpecInitProviderGateway
 {
     /// <summary>The password associated with the certificate provided above.</summary>
@@ -952,6 +994,7 @@ public partial class V1beta1CustomDomainSpecInitProviderGateway
     public string? SslKeyvaultIdentityClientId { get; set; }
 }
 
+/// <summary>The password associated with the certificate provided above.</summary>
 public partial class V1beta1CustomDomainSpecInitProviderManagementCertificatePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -967,6 +1010,7 @@ public partial class V1beta1CustomDomainSpecInitProviderManagementCertificatePas
     public string Namespace { get; set; }
 }
 
+/// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
 public partial class V1beta1CustomDomainSpecInitProviderManagementCertificateSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -982,6 +1026,7 @@ public partial class V1beta1CustomDomainSpecInitProviderManagementCertificateSec
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomDomainSpecInitProviderManagement
 {
     /// <summary>The password associated with the certificate provided above.</summary>
@@ -1009,6 +1054,7 @@ public partial class V1beta1CustomDomainSpecInitProviderManagement
     public string? SslKeyvaultIdentityClientId { get; set; }
 }
 
+/// <summary>The password associated with the certificate provided above.</summary>
 public partial class V1beta1CustomDomainSpecInitProviderPortalCertificatePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1024,6 +1070,7 @@ public partial class V1beta1CustomDomainSpecInitProviderPortalCertificatePasswor
     public string Namespace { get; set; }
 }
 
+/// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
 public partial class V1beta1CustomDomainSpecInitProviderPortalCertificateSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1039,6 +1086,7 @@ public partial class V1beta1CustomDomainSpecInitProviderPortalCertificateSecretR
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomDomainSpecInitProviderPortal
 {
     /// <summary>The password associated with the certificate provided above.</summary>
@@ -1066,6 +1114,7 @@ public partial class V1beta1CustomDomainSpecInitProviderPortal
     public string? SslKeyvaultIdentityClientId { get; set; }
 }
 
+/// <summary>The password associated with the certificate provided above.</summary>
 public partial class V1beta1CustomDomainSpecInitProviderScmCertificatePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1081,6 +1130,7 @@ public partial class V1beta1CustomDomainSpecInitProviderScmCertificatePasswordSe
     public string Namespace { get; set; }
 }
 
+/// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
 public partial class V1beta1CustomDomainSpecInitProviderScmCertificateSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1096,6 +1146,7 @@ public partial class V1beta1CustomDomainSpecInitProviderScmCertificateSecretRef
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomDomainSpecInitProviderScm
 {
     /// <summary>The password associated with the certificate provided above.</summary>
@@ -1123,6 +1174,7 @@ public partial class V1beta1CustomDomainSpecInitProviderScm
     public string? SslKeyvaultIdentityClientId { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1CustomDomainSpecInitProvider
 {
     /// <summary>One or more developer_portal blocks as defined below.</summary>
@@ -1188,6 +1240,7 @@ public enum V1beta1CustomDomainSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CustomDomainSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1201,6 +1254,7 @@ public partial class V1beta1CustomDomainSpecProviderConfigRefPolicy
     public V1beta1CustomDomainSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1CustomDomainSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1232,6 +1286,7 @@ public enum V1beta1CustomDomainSpecPublishConnectionDetailsToConfigRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CustomDomainSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1245,6 +1300,7 @@ public partial class V1beta1CustomDomainSpecPublishConnectionDetailsToConfigRefP
     public V1beta1CustomDomainSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1CustomDomainSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1256,6 +1312,7 @@ public partial class V1beta1CustomDomainSpecPublishConnectionDetailsToConfigRef
     public V1beta1CustomDomainSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1CustomDomainSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1271,6 +1328,7 @@ public partial class V1beta1CustomDomainSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1CustomDomainSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1286,6 +1344,7 @@ public partial class V1beta1CustomDomainSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1CustomDomainSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1297,6 +1356,7 @@ public partial class V1beta1CustomDomainSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>CustomDomainSpec defines the desired state of CustomDomain</summary>
 public partial class V1beta1CustomDomainSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1329,6 +1389,7 @@ public partial class V1beta1CustomDomainSpec
     public V1beta1CustomDomainSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomDomainStatusAtProviderDeveloperPortal
 {
     /// <summary></summary>
@@ -1368,6 +1429,7 @@ public partial class V1beta1CustomDomainStatusAtProviderDeveloperPortal
     public string? Thumbprint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomDomainStatusAtProviderGateway
 {
     /// <summary></summary>
@@ -1411,6 +1473,7 @@ public partial class V1beta1CustomDomainStatusAtProviderGateway
     public string? Thumbprint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomDomainStatusAtProviderManagement
 {
     /// <summary></summary>
@@ -1450,6 +1513,7 @@ public partial class V1beta1CustomDomainStatusAtProviderManagement
     public string? Thumbprint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomDomainStatusAtProviderPortal
 {
     /// <summary></summary>
@@ -1489,6 +1553,7 @@ public partial class V1beta1CustomDomainStatusAtProviderPortal
     public string? Thumbprint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomDomainStatusAtProviderScm
 {
     /// <summary></summary>
@@ -1528,6 +1593,7 @@ public partial class V1beta1CustomDomainStatusAtProviderScm
     public string? Thumbprint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomDomainStatusAtProvider
 {
     /// <summary>The ID of the API Management service for which to configure Custom Domains. Changing this forces a new API Management Custom Domain resource to be created.</summary>
@@ -1559,6 +1625,7 @@ public partial class V1beta1CustomDomainStatusAtProvider
     public IList<V1beta1CustomDomainStatusAtProviderScm>? Scm { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1CustomDomainStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1586,6 +1653,7 @@ public partial class V1beta1CustomDomainStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>CustomDomainStatus defines the observed state of CustomDomain.</summary>
 public partial class V1beta1CustomDomainStatus
 {
     /// <summary></summary>
@@ -1602,6 +1670,7 @@ public partial class V1beta1CustomDomainStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>CustomDomain is the Schema for the CustomDomains API. Manages a API Management Custom Domain.</summary>
 public partial class V1beta1CustomDomain : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1CustomDomainSpec>, IStatus<V1beta1CustomDomainStatus>
 {
     public const string KubeApiVersion = "v1beta1";

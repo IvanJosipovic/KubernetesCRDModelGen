@@ -18,6 +18,7 @@ public enum V1beta1TargetSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetSpecForProviderBatchTarget
 {
     /// <summary>The size of the array, if this is an array batch job. Valid values are integers between 2 and 10,000.</summary>
@@ -37,6 +38,7 @@ public partial class V1beta1TargetSpecForProviderBatchTarget
     public string? JobName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetSpecForProviderDeadLetterConfig
 {
     /// <summary>- ARN of the SQS queue specified as the target for the dead-letter queue.</summary>
@@ -44,6 +46,7 @@ public partial class V1beta1TargetSpecForProviderDeadLetterConfig
     public string? Arn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetSpecForProviderEcsTargetCapacityProviderStrategy
 {
     /// <summary>The base value designates how many tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined. Defaults to 0.</summary>
@@ -59,6 +62,7 @@ public partial class V1beta1TargetSpecForProviderEcsTargetCapacityProviderStrate
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetSpecForProviderEcsTargetNetworkConfiguration
 {
     /// <summary>Assign a public IP address to the ENI (Fargate launch type only). Valid values are true or false. Defaults to false.</summary>
@@ -74,6 +78,7 @@ public partial class V1beta1TargetSpecForProviderEcsTargetNetworkConfiguration
     public IList<string>? Subnets { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetSpecForProviderEcsTargetOrderedPlacementStrategy
 {
     /// <summary>The field to apply the placement strategy against. For the spread placement strategy, valid values are instanceId (or host, which has the same effect), or any platform or custom attribute that is applied to a container instance, such as attribute:ecs.availability-zone. For the binpack placement strategy, valid values are cpu and memory. For the random placement strategy, this field is not used. For more information, see Amazon ECS task placement strategies.</summary>
@@ -85,6 +90,7 @@ public partial class V1beta1TargetSpecForProviderEcsTargetOrderedPlacementStrate
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetSpecForProviderEcsTargetPlacementConstraint
 {
     /// <summary>Cluster Query Language expression to apply to the constraint. Does not need to be specified for the distinctInstance type. For more information, see Cluster Query Language in the Amazon EC2 Container Service Developer Guide.</summary>
@@ -116,6 +122,7 @@ public enum V1beta1TargetSpecForProviderEcsTargetTaskDefinitionArnRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TargetSpecForProviderEcsTargetTaskDefinitionArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -129,6 +136,7 @@ public partial class V1beta1TargetSpecForProviderEcsTargetTaskDefinitionArnRefPo
     public V1beta1TargetSpecForProviderEcsTargetTaskDefinitionArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a TaskDefinition in ecs to populate taskDefinitionArn.</summary>
 public partial class V1beta1TargetSpecForProviderEcsTargetTaskDefinitionArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -160,6 +168,7 @@ public enum V1beta1TargetSpecForProviderEcsTargetTaskDefinitionArnSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TargetSpecForProviderEcsTargetTaskDefinitionArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -173,6 +182,7 @@ public partial class V1beta1TargetSpecForProviderEcsTargetTaskDefinitionArnSelec
     public V1beta1TargetSpecForProviderEcsTargetTaskDefinitionArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a TaskDefinition in ecs to populate taskDefinitionArn.</summary>
 public partial class V1beta1TargetSpecForProviderEcsTargetTaskDefinitionArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -188,6 +198,7 @@ public partial class V1beta1TargetSpecForProviderEcsTargetTaskDefinitionArnSelec
     public V1beta1TargetSpecForProviderEcsTargetTaskDefinitionArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetSpecForProviderEcsTarget
 {
     /// <summary>The capacity provider strategy to use for the task. If a capacity_provider_strategy specified, the launch_type parameter must be omitted. If no capacity_provider_strategy or launch_type is specified, the default capacity provider strategy for the cluster is used. Can be one or more. See below.</summary>
@@ -271,6 +282,7 @@ public enum V1beta1TargetSpecForProviderEventBusNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TargetSpecForProviderEventBusNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -284,6 +296,7 @@ public partial class V1beta1TargetSpecForProviderEventBusNameRefPolicy
     public V1beta1TargetSpecForProviderEventBusNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bus in cloudwatchevents to populate eventBusName.</summary>
 public partial class V1beta1TargetSpecForProviderEventBusNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -315,6 +328,7 @@ public enum V1beta1TargetSpecForProviderEventBusNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TargetSpecForProviderEventBusNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -328,6 +342,7 @@ public partial class V1beta1TargetSpecForProviderEventBusNameSelectorPolicy
     public V1beta1TargetSpecForProviderEventBusNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bus in cloudwatchevents to populate eventBusName.</summary>
 public partial class V1beta1TargetSpecForProviderEventBusNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -343,6 +358,7 @@ public partial class V1beta1TargetSpecForProviderEventBusNameSelector
     public V1beta1TargetSpecForProviderEventBusNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetSpecForProviderHttpTarget
 {
     /// <summary>Enables you to specify HTTP headers to add to the request.</summary>
@@ -358,6 +374,7 @@ public partial class V1beta1TargetSpecForProviderHttpTarget
     public IDictionary<string, string>? QueryStringParameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetSpecForProviderInputTransformer
 {
     /// <summary>Key value pairs specified in the form of JSONPath (for example, time = $.time)</summary>
@@ -369,6 +386,7 @@ public partial class V1beta1TargetSpecForProviderInputTransformer
     public string? InputTemplate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetSpecForProviderKinesisTarget
 {
     /// <summary>The JSON path to be extracted from the event and used as the partition key.</summary>
@@ -376,6 +394,7 @@ public partial class V1beta1TargetSpecForProviderKinesisTarget
     public string? PartitionKeyPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetSpecForProviderRedshiftTarget
 {
     /// <summary>The name of the database.</summary>
@@ -403,6 +422,7 @@ public partial class V1beta1TargetSpecForProviderRedshiftTarget
     public bool? WithEvent { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetSpecForProviderRetryPolicy
 {
     /// <summary>The age in seconds to continue to make retry attempts.</summary>
@@ -434,6 +454,7 @@ public enum V1beta1TargetSpecForProviderRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TargetSpecForProviderRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -447,6 +468,7 @@ public partial class V1beta1TargetSpecForProviderRoleArnRefPolicy
     public V1beta1TargetSpecForProviderRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1TargetSpecForProviderRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -478,6 +500,7 @@ public enum V1beta1TargetSpecForProviderRoleArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TargetSpecForProviderRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -491,6 +514,7 @@ public partial class V1beta1TargetSpecForProviderRoleArnSelectorPolicy
     public V1beta1TargetSpecForProviderRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1TargetSpecForProviderRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -526,6 +550,7 @@ public enum V1beta1TargetSpecForProviderRuleRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TargetSpecForProviderRuleRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -539,6 +564,7 @@ public partial class V1beta1TargetSpecForProviderRuleRefPolicy
     public V1beta1TargetSpecForProviderRuleRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Rule in cloudwatchevents to populate rule.</summary>
 public partial class V1beta1TargetSpecForProviderRuleRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -570,6 +596,7 @@ public enum V1beta1TargetSpecForProviderRuleSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TargetSpecForProviderRuleSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -583,6 +610,7 @@ public partial class V1beta1TargetSpecForProviderRuleSelectorPolicy
     public V1beta1TargetSpecForProviderRuleSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Rule in cloudwatchevents to populate rule.</summary>
 public partial class V1beta1TargetSpecForProviderRuleSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -598,6 +626,7 @@ public partial class V1beta1TargetSpecForProviderRuleSelector
     public V1beta1TargetSpecForProviderRuleSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetSpecForProviderRunCommandTargets
 {
     /// <summary>Can be either tag:tag-key or InstanceIds.</summary>
@@ -609,6 +638,7 @@ public partial class V1beta1TargetSpecForProviderRunCommandTargets
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetSpecForProviderSagemakerPipelineTargetPipelineParameterList
 {
     /// <summary>Name of parameter to start execution of a SageMaker Model Building Pipeline.</summary>
@@ -620,6 +650,7 @@ public partial class V1beta1TargetSpecForProviderSagemakerPipelineTargetPipeline
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetSpecForProviderSagemakerPipelineTarget
 {
     /// <summary>List of Parameter names and values for SageMaker Model Building Pipeline execution.</summary>
@@ -627,6 +658,7 @@ public partial class V1beta1TargetSpecForProviderSagemakerPipelineTarget
     public IList<V1beta1TargetSpecForProviderSagemakerPipelineTargetPipelineParameterList>? PipelineParameterList { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetSpecForProviderSqsTarget
 {
     /// <summary>The FIFO message group ID to use as the target.</summary>
@@ -634,6 +666,7 @@ public partial class V1beta1TargetSpecForProviderSqsTarget
     public string? MessageGroupId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetSpecForProvider
 {
     /// <summary>The Amazon Resource Name (ARN) of the target.</summary>
@@ -741,6 +774,7 @@ public partial class V1beta1TargetSpecForProvider
     public string? TargetId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetSpecInitProviderBatchTarget
 {
     /// <summary>The size of the array, if this is an array batch job. Valid values are integers between 2 and 10,000.</summary>
@@ -760,6 +794,7 @@ public partial class V1beta1TargetSpecInitProviderBatchTarget
     public string? JobName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetSpecInitProviderDeadLetterConfig
 {
     /// <summary>- ARN of the SQS queue specified as the target for the dead-letter queue.</summary>
@@ -767,6 +802,7 @@ public partial class V1beta1TargetSpecInitProviderDeadLetterConfig
     public string? Arn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetSpecInitProviderEcsTargetCapacityProviderStrategy
 {
     /// <summary>The base value designates how many tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined. Defaults to 0.</summary>
@@ -782,6 +818,7 @@ public partial class V1beta1TargetSpecInitProviderEcsTargetCapacityProviderStrat
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetSpecInitProviderEcsTargetNetworkConfiguration
 {
     /// <summary>Assign a public IP address to the ENI (Fargate launch type only). Valid values are true or false. Defaults to false.</summary>
@@ -797,6 +834,7 @@ public partial class V1beta1TargetSpecInitProviderEcsTargetNetworkConfiguration
     public IList<string>? Subnets { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetSpecInitProviderEcsTargetOrderedPlacementStrategy
 {
     /// <summary>The field to apply the placement strategy against. For the spread placement strategy, valid values are instanceId (or host, which has the same effect), or any platform or custom attribute that is applied to a container instance, such as attribute:ecs.availability-zone. For the binpack placement strategy, valid values are cpu and memory. For the random placement strategy, this field is not used. For more information, see Amazon ECS task placement strategies.</summary>
@@ -808,6 +846,7 @@ public partial class V1beta1TargetSpecInitProviderEcsTargetOrderedPlacementStrat
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetSpecInitProviderEcsTargetPlacementConstraint
 {
     /// <summary>Cluster Query Language expression to apply to the constraint. Does not need to be specified for the distinctInstance type. For more information, see Cluster Query Language in the Amazon EC2 Container Service Developer Guide.</summary>
@@ -839,6 +878,7 @@ public enum V1beta1TargetSpecInitProviderEcsTargetTaskDefinitionArnRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TargetSpecInitProviderEcsTargetTaskDefinitionArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -852,6 +892,7 @@ public partial class V1beta1TargetSpecInitProviderEcsTargetTaskDefinitionArnRefP
     public V1beta1TargetSpecInitProviderEcsTargetTaskDefinitionArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a TaskDefinition in ecs to populate taskDefinitionArn.</summary>
 public partial class V1beta1TargetSpecInitProviderEcsTargetTaskDefinitionArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -883,6 +924,7 @@ public enum V1beta1TargetSpecInitProviderEcsTargetTaskDefinitionArnSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TargetSpecInitProviderEcsTargetTaskDefinitionArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -896,6 +938,7 @@ public partial class V1beta1TargetSpecInitProviderEcsTargetTaskDefinitionArnSele
     public V1beta1TargetSpecInitProviderEcsTargetTaskDefinitionArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a TaskDefinition in ecs to populate taskDefinitionArn.</summary>
 public partial class V1beta1TargetSpecInitProviderEcsTargetTaskDefinitionArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -911,6 +954,7 @@ public partial class V1beta1TargetSpecInitProviderEcsTargetTaskDefinitionArnSele
     public V1beta1TargetSpecInitProviderEcsTargetTaskDefinitionArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetSpecInitProviderEcsTarget
 {
     /// <summary>The capacity provider strategy to use for the task. If a capacity_provider_strategy specified, the launch_type parameter must be omitted. If no capacity_provider_strategy or launch_type is specified, the default capacity provider strategy for the cluster is used. Can be one or more. See below.</summary>
@@ -994,6 +1038,7 @@ public enum V1beta1TargetSpecInitProviderEventBusNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TargetSpecInitProviderEventBusNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1007,6 +1052,7 @@ public partial class V1beta1TargetSpecInitProviderEventBusNameRefPolicy
     public V1beta1TargetSpecInitProviderEventBusNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bus in cloudwatchevents to populate eventBusName.</summary>
 public partial class V1beta1TargetSpecInitProviderEventBusNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1038,6 +1084,7 @@ public enum V1beta1TargetSpecInitProviderEventBusNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TargetSpecInitProviderEventBusNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1051,6 +1098,7 @@ public partial class V1beta1TargetSpecInitProviderEventBusNameSelectorPolicy
     public V1beta1TargetSpecInitProviderEventBusNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bus in cloudwatchevents to populate eventBusName.</summary>
 public partial class V1beta1TargetSpecInitProviderEventBusNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1066,6 +1114,7 @@ public partial class V1beta1TargetSpecInitProviderEventBusNameSelector
     public V1beta1TargetSpecInitProviderEventBusNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetSpecInitProviderHttpTarget
 {
     /// <summary>Enables you to specify HTTP headers to add to the request.</summary>
@@ -1081,6 +1130,7 @@ public partial class V1beta1TargetSpecInitProviderHttpTarget
     public IDictionary<string, string>? QueryStringParameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetSpecInitProviderInputTransformer
 {
     /// <summary>Key value pairs specified in the form of JSONPath (for example, time = $.time)</summary>
@@ -1092,6 +1142,7 @@ public partial class V1beta1TargetSpecInitProviderInputTransformer
     public string? InputTemplate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetSpecInitProviderKinesisTarget
 {
     /// <summary>The JSON path to be extracted from the event and used as the partition key.</summary>
@@ -1099,6 +1150,7 @@ public partial class V1beta1TargetSpecInitProviderKinesisTarget
     public string? PartitionKeyPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetSpecInitProviderRedshiftTarget
 {
     /// <summary>The name of the database.</summary>
@@ -1126,6 +1178,7 @@ public partial class V1beta1TargetSpecInitProviderRedshiftTarget
     public bool? WithEvent { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetSpecInitProviderRetryPolicy
 {
     /// <summary>The age in seconds to continue to make retry attempts.</summary>
@@ -1157,6 +1210,7 @@ public enum V1beta1TargetSpecInitProviderRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TargetSpecInitProviderRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1170,6 +1224,7 @@ public partial class V1beta1TargetSpecInitProviderRoleArnRefPolicy
     public V1beta1TargetSpecInitProviderRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1TargetSpecInitProviderRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1201,6 +1256,7 @@ public enum V1beta1TargetSpecInitProviderRoleArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TargetSpecInitProviderRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1214,6 +1270,7 @@ public partial class V1beta1TargetSpecInitProviderRoleArnSelectorPolicy
     public V1beta1TargetSpecInitProviderRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1TargetSpecInitProviderRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1249,6 +1306,7 @@ public enum V1beta1TargetSpecInitProviderRuleRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TargetSpecInitProviderRuleRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1262,6 +1320,7 @@ public partial class V1beta1TargetSpecInitProviderRuleRefPolicy
     public V1beta1TargetSpecInitProviderRuleRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Rule in cloudwatchevents to populate rule.</summary>
 public partial class V1beta1TargetSpecInitProviderRuleRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1293,6 +1352,7 @@ public enum V1beta1TargetSpecInitProviderRuleSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TargetSpecInitProviderRuleSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1306,6 +1366,7 @@ public partial class V1beta1TargetSpecInitProviderRuleSelectorPolicy
     public V1beta1TargetSpecInitProviderRuleSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Rule in cloudwatchevents to populate rule.</summary>
 public partial class V1beta1TargetSpecInitProviderRuleSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1321,6 +1382,7 @@ public partial class V1beta1TargetSpecInitProviderRuleSelector
     public V1beta1TargetSpecInitProviderRuleSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetSpecInitProviderRunCommandTargets
 {
     /// <summary>Can be either tag:tag-key or InstanceIds.</summary>
@@ -1332,6 +1394,7 @@ public partial class V1beta1TargetSpecInitProviderRunCommandTargets
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetSpecInitProviderSagemakerPipelineTargetPipelineParameterList
 {
     /// <summary>Name of parameter to start execution of a SageMaker Model Building Pipeline.</summary>
@@ -1343,6 +1406,7 @@ public partial class V1beta1TargetSpecInitProviderSagemakerPipelineTargetPipelin
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetSpecInitProviderSagemakerPipelineTarget
 {
     /// <summary>List of Parameter names and values for SageMaker Model Building Pipeline execution.</summary>
@@ -1350,6 +1414,7 @@ public partial class V1beta1TargetSpecInitProviderSagemakerPipelineTarget
     public IList<V1beta1TargetSpecInitProviderSagemakerPipelineTargetPipelineParameterList>? PipelineParameterList { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetSpecInitProviderSqsTarget
 {
     /// <summary>The FIFO message group ID to use as the target.</summary>
@@ -1357,6 +1422,7 @@ public partial class V1beta1TargetSpecInitProviderSqsTarget
     public string? MessageGroupId { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1TargetSpecInitProvider
 {
     /// <summary>The Amazon Resource Name (ARN) of the target.</summary>
@@ -1502,6 +1568,7 @@ public enum V1beta1TargetSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TargetSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1515,6 +1582,7 @@ public partial class V1beta1TargetSpecProviderConfigRefPolicy
     public V1beta1TargetSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1TargetSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1546,6 +1614,7 @@ public enum V1beta1TargetSpecPublishConnectionDetailsToConfigRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TargetSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1559,6 +1628,7 @@ public partial class V1beta1TargetSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1TargetSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1TargetSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1570,6 +1640,7 @@ public partial class V1beta1TargetSpecPublishConnectionDetailsToConfigRef
     public V1beta1TargetSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1TargetSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1585,6 +1656,7 @@ public partial class V1beta1TargetSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1TargetSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1600,6 +1672,7 @@ public partial class V1beta1TargetSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1TargetSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1611,6 +1684,7 @@ public partial class V1beta1TargetSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>TargetSpec defines the desired state of Target</summary>
 public partial class V1beta1TargetSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1643,6 +1717,7 @@ public partial class V1beta1TargetSpec
     public V1beta1TargetSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetStatusAtProviderBatchTarget
 {
     /// <summary>The size of the array, if this is an array batch job. Valid values are integers between 2 and 10,000.</summary>
@@ -1662,6 +1737,7 @@ public partial class V1beta1TargetStatusAtProviderBatchTarget
     public string? JobName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetStatusAtProviderDeadLetterConfig
 {
     /// <summary>- ARN of the SQS queue specified as the target for the dead-letter queue.</summary>
@@ -1669,6 +1745,7 @@ public partial class V1beta1TargetStatusAtProviderDeadLetterConfig
     public string? Arn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetStatusAtProviderEcsTargetCapacityProviderStrategy
 {
     /// <summary>The base value designates how many tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined. Defaults to 0.</summary>
@@ -1684,6 +1761,7 @@ public partial class V1beta1TargetStatusAtProviderEcsTargetCapacityProviderStrat
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetStatusAtProviderEcsTargetNetworkConfiguration
 {
     /// <summary>Assign a public IP address to the ENI (Fargate launch type only). Valid values are true or false. Defaults to false.</summary>
@@ -1699,6 +1777,7 @@ public partial class V1beta1TargetStatusAtProviderEcsTargetNetworkConfiguration
     public IList<string>? Subnets { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetStatusAtProviderEcsTargetOrderedPlacementStrategy
 {
     /// <summary>The field to apply the placement strategy against. For the spread placement strategy, valid values are instanceId (or host, which has the same effect), or any platform or custom attribute that is applied to a container instance, such as attribute:ecs.availability-zone. For the binpack placement strategy, valid values are cpu and memory. For the random placement strategy, this field is not used. For more information, see Amazon ECS task placement strategies.</summary>
@@ -1710,6 +1789,7 @@ public partial class V1beta1TargetStatusAtProviderEcsTargetOrderedPlacementStrat
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetStatusAtProviderEcsTargetPlacementConstraint
 {
     /// <summary>Cluster Query Language expression to apply to the constraint. Does not need to be specified for the distinctInstance type. For more information, see Cluster Query Language in the Amazon EC2 Container Service Developer Guide.</summary>
@@ -1721,6 +1801,7 @@ public partial class V1beta1TargetStatusAtProviderEcsTargetPlacementConstraint
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetStatusAtProviderEcsTarget
 {
     /// <summary>The capacity provider strategy to use for the task. If a capacity_provider_strategy specified, the launch_type parameter must be omitted. If no capacity_provider_strategy or launch_type is specified, the default capacity provider strategy for the cluster is used. Can be one or more. See below.</summary>
@@ -1776,6 +1857,7 @@ public partial class V1beta1TargetStatusAtProviderEcsTarget
     public string? TaskDefinitionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetStatusAtProviderHttpTarget
 {
     /// <summary>Enables you to specify HTTP headers to add to the request.</summary>
@@ -1791,6 +1873,7 @@ public partial class V1beta1TargetStatusAtProviderHttpTarget
     public IDictionary<string, string>? QueryStringParameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetStatusAtProviderInputTransformer
 {
     /// <summary>Key value pairs specified in the form of JSONPath (for example, time = $.time)</summary>
@@ -1802,6 +1885,7 @@ public partial class V1beta1TargetStatusAtProviderInputTransformer
     public string? InputTemplate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetStatusAtProviderKinesisTarget
 {
     /// <summary>The JSON path to be extracted from the event and used as the partition key.</summary>
@@ -1809,6 +1893,7 @@ public partial class V1beta1TargetStatusAtProviderKinesisTarget
     public string? PartitionKeyPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetStatusAtProviderRedshiftTarget
 {
     /// <summary>The name of the database.</summary>
@@ -1836,6 +1921,7 @@ public partial class V1beta1TargetStatusAtProviderRedshiftTarget
     public bool? WithEvent { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetStatusAtProviderRetryPolicy
 {
     /// <summary>The age in seconds to continue to make retry attempts.</summary>
@@ -1847,6 +1933,7 @@ public partial class V1beta1TargetStatusAtProviderRetryPolicy
     public double? MaximumRetryAttempts { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetStatusAtProviderRunCommandTargets
 {
     /// <summary>Can be either tag:tag-key or InstanceIds.</summary>
@@ -1858,6 +1945,7 @@ public partial class V1beta1TargetStatusAtProviderRunCommandTargets
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetStatusAtProviderSagemakerPipelineTargetPipelineParameterList
 {
     /// <summary>Name of parameter to start execution of a SageMaker Model Building Pipeline.</summary>
@@ -1869,6 +1957,7 @@ public partial class V1beta1TargetStatusAtProviderSagemakerPipelineTargetPipelin
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetStatusAtProviderSagemakerPipelineTarget
 {
     /// <summary>List of Parameter names and values for SageMaker Model Building Pipeline execution.</summary>
@@ -1876,6 +1965,7 @@ public partial class V1beta1TargetStatusAtProviderSagemakerPipelineTarget
     public IList<V1beta1TargetStatusAtProviderSagemakerPipelineTargetPipelineParameterList>? PipelineParameterList { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetStatusAtProviderSqsTarget
 {
     /// <summary>The FIFO message group ID to use as the target.</summary>
@@ -1883,6 +1973,7 @@ public partial class V1beta1TargetStatusAtProviderSqsTarget
     public string? MessageGroupId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetStatusAtProvider
 {
     /// <summary>The Amazon Resource Name (ARN) of the target.</summary>
@@ -1966,6 +2057,7 @@ public partial class V1beta1TargetStatusAtProvider
     public string? TargetId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1TargetStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1993,6 +2085,7 @@ public partial class V1beta1TargetStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>TargetStatus defines the observed state of Target.</summary>
 public partial class V1beta1TargetStatus
 {
     /// <summary></summary>
@@ -2009,6 +2102,7 @@ public partial class V1beta1TargetStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Target is the Schema for the Targets API. Provides an EventBridge Target resource.</summary>
 public partial class V1beta1Target : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1TargetSpec>, IStatus<V1beta1TargetStatus>
 {
     public const string KubeApiVersion = "v1beta1";

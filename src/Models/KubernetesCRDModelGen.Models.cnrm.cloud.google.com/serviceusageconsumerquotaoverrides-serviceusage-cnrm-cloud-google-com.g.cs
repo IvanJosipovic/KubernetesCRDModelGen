@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.serviceusage.cnrm.cloud.google.com;
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1ServiceUsageConsumerQuotaOverrideSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1ServiceUsageConsumerQuotaOverrideSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ServiceUsageConsumerQuotaOverrideSpec
 {
     /// <summary>Immutable. If this map is nonempty, then this override applies only to specific values for dimensions defined in the limit unit.</summary>
@@ -58,6 +60,7 @@ public partial class V1alpha1ServiceUsageConsumerQuotaOverrideSpec
     public string Service { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ServiceUsageConsumerQuotaOverrideStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -81,6 +84,7 @@ public partial class V1alpha1ServiceUsageConsumerQuotaOverrideStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ServiceUsageConsumerQuotaOverrideStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -97,6 +101,7 @@ public partial class V1alpha1ServiceUsageConsumerQuotaOverrideStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1ServiceUsageConsumerQuotaOverride : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ServiceUsageConsumerQuotaOverrideSpec>, IStatus<V1alpha1ServiceUsageConsumerQuotaOverrideStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dbformysql.azure.com;
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20230630storageFlexibleServerSpecAdministratorLoginPassword
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -19,6 +20,7 @@ public partial class V1api20230630storageFlexibleServerSpecAdministratorLoginPas
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230630.Backup Storage Profile properties of a server</summary>
 public partial class V1api20230630storageFlexibleServerSpecBackup
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -34,6 +36,7 @@ public partial class V1api20230630storageFlexibleServerSpecBackup
     public string? GeoRedundantBackup { get; set; }
 }
 
+/// <summary>GeoBackupUserAssignedIdentityReference: Geo backup user identity resource id as identity can't cross region, need identity in same region as geo backup</summary>
 public partial class V1api20230630storageFlexibleServerSpecDataEncryptionGeoBackupUserAssignedIdentityReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -53,6 +56,7 @@ public partial class V1api20230630storageFlexibleServerSpecDataEncryptionGeoBack
     public string? Name { get; set; }
 }
 
+/// <summary>PrimaryUserAssignedIdentityReference: Primary user identity resource id</summary>
 public partial class V1api20230630storageFlexibleServerSpecDataEncryptionPrimaryUserAssignedIdentityReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -72,6 +76,7 @@ public partial class V1api20230630storageFlexibleServerSpecDataEncryptionPrimary
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230630.DataEncryption The date encryption for cmk.</summary>
 public partial class V1api20230630storageFlexibleServerSpecDataEncryption
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -99,6 +104,7 @@ public partial class V1api20230630storageFlexibleServerSpecDataEncryption
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230630.HighAvailability Network related properties of a server</summary>
 public partial class V1api20230630storageFlexibleServerSpecHighAvailability
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -114,6 +120,7 @@ public partial class V1api20230630storageFlexibleServerSpecHighAvailability
     public string? StandbyAvailabilityZone { get; set; }
 }
 
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 public partial class V1api20230630storageFlexibleServerSpecIdentityUserAssignedIdentitiesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -133,6 +140,7 @@ public partial class V1api20230630storageFlexibleServerSpecIdentityUserAssignedI
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230630.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
 public partial class V1api20230630storageFlexibleServerSpecIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -144,6 +152,7 @@ public partial class V1api20230630storageFlexibleServerSpecIdentityUserAssignedI
     public V1api20230630storageFlexibleServerSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20230630.MySQLServerIdentity Properties to configure Identity for Bring your Own Keys</summary>
 public partial class V1api20230630storageFlexibleServerSpecIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -159,6 +168,7 @@ public partial class V1api20230630storageFlexibleServerSpecIdentity
     public IList<V1api20230630storageFlexibleServerSpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20230630storageFlexibleServerSpecImportSourcePropertiesSasToken
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -170,6 +180,7 @@ public partial class V1api20230630storageFlexibleServerSpecImportSourcePropertie
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230630.ImportSourceProperties Import source related properties.</summary>
 public partial class V1api20230630storageFlexibleServerSpecImportSourceProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -193,6 +204,7 @@ public partial class V1api20230630storageFlexibleServerSpecImportSourcePropertie
     public string? StorageUrl { get; set; }
 }
 
+/// <summary>Storage version of v1api20230630.MaintenanceWindow Maintenance window of a server.</summary>
 public partial class V1api20230630storageFlexibleServerSpecMaintenanceWindow
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -216,6 +228,7 @@ public partial class V1api20230630storageFlexibleServerSpecMaintenanceWindow
     public int? StartMinute { get; set; }
 }
 
+/// <summary>DelegatedSubnetResourceReference: Delegated subnet resource id used to setup vnet for a server.</summary>
 public partial class V1api20230630storageFlexibleServerSpecNetworkDelegatedSubnetResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -235,6 +248,7 @@ public partial class V1api20230630storageFlexibleServerSpecNetworkDelegatedSubne
     public string? Name { get; set; }
 }
 
+/// <summary>PrivateDnsZoneResourceReference: Private DNS zone resource id.</summary>
 public partial class V1api20230630storageFlexibleServerSpecNetworkPrivateDnsZoneResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -254,6 +268,7 @@ public partial class V1api20230630storageFlexibleServerSpecNetworkPrivateDnsZone
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230630.Network Network related properties of a server</summary>
 public partial class V1api20230630storageFlexibleServerSpecNetwork
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -273,6 +288,7 @@ public partial class V1api20230630storageFlexibleServerSpecNetwork
     public string? PublicNetworkAccess { get; set; }
 }
 
+/// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20230630storageFlexibleServerSpecOperatorSpecConfigMapsAdministratorLogin
 {
     /// <summary>Key is the key in the ConfigMap being referenced</summary>
@@ -284,6 +300,7 @@ public partial class V1api20230630storageFlexibleServerSpecOperatorSpecConfigMap
     public string Name { get; set; }
 }
 
+/// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20230630storageFlexibleServerSpecOperatorSpecConfigMapsFullyQualifiedDomainName
 {
     /// <summary>Key is the key in the ConfigMap being referenced</summary>
@@ -295,6 +312,7 @@ public partial class V1api20230630storageFlexibleServerSpecOperatorSpecConfigMap
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230630.FlexibleServerOperatorConfigMaps</summary>
 public partial class V1api20230630storageFlexibleServerSpecOperatorSpecConfigMaps
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -310,6 +328,7 @@ public partial class V1api20230630storageFlexibleServerSpecOperatorSpecConfigMap
     public V1api20230630storageFlexibleServerSpecOperatorSpecConfigMapsFullyQualifiedDomainName? FullyQualifiedDomainName { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20230630storageFlexibleServerSpecOperatorSpecSecretsFullyQualifiedDomainName
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -321,6 +340,7 @@ public partial class V1api20230630storageFlexibleServerSpecOperatorSpecSecretsFu
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230630.FlexibleServerOperatorSecrets</summary>
 public partial class V1api20230630storageFlexibleServerSpecOperatorSpecSecrets
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -332,6 +352,7 @@ public partial class V1api20230630storageFlexibleServerSpecOperatorSpecSecrets
     public V1api20230630storageFlexibleServerSpecOperatorSpecSecretsFullyQualifiedDomainName? FullyQualifiedDomainName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230630.FlexibleServerOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 public partial class V1api20230630storageFlexibleServerSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -347,6 +368,7 @@ public partial class V1api20230630storageFlexibleServerSpecOperatorSpec
     public V1api20230630storageFlexibleServerSpecOperatorSpecSecrets? Secrets { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20230630storageFlexibleServerSpecOwner
 {
     /// <summary></summary>
@@ -358,6 +380,7 @@ public partial class V1api20230630storageFlexibleServerSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230630.MySQLServerSku Billing information related properties of a server.</summary>
 public partial class V1api20230630storageFlexibleServerSpecSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -373,6 +396,7 @@ public partial class V1api20230630storageFlexibleServerSpecSku
     public string? Tier { get; set; }
 }
 
+/// <summary>SourceServerResourceReference: The source MySQL server id.</summary>
 public partial class V1api20230630storageFlexibleServerSpecSourceServerResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -392,6 +416,7 @@ public partial class V1api20230630storageFlexibleServerSpecSourceServerResourceR
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230630.Storage Storage Profile properties of a server</summary>
 public partial class V1api20230630storageFlexibleServerSpecStorage
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -419,6 +444,7 @@ public partial class V1api20230630storageFlexibleServerSpecStorage
     public int? StorageSizeGB { get; set; }
 }
 
+/// <summary>Storage version of v1api20230630.FlexibleServer_Spec</summary>
 public partial class V1api20230630storageFlexibleServerSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -518,6 +544,7 @@ public partial class V1api20230630storageFlexibleServerSpec
     public string? Version { get; set; }
 }
 
+/// <summary>Storage version of v1api20230630.Backup_STATUS Storage Profile properties of a server</summary>
 public partial class V1api20230630storageFlexibleServerStatusBackup
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -537,6 +564,7 @@ public partial class V1api20230630storageFlexibleServerStatusBackup
     public string? GeoRedundantBackup { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20230630storageFlexibleServerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -568,6 +596,7 @@ public partial class V1api20230630storageFlexibleServerStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230630.DataEncryption_STATUS The date encryption for cmk.</summary>
 public partial class V1api20230630storageFlexibleServerStatusDataEncryption
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -595,6 +624,7 @@ public partial class V1api20230630storageFlexibleServerStatusDataEncryption
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230630.HighAvailability_STATUS Network related properties of a server</summary>
 public partial class V1api20230630storageFlexibleServerStatusHighAvailability
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -614,6 +644,7 @@ public partial class V1api20230630storageFlexibleServerStatusHighAvailability
     public string? State { get; set; }
 }
 
+/// <summary>Storage version of v1api20230630.MySQLServerIdentity_STATUS Properties to configure Identity for Bring your Own Keys</summary>
 public partial class V1api20230630storageFlexibleServerStatusIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -637,6 +668,7 @@ public partial class V1api20230630storageFlexibleServerStatusIdentity
     public IDictionary<string, JsonNode>? UserAssignedIdentities { get; set; }
 }
 
+/// <summary>Storage version of v1api20230630.ImportSourceProperties_STATUS Import source related properties.</summary>
 public partial class V1api20230630storageFlexibleServerStatusImportSourceProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -656,6 +688,7 @@ public partial class V1api20230630storageFlexibleServerStatusImportSourcePropert
     public string? StorageUrl { get; set; }
 }
 
+/// <summary>Storage version of v1api20230630.MaintenanceWindow_STATUS Maintenance window of a server.</summary>
 public partial class V1api20230630storageFlexibleServerStatusMaintenanceWindow
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -679,6 +712,7 @@ public partial class V1api20230630storageFlexibleServerStatusMaintenanceWindow
     public int? StartMinute { get; set; }
 }
 
+/// <summary>Storage version of v1api20230630.Network_STATUS Network related properties of a server</summary>
 public partial class V1api20230630storageFlexibleServerStatusNetwork
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -698,6 +732,7 @@ public partial class V1api20230630storageFlexibleServerStatusNetwork
     public string? PublicNetworkAccess { get; set; }
 }
 
+/// <summary>Storage version of v1api20230630.PrivateEndpointConnection_STATUS The private endpoint connection resource.</summary>
 public partial class V1api20230630storageFlexibleServerStatusPrivateEndpointConnections
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -709,6 +744,7 @@ public partial class V1api20230630storageFlexibleServerStatusPrivateEndpointConn
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20230630.MySQLServerSku_STATUS Billing information related properties of a server.</summary>
 public partial class V1api20230630storageFlexibleServerStatusSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -724,6 +760,7 @@ public partial class V1api20230630storageFlexibleServerStatusSku
     public string? Tier { get; set; }
 }
 
+/// <summary>Storage version of v1api20230630.Storage_STATUS Storage Profile properties of a server</summary>
 public partial class V1api20230630storageFlexibleServerStatusStorage
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -755,6 +792,7 @@ public partial class V1api20230630storageFlexibleServerStatusStorage
     public string? StorageSku { get; set; }
 }
 
+/// <summary>Storage version of v1api20230630.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 public partial class V1api20230630storageFlexibleServerStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -786,6 +824,7 @@ public partial class V1api20230630storageFlexibleServerStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
+/// <summary>Storage version of v1api20230630.FlexibleServer_STATUS</summary>
 public partial class V1api20230630storageFlexibleServerStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -902,6 +941,7 @@ public partial class V1api20230630storageFlexibleServerStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20230630.FlexibleServer Generator information: - Generated from: /mysql/resource-manager/Microsoft.DBforMySQL/FlexibleServers/stable/2023-06-30/FlexibleServers.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}</summary>
 public partial class V1api20230630storageFlexibleServer : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230630storageFlexibleServerSpec>, IStatus<V1api20230630storageFlexibleServerStatus>
 {
     public const string KubeApiVersion = "v1api20230630storage";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+/// <summary>Storage version of v1api20220701.ResourceSet The base resource set for visibility and auto-approval.</summary>
 public partial class V1api20220701storagePrivateLinkServiceSpecAutoApproval
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -19,6 +20,7 @@ public partial class V1api20220701storagePrivateLinkServiceSpecAutoApproval
     public IList<string>? Subscriptions { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.ExtendedLocation ExtendedLocation complex type.</summary>
 public partial class V1api20220701storagePrivateLinkServiceSpecExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -34,6 +36,7 @@ public partial class V1api20220701storagePrivateLinkServiceSpecExtendedLocation
     public string? Type { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20220701storagePrivateLinkServiceSpecIpConfigurationsSubnetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -53,6 +56,7 @@ public partial class V1api20220701storagePrivateLinkServiceSpecIpConfigurationsS
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.Subnet_PrivateLinkService_SubResourceEmbedded Subnet in a virtual network resource.</summary>
 public partial class V1api20220701storagePrivateLinkServiceSpecIpConfigurationsSubnet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -64,6 +68,7 @@ public partial class V1api20220701storagePrivateLinkServiceSpecIpConfigurationsS
     public V1api20220701storagePrivateLinkServiceSpecIpConfigurationsSubnetReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.PrivateLinkServiceIpConfiguration The private link service ip configuration.</summary>
 public partial class V1api20220701storagePrivateLinkServiceSpecIpConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -95,6 +100,7 @@ public partial class V1api20220701storagePrivateLinkServiceSpecIpConfigurations
     public V1api20220701storagePrivateLinkServiceSpecIpConfigurationsSubnet? Subnet { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20220701storagePrivateLinkServiceSpecLoadBalancerFrontendIpConfigurationsReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -114,6 +120,7 @@ public partial class V1api20220701storagePrivateLinkServiceSpecLoadBalancerFront
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.FrontendIPConfiguration_PrivateLinkService_SubResourceEmbedded Frontend IP address of the load balancer.</summary>
 public partial class V1api20220701storagePrivateLinkServiceSpecLoadBalancerFrontendIpConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -125,6 +132,7 @@ public partial class V1api20220701storagePrivateLinkServiceSpecLoadBalancerFront
     public V1api20220701storagePrivateLinkServiceSpecLoadBalancerFrontendIpConfigurationsReference? Reference { get; set; }
 }
 
+/// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20220701storagePrivateLinkServiceSpecOperatorSpecConfigMapsAlias
 {
     /// <summary>Key is the key in the ConfigMap being referenced</summary>
@@ -136,6 +144,7 @@ public partial class V1api20220701storagePrivateLinkServiceSpecOperatorSpecConfi
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.PrivateLinkServiceOperatorConfigMaps</summary>
 public partial class V1api20220701storagePrivateLinkServiceSpecOperatorSpecConfigMaps
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -147,6 +156,7 @@ public partial class V1api20220701storagePrivateLinkServiceSpecOperatorSpecConfi
     public V1api20220701storagePrivateLinkServiceSpecOperatorSpecConfigMapsAlias? Alias { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.PrivateLinkServiceOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 public partial class V1api20220701storagePrivateLinkServiceSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -158,6 +168,7 @@ public partial class V1api20220701storagePrivateLinkServiceSpecOperatorSpec
     public V1api20220701storagePrivateLinkServiceSpecOperatorSpecConfigMaps? ConfigMaps { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20220701storagePrivateLinkServiceSpecOwner
 {
     /// <summary></summary>
@@ -169,6 +180,7 @@ public partial class V1api20220701storagePrivateLinkServiceSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.ResourceSet The base resource set for visibility and auto-approval.</summary>
 public partial class V1api20220701storagePrivateLinkServiceSpecVisibility
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -180,6 +192,7 @@ public partial class V1api20220701storagePrivateLinkServiceSpecVisibility
     public IList<string>? Subscriptions { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.PrivateLinkService_Spec</summary>
 public partial class V1api20220701storagePrivateLinkServiceSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -239,6 +252,7 @@ public partial class V1api20220701storagePrivateLinkServiceSpec
     public V1api20220701storagePrivateLinkServiceSpecVisibility? Visibility { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.ResourceSet_STATUS The base resource set for visibility and auto-approval.</summary>
 public partial class V1api20220701storagePrivateLinkServiceStatusAutoApproval
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -250,6 +264,7 @@ public partial class V1api20220701storagePrivateLinkServiceStatusAutoApproval
     public IList<string>? Subscriptions { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20220701storagePrivateLinkServiceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -281,6 +296,7 @@ public partial class V1api20220701storagePrivateLinkServiceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.ExtendedLocation_STATUS ExtendedLocation complex type.</summary>
 public partial class V1api20220701storagePrivateLinkServiceStatusExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -296,6 +312,7 @@ public partial class V1api20220701storagePrivateLinkServiceStatusExtendedLocatio
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.Subnet_STATUS_PrivateLinkService_SubResourceEmbedded Subnet in a virtual network resource.</summary>
 public partial class V1api20220701storagePrivateLinkServiceStatusIpConfigurationsSubnet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -307,6 +324,7 @@ public partial class V1api20220701storagePrivateLinkServiceStatusIpConfiguration
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.PrivateLinkServiceIpConfiguration_STATUS The private link service ip configuration.</summary>
 public partial class V1api20220701storagePrivateLinkServiceStatusIpConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -354,6 +372,7 @@ public partial class V1api20220701storagePrivateLinkServiceStatusIpConfiguration
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.FrontendIPConfiguration_STATUS_PrivateLinkService_SubResourceEmbedded Frontend IP address of the load balancer.</summary>
 public partial class V1api20220701storagePrivateLinkServiceStatusLoadBalancerFrontendIpConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -365,6 +384,7 @@ public partial class V1api20220701storagePrivateLinkServiceStatusLoadBalancerFro
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.NetworkInterface_STATUS_PrivateLinkService_SubResourceEmbedded A network interface in a resource group.</summary>
 public partial class V1api20220701storagePrivateLinkServiceStatusNetworkInterfaces
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -376,6 +396,7 @@ public partial class V1api20220701storagePrivateLinkServiceStatusNetworkInterfac
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.PrivateEndpointConnection_STATUS PrivateEndpointConnection resource.</summary>
 public partial class V1api20220701storagePrivateLinkServiceStatusPrivateEndpointConnections
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -387,6 +408,7 @@ public partial class V1api20220701storagePrivateLinkServiceStatusPrivateEndpoint
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.ResourceSet_STATUS The base resource set for visibility and auto-approval.</summary>
 public partial class V1api20220701storagePrivateLinkServiceStatusVisibility
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -398,6 +420,7 @@ public partial class V1api20220701storagePrivateLinkServiceStatusVisibility
     public IList<string>? Subscriptions { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.PrivateLinkService_STATUS_PrivateLinkService_SubResourceEmbedded Private link service resource.</summary>
 public partial class V1api20220701storagePrivateLinkServiceStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -478,6 +501,7 @@ public partial class V1api20220701storagePrivateLinkServiceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20220701.PrivateLinkService Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2022-07-01/privateLinkService.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateLinkServices/{serviceName}</summary>
 public partial class V1api20220701storagePrivateLinkService : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20220701storagePrivateLinkServiceSpec>, IStatus<V1api20220701storagePrivateLinkServiceStatus>
 {
     public const string KubeApiVersion = "v1api20220701storage";

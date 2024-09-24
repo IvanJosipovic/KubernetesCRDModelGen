@@ -38,6 +38,7 @@ public enum V1beta1VPCIpamPoolCidrAllocationSpecForProviderIpamPoolIdRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPCIpamPoolCidrAllocationSpecForProviderIpamPoolIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1VPCIpamPoolCidrAllocationSpecForProviderIpamPoolIdRe
     public V1beta1VPCIpamPoolCidrAllocationSpecForProviderIpamPoolIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPCIpamPool in ec2 to populate ipamPoolId.</summary>
 public partial class V1beta1VPCIpamPoolCidrAllocationSpecForProviderIpamPoolIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1VPCIpamPoolCidrAllocationSpecForProviderIpamPoolIdSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VPCIpamPoolCidrAllocationSpecForProviderIpamPoolIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1VPCIpamPoolCidrAllocationSpecForProviderIpamPoolIdSe
     public V1beta1VPCIpamPoolCidrAllocationSpecForProviderIpamPoolIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPCIpamPool in ec2 to populate ipamPoolId.</summary>
 public partial class V1beta1VPCIpamPoolCidrAllocationSpecForProviderIpamPoolIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1VPCIpamPoolCidrAllocationSpecForProviderIpamPoolIdSe
     public V1beta1VPCIpamPoolCidrAllocationSpecForProviderIpamPoolIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPCIpamPoolCidrAllocationSpecForProvider
 {
     /// <summary>The CIDR you want to assign to the pool.</summary>
@@ -165,6 +170,7 @@ public enum V1beta1VPCIpamPoolCidrAllocationSpecInitProviderIpamPoolIdRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPCIpamPoolCidrAllocationSpecInitProviderIpamPoolIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -178,6 +184,7 @@ public partial class V1beta1VPCIpamPoolCidrAllocationSpecInitProviderIpamPoolIdR
     public V1beta1VPCIpamPoolCidrAllocationSpecInitProviderIpamPoolIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPCIpamPool in ec2 to populate ipamPoolId.</summary>
 public partial class V1beta1VPCIpamPoolCidrAllocationSpecInitProviderIpamPoolIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -209,6 +216,7 @@ public enum V1beta1VPCIpamPoolCidrAllocationSpecInitProviderIpamPoolIdSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VPCIpamPoolCidrAllocationSpecInitProviderIpamPoolIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -222,6 +230,7 @@ public partial class V1beta1VPCIpamPoolCidrAllocationSpecInitProviderIpamPoolIdS
     public V1beta1VPCIpamPoolCidrAllocationSpecInitProviderIpamPoolIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPCIpamPool in ec2 to populate ipamPoolId.</summary>
 public partial class V1beta1VPCIpamPoolCidrAllocationSpecInitProviderIpamPoolIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -237,6 +246,7 @@ public partial class V1beta1VPCIpamPoolCidrAllocationSpecInitProviderIpamPoolIdS
     public V1beta1VPCIpamPoolCidrAllocationSpecInitProviderIpamPoolIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1VPCIpamPoolCidrAllocationSpecInitProvider
 {
     /// <summary>The CIDR you want to assign to the pool.</summary>
@@ -310,6 +320,7 @@ public enum V1beta1VPCIpamPoolCidrAllocationSpecProviderConfigRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPCIpamPoolCidrAllocationSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -323,6 +334,7 @@ public partial class V1beta1VPCIpamPoolCidrAllocationSpecProviderConfigRefPolicy
     public V1beta1VPCIpamPoolCidrAllocationSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1VPCIpamPoolCidrAllocationSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -354,6 +366,7 @@ public enum V1beta1VPCIpamPoolCidrAllocationSpecPublishConnectionDetailsToConfig
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPCIpamPoolCidrAllocationSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -367,6 +380,7 @@ public partial class V1beta1VPCIpamPoolCidrAllocationSpecPublishConnectionDetail
     public V1beta1VPCIpamPoolCidrAllocationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1VPCIpamPoolCidrAllocationSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -378,6 +392,7 @@ public partial class V1beta1VPCIpamPoolCidrAllocationSpecPublishConnectionDetail
     public V1beta1VPCIpamPoolCidrAllocationSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1VPCIpamPoolCidrAllocationSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -393,6 +408,7 @@ public partial class V1beta1VPCIpamPoolCidrAllocationSpecPublishConnectionDetail
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1VPCIpamPoolCidrAllocationSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -408,6 +424,7 @@ public partial class V1beta1VPCIpamPoolCidrAllocationSpecPublishConnectionDetail
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1VPCIpamPoolCidrAllocationSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -419,6 +436,7 @@ public partial class V1beta1VPCIpamPoolCidrAllocationSpecWriteConnectionSecretTo
     public string Namespace { get; set; }
 }
 
+/// <summary>VPCIpamPoolCidrAllocationSpec defines the desired state of VPCIpamPoolCidrAllocation</summary>
 public partial class V1beta1VPCIpamPoolCidrAllocationSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -451,6 +469,7 @@ public partial class V1beta1VPCIpamPoolCidrAllocationSpec
     public V1beta1VPCIpamPoolCidrAllocationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPCIpamPoolCidrAllocationStatusAtProvider
 {
     /// <summary>The CIDR you want to assign to the pool.</summary>
@@ -494,6 +513,7 @@ public partial class V1beta1VPCIpamPoolCidrAllocationStatusAtProvider
     public string? ResourceType { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1VPCIpamPoolCidrAllocationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -521,6 +541,7 @@ public partial class V1beta1VPCIpamPoolCidrAllocationStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>VPCIpamPoolCidrAllocationStatus defines the observed state of VPCIpamPoolCidrAllocation.</summary>
 public partial class V1beta1VPCIpamPoolCidrAllocationStatus
 {
     /// <summary></summary>
@@ -537,6 +558,7 @@ public partial class V1beta1VPCIpamPoolCidrAllocationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>VPCIpamPoolCidrAllocation is the Schema for the VPCIpamPoolCidrAllocations API. Allocates (reserves) a CIDR from an IPAM address pool, preventing usage by IPAM.</summary>
 public partial class V1beta1VPCIpamPoolCidrAllocation : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1VPCIpamPoolCidrAllocationSpec>, IStatus<V1beta1VPCIpamPoolCidrAllocationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

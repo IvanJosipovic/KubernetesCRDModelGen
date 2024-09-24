@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigee.cnrm.cloud.google.com;
+/// <summary>Immutable.</summary>
 public partial class V1beta1ApigeeEnvironmentSpecApigeeOrganizationRef
 {
     /// <summary>The apigee organization for the resource  Allowed value: The Google Cloud resource name of an `ApigeeOrganization` resource (format: `organizations/{{name}}`).</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1ApigeeEnvironmentSpecApigeeOrganizationRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApigeeEnvironmentSpec
 {
     /// <summary>Immutable.</summary>
@@ -46,6 +48,7 @@ public partial class V1beta1ApigeeEnvironmentSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApigeeEnvironmentStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -69,6 +72,7 @@ public partial class V1beta1ApigeeEnvironmentStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApigeeEnvironmentStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -93,6 +97,7 @@ public partial class V1beta1ApigeeEnvironmentStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ApigeeEnvironment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ApigeeEnvironmentSpec>, IStatus<V1beta1ApigeeEnvironmentStatus>
 {
     public const string KubeApiVersion = "v1beta1";

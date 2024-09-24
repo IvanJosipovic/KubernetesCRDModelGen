@@ -38,6 +38,7 @@ public enum V1beta1BackupPolicyPostgreSQLSpecForProviderResourceGroupNameRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupPolicyPostgreSQLSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1BackupPolicyPostgreSQLSpecForProviderResourceGroupNa
     public V1beta1BackupPolicyPostgreSQLSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1BackupPolicyPostgreSQLSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1BackupPolicyPostgreSQLSpecForProviderResourceGroupNameSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupPolicyPostgreSQLSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1BackupPolicyPostgreSQLSpecForProviderResourceGroupNa
     public V1beta1BackupPolicyPostgreSQLSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1BackupPolicyPostgreSQLSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1BackupPolicyPostgreSQLSpecForProviderResourceGroupNa
     public V1beta1BackupPolicyPostgreSQLSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupPolicyPostgreSQLSpecForProviderRetentionRuleCriteria
 {
     /// <summary>Possible values are AllBackup, FirstOfDay, FirstOfWeek, FirstOfMonth and FirstOfYear. These values mean the first successful backup of the day/week/month/year. Changing this forces a new Backup Policy PostgreSQL to be created.</summary>
@@ -133,6 +138,7 @@ public partial class V1beta1BackupPolicyPostgreSQLSpecForProviderRetentionRuleCr
     public IList<string>? WeeksOfMonth { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupPolicyPostgreSQLSpecForProviderRetentionRule
 {
     /// <summary>A criteria block as defined below. Changing this forces a new Backup Policy PostgreSQL to be created.</summary>
@@ -172,6 +178,7 @@ public enum V1beta1BackupPolicyPostgreSQLSpecForProviderVaultNameRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupPolicyPostgreSQLSpecForProviderVaultNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -185,6 +192,7 @@ public partial class V1beta1BackupPolicyPostgreSQLSpecForProviderVaultNameRefPol
     public V1beta1BackupPolicyPostgreSQLSpecForProviderVaultNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a BackupVault in dataprotection to populate vaultName.</summary>
 public partial class V1beta1BackupPolicyPostgreSQLSpecForProviderVaultNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -216,6 +224,7 @@ public enum V1beta1BackupPolicyPostgreSQLSpecForProviderVaultNameSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupPolicyPostgreSQLSpecForProviderVaultNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -229,6 +238,7 @@ public partial class V1beta1BackupPolicyPostgreSQLSpecForProviderVaultNameSelect
     public V1beta1BackupPolicyPostgreSQLSpecForProviderVaultNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a BackupVault in dataprotection to populate vaultName.</summary>
 public partial class V1beta1BackupPolicyPostgreSQLSpecForProviderVaultNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -244,6 +254,7 @@ public partial class V1beta1BackupPolicyPostgreSQLSpecForProviderVaultNameSelect
     public V1beta1BackupPolicyPostgreSQLSpecForProviderVaultNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupPolicyPostgreSQLSpecForProvider
 {
     /// <summary>Specifies a list of repeating time interval. It supports weekly back. It should follow ISO 8601 repeating time interval. Changing this forces a new Backup Policy PostgreSQL to be created.</summary>
@@ -287,6 +298,7 @@ public partial class V1beta1BackupPolicyPostgreSQLSpecForProvider
     public V1beta1BackupPolicyPostgreSQLSpecForProviderVaultNameSelector? VaultNameSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupPolicyPostgreSQLSpecInitProviderRetentionRuleCriteria
 {
     /// <summary>Possible values are AllBackup, FirstOfDay, FirstOfWeek, FirstOfMonth and FirstOfYear. These values mean the first successful backup of the day/week/month/year. Changing this forces a new Backup Policy PostgreSQL to be created.</summary>
@@ -310,6 +322,7 @@ public partial class V1beta1BackupPolicyPostgreSQLSpecInitProviderRetentionRuleC
     public IList<string>? WeeksOfMonth { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupPolicyPostgreSQLSpecInitProviderRetentionRule
 {
     /// <summary>A criteria block as defined below. Changing this forces a new Backup Policy PostgreSQL to be created.</summary>
@@ -329,6 +342,7 @@ public partial class V1beta1BackupPolicyPostgreSQLSpecInitProviderRetentionRule
     public double? Priority { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1BackupPolicyPostgreSQLSpecInitProvider
 {
     /// <summary>Specifies a list of repeating time interval. It supports weekly back. It should follow ISO 8601 repeating time interval. Changing this forces a new Backup Policy PostgreSQL to be created.</summary>
@@ -390,6 +404,7 @@ public enum V1beta1BackupPolicyPostgreSQLSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupPolicyPostgreSQLSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -403,6 +418,7 @@ public partial class V1beta1BackupPolicyPostgreSQLSpecProviderConfigRefPolicy
     public V1beta1BackupPolicyPostgreSQLSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1BackupPolicyPostgreSQLSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -434,6 +450,7 @@ public enum V1beta1BackupPolicyPostgreSQLSpecPublishConnectionDetailsToConfigRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupPolicyPostgreSQLSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -447,6 +464,7 @@ public partial class V1beta1BackupPolicyPostgreSQLSpecPublishConnectionDetailsTo
     public V1beta1BackupPolicyPostgreSQLSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1BackupPolicyPostgreSQLSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -458,6 +476,7 @@ public partial class V1beta1BackupPolicyPostgreSQLSpecPublishConnectionDetailsTo
     public V1beta1BackupPolicyPostgreSQLSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1BackupPolicyPostgreSQLSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -473,6 +492,7 @@ public partial class V1beta1BackupPolicyPostgreSQLSpecPublishConnectionDetailsTo
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1BackupPolicyPostgreSQLSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -488,6 +508,7 @@ public partial class V1beta1BackupPolicyPostgreSQLSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1BackupPolicyPostgreSQLSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -499,6 +520,7 @@ public partial class V1beta1BackupPolicyPostgreSQLSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>BackupPolicyPostgreSQLSpec defines the desired state of BackupPolicyPostgreSQL</summary>
 public partial class V1beta1BackupPolicyPostgreSQLSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -531,6 +553,7 @@ public partial class V1beta1BackupPolicyPostgreSQLSpec
     public V1beta1BackupPolicyPostgreSQLSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupPolicyPostgreSQLStatusAtProviderRetentionRuleCriteria
 {
     /// <summary>Possible values are AllBackup, FirstOfDay, FirstOfWeek, FirstOfMonth and FirstOfYear. These values mean the first successful backup of the day/week/month/year. Changing this forces a new Backup Policy PostgreSQL to be created.</summary>
@@ -554,6 +577,7 @@ public partial class V1beta1BackupPolicyPostgreSQLStatusAtProviderRetentionRuleC
     public IList<string>? WeeksOfMonth { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupPolicyPostgreSQLStatusAtProviderRetentionRule
 {
     /// <summary>A criteria block as defined below. Changing this forces a new Backup Policy PostgreSQL to be created.</summary>
@@ -573,6 +597,7 @@ public partial class V1beta1BackupPolicyPostgreSQLStatusAtProviderRetentionRule
     public double? Priority { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupPolicyPostgreSQLStatusAtProvider
 {
     /// <summary>Specifies a list of repeating time interval. It supports weekly back. It should follow ISO 8601 repeating time interval. Changing this forces a new Backup Policy PostgreSQL to be created.</summary>
@@ -604,6 +629,7 @@ public partial class V1beta1BackupPolicyPostgreSQLStatusAtProvider
     public string? VaultName { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1BackupPolicyPostgreSQLStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -631,6 +657,7 @@ public partial class V1beta1BackupPolicyPostgreSQLStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>BackupPolicyPostgreSQLStatus defines the observed state of BackupPolicyPostgreSQL.</summary>
 public partial class V1beta1BackupPolicyPostgreSQLStatus
 {
     /// <summary></summary>
@@ -647,6 +674,7 @@ public partial class V1beta1BackupPolicyPostgreSQLStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>BackupPolicyPostgreSQL is the Schema for the BackupPolicyPostgreSQLs API. Manages a Backup Policy to back up PostgreSQL.</summary>
 public partial class V1beta1BackupPolicyPostgreSQL : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BackupPolicyPostgreSQLSpec>, IStatus<V1beta1BackupPolicyPostgreSQLStatus>
 {
     public const string KubeApiVersion = "v1beta1";

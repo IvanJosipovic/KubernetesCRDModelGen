@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.crd.projectcalico.org;
+/// <summary></summary>
 public partial class V1BGPFilterSpecExportV4PrefixLength
 {
     /// <summary></summary>
@@ -19,6 +20,7 @@ public partial class V1BGPFilterSpecExportV4PrefixLength
     public int? Min { get; set; }
 }
 
+/// <summary>BGPFilterRuleV4 defines a BGP filter rule consisting a single IPv4 CIDR block and a filter action for this CIDR.</summary>
 public partial class V1BGPFilterSpecExportV4
 {
     /// <summary></summary>
@@ -46,6 +48,7 @@ public partial class V1BGPFilterSpecExportV4
     public string? Source { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1BGPFilterSpecExportV6PrefixLength
 {
     /// <summary></summary>
@@ -57,6 +60,7 @@ public partial class V1BGPFilterSpecExportV6PrefixLength
     public int? Min { get; set; }
 }
 
+/// <summary>BGPFilterRuleV6 defines a BGP filter rule consisting a single IPv6 CIDR block and a filter action for this CIDR.</summary>
 public partial class V1BGPFilterSpecExportV6
 {
     /// <summary></summary>
@@ -84,6 +88,7 @@ public partial class V1BGPFilterSpecExportV6
     public string? Source { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1BGPFilterSpecImportV4PrefixLength
 {
     /// <summary></summary>
@@ -95,6 +100,7 @@ public partial class V1BGPFilterSpecImportV4PrefixLength
     public int? Min { get; set; }
 }
 
+/// <summary>BGPFilterRuleV4 defines a BGP filter rule consisting a single IPv4 CIDR block and a filter action for this CIDR.</summary>
 public partial class V1BGPFilterSpecImportV4
 {
     /// <summary></summary>
@@ -122,6 +128,7 @@ public partial class V1BGPFilterSpecImportV4
     public string? Source { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1BGPFilterSpecImportV6PrefixLength
 {
     /// <summary></summary>
@@ -133,6 +140,7 @@ public partial class V1BGPFilterSpecImportV6PrefixLength
     public int? Min { get; set; }
 }
 
+/// <summary>BGPFilterRuleV6 defines a BGP filter rule consisting a single IPv6 CIDR block and a filter action for this CIDR.</summary>
 public partial class V1BGPFilterSpecImportV6
 {
     /// <summary></summary>
@@ -160,6 +168,7 @@ public partial class V1BGPFilterSpecImportV6
     public string? Source { get; set; }
 }
 
+/// <summary>BGPFilterSpec contains the IPv4 and IPv6 filter rules of the BGP Filter.</summary>
 public partial class V1BGPFilterSpec
 {
     /// <summary>The ordered set of IPv4 BGPFilter rules acting on exporting routes to a peer.</summary>
@@ -180,6 +189,7 @@ public partial class V1BGPFilterSpec
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1BGPFilter : IKubernetesObject<V1ObjectMeta>, ISpec<V1BGPFilterSpec>
 {
     public const string KubeApiVersion = "v1";

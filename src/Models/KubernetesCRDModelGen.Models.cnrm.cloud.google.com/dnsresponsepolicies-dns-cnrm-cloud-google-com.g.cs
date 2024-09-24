@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dns.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1alpha1DNSResponsePolicySpecGkeClusters
 {
     /// <summary>The resource name of the cluster to bind this ManagedZone to. This should be specified in the format like 'projects/*/locations/*/clusters/*'.</summary>
@@ -15,6 +16,7 @@ public partial class V1alpha1DNSResponsePolicySpecGkeClusters
     public string GkeClusterName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DNSResponsePolicySpecNetworks
 {
     /// <summary>The fully qualified URL of the VPC network to bind to. This should be formatted like 'https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}'.</summary>
@@ -22,6 +24,7 @@ public partial class V1alpha1DNSResponsePolicySpecNetworks
     public string NetworkUrl { get; set; }
 }
 
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1DNSResponsePolicySpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -37,6 +40,7 @@ public partial class V1alpha1DNSResponsePolicySpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DNSResponsePolicySpec
 {
     /// <summary>The description of the response policy, such as 'My new response policy'.</summary>
@@ -60,6 +64,7 @@ public partial class V1alpha1DNSResponsePolicySpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DNSResponsePolicyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -83,6 +88,7 @@ public partial class V1alpha1DNSResponsePolicyStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DNSResponsePolicyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -95,6 +101,7 @@ public partial class V1alpha1DNSResponsePolicyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1DNSResponsePolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DNSResponsePolicySpec>, IStatus<V1alpha1DNSResponsePolicyStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

@@ -18,6 +18,7 @@ public enum V1beta1RouterNATSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1RouterNATSpecForProviderLogConfig
 {
     /// <summary>Indicates whether or not to export logs.</summary>
@@ -49,6 +50,7 @@ public enum V1beta1RouterNATSpecForProviderRouterRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RouterNATSpecForProviderRouterRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -62,6 +64,7 @@ public partial class V1beta1RouterNATSpecForProviderRouterRefPolicy
     public V1beta1RouterNATSpecForProviderRouterRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Router in compute to populate router.</summary>
 public partial class V1beta1RouterNATSpecForProviderRouterRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -93,6 +96,7 @@ public enum V1beta1RouterNATSpecForProviderRouterSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RouterNATSpecForProviderRouterSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -106,6 +110,7 @@ public partial class V1beta1RouterNATSpecForProviderRouterSelectorPolicy
     public V1beta1RouterNATSpecForProviderRouterSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Router in compute to populate router.</summary>
 public partial class V1beta1RouterNATSpecForProviderRouterSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1RouterNATSpecForProviderRouterSelector
     public V1beta1RouterNATSpecForProviderRouterSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouterNATSpecForProviderRulesAction
 {
     /// <summary>A list of URLs of the IP resources used for this NAT rule. These IP addresses must be valid static external IP addresses assigned to the project. This field is used for public NAT.</summary>
@@ -132,6 +138,7 @@ public partial class V1beta1RouterNATSpecForProviderRulesAction
     public IList<string>? SourceNatDrainIps { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouterNATSpecForProviderRules
 {
     /// <summary>The action to be enforced for traffic that matches this rule. Structure is documented below.</summary>
@@ -171,6 +178,7 @@ public enum V1beta1RouterNATSpecForProviderSubnetworkNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RouterNATSpecForProviderSubnetworkNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -184,6 +192,7 @@ public partial class V1beta1RouterNATSpecForProviderSubnetworkNameRefPolicy
     public V1beta1RouterNATSpecForProviderSubnetworkNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnetwork in compute to populate name.</summary>
 public partial class V1beta1RouterNATSpecForProviderSubnetworkNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -215,6 +224,7 @@ public enum V1beta1RouterNATSpecForProviderSubnetworkNameSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RouterNATSpecForProviderSubnetworkNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -228,6 +238,7 @@ public partial class V1beta1RouterNATSpecForProviderSubnetworkNameSelectorPolicy
     public V1beta1RouterNATSpecForProviderSubnetworkNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnetwork in compute to populate name.</summary>
 public partial class V1beta1RouterNATSpecForProviderSubnetworkNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -243,6 +254,7 @@ public partial class V1beta1RouterNATSpecForProviderSubnetworkNameSelector
     public V1beta1RouterNATSpecForProviderSubnetworkNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouterNATSpecForProviderSubnetwork
 {
     /// <summary>Self-link of subnetwork to NAT</summary>
@@ -266,6 +278,7 @@ public partial class V1beta1RouterNATSpecForProviderSubnetwork
     public IList<string>? SourceIpRangesToNat { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouterNATSpecForProvider
 {
     /// <summary>The network tier to use when automatically reserving NAT IP addresses. Must be one of: PREMIUM, STANDARD. If not specified, then the current project-level default tier is used. Possible values are: PREMIUM, STANDARD.</summary>
@@ -361,6 +374,7 @@ public partial class V1beta1RouterNATSpecForProvider
     public double? UdpIdleTimeoutSec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouterNATSpecInitProviderLogConfig
 {
     /// <summary>Indicates whether or not to export logs.</summary>
@@ -372,6 +386,7 @@ public partial class V1beta1RouterNATSpecInitProviderLogConfig
     public string? Filter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouterNATSpecInitProviderRulesAction
 {
     /// <summary>A list of URLs of the IP resources used for this NAT rule. These IP addresses must be valid static external IP addresses assigned to the project. This field is used for public NAT.</summary>
@@ -383,6 +398,7 @@ public partial class V1beta1RouterNATSpecInitProviderRulesAction
     public IList<string>? SourceNatDrainIps { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouterNATSpecInitProviderRules
 {
     /// <summary>The action to be enforced for traffic that matches this rule. Structure is documented below.</summary>
@@ -422,6 +438,7 @@ public enum V1beta1RouterNATSpecInitProviderSubnetworkNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RouterNATSpecInitProviderSubnetworkNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -435,6 +452,7 @@ public partial class V1beta1RouterNATSpecInitProviderSubnetworkNameRefPolicy
     public V1beta1RouterNATSpecInitProviderSubnetworkNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnetwork in compute to populate name.</summary>
 public partial class V1beta1RouterNATSpecInitProviderSubnetworkNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -466,6 +484,7 @@ public enum V1beta1RouterNATSpecInitProviderSubnetworkNameSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RouterNATSpecInitProviderSubnetworkNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -479,6 +498,7 @@ public partial class V1beta1RouterNATSpecInitProviderSubnetworkNameSelectorPolic
     public V1beta1RouterNATSpecInitProviderSubnetworkNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnetwork in compute to populate name.</summary>
 public partial class V1beta1RouterNATSpecInitProviderSubnetworkNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -494,6 +514,7 @@ public partial class V1beta1RouterNATSpecInitProviderSubnetworkNameSelector
     public V1beta1RouterNATSpecInitProviderSubnetworkNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouterNATSpecInitProviderSubnetwork
 {
     /// <summary>Self-link of subnetwork to NAT</summary>
@@ -517,6 +538,7 @@ public partial class V1beta1RouterNATSpecInitProviderSubnetwork
     public IList<string>? SourceIpRangesToNat { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1RouterNATSpecInitProvider
 {
     /// <summary>The network tier to use when automatically reserving NAT IP addresses. Must be one of: PREMIUM, STANDARD. If not specified, then the current project-level default tier is used. Possible values are: PREMIUM, STANDARD.</summary>
@@ -638,6 +660,7 @@ public enum V1beta1RouterNATSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RouterNATSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -651,6 +674,7 @@ public partial class V1beta1RouterNATSpecProviderConfigRefPolicy
     public V1beta1RouterNATSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1RouterNATSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -682,6 +706,7 @@ public enum V1beta1RouterNATSpecPublishConnectionDetailsToConfigRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RouterNATSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -695,6 +720,7 @@ public partial class V1beta1RouterNATSpecPublishConnectionDetailsToConfigRefPoli
     public V1beta1RouterNATSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1RouterNATSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -706,6 +732,7 @@ public partial class V1beta1RouterNATSpecPublishConnectionDetailsToConfigRef
     public V1beta1RouterNATSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1RouterNATSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -721,6 +748,7 @@ public partial class V1beta1RouterNATSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1RouterNATSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -736,6 +764,7 @@ public partial class V1beta1RouterNATSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1RouterNATSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -747,6 +776,7 @@ public partial class V1beta1RouterNATSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>RouterNATSpec defines the desired state of RouterNAT</summary>
 public partial class V1beta1RouterNATSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -779,6 +809,7 @@ public partial class V1beta1RouterNATSpec
     public V1beta1RouterNATSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouterNATStatusAtProviderLogConfig
 {
     /// <summary>Indicates whether or not to export logs.</summary>
@@ -790,6 +821,7 @@ public partial class V1beta1RouterNATStatusAtProviderLogConfig
     public string? Filter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouterNATStatusAtProviderRulesAction
 {
     /// <summary>A list of URLs of the IP resources used for this NAT rule. These IP addresses must be valid static external IP addresses assigned to the project. This field is used for public NAT.</summary>
@@ -801,6 +833,7 @@ public partial class V1beta1RouterNATStatusAtProviderRulesAction
     public IList<string>? SourceNatDrainIps { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouterNATStatusAtProviderRules
 {
     /// <summary>The action to be enforced for traffic that matches this rule. Structure is documented below.</summary>
@@ -820,6 +853,7 @@ public partial class V1beta1RouterNATStatusAtProviderRules
     public double? RuleNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouterNATStatusAtProviderSubnetwork
 {
     /// <summary>Self-link of subnetwork to NAT</summary>
@@ -835,6 +869,7 @@ public partial class V1beta1RouterNATStatusAtProviderSubnetwork
     public IList<string>? SourceIpRangesToNat { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouterNATStatusAtProvider
 {
     /// <summary>The network tier to use when automatically reserving NAT IP addresses. Must be one of: PREMIUM, STANDARD. If not specified, then the current project-level default tier is used. Possible values are: PREMIUM, STANDARD.</summary>
@@ -926,6 +961,7 @@ public partial class V1beta1RouterNATStatusAtProvider
     public double? UdpIdleTimeoutSec { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1RouterNATStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -953,6 +989,7 @@ public partial class V1beta1RouterNATStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>RouterNATStatus defines the observed state of RouterNAT.</summary>
 public partial class V1beta1RouterNATStatus
 {
     /// <summary></summary>
@@ -969,6 +1006,7 @@ public partial class V1beta1RouterNATStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>RouterNAT is the Schema for the RouterNATs API. A NAT service created in a router.</summary>
 public partial class V1beta1RouterNAT : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1RouterNATSpec>, IStatus<V1beta1RouterNATStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apikeys.cnrm.cloud.google.com;
+/// <summary>Immutable. The Project that this resource belongs to.</summary>
 public partial class V1alpha1APIKeysKeySpecProjectRef
 {
     /// <summary>The `projectID` field of a project, when not managed by Config Connector.</summary>
@@ -27,6 +28,7 @@ public partial class V1alpha1APIKeysKeySpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1APIKeysKeySpecRestrictionsAndroidKeyRestrictionsAllowedApplications
 {
     /// <summary>The package name of the application.</summary>
@@ -38,6 +40,7 @@ public partial class V1alpha1APIKeysKeySpecRestrictionsAndroidKeyRestrictionsAll
     public string Sha1Fingerprint { get; set; }
 }
 
+/// <summary>The Android apps that are allowed to use the key.</summary>
 public partial class V1alpha1APIKeysKeySpecRestrictionsAndroidKeyRestrictions
 {
     /// <summary>A list of Android applications that are allowed to make API calls with this key.</summary>
@@ -45,6 +48,7 @@ public partial class V1alpha1APIKeysKeySpecRestrictionsAndroidKeyRestrictions
     public IList<V1alpha1APIKeysKeySpecRestrictionsAndroidKeyRestrictionsAllowedApplications> AllowedApplications { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1APIKeysKeySpecRestrictionsApiTargets
 {
     /// <summary>Optional. List of one or more methods that can be called. If empty, all methods for the service are allowed. A wildcard (*) can be used as the last symbol. Valid examples: `google.cloud.translate.v2.TranslateService.GetSupportedLanguage` `TranslateText` `Get*` `translate.googleapis.com.Get*`</summary>
@@ -56,6 +60,7 @@ public partial class V1alpha1APIKeysKeySpecRestrictionsApiTargets
     public string Service { get; set; }
 }
 
+/// <summary>The HTTP referrers (websites) that are allowed to use the key.</summary>
 public partial class V1alpha1APIKeysKeySpecRestrictionsBrowserKeyRestrictions
 {
     /// <summary>A list of regular expressions for the referrer URLs that are allowed to make API calls with this key.</summary>
@@ -63,6 +68,7 @@ public partial class V1alpha1APIKeysKeySpecRestrictionsBrowserKeyRestrictions
     public IList<string> AllowedReferrers { get; set; }
 }
 
+/// <summary>The iOS apps that are allowed to use the key.</summary>
 public partial class V1alpha1APIKeysKeySpecRestrictionsIosKeyRestrictions
 {
     /// <summary>A list of bundle IDs that are allowed when making API calls with this key.</summary>
@@ -70,6 +76,7 @@ public partial class V1alpha1APIKeysKeySpecRestrictionsIosKeyRestrictions
     public IList<string> AllowedBundleIds { get; set; }
 }
 
+/// <summary>The IP addresses of callers that are allowed to use the key.</summary>
 public partial class V1alpha1APIKeysKeySpecRestrictionsServerKeyRestrictions
 {
     /// <summary>A list of the caller IP addresses that are allowed to make API calls with this key.</summary>
@@ -77,6 +84,7 @@ public partial class V1alpha1APIKeysKeySpecRestrictionsServerKeyRestrictions
     public IList<string> AllowedIps { get; set; }
 }
 
+/// <summary>Key restrictions.</summary>
 public partial class V1alpha1APIKeysKeySpecRestrictions
 {
     /// <summary>The Android apps that are allowed to use the key.</summary>
@@ -100,6 +108,7 @@ public partial class V1alpha1APIKeysKeySpecRestrictions
     public V1alpha1APIKeysKeySpecRestrictionsServerKeyRestrictions? ServerKeyRestrictions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1APIKeysKeySpec
 {
     /// <summary>Human-readable display name of this key that you can modify. The maximum length is 63 characters.</summary>
@@ -119,6 +128,7 @@ public partial class V1alpha1APIKeysKeySpec
     public V1alpha1APIKeysKeySpecRestrictions? Restrictions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1APIKeysKeyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -142,6 +152,7 @@ public partial class V1alpha1APIKeysKeyStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 public partial class V1alpha1APIKeysKeyStatusObservedState
 {
     /// <summary>Output only. Unique id in UUID4 format.</summary>
@@ -149,6 +160,7 @@ public partial class V1alpha1APIKeysKeyStatusObservedState
     public string? Uid { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1APIKeysKeyStatus
 {
     /// <summary>Conditions represent the latest available observations of the object's current state.</summary>
@@ -165,6 +177,7 @@ public partial class V1alpha1APIKeysKeyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>APIKeysKey is the Schema for the APIKeys Key resource.</summary>
 public partial class V1alpha1APIKeysKey : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1APIKeysKeySpec>, IStatus<V1alpha1APIKeysKeyStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

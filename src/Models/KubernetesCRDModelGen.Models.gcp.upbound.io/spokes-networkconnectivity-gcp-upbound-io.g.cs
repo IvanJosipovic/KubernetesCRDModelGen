@@ -38,6 +38,7 @@ public enum V1beta1SpokeSpecForProviderHubRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpokeSpecForProviderHubRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1SpokeSpecForProviderHubRefPolicy
     public V1beta1SpokeSpecForProviderHubRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Hub in networkconnectivity to populate hub.</summary>
 public partial class V1beta1SpokeSpecForProviderHubRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1SpokeSpecForProviderHubSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SpokeSpecForProviderHubSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1SpokeSpecForProviderHubSelectorPolicy
     public V1beta1SpokeSpecForProviderHubSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Hub in networkconnectivity to populate hub.</summary>
 public partial class V1beta1SpokeSpecForProviderHubSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1SpokeSpecForProviderHubSelector
     public V1beta1SpokeSpecForProviderHubSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpokeSpecForProviderLinkedInterconnectAttachments
 {
     /// <summary>A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.</summary>
@@ -141,6 +146,7 @@ public enum V1beta1SpokeSpecForProviderLinkedRouterApplianceInstancesInstancesVi
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpokeSpecForProviderLinkedRouterApplianceInstancesInstancesVirtualMachineRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -154,6 +160,7 @@ public partial class V1beta1SpokeSpecForProviderLinkedRouterApplianceInstancesIn
     public V1beta1SpokeSpecForProviderLinkedRouterApplianceInstancesInstancesVirtualMachineRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Instance in compute to populate virtualMachine.</summary>
 public partial class V1beta1SpokeSpecForProviderLinkedRouterApplianceInstancesInstancesVirtualMachineRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -185,6 +192,7 @@ public enum V1beta1SpokeSpecForProviderLinkedRouterApplianceInstancesInstancesVi
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SpokeSpecForProviderLinkedRouterApplianceInstancesInstancesVirtualMachineSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -198,6 +206,7 @@ public partial class V1beta1SpokeSpecForProviderLinkedRouterApplianceInstancesIn
     public V1beta1SpokeSpecForProviderLinkedRouterApplianceInstancesInstancesVirtualMachineSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Instance in compute to populate virtualMachine.</summary>
 public partial class V1beta1SpokeSpecForProviderLinkedRouterApplianceInstancesInstancesVirtualMachineSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -213,6 +222,7 @@ public partial class V1beta1SpokeSpecForProviderLinkedRouterApplianceInstancesIn
     public V1beta1SpokeSpecForProviderLinkedRouterApplianceInstancesInstancesVirtualMachineSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpokeSpecForProviderLinkedRouterApplianceInstancesInstances
 {
     /// <summary>The IP address on the VM to use for peering.</summary>
@@ -232,6 +242,7 @@ public partial class V1beta1SpokeSpecForProviderLinkedRouterApplianceInstancesIn
     public V1beta1SpokeSpecForProviderLinkedRouterApplianceInstancesInstancesVirtualMachineSelector? VirtualMachineSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpokeSpecForProviderLinkedRouterApplianceInstances
 {
     /// <summary>The list of router appliance instances</summary>
@@ -263,6 +274,7 @@ public enum V1beta1SpokeSpecForProviderLinkedVpcNetworkUriRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpokeSpecForProviderLinkedVpcNetworkUriRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -276,6 +288,7 @@ public partial class V1beta1SpokeSpecForProviderLinkedVpcNetworkUriRefPolicy
     public V1beta1SpokeSpecForProviderLinkedVpcNetworkUriRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate uri.</summary>
 public partial class V1beta1SpokeSpecForProviderLinkedVpcNetworkUriRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -307,6 +320,7 @@ public enum V1beta1SpokeSpecForProviderLinkedVpcNetworkUriSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SpokeSpecForProviderLinkedVpcNetworkUriSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -320,6 +334,7 @@ public partial class V1beta1SpokeSpecForProviderLinkedVpcNetworkUriSelectorPolic
     public V1beta1SpokeSpecForProviderLinkedVpcNetworkUriSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate uri.</summary>
 public partial class V1beta1SpokeSpecForProviderLinkedVpcNetworkUriSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -335,6 +350,7 @@ public partial class V1beta1SpokeSpecForProviderLinkedVpcNetworkUriSelector
     public V1beta1SpokeSpecForProviderLinkedVpcNetworkUriSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpokeSpecForProviderLinkedVpcNetwork
 {
     /// <summary>IP ranges encompassing the subnets to be excluded from peering.</summary>
@@ -354,6 +370,7 @@ public partial class V1beta1SpokeSpecForProviderLinkedVpcNetwork
     public V1beta1SpokeSpecForProviderLinkedVpcNetworkUriSelector? UriSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpokeSpecForProviderLinkedVpnTunnels
 {
     /// <summary>A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.</summary>
@@ -365,6 +382,7 @@ public partial class V1beta1SpokeSpecForProviderLinkedVpnTunnels
     public IList<string>? Uris { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpokeSpecForProvider
 {
     /// <summary>An optional description of the spoke.</summary>
@@ -436,6 +454,7 @@ public enum V1beta1SpokeSpecInitProviderHubRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpokeSpecInitProviderHubRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -449,6 +468,7 @@ public partial class V1beta1SpokeSpecInitProviderHubRefPolicy
     public V1beta1SpokeSpecInitProviderHubRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Hub in networkconnectivity to populate hub.</summary>
 public partial class V1beta1SpokeSpecInitProviderHubRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -480,6 +500,7 @@ public enum V1beta1SpokeSpecInitProviderHubSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SpokeSpecInitProviderHubSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -493,6 +514,7 @@ public partial class V1beta1SpokeSpecInitProviderHubSelectorPolicy
     public V1beta1SpokeSpecInitProviderHubSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Hub in networkconnectivity to populate hub.</summary>
 public partial class V1beta1SpokeSpecInitProviderHubSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -508,6 +530,7 @@ public partial class V1beta1SpokeSpecInitProviderHubSelector
     public V1beta1SpokeSpecInitProviderHubSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpokeSpecInitProviderLinkedInterconnectAttachments
 {
     /// <summary>A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.</summary>
@@ -539,6 +562,7 @@ public enum V1beta1SpokeSpecInitProviderLinkedRouterApplianceInstancesInstancesV
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpokeSpecInitProviderLinkedRouterApplianceInstancesInstancesVirtualMachineRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -552,6 +576,7 @@ public partial class V1beta1SpokeSpecInitProviderLinkedRouterApplianceInstancesI
     public V1beta1SpokeSpecInitProviderLinkedRouterApplianceInstancesInstancesVirtualMachineRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Instance in compute to populate virtualMachine.</summary>
 public partial class V1beta1SpokeSpecInitProviderLinkedRouterApplianceInstancesInstancesVirtualMachineRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -583,6 +608,7 @@ public enum V1beta1SpokeSpecInitProviderLinkedRouterApplianceInstancesInstancesV
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SpokeSpecInitProviderLinkedRouterApplianceInstancesInstancesVirtualMachineSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -596,6 +622,7 @@ public partial class V1beta1SpokeSpecInitProviderLinkedRouterApplianceInstancesI
     public V1beta1SpokeSpecInitProviderLinkedRouterApplianceInstancesInstancesVirtualMachineSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Instance in compute to populate virtualMachine.</summary>
 public partial class V1beta1SpokeSpecInitProviderLinkedRouterApplianceInstancesInstancesVirtualMachineSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -611,6 +638,7 @@ public partial class V1beta1SpokeSpecInitProviderLinkedRouterApplianceInstancesI
     public V1beta1SpokeSpecInitProviderLinkedRouterApplianceInstancesInstancesVirtualMachineSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpokeSpecInitProviderLinkedRouterApplianceInstancesInstances
 {
     /// <summary>The IP address on the VM to use for peering.</summary>
@@ -630,6 +658,7 @@ public partial class V1beta1SpokeSpecInitProviderLinkedRouterApplianceInstancesI
     public V1beta1SpokeSpecInitProviderLinkedRouterApplianceInstancesInstancesVirtualMachineSelector? VirtualMachineSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpokeSpecInitProviderLinkedRouterApplianceInstances
 {
     /// <summary>The list of router appliance instances</summary>
@@ -661,6 +690,7 @@ public enum V1beta1SpokeSpecInitProviderLinkedVpcNetworkUriRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpokeSpecInitProviderLinkedVpcNetworkUriRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -674,6 +704,7 @@ public partial class V1beta1SpokeSpecInitProviderLinkedVpcNetworkUriRefPolicy
     public V1beta1SpokeSpecInitProviderLinkedVpcNetworkUriRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate uri.</summary>
 public partial class V1beta1SpokeSpecInitProviderLinkedVpcNetworkUriRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -705,6 +736,7 @@ public enum V1beta1SpokeSpecInitProviderLinkedVpcNetworkUriSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SpokeSpecInitProviderLinkedVpcNetworkUriSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -718,6 +750,7 @@ public partial class V1beta1SpokeSpecInitProviderLinkedVpcNetworkUriSelectorPoli
     public V1beta1SpokeSpecInitProviderLinkedVpcNetworkUriSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate uri.</summary>
 public partial class V1beta1SpokeSpecInitProviderLinkedVpcNetworkUriSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -733,6 +766,7 @@ public partial class V1beta1SpokeSpecInitProviderLinkedVpcNetworkUriSelector
     public V1beta1SpokeSpecInitProviderLinkedVpcNetworkUriSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpokeSpecInitProviderLinkedVpcNetwork
 {
     /// <summary>IP ranges encompassing the subnets to be excluded from peering.</summary>
@@ -752,6 +786,7 @@ public partial class V1beta1SpokeSpecInitProviderLinkedVpcNetwork
     public V1beta1SpokeSpecInitProviderLinkedVpcNetworkUriSelector? UriSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpokeSpecInitProviderLinkedVpnTunnels
 {
     /// <summary>A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.</summary>
@@ -763,6 +798,7 @@ public partial class V1beta1SpokeSpecInitProviderLinkedVpnTunnels
     public IList<string>? Uris { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1SpokeSpecInitProvider
 {
     /// <summary>An optional description of the spoke.</summary>
@@ -856,6 +892,7 @@ public enum V1beta1SpokeSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpokeSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -869,6 +906,7 @@ public partial class V1beta1SpokeSpecProviderConfigRefPolicy
     public V1beta1SpokeSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1SpokeSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -900,6 +938,7 @@ public enum V1beta1SpokeSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpokeSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -913,6 +952,7 @@ public partial class V1beta1SpokeSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1SpokeSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1SpokeSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -924,6 +964,7 @@ public partial class V1beta1SpokeSpecPublishConnectionDetailsToConfigRef
     public V1beta1SpokeSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1SpokeSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -939,6 +980,7 @@ public partial class V1beta1SpokeSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1SpokeSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -954,6 +996,7 @@ public partial class V1beta1SpokeSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1SpokeSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -965,6 +1008,7 @@ public partial class V1beta1SpokeSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>SpokeSpec defines the desired state of Spoke</summary>
 public partial class V1beta1SpokeSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -997,6 +1041,7 @@ public partial class V1beta1SpokeSpec
     public V1beta1SpokeSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpokeStatusAtProviderLinkedInterconnectAttachments
 {
     /// <summary>A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.</summary>
@@ -1008,6 +1053,7 @@ public partial class V1beta1SpokeStatusAtProviderLinkedInterconnectAttachments
     public IList<string>? Uris { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpokeStatusAtProviderLinkedRouterApplianceInstancesInstances
 {
     /// <summary>The IP address on the VM to use for peering.</summary>
@@ -1019,6 +1065,7 @@ public partial class V1beta1SpokeStatusAtProviderLinkedRouterApplianceInstancesI
     public string? VirtualMachine { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpokeStatusAtProviderLinkedRouterApplianceInstances
 {
     /// <summary>The list of router appliance instances</summary>
@@ -1030,6 +1077,7 @@ public partial class V1beta1SpokeStatusAtProviderLinkedRouterApplianceInstances
     public bool? SiteToSiteDataTransfer { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpokeStatusAtProviderLinkedVpcNetwork
 {
     /// <summary>IP ranges encompassing the subnets to be excluded from peering.</summary>
@@ -1041,6 +1089,7 @@ public partial class V1beta1SpokeStatusAtProviderLinkedVpcNetwork
     public string? Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpokeStatusAtProviderLinkedVpnTunnels
 {
     /// <summary>A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.</summary>
@@ -1052,6 +1101,7 @@ public partial class V1beta1SpokeStatusAtProviderLinkedVpnTunnels
     public IList<string>? Uris { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpokeStatusAtProvider
 {
     /// <summary>Output only. The time the spoke was created.</summary>
@@ -1123,6 +1173,7 @@ public partial class V1beta1SpokeStatusAtProvider
     public string? UpdateTime { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1SpokeStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1150,6 +1201,7 @@ public partial class V1beta1SpokeStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>SpokeStatus defines the observed state of Spoke.</summary>
 public partial class V1beta1SpokeStatus
 {
     /// <summary></summary>
@@ -1166,6 +1218,7 @@ public partial class V1beta1SpokeStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Spoke is the Schema for the Spokes API. The NetworkConnectivity Spoke resource</summary>
 public partial class V1beta1Spoke : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SpokeSpec>, IStatus<V1beta1SpokeStatus>
 {
     public const string KubeApiVersion = "v1beta1";

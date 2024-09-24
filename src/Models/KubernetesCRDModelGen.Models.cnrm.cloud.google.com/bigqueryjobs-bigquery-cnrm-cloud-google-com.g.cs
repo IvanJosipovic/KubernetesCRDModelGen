@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigquery.cnrm.cloud.google.com;
+/// <summary>Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.</summary>
 public partial class V1beta1BigQueryJobSpecCopyDestinationEncryptionConfigurationKmsKeyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1BigQueryJobSpecCopyDestinationEncryptionConfiguratio
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. Custom encryption configuration (e.g., Cloud KMS keys).</summary>
 public partial class V1beta1BigQueryJobSpecCopyDestinationEncryptionConfiguration
 {
     /// <summary>Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.</summary>
@@ -34,6 +36,7 @@ public partial class V1beta1BigQueryJobSpecCopyDestinationEncryptionConfiguratio
     public string? KmsKeyVersion { get; set; }
 }
 
+/// <summary>A reference to the table.</summary>
 public partial class V1beta1BigQueryJobSpecCopyDestinationTableTableRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `BigQueryTable` resource.</summary>
@@ -49,6 +52,7 @@ public partial class V1beta1BigQueryJobSpecCopyDestinationTableTableRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. The destination table.</summary>
 public partial class V1beta1BigQueryJobSpecCopyDestinationTable
 {
     /// <summary>A reference to the table.</summary>
@@ -56,6 +60,7 @@ public partial class V1beta1BigQueryJobSpecCopyDestinationTable
     public V1beta1BigQueryJobSpecCopyDestinationTableTableRef TableRef { get; set; }
 }
 
+/// <summary>A reference to the table.</summary>
 public partial class V1beta1BigQueryJobSpecCopySourceTablesTableRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `BigQueryTable` resource.</summary>
@@ -71,6 +76,7 @@ public partial class V1beta1BigQueryJobSpecCopySourceTablesTableRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BigQueryJobSpecCopySourceTables
 {
     /// <summary>A reference to the table.</summary>
@@ -78,6 +84,7 @@ public partial class V1beta1BigQueryJobSpecCopySourceTables
     public V1beta1BigQueryJobSpecCopySourceTablesTableRef TableRef { get; set; }
 }
 
+/// <summary>Immutable. Copies a table.</summary>
 public partial class V1beta1BigQueryJobSpecCopy
 {
     /// <summary>Immutable. Specifies whether the job is allowed to create new tables. The following values are supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table. CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result. Creation, truncation and append actions occur as one atomic update upon job completion Default value: "CREATE_NEVER" Possible values: ["CREATE_IF_NEEDED", "CREATE_NEVER"].</summary>
@@ -101,6 +108,7 @@ public partial class V1beta1BigQueryJobSpecCopy
     public string? WriteDisposition { get; set; }
 }
 
+/// <summary>A reference to the table.</summary>
 public partial class V1beta1BigQueryJobSpecExtractSourceTableTableRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `BigQueryTable` resource.</summary>
@@ -116,6 +124,7 @@ public partial class V1beta1BigQueryJobSpecExtractSourceTableTableRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. A reference to the table being exported.</summary>
 public partial class V1beta1BigQueryJobSpecExtractSourceTable
 {
     /// <summary>A reference to the table.</summary>
@@ -123,6 +132,7 @@ public partial class V1beta1BigQueryJobSpecExtractSourceTable
     public V1beta1BigQueryJobSpecExtractSourceTableTableRef TableRef { get; set; }
 }
 
+/// <summary>Immutable. Configures an extract job.</summary>
 public partial class V1beta1BigQueryJobSpecExtract
 {
     /// <summary>Immutable. The compression type to use for exported files. Possible values include GZIP, DEFLATE, SNAPPY, and NONE. The default value is NONE. DEFLATE and SNAPPY are only supported for Avro.</summary>
@@ -154,6 +164,7 @@ public partial class V1beta1BigQueryJobSpecExtract
     public bool? UseAvroLogicalTypes { get; set; }
 }
 
+/// <summary>Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.</summary>
 public partial class V1beta1BigQueryJobSpecLoadDestinationEncryptionConfigurationKmsKeyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
@@ -169,6 +180,7 @@ public partial class V1beta1BigQueryJobSpecLoadDestinationEncryptionConfiguratio
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. Custom encryption configuration (e.g., Cloud KMS keys).</summary>
 public partial class V1beta1BigQueryJobSpecLoadDestinationEncryptionConfiguration
 {
     /// <summary>Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.</summary>
@@ -180,6 +192,7 @@ public partial class V1beta1BigQueryJobSpecLoadDestinationEncryptionConfiguratio
     public string? KmsKeyVersion { get; set; }
 }
 
+/// <summary>A reference to the table.</summary>
 public partial class V1beta1BigQueryJobSpecLoadDestinationTableTableRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `BigQueryTable` resource.</summary>
@@ -195,6 +208,7 @@ public partial class V1beta1BigQueryJobSpecLoadDestinationTableTableRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. The destination table to load the data into.</summary>
 public partial class V1beta1BigQueryJobSpecLoadDestinationTable
 {
     /// <summary>A reference to the table.</summary>
@@ -202,6 +216,7 @@ public partial class V1beta1BigQueryJobSpecLoadDestinationTable
     public V1beta1BigQueryJobSpecLoadDestinationTableTableRef TableRef { get; set; }
 }
 
+/// <summary>Immutable. Parquet Options for load and make external tables.</summary>
 public partial class V1beta1BigQueryJobSpecLoadParquetOptions
 {
     /// <summary>Immutable. If sourceFormat is set to PARQUET, indicates whether to use schema inference specifically for Parquet LIST logical type.</summary>
@@ -213,6 +228,7 @@ public partial class V1beta1BigQueryJobSpecLoadParquetOptions
     public bool? EnumAsString { get; set; }
 }
 
+/// <summary>Immutable. Time-based partitioning specification for the destination table.</summary>
 public partial class V1beta1BigQueryJobSpecLoadTimePartitioning
 {
     /// <summary>Immutable. Number of milliseconds for which to keep the storage for a partition. A wrapper is used here because 0 is an invalid value.</summary>
@@ -228,6 +244,7 @@ public partial class V1beta1BigQueryJobSpecLoadTimePartitioning
     public string Type { get; set; }
 }
 
+/// <summary>Immutable. Configures a load job.</summary>
 public partial class V1beta1BigQueryJobSpecLoad
 {
     /// <summary>Immutable. Accept rows that are missing trailing optional columns. The missing values are treated as nulls. If false, records with missing trailing columns are treated as bad records, and if there are too many bad records, an invalid error is returned in the job result. The default value is false. Only applicable to CSV, ignored for other formats.</summary>
@@ -315,6 +332,7 @@ public partial class V1beta1BigQueryJobSpecLoad
     public string? WriteDisposition { get; set; }
 }
 
+/// <summary>A reference to the dataset.</summary>
 public partial class V1beta1BigQueryJobSpecQueryDefaultDatasetDatasetRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `BigQueryDataset` resource.</summary>
@@ -330,6 +348,7 @@ public partial class V1beta1BigQueryJobSpecQueryDefaultDatasetDatasetRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.</summary>
 public partial class V1beta1BigQueryJobSpecQueryDefaultDataset
 {
     /// <summary>A reference to the dataset.</summary>
@@ -337,6 +356,7 @@ public partial class V1beta1BigQueryJobSpecQueryDefaultDataset
     public V1beta1BigQueryJobSpecQueryDefaultDatasetDatasetRef DatasetRef { get; set; }
 }
 
+/// <summary>Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.</summary>
 public partial class V1beta1BigQueryJobSpecQueryDestinationEncryptionConfigurationKmsKeyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
@@ -352,6 +372,7 @@ public partial class V1beta1BigQueryJobSpecQueryDestinationEncryptionConfigurati
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. Custom encryption configuration (e.g., Cloud KMS keys).</summary>
 public partial class V1beta1BigQueryJobSpecQueryDestinationEncryptionConfiguration
 {
     /// <summary>Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.</summary>
@@ -363,6 +384,7 @@ public partial class V1beta1BigQueryJobSpecQueryDestinationEncryptionConfigurati
     public string? KmsKeyVersion { get; set; }
 }
 
+/// <summary>A reference to the table.</summary>
 public partial class V1beta1BigQueryJobSpecQueryDestinationTableTableRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `BigQueryTable` resource.</summary>
@@ -378,6 +400,7 @@ public partial class V1beta1BigQueryJobSpecQueryDestinationTableTableRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. Describes the table where the query results should be stored. This property must be set for large results that exceed the maximum response size. For queries that produce anonymous (cached) results, this field will be populated by BigQuery.</summary>
 public partial class V1beta1BigQueryJobSpecQueryDestinationTable
 {
     /// <summary>A reference to the table.</summary>
@@ -385,6 +408,7 @@ public partial class V1beta1BigQueryJobSpecQueryDestinationTable
     public V1beta1BigQueryJobSpecQueryDestinationTableTableRef TableRef { get; set; }
 }
 
+/// <summary>Immutable. Options controlling the execution of scripts.</summary>
 public partial class V1beta1BigQueryJobSpecQueryScriptOptions
 {
     /// <summary>Immutable. Determines which statement in the script represents the "key result", used to populate the schema and query results of the script job. Possible values: ["LAST", "FIRST_SELECT"].</summary>
@@ -400,6 +424,7 @@ public partial class V1beta1BigQueryJobSpecQueryScriptOptions
     public string? StatementTimeoutMs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BigQueryJobSpecQueryUserDefinedFunctionResources
 {
     /// <summary>Immutable. An inline resource that contains code for a user-defined function (UDF). Providing a inline code resource is equivalent to providing a URI for a file containing the same code.</summary>
@@ -411,6 +436,7 @@ public partial class V1beta1BigQueryJobSpecQueryUserDefinedFunctionResources
     public string? ResourceUri { get; set; }
 }
 
+/// <summary>Immutable. Configures a query job.</summary>
 public partial class V1beta1BigQueryJobSpecQuery
 {
     /// <summary>Immutable. If true and query uses legacy SQL dialect, allows the query to produce arbitrarily large result tables at a slight cost in performance. Requires destinationTable to be set. For standard SQL queries, this flag is ignored and large results are always allowed. However, you must still set destinationTable when result size exceeds the allowed maximum response size.</summary>
@@ -482,6 +508,7 @@ public partial class V1beta1BigQueryJobSpecQuery
     public string? WriteDisposition { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BigQueryJobSpec
 {
     /// <summary>Immutable. Copies a table.</summary>
@@ -513,6 +540,7 @@ public partial class V1beta1BigQueryJobSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BigQueryJobStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -536,6 +564,7 @@ public partial class V1beta1BigQueryJobStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BigQueryJobStatusStatusErrorResult
 {
     /// <summary>Specifies where the error occurred, if present.</summary>
@@ -551,6 +580,7 @@ public partial class V1beta1BigQueryJobStatusStatusErrorResult
     public string? Reason { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BigQueryJobStatusStatusErrors
 {
     /// <summary>Specifies where the error occurred, if present.</summary>
@@ -566,6 +596,7 @@ public partial class V1beta1BigQueryJobStatusStatusErrors
     public string? Reason { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BigQueryJobStatusStatus
 {
     /// <summary>Final error result of the job. If present, indicates that the job has completed and was unsuccessful.</summary>
@@ -581,6 +612,7 @@ public partial class V1beta1BigQueryJobStatusStatus
     public string? State { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BigQueryJobStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -605,6 +637,7 @@ public partial class V1beta1BigQueryJobStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1BigQueryJob : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BigQueryJobSpec>, IStatus<V1beta1BigQueryJobStatus>
 {
     public const string KubeApiVersion = "v1beta1";

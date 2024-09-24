@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kubernetesconfiguration.azure.com;
+/// <summary>Storage version of v1api20230501.Extension_Properties_AksAssignedIdentity_Spec</summary>
 public partial class V1api20230501storageExtensionSpecAksAssignedIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -19,6 +20,7 @@ public partial class V1api20230501storageExtensionSpecAksAssignedIdentity
     public string? Type { get; set; }
 }
 
+/// <summary>SecretMapReference is a reference to a Kubernetes secret in the same namespace as the resource it is on.</summary>
 public partial class V1api20230501storageExtensionSpecConfigurationProtectedSettings
 {
     /// <summary>Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource</summary>
@@ -26,6 +28,7 @@ public partial class V1api20230501storageExtensionSpecConfigurationProtectedSett
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.Identity Identity for the resource.</summary>
 public partial class V1api20230501storageExtensionSpecIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -37,6 +40,7 @@ public partial class V1api20230501storageExtensionSpecIdentity
     public string? Type { get; set; }
 }
 
+/// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20230501storageExtensionSpecOperatorSpecConfigMapsPrincipalId
 {
     /// <summary>Key is the key in the ConfigMap being referenced</summary>
@@ -48,6 +52,7 @@ public partial class V1api20230501storageExtensionSpecOperatorSpecConfigMapsPrin
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.ExtensionOperatorConfigMaps</summary>
 public partial class V1api20230501storageExtensionSpecOperatorSpecConfigMaps
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -59,6 +64,7 @@ public partial class V1api20230501storageExtensionSpecOperatorSpecConfigMaps
     public V1api20230501storageExtensionSpecOperatorSpecConfigMapsPrincipalId? PrincipalId { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.ExtensionOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 public partial class V1api20230501storageExtensionSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -70,6 +76,7 @@ public partial class V1api20230501storageExtensionSpecOperatorSpec
     public V1api20230501storageExtensionSpecOperatorSpecConfigMaps? ConfigMaps { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. This resource is an extension resource, which means that any other Azure resource can be its owner.</summary>
 public partial class V1api20230501storageExtensionSpecOwner
 {
     /// <summary>Ownership across namespaces is not supported.</summary>
@@ -89,6 +96,7 @@ public partial class V1api20230501storageExtensionSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.Plan Plan for the resource.</summary>
 public partial class V1api20230501storageExtensionSpecPlan
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -116,6 +124,7 @@ public partial class V1api20230501storageExtensionSpecPlan
     public string? Version { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.ScopeCluster Specifies that the scope of the extension is Cluster</summary>
 public partial class V1api20230501storageExtensionSpecScopeCluster
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -127,6 +136,7 @@ public partial class V1api20230501storageExtensionSpecScopeCluster
     public string? ReleaseNamespace { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.ScopeNamespace Specifies that the scope of the extension is Namespace</summary>
 public partial class V1api20230501storageExtensionSpecScopeNamespace
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -138,6 +148,7 @@ public partial class V1api20230501storageExtensionSpecScopeNamespace
     public string? TargetNamespace { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.Scope Scope of the extension. It can be either Cluster or Namespace; but not both.</summary>
 public partial class V1api20230501storageExtensionSpecScope
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -153,6 +164,7 @@ public partial class V1api20230501storageExtensionSpecScope
     public V1api20230501storageExtensionSpecScopeNamespace? Namespace { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.SystemData Metadata pertaining to creation and last modification of the resource.</summary>
 public partial class V1api20230501storageExtensionSpecSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -184,6 +196,7 @@ public partial class V1api20230501storageExtensionSpecSystemData
     public string? LastModifiedByType { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.Extension_Spec</summary>
 public partial class V1api20230501storageExtensionSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -251,6 +264,7 @@ public partial class V1api20230501storageExtensionSpec
     public string? Version { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.Extension_Properties_AksAssignedIdentity_STATUS</summary>
 public partial class V1api20230501storageExtensionStatusAksAssignedIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -270,6 +284,7 @@ public partial class V1api20230501storageExtensionStatusAksAssignedIdentity
     public string? Type { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20230501storageExtensionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -301,6 +316,7 @@ public partial class V1api20230501storageExtensionStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 public partial class V1api20230501storageExtensionStatusErrorInfoAdditionalInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -316,6 +332,7 @@ public partial class V1api20230501storageExtensionStatusErrorInfoAdditionalInfo
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 public partial class V1api20230501storageExtensionStatusErrorInfoDetailsAdditionalInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -331,6 +348,7 @@ public partial class V1api20230501storageExtensionStatusErrorInfoDetailsAddition
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.ErrorDetail_STATUS_Unrolled</summary>
 public partial class V1api20230501storageExtensionStatusErrorInfoDetails
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -354,6 +372,7 @@ public partial class V1api20230501storageExtensionStatusErrorInfoDetails
     public string? Target { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.ErrorDetail_STATUS The error detail.</summary>
 public partial class V1api20230501storageExtensionStatusErrorInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -381,6 +400,7 @@ public partial class V1api20230501storageExtensionStatusErrorInfo
     public string? Target { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.Identity_STATUS Identity for the resource.</summary>
 public partial class V1api20230501storageExtensionStatusIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -400,6 +420,7 @@ public partial class V1api20230501storageExtensionStatusIdentity
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.Plan_STATUS Plan for the resource.</summary>
 public partial class V1api20230501storageExtensionStatusPlan
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -427,6 +448,7 @@ public partial class V1api20230501storageExtensionStatusPlan
     public string? Version { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.ScopeCluster_STATUS Specifies that the scope of the extension is Cluster</summary>
 public partial class V1api20230501storageExtensionStatusScopeCluster
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -438,6 +460,7 @@ public partial class V1api20230501storageExtensionStatusScopeCluster
     public string? ReleaseNamespace { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.ScopeNamespace_STATUS Specifies that the scope of the extension is Namespace</summary>
 public partial class V1api20230501storageExtensionStatusScopeNamespace
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -449,6 +472,7 @@ public partial class V1api20230501storageExtensionStatusScopeNamespace
     public string? TargetNamespace { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.Scope_STATUS Scope of the extension. It can be either Cluster or Namespace; but not both.</summary>
 public partial class V1api20230501storageExtensionStatusScope
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -464,6 +488,7 @@ public partial class V1api20230501storageExtensionStatusScope
     public V1api20230501storageExtensionStatusScopeNamespace? Namespace { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.ExtensionStatus_STATUS Status from the extension.</summary>
 public partial class V1api20230501storageExtensionStatusStatuses
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -491,6 +516,7 @@ public partial class V1api20230501storageExtensionStatusStatuses
     public string? Time { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 public partial class V1api20230501storageExtensionStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -522,6 +548,7 @@ public partial class V1api20230501storageExtensionStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.Extension_STATUS The Extension object.</summary>
 public partial class V1api20230501storageExtensionStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -618,6 +645,7 @@ public partial class V1api20230501storageExtensionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20230501.Extension Generator information: - Generated from: /kubernetesconfiguration/resource-manager/Microsoft.KubernetesConfiguration/stable/2023-05-01/extensions.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{clusterRp}/{clusterResourceName}/{clusterName}/providers/Microsoft.KubernetesConfiguration/extensions/{extensionName}</summary>
 public partial class V1api20230501storageExtension : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230501storageExtensionSpec>, IStatus<V1api20230501storageExtensionStatus>
 {
     public const string KubeApiVersion = "v1api20230501storage";

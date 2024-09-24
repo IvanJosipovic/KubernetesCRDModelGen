@@ -38,6 +38,7 @@ public enum V1beta1AppConnectorSpecForProviderPrincipalInfoServiceAccountEmailRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AppConnectorSpecForProviderPrincipalInfoServiceAccountEmailRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1AppConnectorSpecForProviderPrincipalInfoServiceAccou
     public V1beta1AppConnectorSpecForProviderPrincipalInfoServiceAccountEmailRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ServiceAccount in cloudplatform to populate email.</summary>
 public partial class V1beta1AppConnectorSpecForProviderPrincipalInfoServiceAccountEmailRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1AppConnectorSpecForProviderPrincipalInfoServiceAccountEmailSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AppConnectorSpecForProviderPrincipalInfoServiceAccountEmailSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1AppConnectorSpecForProviderPrincipalInfoServiceAccou
     public V1beta1AppConnectorSpecForProviderPrincipalInfoServiceAccountEmailSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ServiceAccount in cloudplatform to populate email.</summary>
 public partial class V1beta1AppConnectorSpecForProviderPrincipalInfoServiceAccountEmailSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1AppConnectorSpecForProviderPrincipalInfoServiceAccou
     public V1beta1AppConnectorSpecForProviderPrincipalInfoServiceAccountEmailSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppConnectorSpecForProviderPrincipalInfoServiceAccount
 {
     /// <summary>Email address of the service account.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1AppConnectorSpecForProviderPrincipalInfoServiceAccou
     public V1beta1AppConnectorSpecForProviderPrincipalInfoServiceAccountEmailSelector? EmailSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppConnectorSpecForProviderPrincipalInfo
 {
     /// <summary>ServiceAccount represents a GCP service account. Structure is documented below.</summary>
@@ -132,6 +138,7 @@ public partial class V1beta1AppConnectorSpecForProviderPrincipalInfo
     public IList<V1beta1AppConnectorSpecForProviderPrincipalInfoServiceAccount>? ServiceAccount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppConnectorSpecForProvider
 {
     /// <summary>An arbitrary user-provided name for the AppConnector.</summary>
@@ -175,6 +182,7 @@ public enum V1beta1AppConnectorSpecInitProviderPrincipalInfoServiceAccountEmailR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AppConnectorSpecInitProviderPrincipalInfoServiceAccountEmailRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -188,6 +196,7 @@ public partial class V1beta1AppConnectorSpecInitProviderPrincipalInfoServiceAcco
     public V1beta1AppConnectorSpecInitProviderPrincipalInfoServiceAccountEmailRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ServiceAccount in cloudplatform to populate email.</summary>
 public partial class V1beta1AppConnectorSpecInitProviderPrincipalInfoServiceAccountEmailRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -219,6 +228,7 @@ public enum V1beta1AppConnectorSpecInitProviderPrincipalInfoServiceAccountEmailS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AppConnectorSpecInitProviderPrincipalInfoServiceAccountEmailSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -232,6 +242,7 @@ public partial class V1beta1AppConnectorSpecInitProviderPrincipalInfoServiceAcco
     public V1beta1AppConnectorSpecInitProviderPrincipalInfoServiceAccountEmailSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ServiceAccount in cloudplatform to populate email.</summary>
 public partial class V1beta1AppConnectorSpecInitProviderPrincipalInfoServiceAccountEmailSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -247,6 +258,7 @@ public partial class V1beta1AppConnectorSpecInitProviderPrincipalInfoServiceAcco
     public V1beta1AppConnectorSpecInitProviderPrincipalInfoServiceAccountEmailSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppConnectorSpecInitProviderPrincipalInfoServiceAccount
 {
     /// <summary>Email address of the service account.</summary>
@@ -262,6 +274,7 @@ public partial class V1beta1AppConnectorSpecInitProviderPrincipalInfoServiceAcco
     public V1beta1AppConnectorSpecInitProviderPrincipalInfoServiceAccountEmailSelector? EmailSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppConnectorSpecInitProviderPrincipalInfo
 {
     /// <summary>ServiceAccount represents a GCP service account. Structure is documented below.</summary>
@@ -269,6 +282,7 @@ public partial class V1beta1AppConnectorSpecInitProviderPrincipalInfo
     public IList<V1beta1AppConnectorSpecInitProviderPrincipalInfoServiceAccount>? ServiceAccount { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1AppConnectorSpecInitProvider
 {
     /// <summary>An arbitrary user-provided name for the AppConnector.</summary>
@@ -330,6 +344,7 @@ public enum V1beta1AppConnectorSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AppConnectorSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -343,6 +358,7 @@ public partial class V1beta1AppConnectorSpecProviderConfigRefPolicy
     public V1beta1AppConnectorSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1AppConnectorSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -374,6 +390,7 @@ public enum V1beta1AppConnectorSpecPublishConnectionDetailsToConfigRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AppConnectorSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -387,6 +404,7 @@ public partial class V1beta1AppConnectorSpecPublishConnectionDetailsToConfigRefP
     public V1beta1AppConnectorSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1AppConnectorSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -398,6 +416,7 @@ public partial class V1beta1AppConnectorSpecPublishConnectionDetailsToConfigRef
     public V1beta1AppConnectorSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1AppConnectorSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -413,6 +432,7 @@ public partial class V1beta1AppConnectorSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1AppConnectorSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -428,6 +448,7 @@ public partial class V1beta1AppConnectorSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1AppConnectorSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -439,6 +460,7 @@ public partial class V1beta1AppConnectorSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>AppConnectorSpec defines the desired state of AppConnector</summary>
 public partial class V1beta1AppConnectorSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -471,6 +493,7 @@ public partial class V1beta1AppConnectorSpec
     public V1beta1AppConnectorSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppConnectorStatusAtProviderPrincipalInfoServiceAccount
 {
     /// <summary>Email address of the service account.</summary>
@@ -478,6 +501,7 @@ public partial class V1beta1AppConnectorStatusAtProviderPrincipalInfoServiceAcco
     public string? Email { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppConnectorStatusAtProviderPrincipalInfo
 {
     /// <summary>ServiceAccount represents a GCP service account. Structure is documented below.</summary>
@@ -485,6 +509,7 @@ public partial class V1beta1AppConnectorStatusAtProviderPrincipalInfo
     public IList<V1beta1AppConnectorStatusAtProviderPrincipalInfoServiceAccount>? ServiceAccount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppConnectorStatusAtProvider
 {
     /// <summary>An arbitrary user-provided name for the AppConnector.</summary>
@@ -524,6 +549,7 @@ public partial class V1beta1AppConnectorStatusAtProvider
     public IDictionary<string, string>? TerraformLabels { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1AppConnectorStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -551,6 +577,7 @@ public partial class V1beta1AppConnectorStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>AppConnectorStatus defines the observed state of AppConnector.</summary>
 public partial class V1beta1AppConnectorStatus
 {
     /// <summary></summary>
@@ -567,6 +594,7 @@ public partial class V1beta1AppConnectorStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>AppConnector is the Schema for the AppConnectors API. A BeyondCorp AppConnector resource represents an application facing component deployed proximal to and with direct access to the application instances.</summary>
 public partial class V1beta1AppConnector : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AppConnectorSpec>, IStatus<V1beta1AppConnectorStatus>
 {
     public const string KubeApiVersion = "v1beta1";

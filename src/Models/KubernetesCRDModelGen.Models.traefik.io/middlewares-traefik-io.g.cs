@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.traefik.io;
+/// <summary>AddPrefix holds the add prefix middleware configuration. This middleware updates the path of a request before forwarding it. More info: https://doc.traefik.io/traefik/v3.1/middlewares/http/addprefix/</summary>
 public partial class V1alpha1MiddlewareSpecAddPrefix
 {
     /// <summary>Prefix is the string to add before the current path in the requested URL. It should include a leading slash (/).</summary>
@@ -15,6 +16,7 @@ public partial class V1alpha1MiddlewareSpecAddPrefix
     public string? Prefix { get; set; }
 }
 
+/// <summary>BasicAuth holds the basic auth middleware configuration. This middleware restricts access to your services to known users. More info: https://doc.traefik.io/traefik/v3.1/middlewares/http/basicauth/</summary>
 public partial class V1alpha1MiddlewareSpecBasicAuth
 {
     /// <summary>HeaderField defines a header field to store the authenticated user. More info: https://doc.traefik.io/traefik/v3.1/middlewares/http/basicauth/#headerfield</summary>
@@ -34,6 +36,7 @@ public partial class V1alpha1MiddlewareSpecBasicAuth
     public string? Secret { get; set; }
 }
 
+/// <summary>Buffering holds the buffering middleware configuration. This middleware retries or limits the size of requests that can be forwarded to backends. More info: https://doc.traefik.io/traefik/v3.1/middlewares/http/buffering/#maxrequestbodybytes</summary>
 public partial class V1alpha1MiddlewareSpecBuffering
 {
     /// <summary>MaxRequestBodyBytes defines the maximum allowed body size for the request (in bytes). If the request exceeds the allowed size, it is not forwarded to the service, and the client gets a 413 (Request Entity Too Large) response. Default: 0 (no maximum).</summary>
@@ -57,6 +60,7 @@ public partial class V1alpha1MiddlewareSpecBuffering
     public string? RetryExpression { get; set; }
 }
 
+/// <summary>MiddlewareRef is a reference to a Middleware resource.</summary>
 public partial class V1alpha1MiddlewareSpecChainMiddlewares
 {
     /// <summary>Name defines the name of the referenced Middleware resource.</summary>
@@ -68,6 +72,7 @@ public partial class V1alpha1MiddlewareSpecChainMiddlewares
     public string? Namespace { get; set; }
 }
 
+/// <summary>Chain holds the configuration of the chain middleware. This middleware enables to define reusable combinations of other pieces of middleware. More info: https://doc.traefik.io/traefik/v3.1/middlewares/http/chain/</summary>
 public partial class V1alpha1MiddlewareSpecChain
 {
     /// <summary>Middlewares is the list of MiddlewareRef which composes the chain.</summary>
@@ -75,6 +80,7 @@ public partial class V1alpha1MiddlewareSpecChain
     public IList<V1alpha1MiddlewareSpecChainMiddlewares>? Middlewares { get; set; }
 }
 
+/// <summary>CircuitBreaker holds the circuit breaker configuration.</summary>
 public partial class V1alpha1MiddlewareSpecCircuitBreaker
 {
     /// <summary>CheckPeriod is the interval between successive checks of the circuit breaker condition (when in standby state).</summary>
@@ -98,6 +104,7 @@ public partial class V1alpha1MiddlewareSpecCircuitBreaker
     public int? ResponseCode { get; set; }
 }
 
+/// <summary>Compress holds the compress middleware configuration. This middleware compresses responses before sending them to the client, using gzip compression. More info: https://doc.traefik.io/traefik/v3.1/middlewares/http/compress/</summary>
 public partial class V1alpha1MiddlewareSpecCompress
 {
     /// <summary>DefaultEncoding specifies the default encoding if the `Accept-Encoding` header is not in the request or contains a wildcard (`*`).</summary>
@@ -117,6 +124,7 @@ public partial class V1alpha1MiddlewareSpecCompress
     public int? MinResponseBodyBytes { get; set; }
 }
 
+/// <summary>ContentType holds the content-type middleware configuration. This middleware exists to enable the correct behavior until at least the default one can be changed in a future version.</summary>
 public partial class V1alpha1MiddlewareSpecContentType
 {
     /// <summary>AutoDetect specifies whether to let the `Content-Type` header, if it has not been set by the backend, be automatically set to a value derived from the contents of the response. Deprecated: AutoDetect option is deprecated, Content-Type middleware is only meant to be used to enable the content-type detection, please remove any usage of this option.</summary>
@@ -124,6 +132,7 @@ public partial class V1alpha1MiddlewareSpecContentType
     public bool? AutoDetect { get; set; }
 }
 
+/// <summary>DigestAuth holds the digest auth middleware configuration. This middleware restricts access to your services to known users. More info: https://doc.traefik.io/traefik/v3.1/middlewares/http/digestauth/</summary>
 public partial class V1alpha1MiddlewareSpecDigestAuth
 {
     /// <summary>HeaderField defines a header field to store the authenticated user. More info: https://doc.traefik.io/traefik/v3.1/middlewares/http/basicauth/#headerfield</summary>
@@ -143,6 +152,7 @@ public partial class V1alpha1MiddlewareSpecDigestAuth
     public string? Secret { get; set; }
 }
 
+/// <summary>Healthcheck defines health checks for ExternalName services.</summary>
 public partial class V1alpha1MiddlewareSpecErrorsServiceHealthCheck
 {
     /// <summary>FollowRedirects defines whether redirects should be followed during the health check calls. Default: true</summary>
@@ -200,6 +210,7 @@ public enum V1alpha1MiddlewareSpecErrorsServiceKindEnum
     TraefikService
 }
 
+/// <summary>ResponseForwarding defines how Traefik forwards the response from the upstream Kubernetes Service to the client.</summary>
 public partial class V1alpha1MiddlewareSpecErrorsServiceResponseForwarding
 {
     /// <summary>FlushInterval defines the interval, in milliseconds, in between flushes to the client while copying the response body. A negative value means to flush immediately after each write to the client. This configuration is ignored when ReverseProxy recognizes a response as a streaming response; for such responses, writes are flushed to the client immediately. Default: 100ms</summary>
@@ -207,6 +218,7 @@ public partial class V1alpha1MiddlewareSpecErrorsServiceResponseForwarding
     public string? FlushInterval { get; set; }
 }
 
+/// <summary>Cookie defines the sticky cookie configuration.</summary>
 public partial class V1alpha1MiddlewareSpecErrorsServiceStickyCookie
 {
     /// <summary>HTTPOnly defines whether the cookie can be accessed by client-side APIs, such as JavaScript.</summary>
@@ -230,6 +242,7 @@ public partial class V1alpha1MiddlewareSpecErrorsServiceStickyCookie
     public bool? Secure { get; set; }
 }
 
+/// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.1/routing/services/#sticky-sessions</summary>
 public partial class V1alpha1MiddlewareSpecErrorsServiceSticky
 {
     /// <summary>Cookie defines the sticky cookie configuration.</summary>
@@ -237,6 +250,7 @@ public partial class V1alpha1MiddlewareSpecErrorsServiceSticky
     public V1alpha1MiddlewareSpecErrorsServiceStickyCookie? Cookie { get; set; }
 }
 
+/// <summary>Service defines the reference to a Kubernetes Service that will serve the error page. More info: https://doc.traefik.io/traefik/v3.1/middlewares/http/errorpages/#service</summary>
 public partial class V1alpha1MiddlewareSpecErrorsService
 {
     /// <summary>Healthcheck defines health checks for ExternalName services.</summary>
@@ -297,6 +311,7 @@ public partial class V1alpha1MiddlewareSpecErrorsService
     public int? Weight { get; set; }
 }
 
+/// <summary>ErrorPage holds the custom error middleware configuration. This middleware returns a custom page in lieu of the default, according to configured ranges of HTTP Status codes. More info: https://doc.traefik.io/traefik/v3.1/middlewares/http/errorpages/</summary>
 public partial class V1alpha1MiddlewareSpecErrors
 {
     /// <summary>Query defines the URL for the error page (hosted by service). The {status} variable can be used in order to insert the status code in the URL.</summary>
@@ -312,6 +327,7 @@ public partial class V1alpha1MiddlewareSpecErrors
     public IList<string>? Status { get; set; }
 }
 
+/// <summary>TLS defines the configuration used to secure the connection to the authentication server.</summary>
 public partial class V1alpha1MiddlewareSpecForwardAuthTls
 {
     /// <summary>Deprecated: TLS client authentication is a server side option (see https://github.com/golang/go/blob/740a490f71d026bb7d2d13cb8fa2d6d6e0572b70/src/crypto/tls/common.go#L634).</summary>
@@ -331,6 +347,7 @@ public partial class V1alpha1MiddlewareSpecForwardAuthTls
     public bool? InsecureSkipVerify { get; set; }
 }
 
+/// <summary>ForwardAuth holds the forward auth middleware configuration. This middleware delegates the request authentication to a Service. More info: https://doc.traefik.io/traefik/v3.1/middlewares/http/forwardauth/</summary>
 public partial class V1alpha1MiddlewareSpecForwardAuth
 {
     /// <summary>AddAuthCookiesToResponse defines the list of cookies to copy from the authentication server response to the response.</summary>
@@ -362,6 +379,7 @@ public partial class V1alpha1MiddlewareSpecForwardAuth
     public bool? TrustForwardHeader { get; set; }
 }
 
+/// <summary>GrpcWeb holds the gRPC web middleware configuration. This middleware converts a gRPC web request to an HTTP/2 gRPC request.</summary>
 public partial class V1alpha1MiddlewareSpecGrpcWeb
 {
     /// <summary>AllowOrigins is a list of allowable origins. Can also be a wildcard origin "*".</summary>
@@ -369,6 +387,7 @@ public partial class V1alpha1MiddlewareSpecGrpcWeb
     public IList<string>? AllowOrigins { get; set; }
 }
 
+/// <summary>Headers holds the headers middleware configuration. This middleware manages the requests and responses headers. More info: https://doc.traefik.io/traefik/v3.1/middlewares/http/headers/#customrequestheaders</summary>
 public partial class V1alpha1MiddlewareSpecHeaders
 {
     /// <summary>AccessControlAllowCredentials defines whether the request can include user credentials.</summary>
@@ -504,6 +523,7 @@ public partial class V1alpha1MiddlewareSpecHeaders
     public long? StsSeconds { get; set; }
 }
 
+/// <summary>IPStrategy holds the IP strategy configuration used by Traefik to determine the client IP. More info: https://doc.traefik.io/traefik/v3.1/middlewares/http/ipallowlist/#ipstrategy</summary>
 public partial class V1alpha1MiddlewareSpecInFlightReqSourceCriterionIpStrategy
 {
     /// <summary>Depth tells Traefik to use the X-Forwarded-For header and take the IP located at the depth position (starting from the right).</summary>
@@ -515,6 +535,7 @@ public partial class V1alpha1MiddlewareSpecInFlightReqSourceCriterionIpStrategy
     public IList<string>? ExcludedIPs { get; set; }
 }
 
+/// <summary>SourceCriterion defines what criterion is used to group requests as originating from a common source. If several strategies are defined at the same time, an error will be raised. If none are set, the default is to use the requestHost. More info: https://doc.traefik.io/traefik/v3.1/middlewares/http/inflightreq/#sourcecriterion</summary>
 public partial class V1alpha1MiddlewareSpecInFlightReqSourceCriterion
 {
     /// <summary>IPStrategy holds the IP strategy configuration used by Traefik to determine the client IP. More info: https://doc.traefik.io/traefik/v3.1/middlewares/http/ipallowlist/#ipstrategy</summary>
@@ -530,6 +551,7 @@ public partial class V1alpha1MiddlewareSpecInFlightReqSourceCriterion
     public bool? RequestHost { get; set; }
 }
 
+/// <summary>InFlightReq holds the in-flight request middleware configuration. This middleware limits the number of requests being processed and served concurrently. More info: https://doc.traefik.io/traefik/v3.1/middlewares/http/inflightreq/</summary>
 public partial class V1alpha1MiddlewareSpecInFlightReq
 {
     /// <summary>Amount defines the maximum amount of allowed simultaneous in-flight request. The middleware responds with HTTP 429 Too Many Requests if there are already amount requests in progress (based on the same sourceCriterion strategy).</summary>
@@ -541,6 +563,7 @@ public partial class V1alpha1MiddlewareSpecInFlightReq
     public V1alpha1MiddlewareSpecInFlightReqSourceCriterion? SourceCriterion { get; set; }
 }
 
+/// <summary>IPStrategy holds the IP strategy configuration used by Traefik to determine the client IP. More info: https://doc.traefik.io/traefik/v3.1/middlewares/http/ipallowlist/#ipstrategy</summary>
 public partial class V1alpha1MiddlewareSpecIpAllowListIpStrategy
 {
     /// <summary>Depth tells Traefik to use the X-Forwarded-For header and take the IP located at the depth position (starting from the right).</summary>
@@ -552,6 +575,7 @@ public partial class V1alpha1MiddlewareSpecIpAllowListIpStrategy
     public IList<string>? ExcludedIPs { get; set; }
 }
 
+/// <summary>IPAllowList holds the IP allowlist middleware configuration. This middleware limits allowed requests based on the client IP. More info: https://doc.traefik.io/traefik/v3.1/middlewares/http/ipallowlist/</summary>
 public partial class V1alpha1MiddlewareSpecIpAllowList
 {
     /// <summary>IPStrategy holds the IP strategy configuration used by Traefik to determine the client IP. More info: https://doc.traefik.io/traefik/v3.1/middlewares/http/ipallowlist/#ipstrategy</summary>
@@ -567,6 +591,7 @@ public partial class V1alpha1MiddlewareSpecIpAllowList
     public IList<string>? SourceRange { get; set; }
 }
 
+/// <summary>IPStrategy holds the IP strategy configuration used by Traefik to determine the client IP. More info: https://doc.traefik.io/traefik/v3.1/middlewares/http/ipallowlist/#ipstrategy</summary>
 public partial class V1alpha1MiddlewareSpecIpWhiteListIpStrategy
 {
     /// <summary>Depth tells Traefik to use the X-Forwarded-For header and take the IP located at the depth position (starting from the right).</summary>
@@ -578,6 +603,7 @@ public partial class V1alpha1MiddlewareSpecIpWhiteListIpStrategy
     public IList<string>? ExcludedIPs { get; set; }
 }
 
+/// <summary>Deprecated: please use IPAllowList instead.</summary>
 public partial class V1alpha1MiddlewareSpecIpWhiteList
 {
     /// <summary>IPStrategy holds the IP strategy configuration used by Traefik to determine the client IP. More info: https://doc.traefik.io/traefik/v3.1/middlewares/http/ipallowlist/#ipstrategy</summary>
@@ -589,6 +615,7 @@ public partial class V1alpha1MiddlewareSpecIpWhiteList
     public IList<string>? SourceRange { get; set; }
 }
 
+/// <summary>Issuer defines the client certificate issuer details to add to the X-Forwarded-Tls-Client-Cert-Info header.</summary>
 public partial class V1alpha1MiddlewareSpecPassTLSClientCertInfoIssuer
 {
     /// <summary>CommonName defines whether to add the organizationalUnit information into the issuer.</summary>
@@ -620,6 +647,7 @@ public partial class V1alpha1MiddlewareSpecPassTLSClientCertInfoIssuer
     public bool? SerialNumber { get; set; }
 }
 
+/// <summary>Subject defines the client certificate subject details to add to the X-Forwarded-Tls-Client-Cert-Info header.</summary>
 public partial class V1alpha1MiddlewareSpecPassTLSClientCertInfoSubject
 {
     /// <summary>CommonName defines whether to add the organizationalUnit information into the subject.</summary>
@@ -655,6 +683,7 @@ public partial class V1alpha1MiddlewareSpecPassTLSClientCertInfoSubject
     public bool? SerialNumber { get; set; }
 }
 
+/// <summary>Info selects the specific client certificate details you want to add to the X-Forwarded-Tls-Client-Cert-Info header.</summary>
 public partial class V1alpha1MiddlewareSpecPassTLSClientCertInfo
 {
     /// <summary>Issuer defines the client certificate issuer details to add to the X-Forwarded-Tls-Client-Cert-Info header.</summary>
@@ -682,6 +711,7 @@ public partial class V1alpha1MiddlewareSpecPassTLSClientCertInfo
     public V1alpha1MiddlewareSpecPassTLSClientCertInfoSubject? Subject { get; set; }
 }
 
+/// <summary>PassTLSClientCert holds the pass TLS client cert middleware configuration. This middleware adds the selected data from the passed client TLS certificate to a header. More info: https://doc.traefik.io/traefik/v3.1/middlewares/http/passtlsclientcert/</summary>
 public partial class V1alpha1MiddlewareSpecPassTLSClientCert
 {
     /// <summary>Info selects the specific client certificate details you want to add to the X-Forwarded-Tls-Client-Cert-Info header.</summary>
@@ -693,6 +723,7 @@ public partial class V1alpha1MiddlewareSpecPassTLSClientCert
     public bool? Pem { get; set; }
 }
 
+/// <summary>IPStrategy holds the IP strategy configuration used by Traefik to determine the client IP. More info: https://doc.traefik.io/traefik/v3.1/middlewares/http/ipallowlist/#ipstrategy</summary>
 public partial class V1alpha1MiddlewareSpecRateLimitSourceCriterionIpStrategy
 {
     /// <summary>Depth tells Traefik to use the X-Forwarded-For header and take the IP located at the depth position (starting from the right).</summary>
@@ -704,6 +735,7 @@ public partial class V1alpha1MiddlewareSpecRateLimitSourceCriterionIpStrategy
     public IList<string>? ExcludedIPs { get; set; }
 }
 
+/// <summary>SourceCriterion defines what criterion is used to group requests as originating from a common source. If several strategies are defined at the same time, an error will be raised. If none are set, the default is to use the request's remote address field (as an ipStrategy).</summary>
 public partial class V1alpha1MiddlewareSpecRateLimitSourceCriterion
 {
     /// <summary>IPStrategy holds the IP strategy configuration used by Traefik to determine the client IP. More info: https://doc.traefik.io/traefik/v3.1/middlewares/http/ipallowlist/#ipstrategy</summary>
@@ -719,6 +751,7 @@ public partial class V1alpha1MiddlewareSpecRateLimitSourceCriterion
     public bool? RequestHost { get; set; }
 }
 
+/// <summary>RateLimit holds the rate limit configuration. This middleware ensures that services will receive a fair amount of requests, and allows one to define what fair is. More info: https://doc.traefik.io/traefik/v3.1/middlewares/http/ratelimit/</summary>
 public partial class V1alpha1MiddlewareSpecRateLimit
 {
     /// <summary>Average is the maximum rate, by default in requests/s, allowed for the given source. It defaults to 0, which means no rate limiting. The rate is actually defined by dividing Average by Period. So for a rate below 1req/s, one needs to define a Period larger than a second.</summary>
@@ -738,6 +771,7 @@ public partial class V1alpha1MiddlewareSpecRateLimit
     public V1alpha1MiddlewareSpecRateLimitSourceCriterion? SourceCriterion { get; set; }
 }
 
+/// <summary>RedirectRegex holds the redirect regex middleware configuration. This middleware redirects a request using regex matching and replacement. More info: https://doc.traefik.io/traefik/v3.1/middlewares/http/redirectregex/#regex</summary>
 public partial class V1alpha1MiddlewareSpecRedirectRegex
 {
     /// <summary>Permanent defines whether the redirection is permanent (301).</summary>
@@ -753,6 +787,7 @@ public partial class V1alpha1MiddlewareSpecRedirectRegex
     public string? Replacement { get; set; }
 }
 
+/// <summary>RedirectScheme holds the redirect scheme middleware configuration. This middleware redirects requests from a scheme/port to another. More info: https://doc.traefik.io/traefik/v3.1/middlewares/http/redirectscheme/</summary>
 public partial class V1alpha1MiddlewareSpecRedirectScheme
 {
     /// <summary>Permanent defines whether the redirection is permanent (301).</summary>
@@ -768,6 +803,7 @@ public partial class V1alpha1MiddlewareSpecRedirectScheme
     public string? Scheme { get; set; }
 }
 
+/// <summary>ReplacePath holds the replace path middleware configuration. This middleware replaces the path of the request URL and store the original path in an X-Replaced-Path header. More info: https://doc.traefik.io/traefik/v3.1/middlewares/http/replacepath/</summary>
 public partial class V1alpha1MiddlewareSpecReplacePath
 {
     /// <summary>Path defines the path to use as replacement in the request URL.</summary>
@@ -775,6 +811,7 @@ public partial class V1alpha1MiddlewareSpecReplacePath
     public string? Path { get; set; }
 }
 
+/// <summary>ReplacePathRegex holds the replace path regex middleware configuration. This middleware replaces the path of a URL using regex matching and replacement. More info: https://doc.traefik.io/traefik/v3.1/middlewares/http/replacepathregex/</summary>
 public partial class V1alpha1MiddlewareSpecReplacePathRegex
 {
     /// <summary>Regex defines the regular expression used to match and capture the path from the request URL.</summary>
@@ -786,6 +823,7 @@ public partial class V1alpha1MiddlewareSpecReplacePathRegex
     public string? Replacement { get; set; }
 }
 
+/// <summary>Retry holds the retry middleware configuration. This middleware reissues requests a given number of times to a backend server if that server does not reply. As soon as the server answers, the middleware stops retrying, regardless of the response status. More info: https://doc.traefik.io/traefik/v3.1/middlewares/http/retry/</summary>
 public partial class V1alpha1MiddlewareSpecRetry
 {
     /// <summary>Attempts defines how many times the request should be retried.</summary>
@@ -797,6 +835,7 @@ public partial class V1alpha1MiddlewareSpecRetry
     public IntstrIntOrString? InitialInterval { get; set; }
 }
 
+/// <summary>StripPrefix holds the strip prefix middleware configuration. This middleware removes the specified prefixes from the URL path. More info: https://doc.traefik.io/traefik/v3.1/middlewares/http/stripprefix/</summary>
 public partial class V1alpha1MiddlewareSpecStripPrefix
 {
     /// <summary>Deprecated: ForceSlash option is deprecated, please remove any usage of this option. ForceSlash ensures that the resulting stripped path is not the empty string, by replacing it with / when necessary. Default: true.</summary>
@@ -808,6 +847,7 @@ public partial class V1alpha1MiddlewareSpecStripPrefix
     public IList<string>? Prefixes { get; set; }
 }
 
+/// <summary>StripPrefixRegex holds the strip prefix regex middleware configuration. This middleware removes the matching prefixes from the URL path. More info: https://doc.traefik.io/traefik/v3.1/middlewares/http/stripprefixregex/</summary>
 public partial class V1alpha1MiddlewareSpecStripPrefixRegex
 {
     /// <summary>Regex defines the regular expression to match the path prefix from the request URL.</summary>
@@ -815,6 +855,7 @@ public partial class V1alpha1MiddlewareSpecStripPrefixRegex
     public IList<string>? Regex { get; set; }
 }
 
+/// <summary>MiddlewareSpec defines the desired state of a Middleware.</summary>
 public partial class V1alpha1MiddlewareSpec
 {
     /// <summary>AddPrefix holds the add prefix middleware configuration. This middleware updates the path of a request before forwarding it. More info: https://doc.traefik.io/traefik/v3.1/middlewares/http/addprefix/</summary>
@@ -919,6 +960,7 @@ public partial class V1alpha1MiddlewareSpec
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Middleware is the CRD implementation of a Traefik Middleware. More info: https://doc.traefik.io/traefik/v3.1/middlewares/http/overview/</summary>
 public partial class V1alpha1Middleware : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1MiddlewareSpec>
 {
     public const string KubeApiVersion = "v1alpha1";

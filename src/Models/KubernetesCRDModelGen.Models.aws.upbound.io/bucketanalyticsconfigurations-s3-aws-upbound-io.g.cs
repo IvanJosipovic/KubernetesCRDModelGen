@@ -38,6 +38,7 @@ public enum V1beta1BucketAnalyticsConfigurationSpecForProviderBucketRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketAnalyticsConfigurationSpecForProviderBucketRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1BucketAnalyticsConfigurationSpecForProviderBucketRef
     public V1beta1BucketAnalyticsConfigurationSpecForProviderBucketRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1BucketAnalyticsConfigurationSpecForProviderBucketRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1BucketAnalyticsConfigurationSpecForProviderBucketSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BucketAnalyticsConfigurationSpecForProviderBucketSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1BucketAnalyticsConfigurationSpecForProviderBucketSel
     public V1beta1BucketAnalyticsConfigurationSpecForProviderBucketSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1BucketAnalyticsConfigurationSpecForProviderBucketSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1BucketAnalyticsConfigurationSpecForProviderBucketSel
     public V1beta1BucketAnalyticsConfigurationSpecForProviderBucketSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketAnalyticsConfigurationSpecForProviderFilter
 {
     /// <summary>Object prefix for filtering.</summary>
@@ -141,6 +146,7 @@ public enum V1beta1BucketAnalyticsConfigurationSpecForProviderStorageClassAnalys
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketAnalyticsConfigurationSpecForProviderStorageClassAnalysisDataExportDestinationS3BucketDestinationBucketArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -154,6 +160,7 @@ public partial class V1beta1BucketAnalyticsConfigurationSpecForProviderStorageCl
     public V1beta1BucketAnalyticsConfigurationSpecForProviderStorageClassAnalysisDataExportDestinationS3BucketDestinationBucketArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate bucketArn.</summary>
 public partial class V1beta1BucketAnalyticsConfigurationSpecForProviderStorageClassAnalysisDataExportDestinationS3BucketDestinationBucketArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -185,6 +192,7 @@ public enum V1beta1BucketAnalyticsConfigurationSpecForProviderStorageClassAnalys
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BucketAnalyticsConfigurationSpecForProviderStorageClassAnalysisDataExportDestinationS3BucketDestinationBucketArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -198,6 +206,7 @@ public partial class V1beta1BucketAnalyticsConfigurationSpecForProviderStorageCl
     public V1beta1BucketAnalyticsConfigurationSpecForProviderStorageClassAnalysisDataExportDestinationS3BucketDestinationBucketArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate bucketArn.</summary>
 public partial class V1beta1BucketAnalyticsConfigurationSpecForProviderStorageClassAnalysisDataExportDestinationS3BucketDestinationBucketArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -213,6 +222,7 @@ public partial class V1beta1BucketAnalyticsConfigurationSpecForProviderStorageCl
     public V1beta1BucketAnalyticsConfigurationSpecForProviderStorageClassAnalysisDataExportDestinationS3BucketDestinationBucketArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketAnalyticsConfigurationSpecForProviderStorageClassAnalysisDataExportDestinationS3BucketDestination
 {
     /// <summary>Account ID that owns the destination bucket.</summary>
@@ -240,6 +250,7 @@ public partial class V1beta1BucketAnalyticsConfigurationSpecForProviderStorageCl
     public string? Prefix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketAnalyticsConfigurationSpecForProviderStorageClassAnalysisDataExportDestination
 {
     /// <summary>Analytics data export currently only supports an S3 bucket destination (documented below).</summary>
@@ -247,6 +258,7 @@ public partial class V1beta1BucketAnalyticsConfigurationSpecForProviderStorageCl
     public IList<V1beta1BucketAnalyticsConfigurationSpecForProviderStorageClassAnalysisDataExportDestinationS3BucketDestination>? S3BucketDestination { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketAnalyticsConfigurationSpecForProviderStorageClassAnalysisDataExport
 {
     /// <summary>Specifies the destination for the exported analytics data (documented below).</summary>
@@ -258,6 +270,7 @@ public partial class V1beta1BucketAnalyticsConfigurationSpecForProviderStorageCl
     public string? OutputSchemaVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketAnalyticsConfigurationSpecForProviderStorageClassAnalysis
 {
     /// <summary>Data export configuration (documented below).</summary>
@@ -265,6 +278,7 @@ public partial class V1beta1BucketAnalyticsConfigurationSpecForProviderStorageCl
     public IList<V1beta1BucketAnalyticsConfigurationSpecForProviderStorageClassAnalysisDataExport>? DataExport { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketAnalyticsConfigurationSpecForProvider
 {
     /// <summary>Name of the bucket this analytics configuration is associated with.</summary>
@@ -316,6 +330,7 @@ public enum V1beta1BucketAnalyticsConfigurationSpecInitProviderBucketRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketAnalyticsConfigurationSpecInitProviderBucketRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -329,6 +344,7 @@ public partial class V1beta1BucketAnalyticsConfigurationSpecInitProviderBucketRe
     public V1beta1BucketAnalyticsConfigurationSpecInitProviderBucketRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1BucketAnalyticsConfigurationSpecInitProviderBucketRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -360,6 +376,7 @@ public enum V1beta1BucketAnalyticsConfigurationSpecInitProviderBucketSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BucketAnalyticsConfigurationSpecInitProviderBucketSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -373,6 +390,7 @@ public partial class V1beta1BucketAnalyticsConfigurationSpecInitProviderBucketSe
     public V1beta1BucketAnalyticsConfigurationSpecInitProviderBucketSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1BucketAnalyticsConfigurationSpecInitProviderBucketSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -388,6 +406,7 @@ public partial class V1beta1BucketAnalyticsConfigurationSpecInitProviderBucketSe
     public V1beta1BucketAnalyticsConfigurationSpecInitProviderBucketSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketAnalyticsConfigurationSpecInitProviderFilter
 {
     /// <summary>Object prefix for filtering.</summary>
@@ -419,6 +438,7 @@ public enum V1beta1BucketAnalyticsConfigurationSpecInitProviderStorageClassAnaly
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketAnalyticsConfigurationSpecInitProviderStorageClassAnalysisDataExportDestinationS3BucketDestinationBucketArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -432,6 +452,7 @@ public partial class V1beta1BucketAnalyticsConfigurationSpecInitProviderStorageC
     public V1beta1BucketAnalyticsConfigurationSpecInitProviderStorageClassAnalysisDataExportDestinationS3BucketDestinationBucketArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate bucketArn.</summary>
 public partial class V1beta1BucketAnalyticsConfigurationSpecInitProviderStorageClassAnalysisDataExportDestinationS3BucketDestinationBucketArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -463,6 +484,7 @@ public enum V1beta1BucketAnalyticsConfigurationSpecInitProviderStorageClassAnaly
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BucketAnalyticsConfigurationSpecInitProviderStorageClassAnalysisDataExportDestinationS3BucketDestinationBucketArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -476,6 +498,7 @@ public partial class V1beta1BucketAnalyticsConfigurationSpecInitProviderStorageC
     public V1beta1BucketAnalyticsConfigurationSpecInitProviderStorageClassAnalysisDataExportDestinationS3BucketDestinationBucketArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate bucketArn.</summary>
 public partial class V1beta1BucketAnalyticsConfigurationSpecInitProviderStorageClassAnalysisDataExportDestinationS3BucketDestinationBucketArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -491,6 +514,7 @@ public partial class V1beta1BucketAnalyticsConfigurationSpecInitProviderStorageC
     public V1beta1BucketAnalyticsConfigurationSpecInitProviderStorageClassAnalysisDataExportDestinationS3BucketDestinationBucketArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketAnalyticsConfigurationSpecInitProviderStorageClassAnalysisDataExportDestinationS3BucketDestination
 {
     /// <summary>Account ID that owns the destination bucket.</summary>
@@ -518,6 +542,7 @@ public partial class V1beta1BucketAnalyticsConfigurationSpecInitProviderStorageC
     public string? Prefix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketAnalyticsConfigurationSpecInitProviderStorageClassAnalysisDataExportDestination
 {
     /// <summary>Analytics data export currently only supports an S3 bucket destination (documented below).</summary>
@@ -525,6 +550,7 @@ public partial class V1beta1BucketAnalyticsConfigurationSpecInitProviderStorageC
     public IList<V1beta1BucketAnalyticsConfigurationSpecInitProviderStorageClassAnalysisDataExportDestinationS3BucketDestination>? S3BucketDestination { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketAnalyticsConfigurationSpecInitProviderStorageClassAnalysisDataExport
 {
     /// <summary>Specifies the destination for the exported analytics data (documented below).</summary>
@@ -536,6 +562,7 @@ public partial class V1beta1BucketAnalyticsConfigurationSpecInitProviderStorageC
     public string? OutputSchemaVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketAnalyticsConfigurationSpecInitProviderStorageClassAnalysis
 {
     /// <summary>Data export configuration (documented below).</summary>
@@ -543,6 +570,7 @@ public partial class V1beta1BucketAnalyticsConfigurationSpecInitProviderStorageC
     public IList<V1beta1BucketAnalyticsConfigurationSpecInitProviderStorageClassAnalysisDataExport>? DataExport { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1BucketAnalyticsConfigurationSpecInitProvider
 {
     /// <summary>Name of the bucket this analytics configuration is associated with.</summary>
@@ -612,6 +640,7 @@ public enum V1beta1BucketAnalyticsConfigurationSpecProviderConfigRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketAnalyticsConfigurationSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -625,6 +654,7 @@ public partial class V1beta1BucketAnalyticsConfigurationSpecProviderConfigRefPol
     public V1beta1BucketAnalyticsConfigurationSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1BucketAnalyticsConfigurationSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -656,6 +686,7 @@ public enum V1beta1BucketAnalyticsConfigurationSpecPublishConnectionDetailsToCon
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketAnalyticsConfigurationSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -669,6 +700,7 @@ public partial class V1beta1BucketAnalyticsConfigurationSpecPublishConnectionDet
     public V1beta1BucketAnalyticsConfigurationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1BucketAnalyticsConfigurationSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -680,6 +712,7 @@ public partial class V1beta1BucketAnalyticsConfigurationSpecPublishConnectionDet
     public V1beta1BucketAnalyticsConfigurationSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1BucketAnalyticsConfigurationSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -695,6 +728,7 @@ public partial class V1beta1BucketAnalyticsConfigurationSpecPublishConnectionDet
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1BucketAnalyticsConfigurationSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -710,6 +744,7 @@ public partial class V1beta1BucketAnalyticsConfigurationSpecPublishConnectionDet
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1BucketAnalyticsConfigurationSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -721,6 +756,7 @@ public partial class V1beta1BucketAnalyticsConfigurationSpecWriteConnectionSecre
     public string Namespace { get; set; }
 }
 
+/// <summary>BucketAnalyticsConfigurationSpec defines the desired state of BucketAnalyticsConfiguration</summary>
 public partial class V1beta1BucketAnalyticsConfigurationSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -753,6 +789,7 @@ public partial class V1beta1BucketAnalyticsConfigurationSpec
     public V1beta1BucketAnalyticsConfigurationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketAnalyticsConfigurationStatusAtProviderFilter
 {
     /// <summary>Object prefix for filtering.</summary>
@@ -764,6 +801,7 @@ public partial class V1beta1BucketAnalyticsConfigurationStatusAtProviderFilter
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketAnalyticsConfigurationStatusAtProviderStorageClassAnalysisDataExportDestinationS3BucketDestination
 {
     /// <summary>Account ID that owns the destination bucket.</summary>
@@ -783,6 +821,7 @@ public partial class V1beta1BucketAnalyticsConfigurationStatusAtProviderStorageC
     public string? Prefix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketAnalyticsConfigurationStatusAtProviderStorageClassAnalysisDataExportDestination
 {
     /// <summary>Analytics data export currently only supports an S3 bucket destination (documented below).</summary>
@@ -790,6 +829,7 @@ public partial class V1beta1BucketAnalyticsConfigurationStatusAtProviderStorageC
     public IList<V1beta1BucketAnalyticsConfigurationStatusAtProviderStorageClassAnalysisDataExportDestinationS3BucketDestination>? S3BucketDestination { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketAnalyticsConfigurationStatusAtProviderStorageClassAnalysisDataExport
 {
     /// <summary>Specifies the destination for the exported analytics data (documented below).</summary>
@@ -801,6 +841,7 @@ public partial class V1beta1BucketAnalyticsConfigurationStatusAtProviderStorageC
     public string? OutputSchemaVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketAnalyticsConfigurationStatusAtProviderStorageClassAnalysis
 {
     /// <summary>Data export configuration (documented below).</summary>
@@ -808,6 +849,7 @@ public partial class V1beta1BucketAnalyticsConfigurationStatusAtProviderStorageC
     public IList<V1beta1BucketAnalyticsConfigurationStatusAtProviderStorageClassAnalysisDataExport>? DataExport { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketAnalyticsConfigurationStatusAtProvider
 {
     /// <summary>Name of the bucket this analytics configuration is associated with.</summary>
@@ -831,6 +873,7 @@ public partial class V1beta1BucketAnalyticsConfigurationStatusAtProvider
     public IList<V1beta1BucketAnalyticsConfigurationStatusAtProviderStorageClassAnalysis>? StorageClassAnalysis { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1BucketAnalyticsConfigurationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -858,6 +901,7 @@ public partial class V1beta1BucketAnalyticsConfigurationStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>BucketAnalyticsConfigurationStatus defines the observed state of BucketAnalyticsConfiguration.</summary>
 public partial class V1beta1BucketAnalyticsConfigurationStatus
 {
     /// <summary></summary>
@@ -874,6 +918,7 @@ public partial class V1beta1BucketAnalyticsConfigurationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>BucketAnalyticsConfiguration is the Schema for the BucketAnalyticsConfigurations API. Provides a S3 bucket analytics configuration resource.</summary>
 public partial class V1beta1BucketAnalyticsConfiguration : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BucketAnalyticsConfigurationSpec>, IStatus<V1beta1BucketAnalyticsConfigurationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.vpcaccess.cnrm.cloud.google.com;
+/// <summary>Immutable. Name or self_link of the VPC network. Required if 'ip_cidr_range' is set.</summary>
 public partial class V1beta1VPCAccessConnectorSpecNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1VPCAccessConnectorSpecNetworkRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. The project that this resource belongs to.</summary>
 public partial class V1beta1VPCAccessConnectorSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1VPCAccessConnectorSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}"</summary>
 public partial class V1beta1VPCAccessConnectorSpecSubnetNameRef
 {
     /// <summary>Allowed value: The `name` field of a `ComputeSubnetwork` resource.</summary>
@@ -53,6 +56,7 @@ public partial class V1beta1VPCAccessConnectorSpecSubnetNameRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. Project in which the subnet exists. If not set, this project is assumed to be the project for which the connector create request was issued.</summary>
 public partial class V1beta1VPCAccessConnectorSpecSubnetProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -68,6 +72,7 @@ public partial class V1beta1VPCAccessConnectorSpecSubnetProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. The subnet in which to house the connector.</summary>
 public partial class V1beta1VPCAccessConnectorSpecSubnet
 {
     /// <summary>Immutable. Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}"</summary>
@@ -79,6 +84,7 @@ public partial class V1beta1VPCAccessConnectorSpecSubnet
     public V1beta1VPCAccessConnectorSpecSubnetProjectRef? ProjectRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPCAccessConnectorSpec
 {
     /// <summary>Immutable. The range of internal addresses that follows RFC 4632 notation. Example: '10.132.0.0/28'.</summary>
@@ -126,6 +132,7 @@ public partial class V1beta1VPCAccessConnectorSpec
     public V1beta1VPCAccessConnectorSpecSubnet? Subnet { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPCAccessConnectorStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -149,6 +156,7 @@ public partial class V1beta1VPCAccessConnectorStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPCAccessConnectorStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -173,6 +181,7 @@ public partial class V1beta1VPCAccessConnectorStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1VPCAccessConnector : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1VPCAccessConnectorSpec>, IStatus<V1beta1VPCAccessConnectorStatus>
 {
     public const string KubeApiVersion = "v1beta1";

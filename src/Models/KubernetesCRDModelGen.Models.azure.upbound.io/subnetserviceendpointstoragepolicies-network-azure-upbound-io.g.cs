@@ -18,6 +18,7 @@ public enum V1beta1SubnetServiceEndpointStoragePolicySpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1SubnetServiceEndpointStoragePolicySpecForProviderDefinition
 {
     /// <summary>The description of this Subnet Service Endpoint Storage Policy Definition.</summary>
@@ -57,6 +58,7 @@ public enum V1beta1SubnetServiceEndpointStoragePolicySpecForProviderResourceGrou
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SubnetServiceEndpointStoragePolicySpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -70,6 +72,7 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicySpecForProviderRes
     public V1beta1SubnetServiceEndpointStoragePolicySpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1SubnetServiceEndpointStoragePolicySpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -101,6 +104,7 @@ public enum V1beta1SubnetServiceEndpointStoragePolicySpecForProviderResourceGrou
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SubnetServiceEndpointStoragePolicySpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -114,6 +118,7 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicySpecForProviderRes
     public V1beta1SubnetServiceEndpointStoragePolicySpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1SubnetServiceEndpointStoragePolicySpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -129,6 +134,7 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicySpecForProviderRes
     public V1beta1SubnetServiceEndpointStoragePolicySpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubnetServiceEndpointStoragePolicySpecForProvider
 {
     /// <summary>A definition block as defined below</summary>
@@ -156,6 +162,7 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicySpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubnetServiceEndpointStoragePolicySpecInitProviderDefinition
 {
     /// <summary>The description of this Subnet Service Endpoint Storage Policy Definition.</summary>
@@ -175,6 +182,7 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicySpecInitProviderDe
     public IList<string>? ServiceResources { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1SubnetServiceEndpointStoragePolicySpecInitProvider
 {
     /// <summary>A definition block as defined below</summary>
@@ -232,6 +240,7 @@ public enum V1beta1SubnetServiceEndpointStoragePolicySpecProviderConfigRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SubnetServiceEndpointStoragePolicySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -245,6 +254,7 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicySpecProviderConfig
     public V1beta1SubnetServiceEndpointStoragePolicySpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1SubnetServiceEndpointStoragePolicySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -276,6 +286,7 @@ public enum V1beta1SubnetServiceEndpointStoragePolicySpecPublishConnectionDetail
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SubnetServiceEndpointStoragePolicySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -289,6 +300,7 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicySpecPublishConnect
     public V1beta1SubnetServiceEndpointStoragePolicySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1SubnetServiceEndpointStoragePolicySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -300,6 +312,7 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicySpecPublishConnect
     public V1beta1SubnetServiceEndpointStoragePolicySpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1SubnetServiceEndpointStoragePolicySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -315,6 +328,7 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicySpecPublishConnect
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1SubnetServiceEndpointStoragePolicySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -330,6 +344,7 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicySpecPublishConnect
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1SubnetServiceEndpointStoragePolicySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -341,6 +356,7 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicySpecWriteConnectio
     public string Namespace { get; set; }
 }
 
+/// <summary>SubnetServiceEndpointStoragePolicySpec defines the desired state of SubnetServiceEndpointStoragePolicy</summary>
 public partial class V1beta1SubnetServiceEndpointStoragePolicySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -373,6 +389,7 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicySpec
     public V1beta1SubnetServiceEndpointStoragePolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubnetServiceEndpointStoragePolicyStatusAtProviderDefinition
 {
     /// <summary>The description of this Subnet Service Endpoint Storage Policy Definition.</summary>
@@ -392,6 +409,7 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicyStatusAtProviderDe
     public IList<string>? ServiceResources { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubnetServiceEndpointStoragePolicyStatusAtProvider
 {
     /// <summary>A definition block as defined below</summary>
@@ -415,6 +433,7 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicyStatusAtProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1SubnetServiceEndpointStoragePolicyStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -442,6 +461,7 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicyStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>SubnetServiceEndpointStoragePolicyStatus defines the observed state of SubnetServiceEndpointStoragePolicy.</summary>
 public partial class V1beta1SubnetServiceEndpointStoragePolicyStatus
 {
     /// <summary></summary>
@@ -458,6 +478,7 @@ public partial class V1beta1SubnetServiceEndpointStoragePolicyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>SubnetServiceEndpointStoragePolicy is the Schema for the SubnetServiceEndpointStoragePolicys API. Manages a Subnet Service Endpoint Storage Policy.</summary>
 public partial class V1beta1SubnetServiceEndpointStoragePolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SubnetServiceEndpointStoragePolicySpec>, IStatus<V1beta1SubnetServiceEndpointStoragePolicyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kms.cnrm.cloud.google.com;
+/// <summary>The KMSKeyRing that this key belongs to.</summary>
 public partial class V1beta1KMSCryptoKeySpecKeyRingRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSKeyRing` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1KMSCryptoKeySpecKeyRingRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>A template describing settings for new crypto key versions.</summary>
 public partial class V1beta1KMSCryptoKeySpecVersionTemplate
 {
     /// <summary>The algorithm to use when creating a version based on this template. See the [algorithm reference](https://cloud.google.com/kms/docs/reference/rest/v1/CryptoKeyVersionAlgorithm) for possible inputs.</summary>
@@ -34,6 +36,7 @@ public partial class V1beta1KMSCryptoKeySpecVersionTemplate
     public string? ProtectionLevel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KMSCryptoKeySpec
 {
     /// <summary>Immutable. The period of time that versions of this key spend in the DESTROY_SCHEDULED state before transitioning to DESTROYED. If not specified at creation time, the default duration is 24 hours.</summary>
@@ -69,6 +72,7 @@ public partial class V1beta1KMSCryptoKeySpec
     public V1beta1KMSCryptoKeySpecVersionTemplate? VersionTemplate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KMSCryptoKeyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -92,6 +96,7 @@ public partial class V1beta1KMSCryptoKeyStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KMSCryptoKeyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -108,6 +113,7 @@ public partial class V1beta1KMSCryptoKeyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1KMSCryptoKey : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1KMSCryptoKeySpec>, IStatus<V1beta1KMSCryptoKeyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

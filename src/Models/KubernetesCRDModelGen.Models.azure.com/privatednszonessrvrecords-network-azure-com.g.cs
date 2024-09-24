@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+/// <summary>Storage version of v1api20200601.ARecord An A record.</summary>
 public partial class V1api20200601storagePrivateDnsZonesSRVRecordSpecARecords
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -19,6 +20,7 @@ public partial class V1api20200601storagePrivateDnsZonesSRVRecordSpecARecords
     public string? Ipv4Address { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.AaaaRecord An AAAA record.</summary>
 public partial class V1api20200601storagePrivateDnsZonesSRVRecordSpecAaaaRecords
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -30,6 +32,7 @@ public partial class V1api20200601storagePrivateDnsZonesSRVRecordSpecAaaaRecords
     public string? Ipv6Address { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.CnameRecord A CNAME record.</summary>
 public partial class V1api20200601storagePrivateDnsZonesSRVRecordSpecCnameRecord
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -41,6 +44,7 @@ public partial class V1api20200601storagePrivateDnsZonesSRVRecordSpecCnameRecord
     public string? Cname { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.MxRecord An MX record.</summary>
 public partial class V1api20200601storagePrivateDnsZonesSRVRecordSpecMxRecords
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -56,6 +60,7 @@ public partial class V1api20200601storagePrivateDnsZonesSRVRecordSpecMxRecords
     public int? Preference { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a network.azure.com/PrivateDnsZone resource</summary>
 public partial class V1api20200601storagePrivateDnsZonesSRVRecordSpecOwner
 {
     /// <summary></summary>
@@ -67,6 +72,7 @@ public partial class V1api20200601storagePrivateDnsZonesSRVRecordSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.PtrRecord A PTR record.</summary>
 public partial class V1api20200601storagePrivateDnsZonesSRVRecordSpecPtrRecords
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -78,6 +84,7 @@ public partial class V1api20200601storagePrivateDnsZonesSRVRecordSpecPtrRecords
     public string? Ptrdname { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.SoaRecord An SOA record.</summary>
 public partial class V1api20200601storagePrivateDnsZonesSRVRecordSpecSoaRecord
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -113,6 +120,7 @@ public partial class V1api20200601storagePrivateDnsZonesSRVRecordSpecSoaRecord
     public int? SerialNumber { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.SrvRecord An SRV record.</summary>
 public partial class V1api20200601storagePrivateDnsZonesSRVRecordSpecSrvRecords
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -136,6 +144,7 @@ public partial class V1api20200601storagePrivateDnsZonesSRVRecordSpecSrvRecords
     public int? Weight { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.TxtRecord A TXT record.</summary>
 public partial class V1api20200601storagePrivateDnsZonesSRVRecordSpecTxtRecords
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -147,6 +156,7 @@ public partial class V1api20200601storagePrivateDnsZonesSRVRecordSpecTxtRecords
     public IList<string>? Value { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.PrivateDnsZones_SRV_Spec</summary>
 public partial class V1api20200601storagePrivateDnsZonesSRVRecordSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -210,6 +220,7 @@ public partial class V1api20200601storagePrivateDnsZonesSRVRecordSpec
     public IList<V1api20200601storagePrivateDnsZonesSRVRecordSpecTxtRecords>? TxtRecords { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.ARecord_STATUS An A record.</summary>
 public partial class V1api20200601storagePrivateDnsZonesSRVRecordStatusARecords
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -221,6 +232,7 @@ public partial class V1api20200601storagePrivateDnsZonesSRVRecordStatusARecords
     public string? Ipv4Address { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.AaaaRecord_STATUS An AAAA record.</summary>
 public partial class V1api20200601storagePrivateDnsZonesSRVRecordStatusAaaaRecords
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -232,6 +244,7 @@ public partial class V1api20200601storagePrivateDnsZonesSRVRecordStatusAaaaRecor
     public string? Ipv6Address { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.CnameRecord_STATUS A CNAME record.</summary>
 public partial class V1api20200601storagePrivateDnsZonesSRVRecordStatusCnameRecord
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -243,6 +256,7 @@ public partial class V1api20200601storagePrivateDnsZonesSRVRecordStatusCnameReco
     public string? Cname { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20200601storagePrivateDnsZonesSRVRecordStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -274,6 +288,7 @@ public partial class V1api20200601storagePrivateDnsZonesSRVRecordStatusCondition
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.MxRecord_STATUS An MX record.</summary>
 public partial class V1api20200601storagePrivateDnsZonesSRVRecordStatusMxRecords
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -289,6 +304,7 @@ public partial class V1api20200601storagePrivateDnsZonesSRVRecordStatusMxRecords
     public int? Preference { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.PtrRecord_STATUS A PTR record.</summary>
 public partial class V1api20200601storagePrivateDnsZonesSRVRecordStatusPtrRecords
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -300,6 +316,7 @@ public partial class V1api20200601storagePrivateDnsZonesSRVRecordStatusPtrRecord
     public string? Ptrdname { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.SoaRecord_STATUS An SOA record.</summary>
 public partial class V1api20200601storagePrivateDnsZonesSRVRecordStatusSoaRecord
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -335,6 +352,7 @@ public partial class V1api20200601storagePrivateDnsZonesSRVRecordStatusSoaRecord
     public int? SerialNumber { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.SrvRecord_STATUS An SRV record.</summary>
 public partial class V1api20200601storagePrivateDnsZonesSRVRecordStatusSrvRecords
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -358,6 +376,7 @@ public partial class V1api20200601storagePrivateDnsZonesSRVRecordStatusSrvRecord
     public int? Weight { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.TxtRecord_STATUS A TXT record.</summary>
 public partial class V1api20200601storagePrivateDnsZonesSRVRecordStatusTxtRecords
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -369,6 +388,7 @@ public partial class V1api20200601storagePrivateDnsZonesSRVRecordStatusTxtRecord
     public IList<string>? Value { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.PrivateDnsZones_SRV_STATUS</summary>
 public partial class V1api20200601storagePrivateDnsZonesSRVRecordStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -445,6 +465,7 @@ public partial class V1api20200601storagePrivateDnsZonesSRVRecordStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20200601.PrivateDnsZonesSRVRecord Generator information: - Generated from: /privatedns/resource-manager/Microsoft.Network/stable/2020-06-01/privatedns.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateZoneName}/SRV/{relativeRecordSetName}</summary>
 public partial class V1api20200601storagePrivateDnsZonesSRVRecord : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20200601storagePrivateDnsZonesSRVRecordSpec>, IStatus<V1api20200601storagePrivateDnsZonesSRVRecordStatus>
 {
     public const string KubeApiVersion = "v1api20200601storage";

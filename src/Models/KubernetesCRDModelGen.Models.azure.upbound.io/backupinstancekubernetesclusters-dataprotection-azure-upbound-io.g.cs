@@ -18,6 +18,7 @@ public enum V1beta1BackupInstanceKubernetesClusterSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>A backup_datasource_parameters block as defined below.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderBackupDatasourceParameters
 {
     /// <summary>Whether to include cluster scope resources during backup. Default to false. Changing this forces a new resource to be created.</summary>
@@ -69,6 +70,7 @@ public enum V1beta1BackupInstanceKubernetesClusterSpecForProviderBackupPolicyIdR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderBackupPolicyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -82,6 +84,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderBackup
     public V1beta1BackupInstanceKubernetesClusterSpecForProviderBackupPolicyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a BackupPolicyKubernetesCluster in dataprotection to populate backupPolicyId.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderBackupPolicyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -113,6 +116,7 @@ public enum V1beta1BackupInstanceKubernetesClusterSpecForProviderBackupPolicyIdS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderBackupPolicyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -126,6 +130,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderBackup
     public V1beta1BackupInstanceKubernetesClusterSpecForProviderBackupPolicyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a BackupPolicyKubernetesCluster in dataprotection to populate backupPolicyId.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderBackupPolicyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -161,6 +166,7 @@ public enum V1beta1BackupInstanceKubernetesClusterSpecForProviderKubernetesClust
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderKubernetesClusterIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -174,6 +180,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderKubern
     public V1beta1BackupInstanceKubernetesClusterSpecForProviderKubernetesClusterIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a KubernetesCluster in containerservice to populate kubernetesClusterId.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderKubernetesClusterIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -205,6 +212,7 @@ public enum V1beta1BackupInstanceKubernetesClusterSpecForProviderKubernetesClust
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderKubernetesClusterIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -218,6 +226,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderKubern
     public V1beta1BackupInstanceKubernetesClusterSpecForProviderKubernetesClusterIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a KubernetesCluster in containerservice to populate kubernetesClusterId.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderKubernetesClusterIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -253,6 +262,7 @@ public enum V1beta1BackupInstanceKubernetesClusterSpecForProviderSnapshotResourc
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderSnapshotResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -266,6 +276,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderSnapsh
     public V1beta1BackupInstanceKubernetesClusterSpecForProviderSnapshotResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate snapshotResourceGroupName.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderSnapshotResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -297,6 +308,7 @@ public enum V1beta1BackupInstanceKubernetesClusterSpecForProviderSnapshotResourc
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderSnapshotResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -310,6 +322,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderSnapsh
     public V1beta1BackupInstanceKubernetesClusterSpecForProviderSnapshotResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate snapshotResourceGroupName.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderSnapshotResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -345,6 +358,7 @@ public enum V1beta1BackupInstanceKubernetesClusterSpecForProviderVaultIdRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderVaultIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -358,6 +372,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderVaultI
     public V1beta1BackupInstanceKubernetesClusterSpecForProviderVaultIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a BackupVault in dataprotection to populate vaultId.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderVaultIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -389,6 +404,7 @@ public enum V1beta1BackupInstanceKubernetesClusterSpecForProviderVaultIdSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderVaultIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -402,6 +418,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderVaultI
     public V1beta1BackupInstanceKubernetesClusterSpecForProviderVaultIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a BackupVault in dataprotection to populate vaultId.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderVaultIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -417,6 +434,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderVaultI
     public V1beta1BackupInstanceKubernetesClusterSpecForProviderVaultIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecForProvider
 {
     /// <summary>A backup_datasource_parameters block as defined below.</summary>
@@ -476,6 +494,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecForProvider
     public V1beta1BackupInstanceKubernetesClusterSpecForProviderVaultIdSelector? VaultIdSelector { get; set; }
 }
 
+/// <summary>A backup_datasource_parameters block as defined below.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderBackupDatasourceParameters
 {
     /// <summary>Whether to include cluster scope resources during backup. Default to false. Changing this forces a new resource to be created.</summary>
@@ -527,6 +546,7 @@ public enum V1beta1BackupInstanceKubernetesClusterSpecInitProviderBackupPolicyId
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderBackupPolicyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -540,6 +560,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderBacku
     public V1beta1BackupInstanceKubernetesClusterSpecInitProviderBackupPolicyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a BackupPolicyKubernetesCluster in dataprotection to populate backupPolicyId.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderBackupPolicyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -571,6 +592,7 @@ public enum V1beta1BackupInstanceKubernetesClusterSpecInitProviderBackupPolicyId
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderBackupPolicyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -584,6 +606,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderBacku
     public V1beta1BackupInstanceKubernetesClusterSpecInitProviderBackupPolicyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a BackupPolicyKubernetesCluster in dataprotection to populate backupPolicyId.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderBackupPolicyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -619,6 +642,7 @@ public enum V1beta1BackupInstanceKubernetesClusterSpecInitProviderKubernetesClus
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderKubernetesClusterIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -632,6 +656,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderKuber
     public V1beta1BackupInstanceKubernetesClusterSpecInitProviderKubernetesClusterIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a KubernetesCluster in containerservice to populate kubernetesClusterId.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderKubernetesClusterIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -663,6 +688,7 @@ public enum V1beta1BackupInstanceKubernetesClusterSpecInitProviderKubernetesClus
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderKubernetesClusterIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -676,6 +702,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderKuber
     public V1beta1BackupInstanceKubernetesClusterSpecInitProviderKubernetesClusterIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a KubernetesCluster in containerservice to populate kubernetesClusterId.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderKubernetesClusterIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -711,6 +738,7 @@ public enum V1beta1BackupInstanceKubernetesClusterSpecInitProviderSnapshotResour
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderSnapshotResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -724,6 +752,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderSnaps
     public V1beta1BackupInstanceKubernetesClusterSpecInitProviderSnapshotResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate snapshotResourceGroupName.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderSnapshotResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -755,6 +784,7 @@ public enum V1beta1BackupInstanceKubernetesClusterSpecInitProviderSnapshotResour
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderSnapshotResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -768,6 +798,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderSnaps
     public V1beta1BackupInstanceKubernetesClusterSpecInitProviderSnapshotResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate snapshotResourceGroupName.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderSnapshotResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -783,6 +814,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderSnaps
     public V1beta1BackupInstanceKubernetesClusterSpecInitProviderSnapshotResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProvider
 {
     /// <summary>A backup_datasource_parameters block as defined below.</summary>
@@ -872,6 +904,7 @@ public enum V1beta1BackupInstanceKubernetesClusterSpecProviderConfigRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -885,6 +918,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecProviderConfigRef
     public V1beta1BackupInstanceKubernetesClusterSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -916,6 +950,7 @@ public enum V1beta1BackupInstanceKubernetesClusterSpecPublishConnectionDetailsTo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -929,6 +964,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecPublishConnection
     public V1beta1BackupInstanceKubernetesClusterSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -940,6 +976,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecPublishConnection
     public V1beta1BackupInstanceKubernetesClusterSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -955,6 +992,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecPublishConnection
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -970,6 +1008,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecPublishConnection
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -981,6 +1020,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecWriteConnectionSe
     public string Namespace { get; set; }
 }
 
+/// <summary>BackupInstanceKubernetesClusterSpec defines the desired state of BackupInstanceKubernetesCluster</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1013,6 +1053,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpec
     public V1beta1BackupInstanceKubernetesClusterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary>A backup_datasource_parameters block as defined below.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterStatusAtProviderBackupDatasourceParameters
 {
     /// <summary>Whether to include cluster scope resources during backup. Default to false. Changing this forces a new resource to be created.</summary>
@@ -1044,6 +1085,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterStatusAtProviderBacku
     public bool? VolumeSnapshotEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupInstanceKubernetesClusterStatusAtProvider
 {
     /// <summary>A backup_datasource_parameters block as defined below.</summary>
@@ -1075,6 +1117,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterStatusAtProvider
     public string? VaultId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1102,6 +1145,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>BackupInstanceKubernetesClusterStatus defines the observed state of BackupInstanceKubernetesCluster.</summary>
 public partial class V1beta1BackupInstanceKubernetesClusterStatus
 {
     /// <summary></summary>
@@ -1118,6 +1162,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>BackupInstanceKubernetesCluster is the Schema for the BackupInstanceKubernetesClusters API. Manages a Backup Instance to back up a Kubernetes Cluster.</summary>
 public partial class V1beta1BackupInstanceKubernetesCluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BackupInstanceKubernetesClusterSpec>, IStatus<V1beta1BackupInstanceKubernetesClusterStatus>
 {
     public const string KubeApiVersion = "v1beta1";

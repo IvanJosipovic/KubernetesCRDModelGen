@@ -38,6 +38,7 @@ public enum V1beta1LustreFileSystemSpecForProviderKmsKeyIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LustreFileSystemSpecForProviderKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1LustreFileSystemSpecForProviderKmsKeyIdRefPolicy
     public V1beta1LustreFileSystemSpecForProviderKmsKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1LustreFileSystemSpecForProviderKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1LustreFileSystemSpecForProviderKmsKeyIdSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LustreFileSystemSpecForProviderKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1LustreFileSystemSpecForProviderKmsKeyIdSelectorPolic
     public V1beta1LustreFileSystemSpecForProviderKmsKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1LustreFileSystemSpecForProviderKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1LustreFileSystemSpecForProviderKmsKeyIdSelector
     public V1beta1LustreFileSystemSpecForProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LustreFileSystemSpecForProviderLogConfiguration
 {
     /// <summary>The Amazon Resource Name (ARN) that specifies the destination of the logs. The name of the Amazon CloudWatch Logs log group must begin with the /aws/fsx prefix. If you do not provide a destination, Amazon FSx will create and use a log stream in the CloudWatch Logs /aws/fsx/lustre log group.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1LustreFileSystemSpecForProviderLogConfiguration
     public string? Level { get; set; }
 }
 
+/// <summary>The Lustre metadata configuration used when creating an Amazon FSx for Lustre file system. This can be used to specify a user provisioned metadata scale. This is only supported when deployment_type is set to PERSISTENT_2. See Metadata Configuration below.</summary>
 public partial class V1beta1LustreFileSystemSpecForProviderMetadataConfiguration
 {
     /// <summary>Amount of IOPS provisioned for metadata. This parameter should only be used when the mode is set to USER_PROVISIONED. Valid Values are 1500,3000,6000 and 12000 through 192000 in increments of 12000.</summary>
@@ -132,6 +138,7 @@ public partial class V1beta1LustreFileSystemSpecForProviderMetadataConfiguration
     public string? Mode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LustreFileSystemSpecForProviderRootSquashConfiguration
 {
     /// <summary>When root squash is enabled, you can optionally specify an array of NIDs of clients for which root squash does not apply. A client NID is a Lustre Network Identifier used to uniquely identify a client. You can specify the NID as either a single address or a range of addresses: 1. A single address is described in standard Lustre NID format by specifying the client’s IP address followed by the Lustre network ID (for example, 10.0.1.6@tcp). 2. An address range is described using a dash to separate the range (for example, 10.0.[2-10].[1-255]@tcp).</summary>
@@ -163,6 +170,7 @@ public enum V1beta1LustreFileSystemSpecForProviderSecurityGroupIdRefsPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LustreFileSystemSpecForProviderSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -176,6 +184,7 @@ public partial class V1beta1LustreFileSystemSpecForProviderSecurityGroupIdRefsPo
     public V1beta1LustreFileSystemSpecForProviderSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1LustreFileSystemSpecForProviderSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -207,6 +216,7 @@ public enum V1beta1LustreFileSystemSpecForProviderSecurityGroupIdSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LustreFileSystemSpecForProviderSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -220,6 +230,7 @@ public partial class V1beta1LustreFileSystemSpecForProviderSecurityGroupIdSelect
     public V1beta1LustreFileSystemSpecForProviderSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 public partial class V1beta1LustreFileSystemSpecForProviderSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -255,6 +266,7 @@ public enum V1beta1LustreFileSystemSpecForProviderSubnetIdRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LustreFileSystemSpecForProviderSubnetIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -268,6 +280,7 @@ public partial class V1beta1LustreFileSystemSpecForProviderSubnetIdRefsPolicy
     public V1beta1LustreFileSystemSpecForProviderSubnetIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1LustreFileSystemSpecForProviderSubnetIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -299,6 +312,7 @@ public enum V1beta1LustreFileSystemSpecForProviderSubnetIdSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LustreFileSystemSpecForProviderSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -312,6 +326,7 @@ public partial class V1beta1LustreFileSystemSpecForProviderSubnetIdSelectorPolic
     public V1beta1LustreFileSystemSpecForProviderSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 public partial class V1beta1LustreFileSystemSpecForProviderSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -327,6 +342,7 @@ public partial class V1beta1LustreFileSystemSpecForProviderSubnetIdSelector
     public V1beta1LustreFileSystemSpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LustreFileSystemSpecForProvider
 {
     /// <summary>How Amazon FSx keeps your file and directory listings up to date as you add or modify objects in your linked S3 bucket. see Auto Import Data Repo for more details. Only supported on PERSISTENT_1 deployment types.</summary>
@@ -470,6 +486,7 @@ public enum V1beta1LustreFileSystemSpecInitProviderKmsKeyIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LustreFileSystemSpecInitProviderKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -483,6 +500,7 @@ public partial class V1beta1LustreFileSystemSpecInitProviderKmsKeyIdRefPolicy
     public V1beta1LustreFileSystemSpecInitProviderKmsKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1LustreFileSystemSpecInitProviderKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -514,6 +532,7 @@ public enum V1beta1LustreFileSystemSpecInitProviderKmsKeyIdSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LustreFileSystemSpecInitProviderKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -527,6 +546,7 @@ public partial class V1beta1LustreFileSystemSpecInitProviderKmsKeyIdSelectorPoli
     public V1beta1LustreFileSystemSpecInitProviderKmsKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1LustreFileSystemSpecInitProviderKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -542,6 +562,7 @@ public partial class V1beta1LustreFileSystemSpecInitProviderKmsKeyIdSelector
     public V1beta1LustreFileSystemSpecInitProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LustreFileSystemSpecInitProviderLogConfiguration
 {
     /// <summary>The Amazon Resource Name (ARN) that specifies the destination of the logs. The name of the Amazon CloudWatch Logs log group must begin with the /aws/fsx prefix. If you do not provide a destination, Amazon FSx will create and use a log stream in the CloudWatch Logs /aws/fsx/lustre log group.</summary>
@@ -553,6 +574,7 @@ public partial class V1beta1LustreFileSystemSpecInitProviderLogConfiguration
     public string? Level { get; set; }
 }
 
+/// <summary>The Lustre metadata configuration used when creating an Amazon FSx for Lustre file system. This can be used to specify a user provisioned metadata scale. This is only supported when deployment_type is set to PERSISTENT_2. See Metadata Configuration below.</summary>
 public partial class V1beta1LustreFileSystemSpecInitProviderMetadataConfiguration
 {
     /// <summary>Amount of IOPS provisioned for metadata. This parameter should only be used when the mode is set to USER_PROVISIONED. Valid Values are 1500,3000,6000 and 12000 through 192000 in increments of 12000.</summary>
@@ -564,6 +586,7 @@ public partial class V1beta1LustreFileSystemSpecInitProviderMetadataConfiguratio
     public string? Mode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LustreFileSystemSpecInitProviderRootSquashConfiguration
 {
     /// <summary>When root squash is enabled, you can optionally specify an array of NIDs of clients for which root squash does not apply. A client NID is a Lustre Network Identifier used to uniquely identify a client. You can specify the NID as either a single address or a range of addresses: 1. A single address is described in standard Lustre NID format by specifying the client’s IP address followed by the Lustre network ID (for example, 10.0.1.6@tcp). 2. An address range is described using a dash to separate the range (for example, 10.0.[2-10].[1-255]@tcp).</summary>
@@ -595,6 +618,7 @@ public enum V1beta1LustreFileSystemSpecInitProviderSecurityGroupIdRefsPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LustreFileSystemSpecInitProviderSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -608,6 +632,7 @@ public partial class V1beta1LustreFileSystemSpecInitProviderSecurityGroupIdRefsP
     public V1beta1LustreFileSystemSpecInitProviderSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1LustreFileSystemSpecInitProviderSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -639,6 +664,7 @@ public enum V1beta1LustreFileSystemSpecInitProviderSecurityGroupIdSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LustreFileSystemSpecInitProviderSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -652,6 +678,7 @@ public partial class V1beta1LustreFileSystemSpecInitProviderSecurityGroupIdSelec
     public V1beta1LustreFileSystemSpecInitProviderSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 public partial class V1beta1LustreFileSystemSpecInitProviderSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -687,6 +714,7 @@ public enum V1beta1LustreFileSystemSpecInitProviderSubnetIdRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LustreFileSystemSpecInitProviderSubnetIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -700,6 +728,7 @@ public partial class V1beta1LustreFileSystemSpecInitProviderSubnetIdRefsPolicy
     public V1beta1LustreFileSystemSpecInitProviderSubnetIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1LustreFileSystemSpecInitProviderSubnetIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -731,6 +760,7 @@ public enum V1beta1LustreFileSystemSpecInitProviderSubnetIdSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LustreFileSystemSpecInitProviderSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -744,6 +774,7 @@ public partial class V1beta1LustreFileSystemSpecInitProviderSubnetIdSelectorPoli
     public V1beta1LustreFileSystemSpecInitProviderSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 public partial class V1beta1LustreFileSystemSpecInitProviderSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -759,6 +790,7 @@ public partial class V1beta1LustreFileSystemSpecInitProviderSubnetIdSelector
     public V1beta1LustreFileSystemSpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1LustreFileSystemSpecInitProvider
 {
     /// <summary>How Amazon FSx keeps your file and directory listings up to date as you add or modify objects in your linked S3 bucket. see Auto Import Data Repo for more details. Only supported on PERSISTENT_1 deployment types.</summary>
@@ -920,6 +952,7 @@ public enum V1beta1LustreFileSystemSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LustreFileSystemSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -933,6 +966,7 @@ public partial class V1beta1LustreFileSystemSpecProviderConfigRefPolicy
     public V1beta1LustreFileSystemSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1LustreFileSystemSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -964,6 +998,7 @@ public enum V1beta1LustreFileSystemSpecPublishConnectionDetailsToConfigRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LustreFileSystemSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -977,6 +1012,7 @@ public partial class V1beta1LustreFileSystemSpecPublishConnectionDetailsToConfig
     public V1beta1LustreFileSystemSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1LustreFileSystemSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -988,6 +1024,7 @@ public partial class V1beta1LustreFileSystemSpecPublishConnectionDetailsToConfig
     public V1beta1LustreFileSystemSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1LustreFileSystemSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1003,6 +1040,7 @@ public partial class V1beta1LustreFileSystemSpecPublishConnectionDetailsToMetada
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1LustreFileSystemSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1018,6 +1056,7 @@ public partial class V1beta1LustreFileSystemSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1LustreFileSystemSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1029,6 +1068,7 @@ public partial class V1beta1LustreFileSystemSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>LustreFileSystemSpec defines the desired state of LustreFileSystem</summary>
 public partial class V1beta1LustreFileSystemSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1061,6 +1101,7 @@ public partial class V1beta1LustreFileSystemSpec
     public V1beta1LustreFileSystemSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LustreFileSystemStatusAtProviderLogConfiguration
 {
     /// <summary>The Amazon Resource Name (ARN) that specifies the destination of the logs. The name of the Amazon CloudWatch Logs log group must begin with the /aws/fsx prefix. If you do not provide a destination, Amazon FSx will create and use a log stream in the CloudWatch Logs /aws/fsx/lustre log group.</summary>
@@ -1072,6 +1113,7 @@ public partial class V1beta1LustreFileSystemStatusAtProviderLogConfiguration
     public string? Level { get; set; }
 }
 
+/// <summary>The Lustre metadata configuration used when creating an Amazon FSx for Lustre file system. This can be used to specify a user provisioned metadata scale. This is only supported when deployment_type is set to PERSISTENT_2. See Metadata Configuration below.</summary>
 public partial class V1beta1LustreFileSystemStatusAtProviderMetadataConfiguration
 {
     /// <summary>Amount of IOPS provisioned for metadata. This parameter should only be used when the mode is set to USER_PROVISIONED. Valid Values are 1500,3000,6000 and 12000 through 192000 in increments of 12000.</summary>
@@ -1083,6 +1125,7 @@ public partial class V1beta1LustreFileSystemStatusAtProviderMetadataConfiguratio
     public string? Mode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LustreFileSystemStatusAtProviderRootSquashConfiguration
 {
     /// <summary>When root squash is enabled, you can optionally specify an array of NIDs of clients for which root squash does not apply. A client NID is a Lustre Network Identifier used to uniquely identify a client. You can specify the NID as either a single address or a range of addresses: 1. A single address is described in standard Lustre NID format by specifying the client’s IP address followed by the Lustre network ID (for example, 10.0.1.6@tcp). 2. An address range is described using a dash to separate the range (for example, 10.0.[2-10].[1-255]@tcp).</summary>
@@ -1094,6 +1137,7 @@ public partial class V1beta1LustreFileSystemStatusAtProviderRootSquashConfigurat
     public string? RootSquash { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LustreFileSystemStatusAtProvider
 {
     /// <summary>Amazon Resource Name of the file system.</summary>
@@ -1221,6 +1265,7 @@ public partial class V1beta1LustreFileSystemStatusAtProvider
     public string? WeeklyMaintenanceStartTime { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1LustreFileSystemStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1248,6 +1293,7 @@ public partial class V1beta1LustreFileSystemStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>LustreFileSystemStatus defines the observed state of LustreFileSystem.</summary>
 public partial class V1beta1LustreFileSystemStatus
 {
     /// <summary></summary>
@@ -1264,6 +1310,7 @@ public partial class V1beta1LustreFileSystemStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>LustreFileSystem is the Schema for the LustreFileSystems API. Manages a FSx Lustre File System.</summary>
 public partial class V1beta1LustreFileSystem : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LustreFileSystemSpec>, IStatus<V1beta1LustreFileSystemStatus>
 {
     public const string KubeApiVersion = "v1beta1";

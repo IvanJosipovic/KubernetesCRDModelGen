@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1alpha1ComputeNetworkEndpointSpecInstanceRef
 {
     /// <summary>Allowed value: The `name` field of a `ComputeInstance` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1ComputeNetworkEndpointSpecInstanceRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputeNetworkEndpointSpecNetworkEndpointGroupRef
 {
     /// <summary>Allowed value: The `name` field of a `ComputeNetworkEndpointGroup` resource.</summary>
@@ -38,6 +40,7 @@ public partial class V1alpha1ComputeNetworkEndpointSpecNetworkEndpointGroupRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1ComputeNetworkEndpointSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -53,6 +56,7 @@ public partial class V1alpha1ComputeNetworkEndpointSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputeNetworkEndpointSpec
 {
     /// <summary></summary>
@@ -80,6 +84,7 @@ public partial class V1alpha1ComputeNetworkEndpointSpec
     public string Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputeNetworkEndpointStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -103,6 +108,7 @@ public partial class V1alpha1ComputeNetworkEndpointStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputeNetworkEndpointStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -115,6 +121,7 @@ public partial class V1alpha1ComputeNetworkEndpointStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1ComputeNetworkEndpoint : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ComputeNetworkEndpointSpec>, IStatus<V1alpha1ComputeNetworkEndpointStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

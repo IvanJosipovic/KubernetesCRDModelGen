@@ -38,6 +38,7 @@ public enum V1beta1TargetTCPProxySpecForProviderBackendServiceRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TargetTCPProxySpecForProviderBackendServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1TargetTCPProxySpecForProviderBackendServiceRefPolicy
     public V1beta1TargetTCPProxySpecForProviderBackendServiceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a BackendService in compute to populate backendService.</summary>
 public partial class V1beta1TargetTCPProxySpecForProviderBackendServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1TargetTCPProxySpecForProviderBackendServiceSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TargetTCPProxySpecForProviderBackendServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1TargetTCPProxySpecForProviderBackendServiceSelectorP
     public V1beta1TargetTCPProxySpecForProviderBackendServiceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a BackendService in compute to populate backendService.</summary>
 public partial class V1beta1TargetTCPProxySpecForProviderBackendServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1TargetTCPProxySpecForProviderBackendServiceSelector
     public V1beta1TargetTCPProxySpecForProviderBackendServiceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetTCPProxySpecForProvider
 {
     /// <summary>A reference to the BackendService resource.</summary>
@@ -161,6 +166,7 @@ public enum V1beta1TargetTCPProxySpecInitProviderBackendServiceRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TargetTCPProxySpecInitProviderBackendServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -174,6 +180,7 @@ public partial class V1beta1TargetTCPProxySpecInitProviderBackendServiceRefPolic
     public V1beta1TargetTCPProxySpecInitProviderBackendServiceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a BackendService in compute to populate backendService.</summary>
 public partial class V1beta1TargetTCPProxySpecInitProviderBackendServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -205,6 +212,7 @@ public enum V1beta1TargetTCPProxySpecInitProviderBackendServiceSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TargetTCPProxySpecInitProviderBackendServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -218,6 +226,7 @@ public partial class V1beta1TargetTCPProxySpecInitProviderBackendServiceSelector
     public V1beta1TargetTCPProxySpecInitProviderBackendServiceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a BackendService in compute to populate backendService.</summary>
 public partial class V1beta1TargetTCPProxySpecInitProviderBackendServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -233,6 +242,7 @@ public partial class V1beta1TargetTCPProxySpecInitProviderBackendServiceSelector
     public V1beta1TargetTCPProxySpecInitProviderBackendServiceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1TargetTCPProxySpecInitProvider
 {
     /// <summary>A reference to the BackendService resource.</summary>
@@ -306,6 +316,7 @@ public enum V1beta1TargetTCPProxySpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TargetTCPProxySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -319,6 +330,7 @@ public partial class V1beta1TargetTCPProxySpecProviderConfigRefPolicy
     public V1beta1TargetTCPProxySpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1TargetTCPProxySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -350,6 +362,7 @@ public enum V1beta1TargetTCPProxySpecPublishConnectionDetailsToConfigRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TargetTCPProxySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -363,6 +376,7 @@ public partial class V1beta1TargetTCPProxySpecPublishConnectionDetailsToConfigRe
     public V1beta1TargetTCPProxySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1TargetTCPProxySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -374,6 +388,7 @@ public partial class V1beta1TargetTCPProxySpecPublishConnectionDetailsToConfigRe
     public V1beta1TargetTCPProxySpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1TargetTCPProxySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -389,6 +404,7 @@ public partial class V1beta1TargetTCPProxySpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1TargetTCPProxySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -404,6 +420,7 @@ public partial class V1beta1TargetTCPProxySpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1TargetTCPProxySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -415,6 +432,7 @@ public partial class V1beta1TargetTCPProxySpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>TargetTCPProxySpec defines the desired state of TargetTCPProxy</summary>
 public partial class V1beta1TargetTCPProxySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -447,6 +465,7 @@ public partial class V1beta1TargetTCPProxySpec
     public V1beta1TargetTCPProxySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TargetTCPProxyStatusAtProvider
 {
     /// <summary>A reference to the BackendService resource.</summary>
@@ -486,6 +505,7 @@ public partial class V1beta1TargetTCPProxyStatusAtProvider
     public string? SelfLink { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1TargetTCPProxyStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -513,6 +533,7 @@ public partial class V1beta1TargetTCPProxyStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>TargetTCPProxyStatus defines the observed state of TargetTCPProxy.</summary>
 public partial class V1beta1TargetTCPProxyStatus
 {
     /// <summary></summary>
@@ -529,6 +550,7 @@ public partial class V1beta1TargetTCPProxyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>TargetTCPProxy is the Schema for the TargetTCPProxys API. Represents a TargetTcpProxy resource, which is used by one or more global forwarding rule to route incoming TCP requests to a Backend service.</summary>
 public partial class V1beta1TargetTCPProxy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1TargetTCPProxySpec>, IStatus<V1beta1TargetTCPProxyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

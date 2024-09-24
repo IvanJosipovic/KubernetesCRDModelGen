@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datacatalog.cnrm.cloud.google.com;
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1beta1DataCatalogTaxonomySpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1DataCatalogTaxonomySpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataCatalogTaxonomySpec
 {
     /// <summary>A list of policy types that are activated for this taxonomy. If not set, defaults to an empty list. Possible values: ["POLICY_TYPE_UNSPECIFIED", "FINE_GRAINED_ACCESS_CONTROL"].</summary>
@@ -50,6 +52,7 @@ public partial class V1beta1DataCatalogTaxonomySpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataCatalogTaxonomyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -73,6 +76,7 @@ public partial class V1beta1DataCatalogTaxonomyStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataCatalogTaxonomyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -89,6 +93,7 @@ public partial class V1beta1DataCatalogTaxonomyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1DataCatalogTaxonomy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DataCatalogTaxonomySpec>, IStatus<V1beta1DataCatalogTaxonomyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

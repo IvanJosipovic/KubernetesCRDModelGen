@@ -38,6 +38,7 @@ public enum V1beta1GatewayAPISpecForProviderApiIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GatewayAPISpecForProviderApiIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1GatewayAPISpecForProviderApiIdRefPolicy
     public V1beta1GatewayAPISpecForProviderApiIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a API in apimanagement to populate apiId.</summary>
 public partial class V1beta1GatewayAPISpecForProviderApiIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1GatewayAPISpecForProviderApiIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GatewayAPISpecForProviderApiIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1GatewayAPISpecForProviderApiIdSelectorPolicy
     public V1beta1GatewayAPISpecForProviderApiIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a API in apimanagement to populate apiId.</summary>
 public partial class V1beta1GatewayAPISpecForProviderApiIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1GatewayAPISpecForProviderGatewayIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GatewayAPISpecForProviderGatewayIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1GatewayAPISpecForProviderGatewayIdRefPolicy
     public V1beta1GatewayAPISpecForProviderGatewayIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Gateway in apimanagement to populate gatewayId.</summary>
 public partial class V1beta1GatewayAPISpecForProviderGatewayIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1GatewayAPISpecForProviderGatewayIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GatewayAPISpecForProviderGatewayIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1GatewayAPISpecForProviderGatewayIdSelectorPolicy
     public V1beta1GatewayAPISpecForProviderGatewayIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Gateway in apimanagement to populate gatewayId.</summary>
 public partial class V1beta1GatewayAPISpecForProviderGatewayIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1GatewayAPISpecForProviderGatewayIdSelector
     public V1beta1GatewayAPISpecForProviderGatewayIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayAPISpecForProvider
 {
     /// <summary>The Identifier of the API Management API within the API Management Service. Changing this forces a new API Management Gateway API to be created.</summary>
@@ -249,6 +258,7 @@ public enum V1beta1GatewayAPISpecInitProviderApiIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GatewayAPISpecInitProviderApiIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -262,6 +272,7 @@ public partial class V1beta1GatewayAPISpecInitProviderApiIdRefPolicy
     public V1beta1GatewayAPISpecInitProviderApiIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a API in apimanagement to populate apiId.</summary>
 public partial class V1beta1GatewayAPISpecInitProviderApiIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -293,6 +304,7 @@ public enum V1beta1GatewayAPISpecInitProviderApiIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GatewayAPISpecInitProviderApiIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -306,6 +318,7 @@ public partial class V1beta1GatewayAPISpecInitProviderApiIdSelectorPolicy
     public V1beta1GatewayAPISpecInitProviderApiIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a API in apimanagement to populate apiId.</summary>
 public partial class V1beta1GatewayAPISpecInitProviderApiIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -341,6 +354,7 @@ public enum V1beta1GatewayAPISpecInitProviderGatewayIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GatewayAPISpecInitProviderGatewayIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -354,6 +368,7 @@ public partial class V1beta1GatewayAPISpecInitProviderGatewayIdRefPolicy
     public V1beta1GatewayAPISpecInitProviderGatewayIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Gateway in apimanagement to populate gatewayId.</summary>
 public partial class V1beta1GatewayAPISpecInitProviderGatewayIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -385,6 +400,7 @@ public enum V1beta1GatewayAPISpecInitProviderGatewayIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GatewayAPISpecInitProviderGatewayIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -398,6 +414,7 @@ public partial class V1beta1GatewayAPISpecInitProviderGatewayIdSelectorPolicy
     public V1beta1GatewayAPISpecInitProviderGatewayIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Gateway in apimanagement to populate gatewayId.</summary>
 public partial class V1beta1GatewayAPISpecInitProviderGatewayIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -413,6 +430,7 @@ public partial class V1beta1GatewayAPISpecInitProviderGatewayIdSelector
     public V1beta1GatewayAPISpecInitProviderGatewayIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1GatewayAPISpecInitProvider
 {
     /// <summary>The Identifier of the API Management API within the API Management Service. Changing this forces a new API Management Gateway API to be created.</summary>
@@ -482,6 +500,7 @@ public enum V1beta1GatewayAPISpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GatewayAPISpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -495,6 +514,7 @@ public partial class V1beta1GatewayAPISpecProviderConfigRefPolicy
     public V1beta1GatewayAPISpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1GatewayAPISpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -526,6 +546,7 @@ public enum V1beta1GatewayAPISpecPublishConnectionDetailsToConfigRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GatewayAPISpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -539,6 +560,7 @@ public partial class V1beta1GatewayAPISpecPublishConnectionDetailsToConfigRefPol
     public V1beta1GatewayAPISpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1GatewayAPISpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -550,6 +572,7 @@ public partial class V1beta1GatewayAPISpecPublishConnectionDetailsToConfigRef
     public V1beta1GatewayAPISpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1GatewayAPISpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -565,6 +588,7 @@ public partial class V1beta1GatewayAPISpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1GatewayAPISpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -580,6 +604,7 @@ public partial class V1beta1GatewayAPISpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1GatewayAPISpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -591,6 +616,7 @@ public partial class V1beta1GatewayAPISpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>GatewayAPISpec defines the desired state of GatewayAPI</summary>
 public partial class V1beta1GatewayAPISpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -623,6 +649,7 @@ public partial class V1beta1GatewayAPISpec
     public V1beta1GatewayAPISpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayAPIStatusAtProvider
 {
     /// <summary>The Identifier of the API Management API within the API Management Service. Changing this forces a new API Management Gateway API to be created.</summary>
@@ -638,6 +665,7 @@ public partial class V1beta1GatewayAPIStatusAtProvider
     public string? Id { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1GatewayAPIStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -665,6 +693,7 @@ public partial class V1beta1GatewayAPIStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>GatewayAPIStatus defines the observed state of GatewayAPI.</summary>
 public partial class V1beta1GatewayAPIStatus
 {
     /// <summary></summary>
@@ -681,6 +710,7 @@ public partial class V1beta1GatewayAPIStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>GatewayAPI is the Schema for the GatewayAPIs API. Manages a API Management Gateway API.</summary>
 public partial class V1beta1GatewayAPI : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1GatewayAPISpec>, IStatus<V1beta1GatewayAPIStatus>
 {
     public const string KubeApiVersion = "v1beta1";

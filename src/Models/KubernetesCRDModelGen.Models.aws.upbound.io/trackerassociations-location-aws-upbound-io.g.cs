@@ -38,6 +38,7 @@ public enum V1beta1TrackerAssociationSpecForProviderConsumerArnRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TrackerAssociationSpecForProviderConsumerArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1TrackerAssociationSpecForProviderConsumerArnRefPolic
     public V1beta1TrackerAssociationSpecForProviderConsumerArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a GeofenceCollection in location to populate consumerArn.</summary>
 public partial class V1beta1TrackerAssociationSpecForProviderConsumerArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1TrackerAssociationSpecForProviderConsumerArnSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TrackerAssociationSpecForProviderConsumerArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1TrackerAssociationSpecForProviderConsumerArnSelector
     public V1beta1TrackerAssociationSpecForProviderConsumerArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a GeofenceCollection in location to populate consumerArn.</summary>
 public partial class V1beta1TrackerAssociationSpecForProviderConsumerArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1TrackerAssociationSpecForProviderTrackerNameRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TrackerAssociationSpecForProviderTrackerNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1TrackerAssociationSpecForProviderTrackerNameRefPolic
     public V1beta1TrackerAssociationSpecForProviderTrackerNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Tracker in location to populate trackerName.</summary>
 public partial class V1beta1TrackerAssociationSpecForProviderTrackerNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1TrackerAssociationSpecForProviderTrackerNameSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TrackerAssociationSpecForProviderTrackerNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1TrackerAssociationSpecForProviderTrackerNameSelector
     public V1beta1TrackerAssociationSpecForProviderTrackerNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Tracker in location to populate trackerName.</summary>
 public partial class V1beta1TrackerAssociationSpecForProviderTrackerNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1TrackerAssociationSpecForProviderTrackerNameSelector
     public V1beta1TrackerAssociationSpecForProviderTrackerNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TrackerAssociationSpecForProvider
 {
     /// <summary>The Amazon Resource Name (ARN) for the geofence collection to be associated to tracker resource. Used when you need to specify a resource across all AWS.</summary>
@@ -253,6 +262,7 @@ public enum V1beta1TrackerAssociationSpecInitProviderConsumerArnRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TrackerAssociationSpecInitProviderConsumerArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -266,6 +276,7 @@ public partial class V1beta1TrackerAssociationSpecInitProviderConsumerArnRefPoli
     public V1beta1TrackerAssociationSpecInitProviderConsumerArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a GeofenceCollection in location to populate consumerArn.</summary>
 public partial class V1beta1TrackerAssociationSpecInitProviderConsumerArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -297,6 +308,7 @@ public enum V1beta1TrackerAssociationSpecInitProviderConsumerArnSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TrackerAssociationSpecInitProviderConsumerArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -310,6 +322,7 @@ public partial class V1beta1TrackerAssociationSpecInitProviderConsumerArnSelecto
     public V1beta1TrackerAssociationSpecInitProviderConsumerArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a GeofenceCollection in location to populate consumerArn.</summary>
 public partial class V1beta1TrackerAssociationSpecInitProviderConsumerArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -345,6 +358,7 @@ public enum V1beta1TrackerAssociationSpecInitProviderTrackerNameRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TrackerAssociationSpecInitProviderTrackerNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -358,6 +372,7 @@ public partial class V1beta1TrackerAssociationSpecInitProviderTrackerNameRefPoli
     public V1beta1TrackerAssociationSpecInitProviderTrackerNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Tracker in location to populate trackerName.</summary>
 public partial class V1beta1TrackerAssociationSpecInitProviderTrackerNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -389,6 +404,7 @@ public enum V1beta1TrackerAssociationSpecInitProviderTrackerNameSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TrackerAssociationSpecInitProviderTrackerNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -402,6 +418,7 @@ public partial class V1beta1TrackerAssociationSpecInitProviderTrackerNameSelecto
     public V1beta1TrackerAssociationSpecInitProviderTrackerNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Tracker in location to populate trackerName.</summary>
 public partial class V1beta1TrackerAssociationSpecInitProviderTrackerNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -417,6 +434,7 @@ public partial class V1beta1TrackerAssociationSpecInitProviderTrackerNameSelecto
     public V1beta1TrackerAssociationSpecInitProviderTrackerNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1TrackerAssociationSpecInitProvider
 {
     /// <summary>The Amazon Resource Name (ARN) for the geofence collection to be associated to tracker resource. Used when you need to specify a resource across all AWS.</summary>
@@ -486,6 +504,7 @@ public enum V1beta1TrackerAssociationSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TrackerAssociationSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -499,6 +518,7 @@ public partial class V1beta1TrackerAssociationSpecProviderConfigRefPolicy
     public V1beta1TrackerAssociationSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1TrackerAssociationSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -530,6 +550,7 @@ public enum V1beta1TrackerAssociationSpecPublishConnectionDetailsToConfigRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TrackerAssociationSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -543,6 +564,7 @@ public partial class V1beta1TrackerAssociationSpecPublishConnectionDetailsToConf
     public V1beta1TrackerAssociationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1TrackerAssociationSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -554,6 +576,7 @@ public partial class V1beta1TrackerAssociationSpecPublishConnectionDetailsToConf
     public V1beta1TrackerAssociationSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1TrackerAssociationSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -569,6 +592,7 @@ public partial class V1beta1TrackerAssociationSpecPublishConnectionDetailsToMeta
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1TrackerAssociationSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -584,6 +608,7 @@ public partial class V1beta1TrackerAssociationSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1TrackerAssociationSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -595,6 +620,7 @@ public partial class V1beta1TrackerAssociationSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>TrackerAssociationSpec defines the desired state of TrackerAssociation</summary>
 public partial class V1beta1TrackerAssociationSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -627,6 +653,7 @@ public partial class V1beta1TrackerAssociationSpec
     public V1beta1TrackerAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TrackerAssociationStatusAtProvider
 {
     /// <summary>The Amazon Resource Name (ARN) for the geofence collection to be associated to tracker resource. Used when you need to specify a resource across all AWS.</summary>
@@ -642,6 +669,7 @@ public partial class V1beta1TrackerAssociationStatusAtProvider
     public string? TrackerName { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1TrackerAssociationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -669,6 +697,7 @@ public partial class V1beta1TrackerAssociationStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>TrackerAssociationStatus defines the observed state of TrackerAssociation.</summary>
 public partial class V1beta1TrackerAssociationStatus
 {
     /// <summary></summary>
@@ -685,6 +714,7 @@ public partial class V1beta1TrackerAssociationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>TrackerAssociation is the Schema for the TrackerAssociations API.</summary>
 public partial class V1beta1TrackerAssociation : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1TrackerAssociationSpec>, IStatus<V1beta1TrackerAssociationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

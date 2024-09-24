@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iam.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1IAMPolicySpecAuditConfigsAuditLogConfigs
 {
     /// <summary>Identities that do not cause logging for this type of permission. The format is the same as that for 'members' in IAMPolicy/IAMPolicyMember.</summary>
@@ -19,6 +20,7 @@ public partial class V1beta1IAMPolicySpecAuditConfigsAuditLogConfigs
     public string LogType { get; set; }
 }
 
+/// <summary>Specifies the Cloud Audit Logs configuration for the IAM policy.</summary>
 public partial class V1beta1IAMPolicySpecAuditConfigs
 {
     /// <summary>Required. The configuration for logging of each type of permission.</summary>
@@ -30,6 +32,7 @@ public partial class V1beta1IAMPolicySpecAuditConfigs
     public string Service { get; set; }
 }
 
+/// <summary>Optional. The condition under which the binding applies.</summary>
 public partial class V1beta1IAMPolicySpecBindingsCondition
 {
     /// <summary></summary>
@@ -45,6 +48,7 @@ public partial class V1beta1IAMPolicySpecBindingsCondition
     public string Title { get; set; }
 }
 
+/// <summary>Specifies the members to bind to an IAM role.</summary>
 public partial class V1beta1IAMPolicySpecBindings
 {
     /// <summary>Optional. The condition under which the binding applies.</summary>
@@ -60,6 +64,7 @@ public partial class V1beta1IAMPolicySpecBindings
     public string Role { get; set; }
 }
 
+/// <summary>Immutable. Required. The GCP resource to set the IAM policy on.</summary>
 public partial class V1beta1IAMPolicySpecResourceRef
 {
     /// <summary></summary>
@@ -83,6 +88,7 @@ public partial class V1beta1IAMPolicySpecResourceRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>IAMPolicySpec defines the desired state of IAMPolicy</summary>
 public partial class V1beta1IAMPolicySpec
 {
     /// <summary>Optional. The list of IAM audit configs.</summary>
@@ -98,6 +104,7 @@ public partial class V1beta1IAMPolicySpec
     public V1beta1IAMPolicySpecResourceRef ResourceRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IAMPolicyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -121,6 +128,7 @@ public partial class V1beta1IAMPolicyStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary>IAMPolicyStatus defines the observed state of IAMPolicy</summary>
 public partial class V1beta1IAMPolicyStatus
 {
     /// <summary>Conditions represent the latest available observations of the IAM policy's current state.</summary>
@@ -133,6 +141,7 @@ public partial class V1beta1IAMPolicyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>IAMPolicy is the Schema for the iampolicies API</summary>
 public partial class V1beta1IAMPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IAMPolicySpec>, IStatus<V1beta1IAMPolicyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

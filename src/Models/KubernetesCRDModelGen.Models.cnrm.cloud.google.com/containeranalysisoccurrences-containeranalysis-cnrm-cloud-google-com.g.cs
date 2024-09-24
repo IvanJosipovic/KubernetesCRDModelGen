@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containeranalysis.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1alpha1ContainerAnalysisOccurrenceSpecAttestationSignatures
 {
     /// <summary>The identifier for the public key that verifies this signature. MUST be an RFC3986 conformant URI. * When possible, the key id should be an immutable reference, such as a cryptographic digest. Examples of valid values:  * OpenPGP V4 public key fingerprint. See https://www.iana.org/assignments/uri-schemes/prov/openpgp4fpr   for more details on this scheme.     * 'openpgp4fpr:74FAF3B861BDA0870C7B6DEF607E48D2A663AEEA' * RFC6920 digest-named SubjectPublicKeyInfo (digest of the DER serialization):     * "ni:///sha-256;cD9o9Cq6LG3jD0iKXqEi_vdjJGecm_iXkbqVoScViaU".</summary>
@@ -19,6 +20,7 @@ public partial class V1alpha1ContainerAnalysisOccurrenceSpecAttestationSignature
     public string? Signature { get; set; }
 }
 
+/// <summary>Occurrence that represents a single "attestation". The authenticity of an attestation can be verified using the attached signature. If the verifier trusts the public key of the signer, then verifying the signature is sufficient to establish trust. In this circumstance, the authority to which this attestation is attached is primarily useful for lookup (how to find this attestation if you already know the authority and artifact to be verified) and intent (for which authority this attestation was intended to sign.</summary>
 public partial class V1alpha1ContainerAnalysisOccurrenceSpecAttestation
 {
     /// <summary>The serialized payload that is verified by one or more signatures. A base64-encoded string.</summary>
@@ -30,6 +32,7 @@ public partial class V1alpha1ContainerAnalysisOccurrenceSpecAttestation
     public IList<V1alpha1ContainerAnalysisOccurrenceSpecAttestationSignatures> Signatures { get; set; }
 }
 
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1ContainerAnalysisOccurrenceSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -45,6 +48,7 @@ public partial class V1alpha1ContainerAnalysisOccurrenceSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ContainerAnalysisOccurrenceSpec
 {
     /// <summary>Occurrence that represents a single "attestation". The authenticity of an attestation can be verified using the attached signature. If the verifier trusts the public key of the signer, then verifying the signature is sufficient to establish trust. In this circumstance, the authority to which this attestation is attached is primarily useful for lookup (how to find this attestation if you already know the authority and artifact to be verified) and intent (for which authority this attestation was intended to sign.</summary>
@@ -72,6 +76,7 @@ public partial class V1alpha1ContainerAnalysisOccurrenceSpec
     public string ResourceUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ContainerAnalysisOccurrenceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -95,6 +100,7 @@ public partial class V1alpha1ContainerAnalysisOccurrenceStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ContainerAnalysisOccurrenceStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -123,6 +129,7 @@ public partial class V1alpha1ContainerAnalysisOccurrenceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1ContainerAnalysisOccurrence : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ContainerAnalysisOccurrenceSpec>, IStatus<V1alpha1ContainerAnalysisOccurrenceStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

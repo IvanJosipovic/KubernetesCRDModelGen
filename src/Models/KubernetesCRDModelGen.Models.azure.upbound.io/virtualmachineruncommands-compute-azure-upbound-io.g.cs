@@ -18,6 +18,7 @@ public enum V1beta1VirtualMachineRunCommandSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>The client ID of the managed identity.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobManagedIdentityClientIdSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobMana
     public string Namespace { get; set; }
 }
 
+/// <summary>The object ID of the managed identity.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobManagedIdentityObjectIdSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -48,6 +50,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobMana
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobManagedIdentity
 {
     /// <summary>The client ID of the managed identity.</summary>
@@ -79,6 +82,7 @@ public enum V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -92,6 +96,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriR
     public V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Blob in storage to populate errorBlobUri.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -123,6 +128,7 @@ public enum V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -136,6 +142,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriS
     public V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Blob in storage to populate errorBlobUri.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -151,6 +158,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriS
     public V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>The client ID of the managed identity.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobManagedIdentityClientIdSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -166,6 +174,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobMan
     public string Namespace { get; set; }
 }
 
+/// <summary>The object ID of the managed identity.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobManagedIdentityObjectIdSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -181,6 +190,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobMan
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobManagedIdentity
 {
     /// <summary>The client ID of the managed identity.</summary>
@@ -212,6 +222,7 @@ public enum V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUriRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUriRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -225,6 +236,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUri
     public V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUriRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Blob in storage to populate outputBlobUri.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUriRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -256,6 +268,7 @@ public enum V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUriSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUriSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -269,6 +282,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUri
     public V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUriSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Blob in storage to populate outputBlobUri.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUriSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -284,6 +298,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUri
     public V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUriSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderParameter
 {
     /// <summary>The run parameter name.</summary>
@@ -295,6 +310,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderParameter
     public string? Value { get; set; }
 }
 
+/// <summary>The run parameter name.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderProtectedParameterNameSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -310,6 +326,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderProtectedPara
     public string Namespace { get; set; }
 }
 
+/// <summary>The run parameter value.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderProtectedParameterValueSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -325,6 +342,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderProtectedPara
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderProtectedParameter
 {
     /// <summary>The run parameter name.</summary>
@@ -336,6 +354,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderProtectedPara
     public V1beta1VirtualMachineRunCommandSpecForProviderProtectedParameterValueSecretRef ValueSecretRef { get; set; }
 }
 
+/// <summary>Specifies the user account password on the VM when executing the Virtual Machine Run Command.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderRunAsPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -351,6 +370,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderRunAsPassword
     public string Namespace { get; set; }
 }
 
+/// <summary>The client ID of the managed identity.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriManagedIdentityClientIdSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -366,6 +386,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptU
     public string Namespace { get; set; }
 }
 
+/// <summary>The object ID of the managed identity.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriManagedIdentityObjectIdSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -381,6 +402,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptU
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriManagedIdentity
 {
     /// <summary>The client ID of the managed identity.</summary>
@@ -412,6 +434,7 @@ public enum V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -425,6 +448,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptU
     public V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Blob in storage to populate scriptUri.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -456,6 +480,7 @@ public enum V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -469,6 +494,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptU
     public V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Blob in storage to populate scriptUri.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -484,6 +510,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptU
     public V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderSource
 {
     /// <summary></summary>
@@ -531,6 +558,7 @@ public enum V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachineIdRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachineIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -544,6 +572,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachin
     public V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachineIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LinuxVirtualMachine in compute to populate virtualMachineId.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachineIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -575,6 +604,7 @@ public enum V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachineIdSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachineIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -588,6 +618,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachin
     public V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachineIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LinuxVirtualMachine in compute to populate virtualMachineId.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachineIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -603,6 +634,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachin
     public V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachineIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualMachineRunCommandSpecForProvider
 {
     /// <summary>An error_blob_managed_identity block as defined below. User-assigned managed Identity that has access to errorBlobUri storage blob.</summary>
@@ -678,6 +710,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProvider
     public V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachineIdSelector? VirtualMachineIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobManagedIdentity
 {
 }
@@ -702,6 +735,7 @@ public enum V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUriRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUriRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -715,6 +749,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUri
     public V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUriRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Blob in storage to populate errorBlobUri.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUriRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -746,6 +781,7 @@ public enum V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUriSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUriSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -759,6 +795,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUri
     public V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUriSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Blob in storage to populate errorBlobUri.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUriSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -774,6 +811,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUri
     public V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUriSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobManagedIdentity
 {
 }
@@ -798,6 +836,7 @@ public enum V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUriRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUriRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -811,6 +850,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUr
     public V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUriRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Blob in storage to populate outputBlobUri.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUriRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -842,6 +882,7 @@ public enum V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUriSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUriSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -855,6 +896,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUr
     public V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUriSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Blob in storage to populate outputBlobUri.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUriSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -870,6 +912,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUr
     public V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUriSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderParameter
 {
     /// <summary>The run parameter name.</summary>
@@ -881,10 +924,12 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderParameter
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderProtectedParameter
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriManagedIdentity
 {
 }
@@ -909,6 +954,7 @@ public enum V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -922,6 +968,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSourceScript
     public V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Blob in storage to populate scriptUri.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -953,6 +1000,7 @@ public enum V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -966,6 +1014,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSourceScript
     public V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Blob in storage to populate scriptUri.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -981,6 +1030,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSourceScript
     public V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSource
 {
     /// <summary></summary>
@@ -1008,6 +1058,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSource
     public V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriSelector? ScriptUriSelector { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecInitProvider
 {
     /// <summary>An error_blob_managed_identity block as defined below. User-assigned managed Identity that has access to errorBlobUri storage blob.</summary>
@@ -1109,6 +1160,7 @@ public enum V1beta1VirtualMachineRunCommandSpecProviderConfigRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1122,6 +1174,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecProviderConfigRefPolicy
     public V1beta1VirtualMachineRunCommandSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1153,6 +1206,7 @@ public enum V1beta1VirtualMachineRunCommandSpecPublishConnectionDetailsToConfigR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1166,6 +1220,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecPublishConnectionDetails
     public V1beta1VirtualMachineRunCommandSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1177,6 +1232,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecPublishConnectionDetails
     public V1beta1VirtualMachineRunCommandSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1192,6 +1248,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecPublishConnectionDetails
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1207,6 +1264,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecPublishConnectionDetails
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1VirtualMachineRunCommandSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1218,6 +1276,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecWriteConnectionSecretToR
     public string Namespace { get; set; }
 }
 
+/// <summary>VirtualMachineRunCommandSpec defines the desired state of VirtualMachineRunCommand</summary>
 public partial class V1beta1VirtualMachineRunCommandSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1250,6 +1309,7 @@ public partial class V1beta1VirtualMachineRunCommandSpec
     public V1beta1VirtualMachineRunCommandSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary>The client ID of the managed identity.</summary>
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderErrorBlobManagedIdentityClientIdSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1265,6 +1325,7 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderErrorBlobMan
     public string Namespace { get; set; }
 }
 
+/// <summary>The object ID of the managed identity.</summary>
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderErrorBlobManagedIdentityObjectIdSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1280,6 +1341,7 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderErrorBlobMan
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderErrorBlobManagedIdentity
 {
     /// <summary>The client ID of the managed identity.</summary>
@@ -1291,6 +1353,7 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderErrorBlobMan
     public V1beta1VirtualMachineRunCommandStatusAtProviderErrorBlobManagedIdentityObjectIdSecretRef? ObjectIdSecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderInstanceView
 {
     /// <summary></summary>
@@ -1322,6 +1385,7 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderInstanceView
     public string? StartTime { get; set; }
 }
 
+/// <summary>The client ID of the managed identity.</summary>
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderOutputBlobManagedIdentityClientIdSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1337,6 +1401,7 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderOutputBlobMa
     public string Namespace { get; set; }
 }
 
+/// <summary>The object ID of the managed identity.</summary>
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderOutputBlobManagedIdentityObjectIdSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1352,6 +1417,7 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderOutputBlobMa
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderOutputBlobManagedIdentity
 {
     /// <summary>The client ID of the managed identity.</summary>
@@ -1363,6 +1429,7 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderOutputBlobMa
     public V1beta1VirtualMachineRunCommandStatusAtProviderOutputBlobManagedIdentityObjectIdSecretRef? ObjectIdSecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderParameter
 {
     /// <summary>The run parameter name.</summary>
@@ -1374,6 +1441,7 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderParameter
     public string? Value { get; set; }
 }
 
+/// <summary>The run parameter name.</summary>
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderProtectedParameterNameSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1389,6 +1457,7 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderProtectedPar
     public string Namespace { get; set; }
 }
 
+/// <summary>The run parameter value.</summary>
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderProtectedParameterValueSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1404,6 +1473,7 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderProtectedPar
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderProtectedParameter
 {
     /// <summary>The run parameter name.</summary>
@@ -1415,6 +1485,7 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderProtectedPar
     public V1beta1VirtualMachineRunCommandStatusAtProviderProtectedParameterValueSecretRef ValueSecretRef { get; set; }
 }
 
+/// <summary>The client ID of the managed identity.</summary>
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderSourceScriptUriManagedIdentityClientIdSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1430,6 +1501,7 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderSourceScript
     public string Namespace { get; set; }
 }
 
+/// <summary>The object ID of the managed identity.</summary>
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderSourceScriptUriManagedIdentityObjectIdSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1445,6 +1517,7 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderSourceScript
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderSourceScriptUriManagedIdentity
 {
     /// <summary>The client ID of the managed identity.</summary>
@@ -1456,6 +1529,7 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderSourceScript
     public V1beta1VirtualMachineRunCommandStatusAtProviderSourceScriptUriManagedIdentityObjectIdSecretRef? ObjectIdSecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderSource
 {
     /// <summary></summary>
@@ -1475,6 +1549,7 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderSource
     public IList<V1beta1VirtualMachineRunCommandStatusAtProviderSourceScriptUriManagedIdentity>? ScriptUriManagedIdentity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualMachineRunCommandStatusAtProvider
 {
     /// <summary>An error_blob_managed_identity block as defined below. User-assigned managed Identity that has access to errorBlobUri storage blob.</summary>
@@ -1530,6 +1605,7 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProvider
     public string? VirtualMachineId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1VirtualMachineRunCommandStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1557,6 +1633,7 @@ public partial class V1beta1VirtualMachineRunCommandStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>VirtualMachineRunCommandStatus defines the observed state of VirtualMachineRunCommand.</summary>
 public partial class V1beta1VirtualMachineRunCommandStatus
 {
     /// <summary></summary>
@@ -1573,6 +1650,7 @@ public partial class V1beta1VirtualMachineRunCommandStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>VirtualMachineRunCommand is the Schema for the VirtualMachineRunCommands API. Manages a Virtual Machine Run Command.</summary>
 public partial class V1beta1VirtualMachineRunCommand : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1VirtualMachineRunCommandSpec>, IStatus<V1beta1VirtualMachineRunCommandStatus>
 {
     public const string KubeApiVersion = "v1beta1";

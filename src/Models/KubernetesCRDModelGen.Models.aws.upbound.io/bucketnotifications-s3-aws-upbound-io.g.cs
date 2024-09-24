@@ -38,6 +38,7 @@ public enum V1beta1BucketNotificationSpecForProviderBucketRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketNotificationSpecForProviderBucketRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1BucketNotificationSpecForProviderBucketRefPolicy
     public V1beta1BucketNotificationSpecForProviderBucketRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1BucketNotificationSpecForProviderBucketRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1BucketNotificationSpecForProviderBucketSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BucketNotificationSpecForProviderBucketSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1BucketNotificationSpecForProviderBucketSelectorPolic
     public V1beta1BucketNotificationSpecForProviderBucketSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1BucketNotificationSpecForProviderBucketSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1BucketNotificationSpecForProviderBucketSelector
     public V1beta1BucketNotificationSpecForProviderBucketSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketNotificationSpecForProviderLambdaFunction
 {
     /// <summary>Event for which to send notifications.</summary>
@@ -153,6 +158,7 @@ public enum V1beta1BucketNotificationSpecForProviderQueueQueueArnRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketNotificationSpecForProviderQueueQueueArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -166,6 +172,7 @@ public partial class V1beta1BucketNotificationSpecForProviderQueueQueueArnRefPol
     public V1beta1BucketNotificationSpecForProviderQueueQueueArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Queue in sqs to populate queueArn.</summary>
 public partial class V1beta1BucketNotificationSpecForProviderQueueQueueArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -197,6 +204,7 @@ public enum V1beta1BucketNotificationSpecForProviderQueueQueueArnSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BucketNotificationSpecForProviderQueueQueueArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -210,6 +218,7 @@ public partial class V1beta1BucketNotificationSpecForProviderQueueQueueArnSelect
     public V1beta1BucketNotificationSpecForProviderQueueQueueArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Queue in sqs to populate queueArn.</summary>
 public partial class V1beta1BucketNotificationSpecForProviderQueueQueueArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -225,6 +234,7 @@ public partial class V1beta1BucketNotificationSpecForProviderQueueQueueArnSelect
     public V1beta1BucketNotificationSpecForProviderQueueQueueArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketNotificationSpecForProviderQueue
 {
     /// <summary>Specifies event for which to send notifications.</summary>
@@ -276,6 +286,7 @@ public enum V1beta1BucketNotificationSpecForProviderTopicTopicArnRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketNotificationSpecForProviderTopicTopicArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -289,6 +300,7 @@ public partial class V1beta1BucketNotificationSpecForProviderTopicTopicArnRefPol
     public V1beta1BucketNotificationSpecForProviderTopicTopicArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Topic in sns to populate topicArn.</summary>
 public partial class V1beta1BucketNotificationSpecForProviderTopicTopicArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -320,6 +332,7 @@ public enum V1beta1BucketNotificationSpecForProviderTopicTopicArnSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BucketNotificationSpecForProviderTopicTopicArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -333,6 +346,7 @@ public partial class V1beta1BucketNotificationSpecForProviderTopicTopicArnSelect
     public V1beta1BucketNotificationSpecForProviderTopicTopicArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Topic in sns to populate topicArn.</summary>
 public partial class V1beta1BucketNotificationSpecForProviderTopicTopicArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -348,6 +362,7 @@ public partial class V1beta1BucketNotificationSpecForProviderTopicTopicArnSelect
     public V1beta1BucketNotificationSpecForProviderTopicTopicArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketNotificationSpecForProviderTopic
 {
     /// <summary>Event for which to send notifications.</summary>
@@ -379,6 +394,7 @@ public partial class V1beta1BucketNotificationSpecForProviderTopic
     public V1beta1BucketNotificationSpecForProviderTopicTopicArnSelector? TopicArnSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketNotificationSpecForProvider
 {
     /// <summary>Name of the bucket for notification configuration.</summary>
@@ -434,6 +450,7 @@ public enum V1beta1BucketNotificationSpecInitProviderBucketRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketNotificationSpecInitProviderBucketRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -447,6 +464,7 @@ public partial class V1beta1BucketNotificationSpecInitProviderBucketRefPolicy
     public V1beta1BucketNotificationSpecInitProviderBucketRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1BucketNotificationSpecInitProviderBucketRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -478,6 +496,7 @@ public enum V1beta1BucketNotificationSpecInitProviderBucketSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BucketNotificationSpecInitProviderBucketSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -491,6 +510,7 @@ public partial class V1beta1BucketNotificationSpecInitProviderBucketSelectorPoli
     public V1beta1BucketNotificationSpecInitProviderBucketSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1BucketNotificationSpecInitProviderBucketSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -506,6 +526,7 @@ public partial class V1beta1BucketNotificationSpecInitProviderBucketSelector
     public V1beta1BucketNotificationSpecInitProviderBucketSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketNotificationSpecInitProviderLambdaFunction
 {
     /// <summary>Event for which to send notifications.</summary>
@@ -549,6 +570,7 @@ public enum V1beta1BucketNotificationSpecInitProviderQueueQueueArnRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketNotificationSpecInitProviderQueueQueueArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -562,6 +584,7 @@ public partial class V1beta1BucketNotificationSpecInitProviderQueueQueueArnRefPo
     public V1beta1BucketNotificationSpecInitProviderQueueQueueArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Queue in sqs to populate queueArn.</summary>
 public partial class V1beta1BucketNotificationSpecInitProviderQueueQueueArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -593,6 +616,7 @@ public enum V1beta1BucketNotificationSpecInitProviderQueueQueueArnSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BucketNotificationSpecInitProviderQueueQueueArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -606,6 +630,7 @@ public partial class V1beta1BucketNotificationSpecInitProviderQueueQueueArnSelec
     public V1beta1BucketNotificationSpecInitProviderQueueQueueArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Queue in sqs to populate queueArn.</summary>
 public partial class V1beta1BucketNotificationSpecInitProviderQueueQueueArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -621,6 +646,7 @@ public partial class V1beta1BucketNotificationSpecInitProviderQueueQueueArnSelec
     public V1beta1BucketNotificationSpecInitProviderQueueQueueArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketNotificationSpecInitProviderQueue
 {
     /// <summary>Specifies event for which to send notifications.</summary>
@@ -672,6 +698,7 @@ public enum V1beta1BucketNotificationSpecInitProviderTopicTopicArnRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketNotificationSpecInitProviderTopicTopicArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -685,6 +712,7 @@ public partial class V1beta1BucketNotificationSpecInitProviderTopicTopicArnRefPo
     public V1beta1BucketNotificationSpecInitProviderTopicTopicArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Topic in sns to populate topicArn.</summary>
 public partial class V1beta1BucketNotificationSpecInitProviderTopicTopicArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -716,6 +744,7 @@ public enum V1beta1BucketNotificationSpecInitProviderTopicTopicArnSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BucketNotificationSpecInitProviderTopicTopicArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -729,6 +758,7 @@ public partial class V1beta1BucketNotificationSpecInitProviderTopicTopicArnSelec
     public V1beta1BucketNotificationSpecInitProviderTopicTopicArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Topic in sns to populate topicArn.</summary>
 public partial class V1beta1BucketNotificationSpecInitProviderTopicTopicArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -744,6 +774,7 @@ public partial class V1beta1BucketNotificationSpecInitProviderTopicTopicArnSelec
     public V1beta1BucketNotificationSpecInitProviderTopicTopicArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketNotificationSpecInitProviderTopic
 {
     /// <summary>Event for which to send notifications.</summary>
@@ -775,6 +806,7 @@ public partial class V1beta1BucketNotificationSpecInitProviderTopic
     public V1beta1BucketNotificationSpecInitProviderTopicTopicArnSelector? TopicArnSelector { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1BucketNotificationSpecInitProvider
 {
     /// <summary>Name of the bucket for notification configuration.</summary>
@@ -848,6 +880,7 @@ public enum V1beta1BucketNotificationSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketNotificationSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -861,6 +894,7 @@ public partial class V1beta1BucketNotificationSpecProviderConfigRefPolicy
     public V1beta1BucketNotificationSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1BucketNotificationSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -892,6 +926,7 @@ public enum V1beta1BucketNotificationSpecPublishConnectionDetailsToConfigRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketNotificationSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -905,6 +940,7 @@ public partial class V1beta1BucketNotificationSpecPublishConnectionDetailsToConf
     public V1beta1BucketNotificationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1BucketNotificationSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -916,6 +952,7 @@ public partial class V1beta1BucketNotificationSpecPublishConnectionDetailsToConf
     public V1beta1BucketNotificationSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1BucketNotificationSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -931,6 +968,7 @@ public partial class V1beta1BucketNotificationSpecPublishConnectionDetailsToMeta
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1BucketNotificationSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -946,6 +984,7 @@ public partial class V1beta1BucketNotificationSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1BucketNotificationSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -957,6 +996,7 @@ public partial class V1beta1BucketNotificationSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>BucketNotificationSpec defines the desired state of BucketNotification</summary>
 public partial class V1beta1BucketNotificationSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -989,6 +1029,7 @@ public partial class V1beta1BucketNotificationSpec
     public V1beta1BucketNotificationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketNotificationStatusAtProviderLambdaFunction
 {
     /// <summary>Event for which to send notifications.</summary>
@@ -1012,6 +1053,7 @@ public partial class V1beta1BucketNotificationStatusAtProviderLambdaFunction
     public string? LambdaFunctionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketNotificationStatusAtProviderQueue
 {
     /// <summary>Specifies event for which to send notifications.</summary>
@@ -1035,6 +1077,7 @@ public partial class V1beta1BucketNotificationStatusAtProviderQueue
     public string? QueueArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketNotificationStatusAtProviderTopic
 {
     /// <summary>Event for which to send notifications.</summary>
@@ -1058,6 +1101,7 @@ public partial class V1beta1BucketNotificationStatusAtProviderTopic
     public string? TopicArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketNotificationStatusAtProvider
 {
     /// <summary>Name of the bucket for notification configuration.</summary>
@@ -1085,6 +1129,7 @@ public partial class V1beta1BucketNotificationStatusAtProvider
     public IList<V1beta1BucketNotificationStatusAtProviderTopic>? Topic { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1BucketNotificationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1112,6 +1157,7 @@ public partial class V1beta1BucketNotificationStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>BucketNotificationStatus defines the observed state of BucketNotification.</summary>
 public partial class V1beta1BucketNotificationStatus
 {
     /// <summary></summary>
@@ -1128,6 +1174,7 @@ public partial class V1beta1BucketNotificationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>BucketNotification is the Schema for the BucketNotifications API. Manages a S3 Bucket Notification Configuration</summary>
 public partial class V1beta1BucketNotification : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BucketNotificationSpec>, IStatus<V1beta1BucketNotificationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

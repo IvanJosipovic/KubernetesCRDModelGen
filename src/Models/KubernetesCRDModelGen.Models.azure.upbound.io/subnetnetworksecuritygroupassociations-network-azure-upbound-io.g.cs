@@ -38,6 +38,7 @@ public enum V1beta1SubnetNetworkSecurityGroupAssociationSpecForProviderNetworkSe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecForProviderNetworkSecurityGroupIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecForProvider
     public V1beta1SubnetNetworkSecurityGroupAssociationSpecForProviderNetworkSecurityGroupIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SecurityGroup in network to populate networkSecurityGroupId.</summary>
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecForProviderNetworkSecurityGroupIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1SubnetNetworkSecurityGroupAssociationSpecForProviderNetworkSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecForProviderNetworkSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecForProvider
     public V1beta1SubnetNetworkSecurityGroupAssociationSpecForProviderNetworkSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SecurityGroup in network to populate networkSecurityGroupId.</summary>
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecForProviderNetworkSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1SubnetNetworkSecurityGroupAssociationSpecForProviderSubnetIdR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecForProviderSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecForProvider
     public V1beta1SubnetNetworkSecurityGroupAssociationSpecForProviderSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecForProviderSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1SubnetNetworkSecurityGroupAssociationSpecForProviderSubnetIdS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecForProviderSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecForProvider
     public V1beta1SubnetNetworkSecurityGroupAssociationSpecForProviderSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecForProviderSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecForProvider
     public V1beta1SubnetNetworkSecurityGroupAssociationSpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecForProvider
 {
     /// <summary>The ID of the Network Security Group which should be associated with the Subnet. Changing this forces a new resource to be created.</summary>
@@ -249,6 +258,7 @@ public enum V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProviderNetworkS
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProviderNetworkSecurityGroupIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -262,6 +272,7 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProvide
     public V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProviderNetworkSecurityGroupIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SecurityGroup in network to populate networkSecurityGroupId.</summary>
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProviderNetworkSecurityGroupIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -293,6 +304,7 @@ public enum V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProviderNetworkS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProviderNetworkSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -306,6 +318,7 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProvide
     public V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProviderNetworkSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SecurityGroup in network to populate networkSecurityGroupId.</summary>
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProviderNetworkSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -341,6 +354,7 @@ public enum V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProviderSubnetId
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProviderSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -354,6 +368,7 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProvide
     public V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProviderSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProviderSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -385,6 +400,7 @@ public enum V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProviderSubnetId
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProviderSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -398,6 +414,7 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProvide
     public V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProviderSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProviderSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -413,6 +430,7 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProvide
     public V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecInitProvider
 {
     /// <summary>The ID of the Network Security Group which should be associated with the Subnet. Changing this forces a new resource to be created.</summary>
@@ -482,6 +500,7 @@ public enum V1beta1SubnetNetworkSecurityGroupAssociationSpecProviderConfigRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -495,6 +514,7 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecProviderCon
     public V1beta1SubnetNetworkSecurityGroupAssociationSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -526,6 +546,7 @@ public enum V1beta1SubnetNetworkSecurityGroupAssociationSpecPublishConnectionDet
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -539,6 +560,7 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecPublishConn
     public V1beta1SubnetNetworkSecurityGroupAssociationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -550,6 +572,7 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecPublishConn
     public V1beta1SubnetNetworkSecurityGroupAssociationSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -565,6 +588,7 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecPublishConn
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -580,6 +604,7 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecPublishConn
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -591,6 +616,7 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpecWriteConnec
     public string Namespace { get; set; }
 }
 
+/// <summary>SubnetNetworkSecurityGroupAssociationSpec defines the desired state of SubnetNetworkSecurityGroupAssociation</summary>
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -623,6 +649,7 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationSpec
     public V1beta1SubnetNetworkSecurityGroupAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationStatusAtProvider
 {
     /// <summary>The ID of the Subnet.</summary>
@@ -638,6 +665,7 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationStatusAtProvide
     public string? SubnetId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -665,6 +693,7 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationStatusCondition
     public string Type { get; set; }
 }
 
+/// <summary>SubnetNetworkSecurityGroupAssociationStatus defines the observed state of SubnetNetworkSecurityGroupAssociation.</summary>
 public partial class V1beta1SubnetNetworkSecurityGroupAssociationStatus
 {
     /// <summary></summary>
@@ -681,6 +710,7 @@ public partial class V1beta1SubnetNetworkSecurityGroupAssociationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>SubnetNetworkSecurityGroupAssociation is the Schema for the SubnetNetworkSecurityGroupAssociations API. Associates a</summary>
 public partial class V1beta1SubnetNetworkSecurityGroupAssociation : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SubnetNetworkSecurityGroupAssociationSpec>, IStatus<V1beta1SubnetNetworkSecurityGroupAssociationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

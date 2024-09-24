@@ -38,6 +38,7 @@ public enum V1beta1LBAttachmentSpecForProviderInstanceNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LBAttachmentSpecForProviderInstanceNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1LBAttachmentSpecForProviderInstanceNameRefPolicy
     public V1beta1LBAttachmentSpecForProviderInstanceNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Instance in lightsail to populate instanceName.</summary>
 public partial class V1beta1LBAttachmentSpecForProviderInstanceNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1LBAttachmentSpecForProviderInstanceNameSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LBAttachmentSpecForProviderInstanceNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1LBAttachmentSpecForProviderInstanceNameSelectorPolic
     public V1beta1LBAttachmentSpecForProviderInstanceNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Instance in lightsail to populate instanceName.</summary>
 public partial class V1beta1LBAttachmentSpecForProviderInstanceNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1LBAttachmentSpecForProviderLbNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LBAttachmentSpecForProviderLbNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1LBAttachmentSpecForProviderLbNameRefPolicy
     public V1beta1LBAttachmentSpecForProviderLbNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LB in lightsail to populate lbName.</summary>
 public partial class V1beta1LBAttachmentSpecForProviderLbNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1LBAttachmentSpecForProviderLbNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LBAttachmentSpecForProviderLbNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1LBAttachmentSpecForProviderLbNameSelectorPolicy
     public V1beta1LBAttachmentSpecForProviderLbNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LB in lightsail to populate lbName.</summary>
 public partial class V1beta1LBAttachmentSpecForProviderLbNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1LBAttachmentSpecForProviderLbNameSelector
     public V1beta1LBAttachmentSpecForProviderLbNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBAttachmentSpecForProvider
 {
     /// <summary>The name of the instance to attach to the load balancer.</summary>
@@ -253,6 +262,7 @@ public enum V1beta1LBAttachmentSpecInitProviderInstanceNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LBAttachmentSpecInitProviderInstanceNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -266,6 +276,7 @@ public partial class V1beta1LBAttachmentSpecInitProviderInstanceNameRefPolicy
     public V1beta1LBAttachmentSpecInitProviderInstanceNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Instance in lightsail to populate instanceName.</summary>
 public partial class V1beta1LBAttachmentSpecInitProviderInstanceNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -297,6 +308,7 @@ public enum V1beta1LBAttachmentSpecInitProviderInstanceNameSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LBAttachmentSpecInitProviderInstanceNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -310,6 +322,7 @@ public partial class V1beta1LBAttachmentSpecInitProviderInstanceNameSelectorPoli
     public V1beta1LBAttachmentSpecInitProviderInstanceNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Instance in lightsail to populate instanceName.</summary>
 public partial class V1beta1LBAttachmentSpecInitProviderInstanceNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -345,6 +358,7 @@ public enum V1beta1LBAttachmentSpecInitProviderLbNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LBAttachmentSpecInitProviderLbNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -358,6 +372,7 @@ public partial class V1beta1LBAttachmentSpecInitProviderLbNameRefPolicy
     public V1beta1LBAttachmentSpecInitProviderLbNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LB in lightsail to populate lbName.</summary>
 public partial class V1beta1LBAttachmentSpecInitProviderLbNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -389,6 +404,7 @@ public enum V1beta1LBAttachmentSpecInitProviderLbNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LBAttachmentSpecInitProviderLbNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -402,6 +418,7 @@ public partial class V1beta1LBAttachmentSpecInitProviderLbNameSelectorPolicy
     public V1beta1LBAttachmentSpecInitProviderLbNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LB in lightsail to populate lbName.</summary>
 public partial class V1beta1LBAttachmentSpecInitProviderLbNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -417,6 +434,7 @@ public partial class V1beta1LBAttachmentSpecInitProviderLbNameSelector
     public V1beta1LBAttachmentSpecInitProviderLbNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1LBAttachmentSpecInitProvider
 {
     /// <summary>The name of the instance to attach to the load balancer.</summary>
@@ -486,6 +504,7 @@ public enum V1beta1LBAttachmentSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LBAttachmentSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -499,6 +518,7 @@ public partial class V1beta1LBAttachmentSpecProviderConfigRefPolicy
     public V1beta1LBAttachmentSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1LBAttachmentSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -530,6 +550,7 @@ public enum V1beta1LBAttachmentSpecPublishConnectionDetailsToConfigRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LBAttachmentSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -543,6 +564,7 @@ public partial class V1beta1LBAttachmentSpecPublishConnectionDetailsToConfigRefP
     public V1beta1LBAttachmentSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1LBAttachmentSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -554,6 +576,7 @@ public partial class V1beta1LBAttachmentSpecPublishConnectionDetailsToConfigRef
     public V1beta1LBAttachmentSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1LBAttachmentSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -569,6 +592,7 @@ public partial class V1beta1LBAttachmentSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1LBAttachmentSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -584,6 +608,7 @@ public partial class V1beta1LBAttachmentSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1LBAttachmentSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -595,6 +620,7 @@ public partial class V1beta1LBAttachmentSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>LBAttachmentSpec defines the desired state of LBAttachment</summary>
 public partial class V1beta1LBAttachmentSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -627,6 +653,7 @@ public partial class V1beta1LBAttachmentSpec
     public V1beta1LBAttachmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBAttachmentStatusAtProvider
 {
     /// <summary>A combination of attributes to create a unique id: lb_name,instance_name</summary>
@@ -642,6 +669,7 @@ public partial class V1beta1LBAttachmentStatusAtProvider
     public string? LbName { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1LBAttachmentStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -669,6 +697,7 @@ public partial class V1beta1LBAttachmentStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>LBAttachmentStatus defines the observed state of LBAttachment.</summary>
 public partial class V1beta1LBAttachmentStatus
 {
     /// <summary></summary>
@@ -685,6 +714,7 @@ public partial class V1beta1LBAttachmentStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>LBAttachment is the Schema for the LBAttachments API. Attaches a Lightsail Instance to a Lightsail Load Balancer</summary>
 public partial class V1beta1LBAttachment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LBAttachmentSpec>, IStatus<V1beta1LBAttachmentStatus>
 {
     public const string KubeApiVersion = "v1beta1";

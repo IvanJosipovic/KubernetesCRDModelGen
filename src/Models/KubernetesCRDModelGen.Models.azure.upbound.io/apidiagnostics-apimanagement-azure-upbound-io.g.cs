@@ -38,6 +38,7 @@ public enum V1beta1APIDiagnosticSpecForProviderApiManagementLoggerIdRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1APIDiagnosticSpecForProviderApiManagementLoggerIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1APIDiagnosticSpecForProviderApiManagementLoggerIdRef
     public V1beta1APIDiagnosticSpecForProviderApiManagementLoggerIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Logger in apimanagement to populate apiManagementLoggerId.</summary>
 public partial class V1beta1APIDiagnosticSpecForProviderApiManagementLoggerIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1APIDiagnosticSpecForProviderApiManagementLoggerIdSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1APIDiagnosticSpecForProviderApiManagementLoggerIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1APIDiagnosticSpecForProviderApiManagementLoggerIdSel
     public V1beta1APIDiagnosticSpecForProviderApiManagementLoggerIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Logger in apimanagement to populate apiManagementLoggerId.</summary>
 public partial class V1beta1APIDiagnosticSpecForProviderApiManagementLoggerIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1APIDiagnosticSpecForProviderApiManagementNameRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1APIDiagnosticSpecForProviderApiManagementNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1APIDiagnosticSpecForProviderApiManagementNameRefPoli
     public V1beta1APIDiagnosticSpecForProviderApiManagementNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Management in apimanagement to populate apiManagementName.</summary>
 public partial class V1beta1APIDiagnosticSpecForProviderApiManagementNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1APIDiagnosticSpecForProviderApiManagementNameSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1APIDiagnosticSpecForProviderApiManagementNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1APIDiagnosticSpecForProviderApiManagementNameSelecto
     public V1beta1APIDiagnosticSpecForProviderApiManagementNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Management in apimanagement to populate apiManagementName.</summary>
 public partial class V1beta1APIDiagnosticSpecForProviderApiManagementNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1APIDiagnosticSpecForProviderApiNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1APIDiagnosticSpecForProviderApiNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1APIDiagnosticSpecForProviderApiNameRefPolicy
     public V1beta1APIDiagnosticSpecForProviderApiNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a API in apimanagement to populate apiName.</summary>
 public partial class V1beta1APIDiagnosticSpecForProviderApiNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1APIDiagnosticSpecForProviderApiNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1APIDiagnosticSpecForProviderApiNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1APIDiagnosticSpecForProviderApiNameSelectorPolicy
     public V1beta1APIDiagnosticSpecForProviderApiNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a API in apimanagement to populate apiName.</summary>
 public partial class V1beta1APIDiagnosticSpecForProviderApiNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1APIDiagnosticSpecForProviderApiNameSelector
     public V1beta1APIDiagnosticSpecForProviderApiNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticSpecForProviderBackendRequestDataMaskingHeaders
 {
     /// <summary>The data masking mode. Possible values are Mask and Hide for query_params. The only possible value is Mask for headers.</summary>
@@ -305,6 +318,7 @@ public partial class V1beta1APIDiagnosticSpecForProviderBackendRequestDataMaskin
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticSpecForProviderBackendRequestDataMaskingQueryParams
 {
     /// <summary>The data masking mode. Possible values are Mask and Hide for query_params. The only possible value is Mask for headers.</summary>
@@ -316,6 +330,7 @@ public partial class V1beta1APIDiagnosticSpecForProviderBackendRequestDataMaskin
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticSpecForProviderBackendRequestDataMasking
 {
     /// <summary>A headers block as defined below.</summary>
@@ -327,6 +342,7 @@ public partial class V1beta1APIDiagnosticSpecForProviderBackendRequestDataMaskin
     public IList<V1beta1APIDiagnosticSpecForProviderBackendRequestDataMaskingQueryParams>? QueryParams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticSpecForProviderBackendRequest
 {
     /// <summary>Number of payload bytes to log (up to 8192).</summary>
@@ -342,6 +358,7 @@ public partial class V1beta1APIDiagnosticSpecForProviderBackendRequest
     public IList<string>? HeadersToLog { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticSpecForProviderBackendResponseDataMaskingHeaders
 {
     /// <summary>The data masking mode. Possible values are Mask and Hide for query_params. The only possible value is Mask for headers.</summary>
@@ -353,6 +370,7 @@ public partial class V1beta1APIDiagnosticSpecForProviderBackendResponseDataMaski
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticSpecForProviderBackendResponseDataMaskingQueryParams
 {
     /// <summary>The data masking mode. Possible values are Mask and Hide for query_params. The only possible value is Mask for headers.</summary>
@@ -364,6 +382,7 @@ public partial class V1beta1APIDiagnosticSpecForProviderBackendResponseDataMaski
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticSpecForProviderBackendResponseDataMasking
 {
     /// <summary>A headers block as defined below.</summary>
@@ -375,6 +394,7 @@ public partial class V1beta1APIDiagnosticSpecForProviderBackendResponseDataMaski
     public IList<V1beta1APIDiagnosticSpecForProviderBackendResponseDataMaskingQueryParams>? QueryParams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticSpecForProviderBackendResponse
 {
     /// <summary>Number of payload bytes to log (up to 8192).</summary>
@@ -390,6 +410,7 @@ public partial class V1beta1APIDiagnosticSpecForProviderBackendResponse
     public IList<string>? HeadersToLog { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticSpecForProviderFrontendRequestDataMaskingHeaders
 {
     /// <summary>The data masking mode. Possible values are Mask and Hide for query_params. The only possible value is Mask for headers.</summary>
@@ -401,6 +422,7 @@ public partial class V1beta1APIDiagnosticSpecForProviderFrontendRequestDataMaski
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticSpecForProviderFrontendRequestDataMaskingQueryParams
 {
     /// <summary>The data masking mode. Possible values are Mask and Hide for query_params. The only possible value is Mask for headers.</summary>
@@ -412,6 +434,7 @@ public partial class V1beta1APIDiagnosticSpecForProviderFrontendRequestDataMaski
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticSpecForProviderFrontendRequestDataMasking
 {
     /// <summary>A headers block as defined below.</summary>
@@ -423,6 +446,7 @@ public partial class V1beta1APIDiagnosticSpecForProviderFrontendRequestDataMaski
     public IList<V1beta1APIDiagnosticSpecForProviderFrontendRequestDataMaskingQueryParams>? QueryParams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticSpecForProviderFrontendRequest
 {
     /// <summary>Number of payload bytes to log (up to 8192).</summary>
@@ -438,6 +462,7 @@ public partial class V1beta1APIDiagnosticSpecForProviderFrontendRequest
     public IList<string>? HeadersToLog { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticSpecForProviderFrontendResponseDataMaskingHeaders
 {
     /// <summary>The data masking mode. Possible values are Mask and Hide for query_params. The only possible value is Mask for headers.</summary>
@@ -449,6 +474,7 @@ public partial class V1beta1APIDiagnosticSpecForProviderFrontendResponseDataMask
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticSpecForProviderFrontendResponseDataMaskingQueryParams
 {
     /// <summary>The data masking mode. Possible values are Mask and Hide for query_params. The only possible value is Mask for headers.</summary>
@@ -460,6 +486,7 @@ public partial class V1beta1APIDiagnosticSpecForProviderFrontendResponseDataMask
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticSpecForProviderFrontendResponseDataMasking
 {
     /// <summary>A headers block as defined below.</summary>
@@ -471,6 +498,7 @@ public partial class V1beta1APIDiagnosticSpecForProviderFrontendResponseDataMask
     public IList<V1beta1APIDiagnosticSpecForProviderFrontendResponseDataMaskingQueryParams>? QueryParams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticSpecForProviderFrontendResponse
 {
     /// <summary>Number of payload bytes to log (up to 8192).</summary>
@@ -506,6 +534,7 @@ public enum V1beta1APIDiagnosticSpecForProviderResourceGroupNameRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1APIDiagnosticSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -519,6 +548,7 @@ public partial class V1beta1APIDiagnosticSpecForProviderResourceGroupNameRefPoli
     public V1beta1APIDiagnosticSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1APIDiagnosticSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -550,6 +580,7 @@ public enum V1beta1APIDiagnosticSpecForProviderResourceGroupNameSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1APIDiagnosticSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -563,6 +594,7 @@ public partial class V1beta1APIDiagnosticSpecForProviderResourceGroupNameSelecto
     public V1beta1APIDiagnosticSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1APIDiagnosticSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -578,6 +610,7 @@ public partial class V1beta1APIDiagnosticSpecForProviderResourceGroupNameSelecto
     public V1beta1APIDiagnosticSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticSpecForProvider
 {
     /// <summary>Always log errors. Send telemetry if there is an erroneous condition, regardless of sampling settings.</summary>
@@ -689,6 +722,7 @@ public enum V1beta1APIDiagnosticSpecInitProviderApiManagementLoggerIdRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1APIDiagnosticSpecInitProviderApiManagementLoggerIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -702,6 +736,7 @@ public partial class V1beta1APIDiagnosticSpecInitProviderApiManagementLoggerIdRe
     public V1beta1APIDiagnosticSpecInitProviderApiManagementLoggerIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Logger in apimanagement to populate apiManagementLoggerId.</summary>
 public partial class V1beta1APIDiagnosticSpecInitProviderApiManagementLoggerIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -733,6 +768,7 @@ public enum V1beta1APIDiagnosticSpecInitProviderApiManagementLoggerIdSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1APIDiagnosticSpecInitProviderApiManagementLoggerIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -746,6 +782,7 @@ public partial class V1beta1APIDiagnosticSpecInitProviderApiManagementLoggerIdSe
     public V1beta1APIDiagnosticSpecInitProviderApiManagementLoggerIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Logger in apimanagement to populate apiManagementLoggerId.</summary>
 public partial class V1beta1APIDiagnosticSpecInitProviderApiManagementLoggerIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -761,6 +798,7 @@ public partial class V1beta1APIDiagnosticSpecInitProviderApiManagementLoggerIdSe
     public V1beta1APIDiagnosticSpecInitProviderApiManagementLoggerIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticSpecInitProviderBackendRequestDataMaskingHeaders
 {
     /// <summary>The data masking mode. Possible values are Mask and Hide for query_params. The only possible value is Mask for headers.</summary>
@@ -772,6 +810,7 @@ public partial class V1beta1APIDiagnosticSpecInitProviderBackendRequestDataMaski
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticSpecInitProviderBackendRequestDataMaskingQueryParams
 {
     /// <summary>The data masking mode. Possible values are Mask and Hide for query_params. The only possible value is Mask for headers.</summary>
@@ -783,6 +822,7 @@ public partial class V1beta1APIDiagnosticSpecInitProviderBackendRequestDataMaski
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticSpecInitProviderBackendRequestDataMasking
 {
     /// <summary>A headers block as defined below.</summary>
@@ -794,6 +834,7 @@ public partial class V1beta1APIDiagnosticSpecInitProviderBackendRequestDataMaski
     public IList<V1beta1APIDiagnosticSpecInitProviderBackendRequestDataMaskingQueryParams>? QueryParams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticSpecInitProviderBackendRequest
 {
     /// <summary>Number of payload bytes to log (up to 8192).</summary>
@@ -809,6 +850,7 @@ public partial class V1beta1APIDiagnosticSpecInitProviderBackendRequest
     public IList<string>? HeadersToLog { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticSpecInitProviderBackendResponseDataMaskingHeaders
 {
     /// <summary>The data masking mode. Possible values are Mask and Hide for query_params. The only possible value is Mask for headers.</summary>
@@ -820,6 +862,7 @@ public partial class V1beta1APIDiagnosticSpecInitProviderBackendResponseDataMask
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticSpecInitProviderBackendResponseDataMaskingQueryParams
 {
     /// <summary>The data masking mode. Possible values are Mask and Hide for query_params. The only possible value is Mask for headers.</summary>
@@ -831,6 +874,7 @@ public partial class V1beta1APIDiagnosticSpecInitProviderBackendResponseDataMask
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticSpecInitProviderBackendResponseDataMasking
 {
     /// <summary>A headers block as defined below.</summary>
@@ -842,6 +886,7 @@ public partial class V1beta1APIDiagnosticSpecInitProviderBackendResponseDataMask
     public IList<V1beta1APIDiagnosticSpecInitProviderBackendResponseDataMaskingQueryParams>? QueryParams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticSpecInitProviderBackendResponse
 {
     /// <summary>Number of payload bytes to log (up to 8192).</summary>
@@ -857,6 +902,7 @@ public partial class V1beta1APIDiagnosticSpecInitProviderBackendResponse
     public IList<string>? HeadersToLog { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticSpecInitProviderFrontendRequestDataMaskingHeaders
 {
     /// <summary>The data masking mode. Possible values are Mask and Hide for query_params. The only possible value is Mask for headers.</summary>
@@ -868,6 +914,7 @@ public partial class V1beta1APIDiagnosticSpecInitProviderFrontendRequestDataMask
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticSpecInitProviderFrontendRequestDataMaskingQueryParams
 {
     /// <summary>The data masking mode. Possible values are Mask and Hide for query_params. The only possible value is Mask for headers.</summary>
@@ -879,6 +926,7 @@ public partial class V1beta1APIDiagnosticSpecInitProviderFrontendRequestDataMask
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticSpecInitProviderFrontendRequestDataMasking
 {
     /// <summary>A headers block as defined below.</summary>
@@ -890,6 +938,7 @@ public partial class V1beta1APIDiagnosticSpecInitProviderFrontendRequestDataMask
     public IList<V1beta1APIDiagnosticSpecInitProviderFrontendRequestDataMaskingQueryParams>? QueryParams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticSpecInitProviderFrontendRequest
 {
     /// <summary>Number of payload bytes to log (up to 8192).</summary>
@@ -905,6 +954,7 @@ public partial class V1beta1APIDiagnosticSpecInitProviderFrontendRequest
     public IList<string>? HeadersToLog { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticSpecInitProviderFrontendResponseDataMaskingHeaders
 {
     /// <summary>The data masking mode. Possible values are Mask and Hide for query_params. The only possible value is Mask for headers.</summary>
@@ -916,6 +966,7 @@ public partial class V1beta1APIDiagnosticSpecInitProviderFrontendResponseDataMas
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticSpecInitProviderFrontendResponseDataMaskingQueryParams
 {
     /// <summary>The data masking mode. Possible values are Mask and Hide for query_params. The only possible value is Mask for headers.</summary>
@@ -927,6 +978,7 @@ public partial class V1beta1APIDiagnosticSpecInitProviderFrontendResponseDataMas
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticSpecInitProviderFrontendResponseDataMasking
 {
     /// <summary>A headers block as defined below.</summary>
@@ -938,6 +990,7 @@ public partial class V1beta1APIDiagnosticSpecInitProviderFrontendResponseDataMas
     public IList<V1beta1APIDiagnosticSpecInitProviderFrontendResponseDataMaskingQueryParams>? QueryParams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticSpecInitProviderFrontendResponse
 {
     /// <summary>Number of payload bytes to log (up to 8192).</summary>
@@ -953,6 +1006,7 @@ public partial class V1beta1APIDiagnosticSpecInitProviderFrontendResponse
     public IList<string>? HeadersToLog { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1APIDiagnosticSpecInitProvider
 {
     /// <summary>Always log errors. Send telemetry if there is an erroneous condition, regardless of sampling settings.</summary>
@@ -1050,6 +1104,7 @@ public enum V1beta1APIDiagnosticSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1APIDiagnosticSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1063,6 +1118,7 @@ public partial class V1beta1APIDiagnosticSpecProviderConfigRefPolicy
     public V1beta1APIDiagnosticSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1APIDiagnosticSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1094,6 +1150,7 @@ public enum V1beta1APIDiagnosticSpecPublishConnectionDetailsToConfigRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1APIDiagnosticSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1107,6 +1164,7 @@ public partial class V1beta1APIDiagnosticSpecPublishConnectionDetailsToConfigRef
     public V1beta1APIDiagnosticSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1APIDiagnosticSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1118,6 +1176,7 @@ public partial class V1beta1APIDiagnosticSpecPublishConnectionDetailsToConfigRef
     public V1beta1APIDiagnosticSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1APIDiagnosticSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1133,6 +1192,7 @@ public partial class V1beta1APIDiagnosticSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1APIDiagnosticSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1148,6 +1208,7 @@ public partial class V1beta1APIDiagnosticSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1APIDiagnosticSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1159,6 +1220,7 @@ public partial class V1beta1APIDiagnosticSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>APIDiagnosticSpec defines the desired state of APIDiagnostic</summary>
 public partial class V1beta1APIDiagnosticSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1191,6 +1253,7 @@ public partial class V1beta1APIDiagnosticSpec
     public V1beta1APIDiagnosticSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticStatusAtProviderBackendRequestDataMaskingHeaders
 {
     /// <summary>The data masking mode. Possible values are Mask and Hide for query_params. The only possible value is Mask for headers.</summary>
@@ -1202,6 +1265,7 @@ public partial class V1beta1APIDiagnosticStatusAtProviderBackendRequestDataMaski
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticStatusAtProviderBackendRequestDataMaskingQueryParams
 {
     /// <summary>The data masking mode. Possible values are Mask and Hide for query_params. The only possible value is Mask for headers.</summary>
@@ -1213,6 +1277,7 @@ public partial class V1beta1APIDiagnosticStatusAtProviderBackendRequestDataMaski
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticStatusAtProviderBackendRequestDataMasking
 {
     /// <summary>A headers block as defined below.</summary>
@@ -1224,6 +1289,7 @@ public partial class V1beta1APIDiagnosticStatusAtProviderBackendRequestDataMaski
     public IList<V1beta1APIDiagnosticStatusAtProviderBackendRequestDataMaskingQueryParams>? QueryParams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticStatusAtProviderBackendRequest
 {
     /// <summary>Number of payload bytes to log (up to 8192).</summary>
@@ -1239,6 +1305,7 @@ public partial class V1beta1APIDiagnosticStatusAtProviderBackendRequest
     public IList<string>? HeadersToLog { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticStatusAtProviderBackendResponseDataMaskingHeaders
 {
     /// <summary>The data masking mode. Possible values are Mask and Hide for query_params. The only possible value is Mask for headers.</summary>
@@ -1250,6 +1317,7 @@ public partial class V1beta1APIDiagnosticStatusAtProviderBackendResponseDataMask
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticStatusAtProviderBackendResponseDataMaskingQueryParams
 {
     /// <summary>The data masking mode. Possible values are Mask and Hide for query_params. The only possible value is Mask for headers.</summary>
@@ -1261,6 +1329,7 @@ public partial class V1beta1APIDiagnosticStatusAtProviderBackendResponseDataMask
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticStatusAtProviderBackendResponseDataMasking
 {
     /// <summary>A headers block as defined below.</summary>
@@ -1272,6 +1341,7 @@ public partial class V1beta1APIDiagnosticStatusAtProviderBackendResponseDataMask
     public IList<V1beta1APIDiagnosticStatusAtProviderBackendResponseDataMaskingQueryParams>? QueryParams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticStatusAtProviderBackendResponse
 {
     /// <summary>Number of payload bytes to log (up to 8192).</summary>
@@ -1287,6 +1357,7 @@ public partial class V1beta1APIDiagnosticStatusAtProviderBackendResponse
     public IList<string>? HeadersToLog { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticStatusAtProviderFrontendRequestDataMaskingHeaders
 {
     /// <summary>The data masking mode. Possible values are Mask and Hide for query_params. The only possible value is Mask for headers.</summary>
@@ -1298,6 +1369,7 @@ public partial class V1beta1APIDiagnosticStatusAtProviderFrontendRequestDataMask
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticStatusAtProviderFrontendRequestDataMaskingQueryParams
 {
     /// <summary>The data masking mode. Possible values are Mask and Hide for query_params. The only possible value is Mask for headers.</summary>
@@ -1309,6 +1381,7 @@ public partial class V1beta1APIDiagnosticStatusAtProviderFrontendRequestDataMask
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticStatusAtProviderFrontendRequestDataMasking
 {
     /// <summary>A headers block as defined below.</summary>
@@ -1320,6 +1393,7 @@ public partial class V1beta1APIDiagnosticStatusAtProviderFrontendRequestDataMask
     public IList<V1beta1APIDiagnosticStatusAtProviderFrontendRequestDataMaskingQueryParams>? QueryParams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticStatusAtProviderFrontendRequest
 {
     /// <summary>Number of payload bytes to log (up to 8192).</summary>
@@ -1335,6 +1409,7 @@ public partial class V1beta1APIDiagnosticStatusAtProviderFrontendRequest
     public IList<string>? HeadersToLog { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticStatusAtProviderFrontendResponseDataMaskingHeaders
 {
     /// <summary>The data masking mode. Possible values are Mask and Hide for query_params. The only possible value is Mask for headers.</summary>
@@ -1346,6 +1421,7 @@ public partial class V1beta1APIDiagnosticStatusAtProviderFrontendResponseDataMas
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticStatusAtProviderFrontendResponseDataMaskingQueryParams
 {
     /// <summary>The data masking mode. Possible values are Mask and Hide for query_params. The only possible value is Mask for headers.</summary>
@@ -1357,6 +1433,7 @@ public partial class V1beta1APIDiagnosticStatusAtProviderFrontendResponseDataMas
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticStatusAtProviderFrontendResponseDataMasking
 {
     /// <summary>A headers block as defined below.</summary>
@@ -1368,6 +1445,7 @@ public partial class V1beta1APIDiagnosticStatusAtProviderFrontendResponseDataMas
     public IList<V1beta1APIDiagnosticStatusAtProviderFrontendResponseDataMaskingQueryParams>? QueryParams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticStatusAtProviderFrontendResponse
 {
     /// <summary>Number of payload bytes to log (up to 8192).</summary>
@@ -1383,6 +1461,7 @@ public partial class V1beta1APIDiagnosticStatusAtProviderFrontendResponse
     public IList<string>? HeadersToLog { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIDiagnosticStatusAtProvider
 {
     /// <summary>Always log errors. Send telemetry if there is an erroneous condition, regardless of sampling settings.</summary>
@@ -1446,6 +1525,7 @@ public partial class V1beta1APIDiagnosticStatusAtProvider
     public string? Verbosity { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1APIDiagnosticStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1473,6 +1553,7 @@ public partial class V1beta1APIDiagnosticStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>APIDiagnosticStatus defines the observed state of APIDiagnostic.</summary>
 public partial class V1beta1APIDiagnosticStatus
 {
     /// <summary></summary>
@@ -1489,6 +1570,7 @@ public partial class V1beta1APIDiagnosticStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>APIDiagnostic is the Schema for the APIDiagnostics API. Manages a API Management Service API Diagnostics Logs.</summary>
 public partial class V1beta1APIDiagnostic : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1APIDiagnosticSpec>, IStatus<V1beta1APIDiagnosticStatus>
 {
     public const string KubeApiVersion = "v1beta1";

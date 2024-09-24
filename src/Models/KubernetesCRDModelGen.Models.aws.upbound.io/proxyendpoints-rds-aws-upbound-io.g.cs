@@ -38,6 +38,7 @@ public enum V1beta1ProxyEndpointSpecForProviderDbProxyNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ProxyEndpointSpecForProviderDbProxyNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ProxyEndpointSpecForProviderDbProxyNameRefPolicy
     public V1beta1ProxyEndpointSpecForProviderDbProxyNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Proxy in rds to populate dbProxyName.</summary>
 public partial class V1beta1ProxyEndpointSpecForProviderDbProxyNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ProxyEndpointSpecForProviderDbProxyNameSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ProxyEndpointSpecForProviderDbProxyNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ProxyEndpointSpecForProviderDbProxyNameSelectorPolic
     public V1beta1ProxyEndpointSpecForProviderDbProxyNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Proxy in rds to populate dbProxyName.</summary>
 public partial class V1beta1ProxyEndpointSpecForProviderDbProxyNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1ProxyEndpointSpecForProviderVpcSecurityGroupIdRefsPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ProxyEndpointSpecForProviderVpcSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1ProxyEndpointSpecForProviderVpcSecurityGroupIdRefsPo
     public V1beta1ProxyEndpointSpecForProviderVpcSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1ProxyEndpointSpecForProviderVpcSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1ProxyEndpointSpecForProviderVpcSecurityGroupIdSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ProxyEndpointSpecForProviderVpcSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1ProxyEndpointSpecForProviderVpcSecurityGroupIdSelect
     public V1beta1ProxyEndpointSpecForProviderVpcSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate vpcSecurityGroupIds.</summary>
 public partial class V1beta1ProxyEndpointSpecForProviderVpcSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1ProxyEndpointSpecForProviderVpcSecurityGroupIdSelect
     public V1beta1ProxyEndpointSpecForProviderVpcSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ProxyEndpointSpecForProvider
 {
     /// <summary>The name of the DB proxy associated with the DB proxy endpoint that you create.</summary>
@@ -265,6 +274,7 @@ public enum V1beta1ProxyEndpointSpecInitProviderVpcSecurityGroupIdRefsPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ProxyEndpointSpecInitProviderVpcSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -278,6 +288,7 @@ public partial class V1beta1ProxyEndpointSpecInitProviderVpcSecurityGroupIdRefsP
     public V1beta1ProxyEndpointSpecInitProviderVpcSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1ProxyEndpointSpecInitProviderVpcSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -309,6 +320,7 @@ public enum V1beta1ProxyEndpointSpecInitProviderVpcSecurityGroupIdSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ProxyEndpointSpecInitProviderVpcSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -322,6 +334,7 @@ public partial class V1beta1ProxyEndpointSpecInitProviderVpcSecurityGroupIdSelec
     public V1beta1ProxyEndpointSpecInitProviderVpcSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate vpcSecurityGroupIds.</summary>
 public partial class V1beta1ProxyEndpointSpecInitProviderVpcSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -337,6 +350,7 @@ public partial class V1beta1ProxyEndpointSpecInitProviderVpcSecurityGroupIdSelec
     public V1beta1ProxyEndpointSpecInitProviderVpcSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ProxyEndpointSpecInitProvider
 {
     /// <summary>Key-value map of resource tags.</summary>
@@ -406,6 +420,7 @@ public enum V1beta1ProxyEndpointSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ProxyEndpointSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -419,6 +434,7 @@ public partial class V1beta1ProxyEndpointSpecProviderConfigRefPolicy
     public V1beta1ProxyEndpointSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ProxyEndpointSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -450,6 +466,7 @@ public enum V1beta1ProxyEndpointSpecPublishConnectionDetailsToConfigRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ProxyEndpointSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -463,6 +480,7 @@ public partial class V1beta1ProxyEndpointSpecPublishConnectionDetailsToConfigRef
     public V1beta1ProxyEndpointSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ProxyEndpointSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -474,6 +492,7 @@ public partial class V1beta1ProxyEndpointSpecPublishConnectionDetailsToConfigRef
     public V1beta1ProxyEndpointSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ProxyEndpointSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -489,6 +508,7 @@ public partial class V1beta1ProxyEndpointSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ProxyEndpointSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -504,6 +524,7 @@ public partial class V1beta1ProxyEndpointSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ProxyEndpointSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -515,6 +536,7 @@ public partial class V1beta1ProxyEndpointSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ProxyEndpointSpec defines the desired state of ProxyEndpoint</summary>
 public partial class V1beta1ProxyEndpointSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -547,6 +569,7 @@ public partial class V1beta1ProxyEndpointSpec
     public V1beta1ProxyEndpointSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ProxyEndpointStatusAtProvider
 {
     /// <summary>The Amazon Resource Name (ARN) for the proxy endpoint.</summary>
@@ -594,6 +617,7 @@ public partial class V1beta1ProxyEndpointStatusAtProvider
     public IList<string>? VpcSubnetIds { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ProxyEndpointStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -621,6 +645,7 @@ public partial class V1beta1ProxyEndpointStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ProxyEndpointStatus defines the observed state of ProxyEndpoint.</summary>
 public partial class V1beta1ProxyEndpointStatus
 {
     /// <summary></summary>
@@ -637,6 +662,7 @@ public partial class V1beta1ProxyEndpointStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ProxyEndpoint is the Schema for the ProxyEndpoints API. Provides an RDS DB proxy endpoint resource.</summary>
 public partial class V1beta1ProxyEndpoint : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ProxyEndpointSpec>, IStatus<V1beta1ProxyEndpointStatus>
 {
     public const string KubeApiVersion = "v1beta1";

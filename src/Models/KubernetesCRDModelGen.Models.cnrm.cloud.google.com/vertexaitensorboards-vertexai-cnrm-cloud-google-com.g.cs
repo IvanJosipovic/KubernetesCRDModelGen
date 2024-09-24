@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.vertexai.cnrm.cloud.google.com;
+/// <summary>Immutable. Customer-managed encryption key spec for a Tensorboard. If set, this Tensorboard and all sub-resources of this Tensorboard will be secured by this key.</summary>
 public partial class V1alpha1VertexAITensorboardSpecEncryptionSpec
 {
     /// <summary>Immutable. The Cloud KMS resource identifier of the customer managed encryption key used to protect a resource. Has the form: projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key. The key needs to be in the same region as where the resource is created.</summary>
@@ -15,6 +16,7 @@ public partial class V1alpha1VertexAITensorboardSpecEncryptionSpec
     public string KmsKeyName { get; set; }
 }
 
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1VertexAITensorboardSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -30,6 +32,7 @@ public partial class V1alpha1VertexAITensorboardSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1VertexAITensorboardSpec
 {
     /// <summary>Description of this Tensorboard.</summary>
@@ -57,6 +60,7 @@ public partial class V1alpha1VertexAITensorboardSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1VertexAITensorboardStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -80,6 +84,7 @@ public partial class V1alpha1VertexAITensorboardStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1VertexAITensorboardStatus
 {
     /// <summary>Consumer project Cloud Storage path prefix used to store blob data, which can either be a bucket or directory. Does not end with a '/'.</summary>
@@ -112,6 +117,7 @@ public partial class V1alpha1VertexAITensorboardStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1VertexAITensorboard : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1VertexAITensorboardSpec>, IStatus<V1alpha1VertexAITensorboardStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

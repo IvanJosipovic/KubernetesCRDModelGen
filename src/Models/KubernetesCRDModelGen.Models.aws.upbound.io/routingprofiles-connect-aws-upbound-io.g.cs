@@ -38,6 +38,7 @@ public enum V1beta2RoutingProfileSpecForProviderDefaultOutboundQueueIdRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2RoutingProfileSpecForProviderDefaultOutboundQueueIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta2RoutingProfileSpecForProviderDefaultOutboundQueueIdR
     public V1beta2RoutingProfileSpecForProviderDefaultOutboundQueueIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Queue in connect to populate defaultOutboundQueueId.</summary>
 public partial class V1beta2RoutingProfileSpecForProviderDefaultOutboundQueueIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta2RoutingProfileSpecForProviderDefaultOutboundQueueIdSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2RoutingProfileSpecForProviderDefaultOutboundQueueIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta2RoutingProfileSpecForProviderDefaultOutboundQueueIdS
     public V1beta2RoutingProfileSpecForProviderDefaultOutboundQueueIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Queue in connect to populate defaultOutboundQueueId.</summary>
 public partial class V1beta2RoutingProfileSpecForProviderDefaultOutboundQueueIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta2RoutingProfileSpecForProviderInstanceIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2RoutingProfileSpecForProviderInstanceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta2RoutingProfileSpecForProviderInstanceIdRefPolicy
     public V1beta2RoutingProfileSpecForProviderInstanceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Instance in connect to populate instanceId.</summary>
 public partial class V1beta2RoutingProfileSpecForProviderInstanceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta2RoutingProfileSpecForProviderInstanceIdSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2RoutingProfileSpecForProviderInstanceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta2RoutingProfileSpecForProviderInstanceIdSelectorPolic
     public V1beta2RoutingProfileSpecForProviderInstanceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Instance in connect to populate instanceId.</summary>
 public partial class V1beta2RoutingProfileSpecForProviderInstanceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta2RoutingProfileSpecForProviderInstanceIdSelector
     public V1beta2RoutingProfileSpecForProviderInstanceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2RoutingProfileSpecForProviderMediaConcurrencies
 {
     /// <summary>Specifies the channels that agents can handle in the Contact Control Panel (CCP). Valid values are VOICE, CHAT, TASK.</summary>
@@ -213,6 +222,7 @@ public partial class V1beta2RoutingProfileSpecForProviderMediaConcurrencies
     public double? Concurrency { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2RoutingProfileSpecForProviderQueueConfigs
 {
     /// <summary>Specifies the channels agents can handle in the Contact Control Panel (CCP) for this routing profile. Valid values are VOICE, CHAT, TASK.</summary>
@@ -232,6 +242,7 @@ public partial class V1beta2RoutingProfileSpecForProviderQueueConfigs
     public string? QueueId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2RoutingProfileSpecForProvider
 {
     /// <summary>Specifies the default outbound queue for the Routing Profile.</summary>
@@ -303,6 +314,7 @@ public enum V1beta2RoutingProfileSpecInitProviderDefaultOutboundQueueIdRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2RoutingProfileSpecInitProviderDefaultOutboundQueueIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -316,6 +328,7 @@ public partial class V1beta2RoutingProfileSpecInitProviderDefaultOutboundQueueId
     public V1beta2RoutingProfileSpecInitProviderDefaultOutboundQueueIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Queue in connect to populate defaultOutboundQueueId.</summary>
 public partial class V1beta2RoutingProfileSpecInitProviderDefaultOutboundQueueIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -347,6 +360,7 @@ public enum V1beta2RoutingProfileSpecInitProviderDefaultOutboundQueueIdSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2RoutingProfileSpecInitProviderDefaultOutboundQueueIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -360,6 +374,7 @@ public partial class V1beta2RoutingProfileSpecInitProviderDefaultOutboundQueueId
     public V1beta2RoutingProfileSpecInitProviderDefaultOutboundQueueIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Queue in connect to populate defaultOutboundQueueId.</summary>
 public partial class V1beta2RoutingProfileSpecInitProviderDefaultOutboundQueueIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -395,6 +410,7 @@ public enum V1beta2RoutingProfileSpecInitProviderInstanceIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2RoutingProfileSpecInitProviderInstanceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -408,6 +424,7 @@ public partial class V1beta2RoutingProfileSpecInitProviderInstanceIdRefPolicy
     public V1beta2RoutingProfileSpecInitProviderInstanceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Instance in connect to populate instanceId.</summary>
 public partial class V1beta2RoutingProfileSpecInitProviderInstanceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -439,6 +456,7 @@ public enum V1beta2RoutingProfileSpecInitProviderInstanceIdSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2RoutingProfileSpecInitProviderInstanceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -452,6 +470,7 @@ public partial class V1beta2RoutingProfileSpecInitProviderInstanceIdSelectorPoli
     public V1beta2RoutingProfileSpecInitProviderInstanceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Instance in connect to populate instanceId.</summary>
 public partial class V1beta2RoutingProfileSpecInitProviderInstanceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -467,6 +486,7 @@ public partial class V1beta2RoutingProfileSpecInitProviderInstanceIdSelector
     public V1beta2RoutingProfileSpecInitProviderInstanceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2RoutingProfileSpecInitProviderMediaConcurrencies
 {
     /// <summary>Specifies the channels that agents can handle in the Contact Control Panel (CCP). Valid values are VOICE, CHAT, TASK.</summary>
@@ -478,6 +498,7 @@ public partial class V1beta2RoutingProfileSpecInitProviderMediaConcurrencies
     public double? Concurrency { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2RoutingProfileSpecInitProviderQueueConfigs
 {
     /// <summary>Specifies the channels agents can handle in the Contact Control Panel (CCP) for this routing profile. Valid values are VOICE, CHAT, TASK.</summary>
@@ -497,6 +518,7 @@ public partial class V1beta2RoutingProfileSpecInitProviderQueueConfigs
     public string? QueueId { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta2RoutingProfileSpecInitProvider
 {
     /// <summary>Specifies the default outbound queue for the Routing Profile.</summary>
@@ -586,6 +608,7 @@ public enum V1beta2RoutingProfileSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2RoutingProfileSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -599,6 +622,7 @@ public partial class V1beta2RoutingProfileSpecProviderConfigRefPolicy
     public V1beta2RoutingProfileSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta2RoutingProfileSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -630,6 +654,7 @@ public enum V1beta2RoutingProfileSpecPublishConnectionDetailsToConfigRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2RoutingProfileSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -643,6 +668,7 @@ public partial class V1beta2RoutingProfileSpecPublishConnectionDetailsToConfigRe
     public V1beta2RoutingProfileSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta2RoutingProfileSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -654,6 +680,7 @@ public partial class V1beta2RoutingProfileSpecPublishConnectionDetailsToConfigRe
     public V1beta2RoutingProfileSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta2RoutingProfileSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -669,6 +696,7 @@ public partial class V1beta2RoutingProfileSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta2RoutingProfileSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -684,6 +712,7 @@ public partial class V1beta2RoutingProfileSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta2RoutingProfileSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -695,6 +724,7 @@ public partial class V1beta2RoutingProfileSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>RoutingProfileSpec defines the desired state of RoutingProfile</summary>
 public partial class V1beta2RoutingProfileSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -727,6 +757,7 @@ public partial class V1beta2RoutingProfileSpec
     public V1beta2RoutingProfileSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2RoutingProfileStatusAtProviderMediaConcurrencies
 {
     /// <summary>Specifies the channels that agents can handle in the Contact Control Panel (CCP). Valid values are VOICE, CHAT, TASK.</summary>
@@ -738,6 +769,7 @@ public partial class V1beta2RoutingProfileStatusAtProviderMediaConcurrencies
     public double? Concurrency { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2RoutingProfileStatusAtProviderQueueConfigs
 {
     /// <summary>Specifies the channels agents can handle in the Contact Control Panel (CCP) for this routing profile. Valid values are VOICE, CHAT, TASK.</summary>
@@ -765,6 +797,7 @@ public partial class V1beta2RoutingProfileStatusAtProviderQueueConfigs
     public string? QueueName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2RoutingProfileStatusAtProvider
 {
     /// <summary>The Amazon Resource Name (ARN) of the Routing Profile.</summary>
@@ -812,6 +845,7 @@ public partial class V1beta2RoutingProfileStatusAtProvider
     public IDictionary<string, string>? TagsAll { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta2RoutingProfileStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -839,6 +873,7 @@ public partial class V1beta2RoutingProfileStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>RoutingProfileStatus defines the observed state of RoutingProfile.</summary>
 public partial class V1beta2RoutingProfileStatus
 {
     /// <summary></summary>
@@ -855,6 +890,7 @@ public partial class V1beta2RoutingProfileStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>RoutingProfile is the Schema for the RoutingProfiles API. Provides details about a specific Amazon Connect Routing Profile.</summary>
 public partial class V1beta2RoutingProfile : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta2RoutingProfileSpec>, IStatus<V1beta2RoutingProfileStatus>
 {
     public const string KubeApiVersion = "v1beta2";

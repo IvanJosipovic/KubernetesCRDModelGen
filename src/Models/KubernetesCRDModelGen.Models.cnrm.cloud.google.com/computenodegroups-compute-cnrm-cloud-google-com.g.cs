@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary>Immutable. If you use sole-tenant nodes for your workloads, you can use the node group autoscaler to automatically manage the sizes of your node groups.</summary>
 public partial class V1beta1ComputeNodeGroupSpecAutoscalingPolicy
 {
     /// <summary>Immutable. Maximum size of the node group. Set to a value less than or equal to 100 and greater than or equal to min-nodes.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1ComputeNodeGroupSpecAutoscalingPolicy
     public string? Mode { get; set; }
 }
 
+/// <summary>Immutable. contains properties for the timeframe of maintenance.</summary>
 public partial class V1beta1ComputeNodeGroupSpecMaintenanceWindow
 {
     /// <summary>Immutable. instances.start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.</summary>
@@ -30,6 +32,7 @@ public partial class V1beta1ComputeNodeGroupSpecMaintenanceWindow
     public string StartTime { get; set; }
 }
 
+/// <summary>The node template to which this node group belongs.</summary>
 public partial class V1beta1ComputeNodeGroupSpecNodeTemplateRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNodeTemplate` resource.</summary>
@@ -45,6 +48,7 @@ public partial class V1beta1ComputeNodeGroupSpecNodeTemplateRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The key of this project config in the parent map.</summary>
 public partial class V1beta1ComputeNodeGroupSpecShareSettingsProjectMapIdRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -60,6 +64,7 @@ public partial class V1beta1ComputeNodeGroupSpecShareSettingsProjectMapIdRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The project id/number should be the same as the key of this project config in the project map.</summary>
 public partial class V1beta1ComputeNodeGroupSpecShareSettingsProjectMapProjectIdRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -75,6 +80,7 @@ public partial class V1beta1ComputeNodeGroupSpecShareSettingsProjectMapProjectId
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeNodeGroupSpecShareSettingsProjectMap
 {
     /// <summary>The key of this project config in the parent map.</summary>
@@ -86,6 +92,7 @@ public partial class V1beta1ComputeNodeGroupSpecShareSettingsProjectMap
     public V1beta1ComputeNodeGroupSpecShareSettingsProjectMapProjectIdRef ProjectIdRef { get; set; }
 }
 
+/// <summary>Immutable. Share settings for the node group.</summary>
 public partial class V1beta1ComputeNodeGroupSpecShareSettings
 {
     /// <summary>Immutable. A map of project id and project config. This is only valid when shareType's value is SPECIFIC_PROJECTS.</summary>
@@ -97,6 +104,7 @@ public partial class V1beta1ComputeNodeGroupSpecShareSettings
     public string ShareType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeNodeGroupSpec
 {
     /// <summary>Immutable. If you use sole-tenant nodes for your workloads, you can use the node group autoscaler to automatically manage the sizes of your node groups.</summary>
@@ -140,6 +148,7 @@ public partial class V1beta1ComputeNodeGroupSpec
     public string Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeNodeGroupStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -163,6 +172,7 @@ public partial class V1beta1ComputeNodeGroupStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeNodeGroupStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -183,6 +193,7 @@ public partial class V1beta1ComputeNodeGroupStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ComputeNodeGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeNodeGroupSpec>, IStatus<V1beta1ComputeNodeGroupStatus>
 {
     public const string KubeApiVersion = "v1beta1";

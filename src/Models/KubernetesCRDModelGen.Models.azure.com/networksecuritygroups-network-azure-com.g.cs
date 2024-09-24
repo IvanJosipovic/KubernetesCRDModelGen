@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20201101storageNetworkSecurityGroupSpecOwner
 {
     /// <summary></summary>
@@ -19,6 +20,7 @@ public partial class V1api20201101storageNetworkSecurityGroupSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.NetworkSecurityGroup_Spec</summary>
 public partial class V1api20201101storageNetworkSecurityGroupSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -46,6 +48,7 @@ public partial class V1api20201101storageNetworkSecurityGroupSpec
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20201101storageNetworkSecurityGroupStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -77,6 +80,7 @@ public partial class V1api20201101storageNetworkSecurityGroupStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SecurityRule_STATUS Network security rule.</summary>
 public partial class V1api20201101storageNetworkSecurityGroupStatusDefaultSecurityRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -88,6 +92,7 @@ public partial class V1api20201101storageNetworkSecurityGroupStatusDefaultSecuri
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.FlowLog_STATUS A flow log resource.</summary>
 public partial class V1api20201101storageNetworkSecurityGroupStatusFlowLogs
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -99,6 +104,7 @@ public partial class V1api20201101storageNetworkSecurityGroupStatusFlowLogs
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.NetworkInterface_STATUS_NetworkSecurityGroup_SubResourceEmbedded A network interface in a resource group.</summary>
 public partial class V1api20201101storageNetworkSecurityGroupStatusNetworkInterfaces
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -110,6 +116,7 @@ public partial class V1api20201101storageNetworkSecurityGroupStatusNetworkInterf
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.Subnet_STATUS_NetworkSecurityGroup_SubResourceEmbedded Subnet in a virtual network resource.</summary>
 public partial class V1api20201101storageNetworkSecurityGroupStatusSubnets
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -121,6 +128,7 @@ public partial class V1api20201101storageNetworkSecurityGroupStatusSubnets
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.NetworkSecurityGroup_STATUS_NetworkSecurityGroup_SubResourceEmbedded NetworkSecurityGroup resource.</summary>
 public partial class V1api20201101storageNetworkSecurityGroupStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -181,6 +189,7 @@ public partial class V1api20201101storageNetworkSecurityGroupStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20201101.NetworkSecurityGroup Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/networkSecurityGroup.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkSecurityGroups/{networkSecurityGroupName}</summary>
 public partial class V1api20201101storageNetworkSecurityGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20201101storageNetworkSecurityGroupSpec>, IStatus<V1api20201101storageNetworkSecurityGroupStatus>
 {
     public const string KubeApiVersion = "v1api20201101storage";

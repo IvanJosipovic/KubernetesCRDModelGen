@@ -18,6 +18,7 @@ public enum V1beta1OntapFileSystemSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1OntapFileSystemSpecForProviderDiskIopsConfiguration
 {
     /// <summary>- The total number of SSD IOPS provisioned for the file system.</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1OntapFileSystemSpecForProviderDiskIopsConfiguration
     public string? Mode { get; set; }
 }
 
+/// <summary>The ONTAP administrative password for the fsxadmin user that you can use to administer your file system using the ONTAP CLI and REST API.</summary>
 public partial class V1beta1OntapFileSystemSpecForProviderFsxAdminPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -64,6 +66,7 @@ public enum V1beta1OntapFileSystemSpecForProviderKmsKeyIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OntapFileSystemSpecForProviderKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -77,6 +80,7 @@ public partial class V1beta1OntapFileSystemSpecForProviderKmsKeyIdRefPolicy
     public V1beta1OntapFileSystemSpecForProviderKmsKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1OntapFileSystemSpecForProviderKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -108,6 +112,7 @@ public enum V1beta1OntapFileSystemSpecForProviderKmsKeyIdSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1OntapFileSystemSpecForProviderKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1OntapFileSystemSpecForProviderKmsKeyIdSelectorPolicy
     public V1beta1OntapFileSystemSpecForProviderKmsKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1OntapFileSystemSpecForProviderKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -156,6 +162,7 @@ public enum V1beta1OntapFileSystemSpecForProviderPreferredSubnetIdRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OntapFileSystemSpecForProviderPreferredSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -169,6 +176,7 @@ public partial class V1beta1OntapFileSystemSpecForProviderPreferredSubnetIdRefPo
     public V1beta1OntapFileSystemSpecForProviderPreferredSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in ec2 to populate preferredSubnetId.</summary>
 public partial class V1beta1OntapFileSystemSpecForProviderPreferredSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -200,6 +208,7 @@ public enum V1beta1OntapFileSystemSpecForProviderPreferredSubnetIdSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1OntapFileSystemSpecForProviderPreferredSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -213,6 +222,7 @@ public partial class V1beta1OntapFileSystemSpecForProviderPreferredSubnetIdSelec
     public V1beta1OntapFileSystemSpecForProviderPreferredSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in ec2 to populate preferredSubnetId.</summary>
 public partial class V1beta1OntapFileSystemSpecForProviderPreferredSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -248,6 +258,7 @@ public enum V1beta1OntapFileSystemSpecForProviderSecurityGroupIdRefsPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OntapFileSystemSpecForProviderSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -261,6 +272,7 @@ public partial class V1beta1OntapFileSystemSpecForProviderSecurityGroupIdRefsPol
     public V1beta1OntapFileSystemSpecForProviderSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1OntapFileSystemSpecForProviderSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -292,6 +304,7 @@ public enum V1beta1OntapFileSystemSpecForProviderSecurityGroupIdSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1OntapFileSystemSpecForProviderSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -305,6 +318,7 @@ public partial class V1beta1OntapFileSystemSpecForProviderSecurityGroupIdSelecto
     public V1beta1OntapFileSystemSpecForProviderSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 public partial class V1beta1OntapFileSystemSpecForProviderSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -340,6 +354,7 @@ public enum V1beta1OntapFileSystemSpecForProviderSubnetIdRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OntapFileSystemSpecForProviderSubnetIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -353,6 +368,7 @@ public partial class V1beta1OntapFileSystemSpecForProviderSubnetIdRefsPolicy
     public V1beta1OntapFileSystemSpecForProviderSubnetIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1OntapFileSystemSpecForProviderSubnetIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -384,6 +400,7 @@ public enum V1beta1OntapFileSystemSpecForProviderSubnetIdSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1OntapFileSystemSpecForProviderSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -397,6 +414,7 @@ public partial class V1beta1OntapFileSystemSpecForProviderSubnetIdSelectorPolicy
     public V1beta1OntapFileSystemSpecForProviderSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 public partial class V1beta1OntapFileSystemSpecForProviderSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -412,6 +430,7 @@ public partial class V1beta1OntapFileSystemSpecForProviderSubnetIdSelector
     public V1beta1OntapFileSystemSpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OntapFileSystemSpecForProvider
 {
     /// <summary>The number of days to retain automatic backups. Setting this to 0 disables automatic backups. You can retain automatic backups for a maximum of 90 days.</summary>
@@ -523,6 +542,7 @@ public partial class V1beta1OntapFileSystemSpecForProvider
     public string? WeeklyMaintenanceStartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OntapFileSystemSpecInitProviderDiskIopsConfiguration
 {
     /// <summary>- The total number of SSD IOPS provisioned for the file system.</summary>
@@ -534,6 +554,7 @@ public partial class V1beta1OntapFileSystemSpecInitProviderDiskIopsConfiguration
     public string? Mode { get; set; }
 }
 
+/// <summary>The ONTAP administrative password for the fsxadmin user that you can use to administer your file system using the ONTAP CLI and REST API.</summary>
 public partial class V1beta1OntapFileSystemSpecInitProviderFsxAdminPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -569,6 +590,7 @@ public enum V1beta1OntapFileSystemSpecInitProviderKmsKeyIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OntapFileSystemSpecInitProviderKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -582,6 +604,7 @@ public partial class V1beta1OntapFileSystemSpecInitProviderKmsKeyIdRefPolicy
     public V1beta1OntapFileSystemSpecInitProviderKmsKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1OntapFileSystemSpecInitProviderKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -613,6 +636,7 @@ public enum V1beta1OntapFileSystemSpecInitProviderKmsKeyIdSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1OntapFileSystemSpecInitProviderKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -626,6 +650,7 @@ public partial class V1beta1OntapFileSystemSpecInitProviderKmsKeyIdSelectorPolic
     public V1beta1OntapFileSystemSpecInitProviderKmsKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1OntapFileSystemSpecInitProviderKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -661,6 +686,7 @@ public enum V1beta1OntapFileSystemSpecInitProviderPreferredSubnetIdRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OntapFileSystemSpecInitProviderPreferredSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -674,6 +700,7 @@ public partial class V1beta1OntapFileSystemSpecInitProviderPreferredSubnetIdRefP
     public V1beta1OntapFileSystemSpecInitProviderPreferredSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in ec2 to populate preferredSubnetId.</summary>
 public partial class V1beta1OntapFileSystemSpecInitProviderPreferredSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -705,6 +732,7 @@ public enum V1beta1OntapFileSystemSpecInitProviderPreferredSubnetIdSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1OntapFileSystemSpecInitProviderPreferredSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -718,6 +746,7 @@ public partial class V1beta1OntapFileSystemSpecInitProviderPreferredSubnetIdSele
     public V1beta1OntapFileSystemSpecInitProviderPreferredSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in ec2 to populate preferredSubnetId.</summary>
 public partial class V1beta1OntapFileSystemSpecInitProviderPreferredSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -753,6 +782,7 @@ public enum V1beta1OntapFileSystemSpecInitProviderSecurityGroupIdRefsPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OntapFileSystemSpecInitProviderSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -766,6 +796,7 @@ public partial class V1beta1OntapFileSystemSpecInitProviderSecurityGroupIdRefsPo
     public V1beta1OntapFileSystemSpecInitProviderSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1OntapFileSystemSpecInitProviderSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -797,6 +828,7 @@ public enum V1beta1OntapFileSystemSpecInitProviderSecurityGroupIdSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1OntapFileSystemSpecInitProviderSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -810,6 +842,7 @@ public partial class V1beta1OntapFileSystemSpecInitProviderSecurityGroupIdSelect
     public V1beta1OntapFileSystemSpecInitProviderSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 public partial class V1beta1OntapFileSystemSpecInitProviderSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -845,6 +878,7 @@ public enum V1beta1OntapFileSystemSpecInitProviderSubnetIdRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OntapFileSystemSpecInitProviderSubnetIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -858,6 +892,7 @@ public partial class V1beta1OntapFileSystemSpecInitProviderSubnetIdRefsPolicy
     public V1beta1OntapFileSystemSpecInitProviderSubnetIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1OntapFileSystemSpecInitProviderSubnetIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -889,6 +924,7 @@ public enum V1beta1OntapFileSystemSpecInitProviderSubnetIdSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1OntapFileSystemSpecInitProviderSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -902,6 +938,7 @@ public partial class V1beta1OntapFileSystemSpecInitProviderSubnetIdSelectorPolic
     public V1beta1OntapFileSystemSpecInitProviderSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 public partial class V1beta1OntapFileSystemSpecInitProviderSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -917,6 +954,7 @@ public partial class V1beta1OntapFileSystemSpecInitProviderSubnetIdSelector
     public V1beta1OntapFileSystemSpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1OntapFileSystemSpecInitProvider
 {
     /// <summary>The number of days to retain automatic backups. Setting this to 0 disables automatic backups. You can retain automatic backups for a maximum of 90 days.</summary>
@@ -1066,6 +1104,7 @@ public enum V1beta1OntapFileSystemSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OntapFileSystemSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1079,6 +1118,7 @@ public partial class V1beta1OntapFileSystemSpecProviderConfigRefPolicy
     public V1beta1OntapFileSystemSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1OntapFileSystemSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1110,6 +1150,7 @@ public enum V1beta1OntapFileSystemSpecPublishConnectionDetailsToConfigRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OntapFileSystemSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1123,6 +1164,7 @@ public partial class V1beta1OntapFileSystemSpecPublishConnectionDetailsToConfigR
     public V1beta1OntapFileSystemSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1OntapFileSystemSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1134,6 +1176,7 @@ public partial class V1beta1OntapFileSystemSpecPublishConnectionDetailsToConfigR
     public V1beta1OntapFileSystemSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1OntapFileSystemSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1149,6 +1192,7 @@ public partial class V1beta1OntapFileSystemSpecPublishConnectionDetailsToMetadat
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1OntapFileSystemSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1164,6 +1208,7 @@ public partial class V1beta1OntapFileSystemSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1OntapFileSystemSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1175,6 +1220,7 @@ public partial class V1beta1OntapFileSystemSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>OntapFileSystemSpec defines the desired state of OntapFileSystem</summary>
 public partial class V1beta1OntapFileSystemSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1207,6 +1253,7 @@ public partial class V1beta1OntapFileSystemSpec
     public V1beta1OntapFileSystemSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OntapFileSystemStatusAtProviderDiskIopsConfiguration
 {
     /// <summary>- The total number of SSD IOPS provisioned for the file system.</summary>
@@ -1218,6 +1265,7 @@ public partial class V1beta1OntapFileSystemStatusAtProviderDiskIopsConfiguration
     public string? Mode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OntapFileSystemStatusAtProviderEndpointsIntercluster
 {
     /// <summary>DNS name for the file system, e.g., fs-12345678.fsx.us-west-2.amazonaws.com</summary>
@@ -1229,6 +1277,7 @@ public partial class V1beta1OntapFileSystemStatusAtProviderEndpointsIntercluster
     public IList<string>? IpAddresses { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OntapFileSystemStatusAtProviderEndpointsManagement
 {
     /// <summary>DNS name for the file system, e.g., fs-12345678.fsx.us-west-2.amazonaws.com</summary>
@@ -1240,6 +1289,7 @@ public partial class V1beta1OntapFileSystemStatusAtProviderEndpointsManagement
     public IList<string>? IpAddresses { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OntapFileSystemStatusAtProviderEndpoints
 {
     /// <summary>An endpoint for managing your file system by setting up NetApp SnapMirror with other ONTAP systems. See Endpoint.</summary>
@@ -1251,6 +1301,7 @@ public partial class V1beta1OntapFileSystemStatusAtProviderEndpoints
     public IList<V1beta1OntapFileSystemStatusAtProviderEndpointsManagement>? Management { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OntapFileSystemStatusAtProvider
 {
     /// <summary>Amazon Resource Name of the file system.</summary>
@@ -1354,6 +1405,7 @@ public partial class V1beta1OntapFileSystemStatusAtProvider
     public string? WeeklyMaintenanceStartTime { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1OntapFileSystemStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1381,6 +1433,7 @@ public partial class V1beta1OntapFileSystemStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>OntapFileSystemStatus defines the observed state of OntapFileSystem.</summary>
 public partial class V1beta1OntapFileSystemStatus
 {
     /// <summary></summary>
@@ -1397,6 +1450,7 @@ public partial class V1beta1OntapFileSystemStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>OntapFileSystem is the Schema for the OntapFileSystems API. Manages an Amazon FSx for NetApp ONTAP file system.</summary>
 public partial class V1beta1OntapFileSystem : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1OntapFileSystemSpec>, IStatus<V1beta1OntapFileSystemStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -18,6 +18,7 @@ public enum V1beta1RouterPeerSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1RouterPeerSpecForProviderAdvertisedIpRanges
 {
     /// <summary>User-specified description for the IP range.</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1RouterPeerSpecForProviderAdvertisedIpRanges
     public string? Range { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouterPeerSpecForProviderBfd
 {
     /// <summary>The minimum interval, in milliseconds, between BFD control packets received from the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the transmit interval of the other router. If set, this value must be between 1000 and 30000.</summary>
@@ -48,6 +50,7 @@ public partial class V1beta1RouterPeerSpecForProviderBfd
     public string? SessionInitializationMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouterPeerSpecForProviderCustomLearnedIpRanges
 {
     /// <summary>The IP range to advertise. The value must be a CIDR-formatted string.</summary>
@@ -75,6 +78,7 @@ public enum V1beta1RouterPeerSpecForProviderInterfaceRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RouterPeerSpecForProviderInterfaceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -88,6 +92,7 @@ public partial class V1beta1RouterPeerSpecForProviderInterfaceRefPolicy
     public V1beta1RouterPeerSpecForProviderInterfaceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RouterInterface in compute to populate interface.</summary>
 public partial class V1beta1RouterPeerSpecForProviderInterfaceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -119,6 +124,7 @@ public enum V1beta1RouterPeerSpecForProviderInterfaceSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RouterPeerSpecForProviderInterfaceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -132,6 +138,7 @@ public partial class V1beta1RouterPeerSpecForProviderInterfaceSelectorPolicy
     public V1beta1RouterPeerSpecForProviderInterfaceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RouterInterface in compute to populate interface.</summary>
 public partial class V1beta1RouterPeerSpecForProviderInterfaceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -147,6 +154,7 @@ public partial class V1beta1RouterPeerSpecForProviderInterfaceSelector
     public V1beta1RouterPeerSpecForProviderInterfaceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
 public partial class V1beta1RouterPeerSpecForProviderMd5AuthenticationKeyKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -162,6 +170,7 @@ public partial class V1beta1RouterPeerSpecForProviderMd5AuthenticationKeyKeySecr
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouterPeerSpecForProviderMd5AuthenticationKey
 {
     /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
@@ -193,6 +202,7 @@ public enum V1beta1RouterPeerSpecForProviderPeerIpAddressRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RouterPeerSpecForProviderPeerIpAddressRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -206,6 +216,7 @@ public partial class V1beta1RouterPeerSpecForProviderPeerIpAddressRefPolicy
     public V1beta1RouterPeerSpecForProviderPeerIpAddressRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Address in compute to populate peerIpAddress.</summary>
 public partial class V1beta1RouterPeerSpecForProviderPeerIpAddressRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -237,6 +248,7 @@ public enum V1beta1RouterPeerSpecForProviderPeerIpAddressSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RouterPeerSpecForProviderPeerIpAddressSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -250,6 +262,7 @@ public partial class V1beta1RouterPeerSpecForProviderPeerIpAddressSelectorPolicy
     public V1beta1RouterPeerSpecForProviderPeerIpAddressSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Address in compute to populate peerIpAddress.</summary>
 public partial class V1beta1RouterPeerSpecForProviderPeerIpAddressSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -285,6 +298,7 @@ public enum V1beta1RouterPeerSpecForProviderRegionRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RouterPeerSpecForProviderRegionRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -298,6 +312,7 @@ public partial class V1beta1RouterPeerSpecForProviderRegionRefPolicy
     public V1beta1RouterPeerSpecForProviderRegionRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Router in compute to populate region.</summary>
 public partial class V1beta1RouterPeerSpecForProviderRegionRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -329,6 +344,7 @@ public enum V1beta1RouterPeerSpecForProviderRegionSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RouterPeerSpecForProviderRegionSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -342,6 +358,7 @@ public partial class V1beta1RouterPeerSpecForProviderRegionSelectorPolicy
     public V1beta1RouterPeerSpecForProviderRegionSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Router in compute to populate region.</summary>
 public partial class V1beta1RouterPeerSpecForProviderRegionSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -377,6 +394,7 @@ public enum V1beta1RouterPeerSpecForProviderRouterApplianceInstanceRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RouterPeerSpecForProviderRouterApplianceInstanceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -390,6 +408,7 @@ public partial class V1beta1RouterPeerSpecForProviderRouterApplianceInstanceRefP
     public V1beta1RouterPeerSpecForProviderRouterApplianceInstanceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Instance in compute to populate routerApplianceInstance.</summary>
 public partial class V1beta1RouterPeerSpecForProviderRouterApplianceInstanceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -421,6 +440,7 @@ public enum V1beta1RouterPeerSpecForProviderRouterApplianceInstanceSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RouterPeerSpecForProviderRouterApplianceInstanceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -434,6 +454,7 @@ public partial class V1beta1RouterPeerSpecForProviderRouterApplianceInstanceSele
     public V1beta1RouterPeerSpecForProviderRouterApplianceInstanceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Instance in compute to populate routerApplianceInstance.</summary>
 public partial class V1beta1RouterPeerSpecForProviderRouterApplianceInstanceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -469,6 +490,7 @@ public enum V1beta1RouterPeerSpecForProviderRouterRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RouterPeerSpecForProviderRouterRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -482,6 +504,7 @@ public partial class V1beta1RouterPeerSpecForProviderRouterRefPolicy
     public V1beta1RouterPeerSpecForProviderRouterRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Router in compute to populate router.</summary>
 public partial class V1beta1RouterPeerSpecForProviderRouterRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -513,6 +536,7 @@ public enum V1beta1RouterPeerSpecForProviderRouterSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RouterPeerSpecForProviderRouterSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -526,6 +550,7 @@ public partial class V1beta1RouterPeerSpecForProviderRouterSelectorPolicy
     public V1beta1RouterPeerSpecForProviderRouterSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Router in compute to populate router.</summary>
 public partial class V1beta1RouterPeerSpecForProviderRouterSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -541,6 +566,7 @@ public partial class V1beta1RouterPeerSpecForProviderRouterSelector
     public V1beta1RouterPeerSpecForProviderRouterSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouterPeerSpecForProvider
 {
     /// <summary>User-specified flag to indicate which mode to use for advertisement. Valid values of this enum field are: DEFAULT, CUSTOM Default value is DEFAULT. Possible values are: DEFAULT, CUSTOM.</summary>
@@ -676,6 +702,7 @@ public partial class V1beta1RouterPeerSpecForProvider
     public V1beta1RouterPeerSpecForProviderRouterSelector? RouterSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouterPeerSpecInitProviderAdvertisedIpRanges
 {
     /// <summary>User-specified description for the IP range.</summary>
@@ -687,6 +714,7 @@ public partial class V1beta1RouterPeerSpecInitProviderAdvertisedIpRanges
     public string? Range { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouterPeerSpecInitProviderBfd
 {
     /// <summary>The minimum interval, in milliseconds, between BFD control packets received from the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the transmit interval of the other router. If set, this value must be between 1000 and 30000.</summary>
@@ -706,6 +734,7 @@ public partial class V1beta1RouterPeerSpecInitProviderBfd
     public string? SessionInitializationMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouterPeerSpecInitProviderCustomLearnedIpRanges
 {
     /// <summary>The IP range to advertise. The value must be a CIDR-formatted string.</summary>
@@ -733,6 +762,7 @@ public enum V1beta1RouterPeerSpecInitProviderInterfaceRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RouterPeerSpecInitProviderInterfaceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -746,6 +776,7 @@ public partial class V1beta1RouterPeerSpecInitProviderInterfaceRefPolicy
     public V1beta1RouterPeerSpecInitProviderInterfaceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RouterInterface in compute to populate interface.</summary>
 public partial class V1beta1RouterPeerSpecInitProviderInterfaceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -777,6 +808,7 @@ public enum V1beta1RouterPeerSpecInitProviderInterfaceSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RouterPeerSpecInitProviderInterfaceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -790,6 +822,7 @@ public partial class V1beta1RouterPeerSpecInitProviderInterfaceSelectorPolicy
     public V1beta1RouterPeerSpecInitProviderInterfaceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RouterInterface in compute to populate interface.</summary>
 public partial class V1beta1RouterPeerSpecInitProviderInterfaceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -805,6 +838,7 @@ public partial class V1beta1RouterPeerSpecInitProviderInterfaceSelector
     public V1beta1RouterPeerSpecInitProviderInterfaceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouterPeerSpecInitProviderMd5AuthenticationKey
 {
     /// <summary>Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression [a-z]([-a-z0-9]*[a-z0-9])? which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</summary>
@@ -832,6 +866,7 @@ public enum V1beta1RouterPeerSpecInitProviderPeerIpAddressRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RouterPeerSpecInitProviderPeerIpAddressRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -845,6 +880,7 @@ public partial class V1beta1RouterPeerSpecInitProviderPeerIpAddressRefPolicy
     public V1beta1RouterPeerSpecInitProviderPeerIpAddressRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Address in compute to populate peerIpAddress.</summary>
 public partial class V1beta1RouterPeerSpecInitProviderPeerIpAddressRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -876,6 +912,7 @@ public enum V1beta1RouterPeerSpecInitProviderPeerIpAddressSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RouterPeerSpecInitProviderPeerIpAddressSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -889,6 +926,7 @@ public partial class V1beta1RouterPeerSpecInitProviderPeerIpAddressSelectorPolic
     public V1beta1RouterPeerSpecInitProviderPeerIpAddressSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Address in compute to populate peerIpAddress.</summary>
 public partial class V1beta1RouterPeerSpecInitProviderPeerIpAddressSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -924,6 +962,7 @@ public enum V1beta1RouterPeerSpecInitProviderRegionRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RouterPeerSpecInitProviderRegionRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -937,6 +976,7 @@ public partial class V1beta1RouterPeerSpecInitProviderRegionRefPolicy
     public V1beta1RouterPeerSpecInitProviderRegionRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Router in compute to populate region.</summary>
 public partial class V1beta1RouterPeerSpecInitProviderRegionRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -968,6 +1008,7 @@ public enum V1beta1RouterPeerSpecInitProviderRegionSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RouterPeerSpecInitProviderRegionSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -981,6 +1022,7 @@ public partial class V1beta1RouterPeerSpecInitProviderRegionSelectorPolicy
     public V1beta1RouterPeerSpecInitProviderRegionSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Router in compute to populate region.</summary>
 public partial class V1beta1RouterPeerSpecInitProviderRegionSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1016,6 +1058,7 @@ public enum V1beta1RouterPeerSpecInitProviderRouterApplianceInstanceRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RouterPeerSpecInitProviderRouterApplianceInstanceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1029,6 +1072,7 @@ public partial class V1beta1RouterPeerSpecInitProviderRouterApplianceInstanceRef
     public V1beta1RouterPeerSpecInitProviderRouterApplianceInstanceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Instance in compute to populate routerApplianceInstance.</summary>
 public partial class V1beta1RouterPeerSpecInitProviderRouterApplianceInstanceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1060,6 +1104,7 @@ public enum V1beta1RouterPeerSpecInitProviderRouterApplianceInstanceSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RouterPeerSpecInitProviderRouterApplianceInstanceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1073,6 +1118,7 @@ public partial class V1beta1RouterPeerSpecInitProviderRouterApplianceInstanceSel
     public V1beta1RouterPeerSpecInitProviderRouterApplianceInstanceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Instance in compute to populate routerApplianceInstance.</summary>
 public partial class V1beta1RouterPeerSpecInitProviderRouterApplianceInstanceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1088,6 +1134,7 @@ public partial class V1beta1RouterPeerSpecInitProviderRouterApplianceInstanceSel
     public V1beta1RouterPeerSpecInitProviderRouterApplianceInstanceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1RouterPeerSpecInitProvider
 {
     /// <summary>User-specified flag to indicate which mode to use for advertisement. Valid values of this enum field are: DEFAULT, CUSTOM Default value is DEFAULT. Possible values are: DEFAULT, CUSTOM.</summary>
@@ -1253,6 +1300,7 @@ public enum V1beta1RouterPeerSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RouterPeerSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1266,6 +1314,7 @@ public partial class V1beta1RouterPeerSpecProviderConfigRefPolicy
     public V1beta1RouterPeerSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1RouterPeerSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1297,6 +1346,7 @@ public enum V1beta1RouterPeerSpecPublishConnectionDetailsToConfigRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RouterPeerSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1310,6 +1360,7 @@ public partial class V1beta1RouterPeerSpecPublishConnectionDetailsToConfigRefPol
     public V1beta1RouterPeerSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1RouterPeerSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1321,6 +1372,7 @@ public partial class V1beta1RouterPeerSpecPublishConnectionDetailsToConfigRef
     public V1beta1RouterPeerSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1RouterPeerSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1336,6 +1388,7 @@ public partial class V1beta1RouterPeerSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1RouterPeerSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1351,6 +1404,7 @@ public partial class V1beta1RouterPeerSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1RouterPeerSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1362,6 +1416,7 @@ public partial class V1beta1RouterPeerSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>RouterPeerSpec defines the desired state of RouterPeer</summary>
 public partial class V1beta1RouterPeerSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1394,6 +1449,7 @@ public partial class V1beta1RouterPeerSpec
     public V1beta1RouterPeerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouterPeerStatusAtProviderAdvertisedIpRanges
 {
     /// <summary>User-specified description for the IP range.</summary>
@@ -1405,6 +1461,7 @@ public partial class V1beta1RouterPeerStatusAtProviderAdvertisedIpRanges
     public string? Range { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouterPeerStatusAtProviderBfd
 {
     /// <summary>The minimum interval, in milliseconds, between BFD control packets received from the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the transmit interval of the other router. If set, this value must be between 1000 and 30000.</summary>
@@ -1424,6 +1481,7 @@ public partial class V1beta1RouterPeerStatusAtProviderBfd
     public string? SessionInitializationMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouterPeerStatusAtProviderCustomLearnedIpRanges
 {
     /// <summary>The IP range to advertise. The value must be a CIDR-formatted string.</summary>
@@ -1431,6 +1489,7 @@ public partial class V1beta1RouterPeerStatusAtProviderCustomLearnedIpRanges
     public string? Range { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouterPeerStatusAtProviderMd5AuthenticationKey
 {
     /// <summary>Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression [a-z]([-a-z0-9]*[a-z0-9])? which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</summary>
@@ -1438,6 +1497,7 @@ public partial class V1beta1RouterPeerStatusAtProviderMd5AuthenticationKey
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouterPeerStatusAtProvider
 {
     /// <summary>User-specified flag to indicate which mode to use for advertisement. Valid values of this enum field are: DEFAULT, CUSTOM Default value is DEFAULT. Possible values are: DEFAULT, CUSTOM.</summary>
@@ -1541,6 +1601,7 @@ public partial class V1beta1RouterPeerStatusAtProvider
     public string? RouterApplianceInstance { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1RouterPeerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1568,6 +1629,7 @@ public partial class V1beta1RouterPeerStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>RouterPeerStatus defines the observed state of RouterPeer.</summary>
 public partial class V1beta1RouterPeerStatus
 {
     /// <summary></summary>
@@ -1584,6 +1646,7 @@ public partial class V1beta1RouterPeerStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>RouterPeer is the Schema for the RouterPeers API. BGP information that must be configured into the routing stack to establish BGP peering.</summary>
 public partial class V1beta1RouterPeer : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1RouterPeerSpec>, IStatus<V1beta1RouterPeerStatus>
 {
     public const string KubeApiVersion = "v1beta1";

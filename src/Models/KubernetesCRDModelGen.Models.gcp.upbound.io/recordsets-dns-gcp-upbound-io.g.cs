@@ -38,6 +38,7 @@ public enum V1beta1RecordSetSpecForProviderManagedZoneRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RecordSetSpecForProviderManagedZoneRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1RecordSetSpecForProviderManagedZoneRefPolicy
     public V1beta1RecordSetSpecForProviderManagedZoneRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ManagedZone in dns to populate managedZone.</summary>
 public partial class V1beta1RecordSetSpecForProviderManagedZoneRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1RecordSetSpecForProviderManagedZoneSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RecordSetSpecForProviderManagedZoneSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1RecordSetSpecForProviderManagedZoneSelectorPolicy
     public V1beta1RecordSetSpecForProviderManagedZoneSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ManagedZone in dns to populate managedZone.</summary>
 public partial class V1beta1RecordSetSpecForProviderManagedZoneSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1RecordSetSpecForProviderManagedZoneSelector
     public V1beta1RecordSetSpecForProviderManagedZoneSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetSpecForProviderRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancers
 {
     /// <summary>The frontend IP address of the load balancer.</summary>
@@ -141,6 +146,7 @@ public partial class V1beta1RecordSetSpecForProviderRoutingPolicyGeoHealthChecke
     public string? Region { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetSpecForProviderRoutingPolicyGeoHealthCheckedTargets
 {
     /// <summary>The list of internal load balancers to health check. Structure is document below.</summary>
@@ -148,6 +154,7 @@ public partial class V1beta1RecordSetSpecForProviderRoutingPolicyGeoHealthChecke
     public IList<V1beta1RecordSetSpecForProviderRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancers>? InternalLoadBalancers { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetSpecForProviderRoutingPolicyGeo
 {
     /// <summary>The list of targets to be health checked. Note that if DNSSEC is enabled for this zone, only one of rrdatas or health_checked_targets can be set. Structure is document below.</summary>
@@ -163,6 +170,7 @@ public partial class V1beta1RecordSetSpecForProviderRoutingPolicyGeo
     public IList<string>? Rrdatas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancers
 {
     /// <summary>The frontend IP address of the load balancer.</summary>
@@ -194,6 +202,7 @@ public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupBa
     public string? Region { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargets
 {
     /// <summary>The list of internal load balancers to health check. Structure is document below.</summary>
@@ -201,6 +210,7 @@ public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupBa
     public IList<V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancers>? InternalLoadBalancers { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupBackupGeo
 {
     /// <summary>The list of targets to be health checked. Note that if DNSSEC is enabled for this zone, only one of rrdatas or health_checked_targets can be set. Structure is document below.</summary>
@@ -236,6 +246,7 @@ public enum V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimaryInte
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersIpAddressRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -249,6 +260,7 @@ public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPr
     public V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersIpAddressRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ForwardingRule in compute to populate ipAddress.</summary>
 public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersIpAddressRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -280,6 +292,7 @@ public enum V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimaryInte
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersIpAddressSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -293,6 +306,7 @@ public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPr
     public V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersIpAddressSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ForwardingRule in compute to populate ipAddress.</summary>
 public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersIpAddressSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -328,6 +342,7 @@ public enum V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimaryInte
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersNetworkUrlRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -341,6 +356,7 @@ public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPr
     public V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersNetworkUrlRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate networkUrl.</summary>
 public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersNetworkUrlRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -372,6 +388,7 @@ public enum V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimaryInte
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersNetworkUrlSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -385,6 +402,7 @@ public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPr
     public V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersNetworkUrlSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate networkUrl.</summary>
 public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersNetworkUrlSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -420,6 +438,7 @@ public enum V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimaryInte
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersProjectRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -433,6 +452,7 @@ public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPr
     public V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersProjectRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ForwardingRule in compute to populate project.</summary>
 public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersProjectRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -464,6 +484,7 @@ public enum V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimaryInte
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersProjectSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -477,6 +498,7 @@ public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPr
     public V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersProjectSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ForwardingRule in compute to populate project.</summary>
 public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersProjectSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -512,6 +534,7 @@ public enum V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimaryInte
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersRegionRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -525,6 +548,7 @@ public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPr
     public V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersRegionRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ForwardingRule in compute to populate region.</summary>
 public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersRegionRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -556,6 +580,7 @@ public enum V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimaryInte
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersRegionSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -569,6 +594,7 @@ public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPr
     public V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersRegionSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ForwardingRule in compute to populate region.</summary>
 public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersRegionSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -584,6 +610,7 @@ public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPr
     public V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersRegionSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancers
 {
     /// <summary>The frontend IP address of the load balancer.</summary>
@@ -647,6 +674,7 @@ public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPr
     public V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersRegionSelector? RegionSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimary
 {
     /// <summary>The list of internal load balancers to health check. Structure is document below.</summary>
@@ -654,6 +682,7 @@ public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPr
     public IList<V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancers>? InternalLoadBalancers { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackup
 {
     /// <summary>The backup geo targets, which provide a regional failover policy for the otherwise global primary targets. Structure is document above.</summary>
@@ -673,6 +702,7 @@ public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackup
     public double? TrickleRatio { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetSpecForProviderRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancers
 {
     /// <summary>The frontend IP address of the load balancer.</summary>
@@ -704,6 +734,7 @@ public partial class V1beta1RecordSetSpecForProviderRoutingPolicyWrrHealthChecke
     public string? Region { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetSpecForProviderRoutingPolicyWrrHealthCheckedTargets
 {
     /// <summary>The list of internal load balancers to health check. Structure is document below.</summary>
@@ -711,6 +742,7 @@ public partial class V1beta1RecordSetSpecForProviderRoutingPolicyWrrHealthChecke
     public IList<V1beta1RecordSetSpecForProviderRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancers>? InternalLoadBalancers { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetSpecForProviderRoutingPolicyWrr
 {
     /// <summary>The list of targets to be health checked. Note that if DNSSEC is enabled for this zone, only one of rrdatas or health_checked_targets can be set. Structure is document below.</summary>
@@ -726,6 +758,7 @@ public partial class V1beta1RecordSetSpecForProviderRoutingPolicyWrr
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetSpecForProviderRoutingPolicy
 {
     /// <summary>Specifies whether to enable fencing for geo queries.</summary>
@@ -745,6 +778,7 @@ public partial class V1beta1RecordSetSpecForProviderRoutingPolicy
     public IList<V1beta1RecordSetSpecForProviderRoutingPolicyWrr>? Wrr { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetSpecForProvider
 {
     /// <summary>The name of the zone in which this record set will reside.</summary>
@@ -804,6 +838,7 @@ public enum V1beta1RecordSetSpecInitProviderManagedZoneRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RecordSetSpecInitProviderManagedZoneRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -817,6 +852,7 @@ public partial class V1beta1RecordSetSpecInitProviderManagedZoneRefPolicy
     public V1beta1RecordSetSpecInitProviderManagedZoneRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ManagedZone in dns to populate managedZone.</summary>
 public partial class V1beta1RecordSetSpecInitProviderManagedZoneRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -848,6 +884,7 @@ public enum V1beta1RecordSetSpecInitProviderManagedZoneSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RecordSetSpecInitProviderManagedZoneSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -861,6 +898,7 @@ public partial class V1beta1RecordSetSpecInitProviderManagedZoneSelectorPolicy
     public V1beta1RecordSetSpecInitProviderManagedZoneSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ManagedZone in dns to populate managedZone.</summary>
 public partial class V1beta1RecordSetSpecInitProviderManagedZoneSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -876,6 +914,7 @@ public partial class V1beta1RecordSetSpecInitProviderManagedZoneSelector
     public V1beta1RecordSetSpecInitProviderManagedZoneSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancers
 {
     /// <summary>The frontend IP address of the load balancer.</summary>
@@ -907,6 +946,7 @@ public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyGeoHealthCheck
     public string? Region { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyGeoHealthCheckedTargets
 {
     /// <summary>The list of internal load balancers to health check. Structure is document below.</summary>
@@ -914,6 +954,7 @@ public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyGeoHealthCheck
     public IList<V1beta1RecordSetSpecInitProviderRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancers>? InternalLoadBalancers { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyGeo
 {
     /// <summary>The list of targets to be health checked. Note that if DNSSEC is enabled for this zone, only one of rrdatas or health_checked_targets can be set. Structure is document below.</summary>
@@ -929,6 +970,7 @@ public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyGeo
     public IList<string>? Rrdatas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancers
 {
     /// <summary>The frontend IP address of the load balancer.</summary>
@@ -960,6 +1002,7 @@ public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupB
     public string? Region { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargets
 {
     /// <summary>The list of internal load balancers to health check. Structure is document below.</summary>
@@ -967,6 +1010,7 @@ public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupB
     public IList<V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancers>? InternalLoadBalancers { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupBackupGeo
 {
     /// <summary>The list of targets to be health checked. Note that if DNSSEC is enabled for this zone, only one of rrdatas or health_checked_targets can be set. Structure is document below.</summary>
@@ -1002,6 +1046,7 @@ public enum V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimaryInt
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersIpAddressRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1015,6 +1060,7 @@ public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupP
     public V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersIpAddressRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ForwardingRule in compute to populate ipAddress.</summary>
 public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersIpAddressRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1046,6 +1092,7 @@ public enum V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimaryInt
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersIpAddressSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1059,6 +1106,7 @@ public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupP
     public V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersIpAddressSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ForwardingRule in compute to populate ipAddress.</summary>
 public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersIpAddressSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1094,6 +1142,7 @@ public enum V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimaryInt
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersNetworkUrlRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1107,6 +1156,7 @@ public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupP
     public V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersNetworkUrlRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate networkUrl.</summary>
 public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersNetworkUrlRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1138,6 +1188,7 @@ public enum V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimaryInt
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersNetworkUrlSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1151,6 +1202,7 @@ public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupP
     public V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersNetworkUrlSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate networkUrl.</summary>
 public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersNetworkUrlSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1186,6 +1238,7 @@ public enum V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimaryInt
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersProjectRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1199,6 +1252,7 @@ public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupP
     public V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersProjectRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ForwardingRule in compute to populate project.</summary>
 public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersProjectRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1230,6 +1284,7 @@ public enum V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimaryInt
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersProjectSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1243,6 +1298,7 @@ public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupP
     public V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersProjectSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ForwardingRule in compute to populate project.</summary>
 public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersProjectSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1278,6 +1334,7 @@ public enum V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimaryInt
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersRegionRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1291,6 +1348,7 @@ public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupP
     public V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersRegionRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ForwardingRule in compute to populate region.</summary>
 public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersRegionRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1322,6 +1380,7 @@ public enum V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimaryInt
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersRegionSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1335,6 +1394,7 @@ public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupP
     public V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersRegionSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ForwardingRule in compute to populate region.</summary>
 public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersRegionSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1350,6 +1410,7 @@ public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupP
     public V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersRegionSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancers
 {
     /// <summary>The frontend IP address of the load balancer.</summary>
@@ -1413,6 +1474,7 @@ public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupP
     public V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersRegionSelector? RegionSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimary
 {
     /// <summary>The list of internal load balancers to health check. Structure is document below.</summary>
@@ -1420,6 +1482,7 @@ public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupP
     public IList<V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancers>? InternalLoadBalancers { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackup
 {
     /// <summary>The backup geo targets, which provide a regional failover policy for the otherwise global primary targets. Structure is document above.</summary>
@@ -1439,6 +1502,7 @@ public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackup
     public double? TrickleRatio { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancers
 {
     /// <summary>The frontend IP address of the load balancer.</summary>
@@ -1470,6 +1534,7 @@ public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyWrrHealthCheck
     public string? Region { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyWrrHealthCheckedTargets
 {
     /// <summary>The list of internal load balancers to health check. Structure is document below.</summary>
@@ -1477,6 +1542,7 @@ public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyWrrHealthCheck
     public IList<V1beta1RecordSetSpecInitProviderRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancers>? InternalLoadBalancers { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyWrr
 {
     /// <summary>The list of targets to be health checked. Note that if DNSSEC is enabled for this zone, only one of rrdatas or health_checked_targets can be set. Structure is document below.</summary>
@@ -1492,6 +1558,7 @@ public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyWrr
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetSpecInitProviderRoutingPolicy
 {
     /// <summary>Specifies whether to enable fencing for geo queries.</summary>
@@ -1511,6 +1578,7 @@ public partial class V1beta1RecordSetSpecInitProviderRoutingPolicy
     public IList<V1beta1RecordSetSpecInitProviderRoutingPolicyWrr>? Wrr { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1RecordSetSpecInitProvider
 {
     /// <summary>The name of the zone in which this record set will reside.</summary>
@@ -1592,6 +1660,7 @@ public enum V1beta1RecordSetSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RecordSetSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1605,6 +1674,7 @@ public partial class V1beta1RecordSetSpecProviderConfigRefPolicy
     public V1beta1RecordSetSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1RecordSetSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1636,6 +1706,7 @@ public enum V1beta1RecordSetSpecPublishConnectionDetailsToConfigRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RecordSetSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1649,6 +1720,7 @@ public partial class V1beta1RecordSetSpecPublishConnectionDetailsToConfigRefPoli
     public V1beta1RecordSetSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1RecordSetSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1660,6 +1732,7 @@ public partial class V1beta1RecordSetSpecPublishConnectionDetailsToConfigRef
     public V1beta1RecordSetSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1RecordSetSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1675,6 +1748,7 @@ public partial class V1beta1RecordSetSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1RecordSetSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1690,6 +1764,7 @@ public partial class V1beta1RecordSetSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1RecordSetSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1701,6 +1776,7 @@ public partial class V1beta1RecordSetSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>RecordSetSpec defines the desired state of RecordSet</summary>
 public partial class V1beta1RecordSetSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1733,6 +1809,7 @@ public partial class V1beta1RecordSetSpec
     public V1beta1RecordSetSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetStatusAtProviderRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancers
 {
     /// <summary>The frontend IP address of the load balancer.</summary>
@@ -1764,6 +1841,7 @@ public partial class V1beta1RecordSetStatusAtProviderRoutingPolicyGeoHealthCheck
     public string? Region { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetStatusAtProviderRoutingPolicyGeoHealthCheckedTargets
 {
     /// <summary>The list of internal load balancers to health check. Structure is document below.</summary>
@@ -1771,6 +1849,7 @@ public partial class V1beta1RecordSetStatusAtProviderRoutingPolicyGeoHealthCheck
     public IList<V1beta1RecordSetStatusAtProviderRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancers>? InternalLoadBalancers { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetStatusAtProviderRoutingPolicyGeo
 {
     /// <summary>The list of targets to be health checked. Note that if DNSSEC is enabled for this zone, only one of rrdatas or health_checked_targets can be set. Structure is document below.</summary>
@@ -1786,6 +1865,7 @@ public partial class V1beta1RecordSetStatusAtProviderRoutingPolicyGeo
     public IList<string>? Rrdatas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetStatusAtProviderRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancers
 {
     /// <summary>The frontend IP address of the load balancer.</summary>
@@ -1817,6 +1897,7 @@ public partial class V1beta1RecordSetStatusAtProviderRoutingPolicyPrimaryBackupB
     public string? Region { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetStatusAtProviderRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargets
 {
     /// <summary>The list of internal load balancers to health check. Structure is document below.</summary>
@@ -1824,6 +1905,7 @@ public partial class V1beta1RecordSetStatusAtProviderRoutingPolicyPrimaryBackupB
     public IList<V1beta1RecordSetStatusAtProviderRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancers>? InternalLoadBalancers { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetStatusAtProviderRoutingPolicyPrimaryBackupBackupGeo
 {
     /// <summary>The list of targets to be health checked. Note that if DNSSEC is enabled for this zone, only one of rrdatas or health_checked_targets can be set. Structure is document below.</summary>
@@ -1839,6 +1921,7 @@ public partial class V1beta1RecordSetStatusAtProviderRoutingPolicyPrimaryBackupB
     public IList<string>? Rrdatas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetStatusAtProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancers
 {
     /// <summary>The frontend IP address of the load balancer.</summary>
@@ -1870,6 +1953,7 @@ public partial class V1beta1RecordSetStatusAtProviderRoutingPolicyPrimaryBackupP
     public string? Region { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetStatusAtProviderRoutingPolicyPrimaryBackupPrimary
 {
     /// <summary>The list of internal load balancers to health check. Structure is document below.</summary>
@@ -1877,6 +1961,7 @@ public partial class V1beta1RecordSetStatusAtProviderRoutingPolicyPrimaryBackupP
     public IList<V1beta1RecordSetStatusAtProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancers>? InternalLoadBalancers { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetStatusAtProviderRoutingPolicyPrimaryBackup
 {
     /// <summary>The backup geo targets, which provide a regional failover policy for the otherwise global primary targets. Structure is document above.</summary>
@@ -1896,6 +1981,7 @@ public partial class V1beta1RecordSetStatusAtProviderRoutingPolicyPrimaryBackup
     public double? TrickleRatio { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetStatusAtProviderRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancers
 {
     /// <summary>The frontend IP address of the load balancer.</summary>
@@ -1927,6 +2013,7 @@ public partial class V1beta1RecordSetStatusAtProviderRoutingPolicyWrrHealthCheck
     public string? Region { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetStatusAtProviderRoutingPolicyWrrHealthCheckedTargets
 {
     /// <summary>The list of internal load balancers to health check. Structure is document below.</summary>
@@ -1934,6 +2021,7 @@ public partial class V1beta1RecordSetStatusAtProviderRoutingPolicyWrrHealthCheck
     public IList<V1beta1RecordSetStatusAtProviderRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancers>? InternalLoadBalancers { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetStatusAtProviderRoutingPolicyWrr
 {
     /// <summary>The list of targets to be health checked. Note that if DNSSEC is enabled for this zone, only one of rrdatas or health_checked_targets can be set. Structure is document below.</summary>
@@ -1949,6 +2037,7 @@ public partial class V1beta1RecordSetStatusAtProviderRoutingPolicyWrr
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetStatusAtProviderRoutingPolicy
 {
     /// <summary>Specifies whether to enable fencing for geo queries.</summary>
@@ -1968,6 +2057,7 @@ public partial class V1beta1RecordSetStatusAtProviderRoutingPolicy
     public IList<V1beta1RecordSetStatusAtProviderRoutingPolicyWrr>? Wrr { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSetStatusAtProvider
 {
     /// <summary>an identifier for the resource with format projects/{{project}}/managedZones/{{zone}}/rrsets/{{name}}/{{type}}</summary>
@@ -2003,6 +2093,7 @@ public partial class V1beta1RecordSetStatusAtProvider
     public string? Type { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1RecordSetStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2030,6 +2121,7 @@ public partial class V1beta1RecordSetStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>RecordSetStatus defines the observed state of RecordSet.</summary>
 public partial class V1beta1RecordSetStatus
 {
     /// <summary></summary>
@@ -2046,6 +2138,7 @@ public partial class V1beta1RecordSetStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>RecordSet is the Schema for the RecordSets API. Manages a set of DNS records within Google Cloud DNS.</summary>
 public partial class V1beta1RecordSet : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1RecordSetSpec>, IStatus<V1beta1RecordSetStatus>
 {
     public const string KubeApiVersion = "v1beta1";

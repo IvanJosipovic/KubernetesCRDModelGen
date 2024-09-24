@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudscheduler.cnrm.cloud.google.com;
+/// <summary>App Engine Routing setting for the job.</summary>
 public partial class V1beta1CloudSchedulerJobSpecAppEngineHttpTargetAppEngineRouting
 {
     /// <summary>App instance. By default, the job is sent to an instance which is available when the job is attempted. Requests can only be sent to a specific instance if [manual scaling is used in App Engine Standard](https://cloud.google.com/appengine/docs/python/an-overview-of-app-engine?hl=en_US#scaling_types_and_instance_classes). App Engine Flex does not support instances. For more information, see [App Engine Standard request routing](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed) and [App Engine Flex request routing](https://cloud.google.com/appengine/docs/flexible/python/how-requests-are-routed).</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1CloudSchedulerJobSpecAppEngineHttpTargetAppEngineRou
     public string? Version { get; set; }
 }
 
+/// <summary>App Engine HTTP target.</summary>
 public partial class V1beta1CloudSchedulerJobSpecAppEngineHttpTarget
 {
     /// <summary>App Engine Routing setting for the job.</summary>
@@ -46,6 +48,7 @@ public partial class V1beta1CloudSchedulerJobSpecAppEngineHttpTarget
     public string? RelativeUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CloudSchedulerJobSpecHttpTargetOauthTokenServiceAccountRef
 {
     /// <summary>[Service account email](https://cloud.google.com/iam/docs/service-accounts) to be used for generating OAuth token. The service account must be within the same project as the job. The caller must have iam.serviceAccounts.actAs permission for the service account.  Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
@@ -61,6 +64,7 @@ public partial class V1beta1CloudSchedulerJobSpecHttpTargetOauthTokenServiceAcco
     public string? Namespace { get; set; }
 }
 
+/// <summary>If specified, an [OAuth token](https://developers.google.com/identity/protocols/OAuth2) will be generated and attached as an `Authorization` header in the HTTP request. This type of authorization should generally only be used when calling Google APIs hosted on *.googleapis.com.</summary>
 public partial class V1beta1CloudSchedulerJobSpecHttpTargetOauthToken
 {
     /// <summary>OAuth scope to be used for generating OAuth access token. If not specified, "https://www.googleapis.com/auth/cloud-platform" will be used.</summary>
@@ -72,6 +76,7 @@ public partial class V1beta1CloudSchedulerJobSpecHttpTargetOauthToken
     public V1beta1CloudSchedulerJobSpecHttpTargetOauthTokenServiceAccountRef? ServiceAccountRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CloudSchedulerJobSpecHttpTargetOidcTokenServiceAccountRef
 {
     /// <summary>[Service account email](https://cloud.google.com/iam/docs/service-accounts) to be used for generating OIDC token. The service account must be within the same project as the job. The caller must have iam.serviceAccounts.actAs permission for the service account.  Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
@@ -87,6 +92,7 @@ public partial class V1beta1CloudSchedulerJobSpecHttpTargetOidcTokenServiceAccou
     public string? Namespace { get; set; }
 }
 
+/// <summary>If specified, an [OIDC](https://developers.google.com/identity/protocols/OpenIDConnect) token will be generated and attached as an `Authorization` header in the HTTP request. This type of authorization can be used for many scenarios, including calling Cloud Run, or endpoints where you intend to validate the token yourself.</summary>
 public partial class V1beta1CloudSchedulerJobSpecHttpTargetOidcToken
 {
     /// <summary>Audience to be used when generating OIDC token. If not specified, the URI specified in target will be used.</summary>
@@ -98,6 +104,7 @@ public partial class V1beta1CloudSchedulerJobSpecHttpTargetOidcToken
     public V1beta1CloudSchedulerJobSpecHttpTargetOidcTokenServiceAccountRef? ServiceAccountRef { get; set; }
 }
 
+/// <summary>HTTP target.</summary>
 public partial class V1beta1CloudSchedulerJobSpecHttpTarget
 {
     /// <summary>HTTP request body. A request body is allowed only if the HTTP method is POST, PUT, or PATCH. It is an error to set body on a job with an incompatible HttpMethod.</summary>
@@ -125,6 +132,7 @@ public partial class V1beta1CloudSchedulerJobSpecHttpTarget
     public string Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CloudSchedulerJobSpecPubsubTargetTopicRef
 {
     /// <summary>Required. The name of the Cloud Pub/Sub topic to which messages will be published when a job is delivered. The topic name must be in the same format as required by Pub/Sub's [PublishRequest.name](https://cloud.google.com/pubsub/docs/reference/rpc/google.pubsub.v1#publishrequest), for example `projects/PROJECT_ID/topics/TOPIC_ID`. The topic must be in the same project as the Cloud Scheduler job.  Allowed value: The Google Cloud resource name of a `PubSubTopic` resource (format: `projects/{{project}}/topics/{{name}}`).</summary>
@@ -140,6 +148,7 @@ public partial class V1beta1CloudSchedulerJobSpecPubsubTargetTopicRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Pub/Sub target.</summary>
 public partial class V1beta1CloudSchedulerJobSpecPubsubTarget
 {
     /// <summary>Attributes for PubsubMessage. Pubsub message must contain either non-empty data, or at least one attribute.</summary>
@@ -155,6 +164,7 @@ public partial class V1beta1CloudSchedulerJobSpecPubsubTarget
     public V1beta1CloudSchedulerJobSpecPubsubTargetTopicRef TopicRef { get; set; }
 }
 
+/// <summary>Settings that determine the retry behavior.</summary>
 public partial class V1beta1CloudSchedulerJobSpecRetryConfig
 {
     /// <summary>The maximum amount of time to wait before retrying a job after it fails. The default value of this field is 1 hour.</summary>
@@ -178,6 +188,7 @@ public partial class V1beta1CloudSchedulerJobSpecRetryConfig
     public long? RetryCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CloudSchedulerJobSpec
 {
     /// <summary>App Engine HTTP target.</summary>
@@ -221,6 +232,7 @@ public partial class V1beta1CloudSchedulerJobSpec
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CloudSchedulerJobStatusAppEngineHttpTargetAppEngineRouting
 {
     /// <summary>Output only. The host that the job is sent to. For more information about how App Engine requests are routed, see [here](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed). The host is constructed as: * `host = [application_domain_name]` `| [service] + '.' + [application_domain_name]` `| [version] + '.' + [application_domain_name]` `| [version_dot_service]+ '.' + [application_domain_name]` `| [instance] + '.' + [application_domain_name]` `| [instance_dot_service] + '.' + [application_domain_name]` `| [instance_dot_version] + '.' + [application_domain_name]` `| [instance_dot_version_dot_service] + '.' + [application_domain_name]` * `application_domain_name` = The domain name of the app, for example .appspot.com, which is associated with the job's project ID. * `service =` service * `version =` version * `version_dot_service =` version `+ '.' +` service * `instance =` instance * `instance_dot_service =` instance `+ '.' +` service * `instance_dot_version =` instance `+ '.' +` version * `instance_dot_version_dot_service =` instance `+ '.' +` version `+ '.' +` service If service is empty, then the job will be sent to the service which is the default service when the job is attempted. If version is empty, then the job will be sent to the version which is the default version when the job is attempted. If instance is empty, then the job will be sent to an instance which is available when the job is attempted. If service, version, or instance is invalid, then the job will be sent to the default version of the default service when the job is attempted.</summary>
@@ -228,6 +240,7 @@ public partial class V1beta1CloudSchedulerJobStatusAppEngineHttpTargetAppEngineR
     public string? Host { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CloudSchedulerJobStatusAppEngineHttpTarget
 {
     /// <summary></summary>
@@ -235,6 +248,7 @@ public partial class V1beta1CloudSchedulerJobStatusAppEngineHttpTarget
     public V1beta1CloudSchedulerJobStatusAppEngineHttpTargetAppEngineRouting? AppEngineRouting { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CloudSchedulerJobStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -258,6 +272,7 @@ public partial class V1beta1CloudSchedulerJobStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CloudSchedulerJobStatusStatusDetails
 {
     /// <summary>A URL/resource name that uniquely identifies the type of the serialized protocol buffer message. This string must contain at least one "/" character. The last segment of the URL's path must represent the fully qualified name of the type (as in `path/google.protobuf.Duration`). The name should be in a canonical form (e.g., leading "." is not accepted). In practice, teams usually precompile into the binary all types that they expect it to use in the context of Any. However, for URLs which use the scheme `http`, `https`, or no scheme, one can optionally set up a type server that maps type URLs to message definitions as follows: * If no scheme is provided, `https` is assumed. * An HTTP GET on the URL must yield a google.protobuf.Type value in binary format, or produce an error. * Applications are allowed to cache lookup results based on the URL, or have them precompiled into a binary to avoid any lookup. Therefore, binary compatibility needs to be preserved on changes to types. (Use versioned type names to manage breaking changes.) Note: this functionality is not currently available in the official protobuf release, and it is not used for type URLs beginning with type.googleapis.com. Schemes other than `http`, `https` (or the empty scheme) might be used with implementation specific semantics.</summary>
@@ -269,6 +284,7 @@ public partial class V1beta1CloudSchedulerJobStatusStatusDetails
     public string? Value { get; set; }
 }
 
+/// <summary>Output only. The response from the target for the last attempted execution.</summary>
 public partial class V1beta1CloudSchedulerJobStatusStatus
 {
     /// <summary>The status code, which should be an enum value of google.rpc.Code.</summary>
@@ -284,6 +300,7 @@ public partial class V1beta1CloudSchedulerJobStatusStatus
     public string? Message { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CloudSchedulerJobStatus
 {
     /// <summary></summary>
@@ -320,6 +337,7 @@ public partial class V1beta1CloudSchedulerJobStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1CloudSchedulerJob : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1CloudSchedulerJobSpec>, IStatus<V1beta1CloudSchedulerJobStatus>
 {
     public const string KubeApiVersion = "v1beta1";

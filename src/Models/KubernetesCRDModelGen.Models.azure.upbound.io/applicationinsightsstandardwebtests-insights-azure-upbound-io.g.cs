@@ -38,6 +38,7 @@ public enum V1beta1ApplicationInsightsStandardWebTestSpecForProviderApplicationI
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderApplicationInsightsIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderApp
     public V1beta1ApplicationInsightsStandardWebTestSpecForProviderApplicationInsightsIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ApplicationInsights in insights to populate applicationInsightsId.</summary>
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderApplicationInsightsIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ApplicationInsightsStandardWebTestSpecForProviderApplicationI
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderApplicationInsightsIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderApp
     public V1beta1ApplicationInsightsStandardWebTestSpecForProviderApplicationInsightsIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ApplicationInsights in insights to populate applicationInsightsId.</summary>
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderApplicationInsightsIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderApp
     public V1beta1ApplicationInsightsStandardWebTestSpecForProviderApplicationInsightsIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderRequestHeader
 {
     /// <summary>The name which should be used for this Application Insights Standard WebTest. Changing this forces a new Application Insights Standard WebTest to be created.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderReq
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderRequest
 {
     /// <summary>The WebTest request body.</summary>
@@ -168,6 +174,7 @@ public enum V1beta1ApplicationInsightsStandardWebTestSpecForProviderResourceGrou
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -181,6 +188,7 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderRes
     public V1beta1ApplicationInsightsStandardWebTestSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -212,6 +220,7 @@ public enum V1beta1ApplicationInsightsStandardWebTestSpecForProviderResourceGrou
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -225,6 +234,7 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderRes
     public V1beta1ApplicationInsightsStandardWebTestSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -240,6 +250,7 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderRes
     public V1beta1ApplicationInsightsStandardWebTestSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderValidationRulesContent
 {
     /// <summary>A string value containing the content to match on.</summary>
@@ -255,6 +266,7 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderVal
     public bool? PassIfTextFound { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderValidationRules
 {
     /// <summary>A content block as defined above.</summary>
@@ -274,6 +286,7 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderVal
     public bool? SslCheckEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProvider
 {
     /// <summary>The ID of the Application Insights instance on which the WebTest operates. Changing this forces a new Application Insights Standard WebTest to be created.</summary>
@@ -361,6 +374,7 @@ public enum V1beta1ApplicationInsightsStandardWebTestSpecInitProviderApplication
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecInitProviderApplicationInsightsIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -374,6 +388,7 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecInitProviderAp
     public V1beta1ApplicationInsightsStandardWebTestSpecInitProviderApplicationInsightsIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ApplicationInsights in insights to populate applicationInsightsId.</summary>
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecInitProviderApplicationInsightsIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -405,6 +420,7 @@ public enum V1beta1ApplicationInsightsStandardWebTestSpecInitProviderApplication
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecInitProviderApplicationInsightsIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -418,6 +434,7 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecInitProviderAp
     public V1beta1ApplicationInsightsStandardWebTestSpecInitProviderApplicationInsightsIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ApplicationInsights in insights to populate applicationInsightsId.</summary>
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecInitProviderApplicationInsightsIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -433,6 +450,7 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecInitProviderAp
     public V1beta1ApplicationInsightsStandardWebTestSpecInitProviderApplicationInsightsIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecInitProviderRequestHeader
 {
     /// <summary>The name which should be used for this Application Insights Standard WebTest. Changing this forces a new Application Insights Standard WebTest to be created.</summary>
@@ -444,6 +462,7 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecInitProviderRe
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecInitProviderRequest
 {
     /// <summary>The WebTest request body.</summary>
@@ -471,6 +490,7 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecInitProviderRe
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecInitProviderValidationRulesContent
 {
     /// <summary>A string value containing the content to match on.</summary>
@@ -486,6 +506,7 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecInitProviderVa
     public bool? PassIfTextFound { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecInitProviderValidationRules
 {
     /// <summary>A content block as defined above.</summary>
@@ -505,6 +526,7 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecInitProviderVa
     public bool? SslCheckEnabled { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecInitProvider
 {
     /// <summary>The ID of the Application Insights instance on which the WebTest operates. Changing this forces a new Application Insights Standard WebTest to be created.</summary>
@@ -602,6 +624,7 @@ public enum V1beta1ApplicationInsightsStandardWebTestSpecProviderConfigRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -615,6 +638,7 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecProviderConfig
     public V1beta1ApplicationInsightsStandardWebTestSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -646,6 +670,7 @@ public enum V1beta1ApplicationInsightsStandardWebTestSpecPublishConnectionDetail
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -659,6 +684,7 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecPublishConnect
     public V1beta1ApplicationInsightsStandardWebTestSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -670,6 +696,7 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecPublishConnect
     public V1beta1ApplicationInsightsStandardWebTestSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -685,6 +712,7 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecPublishConnect
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -700,6 +728,7 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecPublishConnect
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -711,6 +740,7 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpecWriteConnectio
     public string Namespace { get; set; }
 }
 
+/// <summary>ApplicationInsightsStandardWebTestSpec defines the desired state of ApplicationInsightsStandardWebTest</summary>
 public partial class V1beta1ApplicationInsightsStandardWebTestSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -743,6 +773,7 @@ public partial class V1beta1ApplicationInsightsStandardWebTestSpec
     public V1beta1ApplicationInsightsStandardWebTestSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationInsightsStandardWebTestStatusAtProviderRequestHeader
 {
     /// <summary>The name which should be used for this Application Insights Standard WebTest. Changing this forces a new Application Insights Standard WebTest to be created.</summary>
@@ -754,6 +785,7 @@ public partial class V1beta1ApplicationInsightsStandardWebTestStatusAtProviderRe
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationInsightsStandardWebTestStatusAtProviderRequest
 {
     /// <summary>The WebTest request body.</summary>
@@ -781,6 +813,7 @@ public partial class V1beta1ApplicationInsightsStandardWebTestStatusAtProviderRe
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationInsightsStandardWebTestStatusAtProviderValidationRulesContent
 {
     /// <summary>A string value containing the content to match on.</summary>
@@ -796,6 +829,7 @@ public partial class V1beta1ApplicationInsightsStandardWebTestStatusAtProviderVa
     public bool? PassIfTextFound { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationInsightsStandardWebTestStatusAtProviderValidationRules
 {
     /// <summary>A content block as defined above.</summary>
@@ -815,6 +849,7 @@ public partial class V1beta1ApplicationInsightsStandardWebTestStatusAtProviderVa
     public bool? SslCheckEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationInsightsStandardWebTestStatusAtProvider
 {
     /// <summary>The ID of the Application Insights instance on which the WebTest operates. Changing this forces a new Application Insights Standard WebTest to be created.</summary>
@@ -874,6 +909,7 @@ public partial class V1beta1ApplicationInsightsStandardWebTestStatusAtProvider
     public IList<V1beta1ApplicationInsightsStandardWebTestStatusAtProviderValidationRules>? ValidationRules { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ApplicationInsightsStandardWebTestStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -901,6 +937,7 @@ public partial class V1beta1ApplicationInsightsStandardWebTestStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ApplicationInsightsStandardWebTestStatus defines the observed state of ApplicationInsightsStandardWebTest.</summary>
 public partial class V1beta1ApplicationInsightsStandardWebTestStatus
 {
     /// <summary></summary>
@@ -917,6 +954,7 @@ public partial class V1beta1ApplicationInsightsStandardWebTestStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ApplicationInsightsStandardWebTest is the Schema for the ApplicationInsightsStandardWebTests API. Manages a Application Insights Standard WebTest.</summary>
 public partial class V1beta1ApplicationInsightsStandardWebTest : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ApplicationInsightsStandardWebTestSpec>, IStatus<V1beta1ApplicationInsightsStandardWebTestStatus>
 {
     public const string KubeApiVersion = "v1beta1";

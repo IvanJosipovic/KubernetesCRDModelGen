@@ -38,6 +38,7 @@ public enum V1beta1ResolverSpecForProviderApiIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ResolverSpecForProviderApiIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ResolverSpecForProviderApiIdRefPolicy
     public V1beta1ResolverSpecForProviderApiIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a GraphQLAPI in appsync to populate apiId.</summary>
 public partial class V1beta1ResolverSpecForProviderApiIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ResolverSpecForProviderApiIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ResolverSpecForProviderApiIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ResolverSpecForProviderApiIdSelectorPolicy
     public V1beta1ResolverSpecForProviderApiIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a GraphQLAPI in appsync to populate apiId.</summary>
 public partial class V1beta1ResolverSpecForProviderApiIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1ResolverSpecForProviderApiIdSelector
     public V1beta1ResolverSpecForProviderApiIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResolverSpecForProviderCachingConfig
 {
     /// <summary>The caching keys for a resolver that has caching activated. Valid values are entries from the $context.arguments, $context.source, and $context.identity maps.</summary>
@@ -141,6 +146,7 @@ public enum V1beta1ResolverSpecForProviderDataSourceRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ResolverSpecForProviderDataSourceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -154,6 +160,7 @@ public partial class V1beta1ResolverSpecForProviderDataSourceRefPolicy
     public V1beta1ResolverSpecForProviderDataSourceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Datasource in appsync to populate dataSource.</summary>
 public partial class V1beta1ResolverSpecForProviderDataSourceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -185,6 +192,7 @@ public enum V1beta1ResolverSpecForProviderDataSourceSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ResolverSpecForProviderDataSourceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -198,6 +206,7 @@ public partial class V1beta1ResolverSpecForProviderDataSourceSelectorPolicy
     public V1beta1ResolverSpecForProviderDataSourceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Datasource in appsync to populate dataSource.</summary>
 public partial class V1beta1ResolverSpecForProviderDataSourceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -213,6 +222,7 @@ public partial class V1beta1ResolverSpecForProviderDataSourceSelector
     public V1beta1ResolverSpecForProviderDataSourceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResolverSpecForProviderPipelineConfig
 {
     /// <summary>A list of Function objects.</summary>
@@ -220,6 +230,7 @@ public partial class V1beta1ResolverSpecForProviderPipelineConfig
     public IList<string>? Functions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResolverSpecForProviderRuntime
 {
     /// <summary>The name of the runtime to use. Currently, the only allowed value is APPSYNC_JS.</summary>
@@ -231,6 +242,7 @@ public partial class V1beta1ResolverSpecForProviderRuntime
     public string? RuntimeVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResolverSpecForProviderSyncConfigLambdaConflictHandlerConfig
 {
     /// <summary>ARN for the Lambda function to use as the Conflict Handler.</summary>
@@ -238,6 +250,7 @@ public partial class V1beta1ResolverSpecForProviderSyncConfigLambdaConflictHandl
     public string? LambdaConflictHandlerArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResolverSpecForProviderSyncConfig
 {
     /// <summary>Conflict Detection strategy to use. Valid values are NONE and VERSION.</summary>
@@ -253,6 +266,7 @@ public partial class V1beta1ResolverSpecForProviderSyncConfig
     public IList<V1beta1ResolverSpecForProviderSyncConfigLambdaConflictHandlerConfig>? LambdaConflictHandlerConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResolverSpecForProvider
 {
     /// <summary>API ID for the GraphQL API.</summary>
@@ -328,6 +342,7 @@ public partial class V1beta1ResolverSpecForProvider
     public string Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResolverSpecInitProviderCachingConfig
 {
     /// <summary>The caching keys for a resolver that has caching activated. Valid values are entries from the $context.arguments, $context.source, and $context.identity maps.</summary>
@@ -359,6 +374,7 @@ public enum V1beta1ResolverSpecInitProviderDataSourceRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ResolverSpecInitProviderDataSourceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -372,6 +388,7 @@ public partial class V1beta1ResolverSpecInitProviderDataSourceRefPolicy
     public V1beta1ResolverSpecInitProviderDataSourceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Datasource in appsync to populate dataSource.</summary>
 public partial class V1beta1ResolverSpecInitProviderDataSourceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -403,6 +420,7 @@ public enum V1beta1ResolverSpecInitProviderDataSourceSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ResolverSpecInitProviderDataSourceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -416,6 +434,7 @@ public partial class V1beta1ResolverSpecInitProviderDataSourceSelectorPolicy
     public V1beta1ResolverSpecInitProviderDataSourceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Datasource in appsync to populate dataSource.</summary>
 public partial class V1beta1ResolverSpecInitProviderDataSourceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -431,6 +450,7 @@ public partial class V1beta1ResolverSpecInitProviderDataSourceSelector
     public V1beta1ResolverSpecInitProviderDataSourceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResolverSpecInitProviderPipelineConfig
 {
     /// <summary>A list of Function objects.</summary>
@@ -438,6 +458,7 @@ public partial class V1beta1ResolverSpecInitProviderPipelineConfig
     public IList<string>? Functions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResolverSpecInitProviderRuntime
 {
     /// <summary>The name of the runtime to use. Currently, the only allowed value is APPSYNC_JS.</summary>
@@ -449,6 +470,7 @@ public partial class V1beta1ResolverSpecInitProviderRuntime
     public string? RuntimeVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResolverSpecInitProviderSyncConfigLambdaConflictHandlerConfig
 {
     /// <summary>ARN for the Lambda function to use as the Conflict Handler.</summary>
@@ -456,6 +478,7 @@ public partial class V1beta1ResolverSpecInitProviderSyncConfigLambdaConflictHand
     public string? LambdaConflictHandlerArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResolverSpecInitProviderSyncConfig
 {
     /// <summary>Conflict Detection strategy to use. Valid values are NONE and VERSION.</summary>
@@ -471,6 +494,7 @@ public partial class V1beta1ResolverSpecInitProviderSyncConfig
     public IList<V1beta1ResolverSpecInitProviderSyncConfigLambdaConflictHandlerConfig>? LambdaConflictHandlerConfig { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ResolverSpecInitProvider
 {
     /// <summary>The Caching Config. See Caching Config.</summary>
@@ -564,6 +588,7 @@ public enum V1beta1ResolverSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ResolverSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -577,6 +602,7 @@ public partial class V1beta1ResolverSpecProviderConfigRefPolicy
     public V1beta1ResolverSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ResolverSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -608,6 +634,7 @@ public enum V1beta1ResolverSpecPublishConnectionDetailsToConfigRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ResolverSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -621,6 +648,7 @@ public partial class V1beta1ResolverSpecPublishConnectionDetailsToConfigRefPolic
     public V1beta1ResolverSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ResolverSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -632,6 +660,7 @@ public partial class V1beta1ResolverSpecPublishConnectionDetailsToConfigRef
     public V1beta1ResolverSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ResolverSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -647,6 +676,7 @@ public partial class V1beta1ResolverSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ResolverSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -662,6 +692,7 @@ public partial class V1beta1ResolverSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ResolverSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -673,6 +704,7 @@ public partial class V1beta1ResolverSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ResolverSpec defines the desired state of Resolver</summary>
 public partial class V1beta1ResolverSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -705,6 +737,7 @@ public partial class V1beta1ResolverSpec
     public V1beta1ResolverSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResolverStatusAtProviderCachingConfig
 {
     /// <summary>The caching keys for a resolver that has caching activated. Valid values are entries from the $context.arguments, $context.source, and $context.identity maps.</summary>
@@ -716,6 +749,7 @@ public partial class V1beta1ResolverStatusAtProviderCachingConfig
     public double? Ttl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResolverStatusAtProviderPipelineConfig
 {
     /// <summary>A list of Function objects.</summary>
@@ -723,6 +757,7 @@ public partial class V1beta1ResolverStatusAtProviderPipelineConfig
     public IList<string>? Functions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResolverStatusAtProviderRuntime
 {
     /// <summary>The name of the runtime to use. Currently, the only allowed value is APPSYNC_JS.</summary>
@@ -734,6 +769,7 @@ public partial class V1beta1ResolverStatusAtProviderRuntime
     public string? RuntimeVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResolverStatusAtProviderSyncConfigLambdaConflictHandlerConfig
 {
     /// <summary>ARN for the Lambda function to use as the Conflict Handler.</summary>
@@ -741,6 +777,7 @@ public partial class V1beta1ResolverStatusAtProviderSyncConfigLambdaConflictHand
     public string? LambdaConflictHandlerArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResolverStatusAtProviderSyncConfig
 {
     /// <summary>Conflict Detection strategy to use. Valid values are NONE and VERSION.</summary>
@@ -756,6 +793,7 @@ public partial class V1beta1ResolverStatusAtProviderSyncConfig
     public IList<V1beta1ResolverStatusAtProviderSyncConfigLambdaConflictHandlerConfig>? LambdaConflictHandlerConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResolverStatusAtProvider
 {
     /// <summary>API ID for the GraphQL API.</summary>
@@ -819,6 +857,7 @@ public partial class V1beta1ResolverStatusAtProvider
     public string? Type { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ResolverStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -846,6 +885,7 @@ public partial class V1beta1ResolverStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ResolverStatus defines the observed state of Resolver.</summary>
 public partial class V1beta1ResolverStatus
 {
     /// <summary></summary>
@@ -862,6 +902,7 @@ public partial class V1beta1ResolverStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Resolver is the Schema for the Resolvers API. Provides an AppSync Resolver.</summary>
 public partial class V1beta1Resolver : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ResolverSpec>, IStatus<V1beta1ResolverStatus>
 {
     public const string KubeApiVersion = "v1beta1";

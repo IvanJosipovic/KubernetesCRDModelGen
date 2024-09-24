@@ -38,6 +38,7 @@ public enum V1beta1AttachedDiskSpecForProviderDiskRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AttachedDiskSpecForProviderDiskRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1AttachedDiskSpecForProviderDiskRefPolicy
     public V1beta1AttachedDiskSpecForProviderDiskRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Disk in compute to populate disk.</summary>
 public partial class V1beta1AttachedDiskSpecForProviderDiskRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1AttachedDiskSpecForProviderDiskSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AttachedDiskSpecForProviderDiskSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1AttachedDiskSpecForProviderDiskSelectorPolicy
     public V1beta1AttachedDiskSpecForProviderDiskSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Disk in compute to populate disk.</summary>
 public partial class V1beta1AttachedDiskSpecForProviderDiskSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1AttachedDiskSpecForProviderInstanceRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AttachedDiskSpecForProviderInstanceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1AttachedDiskSpecForProviderInstanceRefPolicy
     public V1beta1AttachedDiskSpecForProviderInstanceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Instance in compute to populate instance.</summary>
 public partial class V1beta1AttachedDiskSpecForProviderInstanceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1AttachedDiskSpecForProviderInstanceSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AttachedDiskSpecForProviderInstanceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1AttachedDiskSpecForProviderInstanceSelectorPolicy
     public V1beta1AttachedDiskSpecForProviderInstanceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Instance in compute to populate instance.</summary>
 public partial class V1beta1AttachedDiskSpecForProviderInstanceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1AttachedDiskSpecForProviderInstanceSelector
     public V1beta1AttachedDiskSpecForProviderInstanceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AttachedDiskSpecForProvider
 {
     /// <summary>Specifies a unique device name of your choice that is reflected into the /dev/disk/by-id/google-* tree of a Linux operating system running within the instance. This name can be used to reference the device for mounting, resizing, and so on, from within the instance.</summary>
@@ -265,6 +274,7 @@ public enum V1beta1AttachedDiskSpecInitProviderDiskRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AttachedDiskSpecInitProviderDiskRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -278,6 +288,7 @@ public partial class V1beta1AttachedDiskSpecInitProviderDiskRefPolicy
     public V1beta1AttachedDiskSpecInitProviderDiskRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Disk in compute to populate disk.</summary>
 public partial class V1beta1AttachedDiskSpecInitProviderDiskRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -309,6 +320,7 @@ public enum V1beta1AttachedDiskSpecInitProviderDiskSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AttachedDiskSpecInitProviderDiskSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -322,6 +334,7 @@ public partial class V1beta1AttachedDiskSpecInitProviderDiskSelectorPolicy
     public V1beta1AttachedDiskSpecInitProviderDiskSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Disk in compute to populate disk.</summary>
 public partial class V1beta1AttachedDiskSpecInitProviderDiskSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -357,6 +370,7 @@ public enum V1beta1AttachedDiskSpecInitProviderInstanceRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AttachedDiskSpecInitProviderInstanceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -370,6 +384,7 @@ public partial class V1beta1AttachedDiskSpecInitProviderInstanceRefPolicy
     public V1beta1AttachedDiskSpecInitProviderInstanceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Instance in compute to populate instance.</summary>
 public partial class V1beta1AttachedDiskSpecInitProviderInstanceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -401,6 +416,7 @@ public enum V1beta1AttachedDiskSpecInitProviderInstanceSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AttachedDiskSpecInitProviderInstanceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -414,6 +430,7 @@ public partial class V1beta1AttachedDiskSpecInitProviderInstanceSelectorPolicy
     public V1beta1AttachedDiskSpecInitProviderInstanceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Instance in compute to populate instance.</summary>
 public partial class V1beta1AttachedDiskSpecInitProviderInstanceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -429,6 +446,7 @@ public partial class V1beta1AttachedDiskSpecInitProviderInstanceSelector
     public V1beta1AttachedDiskSpecInitProviderInstanceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1AttachedDiskSpecInitProvider
 {
     /// <summary>Specifies a unique device name of your choice that is reflected into the /dev/disk/by-id/google-* tree of a Linux operating system running within the instance. This name can be used to reference the device for mounting, resizing, and so on, from within the instance.</summary>
@@ -514,6 +532,7 @@ public enum V1beta1AttachedDiskSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AttachedDiskSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -527,6 +546,7 @@ public partial class V1beta1AttachedDiskSpecProviderConfigRefPolicy
     public V1beta1AttachedDiskSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1AttachedDiskSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -558,6 +578,7 @@ public enum V1beta1AttachedDiskSpecPublishConnectionDetailsToConfigRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AttachedDiskSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -571,6 +592,7 @@ public partial class V1beta1AttachedDiskSpecPublishConnectionDetailsToConfigRefP
     public V1beta1AttachedDiskSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1AttachedDiskSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -582,6 +604,7 @@ public partial class V1beta1AttachedDiskSpecPublishConnectionDetailsToConfigRef
     public V1beta1AttachedDiskSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1AttachedDiskSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -597,6 +620,7 @@ public partial class V1beta1AttachedDiskSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1AttachedDiskSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -612,6 +636,7 @@ public partial class V1beta1AttachedDiskSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1AttachedDiskSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -623,6 +648,7 @@ public partial class V1beta1AttachedDiskSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>AttachedDiskSpec defines the desired state of AttachedDisk</summary>
 public partial class V1beta1AttachedDiskSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -655,6 +681,7 @@ public partial class V1beta1AttachedDiskSpec
     public V1beta1AttachedDiskSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AttachedDiskStatusAtProvider
 {
     /// <summary>Specifies a unique device name of your choice that is reflected into the /dev/disk/by-id/google-* tree of a Linux operating system running within the instance. This name can be used to reference the device for mounting, resizing, and so on, from within the instance.</summary>
@@ -686,6 +713,7 @@ public partial class V1beta1AttachedDiskStatusAtProvider
     public string? Zone { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1AttachedDiskStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -713,6 +741,7 @@ public partial class V1beta1AttachedDiskStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>AttachedDiskStatus defines the observed state of AttachedDisk.</summary>
 public partial class V1beta1AttachedDiskStatus
 {
     /// <summary></summary>
@@ -729,6 +758,7 @@ public partial class V1beta1AttachedDiskStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>AttachedDisk is the Schema for the AttachedDisks API. Resource that allows attaching existing persistent disks to compute instances.</summary>
 public partial class V1beta1AttachedDisk : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AttachedDiskSpec>, IStatus<V1beta1AttachedDiskStatus>
 {
     public const string KubeApiVersion = "v1beta1";

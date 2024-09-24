@@ -38,6 +38,7 @@ public enum V1beta1ReferenceInputBlobSpecForProviderResourceGroupNameRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ReferenceInputBlobSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ReferenceInputBlobSpecForProviderResourceGroupNameRe
     public V1beta1ReferenceInputBlobSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1ReferenceInputBlobSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ReferenceInputBlobSpecForProviderResourceGroupNameSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ReferenceInputBlobSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ReferenceInputBlobSpecForProviderResourceGroupNameSe
     public V1beta1ReferenceInputBlobSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1ReferenceInputBlobSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1ReferenceInputBlobSpecForProviderResourceGroupNameSe
     public V1beta1ReferenceInputBlobSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ReferenceInputBlobSpecForProviderSerialization
 {
     /// <summary>The encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. It currently can only be set to UTF8.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1ReferenceInputBlobSpecForProviderSerialization
     public string? Type { get; set; }
 }
 
+/// <summary>The Access Key which should be used to connect to this Storage Account. Required if authentication_mode is ConnectionString.</summary>
 public partial class V1beta1ReferenceInputBlobSpecForProviderStorageAccountKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -160,6 +166,7 @@ public enum V1beta1ReferenceInputBlobSpecForProviderStorageAccountNameRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ReferenceInputBlobSpecForProviderStorageAccountNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -173,6 +180,7 @@ public partial class V1beta1ReferenceInputBlobSpecForProviderStorageAccountNameR
     public V1beta1ReferenceInputBlobSpecForProviderStorageAccountNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in storage to populate storageAccountName.</summary>
 public partial class V1beta1ReferenceInputBlobSpecForProviderStorageAccountNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -204,6 +212,7 @@ public enum V1beta1ReferenceInputBlobSpecForProviderStorageAccountNameSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ReferenceInputBlobSpecForProviderStorageAccountNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -217,6 +226,7 @@ public partial class V1beta1ReferenceInputBlobSpecForProviderStorageAccountNameS
     public V1beta1ReferenceInputBlobSpecForProviderStorageAccountNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in storage to populate storageAccountName.</summary>
 public partial class V1beta1ReferenceInputBlobSpecForProviderStorageAccountNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -252,6 +262,7 @@ public enum V1beta1ReferenceInputBlobSpecForProviderStorageContainerNameRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ReferenceInputBlobSpecForProviderStorageContainerNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -265,6 +276,7 @@ public partial class V1beta1ReferenceInputBlobSpecForProviderStorageContainerNam
     public V1beta1ReferenceInputBlobSpecForProviderStorageContainerNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Container in storage to populate storageContainerName.</summary>
 public partial class V1beta1ReferenceInputBlobSpecForProviderStorageContainerNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -296,6 +308,7 @@ public enum V1beta1ReferenceInputBlobSpecForProviderStorageContainerNameSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ReferenceInputBlobSpecForProviderStorageContainerNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -309,6 +322,7 @@ public partial class V1beta1ReferenceInputBlobSpecForProviderStorageContainerNam
     public V1beta1ReferenceInputBlobSpecForProviderStorageContainerNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Container in storage to populate storageContainerName.</summary>
 public partial class V1beta1ReferenceInputBlobSpecForProviderStorageContainerNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -344,6 +358,7 @@ public enum V1beta1ReferenceInputBlobSpecForProviderStreamAnalyticsJobNameRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ReferenceInputBlobSpecForProviderStreamAnalyticsJobNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -357,6 +372,7 @@ public partial class V1beta1ReferenceInputBlobSpecForProviderStreamAnalyticsJobN
     public V1beta1ReferenceInputBlobSpecForProviderStreamAnalyticsJobNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Job in streamanalytics to populate streamAnalyticsJobName.</summary>
 public partial class V1beta1ReferenceInputBlobSpecForProviderStreamAnalyticsJobNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -388,6 +404,7 @@ public enum V1beta1ReferenceInputBlobSpecForProviderStreamAnalyticsJobNameSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ReferenceInputBlobSpecForProviderStreamAnalyticsJobNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -401,6 +418,7 @@ public partial class V1beta1ReferenceInputBlobSpecForProviderStreamAnalyticsJobN
     public V1beta1ReferenceInputBlobSpecForProviderStreamAnalyticsJobNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Job in streamanalytics to populate streamAnalyticsJobName.</summary>
 public partial class V1beta1ReferenceInputBlobSpecForProviderStreamAnalyticsJobNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -416,6 +434,7 @@ public partial class V1beta1ReferenceInputBlobSpecForProviderStreamAnalyticsJobN
     public V1beta1ReferenceInputBlobSpecForProviderStreamAnalyticsJobNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ReferenceInputBlobSpecForProvider
 {
     /// <summary>The authentication mode for the Stream Analytics Reference Input. Possible values are Msi and ConnectionString. Defaults to ConnectionString.</summary>
@@ -515,6 +534,7 @@ public enum V1beta1ReferenceInputBlobSpecInitProviderResourceGroupNameRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ReferenceInputBlobSpecInitProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -528,6 +548,7 @@ public partial class V1beta1ReferenceInputBlobSpecInitProviderResourceGroupNameR
     public V1beta1ReferenceInputBlobSpecInitProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1ReferenceInputBlobSpecInitProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -559,6 +580,7 @@ public enum V1beta1ReferenceInputBlobSpecInitProviderResourceGroupNameSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ReferenceInputBlobSpecInitProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -572,6 +594,7 @@ public partial class V1beta1ReferenceInputBlobSpecInitProviderResourceGroupNameS
     public V1beta1ReferenceInputBlobSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1ReferenceInputBlobSpecInitProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -587,6 +610,7 @@ public partial class V1beta1ReferenceInputBlobSpecInitProviderResourceGroupNameS
     public V1beta1ReferenceInputBlobSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ReferenceInputBlobSpecInitProviderSerialization
 {
     /// <summary>The encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. It currently can only be set to UTF8.</summary>
@@ -622,6 +646,7 @@ public enum V1beta1ReferenceInputBlobSpecInitProviderStorageAccountNameRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ReferenceInputBlobSpecInitProviderStorageAccountNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -635,6 +660,7 @@ public partial class V1beta1ReferenceInputBlobSpecInitProviderStorageAccountName
     public V1beta1ReferenceInputBlobSpecInitProviderStorageAccountNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in storage to populate storageAccountName.</summary>
 public partial class V1beta1ReferenceInputBlobSpecInitProviderStorageAccountNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -666,6 +692,7 @@ public enum V1beta1ReferenceInputBlobSpecInitProviderStorageAccountNameSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ReferenceInputBlobSpecInitProviderStorageAccountNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -679,6 +706,7 @@ public partial class V1beta1ReferenceInputBlobSpecInitProviderStorageAccountName
     public V1beta1ReferenceInputBlobSpecInitProviderStorageAccountNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in storage to populate storageAccountName.</summary>
 public partial class V1beta1ReferenceInputBlobSpecInitProviderStorageAccountNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -714,6 +742,7 @@ public enum V1beta1ReferenceInputBlobSpecInitProviderStorageContainerNameRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ReferenceInputBlobSpecInitProviderStorageContainerNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -727,6 +756,7 @@ public partial class V1beta1ReferenceInputBlobSpecInitProviderStorageContainerNa
     public V1beta1ReferenceInputBlobSpecInitProviderStorageContainerNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Container in storage to populate storageContainerName.</summary>
 public partial class V1beta1ReferenceInputBlobSpecInitProviderStorageContainerNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -758,6 +788,7 @@ public enum V1beta1ReferenceInputBlobSpecInitProviderStorageContainerNameSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ReferenceInputBlobSpecInitProviderStorageContainerNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -771,6 +802,7 @@ public partial class V1beta1ReferenceInputBlobSpecInitProviderStorageContainerNa
     public V1beta1ReferenceInputBlobSpecInitProviderStorageContainerNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Container in storage to populate storageContainerName.</summary>
 public partial class V1beta1ReferenceInputBlobSpecInitProviderStorageContainerNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -806,6 +838,7 @@ public enum V1beta1ReferenceInputBlobSpecInitProviderStreamAnalyticsJobNameRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ReferenceInputBlobSpecInitProviderStreamAnalyticsJobNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -819,6 +852,7 @@ public partial class V1beta1ReferenceInputBlobSpecInitProviderStreamAnalyticsJob
     public V1beta1ReferenceInputBlobSpecInitProviderStreamAnalyticsJobNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Job in streamanalytics to populate streamAnalyticsJobName.</summary>
 public partial class V1beta1ReferenceInputBlobSpecInitProviderStreamAnalyticsJobNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -850,6 +884,7 @@ public enum V1beta1ReferenceInputBlobSpecInitProviderStreamAnalyticsJobNameSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ReferenceInputBlobSpecInitProviderStreamAnalyticsJobNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -863,6 +898,7 @@ public partial class V1beta1ReferenceInputBlobSpecInitProviderStreamAnalyticsJob
     public V1beta1ReferenceInputBlobSpecInitProviderStreamAnalyticsJobNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Job in streamanalytics to populate streamAnalyticsJobName.</summary>
 public partial class V1beta1ReferenceInputBlobSpecInitProviderStreamAnalyticsJobNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -878,6 +914,7 @@ public partial class V1beta1ReferenceInputBlobSpecInitProviderStreamAnalyticsJob
     public V1beta1ReferenceInputBlobSpecInitProviderStreamAnalyticsJobNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ReferenceInputBlobSpecInitProvider
 {
     /// <summary>The authentication mode for the Stream Analytics Reference Input. Possible values are Msi and ConnectionString. Defaults to ConnectionString.</summary>
@@ -995,6 +1032,7 @@ public enum V1beta1ReferenceInputBlobSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ReferenceInputBlobSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1008,6 +1046,7 @@ public partial class V1beta1ReferenceInputBlobSpecProviderConfigRefPolicy
     public V1beta1ReferenceInputBlobSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ReferenceInputBlobSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1039,6 +1078,7 @@ public enum V1beta1ReferenceInputBlobSpecPublishConnectionDetailsToConfigRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ReferenceInputBlobSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1052,6 +1092,7 @@ public partial class V1beta1ReferenceInputBlobSpecPublishConnectionDetailsToConf
     public V1beta1ReferenceInputBlobSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ReferenceInputBlobSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1063,6 +1104,7 @@ public partial class V1beta1ReferenceInputBlobSpecPublishConnectionDetailsToConf
     public V1beta1ReferenceInputBlobSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ReferenceInputBlobSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1078,6 +1120,7 @@ public partial class V1beta1ReferenceInputBlobSpecPublishConnectionDetailsToMeta
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ReferenceInputBlobSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1093,6 +1136,7 @@ public partial class V1beta1ReferenceInputBlobSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ReferenceInputBlobSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1104,6 +1148,7 @@ public partial class V1beta1ReferenceInputBlobSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ReferenceInputBlobSpec defines the desired state of ReferenceInputBlob</summary>
 public partial class V1beta1ReferenceInputBlobSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1136,6 +1181,7 @@ public partial class V1beta1ReferenceInputBlobSpec
     public V1beta1ReferenceInputBlobSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ReferenceInputBlobStatusAtProviderSerialization
 {
     /// <summary>The encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. It currently can only be set to UTF8.</summary>
@@ -1151,6 +1197,7 @@ public partial class V1beta1ReferenceInputBlobStatusAtProviderSerialization
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ReferenceInputBlobStatusAtProvider
 {
     /// <summary>The authentication mode for the Stream Analytics Reference Input. Possible values are Msi and ConnectionString. Defaults to ConnectionString.</summary>
@@ -1198,6 +1245,7 @@ public partial class V1beta1ReferenceInputBlobStatusAtProvider
     public string? TimeFormat { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ReferenceInputBlobStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1225,6 +1273,7 @@ public partial class V1beta1ReferenceInputBlobStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ReferenceInputBlobStatus defines the observed state of ReferenceInputBlob.</summary>
 public partial class V1beta1ReferenceInputBlobStatus
 {
     /// <summary></summary>
@@ -1241,6 +1290,7 @@ public partial class V1beta1ReferenceInputBlobStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ReferenceInputBlob is the Schema for the ReferenceInputBlobs API. Manages a Stream Analytics Reference Input Blob.</summary>
 public partial class V1beta1ReferenceInputBlob : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ReferenceInputBlobSpec>, IStatus<V1beta1ReferenceInputBlobStatus>
 {
     public const string KubeApiVersion = "v1beta1";

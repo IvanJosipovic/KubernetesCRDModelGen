@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kms.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1KMSKeyRingSpec
 {
     /// <summary>Immutable. The location for the KeyRing. A full list of valid locations can be found by running 'gcloud kms locations list'.</summary>
@@ -19,6 +20,7 @@ public partial class V1beta1KMSKeyRingSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KMSKeyRingStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -42,6 +44,7 @@ public partial class V1beta1KMSKeyRingStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KMSKeyRingStatus
 {
     /// <summary>Conditions represent the latest available observations of the KMSKeyRing's current state.</summary>
@@ -58,6 +61,7 @@ public partial class V1beta1KMSKeyRingStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>KMSKeyRing represents a KMS KeyRing.</summary>
 public partial class V1beta1KMSKeyRing : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1KMSKeyRingSpec>, IStatus<V1beta1KMSKeyRingStatus>
 {
     public const string KubeApiVersion = "v1beta1";

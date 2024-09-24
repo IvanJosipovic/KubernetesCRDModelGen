@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.securitycenter.cnrm.cloud.google.com;
+/// <summary>The organization that this resource belongs to.</summary>
 public partial class V1alpha1SecurityCenterSourceSpecOrganizationRef
 {
     /// <summary>Allowed value: The `name` field of an `Organization` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1SecurityCenterSourceSpecOrganizationRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1SecurityCenterSourceSpec
 {
     /// <summary>The description of the source (max of 1024 characters).</summary>
@@ -42,6 +44,7 @@ public partial class V1alpha1SecurityCenterSourceSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1SecurityCenterSourceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -65,6 +68,7 @@ public partial class V1alpha1SecurityCenterSourceStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1SecurityCenterSourceStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -81,6 +85,7 @@ public partial class V1alpha1SecurityCenterSourceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1SecurityCenterSource : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1SecurityCenterSourceSpec>, IStatus<V1alpha1SecurityCenterSourceStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

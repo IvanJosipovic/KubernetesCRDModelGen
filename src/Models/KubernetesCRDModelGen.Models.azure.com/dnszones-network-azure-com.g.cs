@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20180501storageDnsZoneSpecOwner
 {
     /// <summary></summary>
@@ -19,6 +20,7 @@ public partial class V1api20180501storageDnsZoneSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Reference: Resource Id.</summary>
 public partial class V1api20180501storageDnsZoneSpecRegistrationVirtualNetworksReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -38,6 +40,7 @@ public partial class V1api20180501storageDnsZoneSpecRegistrationVirtualNetworksR
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20180501.SubResource A reference to a another resource</summary>
 public partial class V1api20180501storageDnsZoneSpecRegistrationVirtualNetworks
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -49,6 +52,7 @@ public partial class V1api20180501storageDnsZoneSpecRegistrationVirtualNetworks
     public V1api20180501storageDnsZoneSpecRegistrationVirtualNetworksReference? Reference { get; set; }
 }
 
+/// <summary>Reference: Resource Id.</summary>
 public partial class V1api20180501storageDnsZoneSpecResolutionVirtualNetworksReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -68,6 +72,7 @@ public partial class V1api20180501storageDnsZoneSpecResolutionVirtualNetworksRef
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20180501.SubResource A reference to a another resource</summary>
 public partial class V1api20180501storageDnsZoneSpecResolutionVirtualNetworks
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -79,6 +84,7 @@ public partial class V1api20180501storageDnsZoneSpecResolutionVirtualNetworks
     public V1api20180501storageDnsZoneSpecResolutionVirtualNetworksReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20180501.DnsZone_Spec</summary>
 public partial class V1api20180501storageDnsZoneSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -118,6 +124,7 @@ public partial class V1api20180501storageDnsZoneSpec
     public string? ZoneType { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20180501storageDnsZoneStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -149,6 +156,7 @@ public partial class V1api20180501storageDnsZoneStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20180501.SubResource_STATUS A reference to a another resource</summary>
 public partial class V1api20180501storageDnsZoneStatusRegistrationVirtualNetworks
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -160,6 +168,7 @@ public partial class V1api20180501storageDnsZoneStatusRegistrationVirtualNetwork
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20180501.SubResource_STATUS A reference to a another resource</summary>
 public partial class V1api20180501storageDnsZoneStatusResolutionVirtualNetworks
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -171,6 +180,7 @@ public partial class V1api20180501storageDnsZoneStatusResolutionVirtualNetworks
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20180501.DnsZone_STATUS</summary>
 public partial class V1api20180501storageDnsZoneStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -235,6 +245,7 @@ public partial class V1api20180501storageDnsZoneStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20180501.DnsZone Generator information: - Generated from: /dns/resource-manager/Microsoft.Network/stable/2018-05-01/dns.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}</summary>
 public partial class V1api20180501storageDnsZone : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20180501storageDnsZoneSpec>, IStatus<V1api20180501storageDnsZoneStatus>
 {
     public const string KubeApiVersion = "v1api20180501storage";

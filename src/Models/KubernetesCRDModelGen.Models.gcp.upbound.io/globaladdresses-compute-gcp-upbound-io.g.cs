@@ -38,6 +38,7 @@ public enum V1beta1GlobalAddressSpecForProviderNetworkRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GlobalAddressSpecForProviderNetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1GlobalAddressSpecForProviderNetworkRefPolicy
     public V1beta1GlobalAddressSpecForProviderNetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate network.</summary>
 public partial class V1beta1GlobalAddressSpecForProviderNetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1GlobalAddressSpecForProviderNetworkSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GlobalAddressSpecForProviderNetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1GlobalAddressSpecForProviderNetworkSelectorPolicy
     public V1beta1GlobalAddressSpecForProviderNetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate network.</summary>
 public partial class V1beta1GlobalAddressSpecForProviderNetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1GlobalAddressSpecForProviderNetworkSelector
     public V1beta1GlobalAddressSpecForProviderNetworkSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GlobalAddressSpecForProvider
 {
     /// <summary>The IP address or beginning of the address range represented by this resource. This can be supplied as an input to reserve a specific address or omitted to allow GCP to choose a valid one for you.</summary>
@@ -177,6 +182,7 @@ public enum V1beta1GlobalAddressSpecInitProviderNetworkRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GlobalAddressSpecInitProviderNetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -190,6 +196,7 @@ public partial class V1beta1GlobalAddressSpecInitProviderNetworkRefPolicy
     public V1beta1GlobalAddressSpecInitProviderNetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate network.</summary>
 public partial class V1beta1GlobalAddressSpecInitProviderNetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -221,6 +228,7 @@ public enum V1beta1GlobalAddressSpecInitProviderNetworkSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GlobalAddressSpecInitProviderNetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -234,6 +242,7 @@ public partial class V1beta1GlobalAddressSpecInitProviderNetworkSelectorPolicy
     public V1beta1GlobalAddressSpecInitProviderNetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate network.</summary>
 public partial class V1beta1GlobalAddressSpecInitProviderNetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -249,6 +258,7 @@ public partial class V1beta1GlobalAddressSpecInitProviderNetworkSelector
     public V1beta1GlobalAddressSpecInitProviderNetworkSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1GlobalAddressSpecInitProvider
 {
     /// <summary>The IP address or beginning of the address range represented by this resource. This can be supplied as an input to reserve a specific address or omitted to allow GCP to choose a valid one for you.</summary>
@@ -338,6 +348,7 @@ public enum V1beta1GlobalAddressSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GlobalAddressSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -351,6 +362,7 @@ public partial class V1beta1GlobalAddressSpecProviderConfigRefPolicy
     public V1beta1GlobalAddressSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1GlobalAddressSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -382,6 +394,7 @@ public enum V1beta1GlobalAddressSpecPublishConnectionDetailsToConfigRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GlobalAddressSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -395,6 +408,7 @@ public partial class V1beta1GlobalAddressSpecPublishConnectionDetailsToConfigRef
     public V1beta1GlobalAddressSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1GlobalAddressSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -406,6 +420,7 @@ public partial class V1beta1GlobalAddressSpecPublishConnectionDetailsToConfigRef
     public V1beta1GlobalAddressSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1GlobalAddressSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -421,6 +436,7 @@ public partial class V1beta1GlobalAddressSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1GlobalAddressSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -436,6 +452,7 @@ public partial class V1beta1GlobalAddressSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1GlobalAddressSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -447,6 +464,7 @@ public partial class V1beta1GlobalAddressSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>GlobalAddressSpec defines the desired state of GlobalAddress</summary>
 public partial class V1beta1GlobalAddressSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -479,6 +497,7 @@ public partial class V1beta1GlobalAddressSpec
     public V1beta1GlobalAddressSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GlobalAddressStatusAtProvider
 {
     /// <summary>The IP address or beginning of the address range represented by this resource. This can be supplied as an input to reserve a specific address or omitted to allow GCP to choose a valid one for you.</summary>
@@ -538,6 +557,7 @@ public partial class V1beta1GlobalAddressStatusAtProvider
     public IDictionary<string, string>? TerraformLabels { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1GlobalAddressStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -565,6 +585,7 @@ public partial class V1beta1GlobalAddressStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>GlobalAddressStatus defines the observed state of GlobalAddress.</summary>
 public partial class V1beta1GlobalAddressStatus
 {
     /// <summary></summary>
@@ -581,6 +602,7 @@ public partial class V1beta1GlobalAddressStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>GlobalAddress is the Schema for the GlobalAddresss API. Represents a Global Address resource.</summary>
 public partial class V1beta1GlobalAddress : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1GlobalAddressSpec>, IStatus<V1beta1GlobalAddressStatus>
 {
     public const string KubeApiVersion = "v1beta1";

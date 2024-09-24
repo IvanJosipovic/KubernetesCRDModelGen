@@ -18,6 +18,7 @@ public enum V1beta1TransitGatewayPeeringAttachmentSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Describes whether dynamic routing is enabled or disabled for the transit gateway peering request. See options below for more details!</summary>
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProviderOptions
 {
     /// <summary>Indicates whether dynamic routing is enabled or disabled.. Supports enable and disable.</summary>
@@ -45,6 +46,7 @@ public enum V1beta1TransitGatewayPeeringAttachmentSpecForProviderPeerTransitGate
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProviderPeerTransitGatewayIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -58,6 +60,7 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProviderPeerTr
     public V1beta1TransitGatewayPeeringAttachmentSpecForProviderPeerTransitGatewayIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a TransitGateway in ec2 to populate peerTransitGatewayId.</summary>
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProviderPeerTransitGatewayIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -89,6 +92,7 @@ public enum V1beta1TransitGatewayPeeringAttachmentSpecForProviderPeerTransitGate
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProviderPeerTransitGatewayIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -102,6 +106,7 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProviderPeerTr
     public V1beta1TransitGatewayPeeringAttachmentSpecForProviderPeerTransitGatewayIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a TransitGateway in ec2 to populate peerTransitGatewayId.</summary>
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProviderPeerTransitGatewayIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -137,6 +142,7 @@ public enum V1beta1TransitGatewayPeeringAttachmentSpecForProviderTransitGatewayI
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProviderTransitGatewayIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -150,6 +156,7 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProviderTransi
     public V1beta1TransitGatewayPeeringAttachmentSpecForProviderTransitGatewayIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a TransitGateway in ec2 to populate transitGatewayId.</summary>
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProviderTransitGatewayIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -181,6 +188,7 @@ public enum V1beta1TransitGatewayPeeringAttachmentSpecForProviderTransitGatewayI
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProviderTransitGatewayIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -194,6 +202,7 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProviderTransi
     public V1beta1TransitGatewayPeeringAttachmentSpecForProviderTransitGatewayIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a TransitGateway in ec2 to populate transitGatewayId.</summary>
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProviderTransitGatewayIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -209,6 +218,7 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProviderTransi
     public V1beta1TransitGatewayPeeringAttachmentSpecForProviderTransitGatewayIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProvider
 {
     /// <summary>Describes whether dynamic routing is enabled or disabled for the transit gateway peering request. See options below for more details!</summary>
@@ -256,6 +266,7 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProvider
     public V1beta1TransitGatewayPeeringAttachmentSpecForProviderTransitGatewayIdSelector? TransitGatewayIdSelector { get; set; }
 }
 
+/// <summary>Describes whether dynamic routing is enabled or disabled for the transit gateway peering request. See options below for more details!</summary>
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProviderOptions
 {
     /// <summary>Indicates whether dynamic routing is enabled or disabled.. Supports enable and disable.</summary>
@@ -283,6 +294,7 @@ public enum V1beta1TransitGatewayPeeringAttachmentSpecInitProviderPeerTransitGat
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProviderPeerTransitGatewayIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -296,6 +308,7 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProviderPeerT
     public V1beta1TransitGatewayPeeringAttachmentSpecInitProviderPeerTransitGatewayIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a TransitGateway in ec2 to populate peerTransitGatewayId.</summary>
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProviderPeerTransitGatewayIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -327,6 +340,7 @@ public enum V1beta1TransitGatewayPeeringAttachmentSpecInitProviderPeerTransitGat
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProviderPeerTransitGatewayIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -340,6 +354,7 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProviderPeerT
     public V1beta1TransitGatewayPeeringAttachmentSpecInitProviderPeerTransitGatewayIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a TransitGateway in ec2 to populate peerTransitGatewayId.</summary>
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProviderPeerTransitGatewayIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -375,6 +390,7 @@ public enum V1beta1TransitGatewayPeeringAttachmentSpecInitProviderTransitGateway
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProviderTransitGatewayIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -388,6 +404,7 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProviderTrans
     public V1beta1TransitGatewayPeeringAttachmentSpecInitProviderTransitGatewayIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a TransitGateway in ec2 to populate transitGatewayId.</summary>
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProviderTransitGatewayIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -419,6 +436,7 @@ public enum V1beta1TransitGatewayPeeringAttachmentSpecInitProviderTransitGateway
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProviderTransitGatewayIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -432,6 +450,7 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProviderTrans
     public V1beta1TransitGatewayPeeringAttachmentSpecInitProviderTransitGatewayIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a TransitGateway in ec2 to populate transitGatewayId.</summary>
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProviderTransitGatewayIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -447,6 +466,7 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProviderTrans
     public V1beta1TransitGatewayPeeringAttachmentSpecInitProviderTransitGatewayIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProvider
 {
     /// <summary>Describes whether dynamic routing is enabled or disabled for the transit gateway peering request. See options below for more details!</summary>
@@ -532,6 +552,7 @@ public enum V1beta1TransitGatewayPeeringAttachmentSpecProviderConfigRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -545,6 +566,7 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecProviderConfigRef
     public V1beta1TransitGatewayPeeringAttachmentSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -576,6 +598,7 @@ public enum V1beta1TransitGatewayPeeringAttachmentSpecPublishConnectionDetailsTo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -589,6 +612,7 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecPublishConnection
     public V1beta1TransitGatewayPeeringAttachmentSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -600,6 +624,7 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecPublishConnection
     public V1beta1TransitGatewayPeeringAttachmentSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -615,6 +640,7 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecPublishConnection
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -630,6 +656,7 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecPublishConnection
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -641,6 +668,7 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecWriteConnectionSe
     public string Namespace { get; set; }
 }
 
+/// <summary>TransitGatewayPeeringAttachmentSpec defines the desired state of TransitGatewayPeeringAttachment</summary>
 public partial class V1beta1TransitGatewayPeeringAttachmentSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -673,6 +701,7 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpec
     public V1beta1TransitGatewayPeeringAttachmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary>Describes whether dynamic routing is enabled or disabled for the transit gateway peering request. See options below for more details!</summary>
 public partial class V1beta1TransitGatewayPeeringAttachmentStatusAtProviderOptions
 {
     /// <summary>Indicates whether dynamic routing is enabled or disabled.. Supports enable and disable.</summary>
@@ -680,6 +709,7 @@ public partial class V1beta1TransitGatewayPeeringAttachmentStatusAtProviderOptio
     public string? DynamicRouting { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TransitGatewayPeeringAttachmentStatusAtProvider
 {
     /// <summary>EC2 Transit Gateway Attachment identifier</summary>
@@ -719,6 +749,7 @@ public partial class V1beta1TransitGatewayPeeringAttachmentStatusAtProvider
     public string? TransitGatewayId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1TransitGatewayPeeringAttachmentStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -746,6 +777,7 @@ public partial class V1beta1TransitGatewayPeeringAttachmentStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>TransitGatewayPeeringAttachmentStatus defines the observed state of TransitGatewayPeeringAttachment.</summary>
 public partial class V1beta1TransitGatewayPeeringAttachmentStatus
 {
     /// <summary></summary>
@@ -762,6 +794,7 @@ public partial class V1beta1TransitGatewayPeeringAttachmentStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>TransitGatewayPeeringAttachment is the Schema for the TransitGatewayPeeringAttachments API. Manages an EC2 Transit Gateway Peering Attachment</summary>
 public partial class V1beta1TransitGatewayPeeringAttachment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1TransitGatewayPeeringAttachmentSpec>, IStatus<V1beta1TransitGatewayPeeringAttachmentStatus>
 {
     public const string KubeApiVersion = "v1beta1";

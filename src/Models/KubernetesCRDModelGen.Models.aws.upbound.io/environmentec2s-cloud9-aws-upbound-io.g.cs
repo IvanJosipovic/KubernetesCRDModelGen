@@ -38,6 +38,7 @@ public enum V1beta1EnvironmentEC2SpecForProviderSubnetIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EnvironmentEC2SpecForProviderSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1EnvironmentEC2SpecForProviderSubnetIdRefPolicy
     public V1beta1EnvironmentEC2SpecForProviderSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
 public partial class V1beta1EnvironmentEC2SpecForProviderSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1EnvironmentEC2SpecForProviderSubnetIdSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EnvironmentEC2SpecForProviderSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1EnvironmentEC2SpecForProviderSubnetIdSelectorPolicy
     public V1beta1EnvironmentEC2SpecForProviderSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
 public partial class V1beta1EnvironmentEC2SpecForProviderSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1EnvironmentEC2SpecForProviderSubnetIdSelector
     public V1beta1EnvironmentEC2SpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentEC2SpecForProvider
 {
     /// <summary>The number of minutes until the running instance is shut down after the environment has last been used.</summary>
@@ -181,6 +186,7 @@ public enum V1beta1EnvironmentEC2SpecInitProviderSubnetIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EnvironmentEC2SpecInitProviderSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -194,6 +200,7 @@ public partial class V1beta1EnvironmentEC2SpecInitProviderSubnetIdRefPolicy
     public V1beta1EnvironmentEC2SpecInitProviderSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
 public partial class V1beta1EnvironmentEC2SpecInitProviderSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -225,6 +232,7 @@ public enum V1beta1EnvironmentEC2SpecInitProviderSubnetIdSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EnvironmentEC2SpecInitProviderSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -238,6 +246,7 @@ public partial class V1beta1EnvironmentEC2SpecInitProviderSubnetIdSelectorPolicy
     public V1beta1EnvironmentEC2SpecInitProviderSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
 public partial class V1beta1EnvironmentEC2SpecInitProviderSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -253,6 +262,7 @@ public partial class V1beta1EnvironmentEC2SpecInitProviderSubnetIdSelector
     public V1beta1EnvironmentEC2SpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1EnvironmentEC2SpecInitProvider
 {
     /// <summary>The number of minutes until the running instance is shut down after the environment has last been used.</summary>
@@ -342,6 +352,7 @@ public enum V1beta1EnvironmentEC2SpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EnvironmentEC2SpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -355,6 +366,7 @@ public partial class V1beta1EnvironmentEC2SpecProviderConfigRefPolicy
     public V1beta1EnvironmentEC2SpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1EnvironmentEC2SpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -386,6 +398,7 @@ public enum V1beta1EnvironmentEC2SpecPublishConnectionDetailsToConfigRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EnvironmentEC2SpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -399,6 +412,7 @@ public partial class V1beta1EnvironmentEC2SpecPublishConnectionDetailsToConfigRe
     public V1beta1EnvironmentEC2SpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1EnvironmentEC2SpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -410,6 +424,7 @@ public partial class V1beta1EnvironmentEC2SpecPublishConnectionDetailsToConfigRe
     public V1beta1EnvironmentEC2SpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1EnvironmentEC2SpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -425,6 +440,7 @@ public partial class V1beta1EnvironmentEC2SpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1EnvironmentEC2SpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -440,6 +456,7 @@ public partial class V1beta1EnvironmentEC2SpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1EnvironmentEC2SpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -451,6 +468,7 @@ public partial class V1beta1EnvironmentEC2SpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>EnvironmentEC2Spec defines the desired state of EnvironmentEC2</summary>
 public partial class V1beta1EnvironmentEC2Spec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -483,6 +501,7 @@ public partial class V1beta1EnvironmentEC2Spec
     public V1beta1EnvironmentEC2SpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentEC2StatusAtProvider
 {
     /// <summary>The ARN of the environment.</summary>
@@ -538,6 +557,7 @@ public partial class V1beta1EnvironmentEC2StatusAtProvider
     public string? Type { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1EnvironmentEC2StatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -565,6 +585,7 @@ public partial class V1beta1EnvironmentEC2StatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>EnvironmentEC2Status defines the observed state of EnvironmentEC2.</summary>
 public partial class V1beta1EnvironmentEC2Status
 {
     /// <summary></summary>
@@ -581,6 +602,7 @@ public partial class V1beta1EnvironmentEC2Status
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>EnvironmentEC2 is the Schema for the EnvironmentEC2s API. Provides a Cloud9 EC2 Development Environment.</summary>
 public partial class V1beta1EnvironmentEC2 : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1EnvironmentEC2Spec>, IStatus<V1beta1EnvironmentEC2Status>
 {
     public const string KubeApiVersion = "v1beta1";

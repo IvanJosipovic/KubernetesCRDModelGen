@@ -18,6 +18,7 @@ public enum V1beta1LabServicePlanSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServicePlanSpecForProviderDefaultAutoShutdown
 {
     /// <summary>The amount of time a VM will stay running after a user disconnects if this behavior is enabled. This value must be formatted as an ISO 8601 string.</summary>
@@ -37,6 +38,7 @@ public partial class V1beta1LabServicePlanSpecForProviderDefaultAutoShutdown
     public string? ShutdownOnIdle { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServicePlanSpecForProviderDefaultConnection
 {
     /// <summary>The enabled access level for Client Access over RDP. Possible values are Private and Public.</summary>
@@ -76,6 +78,7 @@ public enum V1beta1LabServicePlanSpecForProviderDefaultNetworkSubnetIdRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LabServicePlanSpecForProviderDefaultNetworkSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -89,6 +92,7 @@ public partial class V1beta1LabServicePlanSpecForProviderDefaultNetworkSubnetIdR
     public V1beta1LabServicePlanSpecForProviderDefaultNetworkSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate defaultNetworkSubnetId.</summary>
 public partial class V1beta1LabServicePlanSpecForProviderDefaultNetworkSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -120,6 +124,7 @@ public enum V1beta1LabServicePlanSpecForProviderDefaultNetworkSubnetIdSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LabServicePlanSpecForProviderDefaultNetworkSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -133,6 +138,7 @@ public partial class V1beta1LabServicePlanSpecForProviderDefaultNetworkSubnetIdS
     public V1beta1LabServicePlanSpecForProviderDefaultNetworkSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate defaultNetworkSubnetId.</summary>
 public partial class V1beta1LabServicePlanSpecForProviderDefaultNetworkSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -168,6 +174,7 @@ public enum V1beta1LabServicePlanSpecForProviderResourceGroupNameRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LabServicePlanSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -181,6 +188,7 @@ public partial class V1beta1LabServicePlanSpecForProviderResourceGroupNameRefPol
     public V1beta1LabServicePlanSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1LabServicePlanSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -212,6 +220,7 @@ public enum V1beta1LabServicePlanSpecForProviderResourceGroupNameSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LabServicePlanSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -225,6 +234,7 @@ public partial class V1beta1LabServicePlanSpecForProviderResourceGroupNameSelect
     public V1beta1LabServicePlanSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1LabServicePlanSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -240,6 +250,7 @@ public partial class V1beta1LabServicePlanSpecForProviderResourceGroupNameSelect
     public V1beta1LabServicePlanSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServicePlanSpecForProviderSupport
 {
     /// <summary>The email address for the support contact.</summary>
@@ -259,6 +270,7 @@ public partial class V1beta1LabServicePlanSpecForProviderSupport
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServicePlanSpecForProvider
 {
     /// <summary>The allowed regions for the lab creator to use when creating labs using this Lab Service Plan. The allowed region's count must be between 1 and 28.</summary>
@@ -314,6 +326,7 @@ public partial class V1beta1LabServicePlanSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServicePlanSpecInitProviderDefaultAutoShutdown
 {
     /// <summary>The amount of time a VM will stay running after a user disconnects if this behavior is enabled. This value must be formatted as an ISO 8601 string.</summary>
@@ -333,6 +346,7 @@ public partial class V1beta1LabServicePlanSpecInitProviderDefaultAutoShutdown
     public string? ShutdownOnIdle { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServicePlanSpecInitProviderDefaultConnection
 {
     /// <summary>The enabled access level for Client Access over RDP. Possible values are Private and Public.</summary>
@@ -372,6 +386,7 @@ public enum V1beta1LabServicePlanSpecInitProviderDefaultNetworkSubnetIdRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LabServicePlanSpecInitProviderDefaultNetworkSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -385,6 +400,7 @@ public partial class V1beta1LabServicePlanSpecInitProviderDefaultNetworkSubnetId
     public V1beta1LabServicePlanSpecInitProviderDefaultNetworkSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate defaultNetworkSubnetId.</summary>
 public partial class V1beta1LabServicePlanSpecInitProviderDefaultNetworkSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -416,6 +432,7 @@ public enum V1beta1LabServicePlanSpecInitProviderDefaultNetworkSubnetIdSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LabServicePlanSpecInitProviderDefaultNetworkSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -429,6 +446,7 @@ public partial class V1beta1LabServicePlanSpecInitProviderDefaultNetworkSubnetId
     public V1beta1LabServicePlanSpecInitProviderDefaultNetworkSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate defaultNetworkSubnetId.</summary>
 public partial class V1beta1LabServicePlanSpecInitProviderDefaultNetworkSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -444,6 +462,7 @@ public partial class V1beta1LabServicePlanSpecInitProviderDefaultNetworkSubnetId
     public V1beta1LabServicePlanSpecInitProviderDefaultNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServicePlanSpecInitProviderSupport
 {
     /// <summary>The email address for the support contact.</summary>
@@ -463,6 +482,7 @@ public partial class V1beta1LabServicePlanSpecInitProviderSupport
     public string? Url { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1LabServicePlanSpecInitProvider
 {
     /// <summary>The allowed regions for the lab creator to use when creating labs using this Lab Service Plan. The allowed region's count must be between 1 and 28.</summary>
@@ -548,6 +568,7 @@ public enum V1beta1LabServicePlanSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LabServicePlanSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -561,6 +582,7 @@ public partial class V1beta1LabServicePlanSpecProviderConfigRefPolicy
     public V1beta1LabServicePlanSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1LabServicePlanSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -592,6 +614,7 @@ public enum V1beta1LabServicePlanSpecPublishConnectionDetailsToConfigRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LabServicePlanSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -605,6 +628,7 @@ public partial class V1beta1LabServicePlanSpecPublishConnectionDetailsToConfigRe
     public V1beta1LabServicePlanSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1LabServicePlanSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -616,6 +640,7 @@ public partial class V1beta1LabServicePlanSpecPublishConnectionDetailsToConfigRe
     public V1beta1LabServicePlanSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1LabServicePlanSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -631,6 +656,7 @@ public partial class V1beta1LabServicePlanSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1LabServicePlanSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -646,6 +672,7 @@ public partial class V1beta1LabServicePlanSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1LabServicePlanSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -657,6 +684,7 @@ public partial class V1beta1LabServicePlanSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>LabServicePlanSpec defines the desired state of LabServicePlan</summary>
 public partial class V1beta1LabServicePlanSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -689,6 +717,7 @@ public partial class V1beta1LabServicePlanSpec
     public V1beta1LabServicePlanSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServicePlanStatusAtProviderDefaultAutoShutdown
 {
     /// <summary>The amount of time a VM will stay running after a user disconnects if this behavior is enabled. This value must be formatted as an ISO 8601 string.</summary>
@@ -708,6 +737,7 @@ public partial class V1beta1LabServicePlanStatusAtProviderDefaultAutoShutdown
     public string? ShutdownOnIdle { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServicePlanStatusAtProviderDefaultConnection
 {
     /// <summary>The enabled access level for Client Access over RDP. Possible values are Private and Public.</summary>
@@ -727,6 +757,7 @@ public partial class V1beta1LabServicePlanStatusAtProviderDefaultConnection
     public string? WebSshAccess { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServicePlanStatusAtProviderSupport
 {
     /// <summary>The email address for the support contact.</summary>
@@ -746,6 +777,7 @@ public partial class V1beta1LabServicePlanStatusAtProviderSupport
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LabServicePlanStatusAtProvider
 {
     /// <summary>The allowed regions for the lab creator to use when creating labs using this Lab Service Plan. The allowed region's count must be between 1 and 28.</summary>
@@ -789,6 +821,7 @@ public partial class V1beta1LabServicePlanStatusAtProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1LabServicePlanStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -816,6 +849,7 @@ public partial class V1beta1LabServicePlanStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>LabServicePlanStatus defines the observed state of LabServicePlan.</summary>
 public partial class V1beta1LabServicePlanStatus
 {
     /// <summary></summary>
@@ -832,6 +866,7 @@ public partial class V1beta1LabServicePlanStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>LabServicePlan is the Schema for the LabServicePlans API. Manages a Lab Service Plan.</summary>
 public partial class V1beta1LabServicePlan : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LabServicePlanSpec>, IStatus<V1beta1LabServicePlanStatus>
 {
     public const string KubeApiVersion = "v1beta1";

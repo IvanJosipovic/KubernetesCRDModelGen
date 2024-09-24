@@ -38,6 +38,7 @@ public enum V1beta1GroupTagSpecForProviderAutoscalingGroupNameRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GroupTagSpecForProviderAutoscalingGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1GroupTagSpecForProviderAutoscalingGroupNameRefPolicy
     public V1beta1GroupTagSpecForProviderAutoscalingGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a AutoscalingGroup in autoscaling to populate autoscalingGroupName.</summary>
 public partial class V1beta1GroupTagSpecForProviderAutoscalingGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1GroupTagSpecForProviderAutoscalingGroupNameSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GroupTagSpecForProviderAutoscalingGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1GroupTagSpecForProviderAutoscalingGroupNameSelectorP
     public V1beta1GroupTagSpecForProviderAutoscalingGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a AutoscalingGroup in autoscaling to populate autoscalingGroupName.</summary>
 public partial class V1beta1GroupTagSpecForProviderAutoscalingGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1GroupTagSpecForProviderAutoscalingGroupNameSelector
     public V1beta1GroupTagSpecForProviderAutoscalingGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GroupTagSpecForProviderTag
 {
     /// <summary>Tag name.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1GroupTagSpecForProviderTag
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GroupTagSpecForProvider
 {
     /// <summary>Name of the Autoscaling Group to apply the tag to.</summary>
@@ -168,6 +174,7 @@ public enum V1beta1GroupTagSpecInitProviderAutoscalingGroupNameRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GroupTagSpecInitProviderAutoscalingGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -181,6 +188,7 @@ public partial class V1beta1GroupTagSpecInitProviderAutoscalingGroupNameRefPolic
     public V1beta1GroupTagSpecInitProviderAutoscalingGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a AutoscalingGroup in autoscaling to populate autoscalingGroupName.</summary>
 public partial class V1beta1GroupTagSpecInitProviderAutoscalingGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -212,6 +220,7 @@ public enum V1beta1GroupTagSpecInitProviderAutoscalingGroupNameSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GroupTagSpecInitProviderAutoscalingGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -225,6 +234,7 @@ public partial class V1beta1GroupTagSpecInitProviderAutoscalingGroupNameSelector
     public V1beta1GroupTagSpecInitProviderAutoscalingGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a AutoscalingGroup in autoscaling to populate autoscalingGroupName.</summary>
 public partial class V1beta1GroupTagSpecInitProviderAutoscalingGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -240,6 +250,7 @@ public partial class V1beta1GroupTagSpecInitProviderAutoscalingGroupNameSelector
     public V1beta1GroupTagSpecInitProviderAutoscalingGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GroupTagSpecInitProviderTag
 {
     /// <summary>Tag name.</summary>
@@ -255,6 +266,7 @@ public partial class V1beta1GroupTagSpecInitProviderTag
     public string? Value { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1GroupTagSpecInitProvider
 {
     /// <summary>Name of the Autoscaling Group to apply the tag to.</summary>
@@ -316,6 +328,7 @@ public enum V1beta1GroupTagSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GroupTagSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -329,6 +342,7 @@ public partial class V1beta1GroupTagSpecProviderConfigRefPolicy
     public V1beta1GroupTagSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1GroupTagSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -360,6 +374,7 @@ public enum V1beta1GroupTagSpecPublishConnectionDetailsToConfigRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GroupTagSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -373,6 +388,7 @@ public partial class V1beta1GroupTagSpecPublishConnectionDetailsToConfigRefPolic
     public V1beta1GroupTagSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1GroupTagSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -384,6 +400,7 @@ public partial class V1beta1GroupTagSpecPublishConnectionDetailsToConfigRef
     public V1beta1GroupTagSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1GroupTagSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -399,6 +416,7 @@ public partial class V1beta1GroupTagSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1GroupTagSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -414,6 +432,7 @@ public partial class V1beta1GroupTagSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1GroupTagSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -425,6 +444,7 @@ public partial class V1beta1GroupTagSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>GroupTagSpec defines the desired state of GroupTag</summary>
 public partial class V1beta1GroupTagSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -457,6 +477,7 @@ public partial class V1beta1GroupTagSpec
     public V1beta1GroupTagSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GroupTagStatusAtProviderTag
 {
     /// <summary>Tag name.</summary>
@@ -472,6 +493,7 @@ public partial class V1beta1GroupTagStatusAtProviderTag
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GroupTagStatusAtProvider
 {
     /// <summary>Name of the Autoscaling Group to apply the tag to.</summary>
@@ -487,6 +509,7 @@ public partial class V1beta1GroupTagStatusAtProvider
     public IList<V1beta1GroupTagStatusAtProviderTag>? Tag { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1GroupTagStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -514,6 +537,7 @@ public partial class V1beta1GroupTagStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>GroupTagStatus defines the observed state of GroupTag.</summary>
 public partial class V1beta1GroupTagStatus
 {
     /// <summary></summary>
@@ -530,6 +554,7 @@ public partial class V1beta1GroupTagStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>GroupTag is the Schema for the GroupTags API. Manages an individual Autoscaling Group tag</summary>
 public partial class V1beta1GroupTag : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1GroupTagSpec>, IStatus<V1beta1GroupTagStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -38,6 +38,7 @@ public enum V1beta1BackupSpecForProviderFileSystemIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupSpecForProviderFileSystemIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1BackupSpecForProviderFileSystemIdRefPolicy
     public V1beta1BackupSpecForProviderFileSystemIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LustreFileSystem in fsx to populate fileSystemId.</summary>
 public partial class V1beta1BackupSpecForProviderFileSystemIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1BackupSpecForProviderFileSystemIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupSpecForProviderFileSystemIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1BackupSpecForProviderFileSystemIdSelectorPolicy
     public V1beta1BackupSpecForProviderFileSystemIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LustreFileSystem in fsx to populate fileSystemId.</summary>
 public partial class V1beta1BackupSpecForProviderFileSystemIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1BackupSpecForProviderFileSystemIdSelector
     public V1beta1BackupSpecForProviderFileSystemIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupSpecForProvider
 {
     /// <summary>The ID of the file system to back up. Required if backing up Lustre or Windows file systems.</summary>
@@ -157,6 +162,7 @@ public enum V1beta1BackupSpecInitProviderFileSystemIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupSpecInitProviderFileSystemIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -170,6 +176,7 @@ public partial class V1beta1BackupSpecInitProviderFileSystemIdRefPolicy
     public V1beta1BackupSpecInitProviderFileSystemIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LustreFileSystem in fsx to populate fileSystemId.</summary>
 public partial class V1beta1BackupSpecInitProviderFileSystemIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -201,6 +208,7 @@ public enum V1beta1BackupSpecInitProviderFileSystemIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupSpecInitProviderFileSystemIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -214,6 +222,7 @@ public partial class V1beta1BackupSpecInitProviderFileSystemIdSelectorPolicy
     public V1beta1BackupSpecInitProviderFileSystemIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LustreFileSystem in fsx to populate fileSystemId.</summary>
 public partial class V1beta1BackupSpecInitProviderFileSystemIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -229,6 +238,7 @@ public partial class V1beta1BackupSpecInitProviderFileSystemIdSelector
     public V1beta1BackupSpecInitProviderFileSystemIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1BackupSpecInitProvider
 {
     /// <summary>The ID of the file system to back up. Required if backing up Lustre or Windows file systems.</summary>
@@ -294,6 +304,7 @@ public enum V1beta1BackupSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -307,6 +318,7 @@ public partial class V1beta1BackupSpecProviderConfigRefPolicy
     public V1beta1BackupSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1BackupSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -338,6 +350,7 @@ public enum V1beta1BackupSpecPublishConnectionDetailsToConfigRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -351,6 +364,7 @@ public partial class V1beta1BackupSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1BackupSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1BackupSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -362,6 +376,7 @@ public partial class V1beta1BackupSpecPublishConnectionDetailsToConfigRef
     public V1beta1BackupSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1BackupSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -377,6 +392,7 @@ public partial class V1beta1BackupSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1BackupSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -392,6 +408,7 @@ public partial class V1beta1BackupSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1BackupSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -403,6 +420,7 @@ public partial class V1beta1BackupSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>BackupSpec defines the desired state of Backup</summary>
 public partial class V1beta1BackupSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -435,6 +453,7 @@ public partial class V1beta1BackupSpec
     public V1beta1BackupSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupStatusAtProvider
 {
     /// <summary>Amazon Resource Name of the backup.</summary>
@@ -474,6 +493,7 @@ public partial class V1beta1BackupStatusAtProvider
     public string? VolumeId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1BackupStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -501,6 +521,7 @@ public partial class V1beta1BackupStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>BackupStatus defines the observed state of Backup.</summary>
 public partial class V1beta1BackupStatus
 {
     /// <summary></summary>
@@ -517,6 +538,7 @@ public partial class V1beta1BackupStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Backup is the Schema for the Backups API. Manages a FSx Backup.</summary>
 public partial class V1beta1Backup : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BackupSpec>, IStatus<V1beta1BackupStatus>
 {
     public const string KubeApiVersion = "v1beta1";

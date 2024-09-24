@@ -18,6 +18,7 @@ public enum V1beta1EndpointSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleCacheExpirationAction
 {
     /// <summary>The behavior of the cache key for query strings. Valid values are Exclude, ExcludeAll, Include and IncludeAll.</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleCacheExpirationAc
     public string? Duration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleCacheKeyQueryStringAction
 {
     /// <summary>The behavior of the cache key for query strings. Valid values are Exclude, ExcludeAll, Include and IncludeAll.</summary>
@@ -40,6 +42,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleCacheKeyQueryStri
     public string? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleCookiesCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -63,6 +66,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleCookiesCondition
     public IList<string>? Transforms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleDeviceCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -78,6 +82,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleDeviceCondition
     public string? Operator { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleHttpVersionCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -93,6 +98,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleHttpVersionCondit
     public string? Operator { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleModifyRequestHeaderAction
 {
     /// <summary>Action to be executed on a header value. Valid values are Append, Delete and Overwrite.</summary>
@@ -108,6 +114,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleModifyRequestHead
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleModifyResponseHeaderAction
 {
     /// <summary>Action to be executed on a header value. Valid values are Append, Delete and Overwrite.</summary>
@@ -123,6 +130,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleModifyResponseHea
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderDeliveryRulePostArgCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -146,6 +154,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRulePostArgCondition
     public IList<string>? Transforms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleQueryStringCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -165,6 +174,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleQueryStringCondit
     public IList<string>? Transforms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleRemoteAddressCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -180,6 +190,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleRemoteAddressCond
     public string? Operator { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleRequestBodyCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -199,6 +210,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleRequestBodyCondit
     public IList<string>? Transforms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleRequestHeaderCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -222,6 +234,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleRequestHeaderCond
     public IList<string>? Transforms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleRequestMethodCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -237,6 +250,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleRequestMethodCond
     public string? Operator { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleRequestSchemeCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -252,6 +266,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleRequestSchemeCond
     public string? Operator { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleRequestUriCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -271,6 +286,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleRequestUriConditi
     public IList<string>? Transforms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleUrlFileExtensionCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -290,6 +306,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleUrlFileExtensionC
     public IList<string>? Transforms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleUrlFileNameCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -309,6 +326,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleUrlFileNameCondit
     public IList<string>? Transforms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleUrlPathCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -328,6 +346,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleUrlPathCondition
     public IList<string>? Transforms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleUrlRedirectAction
 {
     /// <summary>Specifies the fragment part of the URL. This value must not start with a #.</summary>
@@ -355,6 +374,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleUrlRedirectAction
     public string? RedirectType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleUrlRewriteAction
 {
     /// <summary>This value must start with a / and can't be longer than 260 characters.</summary>
@@ -370,6 +390,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRuleUrlRewriteAction
     public string? SourcePattern { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderDeliveryRule
 {
     /// <summary>A cache_expiration_action block as defined above.</summary>
@@ -461,6 +482,7 @@ public partial class V1beta1EndpointSpecForProviderDeliveryRule
     public IList<V1beta1EndpointSpecForProviderDeliveryRuleUrlRewriteAction>? UrlRewriteAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderGeoFilter
 {
     /// <summary>The Action of the Geo Filter. Possible values include Allow and Block.</summary>
@@ -476,6 +498,7 @@ public partial class V1beta1EndpointSpecForProviderGeoFilter
     public string? RelativePath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRuleCacheExpirationAction
 {
     /// <summary>The behavior of the cache key for query strings. Valid values are Exclude, ExcludeAll, Include and IncludeAll.</summary>
@@ -487,6 +510,7 @@ public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRuleCacheExpira
     public string? Duration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRuleCacheKeyQueryStringAction
 {
     /// <summary>The behavior of the cache key for query strings. Valid values are Exclude, ExcludeAll, Include and IncludeAll.</summary>
@@ -498,6 +522,7 @@ public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRuleCacheKeyQue
     public string? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRuleModifyRequestHeaderAction
 {
     /// <summary>Action to be executed on a header value. Valid values are Append, Delete and Overwrite.</summary>
@@ -513,6 +538,7 @@ public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRuleModifyReque
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRuleModifyResponseHeaderAction
 {
     /// <summary>Action to be executed on a header value. Valid values are Append, Delete and Overwrite.</summary>
@@ -528,6 +554,7 @@ public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRuleModifyRespo
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRuleUrlRedirectAction
 {
     /// <summary>Specifies the fragment part of the URL. This value must not start with a #.</summary>
@@ -555,6 +582,7 @@ public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRuleUrlRedirect
     public string? RedirectType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRuleUrlRewriteAction
 {
     /// <summary>This value must start with a / and can't be longer than 260 characters.</summary>
@@ -570,6 +598,7 @@ public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRuleUrlRewriteA
     public string? SourcePattern { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRule
 {
     /// <summary>A cache_expiration_action block as defined above.</summary>
@@ -597,6 +626,7 @@ public partial class V1beta1EndpointSpecForProviderGlobalDeliveryRule
     public IList<V1beta1EndpointSpecForProviderGlobalDeliveryRuleUrlRewriteAction>? UrlRewriteAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderOrigin
 {
     /// <summary>A string that determines the hostname/IP address of the origin server. This string can be a domain name, Storage Account endpoint, Web App endpoint, IPv4 address or IPv6 address. Changing this forces a new resource to be created.</summary>
@@ -636,6 +666,7 @@ public enum V1beta1EndpointSpecForProviderProfileNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EndpointSpecForProviderProfileNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -649,6 +680,7 @@ public partial class V1beta1EndpointSpecForProviderProfileNameRefPolicy
     public V1beta1EndpointSpecForProviderProfileNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Profile in cdn to populate profileName.</summary>
 public partial class V1beta1EndpointSpecForProviderProfileNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -680,6 +712,7 @@ public enum V1beta1EndpointSpecForProviderProfileNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EndpointSpecForProviderProfileNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -693,6 +726,7 @@ public partial class V1beta1EndpointSpecForProviderProfileNameSelectorPolicy
     public V1beta1EndpointSpecForProviderProfileNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Profile in cdn to populate profileName.</summary>
 public partial class V1beta1EndpointSpecForProviderProfileNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -728,6 +762,7 @@ public enum V1beta1EndpointSpecForProviderResourceGroupNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EndpointSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -741,6 +776,7 @@ public partial class V1beta1EndpointSpecForProviderResourceGroupNameRefPolicy
     public V1beta1EndpointSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1EndpointSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -772,6 +808,7 @@ public enum V1beta1EndpointSpecForProviderResourceGroupNameSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EndpointSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -785,6 +822,7 @@ public partial class V1beta1EndpointSpecForProviderResourceGroupNameSelectorPoli
     public V1beta1EndpointSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1EndpointSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -800,6 +838,7 @@ public partial class V1beta1EndpointSpecForProviderResourceGroupNameSelector
     public V1beta1EndpointSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProvider
 {
     /// <summary>An array of strings that indicates a content types on which compression will be applied. The value for the elements should be MIME types.</summary>
@@ -887,6 +926,7 @@ public partial class V1beta1EndpointSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleCacheExpirationAction
 {
     /// <summary>The behavior of the cache key for query strings. Valid values are Exclude, ExcludeAll, Include and IncludeAll.</summary>
@@ -898,6 +938,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleCacheExpirationA
     public string? Duration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleCacheKeyQueryStringAction
 {
     /// <summary>The behavior of the cache key for query strings. Valid values are Exclude, ExcludeAll, Include and IncludeAll.</summary>
@@ -909,6 +950,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleCacheKeyQueryStr
     public string? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleCookiesCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -932,6 +974,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleCookiesCondition
     public IList<string>? Transforms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleDeviceCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -947,6 +990,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleDeviceCondition
     public string? Operator { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleHttpVersionCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -962,6 +1006,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleHttpVersionCondi
     public string? Operator { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleModifyRequestHeaderAction
 {
     /// <summary>Action to be executed on a header value. Valid values are Append, Delete and Overwrite.</summary>
@@ -977,6 +1022,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleModifyRequestHea
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleModifyResponseHeaderAction
 {
     /// <summary>Action to be executed on a header value. Valid values are Append, Delete and Overwrite.</summary>
@@ -992,6 +1038,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleModifyResponseHe
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderDeliveryRulePostArgCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1015,6 +1062,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRulePostArgCondition
     public IList<string>? Transforms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleQueryStringCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1034,6 +1082,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleQueryStringCondi
     public IList<string>? Transforms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleRemoteAddressCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1049,6 +1098,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleRemoteAddressCon
     public string? Operator { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleRequestBodyCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1068,6 +1118,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleRequestBodyCondi
     public IList<string>? Transforms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleRequestHeaderCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1091,6 +1142,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleRequestHeaderCon
     public IList<string>? Transforms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleRequestMethodCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1106,6 +1158,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleRequestMethodCon
     public string? Operator { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleRequestSchemeCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1121,6 +1174,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleRequestSchemeCon
     public string? Operator { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleRequestUriCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1140,6 +1194,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleRequestUriCondit
     public IList<string>? Transforms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleUrlFileExtensionCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1159,6 +1214,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleUrlFileExtension
     public IList<string>? Transforms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleUrlFileNameCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1178,6 +1234,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleUrlFileNameCondi
     public IList<string>? Transforms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleUrlPathCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1197,6 +1254,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleUrlPathCondition
     public IList<string>? Transforms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleUrlRedirectAction
 {
     /// <summary>Specifies the fragment part of the URL. This value must not start with a #.</summary>
@@ -1224,6 +1282,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleUrlRedirectActio
     public string? RedirectType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderDeliveryRuleUrlRewriteAction
 {
     /// <summary>This value must start with a / and can't be longer than 260 characters.</summary>
@@ -1239,6 +1298,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRuleUrlRewriteAction
     public string? SourcePattern { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderDeliveryRule
 {
     /// <summary>A cache_expiration_action block as defined above.</summary>
@@ -1330,6 +1390,7 @@ public partial class V1beta1EndpointSpecInitProviderDeliveryRule
     public IList<V1beta1EndpointSpecInitProviderDeliveryRuleUrlRewriteAction>? UrlRewriteAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderGeoFilter
 {
     /// <summary>The Action of the Geo Filter. Possible values include Allow and Block.</summary>
@@ -1345,6 +1406,7 @@ public partial class V1beta1EndpointSpecInitProviderGeoFilter
     public string? RelativePath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRuleCacheExpirationAction
 {
     /// <summary>The behavior of the cache key for query strings. Valid values are Exclude, ExcludeAll, Include and IncludeAll.</summary>
@@ -1356,6 +1418,7 @@ public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRuleCacheExpir
     public string? Duration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRuleCacheKeyQueryStringAction
 {
     /// <summary>The behavior of the cache key for query strings. Valid values are Exclude, ExcludeAll, Include and IncludeAll.</summary>
@@ -1367,6 +1430,7 @@ public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRuleCacheKeyQu
     public string? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRuleModifyRequestHeaderAction
 {
     /// <summary>Action to be executed on a header value. Valid values are Append, Delete and Overwrite.</summary>
@@ -1382,6 +1446,7 @@ public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRuleModifyRequ
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRuleModifyResponseHeaderAction
 {
     /// <summary>Action to be executed on a header value. Valid values are Append, Delete and Overwrite.</summary>
@@ -1397,6 +1462,7 @@ public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRuleModifyResp
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRuleUrlRedirectAction
 {
     /// <summary>Specifies the fragment part of the URL. This value must not start with a #.</summary>
@@ -1424,6 +1490,7 @@ public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRuleUrlRedirec
     public string? RedirectType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRuleUrlRewriteAction
 {
     /// <summary>This value must start with a / and can't be longer than 260 characters.</summary>
@@ -1439,6 +1506,7 @@ public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRuleUrlRewrite
     public string? SourcePattern { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRule
 {
     /// <summary>A cache_expiration_action block as defined above.</summary>
@@ -1466,6 +1534,7 @@ public partial class V1beta1EndpointSpecInitProviderGlobalDeliveryRule
     public IList<V1beta1EndpointSpecInitProviderGlobalDeliveryRuleUrlRewriteAction>? UrlRewriteAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderOrigin
 {
     /// <summary>A string that determines the hostname/IP address of the origin server. This string can be a domain name, Storage Account endpoint, Web App endpoint, IPv4 address or IPv6 address. Changing this forces a new resource to be created.</summary>
@@ -1485,6 +1554,7 @@ public partial class V1beta1EndpointSpecInitProviderOrigin
     public string? Name { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1EndpointSpecInitProvider
 {
     /// <summary>An array of strings that indicates a content types on which compression will be applied. The value for the elements should be MIME types.</summary>
@@ -1590,6 +1660,7 @@ public enum V1beta1EndpointSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EndpointSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1603,6 +1674,7 @@ public partial class V1beta1EndpointSpecProviderConfigRefPolicy
     public V1beta1EndpointSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1EndpointSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1634,6 +1706,7 @@ public enum V1beta1EndpointSpecPublishConnectionDetailsToConfigRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EndpointSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1647,6 +1720,7 @@ public partial class V1beta1EndpointSpecPublishConnectionDetailsToConfigRefPolic
     public V1beta1EndpointSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1EndpointSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1658,6 +1732,7 @@ public partial class V1beta1EndpointSpecPublishConnectionDetailsToConfigRef
     public V1beta1EndpointSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1EndpointSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1673,6 +1748,7 @@ public partial class V1beta1EndpointSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1EndpointSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1688,6 +1764,7 @@ public partial class V1beta1EndpointSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1EndpointSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1699,6 +1776,7 @@ public partial class V1beta1EndpointSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>EndpointSpec defines the desired state of Endpoint</summary>
 public partial class V1beta1EndpointSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1731,6 +1809,7 @@ public partial class V1beta1EndpointSpec
     public V1beta1EndpointSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleCacheExpirationAction
 {
     /// <summary>The behavior of the cache key for query strings. Valid values are Exclude, ExcludeAll, Include and IncludeAll.</summary>
@@ -1742,6 +1821,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleCacheExpirationA
     public string? Duration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleCacheKeyQueryStringAction
 {
     /// <summary>The behavior of the cache key for query strings. Valid values are Exclude, ExcludeAll, Include and IncludeAll.</summary>
@@ -1753,6 +1833,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleCacheKeyQueryStr
     public string? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleCookiesCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1776,6 +1857,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleCookiesCondition
     public IList<string>? Transforms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleDeviceCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1791,6 +1873,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleDeviceCondition
     public string? Operator { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleHttpVersionCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1806,6 +1889,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleHttpVersionCondi
     public string? Operator { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleModifyRequestHeaderAction
 {
     /// <summary>Action to be executed on a header value. Valid values are Append, Delete and Overwrite.</summary>
@@ -1821,6 +1905,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleModifyRequestHea
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleModifyResponseHeaderAction
 {
     /// <summary>Action to be executed on a header value. Valid values are Append, Delete and Overwrite.</summary>
@@ -1836,6 +1921,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleModifyResponseHe
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderDeliveryRulePostArgCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1859,6 +1945,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRulePostArgCondition
     public IList<string>? Transforms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleQueryStringCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1878,6 +1965,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleQueryStringCondi
     public IList<string>? Transforms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleRemoteAddressCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1893,6 +1981,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleRemoteAddressCon
     public string? Operator { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleRequestBodyCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1912,6 +2001,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleRequestBodyCondi
     public IList<string>? Transforms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleRequestHeaderCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1935,6 +2025,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleRequestHeaderCon
     public IList<string>? Transforms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleRequestMethodCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1950,6 +2041,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleRequestMethodCon
     public string? Operator { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleRequestSchemeCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1965,6 +2057,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleRequestSchemeCon
     public string? Operator { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleRequestUriCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -1984,6 +2077,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleRequestUriCondit
     public IList<string>? Transforms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleUrlFileExtensionCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -2003,6 +2097,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleUrlFileExtension
     public IList<string>? Transforms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleUrlFileNameCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -2022,6 +2117,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleUrlFileNameCondi
     public IList<string>? Transforms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleUrlPathCondition
 {
     /// <summary>List of string values. This is required if operator is not Any.</summary>
@@ -2041,6 +2137,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleUrlPathCondition
     public IList<string>? Transforms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleUrlRedirectAction
 {
     /// <summary>Specifies the fragment part of the URL. This value must not start with a #.</summary>
@@ -2068,6 +2165,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleUrlRedirectActio
     public string? RedirectType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderDeliveryRuleUrlRewriteAction
 {
     /// <summary>This value must start with a / and can't be longer than 260 characters.</summary>
@@ -2083,6 +2181,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRuleUrlRewriteAction
     public string? SourcePattern { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderDeliveryRule
 {
     /// <summary>A cache_expiration_action block as defined above.</summary>
@@ -2174,6 +2273,7 @@ public partial class V1beta1EndpointStatusAtProviderDeliveryRule
     public IList<V1beta1EndpointStatusAtProviderDeliveryRuleUrlRewriteAction>? UrlRewriteAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderGeoFilter
 {
     /// <summary>The Action of the Geo Filter. Possible values include Allow and Block.</summary>
@@ -2189,6 +2289,7 @@ public partial class V1beta1EndpointStatusAtProviderGeoFilter
     public string? RelativePath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRuleCacheExpirationAction
 {
     /// <summary>The behavior of the cache key for query strings. Valid values are Exclude, ExcludeAll, Include and IncludeAll.</summary>
@@ -2200,6 +2301,7 @@ public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRuleCacheExpir
     public string? Duration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRuleCacheKeyQueryStringAction
 {
     /// <summary>The behavior of the cache key for query strings. Valid values are Exclude, ExcludeAll, Include and IncludeAll.</summary>
@@ -2211,6 +2313,7 @@ public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRuleCacheKeyQu
     public string? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRuleModifyRequestHeaderAction
 {
     /// <summary>Action to be executed on a header value. Valid values are Append, Delete and Overwrite.</summary>
@@ -2226,6 +2329,7 @@ public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRuleModifyRequ
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRuleModifyResponseHeaderAction
 {
     /// <summary>Action to be executed on a header value. Valid values are Append, Delete and Overwrite.</summary>
@@ -2241,6 +2345,7 @@ public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRuleModifyResp
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRuleUrlRedirectAction
 {
     /// <summary>Specifies the fragment part of the URL. This value must not start with a #.</summary>
@@ -2268,6 +2373,7 @@ public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRuleUrlRedirec
     public string? RedirectType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRuleUrlRewriteAction
 {
     /// <summary>This value must start with a / and can't be longer than 260 characters.</summary>
@@ -2283,6 +2389,7 @@ public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRuleUrlRewrite
     public string? SourcePattern { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRule
 {
     /// <summary>A cache_expiration_action block as defined above.</summary>
@@ -2310,6 +2417,7 @@ public partial class V1beta1EndpointStatusAtProviderGlobalDeliveryRule
     public IList<V1beta1EndpointStatusAtProviderGlobalDeliveryRuleUrlRewriteAction>? UrlRewriteAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderOrigin
 {
     /// <summary>A string that determines the hostname/IP address of the origin server. This string can be a domain name, Storage Account endpoint, Web App endpoint, IPv4 address or IPv6 address. Changing this forces a new resource to be created.</summary>
@@ -2329,6 +2437,7 @@ public partial class V1beta1EndpointStatusAtProviderOrigin
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProvider
 {
     /// <summary>An array of strings that indicates a content types on which compression will be applied. The value for the elements should be MIME types.</summary>
@@ -2408,6 +2517,7 @@ public partial class V1beta1EndpointStatusAtProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1EndpointStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2435,6 +2545,7 @@ public partial class V1beta1EndpointStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>EndpointStatus defines the observed state of Endpoint.</summary>
 public partial class V1beta1EndpointStatus
 {
     /// <summary></summary>
@@ -2451,6 +2562,7 @@ public partial class V1beta1EndpointStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Endpoint is the Schema for the Endpoints API. Manages a CDN Endpoint.</summary>
 public partial class V1beta1Endpoint : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1EndpointSpec>, IStatus<V1beta1EndpointStatus>
 {
     public const string KubeApiVersion = "v1beta1";

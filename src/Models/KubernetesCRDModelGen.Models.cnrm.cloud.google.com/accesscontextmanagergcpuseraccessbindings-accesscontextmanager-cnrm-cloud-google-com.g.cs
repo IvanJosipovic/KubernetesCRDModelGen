@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.accesscontextmanager.cnrm.cloud.google.com;
+/// <summary>The organization that this resource belongs to.</summary>
 public partial class V1alpha1AccessContextManagerGCPUserAccessBindingSpecOrganizationRef
 {
     /// <summary>Allowed value: The `name` field of an `Organization` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1AccessContextManagerGCPUserAccessBindingSpecOrganiz
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AccessContextManagerGCPUserAccessBindingSpec
 {
     /// <summary>Required. Access level that a user must have to be granted access. Only one access level is supported, not multiple. This repeated field must have exactly one element. Example: "accessPolicies/9522/accessLevels/device_trusted".</summary>
@@ -42,6 +44,7 @@ public partial class V1alpha1AccessContextManagerGCPUserAccessBindingSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AccessContextManagerGCPUserAccessBindingStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -65,6 +68,7 @@ public partial class V1alpha1AccessContextManagerGCPUserAccessBindingStatusCondi
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AccessContextManagerGCPUserAccessBindingStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -81,6 +85,7 @@ public partial class V1alpha1AccessContextManagerGCPUserAccessBindingStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1AccessContextManagerGCPUserAccessBinding : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1AccessContextManagerGCPUserAccessBindingSpec>, IStatus<V1alpha1AccessContextManagerGCPUserAccessBindingStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

@@ -38,6 +38,7 @@ public enum V1beta1ZoneSpecForProviderDelegationSetIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ZoneSpecForProviderDelegationSetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ZoneSpecForProviderDelegationSetIdRefPolicy
     public V1beta1ZoneSpecForProviderDelegationSetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a DelegationSet in route53 to populate delegationSetId.</summary>
 public partial class V1beta1ZoneSpecForProviderDelegationSetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ZoneSpecForProviderDelegationSetIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ZoneSpecForProviderDelegationSetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ZoneSpecForProviderDelegationSetIdSelectorPolicy
     public V1beta1ZoneSpecForProviderDelegationSetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a DelegationSet in route53 to populate delegationSetId.</summary>
 public partial class V1beta1ZoneSpecForProviderDelegationSetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1ZoneSpecForProviderVpcVpcIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ZoneSpecForProviderVpcVpcIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1ZoneSpecForProviderVpcVpcIdRefPolicy
     public V1beta1ZoneSpecForProviderVpcVpcIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1ZoneSpecForProviderVpcVpcIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1ZoneSpecForProviderVpcVpcIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ZoneSpecForProviderVpcVpcIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1ZoneSpecForProviderVpcVpcIdSelectorPolicy
     public V1beta1ZoneSpecForProviderVpcVpcIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1ZoneSpecForProviderVpcVpcIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1ZoneSpecForProviderVpcVpcIdSelector
     public V1beta1ZoneSpecForProviderVpcVpcIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ZoneSpecForProviderVpc
 {
     /// <summary>ID of the VPC to associate.</summary>
@@ -221,6 +230,7 @@ public partial class V1beta1ZoneSpecForProviderVpc
     public string? VpcRegion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ZoneSpecForProvider
 {
     /// <summary>A comment for the hosted zone.</summary>
@@ -280,6 +290,7 @@ public enum V1beta1ZoneSpecInitProviderDelegationSetIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ZoneSpecInitProviderDelegationSetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -293,6 +304,7 @@ public partial class V1beta1ZoneSpecInitProviderDelegationSetIdRefPolicy
     public V1beta1ZoneSpecInitProviderDelegationSetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a DelegationSet in route53 to populate delegationSetId.</summary>
 public partial class V1beta1ZoneSpecInitProviderDelegationSetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -324,6 +336,7 @@ public enum V1beta1ZoneSpecInitProviderDelegationSetIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ZoneSpecInitProviderDelegationSetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -337,6 +350,7 @@ public partial class V1beta1ZoneSpecInitProviderDelegationSetIdSelectorPolicy
     public V1beta1ZoneSpecInitProviderDelegationSetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a DelegationSet in route53 to populate delegationSetId.</summary>
 public partial class V1beta1ZoneSpecInitProviderDelegationSetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -372,6 +386,7 @@ public enum V1beta1ZoneSpecInitProviderVpcVpcIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ZoneSpecInitProviderVpcVpcIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -385,6 +400,7 @@ public partial class V1beta1ZoneSpecInitProviderVpcVpcIdRefPolicy
     public V1beta1ZoneSpecInitProviderVpcVpcIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1ZoneSpecInitProviderVpcVpcIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -416,6 +432,7 @@ public enum V1beta1ZoneSpecInitProviderVpcVpcIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ZoneSpecInitProviderVpcVpcIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -429,6 +446,7 @@ public partial class V1beta1ZoneSpecInitProviderVpcVpcIdSelectorPolicy
     public V1beta1ZoneSpecInitProviderVpcVpcIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1ZoneSpecInitProviderVpcVpcIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -444,6 +462,7 @@ public partial class V1beta1ZoneSpecInitProviderVpcVpcIdSelector
     public V1beta1ZoneSpecInitProviderVpcVpcIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ZoneSpecInitProviderVpc
 {
     /// <summary>ID of the VPC to associate.</summary>
@@ -463,6 +482,7 @@ public partial class V1beta1ZoneSpecInitProviderVpc
     public string? VpcRegion { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ZoneSpecInitProvider
 {
     /// <summary>A comment for the hosted zone.</summary>
@@ -540,6 +560,7 @@ public enum V1beta1ZoneSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ZoneSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -553,6 +574,7 @@ public partial class V1beta1ZoneSpecProviderConfigRefPolicy
     public V1beta1ZoneSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ZoneSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -584,6 +606,7 @@ public enum V1beta1ZoneSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ZoneSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -597,6 +620,7 @@ public partial class V1beta1ZoneSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1ZoneSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ZoneSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -608,6 +632,7 @@ public partial class V1beta1ZoneSpecPublishConnectionDetailsToConfigRef
     public V1beta1ZoneSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ZoneSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -623,6 +648,7 @@ public partial class V1beta1ZoneSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ZoneSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -638,6 +664,7 @@ public partial class V1beta1ZoneSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ZoneSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -649,6 +676,7 @@ public partial class V1beta1ZoneSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ZoneSpec defines the desired state of Zone</summary>
 public partial class V1beta1ZoneSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -681,6 +709,7 @@ public partial class V1beta1ZoneSpec
     public V1beta1ZoneSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ZoneStatusAtProviderVpc
 {
     /// <summary>ID of the VPC to associate.</summary>
@@ -692,6 +721,7 @@ public partial class V1beta1ZoneStatusAtProviderVpc
     public string? VpcRegion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ZoneStatusAtProvider
 {
     /// <summary>The Amazon Resource Name (ARN) of the Hosted Zone.</summary>
@@ -743,6 +773,7 @@ public partial class V1beta1ZoneStatusAtProvider
     public string? ZoneId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ZoneStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -770,6 +801,7 @@ public partial class V1beta1ZoneStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ZoneStatus defines the observed state of Zone.</summary>
 public partial class V1beta1ZoneStatus
 {
     /// <summary></summary>
@@ -786,6 +818,7 @@ public partial class V1beta1ZoneStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Zone is the Schema for the Zones API. Manages a Route53 Hosted Zone</summary>
 public partial class V1beta1Zone : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ZoneSpec>, IStatus<V1beta1ZoneStatus>
 {
     public const string KubeApiVersion = "v1beta1";

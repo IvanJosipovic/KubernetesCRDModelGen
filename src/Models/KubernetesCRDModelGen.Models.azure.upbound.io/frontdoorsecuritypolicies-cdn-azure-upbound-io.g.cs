@@ -38,6 +38,7 @@ public enum V1beta1FrontdoorSecurityPolicySpecForProviderCdnFrontdoorProfileIdRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FrontdoorSecurityPolicySpecForProviderCdnFrontdoorProfileIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1FrontdoorSecurityPolicySpecForProviderCdnFrontdoorPr
     public V1beta1FrontdoorSecurityPolicySpecForProviderCdnFrontdoorProfileIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a FrontdoorProfile in cdn to populate cdnFrontdoorProfileId.</summary>
 public partial class V1beta1FrontdoorSecurityPolicySpecForProviderCdnFrontdoorProfileIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1FrontdoorSecurityPolicySpecForProviderCdnFrontdoorProfileIdSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FrontdoorSecurityPolicySpecForProviderCdnFrontdoorProfileIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1FrontdoorSecurityPolicySpecForProviderCdnFrontdoorPr
     public V1beta1FrontdoorSecurityPolicySpecForProviderCdnFrontdoorProfileIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a FrontdoorProfile in cdn to populate cdnFrontdoorProfileId.</summary>
 public partial class V1beta1FrontdoorSecurityPolicySpecForProviderCdnFrontdoorProfileIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1FrontdoorSecurityPolicySpecForProviderSecurityPoliciesFirewal
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FrontdoorSecurityPolicySpecForProviderSecurityPoliciesFirewallAssociationDomainCdnFrontdoorDomainIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1FrontdoorSecurityPolicySpecForProviderSecurityPolici
     public V1beta1FrontdoorSecurityPolicySpecForProviderSecurityPoliciesFirewallAssociationDomainCdnFrontdoorDomainIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a FrontdoorCustomDomain in cdn to populate cdnFrontdoorDomainId.</summary>
 public partial class V1beta1FrontdoorSecurityPolicySpecForProviderSecurityPoliciesFirewallAssociationDomainCdnFrontdoorDomainIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1FrontdoorSecurityPolicySpecForProviderSecurityPoliciesFirewal
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FrontdoorSecurityPolicySpecForProviderSecurityPoliciesFirewallAssociationDomainCdnFrontdoorDomainIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1FrontdoorSecurityPolicySpecForProviderSecurityPolici
     public V1beta1FrontdoorSecurityPolicySpecForProviderSecurityPoliciesFirewallAssociationDomainCdnFrontdoorDomainIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a FrontdoorCustomDomain in cdn to populate cdnFrontdoorDomainId.</summary>
 public partial class V1beta1FrontdoorSecurityPolicySpecForProviderSecurityPoliciesFirewallAssociationDomainCdnFrontdoorDomainIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1FrontdoorSecurityPolicySpecForProviderSecurityPolici
     public V1beta1FrontdoorSecurityPolicySpecForProviderSecurityPoliciesFirewallAssociationDomainCdnFrontdoorDomainIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorSecurityPolicySpecForProviderSecurityPoliciesFirewallAssociationDomain
 {
     /// <summary>The Resource Id of the Front Door Custom Domain or Front Door Endpoint that should be bound to this Front Door Security Policy. Changing this forces a new Front Door Security Policy to be created.</summary>
@@ -217,6 +226,7 @@ public partial class V1beta1FrontdoorSecurityPolicySpecForProviderSecurityPolici
     public V1beta1FrontdoorSecurityPolicySpecForProviderSecurityPoliciesFirewallAssociationDomainCdnFrontdoorDomainIdSelector? CdnFrontdoorDomainIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorSecurityPolicySpecForProviderSecurityPoliciesFirewallAssociation
 {
     /// <summary>One or more domain blocks as defined below. Changing this forces a new Front Door Security Policy to be created.</summary>
@@ -248,6 +258,7 @@ public enum V1beta1FrontdoorSecurityPolicySpecForProviderSecurityPoliciesFirewal
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FrontdoorSecurityPolicySpecForProviderSecurityPoliciesFirewallCdnFrontdoorFirewallPolicyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -261,6 +272,7 @@ public partial class V1beta1FrontdoorSecurityPolicySpecForProviderSecurityPolici
     public V1beta1FrontdoorSecurityPolicySpecForProviderSecurityPoliciesFirewallCdnFrontdoorFirewallPolicyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a FrontdoorFirewallPolicy in cdn to populate cdnFrontdoorFirewallPolicyId.</summary>
 public partial class V1beta1FrontdoorSecurityPolicySpecForProviderSecurityPoliciesFirewallCdnFrontdoorFirewallPolicyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -292,6 +304,7 @@ public enum V1beta1FrontdoorSecurityPolicySpecForProviderSecurityPoliciesFirewal
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FrontdoorSecurityPolicySpecForProviderSecurityPoliciesFirewallCdnFrontdoorFirewallPolicyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -305,6 +318,7 @@ public partial class V1beta1FrontdoorSecurityPolicySpecForProviderSecurityPolici
     public V1beta1FrontdoorSecurityPolicySpecForProviderSecurityPoliciesFirewallCdnFrontdoorFirewallPolicyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a FrontdoorFirewallPolicy in cdn to populate cdnFrontdoorFirewallPolicyId.</summary>
 public partial class V1beta1FrontdoorSecurityPolicySpecForProviderSecurityPoliciesFirewallCdnFrontdoorFirewallPolicyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -320,6 +334,7 @@ public partial class V1beta1FrontdoorSecurityPolicySpecForProviderSecurityPolici
     public V1beta1FrontdoorSecurityPolicySpecForProviderSecurityPoliciesFirewallCdnFrontdoorFirewallPolicyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorSecurityPolicySpecForProviderSecurityPoliciesFirewall
 {
     /// <summary>An association block as defined below. Changing this forces a new Front Door Security Policy to be created.</summary>
@@ -339,6 +354,7 @@ public partial class V1beta1FrontdoorSecurityPolicySpecForProviderSecurityPolici
     public V1beta1FrontdoorSecurityPolicySpecForProviderSecurityPoliciesFirewallCdnFrontdoorFirewallPolicyIdSelector? CdnFrontdoorFirewallPolicyIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorSecurityPolicySpecForProviderSecurityPolicies
 {
     /// <summary>An firewall block as defined below. Changing this forces a new Front Door Security Policy to be created.</summary>
@@ -346,6 +362,7 @@ public partial class V1beta1FrontdoorSecurityPolicySpecForProviderSecurityPolici
     public IList<V1beta1FrontdoorSecurityPolicySpecForProviderSecurityPoliciesFirewall>? Firewall { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorSecurityPolicySpecForProvider
 {
     /// <summary>The Front Door Profile Resource Id that is linked to this Front Door Security Policy. Changing this forces a new Front Door Security Policy to be created.</summary>
@@ -385,6 +402,7 @@ public enum V1beta1FrontdoorSecurityPolicySpecInitProviderSecurityPoliciesFirewa
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FrontdoorSecurityPolicySpecInitProviderSecurityPoliciesFirewallAssociationDomainCdnFrontdoorDomainIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -398,6 +416,7 @@ public partial class V1beta1FrontdoorSecurityPolicySpecInitProviderSecurityPolic
     public V1beta1FrontdoorSecurityPolicySpecInitProviderSecurityPoliciesFirewallAssociationDomainCdnFrontdoorDomainIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a FrontdoorCustomDomain in cdn to populate cdnFrontdoorDomainId.</summary>
 public partial class V1beta1FrontdoorSecurityPolicySpecInitProviderSecurityPoliciesFirewallAssociationDomainCdnFrontdoorDomainIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -429,6 +448,7 @@ public enum V1beta1FrontdoorSecurityPolicySpecInitProviderSecurityPoliciesFirewa
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FrontdoorSecurityPolicySpecInitProviderSecurityPoliciesFirewallAssociationDomainCdnFrontdoorDomainIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -442,6 +462,7 @@ public partial class V1beta1FrontdoorSecurityPolicySpecInitProviderSecurityPolic
     public V1beta1FrontdoorSecurityPolicySpecInitProviderSecurityPoliciesFirewallAssociationDomainCdnFrontdoorDomainIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a FrontdoorCustomDomain in cdn to populate cdnFrontdoorDomainId.</summary>
 public partial class V1beta1FrontdoorSecurityPolicySpecInitProviderSecurityPoliciesFirewallAssociationDomainCdnFrontdoorDomainIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -457,6 +478,7 @@ public partial class V1beta1FrontdoorSecurityPolicySpecInitProviderSecurityPolic
     public V1beta1FrontdoorSecurityPolicySpecInitProviderSecurityPoliciesFirewallAssociationDomainCdnFrontdoorDomainIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorSecurityPolicySpecInitProviderSecurityPoliciesFirewallAssociationDomain
 {
     /// <summary>The Resource Id of the Front Door Custom Domain or Front Door Endpoint that should be bound to this Front Door Security Policy. Changing this forces a new Front Door Security Policy to be created.</summary>
@@ -472,6 +494,7 @@ public partial class V1beta1FrontdoorSecurityPolicySpecInitProviderSecurityPolic
     public V1beta1FrontdoorSecurityPolicySpecInitProviderSecurityPoliciesFirewallAssociationDomainCdnFrontdoorDomainIdSelector? CdnFrontdoorDomainIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorSecurityPolicySpecInitProviderSecurityPoliciesFirewallAssociation
 {
     /// <summary>One or more domain blocks as defined below. Changing this forces a new Front Door Security Policy to be created.</summary>
@@ -503,6 +526,7 @@ public enum V1beta1FrontdoorSecurityPolicySpecInitProviderSecurityPoliciesFirewa
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FrontdoorSecurityPolicySpecInitProviderSecurityPoliciesFirewallCdnFrontdoorFirewallPolicyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -516,6 +540,7 @@ public partial class V1beta1FrontdoorSecurityPolicySpecInitProviderSecurityPolic
     public V1beta1FrontdoorSecurityPolicySpecInitProviderSecurityPoliciesFirewallCdnFrontdoorFirewallPolicyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a FrontdoorFirewallPolicy in cdn to populate cdnFrontdoorFirewallPolicyId.</summary>
 public partial class V1beta1FrontdoorSecurityPolicySpecInitProviderSecurityPoliciesFirewallCdnFrontdoorFirewallPolicyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -547,6 +572,7 @@ public enum V1beta1FrontdoorSecurityPolicySpecInitProviderSecurityPoliciesFirewa
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FrontdoorSecurityPolicySpecInitProviderSecurityPoliciesFirewallCdnFrontdoorFirewallPolicyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -560,6 +586,7 @@ public partial class V1beta1FrontdoorSecurityPolicySpecInitProviderSecurityPolic
     public V1beta1FrontdoorSecurityPolicySpecInitProviderSecurityPoliciesFirewallCdnFrontdoorFirewallPolicyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a FrontdoorFirewallPolicy in cdn to populate cdnFrontdoorFirewallPolicyId.</summary>
 public partial class V1beta1FrontdoorSecurityPolicySpecInitProviderSecurityPoliciesFirewallCdnFrontdoorFirewallPolicyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -575,6 +602,7 @@ public partial class V1beta1FrontdoorSecurityPolicySpecInitProviderSecurityPolic
     public V1beta1FrontdoorSecurityPolicySpecInitProviderSecurityPoliciesFirewallCdnFrontdoorFirewallPolicyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorSecurityPolicySpecInitProviderSecurityPoliciesFirewall
 {
     /// <summary>An association block as defined below. Changing this forces a new Front Door Security Policy to be created.</summary>
@@ -594,6 +622,7 @@ public partial class V1beta1FrontdoorSecurityPolicySpecInitProviderSecurityPolic
     public V1beta1FrontdoorSecurityPolicySpecInitProviderSecurityPoliciesFirewallCdnFrontdoorFirewallPolicyIdSelector? CdnFrontdoorFirewallPolicyIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorSecurityPolicySpecInitProviderSecurityPolicies
 {
     /// <summary>An firewall block as defined below. Changing this forces a new Front Door Security Policy to be created.</summary>
@@ -601,6 +630,7 @@ public partial class V1beta1FrontdoorSecurityPolicySpecInitProviderSecurityPolic
     public IList<V1beta1FrontdoorSecurityPolicySpecInitProviderSecurityPoliciesFirewall>? Firewall { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1FrontdoorSecurityPolicySpecInitProvider
 {
     /// <summary>An security_policies block as defined below. Changing this forces a new Front Door Security Policy to be created.</summary>
@@ -650,6 +680,7 @@ public enum V1beta1FrontdoorSecurityPolicySpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FrontdoorSecurityPolicySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -663,6 +694,7 @@ public partial class V1beta1FrontdoorSecurityPolicySpecProviderConfigRefPolicy
     public V1beta1FrontdoorSecurityPolicySpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1FrontdoorSecurityPolicySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -694,6 +726,7 @@ public enum V1beta1FrontdoorSecurityPolicySpecPublishConnectionDetailsToConfigRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FrontdoorSecurityPolicySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -707,6 +740,7 @@ public partial class V1beta1FrontdoorSecurityPolicySpecPublishConnectionDetailsT
     public V1beta1FrontdoorSecurityPolicySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1FrontdoorSecurityPolicySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -718,6 +752,7 @@ public partial class V1beta1FrontdoorSecurityPolicySpecPublishConnectionDetailsT
     public V1beta1FrontdoorSecurityPolicySpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1FrontdoorSecurityPolicySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -733,6 +768,7 @@ public partial class V1beta1FrontdoorSecurityPolicySpecPublishConnectionDetailsT
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1FrontdoorSecurityPolicySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -748,6 +784,7 @@ public partial class V1beta1FrontdoorSecurityPolicySpecPublishConnectionDetailsT
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1FrontdoorSecurityPolicySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -759,6 +796,7 @@ public partial class V1beta1FrontdoorSecurityPolicySpecWriteConnectionSecretToRe
     public string Namespace { get; set; }
 }
 
+/// <summary>FrontdoorSecurityPolicySpec defines the desired state of FrontdoorSecurityPolicy</summary>
 public partial class V1beta1FrontdoorSecurityPolicySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -791,6 +829,7 @@ public partial class V1beta1FrontdoorSecurityPolicySpec
     public V1beta1FrontdoorSecurityPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorSecurityPolicyStatusAtProviderSecurityPoliciesFirewallAssociationDomain
 {
     /// <summary>(Computed) Is the Front Door Custom Domain/Endpoint activated?</summary>
@@ -802,6 +841,7 @@ public partial class V1beta1FrontdoorSecurityPolicyStatusAtProviderSecurityPolic
     public string? CdnFrontdoorDomainId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorSecurityPolicyStatusAtProviderSecurityPoliciesFirewallAssociation
 {
     /// <summary>One or more domain blocks as defined below. Changing this forces a new Front Door Security Policy to be created.</summary>
@@ -813,6 +853,7 @@ public partial class V1beta1FrontdoorSecurityPolicyStatusAtProviderSecurityPolic
     public IList<string>? PatternsToMatch { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorSecurityPolicyStatusAtProviderSecurityPoliciesFirewall
 {
     /// <summary>An association block as defined below. Changing this forces a new Front Door Security Policy to be created.</summary>
@@ -824,6 +865,7 @@ public partial class V1beta1FrontdoorSecurityPolicyStatusAtProviderSecurityPolic
     public string? CdnFrontdoorFirewallPolicyId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorSecurityPolicyStatusAtProviderSecurityPolicies
 {
     /// <summary>An firewall block as defined below. Changing this forces a new Front Door Security Policy to be created.</summary>
@@ -831,6 +873,7 @@ public partial class V1beta1FrontdoorSecurityPolicyStatusAtProviderSecurityPolic
     public IList<V1beta1FrontdoorSecurityPolicyStatusAtProviderSecurityPoliciesFirewall>? Firewall { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorSecurityPolicyStatusAtProvider
 {
     /// <summary>The Front Door Profile Resource Id that is linked to this Front Door Security Policy. Changing this forces a new Front Door Security Policy to be created.</summary>
@@ -846,6 +889,7 @@ public partial class V1beta1FrontdoorSecurityPolicyStatusAtProvider
     public IList<V1beta1FrontdoorSecurityPolicyStatusAtProviderSecurityPolicies>? SecurityPolicies { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1FrontdoorSecurityPolicyStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -873,6 +917,7 @@ public partial class V1beta1FrontdoorSecurityPolicyStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>FrontdoorSecurityPolicyStatus defines the observed state of FrontdoorSecurityPolicy.</summary>
 public partial class V1beta1FrontdoorSecurityPolicyStatus
 {
     /// <summary></summary>
@@ -889,6 +934,7 @@ public partial class V1beta1FrontdoorSecurityPolicyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>FrontdoorSecurityPolicy is the Schema for the FrontdoorSecurityPolicys API. Manages a Front Door (standard/premium) Security Policy.</summary>
 public partial class V1beta1FrontdoorSecurityPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FrontdoorSecurityPolicySpec>, IStatus<V1beta1FrontdoorSecurityPolicyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

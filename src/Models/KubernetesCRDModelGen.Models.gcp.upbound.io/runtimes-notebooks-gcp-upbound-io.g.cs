@@ -18,6 +18,7 @@ public enum V1beta1RuntimeSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1RuntimeSpecForProviderAccessConfig
 {
     /// <summary>The type of access mode this instance. For valid values, see https://cloud.google.com/vertex-ai/docs/workbench/reference/ rest/v1/projects.locations.runtimes#RuntimeAccessType.</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1RuntimeSpecForProviderAccessConfig
     public string? RuntimeOwner { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RuntimeSpecForProviderSoftwareConfigKernels
 {
     /// <summary>The path to the container image repository. For example: gcr.io/{project_id}/{imageName}</summary>
@@ -40,6 +42,7 @@ public partial class V1beta1RuntimeSpecForProviderSoftwareConfigKernels
     public string? Tag { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RuntimeSpecForProviderSoftwareConfig
 {
     /// <summary>Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we'll automatically choose from official GPU drivers.</summary>
@@ -79,6 +82,7 @@ public partial class V1beta1RuntimeSpecForProviderSoftwareConfig
     public string? PostStartupScriptBehavior { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RuntimeSpecForProviderVirtualMachineVirtualMachineConfigAcceleratorConfig
 {
     /// <summary>Count of cores of this accelerator.</summary>
@@ -90,6 +94,7 @@ public partial class V1beta1RuntimeSpecForProviderVirtualMachineVirtualMachineCo
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RuntimeSpecForProviderVirtualMachineVirtualMachineConfigContainerImages
 {
     /// <summary>The path to the container image repository. For example: gcr.io/{project_id}/{imageName}</summary>
@@ -101,6 +106,7 @@ public partial class V1beta1RuntimeSpecForProviderVirtualMachineVirtualMachineCo
     public string? Tag { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RuntimeSpecForProviderVirtualMachineVirtualMachineConfigDataDiskInitializeParams
 {
     /// <summary>Provide this property when creating the disk.</summary>
@@ -124,6 +130,7 @@ public partial class V1beta1RuntimeSpecForProviderVirtualMachineVirtualMachineCo
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RuntimeSpecForProviderVirtualMachineVirtualMachineConfigDataDisk
 {
     /// <summary>Input only. Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new instance. This property is mutually exclusive with the source property; you can only define one or the other, but not both. Structure is documented below.</summary>
@@ -147,6 +154,7 @@ public partial class V1beta1RuntimeSpecForProviderVirtualMachineVirtualMachineCo
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RuntimeSpecForProviderVirtualMachineVirtualMachineConfigEncryptionConfig
 {
     /// <summary>The Cloud KMS resource identifier of the customer-managed encryption key used to protect a resource, such as a disks. It has the following format: projects/{PROJECT_ID}/locations/{REGION}/keyRings/ {KEY_RING_NAME}/cryptoKeys/{KEY_NAME}</summary>
@@ -154,6 +162,7 @@ public partial class V1beta1RuntimeSpecForProviderVirtualMachineVirtualMachineCo
     public string? KmsKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RuntimeSpecForProviderVirtualMachineVirtualMachineConfigShieldedInstanceConfig
 {
     /// <summary>Defines whether the instance has integrity monitoring enabled. Enables monitoring and attestation of the boot integrity of the instance. The attestation is performed against the integrity policy baseline. This baseline is initially derived from the implicitly trusted boot image when the instance is created. Enabled by default.</summary>
@@ -169,6 +178,7 @@ public partial class V1beta1RuntimeSpecForProviderVirtualMachineVirtualMachineCo
     public bool? EnableVtpm { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RuntimeSpecForProviderVirtualMachineVirtualMachineConfig
 {
     /// <summary>The Compute Engine accelerator configuration for this runtime. Structure is documented below.</summary>
@@ -228,6 +238,7 @@ public partial class V1beta1RuntimeSpecForProviderVirtualMachineVirtualMachineCo
     public IList<string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RuntimeSpecForProviderVirtualMachine
 {
     /// <summary>Virtual Machine configuration settings. Structure is documented below.</summary>
@@ -235,6 +246,7 @@ public partial class V1beta1RuntimeSpecForProviderVirtualMachine
     public IList<V1beta1RuntimeSpecForProviderVirtualMachineVirtualMachineConfig>? VirtualMachineConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RuntimeSpecForProvider
 {
     /// <summary>The config settings for accessing runtime. Structure is documented below.</summary>
@@ -262,6 +274,7 @@ public partial class V1beta1RuntimeSpecForProvider
     public IList<V1beta1RuntimeSpecForProviderVirtualMachine>? VirtualMachine { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RuntimeSpecInitProviderAccessConfig
 {
     /// <summary>The type of access mode this instance. For valid values, see https://cloud.google.com/vertex-ai/docs/workbench/reference/ rest/v1/projects.locations.runtimes#RuntimeAccessType.</summary>
@@ -273,6 +286,7 @@ public partial class V1beta1RuntimeSpecInitProviderAccessConfig
     public string? RuntimeOwner { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RuntimeSpecInitProviderSoftwareConfigKernels
 {
     /// <summary>The path to the container image repository. For example: gcr.io/{project_id}/{imageName}</summary>
@@ -284,6 +298,7 @@ public partial class V1beta1RuntimeSpecInitProviderSoftwareConfigKernels
     public string? Tag { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RuntimeSpecInitProviderSoftwareConfig
 {
     /// <summary>Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we'll automatically choose from official GPU drivers.</summary>
@@ -323,6 +338,7 @@ public partial class V1beta1RuntimeSpecInitProviderSoftwareConfig
     public string? PostStartupScriptBehavior { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RuntimeSpecInitProviderVirtualMachineVirtualMachineConfigAcceleratorConfig
 {
     /// <summary>Count of cores of this accelerator.</summary>
@@ -334,6 +350,7 @@ public partial class V1beta1RuntimeSpecInitProviderVirtualMachineVirtualMachineC
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RuntimeSpecInitProviderVirtualMachineVirtualMachineConfigContainerImages
 {
     /// <summary>The path to the container image repository. For example: gcr.io/{project_id}/{imageName}</summary>
@@ -345,6 +362,7 @@ public partial class V1beta1RuntimeSpecInitProviderVirtualMachineVirtualMachineC
     public string? Tag { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RuntimeSpecInitProviderVirtualMachineVirtualMachineConfigDataDiskInitializeParams
 {
     /// <summary>Provide this property when creating the disk.</summary>
@@ -368,6 +386,7 @@ public partial class V1beta1RuntimeSpecInitProviderVirtualMachineVirtualMachineC
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RuntimeSpecInitProviderVirtualMachineVirtualMachineConfigDataDisk
 {
     /// <summary>Input only. Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new instance. This property is mutually exclusive with the source property; you can only define one or the other, but not both. Structure is documented below.</summary>
@@ -391,6 +410,7 @@ public partial class V1beta1RuntimeSpecInitProviderVirtualMachineVirtualMachineC
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RuntimeSpecInitProviderVirtualMachineVirtualMachineConfigEncryptionConfig
 {
     /// <summary>The Cloud KMS resource identifier of the customer-managed encryption key used to protect a resource, such as a disks. It has the following format: projects/{PROJECT_ID}/locations/{REGION}/keyRings/ {KEY_RING_NAME}/cryptoKeys/{KEY_NAME}</summary>
@@ -398,6 +418,7 @@ public partial class V1beta1RuntimeSpecInitProviderVirtualMachineVirtualMachineC
     public string? KmsKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RuntimeSpecInitProviderVirtualMachineVirtualMachineConfigShieldedInstanceConfig
 {
     /// <summary>Defines whether the instance has integrity monitoring enabled. Enables monitoring and attestation of the boot integrity of the instance. The attestation is performed against the integrity policy baseline. This baseline is initially derived from the implicitly trusted boot image when the instance is created. Enabled by default.</summary>
@@ -413,6 +434,7 @@ public partial class V1beta1RuntimeSpecInitProviderVirtualMachineVirtualMachineC
     public bool? EnableVtpm { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RuntimeSpecInitProviderVirtualMachineVirtualMachineConfig
 {
     /// <summary>The Compute Engine accelerator configuration for this runtime. Structure is documented below.</summary>
@@ -472,6 +494,7 @@ public partial class V1beta1RuntimeSpecInitProviderVirtualMachineVirtualMachineC
     public IList<string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RuntimeSpecInitProviderVirtualMachine
 {
     /// <summary>Virtual Machine configuration settings. Structure is documented below.</summary>
@@ -479,6 +502,7 @@ public partial class V1beta1RuntimeSpecInitProviderVirtualMachine
     public IList<V1beta1RuntimeSpecInitProviderVirtualMachineVirtualMachineConfig>? VirtualMachineConfig { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1RuntimeSpecInitProvider
 {
     /// <summary>The config settings for accessing runtime. Structure is documented below.</summary>
@@ -544,6 +568,7 @@ public enum V1beta1RuntimeSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RuntimeSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -557,6 +582,7 @@ public partial class V1beta1RuntimeSpecProviderConfigRefPolicy
     public V1beta1RuntimeSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1RuntimeSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -588,6 +614,7 @@ public enum V1beta1RuntimeSpecPublishConnectionDetailsToConfigRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RuntimeSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -601,6 +628,7 @@ public partial class V1beta1RuntimeSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1RuntimeSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1RuntimeSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -612,6 +640,7 @@ public partial class V1beta1RuntimeSpecPublishConnectionDetailsToConfigRef
     public V1beta1RuntimeSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1RuntimeSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -627,6 +656,7 @@ public partial class V1beta1RuntimeSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1RuntimeSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -642,6 +672,7 @@ public partial class V1beta1RuntimeSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1RuntimeSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -653,6 +684,7 @@ public partial class V1beta1RuntimeSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>RuntimeSpec defines the desired state of Runtime</summary>
 public partial class V1beta1RuntimeSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -685,6 +717,7 @@ public partial class V1beta1RuntimeSpec
     public V1beta1RuntimeSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RuntimeStatusAtProviderAccessConfig
 {
     /// <summary>The type of access mode this instance. For valid values, see https://cloud.google.com/vertex-ai/docs/workbench/reference/ rest/v1/projects.locations.runtimes#RuntimeAccessType.</summary>
@@ -700,6 +733,7 @@ public partial class V1beta1RuntimeStatusAtProviderAccessConfig
     public string? RuntimeOwner { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RuntimeStatusAtProviderMetrics
 {
     /// <summary>(Output) Contains runtime daemon metrics, such as OS and kernels and sessions stats.</summary>
@@ -707,6 +741,7 @@ public partial class V1beta1RuntimeStatusAtProviderMetrics
     public IDictionary<string, string>? SystemMetrics { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RuntimeStatusAtProviderSoftwareConfigKernels
 {
     /// <summary>The path to the container image repository. For example: gcr.io/{project_id}/{imageName}</summary>
@@ -718,6 +753,7 @@ public partial class V1beta1RuntimeStatusAtProviderSoftwareConfigKernels
     public string? Tag { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RuntimeStatusAtProviderSoftwareConfig
 {
     /// <summary>Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we'll automatically choose from official GPU drivers.</summary>
@@ -761,6 +797,7 @@ public partial class V1beta1RuntimeStatusAtProviderSoftwareConfig
     public bool? Upgradeable { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RuntimeStatusAtProviderVirtualMachineVirtualMachineConfigAcceleratorConfig
 {
     /// <summary>Count of cores of this accelerator.</summary>
@@ -772,6 +809,7 @@ public partial class V1beta1RuntimeStatusAtProviderVirtualMachineVirtualMachineC
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RuntimeStatusAtProviderVirtualMachineVirtualMachineConfigContainerImages
 {
     /// <summary>The path to the container image repository. For example: gcr.io/{project_id}/{imageName}</summary>
@@ -783,6 +821,7 @@ public partial class V1beta1RuntimeStatusAtProviderVirtualMachineVirtualMachineC
     public string? Tag { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RuntimeStatusAtProviderVirtualMachineVirtualMachineConfigDataDiskInitializeParams
 {
     /// <summary>Provide this property when creating the disk.</summary>
@@ -806,6 +845,7 @@ public partial class V1beta1RuntimeStatusAtProviderVirtualMachineVirtualMachineC
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RuntimeStatusAtProviderVirtualMachineVirtualMachineConfigDataDisk
 {
     /// <summary>(Output) Optional. Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the disk is detached from the instance).</summary>
@@ -857,6 +897,7 @@ public partial class V1beta1RuntimeStatusAtProviderVirtualMachineVirtualMachineC
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RuntimeStatusAtProviderVirtualMachineVirtualMachineConfigEncryptionConfig
 {
     /// <summary>The Cloud KMS resource identifier of the customer-managed encryption key used to protect a resource, such as a disks. It has the following format: projects/{PROJECT_ID}/locations/{REGION}/keyRings/ {KEY_RING_NAME}/cryptoKeys/{KEY_NAME}</summary>
@@ -864,6 +905,7 @@ public partial class V1beta1RuntimeStatusAtProviderVirtualMachineVirtualMachineC
     public string? KmsKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RuntimeStatusAtProviderVirtualMachineVirtualMachineConfigShieldedInstanceConfig
 {
     /// <summary>Defines whether the instance has integrity monitoring enabled. Enables monitoring and attestation of the boot integrity of the instance. The attestation is performed against the integrity policy baseline. This baseline is initially derived from the implicitly trusted boot image when the instance is created. Enabled by default.</summary>
@@ -879,6 +921,7 @@ public partial class V1beta1RuntimeStatusAtProviderVirtualMachineVirtualMachineC
     public bool? EnableVtpm { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RuntimeStatusAtProviderVirtualMachineVirtualMachineConfig
 {
     /// <summary>The Compute Engine accelerator configuration for this runtime. Structure is documented below.</summary>
@@ -946,6 +989,7 @@ public partial class V1beta1RuntimeStatusAtProviderVirtualMachineVirtualMachineC
     public string? Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RuntimeStatusAtProviderVirtualMachine
 {
     /// <summary>(Output) The unique identifier of the Managed Compute Engine instance.</summary>
@@ -961,6 +1005,7 @@ public partial class V1beta1RuntimeStatusAtProviderVirtualMachine
     public IList<V1beta1RuntimeStatusAtProviderVirtualMachineVirtualMachineConfig>? VirtualMachineConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RuntimeStatusAtProvider
 {
     /// <summary>The config settings for accessing runtime. Structure is documented below.</summary>
@@ -1012,6 +1057,7 @@ public partial class V1beta1RuntimeStatusAtProvider
     public IList<V1beta1RuntimeStatusAtProviderVirtualMachine>? VirtualMachine { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1RuntimeStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1039,6 +1085,7 @@ public partial class V1beta1RuntimeStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>RuntimeStatus defines the observed state of Runtime.</summary>
 public partial class V1beta1RuntimeStatus
 {
     /// <summary></summary>
@@ -1055,6 +1102,7 @@ public partial class V1beta1RuntimeStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Runtime is the Schema for the Runtimes API. A Cloud AI Platform Notebook runtime.</summary>
 public partial class V1beta1Runtime : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1RuntimeSpec>, IStatus<V1beta1RuntimeStatus>
 {
     public const string KubeApiVersion = "v1beta1";

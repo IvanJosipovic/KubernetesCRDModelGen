@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.web.azure.com;
+/// <summary>Storage version of v1api20220301.ExtendedLocation Extended Location.</summary>
 public partial class V1api20220301storageServerFarmSpecExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -19,6 +20,7 @@ public partial class V1api20220301storageServerFarmSpecExtendedLocation
     public string? Name { get; set; }
 }
 
+/// <summary>Reference: Resource ID of the App Service Environment.</summary>
 public partial class V1api20220301storageServerFarmSpecHostingEnvironmentProfileReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -38,6 +40,7 @@ public partial class V1api20220301storageServerFarmSpecHostingEnvironmentProfile
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.HostingEnvironmentProfile Specification for an App Service Environment to use for this resource.</summary>
 public partial class V1api20220301storageServerFarmSpecHostingEnvironmentProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -49,6 +52,7 @@ public partial class V1api20220301storageServerFarmSpecHostingEnvironmentProfile
     public V1api20220301storageServerFarmSpecHostingEnvironmentProfileReference? Reference { get; set; }
 }
 
+/// <summary>Reference: Resource ID of the Kubernetes Environment.</summary>
 public partial class V1api20220301storageServerFarmSpecKubeEnvironmentProfileReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -68,6 +72,7 @@ public partial class V1api20220301storageServerFarmSpecKubeEnvironmentProfileRef
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.KubeEnvironmentProfile Specification for a Kubernetes Environment to use for this resource.</summary>
 public partial class V1api20220301storageServerFarmSpecKubeEnvironmentProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -79,6 +84,7 @@ public partial class V1api20220301storageServerFarmSpecKubeEnvironmentProfile
     public V1api20220301storageServerFarmSpecKubeEnvironmentProfileReference? Reference { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20220301storageServerFarmSpecOwner
 {
     /// <summary></summary>
@@ -90,6 +96,7 @@ public partial class V1api20220301storageServerFarmSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.Capability Describes the capabilities/features allowed for a specific SKU.</summary>
 public partial class V1api20220301storageServerFarmSpecSkuCapabilities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -109,6 +116,7 @@ public partial class V1api20220301storageServerFarmSpecSkuCapabilities
     public string? Value { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SkuCapacity Description of the App Service plan scale options.</summary>
 public partial class V1api20220301storageServerFarmSpecSkuSkuCapacity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -136,6 +144,7 @@ public partial class V1api20220301storageServerFarmSpecSkuSkuCapacity
     public string? ScaleType { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SkuDescription Description of a SKU for a scalable resource.</summary>
 public partial class V1api20220301storageServerFarmSpecSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -175,6 +184,7 @@ public partial class V1api20220301storageServerFarmSpecSku
     public string? Tier { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.Serverfarm_Spec</summary>
 public partial class V1api20220301storageServerFarmSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -274,6 +284,7 @@ public partial class V1api20220301storageServerFarmSpec
     public bool? ZoneRedundant { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20220301storageServerFarmStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -305,6 +316,7 @@ public partial class V1api20220301storageServerFarmStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.ExtendedLocation_STATUS Extended Location.</summary>
 public partial class V1api20220301storageServerFarmStatusExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -320,6 +332,7 @@ public partial class V1api20220301storageServerFarmStatusExtendedLocation
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.HostingEnvironmentProfile_STATUS Specification for an App Service Environment to use for this resource.</summary>
 public partial class V1api20220301storageServerFarmStatusHostingEnvironmentProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -339,6 +352,7 @@ public partial class V1api20220301storageServerFarmStatusHostingEnvironmentProfi
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.KubeEnvironmentProfile_STATUS Specification for a Kubernetes Environment to use for this resource.</summary>
 public partial class V1api20220301storageServerFarmStatusKubeEnvironmentProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -358,6 +372,7 @@ public partial class V1api20220301storageServerFarmStatusKubeEnvironmentProfile
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.Capability_STATUS Describes the capabilities/features allowed for a specific SKU.</summary>
 public partial class V1api20220301storageServerFarmStatusSkuCapabilities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -377,6 +392,7 @@ public partial class V1api20220301storageServerFarmStatusSkuCapabilities
     public string? Value { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SkuCapacity_STATUS Description of the App Service plan scale options.</summary>
 public partial class V1api20220301storageServerFarmStatusSkuSkuCapacity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -404,6 +420,7 @@ public partial class V1api20220301storageServerFarmStatusSkuSkuCapacity
     public string? ScaleType { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SkuDescription_STATUS Description of a SKU for a scalable resource.</summary>
 public partial class V1api20220301storageServerFarmStatusSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -443,6 +460,7 @@ public partial class V1api20220301storageServerFarmStatusSku
     public string? Tier { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.Serverfarm_STATUS</summary>
 public partial class V1api20220301storageServerFarmStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -579,6 +597,7 @@ public partial class V1api20220301storageServerFarmStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20220301.ServerFarm Generator information: - Generated from: /web/resource-manager/Microsoft.Web/stable/2022-03-01/AppServicePlans.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/serverfarms/{name}</summary>
 public partial class V1api20220301storageServerFarm : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20220301storageServerFarmSpec>, IStatus<V1api20220301storageServerFarmStatus>
 {
     public const string KubeApiVersion = "v1api20220301storage";

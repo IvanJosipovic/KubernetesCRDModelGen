@@ -18,6 +18,7 @@ public enum V1beta1SelectionSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1SelectionSpecForProviderConditionStringEquals
 {
     /// <summary>The key in a key-value pair.</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1SelectionSpecForProviderConditionStringEquals
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SelectionSpecForProviderConditionStringLike
 {
     /// <summary>The key in a key-value pair.</summary>
@@ -40,6 +42,7 @@ public partial class V1beta1SelectionSpecForProviderConditionStringLike
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SelectionSpecForProviderConditionStringNotEquals
 {
     /// <summary>The key in a key-value pair.</summary>
@@ -51,6 +54,7 @@ public partial class V1beta1SelectionSpecForProviderConditionStringNotEquals
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SelectionSpecForProviderConditionStringNotLike
 {
     /// <summary>The key in a key-value pair.</summary>
@@ -62,6 +66,7 @@ public partial class V1beta1SelectionSpecForProviderConditionStringNotLike
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SelectionSpecForProviderCondition
 {
     /// <summary></summary>
@@ -101,6 +106,7 @@ public enum V1beta1SelectionSpecForProviderIamRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SelectionSpecForProviderIamRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -114,6 +120,7 @@ public partial class V1beta1SelectionSpecForProviderIamRoleArnRefPolicy
     public V1beta1SelectionSpecForProviderIamRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate iamRoleArn.</summary>
 public partial class V1beta1SelectionSpecForProviderIamRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -145,6 +152,7 @@ public enum V1beta1SelectionSpecForProviderIamRoleArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SelectionSpecForProviderIamRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -158,6 +166,7 @@ public partial class V1beta1SelectionSpecForProviderIamRoleArnSelectorPolicy
     public V1beta1SelectionSpecForProviderIamRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate iamRoleArn.</summary>
 public partial class V1beta1SelectionSpecForProviderIamRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -193,6 +202,7 @@ public enum V1beta1SelectionSpecForProviderPlanIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SelectionSpecForProviderPlanIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -206,6 +216,7 @@ public partial class V1beta1SelectionSpecForProviderPlanIdRefPolicy
     public V1beta1SelectionSpecForProviderPlanIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Plan in backup to populate planId.</summary>
 public partial class V1beta1SelectionSpecForProviderPlanIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -237,6 +248,7 @@ public enum V1beta1SelectionSpecForProviderPlanIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SelectionSpecForProviderPlanIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -250,6 +262,7 @@ public partial class V1beta1SelectionSpecForProviderPlanIdSelectorPolicy
     public V1beta1SelectionSpecForProviderPlanIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Plan in backup to populate planId.</summary>
 public partial class V1beta1SelectionSpecForProviderPlanIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -265,6 +278,7 @@ public partial class V1beta1SelectionSpecForProviderPlanIdSelector
     public V1beta1SelectionSpecForProviderPlanIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SelectionSpecForProviderSelectionTag
 {
     /// <summary>The key in a key-value pair.</summary>
@@ -280,6 +294,7 @@ public partial class V1beta1SelectionSpecForProviderSelectionTag
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SelectionSpecForProvider
 {
     /// <summary>A list of conditions that you define to assign resources to your backup plans using tags.</summary>
@@ -331,6 +346,7 @@ public partial class V1beta1SelectionSpecForProvider
     public IList<V1beta1SelectionSpecForProviderSelectionTag>? SelectionTag { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SelectionSpecInitProviderConditionStringEquals
 {
     /// <summary>The key in a key-value pair.</summary>
@@ -342,6 +358,7 @@ public partial class V1beta1SelectionSpecInitProviderConditionStringEquals
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SelectionSpecInitProviderConditionStringLike
 {
     /// <summary>The key in a key-value pair.</summary>
@@ -353,6 +370,7 @@ public partial class V1beta1SelectionSpecInitProviderConditionStringLike
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SelectionSpecInitProviderConditionStringNotEquals
 {
     /// <summary>The key in a key-value pair.</summary>
@@ -364,6 +382,7 @@ public partial class V1beta1SelectionSpecInitProviderConditionStringNotEquals
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SelectionSpecInitProviderConditionStringNotLike
 {
     /// <summary>The key in a key-value pair.</summary>
@@ -375,6 +394,7 @@ public partial class V1beta1SelectionSpecInitProviderConditionStringNotLike
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SelectionSpecInitProviderCondition
 {
     /// <summary></summary>
@@ -414,6 +434,7 @@ public enum V1beta1SelectionSpecInitProviderIamRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SelectionSpecInitProviderIamRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -427,6 +448,7 @@ public partial class V1beta1SelectionSpecInitProviderIamRoleArnRefPolicy
     public V1beta1SelectionSpecInitProviderIamRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate iamRoleArn.</summary>
 public partial class V1beta1SelectionSpecInitProviderIamRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -458,6 +480,7 @@ public enum V1beta1SelectionSpecInitProviderIamRoleArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SelectionSpecInitProviderIamRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -471,6 +494,7 @@ public partial class V1beta1SelectionSpecInitProviderIamRoleArnSelectorPolicy
     public V1beta1SelectionSpecInitProviderIamRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate iamRoleArn.</summary>
 public partial class V1beta1SelectionSpecInitProviderIamRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -506,6 +530,7 @@ public enum V1beta1SelectionSpecInitProviderPlanIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SelectionSpecInitProviderPlanIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -519,6 +544,7 @@ public partial class V1beta1SelectionSpecInitProviderPlanIdRefPolicy
     public V1beta1SelectionSpecInitProviderPlanIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Plan in backup to populate planId.</summary>
 public partial class V1beta1SelectionSpecInitProviderPlanIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -550,6 +576,7 @@ public enum V1beta1SelectionSpecInitProviderPlanIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SelectionSpecInitProviderPlanIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -563,6 +590,7 @@ public partial class V1beta1SelectionSpecInitProviderPlanIdSelectorPolicy
     public V1beta1SelectionSpecInitProviderPlanIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Plan in backup to populate planId.</summary>
 public partial class V1beta1SelectionSpecInitProviderPlanIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -578,6 +606,7 @@ public partial class V1beta1SelectionSpecInitProviderPlanIdSelector
     public V1beta1SelectionSpecInitProviderPlanIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SelectionSpecInitProviderSelectionTag
 {
     /// <summary>The key in a key-value pair.</summary>
@@ -593,6 +622,7 @@ public partial class V1beta1SelectionSpecInitProviderSelectionTag
     public string? Value { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1SelectionSpecInitProvider
 {
     /// <summary>A list of conditions that you define to assign resources to your backup plans using tags.</summary>
@@ -682,6 +712,7 @@ public enum V1beta1SelectionSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SelectionSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -695,6 +726,7 @@ public partial class V1beta1SelectionSpecProviderConfigRefPolicy
     public V1beta1SelectionSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1SelectionSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -726,6 +758,7 @@ public enum V1beta1SelectionSpecPublishConnectionDetailsToConfigRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SelectionSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -739,6 +772,7 @@ public partial class V1beta1SelectionSpecPublishConnectionDetailsToConfigRefPoli
     public V1beta1SelectionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1SelectionSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -750,6 +784,7 @@ public partial class V1beta1SelectionSpecPublishConnectionDetailsToConfigRef
     public V1beta1SelectionSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1SelectionSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -765,6 +800,7 @@ public partial class V1beta1SelectionSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1SelectionSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -780,6 +816,7 @@ public partial class V1beta1SelectionSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1SelectionSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -791,6 +828,7 @@ public partial class V1beta1SelectionSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>SelectionSpec defines the desired state of Selection</summary>
 public partial class V1beta1SelectionSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -823,6 +861,7 @@ public partial class V1beta1SelectionSpec
     public V1beta1SelectionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SelectionStatusAtProviderConditionStringEquals
 {
     /// <summary>The key in a key-value pair.</summary>
@@ -834,6 +873,7 @@ public partial class V1beta1SelectionStatusAtProviderConditionStringEquals
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SelectionStatusAtProviderConditionStringLike
 {
     /// <summary>The key in a key-value pair.</summary>
@@ -845,6 +885,7 @@ public partial class V1beta1SelectionStatusAtProviderConditionStringLike
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SelectionStatusAtProviderConditionStringNotEquals
 {
     /// <summary>The key in a key-value pair.</summary>
@@ -856,6 +897,7 @@ public partial class V1beta1SelectionStatusAtProviderConditionStringNotEquals
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SelectionStatusAtProviderConditionStringNotLike
 {
     /// <summary>The key in a key-value pair.</summary>
@@ -867,6 +909,7 @@ public partial class V1beta1SelectionStatusAtProviderConditionStringNotLike
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SelectionStatusAtProviderCondition
 {
     /// <summary></summary>
@@ -886,6 +929,7 @@ public partial class V1beta1SelectionStatusAtProviderCondition
     public IList<V1beta1SelectionStatusAtProviderConditionStringNotLike>? StringNotLike { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SelectionStatusAtProviderSelectionTag
 {
     /// <summary>The key in a key-value pair.</summary>
@@ -901,6 +945,7 @@ public partial class V1beta1SelectionStatusAtProviderSelectionTag
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SelectionStatusAtProvider
 {
     /// <summary>A list of conditions that you define to assign resources to your backup plans using tags.</summary>
@@ -936,6 +981,7 @@ public partial class V1beta1SelectionStatusAtProvider
     public IList<V1beta1SelectionStatusAtProviderSelectionTag>? SelectionTag { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1SelectionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -963,6 +1009,7 @@ public partial class V1beta1SelectionStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>SelectionStatus defines the observed state of Selection.</summary>
 public partial class V1beta1SelectionStatus
 {
     /// <summary></summary>
@@ -979,6 +1026,7 @@ public partial class V1beta1SelectionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Selection is the Schema for the Selections API. Manages selection conditions for AWS Backup plan resources.</summary>
 public partial class V1beta1Selection : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SelectionSpec>, IStatus<V1beta1SelectionStatus>
 {
     public const string KubeApiVersion = "v1beta1";

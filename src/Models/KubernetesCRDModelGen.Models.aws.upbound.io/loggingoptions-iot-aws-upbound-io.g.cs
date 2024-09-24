@@ -38,6 +38,7 @@ public enum V1beta1LoggingOptionsSpecForProviderRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LoggingOptionsSpecForProviderRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1LoggingOptionsSpecForProviderRoleArnRefPolicy
     public V1beta1LoggingOptionsSpecForProviderRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1LoggingOptionsSpecForProviderRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1LoggingOptionsSpecForProviderRoleArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LoggingOptionsSpecForProviderRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1LoggingOptionsSpecForProviderRoleArnSelectorPolicy
     public V1beta1LoggingOptionsSpecForProviderRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1LoggingOptionsSpecForProviderRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1LoggingOptionsSpecForProviderRoleArnSelector
     public V1beta1LoggingOptionsSpecForProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LoggingOptionsSpecForProvider
 {
     /// <summary>The default logging level. Valid Values: "DEBUG", "INFO", "ERROR", "WARN", "DISABLED".</summary>
@@ -157,6 +162,7 @@ public enum V1beta1LoggingOptionsSpecInitProviderRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LoggingOptionsSpecInitProviderRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -170,6 +176,7 @@ public partial class V1beta1LoggingOptionsSpecInitProviderRoleArnRefPolicy
     public V1beta1LoggingOptionsSpecInitProviderRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1LoggingOptionsSpecInitProviderRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -201,6 +208,7 @@ public enum V1beta1LoggingOptionsSpecInitProviderRoleArnSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LoggingOptionsSpecInitProviderRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -214,6 +222,7 @@ public partial class V1beta1LoggingOptionsSpecInitProviderRoleArnSelectorPolicy
     public V1beta1LoggingOptionsSpecInitProviderRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1LoggingOptionsSpecInitProviderRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -229,6 +238,7 @@ public partial class V1beta1LoggingOptionsSpecInitProviderRoleArnSelector
     public V1beta1LoggingOptionsSpecInitProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1LoggingOptionsSpecInitProvider
 {
     /// <summary>The default logging level. Valid Values: "DEBUG", "INFO", "ERROR", "WARN", "DISABLED".</summary>
@@ -294,6 +304,7 @@ public enum V1beta1LoggingOptionsSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LoggingOptionsSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -307,6 +318,7 @@ public partial class V1beta1LoggingOptionsSpecProviderConfigRefPolicy
     public V1beta1LoggingOptionsSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1LoggingOptionsSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -338,6 +350,7 @@ public enum V1beta1LoggingOptionsSpecPublishConnectionDetailsToConfigRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LoggingOptionsSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -351,6 +364,7 @@ public partial class V1beta1LoggingOptionsSpecPublishConnectionDetailsToConfigRe
     public V1beta1LoggingOptionsSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1LoggingOptionsSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -362,6 +376,7 @@ public partial class V1beta1LoggingOptionsSpecPublishConnectionDetailsToConfigRe
     public V1beta1LoggingOptionsSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1LoggingOptionsSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -377,6 +392,7 @@ public partial class V1beta1LoggingOptionsSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1LoggingOptionsSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -392,6 +408,7 @@ public partial class V1beta1LoggingOptionsSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1LoggingOptionsSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -403,6 +420,7 @@ public partial class V1beta1LoggingOptionsSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>LoggingOptionsSpec defines the desired state of LoggingOptions</summary>
 public partial class V1beta1LoggingOptionsSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -435,6 +453,7 @@ public partial class V1beta1LoggingOptionsSpec
     public V1beta1LoggingOptionsSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LoggingOptionsStatusAtProvider
 {
     /// <summary>The default logging level. Valid Values: "DEBUG", "INFO", "ERROR", "WARN", "DISABLED".</summary>
@@ -454,6 +473,7 @@ public partial class V1beta1LoggingOptionsStatusAtProvider
     public string? RoleArn { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1LoggingOptionsStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -481,6 +501,7 @@ public partial class V1beta1LoggingOptionsStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>LoggingOptionsStatus defines the observed state of LoggingOptions.</summary>
 public partial class V1beta1LoggingOptionsStatus
 {
     /// <summary></summary>
@@ -497,6 +518,7 @@ public partial class V1beta1LoggingOptionsStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>LoggingOptions is the Schema for the LoggingOptionss API. Provides a resource to manage default logging options.</summary>
 public partial class V1beta1LoggingOptions : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LoggingOptionsSpec>, IStatus<V1beta1LoggingOptionsStatus>
 {
     public const string KubeApiVersion = "v1beta1";

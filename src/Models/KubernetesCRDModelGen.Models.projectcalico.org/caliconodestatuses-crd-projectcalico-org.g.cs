@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.crd.projectcalico.org;
+/// <summary>CalicoNodeStatusSpec contains the specification for a CalicoNodeStatus resource.</summary>
 public partial class V1CalicoNodeStatusSpec
 {
     /// <summary>Classes declares the types of information to monitor for this calico/node, and allows for selective status reporting about certain subsets of information.</summary>
@@ -23,6 +24,7 @@ public partial class V1CalicoNodeStatusSpec
     public int? UpdatePeriodSeconds { get; set; }
 }
 
+/// <summary>BIRDV4 represents the latest observed status of bird4.</summary>
 public partial class V1CalicoNodeStatusStatusAgentBirdV4
 {
     /// <summary>LastBootTime holds the value of lastBootTime from bird.ctl output.</summary>
@@ -46,6 +48,7 @@ public partial class V1CalicoNodeStatusStatusAgentBirdV4
     public string? Version { get; set; }
 }
 
+/// <summary>BIRDV6 represents the latest observed status of bird6.</summary>
 public partial class V1CalicoNodeStatusStatusAgentBirdV6
 {
     /// <summary>LastBootTime holds the value of lastBootTime from bird.ctl output.</summary>
@@ -69,6 +72,7 @@ public partial class V1CalicoNodeStatusStatusAgentBirdV6
     public string? Version { get; set; }
 }
 
+/// <summary>Agent holds agent status on the node.</summary>
 public partial class V1CalicoNodeStatusStatusAgent
 {
     /// <summary>BIRDV4 represents the latest observed status of bird4.</summary>
@@ -80,6 +84,7 @@ public partial class V1CalicoNodeStatusStatusAgent
     public V1CalicoNodeStatusStatusAgentBirdV6? BirdV6 { get; set; }
 }
 
+/// <summary>CalicoNodePeer contains the status of BGP peers on the node.</summary>
 public partial class V1CalicoNodeStatusStatusBgpPeersV4
 {
     /// <summary>IP address of the peer whose condition we are reporting.</summary>
@@ -99,6 +104,7 @@ public partial class V1CalicoNodeStatusStatusBgpPeersV4
     public string? Type { get; set; }
 }
 
+/// <summary>CalicoNodePeer contains the status of BGP peers on the node.</summary>
 public partial class V1CalicoNodeStatusStatusBgpPeersV6
 {
     /// <summary>IP address of the peer whose condition we are reporting.</summary>
@@ -118,6 +124,7 @@ public partial class V1CalicoNodeStatusStatusBgpPeersV6
     public string? Type { get; set; }
 }
 
+/// <summary>BGP holds node BGP status.</summary>
 public partial class V1CalicoNodeStatusStatusBgp
 {
     /// <summary>The total number of IPv4 established bgp sessions.</summary>
@@ -145,6 +152,7 @@ public partial class V1CalicoNodeStatusStatusBgp
     public IList<V1CalicoNodeStatusStatusBgpPeersV6>? PeersV6 { get; set; }
 }
 
+/// <summary>LearnedFrom contains information regarding where this route originated.</summary>
 public partial class V1CalicoNodeStatusStatusRoutesRoutesV4LearnedFrom
 {
     /// <summary>If sourceType is NodeMesh or BGPPeer, IP address of the router that sent us this route.</summary>
@@ -156,6 +164,7 @@ public partial class V1CalicoNodeStatusStatusRoutesRoutesV4LearnedFrom
     public string? SourceType { get; set; }
 }
 
+/// <summary>CalicoNodeRoute contains the status of BGP routes on the node.</summary>
 public partial class V1CalicoNodeStatusStatusRoutesRoutesV4
 {
     /// <summary>Destination of the route.</summary>
@@ -179,6 +188,7 @@ public partial class V1CalicoNodeStatusStatusRoutesRoutesV4
     public string? Type { get; set; }
 }
 
+/// <summary>LearnedFrom contains information regarding where this route originated.</summary>
 public partial class V1CalicoNodeStatusStatusRoutesRoutesV6LearnedFrom
 {
     /// <summary>If sourceType is NodeMesh or BGPPeer, IP address of the router that sent us this route.</summary>
@@ -190,6 +200,7 @@ public partial class V1CalicoNodeStatusStatusRoutesRoutesV6LearnedFrom
     public string? SourceType { get; set; }
 }
 
+/// <summary>CalicoNodeRoute contains the status of BGP routes on the node.</summary>
 public partial class V1CalicoNodeStatusStatusRoutesRoutesV6
 {
     /// <summary>Destination of the route.</summary>
@@ -213,6 +224,7 @@ public partial class V1CalicoNodeStatusStatusRoutesRoutesV6
     public string? Type { get; set; }
 }
 
+/// <summary>Routes reports routes known to the Calico BGP daemon on the node.</summary>
 public partial class V1CalicoNodeStatusStatusRoutes
 {
     /// <summary>RoutesV4 represents IPv4 routes on the node.</summary>
@@ -224,6 +236,7 @@ public partial class V1CalicoNodeStatusStatusRoutes
     public IList<V1CalicoNodeStatusStatusRoutesRoutesV6>? RoutesV6 { get; set; }
 }
 
+/// <summary>CalicoNodeStatusStatus defines the observed state of CalicoNodeStatus. No validation needed for status since it is updated by Calico.</summary>
 public partial class V1CalicoNodeStatusStatus
 {
     /// <summary>Agent holds agent status on the node.</summary>
@@ -244,6 +257,7 @@ public partial class V1CalicoNodeStatusStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1CalicoNodeStatus : IKubernetesObject<V1ObjectMeta>, ISpec<V1CalicoNodeStatusSpec>, IStatus<V1CalicoNodeStatusStatus>
 {
     public const string KubeApiVersion = "v1";

@@ -18,6 +18,7 @@ public enum V1beta1IOTSecuritySolutionSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1IOTSecuritySolutionSpecForProviderAdditionalWorkspace
 {
     /// <summary>A list of data types which sent to workspace. Possible values are Alerts and RawEvents.</summary>
@@ -49,6 +50,7 @@ public enum V1beta1IOTSecuritySolutionSpecForProviderIothubIdsRefsPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTSecuritySolutionSpecForProviderIothubIdsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -62,6 +64,7 @@ public partial class V1beta1IOTSecuritySolutionSpecForProviderIothubIdsRefsPolic
     public V1beta1IOTSecuritySolutionSpecForProviderIothubIdsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1IOTSecuritySolutionSpecForProviderIothubIdsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -93,6 +96,7 @@ public enum V1beta1IOTSecuritySolutionSpecForProviderIothubIdsSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IOTSecuritySolutionSpecForProviderIothubIdsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -106,6 +110,7 @@ public partial class V1beta1IOTSecuritySolutionSpecForProviderIothubIdsSelectorP
     public V1beta1IOTSecuritySolutionSpecForProviderIothubIdsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of IOTHub in devices to populate iothubIds.</summary>
 public partial class V1beta1IOTSecuritySolutionSpecForProviderIothubIdsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1IOTSecuritySolutionSpecForProviderIothubIdsSelector
     public V1beta1IOTSecuritySolutionSpecForProviderIothubIdsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IOTSecuritySolutionSpecForProviderRecommendationsEnabled
 {
     /// <summary>Is Principal Authentication enabled for the ACR repository? Defaults to true.</summary>
@@ -208,6 +214,7 @@ public enum V1beta1IOTSecuritySolutionSpecForProviderResourceGroupNameRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTSecuritySolutionSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -221,6 +228,7 @@ public partial class V1beta1IOTSecuritySolutionSpecForProviderResourceGroupNameR
     public V1beta1IOTSecuritySolutionSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1IOTSecuritySolutionSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -252,6 +260,7 @@ public enum V1beta1IOTSecuritySolutionSpecForProviderResourceGroupNameSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IOTSecuritySolutionSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -265,6 +274,7 @@ public partial class V1beta1IOTSecuritySolutionSpecForProviderResourceGroupNameS
     public V1beta1IOTSecuritySolutionSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1IOTSecuritySolutionSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -280,6 +290,7 @@ public partial class V1beta1IOTSecuritySolutionSpecForProviderResourceGroupNameS
     public V1beta1IOTSecuritySolutionSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IOTSecuritySolutionSpecForProvider
 {
     /// <summary>A additional_workspace block as defined below.</summary>
@@ -359,6 +370,7 @@ public partial class V1beta1IOTSecuritySolutionSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IOTSecuritySolutionSpecInitProviderAdditionalWorkspace
 {
     /// <summary>A list of data types which sent to workspace. Possible values are Alerts and RawEvents.</summary>
@@ -390,6 +402,7 @@ public enum V1beta1IOTSecuritySolutionSpecInitProviderIothubIdsRefsPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTSecuritySolutionSpecInitProviderIothubIdsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -403,6 +416,7 @@ public partial class V1beta1IOTSecuritySolutionSpecInitProviderIothubIdsRefsPoli
     public V1beta1IOTSecuritySolutionSpecInitProviderIothubIdsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1IOTSecuritySolutionSpecInitProviderIothubIdsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -434,6 +448,7 @@ public enum V1beta1IOTSecuritySolutionSpecInitProviderIothubIdsSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IOTSecuritySolutionSpecInitProviderIothubIdsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -447,6 +462,7 @@ public partial class V1beta1IOTSecuritySolutionSpecInitProviderIothubIdsSelector
     public V1beta1IOTSecuritySolutionSpecInitProviderIothubIdsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of IOTHub in devices to populate iothubIds.</summary>
 public partial class V1beta1IOTSecuritySolutionSpecInitProviderIothubIdsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -462,6 +478,7 @@ public partial class V1beta1IOTSecuritySolutionSpecInitProviderIothubIdsSelector
     public V1beta1IOTSecuritySolutionSpecInitProviderIothubIdsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IOTSecuritySolutionSpecInitProviderRecommendationsEnabled
 {
     /// <summary>Is Principal Authentication enabled for the ACR repository? Defaults to true.</summary>
@@ -529,6 +546,7 @@ public partial class V1beta1IOTSecuritySolutionSpecInitProviderRecommendationsEn
     public bool? VulnerableTlsCipherSuite { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1IOTSecuritySolutionSpecInitProvider
 {
     /// <summary>A additional_workspace block as defined below.</summary>
@@ -638,6 +656,7 @@ public enum V1beta1IOTSecuritySolutionSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTSecuritySolutionSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -651,6 +670,7 @@ public partial class V1beta1IOTSecuritySolutionSpecProviderConfigRefPolicy
     public V1beta1IOTSecuritySolutionSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1IOTSecuritySolutionSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -682,6 +702,7 @@ public enum V1beta1IOTSecuritySolutionSpecPublishConnectionDetailsToConfigRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTSecuritySolutionSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -695,6 +716,7 @@ public partial class V1beta1IOTSecuritySolutionSpecPublishConnectionDetailsToCon
     public V1beta1IOTSecuritySolutionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1IOTSecuritySolutionSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -706,6 +728,7 @@ public partial class V1beta1IOTSecuritySolutionSpecPublishConnectionDetailsToCon
     public V1beta1IOTSecuritySolutionSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1IOTSecuritySolutionSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -721,6 +744,7 @@ public partial class V1beta1IOTSecuritySolutionSpecPublishConnectionDetailsToMet
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1IOTSecuritySolutionSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -736,6 +760,7 @@ public partial class V1beta1IOTSecuritySolutionSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1IOTSecuritySolutionSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -747,6 +772,7 @@ public partial class V1beta1IOTSecuritySolutionSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>IOTSecuritySolutionSpec defines the desired state of IOTSecuritySolution</summary>
 public partial class V1beta1IOTSecuritySolutionSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -779,6 +805,7 @@ public partial class V1beta1IOTSecuritySolutionSpec
     public V1beta1IOTSecuritySolutionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IOTSecuritySolutionStatusAtProviderAdditionalWorkspace
 {
     /// <summary>A list of data types which sent to workspace. Possible values are Alerts and RawEvents.</summary>
@@ -790,6 +817,7 @@ public partial class V1beta1IOTSecuritySolutionStatusAtProviderAdditionalWorkspa
     public string? WorkspaceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IOTSecuritySolutionStatusAtProviderRecommendationsEnabled
 {
     /// <summary>Is Principal Authentication enabled for the ACR repository? Defaults to true.</summary>
@@ -857,6 +885,7 @@ public partial class V1beta1IOTSecuritySolutionStatusAtProviderRecommendationsEn
     public bool? VulnerableTlsCipherSuite { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IOTSecuritySolutionStatusAtProvider
 {
     /// <summary>A additional_workspace block as defined below.</summary>
@@ -924,6 +953,7 @@ public partial class V1beta1IOTSecuritySolutionStatusAtProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1IOTSecuritySolutionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -951,6 +981,7 @@ public partial class V1beta1IOTSecuritySolutionStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>IOTSecuritySolutionStatus defines the observed state of IOTSecuritySolution.</summary>
 public partial class V1beta1IOTSecuritySolutionStatus
 {
     /// <summary></summary>
@@ -967,6 +998,7 @@ public partial class V1beta1IOTSecuritySolutionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>IOTSecuritySolution is the Schema for the IOTSecuritySolutions API. Manages an iot security solution.</summary>
 public partial class V1beta1IOTSecuritySolution : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IOTSecuritySolutionSpec>, IStatus<V1beta1IOTSecuritySolutionStatus>
 {
     public const string KubeApiVersion = "v1beta1";

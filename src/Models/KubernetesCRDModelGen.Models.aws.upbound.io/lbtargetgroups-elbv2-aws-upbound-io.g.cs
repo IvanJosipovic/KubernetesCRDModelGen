@@ -18,6 +18,7 @@ public enum V1beta1LBTargetGroupSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1LBTargetGroupSpecForProviderHealthCheck
 {
     /// <summary>Whether health checks are enabled. Defaults to true.</summary>
@@ -57,6 +58,7 @@ public partial class V1beta1LBTargetGroupSpecForProviderHealthCheck
     public double? UnhealthyThreshold { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBTargetGroupSpecForProviderStickiness
 {
     /// <summary>Only used when the type is lb_cookie. The time period, in seconds, during which requests from a client should be routed to the same target. After this time period expires, the load balancer-generated cookie is considered stale. The range is 1 second to 1 week (604800 seconds). The default value is 1 day (86400 seconds).</summary>
@@ -76,6 +78,7 @@ public partial class V1beta1LBTargetGroupSpecForProviderStickiness
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBTargetGroupSpecForProviderTargetFailover
 {
     /// <summary>Indicates how the GWLB handles existing flows when a target is deregistered. Possible values are rebalance and no_rebalance. Must match the attribute value set for on_unhealthy. Default: no_rebalance.</summary>
@@ -87,6 +90,7 @@ public partial class V1beta1LBTargetGroupSpecForProviderTargetFailover
     public string? OnUnhealthy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBTargetGroupSpecForProviderTargetHealthState
 {
     /// <summary>Indicates whether the load balancer terminates connections to unhealthy targets. Possible values are true or false. Default: true.</summary>
@@ -114,6 +118,7 @@ public enum V1beta1LBTargetGroupSpecForProviderVpcIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LBTargetGroupSpecForProviderVpcIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -127,6 +132,7 @@ public partial class V1beta1LBTargetGroupSpecForProviderVpcIdRefPolicy
     public V1beta1LBTargetGroupSpecForProviderVpcIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1LBTargetGroupSpecForProviderVpcIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -158,6 +164,7 @@ public enum V1beta1LBTargetGroupSpecForProviderVpcIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LBTargetGroupSpecForProviderVpcIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -171,6 +178,7 @@ public partial class V1beta1LBTargetGroupSpecForProviderVpcIdSelectorPolicy
     public V1beta1LBTargetGroupSpecForProviderVpcIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1LBTargetGroupSpecForProviderVpcIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -186,6 +194,7 @@ public partial class V1beta1LBTargetGroupSpecForProviderVpcIdSelector
     public V1beta1LBTargetGroupSpecForProviderVpcIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBTargetGroupSpecForProvider
 {
     /// <summary>Whether to terminate connections at the end of the deregistration timeout on Network Load Balancers. See doc for more information. Default is false.</summary>
@@ -285,6 +294,7 @@ public partial class V1beta1LBTargetGroupSpecForProvider
     public V1beta1LBTargetGroupSpecForProviderVpcIdSelector? VpcIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBTargetGroupSpecInitProviderHealthCheck
 {
     /// <summary>Whether health checks are enabled. Defaults to true.</summary>
@@ -324,6 +334,7 @@ public partial class V1beta1LBTargetGroupSpecInitProviderHealthCheck
     public double? UnhealthyThreshold { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBTargetGroupSpecInitProviderStickiness
 {
     /// <summary>Only used when the type is lb_cookie. The time period, in seconds, during which requests from a client should be routed to the same target. After this time period expires, the load balancer-generated cookie is considered stale. The range is 1 second to 1 week (604800 seconds). The default value is 1 day (86400 seconds).</summary>
@@ -343,6 +354,7 @@ public partial class V1beta1LBTargetGroupSpecInitProviderStickiness
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBTargetGroupSpecInitProviderTargetFailover
 {
     /// <summary>Indicates how the GWLB handles existing flows when a target is deregistered. Possible values are rebalance and no_rebalance. Must match the attribute value set for on_unhealthy. Default: no_rebalance.</summary>
@@ -354,6 +366,7 @@ public partial class V1beta1LBTargetGroupSpecInitProviderTargetFailover
     public string? OnUnhealthy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBTargetGroupSpecInitProviderTargetHealthState
 {
     /// <summary>Indicates whether the load balancer terminates connections to unhealthy targets. Possible values are true or false. Default: true.</summary>
@@ -381,6 +394,7 @@ public enum V1beta1LBTargetGroupSpecInitProviderVpcIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LBTargetGroupSpecInitProviderVpcIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -394,6 +408,7 @@ public partial class V1beta1LBTargetGroupSpecInitProviderVpcIdRefPolicy
     public V1beta1LBTargetGroupSpecInitProviderVpcIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1LBTargetGroupSpecInitProviderVpcIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -425,6 +440,7 @@ public enum V1beta1LBTargetGroupSpecInitProviderVpcIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LBTargetGroupSpecInitProviderVpcIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -438,6 +454,7 @@ public partial class V1beta1LBTargetGroupSpecInitProviderVpcIdSelectorPolicy
     public V1beta1LBTargetGroupSpecInitProviderVpcIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1LBTargetGroupSpecInitProviderVpcIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -453,6 +470,7 @@ public partial class V1beta1LBTargetGroupSpecInitProviderVpcIdSelector
     public V1beta1LBTargetGroupSpecInitProviderVpcIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1LBTargetGroupSpecInitProvider
 {
     /// <summary>Whether to terminate connections at the end of the deregistration timeout on Network Load Balancers. See doc for more information. Default is false.</summary>
@@ -590,6 +608,7 @@ public enum V1beta1LBTargetGroupSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LBTargetGroupSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -603,6 +622,7 @@ public partial class V1beta1LBTargetGroupSpecProviderConfigRefPolicy
     public V1beta1LBTargetGroupSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1LBTargetGroupSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -634,6 +654,7 @@ public enum V1beta1LBTargetGroupSpecPublishConnectionDetailsToConfigRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LBTargetGroupSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -647,6 +668,7 @@ public partial class V1beta1LBTargetGroupSpecPublishConnectionDetailsToConfigRef
     public V1beta1LBTargetGroupSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1LBTargetGroupSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -658,6 +680,7 @@ public partial class V1beta1LBTargetGroupSpecPublishConnectionDetailsToConfigRef
     public V1beta1LBTargetGroupSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1LBTargetGroupSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -673,6 +696,7 @@ public partial class V1beta1LBTargetGroupSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1LBTargetGroupSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -688,6 +712,7 @@ public partial class V1beta1LBTargetGroupSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1LBTargetGroupSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -699,6 +724,7 @@ public partial class V1beta1LBTargetGroupSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>LBTargetGroupSpec defines the desired state of LBTargetGroup</summary>
 public partial class V1beta1LBTargetGroupSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -731,6 +757,7 @@ public partial class V1beta1LBTargetGroupSpec
     public V1beta1LBTargetGroupSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBTargetGroupStatusAtProviderHealthCheck
 {
     /// <summary>Whether health checks are enabled. Defaults to true.</summary>
@@ -770,6 +797,7 @@ public partial class V1beta1LBTargetGroupStatusAtProviderHealthCheck
     public double? UnhealthyThreshold { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBTargetGroupStatusAtProviderStickiness
 {
     /// <summary>Only used when the type is lb_cookie. The time period, in seconds, during which requests from a client should be routed to the same target. After this time period expires, the load balancer-generated cookie is considered stale. The range is 1 second to 1 week (604800 seconds). The default value is 1 day (86400 seconds).</summary>
@@ -789,6 +817,7 @@ public partial class V1beta1LBTargetGroupStatusAtProviderStickiness
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBTargetGroupStatusAtProviderTargetFailover
 {
     /// <summary>Indicates how the GWLB handles existing flows when a target is deregistered. Possible values are rebalance and no_rebalance. Must match the attribute value set for on_unhealthy. Default: no_rebalance.</summary>
@@ -800,6 +829,7 @@ public partial class V1beta1LBTargetGroupStatusAtProviderTargetFailover
     public string? OnUnhealthy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBTargetGroupStatusAtProviderTargetHealthState
 {
     /// <summary>Indicates whether the load balancer terminates connections to unhealthy targets. Possible values are true or false. Default: true.</summary>
@@ -807,6 +837,7 @@ public partial class V1beta1LBTargetGroupStatusAtProviderTargetHealthState
     public bool? EnableUnhealthyConnectionTermination { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBTargetGroupStatusAtProvider
 {
     /// <summary>ARN of the Target Group (matches id).</summary>
@@ -914,6 +945,7 @@ public partial class V1beta1LBTargetGroupStatusAtProvider
     public string? VpcId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1LBTargetGroupStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -941,6 +973,7 @@ public partial class V1beta1LBTargetGroupStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>LBTargetGroupStatus defines the observed state of LBTargetGroup.</summary>
 public partial class V1beta1LBTargetGroupStatus
 {
     /// <summary></summary>
@@ -957,6 +990,7 @@ public partial class V1beta1LBTargetGroupStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>LBTargetGroup is the Schema for the LBTargetGroups API. Provides a Target Group resource for use with Load Balancers.</summary>
 public partial class V1beta1LBTargetGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LBTargetGroupSpec>, IStatus<V1beta1LBTargetGroupStatus>
 {
     public const string KubeApiVersion = "v1beta1";

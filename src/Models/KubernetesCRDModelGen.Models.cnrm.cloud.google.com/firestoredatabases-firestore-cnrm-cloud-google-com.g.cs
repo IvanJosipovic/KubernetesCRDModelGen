@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.firestore.cnrm.cloud.google.com;
+/// <summary>Immutable. The Project that this resource belongs to.</summary>
 public partial class V1alpha1FirestoreDatabaseSpecProjectRef
 {
     /// <summary>The `projectID` field of a project, when not managed by Config Connector.</summary>
@@ -27,6 +28,7 @@ public partial class V1alpha1FirestoreDatabaseSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>FirestoreDatabaseSpec defines the desired state of FirestoreDatabase</summary>
 public partial class V1alpha1FirestoreDatabaseSpec
 {
     /// <summary>The concurrency control mode to use for this database. See https://cloud.google.com/firestore/docs/reference/rest/v1/projects.databases#concurrencymode for more info.</summary>
@@ -50,6 +52,7 @@ public partial class V1alpha1FirestoreDatabaseSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1FirestoreDatabaseStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -73,6 +76,7 @@ public partial class V1alpha1FirestoreDatabaseStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 public partial class V1alpha1FirestoreDatabaseStatusObservedState
 {
     /// <summary>Output only. The timestamp at which this database was created. Databases created before 2016 do not populate create_time.</summary>
@@ -104,6 +108,7 @@ public partial class V1alpha1FirestoreDatabaseStatusObservedState
     public string? VersionRetentionPeriod { get; set; }
 }
 
+/// <summary>FirestoreDatabaseStatus defines the config connector machine state of FirestoreDatabase</summary>
 public partial class V1alpha1FirestoreDatabaseStatus
 {
     /// <summary>Conditions represent the latest available observations of the object's current state.</summary>
@@ -124,6 +129,7 @@ public partial class V1alpha1FirestoreDatabaseStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>FirestoreDatabase is the Schema for the FirestoreDatabase API</summary>
 public partial class V1alpha1FirestoreDatabase : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1FirestoreDatabaseSpec>, IStatus<V1alpha1FirestoreDatabaseStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

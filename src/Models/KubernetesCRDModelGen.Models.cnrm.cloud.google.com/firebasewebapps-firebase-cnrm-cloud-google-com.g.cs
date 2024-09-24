@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.firebase.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1alpha1FirebaseWebAppSpec
 {
     /// <summary>The globally unique, Google-assigned identifier (UID) for the Firebase API key associated with the WebApp. If apiKeyId is not set during creation, then Firebase automatically associates an apiKeyId with the WebApp. This auto-associated key may be an existing valid key or, if no valid key exists, a new one will be provisioned.</summary>
@@ -31,6 +32,7 @@ public partial class V1alpha1FirebaseWebAppSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1FirebaseWebAppStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -54,6 +56,7 @@ public partial class V1alpha1FirebaseWebAppStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1FirebaseWebAppStatus
 {
     /// <summary>The globally unique, Firebase-assigned identifier of the App. This identifier should be treated as an opaque token, as the data format is not specified.</summary>
@@ -78,6 +81,7 @@ public partial class V1alpha1FirebaseWebAppStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1FirebaseWebApp : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1FirebaseWebAppSpec>, IStatus<V1alpha1FirebaseWebAppStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

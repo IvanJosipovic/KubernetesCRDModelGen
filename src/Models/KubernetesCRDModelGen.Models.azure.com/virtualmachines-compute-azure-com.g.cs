@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.azure.com;
+/// <summary>Storage version of v1api20220301.AdditionalCapabilities Enables or disables a capability on the virtual machine or virtual machine scale set.</summary>
 public partial class V1api20220301storageVirtualMachineSpecAdditionalCapabilities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -23,6 +24,7 @@ public partial class V1api20220301storageVirtualMachineSpecAdditionalCapabilitie
     public bool? UltraSSDEnabled { get; set; }
 }
 
+/// <summary>PackageReferenceReference: Specifies the GalleryApplicationVersion resource id on the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.Compute/galleries/{galleryName}/applications/{application}/versions/{version}</summary>
 public partial class V1api20220301storageVirtualMachineSpecApplicationProfileGalleryApplicationsPackageReferenceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -42,6 +44,7 @@ public partial class V1api20220301storageVirtualMachineSpecApplicationProfileGal
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VMGalleryApplication Specifies the required information to reference a compute gallery application version</summary>
 public partial class V1api20220301storageVirtualMachineSpecApplicationProfileGalleryApplications
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -73,6 +76,7 @@ public partial class V1api20220301storageVirtualMachineSpecApplicationProfileGal
     public bool? TreatFailureAsDeploymentFailure { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.ApplicationProfile Contains the list of gallery applications that should be made available to the VM/VMSS</summary>
 public partial class V1api20220301storageVirtualMachineSpecApplicationProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -84,6 +88,7 @@ public partial class V1api20220301storageVirtualMachineSpecApplicationProfile
     public IList<V1api20220301storageVirtualMachineSpecApplicationProfileGalleryApplications>? GalleryApplications { get; set; }
 }
 
+/// <summary>Reference: Resource Id</summary>
 public partial class V1api20220301storageVirtualMachineSpecAvailabilitySetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -103,6 +108,7 @@ public partial class V1api20220301storageVirtualMachineSpecAvailabilitySetRefere
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource</summary>
 public partial class V1api20220301storageVirtualMachineSpecAvailabilitySet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -114,6 +120,7 @@ public partial class V1api20220301storageVirtualMachineSpecAvailabilitySet
     public V1api20220301storageVirtualMachineSpecAvailabilitySetReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.BillingProfile Specifies the billing related details of a Azure Spot VM or VMSS. Minimum api-version: 2019-03-01.</summary>
 public partial class V1api20220301storageVirtualMachineSpecBillingProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -125,6 +132,7 @@ public partial class V1api20220301storageVirtualMachineSpecBillingProfile
     public double? MaxPrice { get; set; }
 }
 
+/// <summary>Reference: Resource Id</summary>
 public partial class V1api20220301storageVirtualMachineSpecCapacityReservationCapacityReservationGroupReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -144,6 +152,7 @@ public partial class V1api20220301storageVirtualMachineSpecCapacityReservationCa
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource</summary>
 public partial class V1api20220301storageVirtualMachineSpecCapacityReservationCapacityReservationGroup
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -155,6 +164,7 @@ public partial class V1api20220301storageVirtualMachineSpecCapacityReservationCa
     public V1api20220301storageVirtualMachineSpecCapacityReservationCapacityReservationGroupReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.CapacityReservationProfile The parameters of a capacity reservation Profile.</summary>
 public partial class V1api20220301storageVirtualMachineSpecCapacityReservation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -166,6 +176,7 @@ public partial class V1api20220301storageVirtualMachineSpecCapacityReservation
     public V1api20220301storageVirtualMachineSpecCapacityReservationCapacityReservationGroup? CapacityReservationGroup { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.BootDiagnostics Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. You can easily view the output of your console log. Azure also enables you to see a screenshot of the VM from the hypervisor.</summary>
 public partial class V1api20220301storageVirtualMachineSpecDiagnosticsProfileBootDiagnostics
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -181,6 +192,7 @@ public partial class V1api20220301storageVirtualMachineSpecDiagnosticsProfileBoo
     public string? StorageUri { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.DiagnosticsProfile Specifies the boot diagnostic settings state. Minimum api-version: 2015-06-15.</summary>
 public partial class V1api20220301storageVirtualMachineSpecDiagnosticsProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -192,6 +204,7 @@ public partial class V1api20220301storageVirtualMachineSpecDiagnosticsProfile
     public V1api20220301storageVirtualMachineSpecDiagnosticsProfileBootDiagnostics? BootDiagnostics { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.ExtendedLocation The complex type of the extended location.</summary>
 public partial class V1api20220301storageVirtualMachineSpecExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -207,6 +220,7 @@ public partial class V1api20220301storageVirtualMachineSpecExtendedLocation
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VMSizeProperties Specifies VM Size Property settings on the virtual machine.</summary>
 public partial class V1api20220301storageVirtualMachineSpecHardwareProfileVmSizeProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -222,6 +236,7 @@ public partial class V1api20220301storageVirtualMachineSpecHardwareProfileVmSize
     public int? VCPUsPerCore { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.HardwareProfile Specifies the hardware settings for the virtual machine.</summary>
 public partial class V1api20220301storageVirtualMachineSpecHardwareProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -237,6 +252,7 @@ public partial class V1api20220301storageVirtualMachineSpecHardwareProfile
     public V1api20220301storageVirtualMachineSpecHardwareProfileVmSizeProperties? VmSizeProperties { get; set; }
 }
 
+/// <summary>Reference: Resource Id</summary>
 public partial class V1api20220301storageVirtualMachineSpecHostReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -256,6 +272,7 @@ public partial class V1api20220301storageVirtualMachineSpecHostReference
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource</summary>
 public partial class V1api20220301storageVirtualMachineSpecHost
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -267,6 +284,7 @@ public partial class V1api20220301storageVirtualMachineSpecHost
     public V1api20220301storageVirtualMachineSpecHostReference? Reference { get; set; }
 }
 
+/// <summary>Reference: Resource Id</summary>
 public partial class V1api20220301storageVirtualMachineSpecHostGroupReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -286,6 +304,7 @@ public partial class V1api20220301storageVirtualMachineSpecHostGroupReference
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource</summary>
 public partial class V1api20220301storageVirtualMachineSpecHostGroup
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -297,6 +316,7 @@ public partial class V1api20220301storageVirtualMachineSpecHostGroup
     public V1api20220301storageVirtualMachineSpecHostGroupReference? Reference { get; set; }
 }
 
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 public partial class V1api20220301storageVirtualMachineSpecIdentityUserAssignedIdentitiesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -316,6 +336,7 @@ public partial class V1api20220301storageVirtualMachineSpecIdentityUserAssignedI
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
 public partial class V1api20220301storageVirtualMachineSpecIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -327,6 +348,7 @@ public partial class V1api20220301storageVirtualMachineSpecIdentityUserAssignedI
     public V1api20220301storageVirtualMachineSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualMachineIdentity Identity for the virtual machine.</summary>
 public partial class V1api20220301storageVirtualMachineSpecIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -342,6 +364,7 @@ public partial class V1api20220301storageVirtualMachineSpecIdentity
     public IList<V1api20220301storageVirtualMachineSpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualMachineNetworkInterfaceDnsSettingsConfiguration Describes a virtual machines network configuration's DNS settings.</summary>
 public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetworkInterfaceConfigurationsDnsSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -353,6 +376,7 @@ public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetwork
     public IList<string>? DnsServers { get; set; }
 }
 
+/// <summary>Reference: Resource Id</summary>
 public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetworkInterfaceConfigurationsDscpConfigurationReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -372,6 +396,7 @@ public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetwork
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource</summary>
 public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetworkInterfaceConfigurationsDscpConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -383,6 +408,7 @@ public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetwork
     public V1api20220301storageVirtualMachineSpecNetworkProfileNetworkInterfaceConfigurationsDscpConfigurationReference? Reference { get; set; }
 }
 
+/// <summary>Reference: Resource Id</summary>
 public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsApplicationGatewayBackendAddressPoolsReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -402,6 +428,7 @@ public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetwork
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource</summary>
 public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsApplicationGatewayBackendAddressPools
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -413,6 +440,7 @@ public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetwork
     public V1api20220301storageVirtualMachineSpecNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsApplicationGatewayBackendAddressPoolsReference? Reference { get; set; }
 }
 
+/// <summary>Reference: Resource Id</summary>
 public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsApplicationSecurityGroupsReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -432,6 +460,7 @@ public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetwork
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource</summary>
 public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsApplicationSecurityGroups
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -443,6 +472,7 @@ public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetwork
     public V1api20220301storageVirtualMachineSpecNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsApplicationSecurityGroupsReference? Reference { get; set; }
 }
 
+/// <summary>Reference: Resource Id</summary>
 public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsLoadBalancerBackendAddressPoolsReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -462,6 +492,7 @@ public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetwork
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource</summary>
 public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsLoadBalancerBackendAddressPools
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -473,6 +504,7 @@ public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetwork
     public V1api20220301storageVirtualMachineSpecNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsLoadBalancerBackendAddressPoolsReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualMachinePublicIPAddressDnsSettingsConfiguration Describes a virtual machines network configuration's DNS settings.</summary>
 public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfigurationDnsSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -484,6 +516,7 @@ public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetwork
     public string? DomainNameLabel { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualMachineIpTag Contains the IP tag associated with the public IP address.</summary>
 public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfigurationIpTags
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -499,6 +532,7 @@ public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetwork
     public string? Tag { get; set; }
 }
 
+/// <summary>Reference: Resource Id</summary>
 public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfigurationPublicIPPrefixReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -518,6 +552,7 @@ public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetwork
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource</summary>
 public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfigurationPublicIPPrefix
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -529,6 +564,7 @@ public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetwork
     public V1api20220301storageVirtualMachineSpecNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfigurationPublicIPPrefixReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.PublicIPAddressSku Describes the public IP Sku. It can only be set with OrchestrationMode as Flexible.</summary>
 public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfigurationSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -544,6 +580,7 @@ public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetwork
     public string? Tier { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualMachinePublicIPAddressConfiguration Describes a virtual machines IP Configuration's PublicIPAddress configuration</summary>
 public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -587,6 +624,7 @@ public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetwork
     public V1api20220301storageVirtualMachineSpecNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfigurationSku? Sku { get; set; }
 }
 
+/// <summary>Reference: Resource Id</summary>
 public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsSubnetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -606,6 +644,7 @@ public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetwork
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource</summary>
 public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsSubnet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -617,6 +656,7 @@ public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetwork
     public V1api20220301storageVirtualMachineSpecNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsSubnetReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualMachineNetworkInterfaceIPConfiguration Describes a virtual machine network profile's IP configuration.</summary>
 public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetworkInterfaceConfigurationsIpConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -656,6 +696,7 @@ public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetwork
     public V1api20220301storageVirtualMachineSpecNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsSubnet? Subnet { get; set; }
 }
 
+/// <summary>Reference: Resource Id</summary>
 public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetworkInterfaceConfigurationsNetworkSecurityGroupReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -675,6 +716,7 @@ public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetwork
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource</summary>
 public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetworkInterfaceConfigurationsNetworkSecurityGroup
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -686,6 +728,7 @@ public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetwork
     public V1api20220301storageVirtualMachineSpecNetworkProfileNetworkInterfaceConfigurationsNetworkSecurityGroupReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualMachineNetworkInterfaceConfiguration Describes a virtual machine network interface configurations.</summary>
 public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetworkInterfaceConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -733,6 +776,7 @@ public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetwork
     public bool? Primary { get; set; }
 }
 
+/// <summary>Reference: Resource Id</summary>
 public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetworkInterfacesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -752,6 +796,7 @@ public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetwork
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.NetworkInterfaceReference Describes a network interface reference.</summary>
 public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetworkInterfaces
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -771,6 +816,7 @@ public partial class V1api20220301storageVirtualMachineSpecNetworkProfileNetwork
     public V1api20220301storageVirtualMachineSpecNetworkProfileNetworkInterfacesReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.NetworkProfile Specifies the network interfaces or the networking configuration of the virtual machine.</summary>
 public partial class V1api20220301storageVirtualMachineSpecNetworkProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -790,6 +836,7 @@ public partial class V1api20220301storageVirtualMachineSpecNetworkProfile
     public IList<V1api20220301storageVirtualMachineSpecNetworkProfileNetworkInterfaces>? NetworkInterfaces { get; set; }
 }
 
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20220301storageVirtualMachineSpecOsProfileAdminPassword
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -801,6 +848,7 @@ public partial class V1api20220301storageVirtualMachineSpecOsProfileAdminPasswor
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.LinuxVMGuestPatchAutomaticByPlatformSettings Specifies additional settings to be applied when patch mode AutomaticByPlatform is selected in Linux patch settings.</summary>
 public partial class V1api20220301storageVirtualMachineSpecOsProfileLinuxConfigurationPatchSettingsAutomaticByPlatformSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -812,6 +860,7 @@ public partial class V1api20220301storageVirtualMachineSpecOsProfileLinuxConfigu
     public string? RebootSetting { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.LinuxPatchSettings Specifies settings related to VM Guest Patching on Linux.</summary>
 public partial class V1api20220301storageVirtualMachineSpecOsProfileLinuxConfigurationPatchSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -831,6 +880,7 @@ public partial class V1api20220301storageVirtualMachineSpecOsProfileLinuxConfigu
     public string? PatchMode { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SshPublicKeySpec Contains information about SSH certificate public key and the path on the Linux VM where the public key is placed.</summary>
 public partial class V1api20220301storageVirtualMachineSpecOsProfileLinuxConfigurationSshPublicKeys
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -846,6 +896,7 @@ public partial class V1api20220301storageVirtualMachineSpecOsProfileLinuxConfigu
     public string? Path { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SshConfiguration SSH configuration for Linux based VMs running on Azure</summary>
 public partial class V1api20220301storageVirtualMachineSpecOsProfileLinuxConfigurationSsh
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -857,6 +908,7 @@ public partial class V1api20220301storageVirtualMachineSpecOsProfileLinuxConfigu
     public IList<V1api20220301storageVirtualMachineSpecOsProfileLinuxConfigurationSshPublicKeys>? PublicKeys { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.LinuxConfiguration Specifies the Linux operating system settings on the virtual machine. For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros).</summary>
 public partial class V1api20220301storageVirtualMachineSpecOsProfileLinuxConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -880,6 +932,7 @@ public partial class V1api20220301storageVirtualMachineSpecOsProfileLinuxConfigu
     public V1api20220301storageVirtualMachineSpecOsProfileLinuxConfigurationSsh? Ssh { get; set; }
 }
 
+/// <summary>Reference: Resource Id</summary>
 public partial class V1api20220301storageVirtualMachineSpecOsProfileSecretsSourceVaultReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -899,6 +952,7 @@ public partial class V1api20220301storageVirtualMachineSpecOsProfileSecretsSourc
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource</summary>
 public partial class V1api20220301storageVirtualMachineSpecOsProfileSecretsSourceVault
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -910,6 +964,7 @@ public partial class V1api20220301storageVirtualMachineSpecOsProfileSecretsSourc
     public V1api20220301storageVirtualMachineSpecOsProfileSecretsSourceVaultReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VaultCertificate Describes a single certificate reference in a Key Vault, and where the certificate should reside on the VM.</summary>
 public partial class V1api20220301storageVirtualMachineSpecOsProfileSecretsVaultCertificates
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -925,6 +980,7 @@ public partial class V1api20220301storageVirtualMachineSpecOsProfileSecretsVault
     public string? CertificateUrl { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VaultSecretGroup Describes a set of certificates which are all in the same Key Vault.</summary>
 public partial class V1api20220301storageVirtualMachineSpecOsProfileSecrets
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -940,6 +996,7 @@ public partial class V1api20220301storageVirtualMachineSpecOsProfileSecrets
     public IList<V1api20220301storageVirtualMachineSpecOsProfileSecretsVaultCertificates>? VaultCertificates { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.AdditionalUnattendContent Specifies additional XML formatted information that can be included in the Unattend.xml file, which is used by Windows Setup. Contents are defined by setting name, component name, and the pass in which the content is applied.</summary>
 public partial class V1api20220301storageVirtualMachineSpecOsProfileWindowsConfigurationAdditionalUnattendContent
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -963,6 +1020,7 @@ public partial class V1api20220301storageVirtualMachineSpecOsProfileWindowsConfi
     public string? SettingName { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.WindowsVMGuestPatchAutomaticByPlatformSettings Specifies additional settings to be applied when patch mode AutomaticByPlatform is selected in Windows patch settings.</summary>
 public partial class V1api20220301storageVirtualMachineSpecOsProfileWindowsConfigurationPatchSettingsAutomaticByPlatformSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -974,6 +1032,7 @@ public partial class V1api20220301storageVirtualMachineSpecOsProfileWindowsConfi
     public string? RebootSetting { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.PatchSettings Specifies settings related to VM Guest Patching on Windows.</summary>
 public partial class V1api20220301storageVirtualMachineSpecOsProfileWindowsConfigurationPatchSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -997,6 +1056,7 @@ public partial class V1api20220301storageVirtualMachineSpecOsProfileWindowsConfi
     public string? PatchMode { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.WinRMListener Describes Protocol and thumbprint of Windows Remote Management listener</summary>
 public partial class V1api20220301storageVirtualMachineSpecOsProfileWindowsConfigurationWinRMListeners
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1012,6 +1072,7 @@ public partial class V1api20220301storageVirtualMachineSpecOsProfileWindowsConfi
     public string? Protocol { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.WinRMConfiguration Describes Windows Remote Management configuration of the VM</summary>
 public partial class V1api20220301storageVirtualMachineSpecOsProfileWindowsConfigurationWinRM
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1023,6 +1084,7 @@ public partial class V1api20220301storageVirtualMachineSpecOsProfileWindowsConfi
     public IList<V1api20220301storageVirtualMachineSpecOsProfileWindowsConfigurationWinRMListeners>? Listeners { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.WindowsConfiguration Specifies Windows operating system settings on the virtual machine.</summary>
 public partial class V1api20220301storageVirtualMachineSpecOsProfileWindowsConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1054,6 +1116,7 @@ public partial class V1api20220301storageVirtualMachineSpecOsProfileWindowsConfi
     public V1api20220301storageVirtualMachineSpecOsProfileWindowsConfigurationWinRM? WinRM { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.OSProfile Specifies the operating system settings for the virtual machine. Some of the settings cannot be changed once VM is provisioned.</summary>
 public partial class V1api20220301storageVirtualMachineSpecOsProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1097,6 +1160,7 @@ public partial class V1api20220301storageVirtualMachineSpecOsProfile
     public V1api20220301storageVirtualMachineSpecOsProfileWindowsConfiguration? WindowsConfiguration { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20220301storageVirtualMachineSpecOwner
 {
     /// <summary></summary>
@@ -1108,6 +1172,7 @@ public partial class V1api20220301storageVirtualMachineSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.Plan Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use. In the Azure portal, find the marketplace image that you want to use and then click Want to deploy programmatically, Get Started -&gt;. Enter any required information and then click Save.</summary>
 public partial class V1api20220301storageVirtualMachineSpecPlan
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1131,6 +1196,7 @@ public partial class V1api20220301storageVirtualMachineSpecPlan
     public string? Publisher { get; set; }
 }
 
+/// <summary>Reference: Resource Id</summary>
 public partial class V1api20220301storageVirtualMachineSpecProximityPlacementGroupReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -1150,6 +1216,7 @@ public partial class V1api20220301storageVirtualMachineSpecProximityPlacementGro
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource</summary>
 public partial class V1api20220301storageVirtualMachineSpecProximityPlacementGroup
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1161,6 +1228,7 @@ public partial class V1api20220301storageVirtualMachineSpecProximityPlacementGro
     public V1api20220301storageVirtualMachineSpecProximityPlacementGroupReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.TerminateNotificationProfile</summary>
 public partial class V1api20220301storageVirtualMachineSpecScheduledEventsProfileTerminateNotificationProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1176,6 +1244,7 @@ public partial class V1api20220301storageVirtualMachineSpecScheduledEventsProfil
     public string? NotBeforeTimeout { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.ScheduledEventsProfile</summary>
 public partial class V1api20220301storageVirtualMachineSpecScheduledEventsProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1187,6 +1256,7 @@ public partial class V1api20220301storageVirtualMachineSpecScheduledEventsProfil
     public V1api20220301storageVirtualMachineSpecScheduledEventsProfileTerminateNotificationProfile? TerminateNotificationProfile { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.UefiSettings Specifies the security settings like secure boot and vTPM used while creating the virtual machine. Minimum api-version: 2020-12-01</summary>
 public partial class V1api20220301storageVirtualMachineSpecSecurityProfileUefiSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1202,6 +1272,7 @@ public partial class V1api20220301storageVirtualMachineSpecSecurityProfileUefiSe
     public bool? VTpmEnabled { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SecurityProfile Specifies the Security profile settings for the virtual machine or virtual machine scale set.</summary>
 public partial class V1api20220301storageVirtualMachineSpecSecurityProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1221,6 +1292,7 @@ public partial class V1api20220301storageVirtualMachineSpecSecurityProfile
     public V1api20220301storageVirtualMachineSpecSecurityProfileUefiSettings? UefiSettings { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualHardDisk Describes the uri of a disk.</summary>
 public partial class V1api20220301storageVirtualMachineSpecStorageProfileDataDisksImage
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1232,6 +1304,7 @@ public partial class V1api20220301storageVirtualMachineSpecStorageProfileDataDis
     public string? Uri { get; set; }
 }
 
+/// <summary>Reference: Resource Id</summary>
 public partial class V1api20220301storageVirtualMachineSpecStorageProfileDataDisksManagedDiskDiskEncryptionSetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -1251,6 +1324,7 @@ public partial class V1api20220301storageVirtualMachineSpecStorageProfileDataDis
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource</summary>
 public partial class V1api20220301storageVirtualMachineSpecStorageProfileDataDisksManagedDiskDiskEncryptionSet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1262,6 +1336,7 @@ public partial class V1api20220301storageVirtualMachineSpecStorageProfileDataDis
     public V1api20220301storageVirtualMachineSpecStorageProfileDataDisksManagedDiskDiskEncryptionSetReference? Reference { get; set; }
 }
 
+/// <summary>Reference: Resource Id</summary>
 public partial class V1api20220301storageVirtualMachineSpecStorageProfileDataDisksManagedDiskReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -1281,6 +1356,7 @@ public partial class V1api20220301storageVirtualMachineSpecStorageProfileDataDis
     public string? Name { get; set; }
 }
 
+/// <summary>Reference: Resource Id</summary>
 public partial class V1api20220301storageVirtualMachineSpecStorageProfileDataDisksManagedDiskSecurityProfileDiskEncryptionSetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -1300,6 +1376,7 @@ public partial class V1api20220301storageVirtualMachineSpecStorageProfileDataDis
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource</summary>
 public partial class V1api20220301storageVirtualMachineSpecStorageProfileDataDisksManagedDiskSecurityProfileDiskEncryptionSet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1311,6 +1388,7 @@ public partial class V1api20220301storageVirtualMachineSpecStorageProfileDataDis
     public V1api20220301storageVirtualMachineSpecStorageProfileDataDisksManagedDiskSecurityProfileDiskEncryptionSetReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VMDiskSecurityProfile Specifies the security profile settings for the managed disk. NOTE: It can only be set for Confidential VMs</summary>
 public partial class V1api20220301storageVirtualMachineSpecStorageProfileDataDisksManagedDiskSecurityProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1326,6 +1404,7 @@ public partial class V1api20220301storageVirtualMachineSpecStorageProfileDataDis
     public string? SecurityEncryptionType { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.ManagedDiskParameters The parameters of a managed disk.</summary>
 public partial class V1api20220301storageVirtualMachineSpecStorageProfileDataDisksManagedDisk
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1349,6 +1428,7 @@ public partial class V1api20220301storageVirtualMachineSpecStorageProfileDataDis
     public string? StorageAccountType { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualHardDisk Describes the uri of a disk.</summary>
 public partial class V1api20220301storageVirtualMachineSpecStorageProfileDataDisksVhd
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1360,6 +1440,7 @@ public partial class V1api20220301storageVirtualMachineSpecStorageProfileDataDis
     public string? Uri { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.DataDisk Describes a data disk.</summary>
 public partial class V1api20220301storageVirtualMachineSpecStorageProfileDataDisks
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1415,6 +1496,7 @@ public partial class V1api20220301storageVirtualMachineSpecStorageProfileDataDis
     public bool? WriteAcceleratorEnabled { get; set; }
 }
 
+/// <summary>Reference: Resource Id</summary>
 public partial class V1api20220301storageVirtualMachineSpecStorageProfileImageReferenceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -1434,6 +1516,7 @@ public partial class V1api20220301storageVirtualMachineSpecStorageProfileImageRe
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.ImageReference Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations. NOTE: Image reference publisher and offer can only be set when you create the scale set.</summary>
 public partial class V1api20220301storageVirtualMachineSpecStorageProfileImageReference
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1469,6 +1552,7 @@ public partial class V1api20220301storageVirtualMachineSpecStorageProfileImageRe
     public string? Version { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.DiffDiskSettings Describes the parameters of ephemeral disk settings that can be specified for operating system disk. NOTE: The ephemeral disk settings can only be specified for managed disk.</summary>
 public partial class V1api20220301storageVirtualMachineSpecStorageProfileOsDiskDiffDiskSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1484,6 +1568,7 @@ public partial class V1api20220301storageVirtualMachineSpecStorageProfileOsDiskD
     public string? Placement { get; set; }
 }
 
+/// <summary>Reference: Resource Id</summary>
 public partial class V1api20220301storageVirtualMachineSpecStorageProfileOsDiskEncryptionSettingsDiskEncryptionKeySourceVaultReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -1503,6 +1588,7 @@ public partial class V1api20220301storageVirtualMachineSpecStorageProfileOsDiskE
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource</summary>
 public partial class V1api20220301storageVirtualMachineSpecStorageProfileOsDiskEncryptionSettingsDiskEncryptionKeySourceVault
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1514,6 +1600,7 @@ public partial class V1api20220301storageVirtualMachineSpecStorageProfileOsDiskE
     public V1api20220301storageVirtualMachineSpecStorageProfileOsDiskEncryptionSettingsDiskEncryptionKeySourceVaultReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.KeyVaultSecretReference Describes a reference to Key Vault Secret</summary>
 public partial class V1api20220301storageVirtualMachineSpecStorageProfileOsDiskEncryptionSettingsDiskEncryptionKey
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1529,6 +1616,7 @@ public partial class V1api20220301storageVirtualMachineSpecStorageProfileOsDiskE
     public V1api20220301storageVirtualMachineSpecStorageProfileOsDiskEncryptionSettingsDiskEncryptionKeySourceVault? SourceVault { get; set; }
 }
 
+/// <summary>Reference: Resource Id</summary>
 public partial class V1api20220301storageVirtualMachineSpecStorageProfileOsDiskEncryptionSettingsKeyEncryptionKeySourceVaultReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -1548,6 +1636,7 @@ public partial class V1api20220301storageVirtualMachineSpecStorageProfileOsDiskE
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource</summary>
 public partial class V1api20220301storageVirtualMachineSpecStorageProfileOsDiskEncryptionSettingsKeyEncryptionKeySourceVault
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1559,6 +1648,7 @@ public partial class V1api20220301storageVirtualMachineSpecStorageProfileOsDiskE
     public V1api20220301storageVirtualMachineSpecStorageProfileOsDiskEncryptionSettingsKeyEncryptionKeySourceVaultReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.KeyVaultKeyReference Describes a reference to Key Vault Key</summary>
 public partial class V1api20220301storageVirtualMachineSpecStorageProfileOsDiskEncryptionSettingsKeyEncryptionKey
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1574,6 +1664,7 @@ public partial class V1api20220301storageVirtualMachineSpecStorageProfileOsDiskE
     public V1api20220301storageVirtualMachineSpecStorageProfileOsDiskEncryptionSettingsKeyEncryptionKeySourceVault? SourceVault { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.DiskEncryptionSettings Describes a Encryption Settings for a Disk</summary>
 public partial class V1api20220301storageVirtualMachineSpecStorageProfileOsDiskEncryptionSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1593,6 +1684,7 @@ public partial class V1api20220301storageVirtualMachineSpecStorageProfileOsDiskE
     public V1api20220301storageVirtualMachineSpecStorageProfileOsDiskEncryptionSettingsKeyEncryptionKey? KeyEncryptionKey { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualHardDisk Describes the uri of a disk.</summary>
 public partial class V1api20220301storageVirtualMachineSpecStorageProfileOsDiskImage
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1604,6 +1696,7 @@ public partial class V1api20220301storageVirtualMachineSpecStorageProfileOsDiskI
     public string? Uri { get; set; }
 }
 
+/// <summary>Reference: Resource Id</summary>
 public partial class V1api20220301storageVirtualMachineSpecStorageProfileOsDiskManagedDiskDiskEncryptionSetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -1623,6 +1716,7 @@ public partial class V1api20220301storageVirtualMachineSpecStorageProfileOsDiskM
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource</summary>
 public partial class V1api20220301storageVirtualMachineSpecStorageProfileOsDiskManagedDiskDiskEncryptionSet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1634,6 +1728,7 @@ public partial class V1api20220301storageVirtualMachineSpecStorageProfileOsDiskM
     public V1api20220301storageVirtualMachineSpecStorageProfileOsDiskManagedDiskDiskEncryptionSetReference? Reference { get; set; }
 }
 
+/// <summary>Reference: Resource Id</summary>
 public partial class V1api20220301storageVirtualMachineSpecStorageProfileOsDiskManagedDiskReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -1653,6 +1748,7 @@ public partial class V1api20220301storageVirtualMachineSpecStorageProfileOsDiskM
     public string? Name { get; set; }
 }
 
+/// <summary>Reference: Resource Id</summary>
 public partial class V1api20220301storageVirtualMachineSpecStorageProfileOsDiskManagedDiskSecurityProfileDiskEncryptionSetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -1672,6 +1768,7 @@ public partial class V1api20220301storageVirtualMachineSpecStorageProfileOsDiskM
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource</summary>
 public partial class V1api20220301storageVirtualMachineSpecStorageProfileOsDiskManagedDiskSecurityProfileDiskEncryptionSet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1683,6 +1780,7 @@ public partial class V1api20220301storageVirtualMachineSpecStorageProfileOsDiskM
     public V1api20220301storageVirtualMachineSpecStorageProfileOsDiskManagedDiskSecurityProfileDiskEncryptionSetReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VMDiskSecurityProfile Specifies the security profile settings for the managed disk. NOTE: It can only be set for Confidential VMs</summary>
 public partial class V1api20220301storageVirtualMachineSpecStorageProfileOsDiskManagedDiskSecurityProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1698,6 +1796,7 @@ public partial class V1api20220301storageVirtualMachineSpecStorageProfileOsDiskM
     public string? SecurityEncryptionType { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.ManagedDiskParameters The parameters of a managed disk.</summary>
 public partial class V1api20220301storageVirtualMachineSpecStorageProfileOsDiskManagedDisk
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1721,6 +1820,7 @@ public partial class V1api20220301storageVirtualMachineSpecStorageProfileOsDiskM
     public string? StorageAccountType { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualHardDisk Describes the uri of a disk.</summary>
 public partial class V1api20220301storageVirtualMachineSpecStorageProfileOsDiskVhd
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1732,6 +1832,7 @@ public partial class V1api20220301storageVirtualMachineSpecStorageProfileOsDiskV
     public string? Uri { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.OSDisk Specifies information about the operating system disk used by the virtual machine. For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).</summary>
 public partial class V1api20220301storageVirtualMachineSpecStorageProfileOsDisk
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1787,6 +1888,7 @@ public partial class V1api20220301storageVirtualMachineSpecStorageProfileOsDisk
     public bool? WriteAcceleratorEnabled { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.StorageProfile Specifies the storage settings for the virtual machine disks.</summary>
 public partial class V1api20220301storageVirtualMachineSpecStorageProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1806,6 +1908,7 @@ public partial class V1api20220301storageVirtualMachineSpecStorageProfile
     public V1api20220301storageVirtualMachineSpecStorageProfileOsDisk? OsDisk { get; set; }
 }
 
+/// <summary>Reference: Resource Id</summary>
 public partial class V1api20220301storageVirtualMachineSpecVirtualMachineScaleSetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -1825,6 +1928,7 @@ public partial class V1api20220301storageVirtualMachineSpecVirtualMachineScaleSe
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource</summary>
 public partial class V1api20220301storageVirtualMachineSpecVirtualMachineScaleSet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1836,6 +1940,7 @@ public partial class V1api20220301storageVirtualMachineSpecVirtualMachineScaleSe
     public V1api20220301storageVirtualMachineSpecVirtualMachineScaleSetReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualMachine_Spec</summary>
 public partial class V1api20220301storageVirtualMachineSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1967,6 +2072,7 @@ public partial class V1api20220301storageVirtualMachineSpec
     public IList<string>? Zones { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.AdditionalCapabilities_STATUS Enables or disables a capability on the virtual machine or virtual machine scale set.</summary>
 public partial class V1api20220301storageVirtualMachineStatusAdditionalCapabilities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1982,6 +2088,7 @@ public partial class V1api20220301storageVirtualMachineStatusAdditionalCapabilit
     public bool? UltraSSDEnabled { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VMGalleryApplication_STATUS Specifies the required information to reference a compute gallery application version</summary>
 public partial class V1api20220301storageVirtualMachineStatusApplicationProfileGalleryApplications
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2013,6 +2120,7 @@ public partial class V1api20220301storageVirtualMachineStatusApplicationProfileG
     public bool? TreatFailureAsDeploymentFailure { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.ApplicationProfile_STATUS Contains the list of gallery applications that should be made available to the VM/VMSS</summary>
 public partial class V1api20220301storageVirtualMachineStatusApplicationProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2024,6 +2132,7 @@ public partial class V1api20220301storageVirtualMachineStatusApplicationProfile
     public IList<V1api20220301storageVirtualMachineStatusApplicationProfileGalleryApplications>? GalleryApplications { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 public partial class V1api20220301storageVirtualMachineStatusAvailabilitySet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2035,6 +2144,7 @@ public partial class V1api20220301storageVirtualMachineStatusAvailabilitySet
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.BillingProfile_STATUS Specifies the billing related details of a Azure Spot VM or VMSS. Minimum api-version: 2019-03-01.</summary>
 public partial class V1api20220301storageVirtualMachineStatusBillingProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2046,6 +2156,7 @@ public partial class V1api20220301storageVirtualMachineStatusBillingProfile
     public double? MaxPrice { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 public partial class V1api20220301storageVirtualMachineStatusCapacityReservationCapacityReservationGroup
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2057,6 +2168,7 @@ public partial class V1api20220301storageVirtualMachineStatusCapacityReservation
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.CapacityReservationProfile_STATUS The parameters of a capacity reservation Profile.</summary>
 public partial class V1api20220301storageVirtualMachineStatusCapacityReservation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2068,6 +2180,7 @@ public partial class V1api20220301storageVirtualMachineStatusCapacityReservation
     public V1api20220301storageVirtualMachineStatusCapacityReservationCapacityReservationGroup? CapacityReservationGroup { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20220301storageVirtualMachineStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -2099,6 +2212,7 @@ public partial class V1api20220301storageVirtualMachineStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.BootDiagnostics_STATUS Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. You can easily view the output of your console log. Azure also enables you to see a screenshot of the VM from the hypervisor.</summary>
 public partial class V1api20220301storageVirtualMachineStatusDiagnosticsProfileBootDiagnostics
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2114,6 +2228,7 @@ public partial class V1api20220301storageVirtualMachineStatusDiagnosticsProfileB
     public string? StorageUri { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.DiagnosticsProfile_STATUS Specifies the boot diagnostic settings state. Minimum api-version: 2015-06-15.</summary>
 public partial class V1api20220301storageVirtualMachineStatusDiagnosticsProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2125,6 +2240,7 @@ public partial class V1api20220301storageVirtualMachineStatusDiagnosticsProfile
     public V1api20220301storageVirtualMachineStatusDiagnosticsProfileBootDiagnostics? BootDiagnostics { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.ExtendedLocation_STATUS The complex type of the extended location.</summary>
 public partial class V1api20220301storageVirtualMachineStatusExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2140,6 +2256,7 @@ public partial class V1api20220301storageVirtualMachineStatusExtendedLocation
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VMSizeProperties_STATUS Specifies VM Size Property settings on the virtual machine.</summary>
 public partial class V1api20220301storageVirtualMachineStatusHardwareProfileVmSizeProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2155,6 +2272,7 @@ public partial class V1api20220301storageVirtualMachineStatusHardwareProfileVmSi
     public int? VCPUsPerCore { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.HardwareProfile_STATUS Specifies the hardware settings for the virtual machine.</summary>
 public partial class V1api20220301storageVirtualMachineStatusHardwareProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2170,6 +2288,7 @@ public partial class V1api20220301storageVirtualMachineStatusHardwareProfile
     public V1api20220301storageVirtualMachineStatusHardwareProfileVmSizeProperties? VmSizeProperties { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 public partial class V1api20220301storageVirtualMachineStatusHost
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2181,6 +2300,7 @@ public partial class V1api20220301storageVirtualMachineStatusHost
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 public partial class V1api20220301storageVirtualMachineStatusHostGroup
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2192,6 +2312,7 @@ public partial class V1api20220301storageVirtualMachineStatusHostGroup
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualMachineIdentity_UserAssignedIdentities_STATUS</summary>
 public partial class V1api20220301storageVirtualMachineStatusIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2207,6 +2328,7 @@ public partial class V1api20220301storageVirtualMachineStatusIdentityUserAssigne
     public string? PrincipalId { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualMachineIdentity_STATUS Identity for the virtual machine.</summary>
 public partial class V1api20220301storageVirtualMachineStatusIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2230,6 +2352,7 @@ public partial class V1api20220301storageVirtualMachineStatusIdentity
     public IDictionary<string, V1api20220301storageVirtualMachineStatusIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.InstanceViewStatus_STATUS Instance view status.</summary>
 public partial class V1api20220301storageVirtualMachineStatusInstanceViewBootDiagnosticsStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2257,6 +2380,7 @@ public partial class V1api20220301storageVirtualMachineStatusInstanceViewBootDia
     public string? Time { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.BootDiagnosticsInstanceView_STATUS The instance view of a virtual machine boot diagnostics.</summary>
 public partial class V1api20220301storageVirtualMachineStatusInstanceViewBootDiagnostics
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2276,6 +2400,7 @@ public partial class V1api20220301storageVirtualMachineStatusInstanceViewBootDia
     public V1api20220301storageVirtualMachineStatusInstanceViewBootDiagnosticsStatus? Status { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 public partial class V1api20220301storageVirtualMachineStatusInstanceViewDisksEncryptionSettingsDiskEncryptionKeySourceVault
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2287,6 +2412,7 @@ public partial class V1api20220301storageVirtualMachineStatusInstanceViewDisksEn
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.KeyVaultSecretReference_STATUS Describes a reference to Key Vault Secret</summary>
 public partial class V1api20220301storageVirtualMachineStatusInstanceViewDisksEncryptionSettingsDiskEncryptionKey
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2302,6 +2428,7 @@ public partial class V1api20220301storageVirtualMachineStatusInstanceViewDisksEn
     public V1api20220301storageVirtualMachineStatusInstanceViewDisksEncryptionSettingsDiskEncryptionKeySourceVault? SourceVault { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 public partial class V1api20220301storageVirtualMachineStatusInstanceViewDisksEncryptionSettingsKeyEncryptionKeySourceVault
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2313,6 +2440,7 @@ public partial class V1api20220301storageVirtualMachineStatusInstanceViewDisksEn
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.KeyVaultKeyReference_STATUS Describes a reference to Key Vault Key</summary>
 public partial class V1api20220301storageVirtualMachineStatusInstanceViewDisksEncryptionSettingsKeyEncryptionKey
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2328,6 +2456,7 @@ public partial class V1api20220301storageVirtualMachineStatusInstanceViewDisksEn
     public V1api20220301storageVirtualMachineStatusInstanceViewDisksEncryptionSettingsKeyEncryptionKeySourceVault? SourceVault { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.DiskEncryptionSettings_STATUS Describes a Encryption Settings for a Disk</summary>
 public partial class V1api20220301storageVirtualMachineStatusInstanceViewDisksEncryptionSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2347,6 +2476,7 @@ public partial class V1api20220301storageVirtualMachineStatusInstanceViewDisksEn
     public V1api20220301storageVirtualMachineStatusInstanceViewDisksEncryptionSettingsKeyEncryptionKey? KeyEncryptionKey { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.InstanceViewStatus_STATUS Instance view status.</summary>
 public partial class V1api20220301storageVirtualMachineStatusInstanceViewDisksStatuses
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2374,6 +2504,7 @@ public partial class V1api20220301storageVirtualMachineStatusInstanceViewDisksSt
     public string? Time { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.DiskInstanceView_STATUS The instance view of the disk.</summary>
 public partial class V1api20220301storageVirtualMachineStatusInstanceViewDisks
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2393,6 +2524,7 @@ public partial class V1api20220301storageVirtualMachineStatusInstanceViewDisks
     public IList<V1api20220301storageVirtualMachineStatusInstanceViewDisksStatuses>? Statuses { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.InstanceViewStatus_STATUS Instance view status.</summary>
 public partial class V1api20220301storageVirtualMachineStatusInstanceViewExtensionsStatuses
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2420,6 +2552,7 @@ public partial class V1api20220301storageVirtualMachineStatusInstanceViewExtensi
     public string? Time { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.InstanceViewStatus_STATUS Instance view status.</summary>
 public partial class V1api20220301storageVirtualMachineStatusInstanceViewExtensionsSubstatuses
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2447,6 +2580,7 @@ public partial class V1api20220301storageVirtualMachineStatusInstanceViewExtensi
     public string? Time { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualMachineExtensionInstanceView_STATUS The instance view of a virtual machine extension.</summary>
 public partial class V1api20220301storageVirtualMachineStatusInstanceViewExtensions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2474,6 +2608,7 @@ public partial class V1api20220301storageVirtualMachineStatusInstanceViewExtensi
     public string? TypeHandlerVersion { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.MaintenanceRedeployStatus_STATUS Maintenance Operation Status.</summary>
 public partial class V1api20220301storageVirtualMachineStatusInstanceViewMaintenanceRedeployStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2509,6 +2644,7 @@ public partial class V1api20220301storageVirtualMachineStatusInstanceViewMainten
     public string? PreMaintenanceWindowStartTime { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.ApiErrorBase_STATUS Api error base.</summary>
 public partial class V1api20220301storageVirtualMachineStatusInstanceViewPatchStatusAvailablePatchSummaryErrorDetails
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2528,6 +2664,7 @@ public partial class V1api20220301storageVirtualMachineStatusInstanceViewPatchSt
     public string? Target { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.InnerError_STATUS Inner error details.</summary>
 public partial class V1api20220301storageVirtualMachineStatusInstanceViewPatchStatusAvailablePatchSummaryErrorInnererror
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2543,6 +2680,7 @@ public partial class V1api20220301storageVirtualMachineStatusInstanceViewPatchSt
     public string? Exceptiontype { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.ApiError_STATUS Api error.</summary>
 public partial class V1api20220301storageVirtualMachineStatusInstanceViewPatchStatusAvailablePatchSummaryError
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2570,6 +2708,7 @@ public partial class V1api20220301storageVirtualMachineStatusInstanceViewPatchSt
     public string? Target { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.AvailablePatchSummary_STATUS Describes the properties of an virtual machine instance view for available patch summary.</summary>
 public partial class V1api20220301storageVirtualMachineStatusInstanceViewPatchStatusAvailablePatchSummary
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2609,6 +2748,7 @@ public partial class V1api20220301storageVirtualMachineStatusInstanceViewPatchSt
     public string? Status { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.InstanceViewStatus_STATUS Instance view status.</summary>
 public partial class V1api20220301storageVirtualMachineStatusInstanceViewPatchStatusConfigurationStatuses
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2636,6 +2776,7 @@ public partial class V1api20220301storageVirtualMachineStatusInstanceViewPatchSt
     public string? Time { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.ApiErrorBase_STATUS Api error base.</summary>
 public partial class V1api20220301storageVirtualMachineStatusInstanceViewPatchStatusLastPatchInstallationSummaryErrorDetails
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2655,6 +2796,7 @@ public partial class V1api20220301storageVirtualMachineStatusInstanceViewPatchSt
     public string? Target { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.InnerError_STATUS Inner error details.</summary>
 public partial class V1api20220301storageVirtualMachineStatusInstanceViewPatchStatusLastPatchInstallationSummaryErrorInnererror
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2670,6 +2812,7 @@ public partial class V1api20220301storageVirtualMachineStatusInstanceViewPatchSt
     public string? Exceptiontype { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.ApiError_STATUS Api error.</summary>
 public partial class V1api20220301storageVirtualMachineStatusInstanceViewPatchStatusLastPatchInstallationSummaryError
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2697,6 +2840,7 @@ public partial class V1api20220301storageVirtualMachineStatusInstanceViewPatchSt
     public string? Target { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.LastPatchInstallationSummary_STATUS Describes the properties of the last installed patch summary.</summary>
 public partial class V1api20220301storageVirtualMachineStatusInstanceViewPatchStatusLastPatchInstallationSummary
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2748,6 +2892,7 @@ public partial class V1api20220301storageVirtualMachineStatusInstanceViewPatchSt
     public string? Status { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualMachinePatchStatus_STATUS The status of virtual machine patch operations.</summary>
 public partial class V1api20220301storageVirtualMachineStatusInstanceViewPatchStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2767,6 +2912,7 @@ public partial class V1api20220301storageVirtualMachineStatusInstanceViewPatchSt
     public V1api20220301storageVirtualMachineStatusInstanceViewPatchStatusLastPatchInstallationSummary? LastPatchInstallationSummary { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.InstanceViewStatus_STATUS Instance view status.</summary>
 public partial class V1api20220301storageVirtualMachineStatusInstanceViewStatuses
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2794,6 +2940,7 @@ public partial class V1api20220301storageVirtualMachineStatusInstanceViewStatuse
     public string? Time { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.InstanceViewStatus_STATUS Instance view status.</summary>
 public partial class V1api20220301storageVirtualMachineStatusInstanceViewVmAgentExtensionHandlersStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2821,6 +2968,7 @@ public partial class V1api20220301storageVirtualMachineStatusInstanceViewVmAgent
     public string? Time { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualMachineExtensionHandlerInstanceView_STATUS The instance view of a virtual machine extension handler.</summary>
 public partial class V1api20220301storageVirtualMachineStatusInstanceViewVmAgentExtensionHandlers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2840,6 +2988,7 @@ public partial class V1api20220301storageVirtualMachineStatusInstanceViewVmAgent
     public string? TypeHandlerVersion { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.InstanceViewStatus_STATUS Instance view status.</summary>
 public partial class V1api20220301storageVirtualMachineStatusInstanceViewVmAgentStatuses
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2867,6 +3016,7 @@ public partial class V1api20220301storageVirtualMachineStatusInstanceViewVmAgent
     public string? Time { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualMachineAgentInstanceView_STATUS The instance view of the VM Agent running on the virtual machine.</summary>
 public partial class V1api20220301storageVirtualMachineStatusInstanceViewVmAgent
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2886,6 +3036,7 @@ public partial class V1api20220301storageVirtualMachineStatusInstanceViewVmAgent
     public string? VmAgentVersion { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.InstanceViewStatus_STATUS Instance view status.</summary>
 public partial class V1api20220301storageVirtualMachineStatusInstanceViewVmHealthStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2913,6 +3064,7 @@ public partial class V1api20220301storageVirtualMachineStatusInstanceViewVmHealt
     public string? Time { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualMachineHealthStatus_STATUS The health status of the VM.</summary>
 public partial class V1api20220301storageVirtualMachineStatusInstanceViewVmHealth
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2924,6 +3076,7 @@ public partial class V1api20220301storageVirtualMachineStatusInstanceViewVmHealt
     public V1api20220301storageVirtualMachineStatusInstanceViewVmHealthStatus? Status { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualMachineInstanceView_STATUS The instance view of a virtual machine.</summary>
 public partial class V1api20220301storageVirtualMachineStatusInstanceView
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2995,6 +3148,7 @@ public partial class V1api20220301storageVirtualMachineStatusInstanceView
     public V1api20220301storageVirtualMachineStatusInstanceViewVmHealth? VmHealth { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualMachineNetworkInterfaceDnsSettingsConfiguration_STATUS Describes a virtual machines network configuration's DNS settings.</summary>
 public partial class V1api20220301storageVirtualMachineStatusNetworkProfileNetworkInterfaceConfigurationsDnsSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3006,6 +3160,7 @@ public partial class V1api20220301storageVirtualMachineStatusNetworkProfileNetwo
     public IList<string>? DnsServers { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 public partial class V1api20220301storageVirtualMachineStatusNetworkProfileNetworkInterfaceConfigurationsDscpConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3017,6 +3172,7 @@ public partial class V1api20220301storageVirtualMachineStatusNetworkProfileNetwo
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 public partial class V1api20220301storageVirtualMachineStatusNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsApplicationGatewayBackendAddressPools
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3028,6 +3184,7 @@ public partial class V1api20220301storageVirtualMachineStatusNetworkProfileNetwo
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 public partial class V1api20220301storageVirtualMachineStatusNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsApplicationSecurityGroups
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3039,6 +3196,7 @@ public partial class V1api20220301storageVirtualMachineStatusNetworkProfileNetwo
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 public partial class V1api20220301storageVirtualMachineStatusNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsLoadBalancerBackendAddressPools
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3050,6 +3208,7 @@ public partial class V1api20220301storageVirtualMachineStatusNetworkProfileNetwo
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualMachinePublicIPAddressDnsSettingsConfiguration_STATUS Describes a virtual machines network configuration's DNS settings.</summary>
 public partial class V1api20220301storageVirtualMachineStatusNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfigurationDnsSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3061,6 +3220,7 @@ public partial class V1api20220301storageVirtualMachineStatusNetworkProfileNetwo
     public string? DomainNameLabel { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualMachineIpTag_STATUS Contains the IP tag associated with the public IP address.</summary>
 public partial class V1api20220301storageVirtualMachineStatusNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfigurationIpTags
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3076,6 +3236,7 @@ public partial class V1api20220301storageVirtualMachineStatusNetworkProfileNetwo
     public string? Tag { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 public partial class V1api20220301storageVirtualMachineStatusNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfigurationPublicIPPrefix
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3087,6 +3248,7 @@ public partial class V1api20220301storageVirtualMachineStatusNetworkProfileNetwo
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.PublicIPAddressSku_STATUS Describes the public IP Sku. It can only be set with OrchestrationMode as Flexible.</summary>
 public partial class V1api20220301storageVirtualMachineStatusNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfigurationSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3102,6 +3264,7 @@ public partial class V1api20220301storageVirtualMachineStatusNetworkProfileNetwo
     public string? Tier { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualMachinePublicIPAddressConfiguration_STATUS Describes a virtual machines IP Configuration's PublicIPAddress configuration</summary>
 public partial class V1api20220301storageVirtualMachineStatusNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3145,6 +3308,7 @@ public partial class V1api20220301storageVirtualMachineStatusNetworkProfileNetwo
     public V1api20220301storageVirtualMachineStatusNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsPublicIPAddressConfigurationSku? Sku { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 public partial class V1api20220301storageVirtualMachineStatusNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsSubnet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3156,6 +3320,7 @@ public partial class V1api20220301storageVirtualMachineStatusNetworkProfileNetwo
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualMachineNetworkInterfaceIPConfiguration_STATUS Describes a virtual machine network profile's IP configuration.</summary>
 public partial class V1api20220301storageVirtualMachineStatusNetworkProfileNetworkInterfaceConfigurationsIpConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3195,6 +3360,7 @@ public partial class V1api20220301storageVirtualMachineStatusNetworkProfileNetwo
     public V1api20220301storageVirtualMachineStatusNetworkProfileNetworkInterfaceConfigurationsIpConfigurationsSubnet? Subnet { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 public partial class V1api20220301storageVirtualMachineStatusNetworkProfileNetworkInterfaceConfigurationsNetworkSecurityGroup
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3206,6 +3372,7 @@ public partial class V1api20220301storageVirtualMachineStatusNetworkProfileNetwo
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualMachineNetworkInterfaceConfiguration_STATUS Describes a virtual machine network interface configurations.</summary>
 public partial class V1api20220301storageVirtualMachineStatusNetworkProfileNetworkInterfaceConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3253,6 +3420,7 @@ public partial class V1api20220301storageVirtualMachineStatusNetworkProfileNetwo
     public bool? Primary { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.NetworkInterfaceReference_STATUS Describes a network interface reference.</summary>
 public partial class V1api20220301storageVirtualMachineStatusNetworkProfileNetworkInterfaces
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3272,6 +3440,7 @@ public partial class V1api20220301storageVirtualMachineStatusNetworkProfileNetwo
     public bool? Primary { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.NetworkProfile_STATUS Specifies the network interfaces or the networking configuration of the virtual machine.</summary>
 public partial class V1api20220301storageVirtualMachineStatusNetworkProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3291,6 +3460,7 @@ public partial class V1api20220301storageVirtualMachineStatusNetworkProfile
     public IList<V1api20220301storageVirtualMachineStatusNetworkProfileNetworkInterfaces>? NetworkInterfaces { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.LinuxVMGuestPatchAutomaticByPlatformSettings_STATUS Specifies additional settings to be applied when patch mode AutomaticByPlatform is selected in Linux patch settings.</summary>
 public partial class V1api20220301storageVirtualMachineStatusOsProfileLinuxConfigurationPatchSettingsAutomaticByPlatformSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3302,6 +3472,7 @@ public partial class V1api20220301storageVirtualMachineStatusOsProfileLinuxConfi
     public string? RebootSetting { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.LinuxPatchSettings_STATUS Specifies settings related to VM Guest Patching on Linux.</summary>
 public partial class V1api20220301storageVirtualMachineStatusOsProfileLinuxConfigurationPatchSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3321,6 +3492,7 @@ public partial class V1api20220301storageVirtualMachineStatusOsProfileLinuxConfi
     public string? PatchMode { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SshPublicKey_STATUS Contains information about SSH certificate public key and the path on the Linux VM where the public key is placed.</summary>
 public partial class V1api20220301storageVirtualMachineStatusOsProfileLinuxConfigurationSshPublicKeys
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3336,6 +3508,7 @@ public partial class V1api20220301storageVirtualMachineStatusOsProfileLinuxConfi
     public string? Path { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SshConfiguration_STATUS SSH configuration for Linux based VMs running on Azure</summary>
 public partial class V1api20220301storageVirtualMachineStatusOsProfileLinuxConfigurationSsh
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3347,6 +3520,7 @@ public partial class V1api20220301storageVirtualMachineStatusOsProfileLinuxConfi
     public IList<V1api20220301storageVirtualMachineStatusOsProfileLinuxConfigurationSshPublicKeys>? PublicKeys { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.LinuxConfiguration_STATUS Specifies the Linux operating system settings on the virtual machine. For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros).</summary>
 public partial class V1api20220301storageVirtualMachineStatusOsProfileLinuxConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3370,6 +3544,7 @@ public partial class V1api20220301storageVirtualMachineStatusOsProfileLinuxConfi
     public V1api20220301storageVirtualMachineStatusOsProfileLinuxConfigurationSsh? Ssh { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 public partial class V1api20220301storageVirtualMachineStatusOsProfileSecretsSourceVault
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3381,6 +3556,7 @@ public partial class V1api20220301storageVirtualMachineStatusOsProfileSecretsSou
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VaultCertificate_STATUS Describes a single certificate reference in a Key Vault, and where the certificate should reside on the VM.</summary>
 public partial class V1api20220301storageVirtualMachineStatusOsProfileSecretsVaultCertificates
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3396,6 +3572,7 @@ public partial class V1api20220301storageVirtualMachineStatusOsProfileSecretsVau
     public string? CertificateUrl { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VaultSecretGroup_STATUS Describes a set of certificates which are all in the same Key Vault.</summary>
 public partial class V1api20220301storageVirtualMachineStatusOsProfileSecrets
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3411,6 +3588,7 @@ public partial class V1api20220301storageVirtualMachineStatusOsProfileSecrets
     public IList<V1api20220301storageVirtualMachineStatusOsProfileSecretsVaultCertificates>? VaultCertificates { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.AdditionalUnattendContent_STATUS Specifies additional XML formatted information that can be included in the Unattend.xml file, which is used by Windows Setup. Contents are defined by setting name, component name, and the pass in which the content is applied.</summary>
 public partial class V1api20220301storageVirtualMachineStatusOsProfileWindowsConfigurationAdditionalUnattendContent
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3434,6 +3612,7 @@ public partial class V1api20220301storageVirtualMachineStatusOsProfileWindowsCon
     public string? SettingName { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.WindowsVMGuestPatchAutomaticByPlatformSettings_STATUS Specifies additional settings to be applied when patch mode AutomaticByPlatform is selected in Windows patch settings.</summary>
 public partial class V1api20220301storageVirtualMachineStatusOsProfileWindowsConfigurationPatchSettingsAutomaticByPlatformSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3445,6 +3624,7 @@ public partial class V1api20220301storageVirtualMachineStatusOsProfileWindowsCon
     public string? RebootSetting { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.PatchSettings_STATUS Specifies settings related to VM Guest Patching on Windows.</summary>
 public partial class V1api20220301storageVirtualMachineStatusOsProfileWindowsConfigurationPatchSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3468,6 +3648,7 @@ public partial class V1api20220301storageVirtualMachineStatusOsProfileWindowsCon
     public string? PatchMode { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.WinRMListener_STATUS Describes Protocol and thumbprint of Windows Remote Management listener</summary>
 public partial class V1api20220301storageVirtualMachineStatusOsProfileWindowsConfigurationWinRMListeners
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3483,6 +3664,7 @@ public partial class V1api20220301storageVirtualMachineStatusOsProfileWindowsCon
     public string? Protocol { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.WinRMConfiguration_STATUS Describes Windows Remote Management configuration of the VM</summary>
 public partial class V1api20220301storageVirtualMachineStatusOsProfileWindowsConfigurationWinRM
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3494,6 +3676,7 @@ public partial class V1api20220301storageVirtualMachineStatusOsProfileWindowsCon
     public IList<V1api20220301storageVirtualMachineStatusOsProfileWindowsConfigurationWinRMListeners>? Listeners { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.WindowsConfiguration_STATUS Specifies Windows operating system settings on the virtual machine.</summary>
 public partial class V1api20220301storageVirtualMachineStatusOsProfileWindowsConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3525,6 +3708,7 @@ public partial class V1api20220301storageVirtualMachineStatusOsProfileWindowsCon
     public V1api20220301storageVirtualMachineStatusOsProfileWindowsConfigurationWinRM? WinRM { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.OSProfile_STATUS Specifies the operating system settings for the virtual machine. Some of the settings cannot be changed once VM is provisioned.</summary>
 public partial class V1api20220301storageVirtualMachineStatusOsProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3564,6 +3748,7 @@ public partial class V1api20220301storageVirtualMachineStatusOsProfile
     public V1api20220301storageVirtualMachineStatusOsProfileWindowsConfiguration? WindowsConfiguration { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.Plan_STATUS Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use. In the Azure portal, find the marketplace image that you want to use and then click Want to deploy programmatically, Get Started -&gt;. Enter any required information and then click Save.</summary>
 public partial class V1api20220301storageVirtualMachineStatusPlan
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3587,6 +3772,7 @@ public partial class V1api20220301storageVirtualMachineStatusPlan
     public string? Publisher { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 public partial class V1api20220301storageVirtualMachineStatusProximityPlacementGroup
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3598,6 +3784,7 @@ public partial class V1api20220301storageVirtualMachineStatusProximityPlacementG
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.InstanceViewStatus_STATUS Instance view status.</summary>
 public partial class V1api20220301storageVirtualMachineStatusResourcesInstanceViewStatuses
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3625,6 +3812,7 @@ public partial class V1api20220301storageVirtualMachineStatusResourcesInstanceVi
     public string? Time { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.InstanceViewStatus_STATUS Instance view status.</summary>
 public partial class V1api20220301storageVirtualMachineStatusResourcesInstanceViewSubstatuses
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3652,6 +3840,7 @@ public partial class V1api20220301storageVirtualMachineStatusResourcesInstanceVi
     public string? Time { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualMachineExtensionInstanceView_STATUS The instance view of a virtual machine extension.</summary>
 public partial class V1api20220301storageVirtualMachineStatusResourcesInstanceView
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3679,6 +3868,7 @@ public partial class V1api20220301storageVirtualMachineStatusResourcesInstanceVi
     public string? TypeHandlerVersion { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 public partial class V1api20220301storageVirtualMachineStatusResourcesProtectedSettingsFromKeyVaultSourceVault
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3690,6 +3880,7 @@ public partial class V1api20220301storageVirtualMachineStatusResourcesProtectedS
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.KeyVaultSecretReference_STATUS Describes a reference to Key Vault Secret</summary>
 public partial class V1api20220301storageVirtualMachineStatusResourcesProtectedSettingsFromKeyVault
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3705,6 +3896,7 @@ public partial class V1api20220301storageVirtualMachineStatusResourcesProtectedS
     public V1api20220301storageVirtualMachineStatusResourcesProtectedSettingsFromKeyVaultSourceVault? SourceVault { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualMachineExtension_STATUS Describes a Virtual Machine Extension.</summary>
 public partial class V1api20220301storageVirtualMachineStatusResources
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3776,6 +3968,7 @@ public partial class V1api20220301storageVirtualMachineStatusResources
     public string? TypeHandlerVersion { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.TerminateNotificationProfile_STATUS</summary>
 public partial class V1api20220301storageVirtualMachineStatusScheduledEventsProfileTerminateNotificationProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3791,6 +3984,7 @@ public partial class V1api20220301storageVirtualMachineStatusScheduledEventsProf
     public string? NotBeforeTimeout { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.ScheduledEventsProfile_STATUS</summary>
 public partial class V1api20220301storageVirtualMachineStatusScheduledEventsProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3802,6 +3996,7 @@ public partial class V1api20220301storageVirtualMachineStatusScheduledEventsProf
     public V1api20220301storageVirtualMachineStatusScheduledEventsProfileTerminateNotificationProfile? TerminateNotificationProfile { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.UefiSettings_STATUS Specifies the security settings like secure boot and vTPM used while creating the virtual machine. Minimum api-version: 2020-12-01</summary>
 public partial class V1api20220301storageVirtualMachineStatusSecurityProfileUefiSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3817,6 +4012,7 @@ public partial class V1api20220301storageVirtualMachineStatusSecurityProfileUefi
     public bool? VTpmEnabled { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SecurityProfile_STATUS Specifies the Security profile settings for the virtual machine or virtual machine scale set.</summary>
 public partial class V1api20220301storageVirtualMachineStatusSecurityProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3836,6 +4032,7 @@ public partial class V1api20220301storageVirtualMachineStatusSecurityProfile
     public V1api20220301storageVirtualMachineStatusSecurityProfileUefiSettings? UefiSettings { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualHardDisk_STATUS Describes the uri of a disk.</summary>
 public partial class V1api20220301storageVirtualMachineStatusStorageProfileDataDisksImage
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3847,6 +4044,7 @@ public partial class V1api20220301storageVirtualMachineStatusStorageProfileDataD
     public string? Uri { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 public partial class V1api20220301storageVirtualMachineStatusStorageProfileDataDisksManagedDiskDiskEncryptionSet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3858,6 +4056,7 @@ public partial class V1api20220301storageVirtualMachineStatusStorageProfileDataD
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 public partial class V1api20220301storageVirtualMachineStatusStorageProfileDataDisksManagedDiskSecurityProfileDiskEncryptionSet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3869,6 +4068,7 @@ public partial class V1api20220301storageVirtualMachineStatusStorageProfileDataD
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VMDiskSecurityProfile_STATUS Specifies the security profile settings for the managed disk. NOTE: It can only be set for Confidential VMs</summary>
 public partial class V1api20220301storageVirtualMachineStatusStorageProfileDataDisksManagedDiskSecurityProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3884,6 +4084,7 @@ public partial class V1api20220301storageVirtualMachineStatusStorageProfileDataD
     public string? SecurityEncryptionType { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.ManagedDiskParameters_STATUS The parameters of a managed disk.</summary>
 public partial class V1api20220301storageVirtualMachineStatusStorageProfileDataDisksManagedDisk
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3907,6 +4108,7 @@ public partial class V1api20220301storageVirtualMachineStatusStorageProfileDataD
     public string? StorageAccountType { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualHardDisk_STATUS Describes the uri of a disk.</summary>
 public partial class V1api20220301storageVirtualMachineStatusStorageProfileDataDisksVhd
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3918,6 +4120,7 @@ public partial class V1api20220301storageVirtualMachineStatusStorageProfileDataD
     public string? Uri { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.DataDisk_STATUS Describes a data disk.</summary>
 public partial class V1api20220301storageVirtualMachineStatusStorageProfileDataDisks
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3981,6 +4184,7 @@ public partial class V1api20220301storageVirtualMachineStatusStorageProfileDataD
     public bool? WriteAcceleratorEnabled { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.ImageReference_STATUS Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations. NOTE: Image reference publisher and offer can only be set when you create the scale set.</summary>
 public partial class V1api20220301storageVirtualMachineStatusStorageProfileImageReference
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -4020,6 +4224,7 @@ public partial class V1api20220301storageVirtualMachineStatusStorageProfileImage
     public string? Version { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.DiffDiskSettings_STATUS Describes the parameters of ephemeral disk settings that can be specified for operating system disk. NOTE: The ephemeral disk settings can only be specified for managed disk.</summary>
 public partial class V1api20220301storageVirtualMachineStatusStorageProfileOsDiskDiffDiskSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -4035,6 +4240,7 @@ public partial class V1api20220301storageVirtualMachineStatusStorageProfileOsDis
     public string? Placement { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 public partial class V1api20220301storageVirtualMachineStatusStorageProfileOsDiskEncryptionSettingsDiskEncryptionKeySourceVault
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -4046,6 +4252,7 @@ public partial class V1api20220301storageVirtualMachineStatusStorageProfileOsDis
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.KeyVaultSecretReference_STATUS Describes a reference to Key Vault Secret</summary>
 public partial class V1api20220301storageVirtualMachineStatusStorageProfileOsDiskEncryptionSettingsDiskEncryptionKey
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -4061,6 +4268,7 @@ public partial class V1api20220301storageVirtualMachineStatusStorageProfileOsDis
     public V1api20220301storageVirtualMachineStatusStorageProfileOsDiskEncryptionSettingsDiskEncryptionKeySourceVault? SourceVault { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 public partial class V1api20220301storageVirtualMachineStatusStorageProfileOsDiskEncryptionSettingsKeyEncryptionKeySourceVault
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -4072,6 +4280,7 @@ public partial class V1api20220301storageVirtualMachineStatusStorageProfileOsDis
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.KeyVaultKeyReference_STATUS Describes a reference to Key Vault Key</summary>
 public partial class V1api20220301storageVirtualMachineStatusStorageProfileOsDiskEncryptionSettingsKeyEncryptionKey
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -4087,6 +4296,7 @@ public partial class V1api20220301storageVirtualMachineStatusStorageProfileOsDis
     public V1api20220301storageVirtualMachineStatusStorageProfileOsDiskEncryptionSettingsKeyEncryptionKeySourceVault? SourceVault { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.DiskEncryptionSettings_STATUS Describes a Encryption Settings for a Disk</summary>
 public partial class V1api20220301storageVirtualMachineStatusStorageProfileOsDiskEncryptionSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -4106,6 +4316,7 @@ public partial class V1api20220301storageVirtualMachineStatusStorageProfileOsDis
     public V1api20220301storageVirtualMachineStatusStorageProfileOsDiskEncryptionSettingsKeyEncryptionKey? KeyEncryptionKey { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualHardDisk_STATUS Describes the uri of a disk.</summary>
 public partial class V1api20220301storageVirtualMachineStatusStorageProfileOsDiskImage
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -4117,6 +4328,7 @@ public partial class V1api20220301storageVirtualMachineStatusStorageProfileOsDis
     public string? Uri { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 public partial class V1api20220301storageVirtualMachineStatusStorageProfileOsDiskManagedDiskDiskEncryptionSet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -4128,6 +4340,7 @@ public partial class V1api20220301storageVirtualMachineStatusStorageProfileOsDis
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 public partial class V1api20220301storageVirtualMachineStatusStorageProfileOsDiskManagedDiskSecurityProfileDiskEncryptionSet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -4139,6 +4352,7 @@ public partial class V1api20220301storageVirtualMachineStatusStorageProfileOsDis
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VMDiskSecurityProfile_STATUS Specifies the security profile settings for the managed disk. NOTE: It can only be set for Confidential VMs</summary>
 public partial class V1api20220301storageVirtualMachineStatusStorageProfileOsDiskManagedDiskSecurityProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -4154,6 +4368,7 @@ public partial class V1api20220301storageVirtualMachineStatusStorageProfileOsDis
     public string? SecurityEncryptionType { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.ManagedDiskParameters_STATUS The parameters of a managed disk.</summary>
 public partial class V1api20220301storageVirtualMachineStatusStorageProfileOsDiskManagedDisk
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -4177,6 +4392,7 @@ public partial class V1api20220301storageVirtualMachineStatusStorageProfileOsDis
     public string? StorageAccountType { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualHardDisk_STATUS Describes the uri of a disk.</summary>
 public partial class V1api20220301storageVirtualMachineStatusStorageProfileOsDiskVhd
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -4188,6 +4404,7 @@ public partial class V1api20220301storageVirtualMachineStatusStorageProfileOsDis
     public string? Uri { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.OSDisk_STATUS Specifies information about the operating system disk used by the virtual machine. For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).</summary>
 public partial class V1api20220301storageVirtualMachineStatusStorageProfileOsDisk
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -4243,6 +4460,7 @@ public partial class V1api20220301storageVirtualMachineStatusStorageProfileOsDis
     public bool? WriteAcceleratorEnabled { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.StorageProfile_STATUS Specifies the storage settings for the virtual machine disks.</summary>
 public partial class V1api20220301storageVirtualMachineStatusStorageProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -4262,6 +4480,7 @@ public partial class V1api20220301storageVirtualMachineStatusStorageProfile
     public V1api20220301storageVirtualMachineStatusStorageProfileOsDisk? OsDisk { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 public partial class V1api20220301storageVirtualMachineStatusVirtualMachineScaleSet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -4273,6 +4492,7 @@ public partial class V1api20220301storageVirtualMachineStatusVirtualMachineScale
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualMachine_STATUS Describes a Virtual Machine.</summary>
 public partial class V1api20220301storageVirtualMachineStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -4429,6 +4649,7 @@ public partial class V1api20220301storageVirtualMachineStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20220301.VirtualMachine Generator information: - Generated from: /compute/resource-manager/Microsoft.Compute/ComputeRP/stable/2022-03-01/virtualMachine.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}</summary>
 public partial class V1api20220301storageVirtualMachine : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20220301storageVirtualMachineSpec>, IStatus<V1api20220301storageVirtualMachineStatus>
 {
     public const string KubeApiVersion = "v1api20220301storage";

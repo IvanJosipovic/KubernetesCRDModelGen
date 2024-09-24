@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.azure.com;
+/// <summary>Storage version of v1api20230101.ActiveDirectoryProperties Settings properties for Active Directory (AD).</summary>
 public partial class V1api20230101storageStorageAccountSpecAzureFilesIdentityBasedAuthenticationActiveDirectoryProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -47,6 +48,7 @@ public partial class V1api20230101storageStorageAccountSpecAzureFilesIdentityBas
     public string? SamAccountName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.AzureFilesIdentityBasedAuthentication Settings for Azure Files identity based authentication.</summary>
 public partial class V1api20230101storageStorageAccountSpecAzureFilesIdentityBasedAuthentication
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -66,6 +68,7 @@ public partial class V1api20230101storageStorageAccountSpecAzureFilesIdentityBas
     public string? DirectoryServiceOptions { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.CustomDomain The custom domain assigned to this storage account. This can be set via Update.</summary>
 public partial class V1api20230101storageStorageAccountSpecCustomDomain
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -81,6 +84,7 @@ public partial class V1api20230101storageStorageAccountSpecCustomDomain
     public bool? UseSubDomainName { get; set; }
 }
 
+/// <summary>UserAssignedIdentityReference: Resource identifier of the UserAssigned identity to be associated with server-side encryption on the storage account.</summary>
 public partial class V1api20230101storageStorageAccountSpecEncryptionIdentityUserAssignedIdentityReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -100,6 +104,7 @@ public partial class V1api20230101storageStorageAccountSpecEncryptionIdentityUse
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.EncryptionIdentity Encryption identity for the storage account.</summary>
 public partial class V1api20230101storageStorageAccountSpecEncryptionIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -115,6 +120,7 @@ public partial class V1api20230101storageStorageAccountSpecEncryptionIdentity
     public V1api20230101storageStorageAccountSpecEncryptionIdentityUserAssignedIdentityReference? UserAssignedIdentityReference { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.KeyVaultProperties Properties of key vault.</summary>
 public partial class V1api20230101storageStorageAccountSpecEncryptionKeyvaultproperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -134,6 +140,7 @@ public partial class V1api20230101storageStorageAccountSpecEncryptionKeyvaultpro
     public string? Keyversion { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.EncryptionService A service that allows server-side encryption to be used.</summary>
 public partial class V1api20230101storageStorageAccountSpecEncryptionServicesBlob
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -149,6 +156,7 @@ public partial class V1api20230101storageStorageAccountSpecEncryptionServicesBlo
     public string? KeyType { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.EncryptionService A service that allows server-side encryption to be used.</summary>
 public partial class V1api20230101storageStorageAccountSpecEncryptionServicesFile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -164,6 +172,7 @@ public partial class V1api20230101storageStorageAccountSpecEncryptionServicesFil
     public string? KeyType { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.EncryptionService A service that allows server-side encryption to be used.</summary>
 public partial class V1api20230101storageStorageAccountSpecEncryptionServicesQueue
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -179,6 +188,7 @@ public partial class V1api20230101storageStorageAccountSpecEncryptionServicesQue
     public string? KeyType { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.EncryptionService A service that allows server-side encryption to be used.</summary>
 public partial class V1api20230101storageStorageAccountSpecEncryptionServicesTable
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -194,6 +204,7 @@ public partial class V1api20230101storageStorageAccountSpecEncryptionServicesTab
     public string? KeyType { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.EncryptionServices A list of services that support encryption.</summary>
 public partial class V1api20230101storageStorageAccountSpecEncryptionServices
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -217,6 +228,7 @@ public partial class V1api20230101storageStorageAccountSpecEncryptionServices
     public V1api20230101storageStorageAccountSpecEncryptionServicesTable? Table { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.Encryption The encryption settings on the storage account.</summary>
 public partial class V1api20230101storageStorageAccountSpecEncryption
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -244,6 +256,7 @@ public partial class V1api20230101storageStorageAccountSpecEncryption
     public V1api20230101storageStorageAccountSpecEncryptionServices? Services { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.ExtendedLocation The complex type of the extended location.</summary>
 public partial class V1api20230101storageStorageAccountSpecExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -259,6 +272,7 @@ public partial class V1api20230101storageStorageAccountSpecExtendedLocation
     public string? Type { get; set; }
 }
 
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 public partial class V1api20230101storageStorageAccountSpecIdentityUserAssignedIdentitiesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -278,6 +292,7 @@ public partial class V1api20230101storageStorageAccountSpecIdentityUserAssignedI
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
 public partial class V1api20230101storageStorageAccountSpecIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -289,6 +304,7 @@ public partial class V1api20230101storageStorageAccountSpecIdentityUserAssignedI
     public V1api20230101storageStorageAccountSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.Identity Identity for the resource.</summary>
 public partial class V1api20230101storageStorageAccountSpecIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -304,6 +320,7 @@ public partial class V1api20230101storageStorageAccountSpecIdentity
     public IList<V1api20230101storageStorageAccountSpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.AccountImmutabilityPolicyProperties This defines account-level immutability policy properties.</summary>
 public partial class V1api20230101storageStorageAccountSpecImmutableStorageWithVersioningImmutabilityPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -323,6 +340,7 @@ public partial class V1api20230101storageStorageAccountSpecImmutableStorageWithV
     public string? State { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.ImmutableStorageAccount This property enables and defines account-level immutability. Enabling the feature auto-enables Blob Versioning.</summary>
 public partial class V1api20230101storageStorageAccountSpecImmutableStorageWithVersioning
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -338,6 +356,7 @@ public partial class V1api20230101storageStorageAccountSpecImmutableStorageWithV
     public V1api20230101storageStorageAccountSpecImmutableStorageWithVersioningImmutabilityPolicy? ImmutabilityPolicy { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.KeyPolicy KeyPolicy assigned to the storage account.</summary>
 public partial class V1api20230101storageStorageAccountSpecKeyPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -349,6 +368,7 @@ public partial class V1api20230101storageStorageAccountSpecKeyPolicy
     public int? KeyExpirationPeriodInDays { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.IPRule IP rule with specific IP or IP range in CIDR format.</summary>
 public partial class V1api20230101storageStorageAccountSpecNetworkAclsIpRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -364,6 +384,7 @@ public partial class V1api20230101storageStorageAccountSpecNetworkAclsIpRules
     public string? Value { get; set; }
 }
 
+/// <summary>ResourceReference: Resource Id</summary>
 public partial class V1api20230101storageStorageAccountSpecNetworkAclsResourceAccessRulesResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -383,6 +404,7 @@ public partial class V1api20230101storageStorageAccountSpecNetworkAclsResourceAc
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.ResourceAccessRule Resource Access Rule.</summary>
 public partial class V1api20230101storageStorageAccountSpecNetworkAclsResourceAccessRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -398,6 +420,7 @@ public partial class V1api20230101storageStorageAccountSpecNetworkAclsResourceAc
     public string? TenantId { get; set; }
 }
 
+/// <summary>Reference: Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}.</summary>
 public partial class V1api20230101storageStorageAccountSpecNetworkAclsVirtualNetworkRulesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -417,6 +440,7 @@ public partial class V1api20230101storageStorageAccountSpecNetworkAclsVirtualNet
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.VirtualNetworkRule Virtual Network rule.</summary>
 public partial class V1api20230101storageStorageAccountSpecNetworkAclsVirtualNetworkRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -436,6 +460,7 @@ public partial class V1api20230101storageStorageAccountSpecNetworkAclsVirtualNet
     public string? State { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.NetworkRuleSet Network rule set</summary>
 public partial class V1api20230101storageStorageAccountSpecNetworkAcls
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -463,6 +488,7 @@ public partial class V1api20230101storageStorageAccountSpecNetworkAcls
     public IList<V1api20230101storageStorageAccountSpecNetworkAclsVirtualNetworkRules>? VirtualNetworkRules { get; set; }
 }
 
+/// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20230101storageStorageAccountSpecOperatorSpecConfigMapsBlobEndpoint
 {
     /// <summary>Key is the key in the ConfigMap being referenced</summary>
@@ -474,6 +500,7 @@ public partial class V1api20230101storageStorageAccountSpecOperatorSpecConfigMap
     public string Name { get; set; }
 }
 
+/// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20230101storageStorageAccountSpecOperatorSpecConfigMapsDfsEndpoint
 {
     /// <summary>Key is the key in the ConfigMap being referenced</summary>
@@ -485,6 +512,7 @@ public partial class V1api20230101storageStorageAccountSpecOperatorSpecConfigMap
     public string Name { get; set; }
 }
 
+/// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20230101storageStorageAccountSpecOperatorSpecConfigMapsFileEndpoint
 {
     /// <summary>Key is the key in the ConfigMap being referenced</summary>
@@ -496,6 +524,7 @@ public partial class V1api20230101storageStorageAccountSpecOperatorSpecConfigMap
     public string Name { get; set; }
 }
 
+/// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20230101storageStorageAccountSpecOperatorSpecConfigMapsQueueEndpoint
 {
     /// <summary>Key is the key in the ConfigMap being referenced</summary>
@@ -507,6 +536,7 @@ public partial class V1api20230101storageStorageAccountSpecOperatorSpecConfigMap
     public string Name { get; set; }
 }
 
+/// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20230101storageStorageAccountSpecOperatorSpecConfigMapsTableEndpoint
 {
     /// <summary>Key is the key in the ConfigMap being referenced</summary>
@@ -518,6 +548,7 @@ public partial class V1api20230101storageStorageAccountSpecOperatorSpecConfigMap
     public string Name { get; set; }
 }
 
+/// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20230101storageStorageAccountSpecOperatorSpecConfigMapsWebEndpoint
 {
     /// <summary>Key is the key in the ConfigMap being referenced</summary>
@@ -529,6 +560,7 @@ public partial class V1api20230101storageStorageAccountSpecOperatorSpecConfigMap
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.StorageAccountOperatorConfigMaps</summary>
 public partial class V1api20230101storageStorageAccountSpecOperatorSpecConfigMaps
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -560,6 +592,7 @@ public partial class V1api20230101storageStorageAccountSpecOperatorSpecConfigMap
     public V1api20230101storageStorageAccountSpecOperatorSpecConfigMapsWebEndpoint? WebEndpoint { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20230101storageStorageAccountSpecOperatorSpecSecretsBlobEndpoint
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -571,6 +604,7 @@ public partial class V1api20230101storageStorageAccountSpecOperatorSpecSecretsBl
     public string Name { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20230101storageStorageAccountSpecOperatorSpecSecretsDfsEndpoint
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -582,6 +616,7 @@ public partial class V1api20230101storageStorageAccountSpecOperatorSpecSecretsDf
     public string Name { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20230101storageStorageAccountSpecOperatorSpecSecretsFileEndpoint
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -593,6 +628,7 @@ public partial class V1api20230101storageStorageAccountSpecOperatorSpecSecretsFi
     public string Name { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20230101storageStorageAccountSpecOperatorSpecSecretsKey1
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -604,6 +640,7 @@ public partial class V1api20230101storageStorageAccountSpecOperatorSpecSecretsKe
     public string Name { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20230101storageStorageAccountSpecOperatorSpecSecretsKey2
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -615,6 +652,7 @@ public partial class V1api20230101storageStorageAccountSpecOperatorSpecSecretsKe
     public string Name { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20230101storageStorageAccountSpecOperatorSpecSecretsQueueEndpoint
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -626,6 +664,7 @@ public partial class V1api20230101storageStorageAccountSpecOperatorSpecSecretsQu
     public string Name { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20230101storageStorageAccountSpecOperatorSpecSecretsTableEndpoint
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -637,6 +676,7 @@ public partial class V1api20230101storageStorageAccountSpecOperatorSpecSecretsTa
     public string Name { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20230101storageStorageAccountSpecOperatorSpecSecretsWebEndpoint
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -648,6 +688,7 @@ public partial class V1api20230101storageStorageAccountSpecOperatorSpecSecretsWe
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.StorageAccountOperatorSecrets</summary>
 public partial class V1api20230101storageStorageAccountSpecOperatorSpecSecrets
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -687,6 +728,7 @@ public partial class V1api20230101storageStorageAccountSpecOperatorSpecSecrets
     public V1api20230101storageStorageAccountSpecOperatorSpecSecretsWebEndpoint? WebEndpoint { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.StorageAccountOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 public partial class V1api20230101storageStorageAccountSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -702,6 +744,7 @@ public partial class V1api20230101storageStorageAccountSpecOperatorSpec
     public V1api20230101storageStorageAccountSpecOperatorSpecSecrets? Secrets { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20230101storageStorageAccountSpecOwner
 {
     /// <summary></summary>
@@ -713,6 +756,7 @@ public partial class V1api20230101storageStorageAccountSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.RoutingPreference Routing preference defines the type of network, either microsoft or internet routing to be used to deliver the user data, the default option is microsoft routing</summary>
 public partial class V1api20230101storageStorageAccountSpecRoutingPreference
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -732,6 +776,7 @@ public partial class V1api20230101storageStorageAccountSpecRoutingPreference
     public string? RoutingChoice { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.SasPolicy SasPolicy assigned to the storage account.</summary>
 public partial class V1api20230101storageStorageAccountSpecSasPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -747,6 +792,7 @@ public partial class V1api20230101storageStorageAccountSpecSasPolicy
     public string? SasExpirationPeriod { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.Sku The SKU of the storage account.</summary>
 public partial class V1api20230101storageStorageAccountSpecSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -762,6 +808,7 @@ public partial class V1api20230101storageStorageAccountSpecSku
     public string? Tier { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.StorageAccount_Spec</summary>
 public partial class V1api20230101storageStorageAccountSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -901,6 +948,7 @@ public partial class V1api20230101storageStorageAccountSpec
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.ActiveDirectoryProperties_STATUS Settings properties for Active Directory (AD).</summary>
 public partial class V1api20230101storageStorageAccountStatusAzureFilesIdentityBasedAuthenticationActiveDirectoryProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -940,6 +988,7 @@ public partial class V1api20230101storageStorageAccountStatusAzureFilesIdentityB
     public string? SamAccountName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.AzureFilesIdentityBasedAuthentication_STATUS Settings for Azure Files identity based authentication.</summary>
 public partial class V1api20230101storageStorageAccountStatusAzureFilesIdentityBasedAuthentication
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -959,6 +1008,7 @@ public partial class V1api20230101storageStorageAccountStatusAzureFilesIdentityB
     public string? DirectoryServiceOptions { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.BlobRestoreRange_STATUS Blob range</summary>
 public partial class V1api20230101storageStorageAccountStatusBlobRestoreStatusParametersBlobRanges
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -974,6 +1024,7 @@ public partial class V1api20230101storageStorageAccountStatusBlobRestoreStatusPa
     public string? StartRange { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.BlobRestoreParameters_STATUS Blob restore parameters</summary>
 public partial class V1api20230101storageStorageAccountStatusBlobRestoreStatusParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -989,6 +1040,7 @@ public partial class V1api20230101storageStorageAccountStatusBlobRestoreStatusPa
     public string? TimeToRestore { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.BlobRestoreStatus_STATUS Blob restore status.</summary>
 public partial class V1api20230101storageStorageAccountStatusBlobRestoreStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1012,6 +1064,7 @@ public partial class V1api20230101storageStorageAccountStatusBlobRestoreStatus
     public string? Status { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20230101storageStorageAccountStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -1043,6 +1096,7 @@ public partial class V1api20230101storageStorageAccountStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.CustomDomain_STATUS The custom domain assigned to this storage account. This can be set via Update.</summary>
 public partial class V1api20230101storageStorageAccountStatusCustomDomain
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1058,6 +1112,7 @@ public partial class V1api20230101storageStorageAccountStatusCustomDomain
     public bool? UseSubDomainName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.EncryptionIdentity_STATUS Encryption identity for the storage account.</summary>
 public partial class V1api20230101storageStorageAccountStatusEncryptionIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1073,6 +1128,7 @@ public partial class V1api20230101storageStorageAccountStatusEncryptionIdentity
     public string? UserAssignedIdentity { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.KeyVaultProperties_STATUS Properties of key vault.</summary>
 public partial class V1api20230101storageStorageAccountStatusEncryptionKeyvaultproperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1104,6 +1160,7 @@ public partial class V1api20230101storageStorageAccountStatusEncryptionKeyvaultp
     public string? LastKeyRotationTimestamp { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.EncryptionService_STATUS A service that allows server-side encryption to be used.</summary>
 public partial class V1api20230101storageStorageAccountStatusEncryptionServicesBlob
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1123,6 +1180,7 @@ public partial class V1api20230101storageStorageAccountStatusEncryptionServicesB
     public string? LastEnabledTime { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.EncryptionService_STATUS A service that allows server-side encryption to be used.</summary>
 public partial class V1api20230101storageStorageAccountStatusEncryptionServicesFile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1142,6 +1200,7 @@ public partial class V1api20230101storageStorageAccountStatusEncryptionServicesF
     public string? LastEnabledTime { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.EncryptionService_STATUS A service that allows server-side encryption to be used.</summary>
 public partial class V1api20230101storageStorageAccountStatusEncryptionServicesQueue
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1161,6 +1220,7 @@ public partial class V1api20230101storageStorageAccountStatusEncryptionServicesQ
     public string? LastEnabledTime { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.EncryptionService_STATUS A service that allows server-side encryption to be used.</summary>
 public partial class V1api20230101storageStorageAccountStatusEncryptionServicesTable
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1180,6 +1240,7 @@ public partial class V1api20230101storageStorageAccountStatusEncryptionServicesT
     public string? LastEnabledTime { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.EncryptionServices_STATUS A list of services that support encryption.</summary>
 public partial class V1api20230101storageStorageAccountStatusEncryptionServices
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1203,6 +1264,7 @@ public partial class V1api20230101storageStorageAccountStatusEncryptionServices
     public V1api20230101storageStorageAccountStatusEncryptionServicesTable? Table { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.Encryption_STATUS The encryption settings on the storage account.</summary>
 public partial class V1api20230101storageStorageAccountStatusEncryption
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1230,6 +1292,7 @@ public partial class V1api20230101storageStorageAccountStatusEncryption
     public V1api20230101storageStorageAccountStatusEncryptionServices? Services { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.ExtendedLocation_STATUS The complex type of the extended location.</summary>
 public partial class V1api20230101storageStorageAccountStatusExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1245,6 +1308,7 @@ public partial class V1api20230101storageStorageAccountStatusExtendedLocation
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.GeoReplicationStats_STATUS Statistics related to replication for storage account's Blob, Table, Queue and File services. It is only available when geo-redundant replication is enabled for the storage account.</summary>
 public partial class V1api20230101storageStorageAccountStatusGeoReplicationStats
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1276,6 +1340,7 @@ public partial class V1api20230101storageStorageAccountStatusGeoReplicationStats
     public string? Status { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.UserAssignedIdentity_STATUS UserAssignedIdentity for the resource.</summary>
 public partial class V1api20230101storageStorageAccountStatusIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1291,6 +1356,7 @@ public partial class V1api20230101storageStorageAccountStatusIdentityUserAssigne
     public string? PrincipalId { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.Identity_STATUS Identity for the resource.</summary>
 public partial class V1api20230101storageStorageAccountStatusIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1314,6 +1380,7 @@ public partial class V1api20230101storageStorageAccountStatusIdentity
     public IDictionary<string, V1api20230101storageStorageAccountStatusIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.AccountImmutabilityPolicyProperties_STATUS This defines account-level immutability policy properties.</summary>
 public partial class V1api20230101storageStorageAccountStatusImmutableStorageWithVersioningImmutabilityPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1333,6 +1400,7 @@ public partial class V1api20230101storageStorageAccountStatusImmutableStorageWit
     public string? State { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.ImmutableStorageAccount_STATUS This property enables and defines account-level immutability. Enabling the feature auto-enables Blob Versioning.</summary>
 public partial class V1api20230101storageStorageAccountStatusImmutableStorageWithVersioning
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1348,6 +1416,7 @@ public partial class V1api20230101storageStorageAccountStatusImmutableStorageWit
     public V1api20230101storageStorageAccountStatusImmutableStorageWithVersioningImmutabilityPolicy? ImmutabilityPolicy { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.KeyCreationTime_STATUS Storage account keys creation time.</summary>
 public partial class V1api20230101storageStorageAccountStatusKeyCreationTime
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1363,6 +1432,7 @@ public partial class V1api20230101storageStorageAccountStatusKeyCreationTime
     public string? Key2 { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.KeyPolicy_STATUS KeyPolicy assigned to the storage account.</summary>
 public partial class V1api20230101storageStorageAccountStatusKeyPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1374,6 +1444,7 @@ public partial class V1api20230101storageStorageAccountStatusKeyPolicy
     public int? KeyExpirationPeriodInDays { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.IPRule_STATUS IP rule with specific IP or IP range in CIDR format.</summary>
 public partial class V1api20230101storageStorageAccountStatusNetworkAclsIpRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1389,6 +1460,7 @@ public partial class V1api20230101storageStorageAccountStatusNetworkAclsIpRules
     public string? Value { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.ResourceAccessRule_STATUS Resource Access Rule.</summary>
 public partial class V1api20230101storageStorageAccountStatusNetworkAclsResourceAccessRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1404,6 +1476,7 @@ public partial class V1api20230101storageStorageAccountStatusNetworkAclsResource
     public string? TenantId { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.VirtualNetworkRule_STATUS Virtual Network rule.</summary>
 public partial class V1api20230101storageStorageAccountStatusNetworkAclsVirtualNetworkRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1423,6 +1496,7 @@ public partial class V1api20230101storageStorageAccountStatusNetworkAclsVirtualN
     public string? State { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.NetworkRuleSet_STATUS Network rule set</summary>
 public partial class V1api20230101storageStorageAccountStatusNetworkAcls
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1450,6 +1524,7 @@ public partial class V1api20230101storageStorageAccountStatusNetworkAcls
     public IList<V1api20230101storageStorageAccountStatusNetworkAclsVirtualNetworkRules>? VirtualNetworkRules { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.StorageAccountInternetEndpoints_STATUS The URIs that are used to perform a retrieval of a public blob, file, web or dfs object via a internet routing endpoint.</summary>
 public partial class V1api20230101storageStorageAccountStatusPrimaryEndpointsInternetEndpoints
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1473,6 +1548,7 @@ public partial class V1api20230101storageStorageAccountStatusPrimaryEndpointsInt
     public string? Web { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.StorageAccountMicrosoftEndpoints_STATUS The URIs that are used to perform a retrieval of a public blob, queue, table, web or dfs object via a microsoft routing endpoint.</summary>
 public partial class V1api20230101storageStorageAccountStatusPrimaryEndpointsMicrosoftEndpoints
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1504,6 +1580,7 @@ public partial class V1api20230101storageStorageAccountStatusPrimaryEndpointsMic
     public string? Web { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.Endpoints_STATUS The URIs that are used to perform a retrieval of a public blob, queue, table, web or dfs object.</summary>
 public partial class V1api20230101storageStorageAccountStatusPrimaryEndpoints
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1543,6 +1620,7 @@ public partial class V1api20230101storageStorageAccountStatusPrimaryEndpoints
     public string? Web { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.PrivateEndpointConnection_STATUS The Private Endpoint Connection resource.</summary>
 public partial class V1api20230101storageStorageAccountStatusPrivateEndpointConnections
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1554,6 +1632,7 @@ public partial class V1api20230101storageStorageAccountStatusPrivateEndpointConn
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.RoutingPreference_STATUS Routing preference defines the type of network, either microsoft or internet routing to be used to deliver the user data, the default option is microsoft routing</summary>
 public partial class V1api20230101storageStorageAccountStatusRoutingPreference
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1573,6 +1652,7 @@ public partial class V1api20230101storageStorageAccountStatusRoutingPreference
     public string? RoutingChoice { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.SasPolicy_STATUS SasPolicy assigned to the storage account.</summary>
 public partial class V1api20230101storageStorageAccountStatusSasPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1588,6 +1668,7 @@ public partial class V1api20230101storageStorageAccountStatusSasPolicy
     public string? SasExpirationPeriod { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.StorageAccountInternetEndpoints_STATUS The URIs that are used to perform a retrieval of a public blob, file, web or dfs object via a internet routing endpoint.</summary>
 public partial class V1api20230101storageStorageAccountStatusSecondaryEndpointsInternetEndpoints
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1611,6 +1692,7 @@ public partial class V1api20230101storageStorageAccountStatusSecondaryEndpointsI
     public string? Web { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.StorageAccountMicrosoftEndpoints_STATUS The URIs that are used to perform a retrieval of a public blob, queue, table, web or dfs object via a microsoft routing endpoint.</summary>
 public partial class V1api20230101storageStorageAccountStatusSecondaryEndpointsMicrosoftEndpoints
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1642,6 +1724,7 @@ public partial class V1api20230101storageStorageAccountStatusSecondaryEndpointsM
     public string? Web { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.Endpoints_STATUS The URIs that are used to perform a retrieval of a public blob, queue, table, web or dfs object.</summary>
 public partial class V1api20230101storageStorageAccountStatusSecondaryEndpoints
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1681,6 +1764,7 @@ public partial class V1api20230101storageStorageAccountStatusSecondaryEndpoints
     public string? Web { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.Sku_STATUS The SKU of the storage account.</summary>
 public partial class V1api20230101storageStorageAccountStatusSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1696,6 +1780,7 @@ public partial class V1api20230101storageStorageAccountStatusSku
     public string? Tier { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.StorageAccountSkuConversionStatus_STATUS This defines the sku conversion status object for asynchronous sku conversions.</summary>
 public partial class V1api20230101storageStorageAccountStatusStorageAccountSkuConversionStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1719,6 +1804,7 @@ public partial class V1api20230101storageStorageAccountStatusStorageAccountSkuCo
     public string? TargetSkuName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.StorageAccount_STATUS The storage account.</summary>
 public partial class V1api20230101storageStorageAccountStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1927,6 +2013,7 @@ public partial class V1api20230101storageStorageAccountStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20230101.StorageAccount Generator information: - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2023-01-01/storage.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}</summary>
 public partial class V1api20230101storageStorageAccount : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230101storageStorageAccountSpec>, IStatus<V1api20230101storageStorageAccountStatus>
 {
     public const string KubeApiVersion = "v1api20230101storage";

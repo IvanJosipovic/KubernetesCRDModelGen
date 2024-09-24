@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.beyondcorp.cnrm.cloud.google.com;
+/// <summary>Address of the remote application endpoint for the BeyondCorp AppConnection.</summary>
 public partial class V1alpha1BeyondCorpAppConnectionSpecApplicationEndpoint
 {
     /// <summary>Hostname or IP address of the remote application endpoint.</summary>
@@ -19,6 +20,7 @@ public partial class V1alpha1BeyondCorpAppConnectionSpecApplicationEndpoint
     public int Port { get; set; }
 }
 
+/// <summary>Gateway used by the AppConnection.</summary>
 public partial class V1alpha1BeyondCorpAppConnectionSpecGateway
 {
     /// <summary>AppGateway name in following format: projects/{project_id}/locations/{locationId}/appgateways/{gateway_id}.</summary>
@@ -38,6 +40,7 @@ public partial class V1alpha1BeyondCorpAppConnectionSpecGateway
     public string? Uri { get; set; }
 }
 
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1BeyondCorpAppConnectionSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -53,6 +56,7 @@ public partial class V1alpha1BeyondCorpAppConnectionSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1BeyondCorpAppConnectionSpec
 {
     /// <summary>Address of the remote application endpoint for the BeyondCorp AppConnection.</summary>
@@ -88,6 +92,7 @@ public partial class V1alpha1BeyondCorpAppConnectionSpec
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1BeyondCorpAppConnectionStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -111,6 +116,7 @@ public partial class V1alpha1BeyondCorpAppConnectionStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1BeyondCorpAppConnectionStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -123,6 +129,7 @@ public partial class V1alpha1BeyondCorpAppConnectionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1BeyondCorpAppConnection : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1BeyondCorpAppConnectionSpec>, IStatus<V1alpha1BeyondCorpAppConnectionStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

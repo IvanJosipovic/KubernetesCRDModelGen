@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.helm.toolkit.fluxcd.io;
+/// <summary>ObjectMeta holds the template for metadata like labels and annotations.</summary>
 public partial class V2HelmReleaseSpecChartMetadata
 {
     /// <summary>Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/</summary>
@@ -42,6 +43,7 @@ public enum V2HelmReleaseSpecChartSpecSourceRefKindEnum
     Bucket
 }
 
+/// <summary>The name and namespace of the v1.Source the chart is available at.</summary>
 public partial class V2HelmReleaseSpecChartSpecSourceRef
 {
     /// <summary>APIVersion of the referent.</summary>
@@ -72,6 +74,7 @@ public enum V2HelmReleaseSpecChartSpecVerifyProviderEnum
     Notation
 }
 
+/// <summary>SecretRef specifies the Kubernetes Secret containing the trusted public keys.</summary>
 public partial class V2HelmReleaseSpecChartSpecVerifySecretRef
 {
     /// <summary>Name of the referent.</summary>
@@ -79,6 +82,7 @@ public partial class V2HelmReleaseSpecChartSpecVerifySecretRef
     public string Name { get; set; }
 }
 
+/// <summary>Verify contains the secret name containing the trusted public keys used to verify the signature and specifies which provider to use to check whether OCI image is authentic. This field is only supported for OCI sources. Chart dependencies, which are not bundled in the umbrella chart artifact, are not verified.</summary>
 public partial class V2HelmReleaseSpecChartSpecVerify
 {
     /// <summary>Provider specifies the technology used to sign the OCI Helm chart.</summary>
@@ -91,6 +95,7 @@ public partial class V2HelmReleaseSpecChartSpecVerify
     public V2HelmReleaseSpecChartSpecVerifySecretRef? SecretRef { get; set; }
 }
 
+/// <summary>Spec holds the template for the v1.HelmChartSpec for this HelmRelease.</summary>
 public partial class V2HelmReleaseSpecChartSpec
 {
     /// <summary>The name or path the Helm chart is available at in the SourceRef.</summary>
@@ -127,6 +132,7 @@ public partial class V2HelmReleaseSpecChartSpec
     public string? Version { get; set; }
 }
 
+/// <summary>Chart defines the template of the v1.HelmChart that should be created for this HelmRelease.</summary>
 public partial class V2HelmReleaseSpecChart
 {
     /// <summary>ObjectMeta holds the template for metadata like labels and annotations.</summary>
@@ -148,6 +154,7 @@ public enum V2HelmReleaseSpecChartRefKindEnum
     HelmChart
 }
 
+/// <summary>ChartRef holds a reference to a source controller resource containing the Helm chart artifact.</summary>
 public partial class V2HelmReleaseSpecChartRef
 {
     /// <summary>APIVersion of the referent.</summary>
@@ -168,6 +175,7 @@ public partial class V2HelmReleaseSpecChartRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>NamespacedObjectReference contains enough information to locate the referenced Kubernetes resource object in any namespace.</summary>
 public partial class V2HelmReleaseSpecDependsOn
 {
     /// <summary>Name of the referent.</summary>
@@ -179,6 +187,7 @@ public partial class V2HelmReleaseSpecDependsOn
     public string? Namespace { get; set; }
 }
 
+/// <summary>Target is a selector for specifying Kubernetes objects to which this rule applies. If Target is not set, the Paths will be ignored for all Kubernetes objects within the manifest of the Helm release.</summary>
 public partial class V2HelmReleaseSpecDriftDetectionIgnoreTarget
 {
     /// <summary>AnnotationSelector is a string that follows the label selection expression https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#api It matches with the resource annotations.</summary>
@@ -210,6 +219,7 @@ public partial class V2HelmReleaseSpecDriftDetectionIgnoreTarget
     public string? Version { get; set; }
 }
 
+/// <summary>IgnoreRule defines a rule to selectively disregard specific changes during the drift detection process.</summary>
 public partial class V2HelmReleaseSpecDriftDetectionIgnore
 {
     /// <summary>Paths is a list of JSON Pointer (RFC 6901) paths to be excluded from consideration in a Kubernetes object.</summary>
@@ -234,6 +244,7 @@ public enum V2HelmReleaseSpecDriftDetectionModeEnum
     Disabled
 }
 
+/// <summary>DriftDetection holds the configuration for detecting and handling differences between the manifest in the Helm storage and the resources currently existing in the cluster.</summary>
 public partial class V2HelmReleaseSpecDriftDetection
 {
     /// <summary>Ignore contains a list of rules for specifying which changes to ignore during diffing.</summary>
@@ -259,6 +270,7 @@ public enum V2HelmReleaseSpecInstallCrdsEnum
     CreateReplace
 }
 
+/// <summary>Remediation holds the remediation configuration for when the Helm install action for the HelmRelease fails. The default is to not perform any action.</summary>
 public partial class V2HelmReleaseSpecInstallRemediation
 {
     /// <summary>IgnoreTestFailures tells the controller to skip remediation when the Helm tests are run after an install action but fail. Defaults to 'Test.IgnoreFailures'.</summary>
@@ -274,6 +286,7 @@ public partial class V2HelmReleaseSpecInstallRemediation
     public int? Retries { get; set; }
 }
 
+/// <summary>Install holds the configuration for Helm install actions for this HelmRelease.</summary>
 public partial class V2HelmReleaseSpecInstall
 {
     /// <summary>CRDs upgrade CRDs from the Helm Chart's crds directory according to the CRD upgrade policy provided here. Valid values are `Skip`, `Create` or `CreateReplace`. Default is `Create` and if omitted CRDs are installed but not updated.   Skip: do neither install nor replace (update) any CRDs.   Create: new CRDs are created, existing CRDs are neither updated nor deleted.   CreateReplace: new CRDs are created, existing CRDs are updated (replaced) but not deleted.   By default, CRDs are applied (installed) during Helm install action. With this option users can opt in to CRD replace existing CRDs on Helm install actions, which is not (yet) natively supported by Helm. https://helm.sh/docs/chart_best_practices/custom_resource_definitions.</summary>
@@ -318,6 +331,7 @@ public partial class V2HelmReleaseSpecInstall
     public string? Timeout { get; set; }
 }
 
+/// <summary>SecretRef holds the name of a secret that contains a key with the kubeconfig file as the value. If no key is set, the key will default to 'value'. It is recommended that the kubeconfig is self-contained, and the secret is regularly updated if credentials such as a cloud-access-token expire. Cloud specific `cmd-path` auth helpers will not function without adding binaries and credentials to the Pod that is responsible for reconciling Kubernetes resources.</summary>
 public partial class V2HelmReleaseSpecKubeConfigSecretRef
 {
     /// <summary>Key in the Secret, when not specified an implementation-specific default key is used.</summary>
@@ -329,6 +343,7 @@ public partial class V2HelmReleaseSpecKubeConfigSecretRef
     public string Name { get; set; }
 }
 
+/// <summary>KubeConfig for reconciling the HelmRelease on a remote cluster. When used in combination with HelmReleaseSpec.ServiceAccountName, forces the controller to act on behalf of that Service Account at the target cluster. If the --default-service-account flag is set, its value will be used as a controller level fallback for when HelmReleaseSpec.ServiceAccountName is empty.</summary>
 public partial class V2HelmReleaseSpecKubeConfig
 {
     /// <summary>SecretRef holds the name of a secret that contains a key with the kubeconfig file as the value. If no key is set, the key will default to 'value'. It is recommended that the kubeconfig is self-contained, and the secret is regularly updated if credentials such as a cloud-access-token expire. Cloud specific `cmd-path` auth helpers will not function without adding binaries and credentials to the Pod that is responsible for reconciling Kubernetes resources.</summary>
@@ -336,6 +351,7 @@ public partial class V2HelmReleaseSpecKubeConfig
     public V2HelmReleaseSpecKubeConfigSecretRef SecretRef { get; set; }
 }
 
+/// <summary>Image contains an image name, a new name, a new tag or digest, which will replace the original name and tag.</summary>
 public partial class V2HelmReleaseSpecPostRenderersKustomizeImages
 {
     /// <summary>Digest is the value used to replace the original image tag. If digest is present NewTag value is ignored.</summary>
@@ -355,6 +371,7 @@ public partial class V2HelmReleaseSpecPostRenderersKustomizeImages
     public string? NewTag { get; set; }
 }
 
+/// <summary>Target points to the resources that the patch document should be applied to.</summary>
 public partial class V2HelmReleaseSpecPostRenderersKustomizePatchesTarget
 {
     /// <summary>AnnotationSelector is a string that follows the label selection expression https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#api It matches with the resource annotations.</summary>
@@ -386,6 +403,7 @@ public partial class V2HelmReleaseSpecPostRenderersKustomizePatchesTarget
     public string? Version { get; set; }
 }
 
+/// <summary>Patch contains an inline StrategicMerge or JSON6902 patch, and the target the patch should be applied to.</summary>
 public partial class V2HelmReleaseSpecPostRenderersKustomizePatches
 {
     /// <summary>Patch contains an inline StrategicMerge patch or an inline JSON6902 patch with an array of operation objects.</summary>
@@ -397,6 +415,7 @@ public partial class V2HelmReleaseSpecPostRenderersKustomizePatches
     public V2HelmReleaseSpecPostRenderersKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary>Kustomization to apply as PostRenderer.</summary>
 public partial class V2HelmReleaseSpecPostRenderersKustomize
 {
     /// <summary>Images is a list of (image name, new name, new tag or digest) for changing image names, tags or digests. This can also be achieved with a patch, but this operator is simpler to specify.</summary>
@@ -408,6 +427,7 @@ public partial class V2HelmReleaseSpecPostRenderersKustomize
     public IList<V2HelmReleaseSpecPostRenderersKustomizePatches>? Patches { get; set; }
 }
 
+/// <summary>PostRenderer contains a Helm PostRenderer specification.</summary>
 public partial class V2HelmReleaseSpecPostRenderers
 {
     /// <summary>Kustomization to apply as PostRenderer.</summary>
@@ -415,6 +435,7 @@ public partial class V2HelmReleaseSpecPostRenderers
     public V2HelmReleaseSpecPostRenderersKustomize? Kustomize { get; set; }
 }
 
+/// <summary>Rollback holds the configuration for Helm rollback actions for this HelmRelease.</summary>
 public partial class V2HelmReleaseSpecRollback
 {
     /// <summary>CleanupOnFail allows deletion of new resources created during the Helm rollback action when it fails.</summary>
@@ -446,6 +467,7 @@ public partial class V2HelmReleaseSpecRollback
     public string? Timeout { get; set; }
 }
 
+/// <summary>Filter holds the configuration for individual Helm test filters.</summary>
 public partial class V2HelmReleaseSpecTestFilters
 {
     /// <summary>Exclude specifies whether the named test should be excluded.</summary>
@@ -457,6 +479,7 @@ public partial class V2HelmReleaseSpecTestFilters
     public string Name { get; set; }
 }
 
+/// <summary>Test holds the configuration for Helm test actions for this HelmRelease.</summary>
 public partial class V2HelmReleaseSpecTest
 {
     /// <summary>Enable enables Helm test actions for this HelmRelease after an Helm install or upgrade action has been performed.</summary>
@@ -489,6 +512,7 @@ public enum V2HelmReleaseSpecUninstallDeletionPropagationEnum
     Orphan
 }
 
+/// <summary>Uninstall holds the configuration for Helm uninstall actions for this HelmRelease.</summary>
 public partial class V2HelmReleaseSpecUninstall
 {
     /// <summary>DeletionPropagation specifies the deletion propagation policy when a Helm uninstall is performed.</summary>
@@ -536,6 +560,7 @@ public enum V2HelmReleaseSpecUpgradeRemediationStrategyEnum
     Uninstall
 }
 
+/// <summary>Remediation holds the remediation configuration for when the Helm upgrade action for the HelmRelease fails. The default is to not perform any action.</summary>
 public partial class V2HelmReleaseSpecUpgradeRemediation
 {
     /// <summary>IgnoreTestFailures tells the controller to skip remediation when the Helm tests are run after an upgrade action but fail. Defaults to 'Test.IgnoreFailures'.</summary>
@@ -556,6 +581,7 @@ public partial class V2HelmReleaseSpecUpgradeRemediation
     public V2HelmReleaseSpecUpgradeRemediationStrategyEnum? Strategy { get; set; }
 }
 
+/// <summary>Upgrade holds the configuration for Helm upgrade actions for this HelmRelease.</summary>
 public partial class V2HelmReleaseSpecUpgrade
 {
     /// <summary>CleanupOnFail allows deletion of new resources created during the Helm upgrade action when it fails.</summary>
@@ -610,6 +636,7 @@ public enum V2HelmReleaseSpecValuesFromKindEnum
     ConfigMap
 }
 
+/// <summary>ValuesReference contains a reference to a resource containing Helm values, and optionally the key they can be found at.</summary>
 public partial class V2HelmReleaseSpecValuesFrom
 {
     /// <summary>Kind of the values referent, valid values are ('Secret', 'ConfigMap').</summary>
@@ -634,6 +661,7 @@ public partial class V2HelmReleaseSpecValuesFrom
     public string? ValuesKey { get; set; }
 }
 
+/// <summary>HelmReleaseSpec defines the desired state of a Helm release.</summary>
 public partial class V2HelmReleaseSpec
 {
     /// <summary>Chart defines the template of the v1.HelmChart that should be created for this HelmRelease.</summary>
@@ -738,6 +766,7 @@ public enum V2HelmReleaseStatusConditionsStatusEnum
     Unknown
 }
 
+/// <summary>Condition contains details for one aspect of the current state of this API Resource. --- This struct is intended for direct use as an array at the field path .status.conditions.  For example,   	type FooStatus struct{ 	    // Represents the observations of a foo's current state. 	    // Known .status.conditions.type are: "Available", "Progressing", and "Degraded" 	    // +patchMergeKey=type 	    // +patchStrategy=merge 	    // +listType=map 	    // +listMapKey=type 	    Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`   	    // other fields 	}</summary>
 public partial class V2HelmReleaseStatusConditions
 {
     /// <summary>lastTransitionTime is the last time the condition transitioned from one status to another. This should be when the underlying condition changed.  If that is not known, then using the time when the API field changed is acceptable.</summary>
@@ -766,6 +795,7 @@ public partial class V2HelmReleaseStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>TestHookStatus holds the status information for a test hook as observed to be run by the controller.</summary>
 public partial class V2HelmReleaseStatusHistoryTestHooks
 {
     /// <summary>LastCompleted is the time the test hook last completed.</summary>
@@ -781,6 +811,7 @@ public partial class V2HelmReleaseStatusHistoryTestHooks
     public string? Phase { get; set; }
 }
 
+/// <summary>Snapshot captures a point-in-time copy of the status information for a Helm release, as managed by the controller.</summary>
 public partial class V2HelmReleaseStatusHistory
 {
     /// <summary>APIVersion is the API version of the Snapshot. Provisional: when the calculation method of the Digest field is changed, this field will be used to distinguish between the old and new methods.</summary>
@@ -854,6 +885,7 @@ public enum V2HelmReleaseStatusLastAttemptedReleaseActionEnum
     Upgrade
 }
 
+/// <summary>HelmReleaseStatus defines the observed state of a HelmRelease.</summary>
 public partial class V2HelmReleaseStatus
 {
     /// <summary>Conditions holds the conditions for the HelmRelease.</summary>
@@ -935,6 +967,7 @@ public partial class V2HelmReleaseStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>HelmRelease is the Schema for the helmreleases API</summary>
 public partial class V2HelmRelease : IKubernetesObject<V1ObjectMeta>, ISpec<V2HelmReleaseSpec>, IStatus<V2HelmReleaseStatus>
 {
     public const string KubeApiVersion = "v2";

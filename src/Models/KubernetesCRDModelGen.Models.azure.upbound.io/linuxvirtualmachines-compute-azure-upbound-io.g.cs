@@ -18,6 +18,7 @@ public enum V1beta1LinuxVirtualMachineSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderAdditionalCapabilities
 {
     /// <summary>Should the capacity to enable Data Disks of the UltraSSD_LRS storage account type be supported on this Virtual Machine? Defaults to false.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderAdditionalCapabili
     public bool? UltraSsdEnabled { get; set; }
 }
 
+/// <summary>The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderAdminPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -40,6 +42,7 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderAdminPasswordSecre
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderAdminSshKey
 {
     /// <summary>The Public Key which should be used for authentication, which needs to be at least 2048-bit and in ssh-rsa format. Changing this forces a new resource to be created.</summary>
@@ -51,6 +54,7 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderAdminSshKey
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderBootDiagnostics
 {
     /// <summary>The Primary/Secondary Endpoint for the Azure Storage Account which should be used to store Boot Diagnostics, including Console Output and Screenshots from the Hypervisor.</summary>
@@ -58,6 +62,7 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderBootDiagnostics
     public string? StorageAccountUri { get; set; }
 }
 
+/// <summary>The Base64-Encoded Custom Data which should be used for this Virtual Machine. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderCustomDataSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -73,6 +78,7 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderCustomDataSecretRe
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderGalleryApplication
 {
     /// <summary>Specifies whether the version will be automatically updated for the VM when a new Gallery Application version is available in PIR/SIG. Defaults to false.</summary>
@@ -100,6 +106,7 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderGalleryApplication
     public string? VersionId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Linux Virtual Machine.</summary>
@@ -131,6 +138,7 @@ public enum V1beta1LinuxVirtualMachineSpecForProviderNetworkInterfaceIdsRefsPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderNetworkInterfaceIdsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -144,6 +152,7 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderNetworkInterfaceId
     public V1beta1LinuxVirtualMachineSpecForProviderNetworkInterfaceIdsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderNetworkInterfaceIdsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -175,6 +184,7 @@ public enum V1beta1LinuxVirtualMachineSpecForProviderNetworkInterfaceIdsSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderNetworkInterfaceIdsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -188,6 +198,7 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderNetworkInterfaceId
     public V1beta1LinuxVirtualMachineSpecForProviderNetworkInterfaceIdsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of NetworkInterface in network to populate networkInterfaceIds.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderNetworkInterfaceIdsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -203,6 +214,7 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderNetworkInterfaceId
     public V1beta1LinuxVirtualMachineSpecForProviderNetworkInterfaceIdsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderOsDiskDiffDiskSettings
 {
     /// <summary>Specifies the Ephemeral Disk Settings for the OS Disk. At this time the only possible value is Local. Changing this forces a new resource to be created.</summary>
@@ -214,6 +226,7 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderOsDiskDiffDiskSett
     public string? Placement { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderOsDisk
 {
     /// <summary>The Type of Caching which should be used for the Internal OS Disk. Possible values are None, ReadOnly and ReadWrite.</summary>
@@ -253,6 +266,7 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderOsDisk
     public bool? WriteAcceleratorEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderOsImageNotification
 {
     /// <summary>Length of time a notification to be sent to the VM on the instance metadata server till the VM gets OS upgraded. The only possible value is PT15M. Defaults to PT15M.</summary>
@@ -260,6 +274,7 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderOsImageNotificatio
     public string? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderPlan
 {
     /// <summary>Specifies the Name of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.</summary>
@@ -295,6 +310,7 @@ public enum V1beta1LinuxVirtualMachineSpecForProviderResourceGroupNameRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -308,6 +324,7 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderResourceGroupNameR
     public V1beta1LinuxVirtualMachineSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -339,6 +356,7 @@ public enum V1beta1LinuxVirtualMachineSpecForProviderResourceGroupNameSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -352,6 +370,7 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderResourceGroupNameS
     public V1beta1LinuxVirtualMachineSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -367,6 +386,7 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderResourceGroupNameS
     public V1beta1LinuxVirtualMachineSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderSecretCertificate
 {
     /// <summary>The Secret URL of a Key Vault Certificate.</summary>
@@ -374,6 +394,7 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderSecretCertificate
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderSecret
 {
     /// <summary>One or more certificate blocks as defined above.</summary>
@@ -385,6 +406,7 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderSecret
     public string? KeyVaultId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderSourceImageReference
 {
     /// <summary>Specifies the offer of the image used to create the virtual machines. Changing this forces a new resource to be created.</summary>
@@ -404,6 +426,7 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderSourceImageReferen
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderTerminationNotification
 {
     /// <summary>Should the termination notification be enabled on this Virtual Machine?</summary>
@@ -415,6 +438,7 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderTerminationNotific
     public string? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProvider
 {
     /// <summary>A additional_capabilities block as defined below.</summary>
@@ -626,6 +650,7 @@ public partial class V1beta1LinuxVirtualMachineSpecForProvider
     public string? Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderAdditionalCapabilities
 {
     /// <summary>Should the capacity to enable Data Disks of the UltraSSD_LRS storage account type be supported on this Virtual Machine? Defaults to false.</summary>
@@ -633,6 +658,7 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderAdditionalCapabil
     public bool? UltraSsdEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderAdminSshKey
 {
     /// <summary>The Public Key which should be used for authentication, which needs to be at least 2048-bit and in ssh-rsa format. Changing this forces a new resource to be created.</summary>
@@ -644,6 +670,7 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderAdminSshKey
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderBootDiagnostics
 {
     /// <summary>The Primary/Secondary Endpoint for the Azure Storage Account which should be used to store Boot Diagnostics, including Console Output and Screenshots from the Hypervisor.</summary>
@@ -651,6 +678,7 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderBootDiagnostics
     public string? StorageAccountUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderGalleryApplication
 {
     /// <summary>Specifies whether the version will be automatically updated for the VM when a new Gallery Application version is available in PIR/SIG. Defaults to false.</summary>
@@ -678,6 +706,7 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderGalleryApplicatio
     public string? VersionId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Linux Virtual Machine.</summary>
@@ -709,6 +738,7 @@ public enum V1beta1LinuxVirtualMachineSpecInitProviderNetworkInterfaceIdsRefsPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderNetworkInterfaceIdsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -722,6 +752,7 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderNetworkInterfaceI
     public V1beta1LinuxVirtualMachineSpecInitProviderNetworkInterfaceIdsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderNetworkInterfaceIdsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -753,6 +784,7 @@ public enum V1beta1LinuxVirtualMachineSpecInitProviderNetworkInterfaceIdsSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderNetworkInterfaceIdsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -766,6 +798,7 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderNetworkInterfaceI
     public V1beta1LinuxVirtualMachineSpecInitProviderNetworkInterfaceIdsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of NetworkInterface in network to populate networkInterfaceIds.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderNetworkInterfaceIdsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -781,6 +814,7 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderNetworkInterfaceI
     public V1beta1LinuxVirtualMachineSpecInitProviderNetworkInterfaceIdsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderOsDiskDiffDiskSettings
 {
     /// <summary>Specifies the Ephemeral Disk Settings for the OS Disk. At this time the only possible value is Local. Changing this forces a new resource to be created.</summary>
@@ -792,6 +826,7 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderOsDiskDiffDiskSet
     public string? Placement { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderOsDisk
 {
     /// <summary>The Type of Caching which should be used for the Internal OS Disk. Possible values are None, ReadOnly and ReadWrite.</summary>
@@ -831,6 +866,7 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderOsDisk
     public bool? WriteAcceleratorEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderOsImageNotification
 {
     /// <summary>Length of time a notification to be sent to the VM on the instance metadata server till the VM gets OS upgraded. The only possible value is PT15M. Defaults to PT15M.</summary>
@@ -838,6 +874,7 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderOsImageNotificati
     public string? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderPlan
 {
     /// <summary>Specifies the Name of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.</summary>
@@ -853,6 +890,7 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderPlan
     public string? Publisher { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderSecretCertificate
 {
     /// <summary>The Secret URL of a Key Vault Certificate.</summary>
@@ -860,6 +898,7 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderSecretCertificate
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderSecret
 {
     /// <summary>One or more certificate blocks as defined above.</summary>
@@ -871,6 +910,7 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderSecret
     public string? KeyVaultId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderSourceImageReference
 {
     /// <summary>Specifies the offer of the image used to create the virtual machines. Changing this forces a new resource to be created.</summary>
@@ -890,6 +930,7 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderSourceImageRefere
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderTerminationNotification
 {
     /// <summary>Should the termination notification be enabled on this Virtual Machine?</summary>
@@ -901,6 +942,7 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderTerminationNotifi
     public string? Timeout { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecInitProvider
 {
     /// <summary>A additional_capabilities block as defined below.</summary>
@@ -1134,6 +1176,7 @@ public enum V1beta1LinuxVirtualMachineSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1147,6 +1190,7 @@ public partial class V1beta1LinuxVirtualMachineSpecProviderConfigRefPolicy
     public V1beta1LinuxVirtualMachineSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1178,6 +1222,7 @@ public enum V1beta1LinuxVirtualMachineSpecPublishConnectionDetailsToConfigRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1191,6 +1236,7 @@ public partial class V1beta1LinuxVirtualMachineSpecPublishConnectionDetailsToCon
     public V1beta1LinuxVirtualMachineSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1202,6 +1248,7 @@ public partial class V1beta1LinuxVirtualMachineSpecPublishConnectionDetailsToCon
     public V1beta1LinuxVirtualMachineSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1217,6 +1264,7 @@ public partial class V1beta1LinuxVirtualMachineSpecPublishConnectionDetailsToMet
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1232,6 +1280,7 @@ public partial class V1beta1LinuxVirtualMachineSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1243,6 +1292,7 @@ public partial class V1beta1LinuxVirtualMachineSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>LinuxVirtualMachineSpec defines the desired state of LinuxVirtualMachine</summary>
 public partial class V1beta1LinuxVirtualMachineSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1275,6 +1325,7 @@ public partial class V1beta1LinuxVirtualMachineSpec
     public V1beta1LinuxVirtualMachineSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineStatusAtProviderAdditionalCapabilities
 {
     /// <summary>Should the capacity to enable Data Disks of the UltraSSD_LRS storage account type be supported on this Virtual Machine? Defaults to false.</summary>
@@ -1282,6 +1333,7 @@ public partial class V1beta1LinuxVirtualMachineStatusAtProviderAdditionalCapabil
     public bool? UltraSsdEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineStatusAtProviderAdminSshKey
 {
     /// <summary>The Public Key which should be used for authentication, which needs to be at least 2048-bit and in ssh-rsa format. Changing this forces a new resource to be created.</summary>
@@ -1293,6 +1345,7 @@ public partial class V1beta1LinuxVirtualMachineStatusAtProviderAdminSshKey
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineStatusAtProviderBootDiagnostics
 {
     /// <summary>The Primary/Secondary Endpoint for the Azure Storage Account which should be used to store Boot Diagnostics, including Console Output and Screenshots from the Hypervisor.</summary>
@@ -1300,6 +1353,7 @@ public partial class V1beta1LinuxVirtualMachineStatusAtProviderBootDiagnostics
     public string? StorageAccountUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineStatusAtProviderGalleryApplication
 {
     /// <summary>Specifies whether the version will be automatically updated for the VM when a new Gallery Application version is available in PIR/SIG. Defaults to false.</summary>
@@ -1327,6 +1381,7 @@ public partial class V1beta1LinuxVirtualMachineStatusAtProviderGalleryApplicatio
     public string? VersionId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineStatusAtProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Linux Virtual Machine.</summary>
@@ -1346,6 +1401,7 @@ public partial class V1beta1LinuxVirtualMachineStatusAtProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineStatusAtProviderOsDiskDiffDiskSettings
 {
     /// <summary>Specifies the Ephemeral Disk Settings for the OS Disk. At this time the only possible value is Local. Changing this forces a new resource to be created.</summary>
@@ -1357,6 +1413,7 @@ public partial class V1beta1LinuxVirtualMachineStatusAtProviderOsDiskDiffDiskSet
     public string? Placement { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineStatusAtProviderOsDisk
 {
     /// <summary>The Type of Caching which should be used for the Internal OS Disk. Possible values are None, ReadOnly and ReadWrite.</summary>
@@ -1396,6 +1453,7 @@ public partial class V1beta1LinuxVirtualMachineStatusAtProviderOsDisk
     public bool? WriteAcceleratorEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineStatusAtProviderOsImageNotification
 {
     /// <summary>Length of time a notification to be sent to the VM on the instance metadata server till the VM gets OS upgraded. The only possible value is PT15M. Defaults to PT15M.</summary>
@@ -1403,6 +1461,7 @@ public partial class V1beta1LinuxVirtualMachineStatusAtProviderOsImageNotificati
     public string? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineStatusAtProviderPlan
 {
     /// <summary>Specifies the Name of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.</summary>
@@ -1418,6 +1477,7 @@ public partial class V1beta1LinuxVirtualMachineStatusAtProviderPlan
     public string? Publisher { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineStatusAtProviderSecretCertificate
 {
     /// <summary>The Secret URL of a Key Vault Certificate.</summary>
@@ -1425,6 +1485,7 @@ public partial class V1beta1LinuxVirtualMachineStatusAtProviderSecretCertificate
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineStatusAtProviderSecret
 {
     /// <summary>One or more certificate blocks as defined above.</summary>
@@ -1436,6 +1497,7 @@ public partial class V1beta1LinuxVirtualMachineStatusAtProviderSecret
     public string? KeyVaultId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineStatusAtProviderSourceImageReference
 {
     /// <summary>Specifies the offer of the image used to create the virtual machines. Changing this forces a new resource to be created.</summary>
@@ -1455,6 +1517,7 @@ public partial class V1beta1LinuxVirtualMachineStatusAtProviderSourceImageRefere
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineStatusAtProviderTerminationNotification
 {
     /// <summary>Should the termination notification be enabled on this Virtual Machine?</summary>
@@ -1466,6 +1529,7 @@ public partial class V1beta1LinuxVirtualMachineStatusAtProviderTerminationNotifi
     public string? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineStatusAtProvider
 {
     /// <summary>A additional_capabilities block as defined below.</summary>
@@ -1677,6 +1741,7 @@ public partial class V1beta1LinuxVirtualMachineStatusAtProvider
     public string? Zone { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1LinuxVirtualMachineStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1704,6 +1769,7 @@ public partial class V1beta1LinuxVirtualMachineStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>LinuxVirtualMachineStatus defines the observed state of LinuxVirtualMachine.</summary>
 public partial class V1beta1LinuxVirtualMachineStatus
 {
     /// <summary></summary>
@@ -1720,6 +1786,7 @@ public partial class V1beta1LinuxVirtualMachineStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>LinuxVirtualMachine is the Schema for the LinuxVirtualMachines API. Manages a Linux Virtual Machine.</summary>
 public partial class V1beta1LinuxVirtualMachine : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LinuxVirtualMachineSpec>, IStatus<V1beta1LinuxVirtualMachineStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -18,6 +18,7 @@ public enum V1beta1CassandraClusterSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>The initial admin password for this Cassandra Cluster. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1CassandraClusterSpecForProviderDefaultAdminPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -53,6 +54,7 @@ public enum V1beta1CassandraClusterSpecForProviderDelegatedManagementSubnetIdRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CassandraClusterSpecForProviderDelegatedManagementSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -66,6 +68,7 @@ public partial class V1beta1CassandraClusterSpecForProviderDelegatedManagementSu
     public V1beta1CassandraClusterSpecForProviderDelegatedManagementSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate delegatedManagementSubnetId.</summary>
 public partial class V1beta1CassandraClusterSpecForProviderDelegatedManagementSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -97,6 +100,7 @@ public enum V1beta1CassandraClusterSpecForProviderDelegatedManagementSubnetIdSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CassandraClusterSpecForProviderDelegatedManagementSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1CassandraClusterSpecForProviderDelegatedManagementSu
     public V1beta1CassandraClusterSpecForProviderDelegatedManagementSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate delegatedManagementSubnetId.</summary>
 public partial class V1beta1CassandraClusterSpecForProviderDelegatedManagementSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1CassandraClusterSpecForProviderDelegatedManagementSu
     public V1beta1CassandraClusterSpecForProviderDelegatedManagementSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CassandraClusterSpecForProviderIdentity
 {
     /// <summary>Specifies the type of Managed Service Identity that should be configured on this Cassandra Cluster. The only possible value is SystemAssigned.</summary>
@@ -152,6 +158,7 @@ public enum V1beta1CassandraClusterSpecForProviderResourceGroupNameRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CassandraClusterSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -165,6 +172,7 @@ public partial class V1beta1CassandraClusterSpecForProviderResourceGroupNameRefP
     public V1beta1CassandraClusterSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1CassandraClusterSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -196,6 +204,7 @@ public enum V1beta1CassandraClusterSpecForProviderResourceGroupNameSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CassandraClusterSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -209,6 +218,7 @@ public partial class V1beta1CassandraClusterSpecForProviderResourceGroupNameSele
     public V1beta1CassandraClusterSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1CassandraClusterSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -224,6 +234,7 @@ public partial class V1beta1CassandraClusterSpecForProviderResourceGroupNameSele
     public V1beta1CassandraClusterSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CassandraClusterSpecForProvider
 {
     /// <summary>The authentication method that is used to authenticate clients. Possible values are None and Cassandra. Defaults to Cassandra.</summary>
@@ -315,6 +326,7 @@ public enum V1beta1CassandraClusterSpecInitProviderDelegatedManagementSubnetIdRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CassandraClusterSpecInitProviderDelegatedManagementSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -328,6 +340,7 @@ public partial class V1beta1CassandraClusterSpecInitProviderDelegatedManagementS
     public V1beta1CassandraClusterSpecInitProviderDelegatedManagementSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate delegatedManagementSubnetId.</summary>
 public partial class V1beta1CassandraClusterSpecInitProviderDelegatedManagementSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -359,6 +372,7 @@ public enum V1beta1CassandraClusterSpecInitProviderDelegatedManagementSubnetIdSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CassandraClusterSpecInitProviderDelegatedManagementSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -372,6 +386,7 @@ public partial class V1beta1CassandraClusterSpecInitProviderDelegatedManagementS
     public V1beta1CassandraClusterSpecInitProviderDelegatedManagementSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate delegatedManagementSubnetId.</summary>
 public partial class V1beta1CassandraClusterSpecInitProviderDelegatedManagementSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -387,6 +402,7 @@ public partial class V1beta1CassandraClusterSpecInitProviderDelegatedManagementS
     public V1beta1CassandraClusterSpecInitProviderDelegatedManagementSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CassandraClusterSpecInitProviderIdentity
 {
     /// <summary>Specifies the type of Managed Service Identity that should be configured on this Cassandra Cluster. The only possible value is SystemAssigned.</summary>
@@ -394,6 +410,7 @@ public partial class V1beta1CassandraClusterSpecInitProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1CassandraClusterSpecInitProvider
 {
     /// <summary>The authentication method that is used to authenticate clients. Possible values are None and Cassandra. Defaults to Cassandra.</summary>
@@ -491,6 +508,7 @@ public enum V1beta1CassandraClusterSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CassandraClusterSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -504,6 +522,7 @@ public partial class V1beta1CassandraClusterSpecProviderConfigRefPolicy
     public V1beta1CassandraClusterSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1CassandraClusterSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -535,6 +554,7 @@ public enum V1beta1CassandraClusterSpecPublishConnectionDetailsToConfigRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CassandraClusterSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -548,6 +568,7 @@ public partial class V1beta1CassandraClusterSpecPublishConnectionDetailsToConfig
     public V1beta1CassandraClusterSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1CassandraClusterSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -559,6 +580,7 @@ public partial class V1beta1CassandraClusterSpecPublishConnectionDetailsToConfig
     public V1beta1CassandraClusterSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1CassandraClusterSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -574,6 +596,7 @@ public partial class V1beta1CassandraClusterSpecPublishConnectionDetailsToMetada
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1CassandraClusterSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -589,6 +612,7 @@ public partial class V1beta1CassandraClusterSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1CassandraClusterSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -600,6 +624,7 @@ public partial class V1beta1CassandraClusterSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>CassandraClusterSpec defines the desired state of CassandraCluster</summary>
 public partial class V1beta1CassandraClusterSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -632,6 +657,7 @@ public partial class V1beta1CassandraClusterSpec
     public V1beta1CassandraClusterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CassandraClusterStatusAtProviderIdentity
 {
     /// <summary>The ID of the Cassandra Cluster.</summary>
@@ -647,6 +673,7 @@ public partial class V1beta1CassandraClusterStatusAtProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CassandraClusterStatusAtProvider
 {
     /// <summary>The authentication method that is used to authenticate clients. Possible values are None and Cassandra. Defaults to Cassandra.</summary>
@@ -702,6 +729,7 @@ public partial class V1beta1CassandraClusterStatusAtProvider
     public string? Version { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1CassandraClusterStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -729,6 +757,7 @@ public partial class V1beta1CassandraClusterStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>CassandraClusterStatus defines the observed state of CassandraCluster.</summary>
 public partial class V1beta1CassandraClusterStatus
 {
     /// <summary></summary>
@@ -745,6 +774,7 @@ public partial class V1beta1CassandraClusterStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>CassandraCluster is the Schema for the CassandraClusters API. Manages a Cassandra Cluster.</summary>
 public partial class V1beta1CassandraCluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1CassandraClusterSpec>, IStatus<V1beta1CassandraClusterStatus>
 {
     public const string KubeApiVersion = "v1beta1";

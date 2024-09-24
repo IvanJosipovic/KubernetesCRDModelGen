@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigee.cnrm.cloud.google.com;
+/// <summary>Configuration for the Advanced API Ops add-on.</summary>
 public partial class V1beta1ApigeeOrganizationSpecAddonsConfigAdvancedApiOpsConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -15,6 +16,7 @@ public partial class V1beta1ApigeeOrganizationSpecAddonsConfigAdvancedApiOpsConf
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Configuration for the Monetization add-on.</summary>
 public partial class V1beta1ApigeeOrganizationSpecAddonsConfigMonetizationConfig
 {
     /// <summary>Flag that specifies whether the Monetization add-on is enabled.</summary>
@@ -22,6 +24,7 @@ public partial class V1beta1ApigeeOrganizationSpecAddonsConfigMonetizationConfig
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Addon configurations of the Apigee organization.</summary>
 public partial class V1beta1ApigeeOrganizationSpecAddonsConfig
 {
     /// <summary>Configuration for the Advanced API Ops add-on.</summary>
@@ -33,6 +36,7 @@ public partial class V1beta1ApigeeOrganizationSpecAddonsConfig
     public V1beta1ApigeeOrganizationSpecAddonsConfigMonetizationConfig? MonetizationConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApigeeOrganizationSpecAuthorizedNetworkRef
 {
     /// <summary>Compute Engine network used for Service Networking to be peered with Apigee runtime instances. See (https://cloud.google.com/vpc/docs/shared-vpc). To use a shared VPC network, use the following format: `projects/{host-project-id}/{region}/networks/{network-name}`. For example: `projects/my-sharedvpc-host/global/networks/mynetwork` **Note:** Not supported for Apigee hybrid.  Allowed value: The Google Cloud resource name of a `ComputeNetwork` resource (format: `projects/{{project}}/global/networks/{{name}}`).</summary>
@@ -48,6 +52,7 @@ public partial class V1beta1ApigeeOrganizationSpecAuthorizedNetworkRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. The Project that this resource belongs to.</summary>
 public partial class V1beta1ApigeeOrganizationSpecProjectRef
 {
     /// <summary>Required. Name of the GCP project in which to associate the Apigee organization. Pass the information as a query parameter using the following structure in your request: projects/&lt;project&gt; Authorization requires the following IAM permission on the specified resource parent: apigee.organizations.create  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -63,6 +68,7 @@ public partial class V1beta1ApigeeOrganizationSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApigeeOrganizationSpecRuntimeDatabaseEncryptionKeyRef
 {
     /// <summary>Cloud KMS key name used for encrypting the data that is stored and replicated across runtime instances. Update is not allowed after the organization is created. Required when (#RuntimeType) is `TRIAL`, a Google-Managed encryption key will be used. For example: "projects/foo/locations/us/keyRings/bar/cryptoKeys/baz". **Note:** Not supported for Apigee hybrid.  Allowed value: The Google Cloud resource name of a `KMSCryptoKey` resource (format: `{{selfLink}}`).</summary>
@@ -78,6 +84,7 @@ public partial class V1beta1ApigeeOrganizationSpecRuntimeDatabaseEncryptionKeyRe
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApigeeOrganizationSpec
 {
     /// <summary>Addon configurations of the Apigee organization.</summary>
@@ -121,6 +128,7 @@ public partial class V1beta1ApigeeOrganizationSpec
     public string RuntimeType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApigeeOrganizationStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -144,6 +152,7 @@ public partial class V1beta1ApigeeOrganizationStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApigeeOrganizationStatus
 {
     /// <summary>Output only. Billing type of the Apigee organization. See (https://cloud.google.com/apigee/pricing). Possible values: BILLING_TYPE_UNSPECIFIED, SUBSCRIPTION, EVALUATION</summary>
@@ -192,6 +201,7 @@ public partial class V1beta1ApigeeOrganizationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ApigeeOrganization : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ApigeeOrganizationSpec>, IStatus<V1beta1ApigeeOrganizationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

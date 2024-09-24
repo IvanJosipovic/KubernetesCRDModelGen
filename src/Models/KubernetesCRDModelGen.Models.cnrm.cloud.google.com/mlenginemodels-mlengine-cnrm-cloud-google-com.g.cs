@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.mlengine.cnrm.cloud.google.com;
+/// <summary>Immutable. The default version of the model. This version will be used to handle prediction requests that do not specify a version.</summary>
 public partial class V1alpha1MLEngineModelSpecDefaultVersion
 {
     /// <summary>Immutable. The name specified for the version when it was created.</summary>
@@ -15,6 +16,7 @@ public partial class V1alpha1MLEngineModelSpecDefaultVersion
     public string Name { get; set; }
 }
 
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1MLEngineModelSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -30,6 +32,7 @@ public partial class V1alpha1MLEngineModelSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1MLEngineModelSpec
 {
     /// <summary>Immutable. The default version of the model. This version will be used to handle prediction requests that do not specify a version.</summary>
@@ -61,6 +64,7 @@ public partial class V1alpha1MLEngineModelSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1MLEngineModelStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -84,6 +88,7 @@ public partial class V1alpha1MLEngineModelStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1MLEngineModelStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -96,6 +101,7 @@ public partial class V1alpha1MLEngineModelStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1MLEngineModel : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1MLEngineModelSpec>, IStatus<V1alpha1MLEngineModelStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

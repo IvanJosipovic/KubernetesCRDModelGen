@@ -18,6 +18,7 @@ public enum V1beta1WindowsVirtualMachineScaleSetSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderAdditionalCapabilities
 {
     /// <summary>Should the capacity to enable Data Disks of the UltraSSD_LRS storage account type be supported on this Virtual Machine Scale Set? Possible values are true or false. Defaults to false. Changing this forces a new resource to be created.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderAddition
     public bool? UltraSsdEnabled { get; set; }
 }
 
+/// <summary>The XML formatted content that is added to the unattend.xml file for the specified path and component. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderAdditionalUnattendContentContentSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -40,6 +42,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderAddition
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderAdditionalUnattendContent
 {
     /// <summary>The XML formatted content that is added to the unattend.xml file for the specified path and component. Changing this forces a new resource to be created.</summary>
@@ -51,6 +54,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderAddition
     public string? Setting { get; set; }
 }
 
+/// <summary>The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderAdminPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -66,6 +70,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderAdminPas
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderAutomaticInstanceRepair
 {
     /// <summary>Should the automatic instance repair be enabled on this Virtual Machine Scale Set?</summary>
@@ -77,6 +82,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderAutomati
     public string? GracePeriod { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderAutomaticOsUpgradePolicy
 {
     /// <summary>Should automatic rollbacks be disabled?</summary>
@@ -88,6 +94,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderAutomati
     public bool? EnableAutomaticOsUpgrade { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderBootDiagnostics
 {
     /// <summary>The Primary/Secondary Endpoint for the Azure Storage Account which should be used to store Boot Diagnostics, including Console Output and Screenshots from the Hypervisor.</summary>
@@ -95,6 +102,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderBootDiag
     public string? StorageAccountUri { get; set; }
 }
 
+/// <summary>The Base64-Encoded Custom Data which should be used for this Virtual Machine Scale Set.</summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderCustomDataSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -110,6 +118,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderCustomDa
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderDataDisk
 {
     /// <summary>The type of Caching which should be used for this Data Disk. Possible values are None, ReadOnly and ReadWrite.</summary>
@@ -153,6 +162,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderDataDisk
     public bool? WriteAcceleratorEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderExtensionProtectedSettingsFromKeyVault
 {
     /// <summary>The URL to the Key Vault Secret which stores the protected settings.</summary>
@@ -164,6 +174,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderExtensio
     public string? SourceVaultId { get; set; }
 }
 
+/// <summary>A JSON String which specifies Sensitive Settings (such as Passwords) for the Extension.</summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderExtensionProtectedSettingsSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -179,6 +190,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderExtensio
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderExtension
 {
     /// <summary>Should the latest version of the Extension be used at Deployment Time, if one is available? This won't auto-update the extension on existing installation. Defaults to true.</summary>
@@ -226,6 +238,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderExtensio
     public string? TypeHandlerVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderGalleryApplication
 {
     /// <summary>Specifies the URI to an Azure Blob that will replace the default configuration for the package if provided. Changing this forces a new resource to be created.</summary>
@@ -245,6 +258,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderGalleryA
     public string? VersionId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderGalleryApplications
 {
     /// <summary></summary>
@@ -264,6 +278,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderGalleryA
     public string? Tag { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Windows Virtual Machine Scale Set.</summary>
@@ -275,6 +290,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderNetworkInterfaceIpConfigurationPublicIpAddressIpTag
 {
     /// <summary>The IP Tag associated with the Public IP, such as SQL or Storage. Changing this forces a new resource to be created.</summary>
@@ -286,6 +302,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderNetworkI
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderNetworkInterfaceIpConfigurationPublicIpAddress
 {
     /// <summary>The Prefix which should be used for the Domain Name Label for each Virtual Machine Instance. Azure concatenates the Domain Name Label and Virtual Machine Index to create a unique Domain Name Label for each Virtual Machine.</summary>
@@ -333,6 +350,7 @@ public enum V1beta1WindowsVirtualMachineScaleSetSpecForProviderNetworkInterfaceI
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderNetworkInterfaceIpConfigurationSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -346,6 +364,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderNetworkI
     public V1beta1WindowsVirtualMachineScaleSetSpecForProviderNetworkInterfaceIpConfigurationSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderNetworkInterfaceIpConfigurationSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -377,6 +396,7 @@ public enum V1beta1WindowsVirtualMachineScaleSetSpecForProviderNetworkInterfaceI
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderNetworkInterfaceIpConfigurationSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -390,6 +410,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderNetworkI
     public V1beta1WindowsVirtualMachineScaleSetSpecForProviderNetworkInterfaceIpConfigurationSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderNetworkInterfaceIpConfigurationSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -405,6 +426,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderNetworkI
     public V1beta1WindowsVirtualMachineScaleSetSpecForProviderNetworkInterfaceIpConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderNetworkInterfaceIpConfiguration
 {
     /// <summary>A list of Backend Address Pools ID's from a Application Gateway which this Virtual Machine Scale Set should be connected to.</summary>
@@ -452,6 +474,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderNetworkI
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderNetworkInterface
 {
     /// <summary>A list of IP Addresses of DNS Servers which should be assigned to the Network Interface.</summary>
@@ -483,6 +506,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderNetworkI
     public bool? Primary { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderOsDiskDiffDiskSettings
 {
     /// <summary>Specifies the Ephemeral Disk Settings for the OS Disk. At this time the only possible value is Local. Changing this forces a new resource to be created.</summary>
@@ -494,6 +518,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderOsDiskDi
     public string? Placement { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderOsDisk
 {
     /// <summary>The Type of Caching which should be used for the Internal OS Disk. Possible values are None, ReadOnly and ReadWrite.</summary>
@@ -529,6 +554,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderOsDisk
     public bool? WriteAcceleratorEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderPlan
 {
     /// <summary>Specifies the name of the image from the marketplace. Changing this forces a new resource to be created.</summary>
@@ -564,6 +590,7 @@ public enum V1beta1WindowsVirtualMachineScaleSetSpecForProviderResourceGroupName
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -577,6 +604,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderResource
     public V1beta1WindowsVirtualMachineScaleSetSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -608,6 +636,7 @@ public enum V1beta1WindowsVirtualMachineScaleSetSpecForProviderResourceGroupName
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -621,6 +650,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderResource
     public V1beta1WindowsVirtualMachineScaleSetSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -636,6 +666,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderResource
     public V1beta1WindowsVirtualMachineScaleSetSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderRollingUpgradePolicy
 {
     /// <summary>Should the Virtual Machine Scale Set ignore the Azure Zone boundaries when constructing upgrade batches? Possible values are true or false.</summary>
@@ -663,6 +694,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderRollingU
     public bool? PrioritizeUnhealthyInstancesEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderScaleIn
 {
     /// <summary>Should the virtual machines chosen for removal be force deleted when the virtual machine scale set is being scaled-in? Possible values are true or false. Defaults to false.</summary>
@@ -674,6 +706,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderScaleIn
     public string? Rule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderSecretCertificate
 {
     /// <summary>The certificate store on the Virtual Machine where the certificate should be added.</summary>
@@ -685,6 +718,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderSecretCe
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderSecret
 {
     /// <summary>One or more certificate blocks as defined above.</summary>
@@ -696,6 +730,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderSecret
     public string? KeyVaultId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderSourceImageReference
 {
     /// <summary>Specifies the offer of the image used to create the virtual machines. Changing this forces a new resource to be created.</summary>
@@ -715,6 +750,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderSourceIm
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderSpotRestore
 {
     /// <summary>Should the Spot-Try-Restore feature be enabled? The Spot-Try-Restore feature will attempt to automatically restore the evicted Spot Virtual Machine Scale Set VM instances opportunistically based on capacity availability and pricing constraints. Possible values are true or false. Defaults to false. Changing this forces a new resource to be created.</summary>
@@ -726,6 +762,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderSpotRest
     public string? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderTerminateNotification
 {
     /// <summary>Should the terminate notification be enabled on this Virtual Machine Scale Set?</summary>
@@ -737,6 +774,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderTerminat
     public string? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderTerminationNotification
 {
     /// <summary>Should the termination notification be enabled on this Virtual Machine Scale Set?</summary>
@@ -748,6 +786,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderTerminat
     public string? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderWinrmListener
 {
     /// <summary>The Secret URL of a Key Vault Certificate, which must be specified when protocol is set to Https. Changing this forces a new resource to be created.</summary>
@@ -759,6 +798,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderWinrmLis
     public string? Protocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProvider
 {
     /// <summary>An additional_capabilities block as defined below.</summary>
@@ -998,6 +1038,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProvider
     public IList<string>? Zones { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderAdditionalCapabilities
 {
     /// <summary>Should the capacity to enable Data Disks of the UltraSSD_LRS storage account type be supported on this Virtual Machine Scale Set? Possible values are true or false. Defaults to false. Changing this forces a new resource to be created.</summary>
@@ -1005,6 +1046,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderAdditio
     public bool? UltraSsdEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderAdditionalUnattendContent
 {
     /// <summary>The name of the setting to which the content applies. Possible values are AutoLogon and FirstLogonCommands. Changing this forces a new resource to be created.</summary>
@@ -1012,6 +1054,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderAdditio
     public string? Setting { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderAutomaticInstanceRepair
 {
     /// <summary>Should the automatic instance repair be enabled on this Virtual Machine Scale Set?</summary>
@@ -1023,6 +1066,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderAutomat
     public string? GracePeriod { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderAutomaticOsUpgradePolicy
 {
     /// <summary>Should automatic rollbacks be disabled?</summary>
@@ -1034,6 +1078,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderAutomat
     public bool? EnableAutomaticOsUpgrade { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderBootDiagnostics
 {
     /// <summary>The Primary/Secondary Endpoint for the Azure Storage Account which should be used to store Boot Diagnostics, including Console Output and Screenshots from the Hypervisor.</summary>
@@ -1041,6 +1086,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderBootDia
     public string? StorageAccountUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderDataDisk
 {
     /// <summary>The type of Caching which should be used for this Data Disk. Possible values are None, ReadOnly and ReadWrite.</summary>
@@ -1084,6 +1130,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderDataDis
     public bool? WriteAcceleratorEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderExtensionProtectedSettingsFromKeyVault
 {
     /// <summary>The URL to the Key Vault Secret which stores the protected settings.</summary>
@@ -1095,6 +1142,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderExtensi
     public string? SourceVaultId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderExtension
 {
     /// <summary>Should the latest version of the Extension be used at Deployment Time, if one is available? This won't auto-update the extension on existing installation. Defaults to true.</summary>
@@ -1138,6 +1186,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderExtensi
     public string? TypeHandlerVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderGalleryApplication
 {
     /// <summary>Specifies the URI to an Azure Blob that will replace the default configuration for the package if provided. Changing this forces a new resource to be created.</summary>
@@ -1157,6 +1206,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderGallery
     public string? VersionId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderGalleryApplications
 {
     /// <summary></summary>
@@ -1176,6 +1226,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderGallery
     public string? Tag { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Windows Virtual Machine Scale Set.</summary>
@@ -1187,6 +1238,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderIdentit
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderNetworkInterfaceIpConfigurationPublicIpAddressIpTag
 {
     /// <summary>The IP Tag associated with the Public IP, such as SQL or Storage. Changing this forces a new resource to be created.</summary>
@@ -1198,6 +1250,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderNetwork
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderNetworkInterfaceIpConfigurationPublicIpAddress
 {
     /// <summary>The Prefix which should be used for the Domain Name Label for each Virtual Machine Instance. Azure concatenates the Domain Name Label and Virtual Machine Index to create a unique Domain Name Label for each Virtual Machine.</summary>
@@ -1245,6 +1298,7 @@ public enum V1beta1WindowsVirtualMachineScaleSetSpecInitProviderNetworkInterface
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderNetworkInterfaceIpConfigurationSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1258,6 +1312,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderNetwork
     public V1beta1WindowsVirtualMachineScaleSetSpecInitProviderNetworkInterfaceIpConfigurationSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderNetworkInterfaceIpConfigurationSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1289,6 +1344,7 @@ public enum V1beta1WindowsVirtualMachineScaleSetSpecInitProviderNetworkInterface
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderNetworkInterfaceIpConfigurationSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1302,6 +1358,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderNetwork
     public V1beta1WindowsVirtualMachineScaleSetSpecInitProviderNetworkInterfaceIpConfigurationSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderNetworkInterfaceIpConfigurationSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1317,6 +1374,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderNetwork
     public V1beta1WindowsVirtualMachineScaleSetSpecInitProviderNetworkInterfaceIpConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderNetworkInterfaceIpConfiguration
 {
     /// <summary>A list of Backend Address Pools ID's from a Application Gateway which this Virtual Machine Scale Set should be connected to.</summary>
@@ -1364,6 +1422,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderNetwork
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderNetworkInterface
 {
     /// <summary>A list of IP Addresses of DNS Servers which should be assigned to the Network Interface.</summary>
@@ -1395,6 +1454,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderNetwork
     public bool? Primary { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderOsDiskDiffDiskSettings
 {
     /// <summary>Specifies the Ephemeral Disk Settings for the OS Disk. At this time the only possible value is Local. Changing this forces a new resource to be created.</summary>
@@ -1406,6 +1466,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderOsDiskD
     public string? Placement { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderOsDisk
 {
     /// <summary>The Type of Caching which should be used for the Internal OS Disk. Possible values are None, ReadOnly and ReadWrite.</summary>
@@ -1441,6 +1502,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderOsDisk
     public bool? WriteAcceleratorEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderPlan
 {
     /// <summary>Specifies the name of the image from the marketplace. Changing this forces a new resource to be created.</summary>
@@ -1456,6 +1518,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderPlan
     public string? Publisher { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderRollingUpgradePolicy
 {
     /// <summary>Should the Virtual Machine Scale Set ignore the Azure Zone boundaries when constructing upgrade batches? Possible values are true or false.</summary>
@@ -1483,6 +1546,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderRolling
     public bool? PrioritizeUnhealthyInstancesEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderScaleIn
 {
     /// <summary>Should the virtual machines chosen for removal be force deleted when the virtual machine scale set is being scaled-in? Possible values are true or false. Defaults to false.</summary>
@@ -1494,6 +1558,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderScaleIn
     public string? Rule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderSecretCertificate
 {
     /// <summary>The certificate store on the Virtual Machine where the certificate should be added.</summary>
@@ -1505,6 +1570,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderSecretC
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderSecret
 {
     /// <summary>One or more certificate blocks as defined above.</summary>
@@ -1516,6 +1582,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderSecret
     public string? KeyVaultId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderSourceImageReference
 {
     /// <summary>Specifies the offer of the image used to create the virtual machines. Changing this forces a new resource to be created.</summary>
@@ -1535,6 +1602,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderSourceI
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderSpotRestore
 {
     /// <summary>Should the Spot-Try-Restore feature be enabled? The Spot-Try-Restore feature will attempt to automatically restore the evicted Spot Virtual Machine Scale Set VM instances opportunistically based on capacity availability and pricing constraints. Possible values are true or false. Defaults to false. Changing this forces a new resource to be created.</summary>
@@ -1546,6 +1614,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderSpotRes
     public string? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderTerminateNotification
 {
     /// <summary>Should the terminate notification be enabled on this Virtual Machine Scale Set?</summary>
@@ -1557,6 +1626,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderTermina
     public string? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderTerminationNotification
 {
     /// <summary>Should the termination notification be enabled on this Virtual Machine Scale Set?</summary>
@@ -1568,6 +1638,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderTermina
     public string? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderWinrmListener
 {
     /// <summary>The Secret URL of a Key Vault Certificate, which must be specified when protocol is set to Https. Changing this forces a new resource to be created.</summary>
@@ -1579,6 +1650,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderWinrmLi
     public string? Protocol { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProvider
 {
     /// <summary>An additional_capabilities block as defined below.</summary>
@@ -1840,6 +1912,7 @@ public enum V1beta1WindowsVirtualMachineScaleSetSpecProviderConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1853,6 +1926,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecProviderConfigRefPo
     public V1beta1WindowsVirtualMachineScaleSetSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1884,6 +1958,7 @@ public enum V1beta1WindowsVirtualMachineScaleSetSpecPublishConnectionDetailsToCo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1897,6 +1972,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecPublishConnectionDe
     public V1beta1WindowsVirtualMachineScaleSetSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1908,6 +1984,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecPublishConnectionDe
     public V1beta1WindowsVirtualMachineScaleSetSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1923,6 +2000,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecPublishConnectionDe
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1938,6 +2016,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecPublishConnectionDe
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1949,6 +2028,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecWriteConnectionSecr
     public string Namespace { get; set; }
 }
 
+/// <summary>WindowsVirtualMachineScaleSetSpec defines the desired state of WindowsVirtualMachineScaleSet</summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1981,6 +2061,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpec
     public V1beta1WindowsVirtualMachineScaleSetSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderAdditionalCapabilities
 {
     /// <summary>Should the capacity to enable Data Disks of the UltraSSD_LRS storage account type be supported on this Virtual Machine Scale Set? Possible values are true or false. Defaults to false. Changing this forces a new resource to be created.</summary>
@@ -1988,6 +2069,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderAdditio
     public bool? UltraSsdEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderAdditionalUnattendContent
 {
     /// <summary>The name of the setting to which the content applies. Possible values are AutoLogon and FirstLogonCommands. Changing this forces a new resource to be created.</summary>
@@ -1995,6 +2077,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderAdditio
     public string? Setting { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderAutomaticInstanceRepair
 {
     /// <summary>Should the automatic instance repair be enabled on this Virtual Machine Scale Set?</summary>
@@ -2006,6 +2089,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderAutomat
     public string? GracePeriod { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderAutomaticOsUpgradePolicy
 {
     /// <summary>Should automatic rollbacks be disabled?</summary>
@@ -2017,6 +2101,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderAutomat
     public bool? EnableAutomaticOsUpgrade { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderBootDiagnostics
 {
     /// <summary>The Primary/Secondary Endpoint for the Azure Storage Account which should be used to store Boot Diagnostics, including Console Output and Screenshots from the Hypervisor.</summary>
@@ -2024,6 +2109,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderBootDia
     public string? StorageAccountUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderDataDisk
 {
     /// <summary>The type of Caching which should be used for this Data Disk. Possible values are None, ReadOnly and ReadWrite.</summary>
@@ -2067,6 +2153,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderDataDis
     public bool? WriteAcceleratorEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderExtensionProtectedSettingsFromKeyVault
 {
     /// <summary>The URL to the Key Vault Secret which stores the protected settings.</summary>
@@ -2078,6 +2165,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderExtensi
     public string? SourceVaultId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderExtension
 {
     /// <summary>Should the latest version of the Extension be used at Deployment Time, if one is available? This won't auto-update the extension on existing installation. Defaults to true.</summary>
@@ -2121,6 +2209,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderExtensi
     public string? TypeHandlerVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderGalleryApplication
 {
     /// <summary>Specifies the URI to an Azure Blob that will replace the default configuration for the package if provided. Changing this forces a new resource to be created.</summary>
@@ -2140,6 +2229,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderGallery
     public string? VersionId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderGalleryApplications
 {
     /// <summary></summary>
@@ -2159,6 +2249,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderGallery
     public string? Tag { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Windows Virtual Machine Scale Set.</summary>
@@ -2178,6 +2269,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderIdentit
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderNetworkInterfaceIpConfigurationPublicIpAddressIpTag
 {
     /// <summary>The IP Tag associated with the Public IP, such as SQL or Storage. Changing this forces a new resource to be created.</summary>
@@ -2189,6 +2281,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderNetwork
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderNetworkInterfaceIpConfigurationPublicIpAddress
 {
     /// <summary>The Prefix which should be used for the Domain Name Label for each Virtual Machine Instance. Azure concatenates the Domain Name Label and Virtual Machine Index to create a unique Domain Name Label for each Virtual Machine.</summary>
@@ -2216,6 +2309,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderNetwork
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderNetworkInterfaceIpConfiguration
 {
     /// <summary>A list of Backend Address Pools ID's from a Application Gateway which this Virtual Machine Scale Set should be connected to.</summary>
@@ -2255,6 +2349,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderNetwork
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderNetworkInterface
 {
     /// <summary>A list of IP Addresses of DNS Servers which should be assigned to the Network Interface.</summary>
@@ -2286,6 +2381,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderNetwork
     public bool? Primary { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderOsDiskDiffDiskSettings
 {
     /// <summary>Specifies the Ephemeral Disk Settings for the OS Disk. At this time the only possible value is Local. Changing this forces a new resource to be created.</summary>
@@ -2297,6 +2393,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderOsDiskD
     public string? Placement { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderOsDisk
 {
     /// <summary>The Type of Caching which should be used for the Internal OS Disk. Possible values are None, ReadOnly and ReadWrite.</summary>
@@ -2332,6 +2429,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderOsDisk
     public bool? WriteAcceleratorEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderPlan
 {
     /// <summary>Specifies the name of the image from the marketplace. Changing this forces a new resource to be created.</summary>
@@ -2347,6 +2445,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderPlan
     public string? Publisher { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderRollingUpgradePolicy
 {
     /// <summary>Should the Virtual Machine Scale Set ignore the Azure Zone boundaries when constructing upgrade batches? Possible values are true or false.</summary>
@@ -2374,6 +2473,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderRolling
     public bool? PrioritizeUnhealthyInstancesEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderScaleIn
 {
     /// <summary>Should the virtual machines chosen for removal be force deleted when the virtual machine scale set is being scaled-in? Possible values are true or false. Defaults to false.</summary>
@@ -2385,6 +2485,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderScaleIn
     public string? Rule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderSecretCertificate
 {
     /// <summary>The certificate store on the Virtual Machine where the certificate should be added.</summary>
@@ -2396,6 +2497,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderSecretC
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderSecret
 {
     /// <summary>One or more certificate blocks as defined above.</summary>
@@ -2407,6 +2509,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderSecret
     public string? KeyVaultId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderSourceImageReference
 {
     /// <summary>Specifies the offer of the image used to create the virtual machines. Changing this forces a new resource to be created.</summary>
@@ -2426,6 +2529,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderSourceI
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderSpotRestore
 {
     /// <summary>Should the Spot-Try-Restore feature be enabled? The Spot-Try-Restore feature will attempt to automatically restore the evicted Spot Virtual Machine Scale Set VM instances opportunistically based on capacity availability and pricing constraints. Possible values are true or false. Defaults to false. Changing this forces a new resource to be created.</summary>
@@ -2437,6 +2541,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderSpotRes
     public string? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderTerminateNotification
 {
     /// <summary>Should the terminate notification be enabled on this Virtual Machine Scale Set?</summary>
@@ -2448,6 +2553,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderTermina
     public string? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderTerminationNotification
 {
     /// <summary>Should the termination notification be enabled on this Virtual Machine Scale Set?</summary>
@@ -2459,6 +2565,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderTermina
     public string? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderWinrmListener
 {
     /// <summary>The Secret URL of a Key Vault Certificate, which must be specified when protocol is set to Https. Changing this forces a new resource to be created.</summary>
@@ -2470,6 +2577,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderWinrmLi
     public string? Protocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProvider
 {
     /// <summary>An additional_capabilities block as defined below.</summary>
@@ -2701,6 +2809,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProvider
     public IList<string>? Zones { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2728,6 +2837,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>WindowsVirtualMachineScaleSetStatus defines the observed state of WindowsVirtualMachineScaleSet.</summary>
 public partial class V1beta1WindowsVirtualMachineScaleSetStatus
 {
     /// <summary></summary>
@@ -2744,6 +2854,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>WindowsVirtualMachineScaleSet is the Schema for the WindowsVirtualMachineScaleSets API. Manages a Windows Virtual Machine Scale Set.</summary>
 public partial class V1beta1WindowsVirtualMachineScaleSet : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1WindowsVirtualMachineScaleSetSpec>, IStatus<V1beta1WindowsVirtualMachineScaleSetStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -18,6 +18,7 @@ public enum V1beta1SubscriptionIAMMemberSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1SubscriptionIAMMemberSpecForProviderCondition
 {
     /// <summary></summary>
@@ -53,6 +54,7 @@ public enum V1beta1SubscriptionIAMMemberSpecForProviderSubscriptionRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SubscriptionIAMMemberSpecForProviderSubscriptionRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -66,6 +68,7 @@ public partial class V1beta1SubscriptionIAMMemberSpecForProviderSubscriptionRefP
     public V1beta1SubscriptionIAMMemberSpecForProviderSubscriptionRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subscription in pubsub to populate subscription.</summary>
 public partial class V1beta1SubscriptionIAMMemberSpecForProviderSubscriptionRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -97,6 +100,7 @@ public enum V1beta1SubscriptionIAMMemberSpecForProviderSubscriptionSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SubscriptionIAMMemberSpecForProviderSubscriptionSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1SubscriptionIAMMemberSpecForProviderSubscriptionSele
     public V1beta1SubscriptionIAMMemberSpecForProviderSubscriptionSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subscription in pubsub to populate subscription.</summary>
 public partial class V1beta1SubscriptionIAMMemberSpecForProviderSubscriptionSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1SubscriptionIAMMemberSpecForProviderSubscriptionSele
     public V1beta1SubscriptionIAMMemberSpecForProviderSubscriptionSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubscriptionIAMMemberSpecForProvider
 {
     /// <summary></summary>
@@ -156,6 +162,7 @@ public partial class V1beta1SubscriptionIAMMemberSpecForProvider
     public V1beta1SubscriptionIAMMemberSpecForProviderSubscriptionSelector? SubscriptionSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubscriptionIAMMemberSpecInitProviderCondition
 {
     /// <summary></summary>
@@ -191,6 +198,7 @@ public enum V1beta1SubscriptionIAMMemberSpecInitProviderSubscriptionRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SubscriptionIAMMemberSpecInitProviderSubscriptionRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -204,6 +212,7 @@ public partial class V1beta1SubscriptionIAMMemberSpecInitProviderSubscriptionRef
     public V1beta1SubscriptionIAMMemberSpecInitProviderSubscriptionRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subscription in pubsub to populate subscription.</summary>
 public partial class V1beta1SubscriptionIAMMemberSpecInitProviderSubscriptionRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -235,6 +244,7 @@ public enum V1beta1SubscriptionIAMMemberSpecInitProviderSubscriptionSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SubscriptionIAMMemberSpecInitProviderSubscriptionSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -248,6 +258,7 @@ public partial class V1beta1SubscriptionIAMMemberSpecInitProviderSubscriptionSel
     public V1beta1SubscriptionIAMMemberSpecInitProviderSubscriptionSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subscription in pubsub to populate subscription.</summary>
 public partial class V1beta1SubscriptionIAMMemberSpecInitProviderSubscriptionSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -263,6 +274,7 @@ public partial class V1beta1SubscriptionIAMMemberSpecInitProviderSubscriptionSel
     public V1beta1SubscriptionIAMMemberSpecInitProviderSubscriptionSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1SubscriptionIAMMemberSpecInitProvider
 {
     /// <summary></summary>
@@ -336,6 +348,7 @@ public enum V1beta1SubscriptionIAMMemberSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SubscriptionIAMMemberSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -349,6 +362,7 @@ public partial class V1beta1SubscriptionIAMMemberSpecProviderConfigRefPolicy
     public V1beta1SubscriptionIAMMemberSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1SubscriptionIAMMemberSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -380,6 +394,7 @@ public enum V1beta1SubscriptionIAMMemberSpecPublishConnectionDetailsToConfigRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SubscriptionIAMMemberSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -393,6 +408,7 @@ public partial class V1beta1SubscriptionIAMMemberSpecPublishConnectionDetailsToC
     public V1beta1SubscriptionIAMMemberSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1SubscriptionIAMMemberSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -404,6 +420,7 @@ public partial class V1beta1SubscriptionIAMMemberSpecPublishConnectionDetailsToC
     public V1beta1SubscriptionIAMMemberSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1SubscriptionIAMMemberSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -419,6 +436,7 @@ public partial class V1beta1SubscriptionIAMMemberSpecPublishConnectionDetailsToM
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1SubscriptionIAMMemberSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -434,6 +452,7 @@ public partial class V1beta1SubscriptionIAMMemberSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1SubscriptionIAMMemberSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -445,6 +464,7 @@ public partial class V1beta1SubscriptionIAMMemberSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>SubscriptionIAMMemberSpec defines the desired state of SubscriptionIAMMember</summary>
 public partial class V1beta1SubscriptionIAMMemberSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -477,6 +497,7 @@ public partial class V1beta1SubscriptionIAMMemberSpec
     public V1beta1SubscriptionIAMMemberSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubscriptionIAMMemberStatusAtProviderCondition
 {
     /// <summary></summary>
@@ -492,6 +513,7 @@ public partial class V1beta1SubscriptionIAMMemberStatusAtProviderCondition
     public string? Title { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubscriptionIAMMemberStatusAtProvider
 {
     /// <summary></summary>
@@ -523,6 +545,7 @@ public partial class V1beta1SubscriptionIAMMemberStatusAtProvider
     public string? Subscription { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1SubscriptionIAMMemberStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -550,6 +573,7 @@ public partial class V1beta1SubscriptionIAMMemberStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>SubscriptionIAMMemberStatus defines the observed state of SubscriptionIAMMember.</summary>
 public partial class V1beta1SubscriptionIAMMemberStatus
 {
     /// <summary></summary>
@@ -566,6 +590,7 @@ public partial class V1beta1SubscriptionIAMMemberStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>SubscriptionIAMMember is the Schema for the SubscriptionIAMMembers API. &lt;no value&gt;</summary>
 public partial class V1beta1SubscriptionIAMMember : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SubscriptionIAMMemberSpec>, IStatus<V1beta1SubscriptionIAMMemberStatus>
 {
     public const string KubeApiVersion = "v1beta1";

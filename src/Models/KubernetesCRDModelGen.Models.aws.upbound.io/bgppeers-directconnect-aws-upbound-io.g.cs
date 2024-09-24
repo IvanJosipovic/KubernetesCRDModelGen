@@ -38,6 +38,7 @@ public enum V1beta1BGPPeerSpecForProviderVirtualInterfaceIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BGPPeerSpecForProviderVirtualInterfaceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1BGPPeerSpecForProviderVirtualInterfaceIdRefPolicy
     public V1beta1BGPPeerSpecForProviderVirtualInterfaceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a PrivateVirtualInterface in directconnect to populate virtualInterfaceId.</summary>
 public partial class V1beta1BGPPeerSpecForProviderVirtualInterfaceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1BGPPeerSpecForProviderVirtualInterfaceIdSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BGPPeerSpecForProviderVirtualInterfaceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1BGPPeerSpecForProviderVirtualInterfaceIdSelectorPoli
     public V1beta1BGPPeerSpecForProviderVirtualInterfaceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a PrivateVirtualInterface in directconnect to populate virtualInterfaceId.</summary>
 public partial class V1beta1BGPPeerSpecForProviderVirtualInterfaceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1BGPPeerSpecForProviderVirtualInterfaceIdSelector
     public V1beta1BGPPeerSpecForProviderVirtualInterfaceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BGPPeerSpecForProvider
 {
     /// <summary>The address family for the BGP peer. ipv4  or ipv6.</summary>
@@ -169,6 +174,7 @@ public enum V1beta1BGPPeerSpecInitProviderVirtualInterfaceIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BGPPeerSpecInitProviderVirtualInterfaceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -182,6 +188,7 @@ public partial class V1beta1BGPPeerSpecInitProviderVirtualInterfaceIdRefPolicy
     public V1beta1BGPPeerSpecInitProviderVirtualInterfaceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a PrivateVirtualInterface in directconnect to populate virtualInterfaceId.</summary>
 public partial class V1beta1BGPPeerSpecInitProviderVirtualInterfaceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -213,6 +220,7 @@ public enum V1beta1BGPPeerSpecInitProviderVirtualInterfaceIdSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BGPPeerSpecInitProviderVirtualInterfaceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -226,6 +234,7 @@ public partial class V1beta1BGPPeerSpecInitProviderVirtualInterfaceIdSelectorPol
     public V1beta1BGPPeerSpecInitProviderVirtualInterfaceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a PrivateVirtualInterface in directconnect to populate virtualInterfaceId.</summary>
 public partial class V1beta1BGPPeerSpecInitProviderVirtualInterfaceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -241,6 +250,7 @@ public partial class V1beta1BGPPeerSpecInitProviderVirtualInterfaceIdSelector
     public V1beta1BGPPeerSpecInitProviderVirtualInterfaceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1BGPPeerSpecInitProvider
 {
     /// <summary>The address family for the BGP peer. ipv4  or ipv6.</summary>
@@ -318,6 +328,7 @@ public enum V1beta1BGPPeerSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BGPPeerSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -331,6 +342,7 @@ public partial class V1beta1BGPPeerSpecProviderConfigRefPolicy
     public V1beta1BGPPeerSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1BGPPeerSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -362,6 +374,7 @@ public enum V1beta1BGPPeerSpecPublishConnectionDetailsToConfigRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BGPPeerSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -375,6 +388,7 @@ public partial class V1beta1BGPPeerSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1BGPPeerSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1BGPPeerSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -386,6 +400,7 @@ public partial class V1beta1BGPPeerSpecPublishConnectionDetailsToConfigRef
     public V1beta1BGPPeerSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1BGPPeerSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -401,6 +416,7 @@ public partial class V1beta1BGPPeerSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1BGPPeerSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -416,6 +432,7 @@ public partial class V1beta1BGPPeerSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1BGPPeerSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -427,6 +444,7 @@ public partial class V1beta1BGPPeerSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>BGPPeerSpec defines the desired state of BGPPeer</summary>
 public partial class V1beta1BGPPeerSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -459,6 +477,7 @@ public partial class V1beta1BGPPeerSpec
     public V1beta1BGPPeerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BGPPeerStatusAtProvider
 {
     /// <summary>The address family for the BGP peer. ipv4  or ipv6.</summary>
@@ -502,6 +521,7 @@ public partial class V1beta1BGPPeerStatusAtProvider
     public string? VirtualInterfaceId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1BGPPeerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -529,6 +549,7 @@ public partial class V1beta1BGPPeerStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>BGPPeerStatus defines the observed state of BGPPeer.</summary>
 public partial class V1beta1BGPPeerStatus
 {
     /// <summary></summary>
@@ -545,6 +566,7 @@ public partial class V1beta1BGPPeerStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>BGPPeer is the Schema for the BGPPeers API. Provides a Direct Connect BGP peer resource.</summary>
 public partial class V1beta1BGPPeer : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BGPPeerSpec>, IStatus<V1beta1BGPPeerStatus>
 {
     public const string KubeApiVersion = "v1beta1";

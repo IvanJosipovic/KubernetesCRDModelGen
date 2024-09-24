@@ -18,6 +18,7 @@ public enum V1beta1FlowSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderAdvancedSettingsAudioExportGcsDestination
 {
     /// <summary>The Google Cloud Storage URI for the exported objects. Whether a full object name, or just a prefix, its usage depends on the Dialogflow operation. Format: gs://bucket/object-name-or-prefix</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1FlowSpecForProviderAdvancedSettingsAudioExportGcsDes
     public string? Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderAdvancedSettingsDtmfSettings
 {
     /// <summary>If true, incoming audio is processed for DTMF (dual tone multi frequency) events. For example, if the caller presses a button on their telephone keypad and DTMF processing is enabled, Dialogflow will detect the event (e.g. a "3" was pressed) in the incoming audio and pass the event to the bot to drive business logic (e.g. when 3 is pressed, return the account balance).</summary>
@@ -40,6 +42,7 @@ public partial class V1beta1FlowSpecForProviderAdvancedSettingsDtmfSettings
     public double? MaxDigits { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderAdvancedSettings
 {
     /// <summary>If present, incoming audio is exported by Dialogflow to the configured Google Cloud Storage destination. Exposed at the following levels:</summary>
@@ -51,6 +54,7 @@ public partial class V1beta1FlowSpecForProviderAdvancedSettings
     public IList<V1beta1FlowSpecForProviderAdvancedSettingsDtmfSettings>? DtmfSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillmentConditionalCases
 {
     /// <summary>A JSON encoded list of cascading if-else conditions. Cases are mutually exclusive. The first one with a matching condition is selected, all the rest ignored. See Case for the schema.</summary>
@@ -58,6 +62,7 @@ public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillmentCo
     public string? Cases { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillmentMessagesConversationSuccess
 {
     /// <summary>Custom metadata. Dialogflow doesn't impose any structure on this.</summary>
@@ -65,6 +70,7 @@ public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillmentMe
     public string? Metadata { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillmentMessagesLiveAgentHandoff
 {
     /// <summary>Custom metadata. Dialogflow doesn't impose any structure on this.</summary>
@@ -72,6 +78,7 @@ public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillmentMe
     public string? Metadata { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillmentMessagesOutputAudioText
 {
     /// <summary>The SSML text to be synthesized. For more information, see SSML.</summary>
@@ -83,6 +90,7 @@ public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillmentMe
     public string? Text { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillmentMessagesPlayAudio
 {
     /// <summary>URI of the audio clip. Dialogflow does not impose any validation on this value. It is specific to the client that reads it.</summary>
@@ -90,6 +98,7 @@ public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillmentMe
     public string? AudioUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillmentMessagesTelephonyTransferCall
 {
     /// <summary>Transfer the call to a phone number in E.164 format.</summary>
@@ -97,6 +106,7 @@ public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillmentMe
     public string? PhoneNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillmentMessagesText
 {
     /// <summary>A collection of text responses.</summary>
@@ -104,6 +114,7 @@ public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillmentMe
     public IList<string>? Text { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillmentMessages
 {
     /// <summary>The channel which the response is associated with. Clients can specify the channel via QueryParameters.channel, and only associated channel response will be returned.</summary>
@@ -139,6 +150,7 @@ public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillmentMe
     public IList<V1beta1FlowSpecForProviderEventHandlersTriggerFulfillmentMessagesText>? Text { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillmentSetParameterActions
 {
     /// <summary>Display name of the parameter.</summary>
@@ -150,6 +162,7 @@ public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillmentSe
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillment
 {
     /// <summary>Conditional cases for this fulfillment. Structure is documented below.</summary>
@@ -177,6 +190,7 @@ public partial class V1beta1FlowSpecForProviderEventHandlersTriggerFulfillment
     public string? Webhook { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderEventHandlers
 {
     /// <summary>The name of the event to handle.</summary>
@@ -196,6 +210,7 @@ public partial class V1beta1FlowSpecForProviderEventHandlers
     public IList<V1beta1FlowSpecForProviderEventHandlersTriggerFulfillment>? TriggerFulfillment { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderNluSettings
 {
     /// <summary>To filter out false positive results and still get variety in matched natural language inputs for your agent, you can tune the machine learning classification threshold. If the returned score value is less than the threshold value, then a no-match event will be triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the default of 0.3 is used.</summary>
@@ -231,6 +246,7 @@ public enum V1beta1FlowSpecForProviderParentRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FlowSpecForProviderParentRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -244,6 +260,7 @@ public partial class V1beta1FlowSpecForProviderParentRefPolicy
     public V1beta1FlowSpecForProviderParentRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Agent in dialogflowcx to populate parent.</summary>
 public partial class V1beta1FlowSpecForProviderParentRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -275,6 +292,7 @@ public enum V1beta1FlowSpecForProviderParentSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FlowSpecForProviderParentSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -288,6 +306,7 @@ public partial class V1beta1FlowSpecForProviderParentSelectorPolicy
     public V1beta1FlowSpecForProviderParentSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Agent in dialogflowcx to populate parent.</summary>
 public partial class V1beta1FlowSpecForProviderParentSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -323,6 +342,7 @@ public enum V1beta1FlowSpecForProviderTransitionRoutesTargetFlowRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FlowSpecForProviderTransitionRoutesTargetFlowRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -336,6 +356,7 @@ public partial class V1beta1FlowSpecForProviderTransitionRoutesTargetFlowRefPoli
     public V1beta1FlowSpecForProviderTransitionRoutesTargetFlowRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Agent in dialogflowcx to populate targetFlow.</summary>
 public partial class V1beta1FlowSpecForProviderTransitionRoutesTargetFlowRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -367,6 +388,7 @@ public enum V1beta1FlowSpecForProviderTransitionRoutesTargetFlowSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FlowSpecForProviderTransitionRoutesTargetFlowSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -380,6 +402,7 @@ public partial class V1beta1FlowSpecForProviderTransitionRoutesTargetFlowSelecto
     public V1beta1FlowSpecForProviderTransitionRoutesTargetFlowSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Agent in dialogflowcx to populate targetFlow.</summary>
 public partial class V1beta1FlowSpecForProviderTransitionRoutesTargetFlowSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -395,6 +418,7 @@ public partial class V1beta1FlowSpecForProviderTransitionRoutesTargetFlowSelecto
     public V1beta1FlowSpecForProviderTransitionRoutesTargetFlowSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmentConditionalCases
 {
     /// <summary>A JSON encoded list of cascading if-else conditions. Cases are mutually exclusive. The first one with a matching condition is selected, all the rest ignored. See Case for the schema.</summary>
@@ -402,6 +426,7 @@ public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmen
     public string? Cases { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmentMessagesConversationSuccess
 {
     /// <summary>Custom metadata. Dialogflow doesn't impose any structure on this.</summary>
@@ -409,6 +434,7 @@ public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmen
     public string? Metadata { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmentMessagesLiveAgentHandoff
 {
     /// <summary>Custom metadata. Dialogflow doesn't impose any structure on this.</summary>
@@ -416,6 +442,7 @@ public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmen
     public string? Metadata { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmentMessagesOutputAudioText
 {
     /// <summary>The SSML text to be synthesized. For more information, see SSML.</summary>
@@ -427,6 +454,7 @@ public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmen
     public string? Text { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmentMessagesPlayAudio
 {
     /// <summary>URI of the audio clip. Dialogflow does not impose any validation on this value. It is specific to the client that reads it.</summary>
@@ -434,6 +462,7 @@ public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmen
     public string? AudioUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmentMessagesTelephonyTransferCall
 {
     /// <summary>Transfer the call to a phone number in E.164 format.</summary>
@@ -441,6 +470,7 @@ public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmen
     public string? PhoneNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmentMessagesText
 {
     /// <summary>A collection of text responses.</summary>
@@ -448,6 +478,7 @@ public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmen
     public IList<string>? Text { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmentMessages
 {
     /// <summary>The channel which the response is associated with. Clients can specify the channel via QueryParameters.channel, and only associated channel response will be returned.</summary>
@@ -483,6 +514,7 @@ public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmen
     public IList<V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmentMessagesText>? Text { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmentSetParameterActions
 {
     /// <summary>Display name of the parameter.</summary>
@@ -494,6 +526,7 @@ public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmen
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillment
 {
     /// <summary>Conditional cases for this fulfillment. Structure is documented below.</summary>
@@ -521,6 +554,7 @@ public partial class V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillmen
     public string? Webhook { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProviderTransitionRoutes
 {
     /// <summary>The condition to evaluate against form parameters or session parameters. At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.</summary>
@@ -552,6 +586,7 @@ public partial class V1beta1FlowSpecForProviderTransitionRoutes
     public IList<V1beta1FlowSpecForProviderTransitionRoutesTriggerFulfillment>? TriggerFulfillment { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecForProvider
 {
     /// <summary>Hierarchical advanced settings for this flow. The settings exposed at the lower level overrides the settings exposed at the higher level. Hierarchy: Agent-&gt;Flow-&gt;Page-&gt;Fulfillment/Parameter. Structure is documented below.</summary>
@@ -603,6 +638,7 @@ public partial class V1beta1FlowSpecForProvider
     public IList<V1beta1FlowSpecForProviderTransitionRoutes>? TransitionRoutes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderAdvancedSettingsAudioExportGcsDestination
 {
     /// <summary>The Google Cloud Storage URI for the exported objects. Whether a full object name, or just a prefix, its usage depends on the Dialogflow operation. Format: gs://bucket/object-name-or-prefix</summary>
@@ -610,6 +646,7 @@ public partial class V1beta1FlowSpecInitProviderAdvancedSettingsAudioExportGcsDe
     public string? Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderAdvancedSettingsDtmfSettings
 {
     /// <summary>If true, incoming audio is processed for DTMF (dual tone multi frequency) events. For example, if the caller presses a button on their telephone keypad and DTMF processing is enabled, Dialogflow will detect the event (e.g. a "3" was pressed) in the incoming audio and pass the event to the bot to drive business logic (e.g. when 3 is pressed, return the account balance).</summary>
@@ -625,6 +662,7 @@ public partial class V1beta1FlowSpecInitProviderAdvancedSettingsDtmfSettings
     public double? MaxDigits { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderAdvancedSettings
 {
     /// <summary>If present, incoming audio is exported by Dialogflow to the configured Google Cloud Storage destination. Exposed at the following levels:</summary>
@@ -636,6 +674,7 @@ public partial class V1beta1FlowSpecInitProviderAdvancedSettings
     public IList<V1beta1FlowSpecInitProviderAdvancedSettingsDtmfSettings>? DtmfSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillmentConditionalCases
 {
     /// <summary>A JSON encoded list of cascading if-else conditions. Cases are mutually exclusive. The first one with a matching condition is selected, all the rest ignored. See Case for the schema.</summary>
@@ -643,6 +682,7 @@ public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillmentC
     public string? Cases { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillmentMessagesConversationSuccess
 {
     /// <summary>Custom metadata. Dialogflow doesn't impose any structure on this.</summary>
@@ -650,6 +690,7 @@ public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillmentM
     public string? Metadata { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillmentMessagesLiveAgentHandoff
 {
     /// <summary>Custom metadata. Dialogflow doesn't impose any structure on this.</summary>
@@ -657,6 +698,7 @@ public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillmentM
     public string? Metadata { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillmentMessagesOutputAudioText
 {
     /// <summary>The SSML text to be synthesized. For more information, see SSML.</summary>
@@ -668,6 +710,7 @@ public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillmentM
     public string? Text { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillmentMessagesPlayAudio
 {
     /// <summary>URI of the audio clip. Dialogflow does not impose any validation on this value. It is specific to the client that reads it.</summary>
@@ -675,6 +718,7 @@ public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillmentM
     public string? AudioUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillmentMessagesTelephonyTransferCall
 {
     /// <summary>Transfer the call to a phone number in E.164 format.</summary>
@@ -682,6 +726,7 @@ public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillmentM
     public string? PhoneNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillmentMessagesText
 {
     /// <summary>A collection of text responses.</summary>
@@ -689,6 +734,7 @@ public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillmentM
     public IList<string>? Text { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillmentMessages
 {
     /// <summary>The channel which the response is associated with. Clients can specify the channel via QueryParameters.channel, and only associated channel response will be returned.</summary>
@@ -724,6 +770,7 @@ public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillmentM
     public IList<V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillmentMessagesText>? Text { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillmentSetParameterActions
 {
     /// <summary>Display name of the parameter.</summary>
@@ -735,6 +782,7 @@ public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillmentS
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillment
 {
     /// <summary>Conditional cases for this fulfillment. Structure is documented below.</summary>
@@ -762,6 +810,7 @@ public partial class V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillment
     public string? Webhook { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderEventHandlers
 {
     /// <summary>The name of the event to handle.</summary>
@@ -781,6 +830,7 @@ public partial class V1beta1FlowSpecInitProviderEventHandlers
     public IList<V1beta1FlowSpecInitProviderEventHandlersTriggerFulfillment>? TriggerFulfillment { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderNluSettings
 {
     /// <summary>To filter out false positive results and still get variety in matched natural language inputs for your agent, you can tune the machine learning classification threshold. If the returned score value is less than the threshold value, then a no-match event will be triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the default of 0.3 is used.</summary>
@@ -816,6 +866,7 @@ public enum V1beta1FlowSpecInitProviderParentRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FlowSpecInitProviderParentRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -829,6 +880,7 @@ public partial class V1beta1FlowSpecInitProviderParentRefPolicy
     public V1beta1FlowSpecInitProviderParentRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Agent in dialogflowcx to populate parent.</summary>
 public partial class V1beta1FlowSpecInitProviderParentRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -860,6 +912,7 @@ public enum V1beta1FlowSpecInitProviderParentSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FlowSpecInitProviderParentSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -873,6 +926,7 @@ public partial class V1beta1FlowSpecInitProviderParentSelectorPolicy
     public V1beta1FlowSpecInitProviderParentSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Agent in dialogflowcx to populate parent.</summary>
 public partial class V1beta1FlowSpecInitProviderParentSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -908,6 +962,7 @@ public enum V1beta1FlowSpecInitProviderTransitionRoutesTargetFlowRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FlowSpecInitProviderTransitionRoutesTargetFlowRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -921,6 +976,7 @@ public partial class V1beta1FlowSpecInitProviderTransitionRoutesTargetFlowRefPol
     public V1beta1FlowSpecInitProviderTransitionRoutesTargetFlowRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Agent in dialogflowcx to populate targetFlow.</summary>
 public partial class V1beta1FlowSpecInitProviderTransitionRoutesTargetFlowRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -952,6 +1008,7 @@ public enum V1beta1FlowSpecInitProviderTransitionRoutesTargetFlowSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FlowSpecInitProviderTransitionRoutesTargetFlowSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -965,6 +1022,7 @@ public partial class V1beta1FlowSpecInitProviderTransitionRoutesTargetFlowSelect
     public V1beta1FlowSpecInitProviderTransitionRoutesTargetFlowSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Agent in dialogflowcx to populate targetFlow.</summary>
 public partial class V1beta1FlowSpecInitProviderTransitionRoutesTargetFlowSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -980,6 +1038,7 @@ public partial class V1beta1FlowSpecInitProviderTransitionRoutesTargetFlowSelect
     public V1beta1FlowSpecInitProviderTransitionRoutesTargetFlowSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillmentConditionalCases
 {
     /// <summary>A JSON encoded list of cascading if-else conditions. Cases are mutually exclusive. The first one with a matching condition is selected, all the rest ignored. See Case for the schema.</summary>
@@ -987,6 +1046,7 @@ public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillme
     public string? Cases { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillmentMessagesConversationSuccess
 {
     /// <summary>Custom metadata. Dialogflow doesn't impose any structure on this.</summary>
@@ -994,6 +1054,7 @@ public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillme
     public string? Metadata { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillmentMessagesLiveAgentHandoff
 {
     /// <summary>Custom metadata. Dialogflow doesn't impose any structure on this.</summary>
@@ -1001,6 +1062,7 @@ public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillme
     public string? Metadata { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillmentMessagesOutputAudioText
 {
     /// <summary>The SSML text to be synthesized. For more information, see SSML.</summary>
@@ -1012,6 +1074,7 @@ public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillme
     public string? Text { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillmentMessagesPlayAudio
 {
     /// <summary>URI of the audio clip. Dialogflow does not impose any validation on this value. It is specific to the client that reads it.</summary>
@@ -1019,6 +1082,7 @@ public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillme
     public string? AudioUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillmentMessagesTelephonyTransferCall
 {
     /// <summary>Transfer the call to a phone number in E.164 format.</summary>
@@ -1026,6 +1090,7 @@ public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillme
     public string? PhoneNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillmentMessagesText
 {
     /// <summary>A collection of text responses.</summary>
@@ -1033,6 +1098,7 @@ public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillme
     public IList<string>? Text { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillmentMessages
 {
     /// <summary>The channel which the response is associated with. Clients can specify the channel via QueryParameters.channel, and only associated channel response will be returned.</summary>
@@ -1068,6 +1134,7 @@ public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillme
     public IList<V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillmentMessagesText>? Text { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillmentSetParameterActions
 {
     /// <summary>Display name of the parameter.</summary>
@@ -1079,6 +1146,7 @@ public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillme
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillment
 {
     /// <summary>Conditional cases for this fulfillment. Structure is documented below.</summary>
@@ -1106,6 +1174,7 @@ public partial class V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillme
     public string? Webhook { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowSpecInitProviderTransitionRoutes
 {
     /// <summary>The condition to evaluate against form parameters or session parameters. At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.</summary>
@@ -1137,6 +1206,7 @@ public partial class V1beta1FlowSpecInitProviderTransitionRoutes
     public IList<V1beta1FlowSpecInitProviderTransitionRoutesTriggerFulfillment>? TriggerFulfillment { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1FlowSpecInitProvider
 {
     /// <summary>Hierarchical advanced settings for this flow. The settings exposed at the lower level overrides the settings exposed at the higher level. Hierarchy: Agent-&gt;Flow-&gt;Page-&gt;Fulfillment/Parameter. Structure is documented below.</summary>
@@ -1230,6 +1300,7 @@ public enum V1beta1FlowSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FlowSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1243,6 +1314,7 @@ public partial class V1beta1FlowSpecProviderConfigRefPolicy
     public V1beta1FlowSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1FlowSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1274,6 +1346,7 @@ public enum V1beta1FlowSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FlowSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1287,6 +1360,7 @@ public partial class V1beta1FlowSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1FlowSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1FlowSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1298,6 +1372,7 @@ public partial class V1beta1FlowSpecPublishConnectionDetailsToConfigRef
     public V1beta1FlowSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1FlowSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1313,6 +1388,7 @@ public partial class V1beta1FlowSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1FlowSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1328,6 +1404,7 @@ public partial class V1beta1FlowSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1FlowSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1339,6 +1416,7 @@ public partial class V1beta1FlowSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>FlowSpec defines the desired state of Flow</summary>
 public partial class V1beta1FlowSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1371,6 +1449,7 @@ public partial class V1beta1FlowSpec
     public V1beta1FlowSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderAdvancedSettingsAudioExportGcsDestination
 {
     /// <summary>The Google Cloud Storage URI for the exported objects. Whether a full object name, or just a prefix, its usage depends on the Dialogflow operation. Format: gs://bucket/object-name-or-prefix</summary>
@@ -1378,6 +1457,7 @@ public partial class V1beta1FlowStatusAtProviderAdvancedSettingsAudioExportGcsDe
     public string? Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderAdvancedSettingsDtmfSettings
 {
     /// <summary>If true, incoming audio is processed for DTMF (dual tone multi frequency) events. For example, if the caller presses a button on their telephone keypad and DTMF processing is enabled, Dialogflow will detect the event (e.g. a "3" was pressed) in the incoming audio and pass the event to the bot to drive business logic (e.g. when 3 is pressed, return the account balance).</summary>
@@ -1393,6 +1473,7 @@ public partial class V1beta1FlowStatusAtProviderAdvancedSettingsDtmfSettings
     public double? MaxDigits { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderAdvancedSettings
 {
     /// <summary>If present, incoming audio is exported by Dialogflow to the configured Google Cloud Storage destination. Exposed at the following levels:</summary>
@@ -1404,6 +1485,7 @@ public partial class V1beta1FlowStatusAtProviderAdvancedSettings
     public IList<V1beta1FlowStatusAtProviderAdvancedSettingsDtmfSettings>? DtmfSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillmentConditionalCases
 {
     /// <summary>A JSON encoded list of cascading if-else conditions. Cases are mutually exclusive. The first one with a matching condition is selected, all the rest ignored. See Case for the schema.</summary>
@@ -1411,6 +1493,7 @@ public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillmentC
     public string? Cases { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillmentMessagesConversationSuccess
 {
     /// <summary>Custom metadata. Dialogflow doesn't impose any structure on this.</summary>
@@ -1418,6 +1501,7 @@ public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillmentM
     public string? Metadata { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillmentMessagesLiveAgentHandoff
 {
     /// <summary>Custom metadata. Dialogflow doesn't impose any structure on this.</summary>
@@ -1425,6 +1509,7 @@ public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillmentM
     public string? Metadata { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillmentMessagesOutputAudioText
 {
     /// <summary>(Output) Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.</summary>
@@ -1440,6 +1525,7 @@ public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillmentM
     public string? Text { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillmentMessagesPlayAudio
 {
     /// <summary>(Output) Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.</summary>
@@ -1451,6 +1537,7 @@ public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillmentM
     public string? AudioUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillmentMessagesTelephonyTransferCall
 {
     /// <summary>Transfer the call to a phone number in E.164 format.</summary>
@@ -1458,6 +1545,7 @@ public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillmentM
     public string? PhoneNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillmentMessagesText
 {
     /// <summary>(Output) Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.</summary>
@@ -1469,6 +1557,7 @@ public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillmentM
     public IList<string>? Text { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillmentMessages
 {
     /// <summary>The channel which the response is associated with. Clients can specify the channel via QueryParameters.channel, and only associated channel response will be returned.</summary>
@@ -1504,6 +1593,7 @@ public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillmentM
     public IList<V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillmentMessagesText>? Text { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillmentSetParameterActions
 {
     /// <summary>Display name of the parameter.</summary>
@@ -1515,6 +1605,7 @@ public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillmentS
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillment
 {
     /// <summary>Conditional cases for this fulfillment. Structure is documented below.</summary>
@@ -1542,6 +1633,7 @@ public partial class V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillment
     public string? Webhook { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderEventHandlers
 {
     /// <summary>The name of the event to handle.</summary>
@@ -1565,6 +1657,7 @@ public partial class V1beta1FlowStatusAtProviderEventHandlers
     public IList<V1beta1FlowStatusAtProviderEventHandlersTriggerFulfillment>? TriggerFulfillment { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderNluSettings
 {
     /// <summary>To filter out false positive results and still get variety in matched natural language inputs for your agent, you can tune the machine learning classification threshold. If the returned score value is less than the threshold value, then a no-match event will be triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the default of 0.3 is used.</summary>
@@ -1580,6 +1673,7 @@ public partial class V1beta1FlowStatusAtProviderNluSettings
     public string? ModelType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillmentConditionalCases
 {
     /// <summary>A JSON encoded list of cascading if-else conditions. Cases are mutually exclusive. The first one with a matching condition is selected, all the rest ignored. See Case for the schema.</summary>
@@ -1587,6 +1681,7 @@ public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillme
     public string? Cases { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillmentMessagesConversationSuccess
 {
     /// <summary>Custom metadata. Dialogflow doesn't impose any structure on this.</summary>
@@ -1594,6 +1689,7 @@ public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillme
     public string? Metadata { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillmentMessagesLiveAgentHandoff
 {
     /// <summary>Custom metadata. Dialogflow doesn't impose any structure on this.</summary>
@@ -1601,6 +1697,7 @@ public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillme
     public string? Metadata { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillmentMessagesOutputAudioText
 {
     /// <summary>(Output) Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.</summary>
@@ -1616,6 +1713,7 @@ public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillme
     public string? Text { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillmentMessagesPlayAudio
 {
     /// <summary>(Output) Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.</summary>
@@ -1627,6 +1725,7 @@ public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillme
     public string? AudioUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillmentMessagesTelephonyTransferCall
 {
     /// <summary>Transfer the call to a phone number in E.164 format.</summary>
@@ -1634,6 +1733,7 @@ public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillme
     public string? PhoneNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillmentMessagesText
 {
     /// <summary>(Output) Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.</summary>
@@ -1645,6 +1745,7 @@ public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillme
     public IList<string>? Text { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillmentMessages
 {
     /// <summary>The channel which the response is associated with. Clients can specify the channel via QueryParameters.channel, and only associated channel response will be returned.</summary>
@@ -1680,6 +1781,7 @@ public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillme
     public IList<V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillmentMessagesText>? Text { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillmentSetParameterActions
 {
     /// <summary>Display name of the parameter.</summary>
@@ -1691,6 +1793,7 @@ public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillme
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillment
 {
     /// <summary>Conditional cases for this fulfillment. Structure is documented below.</summary>
@@ -1718,6 +1821,7 @@ public partial class V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillme
     public string? Webhook { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProviderTransitionRoutes
 {
     /// <summary>The condition to evaluate against form parameters or session parameters. At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.</summary>
@@ -1745,6 +1849,7 @@ public partial class V1beta1FlowStatusAtProviderTransitionRoutes
     public IList<V1beta1FlowStatusAtProviderTransitionRoutesTriggerFulfillment>? TriggerFulfillment { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowStatusAtProvider
 {
     /// <summary>Hierarchical advanced settings for this flow. The settings exposed at the lower level overrides the settings exposed at the higher level. Hierarchy: Agent-&gt;Flow-&gt;Page-&gt;Fulfillment/Parameter. Structure is documented below.</summary>
@@ -1796,6 +1901,7 @@ public partial class V1beta1FlowStatusAtProvider
     public IList<V1beta1FlowStatusAtProviderTransitionRoutes>? TransitionRoutes { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1FlowStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1823,6 +1929,7 @@ public partial class V1beta1FlowStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>FlowStatus defines the observed state of Flow.</summary>
 public partial class V1beta1FlowStatus
 {
     /// <summary></summary>
@@ -1839,6 +1946,7 @@ public partial class V1beta1FlowStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Flow is the Schema for the Flows API. Flows represents the conversation flows when you build your chatbot agent.</summary>
 public partial class V1beta1Flow : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FlowSpec>, IStatus<V1beta1FlowStatus>
 {
     public const string KubeApiVersion = "v1beta1";

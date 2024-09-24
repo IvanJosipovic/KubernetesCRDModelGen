@@ -38,6 +38,7 @@ public enum V1beta1StreamInputEventHubSpecForProviderEventhubConsumerGroupNameRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1StreamInputEventHubSpecForProviderEventhubConsumerGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1StreamInputEventHubSpecForProviderEventhubConsumerGr
     public V1beta1StreamInputEventHubSpecForProviderEventhubConsumerGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ConsumerGroup in eventhub to populate eventhubConsumerGroupName.</summary>
 public partial class V1beta1StreamInputEventHubSpecForProviderEventhubConsumerGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1StreamInputEventHubSpecForProviderEventhubConsumerGroupNameSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1StreamInputEventHubSpecForProviderEventhubConsumerGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1StreamInputEventHubSpecForProviderEventhubConsumerGr
     public V1beta1StreamInputEventHubSpecForProviderEventhubConsumerGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ConsumerGroup in eventhub to populate eventhubConsumerGroupName.</summary>
 public partial class V1beta1StreamInputEventHubSpecForProviderEventhubConsumerGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1StreamInputEventHubSpecForProviderEventhubNameRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1StreamInputEventHubSpecForProviderEventhubNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1StreamInputEventHubSpecForProviderEventhubNameRefPol
     public V1beta1StreamInputEventHubSpecForProviderEventhubNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a EventHub in eventhub to populate eventhubName.</summary>
 public partial class V1beta1StreamInputEventHubSpecForProviderEventhubNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1StreamInputEventHubSpecForProviderEventhubNameSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1StreamInputEventHubSpecForProviderEventhubNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1StreamInputEventHubSpecForProviderEventhubNameSelect
     public V1beta1StreamInputEventHubSpecForProviderEventhubNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a EventHub in eventhub to populate eventhubName.</summary>
 public partial class V1beta1StreamInputEventHubSpecForProviderEventhubNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1StreamInputEventHubSpecForProviderResourceGroupNameRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1StreamInputEventHubSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1StreamInputEventHubSpecForProviderResourceGroupNameR
     public V1beta1StreamInputEventHubSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1StreamInputEventHubSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1StreamInputEventHubSpecForProviderResourceGroupNameSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1StreamInputEventHubSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1StreamInputEventHubSpecForProviderResourceGroupNameS
     public V1beta1StreamInputEventHubSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1StreamInputEventHubSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1StreamInputEventHubSpecForProviderResourceGroupNameS
     public V1beta1StreamInputEventHubSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StreamInputEventHubSpecForProviderSerialization
 {
     /// <summary>The encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. It currently can only be set to UTF8.</summary>
@@ -329,6 +342,7 @@ public enum V1beta1StreamInputEventHubSpecForProviderServicebusNamespaceRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1StreamInputEventHubSpecForProviderServicebusNamespaceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -342,6 +356,7 @@ public partial class V1beta1StreamInputEventHubSpecForProviderServicebusNamespac
     public V1beta1StreamInputEventHubSpecForProviderServicebusNamespaceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a EventHubNamespace in eventhub to populate servicebusNamespace.</summary>
 public partial class V1beta1StreamInputEventHubSpecForProviderServicebusNamespaceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -373,6 +388,7 @@ public enum V1beta1StreamInputEventHubSpecForProviderServicebusNamespaceSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1StreamInputEventHubSpecForProviderServicebusNamespaceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -386,6 +402,7 @@ public partial class V1beta1StreamInputEventHubSpecForProviderServicebusNamespac
     public V1beta1StreamInputEventHubSpecForProviderServicebusNamespaceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a EventHubNamespace in eventhub to populate servicebusNamespace.</summary>
 public partial class V1beta1StreamInputEventHubSpecForProviderServicebusNamespaceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -401,6 +418,7 @@ public partial class V1beta1StreamInputEventHubSpecForProviderServicebusNamespac
     public V1beta1StreamInputEventHubSpecForProviderServicebusNamespaceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>The shared access policy key for the specified shared access policy.</summary>
 public partial class V1beta1StreamInputEventHubSpecForProviderSharedAccessPolicyKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -436,6 +454,7 @@ public enum V1beta1StreamInputEventHubSpecForProviderStreamAnalyticsJobNameRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1StreamInputEventHubSpecForProviderStreamAnalyticsJobNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -449,6 +468,7 @@ public partial class V1beta1StreamInputEventHubSpecForProviderStreamAnalyticsJob
     public V1beta1StreamInputEventHubSpecForProviderStreamAnalyticsJobNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Job in streamanalytics to populate streamAnalyticsJobName.</summary>
 public partial class V1beta1StreamInputEventHubSpecForProviderStreamAnalyticsJobNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -480,6 +500,7 @@ public enum V1beta1StreamInputEventHubSpecForProviderStreamAnalyticsJobNameSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1StreamInputEventHubSpecForProviderStreamAnalyticsJobNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -493,6 +514,7 @@ public partial class V1beta1StreamInputEventHubSpecForProviderStreamAnalyticsJob
     public V1beta1StreamInputEventHubSpecForProviderStreamAnalyticsJobNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Job in streamanalytics to populate streamAnalyticsJobName.</summary>
 public partial class V1beta1StreamInputEventHubSpecForProviderStreamAnalyticsJobNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -508,6 +530,7 @@ public partial class V1beta1StreamInputEventHubSpecForProviderStreamAnalyticsJob
     public V1beta1StreamInputEventHubSpecForProviderStreamAnalyticsJobNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StreamInputEventHubSpecForProvider
 {
     /// <summary>The authentication mode for the Stream Output. Possible values are Msi and ConnectionString. Defaults to ConnectionString.</summary>
@@ -615,6 +638,7 @@ public enum V1beta1StreamInputEventHubSpecInitProviderEventhubConsumerGroupNameR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1StreamInputEventHubSpecInitProviderEventhubConsumerGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -628,6 +652,7 @@ public partial class V1beta1StreamInputEventHubSpecInitProviderEventhubConsumerG
     public V1beta1StreamInputEventHubSpecInitProviderEventhubConsumerGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ConsumerGroup in eventhub to populate eventhubConsumerGroupName.</summary>
 public partial class V1beta1StreamInputEventHubSpecInitProviderEventhubConsumerGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -659,6 +684,7 @@ public enum V1beta1StreamInputEventHubSpecInitProviderEventhubConsumerGroupNameS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1StreamInputEventHubSpecInitProviderEventhubConsumerGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -672,6 +698,7 @@ public partial class V1beta1StreamInputEventHubSpecInitProviderEventhubConsumerG
     public V1beta1StreamInputEventHubSpecInitProviderEventhubConsumerGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ConsumerGroup in eventhub to populate eventhubConsumerGroupName.</summary>
 public partial class V1beta1StreamInputEventHubSpecInitProviderEventhubConsumerGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -707,6 +734,7 @@ public enum V1beta1StreamInputEventHubSpecInitProviderEventhubNameRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1StreamInputEventHubSpecInitProviderEventhubNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -720,6 +748,7 @@ public partial class V1beta1StreamInputEventHubSpecInitProviderEventhubNameRefPo
     public V1beta1StreamInputEventHubSpecInitProviderEventhubNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a EventHub in eventhub to populate eventhubName.</summary>
 public partial class V1beta1StreamInputEventHubSpecInitProviderEventhubNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -751,6 +780,7 @@ public enum V1beta1StreamInputEventHubSpecInitProviderEventhubNameSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1StreamInputEventHubSpecInitProviderEventhubNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -764,6 +794,7 @@ public partial class V1beta1StreamInputEventHubSpecInitProviderEventhubNameSelec
     public V1beta1StreamInputEventHubSpecInitProviderEventhubNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a EventHub in eventhub to populate eventhubName.</summary>
 public partial class V1beta1StreamInputEventHubSpecInitProviderEventhubNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -799,6 +830,7 @@ public enum V1beta1StreamInputEventHubSpecInitProviderResourceGroupNameRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1StreamInputEventHubSpecInitProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -812,6 +844,7 @@ public partial class V1beta1StreamInputEventHubSpecInitProviderResourceGroupName
     public V1beta1StreamInputEventHubSpecInitProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1StreamInputEventHubSpecInitProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -843,6 +876,7 @@ public enum V1beta1StreamInputEventHubSpecInitProviderResourceGroupNameSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1StreamInputEventHubSpecInitProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -856,6 +890,7 @@ public partial class V1beta1StreamInputEventHubSpecInitProviderResourceGroupName
     public V1beta1StreamInputEventHubSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1StreamInputEventHubSpecInitProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -871,6 +906,7 @@ public partial class V1beta1StreamInputEventHubSpecInitProviderResourceGroupName
     public V1beta1StreamInputEventHubSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StreamInputEventHubSpecInitProviderSerialization
 {
     /// <summary>The encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. It currently can only be set to UTF8.</summary>
@@ -906,6 +942,7 @@ public enum V1beta1StreamInputEventHubSpecInitProviderServicebusNamespaceRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1StreamInputEventHubSpecInitProviderServicebusNamespaceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -919,6 +956,7 @@ public partial class V1beta1StreamInputEventHubSpecInitProviderServicebusNamespa
     public V1beta1StreamInputEventHubSpecInitProviderServicebusNamespaceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a EventHubNamespace in eventhub to populate servicebusNamespace.</summary>
 public partial class V1beta1StreamInputEventHubSpecInitProviderServicebusNamespaceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -950,6 +988,7 @@ public enum V1beta1StreamInputEventHubSpecInitProviderServicebusNamespaceSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1StreamInputEventHubSpecInitProviderServicebusNamespaceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -963,6 +1002,7 @@ public partial class V1beta1StreamInputEventHubSpecInitProviderServicebusNamespa
     public V1beta1StreamInputEventHubSpecInitProviderServicebusNamespaceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a EventHubNamespace in eventhub to populate servicebusNamespace.</summary>
 public partial class V1beta1StreamInputEventHubSpecInitProviderServicebusNamespaceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -998,6 +1038,7 @@ public enum V1beta1StreamInputEventHubSpecInitProviderStreamAnalyticsJobNameRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1StreamInputEventHubSpecInitProviderStreamAnalyticsJobNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1011,6 +1052,7 @@ public partial class V1beta1StreamInputEventHubSpecInitProviderStreamAnalyticsJo
     public V1beta1StreamInputEventHubSpecInitProviderStreamAnalyticsJobNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Job in streamanalytics to populate streamAnalyticsJobName.</summary>
 public partial class V1beta1StreamInputEventHubSpecInitProviderStreamAnalyticsJobNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1042,6 +1084,7 @@ public enum V1beta1StreamInputEventHubSpecInitProviderStreamAnalyticsJobNameSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1StreamInputEventHubSpecInitProviderStreamAnalyticsJobNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1055,6 +1098,7 @@ public partial class V1beta1StreamInputEventHubSpecInitProviderStreamAnalyticsJo
     public V1beta1StreamInputEventHubSpecInitProviderStreamAnalyticsJobNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Job in streamanalytics to populate streamAnalyticsJobName.</summary>
 public partial class V1beta1StreamInputEventHubSpecInitProviderStreamAnalyticsJobNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1070,6 +1114,7 @@ public partial class V1beta1StreamInputEventHubSpecInitProviderStreamAnalyticsJo
     public V1beta1StreamInputEventHubSpecInitProviderStreamAnalyticsJobNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1StreamInputEventHubSpecInitProvider
 {
     /// <summary>The authentication mode for the Stream Output. Possible values are Msi and ConnectionString. Defaults to ConnectionString.</summary>
@@ -1195,6 +1240,7 @@ public enum V1beta1StreamInputEventHubSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1StreamInputEventHubSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1208,6 +1254,7 @@ public partial class V1beta1StreamInputEventHubSpecProviderConfigRefPolicy
     public V1beta1StreamInputEventHubSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1StreamInputEventHubSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1239,6 +1286,7 @@ public enum V1beta1StreamInputEventHubSpecPublishConnectionDetailsToConfigRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1StreamInputEventHubSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1252,6 +1300,7 @@ public partial class V1beta1StreamInputEventHubSpecPublishConnectionDetailsToCon
     public V1beta1StreamInputEventHubSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1StreamInputEventHubSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1263,6 +1312,7 @@ public partial class V1beta1StreamInputEventHubSpecPublishConnectionDetailsToCon
     public V1beta1StreamInputEventHubSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1StreamInputEventHubSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1278,6 +1328,7 @@ public partial class V1beta1StreamInputEventHubSpecPublishConnectionDetailsToMet
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1StreamInputEventHubSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1293,6 +1344,7 @@ public partial class V1beta1StreamInputEventHubSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1StreamInputEventHubSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1304,6 +1356,7 @@ public partial class V1beta1StreamInputEventHubSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>StreamInputEventHubSpec defines the desired state of StreamInputEventHub</summary>
 public partial class V1beta1StreamInputEventHubSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1336,6 +1389,7 @@ public partial class V1beta1StreamInputEventHubSpec
     public V1beta1StreamInputEventHubSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StreamInputEventHubStatusAtProviderSerialization
 {
     /// <summary>The encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. It currently can only be set to UTF8.</summary>
@@ -1351,6 +1405,7 @@ public partial class V1beta1StreamInputEventHubStatusAtProviderSerialization
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StreamInputEventHubStatusAtProvider
 {
     /// <summary>The authentication mode for the Stream Output. Possible values are Msi and ConnectionString. Defaults to ConnectionString.</summary>
@@ -1398,6 +1453,7 @@ public partial class V1beta1StreamInputEventHubStatusAtProvider
     public string? StreamAnalyticsJobName { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1StreamInputEventHubStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1425,6 +1481,7 @@ public partial class V1beta1StreamInputEventHubStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>StreamInputEventHubStatus defines the observed state of StreamInputEventHub.</summary>
 public partial class V1beta1StreamInputEventHubStatus
 {
     /// <summary></summary>
@@ -1441,6 +1498,7 @@ public partial class V1beta1StreamInputEventHubStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>StreamInputEventHub is the Schema for the StreamInputEventHubs API. Manages a Stream Analytics Stream Input EventHub.</summary>
 public partial class V1beta1StreamInputEventHub : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1StreamInputEventHubSpec>, IStatus<V1beta1StreamInputEventHubStatus>
 {
     public const string KubeApiVersion = "v1beta1";

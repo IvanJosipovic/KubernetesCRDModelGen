@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.essentialcontacts.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1alpha1EssentialContactsContactSpec
 {
     /// <summary>Immutable. The email address to send notifications to. This does not need to be a Google account.</summary>
@@ -31,6 +32,7 @@ public partial class V1alpha1EssentialContactsContactSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1EssentialContactsContactStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -54,6 +56,7 @@ public partial class V1alpha1EssentialContactsContactStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1EssentialContactsContactStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -70,6 +73,7 @@ public partial class V1alpha1EssentialContactsContactStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1EssentialContactsContact : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1EssentialContactsContactSpec>, IStatus<V1alpha1EssentialContactsContactStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

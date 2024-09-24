@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.azure.com;
+/// <summary>Storage version of v1api20230101.CorsRule Specifies a CORS rule for the Blob service.</summary>
 public partial class V1api20230101storageStorageAccountsFileServiceSpecCorsCorsRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -35,6 +36,7 @@ public partial class V1api20230101storageStorageAccountsFileServiceSpecCorsCorsR
     public int? MaxAgeInSeconds { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.CorsRules Sets the CORS rules. You can include up to five CorsRule elements in the request.</summary>
 public partial class V1api20230101storageStorageAccountsFileServiceSpecCors
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -46,6 +48,7 @@ public partial class V1api20230101storageStorageAccountsFileServiceSpecCors
     public IList<V1api20230101storageStorageAccountsFileServiceSpecCorsCorsRules>? CorsRules { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a storage.azure.com/StorageAccount resource</summary>
 public partial class V1api20230101storageStorageAccountsFileServiceSpecOwner
 {
     /// <summary></summary>
@@ -57,6 +60,7 @@ public partial class V1api20230101storageStorageAccountsFileServiceSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.Multichannel Multichannel setting. Applies to Premium FileStorage only.</summary>
 public partial class V1api20230101storageStorageAccountsFileServiceSpecProtocolSettingsSmbMultichannel
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -68,6 +72,7 @@ public partial class V1api20230101storageStorageAccountsFileServiceSpecProtocolS
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.SmbSetting Setting for SMB protocol</summary>
 public partial class V1api20230101storageStorageAccountsFileServiceSpecProtocolSettingsSmb
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -95,6 +100,7 @@ public partial class V1api20230101storageStorageAccountsFileServiceSpecProtocolS
     public string? Versions { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.ProtocolSettings Protocol settings for file service</summary>
 public partial class V1api20230101storageStorageAccountsFileServiceSpecProtocolSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -106,6 +112,7 @@ public partial class V1api20230101storageStorageAccountsFileServiceSpecProtocolS
     public V1api20230101storageStorageAccountsFileServiceSpecProtocolSettingsSmb? Smb { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.DeleteRetentionPolicy The service properties for soft delete.</summary>
 public partial class V1api20230101storageStorageAccountsFileServiceSpecShareDeleteRetentionPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -125,6 +132,7 @@ public partial class V1api20230101storageStorageAccountsFileServiceSpecShareDele
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.StorageAccounts_FileService_Spec</summary>
 public partial class V1api20230101storageStorageAccountsFileServiceSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -152,6 +160,7 @@ public partial class V1api20230101storageStorageAccountsFileServiceSpec
     public V1api20230101storageStorageAccountsFileServiceSpecShareDeleteRetentionPolicy? ShareDeleteRetentionPolicy { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20230101storageStorageAccountsFileServiceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -183,6 +192,7 @@ public partial class V1api20230101storageStorageAccountsFileServiceStatusConditi
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.CorsRule_STATUS Specifies a CORS rule for the Blob service.</summary>
 public partial class V1api20230101storageStorageAccountsFileServiceStatusCorsCorsRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -210,6 +220,7 @@ public partial class V1api20230101storageStorageAccountsFileServiceStatusCorsCor
     public int? MaxAgeInSeconds { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.CorsRules_STATUS Sets the CORS rules. You can include up to five CorsRule elements in the request.</summary>
 public partial class V1api20230101storageStorageAccountsFileServiceStatusCors
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -221,6 +232,7 @@ public partial class V1api20230101storageStorageAccountsFileServiceStatusCors
     public IList<V1api20230101storageStorageAccountsFileServiceStatusCorsCorsRules>? CorsRules { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.Multichannel_STATUS Multichannel setting. Applies to Premium FileStorage only.</summary>
 public partial class V1api20230101storageStorageAccountsFileServiceStatusProtocolSettingsSmbMultichannel
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -232,6 +244,7 @@ public partial class V1api20230101storageStorageAccountsFileServiceStatusProtoco
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.SmbSetting_STATUS Setting for SMB protocol</summary>
 public partial class V1api20230101storageStorageAccountsFileServiceStatusProtocolSettingsSmb
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -259,6 +272,7 @@ public partial class V1api20230101storageStorageAccountsFileServiceStatusProtoco
     public string? Versions { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.ProtocolSettings_STATUS Protocol settings for file service</summary>
 public partial class V1api20230101storageStorageAccountsFileServiceStatusProtocolSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -270,6 +284,7 @@ public partial class V1api20230101storageStorageAccountsFileServiceStatusProtoco
     public V1api20230101storageStorageAccountsFileServiceStatusProtocolSettingsSmb? Smb { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.DeleteRetentionPolicy_STATUS The service properties for soft delete.</summary>
 public partial class V1api20230101storageStorageAccountsFileServiceStatusShareDeleteRetentionPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -289,6 +304,7 @@ public partial class V1api20230101storageStorageAccountsFileServiceStatusShareDe
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.Sku_STATUS The SKU of the storage account.</summary>
 public partial class V1api20230101storageStorageAccountsFileServiceStatusSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -304,6 +320,7 @@ public partial class V1api20230101storageStorageAccountsFileServiceStatusSku
     public string? Tier { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.StorageAccounts_FileService_STATUS</summary>
 public partial class V1api20230101storageStorageAccountsFileServiceStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -344,6 +361,7 @@ public partial class V1api20230101storageStorageAccountsFileServiceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20230101.StorageAccountsFileService Generator information: - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2023-01-01/file.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/fileServices/default</summary>
 public partial class V1api20230101storageStorageAccountsFileService : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230101storageStorageAccountsFileServiceSpec>, IStatus<V1api20230101storageStorageAccountsFileServiceStatus>
 {
     public const string KubeApiVersion = "v1api20230101storage";

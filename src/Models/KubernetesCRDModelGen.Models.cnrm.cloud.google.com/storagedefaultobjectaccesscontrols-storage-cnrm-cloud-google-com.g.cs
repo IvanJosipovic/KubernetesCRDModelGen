@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.cnrm.cloud.google.com;
+/// <summary>Reference to the bucket.</summary>
 public partial class V1beta1StorageDefaultObjectAccessControlSpecBucketRef
 {
     /// <summary>Allowed value: The `name` field of a `StorageBucket` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1StorageDefaultObjectAccessControlSpecBucketRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StorageDefaultObjectAccessControlSpec
 {
     /// <summary>Reference to the bucket.</summary>
@@ -42,6 +44,7 @@ public partial class V1beta1StorageDefaultObjectAccessControlSpec
     public string Role { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StorageDefaultObjectAccessControlStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -65,6 +68,7 @@ public partial class V1beta1StorageDefaultObjectAccessControlStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary>The project team associated with the entity.</summary>
 public partial class V1beta1StorageDefaultObjectAccessControlStatusProjectTeam
 {
     /// <summary>The project team associated with the entity.</summary>
@@ -76,6 +80,7 @@ public partial class V1beta1StorageDefaultObjectAccessControlStatusProjectTeam
     public string? Team { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StorageDefaultObjectAccessControlStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -108,6 +113,7 @@ public partial class V1beta1StorageDefaultObjectAccessControlStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1StorageDefaultObjectAccessControl : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1StorageDefaultObjectAccessControlSpec>, IStatus<V1beta1StorageDefaultObjectAccessControlStatus>
 {
     public const string KubeApiVersion = "v1beta1";

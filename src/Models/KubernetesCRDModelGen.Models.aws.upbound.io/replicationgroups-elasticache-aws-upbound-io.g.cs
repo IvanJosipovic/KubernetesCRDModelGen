@@ -18,6 +18,7 @@ public enum V1beta2ReplicationGroupSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Password used to access a password protected server. Can be specified only if transit_encryption_enabled = true. If you set autoGenerateAuthToken to true, the Secret referenced here will be created or updated with generated auth token if it does not already contain one.</summary>
 public partial class V1beta2ReplicationGroupSpecForProviderAuthTokenSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -53,6 +54,7 @@ public enum V1beta2ReplicationGroupSpecForProviderGlobalReplicationGroupIdRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2ReplicationGroupSpecForProviderGlobalReplicationGroupIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -66,6 +68,7 @@ public partial class V1beta2ReplicationGroupSpecForProviderGlobalReplicationGrou
     public V1beta2ReplicationGroupSpecForProviderGlobalReplicationGroupIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a GlobalReplicationGroup in elasticache to populate globalReplicationGroupId.</summary>
 public partial class V1beta2ReplicationGroupSpecForProviderGlobalReplicationGroupIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -97,6 +100,7 @@ public enum V1beta2ReplicationGroupSpecForProviderGlobalReplicationGroupIdSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2ReplicationGroupSpecForProviderGlobalReplicationGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta2ReplicationGroupSpecForProviderGlobalReplicationGrou
     public V1beta2ReplicationGroupSpecForProviderGlobalReplicationGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a GlobalReplicationGroup in elasticache to populate globalReplicationGroupId.</summary>
 public partial class V1beta2ReplicationGroupSpecForProviderGlobalReplicationGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -145,6 +150,7 @@ public enum V1beta2ReplicationGroupSpecForProviderKmsKeyIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2ReplicationGroupSpecForProviderKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -158,6 +164,7 @@ public partial class V1beta2ReplicationGroupSpecForProviderKmsKeyIdRefPolicy
     public V1beta2ReplicationGroupSpecForProviderKmsKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta2ReplicationGroupSpecForProviderKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -189,6 +196,7 @@ public enum V1beta2ReplicationGroupSpecForProviderKmsKeyIdSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2ReplicationGroupSpecForProviderKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta2ReplicationGroupSpecForProviderKmsKeyIdSelectorPolic
     public V1beta2ReplicationGroupSpecForProviderKmsKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta2ReplicationGroupSpecForProviderKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -217,6 +226,7 @@ public partial class V1beta2ReplicationGroupSpecForProviderKmsKeyIdSelector
     public V1beta2ReplicationGroupSpecForProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2ReplicationGroupSpecForProviderLogDeliveryConfiguration
 {
     /// <summary>Name of either the CloudWatch Logs LogGroup or Kinesis Data Firehose resource.</summary>
@@ -256,6 +266,7 @@ public enum V1beta2ReplicationGroupSpecForProviderSecurityGroupIdRefsPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2ReplicationGroupSpecForProviderSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -269,6 +280,7 @@ public partial class V1beta2ReplicationGroupSpecForProviderSecurityGroupIdRefsPo
     public V1beta2ReplicationGroupSpecForProviderSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta2ReplicationGroupSpecForProviderSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -300,6 +312,7 @@ public enum V1beta2ReplicationGroupSpecForProviderSecurityGroupIdSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2ReplicationGroupSpecForProviderSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -313,6 +326,7 @@ public partial class V1beta2ReplicationGroupSpecForProviderSecurityGroupIdSelect
     public V1beta2ReplicationGroupSpecForProviderSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 public partial class V1beta2ReplicationGroupSpecForProviderSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -348,6 +362,7 @@ public enum V1beta2ReplicationGroupSpecForProviderSubnetGroupNameRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2ReplicationGroupSpecForProviderSubnetGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -361,6 +376,7 @@ public partial class V1beta2ReplicationGroupSpecForProviderSubnetGroupNameRefPol
     public V1beta2ReplicationGroupSpecForProviderSubnetGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SubnetGroup in elasticache to populate subnetGroupName.</summary>
 public partial class V1beta2ReplicationGroupSpecForProviderSubnetGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -392,6 +408,7 @@ public enum V1beta2ReplicationGroupSpecForProviderSubnetGroupNameSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2ReplicationGroupSpecForProviderSubnetGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -405,6 +422,7 @@ public partial class V1beta2ReplicationGroupSpecForProviderSubnetGroupNameSelect
     public V1beta2ReplicationGroupSpecForProviderSubnetGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SubnetGroup in elasticache to populate subnetGroupName.</summary>
 public partial class V1beta2ReplicationGroupSpecForProviderSubnetGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -420,6 +438,7 @@ public partial class V1beta2ReplicationGroupSpecForProviderSubnetGroupNameSelect
     public V1beta2ReplicationGroupSpecForProviderSubnetGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2ReplicationGroupSpecForProvider
 {
     /// <summary>Specifies whether any modifications are applied immediately, or during the next maintenance window. Default is false.</summary>
@@ -611,6 +630,7 @@ public partial class V1beta2ReplicationGroupSpecForProvider
     public IList<string>? UserGroupIds { get; set; }
 }
 
+/// <summary>Password used to access a password protected server. Can be specified only if transit_encryption_enabled = true. If you set autoGenerateAuthToken to true, the Secret referenced here will be created or updated with generated auth token if it does not already contain one.</summary>
 public partial class V1beta2ReplicationGroupSpecInitProviderAuthTokenSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -646,6 +666,7 @@ public enum V1beta2ReplicationGroupSpecInitProviderGlobalReplicationGroupIdRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2ReplicationGroupSpecInitProviderGlobalReplicationGroupIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -659,6 +680,7 @@ public partial class V1beta2ReplicationGroupSpecInitProviderGlobalReplicationGro
     public V1beta2ReplicationGroupSpecInitProviderGlobalReplicationGroupIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a GlobalReplicationGroup in elasticache to populate globalReplicationGroupId.</summary>
 public partial class V1beta2ReplicationGroupSpecInitProviderGlobalReplicationGroupIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -690,6 +712,7 @@ public enum V1beta2ReplicationGroupSpecInitProviderGlobalReplicationGroupIdSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2ReplicationGroupSpecInitProviderGlobalReplicationGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -703,6 +726,7 @@ public partial class V1beta2ReplicationGroupSpecInitProviderGlobalReplicationGro
     public V1beta2ReplicationGroupSpecInitProviderGlobalReplicationGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a GlobalReplicationGroup in elasticache to populate globalReplicationGroupId.</summary>
 public partial class V1beta2ReplicationGroupSpecInitProviderGlobalReplicationGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -738,6 +762,7 @@ public enum V1beta2ReplicationGroupSpecInitProviderKmsKeyIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2ReplicationGroupSpecInitProviderKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -751,6 +776,7 @@ public partial class V1beta2ReplicationGroupSpecInitProviderKmsKeyIdRefPolicy
     public V1beta2ReplicationGroupSpecInitProviderKmsKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta2ReplicationGroupSpecInitProviderKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -782,6 +808,7 @@ public enum V1beta2ReplicationGroupSpecInitProviderKmsKeyIdSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2ReplicationGroupSpecInitProviderKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -795,6 +822,7 @@ public partial class V1beta2ReplicationGroupSpecInitProviderKmsKeyIdSelectorPoli
     public V1beta2ReplicationGroupSpecInitProviderKmsKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta2ReplicationGroupSpecInitProviderKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -810,6 +838,7 @@ public partial class V1beta2ReplicationGroupSpecInitProviderKmsKeyIdSelector
     public V1beta2ReplicationGroupSpecInitProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2ReplicationGroupSpecInitProviderLogDeliveryConfiguration
 {
     /// <summary>Name of either the CloudWatch Logs LogGroup or Kinesis Data Firehose resource.</summary>
@@ -849,6 +878,7 @@ public enum V1beta2ReplicationGroupSpecInitProviderSecurityGroupIdRefsPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2ReplicationGroupSpecInitProviderSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -862,6 +892,7 @@ public partial class V1beta2ReplicationGroupSpecInitProviderSecurityGroupIdRefsP
     public V1beta2ReplicationGroupSpecInitProviderSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta2ReplicationGroupSpecInitProviderSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -893,6 +924,7 @@ public enum V1beta2ReplicationGroupSpecInitProviderSecurityGroupIdSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2ReplicationGroupSpecInitProviderSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -906,6 +938,7 @@ public partial class V1beta2ReplicationGroupSpecInitProviderSecurityGroupIdSelec
     public V1beta2ReplicationGroupSpecInitProviderSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 public partial class V1beta2ReplicationGroupSpecInitProviderSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -941,6 +974,7 @@ public enum V1beta2ReplicationGroupSpecInitProviderSubnetGroupNameRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2ReplicationGroupSpecInitProviderSubnetGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -954,6 +988,7 @@ public partial class V1beta2ReplicationGroupSpecInitProviderSubnetGroupNameRefPo
     public V1beta2ReplicationGroupSpecInitProviderSubnetGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SubnetGroup in elasticache to populate subnetGroupName.</summary>
 public partial class V1beta2ReplicationGroupSpecInitProviderSubnetGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -985,6 +1020,7 @@ public enum V1beta2ReplicationGroupSpecInitProviderSubnetGroupNameSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2ReplicationGroupSpecInitProviderSubnetGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -998,6 +1034,7 @@ public partial class V1beta2ReplicationGroupSpecInitProviderSubnetGroupNameSelec
     public V1beta2ReplicationGroupSpecInitProviderSubnetGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SubnetGroup in elasticache to populate subnetGroupName.</summary>
 public partial class V1beta2ReplicationGroupSpecInitProviderSubnetGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1013,6 +1050,7 @@ public partial class V1beta2ReplicationGroupSpecInitProviderSubnetGroupNameSelec
     public V1beta2ReplicationGroupSpecInitProviderSubnetGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta2ReplicationGroupSpecInitProvider
 {
     /// <summary>Specifies whether any modifications are applied immediately, or during the next maintenance window. Default is false.</summary>
@@ -1238,6 +1276,7 @@ public enum V1beta2ReplicationGroupSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2ReplicationGroupSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1251,6 +1290,7 @@ public partial class V1beta2ReplicationGroupSpecProviderConfigRefPolicy
     public V1beta2ReplicationGroupSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta2ReplicationGroupSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1282,6 +1322,7 @@ public enum V1beta2ReplicationGroupSpecPublishConnectionDetailsToConfigRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2ReplicationGroupSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1295,6 +1336,7 @@ public partial class V1beta2ReplicationGroupSpecPublishConnectionDetailsToConfig
     public V1beta2ReplicationGroupSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta2ReplicationGroupSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1306,6 +1348,7 @@ public partial class V1beta2ReplicationGroupSpecPublishConnectionDetailsToConfig
     public V1beta2ReplicationGroupSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta2ReplicationGroupSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1321,6 +1364,7 @@ public partial class V1beta2ReplicationGroupSpecPublishConnectionDetailsToMetada
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta2ReplicationGroupSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1336,6 +1380,7 @@ public partial class V1beta2ReplicationGroupSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta2ReplicationGroupSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1347,6 +1392,7 @@ public partial class V1beta2ReplicationGroupSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ReplicationGroupSpec defines the desired state of ReplicationGroup</summary>
 public partial class V1beta2ReplicationGroupSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1379,6 +1425,7 @@ public partial class V1beta2ReplicationGroupSpec
     public V1beta2ReplicationGroupSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2ReplicationGroupStatusAtProviderLogDeliveryConfiguration
 {
     /// <summary>Name of either the CloudWatch Logs LogGroup or Kinesis Data Firehose resource.</summary>
@@ -1398,6 +1445,7 @@ public partial class V1beta2ReplicationGroupStatusAtProviderLogDeliveryConfigura
     public string? LogType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2ReplicationGroupStatusAtProvider
 {
     /// <summary>Specifies whether any modifications are applied immediately, or during the next maintenance window. Default is false.</summary>
@@ -1581,6 +1629,7 @@ public partial class V1beta2ReplicationGroupStatusAtProvider
     public IList<string>? UserGroupIds { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta2ReplicationGroupStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1608,6 +1657,7 @@ public partial class V1beta2ReplicationGroupStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ReplicationGroupStatus defines the observed state of ReplicationGroup.</summary>
 public partial class V1beta2ReplicationGroupStatus
 {
     /// <summary></summary>
@@ -1624,6 +1674,7 @@ public partial class V1beta2ReplicationGroupStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ReplicationGroup is the Schema for the ReplicationGroups API. Provides an ElastiCache Replication Group resource.</summary>
 public partial class V1beta2ReplicationGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta2ReplicationGroupSpec>, IStatus<V1beta2ReplicationGroupStatus>
 {
     public const string KubeApiVersion = "v1beta2";

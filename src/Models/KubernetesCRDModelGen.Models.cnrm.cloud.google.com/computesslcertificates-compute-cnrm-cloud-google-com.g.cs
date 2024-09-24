@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 public partial class V1beta1ComputeSSLCertificateSpecCertificateValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -19,6 +20,7 @@ public partial class V1beta1ComputeSSLCertificateSpecCertificateValueFromSecretK
     public string Name { get; set; }
 }
 
+/// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 public partial class V1beta1ComputeSSLCertificateSpecCertificateValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -26,6 +28,7 @@ public partial class V1beta1ComputeSSLCertificateSpecCertificateValueFrom
     public V1beta1ComputeSSLCertificateSpecCertificateValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary>Immutable. The certificate in PEM format. The certificate chain must be no greater than 5 certs long. The chain must include at least one intermediate cert.</summary>
 public partial class V1beta1ComputeSSLCertificateSpecCertificate
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -37,6 +40,7 @@ public partial class V1beta1ComputeSSLCertificateSpecCertificate
     public V1beta1ComputeSSLCertificateSpecCertificateValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 public partial class V1beta1ComputeSSLCertificateSpecPrivateKeyValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -48,6 +52,7 @@ public partial class V1beta1ComputeSSLCertificateSpecPrivateKeyValueFromSecretKe
     public string Name { get; set; }
 }
 
+/// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 public partial class V1beta1ComputeSSLCertificateSpecPrivateKeyValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -55,6 +60,7 @@ public partial class V1beta1ComputeSSLCertificateSpecPrivateKeyValueFrom
     public V1beta1ComputeSSLCertificateSpecPrivateKeyValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary>Immutable. The write-only private key in PEM format.</summary>
 public partial class V1beta1ComputeSSLCertificateSpecPrivateKey
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -66,6 +72,7 @@ public partial class V1beta1ComputeSSLCertificateSpecPrivateKey
     public V1beta1ComputeSSLCertificateSpecPrivateKeyValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeSSLCertificateSpec
 {
     /// <summary>Immutable. The certificate in PEM format. The certificate chain must be no greater than 5 certs long. The chain must include at least one intermediate cert.</summary>
@@ -89,6 +96,7 @@ public partial class V1beta1ComputeSSLCertificateSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeSSLCertificateStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -112,6 +120,7 @@ public partial class V1beta1ComputeSSLCertificateStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeSSLCertificateStatus
 {
     /// <summary>The unique identifier for the resource.</summary>
@@ -140,6 +149,7 @@ public partial class V1beta1ComputeSSLCertificateStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ComputeSSLCertificate : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeSSLCertificateSpec>, IStatus<V1beta1ComputeSSLCertificateStatus>
 {
     public const string KubeApiVersion = "v1beta1";

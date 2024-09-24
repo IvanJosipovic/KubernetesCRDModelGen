@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.azure.com;
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a sql.azure.com/ServersDatabase resource</summary>
 public partial class V1api20211101storageServersDatabasesTransparentDataEncryptionSpecOwner
 {
     /// <summary></summary>
@@ -19,6 +20,7 @@ public partial class V1api20211101storageServersDatabasesTransparentDataEncrypti
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.Servers_Databases_TransparentDataEncryption_Spec</summary>
 public partial class V1api20211101storageServersDatabasesTransparentDataEncryptionSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -38,6 +40,7 @@ public partial class V1api20211101storageServersDatabasesTransparentDataEncrypti
     public string? State { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20211101storageServersDatabasesTransparentDataEncryptionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -69,6 +72,7 @@ public partial class V1api20211101storageServersDatabasesTransparentDataEncrypti
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.Servers_Databases_TransparentDataEncryption_STATUS</summary>
 public partial class V1api20211101storageServersDatabasesTransparentDataEncryptionStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -97,6 +101,7 @@ public partial class V1api20211101storageServersDatabasesTransparentDataEncrypti
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20211101.ServersDatabasesTransparentDataEncryption Generator information: - Generated from: /sql/resource-manager/Microsoft.Sql/stable/2021-11-01/TransparentDataEncryptions.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/transparentDataEncryption/{tdeName}</summary>
 public partial class V1api20211101storageServersDatabasesTransparentDataEncryption : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20211101storageServersDatabasesTransparentDataEncryptionSpec>, IStatus<V1api20211101storageServersDatabasesTransparentDataEncryptionStatus>
 {
     public const string KubeApiVersion = "v1api20211101storage";

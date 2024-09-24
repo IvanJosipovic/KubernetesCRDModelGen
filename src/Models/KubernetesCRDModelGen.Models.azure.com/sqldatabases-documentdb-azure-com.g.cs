@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.documentdb.azure.com;
+/// <summary>Storage version of v1api20231115.AutoscaleSettings</summary>
 public partial class V1api20231115storageSqlDatabaseSpecOptionsAutoscaleSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -19,6 +20,7 @@ public partial class V1api20231115storageSqlDatabaseSpecOptionsAutoscaleSettings
     public int? MaxThroughput { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.CreateUpdateOptions CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"</summary>
 public partial class V1api20231115storageSqlDatabaseSpecOptions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -34,6 +36,7 @@ public partial class V1api20231115storageSqlDatabaseSpecOptions
     public int? Throughput { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a documentdb.azure.com/DatabaseAccount resource</summary>
 public partial class V1api20231115storageSqlDatabaseSpecOwner
 {
     /// <summary></summary>
@@ -45,6 +48,7 @@ public partial class V1api20231115storageSqlDatabaseSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.RestoreParametersBase Parameters to indicate the information about the restore.</summary>
 public partial class V1api20231115storageSqlDatabaseSpecResourceRestoreParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -60,6 +64,7 @@ public partial class V1api20231115storageSqlDatabaseSpecResourceRestoreParameter
     public string? RestoreTimestampInUtc { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.SqlDatabaseResource Cosmos DB SQL database resource object</summary>
 public partial class V1api20231115storageSqlDatabaseSpecResource
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -79,6 +84,7 @@ public partial class V1api20231115storageSqlDatabaseSpecResource
     public V1api20231115storageSqlDatabaseSpecResourceRestoreParameters? RestoreParameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.DatabaseAccounts_SqlDatabase_Spec</summary>
 public partial class V1api20231115storageSqlDatabaseSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -114,6 +120,7 @@ public partial class V1api20231115storageSqlDatabaseSpec
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20231115storageSqlDatabaseStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -145,6 +152,7 @@ public partial class V1api20231115storageSqlDatabaseStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.AutoscaleSettings_STATUS</summary>
 public partial class V1api20231115storageSqlDatabaseStatusOptionsAutoscaleSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -156,6 +164,7 @@ public partial class V1api20231115storageSqlDatabaseStatusOptionsAutoscaleSettin
     public int? MaxThroughput { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.OptionsResource_STATUS Cosmos DB options resource object</summary>
 public partial class V1api20231115storageSqlDatabaseStatusOptions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -171,6 +180,7 @@ public partial class V1api20231115storageSqlDatabaseStatusOptions
     public int? Throughput { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.RestoreParametersBase_STATUS Parameters to indicate the information about the restore.</summary>
 public partial class V1api20231115storageSqlDatabaseStatusResourceRestoreParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -186,6 +196,7 @@ public partial class V1api20231115storageSqlDatabaseStatusResourceRestoreParamet
     public string? RestoreTimestampInUtc { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.SqlDatabaseGetProperties_Resource_STATUS</summary>
 public partial class V1api20231115storageSqlDatabaseStatusResource
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -225,6 +236,7 @@ public partial class V1api20231115storageSqlDatabaseStatusResource
     public V1api20231115storageSqlDatabaseStatusResourceRestoreParameters? RestoreParameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.DatabaseAccounts_SqlDatabase_STATUS</summary>
 public partial class V1api20231115storageSqlDatabaseStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -265,6 +277,7 @@ public partial class V1api20231115storageSqlDatabaseStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20231115.SqlDatabase Generator information: - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2023-11-15/cosmos-db.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}</summary>
 public partial class V1api20231115storageSqlDatabase : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20231115storageSqlDatabaseSpec>, IStatus<V1api20231115storageSqlDatabaseStatus>
 {
     public const string KubeApiVersion = "v1api20231115storage";

@@ -38,6 +38,7 @@ public enum V1beta1TriggerSpecForProviderActionsCrawlerNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TriggerSpecForProviderActionsCrawlerNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1TriggerSpecForProviderActionsCrawlerNameRefPolicy
     public V1beta1TriggerSpecForProviderActionsCrawlerNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Crawler in glue to populate crawlerName.</summary>
 public partial class V1beta1TriggerSpecForProviderActionsCrawlerNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1TriggerSpecForProviderActionsCrawlerNameSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TriggerSpecForProviderActionsCrawlerNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1TriggerSpecForProviderActionsCrawlerNameSelectorPoli
     public V1beta1TriggerSpecForProviderActionsCrawlerNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Crawler in glue to populate crawlerName.</summary>
 public partial class V1beta1TriggerSpecForProviderActionsCrawlerNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1TriggerSpecForProviderActionsJobNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TriggerSpecForProviderActionsJobNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1TriggerSpecForProviderActionsJobNameRefPolicy
     public V1beta1TriggerSpecForProviderActionsJobNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Job in glue to populate jobName.</summary>
 public partial class V1beta1TriggerSpecForProviderActionsJobNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1TriggerSpecForProviderActionsJobNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TriggerSpecForProviderActionsJobNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1TriggerSpecForProviderActionsJobNameSelectorPolicy
     public V1beta1TriggerSpecForProviderActionsJobNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Job in glue to populate jobName.</summary>
 public partial class V1beta1TriggerSpecForProviderActionsJobNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1TriggerSpecForProviderActionsJobNameSelector
     public V1beta1TriggerSpecForProviderActionsJobNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecForProviderActionsNotificationProperty
 {
     /// <summary>After a job run starts, the number of minutes to wait before sending a job run delay notification.</summary>
@@ -209,6 +218,7 @@ public partial class V1beta1TriggerSpecForProviderActionsNotificationProperty
     public double? NotifyDelayAfter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecForProviderActions
 {
     /// <summary>Arguments to be passed to the job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes.</summary>
@@ -252,6 +262,7 @@ public partial class V1beta1TriggerSpecForProviderActions
     public double? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecForProviderEventBatchingCondition
 {
     /// <summary>Number of events that must be received from Amazon EventBridge before EventBridge  event trigger fires.</summary>
@@ -283,6 +294,7 @@ public enum V1beta1TriggerSpecForProviderPredicateConditionsCrawlerNameRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TriggerSpecForProviderPredicateConditionsCrawlerNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -296,6 +308,7 @@ public partial class V1beta1TriggerSpecForProviderPredicateConditionsCrawlerName
     public V1beta1TriggerSpecForProviderPredicateConditionsCrawlerNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Crawler in glue to populate crawlerName.</summary>
 public partial class V1beta1TriggerSpecForProviderPredicateConditionsCrawlerNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -327,6 +340,7 @@ public enum V1beta1TriggerSpecForProviderPredicateConditionsCrawlerNameSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TriggerSpecForProviderPredicateConditionsCrawlerNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -340,6 +354,7 @@ public partial class V1beta1TriggerSpecForProviderPredicateConditionsCrawlerName
     public V1beta1TriggerSpecForProviderPredicateConditionsCrawlerNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Crawler in glue to populate crawlerName.</summary>
 public partial class V1beta1TriggerSpecForProviderPredicateConditionsCrawlerNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -375,6 +390,7 @@ public enum V1beta1TriggerSpecForProviderPredicateConditionsJobNameRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TriggerSpecForProviderPredicateConditionsJobNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -388,6 +404,7 @@ public partial class V1beta1TriggerSpecForProviderPredicateConditionsJobNameRefP
     public V1beta1TriggerSpecForProviderPredicateConditionsJobNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Job in glue to populate jobName.</summary>
 public partial class V1beta1TriggerSpecForProviderPredicateConditionsJobNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -419,6 +436,7 @@ public enum V1beta1TriggerSpecForProviderPredicateConditionsJobNameSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TriggerSpecForProviderPredicateConditionsJobNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -432,6 +450,7 @@ public partial class V1beta1TriggerSpecForProviderPredicateConditionsJobNameSele
     public V1beta1TriggerSpecForProviderPredicateConditionsJobNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Job in glue to populate jobName.</summary>
 public partial class V1beta1TriggerSpecForProviderPredicateConditionsJobNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -447,6 +466,7 @@ public partial class V1beta1TriggerSpecForProviderPredicateConditionsJobNameSele
     public V1beta1TriggerSpecForProviderPredicateConditionsJobNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecForProviderPredicateConditions
 {
     /// <summary>The condition crawl state. Currently, the values supported are RUNNING, SUCCEEDED, CANCELLED, and FAILED. If this is specified, crawler_name must also be specified. Conflicts with state.</summary>
@@ -486,6 +506,7 @@ public partial class V1beta1TriggerSpecForProviderPredicateConditions
     public string? State { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecForProviderPredicate
 {
     /// <summary>A list of the conditions that determine when the trigger will fire. See Conditions.</summary>
@@ -497,6 +518,7 @@ public partial class V1beta1TriggerSpecForProviderPredicate
     public string? Logical { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecForProvider
 {
     /// <summary>–  List of actions initiated by this trigger when it fires. See Actions Below.</summary>
@@ -564,6 +586,7 @@ public enum V1beta1TriggerSpecInitProviderActionsCrawlerNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TriggerSpecInitProviderActionsCrawlerNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -577,6 +600,7 @@ public partial class V1beta1TriggerSpecInitProviderActionsCrawlerNameRefPolicy
     public V1beta1TriggerSpecInitProviderActionsCrawlerNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Crawler in glue to populate crawlerName.</summary>
 public partial class V1beta1TriggerSpecInitProviderActionsCrawlerNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -608,6 +632,7 @@ public enum V1beta1TriggerSpecInitProviderActionsCrawlerNameSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TriggerSpecInitProviderActionsCrawlerNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -621,6 +646,7 @@ public partial class V1beta1TriggerSpecInitProviderActionsCrawlerNameSelectorPol
     public V1beta1TriggerSpecInitProviderActionsCrawlerNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Crawler in glue to populate crawlerName.</summary>
 public partial class V1beta1TriggerSpecInitProviderActionsCrawlerNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -656,6 +682,7 @@ public enum V1beta1TriggerSpecInitProviderActionsJobNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TriggerSpecInitProviderActionsJobNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -669,6 +696,7 @@ public partial class V1beta1TriggerSpecInitProviderActionsJobNameRefPolicy
     public V1beta1TriggerSpecInitProviderActionsJobNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Job in glue to populate jobName.</summary>
 public partial class V1beta1TriggerSpecInitProviderActionsJobNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -700,6 +728,7 @@ public enum V1beta1TriggerSpecInitProviderActionsJobNameSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TriggerSpecInitProviderActionsJobNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -713,6 +742,7 @@ public partial class V1beta1TriggerSpecInitProviderActionsJobNameSelectorPolicy
     public V1beta1TriggerSpecInitProviderActionsJobNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Job in glue to populate jobName.</summary>
 public partial class V1beta1TriggerSpecInitProviderActionsJobNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -728,6 +758,7 @@ public partial class V1beta1TriggerSpecInitProviderActionsJobNameSelector
     public V1beta1TriggerSpecInitProviderActionsJobNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecInitProviderActionsNotificationProperty
 {
     /// <summary>After a job run starts, the number of minutes to wait before sending a job run delay notification.</summary>
@@ -735,6 +766,7 @@ public partial class V1beta1TriggerSpecInitProviderActionsNotificationProperty
     public double? NotifyDelayAfter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecInitProviderActions
 {
     /// <summary>Arguments to be passed to the job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes.</summary>
@@ -778,6 +810,7 @@ public partial class V1beta1TriggerSpecInitProviderActions
     public double? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecInitProviderEventBatchingCondition
 {
     /// <summary>Number of events that must be received from Amazon EventBridge before EventBridge  event trigger fires.</summary>
@@ -809,6 +842,7 @@ public enum V1beta1TriggerSpecInitProviderPredicateConditionsCrawlerNameRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TriggerSpecInitProviderPredicateConditionsCrawlerNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -822,6 +856,7 @@ public partial class V1beta1TriggerSpecInitProviderPredicateConditionsCrawlerNam
     public V1beta1TriggerSpecInitProviderPredicateConditionsCrawlerNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Crawler in glue to populate crawlerName.</summary>
 public partial class V1beta1TriggerSpecInitProviderPredicateConditionsCrawlerNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -853,6 +888,7 @@ public enum V1beta1TriggerSpecInitProviderPredicateConditionsCrawlerNameSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TriggerSpecInitProviderPredicateConditionsCrawlerNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -866,6 +902,7 @@ public partial class V1beta1TriggerSpecInitProviderPredicateConditionsCrawlerNam
     public V1beta1TriggerSpecInitProviderPredicateConditionsCrawlerNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Crawler in glue to populate crawlerName.</summary>
 public partial class V1beta1TriggerSpecInitProviderPredicateConditionsCrawlerNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -901,6 +938,7 @@ public enum V1beta1TriggerSpecInitProviderPredicateConditionsJobNameRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TriggerSpecInitProviderPredicateConditionsJobNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -914,6 +952,7 @@ public partial class V1beta1TriggerSpecInitProviderPredicateConditionsJobNameRef
     public V1beta1TriggerSpecInitProviderPredicateConditionsJobNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Job in glue to populate jobName.</summary>
 public partial class V1beta1TriggerSpecInitProviderPredicateConditionsJobNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -945,6 +984,7 @@ public enum V1beta1TriggerSpecInitProviderPredicateConditionsJobNameSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TriggerSpecInitProviderPredicateConditionsJobNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -958,6 +998,7 @@ public partial class V1beta1TriggerSpecInitProviderPredicateConditionsJobNameSel
     public V1beta1TriggerSpecInitProviderPredicateConditionsJobNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Job in glue to populate jobName.</summary>
 public partial class V1beta1TriggerSpecInitProviderPredicateConditionsJobNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -973,6 +1014,7 @@ public partial class V1beta1TriggerSpecInitProviderPredicateConditionsJobNameSel
     public V1beta1TriggerSpecInitProviderPredicateConditionsJobNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecInitProviderPredicateConditions
 {
     /// <summary>The condition crawl state. Currently, the values supported are RUNNING, SUCCEEDED, CANCELLED, and FAILED. If this is specified, crawler_name must also be specified. Conflicts with state.</summary>
@@ -1012,6 +1054,7 @@ public partial class V1beta1TriggerSpecInitProviderPredicateConditions
     public string? State { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecInitProviderPredicate
 {
     /// <summary>A list of the conditions that determine when the trigger will fire. See Conditions.</summary>
@@ -1023,6 +1066,7 @@ public partial class V1beta1TriggerSpecInitProviderPredicate
     public string? Logical { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1TriggerSpecInitProvider
 {
     /// <summary>–  List of actions initiated by this trigger when it fires. See Actions Below.</summary>
@@ -1108,6 +1152,7 @@ public enum V1beta1TriggerSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TriggerSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1121,6 +1166,7 @@ public partial class V1beta1TriggerSpecProviderConfigRefPolicy
     public V1beta1TriggerSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1TriggerSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1152,6 +1198,7 @@ public enum V1beta1TriggerSpecPublishConnectionDetailsToConfigRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TriggerSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1165,6 +1212,7 @@ public partial class V1beta1TriggerSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1TriggerSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1TriggerSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1176,6 +1224,7 @@ public partial class V1beta1TriggerSpecPublishConnectionDetailsToConfigRef
     public V1beta1TriggerSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1TriggerSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1191,6 +1240,7 @@ public partial class V1beta1TriggerSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1TriggerSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1206,6 +1256,7 @@ public partial class V1beta1TriggerSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1TriggerSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1217,6 +1268,7 @@ public partial class V1beta1TriggerSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>TriggerSpec defines the desired state of Trigger</summary>
 public partial class V1beta1TriggerSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1249,6 +1301,7 @@ public partial class V1beta1TriggerSpec
     public V1beta1TriggerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProviderActionsNotificationProperty
 {
     /// <summary>After a job run starts, the number of minutes to wait before sending a job run delay notification.</summary>
@@ -1256,6 +1309,7 @@ public partial class V1beta1TriggerStatusAtProviderActionsNotificationProperty
     public double? NotifyDelayAfter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProviderActions
 {
     /// <summary>Arguments to be passed to the job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes.</summary>
@@ -1283,6 +1337,7 @@ public partial class V1beta1TriggerStatusAtProviderActions
     public double? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProviderEventBatchingCondition
 {
     /// <summary>Number of events that must be received from Amazon EventBridge before EventBridge  event trigger fires.</summary>
@@ -1294,6 +1349,7 @@ public partial class V1beta1TriggerStatusAtProviderEventBatchingCondition
     public double? BatchWindow { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProviderPredicateConditions
 {
     /// <summary>The condition crawl state. Currently, the values supported are RUNNING, SUCCEEDED, CANCELLED, and FAILED. If this is specified, crawler_name must also be specified. Conflicts with state.</summary>
@@ -1317,6 +1373,7 @@ public partial class V1beta1TriggerStatusAtProviderPredicateConditions
     public string? State { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProviderPredicate
 {
     /// <summary>A list of the conditions that determine when the trigger will fire. See Conditions.</summary>
@@ -1328,6 +1385,7 @@ public partial class V1beta1TriggerStatusAtProviderPredicate
     public string? Logical { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProvider
 {
     /// <summary>–  List of actions initiated by this trigger when it fires. See Actions Below.</summary>
@@ -1387,6 +1445,7 @@ public partial class V1beta1TriggerStatusAtProvider
     public string? WorkflowName { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1TriggerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1414,6 +1473,7 @@ public partial class V1beta1TriggerStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>TriggerStatus defines the observed state of Trigger.</summary>
 public partial class V1beta1TriggerStatus
 {
     /// <summary></summary>
@@ -1430,6 +1490,7 @@ public partial class V1beta1TriggerStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Trigger is the Schema for the Triggers API. Manages a Glue Trigger resource.</summary>
 public partial class V1beta1Trigger : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1TriggerSpec>, IStatus<V1beta1TriggerStatus>
 {
     public const string KubeApiVersion = "v1beta1";

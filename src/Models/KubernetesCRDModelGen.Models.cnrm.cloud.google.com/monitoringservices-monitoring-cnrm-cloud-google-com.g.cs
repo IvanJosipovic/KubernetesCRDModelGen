@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.monitoring.cnrm.cloud.google.com;
+/// <summary>Immutable. The Project that this resource belongs to.</summary>
 public partial class V1beta1MonitoringServiceSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1MonitoringServiceSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Configuration for how to query telemetry on a Service.</summary>
 public partial class V1beta1MonitoringServiceSpecTelemetry
 {
     /// <summary>The full name of the resource that defines this service. Formatted as described in https://cloud.google.com/apis/design/resource_names.</summary>
@@ -30,6 +32,7 @@ public partial class V1beta1MonitoringServiceSpecTelemetry
     public string? ResourceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringServiceSpec
 {
     /// <summary>Name used for UI elements listing this Service.</summary>
@@ -49,6 +52,7 @@ public partial class V1beta1MonitoringServiceSpec
     public V1beta1MonitoringServiceSpecTelemetry? Telemetry { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringServiceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -72,6 +76,7 @@ public partial class V1beta1MonitoringServiceStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringServiceStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -84,6 +89,7 @@ public partial class V1beta1MonitoringServiceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1MonitoringService : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MonitoringServiceSpec>, IStatus<V1beta1MonitoringServiceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

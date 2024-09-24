@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigquery.cnrm.cloud.google.com;
+/// <summary>The dataset this entry applies to.</summary>
 public partial class V1beta1BigQueryDatasetSpecAccessDatasetDataset
 {
     /// <summary>Required. A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.</summary>
@@ -19,6 +20,7 @@ public partial class V1beta1BigQueryDatasetSpecAccessDatasetDataset
     public string ProjectId { get; set; }
 }
 
+/// <summary>[Pick one] A grant authorizing all resources of a particular type in a particular dataset access to this dataset. Only views are supported for now. The role field is not required when this field is set. If that dataset is deleted and re-created, its access needs to be granted again via an update operation.</summary>
 public partial class V1beta1BigQueryDatasetSpecAccessDataset
 {
     /// <summary>The dataset this entry applies to.</summary>
@@ -30,6 +32,7 @@ public partial class V1beta1BigQueryDatasetSpecAccessDataset
     public IList<string> TargetTypes { get; set; }
 }
 
+/// <summary>[Pick one] A routine from a different dataset to grant access to. Queries executed against that routine will have read access to views/tables/routines in this dataset. Only UDF is supported for now. The role field is not required when this field is set. If that routine is updated by any user, access to the routine needs to be granted again via an update operation.</summary>
 public partial class V1beta1BigQueryDatasetSpecAccessRoutine
 {
     /// <summary>Required. The ID of the dataset containing this routine.</summary>
@@ -45,6 +48,7 @@ public partial class V1beta1BigQueryDatasetSpecAccessRoutine
     public string RoutineId { get; set; }
 }
 
+/// <summary>[Pick one] A view from a different dataset to grant access to. Queries executed against that view will have read access to views/tables/routines in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to the view needs to be granted again via an update operation.</summary>
 public partial class V1beta1BigQueryDatasetSpecAccessView
 {
     /// <summary>Required. The ID of the dataset containing this table.</summary>
@@ -60,6 +64,7 @@ public partial class V1beta1BigQueryDatasetSpecAccessView
     public string TableId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BigQueryDatasetSpecAccess
 {
     /// <summary>[Pick one] A grant authorizing all resources of a particular type in a particular dataset access to this dataset. Only views are supported for now. The role field is not required when this field is set. If that dataset is deleted and re-created, its access needs to be granted again via an update operation.</summary>
@@ -99,6 +104,7 @@ public partial class V1beta1BigQueryDatasetSpecAccess
     public V1beta1BigQueryDatasetSpecAccessView? View { get; set; }
 }
 
+/// <summary>Optional. Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.</summary>
 public partial class V1beta1BigQueryDatasetSpecDefaultEncryptionConfigurationKmsKeyRef
 {
     /// <summary>A reference to an externally managed KMSCryptoKey. Should be in the format `projects/[kms_project_id]/locations/[region]/keyRings/[key_ring_id]/cryptoKeys/[key]`.</summary>
@@ -114,6 +120,7 @@ public partial class V1beta1BigQueryDatasetSpecDefaultEncryptionConfigurationKms
     public string? Namespace { get; set; }
 }
 
+/// <summary>The default encryption key for all tables in the dataset. After this property is set, the encryption key of all newly-created tables in the dataset is set to this value unless the table creation request or query explicitly overrides the key.</summary>
 public partial class V1beta1BigQueryDatasetSpecDefaultEncryptionConfiguration
 {
     /// <summary>Optional. Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.</summary>
@@ -121,6 +128,7 @@ public partial class V1beta1BigQueryDatasetSpecDefaultEncryptionConfiguration
     public V1beta1BigQueryDatasetSpecDefaultEncryptionConfigurationKmsKeyRef? KmsKeyRef { get; set; }
 }
 
+/// <summary>The project that this resource belongs to. optional.</summary>
 public partial class V1beta1BigQueryDatasetSpecProjectRef
 {
     /// <summary>The `projectID` field of a project, when not managed by Config Connector.</summary>
@@ -140,6 +148,7 @@ public partial class V1beta1BigQueryDatasetSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>BigQueryDatasetSpec defines the desired state of BigQueryDataset</summary>
 public partial class V1beta1BigQueryDatasetSpec
 {
     /// <summary>An array of objects that define dataset access for one or more entities.</summary>
@@ -195,6 +204,7 @@ public partial class V1beta1BigQueryDatasetSpec
     public string? StorageBillingModel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BigQueryDatasetStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -218,6 +228,7 @@ public partial class V1beta1BigQueryDatasetStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary>BigQueryDatasetStatus defines the config connector machine state of BigQueryDataset</summary>
 public partial class V1beta1BigQueryDatasetStatus
 {
     /// <summary>Conditions represent the latest available observations of the object's current state.</summary>
@@ -246,6 +257,7 @@ public partial class V1beta1BigQueryDatasetStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>BigQueryDataset is the Schema for the BigQueryDataset API</summary>
 public partial class V1beta1BigQueryDataset : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BigQueryDatasetSpec>, IStatus<V1beta1BigQueryDatasetStatus>
 {
     public const string KubeApiVersion = "v1beta1";

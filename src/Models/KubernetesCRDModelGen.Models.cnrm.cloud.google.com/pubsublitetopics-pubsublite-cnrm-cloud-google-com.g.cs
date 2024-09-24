@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.pubsublite.cnrm.cloud.google.com;
+/// <summary>The capacity configuration.</summary>
 public partial class V1alpha1PubSubLiteTopicSpecPartitionConfigCapacity
 {
     /// <summary>Subscribe throughput capacity per partition in MiB/s. Must be &gt;= 4 and &lt;= 16.</summary>
@@ -19,6 +20,7 @@ public partial class V1alpha1PubSubLiteTopicSpecPartitionConfigCapacity
     public int SubscribeMibPerSec { get; set; }
 }
 
+/// <summary>The settings for this topic's partitions.</summary>
 public partial class V1alpha1PubSubLiteTopicSpecPartitionConfig
 {
     /// <summary>The capacity configuration.</summary>
@@ -30,6 +32,7 @@ public partial class V1alpha1PubSubLiteTopicSpecPartitionConfig
     public int Count { get; set; }
 }
 
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1PubSubLiteTopicSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -45,6 +48,7 @@ public partial class V1alpha1PubSubLiteTopicSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The settings for this topic's Reservation usage.</summary>
 public partial class V1alpha1PubSubLiteTopicSpecReservationConfig
 {
     /// <summary>The Reservation to use for this topic's throughput capacity.</summary>
@@ -52,6 +56,7 @@ public partial class V1alpha1PubSubLiteTopicSpecReservationConfig
     public string? ThroughputReservation { get; set; }
 }
 
+/// <summary>The settings for a topic's message retention.</summary>
 public partial class V1alpha1PubSubLiteTopicSpecRetentionConfig
 {
     /// <summary>The provisioned storage, in bytes, per partition. If the number of bytes stored in any of the topic's partitions grows beyond this value, older messages will be dropped to make room for newer ones, regardless of the value of period.</summary>
@@ -63,6 +68,7 @@ public partial class V1alpha1PubSubLiteTopicSpecRetentionConfig
     public string? Period { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1PubSubLiteTopicSpec
 {
     /// <summary>The settings for this topic's partitions.</summary>
@@ -94,6 +100,7 @@ public partial class V1alpha1PubSubLiteTopicSpec
     public string Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1PubSubLiteTopicStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -117,6 +124,7 @@ public partial class V1alpha1PubSubLiteTopicStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1PubSubLiteTopicStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -129,6 +137,7 @@ public partial class V1alpha1PubSubLiteTopicStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1PubSubLiteTopic : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1PubSubLiteTopicSpec>, IStatus<V1alpha1PubSubLiteTopicStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

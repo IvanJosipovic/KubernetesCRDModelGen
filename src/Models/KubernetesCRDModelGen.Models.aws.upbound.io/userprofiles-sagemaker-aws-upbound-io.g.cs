@@ -38,6 +38,7 @@ public enum V1beta1UserProfileSpecForProviderDomainIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserProfileSpecForProviderDomainIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1UserProfileSpecForProviderDomainIdRefPolicy
     public V1beta1UserProfileSpecForProviderDomainIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Domain in sagemaker to populate domainId.</summary>
 public partial class V1beta1UserProfileSpecForProviderDomainIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1UserProfileSpecForProviderDomainIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserProfileSpecForProviderDomainIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1UserProfileSpecForProviderDomainIdSelectorPolicy
     public V1beta1UserProfileSpecForProviderDomainIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Domain in sagemaker to populate domainId.</summary>
 public partial class V1beta1UserProfileSpecForProviderDomainIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1UserProfileSpecForProviderDomainIdSelector
     public V1beta1UserProfileSpecForProviderDomainIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecForProviderUserSettingsCanvasAppSettingsDirectDeploySettings
 {
     /// <summary>Describes whether model deployment permissions are enabled or disabled in the Canvas application. Valid values are ENABLED and DISABLED.</summary>
@@ -117,6 +122,7 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsCanvasAppSetti
     public string? Status { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecForProviderUserSettingsCanvasAppSettingsGenerativeAiSettings
 {
     /// <summary>The user profile Amazon Resource Name (ARN).</summary>
@@ -124,6 +130,7 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsCanvasAppSetti
     public string? AmazonBedrockRoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecForProviderUserSettingsCanvasAppSettingsIdentityProviderOauthSettings
 {
     /// <summary>The name of the data source that you're connecting to. Canvas currently supports OAuth for Snowflake and Salesforce Data Cloud. Valid values are SalesforceGenie and Snowflake.</summary>
@@ -139,6 +146,7 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsCanvasAppSetti
     public string? Status { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecForProviderUserSettingsCanvasAppSettingsKendraSettings
 {
     /// <summary>Describes whether the document querying feature is enabled or disabled in the Canvas application. Valid values are ENABLED and DISABLED.</summary>
@@ -146,6 +154,7 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsCanvasAppSetti
     public string? Status { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecForProviderUserSettingsCanvasAppSettingsModelRegisterSettings
 {
     /// <summary>The Amazon Resource Name (ARN) of the SageMaker model registry account. Required only to register model versions created by a different SageMaker Canvas AWS account than the AWS account in which SageMaker model registry is set up.</summary>
@@ -157,6 +166,7 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsCanvasAppSetti
     public string? Status { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecForProviderUserSettingsCanvasAppSettingsTimeSeriesForecastingSettings
 {
     /// <summary>The IAM role that Canvas passes to Amazon Forecast for time series forecasting. By default, Canvas uses the execution role specified in the UserProfile that launches the Canvas app. If an execution role is not specified in the UserProfile, Canvas uses the execution role specified in the Domain that owns the UserProfile. To allow time series forecasting, this IAM role should have the AmazonSageMakerCanvasForecastAccess policy attached and forecast.amazonaws.com added in the trust relationship as a service principal.</summary>
@@ -168,6 +178,7 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsCanvasAppSetti
     public string? Status { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecForProviderUserSettingsCanvasAppSettingsWorkspaceSettings
 {
     /// <summary>The Amazon S3 bucket used to store artifacts generated by Canvas. Updating the Amazon S3 location impacts existing configuration settings, and Canvas users no longer have access to their artifacts. Canvas users must log out and log back in to apply the new location.</summary>
@@ -179,6 +190,7 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsCanvasAppSetti
     public string? S3KmsKeyId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecForProviderUserSettingsCanvasAppSettings
 {
     /// <summary>The model deployment settings for the SageMaker Canvas application. See Direct Deploy Settings below.</summary>
@@ -210,6 +222,7 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsCanvasAppSetti
     public IList<V1beta1UserProfileSpecForProviderUserSettingsCanvasAppSettingsWorkspaceSettings>? WorkspaceSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecForProviderUserSettingsCodeEditorAppSettingsCustomImage
 {
     /// <summary>The name of the App Image Config.</summary>
@@ -225,6 +238,7 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsCodeEditorAppS
     public double? ImageVersionNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecForProviderUserSettingsCodeEditorAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -248,6 +262,7 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsCodeEditorAppS
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecForProviderUserSettingsCodeEditorAppSettings
 {
     /// <summary>A list of custom SageMaker images that are configured to run as a CodeEditor app. see Custom Image below.</summary>
@@ -263,6 +278,7 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsCodeEditorAppS
     public IList<string>? LifecycleConfigArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecForProviderUserSettingsCustomFileSystemConfigEfsFileSystemConfig
 {
     /// <summary>The ID of your Amazon EFS file system.</summary>
@@ -274,6 +290,7 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsCustomFileSyst
     public string? FileSystemPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecForProviderUserSettingsCustomFileSystemConfig
 {
     /// <summary>The default EBS storage settings for a private space. See EFS File System Config below.</summary>
@@ -281,6 +298,7 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsCustomFileSyst
     public IList<V1beta1UserProfileSpecForProviderUserSettingsCustomFileSystemConfigEfsFileSystemConfig>? EfsFileSystemConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecForProviderUserSettingsCustomPosixUserConfig
 {
     /// <summary>The POSIX group ID.</summary>
@@ -292,6 +310,7 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsCustomPosixUse
     public double? Uid { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecForProviderUserSettingsJupyterLabAppSettingsCodeRepository
 {
     /// <summary>The URL of the Git repository.</summary>
@@ -299,6 +318,7 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsJupyterLabAppS
     public string? RepositoryUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecForProviderUserSettingsJupyterLabAppSettingsCustomImage
 {
     /// <summary>The name of the App Image Config.</summary>
@@ -314,6 +334,7 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsJupyterLabAppS
     public double? ImageVersionNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecForProviderUserSettingsJupyterLabAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -337,6 +358,7 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsJupyterLabAppS
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecForProviderUserSettingsJupyterLabAppSettings
 {
     /// <summary>A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see Code Repository below.</summary>
@@ -356,6 +378,7 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsJupyterLabAppS
     public IList<string>? LifecycleConfigArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecForProviderUserSettingsJupyterServerAppSettingsCodeRepository
 {
     /// <summary>The URL of the Git repository.</summary>
@@ -363,6 +386,7 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsJupyterServerA
     public string? RepositoryUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecForProviderUserSettingsJupyterServerAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -386,6 +410,7 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsJupyterServerA
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecForProviderUserSettingsJupyterServerAppSettings
 {
     /// <summary>A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see Code Repository below.</summary>
@@ -401,6 +426,7 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsJupyterServerA
     public IList<string>? LifecycleConfigArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecForProviderUserSettingsKernelGatewayAppSettingsCustomImage
 {
     /// <summary>The name of the App Image Config.</summary>
@@ -416,6 +442,7 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsKernelGatewayA
     public double? ImageVersionNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecForProviderUserSettingsKernelGatewayAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -439,6 +466,7 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsKernelGatewayA
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecForProviderUserSettingsKernelGatewayAppSettings
 {
     /// <summary>A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.</summary>
@@ -454,6 +482,7 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsKernelGatewayA
     public IList<string>? LifecycleConfigArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecForProviderUserSettingsRSessionAppSettingsCustomImage
 {
     /// <summary>The name of the App Image Config.</summary>
@@ -469,6 +498,7 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsRSessionAppSet
     public double? ImageVersionNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecForProviderUserSettingsRSessionAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -492,6 +522,7 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsRSessionAppSet
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecForProviderUserSettingsRSessionAppSettings
 {
     /// <summary>A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.</summary>
@@ -503,6 +534,7 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsRSessionAppSet
     public IList<V1beta1UserProfileSpecForProviderUserSettingsRSessionAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecForProviderUserSettingsRStudioServerProAppSettings
 {
     /// <summary>Indicates whether the current user has access to the RStudioServerPro app. Valid values are ENABLED and DISABLED.</summary>
@@ -514,6 +546,7 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsRStudioServerP
     public string? UserGroup { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecForProviderUserSettingsSharingSettings
 {
     /// <summary>Whether to include the notebook cell output when sharing the notebook. The default is Disabled. Valid values are Allowed and Disabled.</summary>
@@ -529,6 +562,7 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsSharingSetting
     public string? S3OutputPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecForProviderUserSettingsSpaceStorageSettingsDefaultEbsStorageSettings
 {
     /// <summary>The default size of the EBS storage volume for a private space.</summary>
@@ -540,6 +574,7 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsSpaceStorageSe
     public double? MaximumEbsVolumeSizeInGb { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecForProviderUserSettingsSpaceStorageSettings
 {
     /// <summary>The default EBS storage settings for a private space. See Default EBS Storage Settings below.</summary>
@@ -547,6 +582,7 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsSpaceStorageSe
     public IList<V1beta1UserProfileSpecForProviderUserSettingsSpaceStorageSettingsDefaultEbsStorageSettings>? DefaultEbsStorageSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecForProviderUserSettingsTensorBoardAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -570,6 +606,7 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsTensorBoardApp
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecForProviderUserSettingsTensorBoardAppSettings
 {
     /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.</summary>
@@ -577,6 +614,7 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsTensorBoardApp
     public IList<V1beta1UserProfileSpecForProviderUserSettingsTensorBoardAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecForProviderUserSettings
 {
     /// <summary>The Canvas app settings. See Canvas App Settings below.</summary>
@@ -644,6 +682,7 @@ public partial class V1beta1UserProfileSpecForProviderUserSettings
     public IList<V1beta1UserProfileSpecForProviderUserSettingsTensorBoardAppSettings>? TensorBoardAppSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecForProvider
 {
     /// <summary>The ID of the associated Domain.</summary>
@@ -703,6 +742,7 @@ public enum V1beta1UserProfileSpecInitProviderDomainIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserProfileSpecInitProviderDomainIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -716,6 +756,7 @@ public partial class V1beta1UserProfileSpecInitProviderDomainIdRefPolicy
     public V1beta1UserProfileSpecInitProviderDomainIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Domain in sagemaker to populate domainId.</summary>
 public partial class V1beta1UserProfileSpecInitProviderDomainIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -747,6 +788,7 @@ public enum V1beta1UserProfileSpecInitProviderDomainIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserProfileSpecInitProviderDomainIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -760,6 +802,7 @@ public partial class V1beta1UserProfileSpecInitProviderDomainIdSelectorPolicy
     public V1beta1UserProfileSpecInitProviderDomainIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Domain in sagemaker to populate domainId.</summary>
 public partial class V1beta1UserProfileSpecInitProviderDomainIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -775,6 +818,7 @@ public partial class V1beta1UserProfileSpecInitProviderDomainIdSelector
     public V1beta1UserProfileSpecInitProviderDomainIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecInitProviderUserSettingsCanvasAppSettingsDirectDeploySettings
 {
     /// <summary>Describes whether model deployment permissions are enabled or disabled in the Canvas application. Valid values are ENABLED and DISABLED.</summary>
@@ -782,6 +826,7 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsCanvasAppSett
     public string? Status { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecInitProviderUserSettingsCanvasAppSettingsGenerativeAiSettings
 {
     /// <summary>The user profile Amazon Resource Name (ARN).</summary>
@@ -789,6 +834,7 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsCanvasAppSett
     public string? AmazonBedrockRoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecInitProviderUserSettingsCanvasAppSettingsIdentityProviderOauthSettings
 {
     /// <summary>The name of the data source that you're connecting to. Canvas currently supports OAuth for Snowflake and Salesforce Data Cloud. Valid values are SalesforceGenie and Snowflake.</summary>
@@ -804,6 +850,7 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsCanvasAppSett
     public string? Status { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecInitProviderUserSettingsCanvasAppSettingsKendraSettings
 {
     /// <summary>Describes whether the document querying feature is enabled or disabled in the Canvas application. Valid values are ENABLED and DISABLED.</summary>
@@ -811,6 +858,7 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsCanvasAppSett
     public string? Status { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecInitProviderUserSettingsCanvasAppSettingsModelRegisterSettings
 {
     /// <summary>The Amazon Resource Name (ARN) of the SageMaker model registry account. Required only to register model versions created by a different SageMaker Canvas AWS account than the AWS account in which SageMaker model registry is set up.</summary>
@@ -822,6 +870,7 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsCanvasAppSett
     public string? Status { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecInitProviderUserSettingsCanvasAppSettingsTimeSeriesForecastingSettings
 {
     /// <summary>The IAM role that Canvas passes to Amazon Forecast for time series forecasting. By default, Canvas uses the execution role specified in the UserProfile that launches the Canvas app. If an execution role is not specified in the UserProfile, Canvas uses the execution role specified in the Domain that owns the UserProfile. To allow time series forecasting, this IAM role should have the AmazonSageMakerCanvasForecastAccess policy attached and forecast.amazonaws.com added in the trust relationship as a service principal.</summary>
@@ -833,6 +882,7 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsCanvasAppSett
     public string? Status { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecInitProviderUserSettingsCanvasAppSettingsWorkspaceSettings
 {
     /// <summary>The Amazon S3 bucket used to store artifacts generated by Canvas. Updating the Amazon S3 location impacts existing configuration settings, and Canvas users no longer have access to their artifacts. Canvas users must log out and log back in to apply the new location.</summary>
@@ -844,6 +894,7 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsCanvasAppSett
     public string? S3KmsKeyId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecInitProviderUserSettingsCanvasAppSettings
 {
     /// <summary>The model deployment settings for the SageMaker Canvas application. See Direct Deploy Settings below.</summary>
@@ -875,6 +926,7 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsCanvasAppSett
     public IList<V1beta1UserProfileSpecInitProviderUserSettingsCanvasAppSettingsWorkspaceSettings>? WorkspaceSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecInitProviderUserSettingsCodeEditorAppSettingsCustomImage
 {
     /// <summary>The name of the App Image Config.</summary>
@@ -890,6 +942,7 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsCodeEditorApp
     public double? ImageVersionNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecInitProviderUserSettingsCodeEditorAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -913,6 +966,7 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsCodeEditorApp
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecInitProviderUserSettingsCodeEditorAppSettings
 {
     /// <summary>A list of custom SageMaker images that are configured to run as a CodeEditor app. see Custom Image below.</summary>
@@ -928,6 +982,7 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsCodeEditorApp
     public IList<string>? LifecycleConfigArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecInitProviderUserSettingsCustomFileSystemConfigEfsFileSystemConfig
 {
     /// <summary>The ID of your Amazon EFS file system.</summary>
@@ -939,6 +994,7 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsCustomFileSys
     public string? FileSystemPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecInitProviderUserSettingsCustomFileSystemConfig
 {
     /// <summary>The default EBS storage settings for a private space. See EFS File System Config below.</summary>
@@ -946,6 +1002,7 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsCustomFileSys
     public IList<V1beta1UserProfileSpecInitProviderUserSettingsCustomFileSystemConfigEfsFileSystemConfig>? EfsFileSystemConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecInitProviderUserSettingsCustomPosixUserConfig
 {
     /// <summary>The POSIX group ID.</summary>
@@ -957,6 +1014,7 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsCustomPosixUs
     public double? Uid { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecInitProviderUserSettingsJupyterLabAppSettingsCodeRepository
 {
     /// <summary>The URL of the Git repository.</summary>
@@ -964,6 +1022,7 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsJupyterLabApp
     public string? RepositoryUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecInitProviderUserSettingsJupyterLabAppSettingsCustomImage
 {
     /// <summary>The name of the App Image Config.</summary>
@@ -979,6 +1038,7 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsJupyterLabApp
     public double? ImageVersionNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecInitProviderUserSettingsJupyterLabAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -1002,6 +1062,7 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsJupyterLabApp
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecInitProviderUserSettingsJupyterLabAppSettings
 {
     /// <summary>A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see Code Repository below.</summary>
@@ -1021,6 +1082,7 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsJupyterLabApp
     public IList<string>? LifecycleConfigArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecInitProviderUserSettingsJupyterServerAppSettingsCodeRepository
 {
     /// <summary>The URL of the Git repository.</summary>
@@ -1028,6 +1090,7 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsJupyterServer
     public string? RepositoryUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecInitProviderUserSettingsJupyterServerAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -1051,6 +1114,7 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsJupyterServer
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecInitProviderUserSettingsJupyterServerAppSettings
 {
     /// <summary>A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see Code Repository below.</summary>
@@ -1066,6 +1130,7 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsJupyterServer
     public IList<string>? LifecycleConfigArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecInitProviderUserSettingsKernelGatewayAppSettingsCustomImage
 {
     /// <summary>The name of the App Image Config.</summary>
@@ -1081,6 +1146,7 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsKernelGateway
     public double? ImageVersionNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecInitProviderUserSettingsKernelGatewayAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -1104,6 +1170,7 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsKernelGateway
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecInitProviderUserSettingsKernelGatewayAppSettings
 {
     /// <summary>A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.</summary>
@@ -1119,6 +1186,7 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsKernelGateway
     public IList<string>? LifecycleConfigArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecInitProviderUserSettingsRSessionAppSettingsCustomImage
 {
     /// <summary>The name of the App Image Config.</summary>
@@ -1134,6 +1202,7 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsRSessionAppSe
     public double? ImageVersionNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecInitProviderUserSettingsRSessionAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -1157,6 +1226,7 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsRSessionAppSe
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecInitProviderUserSettingsRSessionAppSettings
 {
     /// <summary>A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.</summary>
@@ -1168,6 +1238,7 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsRSessionAppSe
     public IList<V1beta1UserProfileSpecInitProviderUserSettingsRSessionAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecInitProviderUserSettingsRStudioServerProAppSettings
 {
     /// <summary>Indicates whether the current user has access to the RStudioServerPro app. Valid values are ENABLED and DISABLED.</summary>
@@ -1179,6 +1250,7 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsRStudioServer
     public string? UserGroup { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecInitProviderUserSettingsSharingSettings
 {
     /// <summary>Whether to include the notebook cell output when sharing the notebook. The default is Disabled. Valid values are Allowed and Disabled.</summary>
@@ -1194,6 +1266,7 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsSharingSettin
     public string? S3OutputPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecInitProviderUserSettingsSpaceStorageSettingsDefaultEbsStorageSettings
 {
     /// <summary>The default size of the EBS storage volume for a private space.</summary>
@@ -1205,6 +1278,7 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsSpaceStorageS
     public double? MaximumEbsVolumeSizeInGb { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecInitProviderUserSettingsSpaceStorageSettings
 {
     /// <summary>The default EBS storage settings for a private space. See Default EBS Storage Settings below.</summary>
@@ -1212,6 +1286,7 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsSpaceStorageS
     public IList<V1beta1UserProfileSpecInitProviderUserSettingsSpaceStorageSettingsDefaultEbsStorageSettings>? DefaultEbsStorageSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecInitProviderUserSettingsTensorBoardAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -1235,6 +1310,7 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsTensorBoardAp
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecInitProviderUserSettingsTensorBoardAppSettings
 {
     /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.</summary>
@@ -1242,6 +1318,7 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsTensorBoardAp
     public IList<V1beta1UserProfileSpecInitProviderUserSettingsTensorBoardAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileSpecInitProviderUserSettings
 {
     /// <summary>The Canvas app settings. See Canvas App Settings below.</summary>
@@ -1309,6 +1386,7 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettings
     public IList<V1beta1UserProfileSpecInitProviderUserSettingsTensorBoardAppSettings>? TensorBoardAppSettings { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1UserProfileSpecInitProvider
 {
     /// <summary>The ID of the associated Domain.</summary>
@@ -1386,6 +1464,7 @@ public enum V1beta1UserProfileSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserProfileSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1399,6 +1478,7 @@ public partial class V1beta1UserProfileSpecProviderConfigRefPolicy
     public V1beta1UserProfileSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1UserProfileSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1430,6 +1510,7 @@ public enum V1beta1UserProfileSpecPublishConnectionDetailsToConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserProfileSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1443,6 +1524,7 @@ public partial class V1beta1UserProfileSpecPublishConnectionDetailsToConfigRefPo
     public V1beta1UserProfileSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1UserProfileSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1454,6 +1536,7 @@ public partial class V1beta1UserProfileSpecPublishConnectionDetailsToConfigRef
     public V1beta1UserProfileSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1UserProfileSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1469,6 +1552,7 @@ public partial class V1beta1UserProfileSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1UserProfileSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1484,6 +1568,7 @@ public partial class V1beta1UserProfileSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1UserProfileSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1495,6 +1580,7 @@ public partial class V1beta1UserProfileSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>UserProfileSpec defines the desired state of UserProfile</summary>
 public partial class V1beta1UserProfileSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1527,6 +1613,7 @@ public partial class V1beta1UserProfileSpec
     public V1beta1UserProfileSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileStatusAtProviderUserSettingsCanvasAppSettingsDirectDeploySettings
 {
     /// <summary>Describes whether model deployment permissions are enabled or disabled in the Canvas application. Valid values are ENABLED and DISABLED.</summary>
@@ -1534,6 +1621,7 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsCanvasAppSett
     public string? Status { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileStatusAtProviderUserSettingsCanvasAppSettingsGenerativeAiSettings
 {
     /// <summary>The user profile Amazon Resource Name (ARN).</summary>
@@ -1541,6 +1629,7 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsCanvasAppSett
     public string? AmazonBedrockRoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileStatusAtProviderUserSettingsCanvasAppSettingsIdentityProviderOauthSettings
 {
     /// <summary>The name of the data source that you're connecting to. Canvas currently supports OAuth for Snowflake and Salesforce Data Cloud. Valid values are SalesforceGenie and Snowflake.</summary>
@@ -1556,6 +1645,7 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsCanvasAppSett
     public string? Status { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileStatusAtProviderUserSettingsCanvasAppSettingsKendraSettings
 {
     /// <summary>Describes whether the document querying feature is enabled or disabled in the Canvas application. Valid values are ENABLED and DISABLED.</summary>
@@ -1563,6 +1653,7 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsCanvasAppSett
     public string? Status { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileStatusAtProviderUserSettingsCanvasAppSettingsModelRegisterSettings
 {
     /// <summary>The Amazon Resource Name (ARN) of the SageMaker model registry account. Required only to register model versions created by a different SageMaker Canvas AWS account than the AWS account in which SageMaker model registry is set up.</summary>
@@ -1574,6 +1665,7 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsCanvasAppSett
     public string? Status { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileStatusAtProviderUserSettingsCanvasAppSettingsTimeSeriesForecastingSettings
 {
     /// <summary>The IAM role that Canvas passes to Amazon Forecast for time series forecasting. By default, Canvas uses the execution role specified in the UserProfile that launches the Canvas app. If an execution role is not specified in the UserProfile, Canvas uses the execution role specified in the Domain that owns the UserProfile. To allow time series forecasting, this IAM role should have the AmazonSageMakerCanvasForecastAccess policy attached and forecast.amazonaws.com added in the trust relationship as a service principal.</summary>
@@ -1585,6 +1677,7 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsCanvasAppSett
     public string? Status { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileStatusAtProviderUserSettingsCanvasAppSettingsWorkspaceSettings
 {
     /// <summary>The Amazon S3 bucket used to store artifacts generated by Canvas. Updating the Amazon S3 location impacts existing configuration settings, and Canvas users no longer have access to their artifacts. Canvas users must log out and log back in to apply the new location.</summary>
@@ -1596,6 +1689,7 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsCanvasAppSett
     public string? S3KmsKeyId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileStatusAtProviderUserSettingsCanvasAppSettings
 {
     /// <summary>The model deployment settings for the SageMaker Canvas application. See Direct Deploy Settings below.</summary>
@@ -1627,6 +1721,7 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsCanvasAppSett
     public IList<V1beta1UserProfileStatusAtProviderUserSettingsCanvasAppSettingsWorkspaceSettings>? WorkspaceSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileStatusAtProviderUserSettingsCodeEditorAppSettingsCustomImage
 {
     /// <summary>The name of the App Image Config.</summary>
@@ -1642,6 +1737,7 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsCodeEditorApp
     public double? ImageVersionNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileStatusAtProviderUserSettingsCodeEditorAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -1665,6 +1761,7 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsCodeEditorApp
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileStatusAtProviderUserSettingsCodeEditorAppSettings
 {
     /// <summary>A list of custom SageMaker images that are configured to run as a CodeEditor app. see Custom Image below.</summary>
@@ -1680,6 +1777,7 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsCodeEditorApp
     public IList<string>? LifecycleConfigArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileStatusAtProviderUserSettingsCustomFileSystemConfigEfsFileSystemConfig
 {
     /// <summary>The ID of your Amazon EFS file system.</summary>
@@ -1691,6 +1789,7 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsCustomFileSys
     public string? FileSystemPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileStatusAtProviderUserSettingsCustomFileSystemConfig
 {
     /// <summary>The default EBS storage settings for a private space. See EFS File System Config below.</summary>
@@ -1698,6 +1797,7 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsCustomFileSys
     public IList<V1beta1UserProfileStatusAtProviderUserSettingsCustomFileSystemConfigEfsFileSystemConfig>? EfsFileSystemConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileStatusAtProviderUserSettingsCustomPosixUserConfig
 {
     /// <summary>The POSIX group ID.</summary>
@@ -1709,6 +1809,7 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsCustomPosixUs
     public double? Uid { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileStatusAtProviderUserSettingsJupyterLabAppSettingsCodeRepository
 {
     /// <summary>The URL of the Git repository.</summary>
@@ -1716,6 +1817,7 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsJupyterLabApp
     public string? RepositoryUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileStatusAtProviderUserSettingsJupyterLabAppSettingsCustomImage
 {
     /// <summary>The name of the App Image Config.</summary>
@@ -1731,6 +1833,7 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsJupyterLabApp
     public double? ImageVersionNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileStatusAtProviderUserSettingsJupyterLabAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -1754,6 +1857,7 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsJupyterLabApp
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileStatusAtProviderUserSettingsJupyterLabAppSettings
 {
     /// <summary>A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see Code Repository below.</summary>
@@ -1773,6 +1877,7 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsJupyterLabApp
     public IList<string>? LifecycleConfigArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileStatusAtProviderUserSettingsJupyterServerAppSettingsCodeRepository
 {
     /// <summary>The URL of the Git repository.</summary>
@@ -1780,6 +1885,7 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsJupyterServer
     public string? RepositoryUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileStatusAtProviderUserSettingsJupyterServerAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -1803,6 +1909,7 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsJupyterServer
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileStatusAtProviderUserSettingsJupyterServerAppSettings
 {
     /// <summary>A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see Code Repository below.</summary>
@@ -1818,6 +1925,7 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsJupyterServer
     public IList<string>? LifecycleConfigArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileStatusAtProviderUserSettingsKernelGatewayAppSettingsCustomImage
 {
     /// <summary>The name of the App Image Config.</summary>
@@ -1833,6 +1941,7 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsKernelGateway
     public double? ImageVersionNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileStatusAtProviderUserSettingsKernelGatewayAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -1856,6 +1965,7 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsKernelGateway
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileStatusAtProviderUserSettingsKernelGatewayAppSettings
 {
     /// <summary>A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.</summary>
@@ -1871,6 +1981,7 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsKernelGateway
     public IList<string>? LifecycleConfigArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileStatusAtProviderUserSettingsRSessionAppSettingsCustomImage
 {
     /// <summary>The name of the App Image Config.</summary>
@@ -1886,6 +1997,7 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsRSessionAppSe
     public double? ImageVersionNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileStatusAtProviderUserSettingsRSessionAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -1909,6 +2021,7 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsRSessionAppSe
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileStatusAtProviderUserSettingsRSessionAppSettings
 {
     /// <summary>A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.</summary>
@@ -1920,6 +2033,7 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsRSessionAppSe
     public IList<V1beta1UserProfileStatusAtProviderUserSettingsRSessionAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileStatusAtProviderUserSettingsRStudioServerProAppSettings
 {
     /// <summary>Indicates whether the current user has access to the RStudioServerPro app. Valid values are ENABLED and DISABLED.</summary>
@@ -1931,6 +2045,7 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsRStudioServer
     public string? UserGroup { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileStatusAtProviderUserSettingsSharingSettings
 {
     /// <summary>Whether to include the notebook cell output when sharing the notebook. The default is Disabled. Valid values are Allowed and Disabled.</summary>
@@ -1946,6 +2061,7 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsSharingSettin
     public string? S3OutputPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileStatusAtProviderUserSettingsSpaceStorageSettingsDefaultEbsStorageSettings
 {
     /// <summary>The default size of the EBS storage volume for a private space.</summary>
@@ -1957,6 +2073,7 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsSpaceStorageS
     public double? MaximumEbsVolumeSizeInGb { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileStatusAtProviderUserSettingsSpaceStorageSettings
 {
     /// <summary>The default EBS storage settings for a private space. See Default EBS Storage Settings below.</summary>
@@ -1964,6 +2081,7 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsSpaceStorageS
     public IList<V1beta1UserProfileStatusAtProviderUserSettingsSpaceStorageSettingsDefaultEbsStorageSettings>? DefaultEbsStorageSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileStatusAtProviderUserSettingsTensorBoardAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -1987,6 +2105,7 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsTensorBoardAp
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileStatusAtProviderUserSettingsTensorBoardAppSettings
 {
     /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.</summary>
@@ -1994,6 +2113,7 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsTensorBoardAp
     public IList<V1beta1UserProfileStatusAtProviderUserSettingsTensorBoardAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileStatusAtProviderUserSettings
 {
     /// <summary>The Canvas app settings. See Canvas App Settings below.</summary>
@@ -2061,6 +2181,7 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettings
     public IList<V1beta1UserProfileStatusAtProviderUserSettingsTensorBoardAppSettings>? TensorBoardAppSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserProfileStatusAtProvider
 {
     /// <summary>The user profile Amazon Resource Name (ARN).</summary>
@@ -2104,6 +2225,7 @@ public partial class V1beta1UserProfileStatusAtProvider
     public IList<V1beta1UserProfileStatusAtProviderUserSettings>? UserSettings { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1UserProfileStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2131,6 +2253,7 @@ public partial class V1beta1UserProfileStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>UserProfileStatus defines the observed state of UserProfile.</summary>
 public partial class V1beta1UserProfileStatus
 {
     /// <summary></summary>
@@ -2147,6 +2270,7 @@ public partial class V1beta1UserProfileStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>UserProfile is the Schema for the UserProfiles API. Provides a SageMaker User Profile resource.</summary>
 public partial class V1beta1UserProfile : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1UserProfileSpec>, IStatus<V1beta1UserProfileStatus>
 {
     public const string KubeApiVersion = "v1beta1";

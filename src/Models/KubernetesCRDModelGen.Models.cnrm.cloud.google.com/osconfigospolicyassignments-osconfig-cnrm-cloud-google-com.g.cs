@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.osconfig.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecInstanceFilterExclusionLabels
 {
     /// <summary>Labels are identified by key/value pairs in this map. A VM should contain all the key/value pairs specified in this map to be selected.</summary>
@@ -15,6 +16,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecInstanceFilterExclusio
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecInstanceFilterInclusionLabels
 {
     /// <summary>Labels are identified by key/value pairs in this map. A VM should contain all the key/value pairs specified in this map to be selected.</summary>
@@ -22,6 +24,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecInstanceFilterInclusio
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecInstanceFilterInventories
 {
     /// <summary>Required. The OS short name</summary>
@@ -33,6 +36,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecInstanceFilterInventor
     public string? OsVersion { get; set; }
 }
 
+/// <summary>Required. Filter to select VMs.</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecInstanceFilter
 {
     /// <summary>Target all VMs in the project. If true, no other criteria is permitted.</summary>
@@ -52,6 +56,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecInstanceFilter
     public IList<V1beta1OSConfigOSPolicyAssignmentSpecInstanceFilterInventories>? Inventories { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsInventoryFilters
 {
     /// <summary>Required. The OS short name</summary>
@@ -63,6 +68,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
     public string? OsVersion { get; set; }
 }
 
+/// <summary>A Cloud Storage object.</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesExecEnforceFileGcs
 {
     /// <summary>Required. Bucket of the Cloud Storage object.</summary>
@@ -78,6 +84,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
     public string Object { get; set; }
 }
 
+/// <summary>A generic remote file.</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesExecEnforceFileRemote
 {
     /// <summary>SHA256 checksum of the remote file.</summary>
@@ -89,6 +96,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
     public string Uri { get; set; }
 }
 
+/// <summary>A remote or local file.</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesExecEnforceFile
 {
     /// <summary>Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.</summary>
@@ -108,6 +116,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
     public V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesExecEnforceFileRemote? Remote { get; set; }
 }
 
+/// <summary>What to run to bring this resource into the desired state. An exit code of 100 indicates "success", any other exit code indicates a failure running enforce.</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesExecEnforce
 {
     /// <summary>Optional arguments to pass to the source during execution.</summary>
@@ -131,6 +140,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
     public string? Script { get; set; }
 }
 
+/// <summary>A Cloud Storage object.</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesExecValidateFileGcs
 {
     /// <summary>Required. Bucket of the Cloud Storage object.</summary>
@@ -146,6 +156,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
     public string Object { get; set; }
 }
 
+/// <summary>A generic remote file.</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesExecValidateFileRemote
 {
     /// <summary>SHA256 checksum of the remote file.</summary>
@@ -157,6 +168,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
     public string Uri { get; set; }
 }
 
+/// <summary>A remote or local file.</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesExecValidateFile
 {
     /// <summary>Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.</summary>
@@ -176,6 +188,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
     public V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesExecValidateFileRemote? Remote { get; set; }
 }
 
+/// <summary>Required. What to run to validate this resource is in the desired state. An exit code of 100 indicates "in desired state", and exit code of 101 indicates "not in desired state". Any other exit code indicates a failure running validate.</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesExecValidate
 {
     /// <summary>Optional arguments to pass to the source during execution.</summary>
@@ -199,6 +212,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
     public string? Script { get; set; }
 }
 
+/// <summary>Exec resource</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesExec
 {
     /// <summary>What to run to bring this resource into the desired state. An exit code of 100 indicates "success", any other exit code indicates a failure running enforce.</summary>
@@ -210,6 +224,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
     public V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesExecValidate Validate { get; set; }
 }
 
+/// <summary>A Cloud Storage object.</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesFileFileGcs
 {
     /// <summary>Required. Bucket of the Cloud Storage object.</summary>
@@ -225,6 +240,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
     public string Object { get; set; }
 }
 
+/// <summary>A generic remote file.</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesFileFileRemote
 {
     /// <summary>SHA256 checksum of the remote file.</summary>
@@ -236,6 +252,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
     public string Uri { get; set; }
 }
 
+/// <summary>A remote or local source.</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesFileFile
 {
     /// <summary>Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.</summary>
@@ -255,6 +272,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
     public V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesFileFileRemote? Remote { get; set; }
 }
 
+/// <summary>File resource</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesFile
 {
     /// <summary>A a file with this content. The size of the content is limited to 1024 characters.</summary>
@@ -278,6 +296,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
     public string State { get; set; }
 }
 
+/// <summary>A package managed by Apt.</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesPkgApt
 {
     /// <summary>Required. Package name.</summary>
@@ -285,6 +304,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
     public string Name { get; set; }
 }
 
+/// <summary>A Cloud Storage object.</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesPkgDebSourceGcs
 {
     /// <summary>Required. Bucket of the Cloud Storage object.</summary>
@@ -300,6 +320,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
     public string Object { get; set; }
 }
 
+/// <summary>A generic remote file.</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesPkgDebSourceRemote
 {
     /// <summary>SHA256 checksum of the remote file.</summary>
@@ -311,6 +332,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
     public string Uri { get; set; }
 }
 
+/// <summary>Required. A deb package.</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesPkgDebSource
 {
     /// <summary>Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.</summary>
@@ -330,6 +352,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
     public V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesPkgDebSourceRemote? Remote { get; set; }
 }
 
+/// <summary>A deb package file.</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesPkgDeb
 {
     /// <summary>Whether dependencies should also be installed. - install when false: `dpkg -i package` - install when true: `apt-get update &amp;&amp; apt-get -y install package.deb`</summary>
@@ -341,6 +364,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
     public V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesPkgDebSource Source { get; set; }
 }
 
+/// <summary>A package managed by GooGet.</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesPkgGooget
 {
     /// <summary>Required. Package name.</summary>
@@ -348,6 +372,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
     public string Name { get; set; }
 }
 
+/// <summary>A Cloud Storage object.</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesPkgMsiSourceGcs
 {
     /// <summary>Required. Bucket of the Cloud Storage object.</summary>
@@ -363,6 +388,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
     public string Object { get; set; }
 }
 
+/// <summary>A generic remote file.</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesPkgMsiSourceRemote
 {
     /// <summary>SHA256 checksum of the remote file.</summary>
@@ -374,6 +400,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
     public string Uri { get; set; }
 }
 
+/// <summary>Required. The MSI package.</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesPkgMsiSource
 {
     /// <summary>Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.</summary>
@@ -393,6 +420,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
     public V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesPkgMsiSourceRemote? Remote { get; set; }
 }
 
+/// <summary>An MSI package.</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesPkgMsi
 {
     /// <summary>Additional properties to use during installation. This should be in the format of Property=Setting. Appended to the defaults of `ACTION=INSTALL REBOOT=ReallySuppress`.</summary>
@@ -404,6 +432,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
     public V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesPkgMsiSource Source { get; set; }
 }
 
+/// <summary>A Cloud Storage object.</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesPkgRpmSourceGcs
 {
     /// <summary>Required. Bucket of the Cloud Storage object.</summary>
@@ -419,6 +448,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
     public string Object { get; set; }
 }
 
+/// <summary>A generic remote file.</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesPkgRpmSourceRemote
 {
     /// <summary>SHA256 checksum of the remote file.</summary>
@@ -430,6 +460,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
     public string Uri { get; set; }
 }
 
+/// <summary>Required. An rpm package.</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesPkgRpmSource
 {
     /// <summary>Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.</summary>
@@ -449,6 +480,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
     public V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesPkgRpmSourceRemote? Remote { get; set; }
 }
 
+/// <summary>An rpm package file.</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesPkgRpm
 {
     /// <summary>Whether dependencies should also be installed. - install when false: `rpm --upgrade --replacepkgs package.rpm` - install when true: `yum -y install package.rpm` or `zypper -y install package.rpm`</summary>
@@ -460,6 +492,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
     public V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesPkgRpmSource Source { get; set; }
 }
 
+/// <summary>A package managed by YUM.</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesPkgYum
 {
     /// <summary>Required. Package name.</summary>
@@ -467,6 +500,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
     public string Name { get; set; }
 }
 
+/// <summary>A package managed by Zypper.</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesPkgZypper
 {
     /// <summary>Required. Package name.</summary>
@@ -474,6 +508,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
     public string Name { get; set; }
 }
 
+/// <summary>Package resource</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesPkg
 {
     /// <summary>A package managed by Apt.</summary>
@@ -509,6 +544,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
     public V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesPkgZypper? Zypper { get; set; }
 }
 
+/// <summary>An Apt Repository.</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesRepositoryApt
 {
     /// <summary>Required. Type of archive files in this repository. Possible values: ARCHIVE_TYPE_UNSPECIFIED, DEB, DEB_SRC</summary>
@@ -532,6 +568,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
     public string Uri { get; set; }
 }
 
+/// <summary>A Goo Repository.</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesRepositoryGoo
 {
     /// <summary>Required. The name of the repository.</summary>
@@ -543,6 +580,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
     public string Url { get; set; }
 }
 
+/// <summary>A Yum Repository.</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesRepositoryYum
 {
     /// <summary>Required. The location of the repository directory.</summary>
@@ -562,6 +600,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
     public string Id { get; set; }
 }
 
+/// <summary>A Zypper Repository.</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesRepositoryZypper
 {
     /// <summary>Required. The location of the repository directory.</summary>
@@ -581,6 +620,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
     public string Id { get; set; }
 }
 
+/// <summary>Package repository resource</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesRepository
 {
     /// <summary>An Apt Repository.</summary>
@@ -600,6 +640,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
     public V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesRepositoryZypper? Zypper { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResources
 {
     /// <summary>Exec resource</summary>
@@ -623,6 +664,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
     public V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResourcesRepository? Repository { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroups
 {
     /// <summary>List of inventory filters for the resource group. The resources in this resource group are applied to the target VM if it satisfies at least one of the following inventory filters. For example, to apply this resource group to VMs running either `RHEL` or `CentOS` operating systems, specify 2 items for the list with following values: inventory_filters[0].os_short_name='rhel' and inventory_filters[1].os_short_name='centos' If the list is empty, this resource group will be applied to the target VM unconditionally.</summary>
@@ -634,6 +676,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGrou
     public IList<V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroupsResources> Resources { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPolicies
 {
     /// <summary>This flag determines the OS policy compliance status when none of the resource groups within the policy are applicable for a VM. Set this value to `true` if the policy needs to be reported as compliant even if the policy has nothing to validate or enforce.</summary>
@@ -657,6 +700,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecOsPolicies
     public IList<V1beta1OSConfigOSPolicyAssignmentSpecOsPoliciesResourceGroups> ResourceGroups { get; set; }
 }
 
+/// <summary>Immutable. The Project that this resource belongs to.</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -672,6 +716,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Required. The maximum number (or percentage) of VMs per zone to disrupt at any given moment.</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecRolloutDisruptionBudget
 {
     /// <summary>Specifies a fixed value.</summary>
@@ -683,6 +728,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecRolloutDisruptionBudge
     public long? Percent { get; set; }
 }
 
+/// <summary>Required. Rollout to deploy the OS policy assignment. A rollout is triggered in the following situations: 1) OSPolicyAssignment is created. 2) OSPolicyAssignment is updated and the update contains changes to one of the following fields: - instance_filter - os_policies 3) OSPolicyAssignment is deleted.</summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpecRollout
 {
     /// <summary>Required. The maximum number (or percentage) of VMs per zone to disrupt at any given moment.</summary>
@@ -694,6 +740,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpecRollout
     public string MinWaitDuration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentSpec
 {
     /// <summary>OS policy assignment description. Length of the description is limited to 1024 characters.</summary>
@@ -729,6 +776,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentSpec
     public bool? SkipAwaitRollout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -752,6 +800,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OSConfigOSPolicyAssignmentStatus
 {
     /// <summary>Output only. Indicates that this revision has been successfully rolled out in this zone and new VMs will be assigned OS policies from this revision. For a given OS policy assignment, there is only one revision with a value of `true` for this field.</summary>
@@ -796,6 +845,7 @@ public partial class V1beta1OSConfigOSPolicyAssignmentStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1OSConfigOSPolicyAssignment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1OSConfigOSPolicyAssignmentSpec>, IStatus<V1beta1OSConfigOSPolicyAssignmentStatus>
 {
     public const string KubeApiVersion = "v1beta1";

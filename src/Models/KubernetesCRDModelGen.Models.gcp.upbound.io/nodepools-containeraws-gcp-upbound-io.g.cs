@@ -18,6 +18,7 @@ public enum V1beta1NodePoolSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1NodePoolSpecForProviderAutoscaling
 {
     /// <summary>Maximum number of nodes in the NodePool. Must be &gt;= min_node_count.</summary>
@@ -49,6 +50,7 @@ public enum V1beta1NodePoolSpecForProviderClusterRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NodePoolSpecForProviderClusterRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -62,6 +64,7 @@ public partial class V1beta1NodePoolSpecForProviderClusterRefPolicy
     public V1beta1NodePoolSpecForProviderClusterRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in containeraws to populate cluster.</summary>
 public partial class V1beta1NodePoolSpecForProviderClusterRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -93,6 +96,7 @@ public enum V1beta1NodePoolSpecForProviderClusterSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NodePoolSpecForProviderClusterSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -106,6 +110,7 @@ public partial class V1beta1NodePoolSpecForProviderClusterSelectorPolicy
     public V1beta1NodePoolSpecForProviderClusterSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in containeraws to populate cluster.</summary>
 public partial class V1beta1NodePoolSpecForProviderClusterSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1NodePoolSpecForProviderClusterSelector
     public V1beta1NodePoolSpecForProviderClusterSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodePoolSpecForProviderConfigAutoscalingMetricsCollection
 {
     /// <summary>The frequency at which EC2 Auto Scaling sends aggregated data to AWS CloudWatch. The only valid value is "1Minute".</summary>
@@ -132,6 +138,7 @@ public partial class V1beta1NodePoolSpecForProviderConfigAutoscalingMetricsColle
     public IList<string>? Metrics { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodePoolSpecForProviderConfigConfigEncryption
 {
     /// <summary>Optional. The Amazon Resource Name (ARN) of the Customer Managed Key (CMK) used to encrypt AWS EBS volumes. If not specified, the default Amazon managed key associated to the AWS region where this cluster runs will be used.</summary>
@@ -139,6 +146,7 @@ public partial class V1beta1NodePoolSpecForProviderConfigConfigEncryption
     public string? KmsKeyArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodePoolSpecForProviderConfigProxyConfig
 {
     /// <summary>The ARN of the AWS Secret Manager secret that contains the HTTP(S) proxy configuration.</summary>
@@ -150,6 +158,7 @@ public partial class V1beta1NodePoolSpecForProviderConfigProxyConfig
     public string? SecretVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodePoolSpecForProviderConfigRootVolume
 {
     /// <summary>Optional. The number of I/O operations per second (IOPS) to provision for GP3 volume.</summary>
@@ -173,6 +182,7 @@ public partial class V1beta1NodePoolSpecForProviderConfigRootVolume
     public string? VolumeType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodePoolSpecForProviderConfigSshConfig
 {
     /// <summary>The name of the EC2 key pair used to login into cluster machines.</summary>
@@ -180,6 +190,7 @@ public partial class V1beta1NodePoolSpecForProviderConfigSshConfig
     public string? Ec2KeyPair { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodePoolSpecForProviderConfigTaints
 {
     /// <summary>The taint effect. Possible values: EFFECT_UNSPECIFIED, NO_SCHEDULE, PREFER_NO_SCHEDULE, NO_EXECUTE</summary>
@@ -195,6 +206,7 @@ public partial class V1beta1NodePoolSpecForProviderConfigTaints
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodePoolSpecForProviderConfig
 {
     /// <summary>Optional. Configuration related to CloudWatch metrics collection on the Auto Scaling group of the node pool. When unspecified, metrics collection is disabled.</summary>
@@ -242,6 +254,7 @@ public partial class V1beta1NodePoolSpecForProviderConfig
     public IList<V1beta1NodePoolSpecForProviderConfigTaints>? Taints { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodePoolSpecForProviderManagement
 {
     /// <summary>Optional. Whether or not the nodes will be automatically repaired.</summary>
@@ -249,6 +262,7 @@ public partial class V1beta1NodePoolSpecForProviderManagement
     public bool? AutoRepair { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodePoolSpecForProviderMaxPodsConstraint
 {
     /// <summary>The maximum number of pods to schedule on a single node.</summary>
@@ -256,6 +270,7 @@ public partial class V1beta1NodePoolSpecForProviderMaxPodsConstraint
     public double? MaxPodsPerNode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodePoolSpecForProviderUpdateSettingsSurgeSettings
 {
     /// <summary>Optional. The maximum number of nodes that can be created beyond the current size of the node pool during the update process.</summary>
@@ -267,6 +282,7 @@ public partial class V1beta1NodePoolSpecForProviderUpdateSettingsSurgeSettings
     public double? MaxUnavailable { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodePoolSpecForProviderUpdateSettings
 {
     /// <summary>Optional. Settings for surge update.</summary>
@@ -274,6 +290,7 @@ public partial class V1beta1NodePoolSpecForProviderUpdateSettings
     public IList<V1beta1NodePoolSpecForProviderUpdateSettingsSurgeSettings>? SurgeSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodePoolSpecForProvider
 {
     /// <summary>Optional. Annotations on the node pool. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Key can have 2 segments: prefix  and name , separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.</summary>
@@ -329,6 +346,7 @@ public partial class V1beta1NodePoolSpecForProvider
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodePoolSpecInitProviderAutoscaling
 {
     /// <summary>Maximum number of nodes in the NodePool. Must be &gt;= min_node_count.</summary>
@@ -340,6 +358,7 @@ public partial class V1beta1NodePoolSpecInitProviderAutoscaling
     public double? MinNodeCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodePoolSpecInitProviderConfigAutoscalingMetricsCollection
 {
     /// <summary>The frequency at which EC2 Auto Scaling sends aggregated data to AWS CloudWatch. The only valid value is "1Minute".</summary>
@@ -351,6 +370,7 @@ public partial class V1beta1NodePoolSpecInitProviderConfigAutoscalingMetricsColl
     public IList<string>? Metrics { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodePoolSpecInitProviderConfigConfigEncryption
 {
     /// <summary>Optional. The Amazon Resource Name (ARN) of the Customer Managed Key (CMK) used to encrypt AWS EBS volumes. If not specified, the default Amazon managed key associated to the AWS region where this cluster runs will be used.</summary>
@@ -358,6 +378,7 @@ public partial class V1beta1NodePoolSpecInitProviderConfigConfigEncryption
     public string? KmsKeyArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodePoolSpecInitProviderConfigProxyConfig
 {
     /// <summary>The ARN of the AWS Secret Manager secret that contains the HTTP(S) proxy configuration.</summary>
@@ -369,6 +390,7 @@ public partial class V1beta1NodePoolSpecInitProviderConfigProxyConfig
     public string? SecretVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodePoolSpecInitProviderConfigRootVolume
 {
     /// <summary>Optional. The number of I/O operations per second (IOPS) to provision for GP3 volume.</summary>
@@ -392,6 +414,7 @@ public partial class V1beta1NodePoolSpecInitProviderConfigRootVolume
     public string? VolumeType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodePoolSpecInitProviderConfigSshConfig
 {
     /// <summary>The name of the EC2 key pair used to login into cluster machines.</summary>
@@ -399,6 +422,7 @@ public partial class V1beta1NodePoolSpecInitProviderConfigSshConfig
     public string? Ec2KeyPair { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodePoolSpecInitProviderConfigTaints
 {
     /// <summary>The taint effect. Possible values: EFFECT_UNSPECIFIED, NO_SCHEDULE, PREFER_NO_SCHEDULE, NO_EXECUTE</summary>
@@ -414,6 +438,7 @@ public partial class V1beta1NodePoolSpecInitProviderConfigTaints
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodePoolSpecInitProviderConfig
 {
     /// <summary>Optional. Configuration related to CloudWatch metrics collection on the Auto Scaling group of the node pool. When unspecified, metrics collection is disabled.</summary>
@@ -461,6 +486,7 @@ public partial class V1beta1NodePoolSpecInitProviderConfig
     public IList<V1beta1NodePoolSpecInitProviderConfigTaints>? Taints { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodePoolSpecInitProviderManagement
 {
     /// <summary>Optional. Whether or not the nodes will be automatically repaired.</summary>
@@ -468,6 +494,7 @@ public partial class V1beta1NodePoolSpecInitProviderManagement
     public bool? AutoRepair { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodePoolSpecInitProviderMaxPodsConstraint
 {
     /// <summary>The maximum number of pods to schedule on a single node.</summary>
@@ -475,6 +502,7 @@ public partial class V1beta1NodePoolSpecInitProviderMaxPodsConstraint
     public double? MaxPodsPerNode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodePoolSpecInitProviderUpdateSettingsSurgeSettings
 {
     /// <summary>Optional. The maximum number of nodes that can be created beyond the current size of the node pool during the update process.</summary>
@@ -486,6 +514,7 @@ public partial class V1beta1NodePoolSpecInitProviderUpdateSettingsSurgeSettings
     public double? MaxUnavailable { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodePoolSpecInitProviderUpdateSettings
 {
     /// <summary>Optional. Settings for surge update.</summary>
@@ -493,6 +522,7 @@ public partial class V1beta1NodePoolSpecInitProviderUpdateSettings
     public IList<V1beta1NodePoolSpecInitProviderUpdateSettingsSurgeSettings>? SurgeSettings { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1NodePoolSpecInitProvider
 {
     /// <summary>Optional. Annotations on the node pool. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Key can have 2 segments: prefix  and name , separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.</summary>
@@ -574,6 +604,7 @@ public enum V1beta1NodePoolSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NodePoolSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -587,6 +618,7 @@ public partial class V1beta1NodePoolSpecProviderConfigRefPolicy
     public V1beta1NodePoolSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1NodePoolSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -618,6 +650,7 @@ public enum V1beta1NodePoolSpecPublishConnectionDetailsToConfigRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NodePoolSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -631,6 +664,7 @@ public partial class V1beta1NodePoolSpecPublishConnectionDetailsToConfigRefPolic
     public V1beta1NodePoolSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1NodePoolSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -642,6 +676,7 @@ public partial class V1beta1NodePoolSpecPublishConnectionDetailsToConfigRef
     public V1beta1NodePoolSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1NodePoolSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -657,6 +692,7 @@ public partial class V1beta1NodePoolSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1NodePoolSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -672,6 +708,7 @@ public partial class V1beta1NodePoolSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1NodePoolSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -683,6 +720,7 @@ public partial class V1beta1NodePoolSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>NodePoolSpec defines the desired state of NodePool</summary>
 public partial class V1beta1NodePoolSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -715,6 +753,7 @@ public partial class V1beta1NodePoolSpec
     public V1beta1NodePoolSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodePoolStatusAtProviderAutoscaling
 {
     /// <summary>Maximum number of nodes in the NodePool. Must be &gt;= min_node_count.</summary>
@@ -726,6 +765,7 @@ public partial class V1beta1NodePoolStatusAtProviderAutoscaling
     public double? MinNodeCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodePoolStatusAtProviderConfigAutoscalingMetricsCollection
 {
     /// <summary>The frequency at which EC2 Auto Scaling sends aggregated data to AWS CloudWatch. The only valid value is "1Minute".</summary>
@@ -737,6 +777,7 @@ public partial class V1beta1NodePoolStatusAtProviderConfigAutoscalingMetricsColl
     public IList<string>? Metrics { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodePoolStatusAtProviderConfigConfigEncryption
 {
     /// <summary>Optional. The Amazon Resource Name (ARN) of the Customer Managed Key (CMK) used to encrypt AWS EBS volumes. If not specified, the default Amazon managed key associated to the AWS region where this cluster runs will be used.</summary>
@@ -744,6 +785,7 @@ public partial class V1beta1NodePoolStatusAtProviderConfigConfigEncryption
     public string? KmsKeyArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodePoolStatusAtProviderConfigProxyConfig
 {
     /// <summary>The ARN of the AWS Secret Manager secret that contains the HTTP(S) proxy configuration.</summary>
@@ -755,6 +797,7 @@ public partial class V1beta1NodePoolStatusAtProviderConfigProxyConfig
     public string? SecretVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodePoolStatusAtProviderConfigRootVolume
 {
     /// <summary>Optional. The number of I/O operations per second (IOPS) to provision for GP3 volume.</summary>
@@ -778,6 +821,7 @@ public partial class V1beta1NodePoolStatusAtProviderConfigRootVolume
     public string? VolumeType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodePoolStatusAtProviderConfigSshConfig
 {
     /// <summary>The name of the EC2 key pair used to login into cluster machines.</summary>
@@ -785,6 +829,7 @@ public partial class V1beta1NodePoolStatusAtProviderConfigSshConfig
     public string? Ec2KeyPair { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodePoolStatusAtProviderConfigTaints
 {
     /// <summary>The taint effect. Possible values: EFFECT_UNSPECIFIED, NO_SCHEDULE, PREFER_NO_SCHEDULE, NO_EXECUTE</summary>
@@ -800,6 +845,7 @@ public partial class V1beta1NodePoolStatusAtProviderConfigTaints
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodePoolStatusAtProviderConfig
 {
     /// <summary>Optional. Configuration related to CloudWatch metrics collection on the Auto Scaling group of the node pool. When unspecified, metrics collection is disabled.</summary>
@@ -847,6 +893,7 @@ public partial class V1beta1NodePoolStatusAtProviderConfig
     public IList<V1beta1NodePoolStatusAtProviderConfigTaints>? Taints { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodePoolStatusAtProviderManagement
 {
     /// <summary>Optional. Whether or not the nodes will be automatically repaired.</summary>
@@ -854,6 +901,7 @@ public partial class V1beta1NodePoolStatusAtProviderManagement
     public bool? AutoRepair { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodePoolStatusAtProviderMaxPodsConstraint
 {
     /// <summary>The maximum number of pods to schedule on a single node.</summary>
@@ -861,6 +909,7 @@ public partial class V1beta1NodePoolStatusAtProviderMaxPodsConstraint
     public double? MaxPodsPerNode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodePoolStatusAtProviderUpdateSettingsSurgeSettings
 {
     /// <summary>Optional. The maximum number of nodes that can be created beyond the current size of the node pool during the update process.</summary>
@@ -872,6 +921,7 @@ public partial class V1beta1NodePoolStatusAtProviderUpdateSettingsSurgeSettings
     public double? MaxUnavailable { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodePoolStatusAtProviderUpdateSettings
 {
     /// <summary>Optional. Settings for surge update.</summary>
@@ -879,6 +929,7 @@ public partial class V1beta1NodePoolStatusAtProviderUpdateSettings
     public IList<V1beta1NodePoolStatusAtProviderUpdateSettingsSurgeSettings>? SurgeSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodePoolStatusAtProvider
 {
     /// <summary>Optional. Annotations on the node pool. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Key can have 2 segments: prefix  and name , separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.</summary>
@@ -958,6 +1009,7 @@ public partial class V1beta1NodePoolStatusAtProvider
     public string? Version { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1NodePoolStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -985,6 +1037,7 @@ public partial class V1beta1NodePoolStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>NodePoolStatus defines the observed state of NodePool.</summary>
 public partial class V1beta1NodePoolStatus
 {
     /// <summary></summary>
@@ -1001,6 +1054,7 @@ public partial class V1beta1NodePoolStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>NodePool is the Schema for the NodePools API. An Anthos node pool running on AWS.</summary>
 public partial class V1beta1NodePool : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1NodePoolSpec>, IStatus<V1beta1NodePoolStatus>
 {
     public const string KubeApiVersion = "v1beta1";

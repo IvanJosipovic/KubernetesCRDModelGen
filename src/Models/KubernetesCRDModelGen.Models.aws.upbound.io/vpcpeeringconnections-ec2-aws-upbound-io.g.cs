@@ -38,6 +38,7 @@ public enum V1beta1VPCPeeringConnectionSpecForProviderPeerVpcIdRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPCPeeringConnectionSpecForProviderPeerVpcIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1VPCPeeringConnectionSpecForProviderPeerVpcIdRefPolic
     public V1beta1VPCPeeringConnectionSpecForProviderPeerVpcIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPC in ec2 to populate peerVpcId.</summary>
 public partial class V1beta1VPCPeeringConnectionSpecForProviderPeerVpcIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1VPCPeeringConnectionSpecForProviderPeerVpcIdSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VPCPeeringConnectionSpecForProviderPeerVpcIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1VPCPeeringConnectionSpecForProviderPeerVpcIdSelector
     public V1beta1VPCPeeringConnectionSpecForProviderPeerVpcIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPC in ec2 to populate peerVpcId.</summary>
 public partial class V1beta1VPCPeeringConnectionSpecForProviderPeerVpcIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1VPCPeeringConnectionSpecForProviderVpcIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPCPeeringConnectionSpecForProviderVpcIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1VPCPeeringConnectionSpecForProviderVpcIdRefPolicy
     public V1beta1VPCPeeringConnectionSpecForProviderVpcIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1VPCPeeringConnectionSpecForProviderVpcIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1VPCPeeringConnectionSpecForProviderVpcIdSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VPCPeeringConnectionSpecForProviderVpcIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1VPCPeeringConnectionSpecForProviderVpcIdSelectorPoli
     public V1beta1VPCPeeringConnectionSpecForProviderVpcIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1VPCPeeringConnectionSpecForProviderVpcIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1VPCPeeringConnectionSpecForProviderVpcIdSelector
     public V1beta1VPCPeeringConnectionSpecForProviderVpcIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPCPeeringConnectionSpecForProvider
 {
     /// <summary>Accept the peering (both VPCs need to be in the same AWS account and region).</summary>
@@ -269,6 +278,7 @@ public enum V1beta1VPCPeeringConnectionSpecInitProviderPeerVpcIdRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPCPeeringConnectionSpecInitProviderPeerVpcIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -282,6 +292,7 @@ public partial class V1beta1VPCPeeringConnectionSpecInitProviderPeerVpcIdRefPoli
     public V1beta1VPCPeeringConnectionSpecInitProviderPeerVpcIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPC in ec2 to populate peerVpcId.</summary>
 public partial class V1beta1VPCPeeringConnectionSpecInitProviderPeerVpcIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -313,6 +324,7 @@ public enum V1beta1VPCPeeringConnectionSpecInitProviderPeerVpcIdSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VPCPeeringConnectionSpecInitProviderPeerVpcIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -326,6 +338,7 @@ public partial class V1beta1VPCPeeringConnectionSpecInitProviderPeerVpcIdSelecto
     public V1beta1VPCPeeringConnectionSpecInitProviderPeerVpcIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPC in ec2 to populate peerVpcId.</summary>
 public partial class V1beta1VPCPeeringConnectionSpecInitProviderPeerVpcIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -361,6 +374,7 @@ public enum V1beta1VPCPeeringConnectionSpecInitProviderVpcIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPCPeeringConnectionSpecInitProviderVpcIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -374,6 +388,7 @@ public partial class V1beta1VPCPeeringConnectionSpecInitProviderVpcIdRefPolicy
     public V1beta1VPCPeeringConnectionSpecInitProviderVpcIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1VPCPeeringConnectionSpecInitProviderVpcIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -405,6 +420,7 @@ public enum V1beta1VPCPeeringConnectionSpecInitProviderVpcIdSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VPCPeeringConnectionSpecInitProviderVpcIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -418,6 +434,7 @@ public partial class V1beta1VPCPeeringConnectionSpecInitProviderVpcIdSelectorPol
     public V1beta1VPCPeeringConnectionSpecInitProviderVpcIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1VPCPeeringConnectionSpecInitProviderVpcIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -433,6 +450,7 @@ public partial class V1beta1VPCPeeringConnectionSpecInitProviderVpcIdSelector
     public V1beta1VPCPeeringConnectionSpecInitProviderVpcIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1VPCPeeringConnectionSpecInitProvider
 {
     /// <summary>Accept the peering (both VPCs need to be in the same AWS account and region).</summary>
@@ -518,6 +536,7 @@ public enum V1beta1VPCPeeringConnectionSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPCPeeringConnectionSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -531,6 +550,7 @@ public partial class V1beta1VPCPeeringConnectionSpecProviderConfigRefPolicy
     public V1beta1VPCPeeringConnectionSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1VPCPeeringConnectionSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -562,6 +582,7 @@ public enum V1beta1VPCPeeringConnectionSpecPublishConnectionDetailsToConfigRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPCPeeringConnectionSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -575,6 +596,7 @@ public partial class V1beta1VPCPeeringConnectionSpecPublishConnectionDetailsToCo
     public V1beta1VPCPeeringConnectionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1VPCPeeringConnectionSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -586,6 +608,7 @@ public partial class V1beta1VPCPeeringConnectionSpecPublishConnectionDetailsToCo
     public V1beta1VPCPeeringConnectionSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1VPCPeeringConnectionSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -601,6 +624,7 @@ public partial class V1beta1VPCPeeringConnectionSpecPublishConnectionDetailsToMe
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1VPCPeeringConnectionSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -616,6 +640,7 @@ public partial class V1beta1VPCPeeringConnectionSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1VPCPeeringConnectionSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -627,6 +652,7 @@ public partial class V1beta1VPCPeeringConnectionSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>VPCPeeringConnectionSpec defines the desired state of VPCPeeringConnection</summary>
 public partial class V1beta1VPCPeeringConnectionSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -659,6 +685,7 @@ public partial class V1beta1VPCPeeringConnectionSpec
     public V1beta1VPCPeeringConnectionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPCPeeringConnectionStatusAtProviderAccepter
 {
     /// <summary>Allow a local VPC to resolve public DNS hostnames to private IP addresses when queried from instances in the peer VPC.</summary>
@@ -666,6 +693,7 @@ public partial class V1beta1VPCPeeringConnectionStatusAtProviderAccepter
     public bool? AllowRemoteVpcDnsResolution { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPCPeeringConnectionStatusAtProviderRequester
 {
     /// <summary>Allow a local VPC to resolve public DNS hostnames to private IP addresses when queried from instances in the peer VPC.</summary>
@@ -673,6 +701,7 @@ public partial class V1beta1VPCPeeringConnectionStatusAtProviderRequester
     public bool? AllowRemoteVpcDnsResolution { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPCPeeringConnectionStatusAtProvider
 {
     /// <summary>The status of the VPC Peering Connection request.</summary>
@@ -720,6 +749,7 @@ public partial class V1beta1VPCPeeringConnectionStatusAtProvider
     public string? VpcId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1VPCPeeringConnectionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -747,6 +777,7 @@ public partial class V1beta1VPCPeeringConnectionStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>VPCPeeringConnectionStatus defines the observed state of VPCPeeringConnection.</summary>
 public partial class V1beta1VPCPeeringConnectionStatus
 {
     /// <summary></summary>
@@ -763,6 +794,7 @@ public partial class V1beta1VPCPeeringConnectionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>VPCPeeringConnection is the Schema for the VPCPeeringConnections API. Provides a resource to manage a VPC peering connection.</summary>
 public partial class V1beta1VPCPeeringConnection : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1VPCPeeringConnectionSpec>, IStatus<V1beta1VPCPeeringConnectionStatus>
 {
     public const string KubeApiVersion = "v1beta1";

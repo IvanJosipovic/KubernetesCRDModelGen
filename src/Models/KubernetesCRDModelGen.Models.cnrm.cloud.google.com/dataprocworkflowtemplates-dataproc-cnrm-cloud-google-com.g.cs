@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataproc.cnrm.cloud.google.com;
+/// <summary>Immutable. Optional. The runtime log config for job execution.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsHadoopJobLoggingConfig
 {
     /// <summary>Immutable. The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -15,6 +16,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsHadoopJobLoggingConf
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
 
+/// <summary>Immutable. Optional. Job is a Hadoop job.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsHadoopJob
 {
     /// <summary>Immutable. Optional. HCFS URIs of archives to be extracted in the working directory of Hadoop drivers and tasks. Supported file types: .jar, .tar, .tar.gz, .tgz, or .zip.</summary>
@@ -50,6 +52,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsHadoopJob
     public IDictionary<string, string>? Properties { get; set; }
 }
 
+/// <summary>Immutable. A list of queries.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsHiveJobQueryList
 {
     /// <summary>Immutable. Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": [ "query1", "query2", "query3;query4", ] } }</summary>
@@ -57,6 +60,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsHiveJobQueryList
     public IList<string> Queries { get; set; }
 }
 
+/// <summary>Immutable. Optional. Job is a Hive job.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsHiveJob
 {
     /// <summary>Immutable. Optional. Whether to continue executing queries if a query fails. The default value is `false`. Setting to `true` can be useful when executing independent parallel queries.</summary>
@@ -84,6 +88,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsHiveJob
     public IDictionary<string, string>? ScriptVariables { get; set; }
 }
 
+/// <summary>Immutable. Optional. The runtime log config for job execution.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsPigJobLoggingConfig
 {
     /// <summary>Immutable. The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -91,6 +96,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsPigJobLoggingConfig
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
 
+/// <summary>Immutable. A list of queries.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsPigJobQueryList
 {
     /// <summary>Immutable. Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": [ "query1", "query2", "query3;query4", ] } }</summary>
@@ -98,6 +104,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsPigJobQueryList
     public IList<string> Queries { get; set; }
 }
 
+/// <summary>Immutable. Optional. Job is a Pig job.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsPigJob
 {
     /// <summary>Immutable. Optional. Whether to continue executing queries if a query fails. The default value is `false`. Setting to `true` can be useful when executing independent parallel queries.</summary>
@@ -129,6 +136,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsPigJob
     public IDictionary<string, string>? ScriptVariables { get; set; }
 }
 
+/// <summary>Immutable. Optional. The runtime log config for job execution.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsPrestoJobLoggingConfig
 {
     /// <summary>Immutable. The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -136,6 +144,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsPrestoJobLoggingConf
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
 
+/// <summary>Immutable. A list of queries.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsPrestoJobQueryList
 {
     /// <summary>Immutable. Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": [ "query1", "query2", "query3;query4", ] } }</summary>
@@ -143,6 +152,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsPrestoJobQueryList
     public IList<string> Queries { get; set; }
 }
 
+/// <summary>Immutable. Optional. Job is a Presto job.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsPrestoJob
 {
     /// <summary>Immutable. Optional. Presto client tags to attach to this query</summary>
@@ -174,6 +184,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsPrestoJob
     public V1beta1DataprocWorkflowTemplateSpecJobsPrestoJobQueryList? QueryList { get; set; }
 }
 
+/// <summary>Immutable. Optional. The runtime log config for job execution.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsPysparkJobLoggingConfig
 {
     /// <summary>Immutable. The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -181,6 +192,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsPysparkJobLoggingCon
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
 
+/// <summary>Immutable. Optional. Job is a PySpark job.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsPysparkJob
 {
     /// <summary>Immutable. Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.</summary>
@@ -216,6 +228,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsPysparkJob
     public IList<string>? PythonFileUris { get; set; }
 }
 
+/// <summary>Immutable. Optional. Job scheduling configuration.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsScheduling
 {
     /// <summary>Immutable. Optional. Maximum number of times per hour a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed. A job may be reported as thrashing if driver exits with non-zero code 4 times within 10 minute window. Maximum value is 10.</summary>
@@ -227,6 +240,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsScheduling
     public long? MaxFailuresTotal { get; set; }
 }
 
+/// <summary>Immutable. Optional. The runtime log config for job execution.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkJobLoggingConfig
 {
     /// <summary>Immutable. The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -234,6 +248,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkJobLoggingConfi
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
 
+/// <summary>Immutable. Optional. Job is a Spark job.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkJob
 {
     /// <summary>Immutable. Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.</summary>
@@ -269,6 +284,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkJob
     public IDictionary<string, string>? Properties { get; set; }
 }
 
+/// <summary>Immutable. Optional. The runtime log config for job execution.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkRJobLoggingConfig
 {
     /// <summary>Immutable. The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -276,6 +292,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkRJobLoggingConf
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
 
+/// <summary>Immutable. Optional. Job is a SparkR job.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkRJob
 {
     /// <summary>Immutable. Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.</summary>
@@ -303,6 +320,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkRJob
     public IDictionary<string, string>? Properties { get; set; }
 }
 
+/// <summary>Immutable. Optional. The runtime log config for job execution.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkSqlJobLoggingConfig
 {
     /// <summary>Immutable. The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -310,6 +328,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkSqlJobLoggingCo
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
 
+/// <summary>Immutable. A list of queries.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkSqlJobQueryList
 {
     /// <summary>Immutable. Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": [ "query1", "query2", "query3;query4", ] } }</summary>
@@ -317,6 +336,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkSqlJobQueryList
     public IList<string> Queries { get; set; }
 }
 
+/// <summary>Immutable. Optional. Job is a SparkSql job.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkSqlJob
 {
     /// <summary>Immutable. Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.</summary>
@@ -344,6 +364,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkSqlJob
     public IDictionary<string, string>? ScriptVariables { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecJobs
 {
     /// <summary>Immutable. Optional. Job is a Hadoop job.</summary>
@@ -395,6 +416,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobs
     public string StepId { get; set; }
 }
 
+/// <summary>Immutable. Validation based on regular expressions.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecParametersValidationRegex
 {
     /// <summary>Immutable. Required. RE2 regular expressions used to validate the parameter's value. The value must match the regex in its entirety (substring matches are not sufficient).</summary>
@@ -402,6 +424,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecParametersValidationRege
     public IList<string> Regexes { get; set; }
 }
 
+/// <summary>Immutable. Validation based on a list of allowed values.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecParametersValidationValues
 {
     /// <summary>Immutable. Required. List of allowed values for the parameter.</summary>
@@ -409,6 +432,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecParametersValidationValu
     public IList<string> Values { get; set; }
 }
 
+/// <summary>Immutable. Optional. Validation rules to be applied to this parameter's value.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecParametersValidation
 {
     /// <summary>Immutable. Validation based on regular expressions.</summary>
@@ -420,6 +444,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecParametersValidation
     public V1beta1DataprocWorkflowTemplateSpecParametersValidationValues? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecParameters
 {
     /// <summary>Immutable. Optional. Brief description of the parameter. Must not exceed 1024 characters.</summary>
@@ -439,6 +464,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecParameters
     public V1beta1DataprocWorkflowTemplateSpecParametersValidation? Validation { get; set; }
 }
 
+/// <summary>Immutable. Optional. A selector that chooses target cluster for jobs based on metadata. The selector is evaluated at the time each job is submitted.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementClusterSelector
 {
     /// <summary>Immutable. Required. The cluster labels. Cluster must have all labels to match.</summary>
@@ -450,6 +476,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementClusterSelector
     public string? Zone { get; set; }
 }
 
+/// <summary>Immutable.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigAutoscalingConfigPolicyRef
 {
     /// <summary>Optional. The autoscaling policy used by the cluster. Only resource names including projectid and location (region) are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id]` * `projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id]` Note that the policy must be in the same project and Dataproc region.  Allowed value: The Google Cloud resource name of a `DataprocAutoscalingPolicy` resource (format: `projects/{{project}}/locations/{{location}}/autoscalingPolicies/{{name}}`).</summary>
@@ -465,6 +492,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. Optional. Autoscaling config for the policy associated with the cluster. Cluster does not autoscale if this field is unset.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigAutoscalingConfig
 {
     /// <summary>Immutable.</summary>
@@ -472,6 +500,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigAutoscalingConfigPolicyRef? PolicyRef { get; set; }
 }
 
+/// <summary>Immutable.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigEncryptionConfigGcePdKmsKeyRef
 {
     /// <summary>Optional. The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.  Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
@@ -487,6 +516,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. Optional. Encryption settings for the cluster.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigEncryptionConfig
 {
     /// <summary>Immutable.</summary>
@@ -494,6 +524,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigEncryptionConfigGcePdKmsKeyRef? GcePdKmsKeyRef { get; set; }
 }
 
+/// <summary>Immutable. Optional. Port/endpoint configuration for this cluster</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigEndpointConfig
 {
     /// <summary>Immutable. Optional. If true, enable http access to specific ports on the cluster from external sources. Defaults to false.</summary>
@@ -501,6 +532,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     public bool? EnableHttpPortAccess { get; set; }
 }
 
+/// <summary>Immutable.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigNetworkRef
 {
     /// <summary>Optional. The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork_uri. If neither `network_uri` nor `subnetwork_uri` is specified, the "default" network of the project is used, if it exists. Cannot be a "Custom Subnet Network" (see [Using Subnetworks](https://cloud.google.com/compute/docs/subnetworks) for more information). A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/regions/global/default` * `projects/[project_id]/regions/global/default` * `default`  Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
@@ -516,6 +548,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityNodeGroupRef
 {
     /// <summary>Required. The URI of a sole-tenant [node group resource](https://cloud.google.com/compute/docs/reference/rest/v1/nodeGroups) that the cluster will be created on. A full URL, partial URI, or node group name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/zones/us-central1-a/nodeGroups/node-group-1` * `projects/[project_id]/zones/us-central1-a/nodeGroups/node-group-1` * `node-group-1`  Allowed value: The `selfLink` field of a `ComputeNodeGroup` resource.</summary>
@@ -531,6 +564,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. Optional. Node Group Affinity for sole-tenant clusters.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity
 {
     /// <summary>Immutable.</summary>
@@ -538,6 +572,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityNodeGroupRef NodeGroupRef { get; set; }
 }
 
+/// <summary>Immutable. Optional. Reservation Affinity for consuming Zonal reservation.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigReservationAffinity
 {
     /// <summary>Immutable. Optional. Type of reservation to consume Possible values: TYPE_UNSPECIFIED, NO_RESERVATION, ANY_RESERVATION, SPECIFIC_RESERVATION</summary>
@@ -553,6 +588,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>Immutable.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigServiceAccountRef
 {
     /// <summary>Optional. The [Dataproc service account](https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/service-accounts#service_accounts_in_dataproc) (also see [VM Data Plane identity](https://cloud.google.com/dataproc/docs/concepts/iam/dataproc-principals#vm_service_account_data_plane_identity)) used by Dataproc cluster VM instances to access Google Cloud Platform services. If not specified, the [Compute Engine default service account](https://cloud.google.com/compute/docs/access/service-accounts#default_service_account) is used.  Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
@@ -568,6 +604,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. Optional. Shielded Instance Config for clusters using Compute Engine Shielded VMs.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfig
 {
     /// <summary>Immutable. Optional. Defines whether instances have integrity monitoring enabled. Integrity monitoring compares the most recent boot measurements to the integrity policy baseline and returns a pair of pass/fail results depending on whether they match or not.</summary>
@@ -583,6 +620,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     public bool? EnableVtpm { get; set; }
 }
 
+/// <summary>Immutable.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigSubnetworkRef
 {
     /// <summary>Optional. The Compute Engine subnetwork to be used for machine communications. Cannot be specified with network_uri. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/regions/us-east1/subnetworks/sub0` * `projects/[project_id]/regions/us-east1/subnetworks/sub0` * `sub0`  Allowed value: The `selfLink` field of a `ComputeSubnetwork` resource.</summary>
@@ -598,6 +636,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. Optional. The shared Compute Engine config settings for all instances in a cluster.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfig
 {
     /// <summary>Immutable. Optional. If true, all instances in the cluster will only have internal IP addresses. By default, clusters are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each instance. This `internal_ip_only` restriction can only be enabled for subnetwork enabled networks, and all off-cluster dependencies must be configured to be accessible without external IP addresses.</summary>
@@ -649,6 +688,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     public string? Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigInitializationActions
 {
     /// <summary>Immutable. Required. Cloud Storage URI of executable file.</summary>
@@ -660,6 +700,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     public string? ExecutionTimeout { get; set; }
 }
 
+/// <summary>Immutable. Optional. Lifecycle setting for the cluster.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigLifecycleConfig
 {
     /// <summary>Immutable. Optional. The time when cluster will be auto-deleted (see JSON representation of [Timestamp](https://developers.google.com/protocol-buffers/docs/proto3#json)).</summary>
@@ -675,6 +716,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     public string? IdleDeleteTtl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigMasterConfigAccelerators
 {
     /// <summary>Immutable. The number of the accelerator cards of this type exposed to this instance.</summary>
@@ -686,6 +728,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     public string? AcceleratorType { get; set; }
 }
 
+/// <summary>Immutable. Optional. Disk option config settings.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigMasterConfigDiskConfig
 {
     /// <summary>Immutable. Optional. Size in GB of the boot disk (default is 500GB).</summary>
@@ -701,6 +744,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     public long? NumLocalSsds { get; set; }
 }
 
+/// <summary>Immutable.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigMasterConfigImageRef
 {
     /// <summary>Optional. The Compute Engine image resource used for cluster instances. The URI can represent an image or image family. Image examples: * `https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/[image-id]` * `projects/[project_id]/global/images/[image-id]` * `image-id` Image family examples. Dataproc will use the most recent image from the family: * `https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/family/[custom-image-family-name]` * `projects/[project_id]/global/images/family/[custom-image-family-name]` If the URI is unspecified, it will be inferred from `SoftwareConfig.image_version` or the system default.  Allowed value: The `selfLink` field of a `ComputeImage` resource.</summary>
@@ -716,6 +760,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. Optional. The Compute Engine config settings for the master instance in a cluster.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigMasterConfig
 {
     /// <summary>Immutable. Optional. The Compute Engine accelerator configuration for these instances.</summary>
@@ -747,6 +792,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     public string? Preemptibility { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecondaryWorkerConfigAccelerators
 {
     /// <summary>Immutable. The number of the accelerator cards of this type exposed to this instance.</summary>
@@ -758,6 +804,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     public string? AcceleratorType { get; set; }
 }
 
+/// <summary>Immutable. Optional. Disk option config settings.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecondaryWorkerConfigDiskConfig
 {
     /// <summary>Immutable. Optional. Size in GB of the boot disk (default is 500GB).</summary>
@@ -773,6 +820,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     public long? NumLocalSsds { get; set; }
 }
 
+/// <summary>Immutable.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecondaryWorkerConfigImageRef
 {
     /// <summary>Optional. The Compute Engine image resource used for cluster instances. The URI can represent an image or image family. Image examples: * `https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/[image-id]` * `projects/[project_id]/global/images/[image-id]` * `image-id` Image family examples. Dataproc will use the most recent image from the family: * `https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/family/[custom-image-family-name]` * `projects/[project_id]/global/images/family/[custom-image-family-name]` If the URI is unspecified, it will be inferred from `SoftwareConfig.image_version` or the system default.  Allowed value: The `selfLink` field of a `ComputeImage` resource.</summary>
@@ -788,6 +836,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. Optional. The Compute Engine config settings for additional worker instances in a cluster.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecondaryWorkerConfig
 {
     /// <summary>Immutable. Optional. The Compute Engine accelerator configuration for these instances.</summary>
@@ -819,6 +868,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     public string? Preemptibility { get; set; }
 }
 
+/// <summary>Immutable.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecurityConfigKerberosConfigKmsKeyRef
 {
     /// <summary>Optional. The uri of the KMS key used to encrypt various sensitive files.  Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
@@ -834,6 +884,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. Optional. Kerberos related configuration.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecurityConfigKerberosConfig
 {
     /// <summary>Immutable. Optional. The admin server (IP or hostname) for the remote trusted realm in a cross realm trust relationship.</summary>
@@ -897,6 +948,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     public string? TruststorePassword { get; set; }
 }
 
+/// <summary>Immutable. Optional. Security settings for the cluster.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecurityConfig
 {
     /// <summary>Immutable. Optional. Kerberos related configuration.</summary>
@@ -904,6 +956,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecurityConfigKerberosConfig? KerberosConfig { get; set; }
 }
 
+/// <summary>Immutable. Optional. The config settings for software inside the cluster.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSoftwareConfig
 {
     /// <summary>Immutable. Optional. The version of software inside the cluster. It must be one of the supported [Dataproc Versions](https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#supported_dataproc_versions), such as "1.2" (including a subminor version, such as "1.2.29"), or the ["preview" version](https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#other_versions). If unspecified, it defaults to the latest Debian version.</summary>
@@ -919,6 +972,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     public IDictionary<string, string>? Properties { get; set; }
 }
 
+/// <summary>Immutable.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigStagingBucketRef
 {
     /// <summary>Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket (see [Dataproc staging bucket](https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). **This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.**  Allowed value: The Google Cloud resource name of a `StorageBucket` resource (format: `{{name}}`).</summary>
@@ -934,6 +988,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigTempBucketRef
 {
     /// <summary>Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if you specify a bucket. **This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.**  Allowed value: The Google Cloud resource name of a `StorageBucket` resource (format: `{{name}}`).</summary>
@@ -949,6 +1004,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigWorkerConfigAccelerators
 {
     /// <summary>Immutable. The number of the accelerator cards of this type exposed to this instance.</summary>
@@ -960,6 +1016,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     public string? AcceleratorType { get; set; }
 }
 
+/// <summary>Immutable. Optional. Disk option config settings.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigWorkerConfigDiskConfig
 {
     /// <summary>Immutable. Optional. Size in GB of the boot disk (default is 500GB).</summary>
@@ -975,6 +1032,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     public long? NumLocalSsds { get; set; }
 }
 
+/// <summary>Immutable.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigWorkerConfigImageRef
 {
     /// <summary>Optional. The Compute Engine image resource used for cluster instances. The URI can represent an image or image family. Image examples: * `https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/[image-id]` * `projects/[project_id]/global/images/[image-id]` * `image-id` Image family examples. Dataproc will use the most recent image from the family: * `https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/family/[custom-image-family-name]` * `projects/[project_id]/global/images/family/[custom-image-family-name]` If the URI is unspecified, it will be inferred from `SoftwareConfig.image_version` or the system default.  Allowed value: The `selfLink` field of a `ComputeImage` resource.</summary>
@@ -990,6 +1048,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. Optional. The Compute Engine config settings for worker instances in a cluster.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigWorkerConfig
 {
     /// <summary>Immutable. Optional. The Compute Engine accelerator configuration for these instances.</summary>
@@ -1021,6 +1080,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     public string? Preemptibility { get; set; }
 }
 
+/// <summary>Immutable. Required. The cluster configuration.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfig
 {
     /// <summary>Immutable. Optional. Autoscaling config for the policy associated with the cluster. Cluster does not autoscale if this field is unset.</summary>
@@ -1076,6 +1136,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
     public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigWorkerConfig? WorkerConfig { get; set; }
 }
 
+/// <summary>Immutable. A cluster that is managed by the workflow.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedCluster
 {
     /// <summary>Immutable. Required. The cluster name prefix. A unique cluster name will be formed by appending a random suffix. The name must contain only lower-case letters (a-z), numbers (0-9), and hyphens (-). Must begin with a letter. Cannot begin or end with hyphen. Must consist of between 2 and 35 characters.</summary>
@@ -1091,6 +1152,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedCluster
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary>Immutable. Required. WorkflowTemplate scheduling information.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecPlacement
 {
     /// <summary>Immutable. Optional. A selector that chooses target cluster for jobs based on metadata. The selector is evaluated at the time each job is submitted.</summary>
@@ -1102,6 +1164,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacement
     public V1beta1DataprocWorkflowTemplateSpecPlacementManagedCluster? ManagedCluster { get; set; }
 }
 
+/// <summary>Immutable. The Project that this resource belongs to.</summary>
 public partial class V1beta1DataprocWorkflowTemplateSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -1117,6 +1180,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataprocWorkflowTemplateSpec
 {
     /// <summary>Immutable. Optional. Timeout duration for the DAG of jobs, expressed in seconds (see [JSON representation of duration](https://developers.google.com/protocol-buffers/docs/proto3#json)). The timeout duration must be from 10 minutes ("600s") to 24 hours ("86400s"). The timer begins when the first job is submitted. If the workflow is running at the end of the timeout period, any remaining jobs are cancelled, the workflow is ended, and if the workflow was running on a [managed cluster](/dataproc/docs/concepts/workflows/using-workflows#configuring_or_selecting_a_cluster), the cluster is deleted.</summary>
@@ -1148,6 +1212,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataprocWorkflowTemplateStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -1171,6 +1236,7 @@ public partial class V1beta1DataprocWorkflowTemplateStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigEndpointConfig
 {
     /// <summary>Output only. The map of port descriptions to URLs. Will only be populated if enable_http_port_access is true.</summary>
@@ -1178,6 +1244,7 @@ public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedCluste
     public IDictionary<string, string>? HttpPorts { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigLifecycleConfig
 {
     /// <summary>Output only. The time when cluster became idle (most recent job finished) and became eligible for deletion due to idleness (see JSON representation of [Timestamp](https://developers.google.com/protocol-buffers/docs/proto3#json)).</summary>
@@ -1185,6 +1252,7 @@ public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedCluste
     public string? IdleStartTime { get; set; }
 }
 
+/// <summary>Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.</summary>
 public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigMasterConfigManagedGroupConfig
 {
     /// <summary>Output only. The name of the Instance Group Manager for this group.</summary>
@@ -1196,6 +1264,7 @@ public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedCluste
     public string? InstanceTemplateName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigMasterConfig
 {
     /// <summary>Output only. The list of instance names. Dataproc derives the names from `cluster_name`, `num_instances`, and the instance group.</summary>
@@ -1211,6 +1280,7 @@ public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedCluste
     public V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigMasterConfigManagedGroupConfig? ManagedGroupConfig { get; set; }
 }
 
+/// <summary>Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.</summary>
 public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfig
 {
     /// <summary>Output only. The name of the Instance Group Manager for this group.</summary>
@@ -1222,6 +1292,7 @@ public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedCluste
     public string? InstanceTemplateName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigSecondaryWorkerConfig
 {
     /// <summary>Output only. The list of instance names. Dataproc derives the names from `cluster_name`, `num_instances`, and the instance group.</summary>
@@ -1237,6 +1308,7 @@ public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedCluste
     public V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfig? ManagedGroupConfig { get; set; }
 }
 
+/// <summary>Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.</summary>
 public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigWorkerConfigManagedGroupConfig
 {
     /// <summary>Output only. The name of the Instance Group Manager for this group.</summary>
@@ -1248,6 +1320,7 @@ public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedCluste
     public string? InstanceTemplateName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigWorkerConfig
 {
     /// <summary>Output only. The list of instance names. Dataproc derives the names from `cluster_name`, `num_instances`, and the instance group.</summary>
@@ -1263,6 +1336,7 @@ public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedCluste
     public V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigWorkerConfigManagedGroupConfig? ManagedGroupConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfig
 {
     /// <summary></summary>
@@ -1286,6 +1360,7 @@ public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedCluste
     public V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigWorkerConfig? WorkerConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedCluster
 {
     /// <summary></summary>
@@ -1293,6 +1368,7 @@ public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedCluste
     public V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfig? Config { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataprocWorkflowTemplateStatusPlacement
 {
     /// <summary></summary>
@@ -1300,6 +1376,7 @@ public partial class V1beta1DataprocWorkflowTemplateStatusPlacement
     public V1beta1DataprocWorkflowTemplateStatusPlacementManagedCluster? ManagedCluster { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataprocWorkflowTemplateStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -1328,6 +1405,7 @@ public partial class V1beta1DataprocWorkflowTemplateStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1DataprocWorkflowTemplate : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DataprocWorkflowTemplateSpec>, IStatus<V1beta1DataprocWorkflowTemplateStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -18,6 +18,7 @@ public enum V1beta1ConnectionSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectionSpecForProviderAwsAccessRole
 {
     /// <summary>The user’s AWS IAM Role that trusts the Google-owned AWS IAM user Connection.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1ConnectionSpecForProviderAwsAccessRole
     public string? IamRoleId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectionSpecForProviderAws
 {
     /// <summary>Authentication using Google owned service account to assume into customer's AWS IAM Role. Structure is documented below.</summary>
@@ -32,6 +34,7 @@ public partial class V1beta1ConnectionSpecForProviderAws
     public IList<V1beta1ConnectionSpecForProviderAwsAccessRole>? AccessRole { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectionSpecForProviderAzure
 {
     /// <summary>The id of customer's directory that host the data.</summary>
@@ -43,10 +46,12 @@ public partial class V1beta1ConnectionSpecForProviderAzure
     public string? FederatedApplicationClientId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectionSpecForProviderCloudResource
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectionSpecForProviderCloudSpanner
 {
     /// <summary>Cloud Spanner database in the form `project/instance/database'.</summary>
@@ -74,6 +79,7 @@ public partial class V1beta1ConnectionSpecForProviderCloudSpanner
     public bool? UseServerlessAnalytics { get; set; }
 }
 
+/// <summary>Password for database. Note: This property is sensitive and will not be displayed in the plan.</summary>
 public partial class V1beta1ConnectionSpecForProviderCloudSqlCredentialPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -109,6 +115,7 @@ public enum V1beta1ConnectionSpecForProviderCloudSqlCredentialUsernameRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectionSpecForProviderCloudSqlCredentialUsernameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -122,6 +129,7 @@ public partial class V1beta1ConnectionSpecForProviderCloudSqlCredentialUsernameR
     public V1beta1ConnectionSpecForProviderCloudSqlCredentialUsernameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a User in sql to populate username.</summary>
 public partial class V1beta1ConnectionSpecForProviderCloudSqlCredentialUsernameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -153,6 +161,7 @@ public enum V1beta1ConnectionSpecForProviderCloudSqlCredentialUsernameSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectionSpecForProviderCloudSqlCredentialUsernameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -166,6 +175,7 @@ public partial class V1beta1ConnectionSpecForProviderCloudSqlCredentialUsernameS
     public V1beta1ConnectionSpecForProviderCloudSqlCredentialUsernameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a User in sql to populate username.</summary>
 public partial class V1beta1ConnectionSpecForProviderCloudSqlCredentialUsernameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -181,6 +191,7 @@ public partial class V1beta1ConnectionSpecForProviderCloudSqlCredentialUsernameS
     public V1beta1ConnectionSpecForProviderCloudSqlCredentialUsernameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectionSpecForProviderCloudSqlCredential
 {
     /// <summary>Password for database. Note: This property is sensitive and will not be displayed in the plan.</summary>
@@ -220,6 +231,7 @@ public enum V1beta1ConnectionSpecForProviderCloudSqlDatabaseRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectionSpecForProviderCloudSqlDatabaseRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -233,6 +245,7 @@ public partial class V1beta1ConnectionSpecForProviderCloudSqlDatabaseRefPolicy
     public V1beta1ConnectionSpecForProviderCloudSqlDatabaseRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Database in sql to populate database.</summary>
 public partial class V1beta1ConnectionSpecForProviderCloudSqlDatabaseRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -264,6 +277,7 @@ public enum V1beta1ConnectionSpecForProviderCloudSqlDatabaseSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectionSpecForProviderCloudSqlDatabaseSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -277,6 +291,7 @@ public partial class V1beta1ConnectionSpecForProviderCloudSqlDatabaseSelectorPol
     public V1beta1ConnectionSpecForProviderCloudSqlDatabaseSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Database in sql to populate database.</summary>
 public partial class V1beta1ConnectionSpecForProviderCloudSqlDatabaseSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -312,6 +327,7 @@ public enum V1beta1ConnectionSpecForProviderCloudSqlInstanceIdRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectionSpecForProviderCloudSqlInstanceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -325,6 +341,7 @@ public partial class V1beta1ConnectionSpecForProviderCloudSqlInstanceIdRefPolicy
     public V1beta1ConnectionSpecForProviderCloudSqlInstanceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a DatabaseInstance in sql to populate instanceId.</summary>
 public partial class V1beta1ConnectionSpecForProviderCloudSqlInstanceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -356,6 +373,7 @@ public enum V1beta1ConnectionSpecForProviderCloudSqlInstanceIdSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectionSpecForProviderCloudSqlInstanceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -369,6 +387,7 @@ public partial class V1beta1ConnectionSpecForProviderCloudSqlInstanceIdSelectorP
     public V1beta1ConnectionSpecForProviderCloudSqlInstanceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a DatabaseInstance in sql to populate instanceId.</summary>
 public partial class V1beta1ConnectionSpecForProviderCloudSqlInstanceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -384,6 +403,7 @@ public partial class V1beta1ConnectionSpecForProviderCloudSqlInstanceIdSelector
     public V1beta1ConnectionSpecForProviderCloudSqlInstanceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectionSpecForProviderCloudSql
 {
     /// <summary>Cloud SQL properties. Structure is documented below.</summary>
@@ -419,6 +439,7 @@ public partial class V1beta1ConnectionSpecForProviderCloudSql
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectionSpecForProviderSparkMetastoreServiceConfig
 {
     /// <summary>Resource name of an existing Dataproc Metastore service in the form of projects/[projectId]/locations/[region]/services/[serviceId].</summary>
@@ -446,6 +467,7 @@ public enum V1beta1ConnectionSpecForProviderSparkSparkHistoryServerConfigDatapro
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectionSpecForProviderSparkSparkHistoryServerConfigDataprocClusterRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -459,6 +481,7 @@ public partial class V1beta1ConnectionSpecForProviderSparkSparkHistoryServerConf
     public V1beta1ConnectionSpecForProviderSparkSparkHistoryServerConfigDataprocClusterRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in dataproc to populate dataprocCluster.</summary>
 public partial class V1beta1ConnectionSpecForProviderSparkSparkHistoryServerConfigDataprocClusterRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -490,6 +513,7 @@ public enum V1beta1ConnectionSpecForProviderSparkSparkHistoryServerConfigDatapro
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectionSpecForProviderSparkSparkHistoryServerConfigDataprocClusterSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -503,6 +527,7 @@ public partial class V1beta1ConnectionSpecForProviderSparkSparkHistoryServerConf
     public V1beta1ConnectionSpecForProviderSparkSparkHistoryServerConfigDataprocClusterSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in dataproc to populate dataprocCluster.</summary>
 public partial class V1beta1ConnectionSpecForProviderSparkSparkHistoryServerConfigDataprocClusterSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -518,6 +543,7 @@ public partial class V1beta1ConnectionSpecForProviderSparkSparkHistoryServerConf
     public V1beta1ConnectionSpecForProviderSparkSparkHistoryServerConfigDataprocClusterSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectionSpecForProviderSparkSparkHistoryServerConfig
 {
     /// <summary>Resource name of an existing Dataproc Cluster to act as a Spark History Server for the connection if the form of projects/[projectId]/regions/[region]/clusters/[cluster_name].</summary>
@@ -533,6 +559,7 @@ public partial class V1beta1ConnectionSpecForProviderSparkSparkHistoryServerConf
     public V1beta1ConnectionSpecForProviderSparkSparkHistoryServerConfigDataprocClusterSelector? DataprocClusterSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectionSpecForProviderSpark
 {
     /// <summary>Dataproc Metastore Service configuration for the connection. Structure is documented below.</summary>
@@ -544,6 +571,7 @@ public partial class V1beta1ConnectionSpecForProviderSpark
     public IList<V1beta1ConnectionSpecForProviderSparkSparkHistoryServerConfig>? SparkHistoryServerConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectionSpecForProvider
 {
     /// <summary>Connection properties specific to Amazon Web Services. Structure is documented below.</summary>
@@ -595,6 +623,7 @@ public partial class V1beta1ConnectionSpecForProvider
     public IList<V1beta1ConnectionSpecForProviderSpark>? Spark { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectionSpecInitProviderAwsAccessRole
 {
     /// <summary>The user’s AWS IAM Role that trusts the Google-owned AWS IAM user Connection.</summary>
@@ -602,6 +631,7 @@ public partial class V1beta1ConnectionSpecInitProviderAwsAccessRole
     public string? IamRoleId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectionSpecInitProviderAws
 {
     /// <summary>Authentication using Google owned service account to assume into customer's AWS IAM Role. Structure is documented below.</summary>
@@ -609,6 +639,7 @@ public partial class V1beta1ConnectionSpecInitProviderAws
     public IList<V1beta1ConnectionSpecInitProviderAwsAccessRole>? AccessRole { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectionSpecInitProviderAzure
 {
     /// <summary>The id of customer's directory that host the data.</summary>
@@ -620,10 +651,12 @@ public partial class V1beta1ConnectionSpecInitProviderAzure
     public string? FederatedApplicationClientId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectionSpecInitProviderCloudResource
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectionSpecInitProviderCloudSpanner
 {
     /// <summary>Cloud Spanner database in the form `project/instance/database'.</summary>
@@ -671,6 +704,7 @@ public enum V1beta1ConnectionSpecInitProviderCloudSqlCredentialUsernameRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectionSpecInitProviderCloudSqlCredentialUsernameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -684,6 +718,7 @@ public partial class V1beta1ConnectionSpecInitProviderCloudSqlCredentialUsername
     public V1beta1ConnectionSpecInitProviderCloudSqlCredentialUsernameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a User in sql to populate username.</summary>
 public partial class V1beta1ConnectionSpecInitProviderCloudSqlCredentialUsernameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -715,6 +750,7 @@ public enum V1beta1ConnectionSpecInitProviderCloudSqlCredentialUsernameSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectionSpecInitProviderCloudSqlCredentialUsernameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -728,6 +764,7 @@ public partial class V1beta1ConnectionSpecInitProviderCloudSqlCredentialUsername
     public V1beta1ConnectionSpecInitProviderCloudSqlCredentialUsernameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a User in sql to populate username.</summary>
 public partial class V1beta1ConnectionSpecInitProviderCloudSqlCredentialUsernameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -743,6 +780,7 @@ public partial class V1beta1ConnectionSpecInitProviderCloudSqlCredentialUsername
     public V1beta1ConnectionSpecInitProviderCloudSqlCredentialUsernameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectionSpecInitProviderCloudSqlCredential
 {
     /// <summary>Username for database.</summary>
@@ -778,6 +816,7 @@ public enum V1beta1ConnectionSpecInitProviderCloudSqlDatabaseRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectionSpecInitProviderCloudSqlDatabaseRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -791,6 +830,7 @@ public partial class V1beta1ConnectionSpecInitProviderCloudSqlDatabaseRefPolicy
     public V1beta1ConnectionSpecInitProviderCloudSqlDatabaseRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Database in sql to populate database.</summary>
 public partial class V1beta1ConnectionSpecInitProviderCloudSqlDatabaseRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -822,6 +862,7 @@ public enum V1beta1ConnectionSpecInitProviderCloudSqlDatabaseSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectionSpecInitProviderCloudSqlDatabaseSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -835,6 +876,7 @@ public partial class V1beta1ConnectionSpecInitProviderCloudSqlDatabaseSelectorPo
     public V1beta1ConnectionSpecInitProviderCloudSqlDatabaseSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Database in sql to populate database.</summary>
 public partial class V1beta1ConnectionSpecInitProviderCloudSqlDatabaseSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -870,6 +912,7 @@ public enum V1beta1ConnectionSpecInitProviderCloudSqlInstanceIdRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectionSpecInitProviderCloudSqlInstanceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -883,6 +926,7 @@ public partial class V1beta1ConnectionSpecInitProviderCloudSqlInstanceIdRefPolic
     public V1beta1ConnectionSpecInitProviderCloudSqlInstanceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a DatabaseInstance in sql to populate instanceId.</summary>
 public partial class V1beta1ConnectionSpecInitProviderCloudSqlInstanceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -914,6 +958,7 @@ public enum V1beta1ConnectionSpecInitProviderCloudSqlInstanceIdSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectionSpecInitProviderCloudSqlInstanceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -927,6 +972,7 @@ public partial class V1beta1ConnectionSpecInitProviderCloudSqlInstanceIdSelector
     public V1beta1ConnectionSpecInitProviderCloudSqlInstanceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a DatabaseInstance in sql to populate instanceId.</summary>
 public partial class V1beta1ConnectionSpecInitProviderCloudSqlInstanceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -942,6 +988,7 @@ public partial class V1beta1ConnectionSpecInitProviderCloudSqlInstanceIdSelector
     public V1beta1ConnectionSpecInitProviderCloudSqlInstanceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectionSpecInitProviderCloudSql
 {
     /// <summary>Cloud SQL properties. Structure is documented below.</summary>
@@ -977,6 +1024,7 @@ public partial class V1beta1ConnectionSpecInitProviderCloudSql
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectionSpecInitProviderSparkMetastoreServiceConfig
 {
     /// <summary>Resource name of an existing Dataproc Metastore service in the form of projects/[projectId]/locations/[region]/services/[serviceId].</summary>
@@ -1004,6 +1052,7 @@ public enum V1beta1ConnectionSpecInitProviderSparkSparkHistoryServerConfigDatapr
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectionSpecInitProviderSparkSparkHistoryServerConfigDataprocClusterRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1017,6 +1066,7 @@ public partial class V1beta1ConnectionSpecInitProviderSparkSparkHistoryServerCon
     public V1beta1ConnectionSpecInitProviderSparkSparkHistoryServerConfigDataprocClusterRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in dataproc to populate dataprocCluster.</summary>
 public partial class V1beta1ConnectionSpecInitProviderSparkSparkHistoryServerConfigDataprocClusterRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1048,6 +1098,7 @@ public enum V1beta1ConnectionSpecInitProviderSparkSparkHistoryServerConfigDatapr
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectionSpecInitProviderSparkSparkHistoryServerConfigDataprocClusterSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1061,6 +1112,7 @@ public partial class V1beta1ConnectionSpecInitProviderSparkSparkHistoryServerCon
     public V1beta1ConnectionSpecInitProviderSparkSparkHistoryServerConfigDataprocClusterSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in dataproc to populate dataprocCluster.</summary>
 public partial class V1beta1ConnectionSpecInitProviderSparkSparkHistoryServerConfigDataprocClusterSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1076,6 +1128,7 @@ public partial class V1beta1ConnectionSpecInitProviderSparkSparkHistoryServerCon
     public V1beta1ConnectionSpecInitProviderSparkSparkHistoryServerConfigDataprocClusterSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectionSpecInitProviderSparkSparkHistoryServerConfig
 {
     /// <summary>Resource name of an existing Dataproc Cluster to act as a Spark History Server for the connection if the form of projects/[projectId]/regions/[region]/clusters/[cluster_name].</summary>
@@ -1091,6 +1144,7 @@ public partial class V1beta1ConnectionSpecInitProviderSparkSparkHistoryServerCon
     public V1beta1ConnectionSpecInitProviderSparkSparkHistoryServerConfigDataprocClusterSelector? DataprocClusterSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectionSpecInitProviderSpark
 {
     /// <summary>Dataproc Metastore Service configuration for the connection. Structure is documented below.</summary>
@@ -1102,6 +1156,7 @@ public partial class V1beta1ConnectionSpecInitProviderSpark
     public IList<V1beta1ConnectionSpecInitProviderSparkSparkHistoryServerConfig>? SparkHistoryServerConfig { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ConnectionSpecInitProvider
 {
     /// <summary>Connection properties specific to Amazon Web Services. Structure is documented below.</summary>
@@ -1195,6 +1250,7 @@ public enum V1beta1ConnectionSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectionSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1208,6 +1264,7 @@ public partial class V1beta1ConnectionSpecProviderConfigRefPolicy
     public V1beta1ConnectionSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ConnectionSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1239,6 +1296,7 @@ public enum V1beta1ConnectionSpecPublishConnectionDetailsToConfigRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectionSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1252,6 +1310,7 @@ public partial class V1beta1ConnectionSpecPublishConnectionDetailsToConfigRefPol
     public V1beta1ConnectionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ConnectionSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1263,6 +1322,7 @@ public partial class V1beta1ConnectionSpecPublishConnectionDetailsToConfigRef
     public V1beta1ConnectionSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ConnectionSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1278,6 +1338,7 @@ public partial class V1beta1ConnectionSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ConnectionSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1293,6 +1354,7 @@ public partial class V1beta1ConnectionSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ConnectionSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1304,6 +1366,7 @@ public partial class V1beta1ConnectionSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ConnectionSpec defines the desired state of Connection</summary>
 public partial class V1beta1ConnectionSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1336,6 +1399,7 @@ public partial class V1beta1ConnectionSpec
     public V1beta1ConnectionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectionStatusAtProviderAwsAccessRole
 {
     /// <summary>The user’s AWS IAM Role that trusts the Google-owned AWS IAM user Connection.</summary>
@@ -1347,6 +1411,7 @@ public partial class V1beta1ConnectionStatusAtProviderAwsAccessRole
     public string? Identity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectionStatusAtProviderAws
 {
     /// <summary>Authentication using Google owned service account to assume into customer's AWS IAM Role. Structure is documented below.</summary>
@@ -1354,6 +1419,7 @@ public partial class V1beta1ConnectionStatusAtProviderAws
     public IList<V1beta1ConnectionStatusAtProviderAwsAccessRole>? AccessRole { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectionStatusAtProviderAzure
 {
     /// <summary>(Output) The name of the Azure Active Directory Application.</summary>
@@ -1385,6 +1451,7 @@ public partial class V1beta1ConnectionStatusAtProviderAzure
     public string? RedirectUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectionStatusAtProviderCloudResource
 {
     /// <summary>(Output) The account ID of the service created for the purpose of this connection.</summary>
@@ -1392,6 +1459,7 @@ public partial class V1beta1ConnectionStatusAtProviderCloudResource
     public string? ServiceAccountId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectionStatusAtProviderCloudSpanner
 {
     /// <summary>Cloud Spanner database in the form `project/instance/database'.</summary>
@@ -1419,6 +1487,7 @@ public partial class V1beta1ConnectionStatusAtProviderCloudSpanner
     public bool? UseServerlessAnalytics { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectionStatusAtProviderCloudSqlCredential
 {
     /// <summary>Username for database.</summary>
@@ -1426,6 +1495,7 @@ public partial class V1beta1ConnectionStatusAtProviderCloudSqlCredential
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectionStatusAtProviderCloudSql
 {
     /// <summary>Cloud SQL properties. Structure is documented below.</summary>
@@ -1449,6 +1519,7 @@ public partial class V1beta1ConnectionStatusAtProviderCloudSql
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectionStatusAtProviderSparkMetastoreServiceConfig
 {
     /// <summary>Resource name of an existing Dataproc Metastore service in the form of projects/[projectId]/locations/[region]/services/[serviceId].</summary>
@@ -1456,6 +1527,7 @@ public partial class V1beta1ConnectionStatusAtProviderSparkMetastoreServiceConfi
     public string? MetastoreService { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectionStatusAtProviderSparkSparkHistoryServerConfig
 {
     /// <summary>Resource name of an existing Dataproc Cluster to act as a Spark History Server for the connection if the form of projects/[projectId]/regions/[region]/clusters/[cluster_name].</summary>
@@ -1463,6 +1535,7 @@ public partial class V1beta1ConnectionStatusAtProviderSparkSparkHistoryServerCon
     public string? DataprocCluster { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectionStatusAtProviderSpark
 {
     /// <summary>Dataproc Metastore Service configuration for the connection. Structure is documented below.</summary>
@@ -1478,6 +1551,7 @@ public partial class V1beta1ConnectionStatusAtProviderSpark
     public IList<V1beta1ConnectionStatusAtProviderSparkSparkHistoryServerConfig>? SparkHistoryServerConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectionStatusAtProvider
 {
     /// <summary>Connection properties specific to Amazon Web Services. Structure is documented below.</summary>
@@ -1541,6 +1615,7 @@ public partial class V1beta1ConnectionStatusAtProvider
     public IList<V1beta1ConnectionStatusAtProviderSpark>? Spark { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ConnectionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1568,6 +1643,7 @@ public partial class V1beta1ConnectionStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ConnectionStatus defines the observed state of Connection.</summary>
 public partial class V1beta1ConnectionStatus
 {
     /// <summary></summary>
@@ -1584,6 +1660,7 @@ public partial class V1beta1ConnectionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Connection is the Schema for the Connections API. A connection allows BigQuery connections to external data sources.</summary>
 public partial class V1beta1Connection : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ConnectionSpec>, IStatus<V1beta1ConnectionStatus>
 {
     public const string KubeApiVersion = "v1beta1";

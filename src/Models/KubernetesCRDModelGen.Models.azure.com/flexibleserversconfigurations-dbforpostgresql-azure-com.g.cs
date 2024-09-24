@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dbforpostgresql.azure.com;
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a dbforpostgresql.azure.com/FlexibleServer resource</summary>
 public partial class V1api20221201storageFlexibleServersConfigurationSpecOwner
 {
     /// <summary></summary>
@@ -19,6 +20,7 @@ public partial class V1api20221201storageFlexibleServersConfigurationSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20221201.FlexibleServers_Configuration_Spec</summary>
 public partial class V1api20221201storageFlexibleServersConfigurationSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -46,6 +48,7 @@ public partial class V1api20221201storageFlexibleServersConfigurationSpec
     public string? Value { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20221201storageFlexibleServersConfigurationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -77,6 +80,7 @@ public partial class V1api20221201storageFlexibleServersConfigurationStatusCondi
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20221201.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 public partial class V1api20221201storageFlexibleServersConfigurationStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -108,6 +112,7 @@ public partial class V1api20221201storageFlexibleServersConfigurationStatusSyste
     public string? LastModifiedByType { get; set; }
 }
 
+/// <summary>Storage version of v1api20221201.FlexibleServers_Configuration_STATUS</summary>
 public partial class V1api20221201storageFlexibleServersConfigurationStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -180,6 +185,7 @@ public partial class V1api20221201storageFlexibleServersConfigurationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20221201.FlexibleServersConfiguration Generator information: - Generated from: /postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2022-12-01/Configuration.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforPostgreSQL/flexibleServers/{serverName}/configurations/{configurationName}</summary>
 public partial class V1api20221201storageFlexibleServersConfiguration : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20221201storageFlexibleServersConfigurationSpec>, IStatus<V1api20221201storageFlexibleServersConfigurationStatus>
 {
     public const string KubeApiVersion = "v1api20221201storage";

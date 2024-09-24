@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.firebase.cnrm.cloud.google.com;
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1FirebaseProjectSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1FirebaseProjectSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1FirebaseProjectSpec
 {
     /// <summary>The project that this resource belongs to.</summary>
@@ -34,6 +36,7 @@ public partial class V1alpha1FirebaseProjectSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1FirebaseProjectStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -57,6 +60,7 @@ public partial class V1alpha1FirebaseProjectStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1FirebaseProjectStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -77,6 +81,7 @@ public partial class V1alpha1FirebaseProjectStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1FirebaseProject : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1FirebaseProjectSpec>, IStatus<V1alpha1FirebaseProjectStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

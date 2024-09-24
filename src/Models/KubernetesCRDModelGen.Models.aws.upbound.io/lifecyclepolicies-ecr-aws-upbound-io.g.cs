@@ -38,6 +38,7 @@ public enum V1beta1LifecyclePolicySpecForProviderRepositoryRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LifecyclePolicySpecForProviderRepositoryRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1LifecyclePolicySpecForProviderRepositoryRefPolicy
     public V1beta1LifecyclePolicySpecForProviderRepositoryRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Repository in ecr to populate repository.</summary>
 public partial class V1beta1LifecyclePolicySpecForProviderRepositoryRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1LifecyclePolicySpecForProviderRepositorySelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LifecyclePolicySpecForProviderRepositorySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1LifecyclePolicySpecForProviderRepositorySelectorPoli
     public V1beta1LifecyclePolicySpecForProviderRepositorySelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Repository in ecr to populate repository.</summary>
 public partial class V1beta1LifecyclePolicySpecForProviderRepositorySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1LifecyclePolicySpecForProviderRepositorySelector
     public V1beta1LifecyclePolicySpecForProviderRepositorySelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicySpecForProvider
 {
     /// <summary>The policy document. This is a JSON formatted string. See more details about Policy Parameters in the official AWS docs. Consider using the aws_ecr_lifecycle_policy_document data_source to generate/manage the JSON document used for the policy argument.</summary>
@@ -153,6 +158,7 @@ public enum V1beta1LifecyclePolicySpecInitProviderRepositoryRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LifecyclePolicySpecInitProviderRepositoryRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -166,6 +172,7 @@ public partial class V1beta1LifecyclePolicySpecInitProviderRepositoryRefPolicy
     public V1beta1LifecyclePolicySpecInitProviderRepositoryRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Repository in ecr to populate repository.</summary>
 public partial class V1beta1LifecyclePolicySpecInitProviderRepositoryRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -197,6 +204,7 @@ public enum V1beta1LifecyclePolicySpecInitProviderRepositorySelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LifecyclePolicySpecInitProviderRepositorySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -210,6 +218,7 @@ public partial class V1beta1LifecyclePolicySpecInitProviderRepositorySelectorPol
     public V1beta1LifecyclePolicySpecInitProviderRepositorySelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Repository in ecr to populate repository.</summary>
 public partial class V1beta1LifecyclePolicySpecInitProviderRepositorySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -225,6 +234,7 @@ public partial class V1beta1LifecyclePolicySpecInitProviderRepositorySelector
     public V1beta1LifecyclePolicySpecInitProviderRepositorySelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1LifecyclePolicySpecInitProvider
 {
     /// <summary>The policy document. This is a JSON formatted string. See more details about Policy Parameters in the official AWS docs. Consider using the aws_ecr_lifecycle_policy_document data_source to generate/manage the JSON document used for the policy argument.</summary>
@@ -286,6 +296,7 @@ public enum V1beta1LifecyclePolicySpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LifecyclePolicySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -299,6 +310,7 @@ public partial class V1beta1LifecyclePolicySpecProviderConfigRefPolicy
     public V1beta1LifecyclePolicySpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1LifecyclePolicySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -330,6 +342,7 @@ public enum V1beta1LifecyclePolicySpecPublishConnectionDetailsToConfigRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LifecyclePolicySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -343,6 +356,7 @@ public partial class V1beta1LifecyclePolicySpecPublishConnectionDetailsToConfigR
     public V1beta1LifecyclePolicySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1LifecyclePolicySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -354,6 +368,7 @@ public partial class V1beta1LifecyclePolicySpecPublishConnectionDetailsToConfigR
     public V1beta1LifecyclePolicySpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1LifecyclePolicySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -369,6 +384,7 @@ public partial class V1beta1LifecyclePolicySpecPublishConnectionDetailsToMetadat
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1LifecyclePolicySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -384,6 +400,7 @@ public partial class V1beta1LifecyclePolicySpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1LifecyclePolicySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -395,6 +412,7 @@ public partial class V1beta1LifecyclePolicySpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>LifecyclePolicySpec defines the desired state of LifecyclePolicy</summary>
 public partial class V1beta1LifecyclePolicySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -427,6 +445,7 @@ public partial class V1beta1LifecyclePolicySpec
     public V1beta1LifecyclePolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicyStatusAtProvider
 {
     /// <summary></summary>
@@ -446,6 +465,7 @@ public partial class V1beta1LifecyclePolicyStatusAtProvider
     public string? Repository { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1LifecyclePolicyStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -473,6 +493,7 @@ public partial class V1beta1LifecyclePolicyStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>LifecyclePolicyStatus defines the observed state of LifecyclePolicy.</summary>
 public partial class V1beta1LifecyclePolicyStatus
 {
     /// <summary></summary>
@@ -489,6 +510,7 @@ public partial class V1beta1LifecyclePolicyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>LifecyclePolicy is the Schema for the LifecyclePolicys API. Manages an ECR repository lifecycle policy.</summary>
 public partial class V1beta1LifecyclePolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LifecyclePolicySpec>, IStatus<V1beta1LifecyclePolicyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkservices.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1NetworkServicesTCPRouteSpecGateways
 {
     /// <summary>Allowed value: The `selfLink` field of a `NetworkServicesGateway` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1NetworkServicesTCPRouteSpecGateways
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkServicesTCPRouteSpecMeshes
 {
     /// <summary>Allowed value: The `selfLink` field of a `NetworkServicesMesh` resource.</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1NetworkServicesTCPRouteSpecMeshes
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. The Project that this resource belongs to.</summary>
 public partial class V1beta1NetworkServicesTCPRouteSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -53,6 +56,7 @@ public partial class V1beta1NetworkServicesTCPRouteSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkServicesTCPRouteSpecRulesActionDestinationsServiceRef
 {
     /// <summary>Required. The URL of a BackendService to route traffic to.  Allowed value: The Google Cloud resource name of a `ComputeBackendService` resource (format: `projects/{{project}}/global/backendServices/{{name}}`).</summary>
@@ -68,6 +72,7 @@ public partial class V1beta1NetworkServicesTCPRouteSpecRulesActionDestinationsSe
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkServicesTCPRouteSpecRulesActionDestinations
 {
     /// <summary></summary>
@@ -79,6 +84,7 @@ public partial class V1beta1NetworkServicesTCPRouteSpecRulesActionDestinations
     public long? Weight { get; set; }
 }
 
+/// <summary>Required. The detailed rule defining how to route matched traffic.</summary>
 public partial class V1beta1NetworkServicesTCPRouteSpecRulesAction
 {
     /// <summary>Optional. The destination services to which traffic should be forwarded. At least one destination service is required.</summary>
@@ -90,6 +96,7 @@ public partial class V1beta1NetworkServicesTCPRouteSpecRulesAction
     public bool? OriginalDestination { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkServicesTCPRouteSpecRulesMatches
 {
     /// <summary>Required. Must be specified in the CIDR range format. A CIDR range consists of an IP Address and a prefix length to construct the subnet mask. By default, the prefix length is 32 (i.e. matches a single IP address). Only IPV4 addresses are supported. Examples: “10.0.0.1” - matches against this exact IP address. “10.0.0.0/8" - matches against any IP address within the 10.0.0.0 subnet and 255.255.255.0 mask. "0.0.0.0/0" - matches against any IP address'.</summary>
@@ -101,6 +108,7 @@ public partial class V1beta1NetworkServicesTCPRouteSpecRulesMatches
     public string Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkServicesTCPRouteSpecRules
 {
     /// <summary>Required. The detailed rule defining how to route matched traffic.</summary>
@@ -112,6 +120,7 @@ public partial class V1beta1NetworkServicesTCPRouteSpecRules
     public IList<V1beta1NetworkServicesTCPRouteSpecRulesMatches>? Matches { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkServicesTCPRouteSpec
 {
     /// <summary>Optional. A free-text description of the resource. Max length 1024 characters.</summary>
@@ -143,6 +152,7 @@ public partial class V1beta1NetworkServicesTCPRouteSpec
     public IList<V1beta1NetworkServicesTCPRouteSpecRules> Rules { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkServicesTCPRouteStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -166,6 +176,7 @@ public partial class V1beta1NetworkServicesTCPRouteStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkServicesTCPRouteStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -190,6 +201,7 @@ public partial class V1beta1NetworkServicesTCPRouteStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1NetworkServicesTCPRoute : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1NetworkServicesTCPRouteSpec>, IStatus<V1beta1NetworkServicesTCPRouteStatus>
 {
     public const string KubeApiVersion = "v1beta1";

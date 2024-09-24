@@ -38,6 +38,7 @@ public enum V1beta1SafetyRuleSpecForProviderAssertedControlsRefsPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SafetyRuleSpecForProviderAssertedControlsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1SafetyRuleSpecForProviderAssertedControlsRefsPolicy
     public V1beta1SafetyRuleSpecForProviderAssertedControlsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1SafetyRuleSpecForProviderAssertedControlsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1SafetyRuleSpecForProviderAssertedControlsSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SafetyRuleSpecForProviderAssertedControlsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1SafetyRuleSpecForProviderAssertedControlsSelectorPol
     public V1beta1SafetyRuleSpecForProviderAssertedControlsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of RoutingControl in route53recoverycontrolconfig to populate assertedControls.</summary>
 public partial class V1beta1SafetyRuleSpecForProviderAssertedControlsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1SafetyRuleSpecForProviderControlPanelArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SafetyRuleSpecForProviderControlPanelArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1SafetyRuleSpecForProviderControlPanelArnRefPolicy
     public V1beta1SafetyRuleSpecForProviderControlPanelArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ControlPanel in route53recoverycontrolconfig to populate controlPanelArn.</summary>
 public partial class V1beta1SafetyRuleSpecForProviderControlPanelArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1SafetyRuleSpecForProviderControlPanelArnSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SafetyRuleSpecForProviderControlPanelArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1SafetyRuleSpecForProviderControlPanelArnSelectorPoli
     public V1beta1SafetyRuleSpecForProviderControlPanelArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ControlPanel in route53recoverycontrolconfig to populate controlPanelArn.</summary>
 public partial class V1beta1SafetyRuleSpecForProviderControlPanelArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1SafetyRuleSpecForProviderControlPanelArnSelector
     public V1beta1SafetyRuleSpecForProviderControlPanelArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SafetyRuleSpecForProviderRuleConfig
 {
     /// <summary>Logical negation of the rule.</summary>
@@ -217,6 +226,7 @@ public partial class V1beta1SafetyRuleSpecForProviderRuleConfig
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SafetyRuleSpecForProvider
 {
     /// <summary>Routing controls that are part of transactions that are evaluated to determine if a request to change a routing control state is allowed.</summary>
@@ -288,6 +298,7 @@ public enum V1beta1SafetyRuleSpecInitProviderAssertedControlsRefsPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SafetyRuleSpecInitProviderAssertedControlsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -301,6 +312,7 @@ public partial class V1beta1SafetyRuleSpecInitProviderAssertedControlsRefsPolicy
     public V1beta1SafetyRuleSpecInitProviderAssertedControlsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1SafetyRuleSpecInitProviderAssertedControlsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -332,6 +344,7 @@ public enum V1beta1SafetyRuleSpecInitProviderAssertedControlsSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SafetyRuleSpecInitProviderAssertedControlsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -345,6 +358,7 @@ public partial class V1beta1SafetyRuleSpecInitProviderAssertedControlsSelectorPo
     public V1beta1SafetyRuleSpecInitProviderAssertedControlsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of RoutingControl in route53recoverycontrolconfig to populate assertedControls.</summary>
 public partial class V1beta1SafetyRuleSpecInitProviderAssertedControlsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -380,6 +394,7 @@ public enum V1beta1SafetyRuleSpecInitProviderControlPanelArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SafetyRuleSpecInitProviderControlPanelArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -393,6 +408,7 @@ public partial class V1beta1SafetyRuleSpecInitProviderControlPanelArnRefPolicy
     public V1beta1SafetyRuleSpecInitProviderControlPanelArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ControlPanel in route53recoverycontrolconfig to populate controlPanelArn.</summary>
 public partial class V1beta1SafetyRuleSpecInitProviderControlPanelArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -424,6 +440,7 @@ public enum V1beta1SafetyRuleSpecInitProviderControlPanelArnSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SafetyRuleSpecInitProviderControlPanelArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -437,6 +454,7 @@ public partial class V1beta1SafetyRuleSpecInitProviderControlPanelArnSelectorPol
     public V1beta1SafetyRuleSpecInitProviderControlPanelArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ControlPanel in route53recoverycontrolconfig to populate controlPanelArn.</summary>
 public partial class V1beta1SafetyRuleSpecInitProviderControlPanelArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -452,6 +470,7 @@ public partial class V1beta1SafetyRuleSpecInitProviderControlPanelArnSelector
     public V1beta1SafetyRuleSpecInitProviderControlPanelArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SafetyRuleSpecInitProviderRuleConfig
 {
     /// <summary>Logical negation of the rule.</summary>
@@ -467,6 +486,7 @@ public partial class V1beta1SafetyRuleSpecInitProviderRuleConfig
     public string? Type { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1SafetyRuleSpecInitProvider
 {
     /// <summary>Routing controls that are part of transactions that are evaluated to determine if a request to change a routing control state is allowed.</summary>
@@ -556,6 +576,7 @@ public enum V1beta1SafetyRuleSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SafetyRuleSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -569,6 +590,7 @@ public partial class V1beta1SafetyRuleSpecProviderConfigRefPolicy
     public V1beta1SafetyRuleSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1SafetyRuleSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -600,6 +622,7 @@ public enum V1beta1SafetyRuleSpecPublishConnectionDetailsToConfigRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SafetyRuleSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -613,6 +636,7 @@ public partial class V1beta1SafetyRuleSpecPublishConnectionDetailsToConfigRefPol
     public V1beta1SafetyRuleSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1SafetyRuleSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -624,6 +648,7 @@ public partial class V1beta1SafetyRuleSpecPublishConnectionDetailsToConfigRef
     public V1beta1SafetyRuleSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1SafetyRuleSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -639,6 +664,7 @@ public partial class V1beta1SafetyRuleSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1SafetyRuleSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -654,6 +680,7 @@ public partial class V1beta1SafetyRuleSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1SafetyRuleSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -665,6 +692,7 @@ public partial class V1beta1SafetyRuleSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>SafetyRuleSpec defines the desired state of SafetyRule</summary>
 public partial class V1beta1SafetyRuleSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -697,6 +725,7 @@ public partial class V1beta1SafetyRuleSpec
     public V1beta1SafetyRuleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SafetyRuleStatusAtProviderRuleConfig
 {
     /// <summary>Logical negation of the rule.</summary>
@@ -712,6 +741,7 @@ public partial class V1beta1SafetyRuleStatusAtProviderRuleConfig
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SafetyRuleStatusAtProvider
 {
     /// <summary>ARN of the safety rule.</summary>
@@ -755,6 +785,7 @@ public partial class V1beta1SafetyRuleStatusAtProvider
     public double? WaitPeriodMs { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1SafetyRuleStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -782,6 +813,7 @@ public partial class V1beta1SafetyRuleStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>SafetyRuleStatus defines the observed state of SafetyRule.</summary>
 public partial class V1beta1SafetyRuleStatus
 {
     /// <summary></summary>
@@ -798,6 +830,7 @@ public partial class V1beta1SafetyRuleStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>SafetyRule is the Schema for the SafetyRules API. Provides an AWS Route 53 Recovery Control Config Safety Rule</summary>
 public partial class V1beta1SafetyRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SafetyRuleSpec>, IStatus<V1beta1SafetyRuleStatus>
 {
     public const string KubeApiVersion = "v1beta1";

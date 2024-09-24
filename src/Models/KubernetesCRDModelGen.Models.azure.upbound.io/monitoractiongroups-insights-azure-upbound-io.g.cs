@@ -18,6 +18,7 @@ public enum V1beta1MonitorActionGroupSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionGroupSpecForProviderArmRoleReceiver
 {
     /// <summary>The name of the ARM role receiver.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1MonitorActionGroupSpecForProviderArmRoleReceiver
     public bool? UseCommonAlertSchema { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionGroupSpecForProviderAutomationRunbookReceiver
 {
     /// <summary>The automation account ID which holds this runbook and authenticates to Azure resources.</summary>
@@ -64,6 +66,7 @@ public partial class V1beta1MonitorActionGroupSpecForProviderAutomationRunbookRe
     public string? WebhookResourceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionGroupSpecForProviderAzureAppPushReceiver
 {
     /// <summary>The email address of the user signed into the mobile app who will receive push notifications from this receiver.</summary>
@@ -75,6 +78,7 @@ public partial class V1beta1MonitorActionGroupSpecForProviderAzureAppPushReceive
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionGroupSpecForProviderAzureFunctionReceiver
 {
     /// <summary>The Azure resource ID of the function app.</summary>
@@ -98,6 +102,7 @@ public partial class V1beta1MonitorActionGroupSpecForProviderAzureFunctionReceiv
     public bool? UseCommonAlertSchema { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionGroupSpecForProviderEmailReceiver
 {
     /// <summary>The email address of this receiver.</summary>
@@ -113,6 +118,7 @@ public partial class V1beta1MonitorActionGroupSpecForProviderEmailReceiver
     public bool? UseCommonAlertSchema { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionGroupSpecForProviderEventHubReceiver
 {
     /// <summary>The resource ID of the respective Event Hub.</summary>
@@ -144,6 +150,7 @@ public partial class V1beta1MonitorActionGroupSpecForProviderEventHubReceiver
     public bool? UseCommonAlertSchema { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionGroupSpecForProviderItsmReceiver
 {
     /// <summary>The unique connection identifier of the ITSM connection.</summary>
@@ -167,6 +174,7 @@ public partial class V1beta1MonitorActionGroupSpecForProviderItsmReceiver
     public string? WorkspaceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionGroupSpecForProviderLogicAppReceiver
 {
     /// <summary>The callback url where HTTP request sent to.</summary>
@@ -206,6 +214,7 @@ public enum V1beta1MonitorActionGroupSpecForProviderResourceGroupNameRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorActionGroupSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -219,6 +228,7 @@ public partial class V1beta1MonitorActionGroupSpecForProviderResourceGroupNameRe
     public V1beta1MonitorActionGroupSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1MonitorActionGroupSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -250,6 +260,7 @@ public enum V1beta1MonitorActionGroupSpecForProviderResourceGroupNameSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorActionGroupSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -263,6 +274,7 @@ public partial class V1beta1MonitorActionGroupSpecForProviderResourceGroupNameSe
     public V1beta1MonitorActionGroupSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1MonitorActionGroupSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -278,6 +290,7 @@ public partial class V1beta1MonitorActionGroupSpecForProviderResourceGroupNameSe
     public V1beta1MonitorActionGroupSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionGroupSpecForProviderSmsReceiver
 {
     /// <summary>The country code of the SMS receiver.</summary>
@@ -293,6 +306,7 @@ public partial class V1beta1MonitorActionGroupSpecForProviderSmsReceiver
     public string? PhoneNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionGroupSpecForProviderVoiceReceiver
 {
     /// <summary>The country code of the voice receiver.</summary>
@@ -308,6 +322,7 @@ public partial class V1beta1MonitorActionGroupSpecForProviderVoiceReceiver
     public string? PhoneNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionGroupSpecForProviderWebhookReceiverAadAuth
 {
     /// <summary>The identifier URI for AAD auth.</summary>
@@ -323,6 +338,7 @@ public partial class V1beta1MonitorActionGroupSpecForProviderWebhookReceiverAadA
     public string? TenantId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionGroupSpecForProviderWebhookReceiver
 {
     /// <summary>The aad_auth block as defined below.</summary>
@@ -342,6 +358,7 @@ public partial class V1beta1MonitorActionGroupSpecForProviderWebhookReceiver
     public bool? UseCommonAlertSchema { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionGroupSpecForProvider
 {
     /// <summary>One or more arm_role_receiver blocks as defined below.</summary>
@@ -417,6 +434,7 @@ public partial class V1beta1MonitorActionGroupSpecForProvider
     public IList<V1beta1MonitorActionGroupSpecForProviderWebhookReceiver>? WebhookReceiver { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionGroupSpecInitProviderArmRoleReceiver
 {
     /// <summary>The name of the ARM role receiver.</summary>
@@ -432,6 +450,7 @@ public partial class V1beta1MonitorActionGroupSpecInitProviderArmRoleReceiver
     public bool? UseCommonAlertSchema { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionGroupSpecInitProviderAutomationRunbookReceiver
 {
     /// <summary>The automation account ID which holds this runbook and authenticates to Azure resources.</summary>
@@ -463,6 +482,7 @@ public partial class V1beta1MonitorActionGroupSpecInitProviderAutomationRunbookR
     public string? WebhookResourceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionGroupSpecInitProviderAzureAppPushReceiver
 {
     /// <summary>The email address of the user signed into the mobile app who will receive push notifications from this receiver.</summary>
@@ -474,6 +494,7 @@ public partial class V1beta1MonitorActionGroupSpecInitProviderAzureAppPushReceiv
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionGroupSpecInitProviderAzureFunctionReceiver
 {
     /// <summary>The Azure resource ID of the function app.</summary>
@@ -497,6 +518,7 @@ public partial class V1beta1MonitorActionGroupSpecInitProviderAzureFunctionRecei
     public bool? UseCommonAlertSchema { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionGroupSpecInitProviderEmailReceiver
 {
     /// <summary>The email address of this receiver.</summary>
@@ -512,6 +534,7 @@ public partial class V1beta1MonitorActionGroupSpecInitProviderEmailReceiver
     public bool? UseCommonAlertSchema { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionGroupSpecInitProviderEventHubReceiver
 {
     /// <summary>The resource ID of the respective Event Hub.</summary>
@@ -543,6 +566,7 @@ public partial class V1beta1MonitorActionGroupSpecInitProviderEventHubReceiver
     public bool? UseCommonAlertSchema { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionGroupSpecInitProviderItsmReceiver
 {
     /// <summary>The unique connection identifier of the ITSM connection.</summary>
@@ -566,6 +590,7 @@ public partial class V1beta1MonitorActionGroupSpecInitProviderItsmReceiver
     public string? WorkspaceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionGroupSpecInitProviderLogicAppReceiver
 {
     /// <summary>The callback url where HTTP request sent to.</summary>
@@ -585,6 +610,7 @@ public partial class V1beta1MonitorActionGroupSpecInitProviderLogicAppReceiver
     public bool? UseCommonAlertSchema { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionGroupSpecInitProviderSmsReceiver
 {
     /// <summary>The country code of the SMS receiver.</summary>
@@ -600,6 +626,7 @@ public partial class V1beta1MonitorActionGroupSpecInitProviderSmsReceiver
     public string? PhoneNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionGroupSpecInitProviderVoiceReceiver
 {
     /// <summary>The country code of the voice receiver.</summary>
@@ -615,6 +642,7 @@ public partial class V1beta1MonitorActionGroupSpecInitProviderVoiceReceiver
     public string? PhoneNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionGroupSpecInitProviderWebhookReceiverAadAuth
 {
     /// <summary>The identifier URI for AAD auth.</summary>
@@ -630,6 +658,7 @@ public partial class V1beta1MonitorActionGroupSpecInitProviderWebhookReceiverAad
     public string? TenantId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionGroupSpecInitProviderWebhookReceiver
 {
     /// <summary>The aad_auth block as defined below.</summary>
@@ -649,6 +678,7 @@ public partial class V1beta1MonitorActionGroupSpecInitProviderWebhookReceiver
     public bool? UseCommonAlertSchema { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1MonitorActionGroupSpecInitProvider
 {
     /// <summary>One or more arm_role_receiver blocks as defined below.</summary>
@@ -754,6 +784,7 @@ public enum V1beta1MonitorActionGroupSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorActionGroupSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -767,6 +798,7 @@ public partial class V1beta1MonitorActionGroupSpecProviderConfigRefPolicy
     public V1beta1MonitorActionGroupSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1MonitorActionGroupSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -798,6 +830,7 @@ public enum V1beta1MonitorActionGroupSpecPublishConnectionDetailsToConfigRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorActionGroupSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -811,6 +844,7 @@ public partial class V1beta1MonitorActionGroupSpecPublishConnectionDetailsToConf
     public V1beta1MonitorActionGroupSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1MonitorActionGroupSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -822,6 +856,7 @@ public partial class V1beta1MonitorActionGroupSpecPublishConnectionDetailsToConf
     public V1beta1MonitorActionGroupSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1MonitorActionGroupSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -837,6 +872,7 @@ public partial class V1beta1MonitorActionGroupSpecPublishConnectionDetailsToMeta
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1MonitorActionGroupSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -852,6 +888,7 @@ public partial class V1beta1MonitorActionGroupSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1MonitorActionGroupSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -863,6 +900,7 @@ public partial class V1beta1MonitorActionGroupSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>MonitorActionGroupSpec defines the desired state of MonitorActionGroup</summary>
 public partial class V1beta1MonitorActionGroupSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -895,6 +933,7 @@ public partial class V1beta1MonitorActionGroupSpec
     public V1beta1MonitorActionGroupSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionGroupStatusAtProviderArmRoleReceiver
 {
     /// <summary>The name of the ARM role receiver.</summary>
@@ -910,6 +949,7 @@ public partial class V1beta1MonitorActionGroupStatusAtProviderArmRoleReceiver
     public bool? UseCommonAlertSchema { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionGroupStatusAtProviderAutomationRunbookReceiver
 {
     /// <summary>The automation account ID which holds this runbook and authenticates to Azure resources.</summary>
@@ -941,6 +981,7 @@ public partial class V1beta1MonitorActionGroupStatusAtProviderAutomationRunbookR
     public string? WebhookResourceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionGroupStatusAtProviderAzureAppPushReceiver
 {
     /// <summary>The email address of the user signed into the mobile app who will receive push notifications from this receiver.</summary>
@@ -952,6 +993,7 @@ public partial class V1beta1MonitorActionGroupStatusAtProviderAzureAppPushReceiv
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionGroupStatusAtProviderAzureFunctionReceiver
 {
     /// <summary>The Azure resource ID of the function app.</summary>
@@ -975,6 +1017,7 @@ public partial class V1beta1MonitorActionGroupStatusAtProviderAzureFunctionRecei
     public bool? UseCommonAlertSchema { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionGroupStatusAtProviderEmailReceiver
 {
     /// <summary>The email address of this receiver.</summary>
@@ -990,6 +1033,7 @@ public partial class V1beta1MonitorActionGroupStatusAtProviderEmailReceiver
     public bool? UseCommonAlertSchema { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionGroupStatusAtProviderEventHubReceiver
 {
     /// <summary>The resource ID of the respective Event Hub.</summary>
@@ -1021,6 +1065,7 @@ public partial class V1beta1MonitorActionGroupStatusAtProviderEventHubReceiver
     public bool? UseCommonAlertSchema { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionGroupStatusAtProviderItsmReceiver
 {
     /// <summary>The unique connection identifier of the ITSM connection.</summary>
@@ -1044,6 +1089,7 @@ public partial class V1beta1MonitorActionGroupStatusAtProviderItsmReceiver
     public string? WorkspaceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionGroupStatusAtProviderLogicAppReceiver
 {
     /// <summary>The callback url where HTTP request sent to.</summary>
@@ -1063,6 +1109,7 @@ public partial class V1beta1MonitorActionGroupStatusAtProviderLogicAppReceiver
     public bool? UseCommonAlertSchema { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionGroupStatusAtProviderSmsReceiver
 {
     /// <summary>The country code of the SMS receiver.</summary>
@@ -1078,6 +1125,7 @@ public partial class V1beta1MonitorActionGroupStatusAtProviderSmsReceiver
     public string? PhoneNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionGroupStatusAtProviderVoiceReceiver
 {
     /// <summary>The country code of the voice receiver.</summary>
@@ -1093,6 +1141,7 @@ public partial class V1beta1MonitorActionGroupStatusAtProviderVoiceReceiver
     public string? PhoneNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionGroupStatusAtProviderWebhookReceiverAadAuth
 {
     /// <summary>The identifier URI for AAD auth.</summary>
@@ -1108,6 +1157,7 @@ public partial class V1beta1MonitorActionGroupStatusAtProviderWebhookReceiverAad
     public string? TenantId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionGroupStatusAtProviderWebhookReceiver
 {
     /// <summary>The aad_auth block as defined below.</summary>
@@ -1127,6 +1177,7 @@ public partial class V1beta1MonitorActionGroupStatusAtProviderWebhookReceiver
     public bool? UseCommonAlertSchema { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionGroupStatusAtProvider
 {
     /// <summary>One or more arm_role_receiver blocks as defined below.</summary>
@@ -1198,6 +1249,7 @@ public partial class V1beta1MonitorActionGroupStatusAtProvider
     public IList<V1beta1MonitorActionGroupStatusAtProviderWebhookReceiver>? WebhookReceiver { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1MonitorActionGroupStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1225,6 +1277,7 @@ public partial class V1beta1MonitorActionGroupStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>MonitorActionGroupStatus defines the observed state of MonitorActionGroup.</summary>
 public partial class V1beta1MonitorActionGroupStatus
 {
     /// <summary></summary>
@@ -1241,6 +1294,7 @@ public partial class V1beta1MonitorActionGroupStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>MonitorActionGroup is the Schema for the MonitorActionGroups API. Manages an Action Group within Azure Monitor</summary>
 public partial class V1beta1MonitorActionGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MonitorActionGroupSpec>, IStatus<V1beta1MonitorActionGroupStatus>
 {
     public const string KubeApiVersion = "v1beta1";

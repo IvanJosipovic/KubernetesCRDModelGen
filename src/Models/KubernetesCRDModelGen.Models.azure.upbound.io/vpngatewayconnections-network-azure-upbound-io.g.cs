@@ -38,6 +38,7 @@ public enum V1beta1VPNGatewayConnectionSpecForProviderRemoteVpnSiteIdRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPNGatewayConnectionSpecForProviderRemoteVpnSiteIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1VPNGatewayConnectionSpecForProviderRemoteVpnSiteIdRe
     public V1beta1VPNGatewayConnectionSpecForProviderRemoteVpnSiteIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPNSite in network to populate remoteVpnSiteId.</summary>
 public partial class V1beta1VPNGatewayConnectionSpecForProviderRemoteVpnSiteIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1VPNGatewayConnectionSpecForProviderRemoteVpnSiteIdSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VPNGatewayConnectionSpecForProviderRemoteVpnSiteIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1VPNGatewayConnectionSpecForProviderRemoteVpnSiteIdSe
     public V1beta1VPNGatewayConnectionSpecForProviderRemoteVpnSiteIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPNSite in network to populate remoteVpnSiteId.</summary>
 public partial class V1beta1VPNGatewayConnectionSpecForProviderRemoteVpnSiteIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1VPNGatewayConnectionSpecForProviderRemoteVpnSiteIdSe
     public V1beta1VPNGatewayConnectionSpecForProviderRemoteVpnSiteIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNGatewayConnectionSpecForProviderRoutingPropagatedRouteTable
 {
     /// <summary>A list of labels to assign to this route table.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1VPNGatewayConnectionSpecForProviderRoutingPropagated
     public IList<string>? RouteTableIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNGatewayConnectionSpecForProviderRouting
 {
     /// <summary>The ID of the Route Table associated with this VPN Connection.</summary>
@@ -140,6 +146,7 @@ public partial class V1beta1VPNGatewayConnectionSpecForProviderRouting
     public IList<V1beta1VPNGatewayConnectionSpecForProviderRoutingPropagatedRouteTable>? PropagatedRouteTable { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNGatewayConnectionSpecForProviderTrafficSelectorPolicy
 {
     /// <summary>A list of local address spaces in CIDR format for this VPN Gateway Connection.</summary>
@@ -171,6 +178,7 @@ public enum V1beta1VPNGatewayConnectionSpecForProviderVpnGatewayIdRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPNGatewayConnectionSpecForProviderVpnGatewayIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -184,6 +192,7 @@ public partial class V1beta1VPNGatewayConnectionSpecForProviderVpnGatewayIdRefPo
     public V1beta1VPNGatewayConnectionSpecForProviderVpnGatewayIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPNGateway in network to populate vpnGatewayId.</summary>
 public partial class V1beta1VPNGatewayConnectionSpecForProviderVpnGatewayIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -215,6 +224,7 @@ public enum V1beta1VPNGatewayConnectionSpecForProviderVpnGatewayIdSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VPNGatewayConnectionSpecForProviderVpnGatewayIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -228,6 +238,7 @@ public partial class V1beta1VPNGatewayConnectionSpecForProviderVpnGatewayIdSelec
     public V1beta1VPNGatewayConnectionSpecForProviderVpnGatewayIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPNGateway in network to populate vpnGatewayId.</summary>
 public partial class V1beta1VPNGatewayConnectionSpecForProviderVpnGatewayIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -243,6 +254,7 @@ public partial class V1beta1VPNGatewayConnectionSpecForProviderVpnGatewayIdSelec
     public V1beta1VPNGatewayConnectionSpecForProviderVpnGatewayIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNGatewayConnectionSpecForProviderVpnLinkCustomBgpAddress
 {
     /// <summary>The custom bgp ip address which belongs to the IP Configuration.</summary>
@@ -254,6 +266,7 @@ public partial class V1beta1VPNGatewayConnectionSpecForProviderVpnLinkCustomBgpA
     public string? IpConfigurationId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNGatewayConnectionSpecForProviderVpnLinkIpsecPolicy
 {
     /// <summary>The DH Group used in IKE Phase 1 for initial SA. Possible values are None, DHGroup1, DHGroup2, DHGroup14, DHGroup24, DHGroup2048, ECP256, ECP384.</summary>
@@ -289,6 +302,7 @@ public partial class V1beta1VPNGatewayConnectionSpecForProviderVpnLinkIpsecPolic
     public double? SaLifetimeSec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNGatewayConnectionSpecForProviderVpnLink
 {
     /// <summary>The expected connection bandwidth in MBPS. Defaults to 10.</summary>
@@ -352,6 +366,7 @@ public partial class V1beta1VPNGatewayConnectionSpecForProviderVpnLink
     public string? VpnSiteLinkId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNGatewayConnectionSpecForProvider
 {
     /// <summary>Whether Internet Security is enabled for this VPN Connection. Defaults to false.</summary>
@@ -415,6 +430,7 @@ public enum V1beta1VPNGatewayConnectionSpecInitProviderRemoteVpnSiteIdRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPNGatewayConnectionSpecInitProviderRemoteVpnSiteIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -428,6 +444,7 @@ public partial class V1beta1VPNGatewayConnectionSpecInitProviderRemoteVpnSiteIdR
     public V1beta1VPNGatewayConnectionSpecInitProviderRemoteVpnSiteIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPNSite in network to populate remoteVpnSiteId.</summary>
 public partial class V1beta1VPNGatewayConnectionSpecInitProviderRemoteVpnSiteIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -459,6 +476,7 @@ public enum V1beta1VPNGatewayConnectionSpecInitProviderRemoteVpnSiteIdSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VPNGatewayConnectionSpecInitProviderRemoteVpnSiteIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -472,6 +490,7 @@ public partial class V1beta1VPNGatewayConnectionSpecInitProviderRemoteVpnSiteIdS
     public V1beta1VPNGatewayConnectionSpecInitProviderRemoteVpnSiteIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPNSite in network to populate remoteVpnSiteId.</summary>
 public partial class V1beta1VPNGatewayConnectionSpecInitProviderRemoteVpnSiteIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -487,6 +506,7 @@ public partial class V1beta1VPNGatewayConnectionSpecInitProviderRemoteVpnSiteIdS
     public V1beta1VPNGatewayConnectionSpecInitProviderRemoteVpnSiteIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNGatewayConnectionSpecInitProviderRoutingPropagatedRouteTable
 {
     /// <summary>A list of labels to assign to this route table.</summary>
@@ -498,6 +518,7 @@ public partial class V1beta1VPNGatewayConnectionSpecInitProviderRoutingPropagate
     public IList<string>? RouteTableIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNGatewayConnectionSpecInitProviderRouting
 {
     /// <summary>The ID of the Route Table associated with this VPN Connection.</summary>
@@ -517,6 +538,7 @@ public partial class V1beta1VPNGatewayConnectionSpecInitProviderRouting
     public IList<V1beta1VPNGatewayConnectionSpecInitProviderRoutingPropagatedRouteTable>? PropagatedRouteTable { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNGatewayConnectionSpecInitProviderTrafficSelectorPolicy
 {
     /// <summary>A list of local address spaces in CIDR format for this VPN Gateway Connection.</summary>
@@ -528,6 +550,7 @@ public partial class V1beta1VPNGatewayConnectionSpecInitProviderTrafficSelectorP
     public IList<string>? RemoteAddressRanges { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNGatewayConnectionSpecInitProviderVpnLinkCustomBgpAddress
 {
     /// <summary>The custom bgp ip address which belongs to the IP Configuration.</summary>
@@ -539,6 +562,7 @@ public partial class V1beta1VPNGatewayConnectionSpecInitProviderVpnLinkCustomBgp
     public string? IpConfigurationId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNGatewayConnectionSpecInitProviderVpnLinkIpsecPolicy
 {
     /// <summary>The DH Group used in IKE Phase 1 for initial SA. Possible values are None, DHGroup1, DHGroup2, DHGroup14, DHGroup24, DHGroup2048, ECP256, ECP384.</summary>
@@ -574,6 +598,7 @@ public partial class V1beta1VPNGatewayConnectionSpecInitProviderVpnLinkIpsecPoli
     public double? SaLifetimeSec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNGatewayConnectionSpecInitProviderVpnLink
 {
     /// <summary>The expected connection bandwidth in MBPS. Defaults to 10.</summary>
@@ -637,6 +662,7 @@ public partial class V1beta1VPNGatewayConnectionSpecInitProviderVpnLink
     public string? VpnSiteLinkId { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1VPNGatewayConnectionSpecInitProvider
 {
     /// <summary>Whether Internet Security is enabled for this VPN Connection. Defaults to false.</summary>
@@ -710,6 +736,7 @@ public enum V1beta1VPNGatewayConnectionSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPNGatewayConnectionSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -723,6 +750,7 @@ public partial class V1beta1VPNGatewayConnectionSpecProviderConfigRefPolicy
     public V1beta1VPNGatewayConnectionSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1VPNGatewayConnectionSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -754,6 +782,7 @@ public enum V1beta1VPNGatewayConnectionSpecPublishConnectionDetailsToConfigRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPNGatewayConnectionSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -767,6 +796,7 @@ public partial class V1beta1VPNGatewayConnectionSpecPublishConnectionDetailsToCo
     public V1beta1VPNGatewayConnectionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1VPNGatewayConnectionSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -778,6 +808,7 @@ public partial class V1beta1VPNGatewayConnectionSpecPublishConnectionDetailsToCo
     public V1beta1VPNGatewayConnectionSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1VPNGatewayConnectionSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -793,6 +824,7 @@ public partial class V1beta1VPNGatewayConnectionSpecPublishConnectionDetailsToMe
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1VPNGatewayConnectionSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -808,6 +840,7 @@ public partial class V1beta1VPNGatewayConnectionSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1VPNGatewayConnectionSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -819,6 +852,7 @@ public partial class V1beta1VPNGatewayConnectionSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>VPNGatewayConnectionSpec defines the desired state of VPNGatewayConnection</summary>
 public partial class V1beta1VPNGatewayConnectionSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -851,6 +885,7 @@ public partial class V1beta1VPNGatewayConnectionSpec
     public V1beta1VPNGatewayConnectionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNGatewayConnectionStatusAtProviderRoutingPropagatedRouteTable
 {
     /// <summary>A list of labels to assign to this route table.</summary>
@@ -862,6 +897,7 @@ public partial class V1beta1VPNGatewayConnectionStatusAtProviderRoutingPropagate
     public IList<string>? RouteTableIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNGatewayConnectionStatusAtProviderRouting
 {
     /// <summary>The ID of the Route Table associated with this VPN Connection.</summary>
@@ -881,6 +917,7 @@ public partial class V1beta1VPNGatewayConnectionStatusAtProviderRouting
     public IList<V1beta1VPNGatewayConnectionStatusAtProviderRoutingPropagatedRouteTable>? PropagatedRouteTable { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNGatewayConnectionStatusAtProviderTrafficSelectorPolicy
 {
     /// <summary>A list of local address spaces in CIDR format for this VPN Gateway Connection.</summary>
@@ -892,6 +929,7 @@ public partial class V1beta1VPNGatewayConnectionStatusAtProviderTrafficSelectorP
     public IList<string>? RemoteAddressRanges { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNGatewayConnectionStatusAtProviderVpnLinkCustomBgpAddress
 {
     /// <summary>The custom bgp ip address which belongs to the IP Configuration.</summary>
@@ -903,6 +941,7 @@ public partial class V1beta1VPNGatewayConnectionStatusAtProviderVpnLinkCustomBgp
     public string? IpConfigurationId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNGatewayConnectionStatusAtProviderVpnLinkIpsecPolicy
 {
     /// <summary>The DH Group used in IKE Phase 1 for initial SA. Possible values are None, DHGroup1, DHGroup2, DHGroup14, DHGroup24, DHGroup2048, ECP256, ECP384.</summary>
@@ -938,6 +977,7 @@ public partial class V1beta1VPNGatewayConnectionStatusAtProviderVpnLinkIpsecPoli
     public double? SaLifetimeSec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNGatewayConnectionStatusAtProviderVpnLink
 {
     /// <summary>The expected connection bandwidth in MBPS. Defaults to 10.</summary>
@@ -1001,6 +1041,7 @@ public partial class V1beta1VPNGatewayConnectionStatusAtProviderVpnLink
     public string? VpnSiteLinkId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNGatewayConnectionStatusAtProvider
 {
     /// <summary>The ID of the VPN Gateway Connection.</summary>
@@ -1032,6 +1073,7 @@ public partial class V1beta1VPNGatewayConnectionStatusAtProvider
     public IList<V1beta1VPNGatewayConnectionStatusAtProviderVpnLink>? VpnLink { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1VPNGatewayConnectionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1059,6 +1101,7 @@ public partial class V1beta1VPNGatewayConnectionStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>VPNGatewayConnectionStatus defines the observed state of VPNGatewayConnection.</summary>
 public partial class V1beta1VPNGatewayConnectionStatus
 {
     /// <summary></summary>
@@ -1075,6 +1118,7 @@ public partial class V1beta1VPNGatewayConnectionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>VPNGatewayConnection is the Schema for the VPNGatewayConnections API. Manages a VPN Gateway Connection.</summary>
 public partial class V1beta1VPNGatewayConnection : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1VPNGatewayConnectionSpec>, IStatus<V1beta1VPNGatewayConnectionStatus>
 {
     public const string KubeApiVersion = "v1beta1";

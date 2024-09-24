@@ -38,6 +38,7 @@ public enum V1beta1ServiceSpecForProviderMetadataNamespaceRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceSpecForProviderMetadataNamespaceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ServiceSpecForProviderMetadataNamespaceRefPolicy
     public V1beta1ServiceSpecForProviderMetadataNamespaceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Project in cloudplatform to populate namespace.</summary>
 public partial class V1beta1ServiceSpecForProviderMetadataNamespaceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ServiceSpecForProviderMetadataNamespaceSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServiceSpecForProviderMetadataNamespaceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ServiceSpecForProviderMetadataNamespaceSelectorPolic
     public V1beta1ServiceSpecForProviderMetadataNamespaceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Project in cloudplatform to populate namespace.</summary>
 public partial class V1beta1ServiceSpecForProviderMetadataNamespaceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1ServiceSpecForProviderMetadataNamespaceSelector
     public V1beta1ServiceSpecForProviderMetadataNamespaceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderMetadata
 {
     /// <summary>Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field. Annotations with run.googleapis.com/ and autoscaling.knative.dev are restricted. Use the following annotation keys to configure features on a Revision template:</summary>
@@ -133,6 +138,7 @@ public partial class V1beta1ServiceSpecForProviderMetadata
     public V1beta1ServiceSpecForProviderMetadataNamespaceSelector? NamespaceSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderTemplateMetadata
 {
     /// <summary>Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field. Annotations with run.googleapis.com/ and autoscaling.knative.dev are restricted. Use the following annotation keys to configure features on a Revision template:</summary>
@@ -172,6 +178,7 @@ public enum V1beta1ServiceSpecForProviderTemplateSpecContainersEnvValueFromSecre
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersEnvValueFromSecretKeyRefNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -185,6 +192,7 @@ public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersEnvValue
     public V1beta1ServiceSpecForProviderTemplateSpecContainersEnvValueFromSecretKeyRefNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Secret in secretmanager to populate name.</summary>
 public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersEnvValueFromSecretKeyRefNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -216,6 +224,7 @@ public enum V1beta1ServiceSpecForProviderTemplateSpecContainersEnvValueFromSecre
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersEnvValueFromSecretKeyRefNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -229,6 +238,7 @@ public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersEnvValue
     public V1beta1ServiceSpecForProviderTemplateSpecContainersEnvValueFromSecretKeyRefNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Secret in secretmanager to populate name.</summary>
 public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersEnvValueFromSecretKeyRefNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -244,6 +254,7 @@ public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersEnvValue
     public V1beta1ServiceSpecForProviderTemplateSpecContainersEnvValueFromSecretKeyRefNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersEnvValueFromSecretKeyRef
 {
     /// <summary>A Cloud Secret Manager secret version. Must be 'latest' for the latest version or an integer for a specific version.</summary>
@@ -263,6 +274,7 @@ public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersEnvValue
     public V1beta1ServiceSpecForProviderTemplateSpecContainersEnvValueFromSecretKeyRefNameSelector? NameSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersEnvValueFrom
 {
     /// <summary>Selects a key (version) of a secret in Secret Manager. Structure is documented below.</summary>
@@ -270,6 +282,7 @@ public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersEnvValue
     public IList<V1beta1ServiceSpecForProviderTemplateSpecContainersEnvValueFromSecretKeyRef>? SecretKeyRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersEnv
 {
     /// <summary>Volume's name.</summary>
@@ -285,6 +298,7 @@ public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersEnv
     public IList<V1beta1ServiceSpecForProviderTemplateSpecContainersEnvValueFrom>? ValueFrom { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersEnvFromConfigMapRefLocalObjectReference
 {
     /// <summary>Volume's name.</summary>
@@ -292,6 +306,7 @@ public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersEnvFromC
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersEnvFromConfigMapRef
 {
     /// <summary>The Secret to select from. Structure is documented below.</summary>
@@ -303,6 +318,7 @@ public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersEnvFromC
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersEnvFromSecretRefLocalObjectReference
 {
     /// <summary>Volume's name.</summary>
@@ -310,6 +326,7 @@ public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersEnvFromS
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersEnvFromSecretRef
 {
     /// <summary>The Secret to select from. Structure is documented below.</summary>
@@ -321,6 +338,7 @@ public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersEnvFromS
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersEnvFrom
 {
     /// <summary>The ConfigMap to select from. Structure is documented below.</summary>
@@ -336,6 +354,7 @@ public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersEnvFrom
     public IList<V1beta1ServiceSpecForProviderTemplateSpecContainersEnvFromSecretRef>? SecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersLivenessProbeGrpc
 {
     /// <summary>Port number to access on the container. Number must be in the range 1 to 65535. If not specified, defaults to the same value as container.ports[0].containerPort.</summary>
@@ -347,6 +366,7 @@ public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersLiveness
     public string? Service { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersLivenessProbeHttpGetHttpHeaders
 {
     /// <summary>Volume's name.</summary>
@@ -358,6 +378,7 @@ public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersLiveness
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersLivenessProbeHttpGet
 {
     /// <summary>Custom headers to set in the request. HTTP allows repeated headers. Structure is documented below.</summary>
@@ -373,6 +394,7 @@ public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersLiveness
     public double? Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersLivenessProbe
 {
     /// <summary>Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.</summary>
@@ -400,6 +422,7 @@ public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersLiveness
     public double? TimeoutSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersPorts
 {
     /// <summary>Port number the container listens on. This must be a valid port number (between 1 and 65535). Defaults to "8080".</summary>
@@ -415,6 +438,7 @@ public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersPorts
     public string? Protocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersResources
 {
     /// <summary>Limits describes the maximum amount of compute resources allowed. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go</summary>
@@ -426,6 +450,7 @@ public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersResource
     public IDictionary<string, string>? Requests { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersStartupProbeGrpc
 {
     /// <summary>Port number to access on the container. Number must be in the range 1 to 65535. If not specified, defaults to the same value as container.ports[0].containerPort.</summary>
@@ -437,6 +462,7 @@ public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersStartupP
     public string? Service { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersStartupProbeHttpGetHttpHeaders
 {
     /// <summary>Volume's name.</summary>
@@ -448,6 +474,7 @@ public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersStartupP
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersStartupProbeHttpGet
 {
     /// <summary>Custom headers to set in the request. HTTP allows repeated headers. Structure is documented below.</summary>
@@ -463,6 +490,7 @@ public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersStartupP
     public double? Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersStartupProbeTcpSocket
 {
     /// <summary>Port number to access on the container. Number must be in the range 1 to 65535. If not specified, defaults to the same value as container.ports[0].containerPort.</summary>
@@ -470,6 +498,7 @@ public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersStartupP
     public double? Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersStartupProbe
 {
     /// <summary>Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.</summary>
@@ -501,6 +530,7 @@ public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersStartupP
     public double? TimeoutSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersVolumeMounts
 {
     /// <summary>Path within the container at which the volume should be mounted.  Must not contain ':'.</summary>
@@ -512,6 +542,7 @@ public partial class V1beta1ServiceSpecForProviderTemplateSpecContainersVolumeMo
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderTemplateSpecContainers
 {
     /// <summary>Arguments to the entrypoint. The docker image's CMD is used if this is not provided.</summary>
@@ -563,6 +594,7 @@ public partial class V1beta1ServiceSpecForProviderTemplateSpecContainers
     public string? WorkingDir { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderTemplateSpecVolumesSecretItems
 {
     /// <summary>A Cloud Secret Manager secret version. Must be 'latest' for the latest version or an integer for a specific version.</summary>
@@ -598,6 +630,7 @@ public enum V1beta1ServiceSpecForProviderTemplateSpecVolumesSecretSecretNameRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceSpecForProviderTemplateSpecVolumesSecretSecretNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -611,6 +644,7 @@ public partial class V1beta1ServiceSpecForProviderTemplateSpecVolumesSecretSecre
     public V1beta1ServiceSpecForProviderTemplateSpecVolumesSecretSecretNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Secret in secretmanager to populate secretName.</summary>
 public partial class V1beta1ServiceSpecForProviderTemplateSpecVolumesSecretSecretNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -642,6 +676,7 @@ public enum V1beta1ServiceSpecForProviderTemplateSpecVolumesSecretSecretNameSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServiceSpecForProviderTemplateSpecVolumesSecretSecretNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -655,6 +690,7 @@ public partial class V1beta1ServiceSpecForProviderTemplateSpecVolumesSecretSecre
     public V1beta1ServiceSpecForProviderTemplateSpecVolumesSecretSecretNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Secret in secretmanager to populate secretName.</summary>
 public partial class V1beta1ServiceSpecForProviderTemplateSpecVolumesSecretSecretNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -670,6 +706,7 @@ public partial class V1beta1ServiceSpecForProviderTemplateSpecVolumesSecretSecre
     public V1beta1ServiceSpecForProviderTemplateSpecVolumesSecretSecretNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderTemplateSpecVolumesSecret
 {
     /// <summary>Mode bits to use on created files by default. Must be a value between 0000 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.</summary>
@@ -693,6 +730,7 @@ public partial class V1beta1ServiceSpecForProviderTemplateSpecVolumesSecret
     public V1beta1ServiceSpecForProviderTemplateSpecVolumesSecretSecretNameSelector? SecretNameSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderTemplateSpecVolumes
 {
     /// <summary>Volume's name.</summary>
@@ -704,6 +742,7 @@ public partial class V1beta1ServiceSpecForProviderTemplateSpecVolumes
     public IList<V1beta1ServiceSpecForProviderTemplateSpecVolumesSecret>? Secret { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderTemplateSpec
 {
     /// <summary>ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per container of the Revision. Values are:</summary>
@@ -727,6 +766,7 @@ public partial class V1beta1ServiceSpecForProviderTemplateSpec
     public IList<V1beta1ServiceSpecForProviderTemplateSpecVolumes>? Volumes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderTemplate
 {
     /// <summary>Optional metadata for this Revision, including labels and annotations. Name will be generated by the Configuration. To set minimum instances for this revision, use the "autoscaling.knative.dev/minScale" annotation key. To set maximum instances for this revision, use the "autoscaling.knative.dev/maxScale" annotation key. To set Cloud SQL connections for the revision, use the "run.googleapis.com/cloudsql-instances" annotation key. Structure is documented below.</summary>
@@ -738,6 +778,7 @@ public partial class V1beta1ServiceSpecForProviderTemplate
     public IList<V1beta1ServiceSpecForProviderTemplateSpec>? Spec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderTraffic
 {
     /// <summary>LatestRevision may be optionally provided to indicate that the latest ready Revision of the Configuration should be used for this traffic target. When provided LatestRevision must be true if RevisionName is empty; it must be false when RevisionName is non-empty.</summary>
@@ -757,6 +798,7 @@ public partial class V1beta1ServiceSpecForProviderTraffic
     public string? Tag { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProvider
 {
     /// <summary>If set to true, the revision name (template.metadata.name) will be omitted and autogenerated by Cloud Run. This cannot be set to true while template.metadata.name is also set. (For legacy support, if template.metadata.name is unset in state while this field is set to false, the revision name will still autogenerate.)</summary>
@@ -804,6 +846,7 @@ public enum V1beta1ServiceSpecInitProviderMetadataNamespaceRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceSpecInitProviderMetadataNamespaceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -817,6 +860,7 @@ public partial class V1beta1ServiceSpecInitProviderMetadataNamespaceRefPolicy
     public V1beta1ServiceSpecInitProviderMetadataNamespaceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Project in cloudplatform to populate namespace.</summary>
 public partial class V1beta1ServiceSpecInitProviderMetadataNamespaceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -848,6 +892,7 @@ public enum V1beta1ServiceSpecInitProviderMetadataNamespaceSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServiceSpecInitProviderMetadataNamespaceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -861,6 +906,7 @@ public partial class V1beta1ServiceSpecInitProviderMetadataNamespaceSelectorPoli
     public V1beta1ServiceSpecInitProviderMetadataNamespaceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Project in cloudplatform to populate namespace.</summary>
 public partial class V1beta1ServiceSpecInitProviderMetadataNamespaceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -876,6 +922,7 @@ public partial class V1beta1ServiceSpecInitProviderMetadataNamespaceSelector
     public V1beta1ServiceSpecInitProviderMetadataNamespaceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderMetadata
 {
     /// <summary>Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field. Annotations with run.googleapis.com/ and autoscaling.knative.dev are restricted. Use the following annotation keys to configure features on a Revision template:</summary>
@@ -899,6 +946,7 @@ public partial class V1beta1ServiceSpecInitProviderMetadata
     public V1beta1ServiceSpecInitProviderMetadataNamespaceSelector? NamespaceSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderTemplateMetadata
 {
     /// <summary>Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field. Annotations with run.googleapis.com/ and autoscaling.knative.dev are restricted. Use the following annotation keys to configure features on a Revision template:</summary>
@@ -938,6 +986,7 @@ public enum V1beta1ServiceSpecInitProviderTemplateSpecContainersEnvValueFromSecr
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersEnvValueFromSecretKeyRefNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -951,6 +1000,7 @@ public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersEnvValu
     public V1beta1ServiceSpecInitProviderTemplateSpecContainersEnvValueFromSecretKeyRefNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Secret in secretmanager to populate name.</summary>
 public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersEnvValueFromSecretKeyRefNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -982,6 +1032,7 @@ public enum V1beta1ServiceSpecInitProviderTemplateSpecContainersEnvValueFromSecr
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersEnvValueFromSecretKeyRefNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -995,6 +1046,7 @@ public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersEnvValu
     public V1beta1ServiceSpecInitProviderTemplateSpecContainersEnvValueFromSecretKeyRefNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Secret in secretmanager to populate name.</summary>
 public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersEnvValueFromSecretKeyRefNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1010,6 +1062,7 @@ public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersEnvValu
     public V1beta1ServiceSpecInitProviderTemplateSpecContainersEnvValueFromSecretKeyRefNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersEnvValueFromSecretKeyRef
 {
     /// <summary>A Cloud Secret Manager secret version. Must be 'latest' for the latest version or an integer for a specific version.</summary>
@@ -1029,6 +1082,7 @@ public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersEnvValu
     public V1beta1ServiceSpecInitProviderTemplateSpecContainersEnvValueFromSecretKeyRefNameSelector? NameSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersEnvValueFrom
 {
     /// <summary>Selects a key (version) of a secret in Secret Manager. Structure is documented below.</summary>
@@ -1036,6 +1090,7 @@ public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersEnvValu
     public IList<V1beta1ServiceSpecInitProviderTemplateSpecContainersEnvValueFromSecretKeyRef>? SecretKeyRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersEnv
 {
     /// <summary>Volume's name.</summary>
@@ -1051,6 +1106,7 @@ public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersEnv
     public IList<V1beta1ServiceSpecInitProviderTemplateSpecContainersEnvValueFrom>? ValueFrom { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersEnvFromConfigMapRefLocalObjectReference
 {
     /// <summary>Volume's name.</summary>
@@ -1058,6 +1114,7 @@ public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersEnvFrom
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersEnvFromConfigMapRef
 {
     /// <summary>The Secret to select from. Structure is documented below.</summary>
@@ -1069,6 +1126,7 @@ public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersEnvFrom
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersEnvFromSecretRefLocalObjectReference
 {
     /// <summary>Volume's name.</summary>
@@ -1076,6 +1134,7 @@ public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersEnvFrom
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersEnvFromSecretRef
 {
     /// <summary>The Secret to select from. Structure is documented below.</summary>
@@ -1087,6 +1146,7 @@ public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersEnvFrom
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersEnvFrom
 {
     /// <summary>The ConfigMap to select from. Structure is documented below.</summary>
@@ -1102,6 +1162,7 @@ public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersEnvFrom
     public IList<V1beta1ServiceSpecInitProviderTemplateSpecContainersEnvFromSecretRef>? SecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersLivenessProbeGrpc
 {
     /// <summary>Port number to access on the container. Number must be in the range 1 to 65535. If not specified, defaults to the same value as container.ports[0].containerPort.</summary>
@@ -1113,6 +1174,7 @@ public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersLivenes
     public string? Service { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersLivenessProbeHttpGetHttpHeaders
 {
     /// <summary>Volume's name.</summary>
@@ -1124,6 +1186,7 @@ public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersLivenes
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersLivenessProbeHttpGet
 {
     /// <summary>Custom headers to set in the request. HTTP allows repeated headers. Structure is documented below.</summary>
@@ -1139,6 +1202,7 @@ public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersLivenes
     public double? Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersLivenessProbe
 {
     /// <summary>Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.</summary>
@@ -1166,6 +1230,7 @@ public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersLivenes
     public double? TimeoutSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersPorts
 {
     /// <summary>Port number the container listens on. This must be a valid port number (between 1 and 65535). Defaults to "8080".</summary>
@@ -1181,6 +1246,7 @@ public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersPorts
     public string? Protocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersResources
 {
     /// <summary>Limits describes the maximum amount of compute resources allowed. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go</summary>
@@ -1192,6 +1258,7 @@ public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersResourc
     public IDictionary<string, string>? Requests { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersStartupProbeGrpc
 {
     /// <summary>Port number to access on the container. Number must be in the range 1 to 65535. If not specified, defaults to the same value as container.ports[0].containerPort.</summary>
@@ -1203,6 +1270,7 @@ public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersStartup
     public string? Service { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersStartupProbeHttpGetHttpHeaders
 {
     /// <summary>Volume's name.</summary>
@@ -1214,6 +1282,7 @@ public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersStartup
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersStartupProbeHttpGet
 {
     /// <summary>Custom headers to set in the request. HTTP allows repeated headers. Structure is documented below.</summary>
@@ -1229,6 +1298,7 @@ public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersStartup
     public double? Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersStartupProbeTcpSocket
 {
     /// <summary>Port number to access on the container. Number must be in the range 1 to 65535. If not specified, defaults to the same value as container.ports[0].containerPort.</summary>
@@ -1236,6 +1306,7 @@ public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersStartup
     public double? Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersStartupProbe
 {
     /// <summary>Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.</summary>
@@ -1267,6 +1338,7 @@ public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersStartup
     public double? TimeoutSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersVolumeMounts
 {
     /// <summary>Path within the container at which the volume should be mounted.  Must not contain ':'.</summary>
@@ -1278,6 +1350,7 @@ public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainersVolumeM
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainers
 {
     /// <summary>Arguments to the entrypoint. The docker image's CMD is used if this is not provided.</summary>
@@ -1329,6 +1402,7 @@ public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainers
     public string? WorkingDir { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderTemplateSpecVolumesSecretItems
 {
     /// <summary>A Cloud Secret Manager secret version. Must be 'latest' for the latest version or an integer for a specific version.</summary>
@@ -1364,6 +1438,7 @@ public enum V1beta1ServiceSpecInitProviderTemplateSpecVolumesSecretSecretNameRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceSpecInitProviderTemplateSpecVolumesSecretSecretNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1377,6 +1452,7 @@ public partial class V1beta1ServiceSpecInitProviderTemplateSpecVolumesSecretSecr
     public V1beta1ServiceSpecInitProviderTemplateSpecVolumesSecretSecretNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Secret in secretmanager to populate secretName.</summary>
 public partial class V1beta1ServiceSpecInitProviderTemplateSpecVolumesSecretSecretNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1408,6 +1484,7 @@ public enum V1beta1ServiceSpecInitProviderTemplateSpecVolumesSecretSecretNameSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServiceSpecInitProviderTemplateSpecVolumesSecretSecretNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1421,6 +1498,7 @@ public partial class V1beta1ServiceSpecInitProviderTemplateSpecVolumesSecretSecr
     public V1beta1ServiceSpecInitProviderTemplateSpecVolumesSecretSecretNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Secret in secretmanager to populate secretName.</summary>
 public partial class V1beta1ServiceSpecInitProviderTemplateSpecVolumesSecretSecretNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1436,6 +1514,7 @@ public partial class V1beta1ServiceSpecInitProviderTemplateSpecVolumesSecretSecr
     public V1beta1ServiceSpecInitProviderTemplateSpecVolumesSecretSecretNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderTemplateSpecVolumesSecret
 {
     /// <summary>Mode bits to use on created files by default. Must be a value between 0000 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.</summary>
@@ -1459,6 +1538,7 @@ public partial class V1beta1ServiceSpecInitProviderTemplateSpecVolumesSecret
     public V1beta1ServiceSpecInitProviderTemplateSpecVolumesSecretSecretNameSelector? SecretNameSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderTemplateSpecVolumes
 {
     /// <summary>Volume's name.</summary>
@@ -1470,6 +1550,7 @@ public partial class V1beta1ServiceSpecInitProviderTemplateSpecVolumes
     public IList<V1beta1ServiceSpecInitProviderTemplateSpecVolumesSecret>? Secret { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderTemplateSpec
 {
     /// <summary>ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per container of the Revision. Values are:</summary>
@@ -1493,6 +1574,7 @@ public partial class V1beta1ServiceSpecInitProviderTemplateSpec
     public IList<V1beta1ServiceSpecInitProviderTemplateSpecVolumes>? Volumes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderTemplate
 {
     /// <summary>Optional metadata for this Revision, including labels and annotations. Name will be generated by the Configuration. To set minimum instances for this revision, use the "autoscaling.knative.dev/minScale" annotation key. To set maximum instances for this revision, use the "autoscaling.knative.dev/maxScale" annotation key. To set Cloud SQL connections for the revision, use the "run.googleapis.com/cloudsql-instances" annotation key. Structure is documented below.</summary>
@@ -1504,6 +1586,7 @@ public partial class V1beta1ServiceSpecInitProviderTemplate
     public IList<V1beta1ServiceSpecInitProviderTemplateSpec>? Spec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderTraffic
 {
     /// <summary>LatestRevision may be optionally provided to indicate that the latest ready Revision of the Configuration should be used for this traffic target. When provided LatestRevision must be true if RevisionName is empty; it must be false when RevisionName is non-empty.</summary>
@@ -1523,6 +1606,7 @@ public partial class V1beta1ServiceSpecInitProviderTraffic
     public string? Tag { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ServiceSpecInitProvider
 {
     /// <summary>If set to true, the revision name (template.metadata.name) will be omitted and autogenerated by Cloud Run. This cannot be set to true while template.metadata.name is also set. (For legacy support, if template.metadata.name is unset in state while this field is set to false, the revision name will still autogenerate.)</summary>
@@ -1588,6 +1672,7 @@ public enum V1beta1ServiceSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1601,6 +1686,7 @@ public partial class V1beta1ServiceSpecProviderConfigRefPolicy
     public V1beta1ServiceSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ServiceSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1632,6 +1718,7 @@ public enum V1beta1ServiceSpecPublishConnectionDetailsToConfigRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1645,6 +1732,7 @@ public partial class V1beta1ServiceSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1ServiceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ServiceSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1656,6 +1744,7 @@ public partial class V1beta1ServiceSpecPublishConnectionDetailsToConfigRef
     public V1beta1ServiceSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ServiceSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1671,6 +1760,7 @@ public partial class V1beta1ServiceSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ServiceSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1686,6 +1776,7 @@ public partial class V1beta1ServiceSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ServiceSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1697,6 +1788,7 @@ public partial class V1beta1ServiceSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ServiceSpec defines the desired state of Service</summary>
 public partial class V1beta1ServiceSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1729,6 +1821,7 @@ public partial class V1beta1ServiceSpec
     public V1beta1ServiceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderMetadata
 {
     /// <summary>Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field. Annotations with run.googleapis.com/ and autoscaling.knative.dev are restricted. Use the following annotation keys to configure features on a Revision template:</summary>
@@ -1772,6 +1865,7 @@ public partial class V1beta1ServiceStatusAtProviderMetadata
     public string? Uid { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderStatusConditions
 {
     /// <summary>(Output) Human readable message indicating details about the current status.</summary>
@@ -1791,6 +1885,7 @@ public partial class V1beta1ServiceStatusAtProviderStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderStatusTraffic
 {
     /// <summary>LatestRevision may be optionally provided to indicate that the latest ready Revision of the Configuration should be used for this traffic target. When provided LatestRevision must be true if RevisionName is empty; it must be false when RevisionName is non-empty.</summary>
@@ -1814,6 +1909,7 @@ public partial class V1beta1ServiceStatusAtProviderStatusTraffic
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderStatus
 {
     /// <summary>(Output) Array of observed Service Conditions, indicating the current ready state of the service. Structure is documented below.</summary>
@@ -1841,6 +1937,7 @@ public partial class V1beta1ServiceStatusAtProviderStatus
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderTemplateMetadata
 {
     /// <summary>Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field. Annotations with run.googleapis.com/ and autoscaling.knative.dev are restricted. Use the following annotation keys to configure features on a Revision template:</summary>
@@ -1876,6 +1973,7 @@ public partial class V1beta1ServiceStatusAtProviderTemplateMetadata
     public string? Uid { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersEnvValueFromSecretKeyRef
 {
     /// <summary>A Cloud Secret Manager secret version. Must be 'latest' for the latest version or an integer for a specific version.</summary>
@@ -1887,6 +1985,7 @@ public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersEnvValu
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersEnvValueFrom
 {
     /// <summary>Selects a key (version) of a secret in Secret Manager. Structure is documented below.</summary>
@@ -1894,6 +1993,7 @@ public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersEnvValu
     public IList<V1beta1ServiceStatusAtProviderTemplateSpecContainersEnvValueFromSecretKeyRef>? SecretKeyRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersEnv
 {
     /// <summary>Volume's name.</summary>
@@ -1909,6 +2009,7 @@ public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersEnv
     public IList<V1beta1ServiceStatusAtProviderTemplateSpecContainersEnvValueFrom>? ValueFrom { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersEnvFromConfigMapRefLocalObjectReference
 {
     /// <summary>Volume's name.</summary>
@@ -1916,6 +2017,7 @@ public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersEnvFrom
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersEnvFromConfigMapRef
 {
     /// <summary>The Secret to select from. Structure is documented below.</summary>
@@ -1927,6 +2029,7 @@ public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersEnvFrom
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersEnvFromSecretRefLocalObjectReference
 {
     /// <summary>Volume's name.</summary>
@@ -1934,6 +2037,7 @@ public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersEnvFrom
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersEnvFromSecretRef
 {
     /// <summary>The Secret to select from. Structure is documented below.</summary>
@@ -1945,6 +2049,7 @@ public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersEnvFrom
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersEnvFrom
 {
     /// <summary>The ConfigMap to select from. Structure is documented below.</summary>
@@ -1960,6 +2065,7 @@ public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersEnvFrom
     public IList<V1beta1ServiceStatusAtProviderTemplateSpecContainersEnvFromSecretRef>? SecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersLivenessProbeGrpc
 {
     /// <summary>Port number to access on the container. Number must be in the range 1 to 65535. If not specified, defaults to the same value as container.ports[0].containerPort.</summary>
@@ -1971,6 +2077,7 @@ public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersLivenes
     public string? Service { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersLivenessProbeHttpGetHttpHeaders
 {
     /// <summary>Volume's name.</summary>
@@ -1982,6 +2089,7 @@ public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersLivenes
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersLivenessProbeHttpGet
 {
     /// <summary>Custom headers to set in the request. HTTP allows repeated headers. Structure is documented below.</summary>
@@ -1997,6 +2105,7 @@ public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersLivenes
     public double? Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersLivenessProbe
 {
     /// <summary>Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.</summary>
@@ -2024,6 +2133,7 @@ public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersLivenes
     public double? TimeoutSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersPorts
 {
     /// <summary>Port number the container listens on. This must be a valid port number (between 1 and 65535). Defaults to "8080".</summary>
@@ -2039,6 +2149,7 @@ public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersPorts
     public string? Protocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersResources
 {
     /// <summary>Limits describes the maximum amount of compute resources allowed. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go</summary>
@@ -2050,6 +2161,7 @@ public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersResourc
     public IDictionary<string, string>? Requests { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersStartupProbeGrpc
 {
     /// <summary>Port number to access on the container. Number must be in the range 1 to 65535. If not specified, defaults to the same value as container.ports[0].containerPort.</summary>
@@ -2061,6 +2173,7 @@ public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersStartup
     public string? Service { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersStartupProbeHttpGetHttpHeaders
 {
     /// <summary>Volume's name.</summary>
@@ -2072,6 +2185,7 @@ public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersStartup
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersStartupProbeHttpGet
 {
     /// <summary>Custom headers to set in the request. HTTP allows repeated headers. Structure is documented below.</summary>
@@ -2087,6 +2201,7 @@ public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersStartup
     public double? Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersStartupProbeTcpSocket
 {
     /// <summary>Port number to access on the container. Number must be in the range 1 to 65535. If not specified, defaults to the same value as container.ports[0].containerPort.</summary>
@@ -2094,6 +2209,7 @@ public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersStartup
     public double? Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersStartupProbe
 {
     /// <summary>Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.</summary>
@@ -2125,6 +2241,7 @@ public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersStartup
     public double? TimeoutSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersVolumeMounts
 {
     /// <summary>Path within the container at which the volume should be mounted.  Must not contain ':'.</summary>
@@ -2136,6 +2253,7 @@ public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainersVolumeM
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainers
 {
     /// <summary>Arguments to the entrypoint. The docker image's CMD is used if this is not provided.</summary>
@@ -2187,6 +2305,7 @@ public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainers
     public string? WorkingDir { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderTemplateSpecVolumesSecretItems
 {
     /// <summary>A Cloud Secret Manager secret version. Must be 'latest' for the latest version or an integer for a specific version.</summary>
@@ -2202,6 +2321,7 @@ public partial class V1beta1ServiceStatusAtProviderTemplateSpecVolumesSecretItem
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderTemplateSpecVolumesSecret
 {
     /// <summary>Mode bits to use on created files by default. Must be a value between 0000 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.</summary>
@@ -2217,6 +2337,7 @@ public partial class V1beta1ServiceStatusAtProviderTemplateSpecVolumesSecret
     public string? SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderTemplateSpecVolumes
 {
     /// <summary>Volume's name.</summary>
@@ -2228,6 +2349,7 @@ public partial class V1beta1ServiceStatusAtProviderTemplateSpecVolumes
     public IList<V1beta1ServiceStatusAtProviderTemplateSpecVolumesSecret>? Secret { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderTemplateSpec
 {
     /// <summary>ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per container of the Revision. Values are:</summary>
@@ -2255,6 +2377,7 @@ public partial class V1beta1ServiceStatusAtProviderTemplateSpec
     public IList<V1beta1ServiceStatusAtProviderTemplateSpecVolumes>? Volumes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderTemplate
 {
     /// <summary>Optional metadata for this Revision, including labels and annotations. Name will be generated by the Configuration. To set minimum instances for this revision, use the "autoscaling.knative.dev/minScale" annotation key. To set maximum instances for this revision, use the "autoscaling.knative.dev/maxScale" annotation key. To set Cloud SQL connections for the revision, use the "run.googleapis.com/cloudsql-instances" annotation key. Structure is documented below.</summary>
@@ -2266,6 +2389,7 @@ public partial class V1beta1ServiceStatusAtProviderTemplate
     public IList<V1beta1ServiceStatusAtProviderTemplateSpec>? Spec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderTraffic
 {
     /// <summary>LatestRevision may be optionally provided to indicate that the latest ready Revision of the Configuration should be used for this traffic target. When provided LatestRevision must be true if RevisionName is empty; it must be false when RevisionName is non-empty.</summary>
@@ -2289,6 +2413,7 @@ public partial class V1beta1ServiceStatusAtProviderTraffic
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProvider
 {
     /// <summary>If set to true, the revision name (template.metadata.name) will be omitted and autogenerated by Cloud Run. This cannot be set to true while template.metadata.name is also set. (For legacy support, if template.metadata.name is unset in state while this field is set to false, the revision name will still autogenerate.)</summary>
@@ -2324,6 +2449,7 @@ public partial class V1beta1ServiceStatusAtProvider
     public IList<V1beta1ServiceStatusAtProviderTraffic>? Traffic { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ServiceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2351,6 +2477,7 @@ public partial class V1beta1ServiceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ServiceStatus defines the observed state of Service.</summary>
 public partial class V1beta1ServiceStatus
 {
     /// <summary></summary>
@@ -2367,6 +2494,7 @@ public partial class V1beta1ServiceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Service is the Schema for the Services API. A Cloud Run service has a unique endpoint and autoscales containers.</summary>
 public partial class V1beta1Service : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ServiceSpec>, IStatus<V1beta1ServiceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

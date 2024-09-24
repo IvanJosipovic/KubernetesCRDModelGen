@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.traefik.io;
+/// <summary>Spiffe defines the SPIFFE configuration.</summary>
 public partial class V1alpha1ServersTransportTCPSpecTlsSpiffe
 {
     /// <summary>IDs defines the allowed SPIFFE IDs (takes precedence over the SPIFFE TrustDomain).</summary>
@@ -19,6 +20,7 @@ public partial class V1alpha1ServersTransportTCPSpecTlsSpiffe
     public string? TrustDomain { get; set; }
 }
 
+/// <summary>TLS defines the TLS configuration</summary>
 public partial class V1alpha1ServersTransportTCPSpecTls
 {
     /// <summary>CertificatesSecrets defines a list of secret storing client certificates for mTLS.</summary>
@@ -46,6 +48,7 @@ public partial class V1alpha1ServersTransportTCPSpecTls
     public V1alpha1ServersTransportTCPSpecTlsSpiffe? Spiffe { get; set; }
 }
 
+/// <summary>ServersTransportTCPSpec defines the desired state of a ServersTransportTCP.</summary>
 public partial class V1alpha1ServersTransportTCPSpec
 {
     /// <summary>DialKeepAlive is the interval between keep-alive probes for an active network connection. If zero, keep-alive probes are sent with a default value (currently 15 seconds), if supported by the protocol and operating system. Network protocols or operating systems that do not support keep-alives ignore this field. If negative, keep-alive probes are disabled.</summary>
@@ -66,6 +69,7 @@ public partial class V1alpha1ServersTransportTCPSpec
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ServersTransportTCP is the CRD implementation of a TCPServersTransport. If no tcpServersTransport is specified, a default one named default@internal will be used. The default@internal tcpServersTransport can be configured in the static configuration. More info: https://doc.traefik.io/traefik/v3.1/routing/services/#serverstransport_3</summary>
 public partial class V1alpha1ServersTransportTCP : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ServersTransportTCPSpec>
 {
     public const string KubeApiVersion = "v1alpha1";

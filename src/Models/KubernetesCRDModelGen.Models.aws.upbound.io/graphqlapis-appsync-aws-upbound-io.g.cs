@@ -18,6 +18,7 @@ public enum V1beta1GraphQLAPISpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1GraphQLAPISpecForProviderAdditionalAuthenticationProviderLambdaAuthorizerConfig
 {
     /// <summary>Number of seconds a response should be cached for. The default is 5 minutes (300 seconds). The Lambda function can override this by returning a ttlOverride key in its response. A value of 0 disables caching of responses. Minimum value of 0. Maximum value of 3600.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1GraphQLAPISpecForProviderAdditionalAuthenticationPro
     public string? IdentityValidationExpression { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GraphQLAPISpecForProviderAdditionalAuthenticationProviderOpenidConnectConfig
 {
     /// <summary>Number of milliseconds a token is valid after being authenticated.</summary>
@@ -52,6 +54,7 @@ public partial class V1beta1GraphQLAPISpecForProviderAdditionalAuthenticationPro
     public string? Issuer { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GraphQLAPISpecForProviderAdditionalAuthenticationProviderUserPoolConfig
 {
     /// <summary>Regular expression for validating the incoming Amazon Cognito User Pool app client ID.</summary>
@@ -67,6 +70,7 @@ public partial class V1beta1GraphQLAPISpecForProviderAdditionalAuthenticationPro
     public string? UserPoolId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GraphQLAPISpecForProviderAdditionalAuthenticationProvider
 {
     /// <summary>Authentication type. Valid values: API_KEY, AWS_IAM, AMAZON_COGNITO_USER_POOLS, OPENID_CONNECT, AWS_LAMBDA</summary>
@@ -86,6 +90,7 @@ public partial class V1beta1GraphQLAPISpecForProviderAdditionalAuthenticationPro
     public IList<V1beta1GraphQLAPISpecForProviderAdditionalAuthenticationProviderUserPoolConfig>? UserPoolConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GraphQLAPISpecForProviderLambdaAuthorizerConfig
 {
     /// <summary>Number of seconds a response should be cached for. The default is 5 minutes (300 seconds). The Lambda function can override this by returning a ttlOverride key in its response. A value of 0 disables caching of responses. Minimum value of 0. Maximum value of 3600.</summary>
@@ -121,6 +126,7 @@ public enum V1beta1GraphQLAPISpecForProviderLogConfigCloudwatchLogsRoleArnRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GraphQLAPISpecForProviderLogConfigCloudwatchLogsRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -134,6 +140,7 @@ public partial class V1beta1GraphQLAPISpecForProviderLogConfigCloudwatchLogsRole
     public V1beta1GraphQLAPISpecForProviderLogConfigCloudwatchLogsRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate cloudwatchLogsRoleArn.</summary>
 public partial class V1beta1GraphQLAPISpecForProviderLogConfigCloudwatchLogsRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -165,6 +172,7 @@ public enum V1beta1GraphQLAPISpecForProviderLogConfigCloudwatchLogsRoleArnSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GraphQLAPISpecForProviderLogConfigCloudwatchLogsRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -178,6 +186,7 @@ public partial class V1beta1GraphQLAPISpecForProviderLogConfigCloudwatchLogsRole
     public V1beta1GraphQLAPISpecForProviderLogConfigCloudwatchLogsRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate cloudwatchLogsRoleArn.</summary>
 public partial class V1beta1GraphQLAPISpecForProviderLogConfigCloudwatchLogsRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -193,6 +202,7 @@ public partial class V1beta1GraphQLAPISpecForProviderLogConfigCloudwatchLogsRole
     public V1beta1GraphQLAPISpecForProviderLogConfigCloudwatchLogsRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GraphQLAPISpecForProviderLogConfig
 {
     /// <summary>Amazon Resource Name of the service role that AWS AppSync will assume to publish to Amazon CloudWatch logs in your account.</summary>
@@ -216,6 +226,7 @@ public partial class V1beta1GraphQLAPISpecForProviderLogConfig
     public string? FieldLogLevel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GraphQLAPISpecForProviderOpenidConnectConfig
 {
     /// <summary>Number of milliseconds a token is valid after being authenticated.</summary>
@@ -255,6 +266,7 @@ public enum V1beta1GraphQLAPISpecForProviderUserPoolConfigUserPoolIdRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GraphQLAPISpecForProviderUserPoolConfigUserPoolIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -268,6 +280,7 @@ public partial class V1beta1GraphQLAPISpecForProviderUserPoolConfigUserPoolIdRef
     public V1beta1GraphQLAPISpecForProviderUserPoolConfigUserPoolIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserPool in cognitoidp to populate userPoolId.</summary>
 public partial class V1beta1GraphQLAPISpecForProviderUserPoolConfigUserPoolIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -299,6 +312,7 @@ public enum V1beta1GraphQLAPISpecForProviderUserPoolConfigUserPoolIdSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GraphQLAPISpecForProviderUserPoolConfigUserPoolIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -312,6 +326,7 @@ public partial class V1beta1GraphQLAPISpecForProviderUserPoolConfigUserPoolIdSel
     public V1beta1GraphQLAPISpecForProviderUserPoolConfigUserPoolIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserPool in cognitoidp to populate userPoolId.</summary>
 public partial class V1beta1GraphQLAPISpecForProviderUserPoolConfigUserPoolIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -327,6 +342,7 @@ public partial class V1beta1GraphQLAPISpecForProviderUserPoolConfigUserPoolIdSel
     public V1beta1GraphQLAPISpecForProviderUserPoolConfigUserPoolIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GraphQLAPISpecForProviderUserPoolConfig
 {
     /// <summary>Regular expression for validating the incoming Amazon Cognito User Pool app client ID.</summary>
@@ -354,6 +370,7 @@ public partial class V1beta1GraphQLAPISpecForProviderUserPoolConfig
     public V1beta1GraphQLAPISpecForProviderUserPoolConfigUserPoolIdSelector? UserPoolIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GraphQLAPISpecForProvider
 {
     /// <summary>One or more additional authentication providers for the GraphqlApi. Defined below.</summary>
@@ -417,6 +434,7 @@ public partial class V1beta1GraphQLAPISpecForProvider
     public bool? XrayEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GraphQLAPISpecInitProviderAdditionalAuthenticationProviderLambdaAuthorizerConfig
 {
     /// <summary>Number of seconds a response should be cached for. The default is 5 minutes (300 seconds). The Lambda function can override this by returning a ttlOverride key in its response. A value of 0 disables caching of responses. Minimum value of 0. Maximum value of 3600.</summary>
@@ -432,6 +450,7 @@ public partial class V1beta1GraphQLAPISpecInitProviderAdditionalAuthenticationPr
     public string? IdentityValidationExpression { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GraphQLAPISpecInitProviderAdditionalAuthenticationProviderOpenidConnectConfig
 {
     /// <summary>Number of milliseconds a token is valid after being authenticated.</summary>
@@ -451,6 +470,7 @@ public partial class V1beta1GraphQLAPISpecInitProviderAdditionalAuthenticationPr
     public string? Issuer { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GraphQLAPISpecInitProviderAdditionalAuthenticationProviderUserPoolConfig
 {
     /// <summary>Regular expression for validating the incoming Amazon Cognito User Pool app client ID.</summary>
@@ -466,6 +486,7 @@ public partial class V1beta1GraphQLAPISpecInitProviderAdditionalAuthenticationPr
     public string? UserPoolId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GraphQLAPISpecInitProviderAdditionalAuthenticationProvider
 {
     /// <summary>Authentication type. Valid values: API_KEY, AWS_IAM, AMAZON_COGNITO_USER_POOLS, OPENID_CONNECT, AWS_LAMBDA</summary>
@@ -485,6 +506,7 @@ public partial class V1beta1GraphQLAPISpecInitProviderAdditionalAuthenticationPr
     public IList<V1beta1GraphQLAPISpecInitProviderAdditionalAuthenticationProviderUserPoolConfig>? UserPoolConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GraphQLAPISpecInitProviderLambdaAuthorizerConfig
 {
     /// <summary>Number of seconds a response should be cached for. The default is 5 minutes (300 seconds). The Lambda function can override this by returning a ttlOverride key in its response. A value of 0 disables caching of responses. Minimum value of 0. Maximum value of 3600.</summary>
@@ -520,6 +542,7 @@ public enum V1beta1GraphQLAPISpecInitProviderLogConfigCloudwatchLogsRoleArnRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GraphQLAPISpecInitProviderLogConfigCloudwatchLogsRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -533,6 +556,7 @@ public partial class V1beta1GraphQLAPISpecInitProviderLogConfigCloudwatchLogsRol
     public V1beta1GraphQLAPISpecInitProviderLogConfigCloudwatchLogsRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate cloudwatchLogsRoleArn.</summary>
 public partial class V1beta1GraphQLAPISpecInitProviderLogConfigCloudwatchLogsRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -564,6 +588,7 @@ public enum V1beta1GraphQLAPISpecInitProviderLogConfigCloudwatchLogsRoleArnSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GraphQLAPISpecInitProviderLogConfigCloudwatchLogsRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -577,6 +602,7 @@ public partial class V1beta1GraphQLAPISpecInitProviderLogConfigCloudwatchLogsRol
     public V1beta1GraphQLAPISpecInitProviderLogConfigCloudwatchLogsRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate cloudwatchLogsRoleArn.</summary>
 public partial class V1beta1GraphQLAPISpecInitProviderLogConfigCloudwatchLogsRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -592,6 +618,7 @@ public partial class V1beta1GraphQLAPISpecInitProviderLogConfigCloudwatchLogsRol
     public V1beta1GraphQLAPISpecInitProviderLogConfigCloudwatchLogsRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GraphQLAPISpecInitProviderLogConfig
 {
     /// <summary>Amazon Resource Name of the service role that AWS AppSync will assume to publish to Amazon CloudWatch logs in your account.</summary>
@@ -615,6 +642,7 @@ public partial class V1beta1GraphQLAPISpecInitProviderLogConfig
     public string? FieldLogLevel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GraphQLAPISpecInitProviderOpenidConnectConfig
 {
     /// <summary>Number of milliseconds a token is valid after being authenticated.</summary>
@@ -654,6 +682,7 @@ public enum V1beta1GraphQLAPISpecInitProviderUserPoolConfigUserPoolIdRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GraphQLAPISpecInitProviderUserPoolConfigUserPoolIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -667,6 +696,7 @@ public partial class V1beta1GraphQLAPISpecInitProviderUserPoolConfigUserPoolIdRe
     public V1beta1GraphQLAPISpecInitProviderUserPoolConfigUserPoolIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserPool in cognitoidp to populate userPoolId.</summary>
 public partial class V1beta1GraphQLAPISpecInitProviderUserPoolConfigUserPoolIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -698,6 +728,7 @@ public enum V1beta1GraphQLAPISpecInitProviderUserPoolConfigUserPoolIdSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GraphQLAPISpecInitProviderUserPoolConfigUserPoolIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -711,6 +742,7 @@ public partial class V1beta1GraphQLAPISpecInitProviderUserPoolConfigUserPoolIdSe
     public V1beta1GraphQLAPISpecInitProviderUserPoolConfigUserPoolIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserPool in cognitoidp to populate userPoolId.</summary>
 public partial class V1beta1GraphQLAPISpecInitProviderUserPoolConfigUserPoolIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -726,6 +758,7 @@ public partial class V1beta1GraphQLAPISpecInitProviderUserPoolConfigUserPoolIdSe
     public V1beta1GraphQLAPISpecInitProviderUserPoolConfigUserPoolIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GraphQLAPISpecInitProviderUserPoolConfig
 {
     /// <summary>Regular expression for validating the incoming Amazon Cognito User Pool app client ID.</summary>
@@ -753,6 +786,7 @@ public partial class V1beta1GraphQLAPISpecInitProviderUserPoolConfig
     public V1beta1GraphQLAPISpecInitProviderUserPoolConfigUserPoolIdSelector? UserPoolIdSelector { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1GraphQLAPISpecInitProvider
 {
     /// <summary>One or more additional authentication providers for the GraphqlApi. Defined below.</summary>
@@ -854,6 +888,7 @@ public enum V1beta1GraphQLAPISpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GraphQLAPISpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -867,6 +902,7 @@ public partial class V1beta1GraphQLAPISpecProviderConfigRefPolicy
     public V1beta1GraphQLAPISpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1GraphQLAPISpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -898,6 +934,7 @@ public enum V1beta1GraphQLAPISpecPublishConnectionDetailsToConfigRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GraphQLAPISpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -911,6 +948,7 @@ public partial class V1beta1GraphQLAPISpecPublishConnectionDetailsToConfigRefPol
     public V1beta1GraphQLAPISpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1GraphQLAPISpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -922,6 +960,7 @@ public partial class V1beta1GraphQLAPISpecPublishConnectionDetailsToConfigRef
     public V1beta1GraphQLAPISpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1GraphQLAPISpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -937,6 +976,7 @@ public partial class V1beta1GraphQLAPISpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1GraphQLAPISpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -952,6 +992,7 @@ public partial class V1beta1GraphQLAPISpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1GraphQLAPISpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -963,6 +1004,7 @@ public partial class V1beta1GraphQLAPISpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>GraphQLAPISpec defines the desired state of GraphQLAPI</summary>
 public partial class V1beta1GraphQLAPISpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -995,6 +1037,7 @@ public partial class V1beta1GraphQLAPISpec
     public V1beta1GraphQLAPISpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GraphQLAPIStatusAtProviderAdditionalAuthenticationProviderLambdaAuthorizerConfig
 {
     /// <summary>Number of seconds a response should be cached for. The default is 5 minutes (300 seconds). The Lambda function can override this by returning a ttlOverride key in its response. A value of 0 disables caching of responses. Minimum value of 0. Maximum value of 3600.</summary>
@@ -1010,6 +1053,7 @@ public partial class V1beta1GraphQLAPIStatusAtProviderAdditionalAuthenticationPr
     public string? IdentityValidationExpression { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GraphQLAPIStatusAtProviderAdditionalAuthenticationProviderOpenidConnectConfig
 {
     /// <summary>Number of milliseconds a token is valid after being authenticated.</summary>
@@ -1029,6 +1073,7 @@ public partial class V1beta1GraphQLAPIStatusAtProviderAdditionalAuthenticationPr
     public string? Issuer { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GraphQLAPIStatusAtProviderAdditionalAuthenticationProviderUserPoolConfig
 {
     /// <summary>Regular expression for validating the incoming Amazon Cognito User Pool app client ID.</summary>
@@ -1044,6 +1089,7 @@ public partial class V1beta1GraphQLAPIStatusAtProviderAdditionalAuthenticationPr
     public string? UserPoolId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GraphQLAPIStatusAtProviderAdditionalAuthenticationProvider
 {
     /// <summary>Authentication type. Valid values: API_KEY, AWS_IAM, AMAZON_COGNITO_USER_POOLS, OPENID_CONNECT, AWS_LAMBDA</summary>
@@ -1063,6 +1109,7 @@ public partial class V1beta1GraphQLAPIStatusAtProviderAdditionalAuthenticationPr
     public IList<V1beta1GraphQLAPIStatusAtProviderAdditionalAuthenticationProviderUserPoolConfig>? UserPoolConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GraphQLAPIStatusAtProviderLambdaAuthorizerConfig
 {
     /// <summary>Number of seconds a response should be cached for. The default is 5 minutes (300 seconds). The Lambda function can override this by returning a ttlOverride key in its response. A value of 0 disables caching of responses. Minimum value of 0. Maximum value of 3600.</summary>
@@ -1078,6 +1125,7 @@ public partial class V1beta1GraphQLAPIStatusAtProviderLambdaAuthorizerConfig
     public string? IdentityValidationExpression { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GraphQLAPIStatusAtProviderLogConfig
 {
     /// <summary>Amazon Resource Name of the service role that AWS AppSync will assume to publish to Amazon CloudWatch logs in your account.</summary>
@@ -1093,6 +1141,7 @@ public partial class V1beta1GraphQLAPIStatusAtProviderLogConfig
     public string? FieldLogLevel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GraphQLAPIStatusAtProviderOpenidConnectConfig
 {
     /// <summary>Number of milliseconds a token is valid after being authenticated.</summary>
@@ -1112,6 +1161,7 @@ public partial class V1beta1GraphQLAPIStatusAtProviderOpenidConnectConfig
     public string? Issuer { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GraphQLAPIStatusAtProviderUserPoolConfig
 {
     /// <summary>Regular expression for validating the incoming Amazon Cognito User Pool app client ID.</summary>
@@ -1131,6 +1181,7 @@ public partial class V1beta1GraphQLAPIStatusAtProviderUserPoolConfig
     public string? UserPoolId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GraphQLAPIStatusAtProvider
 {
     /// <summary>One or more additional authentication providers for the GraphqlApi. Defined below.</summary>
@@ -1206,6 +1257,7 @@ public partial class V1beta1GraphQLAPIStatusAtProvider
     public bool? XrayEnabled { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1GraphQLAPIStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1233,6 +1285,7 @@ public partial class V1beta1GraphQLAPIStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>GraphQLAPIStatus defines the observed state of GraphQLAPI.</summary>
 public partial class V1beta1GraphQLAPIStatus
 {
     /// <summary></summary>
@@ -1249,6 +1302,7 @@ public partial class V1beta1GraphQLAPIStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>GraphQLAPI is the Schema for the GraphQLAPIs API. Provides an AppSync GraphQL API.</summary>
 public partial class V1beta1GraphQLAPI : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1GraphQLAPISpec>, IStatus<V1beta1GraphQLAPIStatus>
 {
     public const string KubeApiVersion = "v1beta1";

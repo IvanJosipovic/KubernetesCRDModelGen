@@ -18,6 +18,7 @@ public enum V1beta1StandardAppVersionSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionSpecForProviderAutomaticScalingStandardSchedulerSettings
 {
     /// <summary>Maximum number of instances to run for this version. Set to zero to disable maxInstances configuration.</summary>
@@ -37,6 +38,7 @@ public partial class V1beta1StandardAppVersionSpecForProviderAutomaticScalingSta
     public double? TargetThroughputUtilization { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionSpecForProviderAutomaticScaling
 {
     /// <summary>Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance. Defaults to a runtime-specific value.</summary>
@@ -64,6 +66,7 @@ public partial class V1beta1StandardAppVersionSpecForProviderAutomaticScaling
     public IList<V1beta1StandardAppVersionSpecForProviderAutomaticScalingStandardSchedulerSettings>? StandardSchedulerSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionSpecForProviderBasicScaling
 {
     /// <summary>Duration of time after the last request that an instance must wait before the instance is shut down. A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". Defaults to 900s.</summary>
@@ -75,6 +78,7 @@ public partial class V1beta1StandardAppVersionSpecForProviderBasicScaling
     public double? MaxInstances { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionSpecForProviderDeploymentFiles
 {
     /// <summary>Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.</summary>
@@ -90,6 +94,7 @@ public partial class V1beta1StandardAppVersionSpecForProviderDeploymentFiles
     public string? SourceUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionSpecForProviderDeploymentZip
 {
     /// <summary>files count</summary>
@@ -101,6 +106,7 @@ public partial class V1beta1StandardAppVersionSpecForProviderDeploymentZip
     public string? SourceUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionSpecForProviderDeployment
 {
     /// <summary>Manifest of the files stored in Google Cloud Storage that are included as part of this version. All files must be readable using the credentials supplied with this call. Structure is documented below.</summary>
@@ -112,6 +118,7 @@ public partial class V1beta1StandardAppVersionSpecForProviderDeployment
     public IList<V1beta1StandardAppVersionSpecForProviderDeploymentZip>? Zip { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionSpecForProviderEntrypoint
 {
     /// <summary>The format should be a shell command that can be fed to bash -c.</summary>
@@ -119,6 +126,7 @@ public partial class V1beta1StandardAppVersionSpecForProviderEntrypoint
     public string? Shell { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionSpecForProviderHandlersScript
 {
     /// <summary>Path to the script from the application root directory.</summary>
@@ -126,6 +134,7 @@ public partial class V1beta1StandardAppVersionSpecForProviderHandlersScript
     public string? ScriptPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionSpecForProviderHandlersStaticFiles
 {
     /// <summary>Whether files should also be uploaded as code data. By default, files declared in static file handlers are uploaded as static data and are only served to end users; they cannot be read by the application. If enabled, uploads are charged against both your code and static data storage resource quotas.</summary>
@@ -157,6 +166,7 @@ public partial class V1beta1StandardAppVersionSpecForProviderHandlersStaticFiles
     public string? UploadPathRegex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionSpecForProviderHandlers
 {
     /// <summary>Actions to take when the user is not logged in. Possible values are: AUTH_FAIL_ACTION_REDIRECT, AUTH_FAIL_ACTION_UNAUTHORIZED.</summary>
@@ -188,6 +198,7 @@ public partial class V1beta1StandardAppVersionSpecForProviderHandlers
     public string? UrlRegex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionSpecForProviderLibraries
 {
     /// <summary>Name of the library. Example "django".</summary>
@@ -199,6 +210,7 @@ public partial class V1beta1StandardAppVersionSpecForProviderLibraries
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionSpecForProviderManualScaling
 {
     /// <summary>Number of instances to assign to the service at the start. Note: When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2 Modules API set_num_instances() you must use lifecycle.ignore_changes = ["manual_scaling"[0].instances] to prevent drift detection.</summary>
@@ -226,6 +238,7 @@ public enum V1beta1StandardAppVersionSpecForProviderServiceAccountRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1StandardAppVersionSpecForProviderServiceAccountRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -239,6 +252,7 @@ public partial class V1beta1StandardAppVersionSpecForProviderServiceAccountRefPo
     public V1beta1StandardAppVersionSpecForProviderServiceAccountRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
 public partial class V1beta1StandardAppVersionSpecForProviderServiceAccountRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -270,6 +284,7 @@ public enum V1beta1StandardAppVersionSpecForProviderServiceAccountSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1StandardAppVersionSpecForProviderServiceAccountSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -283,6 +298,7 @@ public partial class V1beta1StandardAppVersionSpecForProviderServiceAccountSelec
     public V1beta1StandardAppVersionSpecForProviderServiceAccountSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
 public partial class V1beta1StandardAppVersionSpecForProviderServiceAccountSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -298,6 +314,7 @@ public partial class V1beta1StandardAppVersionSpecForProviderServiceAccountSelec
     public V1beta1StandardAppVersionSpecForProviderServiceAccountSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionSpecForProviderVpcAccessConnector
 {
     /// <summary>The egress setting for the connector, controlling what traffic is diverted through it.</summary>
@@ -309,6 +326,7 @@ public partial class V1beta1StandardAppVersionSpecForProviderVpcAccessConnector
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionSpecForProvider
 {
     /// <summary>Allows App Engine second generation runtimes to access the legacy bundled services.</summary>
@@ -400,6 +418,7 @@ public partial class V1beta1StandardAppVersionSpecForProvider
     public IList<V1beta1StandardAppVersionSpecForProviderVpcAccessConnector>? VpcAccessConnector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionSpecInitProviderAutomaticScalingStandardSchedulerSettings
 {
     /// <summary>Maximum number of instances to run for this version. Set to zero to disable maxInstances configuration.</summary>
@@ -419,6 +438,7 @@ public partial class V1beta1StandardAppVersionSpecInitProviderAutomaticScalingSt
     public double? TargetThroughputUtilization { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionSpecInitProviderAutomaticScaling
 {
     /// <summary>Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance. Defaults to a runtime-specific value.</summary>
@@ -446,6 +466,7 @@ public partial class V1beta1StandardAppVersionSpecInitProviderAutomaticScaling
     public IList<V1beta1StandardAppVersionSpecInitProviderAutomaticScalingStandardSchedulerSettings>? StandardSchedulerSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionSpecInitProviderBasicScaling
 {
     /// <summary>Duration of time after the last request that an instance must wait before the instance is shut down. A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". Defaults to 900s.</summary>
@@ -457,6 +478,7 @@ public partial class V1beta1StandardAppVersionSpecInitProviderBasicScaling
     public double? MaxInstances { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionSpecInitProviderDeploymentFiles
 {
     /// <summary>Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.</summary>
@@ -472,6 +494,7 @@ public partial class V1beta1StandardAppVersionSpecInitProviderDeploymentFiles
     public string? SourceUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionSpecInitProviderDeploymentZip
 {
     /// <summary>files count</summary>
@@ -483,6 +506,7 @@ public partial class V1beta1StandardAppVersionSpecInitProviderDeploymentZip
     public string? SourceUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionSpecInitProviderDeployment
 {
     /// <summary>Manifest of the files stored in Google Cloud Storage that are included as part of this version. All files must be readable using the credentials supplied with this call. Structure is documented below.</summary>
@@ -494,6 +518,7 @@ public partial class V1beta1StandardAppVersionSpecInitProviderDeployment
     public IList<V1beta1StandardAppVersionSpecInitProviderDeploymentZip>? Zip { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionSpecInitProviderEntrypoint
 {
     /// <summary>The format should be a shell command that can be fed to bash -c.</summary>
@@ -501,6 +526,7 @@ public partial class V1beta1StandardAppVersionSpecInitProviderEntrypoint
     public string? Shell { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionSpecInitProviderHandlersScript
 {
     /// <summary>Path to the script from the application root directory.</summary>
@@ -508,6 +534,7 @@ public partial class V1beta1StandardAppVersionSpecInitProviderHandlersScript
     public string? ScriptPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionSpecInitProviderHandlersStaticFiles
 {
     /// <summary>Whether files should also be uploaded as code data. By default, files declared in static file handlers are uploaded as static data and are only served to end users; they cannot be read by the application. If enabled, uploads are charged against both your code and static data storage resource quotas.</summary>
@@ -539,6 +566,7 @@ public partial class V1beta1StandardAppVersionSpecInitProviderHandlersStaticFile
     public string? UploadPathRegex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionSpecInitProviderHandlers
 {
     /// <summary>Actions to take when the user is not logged in. Possible values are: AUTH_FAIL_ACTION_REDIRECT, AUTH_FAIL_ACTION_UNAUTHORIZED.</summary>
@@ -570,6 +598,7 @@ public partial class V1beta1StandardAppVersionSpecInitProviderHandlers
     public string? UrlRegex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionSpecInitProviderLibraries
 {
     /// <summary>Name of the library. Example "django".</summary>
@@ -581,6 +610,7 @@ public partial class V1beta1StandardAppVersionSpecInitProviderLibraries
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionSpecInitProviderManualScaling
 {
     /// <summary>Number of instances to assign to the service at the start. Note: When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2 Modules API set_num_instances() you must use lifecycle.ignore_changes = ["manual_scaling"[0].instances] to prevent drift detection.</summary>
@@ -608,6 +638,7 @@ public enum V1beta1StandardAppVersionSpecInitProviderServiceAccountRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1StandardAppVersionSpecInitProviderServiceAccountRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -621,6 +652,7 @@ public partial class V1beta1StandardAppVersionSpecInitProviderServiceAccountRefP
     public V1beta1StandardAppVersionSpecInitProviderServiceAccountRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
 public partial class V1beta1StandardAppVersionSpecInitProviderServiceAccountRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -652,6 +684,7 @@ public enum V1beta1StandardAppVersionSpecInitProviderServiceAccountSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1StandardAppVersionSpecInitProviderServiceAccountSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -665,6 +698,7 @@ public partial class V1beta1StandardAppVersionSpecInitProviderServiceAccountSele
     public V1beta1StandardAppVersionSpecInitProviderServiceAccountSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
 public partial class V1beta1StandardAppVersionSpecInitProviderServiceAccountSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -680,6 +714,7 @@ public partial class V1beta1StandardAppVersionSpecInitProviderServiceAccountSele
     public V1beta1StandardAppVersionSpecInitProviderServiceAccountSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionSpecInitProviderVpcAccessConnector
 {
     /// <summary>The egress setting for the connector, controlling what traffic is diverted through it.</summary>
@@ -691,6 +726,7 @@ public partial class V1beta1StandardAppVersionSpecInitProviderVpcAccessConnector
     public string? Name { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1StandardAppVersionSpecInitProvider
 {
     /// <summary>Allows App Engine second generation runtimes to access the legacy bundled services.</summary>
@@ -820,6 +856,7 @@ public enum V1beta1StandardAppVersionSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1StandardAppVersionSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -833,6 +870,7 @@ public partial class V1beta1StandardAppVersionSpecProviderConfigRefPolicy
     public V1beta1StandardAppVersionSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1StandardAppVersionSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -864,6 +902,7 @@ public enum V1beta1StandardAppVersionSpecPublishConnectionDetailsToConfigRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1StandardAppVersionSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -877,6 +916,7 @@ public partial class V1beta1StandardAppVersionSpecPublishConnectionDetailsToConf
     public V1beta1StandardAppVersionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1StandardAppVersionSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -888,6 +928,7 @@ public partial class V1beta1StandardAppVersionSpecPublishConnectionDetailsToConf
     public V1beta1StandardAppVersionSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1StandardAppVersionSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -903,6 +944,7 @@ public partial class V1beta1StandardAppVersionSpecPublishConnectionDetailsToMeta
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1StandardAppVersionSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -918,6 +960,7 @@ public partial class V1beta1StandardAppVersionSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1StandardAppVersionSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -929,6 +972,7 @@ public partial class V1beta1StandardAppVersionSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>StandardAppVersionSpec defines the desired state of StandardAppVersion</summary>
 public partial class V1beta1StandardAppVersionSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -961,6 +1005,7 @@ public partial class V1beta1StandardAppVersionSpec
     public V1beta1StandardAppVersionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionStatusAtProviderAutomaticScalingStandardSchedulerSettings
 {
     /// <summary>Maximum number of instances to run for this version. Set to zero to disable maxInstances configuration.</summary>
@@ -980,6 +1025,7 @@ public partial class V1beta1StandardAppVersionStatusAtProviderAutomaticScalingSt
     public double? TargetThroughputUtilization { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionStatusAtProviderAutomaticScaling
 {
     /// <summary>Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance. Defaults to a runtime-specific value.</summary>
@@ -1007,6 +1053,7 @@ public partial class V1beta1StandardAppVersionStatusAtProviderAutomaticScaling
     public IList<V1beta1StandardAppVersionStatusAtProviderAutomaticScalingStandardSchedulerSettings>? StandardSchedulerSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionStatusAtProviderBasicScaling
 {
     /// <summary>Duration of time after the last request that an instance must wait before the instance is shut down. A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". Defaults to 900s.</summary>
@@ -1018,6 +1065,7 @@ public partial class V1beta1StandardAppVersionStatusAtProviderBasicScaling
     public double? MaxInstances { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionStatusAtProviderDeploymentFiles
 {
     /// <summary>Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.</summary>
@@ -1033,6 +1081,7 @@ public partial class V1beta1StandardAppVersionStatusAtProviderDeploymentFiles
     public string? SourceUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionStatusAtProviderDeploymentZip
 {
     /// <summary>files count</summary>
@@ -1044,6 +1093,7 @@ public partial class V1beta1StandardAppVersionStatusAtProviderDeploymentZip
     public string? SourceUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionStatusAtProviderDeployment
 {
     /// <summary>Manifest of the files stored in Google Cloud Storage that are included as part of this version. All files must be readable using the credentials supplied with this call. Structure is documented below.</summary>
@@ -1055,6 +1105,7 @@ public partial class V1beta1StandardAppVersionStatusAtProviderDeployment
     public IList<V1beta1StandardAppVersionStatusAtProviderDeploymentZip>? Zip { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionStatusAtProviderEntrypoint
 {
     /// <summary>The format should be a shell command that can be fed to bash -c.</summary>
@@ -1062,6 +1113,7 @@ public partial class V1beta1StandardAppVersionStatusAtProviderEntrypoint
     public string? Shell { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionStatusAtProviderHandlersScript
 {
     /// <summary>Path to the script from the application root directory.</summary>
@@ -1069,6 +1121,7 @@ public partial class V1beta1StandardAppVersionStatusAtProviderHandlersScript
     public string? ScriptPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionStatusAtProviderHandlersStaticFiles
 {
     /// <summary>Whether files should also be uploaded as code data. By default, files declared in static file handlers are uploaded as static data and are only served to end users; they cannot be read by the application. If enabled, uploads are charged against both your code and static data storage resource quotas.</summary>
@@ -1100,6 +1153,7 @@ public partial class V1beta1StandardAppVersionStatusAtProviderHandlersStaticFile
     public string? UploadPathRegex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionStatusAtProviderHandlers
 {
     /// <summary>Actions to take when the user is not logged in. Possible values are: AUTH_FAIL_ACTION_REDIRECT, AUTH_FAIL_ACTION_UNAUTHORIZED.</summary>
@@ -1131,6 +1185,7 @@ public partial class V1beta1StandardAppVersionStatusAtProviderHandlers
     public string? UrlRegex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionStatusAtProviderLibraries
 {
     /// <summary>Name of the library. Example "django".</summary>
@@ -1142,6 +1197,7 @@ public partial class V1beta1StandardAppVersionStatusAtProviderLibraries
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionStatusAtProviderManualScaling
 {
     /// <summary>Number of instances to assign to the service at the start. Note: When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2 Modules API set_num_instances() you must use lifecycle.ignore_changes = ["manual_scaling"[0].instances] to prevent drift detection.</summary>
@@ -1149,6 +1205,7 @@ public partial class V1beta1StandardAppVersionStatusAtProviderManualScaling
     public double? Instances { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionStatusAtProviderVpcAccessConnector
 {
     /// <summary>The egress setting for the connector, controlling what traffic is diverted through it.</summary>
@@ -1160,6 +1217,7 @@ public partial class V1beta1StandardAppVersionStatusAtProviderVpcAccessConnector
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StandardAppVersionStatusAtProvider
 {
     /// <summary>Allows App Engine second generation runtimes to access the legacy bundled services.</summary>
@@ -1251,6 +1309,7 @@ public partial class V1beta1StandardAppVersionStatusAtProvider
     public IList<V1beta1StandardAppVersionStatusAtProviderVpcAccessConnector>? VpcAccessConnector { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1StandardAppVersionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1278,6 +1337,7 @@ public partial class V1beta1StandardAppVersionStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>StandardAppVersionStatus defines the observed state of StandardAppVersion.</summary>
 public partial class V1beta1StandardAppVersionStatus
 {
     /// <summary></summary>
@@ -1294,6 +1354,7 @@ public partial class V1beta1StandardAppVersionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>StandardAppVersion is the Schema for the StandardAppVersions API. Standard App Version resource to create a new version of standard GAE Application.</summary>
 public partial class V1beta1StandardAppVersion : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1StandardAppVersionSpec>, IStatus<V1beta1StandardAppVersionStatus>
 {
     public const string KubeApiVersion = "v1beta1";

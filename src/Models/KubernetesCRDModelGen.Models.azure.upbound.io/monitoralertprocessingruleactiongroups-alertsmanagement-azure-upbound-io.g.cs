@@ -38,6 +38,7 @@ public enum V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderAddAction
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderAddActionGroupIdsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProvider
     public V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderAddActionGroupIdsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderAddActionGroupIdsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderAddAction
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderAddActionGroupIdsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProvider
     public V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderAddActionGroupIdsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of MonitorActionGroup in insights to populate addActionGroupIds.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderAddActionGroupIdsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProvider
     public V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderAddActionGroupIdsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderConditionAlertContext
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProvider
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderConditionAlertRuleId
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -132,6 +138,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProvider
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderConditionAlertRuleName
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -143,6 +150,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProvider
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderConditionDescription
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -154,6 +162,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProvider
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderConditionMonitorCondition
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -165,6 +174,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProvider
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderConditionMonitorService
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -176,6 +186,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProvider
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderConditionSeverity
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -187,6 +198,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProvider
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderConditionSignalType
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -198,6 +210,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProvider
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderConditionTargetResource
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -209,6 +222,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProvider
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderConditionTargetResourceGroup
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -220,6 +234,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProvider
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderConditionTargetResourceType
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -231,6 +246,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProvider
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderCondition
 {
     /// <summary>A alert_context block as defined above.</summary>
@@ -298,6 +314,7 @@ public enum V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderResourceG
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -311,6 +328,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProvider
     public V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -342,6 +360,7 @@ public enum V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderResourceG
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -355,6 +374,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProvider
     public V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -370,6 +390,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProvider
     public V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderScheduleRecurrenceDaily
 {
     /// <summary>Specifies the recurrence end time (H:M:S).</summary>
@@ -381,6 +402,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProvider
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderScheduleRecurrenceMonthly
 {
     /// <summary>Specifies a list of dayOfMonth to recurrence. Possible values are integers between 1 - 31.</summary>
@@ -396,6 +418,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProvider
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderScheduleRecurrenceWeekly
 {
     /// <summary>Specifies a list of dayOfWeek to recurrence. Possible values are Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday.</summary>
@@ -411,6 +434,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProvider
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderScheduleRecurrence
 {
     /// <summary>One or more daily blocks as defined above.</summary>
@@ -426,6 +450,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProvider
     public IList<V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderScheduleRecurrenceWeekly>? Weekly { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderSchedule
 {
     /// <summary>Specifies the Alert Processing Rule effective start time (Y-m-d'T'H:M:S).</summary>
@@ -465,6 +490,7 @@ public enum V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderScopesRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderScopesRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -478,6 +504,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProvider
     public V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderScopesRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderScopesRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -509,6 +536,7 @@ public enum V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderScopesSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderScopesSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -522,6 +550,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProvider
     public V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderScopesSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of ResourceGroup in azure to populate scopes.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderScopesSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -537,6 +566,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProvider
     public V1beta1MonitorAlertProcessingRuleActionGroupSpecForProviderScopesSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecForProvider
 {
     /// <summary>Specifies a list of Action Group IDs.</summary>
@@ -616,6 +646,7 @@ public enum V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProviderAddActio
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProviderAddActionGroupIdsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -629,6 +660,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProvide
     public V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProviderAddActionGroupIdsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProviderAddActionGroupIdsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -660,6 +692,7 @@ public enum V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProviderAddActio
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProviderAddActionGroupIdsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -673,6 +706,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProvide
     public V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProviderAddActionGroupIdsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of MonitorActionGroup in insights to populate addActionGroupIds.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProviderAddActionGroupIdsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -688,6 +722,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProvide
     public V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProviderAddActionGroupIdsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProviderConditionAlertContext
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -699,6 +734,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProviderConditionAlertRuleId
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -710,6 +746,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProviderConditionAlertRuleName
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -721,6 +758,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProviderConditionDescription
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -732,6 +770,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProviderConditionMonitorCondition
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -743,6 +782,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProviderConditionMonitorService
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -754,6 +794,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProviderConditionSeverity
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -765,6 +806,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProviderConditionSignalType
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -776,6 +818,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProviderConditionTargetResource
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -787,6 +830,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProviderConditionTargetResourceGroup
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -798,6 +842,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProviderConditionTargetResourceType
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -809,6 +854,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProviderCondition
 {
     /// <summary>A alert_context block as defined above.</summary>
@@ -856,6 +902,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProvide
     public IList<V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProviderConditionTargetResourceType>? TargetResourceType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProviderScheduleRecurrenceDaily
 {
     /// <summary>Specifies the recurrence end time (H:M:S).</summary>
@@ -867,6 +914,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProvide
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProviderScheduleRecurrenceMonthly
 {
     /// <summary>Specifies a list of dayOfMonth to recurrence. Possible values are integers between 1 - 31.</summary>
@@ -882,6 +930,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProvide
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProviderScheduleRecurrenceWeekly
 {
     /// <summary>Specifies a list of dayOfWeek to recurrence. Possible values are Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday.</summary>
@@ -897,6 +946,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProvide
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProviderScheduleRecurrence
 {
     /// <summary>One or more daily blocks as defined above.</summary>
@@ -912,6 +962,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProvide
     public IList<V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProviderScheduleRecurrenceWeekly>? Weekly { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProviderSchedule
 {
     /// <summary>Specifies the Alert Processing Rule effective start time (Y-m-d'T'H:M:S).</summary>
@@ -951,6 +1002,7 @@ public enum V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProviderScopesRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProviderScopesRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -964,6 +1016,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProvide
     public V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProviderScopesRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProviderScopesRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -995,6 +1048,7 @@ public enum V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProviderScopesSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProviderScopesSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1008,6 +1062,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProvide
     public V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProviderScopesSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of ResourceGroup in azure to populate scopes.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProviderScopesSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1023,6 +1078,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProvide
     public V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProviderScopesSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecInitProvider
 {
     /// <summary>Specifies a list of Action Group IDs.</summary>
@@ -1112,6 +1168,7 @@ public enum V1beta1MonitorAlertProcessingRuleActionGroupSpecProviderConfigRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1125,6 +1182,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecProviderCon
     public V1beta1MonitorAlertProcessingRuleActionGroupSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1156,6 +1214,7 @@ public enum V1beta1MonitorAlertProcessingRuleActionGroupSpecPublishConnectionDet
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1169,6 +1228,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecPublishConn
     public V1beta1MonitorAlertProcessingRuleActionGroupSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1180,6 +1240,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecPublishConn
     public V1beta1MonitorAlertProcessingRuleActionGroupSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1195,6 +1256,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecPublishConn
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1210,6 +1272,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecPublishConn
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1221,6 +1284,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpecWriteConnec
     public string Namespace { get; set; }
 }
 
+/// <summary>MonitorAlertProcessingRuleActionGroupSpec defines the desired state of MonitorAlertProcessingRuleActionGroup</summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1253,6 +1317,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupSpec
     public V1beta1MonitorAlertProcessingRuleActionGroupSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatusAtProviderConditionAlertContext
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -1264,6 +1329,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatusAtProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatusAtProviderConditionAlertRuleId
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -1275,6 +1341,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatusAtProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatusAtProviderConditionAlertRuleName
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -1286,6 +1353,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatusAtProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatusAtProviderConditionDescription
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -1297,6 +1365,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatusAtProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatusAtProviderConditionMonitorCondition
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -1308,6 +1377,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatusAtProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatusAtProviderConditionMonitorService
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -1319,6 +1389,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatusAtProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatusAtProviderConditionSeverity
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -1330,6 +1401,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatusAtProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatusAtProviderConditionSignalType
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -1341,6 +1413,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatusAtProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatusAtProviderConditionTargetResource
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -1352,6 +1425,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatusAtProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatusAtProviderConditionTargetResourceGroup
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -1363,6 +1437,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatusAtProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatusAtProviderConditionTargetResourceType
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -1374,6 +1449,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatusAtProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatusAtProviderCondition
 {
     /// <summary>A alert_context block as defined above.</summary>
@@ -1421,6 +1497,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatusAtProvide
     public IList<V1beta1MonitorAlertProcessingRuleActionGroupStatusAtProviderConditionTargetResourceType>? TargetResourceType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatusAtProviderScheduleRecurrenceDaily
 {
     /// <summary>Specifies the recurrence end time (H:M:S).</summary>
@@ -1432,6 +1509,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatusAtProvide
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatusAtProviderScheduleRecurrenceMonthly
 {
     /// <summary>Specifies a list of dayOfMonth to recurrence. Possible values are integers between 1 - 31.</summary>
@@ -1447,6 +1525,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatusAtProvide
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatusAtProviderScheduleRecurrenceWeekly
 {
     /// <summary>Specifies a list of dayOfWeek to recurrence. Possible values are Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday.</summary>
@@ -1462,6 +1541,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatusAtProvide
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatusAtProviderScheduleRecurrence
 {
     /// <summary>One or more daily blocks as defined above.</summary>
@@ -1477,6 +1557,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatusAtProvide
     public IList<V1beta1MonitorAlertProcessingRuleActionGroupStatusAtProviderScheduleRecurrenceWeekly>? Weekly { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatusAtProviderSchedule
 {
     /// <summary>Specifies the Alert Processing Rule effective start time (Y-m-d'T'H:M:S).</summary>
@@ -1496,6 +1577,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatusAtProvide
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatusAtProvider
 {
     /// <summary>Specifies a list of Action Group IDs.</summary>
@@ -1535,6 +1617,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatusAtProvide
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1562,6 +1645,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatusCondition
     public string Type { get; set; }
 }
 
+/// <summary>MonitorAlertProcessingRuleActionGroupStatus defines the observed state of MonitorAlertProcessingRuleActionGroup.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatus
 {
     /// <summary></summary>
@@ -1578,6 +1662,7 @@ public partial class V1beta1MonitorAlertProcessingRuleActionGroupStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>MonitorAlertProcessingRuleActionGroup is the Schema for the MonitorAlertProcessingRuleActionGroups API. Manages an Alert Processing Rule which apply action group.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleActionGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MonitorAlertProcessingRuleActionGroupSpec>, IStatus<V1beta1MonitorAlertProcessingRuleActionGroupStatus>
 {
     public const string KubeApiVersion = "v1beta1";

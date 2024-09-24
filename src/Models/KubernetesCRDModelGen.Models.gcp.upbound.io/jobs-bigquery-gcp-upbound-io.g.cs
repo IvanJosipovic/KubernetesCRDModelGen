@@ -38,6 +38,7 @@ public enum V1beta1JobSpecForProviderCopyDestinationEncryptionConfigurationKmsKe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecForProviderCopyDestinationEncryptionConfigurationKmsKeyNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1JobSpecForProviderCopyDestinationEncryptionConfigura
     public V1beta1JobSpecForProviderCopyDestinationEncryptionConfigurationKmsKeyNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a CryptoKey in kms to populate kmsKeyName.</summary>
 public partial class V1beta1JobSpecForProviderCopyDestinationEncryptionConfigurationKmsKeyNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1JobSpecForProviderCopyDestinationEncryptionConfigurationKmsKe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobSpecForProviderCopyDestinationEncryptionConfigurationKmsKeyNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1JobSpecForProviderCopyDestinationEncryptionConfigura
     public V1beta1JobSpecForProviderCopyDestinationEncryptionConfigurationKmsKeyNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a CryptoKey in kms to populate kmsKeyName.</summary>
 public partial class V1beta1JobSpecForProviderCopyDestinationEncryptionConfigurationKmsKeyNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1JobSpecForProviderCopyDestinationEncryptionConfigura
     public V1beta1JobSpecForProviderCopyDestinationEncryptionConfigurationKmsKeyNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderCopyDestinationEncryptionConfiguration
 {
     /// <summary>Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.</summary>
@@ -145,6 +150,7 @@ public enum V1beta1JobSpecForProviderCopyDestinationTableDatasetIdRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecForProviderCopyDestinationTableDatasetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -158,6 +164,7 @@ public partial class V1beta1JobSpecForProviderCopyDestinationTableDatasetIdRefPo
     public V1beta1JobSpecForProviderCopyDestinationTableDatasetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Dataset in bigquery to populate datasetId.</summary>
 public partial class V1beta1JobSpecForProviderCopyDestinationTableDatasetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -189,6 +196,7 @@ public enum V1beta1JobSpecForProviderCopyDestinationTableDatasetIdSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobSpecForProviderCopyDestinationTableDatasetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1JobSpecForProviderCopyDestinationTableDatasetIdSelec
     public V1beta1JobSpecForProviderCopyDestinationTableDatasetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Dataset in bigquery to populate datasetId.</summary>
 public partial class V1beta1JobSpecForProviderCopyDestinationTableDatasetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -237,6 +246,7 @@ public enum V1beta1JobSpecForProviderCopyDestinationTableTableIdRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecForProviderCopyDestinationTableTableIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -250,6 +260,7 @@ public partial class V1beta1JobSpecForProviderCopyDestinationTableTableIdRefPoli
     public V1beta1JobSpecForProviderCopyDestinationTableTableIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Table in bigquery to populate tableId.</summary>
 public partial class V1beta1JobSpecForProviderCopyDestinationTableTableIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -281,6 +292,7 @@ public enum V1beta1JobSpecForProviderCopyDestinationTableTableIdSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobSpecForProviderCopyDestinationTableTableIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1JobSpecForProviderCopyDestinationTableTableIdSelecto
     public V1beta1JobSpecForProviderCopyDestinationTableTableIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Table in bigquery to populate tableId.</summary>
 public partial class V1beta1JobSpecForProviderCopyDestinationTableTableIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -309,6 +322,7 @@ public partial class V1beta1JobSpecForProviderCopyDestinationTableTableIdSelecto
     public V1beta1JobSpecForProviderCopyDestinationTableTableIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderCopyDestinationTable
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -340,6 +354,7 @@ public partial class V1beta1JobSpecForProviderCopyDestinationTable
     public V1beta1JobSpecForProviderCopyDestinationTableTableIdSelector? TableIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderCopySourceTables
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -355,6 +370,7 @@ public partial class V1beta1JobSpecForProviderCopySourceTables
     public string? TableId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderCopy
 {
     /// <summary>Specifies whether the job is allowed to create new tables. The following values are supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table. CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result. Creation, truncation and append actions occur as one atomic update upon job completion Default value is CREATE_IF_NEEDED. Possible values are: CREATE_IF_NEEDED, CREATE_NEVER.</summary>
@@ -378,6 +394,7 @@ public partial class V1beta1JobSpecForProviderCopy
     public string? WriteDisposition { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderExtractSourceModel
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -413,6 +430,7 @@ public enum V1beta1JobSpecForProviderExtractSourceTableDatasetIdRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecForProviderExtractSourceTableDatasetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -426,6 +444,7 @@ public partial class V1beta1JobSpecForProviderExtractSourceTableDatasetIdRefPoli
     public V1beta1JobSpecForProviderExtractSourceTableDatasetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Dataset in bigquery to populate datasetId.</summary>
 public partial class V1beta1JobSpecForProviderExtractSourceTableDatasetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -457,6 +476,7 @@ public enum V1beta1JobSpecForProviderExtractSourceTableDatasetIdSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobSpecForProviderExtractSourceTableDatasetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -470,6 +490,7 @@ public partial class V1beta1JobSpecForProviderExtractSourceTableDatasetIdSelecto
     public V1beta1JobSpecForProviderExtractSourceTableDatasetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Dataset in bigquery to populate datasetId.</summary>
 public partial class V1beta1JobSpecForProviderExtractSourceTableDatasetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -505,6 +526,7 @@ public enum V1beta1JobSpecForProviderExtractSourceTableTableIdRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecForProviderExtractSourceTableTableIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -518,6 +540,7 @@ public partial class V1beta1JobSpecForProviderExtractSourceTableTableIdRefPolicy
     public V1beta1JobSpecForProviderExtractSourceTableTableIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Table in bigquery to populate tableId.</summary>
 public partial class V1beta1JobSpecForProviderExtractSourceTableTableIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -549,6 +572,7 @@ public enum V1beta1JobSpecForProviderExtractSourceTableTableIdSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobSpecForProviderExtractSourceTableTableIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -562,6 +586,7 @@ public partial class V1beta1JobSpecForProviderExtractSourceTableTableIdSelectorP
     public V1beta1JobSpecForProviderExtractSourceTableTableIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Table in bigquery to populate tableId.</summary>
 public partial class V1beta1JobSpecForProviderExtractSourceTableTableIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -577,6 +602,7 @@ public partial class V1beta1JobSpecForProviderExtractSourceTableTableIdSelector
     public V1beta1JobSpecForProviderExtractSourceTableTableIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderExtractSourceTable
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -608,6 +634,7 @@ public partial class V1beta1JobSpecForProviderExtractSourceTable
     public V1beta1JobSpecForProviderExtractSourceTableTableIdSelector? TableIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderExtract
 {
     /// <summary>The compression type to use for exported files. Possible values include GZIP, DEFLATE, SNAPPY, and NONE. The default value is NONE. DEFLATE and SNAPPY are only supported for Avro.</summary>
@@ -643,6 +670,7 @@ public partial class V1beta1JobSpecForProviderExtract
     public bool? UseAvroLogicalTypes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderLoadDestinationEncryptionConfiguration
 {
     /// <summary>Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.</summary>
@@ -670,6 +698,7 @@ public enum V1beta1JobSpecForProviderLoadDestinationTableDatasetIdRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecForProviderLoadDestinationTableDatasetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -683,6 +712,7 @@ public partial class V1beta1JobSpecForProviderLoadDestinationTableDatasetIdRefPo
     public V1beta1JobSpecForProviderLoadDestinationTableDatasetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Dataset in bigquery to populate datasetId.</summary>
 public partial class V1beta1JobSpecForProviderLoadDestinationTableDatasetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -714,6 +744,7 @@ public enum V1beta1JobSpecForProviderLoadDestinationTableDatasetIdSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobSpecForProviderLoadDestinationTableDatasetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -727,6 +758,7 @@ public partial class V1beta1JobSpecForProviderLoadDestinationTableDatasetIdSelec
     public V1beta1JobSpecForProviderLoadDestinationTableDatasetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Dataset in bigquery to populate datasetId.</summary>
 public partial class V1beta1JobSpecForProviderLoadDestinationTableDatasetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -762,6 +794,7 @@ public enum V1beta1JobSpecForProviderLoadDestinationTableTableIdRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecForProviderLoadDestinationTableTableIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -775,6 +808,7 @@ public partial class V1beta1JobSpecForProviderLoadDestinationTableTableIdRefPoli
     public V1beta1JobSpecForProviderLoadDestinationTableTableIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Table in bigquery to populate tableId.</summary>
 public partial class V1beta1JobSpecForProviderLoadDestinationTableTableIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -806,6 +840,7 @@ public enum V1beta1JobSpecForProviderLoadDestinationTableTableIdSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobSpecForProviderLoadDestinationTableTableIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -819,6 +854,7 @@ public partial class V1beta1JobSpecForProviderLoadDestinationTableTableIdSelecto
     public V1beta1JobSpecForProviderLoadDestinationTableTableIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Table in bigquery to populate tableId.</summary>
 public partial class V1beta1JobSpecForProviderLoadDestinationTableTableIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -834,6 +870,7 @@ public partial class V1beta1JobSpecForProviderLoadDestinationTableTableIdSelecto
     public V1beta1JobSpecForProviderLoadDestinationTableTableIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderLoadDestinationTable
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -865,6 +902,7 @@ public partial class V1beta1JobSpecForProviderLoadDestinationTable
     public V1beta1JobSpecForProviderLoadDestinationTableTableIdSelector? TableIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderLoadParquetOptions
 {
     /// <summary>If sourceFormat is set to PARQUET, indicates whether to use schema inference specifically for Parquet LIST logical type.</summary>
@@ -876,6 +914,7 @@ public partial class V1beta1JobSpecForProviderLoadParquetOptions
     public bool? EnumAsString { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderLoadTimePartitioning
 {
     /// <summary>Number of milliseconds for which to keep the storage for a partition. A wrapper is used here because 0 is an invalid value.</summary>
@@ -891,6 +930,7 @@ public partial class V1beta1JobSpecForProviderLoadTimePartitioning
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderLoad
 {
     /// <summary>Accept rows that are missing trailing optional columns. The missing values are treated as nulls. If false, records with missing trailing columns are treated as bad records, and if there are too many bad records, an invalid error is returned in the job result. The default value is false. Only applicable to CSV, ignored for other formats.</summary>
@@ -998,6 +1038,7 @@ public enum V1beta1JobSpecForProviderQueryDefaultDatasetDatasetIdRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecForProviderQueryDefaultDatasetDatasetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1011,6 +1052,7 @@ public partial class V1beta1JobSpecForProviderQueryDefaultDatasetDatasetIdRefPol
     public V1beta1JobSpecForProviderQueryDefaultDatasetDatasetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Dataset in bigquery to populate datasetId.</summary>
 public partial class V1beta1JobSpecForProviderQueryDefaultDatasetDatasetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1042,6 +1084,7 @@ public enum V1beta1JobSpecForProviderQueryDefaultDatasetDatasetIdSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobSpecForProviderQueryDefaultDatasetDatasetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1055,6 +1098,7 @@ public partial class V1beta1JobSpecForProviderQueryDefaultDatasetDatasetIdSelect
     public V1beta1JobSpecForProviderQueryDefaultDatasetDatasetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Dataset in bigquery to populate datasetId.</summary>
 public partial class V1beta1JobSpecForProviderQueryDefaultDatasetDatasetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1070,6 +1114,7 @@ public partial class V1beta1JobSpecForProviderQueryDefaultDatasetDatasetIdSelect
     public V1beta1JobSpecForProviderQueryDefaultDatasetDatasetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderQueryDefaultDataset
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -1089,6 +1134,7 @@ public partial class V1beta1JobSpecForProviderQueryDefaultDataset
     public string? ProjectId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderQueryDestinationEncryptionConfiguration
 {
     /// <summary>Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.</summary>
@@ -1116,6 +1162,7 @@ public enum V1beta1JobSpecForProviderQueryDestinationTableDatasetIdRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecForProviderQueryDestinationTableDatasetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1129,6 +1176,7 @@ public partial class V1beta1JobSpecForProviderQueryDestinationTableDatasetIdRefP
     public V1beta1JobSpecForProviderQueryDestinationTableDatasetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Dataset in bigquery to populate datasetId.</summary>
 public partial class V1beta1JobSpecForProviderQueryDestinationTableDatasetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1160,6 +1208,7 @@ public enum V1beta1JobSpecForProviderQueryDestinationTableDatasetIdSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobSpecForProviderQueryDestinationTableDatasetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1173,6 +1222,7 @@ public partial class V1beta1JobSpecForProviderQueryDestinationTableDatasetIdSele
     public V1beta1JobSpecForProviderQueryDestinationTableDatasetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Dataset in bigquery to populate datasetId.</summary>
 public partial class V1beta1JobSpecForProviderQueryDestinationTableDatasetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1208,6 +1258,7 @@ public enum V1beta1JobSpecForProviderQueryDestinationTableTableIdRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecForProviderQueryDestinationTableTableIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1221,6 +1272,7 @@ public partial class V1beta1JobSpecForProviderQueryDestinationTableTableIdRefPol
     public V1beta1JobSpecForProviderQueryDestinationTableTableIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Table in bigquery to populate tableId.</summary>
 public partial class V1beta1JobSpecForProviderQueryDestinationTableTableIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1252,6 +1304,7 @@ public enum V1beta1JobSpecForProviderQueryDestinationTableTableIdSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobSpecForProviderQueryDestinationTableTableIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1265,6 +1318,7 @@ public partial class V1beta1JobSpecForProviderQueryDestinationTableTableIdSelect
     public V1beta1JobSpecForProviderQueryDestinationTableTableIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Table in bigquery to populate tableId.</summary>
 public partial class V1beta1JobSpecForProviderQueryDestinationTableTableIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1280,6 +1334,7 @@ public partial class V1beta1JobSpecForProviderQueryDestinationTableTableIdSelect
     public V1beta1JobSpecForProviderQueryDestinationTableTableIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderQueryDestinationTable
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -1311,6 +1366,7 @@ public partial class V1beta1JobSpecForProviderQueryDestinationTable
     public V1beta1JobSpecForProviderQueryDestinationTableTableIdSelector? TableIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderQueryScriptOptions
 {
     /// <summary>Determines which statement in the script represents the "key result", used to populate the schema and query results of the script job. Possible values are: LAST, FIRST_SELECT.</summary>
@@ -1326,6 +1382,7 @@ public partial class V1beta1JobSpecForProviderQueryScriptOptions
     public string? StatementTimeoutMs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderQueryUserDefinedFunctionResources
 {
     /// <summary>An inline resource that contains code for a user-defined function (UDF). Providing a inline code resource is equivalent to providing a URI for a file containing the same code.</summary>
@@ -1337,6 +1394,7 @@ public partial class V1beta1JobSpecForProviderQueryUserDefinedFunctionResources
     public string? ResourceUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderQuery
 {
     /// <summary>If true and query uses legacy SQL dialect, allows the query to produce arbitrarily large result tables at a slight cost in performance. Requires destinationTable to be set. For standard SQL queries, this flag is ignored and large results are always allowed. However, you must still set destinationTable when result size exceeds the allowed maximum response size.</summary>
@@ -1408,6 +1466,7 @@ public partial class V1beta1JobSpecForProviderQuery
     public string? WriteDisposition { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProvider
 {
     /// <summary>Copies a table. Structure is documented below.</summary>
@@ -1467,6 +1526,7 @@ public enum V1beta1JobSpecInitProviderCopyDestinationEncryptionConfigurationKmsK
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecInitProviderCopyDestinationEncryptionConfigurationKmsKeyNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1480,6 +1540,7 @@ public partial class V1beta1JobSpecInitProviderCopyDestinationEncryptionConfigur
     public V1beta1JobSpecInitProviderCopyDestinationEncryptionConfigurationKmsKeyNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a CryptoKey in kms to populate kmsKeyName.</summary>
 public partial class V1beta1JobSpecInitProviderCopyDestinationEncryptionConfigurationKmsKeyNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1511,6 +1572,7 @@ public enum V1beta1JobSpecInitProviderCopyDestinationEncryptionConfigurationKmsK
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobSpecInitProviderCopyDestinationEncryptionConfigurationKmsKeyNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1524,6 +1586,7 @@ public partial class V1beta1JobSpecInitProviderCopyDestinationEncryptionConfigur
     public V1beta1JobSpecInitProviderCopyDestinationEncryptionConfigurationKmsKeyNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a CryptoKey in kms to populate kmsKeyName.</summary>
 public partial class V1beta1JobSpecInitProviderCopyDestinationEncryptionConfigurationKmsKeyNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1539,6 +1602,7 @@ public partial class V1beta1JobSpecInitProviderCopyDestinationEncryptionConfigur
     public V1beta1JobSpecInitProviderCopyDestinationEncryptionConfigurationKmsKeyNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderCopyDestinationEncryptionConfiguration
 {
     /// <summary>Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.</summary>
@@ -1574,6 +1638,7 @@ public enum V1beta1JobSpecInitProviderCopyDestinationTableDatasetIdRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecInitProviderCopyDestinationTableDatasetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1587,6 +1652,7 @@ public partial class V1beta1JobSpecInitProviderCopyDestinationTableDatasetIdRefP
     public V1beta1JobSpecInitProviderCopyDestinationTableDatasetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Dataset in bigquery to populate datasetId.</summary>
 public partial class V1beta1JobSpecInitProviderCopyDestinationTableDatasetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1618,6 +1684,7 @@ public enum V1beta1JobSpecInitProviderCopyDestinationTableDatasetIdSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobSpecInitProviderCopyDestinationTableDatasetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1631,6 +1698,7 @@ public partial class V1beta1JobSpecInitProviderCopyDestinationTableDatasetIdSele
     public V1beta1JobSpecInitProviderCopyDestinationTableDatasetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Dataset in bigquery to populate datasetId.</summary>
 public partial class V1beta1JobSpecInitProviderCopyDestinationTableDatasetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1666,6 +1734,7 @@ public enum V1beta1JobSpecInitProviderCopyDestinationTableTableIdRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecInitProviderCopyDestinationTableTableIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1679,6 +1748,7 @@ public partial class V1beta1JobSpecInitProviderCopyDestinationTableTableIdRefPol
     public V1beta1JobSpecInitProviderCopyDestinationTableTableIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Table in bigquery to populate tableId.</summary>
 public partial class V1beta1JobSpecInitProviderCopyDestinationTableTableIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1710,6 +1780,7 @@ public enum V1beta1JobSpecInitProviderCopyDestinationTableTableIdSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobSpecInitProviderCopyDestinationTableTableIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1723,6 +1794,7 @@ public partial class V1beta1JobSpecInitProviderCopyDestinationTableTableIdSelect
     public V1beta1JobSpecInitProviderCopyDestinationTableTableIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Table in bigquery to populate tableId.</summary>
 public partial class V1beta1JobSpecInitProviderCopyDestinationTableTableIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1738,6 +1810,7 @@ public partial class V1beta1JobSpecInitProviderCopyDestinationTableTableIdSelect
     public V1beta1JobSpecInitProviderCopyDestinationTableTableIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderCopyDestinationTable
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -1769,6 +1842,7 @@ public partial class V1beta1JobSpecInitProviderCopyDestinationTable
     public V1beta1JobSpecInitProviderCopyDestinationTableTableIdSelector? TableIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderCopySourceTables
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -1784,6 +1858,7 @@ public partial class V1beta1JobSpecInitProviderCopySourceTables
     public string? TableId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderCopy
 {
     /// <summary>Specifies whether the job is allowed to create new tables. The following values are supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table. CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result. Creation, truncation and append actions occur as one atomic update upon job completion Default value is CREATE_IF_NEEDED. Possible values are: CREATE_IF_NEEDED, CREATE_NEVER.</summary>
@@ -1807,6 +1882,7 @@ public partial class V1beta1JobSpecInitProviderCopy
     public string? WriteDisposition { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderExtractSourceModel
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -1842,6 +1918,7 @@ public enum V1beta1JobSpecInitProviderExtractSourceTableDatasetIdRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecInitProviderExtractSourceTableDatasetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1855,6 +1932,7 @@ public partial class V1beta1JobSpecInitProviderExtractSourceTableDatasetIdRefPol
     public V1beta1JobSpecInitProviderExtractSourceTableDatasetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Dataset in bigquery to populate datasetId.</summary>
 public partial class V1beta1JobSpecInitProviderExtractSourceTableDatasetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1886,6 +1964,7 @@ public enum V1beta1JobSpecInitProviderExtractSourceTableDatasetIdSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobSpecInitProviderExtractSourceTableDatasetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1899,6 +1978,7 @@ public partial class V1beta1JobSpecInitProviderExtractSourceTableDatasetIdSelect
     public V1beta1JobSpecInitProviderExtractSourceTableDatasetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Dataset in bigquery to populate datasetId.</summary>
 public partial class V1beta1JobSpecInitProviderExtractSourceTableDatasetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1934,6 +2014,7 @@ public enum V1beta1JobSpecInitProviderExtractSourceTableTableIdRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecInitProviderExtractSourceTableTableIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1947,6 +2028,7 @@ public partial class V1beta1JobSpecInitProviderExtractSourceTableTableIdRefPolic
     public V1beta1JobSpecInitProviderExtractSourceTableTableIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Table in bigquery to populate tableId.</summary>
 public partial class V1beta1JobSpecInitProviderExtractSourceTableTableIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1978,6 +2060,7 @@ public enum V1beta1JobSpecInitProviderExtractSourceTableTableIdSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobSpecInitProviderExtractSourceTableTableIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1991,6 +2074,7 @@ public partial class V1beta1JobSpecInitProviderExtractSourceTableTableIdSelector
     public V1beta1JobSpecInitProviderExtractSourceTableTableIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Table in bigquery to populate tableId.</summary>
 public partial class V1beta1JobSpecInitProviderExtractSourceTableTableIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2006,6 +2090,7 @@ public partial class V1beta1JobSpecInitProviderExtractSourceTableTableIdSelector
     public V1beta1JobSpecInitProviderExtractSourceTableTableIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderExtractSourceTable
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -2037,6 +2122,7 @@ public partial class V1beta1JobSpecInitProviderExtractSourceTable
     public V1beta1JobSpecInitProviderExtractSourceTableTableIdSelector? TableIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderExtract
 {
     /// <summary>The compression type to use for exported files. Possible values include GZIP, DEFLATE, SNAPPY, and NONE. The default value is NONE. DEFLATE and SNAPPY are only supported for Avro.</summary>
@@ -2072,6 +2158,7 @@ public partial class V1beta1JobSpecInitProviderExtract
     public bool? UseAvroLogicalTypes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderLoadDestinationEncryptionConfiguration
 {
     /// <summary>Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.</summary>
@@ -2099,6 +2186,7 @@ public enum V1beta1JobSpecInitProviderLoadDestinationTableDatasetIdRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecInitProviderLoadDestinationTableDatasetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2112,6 +2200,7 @@ public partial class V1beta1JobSpecInitProviderLoadDestinationTableDatasetIdRefP
     public V1beta1JobSpecInitProviderLoadDestinationTableDatasetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Dataset in bigquery to populate datasetId.</summary>
 public partial class V1beta1JobSpecInitProviderLoadDestinationTableDatasetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2143,6 +2232,7 @@ public enum V1beta1JobSpecInitProviderLoadDestinationTableDatasetIdSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobSpecInitProviderLoadDestinationTableDatasetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2156,6 +2246,7 @@ public partial class V1beta1JobSpecInitProviderLoadDestinationTableDatasetIdSele
     public V1beta1JobSpecInitProviderLoadDestinationTableDatasetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Dataset in bigquery to populate datasetId.</summary>
 public partial class V1beta1JobSpecInitProviderLoadDestinationTableDatasetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2191,6 +2282,7 @@ public enum V1beta1JobSpecInitProviderLoadDestinationTableTableIdRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecInitProviderLoadDestinationTableTableIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2204,6 +2296,7 @@ public partial class V1beta1JobSpecInitProviderLoadDestinationTableTableIdRefPol
     public V1beta1JobSpecInitProviderLoadDestinationTableTableIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Table in bigquery to populate tableId.</summary>
 public partial class V1beta1JobSpecInitProviderLoadDestinationTableTableIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2235,6 +2328,7 @@ public enum V1beta1JobSpecInitProviderLoadDestinationTableTableIdSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobSpecInitProviderLoadDestinationTableTableIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2248,6 +2342,7 @@ public partial class V1beta1JobSpecInitProviderLoadDestinationTableTableIdSelect
     public V1beta1JobSpecInitProviderLoadDestinationTableTableIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Table in bigquery to populate tableId.</summary>
 public partial class V1beta1JobSpecInitProviderLoadDestinationTableTableIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2263,6 +2358,7 @@ public partial class V1beta1JobSpecInitProviderLoadDestinationTableTableIdSelect
     public V1beta1JobSpecInitProviderLoadDestinationTableTableIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderLoadDestinationTable
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -2294,6 +2390,7 @@ public partial class V1beta1JobSpecInitProviderLoadDestinationTable
     public V1beta1JobSpecInitProviderLoadDestinationTableTableIdSelector? TableIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderLoadParquetOptions
 {
     /// <summary>If sourceFormat is set to PARQUET, indicates whether to use schema inference specifically for Parquet LIST logical type.</summary>
@@ -2305,6 +2402,7 @@ public partial class V1beta1JobSpecInitProviderLoadParquetOptions
     public bool? EnumAsString { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderLoadTimePartitioning
 {
     /// <summary>Number of milliseconds for which to keep the storage for a partition. A wrapper is used here because 0 is an invalid value.</summary>
@@ -2320,6 +2418,7 @@ public partial class V1beta1JobSpecInitProviderLoadTimePartitioning
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderLoad
 {
     /// <summary>Accept rows that are missing trailing optional columns. The missing values are treated as nulls. If false, records with missing trailing columns are treated as bad records, and if there are too many bad records, an invalid error is returned in the job result. The default value is false. Only applicable to CSV, ignored for other formats.</summary>
@@ -2427,6 +2526,7 @@ public enum V1beta1JobSpecInitProviderQueryDefaultDatasetDatasetIdRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecInitProviderQueryDefaultDatasetDatasetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2440,6 +2540,7 @@ public partial class V1beta1JobSpecInitProviderQueryDefaultDatasetDatasetIdRefPo
     public V1beta1JobSpecInitProviderQueryDefaultDatasetDatasetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Dataset in bigquery to populate datasetId.</summary>
 public partial class V1beta1JobSpecInitProviderQueryDefaultDatasetDatasetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2471,6 +2572,7 @@ public enum V1beta1JobSpecInitProviderQueryDefaultDatasetDatasetIdSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobSpecInitProviderQueryDefaultDatasetDatasetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2484,6 +2586,7 @@ public partial class V1beta1JobSpecInitProviderQueryDefaultDatasetDatasetIdSelec
     public V1beta1JobSpecInitProviderQueryDefaultDatasetDatasetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Dataset in bigquery to populate datasetId.</summary>
 public partial class V1beta1JobSpecInitProviderQueryDefaultDatasetDatasetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2499,6 +2602,7 @@ public partial class V1beta1JobSpecInitProviderQueryDefaultDatasetDatasetIdSelec
     public V1beta1JobSpecInitProviderQueryDefaultDatasetDatasetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderQueryDefaultDataset
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -2518,6 +2622,7 @@ public partial class V1beta1JobSpecInitProviderQueryDefaultDataset
     public string? ProjectId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderQueryDestinationEncryptionConfiguration
 {
     /// <summary>Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.</summary>
@@ -2545,6 +2650,7 @@ public enum V1beta1JobSpecInitProviderQueryDestinationTableDatasetIdRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecInitProviderQueryDestinationTableDatasetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2558,6 +2664,7 @@ public partial class V1beta1JobSpecInitProviderQueryDestinationTableDatasetIdRef
     public V1beta1JobSpecInitProviderQueryDestinationTableDatasetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Dataset in bigquery to populate datasetId.</summary>
 public partial class V1beta1JobSpecInitProviderQueryDestinationTableDatasetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2589,6 +2696,7 @@ public enum V1beta1JobSpecInitProviderQueryDestinationTableDatasetIdSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobSpecInitProviderQueryDestinationTableDatasetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2602,6 +2710,7 @@ public partial class V1beta1JobSpecInitProviderQueryDestinationTableDatasetIdSel
     public V1beta1JobSpecInitProviderQueryDestinationTableDatasetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Dataset in bigquery to populate datasetId.</summary>
 public partial class V1beta1JobSpecInitProviderQueryDestinationTableDatasetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2637,6 +2746,7 @@ public enum V1beta1JobSpecInitProviderQueryDestinationTableTableIdRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecInitProviderQueryDestinationTableTableIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2650,6 +2760,7 @@ public partial class V1beta1JobSpecInitProviderQueryDestinationTableTableIdRefPo
     public V1beta1JobSpecInitProviderQueryDestinationTableTableIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Table in bigquery to populate tableId.</summary>
 public partial class V1beta1JobSpecInitProviderQueryDestinationTableTableIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2681,6 +2792,7 @@ public enum V1beta1JobSpecInitProviderQueryDestinationTableTableIdSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobSpecInitProviderQueryDestinationTableTableIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2694,6 +2806,7 @@ public partial class V1beta1JobSpecInitProviderQueryDestinationTableTableIdSelec
     public V1beta1JobSpecInitProviderQueryDestinationTableTableIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Table in bigquery to populate tableId.</summary>
 public partial class V1beta1JobSpecInitProviderQueryDestinationTableTableIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2709,6 +2822,7 @@ public partial class V1beta1JobSpecInitProviderQueryDestinationTableTableIdSelec
     public V1beta1JobSpecInitProviderQueryDestinationTableTableIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderQueryDestinationTable
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -2740,6 +2854,7 @@ public partial class V1beta1JobSpecInitProviderQueryDestinationTable
     public V1beta1JobSpecInitProviderQueryDestinationTableTableIdSelector? TableIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderQueryScriptOptions
 {
     /// <summary>Determines which statement in the script represents the "key result", used to populate the schema and query results of the script job. Possible values are: LAST, FIRST_SELECT.</summary>
@@ -2755,6 +2870,7 @@ public partial class V1beta1JobSpecInitProviderQueryScriptOptions
     public string? StatementTimeoutMs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderQueryUserDefinedFunctionResources
 {
     /// <summary>An inline resource that contains code for a user-defined function (UDF). Providing a inline code resource is equivalent to providing a URI for a file containing the same code.</summary>
@@ -2766,6 +2882,7 @@ public partial class V1beta1JobSpecInitProviderQueryUserDefinedFunctionResources
     public string? ResourceUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderQuery
 {
     /// <summary>If true and query uses legacy SQL dialect, allows the query to produce arbitrarily large result tables at a slight cost in performance. Requires destinationTable to be set. For standard SQL queries, this flag is ignored and large results are always allowed. However, you must still set destinationTable when result size exceeds the allowed maximum response size.</summary>
@@ -2837,6 +2954,7 @@ public partial class V1beta1JobSpecInitProviderQuery
     public string? WriteDisposition { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1JobSpecInitProvider
 {
     /// <summary>Copies a table. Structure is documented below.</summary>
@@ -2918,6 +3036,7 @@ public enum V1beta1JobSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2931,6 +3050,7 @@ public partial class V1beta1JobSpecProviderConfigRefPolicy
     public V1beta1JobSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1JobSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2962,6 +3082,7 @@ public enum V1beta1JobSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2975,6 +3096,7 @@ public partial class V1beta1JobSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1JobSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1JobSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2986,6 +3108,7 @@ public partial class V1beta1JobSpecPublishConnectionDetailsToConfigRef
     public V1beta1JobSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1JobSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -3001,6 +3124,7 @@ public partial class V1beta1JobSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1JobSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -3016,6 +3140,7 @@ public partial class V1beta1JobSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1JobSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -3027,6 +3152,7 @@ public partial class V1beta1JobSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>JobSpec defines the desired state of Job</summary>
 public partial class V1beta1JobSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -3059,6 +3185,7 @@ public partial class V1beta1JobSpec
     public V1beta1JobSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderCopyDestinationEncryptionConfiguration
 {
     /// <summary>Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.</summary>
@@ -3070,6 +3197,7 @@ public partial class V1beta1JobStatusAtProviderCopyDestinationEncryptionConfigur
     public string? KmsKeyVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderCopyDestinationTable
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -3085,6 +3213,7 @@ public partial class V1beta1JobStatusAtProviderCopyDestinationTable
     public string? TableId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderCopySourceTables
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -3100,6 +3229,7 @@ public partial class V1beta1JobStatusAtProviderCopySourceTables
     public string? TableId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderCopy
 {
     /// <summary>Specifies whether the job is allowed to create new tables. The following values are supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table. CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result. Creation, truncation and append actions occur as one atomic update upon job completion Default value is CREATE_IF_NEEDED. Possible values are: CREATE_IF_NEEDED, CREATE_NEVER.</summary>
@@ -3123,6 +3253,7 @@ public partial class V1beta1JobStatusAtProviderCopy
     public string? WriteDisposition { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderExtractSourceModel
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -3138,6 +3269,7 @@ public partial class V1beta1JobStatusAtProviderExtractSourceModel
     public string? ProjectId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderExtractSourceTable
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -3153,6 +3285,7 @@ public partial class V1beta1JobStatusAtProviderExtractSourceTable
     public string? TableId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderExtract
 {
     /// <summary>The compression type to use for exported files. Possible values include GZIP, DEFLATE, SNAPPY, and NONE. The default value is NONE. DEFLATE and SNAPPY are only supported for Avro.</summary>
@@ -3188,6 +3321,7 @@ public partial class V1beta1JobStatusAtProviderExtract
     public bool? UseAvroLogicalTypes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderLoadDestinationEncryptionConfiguration
 {
     /// <summary>Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.</summary>
@@ -3199,6 +3333,7 @@ public partial class V1beta1JobStatusAtProviderLoadDestinationEncryptionConfigur
     public string? KmsKeyVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderLoadDestinationTable
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -3214,6 +3349,7 @@ public partial class V1beta1JobStatusAtProviderLoadDestinationTable
     public string? TableId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderLoadParquetOptions
 {
     /// <summary>If sourceFormat is set to PARQUET, indicates whether to use schema inference specifically for Parquet LIST logical type.</summary>
@@ -3225,6 +3361,7 @@ public partial class V1beta1JobStatusAtProviderLoadParquetOptions
     public bool? EnumAsString { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderLoadTimePartitioning
 {
     /// <summary>Number of milliseconds for which to keep the storage for a partition. A wrapper is used here because 0 is an invalid value.</summary>
@@ -3240,6 +3377,7 @@ public partial class V1beta1JobStatusAtProviderLoadTimePartitioning
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderLoad
 {
     /// <summary>Accept rows that are missing trailing optional columns. The missing values are treated as nulls. If false, records with missing trailing columns are treated as bad records, and if there are too many bad records, an invalid error is returned in the job result. The default value is false. Only applicable to CSV, ignored for other formats.</summary>
@@ -3327,6 +3465,7 @@ public partial class V1beta1JobStatusAtProviderLoad
     public string? WriteDisposition { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderQueryDefaultDataset
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -3338,6 +3477,7 @@ public partial class V1beta1JobStatusAtProviderQueryDefaultDataset
     public string? ProjectId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderQueryDestinationEncryptionConfiguration
 {
     /// <summary>Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.</summary>
@@ -3349,6 +3489,7 @@ public partial class V1beta1JobStatusAtProviderQueryDestinationEncryptionConfigu
     public string? KmsKeyVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderQueryDestinationTable
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -3364,6 +3505,7 @@ public partial class V1beta1JobStatusAtProviderQueryDestinationTable
     public string? TableId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderQueryScriptOptions
 {
     /// <summary>Determines which statement in the script represents the "key result", used to populate the schema and query results of the script job. Possible values are: LAST, FIRST_SELECT.</summary>
@@ -3379,6 +3521,7 @@ public partial class V1beta1JobStatusAtProviderQueryScriptOptions
     public string? StatementTimeoutMs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderQueryUserDefinedFunctionResources
 {
     /// <summary>An inline resource that contains code for a user-defined function (UDF). Providing a inline code resource is equivalent to providing a URI for a file containing the same code.</summary>
@@ -3390,6 +3533,7 @@ public partial class V1beta1JobStatusAtProviderQueryUserDefinedFunctionResources
     public string? ResourceUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderQuery
 {
     /// <summary>If true and query uses legacy SQL dialect, allows the query to produce arbitrarily large result tables at a slight cost in performance. Requires destinationTable to be set. For standard SQL queries, this flag is ignored and large results are always allowed. However, you must still set destinationTable when result size exceeds the allowed maximum response size.</summary>
@@ -3461,6 +3605,7 @@ public partial class V1beta1JobStatusAtProviderQuery
     public string? WriteDisposition { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderStatusErrorResult
 {
     /// <summary>The geographic location of the job. The default value is US.</summary>
@@ -3476,6 +3621,7 @@ public partial class V1beta1JobStatusAtProviderStatusErrorResult
     public string? Reason { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderStatusErrors
 {
     /// <summary>The geographic location of the job. The default value is US.</summary>
@@ -3491,6 +3637,7 @@ public partial class V1beta1JobStatusAtProviderStatusErrors
     public string? Reason { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderStatus
 {
     /// <summary>(Output) Final error result of the job. If present, indicates that the job has completed and was unsuccessful. Structure is documented below.</summary>
@@ -3506,6 +3653,7 @@ public partial class V1beta1JobStatusAtProviderStatus
     public string? State { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProvider
 {
     /// <summary>Copies a table. Structure is documented below.</summary>
@@ -3569,6 +3717,7 @@ public partial class V1beta1JobStatusAtProvider
     public string? UserEmail { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1JobStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -3596,6 +3745,7 @@ public partial class V1beta1JobStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>JobStatus defines the observed state of Job.</summary>
 public partial class V1beta1JobStatus
 {
     /// <summary></summary>
@@ -3612,6 +3762,7 @@ public partial class V1beta1JobStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Job is the Schema for the Jobs API. Jobs are actions that BigQuery runs on your behalf to load data, export data, query data, or copy data.</summary>
 public partial class V1beta1Job : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1JobSpec>, IStatus<V1beta1JobStatus>
 {
     public const string KubeApiVersion = "v1beta1";

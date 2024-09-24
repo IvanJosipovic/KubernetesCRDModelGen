@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1alpha1ComputePerInstanceConfigSpecInstanceGroupManagerRef
 {
     /// <summary>Allowed value: The `name` field of a `ComputeInstanceGroupManager` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1ComputePerInstanceConfigSpecInstanceGroupManagerRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputePerInstanceConfigSpecPreservedStateDisk
 {
     /// <summary>A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are 'NEVER' and 'ON_PERMANENT_INSTANCE_DELETION'. 'NEVER' - detach the disk when the VM is deleted, but do not delete the disk. 'ON_PERMANENT_INSTANCE_DELETION' will delete the stateful disk when the VM is permanently deleted from the instance group. Default value: "NEVER" Possible values: ["NEVER", "ON_PERMANENT_INSTANCE_DELETION"].</summary>
@@ -42,6 +44,7 @@ public partial class V1alpha1ComputePerInstanceConfigSpecPreservedStateDisk
     public string Source { get; set; }
 }
 
+/// <summary>Ip address representation.</summary>
 public partial class V1alpha1ComputePerInstanceConfigSpecPreservedStateExternalIpIpAddress
 {
     /// <summary>The URL of the reservation for this IP address.</summary>
@@ -49,6 +52,7 @@ public partial class V1alpha1ComputePerInstanceConfigSpecPreservedStateExternalI
     public string? Address { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputePerInstanceConfigSpecPreservedStateExternalIp
 {
     /// <summary>These stateful IPs will never be released during autohealing, update or VM instance recreate operations. This flag is used to configure if the IP reservation should be deleted after it is no longer used by the group, e.g. when the given instance or the whole group is deleted. Default value: "NEVER" Possible values: ["NEVER", "ON_PERMANENT_INSTANCE_DELETION"].</summary>
@@ -64,6 +68,7 @@ public partial class V1alpha1ComputePerInstanceConfigSpecPreservedStateExternalI
     public V1alpha1ComputePerInstanceConfigSpecPreservedStateExternalIpIpAddress? IpAddress { get; set; }
 }
 
+/// <summary>Ip address representation.</summary>
 public partial class V1alpha1ComputePerInstanceConfigSpecPreservedStateInternalIpIpAddress
 {
     /// <summary>The URL of the reservation for this IP address.</summary>
@@ -71,6 +76,7 @@ public partial class V1alpha1ComputePerInstanceConfigSpecPreservedStateInternalI
     public string? Address { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputePerInstanceConfigSpecPreservedStateInternalIp
 {
     /// <summary>These stateful IPs will never be released during autohealing, update or VM instance recreate operations. This flag is used to configure if the IP reservation should be deleted after it is no longer used by the group, e.g. when the given instance or the whole group is deleted. Default value: "NEVER" Possible values: ["NEVER", "ON_PERMANENT_INSTANCE_DELETION"].</summary>
@@ -86,6 +92,7 @@ public partial class V1alpha1ComputePerInstanceConfigSpecPreservedStateInternalI
     public V1alpha1ComputePerInstanceConfigSpecPreservedStateInternalIpIpAddress? IpAddress { get; set; }
 }
 
+/// <summary>The preserved state for this instance.</summary>
 public partial class V1alpha1ComputePerInstanceConfigSpecPreservedState
 {
     /// <summary>Stateful disks for the instance.</summary>
@@ -105,6 +112,7 @@ public partial class V1alpha1ComputePerInstanceConfigSpecPreservedState
     public IDictionary<string, string>? Metadata { get; set; }
 }
 
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1ComputePerInstanceConfigSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -120,6 +128,7 @@ public partial class V1alpha1ComputePerInstanceConfigSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputePerInstanceConfigSpec
 {
     /// <summary></summary>
@@ -155,6 +164,7 @@ public partial class V1alpha1ComputePerInstanceConfigSpec
     public string Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputePerInstanceConfigStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -178,6 +188,7 @@ public partial class V1alpha1ComputePerInstanceConfigStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputePerInstanceConfigStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -190,6 +201,7 @@ public partial class V1alpha1ComputePerInstanceConfigStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1ComputePerInstanceConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ComputePerInstanceConfigSpec>, IStatus<V1alpha1ComputePerInstanceConfigStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

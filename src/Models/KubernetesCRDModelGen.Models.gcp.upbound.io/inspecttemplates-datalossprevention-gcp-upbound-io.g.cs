@@ -18,6 +18,7 @@ public enum V1beta1InspectTemplateSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigCustomInfoTypesDictionaryCloudStoragePath
 {
     /// <summary>A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigCustomInf
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigCustomInfoTypesDictionaryWordList
 {
     /// <summary>Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits.</summary>
@@ -32,6 +34,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigCustomInf
     public IList<string>? Words { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigCustomInfoTypesDictionary
 {
     /// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted. Structure is documented below.</summary>
@@ -43,6 +46,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigCustomInf
     public IList<V1beta1InspectTemplateSpecForProviderInspectConfigCustomInfoTypesDictionaryWordList>? WordList { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigCustomInfoTypesInfoTypeSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -50,6 +54,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigCustomInf
     public string? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigCustomInfoTypesInfoType
 {
     /// <summary>Resource name of the requested StoredInfoType, for example organizations/433245324/storedInfoTypes/432452342 or projects/project-id/storedInfoTypes/432452342.</summary>
@@ -65,6 +70,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigCustomInf
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigCustomInfoTypesRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -76,6 +82,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigCustomInf
     public string? Pattern { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigCustomInfoTypesSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -83,6 +90,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigCustomInf
     public string? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigCustomInfoTypesStoredType
 {
     /// <summary>Resource name of the requested StoredInfoType, for example organizations/433245324/storedInfoTypes/432452342 or projects/project-id/storedInfoTypes/432452342.</summary>
@@ -90,10 +98,12 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigCustomInf
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigCustomInfoTypesSurrogateType
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigCustomInfoTypes
 {
     /// <summary>Dictionary which defines the rule. Structure is documented below.</summary>
@@ -129,6 +139,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigCustomInf
     public IList<V1beta1InspectTemplateSpecForProviderInspectConfigCustomInfoTypesSurrogateType>? SurrogateType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigInfoTypesSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -136,6 +147,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigInfoTypes
     public string? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigInfoTypes
 {
     /// <summary>Resource name of the requested StoredInfoType, for example organizations/433245324/storedInfoTypes/432452342 or projects/project-id/storedInfoTypes/432452342.</summary>
@@ -151,6 +163,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigInfoTypes
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -158,6 +171,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigLimitsMax
     public string? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigLimitsMaxFindingsPerInfoTypeInfoType
 {
     /// <summary>Resource name of the requested StoredInfoType, for example organizations/433245324/storedInfoTypes/432452342 or projects/project-id/storedInfoTypes/432452342.</summary>
@@ -173,6 +187,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigLimitsMax
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigLimitsMaxFindingsPerInfoType
 {
     /// <summary>Type of information the findings limit applies to. Only one limit per infoType should be provided. If InfoTypeLimit does not have an infoType, the DLP API applies the limit against all infoTypes that are found but not specified in another InfoTypeLimit. Structure is documented below.</summary>
@@ -184,6 +199,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigLimitsMax
     public double? MaxFindings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigLimits
 {
     /// <summary>Configuration of findings limit given for specified infoTypes. Structure is documented below.</summary>
@@ -199,6 +215,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigLimits
     public double? MaxFindingsPerRequest { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetInfoTypesSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -206,6 +223,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetIn
     public string? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetInfoTypes
 {
     /// <summary>Resource name of the requested StoredInfoType, for example organizations/433245324/storedInfoTypes/432452342 or projects/project-id/storedInfoTypes/432452342.</summary>
@@ -221,6 +239,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetIn
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath
 {
     /// <summary>A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt</summary>
@@ -228,6 +247,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRu
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRulesExclusionRuleDictionaryWordList
 {
     /// <summary>Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits.</summary>
@@ -235,6 +255,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRu
     public IList<string>? Words { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRulesExclusionRuleDictionary
 {
     /// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted. Structure is documented below.</summary>
@@ -246,6 +267,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRu
     public IList<V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRulesExclusionRuleDictionaryWordList>? WordList { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordHotwordRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -257,6 +279,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRu
     public string? Pattern { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordProximity
 {
     /// <summary>Number of characters after the finding to consider. Either this or window_before must be specified</summary>
@@ -268,6 +291,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRu
     public double? WindowBefore { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRulesExclusionRuleExcludeByHotword
 {
     /// <summary>Regular expression pattern defining what qualifies as a hotword. Structure is documented below.</summary>
@@ -279,6 +303,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRu
     public IList<V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordProximity>? Proximity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -286,6 +311,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRu
     public string? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes
 {
     /// <summary>Resource name of the requested StoredInfoType, for example organizations/433245324/storedInfoTypes/432452342 or projects/project-id/storedInfoTypes/432452342.</summary>
@@ -301,6 +327,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRu
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes
 {
     /// <summary>List of infoTypes this rule set is applied to. Structure is documented below.</summary>
@@ -308,6 +335,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRu
     public IList<V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes>? InfoTypes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRulesExclusionRuleRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -319,6 +347,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRu
     public string? Pattern { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRulesExclusionRule
 {
     /// <summary>Dictionary which defines the rule. Structure is documented below.</summary>
@@ -342,6 +371,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRu
     public IList<V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRulesExclusionRuleRegex>? Regex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRulesHotwordRuleHotwordRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -353,6 +383,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRu
     public string? Pattern { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment
 {
     /// <summary>Set the likelihood of a finding to a fixed value. Either this or relative_likelihood can be set. Possible values are: VERY_UNLIKELY, UNLIKELY, POSSIBLE, LIKELY, VERY_LIKELY.</summary>
@@ -364,6 +395,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRu
     public double? RelativeLikelihood { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRulesHotwordRuleProximity
 {
     /// <summary>Number of characters after the finding to consider. Either this or window_before must be specified</summary>
@@ -375,6 +407,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRu
     public double? WindowBefore { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRulesHotwordRule
 {
     /// <summary>Regular expression pattern defining what qualifies as a hotword. Structure is documented below.</summary>
@@ -390,6 +423,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRu
     public IList<V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRulesHotwordRuleProximity>? Proximity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRules
 {
     /// <summary>The rule that specifies conditions when findings of infoTypes specified in InspectionRuleSet are removed from results. Structure is documented below.</summary>
@@ -401,6 +435,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRu
     public IList<V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRulesHotwordRule>? HotwordRule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSet
 {
     /// <summary>List of infoTypes this rule set is applied to. Structure is documented below.</summary>
@@ -412,6 +447,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfigRuleSet
     public IList<V1beta1InspectTemplateSpecForProviderInspectConfigRuleSetRules>? Rules { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecForProviderInspectConfig
 {
     /// <summary>List of options defining data content to scan. If empty, text, images, and other content will be included. Each value may be one of: CONTENT_TEXT, CONTENT_IMAGE.</summary>
@@ -447,6 +483,7 @@ public partial class V1beta1InspectTemplateSpecForProviderInspectConfig
     public IList<V1beta1InspectTemplateSpecForProviderInspectConfigRuleSet>? RuleSet { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecForProvider
 {
     /// <summary>A description of the inspect template.</summary>
@@ -470,6 +507,7 @@ public partial class V1beta1InspectTemplateSpecForProvider
     public string? TemplateId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigCustomInfoTypesDictionaryCloudStoragePath
 {
     /// <summary>A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt</summary>
@@ -477,6 +515,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigCustomIn
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigCustomInfoTypesDictionaryWordList
 {
     /// <summary>Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits.</summary>
@@ -484,6 +523,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigCustomIn
     public IList<string>? Words { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigCustomInfoTypesDictionary
 {
     /// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted. Structure is documented below.</summary>
@@ -495,6 +535,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigCustomIn
     public IList<V1beta1InspectTemplateSpecInitProviderInspectConfigCustomInfoTypesDictionaryWordList>? WordList { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigCustomInfoTypesInfoTypeSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -502,6 +543,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigCustomIn
     public string? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigCustomInfoTypesInfoType
 {
     /// <summary>Resource name of the requested StoredInfoType, for example organizations/433245324/storedInfoTypes/432452342 or projects/project-id/storedInfoTypes/432452342.</summary>
@@ -517,6 +559,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigCustomIn
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigCustomInfoTypesRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -528,6 +571,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigCustomIn
     public string? Pattern { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigCustomInfoTypesSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -535,6 +579,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigCustomIn
     public string? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigCustomInfoTypesStoredType
 {
     /// <summary>Resource name of the requested StoredInfoType, for example organizations/433245324/storedInfoTypes/432452342 or projects/project-id/storedInfoTypes/432452342.</summary>
@@ -542,10 +587,12 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigCustomIn
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigCustomInfoTypesSurrogateType
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigCustomInfoTypes
 {
     /// <summary>Dictionary which defines the rule. Structure is documented below.</summary>
@@ -581,6 +628,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigCustomIn
     public IList<V1beta1InspectTemplateSpecInitProviderInspectConfigCustomInfoTypesSurrogateType>? SurrogateType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigInfoTypesSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -588,6 +636,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigInfoType
     public string? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigInfoTypes
 {
     /// <summary>Resource name of the requested StoredInfoType, for example organizations/433245324/storedInfoTypes/432452342 or projects/project-id/storedInfoTypes/432452342.</summary>
@@ -603,6 +652,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigInfoType
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -610,6 +660,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigLimitsMa
     public string? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigLimitsMaxFindingsPerInfoTypeInfoType
 {
     /// <summary>Resource name of the requested StoredInfoType, for example organizations/433245324/storedInfoTypes/432452342 or projects/project-id/storedInfoTypes/432452342.</summary>
@@ -625,6 +676,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigLimitsMa
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigLimitsMaxFindingsPerInfoType
 {
     /// <summary>Type of information the findings limit applies to. Only one limit per infoType should be provided. If InfoTypeLimit does not have an infoType, the DLP API applies the limit against all infoTypes that are found but not specified in another InfoTypeLimit. Structure is documented below.</summary>
@@ -636,6 +688,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigLimitsMa
     public double? MaxFindings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigLimits
 {
     /// <summary>Configuration of findings limit given for specified infoTypes. Structure is documented below.</summary>
@@ -651,6 +704,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigLimits
     public double? MaxFindingsPerRequest { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetInfoTypesSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -658,6 +712,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetI
     public string? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetInfoTypes
 {
     /// <summary>Resource name of the requested StoredInfoType, for example organizations/433245324/storedInfoTypes/432452342 or projects/project-id/storedInfoTypes/432452342.</summary>
@@ -673,6 +728,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetI
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath
 {
     /// <summary>A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt</summary>
@@ -680,6 +736,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetR
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRulesExclusionRuleDictionaryWordList
 {
     /// <summary>Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits.</summary>
@@ -687,6 +744,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetR
     public IList<string>? Words { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRulesExclusionRuleDictionary
 {
     /// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted. Structure is documented below.</summary>
@@ -698,6 +756,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetR
     public IList<V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRulesExclusionRuleDictionaryWordList>? WordList { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordHotwordRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -709,6 +768,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetR
     public string? Pattern { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordProximity
 {
     /// <summary>Number of characters after the finding to consider. Either this or window_before must be specified</summary>
@@ -720,6 +780,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetR
     public double? WindowBefore { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRulesExclusionRuleExcludeByHotword
 {
     /// <summary>Regular expression pattern defining what qualifies as a hotword. Structure is documented below.</summary>
@@ -731,6 +792,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetR
     public IList<V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordProximity>? Proximity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -738,6 +800,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetR
     public string? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes
 {
     /// <summary>Resource name of the requested StoredInfoType, for example organizations/433245324/storedInfoTypes/432452342 or projects/project-id/storedInfoTypes/432452342.</summary>
@@ -753,6 +816,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetR
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes
 {
     /// <summary>List of infoTypes this rule set is applied to. Structure is documented below.</summary>
@@ -760,6 +824,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetR
     public IList<V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes>? InfoTypes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRulesExclusionRuleRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -771,6 +836,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetR
     public string? Pattern { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRulesExclusionRule
 {
     /// <summary>Dictionary which defines the rule. Structure is documented below.</summary>
@@ -794,6 +860,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetR
     public IList<V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRulesExclusionRuleRegex>? Regex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRulesHotwordRuleHotwordRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -805,6 +872,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetR
     public string? Pattern { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment
 {
     /// <summary>Set the likelihood of a finding to a fixed value. Either this or relative_likelihood can be set. Possible values are: VERY_UNLIKELY, UNLIKELY, POSSIBLE, LIKELY, VERY_LIKELY.</summary>
@@ -816,6 +884,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetR
     public double? RelativeLikelihood { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRulesHotwordRuleProximity
 {
     /// <summary>Number of characters after the finding to consider. Either this or window_before must be specified</summary>
@@ -827,6 +896,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetR
     public double? WindowBefore { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRulesHotwordRule
 {
     /// <summary>Regular expression pattern defining what qualifies as a hotword. Structure is documented below.</summary>
@@ -842,6 +912,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetR
     public IList<V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRulesHotwordRuleProximity>? Proximity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRules
 {
     /// <summary>The rule that specifies conditions when findings of infoTypes specified in InspectionRuleSet are removed from results. Structure is documented below.</summary>
@@ -853,6 +924,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetR
     public IList<V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRulesHotwordRule>? HotwordRule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSet
 {
     /// <summary>List of infoTypes this rule set is applied to. Structure is documented below.</summary>
@@ -864,6 +936,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSet
     public IList<V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSetRules>? Rules { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateSpecInitProviderInspectConfig
 {
     /// <summary>List of options defining data content to scan. If empty, text, images, and other content will be included. Each value may be one of: CONTENT_TEXT, CONTENT_IMAGE.</summary>
@@ -899,6 +972,7 @@ public partial class V1beta1InspectTemplateSpecInitProviderInspectConfig
     public IList<V1beta1InspectTemplateSpecInitProviderInspectConfigRuleSet>? RuleSet { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1InspectTemplateSpecInitProvider
 {
     /// <summary>A description of the inspect template.</summary>
@@ -964,6 +1038,7 @@ public enum V1beta1InspectTemplateSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InspectTemplateSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -977,6 +1052,7 @@ public partial class V1beta1InspectTemplateSpecProviderConfigRefPolicy
     public V1beta1InspectTemplateSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1InspectTemplateSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1008,6 +1084,7 @@ public enum V1beta1InspectTemplateSpecPublishConnectionDetailsToConfigRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InspectTemplateSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1021,6 +1098,7 @@ public partial class V1beta1InspectTemplateSpecPublishConnectionDetailsToConfigR
     public V1beta1InspectTemplateSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1InspectTemplateSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1032,6 +1110,7 @@ public partial class V1beta1InspectTemplateSpecPublishConnectionDetailsToConfigR
     public V1beta1InspectTemplateSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1InspectTemplateSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1047,6 +1126,7 @@ public partial class V1beta1InspectTemplateSpecPublishConnectionDetailsToMetadat
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1InspectTemplateSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1062,6 +1142,7 @@ public partial class V1beta1InspectTemplateSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1InspectTemplateSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1073,6 +1154,7 @@ public partial class V1beta1InspectTemplateSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>InspectTemplateSpec defines the desired state of InspectTemplate</summary>
 public partial class V1beta1InspectTemplateSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1105,6 +1187,7 @@ public partial class V1beta1InspectTemplateSpec
     public V1beta1InspectTemplateSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigCustomInfoTypesDictionaryCloudStoragePath
 {
     /// <summary>A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt</summary>
@@ -1112,6 +1195,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigCustomIn
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigCustomInfoTypesDictionaryWordList
 {
     /// <summary>Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits.</summary>
@@ -1119,6 +1203,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigCustomIn
     public IList<string>? Words { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigCustomInfoTypesDictionary
 {
     /// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted. Structure is documented below.</summary>
@@ -1130,6 +1215,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigCustomIn
     public IList<V1beta1InspectTemplateStatusAtProviderInspectConfigCustomInfoTypesDictionaryWordList>? WordList { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigCustomInfoTypesInfoTypeSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -1137,6 +1223,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigCustomIn
     public string? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigCustomInfoTypesInfoType
 {
     /// <summary>Resource name of the requested StoredInfoType, for example organizations/433245324/storedInfoTypes/432452342 or projects/project-id/storedInfoTypes/432452342.</summary>
@@ -1152,6 +1239,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigCustomIn
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigCustomInfoTypesRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -1163,6 +1251,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigCustomIn
     public string? Pattern { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigCustomInfoTypesSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -1170,6 +1259,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigCustomIn
     public string? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigCustomInfoTypesStoredType
 {
     /// <summary>Resource name of the requested StoredInfoType, for example organizations/433245324/storedInfoTypes/432452342 or projects/project-id/storedInfoTypes/432452342.</summary>
@@ -1177,10 +1267,12 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigCustomIn
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigCustomInfoTypesSurrogateType
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigCustomInfoTypes
 {
     /// <summary>Dictionary which defines the rule. Structure is documented below.</summary>
@@ -1216,6 +1308,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigCustomIn
     public IList<V1beta1InspectTemplateStatusAtProviderInspectConfigCustomInfoTypesSurrogateType>? SurrogateType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigInfoTypesSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -1223,6 +1316,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigInfoType
     public string? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigInfoTypes
 {
     /// <summary>Resource name of the requested StoredInfoType, for example organizations/433245324/storedInfoTypes/432452342 or projects/project-id/storedInfoTypes/432452342.</summary>
@@ -1238,6 +1332,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigInfoType
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -1245,6 +1340,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigLimitsMa
     public string? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigLimitsMaxFindingsPerInfoTypeInfoType
 {
     /// <summary>Resource name of the requested StoredInfoType, for example organizations/433245324/storedInfoTypes/432452342 or projects/project-id/storedInfoTypes/432452342.</summary>
@@ -1260,6 +1356,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigLimitsMa
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigLimitsMaxFindingsPerInfoType
 {
     /// <summary>Type of information the findings limit applies to. Only one limit per infoType should be provided. If InfoTypeLimit does not have an infoType, the DLP API applies the limit against all infoTypes that are found but not specified in another InfoTypeLimit. Structure is documented below.</summary>
@@ -1271,6 +1368,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigLimitsMa
     public double? MaxFindings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigLimits
 {
     /// <summary>Configuration of findings limit given for specified infoTypes. Structure is documented below.</summary>
@@ -1286,6 +1384,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigLimits
     public double? MaxFindingsPerRequest { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetInfoTypesSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -1293,6 +1392,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetI
     public string? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetInfoTypes
 {
     /// <summary>Resource name of the requested StoredInfoType, for example organizations/433245324/storedInfoTypes/432452342 or projects/project-id/storedInfoTypes/432452342.</summary>
@@ -1308,6 +1408,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetI
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath
 {
     /// <summary>A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt</summary>
@@ -1315,6 +1416,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetR
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRulesExclusionRuleDictionaryWordList
 {
     /// <summary>Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits.</summary>
@@ -1322,6 +1424,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetR
     public IList<string>? Words { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRulesExclusionRuleDictionary
 {
     /// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted. Structure is documented below.</summary>
@@ -1333,6 +1436,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetR
     public IList<V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRulesExclusionRuleDictionaryWordList>? WordList { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordHotwordRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -1344,6 +1448,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetR
     public string? Pattern { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordProximity
 {
     /// <summary>Number of characters after the finding to consider. Either this or window_before must be specified</summary>
@@ -1355,6 +1460,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetR
     public double? WindowBefore { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRulesExclusionRuleExcludeByHotword
 {
     /// <summary>Regular expression pattern defining what qualifies as a hotword. Structure is documented below.</summary>
@@ -1366,6 +1472,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetR
     public IList<V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordProximity>? Proximity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -1373,6 +1480,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetR
     public string? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes
 {
     /// <summary>Resource name of the requested StoredInfoType, for example organizations/433245324/storedInfoTypes/432452342 or projects/project-id/storedInfoTypes/432452342.</summary>
@@ -1388,6 +1496,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetR
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes
 {
     /// <summary>List of infoTypes this rule set is applied to. Structure is documented below.</summary>
@@ -1395,6 +1504,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetR
     public IList<V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes>? InfoTypes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRulesExclusionRuleRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -1406,6 +1516,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetR
     public string? Pattern { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRulesExclusionRule
 {
     /// <summary>Dictionary which defines the rule. Structure is documented below.</summary>
@@ -1429,6 +1540,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetR
     public IList<V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRulesExclusionRuleRegex>? Regex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRulesHotwordRuleHotwordRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -1440,6 +1552,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetR
     public string? Pattern { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment
 {
     /// <summary>Set the likelihood of a finding to a fixed value. Either this or relative_likelihood can be set. Possible values are: VERY_UNLIKELY, UNLIKELY, POSSIBLE, LIKELY, VERY_LIKELY.</summary>
@@ -1451,6 +1564,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetR
     public double? RelativeLikelihood { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRulesHotwordRuleProximity
 {
     /// <summary>Number of characters after the finding to consider. Either this or window_before must be specified</summary>
@@ -1462,6 +1576,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetR
     public double? WindowBefore { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRulesHotwordRule
 {
     /// <summary>Regular expression pattern defining what qualifies as a hotword. Structure is documented below.</summary>
@@ -1477,6 +1592,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetR
     public IList<V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRulesHotwordRuleProximity>? Proximity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRules
 {
     /// <summary>The rule that specifies conditions when findings of infoTypes specified in InspectionRuleSet are removed from results. Structure is documented below.</summary>
@@ -1488,6 +1604,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetR
     public IList<V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRulesHotwordRule>? HotwordRule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSet
 {
     /// <summary>List of infoTypes this rule set is applied to. Structure is documented below.</summary>
@@ -1499,6 +1616,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSet
     public IList<V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSetRules>? Rules { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateStatusAtProviderInspectConfig
 {
     /// <summary>List of options defining data content to scan. If empty, text, images, and other content will be included. Each value may be one of: CONTENT_TEXT, CONTENT_IMAGE.</summary>
@@ -1534,6 +1652,7 @@ public partial class V1beta1InspectTemplateStatusAtProviderInspectConfig
     public IList<V1beta1InspectTemplateStatusAtProviderInspectConfigRuleSet>? RuleSet { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InspectTemplateStatusAtProvider
 {
     /// <summary>A description of the inspect template.</summary>
@@ -1565,6 +1684,7 @@ public partial class V1beta1InspectTemplateStatusAtProvider
     public string? TemplateId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1InspectTemplateStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1592,6 +1712,7 @@ public partial class V1beta1InspectTemplateStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>InspectTemplateStatus defines the observed state of InspectTemplate.</summary>
 public partial class V1beta1InspectTemplateStatus
 {
     /// <summary></summary>
@@ -1608,6 +1729,7 @@ public partial class V1beta1InspectTemplateStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>InspectTemplate is the Schema for the InspectTemplates API. An inspect job template.</summary>
 public partial class V1beta1InspectTemplate : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1InspectTemplateSpec>, IStatus<V1beta1InspectTemplateStatus>
 {
     public const string KubeApiVersion = "v1beta1";

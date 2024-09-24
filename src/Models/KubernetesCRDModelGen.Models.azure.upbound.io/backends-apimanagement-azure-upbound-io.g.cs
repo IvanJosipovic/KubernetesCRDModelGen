@@ -38,6 +38,7 @@ public enum V1beta1BackendSpecForProviderApiManagementNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackendSpecForProviderApiManagementNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1BackendSpecForProviderApiManagementNameRefPolicy
     public V1beta1BackendSpecForProviderApiManagementNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Management in apimanagement to populate apiManagementName.</summary>
 public partial class V1beta1BackendSpecForProviderApiManagementNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1BackendSpecForProviderApiManagementNameSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackendSpecForProviderApiManagementNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1BackendSpecForProviderApiManagementNameSelectorPolic
     public V1beta1BackendSpecForProviderApiManagementNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Management in apimanagement to populate apiManagementName.</summary>
 public partial class V1beta1BackendSpecForProviderApiManagementNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1BackendSpecForProviderApiManagementNameSelector
     public V1beta1BackendSpecForProviderApiManagementNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendSpecForProviderCredentialsAuthorization
 {
     /// <summary>The authentication Parameter value.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1BackendSpecForProviderCredentialsAuthorization
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendSpecForProviderCredentials
 {
     /// <summary>An authorization block as defined below.</summary>
@@ -140,6 +146,7 @@ public partial class V1beta1BackendSpecForProviderCredentials
     public IDictionary<string, string>? Query { get; set; }
 }
 
+/// <summary>The password to connect to the proxy server.</summary>
 public partial class V1beta1BackendSpecForProviderProxyPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -155,6 +162,7 @@ public partial class V1beta1BackendSpecForProviderProxyPasswordSecretRef
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendSpecForProviderProxy
 {
     /// <summary>The password to connect to the proxy server.</summary>
@@ -190,6 +198,7 @@ public enum V1beta1BackendSpecForProviderResourceGroupNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackendSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -203,6 +212,7 @@ public partial class V1beta1BackendSpecForProviderResourceGroupNameRefPolicy
     public V1beta1BackendSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1BackendSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -234,6 +244,7 @@ public enum V1beta1BackendSpecForProviderResourceGroupNameSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackendSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -247,6 +258,7 @@ public partial class V1beta1BackendSpecForProviderResourceGroupNameSelectorPolic
     public V1beta1BackendSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1BackendSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -262,6 +274,7 @@ public partial class V1beta1BackendSpecForProviderResourceGroupNameSelector
     public V1beta1BackendSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendSpecForProviderServiceFabricClusterServerX509Name
 {
     /// <summary>The thumbprint for the issuer of the certificate.</summary>
@@ -273,6 +286,7 @@ public partial class V1beta1BackendSpecForProviderServiceFabricClusterServerX509
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendSpecForProviderServiceFabricCluster
 {
     /// <summary>The client certificate resource id for the management endpoint.</summary>
@@ -300,6 +314,7 @@ public partial class V1beta1BackendSpecForProviderServiceFabricCluster
     public IList<V1beta1BackendSpecForProviderServiceFabricClusterServerX509Name>? ServerX509Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendSpecForProviderTls
 {
     /// <summary>Flag indicating whether SSL certificate chain validation should be done when using self-signed certificates for the backend host.</summary>
@@ -311,6 +326,7 @@ public partial class V1beta1BackendSpecForProviderTls
     public bool? ValidateCertificateName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendSpecForProvider
 {
     /// <summary>The Name of the API Management Service where this backend should be created. Changing this forces a new resource to be created.</summary>
@@ -374,6 +390,7 @@ public partial class V1beta1BackendSpecForProvider
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendSpecInitProviderCredentialsAuthorization
 {
     /// <summary>The authentication Parameter value.</summary>
@@ -385,6 +402,7 @@ public partial class V1beta1BackendSpecInitProviderCredentialsAuthorization
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendSpecInitProviderCredentials
 {
     /// <summary>An authorization block as defined below.</summary>
@@ -404,6 +422,7 @@ public partial class V1beta1BackendSpecInitProviderCredentials
     public IDictionary<string, string>? Query { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendSpecInitProviderProxy
 {
     /// <summary>The URL of the proxy server.</summary>
@@ -415,6 +434,7 @@ public partial class V1beta1BackendSpecInitProviderProxy
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendSpecInitProviderServiceFabricClusterServerX509Name
 {
     /// <summary>The thumbprint for the issuer of the certificate.</summary>
@@ -426,6 +446,7 @@ public partial class V1beta1BackendSpecInitProviderServiceFabricClusterServerX50
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendSpecInitProviderServiceFabricCluster
 {
     /// <summary>The client certificate resource id for the management endpoint.</summary>
@@ -453,6 +474,7 @@ public partial class V1beta1BackendSpecInitProviderServiceFabricCluster
     public IList<V1beta1BackendSpecInitProviderServiceFabricClusterServerX509Name>? ServerX509Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendSpecInitProviderTls
 {
     /// <summary>Flag indicating whether SSL certificate chain validation should be done when using self-signed certificates for the backend host.</summary>
@@ -464,6 +486,7 @@ public partial class V1beta1BackendSpecInitProviderTls
     public bool? ValidateCertificateName { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1BackendSpecInitProvider
 {
     /// <summary>A credentials block as documented below.</summary>
@@ -545,6 +568,7 @@ public enum V1beta1BackendSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackendSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -558,6 +582,7 @@ public partial class V1beta1BackendSpecProviderConfigRefPolicy
     public V1beta1BackendSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1BackendSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -589,6 +614,7 @@ public enum V1beta1BackendSpecPublishConnectionDetailsToConfigRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackendSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -602,6 +628,7 @@ public partial class V1beta1BackendSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1BackendSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1BackendSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -613,6 +640,7 @@ public partial class V1beta1BackendSpecPublishConnectionDetailsToConfigRef
     public V1beta1BackendSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1BackendSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -628,6 +656,7 @@ public partial class V1beta1BackendSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1BackendSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -643,6 +672,7 @@ public partial class V1beta1BackendSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1BackendSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -654,6 +684,7 @@ public partial class V1beta1BackendSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>BackendSpec defines the desired state of Backend</summary>
 public partial class V1beta1BackendSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -686,6 +717,7 @@ public partial class V1beta1BackendSpec
     public V1beta1BackendSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendStatusAtProviderCredentialsAuthorization
 {
     /// <summary>The authentication Parameter value.</summary>
@@ -697,6 +729,7 @@ public partial class V1beta1BackendStatusAtProviderCredentialsAuthorization
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendStatusAtProviderCredentials
 {
     /// <summary>An authorization block as defined below.</summary>
@@ -716,6 +749,7 @@ public partial class V1beta1BackendStatusAtProviderCredentials
     public IDictionary<string, string>? Query { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendStatusAtProviderProxy
 {
     /// <summary>The URL of the proxy server.</summary>
@@ -727,6 +761,7 @@ public partial class V1beta1BackendStatusAtProviderProxy
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendStatusAtProviderServiceFabricClusterServerX509Name
 {
     /// <summary>The thumbprint for the issuer of the certificate.</summary>
@@ -738,6 +773,7 @@ public partial class V1beta1BackendStatusAtProviderServiceFabricClusterServerX50
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendStatusAtProviderServiceFabricCluster
 {
     /// <summary>The client certificate resource id for the management endpoint.</summary>
@@ -765,6 +801,7 @@ public partial class V1beta1BackendStatusAtProviderServiceFabricCluster
     public IList<V1beta1BackendStatusAtProviderServiceFabricClusterServerX509Name>? ServerX509Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendStatusAtProviderTls
 {
     /// <summary>Flag indicating whether SSL certificate chain validation should be done when using self-signed certificates for the backend host.</summary>
@@ -776,6 +813,7 @@ public partial class V1beta1BackendStatusAtProviderTls
     public bool? ValidateCertificateName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendStatusAtProvider
 {
     /// <summary>The Name of the API Management Service where this backend should be created. Changing this forces a new resource to be created.</summary>
@@ -827,6 +865,7 @@ public partial class V1beta1BackendStatusAtProvider
     public string? Url { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1BackendStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -854,6 +893,7 @@ public partial class V1beta1BackendStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>BackendStatus defines the observed state of Backend.</summary>
 public partial class V1beta1BackendStatus
 {
     /// <summary></summary>
@@ -870,6 +910,7 @@ public partial class V1beta1BackendStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Backend is the Schema for the Backends API. Manages a backend within an API Management Service.</summary>
 public partial class V1beta1Backend : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BackendSpec>, IStatus<V1beta1BackendStatus>
 {
     public const string KubeApiVersion = "v1beta1";

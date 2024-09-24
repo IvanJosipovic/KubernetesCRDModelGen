@@ -38,6 +38,7 @@ public enum V1beta1MSSQLFailoverGroupSpecForProviderDatabasesRefsPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MSSQLFailoverGroupSpecForProviderDatabasesRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1MSSQLFailoverGroupSpecForProviderDatabasesRefsPolicy
     public V1beta1MSSQLFailoverGroupSpecForProviderDatabasesRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1MSSQLFailoverGroupSpecForProviderDatabasesRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1MSSQLFailoverGroupSpecForProviderDatabasesSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MSSQLFailoverGroupSpecForProviderDatabasesSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1MSSQLFailoverGroupSpecForProviderDatabasesSelectorPo
     public V1beta1MSSQLFailoverGroupSpecForProviderDatabasesSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of MSSQLDatabase in sql to populate databases.</summary>
 public partial class V1beta1MSSQLFailoverGroupSpecForProviderDatabasesSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1MSSQLFailoverGroupSpecForProviderPartnerServerIdRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MSSQLFailoverGroupSpecForProviderPartnerServerIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1MSSQLFailoverGroupSpecForProviderPartnerServerIdRefP
     public V1beta1MSSQLFailoverGroupSpecForProviderPartnerServerIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a MSSQLServer in sql to populate id.</summary>
 public partial class V1beta1MSSQLFailoverGroupSpecForProviderPartnerServerIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1MSSQLFailoverGroupSpecForProviderPartnerServerIdSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MSSQLFailoverGroupSpecForProviderPartnerServerIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1MSSQLFailoverGroupSpecForProviderPartnerServerIdSele
     public V1beta1MSSQLFailoverGroupSpecForProviderPartnerServerIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a MSSQLServer in sql to populate id.</summary>
 public partial class V1beta1MSSQLFailoverGroupSpecForProviderPartnerServerIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1MSSQLFailoverGroupSpecForProviderPartnerServerIdSele
     public V1beta1MSSQLFailoverGroupSpecForProviderPartnerServerIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MSSQLFailoverGroupSpecForProviderPartnerServer
 {
     /// <summary>The ID of a partner SQL server to include in the failover group.</summary>
@@ -217,6 +226,7 @@ public partial class V1beta1MSSQLFailoverGroupSpecForProviderPartnerServer
     public V1beta1MSSQLFailoverGroupSpecForProviderPartnerServerIdSelector? IdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MSSQLFailoverGroupSpecForProviderReadWriteEndpointFailoverPolicy
 {
     /// <summary>The grace period in minutes, before failover with data loss is attempted for the read-write endpoint. Required when mode is Automatic.</summary>
@@ -248,6 +258,7 @@ public enum V1beta1MSSQLFailoverGroupSpecForProviderServerIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MSSQLFailoverGroupSpecForProviderServerIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -261,6 +272,7 @@ public partial class V1beta1MSSQLFailoverGroupSpecForProviderServerIdRefPolicy
     public V1beta1MSSQLFailoverGroupSpecForProviderServerIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a MSSQLServer in sql to populate serverId.</summary>
 public partial class V1beta1MSSQLFailoverGroupSpecForProviderServerIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -292,6 +304,7 @@ public enum V1beta1MSSQLFailoverGroupSpecForProviderServerIdSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MSSQLFailoverGroupSpecForProviderServerIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -305,6 +318,7 @@ public partial class V1beta1MSSQLFailoverGroupSpecForProviderServerIdSelectorPol
     public V1beta1MSSQLFailoverGroupSpecForProviderServerIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a MSSQLServer in sql to populate serverId.</summary>
 public partial class V1beta1MSSQLFailoverGroupSpecForProviderServerIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -320,6 +334,7 @@ public partial class V1beta1MSSQLFailoverGroupSpecForProviderServerIdSelector
     public V1beta1MSSQLFailoverGroupSpecForProviderServerIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MSSQLFailoverGroupSpecForProvider
 {
     /// <summary>A set of database names to include in the failover group.</summary>
@@ -383,6 +398,7 @@ public enum V1beta1MSSQLFailoverGroupSpecInitProviderDatabasesRefsPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MSSQLFailoverGroupSpecInitProviderDatabasesRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -396,6 +412,7 @@ public partial class V1beta1MSSQLFailoverGroupSpecInitProviderDatabasesRefsPolic
     public V1beta1MSSQLFailoverGroupSpecInitProviderDatabasesRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1MSSQLFailoverGroupSpecInitProviderDatabasesRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -427,6 +444,7 @@ public enum V1beta1MSSQLFailoverGroupSpecInitProviderDatabasesSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MSSQLFailoverGroupSpecInitProviderDatabasesSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -440,6 +458,7 @@ public partial class V1beta1MSSQLFailoverGroupSpecInitProviderDatabasesSelectorP
     public V1beta1MSSQLFailoverGroupSpecInitProviderDatabasesSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of MSSQLDatabase in sql to populate databases.</summary>
 public partial class V1beta1MSSQLFailoverGroupSpecInitProviderDatabasesSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -475,6 +494,7 @@ public enum V1beta1MSSQLFailoverGroupSpecInitProviderPartnerServerIdRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MSSQLFailoverGroupSpecInitProviderPartnerServerIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -488,6 +508,7 @@ public partial class V1beta1MSSQLFailoverGroupSpecInitProviderPartnerServerIdRef
     public V1beta1MSSQLFailoverGroupSpecInitProviderPartnerServerIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a MSSQLServer in sql to populate id.</summary>
 public partial class V1beta1MSSQLFailoverGroupSpecInitProviderPartnerServerIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -519,6 +540,7 @@ public enum V1beta1MSSQLFailoverGroupSpecInitProviderPartnerServerIdSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MSSQLFailoverGroupSpecInitProviderPartnerServerIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -532,6 +554,7 @@ public partial class V1beta1MSSQLFailoverGroupSpecInitProviderPartnerServerIdSel
     public V1beta1MSSQLFailoverGroupSpecInitProviderPartnerServerIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a MSSQLServer in sql to populate id.</summary>
 public partial class V1beta1MSSQLFailoverGroupSpecInitProviderPartnerServerIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -547,6 +570,7 @@ public partial class V1beta1MSSQLFailoverGroupSpecInitProviderPartnerServerIdSel
     public V1beta1MSSQLFailoverGroupSpecInitProviderPartnerServerIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MSSQLFailoverGroupSpecInitProviderPartnerServer
 {
     /// <summary>The ID of a partner SQL server to include in the failover group.</summary>
@@ -562,6 +586,7 @@ public partial class V1beta1MSSQLFailoverGroupSpecInitProviderPartnerServer
     public V1beta1MSSQLFailoverGroupSpecInitProviderPartnerServerIdSelector? IdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MSSQLFailoverGroupSpecInitProviderReadWriteEndpointFailoverPolicy
 {
     /// <summary>The grace period in minutes, before failover with data loss is attempted for the read-write endpoint. Required when mode is Automatic.</summary>
@@ -573,6 +598,7 @@ public partial class V1beta1MSSQLFailoverGroupSpecInitProviderReadWriteEndpointF
     public string? Mode { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1MSSQLFailoverGroupSpecInitProvider
 {
     /// <summary>A set of database names to include in the failover group.</summary>
@@ -646,6 +672,7 @@ public enum V1beta1MSSQLFailoverGroupSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MSSQLFailoverGroupSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -659,6 +686,7 @@ public partial class V1beta1MSSQLFailoverGroupSpecProviderConfigRefPolicy
     public V1beta1MSSQLFailoverGroupSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1MSSQLFailoverGroupSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -690,6 +718,7 @@ public enum V1beta1MSSQLFailoverGroupSpecPublishConnectionDetailsToConfigRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MSSQLFailoverGroupSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -703,6 +732,7 @@ public partial class V1beta1MSSQLFailoverGroupSpecPublishConnectionDetailsToConf
     public V1beta1MSSQLFailoverGroupSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1MSSQLFailoverGroupSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -714,6 +744,7 @@ public partial class V1beta1MSSQLFailoverGroupSpecPublishConnectionDetailsToConf
     public V1beta1MSSQLFailoverGroupSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1MSSQLFailoverGroupSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -729,6 +760,7 @@ public partial class V1beta1MSSQLFailoverGroupSpecPublishConnectionDetailsToMeta
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1MSSQLFailoverGroupSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -744,6 +776,7 @@ public partial class V1beta1MSSQLFailoverGroupSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1MSSQLFailoverGroupSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -755,6 +788,7 @@ public partial class V1beta1MSSQLFailoverGroupSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>MSSQLFailoverGroupSpec defines the desired state of MSSQLFailoverGroup</summary>
 public partial class V1beta1MSSQLFailoverGroupSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -787,6 +821,7 @@ public partial class V1beta1MSSQLFailoverGroupSpec
     public V1beta1MSSQLFailoverGroupSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MSSQLFailoverGroupStatusAtProviderPartnerServer
 {
     /// <summary>The ID of a partner SQL server to include in the failover group.</summary>
@@ -802,6 +837,7 @@ public partial class V1beta1MSSQLFailoverGroupStatusAtProviderPartnerServer
     public string? Role { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MSSQLFailoverGroupStatusAtProviderReadWriteEndpointFailoverPolicy
 {
     /// <summary>The grace period in minutes, before failover with data loss is attempted for the read-write endpoint. Required when mode is Automatic.</summary>
@@ -813,6 +849,7 @@ public partial class V1beta1MSSQLFailoverGroupStatusAtProviderReadWriteEndpointF
     public string? Mode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MSSQLFailoverGroupStatusAtProvider
 {
     /// <summary>A set of database names to include in the failover group.</summary>
@@ -844,6 +881,7 @@ public partial class V1beta1MSSQLFailoverGroupStatusAtProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1MSSQLFailoverGroupStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -871,6 +909,7 @@ public partial class V1beta1MSSQLFailoverGroupStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>MSSQLFailoverGroupStatus defines the observed state of MSSQLFailoverGroup.</summary>
 public partial class V1beta1MSSQLFailoverGroupStatus
 {
     /// <summary></summary>
@@ -887,6 +926,7 @@ public partial class V1beta1MSSQLFailoverGroupStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>MSSQLFailoverGroup is the Schema for the MSSQLFailoverGroups API. Manages a Microsoft Azure SQL Failover Group.</summary>
 public partial class V1beta1MSSQLFailoverGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MSSQLFailoverGroupSpec>, IStatus<V1beta1MSSQLFailoverGroupStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.argoproj.io;
+/// <summary></summary>
 public partial class V1alpha1ApplicationOperationInfo
 {
     /// <summary></summary>
@@ -19,6 +20,7 @@ public partial class V1alpha1ApplicationOperationInfo
     public string Value { get; set; }
 }
 
+/// <summary>InitiatedBy contains information about who initiated the operations</summary>
 public partial class V1alpha1ApplicationOperationInitiatedBy
 {
     /// <summary>Automated is set to true if operation was initiated automatically by the application controller.</summary>
@@ -30,6 +32,7 @@ public partial class V1alpha1ApplicationOperationInitiatedBy
     public string? Username { get; set; }
 }
 
+/// <summary>Backoff controls how to backoff on subsequent retries of failed syncs</summary>
 public partial class V1alpha1ApplicationOperationRetryBackoff
 {
     /// <summary>Duration is the amount to back off. Default unit is seconds, but could also be a duration (e.g. "2m", "1h")</summary>
@@ -45,6 +48,7 @@ public partial class V1alpha1ApplicationOperationRetryBackoff
     public string? MaxDuration { get; set; }
 }
 
+/// <summary>Retry controls the strategy to apply if a sync fails</summary>
 public partial class V1alpha1ApplicationOperationRetry
 {
     /// <summary>Backoff controls how to backoff on subsequent retries of failed syncs</summary>
@@ -56,6 +60,7 @@ public partial class V1alpha1ApplicationOperationRetry
     public long? Limit { get; set; }
 }
 
+/// <summary>SyncOperationResource contains resources to sync.</summary>
 public partial class V1alpha1ApplicationOperationSyncResources
 {
     /// <summary></summary>
@@ -75,6 +80,7 @@ public partial class V1alpha1ApplicationOperationSyncResources
     public string? Namespace { get; set; }
 }
 
+/// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
 public partial class V1alpha1ApplicationOperationSyncSourceDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -90,6 +96,7 @@ public partial class V1alpha1ApplicationOperationSyncSourceDirectoryJsonnetExtVa
     public string Value { get; set; }
 }
 
+/// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
 public partial class V1alpha1ApplicationOperationSyncSourceDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -105,6 +112,7 @@ public partial class V1alpha1ApplicationOperationSyncSourceDirectoryJsonnetTlas
     public string Value { get; set; }
 }
 
+/// <summary>Jsonnet holds options specific to Jsonnet</summary>
 public partial class V1alpha1ApplicationOperationSyncSourceDirectoryJsonnet
 {
     /// <summary>ExtVars is a list of Jsonnet External Variables</summary>
@@ -120,6 +128,7 @@ public partial class V1alpha1ApplicationOperationSyncSourceDirectoryJsonnet
     public IList<V1alpha1ApplicationOperationSyncSourceDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary>Directory holds path/directory specific options</summary>
 public partial class V1alpha1ApplicationOperationSyncSourceDirectory
 {
     /// <summary>Exclude contains a glob pattern to match paths against that should be explicitly excluded from being used during manifest generation</summary>
@@ -139,6 +148,7 @@ public partial class V1alpha1ApplicationOperationSyncSourceDirectory
     public bool? Recurse { get; set; }
 }
 
+/// <summary>HelmFileParameter is a file parameter that's passed to helm template during manifest generation</summary>
 public partial class V1alpha1ApplicationOperationSyncSourceHelmFileParameters
 {
     /// <summary>Name is the name of the Helm parameter</summary>
@@ -150,6 +160,7 @@ public partial class V1alpha1ApplicationOperationSyncSourceHelmFileParameters
     public string? Path { get; set; }
 }
 
+/// <summary>HelmParameter is a parameter that's passed to helm template during manifest generation</summary>
 public partial class V1alpha1ApplicationOperationSyncSourceHelmParameters
 {
     /// <summary>ForceString determines whether to tell Helm to interpret booleans and numbers as strings</summary>
@@ -165,6 +176,7 @@ public partial class V1alpha1ApplicationOperationSyncSourceHelmParameters
     public string? Value { get; set; }
 }
 
+/// <summary>Helm holds helm specific options</summary>
 public partial class V1alpha1ApplicationOperationSyncSourceHelm
 {
     /// <summary>FileParameters are file parameters to the helm template</summary>
@@ -208,6 +220,7 @@ public partial class V1alpha1ApplicationOperationSyncSourceHelm
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationOperationSyncSourceKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -239,6 +252,7 @@ public partial class V1alpha1ApplicationOperationSyncSourceKustomizePatchesTarge
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationOperationSyncSourceKustomizePatches
 {
     /// <summary></summary>
@@ -258,6 +272,7 @@ public partial class V1alpha1ApplicationOperationSyncSourceKustomizePatches
     public V1alpha1ApplicationOperationSyncSourceKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationOperationSyncSourceKustomizeReplicas
 {
     /// <summary>Number of replicas</summary>
@@ -269,6 +284,7 @@ public partial class V1alpha1ApplicationOperationSyncSourceKustomizeReplicas
     public string Name { get; set; }
 }
 
+/// <summary>Kustomize holds kustomize specific options</summary>
 public partial class V1alpha1ApplicationOperationSyncSourceKustomize
 {
     /// <summary>CommonAnnotations is a list of additional annotations to add to rendered manifests</summary>
@@ -328,6 +344,7 @@ public partial class V1alpha1ApplicationOperationSyncSourceKustomize
     public string? Version { get; set; }
 }
 
+/// <summary>EnvEntry represents an entry in the application's environment</summary>
 public partial class V1alpha1ApplicationOperationSyncSourcePluginEnv
 {
     /// <summary>Name is the name of the variable, usually expressed in uppercase</summary>
@@ -339,6 +356,7 @@ public partial class V1alpha1ApplicationOperationSyncSourcePluginEnv
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationOperationSyncSourcePluginParameters
 {
     /// <summary>Array is the value of an array type parameter.</summary>
@@ -358,6 +376,7 @@ public partial class V1alpha1ApplicationOperationSyncSourcePluginParameters
     public string? String { get; set; }
 }
 
+/// <summary>Plugin holds config management plugin specific options</summary>
 public partial class V1alpha1ApplicationOperationSyncSourcePlugin
 {
     /// <summary>Env is a list of environment variable entries</summary>
@@ -373,6 +392,7 @@ public partial class V1alpha1ApplicationOperationSyncSourcePlugin
     public IList<V1alpha1ApplicationOperationSyncSourcePluginParameters>? Parameters { get; set; }
 }
 
+/// <summary>Source overrides the source definition set in the application. This is typically set in a Rollback operation and is nil during a Sync operation</summary>
 public partial class V1alpha1ApplicationOperationSyncSource
 {
     /// <summary>Chart is a Helm chart name, and must be specified for applications sourced from a Helm repo.</summary>
@@ -412,6 +432,7 @@ public partial class V1alpha1ApplicationOperationSyncSource
     public string? TargetRevision { get; set; }
 }
 
+/// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
 public partial class V1alpha1ApplicationOperationSyncSourcesDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -427,6 +448,7 @@ public partial class V1alpha1ApplicationOperationSyncSourcesDirectoryJsonnetExtV
     public string Value { get; set; }
 }
 
+/// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
 public partial class V1alpha1ApplicationOperationSyncSourcesDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -442,6 +464,7 @@ public partial class V1alpha1ApplicationOperationSyncSourcesDirectoryJsonnetTlas
     public string Value { get; set; }
 }
 
+/// <summary>Jsonnet holds options specific to Jsonnet</summary>
 public partial class V1alpha1ApplicationOperationSyncSourcesDirectoryJsonnet
 {
     /// <summary>ExtVars is a list of Jsonnet External Variables</summary>
@@ -457,6 +480,7 @@ public partial class V1alpha1ApplicationOperationSyncSourcesDirectoryJsonnet
     public IList<V1alpha1ApplicationOperationSyncSourcesDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary>Directory holds path/directory specific options</summary>
 public partial class V1alpha1ApplicationOperationSyncSourcesDirectory
 {
     /// <summary>Exclude contains a glob pattern to match paths against that should be explicitly excluded from being used during manifest generation</summary>
@@ -476,6 +500,7 @@ public partial class V1alpha1ApplicationOperationSyncSourcesDirectory
     public bool? Recurse { get; set; }
 }
 
+/// <summary>HelmFileParameter is a file parameter that's passed to helm template during manifest generation</summary>
 public partial class V1alpha1ApplicationOperationSyncSourcesHelmFileParameters
 {
     /// <summary>Name is the name of the Helm parameter</summary>
@@ -487,6 +512,7 @@ public partial class V1alpha1ApplicationOperationSyncSourcesHelmFileParameters
     public string? Path { get; set; }
 }
 
+/// <summary>HelmParameter is a parameter that's passed to helm template during manifest generation</summary>
 public partial class V1alpha1ApplicationOperationSyncSourcesHelmParameters
 {
     /// <summary>ForceString determines whether to tell Helm to interpret booleans and numbers as strings</summary>
@@ -502,6 +528,7 @@ public partial class V1alpha1ApplicationOperationSyncSourcesHelmParameters
     public string? Value { get; set; }
 }
 
+/// <summary>Helm holds helm specific options</summary>
 public partial class V1alpha1ApplicationOperationSyncSourcesHelm
 {
     /// <summary>FileParameters are file parameters to the helm template</summary>
@@ -545,6 +572,7 @@ public partial class V1alpha1ApplicationOperationSyncSourcesHelm
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationOperationSyncSourcesKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -576,6 +604,7 @@ public partial class V1alpha1ApplicationOperationSyncSourcesKustomizePatchesTarg
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationOperationSyncSourcesKustomizePatches
 {
     /// <summary></summary>
@@ -595,6 +624,7 @@ public partial class V1alpha1ApplicationOperationSyncSourcesKustomizePatches
     public V1alpha1ApplicationOperationSyncSourcesKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationOperationSyncSourcesKustomizeReplicas
 {
     /// <summary>Number of replicas</summary>
@@ -606,6 +636,7 @@ public partial class V1alpha1ApplicationOperationSyncSourcesKustomizeReplicas
     public string Name { get; set; }
 }
 
+/// <summary>Kustomize holds kustomize specific options</summary>
 public partial class V1alpha1ApplicationOperationSyncSourcesKustomize
 {
     /// <summary>CommonAnnotations is a list of additional annotations to add to rendered manifests</summary>
@@ -665,6 +696,7 @@ public partial class V1alpha1ApplicationOperationSyncSourcesKustomize
     public string? Version { get; set; }
 }
 
+/// <summary>EnvEntry represents an entry in the application's environment</summary>
 public partial class V1alpha1ApplicationOperationSyncSourcesPluginEnv
 {
     /// <summary>Name is the name of the variable, usually expressed in uppercase</summary>
@@ -676,6 +708,7 @@ public partial class V1alpha1ApplicationOperationSyncSourcesPluginEnv
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationOperationSyncSourcesPluginParameters
 {
     /// <summary>Array is the value of an array type parameter.</summary>
@@ -695,6 +728,7 @@ public partial class V1alpha1ApplicationOperationSyncSourcesPluginParameters
     public string? String { get; set; }
 }
 
+/// <summary>Plugin holds config management plugin specific options</summary>
 public partial class V1alpha1ApplicationOperationSyncSourcesPlugin
 {
     /// <summary>Env is a list of environment variable entries</summary>
@@ -710,6 +744,7 @@ public partial class V1alpha1ApplicationOperationSyncSourcesPlugin
     public IList<V1alpha1ApplicationOperationSyncSourcesPluginParameters>? Parameters { get; set; }
 }
 
+/// <summary>ApplicationSource contains all required information about the source of an application</summary>
 public partial class V1alpha1ApplicationOperationSyncSources
 {
     /// <summary>Chart is a Helm chart name, and must be specified for applications sourced from a Helm repo.</summary>
@@ -749,6 +784,7 @@ public partial class V1alpha1ApplicationOperationSyncSources
     public string? TargetRevision { get; set; }
 }
 
+/// <summary>Apply will perform a `kubectl apply` to perform the sync.</summary>
 public partial class V1alpha1ApplicationOperationSyncSyncStrategyApply
 {
     /// <summary>Force indicates whether or not to supply the --force flag to `kubectl apply`. The --force flag deletes and re-create the resource, when PATCH encounters conflict and has retried for 5 times.</summary>
@@ -756,6 +792,7 @@ public partial class V1alpha1ApplicationOperationSyncSyncStrategyApply
     public bool? Force { get; set; }
 }
 
+/// <summary>Hook will submit any referenced resources to perform the sync. This is the default strategy</summary>
 public partial class V1alpha1ApplicationOperationSyncSyncStrategyHook
 {
     /// <summary>Force indicates whether or not to supply the --force flag to `kubectl apply`. The --force flag deletes and re-create the resource, when PATCH encounters conflict and has retried for 5 times.</summary>
@@ -763,6 +800,7 @@ public partial class V1alpha1ApplicationOperationSyncSyncStrategyHook
     public bool? Force { get; set; }
 }
 
+/// <summary>SyncStrategy describes how to perform the sync</summary>
 public partial class V1alpha1ApplicationOperationSyncSyncStrategy
 {
     /// <summary>Apply will perform a `kubectl apply` to perform the sync.</summary>
@@ -774,6 +812,7 @@ public partial class V1alpha1ApplicationOperationSyncSyncStrategy
     public V1alpha1ApplicationOperationSyncSyncStrategyHook? Hook { get; set; }
 }
 
+/// <summary>Sync contains parameters for the operation</summary>
 public partial class V1alpha1ApplicationOperationSync
 {
     /// <summary>DryRun specifies to perform a `kubectl apply --dry-run` without actually performing the sync</summary>
@@ -817,6 +856,7 @@ public partial class V1alpha1ApplicationOperationSync
     public V1alpha1ApplicationOperationSyncSyncStrategy? SyncStrategy { get; set; }
 }
 
+/// <summary>Operation contains information about a requested or running operation</summary>
 public partial class V1alpha1ApplicationOperation
 {
     /// <summary>Info is a list of informational items for this operation</summary>
@@ -836,6 +876,7 @@ public partial class V1alpha1ApplicationOperation
     public V1alpha1ApplicationOperationSync? Sync { get; set; }
 }
 
+/// <summary>Destination is a reference to the target Kubernetes server and namespace</summary>
 public partial class V1alpha1ApplicationSpecDestination
 {
     /// <summary>Name is an alternate way of specifying the target cluster by its symbolic name. This must be set if Server is not set.</summary>
@@ -851,6 +892,7 @@ public partial class V1alpha1ApplicationSpecDestination
     public string? Server { get; set; }
 }
 
+/// <summary>ResourceIgnoreDifferences contains resource filter and list of json paths which should be ignored during comparison with live state.</summary>
 public partial class V1alpha1ApplicationSpecIgnoreDifferences
 {
     /// <summary></summary>
@@ -882,6 +924,7 @@ public partial class V1alpha1ApplicationSpecIgnoreDifferences
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSpecInfo
 {
     /// <summary></summary>
@@ -893,6 +936,7 @@ public partial class V1alpha1ApplicationSpecInfo
     public string Value { get; set; }
 }
 
+/// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
 public partial class V1alpha1ApplicationSpecSourceDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -908,6 +952,7 @@ public partial class V1alpha1ApplicationSpecSourceDirectoryJsonnetExtVars
     public string Value { get; set; }
 }
 
+/// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
 public partial class V1alpha1ApplicationSpecSourceDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -923,6 +968,7 @@ public partial class V1alpha1ApplicationSpecSourceDirectoryJsonnetTlas
     public string Value { get; set; }
 }
 
+/// <summary>Jsonnet holds options specific to Jsonnet</summary>
 public partial class V1alpha1ApplicationSpecSourceDirectoryJsonnet
 {
     /// <summary>ExtVars is a list of Jsonnet External Variables</summary>
@@ -938,6 +984,7 @@ public partial class V1alpha1ApplicationSpecSourceDirectoryJsonnet
     public IList<V1alpha1ApplicationSpecSourceDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary>Directory holds path/directory specific options</summary>
 public partial class V1alpha1ApplicationSpecSourceDirectory
 {
     /// <summary>Exclude contains a glob pattern to match paths against that should be explicitly excluded from being used during manifest generation</summary>
@@ -957,6 +1004,7 @@ public partial class V1alpha1ApplicationSpecSourceDirectory
     public bool? Recurse { get; set; }
 }
 
+/// <summary>HelmFileParameter is a file parameter that's passed to helm template during manifest generation</summary>
 public partial class V1alpha1ApplicationSpecSourceHelmFileParameters
 {
     /// <summary>Name is the name of the Helm parameter</summary>
@@ -968,6 +1016,7 @@ public partial class V1alpha1ApplicationSpecSourceHelmFileParameters
     public string? Path { get; set; }
 }
 
+/// <summary>HelmParameter is a parameter that's passed to helm template during manifest generation</summary>
 public partial class V1alpha1ApplicationSpecSourceHelmParameters
 {
     /// <summary>ForceString determines whether to tell Helm to interpret booleans and numbers as strings</summary>
@@ -983,6 +1032,7 @@ public partial class V1alpha1ApplicationSpecSourceHelmParameters
     public string? Value { get; set; }
 }
 
+/// <summary>Helm holds helm specific options</summary>
 public partial class V1alpha1ApplicationSpecSourceHelm
 {
     /// <summary>FileParameters are file parameters to the helm template</summary>
@@ -1026,6 +1076,7 @@ public partial class V1alpha1ApplicationSpecSourceHelm
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSpecSourceKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -1057,6 +1108,7 @@ public partial class V1alpha1ApplicationSpecSourceKustomizePatchesTarget
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSpecSourceKustomizePatches
 {
     /// <summary></summary>
@@ -1076,6 +1128,7 @@ public partial class V1alpha1ApplicationSpecSourceKustomizePatches
     public V1alpha1ApplicationSpecSourceKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSpecSourceKustomizeReplicas
 {
     /// <summary>Number of replicas</summary>
@@ -1087,6 +1140,7 @@ public partial class V1alpha1ApplicationSpecSourceKustomizeReplicas
     public string Name { get; set; }
 }
 
+/// <summary>Kustomize holds kustomize specific options</summary>
 public partial class V1alpha1ApplicationSpecSourceKustomize
 {
     /// <summary>CommonAnnotations is a list of additional annotations to add to rendered manifests</summary>
@@ -1146,6 +1200,7 @@ public partial class V1alpha1ApplicationSpecSourceKustomize
     public string? Version { get; set; }
 }
 
+/// <summary>EnvEntry represents an entry in the application's environment</summary>
 public partial class V1alpha1ApplicationSpecSourcePluginEnv
 {
     /// <summary>Name is the name of the variable, usually expressed in uppercase</summary>
@@ -1157,6 +1212,7 @@ public partial class V1alpha1ApplicationSpecSourcePluginEnv
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSpecSourcePluginParameters
 {
     /// <summary>Array is the value of an array type parameter.</summary>
@@ -1176,6 +1232,7 @@ public partial class V1alpha1ApplicationSpecSourcePluginParameters
     public string? String { get; set; }
 }
 
+/// <summary>Plugin holds config management plugin specific options</summary>
 public partial class V1alpha1ApplicationSpecSourcePlugin
 {
     /// <summary>Env is a list of environment variable entries</summary>
@@ -1191,6 +1248,7 @@ public partial class V1alpha1ApplicationSpecSourcePlugin
     public IList<V1alpha1ApplicationSpecSourcePluginParameters>? Parameters { get; set; }
 }
 
+/// <summary>Source is a reference to the location of the application's manifests or chart</summary>
 public partial class V1alpha1ApplicationSpecSource
 {
     /// <summary>Chart is a Helm chart name, and must be specified for applications sourced from a Helm repo.</summary>
@@ -1230,6 +1288,7 @@ public partial class V1alpha1ApplicationSpecSource
     public string? TargetRevision { get; set; }
 }
 
+/// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
 public partial class V1alpha1ApplicationSpecSourcesDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -1245,6 +1304,7 @@ public partial class V1alpha1ApplicationSpecSourcesDirectoryJsonnetExtVars
     public string Value { get; set; }
 }
 
+/// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
 public partial class V1alpha1ApplicationSpecSourcesDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -1260,6 +1320,7 @@ public partial class V1alpha1ApplicationSpecSourcesDirectoryJsonnetTlas
     public string Value { get; set; }
 }
 
+/// <summary>Jsonnet holds options specific to Jsonnet</summary>
 public partial class V1alpha1ApplicationSpecSourcesDirectoryJsonnet
 {
     /// <summary>ExtVars is a list of Jsonnet External Variables</summary>
@@ -1275,6 +1336,7 @@ public partial class V1alpha1ApplicationSpecSourcesDirectoryJsonnet
     public IList<V1alpha1ApplicationSpecSourcesDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary>Directory holds path/directory specific options</summary>
 public partial class V1alpha1ApplicationSpecSourcesDirectory
 {
     /// <summary>Exclude contains a glob pattern to match paths against that should be explicitly excluded from being used during manifest generation</summary>
@@ -1294,6 +1356,7 @@ public partial class V1alpha1ApplicationSpecSourcesDirectory
     public bool? Recurse { get; set; }
 }
 
+/// <summary>HelmFileParameter is a file parameter that's passed to helm template during manifest generation</summary>
 public partial class V1alpha1ApplicationSpecSourcesHelmFileParameters
 {
     /// <summary>Name is the name of the Helm parameter</summary>
@@ -1305,6 +1368,7 @@ public partial class V1alpha1ApplicationSpecSourcesHelmFileParameters
     public string? Path { get; set; }
 }
 
+/// <summary>HelmParameter is a parameter that's passed to helm template during manifest generation</summary>
 public partial class V1alpha1ApplicationSpecSourcesHelmParameters
 {
     /// <summary>ForceString determines whether to tell Helm to interpret booleans and numbers as strings</summary>
@@ -1320,6 +1384,7 @@ public partial class V1alpha1ApplicationSpecSourcesHelmParameters
     public string? Value { get; set; }
 }
 
+/// <summary>Helm holds helm specific options</summary>
 public partial class V1alpha1ApplicationSpecSourcesHelm
 {
     /// <summary>FileParameters are file parameters to the helm template</summary>
@@ -1363,6 +1428,7 @@ public partial class V1alpha1ApplicationSpecSourcesHelm
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSpecSourcesKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -1394,6 +1460,7 @@ public partial class V1alpha1ApplicationSpecSourcesKustomizePatchesTarget
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSpecSourcesKustomizePatches
 {
     /// <summary></summary>
@@ -1413,6 +1480,7 @@ public partial class V1alpha1ApplicationSpecSourcesKustomizePatches
     public V1alpha1ApplicationSpecSourcesKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSpecSourcesKustomizeReplicas
 {
     /// <summary>Number of replicas</summary>
@@ -1424,6 +1492,7 @@ public partial class V1alpha1ApplicationSpecSourcesKustomizeReplicas
     public string Name { get; set; }
 }
 
+/// <summary>Kustomize holds kustomize specific options</summary>
 public partial class V1alpha1ApplicationSpecSourcesKustomize
 {
     /// <summary>CommonAnnotations is a list of additional annotations to add to rendered manifests</summary>
@@ -1483,6 +1552,7 @@ public partial class V1alpha1ApplicationSpecSourcesKustomize
     public string? Version { get; set; }
 }
 
+/// <summary>EnvEntry represents an entry in the application's environment</summary>
 public partial class V1alpha1ApplicationSpecSourcesPluginEnv
 {
     /// <summary>Name is the name of the variable, usually expressed in uppercase</summary>
@@ -1494,6 +1564,7 @@ public partial class V1alpha1ApplicationSpecSourcesPluginEnv
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSpecSourcesPluginParameters
 {
     /// <summary>Array is the value of an array type parameter.</summary>
@@ -1513,6 +1584,7 @@ public partial class V1alpha1ApplicationSpecSourcesPluginParameters
     public string? String { get; set; }
 }
 
+/// <summary>Plugin holds config management plugin specific options</summary>
 public partial class V1alpha1ApplicationSpecSourcesPlugin
 {
     /// <summary>Env is a list of environment variable entries</summary>
@@ -1528,6 +1600,7 @@ public partial class V1alpha1ApplicationSpecSourcesPlugin
     public IList<V1alpha1ApplicationSpecSourcesPluginParameters>? Parameters { get; set; }
 }
 
+/// <summary>ApplicationSource contains all required information about the source of an application</summary>
 public partial class V1alpha1ApplicationSpecSources
 {
     /// <summary>Chart is a Helm chart name, and must be specified for applications sourced from a Helm repo.</summary>
@@ -1567,6 +1640,7 @@ public partial class V1alpha1ApplicationSpecSources
     public string? TargetRevision { get; set; }
 }
 
+/// <summary>Automated will keep an application synced to the target revision</summary>
 public partial class V1alpha1ApplicationSpecSyncPolicyAutomated
 {
     /// <summary>AllowEmpty allows apps have zero live resources (default: false)</summary>
@@ -1582,6 +1656,7 @@ public partial class V1alpha1ApplicationSpecSyncPolicyAutomated
     public bool? SelfHeal { get; set; }
 }
 
+/// <summary>ManagedNamespaceMetadata controls metadata in the given namespace (if CreateNamespace=true)</summary>
 public partial class V1alpha1ApplicationSpecSyncPolicyManagedNamespaceMetadata
 {
     /// <summary></summary>
@@ -1593,6 +1668,7 @@ public partial class V1alpha1ApplicationSpecSyncPolicyManagedNamespaceMetadata
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary>Backoff controls how to backoff on subsequent retries of failed syncs</summary>
 public partial class V1alpha1ApplicationSpecSyncPolicyRetryBackoff
 {
     /// <summary>Duration is the amount to back off. Default unit is seconds, but could also be a duration (e.g. "2m", "1h")</summary>
@@ -1608,6 +1684,7 @@ public partial class V1alpha1ApplicationSpecSyncPolicyRetryBackoff
     public string? MaxDuration { get; set; }
 }
 
+/// <summary>Retry controls failed sync retry behavior</summary>
 public partial class V1alpha1ApplicationSpecSyncPolicyRetry
 {
     /// <summary>Backoff controls how to backoff on subsequent retries of failed syncs</summary>
@@ -1619,6 +1696,7 @@ public partial class V1alpha1ApplicationSpecSyncPolicyRetry
     public long? Limit { get; set; }
 }
 
+/// <summary>SyncPolicy controls when and how a sync will be performed</summary>
 public partial class V1alpha1ApplicationSpecSyncPolicy
 {
     /// <summary>Automated will keep an application synced to the target revision</summary>
@@ -1638,6 +1716,7 @@ public partial class V1alpha1ApplicationSpecSyncPolicy
     public IList<string>? SyncOptions { get; set; }
 }
 
+/// <summary>ApplicationSpec represents desired application state. Contains link to repository with application definition and additional parameters link definition revision.</summary>
 public partial class V1alpha1ApplicationSpec
 {
     /// <summary>Destination is a reference to the target Kubernetes server and namespace</summary>
@@ -1673,6 +1752,7 @@ public partial class V1alpha1ApplicationSpec
     public V1alpha1ApplicationSpecSyncPolicy? SyncPolicy { get; set; }
 }
 
+/// <summary>ApplicationCondition contains details about an application condition, which is usually an error or warning</summary>
 public partial class V1alpha1ApplicationStatusConditions
 {
     /// <summary>LastTransitionTime is the time the condition was last observed</summary>
@@ -1688,6 +1768,7 @@ public partial class V1alpha1ApplicationStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Health contains information about the application's current health status</summary>
 public partial class V1alpha1ApplicationStatusHealth
 {
     /// <summary>Message is a human-readable informational message describing the health status</summary>
@@ -1699,6 +1780,7 @@ public partial class V1alpha1ApplicationStatusHealth
     public string? Status { get; set; }
 }
 
+/// <summary>InitiatedBy contains information about who initiated the operations</summary>
 public partial class V1alpha1ApplicationStatusHistoryInitiatedBy
 {
     /// <summary>Automated is set to true if operation was initiated automatically by the application controller.</summary>
@@ -1710,6 +1792,7 @@ public partial class V1alpha1ApplicationStatusHistoryInitiatedBy
     public string? Username { get; set; }
 }
 
+/// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
 public partial class V1alpha1ApplicationStatusHistorySourceDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -1725,6 +1808,7 @@ public partial class V1alpha1ApplicationStatusHistorySourceDirectoryJsonnetExtVa
     public string Value { get; set; }
 }
 
+/// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
 public partial class V1alpha1ApplicationStatusHistorySourceDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -1740,6 +1824,7 @@ public partial class V1alpha1ApplicationStatusHistorySourceDirectoryJsonnetTlas
     public string Value { get; set; }
 }
 
+/// <summary>Jsonnet holds options specific to Jsonnet</summary>
 public partial class V1alpha1ApplicationStatusHistorySourceDirectoryJsonnet
 {
     /// <summary>ExtVars is a list of Jsonnet External Variables</summary>
@@ -1755,6 +1840,7 @@ public partial class V1alpha1ApplicationStatusHistorySourceDirectoryJsonnet
     public IList<V1alpha1ApplicationStatusHistorySourceDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary>Directory holds path/directory specific options</summary>
 public partial class V1alpha1ApplicationStatusHistorySourceDirectory
 {
     /// <summary>Exclude contains a glob pattern to match paths against that should be explicitly excluded from being used during manifest generation</summary>
@@ -1774,6 +1860,7 @@ public partial class V1alpha1ApplicationStatusHistorySourceDirectory
     public bool? Recurse { get; set; }
 }
 
+/// <summary>HelmFileParameter is a file parameter that's passed to helm template during manifest generation</summary>
 public partial class V1alpha1ApplicationStatusHistorySourceHelmFileParameters
 {
     /// <summary>Name is the name of the Helm parameter</summary>
@@ -1785,6 +1872,7 @@ public partial class V1alpha1ApplicationStatusHistorySourceHelmFileParameters
     public string? Path { get; set; }
 }
 
+/// <summary>HelmParameter is a parameter that's passed to helm template during manifest generation</summary>
 public partial class V1alpha1ApplicationStatusHistorySourceHelmParameters
 {
     /// <summary>ForceString determines whether to tell Helm to interpret booleans and numbers as strings</summary>
@@ -1800,6 +1888,7 @@ public partial class V1alpha1ApplicationStatusHistorySourceHelmParameters
     public string? Value { get; set; }
 }
 
+/// <summary>Helm holds helm specific options</summary>
 public partial class V1alpha1ApplicationStatusHistorySourceHelm
 {
     /// <summary>FileParameters are file parameters to the helm template</summary>
@@ -1843,6 +1932,7 @@ public partial class V1alpha1ApplicationStatusHistorySourceHelm
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationStatusHistorySourceKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -1874,6 +1964,7 @@ public partial class V1alpha1ApplicationStatusHistorySourceKustomizePatchesTarge
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationStatusHistorySourceKustomizePatches
 {
     /// <summary></summary>
@@ -1893,6 +1984,7 @@ public partial class V1alpha1ApplicationStatusHistorySourceKustomizePatches
     public V1alpha1ApplicationStatusHistorySourceKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationStatusHistorySourceKustomizeReplicas
 {
     /// <summary>Number of replicas</summary>
@@ -1904,6 +1996,7 @@ public partial class V1alpha1ApplicationStatusHistorySourceKustomizeReplicas
     public string Name { get; set; }
 }
 
+/// <summary>Kustomize holds kustomize specific options</summary>
 public partial class V1alpha1ApplicationStatusHistorySourceKustomize
 {
     /// <summary>CommonAnnotations is a list of additional annotations to add to rendered manifests</summary>
@@ -1963,6 +2056,7 @@ public partial class V1alpha1ApplicationStatusHistorySourceKustomize
     public string? Version { get; set; }
 }
 
+/// <summary>EnvEntry represents an entry in the application's environment</summary>
 public partial class V1alpha1ApplicationStatusHistorySourcePluginEnv
 {
     /// <summary>Name is the name of the variable, usually expressed in uppercase</summary>
@@ -1974,6 +2068,7 @@ public partial class V1alpha1ApplicationStatusHistorySourcePluginEnv
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationStatusHistorySourcePluginParameters
 {
     /// <summary>Array is the value of an array type parameter.</summary>
@@ -1993,6 +2088,7 @@ public partial class V1alpha1ApplicationStatusHistorySourcePluginParameters
     public string? String { get; set; }
 }
 
+/// <summary>Plugin holds config management plugin specific options</summary>
 public partial class V1alpha1ApplicationStatusHistorySourcePlugin
 {
     /// <summary>Env is a list of environment variable entries</summary>
@@ -2008,6 +2104,7 @@ public partial class V1alpha1ApplicationStatusHistorySourcePlugin
     public IList<V1alpha1ApplicationStatusHistorySourcePluginParameters>? Parameters { get; set; }
 }
 
+/// <summary>Source is a reference to the application source used for the sync operation</summary>
 public partial class V1alpha1ApplicationStatusHistorySource
 {
     /// <summary>Chart is a Helm chart name, and must be specified for applications sourced from a Helm repo.</summary>
@@ -2047,6 +2144,7 @@ public partial class V1alpha1ApplicationStatusHistorySource
     public string? TargetRevision { get; set; }
 }
 
+/// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
 public partial class V1alpha1ApplicationStatusHistorySourcesDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -2062,6 +2160,7 @@ public partial class V1alpha1ApplicationStatusHistorySourcesDirectoryJsonnetExtV
     public string Value { get; set; }
 }
 
+/// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
 public partial class V1alpha1ApplicationStatusHistorySourcesDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -2077,6 +2176,7 @@ public partial class V1alpha1ApplicationStatusHistorySourcesDirectoryJsonnetTlas
     public string Value { get; set; }
 }
 
+/// <summary>Jsonnet holds options specific to Jsonnet</summary>
 public partial class V1alpha1ApplicationStatusHistorySourcesDirectoryJsonnet
 {
     /// <summary>ExtVars is a list of Jsonnet External Variables</summary>
@@ -2092,6 +2192,7 @@ public partial class V1alpha1ApplicationStatusHistorySourcesDirectoryJsonnet
     public IList<V1alpha1ApplicationStatusHistorySourcesDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary>Directory holds path/directory specific options</summary>
 public partial class V1alpha1ApplicationStatusHistorySourcesDirectory
 {
     /// <summary>Exclude contains a glob pattern to match paths against that should be explicitly excluded from being used during manifest generation</summary>
@@ -2111,6 +2212,7 @@ public partial class V1alpha1ApplicationStatusHistorySourcesDirectory
     public bool? Recurse { get; set; }
 }
 
+/// <summary>HelmFileParameter is a file parameter that's passed to helm template during manifest generation</summary>
 public partial class V1alpha1ApplicationStatusHistorySourcesHelmFileParameters
 {
     /// <summary>Name is the name of the Helm parameter</summary>
@@ -2122,6 +2224,7 @@ public partial class V1alpha1ApplicationStatusHistorySourcesHelmFileParameters
     public string? Path { get; set; }
 }
 
+/// <summary>HelmParameter is a parameter that's passed to helm template during manifest generation</summary>
 public partial class V1alpha1ApplicationStatusHistorySourcesHelmParameters
 {
     /// <summary>ForceString determines whether to tell Helm to interpret booleans and numbers as strings</summary>
@@ -2137,6 +2240,7 @@ public partial class V1alpha1ApplicationStatusHistorySourcesHelmParameters
     public string? Value { get; set; }
 }
 
+/// <summary>Helm holds helm specific options</summary>
 public partial class V1alpha1ApplicationStatusHistorySourcesHelm
 {
     /// <summary>FileParameters are file parameters to the helm template</summary>
@@ -2180,6 +2284,7 @@ public partial class V1alpha1ApplicationStatusHistorySourcesHelm
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationStatusHistorySourcesKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -2211,6 +2316,7 @@ public partial class V1alpha1ApplicationStatusHistorySourcesKustomizePatchesTarg
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationStatusHistorySourcesKustomizePatches
 {
     /// <summary></summary>
@@ -2230,6 +2336,7 @@ public partial class V1alpha1ApplicationStatusHistorySourcesKustomizePatches
     public V1alpha1ApplicationStatusHistorySourcesKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationStatusHistorySourcesKustomizeReplicas
 {
     /// <summary>Number of replicas</summary>
@@ -2241,6 +2348,7 @@ public partial class V1alpha1ApplicationStatusHistorySourcesKustomizeReplicas
     public string Name { get; set; }
 }
 
+/// <summary>Kustomize holds kustomize specific options</summary>
 public partial class V1alpha1ApplicationStatusHistorySourcesKustomize
 {
     /// <summary>CommonAnnotations is a list of additional annotations to add to rendered manifests</summary>
@@ -2300,6 +2408,7 @@ public partial class V1alpha1ApplicationStatusHistorySourcesKustomize
     public string? Version { get; set; }
 }
 
+/// <summary>EnvEntry represents an entry in the application's environment</summary>
 public partial class V1alpha1ApplicationStatusHistorySourcesPluginEnv
 {
     /// <summary>Name is the name of the variable, usually expressed in uppercase</summary>
@@ -2311,6 +2420,7 @@ public partial class V1alpha1ApplicationStatusHistorySourcesPluginEnv
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationStatusHistorySourcesPluginParameters
 {
     /// <summary>Array is the value of an array type parameter.</summary>
@@ -2330,6 +2440,7 @@ public partial class V1alpha1ApplicationStatusHistorySourcesPluginParameters
     public string? String { get; set; }
 }
 
+/// <summary>Plugin holds config management plugin specific options</summary>
 public partial class V1alpha1ApplicationStatusHistorySourcesPlugin
 {
     /// <summary>Env is a list of environment variable entries</summary>
@@ -2345,6 +2456,7 @@ public partial class V1alpha1ApplicationStatusHistorySourcesPlugin
     public IList<V1alpha1ApplicationStatusHistorySourcesPluginParameters>? Parameters { get; set; }
 }
 
+/// <summary>ApplicationSource contains all required information about the source of an application</summary>
 public partial class V1alpha1ApplicationStatusHistorySources
 {
     /// <summary>Chart is a Helm chart name, and must be specified for applications sourced from a Helm repo.</summary>
@@ -2384,6 +2496,7 @@ public partial class V1alpha1ApplicationStatusHistorySources
     public string? TargetRevision { get; set; }
 }
 
+/// <summary>RevisionHistory contains history information about a previous sync</summary>
 public partial class V1alpha1ApplicationStatusHistory
 {
     /// <summary>DeployStartedAt holds the time the sync operation started</summary>
@@ -2419,6 +2532,7 @@ public partial class V1alpha1ApplicationStatusHistory
     public IList<V1alpha1ApplicationStatusHistorySources>? Sources { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationInfo
 {
     /// <summary></summary>
@@ -2430,6 +2544,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationInfo
     public string Value { get; set; }
 }
 
+/// <summary>InitiatedBy contains information about who initiated the operations</summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationInitiatedBy
 {
     /// <summary>Automated is set to true if operation was initiated automatically by the application controller.</summary>
@@ -2441,6 +2556,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationInitiatedBy
     public string? Username { get; set; }
 }
 
+/// <summary>Backoff controls how to backoff on subsequent retries of failed syncs</summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationRetryBackoff
 {
     /// <summary>Duration is the amount to back off. Default unit is seconds, but could also be a duration (e.g. "2m", "1h")</summary>
@@ -2456,6 +2572,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationRetryBackof
     public string? MaxDuration { get; set; }
 }
 
+/// <summary>Retry controls the strategy to apply if a sync fails</summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationRetry
 {
     /// <summary>Backoff controls how to backoff on subsequent retries of failed syncs</summary>
@@ -2467,6 +2584,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationRetry
     public long? Limit { get; set; }
 }
 
+/// <summary>SyncOperationResource contains resources to sync.</summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncResources
 {
     /// <summary></summary>
@@ -2486,6 +2604,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncResourc
     public string? Namespace { get; set; }
 }
 
+/// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -2501,6 +2620,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceD
     public string Value { get; set; }
 }
 
+/// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -2516,6 +2636,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceD
     public string Value { get; set; }
 }
 
+/// <summary>Jsonnet holds options specific to Jsonnet</summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceDirectoryJsonnet
 {
     /// <summary>ExtVars is a list of Jsonnet External Variables</summary>
@@ -2531,6 +2652,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceD
     public IList<V1alpha1ApplicationStatusOperationStateOperationSyncSourceDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary>Directory holds path/directory specific options</summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceDirectory
 {
     /// <summary>Exclude contains a glob pattern to match paths against that should be explicitly excluded from being used during manifest generation</summary>
@@ -2550,6 +2672,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceD
     public bool? Recurse { get; set; }
 }
 
+/// <summary>HelmFileParameter is a file parameter that's passed to helm template during manifest generation</summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceHelmFileParameters
 {
     /// <summary>Name is the name of the Helm parameter</summary>
@@ -2561,6 +2684,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceH
     public string? Path { get; set; }
 }
 
+/// <summary>HelmParameter is a parameter that's passed to helm template during manifest generation</summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceHelmParameters
 {
     /// <summary>ForceString determines whether to tell Helm to interpret booleans and numbers as strings</summary>
@@ -2576,6 +2700,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceH
     public string? Value { get; set; }
 }
 
+/// <summary>Helm holds helm specific options</summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceHelm
 {
     /// <summary>FileParameters are file parameters to the helm template</summary>
@@ -2619,6 +2744,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceH
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -2650,6 +2776,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceK
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceKustomizePatches
 {
     /// <summary></summary>
@@ -2669,6 +2796,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceK
     public V1alpha1ApplicationStatusOperationStateOperationSyncSourceKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceKustomizeReplicas
 {
     /// <summary>Number of replicas</summary>
@@ -2680,6 +2808,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceK
     public string Name { get; set; }
 }
 
+/// <summary>Kustomize holds kustomize specific options</summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceKustomize
 {
     /// <summary>CommonAnnotations is a list of additional annotations to add to rendered manifests</summary>
@@ -2739,6 +2868,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceK
     public string? Version { get; set; }
 }
 
+/// <summary>EnvEntry represents an entry in the application's environment</summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourcePluginEnv
 {
     /// <summary>Name is the name of the variable, usually expressed in uppercase</summary>
@@ -2750,6 +2880,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceP
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourcePluginParameters
 {
     /// <summary>Array is the value of an array type parameter.</summary>
@@ -2769,6 +2900,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceP
     public string? String { get; set; }
 }
 
+/// <summary>Plugin holds config management plugin specific options</summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourcePlugin
 {
     /// <summary>Env is a list of environment variable entries</summary>
@@ -2784,6 +2916,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceP
     public IList<V1alpha1ApplicationStatusOperationStateOperationSyncSourcePluginParameters>? Parameters { get; set; }
 }
 
+/// <summary>Source overrides the source definition set in the application. This is typically set in a Rollback operation and is nil during a Sync operation</summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSource
 {
     /// <summary>Chart is a Helm chart name, and must be specified for applications sourced from a Helm repo.</summary>
@@ -2823,6 +2956,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSource
     public string? TargetRevision { get; set; }
 }
 
+/// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourcesDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -2838,6 +2972,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
     public string Value { get; set; }
 }
 
+/// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourcesDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -2853,6 +2988,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
     public string Value { get; set; }
 }
 
+/// <summary>Jsonnet holds options specific to Jsonnet</summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourcesDirectoryJsonnet
 {
     /// <summary>ExtVars is a list of Jsonnet External Variables</summary>
@@ -2868,6 +3004,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
     public IList<V1alpha1ApplicationStatusOperationStateOperationSyncSourcesDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary>Directory holds path/directory specific options</summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourcesDirectory
 {
     /// <summary>Exclude contains a glob pattern to match paths against that should be explicitly excluded from being used during manifest generation</summary>
@@ -2887,6 +3024,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
     public bool? Recurse { get; set; }
 }
 
+/// <summary>HelmFileParameter is a file parameter that's passed to helm template during manifest generation</summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourcesHelmFileParameters
 {
     /// <summary>Name is the name of the Helm parameter</summary>
@@ -2898,6 +3036,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
     public string? Path { get; set; }
 }
 
+/// <summary>HelmParameter is a parameter that's passed to helm template during manifest generation</summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourcesHelmParameters
 {
     /// <summary>ForceString determines whether to tell Helm to interpret booleans and numbers as strings</summary>
@@ -2913,6 +3052,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
     public string? Value { get; set; }
 }
 
+/// <summary>Helm holds helm specific options</summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourcesHelm
 {
     /// <summary>FileParameters are file parameters to the helm template</summary>
@@ -2956,6 +3096,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourcesKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -2987,6 +3128,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourcesKustomizePatches
 {
     /// <summary></summary>
@@ -3006,6 +3148,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
     public V1alpha1ApplicationStatusOperationStateOperationSyncSourcesKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourcesKustomizeReplicas
 {
     /// <summary>Number of replicas</summary>
@@ -3017,6 +3160,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
     public string Name { get; set; }
 }
 
+/// <summary>Kustomize holds kustomize specific options</summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourcesKustomize
 {
     /// <summary>CommonAnnotations is a list of additional annotations to add to rendered manifests</summary>
@@ -3076,6 +3220,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
     public string? Version { get; set; }
 }
 
+/// <summary>EnvEntry represents an entry in the application's environment</summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourcesPluginEnv
 {
     /// <summary>Name is the name of the variable, usually expressed in uppercase</summary>
@@ -3087,6 +3232,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourcesPluginParameters
 {
     /// <summary>Array is the value of an array type parameter.</summary>
@@ -3106,6 +3252,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
     public string? String { get; set; }
 }
 
+/// <summary>Plugin holds config management plugin specific options</summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourcesPlugin
 {
     /// <summary>Env is a list of environment variable entries</summary>
@@ -3121,6 +3268,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
     public IList<V1alpha1ApplicationStatusOperationStateOperationSyncSourcesPluginParameters>? Parameters { get; set; }
 }
 
+/// <summary>ApplicationSource contains all required information about the source of an application</summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
 {
     /// <summary>Chart is a Helm chart name, and must be specified for applications sourced from a Helm repo.</summary>
@@ -3160,6 +3308,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
     public string? TargetRevision { get; set; }
 }
 
+/// <summary>Apply will perform a `kubectl apply` to perform the sync.</summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSyncStrategyApply
 {
     /// <summary>Force indicates whether or not to supply the --force flag to `kubectl apply`. The --force flag deletes and re-create the resource, when PATCH encounters conflict and has retried for 5 times.</summary>
@@ -3167,6 +3316,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSyncStr
     public bool? Force { get; set; }
 }
 
+/// <summary>Hook will submit any referenced resources to perform the sync. This is the default strategy</summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSyncStrategyHook
 {
     /// <summary>Force indicates whether or not to supply the --force flag to `kubectl apply`. The --force flag deletes and re-create the resource, when PATCH encounters conflict and has retried for 5 times.</summary>
@@ -3174,6 +3324,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSyncStr
     public bool? Force { get; set; }
 }
 
+/// <summary>SyncStrategy describes how to perform the sync</summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSyncStrategy
 {
     /// <summary>Apply will perform a `kubectl apply` to perform the sync.</summary>
@@ -3185,6 +3336,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSyncStr
     public V1alpha1ApplicationStatusOperationStateOperationSyncSyncStrategyHook? Hook { get; set; }
 }
 
+/// <summary>Sync contains parameters for the operation</summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperationSync
 {
     /// <summary>DryRun specifies to perform a `kubectl apply --dry-run` without actually performing the sync</summary>
@@ -3228,6 +3380,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSync
     public V1alpha1ApplicationStatusOperationStateOperationSyncSyncStrategy? SyncStrategy { get; set; }
 }
 
+/// <summary>Operation is the original requested operation</summary>
 public partial class V1alpha1ApplicationStatusOperationStateOperation
 {
     /// <summary>Info is a list of informational items for this operation</summary>
@@ -3247,6 +3400,7 @@ public partial class V1alpha1ApplicationStatusOperationStateOperation
     public V1alpha1ApplicationStatusOperationStateOperationSync? Sync { get; set; }
 }
 
+/// <summary>ManagedNamespaceMetadata contains the current sync state of managed namespace metadata</summary>
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultManagedNamespaceMetadata
 {
     /// <summary></summary>
@@ -3258,6 +3412,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultManagedNam
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary>ResourceResult holds the operation result details of a specific resource</summary>
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultResources
 {
     /// <summary>Group specifies the API group of the resource</summary>
@@ -3301,6 +3456,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultResources
     public string Version { get; set; }
 }
 
+/// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -3316,6 +3472,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceDire
     public string Value { get; set; }
 }
 
+/// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -3331,6 +3488,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceDire
     public string Value { get; set; }
 }
 
+/// <summary>Jsonnet holds options specific to Jsonnet</summary>
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceDirectoryJsonnet
 {
     /// <summary>ExtVars is a list of Jsonnet External Variables</summary>
@@ -3346,6 +3504,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceDire
     public IList<V1alpha1ApplicationStatusOperationStateSyncResultSourceDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary>Directory holds path/directory specific options</summary>
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceDirectory
 {
     /// <summary>Exclude contains a glob pattern to match paths against that should be explicitly excluded from being used during manifest generation</summary>
@@ -3365,6 +3524,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceDire
     public bool? Recurse { get; set; }
 }
 
+/// <summary>HelmFileParameter is a file parameter that's passed to helm template during manifest generation</summary>
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceHelmFileParameters
 {
     /// <summary>Name is the name of the Helm parameter</summary>
@@ -3376,6 +3536,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceHelm
     public string? Path { get; set; }
 }
 
+/// <summary>HelmParameter is a parameter that's passed to helm template during manifest generation</summary>
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceHelmParameters
 {
     /// <summary>ForceString determines whether to tell Helm to interpret booleans and numbers as strings</summary>
@@ -3391,6 +3552,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceHelm
     public string? Value { get; set; }
 }
 
+/// <summary>Helm holds helm specific options</summary>
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceHelm
 {
     /// <summary>FileParameters are file parameters to the helm template</summary>
@@ -3434,6 +3596,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceHelm
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -3465,6 +3628,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceKust
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceKustomizePatches
 {
     /// <summary></summary>
@@ -3484,6 +3648,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceKust
     public V1alpha1ApplicationStatusOperationStateSyncResultSourceKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceKustomizeReplicas
 {
     /// <summary>Number of replicas</summary>
@@ -3495,6 +3660,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceKust
     public string Name { get; set; }
 }
 
+/// <summary>Kustomize holds kustomize specific options</summary>
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceKustomize
 {
     /// <summary>CommonAnnotations is a list of additional annotations to add to rendered manifests</summary>
@@ -3554,6 +3720,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceKust
     public string? Version { get; set; }
 }
 
+/// <summary>EnvEntry represents an entry in the application's environment</summary>
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcePluginEnv
 {
     /// <summary>Name is the name of the variable, usually expressed in uppercase</summary>
@@ -3565,6 +3732,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcePlug
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcePluginParameters
 {
     /// <summary>Array is the value of an array type parameter.</summary>
@@ -3584,6 +3752,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcePlug
     public string? String { get; set; }
 }
 
+/// <summary>Plugin holds config management plugin specific options</summary>
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcePlugin
 {
     /// <summary>Env is a list of environment variable entries</summary>
@@ -3599,6 +3768,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcePlug
     public IList<V1alpha1ApplicationStatusOperationStateSyncResultSourcePluginParameters>? Parameters { get; set; }
 }
 
+/// <summary>Source records the application source information of the sync, used for comparing auto-sync</summary>
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSource
 {
     /// <summary>Chart is a Helm chart name, and must be specified for applications sourced from a Helm repo.</summary>
@@ -3638,6 +3808,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSource
     public string? TargetRevision { get; set; }
 }
 
+/// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -3653,6 +3824,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesDir
     public string Value { get; set; }
 }
 
+/// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -3668,6 +3840,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesDir
     public string Value { get; set; }
 }
 
+/// <summary>Jsonnet holds options specific to Jsonnet</summary>
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesDirectoryJsonnet
 {
     /// <summary>ExtVars is a list of Jsonnet External Variables</summary>
@@ -3683,6 +3856,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesDir
     public IList<V1alpha1ApplicationStatusOperationStateSyncResultSourcesDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary>Directory holds path/directory specific options</summary>
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesDirectory
 {
     /// <summary>Exclude contains a glob pattern to match paths against that should be explicitly excluded from being used during manifest generation</summary>
@@ -3702,6 +3876,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesDir
     public bool? Recurse { get; set; }
 }
 
+/// <summary>HelmFileParameter is a file parameter that's passed to helm template during manifest generation</summary>
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesHelmFileParameters
 {
     /// <summary>Name is the name of the Helm parameter</summary>
@@ -3713,6 +3888,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesHel
     public string? Path { get; set; }
 }
 
+/// <summary>HelmParameter is a parameter that's passed to helm template during manifest generation</summary>
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesHelmParameters
 {
     /// <summary>ForceString determines whether to tell Helm to interpret booleans and numbers as strings</summary>
@@ -3728,6 +3904,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesHel
     public string? Value { get; set; }
 }
 
+/// <summary>Helm holds helm specific options</summary>
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesHelm
 {
     /// <summary>FileParameters are file parameters to the helm template</summary>
@@ -3771,6 +3948,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesHel
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -3802,6 +3980,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesKus
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesKustomizePatches
 {
     /// <summary></summary>
@@ -3821,6 +4000,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesKus
     public V1alpha1ApplicationStatusOperationStateSyncResultSourcesKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesKustomizeReplicas
 {
     /// <summary>Number of replicas</summary>
@@ -3832,6 +4012,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesKus
     public string Name { get; set; }
 }
 
+/// <summary>Kustomize holds kustomize specific options</summary>
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesKustomize
 {
     /// <summary>CommonAnnotations is a list of additional annotations to add to rendered manifests</summary>
@@ -3891,6 +4072,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesKus
     public string? Version { get; set; }
 }
 
+/// <summary>EnvEntry represents an entry in the application's environment</summary>
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesPluginEnv
 {
     /// <summary>Name is the name of the variable, usually expressed in uppercase</summary>
@@ -3902,6 +4084,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesPlu
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesPluginParameters
 {
     /// <summary>Array is the value of an array type parameter.</summary>
@@ -3921,6 +4104,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesPlu
     public string? String { get; set; }
 }
 
+/// <summary>Plugin holds config management plugin specific options</summary>
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesPlugin
 {
     /// <summary>Env is a list of environment variable entries</summary>
@@ -3936,6 +4120,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesPlu
     public IList<V1alpha1ApplicationStatusOperationStateSyncResultSourcesPluginParameters>? Parameters { get; set; }
 }
 
+/// <summary>ApplicationSource contains all required information about the source of an application</summary>
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSources
 {
     /// <summary>Chart is a Helm chart name, and must be specified for applications sourced from a Helm repo.</summary>
@@ -3975,6 +4160,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSources
     public string? TargetRevision { get; set; }
 }
 
+/// <summary>SyncResult is the result of a Sync operation</summary>
 public partial class V1alpha1ApplicationStatusOperationStateSyncResult
 {
     /// <summary>ManagedNamespaceMetadata contains the current sync state of managed namespace metadata</summary>
@@ -4002,6 +4188,7 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResult
     public IList<V1alpha1ApplicationStatusOperationStateSyncResultSources>? Sources { get; set; }
 }
 
+/// <summary>OperationState contains information about any ongoing operations, such as a sync</summary>
 public partial class V1alpha1ApplicationStatusOperationState
 {
     /// <summary>FinishedAt contains time of operation completion</summary>
@@ -4033,6 +4220,7 @@ public partial class V1alpha1ApplicationStatusOperationState
     public V1alpha1ApplicationStatusOperationStateSyncResult? SyncResult { get; set; }
 }
 
+/// <summary>HealthStatus contains information about the currently observed health state of an application or resource</summary>
 public partial class V1alpha1ApplicationStatusResourcesHealth
 {
     /// <summary>Message is a human-readable informational message describing the health status</summary>
@@ -4044,6 +4232,7 @@ public partial class V1alpha1ApplicationStatusResourcesHealth
     public string? Status { get; set; }
 }
 
+/// <summary>ResourceStatus holds the current sync and health status of a resource TODO: describe members of this type</summary>
 public partial class V1alpha1ApplicationStatusResources
 {
     /// <summary></summary>
@@ -4087,6 +4276,7 @@ public partial class V1alpha1ApplicationStatusResources
     public string? Version { get; set; }
 }
 
+/// <summary>Summary contains a list of URLs and container images used by this application</summary>
 public partial class V1alpha1ApplicationStatusSummary
 {
     /// <summary>ExternalURLs holds all external URLs of application child resources.</summary>
@@ -4098,6 +4288,7 @@ public partial class V1alpha1ApplicationStatusSummary
     public IList<string>? Images { get; set; }
 }
 
+/// <summary>Destination is a reference to the application's destination used for comparison</summary>
 public partial class V1alpha1ApplicationStatusSyncComparedToDestination
 {
     /// <summary>Name is an alternate way of specifying the target cluster by its symbolic name. This must be set if Server is not set.</summary>
@@ -4113,6 +4304,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToDestination
     public string? Server { get; set; }
 }
 
+/// <summary>ResourceIgnoreDifferences contains resource filter and list of json paths which should be ignored during comparison with live state.</summary>
 public partial class V1alpha1ApplicationStatusSyncComparedToIgnoreDifferences
 {
     /// <summary></summary>
@@ -4144,6 +4336,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToIgnoreDifferences
     public string? Namespace { get; set; }
 }
 
+/// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
 public partial class V1alpha1ApplicationStatusSyncComparedToSourceDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -4159,6 +4352,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourceDirectoryJsonn
     public string Value { get; set; }
 }
 
+/// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
 public partial class V1alpha1ApplicationStatusSyncComparedToSourceDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -4174,6 +4368,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourceDirectoryJsonn
     public string Value { get; set; }
 }
 
+/// <summary>Jsonnet holds options specific to Jsonnet</summary>
 public partial class V1alpha1ApplicationStatusSyncComparedToSourceDirectoryJsonnet
 {
     /// <summary>ExtVars is a list of Jsonnet External Variables</summary>
@@ -4189,6 +4384,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourceDirectoryJsonn
     public IList<V1alpha1ApplicationStatusSyncComparedToSourceDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary>Directory holds path/directory specific options</summary>
 public partial class V1alpha1ApplicationStatusSyncComparedToSourceDirectory
 {
     /// <summary>Exclude contains a glob pattern to match paths against that should be explicitly excluded from being used during manifest generation</summary>
@@ -4208,6 +4404,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourceDirectory
     public bool? Recurse { get; set; }
 }
 
+/// <summary>HelmFileParameter is a file parameter that's passed to helm template during manifest generation</summary>
 public partial class V1alpha1ApplicationStatusSyncComparedToSourceHelmFileParameters
 {
     /// <summary>Name is the name of the Helm parameter</summary>
@@ -4219,6 +4416,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourceHelmFileParame
     public string? Path { get; set; }
 }
 
+/// <summary>HelmParameter is a parameter that's passed to helm template during manifest generation</summary>
 public partial class V1alpha1ApplicationStatusSyncComparedToSourceHelmParameters
 {
     /// <summary>ForceString determines whether to tell Helm to interpret booleans and numbers as strings</summary>
@@ -4234,6 +4432,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourceHelmParameters
     public string? Value { get; set; }
 }
 
+/// <summary>Helm holds helm specific options</summary>
 public partial class V1alpha1ApplicationStatusSyncComparedToSourceHelm
 {
     /// <summary>FileParameters are file parameters to the helm template</summary>
@@ -4277,6 +4476,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourceHelm
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationStatusSyncComparedToSourceKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -4308,6 +4508,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourceKustomizePatch
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationStatusSyncComparedToSourceKustomizePatches
 {
     /// <summary></summary>
@@ -4327,6 +4528,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourceKustomizePatch
     public V1alpha1ApplicationStatusSyncComparedToSourceKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationStatusSyncComparedToSourceKustomizeReplicas
 {
     /// <summary>Number of replicas</summary>
@@ -4338,6 +4540,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourceKustomizeRepli
     public string Name { get; set; }
 }
 
+/// <summary>Kustomize holds kustomize specific options</summary>
 public partial class V1alpha1ApplicationStatusSyncComparedToSourceKustomize
 {
     /// <summary>CommonAnnotations is a list of additional annotations to add to rendered manifests</summary>
@@ -4397,6 +4600,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourceKustomize
     public string? Version { get; set; }
 }
 
+/// <summary>EnvEntry represents an entry in the application's environment</summary>
 public partial class V1alpha1ApplicationStatusSyncComparedToSourcePluginEnv
 {
     /// <summary>Name is the name of the variable, usually expressed in uppercase</summary>
@@ -4408,6 +4612,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcePluginEnv
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationStatusSyncComparedToSourcePluginParameters
 {
     /// <summary>Array is the value of an array type parameter.</summary>
@@ -4427,6 +4632,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcePluginParamete
     public string? String { get; set; }
 }
 
+/// <summary>Plugin holds config management plugin specific options</summary>
 public partial class V1alpha1ApplicationStatusSyncComparedToSourcePlugin
 {
     /// <summary>Env is a list of environment variable entries</summary>
@@ -4442,6 +4648,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcePlugin
     public IList<V1alpha1ApplicationStatusSyncComparedToSourcePluginParameters>? Parameters { get; set; }
 }
 
+/// <summary>Source is a reference to the application's source used for comparison</summary>
 public partial class V1alpha1ApplicationStatusSyncComparedToSource
 {
     /// <summary>Chart is a Helm chart name, and must be specified for applications sourced from a Helm repo.</summary>
@@ -4481,6 +4688,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSource
     public string? TargetRevision { get; set; }
 }
 
+/// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
 public partial class V1alpha1ApplicationStatusSyncComparedToSourcesDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -4496,6 +4704,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcesDirectoryJson
     public string Value { get; set; }
 }
 
+/// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
 public partial class V1alpha1ApplicationStatusSyncComparedToSourcesDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -4511,6 +4720,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcesDirectoryJson
     public string Value { get; set; }
 }
 
+/// <summary>Jsonnet holds options specific to Jsonnet</summary>
 public partial class V1alpha1ApplicationStatusSyncComparedToSourcesDirectoryJsonnet
 {
     /// <summary>ExtVars is a list of Jsonnet External Variables</summary>
@@ -4526,6 +4736,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcesDirectoryJson
     public IList<V1alpha1ApplicationStatusSyncComparedToSourcesDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary>Directory holds path/directory specific options</summary>
 public partial class V1alpha1ApplicationStatusSyncComparedToSourcesDirectory
 {
     /// <summary>Exclude contains a glob pattern to match paths against that should be explicitly excluded from being used during manifest generation</summary>
@@ -4545,6 +4756,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcesDirectory
     public bool? Recurse { get; set; }
 }
 
+/// <summary>HelmFileParameter is a file parameter that's passed to helm template during manifest generation</summary>
 public partial class V1alpha1ApplicationStatusSyncComparedToSourcesHelmFileParameters
 {
     /// <summary>Name is the name of the Helm parameter</summary>
@@ -4556,6 +4768,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcesHelmFileParam
     public string? Path { get; set; }
 }
 
+/// <summary>HelmParameter is a parameter that's passed to helm template during manifest generation</summary>
 public partial class V1alpha1ApplicationStatusSyncComparedToSourcesHelmParameters
 {
     /// <summary>ForceString determines whether to tell Helm to interpret booleans and numbers as strings</summary>
@@ -4571,6 +4784,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcesHelmParameter
     public string? Value { get; set; }
 }
 
+/// <summary>Helm holds helm specific options</summary>
 public partial class V1alpha1ApplicationStatusSyncComparedToSourcesHelm
 {
     /// <summary>FileParameters are file parameters to the helm template</summary>
@@ -4614,6 +4828,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcesHelm
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationStatusSyncComparedToSourcesKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -4645,6 +4860,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcesKustomizePatc
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationStatusSyncComparedToSourcesKustomizePatches
 {
     /// <summary></summary>
@@ -4664,6 +4880,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcesKustomizePatc
     public V1alpha1ApplicationStatusSyncComparedToSourcesKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationStatusSyncComparedToSourcesKustomizeReplicas
 {
     /// <summary>Number of replicas</summary>
@@ -4675,6 +4892,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcesKustomizeRepl
     public string Name { get; set; }
 }
 
+/// <summary>Kustomize holds kustomize specific options</summary>
 public partial class V1alpha1ApplicationStatusSyncComparedToSourcesKustomize
 {
     /// <summary>CommonAnnotations is a list of additional annotations to add to rendered manifests</summary>
@@ -4734,6 +4952,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcesKustomize
     public string? Version { get; set; }
 }
 
+/// <summary>EnvEntry represents an entry in the application's environment</summary>
 public partial class V1alpha1ApplicationStatusSyncComparedToSourcesPluginEnv
 {
     /// <summary>Name is the name of the variable, usually expressed in uppercase</summary>
@@ -4745,6 +4964,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcesPluginEnv
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationStatusSyncComparedToSourcesPluginParameters
 {
     /// <summary>Array is the value of an array type parameter.</summary>
@@ -4764,6 +4984,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcesPluginParamet
     public string? String { get; set; }
 }
 
+/// <summary>Plugin holds config management plugin specific options</summary>
 public partial class V1alpha1ApplicationStatusSyncComparedToSourcesPlugin
 {
     /// <summary>Env is a list of environment variable entries</summary>
@@ -4779,6 +5000,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcesPlugin
     public IList<V1alpha1ApplicationStatusSyncComparedToSourcesPluginParameters>? Parameters { get; set; }
 }
 
+/// <summary>ApplicationSource contains all required information about the source of an application</summary>
 public partial class V1alpha1ApplicationStatusSyncComparedToSources
 {
     /// <summary>Chart is a Helm chart name, and must be specified for applications sourced from a Helm repo.</summary>
@@ -4818,6 +5040,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSources
     public string? TargetRevision { get; set; }
 }
 
+/// <summary>ComparedTo contains information about what has been compared</summary>
 public partial class V1alpha1ApplicationStatusSyncComparedTo
 {
     /// <summary>Destination is a reference to the application's destination used for comparison</summary>
@@ -4837,6 +5060,7 @@ public partial class V1alpha1ApplicationStatusSyncComparedTo
     public IList<V1alpha1ApplicationStatusSyncComparedToSources>? Sources { get; set; }
 }
 
+/// <summary>Sync contains information about the application's current sync status</summary>
 public partial class V1alpha1ApplicationStatusSync
 {
     /// <summary>ComparedTo contains information about what has been compared</summary>
@@ -4856,6 +5080,7 @@ public partial class V1alpha1ApplicationStatusSync
     public string Status { get; set; }
 }
 
+/// <summary>ApplicationStatus contains status information for the application</summary>
 public partial class V1alpha1ApplicationStatus
 {
     /// <summary>Conditions is a list of currently observed application conditions</summary>
@@ -4912,6 +5137,7 @@ public partial class V1alpha1ApplicationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Application is a definition of Application resource.</summary>
 public partial class V1alpha1Application : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ApplicationSpec>, IStatus<V1alpha1ApplicationStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

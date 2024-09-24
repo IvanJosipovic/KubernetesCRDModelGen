@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary>The network in which to reserve the address. If global, the address must be within the RFC1918 IP space. The network cannot be deleted if there are any reserved IP ranges referring to it. This field can only be used with INTERNAL type with the VPC_PEERING and IPSEC_INTERCONNECT purposes.</summary>
 public partial class V1beta1ComputeAddressSpecNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1ComputeAddressSpecNetworkRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The subnetwork in which to reserve the address. If an IP address is specified, it must be within the subnetwork's IP range.  This field can only be used with INTERNAL type with GCE_ENDPOINT/DNS_RESOLVER purposes.</summary>
 public partial class V1beta1ComputeAddressSpecSubnetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeSubnetwork` resource.</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1ComputeAddressSpecSubnetworkRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeAddressSpec
 {
     /// <summary>Immutable. The static external IP address represented by this resource. The IP address must be inside the specified subnetwork, if any. Set by the API if undefined.</summary>
@@ -89,6 +92,7 @@ public partial class V1beta1ComputeAddressSpec
     public V1beta1ComputeAddressSpecSubnetworkRef? SubnetworkRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeAddressStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -112,6 +116,7 @@ public partial class V1beta1ComputeAddressStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary>The observed state of the underlying GCP resource.</summary>
 public partial class V1beta1ComputeAddressStatusObservedState
 {
     /// <summary>Immutable. The static external IP address represented by this resource. The IP address must be inside the specified subnetwork, if any. Set by the API if undefined.</summary>
@@ -119,6 +124,7 @@ public partial class V1beta1ComputeAddressStatusObservedState
     public string? Address { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeAddressStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -151,6 +157,7 @@ public partial class V1beta1ComputeAddressStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ComputeAddress : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeAddressSpec>, IStatus<V1beta1ComputeAddressStatus>
 {
     public const string KubeApiVersion = "v1beta1";

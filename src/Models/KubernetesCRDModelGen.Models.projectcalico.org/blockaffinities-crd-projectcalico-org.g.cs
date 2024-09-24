@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.crd.projectcalico.org;
+/// <summary>BlockAffinitySpec contains the specification for a BlockAffinity resource.</summary>
 public partial class V1BlockAffinitySpec
 {
     /// <summary></summary>
@@ -28,6 +29,7 @@ public partial class V1BlockAffinitySpec
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1BlockAffinity : IKubernetesObject<V1ObjectMeta>, ISpec<V1BlockAffinitySpec>
 {
     public const string KubeApiVersion = "v1";

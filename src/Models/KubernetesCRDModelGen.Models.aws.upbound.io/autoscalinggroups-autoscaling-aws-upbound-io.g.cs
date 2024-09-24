@@ -18,6 +18,7 @@ public enum V1beta2AutoscalingGroupSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderInitialLifecycleHook
 {
     /// <summary></summary>
@@ -49,6 +50,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderInitialLifecycleHook
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderInstanceMaintenancePolicy
 {
     /// <summary>Amount of capacity in the Auto Scaling group that can be in service and healthy, or pending, to support your workload when an instance refresh is in place, as a percentage of the desired capacity of the Auto Scaling group. Values must be between 100 and 200, defaults to 100.</summary>
@@ -60,6 +62,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderInstanceMaintenancePo
     public double? MinHealthyPercentage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderInstanceRefreshPreferencesAlarmSpecification
 {
     /// <summary>List of Cloudwatch alarms. If any of these alarms goes into ALARM state, Instance Refresh is failed.</summary>
@@ -67,6 +70,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderInstanceRefreshPrefer
     public IList<string>? Alarms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderInstanceRefreshPreferences
 {
     /// <summary>Alarm Specification for Instance Refresh.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderInstanceRefreshPrefer
     public string? StandbyInstances { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderInstanceRefresh
 {
     /// <summary>Override default parameters for Instance Refresh.</summary>
@@ -145,6 +150,7 @@ public enum V1beta2AutoscalingGroupSpecForProviderLaunchConfigurationRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderLaunchConfigurationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -158,6 +164,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderLaunchConfigurationRe
     public V1beta2AutoscalingGroupSpecForProviderLaunchConfigurationRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LaunchConfiguration in autoscaling to populate launchConfiguration.</summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderLaunchConfigurationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -189,6 +196,7 @@ public enum V1beta2AutoscalingGroupSpecForProviderLaunchConfigurationSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderLaunchConfigurationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderLaunchConfigurationSe
     public V1beta2AutoscalingGroupSpecForProviderLaunchConfigurationSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LaunchConfiguration in autoscaling to populate launchConfiguration.</summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderLaunchConfigurationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -237,6 +246,7 @@ public enum V1beta2AutoscalingGroupSpecForProviderLaunchTemplateIdRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderLaunchTemplateIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -250,6 +260,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderLaunchTemplateIdRefPo
     public V1beta2AutoscalingGroupSpecForProviderLaunchTemplateIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LaunchTemplate in ec2 to populate id.</summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderLaunchTemplateIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -281,6 +292,7 @@ public enum V1beta2AutoscalingGroupSpecForProviderLaunchTemplateIdSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderLaunchTemplateIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderLaunchTemplateIdSelec
     public V1beta2AutoscalingGroupSpecForProviderLaunchTemplateIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LaunchTemplate in ec2 to populate id.</summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderLaunchTemplateIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -309,6 +322,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderLaunchTemplateIdSelec
     public V1beta2AutoscalingGroupSpecForProviderLaunchTemplateIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderLaunchTemplate
 {
     /// <summary>ID of the launch template. Conflicts with name.</summary>
@@ -332,6 +346,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderLaunchTemplate
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyInstancesDistribution
 {
     /// <summary>Strategy to use when launching on-demand instances. Valid values: prioritized, lowest-price. Default: prioritized.</summary>
@@ -379,6 +394,7 @@ public enum V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemp
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationLaunchTemplateIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -392,6 +408,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     public V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationLaunchTemplateIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LaunchTemplate in ec2 to populate launchTemplateId.</summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationLaunchTemplateIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -423,6 +440,7 @@ public enum V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemp
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationLaunchTemplateIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -436,6 +454,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     public V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationLaunchTemplateIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LaunchTemplate in ec2 to populate launchTemplateId.</summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationLaunchTemplateIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -451,6 +470,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     public V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationLaunchTemplateIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification
 {
     /// <summary>ID of the launch template. Conflicts with launch_template_name.</summary>
@@ -474,6 +494,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsAcceleratorCount
 {
     /// <summary>Maximum.</summary>
@@ -485,6 +506,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsAcceleratorTotalMemoryMib
 {
     /// <summary>Maximum.</summary>
@@ -496,6 +518,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsBaselineEbsBandwidthMbps
 {
     /// <summary>Maximum.</summary>
@@ -507,6 +530,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsMemoryGibPerVcpu
 {
     /// <summary>Maximum.</summary>
@@ -518,6 +542,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsMemoryMib
 {
     /// <summary>Maximum.</summary>
@@ -529,6 +554,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsNetworkBandwidthGbps
 {
     /// <summary>Maximum.</summary>
@@ -540,6 +566,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsNetworkInterfaceCount
 {
     /// <summary>Maximum.</summary>
@@ -551,6 +578,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsTotalLocalStorageGb
 {
     /// <summary>Maximum.</summary>
@@ -562,6 +590,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsVcpuCount
 {
     /// <summary>Maximum.</summary>
@@ -573,6 +602,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirements
 {
     /// <summary>Block describing the minimum and maximum number of accelerators (GPUs, FPGAs, or AWS Inferentia chips). Default is no minimum or maximum.</summary>
@@ -692,6 +722,7 @@ public enum V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemp
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationLaunchTemplateIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -705,6 +736,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     public V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationLaunchTemplateIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LaunchTemplate in ec2 to populate launchTemplateId.</summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationLaunchTemplateIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -736,6 +768,7 @@ public enum V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemp
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationLaunchTemplateIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -749,6 +782,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     public V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationLaunchTemplateIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LaunchTemplate in ec2 to populate launchTemplateId.</summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationLaunchTemplateIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -764,6 +798,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     public V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationLaunchTemplateIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecification
 {
     /// <summary>ID of the launch template. Conflicts with launch_template_name.</summary>
@@ -787,6 +822,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverride
 {
     /// <summary>Override the instance type in the Launch Template with instance types that satisfy the requirements.</summary>
@@ -806,6 +842,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     public string? WeightedCapacity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplate
 {
     /// <summary>Nested argument defines the Launch Template. Defined below.</summary>
@@ -817,6 +854,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyL
     public IList<V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicyLaunchTemplateOverride>? Override { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderMixedInstancesPolicy
 {
     /// <summary>Nested argument containing settings on how to mix on-demand and Spot instances in the Auto Scaling group. Defined below.</summary>
@@ -848,6 +886,7 @@ public enum V1beta2AutoscalingGroupSpecForProviderPlacementGroupRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderPlacementGroupRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -861,6 +900,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderPlacementGroupRefPoli
     public V1beta2AutoscalingGroupSpecForProviderPlacementGroupRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a PlacementGroup in ec2 to populate placementGroup.</summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderPlacementGroupRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -892,6 +932,7 @@ public enum V1beta2AutoscalingGroupSpecForProviderPlacementGroupSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderPlacementGroupSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -905,6 +946,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderPlacementGroupSelecto
     public V1beta2AutoscalingGroupSpecForProviderPlacementGroupSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a PlacementGroup in ec2 to populate placementGroup.</summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderPlacementGroupSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -940,6 +982,7 @@ public enum V1beta2AutoscalingGroupSpecForProviderServiceLinkedRoleArnRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderServiceLinkedRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -953,6 +996,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderServiceLinkedRoleArnR
     public V1beta2AutoscalingGroupSpecForProviderServiceLinkedRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate serviceLinkedRoleArn.</summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderServiceLinkedRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -984,6 +1028,7 @@ public enum V1beta2AutoscalingGroupSpecForProviderServiceLinkedRoleArnSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderServiceLinkedRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -997,6 +1042,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderServiceLinkedRoleArnS
     public V1beta2AutoscalingGroupSpecForProviderServiceLinkedRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate serviceLinkedRoleArn.</summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderServiceLinkedRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1012,6 +1058,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderServiceLinkedRoleArnS
     public V1beta2AutoscalingGroupSpecForProviderServiceLinkedRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderTag
 {
     /// <summary>Key</summary>
@@ -1027,6 +1074,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderTag
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderTrafficSource
 {
     /// <summary>Identifies the traffic source. For Application Load Balancers, Gateway Load Balancers, Network Load Balancers, and VPC Lattice, this will be the Amazon Resource Name (ARN) for a target group in this account and Region. For Classic Load Balancers, this will be the name of the Classic Load Balancer in this account and Region.</summary>
@@ -1058,6 +1106,7 @@ public enum V1beta2AutoscalingGroupSpecForProviderVpcZoneIdentifierRefsPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderVpcZoneIdentifierRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1071,6 +1120,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderVpcZoneIdentifierRefs
     public V1beta2AutoscalingGroupSpecForProviderVpcZoneIdentifierRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderVpcZoneIdentifierRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1102,6 +1152,7 @@ public enum V1beta2AutoscalingGroupSpecForProviderVpcZoneIdentifierSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderVpcZoneIdentifierSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1115,6 +1166,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderVpcZoneIdentifierSele
     public V1beta2AutoscalingGroupSpecForProviderVpcZoneIdentifierSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate vpcZoneIdentifier.</summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderVpcZoneIdentifierSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1130,6 +1182,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderVpcZoneIdentifierSele
     public V1beta2AutoscalingGroupSpecForProviderVpcZoneIdentifierSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderWarmPoolInstanceReusePolicy
 {
     /// <summary>Whether instances in the Auto Scaling group can be returned to the warm pool on scale in.</summary>
@@ -1137,6 +1190,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderWarmPoolInstanceReuse
     public bool? ReuseOnScaleIn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecForProviderWarmPool
 {
     /// <summary>Whether instances in the Auto Scaling group can be returned to the warm pool on scale in. The default is to terminate instances in the Auto Scaling group when the group scales in.</summary>
@@ -1156,6 +1210,7 @@ public partial class V1beta2AutoscalingGroupSpecForProviderWarmPool
     public string? PoolState { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecForProvider
 {
     /// <summary>A list of Availability Zones where instances in the Auto Scaling group can be created. Used for launching into the default VPC subnet in each Availability Zone when not using the vpc_zone_identifier attribute, or for attaching a network interface when an existing network interface ID is specified in a launch template. Conflicts with vpc_zone_identifier.</summary>
@@ -1335,6 +1390,7 @@ public partial class V1beta2AutoscalingGroupSpecForProvider
     public IList<V1beta2AutoscalingGroupSpecForProviderWarmPool>? WarmPool { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderInitialLifecycleHook
 {
     /// <summary></summary>
@@ -1366,6 +1422,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderInitialLifecycleHook
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderInstanceMaintenancePolicy
 {
     /// <summary>Amount of capacity in the Auto Scaling group that can be in service and healthy, or pending, to support your workload when an instance refresh is in place, as a percentage of the desired capacity of the Auto Scaling group. Values must be between 100 and 200, defaults to 100.</summary>
@@ -1377,6 +1434,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderInstanceMaintenanceP
     public double? MinHealthyPercentage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderInstanceRefreshPreferencesAlarmSpecification
 {
     /// <summary>List of Cloudwatch alarms. If any of these alarms goes into ALARM state, Instance Refresh is failed.</summary>
@@ -1384,6 +1442,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderInstanceRefreshPrefe
     public IList<string>? Alarms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderInstanceRefreshPreferences
 {
     /// <summary>Alarm Specification for Instance Refresh.</summary>
@@ -1427,6 +1486,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderInstanceRefreshPrefe
     public string? StandbyInstances { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderInstanceRefresh
 {
     /// <summary>Override default parameters for Instance Refresh.</summary>
@@ -1462,6 +1522,7 @@ public enum V1beta2AutoscalingGroupSpecInitProviderLaunchConfigurationRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderLaunchConfigurationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1475,6 +1536,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderLaunchConfigurationR
     public V1beta2AutoscalingGroupSpecInitProviderLaunchConfigurationRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LaunchConfiguration in autoscaling to populate launchConfiguration.</summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderLaunchConfigurationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1506,6 +1568,7 @@ public enum V1beta2AutoscalingGroupSpecInitProviderLaunchConfigurationSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderLaunchConfigurationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1519,6 +1582,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderLaunchConfigurationS
     public V1beta2AutoscalingGroupSpecInitProviderLaunchConfigurationSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LaunchConfiguration in autoscaling to populate launchConfiguration.</summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderLaunchConfigurationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1554,6 +1618,7 @@ public enum V1beta2AutoscalingGroupSpecInitProviderLaunchTemplateIdRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderLaunchTemplateIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1567,6 +1632,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderLaunchTemplateIdRefP
     public V1beta2AutoscalingGroupSpecInitProviderLaunchTemplateIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LaunchTemplate in ec2 to populate id.</summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderLaunchTemplateIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1598,6 +1664,7 @@ public enum V1beta2AutoscalingGroupSpecInitProviderLaunchTemplateIdSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderLaunchTemplateIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1611,6 +1678,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderLaunchTemplateIdSele
     public V1beta2AutoscalingGroupSpecInitProviderLaunchTemplateIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LaunchTemplate in ec2 to populate id.</summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderLaunchTemplateIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1626,6 +1694,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderLaunchTemplateIdSele
     public V1beta2AutoscalingGroupSpecInitProviderLaunchTemplateIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderLaunchTemplate
 {
     /// <summary>ID of the launch template. Conflicts with name.</summary>
@@ -1649,6 +1718,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderLaunchTemplate
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyInstancesDistribution
 {
     /// <summary>Strategy to use when launching on-demand instances. Valid values: prioritized, lowest-price. Default: prioritized.</summary>
@@ -1696,6 +1766,7 @@ public enum V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTem
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationLaunchTemplateIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1709,6 +1780,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     public V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationLaunchTemplateIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LaunchTemplate in ec2 to populate launchTemplateId.</summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationLaunchTemplateIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1740,6 +1812,7 @@ public enum V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTem
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationLaunchTemplateIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1753,6 +1826,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     public V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationLaunchTemplateIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LaunchTemplate in ec2 to populate launchTemplateId.</summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationLaunchTemplateIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1768,6 +1842,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     public V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationLaunchTemplateIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification
 {
     /// <summary>ID of the launch template. Conflicts with launch_template_name.</summary>
@@ -1791,6 +1866,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsAcceleratorCount
 {
     /// <summary>Maximum.</summary>
@@ -1802,6 +1878,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsAcceleratorTotalMemoryMib
 {
     /// <summary>Maximum.</summary>
@@ -1813,6 +1890,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsBaselineEbsBandwidthMbps
 {
     /// <summary>Maximum.</summary>
@@ -1824,6 +1902,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsMemoryGibPerVcpu
 {
     /// <summary>Maximum.</summary>
@@ -1835,6 +1914,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsMemoryMib
 {
     /// <summary>Maximum.</summary>
@@ -1846,6 +1926,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsNetworkBandwidthGbps
 {
     /// <summary>Maximum.</summary>
@@ -1857,6 +1938,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsNetworkInterfaceCount
 {
     /// <summary>Maximum.</summary>
@@ -1868,6 +1950,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsTotalLocalStorageGb
 {
     /// <summary>Maximum.</summary>
@@ -1879,6 +1962,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsVcpuCount
 {
     /// <summary>Maximum.</summary>
@@ -1890,6 +1974,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirements
 {
     /// <summary>Block describing the minimum and maximum number of accelerators (GPUs, FPGAs, or AWS Inferentia chips). Default is no minimum or maximum.</summary>
@@ -2009,6 +2094,7 @@ public enum V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTem
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationLaunchTemplateIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2022,6 +2108,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     public V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationLaunchTemplateIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LaunchTemplate in ec2 to populate launchTemplateId.</summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationLaunchTemplateIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2053,6 +2140,7 @@ public enum V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTem
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationLaunchTemplateIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2066,6 +2154,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     public V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationLaunchTemplateIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LaunchTemplate in ec2 to populate launchTemplateId.</summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationLaunchTemplateIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2081,6 +2170,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     public V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationLaunchTemplateIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecification
 {
     /// <summary>ID of the launch template. Conflicts with launch_template_name.</summary>
@@ -2104,6 +2194,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverride
 {
     /// <summary>Override the instance type in the Launch Template with instance types that satisfy the requirements.</summary>
@@ -2123,6 +2214,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     public string? WeightedCapacity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplate
 {
     /// <summary>Nested argument defines the Launch Template. Defined below.</summary>
@@ -2134,6 +2226,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
     public IList<V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicyLaunchTemplateOverride>? Override { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderMixedInstancesPolicy
 {
     /// <summary>Nested argument containing settings on how to mix on-demand and Spot instances in the Auto Scaling group. Defined below.</summary>
@@ -2165,6 +2258,7 @@ public enum V1beta2AutoscalingGroupSpecInitProviderPlacementGroupRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderPlacementGroupRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2178,6 +2272,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderPlacementGroupRefPol
     public V1beta2AutoscalingGroupSpecInitProviderPlacementGroupRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a PlacementGroup in ec2 to populate placementGroup.</summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderPlacementGroupRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2209,6 +2304,7 @@ public enum V1beta2AutoscalingGroupSpecInitProviderPlacementGroupSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderPlacementGroupSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2222,6 +2318,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderPlacementGroupSelect
     public V1beta2AutoscalingGroupSpecInitProviderPlacementGroupSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a PlacementGroup in ec2 to populate placementGroup.</summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderPlacementGroupSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2257,6 +2354,7 @@ public enum V1beta2AutoscalingGroupSpecInitProviderServiceLinkedRoleArnRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderServiceLinkedRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2270,6 +2368,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderServiceLinkedRoleArn
     public V1beta2AutoscalingGroupSpecInitProviderServiceLinkedRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate serviceLinkedRoleArn.</summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderServiceLinkedRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2301,6 +2400,7 @@ public enum V1beta2AutoscalingGroupSpecInitProviderServiceLinkedRoleArnSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderServiceLinkedRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2314,6 +2414,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderServiceLinkedRoleArn
     public V1beta2AutoscalingGroupSpecInitProviderServiceLinkedRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate serviceLinkedRoleArn.</summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderServiceLinkedRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2329,6 +2430,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderServiceLinkedRoleArn
     public V1beta2AutoscalingGroupSpecInitProviderServiceLinkedRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderTag
 {
     /// <summary>Key</summary>
@@ -2344,6 +2446,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderTag
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderTrafficSource
 {
     /// <summary>Identifies the traffic source. For Application Load Balancers, Gateway Load Balancers, Network Load Balancers, and VPC Lattice, this will be the Amazon Resource Name (ARN) for a target group in this account and Region. For Classic Load Balancers, this will be the name of the Classic Load Balancer in this account and Region.</summary>
@@ -2375,6 +2478,7 @@ public enum V1beta2AutoscalingGroupSpecInitProviderVpcZoneIdentifierRefsPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderVpcZoneIdentifierRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2388,6 +2492,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderVpcZoneIdentifierRef
     public V1beta2AutoscalingGroupSpecInitProviderVpcZoneIdentifierRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderVpcZoneIdentifierRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2419,6 +2524,7 @@ public enum V1beta2AutoscalingGroupSpecInitProviderVpcZoneIdentifierSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderVpcZoneIdentifierSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2432,6 +2538,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderVpcZoneIdentifierSel
     public V1beta2AutoscalingGroupSpecInitProviderVpcZoneIdentifierSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate vpcZoneIdentifier.</summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderVpcZoneIdentifierSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2447,6 +2554,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderVpcZoneIdentifierSel
     public V1beta2AutoscalingGroupSpecInitProviderVpcZoneIdentifierSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderWarmPoolInstanceReusePolicy
 {
     /// <summary>Whether instances in the Auto Scaling group can be returned to the warm pool on scale in.</summary>
@@ -2454,6 +2562,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderWarmPoolInstanceReus
     public bool? ReuseOnScaleIn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupSpecInitProviderWarmPool
 {
     /// <summary>Whether instances in the Auto Scaling group can be returned to the warm pool on scale in. The default is to terminate instances in the Auto Scaling group when the group scales in.</summary>
@@ -2473,6 +2582,7 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderWarmPool
     public string? PoolState { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta2AutoscalingGroupSpecInitProvider
 {
     /// <summary>A list of Availability Zones where instances in the Auto Scaling group can be created. Used for launching into the default VPC subnet in each Availability Zone when not using the vpc_zone_identifier attribute, or for attaching a network interface when an existing network interface ID is specified in a launch template. Conflicts with vpc_zone_identifier.</summary>
@@ -2690,6 +2800,7 @@ public enum V1beta2AutoscalingGroupSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2AutoscalingGroupSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2703,6 +2814,7 @@ public partial class V1beta2AutoscalingGroupSpecProviderConfigRefPolicy
     public V1beta2AutoscalingGroupSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta2AutoscalingGroupSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2734,6 +2846,7 @@ public enum V1beta2AutoscalingGroupSpecPublishConnectionDetailsToConfigRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2AutoscalingGroupSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2747,6 +2860,7 @@ public partial class V1beta2AutoscalingGroupSpecPublishConnectionDetailsToConfig
     public V1beta2AutoscalingGroupSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta2AutoscalingGroupSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2758,6 +2872,7 @@ public partial class V1beta2AutoscalingGroupSpecPublishConnectionDetailsToConfig
     public V1beta2AutoscalingGroupSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta2AutoscalingGroupSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -2773,6 +2888,7 @@ public partial class V1beta2AutoscalingGroupSpecPublishConnectionDetailsToMetada
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta2AutoscalingGroupSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -2788,6 +2904,7 @@ public partial class V1beta2AutoscalingGroupSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta2AutoscalingGroupSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -2799,6 +2916,7 @@ public partial class V1beta2AutoscalingGroupSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>AutoscalingGroupSpec defines the desired state of AutoscalingGroup</summary>
 public partial class V1beta2AutoscalingGroupSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -2831,6 +2949,7 @@ public partial class V1beta2AutoscalingGroupSpec
     public V1beta2AutoscalingGroupSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupStatusAtProviderInitialLifecycleHook
 {
     /// <summary></summary>
@@ -2862,6 +2981,7 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderInitialLifecycleHook
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupStatusAtProviderInstanceMaintenancePolicy
 {
     /// <summary>Amount of capacity in the Auto Scaling group that can be in service and healthy, or pending, to support your workload when an instance refresh is in place, as a percentage of the desired capacity of the Auto Scaling group. Values must be between 100 and 200, defaults to 100.</summary>
@@ -2873,6 +2993,7 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderInstanceMaintenanceP
     public double? MinHealthyPercentage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupStatusAtProviderInstanceRefreshPreferencesAlarmSpecification
 {
     /// <summary>List of Cloudwatch alarms. If any of these alarms goes into ALARM state, Instance Refresh is failed.</summary>
@@ -2880,6 +3001,7 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderInstanceRefreshPrefe
     public IList<string>? Alarms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupStatusAtProviderInstanceRefreshPreferences
 {
     /// <summary>Alarm Specification for Instance Refresh.</summary>
@@ -2923,6 +3045,7 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderInstanceRefreshPrefe
     public string? StandbyInstances { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupStatusAtProviderInstanceRefresh
 {
     /// <summary>Override default parameters for Instance Refresh.</summary>
@@ -2938,6 +3061,7 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderInstanceRefresh
     public IList<string>? Triggers { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupStatusAtProviderLaunchTemplate
 {
     /// <summary>ID of the launch template. Conflicts with name.</summary>
@@ -2953,6 +3077,7 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderLaunchTemplate
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicyInstancesDistribution
 {
     /// <summary>Strategy to use when launching on-demand instances. Valid values: prioritized, lowest-price. Default: prioritized.</summary>
@@ -2980,6 +3105,7 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicy
     public string? SpotMaxPrice { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification
 {
     /// <summary>ID of the launch template. Conflicts with launch_template_name.</summary>
@@ -2995,6 +3121,7 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicy
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsAcceleratorCount
 {
     /// <summary>Maximum.</summary>
@@ -3006,6 +3133,7 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicy
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsAcceleratorTotalMemoryMib
 {
     /// <summary>Maximum.</summary>
@@ -3017,6 +3145,7 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicy
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsBaselineEbsBandwidthMbps
 {
     /// <summary>Maximum.</summary>
@@ -3028,6 +3157,7 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicy
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsMemoryGibPerVcpu
 {
     /// <summary>Maximum.</summary>
@@ -3039,6 +3169,7 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicy
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsMemoryMib
 {
     /// <summary>Maximum.</summary>
@@ -3050,6 +3181,7 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicy
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsNetworkBandwidthGbps
 {
     /// <summary>Maximum.</summary>
@@ -3061,6 +3193,7 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicy
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsNetworkInterfaceCount
 {
     /// <summary>Maximum.</summary>
@@ -3072,6 +3205,7 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicy
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsTotalLocalStorageGb
 {
     /// <summary>Maximum.</summary>
@@ -3083,6 +3217,7 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicy
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsVcpuCount
 {
     /// <summary>Maximum.</summary>
@@ -3094,6 +3229,7 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicy
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirements
 {
     /// <summary>Block describing the minimum and maximum number of accelerators (GPUs, FPGAs, or AWS Inferentia chips). Default is no minimum or maximum.</summary>
@@ -3193,6 +3329,7 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicy
     public IList<V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsVcpuCount>? VcpuCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecification
 {
     /// <summary>ID of the launch template. Conflicts with launch_template_name.</summary>
@@ -3208,6 +3345,7 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicy
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicyLaunchTemplateOverride
 {
     /// <summary>Override the instance type in the Launch Template with instance types that satisfy the requirements.</summary>
@@ -3227,6 +3365,7 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicy
     public string? WeightedCapacity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicyLaunchTemplate
 {
     /// <summary>Nested argument defines the Launch Template. Defined below.</summary>
@@ -3238,6 +3377,7 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicy
     public IList<V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicyLaunchTemplateOverride>? Override { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicy
 {
     /// <summary>Nested argument containing settings on how to mix on-demand and Spot instances in the Auto Scaling group. Defined below.</summary>
@@ -3249,6 +3389,7 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicy
     public IList<V1beta2AutoscalingGroupStatusAtProviderMixedInstancesPolicyLaunchTemplate>? LaunchTemplate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupStatusAtProviderTag
 {
     /// <summary>Key</summary>
@@ -3264,6 +3405,7 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderTag
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupStatusAtProviderTrafficSource
 {
     /// <summary>Identifies the traffic source. For Application Load Balancers, Gateway Load Balancers, Network Load Balancers, and VPC Lattice, this will be the Amazon Resource Name (ARN) for a target group in this account and Region. For Classic Load Balancers, this will be the name of the Classic Load Balancer in this account and Region.</summary>
@@ -3275,6 +3417,7 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderTrafficSource
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupStatusAtProviderWarmPoolInstanceReusePolicy
 {
     /// <summary>Whether instances in the Auto Scaling group can be returned to the warm pool on scale in.</summary>
@@ -3282,6 +3425,7 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderWarmPoolInstanceReus
     public bool? ReuseOnScaleIn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupStatusAtProviderWarmPool
 {
     /// <summary>Whether instances in the Auto Scaling group can be returned to the warm pool on scale in. The default is to terminate instances in the Auto Scaling group when the group scales in.</summary>
@@ -3301,6 +3445,7 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderWarmPool
     public string? PoolState { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2AutoscalingGroupStatusAtProvider
 {
     /// <summary>ARN for this Auto Scaling Group</summary>
@@ -3468,6 +3613,7 @@ public partial class V1beta2AutoscalingGroupStatusAtProvider
     public double? WarmPoolSize { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta2AutoscalingGroupStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -3495,6 +3641,7 @@ public partial class V1beta2AutoscalingGroupStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>AutoscalingGroupStatus defines the observed state of AutoscalingGroup.</summary>
 public partial class V1beta2AutoscalingGroupStatus
 {
     /// <summary></summary>
@@ -3511,6 +3658,7 @@ public partial class V1beta2AutoscalingGroupStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>AutoscalingGroup is the Schema for the AutoscalingGroups API. Provides an Auto Scaling Group resource.</summary>
 public partial class V1beta2AutoscalingGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta2AutoscalingGroupSpec>, IStatus<V1beta2AutoscalingGroupStatus>
 {
     public const string KubeApiVersion = "v1beta2";

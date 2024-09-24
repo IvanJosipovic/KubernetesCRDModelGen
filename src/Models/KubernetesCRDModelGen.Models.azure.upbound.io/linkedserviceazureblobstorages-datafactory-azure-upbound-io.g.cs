@@ -18,6 +18,7 @@ public enum V1beta1LinkedServiceAzureBlobStorageSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>The connection string. Conflicts with connection_string_insecure, sas_uri and service_endpoint.</summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageSpecForProviderConnectionStringSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -53,6 +54,7 @@ public enum V1beta1LinkedServiceAzureBlobStorageSpecForProviderDataFactoryIdRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageSpecForProviderDataFactoryIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -66,6 +68,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageSpecForProviderDataFact
     public V1beta1LinkedServiceAzureBlobStorageSpecForProviderDataFactoryIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Factory in datafactory to populate dataFactoryId.</summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageSpecForProviderDataFactoryIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -97,6 +100,7 @@ public enum V1beta1LinkedServiceAzureBlobStorageSpecForProviderDataFactoryIdSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageSpecForProviderDataFactoryIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageSpecForProviderDataFact
     public V1beta1LinkedServiceAzureBlobStorageSpecForProviderDataFactoryIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Factory in datafactory to populate dataFactoryId.</summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageSpecForProviderDataFactoryIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -145,6 +150,7 @@ public enum V1beta1LinkedServiceAzureBlobStorageSpecForProviderKeyVaultSasTokenL
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageSpecForProviderKeyVaultSasTokenLinkedServiceNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -158,6 +164,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageSpecForProviderKeyVault
     public V1beta1LinkedServiceAzureBlobStorageSpecForProviderKeyVaultSasTokenLinkedServiceNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LinkedServiceKeyVault in datafactory to populate linkedServiceName.</summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageSpecForProviderKeyVaultSasTokenLinkedServiceNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -189,6 +196,7 @@ public enum V1beta1LinkedServiceAzureBlobStorageSpecForProviderKeyVaultSasTokenL
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageSpecForProviderKeyVaultSasTokenLinkedServiceNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageSpecForProviderKeyVault
     public V1beta1LinkedServiceAzureBlobStorageSpecForProviderKeyVaultSasTokenLinkedServiceNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LinkedServiceKeyVault in datafactory to populate linkedServiceName.</summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageSpecForProviderKeyVaultSasTokenLinkedServiceNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -217,6 +226,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageSpecForProviderKeyVault
     public V1beta1LinkedServiceAzureBlobStorageSpecForProviderKeyVaultSasTokenLinkedServiceNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageSpecForProviderKeyVaultSasToken
 {
     /// <summary>Specifies the name of an existing Key Vault Data Factory Linked Service.</summary>
@@ -236,6 +246,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageSpecForProviderKeyVault
     public string? SecretName { get; set; }
 }
 
+/// <summary>The SAS URI. Conflicts with connection_string_insecure, connection_string and service_endpoint.</summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageSpecForProviderSasuriSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -251,6 +262,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageSpecForProviderSasuriSe
     public string Namespace { get; set; }
 }
 
+/// <summary>The Service Endpoint. Conflicts with connection_string, connection_string_insecure and sas_uri.</summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageSpecForProviderServiceEndpointSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -286,6 +298,7 @@ public enum V1beta1LinkedServiceAzureBlobStorageSpecForProviderServicePrincipalL
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageSpecForProviderServicePrincipalLinkedKeyVaultKeyLinkedServiceNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -299,6 +312,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageSpecForProviderServiceP
     public V1beta1LinkedServiceAzureBlobStorageSpecForProviderServicePrincipalLinkedKeyVaultKeyLinkedServiceNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LinkedServiceKeyVault in datafactory to populate linkedServiceName.</summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageSpecForProviderServicePrincipalLinkedKeyVaultKeyLinkedServiceNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -330,6 +344,7 @@ public enum V1beta1LinkedServiceAzureBlobStorageSpecForProviderServicePrincipalL
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageSpecForProviderServicePrincipalLinkedKeyVaultKeyLinkedServiceNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -343,6 +358,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageSpecForProviderServiceP
     public V1beta1LinkedServiceAzureBlobStorageSpecForProviderServicePrincipalLinkedKeyVaultKeyLinkedServiceNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LinkedServiceKeyVault in datafactory to populate linkedServiceName.</summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageSpecForProviderServicePrincipalLinkedKeyVaultKeyLinkedServiceNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -358,6 +374,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageSpecForProviderServiceP
     public V1beta1LinkedServiceAzureBlobStorageSpecForProviderServicePrincipalLinkedKeyVaultKeyLinkedServiceNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageSpecForProviderServicePrincipalLinkedKeyVaultKey
 {
     /// <summary>Specifies the name of an existing Key Vault Data Factory Linked Service.</summary>
@@ -377,6 +394,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageSpecForProviderServiceP
     public string? SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageSpecForProvider
 {
     /// <summary>A map of additional properties to associate with the Data Factory Linked Service.</summary>
@@ -476,6 +494,7 @@ public enum V1beta1LinkedServiceAzureBlobStorageSpecInitProviderKeyVaultSasToken
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageSpecInitProviderKeyVaultSasTokenLinkedServiceNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -489,6 +508,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageSpecInitProviderKeyVaul
     public V1beta1LinkedServiceAzureBlobStorageSpecInitProviderKeyVaultSasTokenLinkedServiceNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LinkedServiceKeyVault in datafactory to populate linkedServiceName.</summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageSpecInitProviderKeyVaultSasTokenLinkedServiceNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -520,6 +540,7 @@ public enum V1beta1LinkedServiceAzureBlobStorageSpecInitProviderKeyVaultSasToken
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageSpecInitProviderKeyVaultSasTokenLinkedServiceNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -533,6 +554,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageSpecInitProviderKeyVaul
     public V1beta1LinkedServiceAzureBlobStorageSpecInitProviderKeyVaultSasTokenLinkedServiceNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LinkedServiceKeyVault in datafactory to populate linkedServiceName.</summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageSpecInitProviderKeyVaultSasTokenLinkedServiceNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -548,6 +570,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageSpecInitProviderKeyVaul
     public V1beta1LinkedServiceAzureBlobStorageSpecInitProviderKeyVaultSasTokenLinkedServiceNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageSpecInitProviderKeyVaultSasToken
 {
     /// <summary>Specifies the name of an existing Key Vault Data Factory Linked Service.</summary>
@@ -587,6 +610,7 @@ public enum V1beta1LinkedServiceAzureBlobStorageSpecInitProviderServicePrincipal
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageSpecInitProviderServicePrincipalLinkedKeyVaultKeyLinkedServiceNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -600,6 +624,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageSpecInitProviderService
     public V1beta1LinkedServiceAzureBlobStorageSpecInitProviderServicePrincipalLinkedKeyVaultKeyLinkedServiceNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LinkedServiceKeyVault in datafactory to populate linkedServiceName.</summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageSpecInitProviderServicePrincipalLinkedKeyVaultKeyLinkedServiceNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -631,6 +656,7 @@ public enum V1beta1LinkedServiceAzureBlobStorageSpecInitProviderServicePrincipal
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageSpecInitProviderServicePrincipalLinkedKeyVaultKeyLinkedServiceNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -644,6 +670,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageSpecInitProviderService
     public V1beta1LinkedServiceAzureBlobStorageSpecInitProviderServicePrincipalLinkedKeyVaultKeyLinkedServiceNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LinkedServiceKeyVault in datafactory to populate linkedServiceName.</summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageSpecInitProviderServicePrincipalLinkedKeyVaultKeyLinkedServiceNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -659,6 +686,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageSpecInitProviderService
     public V1beta1LinkedServiceAzureBlobStorageSpecInitProviderServicePrincipalLinkedKeyVaultKeyLinkedServiceNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageSpecInitProviderServicePrincipalLinkedKeyVaultKey
 {
     /// <summary>Specifies the name of an existing Key Vault Data Factory Linked Service.</summary>
@@ -678,6 +706,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageSpecInitProviderService
     public string? SecretName { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageSpecInitProvider
 {
     /// <summary>A map of additional properties to associate with the Data Factory Linked Service.</summary>
@@ -775,6 +804,7 @@ public enum V1beta1LinkedServiceAzureBlobStorageSpecProviderConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -788,6 +818,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageSpecProviderConfigRefPo
     public V1beta1LinkedServiceAzureBlobStorageSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -819,6 +850,7 @@ public enum V1beta1LinkedServiceAzureBlobStorageSpecPublishConnectionDetailsToCo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -832,6 +864,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageSpecPublishConnectionDe
     public V1beta1LinkedServiceAzureBlobStorageSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -843,6 +876,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageSpecPublishConnectionDe
     public V1beta1LinkedServiceAzureBlobStorageSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -858,6 +892,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageSpecPublishConnectionDe
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -873,6 +908,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageSpecPublishConnectionDe
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -884,6 +920,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageSpecWriteConnectionSecr
     public string Namespace { get; set; }
 }
 
+/// <summary>LinkedServiceAzureBlobStorageSpec defines the desired state of LinkedServiceAzureBlobStorage</summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -916,6 +953,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageSpec
     public V1beta1LinkedServiceAzureBlobStorageSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageStatusAtProviderKeyVaultSasToken
 {
     /// <summary>Specifies the name of an existing Key Vault Data Factory Linked Service.</summary>
@@ -927,6 +965,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageStatusAtProviderKeyVaul
     public string? SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageStatusAtProviderServicePrincipalLinkedKeyVaultKey
 {
     /// <summary>Specifies the name of an existing Key Vault Data Factory Linked Service.</summary>
@@ -938,6 +977,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageStatusAtProviderService
     public string? SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageStatusAtProvider
 {
     /// <summary>A map of additional properties to associate with the Data Factory Linked Service.</summary>
@@ -1001,6 +1041,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageStatusAtProvider
     public bool? UseManagedIdentity { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1028,6 +1069,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>LinkedServiceAzureBlobStorageStatus defines the observed state of LinkedServiceAzureBlobStorage.</summary>
 public partial class V1beta1LinkedServiceAzureBlobStorageStatus
 {
     /// <summary></summary>
@@ -1044,6 +1086,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>LinkedServiceAzureBlobStorage is the Schema for the LinkedServiceAzureBlobStorages API. Manages a Linked Service (connection) between an Azure Blob Storage Account and Azure Data Factory.</summary>
 public partial class V1beta1LinkedServiceAzureBlobStorage : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LinkedServiceAzureBlobStorageSpec>, IStatus<V1beta1LinkedServiceAzureBlobStorageStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -38,6 +38,7 @@ public enum V1beta1LogAnalyticsLinkedServiceSpecForProviderReadAccessIdRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderReadAccessIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderReadAccessId
     public V1beta1LogAnalyticsLinkedServiceSpecForProviderReadAccessIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in automation to populate readAccessId.</summary>
 public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderReadAccessIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1LogAnalyticsLinkedServiceSpecForProviderReadAccessIdSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderReadAccessIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderReadAccessId
     public V1beta1LogAnalyticsLinkedServiceSpecForProviderReadAccessIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in automation to populate readAccessId.</summary>
 public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderReadAccessIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1LogAnalyticsLinkedServiceSpecForProviderResourceGroupNameRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderResourceGrou
     public V1beta1LogAnalyticsLinkedServiceSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1LogAnalyticsLinkedServiceSpecForProviderResourceGroupNameSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderResourceGrou
     public V1beta1LogAnalyticsLinkedServiceSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1LogAnalyticsLinkedServiceSpecForProviderWorkspaceIdRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderWorkspaceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderWorkspaceIdR
     public V1beta1LogAnalyticsLinkedServiceSpecForProviderWorkspaceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Workspace in operationalinsights to populate workspaceId.</summary>
 public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderWorkspaceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1LogAnalyticsLinkedServiceSpecForProviderWorkspaceIdSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderWorkspaceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderWorkspaceIdS
     public V1beta1LogAnalyticsLinkedServiceSpecForProviderWorkspaceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Workspace in operationalinsights to populate workspaceId.</summary>
 public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderWorkspaceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecForProviderWorkspaceIdS
     public V1beta1LogAnalyticsLinkedServiceSpecForProviderWorkspaceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LogAnalyticsLinkedServiceSpecForProvider
 {
     /// <summary>The ID of the readable Resource that will be linked to the workspace. This should be used for linking to an Automation Account resource.</summary>
@@ -357,6 +370,7 @@ public enum V1beta1LogAnalyticsLinkedServiceSpecInitProviderReadAccessIdRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LogAnalyticsLinkedServiceSpecInitProviderReadAccessIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -370,6 +384,7 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecInitProviderReadAccessI
     public V1beta1LogAnalyticsLinkedServiceSpecInitProviderReadAccessIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in automation to populate readAccessId.</summary>
 public partial class V1beta1LogAnalyticsLinkedServiceSpecInitProviderReadAccessIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -401,6 +416,7 @@ public enum V1beta1LogAnalyticsLinkedServiceSpecInitProviderReadAccessIdSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LogAnalyticsLinkedServiceSpecInitProviderReadAccessIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -414,6 +430,7 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecInitProviderReadAccessI
     public V1beta1LogAnalyticsLinkedServiceSpecInitProviderReadAccessIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in automation to populate readAccessId.</summary>
 public partial class V1beta1LogAnalyticsLinkedServiceSpecInitProviderReadAccessIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -449,6 +466,7 @@ public enum V1beta1LogAnalyticsLinkedServiceSpecInitProviderResourceGroupNameRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LogAnalyticsLinkedServiceSpecInitProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -462,6 +480,7 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecInitProviderResourceGro
     public V1beta1LogAnalyticsLinkedServiceSpecInitProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1LogAnalyticsLinkedServiceSpecInitProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -493,6 +512,7 @@ public enum V1beta1LogAnalyticsLinkedServiceSpecInitProviderResourceGroupNameSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LogAnalyticsLinkedServiceSpecInitProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -506,6 +526,7 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecInitProviderResourceGro
     public V1beta1LogAnalyticsLinkedServiceSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1LogAnalyticsLinkedServiceSpecInitProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -521,6 +542,7 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecInitProviderResourceGro
     public V1beta1LogAnalyticsLinkedServiceSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1LogAnalyticsLinkedServiceSpecInitProvider
 {
     /// <summary>The ID of the readable Resource that will be linked to the workspace. This should be used for linking to an Automation Account resource.</summary>
@@ -594,6 +616,7 @@ public enum V1beta1LogAnalyticsLinkedServiceSpecProviderConfigRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LogAnalyticsLinkedServiceSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -607,6 +630,7 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecProviderConfigRefPolicy
     public V1beta1LogAnalyticsLinkedServiceSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1LogAnalyticsLinkedServiceSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -638,6 +662,7 @@ public enum V1beta1LogAnalyticsLinkedServiceSpecPublishConnectionDetailsToConfig
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LogAnalyticsLinkedServiceSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -651,6 +676,7 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecPublishConnectionDetail
     public V1beta1LogAnalyticsLinkedServiceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1LogAnalyticsLinkedServiceSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -662,6 +688,7 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecPublishConnectionDetail
     public V1beta1LogAnalyticsLinkedServiceSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1LogAnalyticsLinkedServiceSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -677,6 +704,7 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecPublishConnectionDetail
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1LogAnalyticsLinkedServiceSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -692,6 +720,7 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecPublishConnectionDetail
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1LogAnalyticsLinkedServiceSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -703,6 +732,7 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpecWriteConnectionSecretTo
     public string Namespace { get; set; }
 }
 
+/// <summary>LogAnalyticsLinkedServiceSpec defines the desired state of LogAnalyticsLinkedService</summary>
 public partial class V1beta1LogAnalyticsLinkedServiceSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -735,6 +765,7 @@ public partial class V1beta1LogAnalyticsLinkedServiceSpec
     public V1beta1LogAnalyticsLinkedServiceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LogAnalyticsLinkedServiceStatusAtProvider
 {
     /// <summary>The Log Analytics Linked Service ID.</summary>
@@ -762,6 +793,7 @@ public partial class V1beta1LogAnalyticsLinkedServiceStatusAtProvider
     public string? WriteAccessId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1LogAnalyticsLinkedServiceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -789,6 +821,7 @@ public partial class V1beta1LogAnalyticsLinkedServiceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>LogAnalyticsLinkedServiceStatus defines the observed state of LogAnalyticsLinkedService.</summary>
 public partial class V1beta1LogAnalyticsLinkedServiceStatus
 {
     /// <summary></summary>
@@ -805,6 +838,7 @@ public partial class V1beta1LogAnalyticsLinkedServiceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>LogAnalyticsLinkedService is the Schema for the LogAnalyticsLinkedServices API. Manages a Log Analytics Linked Service.</summary>
 public partial class V1beta1LogAnalyticsLinkedService : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LogAnalyticsLinkedServiceSpec>, IStatus<V1beta1LogAnalyticsLinkedServiceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

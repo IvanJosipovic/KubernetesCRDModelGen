@@ -38,6 +38,7 @@ public enum V1beta1RoutingControlSpecForProviderClusterArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RoutingControlSpecForProviderClusterArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1RoutingControlSpecForProviderClusterArnRefPolicy
     public V1beta1RoutingControlSpecForProviderClusterArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in route53recoverycontrolconfig to populate clusterArn.</summary>
 public partial class V1beta1RoutingControlSpecForProviderClusterArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1RoutingControlSpecForProviderClusterArnSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RoutingControlSpecForProviderClusterArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1RoutingControlSpecForProviderClusterArnSelectorPolic
     public V1beta1RoutingControlSpecForProviderClusterArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in route53recoverycontrolconfig to populate clusterArn.</summary>
 public partial class V1beta1RoutingControlSpecForProviderClusterArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1RoutingControlSpecForProviderControlPanelArnRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RoutingControlSpecForProviderControlPanelArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1RoutingControlSpecForProviderControlPanelArnRefPolic
     public V1beta1RoutingControlSpecForProviderControlPanelArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ControlPanel in route53recoverycontrolconfig to populate controlPanelArn.</summary>
 public partial class V1beta1RoutingControlSpecForProviderControlPanelArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1RoutingControlSpecForProviderControlPanelArnSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RoutingControlSpecForProviderControlPanelArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1RoutingControlSpecForProviderControlPanelArnSelector
     public V1beta1RoutingControlSpecForProviderControlPanelArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ControlPanel in route53recoverycontrolconfig to populate controlPanelArn.</summary>
 public partial class V1beta1RoutingControlSpecForProviderControlPanelArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1RoutingControlSpecForProviderControlPanelArnSelector
     public V1beta1RoutingControlSpecForProviderControlPanelArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RoutingControlSpecForProvider
 {
     /// <summary>ARN of the cluster in which this routing control will reside.</summary>
@@ -257,6 +266,7 @@ public enum V1beta1RoutingControlSpecInitProviderClusterArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RoutingControlSpecInitProviderClusterArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -270,6 +280,7 @@ public partial class V1beta1RoutingControlSpecInitProviderClusterArnRefPolicy
     public V1beta1RoutingControlSpecInitProviderClusterArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in route53recoverycontrolconfig to populate clusterArn.</summary>
 public partial class V1beta1RoutingControlSpecInitProviderClusterArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -301,6 +312,7 @@ public enum V1beta1RoutingControlSpecInitProviderClusterArnSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RoutingControlSpecInitProviderClusterArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -314,6 +326,7 @@ public partial class V1beta1RoutingControlSpecInitProviderClusterArnSelectorPoli
     public V1beta1RoutingControlSpecInitProviderClusterArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in route53recoverycontrolconfig to populate clusterArn.</summary>
 public partial class V1beta1RoutingControlSpecInitProviderClusterArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -349,6 +362,7 @@ public enum V1beta1RoutingControlSpecInitProviderControlPanelArnRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RoutingControlSpecInitProviderControlPanelArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -362,6 +376,7 @@ public partial class V1beta1RoutingControlSpecInitProviderControlPanelArnRefPoli
     public V1beta1RoutingControlSpecInitProviderControlPanelArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ControlPanel in route53recoverycontrolconfig to populate controlPanelArn.</summary>
 public partial class V1beta1RoutingControlSpecInitProviderControlPanelArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -393,6 +408,7 @@ public enum V1beta1RoutingControlSpecInitProviderControlPanelArnSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RoutingControlSpecInitProviderControlPanelArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -406,6 +422,7 @@ public partial class V1beta1RoutingControlSpecInitProviderControlPanelArnSelecto
     public V1beta1RoutingControlSpecInitProviderControlPanelArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ControlPanel in route53recoverycontrolconfig to populate controlPanelArn.</summary>
 public partial class V1beta1RoutingControlSpecInitProviderControlPanelArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -421,6 +438,7 @@ public partial class V1beta1RoutingControlSpecInitProviderControlPanelArnSelecto
     public V1beta1RoutingControlSpecInitProviderControlPanelArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1RoutingControlSpecInitProvider
 {
     /// <summary>ARN of the cluster in which this routing control will reside.</summary>
@@ -494,6 +512,7 @@ public enum V1beta1RoutingControlSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RoutingControlSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -507,6 +526,7 @@ public partial class V1beta1RoutingControlSpecProviderConfigRefPolicy
     public V1beta1RoutingControlSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1RoutingControlSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -538,6 +558,7 @@ public enum V1beta1RoutingControlSpecPublishConnectionDetailsToConfigRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RoutingControlSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -551,6 +572,7 @@ public partial class V1beta1RoutingControlSpecPublishConnectionDetailsToConfigRe
     public V1beta1RoutingControlSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1RoutingControlSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -562,6 +584,7 @@ public partial class V1beta1RoutingControlSpecPublishConnectionDetailsToConfigRe
     public V1beta1RoutingControlSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1RoutingControlSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -577,6 +600,7 @@ public partial class V1beta1RoutingControlSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1RoutingControlSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -592,6 +616,7 @@ public partial class V1beta1RoutingControlSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1RoutingControlSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -603,6 +628,7 @@ public partial class V1beta1RoutingControlSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>RoutingControlSpec defines the desired state of RoutingControl</summary>
 public partial class V1beta1RoutingControlSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -635,6 +661,7 @@ public partial class V1beta1RoutingControlSpec
     public V1beta1RoutingControlSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RoutingControlStatusAtProvider
 {
     /// <summary>ARN of the routing control.</summary>
@@ -662,6 +689,7 @@ public partial class V1beta1RoutingControlStatusAtProvider
     public string? Status { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1RoutingControlStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -689,6 +717,7 @@ public partial class V1beta1RoutingControlStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>RoutingControlStatus defines the observed state of RoutingControl.</summary>
 public partial class V1beta1RoutingControlStatus
 {
     /// <summary></summary>
@@ -705,6 +734,7 @@ public partial class V1beta1RoutingControlStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>RoutingControl is the Schema for the RoutingControls API. Provides an AWS Route 53 Recovery Control Config Routing Control</summary>
 public partial class V1beta1RoutingControl : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1RoutingControlSpec>, IStatus<V1beta1RoutingControlStatus>
 {
     public const string KubeApiVersion = "v1beta1";

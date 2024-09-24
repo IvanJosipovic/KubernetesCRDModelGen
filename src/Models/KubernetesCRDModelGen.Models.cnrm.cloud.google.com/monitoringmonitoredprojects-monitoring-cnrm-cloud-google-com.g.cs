@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.monitoring.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1MonitoringMonitoredProjectSpec
 {
     /// <summary>Immutable. Required. The resource name of the existing Metrics Scope that will monitor this project. Example: locations/global/metricsScopes/{SCOPING_PROJECT_ID_OR_NUMBER}</summary>
@@ -19,6 +20,7 @@ public partial class V1beta1MonitoringMonitoredProjectSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringMonitoredProjectStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -42,6 +44,7 @@ public partial class V1beta1MonitoringMonitoredProjectStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringMonitoredProjectStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -58,6 +61,7 @@ public partial class V1beta1MonitoringMonitoredProjectStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1MonitoringMonitoredProject : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MonitoringMonitoredProjectSpec>, IStatus<V1beta1MonitoringMonitoredProjectStatus>
 {
     public const string KubeApiVersion = "v1beta1";

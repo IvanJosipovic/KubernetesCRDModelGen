@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.crd.projectcalico.org;
+/// <summary>IPAMHandleSpec contains the specification for an IPAMHandle resource.</summary>
 public partial class V1IPAMHandleSpec
 {
     /// <summary></summary>
@@ -24,6 +25,7 @@ public partial class V1IPAMHandleSpec
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1IPAMHandle : IKubernetesObject<V1ObjectMeta>, ISpec<V1IPAMHandleSpec>
 {
     public const string KubeApiVersion = "v1";

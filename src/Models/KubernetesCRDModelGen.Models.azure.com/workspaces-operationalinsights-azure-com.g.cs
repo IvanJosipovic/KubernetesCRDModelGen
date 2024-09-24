@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.operationalinsights.azure.com;
+/// <summary>ClusterResourceReference: Dedicated LA cluster resourceId that is linked to the workspaces.</summary>
 public partial class V1api20210601storageWorkspaceSpecFeaturesClusterResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -27,6 +28,7 @@ public partial class V1api20210601storageWorkspaceSpecFeaturesClusterResourceRef
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.WorkspaceFeatures Workspace features.</summary>
 public partial class V1api20210601storageWorkspaceSpecFeatures
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -54,6 +56,7 @@ public partial class V1api20210601storageWorkspaceSpecFeatures
     public bool? ImmediatePurgeDataOn30Days { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20210601storageWorkspaceSpecOwner
 {
     /// <summary></summary>
@@ -65,6 +68,7 @@ public partial class V1api20210601storageWorkspaceSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.WorkspaceSku The SKU (tier) of a workspace.</summary>
 public partial class V1api20210601storageWorkspaceSpecSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -80,6 +84,7 @@ public partial class V1api20210601storageWorkspaceSpecSku
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.WorkspaceCapping The daily volume cap for ingestion.</summary>
 public partial class V1api20210601storageWorkspaceSpecWorkspaceCapping
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -91,6 +96,7 @@ public partial class V1api20210601storageWorkspaceSpecWorkspaceCapping
     public double? DailyQuotaGb { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.Workspace_Spec</summary>
 public partial class V1api20210601storageWorkspaceSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -154,6 +160,7 @@ public partial class V1api20210601storageWorkspaceSpec
     public V1api20210601storageWorkspaceSpecWorkspaceCapping? WorkspaceCapping { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20210601storageWorkspaceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -185,6 +192,7 @@ public partial class V1api20210601storageWorkspaceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.WorkspaceFeatures_STATUS Workspace features.</summary>
 public partial class V1api20210601storageWorkspaceStatusFeatures
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -212,6 +220,7 @@ public partial class V1api20210601storageWorkspaceStatusFeatures
     public bool? ImmediatePurgeDataOn30Days { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.PrivateLinkScopedResource_STATUS The private link scope resource reference.</summary>
 public partial class V1api20210601storageWorkspaceStatusPrivateLinkScopedResources
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -227,6 +236,7 @@ public partial class V1api20210601storageWorkspaceStatusPrivateLinkScopedResourc
     public string? ScopeId { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.WorkspaceSku_STATUS The SKU (tier) of a workspace.</summary>
 public partial class V1api20210601storageWorkspaceStatusSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -246,6 +256,7 @@ public partial class V1api20210601storageWorkspaceStatusSku
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.WorkspaceCapping_STATUS The daily volume cap for ingestion.</summary>
 public partial class V1api20210601storageWorkspaceStatusWorkspaceCapping
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -265,6 +276,7 @@ public partial class V1api20210601storageWorkspaceStatusWorkspaceCapping
     public string? QuotaNextResetTime { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.Workspace_STATUS The top level Workspace resource container.</summary>
 public partial class V1api20210601storageWorkspaceStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -349,6 +361,7 @@ public partial class V1api20210601storageWorkspaceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20210601.Workspace Generator information: - Generated from: /operationalinsights/resource-manager/Microsoft.OperationalInsights/stable/2021-06-01/Workspaces.json - ARM URI: /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}</summary>
 public partial class V1api20210601storageWorkspace : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20210601storageWorkspaceSpec>, IStatus<V1api20210601storageWorkspaceStatus>
 {
     public const string KubeApiVersion = "v1api20210601storage";

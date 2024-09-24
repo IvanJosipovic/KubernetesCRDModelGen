@@ -38,6 +38,7 @@ public enum V1beta1ServiceAttachmentSpecForProviderConsumerAcceptListsNetworkUrl
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceAttachmentSpecForProviderConsumerAcceptListsNetworkUrlRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ServiceAttachmentSpecForProviderConsumerAcceptListsN
     public V1beta1ServiceAttachmentSpecForProviderConsumerAcceptListsNetworkUrlRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate networkUrl.</summary>
 public partial class V1beta1ServiceAttachmentSpecForProviderConsumerAcceptListsNetworkUrlRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ServiceAttachmentSpecForProviderConsumerAcceptListsNetworkUrl
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServiceAttachmentSpecForProviderConsumerAcceptListsNetworkUrlSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ServiceAttachmentSpecForProviderConsumerAcceptListsN
     public V1beta1ServiceAttachmentSpecForProviderConsumerAcceptListsNetworkUrlSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate networkUrl.</summary>
 public partial class V1beta1ServiceAttachmentSpecForProviderConsumerAcceptListsNetworkUrlSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1ServiceAttachmentSpecForProviderConsumerAcceptListsN
     public V1beta1ServiceAttachmentSpecForProviderConsumerAcceptListsNetworkUrlSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceAttachmentSpecForProviderConsumerAcceptLists
 {
     /// <summary>The number of consumer forwarding rules the consumer project can create.</summary>
@@ -153,6 +158,7 @@ public enum V1beta1ServiceAttachmentSpecForProviderNatSubnetsRefsPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceAttachmentSpecForProviderNatSubnetsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -166,6 +172,7 @@ public partial class V1beta1ServiceAttachmentSpecForProviderNatSubnetsRefsPolicy
     public V1beta1ServiceAttachmentSpecForProviderNatSubnetsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1ServiceAttachmentSpecForProviderNatSubnetsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -197,6 +204,7 @@ public enum V1beta1ServiceAttachmentSpecForProviderNatSubnetsSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServiceAttachmentSpecForProviderNatSubnetsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -210,6 +218,7 @@ public partial class V1beta1ServiceAttachmentSpecForProviderNatSubnetsSelectorPo
     public V1beta1ServiceAttachmentSpecForProviderNatSubnetsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnetwork in compute to populate natSubnets.</summary>
 public partial class V1beta1ServiceAttachmentSpecForProviderNatSubnetsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -245,6 +254,7 @@ public enum V1beta1ServiceAttachmentSpecForProviderTargetServiceRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceAttachmentSpecForProviderTargetServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -258,6 +268,7 @@ public partial class V1beta1ServiceAttachmentSpecForProviderTargetServiceRefPoli
     public V1beta1ServiceAttachmentSpecForProviderTargetServiceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ForwardingRule in compute to populate targetService.</summary>
 public partial class V1beta1ServiceAttachmentSpecForProviderTargetServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -289,6 +300,7 @@ public enum V1beta1ServiceAttachmentSpecForProviderTargetServiceSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServiceAttachmentSpecForProviderTargetServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -302,6 +314,7 @@ public partial class V1beta1ServiceAttachmentSpecForProviderTargetServiceSelecto
     public V1beta1ServiceAttachmentSpecForProviderTargetServiceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ForwardingRule in compute to populate targetService.</summary>
 public partial class V1beta1ServiceAttachmentSpecForProviderTargetServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -317,6 +330,7 @@ public partial class V1beta1ServiceAttachmentSpecForProviderTargetServiceSelecto
     public V1beta1ServiceAttachmentSpecForProviderTargetServiceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceAttachmentSpecForProvider
 {
     /// <summary>The connection preference to use for this service attachment. Valid values include "ACCEPT_AUTOMATIC", "ACCEPT_MANUAL".</summary>
@@ -400,6 +414,7 @@ public enum V1beta1ServiceAttachmentSpecInitProviderConsumerAcceptListsNetworkUr
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceAttachmentSpecInitProviderConsumerAcceptListsNetworkUrlRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -413,6 +428,7 @@ public partial class V1beta1ServiceAttachmentSpecInitProviderConsumerAcceptLists
     public V1beta1ServiceAttachmentSpecInitProviderConsumerAcceptListsNetworkUrlRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate networkUrl.</summary>
 public partial class V1beta1ServiceAttachmentSpecInitProviderConsumerAcceptListsNetworkUrlRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -444,6 +460,7 @@ public enum V1beta1ServiceAttachmentSpecInitProviderConsumerAcceptListsNetworkUr
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServiceAttachmentSpecInitProviderConsumerAcceptListsNetworkUrlSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -457,6 +474,7 @@ public partial class V1beta1ServiceAttachmentSpecInitProviderConsumerAcceptLists
     public V1beta1ServiceAttachmentSpecInitProviderConsumerAcceptListsNetworkUrlSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate networkUrl.</summary>
 public partial class V1beta1ServiceAttachmentSpecInitProviderConsumerAcceptListsNetworkUrlSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -472,6 +490,7 @@ public partial class V1beta1ServiceAttachmentSpecInitProviderConsumerAcceptLists
     public V1beta1ServiceAttachmentSpecInitProviderConsumerAcceptListsNetworkUrlSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceAttachmentSpecInitProviderConsumerAcceptLists
 {
     /// <summary>The number of consumer forwarding rules the consumer project can create.</summary>
@@ -515,6 +534,7 @@ public enum V1beta1ServiceAttachmentSpecInitProviderNatSubnetsRefsPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceAttachmentSpecInitProviderNatSubnetsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -528,6 +548,7 @@ public partial class V1beta1ServiceAttachmentSpecInitProviderNatSubnetsRefsPolic
     public V1beta1ServiceAttachmentSpecInitProviderNatSubnetsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1ServiceAttachmentSpecInitProviderNatSubnetsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -559,6 +580,7 @@ public enum V1beta1ServiceAttachmentSpecInitProviderNatSubnetsSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServiceAttachmentSpecInitProviderNatSubnetsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -572,6 +594,7 @@ public partial class V1beta1ServiceAttachmentSpecInitProviderNatSubnetsSelectorP
     public V1beta1ServiceAttachmentSpecInitProviderNatSubnetsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnetwork in compute to populate natSubnets.</summary>
 public partial class V1beta1ServiceAttachmentSpecInitProviderNatSubnetsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -607,6 +630,7 @@ public enum V1beta1ServiceAttachmentSpecInitProviderTargetServiceRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceAttachmentSpecInitProviderTargetServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -620,6 +644,7 @@ public partial class V1beta1ServiceAttachmentSpecInitProviderTargetServiceRefPol
     public V1beta1ServiceAttachmentSpecInitProviderTargetServiceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ForwardingRule in compute to populate targetService.</summary>
 public partial class V1beta1ServiceAttachmentSpecInitProviderTargetServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -651,6 +676,7 @@ public enum V1beta1ServiceAttachmentSpecInitProviderTargetServiceSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServiceAttachmentSpecInitProviderTargetServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -664,6 +690,7 @@ public partial class V1beta1ServiceAttachmentSpecInitProviderTargetServiceSelect
     public V1beta1ServiceAttachmentSpecInitProviderTargetServiceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ForwardingRule in compute to populate targetService.</summary>
 public partial class V1beta1ServiceAttachmentSpecInitProviderTargetServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -679,6 +706,7 @@ public partial class V1beta1ServiceAttachmentSpecInitProviderTargetServiceSelect
     public V1beta1ServiceAttachmentSpecInitProviderTargetServiceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ServiceAttachmentSpecInitProvider
 {
     /// <summary>The connection preference to use for this service attachment. Valid values include "ACCEPT_AUTOMATIC", "ACCEPT_MANUAL".</summary>
@@ -780,6 +808,7 @@ public enum V1beta1ServiceAttachmentSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceAttachmentSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -793,6 +822,7 @@ public partial class V1beta1ServiceAttachmentSpecProviderConfigRefPolicy
     public V1beta1ServiceAttachmentSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ServiceAttachmentSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -824,6 +854,7 @@ public enum V1beta1ServiceAttachmentSpecPublishConnectionDetailsToConfigRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceAttachmentSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -837,6 +868,7 @@ public partial class V1beta1ServiceAttachmentSpecPublishConnectionDetailsToConfi
     public V1beta1ServiceAttachmentSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ServiceAttachmentSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -848,6 +880,7 @@ public partial class V1beta1ServiceAttachmentSpecPublishConnectionDetailsToConfi
     public V1beta1ServiceAttachmentSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ServiceAttachmentSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -863,6 +896,7 @@ public partial class V1beta1ServiceAttachmentSpecPublishConnectionDetailsToMetad
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ServiceAttachmentSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -878,6 +912,7 @@ public partial class V1beta1ServiceAttachmentSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ServiceAttachmentSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -889,6 +924,7 @@ public partial class V1beta1ServiceAttachmentSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ServiceAttachmentSpec defines the desired state of ServiceAttachment</summary>
 public partial class V1beta1ServiceAttachmentSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -921,6 +957,7 @@ public partial class V1beta1ServiceAttachmentSpec
     public V1beta1ServiceAttachmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceAttachmentStatusAtProviderConnectedEndpoints
 {
     /// <summary>(Output) The URL of the consumer forwarding rule.</summary>
@@ -932,6 +969,7 @@ public partial class V1beta1ServiceAttachmentStatusAtProviderConnectedEndpoints
     public string? Status { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceAttachmentStatusAtProviderConsumerAcceptLists
 {
     /// <summary>The number of consumer forwarding rules the consumer project can create.</summary>
@@ -947,6 +985,7 @@ public partial class V1beta1ServiceAttachmentStatusAtProviderConsumerAcceptLists
     public string? ProjectIdOrNum { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceAttachmentStatusAtProvider
 {
     /// <summary>An array of the consumer forwarding rules connected to this service attachment. Structure is documented below.</summary>
@@ -1010,6 +1049,7 @@ public partial class V1beta1ServiceAttachmentStatusAtProvider
     public string? TargetService { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ServiceAttachmentStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1037,6 +1077,7 @@ public partial class V1beta1ServiceAttachmentStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ServiceAttachmentStatus defines the observed state of ServiceAttachment.</summary>
 public partial class V1beta1ServiceAttachmentStatus
 {
     /// <summary></summary>
@@ -1053,6 +1094,7 @@ public partial class V1beta1ServiceAttachmentStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ServiceAttachment is the Schema for the ServiceAttachments API. Represents a ServiceAttachment resource.</summary>
 public partial class V1beta1ServiceAttachment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ServiceAttachmentSpec>, IStatus<V1beta1ServiceAttachmentStatus>
 {
     public const string KubeApiVersion = "v1beta1";

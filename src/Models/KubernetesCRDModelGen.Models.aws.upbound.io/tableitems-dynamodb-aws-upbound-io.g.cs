@@ -38,6 +38,7 @@ public enum V1beta1TableItemSpecForProviderTableNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TableItemSpecForProviderTableNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1TableItemSpecForProviderTableNameRefPolicy
     public V1beta1TableItemSpecForProviderTableNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Table in dynamodb to populate tableName.</summary>
 public partial class V1beta1TableItemSpecForProviderTableNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1TableItemSpecForProviderTableNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TableItemSpecForProviderTableNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1TableItemSpecForProviderTableNameSelectorPolicy
     public V1beta1TableItemSpecForProviderTableNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Table in dynamodb to populate tableName.</summary>
 public partial class V1beta1TableItemSpecForProviderTableNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1TableItemSpecForProviderTableNameSelector
     public V1beta1TableItemSpecForProviderTableNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableItemSpecForProvider
 {
     /// <summary>Hash key to use for lookups and identification of the item</summary>
@@ -161,6 +166,7 @@ public enum V1beta1TableItemSpecInitProviderTableNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TableItemSpecInitProviderTableNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -174,6 +180,7 @@ public partial class V1beta1TableItemSpecInitProviderTableNameRefPolicy
     public V1beta1TableItemSpecInitProviderTableNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Table in dynamodb to populate tableName.</summary>
 public partial class V1beta1TableItemSpecInitProviderTableNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -205,6 +212,7 @@ public enum V1beta1TableItemSpecInitProviderTableNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TableItemSpecInitProviderTableNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -218,6 +226,7 @@ public partial class V1beta1TableItemSpecInitProviderTableNameSelectorPolicy
     public V1beta1TableItemSpecInitProviderTableNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Table in dynamodb to populate tableName.</summary>
 public partial class V1beta1TableItemSpecInitProviderTableNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -233,6 +242,7 @@ public partial class V1beta1TableItemSpecInitProviderTableNameSelector
     public V1beta1TableItemSpecInitProviderTableNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1TableItemSpecInitProvider
 {
     /// <summary>Hash key to use for lookups and identification of the item</summary>
@@ -302,6 +312,7 @@ public enum V1beta1TableItemSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TableItemSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -315,6 +326,7 @@ public partial class V1beta1TableItemSpecProviderConfigRefPolicy
     public V1beta1TableItemSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1TableItemSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -346,6 +358,7 @@ public enum V1beta1TableItemSpecPublishConnectionDetailsToConfigRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TableItemSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -359,6 +372,7 @@ public partial class V1beta1TableItemSpecPublishConnectionDetailsToConfigRefPoli
     public V1beta1TableItemSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1TableItemSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -370,6 +384,7 @@ public partial class V1beta1TableItemSpecPublishConnectionDetailsToConfigRef
     public V1beta1TableItemSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1TableItemSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -385,6 +400,7 @@ public partial class V1beta1TableItemSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1TableItemSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -400,6 +416,7 @@ public partial class V1beta1TableItemSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1TableItemSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -411,6 +428,7 @@ public partial class V1beta1TableItemSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>TableItemSpec defines the desired state of TableItem</summary>
 public partial class V1beta1TableItemSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -443,6 +461,7 @@ public partial class V1beta1TableItemSpec
     public V1beta1TableItemSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableItemStatusAtProvider
 {
     /// <summary>Hash key to use for lookups and identification of the item</summary>
@@ -466,6 +485,7 @@ public partial class V1beta1TableItemStatusAtProvider
     public string? TableName { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1TableItemStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -493,6 +513,7 @@ public partial class V1beta1TableItemStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>TableItemStatus defines the observed state of TableItem.</summary>
 public partial class V1beta1TableItemStatus
 {
     /// <summary></summary>
@@ -509,6 +530,7 @@ public partial class V1beta1TableItemStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>TableItem is the Schema for the TableItems API. Provides a DynamoDB table item resource</summary>
 public partial class V1beta1TableItem : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1TableItemSpec>, IStatus<V1beta1TableItemStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -38,6 +38,7 @@ public enum V1beta1VPCEndpointRouteTableAssociationSpecForProviderRouteTableIdRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPCEndpointRouteTableAssociationSpecForProviderRouteTableIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1VPCEndpointRouteTableAssociationSpecForProviderRoute
     public V1beta1VPCEndpointRouteTableAssociationSpecForProviderRouteTableIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RouteTable in ec2 to populate routeTableId.</summary>
 public partial class V1beta1VPCEndpointRouteTableAssociationSpecForProviderRouteTableIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1VPCEndpointRouteTableAssociationSpecForProviderRouteTableIdSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VPCEndpointRouteTableAssociationSpecForProviderRouteTableIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1VPCEndpointRouteTableAssociationSpecForProviderRoute
     public V1beta1VPCEndpointRouteTableAssociationSpecForProviderRouteTableIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RouteTable in ec2 to populate routeTableId.</summary>
 public partial class V1beta1VPCEndpointRouteTableAssociationSpecForProviderRouteTableIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1VPCEndpointRouteTableAssociationSpecForProviderVpcEndpointIdR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPCEndpointRouteTableAssociationSpecForProviderVpcEndpointIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1VPCEndpointRouteTableAssociationSpecForProviderVpcEn
     public V1beta1VPCEndpointRouteTableAssociationSpecForProviderVpcEndpointIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPCEndpoint in ec2 to populate vpcEndpointId.</summary>
 public partial class V1beta1VPCEndpointRouteTableAssociationSpecForProviderVpcEndpointIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1VPCEndpointRouteTableAssociationSpecForProviderVpcEndpointIdS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VPCEndpointRouteTableAssociationSpecForProviderVpcEndpointIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1VPCEndpointRouteTableAssociationSpecForProviderVpcEn
     public V1beta1VPCEndpointRouteTableAssociationSpecForProviderVpcEndpointIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPCEndpoint in ec2 to populate vpcEndpointId.</summary>
 public partial class V1beta1VPCEndpointRouteTableAssociationSpecForProviderVpcEndpointIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1VPCEndpointRouteTableAssociationSpecForProviderVpcEn
     public V1beta1VPCEndpointRouteTableAssociationSpecForProviderVpcEndpointIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPCEndpointRouteTableAssociationSpecForProvider
 {
     /// <summary>Region is the region you'd like your resource to be created in.</summary>
@@ -253,6 +262,7 @@ public enum V1beta1VPCEndpointRouteTableAssociationSpecInitProviderRouteTableIdR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPCEndpointRouteTableAssociationSpecInitProviderRouteTableIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -266,6 +276,7 @@ public partial class V1beta1VPCEndpointRouteTableAssociationSpecInitProviderRout
     public V1beta1VPCEndpointRouteTableAssociationSpecInitProviderRouteTableIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RouteTable in ec2 to populate routeTableId.</summary>
 public partial class V1beta1VPCEndpointRouteTableAssociationSpecInitProviderRouteTableIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -297,6 +308,7 @@ public enum V1beta1VPCEndpointRouteTableAssociationSpecInitProviderRouteTableIdS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VPCEndpointRouteTableAssociationSpecInitProviderRouteTableIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -310,6 +322,7 @@ public partial class V1beta1VPCEndpointRouteTableAssociationSpecInitProviderRout
     public V1beta1VPCEndpointRouteTableAssociationSpecInitProviderRouteTableIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RouteTable in ec2 to populate routeTableId.</summary>
 public partial class V1beta1VPCEndpointRouteTableAssociationSpecInitProviderRouteTableIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -345,6 +358,7 @@ public enum V1beta1VPCEndpointRouteTableAssociationSpecInitProviderVpcEndpointId
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPCEndpointRouteTableAssociationSpecInitProviderVpcEndpointIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -358,6 +372,7 @@ public partial class V1beta1VPCEndpointRouteTableAssociationSpecInitProviderVpcE
     public V1beta1VPCEndpointRouteTableAssociationSpecInitProviderVpcEndpointIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPCEndpoint in ec2 to populate vpcEndpointId.</summary>
 public partial class V1beta1VPCEndpointRouteTableAssociationSpecInitProviderVpcEndpointIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -389,6 +404,7 @@ public enum V1beta1VPCEndpointRouteTableAssociationSpecInitProviderVpcEndpointId
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VPCEndpointRouteTableAssociationSpecInitProviderVpcEndpointIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -402,6 +418,7 @@ public partial class V1beta1VPCEndpointRouteTableAssociationSpecInitProviderVpcE
     public V1beta1VPCEndpointRouteTableAssociationSpecInitProviderVpcEndpointIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPCEndpoint in ec2 to populate vpcEndpointId.</summary>
 public partial class V1beta1VPCEndpointRouteTableAssociationSpecInitProviderVpcEndpointIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -417,6 +434,7 @@ public partial class V1beta1VPCEndpointRouteTableAssociationSpecInitProviderVpcE
     public V1beta1VPCEndpointRouteTableAssociationSpecInitProviderVpcEndpointIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1VPCEndpointRouteTableAssociationSpecInitProvider
 {
     /// <summary>Identifier of the EC2 Route Table to be associated with the VPC Endpoint.</summary>
@@ -486,6 +504,7 @@ public enum V1beta1VPCEndpointRouteTableAssociationSpecProviderConfigRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPCEndpointRouteTableAssociationSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -499,6 +518,7 @@ public partial class V1beta1VPCEndpointRouteTableAssociationSpecProviderConfigRe
     public V1beta1VPCEndpointRouteTableAssociationSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1VPCEndpointRouteTableAssociationSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -530,6 +550,7 @@ public enum V1beta1VPCEndpointRouteTableAssociationSpecPublishConnectionDetailsT
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPCEndpointRouteTableAssociationSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -543,6 +564,7 @@ public partial class V1beta1VPCEndpointRouteTableAssociationSpecPublishConnectio
     public V1beta1VPCEndpointRouteTableAssociationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1VPCEndpointRouteTableAssociationSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -554,6 +576,7 @@ public partial class V1beta1VPCEndpointRouteTableAssociationSpecPublishConnectio
     public V1beta1VPCEndpointRouteTableAssociationSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1VPCEndpointRouteTableAssociationSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -569,6 +592,7 @@ public partial class V1beta1VPCEndpointRouteTableAssociationSpecPublishConnectio
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1VPCEndpointRouteTableAssociationSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -584,6 +608,7 @@ public partial class V1beta1VPCEndpointRouteTableAssociationSpecPublishConnectio
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1VPCEndpointRouteTableAssociationSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -595,6 +620,7 @@ public partial class V1beta1VPCEndpointRouteTableAssociationSpecWriteConnectionS
     public string Namespace { get; set; }
 }
 
+/// <summary>VPCEndpointRouteTableAssociationSpec defines the desired state of VPCEndpointRouteTableAssociation</summary>
 public partial class V1beta1VPCEndpointRouteTableAssociationSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -627,6 +653,7 @@ public partial class V1beta1VPCEndpointRouteTableAssociationSpec
     public V1beta1VPCEndpointRouteTableAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPCEndpointRouteTableAssociationStatusAtProvider
 {
     /// <summary>A hash of the EC2 Route Table and VPC Endpoint identifiers.</summary>
@@ -642,6 +669,7 @@ public partial class V1beta1VPCEndpointRouteTableAssociationStatusAtProvider
     public string? VpcEndpointId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1VPCEndpointRouteTableAssociationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -669,6 +697,7 @@ public partial class V1beta1VPCEndpointRouteTableAssociationStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>VPCEndpointRouteTableAssociationStatus defines the observed state of VPCEndpointRouteTableAssociation.</summary>
 public partial class V1beta1VPCEndpointRouteTableAssociationStatus
 {
     /// <summary></summary>
@@ -685,6 +714,7 @@ public partial class V1beta1VPCEndpointRouteTableAssociationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>VPCEndpointRouteTableAssociation is the Schema for the VPCEndpointRouteTableAssociations API. Manages a VPC Endpoint Route Table Association</summary>
 public partial class V1beta1VPCEndpointRouteTableAssociation : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1VPCEndpointRouteTableAssociationSpec>, IStatus<V1beta1VPCEndpointRouteTableAssociationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

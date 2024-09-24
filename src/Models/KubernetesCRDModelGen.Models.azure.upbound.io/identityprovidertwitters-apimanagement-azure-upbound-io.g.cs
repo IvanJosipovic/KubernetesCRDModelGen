@@ -18,6 +18,7 @@ public enum V1beta1IdentityProviderTwitterSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>App Consumer API key for Twitter.</summary>
 public partial class V1beta1IdentityProviderTwitterSpecForProviderApiKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -53,6 +54,7 @@ public enum V1beta1IdentityProviderTwitterSpecForProviderApiManagementNameRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IdentityProviderTwitterSpecForProviderApiManagementNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -66,6 +68,7 @@ public partial class V1beta1IdentityProviderTwitterSpecForProviderApiManagementN
     public V1beta1IdentityProviderTwitterSpecForProviderApiManagementNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Management in apimanagement to populate apiManagementName.</summary>
 public partial class V1beta1IdentityProviderTwitterSpecForProviderApiManagementNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -97,6 +100,7 @@ public enum V1beta1IdentityProviderTwitterSpecForProviderApiManagementNameSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IdentityProviderTwitterSpecForProviderApiManagementNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1IdentityProviderTwitterSpecForProviderApiManagementN
     public V1beta1IdentityProviderTwitterSpecForProviderApiManagementNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Management in apimanagement to populate apiManagementName.</summary>
 public partial class V1beta1IdentityProviderTwitterSpecForProviderApiManagementNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1IdentityProviderTwitterSpecForProviderApiManagementN
     public V1beta1IdentityProviderTwitterSpecForProviderApiManagementNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>App Consumer API secret key for Twitter.</summary>
 public partial class V1beta1IdentityProviderTwitterSpecForProviderApiSecretKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -160,6 +166,7 @@ public enum V1beta1IdentityProviderTwitterSpecForProviderResourceGroupNameRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IdentityProviderTwitterSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -173,6 +180,7 @@ public partial class V1beta1IdentityProviderTwitterSpecForProviderResourceGroupN
     public V1beta1IdentityProviderTwitterSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1IdentityProviderTwitterSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -204,6 +212,7 @@ public enum V1beta1IdentityProviderTwitterSpecForProviderResourceGroupNameSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IdentityProviderTwitterSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -217,6 +226,7 @@ public partial class V1beta1IdentityProviderTwitterSpecForProviderResourceGroupN
     public V1beta1IdentityProviderTwitterSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1IdentityProviderTwitterSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -232,6 +242,7 @@ public partial class V1beta1IdentityProviderTwitterSpecForProviderResourceGroupN
     public V1beta1IdentityProviderTwitterSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IdentityProviderTwitterSpecForProvider
 {
     /// <summary>App Consumer API key for Twitter.</summary>
@@ -267,6 +278,7 @@ public partial class V1beta1IdentityProviderTwitterSpecForProvider
     public V1beta1IdentityProviderTwitterSpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 }
 
+/// <summary>App Consumer API key for Twitter.</summary>
 public partial class V1beta1IdentityProviderTwitterSpecInitProviderApiKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -302,6 +314,7 @@ public enum V1beta1IdentityProviderTwitterSpecInitProviderApiManagementNameRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IdentityProviderTwitterSpecInitProviderApiManagementNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -315,6 +328,7 @@ public partial class V1beta1IdentityProviderTwitterSpecInitProviderApiManagement
     public V1beta1IdentityProviderTwitterSpecInitProviderApiManagementNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Management in apimanagement to populate apiManagementName.</summary>
 public partial class V1beta1IdentityProviderTwitterSpecInitProviderApiManagementNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -346,6 +360,7 @@ public enum V1beta1IdentityProviderTwitterSpecInitProviderApiManagementNameSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IdentityProviderTwitterSpecInitProviderApiManagementNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -359,6 +374,7 @@ public partial class V1beta1IdentityProviderTwitterSpecInitProviderApiManagement
     public V1beta1IdentityProviderTwitterSpecInitProviderApiManagementNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Management in apimanagement to populate apiManagementName.</summary>
 public partial class V1beta1IdentityProviderTwitterSpecInitProviderApiManagementNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -374,6 +390,7 @@ public partial class V1beta1IdentityProviderTwitterSpecInitProviderApiManagement
     public V1beta1IdentityProviderTwitterSpecInitProviderApiManagementNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>App Consumer API secret key for Twitter.</summary>
 public partial class V1beta1IdentityProviderTwitterSpecInitProviderApiSecretKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -409,6 +426,7 @@ public enum V1beta1IdentityProviderTwitterSpecInitProviderResourceGroupNameRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IdentityProviderTwitterSpecInitProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -422,6 +440,7 @@ public partial class V1beta1IdentityProviderTwitterSpecInitProviderResourceGroup
     public V1beta1IdentityProviderTwitterSpecInitProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1IdentityProviderTwitterSpecInitProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -453,6 +472,7 @@ public enum V1beta1IdentityProviderTwitterSpecInitProviderResourceGroupNameSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IdentityProviderTwitterSpecInitProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -466,6 +486,7 @@ public partial class V1beta1IdentityProviderTwitterSpecInitProviderResourceGroup
     public V1beta1IdentityProviderTwitterSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1IdentityProviderTwitterSpecInitProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -481,6 +502,7 @@ public partial class V1beta1IdentityProviderTwitterSpecInitProviderResourceGroup
     public V1beta1IdentityProviderTwitterSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1IdentityProviderTwitterSpecInitProvider
 {
     /// <summary>App Consumer API key for Twitter.</summary>
@@ -558,6 +580,7 @@ public enum V1beta1IdentityProviderTwitterSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IdentityProviderTwitterSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -571,6 +594,7 @@ public partial class V1beta1IdentityProviderTwitterSpecProviderConfigRefPolicy
     public V1beta1IdentityProviderTwitterSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1IdentityProviderTwitterSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -602,6 +626,7 @@ public enum V1beta1IdentityProviderTwitterSpecPublishConnectionDetailsToConfigRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IdentityProviderTwitterSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -615,6 +640,7 @@ public partial class V1beta1IdentityProviderTwitterSpecPublishConnectionDetailsT
     public V1beta1IdentityProviderTwitterSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1IdentityProviderTwitterSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -626,6 +652,7 @@ public partial class V1beta1IdentityProviderTwitterSpecPublishConnectionDetailsT
     public V1beta1IdentityProviderTwitterSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1IdentityProviderTwitterSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -641,6 +668,7 @@ public partial class V1beta1IdentityProviderTwitterSpecPublishConnectionDetailsT
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1IdentityProviderTwitterSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -656,6 +684,7 @@ public partial class V1beta1IdentityProviderTwitterSpecPublishConnectionDetailsT
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1IdentityProviderTwitterSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -667,6 +696,7 @@ public partial class V1beta1IdentityProviderTwitterSpecWriteConnectionSecretToRe
     public string Namespace { get; set; }
 }
 
+/// <summary>IdentityProviderTwitterSpec defines the desired state of IdentityProviderTwitter</summary>
 public partial class V1beta1IdentityProviderTwitterSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -699,6 +729,7 @@ public partial class V1beta1IdentityProviderTwitterSpec
     public V1beta1IdentityProviderTwitterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IdentityProviderTwitterStatusAtProvider
 {
     /// <summary>The Name of the API Management Service where this Twitter Identity Provider should be created. Changing this forces a new resource to be created.</summary>
@@ -714,6 +745,7 @@ public partial class V1beta1IdentityProviderTwitterStatusAtProvider
     public string? ResourceGroupName { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1IdentityProviderTwitterStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -741,6 +773,7 @@ public partial class V1beta1IdentityProviderTwitterStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>IdentityProviderTwitterStatus defines the observed state of IdentityProviderTwitter.</summary>
 public partial class V1beta1IdentityProviderTwitterStatus
 {
     /// <summary></summary>
@@ -757,6 +790,7 @@ public partial class V1beta1IdentityProviderTwitterStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>IdentityProviderTwitter is the Schema for the IdentityProviderTwitters API. Manages an API Management Twitter Identity Provider.</summary>
 public partial class V1beta1IdentityProviderTwitter : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IdentityProviderTwitterSpec>, IStatus<V1beta1IdentityProviderTwitterStatus>
 {
     public const string KubeApiVersion = "v1beta1";

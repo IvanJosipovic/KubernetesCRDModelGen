@@ -38,6 +38,7 @@ public enum V1beta1FleetSpecForProviderBuildIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FleetSpecForProviderBuildIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1FleetSpecForProviderBuildIdRefPolicy
     public V1beta1FleetSpecForProviderBuildIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Build in gamelift to populate buildId.</summary>
 public partial class V1beta1FleetSpecForProviderBuildIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1FleetSpecForProviderBuildIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FleetSpecForProviderBuildIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1FleetSpecForProviderBuildIdSelectorPolicy
     public V1beta1FleetSpecForProviderBuildIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Build in gamelift to populate buildId.</summary>
 public partial class V1beta1FleetSpecForProviderBuildIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1FleetSpecForProviderBuildIdSelector
     public V1beta1FleetSpecForProviderBuildIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FleetSpecForProviderCertificateConfiguration
 {
     /// <summary>Indicates whether a TLS/SSL certificate is generated for a fleet. Valid values are DISABLED and GENERATED. Default value is DISABLED.</summary>
@@ -117,6 +122,7 @@ public partial class V1beta1FleetSpecForProviderCertificateConfiguration
     public string? CertificateType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FleetSpecForProviderEc2InboundPermission
 {
     /// <summary>Starting value for a range of allowed port numbers.</summary>
@@ -156,6 +162,7 @@ public enum V1beta1FleetSpecForProviderInstanceRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FleetSpecForProviderInstanceRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -169,6 +176,7 @@ public partial class V1beta1FleetSpecForProviderInstanceRoleArnRefPolicy
     public V1beta1FleetSpecForProviderInstanceRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate instanceRoleArn.</summary>
 public partial class V1beta1FleetSpecForProviderInstanceRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -200,6 +208,7 @@ public enum V1beta1FleetSpecForProviderInstanceRoleArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FleetSpecForProviderInstanceRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -213,6 +222,7 @@ public partial class V1beta1FleetSpecForProviderInstanceRoleArnSelectorPolicy
     public V1beta1FleetSpecForProviderInstanceRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate instanceRoleArn.</summary>
 public partial class V1beta1FleetSpecForProviderInstanceRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -228,6 +238,7 @@ public partial class V1beta1FleetSpecForProviderInstanceRoleArnSelector
     public V1beta1FleetSpecForProviderInstanceRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FleetSpecForProviderResourceCreationLimitPolicy
 {
     /// <summary>Maximum number of game sessions that an individual can create during the policy period.</summary>
@@ -239,6 +250,7 @@ public partial class V1beta1FleetSpecForProviderResourceCreationLimitPolicy
     public double? PolicyPeriodInMinutes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FleetSpecForProviderRuntimeConfigurationServerProcess
 {
     /// <summary>Number of server processes using this configuration to run concurrently on an instance.</summary>
@@ -254,6 +266,7 @@ public partial class V1beta1FleetSpecForProviderRuntimeConfigurationServerProces
     public string? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FleetSpecForProviderRuntimeConfiguration
 {
     /// <summary>Maximum amount of time (in seconds) that a game session can remain in status ACTIVATING.</summary>
@@ -269,6 +282,7 @@ public partial class V1beta1FleetSpecForProviderRuntimeConfiguration
     public IList<V1beta1FleetSpecForProviderRuntimeConfigurationServerProcess>? ServerProcess { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FleetSpecForProvider
 {
     /// <summary>ID of the GameLift Build to be deployed on the fleet.</summary>
@@ -368,6 +382,7 @@ public enum V1beta1FleetSpecInitProviderBuildIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FleetSpecInitProviderBuildIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -381,6 +396,7 @@ public partial class V1beta1FleetSpecInitProviderBuildIdRefPolicy
     public V1beta1FleetSpecInitProviderBuildIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Build in gamelift to populate buildId.</summary>
 public partial class V1beta1FleetSpecInitProviderBuildIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -412,6 +428,7 @@ public enum V1beta1FleetSpecInitProviderBuildIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FleetSpecInitProviderBuildIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -425,6 +442,7 @@ public partial class V1beta1FleetSpecInitProviderBuildIdSelectorPolicy
     public V1beta1FleetSpecInitProviderBuildIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Build in gamelift to populate buildId.</summary>
 public partial class V1beta1FleetSpecInitProviderBuildIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -440,6 +458,7 @@ public partial class V1beta1FleetSpecInitProviderBuildIdSelector
     public V1beta1FleetSpecInitProviderBuildIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FleetSpecInitProviderCertificateConfiguration
 {
     /// <summary>Indicates whether a TLS/SSL certificate is generated for a fleet. Valid values are DISABLED and GENERATED. Default value is DISABLED.</summary>
@@ -447,6 +466,7 @@ public partial class V1beta1FleetSpecInitProviderCertificateConfiguration
     public string? CertificateType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FleetSpecInitProviderEc2InboundPermission
 {
     /// <summary>Starting value for a range of allowed port numbers.</summary>
@@ -486,6 +506,7 @@ public enum V1beta1FleetSpecInitProviderInstanceRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FleetSpecInitProviderInstanceRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -499,6 +520,7 @@ public partial class V1beta1FleetSpecInitProviderInstanceRoleArnRefPolicy
     public V1beta1FleetSpecInitProviderInstanceRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate instanceRoleArn.</summary>
 public partial class V1beta1FleetSpecInitProviderInstanceRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -530,6 +552,7 @@ public enum V1beta1FleetSpecInitProviderInstanceRoleArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FleetSpecInitProviderInstanceRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -543,6 +566,7 @@ public partial class V1beta1FleetSpecInitProviderInstanceRoleArnSelectorPolicy
     public V1beta1FleetSpecInitProviderInstanceRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate instanceRoleArn.</summary>
 public partial class V1beta1FleetSpecInitProviderInstanceRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -558,6 +582,7 @@ public partial class V1beta1FleetSpecInitProviderInstanceRoleArnSelector
     public V1beta1FleetSpecInitProviderInstanceRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FleetSpecInitProviderResourceCreationLimitPolicy
 {
     /// <summary>Maximum number of game sessions that an individual can create during the policy period.</summary>
@@ -569,6 +594,7 @@ public partial class V1beta1FleetSpecInitProviderResourceCreationLimitPolicy
     public double? PolicyPeriodInMinutes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FleetSpecInitProviderRuntimeConfigurationServerProcess
 {
     /// <summary>Number of server processes using this configuration to run concurrently on an instance.</summary>
@@ -584,6 +610,7 @@ public partial class V1beta1FleetSpecInitProviderRuntimeConfigurationServerProce
     public string? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FleetSpecInitProviderRuntimeConfiguration
 {
     /// <summary>Maximum amount of time (in seconds) that a game session can remain in status ACTIVATING.</summary>
@@ -599,6 +626,7 @@ public partial class V1beta1FleetSpecInitProviderRuntimeConfiguration
     public IList<V1beta1FleetSpecInitProviderRuntimeConfigurationServerProcess>? ServerProcess { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1FleetSpecInitProvider
 {
     /// <summary>ID of the GameLift Build to be deployed on the fleet.</summary>
@@ -716,6 +744,7 @@ public enum V1beta1FleetSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FleetSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -729,6 +758,7 @@ public partial class V1beta1FleetSpecProviderConfigRefPolicy
     public V1beta1FleetSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1FleetSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -760,6 +790,7 @@ public enum V1beta1FleetSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FleetSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -773,6 +804,7 @@ public partial class V1beta1FleetSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1FleetSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1FleetSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -784,6 +816,7 @@ public partial class V1beta1FleetSpecPublishConnectionDetailsToConfigRef
     public V1beta1FleetSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1FleetSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -799,6 +832,7 @@ public partial class V1beta1FleetSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1FleetSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -814,6 +848,7 @@ public partial class V1beta1FleetSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1FleetSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -825,6 +860,7 @@ public partial class V1beta1FleetSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>FleetSpec defines the desired state of Fleet</summary>
 public partial class V1beta1FleetSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -857,6 +893,7 @@ public partial class V1beta1FleetSpec
     public V1beta1FleetSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FleetStatusAtProviderCertificateConfiguration
 {
     /// <summary>Indicates whether a TLS/SSL certificate is generated for a fleet. Valid values are DISABLED and GENERATED. Default value is DISABLED.</summary>
@@ -864,6 +901,7 @@ public partial class V1beta1FleetStatusAtProviderCertificateConfiguration
     public string? CertificateType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FleetStatusAtProviderEc2InboundPermission
 {
     /// <summary>Starting value for a range of allowed port numbers.</summary>
@@ -883,6 +921,7 @@ public partial class V1beta1FleetStatusAtProviderEc2InboundPermission
     public double? ToPort { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FleetStatusAtProviderResourceCreationLimitPolicy
 {
     /// <summary>Maximum number of game sessions that an individual can create during the policy period.</summary>
@@ -894,6 +933,7 @@ public partial class V1beta1FleetStatusAtProviderResourceCreationLimitPolicy
     public double? PolicyPeriodInMinutes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FleetStatusAtProviderRuntimeConfigurationServerProcess
 {
     /// <summary>Number of server processes using this configuration to run concurrently on an instance.</summary>
@@ -909,6 +949,7 @@ public partial class V1beta1FleetStatusAtProviderRuntimeConfigurationServerProce
     public string? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FleetStatusAtProviderRuntimeConfiguration
 {
     /// <summary>Maximum amount of time (in seconds) that a game session can remain in status ACTIVATING.</summary>
@@ -924,6 +965,7 @@ public partial class V1beta1FleetStatusAtProviderRuntimeConfiguration
     public IList<V1beta1FleetStatusAtProviderRuntimeConfigurationServerProcess>? ServerProcess { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FleetStatusAtProvider
 {
     /// <summary>Fleet ARN.</summary>
@@ -1011,6 +1053,7 @@ public partial class V1beta1FleetStatusAtProvider
     public IDictionary<string, string>? TagsAll { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1FleetStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1038,6 +1081,7 @@ public partial class V1beta1FleetStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>FleetStatus defines the observed state of Fleet.</summary>
 public partial class V1beta1FleetStatus
 {
     /// <summary></summary>
@@ -1054,6 +1098,7 @@ public partial class V1beta1FleetStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Fleet is the Schema for the Fleets API. Provides a GameLift Fleet resource.</summary>
 public partial class V1beta1Fleet : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FleetSpec>, IStatus<V1beta1FleetStatus>
 {
     public const string KubeApiVersion = "v1beta1";

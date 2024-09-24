@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.crd.projectcalico.org;
+/// <summary>IPReservationSpec contains the specification for an IPReservation resource.</summary>
 public partial class V1IPReservationSpec
 {
     /// <summary>ReservedCIDRs is a list of CIDRs and/or IP addresses that Calico IPAM will exclude from new allocations.</summary>
@@ -16,6 +17,7 @@ public partial class V1IPReservationSpec
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1IPReservation : IKubernetesObject<V1ObjectMeta>, ISpec<V1IPReservationSpec>
 {
     public const string KubeApiVersion = "v1";

@@ -38,6 +38,7 @@ public enum V1beta1ServicePerimeterSpecForProviderSpecAccessLevelsRefsPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServicePerimeterSpecForProviderSpecAccessLevelsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecAccessLevelsRefsP
     public V1beta1ServicePerimeterSpecForProviderSpecAccessLevelsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1ServicePerimeterSpecForProviderSpecAccessLevelsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ServicePerimeterSpecForProviderSpecAccessLevelsSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServicePerimeterSpecForProviderSpecAccessLevelsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecAccessLevelsSelec
     public V1beta1ServicePerimeterSpecForProviderSpecAccessLevelsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of AccessLevel in accesscontextmanager to populate accessLevels.</summary>
 public partial class V1beta1ServicePerimeterSpecForProviderSpecAccessLevelsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecAccessLevelsSelec
     public V1beta1ServicePerimeterSpecForProviderSpecAccessLevelsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecForProviderSpecEgressPoliciesEgressFromSources
 {
     /// <summary>An AccessLevel resource name that allow resources within the ServicePerimeters to be accessed from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter. Referencing a nonexistent AccessLevel will cause an error. If no AccessLevel names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example accessPolicies/MY_POLICY/accessLevels/MY_LEVEL. If * is specified, then all IngressSources will be allowed.</summary>
@@ -117,6 +122,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecEgressPoliciesEgr
     public string? AccessLevel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecForProviderSpecEgressPoliciesEgressFrom
 {
     /// <summary>A list of identities that are allowed access through this ingress policy. Should be in the format of email address. The email address should represent individual user or service account only.</summary>
@@ -136,6 +142,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecEgressPoliciesEgr
     public IList<V1beta1ServicePerimeterSpecForProviderSpecEgressPoliciesEgressFromSources>? Sources { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecForProviderSpecEgressPoliciesEgressToOperationsMethodSelectors
 {
     /// <summary>Value for method should be a valid method name for the corresponding serviceName in ApiOperation. If * used as value for method, then ALL methods and permissions are allowed.</summary>
@@ -147,6 +154,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecEgressPoliciesEgr
     public string? Permission { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecForProviderSpecEgressPoliciesEgressToOperations
 {
     /// <summary>API methods or permissions to allow. Method or permission must belong to the service specified by serviceName field. A single MethodSelector entry with * specified for the method field will allow all methods AND permissions for the service specified in serviceName. Structure is documented below.</summary>
@@ -158,6 +166,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecEgressPoliciesEgr
     public string? ServiceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecForProviderSpecEgressPoliciesEgressTo
 {
     /// <summary>A list of external resources that are allowed to be accessed. A request matches if it contains an external resource in this list (Example: s3://bucket/path). Currently '*' is not allowed.</summary>
@@ -173,6 +182,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecEgressPoliciesEgr
     public IList<string>? Resources { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecForProviderSpecEgressPolicies
 {
     /// <summary>Defines conditions on the source of a request causing this EgressPolicy to apply. Structure is documented below.</summary>
@@ -184,6 +194,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecEgressPolicies
     public IList<V1beta1ServicePerimeterSpecForProviderSpecEgressPoliciesEgressTo>? EgressTo { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecForProviderSpecIngressPoliciesIngressFromSources
 {
     /// <summary>An AccessLevel resource name that allow resources within the ServicePerimeters to be accessed from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter. Referencing a nonexistent AccessLevel will cause an error. If no AccessLevel names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example accessPolicies/MY_POLICY/accessLevels/MY_LEVEL. If * is specified, then all IngressSources will be allowed.</summary>
@@ -195,6 +206,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecIngressPoliciesIn
     public string? Resource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecForProviderSpecIngressPoliciesIngressFrom
 {
     /// <summary>A list of identities that are allowed access through this ingress policy. Should be in the format of email address. The email address should represent individual user or service account only.</summary>
@@ -210,6 +222,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecIngressPoliciesIn
     public IList<V1beta1ServicePerimeterSpecForProviderSpecIngressPoliciesIngressFromSources>? Sources { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecForProviderSpecIngressPoliciesIngressToOperationsMethodSelectors
 {
     /// <summary>Value for method should be a valid method name for the corresponding serviceName in ApiOperation. If * used as value for method, then ALL methods and permissions are allowed.</summary>
@@ -221,6 +234,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecIngressPoliciesIn
     public string? Permission { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecForProviderSpecIngressPoliciesIngressToOperations
 {
     /// <summary>API methods or permissions to allow. Method or permission must belong to the service specified by serviceName field. A single MethodSelector entry with * specified for the method field will allow all methods AND permissions for the service specified in serviceName. Structure is documented below.</summary>
@@ -232,6 +246,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecIngressPoliciesIn
     public string? ServiceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecForProviderSpecIngressPoliciesIngressTo
 {
     /// <summary>A list of ApiOperations the sources specified in corresponding IngressFrom are allowed to perform in this ServicePerimeter. Structure is documented below.</summary>
@@ -243,6 +258,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecIngressPoliciesIn
     public IList<string>? Resources { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecForProviderSpecIngressPolicies
 {
     /// <summary>Defines the conditions on the source of a request causing this IngressPolicy to apply. Structure is documented below.</summary>
@@ -254,6 +270,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecIngressPolicies
     public IList<V1beta1ServicePerimeterSpecForProviderSpecIngressPoliciesIngressTo>? IngressTo { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecForProviderSpecVpcAccessibleServices
 {
     /// <summary>The list of APIs usable within the Service Perimeter. Must be empty unless enableRestriction is True.</summary>
@@ -265,6 +282,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecVpcAccessibleServ
     public bool? EnableRestriction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecForProviderSpec
 {
     /// <summary>A list of AccessLevel resource names that allow resources within the ServicePerimeter to be accessed from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter. Referencing a nonexistent AccessLevel is a syntax error. If no AccessLevel names are listed, resources within the perimeter can only be accessed via GCP calls with request origins within the perimeter. For Service Perimeter Bridge, must be empty. Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}</summary>
@@ -320,6 +338,7 @@ public enum V1beta1ServicePerimeterSpecForProviderStatusAccessLevelsRefsPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServicePerimeterSpecForProviderStatusAccessLevelsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -333,6 +352,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusAccessLevelsRef
     public V1beta1ServicePerimeterSpecForProviderStatusAccessLevelsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1ServicePerimeterSpecForProviderStatusAccessLevelsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -364,6 +384,7 @@ public enum V1beta1ServicePerimeterSpecForProviderStatusAccessLevelsSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServicePerimeterSpecForProviderStatusAccessLevelsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -377,6 +398,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusAccessLevelsSel
     public V1beta1ServicePerimeterSpecForProviderStatusAccessLevelsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of AccessLevel in accesscontextmanager to populate accessLevels.</summary>
 public partial class V1beta1ServicePerimeterSpecForProviderStatusAccessLevelsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -392,6 +414,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusAccessLevelsSel
     public V1beta1ServicePerimeterSpecForProviderStatusAccessLevelsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecForProviderStatusEgressPoliciesEgressFromSources
 {
     /// <summary>An AccessLevel resource name that allow resources within the ServicePerimeters to be accessed from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter. Referencing a nonexistent AccessLevel will cause an error. If no AccessLevel names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example accessPolicies/MY_POLICY/accessLevels/MY_LEVEL. If * is specified, then all IngressSources will be allowed.</summary>
@@ -399,6 +422,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusEgressPoliciesE
     public string? AccessLevel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecForProviderStatusEgressPoliciesEgressFrom
 {
     /// <summary>A list of identities that are allowed access through this ingress policy. Should be in the format of email address. The email address should represent individual user or service account only.</summary>
@@ -418,6 +442,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusEgressPoliciesE
     public IList<V1beta1ServicePerimeterSpecForProviderStatusEgressPoliciesEgressFromSources>? Sources { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecForProviderStatusEgressPoliciesEgressToOperationsMethodSelectors
 {
     /// <summary>Value for method should be a valid method name for the corresponding serviceName in ApiOperation. If * used as value for method, then ALL methods and permissions are allowed.</summary>
@@ -429,6 +454,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusEgressPoliciesE
     public string? Permission { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecForProviderStatusEgressPoliciesEgressToOperations
 {
     /// <summary>API methods or permissions to allow. Method or permission must belong to the service specified by serviceName field. A single MethodSelector entry with * specified for the method field will allow all methods AND permissions for the service specified in serviceName. Structure is documented below.</summary>
@@ -440,6 +466,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusEgressPoliciesE
     public string? ServiceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecForProviderStatusEgressPoliciesEgressTo
 {
     /// <summary>A list of external resources that are allowed to be accessed. A request matches if it contains an external resource in this list (Example: s3://bucket/path). Currently '*' is not allowed.</summary>
@@ -455,6 +482,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusEgressPoliciesE
     public IList<string>? Resources { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecForProviderStatusEgressPolicies
 {
     /// <summary>Defines conditions on the source of a request causing this EgressPolicy to apply. Structure is documented below.</summary>
@@ -486,6 +514,7 @@ public enum V1beta1ServicePerimeterSpecForProviderStatusIngressPoliciesIngressFr
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPoliciesIngressFromSourcesAccessLevelRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -499,6 +528,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPolicies
     public V1beta1ServicePerimeterSpecForProviderStatusIngressPoliciesIngressFromSourcesAccessLevelRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a AccessLevel in accesscontextmanager to populate accessLevel.</summary>
 public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPoliciesIngressFromSourcesAccessLevelRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -530,6 +560,7 @@ public enum V1beta1ServicePerimeterSpecForProviderStatusIngressPoliciesIngressFr
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPoliciesIngressFromSourcesAccessLevelSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -543,6 +574,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPolicies
     public V1beta1ServicePerimeterSpecForProviderStatusIngressPoliciesIngressFromSourcesAccessLevelSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a AccessLevel in accesscontextmanager to populate accessLevel.</summary>
 public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPoliciesIngressFromSourcesAccessLevelSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -558,6 +590,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPolicies
     public V1beta1ServicePerimeterSpecForProviderStatusIngressPoliciesIngressFromSourcesAccessLevelSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPoliciesIngressFromSources
 {
     /// <summary>An AccessLevel resource name that allow resources within the ServicePerimeters to be accessed from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter. Referencing a nonexistent AccessLevel will cause an error. If no AccessLevel names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example accessPolicies/MY_POLICY/accessLevels/MY_LEVEL. If * is specified, then all IngressSources will be allowed.</summary>
@@ -577,6 +610,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPolicies
     public string? Resource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPoliciesIngressFrom
 {
     /// <summary>A list of identities that are allowed access through this ingress policy. Should be in the format of email address. The email address should represent individual user or service account only.</summary>
@@ -592,6 +626,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPolicies
     public IList<V1beta1ServicePerimeterSpecForProviderStatusIngressPoliciesIngressFromSources>? Sources { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPoliciesIngressToOperationsMethodSelectors
 {
     /// <summary>Value for method should be a valid method name for the corresponding serviceName in ApiOperation. If * used as value for method, then ALL methods and permissions are allowed.</summary>
@@ -603,6 +638,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPolicies
     public string? Permission { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPoliciesIngressToOperations
 {
     /// <summary>API methods or permissions to allow. Method or permission must belong to the service specified by serviceName field. A single MethodSelector entry with * specified for the method field will allow all methods AND permissions for the service specified in serviceName. Structure is documented below.</summary>
@@ -614,6 +650,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPolicies
     public string? ServiceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPoliciesIngressTo
 {
     /// <summary>A list of ApiOperations the sources specified in corresponding IngressFrom are allowed to perform in this ServicePerimeter. Structure is documented below.</summary>
@@ -625,6 +662,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPolicies
     public IList<string>? Resources { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPolicies
 {
     /// <summary>Defines the conditions on the source of a request causing this IngressPolicy to apply. Structure is documented below.</summary>
@@ -636,6 +674,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPolicies
     public IList<V1beta1ServicePerimeterSpecForProviderStatusIngressPoliciesIngressTo>? IngressTo { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecForProviderStatusVpcAccessibleServices
 {
     /// <summary>The list of APIs usable within the Service Perimeter. Must be empty unless enableRestriction is True.</summary>
@@ -647,6 +686,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusVpcAccessibleSe
     public bool? EnableRestriction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecForProviderStatus
 {
     /// <summary>A list of AccessLevel resource names that allow resources within the ServicePerimeter to be accessed from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter. Referencing a nonexistent AccessLevel is a syntax error. If no AccessLevel names are listed, resources within the perimeter can only be accessed via GCP calls with request origins within the perimeter. For Service Perimeter Bridge, must be empty. Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}</summary>
@@ -682,6 +722,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatus
     public IList<V1beta1ServicePerimeterSpecForProviderStatusVpcAccessibleServices>? VpcAccessibleServices { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecForProvider
 {
     /// <summary>Description of the ServicePerimeter and its use. Does not affect behavior.</summary>
@@ -737,6 +778,7 @@ public enum V1beta1ServicePerimeterSpecInitProviderSpecAccessLevelsRefsPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderSpecAccessLevelsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -750,6 +792,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecAccessLevelsRefs
     public V1beta1ServicePerimeterSpecInitProviderSpecAccessLevelsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderSpecAccessLevelsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -781,6 +824,7 @@ public enum V1beta1ServicePerimeterSpecInitProviderSpecAccessLevelsSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderSpecAccessLevelsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -794,6 +838,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecAccessLevelsSele
     public V1beta1ServicePerimeterSpecInitProviderSpecAccessLevelsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of AccessLevel in accesscontextmanager to populate accessLevels.</summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderSpecAccessLevelsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -809,6 +854,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecAccessLevelsSele
     public V1beta1ServicePerimeterSpecInitProviderSpecAccessLevelsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderSpecEgressPoliciesEgressFromSources
 {
     /// <summary>An AccessLevel resource name that allow resources within the ServicePerimeters to be accessed from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter. Referencing a nonexistent AccessLevel will cause an error. If no AccessLevel names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example accessPolicies/MY_POLICY/accessLevels/MY_LEVEL. If * is specified, then all IngressSources will be allowed.</summary>
@@ -816,6 +862,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecEgressPoliciesEg
     public string? AccessLevel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderSpecEgressPoliciesEgressFrom
 {
     /// <summary>A list of identities that are allowed access through this ingress policy. Should be in the format of email address. The email address should represent individual user or service account only.</summary>
@@ -835,6 +882,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecEgressPoliciesEg
     public IList<V1beta1ServicePerimeterSpecInitProviderSpecEgressPoliciesEgressFromSources>? Sources { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderSpecEgressPoliciesEgressToOperationsMethodSelectors
 {
     /// <summary>Value for method should be a valid method name for the corresponding serviceName in ApiOperation. If * used as value for method, then ALL methods and permissions are allowed.</summary>
@@ -846,6 +894,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecEgressPoliciesEg
     public string? Permission { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderSpecEgressPoliciesEgressToOperations
 {
     /// <summary>API methods or permissions to allow. Method or permission must belong to the service specified by serviceName field. A single MethodSelector entry with * specified for the method field will allow all methods AND permissions for the service specified in serviceName. Structure is documented below.</summary>
@@ -857,6 +906,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecEgressPoliciesEg
     public string? ServiceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderSpecEgressPoliciesEgressTo
 {
     /// <summary>A list of external resources that are allowed to be accessed. A request matches if it contains an external resource in this list (Example: s3://bucket/path). Currently '*' is not allowed.</summary>
@@ -872,6 +922,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecEgressPoliciesEg
     public IList<string>? Resources { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderSpecEgressPolicies
 {
     /// <summary>Defines conditions on the source of a request causing this EgressPolicy to apply. Structure is documented below.</summary>
@@ -883,6 +934,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecEgressPolicies
     public IList<V1beta1ServicePerimeterSpecInitProviderSpecEgressPoliciesEgressTo>? EgressTo { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderSpecIngressPoliciesIngressFromSources
 {
     /// <summary>An AccessLevel resource name that allow resources within the ServicePerimeters to be accessed from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter. Referencing a nonexistent AccessLevel will cause an error. If no AccessLevel names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example accessPolicies/MY_POLICY/accessLevels/MY_LEVEL. If * is specified, then all IngressSources will be allowed.</summary>
@@ -894,6 +946,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecIngressPoliciesI
     public string? Resource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderSpecIngressPoliciesIngressFrom
 {
     /// <summary>A list of identities that are allowed access through this ingress policy. Should be in the format of email address. The email address should represent individual user or service account only.</summary>
@@ -909,6 +962,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecIngressPoliciesI
     public IList<V1beta1ServicePerimeterSpecInitProviderSpecIngressPoliciesIngressFromSources>? Sources { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderSpecIngressPoliciesIngressToOperationsMethodSelectors
 {
     /// <summary>Value for method should be a valid method name for the corresponding serviceName in ApiOperation. If * used as value for method, then ALL methods and permissions are allowed.</summary>
@@ -920,6 +974,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecIngressPoliciesI
     public string? Permission { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderSpecIngressPoliciesIngressToOperations
 {
     /// <summary>API methods or permissions to allow. Method or permission must belong to the service specified by serviceName field. A single MethodSelector entry with * specified for the method field will allow all methods AND permissions for the service specified in serviceName. Structure is documented below.</summary>
@@ -931,6 +986,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecIngressPoliciesI
     public string? ServiceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderSpecIngressPoliciesIngressTo
 {
     /// <summary>A list of ApiOperations the sources specified in corresponding IngressFrom are allowed to perform in this ServicePerimeter. Structure is documented below.</summary>
@@ -942,6 +998,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecIngressPoliciesI
     public IList<string>? Resources { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderSpecIngressPolicies
 {
     /// <summary>Defines the conditions on the source of a request causing this IngressPolicy to apply. Structure is documented below.</summary>
@@ -953,6 +1010,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecIngressPolicies
     public IList<V1beta1ServicePerimeterSpecInitProviderSpecIngressPoliciesIngressTo>? IngressTo { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderSpecVpcAccessibleServices
 {
     /// <summary>The list of APIs usable within the Service Perimeter. Must be empty unless enableRestriction is True.</summary>
@@ -964,6 +1022,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecVpcAccessibleSer
     public bool? EnableRestriction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderSpec
 {
     /// <summary>A list of AccessLevel resource names that allow resources within the ServicePerimeter to be accessed from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter. Referencing a nonexistent AccessLevel is a syntax error. If no AccessLevel names are listed, resources within the perimeter can only be accessed via GCP calls with request origins within the perimeter. For Service Perimeter Bridge, must be empty. Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}</summary>
@@ -1019,6 +1078,7 @@ public enum V1beta1ServicePerimeterSpecInitProviderStatusAccessLevelsRefsPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusAccessLevelsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1032,6 +1092,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusAccessLevelsRe
     public V1beta1ServicePerimeterSpecInitProviderStatusAccessLevelsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusAccessLevelsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1063,6 +1124,7 @@ public enum V1beta1ServicePerimeterSpecInitProviderStatusAccessLevelsSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusAccessLevelsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1076,6 +1138,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusAccessLevelsSe
     public V1beta1ServicePerimeterSpecInitProviderStatusAccessLevelsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of AccessLevel in accesscontextmanager to populate accessLevels.</summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusAccessLevelsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1091,6 +1154,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusAccessLevelsSe
     public V1beta1ServicePerimeterSpecInitProviderStatusAccessLevelsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusEgressPoliciesEgressFromSources
 {
     /// <summary>An AccessLevel resource name that allow resources within the ServicePerimeters to be accessed from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter. Referencing a nonexistent AccessLevel will cause an error. If no AccessLevel names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example accessPolicies/MY_POLICY/accessLevels/MY_LEVEL. If * is specified, then all IngressSources will be allowed.</summary>
@@ -1098,6 +1162,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusEgressPolicies
     public string? AccessLevel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusEgressPoliciesEgressFrom
 {
     /// <summary>A list of identities that are allowed access through this ingress policy. Should be in the format of email address. The email address should represent individual user or service account only.</summary>
@@ -1117,6 +1182,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusEgressPolicies
     public IList<V1beta1ServicePerimeterSpecInitProviderStatusEgressPoliciesEgressFromSources>? Sources { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusEgressPoliciesEgressToOperationsMethodSelectors
 {
     /// <summary>Value for method should be a valid method name for the corresponding serviceName in ApiOperation. If * used as value for method, then ALL methods and permissions are allowed.</summary>
@@ -1128,6 +1194,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusEgressPolicies
     public string? Permission { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusEgressPoliciesEgressToOperations
 {
     /// <summary>API methods or permissions to allow. Method or permission must belong to the service specified by serviceName field. A single MethodSelector entry with * specified for the method field will allow all methods AND permissions for the service specified in serviceName. Structure is documented below.</summary>
@@ -1139,6 +1206,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusEgressPolicies
     public string? ServiceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusEgressPoliciesEgressTo
 {
     /// <summary>A list of external resources that are allowed to be accessed. A request matches if it contains an external resource in this list (Example: s3://bucket/path). Currently '*' is not allowed.</summary>
@@ -1154,6 +1222,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusEgressPolicies
     public IList<string>? Resources { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusEgressPolicies
 {
     /// <summary>Defines conditions on the source of a request causing this EgressPolicy to apply. Structure is documented below.</summary>
@@ -1185,6 +1254,7 @@ public enum V1beta1ServicePerimeterSpecInitProviderStatusIngressPoliciesIngressF
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPoliciesIngressFromSourcesAccessLevelRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1198,6 +1268,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPolicie
     public V1beta1ServicePerimeterSpecInitProviderStatusIngressPoliciesIngressFromSourcesAccessLevelRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a AccessLevel in accesscontextmanager to populate accessLevel.</summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPoliciesIngressFromSourcesAccessLevelRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1229,6 +1300,7 @@ public enum V1beta1ServicePerimeterSpecInitProviderStatusIngressPoliciesIngressF
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPoliciesIngressFromSourcesAccessLevelSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1242,6 +1314,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPolicie
     public V1beta1ServicePerimeterSpecInitProviderStatusIngressPoliciesIngressFromSourcesAccessLevelSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a AccessLevel in accesscontextmanager to populate accessLevel.</summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPoliciesIngressFromSourcesAccessLevelSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1257,6 +1330,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPolicie
     public V1beta1ServicePerimeterSpecInitProviderStatusIngressPoliciesIngressFromSourcesAccessLevelSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPoliciesIngressFromSources
 {
     /// <summary>An AccessLevel resource name that allow resources within the ServicePerimeters to be accessed from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter. Referencing a nonexistent AccessLevel will cause an error. If no AccessLevel names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example accessPolicies/MY_POLICY/accessLevels/MY_LEVEL. If * is specified, then all IngressSources will be allowed.</summary>
@@ -1276,6 +1350,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPolicie
     public string? Resource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPoliciesIngressFrom
 {
     /// <summary>A list of identities that are allowed access through this ingress policy. Should be in the format of email address. The email address should represent individual user or service account only.</summary>
@@ -1291,6 +1366,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPolicie
     public IList<V1beta1ServicePerimeterSpecInitProviderStatusIngressPoliciesIngressFromSources>? Sources { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPoliciesIngressToOperationsMethodSelectors
 {
     /// <summary>Value for method should be a valid method name for the corresponding serviceName in ApiOperation. If * used as value for method, then ALL methods and permissions are allowed.</summary>
@@ -1302,6 +1378,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPolicie
     public string? Permission { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPoliciesIngressToOperations
 {
     /// <summary>API methods or permissions to allow. Method or permission must belong to the service specified by serviceName field. A single MethodSelector entry with * specified for the method field will allow all methods AND permissions for the service specified in serviceName. Structure is documented below.</summary>
@@ -1313,6 +1390,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPolicie
     public string? ServiceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPoliciesIngressTo
 {
     /// <summary>A list of ApiOperations the sources specified in corresponding IngressFrom are allowed to perform in this ServicePerimeter. Structure is documented below.</summary>
@@ -1324,6 +1402,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPolicie
     public IList<string>? Resources { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPolicies
 {
     /// <summary>Defines the conditions on the source of a request causing this IngressPolicy to apply. Structure is documented below.</summary>
@@ -1335,6 +1414,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPolicie
     public IList<V1beta1ServicePerimeterSpecInitProviderStatusIngressPoliciesIngressTo>? IngressTo { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusVpcAccessibleServices
 {
     /// <summary>The list of APIs usable within the Service Perimeter. Must be empty unless enableRestriction is True.</summary>
@@ -1346,6 +1426,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusVpcAccessibleS
     public bool? EnableRestriction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterSpecInitProviderStatus
 {
     /// <summary>A list of AccessLevel resource names that allow resources within the ServicePerimeter to be accessed from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter. Referencing a nonexistent AccessLevel is a syntax error. If no AccessLevel names are listed, resources within the perimeter can only be accessed via GCP calls with request origins within the perimeter. For Service Perimeter Bridge, must be empty. Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}</summary>
@@ -1381,6 +1462,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatus
     public IList<V1beta1ServicePerimeterSpecInitProviderStatusVpcAccessibleServices>? VpcAccessibleServices { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ServicePerimeterSpecInitProvider
 {
     /// <summary>Description of the ServicePerimeter and its use. Does not affect behavior.</summary>
@@ -1458,6 +1540,7 @@ public enum V1beta1ServicePerimeterSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServicePerimeterSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1471,6 +1554,7 @@ public partial class V1beta1ServicePerimeterSpecProviderConfigRefPolicy
     public V1beta1ServicePerimeterSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ServicePerimeterSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1502,6 +1586,7 @@ public enum V1beta1ServicePerimeterSpecPublishConnectionDetailsToConfigRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServicePerimeterSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1515,6 +1600,7 @@ public partial class V1beta1ServicePerimeterSpecPublishConnectionDetailsToConfig
     public V1beta1ServicePerimeterSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ServicePerimeterSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1526,6 +1612,7 @@ public partial class V1beta1ServicePerimeterSpecPublishConnectionDetailsToConfig
     public V1beta1ServicePerimeterSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ServicePerimeterSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1541,6 +1628,7 @@ public partial class V1beta1ServicePerimeterSpecPublishConnectionDetailsToMetada
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ServicePerimeterSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1556,6 +1644,7 @@ public partial class V1beta1ServicePerimeterSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ServicePerimeterSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1567,6 +1656,7 @@ public partial class V1beta1ServicePerimeterSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ServicePerimeterSpec defines the desired state of ServicePerimeter</summary>
 public partial class V1beta1ServicePerimeterSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1599,6 +1689,7 @@ public partial class V1beta1ServicePerimeterSpec
     public V1beta1ServicePerimeterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterStatusAtProviderSpecEgressPoliciesEgressFromSources
 {
     /// <summary>An AccessLevel resource name that allow resources within the ServicePerimeters to be accessed from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter. Referencing a nonexistent AccessLevel will cause an error. If no AccessLevel names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example accessPolicies/MY_POLICY/accessLevels/MY_LEVEL. If * is specified, then all IngressSources will be allowed.</summary>
@@ -1606,6 +1697,7 @@ public partial class V1beta1ServicePerimeterStatusAtProviderSpecEgressPoliciesEg
     public string? AccessLevel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterStatusAtProviderSpecEgressPoliciesEgressFrom
 {
     /// <summary>A list of identities that are allowed access through this ingress policy. Should be in the format of email address. The email address should represent individual user or service account only.</summary>
@@ -1625,6 +1717,7 @@ public partial class V1beta1ServicePerimeterStatusAtProviderSpecEgressPoliciesEg
     public IList<V1beta1ServicePerimeterStatusAtProviderSpecEgressPoliciesEgressFromSources>? Sources { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterStatusAtProviderSpecEgressPoliciesEgressToOperationsMethodSelectors
 {
     /// <summary>Value for method should be a valid method name for the corresponding serviceName in ApiOperation. If * used as value for method, then ALL methods and permissions are allowed.</summary>
@@ -1636,6 +1729,7 @@ public partial class V1beta1ServicePerimeterStatusAtProviderSpecEgressPoliciesEg
     public string? Permission { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterStatusAtProviderSpecEgressPoliciesEgressToOperations
 {
     /// <summary>API methods or permissions to allow. Method or permission must belong to the service specified by serviceName field. A single MethodSelector entry with * specified for the method field will allow all methods AND permissions for the service specified in serviceName. Structure is documented below.</summary>
@@ -1647,6 +1741,7 @@ public partial class V1beta1ServicePerimeterStatusAtProviderSpecEgressPoliciesEg
     public string? ServiceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterStatusAtProviderSpecEgressPoliciesEgressTo
 {
     /// <summary>A list of external resources that are allowed to be accessed. A request matches if it contains an external resource in this list (Example: s3://bucket/path). Currently '*' is not allowed.</summary>
@@ -1662,6 +1757,7 @@ public partial class V1beta1ServicePerimeterStatusAtProviderSpecEgressPoliciesEg
     public IList<string>? Resources { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterStatusAtProviderSpecEgressPolicies
 {
     /// <summary>Defines conditions on the source of a request causing this EgressPolicy to apply. Structure is documented below.</summary>
@@ -1673,6 +1769,7 @@ public partial class V1beta1ServicePerimeterStatusAtProviderSpecEgressPolicies
     public IList<V1beta1ServicePerimeterStatusAtProviderSpecEgressPoliciesEgressTo>? EgressTo { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterStatusAtProviderSpecIngressPoliciesIngressFromSources
 {
     /// <summary>An AccessLevel resource name that allow resources within the ServicePerimeters to be accessed from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter. Referencing a nonexistent AccessLevel will cause an error. If no AccessLevel names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example accessPolicies/MY_POLICY/accessLevels/MY_LEVEL. If * is specified, then all IngressSources will be allowed.</summary>
@@ -1684,6 +1781,7 @@ public partial class V1beta1ServicePerimeterStatusAtProviderSpecIngressPoliciesI
     public string? Resource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterStatusAtProviderSpecIngressPoliciesIngressFrom
 {
     /// <summary>A list of identities that are allowed access through this ingress policy. Should be in the format of email address. The email address should represent individual user or service account only.</summary>
@@ -1699,6 +1797,7 @@ public partial class V1beta1ServicePerimeterStatusAtProviderSpecIngressPoliciesI
     public IList<V1beta1ServicePerimeterStatusAtProviderSpecIngressPoliciesIngressFromSources>? Sources { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterStatusAtProviderSpecIngressPoliciesIngressToOperationsMethodSelectors
 {
     /// <summary>Value for method should be a valid method name for the corresponding serviceName in ApiOperation. If * used as value for method, then ALL methods and permissions are allowed.</summary>
@@ -1710,6 +1809,7 @@ public partial class V1beta1ServicePerimeterStatusAtProviderSpecIngressPoliciesI
     public string? Permission { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterStatusAtProviderSpecIngressPoliciesIngressToOperations
 {
     /// <summary>API methods or permissions to allow. Method or permission must belong to the service specified by serviceName field. A single MethodSelector entry with * specified for the method field will allow all methods AND permissions for the service specified in serviceName. Structure is documented below.</summary>
@@ -1721,6 +1821,7 @@ public partial class V1beta1ServicePerimeterStatusAtProviderSpecIngressPoliciesI
     public string? ServiceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterStatusAtProviderSpecIngressPoliciesIngressTo
 {
     /// <summary>A list of ApiOperations the sources specified in corresponding IngressFrom are allowed to perform in this ServicePerimeter. Structure is documented below.</summary>
@@ -1732,6 +1833,7 @@ public partial class V1beta1ServicePerimeterStatusAtProviderSpecIngressPoliciesI
     public IList<string>? Resources { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterStatusAtProviderSpecIngressPolicies
 {
     /// <summary>Defines the conditions on the source of a request causing this IngressPolicy to apply. Structure is documented below.</summary>
@@ -1743,6 +1845,7 @@ public partial class V1beta1ServicePerimeterStatusAtProviderSpecIngressPolicies
     public IList<V1beta1ServicePerimeterStatusAtProviderSpecIngressPoliciesIngressTo>? IngressTo { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterStatusAtProviderSpecVpcAccessibleServices
 {
     /// <summary>The list of APIs usable within the Service Perimeter. Must be empty unless enableRestriction is True.</summary>
@@ -1754,6 +1857,7 @@ public partial class V1beta1ServicePerimeterStatusAtProviderSpecVpcAccessibleSer
     public bool? EnableRestriction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterStatusAtProviderSpec
 {
     /// <summary>A list of AccessLevel resource names that allow resources within the ServicePerimeter to be accessed from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter. Referencing a nonexistent AccessLevel is a syntax error. If no AccessLevel names are listed, resources within the perimeter can only be accessed via GCP calls with request origins within the perimeter. For Service Perimeter Bridge, must be empty. Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}</summary>
@@ -1781,6 +1885,7 @@ public partial class V1beta1ServicePerimeterStatusAtProviderSpec
     public IList<V1beta1ServicePerimeterStatusAtProviderSpecVpcAccessibleServices>? VpcAccessibleServices { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterStatusAtProviderStatusEgressPoliciesEgressFromSources
 {
     /// <summary>An AccessLevel resource name that allow resources within the ServicePerimeters to be accessed from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter. Referencing a nonexistent AccessLevel will cause an error. If no AccessLevel names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example accessPolicies/MY_POLICY/accessLevels/MY_LEVEL. If * is specified, then all IngressSources will be allowed.</summary>
@@ -1788,6 +1893,7 @@ public partial class V1beta1ServicePerimeterStatusAtProviderStatusEgressPolicies
     public string? AccessLevel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterStatusAtProviderStatusEgressPoliciesEgressFrom
 {
     /// <summary>A list of identities that are allowed access through this ingress policy. Should be in the format of email address. The email address should represent individual user or service account only.</summary>
@@ -1807,6 +1913,7 @@ public partial class V1beta1ServicePerimeterStatusAtProviderStatusEgressPolicies
     public IList<V1beta1ServicePerimeterStatusAtProviderStatusEgressPoliciesEgressFromSources>? Sources { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterStatusAtProviderStatusEgressPoliciesEgressToOperationsMethodSelectors
 {
     /// <summary>Value for method should be a valid method name for the corresponding serviceName in ApiOperation. If * used as value for method, then ALL methods and permissions are allowed.</summary>
@@ -1818,6 +1925,7 @@ public partial class V1beta1ServicePerimeterStatusAtProviderStatusEgressPolicies
     public string? Permission { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterStatusAtProviderStatusEgressPoliciesEgressToOperations
 {
     /// <summary>API methods or permissions to allow. Method or permission must belong to the service specified by serviceName field. A single MethodSelector entry with * specified for the method field will allow all methods AND permissions for the service specified in serviceName. Structure is documented below.</summary>
@@ -1829,6 +1937,7 @@ public partial class V1beta1ServicePerimeterStatusAtProviderStatusEgressPolicies
     public string? ServiceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterStatusAtProviderStatusEgressPoliciesEgressTo
 {
     /// <summary>A list of external resources that are allowed to be accessed. A request matches if it contains an external resource in this list (Example: s3://bucket/path). Currently '*' is not allowed.</summary>
@@ -1844,6 +1953,7 @@ public partial class V1beta1ServicePerimeterStatusAtProviderStatusEgressPolicies
     public IList<string>? Resources { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterStatusAtProviderStatusEgressPolicies
 {
     /// <summary>Defines conditions on the source of a request causing this EgressPolicy to apply. Structure is documented below.</summary>
@@ -1855,6 +1965,7 @@ public partial class V1beta1ServicePerimeterStatusAtProviderStatusEgressPolicies
     public IList<V1beta1ServicePerimeterStatusAtProviderStatusEgressPoliciesEgressTo>? EgressTo { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterStatusAtProviderStatusIngressPoliciesIngressFromSources
 {
     /// <summary>An AccessLevel resource name that allow resources within the ServicePerimeters to be accessed from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter. Referencing a nonexistent AccessLevel will cause an error. If no AccessLevel names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example accessPolicies/MY_POLICY/accessLevels/MY_LEVEL. If * is specified, then all IngressSources will be allowed.</summary>
@@ -1866,6 +1977,7 @@ public partial class V1beta1ServicePerimeterStatusAtProviderStatusIngressPolicie
     public string? Resource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterStatusAtProviderStatusIngressPoliciesIngressFrom
 {
     /// <summary>A list of identities that are allowed access through this ingress policy. Should be in the format of email address. The email address should represent individual user or service account only.</summary>
@@ -1881,6 +1993,7 @@ public partial class V1beta1ServicePerimeterStatusAtProviderStatusIngressPolicie
     public IList<V1beta1ServicePerimeterStatusAtProviderStatusIngressPoliciesIngressFromSources>? Sources { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterStatusAtProviderStatusIngressPoliciesIngressToOperationsMethodSelectors
 {
     /// <summary>Value for method should be a valid method name for the corresponding serviceName in ApiOperation. If * used as value for method, then ALL methods and permissions are allowed.</summary>
@@ -1892,6 +2005,7 @@ public partial class V1beta1ServicePerimeterStatusAtProviderStatusIngressPolicie
     public string? Permission { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterStatusAtProviderStatusIngressPoliciesIngressToOperations
 {
     /// <summary>API methods or permissions to allow. Method or permission must belong to the service specified by serviceName field. A single MethodSelector entry with * specified for the method field will allow all methods AND permissions for the service specified in serviceName. Structure is documented below.</summary>
@@ -1903,6 +2017,7 @@ public partial class V1beta1ServicePerimeterStatusAtProviderStatusIngressPolicie
     public string? ServiceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterStatusAtProviderStatusIngressPoliciesIngressTo
 {
     /// <summary>A list of ApiOperations the sources specified in corresponding IngressFrom are allowed to perform in this ServicePerimeter. Structure is documented below.</summary>
@@ -1914,6 +2029,7 @@ public partial class V1beta1ServicePerimeterStatusAtProviderStatusIngressPolicie
     public IList<string>? Resources { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterStatusAtProviderStatusIngressPolicies
 {
     /// <summary>Defines the conditions on the source of a request causing this IngressPolicy to apply. Structure is documented below.</summary>
@@ -1925,6 +2041,7 @@ public partial class V1beta1ServicePerimeterStatusAtProviderStatusIngressPolicie
     public IList<V1beta1ServicePerimeterStatusAtProviderStatusIngressPoliciesIngressTo>? IngressTo { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterStatusAtProviderStatusVpcAccessibleServices
 {
     /// <summary>The list of APIs usable within the Service Perimeter. Must be empty unless enableRestriction is True.</summary>
@@ -1936,6 +2053,7 @@ public partial class V1beta1ServicePerimeterStatusAtProviderStatusVpcAccessibleS
     public bool? EnableRestriction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterStatusAtProviderStatus
 {
     /// <summary>A list of AccessLevel resource names that allow resources within the ServicePerimeter to be accessed from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter. Referencing a nonexistent AccessLevel is a syntax error. If no AccessLevel names are listed, resources within the perimeter can only be accessed via GCP calls with request origins within the perimeter. For Service Perimeter Bridge, must be empty. Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}</summary>
@@ -1963,6 +2081,7 @@ public partial class V1beta1ServicePerimeterStatusAtProviderStatus
     public IList<V1beta1ServicePerimeterStatusAtProviderStatusVpcAccessibleServices>? VpcAccessibleServices { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServicePerimeterStatusAtProvider
 {
     /// <summary>Time the AccessPolicy was created in UTC.</summary>
@@ -2010,6 +2129,7 @@ public partial class V1beta1ServicePerimeterStatusAtProvider
     public bool? UseExplicitDryRunSpec { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ServicePerimeterStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2037,6 +2157,7 @@ public partial class V1beta1ServicePerimeterStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ServicePerimeterStatus defines the observed state of ServicePerimeter.</summary>
 public partial class V1beta1ServicePerimeterStatus
 {
     /// <summary></summary>
@@ -2053,6 +2174,7 @@ public partial class V1beta1ServicePerimeterStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ServicePerimeter is the Schema for the ServicePerimeters API. ServicePerimeter describes a set of GCP resources which can freely import and export data amongst themselves, but not export outside of the ServicePerimeter.</summary>
 public partial class V1beta1ServicePerimeter : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ServicePerimeterSpec>, IStatus<V1beta1ServicePerimeterStatus>
 {
     public const string KubeApiVersion = "v1beta1";

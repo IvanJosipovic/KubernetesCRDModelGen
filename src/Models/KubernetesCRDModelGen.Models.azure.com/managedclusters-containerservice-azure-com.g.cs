@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containerservice.azure.com;
+/// <summary>Storage version of v1api20231001.ManagedClusterAADProfile For more details see [managed AAD on AKS](https://docs.microsoft.com/azure/aks/managed-aad).</summary>
 public partial class V1api20231001storageManagedClusterSpecAadProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -43,6 +44,7 @@ public partial class V1api20231001storageManagedClusterSpecAadProfile
     public string? TenantID { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterAddonProfile A Kubernetes add-on profile for a managed cluster.</summary>
 public partial class V1api20231001storageManagedClusterSpecAddonProfiles
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -58,6 +60,7 @@ public partial class V1api20231001storageManagedClusterSpecAddonProfiles
     public bool? Enabled { get; set; }
 }
 
+/// <summary>CapacityReservationGroupReference: AKS will associate the specified agent pool with the Capacity Reservation Group.</summary>
 public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesCapacityReservationGroupReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -77,6 +80,7 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesCapa
     public string? Name { get; set; }
 }
 
+/// <summary>SourceResourceReference: This is the ARM ID of the source object to be used to create the target object.</summary>
 public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesCreationDataSourceResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -96,6 +100,7 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesCrea
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.CreationData Data used when creating a target resource from a source resource.</summary>
 public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesCreationData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -107,6 +112,7 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesCrea
     public V1api20231001storageManagedClusterSpecAgentPoolProfilesCreationDataSourceResourceReference? SourceResourceReference { get; set; }
 }
 
+/// <summary>HostGroupReference: This is of the form: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/hostGroups/{hostGroupName}. For more information see [Azure dedicated hosts](https://docs.microsoft.com/azure/virtual-machines/dedicated-hosts).</summary>
 public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesHostGroupReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -126,6 +132,7 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesHost
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.KubeletConfig See [AKS custom node configuration](https://docs.microsoft.com/azure/aks/custom-node-configuration) for more details.</summary>
 public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesKubeletConfig
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -177,6 +184,7 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesKube
     public string? TopologyManagerPolicy { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.SysctlConfig Sysctl settings for Linux agent nodes.</summary>
 public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesLinuxOSConfigSysctls
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -296,6 +304,7 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesLinu
     public int? VmVfsCachePressure { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.LinuxOSConfig See [AKS custom node configuration](https://docs.microsoft.com/azure/aks/custom-node-configuration) for more details.</summary>
 public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesLinuxOSConfig
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -319,6 +328,7 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesLinu
     public string? TransparentHugePageEnabled { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.PortRange The port range.</summary>
 public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesNetworkProfileAllowedHostPorts
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -338,6 +348,7 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesNetw
     public string? Protocol { get; set; }
 }
 
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesNetworkProfileApplicationSecurityGroupsReferences
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -357,6 +368,7 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesNetw
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.IPTag Contains the IPTag associated with the object.</summary>
 public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesNetworkProfileNodePublicIPTags
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -372,6 +384,7 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesNetw
     public string? Tag { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.AgentPoolNetworkProfile Network settings of an agent pool.</summary>
 public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesNetworkProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -391,6 +404,7 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesNetw
     public IList<V1api20231001storageManagedClusterSpecAgentPoolProfilesNetworkProfileNodePublicIPTags>? NodePublicIPTags { get; set; }
 }
 
+/// <summary>NodePublicIPPrefixReference: This is of the form: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPPrefixes/{publicIPPrefixName}</summary>
 public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesNodePublicIPPrefixReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -410,6 +424,7 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesNode
     public string? Name { get; set; }
 }
 
+/// <summary>PodSubnetReference: If omitted, pod IPs are statically assigned on the node subnet (see vnetSubnetID for more details). This is of the form: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}</summary>
 public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesPodSubnetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -429,6 +444,7 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesPodS
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.PowerState Describes the Power State of the cluster</summary>
 public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesPowerState
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -440,6 +456,7 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesPowe
     public string? Code { get; set; }
 }
 
+/// <summary>ProximityPlacementGroupReference: The ID for Proximity Placement Group.</summary>
 public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesProximityPlacementGroupReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -459,6 +476,7 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesProx
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.AgentPoolUpgradeSettings Settings for upgrading an agentpool</summary>
 public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesUpgradeSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -474,6 +492,7 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesUpgr
     public string? MaxSurge { get; set; }
 }
 
+/// <summary>VnetSubnetReference: If this is not specified, a VNET and subnet will be generated and used. If no podSubnetID is specified, this applies to nodes and pods, otherwise it applies to just nodes. This is of the form: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}</summary>
 public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesVnetSubnetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -493,6 +512,7 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesVnet
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterAgentPoolProfile Profile for the container service agent pool.</summary>
 public partial class V1api20231001storageManagedClusterSpecAgentPoolProfiles
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -664,6 +684,7 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfiles
     public string? WorkloadRuntime { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterAPIServerAccessProfile Access profile for managed cluster API server.</summary>
 public partial class V1api20231001storageManagedClusterSpecApiServerAccessProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -691,6 +712,7 @@ public partial class V1api20231001storageManagedClusterSpecApiServerAccessProfil
     public string? PrivateDNSZone { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterProperties_AutoScalerProfile</summary>
 public partial class V1api20231001storageManagedClusterSpecAutoScalerProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -766,6 +788,7 @@ public partial class V1api20231001storageManagedClusterSpecAutoScalerProfile
     public string? SkipNodesWithSystemPods { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterAutoUpgradeProfile Auto upgrade profile for a managed cluster.</summary>
 public partial class V1api20231001storageManagedClusterSpecAutoUpgradeProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -781,6 +804,7 @@ public partial class V1api20231001storageManagedClusterSpecAutoUpgradeProfile
     public string? UpgradeChannel { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterAzureMonitorProfileKubeStateMetrics Kube State Metrics profile for the Azure Managed Prometheus addon. These optional settings are for the kube-state-metrics pod that is deployed with the addon. See aka.ms/AzureManagedPrometheus-optional-parameters for details.</summary>
 public partial class V1api20231001storageManagedClusterSpecAzureMonitorProfileMetricsKubeStateMetrics
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -796,6 +820,7 @@ public partial class V1api20231001storageManagedClusterSpecAzureMonitorProfileMe
     public string? MetricLabelsAllowlist { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterAzureMonitorProfileMetrics Metrics profile for the Azure Monitor managed service for Prometheus addon. Collect out-of-the-box Kubernetes infrastructure metrics to send to an Azure Monitor Workspace and configure additional scraping for custom targets. See aka.ms/AzureManagedPrometheus for an overview.</summary>
 public partial class V1api20231001storageManagedClusterSpecAzureMonitorProfileMetrics
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -811,6 +836,7 @@ public partial class V1api20231001storageManagedClusterSpecAzureMonitorProfileMe
     public V1api20231001storageManagedClusterSpecAzureMonitorProfileMetricsKubeStateMetrics? KubeStateMetrics { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterAzureMonitorProfile Azure Monitor addon profiles for monitoring the managed cluster.</summary>
 public partial class V1api20231001storageManagedClusterSpecAzureMonitorProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -822,6 +848,7 @@ public partial class V1api20231001storageManagedClusterSpecAzureMonitorProfile
     public V1api20231001storageManagedClusterSpecAzureMonitorProfileMetrics? Metrics { get; set; }
 }
 
+/// <summary>DiskEncryptionSetReference: This is of the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskEncryptionSets/{encryptionSetName}'</summary>
 public partial class V1api20231001storageManagedClusterSpecDiskEncryptionSetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -841,6 +868,7 @@ public partial class V1api20231001storageManagedClusterSpecDiskEncryptionSetRefe
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ExtendedLocation The complex type of the extended location.</summary>
 public partial class V1api20231001storageManagedClusterSpecExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -856,6 +884,7 @@ public partial class V1api20231001storageManagedClusterSpecExtendedLocation
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterHTTPProxyConfig Cluster HTTP proxy configuration.</summary>
 public partial class V1api20231001storageManagedClusterSpecHttpProxyConfig
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -879,6 +908,7 @@ public partial class V1api20231001storageManagedClusterSpecHttpProxyConfig
     public string? TrustedCa { get; set; }
 }
 
+/// <summary>ResourceReference: The ARM resource id of the delegated resource - internal use only.</summary>
 public partial class V1api20231001storageManagedClusterSpecIdentityDelegatedResourcesResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -898,6 +928,7 @@ public partial class V1api20231001storageManagedClusterSpecIdentityDelegatedReso
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.DelegatedResource Delegated resource properties - internal use only.</summary>
 public partial class V1api20231001storageManagedClusterSpecIdentityDelegatedResources
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -921,6 +952,7 @@ public partial class V1api20231001storageManagedClusterSpecIdentityDelegatedReso
     public string? TenantId { get; set; }
 }
 
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 public partial class V1api20231001storageManagedClusterSpecIdentityUserAssignedIdentitiesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -940,6 +972,7 @@ public partial class V1api20231001storageManagedClusterSpecIdentityUserAssignedI
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
 public partial class V1api20231001storageManagedClusterSpecIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -951,6 +984,7 @@ public partial class V1api20231001storageManagedClusterSpecIdentityUserAssignedI
     public V1api20231001storageManagedClusterSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterIdentity Identity for the managed cluster.</summary>
 public partial class V1api20231001storageManagedClusterSpecIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -970,6 +1004,7 @@ public partial class V1api20231001storageManagedClusterSpecIdentity
     public IList<V1api20231001storageManagedClusterSpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
+/// <summary>ResourceReference: The resource ID of the user assigned identity.</summary>
 public partial class V1api20231001storageManagedClusterSpecIdentityProfileResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -989,6 +1024,7 @@ public partial class V1api20231001storageManagedClusterSpecIdentityProfileResour
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.UserAssignedIdentity Details about a user assigned identity.</summary>
 public partial class V1api20231001storageManagedClusterSpecIdentityProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1008,6 +1044,7 @@ public partial class V1api20231001storageManagedClusterSpecIdentityProfile
     public V1api20231001storageManagedClusterSpecIdentityProfileResourceReference? ResourceReference { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ContainerServiceSshPublicKey Contains information about SSH certificate public key data.</summary>
 public partial class V1api20231001storageManagedClusterSpecLinuxProfileSshPublicKeys
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1019,6 +1056,7 @@ public partial class V1api20231001storageManagedClusterSpecLinuxProfileSshPublic
     public string? KeyData { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ContainerServiceSshConfiguration SSH configuration for Linux-based VMs running on Azure.</summary>
 public partial class V1api20231001storageManagedClusterSpecLinuxProfileSsh
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1030,6 +1068,7 @@ public partial class V1api20231001storageManagedClusterSpecLinuxProfileSsh
     public IList<V1api20231001storageManagedClusterSpecLinuxProfileSshPublicKeys>? PublicKeys { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ContainerServiceLinuxProfile Profile for Linux VMs in the container service cluster.</summary>
 public partial class V1api20231001storageManagedClusterSpecLinuxProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1045,6 +1084,7 @@ public partial class V1api20231001storageManagedClusterSpecLinuxProfile
     public V1api20231001storageManagedClusterSpecLinuxProfileSsh? Ssh { get; set; }
 }
 
+/// <summary>Reference: The fully qualified Azure resource id.</summary>
 public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBalancerProfileEffectiveOutboundIPsReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -1064,6 +1104,7 @@ public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBal
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ResourceReference A reference to an Azure resource.</summary>
 public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBalancerProfileEffectiveOutboundIPs
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1075,6 +1116,7 @@ public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBal
     public V1api20231001storageManagedClusterSpecNetworkProfileLoadBalancerProfileEffectiveOutboundIPsReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterLoadBalancerProfile_ManagedOutboundIPs</summary>
 public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBalancerProfileManagedOutboundIPs
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1090,6 +1132,7 @@ public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBal
     public int? CountIPv6 { get; set; }
 }
 
+/// <summary>Reference: The fully qualified Azure resource id.</summary>
 public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBalancerProfileOutboundIPPrefixesPublicIPPrefixesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -1109,6 +1152,7 @@ public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBal
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ResourceReference A reference to an Azure resource.</summary>
 public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBalancerProfileOutboundIPPrefixesPublicIPPrefixes
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1120,6 +1164,7 @@ public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBal
     public V1api20231001storageManagedClusterSpecNetworkProfileLoadBalancerProfileOutboundIPPrefixesPublicIPPrefixesReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterLoadBalancerProfile_OutboundIPPrefixes</summary>
 public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBalancerProfileOutboundIPPrefixes
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1131,6 +1176,7 @@ public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBal
     public IList<V1api20231001storageManagedClusterSpecNetworkProfileLoadBalancerProfileOutboundIPPrefixesPublicIPPrefixes>? PublicIPPrefixes { get; set; }
 }
 
+/// <summary>Reference: The fully qualified Azure resource id.</summary>
 public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBalancerProfileOutboundIPsPublicIPsReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -1150,6 +1196,7 @@ public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBal
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ResourceReference A reference to an Azure resource.</summary>
 public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBalancerProfileOutboundIPsPublicIPs
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1161,6 +1208,7 @@ public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBal
     public V1api20231001storageManagedClusterSpecNetworkProfileLoadBalancerProfileOutboundIPsPublicIPsReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterLoadBalancerProfile_OutboundIPs</summary>
 public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBalancerProfileOutboundIPs
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1172,6 +1220,7 @@ public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBal
     public IList<V1api20231001storageManagedClusterSpecNetworkProfileLoadBalancerProfileOutboundIPsPublicIPs>? PublicIPs { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterLoadBalancerProfile Profile of the managed cluster load balancer.</summary>
 public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBalancerProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1211,6 +1260,7 @@ public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBal
     public V1api20231001storageManagedClusterSpecNetworkProfileLoadBalancerProfileOutboundIPs? OutboundIPs { get; set; }
 }
 
+/// <summary>Reference: The fully qualified Azure resource id.</summary>
 public partial class V1api20231001storageManagedClusterSpecNetworkProfileNatGatewayProfileEffectiveOutboundIPsReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -1230,6 +1280,7 @@ public partial class V1api20231001storageManagedClusterSpecNetworkProfileNatGate
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ResourceReference A reference to an Azure resource.</summary>
 public partial class V1api20231001storageManagedClusterSpecNetworkProfileNatGatewayProfileEffectiveOutboundIPs
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1241,6 +1292,7 @@ public partial class V1api20231001storageManagedClusterSpecNetworkProfileNatGate
     public V1api20231001storageManagedClusterSpecNetworkProfileNatGatewayProfileEffectiveOutboundIPsReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterManagedOutboundIPProfile Profile of the managed outbound IP resources of the managed cluster.</summary>
 public partial class V1api20231001storageManagedClusterSpecNetworkProfileNatGatewayProfileManagedOutboundIPProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1252,6 +1304,7 @@ public partial class V1api20231001storageManagedClusterSpecNetworkProfileNatGate
     public int? Count { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterNATGatewayProfile Profile of the managed cluster NAT gateway.</summary>
 public partial class V1api20231001storageManagedClusterSpecNetworkProfileNatGatewayProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1271,6 +1324,7 @@ public partial class V1api20231001storageManagedClusterSpecNetworkProfileNatGate
     public V1api20231001storageManagedClusterSpecNetworkProfileNatGatewayProfileManagedOutboundIPProfile? ManagedOutboundIPProfile { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ContainerServiceNetworkProfile Profile of network configuration.</summary>
 public partial class V1api20231001storageManagedClusterSpecNetworkProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1338,6 +1392,7 @@ public partial class V1api20231001storageManagedClusterSpecNetworkProfile
     public IList<string>? ServiceCidrs { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterOIDCIssuerProfile The OIDC issuer profile of the Managed Cluster.</summary>
 public partial class V1api20231001storageManagedClusterSpecOidcIssuerProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1349,6 +1404,7 @@ public partial class V1api20231001storageManagedClusterSpecOidcIssuerProfile
     public bool? Enabled { get; set; }
 }
 
+/// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20231001storageManagedClusterSpecOperatorSpecConfigMapsOidcIssuerProfile
 {
     /// <summary>Key is the key in the ConfigMap being referenced</summary>
@@ -1360,6 +1416,7 @@ public partial class V1api20231001storageManagedClusterSpecOperatorSpecConfigMap
     public string Name { get; set; }
 }
 
+/// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20231001storageManagedClusterSpecOperatorSpecConfigMapsPrincipalId
 {
     /// <summary>Key is the key in the ConfigMap being referenced</summary>
@@ -1371,6 +1428,7 @@ public partial class V1api20231001storageManagedClusterSpecOperatorSpecConfigMap
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterOperatorConfigMaps</summary>
 public partial class V1api20231001storageManagedClusterSpecOperatorSpecConfigMaps
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1386,6 +1444,7 @@ public partial class V1api20231001storageManagedClusterSpecOperatorSpecConfigMap
     public V1api20231001storageManagedClusterSpecOperatorSpecConfigMapsPrincipalId? PrincipalId { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20231001storageManagedClusterSpecOperatorSpecSecretsAdminCredentials
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -1397,6 +1456,7 @@ public partial class V1api20231001storageManagedClusterSpecOperatorSpecSecretsAd
     public string Name { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20231001storageManagedClusterSpecOperatorSpecSecretsUserCredentials
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -1408,6 +1468,7 @@ public partial class V1api20231001storageManagedClusterSpecOperatorSpecSecretsUs
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterOperatorSecrets</summary>
 public partial class V1api20231001storageManagedClusterSpecOperatorSpecSecrets
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1423,6 +1484,7 @@ public partial class V1api20231001storageManagedClusterSpecOperatorSpecSecrets
     public V1api20231001storageManagedClusterSpecOperatorSpecSecretsUserCredentials? UserCredentials { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 public partial class V1api20231001storageManagedClusterSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1438,6 +1500,7 @@ public partial class V1api20231001storageManagedClusterSpecOperatorSpec
     public V1api20231001storageManagedClusterSpecOperatorSpecSecrets? Secrets { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20231001storageManagedClusterSpecOwner
 {
     /// <summary></summary>
@@ -1449,6 +1512,7 @@ public partial class V1api20231001storageManagedClusterSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>ResourceReference: The resource ID of the user assigned identity.</summary>
 public partial class V1api20231001storageManagedClusterSpecPodIdentityProfileUserAssignedIdentitiesIdentityResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -1468,6 +1532,7 @@ public partial class V1api20231001storageManagedClusterSpecPodIdentityProfileUse
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.UserAssignedIdentity Details about a user assigned identity.</summary>
 public partial class V1api20231001storageManagedClusterSpecPodIdentityProfileUserAssignedIdentitiesIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1487,6 +1552,7 @@ public partial class V1api20231001storageManagedClusterSpecPodIdentityProfileUse
     public V1api20231001storageManagedClusterSpecPodIdentityProfileUserAssignedIdentitiesIdentityResourceReference? ResourceReference { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterPodIdentity Details about the pod identity assigned to the Managed Cluster.</summary>
 public partial class V1api20231001storageManagedClusterSpecPodIdentityProfileUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1510,6 +1576,7 @@ public partial class V1api20231001storageManagedClusterSpecPodIdentityProfileUse
     public string? Namespace { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterPodIdentityException See [disable AAD Pod Identity for a specific Pod/Application](https://azure.github.io/aad-pod-identity/docs/configure/application_exception/) for more details.</summary>
 public partial class V1api20231001storageManagedClusterSpecPodIdentityProfileUserAssignedIdentityExceptions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1529,6 +1596,7 @@ public partial class V1api20231001storageManagedClusterSpecPodIdentityProfileUse
     public IDictionary<string, string>? PodLabels { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterPodIdentityProfile See [use AAD pod identity](https://docs.microsoft.com/azure/aks/use-azure-ad-pod-identity) for more details on pod identity integration.</summary>
 public partial class V1api20231001storageManagedClusterSpecPodIdentityProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1552,6 +1620,7 @@ public partial class V1api20231001storageManagedClusterSpecPodIdentityProfile
     public IList<V1api20231001storageManagedClusterSpecPodIdentityProfileUserAssignedIdentityExceptions>? UserAssignedIdentityExceptions { get; set; }
 }
 
+/// <summary>Reference: The ID of the private link resource.</summary>
 public partial class V1api20231001storageManagedClusterSpecPrivateLinkResourcesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -1571,6 +1640,7 @@ public partial class V1api20231001storageManagedClusterSpecPrivateLinkResourcesR
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.PrivateLinkResource A private link resource</summary>
 public partial class V1api20231001storageManagedClusterSpecPrivateLinkResources
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1598,6 +1668,7 @@ public partial class V1api20231001storageManagedClusterSpecPrivateLinkResources
     public string? Type { get; set; }
 }
 
+/// <summary>KeyVaultResourceReference: Resource ID of key vault. When keyVaultNetworkAccess is `Private`, this field is required and must be a valid resource ID. When keyVaultNetworkAccess is `Public`, leave the field empty.</summary>
 public partial class V1api20231001storageManagedClusterSpecSecurityProfileAzureKeyVaultKmsKeyVaultResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -1617,6 +1688,7 @@ public partial class V1api20231001storageManagedClusterSpecSecurityProfileAzureK
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.AzureKeyVaultKms Azure Key Vault key management service settings for the security profile.</summary>
 public partial class V1api20231001storageManagedClusterSpecSecurityProfileAzureKeyVaultKms
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1640,6 +1712,7 @@ public partial class V1api20231001storageManagedClusterSpecSecurityProfileAzureK
     public V1api20231001storageManagedClusterSpecSecurityProfileAzureKeyVaultKmsKeyVaultResourceReference? KeyVaultResourceReference { get; set; }
 }
 
+/// <summary>LogAnalyticsWorkspaceResourceReference: Resource ID of the Log Analytics workspace to be associated with Microsoft Defender. When Microsoft Defender is enabled, this field is required and must be a valid workspace resource ID. When Microsoft Defender is disabled, leave the field empty.</summary>
 public partial class V1api20231001storageManagedClusterSpecSecurityProfileDefenderLogAnalyticsWorkspaceResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -1659,6 +1732,7 @@ public partial class V1api20231001storageManagedClusterSpecSecurityProfileDefend
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterSecurityProfileDefenderSecurityMonitoring Microsoft Defender settings for the security profile threat detection.</summary>
 public partial class V1api20231001storageManagedClusterSpecSecurityProfileDefenderSecurityMonitoring
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1670,6 +1744,7 @@ public partial class V1api20231001storageManagedClusterSpecSecurityProfileDefend
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterSecurityProfileDefender Microsoft Defender settings for the security profile.</summary>
 public partial class V1api20231001storageManagedClusterSpecSecurityProfileDefender
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1685,6 +1760,7 @@ public partial class V1api20231001storageManagedClusterSpecSecurityProfileDefend
     public V1api20231001storageManagedClusterSpecSecurityProfileDefenderSecurityMonitoring? SecurityMonitoring { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterSecurityProfileImageCleaner Image Cleaner removes unused images from nodes, freeing up disk space and helping to reduce attack surface area. Here are settings for the security profile.</summary>
 public partial class V1api20231001storageManagedClusterSpecSecurityProfileImageCleaner
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1700,6 +1776,7 @@ public partial class V1api20231001storageManagedClusterSpecSecurityProfileImageC
     public int? IntervalHours { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterSecurityProfileWorkloadIdentity Workload identity settings for the security profile.</summary>
 public partial class V1api20231001storageManagedClusterSpecSecurityProfileWorkloadIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1711,6 +1788,7 @@ public partial class V1api20231001storageManagedClusterSpecSecurityProfileWorklo
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterSecurityProfile Security profile for the container service cluster.</summary>
 public partial class V1api20231001storageManagedClusterSpecSecurityProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1734,6 +1812,7 @@ public partial class V1api20231001storageManagedClusterSpecSecurityProfile
     public V1api20231001storageManagedClusterSpecSecurityProfileWorkloadIdentity? WorkloadIdentity { get; set; }
 }
 
+/// <summary>KeyVaultReference: The resource ID of the Key Vault.</summary>
 public partial class V1api20231001storageManagedClusterSpecServiceMeshProfileIstioCertificateAuthorityPluginKeyVaultReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -1753,6 +1832,7 @@ public partial class V1api20231001storageManagedClusterSpecServiceMeshProfileIst
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.IstioPluginCertificateAuthority Plugin certificates information for Service Mesh.</summary>
 public partial class V1api20231001storageManagedClusterSpecServiceMeshProfileIstioCertificateAuthorityPlugin
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1780,6 +1860,7 @@ public partial class V1api20231001storageManagedClusterSpecServiceMeshProfileIst
     public string? RootCertObjectName { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.IstioCertificateAuthority Istio Service Mesh Certificate Authority (CA) configuration. For now, we only support plugin certificates as described here https://aka.ms/asm-plugin-ca</summary>
 public partial class V1api20231001storageManagedClusterSpecServiceMeshProfileIstioCertificateAuthority
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1791,6 +1872,7 @@ public partial class V1api20231001storageManagedClusterSpecServiceMeshProfileIst
     public V1api20231001storageManagedClusterSpecServiceMeshProfileIstioCertificateAuthorityPlugin? Plugin { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.IstioEgressGateway Istio egress gateway configuration.</summary>
 public partial class V1api20231001storageManagedClusterSpecServiceMeshProfileIstioComponentsEgressGateways
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1806,6 +1888,7 @@ public partial class V1api20231001storageManagedClusterSpecServiceMeshProfileIst
     public IDictionary<string, string>? NodeSelector { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.IstioIngressGateway Istio ingress gateway configuration. For now, we support up to one external ingress gateway named `aks-istio-ingressgateway-external` and one internal ingress gateway named `aks-istio-ingressgateway-internal`.</summary>
 public partial class V1api20231001storageManagedClusterSpecServiceMeshProfileIstioComponentsIngressGateways
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1821,6 +1904,7 @@ public partial class V1api20231001storageManagedClusterSpecServiceMeshProfileIst
     public string? Mode { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.IstioComponents Istio components configuration.</summary>
 public partial class V1api20231001storageManagedClusterSpecServiceMeshProfileIstioComponents
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1836,6 +1920,7 @@ public partial class V1api20231001storageManagedClusterSpecServiceMeshProfileIst
     public IList<V1api20231001storageManagedClusterSpecServiceMeshProfileIstioComponentsIngressGateways>? IngressGateways { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.IstioServiceMesh Istio service mesh configuration.</summary>
 public partial class V1api20231001storageManagedClusterSpecServiceMeshProfileIstio
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1855,6 +1940,7 @@ public partial class V1api20231001storageManagedClusterSpecServiceMeshProfileIst
     public IList<string>? Revisions { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ServiceMeshProfile Service mesh profile for a managed cluster.</summary>
 public partial class V1api20231001storageManagedClusterSpecServiceMeshProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1870,6 +1956,7 @@ public partial class V1api20231001storageManagedClusterSpecServiceMeshProfile
     public string? Mode { get; set; }
 }
 
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20231001storageManagedClusterSpecServicePrincipalProfileSecret
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -1881,6 +1968,7 @@ public partial class V1api20231001storageManagedClusterSpecServicePrincipalProfi
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterServicePrincipalProfile Information about a service principal identity for the cluster to use for manipulating Azure APIs.</summary>
 public partial class V1api20231001storageManagedClusterSpecServicePrincipalProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1896,6 +1984,7 @@ public partial class V1api20231001storageManagedClusterSpecServicePrincipalProfi
     public V1api20231001storageManagedClusterSpecServicePrincipalProfileSecret? Secret { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterSKU The SKU of a Managed Cluster.</summary>
 public partial class V1api20231001storageManagedClusterSpecSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1911,6 +2000,7 @@ public partial class V1api20231001storageManagedClusterSpecSku
     public string? Tier { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterStorageProfileBlobCSIDriver AzureBlob CSI Driver settings for the storage profile.</summary>
 public partial class V1api20231001storageManagedClusterSpecStorageProfileBlobCSIDriver
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1922,6 +2012,7 @@ public partial class V1api20231001storageManagedClusterSpecStorageProfileBlobCSI
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterStorageProfileDiskCSIDriver AzureDisk CSI Driver settings for the storage profile.</summary>
 public partial class V1api20231001storageManagedClusterSpecStorageProfileDiskCSIDriver
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1933,6 +2024,7 @@ public partial class V1api20231001storageManagedClusterSpecStorageProfileDiskCSI
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterStorageProfileFileCSIDriver AzureFile CSI Driver settings for the storage profile.</summary>
 public partial class V1api20231001storageManagedClusterSpecStorageProfileFileCSIDriver
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1944,6 +2036,7 @@ public partial class V1api20231001storageManagedClusterSpecStorageProfileFileCSI
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterStorageProfileSnapshotController Snapshot Controller settings for the storage profile.</summary>
 public partial class V1api20231001storageManagedClusterSpecStorageProfileSnapshotController
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1955,6 +2048,7 @@ public partial class V1api20231001storageManagedClusterSpecStorageProfileSnapsho
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterStorageProfile Storage profile for the container service cluster.</summary>
 public partial class V1api20231001storageManagedClusterSpecStorageProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1978,6 +2072,7 @@ public partial class V1api20231001storageManagedClusterSpecStorageProfile
     public V1api20231001storageManagedClusterSpecStorageProfileSnapshotController? SnapshotController { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.UpgradeOverrideSettings Settings for overrides when upgrading a cluster.</summary>
 public partial class V1api20231001storageManagedClusterSpecUpgradeSettingsOverrideSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1993,6 +2088,7 @@ public partial class V1api20231001storageManagedClusterSpecUpgradeSettingsOverri
     public string? Until { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ClusterUpgradeSettings Settings for upgrading a cluster.</summary>
 public partial class V1api20231001storageManagedClusterSpecUpgradeSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2004,6 +2100,7 @@ public partial class V1api20231001storageManagedClusterSpecUpgradeSettings
     public V1api20231001storageManagedClusterSpecUpgradeSettingsOverrideSettings? OverrideSettings { get; set; }
 }
 
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20231001storageManagedClusterSpecWindowsProfileAdminPassword
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -2015,6 +2112,7 @@ public partial class V1api20231001storageManagedClusterSpecWindowsProfileAdminPa
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.WindowsGmsaProfile Windows gMSA Profile in the managed cluster.</summary>
 public partial class V1api20231001storageManagedClusterSpecWindowsProfileGmsaProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2034,6 +2132,7 @@ public partial class V1api20231001storageManagedClusterSpecWindowsProfileGmsaPro
     public string? RootDomainName { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterWindowsProfile Profile for Windows VMs in the managed cluster.</summary>
 public partial class V1api20231001storageManagedClusterSpecWindowsProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2061,6 +2160,7 @@ public partial class V1api20231001storageManagedClusterSpecWindowsProfile
     public string? LicenseType { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterWorkloadAutoScalerProfileKeda KEDA (Kubernetes Event-driven Autoscaling) settings for the workload auto-scaler profile.</summary>
 public partial class V1api20231001storageManagedClusterSpecWorkloadAutoScalerProfileKeda
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2072,6 +2172,7 @@ public partial class V1api20231001storageManagedClusterSpecWorkloadAutoScalerPro
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterWorkloadAutoScalerProfileVerticalPodAutoscaler VPA (Vertical Pod Autoscaler) settings for the workload auto-scaler profile.</summary>
 public partial class V1api20231001storageManagedClusterSpecWorkloadAutoScalerProfileVerticalPodAutoscaler
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2083,6 +2184,7 @@ public partial class V1api20231001storageManagedClusterSpecWorkloadAutoScalerPro
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterWorkloadAutoScalerProfile Workload Auto-scaler profile for the managed cluster.</summary>
 public partial class V1api20231001storageManagedClusterSpecWorkloadAutoScalerProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2098,6 +2200,7 @@ public partial class V1api20231001storageManagedClusterSpecWorkloadAutoScalerPro
     public V1api20231001storageManagedClusterSpecWorkloadAutoScalerProfileVerticalPodAutoscaler? VerticalPodAutoscaler { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedCluster_Spec</summary>
 public partial class V1api20231001storageManagedClusterSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2265,6 +2368,7 @@ public partial class V1api20231001storageManagedClusterSpec
     public V1api20231001storageManagedClusterSpecWorkloadAutoScalerProfile? WorkloadAutoScalerProfile { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterAADProfile_STATUS For more details see [managed AAD on AKS](https://docs.microsoft.com/azure/aks/managed-aad).</summary>
 public partial class V1api20231001storageManagedClusterStatusAadProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2300,6 +2404,7 @@ public partial class V1api20231001storageManagedClusterStatusAadProfile
     public string? TenantID { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.UserAssignedIdentity_STATUS Details about a user assigned identity.</summary>
 public partial class V1api20231001storageManagedClusterStatusAddonProfilesIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2319,6 +2424,7 @@ public partial class V1api20231001storageManagedClusterStatusAddonProfilesIdenti
     public string? ResourceId { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterAddonProfile_STATUS A Kubernetes add-on profile for a managed cluster.</summary>
 public partial class V1api20231001storageManagedClusterStatusAddonProfiles
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2338,6 +2444,7 @@ public partial class V1api20231001storageManagedClusterStatusAddonProfiles
     public V1api20231001storageManagedClusterStatusAddonProfilesIdentity? Identity { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.CreationData_STATUS Data used when creating a target resource from a source resource.</summary>
 public partial class V1api20231001storageManagedClusterStatusAgentPoolProfilesCreationData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2349,6 +2456,7 @@ public partial class V1api20231001storageManagedClusterStatusAgentPoolProfilesCr
     public string? SourceResourceId { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.KubeletConfig_STATUS See [AKS custom node configuration](https://docs.microsoft.com/azure/aks/custom-node-configuration) for more details.</summary>
 public partial class V1api20231001storageManagedClusterStatusAgentPoolProfilesKubeletConfig
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2400,6 +2508,7 @@ public partial class V1api20231001storageManagedClusterStatusAgentPoolProfilesKu
     public string? TopologyManagerPolicy { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.SysctlConfig_STATUS Sysctl settings for Linux agent nodes.</summary>
 public partial class V1api20231001storageManagedClusterStatusAgentPoolProfilesLinuxOSConfigSysctls
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2519,6 +2628,7 @@ public partial class V1api20231001storageManagedClusterStatusAgentPoolProfilesLi
     public int? VmVfsCachePressure { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.LinuxOSConfig_STATUS See [AKS custom node configuration](https://docs.microsoft.com/azure/aks/custom-node-configuration) for more details.</summary>
 public partial class V1api20231001storageManagedClusterStatusAgentPoolProfilesLinuxOSConfig
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2542,6 +2652,7 @@ public partial class V1api20231001storageManagedClusterStatusAgentPoolProfilesLi
     public string? TransparentHugePageEnabled { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.PortRange_STATUS The port range.</summary>
 public partial class V1api20231001storageManagedClusterStatusAgentPoolProfilesNetworkProfileAllowedHostPorts
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2561,6 +2672,7 @@ public partial class V1api20231001storageManagedClusterStatusAgentPoolProfilesNe
     public string? Protocol { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.IPTag_STATUS Contains the IPTag associated with the object.</summary>
 public partial class V1api20231001storageManagedClusterStatusAgentPoolProfilesNetworkProfileNodePublicIPTags
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2576,6 +2688,7 @@ public partial class V1api20231001storageManagedClusterStatusAgentPoolProfilesNe
     public string? Tag { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.AgentPoolNetworkProfile_STATUS Network settings of an agent pool.</summary>
 public partial class V1api20231001storageManagedClusterStatusAgentPoolProfilesNetworkProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2595,6 +2708,7 @@ public partial class V1api20231001storageManagedClusterStatusAgentPoolProfilesNe
     public IList<V1api20231001storageManagedClusterStatusAgentPoolProfilesNetworkProfileNodePublicIPTags>? NodePublicIPTags { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.PowerState_STATUS Describes the Power State of the cluster</summary>
 public partial class V1api20231001storageManagedClusterStatusAgentPoolProfilesPowerState
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2606,6 +2720,7 @@ public partial class V1api20231001storageManagedClusterStatusAgentPoolProfilesPo
     public string? Code { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.AgentPoolUpgradeSettings_STATUS Settings for upgrading an agentpool</summary>
 public partial class V1api20231001storageManagedClusterStatusAgentPoolProfilesUpgradeSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2621,6 +2736,7 @@ public partial class V1api20231001storageManagedClusterStatusAgentPoolProfilesUp
     public string? MaxSurge { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterAgentPoolProfile_STATUS Profile for the container service agent pool.</summary>
 public partial class V1api20231001storageManagedClusterStatusAgentPoolProfiles
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2804,6 +2920,7 @@ public partial class V1api20231001storageManagedClusterStatusAgentPoolProfiles
     public string? WorkloadRuntime { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterAPIServerAccessProfile_STATUS Access profile for managed cluster API server.</summary>
 public partial class V1api20231001storageManagedClusterStatusApiServerAccessProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2831,6 +2948,7 @@ public partial class V1api20231001storageManagedClusterStatusApiServerAccessProf
     public string? PrivateDNSZone { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterProperties_AutoScalerProfile_STATUS</summary>
 public partial class V1api20231001storageManagedClusterStatusAutoScalerProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2906,6 +3024,7 @@ public partial class V1api20231001storageManagedClusterStatusAutoScalerProfile
     public string? SkipNodesWithSystemPods { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterAutoUpgradeProfile_STATUS Auto upgrade profile for a managed cluster.</summary>
 public partial class V1api20231001storageManagedClusterStatusAutoUpgradeProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2921,6 +3040,7 @@ public partial class V1api20231001storageManagedClusterStatusAutoUpgradeProfile
     public string? UpgradeChannel { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterAzureMonitorProfileKubeStateMetrics_STATUS Kube State Metrics profile for the Azure Managed Prometheus addon. These optional settings are for the kube-state-metrics pod that is deployed with the addon. See aka.ms/AzureManagedPrometheus-optional-parameters for details.</summary>
 public partial class V1api20231001storageManagedClusterStatusAzureMonitorProfileMetricsKubeStateMetrics
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2936,6 +3056,7 @@ public partial class V1api20231001storageManagedClusterStatusAzureMonitorProfile
     public string? MetricLabelsAllowlist { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterAzureMonitorProfileMetrics_STATUS Metrics profile for the Azure Monitor managed service for Prometheus addon. Collect out-of-the-box Kubernetes infrastructure metrics to send to an Azure Monitor Workspace and configure additional scraping for custom targets. See aka.ms/AzureManagedPrometheus for an overview.</summary>
 public partial class V1api20231001storageManagedClusterStatusAzureMonitorProfileMetrics
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2951,6 +3072,7 @@ public partial class V1api20231001storageManagedClusterStatusAzureMonitorProfile
     public V1api20231001storageManagedClusterStatusAzureMonitorProfileMetricsKubeStateMetrics? KubeStateMetrics { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterAzureMonitorProfile_STATUS Azure Monitor addon profiles for monitoring the managed cluster.</summary>
 public partial class V1api20231001storageManagedClusterStatusAzureMonitorProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2962,6 +3084,7 @@ public partial class V1api20231001storageManagedClusterStatusAzureMonitorProfile
     public V1api20231001storageManagedClusterStatusAzureMonitorProfileMetrics? Metrics { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20231001storageManagedClusterStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -2993,6 +3116,7 @@ public partial class V1api20231001storageManagedClusterStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ExtendedLocation_STATUS The complex type of the extended location.</summary>
 public partial class V1api20231001storageManagedClusterStatusExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3008,6 +3132,7 @@ public partial class V1api20231001storageManagedClusterStatusExtendedLocation
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterHTTPProxyConfig_STATUS Cluster HTTP proxy configuration.</summary>
 public partial class V1api20231001storageManagedClusterStatusHttpProxyConfig
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3031,6 +3156,7 @@ public partial class V1api20231001storageManagedClusterStatusHttpProxyConfig
     public string? TrustedCa { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.DelegatedResource_STATUS Delegated resource properties - internal use only.</summary>
 public partial class V1api20231001storageManagedClusterStatusIdentityDelegatedResources
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3054,6 +3180,7 @@ public partial class V1api20231001storageManagedClusterStatusIdentityDelegatedRe
     public string? TenantId { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterIdentity_UserAssignedIdentities_STATUS</summary>
 public partial class V1api20231001storageManagedClusterStatusIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3069,6 +3196,7 @@ public partial class V1api20231001storageManagedClusterStatusIdentityUserAssigne
     public string? PrincipalId { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterIdentity_STATUS Identity for the managed cluster.</summary>
 public partial class V1api20231001storageManagedClusterStatusIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3096,6 +3224,7 @@ public partial class V1api20231001storageManagedClusterStatusIdentity
     public IDictionary<string, V1api20231001storageManagedClusterStatusIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.UserAssignedIdentity_STATUS Details about a user assigned identity.</summary>
 public partial class V1api20231001storageManagedClusterStatusIdentityProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3115,6 +3244,7 @@ public partial class V1api20231001storageManagedClusterStatusIdentityProfile
     public string? ResourceId { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ContainerServiceSshPublicKey_STATUS Contains information about SSH certificate public key data.</summary>
 public partial class V1api20231001storageManagedClusterStatusLinuxProfileSshPublicKeys
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3126,6 +3256,7 @@ public partial class V1api20231001storageManagedClusterStatusLinuxProfileSshPubl
     public string? KeyData { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ContainerServiceSshConfiguration_STATUS SSH configuration for Linux-based VMs running on Azure.</summary>
 public partial class V1api20231001storageManagedClusterStatusLinuxProfileSsh
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3137,6 +3268,7 @@ public partial class V1api20231001storageManagedClusterStatusLinuxProfileSsh
     public IList<V1api20231001storageManagedClusterStatusLinuxProfileSshPublicKeys>? PublicKeys { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ContainerServiceLinuxProfile_STATUS Profile for Linux VMs in the container service cluster.</summary>
 public partial class V1api20231001storageManagedClusterStatusLinuxProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3152,6 +3284,7 @@ public partial class V1api20231001storageManagedClusterStatusLinuxProfile
     public V1api20231001storageManagedClusterStatusLinuxProfileSsh? Ssh { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ResourceReference_STATUS A reference to an Azure resource.</summary>
 public partial class V1api20231001storageManagedClusterStatusNetworkProfileLoadBalancerProfileEffectiveOutboundIPs
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3163,6 +3296,7 @@ public partial class V1api20231001storageManagedClusterStatusNetworkProfileLoadB
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterLoadBalancerProfile_ManagedOutboundIPs_STATUS</summary>
 public partial class V1api20231001storageManagedClusterStatusNetworkProfileLoadBalancerProfileManagedOutboundIPs
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3178,6 +3312,7 @@ public partial class V1api20231001storageManagedClusterStatusNetworkProfileLoadB
     public int? CountIPv6 { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ResourceReference_STATUS A reference to an Azure resource.</summary>
 public partial class V1api20231001storageManagedClusterStatusNetworkProfileLoadBalancerProfileOutboundIPPrefixesPublicIPPrefixes
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3189,6 +3324,7 @@ public partial class V1api20231001storageManagedClusterStatusNetworkProfileLoadB
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterLoadBalancerProfile_OutboundIPPrefixes_STATUS</summary>
 public partial class V1api20231001storageManagedClusterStatusNetworkProfileLoadBalancerProfileOutboundIPPrefixes
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3200,6 +3336,7 @@ public partial class V1api20231001storageManagedClusterStatusNetworkProfileLoadB
     public IList<V1api20231001storageManagedClusterStatusNetworkProfileLoadBalancerProfileOutboundIPPrefixesPublicIPPrefixes>? PublicIPPrefixes { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ResourceReference_STATUS A reference to an Azure resource.</summary>
 public partial class V1api20231001storageManagedClusterStatusNetworkProfileLoadBalancerProfileOutboundIPsPublicIPs
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3211,6 +3348,7 @@ public partial class V1api20231001storageManagedClusterStatusNetworkProfileLoadB
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterLoadBalancerProfile_OutboundIPs_STATUS</summary>
 public partial class V1api20231001storageManagedClusterStatusNetworkProfileLoadBalancerProfileOutboundIPs
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3222,6 +3360,7 @@ public partial class V1api20231001storageManagedClusterStatusNetworkProfileLoadB
     public IList<V1api20231001storageManagedClusterStatusNetworkProfileLoadBalancerProfileOutboundIPsPublicIPs>? PublicIPs { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterLoadBalancerProfile_STATUS Profile of the managed cluster load balancer.</summary>
 public partial class V1api20231001storageManagedClusterStatusNetworkProfileLoadBalancerProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3261,6 +3400,7 @@ public partial class V1api20231001storageManagedClusterStatusNetworkProfileLoadB
     public V1api20231001storageManagedClusterStatusNetworkProfileLoadBalancerProfileOutboundIPs? OutboundIPs { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ResourceReference_STATUS A reference to an Azure resource.</summary>
 public partial class V1api20231001storageManagedClusterStatusNetworkProfileNatGatewayProfileEffectiveOutboundIPs
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3272,6 +3412,7 @@ public partial class V1api20231001storageManagedClusterStatusNetworkProfileNatGa
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterManagedOutboundIPProfile_STATUS Profile of the managed outbound IP resources of the managed cluster.</summary>
 public partial class V1api20231001storageManagedClusterStatusNetworkProfileNatGatewayProfileManagedOutboundIPProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3283,6 +3424,7 @@ public partial class V1api20231001storageManagedClusterStatusNetworkProfileNatGa
     public int? Count { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterNATGatewayProfile_STATUS Profile of the managed cluster NAT gateway.</summary>
 public partial class V1api20231001storageManagedClusterStatusNetworkProfileNatGatewayProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3302,6 +3444,7 @@ public partial class V1api20231001storageManagedClusterStatusNetworkProfileNatGa
     public V1api20231001storageManagedClusterStatusNetworkProfileNatGatewayProfileManagedOutboundIPProfile? ManagedOutboundIPProfile { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ContainerServiceNetworkProfile_STATUS Profile of network configuration.</summary>
 public partial class V1api20231001storageManagedClusterStatusNetworkProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3369,6 +3512,7 @@ public partial class V1api20231001storageManagedClusterStatusNetworkProfile
     public IList<string>? ServiceCidrs { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterOIDCIssuerProfile_STATUS The OIDC issuer profile of the Managed Cluster.</summary>
 public partial class V1api20231001storageManagedClusterStatusOidcIssuerProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3384,6 +3528,7 @@ public partial class V1api20231001storageManagedClusterStatusOidcIssuerProfile
     public string? IssuerURL { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.UserAssignedIdentity_STATUS Details about a user assigned identity.</summary>
 public partial class V1api20231001storageManagedClusterStatusPodIdentityProfileUserAssignedIdentitiesIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3403,6 +3548,7 @@ public partial class V1api20231001storageManagedClusterStatusPodIdentityProfileU
     public string? ResourceId { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterPodIdentityProvisioningErrorBody_STATUS_Unrolled</summary>
 public partial class V1api20231001storageManagedClusterStatusPodIdentityProfileUserAssignedIdentitiesProvisioningInfoErrorErrorDetails
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3422,6 +3568,7 @@ public partial class V1api20231001storageManagedClusterStatusPodIdentityProfileU
     public string? Target { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterPodIdentityProvisioningErrorBody_STATUS An error response from the pod identity provisioning.</summary>
 public partial class V1api20231001storageManagedClusterStatusPodIdentityProfileUserAssignedIdentitiesProvisioningInfoErrorError
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3445,6 +3592,7 @@ public partial class V1api20231001storageManagedClusterStatusPodIdentityProfileU
     public string? Target { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterPodIdentityProvisioningError_STATUS An error response from the pod identity provisioning.</summary>
 public partial class V1api20231001storageManagedClusterStatusPodIdentityProfileUserAssignedIdentitiesProvisioningInfoError
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3456,6 +3604,7 @@ public partial class V1api20231001storageManagedClusterStatusPodIdentityProfileU
     public V1api20231001storageManagedClusterStatusPodIdentityProfileUserAssignedIdentitiesProvisioningInfoErrorError? Error { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterPodIdentity_ProvisioningInfo_STATUS</summary>
 public partial class V1api20231001storageManagedClusterStatusPodIdentityProfileUserAssignedIdentitiesProvisioningInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3467,6 +3616,7 @@ public partial class V1api20231001storageManagedClusterStatusPodIdentityProfileU
     public V1api20231001storageManagedClusterStatusPodIdentityProfileUserAssignedIdentitiesProvisioningInfoError? Error { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterPodIdentity_STATUS Details about the pod identity assigned to the Managed Cluster.</summary>
 public partial class V1api20231001storageManagedClusterStatusPodIdentityProfileUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3498,6 +3648,7 @@ public partial class V1api20231001storageManagedClusterStatusPodIdentityProfileU
     public string? ProvisioningState { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterPodIdentityException_STATUS See [disable AAD Pod Identity for a specific Pod/Application](https://azure.github.io/aad-pod-identity/docs/configure/application_exception/) for more details.</summary>
 public partial class V1api20231001storageManagedClusterStatusPodIdentityProfileUserAssignedIdentityExceptions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3517,6 +3668,7 @@ public partial class V1api20231001storageManagedClusterStatusPodIdentityProfileU
     public IDictionary<string, string>? PodLabels { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterPodIdentityProfile_STATUS See [use AAD pod identity](https://docs.microsoft.com/azure/aks/use-azure-ad-pod-identity) for more details on pod identity integration.</summary>
 public partial class V1api20231001storageManagedClusterStatusPodIdentityProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3540,6 +3692,7 @@ public partial class V1api20231001storageManagedClusterStatusPodIdentityProfile
     public IList<V1api20231001storageManagedClusterStatusPodIdentityProfileUserAssignedIdentityExceptions>? UserAssignedIdentityExceptions { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.PowerState_STATUS Describes the Power State of the cluster</summary>
 public partial class V1api20231001storageManagedClusterStatusPowerState
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3551,6 +3704,7 @@ public partial class V1api20231001storageManagedClusterStatusPowerState
     public string? Code { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.PrivateLinkResource_STATUS A private link resource</summary>
 public partial class V1api20231001storageManagedClusterStatusPrivateLinkResources
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3582,6 +3736,7 @@ public partial class V1api20231001storageManagedClusterStatusPrivateLinkResource
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.AzureKeyVaultKms_STATUS Azure Key Vault key management service settings for the security profile.</summary>
 public partial class V1api20231001storageManagedClusterStatusSecurityProfileAzureKeyVaultKms
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3605,6 +3760,7 @@ public partial class V1api20231001storageManagedClusterStatusSecurityProfileAzur
     public string? KeyVaultResourceId { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterSecurityProfileDefenderSecurityMonitoring_STATUS Microsoft Defender settings for the security profile threat detection.</summary>
 public partial class V1api20231001storageManagedClusterStatusSecurityProfileDefenderSecurityMonitoring
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3616,6 +3772,7 @@ public partial class V1api20231001storageManagedClusterStatusSecurityProfileDefe
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterSecurityProfileDefender_STATUS Microsoft Defender settings for the security profile.</summary>
 public partial class V1api20231001storageManagedClusterStatusSecurityProfileDefender
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3631,6 +3788,7 @@ public partial class V1api20231001storageManagedClusterStatusSecurityProfileDefe
     public V1api20231001storageManagedClusterStatusSecurityProfileDefenderSecurityMonitoring? SecurityMonitoring { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterSecurityProfileImageCleaner_STATUS Image Cleaner removes unused images from nodes, freeing up disk space and helping to reduce attack surface area. Here are settings for the security profile.</summary>
 public partial class V1api20231001storageManagedClusterStatusSecurityProfileImageCleaner
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3646,6 +3804,7 @@ public partial class V1api20231001storageManagedClusterStatusSecurityProfileImag
     public int? IntervalHours { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterSecurityProfileWorkloadIdentity_STATUS Workload identity settings for the security profile.</summary>
 public partial class V1api20231001storageManagedClusterStatusSecurityProfileWorkloadIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3657,6 +3816,7 @@ public partial class V1api20231001storageManagedClusterStatusSecurityProfileWork
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterSecurityProfile_STATUS Security profile for the container service cluster.</summary>
 public partial class V1api20231001storageManagedClusterStatusSecurityProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3680,6 +3840,7 @@ public partial class V1api20231001storageManagedClusterStatusSecurityProfile
     public V1api20231001storageManagedClusterStatusSecurityProfileWorkloadIdentity? WorkloadIdentity { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.IstioPluginCertificateAuthority_STATUS Plugin certificates information for Service Mesh.</summary>
 public partial class V1api20231001storageManagedClusterStatusServiceMeshProfileIstioCertificateAuthorityPlugin
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3707,6 +3868,7 @@ public partial class V1api20231001storageManagedClusterStatusServiceMeshProfileI
     public string? RootCertObjectName { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.IstioCertificateAuthority_STATUS Istio Service Mesh Certificate Authority (CA) configuration. For now, we only support plugin certificates as described here https://aka.ms/asm-plugin-ca</summary>
 public partial class V1api20231001storageManagedClusterStatusServiceMeshProfileIstioCertificateAuthority
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3718,6 +3880,7 @@ public partial class V1api20231001storageManagedClusterStatusServiceMeshProfileI
     public V1api20231001storageManagedClusterStatusServiceMeshProfileIstioCertificateAuthorityPlugin? Plugin { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.IstioEgressGateway_STATUS Istio egress gateway configuration.</summary>
 public partial class V1api20231001storageManagedClusterStatusServiceMeshProfileIstioComponentsEgressGateways
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3733,6 +3896,7 @@ public partial class V1api20231001storageManagedClusterStatusServiceMeshProfileI
     public IDictionary<string, string>? NodeSelector { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.IstioIngressGateway_STATUS Istio ingress gateway configuration. For now, we support up to one external ingress gateway named `aks-istio-ingressgateway-external` and one internal ingress gateway named `aks-istio-ingressgateway-internal`.</summary>
 public partial class V1api20231001storageManagedClusterStatusServiceMeshProfileIstioComponentsIngressGateways
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3748,6 +3912,7 @@ public partial class V1api20231001storageManagedClusterStatusServiceMeshProfileI
     public string? Mode { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.IstioComponents_STATUS Istio components configuration.</summary>
 public partial class V1api20231001storageManagedClusterStatusServiceMeshProfileIstioComponents
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3763,6 +3928,7 @@ public partial class V1api20231001storageManagedClusterStatusServiceMeshProfileI
     public IList<V1api20231001storageManagedClusterStatusServiceMeshProfileIstioComponentsIngressGateways>? IngressGateways { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.IstioServiceMesh_STATUS Istio service mesh configuration.</summary>
 public partial class V1api20231001storageManagedClusterStatusServiceMeshProfileIstio
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3782,6 +3948,7 @@ public partial class V1api20231001storageManagedClusterStatusServiceMeshProfileI
     public IList<string>? Revisions { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ServiceMeshProfile_STATUS Service mesh profile for a managed cluster.</summary>
 public partial class V1api20231001storageManagedClusterStatusServiceMeshProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3797,6 +3964,7 @@ public partial class V1api20231001storageManagedClusterStatusServiceMeshProfile
     public string? Mode { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterServicePrincipalProfile_STATUS Information about a service principal identity for the cluster to use for manipulating Azure APIs.</summary>
 public partial class V1api20231001storageManagedClusterStatusServicePrincipalProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3808,6 +3976,7 @@ public partial class V1api20231001storageManagedClusterStatusServicePrincipalPro
     public string? ClientId { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterSKU_STATUS The SKU of a Managed Cluster.</summary>
 public partial class V1api20231001storageManagedClusterStatusSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3823,6 +3992,7 @@ public partial class V1api20231001storageManagedClusterStatusSku
     public string? Tier { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterStorageProfileBlobCSIDriver_STATUS AzureBlob CSI Driver settings for the storage profile.</summary>
 public partial class V1api20231001storageManagedClusterStatusStorageProfileBlobCSIDriver
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3834,6 +4004,7 @@ public partial class V1api20231001storageManagedClusterStatusStorageProfileBlobC
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterStorageProfileDiskCSIDriver_STATUS AzureDisk CSI Driver settings for the storage profile.</summary>
 public partial class V1api20231001storageManagedClusterStatusStorageProfileDiskCSIDriver
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3845,6 +4016,7 @@ public partial class V1api20231001storageManagedClusterStatusStorageProfileDiskC
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterStorageProfileFileCSIDriver_STATUS AzureFile CSI Driver settings for the storage profile.</summary>
 public partial class V1api20231001storageManagedClusterStatusStorageProfileFileCSIDriver
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3856,6 +4028,7 @@ public partial class V1api20231001storageManagedClusterStatusStorageProfileFileC
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterStorageProfileSnapshotController_STATUS Snapshot Controller settings for the storage profile.</summary>
 public partial class V1api20231001storageManagedClusterStatusStorageProfileSnapshotController
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3867,6 +4040,7 @@ public partial class V1api20231001storageManagedClusterStatusStorageProfileSnaps
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterStorageProfile_STATUS Storage profile for the container service cluster.</summary>
 public partial class V1api20231001storageManagedClusterStatusStorageProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3890,6 +4064,7 @@ public partial class V1api20231001storageManagedClusterStatusStorageProfile
     public V1api20231001storageManagedClusterStatusStorageProfileSnapshotController? SnapshotController { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 public partial class V1api20231001storageManagedClusterStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3921,6 +4096,7 @@ public partial class V1api20231001storageManagedClusterStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.UpgradeOverrideSettings_STATUS Settings for overrides when upgrading a cluster.</summary>
 public partial class V1api20231001storageManagedClusterStatusUpgradeSettingsOverrideSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3936,6 +4112,7 @@ public partial class V1api20231001storageManagedClusterStatusUpgradeSettingsOver
     public string? Until { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ClusterUpgradeSettings_STATUS Settings for upgrading a cluster.</summary>
 public partial class V1api20231001storageManagedClusterStatusUpgradeSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3947,6 +4124,7 @@ public partial class V1api20231001storageManagedClusterStatusUpgradeSettings
     public V1api20231001storageManagedClusterStatusUpgradeSettingsOverrideSettings? OverrideSettings { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.WindowsGmsaProfile_STATUS Windows gMSA Profile in the managed cluster.</summary>
 public partial class V1api20231001storageManagedClusterStatusWindowsProfileGmsaProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3966,6 +4144,7 @@ public partial class V1api20231001storageManagedClusterStatusWindowsProfileGmsaP
     public string? RootDomainName { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterWindowsProfile_STATUS Profile for Windows VMs in the managed cluster.</summary>
 public partial class V1api20231001storageManagedClusterStatusWindowsProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -3989,6 +4168,7 @@ public partial class V1api20231001storageManagedClusterStatusWindowsProfile
     public string? LicenseType { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterWorkloadAutoScalerProfileKeda_STATUS KEDA (Kubernetes Event-driven Autoscaling) settings for the workload auto-scaler profile.</summary>
 public partial class V1api20231001storageManagedClusterStatusWorkloadAutoScalerProfileKeda
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -4000,6 +4180,7 @@ public partial class V1api20231001storageManagedClusterStatusWorkloadAutoScalerP
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterWorkloadAutoScalerProfileVerticalPodAutoscaler_STATUS VPA (Vertical Pod Autoscaler) settings for the workload auto-scaler profile.</summary>
 public partial class V1api20231001storageManagedClusterStatusWorkloadAutoScalerProfileVerticalPodAutoscaler
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -4011,6 +4192,7 @@ public partial class V1api20231001storageManagedClusterStatusWorkloadAutoScalerP
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusterWorkloadAutoScalerProfile_STATUS Workload Auto-scaler profile for the managed cluster.</summary>
 public partial class V1api20231001storageManagedClusterStatusWorkloadAutoScalerProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -4026,6 +4208,7 @@ public partial class V1api20231001storageManagedClusterStatusWorkloadAutoScalerP
     public V1api20231001storageManagedClusterStatusWorkloadAutoScalerProfileVerticalPodAutoscaler? VerticalPodAutoscaler { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedCluster_STATUS Managed cluster.</summary>
 public partial class V1api20231001storageManagedClusterStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -4230,6 +4413,7 @@ public partial class V1api20231001storageManagedClusterStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20231001.ManagedCluster Generator information: - Generated from: /containerservice/resource-manager/Microsoft.ContainerService/aks/stable/2023-10-01/managedClusters.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/managedClusters/{resourceName}</summary>
 public partial class V1api20231001storageManagedCluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20231001storageManagedClusterSpec>, IStatus<V1api20231001storageManagedClusterStatus>
 {
     public const string KubeApiVersion = "v1api20231001storage";

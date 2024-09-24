@@ -38,6 +38,7 @@ public enum V1beta1SecurityGroupIngressRuleSpecForProviderPrefixListIdRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SecurityGroupIngressRuleSpecForProviderPrefixListIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1SecurityGroupIngressRuleSpecForProviderPrefixListIdR
     public V1beta1SecurityGroupIngressRuleSpecForProviderPrefixListIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ManagedPrefixList in ec2 to populate prefixListId.</summary>
 public partial class V1beta1SecurityGroupIngressRuleSpecForProviderPrefixListIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1SecurityGroupIngressRuleSpecForProviderPrefixListIdSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SecurityGroupIngressRuleSpecForProviderPrefixListIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1SecurityGroupIngressRuleSpecForProviderPrefixListIdS
     public V1beta1SecurityGroupIngressRuleSpecForProviderPrefixListIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ManagedPrefixList in ec2 to populate prefixListId.</summary>
 public partial class V1beta1SecurityGroupIngressRuleSpecForProviderPrefixListIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1SecurityGroupIngressRuleSpecForProviderReferencedSecurityGrou
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SecurityGroupIngressRuleSpecForProviderReferencedSecurityGroupIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1SecurityGroupIngressRuleSpecForProviderReferencedSec
     public V1beta1SecurityGroupIngressRuleSpecForProviderReferencedSecurityGroupIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SecurityGroup in ec2 to populate referencedSecurityGroupId.</summary>
 public partial class V1beta1SecurityGroupIngressRuleSpecForProviderReferencedSecurityGroupIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1SecurityGroupIngressRuleSpecForProviderReferencedSecurityGrou
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SecurityGroupIngressRuleSpecForProviderReferencedSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1SecurityGroupIngressRuleSpecForProviderReferencedSec
     public V1beta1SecurityGroupIngressRuleSpecForProviderReferencedSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SecurityGroup in ec2 to populate referencedSecurityGroupId.</summary>
 public partial class V1beta1SecurityGroupIngressRuleSpecForProviderReferencedSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1SecurityGroupIngressRuleSpecForProviderSecurityGroupIdRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SecurityGroupIngressRuleSpecForProviderSecurityGroupIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1SecurityGroupIngressRuleSpecForProviderSecurityGroup
     public V1beta1SecurityGroupIngressRuleSpecForProviderSecurityGroupIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SecurityGroup in ec2 to populate securityGroupId.</summary>
 public partial class V1beta1SecurityGroupIngressRuleSpecForProviderSecurityGroupIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1SecurityGroupIngressRuleSpecForProviderSecurityGroupIdSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SecurityGroupIngressRuleSpecForProviderSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1SecurityGroupIngressRuleSpecForProviderSecurityGroup
     public V1beta1SecurityGroupIngressRuleSpecForProviderSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SecurityGroup in ec2 to populate securityGroupId.</summary>
 public partial class V1beta1SecurityGroupIngressRuleSpecForProviderSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1SecurityGroupIngressRuleSpecForProviderSecurityGroup
     public V1beta1SecurityGroupIngressRuleSpecForProviderSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SecurityGroupIngressRuleSpecForProvider
 {
     /// <summary>The source IPv4 CIDR range.</summary>
@@ -385,6 +398,7 @@ public enum V1beta1SecurityGroupIngressRuleSpecInitProviderPrefixListIdRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SecurityGroupIngressRuleSpecInitProviderPrefixListIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -398,6 +412,7 @@ public partial class V1beta1SecurityGroupIngressRuleSpecInitProviderPrefixListId
     public V1beta1SecurityGroupIngressRuleSpecInitProviderPrefixListIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ManagedPrefixList in ec2 to populate prefixListId.</summary>
 public partial class V1beta1SecurityGroupIngressRuleSpecInitProviderPrefixListIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -429,6 +444,7 @@ public enum V1beta1SecurityGroupIngressRuleSpecInitProviderPrefixListIdSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SecurityGroupIngressRuleSpecInitProviderPrefixListIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -442,6 +458,7 @@ public partial class V1beta1SecurityGroupIngressRuleSpecInitProviderPrefixListId
     public V1beta1SecurityGroupIngressRuleSpecInitProviderPrefixListIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ManagedPrefixList in ec2 to populate prefixListId.</summary>
 public partial class V1beta1SecurityGroupIngressRuleSpecInitProviderPrefixListIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -477,6 +494,7 @@ public enum V1beta1SecurityGroupIngressRuleSpecInitProviderReferencedSecurityGro
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SecurityGroupIngressRuleSpecInitProviderReferencedSecurityGroupIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -490,6 +508,7 @@ public partial class V1beta1SecurityGroupIngressRuleSpecInitProviderReferencedSe
     public V1beta1SecurityGroupIngressRuleSpecInitProviderReferencedSecurityGroupIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SecurityGroup in ec2 to populate referencedSecurityGroupId.</summary>
 public partial class V1beta1SecurityGroupIngressRuleSpecInitProviderReferencedSecurityGroupIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -521,6 +540,7 @@ public enum V1beta1SecurityGroupIngressRuleSpecInitProviderReferencedSecurityGro
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SecurityGroupIngressRuleSpecInitProviderReferencedSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -534,6 +554,7 @@ public partial class V1beta1SecurityGroupIngressRuleSpecInitProviderReferencedSe
     public V1beta1SecurityGroupIngressRuleSpecInitProviderReferencedSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SecurityGroup in ec2 to populate referencedSecurityGroupId.</summary>
 public partial class V1beta1SecurityGroupIngressRuleSpecInitProviderReferencedSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -569,6 +590,7 @@ public enum V1beta1SecurityGroupIngressRuleSpecInitProviderSecurityGroupIdRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SecurityGroupIngressRuleSpecInitProviderSecurityGroupIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -582,6 +604,7 @@ public partial class V1beta1SecurityGroupIngressRuleSpecInitProviderSecurityGrou
     public V1beta1SecurityGroupIngressRuleSpecInitProviderSecurityGroupIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SecurityGroup in ec2 to populate securityGroupId.</summary>
 public partial class V1beta1SecurityGroupIngressRuleSpecInitProviderSecurityGroupIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -613,6 +636,7 @@ public enum V1beta1SecurityGroupIngressRuleSpecInitProviderSecurityGroupIdSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SecurityGroupIngressRuleSpecInitProviderSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -626,6 +650,7 @@ public partial class V1beta1SecurityGroupIngressRuleSpecInitProviderSecurityGrou
     public V1beta1SecurityGroupIngressRuleSpecInitProviderSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SecurityGroup in ec2 to populate securityGroupId.</summary>
 public partial class V1beta1SecurityGroupIngressRuleSpecInitProviderSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -641,6 +666,7 @@ public partial class V1beta1SecurityGroupIngressRuleSpecInitProviderSecurityGrou
     public V1beta1SecurityGroupIngressRuleSpecInitProviderSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1SecurityGroupIngressRuleSpecInitProvider
 {
     /// <summary>The source IPv4 CIDR range.</summary>
@@ -750,6 +776,7 @@ public enum V1beta1SecurityGroupIngressRuleSpecProviderConfigRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SecurityGroupIngressRuleSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -763,6 +790,7 @@ public partial class V1beta1SecurityGroupIngressRuleSpecProviderConfigRefPolicy
     public V1beta1SecurityGroupIngressRuleSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1SecurityGroupIngressRuleSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -794,6 +822,7 @@ public enum V1beta1SecurityGroupIngressRuleSpecPublishConnectionDetailsToConfigR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SecurityGroupIngressRuleSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -807,6 +836,7 @@ public partial class V1beta1SecurityGroupIngressRuleSpecPublishConnectionDetails
     public V1beta1SecurityGroupIngressRuleSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1SecurityGroupIngressRuleSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -818,6 +848,7 @@ public partial class V1beta1SecurityGroupIngressRuleSpecPublishConnectionDetails
     public V1beta1SecurityGroupIngressRuleSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1SecurityGroupIngressRuleSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -833,6 +864,7 @@ public partial class V1beta1SecurityGroupIngressRuleSpecPublishConnectionDetails
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1SecurityGroupIngressRuleSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -848,6 +880,7 @@ public partial class V1beta1SecurityGroupIngressRuleSpecPublishConnectionDetails
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1SecurityGroupIngressRuleSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -859,6 +892,7 @@ public partial class V1beta1SecurityGroupIngressRuleSpecWriteConnectionSecretToR
     public string Namespace { get; set; }
 }
 
+/// <summary>SecurityGroupIngressRuleSpec defines the desired state of SecurityGroupIngressRule</summary>
 public partial class V1beta1SecurityGroupIngressRuleSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -891,6 +925,7 @@ public partial class V1beta1SecurityGroupIngressRuleSpec
     public V1beta1SecurityGroupIngressRuleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SecurityGroupIngressRuleStatusAtProvider
 {
     /// <summary>The Amazon Resource Name (ARN) of the security group rule.</summary>
@@ -950,6 +985,7 @@ public partial class V1beta1SecurityGroupIngressRuleStatusAtProvider
     public double? ToPort { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1SecurityGroupIngressRuleStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -977,6 +1013,7 @@ public partial class V1beta1SecurityGroupIngressRuleStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>SecurityGroupIngressRuleStatus defines the observed state of SecurityGroupIngressRule.</summary>
 public partial class V1beta1SecurityGroupIngressRuleStatus
 {
     /// <summary></summary>
@@ -993,6 +1030,7 @@ public partial class V1beta1SecurityGroupIngressRuleStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>SecurityGroupIngressRule is the Schema for the SecurityGroupIngressRules API. Provides a VPC security group ingress rule resource.</summary>
 public partial class V1beta1SecurityGroupIngressRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SecurityGroupIngressRuleSpec>, IStatus<V1beta1SecurityGroupIngressRuleStatus>
 {
     public const string KubeApiVersion = "v1beta1";

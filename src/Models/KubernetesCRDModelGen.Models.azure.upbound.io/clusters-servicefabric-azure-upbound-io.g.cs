@@ -18,6 +18,7 @@ public enum V1beta1ClusterSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderAzureActiveDirectory
 {
     /// <summary>The Azure Active Directory Client ID which should be used for the Client Application.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1ClusterSpecForProviderAzureActiveDirectory
     public string? TenantId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderCertificate
 {
     /// <summary>The Thumbprint of the Certificate.</summary>
@@ -48,6 +50,7 @@ public partial class V1beta1ClusterSpecForProviderCertificate
     public string? X509StoreName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderCertificateCommonNamesCommonNames
 {
     /// <summary>The common or subject name of the certificate.</summary>
@@ -59,6 +62,7 @@ public partial class V1beta1ClusterSpecForProviderCertificateCommonNamesCommonNa
     public string? CertificateIssuerThumbprint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderCertificateCommonNames
 {
     /// <summary>A common_names block as defined below.</summary>
@@ -70,6 +74,7 @@ public partial class V1beta1ClusterSpecForProviderCertificateCommonNames
     public string? X509StoreName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderClientCertificateCommonName
 {
     /// <summary>The common or subject name of the certificate.</summary>
@@ -85,6 +90,7 @@ public partial class V1beta1ClusterSpecForProviderClientCertificateCommonName
     public string? IssuerThumbprint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderClientCertificateThumbprint
 {
     /// <summary>Does the Client Certificate have Admin Access to the cluster? Non-admin clients can only perform read only operations on the cluster.</summary>
@@ -96,6 +102,7 @@ public partial class V1beta1ClusterSpecForProviderClientCertificateThumbprint
     public string? Thumbprint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderDiagnosticsConfig
 {
     /// <summary>The Blob Endpoint of the Storage Account.</summary>
@@ -119,6 +126,7 @@ public partial class V1beta1ClusterSpecForProviderDiagnosticsConfig
     public string? TableEndpoint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderFabricSettings
 {
     /// <summary>The name of the Fabric Setting, such as Security or Federation.</summary>
@@ -130,6 +138,7 @@ public partial class V1beta1ClusterSpecForProviderFabricSettings
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNodeTypeApplicationPorts
 {
     /// <summary>The end of the Ephemeral Port Range on this Node Type.</summary>
@@ -141,6 +150,7 @@ public partial class V1beta1ClusterSpecForProviderNodeTypeApplicationPorts
     public double? StartPort { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNodeTypeEphemeralPorts
 {
     /// <summary>The end of the Ephemeral Port Range on this Node Type.</summary>
@@ -152,6 +162,7 @@ public partial class V1beta1ClusterSpecForProviderNodeTypeEphemeralPorts
     public double? StartPort { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNodeType
 {
     /// <summary>A application_ports block as defined below.</summary>
@@ -227,6 +238,7 @@ public enum V1beta1ClusterSpecForProviderResourceGroupNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClusterSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -240,6 +252,7 @@ public partial class V1beta1ClusterSpecForProviderResourceGroupNameRefPolicy
     public V1beta1ClusterSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1ClusterSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -271,6 +284,7 @@ public enum V1beta1ClusterSpecForProviderResourceGroupNameSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ClusterSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -284,6 +298,7 @@ public partial class V1beta1ClusterSpecForProviderResourceGroupNameSelectorPolic
     public V1beta1ClusterSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1ClusterSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -299,6 +314,7 @@ public partial class V1beta1ClusterSpecForProviderResourceGroupNameSelector
     public V1beta1ClusterSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderReverseProxyCertificate
 {
     /// <summary>The Thumbprint of the Certificate.</summary>
@@ -314,6 +330,7 @@ public partial class V1beta1ClusterSpecForProviderReverseProxyCertificate
     public string? X509StoreName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderReverseProxyCertificateCommonNamesCommonNames
 {
     /// <summary>The common or subject name of the certificate.</summary>
@@ -325,6 +342,7 @@ public partial class V1beta1ClusterSpecForProviderReverseProxyCertificateCommonN
     public string? CertificateIssuerThumbprint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderReverseProxyCertificateCommonNames
 {
     /// <summary>A common_names block as defined below.</summary>
@@ -336,6 +354,7 @@ public partial class V1beta1ClusterSpecForProviderReverseProxyCertificateCommonN
     public string? X509StoreName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderUpgradePolicyDeltaHealthPolicy
 {
     /// <summary>Specifies the maximum tolerated percentage of delta unhealthy applications that can have aggregated health states of error. If the current unhealthy applications do not respect the percentage relative to the state at the beginning of the upgrade, the cluster is unhealthy. Defaults to 0.</summary>
@@ -351,6 +370,7 @@ public partial class V1beta1ClusterSpecForProviderUpgradePolicyDeltaHealthPolicy
     public double? MaxUpgradeDomainDeltaUnhealthyNodesPercent { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderUpgradePolicyHealthPolicy
 {
     /// <summary>Specifies the maximum tolerated percentage of applications that can have aggregated health state of error. If the upgrade exceeds this percentage, the cluster is unhealthy. Defaults to 0.</summary>
@@ -362,6 +382,7 @@ public partial class V1beta1ClusterSpecForProviderUpgradePolicyHealthPolicy
     public double? MaxUnhealthyNodesPercent { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderUpgradePolicy
 {
     /// <summary>A delta_health_policy block as defined below</summary>
@@ -401,6 +422,7 @@ public partial class V1beta1ClusterSpecForProviderUpgradePolicy
     public string? UpgradeTimeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProvider
 {
     /// <summary>A List of one or more features which should be enabled, such as DnsService.</summary>
@@ -500,6 +522,7 @@ public partial class V1beta1ClusterSpecForProvider
     public string? VmssZonalUpgradeMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderAzureActiveDirectory
 {
     /// <summary>The Azure Active Directory Client ID which should be used for the Client Application.</summary>
@@ -515,6 +538,7 @@ public partial class V1beta1ClusterSpecInitProviderAzureActiveDirectory
     public string? TenantId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderCertificate
 {
     /// <summary>The Thumbprint of the Certificate.</summary>
@@ -530,6 +554,7 @@ public partial class V1beta1ClusterSpecInitProviderCertificate
     public string? X509StoreName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderCertificateCommonNamesCommonNames
 {
     /// <summary>The common or subject name of the certificate.</summary>
@@ -541,6 +566,7 @@ public partial class V1beta1ClusterSpecInitProviderCertificateCommonNamesCommonN
     public string? CertificateIssuerThumbprint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderCertificateCommonNames
 {
     /// <summary>A common_names block as defined below.</summary>
@@ -552,6 +578,7 @@ public partial class V1beta1ClusterSpecInitProviderCertificateCommonNames
     public string? X509StoreName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderClientCertificateCommonName
 {
     /// <summary>The common or subject name of the certificate.</summary>
@@ -567,6 +594,7 @@ public partial class V1beta1ClusterSpecInitProviderClientCertificateCommonName
     public string? IssuerThumbprint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderClientCertificateThumbprint
 {
     /// <summary>Does the Client Certificate have Admin Access to the cluster? Non-admin clients can only perform read only operations on the cluster.</summary>
@@ -578,6 +606,7 @@ public partial class V1beta1ClusterSpecInitProviderClientCertificateThumbprint
     public string? Thumbprint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderDiagnosticsConfig
 {
     /// <summary>The Blob Endpoint of the Storage Account.</summary>
@@ -601,6 +630,7 @@ public partial class V1beta1ClusterSpecInitProviderDiagnosticsConfig
     public string? TableEndpoint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderFabricSettings
 {
     /// <summary>The name of the Fabric Setting, such as Security or Federation.</summary>
@@ -612,6 +642,7 @@ public partial class V1beta1ClusterSpecInitProviderFabricSettings
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNodeTypeApplicationPorts
 {
     /// <summary>The end of the Ephemeral Port Range on this Node Type.</summary>
@@ -623,6 +654,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeTypeApplicationPorts
     public double? StartPort { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNodeTypeEphemeralPorts
 {
     /// <summary>The end of the Ephemeral Port Range on this Node Type.</summary>
@@ -634,6 +666,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeTypeEphemeralPorts
     public double? StartPort { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNodeType
 {
     /// <summary>A application_ports block as defined below.</summary>
@@ -689,6 +722,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeType
     public double? ReverseProxyEndpointPort { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderReverseProxyCertificate
 {
     /// <summary>The Thumbprint of the Certificate.</summary>
@@ -704,6 +738,7 @@ public partial class V1beta1ClusterSpecInitProviderReverseProxyCertificate
     public string? X509StoreName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderReverseProxyCertificateCommonNamesCommonNames
 {
     /// <summary>The common or subject name of the certificate.</summary>
@@ -715,6 +750,7 @@ public partial class V1beta1ClusterSpecInitProviderReverseProxyCertificateCommon
     public string? CertificateIssuerThumbprint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderReverseProxyCertificateCommonNames
 {
     /// <summary>A common_names block as defined below.</summary>
@@ -726,6 +762,7 @@ public partial class V1beta1ClusterSpecInitProviderReverseProxyCertificateCommon
     public string? X509StoreName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderUpgradePolicyDeltaHealthPolicy
 {
     /// <summary>Specifies the maximum tolerated percentage of delta unhealthy applications that can have aggregated health states of error. If the current unhealthy applications do not respect the percentage relative to the state at the beginning of the upgrade, the cluster is unhealthy. Defaults to 0.</summary>
@@ -741,6 +778,7 @@ public partial class V1beta1ClusterSpecInitProviderUpgradePolicyDeltaHealthPolic
     public double? MaxUpgradeDomainDeltaUnhealthyNodesPercent { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderUpgradePolicyHealthPolicy
 {
     /// <summary>Specifies the maximum tolerated percentage of applications that can have aggregated health state of error. If the upgrade exceeds this percentage, the cluster is unhealthy. Defaults to 0.</summary>
@@ -752,6 +790,7 @@ public partial class V1beta1ClusterSpecInitProviderUpgradePolicyHealthPolicy
     public double? MaxUnhealthyNodesPercent { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderUpgradePolicy
 {
     /// <summary>A delta_health_policy block as defined below</summary>
@@ -791,6 +830,7 @@ public partial class V1beta1ClusterSpecInitProviderUpgradePolicy
     public string? UpgradeTimeout { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ClusterSpecInitProvider
 {
     /// <summary>A List of one or more features which should be enabled, such as DnsService.</summary>
@@ -920,6 +960,7 @@ public enum V1beta1ClusterSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClusterSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -933,6 +974,7 @@ public partial class V1beta1ClusterSpecProviderConfigRefPolicy
     public V1beta1ClusterSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ClusterSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -964,6 +1006,7 @@ public enum V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -977,6 +1020,7 @@ public partial class V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ClusterSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -988,6 +1032,7 @@ public partial class V1beta1ClusterSpecPublishConnectionDetailsToConfigRef
     public V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ClusterSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1003,6 +1048,7 @@ public partial class V1beta1ClusterSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ClusterSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1018,6 +1064,7 @@ public partial class V1beta1ClusterSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ClusterSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1029,6 +1076,7 @@ public partial class V1beta1ClusterSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ClusterSpec defines the desired state of Cluster</summary>
 public partial class V1beta1ClusterSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1061,6 +1109,7 @@ public partial class V1beta1ClusterSpec
     public V1beta1ClusterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderAzureActiveDirectory
 {
     /// <summary>The Azure Active Directory Client ID which should be used for the Client Application.</summary>
@@ -1076,6 +1125,7 @@ public partial class V1beta1ClusterStatusAtProviderAzureActiveDirectory
     public string? TenantId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderCertificate
 {
     /// <summary>The Thumbprint of the Certificate.</summary>
@@ -1091,6 +1141,7 @@ public partial class V1beta1ClusterStatusAtProviderCertificate
     public string? X509StoreName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderCertificateCommonNamesCommonNames
 {
     /// <summary>The common or subject name of the certificate.</summary>
@@ -1102,6 +1153,7 @@ public partial class V1beta1ClusterStatusAtProviderCertificateCommonNamesCommonN
     public string? CertificateIssuerThumbprint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderCertificateCommonNames
 {
     /// <summary>A common_names block as defined below.</summary>
@@ -1113,6 +1165,7 @@ public partial class V1beta1ClusterStatusAtProviderCertificateCommonNames
     public string? X509StoreName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderClientCertificateCommonName
 {
     /// <summary>The common or subject name of the certificate.</summary>
@@ -1128,6 +1181,7 @@ public partial class V1beta1ClusterStatusAtProviderClientCertificateCommonName
     public string? IssuerThumbprint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderClientCertificateThumbprint
 {
     /// <summary>Does the Client Certificate have Admin Access to the cluster? Non-admin clients can only perform read only operations on the cluster.</summary>
@@ -1139,6 +1193,7 @@ public partial class V1beta1ClusterStatusAtProviderClientCertificateThumbprint
     public string? Thumbprint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderDiagnosticsConfig
 {
     /// <summary>The Blob Endpoint of the Storage Account.</summary>
@@ -1162,6 +1217,7 @@ public partial class V1beta1ClusterStatusAtProviderDiagnosticsConfig
     public string? TableEndpoint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderFabricSettings
 {
     /// <summary>The name of the Fabric Setting, such as Security or Federation.</summary>
@@ -1173,6 +1229,7 @@ public partial class V1beta1ClusterStatusAtProviderFabricSettings
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodeTypeApplicationPorts
 {
     /// <summary>The end of the Ephemeral Port Range on this Node Type.</summary>
@@ -1184,6 +1241,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeTypeApplicationPorts
     public double? StartPort { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodeTypeEphemeralPorts
 {
     /// <summary>The end of the Ephemeral Port Range on this Node Type.</summary>
@@ -1195,6 +1253,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeTypeEphemeralPorts
     public double? StartPort { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodeType
 {
     /// <summary>A application_ports block as defined below.</summary>
@@ -1250,6 +1309,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeType
     public double? ReverseProxyEndpointPort { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderReverseProxyCertificate
 {
     /// <summary>The Thumbprint of the Certificate.</summary>
@@ -1265,6 +1325,7 @@ public partial class V1beta1ClusterStatusAtProviderReverseProxyCertificate
     public string? X509StoreName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderReverseProxyCertificateCommonNamesCommonNames
 {
     /// <summary>The common or subject name of the certificate.</summary>
@@ -1276,6 +1337,7 @@ public partial class V1beta1ClusterStatusAtProviderReverseProxyCertificateCommon
     public string? CertificateIssuerThumbprint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderReverseProxyCertificateCommonNames
 {
     /// <summary>A common_names block as defined below.</summary>
@@ -1287,6 +1349,7 @@ public partial class V1beta1ClusterStatusAtProviderReverseProxyCertificateCommon
     public string? X509StoreName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderUpgradePolicyDeltaHealthPolicy
 {
     /// <summary>Specifies the maximum tolerated percentage of delta unhealthy applications that can have aggregated health states of error. If the current unhealthy applications do not respect the percentage relative to the state at the beginning of the upgrade, the cluster is unhealthy. Defaults to 0.</summary>
@@ -1302,6 +1365,7 @@ public partial class V1beta1ClusterStatusAtProviderUpgradePolicyDeltaHealthPolic
     public double? MaxUpgradeDomainDeltaUnhealthyNodesPercent { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderUpgradePolicyHealthPolicy
 {
     /// <summary>Specifies the maximum tolerated percentage of applications that can have aggregated health state of error. If the upgrade exceeds this percentage, the cluster is unhealthy. Defaults to 0.</summary>
@@ -1313,6 +1377,7 @@ public partial class V1beta1ClusterStatusAtProviderUpgradePolicyHealthPolicy
     public double? MaxUnhealthyNodesPercent { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderUpgradePolicy
 {
     /// <summary>A delta_health_policy block as defined below</summary>
@@ -1352,6 +1417,7 @@ public partial class V1beta1ClusterStatusAtProviderUpgradePolicy
     public string? UpgradeTimeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProvider
 {
     /// <summary>A List of one or more features which should be enabled, such as DnsService.</summary>
@@ -1451,6 +1517,7 @@ public partial class V1beta1ClusterStatusAtProvider
     public string? VmssZonalUpgradeMode { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ClusterStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1478,6 +1545,7 @@ public partial class V1beta1ClusterStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ClusterStatus defines the observed state of Cluster.</summary>
 public partial class V1beta1ClusterStatus
 {
     /// <summary></summary>
@@ -1494,6 +1562,7 @@ public partial class V1beta1ClusterStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Cluster is the Schema for the Clusters API. Manages a Service Fabric Cluster.</summary>
 public partial class V1beta1Cluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ClusterSpec>, IStatus<V1beta1ClusterStatus>
 {
     public const string KubeApiVersion = "v1beta1";

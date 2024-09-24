@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+/// <summary>Storage version of v1api20220401.EndpointProperties_CustomHeaders</summary>
 public partial class V1api20220401storageTrafficManagerProfilesAzureEndpointSpecCustomHeaders
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -23,6 +24,7 @@ public partial class V1api20220401storageTrafficManagerProfilesAzureEndpointSpec
     public string? Value { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a network.azure.com/TrafficManagerProfile resource</summary>
 public partial class V1api20220401storageTrafficManagerProfilesAzureEndpointSpecOwner
 {
     /// <summary></summary>
@@ -34,6 +36,7 @@ public partial class V1api20220401storageTrafficManagerProfilesAzureEndpointSpec
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220401.EndpointProperties_Subnets</summary>
 public partial class V1api20220401storageTrafficManagerProfilesAzureEndpointSpecSubnets
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -53,6 +56,7 @@ public partial class V1api20220401storageTrafficManagerProfilesAzureEndpointSpec
     public int? Scope { get; set; }
 }
 
+/// <summary>TargetResourceReference: The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.</summary>
 public partial class V1api20220401storageTrafficManagerProfilesAzureEndpointSpecTargetResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -72,6 +76,7 @@ public partial class V1api20220401storageTrafficManagerProfilesAzureEndpointSpec
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220401.Trafficmanagerprofiles_AzureEndpoint_Spec</summary>
 public partial class V1api20220401storageTrafficManagerProfilesAzureEndpointSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -151,6 +156,7 @@ public partial class V1api20220401storageTrafficManagerProfilesAzureEndpointSpec
     public int? Weight { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20220401storageTrafficManagerProfilesAzureEndpointStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -182,6 +188,7 @@ public partial class V1api20220401storageTrafficManagerProfilesAzureEndpointStat
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20220401.EndpointProperties_CustomHeaders_STATUS</summary>
 public partial class V1api20220401storageTrafficManagerProfilesAzureEndpointStatusCustomHeaders
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -197,6 +204,7 @@ public partial class V1api20220401storageTrafficManagerProfilesAzureEndpointStat
     public string? Value { get; set; }
 }
 
+/// <summary>Storage version of v1api20220401.EndpointProperties_Subnets_STATUS</summary>
 public partial class V1api20220401storageTrafficManagerProfilesAzureEndpointStatusSubnets
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -216,6 +224,7 @@ public partial class V1api20220401storageTrafficManagerProfilesAzureEndpointStat
     public int? Scope { get; set; }
 }
 
+/// <summary>Storage version of v1api20220401.Trafficmanagerprofiles_AzureEndpoint_STATUS</summary>
 public partial class V1api20220401storageTrafficManagerProfilesAzureEndpointStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -296,6 +305,7 @@ public partial class V1api20220401storageTrafficManagerProfilesAzureEndpointStat
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20220401.TrafficManagerProfilesAzureEndpoint Generator information: - Generated from: /trafficmanager/resource-manager/Microsoft.Network/stable/2022-04-01/trafficmanager.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}/AzureEndpoints/{endpointName}</summary>
 public partial class V1api20220401storageTrafficManagerProfilesAzureEndpoint : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20220401storageTrafficManagerProfilesAzureEndpointSpec>, IStatus<V1api20220401storageTrafficManagerProfilesAzureEndpointStatus>
 {
     public const string KubeApiVersion = "v1api20220401storage";

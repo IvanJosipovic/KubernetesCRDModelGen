@@ -38,6 +38,7 @@ public enum V1beta1GlobalClusterSpecForProviderSourceDbClusterIdentifierRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GlobalClusterSpecForProviderSourceDbClusterIdentifierRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1GlobalClusterSpecForProviderSourceDbClusterIdentifie
     public V1beta1GlobalClusterSpecForProviderSourceDbClusterIdentifierRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in rds to populate sourceDbClusterIdentifier.</summary>
 public partial class V1beta1GlobalClusterSpecForProviderSourceDbClusterIdentifierRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1GlobalClusterSpecForProviderSourceDbClusterIdentifierSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GlobalClusterSpecForProviderSourceDbClusterIdentifierSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1GlobalClusterSpecForProviderSourceDbClusterIdentifie
     public V1beta1GlobalClusterSpecForProviderSourceDbClusterIdentifierSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in rds to populate sourceDbClusterIdentifier.</summary>
 public partial class V1beta1GlobalClusterSpecForProviderSourceDbClusterIdentifierSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1GlobalClusterSpecForProviderSourceDbClusterIdentifie
     public V1beta1GlobalClusterSpecForProviderSourceDbClusterIdentifierSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GlobalClusterSpecForProvider
 {
     /// <summary>Name for an automatically created database on cluster creation.</summary>
@@ -173,6 +178,7 @@ public enum V1beta1GlobalClusterSpecInitProviderSourceDbClusterIdentifierRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GlobalClusterSpecInitProviderSourceDbClusterIdentifierRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -186,6 +192,7 @@ public partial class V1beta1GlobalClusterSpecInitProviderSourceDbClusterIdentifi
     public V1beta1GlobalClusterSpecInitProviderSourceDbClusterIdentifierRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in rds to populate sourceDbClusterIdentifier.</summary>
 public partial class V1beta1GlobalClusterSpecInitProviderSourceDbClusterIdentifierRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -217,6 +224,7 @@ public enum V1beta1GlobalClusterSpecInitProviderSourceDbClusterIdentifierSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GlobalClusterSpecInitProviderSourceDbClusterIdentifierSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -230,6 +238,7 @@ public partial class V1beta1GlobalClusterSpecInitProviderSourceDbClusterIdentifi
     public V1beta1GlobalClusterSpecInitProviderSourceDbClusterIdentifierSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in rds to populate sourceDbClusterIdentifier.</summary>
 public partial class V1beta1GlobalClusterSpecInitProviderSourceDbClusterIdentifierSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -245,6 +254,7 @@ public partial class V1beta1GlobalClusterSpecInitProviderSourceDbClusterIdentifi
     public V1beta1GlobalClusterSpecInitProviderSourceDbClusterIdentifierSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1GlobalClusterSpecInitProvider
 {
     /// <summary>Name for an automatically created database on cluster creation.</summary>
@@ -326,6 +336,7 @@ public enum V1beta1GlobalClusterSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GlobalClusterSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -339,6 +350,7 @@ public partial class V1beta1GlobalClusterSpecProviderConfigRefPolicy
     public V1beta1GlobalClusterSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1GlobalClusterSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -370,6 +382,7 @@ public enum V1beta1GlobalClusterSpecPublishConnectionDetailsToConfigRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GlobalClusterSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -383,6 +396,7 @@ public partial class V1beta1GlobalClusterSpecPublishConnectionDetailsToConfigRef
     public V1beta1GlobalClusterSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1GlobalClusterSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -394,6 +408,7 @@ public partial class V1beta1GlobalClusterSpecPublishConnectionDetailsToConfigRef
     public V1beta1GlobalClusterSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1GlobalClusterSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -409,6 +424,7 @@ public partial class V1beta1GlobalClusterSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1GlobalClusterSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -424,6 +440,7 @@ public partial class V1beta1GlobalClusterSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1GlobalClusterSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -435,6 +452,7 @@ public partial class V1beta1GlobalClusterSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>GlobalClusterSpec defines the desired state of GlobalCluster</summary>
 public partial class V1beta1GlobalClusterSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -467,6 +485,7 @@ public partial class V1beta1GlobalClusterSpec
     public V1beta1GlobalClusterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GlobalClusterStatusAtProviderGlobalClusterMembers
 {
     /// <summary>Amazon Resource Name (ARN) of member DB Cluster</summary>
@@ -478,6 +497,7 @@ public partial class V1beta1GlobalClusterStatusAtProviderGlobalClusterMembers
     public bool? IsWriter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GlobalClusterStatusAtProvider
 {
     /// <summary>RDS Global Cluster Amazon Resource Name (ARN)</summary>
@@ -529,6 +549,7 @@ public partial class V1beta1GlobalClusterStatusAtProvider
     public bool? StorageEncrypted { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1GlobalClusterStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -556,6 +577,7 @@ public partial class V1beta1GlobalClusterStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>GlobalClusterStatus defines the observed state of GlobalCluster.</summary>
 public partial class V1beta1GlobalClusterStatus
 {
     /// <summary></summary>
@@ -572,6 +594,7 @@ public partial class V1beta1GlobalClusterStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>GlobalCluster is the Schema for the GlobalClusters API. Manages an RDS Global Cluster</summary>
 public partial class V1beta1GlobalCluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1GlobalClusterSpec>, IStatus<V1beta1GlobalClusterStatus>
 {
     public const string KubeApiVersion = "v1beta1";

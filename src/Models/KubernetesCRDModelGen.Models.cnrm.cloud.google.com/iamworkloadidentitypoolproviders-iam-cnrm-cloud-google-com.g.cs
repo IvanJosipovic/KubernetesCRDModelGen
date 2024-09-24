@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iam.cnrm.cloud.google.com;
+/// <summary>An Amazon Web Services identity provider.</summary>
 public partial class V1beta1IAMWorkloadIdentityPoolProviderSpecAws
 {
     /// <summary>Required. The AWS account ID.</summary>
@@ -19,6 +20,7 @@ public partial class V1beta1IAMWorkloadIdentityPoolProviderSpecAws
     public IList<string>? StsUri { get; set; }
 }
 
+/// <summary>An OpenId Connect 1.0 identity provider.</summary>
 public partial class V1beta1IAMWorkloadIdentityPoolProviderSpecOidc
 {
     /// <summary>Acceptable values for the `aud` field (audience) in the OIDC token. Token exchange requests are rejected if the token audience does not match one of the configured values. Each audience may be at most 256 characters. A maximum of 10 audiences may be configured. If this list is empty, the OIDC token audience must be equal to the full canonical resource name of the WorkloadIdentityPoolProvider, with or without the HTTPS prefix. For example: ``` //iam.googleapis.com/projects//locations//workloadIdentityPools//providers/ https://iam.googleapis.com/projects//locations//workloadIdentityPools//providers/ ```</summary>
@@ -30,6 +32,7 @@ public partial class V1beta1IAMWorkloadIdentityPoolProviderSpecOidc
     public string IssuerUri { get; set; }
 }
 
+/// <summary>Immutable. The Project that this resource belongs to.</summary>
 public partial class V1beta1IAMWorkloadIdentityPoolProviderSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -45,6 +48,7 @@ public partial class V1beta1IAMWorkloadIdentityPoolProviderSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable.</summary>
 public partial class V1beta1IAMWorkloadIdentityPoolProviderSpecWorkloadIdentityPoolRef
 {
     /// <summary>The workloadIdentityPool for the resource  Allowed value: The Google Cloud resource name of an `IAMWorkloadIdentityPool` resource (format: `projects/{{project}}/locations/{{location}}/workloadIdentityPools/{{name}}`).</summary>
@@ -60,6 +64,7 @@ public partial class V1beta1IAMWorkloadIdentityPoolProviderSpecWorkloadIdentityP
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IAMWorkloadIdentityPoolProviderSpec
 {
     /// <summary>[A Common Expression Language](https://opensource.google/projects/cel) expression, in plain text, to restrict what otherwise valid authentication credentials issued by the provider should not be accepted. The expression must output a boolean representing whether to allow the federation. The following keywords may be referenced in the expressions: * `assertion`: JSON representing the authentication credential issued by the provider. * `google`: The Google attributes mapped from the assertion in the `attribute_mappings`. * `attribute`: The custom attributes mapped from the assertion in the `attribute_mappings`. The maximum length of the attribute condition expression is 4096 characters. If unspecified, all valid authentication credential are accepted. The following example shows how to only allow credentials with a mapped `google.groups` value of `admins`: ``` "'admins' in google.groups" ```</summary>
@@ -107,6 +112,7 @@ public partial class V1beta1IAMWorkloadIdentityPoolProviderSpec
     public V1beta1IAMWorkloadIdentityPoolProviderSpecWorkloadIdentityPoolRef WorkloadIdentityPoolRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IAMWorkloadIdentityPoolProviderStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -130,6 +136,7 @@ public partial class V1beta1IAMWorkloadIdentityPoolProviderStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IAMWorkloadIdentityPoolProviderStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -146,6 +153,7 @@ public partial class V1beta1IAMWorkloadIdentityPoolProviderStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1IAMWorkloadIdentityPoolProvider : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IAMWorkloadIdentityPoolProviderSpec>, IStatus<V1beta1IAMWorkloadIdentityPoolProviderStatus>
 {
     public const string KubeApiVersion = "v1beta1";

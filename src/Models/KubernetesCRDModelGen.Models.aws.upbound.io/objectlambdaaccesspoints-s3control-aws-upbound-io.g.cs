@@ -38,6 +38,7 @@ public enum V1beta1ObjectLambdaAccessPointSpecForProviderConfigurationSupporting
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ObjectLambdaAccessPointSpecForProviderConfigurationSupportingAccessPointRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ObjectLambdaAccessPointSpecForProviderConfigurationS
     public V1beta1ObjectLambdaAccessPointSpecForProviderConfigurationSupportingAccessPointRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a AccessPoint in s3control to populate supportingAccessPoint.</summary>
 public partial class V1beta1ObjectLambdaAccessPointSpecForProviderConfigurationSupportingAccessPointRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ObjectLambdaAccessPointSpecForProviderConfigurationSupporting
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ObjectLambdaAccessPointSpecForProviderConfigurationSupportingAccessPointSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ObjectLambdaAccessPointSpecForProviderConfigurationS
     public V1beta1ObjectLambdaAccessPointSpecForProviderConfigurationSupportingAccessPointSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a AccessPoint in s3control to populate supportingAccessPoint.</summary>
 public partial class V1beta1ObjectLambdaAccessPointSpecForProviderConfigurationSupportingAccessPointSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1ObjectLambdaAccessPointSpecForProviderConfigurationTransforma
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ObjectLambdaAccessPointSpecForProviderConfigurationTransformationConfigurationContentTransformationAwsLambdaFunctionArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1ObjectLambdaAccessPointSpecForProviderConfigurationT
     public V1beta1ObjectLambdaAccessPointSpecForProviderConfigurationTransformationConfigurationContentTransformationAwsLambdaFunctionArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in lambda to populate functionArn.</summary>
 public partial class V1beta1ObjectLambdaAccessPointSpecForProviderConfigurationTransformationConfigurationContentTransformationAwsLambdaFunctionArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1ObjectLambdaAccessPointSpecForProviderConfigurationTransforma
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ObjectLambdaAccessPointSpecForProviderConfigurationTransformationConfigurationContentTransformationAwsLambdaFunctionArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1ObjectLambdaAccessPointSpecForProviderConfigurationT
     public V1beta1ObjectLambdaAccessPointSpecForProviderConfigurationTransformationConfigurationContentTransformationAwsLambdaFunctionArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in lambda to populate functionArn.</summary>
 public partial class V1beta1ObjectLambdaAccessPointSpecForProviderConfigurationTransformationConfigurationContentTransformationAwsLambdaFunctionArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1ObjectLambdaAccessPointSpecForProviderConfigurationT
     public V1beta1ObjectLambdaAccessPointSpecForProviderConfigurationTransformationConfigurationContentTransformationAwsLambdaFunctionArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ObjectLambdaAccessPointSpecForProviderConfigurationTransformationConfigurationContentTransformationAwsLambda
 {
     /// <summary>The Amazon Resource Name (ARN) of the AWS Lambda function.</summary>
@@ -221,6 +230,7 @@ public partial class V1beta1ObjectLambdaAccessPointSpecForProviderConfigurationT
     public string? FunctionPayload { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ObjectLambdaAccessPointSpecForProviderConfigurationTransformationConfigurationContentTransformation
 {
     /// <summary>Configuration for an AWS Lambda function. See AWS Lambda below for more details.</summary>
@@ -228,6 +238,7 @@ public partial class V1beta1ObjectLambdaAccessPointSpecForProviderConfigurationT
     public IList<V1beta1ObjectLambdaAccessPointSpecForProviderConfigurationTransformationConfigurationContentTransformationAwsLambda>? AwsLambda { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ObjectLambdaAccessPointSpecForProviderConfigurationTransformationConfiguration
 {
     /// <summary>The actions of an Object Lambda Access Point configuration. Valid values: GetObject.</summary>
@@ -239,6 +250,7 @@ public partial class V1beta1ObjectLambdaAccessPointSpecForProviderConfigurationT
     public IList<V1beta1ObjectLambdaAccessPointSpecForProviderConfigurationTransformationConfigurationContentTransformation>? ContentTransformation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ObjectLambdaAccessPointSpecForProviderConfiguration
 {
     /// <summary>Allowed features. Valid values: GetObject-Range, GetObject-PartNumber.</summary>
@@ -266,6 +278,7 @@ public partial class V1beta1ObjectLambdaAccessPointSpecForProviderConfiguration
     public IList<V1beta1ObjectLambdaAccessPointSpecForProviderConfigurationTransformationConfiguration>? TransformationConfiguration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ObjectLambdaAccessPointSpecForProvider
 {
     /// <summary>The AWS account ID for the owner of the bucket for which you want to create an Object Lambda Access Point.</summary>
@@ -305,6 +318,7 @@ public enum V1beta1ObjectLambdaAccessPointSpecInitProviderConfigurationSupportin
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ObjectLambdaAccessPointSpecInitProviderConfigurationSupportingAccessPointRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -318,6 +332,7 @@ public partial class V1beta1ObjectLambdaAccessPointSpecInitProviderConfiguration
     public V1beta1ObjectLambdaAccessPointSpecInitProviderConfigurationSupportingAccessPointRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a AccessPoint in s3control to populate supportingAccessPoint.</summary>
 public partial class V1beta1ObjectLambdaAccessPointSpecInitProviderConfigurationSupportingAccessPointRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -349,6 +364,7 @@ public enum V1beta1ObjectLambdaAccessPointSpecInitProviderConfigurationSupportin
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ObjectLambdaAccessPointSpecInitProviderConfigurationSupportingAccessPointSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -362,6 +378,7 @@ public partial class V1beta1ObjectLambdaAccessPointSpecInitProviderConfiguration
     public V1beta1ObjectLambdaAccessPointSpecInitProviderConfigurationSupportingAccessPointSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a AccessPoint in s3control to populate supportingAccessPoint.</summary>
 public partial class V1beta1ObjectLambdaAccessPointSpecInitProviderConfigurationSupportingAccessPointSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -397,6 +414,7 @@ public enum V1beta1ObjectLambdaAccessPointSpecInitProviderConfigurationTransform
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ObjectLambdaAccessPointSpecInitProviderConfigurationTransformationConfigurationContentTransformationAwsLambdaFunctionArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -410,6 +428,7 @@ public partial class V1beta1ObjectLambdaAccessPointSpecInitProviderConfiguration
     public V1beta1ObjectLambdaAccessPointSpecInitProviderConfigurationTransformationConfigurationContentTransformationAwsLambdaFunctionArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in lambda to populate functionArn.</summary>
 public partial class V1beta1ObjectLambdaAccessPointSpecInitProviderConfigurationTransformationConfigurationContentTransformationAwsLambdaFunctionArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -441,6 +460,7 @@ public enum V1beta1ObjectLambdaAccessPointSpecInitProviderConfigurationTransform
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ObjectLambdaAccessPointSpecInitProviderConfigurationTransformationConfigurationContentTransformationAwsLambdaFunctionArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -454,6 +474,7 @@ public partial class V1beta1ObjectLambdaAccessPointSpecInitProviderConfiguration
     public V1beta1ObjectLambdaAccessPointSpecInitProviderConfigurationTransformationConfigurationContentTransformationAwsLambdaFunctionArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in lambda to populate functionArn.</summary>
 public partial class V1beta1ObjectLambdaAccessPointSpecInitProviderConfigurationTransformationConfigurationContentTransformationAwsLambdaFunctionArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -469,6 +490,7 @@ public partial class V1beta1ObjectLambdaAccessPointSpecInitProviderConfiguration
     public V1beta1ObjectLambdaAccessPointSpecInitProviderConfigurationTransformationConfigurationContentTransformationAwsLambdaFunctionArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ObjectLambdaAccessPointSpecInitProviderConfigurationTransformationConfigurationContentTransformationAwsLambda
 {
     /// <summary>The Amazon Resource Name (ARN) of the AWS Lambda function.</summary>
@@ -488,6 +510,7 @@ public partial class V1beta1ObjectLambdaAccessPointSpecInitProviderConfiguration
     public string? FunctionPayload { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ObjectLambdaAccessPointSpecInitProviderConfigurationTransformationConfigurationContentTransformation
 {
     /// <summary>Configuration for an AWS Lambda function. See AWS Lambda below for more details.</summary>
@@ -495,6 +518,7 @@ public partial class V1beta1ObjectLambdaAccessPointSpecInitProviderConfiguration
     public IList<V1beta1ObjectLambdaAccessPointSpecInitProviderConfigurationTransformationConfigurationContentTransformationAwsLambda>? AwsLambda { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ObjectLambdaAccessPointSpecInitProviderConfigurationTransformationConfiguration
 {
     /// <summary>The actions of an Object Lambda Access Point configuration. Valid values: GetObject.</summary>
@@ -506,6 +530,7 @@ public partial class V1beta1ObjectLambdaAccessPointSpecInitProviderConfiguration
     public IList<V1beta1ObjectLambdaAccessPointSpecInitProviderConfigurationTransformationConfigurationContentTransformation>? ContentTransformation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ObjectLambdaAccessPointSpecInitProviderConfiguration
 {
     /// <summary>Allowed features. Valid values: GetObject-Range, GetObject-PartNumber.</summary>
@@ -533,6 +558,7 @@ public partial class V1beta1ObjectLambdaAccessPointSpecInitProviderConfiguration
     public IList<V1beta1ObjectLambdaAccessPointSpecInitProviderConfigurationTransformationConfiguration>? TransformationConfiguration { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ObjectLambdaAccessPointSpecInitProvider
 {
     /// <summary>The AWS account ID for the owner of the bucket for which you want to create an Object Lambda Access Point.</summary>
@@ -590,6 +616,7 @@ public enum V1beta1ObjectLambdaAccessPointSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ObjectLambdaAccessPointSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -603,6 +630,7 @@ public partial class V1beta1ObjectLambdaAccessPointSpecProviderConfigRefPolicy
     public V1beta1ObjectLambdaAccessPointSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ObjectLambdaAccessPointSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -634,6 +662,7 @@ public enum V1beta1ObjectLambdaAccessPointSpecPublishConnectionDetailsToConfigRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ObjectLambdaAccessPointSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -647,6 +676,7 @@ public partial class V1beta1ObjectLambdaAccessPointSpecPublishConnectionDetailsT
     public V1beta1ObjectLambdaAccessPointSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ObjectLambdaAccessPointSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -658,6 +688,7 @@ public partial class V1beta1ObjectLambdaAccessPointSpecPublishConnectionDetailsT
     public V1beta1ObjectLambdaAccessPointSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ObjectLambdaAccessPointSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -673,6 +704,7 @@ public partial class V1beta1ObjectLambdaAccessPointSpecPublishConnectionDetailsT
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ObjectLambdaAccessPointSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -688,6 +720,7 @@ public partial class V1beta1ObjectLambdaAccessPointSpecPublishConnectionDetailsT
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ObjectLambdaAccessPointSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -699,6 +732,7 @@ public partial class V1beta1ObjectLambdaAccessPointSpecWriteConnectionSecretToRe
     public string Namespace { get; set; }
 }
 
+/// <summary>ObjectLambdaAccessPointSpec defines the desired state of ObjectLambdaAccessPoint</summary>
 public partial class V1beta1ObjectLambdaAccessPointSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -731,6 +765,7 @@ public partial class V1beta1ObjectLambdaAccessPointSpec
     public V1beta1ObjectLambdaAccessPointSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ObjectLambdaAccessPointStatusAtProviderConfigurationTransformationConfigurationContentTransformationAwsLambda
 {
     /// <summary>The Amazon Resource Name (ARN) of the AWS Lambda function.</summary>
@@ -742,6 +777,7 @@ public partial class V1beta1ObjectLambdaAccessPointStatusAtProviderConfiguration
     public string? FunctionPayload { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ObjectLambdaAccessPointStatusAtProviderConfigurationTransformationConfigurationContentTransformation
 {
     /// <summary>Configuration for an AWS Lambda function. See AWS Lambda below for more details.</summary>
@@ -749,6 +785,7 @@ public partial class V1beta1ObjectLambdaAccessPointStatusAtProviderConfiguration
     public IList<V1beta1ObjectLambdaAccessPointStatusAtProviderConfigurationTransformationConfigurationContentTransformationAwsLambda>? AwsLambda { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ObjectLambdaAccessPointStatusAtProviderConfigurationTransformationConfiguration
 {
     /// <summary>The actions of an Object Lambda Access Point configuration. Valid values: GetObject.</summary>
@@ -760,6 +797,7 @@ public partial class V1beta1ObjectLambdaAccessPointStatusAtProviderConfiguration
     public IList<V1beta1ObjectLambdaAccessPointStatusAtProviderConfigurationTransformationConfigurationContentTransformation>? ContentTransformation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ObjectLambdaAccessPointStatusAtProviderConfiguration
 {
     /// <summary>Allowed features. Valid values: GetObject-Range, GetObject-PartNumber.</summary>
@@ -779,6 +817,7 @@ public partial class V1beta1ObjectLambdaAccessPointStatusAtProviderConfiguration
     public IList<V1beta1ObjectLambdaAccessPointStatusAtProviderConfigurationTransformationConfiguration>? TransformationConfiguration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ObjectLambdaAccessPointStatusAtProvider
 {
     /// <summary>The AWS account ID for the owner of the bucket for which you want to create an Object Lambda Access Point.</summary>
@@ -806,6 +845,7 @@ public partial class V1beta1ObjectLambdaAccessPointStatusAtProvider
     public string? Name { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ObjectLambdaAccessPointStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -833,6 +873,7 @@ public partial class V1beta1ObjectLambdaAccessPointStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ObjectLambdaAccessPointStatus defines the observed state of ObjectLambdaAccessPoint.</summary>
 public partial class V1beta1ObjectLambdaAccessPointStatus
 {
     /// <summary></summary>
@@ -849,6 +890,7 @@ public partial class V1beta1ObjectLambdaAccessPointStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ObjectLambdaAccessPoint is the Schema for the ObjectLambdaAccessPoints API. Provides a resource to manage an S3 Object Lambda Access Point.</summary>
 public partial class V1beta1ObjectLambdaAccessPoint : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ObjectLambdaAccessPointSpec>, IStatus<V1beta1ObjectLambdaAccessPointStatus>
 {
     public const string KubeApiVersion = "v1beta1";

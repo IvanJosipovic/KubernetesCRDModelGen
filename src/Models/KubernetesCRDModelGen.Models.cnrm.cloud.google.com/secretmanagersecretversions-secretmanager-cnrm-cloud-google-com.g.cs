@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.secretmanager.cnrm.cloud.google.com;
+/// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 public partial class V1beta1SecretManagerSecretVersionSpecSecretDataValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -19,6 +20,7 @@ public partial class V1beta1SecretManagerSecretVersionSpecSecretDataValueFromSec
     public string Name { get; set; }
 }
 
+/// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 public partial class V1beta1SecretManagerSecretVersionSpecSecretDataValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -26,6 +28,7 @@ public partial class V1beta1SecretManagerSecretVersionSpecSecretDataValueFrom
     public V1beta1SecretManagerSecretVersionSpecSecretDataValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary>Immutable. The secret data. Must be no larger than 64KiB.</summary>
 public partial class V1beta1SecretManagerSecretVersionSpecSecretData
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -37,6 +40,7 @@ public partial class V1beta1SecretManagerSecretVersionSpecSecretData
     public V1beta1SecretManagerSecretVersionSpecSecretDataValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary>Secret Manager secret resource</summary>
 public partial class V1beta1SecretManagerSecretVersionSpecSecretRef
 {
     /// <summary>Allowed value: The `name` field of a `SecretManagerSecret` resource.</summary>
@@ -52,6 +56,7 @@ public partial class V1beta1SecretManagerSecretVersionSpecSecretRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SecretManagerSecretVersionSpec
 {
     /// <summary>The deletion policy for the secret version. Setting 'ABANDON' allows the resource to be abandoned rather than deleted. Setting 'DISABLE' allows the resource to be disabled rather than deleted. Default is 'DELETE'. Possible values are:   * DELETE   * DISABLE   * ABANDON.</summary>
@@ -79,6 +84,7 @@ public partial class V1beta1SecretManagerSecretVersionSpec
     public V1beta1SecretManagerSecretVersionSpecSecretRef SecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SecretManagerSecretVersionStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -102,6 +108,7 @@ public partial class V1beta1SecretManagerSecretVersionStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SecretManagerSecretVersionStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -130,6 +137,7 @@ public partial class V1beta1SecretManagerSecretVersionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1SecretManagerSecretVersion : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SecretManagerSecretVersionSpec>, IStatus<V1beta1SecretManagerSecretVersionStatus>
 {
     public const string KubeApiVersion = "v1beta1";

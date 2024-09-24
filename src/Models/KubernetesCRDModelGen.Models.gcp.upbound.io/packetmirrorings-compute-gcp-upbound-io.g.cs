@@ -38,6 +38,7 @@ public enum V1beta1PacketMirroringSpecForProviderCollectorIlbUrlRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PacketMirroringSpecForProviderCollectorIlbUrlRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1PacketMirroringSpecForProviderCollectorIlbUrlRefPoli
     public V1beta1PacketMirroringSpecForProviderCollectorIlbUrlRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ForwardingRule in compute to populate url.</summary>
 public partial class V1beta1PacketMirroringSpecForProviderCollectorIlbUrlRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1PacketMirroringSpecForProviderCollectorIlbUrlSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PacketMirroringSpecForProviderCollectorIlbUrlSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1PacketMirroringSpecForProviderCollectorIlbUrlSelecto
     public V1beta1PacketMirroringSpecForProviderCollectorIlbUrlSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ForwardingRule in compute to populate url.</summary>
 public partial class V1beta1PacketMirroringSpecForProviderCollectorIlbUrlSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1PacketMirroringSpecForProviderCollectorIlbUrlSelecto
     public V1beta1PacketMirroringSpecForProviderCollectorIlbUrlSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PacketMirroringSpecForProviderCollectorIlb
 {
     /// <summary>The URL of the forwarding rule.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1PacketMirroringSpecForProviderCollectorIlb
     public V1beta1PacketMirroringSpecForProviderCollectorIlbUrlSelector? UrlSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PacketMirroringSpecForProviderFilter
 {
     /// <summary>IP CIDR ranges that apply as a filter on the source (ingress) or destination (egress) IP in the IP header. Only IPv4 is supported.</summary>
@@ -160,6 +166,7 @@ public enum V1beta1PacketMirroringSpecForProviderMirroredResourcesInstancesUrlRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PacketMirroringSpecForProviderMirroredResourcesInstancesUrlRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -173,6 +180,7 @@ public partial class V1beta1PacketMirroringSpecForProviderMirroredResourcesInsta
     public V1beta1PacketMirroringSpecForProviderMirroredResourcesInstancesUrlRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Instance in compute to populate url.</summary>
 public partial class V1beta1PacketMirroringSpecForProviderMirroredResourcesInstancesUrlRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -204,6 +212,7 @@ public enum V1beta1PacketMirroringSpecForProviderMirroredResourcesInstancesUrlSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PacketMirroringSpecForProviderMirroredResourcesInstancesUrlSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -217,6 +226,7 @@ public partial class V1beta1PacketMirroringSpecForProviderMirroredResourcesInsta
     public V1beta1PacketMirroringSpecForProviderMirroredResourcesInstancesUrlSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Instance in compute to populate url.</summary>
 public partial class V1beta1PacketMirroringSpecForProviderMirroredResourcesInstancesUrlSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -232,6 +242,7 @@ public partial class V1beta1PacketMirroringSpecForProviderMirroredResourcesInsta
     public V1beta1PacketMirroringSpecForProviderMirroredResourcesInstancesUrlSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PacketMirroringSpecForProviderMirroredResourcesInstances
 {
     /// <summary>The URL of the subnetwork where this rule should be active.</summary>
@@ -247,6 +258,7 @@ public partial class V1beta1PacketMirroringSpecForProviderMirroredResourcesInsta
     public V1beta1PacketMirroringSpecForProviderMirroredResourcesInstancesUrlSelector? UrlSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PacketMirroringSpecForProviderMirroredResourcesSubnetworks
 {
     /// <summary>The URL of the subnetwork where this rule should be active.</summary>
@@ -254,6 +266,7 @@ public partial class V1beta1PacketMirroringSpecForProviderMirroredResourcesSubne
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PacketMirroringSpecForProviderMirroredResources
 {
     /// <summary>All the listed instances will be mirrored.  Specify at most 50. Structure is documented below.</summary>
@@ -289,6 +302,7 @@ public enum V1beta1PacketMirroringSpecForProviderNetworkUrlRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PacketMirroringSpecForProviderNetworkUrlRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -302,6 +316,7 @@ public partial class V1beta1PacketMirroringSpecForProviderNetworkUrlRefPolicy
     public V1beta1PacketMirroringSpecForProviderNetworkUrlRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate url.</summary>
 public partial class V1beta1PacketMirroringSpecForProviderNetworkUrlRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -333,6 +348,7 @@ public enum V1beta1PacketMirroringSpecForProviderNetworkUrlSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PacketMirroringSpecForProviderNetworkUrlSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -346,6 +362,7 @@ public partial class V1beta1PacketMirroringSpecForProviderNetworkUrlSelectorPoli
     public V1beta1PacketMirroringSpecForProviderNetworkUrlSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate url.</summary>
 public partial class V1beta1PacketMirroringSpecForProviderNetworkUrlSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -361,6 +378,7 @@ public partial class V1beta1PacketMirroringSpecForProviderNetworkUrlSelector
     public V1beta1PacketMirroringSpecForProviderNetworkUrlSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PacketMirroringSpecForProviderNetwork
 {
     /// <summary>The full self_link URL of the network where this rule is active.</summary>
@@ -376,6 +394,7 @@ public partial class V1beta1PacketMirroringSpecForProviderNetwork
     public V1beta1PacketMirroringSpecForProviderNetworkUrlSelector? UrlSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PacketMirroringSpecForProvider
 {
     /// <summary>The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL) that will be used as collector for mirrored traffic. The specified forwarding rule must have is_mirroring_collector set to true. Structure is documented below.</summary>
@@ -431,6 +450,7 @@ public enum V1beta1PacketMirroringSpecInitProviderCollectorIlbUrlRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PacketMirroringSpecInitProviderCollectorIlbUrlRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -444,6 +464,7 @@ public partial class V1beta1PacketMirroringSpecInitProviderCollectorIlbUrlRefPol
     public V1beta1PacketMirroringSpecInitProviderCollectorIlbUrlRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ForwardingRule in compute to populate url.</summary>
 public partial class V1beta1PacketMirroringSpecInitProviderCollectorIlbUrlRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -475,6 +496,7 @@ public enum V1beta1PacketMirroringSpecInitProviderCollectorIlbUrlSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PacketMirroringSpecInitProviderCollectorIlbUrlSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -488,6 +510,7 @@ public partial class V1beta1PacketMirroringSpecInitProviderCollectorIlbUrlSelect
     public V1beta1PacketMirroringSpecInitProviderCollectorIlbUrlSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ForwardingRule in compute to populate url.</summary>
 public partial class V1beta1PacketMirroringSpecInitProviderCollectorIlbUrlSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -503,6 +526,7 @@ public partial class V1beta1PacketMirroringSpecInitProviderCollectorIlbUrlSelect
     public V1beta1PacketMirroringSpecInitProviderCollectorIlbUrlSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PacketMirroringSpecInitProviderCollectorIlb
 {
     /// <summary>The URL of the forwarding rule.</summary>
@@ -518,6 +542,7 @@ public partial class V1beta1PacketMirroringSpecInitProviderCollectorIlb
     public V1beta1PacketMirroringSpecInitProviderCollectorIlbUrlSelector? UrlSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PacketMirroringSpecInitProviderFilter
 {
     /// <summary>IP CIDR ranges that apply as a filter on the source (ingress) or destination (egress) IP in the IP header. Only IPv4 is supported.</summary>
@@ -553,6 +578,7 @@ public enum V1beta1PacketMirroringSpecInitProviderMirroredResourcesInstancesUrlR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PacketMirroringSpecInitProviderMirroredResourcesInstancesUrlRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -566,6 +592,7 @@ public partial class V1beta1PacketMirroringSpecInitProviderMirroredResourcesInst
     public V1beta1PacketMirroringSpecInitProviderMirroredResourcesInstancesUrlRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Instance in compute to populate url.</summary>
 public partial class V1beta1PacketMirroringSpecInitProviderMirroredResourcesInstancesUrlRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -597,6 +624,7 @@ public enum V1beta1PacketMirroringSpecInitProviderMirroredResourcesInstancesUrlS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PacketMirroringSpecInitProviderMirroredResourcesInstancesUrlSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -610,6 +638,7 @@ public partial class V1beta1PacketMirroringSpecInitProviderMirroredResourcesInst
     public V1beta1PacketMirroringSpecInitProviderMirroredResourcesInstancesUrlSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Instance in compute to populate url.</summary>
 public partial class V1beta1PacketMirroringSpecInitProviderMirroredResourcesInstancesUrlSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -625,6 +654,7 @@ public partial class V1beta1PacketMirroringSpecInitProviderMirroredResourcesInst
     public V1beta1PacketMirroringSpecInitProviderMirroredResourcesInstancesUrlSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PacketMirroringSpecInitProviderMirroredResourcesInstances
 {
     /// <summary>The URL of the subnetwork where this rule should be active.</summary>
@@ -640,6 +670,7 @@ public partial class V1beta1PacketMirroringSpecInitProviderMirroredResourcesInst
     public V1beta1PacketMirroringSpecInitProviderMirroredResourcesInstancesUrlSelector? UrlSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PacketMirroringSpecInitProviderMirroredResourcesSubnetworks
 {
     /// <summary>The URL of the subnetwork where this rule should be active.</summary>
@@ -647,6 +678,7 @@ public partial class V1beta1PacketMirroringSpecInitProviderMirroredResourcesSubn
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PacketMirroringSpecInitProviderMirroredResources
 {
     /// <summary>All the listed instances will be mirrored.  Specify at most 50. Structure is documented below.</summary>
@@ -682,6 +714,7 @@ public enum V1beta1PacketMirroringSpecInitProviderNetworkUrlRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PacketMirroringSpecInitProviderNetworkUrlRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -695,6 +728,7 @@ public partial class V1beta1PacketMirroringSpecInitProviderNetworkUrlRefPolicy
     public V1beta1PacketMirroringSpecInitProviderNetworkUrlRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate url.</summary>
 public partial class V1beta1PacketMirroringSpecInitProviderNetworkUrlRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -726,6 +760,7 @@ public enum V1beta1PacketMirroringSpecInitProviderNetworkUrlSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PacketMirroringSpecInitProviderNetworkUrlSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -739,6 +774,7 @@ public partial class V1beta1PacketMirroringSpecInitProviderNetworkUrlSelectorPol
     public V1beta1PacketMirroringSpecInitProviderNetworkUrlSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate url.</summary>
 public partial class V1beta1PacketMirroringSpecInitProviderNetworkUrlSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -754,6 +790,7 @@ public partial class V1beta1PacketMirroringSpecInitProviderNetworkUrlSelector
     public V1beta1PacketMirroringSpecInitProviderNetworkUrlSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PacketMirroringSpecInitProviderNetwork
 {
     /// <summary>The full self_link URL of the network where this rule is active.</summary>
@@ -769,6 +806,7 @@ public partial class V1beta1PacketMirroringSpecInitProviderNetwork
     public V1beta1PacketMirroringSpecInitProviderNetworkUrlSelector? UrlSelector { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1PacketMirroringSpecInitProvider
 {
     /// <summary>The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL) that will be used as collector for mirrored traffic. The specified forwarding rule must have is_mirroring_collector set to true. Structure is documented below.</summary>
@@ -842,6 +880,7 @@ public enum V1beta1PacketMirroringSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PacketMirroringSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -855,6 +894,7 @@ public partial class V1beta1PacketMirroringSpecProviderConfigRefPolicy
     public V1beta1PacketMirroringSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1PacketMirroringSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -886,6 +926,7 @@ public enum V1beta1PacketMirroringSpecPublishConnectionDetailsToConfigRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PacketMirroringSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -899,6 +940,7 @@ public partial class V1beta1PacketMirroringSpecPublishConnectionDetailsToConfigR
     public V1beta1PacketMirroringSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1PacketMirroringSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -910,6 +952,7 @@ public partial class V1beta1PacketMirroringSpecPublishConnectionDetailsToConfigR
     public V1beta1PacketMirroringSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1PacketMirroringSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -925,6 +968,7 @@ public partial class V1beta1PacketMirroringSpecPublishConnectionDetailsToMetadat
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1PacketMirroringSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -940,6 +984,7 @@ public partial class V1beta1PacketMirroringSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1PacketMirroringSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -951,6 +996,7 @@ public partial class V1beta1PacketMirroringSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>PacketMirroringSpec defines the desired state of PacketMirroring</summary>
 public partial class V1beta1PacketMirroringSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -983,6 +1029,7 @@ public partial class V1beta1PacketMirroringSpec
     public V1beta1PacketMirroringSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PacketMirroringStatusAtProviderCollectorIlb
 {
     /// <summary>The URL of the forwarding rule.</summary>
@@ -990,6 +1037,7 @@ public partial class V1beta1PacketMirroringStatusAtProviderCollectorIlb
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PacketMirroringStatusAtProviderFilter
 {
     /// <summary>IP CIDR ranges that apply as a filter on the source (ingress) or destination (egress) IP in the IP header. Only IPv4 is supported.</summary>
@@ -1005,6 +1053,7 @@ public partial class V1beta1PacketMirroringStatusAtProviderFilter
     public IList<string>? IpProtocols { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PacketMirroringStatusAtProviderMirroredResourcesInstances
 {
     /// <summary>The URL of the subnetwork where this rule should be active.</summary>
@@ -1012,6 +1061,7 @@ public partial class V1beta1PacketMirroringStatusAtProviderMirroredResourcesInst
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PacketMirroringStatusAtProviderMirroredResourcesSubnetworks
 {
     /// <summary>The URL of the subnetwork where this rule should be active.</summary>
@@ -1019,6 +1069,7 @@ public partial class V1beta1PacketMirroringStatusAtProviderMirroredResourcesSubn
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PacketMirroringStatusAtProviderMirroredResources
 {
     /// <summary>All the listed instances will be mirrored.  Specify at most 50. Structure is documented below.</summary>
@@ -1034,6 +1085,7 @@ public partial class V1beta1PacketMirroringStatusAtProviderMirroredResources
     public IList<string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PacketMirroringStatusAtProviderNetwork
 {
     /// <summary>The full self_link URL of the network where this rule is active.</summary>
@@ -1041,6 +1093,7 @@ public partial class V1beta1PacketMirroringStatusAtProviderNetwork
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PacketMirroringStatusAtProvider
 {
     /// <summary>The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL) that will be used as collector for mirrored traffic. The specified forwarding rule must have is_mirroring_collector set to true. Structure is documented below.</summary>
@@ -1080,6 +1133,7 @@ public partial class V1beta1PacketMirroringStatusAtProvider
     public string? Region { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1PacketMirroringStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1107,6 +1161,7 @@ public partial class V1beta1PacketMirroringStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>PacketMirroringStatus defines the observed state of PacketMirroring.</summary>
 public partial class V1beta1PacketMirroringStatus
 {
     /// <summary></summary>
@@ -1123,6 +1178,7 @@ public partial class V1beta1PacketMirroringStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>PacketMirroring is the Schema for the PacketMirrorings API. Packet Mirroring mirrors traffic to and from particular VM instances.</summary>
 public partial class V1beta1PacketMirroring : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1PacketMirroringSpec>, IStatus<V1beta1PacketMirroringStatus>
 {
     public const string KubeApiVersion = "v1beta1";

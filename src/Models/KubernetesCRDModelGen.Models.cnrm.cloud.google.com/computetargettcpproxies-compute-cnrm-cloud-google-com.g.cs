@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary>A reference to the ComputeBackendService resource.</summary>
 public partial class V1beta1ComputeTargetTCPProxySpecBackendServiceRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeBackendService` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1ComputeTargetTCPProxySpecBackendServiceRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeTargetTCPProxySpec
 {
     /// <summary>A reference to the ComputeBackendService resource.</summary>
@@ -46,6 +48,7 @@ public partial class V1beta1ComputeTargetTCPProxySpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeTargetTCPProxyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -69,6 +72,7 @@ public partial class V1beta1ComputeTargetTCPProxyStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeTargetTCPProxyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -93,6 +97,7 @@ public partial class V1beta1ComputeTargetTCPProxyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ComputeTargetTCPProxy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeTargetTCPProxySpec>, IStatus<V1beta1ComputeTargetTCPProxyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -38,6 +38,7 @@ public enum V1beta1DBSnapshotCopySpecForProviderKmsKeyIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DBSnapshotCopySpecForProviderKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1DBSnapshotCopySpecForProviderKmsKeyIdRefPolicy
     public V1beta1DBSnapshotCopySpecForProviderKmsKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1DBSnapshotCopySpecForProviderKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1DBSnapshotCopySpecForProviderKmsKeyIdSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DBSnapshotCopySpecForProviderKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1DBSnapshotCopySpecForProviderKmsKeyIdSelectorPolicy
     public V1beta1DBSnapshotCopySpecForProviderKmsKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1DBSnapshotCopySpecForProviderKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1DBSnapshotCopySpecForProviderSourceDbSnapshotIdentifierRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DBSnapshotCopySpecForProviderSourceDbSnapshotIdentifierRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1DBSnapshotCopySpecForProviderSourceDbSnapshotIdentif
     public V1beta1DBSnapshotCopySpecForProviderSourceDbSnapshotIdentifierRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Snapshot in rds to populate sourceDbSnapshotIdentifier.</summary>
 public partial class V1beta1DBSnapshotCopySpecForProviderSourceDbSnapshotIdentifierRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1DBSnapshotCopySpecForProviderSourceDbSnapshotIdentifierSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DBSnapshotCopySpecForProviderSourceDbSnapshotIdentifierSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1DBSnapshotCopySpecForProviderSourceDbSnapshotIdentif
     public V1beta1DBSnapshotCopySpecForProviderSourceDbSnapshotIdentifierSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Snapshot in rds to populate sourceDbSnapshotIdentifier.</summary>
 public partial class V1beta1DBSnapshotCopySpecForProviderSourceDbSnapshotIdentifierSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1DBSnapshotCopySpecForProviderSourceDbSnapshotIdentif
     public V1beta1DBSnapshotCopySpecForProviderSourceDbSnapshotIdentifierSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DBSnapshotCopySpecForProvider
 {
     /// <summary>Whether to copy existing tags. Defaults to false.</summary>
@@ -281,6 +290,7 @@ public enum V1beta1DBSnapshotCopySpecInitProviderKmsKeyIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DBSnapshotCopySpecInitProviderKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -294,6 +304,7 @@ public partial class V1beta1DBSnapshotCopySpecInitProviderKmsKeyIdRefPolicy
     public V1beta1DBSnapshotCopySpecInitProviderKmsKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1DBSnapshotCopySpecInitProviderKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -325,6 +336,7 @@ public enum V1beta1DBSnapshotCopySpecInitProviderKmsKeyIdSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DBSnapshotCopySpecInitProviderKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -338,6 +350,7 @@ public partial class V1beta1DBSnapshotCopySpecInitProviderKmsKeyIdSelectorPolicy
     public V1beta1DBSnapshotCopySpecInitProviderKmsKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1DBSnapshotCopySpecInitProviderKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -373,6 +386,7 @@ public enum V1beta1DBSnapshotCopySpecInitProviderSourceDbSnapshotIdentifierRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DBSnapshotCopySpecInitProviderSourceDbSnapshotIdentifierRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -386,6 +400,7 @@ public partial class V1beta1DBSnapshotCopySpecInitProviderSourceDbSnapshotIdenti
     public V1beta1DBSnapshotCopySpecInitProviderSourceDbSnapshotIdentifierRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Snapshot in rds to populate sourceDbSnapshotIdentifier.</summary>
 public partial class V1beta1DBSnapshotCopySpecInitProviderSourceDbSnapshotIdentifierRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -417,6 +432,7 @@ public enum V1beta1DBSnapshotCopySpecInitProviderSourceDbSnapshotIdentifierSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DBSnapshotCopySpecInitProviderSourceDbSnapshotIdentifierSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -430,6 +446,7 @@ public partial class V1beta1DBSnapshotCopySpecInitProviderSourceDbSnapshotIdenti
     public V1beta1DBSnapshotCopySpecInitProviderSourceDbSnapshotIdentifierSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Snapshot in rds to populate sourceDbSnapshotIdentifier.</summary>
 public partial class V1beta1DBSnapshotCopySpecInitProviderSourceDbSnapshotIdentifierSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -445,6 +462,7 @@ public partial class V1beta1DBSnapshotCopySpecInitProviderSourceDbSnapshotIdenti
     public V1beta1DBSnapshotCopySpecInitProviderSourceDbSnapshotIdentifierSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1DBSnapshotCopySpecInitProvider
 {
     /// <summary>Whether to copy existing tags. Defaults to false.</summary>
@@ -542,6 +560,7 @@ public enum V1beta1DBSnapshotCopySpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DBSnapshotCopySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -555,6 +574,7 @@ public partial class V1beta1DBSnapshotCopySpecProviderConfigRefPolicy
     public V1beta1DBSnapshotCopySpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1DBSnapshotCopySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -586,6 +606,7 @@ public enum V1beta1DBSnapshotCopySpecPublishConnectionDetailsToConfigRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DBSnapshotCopySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -599,6 +620,7 @@ public partial class V1beta1DBSnapshotCopySpecPublishConnectionDetailsToConfigRe
     public V1beta1DBSnapshotCopySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1DBSnapshotCopySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -610,6 +632,7 @@ public partial class V1beta1DBSnapshotCopySpecPublishConnectionDetailsToConfigRe
     public V1beta1DBSnapshotCopySpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1DBSnapshotCopySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -625,6 +648,7 @@ public partial class V1beta1DBSnapshotCopySpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1DBSnapshotCopySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -640,6 +664,7 @@ public partial class V1beta1DBSnapshotCopySpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1DBSnapshotCopySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -651,6 +676,7 @@ public partial class V1beta1DBSnapshotCopySpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>DBSnapshotCopySpec defines the desired state of DBSnapshotCopy</summary>
 public partial class V1beta1DBSnapshotCopySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -683,6 +709,7 @@ public partial class V1beta1DBSnapshotCopySpec
     public V1beta1DBSnapshotCopySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DBSnapshotCopyStatusAtProvider
 {
     /// <summary>Specifies the allocated storage size in gigabytes (GB).</summary>
@@ -782,6 +809,7 @@ public partial class V1beta1DBSnapshotCopyStatusAtProvider
     public string? VpcId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1DBSnapshotCopyStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -809,6 +837,7 @@ public partial class V1beta1DBSnapshotCopyStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>DBSnapshotCopyStatus defines the observed state of DBSnapshotCopy.</summary>
 public partial class V1beta1DBSnapshotCopyStatus
 {
     /// <summary></summary>
@@ -825,6 +854,7 @@ public partial class V1beta1DBSnapshotCopyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>DBSnapshotCopy is the Schema for the DBSnapshotCopys API. Manages an RDS database instance snapshot copy.</summary>
 public partial class V1beta1DBSnapshotCopy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DBSnapshotCopySpec>, IStatus<V1beta1DBSnapshotCopyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

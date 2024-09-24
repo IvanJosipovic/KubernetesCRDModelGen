@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.monitoring.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1MonitoringAlertPolicySpecAlertStrategyNotificationChannelStrategy
 {
     /// <summary>The notification channels that these settings apply to. Each of these correspond to the name field in one of the NotificationChannel objects referenced in the notification_channels field of this AlertPolicy. The format is 'projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID]'.</summary>
@@ -19,6 +20,7 @@ public partial class V1beta1MonitoringAlertPolicySpecAlertStrategyNotificationCh
     public string? RenotifyInterval { get; set; }
 }
 
+/// <summary>Required for alert policies with a LogMatch condition. This limit is not implemented for alert policies that are not log-based.</summary>
 public partial class V1beta1MonitoringAlertPolicySpecAlertStrategyNotificationRateLimit
 {
     /// <summary>Not more than one notification per period.</summary>
@@ -26,6 +28,7 @@ public partial class V1beta1MonitoringAlertPolicySpecAlertStrategyNotificationRa
     public string? Period { get; set; }
 }
 
+/// <summary>Control over how this alert policy's notification channels are notified.</summary>
 public partial class V1beta1MonitoringAlertPolicySpecAlertStrategy
 {
     /// <summary>If an alert policy that was active has no data for this long, any open incidents will close.</summary>
@@ -41,6 +44,7 @@ public partial class V1beta1MonitoringAlertPolicySpecAlertStrategy
     public V1beta1MonitoringAlertPolicySpecAlertStrategyNotificationRateLimit? NotificationRateLimit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionAbsentAggregations
 {
     /// <summary>The alignment period for per-time series alignment. If present, alignmentPeriod must be at least 60 seconds. After per-time series alignment, each time series will contain data points only on the period boundaries. If perSeriesAligner is not specified or equals ALIGN_NONE, then this field is ignored. If perSeriesAligner is specified and does not equal ALIGN_NONE, then this field must be defined; otherwise an error is returned.</summary>
@@ -60,6 +64,7 @@ public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionAbsentAg
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>The number/percent of time series for which the comparison must hold in order for the condition to trigger. If unspecified, then the condition will trigger if the comparison is true for any of the time series that have been identified by filter and aggregations.</summary>
 public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionAbsentTrigger
 {
     /// <summary>The absolute number of time series that must fail the predicate for the condition to be triggered.</summary>
@@ -71,6 +76,7 @@ public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionAbsentTr
     public double? Percent { get; set; }
 }
 
+/// <summary>A condition that checks that a time series continues to receive new data points.</summary>
 public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionAbsent
 {
     /// <summary>Specifies the alignment of data points in individual time series as well as how to combine the retrieved time series together (such as when aggregating multiple streams on each resource to a single stream for each resource or when aggregating streams across all members of a group of resources). Multiple aggregations are applied in the order specified.</summary>
@@ -90,6 +96,7 @@ public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionAbsent
     public V1beta1MonitoringAlertPolicySpecConditionsConditionAbsentTrigger? Trigger { get; set; }
 }
 
+/// <summary>A condition that checks for log messages matching given constraints. If set, no other conditions can be present.</summary>
 public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionMatchedLog
 {
     /// <summary>A logs-based filter.</summary>
@@ -101,6 +108,7 @@ public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionMatchedL
     public IDictionary<string, string>? LabelExtractors { get; set; }
 }
 
+/// <summary>The number/percent of time series for which the comparison must hold in order for the condition to trigger. If unspecified, then the condition will trigger if the comparison is true for any of the time series that have been identified by filter and aggregations, or by the ratio, if denominator_filter and denominator_aggregations are specified.</summary>
 public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionMonitoringQueryLanguageTrigger
 {
     /// <summary>The absolute number of time series that must fail the predicate for the condition to be triggered.</summary>
@@ -112,6 +120,7 @@ public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionMonitori
     public double? Percent { get; set; }
 }
 
+/// <summary>A Monitoring Query Language query that outputs a boolean stream.</summary>
 public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionMonitoringQueryLanguage
 {
     /// <summary>The amount of time that a time series must violate the threshold to be considered failing. Currently, only values that are a multiple of a minute--e.g., 0, 60, 120, or 300 seconds--are supported. If an invalid value is given, an error will be returned. When choosing a duration, it is useful to keep in mind the frequency of the underlying time series data (which may also be affected by any alignments specified in the aggregations field); a good duration is long enough so that a single outlier does not generate spurious alerts, but short enough that unhealthy states are detected and alerted on quickly.</summary>
@@ -131,6 +140,7 @@ public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionMonitori
     public V1beta1MonitoringAlertPolicySpecConditionsConditionMonitoringQueryLanguageTrigger? Trigger { get; set; }
 }
 
+/// <summary>A Monitoring Query Language query that outputs a boolean stream  A condition type that allows alert policies to be defined using Prometheus Query Language (PromQL).  The PrometheusQueryLanguageCondition message contains information from a Prometheus alerting rule and its associated rule group.</summary>
 public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionPrometheusQueryLanguage
 {
     /// <summary>The alerting rule name of this alert in the corresponding Prometheus configuration file.  Some external tools may require this field to be populated correctly in order to refer to the original Prometheus configuration file. The rule group name and the alert name are necessary to update the relevant AlertPolicies in case the definition of the rule group changes in the future.  This field is optional. If this field is not empty, then it must be a valid Prometheus label name.</summary>
@@ -158,6 +168,7 @@ public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionPromethe
     public string? RuleGroup { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionThresholdAggregations
 {
     /// <summary>The alignment period for per-time series alignment. If present, alignmentPeriod must be at least 60 seconds. After per-time series alignment, each time series will contain data points only on the period boundaries. If perSeriesAligner is not specified or equals ALIGN_NONE, then this field is ignored. If perSeriesAligner is specified and does not equal ALIGN_NONE, then this field must be defined; otherwise an error is returned.</summary>
@@ -177,6 +188,7 @@ public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionThreshol
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionThresholdDenominatorAggregations
 {
     /// <summary>The alignment period for per-time series alignment. If present, alignmentPeriod must be at least 60 seconds. After per-time series alignment, each time series will contain data points only on the period boundaries. If perSeriesAligner is not specified or equals ALIGN_NONE, then this field is ignored. If perSeriesAligner is specified and does not equal ALIGN_NONE, then this field must be defined; otherwise an error is returned.</summary>
@@ -196,6 +208,7 @@ public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionThreshol
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>When this field is present, the 'MetricThreshold' condition forecasts whether the time series is predicted to violate the threshold within the 'forecastHorizon'. When this field is not set, the 'MetricThreshold' tests the current value of the timeseries against the threshold.</summary>
 public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionThresholdForecastOptions
 {
     /// <summary>The length of time into the future to forecast whether a timeseries will violate the threshold. If the predicted value is found to violate the threshold, and the violation is observed in all forecasts made for the Configured 'duration', then the timeseries is considered to be failing.</summary>
@@ -203,6 +216,7 @@ public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionThreshol
     public string ForecastHorizon { get; set; }
 }
 
+/// <summary>The number/percent of time series for which the comparison must hold in order for the condition to trigger. If unspecified, then the condition will trigger if the comparison is true for any of the time series that have been identified by filter and aggregations, or by the ratio, if denominator_filter and denominator_aggregations are specified.</summary>
 public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionThresholdTrigger
 {
     /// <summary>The absolute number of time series that must fail the predicate for the condition to be triggered.</summary>
@@ -214,6 +228,7 @@ public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionThreshol
     public double? Percent { get; set; }
 }
 
+/// <summary>A condition that compares a time series against a threshold.</summary>
 public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionThreshold
 {
     /// <summary>Specifies the alignment of data points in individual time series as well as how to combine the retrieved time series together (such as when aggregating multiple streams on each resource to a single stream for each resource or when aggregating streams across all members of a group of resources). Multiple aggregations are applied in the order specified.This field is similar to the one in the MetricService.ListTimeSeries request. It is advisable to use the ListTimeSeries method when debugging this field.</summary>
@@ -257,6 +272,7 @@ public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionThreshol
     public V1beta1MonitoringAlertPolicySpecConditionsConditionThresholdTrigger? Trigger { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringAlertPolicySpecConditions
 {
     /// <summary>A condition that checks that a time series continues to receive new data points.</summary>
@@ -288,6 +304,7 @@ public partial class V1beta1MonitoringAlertPolicySpecConditions
     public string? Name { get; set; }
 }
 
+/// <summary>Documentation that is included with notifications and incidents related to this policy. Best practice is for the documentation to include information to help responders understand, mitigate, escalate, and correct the underlying problems detected by the alerting policy. Notification channels that have limited capacity might not show this documentation.</summary>
 public partial class V1beta1MonitoringAlertPolicySpecDocumentation
 {
     /// <summary>The text of the documentation, interpreted according to mimeType. The content may not exceed 8,192 Unicode characters and may not exceed more than 10,240 bytes when encoded in UTF-8 format, whichever is smaller.</summary>
@@ -299,6 +316,7 @@ public partial class V1beta1MonitoringAlertPolicySpecDocumentation
     public string? MimeType { get; set; }
 }
 
+/// <summary>Identifies the notification channels to which notifications should be sent when incidents are opened or closed or when new violations occur on an already opened incident.</summary>
 public partial class V1beta1MonitoringAlertPolicySpecNotificationChannels
 {
     /// <summary>Allowed value: The `name` field of a `MonitoringNotificationChannel` resource.</summary>
@@ -314,6 +332,7 @@ public partial class V1beta1MonitoringAlertPolicySpecNotificationChannels
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringAlertPolicySpec
 {
     /// <summary>Control over how this alert policy's notification channels are notified.</summary>
@@ -353,6 +372,7 @@ public partial class V1beta1MonitoringAlertPolicySpec
     public string? Severity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringAlertPolicyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -376,6 +396,7 @@ public partial class V1beta1MonitoringAlertPolicyStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringAlertPolicyStatusCreationRecord
 {
     /// <summary>When the change occurred.</summary>
@@ -387,6 +408,7 @@ public partial class V1beta1MonitoringAlertPolicyStatusCreationRecord
     public string? MutatedBy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringAlertPolicyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -407,6 +429,7 @@ public partial class V1beta1MonitoringAlertPolicyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1MonitoringAlertPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MonitoringAlertPolicySpec>, IStatus<V1beta1MonitoringAlertPolicyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

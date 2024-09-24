@@ -38,6 +38,7 @@ public enum V1beta1ManagerStaticMemberSpecForProviderNetworkGroupIdRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ManagerStaticMemberSpecForProviderNetworkGroupIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ManagerStaticMemberSpecForProviderNetworkGroupIdRefP
     public V1beta1ManagerStaticMemberSpecForProviderNetworkGroupIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ManagerNetworkGroup in network to populate networkGroupId.</summary>
 public partial class V1beta1ManagerStaticMemberSpecForProviderNetworkGroupIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ManagerStaticMemberSpecForProviderNetworkGroupIdSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ManagerStaticMemberSpecForProviderNetworkGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ManagerStaticMemberSpecForProviderNetworkGroupIdSele
     public V1beta1ManagerStaticMemberSpecForProviderNetworkGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ManagerNetworkGroup in network to populate networkGroupId.</summary>
 public partial class V1beta1ManagerStaticMemberSpecForProviderNetworkGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1ManagerStaticMemberSpecForProviderTargetVirtualNetworkIdRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ManagerStaticMemberSpecForProviderTargetVirtualNetworkIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1ManagerStaticMemberSpecForProviderTargetVirtualNetwo
     public V1beta1ManagerStaticMemberSpecForProviderTargetVirtualNetworkIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VirtualNetwork in network to populate targetVirtualNetworkId.</summary>
 public partial class V1beta1ManagerStaticMemberSpecForProviderTargetVirtualNetworkIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1ManagerStaticMemberSpecForProviderTargetVirtualNetworkIdSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ManagerStaticMemberSpecForProviderTargetVirtualNetworkIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1ManagerStaticMemberSpecForProviderTargetVirtualNetwo
     public V1beta1ManagerStaticMemberSpecForProviderTargetVirtualNetworkIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VirtualNetwork in network to populate targetVirtualNetworkId.</summary>
 public partial class V1beta1ManagerStaticMemberSpecForProviderTargetVirtualNetworkIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1ManagerStaticMemberSpecForProviderTargetVirtualNetwo
     public V1beta1ManagerStaticMemberSpecForProviderTargetVirtualNetworkIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagerStaticMemberSpecForProvider
 {
     /// <summary>Specifies the ID of the Network Manager Group. Changing this forces a new Network Manager Static Member to be created.</summary>
@@ -249,6 +258,7 @@ public enum V1beta1ManagerStaticMemberSpecInitProviderTargetVirtualNetworkIdRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ManagerStaticMemberSpecInitProviderTargetVirtualNetworkIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -262,6 +272,7 @@ public partial class V1beta1ManagerStaticMemberSpecInitProviderTargetVirtualNetw
     public V1beta1ManagerStaticMemberSpecInitProviderTargetVirtualNetworkIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VirtualNetwork in network to populate targetVirtualNetworkId.</summary>
 public partial class V1beta1ManagerStaticMemberSpecInitProviderTargetVirtualNetworkIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -293,6 +304,7 @@ public enum V1beta1ManagerStaticMemberSpecInitProviderTargetVirtualNetworkIdSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ManagerStaticMemberSpecInitProviderTargetVirtualNetworkIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -306,6 +318,7 @@ public partial class V1beta1ManagerStaticMemberSpecInitProviderTargetVirtualNetw
     public V1beta1ManagerStaticMemberSpecInitProviderTargetVirtualNetworkIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VirtualNetwork in network to populate targetVirtualNetworkId.</summary>
 public partial class V1beta1ManagerStaticMemberSpecInitProviderTargetVirtualNetworkIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -321,6 +334,7 @@ public partial class V1beta1ManagerStaticMemberSpecInitProviderTargetVirtualNetw
     public V1beta1ManagerStaticMemberSpecInitProviderTargetVirtualNetworkIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ManagerStaticMemberSpecInitProvider
 {
     /// <summary>Specifies the Resource ID of the Virtual Network using as the Static Member. Changing this forces a new Network Manager Static Member to be created.</summary>
@@ -378,6 +392,7 @@ public enum V1beta1ManagerStaticMemberSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ManagerStaticMemberSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -391,6 +406,7 @@ public partial class V1beta1ManagerStaticMemberSpecProviderConfigRefPolicy
     public V1beta1ManagerStaticMemberSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ManagerStaticMemberSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -422,6 +438,7 @@ public enum V1beta1ManagerStaticMemberSpecPublishConnectionDetailsToConfigRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ManagerStaticMemberSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -435,6 +452,7 @@ public partial class V1beta1ManagerStaticMemberSpecPublishConnectionDetailsToCon
     public V1beta1ManagerStaticMemberSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ManagerStaticMemberSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -446,6 +464,7 @@ public partial class V1beta1ManagerStaticMemberSpecPublishConnectionDetailsToCon
     public V1beta1ManagerStaticMemberSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ManagerStaticMemberSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -461,6 +480,7 @@ public partial class V1beta1ManagerStaticMemberSpecPublishConnectionDetailsToMet
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ManagerStaticMemberSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -476,6 +496,7 @@ public partial class V1beta1ManagerStaticMemberSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ManagerStaticMemberSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -487,6 +508,7 @@ public partial class V1beta1ManagerStaticMemberSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ManagerStaticMemberSpec defines the desired state of ManagerStaticMember</summary>
 public partial class V1beta1ManagerStaticMemberSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -519,6 +541,7 @@ public partial class V1beta1ManagerStaticMemberSpec
     public V1beta1ManagerStaticMemberSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagerStaticMemberStatusAtProvider
 {
     /// <summary>The ID of the Network Manager Static Member.</summary>
@@ -538,6 +561,7 @@ public partial class V1beta1ManagerStaticMemberStatusAtProvider
     public string? TargetVirtualNetworkId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ManagerStaticMemberStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -565,6 +589,7 @@ public partial class V1beta1ManagerStaticMemberStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ManagerStaticMemberStatus defines the observed state of ManagerStaticMember.</summary>
 public partial class V1beta1ManagerStaticMemberStatus
 {
     /// <summary></summary>
@@ -581,6 +606,7 @@ public partial class V1beta1ManagerStaticMemberStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ManagerStaticMember is the Schema for the ManagerStaticMembers API. Manages a Network Manager Static Member.</summary>
 public partial class V1beta1ManagerStaticMember : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ManagerStaticMemberSpec>, IStatus<V1beta1ManagerStaticMemberStatus>
 {
     public const string KubeApiVersion = "v1beta1";

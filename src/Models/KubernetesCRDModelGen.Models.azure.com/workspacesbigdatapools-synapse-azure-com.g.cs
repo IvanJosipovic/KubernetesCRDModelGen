@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.synapse.azure.com;
+/// <summary>Storage version of v1api20210601.AutoPauseProperties Auto-pausing properties of a Big Data pool powered by Apache Spark</summary>
 public partial class V1api20210601storageWorkspacesBigDataPoolSpecAutoPause
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -23,6 +24,7 @@ public partial class V1api20210601storageWorkspacesBigDataPoolSpecAutoPause
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.AutoScaleProperties Auto-scaling properties of a Big Data pool powered by Apache Spark</summary>
 public partial class V1api20210601storageWorkspacesBigDataPoolSpecAutoScale
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -42,6 +44,7 @@ public partial class V1api20210601storageWorkspacesBigDataPoolSpecAutoScale
     public int? MinNodeCount { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.LibraryInfo Library/package information of a Big Data pool powered by Apache Spark</summary>
 public partial class V1api20210601storageWorkspacesBigDataPoolSpecCustomLibraries
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -65,6 +68,7 @@ public partial class V1api20210601storageWorkspacesBigDataPoolSpecCustomLibrarie
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.DynamicExecutorAllocation Dynamic Executor Allocation Properties</summary>
 public partial class V1api20210601storageWorkspacesBigDataPoolSpecDynamicExecutorAllocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -84,6 +88,7 @@ public partial class V1api20210601storageWorkspacesBigDataPoolSpecDynamicExecuto
     public int? MinExecutors { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.LibraryRequirements Library requirements for a Big Data pool powered by Apache Spark</summary>
 public partial class V1api20210601storageWorkspacesBigDataPoolSpecLibraryRequirements
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -99,6 +104,7 @@ public partial class V1api20210601storageWorkspacesBigDataPoolSpecLibraryRequire
     public string? Filename { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a synapse.azure.com/Workspace resource</summary>
 public partial class V1api20210601storageWorkspacesBigDataPoolSpecOwner
 {
     /// <summary></summary>
@@ -110,6 +116,7 @@ public partial class V1api20210601storageWorkspacesBigDataPoolSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.SparkConfigProperties SparkConfig Properties for a Big Data pool powered by Apache Spark</summary>
 public partial class V1api20210601storageWorkspacesBigDataPoolSpecSparkConfigProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -129,6 +136,7 @@ public partial class V1api20210601storageWorkspacesBigDataPoolSpecSparkConfigPro
     public string? Filename { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.Workspaces_BigDataPool_Spec</summary>
 public partial class V1api20210601storageWorkspacesBigDataPoolSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -224,6 +232,7 @@ public partial class V1api20210601storageWorkspacesBigDataPoolSpec
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.AutoPauseProperties_STATUS Auto-pausing properties of a Big Data pool powered by Apache Spark</summary>
 public partial class V1api20210601storageWorkspacesBigDataPoolStatusAutoPause
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -239,6 +248,7 @@ public partial class V1api20210601storageWorkspacesBigDataPoolStatusAutoPause
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.AutoScaleProperties_STATUS Auto-scaling properties of a Big Data pool powered by Apache Spark</summary>
 public partial class V1api20210601storageWorkspacesBigDataPoolStatusAutoScale
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -258,6 +268,7 @@ public partial class V1api20210601storageWorkspacesBigDataPoolStatusAutoScale
     public int? MinNodeCount { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20210601storageWorkspacesBigDataPoolStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -289,6 +300,7 @@ public partial class V1api20210601storageWorkspacesBigDataPoolStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.LibraryInfo_STATUS Library/package information of a Big Data pool powered by Apache Spark</summary>
 public partial class V1api20210601storageWorkspacesBigDataPoolStatusCustomLibraries
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -324,6 +336,7 @@ public partial class V1api20210601storageWorkspacesBigDataPoolStatusCustomLibrar
     public string? UploadedTimestamp { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.DynamicExecutorAllocation_STATUS Dynamic Executor Allocation Properties</summary>
 public partial class V1api20210601storageWorkspacesBigDataPoolStatusDynamicExecutorAllocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -343,6 +356,7 @@ public partial class V1api20210601storageWorkspacesBigDataPoolStatusDynamicExecu
     public int? MinExecutors { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.LibraryRequirements_STATUS Library requirements for a Big Data pool powered by Apache Spark</summary>
 public partial class V1api20210601storageWorkspacesBigDataPoolStatusLibraryRequirements
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -362,6 +376,7 @@ public partial class V1api20210601storageWorkspacesBigDataPoolStatusLibraryRequi
     public string? Time { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.SparkConfigProperties_STATUS SparkConfig Properties for a Big Data pool powered by Apache Spark</summary>
 public partial class V1api20210601storageWorkspacesBigDataPoolStatusSparkConfigProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -385,6 +400,7 @@ public partial class V1api20210601storageWorkspacesBigDataPoolStatusSparkConfigP
     public string? Time { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.Workspaces_BigDataPool_STATUS</summary>
 public partial class V1api20210601storageWorkspacesBigDataPoolStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -493,6 +509,7 @@ public partial class V1api20210601storageWorkspacesBigDataPoolStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20210601.WorkspacesBigDataPool Generator information: - Generated from: /synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/bigDataPool.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Synapse/workspaces/{workspaceName}/bigDataPools/{bigDataPoolName}</summary>
 public partial class V1api20210601storageWorkspacesBigDataPool : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20210601storageWorkspacesBigDataPoolSpec>, IStatus<V1api20210601storageWorkspacesBigDataPoolStatus>
 {
     public const string KubeApiVersion = "v1api20210601storage";

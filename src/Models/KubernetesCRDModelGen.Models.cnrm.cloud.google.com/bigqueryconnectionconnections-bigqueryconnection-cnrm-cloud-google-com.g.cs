@@ -8,10 +8,12 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigqueryconnection.cnrm.cloud.google.com;
+/// <summary>Use Cloud Resource properties.</summary>
 public partial class V1alpha1BigQueryConnectionConnectionSpecCloudResource
 {
 }
 
+/// <summary>The Project that this resource belongs to.</summary>
 public partial class V1alpha1BigQueryConnectionConnectionSpecProjectRef
 {
     /// <summary>The `projectID` field of a project, when not managed by Config Connector.</summary>
@@ -31,6 +33,7 @@ public partial class V1alpha1BigQueryConnectionConnectionSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>BigQueryConnectionConnectionSpec defines the desired state to connect BigQuery to external resources</summary>
 public partial class V1alpha1BigQueryConnectionConnectionSpec
 {
     /// <summary>Use Cloud Resource properties.</summary>
@@ -58,6 +61,7 @@ public partial class V1alpha1BigQueryConnectionConnectionSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1BigQueryConnectionConnectionStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -81,6 +85,7 @@ public partial class V1alpha1BigQueryConnectionConnectionStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1BigQueryConnectionConnectionStatusObservedStateCloudResource
 {
     /// <summary>Output only. The account ID of the service created for the purpose of this  connection.   The service account does not have any permissions associated with it  when it is created. After creation, customers delegate permissions  to the service account. When the connection is used in the context of an  operation in BigQuery, the service account will be used to connect to the  desired resources in GCP.   The account ID is in the form of:    &lt;service-1234&gt;@gcp-sa-bigquery-cloudresource.iam.gserviceaccount.com</summary>
@@ -88,6 +93,7 @@ public partial class V1alpha1BigQueryConnectionConnectionStatusObservedStateClou
     public string? ServiceAccountID { get; set; }
 }
 
+/// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 public partial class V1alpha1BigQueryConnectionConnectionStatusObservedState
 {
     /// <summary></summary>
@@ -107,6 +113,7 @@ public partial class V1alpha1BigQueryConnectionConnectionStatusObservedState
     public bool? HasCredential { get; set; }
 }
 
+/// <summary>BigQueryConnectionConnectionStatus defines the config connector machine state of BigQueryConnectionConnection</summary>
 public partial class V1alpha1BigQueryConnectionConnectionStatus
 {
     /// <summary>Conditions represent the latest available observations of the object's current state.</summary>
@@ -127,6 +134,7 @@ public partial class V1alpha1BigQueryConnectionConnectionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>BigQueryConnectionConnection is the Schema for the BigQueryConnectionConnection API</summary>
 public partial class V1alpha1BigQueryConnectionConnection : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1BigQueryConnectionConnectionSpec>, IStatus<V1alpha1BigQueryConnectionConnectionStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

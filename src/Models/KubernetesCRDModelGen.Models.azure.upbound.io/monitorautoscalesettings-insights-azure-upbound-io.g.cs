@@ -18,6 +18,7 @@ public enum V1beta1MonitorAutoscaleSettingSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderNotificationEmail
 {
     /// <summary>Specifies a list of custom email addresses to which the email notifications will be sent.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderNotificationEm
     public bool? SendToSubscriptionCoAdministrator { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderNotificationWebhook
 {
     /// <summary>A map of settings.</summary>
@@ -44,6 +46,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderNotificationWe
     public string? ServiceUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderNotification
 {
     /// <summary>A email block as defined below.</summary>
@@ -55,6 +58,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderNotification
     public IList<V1beta1MonitorAutoscaleSettingSpecForProviderNotificationWebhook>? Webhook { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderPredictive
 {
     /// <summary>Specifies the amount of time by which instances are launched in advance. It must be between PT1M and PT1H in ISO 8601 format.</summary>
@@ -66,6 +70,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderPredictive
     public string? ScaleMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileCapacity
 {
     /// <summary>The number of instances that are available for scaling if metrics are not available for evaluation. The default is only used if the current instance count is lower than the default. Valid values are between 0 and 1000.</summary>
@@ -81,6 +86,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileCapacit
     public double? Minimum { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileFixedDate
 {
     /// <summary>Specifies the end date for the profile, formatted as an RFC3339 date string.</summary>
@@ -96,6 +102,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileFixedDa
     public string? Timezone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileRecurrence
 {
     /// <summary>A list of days that this profile takes effect on. Possible values include Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday.</summary>
@@ -115,6 +122,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileRecurre
     public string? Timezone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileRuleMetricTriggerDimensions
 {
     /// <summary>Specifies the name of the profile.</summary>
@@ -150,6 +158,7 @@ public enum V1beta1MonitorAutoscaleSettingSpecForProviderProfileRuleMetricTrigge
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileRuleMetricTriggerMetricResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -163,6 +172,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileRuleMet
     public V1beta1MonitorAutoscaleSettingSpecForProviderProfileRuleMetricTriggerMetricResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LinuxVirtualMachineScaleSet in compute to populate metricResourceId.</summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileRuleMetricTriggerMetricResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -194,6 +204,7 @@ public enum V1beta1MonitorAutoscaleSettingSpecForProviderProfileRuleMetricTrigge
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileRuleMetricTriggerMetricResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -207,6 +218,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileRuleMet
     public V1beta1MonitorAutoscaleSettingSpecForProviderProfileRuleMetricTriggerMetricResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LinuxVirtualMachineScaleSet in compute to populate metricResourceId.</summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileRuleMetricTriggerMetricResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +234,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileRuleMet
     public V1beta1MonitorAutoscaleSettingSpecForProviderProfileRuleMetricTriggerMetricResourceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileRuleMetricTrigger
 {
     /// <summary>One or more dimensions block as defined below.</summary>
@@ -277,6 +290,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileRuleMet
     public string? TimeWindow { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileRuleScaleAction
 {
     /// <summary>The amount of time to wait since the last scaling action before this action occurs. Must be between 1 minute and 1 week and formatted as a ISO 8601 string.</summary>
@@ -296,6 +310,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileRuleSca
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileRule
 {
     /// <summary>A metric_trigger block as defined below.</summary>
@@ -307,6 +322,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfileRule
     public IList<V1beta1MonitorAutoscaleSettingSpecForProviderProfileRuleScaleAction>? ScaleAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderProfile
 {
     /// <summary>A capacity block as defined below.</summary>
@@ -350,6 +366,7 @@ public enum V1beta1MonitorAutoscaleSettingSpecForProviderResourceGroupNameRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -363,6 +380,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderResourceGroupN
     public V1beta1MonitorAutoscaleSettingSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -394,6 +412,7 @@ public enum V1beta1MonitorAutoscaleSettingSpecForProviderResourceGroupNameSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -407,6 +426,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderResourceGroupN
     public V1beta1MonitorAutoscaleSettingSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -442,6 +462,7 @@ public enum V1beta1MonitorAutoscaleSettingSpecForProviderTargetResourceIdRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderTargetResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -455,6 +476,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderTargetResource
     public V1beta1MonitorAutoscaleSettingSpecForProviderTargetResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LinuxVirtualMachineScaleSet in compute to populate targetResourceId.</summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderTargetResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -486,6 +508,7 @@ public enum V1beta1MonitorAutoscaleSettingSpecForProviderTargetResourceIdSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderTargetResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -499,6 +522,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderTargetResource
     public V1beta1MonitorAutoscaleSettingSpecForProviderTargetResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LinuxVirtualMachineScaleSet in compute to populate targetResourceId.</summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecForProviderTargetResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -514,6 +538,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProviderTargetResource
     public V1beta1MonitorAutoscaleSettingSpecForProviderTargetResourceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecForProvider
 {
     /// <summary>Specifies whether automatic scaling is enabled for the target resource. Defaults to true.</summary>
@@ -569,6 +594,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecForProvider
     public V1beta1MonitorAutoscaleSettingSpecForProviderTargetResourceIdSelector? TargetResourceIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderNotificationEmail
 {
     /// <summary>Specifies a list of custom email addresses to which the email notifications will be sent.</summary>
@@ -584,6 +610,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderNotificationE
     public bool? SendToSubscriptionCoAdministrator { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderNotificationWebhook
 {
     /// <summary>A map of settings.</summary>
@@ -595,6 +622,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderNotificationW
     public string? ServiceUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderNotification
 {
     /// <summary>A email block as defined below.</summary>
@@ -606,6 +634,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderNotification
     public IList<V1beta1MonitorAutoscaleSettingSpecInitProviderNotificationWebhook>? Webhook { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderPredictive
 {
     /// <summary>Specifies the amount of time by which instances are launched in advance. It must be between PT1M and PT1H in ISO 8601 format.</summary>
@@ -617,6 +646,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderPredictive
     public string? ScaleMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileCapacity
 {
     /// <summary>The number of instances that are available for scaling if metrics are not available for evaluation. The default is only used if the current instance count is lower than the default. Valid values are between 0 and 1000.</summary>
@@ -632,6 +662,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileCapaci
     public double? Minimum { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileFixedDate
 {
     /// <summary>Specifies the end date for the profile, formatted as an RFC3339 date string.</summary>
@@ -647,6 +678,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileFixedD
     public string? Timezone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRecurrence
 {
     /// <summary>A list of days that this profile takes effect on. Possible values include Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday.</summary>
@@ -666,6 +698,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRecurr
     public string? Timezone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRuleMetricTriggerDimensions
 {
     /// <summary>Specifies the name of the profile.</summary>
@@ -701,6 +734,7 @@ public enum V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRuleMetricTrigg
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRuleMetricTriggerMetricResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -714,6 +748,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRuleMe
     public V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRuleMetricTriggerMetricResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LinuxVirtualMachineScaleSet in compute to populate metricResourceId.</summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRuleMetricTriggerMetricResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -745,6 +780,7 @@ public enum V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRuleMetricTrigg
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRuleMetricTriggerMetricResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -758,6 +794,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRuleMe
     public V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRuleMetricTriggerMetricResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LinuxVirtualMachineScaleSet in compute to populate metricResourceId.</summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRuleMetricTriggerMetricResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -773,6 +810,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRuleMe
     public V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRuleMetricTriggerMetricResourceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRuleMetricTrigger
 {
     /// <summary>One or more dimensions block as defined below.</summary>
@@ -828,6 +866,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRuleMe
     public string? TimeWindow { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRuleScaleAction
 {
     /// <summary>The amount of time to wait since the last scaling action before this action occurs. Must be between 1 minute and 1 week and formatted as a ISO 8601 string.</summary>
@@ -847,6 +886,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRuleSc
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRule
 {
     /// <summary>A metric_trigger block as defined below.</summary>
@@ -858,6 +898,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRule
     public IList<V1beta1MonitorAutoscaleSettingSpecInitProviderProfileRuleScaleAction>? ScaleAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderProfile
 {
     /// <summary>A capacity block as defined below.</summary>
@@ -901,6 +942,7 @@ public enum V1beta1MonitorAutoscaleSettingSpecInitProviderResourceGroupNameRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -914,6 +956,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderResourceGroup
     public V1beta1MonitorAutoscaleSettingSpecInitProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -945,6 +988,7 @@ public enum V1beta1MonitorAutoscaleSettingSpecInitProviderResourceGroupNameSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -958,6 +1002,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderResourceGroup
     public V1beta1MonitorAutoscaleSettingSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -993,6 +1038,7 @@ public enum V1beta1MonitorAutoscaleSettingSpecInitProviderTargetResourceIdRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderTargetResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1006,6 +1052,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderTargetResourc
     public V1beta1MonitorAutoscaleSettingSpecInitProviderTargetResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LinuxVirtualMachineScaleSet in compute to populate targetResourceId.</summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderTargetResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1037,6 +1084,7 @@ public enum V1beta1MonitorAutoscaleSettingSpecInitProviderTargetResourceIdSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderTargetResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1050,6 +1098,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderTargetResourc
     public V1beta1MonitorAutoscaleSettingSpecInitProviderTargetResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LinuxVirtualMachineScaleSet in compute to populate targetResourceId.</summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderTargetResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1065,6 +1114,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecInitProviderTargetResourc
     public V1beta1MonitorAutoscaleSettingSpecInitProviderTargetResourceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecInitProvider
 {
     /// <summary>Specifies whether automatic scaling is enabled for the target resource. Defaults to true.</summary>
@@ -1162,6 +1212,7 @@ public enum V1beta1MonitorAutoscaleSettingSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1175,6 +1226,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecProviderConfigRefPolicy
     public V1beta1MonitorAutoscaleSettingSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1206,6 +1258,7 @@ public enum V1beta1MonitorAutoscaleSettingSpecPublishConnectionDetailsToConfigRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1219,6 +1272,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecPublishConnectionDetailsT
     public V1beta1MonitorAutoscaleSettingSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1230,6 +1284,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecPublishConnectionDetailsT
     public V1beta1MonitorAutoscaleSettingSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1245,6 +1300,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecPublishConnectionDetailsT
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1260,6 +1316,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecPublishConnectionDetailsT
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1MonitorAutoscaleSettingSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1271,6 +1328,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpecWriteConnectionSecretToRe
     public string Namespace { get; set; }
 }
 
+/// <summary>MonitorAutoscaleSettingSpec defines the desired state of MonitorAutoscaleSetting</summary>
 public partial class V1beta1MonitorAutoscaleSettingSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1303,6 +1361,7 @@ public partial class V1beta1MonitorAutoscaleSettingSpec
     public V1beta1MonitorAutoscaleSettingSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderNotificationEmail
 {
     /// <summary>Specifies a list of custom email addresses to which the email notifications will be sent.</summary>
@@ -1318,6 +1377,7 @@ public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderNotificationE
     public bool? SendToSubscriptionCoAdministrator { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderNotificationWebhook
 {
     /// <summary>A map of settings.</summary>
@@ -1329,6 +1389,7 @@ public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderNotificationW
     public string? ServiceUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderNotification
 {
     /// <summary>A email block as defined below.</summary>
@@ -1340,6 +1401,7 @@ public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderNotification
     public IList<V1beta1MonitorAutoscaleSettingStatusAtProviderNotificationWebhook>? Webhook { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderPredictive
 {
     /// <summary>Specifies the amount of time by which instances are launched in advance. It must be between PT1M and PT1H in ISO 8601 format.</summary>
@@ -1351,6 +1413,7 @@ public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderPredictive
     public string? ScaleMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderProfileCapacity
 {
     /// <summary>The number of instances that are available for scaling if metrics are not available for evaluation. The default is only used if the current instance count is lower than the default. Valid values are between 0 and 1000.</summary>
@@ -1366,6 +1429,7 @@ public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderProfileCapaci
     public double? Minimum { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderProfileFixedDate
 {
     /// <summary>Specifies the end date for the profile, formatted as an RFC3339 date string.</summary>
@@ -1381,6 +1445,7 @@ public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderProfileFixedD
     public string? Timezone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderProfileRecurrence
 {
     /// <summary>A list of days that this profile takes effect on. Possible values include Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday.</summary>
@@ -1400,6 +1465,7 @@ public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderProfileRecurr
     public string? Timezone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderProfileRuleMetricTriggerDimensions
 {
     /// <summary>Specifies the name of the profile.</summary>
@@ -1415,6 +1481,7 @@ public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderProfileRuleMe
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderProfileRuleMetricTrigger
 {
     /// <summary>One or more dimensions block as defined below.</summary>
@@ -1462,6 +1529,7 @@ public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderProfileRuleMe
     public string? TimeWindow { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderProfileRuleScaleAction
 {
     /// <summary>The amount of time to wait since the last scaling action before this action occurs. Must be between 1 minute and 1 week and formatted as a ISO 8601 string.</summary>
@@ -1481,6 +1549,7 @@ public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderProfileRuleSc
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderProfileRule
 {
     /// <summary>A metric_trigger block as defined below.</summary>
@@ -1492,6 +1561,7 @@ public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderProfileRule
     public IList<V1beta1MonitorAutoscaleSettingStatusAtProviderProfileRuleScaleAction>? ScaleAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderProfile
 {
     /// <summary>A capacity block as defined below.</summary>
@@ -1515,6 +1585,7 @@ public partial class V1beta1MonitorAutoscaleSettingStatusAtProviderProfile
     public IList<V1beta1MonitorAutoscaleSettingStatusAtProviderProfileRule>? Rule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAutoscaleSettingStatusAtProvider
 {
     /// <summary>Specifies whether automatic scaling is enabled for the target resource. Defaults to true.</summary>
@@ -1558,6 +1629,7 @@ public partial class V1beta1MonitorAutoscaleSettingStatusAtProvider
     public string? TargetResourceId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1MonitorAutoscaleSettingStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1585,6 +1657,7 @@ public partial class V1beta1MonitorAutoscaleSettingStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>MonitorAutoscaleSettingStatus defines the observed state of MonitorAutoscaleSetting.</summary>
 public partial class V1beta1MonitorAutoscaleSettingStatus
 {
     /// <summary></summary>
@@ -1601,6 +1674,7 @@ public partial class V1beta1MonitorAutoscaleSettingStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>MonitorAutoscaleSetting is the Schema for the MonitorAutoscaleSettings API. Manages an AutoScale Setting which can be applied to Virtual Machine Scale Sets, App Services and other scalable resources.</summary>
 public partial class V1beta1MonitorAutoscaleSetting : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MonitorAutoscaleSettingSpec>, IStatus<V1beta1MonitorAutoscaleSettingStatus>
 {
     public const string KubeApiVersion = "v1beta1";

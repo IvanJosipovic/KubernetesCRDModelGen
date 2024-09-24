@@ -38,6 +38,7 @@ public enum V1beta1VolumeAttachmentSpecForProviderInstanceIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VolumeAttachmentSpecForProviderInstanceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1VolumeAttachmentSpecForProviderInstanceIdRefPolicy
     public V1beta1VolumeAttachmentSpecForProviderInstanceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Instance in ec2 to populate instanceId.</summary>
 public partial class V1beta1VolumeAttachmentSpecForProviderInstanceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1VolumeAttachmentSpecForProviderInstanceIdSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VolumeAttachmentSpecForProviderInstanceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1VolumeAttachmentSpecForProviderInstanceIdSelectorPol
     public V1beta1VolumeAttachmentSpecForProviderInstanceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Instance in ec2 to populate instanceId.</summary>
 public partial class V1beta1VolumeAttachmentSpecForProviderInstanceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1VolumeAttachmentSpecForProviderVolumeIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VolumeAttachmentSpecForProviderVolumeIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1VolumeAttachmentSpecForProviderVolumeIdRefPolicy
     public V1beta1VolumeAttachmentSpecForProviderVolumeIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a EBSVolume in ec2 to populate volumeId.</summary>
 public partial class V1beta1VolumeAttachmentSpecForProviderVolumeIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1VolumeAttachmentSpecForProviderVolumeIdSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VolumeAttachmentSpecForProviderVolumeIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1VolumeAttachmentSpecForProviderVolumeIdSelectorPolic
     public V1beta1VolumeAttachmentSpecForProviderVolumeIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a EBSVolume in ec2 to populate volumeId.</summary>
 public partial class V1beta1VolumeAttachmentSpecForProviderVolumeIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1VolumeAttachmentSpecForProviderVolumeIdSelector
     public V1beta1VolumeAttachmentSpecForProviderVolumeIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VolumeAttachmentSpecForProvider
 {
     /// <summary>The device name to expose to the instance (for example, /dev/sdh or xvdh).  See Device Naming on Linux Instances and Device Naming on Windows Instances for more information.</summary>
@@ -269,6 +278,7 @@ public enum V1beta1VolumeAttachmentSpecInitProviderInstanceIdRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VolumeAttachmentSpecInitProviderInstanceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -282,6 +292,7 @@ public partial class V1beta1VolumeAttachmentSpecInitProviderInstanceIdRefPolicy
     public V1beta1VolumeAttachmentSpecInitProviderInstanceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Instance in ec2 to populate instanceId.</summary>
 public partial class V1beta1VolumeAttachmentSpecInitProviderInstanceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -313,6 +324,7 @@ public enum V1beta1VolumeAttachmentSpecInitProviderInstanceIdSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VolumeAttachmentSpecInitProviderInstanceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -326,6 +338,7 @@ public partial class V1beta1VolumeAttachmentSpecInitProviderInstanceIdSelectorPo
     public V1beta1VolumeAttachmentSpecInitProviderInstanceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Instance in ec2 to populate instanceId.</summary>
 public partial class V1beta1VolumeAttachmentSpecInitProviderInstanceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -361,6 +374,7 @@ public enum V1beta1VolumeAttachmentSpecInitProviderVolumeIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VolumeAttachmentSpecInitProviderVolumeIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -374,6 +388,7 @@ public partial class V1beta1VolumeAttachmentSpecInitProviderVolumeIdRefPolicy
     public V1beta1VolumeAttachmentSpecInitProviderVolumeIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a EBSVolume in ec2 to populate volumeId.</summary>
 public partial class V1beta1VolumeAttachmentSpecInitProviderVolumeIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -405,6 +420,7 @@ public enum V1beta1VolumeAttachmentSpecInitProviderVolumeIdSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VolumeAttachmentSpecInitProviderVolumeIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -418,6 +434,7 @@ public partial class V1beta1VolumeAttachmentSpecInitProviderVolumeIdSelectorPoli
     public V1beta1VolumeAttachmentSpecInitProviderVolumeIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a EBSVolume in ec2 to populate volumeId.</summary>
 public partial class V1beta1VolumeAttachmentSpecInitProviderVolumeIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -433,6 +450,7 @@ public partial class V1beta1VolumeAttachmentSpecInitProviderVolumeIdSelector
     public V1beta1VolumeAttachmentSpecInitProviderVolumeIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1VolumeAttachmentSpecInitProvider
 {
     /// <summary>The device name to expose to the instance (for example, /dev/sdh or xvdh).  See Device Naming on Linux Instances and Device Naming on Windows Instances for more information.</summary>
@@ -518,6 +536,7 @@ public enum V1beta1VolumeAttachmentSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VolumeAttachmentSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -531,6 +550,7 @@ public partial class V1beta1VolumeAttachmentSpecProviderConfigRefPolicy
     public V1beta1VolumeAttachmentSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1VolumeAttachmentSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -562,6 +582,7 @@ public enum V1beta1VolumeAttachmentSpecPublishConnectionDetailsToConfigRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VolumeAttachmentSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -575,6 +596,7 @@ public partial class V1beta1VolumeAttachmentSpecPublishConnectionDetailsToConfig
     public V1beta1VolumeAttachmentSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1VolumeAttachmentSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -586,6 +608,7 @@ public partial class V1beta1VolumeAttachmentSpecPublishConnectionDetailsToConfig
     public V1beta1VolumeAttachmentSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1VolumeAttachmentSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -601,6 +624,7 @@ public partial class V1beta1VolumeAttachmentSpecPublishConnectionDetailsToMetada
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1VolumeAttachmentSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -616,6 +640,7 @@ public partial class V1beta1VolumeAttachmentSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1VolumeAttachmentSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -627,6 +652,7 @@ public partial class V1beta1VolumeAttachmentSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>VolumeAttachmentSpec defines the desired state of VolumeAttachment</summary>
 public partial class V1beta1VolumeAttachmentSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -659,6 +685,7 @@ public partial class V1beta1VolumeAttachmentSpec
     public V1beta1VolumeAttachmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VolumeAttachmentStatusAtProvider
 {
     /// <summary>The device name to expose to the instance (for example, /dev/sdh or xvdh).  See Device Naming on Linux Instances and Device Naming on Windows Instances for more information.</summary>
@@ -690,6 +717,7 @@ public partial class V1beta1VolumeAttachmentStatusAtProvider
     public string? VolumeId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1VolumeAttachmentStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -717,6 +745,7 @@ public partial class V1beta1VolumeAttachmentStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>VolumeAttachmentStatus defines the observed state of VolumeAttachment.</summary>
 public partial class V1beta1VolumeAttachmentStatus
 {
     /// <summary></summary>
@@ -733,6 +762,7 @@ public partial class V1beta1VolumeAttachmentStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>VolumeAttachment is the Schema for the VolumeAttachments API. Provides an AWS EBS Volume Attachment</summary>
 public partial class V1beta1VolumeAttachment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1VolumeAttachmentSpec>, IStatus<V1beta1VolumeAttachmentStatus>
 {
     public const string KubeApiVersion = "v1beta1";

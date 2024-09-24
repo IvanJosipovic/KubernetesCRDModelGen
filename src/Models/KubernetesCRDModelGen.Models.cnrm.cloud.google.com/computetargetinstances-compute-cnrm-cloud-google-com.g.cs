@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary>The ComputeInstance handling traffic for this target instance.</summary>
 public partial class V1beta1ComputeTargetInstanceSpecInstanceRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeInstance` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1ComputeTargetInstanceSpecInstanceRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The network this target instance uses to forward traffic. If not specified, the traffic will be forwarded to the network that the default network interface belongs to.</summary>
 public partial class V1beta1ComputeTargetInstanceSpecNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1ComputeTargetInstanceSpecNetworkRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The resource URL for the security policy associated with this target instance.</summary>
 public partial class V1beta1ComputeTargetInstanceSpecSecurityPolicyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeSecurityPolicy` resource.</summary>
@@ -53,6 +56,7 @@ public partial class V1beta1ComputeTargetInstanceSpecSecurityPolicyRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeTargetInstanceSpec
 {
     /// <summary>Immutable. An optional description of this resource.</summary>
@@ -84,6 +88,7 @@ public partial class V1beta1ComputeTargetInstanceSpec
     public string Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeTargetInstanceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -107,6 +112,7 @@ public partial class V1beta1ComputeTargetInstanceStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeTargetInstanceStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -127,6 +133,7 @@ public partial class V1beta1ComputeTargetInstanceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ComputeTargetInstance : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeTargetInstanceSpec>, IStatus<V1beta1ComputeTargetInstanceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

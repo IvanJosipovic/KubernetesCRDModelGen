@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.osconfig.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1alpha1OSConfigPatchDeploymentSpecInstanceFilterGroupLabels
 {
     /// <summary>Immutable. Compute Engine instance labels that must be present for a VM instance to be targeted by this filter.</summary>
@@ -15,6 +16,7 @@ public partial class V1alpha1OSConfigPatchDeploymentSpecInstanceFilterGroupLabel
     public IDictionary<string, string> Labels { get; set; }
 }
 
+/// <summary>Immutable. VM instances to patch.</summary>
 public partial class V1alpha1OSConfigPatchDeploymentSpecInstanceFilter
 {
     /// <summary>Immutable. Target all VM instances in the project. If true, no other criteria is permitted.</summary>
@@ -38,6 +40,7 @@ public partial class V1alpha1OSConfigPatchDeploymentSpecInstanceFilter
     public IList<string>? Zones { get; set; }
 }
 
+/// <summary>Immutable. Schedule a one-time execution.</summary>
 public partial class V1alpha1OSConfigPatchDeploymentSpecOneTimeSchedule
 {
     /// <summary>Immutable. The desired patch job execution time. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".</summary>
@@ -45,6 +48,7 @@ public partial class V1alpha1OSConfigPatchDeploymentSpecOneTimeSchedule
     public string ExecuteTime { get; set; }
 }
 
+/// <summary>Immutable. Apt update settings. Use this setting to override the default apt patch rules.</summary>
 public partial class V1alpha1OSConfigPatchDeploymentSpecPatchConfigApt
 {
     /// <summary>Immutable. List of packages to exclude from update. These packages will be excluded.</summary>
@@ -60,6 +64,7 @@ public partial class V1alpha1OSConfigPatchDeploymentSpecPatchConfigApt
     public string? Type { get; set; }
 }
 
+/// <summary>Immutable. goo update settings. Use this setting to override the default goo patch rules.</summary>
 public partial class V1alpha1OSConfigPatchDeploymentSpecPatchConfigGoo
 {
     /// <summary>Immutable. goo update settings. Use this setting to override the default goo patch rules.</summary>
@@ -67,6 +72,7 @@ public partial class V1alpha1OSConfigPatchDeploymentSpecPatchConfigGoo
     public bool Enabled { get; set; }
 }
 
+/// <summary>Immutable. A Cloud Storage object containing the executable.</summary>
 public partial class V1alpha1OSConfigPatchDeploymentSpecPatchConfigPostStepLinuxExecStepConfigGcsObject
 {
     /// <summary>Immutable. Bucket of the Cloud Storage object.</summary>
@@ -82,6 +88,7 @@ public partial class V1alpha1OSConfigPatchDeploymentSpecPatchConfigPostStepLinux
     public string Object { get; set; }
 }
 
+/// <summary>Immutable. The ExecStepConfig for all Linux VMs targeted by the PatchJob.</summary>
 public partial class V1alpha1OSConfigPatchDeploymentSpecPatchConfigPostStepLinuxExecStepConfig
 {
     /// <summary>Immutable. Defaults to [0]. A list of possible return values that the execution can return to indicate a success.</summary>
@@ -101,6 +108,7 @@ public partial class V1alpha1OSConfigPatchDeploymentSpecPatchConfigPostStepLinux
     public string? LocalPath { get; set; }
 }
 
+/// <summary>Immutable. A Cloud Storage object containing the executable.</summary>
 public partial class V1alpha1OSConfigPatchDeploymentSpecPatchConfigPostStepWindowsExecStepConfigGcsObject
 {
     /// <summary>Immutable. Bucket of the Cloud Storage object.</summary>
@@ -116,6 +124,7 @@ public partial class V1alpha1OSConfigPatchDeploymentSpecPatchConfigPostStepWindo
     public string Object { get; set; }
 }
 
+/// <summary>Immutable. The ExecStepConfig for all Windows VMs targeted by the PatchJob.</summary>
 public partial class V1alpha1OSConfigPatchDeploymentSpecPatchConfigPostStepWindowsExecStepConfig
 {
     /// <summary>Immutable. Defaults to [0]. A list of possible return values that the execution can return to indicate a success.</summary>
@@ -135,6 +144,7 @@ public partial class V1alpha1OSConfigPatchDeploymentSpecPatchConfigPostStepWindo
     public string? LocalPath { get; set; }
 }
 
+/// <summary>Immutable. The ExecStep to run after the patch update.</summary>
 public partial class V1alpha1OSConfigPatchDeploymentSpecPatchConfigPostStep
 {
     /// <summary>Immutable. The ExecStepConfig for all Linux VMs targeted by the PatchJob.</summary>
@@ -146,6 +156,7 @@ public partial class V1alpha1OSConfigPatchDeploymentSpecPatchConfigPostStep
     public V1alpha1OSConfigPatchDeploymentSpecPatchConfigPostStepWindowsExecStepConfig? WindowsExecStepConfig { get; set; }
 }
 
+/// <summary>Immutable. A Cloud Storage object containing the executable.</summary>
 public partial class V1alpha1OSConfigPatchDeploymentSpecPatchConfigPreStepLinuxExecStepConfigGcsObject
 {
     /// <summary>Immutable. Bucket of the Cloud Storage object.</summary>
@@ -161,6 +172,7 @@ public partial class V1alpha1OSConfigPatchDeploymentSpecPatchConfigPreStepLinuxE
     public string Object { get; set; }
 }
 
+/// <summary>Immutable. The ExecStepConfig for all Linux VMs targeted by the PatchJob.</summary>
 public partial class V1alpha1OSConfigPatchDeploymentSpecPatchConfigPreStepLinuxExecStepConfig
 {
     /// <summary>Immutable. Defaults to [0]. A list of possible return values that the execution can return to indicate a success.</summary>
@@ -180,6 +192,7 @@ public partial class V1alpha1OSConfigPatchDeploymentSpecPatchConfigPreStepLinuxE
     public string? LocalPath { get; set; }
 }
 
+/// <summary>Immutable. A Cloud Storage object containing the executable.</summary>
 public partial class V1alpha1OSConfigPatchDeploymentSpecPatchConfigPreStepWindowsExecStepConfigGcsObject
 {
     /// <summary>Immutable. Bucket of the Cloud Storage object.</summary>
@@ -195,6 +208,7 @@ public partial class V1alpha1OSConfigPatchDeploymentSpecPatchConfigPreStepWindow
     public string Object { get; set; }
 }
 
+/// <summary>Immutable. The ExecStepConfig for all Windows VMs targeted by the PatchJob.</summary>
 public partial class V1alpha1OSConfigPatchDeploymentSpecPatchConfigPreStepWindowsExecStepConfig
 {
     /// <summary>Immutable. Defaults to [0]. A list of possible return values that the execution can return to indicate a success.</summary>
@@ -214,6 +228,7 @@ public partial class V1alpha1OSConfigPatchDeploymentSpecPatchConfigPreStepWindow
     public string? LocalPath { get; set; }
 }
 
+/// <summary>Immutable. The ExecStep to run before the patch update.</summary>
 public partial class V1alpha1OSConfigPatchDeploymentSpecPatchConfigPreStep
 {
     /// <summary>Immutable. The ExecStepConfig for all Linux VMs targeted by the PatchJob.</summary>
@@ -225,6 +240,7 @@ public partial class V1alpha1OSConfigPatchDeploymentSpecPatchConfigPreStep
     public V1alpha1OSConfigPatchDeploymentSpecPatchConfigPreStepWindowsExecStepConfig? WindowsExecStepConfig { get; set; }
 }
 
+/// <summary>Immutable. Windows update settings. Use this setting to override the default Windows patch rules.</summary>
 public partial class V1alpha1OSConfigPatchDeploymentSpecPatchConfigWindowsUpdate
 {
     /// <summary>Immutable. Only apply updates of these windows update classifications. If empty, all updates are applied. Possible values: ["CRITICAL", "SECURITY", "DEFINITION", "DRIVER", "FEATURE_PACK", "SERVICE_PACK", "TOOL", "UPDATE_ROLLUP", "UPDATE"].</summary>
@@ -240,6 +256,7 @@ public partial class V1alpha1OSConfigPatchDeploymentSpecPatchConfigWindowsUpdate
     public IList<string>? ExclusivePatches { get; set; }
 }
 
+/// <summary>Immutable. Yum update settings. Use this setting to override the default yum patch rules.</summary>
 public partial class V1alpha1OSConfigPatchDeploymentSpecPatchConfigYum
 {
     /// <summary>Immutable. List of packages to exclude from update. These packages will be excluded.</summary>
@@ -259,6 +276,7 @@ public partial class V1alpha1OSConfigPatchDeploymentSpecPatchConfigYum
     public bool? Security { get; set; }
 }
 
+/// <summary>Immutable. zypper update settings. Use this setting to override the default zypper patch rules.</summary>
 public partial class V1alpha1OSConfigPatchDeploymentSpecPatchConfigZypper
 {
     /// <summary>Immutable. Install only patches with these categories. Common categories include security, recommended, and feature.</summary>
@@ -286,6 +304,7 @@ public partial class V1alpha1OSConfigPatchDeploymentSpecPatchConfigZypper
     public bool? WithUpdate { get; set; }
 }
 
+/// <summary>Immutable. Patch configuration that is applied.</summary>
 public partial class V1alpha1OSConfigPatchDeploymentSpecPatchConfig
 {
     /// <summary>Immutable. Apt update settings. Use this setting to override the default apt patch rules.</summary>
@@ -325,6 +344,7 @@ public partial class V1alpha1OSConfigPatchDeploymentSpecPatchConfig
     public V1alpha1OSConfigPatchDeploymentSpecPatchConfigZypper? Zypper { get; set; }
 }
 
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1OSConfigPatchDeploymentSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -340,6 +360,7 @@ public partial class V1alpha1OSConfigPatchDeploymentSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. Week day in a month.</summary>
 public partial class V1alpha1OSConfigPatchDeploymentSpecRecurringScheduleMonthlyWeekDayOfMonth
 {
     /// <summary>Immutable. A day of the week. Possible values: ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"].</summary>
@@ -351,6 +372,7 @@ public partial class V1alpha1OSConfigPatchDeploymentSpecRecurringScheduleMonthly
     public int WeekOrdinal { get; set; }
 }
 
+/// <summary>Immutable. Schedule with monthly executions.</summary>
 public partial class V1alpha1OSConfigPatchDeploymentSpecRecurringScheduleMonthly
 {
     /// <summary>Immutable. One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month. Months without the target day will be skipped. For example, a schedule to run "every month on the 31st" will not run in February, April, June, etc.</summary>
@@ -362,6 +384,7 @@ public partial class V1alpha1OSConfigPatchDeploymentSpecRecurringScheduleMonthly
     public V1alpha1OSConfigPatchDeploymentSpecRecurringScheduleMonthlyWeekDayOfMonth? WeekDayOfMonth { get; set; }
 }
 
+/// <summary>Immutable. Time of the day to run a recurring deployment.</summary>
 public partial class V1alpha1OSConfigPatchDeploymentSpecRecurringScheduleTimeOfDay
 {
     /// <summary>Immutable. Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
@@ -381,6 +404,7 @@ public partial class V1alpha1OSConfigPatchDeploymentSpecRecurringScheduleTimeOfD
     public int? Seconds { get; set; }
 }
 
+/// <summary>Immutable. Defines the time zone that timeOfDay is relative to. The rules for daylight saving time are determined by the chosen time zone.</summary>
 public partial class V1alpha1OSConfigPatchDeploymentSpecRecurringScheduleTimeZone
 {
     /// <summary>Immutable. IANA Time Zone Database time zone, e.g. "America/New_York".</summary>
@@ -392,6 +416,7 @@ public partial class V1alpha1OSConfigPatchDeploymentSpecRecurringScheduleTimeZon
     public string? Version { get; set; }
 }
 
+/// <summary>Immutable. Schedule with weekly executions.</summary>
 public partial class V1alpha1OSConfigPatchDeploymentSpecRecurringScheduleWeekly
 {
     /// <summary>Immutable. IANA Time Zone Database time zone, e.g. "America/New_York". Possible values: ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"].</summary>
@@ -399,6 +424,7 @@ public partial class V1alpha1OSConfigPatchDeploymentSpecRecurringScheduleWeekly
     public string DayOfWeek { get; set; }
 }
 
+/// <summary>Immutable. Schedule recurring executions.</summary>
 public partial class V1alpha1OSConfigPatchDeploymentSpecRecurringSchedule
 {
     /// <summary>Immutable. The end time at which a recurring patch deployment schedule is no longer active. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".</summary>
@@ -434,6 +460,7 @@ public partial class V1alpha1OSConfigPatchDeploymentSpecRecurringSchedule
     public V1alpha1OSConfigPatchDeploymentSpecRecurringScheduleWeekly? Weekly { get; set; }
 }
 
+/// <summary>Immutable. The maximum number (or percentage) of VMs per zone to disrupt at any given moment. The number of VMs calculated from multiplying the percentage by the total number of VMs in a zone is rounded up. During patching, a VM is considered disrupted from the time the agent is notified to begin until patching has completed. This disruption time includes the time to complete reboot and any post-patch steps. A VM contributes to the disruption budget if its patching operation fails either when applying the patches, running pre or post patch steps, or if it fails to respond with a success notification before timing out. VMs that are not running or do not have an active agent do not count toward this disruption budget. For zone-by-zone rollouts, if the disruption budget in a zone is exceeded, the patch job stops, because continuing to the next zone requires completion of the patch process in the previous zone. For example, if the disruption budget has a fixed value of 10, and 8 VMs fail to patch in the current zone, the patch job continues to patch 2 VMs at a time until the zone is completed. When that zone is completed successfully, patching begins with 10 VMs at a time in the next zone. If 10 VMs in the next zone fail to patch, the patch job stops.</summary>
 public partial class V1alpha1OSConfigPatchDeploymentSpecRolloutDisruptionBudget
 {
     /// <summary>Immutable. Specifies a fixed value.</summary>
@@ -445,6 +472,7 @@ public partial class V1alpha1OSConfigPatchDeploymentSpecRolloutDisruptionBudget
     public int? Percentage { get; set; }
 }
 
+/// <summary>Immutable. Rollout strategy of the patch job.</summary>
 public partial class V1alpha1OSConfigPatchDeploymentSpecRollout
 {
     /// <summary>Immutable. The maximum number (or percentage) of VMs per zone to disrupt at any given moment. The number of VMs calculated from multiplying the percentage by the total number of VMs in a zone is rounded up. During patching, a VM is considered disrupted from the time the agent is notified to begin until patching has completed. This disruption time includes the time to complete reboot and any post-patch steps. A VM contributes to the disruption budget if its patching operation fails either when applying the patches, running pre or post patch steps, or if it fails to respond with a success notification before timing out. VMs that are not running or do not have an active agent do not count toward this disruption budget. For zone-by-zone rollouts, if the disruption budget in a zone is exceeded, the patch job stops, because continuing to the next zone requires completion of the patch process in the previous zone. For example, if the disruption budget has a fixed value of 10, and 8 VMs fail to patch in the current zone, the patch job continues to patch 2 VMs at a time until the zone is completed. When that zone is completed successfully, patching begins with 10 VMs at a time in the next zone. If 10 VMs in the next zone fail to patch, the patch job stops.</summary>
@@ -456,6 +484,7 @@ public partial class V1alpha1OSConfigPatchDeploymentSpecRollout
     public string Mode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1OSConfigPatchDeploymentSpec
 {
     /// <summary>Immutable. Description of the patch deployment. Length of the description is limited to 1024 characters.</summary>
@@ -499,6 +528,7 @@ public partial class V1alpha1OSConfigPatchDeploymentSpec
     public V1alpha1OSConfigPatchDeploymentSpecRollout? Rollout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1OSConfigPatchDeploymentStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -522,6 +552,7 @@ public partial class V1alpha1OSConfigPatchDeploymentStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1OSConfigPatchDeploymentStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -550,6 +581,7 @@ public partial class V1alpha1OSConfigPatchDeploymentStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1OSConfigPatchDeployment : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1OSConfigPatchDeploymentSpec>, IStatus<V1alpha1OSConfigPatchDeploymentStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

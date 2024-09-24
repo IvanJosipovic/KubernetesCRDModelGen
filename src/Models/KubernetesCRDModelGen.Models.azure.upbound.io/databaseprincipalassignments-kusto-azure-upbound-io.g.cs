@@ -38,6 +38,7 @@ public enum V1beta1DatabasePrincipalAssignmentSpecForProviderClusterNameRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderClusterNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderClusterNam
     public V1beta1DatabasePrincipalAssignmentSpecForProviderClusterNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in kusto to populate clusterName.</summary>
 public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderClusterNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1DatabasePrincipalAssignmentSpecForProviderClusterNameSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderClusterNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderClusterNam
     public V1beta1DatabasePrincipalAssignmentSpecForProviderClusterNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in kusto to populate clusterName.</summary>
 public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderClusterNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1DatabasePrincipalAssignmentSpecForProviderDatabaseNameRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderDatabaseNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderDatabaseNa
     public V1beta1DatabasePrincipalAssignmentSpecForProviderDatabaseNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Database in kusto to populate databaseName.</summary>
 public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderDatabaseNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1DatabasePrincipalAssignmentSpecForProviderDatabaseNameSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderDatabaseNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderDatabaseNa
     public V1beta1DatabasePrincipalAssignmentSpecForProviderDatabaseNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Database in kusto to populate databaseName.</summary>
 public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderDatabaseNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1DatabasePrincipalAssignmentSpecForProviderResourceGroupNameRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderResourceGr
     public V1beta1DatabasePrincipalAssignmentSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1DatabasePrincipalAssignmentSpecForProviderResourceGroupNameSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderResourceGr
     public V1beta1DatabasePrincipalAssignmentSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderResourceGr
     public V1beta1DatabasePrincipalAssignmentSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabasePrincipalAssignmentSpecForProvider
 {
     /// <summary>The name of the cluster in which to create the resource. Changing this forces a new resource to be created.</summary>
@@ -349,6 +362,7 @@ public partial class V1beta1DatabasePrincipalAssignmentSpecForProvider
     public string? TenantId { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1DatabasePrincipalAssignmentSpecInitProvider
 {
     /// <summary>The object id of the principal. Changing this forces a new resource to be created.</summary>
@@ -410,6 +424,7 @@ public enum V1beta1DatabasePrincipalAssignmentSpecProviderConfigRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DatabasePrincipalAssignmentSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -423,6 +438,7 @@ public partial class V1beta1DatabasePrincipalAssignmentSpecProviderConfigRefPoli
     public V1beta1DatabasePrincipalAssignmentSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1DatabasePrincipalAssignmentSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -454,6 +470,7 @@ public enum V1beta1DatabasePrincipalAssignmentSpecPublishConnectionDetailsToConf
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DatabasePrincipalAssignmentSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -467,6 +484,7 @@ public partial class V1beta1DatabasePrincipalAssignmentSpecPublishConnectionDeta
     public V1beta1DatabasePrincipalAssignmentSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1DatabasePrincipalAssignmentSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -478,6 +496,7 @@ public partial class V1beta1DatabasePrincipalAssignmentSpecPublishConnectionDeta
     public V1beta1DatabasePrincipalAssignmentSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1DatabasePrincipalAssignmentSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -493,6 +512,7 @@ public partial class V1beta1DatabasePrincipalAssignmentSpecPublishConnectionDeta
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1DatabasePrincipalAssignmentSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -508,6 +528,7 @@ public partial class V1beta1DatabasePrincipalAssignmentSpecPublishConnectionDeta
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1DatabasePrincipalAssignmentSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -519,6 +540,7 @@ public partial class V1beta1DatabasePrincipalAssignmentSpecWriteConnectionSecret
     public string Namespace { get; set; }
 }
 
+/// <summary>DatabasePrincipalAssignmentSpec defines the desired state of DatabasePrincipalAssignment</summary>
 public partial class V1beta1DatabasePrincipalAssignmentSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -551,6 +573,7 @@ public partial class V1beta1DatabasePrincipalAssignmentSpec
     public V1beta1DatabasePrincipalAssignmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabasePrincipalAssignmentStatusAtProvider
 {
     /// <summary>The name of the cluster in which to create the resource. Changing this forces a new resource to be created.</summary>
@@ -594,6 +617,7 @@ public partial class V1beta1DatabasePrincipalAssignmentStatusAtProvider
     public string? TenantName { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1DatabasePrincipalAssignmentStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -621,6 +645,7 @@ public partial class V1beta1DatabasePrincipalAssignmentStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>DatabasePrincipalAssignmentStatus defines the observed state of DatabasePrincipalAssignment.</summary>
 public partial class V1beta1DatabasePrincipalAssignmentStatus
 {
     /// <summary></summary>
@@ -637,6 +662,7 @@ public partial class V1beta1DatabasePrincipalAssignmentStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>DatabasePrincipalAssignment is the Schema for the DatabasePrincipalAssignments API. Manages a Kusto / Data Explorer Database Principal Assignment</summary>
 public partial class V1beta1DatabasePrincipalAssignment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DatabasePrincipalAssignmentSpec>, IStatus<V1beta1DatabasePrincipalAssignmentStatus>
 {
     public const string KubeApiVersion = "v1beta1";

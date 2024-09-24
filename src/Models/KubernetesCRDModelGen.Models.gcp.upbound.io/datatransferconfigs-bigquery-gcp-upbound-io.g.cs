@@ -38,6 +38,7 @@ public enum V1beta1DataTransferConfigSpecForProviderDestinationDatasetIdRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DataTransferConfigSpecForProviderDestinationDatasetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1DataTransferConfigSpecForProviderDestinationDatasetI
     public V1beta1DataTransferConfigSpecForProviderDestinationDatasetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Dataset in bigquery to populate destinationDatasetId.</summary>
 public partial class V1beta1DataTransferConfigSpecForProviderDestinationDatasetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1DataTransferConfigSpecForProviderDestinationDatasetIdSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DataTransferConfigSpecForProviderDestinationDatasetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1DataTransferConfigSpecForProviderDestinationDatasetI
     public V1beta1DataTransferConfigSpecForProviderDestinationDatasetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Dataset in bigquery to populate destinationDatasetId.</summary>
 public partial class V1beta1DataTransferConfigSpecForProviderDestinationDatasetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1DataTransferConfigSpecForProviderDestinationDatasetI
     public V1beta1DataTransferConfigSpecForProviderDestinationDatasetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataTransferConfigSpecForProviderEmailPreferences
 {
     /// <summary>If true, email notifications will be sent on transfer run failures.</summary>
@@ -117,6 +122,7 @@ public partial class V1beta1DataTransferConfigSpecForProviderEmailPreferences
     public bool? EnableFailureEmail { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataTransferConfigSpecForProviderScheduleOptions
 {
     /// <summary>If true, automatic scheduling of data transfer runs for this configuration will be disabled. The runs can be started on ad-hoc basis using transferConfigs.startManualRuns API. When automatic scheduling is disabled, the TransferConfig.schedule field will be ignored.</summary>
@@ -132,6 +138,7 @@ public partial class V1beta1DataTransferConfigSpecForProviderScheduleOptions
     public string? StartTime { get; set; }
 }
 
+/// <summary>The Secret Access Key of the AWS account transferring data from. Note: This property is sensitive and will not be displayed in the plan.</summary>
 public partial class V1beta1DataTransferConfigSpecForProviderSensitiveParamsSecretAccessKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -147,6 +154,7 @@ public partial class V1beta1DataTransferConfigSpecForProviderSensitiveParamsSecr
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataTransferConfigSpecForProviderSensitiveParams
 {
     /// <summary>The Secret Access Key of the AWS account transferring data from. Note: This property is sensitive and will not be displayed in the plan.</summary>
@@ -154,6 +162,7 @@ public partial class V1beta1DataTransferConfigSpecForProviderSensitiveParams
     public V1beta1DataTransferConfigSpecForProviderSensitiveParamsSecretAccessKeySecretRef SecretAccessKeySecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataTransferConfigSpecForProvider
 {
     /// <summary>The number of days to look back to automatically refresh the data. For example, if dataRefreshWindowDays = 10, then every day BigQuery reingests data for [today-10, today-1], rather than ingesting data for just [today-1]. Only valid if the data source supports the feature. Set the value to 0 to use the default value.</summary>
@@ -241,6 +250,7 @@ public enum V1beta1DataTransferConfigSpecInitProviderDestinationDatasetIdRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DataTransferConfigSpecInitProviderDestinationDatasetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -254,6 +264,7 @@ public partial class V1beta1DataTransferConfigSpecInitProviderDestinationDataset
     public V1beta1DataTransferConfigSpecInitProviderDestinationDatasetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Dataset in bigquery to populate destinationDatasetId.</summary>
 public partial class V1beta1DataTransferConfigSpecInitProviderDestinationDatasetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -285,6 +296,7 @@ public enum V1beta1DataTransferConfigSpecInitProviderDestinationDatasetIdSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DataTransferConfigSpecInitProviderDestinationDatasetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -298,6 +310,7 @@ public partial class V1beta1DataTransferConfigSpecInitProviderDestinationDataset
     public V1beta1DataTransferConfigSpecInitProviderDestinationDatasetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Dataset in bigquery to populate destinationDatasetId.</summary>
 public partial class V1beta1DataTransferConfigSpecInitProviderDestinationDatasetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -313,6 +326,7 @@ public partial class V1beta1DataTransferConfigSpecInitProviderDestinationDataset
     public V1beta1DataTransferConfigSpecInitProviderDestinationDatasetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataTransferConfigSpecInitProviderEmailPreferences
 {
     /// <summary>If true, email notifications will be sent on transfer run failures.</summary>
@@ -320,6 +334,7 @@ public partial class V1beta1DataTransferConfigSpecInitProviderEmailPreferences
     public bool? EnableFailureEmail { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataTransferConfigSpecInitProviderScheduleOptions
 {
     /// <summary>If true, automatic scheduling of data transfer runs for this configuration will be disabled. The runs can be started on ad-hoc basis using transferConfigs.startManualRuns API. When automatic scheduling is disabled, the TransferConfig.schedule field will be ignored.</summary>
@@ -335,10 +350,12 @@ public partial class V1beta1DataTransferConfigSpecInitProviderScheduleOptions
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataTransferConfigSpecInitProviderSensitiveParams
 {
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1DataTransferConfigSpecInitProvider
 {
     /// <summary>The number of days to look back to automatically refresh the data. For example, if dataRefreshWindowDays = 10, then every day BigQuery reingests data for [today-10, today-1], rather than ingesting data for just [today-1]. Only valid if the data source supports the feature. Set the value to 0 to use the default value.</summary>
@@ -448,6 +465,7 @@ public enum V1beta1DataTransferConfigSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DataTransferConfigSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -461,6 +479,7 @@ public partial class V1beta1DataTransferConfigSpecProviderConfigRefPolicy
     public V1beta1DataTransferConfigSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1DataTransferConfigSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -492,6 +511,7 @@ public enum V1beta1DataTransferConfigSpecPublishConnectionDetailsToConfigRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DataTransferConfigSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -505,6 +525,7 @@ public partial class V1beta1DataTransferConfigSpecPublishConnectionDetailsToConf
     public V1beta1DataTransferConfigSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1DataTransferConfigSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -516,6 +537,7 @@ public partial class V1beta1DataTransferConfigSpecPublishConnectionDetailsToConf
     public V1beta1DataTransferConfigSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1DataTransferConfigSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -531,6 +553,7 @@ public partial class V1beta1DataTransferConfigSpecPublishConnectionDetailsToMeta
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1DataTransferConfigSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -546,6 +569,7 @@ public partial class V1beta1DataTransferConfigSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1DataTransferConfigSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -557,6 +581,7 @@ public partial class V1beta1DataTransferConfigSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>DataTransferConfigSpec defines the desired state of DataTransferConfig</summary>
 public partial class V1beta1DataTransferConfigSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -589,6 +614,7 @@ public partial class V1beta1DataTransferConfigSpec
     public V1beta1DataTransferConfigSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataTransferConfigStatusAtProviderEmailPreferences
 {
     /// <summary>If true, email notifications will be sent on transfer run failures.</summary>
@@ -596,6 +622,7 @@ public partial class V1beta1DataTransferConfigStatusAtProviderEmailPreferences
     public bool? EnableFailureEmail { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataTransferConfigStatusAtProviderScheduleOptions
 {
     /// <summary>If true, automatic scheduling of data transfer runs for this configuration will be disabled. The runs can be started on ad-hoc basis using transferConfigs.startManualRuns API. When automatic scheduling is disabled, the TransferConfig.schedule field will be ignored.</summary>
@@ -611,6 +638,7 @@ public partial class V1beta1DataTransferConfigStatusAtProviderScheduleOptions
     public string? StartTime { get; set; }
 }
 
+/// <summary>The Secret Access Key of the AWS account transferring data from. Note: This property is sensitive and will not be displayed in the plan.</summary>
 public partial class V1beta1DataTransferConfigStatusAtProviderSensitiveParamsSecretAccessKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -626,6 +654,7 @@ public partial class V1beta1DataTransferConfigStatusAtProviderSensitiveParamsSec
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataTransferConfigStatusAtProviderSensitiveParams
 {
     /// <summary>The Secret Access Key of the AWS account transferring data from. Note: This property is sensitive and will not be displayed in the plan.</summary>
@@ -633,6 +662,7 @@ public partial class V1beta1DataTransferConfigStatusAtProviderSensitiveParams
     public V1beta1DataTransferConfigStatusAtProviderSensitiveParamsSecretAccessKeySecretRef SecretAccessKeySecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataTransferConfigStatusAtProvider
 {
     /// <summary>The number of days to look back to automatically refresh the data. For example, if dataRefreshWindowDays = 10, then every day BigQuery reingests data for [today-10, today-1], rather than ingesting data for just [today-1]. Only valid if the data source supports the feature. Set the value to 0 to use the default value.</summary>
@@ -700,6 +730,7 @@ public partial class V1beta1DataTransferConfigStatusAtProvider
     public string? ServiceAccountName { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1DataTransferConfigStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -727,6 +758,7 @@ public partial class V1beta1DataTransferConfigStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>DataTransferConfigStatus defines the observed state of DataTransferConfig.</summary>
 public partial class V1beta1DataTransferConfigStatus
 {
     /// <summary></summary>
@@ -743,6 +775,7 @@ public partial class V1beta1DataTransferConfigStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>DataTransferConfig is the Schema for the DataTransferConfigs API. Represents a data transfer configuration.</summary>
 public partial class V1beta1DataTransferConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DataTransferConfigSpec>, IStatus<V1beta1DataTransferConfigStatus>
 {
     public const string KubeApiVersion = "v1beta1";

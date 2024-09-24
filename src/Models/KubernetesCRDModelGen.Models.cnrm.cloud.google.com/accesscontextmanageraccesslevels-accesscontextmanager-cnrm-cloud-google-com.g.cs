@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.accesscontextmanager.cnrm.cloud.google.com;
+/// <summary>The AccessContextManagerAccessPolicy this AccessContextManagerAccessLevel lives in.</summary>
 public partial class V1beta1AccessContextManagerAccessLevelSpecAccessPolicyRef
 {
     /// <summary>Allowed value: string of the format `accessPolicies/{{value}}`, where {{value}} is the `name` field of an `AccessContextManagerAccessPolicy` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1AccessContextManagerAccessLevelSpecAccessPolicyRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessContextManagerAccessLevelSpecBasicConditionsDevicePolicyOsConstraints
 {
     /// <summary>The minimum allowed OS version. If not set, any version of this OS satisfies the constraint. Format: "major.minor.patch" such as "10.5.301", "9.2.1".</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1AccessContextManagerAccessLevelSpecBasicConditionsDe
     public bool? RequireVerifiedChromeOs { get; set; }
 }
 
+/// <summary>Device specific restrictions, all restrictions must hold for the Condition to be true. If not specified, all devices are allowed.</summary>
 public partial class V1beta1AccessContextManagerAccessLevelSpecBasicConditionsDevicePolicy
 {
     /// <summary>A list of allowed device management levels. An empty list allows all management levels. Possible values: ["MANAGEMENT_UNSPECIFIED", "NONE", "BASIC", "COMPLETE"].</summary>
@@ -65,6 +68,7 @@ public partial class V1beta1AccessContextManagerAccessLevelSpecBasicConditionsDe
     public bool? RequireScreenLock { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessContextManagerAccessLevelSpecBasicConditionsMembersServiceAccountRef
 {
     /// <summary>Allowed value: string of the format `serviceAccount:{{value}}`, where {{value}} is the `email` field of an `IAMServiceAccount` resource.</summary>
@@ -80,6 +84,7 @@ public partial class V1beta1AccessContextManagerAccessLevelSpecBasicConditionsMe
     public string? Namespace { get; set; }
 }
 
+/// <summary>An allowed list of members (users, service accounts). Using groups is not supported.  The signed-in user originating the request must be a part of one of the provided members. If not specified, a request may come from any user (logged in/not logged in, not present in any groups, etc.).</summary>
 public partial class V1beta1AccessContextManagerAccessLevelSpecBasicConditionsMembers
 {
     /// <summary></summary>
@@ -91,6 +96,7 @@ public partial class V1beta1AccessContextManagerAccessLevelSpecBasicConditionsMe
     public string? User { get; set; }
 }
 
+/// <summary>A list of other access levels defined in the same policy. Referencing an AccessContextManagerAccessLevel which does not exist is an error. All access levels listed must be granted for the condition to be true.</summary>
 public partial class V1beta1AccessContextManagerAccessLevelSpecBasicConditionsRequiredAccessLevels
 {
     /// <summary>Allowed value: The `name` field of an `AccessContextManagerAccessLevel` resource.</summary>
@@ -106,6 +112,7 @@ public partial class V1beta1AccessContextManagerAccessLevelSpecBasicConditionsRe
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessContextManagerAccessLevelSpecBasicConditions
 {
     /// <summary>Device specific restrictions, all restrictions must hold for the Condition to be true. If not specified, all devices are allowed.</summary>
@@ -133,6 +140,7 @@ public partial class V1beta1AccessContextManagerAccessLevelSpecBasicConditions
     public IList<V1beta1AccessContextManagerAccessLevelSpecBasicConditionsRequiredAccessLevels>? RequiredAccessLevels { get; set; }
 }
 
+/// <summary>A set of predefined conditions for the access level and a combining function.</summary>
 public partial class V1beta1AccessContextManagerAccessLevelSpecBasic
 {
     /// <summary>How the conditions list should be combined to determine if a request is granted this AccessLevel. If AND is used, each Condition in conditions must be satisfied for the AccessLevel to be applied. If OR is used, at least one Condition in conditions must be satisfied for the AccessLevel to be applied. Default value: "AND" Possible values: ["AND", "OR"].</summary>
@@ -144,6 +152,7 @@ public partial class V1beta1AccessContextManagerAccessLevelSpecBasic
     public IList<V1beta1AccessContextManagerAccessLevelSpecBasicConditions> Conditions { get; set; }
 }
 
+/// <summary>Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language. This page details the objects and attributes that are used to the build the CEL expressions for custom access levels - https://cloud.google.com/access-context-manager/docs/custom-access-level-spec.</summary>
 public partial class V1beta1AccessContextManagerAccessLevelSpecCustomExpr
 {
     /// <summary>Description of the expression.</summary>
@@ -163,6 +172,7 @@ public partial class V1beta1AccessContextManagerAccessLevelSpecCustomExpr
     public string? Title { get; set; }
 }
 
+/// <summary>Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request. See CEL spec at: https://github.com/google/cel-spec.</summary>
 public partial class V1beta1AccessContextManagerAccessLevelSpecCustom
 {
     /// <summary>Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language. This page details the objects and attributes that are used to the build the CEL expressions for custom access levels - https://cloud.google.com/access-context-manager/docs/custom-access-level-spec.</summary>
@@ -170,6 +180,7 @@ public partial class V1beta1AccessContextManagerAccessLevelSpecCustom
     public V1beta1AccessContextManagerAccessLevelSpecCustomExpr Expr { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessContextManagerAccessLevelSpec
 {
     /// <summary>The AccessContextManagerAccessPolicy this AccessContextManagerAccessLevel lives in.</summary>
@@ -197,6 +208,7 @@ public partial class V1beta1AccessContextManagerAccessLevelSpec
     public string Title { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessContextManagerAccessLevelStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -220,6 +232,7 @@ public partial class V1beta1AccessContextManagerAccessLevelStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessContextManagerAccessLevelStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -232,6 +245,7 @@ public partial class V1beta1AccessContextManagerAccessLevelStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1AccessContextManagerAccessLevel : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AccessContextManagerAccessLevelSpec>, IStatus<V1beta1AccessContextManagerAccessLevelStatus>
 {
     public const string KubeApiVersion = "v1beta1";

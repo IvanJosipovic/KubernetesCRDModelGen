@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigee.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1alpha1ApigeeEnvgroupSpec
 {
     /// <summary>Hostnames of the environment group.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1ApigeeEnvgroupSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApigeeEnvgroupStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -46,6 +48,7 @@ public partial class V1alpha1ApigeeEnvgroupStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApigeeEnvgroupStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -58,6 +61,7 @@ public partial class V1alpha1ApigeeEnvgroupStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1ApigeeEnvgroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ApigeeEnvgroupSpec>, IStatus<V1alpha1ApigeeEnvgroupStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

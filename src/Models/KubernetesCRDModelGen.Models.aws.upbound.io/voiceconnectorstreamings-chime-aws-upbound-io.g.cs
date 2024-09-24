@@ -18,6 +18,7 @@ public enum V1beta1VoiceConnectorStreamingSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1VoiceConnectorStreamingSpecForProviderMediaInsightsConfiguration
 {
     /// <summary>The media insights configuration that will be invoked by the Voice Connector.</summary>
@@ -49,6 +50,7 @@ public enum V1beta1VoiceConnectorStreamingSpecForProviderVoiceConnectorIdRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VoiceConnectorStreamingSpecForProviderVoiceConnectorIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -62,6 +64,7 @@ public partial class V1beta1VoiceConnectorStreamingSpecForProviderVoiceConnector
     public V1beta1VoiceConnectorStreamingSpecForProviderVoiceConnectorIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VoiceConnector in chime to populate voiceConnectorId.</summary>
 public partial class V1beta1VoiceConnectorStreamingSpecForProviderVoiceConnectorIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -93,6 +96,7 @@ public enum V1beta1VoiceConnectorStreamingSpecForProviderVoiceConnectorIdSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VoiceConnectorStreamingSpecForProviderVoiceConnectorIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -106,6 +110,7 @@ public partial class V1beta1VoiceConnectorStreamingSpecForProviderVoiceConnector
     public V1beta1VoiceConnectorStreamingSpecForProviderVoiceConnectorIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VoiceConnector in chime to populate voiceConnectorId.</summary>
 public partial class V1beta1VoiceConnectorStreamingSpecForProviderVoiceConnectorIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1VoiceConnectorStreamingSpecForProviderVoiceConnector
     public V1beta1VoiceConnectorStreamingSpecForProviderVoiceConnectorIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VoiceConnectorStreamingSpecForProvider
 {
     /// <summary>The retention period, in hours, for the Amazon Kinesis data.</summary>
@@ -156,6 +162,7 @@ public partial class V1beta1VoiceConnectorStreamingSpecForProvider
     public V1beta1VoiceConnectorStreamingSpecForProviderVoiceConnectorIdSelector? VoiceConnectorIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VoiceConnectorStreamingSpecInitProviderMediaInsightsConfiguration
 {
     /// <summary>The media insights configuration that will be invoked by the Voice Connector.</summary>
@@ -187,6 +194,7 @@ public enum V1beta1VoiceConnectorStreamingSpecInitProviderVoiceConnectorIdRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VoiceConnectorStreamingSpecInitProviderVoiceConnectorIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -200,6 +208,7 @@ public partial class V1beta1VoiceConnectorStreamingSpecInitProviderVoiceConnecto
     public V1beta1VoiceConnectorStreamingSpecInitProviderVoiceConnectorIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VoiceConnector in chime to populate voiceConnectorId.</summary>
 public partial class V1beta1VoiceConnectorStreamingSpecInitProviderVoiceConnectorIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -231,6 +240,7 @@ public enum V1beta1VoiceConnectorStreamingSpecInitProviderVoiceConnectorIdSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VoiceConnectorStreamingSpecInitProviderVoiceConnectorIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -244,6 +254,7 @@ public partial class V1beta1VoiceConnectorStreamingSpecInitProviderVoiceConnecto
     public V1beta1VoiceConnectorStreamingSpecInitProviderVoiceConnectorIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VoiceConnector in chime to populate voiceConnectorId.</summary>
 public partial class V1beta1VoiceConnectorStreamingSpecInitProviderVoiceConnectorIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -259,6 +270,7 @@ public partial class V1beta1VoiceConnectorStreamingSpecInitProviderVoiceConnecto
     public V1beta1VoiceConnectorStreamingSpecInitProviderVoiceConnectorIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1VoiceConnectorStreamingSpecInitProvider
 {
     /// <summary>The retention period, in hours, for the Amazon Kinesis data.</summary>
@@ -332,6 +344,7 @@ public enum V1beta1VoiceConnectorStreamingSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VoiceConnectorStreamingSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -345,6 +358,7 @@ public partial class V1beta1VoiceConnectorStreamingSpecProviderConfigRefPolicy
     public V1beta1VoiceConnectorStreamingSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1VoiceConnectorStreamingSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -376,6 +390,7 @@ public enum V1beta1VoiceConnectorStreamingSpecPublishConnectionDetailsToConfigRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VoiceConnectorStreamingSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -389,6 +404,7 @@ public partial class V1beta1VoiceConnectorStreamingSpecPublishConnectionDetailsT
     public V1beta1VoiceConnectorStreamingSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1VoiceConnectorStreamingSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -400,6 +416,7 @@ public partial class V1beta1VoiceConnectorStreamingSpecPublishConnectionDetailsT
     public V1beta1VoiceConnectorStreamingSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1VoiceConnectorStreamingSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -415,6 +432,7 @@ public partial class V1beta1VoiceConnectorStreamingSpecPublishConnectionDetailsT
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1VoiceConnectorStreamingSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -430,6 +448,7 @@ public partial class V1beta1VoiceConnectorStreamingSpecPublishConnectionDetailsT
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1VoiceConnectorStreamingSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -441,6 +460,7 @@ public partial class V1beta1VoiceConnectorStreamingSpecWriteConnectionSecretToRe
     public string Namespace { get; set; }
 }
 
+/// <summary>VoiceConnectorStreamingSpec defines the desired state of VoiceConnectorStreaming</summary>
 public partial class V1beta1VoiceConnectorStreamingSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -473,6 +493,7 @@ public partial class V1beta1VoiceConnectorStreamingSpec
     public V1beta1VoiceConnectorStreamingSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VoiceConnectorStreamingStatusAtProviderMediaInsightsConfiguration
 {
     /// <summary>The media insights configuration that will be invoked by the Voice Connector.</summary>
@@ -484,6 +505,7 @@ public partial class V1beta1VoiceConnectorStreamingStatusAtProviderMediaInsights
     public bool? Disabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VoiceConnectorStreamingStatusAtProvider
 {
     /// <summary>The retention period, in hours, for the Amazon Kinesis data.</summary>
@@ -511,6 +533,7 @@ public partial class V1beta1VoiceConnectorStreamingStatusAtProvider
     public string? VoiceConnectorId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1VoiceConnectorStreamingStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -538,6 +561,7 @@ public partial class V1beta1VoiceConnectorStreamingStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>VoiceConnectorStreamingStatus defines the observed state of VoiceConnectorStreaming.</summary>
 public partial class V1beta1VoiceConnectorStreamingStatus
 {
     /// <summary></summary>
@@ -554,6 +578,7 @@ public partial class V1beta1VoiceConnectorStreamingStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>VoiceConnectorStreaming is the Schema for the VoiceConnectorStreamings API. The streaming configuration associated with an Amazon Chime Voice Connector. Specifies whether media streaming is enabled for sending to Amazon Kinesis, and shows the retention period for the Amazon Kinesis data, in hours.</summary>
 public partial class V1beta1VoiceConnectorStreaming : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1VoiceConnectorStreamingSpec>, IStatus<V1beta1VoiceConnectorStreamingStatus>
 {
     public const string KubeApiVersion = "v1beta1";

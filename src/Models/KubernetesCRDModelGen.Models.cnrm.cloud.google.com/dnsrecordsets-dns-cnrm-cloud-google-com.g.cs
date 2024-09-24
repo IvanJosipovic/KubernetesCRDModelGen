@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dns.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1DNSRecordSetSpecManagedZoneRef
 {
     /// <summary>Allowed value: The `name` field of a `DNSManagedZone` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1DNSRecordSetSpecManagedZoneRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancersIpAddressRef
 {
     /// <summary>Allowed value: The `address` field of a `ComputeAddress` resource.</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargets
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancersNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
@@ -53,6 +56,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargets
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancersProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -68,6 +72,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargets
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancersRegionRef
 {
     /// <summary>Allowed value: The `location` field of a `ComputeForwardingRule` resource.</summary>
@@ -83,6 +88,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargets
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancers
 {
     /// <summary></summary>
@@ -114,6 +120,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargets
     public V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancersRegionRef? RegionRef { get; set; }
 }
 
+/// <summary>For A and AAAA types only. The list of targets to be health checked. These can be specified along with `rrdatas` within this item.</summary>
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargets
 {
     /// <summary>The list of internal load balancers to health check.</summary>
@@ -121,6 +128,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargets
     public IList<V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancers> InternalLoadBalancers { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoRrdatasRefs
 {
     /// <summary>Allowed value: The `address` field of a `ComputeAddress` resource.</summary>
@@ -140,6 +148,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoRrdatasRefs
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeo
 {
     /// <summary>For A and AAAA types only. The list of targets to be health checked. These can be specified along with `rrdatas` within this item.</summary>
@@ -155,6 +164,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeo
     public IList<V1beta1DNSRecordSetSpecRoutingPolicyGeoRrdatasRefs>? RrdatasRefs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancersIpAddressRef
 {
     /// <summary>Allowed value: The `address` field of a `ComputeAddress` resource.</summary>
@@ -170,6 +180,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoH
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancersNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
@@ -185,6 +196,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoH
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancersProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -200,6 +212,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoH
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancersRegionRef
 {
     /// <summary>Allowed value: The `location` field of a `ComputeForwardingRule` resource.</summary>
@@ -215,6 +228,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoH
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancers
 {
     /// <summary></summary>
@@ -246,6 +260,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoH
     public V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancersRegionRef? RegionRef { get; set; }
 }
 
+/// <summary>For A and AAAA types only. The list of targets to be health checked. These can be specified along with `rrdatas` within this item.</summary>
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargets
 {
     /// <summary>The list of internal load balancers to health check.</summary>
@@ -253,6 +268,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoH
     public IList<V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancers> InternalLoadBalancers { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoRrdatasRefs
 {
     /// <summary>Allowed value: The `address` field of a `ComputeAddress` resource.</summary>
@@ -268,6 +284,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoR
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeo
 {
     /// <summary>For A and AAAA types only. The list of targets to be health checked. These can be specified along with `rrdatas` within this item.</summary>
@@ -283,6 +300,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeo
     public IList<V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoRrdatasRefs>? RrdatasRefs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersIpAddressRef
 {
     /// <summary>Allowed value: The `address` field of a `ComputeAddress` resource.</summary>
@@ -298,6 +316,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInt
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
@@ -313,6 +332,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInt
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -328,6 +348,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInt
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersRegionRef
 {
     /// <summary>Allowed value: The `location` field of a `ComputeForwardingRule` resource.</summary>
@@ -343,6 +364,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInt
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancers
 {
     /// <summary></summary>
@@ -374,6 +396,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInt
     public V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersRegionRef? RegionRef { get; set; }
 }
 
+/// <summary>The list of global primary targets to be health checked.</summary>
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimary
 {
     /// <summary>The list of internal load balancers to health check.</summary>
@@ -381,6 +404,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimary
     public IList<V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancers> InternalLoadBalancers { get; set; }
 }
 
+/// <summary>The configuration for a primary-backup policy with global to regional failover. Queries are responded to with the global primary targets, but if none of the primary targets are healthy, then we fallback to a regional failover policy.</summary>
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackup
 {
     /// <summary>The backup geo targets, which provide a regional failover policy for the otherwise global primary targets.</summary>
@@ -400,6 +424,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackup
     public double? TrickleRatio { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancersIpAddressRef
 {
     /// <summary>Allowed value: The `address` field of a `ComputeAddress` resource.</summary>
@@ -415,6 +440,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargets
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancersNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
@@ -430,6 +456,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargets
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancersProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -445,6 +472,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargets
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancersRegionRef
 {
     /// <summary>Allowed value: The `location` field of a `ComputeForwardingRule` resource.</summary>
@@ -460,6 +488,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargets
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancers
 {
     /// <summary></summary>
@@ -491,6 +520,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargets
     public V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancersRegionRef? RegionRef { get; set; }
 }
 
+/// <summary>The list of targets to be health checked. Note that if DNSSEC is enabled for this zone, only one of `rrdatas` or `health_checked_targets` can be set.</summary>
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargets
 {
     /// <summary>The list of internal load balancers to health check.</summary>
@@ -498,6 +528,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargets
     public IList<V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancers> InternalLoadBalancers { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrRrdatasRefs
 {
     /// <summary>Allowed value: The `address` field of a `ComputeAddress` resource.</summary>
@@ -517,6 +548,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrRrdatasRefs
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrr
 {
     /// <summary>The list of targets to be health checked. Note that if DNSSEC is enabled for this zone, only one of `rrdatas` or `health_checked_targets` can be set.</summary>
@@ -532,6 +564,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrr
     public double Weight { get; set; }
 }
 
+/// <summary>The configuration for steering traffic based on query. You can specify either Weighted Round Robin(WRR) type or Geolocation(GEO) type.</summary>
 public partial class V1beta1DNSRecordSetSpecRoutingPolicy
 {
     /// <summary>Specifies whether to enable fencing for geo queries.</summary>
@@ -551,6 +584,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicy
     public IList<V1beta1DNSRecordSetSpecRoutingPolicyWrr>? Wrr { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSRecordSetSpecRrdatasRefs
 {
     /// <summary>Allowed value: The `address` field of a `ComputeAddress` resource.</summary>
@@ -570,6 +604,7 @@ public partial class V1beta1DNSRecordSetSpecRrdatasRefs
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSRecordSetSpec
 {
     /// <summary></summary>
@@ -601,6 +636,7 @@ public partial class V1beta1DNSRecordSetSpec
     public string Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSRecordSetStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -624,6 +660,7 @@ public partial class V1beta1DNSRecordSetStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSRecordSetStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -636,6 +673,7 @@ public partial class V1beta1DNSRecordSetStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1DNSRecordSet : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DNSRecordSetSpec>, IStatus<V1beta1DNSRecordSetStatus>
 {
     public const string KubeApiVersion = "v1beta1";

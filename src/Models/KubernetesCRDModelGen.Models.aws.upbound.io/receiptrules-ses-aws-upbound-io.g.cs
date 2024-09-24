@@ -18,6 +18,7 @@ public enum V1beta1ReceiptRuleSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1ReceiptRuleSpecForProviderAddHeaderAction
 {
     /// <summary>The name of the header to add</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1ReceiptRuleSpecForProviderAddHeaderAction
     public double? Position { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ReceiptRuleSpecForProviderBounceAction
 {
     /// <summary>The message to send</summary>
@@ -60,6 +62,7 @@ public partial class V1beta1ReceiptRuleSpecForProviderBounceAction
     public string? TopicArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ReceiptRuleSpecForProviderLambdaAction
 {
     /// <summary>The ARN of the Lambda function to invoke</summary>
@@ -79,6 +82,7 @@ public partial class V1beta1ReceiptRuleSpecForProviderLambdaAction
     public string? TopicArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ReceiptRuleSpecForProviderS3Action
 {
     /// <summary>The name of the S3 bucket</summary>
@@ -102,6 +106,7 @@ public partial class V1beta1ReceiptRuleSpecForProviderS3Action
     public string? TopicArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ReceiptRuleSpecForProviderSnsAction
 {
     /// <summary>The encoding to use for the email within the Amazon SNS notification. Default value is UTF-8.</summary>
@@ -117,6 +122,7 @@ public partial class V1beta1ReceiptRuleSpecForProviderSnsAction
     public string? TopicArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ReceiptRuleSpecForProviderStopAction
 {
     /// <summary>The position of the action in the receipt rule</summary>
@@ -132,6 +138,7 @@ public partial class V1beta1ReceiptRuleSpecForProviderStopAction
     public string? TopicArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ReceiptRuleSpecForProviderWorkmailAction
 {
     /// <summary>The ARN of the WorkMail organization</summary>
@@ -147,6 +154,7 @@ public partial class V1beta1ReceiptRuleSpecForProviderWorkmailAction
     public string? TopicArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ReceiptRuleSpecForProvider
 {
     /// <summary>A list of Add Header Action blocks. Documented below.</summary>
@@ -210,6 +218,7 @@ public partial class V1beta1ReceiptRuleSpecForProvider
     public IList<V1beta1ReceiptRuleSpecForProviderWorkmailAction>? WorkmailAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ReceiptRuleSpecInitProviderAddHeaderAction
 {
     /// <summary>The name of the header to add</summary>
@@ -225,6 +234,7 @@ public partial class V1beta1ReceiptRuleSpecInitProviderAddHeaderAction
     public double? Position { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ReceiptRuleSpecInitProviderBounceAction
 {
     /// <summary>The message to send</summary>
@@ -252,6 +262,7 @@ public partial class V1beta1ReceiptRuleSpecInitProviderBounceAction
     public string? TopicArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ReceiptRuleSpecInitProviderLambdaAction
 {
     /// <summary>The ARN of the Lambda function to invoke</summary>
@@ -271,6 +282,7 @@ public partial class V1beta1ReceiptRuleSpecInitProviderLambdaAction
     public string? TopicArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ReceiptRuleSpecInitProviderS3Action
 {
     /// <summary>The name of the S3 bucket</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1ReceiptRuleSpecInitProviderS3Action
     public string? TopicArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ReceiptRuleSpecInitProviderSnsAction
 {
     /// <summary>The encoding to use for the email within the Amazon SNS notification. Default value is UTF-8.</summary>
@@ -309,6 +322,7 @@ public partial class V1beta1ReceiptRuleSpecInitProviderSnsAction
     public string? TopicArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ReceiptRuleSpecInitProviderStopAction
 {
     /// <summary>The position of the action in the receipt rule</summary>
@@ -324,6 +338,7 @@ public partial class V1beta1ReceiptRuleSpecInitProviderStopAction
     public string? TopicArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ReceiptRuleSpecInitProviderWorkmailAction
 {
     /// <summary>The ARN of the WorkMail organization</summary>
@@ -339,6 +354,7 @@ public partial class V1beta1ReceiptRuleSpecInitProviderWorkmailAction
     public string? TopicArn { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ReceiptRuleSpecInitProvider
 {
     /// <summary>A list of Add Header Action blocks. Documented below.</summary>
@@ -440,6 +456,7 @@ public enum V1beta1ReceiptRuleSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ReceiptRuleSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -453,6 +470,7 @@ public partial class V1beta1ReceiptRuleSpecProviderConfigRefPolicy
     public V1beta1ReceiptRuleSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ReceiptRuleSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -484,6 +502,7 @@ public enum V1beta1ReceiptRuleSpecPublishConnectionDetailsToConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ReceiptRuleSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -497,6 +516,7 @@ public partial class V1beta1ReceiptRuleSpecPublishConnectionDetailsToConfigRefPo
     public V1beta1ReceiptRuleSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ReceiptRuleSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -508,6 +528,7 @@ public partial class V1beta1ReceiptRuleSpecPublishConnectionDetailsToConfigRef
     public V1beta1ReceiptRuleSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ReceiptRuleSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -523,6 +544,7 @@ public partial class V1beta1ReceiptRuleSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ReceiptRuleSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -538,6 +560,7 @@ public partial class V1beta1ReceiptRuleSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ReceiptRuleSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -549,6 +572,7 @@ public partial class V1beta1ReceiptRuleSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ReceiptRuleSpec defines the desired state of ReceiptRule</summary>
 public partial class V1beta1ReceiptRuleSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -581,6 +605,7 @@ public partial class V1beta1ReceiptRuleSpec
     public V1beta1ReceiptRuleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ReceiptRuleStatusAtProviderAddHeaderAction
 {
     /// <summary>The name of the header to add</summary>
@@ -596,6 +621,7 @@ public partial class V1beta1ReceiptRuleStatusAtProviderAddHeaderAction
     public double? Position { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ReceiptRuleStatusAtProviderBounceAction
 {
     /// <summary>The message to send</summary>
@@ -623,6 +649,7 @@ public partial class V1beta1ReceiptRuleStatusAtProviderBounceAction
     public string? TopicArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ReceiptRuleStatusAtProviderLambdaAction
 {
     /// <summary>The ARN of the Lambda function to invoke</summary>
@@ -642,6 +669,7 @@ public partial class V1beta1ReceiptRuleStatusAtProviderLambdaAction
     public string? TopicArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ReceiptRuleStatusAtProviderS3Action
 {
     /// <summary>The name of the S3 bucket</summary>
@@ -665,6 +693,7 @@ public partial class V1beta1ReceiptRuleStatusAtProviderS3Action
     public string? TopicArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ReceiptRuleStatusAtProviderSnsAction
 {
     /// <summary>The encoding to use for the email within the Amazon SNS notification. Default value is UTF-8.</summary>
@@ -680,6 +709,7 @@ public partial class V1beta1ReceiptRuleStatusAtProviderSnsAction
     public string? TopicArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ReceiptRuleStatusAtProviderStopAction
 {
     /// <summary>The position of the action in the receipt rule</summary>
@@ -695,6 +725,7 @@ public partial class V1beta1ReceiptRuleStatusAtProviderStopAction
     public string? TopicArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ReceiptRuleStatusAtProviderWorkmailAction
 {
     /// <summary>The ARN of the WorkMail organization</summary>
@@ -710,6 +741,7 @@ public partial class V1beta1ReceiptRuleStatusAtProviderWorkmailAction
     public string? TopicArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ReceiptRuleStatusAtProvider
 {
     /// <summary>A list of Add Header Action blocks. Documented below.</summary>
@@ -777,6 +809,7 @@ public partial class V1beta1ReceiptRuleStatusAtProvider
     public IList<V1beta1ReceiptRuleStatusAtProviderWorkmailAction>? WorkmailAction { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ReceiptRuleStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -804,6 +837,7 @@ public partial class V1beta1ReceiptRuleStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ReceiptRuleStatus defines the observed state of ReceiptRule.</summary>
 public partial class V1beta1ReceiptRuleStatus
 {
     /// <summary></summary>
@@ -820,6 +854,7 @@ public partial class V1beta1ReceiptRuleStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ReceiptRule is the Schema for the ReceiptRules API. Provides an SES receipt rule resource</summary>
 public partial class V1beta1ReceiptRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ReceiptRuleSpec>, IStatus<V1beta1ReceiptRuleStatus>
 {
     public const string KubeApiVersion = "v1beta1";

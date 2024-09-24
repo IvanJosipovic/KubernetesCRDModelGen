@@ -18,6 +18,7 @@ public enum V1beta1DomainSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultSpaceSettingsJupyterServerAppSettingsCodeRepository
 {
     /// <summary>The URL of the Git repository.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1DomainSpecForProviderDefaultSpaceSettingsJupyterServ
     public string? RepositoryUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultSpaceSettingsJupyterServerAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -48,6 +50,7 @@ public partial class V1beta1DomainSpecForProviderDefaultSpaceSettingsJupyterServ
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultSpaceSettingsJupyterServerAppSettings
 {
     /// <summary>A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see code_repository Block below.</summary>
@@ -63,6 +66,7 @@ public partial class V1beta1DomainSpecForProviderDefaultSpaceSettingsJupyterServ
     public IList<string>? LifecycleConfigArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultSpaceSettingsKernelGatewayAppSettingsCustomImage
 {
     /// <summary>The name of the App Image Config.</summary>
@@ -78,6 +82,7 @@ public partial class V1beta1DomainSpecForProviderDefaultSpaceSettingsKernelGatew
     public double? ImageVersionNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultSpaceSettingsKernelGatewayAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -101,6 +106,7 @@ public partial class V1beta1DomainSpecForProviderDefaultSpaceSettingsKernelGatew
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultSpaceSettingsKernelGatewayAppSettings
 {
     /// <summary>A list of custom SageMaker images that are configured to run as a KernelGateway app. see custom_image Block below.</summary>
@@ -116,6 +122,7 @@ public partial class V1beta1DomainSpecForProviderDefaultSpaceSettingsKernelGatew
     public IList<string>? LifecycleConfigArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultSpaceSettings
 {
     /// <summary>The execution role for the space.</summary>
@@ -135,6 +142,7 @@ public partial class V1beta1DomainSpecForProviderDefaultSpaceSettings
     public IList<string>? SecurityGroups { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsCanvasAppSettingsDirectDeploySettings
 {
     /// <summary>Describes whether time series forecasting is enabled or disabled in the Canvas app. Valid values are ENABLED and DISABLED.</summary>
@@ -142,6 +150,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsCanvasAppSet
     public string? Status { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsCanvasAppSettingsGenerativeAiSettings
 {
     /// <summary>The Amazon Resource Name (ARN) assigned by AWS to this Domain.</summary>
@@ -149,6 +158,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsCanvasAppSet
     public string? AmazonBedrockRoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsCanvasAppSettingsIdentityProviderOauthSettings
 {
     /// <summary>The name of the data source that you're connecting to. Canvas currently supports OAuth for Snowflake and Salesforce Data Cloud. Valid values are SalesforceGenie and Snowflake.</summary>
@@ -164,6 +174,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsCanvasAppSet
     public string? Status { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsCanvasAppSettingsKendraSettings
 {
     /// <summary>Describes whether time series forecasting is enabled or disabled in the Canvas app. Valid values are ENABLED and DISABLED.</summary>
@@ -171,6 +182,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsCanvasAppSet
     public string? Status { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsCanvasAppSettingsModelRegisterSettings
 {
     /// <summary>The Amazon Resource Name (ARN) of the SageMaker model registry account. Required only to register model versions created by a different SageMaker Canvas AWS account than the AWS account in which SageMaker model registry is set up.</summary>
@@ -182,6 +194,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsCanvasAppSet
     public string? Status { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsCanvasAppSettingsTimeSeriesForecastingSettings
 {
     /// <summary>The IAM role that Canvas passes to Amazon Forecast for time series forecasting. By default, Canvas uses the execution role specified in the UserProfile that launches the Canvas app. If an execution role is not specified in the UserProfile, Canvas uses the execution role specified in the Domain that owns the UserProfile. To allow time series forecasting, this IAM role should have the AmazonSageMakerCanvasForecastAccess policy attached and forecast.amazonaws.com added in the trust relationship as a service principal.</summary>
@@ -193,6 +206,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsCanvasAppSet
     public string? Status { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsCanvasAppSettingsWorkspaceSettings
 {
     /// <summary>The Amazon S3 bucket used to store artifacts generated by Canvas. Updating the Amazon S3 location impacts existing configuration settings, and Canvas users no longer have access to their artifacts. Canvas users must log out and log back in to apply the new location.</summary>
@@ -204,6 +218,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsCanvasAppSet
     public string? S3KmsKeyId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsCanvasAppSettings
 {
     /// <summary>The model deployment settings for the SageMaker Canvas application. See direct_deploy_settings Block below.</summary>
@@ -235,6 +250,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsCanvasAppSet
     public IList<V1beta1DomainSpecForProviderDefaultUserSettingsCanvasAppSettingsWorkspaceSettings>? WorkspaceSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsCodeEditorAppSettingsCustomImage
 {
     /// <summary>The name of the App Image Config.</summary>
@@ -250,6 +266,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsCodeEditorAp
     public double? ImageVersionNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsCodeEditorAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -273,6 +290,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsCodeEditorAp
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsCodeEditorAppSettings
 {
     /// <summary>A list of custom SageMaker images that are configured to run as a KernelGateway app. see custom_image Block below.</summary>
@@ -288,6 +306,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsCodeEditorAp
     public IList<string>? LifecycleConfigArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsCustomFileSystemConfigEfsFileSystemConfig
 {
     /// <summary>The ID of your Amazon EFS file system.</summary>
@@ -299,6 +318,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsCustomFileSy
     public string? FileSystemPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsCustomFileSystemConfig
 {
     /// <summary>The default EBS storage settings for a private space. See efs_file_system_config Block below.</summary>
@@ -306,6 +326,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsCustomFileSy
     public IList<V1beta1DomainSpecForProviderDefaultUserSettingsCustomFileSystemConfigEfsFileSystemConfig>? EfsFileSystemConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsCustomPosixUserConfig
 {
     /// <summary>The POSIX group ID.</summary>
@@ -337,6 +358,7 @@ public enum V1beta1DomainSpecForProviderDefaultUserSettingsExecutionRoleRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsExecutionRoleRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -350,6 +372,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsExecutionRol
     public V1beta1DomainSpecForProviderDefaultUserSettingsExecutionRoleRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate executionRole.</summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsExecutionRoleRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -381,6 +404,7 @@ public enum V1beta1DomainSpecForProviderDefaultUserSettingsExecutionRoleSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsExecutionRoleSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -394,6 +418,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsExecutionRol
     public V1beta1DomainSpecForProviderDefaultUserSettingsExecutionRoleSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate executionRole.</summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsExecutionRoleSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -409,6 +434,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsExecutionRol
     public V1beta1DomainSpecForProviderDefaultUserSettingsExecutionRoleSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsJupyterLabAppSettingsCodeRepository
 {
     /// <summary>The URL of the Git repository.</summary>
@@ -416,6 +442,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsJupyterLabAp
     public string? RepositoryUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsJupyterLabAppSettingsCustomImage
 {
     /// <summary>The name of the App Image Config.</summary>
@@ -431,6 +458,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsJupyterLabAp
     public double? ImageVersionNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsJupyterLabAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -454,6 +482,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsJupyterLabAp
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsJupyterLabAppSettings
 {
     /// <summary>A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see code_repository Block below.</summary>
@@ -473,6 +502,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsJupyterLabAp
     public IList<string>? LifecycleConfigArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsJupyterServerAppSettingsCodeRepository
 {
     /// <summary>The URL of the Git repository.</summary>
@@ -480,6 +510,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsJupyterServe
     public string? RepositoryUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -503,6 +534,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsJupyterServe
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsJupyterServerAppSettings
 {
     /// <summary>A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see code_repository Block below.</summary>
@@ -538,6 +570,7 @@ public enum V1beta1DomainSpecForProviderDefaultUserSettingsKernelGatewayAppSetti
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsKernelGatewayAppSettingsCustomImageAppImageConfigNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -551,6 +584,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsKernelGatewa
     public V1beta1DomainSpecForProviderDefaultUserSettingsKernelGatewayAppSettingsCustomImageAppImageConfigNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a AppImageConfig in sagemaker to populate appImageConfigName.</summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsKernelGatewayAppSettingsCustomImageAppImageConfigNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -582,6 +616,7 @@ public enum V1beta1DomainSpecForProviderDefaultUserSettingsKernelGatewayAppSetti
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsKernelGatewayAppSettingsCustomImageAppImageConfigNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -595,6 +630,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsKernelGatewa
     public V1beta1DomainSpecForProviderDefaultUserSettingsKernelGatewayAppSettingsCustomImageAppImageConfigNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a AppImageConfig in sagemaker to populate appImageConfigName.</summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsKernelGatewayAppSettingsCustomImageAppImageConfigNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -630,6 +666,7 @@ public enum V1beta1DomainSpecForProviderDefaultUserSettingsKernelGatewayAppSetti
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsKernelGatewayAppSettingsCustomImageImageNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -643,6 +680,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsKernelGatewa
     public V1beta1DomainSpecForProviderDefaultUserSettingsKernelGatewayAppSettingsCustomImageImageNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ImageVersion in sagemaker to populate imageName.</summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsKernelGatewayAppSettingsCustomImageImageNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -674,6 +712,7 @@ public enum V1beta1DomainSpecForProviderDefaultUserSettingsKernelGatewayAppSetti
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsKernelGatewayAppSettingsCustomImageImageNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -687,6 +726,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsKernelGatewa
     public V1beta1DomainSpecForProviderDefaultUserSettingsKernelGatewayAppSettingsCustomImageImageNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ImageVersion in sagemaker to populate imageName.</summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsKernelGatewayAppSettingsCustomImageImageNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -702,6 +742,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsKernelGatewa
     public V1beta1DomainSpecForProviderDefaultUserSettingsKernelGatewayAppSettingsCustomImageImageNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsKernelGatewayAppSettingsCustomImage
 {
     /// <summary>The name of the App Image Config.</summary>
@@ -733,6 +774,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsKernelGatewa
     public double? ImageVersionNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -756,6 +798,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsKernelGatewa
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsKernelGatewayAppSettings
 {
     /// <summary>A list of custom SageMaker images that are configured to run as a KernelGateway app. see custom_image Block below.</summary>
@@ -771,6 +814,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsKernelGatewa
     public IList<string>? LifecycleConfigArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsRSessionAppSettingsCustomImage
 {
     /// <summary>The name of the App Image Config.</summary>
@@ -786,6 +830,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsRSessionAppS
     public double? ImageVersionNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsRSessionAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -809,6 +854,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsRSessionAppS
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsRSessionAppSettings
 {
     /// <summary>A list of custom SageMaker images that are configured to run as a KernelGateway app. see custom_image Block below.</summary>
@@ -820,6 +866,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsRSessionAppS
     public IList<V1beta1DomainSpecForProviderDefaultUserSettingsRSessionAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsRStudioServerProAppSettings
 {
     /// <summary>Indicates whether the current user has access to the RStudioServerPro app. Valid values are ENABLED and DISABLED.</summary>
@@ -831,6 +878,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsRStudioServe
     public string? UserGroup { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsSharingSettings
 {
     /// <summary>Whether to include the notebook cell output when sharing the notebook. The default is Disabled. Valid values are Allowed and Disabled.</summary>
@@ -846,6 +894,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsSharingSetti
     public string? S3OutputPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsSpaceStorageSettingsDefaultEbsStorageSettings
 {
     /// <summary>The default size of the EBS storage volume for a private space.</summary>
@@ -857,6 +906,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsSpaceStorage
     public double? MaximumEbsVolumeSizeInGb { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsSpaceStorageSettings
 {
     /// <summary>The default EBS storage settings for a private space. See default_ebs_storage_settings Block below.</summary>
@@ -864,6 +914,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsSpaceStorage
     public IList<V1beta1DomainSpecForProviderDefaultUserSettingsSpaceStorageSettingsDefaultEbsStorageSettings>? DefaultEbsStorageSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -887,6 +938,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsTensorBoardA
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsTensorBoardAppSettings
 {
     /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see default_resource_spec Block below.</summary>
@@ -894,6 +946,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsTensorBoardA
     public IList<V1beta1DomainSpecForProviderDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDefaultUserSettings
 {
     /// <summary>The Canvas app settings. See canvas_app_settings Block below.</summary>
@@ -969,6 +1022,7 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettings
     public IList<V1beta1DomainSpecForProviderDefaultUserSettingsTensorBoardAppSettings>? TensorBoardAppSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDomainSettingsRStudioServerProDomainSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -992,6 +1046,7 @@ public partial class V1beta1DomainSpecForProviderDomainSettingsRStudioServerProD
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDomainSettingsRStudioServerProDomainSettings
 {
     /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see default_resource_spec Block below.</summary>
@@ -1011,6 +1066,7 @@ public partial class V1beta1DomainSpecForProviderDomainSettingsRStudioServerProD
     public string? RStudioPackageManagerUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderDomainSettings
 {
     /// <summary>The configuration for attaching a SageMaker user profile name to the execution role as a sts:SourceIdentity key AWS Docs. Valid values are USER_PROFILE_NAME and DISABLED.</summary>
@@ -1046,6 +1102,7 @@ public enum V1beta1DomainSpecForProviderKmsKeyIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DomainSpecForProviderKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1059,6 +1116,7 @@ public partial class V1beta1DomainSpecForProviderKmsKeyIdRefPolicy
     public V1beta1DomainSpecForProviderKmsKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1DomainSpecForProviderKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1090,6 +1148,7 @@ public enum V1beta1DomainSpecForProviderKmsKeyIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DomainSpecForProviderKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1103,6 +1162,7 @@ public partial class V1beta1DomainSpecForProviderKmsKeyIdSelectorPolicy
     public V1beta1DomainSpecForProviderKmsKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1DomainSpecForProviderKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1118,6 +1178,7 @@ public partial class V1beta1DomainSpecForProviderKmsKeyIdSelector
     public V1beta1DomainSpecForProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProviderRetentionPolicy
 {
     /// <summary>The retention policy for data stored on an Amazon Elastic File System (EFS) volume. Valid values are Retain or Delete.  Default value is Retain.</summary>
@@ -1145,6 +1206,7 @@ public enum V1beta1DomainSpecForProviderSubnetIdRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DomainSpecForProviderSubnetIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1158,6 +1220,7 @@ public partial class V1beta1DomainSpecForProviderSubnetIdRefsPolicy
     public V1beta1DomainSpecForProviderSubnetIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1DomainSpecForProviderSubnetIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1189,6 +1252,7 @@ public enum V1beta1DomainSpecForProviderSubnetIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DomainSpecForProviderSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1202,6 +1266,7 @@ public partial class V1beta1DomainSpecForProviderSubnetIdSelectorPolicy
     public V1beta1DomainSpecForProviderSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 public partial class V1beta1DomainSpecForProviderSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1237,6 +1302,7 @@ public enum V1beta1DomainSpecForProviderVpcIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DomainSpecForProviderVpcIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1250,6 +1316,7 @@ public partial class V1beta1DomainSpecForProviderVpcIdRefPolicy
     public V1beta1DomainSpecForProviderVpcIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1DomainSpecForProviderVpcIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1281,6 +1348,7 @@ public enum V1beta1DomainSpecForProviderVpcIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DomainSpecForProviderVpcIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1294,6 +1362,7 @@ public partial class V1beta1DomainSpecForProviderVpcIdSelectorPolicy
     public V1beta1DomainSpecForProviderVpcIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1DomainSpecForProviderVpcIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1309,6 +1378,7 @@ public partial class V1beta1DomainSpecForProviderVpcIdSelector
     public V1beta1DomainSpecForProviderVpcIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecForProvider
 {
     /// <summary>Specifies the VPC used for non-EFS traffic. The default value is PublicInternetOnly. Valid values are PublicInternetOnly and VpcOnly.</summary>
@@ -1388,6 +1458,7 @@ public partial class V1beta1DomainSpecForProvider
     public V1beta1DomainSpecForProviderVpcIdSelector? VpcIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultSpaceSettingsJupyterServerAppSettingsCodeRepository
 {
     /// <summary>The URL of the Git repository.</summary>
@@ -1395,6 +1466,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultSpaceSettingsJupyterSer
     public string? RepositoryUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultSpaceSettingsJupyterServerAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -1418,6 +1490,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultSpaceSettingsJupyterSer
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultSpaceSettingsJupyterServerAppSettings
 {
     /// <summary>A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see code_repository Block below.</summary>
@@ -1433,6 +1506,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultSpaceSettingsJupyterSer
     public IList<string>? LifecycleConfigArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultSpaceSettingsKernelGatewayAppSettingsCustomImage
 {
     /// <summary>The name of the App Image Config.</summary>
@@ -1448,6 +1522,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultSpaceSettingsKernelGate
     public double? ImageVersionNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultSpaceSettingsKernelGatewayAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -1471,6 +1546,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultSpaceSettingsKernelGate
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultSpaceSettingsKernelGatewayAppSettings
 {
     /// <summary>A list of custom SageMaker images that are configured to run as a KernelGateway app. see custom_image Block below.</summary>
@@ -1486,6 +1562,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultSpaceSettingsKernelGate
     public IList<string>? LifecycleConfigArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultSpaceSettings
 {
     /// <summary>The execution role for the space.</summary>
@@ -1505,6 +1582,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultSpaceSettings
     public IList<string>? SecurityGroups { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsCanvasAppSettingsDirectDeploySettings
 {
     /// <summary>Describes whether time series forecasting is enabled or disabled in the Canvas app. Valid values are ENABLED and DISABLED.</summary>
@@ -1512,6 +1590,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsCanvasAppSe
     public string? Status { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsCanvasAppSettingsGenerativeAiSettings
 {
     /// <summary>The Amazon Resource Name (ARN) assigned by AWS to this Domain.</summary>
@@ -1519,6 +1598,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsCanvasAppSe
     public string? AmazonBedrockRoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsCanvasAppSettingsIdentityProviderOauthSettings
 {
     /// <summary>The name of the data source that you're connecting to. Canvas currently supports OAuth for Snowflake and Salesforce Data Cloud. Valid values are SalesforceGenie and Snowflake.</summary>
@@ -1534,6 +1614,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsCanvasAppSe
     public string? Status { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsCanvasAppSettingsKendraSettings
 {
     /// <summary>Describes whether time series forecasting is enabled or disabled in the Canvas app. Valid values are ENABLED and DISABLED.</summary>
@@ -1541,6 +1622,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsCanvasAppSe
     public string? Status { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsCanvasAppSettingsModelRegisterSettings
 {
     /// <summary>The Amazon Resource Name (ARN) of the SageMaker model registry account. Required only to register model versions created by a different SageMaker Canvas AWS account than the AWS account in which SageMaker model registry is set up.</summary>
@@ -1552,6 +1634,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsCanvasAppSe
     public string? Status { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsCanvasAppSettingsTimeSeriesForecastingSettings
 {
     /// <summary>The IAM role that Canvas passes to Amazon Forecast for time series forecasting. By default, Canvas uses the execution role specified in the UserProfile that launches the Canvas app. If an execution role is not specified in the UserProfile, Canvas uses the execution role specified in the Domain that owns the UserProfile. To allow time series forecasting, this IAM role should have the AmazonSageMakerCanvasForecastAccess policy attached and forecast.amazonaws.com added in the trust relationship as a service principal.</summary>
@@ -1563,6 +1646,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsCanvasAppSe
     public string? Status { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsCanvasAppSettingsWorkspaceSettings
 {
     /// <summary>The Amazon S3 bucket used to store artifacts generated by Canvas. Updating the Amazon S3 location impacts existing configuration settings, and Canvas users no longer have access to their artifacts. Canvas users must log out and log back in to apply the new location.</summary>
@@ -1574,6 +1658,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsCanvasAppSe
     public string? S3KmsKeyId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsCanvasAppSettings
 {
     /// <summary>The model deployment settings for the SageMaker Canvas application. See direct_deploy_settings Block below.</summary>
@@ -1605,6 +1690,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsCanvasAppSe
     public IList<V1beta1DomainSpecInitProviderDefaultUserSettingsCanvasAppSettingsWorkspaceSettings>? WorkspaceSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsCodeEditorAppSettingsCustomImage
 {
     /// <summary>The name of the App Image Config.</summary>
@@ -1620,6 +1706,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsCodeEditorA
     public double? ImageVersionNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsCodeEditorAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -1643,6 +1730,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsCodeEditorA
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsCodeEditorAppSettings
 {
     /// <summary>A list of custom SageMaker images that are configured to run as a KernelGateway app. see custom_image Block below.</summary>
@@ -1658,6 +1746,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsCodeEditorA
     public IList<string>? LifecycleConfigArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsCustomFileSystemConfigEfsFileSystemConfig
 {
     /// <summary>The ID of your Amazon EFS file system.</summary>
@@ -1669,6 +1758,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsCustomFileS
     public string? FileSystemPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsCustomFileSystemConfig
 {
     /// <summary>The default EBS storage settings for a private space. See efs_file_system_config Block below.</summary>
@@ -1676,6 +1766,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsCustomFileS
     public IList<V1beta1DomainSpecInitProviderDefaultUserSettingsCustomFileSystemConfigEfsFileSystemConfig>? EfsFileSystemConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsCustomPosixUserConfig
 {
     /// <summary>The POSIX group ID.</summary>
@@ -1707,6 +1798,7 @@ public enum V1beta1DomainSpecInitProviderDefaultUserSettingsExecutionRoleRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsExecutionRoleRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1720,6 +1812,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsExecutionRo
     public V1beta1DomainSpecInitProviderDefaultUserSettingsExecutionRoleRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate executionRole.</summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsExecutionRoleRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1751,6 +1844,7 @@ public enum V1beta1DomainSpecInitProviderDefaultUserSettingsExecutionRoleSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsExecutionRoleSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1764,6 +1858,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsExecutionRo
     public V1beta1DomainSpecInitProviderDefaultUserSettingsExecutionRoleSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate executionRole.</summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsExecutionRoleSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1779,6 +1874,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsExecutionRo
     public V1beta1DomainSpecInitProviderDefaultUserSettingsExecutionRoleSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsJupyterLabAppSettingsCodeRepository
 {
     /// <summary>The URL of the Git repository.</summary>
@@ -1786,6 +1882,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsJupyterLabA
     public string? RepositoryUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsJupyterLabAppSettingsCustomImage
 {
     /// <summary>The name of the App Image Config.</summary>
@@ -1801,6 +1898,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsJupyterLabA
     public double? ImageVersionNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsJupyterLabAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -1824,6 +1922,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsJupyterLabA
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsJupyterLabAppSettings
 {
     /// <summary>A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see code_repository Block below.</summary>
@@ -1843,6 +1942,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsJupyterLabA
     public IList<string>? LifecycleConfigArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsJupyterServerAppSettingsCodeRepository
 {
     /// <summary>The URL of the Git repository.</summary>
@@ -1850,6 +1950,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsJupyterServ
     public string? RepositoryUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -1873,6 +1974,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsJupyterServ
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsJupyterServerAppSettings
 {
     /// <summary>A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see code_repository Block below.</summary>
@@ -1908,6 +2010,7 @@ public enum V1beta1DomainSpecInitProviderDefaultUserSettingsKernelGatewayAppSett
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsKernelGatewayAppSettingsCustomImageAppImageConfigNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1921,6 +2024,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsKernelGatew
     public V1beta1DomainSpecInitProviderDefaultUserSettingsKernelGatewayAppSettingsCustomImageAppImageConfigNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a AppImageConfig in sagemaker to populate appImageConfigName.</summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsKernelGatewayAppSettingsCustomImageAppImageConfigNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1952,6 +2056,7 @@ public enum V1beta1DomainSpecInitProviderDefaultUserSettingsKernelGatewayAppSett
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsKernelGatewayAppSettingsCustomImageAppImageConfigNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1965,6 +2070,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsKernelGatew
     public V1beta1DomainSpecInitProviderDefaultUserSettingsKernelGatewayAppSettingsCustomImageAppImageConfigNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a AppImageConfig in sagemaker to populate appImageConfigName.</summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsKernelGatewayAppSettingsCustomImageAppImageConfigNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2000,6 +2106,7 @@ public enum V1beta1DomainSpecInitProviderDefaultUserSettingsKernelGatewayAppSett
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsKernelGatewayAppSettingsCustomImageImageNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2013,6 +2120,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsKernelGatew
     public V1beta1DomainSpecInitProviderDefaultUserSettingsKernelGatewayAppSettingsCustomImageImageNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ImageVersion in sagemaker to populate imageName.</summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsKernelGatewayAppSettingsCustomImageImageNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2044,6 +2152,7 @@ public enum V1beta1DomainSpecInitProviderDefaultUserSettingsKernelGatewayAppSett
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsKernelGatewayAppSettingsCustomImageImageNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2057,6 +2166,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsKernelGatew
     public V1beta1DomainSpecInitProviderDefaultUserSettingsKernelGatewayAppSettingsCustomImageImageNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ImageVersion in sagemaker to populate imageName.</summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsKernelGatewayAppSettingsCustomImageImageNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2072,6 +2182,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsKernelGatew
     public V1beta1DomainSpecInitProviderDefaultUserSettingsKernelGatewayAppSettingsCustomImageImageNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsKernelGatewayAppSettingsCustomImage
 {
     /// <summary>The name of the App Image Config.</summary>
@@ -2103,6 +2214,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsKernelGatew
     public double? ImageVersionNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -2126,6 +2238,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsKernelGatew
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsKernelGatewayAppSettings
 {
     /// <summary>A list of custom SageMaker images that are configured to run as a KernelGateway app. see custom_image Block below.</summary>
@@ -2141,6 +2254,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsKernelGatew
     public IList<string>? LifecycleConfigArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsRSessionAppSettingsCustomImage
 {
     /// <summary>The name of the App Image Config.</summary>
@@ -2156,6 +2270,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsRSessionApp
     public double? ImageVersionNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsRSessionAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -2179,6 +2294,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsRSessionApp
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsRSessionAppSettings
 {
     /// <summary>A list of custom SageMaker images that are configured to run as a KernelGateway app. see custom_image Block below.</summary>
@@ -2190,6 +2306,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsRSessionApp
     public IList<V1beta1DomainSpecInitProviderDefaultUserSettingsRSessionAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsRStudioServerProAppSettings
 {
     /// <summary>Indicates whether the current user has access to the RStudioServerPro app. Valid values are ENABLED and DISABLED.</summary>
@@ -2201,6 +2318,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsRStudioServ
     public string? UserGroup { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsSharingSettings
 {
     /// <summary>Whether to include the notebook cell output when sharing the notebook. The default is Disabled. Valid values are Allowed and Disabled.</summary>
@@ -2216,6 +2334,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsSharingSett
     public string? S3OutputPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsSpaceStorageSettingsDefaultEbsStorageSettings
 {
     /// <summary>The default size of the EBS storage volume for a private space.</summary>
@@ -2227,6 +2346,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsSpaceStorag
     public double? MaximumEbsVolumeSizeInGb { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsSpaceStorageSettings
 {
     /// <summary>The default EBS storage settings for a private space. See default_ebs_storage_settings Block below.</summary>
@@ -2234,6 +2354,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsSpaceStorag
     public IList<V1beta1DomainSpecInitProviderDefaultUserSettingsSpaceStorageSettingsDefaultEbsStorageSettings>? DefaultEbsStorageSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -2257,6 +2378,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsTensorBoard
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsTensorBoardAppSettings
 {
     /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see default_resource_spec Block below.</summary>
@@ -2264,6 +2386,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsTensorBoard
     public IList<V1beta1DomainSpecInitProviderDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettings
 {
     /// <summary>The Canvas app settings. See canvas_app_settings Block below.</summary>
@@ -2339,6 +2462,7 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettings
     public IList<V1beta1DomainSpecInitProviderDefaultUserSettingsTensorBoardAppSettings>? TensorBoardAppSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDomainSettingsRStudioServerProDomainSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -2362,6 +2486,7 @@ public partial class V1beta1DomainSpecInitProviderDomainSettingsRStudioServerPro
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDomainSettingsRStudioServerProDomainSettings
 {
     /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see default_resource_spec Block below.</summary>
@@ -2381,6 +2506,7 @@ public partial class V1beta1DomainSpecInitProviderDomainSettingsRStudioServerPro
     public string? RStudioPackageManagerUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderDomainSettings
 {
     /// <summary>The configuration for attaching a SageMaker user profile name to the execution role as a sts:SourceIdentity key AWS Docs. Valid values are USER_PROFILE_NAME and DISABLED.</summary>
@@ -2416,6 +2542,7 @@ public enum V1beta1DomainSpecInitProviderKmsKeyIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DomainSpecInitProviderKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2429,6 +2556,7 @@ public partial class V1beta1DomainSpecInitProviderKmsKeyIdRefPolicy
     public V1beta1DomainSpecInitProviderKmsKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1DomainSpecInitProviderKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2460,6 +2588,7 @@ public enum V1beta1DomainSpecInitProviderKmsKeyIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DomainSpecInitProviderKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2473,6 +2602,7 @@ public partial class V1beta1DomainSpecInitProviderKmsKeyIdSelectorPolicy
     public V1beta1DomainSpecInitProviderKmsKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1DomainSpecInitProviderKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2488,6 +2618,7 @@ public partial class V1beta1DomainSpecInitProviderKmsKeyIdSelector
     public V1beta1DomainSpecInitProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainSpecInitProviderRetentionPolicy
 {
     /// <summary>The retention policy for data stored on an Amazon Elastic File System (EFS) volume. Valid values are Retain or Delete.  Default value is Retain.</summary>
@@ -2515,6 +2646,7 @@ public enum V1beta1DomainSpecInitProviderSubnetIdRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DomainSpecInitProviderSubnetIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2528,6 +2660,7 @@ public partial class V1beta1DomainSpecInitProviderSubnetIdRefsPolicy
     public V1beta1DomainSpecInitProviderSubnetIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1DomainSpecInitProviderSubnetIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2559,6 +2692,7 @@ public enum V1beta1DomainSpecInitProviderSubnetIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DomainSpecInitProviderSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2572,6 +2706,7 @@ public partial class V1beta1DomainSpecInitProviderSubnetIdSelectorPolicy
     public V1beta1DomainSpecInitProviderSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 public partial class V1beta1DomainSpecInitProviderSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2607,6 +2742,7 @@ public enum V1beta1DomainSpecInitProviderVpcIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DomainSpecInitProviderVpcIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2620,6 +2756,7 @@ public partial class V1beta1DomainSpecInitProviderVpcIdRefPolicy
     public V1beta1DomainSpecInitProviderVpcIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1DomainSpecInitProviderVpcIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2651,6 +2788,7 @@ public enum V1beta1DomainSpecInitProviderVpcIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DomainSpecInitProviderVpcIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2664,6 +2802,7 @@ public partial class V1beta1DomainSpecInitProviderVpcIdSelectorPolicy
     public V1beta1DomainSpecInitProviderVpcIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1DomainSpecInitProviderVpcIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2679,6 +2818,7 @@ public partial class V1beta1DomainSpecInitProviderVpcIdSelector
     public V1beta1DomainSpecInitProviderVpcIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1DomainSpecInitProvider
 {
     /// <summary>Specifies the VPC used for non-EFS traffic. The default value is PublicInternetOnly. Valid values are PublicInternetOnly and VpcOnly.</summary>
@@ -2796,6 +2936,7 @@ public enum V1beta1DomainSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DomainSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2809,6 +2950,7 @@ public partial class V1beta1DomainSpecProviderConfigRefPolicy
     public V1beta1DomainSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1DomainSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2840,6 +2982,7 @@ public enum V1beta1DomainSpecPublishConnectionDetailsToConfigRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DomainSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2853,6 +2996,7 @@ public partial class V1beta1DomainSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1DomainSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1DomainSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2864,6 +3008,7 @@ public partial class V1beta1DomainSpecPublishConnectionDetailsToConfigRef
     public V1beta1DomainSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1DomainSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -2879,6 +3024,7 @@ public partial class V1beta1DomainSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1DomainSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -2894,6 +3040,7 @@ public partial class V1beta1DomainSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1DomainSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -2905,6 +3052,7 @@ public partial class V1beta1DomainSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>DomainSpec defines the desired state of Domain</summary>
 public partial class V1beta1DomainSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -2937,6 +3085,7 @@ public partial class V1beta1DomainSpec
     public V1beta1DomainSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultSpaceSettingsJupyterServerAppSettingsCodeRepository
 {
     /// <summary>The URL of the Git repository.</summary>
@@ -2944,6 +3093,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultSpaceSettingsJupyterSer
     public string? RepositoryUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultSpaceSettingsJupyterServerAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -2967,6 +3117,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultSpaceSettingsJupyterSer
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultSpaceSettingsJupyterServerAppSettings
 {
     /// <summary>A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see code_repository Block below.</summary>
@@ -2982,6 +3133,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultSpaceSettingsJupyterSer
     public IList<string>? LifecycleConfigArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultSpaceSettingsKernelGatewayAppSettingsCustomImage
 {
     /// <summary>The name of the App Image Config.</summary>
@@ -2997,6 +3149,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultSpaceSettingsKernelGate
     public double? ImageVersionNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultSpaceSettingsKernelGatewayAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -3020,6 +3173,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultSpaceSettingsKernelGate
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultSpaceSettingsKernelGatewayAppSettings
 {
     /// <summary>A list of custom SageMaker images that are configured to run as a KernelGateway app. see custom_image Block below.</summary>
@@ -3035,6 +3189,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultSpaceSettingsKernelGate
     public IList<string>? LifecycleConfigArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultSpaceSettings
 {
     /// <summary>The execution role for the space.</summary>
@@ -3054,6 +3209,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultSpaceSettings
     public IList<string>? SecurityGroups { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsCanvasAppSettingsDirectDeploySettings
 {
     /// <summary>Describes whether time series forecasting is enabled or disabled in the Canvas app. Valid values are ENABLED and DISABLED.</summary>
@@ -3061,6 +3217,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsCanvasAppSe
     public string? Status { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsCanvasAppSettingsGenerativeAiSettings
 {
     /// <summary>The Amazon Resource Name (ARN) assigned by AWS to this Domain.</summary>
@@ -3068,6 +3225,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsCanvasAppSe
     public string? AmazonBedrockRoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsCanvasAppSettingsIdentityProviderOauthSettings
 {
     /// <summary>The name of the data source that you're connecting to. Canvas currently supports OAuth for Snowflake and Salesforce Data Cloud. Valid values are SalesforceGenie and Snowflake.</summary>
@@ -3083,6 +3241,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsCanvasAppSe
     public string? Status { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsCanvasAppSettingsKendraSettings
 {
     /// <summary>Describes whether time series forecasting is enabled or disabled in the Canvas app. Valid values are ENABLED and DISABLED.</summary>
@@ -3090,6 +3249,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsCanvasAppSe
     public string? Status { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsCanvasAppSettingsModelRegisterSettings
 {
     /// <summary>The Amazon Resource Name (ARN) of the SageMaker model registry account. Required only to register model versions created by a different SageMaker Canvas AWS account than the AWS account in which SageMaker model registry is set up.</summary>
@@ -3101,6 +3261,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsCanvasAppSe
     public string? Status { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsCanvasAppSettingsTimeSeriesForecastingSettings
 {
     /// <summary>The IAM role that Canvas passes to Amazon Forecast for time series forecasting. By default, Canvas uses the execution role specified in the UserProfile that launches the Canvas app. If an execution role is not specified in the UserProfile, Canvas uses the execution role specified in the Domain that owns the UserProfile. To allow time series forecasting, this IAM role should have the AmazonSageMakerCanvasForecastAccess policy attached and forecast.amazonaws.com added in the trust relationship as a service principal.</summary>
@@ -3112,6 +3273,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsCanvasAppSe
     public string? Status { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsCanvasAppSettingsWorkspaceSettings
 {
     /// <summary>The Amazon S3 bucket used to store artifacts generated by Canvas. Updating the Amazon S3 location impacts existing configuration settings, and Canvas users no longer have access to their artifacts. Canvas users must log out and log back in to apply the new location.</summary>
@@ -3123,6 +3285,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsCanvasAppSe
     public string? S3KmsKeyId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsCanvasAppSettings
 {
     /// <summary>The model deployment settings for the SageMaker Canvas application. See direct_deploy_settings Block below.</summary>
@@ -3154,6 +3317,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsCanvasAppSe
     public IList<V1beta1DomainStatusAtProviderDefaultUserSettingsCanvasAppSettingsWorkspaceSettings>? WorkspaceSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsCodeEditorAppSettingsCustomImage
 {
     /// <summary>The name of the App Image Config.</summary>
@@ -3169,6 +3333,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsCodeEditorA
     public double? ImageVersionNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsCodeEditorAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -3192,6 +3357,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsCodeEditorA
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsCodeEditorAppSettings
 {
     /// <summary>A list of custom SageMaker images that are configured to run as a KernelGateway app. see custom_image Block below.</summary>
@@ -3207,6 +3373,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsCodeEditorA
     public IList<string>? LifecycleConfigArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsCustomFileSystemConfigEfsFileSystemConfig
 {
     /// <summary>The ID of your Amazon EFS file system.</summary>
@@ -3218,6 +3385,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsCustomFileS
     public string? FileSystemPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsCustomFileSystemConfig
 {
     /// <summary>The default EBS storage settings for a private space. See efs_file_system_config Block below.</summary>
@@ -3225,6 +3393,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsCustomFileS
     public IList<V1beta1DomainStatusAtProviderDefaultUserSettingsCustomFileSystemConfigEfsFileSystemConfig>? EfsFileSystemConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsCustomPosixUserConfig
 {
     /// <summary>The POSIX group ID.</summary>
@@ -3236,6 +3405,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsCustomPosix
     public double? Uid { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsJupyterLabAppSettingsCodeRepository
 {
     /// <summary>The URL of the Git repository.</summary>
@@ -3243,6 +3413,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsJupyterLabA
     public string? RepositoryUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsJupyterLabAppSettingsCustomImage
 {
     /// <summary>The name of the App Image Config.</summary>
@@ -3258,6 +3429,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsJupyterLabA
     public double? ImageVersionNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsJupyterLabAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -3281,6 +3453,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsJupyterLabA
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsJupyterLabAppSettings
 {
     /// <summary>A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see code_repository Block below.</summary>
@@ -3300,6 +3473,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsJupyterLabA
     public IList<string>? LifecycleConfigArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsJupyterServerAppSettingsCodeRepository
 {
     /// <summary>The URL of the Git repository.</summary>
@@ -3307,6 +3481,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsJupyterServ
     public string? RepositoryUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -3330,6 +3505,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsJupyterServ
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsJupyterServerAppSettings
 {
     /// <summary>A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see code_repository Block below.</summary>
@@ -3345,6 +3521,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsJupyterServ
     public IList<string>? LifecycleConfigArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsKernelGatewayAppSettingsCustomImage
 {
     /// <summary>The name of the App Image Config.</summary>
@@ -3360,6 +3537,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsKernelGatew
     public double? ImageVersionNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -3383,6 +3561,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsKernelGatew
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsKernelGatewayAppSettings
 {
     /// <summary>A list of custom SageMaker images that are configured to run as a KernelGateway app. see custom_image Block below.</summary>
@@ -3398,6 +3577,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsKernelGatew
     public IList<string>? LifecycleConfigArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsRSessionAppSettingsCustomImage
 {
     /// <summary>The name of the App Image Config.</summary>
@@ -3413,6 +3593,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsRSessionApp
     public double? ImageVersionNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsRSessionAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -3436,6 +3617,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsRSessionApp
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsRSessionAppSettings
 {
     /// <summary>A list of custom SageMaker images that are configured to run as a KernelGateway app. see custom_image Block below.</summary>
@@ -3447,6 +3629,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsRSessionApp
     public IList<V1beta1DomainStatusAtProviderDefaultUserSettingsRSessionAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsRStudioServerProAppSettings
 {
     /// <summary>Indicates whether the current user has access to the RStudioServerPro app. Valid values are ENABLED and DISABLED.</summary>
@@ -3458,6 +3641,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsRStudioServ
     public string? UserGroup { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsSharingSettings
 {
     /// <summary>Whether to include the notebook cell output when sharing the notebook. The default is Disabled. Valid values are Allowed and Disabled.</summary>
@@ -3473,6 +3657,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsSharingSett
     public string? S3OutputPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsSpaceStorageSettingsDefaultEbsStorageSettings
 {
     /// <summary>The default size of the EBS storage volume for a private space.</summary>
@@ -3484,6 +3669,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsSpaceStorag
     public double? MaximumEbsVolumeSizeInGb { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsSpaceStorageSettings
 {
     /// <summary>The default EBS storage settings for a private space. See default_ebs_storage_settings Block below.</summary>
@@ -3491,6 +3677,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsSpaceStorag
     public IList<V1beta1DomainStatusAtProviderDefaultUserSettingsSpaceStorageSettingsDefaultEbsStorageSettings>? DefaultEbsStorageSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -3514,6 +3701,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsTensorBoard
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsTensorBoardAppSettings
 {
     /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see default_resource_spec Block below.</summary>
@@ -3521,6 +3709,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsTensorBoard
     public IList<V1beta1DomainStatusAtProviderDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDefaultUserSettings
 {
     /// <summary>The Canvas app settings. See canvas_app_settings Block below.</summary>
@@ -3588,6 +3777,7 @@ public partial class V1beta1DomainStatusAtProviderDefaultUserSettings
     public IList<V1beta1DomainStatusAtProviderDefaultUserSettingsTensorBoardAppSettings>? TensorBoardAppSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDomainSettingsRStudioServerProDomainSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -3611,6 +3801,7 @@ public partial class V1beta1DomainStatusAtProviderDomainSettingsRStudioServerPro
     public string? SagemakerImageVersionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDomainSettingsRStudioServerProDomainSettings
 {
     /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see default_resource_spec Block below.</summary>
@@ -3630,6 +3821,7 @@ public partial class V1beta1DomainStatusAtProviderDomainSettingsRStudioServerPro
     public string? RStudioPackageManagerUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderDomainSettings
 {
     /// <summary>The configuration for attaching a SageMaker user profile name to the execution role as a sts:SourceIdentity key AWS Docs. Valid values are USER_PROFILE_NAME and DISABLED.</summary>
@@ -3645,6 +3837,7 @@ public partial class V1beta1DomainStatusAtProviderDomainSettings
     public IList<string>? SecurityGroupIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProviderRetentionPolicy
 {
     /// <summary>The retention policy for data stored on an Amazon Elastic File System (EFS) volume. Valid values are Retain or Delete.  Default value is Retain.</summary>
@@ -3652,6 +3845,7 @@ public partial class V1beta1DomainStatusAtProviderRetentionPolicy
     public string? HomeEfsFileSystem { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainStatusAtProvider
 {
     /// <summary>Specifies the VPC used for non-EFS traffic. The default value is PublicInternetOnly. Valid values are PublicInternetOnly and VpcOnly.</summary>
@@ -3735,6 +3929,7 @@ public partial class V1beta1DomainStatusAtProvider
     public string? VpcId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1DomainStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -3762,6 +3957,7 @@ public partial class V1beta1DomainStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>DomainStatus defines the observed state of Domain.</summary>
 public partial class V1beta1DomainStatus
 {
     /// <summary></summary>
@@ -3778,6 +3974,7 @@ public partial class V1beta1DomainStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Domain is the Schema for the Domains API. Provides a SageMaker Domain resource.</summary>
 public partial class V1beta1Domain : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DomainSpec>, IStatus<V1beta1DomainStatus>
 {
     public const string KubeApiVersion = "v1beta1";

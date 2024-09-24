@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary>The network this VPN gateway is accepting traffic for.</summary>
 public partial class V1beta1ComputeVPNGatewaySpecNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1ComputeVPNGatewaySpecNetworkRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. When this value is present, the VPN Gateway will be used for IPsec-encrypted Cloud Interconnect; all Egress or Ingress traffic for this VPN Gateway interface will go through the specified interconnect attachment resource. Not currently available publicly.</summary>
 public partial class V1beta1ComputeVPNGatewaySpecVpnInterfacesInterconnectAttachmentRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeInterconnectAttachment` resource.</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1ComputeVPNGatewaySpecVpnInterfacesInterconnectAttach
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeVPNGatewaySpecVpnInterfaces
 {
     /// <summary>Immutable. The numeric ID of this VPN gateway interface.</summary>
@@ -53,6 +56,7 @@ public partial class V1beta1ComputeVPNGatewaySpecVpnInterfaces
     public string? IpAddress { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeVPNGatewaySpec
 {
     /// <summary>Immutable. An optional description of this resource.</summary>
@@ -80,6 +84,7 @@ public partial class V1beta1ComputeVPNGatewaySpec
     public IList<V1beta1ComputeVPNGatewaySpecVpnInterfaces>? VpnInterfaces { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeVPNGatewayStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -103,6 +108,7 @@ public partial class V1beta1ComputeVPNGatewayStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeVPNGatewayStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -119,6 +125,7 @@ public partial class V1beta1ComputeVPNGatewayStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ComputeVPNGateway : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeVPNGatewaySpec>, IStatus<V1beta1ComputeVPNGatewayStatus>
 {
     public const string KubeApiVersion = "v1beta1";

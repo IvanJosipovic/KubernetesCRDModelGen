@@ -18,6 +18,7 @@ public enum V1beta1LocationSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1LocationSpecForProviderCountry
 {
     /// <summary>List of countries and/or regions in two-letter format specified by ISO 3166-2.</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1LocationSpecForProviderCountry
     public bool? IncludeUnknownCountriesAndRegions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LocationSpecForProviderIp
 {
     /// <summary>List of IP address ranges in IPv4 CIDR format (e.g. 1.2.3.4/32) or any allowable IPv6 format from IETF RFC596. Each CIDR prefix must be /8 or larger.</summary>
@@ -40,6 +42,7 @@ public partial class V1beta1LocationSpecForProviderIp
     public bool? Trusted { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LocationSpecForProvider
 {
     /// <summary>A country block as documented below, which configures a country-based named location.</summary>
@@ -55,6 +58,7 @@ public partial class V1beta1LocationSpecForProvider
     public IList<V1beta1LocationSpecForProviderIp>? Ip { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LocationSpecInitProviderCountry
 {
     /// <summary>List of countries and/or regions in two-letter format specified by ISO 3166-2.</summary>
@@ -66,6 +70,7 @@ public partial class V1beta1LocationSpecInitProviderCountry
     public bool? IncludeUnknownCountriesAndRegions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LocationSpecInitProviderIp
 {
     /// <summary>List of IP address ranges in IPv4 CIDR format (e.g. 1.2.3.4/32) or any allowable IPv6 format from IETF RFC596. Each CIDR prefix must be /8 or larger.</summary>
@@ -77,6 +82,7 @@ public partial class V1beta1LocationSpecInitProviderIp
     public bool? Trusted { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1LocationSpecInitProvider
 {
     /// <summary>A country block as documented below, which configures a country-based named location.</summary>
@@ -134,6 +140,7 @@ public enum V1beta1LocationSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LocationSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -147,6 +154,7 @@ public partial class V1beta1LocationSpecProviderConfigRefPolicy
     public V1beta1LocationSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1LocationSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -178,6 +186,7 @@ public enum V1beta1LocationSpecPublishConnectionDetailsToConfigRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LocationSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -191,6 +200,7 @@ public partial class V1beta1LocationSpecPublishConnectionDetailsToConfigRefPolic
     public V1beta1LocationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1LocationSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -202,6 +212,7 @@ public partial class V1beta1LocationSpecPublishConnectionDetailsToConfigRef
     public V1beta1LocationSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1LocationSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -217,6 +228,7 @@ public partial class V1beta1LocationSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1LocationSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -232,6 +244,7 @@ public partial class V1beta1LocationSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1LocationSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -243,6 +256,7 @@ public partial class V1beta1LocationSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>LocationSpec defines the desired state of Location</summary>
 public partial class V1beta1LocationSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -275,6 +289,7 @@ public partial class V1beta1LocationSpec
     public V1beta1LocationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LocationStatusAtProviderCountry
 {
     /// <summary>List of countries and/or regions in two-letter format specified by ISO 3166-2.</summary>
@@ -286,6 +301,7 @@ public partial class V1beta1LocationStatusAtProviderCountry
     public bool? IncludeUnknownCountriesAndRegions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LocationStatusAtProviderIp
 {
     /// <summary>List of IP address ranges in IPv4 CIDR format (e.g. 1.2.3.4/32) or any allowable IPv6 format from IETF RFC596. Each CIDR prefix must be /8 or larger.</summary>
@@ -297,6 +313,7 @@ public partial class V1beta1LocationStatusAtProviderIp
     public bool? Trusted { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LocationStatusAtProvider
 {
     /// <summary>A country block as documented below, which configures a country-based named location.</summary>
@@ -316,6 +333,7 @@ public partial class V1beta1LocationStatusAtProvider
     public IList<V1beta1LocationStatusAtProviderIp>? Ip { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1LocationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -343,6 +361,7 @@ public partial class V1beta1LocationStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>LocationStatus defines the observed state of Location.</summary>
 public partial class V1beta1LocationStatus
 {
     /// <summary></summary>
@@ -359,6 +378,7 @@ public partial class V1beta1LocationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Location is the Schema for the Locations API.</summary>
 public partial class V1beta1Location : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LocationSpec>, IStatus<V1beta1LocationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

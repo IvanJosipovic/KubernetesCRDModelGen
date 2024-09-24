@@ -38,6 +38,7 @@ public enum V1beta1MonitorDataCollectionRuleSpecForProviderDataCollectionEndpoin
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataCollectionEndpointIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataCollecti
     public V1beta1MonitorDataCollectionRuleSpecForProviderDataCollectionEndpointIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a MonitorDataCollectionEndpoint in insights to populate dataCollectionEndpointId.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataCollectionEndpointIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1MonitorDataCollectionRuleSpecForProviderDataCollectionEndpoin
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataCollectionEndpointIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataCollecti
     public V1beta1MonitorDataCollectionRuleSpecForProviderDataCollectionEndpointIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a MonitorDataCollectionEndpoint in insights to populate dataCollectionEndpointId.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataCollectionEndpointIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataCollecti
     public V1beta1MonitorDataCollectionRuleSpecForProviderDataCollectionEndpointIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataFlow
 {
     /// <summary>The built-in transform to transform stream data.</summary>
@@ -133,6 +138,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataFlow
     public string? TransformKql { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesDataImportEventHubDataSource
 {
     /// <summary>The Event Hub consumer group name.</summary>
@@ -148,6 +154,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesD
     public string? Stream { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesDataImport
 {
     /// <summary>An event_hub_data_source block as defined below.</summary>
@@ -155,6 +162,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesD
     public IList<V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesDataImportEventHubDataSource>? EventHubDataSource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesExtension
 {
     /// <summary>A JSON String which specifies the extension setting.</summary>
@@ -178,6 +186,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesE
     public IList<string>? Streams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesIisLog
 {
     /// <summary>Specifies a list of absolute paths where the log files are located.</summary>
@@ -193,6 +202,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesI
     public IList<string>? Streams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesLogFileSettingsText
 {
     /// <summary>The timestamp format of the text log files. Possible values are ISO 8601, YYYY-MM-DD HH:MM:SS, M/D/YYYY HH:MM:SS AM/PM, Mon DD, YYYY HH:MM:SS, yyMMdd HH:mm:ss, ddMMyy HH:mm:ss, MMM d hh:mm:ss, dd/MMM/yyyy:HH:mm:ss zzz,and yyyy-MM-ddTHH:mm:ssK.</summary>
@@ -200,6 +210,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesL
     public string? RecordStartTimestampFormat { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesLogFileSettings
 {
     /// <summary>A text block as defined below.</summary>
@@ -207,6 +218,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesL
     public IList<V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesLogFileSettingsText>? Text { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesLogFile
 {
     /// <summary>Specifies a list of file patterns where the log files are located. For example, C:\\JavaLogs\\*.log.</summary>
@@ -230,6 +242,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesL
     public IList<string>? Streams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesPerformanceCounter
 {
     /// <summary>Specifies a list of specifier names of the performance counters you want to collect. To get a list of performance counters on Windows, run the command typeperf. Please see this document for more information.</summary>
@@ -249,6 +262,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesP
     public IList<string>? Streams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesPlatformTelemetry
 {
     /// <summary>The name which should be used for this data source. This name should be unique across all data sources regardless of type within the Data Collection Rule.</summary>
@@ -260,6 +274,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesP
     public IList<string>? Streams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesPrometheusForwarderLabelIncludeFilter
 {
     /// <summary>The label of the filter. This label should be unique across all label_include_fileter block. Possible value is microsoft_metrics_include_label.</summary>
@@ -271,6 +286,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesP
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesPrometheusForwarder
 {
     /// <summary>One or more label_include_filter blocks as defined above.</summary>
@@ -286,6 +302,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesP
     public IList<string>? Streams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesSyslog
 {
     /// <summary>Specifies a list of facility names. Use a wildcard * to collect logs for all facility names. Possible values are alert, *, audit, auth, authpriv, clock, cron, daemon, ftp, kern, local5, local4, local1, local7, local6, local3, local2, local0, lpr, mail, mark, news, nopri, ntp, syslog, user and uucp.</summary>
@@ -305,6 +322,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesS
     public IList<string>? Streams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesWindowsEventLog
 {
     /// <summary>The name which should be used for this data source. This name should be unique across all data sources regardless of type within the Data Collection Rule.</summary>
@@ -320,6 +338,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesW
     public IList<string>? XPathQueries { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesWindowsFirewallLog
 {
     /// <summary>The name which should be used for this data source. This name should be unique across all data sources regardless of type within the Data Collection Rule.</summary>
@@ -331,6 +350,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesW
     public IList<string>? Streams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSources
 {
     /// <summary>A data_import block as defined above.</summary>
@@ -374,6 +394,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSources
     public IList<V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesWindowsFirewallLog>? WindowsFirewallLog { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsAzureMonitorMetrics
 {
     /// <summary>The name which should be used for this data source. This name should be unique across all data sources regardless of type within the Data Collection Rule.</summary>
@@ -401,6 +422,7 @@ public enum V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsEventHubE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsEventHubEventHubIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -414,6 +436,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     public V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsEventHubEventHubIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a EventHub in eventhub to populate eventHubId.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsEventHubEventHubIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -445,6 +468,7 @@ public enum V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsEventHubE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsEventHubEventHubIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -458,6 +482,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     public V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsEventHubEventHubIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a EventHub in eventhub to populate eventHubId.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsEventHubEventHubIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -473,6 +498,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     public V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsEventHubEventHubIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsEventHub
 {
     /// <summary>The resource ID of the Event Hub.</summary>
@@ -492,6 +518,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsEventHubDirect
 {
     /// <summary>The resource ID of the Event Hub.</summary>
@@ -523,6 +550,7 @@ public enum V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsLogAnalyt
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsLogAnalyticsWorkspaceResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -536,6 +564,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     public V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsLogAnalyticsWorkspaceResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Workspace in operationalinsights to populate workspaceResourceId.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsLogAnalyticsWorkspaceResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -567,6 +596,7 @@ public enum V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsLogAnalyt
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsLogAnalyticsWorkspaceResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -580,6 +610,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     public V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsLogAnalyticsWorkspaceResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Workspace in operationalinsights to populate workspaceResourceId.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsLogAnalyticsWorkspaceResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -595,6 +626,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     public V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsLogAnalyticsWorkspaceResourceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsLogAnalytics
 {
     /// <summary>The name which should be used for this data source. This name should be unique across all data sources regardless of type within the Data Collection Rule.</summary>
@@ -614,6 +646,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     public V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsLogAnalyticsWorkspaceResourceIdSelector? WorkspaceResourceIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsMonitorAccount
 {
     /// <summary>The resource ID of the Monitor Account.</summary>
@@ -645,6 +678,7 @@ public enum V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageBl
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageBlobContainerNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -658,6 +692,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     public V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageBlobContainerNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Container in storage to populate containerName.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageBlobContainerNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -689,6 +724,7 @@ public enum V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageBl
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageBlobContainerNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -702,6 +738,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     public V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageBlobContainerNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Container in storage to populate containerName.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageBlobContainerNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -737,6 +774,7 @@ public enum V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageBl
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageBlobStorageAccountIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -750,6 +788,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     public V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageBlobStorageAccountIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageBlobStorageAccountIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -781,6 +820,7 @@ public enum V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageBl
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageBlobStorageAccountIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -794,6 +834,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     public V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageBlobStorageAccountIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageBlobStorageAccountIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -809,6 +850,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     public V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageBlobStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageBlob
 {
     /// <summary>The Storage Container name.</summary>
@@ -840,6 +882,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     public V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageBlobStorageAccountIdSelector? StorageAccountIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageBlobDirect
 {
     /// <summary>The Storage Container name.</summary>
@@ -855,6 +898,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     public string? StorageAccountId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageTableDirect
 {
     /// <summary>The name which should be used for this data source. This name should be unique across all data sources regardless of type within the Data Collection Rule.</summary>
@@ -870,6 +914,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     public string? TableName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
 {
     /// <summary>A azure_monitor_metrics block as defined above.</summary>
@@ -905,6 +950,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDestinations
     public IList<V1beta1MonitorDataCollectionRuleSpecForProviderDestinationsStorageTableDirect>? StorageTableDirect { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderIdentity
 {
     /// <summary>A list of User Assigned Managed Identity IDs to be assigned to this Data Collection Rule. Currently, up to 1 identity is supported.</summary>
@@ -936,6 +982,7 @@ public enum V1beta1MonitorDataCollectionRuleSpecForProviderResourceGroupNameRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -949,6 +996,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderResourceGrou
     public V1beta1MonitorDataCollectionRuleSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -980,6 +1028,7 @@ public enum V1beta1MonitorDataCollectionRuleSpecForProviderResourceGroupNameSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -993,6 +1042,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderResourceGrou
     public V1beta1MonitorDataCollectionRuleSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1008,6 +1058,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderResourceGrou
     public V1beta1MonitorDataCollectionRuleSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderStreamDeclarationColumn
 {
     /// <summary>The name which should be used for this data source. This name should be unique across all data sources regardless of type within the Data Collection Rule.</summary>
@@ -1019,6 +1070,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderStreamDeclar
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProviderStreamDeclaration
 {
     /// <summary>One or more column blocks as defined above.</summary>
@@ -1030,6 +1082,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderStreamDeclar
     public string? StreamName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecForProvider
 {
     /// <summary>The resource ID of the Data Collection Endpoint that this rule can be used with.</summary>
@@ -1113,6 +1166,7 @@ public enum V1beta1MonitorDataCollectionRuleSpecInitProviderDataCollectionEndpoi
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataCollectionEndpointIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1126,6 +1180,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataCollect
     public V1beta1MonitorDataCollectionRuleSpecInitProviderDataCollectionEndpointIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a MonitorDataCollectionEndpoint in insights to populate dataCollectionEndpointId.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataCollectionEndpointIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1157,6 +1212,7 @@ public enum V1beta1MonitorDataCollectionRuleSpecInitProviderDataCollectionEndpoi
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataCollectionEndpointIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1170,6 +1226,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataCollect
     public V1beta1MonitorDataCollectionRuleSpecInitProviderDataCollectionEndpointIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a MonitorDataCollectionEndpoint in insights to populate dataCollectionEndpointId.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataCollectionEndpointIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1185,6 +1242,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataCollect
     public V1beta1MonitorDataCollectionRuleSpecInitProviderDataCollectionEndpointIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataFlow
 {
     /// <summary>The built-in transform to transform stream data.</summary>
@@ -1208,6 +1266,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataFlow
     public string? TransformKql { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSourcesDataImportEventHubDataSource
 {
     /// <summary>The Event Hub consumer group name.</summary>
@@ -1223,6 +1282,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSources
     public string? Stream { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSourcesDataImport
 {
     /// <summary>An event_hub_data_source block as defined below.</summary>
@@ -1230,6 +1290,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSources
     public IList<V1beta1MonitorDataCollectionRuleSpecInitProviderDataSourcesDataImportEventHubDataSource>? EventHubDataSource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSourcesExtension
 {
     /// <summary>A JSON String which specifies the extension setting.</summary>
@@ -1253,6 +1314,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSources
     public IList<string>? Streams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSourcesIisLog
 {
     /// <summary>Specifies a list of absolute paths where the log files are located.</summary>
@@ -1268,6 +1330,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSources
     public IList<string>? Streams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSourcesLogFileSettingsText
 {
     /// <summary>The timestamp format of the text log files. Possible values are ISO 8601, YYYY-MM-DD HH:MM:SS, M/D/YYYY HH:MM:SS AM/PM, Mon DD, YYYY HH:MM:SS, yyMMdd HH:mm:ss, ddMMyy HH:mm:ss, MMM d hh:mm:ss, dd/MMM/yyyy:HH:mm:ss zzz,and yyyy-MM-ddTHH:mm:ssK.</summary>
@@ -1275,6 +1338,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSources
     public string? RecordStartTimestampFormat { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSourcesLogFileSettings
 {
     /// <summary>A text block as defined below.</summary>
@@ -1282,6 +1346,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSources
     public IList<V1beta1MonitorDataCollectionRuleSpecInitProviderDataSourcesLogFileSettingsText>? Text { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSourcesLogFile
 {
     /// <summary>Specifies a list of file patterns where the log files are located. For example, C:\\JavaLogs\\*.log.</summary>
@@ -1305,6 +1370,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSources
     public IList<string>? Streams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSourcesPerformanceCounter
 {
     /// <summary>Specifies a list of specifier names of the performance counters you want to collect. To get a list of performance counters on Windows, run the command typeperf. Please see this document for more information.</summary>
@@ -1324,6 +1390,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSources
     public IList<string>? Streams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSourcesPlatformTelemetry
 {
     /// <summary>The name which should be used for this data source. This name should be unique across all data sources regardless of type within the Data Collection Rule.</summary>
@@ -1335,6 +1402,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSources
     public IList<string>? Streams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSourcesPrometheusForwarderLabelIncludeFilter
 {
     /// <summary>The label of the filter. This label should be unique across all label_include_fileter block. Possible value is microsoft_metrics_include_label.</summary>
@@ -1346,6 +1414,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSources
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSourcesPrometheusForwarder
 {
     /// <summary>One or more label_include_filter blocks as defined above.</summary>
@@ -1361,6 +1430,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSources
     public IList<string>? Streams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSourcesSyslog
 {
     /// <summary>Specifies a list of facility names. Use a wildcard * to collect logs for all facility names. Possible values are alert, *, audit, auth, authpriv, clock, cron, daemon, ftp, kern, local5, local4, local1, local7, local6, local3, local2, local0, lpr, mail, mark, news, nopri, ntp, syslog, user and uucp.</summary>
@@ -1380,6 +1450,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSources
     public IList<string>? Streams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSourcesWindowsEventLog
 {
     /// <summary>The name which should be used for this data source. This name should be unique across all data sources regardless of type within the Data Collection Rule.</summary>
@@ -1395,6 +1466,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSources
     public IList<string>? XPathQueries { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSourcesWindowsFirewallLog
 {
     /// <summary>The name which should be used for this data source. This name should be unique across all data sources regardless of type within the Data Collection Rule.</summary>
@@ -1406,6 +1478,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSources
     public IList<string>? Streams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSources
 {
     /// <summary>A data_import block as defined above.</summary>
@@ -1449,6 +1522,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSources
     public IList<V1beta1MonitorDataCollectionRuleSpecInitProviderDataSourcesWindowsFirewallLog>? WindowsFirewallLog { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsAzureMonitorMetrics
 {
     /// <summary>The name which should be used for this data source. This name should be unique across all data sources regardless of type within the Data Collection Rule.</summary>
@@ -1476,6 +1550,7 @@ public enum V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsEventHub
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsEventHubEventHubIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1489,6 +1564,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     public V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsEventHubEventHubIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a EventHub in eventhub to populate eventHubId.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsEventHubEventHubIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1520,6 +1596,7 @@ public enum V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsEventHub
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsEventHubEventHubIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1533,6 +1610,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     public V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsEventHubEventHubIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a EventHub in eventhub to populate eventHubId.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsEventHubEventHubIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1548,6 +1626,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     public V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsEventHubEventHubIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsEventHub
 {
     /// <summary>The resource ID of the Event Hub.</summary>
@@ -1567,6 +1646,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsEventHubDirect
 {
     /// <summary>The resource ID of the Event Hub.</summary>
@@ -1598,6 +1678,7 @@ public enum V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsLogAnaly
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsLogAnalyticsWorkspaceResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1611,6 +1692,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     public V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsLogAnalyticsWorkspaceResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Workspace in operationalinsights to populate workspaceResourceId.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsLogAnalyticsWorkspaceResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1642,6 +1724,7 @@ public enum V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsLogAnaly
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsLogAnalyticsWorkspaceResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1655,6 +1738,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     public V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsLogAnalyticsWorkspaceResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Workspace in operationalinsights to populate workspaceResourceId.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsLogAnalyticsWorkspaceResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1670,6 +1754,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     public V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsLogAnalyticsWorkspaceResourceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsLogAnalytics
 {
     /// <summary>The name which should be used for this data source. This name should be unique across all data sources regardless of type within the Data Collection Rule.</summary>
@@ -1689,6 +1774,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     public V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsLogAnalyticsWorkspaceResourceIdSelector? WorkspaceResourceIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsMonitorAccount
 {
     /// <summary>The resource ID of the Monitor Account.</summary>
@@ -1720,6 +1806,7 @@ public enum V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageB
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageBlobContainerNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1733,6 +1820,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     public V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageBlobContainerNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Container in storage to populate containerName.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageBlobContainerNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1764,6 +1852,7 @@ public enum V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageB
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageBlobContainerNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1777,6 +1866,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     public V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageBlobContainerNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Container in storage to populate containerName.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageBlobContainerNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1812,6 +1902,7 @@ public enum V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageB
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageBlobStorageAccountIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1825,6 +1916,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     public V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageBlobStorageAccountIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageBlobStorageAccountIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1856,6 +1948,7 @@ public enum V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageB
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageBlobStorageAccountIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1869,6 +1962,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     public V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageBlobStorageAccountIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageBlobStorageAccountIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1884,6 +1978,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     public V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageBlobStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageBlob
 {
     /// <summary>The Storage Container name.</summary>
@@ -1915,6 +2010,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     public V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageBlobStorageAccountIdSelector? StorageAccountIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageBlobDirect
 {
     /// <summary>The Storage Container name.</summary>
@@ -1930,6 +2026,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     public string? StorageAccountId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageTableDirect
 {
     /// <summary>The name which should be used for this data source. This name should be unique across all data sources regardless of type within the Data Collection Rule.</summary>
@@ -1945,6 +2042,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     public string? TableName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestinations
 {
     /// <summary>A azure_monitor_metrics block as defined above.</summary>
@@ -1980,6 +2078,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDestination
     public IList<V1beta1MonitorDataCollectionRuleSpecInitProviderDestinationsStorageTableDirect>? StorageTableDirect { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderIdentity
 {
     /// <summary>A list of User Assigned Managed Identity IDs to be assigned to this Data Collection Rule. Currently, up to 1 identity is supported.</summary>
@@ -1991,6 +2090,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderStreamDeclarationColumn
 {
     /// <summary>The name which should be used for this data source. This name should be unique across all data sources regardless of type within the Data Collection Rule.</summary>
@@ -2002,6 +2102,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderStreamDecla
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderStreamDeclaration
 {
     /// <summary>One or more column blocks as defined above.</summary>
@@ -2013,6 +2114,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderStreamDecla
     public string? StreamName { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecInitProvider
 {
     /// <summary>The resource ID of the Data Collection Endpoint that this rule can be used with.</summary>
@@ -2106,6 +2208,7 @@ public enum V1beta1MonitorDataCollectionRuleSpecProviderConfigRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2119,6 +2222,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecProviderConfigRefPolicy
     public V1beta1MonitorDataCollectionRuleSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2150,6 +2254,7 @@ public enum V1beta1MonitorDataCollectionRuleSpecPublishConnectionDetailsToConfig
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2163,6 +2268,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecPublishConnectionDetail
     public V1beta1MonitorDataCollectionRuleSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2174,6 +2280,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecPublishConnectionDetail
     public V1beta1MonitorDataCollectionRuleSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -2189,6 +2296,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecPublishConnectionDetail
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -2204,6 +2312,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecPublishConnectionDetail
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -2215,6 +2324,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecWriteConnectionSecretTo
     public string Namespace { get; set; }
 }
 
+/// <summary>MonitorDataCollectionRuleSpec defines the desired state of MonitorDataCollectionRule</summary>
 public partial class V1beta1MonitorDataCollectionRuleSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -2247,6 +2357,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpec
     public V1beta1MonitorDataCollectionRuleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataFlow
 {
     /// <summary>The built-in transform to transform stream data.</summary>
@@ -2270,6 +2381,7 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataFlow
     public string? TransformKql { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSourcesDataImportEventHubDataSource
 {
     /// <summary>The Event Hub consumer group name.</summary>
@@ -2285,6 +2397,7 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSources
     public string? Stream { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSourcesDataImport
 {
     /// <summary>An event_hub_data_source block as defined below.</summary>
@@ -2292,6 +2405,7 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSources
     public IList<V1beta1MonitorDataCollectionRuleStatusAtProviderDataSourcesDataImportEventHubDataSource>? EventHubDataSource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSourcesExtension
 {
     /// <summary>A JSON String which specifies the extension setting.</summary>
@@ -2315,6 +2429,7 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSources
     public IList<string>? Streams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSourcesIisLog
 {
     /// <summary>Specifies a list of absolute paths where the log files are located.</summary>
@@ -2330,6 +2445,7 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSources
     public IList<string>? Streams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSourcesLogFileSettingsText
 {
     /// <summary>The timestamp format of the text log files. Possible values are ISO 8601, YYYY-MM-DD HH:MM:SS, M/D/YYYY HH:MM:SS AM/PM, Mon DD, YYYY HH:MM:SS, yyMMdd HH:mm:ss, ddMMyy HH:mm:ss, MMM d hh:mm:ss, dd/MMM/yyyy:HH:mm:ss zzz,and yyyy-MM-ddTHH:mm:ssK.</summary>
@@ -2337,6 +2453,7 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSources
     public string? RecordStartTimestampFormat { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSourcesLogFileSettings
 {
     /// <summary>A text block as defined below.</summary>
@@ -2344,6 +2461,7 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSources
     public IList<V1beta1MonitorDataCollectionRuleStatusAtProviderDataSourcesLogFileSettingsText>? Text { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSourcesLogFile
 {
     /// <summary>Specifies a list of file patterns where the log files are located. For example, C:\\JavaLogs\\*.log.</summary>
@@ -2367,6 +2485,7 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSources
     public IList<string>? Streams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSourcesPerformanceCounter
 {
     /// <summary>Specifies a list of specifier names of the performance counters you want to collect. To get a list of performance counters on Windows, run the command typeperf. Please see this document for more information.</summary>
@@ -2386,6 +2505,7 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSources
     public IList<string>? Streams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSourcesPlatformTelemetry
 {
     /// <summary>The name which should be used for this data source. This name should be unique across all data sources regardless of type within the Data Collection Rule.</summary>
@@ -2397,6 +2517,7 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSources
     public IList<string>? Streams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSourcesPrometheusForwarderLabelIncludeFilter
 {
     /// <summary>The label of the filter. This label should be unique across all label_include_fileter block. Possible value is microsoft_metrics_include_label.</summary>
@@ -2408,6 +2529,7 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSources
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSourcesPrometheusForwarder
 {
     /// <summary>One or more label_include_filter blocks as defined above.</summary>
@@ -2423,6 +2545,7 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSources
     public IList<string>? Streams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSourcesSyslog
 {
     /// <summary>Specifies a list of facility names. Use a wildcard * to collect logs for all facility names. Possible values are alert, *, audit, auth, authpriv, clock, cron, daemon, ftp, kern, local5, local4, local1, local7, local6, local3, local2, local0, lpr, mail, mark, news, nopri, ntp, syslog, user and uucp.</summary>
@@ -2442,6 +2565,7 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSources
     public IList<string>? Streams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSourcesWindowsEventLog
 {
     /// <summary>The name which should be used for this data source. This name should be unique across all data sources regardless of type within the Data Collection Rule.</summary>
@@ -2457,6 +2581,7 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSources
     public IList<string>? XPathQueries { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSourcesWindowsFirewallLog
 {
     /// <summary>The name which should be used for this data source. This name should be unique across all data sources regardless of type within the Data Collection Rule.</summary>
@@ -2468,6 +2593,7 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSources
     public IList<string>? Streams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSources
 {
     /// <summary>A data_import block as defined above.</summary>
@@ -2511,6 +2637,7 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSources
     public IList<V1beta1MonitorDataCollectionRuleStatusAtProviderDataSourcesWindowsFirewallLog>? WindowsFirewallLog { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDestinationsAzureMonitorMetrics
 {
     /// <summary>The name which should be used for this data source. This name should be unique across all data sources regardless of type within the Data Collection Rule.</summary>
@@ -2518,6 +2645,7 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDestination
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDestinationsEventHub
 {
     /// <summary>The resource ID of the Event Hub.</summary>
@@ -2529,6 +2657,7 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDestination
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDestinationsEventHubDirect
 {
     /// <summary>The resource ID of the Event Hub.</summary>
@@ -2540,6 +2669,7 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDestination
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDestinationsLogAnalytics
 {
     /// <summary>The name which should be used for this data source. This name should be unique across all data sources regardless of type within the Data Collection Rule.</summary>
@@ -2551,6 +2681,7 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDestination
     public string? WorkspaceResourceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDestinationsMonitorAccount
 {
     /// <summary>The resource ID of the Monitor Account.</summary>
@@ -2562,6 +2693,7 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDestination
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDestinationsStorageBlob
 {
     /// <summary>The Storage Container name.</summary>
@@ -2577,6 +2709,7 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDestination
     public string? StorageAccountId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDestinationsStorageBlobDirect
 {
     /// <summary>The Storage Container name.</summary>
@@ -2592,6 +2725,7 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDestination
     public string? StorageAccountId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDestinationsStorageTableDirect
 {
     /// <summary>The name which should be used for this data source. This name should be unique across all data sources regardless of type within the Data Collection Rule.</summary>
@@ -2607,6 +2741,7 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDestination
     public string? TableName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDestinations
 {
     /// <summary>A azure_monitor_metrics block as defined above.</summary>
@@ -2642,6 +2777,7 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDestination
     public IList<V1beta1MonitorDataCollectionRuleStatusAtProviderDestinationsStorageTableDirect>? StorageTableDirect { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderIdentity
 {
     /// <summary>A list of User Assigned Managed Identity IDs to be assigned to this Data Collection Rule. Currently, up to 1 identity is supported.</summary>
@@ -2661,6 +2797,7 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderStreamDeclarationColumn
 {
     /// <summary>The name which should be used for this data source. This name should be unique across all data sources regardless of type within the Data Collection Rule.</summary>
@@ -2672,6 +2809,7 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderStreamDecla
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderStreamDeclaration
 {
     /// <summary>One or more column blocks as defined above.</summary>
@@ -2683,6 +2821,7 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderStreamDecla
     public string? StreamName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorDataCollectionRuleStatusAtProvider
 {
     /// <summary>The resource ID of the Data Collection Endpoint that this rule can be used with.</summary>
@@ -2738,6 +2877,7 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1MonitorDataCollectionRuleStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2765,6 +2905,7 @@ public partial class V1beta1MonitorDataCollectionRuleStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>MonitorDataCollectionRuleStatus defines the observed state of MonitorDataCollectionRule.</summary>
 public partial class V1beta1MonitorDataCollectionRuleStatus
 {
     /// <summary></summary>
@@ -2781,6 +2922,7 @@ public partial class V1beta1MonitorDataCollectionRuleStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>MonitorDataCollectionRule is the Schema for the MonitorDataCollectionRules API. Manages a Data Collection Rule.</summary>
 public partial class V1beta1MonitorDataCollectionRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MonitorDataCollectionRuleSpec>, IStatus<V1beta1MonitorDataCollectionRuleStatus>
 {
     public const string KubeApiVersion = "v1beta1";

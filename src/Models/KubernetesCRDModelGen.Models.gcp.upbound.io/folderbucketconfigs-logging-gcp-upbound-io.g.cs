@@ -18,6 +18,7 @@ public enum V1beta1FolderBucketConfigSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1FolderBucketConfigSpecForProviderCmekSettings
 {
     /// <summary>The resource name of the bucket. For example: "folders/my-folder-id/locations/my-location/buckets/my-bucket-id"</summary>
@@ -45,6 +46,7 @@ public enum V1beta1FolderBucketConfigSpecForProviderFolderRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FolderBucketConfigSpecForProviderFolderRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -58,6 +60,7 @@ public partial class V1beta1FolderBucketConfigSpecForProviderFolderRefPolicy
     public V1beta1FolderBucketConfigSpecForProviderFolderRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Folder in cloudplatform to populate folder.</summary>
 public partial class V1beta1FolderBucketConfigSpecForProviderFolderRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -89,6 +92,7 @@ public enum V1beta1FolderBucketConfigSpecForProviderFolderSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FolderBucketConfigSpecForProviderFolderSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -102,6 +106,7 @@ public partial class V1beta1FolderBucketConfigSpecForProviderFolderSelectorPolic
     public V1beta1FolderBucketConfigSpecForProviderFolderSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Folder in cloudplatform to populate folder.</summary>
 public partial class V1beta1FolderBucketConfigSpecForProviderFolderSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -117,6 +122,7 @@ public partial class V1beta1FolderBucketConfigSpecForProviderFolderSelector
     public V1beta1FolderBucketConfigSpecForProviderFolderSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FolderBucketConfigSpecForProviderIndexConfigs
 {
     /// <summary>The LogEntry field path to index. Note that some paths are automatically indexed, and other paths are not eligible for indexing. See indexing documentation for details.</summary>
@@ -128,6 +134,7 @@ public partial class V1beta1FolderBucketConfigSpecForProviderIndexConfigs
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FolderBucketConfigSpecForProvider
 {
     /// <summary>The name of the logging bucket. Logging automatically creates two log buckets: _Required and _Default.</summary>
@@ -167,6 +174,7 @@ public partial class V1beta1FolderBucketConfigSpecForProvider
     public double? RetentionDays { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FolderBucketConfigSpecInitProviderCmekSettings
 {
     /// <summary>The resource name of the bucket. For example: "folders/my-folder-id/locations/my-location/buckets/my-bucket-id"</summary>
@@ -174,6 +182,7 @@ public partial class V1beta1FolderBucketConfigSpecInitProviderCmekSettings
     public string? KmsKeyName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FolderBucketConfigSpecInitProviderIndexConfigs
 {
     /// <summary>The LogEntry field path to index. Note that some paths are automatically indexed, and other paths are not eligible for indexing. See indexing documentation for details.</summary>
@@ -185,6 +194,7 @@ public partial class V1beta1FolderBucketConfigSpecInitProviderIndexConfigs
     public string? Type { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1FolderBucketConfigSpecInitProvider
 {
     /// <summary></summary>
@@ -246,6 +256,7 @@ public enum V1beta1FolderBucketConfigSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FolderBucketConfigSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -259,6 +270,7 @@ public partial class V1beta1FolderBucketConfigSpecProviderConfigRefPolicy
     public V1beta1FolderBucketConfigSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1FolderBucketConfigSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -290,6 +302,7 @@ public enum V1beta1FolderBucketConfigSpecPublishConnectionDetailsToConfigRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FolderBucketConfigSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -303,6 +316,7 @@ public partial class V1beta1FolderBucketConfigSpecPublishConnectionDetailsToConf
     public V1beta1FolderBucketConfigSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1FolderBucketConfigSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -314,6 +328,7 @@ public partial class V1beta1FolderBucketConfigSpecPublishConnectionDetailsToConf
     public V1beta1FolderBucketConfigSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1FolderBucketConfigSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -329,6 +344,7 @@ public partial class V1beta1FolderBucketConfigSpecPublishConnectionDetailsToMeta
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1FolderBucketConfigSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -344,6 +360,7 @@ public partial class V1beta1FolderBucketConfigSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1FolderBucketConfigSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -355,6 +372,7 @@ public partial class V1beta1FolderBucketConfigSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>FolderBucketConfigSpec defines the desired state of FolderBucketConfig</summary>
 public partial class V1beta1FolderBucketConfigSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -387,6 +405,7 @@ public partial class V1beta1FolderBucketConfigSpec
     public V1beta1FolderBucketConfigSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FolderBucketConfigStatusAtProviderCmekSettings
 {
     /// <summary>The resource name of the bucket. For example: "folders/my-folder-id/locations/my-location/buckets/my-bucket-id"</summary>
@@ -406,6 +425,7 @@ public partial class V1beta1FolderBucketConfigStatusAtProviderCmekSettings
     public string? ServiceAccountId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FolderBucketConfigStatusAtProviderIndexConfigs
 {
     /// <summary>The LogEntry field path to index. Note that some paths are automatically indexed, and other paths are not eligible for indexing. See indexing documentation for details.</summary>
@@ -417,6 +437,7 @@ public partial class V1beta1FolderBucketConfigStatusAtProviderIndexConfigs
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FolderBucketConfigStatusAtProvider
 {
     /// <summary>The name of the logging bucket. Logging automatically creates two log buckets: _Required and _Default.</summary>
@@ -460,6 +481,7 @@ public partial class V1beta1FolderBucketConfigStatusAtProvider
     public double? RetentionDays { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1FolderBucketConfigStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -487,6 +509,7 @@ public partial class V1beta1FolderBucketConfigStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>FolderBucketConfigStatus defines the observed state of FolderBucketConfig.</summary>
 public partial class V1beta1FolderBucketConfigStatus
 {
     /// <summary></summary>
@@ -503,6 +526,7 @@ public partial class V1beta1FolderBucketConfigStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>FolderBucketConfig is the Schema for the FolderBucketConfigs API. Manages a folder-level logging bucket config.</summary>
 public partial class V1beta1FolderBucketConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FolderBucketConfigSpec>, IStatus<V1beta1FolderBucketConfigStatus>
 {
     public const string KubeApiVersion = "v1beta1";

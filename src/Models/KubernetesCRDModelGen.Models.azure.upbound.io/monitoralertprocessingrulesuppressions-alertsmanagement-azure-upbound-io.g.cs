@@ -18,6 +18,7 @@ public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderConditionAlertContext
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderConditionAlertRuleId
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -40,6 +42,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderConditionAlertRuleName
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -51,6 +54,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderConditionDescription
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -62,6 +66,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderConditionMonitorCondition
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -73,6 +78,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderConditionMonitorService
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -84,6 +90,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderConditionSeverity
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -95,6 +102,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderConditionSignalType
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -106,6 +114,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderConditionTargetResource
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -117,6 +126,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderConditionTargetResourceGroup
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -128,6 +138,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderConditionTargetResourceType
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -139,6 +150,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderCondition
 {
     /// <summary>A alert_context block as defined above.</summary>
@@ -206,6 +218,7 @@ public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderResourceG
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -219,6 +232,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
     public V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -250,6 +264,7 @@ public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderResourceG
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -263,6 +278,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
     public V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -278,6 +294,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
     public V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderScheduleRecurrenceDaily
 {
     /// <summary>Specifies the recurrence end time (H:M:S).</summary>
@@ -289,6 +306,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderScheduleRecurrenceMonthly
 {
     /// <summary>Specifies a list of dayOfMonth to recurrence. Possible values are integers between 1 - 31.</summary>
@@ -304,6 +322,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderScheduleRecurrenceWeekly
 {
     /// <summary>Specifies a list of dayOfWeek to recurrence. Possible values are Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday.</summary>
@@ -319,6 +338,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderScheduleRecurrence
 {
     /// <summary>One or more daily blocks as defined above.</summary>
@@ -334,6 +354,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
     public IList<V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderScheduleRecurrenceWeekly>? Weekly { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderSchedule
 {
     /// <summary>Specifies the Alert Processing Rule effective start time (Y-m-d'T'H:M:S).</summary>
@@ -373,6 +394,7 @@ public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderScopesRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderScopesRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -386,6 +408,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
     public V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderScopesRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderScopesRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -417,6 +440,7 @@ public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderScopesSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderScopesSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -430,6 +454,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
     public V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderScopesSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of ResourceGroup in azure to populate scopes.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderScopesSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -445,6 +470,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
     public V1beta1MonitorAlertProcessingRuleSuppressionSpecForProviderScopesSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
 {
     /// <summary>A condition block as defined below.</summary>
@@ -492,6 +518,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderConditionAlertContext
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -503,6 +530,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderConditionAlertRuleId
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -514,6 +542,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderConditionAlertRuleName
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -525,6 +554,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderConditionDescription
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -536,6 +566,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderConditionMonitorCondition
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -547,6 +578,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderConditionMonitorService
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -558,6 +590,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderConditionSeverity
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -569,6 +602,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderConditionSignalType
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -580,6 +614,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderConditionTargetResource
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -591,6 +626,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderConditionTargetResourceGroup
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -602,6 +638,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderConditionTargetResourceType
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -613,6 +650,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderCondition
 {
     /// <summary>A alert_context block as defined above.</summary>
@@ -660,6 +698,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
     public IList<V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderConditionTargetResourceType>? TargetResourceType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderScheduleRecurrenceDaily
 {
     /// <summary>Specifies the recurrence end time (H:M:S).</summary>
@@ -671,6 +710,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderScheduleRecurrenceMonthly
 {
     /// <summary>Specifies a list of dayOfMonth to recurrence. Possible values are integers between 1 - 31.</summary>
@@ -686,6 +726,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderScheduleRecurrenceWeekly
 {
     /// <summary>Specifies a list of dayOfWeek to recurrence. Possible values are Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday.</summary>
@@ -701,6 +742,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderScheduleRecurrence
 {
     /// <summary>One or more daily blocks as defined above.</summary>
@@ -716,6 +758,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
     public IList<V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderScheduleRecurrenceWeekly>? Weekly { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderSchedule
 {
     /// <summary>Specifies the Alert Processing Rule effective start time (Y-m-d'T'H:M:S).</summary>
@@ -755,6 +798,7 @@ public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderScopesRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderScopesRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -768,6 +812,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
     public V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderScopesRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderScopesRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -799,6 +844,7 @@ public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderScopesSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderScopesSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -812,6 +858,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
     public V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderScopesSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of ResourceGroup in azure to populate scopes.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderScopesSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -827,6 +874,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvide
     public V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProviderScopesSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecInitProvider
 {
     /// <summary>A condition block as defined below.</summary>
@@ -904,6 +952,7 @@ public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecProviderConfigRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -917,6 +966,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecProviderCon
     public V1beta1MonitorAlertProcessingRuleSuppressionSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -948,6 +998,7 @@ public enum V1beta1MonitorAlertProcessingRuleSuppressionSpecPublishConnectionDet
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -961,6 +1012,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecPublishConn
     public V1beta1MonitorAlertProcessingRuleSuppressionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -972,6 +1024,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecPublishConn
     public V1beta1MonitorAlertProcessingRuleSuppressionSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -987,6 +1040,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecPublishConn
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1002,6 +1056,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecPublishConn
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1013,6 +1068,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpecWriteConnec
     public string Namespace { get; set; }
 }
 
+/// <summary>MonitorAlertProcessingRuleSuppressionSpec defines the desired state of MonitorAlertProcessingRuleSuppression</summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1045,6 +1101,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionSpec
     public V1beta1MonitorAlertProcessingRuleSuppressionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProviderConditionAlertContext
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -1056,6 +1113,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProviderConditionAlertRuleId
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -1067,6 +1125,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProviderConditionAlertRuleName
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -1078,6 +1137,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProviderConditionDescription
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -1089,6 +1149,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProviderConditionMonitorCondition
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -1100,6 +1161,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProviderConditionMonitorService
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -1111,6 +1173,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProviderConditionSeverity
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -1122,6 +1185,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProviderConditionSignalType
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -1133,6 +1197,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProviderConditionTargetResource
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -1144,6 +1209,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProviderConditionTargetResourceGroup
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -1155,6 +1221,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProviderConditionTargetResourceType
 {
     /// <summary>The operator for a given condition. Possible values are Equals, NotEquals, Contains, and DoesNotContain.</summary>
@@ -1166,6 +1233,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProvide
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProviderCondition
 {
     /// <summary>A alert_context block as defined above.</summary>
@@ -1213,6 +1281,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProvide
     public IList<V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProviderConditionTargetResourceType>? TargetResourceType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProviderScheduleRecurrenceDaily
 {
     /// <summary>Specifies the recurrence end time (H:M:S).</summary>
@@ -1224,6 +1293,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProvide
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProviderScheduleRecurrenceMonthly
 {
     /// <summary>Specifies a list of dayOfMonth to recurrence. Possible values are integers between 1 - 31.</summary>
@@ -1239,6 +1309,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProvide
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProviderScheduleRecurrenceWeekly
 {
     /// <summary>Specifies a list of dayOfWeek to recurrence. Possible values are Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday.</summary>
@@ -1254,6 +1325,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProvide
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProviderScheduleRecurrence
 {
     /// <summary>One or more daily blocks as defined above.</summary>
@@ -1269,6 +1341,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProvide
     public IList<V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProviderScheduleRecurrenceWeekly>? Weekly { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProviderSchedule
 {
     /// <summary>Specifies the Alert Processing Rule effective start time (Y-m-d'T'H:M:S).</summary>
@@ -1288,6 +1361,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProvide
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProvider
 {
     /// <summary>A condition block as defined below.</summary>
@@ -1323,6 +1397,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusAtProvide
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1350,6 +1425,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatusCondition
     public string Type { get; set; }
 }
 
+/// <summary>MonitorAlertProcessingRuleSuppressionStatus defines the observed state of MonitorAlertProcessingRuleSuppression.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatus
 {
     /// <summary></summary>
@@ -1366,6 +1442,7 @@ public partial class V1beta1MonitorAlertProcessingRuleSuppressionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>MonitorAlertProcessingRuleSuppression is the Schema for the MonitorAlertProcessingRuleSuppressions API. Manages an Alert Processing Rule which suppress notifications.</summary>
 public partial class V1beta1MonitorAlertProcessingRuleSuppression : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MonitorAlertProcessingRuleSuppressionSpec>, IStatus<V1beta1MonitorAlertProcessingRuleSuppressionStatus>
 {
     public const string KubeApiVersion = "v1beta1";

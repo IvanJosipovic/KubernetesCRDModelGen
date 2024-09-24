@@ -38,6 +38,7 @@ public enum V1beta1AuthorizationRuleSpecForProviderNamespaceNameRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AuthorizationRuleSpecForProviderNamespaceNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1AuthorizationRuleSpecForProviderNamespaceNameRefPoli
     public V1beta1AuthorizationRuleSpecForProviderNamespaceNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a NotificationHubNamespace in notificationhubs to populate namespaceName.</summary>
 public partial class V1beta1AuthorizationRuleSpecForProviderNamespaceNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1AuthorizationRuleSpecForProviderNamespaceNameSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AuthorizationRuleSpecForProviderNamespaceNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1AuthorizationRuleSpecForProviderNamespaceNameSelecto
     public V1beta1AuthorizationRuleSpecForProviderNamespaceNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a NotificationHubNamespace in notificationhubs to populate namespaceName.</summary>
 public partial class V1beta1AuthorizationRuleSpecForProviderNamespaceNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1AuthorizationRuleSpecForProviderNotificationHubNameRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AuthorizationRuleSpecForProviderNotificationHubNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1AuthorizationRuleSpecForProviderNotificationHubNameR
     public V1beta1AuthorizationRuleSpecForProviderNotificationHubNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a NotificationHub in notificationhubs to populate notificationHubName.</summary>
 public partial class V1beta1AuthorizationRuleSpecForProviderNotificationHubNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1AuthorizationRuleSpecForProviderNotificationHubNameSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AuthorizationRuleSpecForProviderNotificationHubNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1AuthorizationRuleSpecForProviderNotificationHubNameS
     public V1beta1AuthorizationRuleSpecForProviderNotificationHubNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a NotificationHub in notificationhubs to populate notificationHubName.</summary>
 public partial class V1beta1AuthorizationRuleSpecForProviderNotificationHubNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1AuthorizationRuleSpecForProviderResourceGroupNameRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AuthorizationRuleSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1AuthorizationRuleSpecForProviderResourceGroupNameRef
     public V1beta1AuthorizationRuleSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1AuthorizationRuleSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1AuthorizationRuleSpecForProviderResourceGroupNameSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AuthorizationRuleSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1AuthorizationRuleSpecForProviderResourceGroupNameSel
     public V1beta1AuthorizationRuleSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1AuthorizationRuleSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1AuthorizationRuleSpecForProviderResourceGroupNameSel
     public V1beta1AuthorizationRuleSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AuthorizationRuleSpecForProvider
 {
     /// <summary>Does this Authorization Rule have Listen access to the Notification Hub? Defaults to false.</summary>
@@ -345,6 +358,7 @@ public partial class V1beta1AuthorizationRuleSpecForProvider
     public bool? Send { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1AuthorizationRuleSpecInitProvider
 {
     /// <summary>Does this Authorization Rule have Listen access to the Notification Hub? Defaults to false.</summary>
@@ -402,6 +416,7 @@ public enum V1beta1AuthorizationRuleSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AuthorizationRuleSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -415,6 +430,7 @@ public partial class V1beta1AuthorizationRuleSpecProviderConfigRefPolicy
     public V1beta1AuthorizationRuleSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1AuthorizationRuleSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -446,6 +462,7 @@ public enum V1beta1AuthorizationRuleSpecPublishConnectionDetailsToConfigRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AuthorizationRuleSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -459,6 +476,7 @@ public partial class V1beta1AuthorizationRuleSpecPublishConnectionDetailsToConfi
     public V1beta1AuthorizationRuleSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1AuthorizationRuleSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -470,6 +488,7 @@ public partial class V1beta1AuthorizationRuleSpecPublishConnectionDetailsToConfi
     public V1beta1AuthorizationRuleSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1AuthorizationRuleSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -485,6 +504,7 @@ public partial class V1beta1AuthorizationRuleSpecPublishConnectionDetailsToMetad
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1AuthorizationRuleSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -500,6 +520,7 @@ public partial class V1beta1AuthorizationRuleSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1AuthorizationRuleSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -511,6 +532,7 @@ public partial class V1beta1AuthorizationRuleSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>AuthorizationRuleSpec defines the desired state of AuthorizationRule</summary>
 public partial class V1beta1AuthorizationRuleSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -543,6 +565,7 @@ public partial class V1beta1AuthorizationRuleSpec
     public V1beta1AuthorizationRuleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AuthorizationRuleStatusAtProvider
 {
     /// <summary>The ID of the Authorization Rule.</summary>
@@ -582,6 +605,7 @@ public partial class V1beta1AuthorizationRuleStatusAtProvider
     public bool? Send { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1AuthorizationRuleStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -609,6 +633,7 @@ public partial class V1beta1AuthorizationRuleStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>AuthorizationRuleStatus defines the observed state of AuthorizationRule.</summary>
 public partial class V1beta1AuthorizationRuleStatus
 {
     /// <summary></summary>
@@ -625,6 +650,7 @@ public partial class V1beta1AuthorizationRuleStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>AuthorizationRule is the Schema for the AuthorizationRules API. Manages an Authorization Rule associated with a Notification Hub within a Notification Hub Namespace.</summary>
 public partial class V1beta1AuthorizationRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AuthorizationRuleSpec>, IStatus<V1beta1AuthorizationRuleStatus>
 {
     public const string KubeApiVersion = "v1beta1";

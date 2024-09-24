@@ -18,6 +18,7 @@ public enum V1beta1AgentSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1AgentSpecForProviderAdvancedSettingsAudioExportGcsDestination
 {
     /// <summary>The Google Cloud Storage URI for the exported objects. Whether a full object name, or just a prefix, its usage depends on the Dialogflow operation. Format: gs://bucket/object-name-or-prefix</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1AgentSpecForProviderAdvancedSettingsAudioExportGcsDe
     public string? Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AgentSpecForProviderAdvancedSettingsDtmfSettings
 {
     /// <summary>If true, incoming audio is processed for DTMF (dual tone multi frequency) events. For example, if the caller presses a button on their telephone keypad and DTMF processing is enabled, Dialogflow will detect the event (e.g. a "3" was pressed) in the incoming audio and pass the event to the bot to drive business logic (e.g. when 3 is pressed, return the account balance).</summary>
@@ -40,6 +42,7 @@ public partial class V1beta1AgentSpecForProviderAdvancedSettingsDtmfSettings
     public double? MaxDigits { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AgentSpecForProviderAdvancedSettings
 {
     /// <summary>If present, incoming audio is exported by Dialogflow to the configured Google Cloud Storage destination. Exposed at the following levels:</summary>
@@ -51,6 +54,7 @@ public partial class V1beta1AgentSpecForProviderAdvancedSettings
     public IList<V1beta1AgentSpecForProviderAdvancedSettingsDtmfSettings>? DtmfSettings { get; set; }
 }
 
+/// <summary>The access token used to authenticate the access to the GitHub repository. Note: This property is sensitive and will not be displayed in the plan.</summary>
 public partial class V1beta1AgentSpecForProviderGitIntegrationSettingsGithubSettingsAccessTokenSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -66,6 +70,7 @@ public partial class V1beta1AgentSpecForProviderGitIntegrationSettingsGithubSett
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AgentSpecForProviderGitIntegrationSettingsGithubSettings
 {
     /// <summary>The access token used to authenticate the access to the GitHub repository. Note: This property is sensitive and will not be displayed in the plan.</summary>
@@ -89,6 +94,7 @@ public partial class V1beta1AgentSpecForProviderGitIntegrationSettingsGithubSett
     public string? TrackingBranch { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AgentSpecForProviderGitIntegrationSettings
 {
     /// <summary>Settings of integration with GitHub. Structure is documented below.</summary>
@@ -96,6 +102,7 @@ public partial class V1beta1AgentSpecForProviderGitIntegrationSettings
     public IList<V1beta1AgentSpecForProviderGitIntegrationSettingsGithubSettings>? GithubSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AgentSpecForProviderSpeechToTextSettings
 {
     /// <summary>Whether to use speech adaptation for speech recognition.</summary>
@@ -103,6 +110,7 @@ public partial class V1beta1AgentSpecForProviderSpeechToTextSettings
     public bool? EnableSpeechAdaptation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AgentSpecForProviderTextToSpeechSettings
 {
     /// <summary>Configuration of how speech should be synthesized, mapping from language to SynthesizeSpeechConfig. These settings affect:</summary>
@@ -110,6 +118,7 @@ public partial class V1beta1AgentSpecForProviderTextToSpeechSettings
     public string? SynthesizeSpeechConfigs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AgentSpecForProvider
 {
     /// <summary>Hierarchical advanced settings for this agent. The settings exposed at the lower level overrides the settings exposed at the higher level. Hierarchy: Agent-&gt;Flow-&gt;Page-&gt;Fulfillment/Parameter. Structure is documented below.</summary>
@@ -173,6 +182,7 @@ public partial class V1beta1AgentSpecForProvider
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AgentSpecInitProviderAdvancedSettingsAudioExportGcsDestination
 {
     /// <summary>The Google Cloud Storage URI for the exported objects. Whether a full object name, or just a prefix, its usage depends on the Dialogflow operation. Format: gs://bucket/object-name-or-prefix</summary>
@@ -180,6 +190,7 @@ public partial class V1beta1AgentSpecInitProviderAdvancedSettingsAudioExportGcsD
     public string? Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AgentSpecInitProviderAdvancedSettingsDtmfSettings
 {
     /// <summary>If true, incoming audio is processed for DTMF (dual tone multi frequency) events. For example, if the caller presses a button on their telephone keypad and DTMF processing is enabled, Dialogflow will detect the event (e.g. a "3" was pressed) in the incoming audio and pass the event to the bot to drive business logic (e.g. when 3 is pressed, return the account balance).</summary>
@@ -195,6 +206,7 @@ public partial class V1beta1AgentSpecInitProviderAdvancedSettingsDtmfSettings
     public double? MaxDigits { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AgentSpecInitProviderAdvancedSettings
 {
     /// <summary>If present, incoming audio is exported by Dialogflow to the configured Google Cloud Storage destination. Exposed at the following levels:</summary>
@@ -206,6 +218,7 @@ public partial class V1beta1AgentSpecInitProviderAdvancedSettings
     public IList<V1beta1AgentSpecInitProviderAdvancedSettingsDtmfSettings>? DtmfSettings { get; set; }
 }
 
+/// <summary>The access token used to authenticate the access to the GitHub repository. Note: This property is sensitive and will not be displayed in the plan.</summary>
 public partial class V1beta1AgentSpecInitProviderGitIntegrationSettingsGithubSettingsAccessTokenSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -221,6 +234,7 @@ public partial class V1beta1AgentSpecInitProviderGitIntegrationSettingsGithubSet
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AgentSpecInitProviderGitIntegrationSettingsGithubSettings
 {
     /// <summary>The access token used to authenticate the access to the GitHub repository. Note: This property is sensitive and will not be displayed in the plan.</summary>
@@ -244,6 +258,7 @@ public partial class V1beta1AgentSpecInitProviderGitIntegrationSettingsGithubSet
     public string? TrackingBranch { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AgentSpecInitProviderGitIntegrationSettings
 {
     /// <summary>Settings of integration with GitHub. Structure is documented below.</summary>
@@ -251,6 +266,7 @@ public partial class V1beta1AgentSpecInitProviderGitIntegrationSettings
     public IList<V1beta1AgentSpecInitProviderGitIntegrationSettingsGithubSettings>? GithubSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AgentSpecInitProviderSpeechToTextSettings
 {
     /// <summary>Whether to use speech adaptation for speech recognition.</summary>
@@ -258,6 +274,7 @@ public partial class V1beta1AgentSpecInitProviderSpeechToTextSettings
     public bool? EnableSpeechAdaptation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AgentSpecInitProviderTextToSpeechSettings
 {
     /// <summary>Configuration of how speech should be synthesized, mapping from language to SynthesizeSpeechConfig. These settings affect:</summary>
@@ -265,6 +282,7 @@ public partial class V1beta1AgentSpecInitProviderTextToSpeechSettings
     public string? SynthesizeSpeechConfigs { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1AgentSpecInitProvider
 {
     /// <summary>Hierarchical advanced settings for this agent. The settings exposed at the lower level overrides the settings exposed at the higher level. Hierarchy: Agent-&gt;Flow-&gt;Page-&gt;Fulfillment/Parameter. Structure is documented below.</summary>
@@ -370,6 +388,7 @@ public enum V1beta1AgentSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AgentSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -383,6 +402,7 @@ public partial class V1beta1AgentSpecProviderConfigRefPolicy
     public V1beta1AgentSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1AgentSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -414,6 +434,7 @@ public enum V1beta1AgentSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AgentSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -427,6 +448,7 @@ public partial class V1beta1AgentSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1AgentSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1AgentSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -438,6 +460,7 @@ public partial class V1beta1AgentSpecPublishConnectionDetailsToConfigRef
     public V1beta1AgentSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1AgentSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -453,6 +476,7 @@ public partial class V1beta1AgentSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1AgentSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -468,6 +492,7 @@ public partial class V1beta1AgentSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1AgentSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -479,6 +504,7 @@ public partial class V1beta1AgentSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>AgentSpec defines the desired state of Agent</summary>
 public partial class V1beta1AgentSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -511,6 +537,7 @@ public partial class V1beta1AgentSpec
     public V1beta1AgentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AgentStatusAtProviderAdvancedSettingsAudioExportGcsDestination
 {
     /// <summary>The Google Cloud Storage URI for the exported objects. Whether a full object name, or just a prefix, its usage depends on the Dialogflow operation. Format: gs://bucket/object-name-or-prefix</summary>
@@ -518,6 +545,7 @@ public partial class V1beta1AgentStatusAtProviderAdvancedSettingsAudioExportGcsD
     public string? Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AgentStatusAtProviderAdvancedSettingsDtmfSettings
 {
     /// <summary>If true, incoming audio is processed for DTMF (dual tone multi frequency) events. For example, if the caller presses a button on their telephone keypad and DTMF processing is enabled, Dialogflow will detect the event (e.g. a "3" was pressed) in the incoming audio and pass the event to the bot to drive business logic (e.g. when 3 is pressed, return the account balance).</summary>
@@ -533,6 +561,7 @@ public partial class V1beta1AgentStatusAtProviderAdvancedSettingsDtmfSettings
     public double? MaxDigits { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AgentStatusAtProviderAdvancedSettings
 {
     /// <summary>If present, incoming audio is exported by Dialogflow to the configured Google Cloud Storage destination. Exposed at the following levels:</summary>
@@ -544,6 +573,7 @@ public partial class V1beta1AgentStatusAtProviderAdvancedSettings
     public IList<V1beta1AgentStatusAtProviderAdvancedSettingsDtmfSettings>? DtmfSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AgentStatusAtProviderGitIntegrationSettingsGithubSettings
 {
     /// <summary>A list of branches configured to be used from Dialogflow.</summary>
@@ -563,6 +593,7 @@ public partial class V1beta1AgentStatusAtProviderGitIntegrationSettingsGithubSet
     public string? TrackingBranch { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AgentStatusAtProviderGitIntegrationSettings
 {
     /// <summary>Settings of integration with GitHub. Structure is documented below.</summary>
@@ -570,6 +601,7 @@ public partial class V1beta1AgentStatusAtProviderGitIntegrationSettings
     public IList<V1beta1AgentStatusAtProviderGitIntegrationSettingsGithubSettings>? GithubSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AgentStatusAtProviderSpeechToTextSettings
 {
     /// <summary>Whether to use speech adaptation for speech recognition.</summary>
@@ -577,6 +609,7 @@ public partial class V1beta1AgentStatusAtProviderSpeechToTextSettings
     public bool? EnableSpeechAdaptation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AgentStatusAtProviderTextToSpeechSettings
 {
     /// <summary>Configuration of how speech should be synthesized, mapping from language to SynthesizeSpeechConfig. These settings affect:</summary>
@@ -584,6 +617,7 @@ public partial class V1beta1AgentStatusAtProviderTextToSpeechSettings
     public string? SynthesizeSpeechConfigs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AgentStatusAtProvider
 {
     /// <summary>Hierarchical advanced settings for this agent. The settings exposed at the lower level overrides the settings exposed at the higher level. Hierarchy: Agent-&gt;Flow-&gt;Page-&gt;Fulfillment/Parameter. Structure is documented below.</summary>
@@ -659,6 +693,7 @@ public partial class V1beta1AgentStatusAtProvider
     public string? TimeZone { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1AgentStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -686,6 +721,7 @@ public partial class V1beta1AgentStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>AgentStatus defines the observed state of Agent.</summary>
 public partial class V1beta1AgentStatus
 {
     /// <summary></summary>
@@ -702,6 +738,7 @@ public partial class V1beta1AgentStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Agent is the Schema for the Agents API. Agents are best described as Natural Language Understanding (NLU) modules that transform user requests into actionable data.</summary>
 public partial class V1beta1Agent : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AgentSpec>, IStatus<V1beta1AgentStatus>
 {
     public const string KubeApiVersion = "v1beta1";

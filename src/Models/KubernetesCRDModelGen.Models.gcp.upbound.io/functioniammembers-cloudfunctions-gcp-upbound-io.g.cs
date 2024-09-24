@@ -38,6 +38,7 @@ public enum V1beta1FunctionIAMMemberSpecForProviderCloudFunctionRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionIAMMemberSpecForProviderCloudFunctionRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1FunctionIAMMemberSpecForProviderCloudFunctionRefPoli
     public V1beta1FunctionIAMMemberSpecForProviderCloudFunctionRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in cloudfunctions to populate cloudFunction.</summary>
 public partial class V1beta1FunctionIAMMemberSpecForProviderCloudFunctionRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1FunctionIAMMemberSpecForProviderCloudFunctionSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionIAMMemberSpecForProviderCloudFunctionSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1FunctionIAMMemberSpecForProviderCloudFunctionSelecto
     public V1beta1FunctionIAMMemberSpecForProviderCloudFunctionSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in cloudfunctions to populate cloudFunction.</summary>
 public partial class V1beta1FunctionIAMMemberSpecForProviderCloudFunctionSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1FunctionIAMMemberSpecForProviderCloudFunctionSelecto
     public V1beta1FunctionIAMMemberSpecForProviderCloudFunctionSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionIAMMemberSpecForProviderCondition
 {
     /// <summary></summary>
@@ -125,6 +130,7 @@ public partial class V1beta1FunctionIAMMemberSpecForProviderCondition
     public string? Title { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionIAMMemberSpecForProvider
 {
     /// <summary></summary>
@@ -180,6 +186,7 @@ public enum V1beta1FunctionIAMMemberSpecInitProviderCloudFunctionRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionIAMMemberSpecInitProviderCloudFunctionRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -193,6 +200,7 @@ public partial class V1beta1FunctionIAMMemberSpecInitProviderCloudFunctionRefPol
     public V1beta1FunctionIAMMemberSpecInitProviderCloudFunctionRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in cloudfunctions to populate cloudFunction.</summary>
 public partial class V1beta1FunctionIAMMemberSpecInitProviderCloudFunctionRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -224,6 +232,7 @@ public enum V1beta1FunctionIAMMemberSpecInitProviderCloudFunctionSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionIAMMemberSpecInitProviderCloudFunctionSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -237,6 +246,7 @@ public partial class V1beta1FunctionIAMMemberSpecInitProviderCloudFunctionSelect
     public V1beta1FunctionIAMMemberSpecInitProviderCloudFunctionSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in cloudfunctions to populate cloudFunction.</summary>
 public partial class V1beta1FunctionIAMMemberSpecInitProviderCloudFunctionSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -252,6 +262,7 @@ public partial class V1beta1FunctionIAMMemberSpecInitProviderCloudFunctionSelect
     public V1beta1FunctionIAMMemberSpecInitProviderCloudFunctionSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionIAMMemberSpecInitProviderCondition
 {
     /// <summary></summary>
@@ -267,6 +278,7 @@ public partial class V1beta1FunctionIAMMemberSpecInitProviderCondition
     public string? Title { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1FunctionIAMMemberSpecInitProvider
 {
     /// <summary></summary>
@@ -344,6 +356,7 @@ public enum V1beta1FunctionIAMMemberSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionIAMMemberSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -357,6 +370,7 @@ public partial class V1beta1FunctionIAMMemberSpecProviderConfigRefPolicy
     public V1beta1FunctionIAMMemberSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1FunctionIAMMemberSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -388,6 +402,7 @@ public enum V1beta1FunctionIAMMemberSpecPublishConnectionDetailsToConfigRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionIAMMemberSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -401,6 +416,7 @@ public partial class V1beta1FunctionIAMMemberSpecPublishConnectionDetailsToConfi
     public V1beta1FunctionIAMMemberSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1FunctionIAMMemberSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -412,6 +428,7 @@ public partial class V1beta1FunctionIAMMemberSpecPublishConnectionDetailsToConfi
     public V1beta1FunctionIAMMemberSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1FunctionIAMMemberSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -427,6 +444,7 @@ public partial class V1beta1FunctionIAMMemberSpecPublishConnectionDetailsToMetad
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1FunctionIAMMemberSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -442,6 +460,7 @@ public partial class V1beta1FunctionIAMMemberSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1FunctionIAMMemberSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -453,6 +472,7 @@ public partial class V1beta1FunctionIAMMemberSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>FunctionIAMMemberSpec defines the desired state of FunctionIAMMember</summary>
 public partial class V1beta1FunctionIAMMemberSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -485,6 +505,7 @@ public partial class V1beta1FunctionIAMMemberSpec
     public V1beta1FunctionIAMMemberSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionIAMMemberStatusAtProviderCondition
 {
     /// <summary></summary>
@@ -500,6 +521,7 @@ public partial class V1beta1FunctionIAMMemberStatusAtProviderCondition
     public string? Title { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionIAMMemberStatusAtProvider
 {
     /// <summary></summary>
@@ -535,6 +557,7 @@ public partial class V1beta1FunctionIAMMemberStatusAtProvider
     public string? Role { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1FunctionIAMMemberStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -562,6 +585,7 @@ public partial class V1beta1FunctionIAMMemberStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>FunctionIAMMemberStatus defines the observed state of FunctionIAMMember.</summary>
 public partial class V1beta1FunctionIAMMemberStatus
 {
     /// <summary></summary>
@@ -578,6 +602,7 @@ public partial class V1beta1FunctionIAMMemberStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>FunctionIAMMember is the Schema for the FunctionIAMMembers API. &lt;no value&gt;</summary>
 public partial class V1beta1FunctionIAMMember : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FunctionIAMMemberSpec>, IStatus<V1beta1FunctionIAMMemberStatus>
 {
     public const string KubeApiVersion = "v1beta1";

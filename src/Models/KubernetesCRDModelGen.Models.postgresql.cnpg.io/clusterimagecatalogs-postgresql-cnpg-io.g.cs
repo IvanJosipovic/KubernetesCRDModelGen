@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.postgresql.cnpg.io;
+/// <summary>CatalogImage defines the image and major version</summary>
 public partial class V1ClusterImageCatalogSpecImages
 {
     /// <summary>The image reference</summary>
@@ -19,6 +20,7 @@ public partial class V1ClusterImageCatalogSpecImages
     public int Major { get; set; }
 }
 
+/// <summary>Specification of the desired behavior of the ClusterImageCatalog. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
 public partial class V1ClusterImageCatalogSpec
 {
     /// <summary>List of CatalogImages available in the catalog</summary>
@@ -27,6 +29,7 @@ public partial class V1ClusterImageCatalogSpec
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ClusterImageCatalog is the Schema for the clusterimagecatalogs API</summary>
 public partial class V1ClusterImageCatalog : IKubernetesObject<V1ObjectMeta>, ISpec<V1ClusterImageCatalogSpec>
 {
     public const string KubeApiVersion = "v1";

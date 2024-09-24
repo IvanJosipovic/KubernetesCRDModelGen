@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apimanagement.azure.com;
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a apimanagement.azure.com/AuthorizationProvider resource</summary>
 public partial class V1api20220801storageAuthorizationProvidersAuthorizationSpecOwner
 {
     /// <summary></summary>
@@ -19,6 +20,7 @@ public partial class V1api20220801storageAuthorizationProvidersAuthorizationSpec
     public string? Name { get; set; }
 }
 
+/// <summary>SecretMapReference is a reference to a Kubernetes secret in the same namespace as the resource it is on.</summary>
 public partial class V1api20220801storageAuthorizationProvidersAuthorizationSpecParameters
 {
     /// <summary>Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource</summary>
@@ -26,6 +28,7 @@ public partial class V1api20220801storageAuthorizationProvidersAuthorizationSpec
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.Service_AuthorizationProviders_Authorization_Spec</summary>
 public partial class V1api20220801storageAuthorizationProvidersAuthorizationSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -57,6 +60,7 @@ public partial class V1api20220801storageAuthorizationProvidersAuthorizationSpec
     public V1api20220801storageAuthorizationProvidersAuthorizationSpecParameters? Parameters { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20220801storageAuthorizationProvidersAuthorizationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -88,6 +92,7 @@ public partial class V1api20220801storageAuthorizationProvidersAuthorizationStat
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.AuthorizationError_STATUS Authorization error details.</summary>
 public partial class V1api20220801storageAuthorizationProvidersAuthorizationStatusError
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -103,6 +108,7 @@ public partial class V1api20220801storageAuthorizationProvidersAuthorizationStat
     public string? Message { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.Service_AuthorizationProviders_Authorization_STATUS</summary>
 public partial class V1api20220801storageAuthorizationProvidersAuthorizationStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -147,6 +153,7 @@ public partial class V1api20220801storageAuthorizationProvidersAuthorizationStat
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20220801.AuthorizationProvidersAuthorization Generator information: - Generated from: /apimanagement/resource-manager/Microsoft.ApiManagement/stable/2022-08-01/apimauthorizationproviders.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/authorizationProviders/{authorizationProviderId}/authorizations/{authorizationId}</summary>
 public partial class V1api20220801storageAuthorizationProvidersAuthorization : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20220801storageAuthorizationProvidersAuthorizationSpec>, IStatus<V1api20220801storageAuthorizationProvidersAuthorizationStatus>
 {
     public const string KubeApiVersion = "v1api20220801storage";

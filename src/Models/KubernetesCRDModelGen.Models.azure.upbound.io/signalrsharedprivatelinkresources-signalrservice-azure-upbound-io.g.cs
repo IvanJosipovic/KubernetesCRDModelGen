@@ -38,6 +38,7 @@ public enum V1beta1SignalrSharedPrivateLinkResourceSpecForProviderSignalrService
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SignalrSharedPrivateLinkResourceSpecForProviderSignalrServiceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1SignalrSharedPrivateLinkResourceSpecForProviderSigna
     public V1beta1SignalrSharedPrivateLinkResourceSpecForProviderSignalrServiceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Service in signalrservice to populate signalrServiceId.</summary>
 public partial class V1beta1SignalrSharedPrivateLinkResourceSpecForProviderSignalrServiceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1SignalrSharedPrivateLinkResourceSpecForProviderSignalrService
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SignalrSharedPrivateLinkResourceSpecForProviderSignalrServiceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1SignalrSharedPrivateLinkResourceSpecForProviderSigna
     public V1beta1SignalrSharedPrivateLinkResourceSpecForProviderSignalrServiceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Service in signalrservice to populate signalrServiceId.</summary>
 public partial class V1beta1SignalrSharedPrivateLinkResourceSpecForProviderSignalrServiceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1SignalrSharedPrivateLinkResourceSpecForProviderTargetResource
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SignalrSharedPrivateLinkResourceSpecForProviderTargetResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1SignalrSharedPrivateLinkResourceSpecForProviderTarge
     public V1beta1SignalrSharedPrivateLinkResourceSpecForProviderTargetResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Vault in keyvault to populate targetResourceId.</summary>
 public partial class V1beta1SignalrSharedPrivateLinkResourceSpecForProviderTargetResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1SignalrSharedPrivateLinkResourceSpecForProviderTargetResource
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SignalrSharedPrivateLinkResourceSpecForProviderTargetResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1SignalrSharedPrivateLinkResourceSpecForProviderTarge
     public V1beta1SignalrSharedPrivateLinkResourceSpecForProviderTargetResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Vault in keyvault to populate targetResourceId.</summary>
 public partial class V1beta1SignalrSharedPrivateLinkResourceSpecForProviderTargetResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1SignalrSharedPrivateLinkResourceSpecForProviderTarge
     public V1beta1SignalrSharedPrivateLinkResourceSpecForProviderTargetResourceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SignalrSharedPrivateLinkResourceSpecForProvider
 {
     /// <summary>The name of the Signalr Shared Private Link Resource. Changing this forces a new resource to be created.</summary>
@@ -261,6 +270,7 @@ public enum V1beta1SignalrSharedPrivateLinkResourceSpecInitProviderSignalrServic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SignalrSharedPrivateLinkResourceSpecInitProviderSignalrServiceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -274,6 +284,7 @@ public partial class V1beta1SignalrSharedPrivateLinkResourceSpecInitProviderSign
     public V1beta1SignalrSharedPrivateLinkResourceSpecInitProviderSignalrServiceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Service in signalrservice to populate signalrServiceId.</summary>
 public partial class V1beta1SignalrSharedPrivateLinkResourceSpecInitProviderSignalrServiceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -305,6 +316,7 @@ public enum V1beta1SignalrSharedPrivateLinkResourceSpecInitProviderSignalrServic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SignalrSharedPrivateLinkResourceSpecInitProviderSignalrServiceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -318,6 +330,7 @@ public partial class V1beta1SignalrSharedPrivateLinkResourceSpecInitProviderSign
     public V1beta1SignalrSharedPrivateLinkResourceSpecInitProviderSignalrServiceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Service in signalrservice to populate signalrServiceId.</summary>
 public partial class V1beta1SignalrSharedPrivateLinkResourceSpecInitProviderSignalrServiceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -353,6 +366,7 @@ public enum V1beta1SignalrSharedPrivateLinkResourceSpecInitProviderTargetResourc
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SignalrSharedPrivateLinkResourceSpecInitProviderTargetResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -366,6 +380,7 @@ public partial class V1beta1SignalrSharedPrivateLinkResourceSpecInitProviderTarg
     public V1beta1SignalrSharedPrivateLinkResourceSpecInitProviderTargetResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Vault in keyvault to populate targetResourceId.</summary>
 public partial class V1beta1SignalrSharedPrivateLinkResourceSpecInitProviderTargetResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -397,6 +412,7 @@ public enum V1beta1SignalrSharedPrivateLinkResourceSpecInitProviderTargetResourc
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SignalrSharedPrivateLinkResourceSpecInitProviderTargetResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -410,6 +426,7 @@ public partial class V1beta1SignalrSharedPrivateLinkResourceSpecInitProviderTarg
     public V1beta1SignalrSharedPrivateLinkResourceSpecInitProviderTargetResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Vault in keyvault to populate targetResourceId.</summary>
 public partial class V1beta1SignalrSharedPrivateLinkResourceSpecInitProviderTargetResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -425,6 +442,7 @@ public partial class V1beta1SignalrSharedPrivateLinkResourceSpecInitProviderTarg
     public V1beta1SignalrSharedPrivateLinkResourceSpecInitProviderTargetResourceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1SignalrSharedPrivateLinkResourceSpecInitProvider
 {
     /// <summary>The name of the Signalr Shared Private Link Resource. Changing this forces a new resource to be created.</summary>
@@ -506,6 +524,7 @@ public enum V1beta1SignalrSharedPrivateLinkResourceSpecProviderConfigRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SignalrSharedPrivateLinkResourceSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -519,6 +538,7 @@ public partial class V1beta1SignalrSharedPrivateLinkResourceSpecProviderConfigRe
     public V1beta1SignalrSharedPrivateLinkResourceSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1SignalrSharedPrivateLinkResourceSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -550,6 +570,7 @@ public enum V1beta1SignalrSharedPrivateLinkResourceSpecPublishConnectionDetailsT
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SignalrSharedPrivateLinkResourceSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -563,6 +584,7 @@ public partial class V1beta1SignalrSharedPrivateLinkResourceSpecPublishConnectio
     public V1beta1SignalrSharedPrivateLinkResourceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1SignalrSharedPrivateLinkResourceSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -574,6 +596,7 @@ public partial class V1beta1SignalrSharedPrivateLinkResourceSpecPublishConnectio
     public V1beta1SignalrSharedPrivateLinkResourceSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1SignalrSharedPrivateLinkResourceSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -589,6 +612,7 @@ public partial class V1beta1SignalrSharedPrivateLinkResourceSpecPublishConnectio
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1SignalrSharedPrivateLinkResourceSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -604,6 +628,7 @@ public partial class V1beta1SignalrSharedPrivateLinkResourceSpecPublishConnectio
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1SignalrSharedPrivateLinkResourceSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -615,6 +640,7 @@ public partial class V1beta1SignalrSharedPrivateLinkResourceSpecWriteConnectionS
     public string Namespace { get; set; }
 }
 
+/// <summary>SignalrSharedPrivateLinkResourceSpec defines the desired state of SignalrSharedPrivateLinkResource</summary>
 public partial class V1beta1SignalrSharedPrivateLinkResourceSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -647,6 +673,7 @@ public partial class V1beta1SignalrSharedPrivateLinkResourceSpec
     public V1beta1SignalrSharedPrivateLinkResourceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SignalrSharedPrivateLinkResourceStatusAtProvider
 {
     /// <summary>The ID of the Signalr Shared Private Link resource.</summary>
@@ -678,6 +705,7 @@ public partial class V1beta1SignalrSharedPrivateLinkResourceStatusAtProvider
     public string? TargetResourceId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1SignalrSharedPrivateLinkResourceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -705,6 +733,7 @@ public partial class V1beta1SignalrSharedPrivateLinkResourceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>SignalrSharedPrivateLinkResourceStatus defines the observed state of SignalrSharedPrivateLinkResource.</summary>
 public partial class V1beta1SignalrSharedPrivateLinkResourceStatus
 {
     /// <summary></summary>
@@ -721,6 +750,7 @@ public partial class V1beta1SignalrSharedPrivateLinkResourceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>SignalrSharedPrivateLinkResource is the Schema for the SignalrSharedPrivateLinkResources API. Manages the Shared Private Link Resource for a Signalr service.</summary>
 public partial class V1beta1SignalrSharedPrivateLinkResource : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SignalrSharedPrivateLinkResourceSpec>, IStatus<V1beta1SignalrSharedPrivateLinkResourceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -18,6 +18,7 @@ public enum V1beta1NodeGroupSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeGroupSpecForProviderAutoscalingPolicy
 {
     /// <summary>Maximum size of the node group. Set to a value less than or equal to 100 and greater than or equal to min-nodes.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1NodeGroupSpecForProviderAutoscalingPolicy
     public string? Mode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeGroupSpecForProviderMaintenanceWindow
 {
     /// <summary>instances.start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.</summary>
@@ -60,6 +62,7 @@ public enum V1beta1NodeGroupSpecForProviderNodeTemplateRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NodeGroupSpecForProviderNodeTemplateRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -73,6 +76,7 @@ public partial class V1beta1NodeGroupSpecForProviderNodeTemplateRefPolicy
     public V1beta1NodeGroupSpecForProviderNodeTemplateRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a NodeTemplate in compute to populate nodeTemplate.</summary>
 public partial class V1beta1NodeGroupSpecForProviderNodeTemplateRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -104,6 +108,7 @@ public enum V1beta1NodeGroupSpecForProviderNodeTemplateSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NodeGroupSpecForProviderNodeTemplateSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -117,6 +122,7 @@ public partial class V1beta1NodeGroupSpecForProviderNodeTemplateSelectorPolicy
     public V1beta1NodeGroupSpecForProviderNodeTemplateSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a NodeTemplate in compute to populate nodeTemplate.</summary>
 public partial class V1beta1NodeGroupSpecForProviderNodeTemplateSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -152,6 +158,7 @@ public enum V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -165,6 +172,7 @@ public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdRef
     public V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Project in cloudplatform to populate id.</summary>
 public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -196,6 +204,7 @@ public enum V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -209,6 +218,7 @@ public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdSel
     public V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Project in cloudplatform to populate id.</summary>
 public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -244,6 +254,7 @@ public enum V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProjectIdRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProjectIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -257,6 +268,7 @@ public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProje
     public V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProjectIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Project in cloudplatform to populate projectId.</summary>
 public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProjectIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -288,6 +300,7 @@ public enum V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProjectIdSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProjectIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -301,6 +314,7 @@ public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProje
     public V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProjectIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Project in cloudplatform to populate projectId.</summary>
 public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProjectIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -316,6 +330,7 @@ public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProje
     public V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProjectIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMap
 {
     /// <summary>The identifier for this object. Format specified above.</summary>
@@ -343,6 +358,7 @@ public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMap
     public V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProjectIdSelector? ProjectIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeGroupSpecForProviderShareSettings
 {
     /// <summary>A map of project id and project config. This is only valid when shareType's value is SPECIFIC_PROJECTS. Structure is documented below.</summary>
@@ -354,6 +370,7 @@ public partial class V1beta1NodeGroupSpecForProviderShareSettings
     public string? ShareType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeGroupSpecForProvider
 {
     /// <summary>If you use sole-tenant nodes for your workloads, you can use the node group autoscaler to automatically manage the sizes of your node groups. One of initial_size or autoscaling_policy must be configured on resource creation. Structure is documented below.</summary>
@@ -401,6 +418,7 @@ public partial class V1beta1NodeGroupSpecForProvider
     public string Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeGroupSpecInitProviderAutoscalingPolicy
 {
     /// <summary>Maximum size of the node group. Set to a value less than or equal to 100 and greater than or equal to min-nodes.</summary>
@@ -416,6 +434,7 @@ public partial class V1beta1NodeGroupSpecInitProviderAutoscalingPolicy
     public string? Mode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeGroupSpecInitProviderMaintenanceWindow
 {
     /// <summary>instances.start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.</summary>
@@ -443,6 +462,7 @@ public enum V1beta1NodeGroupSpecInitProviderNodeTemplateRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NodeGroupSpecInitProviderNodeTemplateRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -456,6 +476,7 @@ public partial class V1beta1NodeGroupSpecInitProviderNodeTemplateRefPolicy
     public V1beta1NodeGroupSpecInitProviderNodeTemplateRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a NodeTemplate in compute to populate nodeTemplate.</summary>
 public partial class V1beta1NodeGroupSpecInitProviderNodeTemplateRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -487,6 +508,7 @@ public enum V1beta1NodeGroupSpecInitProviderNodeTemplateSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NodeGroupSpecInitProviderNodeTemplateSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -500,6 +522,7 @@ public partial class V1beta1NodeGroupSpecInitProviderNodeTemplateSelectorPolicy
     public V1beta1NodeGroupSpecInitProviderNodeTemplateSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a NodeTemplate in compute to populate nodeTemplate.</summary>
 public partial class V1beta1NodeGroupSpecInitProviderNodeTemplateSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -535,6 +558,7 @@ public enum V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -548,6 +572,7 @@ public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdRe
     public V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Project in cloudplatform to populate id.</summary>
 public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -579,6 +604,7 @@ public enum V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -592,6 +618,7 @@ public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdSe
     public V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Project in cloudplatform to populate id.</summary>
 public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -627,6 +654,7 @@ public enum V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProjectIdRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProjectIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -640,6 +668,7 @@ public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProj
     public V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProjectIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Project in cloudplatform to populate projectId.</summary>
 public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProjectIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -671,6 +700,7 @@ public enum V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProjectIdSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProjectIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -684,6 +714,7 @@ public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProj
     public V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProjectIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Project in cloudplatform to populate projectId.</summary>
 public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProjectIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -699,6 +730,7 @@ public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProj
     public V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProjectIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMap
 {
     /// <summary>The identifier for this object. Format specified above.</summary>
@@ -726,6 +758,7 @@ public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMap
     public V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProjectIdSelector? ProjectIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeGroupSpecInitProviderShareSettings
 {
     /// <summary>A map of project id and project config. This is only valid when shareType's value is SPECIFIC_PROJECTS. Structure is documented below.</summary>
@@ -737,6 +770,7 @@ public partial class V1beta1NodeGroupSpecInitProviderShareSettings
     public string? ShareType { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1NodeGroupSpecInitProvider
 {
     /// <summary>If you use sole-tenant nodes for your workloads, you can use the node group autoscaler to automatically manage the sizes of your node groups. One of initial_size or autoscaling_policy must be configured on resource creation. Structure is documented below.</summary>
@@ -822,6 +856,7 @@ public enum V1beta1NodeGroupSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NodeGroupSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -835,6 +870,7 @@ public partial class V1beta1NodeGroupSpecProviderConfigRefPolicy
     public V1beta1NodeGroupSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1NodeGroupSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -866,6 +902,7 @@ public enum V1beta1NodeGroupSpecPublishConnectionDetailsToConfigRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NodeGroupSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -879,6 +916,7 @@ public partial class V1beta1NodeGroupSpecPublishConnectionDetailsToConfigRefPoli
     public V1beta1NodeGroupSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1NodeGroupSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -890,6 +928,7 @@ public partial class V1beta1NodeGroupSpecPublishConnectionDetailsToConfigRef
     public V1beta1NodeGroupSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1NodeGroupSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -905,6 +944,7 @@ public partial class V1beta1NodeGroupSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1NodeGroupSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -920,6 +960,7 @@ public partial class V1beta1NodeGroupSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1NodeGroupSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -931,6 +972,7 @@ public partial class V1beta1NodeGroupSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>NodeGroupSpec defines the desired state of NodeGroup</summary>
 public partial class V1beta1NodeGroupSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -963,6 +1005,7 @@ public partial class V1beta1NodeGroupSpec
     public V1beta1NodeGroupSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeGroupStatusAtProviderAutoscalingPolicy
 {
     /// <summary>Maximum size of the node group. Set to a value less than or equal to 100 and greater than or equal to min-nodes.</summary>
@@ -978,6 +1021,7 @@ public partial class V1beta1NodeGroupStatusAtProviderAutoscalingPolicy
     public string? Mode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeGroupStatusAtProviderMaintenanceWindow
 {
     /// <summary>instances.start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.</summary>
@@ -985,6 +1029,7 @@ public partial class V1beta1NodeGroupStatusAtProviderMaintenanceWindow
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeGroupStatusAtProviderShareSettingsProjectMap
 {
     /// <summary>The identifier for this object. Format specified above.</summary>
@@ -996,6 +1041,7 @@ public partial class V1beta1NodeGroupStatusAtProviderShareSettingsProjectMap
     public string? ProjectId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeGroupStatusAtProviderShareSettings
 {
     /// <summary>A map of project id and project config. This is only valid when shareType's value is SPECIFIC_PROJECTS. Structure is documented below.</summary>
@@ -1007,6 +1053,7 @@ public partial class V1beta1NodeGroupStatusAtProviderShareSettings
     public string? ShareType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeGroupStatusAtProvider
 {
     /// <summary>If you use sole-tenant nodes for your workloads, you can use the node group autoscaler to automatically manage the sizes of your node groups. One of initial_size or autoscaling_policy must be configured on resource creation. Structure is documented below.</summary>
@@ -1062,6 +1109,7 @@ public partial class V1beta1NodeGroupStatusAtProvider
     public string? Zone { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1NodeGroupStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1089,6 +1137,7 @@ public partial class V1beta1NodeGroupStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>NodeGroupStatus defines the observed state of NodeGroup.</summary>
 public partial class V1beta1NodeGroupStatus
 {
     /// <summary></summary>
@@ -1105,6 +1154,7 @@ public partial class V1beta1NodeGroupStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>NodeGroup is the Schema for the NodeGroups API. Represents a NodeGroup resource to manage a group of sole-tenant nodes.</summary>
 public partial class V1beta1NodeGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1NodeGroupSpec>, IStatus<V1beta1NodeGroupStatus>
 {
     public const string KubeApiVersion = "v1beta1";

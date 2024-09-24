@@ -38,6 +38,7 @@ public enum V1beta1FederatedIdentityCredentialSpecForProviderApplicationObjectId
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FederatedIdentityCredentialSpecForProviderApplicationObjectIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1FederatedIdentityCredentialSpecForProviderApplicatio
     public V1beta1FederatedIdentityCredentialSpecForProviderApplicationObjectIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Application in applications to populate applicationObjectId.</summary>
 public partial class V1beta1FederatedIdentityCredentialSpecForProviderApplicationObjectIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1FederatedIdentityCredentialSpecForProviderApplicationObjectId
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FederatedIdentityCredentialSpecForProviderApplicationObjectIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1FederatedIdentityCredentialSpecForProviderApplicatio
     public V1beta1FederatedIdentityCredentialSpecForProviderApplicationObjectIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Application in applications to populate applicationObjectId.</summary>
 public partial class V1beta1FederatedIdentityCredentialSpecForProviderApplicationObjectIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1FederatedIdentityCredentialSpecForProviderApplicatio
     public V1beta1FederatedIdentityCredentialSpecForProviderApplicationObjectIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FederatedIdentityCredentialSpecForProvider
 {
     /// <summary>The resource ID of the application for which this federated identity credential should be created. Changing this field forces a new resource to be created. The resource ID of the application for which this federated identity credential should be created</summary>
@@ -169,6 +174,7 @@ public enum V1beta1FederatedIdentityCredentialSpecInitProviderApplicationObjectI
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FederatedIdentityCredentialSpecInitProviderApplicationObjectIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -182,6 +188,7 @@ public partial class V1beta1FederatedIdentityCredentialSpecInitProviderApplicati
     public V1beta1FederatedIdentityCredentialSpecInitProviderApplicationObjectIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Application in applications to populate applicationObjectId.</summary>
 public partial class V1beta1FederatedIdentityCredentialSpecInitProviderApplicationObjectIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -213,6 +220,7 @@ public enum V1beta1FederatedIdentityCredentialSpecInitProviderApplicationObjectI
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FederatedIdentityCredentialSpecInitProviderApplicationObjectIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -226,6 +234,7 @@ public partial class V1beta1FederatedIdentityCredentialSpecInitProviderApplicati
     public V1beta1FederatedIdentityCredentialSpecInitProviderApplicationObjectIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Application in applications to populate applicationObjectId.</summary>
 public partial class V1beta1FederatedIdentityCredentialSpecInitProviderApplicationObjectIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -241,6 +250,7 @@ public partial class V1beta1FederatedIdentityCredentialSpecInitProviderApplicati
     public V1beta1FederatedIdentityCredentialSpecInitProviderApplicationObjectIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1FederatedIdentityCredentialSpecInitProvider
 {
     /// <summary>The resource ID of the application for which this federated identity credential should be created. Changing this field forces a new resource to be created. The resource ID of the application for which this federated identity credential should be created</summary>
@@ -322,6 +332,7 @@ public enum V1beta1FederatedIdentityCredentialSpecProviderConfigRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FederatedIdentityCredentialSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -335,6 +346,7 @@ public partial class V1beta1FederatedIdentityCredentialSpecProviderConfigRefPoli
     public V1beta1FederatedIdentityCredentialSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1FederatedIdentityCredentialSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -366,6 +378,7 @@ public enum V1beta1FederatedIdentityCredentialSpecPublishConnectionDetailsToConf
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FederatedIdentityCredentialSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -379,6 +392,7 @@ public partial class V1beta1FederatedIdentityCredentialSpecPublishConnectionDeta
     public V1beta1FederatedIdentityCredentialSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1FederatedIdentityCredentialSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -390,6 +404,7 @@ public partial class V1beta1FederatedIdentityCredentialSpecPublishConnectionDeta
     public V1beta1FederatedIdentityCredentialSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1FederatedIdentityCredentialSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -405,6 +420,7 @@ public partial class V1beta1FederatedIdentityCredentialSpecPublishConnectionDeta
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1FederatedIdentityCredentialSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -420,6 +436,7 @@ public partial class V1beta1FederatedIdentityCredentialSpecPublishConnectionDeta
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1FederatedIdentityCredentialSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -431,6 +448,7 @@ public partial class V1beta1FederatedIdentityCredentialSpecWriteConnectionSecret
     public string Namespace { get; set; }
 }
 
+/// <summary>FederatedIdentityCredentialSpec defines the desired state of FederatedIdentityCredential</summary>
 public partial class V1beta1FederatedIdentityCredentialSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -463,6 +481,7 @@ public partial class V1beta1FederatedIdentityCredentialSpec
     public V1beta1FederatedIdentityCredentialSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FederatedIdentityCredentialStatusAtProvider
 {
     /// <summary>The resource ID of the application for which this federated identity credential should be created. Changing this field forces a new resource to be created. The resource ID of the application for which this federated identity credential should be created</summary>
@@ -502,6 +521,7 @@ public partial class V1beta1FederatedIdentityCredentialStatusAtProvider
     public string? Subject { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1FederatedIdentityCredentialStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -529,6 +549,7 @@ public partial class V1beta1FederatedIdentityCredentialStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>FederatedIdentityCredentialStatus defines the observed state of FederatedIdentityCredential.</summary>
 public partial class V1beta1FederatedIdentityCredentialStatus
 {
     /// <summary></summary>
@@ -545,6 +566,7 @@ public partial class V1beta1FederatedIdentityCredentialStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>FederatedIdentityCredential is the Schema for the FederatedIdentityCredentials API.</summary>
 public partial class V1beta1FederatedIdentityCredential : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FederatedIdentityCredentialSpec>, IStatus<V1beta1FederatedIdentityCredentialStatus>
 {
     public const string KubeApiVersion = "v1beta1";

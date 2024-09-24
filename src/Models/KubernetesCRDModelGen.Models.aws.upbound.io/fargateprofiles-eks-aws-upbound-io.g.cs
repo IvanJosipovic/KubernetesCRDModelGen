@@ -38,6 +38,7 @@ public enum V1beta1FargateProfileSpecForProviderClusterNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FargateProfileSpecForProviderClusterNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1FargateProfileSpecForProviderClusterNameRefPolicy
     public V1beta1FargateProfileSpecForProviderClusterNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in eks to populate clusterName.</summary>
 public partial class V1beta1FargateProfileSpecForProviderClusterNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1FargateProfileSpecForProviderClusterNameSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FargateProfileSpecForProviderClusterNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1FargateProfileSpecForProviderClusterNameSelectorPoli
     public V1beta1FargateProfileSpecForProviderClusterNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in eks to populate clusterName.</summary>
 public partial class V1beta1FargateProfileSpecForProviderClusterNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1FargateProfileSpecForProviderPodExecutionRoleArnRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FargateProfileSpecForProviderPodExecutionRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1FargateProfileSpecForProviderPodExecutionRoleArnRefP
     public V1beta1FargateProfileSpecForProviderPodExecutionRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate podExecutionRoleArn.</summary>
 public partial class V1beta1FargateProfileSpecForProviderPodExecutionRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1FargateProfileSpecForProviderPodExecutionRoleArnSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FargateProfileSpecForProviderPodExecutionRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1FargateProfileSpecForProviderPodExecutionRoleArnSele
     public V1beta1FargateProfileSpecForProviderPodExecutionRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate podExecutionRoleArn.</summary>
 public partial class V1beta1FargateProfileSpecForProviderPodExecutionRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1FargateProfileSpecForProviderPodExecutionRoleArnSele
     public V1beta1FargateProfileSpecForProviderPodExecutionRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FargateProfileSpecForProviderSelector
 {
     /// <summary>Key-value map of Kubernetes labels for selection.</summary>
@@ -233,6 +242,7 @@ public enum V1beta1FargateProfileSpecForProviderSubnetIdRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FargateProfileSpecForProviderSubnetIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -246,6 +256,7 @@ public partial class V1beta1FargateProfileSpecForProviderSubnetIdRefsPolicy
     public V1beta1FargateProfileSpecForProviderSubnetIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1FargateProfileSpecForProviderSubnetIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -277,6 +288,7 @@ public enum V1beta1FargateProfileSpecForProviderSubnetIdSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FargateProfileSpecForProviderSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -290,6 +302,7 @@ public partial class V1beta1FargateProfileSpecForProviderSubnetIdSelectorPolicy
     public V1beta1FargateProfileSpecForProviderSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 public partial class V1beta1FargateProfileSpecForProviderSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -305,6 +318,7 @@ public partial class V1beta1FargateProfileSpecForProviderSubnetIdSelector
     public V1beta1FargateProfileSpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FargateProfileSpecForProvider
 {
     /// <summary>–  Name of the EKS Cluster.</summary>
@@ -376,6 +390,7 @@ public enum V1beta1FargateProfileSpecInitProviderClusterNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FargateProfileSpecInitProviderClusterNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -389,6 +404,7 @@ public partial class V1beta1FargateProfileSpecInitProviderClusterNameRefPolicy
     public V1beta1FargateProfileSpecInitProviderClusterNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in eks to populate clusterName.</summary>
 public partial class V1beta1FargateProfileSpecInitProviderClusterNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -420,6 +436,7 @@ public enum V1beta1FargateProfileSpecInitProviderClusterNameSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FargateProfileSpecInitProviderClusterNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -433,6 +450,7 @@ public partial class V1beta1FargateProfileSpecInitProviderClusterNameSelectorPol
     public V1beta1FargateProfileSpecInitProviderClusterNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in eks to populate clusterName.</summary>
 public partial class V1beta1FargateProfileSpecInitProviderClusterNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -468,6 +486,7 @@ public enum V1beta1FargateProfileSpecInitProviderPodExecutionRoleArnRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FargateProfileSpecInitProviderPodExecutionRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -481,6 +500,7 @@ public partial class V1beta1FargateProfileSpecInitProviderPodExecutionRoleArnRef
     public V1beta1FargateProfileSpecInitProviderPodExecutionRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate podExecutionRoleArn.</summary>
 public partial class V1beta1FargateProfileSpecInitProviderPodExecutionRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -512,6 +532,7 @@ public enum V1beta1FargateProfileSpecInitProviderPodExecutionRoleArnSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FargateProfileSpecInitProviderPodExecutionRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -525,6 +546,7 @@ public partial class V1beta1FargateProfileSpecInitProviderPodExecutionRoleArnSel
     public V1beta1FargateProfileSpecInitProviderPodExecutionRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate podExecutionRoleArn.</summary>
 public partial class V1beta1FargateProfileSpecInitProviderPodExecutionRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -540,6 +562,7 @@ public partial class V1beta1FargateProfileSpecInitProviderPodExecutionRoleArnSel
     public V1beta1FargateProfileSpecInitProviderPodExecutionRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FargateProfileSpecInitProviderSelector
 {
     /// <summary>Key-value map of Kubernetes labels for selection.</summary>
@@ -571,6 +594,7 @@ public enum V1beta1FargateProfileSpecInitProviderSubnetIdRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FargateProfileSpecInitProviderSubnetIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -584,6 +608,7 @@ public partial class V1beta1FargateProfileSpecInitProviderSubnetIdRefsPolicy
     public V1beta1FargateProfileSpecInitProviderSubnetIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1FargateProfileSpecInitProviderSubnetIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -615,6 +640,7 @@ public enum V1beta1FargateProfileSpecInitProviderSubnetIdSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FargateProfileSpecInitProviderSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -628,6 +654,7 @@ public partial class V1beta1FargateProfileSpecInitProviderSubnetIdSelectorPolicy
     public V1beta1FargateProfileSpecInitProviderSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 public partial class V1beta1FargateProfileSpecInitProviderSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -643,6 +670,7 @@ public partial class V1beta1FargateProfileSpecInitProviderSubnetIdSelector
     public V1beta1FargateProfileSpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1FargateProfileSpecInitProvider
 {
     /// <summary>–  Name of the EKS Cluster.</summary>
@@ -732,6 +760,7 @@ public enum V1beta1FargateProfileSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FargateProfileSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -745,6 +774,7 @@ public partial class V1beta1FargateProfileSpecProviderConfigRefPolicy
     public V1beta1FargateProfileSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1FargateProfileSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -776,6 +806,7 @@ public enum V1beta1FargateProfileSpecPublishConnectionDetailsToConfigRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FargateProfileSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -789,6 +820,7 @@ public partial class V1beta1FargateProfileSpecPublishConnectionDetailsToConfigRe
     public V1beta1FargateProfileSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1FargateProfileSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -800,6 +832,7 @@ public partial class V1beta1FargateProfileSpecPublishConnectionDetailsToConfigRe
     public V1beta1FargateProfileSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1FargateProfileSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -815,6 +848,7 @@ public partial class V1beta1FargateProfileSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1FargateProfileSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -830,6 +864,7 @@ public partial class V1beta1FargateProfileSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1FargateProfileSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -841,6 +876,7 @@ public partial class V1beta1FargateProfileSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>FargateProfileSpec defines the desired state of FargateProfile</summary>
 public partial class V1beta1FargateProfileSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -873,6 +909,7 @@ public partial class V1beta1FargateProfileSpec
     public V1beta1FargateProfileSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FargateProfileStatusAtProviderSelector
 {
     /// <summary>Key-value map of Kubernetes labels for selection.</summary>
@@ -884,6 +921,7 @@ public partial class V1beta1FargateProfileStatusAtProviderSelector
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FargateProfileStatusAtProvider
 {
     /// <summary>Amazon Resource Name (ARN) of the EKS Fargate Profile.</summary>
@@ -923,6 +961,7 @@ public partial class V1beta1FargateProfileStatusAtProvider
     public IDictionary<string, string>? TagsAll { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1FargateProfileStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -950,6 +989,7 @@ public partial class V1beta1FargateProfileStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>FargateProfileStatus defines the observed state of FargateProfile.</summary>
 public partial class V1beta1FargateProfileStatus
 {
     /// <summary></summary>
@@ -966,6 +1006,7 @@ public partial class V1beta1FargateProfileStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>FargateProfile is the Schema for the FargateProfiles API. Manages an EKS Fargate Profile</summary>
 public partial class V1beta1FargateProfile : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FargateProfileSpec>, IStatus<V1beta1FargateProfileStatus>
 {
     public const string KubeApiVersion = "v1beta1";

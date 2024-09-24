@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.documentdb.azure.com;
+/// <summary>Storage version of v1api20231115.AnalyticalStorageConfiguration Analytical storage specific properties.</summary>
 public partial class V1api20231115storageDatabaseAccountSpecAnalyticalStorageConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -19,6 +20,7 @@ public partial class V1api20231115storageDatabaseAccountSpecAnalyticalStorageCon
     public string? SchemaType { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.ApiProperties</summary>
 public partial class V1api20231115storageDatabaseAccountSpecApiProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -30,6 +32,7 @@ public partial class V1api20231115storageDatabaseAccountSpecApiProperties
     public string? ServerVersion { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.ContinuousModeProperties Configuration values for periodic mode backup</summary>
 public partial class V1api20231115storageDatabaseAccountSpecBackupPolicyContinuousContinuousModeProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -41,6 +44,7 @@ public partial class V1api20231115storageDatabaseAccountSpecBackupPolicyContinuo
     public string? Tier { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.BackupPolicyMigrationState The object representing the state of the migration between the backup policies.</summary>
 public partial class V1api20231115storageDatabaseAccountSpecBackupPolicyContinuousMigrationState
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -60,6 +64,7 @@ public partial class V1api20231115storageDatabaseAccountSpecBackupPolicyContinuo
     public string? TargetType { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.ContinuousModeBackupPolicy</summary>
 public partial class V1api20231115storageDatabaseAccountSpecBackupPolicyContinuous
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -79,6 +84,7 @@ public partial class V1api20231115storageDatabaseAccountSpecBackupPolicyContinuo
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.BackupPolicyMigrationState The object representing the state of the migration between the backup policies.</summary>
 public partial class V1api20231115storageDatabaseAccountSpecBackupPolicyPeriodicMigrationState
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -98,6 +104,7 @@ public partial class V1api20231115storageDatabaseAccountSpecBackupPolicyPeriodic
     public string? TargetType { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.PeriodicModeProperties Configuration values for periodic mode backup</summary>
 public partial class V1api20231115storageDatabaseAccountSpecBackupPolicyPeriodicPeriodicModeProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -117,6 +124,7 @@ public partial class V1api20231115storageDatabaseAccountSpecBackupPolicyPeriodic
     public string? BackupStorageRedundancy { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.PeriodicModeBackupPolicy</summary>
 public partial class V1api20231115storageDatabaseAccountSpecBackupPolicyPeriodic
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -136,6 +144,7 @@ public partial class V1api20231115storageDatabaseAccountSpecBackupPolicyPeriodic
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.BackupPolicy</summary>
 public partial class V1api20231115storageDatabaseAccountSpecBackupPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -151,6 +160,7 @@ public partial class V1api20231115storageDatabaseAccountSpecBackupPolicy
     public V1api20231115storageDatabaseAccountSpecBackupPolicyPeriodic? Periodic { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.Capability Cosmos DB capability object</summary>
 public partial class V1api20231115storageDatabaseAccountSpecCapabilities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -162,6 +172,7 @@ public partial class V1api20231115storageDatabaseAccountSpecCapabilities
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.Capacity The object that represents all properties related to capacity enforcement on an account.</summary>
 public partial class V1api20231115storageDatabaseAccountSpecCapacity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -173,6 +184,7 @@ public partial class V1api20231115storageDatabaseAccountSpecCapacity
     public int? TotalThroughputLimit { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.ConsistencyPolicy The consistency policy for the Cosmos DB database account.</summary>
 public partial class V1api20231115storageDatabaseAccountSpecConsistencyPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -192,6 +204,7 @@ public partial class V1api20231115storageDatabaseAccountSpecConsistencyPolicy
     public int? MaxStalenessPrefix { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.CorsPolicy The CORS policy for the Cosmos DB database account.</summary>
 public partial class V1api20231115storageDatabaseAccountSpecCors
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -219,6 +232,7 @@ public partial class V1api20231115storageDatabaseAccountSpecCors
     public int? MaxAgeInSeconds { get; set; }
 }
 
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 public partial class V1api20231115storageDatabaseAccountSpecIdentityUserAssignedIdentitiesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -238,6 +252,7 @@ public partial class V1api20231115storageDatabaseAccountSpecIdentityUserAssigned
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
 public partial class V1api20231115storageDatabaseAccountSpecIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -249,6 +264,7 @@ public partial class V1api20231115storageDatabaseAccountSpecIdentityUserAssigned
     public V1api20231115storageDatabaseAccountSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.ManagedServiceIdentity Identity for the resource.</summary>
 public partial class V1api20231115storageDatabaseAccountSpecIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -264,6 +280,7 @@ public partial class V1api20231115storageDatabaseAccountSpecIdentity
     public IList<V1api20231115storageDatabaseAccountSpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.IpAddressOrRange IpAddressOrRange object</summary>
 public partial class V1api20231115storageDatabaseAccountSpecIpRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -275,6 +292,7 @@ public partial class V1api20231115storageDatabaseAccountSpecIpRules
     public string? IpAddressOrRange { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.Location A region in which the Azure Cosmos DB database account is deployed.</summary>
 public partial class V1api20231115storageDatabaseAccountSpecLocations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -294,6 +312,7 @@ public partial class V1api20231115storageDatabaseAccountSpecLocations
     public string? LocationName { get; set; }
 }
 
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 public partial class V1api20231115storageDatabaseAccountSpecNetworkAclBypassResourceReferences
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -313,6 +332,7 @@ public partial class V1api20231115storageDatabaseAccountSpecNetworkAclBypassReso
     public string? Name { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20231115storageDatabaseAccountSpecOperatorSpecSecretsDocumentEndpoint
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -324,6 +344,7 @@ public partial class V1api20231115storageDatabaseAccountSpecOperatorSpecSecretsD
     public string Name { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20231115storageDatabaseAccountSpecOperatorSpecSecretsPrimaryMasterKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -335,6 +356,7 @@ public partial class V1api20231115storageDatabaseAccountSpecOperatorSpecSecretsP
     public string Name { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20231115storageDatabaseAccountSpecOperatorSpecSecretsPrimaryReadonlyMasterKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -346,6 +368,7 @@ public partial class V1api20231115storageDatabaseAccountSpecOperatorSpecSecretsP
     public string Name { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20231115storageDatabaseAccountSpecOperatorSpecSecretsSecondaryMasterKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -357,6 +380,7 @@ public partial class V1api20231115storageDatabaseAccountSpecOperatorSpecSecretsS
     public string Name { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20231115storageDatabaseAccountSpecOperatorSpecSecretsSecondaryReadonlyMasterKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -368,6 +392,7 @@ public partial class V1api20231115storageDatabaseAccountSpecOperatorSpecSecretsS
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.DatabaseAccountOperatorSecrets</summary>
 public partial class V1api20231115storageDatabaseAccountSpecOperatorSpecSecrets
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -395,6 +420,7 @@ public partial class V1api20231115storageDatabaseAccountSpecOperatorSpecSecrets
     public V1api20231115storageDatabaseAccountSpecOperatorSpecSecretsSecondaryReadonlyMasterKey? SecondaryReadonlyMasterKey { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.DatabaseAccountOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 public partial class V1api20231115storageDatabaseAccountSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -406,6 +432,7 @@ public partial class V1api20231115storageDatabaseAccountSpecOperatorSpec
     public V1api20231115storageDatabaseAccountSpecOperatorSpecSecrets? Secrets { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20231115storageDatabaseAccountSpecOwner
 {
     /// <summary></summary>
@@ -417,6 +444,7 @@ public partial class V1api20231115storageDatabaseAccountSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.DatabaseRestoreResource Specific Databases to restore.</summary>
 public partial class V1api20231115storageDatabaseAccountSpecRestoreParametersDatabasesToRestore
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -432,6 +460,7 @@ public partial class V1api20231115storageDatabaseAccountSpecRestoreParametersDat
     public string? DatabaseName { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.GremlinDatabaseRestoreResource Specific Gremlin Databases to restore.</summary>
 public partial class V1api20231115storageDatabaseAccountSpecRestoreParametersGremlinDatabasesToRestore
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -447,6 +476,7 @@ public partial class V1api20231115storageDatabaseAccountSpecRestoreParametersGre
     public IList<string>? GraphNames { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.RestoreParameters Parameters to indicate the information about the restore.</summary>
 public partial class V1api20231115storageDatabaseAccountSpecRestoreParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -478,6 +508,7 @@ public partial class V1api20231115storageDatabaseAccountSpecRestoreParameters
     public IList<string>? TablesToRestore { get; set; }
 }
 
+/// <summary>Reference: Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}.</summary>
 public partial class V1api20231115storageDatabaseAccountSpecVirtualNetworkRulesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -497,6 +528,7 @@ public partial class V1api20231115storageDatabaseAccountSpecVirtualNetworkRulesR
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.VirtualNetworkRule Virtual Network ACL Rule object</summary>
 public partial class V1api20231115storageDatabaseAccountSpecVirtualNetworkRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -512,6 +544,7 @@ public partial class V1api20231115storageDatabaseAccountSpecVirtualNetworkRules
     public V1api20231115storageDatabaseAccountSpecVirtualNetworkRulesReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.DatabaseAccount_Spec</summary>
 public partial class V1api20231115storageDatabaseAccountSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -675,6 +708,7 @@ public partial class V1api20231115storageDatabaseAccountSpec
     public IList<V1api20231115storageDatabaseAccountSpecVirtualNetworkRules>? VirtualNetworkRules { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.AnalyticalStorageConfiguration_STATUS Analytical storage specific properties.</summary>
 public partial class V1api20231115storageDatabaseAccountStatusAnalyticalStorageConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -686,6 +720,7 @@ public partial class V1api20231115storageDatabaseAccountStatusAnalyticalStorageC
     public string? SchemaType { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.ApiProperties_STATUS</summary>
 public partial class V1api20231115storageDatabaseAccountStatusApiProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -697,6 +732,7 @@ public partial class V1api20231115storageDatabaseAccountStatusApiProperties
     public string? ServerVersion { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.ContinuousModeProperties_STATUS Configuration values for periodic mode backup</summary>
 public partial class V1api20231115storageDatabaseAccountStatusBackupPolicyContinuousContinuousModeProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -708,6 +744,7 @@ public partial class V1api20231115storageDatabaseAccountStatusBackupPolicyContin
     public string? Tier { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.BackupPolicyMigrationState_STATUS The object representing the state of the migration between the backup policies.</summary>
 public partial class V1api20231115storageDatabaseAccountStatusBackupPolicyContinuousMigrationState
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -727,6 +764,7 @@ public partial class V1api20231115storageDatabaseAccountStatusBackupPolicyContin
     public string? TargetType { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.ContinuousModeBackupPolicy_STATUS</summary>
 public partial class V1api20231115storageDatabaseAccountStatusBackupPolicyContinuous
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -746,6 +784,7 @@ public partial class V1api20231115storageDatabaseAccountStatusBackupPolicyContin
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.BackupPolicyMigrationState_STATUS The object representing the state of the migration between the backup policies.</summary>
 public partial class V1api20231115storageDatabaseAccountStatusBackupPolicyPeriodicMigrationState
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -765,6 +804,7 @@ public partial class V1api20231115storageDatabaseAccountStatusBackupPolicyPeriod
     public string? TargetType { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.PeriodicModeProperties_STATUS Configuration values for periodic mode backup</summary>
 public partial class V1api20231115storageDatabaseAccountStatusBackupPolicyPeriodicPeriodicModeProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -784,6 +824,7 @@ public partial class V1api20231115storageDatabaseAccountStatusBackupPolicyPeriod
     public string? BackupStorageRedundancy { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.PeriodicModeBackupPolicy_STATUS</summary>
 public partial class V1api20231115storageDatabaseAccountStatusBackupPolicyPeriodic
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -803,6 +844,7 @@ public partial class V1api20231115storageDatabaseAccountStatusBackupPolicyPeriod
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.BackupPolicy_STATUS</summary>
 public partial class V1api20231115storageDatabaseAccountStatusBackupPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -818,6 +860,7 @@ public partial class V1api20231115storageDatabaseAccountStatusBackupPolicy
     public V1api20231115storageDatabaseAccountStatusBackupPolicyPeriodic? Periodic { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.Capability_STATUS Cosmos DB capability object</summary>
 public partial class V1api20231115storageDatabaseAccountStatusCapabilities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -829,6 +872,7 @@ public partial class V1api20231115storageDatabaseAccountStatusCapabilities
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.Capacity_STATUS The object that represents all properties related to capacity enforcement on an account.</summary>
 public partial class V1api20231115storageDatabaseAccountStatusCapacity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -840,6 +884,7 @@ public partial class V1api20231115storageDatabaseAccountStatusCapacity
     public int? TotalThroughputLimit { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20231115storageDatabaseAccountStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -871,6 +916,7 @@ public partial class V1api20231115storageDatabaseAccountStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.ConsistencyPolicy_STATUS The consistency policy for the Cosmos DB database account.</summary>
 public partial class V1api20231115storageDatabaseAccountStatusConsistencyPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -890,6 +936,7 @@ public partial class V1api20231115storageDatabaseAccountStatusConsistencyPolicy
     public int? MaxStalenessPrefix { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.CorsPolicy_STATUS The CORS policy for the Cosmos DB database account.</summary>
 public partial class V1api20231115storageDatabaseAccountStatusCors
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -917,6 +964,7 @@ public partial class V1api20231115storageDatabaseAccountStatusCors
     public int? MaxAgeInSeconds { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.FailoverPolicy_STATUS The failover policy for a given region of a database account.</summary>
 public partial class V1api20231115storageDatabaseAccountStatusFailoverPolicies
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -936,6 +984,7 @@ public partial class V1api20231115storageDatabaseAccountStatusFailoverPolicies
     public string? LocationName { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.ManagedServiceIdentity_UserAssignedIdentities_STATUS</summary>
 public partial class V1api20231115storageDatabaseAccountStatusIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -951,6 +1000,7 @@ public partial class V1api20231115storageDatabaseAccountStatusIdentityUserAssign
     public string? PrincipalId { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.ManagedServiceIdentity_STATUS Identity for the resource.</summary>
 public partial class V1api20231115storageDatabaseAccountStatusIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -974,6 +1024,7 @@ public partial class V1api20231115storageDatabaseAccountStatusIdentity
     public IDictionary<string, V1api20231115storageDatabaseAccountStatusIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.IpAddressOrRange_STATUS IpAddressOrRange object</summary>
 public partial class V1api20231115storageDatabaseAccountStatusIpRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -985,6 +1036,7 @@ public partial class V1api20231115storageDatabaseAccountStatusIpRules
     public string? IpAddressOrRange { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.AccountKeyMetadata_STATUS The metadata related to an access key for a given database account.</summary>
 public partial class V1api20231115storageDatabaseAccountStatusKeysMetadataPrimaryMasterKey
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -996,6 +1048,7 @@ public partial class V1api20231115storageDatabaseAccountStatusKeysMetadataPrimar
     public string? GenerationTime { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.AccountKeyMetadata_STATUS The metadata related to an access key for a given database account.</summary>
 public partial class V1api20231115storageDatabaseAccountStatusKeysMetadataPrimaryReadonlyMasterKey
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1007,6 +1060,7 @@ public partial class V1api20231115storageDatabaseAccountStatusKeysMetadataPrimar
     public string? GenerationTime { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.AccountKeyMetadata_STATUS The metadata related to an access key for a given database account.</summary>
 public partial class V1api20231115storageDatabaseAccountStatusKeysMetadataSecondaryMasterKey
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1018,6 +1072,7 @@ public partial class V1api20231115storageDatabaseAccountStatusKeysMetadataSecond
     public string? GenerationTime { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.AccountKeyMetadata_STATUS The metadata related to an access key for a given database account.</summary>
 public partial class V1api20231115storageDatabaseAccountStatusKeysMetadataSecondaryReadonlyMasterKey
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1029,6 +1084,7 @@ public partial class V1api20231115storageDatabaseAccountStatusKeysMetadataSecond
     public string? GenerationTime { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.DatabaseAccountKeysMetadata_STATUS The metadata related to each access key for the given Cosmos DB database account.</summary>
 public partial class V1api20231115storageDatabaseAccountStatusKeysMetadata
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1052,6 +1108,7 @@ public partial class V1api20231115storageDatabaseAccountStatusKeysMetadata
     public V1api20231115storageDatabaseAccountStatusKeysMetadataSecondaryReadonlyMasterKey? SecondaryReadonlyMasterKey { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.Location_STATUS A region in which the Azure Cosmos DB database account is deployed.</summary>
 public partial class V1api20231115storageDatabaseAccountStatusLocations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1083,6 +1140,7 @@ public partial class V1api20231115storageDatabaseAccountStatusLocations
     public string? ProvisioningState { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.PrivateEndpointConnection_STATUS A private endpoint connection</summary>
 public partial class V1api20231115storageDatabaseAccountStatusPrivateEndpointConnections
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1094,6 +1152,7 @@ public partial class V1api20231115storageDatabaseAccountStatusPrivateEndpointCon
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.Location_STATUS A region in which the Azure Cosmos DB database account is deployed.</summary>
 public partial class V1api20231115storageDatabaseAccountStatusReadLocations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1125,6 +1184,7 @@ public partial class V1api20231115storageDatabaseAccountStatusReadLocations
     public string? ProvisioningState { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.DatabaseRestoreResource_STATUS Specific Databases to restore.</summary>
 public partial class V1api20231115storageDatabaseAccountStatusRestoreParametersDatabasesToRestore
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1140,6 +1200,7 @@ public partial class V1api20231115storageDatabaseAccountStatusRestoreParametersD
     public string? DatabaseName { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.GremlinDatabaseRestoreResource_STATUS Specific Gremlin Databases to restore.</summary>
 public partial class V1api20231115storageDatabaseAccountStatusRestoreParametersGremlinDatabasesToRestore
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1155,6 +1216,7 @@ public partial class V1api20231115storageDatabaseAccountStatusRestoreParametersG
     public IList<string>? GraphNames { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.RestoreParameters_STATUS Parameters to indicate the information about the restore.</summary>
 public partial class V1api20231115storageDatabaseAccountStatusRestoreParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1186,6 +1248,7 @@ public partial class V1api20231115storageDatabaseAccountStatusRestoreParameters
     public IList<string>? TablesToRestore { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 public partial class V1api20231115storageDatabaseAccountStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1217,6 +1280,7 @@ public partial class V1api20231115storageDatabaseAccountStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.VirtualNetworkRule_STATUS Virtual Network ACL Rule object</summary>
 public partial class V1api20231115storageDatabaseAccountStatusVirtualNetworkRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1232,6 +1296,7 @@ public partial class V1api20231115storageDatabaseAccountStatusVirtualNetworkRule
     public bool? IgnoreMissingVNetServiceEndpoint { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.Location_STATUS A region in which the Azure Cosmos DB database account is deployed.</summary>
 public partial class V1api20231115storageDatabaseAccountStatusWriteLocations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1263,6 +1328,7 @@ public partial class V1api20231115storageDatabaseAccountStatusWriteLocations
     public string? ProvisioningState { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.DatabaseAccount_STATUS</summary>
 public partial class V1api20231115storageDatabaseAccountStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1463,6 +1529,7 @@ public partial class V1api20231115storageDatabaseAccountStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20231115.DatabaseAccount Generator information: - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2023-11-15/cosmos-db.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}</summary>
 public partial class V1api20231115storageDatabaseAccount : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20231115storageDatabaseAccountSpec>, IStatus<V1api20231115storageDatabaseAccountStatus>
 {
     public const string KubeApiVersion = "v1api20231115storage";

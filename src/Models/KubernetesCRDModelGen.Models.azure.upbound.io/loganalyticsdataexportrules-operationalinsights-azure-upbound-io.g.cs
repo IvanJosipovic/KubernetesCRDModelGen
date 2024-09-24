@@ -38,6 +38,7 @@ public enum V1beta1LogAnalyticsDataExportRuleSpecForProviderDestinationResourceI
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LogAnalyticsDataExportRuleSpecForProviderDestinationResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1LogAnalyticsDataExportRuleSpecForProviderDestination
     public V1beta1LogAnalyticsDataExportRuleSpecForProviderDestinationResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in storage to populate destinationResourceId.</summary>
 public partial class V1beta1LogAnalyticsDataExportRuleSpecForProviderDestinationResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1LogAnalyticsDataExportRuleSpecForProviderDestinationResourceI
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LogAnalyticsDataExportRuleSpecForProviderDestinationResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1LogAnalyticsDataExportRuleSpecForProviderDestination
     public V1beta1LogAnalyticsDataExportRuleSpecForProviderDestinationResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in storage to populate destinationResourceId.</summary>
 public partial class V1beta1LogAnalyticsDataExportRuleSpecForProviderDestinationResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1LogAnalyticsDataExportRuleSpecForProviderResourceGroupNameRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LogAnalyticsDataExportRuleSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1LogAnalyticsDataExportRuleSpecForProviderResourceGro
     public V1beta1LogAnalyticsDataExportRuleSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1LogAnalyticsDataExportRuleSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1LogAnalyticsDataExportRuleSpecForProviderResourceGroupNameSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LogAnalyticsDataExportRuleSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1LogAnalyticsDataExportRuleSpecForProviderResourceGro
     public V1beta1LogAnalyticsDataExportRuleSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1LogAnalyticsDataExportRuleSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1LogAnalyticsDataExportRuleSpecForProviderWorkspaceResourceIdR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LogAnalyticsDataExportRuleSpecForProviderWorkspaceResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1LogAnalyticsDataExportRuleSpecForProviderWorkspaceRe
     public V1beta1LogAnalyticsDataExportRuleSpecForProviderWorkspaceResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Workspace in operationalinsights to populate workspaceResourceId.</summary>
 public partial class V1beta1LogAnalyticsDataExportRuleSpecForProviderWorkspaceResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1LogAnalyticsDataExportRuleSpecForProviderWorkspaceResourceIdS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LogAnalyticsDataExportRuleSpecForProviderWorkspaceResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1LogAnalyticsDataExportRuleSpecForProviderWorkspaceRe
     public V1beta1LogAnalyticsDataExportRuleSpecForProviderWorkspaceResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Workspace in operationalinsights to populate workspaceResourceId.</summary>
 public partial class V1beta1LogAnalyticsDataExportRuleSpecForProviderWorkspaceResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1LogAnalyticsDataExportRuleSpecForProviderWorkspaceRe
     public V1beta1LogAnalyticsDataExportRuleSpecForProviderWorkspaceResourceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LogAnalyticsDataExportRuleSpecForProvider
 {
     /// <summary>The destination resource ID. It should be a storage account, an event hub namespace or an event hub. If the destination is an event hub namespace, an event hub would be created for each table automatically.</summary>
@@ -361,6 +374,7 @@ public enum V1beta1LogAnalyticsDataExportRuleSpecInitProviderDestinationResource
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LogAnalyticsDataExportRuleSpecInitProviderDestinationResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -374,6 +388,7 @@ public partial class V1beta1LogAnalyticsDataExportRuleSpecInitProviderDestinatio
     public V1beta1LogAnalyticsDataExportRuleSpecInitProviderDestinationResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in storage to populate destinationResourceId.</summary>
 public partial class V1beta1LogAnalyticsDataExportRuleSpecInitProviderDestinationResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -405,6 +420,7 @@ public enum V1beta1LogAnalyticsDataExportRuleSpecInitProviderDestinationResource
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LogAnalyticsDataExportRuleSpecInitProviderDestinationResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -418,6 +434,7 @@ public partial class V1beta1LogAnalyticsDataExportRuleSpecInitProviderDestinatio
     public V1beta1LogAnalyticsDataExportRuleSpecInitProviderDestinationResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in storage to populate destinationResourceId.</summary>
 public partial class V1beta1LogAnalyticsDataExportRuleSpecInitProviderDestinationResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -453,6 +470,7 @@ public enum V1beta1LogAnalyticsDataExportRuleSpecInitProviderResourceGroupNameRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LogAnalyticsDataExportRuleSpecInitProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -466,6 +484,7 @@ public partial class V1beta1LogAnalyticsDataExportRuleSpecInitProviderResourceGr
     public V1beta1LogAnalyticsDataExportRuleSpecInitProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1LogAnalyticsDataExportRuleSpecInitProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -497,6 +516,7 @@ public enum V1beta1LogAnalyticsDataExportRuleSpecInitProviderResourceGroupNameSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LogAnalyticsDataExportRuleSpecInitProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -510,6 +530,7 @@ public partial class V1beta1LogAnalyticsDataExportRuleSpecInitProviderResourceGr
     public V1beta1LogAnalyticsDataExportRuleSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1LogAnalyticsDataExportRuleSpecInitProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -525,6 +546,7 @@ public partial class V1beta1LogAnalyticsDataExportRuleSpecInitProviderResourceGr
     public V1beta1LogAnalyticsDataExportRuleSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1LogAnalyticsDataExportRuleSpecInitProvider
 {
     /// <summary>The destination resource ID. It should be a storage account, an event hub namespace or an event hub. If the destination is an event hub namespace, an event hub would be created for each table automatically.</summary>
@@ -602,6 +624,7 @@ public enum V1beta1LogAnalyticsDataExportRuleSpecProviderConfigRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LogAnalyticsDataExportRuleSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -615,6 +638,7 @@ public partial class V1beta1LogAnalyticsDataExportRuleSpecProviderConfigRefPolic
     public V1beta1LogAnalyticsDataExportRuleSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1LogAnalyticsDataExportRuleSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -646,6 +670,7 @@ public enum V1beta1LogAnalyticsDataExportRuleSpecPublishConnectionDetailsToConfi
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LogAnalyticsDataExportRuleSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -659,6 +684,7 @@ public partial class V1beta1LogAnalyticsDataExportRuleSpecPublishConnectionDetai
     public V1beta1LogAnalyticsDataExportRuleSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1LogAnalyticsDataExportRuleSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -670,6 +696,7 @@ public partial class V1beta1LogAnalyticsDataExportRuleSpecPublishConnectionDetai
     public V1beta1LogAnalyticsDataExportRuleSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1LogAnalyticsDataExportRuleSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -685,6 +712,7 @@ public partial class V1beta1LogAnalyticsDataExportRuleSpecPublishConnectionDetai
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1LogAnalyticsDataExportRuleSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -700,6 +728,7 @@ public partial class V1beta1LogAnalyticsDataExportRuleSpecPublishConnectionDetai
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1LogAnalyticsDataExportRuleSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -711,6 +740,7 @@ public partial class V1beta1LogAnalyticsDataExportRuleSpecWriteConnectionSecretT
     public string Namespace { get; set; }
 }
 
+/// <summary>LogAnalyticsDataExportRuleSpec defines the desired state of LogAnalyticsDataExportRule</summary>
 public partial class V1beta1LogAnalyticsDataExportRuleSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -743,6 +773,7 @@ public partial class V1beta1LogAnalyticsDataExportRuleSpec
     public V1beta1LogAnalyticsDataExportRuleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LogAnalyticsDataExportRuleStatusAtProvider
 {
     /// <summary>The destination resource ID. It should be a storage account, an event hub namespace or an event hub. If the destination is an event hub namespace, an event hub would be created for each table automatically.</summary>
@@ -774,6 +805,7 @@ public partial class V1beta1LogAnalyticsDataExportRuleStatusAtProvider
     public string? WorkspaceResourceId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1LogAnalyticsDataExportRuleStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -801,6 +833,7 @@ public partial class V1beta1LogAnalyticsDataExportRuleStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>LogAnalyticsDataExportRuleStatus defines the observed state of LogAnalyticsDataExportRule.</summary>
 public partial class V1beta1LogAnalyticsDataExportRuleStatus
 {
     /// <summary></summary>
@@ -817,6 +850,7 @@ public partial class V1beta1LogAnalyticsDataExportRuleStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>LogAnalyticsDataExportRule is the Schema for the LogAnalyticsDataExportRules API. Manages a log analytics Data Export Rule.</summary>
 public partial class V1beta1LogAnalyticsDataExportRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LogAnalyticsDataExportRuleSpec>, IStatus<V1beta1LogAnalyticsDataExportRuleStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceGroupManagerSpecAutoHealingPoliciesHealthCheckRef
 {
     /// <summary>The URL for the health check that signals autohealing.  Allowed value: The `selfLink` field of a `ComputeHealthCheck` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecAutoHealingPoliciesHe
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceGroupManagerSpecAutoHealingPolicies
 {
     /// <summary></summary>
@@ -34,6 +36,7 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecAutoHealingPolicies
     public long? InitialDelaySec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceGroupManagerSpecDistributionPolicyZones
 {
     /// <summary>Immutable. The URL of the [zone](/compute/docs/regions-zones/#available). The zone must exist in the region where the managed instance group is located.</summary>
@@ -41,6 +44,7 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecDistributionPolicyZon
     public string? Zone { get; set; }
 }
 
+/// <summary>Policy specifying the intended distribution of managed instances across zones in a regional managed instance group.</summary>
 public partial class V1beta1ComputeInstanceGroupManagerSpecDistributionPolicy
 {
     /// <summary>The distribution shape to which the group converges either proactively or on resize events (depending on the value set in `updatePolicy.instanceRedistributionType`). Possible values: TARGET_SHAPE_UNSPECIFIED, ANY, BALANCED, ANY_SINGLE_ZONE</summary>
@@ -52,6 +56,7 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecDistributionPolicy
     public IList<V1beta1ComputeInstanceGroupManagerSpecDistributionPolicyZones>? Zones { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceGroupManagerSpecInstanceTemplateRef
 {
     /// <summary>The URL of the instance template that is specified for this managed instance group. The group uses this template to create all new instances in the managed instance group. The templates for existing instances in the group do not change unless you run `recreateInstances`, run `applyUpdatesToInstances`, or set the group's `updatePolicy.type` to `PROACTIVE`.  Allowed value: The `selfLink` field of a `ComputeInstanceTemplate` resource.</summary>
@@ -67,6 +72,7 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecInstanceTemplateRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceGroupManagerSpecNamedPorts
 {
     /// <summary>Immutable. The name for this named port. The name must be 1-63 characters long, and comply with [RFC1035](https://www.ietf.org/rfc/rfc1035.txt).</summary>
@@ -78,6 +84,7 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecNamedPorts
     public long? Port { get; set; }
 }
 
+/// <summary>Immutable. The Project that this resource belongs to.</summary>
 public partial class V1beta1ComputeInstanceGroupManagerSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -93,6 +100,7 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceGroupManagerSpecServiceAccountRef
 {
     /// <summary>The service account to be used as credentials for all operations performed by the managed instance group on instances. The service accounts needs all permissions required to create and delete instances. By default, the service account: {projectNumber}@cloudservices.gserviceaccount.com is used.  Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
@@ -108,6 +116,7 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecServiceAccountRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceGroupManagerSpecStatefulPolicyPreservedStateDisks
 {
     /// <summary>These stateful disks will never be deleted during autohealing, update or VM instance recreate operations. This flag is used to configure if the disk should be deleted after it is no longer used by the group, e.g. when the given instance or the whole group is deleted. Note: disks attached in READ_ONLY mode cannot be auto-deleted. Possible values: NEVER, ON_PERMANENT_INSTANCE_DELETION</summary>
@@ -115,6 +124,7 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecStatefulPolicyPreserv
     public string? AutoDelete { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceGroupManagerSpecStatefulPolicyPreservedStateExternalIps
 {
     /// <summary>These stateful IPs will never be released during autohealing, update or VM instance recreate operations. This flag is used to configure if the IP reservation should be deleted after it is no longer used by the group, e.g. when the given instance or the whole group is deleted. Possible values: NEVER, ON_PERMANENT_INSTANCE_DELETION</summary>
@@ -122,6 +132,7 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecStatefulPolicyPreserv
     public string? AutoDelete { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceGroupManagerSpecStatefulPolicyPreservedStateInternalIps
 {
     /// <summary>These stateful IPs will never be released during autohealing, update or VM instance recreate operations. This flag is used to configure if the IP reservation should be deleted after it is no longer used by the group, e.g. when the given instance or the whole group is deleted. Possible values: NEVER, ON_PERMANENT_INSTANCE_DELETION</summary>
@@ -129,6 +140,7 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecStatefulPolicyPreserv
     public string? AutoDelete { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceGroupManagerSpecStatefulPolicyPreservedState
 {
     /// <summary>Disks created on the instances that will be preserved on instance delete, update, etc. This map is keyed with the device names of the disks.</summary>
@@ -144,6 +156,7 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecStatefulPolicyPreserv
     public IDictionary<string, V1beta1ComputeInstanceGroupManagerSpecStatefulPolicyPreservedStateInternalIps>? InternalIps { get; set; }
 }
 
+/// <summary>Stateful configuration for this Instanced Group Manager</summary>
 public partial class V1beta1ComputeInstanceGroupManagerSpecStatefulPolicy
 {
     /// <summary></summary>
@@ -151,6 +164,7 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecStatefulPolicy
     public V1beta1ComputeInstanceGroupManagerSpecStatefulPolicyPreservedState? PreservedState { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceGroupManagerSpecTargetPools
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeTargetPool` resource.</summary>
@@ -166,6 +180,7 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecTargetPools
     public string? Namespace { get; set; }
 }
 
+/// <summary>The maximum number of instances that can be created above the specified `targetSize` during the update process. This value can be either a fixed number or, if the group has 10 or more instances, a percentage. If you set a percentage, the number of instances is rounded if necessary. The default value for `maxSurge` is a fixed value equal to the number of zones in which the managed instance group operates. At least one of either `maxSurge` or `maxUnavailable` must be greater than 0. Learn more about [`maxSurge`](/compute/docs/instance-groups/rolling-out-updates-to-managed-instance-groups#max_surge).</summary>
 public partial class V1beta1ComputeInstanceGroupManagerSpecUpdatePolicyMaxSurge
 {
     /// <summary>Specifies a fixed number of VM instances. This must be a positive integer.</summary>
@@ -177,6 +192,7 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecUpdatePolicyMaxSurge
     public long? Percent { get; set; }
 }
 
+/// <summary>The maximum number of instances that can be unavailable during the update process. An instance is considered available if all of the following conditions are satisfied: - The instance's [status](/compute/docs/instances/checking-instance-status) is `RUNNING`. - If there is a [health check](/compute/docs/instance-groups/autohealing-instances-in-migs) on the instance group, the instance's health check status must be `HEALTHY` at least once. If there is no health check on the group, then the instance only needs to have a status of `RUNNING` to be considered available. This value can be either a fixed number or, if the group has 10 or more instances, a percentage. If you set a percentage, the number of instances is rounded if necessary. The default value for `maxUnavailable` is a fixed value equal to the number of zones in which the managed instance group operates. At least one of either `maxSurge` or `maxUnavailable` must be greater than 0. Learn more about [`maxUnavailable`](/compute/docs/instance-groups/rolling-out-updates-to-managed-instance-groups#max_unavailable).</summary>
 public partial class V1beta1ComputeInstanceGroupManagerSpecUpdatePolicyMaxUnavailable
 {
     /// <summary>Specifies a fixed number of VM instances. This must be a positive integer.</summary>
@@ -188,6 +204,7 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecUpdatePolicyMaxUnavai
     public long? Percent { get; set; }
 }
 
+/// <summary>The update policy for this managed instance group.</summary>
 public partial class V1beta1ComputeInstanceGroupManagerSpecUpdatePolicy
 {
     /// <summary>The [instance redistribution policy](/compute/docs/instance-groups/regional-migs#proactive_instance_redistribution) for regional managed instance groups. Valid values are: - `PROACTIVE` (default): The group attempts to maintain an even distribution of VM instances across zones in the region. - `NONE`: For non-autoscaled groups, proactive redistribution is disabled.</summary>
@@ -223,6 +240,7 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecUpdatePolicy
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceGroupManagerSpecVersionsInstanceTemplateRef
 {
     /// <summary>The URL of the instance template that is specified for this managed instance group. The group uses this template to create new instances in the managed instance group until the `targetSize` for this version is reached. The templates for existing instances in the group do not change unless you run `recreateInstances`, run `applyUpdatesToInstances`, or set the group's `updatePolicy.type` to `PROACTIVE`; in those cases, existing instances are updated until the `targetSize` for this version is reached.  Allowed value: The `selfLink` field of a `ComputeInstanceTemplate` resource.</summary>
@@ -238,6 +256,7 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecVersionsInstanceTempl
     public string? Namespace { get; set; }
 }
 
+/// <summary>Specifies the intended number of instances to be created from the `instanceTemplate`. The final number of instances created from the template will be equal to: - If expressed as a fixed number, the minimum of either `targetSize.fixed` or `instanceGroupManager.targetSize` is used. - if expressed as a `percent`, the `targetSize` would be `(targetSize.percent/100 * InstanceGroupManager.targetSize)` If there is a remainder, the number is rounded. If unset, this version will update any remaining instances not updated by another `version`. Read [Starting a canary update](/compute/docs/instance-groups/rolling-out-updates-to-managed-instance-groups#starting_a_canary_update) for more information.</summary>
 public partial class V1beta1ComputeInstanceGroupManagerSpecVersionsTargetSize
 {
     /// <summary>[Output Only] Absolute value of VM instances calculated based on the specific mode. - If the value is `fixed`, then the `calculated` value is equal to the `fixed` value. - If the value is a `percent`, then the `calculated` value is `percent`/100 * `targetSize`. For example, the `calculated` value of a 80% of a managed instance group with 150 instances would be (80/100 * 150) = 120 VM instances. If there is a remainder, the number is rounded.</summary>
@@ -253,6 +272,7 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecVersionsTargetSize
     public long? Percent { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceGroupManagerSpecVersions
 {
     /// <summary></summary>
@@ -268,6 +288,7 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecVersions
     public V1beta1ComputeInstanceGroupManagerSpecVersionsTargetSize? TargetSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceGroupManagerSpec
 {
     /// <summary>The autohealing policy for this managed instance group. You can specify only one value.</summary>
@@ -335,6 +356,7 @@ public partial class V1beta1ComputeInstanceGroupManagerSpec
     public IList<V1beta1ComputeInstanceGroupManagerSpecVersions>? Versions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceGroupManagerStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -358,6 +380,7 @@ public partial class V1beta1ComputeInstanceGroupManagerStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary>[Output Only] The list of instance actions and the number of instances in this managed instance group that are scheduled for each of those actions.</summary>
 public partial class V1beta1ComputeInstanceGroupManagerStatusCurrentActions
 {
     /// <summary>[Output Only] The total number of instances in the managed instance group that are scheduled to be abandoned. Abandoning an instance removes it from the managed instance group without deleting it.</summary>
@@ -397,6 +420,7 @@ public partial class V1beta1ComputeInstanceGroupManagerStatusCurrentActions
     public long? Verifying { get; set; }
 }
 
+/// <summary>[Output Only] Status of per-instance configs on the instance.</summary>
 public partial class V1beta1ComputeInstanceGroupManagerStatusStatusStatefulPerInstanceConfigs
 {
     /// <summary>A bit indicating if all of the group's per-instance configs (listed in the output of a listPerInstanceConfigs API call) have status `EFFECTIVE` or there are no per-instance-configs.</summary>
@@ -404,6 +428,7 @@ public partial class V1beta1ComputeInstanceGroupManagerStatusStatusStatefulPerIn
     public bool? AllEffective { get; set; }
 }
 
+/// <summary>[Output Only] Stateful status of the given Instance Group Manager.</summary>
 public partial class V1beta1ComputeInstanceGroupManagerStatusStatusStateful
 {
     /// <summary>[Output Only] A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions.</summary>
@@ -419,6 +444,7 @@ public partial class V1beta1ComputeInstanceGroupManagerStatusStatusStateful
     public V1beta1ComputeInstanceGroupManagerStatusStatusStatefulPerInstanceConfigs? PerInstanceConfigs { get; set; }
 }
 
+/// <summary>[Output Only] A status of consistency of Instances' versions with their target version specified by `version` field on Instance Group Manager.</summary>
 public partial class V1beta1ComputeInstanceGroupManagerStatusStatusVersionTarget
 {
     /// <summary>[Output Only] A bit indicating whether version target has been reached in this managed instance group, i.e. all instances are in their target version. Instances' target version are specified by `version` field on Instance Group Manager.</summary>
@@ -426,6 +452,7 @@ public partial class V1beta1ComputeInstanceGroupManagerStatusStatusVersionTarget
     public bool? IsReached { get; set; }
 }
 
+/// <summary>[Output Only] The status of this managed instance group.</summary>
 public partial class V1beta1ComputeInstanceGroupManagerStatusStatus
 {
     /// <summary>[Output Only] The URL of the [Autoscaler](/compute/docs/autoscaler/) that targets this instance group manager.</summary>
@@ -445,6 +472,7 @@ public partial class V1beta1ComputeInstanceGroupManagerStatusStatus
     public V1beta1ComputeInstanceGroupManagerStatusStatusVersionTarget? VersionTarget { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceGroupManagerStatusUpdatePolicyMaxSurge
 {
     /// <summary>[Output Only] Absolute value of VM instances calculated based on the specific mode. - If the value is `fixed`, then the `calculated` value is equal to the `fixed` value. - If the value is a `percent`, then the `calculated` value is `percent`/100 * `targetSize`. For example, the `calculated` value of a 80% of a managed instance group with 150 instances would be (80/100 * 150) = 120 VM instances. If there is a remainder, the number is rounded.</summary>
@@ -452,6 +480,7 @@ public partial class V1beta1ComputeInstanceGroupManagerStatusUpdatePolicyMaxSurg
     public long? Calculated { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceGroupManagerStatusUpdatePolicyMaxUnavailable
 {
     /// <summary>[Output Only] Absolute value of VM instances calculated based on the specific mode. - If the value is `fixed`, then the `calculated` value is equal to the `fixed` value. - If the value is a `percent`, then the `calculated` value is `percent`/100 * `targetSize`. For example, the `calculated` value of a 80% of a managed instance group with 150 instances would be (80/100 * 150) = 120 VM instances. If there is a remainder, the number is rounded.</summary>
@@ -459,6 +488,7 @@ public partial class V1beta1ComputeInstanceGroupManagerStatusUpdatePolicyMaxUnav
     public long? Calculated { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceGroupManagerStatusUpdatePolicy
 {
     /// <summary></summary>
@@ -470,6 +500,7 @@ public partial class V1beta1ComputeInstanceGroupManagerStatusUpdatePolicy
     public V1beta1ComputeInstanceGroupManagerStatusUpdatePolicyMaxUnavailable? MaxUnavailable { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceGroupManagerStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -522,6 +553,7 @@ public partial class V1beta1ComputeInstanceGroupManagerStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceGroupManager : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeInstanceGroupManagerSpec>, IStatus<V1beta1ComputeInstanceGroupManagerStatus>
 {
     public const string KubeApiVersion = "v1beta1";

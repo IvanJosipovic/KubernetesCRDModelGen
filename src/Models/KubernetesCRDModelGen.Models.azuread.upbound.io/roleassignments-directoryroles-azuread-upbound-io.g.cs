@@ -38,6 +38,7 @@ public enum V1beta1RoleAssignmentSpecForProviderPrincipalObjectIdRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RoleAssignmentSpecForProviderPrincipalObjectIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1RoleAssignmentSpecForProviderPrincipalObjectIdRefPol
     public V1beta1RoleAssignmentSpecForProviderPrincipalObjectIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a User in users to populate principalObjectId.</summary>
 public partial class V1beta1RoleAssignmentSpecForProviderPrincipalObjectIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1RoleAssignmentSpecForProviderPrincipalObjectIdSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RoleAssignmentSpecForProviderPrincipalObjectIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1RoleAssignmentSpecForProviderPrincipalObjectIdSelect
     public V1beta1RoleAssignmentSpecForProviderPrincipalObjectIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a User in users to populate principalObjectId.</summary>
 public partial class V1beta1RoleAssignmentSpecForProviderPrincipalObjectIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1RoleAssignmentSpecForProviderRoleIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RoleAssignmentSpecForProviderRoleIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1RoleAssignmentSpecForProviderRoleIdRefPolicy
     public V1beta1RoleAssignmentSpecForProviderRoleIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in directoryroles to populate roleId.</summary>
 public partial class V1beta1RoleAssignmentSpecForProviderRoleIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1RoleAssignmentSpecForProviderRoleIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RoleAssignmentSpecForProviderRoleIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1RoleAssignmentSpecForProviderRoleIdSelectorPolicy
     public V1beta1RoleAssignmentSpecForProviderRoleIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in directoryroles to populate roleId.</summary>
 public partial class V1beta1RoleAssignmentSpecForProviderRoleIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1RoleAssignmentSpecForProviderRoleIdSelector
     public V1beta1RoleAssignmentSpecForProviderRoleIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RoleAssignmentSpecForProvider
 {
     /// <summary>Identifier of the app-specific scope when the assignment scope is app-specific. Cannot be used with directory_scope_id. See official documentation for example usage. Changing this forces a new resource to be created. Identifier of the app-specific scope when the assignment scope is app-specific</summary>
@@ -265,6 +274,7 @@ public enum V1beta1RoleAssignmentSpecInitProviderPrincipalObjectIdRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RoleAssignmentSpecInitProviderPrincipalObjectIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -278,6 +288,7 @@ public partial class V1beta1RoleAssignmentSpecInitProviderPrincipalObjectIdRefPo
     public V1beta1RoleAssignmentSpecInitProviderPrincipalObjectIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a User in users to populate principalObjectId.</summary>
 public partial class V1beta1RoleAssignmentSpecInitProviderPrincipalObjectIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -309,6 +320,7 @@ public enum V1beta1RoleAssignmentSpecInitProviderPrincipalObjectIdSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RoleAssignmentSpecInitProviderPrincipalObjectIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -322,6 +334,7 @@ public partial class V1beta1RoleAssignmentSpecInitProviderPrincipalObjectIdSelec
     public V1beta1RoleAssignmentSpecInitProviderPrincipalObjectIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a User in users to populate principalObjectId.</summary>
 public partial class V1beta1RoleAssignmentSpecInitProviderPrincipalObjectIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -357,6 +370,7 @@ public enum V1beta1RoleAssignmentSpecInitProviderRoleIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RoleAssignmentSpecInitProviderRoleIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -370,6 +384,7 @@ public partial class V1beta1RoleAssignmentSpecInitProviderRoleIdRefPolicy
     public V1beta1RoleAssignmentSpecInitProviderRoleIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in directoryroles to populate roleId.</summary>
 public partial class V1beta1RoleAssignmentSpecInitProviderRoleIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -401,6 +416,7 @@ public enum V1beta1RoleAssignmentSpecInitProviderRoleIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RoleAssignmentSpecInitProviderRoleIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -414,6 +430,7 @@ public partial class V1beta1RoleAssignmentSpecInitProviderRoleIdSelectorPolicy
     public V1beta1RoleAssignmentSpecInitProviderRoleIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in directoryroles to populate roleId.</summary>
 public partial class V1beta1RoleAssignmentSpecInitProviderRoleIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -429,6 +446,7 @@ public partial class V1beta1RoleAssignmentSpecInitProviderRoleIdSelector
     public V1beta1RoleAssignmentSpecInitProviderRoleIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1RoleAssignmentSpecInitProvider
 {
     /// <summary>Identifier of the app-specific scope when the assignment scope is app-specific. Cannot be used with directory_scope_id. See official documentation for example usage. Changing this forces a new resource to be created. Identifier of the app-specific scope when the assignment scope is app-specific</summary>
@@ -514,6 +532,7 @@ public enum V1beta1RoleAssignmentSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RoleAssignmentSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -527,6 +546,7 @@ public partial class V1beta1RoleAssignmentSpecProviderConfigRefPolicy
     public V1beta1RoleAssignmentSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1RoleAssignmentSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -558,6 +578,7 @@ public enum V1beta1RoleAssignmentSpecPublishConnectionDetailsToConfigRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RoleAssignmentSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -571,6 +592,7 @@ public partial class V1beta1RoleAssignmentSpecPublishConnectionDetailsToConfigRe
     public V1beta1RoleAssignmentSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1RoleAssignmentSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -582,6 +604,7 @@ public partial class V1beta1RoleAssignmentSpecPublishConnectionDetailsToConfigRe
     public V1beta1RoleAssignmentSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1RoleAssignmentSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -597,6 +620,7 @@ public partial class V1beta1RoleAssignmentSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1RoleAssignmentSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -612,6 +636,7 @@ public partial class V1beta1RoleAssignmentSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1RoleAssignmentSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -623,6 +648,7 @@ public partial class V1beta1RoleAssignmentSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>RoleAssignmentSpec defines the desired state of RoleAssignment</summary>
 public partial class V1beta1RoleAssignmentSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -655,6 +681,7 @@ public partial class V1beta1RoleAssignmentSpec
     public V1beta1RoleAssignmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RoleAssignmentStatusAtProvider
 {
     /// <summary>Identifier of the app-specific scope when the assignment scope is app-specific. Cannot be used with directory_scope_id. See official documentation for example usage. Changing this forces a new resource to be created. Identifier of the app-specific scope when the assignment scope is app-specific</summary>
@@ -686,6 +713,7 @@ public partial class V1beta1RoleAssignmentStatusAtProvider
     public string? RoleId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1RoleAssignmentStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -713,6 +741,7 @@ public partial class V1beta1RoleAssignmentStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>RoleAssignmentStatus defines the observed state of RoleAssignment.</summary>
 public partial class V1beta1RoleAssignmentStatus
 {
     /// <summary></summary>
@@ -729,6 +758,7 @@ public partial class V1beta1RoleAssignmentStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>RoleAssignment is the Schema for the RoleAssignments API.</summary>
 public partial class V1beta1RoleAssignment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1RoleAssignmentSpec>, IStatus<V1beta1RoleAssignmentStatus>
 {
     public const string KubeApiVersion = "v1beta1";

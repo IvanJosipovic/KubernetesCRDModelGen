@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1ComputeTargetPoolSpecBackupTargetPoolRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeTargetPool` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1ComputeTargetPoolSpecBackupTargetPoolRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeTargetPoolSpecHealthChecksHttpHealthCheckRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeHTTPHealthCheck` resource.</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1ComputeTargetPoolSpecHealthChecksHttpHealthCheckRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeTargetPoolSpecHealthChecks
 {
     /// <summary></summary>
@@ -45,6 +48,7 @@ public partial class V1beta1ComputeTargetPoolSpecHealthChecks
     public V1beta1ComputeTargetPoolSpecHealthChecksHttpHealthCheckRef? HttpHealthCheckRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeTargetPoolSpecInstances
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeInstance` resource.</summary>
@@ -60,6 +64,7 @@ public partial class V1beta1ComputeTargetPoolSpecInstances
     public string? Namespace { get; set; }
 }
 
+/// <summary>The resource URL for the security policy associated with this target pool.</summary>
 public partial class V1beta1ComputeTargetPoolSpecSecurityPolicyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeSecurityPolicy` resource.</summary>
@@ -75,6 +80,7 @@ public partial class V1beta1ComputeTargetPoolSpecSecurityPolicyRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeTargetPoolSpec
 {
     /// <summary></summary>
@@ -114,6 +120,7 @@ public partial class V1beta1ComputeTargetPoolSpec
     public string? SessionAffinity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeTargetPoolStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -137,6 +144,7 @@ public partial class V1beta1ComputeTargetPoolStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeTargetPoolStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -153,6 +161,7 @@ public partial class V1beta1ComputeTargetPoolStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ComputeTargetPool : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeTargetPoolSpec>, IStatus<V1beta1ComputeTargetPoolStatus>
 {
     public const string KubeApiVersion = "v1beta1";

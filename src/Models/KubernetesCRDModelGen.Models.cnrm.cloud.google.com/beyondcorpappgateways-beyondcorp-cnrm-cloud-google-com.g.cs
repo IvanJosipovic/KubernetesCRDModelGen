@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.beyondcorp.cnrm.cloud.google.com;
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1BeyondCorpAppGatewaySpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1BeyondCorpAppGatewaySpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1BeyondCorpAppGatewaySpec
 {
     /// <summary>Immutable. An arbitrary user-provided name for the AppGateway.</summary>
@@ -50,6 +52,7 @@ public partial class V1alpha1BeyondCorpAppGatewaySpec
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1BeyondCorpAppGatewayStatusAllocatedConnections
 {
     /// <summary>The ingress port of an allocated connection.</summary>
@@ -61,6 +64,7 @@ public partial class V1alpha1BeyondCorpAppGatewayStatusAllocatedConnections
     public string? PscUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1BeyondCorpAppGatewayStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -84,6 +88,7 @@ public partial class V1alpha1BeyondCorpAppGatewayStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1BeyondCorpAppGatewayStatus
 {
     /// <summary>A list of connections allocated for the Gateway.</summary>
@@ -108,6 +113,7 @@ public partial class V1alpha1BeyondCorpAppGatewayStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1BeyondCorpAppGateway : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1BeyondCorpAppGatewaySpec>, IStatus<V1alpha1BeyondCorpAppGatewayStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

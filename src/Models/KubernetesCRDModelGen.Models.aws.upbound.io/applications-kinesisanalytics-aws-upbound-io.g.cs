@@ -38,6 +38,7 @@ public enum V1beta1ApplicationSpecForProviderCloudwatchLoggingOptionsLogStreamAr
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationSpecForProviderCloudwatchLoggingOptionsLogStreamArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ApplicationSpecForProviderCloudwatchLoggingOptionsLo
     public V1beta1ApplicationSpecForProviderCloudwatchLoggingOptionsLogStreamArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Stream in cloudwatchlogs to populate logStreamArn.</summary>
 public partial class V1beta1ApplicationSpecForProviderCloudwatchLoggingOptionsLogStreamArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ApplicationSpecForProviderCloudwatchLoggingOptionsLogStreamAr
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ApplicationSpecForProviderCloudwatchLoggingOptionsLogStreamArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ApplicationSpecForProviderCloudwatchLoggingOptionsLo
     public V1beta1ApplicationSpecForProviderCloudwatchLoggingOptionsLogStreamArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Stream in cloudwatchlogs to populate logStreamArn.</summary>
 public partial class V1beta1ApplicationSpecForProviderCloudwatchLoggingOptionsLogStreamArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1ApplicationSpecForProviderCloudwatchLoggingOptionsRoleArnRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationSpecForProviderCloudwatchLoggingOptionsRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1ApplicationSpecForProviderCloudwatchLoggingOptionsRo
     public V1beta1ApplicationSpecForProviderCloudwatchLoggingOptionsRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ApplicationSpecForProviderCloudwatchLoggingOptionsRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1ApplicationSpecForProviderCloudwatchLoggingOptionsRoleArnSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ApplicationSpecForProviderCloudwatchLoggingOptionsRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1ApplicationSpecForProviderCloudwatchLoggingOptionsRo
     public V1beta1ApplicationSpecForProviderCloudwatchLoggingOptionsRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ApplicationSpecForProviderCloudwatchLoggingOptionsRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1ApplicationSpecForProviderCloudwatchLoggingOptionsRo
     public V1beta1ApplicationSpecForProviderCloudwatchLoggingOptionsRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecForProviderCloudwatchLoggingOptions
 {
     /// <summary>The ARN of the CloudWatch Log Stream.</summary>
@@ -229,6 +238,7 @@ public partial class V1beta1ApplicationSpecForProviderCloudwatchLoggingOptions
     public V1beta1ApplicationSpecForProviderCloudwatchLoggingOptionsRoleArnSelector? RoleArnSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecForProviderInputsKinesisFirehose
 {
     /// <summary>The ARN of the Lambda function.</summary>
@@ -260,6 +270,7 @@ public enum V1beta1ApplicationSpecForProviderInputsKinesisStreamResourceArnRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationSpecForProviderInputsKinesisStreamResourceArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -273,6 +284,7 @@ public partial class V1beta1ApplicationSpecForProviderInputsKinesisStreamResourc
     public V1beta1ApplicationSpecForProviderInputsKinesisStreamResourceArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Stream in kinesis to populate resourceArn.</summary>
 public partial class V1beta1ApplicationSpecForProviderInputsKinesisStreamResourceArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -304,6 +316,7 @@ public enum V1beta1ApplicationSpecForProviderInputsKinesisStreamResourceArnSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ApplicationSpecForProviderInputsKinesisStreamResourceArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -317,6 +330,7 @@ public partial class V1beta1ApplicationSpecForProviderInputsKinesisStreamResourc
     public V1beta1ApplicationSpecForProviderInputsKinesisStreamResourceArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Stream in kinesis to populate resourceArn.</summary>
 public partial class V1beta1ApplicationSpecForProviderInputsKinesisStreamResourceArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -352,6 +366,7 @@ public enum V1beta1ApplicationSpecForProviderInputsKinesisStreamRoleArnRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationSpecForProviderInputsKinesisStreamRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -365,6 +380,7 @@ public partial class V1beta1ApplicationSpecForProviderInputsKinesisStreamRoleArn
     public V1beta1ApplicationSpecForProviderInputsKinesisStreamRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ApplicationSpecForProviderInputsKinesisStreamRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -396,6 +412,7 @@ public enum V1beta1ApplicationSpecForProviderInputsKinesisStreamRoleArnSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ApplicationSpecForProviderInputsKinesisStreamRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -409,6 +426,7 @@ public partial class V1beta1ApplicationSpecForProviderInputsKinesisStreamRoleArn
     public V1beta1ApplicationSpecForProviderInputsKinesisStreamRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ApplicationSpecForProviderInputsKinesisStreamRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -424,6 +442,7 @@ public partial class V1beta1ApplicationSpecForProviderInputsKinesisStreamRoleArn
     public V1beta1ApplicationSpecForProviderInputsKinesisStreamRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecForProviderInputsKinesisStream
 {
     /// <summary>The ARN of the Lambda function.</summary>
@@ -451,6 +470,7 @@ public partial class V1beta1ApplicationSpecForProviderInputsKinesisStream
     public V1beta1ApplicationSpecForProviderInputsKinesisStreamRoleArnSelector? RoleArnSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecForProviderInputsParallelism
 {
     /// <summary>The Count of streams.</summary>
@@ -458,6 +478,7 @@ public partial class V1beta1ApplicationSpecForProviderInputsParallelism
     public double? Count { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecForProviderInputsProcessingConfigurationLambda
 {
     /// <summary>The ARN of the Lambda function.</summary>
@@ -469,6 +490,7 @@ public partial class V1beta1ApplicationSpecForProviderInputsProcessingConfigurat
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecForProviderInputsProcessingConfiguration
 {
     /// <summary>The Lambda function configuration. See Lambda below for more details.</summary>
@@ -476,6 +498,7 @@ public partial class V1beta1ApplicationSpecForProviderInputsProcessingConfigurat
     public IList<V1beta1ApplicationSpecForProviderInputsProcessingConfigurationLambda>? Lambda { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecForProviderInputsSchemaRecordColumns
 {
     /// <summary>The Mapping reference to the data element.</summary>
@@ -491,6 +514,7 @@ public partial class V1beta1ApplicationSpecForProviderInputsSchemaRecordColumns
     public string? SqlType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecForProviderInputsSchemaRecordFormatMappingParametersCsv
 {
     /// <summary>The Column Delimiter.</summary>
@@ -502,6 +526,7 @@ public partial class V1beta1ApplicationSpecForProviderInputsSchemaRecordFormatMa
     public string? RecordRowDelimiter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecForProviderInputsSchemaRecordFormatMappingParametersJson
 {
     /// <summary>Path to the top-level parent that contains the records.</summary>
@@ -509,6 +534,7 @@ public partial class V1beta1ApplicationSpecForProviderInputsSchemaRecordFormatMa
     public string? RecordRowPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecForProviderInputsSchemaRecordFormatMappingParameters
 {
     /// <summary>Mapping information when the record format uses delimiters. See CSV Mapping Parameters below for more details.</summary>
@@ -520,6 +546,7 @@ public partial class V1beta1ApplicationSpecForProviderInputsSchemaRecordFormatMa
     public IList<V1beta1ApplicationSpecForProviderInputsSchemaRecordFormatMappingParametersJson>? Json { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecForProviderInputsSchemaRecordFormat
 {
     /// <summary>The Mapping Information for the record format. See Mapping Parameters below for more details.</summary>
@@ -527,6 +554,7 @@ public partial class V1beta1ApplicationSpecForProviderInputsSchemaRecordFormat
     public IList<V1beta1ApplicationSpecForProviderInputsSchemaRecordFormatMappingParameters>? MappingParameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecForProviderInputsSchema
 {
     /// <summary>The Record Column mapping for the streaming source data element. See Record Columns below for more details.</summary>
@@ -542,6 +570,7 @@ public partial class V1beta1ApplicationSpecForProviderInputsSchema
     public IList<V1beta1ApplicationSpecForProviderInputsSchemaRecordFormat>? RecordFormat { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecForProviderInputsStartingPositionConfiguration
 {
     /// <summary>The starting position on the stream. Valid values: LAST_STOPPED_POINT, NOW, TRIM_HORIZON.</summary>
@@ -549,6 +578,7 @@ public partial class V1beta1ApplicationSpecForProviderInputsStartingPositionConf
     public string? StartingPosition { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecForProviderInputs
 {
     /// <summary>The Kinesis Firehose configuration for the streaming source. Conflicts with kinesis_stream. See Kinesis Firehose below for more details.</summary>
@@ -600,6 +630,7 @@ public enum V1beta1ApplicationSpecForProviderOutputsKinesisFirehoseResourceArnRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationSpecForProviderOutputsKinesisFirehoseResourceArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -613,6 +644,7 @@ public partial class V1beta1ApplicationSpecForProviderOutputsKinesisFirehoseReso
     public V1beta1ApplicationSpecForProviderOutputsKinesisFirehoseResourceArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a DeliveryStream in firehose to populate resourceArn.</summary>
 public partial class V1beta1ApplicationSpecForProviderOutputsKinesisFirehoseResourceArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -644,6 +676,7 @@ public enum V1beta1ApplicationSpecForProviderOutputsKinesisFirehoseResourceArnSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ApplicationSpecForProviderOutputsKinesisFirehoseResourceArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -657,6 +690,7 @@ public partial class V1beta1ApplicationSpecForProviderOutputsKinesisFirehoseReso
     public V1beta1ApplicationSpecForProviderOutputsKinesisFirehoseResourceArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a DeliveryStream in firehose to populate resourceArn.</summary>
 public partial class V1beta1ApplicationSpecForProviderOutputsKinesisFirehoseResourceArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -692,6 +726,7 @@ public enum V1beta1ApplicationSpecForProviderOutputsKinesisFirehoseRoleArnRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationSpecForProviderOutputsKinesisFirehoseRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -705,6 +740,7 @@ public partial class V1beta1ApplicationSpecForProviderOutputsKinesisFirehoseRole
     public V1beta1ApplicationSpecForProviderOutputsKinesisFirehoseRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ApplicationSpecForProviderOutputsKinesisFirehoseRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -736,6 +772,7 @@ public enum V1beta1ApplicationSpecForProviderOutputsKinesisFirehoseRoleArnSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ApplicationSpecForProviderOutputsKinesisFirehoseRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -749,6 +786,7 @@ public partial class V1beta1ApplicationSpecForProviderOutputsKinesisFirehoseRole
     public V1beta1ApplicationSpecForProviderOutputsKinesisFirehoseRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ApplicationSpecForProviderOutputsKinesisFirehoseRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -764,6 +802,7 @@ public partial class V1beta1ApplicationSpecForProviderOutputsKinesisFirehoseRole
     public V1beta1ApplicationSpecForProviderOutputsKinesisFirehoseRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecForProviderOutputsKinesisFirehose
 {
     /// <summary>The ARN of the Lambda function.</summary>
@@ -791,6 +830,7 @@ public partial class V1beta1ApplicationSpecForProviderOutputsKinesisFirehose
     public V1beta1ApplicationSpecForProviderOutputsKinesisFirehoseRoleArnSelector? RoleArnSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecForProviderOutputsKinesisStream
 {
     /// <summary>The ARN of the Lambda function.</summary>
@@ -802,6 +842,7 @@ public partial class V1beta1ApplicationSpecForProviderOutputsKinesisStream
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecForProviderOutputsLambda
 {
     /// <summary>The ARN of the Lambda function.</summary>
@@ -813,6 +854,7 @@ public partial class V1beta1ApplicationSpecForProviderOutputsLambda
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecForProviderOutputsSchema
 {
     /// <summary>The Format Type of the records on the output stream. Can be CSV or JSON.</summary>
@@ -820,6 +862,7 @@ public partial class V1beta1ApplicationSpecForProviderOutputsSchema
     public string? RecordFormatType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecForProviderOutputs
 {
     /// <summary>The Kinesis Firehose configuration for the destination stream. Conflicts with kinesis_stream. See Kinesis Firehose below for more details.</summary>
@@ -843,6 +886,7 @@ public partial class V1beta1ApplicationSpecForProviderOutputs
     public IList<V1beta1ApplicationSpecForProviderOutputsSchema>? Schema { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecForProviderReferenceDataSourcesS3
 {
     /// <summary>The S3 Bucket ARN.</summary>
@@ -858,6 +902,7 @@ public partial class V1beta1ApplicationSpecForProviderReferenceDataSourcesS3
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecForProviderReferenceDataSourcesSchemaRecordColumns
 {
     /// <summary>The Mapping reference to the data element.</summary>
@@ -873,6 +918,7 @@ public partial class V1beta1ApplicationSpecForProviderReferenceDataSourcesSchema
     public string? SqlType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecForProviderReferenceDataSourcesSchemaRecordFormatMappingParametersCsv
 {
     /// <summary>The Column Delimiter.</summary>
@@ -884,6 +930,7 @@ public partial class V1beta1ApplicationSpecForProviderReferenceDataSourcesSchema
     public string? RecordRowDelimiter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecForProviderReferenceDataSourcesSchemaRecordFormatMappingParametersJson
 {
     /// <summary>Path to the top-level parent that contains the records.</summary>
@@ -891,6 +938,7 @@ public partial class V1beta1ApplicationSpecForProviderReferenceDataSourcesSchema
     public string? RecordRowPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecForProviderReferenceDataSourcesSchemaRecordFormatMappingParameters
 {
     /// <summary>Mapping information when the record format uses delimiters. See CSV Mapping Parameters below for more details.</summary>
@@ -902,6 +950,7 @@ public partial class V1beta1ApplicationSpecForProviderReferenceDataSourcesSchema
     public IList<V1beta1ApplicationSpecForProviderReferenceDataSourcesSchemaRecordFormatMappingParametersJson>? Json { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecForProviderReferenceDataSourcesSchemaRecordFormat
 {
     /// <summary>The Mapping Information for the record format. See Mapping Parameters below for more details.</summary>
@@ -909,6 +958,7 @@ public partial class V1beta1ApplicationSpecForProviderReferenceDataSourcesSchema
     public IList<V1beta1ApplicationSpecForProviderReferenceDataSourcesSchemaRecordFormatMappingParameters>? MappingParameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecForProviderReferenceDataSourcesSchema
 {
     /// <summary>The Record Column mapping for the streaming source data element. See Record Columns below for more details.</summary>
@@ -924,6 +974,7 @@ public partial class V1beta1ApplicationSpecForProviderReferenceDataSourcesSchema
     public IList<V1beta1ApplicationSpecForProviderReferenceDataSourcesSchemaRecordFormat>? RecordFormat { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecForProviderReferenceDataSources
 {
     /// <summary>The S3 configuration for the reference data source. See S3 Reference below for more details.</summary>
@@ -939,6 +990,7 @@ public partial class V1beta1ApplicationSpecForProviderReferenceDataSources
     public string? TableName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecForProvider
 {
     /// <summary>The CloudWatch log stream options to monitor application errors. See CloudWatch Logging Options below for more details.</summary>
@@ -998,6 +1050,7 @@ public enum V1beta1ApplicationSpecInitProviderCloudwatchLoggingOptionsLogStreamA
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationSpecInitProviderCloudwatchLoggingOptionsLogStreamArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1011,6 +1064,7 @@ public partial class V1beta1ApplicationSpecInitProviderCloudwatchLoggingOptionsL
     public V1beta1ApplicationSpecInitProviderCloudwatchLoggingOptionsLogStreamArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Stream in cloudwatchlogs to populate logStreamArn.</summary>
 public partial class V1beta1ApplicationSpecInitProviderCloudwatchLoggingOptionsLogStreamArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1042,6 +1096,7 @@ public enum V1beta1ApplicationSpecInitProviderCloudwatchLoggingOptionsLogStreamA
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ApplicationSpecInitProviderCloudwatchLoggingOptionsLogStreamArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1055,6 +1110,7 @@ public partial class V1beta1ApplicationSpecInitProviderCloudwatchLoggingOptionsL
     public V1beta1ApplicationSpecInitProviderCloudwatchLoggingOptionsLogStreamArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Stream in cloudwatchlogs to populate logStreamArn.</summary>
 public partial class V1beta1ApplicationSpecInitProviderCloudwatchLoggingOptionsLogStreamArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1090,6 +1146,7 @@ public enum V1beta1ApplicationSpecInitProviderCloudwatchLoggingOptionsRoleArnRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationSpecInitProviderCloudwatchLoggingOptionsRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1103,6 +1160,7 @@ public partial class V1beta1ApplicationSpecInitProviderCloudwatchLoggingOptionsR
     public V1beta1ApplicationSpecInitProviderCloudwatchLoggingOptionsRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ApplicationSpecInitProviderCloudwatchLoggingOptionsRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1134,6 +1192,7 @@ public enum V1beta1ApplicationSpecInitProviderCloudwatchLoggingOptionsRoleArnSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ApplicationSpecInitProviderCloudwatchLoggingOptionsRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1147,6 +1206,7 @@ public partial class V1beta1ApplicationSpecInitProviderCloudwatchLoggingOptionsR
     public V1beta1ApplicationSpecInitProviderCloudwatchLoggingOptionsRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ApplicationSpecInitProviderCloudwatchLoggingOptionsRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1162,6 +1222,7 @@ public partial class V1beta1ApplicationSpecInitProviderCloudwatchLoggingOptionsR
     public V1beta1ApplicationSpecInitProviderCloudwatchLoggingOptionsRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecInitProviderCloudwatchLoggingOptions
 {
     /// <summary>The ARN of the CloudWatch Log Stream.</summary>
@@ -1189,6 +1250,7 @@ public partial class V1beta1ApplicationSpecInitProviderCloudwatchLoggingOptions
     public V1beta1ApplicationSpecInitProviderCloudwatchLoggingOptionsRoleArnSelector? RoleArnSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecInitProviderInputsKinesisFirehose
 {
     /// <summary>The ARN of the Lambda function.</summary>
@@ -1220,6 +1282,7 @@ public enum V1beta1ApplicationSpecInitProviderInputsKinesisStreamResourceArnRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationSpecInitProviderInputsKinesisStreamResourceArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1233,6 +1296,7 @@ public partial class V1beta1ApplicationSpecInitProviderInputsKinesisStreamResour
     public V1beta1ApplicationSpecInitProviderInputsKinesisStreamResourceArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Stream in kinesis to populate resourceArn.</summary>
 public partial class V1beta1ApplicationSpecInitProviderInputsKinesisStreamResourceArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1264,6 +1328,7 @@ public enum V1beta1ApplicationSpecInitProviderInputsKinesisStreamResourceArnSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ApplicationSpecInitProviderInputsKinesisStreamResourceArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1277,6 +1342,7 @@ public partial class V1beta1ApplicationSpecInitProviderInputsKinesisStreamResour
     public V1beta1ApplicationSpecInitProviderInputsKinesisStreamResourceArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Stream in kinesis to populate resourceArn.</summary>
 public partial class V1beta1ApplicationSpecInitProviderInputsKinesisStreamResourceArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1312,6 +1378,7 @@ public enum V1beta1ApplicationSpecInitProviderInputsKinesisStreamRoleArnRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationSpecInitProviderInputsKinesisStreamRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1325,6 +1392,7 @@ public partial class V1beta1ApplicationSpecInitProviderInputsKinesisStreamRoleAr
     public V1beta1ApplicationSpecInitProviderInputsKinesisStreamRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ApplicationSpecInitProviderInputsKinesisStreamRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1356,6 +1424,7 @@ public enum V1beta1ApplicationSpecInitProviderInputsKinesisStreamRoleArnSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ApplicationSpecInitProviderInputsKinesisStreamRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1369,6 +1438,7 @@ public partial class V1beta1ApplicationSpecInitProviderInputsKinesisStreamRoleAr
     public V1beta1ApplicationSpecInitProviderInputsKinesisStreamRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ApplicationSpecInitProviderInputsKinesisStreamRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1384,6 +1454,7 @@ public partial class V1beta1ApplicationSpecInitProviderInputsKinesisStreamRoleAr
     public V1beta1ApplicationSpecInitProviderInputsKinesisStreamRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecInitProviderInputsKinesisStream
 {
     /// <summary>The ARN of the Lambda function.</summary>
@@ -1411,6 +1482,7 @@ public partial class V1beta1ApplicationSpecInitProviderInputsKinesisStream
     public V1beta1ApplicationSpecInitProviderInputsKinesisStreamRoleArnSelector? RoleArnSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecInitProviderInputsParallelism
 {
     /// <summary>The Count of streams.</summary>
@@ -1418,6 +1490,7 @@ public partial class V1beta1ApplicationSpecInitProviderInputsParallelism
     public double? Count { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecInitProviderInputsProcessingConfigurationLambda
 {
     /// <summary>The ARN of the Lambda function.</summary>
@@ -1429,6 +1502,7 @@ public partial class V1beta1ApplicationSpecInitProviderInputsProcessingConfigura
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecInitProviderInputsProcessingConfiguration
 {
     /// <summary>The Lambda function configuration. See Lambda below for more details.</summary>
@@ -1436,6 +1510,7 @@ public partial class V1beta1ApplicationSpecInitProviderInputsProcessingConfigura
     public IList<V1beta1ApplicationSpecInitProviderInputsProcessingConfigurationLambda>? Lambda { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecInitProviderInputsSchemaRecordColumns
 {
     /// <summary>The Mapping reference to the data element.</summary>
@@ -1451,6 +1526,7 @@ public partial class V1beta1ApplicationSpecInitProviderInputsSchemaRecordColumns
     public string? SqlType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecInitProviderInputsSchemaRecordFormatMappingParametersCsv
 {
     /// <summary>The Column Delimiter.</summary>
@@ -1462,6 +1538,7 @@ public partial class V1beta1ApplicationSpecInitProviderInputsSchemaRecordFormatM
     public string? RecordRowDelimiter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecInitProviderInputsSchemaRecordFormatMappingParametersJson
 {
     /// <summary>Path to the top-level parent that contains the records.</summary>
@@ -1469,6 +1546,7 @@ public partial class V1beta1ApplicationSpecInitProviderInputsSchemaRecordFormatM
     public string? RecordRowPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecInitProviderInputsSchemaRecordFormatMappingParameters
 {
     /// <summary>Mapping information when the record format uses delimiters. See CSV Mapping Parameters below for more details.</summary>
@@ -1480,6 +1558,7 @@ public partial class V1beta1ApplicationSpecInitProviderInputsSchemaRecordFormatM
     public IList<V1beta1ApplicationSpecInitProviderInputsSchemaRecordFormatMappingParametersJson>? Json { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecInitProviderInputsSchemaRecordFormat
 {
     /// <summary>The Mapping Information for the record format. See Mapping Parameters below for more details.</summary>
@@ -1487,6 +1566,7 @@ public partial class V1beta1ApplicationSpecInitProviderInputsSchemaRecordFormat
     public IList<V1beta1ApplicationSpecInitProviderInputsSchemaRecordFormatMappingParameters>? MappingParameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecInitProviderInputsSchema
 {
     /// <summary>The Record Column mapping for the streaming source data element. See Record Columns below for more details.</summary>
@@ -1502,6 +1582,7 @@ public partial class V1beta1ApplicationSpecInitProviderInputsSchema
     public IList<V1beta1ApplicationSpecInitProviderInputsSchemaRecordFormat>? RecordFormat { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecInitProviderInputsStartingPositionConfiguration
 {
     /// <summary>The starting position on the stream. Valid values: LAST_STOPPED_POINT, NOW, TRIM_HORIZON.</summary>
@@ -1509,6 +1590,7 @@ public partial class V1beta1ApplicationSpecInitProviderInputsStartingPositionCon
     public string? StartingPosition { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecInitProviderInputs
 {
     /// <summary>The Kinesis Firehose configuration for the streaming source. Conflicts with kinesis_stream. See Kinesis Firehose below for more details.</summary>
@@ -1560,6 +1642,7 @@ public enum V1beta1ApplicationSpecInitProviderOutputsKinesisFirehoseResourceArnR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationSpecInitProviderOutputsKinesisFirehoseResourceArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1573,6 +1656,7 @@ public partial class V1beta1ApplicationSpecInitProviderOutputsKinesisFirehoseRes
     public V1beta1ApplicationSpecInitProviderOutputsKinesisFirehoseResourceArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a DeliveryStream in firehose to populate resourceArn.</summary>
 public partial class V1beta1ApplicationSpecInitProviderOutputsKinesisFirehoseResourceArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1604,6 +1688,7 @@ public enum V1beta1ApplicationSpecInitProviderOutputsKinesisFirehoseResourceArnS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ApplicationSpecInitProviderOutputsKinesisFirehoseResourceArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1617,6 +1702,7 @@ public partial class V1beta1ApplicationSpecInitProviderOutputsKinesisFirehoseRes
     public V1beta1ApplicationSpecInitProviderOutputsKinesisFirehoseResourceArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a DeliveryStream in firehose to populate resourceArn.</summary>
 public partial class V1beta1ApplicationSpecInitProviderOutputsKinesisFirehoseResourceArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1652,6 +1738,7 @@ public enum V1beta1ApplicationSpecInitProviderOutputsKinesisFirehoseRoleArnRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationSpecInitProviderOutputsKinesisFirehoseRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1665,6 +1752,7 @@ public partial class V1beta1ApplicationSpecInitProviderOutputsKinesisFirehoseRol
     public V1beta1ApplicationSpecInitProviderOutputsKinesisFirehoseRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ApplicationSpecInitProviderOutputsKinesisFirehoseRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1696,6 +1784,7 @@ public enum V1beta1ApplicationSpecInitProviderOutputsKinesisFirehoseRoleArnSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ApplicationSpecInitProviderOutputsKinesisFirehoseRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1709,6 +1798,7 @@ public partial class V1beta1ApplicationSpecInitProviderOutputsKinesisFirehoseRol
     public V1beta1ApplicationSpecInitProviderOutputsKinesisFirehoseRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ApplicationSpecInitProviderOutputsKinesisFirehoseRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1724,6 +1814,7 @@ public partial class V1beta1ApplicationSpecInitProviderOutputsKinesisFirehoseRol
     public V1beta1ApplicationSpecInitProviderOutputsKinesisFirehoseRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecInitProviderOutputsKinesisFirehose
 {
     /// <summary>The ARN of the Lambda function.</summary>
@@ -1751,6 +1842,7 @@ public partial class V1beta1ApplicationSpecInitProviderOutputsKinesisFirehose
     public V1beta1ApplicationSpecInitProviderOutputsKinesisFirehoseRoleArnSelector? RoleArnSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecInitProviderOutputsKinesisStream
 {
     /// <summary>The ARN of the Lambda function.</summary>
@@ -1762,6 +1854,7 @@ public partial class V1beta1ApplicationSpecInitProviderOutputsKinesisStream
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecInitProviderOutputsLambda
 {
     /// <summary>The ARN of the Lambda function.</summary>
@@ -1773,6 +1866,7 @@ public partial class V1beta1ApplicationSpecInitProviderOutputsLambda
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecInitProviderOutputsSchema
 {
     /// <summary>The Format Type of the records on the output stream. Can be CSV or JSON.</summary>
@@ -1780,6 +1874,7 @@ public partial class V1beta1ApplicationSpecInitProviderOutputsSchema
     public string? RecordFormatType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecInitProviderOutputs
 {
     /// <summary>The Kinesis Firehose configuration for the destination stream. Conflicts with kinesis_stream. See Kinesis Firehose below for more details.</summary>
@@ -1803,6 +1898,7 @@ public partial class V1beta1ApplicationSpecInitProviderOutputs
     public IList<V1beta1ApplicationSpecInitProviderOutputsSchema>? Schema { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecInitProviderReferenceDataSourcesS3
 {
     /// <summary>The S3 Bucket ARN.</summary>
@@ -1818,6 +1914,7 @@ public partial class V1beta1ApplicationSpecInitProviderReferenceDataSourcesS3
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecInitProviderReferenceDataSourcesSchemaRecordColumns
 {
     /// <summary>The Mapping reference to the data element.</summary>
@@ -1833,6 +1930,7 @@ public partial class V1beta1ApplicationSpecInitProviderReferenceDataSourcesSchem
     public string? SqlType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecInitProviderReferenceDataSourcesSchemaRecordFormatMappingParametersCsv
 {
     /// <summary>The Column Delimiter.</summary>
@@ -1844,6 +1942,7 @@ public partial class V1beta1ApplicationSpecInitProviderReferenceDataSourcesSchem
     public string? RecordRowDelimiter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecInitProviderReferenceDataSourcesSchemaRecordFormatMappingParametersJson
 {
     /// <summary>Path to the top-level parent that contains the records.</summary>
@@ -1851,6 +1950,7 @@ public partial class V1beta1ApplicationSpecInitProviderReferenceDataSourcesSchem
     public string? RecordRowPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecInitProviderReferenceDataSourcesSchemaRecordFormatMappingParameters
 {
     /// <summary>Mapping information when the record format uses delimiters. See CSV Mapping Parameters below for more details.</summary>
@@ -1862,6 +1962,7 @@ public partial class V1beta1ApplicationSpecInitProviderReferenceDataSourcesSchem
     public IList<V1beta1ApplicationSpecInitProviderReferenceDataSourcesSchemaRecordFormatMappingParametersJson>? Json { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecInitProviderReferenceDataSourcesSchemaRecordFormat
 {
     /// <summary>The Mapping Information for the record format. See Mapping Parameters below for more details.</summary>
@@ -1869,6 +1970,7 @@ public partial class V1beta1ApplicationSpecInitProviderReferenceDataSourcesSchem
     public IList<V1beta1ApplicationSpecInitProviderReferenceDataSourcesSchemaRecordFormatMappingParameters>? MappingParameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecInitProviderReferenceDataSourcesSchema
 {
     /// <summary>The Record Column mapping for the streaming source data element. See Record Columns below for more details.</summary>
@@ -1884,6 +1986,7 @@ public partial class V1beta1ApplicationSpecInitProviderReferenceDataSourcesSchem
     public IList<V1beta1ApplicationSpecInitProviderReferenceDataSourcesSchemaRecordFormat>? RecordFormat { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationSpecInitProviderReferenceDataSources
 {
     /// <summary>The S3 configuration for the reference data source. See S3 Reference below for more details.</summary>
@@ -1899,6 +2002,7 @@ public partial class V1beta1ApplicationSpecInitProviderReferenceDataSources
     public string? TableName { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ApplicationSpecInitProvider
 {
     /// <summary>The CloudWatch log stream options to monitor application errors. See CloudWatch Logging Options below for more details.</summary>
@@ -1976,6 +2080,7 @@ public enum V1beta1ApplicationSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1989,6 +2094,7 @@ public partial class V1beta1ApplicationSpecProviderConfigRefPolicy
     public V1beta1ApplicationSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ApplicationSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2020,6 +2126,7 @@ public enum V1beta1ApplicationSpecPublishConnectionDetailsToConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2033,6 +2140,7 @@ public partial class V1beta1ApplicationSpecPublishConnectionDetailsToConfigRefPo
     public V1beta1ApplicationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ApplicationSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2044,6 +2152,7 @@ public partial class V1beta1ApplicationSpecPublishConnectionDetailsToConfigRef
     public V1beta1ApplicationSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ApplicationSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -2059,6 +2168,7 @@ public partial class V1beta1ApplicationSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ApplicationSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -2074,6 +2184,7 @@ public partial class V1beta1ApplicationSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ApplicationSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -2085,6 +2196,7 @@ public partial class V1beta1ApplicationSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ApplicationSpec defines the desired state of Application</summary>
 public partial class V1beta1ApplicationSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -2117,6 +2229,7 @@ public partial class V1beta1ApplicationSpec
     public V1beta1ApplicationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationStatusAtProviderCloudwatchLoggingOptions
 {
     /// <summary>The ARN of the Kinesis Analytics Application.</summary>
@@ -2132,6 +2245,7 @@ public partial class V1beta1ApplicationStatusAtProviderCloudwatchLoggingOptions
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationStatusAtProviderInputsKinesisFirehose
 {
     /// <summary>The ARN of the Lambda function.</summary>
@@ -2143,6 +2257,7 @@ public partial class V1beta1ApplicationStatusAtProviderInputsKinesisFirehose
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationStatusAtProviderInputsKinesisStream
 {
     /// <summary>The ARN of the Lambda function.</summary>
@@ -2154,6 +2269,7 @@ public partial class V1beta1ApplicationStatusAtProviderInputsKinesisStream
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationStatusAtProviderInputsParallelism
 {
     /// <summary>The Count of streams.</summary>
@@ -2161,6 +2277,7 @@ public partial class V1beta1ApplicationStatusAtProviderInputsParallelism
     public double? Count { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationStatusAtProviderInputsProcessingConfigurationLambda
 {
     /// <summary>The ARN of the Lambda function.</summary>
@@ -2172,6 +2289,7 @@ public partial class V1beta1ApplicationStatusAtProviderInputsProcessingConfigura
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationStatusAtProviderInputsProcessingConfiguration
 {
     /// <summary>The Lambda function configuration. See Lambda below for more details.</summary>
@@ -2179,6 +2297,7 @@ public partial class V1beta1ApplicationStatusAtProviderInputsProcessingConfigura
     public IList<V1beta1ApplicationStatusAtProviderInputsProcessingConfigurationLambda>? Lambda { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationStatusAtProviderInputsSchemaRecordColumns
 {
     /// <summary>The Mapping reference to the data element.</summary>
@@ -2194,6 +2313,7 @@ public partial class V1beta1ApplicationStatusAtProviderInputsSchemaRecordColumns
     public string? SqlType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationStatusAtProviderInputsSchemaRecordFormatMappingParametersCsv
 {
     /// <summary>The Column Delimiter.</summary>
@@ -2205,6 +2325,7 @@ public partial class V1beta1ApplicationStatusAtProviderInputsSchemaRecordFormatM
     public string? RecordRowDelimiter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationStatusAtProviderInputsSchemaRecordFormatMappingParametersJson
 {
     /// <summary>Path to the top-level parent that contains the records.</summary>
@@ -2212,6 +2333,7 @@ public partial class V1beta1ApplicationStatusAtProviderInputsSchemaRecordFormatM
     public string? RecordRowPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationStatusAtProviderInputsSchemaRecordFormatMappingParameters
 {
     /// <summary>Mapping information when the record format uses delimiters. See CSV Mapping Parameters below for more details.</summary>
@@ -2223,6 +2345,7 @@ public partial class V1beta1ApplicationStatusAtProviderInputsSchemaRecordFormatM
     public IList<V1beta1ApplicationStatusAtProviderInputsSchemaRecordFormatMappingParametersJson>? Json { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationStatusAtProviderInputsSchemaRecordFormat
 {
     /// <summary>The Mapping Information for the record format. See Mapping Parameters below for more details.</summary>
@@ -2234,6 +2357,7 @@ public partial class V1beta1ApplicationStatusAtProviderInputsSchemaRecordFormat
     public string? RecordFormatType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationStatusAtProviderInputsSchema
 {
     /// <summary>The Record Column mapping for the streaming source data element. See Record Columns below for more details.</summary>
@@ -2249,6 +2373,7 @@ public partial class V1beta1ApplicationStatusAtProviderInputsSchema
     public IList<V1beta1ApplicationStatusAtProviderInputsSchemaRecordFormat>? RecordFormat { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationStatusAtProviderInputsStartingPositionConfiguration
 {
     /// <summary>The starting position on the stream. Valid values: LAST_STOPPED_POINT, NOW, TRIM_HORIZON.</summary>
@@ -2256,6 +2381,7 @@ public partial class V1beta1ApplicationStatusAtProviderInputsStartingPositionCon
     public string? StartingPosition { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationStatusAtProviderInputs
 {
     /// <summary>The ARN of the Kinesis Analytics Application.</summary>
@@ -2295,6 +2421,7 @@ public partial class V1beta1ApplicationStatusAtProviderInputs
     public IList<string>? StreamNames { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationStatusAtProviderOutputsKinesisFirehose
 {
     /// <summary>The ARN of the Lambda function.</summary>
@@ -2306,6 +2433,7 @@ public partial class V1beta1ApplicationStatusAtProviderOutputsKinesisFirehose
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationStatusAtProviderOutputsKinesisStream
 {
     /// <summary>The ARN of the Lambda function.</summary>
@@ -2317,6 +2445,7 @@ public partial class V1beta1ApplicationStatusAtProviderOutputsKinesisStream
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationStatusAtProviderOutputsLambda
 {
     /// <summary>The ARN of the Lambda function.</summary>
@@ -2328,6 +2457,7 @@ public partial class V1beta1ApplicationStatusAtProviderOutputsLambda
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationStatusAtProviderOutputsSchema
 {
     /// <summary>The Format Type of the records on the output stream. Can be CSV or JSON.</summary>
@@ -2335,6 +2465,7 @@ public partial class V1beta1ApplicationStatusAtProviderOutputsSchema
     public string? RecordFormatType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationStatusAtProviderOutputs
 {
     /// <summary>The ARN of the Kinesis Analytics Application.</summary>
@@ -2362,6 +2493,7 @@ public partial class V1beta1ApplicationStatusAtProviderOutputs
     public IList<V1beta1ApplicationStatusAtProviderOutputsSchema>? Schema { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationStatusAtProviderReferenceDataSourcesS3
 {
     /// <summary>The S3 Bucket ARN.</summary>
@@ -2377,6 +2509,7 @@ public partial class V1beta1ApplicationStatusAtProviderReferenceDataSourcesS3
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationStatusAtProviderReferenceDataSourcesSchemaRecordColumns
 {
     /// <summary>The Mapping reference to the data element.</summary>
@@ -2392,6 +2525,7 @@ public partial class V1beta1ApplicationStatusAtProviderReferenceDataSourcesSchem
     public string? SqlType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationStatusAtProviderReferenceDataSourcesSchemaRecordFormatMappingParametersCsv
 {
     /// <summary>The Column Delimiter.</summary>
@@ -2403,6 +2537,7 @@ public partial class V1beta1ApplicationStatusAtProviderReferenceDataSourcesSchem
     public string? RecordRowDelimiter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationStatusAtProviderReferenceDataSourcesSchemaRecordFormatMappingParametersJson
 {
     /// <summary>Path to the top-level parent that contains the records.</summary>
@@ -2410,6 +2545,7 @@ public partial class V1beta1ApplicationStatusAtProviderReferenceDataSourcesSchem
     public string? RecordRowPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationStatusAtProviderReferenceDataSourcesSchemaRecordFormatMappingParameters
 {
     /// <summary>Mapping information when the record format uses delimiters. See CSV Mapping Parameters below for more details.</summary>
@@ -2421,6 +2557,7 @@ public partial class V1beta1ApplicationStatusAtProviderReferenceDataSourcesSchem
     public IList<V1beta1ApplicationStatusAtProviderReferenceDataSourcesSchemaRecordFormatMappingParametersJson>? Json { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationStatusAtProviderReferenceDataSourcesSchemaRecordFormat
 {
     /// <summary>The Mapping Information for the record format. See Mapping Parameters below for more details.</summary>
@@ -2432,6 +2569,7 @@ public partial class V1beta1ApplicationStatusAtProviderReferenceDataSourcesSchem
     public string? RecordFormatType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationStatusAtProviderReferenceDataSourcesSchema
 {
     /// <summary>The Record Column mapping for the streaming source data element. See Record Columns below for more details.</summary>
@@ -2447,6 +2585,7 @@ public partial class V1beta1ApplicationStatusAtProviderReferenceDataSourcesSchem
     public IList<V1beta1ApplicationStatusAtProviderReferenceDataSourcesSchemaRecordFormat>? RecordFormat { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationStatusAtProviderReferenceDataSources
 {
     /// <summary>The ARN of the Kinesis Analytics Application.</summary>
@@ -2466,6 +2605,7 @@ public partial class V1beta1ApplicationStatusAtProviderReferenceDataSources
     public string? TableName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationStatusAtProvider
 {
     /// <summary>The ARN of the Kinesis Analytics Appliation.</summary>
@@ -2529,6 +2669,7 @@ public partial class V1beta1ApplicationStatusAtProvider
     public double? Version { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ApplicationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2556,6 +2697,7 @@ public partial class V1beta1ApplicationStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ApplicationStatus defines the observed state of Application.</summary>
 public partial class V1beta1ApplicationStatus
 {
     /// <summary></summary>
@@ -2572,6 +2714,7 @@ public partial class V1beta1ApplicationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Application is the Schema for the Applications API. Provides a AWS Kinesis Analytics Application</summary>
 public partial class V1beta1Application : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ApplicationSpec>, IStatus<V1beta1ApplicationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

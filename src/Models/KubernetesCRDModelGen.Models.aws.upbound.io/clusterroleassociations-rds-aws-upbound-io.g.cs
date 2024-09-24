@@ -38,6 +38,7 @@ public enum V1beta1ClusterRoleAssociationSpecForProviderDbClusterIdentifierRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClusterRoleAssociationSpecForProviderDbClusterIdentifierRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ClusterRoleAssociationSpecForProviderDbClusterIdenti
     public V1beta1ClusterRoleAssociationSpecForProviderDbClusterIdentifierRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in rds to populate dbClusterIdentifier.</summary>
 public partial class V1beta1ClusterRoleAssociationSpecForProviderDbClusterIdentifierRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ClusterRoleAssociationSpecForProviderDbClusterIdentifierSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ClusterRoleAssociationSpecForProviderDbClusterIdentifierSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ClusterRoleAssociationSpecForProviderDbClusterIdenti
     public V1beta1ClusterRoleAssociationSpecForProviderDbClusterIdentifierSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in rds to populate dbClusterIdentifier.</summary>
 public partial class V1beta1ClusterRoleAssociationSpecForProviderDbClusterIdentifierSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1ClusterRoleAssociationSpecForProviderRoleArnRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClusterRoleAssociationSpecForProviderRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1ClusterRoleAssociationSpecForProviderRoleArnRefPolic
     public V1beta1ClusterRoleAssociationSpecForProviderRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ClusterRoleAssociationSpecForProviderRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1ClusterRoleAssociationSpecForProviderRoleArnSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ClusterRoleAssociationSpecForProviderRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1ClusterRoleAssociationSpecForProviderRoleArnSelector
     public V1beta1ClusterRoleAssociationSpecForProviderRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ClusterRoleAssociationSpecForProviderRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1ClusterRoleAssociationSpecForProviderRoleArnSelector
     public V1beta1ClusterRoleAssociationSpecForProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterRoleAssociationSpecForProvider
 {
     /// <summary>DB Cluster Identifier to associate with the IAM Role.</summary>
@@ -257,6 +266,7 @@ public enum V1beta1ClusterRoleAssociationSpecInitProviderDbClusterIdentifierRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClusterRoleAssociationSpecInitProviderDbClusterIdentifierRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -270,6 +280,7 @@ public partial class V1beta1ClusterRoleAssociationSpecInitProviderDbClusterIdent
     public V1beta1ClusterRoleAssociationSpecInitProviderDbClusterIdentifierRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in rds to populate dbClusterIdentifier.</summary>
 public partial class V1beta1ClusterRoleAssociationSpecInitProviderDbClusterIdentifierRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -301,6 +312,7 @@ public enum V1beta1ClusterRoleAssociationSpecInitProviderDbClusterIdentifierSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ClusterRoleAssociationSpecInitProviderDbClusterIdentifierSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -314,6 +326,7 @@ public partial class V1beta1ClusterRoleAssociationSpecInitProviderDbClusterIdent
     public V1beta1ClusterRoleAssociationSpecInitProviderDbClusterIdentifierSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in rds to populate dbClusterIdentifier.</summary>
 public partial class V1beta1ClusterRoleAssociationSpecInitProviderDbClusterIdentifierSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -349,6 +362,7 @@ public enum V1beta1ClusterRoleAssociationSpecInitProviderRoleArnRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClusterRoleAssociationSpecInitProviderRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -362,6 +376,7 @@ public partial class V1beta1ClusterRoleAssociationSpecInitProviderRoleArnRefPoli
     public V1beta1ClusterRoleAssociationSpecInitProviderRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ClusterRoleAssociationSpecInitProviderRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -393,6 +408,7 @@ public enum V1beta1ClusterRoleAssociationSpecInitProviderRoleArnSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ClusterRoleAssociationSpecInitProviderRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -406,6 +422,7 @@ public partial class V1beta1ClusterRoleAssociationSpecInitProviderRoleArnSelecto
     public V1beta1ClusterRoleAssociationSpecInitProviderRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ClusterRoleAssociationSpecInitProviderRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -421,6 +438,7 @@ public partial class V1beta1ClusterRoleAssociationSpecInitProviderRoleArnSelecto
     public V1beta1ClusterRoleAssociationSpecInitProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ClusterRoleAssociationSpecInitProvider
 {
     /// <summary>DB Cluster Identifier to associate with the IAM Role.</summary>
@@ -494,6 +512,7 @@ public enum V1beta1ClusterRoleAssociationSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClusterRoleAssociationSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -507,6 +526,7 @@ public partial class V1beta1ClusterRoleAssociationSpecProviderConfigRefPolicy
     public V1beta1ClusterRoleAssociationSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ClusterRoleAssociationSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -538,6 +558,7 @@ public enum V1beta1ClusterRoleAssociationSpecPublishConnectionDetailsToConfigRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClusterRoleAssociationSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -551,6 +572,7 @@ public partial class V1beta1ClusterRoleAssociationSpecPublishConnectionDetailsTo
     public V1beta1ClusterRoleAssociationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ClusterRoleAssociationSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -562,6 +584,7 @@ public partial class V1beta1ClusterRoleAssociationSpecPublishConnectionDetailsTo
     public V1beta1ClusterRoleAssociationSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ClusterRoleAssociationSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -577,6 +600,7 @@ public partial class V1beta1ClusterRoleAssociationSpecPublishConnectionDetailsTo
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ClusterRoleAssociationSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -592,6 +616,7 @@ public partial class V1beta1ClusterRoleAssociationSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ClusterRoleAssociationSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -603,6 +628,7 @@ public partial class V1beta1ClusterRoleAssociationSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ClusterRoleAssociationSpec defines the desired state of ClusterRoleAssociation</summary>
 public partial class V1beta1ClusterRoleAssociationSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -635,6 +661,7 @@ public partial class V1beta1ClusterRoleAssociationSpec
     public V1beta1ClusterRoleAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterRoleAssociationStatusAtProvider
 {
     /// <summary>DB Cluster Identifier to associate with the IAM Role.</summary>
@@ -654,6 +681,7 @@ public partial class V1beta1ClusterRoleAssociationStatusAtProvider
     public string? RoleArn { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ClusterRoleAssociationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -681,6 +709,7 @@ public partial class V1beta1ClusterRoleAssociationStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ClusterRoleAssociationStatus defines the observed state of ClusterRoleAssociation.</summary>
 public partial class V1beta1ClusterRoleAssociationStatus
 {
     /// <summary></summary>
@@ -697,6 +726,7 @@ public partial class V1beta1ClusterRoleAssociationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ClusterRoleAssociation is the Schema for the ClusterRoleAssociations API. Manages a RDS DB Cluster association with an IAM Role.</summary>
 public partial class V1beta1ClusterRoleAssociation : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ClusterRoleAssociationSpec>, IStatus<V1beta1ClusterRoleAssociationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containerservice.azure.com;
+/// <summary>Storage version of v1api20230315preview.ManagedClusterUpgradeSpec The upgrade to apply to a ManagedCluster.</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunSpecManagedClusterUpdateUpgrade
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -23,6 +24,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunSpecManagedCluste
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.ManagedClusterUpdate The update to be applied to the ManagedClusters.</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunSpecManagedClusterUpdate
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -34,6 +36,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunSpecManagedCluste
     public V1api20230315previewstorageFleetsUpdateRunSpecManagedClusterUpdateUpgrade? Upgrade { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a containerservice.azure.com/Fleet resource</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunSpecOwner
 {
     /// <summary></summary>
@@ -45,6 +48,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.UpdateGroup A group to be updated.</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunSpecStrategyStagesGroups
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -56,6 +60,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunSpecStrategyStage
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.UpdateStage Defines a stage which contains the groups to update and the steps to take (e.g., wait for a time period) before starting the next stage.</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunSpecStrategyStages
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -75,6 +80,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunSpecStrategyStage
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.UpdateRunStrategy Defines the update sequence of the clusters via stages and groups. Stages within a run are executed sequentially one after another. Groups within a stage are executed in parallel. Member clusters within a group are updated sequentially one after another. A valid strategy contains no duplicate groups within or across stages.</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunSpecStrategy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -86,6 +92,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunSpecStrategy
     public IList<V1api20230315previewstorageFleetsUpdateRunSpecStrategyStages>? Stages { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.Fleets_UpdateRun_Spec</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -113,6 +120,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunSpec
     public V1api20230315previewstorageFleetsUpdateRunSpecStrategy? Strategy { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -144,6 +152,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.ManagedClusterUpgradeSpec_STATUS The upgrade to apply to a ManagedCluster.</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusManagedClusterUpdateUpgrade
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -159,6 +168,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusManagedClus
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.ManagedClusterUpdate_STATUS The update to be applied to the ManagedClusters.</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusManagedClusterUpdate
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -170,6 +180,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusManagedClus
     public V1api20230315previewstorageFleetsUpdateRunStatusManagedClusterUpdateUpgrade? Upgrade { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesAfterStageWaitStatusStatusErrorAdditionalInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -185,6 +196,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesAfterStageWaitStatusStatusErrorDetailsAdditionalInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -200,6 +212,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.ErrorDetail_STATUS_Unrolled</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesAfterStageWaitStatusStatusErrorDetails
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -223,6 +236,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     public string? Target { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.ErrorDetail_STATUS The error detail.</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesAfterStageWaitStatusStatusError
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -250,6 +264,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     public string? Target { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.UpdateStatus_STATUS The status for an operation or group of operations.</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesAfterStageWaitStatusStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -273,6 +288,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     public string? State { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.WaitStatus_STATUS The status of the wait duration.</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesAfterStageWaitStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -288,6 +304,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     public int? WaitDurationInSeconds { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesGroupsMembersStatusErrorAdditionalInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -303,6 +320,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesGroupsMembersStatusErrorDetailsAdditionalInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -318,6 +336,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.ErrorDetail_STATUS_Unrolled</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesGroupsMembersStatusErrorDetails
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -341,6 +360,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     public string? Target { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.ErrorDetail_STATUS The error detail.</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesGroupsMembersStatusError
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -368,6 +388,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     public string? Target { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.UpdateStatus_STATUS The status for an operation or group of operations.</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesGroupsMembersStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -391,6 +412,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     public string? State { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.MemberUpdateStatus_STATUS The status of a member update operation.</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesGroupsMembers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -414,6 +436,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     public V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesGroupsMembersStatus? Status { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesGroupsStatusErrorAdditionalInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -429,6 +452,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesGroupsStatusErrorDetailsAdditionalInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -444,6 +468,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.ErrorDetail_STATUS_Unrolled</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesGroupsStatusErrorDetails
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -467,6 +492,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     public string? Target { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.ErrorDetail_STATUS The error detail.</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesGroupsStatusError
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -494,6 +520,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     public string? Target { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.UpdateStatus_STATUS The status for an operation or group of operations.</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesGroupsStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -517,6 +544,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     public string? State { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.UpdateGroupStatus_STATUS The status of a UpdateGroup.</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesGroups
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -536,6 +564,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     public V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesGroupsStatus? Status { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesStatusErrorAdditionalInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -551,6 +580,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesStatusErrorDetailsAdditionalInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -566,6 +596,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.ErrorDetail_STATUS_Unrolled</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesStatusErrorDetails
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -589,6 +620,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     public string? Target { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.ErrorDetail_STATUS The error detail.</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesStatusError
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -616,6 +648,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     public string? Target { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.UpdateStatus_STATUS The status for an operation or group of operations.</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -639,6 +672,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     public string? State { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.UpdateStageStatus_STATUS The status of a UpdateStage.</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStages
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -662,6 +696,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     public V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesStatus? Status { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStatusErrorAdditionalInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -677,6 +712,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStatu
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStatusErrorDetailsAdditionalInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -692,6 +728,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStatu
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.ErrorDetail_STATUS_Unrolled</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStatusErrorDetails
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -715,6 +752,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStatu
     public string? Target { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.ErrorDetail_STATUS The error detail.</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStatusError
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -742,6 +780,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStatu
     public string? Target { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.UpdateStatus_STATUS The status for an operation or group of operations.</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -765,6 +804,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStatu
     public string? State { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.UpdateRunStatus_STATUS The status of a UpdateRun.</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -780,6 +820,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatus
     public V1api20230315previewstorageFleetsUpdateRunStatusStatusStatus? Status { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.UpdateGroup_STATUS A group to be updated.</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStrategyStagesGroups
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -791,6 +832,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStrategySta
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.UpdateStage_STATUS Defines a stage which contains the groups to update and the steps to take (e.g., wait for a time period) before starting the next stage.</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStrategyStages
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -810,6 +852,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStrategySta
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.UpdateRunStrategy_STATUS Defines the update sequence of the clusters via stages and groups. Stages within a run are executed sequentially one after another. Groups within a stage are executed in parallel. Member clusters within a group are updated sequentially one after another. A valid strategy contains no duplicate groups within or across stages.</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStrategy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -821,6 +864,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStrategy
     public IList<V1api20230315previewstorageFleetsUpdateRunStatusStrategyStages>? Stages { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -852,6 +896,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.Fleets_UpdateRun_STATUS</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRunStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -900,6 +945,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20230315preview.FleetsUpdateRun Generator information: - Generated from: /containerservice/resource-manager/Microsoft.ContainerService/fleet/preview/2023-03-15-preview/fleets.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/fleets/{fleetName}/updateRuns/{updateRunName}</summary>
 public partial class V1api20230315previewstorageFleetsUpdateRun : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230315previewstorageFleetsUpdateRunSpec>, IStatus<V1api20230315previewstorageFleetsUpdateRunStatus>
 {
     public const string KubeApiVersion = "v1api20230315previewstorage";

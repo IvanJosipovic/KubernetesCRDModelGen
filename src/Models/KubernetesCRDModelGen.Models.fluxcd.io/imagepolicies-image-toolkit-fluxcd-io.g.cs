@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.image.toolkit.fluxcd.io;
+/// <summary>FilterTags enables filtering for only a subset of tags based on a set of rules. If no rules are provided, all the tags from the repository will be ordered and compared.</summary>
 public partial class V1beta2ImagePolicySpecFilterTags
 {
     /// <summary>Extract allows a capture group to be extracted from the specified regular expression pattern, useful before tag evaluation.</summary>
@@ -19,6 +20,7 @@ public partial class V1beta2ImagePolicySpecFilterTags
     public string? Pattern { get; set; }
 }
 
+/// <summary>ImageRepositoryRef points at the object specifying the image being scanned</summary>
 public partial class V1beta2ImagePolicySpecImageRepositoryRef
 {
     /// <summary>Name of the referent.</summary>
@@ -40,6 +42,7 @@ public enum V1beta2ImagePolicySpecPolicyAlphabeticalOrderEnum
     Desc
 }
 
+/// <summary>Alphabetical set of rules to use for alphabetical ordering of the tags.</summary>
 public partial class V1beta2ImagePolicySpecPolicyAlphabetical
 {
     /// <summary>Order specifies the sorting order of the tags. Given the letters of the alphabet as tags, ascending order would select Z, and descending order would select A.</summary>
@@ -58,6 +61,7 @@ public enum V1beta2ImagePolicySpecPolicyNumericalOrderEnum
     Desc
 }
 
+/// <summary>Numerical set of rules to use for numerical ordering of the tags.</summary>
 public partial class V1beta2ImagePolicySpecPolicyNumerical
 {
     /// <summary>Order specifies the sorting order of the tags. Given the integer values from 0 to 9 as tags, ascending order would select 9, and descending order would select 0.</summary>
@@ -66,6 +70,7 @@ public partial class V1beta2ImagePolicySpecPolicyNumerical
     public V1beta2ImagePolicySpecPolicyNumericalOrderEnum? Order { get; set; }
 }
 
+/// <summary>SemVer gives a semantic version range to check against the tags available.</summary>
 public partial class V1beta2ImagePolicySpecPolicySemver
 {
     /// <summary>Range gives a semver range for the image tag; the highest version within the range that's a tag yields the latest image.</summary>
@@ -73,6 +78,7 @@ public partial class V1beta2ImagePolicySpecPolicySemver
     public string Range { get; set; }
 }
 
+/// <summary>Policy gives the particulars of the policy to be followed in selecting the most recent image</summary>
 public partial class V1beta2ImagePolicySpecPolicy
 {
     /// <summary>Alphabetical set of rules to use for alphabetical ordering of the tags.</summary>
@@ -88,6 +94,7 @@ public partial class V1beta2ImagePolicySpecPolicy
     public V1beta2ImagePolicySpecPolicySemver? Semver { get; set; }
 }
 
+/// <summary>ImagePolicySpec defines the parameters for calculating the ImagePolicy.</summary>
 public partial class V1beta2ImagePolicySpec
 {
     /// <summary>FilterTags enables filtering for only a subset of tags based on a set of rules. If no rules are provided, all the tags from the repository will be ordered and compared.</summary>
@@ -116,6 +123,7 @@ public enum V1beta2ImagePolicyStatusConditionsStatusEnum
     Unknown
 }
 
+/// <summary>Condition contains details for one aspect of the current state of this API Resource. --- This struct is intended for direct use as an array at the field path .status.conditions.  For example,   	type FooStatus struct{ 	    // Represents the observations of a foo's current state. 	    // Known .status.conditions.type are: "Available", "Progressing", and "Degraded" 	    // +patchMergeKey=type 	    // +patchStrategy=merge 	    // +listType=map 	    // +listMapKey=type 	    Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`   	    // other fields 	}</summary>
 public partial class V1beta2ImagePolicyStatusConditions
 {
     /// <summary>lastTransitionTime is the last time the condition transitioned from one status to another. This should be when the underlying condition changed.  If that is not known, then using the time when the API field changed is acceptable.</summary>
@@ -144,6 +152,7 @@ public partial class V1beta2ImagePolicyStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ImagePolicyStatus defines the observed state of ImagePolicy</summary>
 public partial class V1beta2ImagePolicyStatus
 {
     /// <summary></summary>
@@ -164,6 +173,7 @@ public partial class V1beta2ImagePolicyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ImagePolicy is the Schema for the imagepolicies API</summary>
 public partial class V1beta2ImagePolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta2ImagePolicySpec>, IStatus<V1beta2ImagePolicyStatus>
 {
     public const string KubeApiVersion = "v1beta2";

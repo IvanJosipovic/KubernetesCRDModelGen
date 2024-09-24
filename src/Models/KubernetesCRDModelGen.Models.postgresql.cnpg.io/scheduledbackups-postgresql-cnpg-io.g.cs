@@ -21,6 +21,7 @@ public enum V1ScheduledBackupSpecBackupOwnerReferenceEnum
     Cluster
 }
 
+/// <summary>The cluster to backup</summary>
 public partial class V1ScheduledBackupSpecCluster
 {
     /// <summary>Name of the referent.</summary>
@@ -41,6 +42,7 @@ public enum V1ScheduledBackupSpecMethodEnum
     Plugin
 }
 
+/// <summary>Configuration parameters to control the online/hot backup with volume snapshots Overrides the default settings specified in the cluster '.backup.volumeSnapshot.onlineConfiguration' stanza</summary>
 public partial class V1ScheduledBackupSpecOnlineConfiguration
 {
     /// <summary>Control whether the I/O workload for the backup initial checkpoint will be limited, according to the `checkpoint_completion_target` setting on the PostgreSQL server. If set to true, an immediate checkpoint will be used, meaning PostgreSQL will complete the checkpoint as soon as possible. `false` by default.</summary>
@@ -52,6 +54,7 @@ public partial class V1ScheduledBackupSpecOnlineConfiguration
     public bool? WaitForArchive { get; set; }
 }
 
+/// <summary>Configuration parameters passed to the plugin managing this backup</summary>
 public partial class V1ScheduledBackupSpecPluginConfiguration
 {
     /// <summary>Name is the name of the plugin managing this backup</summary>
@@ -73,6 +76,7 @@ public enum V1ScheduledBackupSpecTargetEnum
     PreferStandby
 }
 
+/// <summary>Specification of the desired behavior of the ScheduledBackup. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
 public partial class V1ScheduledBackupSpec
 {
     /// <summary>Indicates which ownerReference should be put inside the created backup resources.&lt;br /&gt; - none: no owner reference for created backup objects (same behavior as before the field was introduced)&lt;br /&gt; - self: sets the Scheduled backup object as owner of the backup&lt;br /&gt; - cluster: set the cluster as owner of the backup&lt;br /&gt;</summary>
@@ -119,6 +123,7 @@ public partial class V1ScheduledBackupSpec
     public V1ScheduledBackupSpecTargetEnum? Target { get; set; }
 }
 
+/// <summary>Most recently observed status of the ScheduledBackup. This data may not be up to date. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
 public partial class V1ScheduledBackupStatus
 {
     /// <summary>The latest time the schedule</summary>
@@ -135,6 +140,7 @@ public partial class V1ScheduledBackupStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ScheduledBackup is the Schema for the scheduledbackups API</summary>
 public partial class V1ScheduledBackup : IKubernetesObject<V1ObjectMeta>, ISpec<V1ScheduledBackupSpec>, IStatus<V1ScheduledBackupStatus>
 {
     public const string KubeApiVersion = "v1";

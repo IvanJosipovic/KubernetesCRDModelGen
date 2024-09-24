@@ -38,6 +38,7 @@ public enum V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderKeyVaultKe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderKeyVaultKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderK
     public V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderKeyVaultKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in keyvault to populate keyVaultKeyId.</summary>
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderKeyVaultKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderKeyVaultKe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderKeyVaultKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderK
     public V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderKeyVaultKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in keyvault to populate keyVaultKeyId.</summary>
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderKeyVaultKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderServerIdRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderServerIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderS
     public V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderServerIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a MSSQLServer in sql to populate serverId.</summary>
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderServerIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderServerIdSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderServerIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderS
     public V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderServerIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a MSSQLServer in sql to populate serverId.</summary>
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderServerIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderS
     public V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderServerIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecForProvider
 {
     /// <summary>When enabled, the server will continuously check the key vault for any new versions of the key being used as the TDE protector. If a new version of the key is detected, the TDE protector on the server will be automatically rotated to the latest key version within 60 minutes.</summary>
@@ -253,6 +262,7 @@ public enum V1beta1MSSQLServerTransparentDataEncryptionSpecInitProviderKeyVaultK
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecInitProviderKeyVaultKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -266,6 +276,7 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecInitProvider
     public V1beta1MSSQLServerTransparentDataEncryptionSpecInitProviderKeyVaultKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in keyvault to populate keyVaultKeyId.</summary>
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecInitProviderKeyVaultKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -297,6 +308,7 @@ public enum V1beta1MSSQLServerTransparentDataEncryptionSpecInitProviderKeyVaultK
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecInitProviderKeyVaultKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -310,6 +322,7 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecInitProvider
     public V1beta1MSSQLServerTransparentDataEncryptionSpecInitProviderKeyVaultKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in keyvault to populate keyVaultKeyId.</summary>
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecInitProviderKeyVaultKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -325,6 +338,7 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecInitProvider
     public V1beta1MSSQLServerTransparentDataEncryptionSpecInitProviderKeyVaultKeyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecInitProvider
 {
     /// <summary>When enabled, the server will continuously check the key vault for any new versions of the key being used as the TDE protector. If a new version of the key is detected, the TDE protector on the server will be automatically rotated to the latest key version within 60 minutes.</summary>
@@ -386,6 +400,7 @@ public enum V1beta1MSSQLServerTransparentDataEncryptionSpecProviderConfigRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -399,6 +414,7 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecProviderConf
     public V1beta1MSSQLServerTransparentDataEncryptionSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -430,6 +446,7 @@ public enum V1beta1MSSQLServerTransparentDataEncryptionSpecPublishConnectionDeta
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -443,6 +460,7 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecPublishConne
     public V1beta1MSSQLServerTransparentDataEncryptionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -454,6 +472,7 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecPublishConne
     public V1beta1MSSQLServerTransparentDataEncryptionSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -469,6 +488,7 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecPublishConne
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -484,6 +504,7 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecPublishConne
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -495,6 +516,7 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecWriteConnect
     public string Namespace { get; set; }
 }
 
+/// <summary>MSSQLServerTransparentDataEncryptionSpec defines the desired state of MSSQLServerTransparentDataEncryption</summary>
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -527,6 +549,7 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionSpec
     public V1beta1MSSQLServerTransparentDataEncryptionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MSSQLServerTransparentDataEncryptionStatusAtProvider
 {
     /// <summary>When enabled, the server will continuously check the key vault for any new versions of the key being used as the TDE protector. If a new version of the key is detected, the TDE protector on the server will be automatically rotated to the latest key version within 60 minutes.</summary>
@@ -546,6 +569,7 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionStatusAtProvider
     public string? ServerId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1MSSQLServerTransparentDataEncryptionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -573,6 +597,7 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>MSSQLServerTransparentDataEncryptionStatus defines the observed state of MSSQLServerTransparentDataEncryption.</summary>
 public partial class V1beta1MSSQLServerTransparentDataEncryptionStatus
 {
     /// <summary></summary>
@@ -589,6 +614,7 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>MSSQLServerTransparentDataEncryption is the Schema for the MSSQLServerTransparentDataEncryptions API. Manages the transparent data encryption configuration for a MSSQL Server</summary>
 public partial class V1beta1MSSQLServerTransparentDataEncryption : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MSSQLServerTransparentDataEncryptionSpec>, IStatus<V1beta1MSSQLServerTransparentDataEncryptionStatus>
 {
     public const string KubeApiVersion = "v1beta1";

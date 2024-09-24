@@ -18,6 +18,7 @@ public enum V1beta1ResponseHeadersPolicySpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicySpecForProviderCorsConfigAccessControlAllowHeaders
 {
     /// <summary></summary>
@@ -25,6 +26,7 @@ public partial class V1beta1ResponseHeadersPolicySpecForProviderCorsConfigAccess
     public IList<string>? Items { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicySpecForProviderCorsConfigAccessControlAllowMethods
 {
     /// <summary></summary>
@@ -32,6 +34,7 @@ public partial class V1beta1ResponseHeadersPolicySpecForProviderCorsConfigAccess
     public IList<string>? Items { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicySpecForProviderCorsConfigAccessControlAllowOrigins
 {
     /// <summary></summary>
@@ -39,6 +42,7 @@ public partial class V1beta1ResponseHeadersPolicySpecForProviderCorsConfigAccess
     public IList<string>? Items { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicySpecForProviderCorsConfigAccessControlExposeHeaders
 {
     /// <summary></summary>
@@ -46,6 +50,7 @@ public partial class V1beta1ResponseHeadersPolicySpecForProviderCorsConfigAccess
     public IList<string>? Items { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicySpecForProviderCorsConfig
 {
     /// <summary>A Boolean value that CloudFront uses as the value for the Access-Control-Allow-Credentials HTTP response header.</summary>
@@ -77,6 +82,7 @@ public partial class V1beta1ResponseHeadersPolicySpecForProviderCorsConfig
     public bool? OriginOverride { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicySpecForProviderCustomHeadersConfigItems
 {
     /// <summary>The HTTP response header name.</summary>
@@ -92,6 +98,7 @@ public partial class V1beta1ResponseHeadersPolicySpecForProviderCustomHeadersCon
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicySpecForProviderCustomHeadersConfig
 {
     /// <summary></summary>
@@ -99,6 +106,7 @@ public partial class V1beta1ResponseHeadersPolicySpecForProviderCustomHeadersCon
     public IList<V1beta1ResponseHeadersPolicySpecForProviderCustomHeadersConfigItems>? Items { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicySpecForProviderRemoveHeadersConfigItems
 {
     /// <summary>The HTTP response header name.</summary>
@@ -106,6 +114,7 @@ public partial class V1beta1ResponseHeadersPolicySpecForProviderRemoveHeadersCon
     public string? Header { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicySpecForProviderRemoveHeadersConfig
 {
     /// <summary></summary>
@@ -113,6 +122,7 @@ public partial class V1beta1ResponseHeadersPolicySpecForProviderRemoveHeadersCon
     public IList<V1beta1ResponseHeadersPolicySpecForProviderRemoveHeadersConfigItems>? Items { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicySpecForProviderSecurityHeadersConfigContentSecurityPolicy
 {
     /// <summary>The policy directives and their values that CloudFront includes as values for the Content-Security-Policy HTTP response header. See Content Security Policy for more information.</summary>
@@ -124,6 +134,7 @@ public partial class V1beta1ResponseHeadersPolicySpecForProviderSecurityHeadersC
     public bool? Override { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicySpecForProviderSecurityHeadersConfigContentTypeOptions
 {
     /// <summary>Whether CloudFront overrides a response header with the same name received from the origin with the header specifies here.</summary>
@@ -131,6 +142,7 @@ public partial class V1beta1ResponseHeadersPolicySpecForProviderSecurityHeadersC
     public bool? Override { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicySpecForProviderSecurityHeadersConfigFrameOptions
 {
     /// <summary>The value of the X-Frame-Options HTTP response header. Valid values: DENY | SAMEORIGIN</summary>
@@ -142,6 +154,7 @@ public partial class V1beta1ResponseHeadersPolicySpecForProviderSecurityHeadersC
     public bool? Override { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicySpecForProviderSecurityHeadersConfigReferrerPolicy
 {
     /// <summary>Whether CloudFront overrides a response header with the same name received from the origin with the header specifies here.</summary>
@@ -153,6 +166,7 @@ public partial class V1beta1ResponseHeadersPolicySpecForProviderSecurityHeadersC
     public string? ReferrerPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicySpecForProviderSecurityHeadersConfigStrictTransportSecurity
 {
     /// <summary>A number that CloudFront uses as the value for the Access-Control-Max-Age HTTP response header.</summary>
@@ -172,6 +186,7 @@ public partial class V1beta1ResponseHeadersPolicySpecForProviderSecurityHeadersC
     public bool? Preload { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicySpecForProviderSecurityHeadersConfigXssProtection
 {
     /// <summary>Whether CloudFront includes the mode=block directive in the X-XSS-Protection header.</summary>
@@ -191,6 +206,7 @@ public partial class V1beta1ResponseHeadersPolicySpecForProviderSecurityHeadersC
     public string? ReportUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicySpecForProviderSecurityHeadersConfig
 {
     /// <summary>The policy directives and their values that CloudFront includes as values for the Content-Security-Policy HTTP response header. See Content Security Policy for more information.</summary>
@@ -218,6 +234,7 @@ public partial class V1beta1ResponseHeadersPolicySpecForProviderSecurityHeadersC
     public IList<V1beta1ResponseHeadersPolicySpecForProviderSecurityHeadersConfigXssProtection>? XssProtection { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicySpecForProviderServerTimingHeadersConfig
 {
     /// <summary>A Whether CloudFront adds the Server-Timing header to HTTP responses that it sends in response to requests that match a cache behavior that's associated with this response headers policy.</summary>
@@ -229,6 +246,7 @@ public partial class V1beta1ResponseHeadersPolicySpecForProviderServerTimingHead
     public double? SamplingRate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicySpecForProvider
 {
     /// <summary>A comment to describe the response headers policy. The comment cannot be longer than 128 characters.</summary>
@@ -268,6 +286,7 @@ public partial class V1beta1ResponseHeadersPolicySpecForProvider
     public IList<V1beta1ResponseHeadersPolicySpecForProviderServerTimingHeadersConfig>? ServerTimingHeadersConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicySpecInitProviderCorsConfigAccessControlAllowHeaders
 {
     /// <summary></summary>
@@ -275,6 +294,7 @@ public partial class V1beta1ResponseHeadersPolicySpecInitProviderCorsConfigAcces
     public IList<string>? Items { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicySpecInitProviderCorsConfigAccessControlAllowMethods
 {
     /// <summary></summary>
@@ -282,6 +302,7 @@ public partial class V1beta1ResponseHeadersPolicySpecInitProviderCorsConfigAcces
     public IList<string>? Items { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicySpecInitProviderCorsConfigAccessControlAllowOrigins
 {
     /// <summary></summary>
@@ -289,6 +310,7 @@ public partial class V1beta1ResponseHeadersPolicySpecInitProviderCorsConfigAcces
     public IList<string>? Items { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicySpecInitProviderCorsConfigAccessControlExposeHeaders
 {
     /// <summary></summary>
@@ -296,6 +318,7 @@ public partial class V1beta1ResponseHeadersPolicySpecInitProviderCorsConfigAcces
     public IList<string>? Items { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicySpecInitProviderCorsConfig
 {
     /// <summary>A Boolean value that CloudFront uses as the value for the Access-Control-Allow-Credentials HTTP response header.</summary>
@@ -327,6 +350,7 @@ public partial class V1beta1ResponseHeadersPolicySpecInitProviderCorsConfig
     public bool? OriginOverride { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicySpecInitProviderCustomHeadersConfigItems
 {
     /// <summary>The HTTP response header name.</summary>
@@ -342,6 +366,7 @@ public partial class V1beta1ResponseHeadersPolicySpecInitProviderCustomHeadersCo
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicySpecInitProviderCustomHeadersConfig
 {
     /// <summary></summary>
@@ -349,6 +374,7 @@ public partial class V1beta1ResponseHeadersPolicySpecInitProviderCustomHeadersCo
     public IList<V1beta1ResponseHeadersPolicySpecInitProviderCustomHeadersConfigItems>? Items { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicySpecInitProviderRemoveHeadersConfigItems
 {
     /// <summary>The HTTP response header name.</summary>
@@ -356,6 +382,7 @@ public partial class V1beta1ResponseHeadersPolicySpecInitProviderRemoveHeadersCo
     public string? Header { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicySpecInitProviderRemoveHeadersConfig
 {
     /// <summary></summary>
@@ -363,6 +390,7 @@ public partial class V1beta1ResponseHeadersPolicySpecInitProviderRemoveHeadersCo
     public IList<V1beta1ResponseHeadersPolicySpecInitProviderRemoveHeadersConfigItems>? Items { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicySpecInitProviderSecurityHeadersConfigContentSecurityPolicy
 {
     /// <summary>The policy directives and their values that CloudFront includes as values for the Content-Security-Policy HTTP response header. See Content Security Policy for more information.</summary>
@@ -374,6 +402,7 @@ public partial class V1beta1ResponseHeadersPolicySpecInitProviderSecurityHeaders
     public bool? Override { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicySpecInitProviderSecurityHeadersConfigContentTypeOptions
 {
     /// <summary>Whether CloudFront overrides a response header with the same name received from the origin with the header specifies here.</summary>
@@ -381,6 +410,7 @@ public partial class V1beta1ResponseHeadersPolicySpecInitProviderSecurityHeaders
     public bool? Override { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicySpecInitProviderSecurityHeadersConfigFrameOptions
 {
     /// <summary>The value of the X-Frame-Options HTTP response header. Valid values: DENY | SAMEORIGIN</summary>
@@ -392,6 +422,7 @@ public partial class V1beta1ResponseHeadersPolicySpecInitProviderSecurityHeaders
     public bool? Override { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicySpecInitProviderSecurityHeadersConfigReferrerPolicy
 {
     /// <summary>Whether CloudFront overrides a response header with the same name received from the origin with the header specifies here.</summary>
@@ -403,6 +434,7 @@ public partial class V1beta1ResponseHeadersPolicySpecInitProviderSecurityHeaders
     public string? ReferrerPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicySpecInitProviderSecurityHeadersConfigStrictTransportSecurity
 {
     /// <summary>A number that CloudFront uses as the value for the Access-Control-Max-Age HTTP response header.</summary>
@@ -422,6 +454,7 @@ public partial class V1beta1ResponseHeadersPolicySpecInitProviderSecurityHeaders
     public bool? Preload { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicySpecInitProviderSecurityHeadersConfigXssProtection
 {
     /// <summary>Whether CloudFront includes the mode=block directive in the X-XSS-Protection header.</summary>
@@ -441,6 +474,7 @@ public partial class V1beta1ResponseHeadersPolicySpecInitProviderSecurityHeaders
     public string? ReportUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicySpecInitProviderSecurityHeadersConfig
 {
     /// <summary>The policy directives and their values that CloudFront includes as values for the Content-Security-Policy HTTP response header. See Content Security Policy for more information.</summary>
@@ -468,6 +502,7 @@ public partial class V1beta1ResponseHeadersPolicySpecInitProviderSecurityHeaders
     public IList<V1beta1ResponseHeadersPolicySpecInitProviderSecurityHeadersConfigXssProtection>? XssProtection { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicySpecInitProviderServerTimingHeadersConfig
 {
     /// <summary>A Whether CloudFront adds the Server-Timing header to HTTP responses that it sends in response to requests that match a cache behavior that's associated with this response headers policy.</summary>
@@ -479,6 +514,7 @@ public partial class V1beta1ResponseHeadersPolicySpecInitProviderServerTimingHea
     public double? SamplingRate { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ResponseHeadersPolicySpecInitProvider
 {
     /// <summary>A comment to describe the response headers policy. The comment cannot be longer than 128 characters.</summary>
@@ -556,6 +592,7 @@ public enum V1beta1ResponseHeadersPolicySpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ResponseHeadersPolicySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -569,6 +606,7 @@ public partial class V1beta1ResponseHeadersPolicySpecProviderConfigRefPolicy
     public V1beta1ResponseHeadersPolicySpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ResponseHeadersPolicySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -600,6 +638,7 @@ public enum V1beta1ResponseHeadersPolicySpecPublishConnectionDetailsToConfigRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ResponseHeadersPolicySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -613,6 +652,7 @@ public partial class V1beta1ResponseHeadersPolicySpecPublishConnectionDetailsToC
     public V1beta1ResponseHeadersPolicySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ResponseHeadersPolicySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -624,6 +664,7 @@ public partial class V1beta1ResponseHeadersPolicySpecPublishConnectionDetailsToC
     public V1beta1ResponseHeadersPolicySpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ResponseHeadersPolicySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -639,6 +680,7 @@ public partial class V1beta1ResponseHeadersPolicySpecPublishConnectionDetailsToM
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ResponseHeadersPolicySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -654,6 +696,7 @@ public partial class V1beta1ResponseHeadersPolicySpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ResponseHeadersPolicySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -665,6 +708,7 @@ public partial class V1beta1ResponseHeadersPolicySpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ResponseHeadersPolicySpec defines the desired state of ResponseHeadersPolicy</summary>
 public partial class V1beta1ResponseHeadersPolicySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -697,6 +741,7 @@ public partial class V1beta1ResponseHeadersPolicySpec
     public V1beta1ResponseHeadersPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicyStatusAtProviderCorsConfigAccessControlAllowHeaders
 {
     /// <summary></summary>
@@ -704,6 +749,7 @@ public partial class V1beta1ResponseHeadersPolicyStatusAtProviderCorsConfigAcces
     public IList<string>? Items { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicyStatusAtProviderCorsConfigAccessControlAllowMethods
 {
     /// <summary></summary>
@@ -711,6 +757,7 @@ public partial class V1beta1ResponseHeadersPolicyStatusAtProviderCorsConfigAcces
     public IList<string>? Items { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicyStatusAtProviderCorsConfigAccessControlAllowOrigins
 {
     /// <summary></summary>
@@ -718,6 +765,7 @@ public partial class V1beta1ResponseHeadersPolicyStatusAtProviderCorsConfigAcces
     public IList<string>? Items { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicyStatusAtProviderCorsConfigAccessControlExposeHeaders
 {
     /// <summary></summary>
@@ -725,6 +773,7 @@ public partial class V1beta1ResponseHeadersPolicyStatusAtProviderCorsConfigAcces
     public IList<string>? Items { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicyStatusAtProviderCorsConfig
 {
     /// <summary>A Boolean value that CloudFront uses as the value for the Access-Control-Allow-Credentials HTTP response header.</summary>
@@ -756,6 +805,7 @@ public partial class V1beta1ResponseHeadersPolicyStatusAtProviderCorsConfig
     public bool? OriginOverride { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicyStatusAtProviderCustomHeadersConfigItems
 {
     /// <summary>The HTTP response header name.</summary>
@@ -771,6 +821,7 @@ public partial class V1beta1ResponseHeadersPolicyStatusAtProviderCustomHeadersCo
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicyStatusAtProviderCustomHeadersConfig
 {
     /// <summary></summary>
@@ -778,6 +829,7 @@ public partial class V1beta1ResponseHeadersPolicyStatusAtProviderCustomHeadersCo
     public IList<V1beta1ResponseHeadersPolicyStatusAtProviderCustomHeadersConfigItems>? Items { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicyStatusAtProviderRemoveHeadersConfigItems
 {
     /// <summary>The HTTP response header name.</summary>
@@ -785,6 +837,7 @@ public partial class V1beta1ResponseHeadersPolicyStatusAtProviderRemoveHeadersCo
     public string? Header { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicyStatusAtProviderRemoveHeadersConfig
 {
     /// <summary></summary>
@@ -792,6 +845,7 @@ public partial class V1beta1ResponseHeadersPolicyStatusAtProviderRemoveHeadersCo
     public IList<V1beta1ResponseHeadersPolicyStatusAtProviderRemoveHeadersConfigItems>? Items { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicyStatusAtProviderSecurityHeadersConfigContentSecurityPolicy
 {
     /// <summary>The policy directives and their values that CloudFront includes as values for the Content-Security-Policy HTTP response header. See Content Security Policy for more information.</summary>
@@ -803,6 +857,7 @@ public partial class V1beta1ResponseHeadersPolicyStatusAtProviderSecurityHeaders
     public bool? Override { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicyStatusAtProviderSecurityHeadersConfigContentTypeOptions
 {
     /// <summary>Whether CloudFront overrides a response header with the same name received from the origin with the header specifies here.</summary>
@@ -810,6 +865,7 @@ public partial class V1beta1ResponseHeadersPolicyStatusAtProviderSecurityHeaders
     public bool? Override { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicyStatusAtProviderSecurityHeadersConfigFrameOptions
 {
     /// <summary>The value of the X-Frame-Options HTTP response header. Valid values: DENY | SAMEORIGIN</summary>
@@ -821,6 +877,7 @@ public partial class V1beta1ResponseHeadersPolicyStatusAtProviderSecurityHeaders
     public bool? Override { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicyStatusAtProviderSecurityHeadersConfigReferrerPolicy
 {
     /// <summary>Whether CloudFront overrides a response header with the same name received from the origin with the header specifies here.</summary>
@@ -832,6 +889,7 @@ public partial class V1beta1ResponseHeadersPolicyStatusAtProviderSecurityHeaders
     public string? ReferrerPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicyStatusAtProviderSecurityHeadersConfigStrictTransportSecurity
 {
     /// <summary>A number that CloudFront uses as the value for the Access-Control-Max-Age HTTP response header.</summary>
@@ -851,6 +909,7 @@ public partial class V1beta1ResponseHeadersPolicyStatusAtProviderSecurityHeaders
     public bool? Preload { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicyStatusAtProviderSecurityHeadersConfigXssProtection
 {
     /// <summary>Whether CloudFront includes the mode=block directive in the X-XSS-Protection header.</summary>
@@ -870,6 +929,7 @@ public partial class V1beta1ResponseHeadersPolicyStatusAtProviderSecurityHeaders
     public string? ReportUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicyStatusAtProviderSecurityHeadersConfig
 {
     /// <summary>The policy directives and their values that CloudFront includes as values for the Content-Security-Policy HTTP response header. See Content Security Policy for more information.</summary>
@@ -897,6 +957,7 @@ public partial class V1beta1ResponseHeadersPolicyStatusAtProviderSecurityHeaders
     public IList<V1beta1ResponseHeadersPolicyStatusAtProviderSecurityHeadersConfigXssProtection>? XssProtection { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicyStatusAtProviderServerTimingHeadersConfig
 {
     /// <summary>A Whether CloudFront adds the Server-Timing header to HTTP responses that it sends in response to requests that match a cache behavior that's associated with this response headers policy.</summary>
@@ -908,6 +969,7 @@ public partial class V1beta1ResponseHeadersPolicyStatusAtProviderServerTimingHea
     public double? SamplingRate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResponseHeadersPolicyStatusAtProvider
 {
     /// <summary>A comment to describe the response headers policy. The comment cannot be longer than 128 characters.</summary>
@@ -947,6 +1009,7 @@ public partial class V1beta1ResponseHeadersPolicyStatusAtProvider
     public IList<V1beta1ResponseHeadersPolicyStatusAtProviderServerTimingHeadersConfig>? ServerTimingHeadersConfig { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ResponseHeadersPolicyStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -974,6 +1037,7 @@ public partial class V1beta1ResponseHeadersPolicyStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ResponseHeadersPolicyStatus defines the observed state of ResponseHeadersPolicy.</summary>
 public partial class V1beta1ResponseHeadersPolicyStatus
 {
     /// <summary></summary>
@@ -990,6 +1054,7 @@ public partial class V1beta1ResponseHeadersPolicyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ResponseHeadersPolicy is the Schema for the ResponseHeadersPolicys API. Provides a CloudFront response headers policy resource.</summary>
 public partial class V1beta1ResponseHeadersPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ResponseHeadersPolicySpec>, IStatus<V1beta1ResponseHeadersPolicyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

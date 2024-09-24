@@ -38,6 +38,7 @@ public enum V1beta1WebPubsubHubSpecForProviderEventHandlerAuthManagedIdentityIdR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WebPubsubHubSpecForProviderEventHandlerAuthManagedIdentityIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1WebPubsubHubSpecForProviderEventHandlerAuthManagedId
     public V1beta1WebPubsubHubSpecForProviderEventHandlerAuthManagedIdentityIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserAssignedIdentity in managedidentity to populate managedIdentityId.</summary>
 public partial class V1beta1WebPubsubHubSpecForProviderEventHandlerAuthManagedIdentityIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1WebPubsubHubSpecForProviderEventHandlerAuthManagedIdentityIdS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WebPubsubHubSpecForProviderEventHandlerAuthManagedIdentityIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1WebPubsubHubSpecForProviderEventHandlerAuthManagedId
     public V1beta1WebPubsubHubSpecForProviderEventHandlerAuthManagedIdentityIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserAssignedIdentity in managedidentity to populate managedIdentityId.</summary>
 public partial class V1beta1WebPubsubHubSpecForProviderEventHandlerAuthManagedIdentityIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1WebPubsubHubSpecForProviderEventHandlerAuthManagedId
     public V1beta1WebPubsubHubSpecForProviderEventHandlerAuthManagedIdentityIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WebPubsubHubSpecForProviderEventHandlerAuth
 {
     /// <summary>Specify the identity ID of the target resource.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1WebPubsubHubSpecForProviderEventHandlerAuth
     public V1beta1WebPubsubHubSpecForProviderEventHandlerAuthManagedIdentityIdSelector? ManagedIdentityIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WebPubsubHubSpecForProviderEventHandler
 {
     /// <summary>An auth block as defined below.</summary>
@@ -164,6 +170,7 @@ public enum V1beta1WebPubsubHubSpecForProviderEventListenerEventhubNameRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WebPubsubHubSpecForProviderEventListenerEventhubNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -177,6 +184,7 @@ public partial class V1beta1WebPubsubHubSpecForProviderEventListenerEventhubName
     public V1beta1WebPubsubHubSpecForProviderEventListenerEventhubNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a EventHub in eventhub to populate eventhubName.</summary>
 public partial class V1beta1WebPubsubHubSpecForProviderEventListenerEventhubNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -208,6 +216,7 @@ public enum V1beta1WebPubsubHubSpecForProviderEventListenerEventhubNameSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WebPubsubHubSpecForProviderEventListenerEventhubNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -221,6 +230,7 @@ public partial class V1beta1WebPubsubHubSpecForProviderEventListenerEventhubName
     public V1beta1WebPubsubHubSpecForProviderEventListenerEventhubNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a EventHub in eventhub to populate eventhubName.</summary>
 public partial class V1beta1WebPubsubHubSpecForProviderEventListenerEventhubNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -256,6 +266,7 @@ public enum V1beta1WebPubsubHubSpecForProviderEventListenerEventhubNamespaceName
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WebPubsubHubSpecForProviderEventListenerEventhubNamespaceNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -269,6 +280,7 @@ public partial class V1beta1WebPubsubHubSpecForProviderEventListenerEventhubName
     public V1beta1WebPubsubHubSpecForProviderEventListenerEventhubNamespaceNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a EventHubNamespace in eventhub to populate eventhubNamespaceName.</summary>
 public partial class V1beta1WebPubsubHubSpecForProviderEventListenerEventhubNamespaceNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -300,6 +312,7 @@ public enum V1beta1WebPubsubHubSpecForProviderEventListenerEventhubNamespaceName
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WebPubsubHubSpecForProviderEventListenerEventhubNamespaceNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -313,6 +326,7 @@ public partial class V1beta1WebPubsubHubSpecForProviderEventListenerEventhubName
     public V1beta1WebPubsubHubSpecForProviderEventListenerEventhubNamespaceNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a EventHubNamespace in eventhub to populate eventhubNamespaceName.</summary>
 public partial class V1beta1WebPubsubHubSpecForProviderEventListenerEventhubNamespaceNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -328,6 +342,7 @@ public partial class V1beta1WebPubsubHubSpecForProviderEventListenerEventhubName
     public V1beta1WebPubsubHubSpecForProviderEventListenerEventhubNamespaceNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WebPubsubHubSpecForProviderEventListener
 {
     /// <summary>Specifies the event hub name to receive the events.</summary>
@@ -383,6 +398,7 @@ public enum V1beta1WebPubsubHubSpecForProviderWebPubsubIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WebPubsubHubSpecForProviderWebPubsubIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -396,6 +412,7 @@ public partial class V1beta1WebPubsubHubSpecForProviderWebPubsubIdRefPolicy
     public V1beta1WebPubsubHubSpecForProviderWebPubsubIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a WebPubsub in signalrservice to populate webPubsubId.</summary>
 public partial class V1beta1WebPubsubHubSpecForProviderWebPubsubIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -427,6 +444,7 @@ public enum V1beta1WebPubsubHubSpecForProviderWebPubsubIdSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WebPubsubHubSpecForProviderWebPubsubIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -440,6 +458,7 @@ public partial class V1beta1WebPubsubHubSpecForProviderWebPubsubIdSelectorPolicy
     public V1beta1WebPubsubHubSpecForProviderWebPubsubIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a WebPubsub in signalrservice to populate webPubsubId.</summary>
 public partial class V1beta1WebPubsubHubSpecForProviderWebPubsubIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -455,6 +474,7 @@ public partial class V1beta1WebPubsubHubSpecForProviderWebPubsubIdSelector
     public V1beta1WebPubsubHubSpecForProviderWebPubsubIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WebPubsubHubSpecForProvider
 {
     /// <summary>Is anonymous connections are allowed for this hub? Defaults to false. Possible values are true, false.</summary>
@@ -506,6 +526,7 @@ public enum V1beta1WebPubsubHubSpecInitProviderEventHandlerAuthManagedIdentityId
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WebPubsubHubSpecInitProviderEventHandlerAuthManagedIdentityIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -519,6 +540,7 @@ public partial class V1beta1WebPubsubHubSpecInitProviderEventHandlerAuthManagedI
     public V1beta1WebPubsubHubSpecInitProviderEventHandlerAuthManagedIdentityIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserAssignedIdentity in managedidentity to populate managedIdentityId.</summary>
 public partial class V1beta1WebPubsubHubSpecInitProviderEventHandlerAuthManagedIdentityIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -550,6 +572,7 @@ public enum V1beta1WebPubsubHubSpecInitProviderEventHandlerAuthManagedIdentityId
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WebPubsubHubSpecInitProviderEventHandlerAuthManagedIdentityIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -563,6 +586,7 @@ public partial class V1beta1WebPubsubHubSpecInitProviderEventHandlerAuthManagedI
     public V1beta1WebPubsubHubSpecInitProviderEventHandlerAuthManagedIdentityIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserAssignedIdentity in managedidentity to populate managedIdentityId.</summary>
 public partial class V1beta1WebPubsubHubSpecInitProviderEventHandlerAuthManagedIdentityIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -578,6 +602,7 @@ public partial class V1beta1WebPubsubHubSpecInitProviderEventHandlerAuthManagedI
     public V1beta1WebPubsubHubSpecInitProviderEventHandlerAuthManagedIdentityIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WebPubsubHubSpecInitProviderEventHandlerAuth
 {
     /// <summary>Specify the identity ID of the target resource.</summary>
@@ -593,6 +618,7 @@ public partial class V1beta1WebPubsubHubSpecInitProviderEventHandlerAuth
     public V1beta1WebPubsubHubSpecInitProviderEventHandlerAuthManagedIdentityIdSelector? ManagedIdentityIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WebPubsubHubSpecInitProviderEventHandler
 {
     /// <summary>An auth block as defined below.</summary>
@@ -632,6 +658,7 @@ public enum V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNameRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -645,6 +672,7 @@ public partial class V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNam
     public V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a EventHub in eventhub to populate eventhubName.</summary>
 public partial class V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -676,6 +704,7 @@ public enum V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNameSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -689,6 +718,7 @@ public partial class V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNam
     public V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a EventHub in eventhub to populate eventhubName.</summary>
 public partial class V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -724,6 +754,7 @@ public enum V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNamespaceNam
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNamespaceNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -737,6 +768,7 @@ public partial class V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNam
     public V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNamespaceNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a EventHubNamespace in eventhub to populate eventhubNamespaceName.</summary>
 public partial class V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNamespaceNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -768,6 +800,7 @@ public enum V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNamespaceNam
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNamespaceNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -781,6 +814,7 @@ public partial class V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNam
     public V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNamespaceNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a EventHubNamespace in eventhub to populate eventhubNamespaceName.</summary>
 public partial class V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNamespaceNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -796,6 +830,7 @@ public partial class V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNam
     public V1beta1WebPubsubHubSpecInitProviderEventListenerEventhubNamespaceNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WebPubsubHubSpecInitProviderEventListener
 {
     /// <summary>Specifies the event hub name to receive the events.</summary>
@@ -851,6 +886,7 @@ public enum V1beta1WebPubsubHubSpecInitProviderWebPubsubIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WebPubsubHubSpecInitProviderWebPubsubIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -864,6 +900,7 @@ public partial class V1beta1WebPubsubHubSpecInitProviderWebPubsubIdRefPolicy
     public V1beta1WebPubsubHubSpecInitProviderWebPubsubIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a WebPubsub in signalrservice to populate webPubsubId.</summary>
 public partial class V1beta1WebPubsubHubSpecInitProviderWebPubsubIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -895,6 +932,7 @@ public enum V1beta1WebPubsubHubSpecInitProviderWebPubsubIdSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WebPubsubHubSpecInitProviderWebPubsubIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -908,6 +946,7 @@ public partial class V1beta1WebPubsubHubSpecInitProviderWebPubsubIdSelectorPolic
     public V1beta1WebPubsubHubSpecInitProviderWebPubsubIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a WebPubsub in signalrservice to populate webPubsubId.</summary>
 public partial class V1beta1WebPubsubHubSpecInitProviderWebPubsubIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -923,6 +962,7 @@ public partial class V1beta1WebPubsubHubSpecInitProviderWebPubsubIdSelector
     public V1beta1WebPubsubHubSpecInitProviderWebPubsubIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1WebPubsubHubSpecInitProvider
 {
     /// <summary>Is anonymous connections are allowed for this hub? Defaults to false. Possible values are true, false.</summary>
@@ -996,6 +1036,7 @@ public enum V1beta1WebPubsubHubSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WebPubsubHubSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1009,6 +1050,7 @@ public partial class V1beta1WebPubsubHubSpecProviderConfigRefPolicy
     public V1beta1WebPubsubHubSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1WebPubsubHubSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1040,6 +1082,7 @@ public enum V1beta1WebPubsubHubSpecPublishConnectionDetailsToConfigRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WebPubsubHubSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1053,6 +1096,7 @@ public partial class V1beta1WebPubsubHubSpecPublishConnectionDetailsToConfigRefP
     public V1beta1WebPubsubHubSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1WebPubsubHubSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1064,6 +1108,7 @@ public partial class V1beta1WebPubsubHubSpecPublishConnectionDetailsToConfigRef
     public V1beta1WebPubsubHubSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1WebPubsubHubSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1079,6 +1124,7 @@ public partial class V1beta1WebPubsubHubSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1WebPubsubHubSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1094,6 +1140,7 @@ public partial class V1beta1WebPubsubHubSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1WebPubsubHubSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1105,6 +1152,7 @@ public partial class V1beta1WebPubsubHubSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>WebPubsubHubSpec defines the desired state of WebPubsubHub</summary>
 public partial class V1beta1WebPubsubHubSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1137,6 +1185,7 @@ public partial class V1beta1WebPubsubHubSpec
     public V1beta1WebPubsubHubSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WebPubsubHubStatusAtProviderEventHandlerAuth
 {
     /// <summary>Specify the identity ID of the target resource.</summary>
@@ -1144,6 +1193,7 @@ public partial class V1beta1WebPubsubHubStatusAtProviderEventHandlerAuth
     public string? ManagedIdentityId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WebPubsubHubStatusAtProviderEventHandler
 {
     /// <summary>An auth block as defined below.</summary>
@@ -1163,6 +1213,7 @@ public partial class V1beta1WebPubsubHubStatusAtProviderEventHandler
     public string? UserEventPattern { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WebPubsubHubStatusAtProviderEventListener
 {
     /// <summary>Specifies the event hub name to receive the events.</summary>
@@ -1182,6 +1233,7 @@ public partial class V1beta1WebPubsubHubStatusAtProviderEventListener
     public IList<string>? UserEventNameFilter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WebPubsubHubStatusAtProvider
 {
     /// <summary>Is anonymous connections are allowed for this hub? Defaults to false. Possible values are true, false.</summary>
@@ -1209,6 +1261,7 @@ public partial class V1beta1WebPubsubHubStatusAtProvider
     public string? WebPubsubId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1WebPubsubHubStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1236,6 +1289,7 @@ public partial class V1beta1WebPubsubHubStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>WebPubsubHubStatus defines the observed state of WebPubsubHub.</summary>
 public partial class V1beta1WebPubsubHubStatus
 {
     /// <summary></summary>
@@ -1252,6 +1306,7 @@ public partial class V1beta1WebPubsubHubStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>WebPubsubHub is the Schema for the WebPubsubHubs API. Manages the hub settings for a Web Pubsub service.</summary>
 public partial class V1beta1WebPubsubHub : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1WebPubsubHubSpec>, IStatus<V1beta1WebPubsubHubStatus>
 {
     public const string KubeApiVersion = "v1beta1";

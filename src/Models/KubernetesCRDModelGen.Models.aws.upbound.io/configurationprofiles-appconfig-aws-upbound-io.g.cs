@@ -38,6 +38,7 @@ public enum V1beta1ConfigurationProfileSpecForProviderApplicationIdRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConfigurationProfileSpecForProviderApplicationIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ConfigurationProfileSpecForProviderApplicationIdRefP
     public V1beta1ConfigurationProfileSpecForProviderApplicationIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Application in appconfig to populate applicationId.</summary>
 public partial class V1beta1ConfigurationProfileSpecForProviderApplicationIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ConfigurationProfileSpecForProviderApplicationIdSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConfigurationProfileSpecForProviderApplicationIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ConfigurationProfileSpecForProviderApplicationIdSele
     public V1beta1ConfigurationProfileSpecForProviderApplicationIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Application in appconfig to populate applicationId.</summary>
 public partial class V1beta1ConfigurationProfileSpecForProviderApplicationIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1ConfigurationProfileSpecForProviderRetrievalRoleArnRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConfigurationProfileSpecForProviderRetrievalRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1ConfigurationProfileSpecForProviderRetrievalRoleArnR
     public V1beta1ConfigurationProfileSpecForProviderRetrievalRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate retrievalRoleArn.</summary>
 public partial class V1beta1ConfigurationProfileSpecForProviderRetrievalRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1ConfigurationProfileSpecForProviderRetrievalRoleArnSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConfigurationProfileSpecForProviderRetrievalRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1ConfigurationProfileSpecForProviderRetrievalRoleArnS
     public V1beta1ConfigurationProfileSpecForProviderRetrievalRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate retrievalRoleArn.</summary>
 public partial class V1beta1ConfigurationProfileSpecForProviderRetrievalRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1ConfigurationProfileSpecForProviderRetrievalRoleArnS
     public V1beta1ConfigurationProfileSpecForProviderRetrievalRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Either the JSON Schema content or the ARN of an AWS Lambda function.</summary>
 public partial class V1beta1ConfigurationProfileSpecForProviderValidatorContentSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -217,6 +226,7 @@ public partial class V1beta1ConfigurationProfileSpecForProviderValidatorContentS
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConfigurationProfileSpecForProviderValidator
 {
     /// <summary>Either the JSON Schema content or the ARN of an AWS Lambda function.</summary>
@@ -228,6 +238,7 @@ public partial class V1beta1ConfigurationProfileSpecForProviderValidator
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConfigurationProfileSpecForProvider
 {
     /// <summary>Application ID. Must be between 4 and 7 characters in length.</summary>
@@ -307,6 +318,7 @@ public enum V1beta1ConfigurationProfileSpecInitProviderApplicationIdRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConfigurationProfileSpecInitProviderApplicationIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -320,6 +332,7 @@ public partial class V1beta1ConfigurationProfileSpecInitProviderApplicationIdRef
     public V1beta1ConfigurationProfileSpecInitProviderApplicationIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Application in appconfig to populate applicationId.</summary>
 public partial class V1beta1ConfigurationProfileSpecInitProviderApplicationIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -351,6 +364,7 @@ public enum V1beta1ConfigurationProfileSpecInitProviderApplicationIdSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConfigurationProfileSpecInitProviderApplicationIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -364,6 +378,7 @@ public partial class V1beta1ConfigurationProfileSpecInitProviderApplicationIdSel
     public V1beta1ConfigurationProfileSpecInitProviderApplicationIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Application in appconfig to populate applicationId.</summary>
 public partial class V1beta1ConfigurationProfileSpecInitProviderApplicationIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -399,6 +414,7 @@ public enum V1beta1ConfigurationProfileSpecInitProviderRetrievalRoleArnRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConfigurationProfileSpecInitProviderRetrievalRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -412,6 +428,7 @@ public partial class V1beta1ConfigurationProfileSpecInitProviderRetrievalRoleArn
     public V1beta1ConfigurationProfileSpecInitProviderRetrievalRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate retrievalRoleArn.</summary>
 public partial class V1beta1ConfigurationProfileSpecInitProviderRetrievalRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -443,6 +460,7 @@ public enum V1beta1ConfigurationProfileSpecInitProviderRetrievalRoleArnSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConfigurationProfileSpecInitProviderRetrievalRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -456,6 +474,7 @@ public partial class V1beta1ConfigurationProfileSpecInitProviderRetrievalRoleArn
     public V1beta1ConfigurationProfileSpecInitProviderRetrievalRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate retrievalRoleArn.</summary>
 public partial class V1beta1ConfigurationProfileSpecInitProviderRetrievalRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -471,6 +490,7 @@ public partial class V1beta1ConfigurationProfileSpecInitProviderRetrievalRoleArn
     public V1beta1ConfigurationProfileSpecInitProviderRetrievalRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Either the JSON Schema content or the ARN of an AWS Lambda function.</summary>
 public partial class V1beta1ConfigurationProfileSpecInitProviderValidatorContentSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -486,6 +506,7 @@ public partial class V1beta1ConfigurationProfileSpecInitProviderValidatorContent
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConfigurationProfileSpecInitProviderValidator
 {
     /// <summary>Either the JSON Schema content or the ARN of an AWS Lambda function.</summary>
@@ -497,6 +518,7 @@ public partial class V1beta1ConfigurationProfileSpecInitProviderValidator
     public string? Type { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ConfigurationProfileSpecInitProvider
 {
     /// <summary>Application ID. Must be between 4 and 7 characters in length.</summary>
@@ -594,6 +616,7 @@ public enum V1beta1ConfigurationProfileSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConfigurationProfileSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -607,6 +630,7 @@ public partial class V1beta1ConfigurationProfileSpecProviderConfigRefPolicy
     public V1beta1ConfigurationProfileSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ConfigurationProfileSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -638,6 +662,7 @@ public enum V1beta1ConfigurationProfileSpecPublishConnectionDetailsToConfigRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConfigurationProfileSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -651,6 +676,7 @@ public partial class V1beta1ConfigurationProfileSpecPublishConnectionDetailsToCo
     public V1beta1ConfigurationProfileSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ConfigurationProfileSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -662,6 +688,7 @@ public partial class V1beta1ConfigurationProfileSpecPublishConnectionDetailsToCo
     public V1beta1ConfigurationProfileSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ConfigurationProfileSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -677,6 +704,7 @@ public partial class V1beta1ConfigurationProfileSpecPublishConnectionDetailsToMe
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ConfigurationProfileSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -692,6 +720,7 @@ public partial class V1beta1ConfigurationProfileSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ConfigurationProfileSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -703,6 +732,7 @@ public partial class V1beta1ConfigurationProfileSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ConfigurationProfileSpec defines the desired state of ConfigurationProfile</summary>
 public partial class V1beta1ConfigurationProfileSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -735,6 +765,7 @@ public partial class V1beta1ConfigurationProfileSpec
     public V1beta1ConfigurationProfileSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConfigurationProfileStatusAtProviderValidator
 {
     /// <summary>Type of validator. Valid values: JSON_SCHEMA and LAMBDA.</summary>
@@ -742,6 +773,7 @@ public partial class V1beta1ConfigurationProfileStatusAtProviderValidator
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConfigurationProfileStatusAtProvider
 {
     /// <summary>Application ID. Must be between 4 and 7 characters in length.</summary>
@@ -797,6 +829,7 @@ public partial class V1beta1ConfigurationProfileStatusAtProvider
     public IList<V1beta1ConfigurationProfileStatusAtProviderValidator>? Validator { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ConfigurationProfileStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -824,6 +857,7 @@ public partial class V1beta1ConfigurationProfileStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ConfigurationProfileStatus defines the observed state of ConfigurationProfile.</summary>
 public partial class V1beta1ConfigurationProfileStatus
 {
     /// <summary></summary>
@@ -840,6 +874,7 @@ public partial class V1beta1ConfigurationProfileStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ConfigurationProfile is the Schema for the ConfigurationProfiles API. Provides an AppConfig Configuration Profile resource.</summary>
 public partial class V1beta1ConfigurationProfile : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ConfigurationProfileSpec>, IStatus<V1beta1ConfigurationProfileStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -38,6 +38,7 @@ public enum V1beta1ResourceDataSyncSpecForProviderS3DestinationBucketNameRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ResourceDataSyncSpecForProviderS3DestinationBucketNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ResourceDataSyncSpecForProviderS3DestinationBucketNa
     public V1beta1ResourceDataSyncSpecForProviderS3DestinationBucketNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate bucketName.</summary>
 public partial class V1beta1ResourceDataSyncSpecForProviderS3DestinationBucketNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ResourceDataSyncSpecForProviderS3DestinationBucketNameSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ResourceDataSyncSpecForProviderS3DestinationBucketNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ResourceDataSyncSpecForProviderS3DestinationBucketNa
     public V1beta1ResourceDataSyncSpecForProviderS3DestinationBucketNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate bucketName.</summary>
 public partial class V1beta1ResourceDataSyncSpecForProviderS3DestinationBucketNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1ResourceDataSyncSpecForProviderS3DestinationRegionRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ResourceDataSyncSpecForProviderS3DestinationRegionRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1ResourceDataSyncSpecForProviderS3DestinationRegionRe
     public V1beta1ResourceDataSyncSpecForProviderS3DestinationRegionRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate region.</summary>
 public partial class V1beta1ResourceDataSyncSpecForProviderS3DestinationRegionRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1ResourceDataSyncSpecForProviderS3DestinationRegionSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ResourceDataSyncSpecForProviderS3DestinationRegionSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1ResourceDataSyncSpecForProviderS3DestinationRegionSe
     public V1beta1ResourceDataSyncSpecForProviderS3DestinationRegionSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate region.</summary>
 public partial class V1beta1ResourceDataSyncSpecForProviderS3DestinationRegionSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1ResourceDataSyncSpecForProviderS3DestinationRegionSe
     public V1beta1ResourceDataSyncSpecForProviderS3DestinationRegionSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceDataSyncSpecForProviderS3Destination
 {
     /// <summary>Name of S3 bucket where the aggregated data is stored.</summary>
@@ -241,6 +250,7 @@ public partial class V1beta1ResourceDataSyncSpecForProviderS3Destination
     public string? SyncFormat { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceDataSyncSpecForProvider
 {
     /// <summary>Region with the bucket targeted by the Resource Data Sync. Region is the region you'd like your resource to be created in.</summary>
@@ -272,6 +282,7 @@ public enum V1beta1ResourceDataSyncSpecInitProviderS3DestinationBucketNameRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ResourceDataSyncSpecInitProviderS3DestinationBucketNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -285,6 +296,7 @@ public partial class V1beta1ResourceDataSyncSpecInitProviderS3DestinationBucketN
     public V1beta1ResourceDataSyncSpecInitProviderS3DestinationBucketNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate bucketName.</summary>
 public partial class V1beta1ResourceDataSyncSpecInitProviderS3DestinationBucketNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -316,6 +328,7 @@ public enum V1beta1ResourceDataSyncSpecInitProviderS3DestinationBucketNameSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ResourceDataSyncSpecInitProviderS3DestinationBucketNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -329,6 +342,7 @@ public partial class V1beta1ResourceDataSyncSpecInitProviderS3DestinationBucketN
     public V1beta1ResourceDataSyncSpecInitProviderS3DestinationBucketNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate bucketName.</summary>
 public partial class V1beta1ResourceDataSyncSpecInitProviderS3DestinationBucketNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -344,6 +358,7 @@ public partial class V1beta1ResourceDataSyncSpecInitProviderS3DestinationBucketN
     public V1beta1ResourceDataSyncSpecInitProviderS3DestinationBucketNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceDataSyncSpecInitProviderS3Destination
 {
     /// <summary>Name of S3 bucket where the aggregated data is stored.</summary>
@@ -371,6 +386,7 @@ public partial class V1beta1ResourceDataSyncSpecInitProviderS3Destination
     public string? SyncFormat { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ResourceDataSyncSpecInitProvider
 {
     /// <summary>Amazon S3 configuration details for the sync.</summary>
@@ -420,6 +436,7 @@ public enum V1beta1ResourceDataSyncSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ResourceDataSyncSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -433,6 +450,7 @@ public partial class V1beta1ResourceDataSyncSpecProviderConfigRefPolicy
     public V1beta1ResourceDataSyncSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ResourceDataSyncSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -464,6 +482,7 @@ public enum V1beta1ResourceDataSyncSpecPublishConnectionDetailsToConfigRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ResourceDataSyncSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -477,6 +496,7 @@ public partial class V1beta1ResourceDataSyncSpecPublishConnectionDetailsToConfig
     public V1beta1ResourceDataSyncSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ResourceDataSyncSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -488,6 +508,7 @@ public partial class V1beta1ResourceDataSyncSpecPublishConnectionDetailsToConfig
     public V1beta1ResourceDataSyncSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ResourceDataSyncSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -503,6 +524,7 @@ public partial class V1beta1ResourceDataSyncSpecPublishConnectionDetailsToMetada
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ResourceDataSyncSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -518,6 +540,7 @@ public partial class V1beta1ResourceDataSyncSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ResourceDataSyncSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -529,6 +552,7 @@ public partial class V1beta1ResourceDataSyncSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ResourceDataSyncSpec defines the desired state of ResourceDataSync</summary>
 public partial class V1beta1ResourceDataSyncSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -561,6 +585,7 @@ public partial class V1beta1ResourceDataSyncSpec
     public V1beta1ResourceDataSyncSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceDataSyncStatusAtProviderS3Destination
 {
     /// <summary>Name of S3 bucket where the aggregated data is stored.</summary>
@@ -584,6 +609,7 @@ public partial class V1beta1ResourceDataSyncStatusAtProviderS3Destination
     public string? SyncFormat { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceDataSyncStatusAtProvider
 {
     /// <summary></summary>
@@ -595,6 +621,7 @@ public partial class V1beta1ResourceDataSyncStatusAtProvider
     public IList<V1beta1ResourceDataSyncStatusAtProviderS3Destination>? S3Destination { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ResourceDataSyncStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -622,6 +649,7 @@ public partial class V1beta1ResourceDataSyncStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ResourceDataSyncStatus defines the observed state of ResourceDataSync.</summary>
 public partial class V1beta1ResourceDataSyncStatus
 {
     /// <summary></summary>
@@ -638,6 +666,7 @@ public partial class V1beta1ResourceDataSyncStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ResourceDataSync is the Schema for the ResourceDataSyncs API. Provides a SSM resource data sync.</summary>
 public partial class V1beta1ResourceDataSync : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ResourceDataSyncSpec>, IStatus<V1beta1ResourceDataSyncStatus>
 {
     public const string KubeApiVersion = "v1beta1";

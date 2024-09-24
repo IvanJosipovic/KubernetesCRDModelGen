@@ -18,6 +18,7 @@ public enum V1beta1HSMConfigurationSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>The password required to access the HSM partition.</summary>
 public partial class V1beta1HSMConfigurationSpecForProviderHsmPartitionPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1HSMConfigurationSpecForProviderHsmPartitionPasswordS
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HSMConfigurationSpecForProvider
 {
     /// <summary>A text description of the HSM configuration to be created.</summary>
@@ -64,6 +66,7 @@ public partial class V1beta1HSMConfigurationSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>The password required to access the HSM partition.</summary>
 public partial class V1beta1HSMConfigurationSpecInitProviderHsmPartitionPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -79,6 +82,7 @@ public partial class V1beta1HSMConfigurationSpecInitProviderHsmPartitionPassword
     public string Namespace { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1HSMConfigurationSpecInitProvider
 {
     /// <summary>A text description of the HSM configuration to be created.</summary>
@@ -148,6 +152,7 @@ public enum V1beta1HSMConfigurationSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HSMConfigurationSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -161,6 +166,7 @@ public partial class V1beta1HSMConfigurationSpecProviderConfigRefPolicy
     public V1beta1HSMConfigurationSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1HSMConfigurationSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -192,6 +198,7 @@ public enum V1beta1HSMConfigurationSpecPublishConnectionDetailsToConfigRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HSMConfigurationSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -205,6 +212,7 @@ public partial class V1beta1HSMConfigurationSpecPublishConnectionDetailsToConfig
     public V1beta1HSMConfigurationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1HSMConfigurationSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -216,6 +224,7 @@ public partial class V1beta1HSMConfigurationSpecPublishConnectionDetailsToConfig
     public V1beta1HSMConfigurationSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1HSMConfigurationSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -231,6 +240,7 @@ public partial class V1beta1HSMConfigurationSpecPublishConnectionDetailsToMetada
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1HSMConfigurationSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -246,6 +256,7 @@ public partial class V1beta1HSMConfigurationSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1HSMConfigurationSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -257,6 +268,7 @@ public partial class V1beta1HSMConfigurationSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>HSMConfigurationSpec defines the desired state of HSMConfiguration</summary>
 public partial class V1beta1HSMConfigurationSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -289,6 +301,7 @@ public partial class V1beta1HSMConfigurationSpec
     public V1beta1HSMConfigurationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HSMConfigurationStatusAtProvider
 {
     /// <summary>Amazon Resource Name (ARN) of the Hsm Client Certificate.</summary>
@@ -324,6 +337,7 @@ public partial class V1beta1HSMConfigurationStatusAtProvider
     public IDictionary<string, string>? TagsAll { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1HSMConfigurationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -351,6 +365,7 @@ public partial class V1beta1HSMConfigurationStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>HSMConfigurationStatus defines the observed state of HSMConfiguration.</summary>
 public partial class V1beta1HSMConfigurationStatus
 {
     /// <summary></summary>
@@ -367,6 +382,7 @@ public partial class V1beta1HSMConfigurationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>HSMConfiguration is the Schema for the HSMConfigurations API. Creates an HSM configuration that contains the information required by an Amazon Redshift cluster to store and use database encryption keys in a Hardware Security Module (HSM).</summary>
 public partial class V1beta1HSMConfiguration : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1HSMConfigurationSpec>, IStatus<V1beta1HSMConfigurationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

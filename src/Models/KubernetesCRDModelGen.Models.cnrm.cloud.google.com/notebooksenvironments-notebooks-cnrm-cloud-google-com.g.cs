@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.notebooks.cnrm.cloud.google.com;
+/// <summary>Use a container image to start the notebook instance.</summary>
 public partial class V1alpha1NotebooksEnvironmentSpecContainerImage
 {
     /// <summary>The path to the container image repository. For example: gcr.io/{project_id}/{imageName}.</summary>
@@ -19,6 +20,7 @@ public partial class V1alpha1NotebooksEnvironmentSpecContainerImage
     public string? Tag { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1NotebooksEnvironmentSpecLocationRef
 {
     /// <summary>Allowed value: The `name` field of a `NotebooksLocation` resource.</summary>
@@ -34,6 +36,7 @@ public partial class V1alpha1NotebooksEnvironmentSpecLocationRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1NotebooksEnvironmentSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -49,6 +52,7 @@ public partial class V1alpha1NotebooksEnvironmentSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Use a Compute Engine VM image to start the notebook instance.</summary>
 public partial class V1alpha1NotebooksEnvironmentSpecVmImage
 {
     /// <summary>Use this VM image family to find the image; the newest image in this family will be used.</summary>
@@ -64,6 +68,7 @@ public partial class V1alpha1NotebooksEnvironmentSpecVmImage
     public string Project { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1NotebooksEnvironmentSpec
 {
     /// <summary>Use a container image to start the notebook instance.</summary>
@@ -99,6 +104,7 @@ public partial class V1alpha1NotebooksEnvironmentSpec
     public V1alpha1NotebooksEnvironmentSpecVmImage? VmImage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1NotebooksEnvironmentStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -122,6 +128,7 @@ public partial class V1alpha1NotebooksEnvironmentStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1NotebooksEnvironmentStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -138,6 +145,7 @@ public partial class V1alpha1NotebooksEnvironmentStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1NotebooksEnvironment : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1NotebooksEnvironmentSpec>, IStatus<V1alpha1NotebooksEnvironmentStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

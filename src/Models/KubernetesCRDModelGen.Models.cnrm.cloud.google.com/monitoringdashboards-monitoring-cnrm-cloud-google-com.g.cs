@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.monitoring.cnrm.cloud.google.com;
+/// <summary>Required. A reference to the MonitoringAlertPolicy.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsAlertChartAlertPolicyRef
 {
     /// <summary>The MonitoringAlertPolicy link in the form "projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]", when not managed by Config Connector.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsAle
     public string? Namespace { get; set; }
 }
 
+/// <summary>A chart of alert policy data.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsAlertChart
 {
     /// <summary>Required. A reference to the MonitoringAlertPolicy.</summary>
@@ -30,10 +32,12 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsAle
     public V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsAlertChartAlertPolicyRef AlertPolicyRef { get; set; }
 }
 
+/// <summary>A blank space.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsBlank
 {
 }
 
+/// <summary>A widget that groups the other widgets. All widgets that are within the area spanned by the grouping widget are considered member widgets.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsCollapsibleGroup
 {
     /// <summary>The collapsed state of the widget on first page load.</summary>
@@ -41,6 +45,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsCol
     public bool? Collapsed { get; set; }
 }
 
+/// <summary>The Project that this resource belongs to.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsErrorReportingPanelProjectRefs
 {
     /// <summary>The `projectID` field of a project, when not managed by Config Connector.</summary>
@@ -60,6 +65,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsErr
     public string? Namespace { get; set; }
 }
 
+/// <summary>A widget that displays a list of error groups.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsErrorReportingPanel
 {
     /// <summary>The projects from which to gather errors.</summary>
@@ -75,6 +81,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsErr
     public IList<string>? Versions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsIncidentListMonitoredResources
 {
     /// <summary>Required. Values for all of the labels listed in the associated monitored resource descriptor.</summary>
@@ -86,6 +93,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsInc
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsIncidentListPolicyRefs
 {
     /// <summary>The MonitoringAlertPolicy link in the form "projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]", when not managed by Config Connector.</summary>
@@ -101,6 +109,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsInc
     public string? Namespace { get; set; }
 }
 
+/// <summary>A widget that shows list of incidents.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsIncidentList
 {
     /// <summary>Optional. The monitored resource for which incidents are listed.</summary>
@@ -112,6 +121,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsInc
     public IList<V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsIncidentListPolicyRefs>? PolicyRefs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsLogsPanelResourceNames
 {
     /// <summary>The external name of the referenced resource</summary>
@@ -131,6 +141,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsLog
     public string? Namespace { get; set; }
 }
 
+/// <summary>A widget that shows a stream of logs.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsLogsPanel
 {
     /// <summary>A filter that chooses which log entries to return.  See [Advanced Logs Queries](https://cloud.google.com/logging/docs/view/advanced-queries).</summary>
@@ -142,6 +153,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsLog
     public IList<V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsLogsPanelResourceNames>? ResourceNames { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilterAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -161,6 +173,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsPie
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Ranking based time series filter.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilterPickTimeSeriesFilter
 {
     /// <summary>How to use the ranking to select time series that pass through the filter.</summary>
@@ -176,6 +189,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsPie
     public string? RankingMethod { get; set; }
 }
 
+/// <summary>Apply a second aggregation after `aggregation` is applied.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilterSecondaryAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -195,6 +209,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsPie
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Filter parameters to fetch time series.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilter
 {
     /// <summary>By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.</summary>
@@ -214,6 +229,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsPie
     public V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilterSecondaryAggregation? SecondaryAggregation { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioDenominatorAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -233,6 +249,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsPie
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>The denominator of the ratio.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioDenominator
 {
     /// <summary>By default, the raw time series data is returned.</summary>
@@ -244,6 +261,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsPie
     public string Filter { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioNumeratorAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -263,6 +281,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsPie
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>The numerator of the ratio.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioNumerator
 {
     /// <summary>By default, the raw time series data is returned.</summary>
@@ -274,6 +293,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsPie
     public string Filter { get; set; }
 }
 
+/// <summary>Ranking based time series filter.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioPickTimeSeriesFilter
 {
     /// <summary>How to use the ranking to select time series that pass through the filter.</summary>
@@ -289,6 +309,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsPie
     public string? RankingMethod { get; set; }
 }
 
+/// <summary>Apply a second aggregation after the ratio is computed.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioSecondaryAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -308,6 +329,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsPie
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Parameters to fetch a ratio between two time series filters.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilterRatio
 {
     /// <summary>The denominator of the ratio.</summary>
@@ -327,6 +349,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsPie
     public V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioSecondaryAggregation? SecondaryAggregation { get; set; }
 }
 
+/// <summary>Required. The query for the PieChart. See, `google.monitoring.dashboard.v1.TimeSeriesQuery`.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsPieChartDataSetsTimeSeriesQuery
 {
     /// <summary>Optional. If set, Cloud Monitoring will treat the full query duration as the alignment period so that there will be only 1 output value.</summary>
@@ -354,6 +377,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsPie
     public string? UnitOverride { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsPieChartDataSets
 {
     /// <summary>Optional. The lower bound on data point frequency for this data set.</summary>
@@ -369,6 +393,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsPie
     public V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsPieChartDataSetsTimeSeriesQuery TimeSeriesQuery { get; set; }
 }
 
+/// <summary>A widget that displays timeseries data as a pie chart.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsPieChart
 {
     /// <summary>Required. Indicates the visualization type for the PieChart.</summary>
@@ -384,10 +409,12 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsPie
     public bool? ShowLabels { get; set; }
 }
 
+/// <summary>Will cause the `Scorecard` to show only the value, with no indicator to its value relative to its thresholds.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsScorecardBlankView
 {
 }
 
+/// <summary>Will cause the scorecard to show a gauge chart.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsScorecardGaugeView
 {
     /// <summary>The lower bound for this gauge chart. The value of the chart should always be greater than or equal to this.</summary>
@@ -399,6 +426,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsSco
     public double? UpperBound { get; set; }
 }
 
+/// <summary>Will cause the scorecard to show a spark chart.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsScorecardSparkChartView
 {
     /// <summary>The lower bound on data point frequency in the chart implemented by specifying the minimum alignment period to use in a time series query.</summary>
@@ -410,6 +438,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsSco
     public string SparkChartType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsScorecardThresholds
 {
     /// <summary>The state color for this threshold. Color is not allowed in a XyChart.</summary>
@@ -433,6 +462,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsSco
     public double? Value { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsScorecardTimeSeriesQueryTimeSeriesFilterAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -452,6 +482,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsSco
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Ranking based time series filter.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsScorecardTimeSeriesQueryTimeSeriesFilterPickTimeSeriesFilter
 {
     /// <summary>How to use the ranking to select time series that pass through the filter.</summary>
@@ -467,6 +498,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsSco
     public string? RankingMethod { get; set; }
 }
 
+/// <summary>Apply a second aggregation after `aggregation` is applied.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsScorecardTimeSeriesQueryTimeSeriesFilterSecondaryAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -486,6 +518,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsSco
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Filter parameters to fetch time series.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsScorecardTimeSeriesQueryTimeSeriesFilter
 {
     /// <summary>By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.</summary>
@@ -505,6 +538,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsSco
     public V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsScorecardTimeSeriesQueryTimeSeriesFilterSecondaryAggregation? SecondaryAggregation { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsScorecardTimeSeriesQueryTimeSeriesFilterRatioDenominatorAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -524,6 +558,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsSco
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>The denominator of the ratio.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsScorecardTimeSeriesQueryTimeSeriesFilterRatioDenominator
 {
     /// <summary>By default, the raw time series data is returned.</summary>
@@ -535,6 +570,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsSco
     public string Filter { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsScorecardTimeSeriesQueryTimeSeriesFilterRatioNumeratorAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -554,6 +590,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsSco
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>The numerator of the ratio.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsScorecardTimeSeriesQueryTimeSeriesFilterRatioNumerator
 {
     /// <summary>By default, the raw time series data is returned.</summary>
@@ -565,6 +602,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsSco
     public string Filter { get; set; }
 }
 
+/// <summary>Ranking based time series filter.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsScorecardTimeSeriesQueryTimeSeriesFilterRatioPickTimeSeriesFilter
 {
     /// <summary>How to use the ranking to select time series that pass through the filter.</summary>
@@ -580,6 +618,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsSco
     public string? RankingMethod { get; set; }
 }
 
+/// <summary>Apply a second aggregation after the ratio is computed.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsScorecardTimeSeriesQueryTimeSeriesFilterRatioSecondaryAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -599,6 +638,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsSco
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Parameters to fetch a ratio between two time series filters.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsScorecardTimeSeriesQueryTimeSeriesFilterRatio
 {
     /// <summary>The denominator of the ratio.</summary>
@@ -618,6 +658,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsSco
     public V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsScorecardTimeSeriesQueryTimeSeriesFilterRatioSecondaryAggregation? SecondaryAggregation { get; set; }
 }
 
+/// <summary>Required. Fields for querying time series data from the Stackdriver metrics API.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsScorecardTimeSeriesQuery
 {
     /// <summary>Optional. If set, Cloud Monitoring will treat the full query duration as the alignment period so that there will be only 1 output value.</summary>
@@ -645,6 +686,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsSco
     public string? UnitOverride { get; set; }
 }
 
+/// <summary>A scorecard summarizing time series data.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsScorecard
 {
     /// <summary>Will cause the `Scorecard` to show only the value, with no indicator to its value relative to its thresholds.</summary>
@@ -668,6 +710,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsSco
     public V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsScorecardTimeSeriesQuery TimeSeriesQuery { get; set; }
 }
 
+/// <summary>A widget that defines a section header for easier navigation of the dashboard.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsSectionHeader
 {
     /// <summary>Whether to insert a divider below the section in the table of contents</summary>
@@ -679,10 +722,12 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsSec
     public string? Subtitle { get; set; }
 }
 
+/// <summary>A widget that groups the other widgets by using a dropdown menu.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsSingleViewGroup
 {
 }
 
+/// <summary>How the text is styled</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTextStyle
 {
     /// <summary>The background color as a hex string. "#RRGGBB" or "#RGB"</summary>
@@ -714,6 +759,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTex
     public string? VerticalAlignment { get; set; }
 }
 
+/// <summary>A raw string or markdown displaying textual content.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsText
 {
     /// <summary>The text content to be displayed.</summary>
@@ -729,6 +775,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTex
     public V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTextStyle? Style { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTimeSeriesTableColumnSettings
 {
     /// <summary>Required. The id of the column.</summary>
@@ -740,6 +787,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTim
     public bool Visible { get; set; }
 }
 
+/// <summary>Optional. Table display options for configuring how the table is rendered.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTimeSeriesTableDataSetsTableDisplayOptions
 {
     /// <summary>Optional. This field is unused and has been replaced by TimeSeriesTable.column_settings</summary>
@@ -747,6 +795,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTim
     public IList<string>? ShownColumns { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -766,6 +815,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTim
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Ranking based time series filter.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterPickTimeSeriesFilter
 {
     /// <summary>How to use the ranking to select time series that pass through the filter.</summary>
@@ -781,6 +831,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTim
     public string? RankingMethod { get; set; }
 }
 
+/// <summary>Apply a second aggregation after `aggregation` is applied.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterSecondaryAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -800,6 +851,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTim
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Filter parameters to fetch time series.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilter
 {
     /// <summary>By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.</summary>
@@ -819,6 +871,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTim
     public V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterSecondaryAggregation? SecondaryAggregation { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterRatioDenominatorAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -838,6 +891,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTim
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>The denominator of the ratio.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterRatioDenominator
 {
     /// <summary>By default, the raw time series data is returned.</summary>
@@ -849,6 +903,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTim
     public string Filter { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterRatioNumeratorAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -868,6 +923,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTim
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>The numerator of the ratio.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterRatioNumerator
 {
     /// <summary>By default, the raw time series data is returned.</summary>
@@ -879,6 +935,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTim
     public string Filter { get; set; }
 }
 
+/// <summary>Ranking based time series filter.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterRatioPickTimeSeriesFilter
 {
     /// <summary>How to use the ranking to select time series that pass through the filter.</summary>
@@ -894,6 +951,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTim
     public string? RankingMethod { get; set; }
 }
 
+/// <summary>Apply a second aggregation after the ratio is computed.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterRatioSecondaryAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -913,6 +971,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTim
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Parameters to fetch a ratio between two time series filters.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterRatio
 {
     /// <summary>The denominator of the ratio.</summary>
@@ -932,6 +991,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTim
     public V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterRatioSecondaryAggregation? SecondaryAggregation { get; set; }
 }
 
+/// <summary>Required. Fields for querying time series data from the Stackdriver metrics API.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTimeSeriesTableDataSetsTimeSeriesQuery
 {
     /// <summary>Optional. If set, Cloud Monitoring will treat the full query duration as the alignment period so that there will be only 1 output value.</summary>
@@ -959,6 +1019,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTim
     public string? UnitOverride { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTimeSeriesTableDataSets
 {
     /// <summary>Optional. The lower bound on data point frequency for this data set.</summary>
@@ -978,6 +1039,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTim
     public V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTimeSeriesTableDataSetsTimeSeriesQuery? TimeSeriesQuery { get; set; }
 }
 
+/// <summary>A widget that displays time series data in a tabular format.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTimeSeriesTable
 {
     /// <summary>Optional. The list of the persistent column settings for the table.</summary>
@@ -993,6 +1055,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsTim
     public string? MetricVisualization { get; set; }
 }
 
+/// <summary>Display options for the chart.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyChartChartOptions
 {
     /// <summary>The chart mode.</summary>
@@ -1000,6 +1063,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyC
     public string? Mode { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilterAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -1019,6 +1083,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyC
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Ranking based time series filter.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilterPickTimeSeriesFilter
 {
     /// <summary>How to use the ranking to select time series that pass through the filter.</summary>
@@ -1034,6 +1099,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyC
     public string? RankingMethod { get; set; }
 }
 
+/// <summary>Apply a second aggregation after `aggregation` is applied.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilterSecondaryAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -1053,6 +1119,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyC
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Filter parameters to fetch time series.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilter
 {
     /// <summary>By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.</summary>
@@ -1072,6 +1139,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyC
     public V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilterSecondaryAggregation? SecondaryAggregation { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioDenominatorAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -1091,6 +1159,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyC
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>The denominator of the ratio.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioDenominator
 {
     /// <summary>By default, the raw time series data is returned.</summary>
@@ -1102,6 +1171,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyC
     public string Filter { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioNumeratorAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -1121,6 +1191,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyC
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>The numerator of the ratio.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioNumerator
 {
     /// <summary>By default, the raw time series data is returned.</summary>
@@ -1132,6 +1203,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyC
     public string Filter { get; set; }
 }
 
+/// <summary>Ranking based time series filter.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioPickTimeSeriesFilter
 {
     /// <summary>How to use the ranking to select time series that pass through the filter.</summary>
@@ -1147,6 +1219,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyC
     public string? RankingMethod { get; set; }
 }
 
+/// <summary>Apply a second aggregation after the ratio is computed.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioSecondaryAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -1166,6 +1239,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyC
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Parameters to fetch a ratio between two time series filters.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilterRatio
 {
     /// <summary>The denominator of the ratio.</summary>
@@ -1185,6 +1259,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyC
     public V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioSecondaryAggregation? SecondaryAggregation { get; set; }
 }
 
+/// <summary>Fields for querying time series data from the Stackdriver metrics API.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyChartDataSetsTimeSeriesQuery
 {
     /// <summary>Optional. If set, Cloud Monitoring will treat the full query duration as the alignment period so that there will be only 1 output value.</summary>
@@ -1212,6 +1287,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyC
     public string? UnitOverride { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyChartDataSets
 {
     /// <summary>A template string for naming `TimeSeries` in the resulting data set.</summary>
@@ -1235,6 +1311,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyC
     public V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyChartDataSetsTimeSeriesQuery TimeSeriesQuery { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyChartThresholds
 {
     /// <summary>The state color for this threshold. Color is not allowed in a XyChart.</summary>
@@ -1258,6 +1335,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyC
     public double? Value { get; set; }
 }
 
+/// <summary>The properties applied to the x-axis.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyChartXAxis
 {
     /// <summary>The label of the axis.</summary>
@@ -1269,6 +1347,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyC
     public string? Scale { get; set; }
 }
 
+/// <summary>The properties applied to the y2-axis.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyChartY2Axis
 {
     /// <summary>The label of the axis.</summary>
@@ -1280,6 +1359,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyC
     public string? Scale { get; set; }
 }
 
+/// <summary>The properties applied to the y-axis.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyChartYAxis
 {
     /// <summary>The label of the axis.</summary>
@@ -1291,6 +1371,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyC
     public string? Scale { get; set; }
 }
 
+/// <summary>A chart of time series data.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyChart
 {
     /// <summary>Display options for the chart.</summary>
@@ -1322,6 +1403,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyC
     public V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyChartYAxis? YAxis { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgets
 {
     /// <summary>A chart of alert policy data.</summary>
@@ -1385,6 +1467,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgets
     public V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsXyChart? XyChart { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumns
 {
     /// <summary>The relative weight of this column. The column weight is used to adjust the width of columns on the screen (relative to peers).</summary>
@@ -1396,6 +1479,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumns
     public IList<V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgets>? Widgets { get; set; }
 }
 
+/// <summary>The content is divided into equally spaced columns and the widgets are arranged vertically.</summary>
 public partial class V1beta1MonitoringDashboardSpecColumnLayout
 {
     /// <summary>The columns of content to display.</summary>
@@ -1403,6 +1487,7 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayout
     public IList<V1beta1MonitoringDashboardSpecColumnLayoutColumns>? Columns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecDashboardFilters
 {
     /// <summary>The specified filter type</summary>
@@ -1422,6 +1507,7 @@ public partial class V1beta1MonitoringDashboardSpecDashboardFilters
     public string? TemplateVariable { get; set; }
 }
 
+/// <summary>Required. A reference to the MonitoringAlertPolicy.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsAlertChartAlertPolicyRef
 {
     /// <summary>The MonitoringAlertPolicy link in the form "projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]", when not managed by Config Connector.</summary>
@@ -1437,6 +1523,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsAlertChartAl
     public string? Namespace { get; set; }
 }
 
+/// <summary>A chart of alert policy data.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsAlertChart
 {
     /// <summary>Required. A reference to the MonitoringAlertPolicy.</summary>
@@ -1444,10 +1531,12 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsAlertChart
     public V1beta1MonitoringDashboardSpecGridLayoutWidgetsAlertChartAlertPolicyRef AlertPolicyRef { get; set; }
 }
 
+/// <summary>A blank space.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsBlank
 {
 }
 
+/// <summary>A widget that groups the other widgets. All widgets that are within the area spanned by the grouping widget are considered member widgets.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsCollapsibleGroup
 {
     /// <summary>The collapsed state of the widget on first page load.</summary>
@@ -1455,6 +1544,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsCollapsibleG
     public bool? Collapsed { get; set; }
 }
 
+/// <summary>The Project that this resource belongs to.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsErrorReportingPanelProjectRefs
 {
     /// <summary>The `projectID` field of a project, when not managed by Config Connector.</summary>
@@ -1474,6 +1564,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsErrorReporti
     public string? Namespace { get; set; }
 }
 
+/// <summary>A widget that displays a list of error groups.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsErrorReportingPanel
 {
     /// <summary>The projects from which to gather errors.</summary>
@@ -1489,6 +1580,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsErrorReporti
     public IList<string>? Versions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsIncidentListMonitoredResources
 {
     /// <summary>Required. Values for all of the labels listed in the associated monitored resource descriptor.</summary>
@@ -1500,6 +1592,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsIncidentList
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsIncidentListPolicyRefs
 {
     /// <summary>The MonitoringAlertPolicy link in the form "projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]", when not managed by Config Connector.</summary>
@@ -1515,6 +1608,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsIncidentList
     public string? Namespace { get; set; }
 }
 
+/// <summary>A widget that shows list of incidents.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsIncidentList
 {
     /// <summary>Optional. The monitored resource for which incidents are listed.</summary>
@@ -1526,6 +1620,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsIncidentList
     public IList<V1beta1MonitoringDashboardSpecGridLayoutWidgetsIncidentListPolicyRefs>? PolicyRefs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsLogsPanelResourceNames
 {
     /// <summary>The external name of the referenced resource</summary>
@@ -1545,6 +1640,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsLogsPanelRes
     public string? Namespace { get; set; }
 }
 
+/// <summary>A widget that shows a stream of logs.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsLogsPanel
 {
     /// <summary>A filter that chooses which log entries to return.  See [Advanced Logs Queries](https://cloud.google.com/logging/docs/view/advanced-queries).</summary>
@@ -1556,6 +1652,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsLogsPanel
     public IList<V1beta1MonitoringDashboardSpecGridLayoutWidgetsLogsPanelResourceNames>? ResourceNames { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilterAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -1575,6 +1672,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsPieChartData
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Ranking based time series filter.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilterPickTimeSeriesFilter
 {
     /// <summary>How to use the ranking to select time series that pass through the filter.</summary>
@@ -1590,6 +1688,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsPieChartData
     public string? RankingMethod { get; set; }
 }
 
+/// <summary>Apply a second aggregation after `aggregation` is applied.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilterSecondaryAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -1609,6 +1708,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsPieChartData
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Filter parameters to fetch time series.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilter
 {
     /// <summary>By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.</summary>
@@ -1628,6 +1728,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsPieChartData
     public V1beta1MonitoringDashboardSpecGridLayoutWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilterSecondaryAggregation? SecondaryAggregation { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioDenominatorAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -1647,6 +1748,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsPieChartData
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>The denominator of the ratio.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioDenominator
 {
     /// <summary>By default, the raw time series data is returned.</summary>
@@ -1658,6 +1760,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsPieChartData
     public string Filter { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioNumeratorAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -1677,6 +1780,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsPieChartData
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>The numerator of the ratio.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioNumerator
 {
     /// <summary>By default, the raw time series data is returned.</summary>
@@ -1688,6 +1792,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsPieChartData
     public string Filter { get; set; }
 }
 
+/// <summary>Ranking based time series filter.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioPickTimeSeriesFilter
 {
     /// <summary>How to use the ranking to select time series that pass through the filter.</summary>
@@ -1703,6 +1808,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsPieChartData
     public string? RankingMethod { get; set; }
 }
 
+/// <summary>Apply a second aggregation after the ratio is computed.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioSecondaryAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -1722,6 +1828,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsPieChartData
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Parameters to fetch a ratio between two time series filters.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilterRatio
 {
     /// <summary>The denominator of the ratio.</summary>
@@ -1741,6 +1848,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsPieChartData
     public V1beta1MonitoringDashboardSpecGridLayoutWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioSecondaryAggregation? SecondaryAggregation { get; set; }
 }
 
+/// <summary>Required. The query for the PieChart. See, `google.monitoring.dashboard.v1.TimeSeriesQuery`.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsPieChartDataSetsTimeSeriesQuery
 {
     /// <summary>Optional. If set, Cloud Monitoring will treat the full query duration as the alignment period so that there will be only 1 output value.</summary>
@@ -1768,6 +1876,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsPieChartData
     public string? UnitOverride { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsPieChartDataSets
 {
     /// <summary>Optional. The lower bound on data point frequency for this data set.</summary>
@@ -1783,6 +1892,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsPieChartData
     public V1beta1MonitoringDashboardSpecGridLayoutWidgetsPieChartDataSetsTimeSeriesQuery TimeSeriesQuery { get; set; }
 }
 
+/// <summary>A widget that displays timeseries data as a pie chart.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsPieChart
 {
     /// <summary>Required. Indicates the visualization type for the PieChart.</summary>
@@ -1798,10 +1908,12 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsPieChart
     public bool? ShowLabels { get; set; }
 }
 
+/// <summary>Will cause the `Scorecard` to show only the value, with no indicator to its value relative to its thresholds.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsScorecardBlankView
 {
 }
 
+/// <summary>Will cause the scorecard to show a gauge chart.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsScorecardGaugeView
 {
     /// <summary>The lower bound for this gauge chart. The value of the chart should always be greater than or equal to this.</summary>
@@ -1813,6 +1925,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsScorecardGau
     public double? UpperBound { get; set; }
 }
 
+/// <summary>Will cause the scorecard to show a spark chart.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsScorecardSparkChartView
 {
     /// <summary>The lower bound on data point frequency in the chart implemented by specifying the minimum alignment period to use in a time series query.</summary>
@@ -1824,6 +1937,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsScorecardSpa
     public string SparkChartType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsScorecardThresholds
 {
     /// <summary>The state color for this threshold. Color is not allowed in a XyChart.</summary>
@@ -1847,6 +1961,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsScorecardThr
     public double? Value { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsScorecardTimeSeriesQueryTimeSeriesFilterAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -1866,6 +1981,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsScorecardTim
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Ranking based time series filter.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsScorecardTimeSeriesQueryTimeSeriesFilterPickTimeSeriesFilter
 {
     /// <summary>How to use the ranking to select time series that pass through the filter.</summary>
@@ -1881,6 +1997,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsScorecardTim
     public string? RankingMethod { get; set; }
 }
 
+/// <summary>Apply a second aggregation after `aggregation` is applied.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsScorecardTimeSeriesQueryTimeSeriesFilterSecondaryAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -1900,6 +2017,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsScorecardTim
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Filter parameters to fetch time series.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsScorecardTimeSeriesQueryTimeSeriesFilter
 {
     /// <summary>By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.</summary>
@@ -1919,6 +2037,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsScorecardTim
     public V1beta1MonitoringDashboardSpecGridLayoutWidgetsScorecardTimeSeriesQueryTimeSeriesFilterSecondaryAggregation? SecondaryAggregation { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsScorecardTimeSeriesQueryTimeSeriesFilterRatioDenominatorAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -1938,6 +2057,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsScorecardTim
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>The denominator of the ratio.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsScorecardTimeSeriesQueryTimeSeriesFilterRatioDenominator
 {
     /// <summary>By default, the raw time series data is returned.</summary>
@@ -1949,6 +2069,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsScorecardTim
     public string Filter { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsScorecardTimeSeriesQueryTimeSeriesFilterRatioNumeratorAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -1968,6 +2089,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsScorecardTim
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>The numerator of the ratio.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsScorecardTimeSeriesQueryTimeSeriesFilterRatioNumerator
 {
     /// <summary>By default, the raw time series data is returned.</summary>
@@ -1979,6 +2101,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsScorecardTim
     public string Filter { get; set; }
 }
 
+/// <summary>Ranking based time series filter.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsScorecardTimeSeriesQueryTimeSeriesFilterRatioPickTimeSeriesFilter
 {
     /// <summary>How to use the ranking to select time series that pass through the filter.</summary>
@@ -1994,6 +2117,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsScorecardTim
     public string? RankingMethod { get; set; }
 }
 
+/// <summary>Apply a second aggregation after the ratio is computed.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsScorecardTimeSeriesQueryTimeSeriesFilterRatioSecondaryAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -2013,6 +2137,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsScorecardTim
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Parameters to fetch a ratio between two time series filters.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsScorecardTimeSeriesQueryTimeSeriesFilterRatio
 {
     /// <summary>The denominator of the ratio.</summary>
@@ -2032,6 +2157,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsScorecardTim
     public V1beta1MonitoringDashboardSpecGridLayoutWidgetsScorecardTimeSeriesQueryTimeSeriesFilterRatioSecondaryAggregation? SecondaryAggregation { get; set; }
 }
 
+/// <summary>Required. Fields for querying time series data from the Stackdriver metrics API.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsScorecardTimeSeriesQuery
 {
     /// <summary>Optional. If set, Cloud Monitoring will treat the full query duration as the alignment period so that there will be only 1 output value.</summary>
@@ -2059,6 +2185,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsScorecardTim
     public string? UnitOverride { get; set; }
 }
 
+/// <summary>A scorecard summarizing time series data.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsScorecard
 {
     /// <summary>Will cause the `Scorecard` to show only the value, with no indicator to its value relative to its thresholds.</summary>
@@ -2082,6 +2209,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsScorecard
     public V1beta1MonitoringDashboardSpecGridLayoutWidgetsScorecardTimeSeriesQuery TimeSeriesQuery { get; set; }
 }
 
+/// <summary>A widget that defines a section header for easier navigation of the dashboard.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsSectionHeader
 {
     /// <summary>Whether to insert a divider below the section in the table of contents</summary>
@@ -2093,10 +2221,12 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsSectionHeade
     public string? Subtitle { get; set; }
 }
 
+/// <summary>A widget that groups the other widgets by using a dropdown menu.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsSingleViewGroup
 {
 }
 
+/// <summary>How the text is styled</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsTextStyle
 {
     /// <summary>The background color as a hex string. "#RRGGBB" or "#RGB"</summary>
@@ -2128,6 +2258,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsTextStyle
     public string? VerticalAlignment { get; set; }
 }
 
+/// <summary>A raw string or markdown displaying textual content.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsText
 {
     /// <summary>The text content to be displayed.</summary>
@@ -2143,6 +2274,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsText
     public V1beta1MonitoringDashboardSpecGridLayoutWidgetsTextStyle? Style { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsTimeSeriesTableColumnSettings
 {
     /// <summary>Required. The id of the column.</summary>
@@ -2154,6 +2286,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsTimeSeriesTa
     public bool Visible { get; set; }
 }
 
+/// <summary>Optional. Table display options for configuring how the table is rendered.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsTimeSeriesTableDataSetsTableDisplayOptions
 {
     /// <summary>Optional. This field is unused and has been replaced by TimeSeriesTable.column_settings</summary>
@@ -2161,6 +2294,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsTimeSeriesTa
     public IList<string>? ShownColumns { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -2180,6 +2314,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsTimeSeriesTa
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Ranking based time series filter.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterPickTimeSeriesFilter
 {
     /// <summary>How to use the ranking to select time series that pass through the filter.</summary>
@@ -2195,6 +2330,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsTimeSeriesTa
     public string? RankingMethod { get; set; }
 }
 
+/// <summary>Apply a second aggregation after `aggregation` is applied.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterSecondaryAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -2214,6 +2350,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsTimeSeriesTa
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Filter parameters to fetch time series.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilter
 {
     /// <summary>By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.</summary>
@@ -2233,6 +2370,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsTimeSeriesTa
     public V1beta1MonitoringDashboardSpecGridLayoutWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterSecondaryAggregation? SecondaryAggregation { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterRatioDenominatorAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -2252,6 +2390,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsTimeSeriesTa
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>The denominator of the ratio.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterRatioDenominator
 {
     /// <summary>By default, the raw time series data is returned.</summary>
@@ -2263,6 +2402,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsTimeSeriesTa
     public string Filter { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterRatioNumeratorAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -2282,6 +2422,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsTimeSeriesTa
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>The numerator of the ratio.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterRatioNumerator
 {
     /// <summary>By default, the raw time series data is returned.</summary>
@@ -2293,6 +2434,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsTimeSeriesTa
     public string Filter { get; set; }
 }
 
+/// <summary>Ranking based time series filter.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterRatioPickTimeSeriesFilter
 {
     /// <summary>How to use the ranking to select time series that pass through the filter.</summary>
@@ -2308,6 +2450,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsTimeSeriesTa
     public string? RankingMethod { get; set; }
 }
 
+/// <summary>Apply a second aggregation after the ratio is computed.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterRatioSecondaryAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -2327,6 +2470,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsTimeSeriesTa
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Parameters to fetch a ratio between two time series filters.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterRatio
 {
     /// <summary>The denominator of the ratio.</summary>
@@ -2346,6 +2490,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsTimeSeriesTa
     public V1beta1MonitoringDashboardSpecGridLayoutWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterRatioSecondaryAggregation? SecondaryAggregation { get; set; }
 }
 
+/// <summary>Required. Fields for querying time series data from the Stackdriver metrics API.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsTimeSeriesTableDataSetsTimeSeriesQuery
 {
     /// <summary>Optional. If set, Cloud Monitoring will treat the full query duration as the alignment period so that there will be only 1 output value.</summary>
@@ -2373,6 +2518,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsTimeSeriesTa
     public string? UnitOverride { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsTimeSeriesTableDataSets
 {
     /// <summary>Optional. The lower bound on data point frequency for this data set.</summary>
@@ -2392,6 +2538,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsTimeSeriesTa
     public V1beta1MonitoringDashboardSpecGridLayoutWidgetsTimeSeriesTableDataSetsTimeSeriesQuery? TimeSeriesQuery { get; set; }
 }
 
+/// <summary>A widget that displays time series data in a tabular format.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsTimeSeriesTable
 {
     /// <summary>Optional. The list of the persistent column settings for the table.</summary>
@@ -2407,6 +2554,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsTimeSeriesTa
     public string? MetricVisualization { get; set; }
 }
 
+/// <summary>Display options for the chart.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartChartOptions
 {
     /// <summary>The chart mode.</summary>
@@ -2414,6 +2562,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartChart
     public string? Mode { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilterAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -2433,6 +2582,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartDataS
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Ranking based time series filter.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilterPickTimeSeriesFilter
 {
     /// <summary>How to use the ranking to select time series that pass through the filter.</summary>
@@ -2448,6 +2598,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartDataS
     public string? RankingMethod { get; set; }
 }
 
+/// <summary>Apply a second aggregation after `aggregation` is applied.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilterSecondaryAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -2467,6 +2618,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartDataS
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Filter parameters to fetch time series.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilter
 {
     /// <summary>By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.</summary>
@@ -2486,6 +2638,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartDataS
     public V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilterSecondaryAggregation? SecondaryAggregation { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioDenominatorAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -2505,6 +2658,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartDataS
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>The denominator of the ratio.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioDenominator
 {
     /// <summary>By default, the raw time series data is returned.</summary>
@@ -2516,6 +2670,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartDataS
     public string Filter { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioNumeratorAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -2535,6 +2690,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartDataS
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>The numerator of the ratio.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioNumerator
 {
     /// <summary>By default, the raw time series data is returned.</summary>
@@ -2546,6 +2702,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartDataS
     public string Filter { get; set; }
 }
 
+/// <summary>Ranking based time series filter.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioPickTimeSeriesFilter
 {
     /// <summary>How to use the ranking to select time series that pass through the filter.</summary>
@@ -2561,6 +2718,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartDataS
     public string? RankingMethod { get; set; }
 }
 
+/// <summary>Apply a second aggregation after the ratio is computed.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioSecondaryAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -2580,6 +2738,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartDataS
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Parameters to fetch a ratio between two time series filters.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilterRatio
 {
     /// <summary>The denominator of the ratio.</summary>
@@ -2599,6 +2758,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartDataS
     public V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioSecondaryAggregation? SecondaryAggregation { get; set; }
 }
 
+/// <summary>Fields for querying time series data from the Stackdriver metrics API.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartDataSetsTimeSeriesQuery
 {
     /// <summary>Optional. If set, Cloud Monitoring will treat the full query duration as the alignment period so that there will be only 1 output value.</summary>
@@ -2626,6 +2786,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartDataS
     public string? UnitOverride { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartDataSets
 {
     /// <summary>A template string for naming `TimeSeries` in the resulting data set.</summary>
@@ -2649,6 +2810,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartDataS
     public V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartDataSetsTimeSeriesQuery TimeSeriesQuery { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartThresholds
 {
     /// <summary>The state color for this threshold. Color is not allowed in a XyChart.</summary>
@@ -2672,6 +2834,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartThres
     public double? Value { get; set; }
 }
 
+/// <summary>The properties applied to the x-axis.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartXAxis
 {
     /// <summary>The label of the axis.</summary>
@@ -2683,6 +2846,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartXAxis
     public string? Scale { get; set; }
 }
 
+/// <summary>The properties applied to the y2-axis.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartY2Axis
 {
     /// <summary>The label of the axis.</summary>
@@ -2694,6 +2858,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartY2Axi
     public string? Scale { get; set; }
 }
 
+/// <summary>The properties applied to the y-axis.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartYAxis
 {
     /// <summary>The label of the axis.</summary>
@@ -2705,6 +2870,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartYAxis
     public string? Scale { get; set; }
 }
 
+/// <summary>A chart of time series data.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChart
 {
     /// <summary>Display options for the chart.</summary>
@@ -2736,6 +2902,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChart
     public V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChartYAxis? YAxis { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgets
 {
     /// <summary>A chart of alert policy data.</summary>
@@ -2799,6 +2966,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgets
     public V1beta1MonitoringDashboardSpecGridLayoutWidgetsXyChart? XyChart { get; set; }
 }
 
+/// <summary>Content is arranged with a basic layout that re-flows a simple list of informational elements like widgets or tiles.</summary>
 public partial class V1beta1MonitoringDashboardSpecGridLayout
 {
     /// <summary>The number of columns into which the view's width is divided. If omitted or set to zero, a system default will be used while rendering.</summary>
@@ -2810,6 +2978,7 @@ public partial class V1beta1MonitoringDashboardSpecGridLayout
     public IList<V1beta1MonitoringDashboardSpecGridLayoutWidgets>? Widgets { get; set; }
 }
 
+/// <summary>Required. A reference to the MonitoringAlertPolicy.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetAlertChartAlertPolicyRef
 {
     /// <summary>The MonitoringAlertPolicy link in the form "projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]", when not managed by Config Connector.</summary>
@@ -2825,6 +2994,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetAlertC
     public string? Namespace { get; set; }
 }
 
+/// <summary>A chart of alert policy data.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetAlertChart
 {
     /// <summary>Required. A reference to the MonitoringAlertPolicy.</summary>
@@ -2832,10 +3002,12 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetAlertC
     public V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetAlertChartAlertPolicyRef AlertPolicyRef { get; set; }
 }
 
+/// <summary>A blank space.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetBlank
 {
 }
 
+/// <summary>A widget that groups the other widgets. All widgets that are within the area spanned by the grouping widget are considered member widgets.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetCollapsibleGroup
 {
     /// <summary>The collapsed state of the widget on first page load.</summary>
@@ -2843,6 +3015,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetCollap
     public bool? Collapsed { get; set; }
 }
 
+/// <summary>The Project that this resource belongs to.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetErrorReportingPanelProjectRefs
 {
     /// <summary>The `projectID` field of a project, when not managed by Config Connector.</summary>
@@ -2862,6 +3035,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetErrorR
     public string? Namespace { get; set; }
 }
 
+/// <summary>A widget that displays a list of error groups.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetErrorReportingPanel
 {
     /// <summary>The projects from which to gather errors.</summary>
@@ -2877,6 +3051,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetErrorR
     public IList<string>? Versions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetIncidentListMonitoredResources
 {
     /// <summary>Required. Values for all of the labels listed in the associated monitored resource descriptor.</summary>
@@ -2888,6 +3063,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetIncide
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetIncidentListPolicyRefs
 {
     /// <summary>The MonitoringAlertPolicy link in the form "projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]", when not managed by Config Connector.</summary>
@@ -2903,6 +3079,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetIncide
     public string? Namespace { get; set; }
 }
 
+/// <summary>A widget that shows list of incidents.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetIncidentList
 {
     /// <summary>Optional. The monitored resource for which incidents are listed.</summary>
@@ -2914,6 +3091,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetIncide
     public IList<V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetIncidentListPolicyRefs>? PolicyRefs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetLogsPanelResourceNames
 {
     /// <summary>The external name of the referenced resource</summary>
@@ -2933,6 +3111,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetLogsPa
     public string? Namespace { get; set; }
 }
 
+/// <summary>A widget that shows a stream of logs.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetLogsPanel
 {
     /// <summary>A filter that chooses which log entries to return.  See [Advanced Logs Queries](https://cloud.google.com/logging/docs/view/advanced-queries).</summary>
@@ -2944,6 +3123,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetLogsPa
     public IList<V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetLogsPanelResourceNames>? ResourceNames { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetPieChartDataSetsTimeSeriesQueryTimeSeriesFilterAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -2963,6 +3143,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetPieCha
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Ranking based time series filter.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetPieChartDataSetsTimeSeriesQueryTimeSeriesFilterPickTimeSeriesFilter
 {
     /// <summary>How to use the ranking to select time series that pass through the filter.</summary>
@@ -2978,6 +3159,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetPieCha
     public string? RankingMethod { get; set; }
 }
 
+/// <summary>Apply a second aggregation after `aggregation` is applied.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetPieChartDataSetsTimeSeriesQueryTimeSeriesFilterSecondaryAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -2997,6 +3179,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetPieCha
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Filter parameters to fetch time series.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetPieChartDataSetsTimeSeriesQueryTimeSeriesFilter
 {
     /// <summary>By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.</summary>
@@ -3016,6 +3199,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetPieCha
     public V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetPieChartDataSetsTimeSeriesQueryTimeSeriesFilterSecondaryAggregation? SecondaryAggregation { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetPieChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioDenominatorAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -3035,6 +3219,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetPieCha
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>The denominator of the ratio.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetPieChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioDenominator
 {
     /// <summary>By default, the raw time series data is returned.</summary>
@@ -3046,6 +3231,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetPieCha
     public string Filter { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetPieChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioNumeratorAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -3065,6 +3251,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetPieCha
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>The numerator of the ratio.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetPieChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioNumerator
 {
     /// <summary>By default, the raw time series data is returned.</summary>
@@ -3076,6 +3263,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetPieCha
     public string Filter { get; set; }
 }
 
+/// <summary>Ranking based time series filter.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetPieChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioPickTimeSeriesFilter
 {
     /// <summary>How to use the ranking to select time series that pass through the filter.</summary>
@@ -3091,6 +3279,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetPieCha
     public string? RankingMethod { get; set; }
 }
 
+/// <summary>Apply a second aggregation after the ratio is computed.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetPieChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioSecondaryAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -3110,6 +3299,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetPieCha
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Parameters to fetch a ratio between two time series filters.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetPieChartDataSetsTimeSeriesQueryTimeSeriesFilterRatio
 {
     /// <summary>The denominator of the ratio.</summary>
@@ -3129,6 +3319,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetPieCha
     public V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetPieChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioSecondaryAggregation? SecondaryAggregation { get; set; }
 }
 
+/// <summary>Required. The query for the PieChart. See, `google.monitoring.dashboard.v1.TimeSeriesQuery`.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetPieChartDataSetsTimeSeriesQuery
 {
     /// <summary>Optional. If set, Cloud Monitoring will treat the full query duration as the alignment period so that there will be only 1 output value.</summary>
@@ -3156,6 +3347,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetPieCha
     public string? UnitOverride { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetPieChartDataSets
 {
     /// <summary>Optional. The lower bound on data point frequency for this data set.</summary>
@@ -3171,6 +3363,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetPieCha
     public V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetPieChartDataSetsTimeSeriesQuery TimeSeriesQuery { get; set; }
 }
 
+/// <summary>A widget that displays timeseries data as a pie chart.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetPieChart
 {
     /// <summary>Required. Indicates the visualization type for the PieChart.</summary>
@@ -3186,10 +3379,12 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetPieCha
     public bool? ShowLabels { get; set; }
 }
 
+/// <summary>Will cause the `Scorecard` to show only the value, with no indicator to its value relative to its thresholds.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetScorecardBlankView
 {
 }
 
+/// <summary>Will cause the scorecard to show a gauge chart.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetScorecardGaugeView
 {
     /// <summary>The lower bound for this gauge chart. The value of the chart should always be greater than or equal to this.</summary>
@@ -3201,6 +3396,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetScorec
     public double? UpperBound { get; set; }
 }
 
+/// <summary>Will cause the scorecard to show a spark chart.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetScorecardSparkChartView
 {
     /// <summary>The lower bound on data point frequency in the chart implemented by specifying the minimum alignment period to use in a time series query.</summary>
@@ -3212,6 +3408,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetScorec
     public string SparkChartType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetScorecardThresholds
 {
     /// <summary>The state color for this threshold. Color is not allowed in a XyChart.</summary>
@@ -3235,6 +3432,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetScorec
     public double? Value { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetScorecardTimeSeriesQueryTimeSeriesFilterAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -3254,6 +3452,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetScorec
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Ranking based time series filter.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetScorecardTimeSeriesQueryTimeSeriesFilterPickTimeSeriesFilter
 {
     /// <summary>How to use the ranking to select time series that pass through the filter.</summary>
@@ -3269,6 +3468,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetScorec
     public string? RankingMethod { get; set; }
 }
 
+/// <summary>Apply a second aggregation after `aggregation` is applied.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetScorecardTimeSeriesQueryTimeSeriesFilterSecondaryAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -3288,6 +3488,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetScorec
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Filter parameters to fetch time series.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetScorecardTimeSeriesQueryTimeSeriesFilter
 {
     /// <summary>By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.</summary>
@@ -3307,6 +3508,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetScorec
     public V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetScorecardTimeSeriesQueryTimeSeriesFilterSecondaryAggregation? SecondaryAggregation { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetScorecardTimeSeriesQueryTimeSeriesFilterRatioDenominatorAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -3326,6 +3528,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetScorec
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>The denominator of the ratio.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetScorecardTimeSeriesQueryTimeSeriesFilterRatioDenominator
 {
     /// <summary>By default, the raw time series data is returned.</summary>
@@ -3337,6 +3540,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetScorec
     public string Filter { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetScorecardTimeSeriesQueryTimeSeriesFilterRatioNumeratorAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -3356,6 +3560,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetScorec
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>The numerator of the ratio.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetScorecardTimeSeriesQueryTimeSeriesFilterRatioNumerator
 {
     /// <summary>By default, the raw time series data is returned.</summary>
@@ -3367,6 +3572,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetScorec
     public string Filter { get; set; }
 }
 
+/// <summary>Ranking based time series filter.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetScorecardTimeSeriesQueryTimeSeriesFilterRatioPickTimeSeriesFilter
 {
     /// <summary>How to use the ranking to select time series that pass through the filter.</summary>
@@ -3382,6 +3588,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetScorec
     public string? RankingMethod { get; set; }
 }
 
+/// <summary>Apply a second aggregation after the ratio is computed.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetScorecardTimeSeriesQueryTimeSeriesFilterRatioSecondaryAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -3401,6 +3608,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetScorec
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Parameters to fetch a ratio between two time series filters.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetScorecardTimeSeriesQueryTimeSeriesFilterRatio
 {
     /// <summary>The denominator of the ratio.</summary>
@@ -3420,6 +3628,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetScorec
     public V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetScorecardTimeSeriesQueryTimeSeriesFilterRatioSecondaryAggregation? SecondaryAggregation { get; set; }
 }
 
+/// <summary>Required. Fields for querying time series data from the Stackdriver metrics API.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetScorecardTimeSeriesQuery
 {
     /// <summary>Optional. If set, Cloud Monitoring will treat the full query duration as the alignment period so that there will be only 1 output value.</summary>
@@ -3447,6 +3656,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetScorec
     public string? UnitOverride { get; set; }
 }
 
+/// <summary>A scorecard summarizing time series data.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetScorecard
 {
     /// <summary>Will cause the `Scorecard` to show only the value, with no indicator to its value relative to its thresholds.</summary>
@@ -3470,6 +3680,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetScorec
     public V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetScorecardTimeSeriesQuery TimeSeriesQuery { get; set; }
 }
 
+/// <summary>A widget that defines a section header for easier navigation of the dashboard.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetSectionHeader
 {
     /// <summary>Whether to insert a divider below the section in the table of contents</summary>
@@ -3481,10 +3692,12 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetSectio
     public string? Subtitle { get; set; }
 }
 
+/// <summary>A widget that groups the other widgets by using a dropdown menu.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetSingleViewGroup
 {
 }
 
+/// <summary>How the text is styled</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetTextStyle
 {
     /// <summary>The background color as a hex string. "#RRGGBB" or "#RGB"</summary>
@@ -3516,6 +3729,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetTextSt
     public string? VerticalAlignment { get; set; }
 }
 
+/// <summary>A raw string or markdown displaying textual content.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetText
 {
     /// <summary>The text content to be displayed.</summary>
@@ -3531,6 +3745,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetText
     public V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetTextStyle? Style { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetTimeSeriesTableColumnSettings
 {
     /// <summary>Required. The id of the column.</summary>
@@ -3542,6 +3757,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetTimeSe
     public bool Visible { get; set; }
 }
 
+/// <summary>Optional. Table display options for configuring how the table is rendered.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetTimeSeriesTableDataSetsTableDisplayOptions
 {
     /// <summary>Optional. This field is unused and has been replaced by TimeSeriesTable.column_settings</summary>
@@ -3549,6 +3765,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetTimeSe
     public IList<string>? ShownColumns { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -3568,6 +3785,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetTimeSe
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Ranking based time series filter.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterPickTimeSeriesFilter
 {
     /// <summary>How to use the ranking to select time series that pass through the filter.</summary>
@@ -3583,6 +3801,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetTimeSe
     public string? RankingMethod { get; set; }
 }
 
+/// <summary>Apply a second aggregation after `aggregation` is applied.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterSecondaryAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -3602,6 +3821,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetTimeSe
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Filter parameters to fetch time series.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilter
 {
     /// <summary>By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.</summary>
@@ -3621,6 +3841,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetTimeSe
     public V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterSecondaryAggregation? SecondaryAggregation { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterRatioDenominatorAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -3640,6 +3861,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetTimeSe
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>The denominator of the ratio.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterRatioDenominator
 {
     /// <summary>By default, the raw time series data is returned.</summary>
@@ -3651,6 +3873,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetTimeSe
     public string Filter { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterRatioNumeratorAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -3670,6 +3893,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetTimeSe
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>The numerator of the ratio.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterRatioNumerator
 {
     /// <summary>By default, the raw time series data is returned.</summary>
@@ -3681,6 +3905,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetTimeSe
     public string Filter { get; set; }
 }
 
+/// <summary>Ranking based time series filter.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterRatioPickTimeSeriesFilter
 {
     /// <summary>How to use the ranking to select time series that pass through the filter.</summary>
@@ -3696,6 +3921,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetTimeSe
     public string? RankingMethod { get; set; }
 }
 
+/// <summary>Apply a second aggregation after the ratio is computed.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterRatioSecondaryAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -3715,6 +3941,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetTimeSe
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Parameters to fetch a ratio between two time series filters.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterRatio
 {
     /// <summary>The denominator of the ratio.</summary>
@@ -3734,6 +3961,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetTimeSe
     public V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterRatioSecondaryAggregation? SecondaryAggregation { get; set; }
 }
 
+/// <summary>Required. Fields for querying time series data from the Stackdriver metrics API.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetTimeSeriesTableDataSetsTimeSeriesQuery
 {
     /// <summary>Optional. If set, Cloud Monitoring will treat the full query duration as the alignment period so that there will be only 1 output value.</summary>
@@ -3761,6 +3989,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetTimeSe
     public string? UnitOverride { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetTimeSeriesTableDataSets
 {
     /// <summary>Optional. The lower bound on data point frequency for this data set.</summary>
@@ -3780,6 +4009,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetTimeSe
     public V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetTimeSeriesTableDataSetsTimeSeriesQuery? TimeSeriesQuery { get; set; }
 }
 
+/// <summary>A widget that displays time series data in a tabular format.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetTimeSeriesTable
 {
     /// <summary>Optional. The list of the persistent column settings for the table.</summary>
@@ -3795,6 +4025,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetTimeSe
     public string? MetricVisualization { get; set; }
 }
 
+/// <summary>Display options for the chart.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChartChartOptions
 {
     /// <summary>The chart mode.</summary>
@@ -3802,6 +4033,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChar
     public string? Mode { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChartDataSetsTimeSeriesQueryTimeSeriesFilterAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -3821,6 +4053,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChar
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Ranking based time series filter.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChartDataSetsTimeSeriesQueryTimeSeriesFilterPickTimeSeriesFilter
 {
     /// <summary>How to use the ranking to select time series that pass through the filter.</summary>
@@ -3836,6 +4069,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChar
     public string? RankingMethod { get; set; }
 }
 
+/// <summary>Apply a second aggregation after `aggregation` is applied.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChartDataSetsTimeSeriesQueryTimeSeriesFilterSecondaryAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -3855,6 +4089,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChar
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Filter parameters to fetch time series.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChartDataSetsTimeSeriesQueryTimeSeriesFilter
 {
     /// <summary>By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.</summary>
@@ -3874,6 +4109,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChar
     public V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChartDataSetsTimeSeriesQueryTimeSeriesFilterSecondaryAggregation? SecondaryAggregation { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioDenominatorAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -3893,6 +4129,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChar
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>The denominator of the ratio.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioDenominator
 {
     /// <summary>By default, the raw time series data is returned.</summary>
@@ -3904,6 +4141,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChar
     public string Filter { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioNumeratorAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -3923,6 +4161,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChar
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>The numerator of the ratio.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioNumerator
 {
     /// <summary>By default, the raw time series data is returned.</summary>
@@ -3934,6 +4173,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChar
     public string Filter { get; set; }
 }
 
+/// <summary>Ranking based time series filter.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioPickTimeSeriesFilter
 {
     /// <summary>How to use the ranking to select time series that pass through the filter.</summary>
@@ -3949,6 +4189,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChar
     public string? RankingMethod { get; set; }
 }
 
+/// <summary>Apply a second aggregation after the ratio is computed.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioSecondaryAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -3968,6 +4209,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChar
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Parameters to fetch a ratio between two time series filters.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChartDataSetsTimeSeriesQueryTimeSeriesFilterRatio
 {
     /// <summary>The denominator of the ratio.</summary>
@@ -3987,6 +4229,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChar
     public V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioSecondaryAggregation? SecondaryAggregation { get; set; }
 }
 
+/// <summary>Fields for querying time series data from the Stackdriver metrics API.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChartDataSetsTimeSeriesQuery
 {
     /// <summary>Optional. If set, Cloud Monitoring will treat the full query duration as the alignment period so that there will be only 1 output value.</summary>
@@ -4014,6 +4257,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChar
     public string? UnitOverride { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChartDataSets
 {
     /// <summary>A template string for naming `TimeSeries` in the resulting data set.</summary>
@@ -4037,6 +4281,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChar
     public V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChartDataSetsTimeSeriesQuery TimeSeriesQuery { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChartThresholds
 {
     /// <summary>The state color for this threshold. Color is not allowed in a XyChart.</summary>
@@ -4060,6 +4305,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChar
     public double? Value { get; set; }
 }
 
+/// <summary>The properties applied to the x-axis.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChartXAxis
 {
     /// <summary>The label of the axis.</summary>
@@ -4071,6 +4317,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChar
     public string? Scale { get; set; }
 }
 
+/// <summary>The properties applied to the y2-axis.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChartY2Axis
 {
     /// <summary>The label of the axis.</summary>
@@ -4082,6 +4329,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChar
     public string? Scale { get; set; }
 }
 
+/// <summary>The properties applied to the y-axis.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChartYAxis
 {
     /// <summary>The label of the axis.</summary>
@@ -4093,6 +4341,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChar
     public string? Scale { get; set; }
 }
 
+/// <summary>A chart of time series data.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChart
 {
     /// <summary>Display options for the chart.</summary>
@@ -4124,6 +4373,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChar
     public V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChartYAxis? YAxis { get; set; }
 }
 
+/// <summary>The informational widget contained in the tile. For example an `XyChart`.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidget
 {
     /// <summary>A chart of alert policy data.</summary>
@@ -4187,6 +4437,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidget
     public V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetXyChart? XyChart { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTiles
 {
     /// <summary>The height of the tile, measured in grid blocks. Tiles must have a minimum height of 1.</summary>
@@ -4210,6 +4461,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTiles
     public int? YPos { get; set; }
 }
 
+/// <summary>The content is arranged as a grid of tiles, with each content widget occupying one or more grid blocks.</summary>
 public partial class V1beta1MonitoringDashboardSpecMosaicLayout
 {
     /// <summary>The number of columns in the mosaic grid. The number of columns must be between 1 and 12, inclusive.</summary>
@@ -4221,6 +4473,7 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayout
     public IList<V1beta1MonitoringDashboardSpecMosaicLayoutTiles>? Tiles { get; set; }
 }
 
+/// <summary>Immutable. The Project that this resource belongs to.</summary>
 public partial class V1beta1MonitoringDashboardSpecProjectRef
 {
     /// <summary>The `projectID` field of a project, when not managed by Config Connector.</summary>
@@ -4240,6 +4493,7 @@ public partial class V1beta1MonitoringDashboardSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Required. A reference to the MonitoringAlertPolicy.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsAlertChartAlertPolicyRef
 {
     /// <summary>The MonitoringAlertPolicy link in the form "projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]", when not managed by Config Connector.</summary>
@@ -4255,6 +4509,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsAlertChar
     public string? Namespace { get; set; }
 }
 
+/// <summary>A chart of alert policy data.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsAlertChart
 {
     /// <summary>Required. A reference to the MonitoringAlertPolicy.</summary>
@@ -4262,10 +4517,12 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsAlertChar
     public V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsAlertChartAlertPolicyRef AlertPolicyRef { get; set; }
 }
 
+/// <summary>A blank space.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsBlank
 {
 }
 
+/// <summary>A widget that groups the other widgets. All widgets that are within the area spanned by the grouping widget are considered member widgets.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsCollapsibleGroup
 {
     /// <summary>The collapsed state of the widget on first page load.</summary>
@@ -4273,6 +4530,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsCollapsib
     public bool? Collapsed { get; set; }
 }
 
+/// <summary>The Project that this resource belongs to.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsErrorReportingPanelProjectRefs
 {
     /// <summary>The `projectID` field of a project, when not managed by Config Connector.</summary>
@@ -4292,6 +4550,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsErrorRepo
     public string? Namespace { get; set; }
 }
 
+/// <summary>A widget that displays a list of error groups.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsErrorReportingPanel
 {
     /// <summary>The projects from which to gather errors.</summary>
@@ -4307,6 +4566,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsErrorRepo
     public IList<string>? Versions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsIncidentListMonitoredResources
 {
     /// <summary>Required. Values for all of the labels listed in the associated monitored resource descriptor.</summary>
@@ -4318,6 +4578,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsIncidentL
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsIncidentListPolicyRefs
 {
     /// <summary>The MonitoringAlertPolicy link in the form "projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]", when not managed by Config Connector.</summary>
@@ -4333,6 +4594,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsIncidentL
     public string? Namespace { get; set; }
 }
 
+/// <summary>A widget that shows list of incidents.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsIncidentList
 {
     /// <summary>Optional. The monitored resource for which incidents are listed.</summary>
@@ -4344,6 +4606,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsIncidentL
     public IList<V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsIncidentListPolicyRefs>? PolicyRefs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsLogsPanelResourceNames
 {
     /// <summary>The external name of the referenced resource</summary>
@@ -4363,6 +4626,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsLogsPanel
     public string? Namespace { get; set; }
 }
 
+/// <summary>A widget that shows a stream of logs.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsLogsPanel
 {
     /// <summary>A filter that chooses which log entries to return.  See [Advanced Logs Queries](https://cloud.google.com/logging/docs/view/advanced-queries).</summary>
@@ -4374,6 +4638,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsLogsPanel
     public IList<V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsLogsPanelResourceNames>? ResourceNames { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilterAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -4393,6 +4658,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsPieChartD
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Ranking based time series filter.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilterPickTimeSeriesFilter
 {
     /// <summary>How to use the ranking to select time series that pass through the filter.</summary>
@@ -4408,6 +4674,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsPieChartD
     public string? RankingMethod { get; set; }
 }
 
+/// <summary>Apply a second aggregation after `aggregation` is applied.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilterSecondaryAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -4427,6 +4694,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsPieChartD
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Filter parameters to fetch time series.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilter
 {
     /// <summary>By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.</summary>
@@ -4446,6 +4714,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsPieChartD
     public V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilterSecondaryAggregation? SecondaryAggregation { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioDenominatorAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -4465,6 +4734,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsPieChartD
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>The denominator of the ratio.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioDenominator
 {
     /// <summary>By default, the raw time series data is returned.</summary>
@@ -4476,6 +4746,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsPieChartD
     public string Filter { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioNumeratorAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -4495,6 +4766,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsPieChartD
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>The numerator of the ratio.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioNumerator
 {
     /// <summary>By default, the raw time series data is returned.</summary>
@@ -4506,6 +4778,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsPieChartD
     public string Filter { get; set; }
 }
 
+/// <summary>Ranking based time series filter.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioPickTimeSeriesFilter
 {
     /// <summary>How to use the ranking to select time series that pass through the filter.</summary>
@@ -4521,6 +4794,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsPieChartD
     public string? RankingMethod { get; set; }
 }
 
+/// <summary>Apply a second aggregation after the ratio is computed.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioSecondaryAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -4540,6 +4814,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsPieChartD
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Parameters to fetch a ratio between two time series filters.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilterRatio
 {
     /// <summary>The denominator of the ratio.</summary>
@@ -4559,6 +4834,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsPieChartD
     public V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsPieChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioSecondaryAggregation? SecondaryAggregation { get; set; }
 }
 
+/// <summary>Required. The query for the PieChart. See, `google.monitoring.dashboard.v1.TimeSeriesQuery`.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsPieChartDataSetsTimeSeriesQuery
 {
     /// <summary>Optional. If set, Cloud Monitoring will treat the full query duration as the alignment period so that there will be only 1 output value.</summary>
@@ -4586,6 +4862,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsPieChartD
     public string? UnitOverride { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsPieChartDataSets
 {
     /// <summary>Optional. The lower bound on data point frequency for this data set.</summary>
@@ -4601,6 +4878,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsPieChartD
     public V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsPieChartDataSetsTimeSeriesQuery TimeSeriesQuery { get; set; }
 }
 
+/// <summary>A widget that displays timeseries data as a pie chart.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsPieChart
 {
     /// <summary>Required. Indicates the visualization type for the PieChart.</summary>
@@ -4616,10 +4894,12 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsPieChart
     public bool? ShowLabels { get; set; }
 }
 
+/// <summary>Will cause the `Scorecard` to show only the value, with no indicator to its value relative to its thresholds.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsScorecardBlankView
 {
 }
 
+/// <summary>Will cause the scorecard to show a gauge chart.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsScorecardGaugeView
 {
     /// <summary>The lower bound for this gauge chart. The value of the chart should always be greater than or equal to this.</summary>
@@ -4631,6 +4911,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsScorecard
     public double? UpperBound { get; set; }
 }
 
+/// <summary>Will cause the scorecard to show a spark chart.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsScorecardSparkChartView
 {
     /// <summary>The lower bound on data point frequency in the chart implemented by specifying the minimum alignment period to use in a time series query.</summary>
@@ -4642,6 +4923,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsScorecard
     public string SparkChartType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsScorecardThresholds
 {
     /// <summary>The state color for this threshold. Color is not allowed in a XyChart.</summary>
@@ -4665,6 +4947,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsScorecard
     public double? Value { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsScorecardTimeSeriesQueryTimeSeriesFilterAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -4684,6 +4967,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsScorecard
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Ranking based time series filter.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsScorecardTimeSeriesQueryTimeSeriesFilterPickTimeSeriesFilter
 {
     /// <summary>How to use the ranking to select time series that pass through the filter.</summary>
@@ -4699,6 +4983,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsScorecard
     public string? RankingMethod { get; set; }
 }
 
+/// <summary>Apply a second aggregation after `aggregation` is applied.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsScorecardTimeSeriesQueryTimeSeriesFilterSecondaryAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -4718,6 +5003,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsScorecard
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Filter parameters to fetch time series.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsScorecardTimeSeriesQueryTimeSeriesFilter
 {
     /// <summary>By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.</summary>
@@ -4737,6 +5023,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsScorecard
     public V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsScorecardTimeSeriesQueryTimeSeriesFilterSecondaryAggregation? SecondaryAggregation { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsScorecardTimeSeriesQueryTimeSeriesFilterRatioDenominatorAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -4756,6 +5043,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsScorecard
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>The denominator of the ratio.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsScorecardTimeSeriesQueryTimeSeriesFilterRatioDenominator
 {
     /// <summary>By default, the raw time series data is returned.</summary>
@@ -4767,6 +5055,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsScorecard
     public string Filter { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsScorecardTimeSeriesQueryTimeSeriesFilterRatioNumeratorAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -4786,6 +5075,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsScorecard
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>The numerator of the ratio.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsScorecardTimeSeriesQueryTimeSeriesFilterRatioNumerator
 {
     /// <summary>By default, the raw time series data is returned.</summary>
@@ -4797,6 +5087,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsScorecard
     public string Filter { get; set; }
 }
 
+/// <summary>Ranking based time series filter.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsScorecardTimeSeriesQueryTimeSeriesFilterRatioPickTimeSeriesFilter
 {
     /// <summary>How to use the ranking to select time series that pass through the filter.</summary>
@@ -4812,6 +5103,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsScorecard
     public string? RankingMethod { get; set; }
 }
 
+/// <summary>Apply a second aggregation after the ratio is computed.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsScorecardTimeSeriesQueryTimeSeriesFilterRatioSecondaryAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -4831,6 +5123,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsScorecard
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Parameters to fetch a ratio between two time series filters.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsScorecardTimeSeriesQueryTimeSeriesFilterRatio
 {
     /// <summary>The denominator of the ratio.</summary>
@@ -4850,6 +5143,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsScorecard
     public V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsScorecardTimeSeriesQueryTimeSeriesFilterRatioSecondaryAggregation? SecondaryAggregation { get; set; }
 }
 
+/// <summary>Required. Fields for querying time series data from the Stackdriver metrics API.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsScorecardTimeSeriesQuery
 {
     /// <summary>Optional. If set, Cloud Monitoring will treat the full query duration as the alignment period so that there will be only 1 output value.</summary>
@@ -4877,6 +5171,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsScorecard
     public string? UnitOverride { get; set; }
 }
 
+/// <summary>A scorecard summarizing time series data.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsScorecard
 {
     /// <summary>Will cause the `Scorecard` to show only the value, with no indicator to its value relative to its thresholds.</summary>
@@ -4900,6 +5195,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsScorecard
     public V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsScorecardTimeSeriesQuery TimeSeriesQuery { get; set; }
 }
 
+/// <summary>A widget that defines a section header for easier navigation of the dashboard.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsSectionHeader
 {
     /// <summary>Whether to insert a divider below the section in the table of contents</summary>
@@ -4911,10 +5207,12 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsSectionHe
     public string? Subtitle { get; set; }
 }
 
+/// <summary>A widget that groups the other widgets by using a dropdown menu.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsSingleViewGroup
 {
 }
 
+/// <summary>How the text is styled</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsTextStyle
 {
     /// <summary>The background color as a hex string. "#RRGGBB" or "#RGB"</summary>
@@ -4946,6 +5244,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsTextStyle
     public string? VerticalAlignment { get; set; }
 }
 
+/// <summary>A raw string or markdown displaying textual content.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsText
 {
     /// <summary>The text content to be displayed.</summary>
@@ -4961,6 +5260,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsText
     public V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsTextStyle? Style { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsTimeSeriesTableColumnSettings
 {
     /// <summary>Required. The id of the column.</summary>
@@ -4972,6 +5272,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsTimeSerie
     public bool Visible { get; set; }
 }
 
+/// <summary>Optional. Table display options for configuring how the table is rendered.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsTimeSeriesTableDataSetsTableDisplayOptions
 {
     /// <summary>Optional. This field is unused and has been replaced by TimeSeriesTable.column_settings</summary>
@@ -4979,6 +5280,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsTimeSerie
     public IList<string>? ShownColumns { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -4998,6 +5300,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsTimeSerie
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Ranking based time series filter.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterPickTimeSeriesFilter
 {
     /// <summary>How to use the ranking to select time series that pass through the filter.</summary>
@@ -5013,6 +5316,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsTimeSerie
     public string? RankingMethod { get; set; }
 }
 
+/// <summary>Apply a second aggregation after `aggregation` is applied.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterSecondaryAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -5032,6 +5336,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsTimeSerie
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Filter parameters to fetch time series.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilter
 {
     /// <summary>By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.</summary>
@@ -5051,6 +5356,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsTimeSerie
     public V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterSecondaryAggregation? SecondaryAggregation { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterRatioDenominatorAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -5070,6 +5376,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsTimeSerie
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>The denominator of the ratio.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterRatioDenominator
 {
     /// <summary>By default, the raw time series data is returned.</summary>
@@ -5081,6 +5388,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsTimeSerie
     public string Filter { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterRatioNumeratorAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -5100,6 +5408,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsTimeSerie
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>The numerator of the ratio.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterRatioNumerator
 {
     /// <summary>By default, the raw time series data is returned.</summary>
@@ -5111,6 +5420,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsTimeSerie
     public string Filter { get; set; }
 }
 
+/// <summary>Ranking based time series filter.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterRatioPickTimeSeriesFilter
 {
     /// <summary>How to use the ranking to select time series that pass through the filter.</summary>
@@ -5126,6 +5436,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsTimeSerie
     public string? RankingMethod { get; set; }
 }
 
+/// <summary>Apply a second aggregation after the ratio is computed.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterRatioSecondaryAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -5145,6 +5456,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsTimeSerie
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Parameters to fetch a ratio between two time series filters.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterRatio
 {
     /// <summary>The denominator of the ratio.</summary>
@@ -5164,6 +5476,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsTimeSerie
     public V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsTimeSeriesTableDataSetsTimeSeriesQueryTimeSeriesFilterRatioSecondaryAggregation? SecondaryAggregation { get; set; }
 }
 
+/// <summary>Required. Fields for querying time series data from the Stackdriver metrics API.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsTimeSeriesTableDataSetsTimeSeriesQuery
 {
     /// <summary>Optional. If set, Cloud Monitoring will treat the full query duration as the alignment period so that there will be only 1 output value.</summary>
@@ -5191,6 +5504,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsTimeSerie
     public string? UnitOverride { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsTimeSeriesTableDataSets
 {
     /// <summary>Optional. The lower bound on data point frequency for this data set.</summary>
@@ -5210,6 +5524,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsTimeSerie
     public V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsTimeSeriesTableDataSetsTimeSeriesQuery? TimeSeriesQuery { get; set; }
 }
 
+/// <summary>A widget that displays time series data in a tabular format.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsTimeSeriesTable
 {
     /// <summary>Optional. The list of the persistent column settings for the table.</summary>
@@ -5225,6 +5540,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsTimeSerie
     public string? MetricVisualization { get; set; }
 }
 
+/// <summary>Display options for the chart.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartChartOptions
 {
     /// <summary>The chart mode.</summary>
@@ -5232,6 +5548,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartCh
     public string? Mode { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilterAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -5251,6 +5568,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartDa
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Ranking based time series filter.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilterPickTimeSeriesFilter
 {
     /// <summary>How to use the ranking to select time series that pass through the filter.</summary>
@@ -5266,6 +5584,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartDa
     public string? RankingMethod { get; set; }
 }
 
+/// <summary>Apply a second aggregation after `aggregation` is applied.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilterSecondaryAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -5285,6 +5604,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartDa
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Filter parameters to fetch time series.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilter
 {
     /// <summary>By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.</summary>
@@ -5304,6 +5624,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartDa
     public V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilterSecondaryAggregation? SecondaryAggregation { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioDenominatorAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -5323,6 +5644,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartDa
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>The denominator of the ratio.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioDenominator
 {
     /// <summary>By default, the raw time series data is returned.</summary>
@@ -5334,6 +5656,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartDa
     public string Filter { get; set; }
 }
 
+/// <summary>By default, the raw time series data is returned.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioNumeratorAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -5353,6 +5676,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartDa
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>The numerator of the ratio.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioNumerator
 {
     /// <summary>By default, the raw time series data is returned.</summary>
@@ -5364,6 +5688,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartDa
     public string Filter { get; set; }
 }
 
+/// <summary>Ranking based time series filter.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioPickTimeSeriesFilter
 {
     /// <summary>How to use the ranking to select time series that pass through the filter.</summary>
@@ -5379,6 +5704,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartDa
     public string? RankingMethod { get; set; }
 }
 
+/// <summary>Apply a second aggregation after the ratio is computed.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioSecondaryAggregation
 {
     /// <summary>The `alignment_period` specifies a time interval, in seconds, that is used to divide the data in all the [time series][google.monitoring.v3.TimeSeries] into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.</summary>
@@ -5398,6 +5724,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartDa
     public string? PerSeriesAligner { get; set; }
 }
 
+/// <summary>Parameters to fetch a ratio between two time series filters.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilterRatio
 {
     /// <summary>The denominator of the ratio.</summary>
@@ -5417,6 +5744,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartDa
     public V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartDataSetsTimeSeriesQueryTimeSeriesFilterRatioSecondaryAggregation? SecondaryAggregation { get; set; }
 }
 
+/// <summary>Fields for querying time series data from the Stackdriver metrics API.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartDataSetsTimeSeriesQuery
 {
     /// <summary>Optional. If set, Cloud Monitoring will treat the full query duration as the alignment period so that there will be only 1 output value.</summary>
@@ -5444,6 +5772,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartDa
     public string? UnitOverride { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartDataSets
 {
     /// <summary>A template string for naming `TimeSeries` in the resulting data set.</summary>
@@ -5467,6 +5796,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartDa
     public V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartDataSetsTimeSeriesQuery TimeSeriesQuery { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartThresholds
 {
     /// <summary>The state color for this threshold. Color is not allowed in a XyChart.</summary>
@@ -5490,6 +5820,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartTh
     public double? Value { get; set; }
 }
 
+/// <summary>The properties applied to the x-axis.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartXAxis
 {
     /// <summary>The label of the axis.</summary>
@@ -5501,6 +5832,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartXA
     public string? Scale { get; set; }
 }
 
+/// <summary>The properties applied to the y2-axis.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartY2Axis
 {
     /// <summary>The label of the axis.</summary>
@@ -5512,6 +5844,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartY2
     public string? Scale { get; set; }
 }
 
+/// <summary>The properties applied to the y-axis.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartYAxis
 {
     /// <summary>The label of the axis.</summary>
@@ -5523,6 +5856,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartYA
     public string? Scale { get; set; }
 }
 
+/// <summary>A chart of time series data.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChart
 {
     /// <summary>Display options for the chart.</summary>
@@ -5554,6 +5888,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChart
     public V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChartYAxis? YAxis { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgets
 {
     /// <summary>A chart of alert policy data.</summary>
@@ -5617,6 +5952,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgets
     public V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsXyChart? XyChart { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRows
 {
     /// <summary>The relative weight of this row. The row weight is used to adjust the height of rows on the screen (relative to peers).</summary>
@@ -5628,6 +5964,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRows
     public IList<V1beta1MonitoringDashboardSpecRowLayoutRowsWidgets>? Widgets { get; set; }
 }
 
+/// <summary>The content is divided into equally spaced rows and the widgets are arranged horizontally.</summary>
 public partial class V1beta1MonitoringDashboardSpecRowLayout
 {
     /// <summary>The rows of content to display.</summary>
@@ -5635,6 +5972,7 @@ public partial class V1beta1MonitoringDashboardSpecRowLayout
     public IList<V1beta1MonitoringDashboardSpecRowLayoutRows>? Rows { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardSpec
 {
     /// <summary>The content is divided into equally spaced columns and the widgets are arranged vertically.</summary>
@@ -5670,6 +6008,7 @@ public partial class V1beta1MonitoringDashboardSpec
     public V1beta1MonitoringDashboardSpecRowLayout? RowLayout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -5693,6 +6032,7 @@ public partial class V1beta1MonitoringDashboardStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringDashboardStatus
 {
     /// <summary>Conditions represent the latest available observations of the MonitoringDashboard's current state.</summary>
@@ -5709,6 +6049,7 @@ public partial class V1beta1MonitoringDashboardStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>MonitoringDashboard is the Schema for the monitoring API</summary>
 public partial class V1beta1MonitoringDashboard : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MonitoringDashboardSpec>, IStatus<V1beta1MonitoringDashboardStatus>
 {
     public const string KubeApiVersion = "v1beta1";

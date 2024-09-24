@@ -18,6 +18,7 @@ public enum V1beta1LinkedServiceAzureDatabricksSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Authenticate to ADB via an access token.</summary>
 public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderAccessTokenSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -53,6 +54,7 @@ public enum V1beta1LinkedServiceAzureDatabricksSpecForProviderDataFactoryIdRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderDataFactoryIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -66,6 +68,7 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderDataFacto
     public V1beta1LinkedServiceAzureDatabricksSpecForProviderDataFactoryIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Factory in datafactory to populate dataFactoryId.</summary>
 public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderDataFactoryIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -97,6 +100,7 @@ public enum V1beta1LinkedServiceAzureDatabricksSpecForProviderDataFactoryIdSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderDataFactoryIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderDataFacto
     public V1beta1LinkedServiceAzureDatabricksSpecForProviderDataFactoryIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Factory in datafactory to populate dataFactoryId.</summary>
 public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderDataFactoryIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderDataFacto
     public V1beta1LinkedServiceAzureDatabricksSpecForProviderDataFactoryIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderInstancePool
 {
     /// <summary>Spark version of a the cluster.</summary>
@@ -144,6 +150,7 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderInstanceP
     public double? MinNumberOfWorkers { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderKeyVaultPassword
 {
     /// <summary>Specifies the name of an existing Key Vault Data Factory Linked Service.</summary>
@@ -175,6 +182,7 @@ public enum V1beta1LinkedServiceAzureDatabricksSpecForProviderMsiWorkSpaceResour
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderMsiWorkSpaceResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -188,6 +196,7 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderMsiWorkSp
     public V1beta1LinkedServiceAzureDatabricksSpecForProviderMsiWorkSpaceResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Workspace in databricks to populate msiWorkSpaceResourceId.</summary>
 public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderMsiWorkSpaceResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -219,6 +228,7 @@ public enum V1beta1LinkedServiceAzureDatabricksSpecForProviderMsiWorkSpaceResour
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderMsiWorkSpaceResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -232,6 +242,7 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderMsiWorkSp
     public V1beta1LinkedServiceAzureDatabricksSpecForProviderMsiWorkSpaceResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Workspace in databricks to populate msiWorkSpaceResourceId.</summary>
 public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderMsiWorkSpaceResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -247,6 +258,7 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderMsiWorkSp
     public V1beta1LinkedServiceAzureDatabricksSpecForProviderMsiWorkSpaceResourceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderNewClusterConfig
 {
     /// <summary>Spark version of a the cluster.</summary>
@@ -290,6 +302,7 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecForProviderNewCluste
     public IDictionary<string, string>? SparkEnvironmentVariables { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinkedServiceAzureDatabricksSpecForProvider
 {
     /// <summary>Authenticate to ADB via an access token.</summary>
@@ -361,6 +374,7 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecForProvider
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinkedServiceAzureDatabricksSpecInitProviderInstancePool
 {
     /// <summary>Spark version of a the cluster.</summary>
@@ -380,6 +394,7 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecInitProviderInstance
     public double? MinNumberOfWorkers { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinkedServiceAzureDatabricksSpecInitProviderKeyVaultPassword
 {
     /// <summary>Specifies the name of an existing Key Vault Data Factory Linked Service.</summary>
@@ -411,6 +426,7 @@ public enum V1beta1LinkedServiceAzureDatabricksSpecInitProviderMsiWorkSpaceResou
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinkedServiceAzureDatabricksSpecInitProviderMsiWorkSpaceResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -424,6 +440,7 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecInitProviderMsiWorkS
     public V1beta1LinkedServiceAzureDatabricksSpecInitProviderMsiWorkSpaceResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Workspace in databricks to populate msiWorkSpaceResourceId.</summary>
 public partial class V1beta1LinkedServiceAzureDatabricksSpecInitProviderMsiWorkSpaceResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -455,6 +472,7 @@ public enum V1beta1LinkedServiceAzureDatabricksSpecInitProviderMsiWorkSpaceResou
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinkedServiceAzureDatabricksSpecInitProviderMsiWorkSpaceResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -468,6 +486,7 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecInitProviderMsiWorkS
     public V1beta1LinkedServiceAzureDatabricksSpecInitProviderMsiWorkSpaceResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Workspace in databricks to populate msiWorkSpaceResourceId.</summary>
 public partial class V1beta1LinkedServiceAzureDatabricksSpecInitProviderMsiWorkSpaceResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -483,6 +502,7 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecInitProviderMsiWorkS
     public V1beta1LinkedServiceAzureDatabricksSpecInitProviderMsiWorkSpaceResourceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinkedServiceAzureDatabricksSpecInitProviderNewClusterConfig
 {
     /// <summary>Spark version of a the cluster.</summary>
@@ -526,6 +546,7 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecInitProviderNewClust
     public IDictionary<string, string>? SparkEnvironmentVariables { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1LinkedServiceAzureDatabricksSpecInitProvider
 {
     /// <summary>The domain URL of the databricks instance.</summary>
@@ -623,6 +644,7 @@ public enum V1beta1LinkedServiceAzureDatabricksSpecProviderConfigRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinkedServiceAzureDatabricksSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -636,6 +658,7 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecProviderConfigRefPol
     public V1beta1LinkedServiceAzureDatabricksSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1LinkedServiceAzureDatabricksSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -667,6 +690,7 @@ public enum V1beta1LinkedServiceAzureDatabricksSpecPublishConnectionDetailsToCon
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinkedServiceAzureDatabricksSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -680,6 +704,7 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecPublishConnectionDet
     public V1beta1LinkedServiceAzureDatabricksSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1LinkedServiceAzureDatabricksSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -691,6 +716,7 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecPublishConnectionDet
     public V1beta1LinkedServiceAzureDatabricksSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1LinkedServiceAzureDatabricksSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -706,6 +732,7 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecPublishConnectionDet
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1LinkedServiceAzureDatabricksSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -721,6 +748,7 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecPublishConnectionDet
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1LinkedServiceAzureDatabricksSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -732,6 +760,7 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpecWriteConnectionSecre
     public string Namespace { get; set; }
 }
 
+/// <summary>LinkedServiceAzureDatabricksSpec defines the desired state of LinkedServiceAzureDatabricks</summary>
 public partial class V1beta1LinkedServiceAzureDatabricksSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -764,6 +793,7 @@ public partial class V1beta1LinkedServiceAzureDatabricksSpec
     public V1beta1LinkedServiceAzureDatabricksSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinkedServiceAzureDatabricksStatusAtProviderInstancePool
 {
     /// <summary>Spark version of a the cluster.</summary>
@@ -783,6 +813,7 @@ public partial class V1beta1LinkedServiceAzureDatabricksStatusAtProviderInstance
     public double? MinNumberOfWorkers { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinkedServiceAzureDatabricksStatusAtProviderKeyVaultPassword
 {
     /// <summary>Specifies the name of an existing Key Vault Data Factory Linked Service.</summary>
@@ -794,6 +825,7 @@ public partial class V1beta1LinkedServiceAzureDatabricksStatusAtProviderKeyVault
     public string? SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinkedServiceAzureDatabricksStatusAtProviderNewClusterConfig
 {
     /// <summary>Spark version of a the cluster.</summary>
@@ -837,6 +869,7 @@ public partial class V1beta1LinkedServiceAzureDatabricksStatusAtProviderNewClust
     public IDictionary<string, string>? SparkEnvironmentVariables { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinkedServiceAzureDatabricksStatusAtProvider
 {
     /// <summary>The domain URL of the databricks instance.</summary>
@@ -892,6 +925,7 @@ public partial class V1beta1LinkedServiceAzureDatabricksStatusAtProvider
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1LinkedServiceAzureDatabricksStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -919,6 +953,7 @@ public partial class V1beta1LinkedServiceAzureDatabricksStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>LinkedServiceAzureDatabricksStatus defines the observed state of LinkedServiceAzureDatabricks.</summary>
 public partial class V1beta1LinkedServiceAzureDatabricksStatus
 {
     /// <summary></summary>
@@ -935,6 +970,7 @@ public partial class V1beta1LinkedServiceAzureDatabricksStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>LinkedServiceAzureDatabricks is the Schema for the LinkedServiceAzureDatabrickss API. Manages a Linked Service (connection) between Azure Databricks and Azure Data Factory.</summary>
 public partial class V1beta1LinkedServiceAzureDatabricks : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LinkedServiceAzureDatabricksSpec>, IStatus<V1beta1LinkedServiceAzureDatabricksStatus>
 {
     public const string KubeApiVersion = "v1beta1";

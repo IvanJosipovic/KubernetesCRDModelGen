@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.keyvault.azure.com;
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20230701storageVaultSpecOwner
 {
     /// <summary></summary>
@@ -19,6 +20,7 @@ public partial class V1api20230701storageVaultSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20230701storageVaultSpecPropertiesAccessPoliciesApplicationIdFromConfig
 {
     /// <summary>Key is the key in the Kubernetes configmap being referenced</summary>
@@ -30,6 +32,7 @@ public partial class V1api20230701storageVaultSpecPropertiesAccessPoliciesApplic
     public string Name { get; set; }
 }
 
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20230701storageVaultSpecPropertiesAccessPoliciesObjectIdFromConfig
 {
     /// <summary>Key is the key in the Kubernetes configmap being referenced</summary>
@@ -41,6 +44,7 @@ public partial class V1api20230701storageVaultSpecPropertiesAccessPoliciesObject
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230701.Permissions Permissions the identity has for keys, secrets, certificates and storage.</summary>
 public partial class V1api20230701storageVaultSpecPropertiesAccessPoliciesPermissions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -64,6 +68,7 @@ public partial class V1api20230701storageVaultSpecPropertiesAccessPoliciesPermis
     public IList<string>? Storage { get; set; }
 }
 
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20230701storageVaultSpecPropertiesAccessPoliciesTenantIdFromConfig
 {
     /// <summary>Key is the key in the Kubernetes configmap being referenced</summary>
@@ -75,6 +80,7 @@ public partial class V1api20230701storageVaultSpecPropertiesAccessPoliciesTenant
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230701.AccessPolicyEntry An identity that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID.</summary>
 public partial class V1api20230701storageVaultSpecPropertiesAccessPolicies
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -110,6 +116,7 @@ public partial class V1api20230701storageVaultSpecPropertiesAccessPolicies
     public V1api20230701storageVaultSpecPropertiesAccessPoliciesTenantIdFromConfig? TenantIdFromConfig { get; set; }
 }
 
+/// <summary>Storage version of v1api20230701.IPRule A rule governing the accessibility of a vault from a specific ip address or ip range.</summary>
 public partial class V1api20230701storageVaultSpecPropertiesNetworkAclsIpRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -121,6 +128,7 @@ public partial class V1api20230701storageVaultSpecPropertiesNetworkAclsIpRules
     public string? Value { get; set; }
 }
 
+/// <summary>Reference: Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.</summary>
 public partial class V1api20230701storageVaultSpecPropertiesNetworkAclsVirtualNetworkRulesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -140,6 +148,7 @@ public partial class V1api20230701storageVaultSpecPropertiesNetworkAclsVirtualNe
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230701.VirtualNetworkRule A rule governing the accessibility of a vault from a specific virtual network.</summary>
 public partial class V1api20230701storageVaultSpecPropertiesNetworkAclsVirtualNetworkRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -155,6 +164,7 @@ public partial class V1api20230701storageVaultSpecPropertiesNetworkAclsVirtualNe
     public V1api20230701storageVaultSpecPropertiesNetworkAclsVirtualNetworkRulesReference Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20230701.NetworkRuleSet A set of rules governing the network accessibility of a vault.</summary>
 public partial class V1api20230701storageVaultSpecPropertiesNetworkAcls
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -178,6 +188,7 @@ public partial class V1api20230701storageVaultSpecPropertiesNetworkAcls
     public IList<V1api20230701storageVaultSpecPropertiesNetworkAclsVirtualNetworkRules>? VirtualNetworkRules { get; set; }
 }
 
+/// <summary>Storage version of v1api20230701.Sku SKU details</summary>
 public partial class V1api20230701storageVaultSpecPropertiesSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -193,6 +204,7 @@ public partial class V1api20230701storageVaultSpecPropertiesSku
     public string? Name { get; set; }
 }
 
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20230701storageVaultSpecPropertiesTenantIdFromConfig
 {
     /// <summary>Key is the key in the Kubernetes configmap being referenced</summary>
@@ -204,6 +216,7 @@ public partial class V1api20230701storageVaultSpecPropertiesTenantIdFromConfig
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230701.VaultProperties Properties of the vault</summary>
 public partial class V1api20230701storageVaultSpecProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -275,6 +288,7 @@ public partial class V1api20230701storageVaultSpecProperties
     public string? VaultUri { get; set; }
 }
 
+/// <summary>Storage version of v1api20230701.Vault_Spec</summary>
 public partial class V1api20230701storageVaultSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -306,6 +320,7 @@ public partial class V1api20230701storageVaultSpec
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20230701storageVaultStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -337,6 +352,7 @@ public partial class V1api20230701storageVaultStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230701.Permissions_STATUS Permissions the identity has for keys, secrets, certificates and storage.</summary>
 public partial class V1api20230701storageVaultStatusPropertiesAccessPoliciesPermissions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -360,6 +376,7 @@ public partial class V1api20230701storageVaultStatusPropertiesAccessPoliciesPerm
     public IList<string>? Storage { get; set; }
 }
 
+/// <summary>Storage version of v1api20230701.AccessPolicyEntry_STATUS An identity that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID.</summary>
 public partial class V1api20230701storageVaultStatusPropertiesAccessPolicies
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -383,6 +400,7 @@ public partial class V1api20230701storageVaultStatusPropertiesAccessPolicies
     public string? TenantId { get; set; }
 }
 
+/// <summary>Storage version of v1api20230701.IPRule_STATUS A rule governing the accessibility of a vault from a specific ip address or ip range.</summary>
 public partial class V1api20230701storageVaultStatusPropertiesNetworkAclsIpRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -394,6 +412,7 @@ public partial class V1api20230701storageVaultStatusPropertiesNetworkAclsIpRules
     public string? Value { get; set; }
 }
 
+/// <summary>Storage version of v1api20230701.VirtualNetworkRule_STATUS A rule governing the accessibility of a vault from a specific virtual network.</summary>
 public partial class V1api20230701storageVaultStatusPropertiesNetworkAclsVirtualNetworkRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -409,6 +428,7 @@ public partial class V1api20230701storageVaultStatusPropertiesNetworkAclsVirtual
     public bool? IgnoreMissingVnetServiceEndpoint { get; set; }
 }
 
+/// <summary>Storage version of v1api20230701.NetworkRuleSet_STATUS A set of rules governing the network accessibility of a vault.</summary>
 public partial class V1api20230701storageVaultStatusPropertiesNetworkAcls
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -432,6 +452,7 @@ public partial class V1api20230701storageVaultStatusPropertiesNetworkAcls
     public IList<V1api20230701storageVaultStatusPropertiesNetworkAclsVirtualNetworkRules>? VirtualNetworkRules { get; set; }
 }
 
+/// <summary>Storage version of v1api20230701.PrivateEndpoint_STATUS Private endpoint object properties.</summary>
 public partial class V1api20230701storageVaultStatusPropertiesPrivateEndpointConnectionsPrivateEndpoint
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -443,6 +464,7 @@ public partial class V1api20230701storageVaultStatusPropertiesPrivateEndpointCon
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20230701.PrivateLinkServiceConnectionState_STATUS An object that represents the approval state of the private link connection.</summary>
 public partial class V1api20230701storageVaultStatusPropertiesPrivateEndpointConnectionsPrivateLinkServiceConnectionState
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -462,6 +484,7 @@ public partial class V1api20230701storageVaultStatusPropertiesPrivateEndpointCon
     public string? Status { get; set; }
 }
 
+/// <summary>Storage version of v1api20230701.PrivateEndpointConnectionItem_STATUS Private endpoint connection item.</summary>
 public partial class V1api20230701storageVaultStatusPropertiesPrivateEndpointConnections
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -489,6 +512,7 @@ public partial class V1api20230701storageVaultStatusPropertiesPrivateEndpointCon
     public string? ProvisioningState { get; set; }
 }
 
+/// <summary>Storage version of v1api20230701.Sku_STATUS SKU details</summary>
 public partial class V1api20230701storageVaultStatusPropertiesSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -504,6 +528,7 @@ public partial class V1api20230701storageVaultStatusPropertiesSku
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230701.VaultProperties_STATUS Properties of the vault</summary>
 public partial class V1api20230701storageVaultStatusProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -579,6 +604,7 @@ public partial class V1api20230701storageVaultStatusProperties
     public string? VaultUri { get; set; }
 }
 
+/// <summary>Storage version of v1api20230701.SystemData_STATUS Metadata pertaining to creation and last modification of the key vault resource.</summary>
 public partial class V1api20230701storageVaultStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -610,6 +636,7 @@ public partial class V1api20230701storageVaultStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
+/// <summary>Storage version of v1api20230701.Vault_STATUS Resource information with extended details.</summary>
 public partial class V1api20230701storageVaultStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -650,6 +677,7 @@ public partial class V1api20230701storageVaultStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20230701.Vault Generator information: - Generated from: /keyvault/resource-manager/Microsoft.KeyVault/stable/2023-07-01/keyvault.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}</summary>
 public partial class V1api20230701storageVault : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230701storageVaultSpec>, IStatus<V1api20230701storageVaultStatus>
 {
     public const string KubeApiVersion = "v1api20230701storage";

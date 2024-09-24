@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iam.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1IAMAccessBoundaryPolicySpecProjectRef
 {
     /// <summary>Allowed value: string of the format `cloudresourcemanager.googleapis.com%2Fprojects%2F{{value}}`, where {{value}} is the `name` field of a `Project` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1IAMAccessBoundaryPolicySpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The availability condition further constrains the access allowed by the access boundary rule.</summary>
 public partial class V1beta1IAMAccessBoundaryPolicySpecRulesAccessBoundaryRuleAvailabilityCondition
 {
     /// <summary>Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.</summary>
@@ -42,6 +44,7 @@ public partial class V1beta1IAMAccessBoundaryPolicySpecRulesAccessBoundaryRuleAv
     public string? Title { get; set; }
 }
 
+/// <summary>An access boundary rule in an IAM policy.</summary>
 public partial class V1beta1IAMAccessBoundaryPolicySpecRulesAccessBoundaryRule
 {
     /// <summary>The availability condition further constrains the access allowed by the access boundary rule.</summary>
@@ -57,6 +60,7 @@ public partial class V1beta1IAMAccessBoundaryPolicySpecRulesAccessBoundaryRule
     public string? AvailableResource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IAMAccessBoundaryPolicySpecRules
 {
     /// <summary>An access boundary rule in an IAM policy.</summary>
@@ -68,6 +72,7 @@ public partial class V1beta1IAMAccessBoundaryPolicySpecRules
     public string? Description { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IAMAccessBoundaryPolicySpec
 {
     /// <summary>The display name of the rule.</summary>
@@ -87,6 +92,7 @@ public partial class V1beta1IAMAccessBoundaryPolicySpec
     public IList<V1beta1IAMAccessBoundaryPolicySpecRules> Rules { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IAMAccessBoundaryPolicyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -110,6 +116,7 @@ public partial class V1beta1IAMAccessBoundaryPolicyStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IAMAccessBoundaryPolicyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -126,6 +133,7 @@ public partial class V1beta1IAMAccessBoundaryPolicyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1IAMAccessBoundaryPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IAMAccessBoundaryPolicySpec>, IStatus<V1beta1IAMAccessBoundaryPolicyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

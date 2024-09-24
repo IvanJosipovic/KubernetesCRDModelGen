@@ -18,6 +18,7 @@ public enum V1beta1IOTHubEndpointStorageContainerSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>The connection string for the endpoint. This attribute can only be specified and is mandatory when authentication_type is keyBased.</summary>
 public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderConnectionStringSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -53,6 +54,7 @@ public enum V1beta1IOTHubEndpointStorageContainerSpecForProviderContainerNameRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderContainerNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -66,6 +68,7 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderContain
     public V1beta1IOTHubEndpointStorageContainerSpecForProviderContainerNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Container in storage to populate containerName.</summary>
 public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderContainerNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -97,6 +100,7 @@ public enum V1beta1IOTHubEndpointStorageContainerSpecForProviderContainerNameSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderContainerNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderContain
     public V1beta1IOTHubEndpointStorageContainerSpecForProviderContainerNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Container in storage to populate containerName.</summary>
 public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderContainerNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -145,6 +150,7 @@ public enum V1beta1IOTHubEndpointStorageContainerSpecForProviderIothubIdRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderIothubIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -158,6 +164,7 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderIothubI
     public V1beta1IOTHubEndpointStorageContainerSpecForProviderIothubIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a IOTHub in devices to populate iothubId.</summary>
 public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderIothubIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -189,6 +196,7 @@ public enum V1beta1IOTHubEndpointStorageContainerSpecForProviderIothubIdSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderIothubIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderIothubI
     public V1beta1IOTHubEndpointStorageContainerSpecForProviderIothubIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a IOTHub in devices to populate iothubId.</summary>
 public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderIothubIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -237,6 +246,7 @@ public enum V1beta1IOTHubEndpointStorageContainerSpecForProviderResourceGroupNam
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -250,6 +260,7 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderResourc
     public V1beta1IOTHubEndpointStorageContainerSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -281,6 +292,7 @@ public enum V1beta1IOTHubEndpointStorageContainerSpecForProviderResourceGroupNam
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderResourc
     public V1beta1IOTHubEndpointStorageContainerSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -309,6 +322,7 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecForProviderResourc
     public V1beta1IOTHubEndpointStorageContainerSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IOTHubEndpointStorageContainerSpecForProvider
 {
     /// <summary>Type used to authenticate against the storage endpoint. Possible values are keyBased and identityBased. Defaults to keyBased.</summary>
@@ -380,6 +394,7 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecForProvider
     public V1beta1IOTHubEndpointStorageContainerSpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 }
 
+/// <summary>The connection string for the endpoint. This attribute can only be specified and is mandatory when authentication_type is keyBased.</summary>
 public partial class V1beta1IOTHubEndpointStorageContainerSpecInitProviderConnectionStringSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -415,6 +430,7 @@ public enum V1beta1IOTHubEndpointStorageContainerSpecInitProviderContainerNameRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTHubEndpointStorageContainerSpecInitProviderContainerNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -428,6 +444,7 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecInitProviderContai
     public V1beta1IOTHubEndpointStorageContainerSpecInitProviderContainerNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Container in storage to populate containerName.</summary>
 public partial class V1beta1IOTHubEndpointStorageContainerSpecInitProviderContainerNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -459,6 +476,7 @@ public enum V1beta1IOTHubEndpointStorageContainerSpecInitProviderContainerNameSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IOTHubEndpointStorageContainerSpecInitProviderContainerNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -472,6 +490,7 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecInitProviderContai
     public V1beta1IOTHubEndpointStorageContainerSpecInitProviderContainerNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Container in storage to populate containerName.</summary>
 public partial class V1beta1IOTHubEndpointStorageContainerSpecInitProviderContainerNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -507,6 +526,7 @@ public enum V1beta1IOTHubEndpointStorageContainerSpecInitProviderResourceGroupNa
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTHubEndpointStorageContainerSpecInitProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -520,6 +540,7 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecInitProviderResour
     public V1beta1IOTHubEndpointStorageContainerSpecInitProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1IOTHubEndpointStorageContainerSpecInitProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -551,6 +572,7 @@ public enum V1beta1IOTHubEndpointStorageContainerSpecInitProviderResourceGroupNa
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IOTHubEndpointStorageContainerSpecInitProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -564,6 +586,7 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecInitProviderResour
     public V1beta1IOTHubEndpointStorageContainerSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1IOTHubEndpointStorageContainerSpecInitProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -579,6 +602,7 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecInitProviderResour
     public V1beta1IOTHubEndpointStorageContainerSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1IOTHubEndpointStorageContainerSpecInitProvider
 {
     /// <summary>Type used to authenticate against the storage endpoint. Possible values are keyBased and identityBased. Defaults to keyBased.</summary>
@@ -680,6 +704,7 @@ public enum V1beta1IOTHubEndpointStorageContainerSpecProviderConfigRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTHubEndpointStorageContainerSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -693,6 +718,7 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecProviderConfigRefP
     public V1beta1IOTHubEndpointStorageContainerSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1IOTHubEndpointStorageContainerSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -724,6 +750,7 @@ public enum V1beta1IOTHubEndpointStorageContainerSpecPublishConnectionDetailsToC
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTHubEndpointStorageContainerSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -737,6 +764,7 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecPublishConnectionD
     public V1beta1IOTHubEndpointStorageContainerSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1IOTHubEndpointStorageContainerSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -748,6 +776,7 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecPublishConnectionD
     public V1beta1IOTHubEndpointStorageContainerSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1IOTHubEndpointStorageContainerSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -763,6 +792,7 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecPublishConnectionD
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1IOTHubEndpointStorageContainerSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -778,6 +808,7 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecPublishConnectionD
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1IOTHubEndpointStorageContainerSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -789,6 +820,7 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpecWriteConnectionSec
     public string Namespace { get; set; }
 }
 
+/// <summary>IOTHubEndpointStorageContainerSpec defines the desired state of IOTHubEndpointStorageContainer</summary>
 public partial class V1beta1IOTHubEndpointStorageContainerSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -821,6 +853,7 @@ public partial class V1beta1IOTHubEndpointStorageContainerSpec
     public V1beta1IOTHubEndpointStorageContainerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IOTHubEndpointStorageContainerStatusAtProvider
 {
     /// <summary>Type used to authenticate against the storage endpoint. Possible values are keyBased and identityBased. Defaults to keyBased.</summary>
@@ -868,6 +901,7 @@ public partial class V1beta1IOTHubEndpointStorageContainerStatusAtProvider
     public string? ResourceGroupName { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1IOTHubEndpointStorageContainerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -895,6 +929,7 @@ public partial class V1beta1IOTHubEndpointStorageContainerStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>IOTHubEndpointStorageContainerStatus defines the observed state of IOTHubEndpointStorageContainer.</summary>
 public partial class V1beta1IOTHubEndpointStorageContainerStatus
 {
     /// <summary></summary>
@@ -911,6 +946,7 @@ public partial class V1beta1IOTHubEndpointStorageContainerStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>IOTHubEndpointStorageContainer is the Schema for the IOTHubEndpointStorageContainers API. Manages an IotHub Storage Container Endpoint</summary>
 public partial class V1beta1IOTHubEndpointStorageContainer : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IOTHubEndpointStorageContainerSpec>, IStatus<V1beta1IOTHubEndpointStorageContainerStatus>
 {
     public const string KubeApiVersion = "v1beta1";

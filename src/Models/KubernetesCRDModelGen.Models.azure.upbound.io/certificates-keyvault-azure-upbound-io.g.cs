@@ -18,6 +18,7 @@ public enum V1beta1CertificateSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>The base64-encoded certificate contents.</summary>
 public partial class V1beta1CertificateSpecForProviderCertificateContentsSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1CertificateSpecForProviderCertificateContentsSecretR
     public string Namespace { get; set; }
 }
 
+/// <summary>The password associated with the certificate.</summary>
 public partial class V1beta1CertificateSpecForProviderCertificatePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -48,6 +50,7 @@ public partial class V1beta1CertificateSpecForProviderCertificatePasswordSecretR
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateSpecForProviderCertificate
 {
     /// <summary>The base64-encoded certificate contents.</summary>
@@ -59,6 +62,7 @@ public partial class V1beta1CertificateSpecForProviderCertificate
     public V1beta1CertificateSpecForProviderCertificatePasswordSecretRef? PasswordSecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateSpecForProviderCertificatePolicyIssuerParameters
 {
     /// <summary>The name of the Certificate Issuer. Possible values include Self (for self-signed certificate), or Unknown (for a certificate issuing authority like Let's Encrypt and Azure direct supported ones).</summary>
@@ -66,6 +70,7 @@ public partial class V1beta1CertificateSpecForProviderCertificatePolicyIssuerPar
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateSpecForProviderCertificatePolicyKeyProperties
 {
     /// <summary>Specifies the curve to use when creating an EC key. Possible values are P-256, P-256K, P-384, and P-521. This field will be required in a future release if key_type is EC or EC-HSM.</summary>
@@ -89,6 +94,7 @@ public partial class V1beta1CertificateSpecForProviderCertificatePolicyKeyProper
     public bool? ReuseKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateSpecForProviderCertificatePolicyLifetimeActionAction
 {
     /// <summary>The Type of action to be performed when the lifetime trigger is triggerec. Possible values include AutoRenew and EmailContacts.</summary>
@@ -96,6 +102,7 @@ public partial class V1beta1CertificateSpecForProviderCertificatePolicyLifetimeA
     public string? ActionType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateSpecForProviderCertificatePolicyLifetimeActionTrigger
 {
     /// <summary>The number of days before the Certificate expires that the action associated with this Trigger should run. Conflicts with lifetime_percentage.</summary>
@@ -107,6 +114,7 @@ public partial class V1beta1CertificateSpecForProviderCertificatePolicyLifetimeA
     public double? LifetimePercentage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateSpecForProviderCertificatePolicyLifetimeAction
 {
     /// <summary>A action block as defined below.</summary>
@@ -118,6 +126,7 @@ public partial class V1beta1CertificateSpecForProviderCertificatePolicyLifetimeA
     public IList<V1beta1CertificateSpecForProviderCertificatePolicyLifetimeActionTrigger>? Trigger { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateSpecForProviderCertificatePolicySecretProperties
 {
     /// <summary>The Content-Type of the Certificate, such as application/x-pkcs12 for a PFX or application/x-pem-file for a PEM.</summary>
@@ -125,6 +134,7 @@ public partial class V1beta1CertificateSpecForProviderCertificatePolicySecretPro
     public string? ContentType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateSpecForProviderCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames
 {
     /// <summary>A list of alternative DNS names (FQDNs) identified by the Certificate.</summary>
@@ -140,6 +150,7 @@ public partial class V1beta1CertificateSpecForProviderCertificatePolicyX509Certi
     public IList<string>? Upns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateSpecForProviderCertificatePolicyX509CertificateProperties
 {
     /// <summary>A list of Extended/Enhanced Key Usages.</summary>
@@ -163,6 +174,7 @@ public partial class V1beta1CertificateSpecForProviderCertificatePolicyX509Certi
     public double? ValidityInMonths { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateSpecForProviderCertificatePolicy
 {
     /// <summary>A issuer_parameters block as defined below.</summary>
@@ -206,6 +218,7 @@ public enum V1beta1CertificateSpecForProviderKeyVaultIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CertificateSpecForProviderKeyVaultIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -219,6 +232,7 @@ public partial class V1beta1CertificateSpecForProviderKeyVaultIdRefPolicy
     public V1beta1CertificateSpecForProviderKeyVaultIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Vault in keyvault to populate keyVaultId.</summary>
 public partial class V1beta1CertificateSpecForProviderKeyVaultIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -250,6 +264,7 @@ public enum V1beta1CertificateSpecForProviderKeyVaultIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CertificateSpecForProviderKeyVaultIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -263,6 +278,7 @@ public partial class V1beta1CertificateSpecForProviderKeyVaultIdSelectorPolicy
     public V1beta1CertificateSpecForProviderKeyVaultIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Vault in keyvault to populate keyVaultId.</summary>
 public partial class V1beta1CertificateSpecForProviderKeyVaultIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -278,6 +294,7 @@ public partial class V1beta1CertificateSpecForProviderKeyVaultIdSelector
     public V1beta1CertificateSpecForProviderKeyVaultIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateSpecForProvider
 {
     /// <summary>A certificate block as defined below, used to Import an existing certificate. Changing this will create a new version of the Key Vault Certificate.</summary>
@@ -309,10 +326,12 @@ public partial class V1beta1CertificateSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateSpecInitProviderCertificate
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateSpecInitProviderCertificatePolicyIssuerParameters
 {
     /// <summary>The name of the Certificate Issuer. Possible values include Self (for self-signed certificate), or Unknown (for a certificate issuing authority like Let's Encrypt and Azure direct supported ones).</summary>
@@ -320,6 +339,7 @@ public partial class V1beta1CertificateSpecInitProviderCertificatePolicyIssuerPa
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateSpecInitProviderCertificatePolicyKeyProperties
 {
     /// <summary>Specifies the curve to use when creating an EC key. Possible values are P-256, P-256K, P-384, and P-521. This field will be required in a future release if key_type is EC or EC-HSM.</summary>
@@ -343,6 +363,7 @@ public partial class V1beta1CertificateSpecInitProviderCertificatePolicyKeyPrope
     public bool? ReuseKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateSpecInitProviderCertificatePolicyLifetimeActionAction
 {
     /// <summary>The Type of action to be performed when the lifetime trigger is triggerec. Possible values include AutoRenew and EmailContacts.</summary>
@@ -350,6 +371,7 @@ public partial class V1beta1CertificateSpecInitProviderCertificatePolicyLifetime
     public string? ActionType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateSpecInitProviderCertificatePolicyLifetimeActionTrigger
 {
     /// <summary>The number of days before the Certificate expires that the action associated with this Trigger should run. Conflicts with lifetime_percentage.</summary>
@@ -361,6 +383,7 @@ public partial class V1beta1CertificateSpecInitProviderCertificatePolicyLifetime
     public double? LifetimePercentage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateSpecInitProviderCertificatePolicyLifetimeAction
 {
     /// <summary>A action block as defined below.</summary>
@@ -372,6 +395,7 @@ public partial class V1beta1CertificateSpecInitProviderCertificatePolicyLifetime
     public IList<V1beta1CertificateSpecInitProviderCertificatePolicyLifetimeActionTrigger>? Trigger { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateSpecInitProviderCertificatePolicySecretProperties
 {
     /// <summary>The Content-Type of the Certificate, such as application/x-pkcs12 for a PFX or application/x-pem-file for a PEM.</summary>
@@ -379,6 +403,7 @@ public partial class V1beta1CertificateSpecInitProviderCertificatePolicySecretPr
     public string? ContentType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateSpecInitProviderCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames
 {
     /// <summary>A list of alternative DNS names (FQDNs) identified by the Certificate.</summary>
@@ -394,6 +419,7 @@ public partial class V1beta1CertificateSpecInitProviderCertificatePolicyX509Cert
     public IList<string>? Upns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateSpecInitProviderCertificatePolicyX509CertificateProperties
 {
     /// <summary>A list of Extended/Enhanced Key Usages.</summary>
@@ -417,6 +443,7 @@ public partial class V1beta1CertificateSpecInitProviderCertificatePolicyX509Cert
     public double? ValidityInMonths { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateSpecInitProviderCertificatePolicy
 {
     /// <summary>A issuer_parameters block as defined below.</summary>
@@ -460,6 +487,7 @@ public enum V1beta1CertificateSpecInitProviderKeyVaultIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CertificateSpecInitProviderKeyVaultIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -473,6 +501,7 @@ public partial class V1beta1CertificateSpecInitProviderKeyVaultIdRefPolicy
     public V1beta1CertificateSpecInitProviderKeyVaultIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Vault in keyvault to populate keyVaultId.</summary>
 public partial class V1beta1CertificateSpecInitProviderKeyVaultIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -504,6 +533,7 @@ public enum V1beta1CertificateSpecInitProviderKeyVaultIdSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CertificateSpecInitProviderKeyVaultIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -517,6 +547,7 @@ public partial class V1beta1CertificateSpecInitProviderKeyVaultIdSelectorPolicy
     public V1beta1CertificateSpecInitProviderKeyVaultIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Vault in keyvault to populate keyVaultId.</summary>
 public partial class V1beta1CertificateSpecInitProviderKeyVaultIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -532,6 +563,7 @@ public partial class V1beta1CertificateSpecInitProviderKeyVaultIdSelector
     public V1beta1CertificateSpecInitProviderKeyVaultIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1CertificateSpecInitProvider
 {
     /// <summary>A certificate block as defined below, used to Import an existing certificate. Changing this will create a new version of the Key Vault Certificate.</summary>
@@ -605,6 +637,7 @@ public enum V1beta1CertificateSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CertificateSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -618,6 +651,7 @@ public partial class V1beta1CertificateSpecProviderConfigRefPolicy
     public V1beta1CertificateSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1CertificateSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -649,6 +683,7 @@ public enum V1beta1CertificateSpecPublishConnectionDetailsToConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CertificateSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -662,6 +697,7 @@ public partial class V1beta1CertificateSpecPublishConnectionDetailsToConfigRefPo
     public V1beta1CertificateSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1CertificateSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -673,6 +709,7 @@ public partial class V1beta1CertificateSpecPublishConnectionDetailsToConfigRef
     public V1beta1CertificateSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1CertificateSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -688,6 +725,7 @@ public partial class V1beta1CertificateSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1CertificateSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -703,6 +741,7 @@ public partial class V1beta1CertificateSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1CertificateSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -714,6 +753,7 @@ public partial class V1beta1CertificateSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>CertificateSpec defines the desired state of Certificate</summary>
 public partial class V1beta1CertificateSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -746,6 +786,7 @@ public partial class V1beta1CertificateSpec
     public V1beta1CertificateSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary>The base64-encoded certificate contents.</summary>
 public partial class V1beta1CertificateStatusAtProviderCertificateContentsSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -761,6 +802,7 @@ public partial class V1beta1CertificateStatusAtProviderCertificateContentsSecret
     public string Namespace { get; set; }
 }
 
+/// <summary>The password associated with the certificate.</summary>
 public partial class V1beta1CertificateStatusAtProviderCertificatePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -776,6 +818,7 @@ public partial class V1beta1CertificateStatusAtProviderCertificatePasswordSecret
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateStatusAtProviderCertificate
 {
     /// <summary>The base64-encoded certificate contents.</summary>
@@ -787,6 +830,7 @@ public partial class V1beta1CertificateStatusAtProviderCertificate
     public V1beta1CertificateStatusAtProviderCertificatePasswordSecretRef? PasswordSecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateStatusAtProviderCertificateAttribute
 {
     /// <summary>The create time of the Key Vault Certificate.</summary>
@@ -814,6 +858,7 @@ public partial class V1beta1CertificateStatusAtProviderCertificateAttribute
     public string? Updated { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateStatusAtProviderCertificatePolicyIssuerParameters
 {
     /// <summary>The name of the Certificate Issuer. Possible values include Self (for self-signed certificate), or Unknown (for a certificate issuing authority like Let's Encrypt and Azure direct supported ones).</summary>
@@ -821,6 +866,7 @@ public partial class V1beta1CertificateStatusAtProviderCertificatePolicyIssuerPa
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateStatusAtProviderCertificatePolicyKeyProperties
 {
     /// <summary>Specifies the curve to use when creating an EC key. Possible values are P-256, P-256K, P-384, and P-521. This field will be required in a future release if key_type is EC or EC-HSM.</summary>
@@ -844,6 +890,7 @@ public partial class V1beta1CertificateStatusAtProviderCertificatePolicyKeyPrope
     public bool? ReuseKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateStatusAtProviderCertificatePolicyLifetimeActionAction
 {
     /// <summary>The Type of action to be performed when the lifetime trigger is triggerec. Possible values include AutoRenew and EmailContacts.</summary>
@@ -851,6 +898,7 @@ public partial class V1beta1CertificateStatusAtProviderCertificatePolicyLifetime
     public string? ActionType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateStatusAtProviderCertificatePolicyLifetimeActionTrigger
 {
     /// <summary>The number of days before the Certificate expires that the action associated with this Trigger should run. Conflicts with lifetime_percentage.</summary>
@@ -862,6 +910,7 @@ public partial class V1beta1CertificateStatusAtProviderCertificatePolicyLifetime
     public double? LifetimePercentage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateStatusAtProviderCertificatePolicyLifetimeAction
 {
     /// <summary>A action block as defined below.</summary>
@@ -873,6 +922,7 @@ public partial class V1beta1CertificateStatusAtProviderCertificatePolicyLifetime
     public IList<V1beta1CertificateStatusAtProviderCertificatePolicyLifetimeActionTrigger>? Trigger { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateStatusAtProviderCertificatePolicySecretProperties
 {
     /// <summary>The Content-Type of the Certificate, such as application/x-pkcs12 for a PFX or application/x-pem-file for a PEM.</summary>
@@ -880,6 +930,7 @@ public partial class V1beta1CertificateStatusAtProviderCertificatePolicySecretPr
     public string? ContentType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateStatusAtProviderCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames
 {
     /// <summary>A list of alternative DNS names (FQDNs) identified by the Certificate.</summary>
@@ -895,6 +946,7 @@ public partial class V1beta1CertificateStatusAtProviderCertificatePolicyX509Cert
     public IList<string>? Upns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateStatusAtProviderCertificatePolicyX509CertificateProperties
 {
     /// <summary>A list of Extended/Enhanced Key Usages.</summary>
@@ -918,6 +970,7 @@ public partial class V1beta1CertificateStatusAtProviderCertificatePolicyX509Cert
     public double? ValidityInMonths { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateStatusAtProviderCertificatePolicy
 {
     /// <summary>A issuer_parameters block as defined below.</summary>
@@ -941,6 +994,7 @@ public partial class V1beta1CertificateStatusAtProviderCertificatePolicy
     public IList<V1beta1CertificateStatusAtProviderCertificatePolicyX509CertificateProperties>? X509CertificateProperties { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateStatusAtProvider
 {
     /// <summary>A certificate block as defined below, used to Import an existing certificate. Changing this will create a new version of the Key Vault Certificate.</summary>
@@ -1008,6 +1062,7 @@ public partial class V1beta1CertificateStatusAtProvider
     public string? VersionlessSecretId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1CertificateStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1035,6 +1090,7 @@ public partial class V1beta1CertificateStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>CertificateStatus defines the observed state of Certificate.</summary>
 public partial class V1beta1CertificateStatus
 {
     /// <summary></summary>
@@ -1051,6 +1107,7 @@ public partial class V1beta1CertificateStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Certificate is the Schema for the Certificates API. Manages a Key Vault Certificate.</summary>
 public partial class V1beta1Certificate : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1CertificateSpec>, IStatus<V1beta1CertificateStatus>
 {
     public const string KubeApiVersion = "v1beta1";

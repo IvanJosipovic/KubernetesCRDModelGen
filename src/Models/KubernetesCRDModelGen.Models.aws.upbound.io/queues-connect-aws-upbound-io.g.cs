@@ -38,6 +38,7 @@ public enum V1beta2QueueSpecForProviderHoursOfOperationIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2QueueSpecForProviderHoursOfOperationIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta2QueueSpecForProviderHoursOfOperationIdRefPolicy
     public V1beta2QueueSpecForProviderHoursOfOperationIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a HoursOfOperation in connect to populate hoursOfOperationId.</summary>
 public partial class V1beta2QueueSpecForProviderHoursOfOperationIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta2QueueSpecForProviderHoursOfOperationIdSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2QueueSpecForProviderHoursOfOperationIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta2QueueSpecForProviderHoursOfOperationIdSelectorPolicy
     public V1beta2QueueSpecForProviderHoursOfOperationIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a HoursOfOperation in connect to populate hoursOfOperationId.</summary>
 public partial class V1beta2QueueSpecForProviderHoursOfOperationIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta2QueueSpecForProviderInstanceIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2QueueSpecForProviderInstanceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta2QueueSpecForProviderInstanceIdRefPolicy
     public V1beta2QueueSpecForProviderInstanceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Instance in connect to populate instanceId.</summary>
 public partial class V1beta2QueueSpecForProviderInstanceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta2QueueSpecForProviderInstanceIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2QueueSpecForProviderInstanceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta2QueueSpecForProviderInstanceIdSelectorPolicy
     public V1beta2QueueSpecForProviderInstanceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Instance in connect to populate instanceId.</summary>
 public partial class V1beta2QueueSpecForProviderInstanceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta2QueueSpecForProviderInstanceIdSelector
     public V1beta2QueueSpecForProviderInstanceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2QueueSpecForProviderOutboundCallerConfig
 {
     /// <summary>Specifies the caller ID name.</summary>
@@ -217,6 +226,7 @@ public partial class V1beta2QueueSpecForProviderOutboundCallerConfig
     public string? OutboundFlowId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2QueueSpecForProvider
 {
     /// <summary>Specifies the description of the Queue.</summary>
@@ -296,6 +306,7 @@ public enum V1beta2QueueSpecInitProviderHoursOfOperationIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2QueueSpecInitProviderHoursOfOperationIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -309,6 +320,7 @@ public partial class V1beta2QueueSpecInitProviderHoursOfOperationIdRefPolicy
     public V1beta2QueueSpecInitProviderHoursOfOperationIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a HoursOfOperation in connect to populate hoursOfOperationId.</summary>
 public partial class V1beta2QueueSpecInitProviderHoursOfOperationIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -340,6 +352,7 @@ public enum V1beta2QueueSpecInitProviderHoursOfOperationIdSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2QueueSpecInitProviderHoursOfOperationIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -353,6 +366,7 @@ public partial class V1beta2QueueSpecInitProviderHoursOfOperationIdSelectorPolic
     public V1beta2QueueSpecInitProviderHoursOfOperationIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a HoursOfOperation in connect to populate hoursOfOperationId.</summary>
 public partial class V1beta2QueueSpecInitProviderHoursOfOperationIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -388,6 +402,7 @@ public enum V1beta2QueueSpecInitProviderInstanceIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2QueueSpecInitProviderInstanceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -401,6 +416,7 @@ public partial class V1beta2QueueSpecInitProviderInstanceIdRefPolicy
     public V1beta2QueueSpecInitProviderInstanceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Instance in connect to populate instanceId.</summary>
 public partial class V1beta2QueueSpecInitProviderInstanceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -432,6 +448,7 @@ public enum V1beta2QueueSpecInitProviderInstanceIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2QueueSpecInitProviderInstanceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -445,6 +462,7 @@ public partial class V1beta2QueueSpecInitProviderInstanceIdSelectorPolicy
     public V1beta2QueueSpecInitProviderInstanceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Instance in connect to populate instanceId.</summary>
 public partial class V1beta2QueueSpecInitProviderInstanceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -460,6 +478,7 @@ public partial class V1beta2QueueSpecInitProviderInstanceIdSelector
     public V1beta2QueueSpecInitProviderInstanceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2QueueSpecInitProviderOutboundCallerConfig
 {
     /// <summary>Specifies the caller ID name.</summary>
@@ -475,6 +494,7 @@ public partial class V1beta2QueueSpecInitProviderOutboundCallerConfig
     public string? OutboundFlowId { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta2QueueSpecInitProvider
 {
     /// <summary>Specifies the description of the Queue.</summary>
@@ -572,6 +592,7 @@ public enum V1beta2QueueSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2QueueSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -585,6 +606,7 @@ public partial class V1beta2QueueSpecProviderConfigRefPolicy
     public V1beta2QueueSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta2QueueSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -616,6 +638,7 @@ public enum V1beta2QueueSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2QueueSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -629,6 +652,7 @@ public partial class V1beta2QueueSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta2QueueSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta2QueueSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -640,6 +664,7 @@ public partial class V1beta2QueueSpecPublishConnectionDetailsToConfigRef
     public V1beta2QueueSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta2QueueSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -655,6 +680,7 @@ public partial class V1beta2QueueSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta2QueueSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -670,6 +696,7 @@ public partial class V1beta2QueueSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta2QueueSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -681,6 +708,7 @@ public partial class V1beta2QueueSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>QueueSpec defines the desired state of Queue</summary>
 public partial class V1beta2QueueSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -713,6 +741,7 @@ public partial class V1beta2QueueSpec
     public V1beta2QueueSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2QueueStatusAtProviderOutboundCallerConfig
 {
     /// <summary>Specifies the caller ID name.</summary>
@@ -728,6 +757,7 @@ public partial class V1beta2QueueStatusAtProviderOutboundCallerConfig
     public string? OutboundFlowId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2QueueStatusAtProvider
 {
     /// <summary>The Amazon Resource Name (ARN) of the Queue.</summary>
@@ -783,6 +813,7 @@ public partial class V1beta2QueueStatusAtProvider
     public IDictionary<string, string>? TagsAll { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta2QueueStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -810,6 +841,7 @@ public partial class V1beta2QueueStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>QueueStatus defines the observed state of Queue.</summary>
 public partial class V1beta2QueueStatus
 {
     /// <summary></summary>
@@ -826,6 +858,7 @@ public partial class V1beta2QueueStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Queue is the Schema for the Queues API. Provides details about a specific Amazon Connect Queue</summary>
 public partial class V1beta2Queue : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta2QueueSpec>, IStatus<V1beta2QueueStatus>
 {
     public const string KubeApiVersion = "v1beta2";

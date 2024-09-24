@@ -38,6 +38,7 @@ public enum V1beta1WorkerPoolSpecForProviderNetworkConfigPeeredNetworkRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkerPoolSpecForProviderNetworkConfigPeeredNetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1WorkerPoolSpecForProviderNetworkConfigPeeredNetworkR
     public V1beta1WorkerPoolSpecForProviderNetworkConfigPeeredNetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate peeredNetwork.</summary>
 public partial class V1beta1WorkerPoolSpecForProviderNetworkConfigPeeredNetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1WorkerPoolSpecForProviderNetworkConfigPeeredNetworkSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkerPoolSpecForProviderNetworkConfigPeeredNetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1WorkerPoolSpecForProviderNetworkConfigPeeredNetworkS
     public V1beta1WorkerPoolSpecForProviderNetworkConfigPeeredNetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate peeredNetwork.</summary>
 public partial class V1beta1WorkerPoolSpecForProviderNetworkConfigPeeredNetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1WorkerPoolSpecForProviderNetworkConfigPeeredNetworkS
     public V1beta1WorkerPoolSpecForProviderNetworkConfigPeeredNetworkSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkerPoolSpecForProviderNetworkConfig
 {
     /// <summary>Immutable. The network definition that the workers are peered to. If this section is left empty, the workers will be peered to WorkerPool.project_id on the service producer network. Must be in the format projects/{project}/global/networks/{network}, where {project} is a project number, such as 12345, and {network} is the name of a VPC network in the project. See (https://cloud.google.com/cloud-build/docs/custom-workers/set-up-custom-worker-pool-environment#understanding_the_network_configuration_options)</summary>
@@ -129,6 +134,7 @@ public partial class V1beta1WorkerPoolSpecForProviderNetworkConfig
     public V1beta1WorkerPoolSpecForProviderNetworkConfigPeeredNetworkSelector? PeeredNetworkSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkerPoolSpecForProviderWorkerConfig
 {
     /// <summary>Size of the disk attached to the worker, in GB. See (https://cloud.google.com/cloud-build/docs/custom-workers/worker-pool-config-file). Specify a value of up to 1000. If 0 is specified, Cloud Build will use a standard disk size.</summary>
@@ -144,6 +150,7 @@ public partial class V1beta1WorkerPoolSpecForProviderWorkerConfig
     public bool? NoExternalIp { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkerPoolSpecForProvider
 {
     /// <summary></summary>
@@ -191,6 +198,7 @@ public enum V1beta1WorkerPoolSpecInitProviderNetworkConfigPeeredNetworkRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkerPoolSpecInitProviderNetworkConfigPeeredNetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -204,6 +212,7 @@ public partial class V1beta1WorkerPoolSpecInitProviderNetworkConfigPeeredNetwork
     public V1beta1WorkerPoolSpecInitProviderNetworkConfigPeeredNetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate peeredNetwork.</summary>
 public partial class V1beta1WorkerPoolSpecInitProviderNetworkConfigPeeredNetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -235,6 +244,7 @@ public enum V1beta1WorkerPoolSpecInitProviderNetworkConfigPeeredNetworkSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkerPoolSpecInitProviderNetworkConfigPeeredNetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -248,6 +258,7 @@ public partial class V1beta1WorkerPoolSpecInitProviderNetworkConfigPeeredNetwork
     public V1beta1WorkerPoolSpecInitProviderNetworkConfigPeeredNetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate peeredNetwork.</summary>
 public partial class V1beta1WorkerPoolSpecInitProviderNetworkConfigPeeredNetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -263,6 +274,7 @@ public partial class V1beta1WorkerPoolSpecInitProviderNetworkConfigPeeredNetwork
     public V1beta1WorkerPoolSpecInitProviderNetworkConfigPeeredNetworkSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkerPoolSpecInitProviderNetworkConfig
 {
     /// <summary>Immutable. The network definition that the workers are peered to. If this section is left empty, the workers will be peered to WorkerPool.project_id on the service producer network. Must be in the format projects/{project}/global/networks/{network}, where {project} is a project number, such as 12345, and {network} is the name of a VPC network in the project. See (https://cloud.google.com/cloud-build/docs/custom-workers/set-up-custom-worker-pool-environment#understanding_the_network_configuration_options)</summary>
@@ -282,6 +294,7 @@ public partial class V1beta1WorkerPoolSpecInitProviderNetworkConfig
     public V1beta1WorkerPoolSpecInitProviderNetworkConfigPeeredNetworkSelector? PeeredNetworkSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkerPoolSpecInitProviderWorkerConfig
 {
     /// <summary>Size of the disk attached to the worker, in GB. See (https://cloud.google.com/cloud-build/docs/custom-workers/worker-pool-config-file). Specify a value of up to 1000. If 0 is specified, Cloud Build will use a standard disk size.</summary>
@@ -297,6 +310,7 @@ public partial class V1beta1WorkerPoolSpecInitProviderWorkerConfig
     public bool? NoExternalIp { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1WorkerPoolSpecInitProvider
 {
     /// <summary></summary>
@@ -362,6 +376,7 @@ public enum V1beta1WorkerPoolSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkerPoolSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -375,6 +390,7 @@ public partial class V1beta1WorkerPoolSpecProviderConfigRefPolicy
     public V1beta1WorkerPoolSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1WorkerPoolSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -406,6 +422,7 @@ public enum V1beta1WorkerPoolSpecPublishConnectionDetailsToConfigRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkerPoolSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -419,6 +436,7 @@ public partial class V1beta1WorkerPoolSpecPublishConnectionDetailsToConfigRefPol
     public V1beta1WorkerPoolSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1WorkerPoolSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -430,6 +448,7 @@ public partial class V1beta1WorkerPoolSpecPublishConnectionDetailsToConfigRef
     public V1beta1WorkerPoolSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1WorkerPoolSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -445,6 +464,7 @@ public partial class V1beta1WorkerPoolSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1WorkerPoolSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -460,6 +480,7 @@ public partial class V1beta1WorkerPoolSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1WorkerPoolSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -471,6 +492,7 @@ public partial class V1beta1WorkerPoolSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>WorkerPoolSpec defines the desired state of WorkerPool</summary>
 public partial class V1beta1WorkerPoolSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -503,6 +525,7 @@ public partial class V1beta1WorkerPoolSpec
     public V1beta1WorkerPoolSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkerPoolStatusAtProviderNetworkConfig
 {
     /// <summary>Immutable. The network definition that the workers are peered to. If this section is left empty, the workers will be peered to WorkerPool.project_id on the service producer network. Must be in the format projects/{project}/global/networks/{network}, where {project} is a project number, such as 12345, and {network} is the name of a VPC network in the project. See (https://cloud.google.com/cloud-build/docs/custom-workers/set-up-custom-worker-pool-environment#understanding_the_network_configuration_options)</summary>
@@ -514,6 +537,7 @@ public partial class V1beta1WorkerPoolStatusAtProviderNetworkConfig
     public string? PeeredNetworkIpRange { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkerPoolStatusAtProviderWorkerConfig
 {
     /// <summary>Size of the disk attached to the worker, in GB. See (https://cloud.google.com/cloud-build/docs/custom-workers/worker-pool-config-file). Specify a value of up to 1000. If 0 is specified, Cloud Build will use a standard disk size.</summary>
@@ -529,6 +553,7 @@ public partial class V1beta1WorkerPoolStatusAtProviderWorkerConfig
     public bool? NoExternalIp { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkerPoolStatusAtProvider
 {
     /// <summary></summary>
@@ -584,6 +609,7 @@ public partial class V1beta1WorkerPoolStatusAtProvider
     public IList<V1beta1WorkerPoolStatusAtProviderWorkerConfig>? WorkerConfig { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1WorkerPoolStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -611,6 +637,7 @@ public partial class V1beta1WorkerPoolStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>WorkerPoolStatus defines the observed state of WorkerPool.</summary>
 public partial class V1beta1WorkerPoolStatus
 {
     /// <summary></summary>
@@ -627,6 +654,7 @@ public partial class V1beta1WorkerPoolStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>WorkerPool is the Schema for the WorkerPools API. Configuration for custom WorkerPool to run builds</summary>
 public partial class V1beta1WorkerPool : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1WorkerPoolSpec>, IStatus<V1beta1WorkerPoolStatus>
 {
     public const string KubeApiVersion = "v1beta1";

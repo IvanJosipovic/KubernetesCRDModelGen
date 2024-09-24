@@ -18,6 +18,7 @@ public enum V1beta1TopicRuleSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderCloudwatchAlarm
 {
     /// <summary>The CloudWatch alarm name.</summary>
@@ -37,6 +38,7 @@ public partial class V1beta1TopicRuleSpecForProviderCloudwatchAlarm
     public string? StateValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderCloudwatchLogs
 {
     /// <summary>The payload that contains a JSON array of records will be sent to CloudWatch via a batch call.</summary>
@@ -52,6 +54,7 @@ public partial class V1beta1TopicRuleSpecForProviderCloudwatchLogs
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderCloudwatchMetric
 {
     /// <summary>The CloudWatch metric name.</summary>
@@ -79,6 +82,7 @@ public partial class V1beta1TopicRuleSpecForProviderCloudwatchMetric
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderDynamodb
 {
     /// <summary>The hash key name.</summary>
@@ -122,6 +126,7 @@ public partial class V1beta1TopicRuleSpecForProviderDynamodb
     public string? TableName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderDynamodbv2PutItem
 {
     /// <summary>The name of the DynamoDB table.</summary>
@@ -129,6 +134,7 @@ public partial class V1beta1TopicRuleSpecForProviderDynamodbv2PutItem
     public string? TableName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderDynamodbv2
 {
     /// <summary>Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.</summary>
@@ -140,6 +146,7 @@ public partial class V1beta1TopicRuleSpecForProviderDynamodbv2
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderElasticsearch
 {
     /// <summary>The endpoint of your Elasticsearch domain.</summary>
@@ -163,6 +170,7 @@ public partial class V1beta1TopicRuleSpecForProviderElasticsearch
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderErrorActionCloudwatchAlarm
 {
     /// <summary>The CloudWatch alarm name.</summary>
@@ -182,6 +190,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionCloudwatchAlarm
     public string? StateValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderErrorActionCloudwatchLogs
 {
     /// <summary>The payload that contains a JSON array of records will be sent to CloudWatch via a batch call.</summary>
@@ -197,6 +206,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionCloudwatchLogs
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderErrorActionCloudwatchMetric
 {
     /// <summary>The CloudWatch metric name.</summary>
@@ -224,6 +234,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionCloudwatchMetric
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderErrorActionDynamodb
 {
     /// <summary>The hash key name.</summary>
@@ -267,6 +278,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionDynamodb
     public string? TableName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderErrorActionDynamodbv2PutItem
 {
     /// <summary>The name of the DynamoDB table.</summary>
@@ -274,6 +286,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionDynamodbv2PutItem
     public string? TableName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderErrorActionDynamodbv2
 {
     /// <summary>Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.</summary>
@@ -285,6 +298,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionDynamodbv2
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderErrorActionElasticsearch
 {
     /// <summary>The endpoint of your Elasticsearch domain.</summary>
@@ -308,6 +322,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionElasticsearch
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderErrorActionFirehose
 {
     /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
@@ -327,6 +342,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionFirehose
     public string? Separator { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderErrorActionHttpHttpHeader
 {
     /// <summary>The name of the HTTP header.</summary>
@@ -338,6 +354,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionHttpHttpHeader
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderErrorActionHttp
 {
     /// <summary>The HTTPS URL used to verify ownership of url.</summary>
@@ -353,6 +370,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionHttp
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderErrorActionIotAnalytics
 {
     /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
@@ -368,6 +386,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionIotAnalytics
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderErrorActionIotEvents
 {
     /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
@@ -387,6 +406,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionIotEvents
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderErrorActionKafkaHeader
 {
     /// <summary>The name of the HTTP header.</summary>
@@ -398,6 +418,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionKafkaHeader
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderErrorActionKafka
 {
     /// <summary>Properties of the Apache Kafka producer client. For more info, see the AWS documentation.</summary>
@@ -425,6 +446,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionKafka
     public string? Topic { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderErrorActionKinesis
 {
     /// <summary>The partition key.</summary>
@@ -440,6 +462,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionKinesis
     public string? StreamName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderErrorActionLambda
 {
     /// <summary>The ARN of the Lambda function.</summary>
@@ -447,6 +470,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionLambda
     public string? FunctionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderErrorActionRepublish
 {
     /// <summary>The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0.</summary>
@@ -462,6 +486,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionRepublish
     public string? Topic { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderErrorActionS3
 {
     /// <summary>The Amazon S3 bucket name.</summary>
@@ -501,6 +526,7 @@ public enum V1beta1TopicRuleSpecForProviderErrorActionSnsRoleArnRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -514,6 +540,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsRoleArnRefPoli
     public V1beta1TopicRuleSpecForProviderErrorActionSnsRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -545,6 +572,7 @@ public enum V1beta1TopicRuleSpecForProviderErrorActionSnsRoleArnSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -558,6 +586,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsRoleArnSelecto
     public V1beta1TopicRuleSpecForProviderErrorActionSnsRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -593,6 +622,7 @@ public enum V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -606,6 +636,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnRefPo
     public V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Topic in sns to populate targetArn.</summary>
 public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -637,6 +668,7 @@ public enum V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -650,6 +682,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnSelec
     public V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Topic in sns to populate targetArn.</summary>
 public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -665,6 +698,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnSelec
     public V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderErrorActionSns
 {
     /// <summary>The message format of the message to publish. Accepted values are "JSON" and "RAW".</summary>
@@ -696,6 +730,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionSns
     public V1beta1TopicRuleSpecForProviderErrorActionSnsTargetArnSelector? TargetArnSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderErrorActionSqs
 {
     /// <summary>The URL of the Amazon SQS queue.</summary>
@@ -711,6 +746,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionSqs
     public bool? UseBase64 { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderErrorActionStepFunctions
 {
     /// <summary>The prefix used to generate, along with a UUID, the unique state machine execution name.</summary>
@@ -726,6 +762,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionStepFunctions
     public string? StateMachineName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderErrorActionTimestreamDimension
 {
     /// <summary>The name of the rule.</summary>
@@ -737,6 +774,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionTimestreamDimensi
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderErrorActionTimestreamTimestamp
 {
     /// <summary>The precision of the timestamp value that results from the expression described in value. Valid values: SECONDS, MILLISECONDS, MICROSECONDS, NANOSECONDS.</summary>
@@ -748,6 +786,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionTimestreamTimesta
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderErrorActionTimestream
 {
     /// <summary>The name of an Amazon Timestream database.</summary>
@@ -771,6 +810,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionTimestream
     public IList<V1beta1TopicRuleSpecForProviderErrorActionTimestreamTimestamp>? Timestamp { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderErrorAction
 {
     /// <summary></summary>
@@ -850,6 +890,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorAction
     public IList<V1beta1TopicRuleSpecForProviderErrorActionTimestream>? Timestream { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderFirehose
 {
     /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
@@ -869,6 +910,7 @@ public partial class V1beta1TopicRuleSpecForProviderFirehose
     public string? Separator { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderHttpHttpHeader
 {
     /// <summary>The name of the HTTP header.</summary>
@@ -880,6 +922,7 @@ public partial class V1beta1TopicRuleSpecForProviderHttpHttpHeader
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderHttp
 {
     /// <summary>The HTTPS URL used to verify ownership of url.</summary>
@@ -895,6 +938,7 @@ public partial class V1beta1TopicRuleSpecForProviderHttp
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderIotAnalytics
 {
     /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
@@ -910,6 +954,7 @@ public partial class V1beta1TopicRuleSpecForProviderIotAnalytics
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderIotEvents
 {
     /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
@@ -929,6 +974,7 @@ public partial class V1beta1TopicRuleSpecForProviderIotEvents
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderKafkaHeader
 {
     /// <summary>The name of the HTTP header.</summary>
@@ -940,6 +986,7 @@ public partial class V1beta1TopicRuleSpecForProviderKafkaHeader
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderKafka
 {
     /// <summary>Properties of the Apache Kafka producer client. For more info, see the AWS documentation.</summary>
@@ -967,6 +1014,7 @@ public partial class V1beta1TopicRuleSpecForProviderKafka
     public string? Topic { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderKinesis
 {
     /// <summary>The partition key.</summary>
@@ -982,6 +1030,7 @@ public partial class V1beta1TopicRuleSpecForProviderKinesis
     public string? StreamName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderLambda
 {
     /// <summary>The ARN of the Lambda function.</summary>
@@ -989,6 +1038,7 @@ public partial class V1beta1TopicRuleSpecForProviderLambda
     public string? FunctionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderRepublish
 {
     /// <summary>The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0.</summary>
@@ -1004,6 +1054,7 @@ public partial class V1beta1TopicRuleSpecForProviderRepublish
     public string? Topic { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderS3
 {
     /// <summary>The Amazon S3 bucket name.</summary>
@@ -1043,6 +1094,7 @@ public enum V1beta1TopicRuleSpecForProviderSnsRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TopicRuleSpecForProviderSnsRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1056,6 +1108,7 @@ public partial class V1beta1TopicRuleSpecForProviderSnsRoleArnRefPolicy
     public V1beta1TopicRuleSpecForProviderSnsRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1TopicRuleSpecForProviderSnsRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1087,6 +1140,7 @@ public enum V1beta1TopicRuleSpecForProviderSnsRoleArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TopicRuleSpecForProviderSnsRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1100,6 +1154,7 @@ public partial class V1beta1TopicRuleSpecForProviderSnsRoleArnSelectorPolicy
     public V1beta1TopicRuleSpecForProviderSnsRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1TopicRuleSpecForProviderSnsRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1135,6 +1190,7 @@ public enum V1beta1TopicRuleSpecForProviderSnsTargetArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TopicRuleSpecForProviderSnsTargetArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1148,6 +1204,7 @@ public partial class V1beta1TopicRuleSpecForProviderSnsTargetArnRefPolicy
     public V1beta1TopicRuleSpecForProviderSnsTargetArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Topic in sns to populate targetArn.</summary>
 public partial class V1beta1TopicRuleSpecForProviderSnsTargetArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1179,6 +1236,7 @@ public enum V1beta1TopicRuleSpecForProviderSnsTargetArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TopicRuleSpecForProviderSnsTargetArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1192,6 +1250,7 @@ public partial class V1beta1TopicRuleSpecForProviderSnsTargetArnSelectorPolicy
     public V1beta1TopicRuleSpecForProviderSnsTargetArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Topic in sns to populate targetArn.</summary>
 public partial class V1beta1TopicRuleSpecForProviderSnsTargetArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1207,6 +1266,7 @@ public partial class V1beta1TopicRuleSpecForProviderSnsTargetArnSelector
     public V1beta1TopicRuleSpecForProviderSnsTargetArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderSns
 {
     /// <summary>The message format of the message to publish. Accepted values are "JSON" and "RAW".</summary>
@@ -1238,6 +1298,7 @@ public partial class V1beta1TopicRuleSpecForProviderSns
     public V1beta1TopicRuleSpecForProviderSnsTargetArnSelector? TargetArnSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderSqs
 {
     /// <summary>The URL of the Amazon SQS queue.</summary>
@@ -1253,6 +1314,7 @@ public partial class V1beta1TopicRuleSpecForProviderSqs
     public bool? UseBase64 { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderStepFunctions
 {
     /// <summary>The prefix used to generate, along with a UUID, the unique state machine execution name.</summary>
@@ -1268,6 +1330,7 @@ public partial class V1beta1TopicRuleSpecForProviderStepFunctions
     public string? StateMachineName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderTimestreamDimension
 {
     /// <summary>The name of the rule.</summary>
@@ -1279,6 +1342,7 @@ public partial class V1beta1TopicRuleSpecForProviderTimestreamDimension
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderTimestreamTimestamp
 {
     /// <summary>The precision of the timestamp value that results from the expression described in value. Valid values: SECONDS, MILLISECONDS, MICROSECONDS, NANOSECONDS.</summary>
@@ -1290,6 +1354,7 @@ public partial class V1beta1TopicRuleSpecForProviderTimestreamTimestamp
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProviderTimestream
 {
     /// <summary>The name of an Amazon Timestream database.</summary>
@@ -1313,6 +1378,7 @@ public partial class V1beta1TopicRuleSpecForProviderTimestream
     public IList<V1beta1TopicRuleSpecForProviderTimestreamTimestamp>? Timestamp { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecForProvider
 {
     /// <summary></summary>
@@ -1420,6 +1486,7 @@ public partial class V1beta1TopicRuleSpecForProvider
     public IList<V1beta1TopicRuleSpecForProviderTimestream>? Timestream { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderCloudwatchAlarm
 {
     /// <summary>The CloudWatch alarm name.</summary>
@@ -1439,6 +1506,7 @@ public partial class V1beta1TopicRuleSpecInitProviderCloudwatchAlarm
     public string? StateValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderCloudwatchLogs
 {
     /// <summary>The payload that contains a JSON array of records will be sent to CloudWatch via a batch call.</summary>
@@ -1454,6 +1522,7 @@ public partial class V1beta1TopicRuleSpecInitProviderCloudwatchLogs
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderCloudwatchMetric
 {
     /// <summary>The CloudWatch metric name.</summary>
@@ -1481,6 +1550,7 @@ public partial class V1beta1TopicRuleSpecInitProviderCloudwatchMetric
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderDynamodb
 {
     /// <summary>The hash key name.</summary>
@@ -1524,6 +1594,7 @@ public partial class V1beta1TopicRuleSpecInitProviderDynamodb
     public string? TableName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderDynamodbv2PutItem
 {
     /// <summary>The name of the DynamoDB table.</summary>
@@ -1531,6 +1602,7 @@ public partial class V1beta1TopicRuleSpecInitProviderDynamodbv2PutItem
     public string? TableName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderDynamodbv2
 {
     /// <summary>Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.</summary>
@@ -1542,6 +1614,7 @@ public partial class V1beta1TopicRuleSpecInitProviderDynamodbv2
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderElasticsearch
 {
     /// <summary>The endpoint of your Elasticsearch domain.</summary>
@@ -1565,6 +1638,7 @@ public partial class V1beta1TopicRuleSpecInitProviderElasticsearch
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionCloudwatchAlarm
 {
     /// <summary>The CloudWatch alarm name.</summary>
@@ -1584,6 +1658,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionCloudwatchAlarm
     public string? StateValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionCloudwatchLogs
 {
     /// <summary>The payload that contains a JSON array of records will be sent to CloudWatch via a batch call.</summary>
@@ -1599,6 +1674,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionCloudwatchLogs
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionCloudwatchMetric
 {
     /// <summary>The CloudWatch metric name.</summary>
@@ -1626,6 +1702,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionCloudwatchMetric
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionDynamodb
 {
     /// <summary>The hash key name.</summary>
@@ -1669,6 +1746,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionDynamodb
     public string? TableName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionDynamodbv2PutItem
 {
     /// <summary>The name of the DynamoDB table.</summary>
@@ -1676,6 +1754,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionDynamodbv2PutIte
     public string? TableName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionDynamodbv2
 {
     /// <summary>Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.</summary>
@@ -1687,6 +1766,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionDynamodbv2
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionElasticsearch
 {
     /// <summary>The endpoint of your Elasticsearch domain.</summary>
@@ -1710,6 +1790,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionElasticsearch
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionFirehose
 {
     /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
@@ -1729,6 +1810,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionFirehose
     public string? Separator { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionHttpHttpHeader
 {
     /// <summary>The name of the HTTP header.</summary>
@@ -1740,6 +1822,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionHttpHttpHeader
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionHttp
 {
     /// <summary>The HTTPS URL used to verify ownership of url.</summary>
@@ -1755,6 +1838,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionHttp
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionIotAnalytics
 {
     /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
@@ -1770,6 +1854,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionIotAnalytics
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionIotEvents
 {
     /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
@@ -1789,6 +1874,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionIotEvents
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionKafkaHeader
 {
     /// <summary>The name of the HTTP header.</summary>
@@ -1800,6 +1886,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionKafkaHeader
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionKafka
 {
     /// <summary>Properties of the Apache Kafka producer client. For more info, see the AWS documentation.</summary>
@@ -1827,6 +1914,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionKafka
     public string? Topic { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionKinesis
 {
     /// <summary>The partition key.</summary>
@@ -1842,6 +1930,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionKinesis
     public string? StreamName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionLambda
 {
     /// <summary>The ARN of the Lambda function.</summary>
@@ -1849,6 +1938,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionLambda
     public string? FunctionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionRepublish
 {
     /// <summary>The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0.</summary>
@@ -1864,6 +1954,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionRepublish
     public string? Topic { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionS3
 {
     /// <summary>The Amazon S3 bucket name.</summary>
@@ -1903,6 +1994,7 @@ public enum V1beta1TopicRuleSpecInitProviderErrorActionSnsRoleArnRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1916,6 +2008,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsRoleArnRefPol
     public V1beta1TopicRuleSpecInitProviderErrorActionSnsRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1947,6 +2040,7 @@ public enum V1beta1TopicRuleSpecInitProviderErrorActionSnsRoleArnSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1960,6 +2054,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsRoleArnSelect
     public V1beta1TopicRuleSpecInitProviderErrorActionSnsRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1995,6 +2090,7 @@ public enum V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2008,6 +2104,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnRefP
     public V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Topic in sns to populate targetArn.</summary>
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2039,6 +2136,7 @@ public enum V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2052,6 +2150,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnSele
     public V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Topic in sns to populate targetArn.</summary>
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2067,6 +2166,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnSele
     public V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionSns
 {
     /// <summary>The message format of the message to publish. Accepted values are "JSON" and "RAW".</summary>
@@ -2098,6 +2198,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionSns
     public V1beta1TopicRuleSpecInitProviderErrorActionSnsTargetArnSelector? TargetArnSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionSqs
 {
     /// <summary>The URL of the Amazon SQS queue.</summary>
@@ -2113,6 +2214,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionSqs
     public bool? UseBase64 { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionStepFunctions
 {
     /// <summary>The prefix used to generate, along with a UUID, the unique state machine execution name.</summary>
@@ -2128,6 +2230,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionStepFunctions
     public string? StateMachineName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionTimestreamDimension
 {
     /// <summary>The name of the rule.</summary>
@@ -2139,6 +2242,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionTimestreamDimens
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionTimestreamTimestamp
 {
     /// <summary>The precision of the timestamp value that results from the expression described in value. Valid values: SECONDS, MILLISECONDS, MICROSECONDS, NANOSECONDS.</summary>
@@ -2150,6 +2254,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionTimestreamTimest
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionTimestream
 {
     /// <summary>The name of an Amazon Timestream database.</summary>
@@ -2173,6 +2278,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionTimestream
     public IList<V1beta1TopicRuleSpecInitProviderErrorActionTimestreamTimestamp>? Timestamp { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderErrorAction
 {
     /// <summary></summary>
@@ -2252,6 +2358,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorAction
     public IList<V1beta1TopicRuleSpecInitProviderErrorActionTimestream>? Timestream { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderFirehose
 {
     /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
@@ -2271,6 +2378,7 @@ public partial class V1beta1TopicRuleSpecInitProviderFirehose
     public string? Separator { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderHttpHttpHeader
 {
     /// <summary>The name of the HTTP header.</summary>
@@ -2282,6 +2390,7 @@ public partial class V1beta1TopicRuleSpecInitProviderHttpHttpHeader
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderHttp
 {
     /// <summary>The HTTPS URL used to verify ownership of url.</summary>
@@ -2297,6 +2406,7 @@ public partial class V1beta1TopicRuleSpecInitProviderHttp
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderIotAnalytics
 {
     /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
@@ -2312,6 +2422,7 @@ public partial class V1beta1TopicRuleSpecInitProviderIotAnalytics
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderIotEvents
 {
     /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
@@ -2331,6 +2442,7 @@ public partial class V1beta1TopicRuleSpecInitProviderIotEvents
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderKafkaHeader
 {
     /// <summary>The name of the HTTP header.</summary>
@@ -2342,6 +2454,7 @@ public partial class V1beta1TopicRuleSpecInitProviderKafkaHeader
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderKafka
 {
     /// <summary>Properties of the Apache Kafka producer client. For more info, see the AWS documentation.</summary>
@@ -2369,6 +2482,7 @@ public partial class V1beta1TopicRuleSpecInitProviderKafka
     public string? Topic { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderKinesis
 {
     /// <summary>The partition key.</summary>
@@ -2384,6 +2498,7 @@ public partial class V1beta1TopicRuleSpecInitProviderKinesis
     public string? StreamName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderLambda
 {
     /// <summary>The ARN of the Lambda function.</summary>
@@ -2391,6 +2506,7 @@ public partial class V1beta1TopicRuleSpecInitProviderLambda
     public string? FunctionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderRepublish
 {
     /// <summary>The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0.</summary>
@@ -2406,6 +2522,7 @@ public partial class V1beta1TopicRuleSpecInitProviderRepublish
     public string? Topic { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderS3
 {
     /// <summary>The Amazon S3 bucket name.</summary>
@@ -2445,6 +2562,7 @@ public enum V1beta1TopicRuleSpecInitProviderSnsRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TopicRuleSpecInitProviderSnsRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2458,6 +2576,7 @@ public partial class V1beta1TopicRuleSpecInitProviderSnsRoleArnRefPolicy
     public V1beta1TopicRuleSpecInitProviderSnsRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1TopicRuleSpecInitProviderSnsRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2489,6 +2608,7 @@ public enum V1beta1TopicRuleSpecInitProviderSnsRoleArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TopicRuleSpecInitProviderSnsRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2502,6 +2622,7 @@ public partial class V1beta1TopicRuleSpecInitProviderSnsRoleArnSelectorPolicy
     public V1beta1TopicRuleSpecInitProviderSnsRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1TopicRuleSpecInitProviderSnsRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2537,6 +2658,7 @@ public enum V1beta1TopicRuleSpecInitProviderSnsTargetArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TopicRuleSpecInitProviderSnsTargetArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2550,6 +2672,7 @@ public partial class V1beta1TopicRuleSpecInitProviderSnsTargetArnRefPolicy
     public V1beta1TopicRuleSpecInitProviderSnsTargetArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Topic in sns to populate targetArn.</summary>
 public partial class V1beta1TopicRuleSpecInitProviderSnsTargetArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2581,6 +2704,7 @@ public enum V1beta1TopicRuleSpecInitProviderSnsTargetArnSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TopicRuleSpecInitProviderSnsTargetArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2594,6 +2718,7 @@ public partial class V1beta1TopicRuleSpecInitProviderSnsTargetArnSelectorPolicy
     public V1beta1TopicRuleSpecInitProviderSnsTargetArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Topic in sns to populate targetArn.</summary>
 public partial class V1beta1TopicRuleSpecInitProviderSnsTargetArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2609,6 +2734,7 @@ public partial class V1beta1TopicRuleSpecInitProviderSnsTargetArnSelector
     public V1beta1TopicRuleSpecInitProviderSnsTargetArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderSns
 {
     /// <summary>The message format of the message to publish. Accepted values are "JSON" and "RAW".</summary>
@@ -2640,6 +2766,7 @@ public partial class V1beta1TopicRuleSpecInitProviderSns
     public V1beta1TopicRuleSpecInitProviderSnsTargetArnSelector? TargetArnSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderSqs
 {
     /// <summary>The URL of the Amazon SQS queue.</summary>
@@ -2655,6 +2782,7 @@ public partial class V1beta1TopicRuleSpecInitProviderSqs
     public bool? UseBase64 { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderStepFunctions
 {
     /// <summary>The prefix used to generate, along with a UUID, the unique state machine execution name.</summary>
@@ -2670,6 +2798,7 @@ public partial class V1beta1TopicRuleSpecInitProviderStepFunctions
     public string? StateMachineName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderTimestreamDimension
 {
     /// <summary>The name of the rule.</summary>
@@ -2681,6 +2810,7 @@ public partial class V1beta1TopicRuleSpecInitProviderTimestreamDimension
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderTimestreamTimestamp
 {
     /// <summary>The precision of the timestamp value that results from the expression described in value. Valid values: SECONDS, MILLISECONDS, MICROSECONDS, NANOSECONDS.</summary>
@@ -2692,6 +2822,7 @@ public partial class V1beta1TopicRuleSpecInitProviderTimestreamTimestamp
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleSpecInitProviderTimestream
 {
     /// <summary>The name of an Amazon Timestream database.</summary>
@@ -2715,6 +2846,7 @@ public partial class V1beta1TopicRuleSpecInitProviderTimestream
     public IList<V1beta1TopicRuleSpecInitProviderTimestreamTimestamp>? Timestamp { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1TopicRuleSpecInitProvider
 {
     /// <summary></summary>
@@ -2860,6 +2992,7 @@ public enum V1beta1TopicRuleSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TopicRuleSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2873,6 +3006,7 @@ public partial class V1beta1TopicRuleSpecProviderConfigRefPolicy
     public V1beta1TopicRuleSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1TopicRuleSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2904,6 +3038,7 @@ public enum V1beta1TopicRuleSpecPublishConnectionDetailsToConfigRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TopicRuleSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2917,6 +3052,7 @@ public partial class V1beta1TopicRuleSpecPublishConnectionDetailsToConfigRefPoli
     public V1beta1TopicRuleSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1TopicRuleSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2928,6 +3064,7 @@ public partial class V1beta1TopicRuleSpecPublishConnectionDetailsToConfigRef
     public V1beta1TopicRuleSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1TopicRuleSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -2943,6 +3080,7 @@ public partial class V1beta1TopicRuleSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1TopicRuleSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -2958,6 +3096,7 @@ public partial class V1beta1TopicRuleSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1TopicRuleSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -2969,6 +3108,7 @@ public partial class V1beta1TopicRuleSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>TopicRuleSpec defines the desired state of TopicRule</summary>
 public partial class V1beta1TopicRuleSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -3001,6 +3141,7 @@ public partial class V1beta1TopicRuleSpec
     public V1beta1TopicRuleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderCloudwatchAlarm
 {
     /// <summary>The CloudWatch alarm name.</summary>
@@ -3020,6 +3161,7 @@ public partial class V1beta1TopicRuleStatusAtProviderCloudwatchAlarm
     public string? StateValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderCloudwatchLogs
 {
     /// <summary>The payload that contains a JSON array of records will be sent to CloudWatch via a batch call.</summary>
@@ -3035,6 +3177,7 @@ public partial class V1beta1TopicRuleStatusAtProviderCloudwatchLogs
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderCloudwatchMetric
 {
     /// <summary>The CloudWatch metric name.</summary>
@@ -3062,6 +3205,7 @@ public partial class V1beta1TopicRuleStatusAtProviderCloudwatchMetric
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderDynamodb
 {
     /// <summary>The hash key name.</summary>
@@ -3105,6 +3249,7 @@ public partial class V1beta1TopicRuleStatusAtProviderDynamodb
     public string? TableName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderDynamodbv2PutItem
 {
     /// <summary>The name of the DynamoDB table.</summary>
@@ -3112,6 +3257,7 @@ public partial class V1beta1TopicRuleStatusAtProviderDynamodbv2PutItem
     public string? TableName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderDynamodbv2
 {
     /// <summary>Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.</summary>
@@ -3123,6 +3269,7 @@ public partial class V1beta1TopicRuleStatusAtProviderDynamodbv2
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderElasticsearch
 {
     /// <summary>The endpoint of your Elasticsearch domain.</summary>
@@ -3146,6 +3293,7 @@ public partial class V1beta1TopicRuleStatusAtProviderElasticsearch
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionCloudwatchAlarm
 {
     /// <summary>The CloudWatch alarm name.</summary>
@@ -3165,6 +3313,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionCloudwatchAlarm
     public string? StateValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionCloudwatchLogs
 {
     /// <summary>The payload that contains a JSON array of records will be sent to CloudWatch via a batch call.</summary>
@@ -3180,6 +3329,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionCloudwatchLogs
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionCloudwatchMetric
 {
     /// <summary>The CloudWatch metric name.</summary>
@@ -3207,6 +3357,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionCloudwatchMetric
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionDynamodb
 {
     /// <summary>The hash key name.</summary>
@@ -3250,6 +3401,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionDynamodb
     public string? TableName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionDynamodbv2PutItem
 {
     /// <summary>The name of the DynamoDB table.</summary>
@@ -3257,6 +3409,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionDynamodbv2PutIte
     public string? TableName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionDynamodbv2
 {
     /// <summary>Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.</summary>
@@ -3268,6 +3421,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionDynamodbv2
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionElasticsearch
 {
     /// <summary>The endpoint of your Elasticsearch domain.</summary>
@@ -3291,6 +3445,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionElasticsearch
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionFirehose
 {
     /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
@@ -3310,6 +3465,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionFirehose
     public string? Separator { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionHttpHttpHeader
 {
     /// <summary>The name of the HTTP header.</summary>
@@ -3321,6 +3477,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionHttpHttpHeader
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionHttp
 {
     /// <summary>The HTTPS URL used to verify ownership of url.</summary>
@@ -3336,6 +3493,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionHttp
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionIotAnalytics
 {
     /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
@@ -3351,6 +3509,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionIotAnalytics
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionIotEvents
 {
     /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
@@ -3370,6 +3529,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionIotEvents
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionKafkaHeader
 {
     /// <summary>The name of the HTTP header.</summary>
@@ -3381,6 +3541,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionKafkaHeader
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionKafka
 {
     /// <summary>Properties of the Apache Kafka producer client. For more info, see the AWS documentation.</summary>
@@ -3408,6 +3569,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionKafka
     public string? Topic { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionKinesis
 {
     /// <summary>The partition key.</summary>
@@ -3423,6 +3585,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionKinesis
     public string? StreamName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionLambda
 {
     /// <summary>The ARN of the Lambda function.</summary>
@@ -3430,6 +3593,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionLambda
     public string? FunctionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionRepublish
 {
     /// <summary>The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0.</summary>
@@ -3445,6 +3609,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionRepublish
     public string? Topic { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionS3
 {
     /// <summary>The Amazon S3 bucket name.</summary>
@@ -3464,6 +3629,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionS3
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionSns
 {
     /// <summary>The message format of the message to publish. Accepted values are "JSON" and "RAW".</summary>
@@ -3479,6 +3645,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionSns
     public string? TargetArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionSqs
 {
     /// <summary>The URL of the Amazon SQS queue.</summary>
@@ -3494,6 +3661,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionSqs
     public bool? UseBase64 { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionStepFunctions
 {
     /// <summary>The prefix used to generate, along with a UUID, the unique state machine execution name.</summary>
@@ -3509,6 +3677,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionStepFunctions
     public string? StateMachineName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionTimestreamDimension
 {
     /// <summary>The name of the rule.</summary>
@@ -3520,6 +3689,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionTimestreamDimens
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionTimestreamTimestamp
 {
     /// <summary>The precision of the timestamp value that results from the expression described in value. Valid values: SECONDS, MILLISECONDS, MICROSECONDS, NANOSECONDS.</summary>
@@ -3531,6 +3701,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionTimestreamTimest
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionTimestream
 {
     /// <summary>The name of an Amazon Timestream database.</summary>
@@ -3554,6 +3725,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionTimestream
     public IList<V1beta1TopicRuleStatusAtProviderErrorActionTimestreamTimestamp>? Timestamp { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderErrorAction
 {
     /// <summary></summary>
@@ -3633,6 +3805,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorAction
     public IList<V1beta1TopicRuleStatusAtProviderErrorActionTimestream>? Timestream { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderFirehose
 {
     /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
@@ -3652,6 +3825,7 @@ public partial class V1beta1TopicRuleStatusAtProviderFirehose
     public string? Separator { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderHttpHttpHeader
 {
     /// <summary>The name of the HTTP header.</summary>
@@ -3663,6 +3837,7 @@ public partial class V1beta1TopicRuleStatusAtProviderHttpHttpHeader
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderHttp
 {
     /// <summary>The HTTPS URL used to verify ownership of url.</summary>
@@ -3678,6 +3853,7 @@ public partial class V1beta1TopicRuleStatusAtProviderHttp
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderIotAnalytics
 {
     /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
@@ -3693,6 +3869,7 @@ public partial class V1beta1TopicRuleStatusAtProviderIotAnalytics
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderIotEvents
 {
     /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
@@ -3712,6 +3889,7 @@ public partial class V1beta1TopicRuleStatusAtProviderIotEvents
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderKafkaHeader
 {
     /// <summary>The name of the HTTP header.</summary>
@@ -3723,6 +3901,7 @@ public partial class V1beta1TopicRuleStatusAtProviderKafkaHeader
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderKafka
 {
     /// <summary>Properties of the Apache Kafka producer client. For more info, see the AWS documentation.</summary>
@@ -3750,6 +3929,7 @@ public partial class V1beta1TopicRuleStatusAtProviderKafka
     public string? Topic { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderKinesis
 {
     /// <summary>The partition key.</summary>
@@ -3765,6 +3945,7 @@ public partial class V1beta1TopicRuleStatusAtProviderKinesis
     public string? StreamName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderLambda
 {
     /// <summary>The ARN of the Lambda function.</summary>
@@ -3772,6 +3953,7 @@ public partial class V1beta1TopicRuleStatusAtProviderLambda
     public string? FunctionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderRepublish
 {
     /// <summary>The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0.</summary>
@@ -3787,6 +3969,7 @@ public partial class V1beta1TopicRuleStatusAtProviderRepublish
     public string? Topic { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderS3
 {
     /// <summary>The Amazon S3 bucket name.</summary>
@@ -3806,6 +3989,7 @@ public partial class V1beta1TopicRuleStatusAtProviderS3
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderSns
 {
     /// <summary>The message format of the message to publish. Accepted values are "JSON" and "RAW".</summary>
@@ -3821,6 +4005,7 @@ public partial class V1beta1TopicRuleStatusAtProviderSns
     public string? TargetArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderSqs
 {
     /// <summary>The URL of the Amazon SQS queue.</summary>
@@ -3836,6 +4021,7 @@ public partial class V1beta1TopicRuleStatusAtProviderSqs
     public bool? UseBase64 { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderStepFunctions
 {
     /// <summary>The prefix used to generate, along with a UUID, the unique state machine execution name.</summary>
@@ -3851,6 +4037,7 @@ public partial class V1beta1TopicRuleStatusAtProviderStepFunctions
     public string? StateMachineName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderTimestreamDimension
 {
     /// <summary>The name of the rule.</summary>
@@ -3862,6 +4049,7 @@ public partial class V1beta1TopicRuleStatusAtProviderTimestreamDimension
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderTimestreamTimestamp
 {
     /// <summary>The precision of the timestamp value that results from the expression described in value. Valid values: SECONDS, MILLISECONDS, MICROSECONDS, NANOSECONDS.</summary>
@@ -3873,6 +4061,7 @@ public partial class V1beta1TopicRuleStatusAtProviderTimestreamTimestamp
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProviderTimestream
 {
     /// <summary>The name of an Amazon Timestream database.</summary>
@@ -3896,6 +4085,7 @@ public partial class V1beta1TopicRuleStatusAtProviderTimestream
     public IList<V1beta1TopicRuleStatusAtProviderTimestreamTimestamp>? Timestamp { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicRuleStatusAtProvider
 {
     /// <summary>The ARN of the topic rule</summary>
@@ -4011,6 +4201,7 @@ public partial class V1beta1TopicRuleStatusAtProvider
     public IList<V1beta1TopicRuleStatusAtProviderTimestream>? Timestream { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1TopicRuleStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -4038,6 +4229,7 @@ public partial class V1beta1TopicRuleStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>TopicRuleStatus defines the observed state of TopicRule.</summary>
 public partial class V1beta1TopicRuleStatus
 {
     /// <summary></summary>
@@ -4054,6 +4246,7 @@ public partial class V1beta1TopicRuleStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>TopicRule is the Schema for the TopicRules API. Creates and manages an AWS IoT topic rule</summary>
 public partial class V1beta1TopicRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1TopicRuleSpec>, IStatus<V1beta1TopicRuleStatus>
 {
     public const string KubeApiVersion = "v1beta1";

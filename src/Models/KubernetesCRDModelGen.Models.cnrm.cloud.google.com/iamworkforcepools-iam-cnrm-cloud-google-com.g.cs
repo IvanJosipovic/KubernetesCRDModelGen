@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iam.cnrm.cloud.google.com;
+/// <summary>Immutable. The Organization that this resource belongs to. Only one of [organizationRef] may be specified.</summary>
 public partial class V1beta1IAMWorkforcePoolSpecOrganizationRef
 {
     /// <summary>Allowed value: The Google Cloud resource name of a Google Cloud Organization (format: `organizations/{{name}}`).</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1IAMWorkforcePoolSpecOrganizationRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IAMWorkforcePoolSpec
 {
     /// <summary>A user-specified description of the pool. Cannot exceed 256 characters.</summary>
@@ -54,6 +56,7 @@ public partial class V1beta1IAMWorkforcePoolSpec
     public string? SessionDuration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IAMWorkforcePoolStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -77,6 +80,7 @@ public partial class V1beta1IAMWorkforcePoolStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IAMWorkforcePoolStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -97,6 +101,7 @@ public partial class V1beta1IAMWorkforcePoolStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1IAMWorkforcePool : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IAMWorkforcePoolSpec>, IStatus<V1beta1IAMWorkforcePoolStatus>
 {
     public const string KubeApiVersion = "v1beta1";

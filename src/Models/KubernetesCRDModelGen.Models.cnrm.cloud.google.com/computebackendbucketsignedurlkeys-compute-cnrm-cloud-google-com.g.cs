@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1alpha1ComputeBackendBucketSignedURLKeySpecBackendBucketRef
 {
     /// <summary>Allowed value: The `name` field of a `ComputeBackendBucket` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1ComputeBackendBucketSignedURLKeySpecBackendBucketRe
     public string? Namespace { get; set; }
 }
 
+/// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 public partial class V1alpha1ComputeBackendBucketSignedURLKeySpecKeyValueValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -34,6 +36,7 @@ public partial class V1alpha1ComputeBackendBucketSignedURLKeySpecKeyValueValueFr
     public string Name { get; set; }
 }
 
+/// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 public partial class V1alpha1ComputeBackendBucketSignedURLKeySpecKeyValueValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -41,6 +44,7 @@ public partial class V1alpha1ComputeBackendBucketSignedURLKeySpecKeyValueValueFr
     public V1alpha1ComputeBackendBucketSignedURLKeySpecKeyValueValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary>Immutable. 128-bit key value used for signing the URL. The key value must be a valid RFC 4648 Section 5 base64url encoded string.</summary>
 public partial class V1alpha1ComputeBackendBucketSignedURLKeySpecKeyValue
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -52,6 +56,7 @@ public partial class V1alpha1ComputeBackendBucketSignedURLKeySpecKeyValue
     public V1alpha1ComputeBackendBucketSignedURLKeySpecKeyValueValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1ComputeBackendBucketSignedURLKeySpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -67,6 +72,7 @@ public partial class V1alpha1ComputeBackendBucketSignedURLKeySpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputeBackendBucketSignedURLKeySpec
 {
     /// <summary></summary>
@@ -86,6 +92,7 @@ public partial class V1alpha1ComputeBackendBucketSignedURLKeySpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputeBackendBucketSignedURLKeyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -109,6 +116,7 @@ public partial class V1alpha1ComputeBackendBucketSignedURLKeyStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputeBackendBucketSignedURLKeyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -121,6 +129,7 @@ public partial class V1alpha1ComputeBackendBucketSignedURLKeyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1ComputeBackendBucketSignedURLKey : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ComputeBackendBucketSignedURLKeySpec>, IStatus<V1alpha1ComputeBackendBucketSignedURLKeyStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

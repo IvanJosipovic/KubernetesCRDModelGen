@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.traefik.io;
+/// <summary>Healthcheck defines health checks for ExternalName services.</summary>
 public partial class V1alpha1TraefikServiceSpecMirroringHealthCheck
 {
     /// <summary>FollowRedirects defines whether redirects should be followed during the health check calls. Default: true</summary>
@@ -65,6 +66,7 @@ public enum V1alpha1TraefikServiceSpecMirroringKindEnum
     TraefikService
 }
 
+/// <summary>Healthcheck defines health checks for ExternalName services.</summary>
 public partial class V1alpha1TraefikServiceSpecMirroringMirrorsHealthCheck
 {
     /// <summary>FollowRedirects defines whether redirects should be followed during the health check calls. Default: true</summary>
@@ -122,6 +124,7 @@ public enum V1alpha1TraefikServiceSpecMirroringMirrorsKindEnum
     TraefikService
 }
 
+/// <summary>ResponseForwarding defines how Traefik forwards the response from the upstream Kubernetes Service to the client.</summary>
 public partial class V1alpha1TraefikServiceSpecMirroringMirrorsResponseForwarding
 {
     /// <summary>FlushInterval defines the interval, in milliseconds, in between flushes to the client while copying the response body. A negative value means to flush immediately after each write to the client. This configuration is ignored when ReverseProxy recognizes a response as a streaming response; for such responses, writes are flushed to the client immediately. Default: 100ms</summary>
@@ -129,6 +132,7 @@ public partial class V1alpha1TraefikServiceSpecMirroringMirrorsResponseForwardin
     public string? FlushInterval { get; set; }
 }
 
+/// <summary>Cookie defines the sticky cookie configuration.</summary>
 public partial class V1alpha1TraefikServiceSpecMirroringMirrorsStickyCookie
 {
     /// <summary>HTTPOnly defines whether the cookie can be accessed by client-side APIs, such as JavaScript.</summary>
@@ -152,6 +156,7 @@ public partial class V1alpha1TraefikServiceSpecMirroringMirrorsStickyCookie
     public bool? Secure { get; set; }
 }
 
+/// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.1/routing/services/#sticky-sessions</summary>
 public partial class V1alpha1TraefikServiceSpecMirroringMirrorsSticky
 {
     /// <summary>Cookie defines the sticky cookie configuration.</summary>
@@ -159,6 +164,7 @@ public partial class V1alpha1TraefikServiceSpecMirroringMirrorsSticky
     public V1alpha1TraefikServiceSpecMirroringMirrorsStickyCookie? Cookie { get; set; }
 }
 
+/// <summary>MirrorService holds the mirror configuration.</summary>
 public partial class V1alpha1TraefikServiceSpecMirroringMirrors
 {
     /// <summary>Healthcheck defines health checks for ExternalName services.</summary>
@@ -223,6 +229,7 @@ public partial class V1alpha1TraefikServiceSpecMirroringMirrors
     public int? Weight { get; set; }
 }
 
+/// <summary>ResponseForwarding defines how Traefik forwards the response from the upstream Kubernetes Service to the client.</summary>
 public partial class V1alpha1TraefikServiceSpecMirroringResponseForwarding
 {
     /// <summary>FlushInterval defines the interval, in milliseconds, in between flushes to the client while copying the response body. A negative value means to flush immediately after each write to the client. This configuration is ignored when ReverseProxy recognizes a response as a streaming response; for such responses, writes are flushed to the client immediately. Default: 100ms</summary>
@@ -230,6 +237,7 @@ public partial class V1alpha1TraefikServiceSpecMirroringResponseForwarding
     public string? FlushInterval { get; set; }
 }
 
+/// <summary>Cookie defines the sticky cookie configuration.</summary>
 public partial class V1alpha1TraefikServiceSpecMirroringStickyCookie
 {
     /// <summary>HTTPOnly defines whether the cookie can be accessed by client-side APIs, such as JavaScript.</summary>
@@ -253,6 +261,7 @@ public partial class V1alpha1TraefikServiceSpecMirroringStickyCookie
     public bool? Secure { get; set; }
 }
 
+/// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.1/routing/services/#sticky-sessions</summary>
 public partial class V1alpha1TraefikServiceSpecMirroringSticky
 {
     /// <summary>Cookie defines the sticky cookie configuration.</summary>
@@ -260,6 +269,7 @@ public partial class V1alpha1TraefikServiceSpecMirroringSticky
     public V1alpha1TraefikServiceSpecMirroringStickyCookie? Cookie { get; set; }
 }
 
+/// <summary>Mirroring defines the Mirroring service configuration.</summary>
 public partial class V1alpha1TraefikServiceSpecMirroring
 {
     /// <summary>Healthcheck defines health checks for ExternalName services.</summary>
@@ -328,6 +338,7 @@ public partial class V1alpha1TraefikServiceSpecMirroring
     public int? Weight { get; set; }
 }
 
+/// <summary>Healthcheck defines health checks for ExternalName services.</summary>
 public partial class V1alpha1TraefikServiceSpecWeightedServicesHealthCheck
 {
     /// <summary>FollowRedirects defines whether redirects should be followed during the health check calls. Default: true</summary>
@@ -385,6 +396,7 @@ public enum V1alpha1TraefikServiceSpecWeightedServicesKindEnum
     TraefikService
 }
 
+/// <summary>ResponseForwarding defines how Traefik forwards the response from the upstream Kubernetes Service to the client.</summary>
 public partial class V1alpha1TraefikServiceSpecWeightedServicesResponseForwarding
 {
     /// <summary>FlushInterval defines the interval, in milliseconds, in between flushes to the client while copying the response body. A negative value means to flush immediately after each write to the client. This configuration is ignored when ReverseProxy recognizes a response as a streaming response; for such responses, writes are flushed to the client immediately. Default: 100ms</summary>
@@ -392,6 +404,7 @@ public partial class V1alpha1TraefikServiceSpecWeightedServicesResponseForwardin
     public string? FlushInterval { get; set; }
 }
 
+/// <summary>Cookie defines the sticky cookie configuration.</summary>
 public partial class V1alpha1TraefikServiceSpecWeightedServicesStickyCookie
 {
     /// <summary>HTTPOnly defines whether the cookie can be accessed by client-side APIs, such as JavaScript.</summary>
@@ -415,6 +428,7 @@ public partial class V1alpha1TraefikServiceSpecWeightedServicesStickyCookie
     public bool? Secure { get; set; }
 }
 
+/// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.1/routing/services/#sticky-sessions</summary>
 public partial class V1alpha1TraefikServiceSpecWeightedServicesSticky
 {
     /// <summary>Cookie defines the sticky cookie configuration.</summary>
@@ -422,6 +436,7 @@ public partial class V1alpha1TraefikServiceSpecWeightedServicesSticky
     public V1alpha1TraefikServiceSpecWeightedServicesStickyCookie? Cookie { get; set; }
 }
 
+/// <summary>Service defines an upstream HTTP service to proxy traffic to.</summary>
 public partial class V1alpha1TraefikServiceSpecWeightedServices
 {
     /// <summary>Healthcheck defines health checks for ExternalName services.</summary>
@@ -482,6 +497,7 @@ public partial class V1alpha1TraefikServiceSpecWeightedServices
     public int? Weight { get; set; }
 }
 
+/// <summary>Cookie defines the sticky cookie configuration.</summary>
 public partial class V1alpha1TraefikServiceSpecWeightedStickyCookie
 {
     /// <summary>HTTPOnly defines whether the cookie can be accessed by client-side APIs, such as JavaScript.</summary>
@@ -505,6 +521,7 @@ public partial class V1alpha1TraefikServiceSpecWeightedStickyCookie
     public bool? Secure { get; set; }
 }
 
+/// <summary>Sticky defines whether sticky sessions are enabled. More info: https://doc.traefik.io/traefik/v3.1/routing/providers/kubernetes-crd/#stickiness-and-load-balancing</summary>
 public partial class V1alpha1TraefikServiceSpecWeightedSticky
 {
     /// <summary>Cookie defines the sticky cookie configuration.</summary>
@@ -512,6 +529,7 @@ public partial class V1alpha1TraefikServiceSpecWeightedSticky
     public V1alpha1TraefikServiceSpecWeightedStickyCookie? Cookie { get; set; }
 }
 
+/// <summary>Weighted defines the Weighted Round Robin configuration.</summary>
 public partial class V1alpha1TraefikServiceSpecWeighted
 {
     /// <summary>Services defines the list of Kubernetes Service and/or TraefikService to load-balance, with weight.</summary>
@@ -523,6 +541,7 @@ public partial class V1alpha1TraefikServiceSpecWeighted
     public V1alpha1TraefikServiceSpecWeightedSticky? Sticky { get; set; }
 }
 
+/// <summary>TraefikServiceSpec defines the desired state of a TraefikService.</summary>
 public partial class V1alpha1TraefikServiceSpec
 {
     /// <summary>Mirroring defines the Mirroring service configuration.</summary>
@@ -535,6 +554,7 @@ public partial class V1alpha1TraefikServiceSpec
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>TraefikService is the CRD implementation of a Traefik Service. TraefikService object allows to: - Apply weight to Services on load-balancing - Mirror traffic on services More info: https://doc.traefik.io/traefik/v3.1/routing/providers/kubernetes-crd/#kind-traefikservice</summary>
 public partial class V1alpha1TraefikService : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1TraefikServiceSpec>
 {
     public const string KubeApiVersion = "v1alpha1";

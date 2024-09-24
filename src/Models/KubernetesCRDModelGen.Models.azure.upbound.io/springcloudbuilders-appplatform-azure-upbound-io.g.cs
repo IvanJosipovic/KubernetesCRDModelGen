@@ -18,6 +18,7 @@ public enum V1beta1SpringCloudBuilderSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudBuilderSpecForProviderBuildPackGroup
 {
     /// <summary>Specifies a list of the build pack's ID.</summary>
@@ -49,6 +50,7 @@ public enum V1beta1SpringCloudBuilderSpecForProviderSpringCloudServiceIdRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpringCloudBuilderSpecForProviderSpringCloudServiceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -62,6 +64,7 @@ public partial class V1beta1SpringCloudBuilderSpecForProviderSpringCloudServiceI
     public V1beta1SpringCloudBuilderSpecForProviderSpringCloudServiceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SpringCloudService in appplatform to populate springCloudServiceId.</summary>
 public partial class V1beta1SpringCloudBuilderSpecForProviderSpringCloudServiceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -93,6 +96,7 @@ public enum V1beta1SpringCloudBuilderSpecForProviderSpringCloudServiceIdSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SpringCloudBuilderSpecForProviderSpringCloudServiceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -106,6 +110,7 @@ public partial class V1beta1SpringCloudBuilderSpecForProviderSpringCloudServiceI
     public V1beta1SpringCloudBuilderSpecForProviderSpringCloudServiceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SpringCloudService in appplatform to populate springCloudServiceId.</summary>
 public partial class V1beta1SpringCloudBuilderSpecForProviderSpringCloudServiceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1SpringCloudBuilderSpecForProviderSpringCloudServiceI
     public V1beta1SpringCloudBuilderSpecForProviderSpringCloudServiceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudBuilderSpecForProviderStack
 {
     /// <summary>Specifies the ID of the ClusterStack.</summary>
@@ -132,6 +138,7 @@ public partial class V1beta1SpringCloudBuilderSpecForProviderStack
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudBuilderSpecForProvider
 {
     /// <summary>One or more build_pack_group blocks as defined below.</summary>
@@ -159,6 +166,7 @@ public partial class V1beta1SpringCloudBuilderSpecForProvider
     public IList<V1beta1SpringCloudBuilderSpecForProviderStack>? Stack { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudBuilderSpecInitProviderBuildPackGroup
 {
     /// <summary>Specifies a list of the build pack's ID.</summary>
@@ -190,6 +198,7 @@ public enum V1beta1SpringCloudBuilderSpecInitProviderSpringCloudServiceIdRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpringCloudBuilderSpecInitProviderSpringCloudServiceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -203,6 +212,7 @@ public partial class V1beta1SpringCloudBuilderSpecInitProviderSpringCloudService
     public V1beta1SpringCloudBuilderSpecInitProviderSpringCloudServiceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SpringCloudService in appplatform to populate springCloudServiceId.</summary>
 public partial class V1beta1SpringCloudBuilderSpecInitProviderSpringCloudServiceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -234,6 +244,7 @@ public enum V1beta1SpringCloudBuilderSpecInitProviderSpringCloudServiceIdSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SpringCloudBuilderSpecInitProviderSpringCloudServiceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -247,6 +258,7 @@ public partial class V1beta1SpringCloudBuilderSpecInitProviderSpringCloudService
     public V1beta1SpringCloudBuilderSpecInitProviderSpringCloudServiceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SpringCloudService in appplatform to populate springCloudServiceId.</summary>
 public partial class V1beta1SpringCloudBuilderSpecInitProviderSpringCloudServiceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -262,6 +274,7 @@ public partial class V1beta1SpringCloudBuilderSpecInitProviderSpringCloudService
     public V1beta1SpringCloudBuilderSpecInitProviderSpringCloudServiceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudBuilderSpecInitProviderStack
 {
     /// <summary>Specifies the ID of the ClusterStack.</summary>
@@ -273,6 +286,7 @@ public partial class V1beta1SpringCloudBuilderSpecInitProviderStack
     public string? Version { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1SpringCloudBuilderSpecInitProvider
 {
     /// <summary>One or more build_pack_group blocks as defined below.</summary>
@@ -342,6 +356,7 @@ public enum V1beta1SpringCloudBuilderSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpringCloudBuilderSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -355,6 +370,7 @@ public partial class V1beta1SpringCloudBuilderSpecProviderConfigRefPolicy
     public V1beta1SpringCloudBuilderSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1SpringCloudBuilderSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -386,6 +402,7 @@ public enum V1beta1SpringCloudBuilderSpecPublishConnectionDetailsToConfigRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpringCloudBuilderSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -399,6 +416,7 @@ public partial class V1beta1SpringCloudBuilderSpecPublishConnectionDetailsToConf
     public V1beta1SpringCloudBuilderSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1SpringCloudBuilderSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -410,6 +428,7 @@ public partial class V1beta1SpringCloudBuilderSpecPublishConnectionDetailsToConf
     public V1beta1SpringCloudBuilderSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1SpringCloudBuilderSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -425,6 +444,7 @@ public partial class V1beta1SpringCloudBuilderSpecPublishConnectionDetailsToMeta
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1SpringCloudBuilderSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -440,6 +460,7 @@ public partial class V1beta1SpringCloudBuilderSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1SpringCloudBuilderSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -451,6 +472,7 @@ public partial class V1beta1SpringCloudBuilderSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>SpringCloudBuilderSpec defines the desired state of SpringCloudBuilder</summary>
 public partial class V1beta1SpringCloudBuilderSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -483,6 +505,7 @@ public partial class V1beta1SpringCloudBuilderSpec
     public V1beta1SpringCloudBuilderSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudBuilderStatusAtProviderBuildPackGroup
 {
     /// <summary>Specifies a list of the build pack's ID.</summary>
@@ -494,6 +517,7 @@ public partial class V1beta1SpringCloudBuilderStatusAtProviderBuildPackGroup
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudBuilderStatusAtProviderStack
 {
     /// <summary>Specifies the ID of the ClusterStack.</summary>
@@ -505,6 +529,7 @@ public partial class V1beta1SpringCloudBuilderStatusAtProviderStack
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudBuilderStatusAtProvider
 {
     /// <summary>One or more build_pack_group blocks as defined below.</summary>
@@ -528,6 +553,7 @@ public partial class V1beta1SpringCloudBuilderStatusAtProvider
     public IList<V1beta1SpringCloudBuilderStatusAtProviderStack>? Stack { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1SpringCloudBuilderStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -555,6 +581,7 @@ public partial class V1beta1SpringCloudBuilderStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>SpringCloudBuilderStatus defines the observed state of SpringCloudBuilder.</summary>
 public partial class V1beta1SpringCloudBuilderStatus
 {
     /// <summary></summary>
@@ -571,6 +598,7 @@ public partial class V1beta1SpringCloudBuilderStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>SpringCloudBuilder is the Schema for the SpringCloudBuilders API. Manages a Spring Cloud Builder.</summary>
 public partial class V1beta1SpringCloudBuilder : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SpringCloudBuilderSpec>, IStatus<V1beta1SpringCloudBuilderStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.deploymentmanager.cnrm.cloud.google.com;
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1DeploymentManagerDeploymentSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1DeploymentManagerDeploymentSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The root configuration file to use for this deployment.</summary>
 public partial class V1alpha1DeploymentManagerDeploymentSpecTargetConfig
 {
     /// <summary>The full YAML contents of your configuration file.</summary>
@@ -30,6 +32,7 @@ public partial class V1alpha1DeploymentManagerDeploymentSpecTargetConfig
     public string Content { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DeploymentManagerDeploymentSpecTargetImports
 {
     /// <summary>The full contents of the template that you want to import.</summary>
@@ -41,6 +44,7 @@ public partial class V1alpha1DeploymentManagerDeploymentSpecTargetImports
     public string? Name { get; set; }
 }
 
+/// <summary>Parameters that define your deployment, including the deployment configuration and relevant templates.</summary>
 public partial class V1alpha1DeploymentManagerDeploymentSpecTarget
 {
     /// <summary>The root configuration file to use for this deployment.</summary>
@@ -52,6 +56,7 @@ public partial class V1alpha1DeploymentManagerDeploymentSpecTarget
     public IList<V1alpha1DeploymentManagerDeploymentSpecTargetImports>? Imports { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DeploymentManagerDeploymentSpec
 {
     /// <summary>Immutable. Set the policy to use for creating new resources. Only used on create and update. Valid values are 'CREATE_OR_ACQUIRE' (default) or 'ACQUIRE'. If set to 'ACQUIRE' and resources do not already exist, the deployment will fail. Note that updating this field does not actually affect the deployment, just how it is updated. Default value: "CREATE_OR_ACQUIRE" Possible values: ["ACQUIRE", "CREATE_OR_ACQUIRE"].</summary>
@@ -83,6 +88,7 @@ public partial class V1alpha1DeploymentManagerDeploymentSpec
     public V1alpha1DeploymentManagerDeploymentSpecTarget Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DeploymentManagerDeploymentStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -106,6 +112,7 @@ public partial class V1alpha1DeploymentManagerDeploymentStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DeploymentManagerDeploymentStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -130,6 +137,7 @@ public partial class V1alpha1DeploymentManagerDeploymentStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1DeploymentManagerDeployment : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DeploymentManagerDeploymentSpec>, IStatus<V1alpha1DeploymentManagerDeploymentStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

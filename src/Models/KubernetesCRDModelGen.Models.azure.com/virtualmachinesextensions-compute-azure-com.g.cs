@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.azure.com;
+/// <summary>Storage version of v1api20220301.InstanceViewStatus Instance view status.</summary>
 public partial class V1api20220301storageVirtualMachinesExtensionSpecInstanceViewStatuses
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -35,6 +36,7 @@ public partial class V1api20220301storageVirtualMachinesExtensionSpecInstanceVie
     public string? Time { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.InstanceViewStatus Instance view status.</summary>
 public partial class V1api20220301storageVirtualMachinesExtensionSpecInstanceViewSubstatuses
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -62,6 +64,7 @@ public partial class V1api20220301storageVirtualMachinesExtensionSpecInstanceVie
     public string? Time { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualMachineExtensionInstanceView The instance view of a virtual machine extension.</summary>
 public partial class V1api20220301storageVirtualMachinesExtensionSpecInstanceView
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -89,6 +92,7 @@ public partial class V1api20220301storageVirtualMachinesExtensionSpecInstanceVie
     public string? TypeHandlerVersion { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a compute.azure.com/VirtualMachine resource</summary>
 public partial class V1api20220301storageVirtualMachinesExtensionSpecOwner
 {
     /// <summary></summary>
@@ -100,6 +104,7 @@ public partial class V1api20220301storageVirtualMachinesExtensionSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>SecretMapReference is a reference to a Kubernetes secret in the same namespace as the resource it is on.</summary>
 public partial class V1api20220301storageVirtualMachinesExtensionSpecProtectedSettings
 {
     /// <summary>Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource</summary>
@@ -107,6 +112,7 @@ public partial class V1api20220301storageVirtualMachinesExtensionSpecProtectedSe
     public string Name { get; set; }
 }
 
+/// <summary>Reference: Resource Id</summary>
 public partial class V1api20220301storageVirtualMachinesExtensionSpecProtectedSettingsFromKeyVaultSourceVaultReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -126,6 +132,7 @@ public partial class V1api20220301storageVirtualMachinesExtensionSpecProtectedSe
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource</summary>
 public partial class V1api20220301storageVirtualMachinesExtensionSpecProtectedSettingsFromKeyVaultSourceVault
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -137,6 +144,7 @@ public partial class V1api20220301storageVirtualMachinesExtensionSpecProtectedSe
     public V1api20220301storageVirtualMachinesExtensionSpecProtectedSettingsFromKeyVaultSourceVaultReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.KeyVaultSecretReference Describes a reference to Key Vault Secret</summary>
 public partial class V1api20220301storageVirtualMachinesExtensionSpecProtectedSettingsFromKeyVault
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -152,6 +160,7 @@ public partial class V1api20220301storageVirtualMachinesExtensionSpecProtectedSe
     public V1api20220301storageVirtualMachinesExtensionSpecProtectedSettingsFromKeyVaultSourceVault? SourceVault { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualMachines_Extension_Spec</summary>
 public partial class V1api20220301storageVirtualMachinesExtensionSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -223,6 +232,7 @@ public partial class V1api20220301storageVirtualMachinesExtensionSpec
     public string? TypeHandlerVersion { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20220301storageVirtualMachinesExtensionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -254,6 +264,7 @@ public partial class V1api20220301storageVirtualMachinesExtensionStatusCondition
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.InstanceViewStatus_STATUS Instance view status.</summary>
 public partial class V1api20220301storageVirtualMachinesExtensionStatusInstanceViewStatuses
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -281,6 +292,7 @@ public partial class V1api20220301storageVirtualMachinesExtensionStatusInstanceV
     public string? Time { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.InstanceViewStatus_STATUS Instance view status.</summary>
 public partial class V1api20220301storageVirtualMachinesExtensionStatusInstanceViewSubstatuses
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -308,6 +320,7 @@ public partial class V1api20220301storageVirtualMachinesExtensionStatusInstanceV
     public string? Time { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualMachineExtensionInstanceView_STATUS The instance view of a virtual machine extension.</summary>
 public partial class V1api20220301storageVirtualMachinesExtensionStatusInstanceView
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -335,6 +348,7 @@ public partial class V1api20220301storageVirtualMachinesExtensionStatusInstanceV
     public string? TypeHandlerVersion { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 public partial class V1api20220301storageVirtualMachinesExtensionStatusProtectedSettingsFromKeyVaultSourceVault
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -346,6 +360,7 @@ public partial class V1api20220301storageVirtualMachinesExtensionStatusProtected
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.KeyVaultSecretReference_STATUS Describes a reference to Key Vault Secret</summary>
 public partial class V1api20220301storageVirtualMachinesExtensionStatusProtectedSettingsFromKeyVault
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -361,6 +376,7 @@ public partial class V1api20220301storageVirtualMachinesExtensionStatusProtected
     public V1api20220301storageVirtualMachinesExtensionStatusProtectedSettingsFromKeyVaultSourceVault? SourceVault { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualMachines_Extension_STATUS</summary>
 public partial class V1api20220301storageVirtualMachinesExtensionStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -437,6 +453,7 @@ public partial class V1api20220301storageVirtualMachinesExtensionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20220301.VirtualMachinesExtension Generator information: - Generated from: /compute/resource-manager/Microsoft.Compute/ComputeRP/stable/2022-03-01/virtualMachine.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/extensions/{vmExtensionName}</summary>
 public partial class V1api20220301storageVirtualMachinesExtension : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20220301storageVirtualMachinesExtensionSpec>, IStatus<V1api20220301storageVirtualMachinesExtensionStatus>
 {
     public const string KubeApiVersion = "v1api20220301storage";

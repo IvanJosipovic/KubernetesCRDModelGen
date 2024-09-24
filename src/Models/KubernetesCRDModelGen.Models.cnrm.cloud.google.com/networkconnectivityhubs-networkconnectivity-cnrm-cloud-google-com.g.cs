@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkconnectivity.cnrm.cloud.google.com;
+/// <summary>Immutable. The Project that this resource belongs to.</summary>
 public partial class V1beta1NetworkConnectivityHubSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1NetworkConnectivityHubSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkConnectivityHubSpec
 {
     /// <summary>An optional description of the hub.</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1NetworkConnectivityHubSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkConnectivityHubStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -61,6 +64,7 @@ public partial class V1beta1NetworkConnectivityHubStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkConnectivityHubStatusRoutingVpcs
 {
     /// <summary>The URI of the VPC network.</summary>
@@ -68,6 +72,7 @@ public partial class V1beta1NetworkConnectivityHubStatusRoutingVpcs
     public string? Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkConnectivityHubStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -100,6 +105,7 @@ public partial class V1beta1NetworkConnectivityHubStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1NetworkConnectivityHub : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1NetworkConnectivityHubSpec>, IStatus<V1beta1NetworkConnectivityHubStatus>
 {
     public const string KubeApiVersion = "v1beta1";

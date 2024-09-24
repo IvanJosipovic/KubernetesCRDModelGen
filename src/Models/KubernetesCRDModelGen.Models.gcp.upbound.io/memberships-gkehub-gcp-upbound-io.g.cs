@@ -18,6 +18,7 @@ public enum V1beta1MembershipSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1MembershipSpecForProviderAuthority
 {
     /// <summary>A JSON Web Token (JWT) issuer URI. issuer must start with https:// and // be a valid with length &lt;2000 characters. For example: https://container.googleapis.com/v1/projects/my-project/locations/us-west1/clusters/my-cluster (must be locations rather than zones).googleapis.com/v1/${google_container_cluster.my-cluster.id}".</summary>
@@ -45,6 +46,7 @@ public enum V1beta1MembershipSpecForProviderEndpointGkeClusterResourceLinkRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MembershipSpecForProviderEndpointGkeClusterResourceLinkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -58,6 +60,7 @@ public partial class V1beta1MembershipSpecForProviderEndpointGkeClusterResourceL
     public V1beta1MembershipSpecForProviderEndpointGkeClusterResourceLinkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in container to populate resourceLink.</summary>
 public partial class V1beta1MembershipSpecForProviderEndpointGkeClusterResourceLinkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -89,6 +92,7 @@ public enum V1beta1MembershipSpecForProviderEndpointGkeClusterResourceLinkSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MembershipSpecForProviderEndpointGkeClusterResourceLinkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -102,6 +106,7 @@ public partial class V1beta1MembershipSpecForProviderEndpointGkeClusterResourceL
     public V1beta1MembershipSpecForProviderEndpointGkeClusterResourceLinkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in container to populate resourceLink.</summary>
 public partial class V1beta1MembershipSpecForProviderEndpointGkeClusterResourceLinkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -117,6 +122,7 @@ public partial class V1beta1MembershipSpecForProviderEndpointGkeClusterResourceL
     public V1beta1MembershipSpecForProviderEndpointGkeClusterResourceLinkSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MembershipSpecForProviderEndpointGkeCluster
 {
     /// <summary>Self-link of the GCP resource for the GKE cluster. For example: //container.googleapis.com/projects/my-project/zones/us-west1-a/clusters/my-cluster. It can be at the most 1000 characters in length.googleapis.com/${google_container_cluster.my-cluster.id}" or google_container_cluster.my-cluster.id.</summary>
@@ -132,6 +138,7 @@ public partial class V1beta1MembershipSpecForProviderEndpointGkeCluster
     public V1beta1MembershipSpecForProviderEndpointGkeClusterResourceLinkSelector? ResourceLinkSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MembershipSpecForProviderEndpoint
 {
     /// <summary>If this Membership is a Kubernetes API server hosted on GKE, this is a self link to its GCP resource. Structure is documented below.</summary>
@@ -139,6 +146,7 @@ public partial class V1beta1MembershipSpecForProviderEndpoint
     public IList<V1beta1MembershipSpecForProviderEndpointGkeCluster>? GkeCluster { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MembershipSpecForProvider
 {
     /// <summary>Authority encodes how Google will recognize identities from this Membership. See the workload identity documentation for more details: https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity Structure is documented below.</summary>
@@ -162,6 +170,7 @@ public partial class V1beta1MembershipSpecForProvider
     public string? Project { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MembershipSpecInitProviderAuthority
 {
     /// <summary>A JSON Web Token (JWT) issuer URI. issuer must start with https:// and // be a valid with length &lt;2000 characters. For example: https://container.googleapis.com/v1/projects/my-project/locations/us-west1/clusters/my-cluster (must be locations rather than zones).googleapis.com/v1/${google_container_cluster.my-cluster.id}".</summary>
@@ -189,6 +198,7 @@ public enum V1beta1MembershipSpecInitProviderEndpointGkeClusterResourceLinkRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MembershipSpecInitProviderEndpointGkeClusterResourceLinkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -202,6 +212,7 @@ public partial class V1beta1MembershipSpecInitProviderEndpointGkeClusterResource
     public V1beta1MembershipSpecInitProviderEndpointGkeClusterResourceLinkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in container to populate resourceLink.</summary>
 public partial class V1beta1MembershipSpecInitProviderEndpointGkeClusterResourceLinkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -233,6 +244,7 @@ public enum V1beta1MembershipSpecInitProviderEndpointGkeClusterResourceLinkSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MembershipSpecInitProviderEndpointGkeClusterResourceLinkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -246,6 +258,7 @@ public partial class V1beta1MembershipSpecInitProviderEndpointGkeClusterResource
     public V1beta1MembershipSpecInitProviderEndpointGkeClusterResourceLinkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in container to populate resourceLink.</summary>
 public partial class V1beta1MembershipSpecInitProviderEndpointGkeClusterResourceLinkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -261,6 +274,7 @@ public partial class V1beta1MembershipSpecInitProviderEndpointGkeClusterResource
     public V1beta1MembershipSpecInitProviderEndpointGkeClusterResourceLinkSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MembershipSpecInitProviderEndpointGkeCluster
 {
     /// <summary>Self-link of the GCP resource for the GKE cluster. For example: //container.googleapis.com/projects/my-project/zones/us-west1-a/clusters/my-cluster. It can be at the most 1000 characters in length.googleapis.com/${google_container_cluster.my-cluster.id}" or google_container_cluster.my-cluster.id.</summary>
@@ -276,6 +290,7 @@ public partial class V1beta1MembershipSpecInitProviderEndpointGkeCluster
     public V1beta1MembershipSpecInitProviderEndpointGkeClusterResourceLinkSelector? ResourceLinkSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MembershipSpecInitProviderEndpoint
 {
     /// <summary>If this Membership is a Kubernetes API server hosted on GKE, this is a self link to its GCP resource. Structure is documented below.</summary>
@@ -283,6 +298,7 @@ public partial class V1beta1MembershipSpecInitProviderEndpoint
     public IList<V1beta1MembershipSpecInitProviderEndpointGkeCluster>? GkeCluster { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1MembershipSpecInitProvider
 {
     /// <summary>Authority encodes how Google will recognize identities from this Membership. See the workload identity documentation for more details: https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity Structure is documented below.</summary>
@@ -344,6 +360,7 @@ public enum V1beta1MembershipSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MembershipSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -357,6 +374,7 @@ public partial class V1beta1MembershipSpecProviderConfigRefPolicy
     public V1beta1MembershipSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1MembershipSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -388,6 +406,7 @@ public enum V1beta1MembershipSpecPublishConnectionDetailsToConfigRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MembershipSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -401,6 +420,7 @@ public partial class V1beta1MembershipSpecPublishConnectionDetailsToConfigRefPol
     public V1beta1MembershipSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1MembershipSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -412,6 +432,7 @@ public partial class V1beta1MembershipSpecPublishConnectionDetailsToConfigRef
     public V1beta1MembershipSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1MembershipSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -427,6 +448,7 @@ public partial class V1beta1MembershipSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1MembershipSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -442,6 +464,7 @@ public partial class V1beta1MembershipSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1MembershipSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -453,6 +476,7 @@ public partial class V1beta1MembershipSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>MembershipSpec defines the desired state of Membership</summary>
 public partial class V1beta1MembershipSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -485,6 +509,7 @@ public partial class V1beta1MembershipSpec
     public V1beta1MembershipSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MembershipStatusAtProviderAuthority
 {
     /// <summary>A JSON Web Token (JWT) issuer URI. issuer must start with https:// and // be a valid with length &lt;2000 characters. For example: https://container.googleapis.com/v1/projects/my-project/locations/us-west1/clusters/my-cluster (must be locations rather than zones).googleapis.com/v1/${google_container_cluster.my-cluster.id}".</summary>
@@ -492,6 +517,7 @@ public partial class V1beta1MembershipStatusAtProviderAuthority
     public string? Issuer { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MembershipStatusAtProviderEndpointGkeCluster
 {
     /// <summary>Self-link of the GCP resource for the GKE cluster. For example: //container.googleapis.com/projects/my-project/zones/us-west1-a/clusters/my-cluster. It can be at the most 1000 characters in length.googleapis.com/${google_container_cluster.my-cluster.id}" or google_container_cluster.my-cluster.id.</summary>
@@ -499,6 +525,7 @@ public partial class V1beta1MembershipStatusAtProviderEndpointGkeCluster
     public string? ResourceLink { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MembershipStatusAtProviderEndpoint
 {
     /// <summary>If this Membership is a Kubernetes API server hosted on GKE, this is a self link to its GCP resource. Structure is documented below.</summary>
@@ -506,6 +533,7 @@ public partial class V1beta1MembershipStatusAtProviderEndpoint
     public IList<V1beta1MembershipStatusAtProviderEndpointGkeCluster>? GkeCluster { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MembershipStatusAtProvider
 {
     /// <summary>Authority encodes how Google will recognize identities from this Membership. See the workload identity documentation for more details: https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity Structure is documented below.</summary>
@@ -545,6 +573,7 @@ public partial class V1beta1MembershipStatusAtProvider
     public IDictionary<string, string>? TerraformLabels { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1MembershipStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -572,6 +601,7 @@ public partial class V1beta1MembershipStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>MembershipStatus defines the observed state of Membership.</summary>
 public partial class V1beta1MembershipStatus
 {
     /// <summary></summary>
@@ -588,6 +618,7 @@ public partial class V1beta1MembershipStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Membership is the Schema for the Memberships API. Membership contains information about a member cluster.</summary>
 public partial class V1beta1Membership : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MembershipSpec>, IStatus<V1beta1MembershipStatus>
 {
     public const string KubeApiVersion = "v1beta1";

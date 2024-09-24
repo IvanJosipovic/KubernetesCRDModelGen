@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.workflows.cnrm.cloud.google.com;
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1WorkflowsWorkflowSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1WorkflowsWorkflowSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowsWorkflowSpec
 {
     /// <summary>The KMS key used to encrypt workflow and execution data.  Format: projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{cryptoKey}.</summary>
@@ -58,6 +60,7 @@ public partial class V1alpha1WorkflowsWorkflowSpec
     public string? SourceContents { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowsWorkflowStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -81,6 +84,7 @@ public partial class V1alpha1WorkflowsWorkflowStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowsWorkflowStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -109,6 +113,7 @@ public partial class V1alpha1WorkflowsWorkflowStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1WorkflowsWorkflow : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1WorkflowsWorkflowSpec>, IStatus<V1alpha1WorkflowsWorkflowStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dbformariadb.azure.com;
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20180601storageServerSpecOperatorSpecSecretsFullyQualifiedDomainName
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -19,6 +20,7 @@ public partial class V1api20180601storageServerSpecOperatorSpecSecretsFullyQuali
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.ServerOperatorSecrets</summary>
 public partial class V1api20180601storageServerSpecOperatorSpecSecrets
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -30,6 +32,7 @@ public partial class V1api20180601storageServerSpecOperatorSpecSecrets
     public V1api20180601storageServerSpecOperatorSpecSecretsFullyQualifiedDomainName? FullyQualifiedDomainName { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.ServerOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 public partial class V1api20180601storageServerSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -41,6 +44,7 @@ public partial class V1api20180601storageServerSpecOperatorSpec
     public V1api20180601storageServerSpecOperatorSpecSecrets? Secrets { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20180601storageServerSpecOwner
 {
     /// <summary></summary>
@@ -52,6 +56,7 @@ public partial class V1api20180601storageServerSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20180601storageServerSpecPropertiesDefaultAdministratorLoginPassword
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -63,6 +68,7 @@ public partial class V1api20180601storageServerSpecPropertiesDefaultAdministrato
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.StorageProfile Storage Profile properties of a server</summary>
 public partial class V1api20180601storageServerSpecPropertiesDefaultStorageProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -86,6 +92,7 @@ public partial class V1api20180601storageServerSpecPropertiesDefaultStorageProfi
     public int? StorageMB { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.ServerPropertiesForDefaultCreate</summary>
 public partial class V1api20180601storageServerSpecPropertiesDefault
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -125,6 +132,7 @@ public partial class V1api20180601storageServerSpecPropertiesDefault
     public string? Version { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.StorageProfile Storage Profile properties of a server</summary>
 public partial class V1api20180601storageServerSpecPropertiesGeoRestoreStorageProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -148,6 +156,7 @@ public partial class V1api20180601storageServerSpecPropertiesGeoRestoreStoragePr
     public int? StorageMB { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.ServerPropertiesForGeoRestore</summary>
 public partial class V1api20180601storageServerSpecPropertiesGeoRestore
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -183,6 +192,7 @@ public partial class V1api20180601storageServerSpecPropertiesGeoRestore
     public string? Version { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.StorageProfile Storage Profile properties of a server</summary>
 public partial class V1api20180601storageServerSpecPropertiesPointInTimeRestoreStorageProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -206,6 +216,7 @@ public partial class V1api20180601storageServerSpecPropertiesPointInTimeRestoreS
     public int? StorageMB { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.ServerPropertiesForRestore</summary>
 public partial class V1api20180601storageServerSpecPropertiesPointInTimeRestore
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -245,6 +256,7 @@ public partial class V1api20180601storageServerSpecPropertiesPointInTimeRestore
     public string? Version { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.StorageProfile Storage Profile properties of a server</summary>
 public partial class V1api20180601storageServerSpecPropertiesReplicaStorageProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -268,6 +280,7 @@ public partial class V1api20180601storageServerSpecPropertiesReplicaStorageProfi
     public int? StorageMB { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.ServerPropertiesForReplica</summary>
 public partial class V1api20180601storageServerSpecPropertiesReplica
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -303,6 +316,7 @@ public partial class V1api20180601storageServerSpecPropertiesReplica
     public string? Version { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.ServerPropertiesForCreate</summary>
 public partial class V1api20180601storageServerSpecProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -326,6 +340,7 @@ public partial class V1api20180601storageServerSpecProperties
     public V1api20180601storageServerSpecPropertiesReplica? Replica { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.Sku Billing information related properties of a server.</summary>
 public partial class V1api20180601storageServerSpecSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -353,6 +368,7 @@ public partial class V1api20180601storageServerSpecSku
     public string? Tier { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.Server_Spec</summary>
 public partial class V1api20180601storageServerSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -392,6 +408,7 @@ public partial class V1api20180601storageServerSpec
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20180601storageServerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -423,6 +440,7 @@ public partial class V1api20180601storageServerStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.PrivateEndpointProperty_STATUS</summary>
 public partial class V1api20180601storageServerStatusPrivateEndpointConnectionsPropertiesPrivateEndpoint
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -434,6 +452,7 @@ public partial class V1api20180601storageServerStatusPrivateEndpointConnectionsP
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.ServerPrivateLinkServiceConnectionStateProperty_STATUS</summary>
 public partial class V1api20180601storageServerStatusPrivateEndpointConnectionsPropertiesPrivateLinkServiceConnectionState
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -453,6 +472,7 @@ public partial class V1api20180601storageServerStatusPrivateEndpointConnectionsP
     public string? Status { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.ServerPrivateEndpointConnectionProperties_STATUS Properties of a private endpoint connection.</summary>
 public partial class V1api20180601storageServerStatusPrivateEndpointConnectionsProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -472,6 +492,7 @@ public partial class V1api20180601storageServerStatusPrivateEndpointConnectionsP
     public string? ProvisioningState { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.ServerPrivateEndpointConnection_STATUS A private endpoint connection under a server</summary>
 public partial class V1api20180601storageServerStatusPrivateEndpointConnections
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -487,6 +508,7 @@ public partial class V1api20180601storageServerStatusPrivateEndpointConnections
     public V1api20180601storageServerStatusPrivateEndpointConnectionsProperties? Properties { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.Sku_STATUS Billing information related properties of a server.</summary>
 public partial class V1api20180601storageServerStatusSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -514,6 +536,7 @@ public partial class V1api20180601storageServerStatusSku
     public string? Tier { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.StorageProfile_STATUS Storage Profile properties of a server</summary>
 public partial class V1api20180601storageServerStatusStorageProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -537,6 +560,7 @@ public partial class V1api20180601storageServerStatusStorageProfile
     public int? StorageMB { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.Server_STATUS Represents a server.</summary>
 public partial class V1api20180601storageServerStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -625,6 +649,7 @@ public partial class V1api20180601storageServerStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20180601.Server Generator information: - Generated from: /mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMariaDB/servers/{serverName}</summary>
 public partial class V1api20180601storageServer : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20180601storageServerSpec>, IStatus<V1api20180601storageServerStatus>
 {
     public const string KubeApiVersion = "v1api20180601storage";

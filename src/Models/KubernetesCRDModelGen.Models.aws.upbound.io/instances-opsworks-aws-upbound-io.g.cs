@@ -18,6 +18,7 @@ public enum V1beta1InstanceSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderEbsBlockDevice
 {
     /// <summary>Whether the volume should be destroyed on instance termination. Default is true.</summary>
@@ -45,6 +46,7 @@ public partial class V1beta1InstanceSpecForProviderEbsBlockDevice
     public string? VolumeType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderEphemeralBlockDevice
 {
     /// <summary>Name of the block device to mount on the instance.</summary>
@@ -76,6 +78,7 @@ public enum V1beta1InstanceSpecForProviderLayerIdsRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecForProviderLayerIdsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -89,6 +92,7 @@ public partial class V1beta1InstanceSpecForProviderLayerIdsRefsPolicy
     public V1beta1InstanceSpecForProviderLayerIdsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1InstanceSpecForProviderLayerIdsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -120,6 +124,7 @@ public enum V1beta1InstanceSpecForProviderLayerIdsSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecForProviderLayerIdsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -133,6 +138,7 @@ public partial class V1beta1InstanceSpecForProviderLayerIdsSelectorPolicy
     public V1beta1InstanceSpecForProviderLayerIdsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of CustomLayer in opsworks to populate layerIds.</summary>
 public partial class V1beta1InstanceSpecForProviderLayerIdsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -148,6 +154,7 @@ public partial class V1beta1InstanceSpecForProviderLayerIdsSelector
     public V1beta1InstanceSpecForProviderLayerIdsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderRootBlockDevice
 {
     /// <summary>Whether the volume should be destroyed on instance termination. Default is true.</summary>
@@ -187,6 +194,7 @@ public enum V1beta1InstanceSpecForProviderSecurityGroupIdRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecForProviderSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -200,6 +208,7 @@ public partial class V1beta1InstanceSpecForProviderSecurityGroupIdRefsPolicy
     public V1beta1InstanceSpecForProviderSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1InstanceSpecForProviderSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -231,6 +240,7 @@ public enum V1beta1InstanceSpecForProviderSecurityGroupIdSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecForProviderSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -244,6 +254,7 @@ public partial class V1beta1InstanceSpecForProviderSecurityGroupIdSelectorPolicy
     public V1beta1InstanceSpecForProviderSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 public partial class V1beta1InstanceSpecForProviderSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -279,6 +290,7 @@ public enum V1beta1InstanceSpecForProviderStackIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecForProviderStackIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -292,6 +304,7 @@ public partial class V1beta1InstanceSpecForProviderStackIdRefPolicy
     public V1beta1InstanceSpecForProviderStackIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Stack in opsworks to populate stackId.</summary>
 public partial class V1beta1InstanceSpecForProviderStackIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -323,6 +336,7 @@ public enum V1beta1InstanceSpecForProviderStackIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecForProviderStackIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -336,6 +350,7 @@ public partial class V1beta1InstanceSpecForProviderStackIdSelectorPolicy
     public V1beta1InstanceSpecForProviderStackIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Stack in opsworks to populate stackId.</summary>
 public partial class V1beta1InstanceSpecForProviderStackIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -371,6 +386,7 @@ public enum V1beta1InstanceSpecForProviderSubnetIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecForProviderSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -384,6 +400,7 @@ public partial class V1beta1InstanceSpecForProviderSubnetIdRefPolicy
     public V1beta1InstanceSpecForProviderSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
 public partial class V1beta1InstanceSpecForProviderSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -415,6 +432,7 @@ public enum V1beta1InstanceSpecForProviderSubnetIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecForProviderSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -428,6 +446,7 @@ public partial class V1beta1InstanceSpecForProviderSubnetIdSelectorPolicy
     public V1beta1InstanceSpecForProviderSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
 public partial class V1beta1InstanceSpecForProviderSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -443,6 +462,7 @@ public partial class V1beta1InstanceSpecForProviderSubnetIdSelector
     public V1beta1InstanceSpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProvider
 {
     /// <summary>OpsWorks agent to install. Default is INHERIT.</summary>
@@ -598,6 +618,7 @@ public partial class V1beta1InstanceSpecForProvider
     public string? VirtualizationType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderEbsBlockDevice
 {
     /// <summary>Whether the volume should be destroyed on instance termination. Default is true.</summary>
@@ -625,6 +646,7 @@ public partial class V1beta1InstanceSpecInitProviderEbsBlockDevice
     public string? VolumeType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderEphemeralBlockDevice
 {
     /// <summary>Name of the block device to mount on the instance.</summary>
@@ -656,6 +678,7 @@ public enum V1beta1InstanceSpecInitProviderLayerIdsRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecInitProviderLayerIdsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -669,6 +692,7 @@ public partial class V1beta1InstanceSpecInitProviderLayerIdsRefsPolicy
     public V1beta1InstanceSpecInitProviderLayerIdsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1InstanceSpecInitProviderLayerIdsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -700,6 +724,7 @@ public enum V1beta1InstanceSpecInitProviderLayerIdsSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecInitProviderLayerIdsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -713,6 +738,7 @@ public partial class V1beta1InstanceSpecInitProviderLayerIdsSelectorPolicy
     public V1beta1InstanceSpecInitProviderLayerIdsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of CustomLayer in opsworks to populate layerIds.</summary>
 public partial class V1beta1InstanceSpecInitProviderLayerIdsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -728,6 +754,7 @@ public partial class V1beta1InstanceSpecInitProviderLayerIdsSelector
     public V1beta1InstanceSpecInitProviderLayerIdsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderRootBlockDevice
 {
     /// <summary>Whether the volume should be destroyed on instance termination. Default is true.</summary>
@@ -767,6 +794,7 @@ public enum V1beta1InstanceSpecInitProviderSecurityGroupIdRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecInitProviderSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -780,6 +808,7 @@ public partial class V1beta1InstanceSpecInitProviderSecurityGroupIdRefsPolicy
     public V1beta1InstanceSpecInitProviderSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1InstanceSpecInitProviderSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -811,6 +840,7 @@ public enum V1beta1InstanceSpecInitProviderSecurityGroupIdSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecInitProviderSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -824,6 +854,7 @@ public partial class V1beta1InstanceSpecInitProviderSecurityGroupIdSelectorPolic
     public V1beta1InstanceSpecInitProviderSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 public partial class V1beta1InstanceSpecInitProviderSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -859,6 +890,7 @@ public enum V1beta1InstanceSpecInitProviderStackIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecInitProviderStackIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -872,6 +904,7 @@ public partial class V1beta1InstanceSpecInitProviderStackIdRefPolicy
     public V1beta1InstanceSpecInitProviderStackIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Stack in opsworks to populate stackId.</summary>
 public partial class V1beta1InstanceSpecInitProviderStackIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -903,6 +936,7 @@ public enum V1beta1InstanceSpecInitProviderStackIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecInitProviderStackIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -916,6 +950,7 @@ public partial class V1beta1InstanceSpecInitProviderStackIdSelectorPolicy
     public V1beta1InstanceSpecInitProviderStackIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Stack in opsworks to populate stackId.</summary>
 public partial class V1beta1InstanceSpecInitProviderStackIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -951,6 +986,7 @@ public enum V1beta1InstanceSpecInitProviderSubnetIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecInitProviderSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -964,6 +1000,7 @@ public partial class V1beta1InstanceSpecInitProviderSubnetIdRefPolicy
     public V1beta1InstanceSpecInitProviderSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
 public partial class V1beta1InstanceSpecInitProviderSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -995,6 +1032,7 @@ public enum V1beta1InstanceSpecInitProviderSubnetIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecInitProviderSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1008,6 +1046,7 @@ public partial class V1beta1InstanceSpecInitProviderSubnetIdSelectorPolicy
     public V1beta1InstanceSpecInitProviderSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
 public partial class V1beta1InstanceSpecInitProviderSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1023,6 +1062,7 @@ public partial class V1beta1InstanceSpecInitProviderSubnetIdSelector
     public V1beta1InstanceSpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1InstanceSpecInitProvider
 {
     /// <summary>OpsWorks agent to install. Default is INHERIT.</summary>
@@ -1220,6 +1260,7 @@ public enum V1beta1InstanceSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1233,6 +1274,7 @@ public partial class V1beta1InstanceSpecProviderConfigRefPolicy
     public V1beta1InstanceSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1InstanceSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1264,6 +1306,7 @@ public enum V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1277,6 +1320,7 @@ public partial class V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolic
     public V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1InstanceSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1288,6 +1332,7 @@ public partial class V1beta1InstanceSpecPublishConnectionDetailsToConfigRef
     public V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1InstanceSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1303,6 +1348,7 @@ public partial class V1beta1InstanceSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1InstanceSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1318,6 +1364,7 @@ public partial class V1beta1InstanceSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1InstanceSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1329,6 +1376,7 @@ public partial class V1beta1InstanceSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>InstanceSpec defines the desired state of Instance</summary>
 public partial class V1beta1InstanceSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1361,6 +1409,7 @@ public partial class V1beta1InstanceSpec
     public V1beta1InstanceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderEbsBlockDevice
 {
     /// <summary>Whether the volume should be destroyed on instance termination. Default is true.</summary>
@@ -1388,6 +1437,7 @@ public partial class V1beta1InstanceStatusAtProviderEbsBlockDevice
     public string? VolumeType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderEphemeralBlockDevice
 {
     /// <summary>Name of the block device to mount on the instance.</summary>
@@ -1399,6 +1449,7 @@ public partial class V1beta1InstanceStatusAtProviderEphemeralBlockDevice
     public string? VirtualName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderRootBlockDevice
 {
     /// <summary>Whether the volume should be destroyed on instance termination. Default is true.</summary>
@@ -1418,6 +1469,7 @@ public partial class V1beta1InstanceStatusAtProviderRootBlockDevice
     public string? VolumeType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProvider
 {
     /// <summary>OpsWorks agent to install. Default is INHERIT.</summary>
@@ -1605,6 +1657,7 @@ public partial class V1beta1InstanceStatusAtProvider
     public string? VirtualizationType { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1InstanceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1632,6 +1685,7 @@ public partial class V1beta1InstanceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>InstanceStatus defines the observed state of Instance.</summary>
 public partial class V1beta1InstanceStatus
 {
     /// <summary></summary>
@@ -1648,6 +1702,7 @@ public partial class V1beta1InstanceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Instance is the Schema for the Instances API. Provides an OpsWorks instance resource.</summary>
 public partial class V1beta1Instance : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1InstanceSpec>, IStatus<V1beta1InstanceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

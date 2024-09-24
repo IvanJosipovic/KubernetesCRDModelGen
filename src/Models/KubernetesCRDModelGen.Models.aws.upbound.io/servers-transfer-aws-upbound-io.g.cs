@@ -38,6 +38,7 @@ public enum V1beta1ServerSpecForProviderCertificateRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServerSpecForProviderCertificateRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ServerSpecForProviderCertificateRefPolicy
     public V1beta1ServerSpecForProviderCertificateRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Certificate in acm to populate certificate.</summary>
 public partial class V1beta1ServerSpecForProviderCertificateRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ServerSpecForProviderCertificateSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServerSpecForProviderCertificateSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ServerSpecForProviderCertificateSelectorPolicy
     public V1beta1ServerSpecForProviderCertificateSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Certificate in acm to populate certificate.</summary>
 public partial class V1beta1ServerSpecForProviderCertificateSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1ServerSpecForProviderDirectoryIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServerSpecForProviderDirectoryIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1ServerSpecForProviderDirectoryIdRefPolicy
     public V1beta1ServerSpecForProviderDirectoryIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Directory in ds to populate directoryId.</summary>
 public partial class V1beta1ServerSpecForProviderDirectoryIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1ServerSpecForProviderDirectoryIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServerSpecForProviderDirectoryIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1ServerSpecForProviderDirectoryIdSelectorPolicy
     public V1beta1ServerSpecForProviderDirectoryIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Directory in ds to populate directoryId.</summary>
 public partial class V1beta1ServerSpecForProviderDirectoryIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1ServerSpecForProviderEndpointDetailsVpcIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServerSpecForProviderEndpointDetailsVpcIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1ServerSpecForProviderEndpointDetailsVpcIdRefPolicy
     public V1beta1ServerSpecForProviderEndpointDetailsVpcIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1ServerSpecForProviderEndpointDetailsVpcIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1ServerSpecForProviderEndpointDetailsVpcIdSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServerSpecForProviderEndpointDetailsVpcIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1ServerSpecForProviderEndpointDetailsVpcIdSelectorPol
     public V1beta1ServerSpecForProviderEndpointDetailsVpcIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1ServerSpecForProviderEndpointDetailsVpcIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1ServerSpecForProviderEndpointDetailsVpcIdSelector
     public V1beta1ServerSpecForProviderEndpointDetailsVpcIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServerSpecForProviderEndpointDetails
 {
     /// <summary>A list of address allocation IDs that are required to attach an Elastic IP address to your SFTP server's endpoint. This property can only be used when endpoint_type is set to VPC.</summary>
@@ -325,6 +338,7 @@ public partial class V1beta1ServerSpecForProviderEndpointDetails
     public V1beta1ServerSpecForProviderEndpointDetailsVpcIdSelector? VpcIdSelector { get; set; }
 }
 
+/// <summary>RSA, ECDSA, or ED25519 private key (e.g., as generated by the ssh-keygen -t rsa -b 2048 -N "" -m PEM -f my-new-server-key, ssh-keygen -t ecdsa -b 256 -N "" -m PEM -f my-new-server-key or ssh-keygen -t ed25519 -N "" -f my-new-server-key commands).</summary>
 public partial class V1beta1ServerSpecForProviderHostKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -360,6 +374,7 @@ public enum V1beta1ServerSpecForProviderLoggingRoleRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServerSpecForProviderLoggingRoleRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -373,6 +388,7 @@ public partial class V1beta1ServerSpecForProviderLoggingRoleRefPolicy
     public V1beta1ServerSpecForProviderLoggingRoleRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate loggingRole.</summary>
 public partial class V1beta1ServerSpecForProviderLoggingRoleRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -404,6 +420,7 @@ public enum V1beta1ServerSpecForProviderLoggingRoleSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServerSpecForProviderLoggingRoleSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -417,6 +434,7 @@ public partial class V1beta1ServerSpecForProviderLoggingRoleSelectorPolicy
     public V1beta1ServerSpecForProviderLoggingRoleSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate loggingRole.</summary>
 public partial class V1beta1ServerSpecForProviderLoggingRoleSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -432,6 +450,7 @@ public partial class V1beta1ServerSpecForProviderLoggingRoleSelector
     public V1beta1ServerSpecForProviderLoggingRoleSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Specify a string to display when users connect to a server. This string is displayed after the user authenticates. The SFTP protocol does not support post-authentication display banners.</summary>
 public partial class V1beta1ServerSpecForProviderPostAuthenticationLoginBannerSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -447,6 +466,7 @@ public partial class V1beta1ServerSpecForProviderPostAuthenticationLoginBannerSe
     public string Namespace { get; set; }
 }
 
+/// <summary>Specify a string to display when users connect to a server. This string is displayed before the user authenticates.</summary>
 public partial class V1beta1ServerSpecForProviderPreAuthenticationLoginBannerSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -462,6 +482,7 @@ public partial class V1beta1ServerSpecForProviderPreAuthenticationLoginBannerSec
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServerSpecForProviderProtocolDetails
 {
     /// <summary>Indicates the transport method for the AS2 messages. Currently, only HTTP is supported.</summary>
@@ -481,6 +502,7 @@ public partial class V1beta1ServerSpecForProviderProtocolDetails
     public string? TlsSessionResumptionMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServerSpecForProviderS3StorageOptions
 {
     /// <summary>Specifies whether or not performance for your Amazon S3 directories is optimized. Valid values are DISABLED, ENABLED.</summary>
@@ -488,6 +510,7 @@ public partial class V1beta1ServerSpecForProviderS3StorageOptions
     public string? DirectoryListingOptimization { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServerSpecForProviderWorkflowDetailsOnPartialUpload
 {
     /// <summary>Includes the necessary permissions for S3, EFS, and Lambda operations that Transfer can assume, so that all workflow steps can operate on the required resources.</summary>
@@ -499,6 +522,7 @@ public partial class V1beta1ServerSpecForProviderWorkflowDetailsOnPartialUpload
     public string? WorkflowId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServerSpecForProviderWorkflowDetailsOnUpload
 {
     /// <summary>Includes the necessary permissions for S3, EFS, and Lambda operations that Transfer can assume, so that all workflow steps can operate on the required resources.</summary>
@@ -510,6 +534,7 @@ public partial class V1beta1ServerSpecForProviderWorkflowDetailsOnUpload
     public string? WorkflowId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServerSpecForProviderWorkflowDetails
 {
     /// <summary>A trigger that starts a workflow if a file is only partially uploaded. See Workflow Detail below. See on_partial_upload block below for details.</summary>
@@ -521,6 +546,7 @@ public partial class V1beta1ServerSpecForProviderWorkflowDetails
     public IList<V1beta1ServerSpecForProviderWorkflowDetailsOnUpload>? OnUpload { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServerSpecForProvider
 {
     /// <summary>The Amazon Resource Name (ARN) of the AWS Certificate Manager (ACM) certificate. This is required when protocols is set to FTPS</summary>
@@ -660,6 +686,7 @@ public enum V1beta1ServerSpecInitProviderCertificateRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServerSpecInitProviderCertificateRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -673,6 +700,7 @@ public partial class V1beta1ServerSpecInitProviderCertificateRefPolicy
     public V1beta1ServerSpecInitProviderCertificateRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Certificate in acm to populate certificate.</summary>
 public partial class V1beta1ServerSpecInitProviderCertificateRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -704,6 +732,7 @@ public enum V1beta1ServerSpecInitProviderCertificateSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServerSpecInitProviderCertificateSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -717,6 +746,7 @@ public partial class V1beta1ServerSpecInitProviderCertificateSelectorPolicy
     public V1beta1ServerSpecInitProviderCertificateSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Certificate in acm to populate certificate.</summary>
 public partial class V1beta1ServerSpecInitProviderCertificateSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -752,6 +782,7 @@ public enum V1beta1ServerSpecInitProviderDirectoryIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServerSpecInitProviderDirectoryIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -765,6 +796,7 @@ public partial class V1beta1ServerSpecInitProviderDirectoryIdRefPolicy
     public V1beta1ServerSpecInitProviderDirectoryIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Directory in ds to populate directoryId.</summary>
 public partial class V1beta1ServerSpecInitProviderDirectoryIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -796,6 +828,7 @@ public enum V1beta1ServerSpecInitProviderDirectoryIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServerSpecInitProviderDirectoryIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -809,6 +842,7 @@ public partial class V1beta1ServerSpecInitProviderDirectoryIdSelectorPolicy
     public V1beta1ServerSpecInitProviderDirectoryIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Directory in ds to populate directoryId.</summary>
 public partial class V1beta1ServerSpecInitProviderDirectoryIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -844,6 +878,7 @@ public enum V1beta1ServerSpecInitProviderEndpointDetailsVpcIdRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServerSpecInitProviderEndpointDetailsVpcIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -857,6 +892,7 @@ public partial class V1beta1ServerSpecInitProviderEndpointDetailsVpcIdRefPolicy
     public V1beta1ServerSpecInitProviderEndpointDetailsVpcIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1ServerSpecInitProviderEndpointDetailsVpcIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -888,6 +924,7 @@ public enum V1beta1ServerSpecInitProviderEndpointDetailsVpcIdSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServerSpecInitProviderEndpointDetailsVpcIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -901,6 +938,7 @@ public partial class V1beta1ServerSpecInitProviderEndpointDetailsVpcIdSelectorPo
     public V1beta1ServerSpecInitProviderEndpointDetailsVpcIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1ServerSpecInitProviderEndpointDetailsVpcIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -916,6 +954,7 @@ public partial class V1beta1ServerSpecInitProviderEndpointDetailsVpcIdSelector
     public V1beta1ServerSpecInitProviderEndpointDetailsVpcIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServerSpecInitProviderEndpointDetails
 {
     /// <summary>A list of address allocation IDs that are required to attach an Elastic IP address to your SFTP server's endpoint. This property can only be used when endpoint_type is set to VPC.</summary>
@@ -947,6 +986,7 @@ public partial class V1beta1ServerSpecInitProviderEndpointDetails
     public V1beta1ServerSpecInitProviderEndpointDetailsVpcIdSelector? VpcIdSelector { get; set; }
 }
 
+/// <summary>RSA, ECDSA, or ED25519 private key (e.g., as generated by the ssh-keygen -t rsa -b 2048 -N "" -m PEM -f my-new-server-key, ssh-keygen -t ecdsa -b 256 -N "" -m PEM -f my-new-server-key or ssh-keygen -t ed25519 -N "" -f my-new-server-key commands).</summary>
 public partial class V1beta1ServerSpecInitProviderHostKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -982,6 +1022,7 @@ public enum V1beta1ServerSpecInitProviderLoggingRoleRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServerSpecInitProviderLoggingRoleRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -995,6 +1036,7 @@ public partial class V1beta1ServerSpecInitProviderLoggingRoleRefPolicy
     public V1beta1ServerSpecInitProviderLoggingRoleRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate loggingRole.</summary>
 public partial class V1beta1ServerSpecInitProviderLoggingRoleRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1026,6 +1068,7 @@ public enum V1beta1ServerSpecInitProviderLoggingRoleSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServerSpecInitProviderLoggingRoleSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1039,6 +1082,7 @@ public partial class V1beta1ServerSpecInitProviderLoggingRoleSelectorPolicy
     public V1beta1ServerSpecInitProviderLoggingRoleSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate loggingRole.</summary>
 public partial class V1beta1ServerSpecInitProviderLoggingRoleSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1054,6 +1098,7 @@ public partial class V1beta1ServerSpecInitProviderLoggingRoleSelector
     public V1beta1ServerSpecInitProviderLoggingRoleSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Specify a string to display when users connect to a server. This string is displayed after the user authenticates. The SFTP protocol does not support post-authentication display banners.</summary>
 public partial class V1beta1ServerSpecInitProviderPostAuthenticationLoginBannerSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1069,6 +1114,7 @@ public partial class V1beta1ServerSpecInitProviderPostAuthenticationLoginBannerS
     public string Namespace { get; set; }
 }
 
+/// <summary>Specify a string to display when users connect to a server. This string is displayed before the user authenticates.</summary>
 public partial class V1beta1ServerSpecInitProviderPreAuthenticationLoginBannerSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1084,6 +1130,7 @@ public partial class V1beta1ServerSpecInitProviderPreAuthenticationLoginBannerSe
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServerSpecInitProviderProtocolDetails
 {
     /// <summary>Indicates the transport method for the AS2 messages. Currently, only HTTP is supported.</summary>
@@ -1103,6 +1150,7 @@ public partial class V1beta1ServerSpecInitProviderProtocolDetails
     public string? TlsSessionResumptionMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServerSpecInitProviderS3StorageOptions
 {
     /// <summary>Specifies whether or not performance for your Amazon S3 directories is optimized. Valid values are DISABLED, ENABLED.</summary>
@@ -1110,6 +1158,7 @@ public partial class V1beta1ServerSpecInitProviderS3StorageOptions
     public string? DirectoryListingOptimization { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServerSpecInitProviderWorkflowDetailsOnPartialUpload
 {
     /// <summary>Includes the necessary permissions for S3, EFS, and Lambda operations that Transfer can assume, so that all workflow steps can operate on the required resources.</summary>
@@ -1121,6 +1170,7 @@ public partial class V1beta1ServerSpecInitProviderWorkflowDetailsOnPartialUpload
     public string? WorkflowId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServerSpecInitProviderWorkflowDetailsOnUpload
 {
     /// <summary>Includes the necessary permissions for S3, EFS, and Lambda operations that Transfer can assume, so that all workflow steps can operate on the required resources.</summary>
@@ -1132,6 +1182,7 @@ public partial class V1beta1ServerSpecInitProviderWorkflowDetailsOnUpload
     public string? WorkflowId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServerSpecInitProviderWorkflowDetails
 {
     /// <summary>A trigger that starts a workflow if a file is only partially uploaded. See Workflow Detail below. See on_partial_upload block below for details.</summary>
@@ -1143,6 +1194,7 @@ public partial class V1beta1ServerSpecInitProviderWorkflowDetails
     public IList<V1beta1ServerSpecInitProviderWorkflowDetailsOnUpload>? OnUpload { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ServerSpecInitProvider
 {
     /// <summary>The Amazon Resource Name (ARN) of the AWS Certificate Manager (ACM) certificate. This is required when protocols is set to FTPS</summary>
@@ -1300,6 +1352,7 @@ public enum V1beta1ServerSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServerSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1313,6 +1366,7 @@ public partial class V1beta1ServerSpecProviderConfigRefPolicy
     public V1beta1ServerSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ServerSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1344,6 +1398,7 @@ public enum V1beta1ServerSpecPublishConnectionDetailsToConfigRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServerSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1357,6 +1412,7 @@ public partial class V1beta1ServerSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1ServerSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ServerSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1368,6 +1424,7 @@ public partial class V1beta1ServerSpecPublishConnectionDetailsToConfigRef
     public V1beta1ServerSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ServerSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1383,6 +1440,7 @@ public partial class V1beta1ServerSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ServerSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1398,6 +1456,7 @@ public partial class V1beta1ServerSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ServerSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1409,6 +1468,7 @@ public partial class V1beta1ServerSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ServerSpec defines the desired state of Server</summary>
 public partial class V1beta1ServerSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1441,6 +1501,7 @@ public partial class V1beta1ServerSpec
     public V1beta1ServerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServerStatusAtProviderEndpointDetails
 {
     /// <summary>A list of address allocation IDs that are required to attach an Elastic IP address to your SFTP server's endpoint. This property can only be used when endpoint_type is set to VPC.</summary>
@@ -1464,6 +1525,7 @@ public partial class V1beta1ServerStatusAtProviderEndpointDetails
     public string? VpcId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServerStatusAtProviderProtocolDetails
 {
     /// <summary>Indicates the transport method for the AS2 messages. Currently, only HTTP is supported.</summary>
@@ -1483,6 +1545,7 @@ public partial class V1beta1ServerStatusAtProviderProtocolDetails
     public string? TlsSessionResumptionMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServerStatusAtProviderS3StorageOptions
 {
     /// <summary>Specifies whether or not performance for your Amazon S3 directories is optimized. Valid values are DISABLED, ENABLED.</summary>
@@ -1490,6 +1553,7 @@ public partial class V1beta1ServerStatusAtProviderS3StorageOptions
     public string? DirectoryListingOptimization { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServerStatusAtProviderWorkflowDetailsOnPartialUpload
 {
     /// <summary>Includes the necessary permissions for S3, EFS, and Lambda operations that Transfer can assume, so that all workflow steps can operate on the required resources.</summary>
@@ -1501,6 +1565,7 @@ public partial class V1beta1ServerStatusAtProviderWorkflowDetailsOnPartialUpload
     public string? WorkflowId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServerStatusAtProviderWorkflowDetailsOnUpload
 {
     /// <summary>Includes the necessary permissions for S3, EFS, and Lambda operations that Transfer can assume, so that all workflow steps can operate on the required resources.</summary>
@@ -1512,6 +1577,7 @@ public partial class V1beta1ServerStatusAtProviderWorkflowDetailsOnUpload
     public string? WorkflowId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServerStatusAtProviderWorkflowDetails
 {
     /// <summary>A trigger that starts a workflow if a file is only partially uploaded. See Workflow Detail below. See on_partial_upload block below for details.</summary>
@@ -1523,6 +1589,7 @@ public partial class V1beta1ServerStatusAtProviderWorkflowDetails
     public IList<V1beta1ServerStatusAtProviderWorkflowDetailsOnUpload>? OnUpload { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServerStatusAtProvider
 {
     /// <summary>Amazon Resource Name (ARN) of Transfer Server</summary>
@@ -1622,6 +1689,7 @@ public partial class V1beta1ServerStatusAtProvider
     public IList<V1beta1ServerStatusAtProviderWorkflowDetails>? WorkflowDetails { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ServerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1649,6 +1717,7 @@ public partial class V1beta1ServerStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ServerStatus defines the observed state of Server.</summary>
 public partial class V1beta1ServerStatus
 {
     /// <summary></summary>
@@ -1665,6 +1734,7 @@ public partial class V1beta1ServerStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Server is the Schema for the Servers API. Provides a AWS Transfer Server resource.</summary>
 public partial class V1beta1Server : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ServerSpec>, IStatus<V1beta1ServerStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.source.toolkit.fluxcd.io;
+/// <summary>NamespaceSelector selects the namespaces to which this ACL applies. An empty map of MatchLabels matches all namespaces in a cluster.</summary>
 public partial class V1HelmRepositorySpecAccessFromNamespaceSelectors
 {
     /// <summary>MatchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.</summary>
@@ -15,6 +16,7 @@ public partial class V1HelmRepositorySpecAccessFromNamespaceSelectors
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>AccessFrom specifies an Access Control List for allowing cross-namespace references to this object. NOTE: Not implemented, provisional as of https://github.com/fluxcd/flux2/pull/2092</summary>
 public partial class V1HelmRepositorySpecAccessFrom
 {
     /// <summary>NamespaceSelectors is the list of namespace selectors to which this ACL applies. Items in this list are evaluated using a logical OR operation.</summary>
@@ -22,6 +24,7 @@ public partial class V1HelmRepositorySpecAccessFrom
     public IList<V1HelmRepositorySpecAccessFromNamespaceSelectors> NamespaceSelectors { get; set; }
 }
 
+/// <summary>CertSecretRef can be given the name of a Secret containing either or both of   - a PEM-encoded client certificate (`tls.crt`) and private key (`tls.key`); - a PEM-encoded CA certificate (`ca.crt`)   and whichever are supplied, will be used for connecting to the registry. The client cert and key are useful if you are authenticating with a certificate; the CA cert is useful if you are using a self-signed server certificate. The Secret must be of type `Opaque` or `kubernetes.io/tls`.   It takes precedence over the values specified in the Secret referred to by `.spec.secretRef`.</summary>
 public partial class V1HelmRepositorySpecCertSecretRef
 {
     /// <summary>Name of the referent.</summary>
@@ -45,6 +48,7 @@ public enum V1HelmRepositorySpecProviderEnum
     Gcp
 }
 
+/// <summary>SecretRef specifies the Secret containing authentication credentials for the HelmRepository. For HTTP/S basic auth the secret must contain 'username' and 'password' fields. Support for TLS auth using the 'certFile' and 'keyFile', and/or 'caFile' keys is deprecated. Please use `.spec.certSecretRef` instead.</summary>
 public partial class V1HelmRepositorySpecSecretRef
 {
     /// <summary>Name of the referent.</summary>
@@ -62,6 +66,7 @@ public enum V1HelmRepositorySpecTypeEnum
     Oci
 }
 
+/// <summary>HelmRepositorySpec specifies the required configuration to produce an Artifact for a Helm repository index YAML.</summary>
 public partial class V1HelmRepositorySpec
 {
     /// <summary>AccessFrom specifies an Access Control List for allowing cross-namespace references to this object. NOTE: Not implemented, provisional as of https://github.com/fluxcd/flux2/pull/2092</summary>
@@ -111,6 +116,7 @@ public partial class V1HelmRepositorySpec
     public string Url { get; set; }
 }
 
+/// <summary>Artifact represents the last successful HelmRepository reconciliation.</summary>
 public partial class V1HelmRepositoryStatusArtifact
 {
     /// <summary>Digest is the digest of the file in the form of '&lt;algorithm&gt;:&lt;checksum&gt;'.</summary>
@@ -155,6 +161,7 @@ public enum V1HelmRepositoryStatusConditionsStatusEnum
     Unknown
 }
 
+/// <summary>Condition contains details for one aspect of the current state of this API Resource. --- This struct is intended for direct use as an array at the field path .status.conditions.  For example,   	type FooStatus struct{ 	    // Represents the observations of a foo's current state. 	    // Known .status.conditions.type are: "Available", "Progressing", and "Degraded" 	    // +patchMergeKey=type 	    // +patchStrategy=merge 	    // +listType=map 	    // +listMapKey=type 	    Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`   	    // other fields 	}</summary>
 public partial class V1HelmRepositoryStatusConditions
 {
     /// <summary>lastTransitionTime is the last time the condition transitioned from one status to another. This should be when the underlying condition changed.  If that is not known, then using the time when the API field changed is acceptable.</summary>
@@ -183,6 +190,7 @@ public partial class V1HelmRepositoryStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>HelmRepositoryStatus records the observed state of the HelmRepository.</summary>
 public partial class V1HelmRepositoryStatus
 {
     /// <summary>Artifact represents the last successful HelmRepository reconciliation.</summary>
@@ -207,6 +215,7 @@ public partial class V1HelmRepositoryStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>HelmRepository is the Schema for the helmrepositories API.</summary>
 public partial class V1HelmRepository : IKubernetesObject<V1ObjectMeta>, ISpec<V1HelmRepositorySpec>, IStatus<V1HelmRepositoryStatus>
 {
     public const string KubeApiVersion = "v1";

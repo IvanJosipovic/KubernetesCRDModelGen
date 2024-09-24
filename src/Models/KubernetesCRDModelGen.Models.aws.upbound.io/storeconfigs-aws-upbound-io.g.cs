@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.aws.upbound.io;
+/// <summary>Env is a reference to an environment variable that contains credentials that must be used to connect to the provider.</summary>
 public partial class V1alpha1StoreConfigSpecKubernetesAuthEnv
 {
     /// <summary>Name is the name of an environment variable.</summary>
@@ -15,6 +16,7 @@ public partial class V1alpha1StoreConfigSpecKubernetesAuthEnv
     public string Name { get; set; }
 }
 
+/// <summary>Fs is a reference to a filesystem location that contains credentials that must be used to connect to the provider.</summary>
 public partial class V1alpha1StoreConfigSpecKubernetesAuthFs
 {
     /// <summary>Path is a filesystem path.</summary>
@@ -22,6 +24,7 @@ public partial class V1alpha1StoreConfigSpecKubernetesAuthFs
     public string Path { get; set; }
 }
 
+/// <summary>A SecretRef is a reference to a secret key that contains the credentials that must be used to connect to the provider.</summary>
 public partial class V1alpha1StoreConfigSpecKubernetesAuthSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -53,6 +56,7 @@ public enum V1alpha1StoreConfigSpecKubernetesAuthSourceEnum
     Filesystem
 }
 
+/// <summary>Credentials used to connect to the Kubernetes API.</summary>
 public partial class V1alpha1StoreConfigSpecKubernetesAuth
 {
     /// <summary>Env is a reference to an environment variable that contains credentials that must be used to connect to the provider.</summary>
@@ -73,6 +77,7 @@ public partial class V1alpha1StoreConfigSpecKubernetesAuth
     public V1alpha1StoreConfigSpecKubernetesAuthSourceEnum Source { get; set; }
 }
 
+/// <summary>Kubernetes configures a Kubernetes secret store. If the "type" is "Kubernetes" but no config provided, in cluster config will be used.</summary>
 public partial class V1alpha1StoreConfigSpecKubernetes
 {
     /// <summary>Credentials used to connect to the Kubernetes API.</summary>
@@ -80,6 +85,7 @@ public partial class V1alpha1StoreConfigSpecKubernetes
     public V1alpha1StoreConfigSpecKubernetesAuth Auth { get; set; }
 }
 
+/// <summary>ConfigRef contains store config reference info.</summary>
 public partial class V1alpha1StoreConfigSpecPluginConfigRef
 {
     /// <summary>APIVersion of the referenced config.</summary>
@@ -95,6 +101,7 @@ public partial class V1alpha1StoreConfigSpecPluginConfigRef
     public string Name { get; set; }
 }
 
+/// <summary>Plugin configures External secret store as a plugin.</summary>
 public partial class V1alpha1StoreConfigSpecPlugin
 {
     /// <summary>ConfigRef contains store config reference info.</summary>
@@ -119,6 +126,7 @@ public enum V1alpha1StoreConfigSpecTypeEnum
     Plugin
 }
 
+/// <summary>A StoreConfigSpec defines the desired state of a ProviderConfig.</summary>
 public partial class V1alpha1StoreConfigSpec
 {
     /// <summary>DefaultScope used for scoping secrets for "cluster-scoped" resources. If store type is "Kubernetes", this would mean the default namespace to store connection secrets for cluster scoped resources. In case of "Vault", this would be used as the default parent path. Typically, should be set as Crossplane installation namespace.</summary>
@@ -139,6 +147,7 @@ public partial class V1alpha1StoreConfigSpec
     public V1alpha1StoreConfigSpecTypeEnum? Type { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1alpha1StoreConfigStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -166,6 +175,7 @@ public partial class V1alpha1StoreConfigStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>A StoreConfigStatus represents the status of a StoreConfig.</summary>
 public partial class V1alpha1StoreConfigStatus
 {
     /// <summary>Conditions of the resource.</summary>
@@ -174,6 +184,7 @@ public partial class V1alpha1StoreConfigStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>A StoreConfig configures how AWS controller should store connection details.</summary>
 public partial class V1alpha1StoreConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1StoreConfigSpec>, IStatus<V1alpha1StoreConfigStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

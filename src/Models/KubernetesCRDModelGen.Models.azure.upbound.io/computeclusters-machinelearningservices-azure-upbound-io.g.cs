@@ -18,6 +18,7 @@ public enum V1beta1ComputeClusterSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeClusterSpecForProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Machine Learning Compute Cluster. Changing this forces a new resource to be created.</summary>
@@ -49,6 +50,7 @@ public enum V1beta1ComputeClusterSpecForProviderMachineLearningWorkspaceIdRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ComputeClusterSpecForProviderMachineLearningWorkspaceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -62,6 +64,7 @@ public partial class V1beta1ComputeClusterSpecForProviderMachineLearningWorkspac
     public V1beta1ComputeClusterSpecForProviderMachineLearningWorkspaceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Workspace in machinelearningservices to populate machineLearningWorkspaceId.</summary>
 public partial class V1beta1ComputeClusterSpecForProviderMachineLearningWorkspaceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -93,6 +96,7 @@ public enum V1beta1ComputeClusterSpecForProviderMachineLearningWorkspaceIdSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ComputeClusterSpecForProviderMachineLearningWorkspaceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -106,6 +110,7 @@ public partial class V1beta1ComputeClusterSpecForProviderMachineLearningWorkspac
     public V1beta1ComputeClusterSpecForProviderMachineLearningWorkspaceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Workspace in machinelearningservices to populate machineLearningWorkspaceId.</summary>
 public partial class V1beta1ComputeClusterSpecForProviderMachineLearningWorkspaceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1ComputeClusterSpecForProviderMachineLearningWorkspac
     public V1beta1ComputeClusterSpecForProviderMachineLearningWorkspaceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeClusterSpecForProviderScaleSettings
 {
     /// <summary>Maximum node count. Changing this forces a new Machine Learning Compute Cluster to be created.</summary>
@@ -136,6 +142,7 @@ public partial class V1beta1ComputeClusterSpecForProviderScaleSettings
     public string? ScaleDownNodesAfterIdleDuration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeClusterSpecForProviderSsh
 {
     /// <summary>Password of the administrator user account. Changing this forces a new Machine Learning Compute Cluster to be created.</summary>
@@ -171,6 +178,7 @@ public enum V1beta1ComputeClusterSpecForProviderSubnetResourceIdRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ComputeClusterSpecForProviderSubnetResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -184,6 +192,7 @@ public partial class V1beta1ComputeClusterSpecForProviderSubnetResourceIdRefPoli
     public V1beta1ComputeClusterSpecForProviderSubnetResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetResourceId.</summary>
 public partial class V1beta1ComputeClusterSpecForProviderSubnetResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -215,6 +224,7 @@ public enum V1beta1ComputeClusterSpecForProviderSubnetResourceIdSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ComputeClusterSpecForProviderSubnetResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -228,6 +238,7 @@ public partial class V1beta1ComputeClusterSpecForProviderSubnetResourceIdSelecto
     public V1beta1ComputeClusterSpecForProviderSubnetResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetResourceId.</summary>
 public partial class V1beta1ComputeClusterSpecForProviderSubnetResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -243,6 +254,7 @@ public partial class V1beta1ComputeClusterSpecForProviderSubnetResourceIdSelecto
     public V1beta1ComputeClusterSpecForProviderSubnetResourceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeClusterSpecForProvider
 {
     /// <summary>The description of the Machine Learning compute. Changing this forces a new Machine Learning Compute Cluster to be created.</summary>
@@ -318,6 +330,7 @@ public partial class V1beta1ComputeClusterSpecForProvider
     public string? VmSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeClusterSpecInitProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Machine Learning Compute Cluster. Changing this forces a new resource to be created.</summary>
@@ -349,6 +362,7 @@ public enum V1beta1ComputeClusterSpecInitProviderMachineLearningWorkspaceIdRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ComputeClusterSpecInitProviderMachineLearningWorkspaceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -362,6 +376,7 @@ public partial class V1beta1ComputeClusterSpecInitProviderMachineLearningWorkspa
     public V1beta1ComputeClusterSpecInitProviderMachineLearningWorkspaceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Workspace in machinelearningservices to populate machineLearningWorkspaceId.</summary>
 public partial class V1beta1ComputeClusterSpecInitProviderMachineLearningWorkspaceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -393,6 +408,7 @@ public enum V1beta1ComputeClusterSpecInitProviderMachineLearningWorkspaceIdSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ComputeClusterSpecInitProviderMachineLearningWorkspaceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -406,6 +422,7 @@ public partial class V1beta1ComputeClusterSpecInitProviderMachineLearningWorkspa
     public V1beta1ComputeClusterSpecInitProviderMachineLearningWorkspaceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Workspace in machinelearningservices to populate machineLearningWorkspaceId.</summary>
 public partial class V1beta1ComputeClusterSpecInitProviderMachineLearningWorkspaceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -421,6 +438,7 @@ public partial class V1beta1ComputeClusterSpecInitProviderMachineLearningWorkspa
     public V1beta1ComputeClusterSpecInitProviderMachineLearningWorkspaceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeClusterSpecInitProviderScaleSettings
 {
     /// <summary>Maximum node count. Changing this forces a new Machine Learning Compute Cluster to be created.</summary>
@@ -436,6 +454,7 @@ public partial class V1beta1ComputeClusterSpecInitProviderScaleSettings
     public string? ScaleDownNodesAfterIdleDuration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeClusterSpecInitProviderSsh
 {
     /// <summary>Password of the administrator user account. Changing this forces a new Machine Learning Compute Cluster to be created.</summary>
@@ -471,6 +490,7 @@ public enum V1beta1ComputeClusterSpecInitProviderSubnetResourceIdRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ComputeClusterSpecInitProviderSubnetResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -484,6 +504,7 @@ public partial class V1beta1ComputeClusterSpecInitProviderSubnetResourceIdRefPol
     public V1beta1ComputeClusterSpecInitProviderSubnetResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetResourceId.</summary>
 public partial class V1beta1ComputeClusterSpecInitProviderSubnetResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -515,6 +536,7 @@ public enum V1beta1ComputeClusterSpecInitProviderSubnetResourceIdSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ComputeClusterSpecInitProviderSubnetResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -528,6 +550,7 @@ public partial class V1beta1ComputeClusterSpecInitProviderSubnetResourceIdSelect
     public V1beta1ComputeClusterSpecInitProviderSubnetResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetResourceId.</summary>
 public partial class V1beta1ComputeClusterSpecInitProviderSubnetResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -543,6 +566,7 @@ public partial class V1beta1ComputeClusterSpecInitProviderSubnetResourceIdSelect
     public V1beta1ComputeClusterSpecInitProviderSubnetResourceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ComputeClusterSpecInitProvider
 {
     /// <summary>The description of the Machine Learning compute. Changing this forces a new Machine Learning Compute Cluster to be created.</summary>
@@ -660,6 +684,7 @@ public enum V1beta1ComputeClusterSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ComputeClusterSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -673,6 +698,7 @@ public partial class V1beta1ComputeClusterSpecProviderConfigRefPolicy
     public V1beta1ComputeClusterSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ComputeClusterSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -704,6 +730,7 @@ public enum V1beta1ComputeClusterSpecPublishConnectionDetailsToConfigRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ComputeClusterSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -717,6 +744,7 @@ public partial class V1beta1ComputeClusterSpecPublishConnectionDetailsToConfigRe
     public V1beta1ComputeClusterSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ComputeClusterSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -728,6 +756,7 @@ public partial class V1beta1ComputeClusterSpecPublishConnectionDetailsToConfigRe
     public V1beta1ComputeClusterSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ComputeClusterSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -743,6 +772,7 @@ public partial class V1beta1ComputeClusterSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ComputeClusterSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -758,6 +788,7 @@ public partial class V1beta1ComputeClusterSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ComputeClusterSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -769,6 +800,7 @@ public partial class V1beta1ComputeClusterSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ComputeClusterSpec defines the desired state of ComputeCluster</summary>
 public partial class V1beta1ComputeClusterSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -801,6 +833,7 @@ public partial class V1beta1ComputeClusterSpec
     public V1beta1ComputeClusterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeClusterStatusAtProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Machine Learning Compute Cluster. Changing this forces a new resource to be created.</summary>
@@ -820,6 +853,7 @@ public partial class V1beta1ComputeClusterStatusAtProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeClusterStatusAtProviderScaleSettings
 {
     /// <summary>Maximum node count. Changing this forces a new Machine Learning Compute Cluster to be created.</summary>
@@ -835,6 +869,7 @@ public partial class V1beta1ComputeClusterStatusAtProviderScaleSettings
     public string? ScaleDownNodesAfterIdleDuration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeClusterStatusAtProviderSsh
 {
     /// <summary>Password of the administrator user account. Changing this forces a new Machine Learning Compute Cluster to be created.</summary>
@@ -850,6 +885,7 @@ public partial class V1beta1ComputeClusterStatusAtProviderSsh
     public string? KeyValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeClusterStatusAtProvider
 {
     /// <summary>The description of the Machine Learning compute. Changing this forces a new Machine Learning Compute Cluster to be created.</summary>
@@ -913,6 +949,7 @@ public partial class V1beta1ComputeClusterStatusAtProvider
     public string? VmSize { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ComputeClusterStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -940,6 +977,7 @@ public partial class V1beta1ComputeClusterStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ComputeClusterStatus defines the observed state of ComputeCluster.</summary>
 public partial class V1beta1ComputeClusterStatus
 {
     /// <summary></summary>
@@ -956,6 +994,7 @@ public partial class V1beta1ComputeClusterStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ComputeCluster is the Schema for the ComputeClusters API. Manages a Machine Learning Compute Cluster.</summary>
 public partial class V1beta1ComputeCluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeClusterSpec>, IStatus<V1beta1ComputeClusterStatus>
 {
     public const string KubeApiVersion = "v1beta1";

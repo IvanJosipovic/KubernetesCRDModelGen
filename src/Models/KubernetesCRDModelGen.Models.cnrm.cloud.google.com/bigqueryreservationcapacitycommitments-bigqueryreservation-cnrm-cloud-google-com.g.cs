@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigqueryreservation.cnrm.cloud.google.com;
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1BigQueryReservationCapacityCommitmentSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1BigQueryReservationCapacityCommitmentSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1BigQueryReservationCapacityCommitmentSpec
 {
     /// <summary>Immutable. The edition type. Valid values are STANDARD, ENTERPRISE, ENTERPRISE_PLUS.</summary>
@@ -58,6 +60,7 @@ public partial class V1alpha1BigQueryReservationCapacityCommitmentSpec
     public int SlotCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1BigQueryReservationCapacityCommitmentStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -81,6 +84,7 @@ public partial class V1alpha1BigQueryReservationCapacityCommitmentStatusConditio
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1BigQueryReservationCapacityCommitmentStatus
 {
     /// <summary>The start of the current commitment period. It is applicable only for ACTIVE capacity commitments.</summary>
@@ -109,6 +113,7 @@ public partial class V1alpha1BigQueryReservationCapacityCommitmentStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1BigQueryReservationCapacityCommitment : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1BigQueryReservationCapacityCommitmentSpec>, IStatus<V1alpha1BigQueryReservationCapacityCommitmentStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

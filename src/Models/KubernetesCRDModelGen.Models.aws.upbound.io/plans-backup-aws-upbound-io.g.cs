@@ -18,6 +18,7 @@ public enum V1beta1PlanSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1PlanSpecForProviderAdvancedBackupSetting
 {
     /// <summary>Specifies the backup option for a selected resource. This option is only available for Windows VSS backup jobs. Set to { WindowsVSS = "enabled" } to enable Windows VSS backup option and create a VSS Windows backup.</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1PlanSpecForProviderAdvancedBackupSetting
     public string? ResourceType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PlanSpecForProviderRuleCopyActionLifecycle
 {
     /// <summary>Specifies the number of days after creation that a recovery point is moved to cold storage.</summary>
@@ -44,6 +46,7 @@ public partial class V1beta1PlanSpecForProviderRuleCopyActionLifecycle
     public bool? OptInToArchiveForSupportedResources { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PlanSpecForProviderRuleCopyAction
 {
     /// <summary>An Amazon Resource Name (ARN) that uniquely identifies the destination backup vault for the copied backup.</summary>
@@ -55,6 +58,7 @@ public partial class V1beta1PlanSpecForProviderRuleCopyAction
     public IList<V1beta1PlanSpecForProviderRuleCopyActionLifecycle>? Lifecycle { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PlanSpecForProviderRuleLifecycle
 {
     /// <summary>Specifies the number of days after creation that a recovery point is moved to cold storage.</summary>
@@ -90,6 +94,7 @@ public enum V1beta1PlanSpecForProviderRuleTargetVaultNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PlanSpecForProviderRuleTargetVaultNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -103,6 +108,7 @@ public partial class V1beta1PlanSpecForProviderRuleTargetVaultNameRefPolicy
     public V1beta1PlanSpecForProviderRuleTargetVaultNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Vault in backup to populate targetVaultName.</summary>
 public partial class V1beta1PlanSpecForProviderRuleTargetVaultNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -134,6 +140,7 @@ public enum V1beta1PlanSpecForProviderRuleTargetVaultNameSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PlanSpecForProviderRuleTargetVaultNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -147,6 +154,7 @@ public partial class V1beta1PlanSpecForProviderRuleTargetVaultNameSelectorPolicy
     public V1beta1PlanSpecForProviderRuleTargetVaultNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Vault in backup to populate targetVaultName.</summary>
 public partial class V1beta1PlanSpecForProviderRuleTargetVaultNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -162,6 +170,7 @@ public partial class V1beta1PlanSpecForProviderRuleTargetVaultNameSelector
     public V1beta1PlanSpecForProviderRuleTargetVaultNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PlanSpecForProviderRule
 {
     /// <summary>The amount of time in minutes AWS Backup attempts a backup before canceling the job and returning an error.</summary>
@@ -209,6 +218,7 @@ public partial class V1beta1PlanSpecForProviderRule
     public V1beta1PlanSpecForProviderRuleTargetVaultNameSelector? TargetVaultNameSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PlanSpecForProvider
 {
     /// <summary>An object that specifies backup options for each resource type.</summary>
@@ -232,6 +242,7 @@ public partial class V1beta1PlanSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PlanSpecInitProviderAdvancedBackupSetting
 {
     /// <summary>Specifies the backup option for a selected resource. This option is only available for Windows VSS backup jobs. Set to { WindowsVSS = "enabled" } to enable Windows VSS backup option and create a VSS Windows backup.</summary>
@@ -243,6 +254,7 @@ public partial class V1beta1PlanSpecInitProviderAdvancedBackupSetting
     public string? ResourceType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PlanSpecInitProviderRuleCopyActionLifecycle
 {
     /// <summary>Specifies the number of days after creation that a recovery point is moved to cold storage.</summary>
@@ -258,6 +270,7 @@ public partial class V1beta1PlanSpecInitProviderRuleCopyActionLifecycle
     public bool? OptInToArchiveForSupportedResources { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PlanSpecInitProviderRuleCopyAction
 {
     /// <summary>An Amazon Resource Name (ARN) that uniquely identifies the destination backup vault for the copied backup.</summary>
@@ -269,6 +282,7 @@ public partial class V1beta1PlanSpecInitProviderRuleCopyAction
     public IList<V1beta1PlanSpecInitProviderRuleCopyActionLifecycle>? Lifecycle { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PlanSpecInitProviderRuleLifecycle
 {
     /// <summary>Specifies the number of days after creation that a recovery point is moved to cold storage.</summary>
@@ -304,6 +318,7 @@ public enum V1beta1PlanSpecInitProviderRuleTargetVaultNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PlanSpecInitProviderRuleTargetVaultNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -317,6 +332,7 @@ public partial class V1beta1PlanSpecInitProviderRuleTargetVaultNameRefPolicy
     public V1beta1PlanSpecInitProviderRuleTargetVaultNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Vault in backup to populate targetVaultName.</summary>
 public partial class V1beta1PlanSpecInitProviderRuleTargetVaultNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -348,6 +364,7 @@ public enum V1beta1PlanSpecInitProviderRuleTargetVaultNameSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PlanSpecInitProviderRuleTargetVaultNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -361,6 +378,7 @@ public partial class V1beta1PlanSpecInitProviderRuleTargetVaultNameSelectorPolic
     public V1beta1PlanSpecInitProviderRuleTargetVaultNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Vault in backup to populate targetVaultName.</summary>
 public partial class V1beta1PlanSpecInitProviderRuleTargetVaultNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -376,6 +394,7 @@ public partial class V1beta1PlanSpecInitProviderRuleTargetVaultNameSelector
     public V1beta1PlanSpecInitProviderRuleTargetVaultNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PlanSpecInitProviderRule
 {
     /// <summary>The amount of time in minutes AWS Backup attempts a backup before canceling the job and returning an error.</summary>
@@ -423,6 +442,7 @@ public partial class V1beta1PlanSpecInitProviderRule
     public V1beta1PlanSpecInitProviderRuleTargetVaultNameSelector? TargetVaultNameSelector { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1PlanSpecInitProvider
 {
     /// <summary>An object that specifies backup options for each resource type.</summary>
@@ -484,6 +504,7 @@ public enum V1beta1PlanSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PlanSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -497,6 +518,7 @@ public partial class V1beta1PlanSpecProviderConfigRefPolicy
     public V1beta1PlanSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1PlanSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -528,6 +550,7 @@ public enum V1beta1PlanSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PlanSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -541,6 +564,7 @@ public partial class V1beta1PlanSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1PlanSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1PlanSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -552,6 +576,7 @@ public partial class V1beta1PlanSpecPublishConnectionDetailsToConfigRef
     public V1beta1PlanSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1PlanSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -567,6 +592,7 @@ public partial class V1beta1PlanSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1PlanSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -582,6 +608,7 @@ public partial class V1beta1PlanSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1PlanSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -593,6 +620,7 @@ public partial class V1beta1PlanSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>PlanSpec defines the desired state of Plan</summary>
 public partial class V1beta1PlanSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -625,6 +653,7 @@ public partial class V1beta1PlanSpec
     public V1beta1PlanSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PlanStatusAtProviderAdvancedBackupSetting
 {
     /// <summary>Specifies the backup option for a selected resource. This option is only available for Windows VSS backup jobs. Set to { WindowsVSS = "enabled" } to enable Windows VSS backup option and create a VSS Windows backup.</summary>
@@ -636,6 +665,7 @@ public partial class V1beta1PlanStatusAtProviderAdvancedBackupSetting
     public string? ResourceType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PlanStatusAtProviderRuleCopyActionLifecycle
 {
     /// <summary>Specifies the number of days after creation that a recovery point is moved to cold storage.</summary>
@@ -651,6 +681,7 @@ public partial class V1beta1PlanStatusAtProviderRuleCopyActionLifecycle
     public bool? OptInToArchiveForSupportedResources { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PlanStatusAtProviderRuleCopyAction
 {
     /// <summary>An Amazon Resource Name (ARN) that uniquely identifies the destination backup vault for the copied backup.</summary>
@@ -662,6 +693,7 @@ public partial class V1beta1PlanStatusAtProviderRuleCopyAction
     public IList<V1beta1PlanStatusAtProviderRuleCopyActionLifecycle>? Lifecycle { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PlanStatusAtProviderRuleLifecycle
 {
     /// <summary>Specifies the number of days after creation that a recovery point is moved to cold storage.</summary>
@@ -677,6 +709,7 @@ public partial class V1beta1PlanStatusAtProviderRuleLifecycle
     public bool? OptInToArchiveForSupportedResources { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PlanStatusAtProviderRule
 {
     /// <summary>The amount of time in minutes AWS Backup attempts a backup before canceling the job and returning an error.</summary>
@@ -716,6 +749,7 @@ public partial class V1beta1PlanStatusAtProviderRule
     public string? TargetVaultName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PlanStatusAtProvider
 {
     /// <summary>An object that specifies backup options for each resource type.</summary>
@@ -751,6 +785,7 @@ public partial class V1beta1PlanStatusAtProvider
     public string? Version { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1PlanStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -778,6 +813,7 @@ public partial class V1beta1PlanStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>PlanStatus defines the observed state of Plan.</summary>
 public partial class V1beta1PlanStatus
 {
     /// <summary></summary>
@@ -794,6 +830,7 @@ public partial class V1beta1PlanStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Plan is the Schema for the Plans API. Provides an AWS Backup plan resource.</summary>
 public partial class V1beta1Plan : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1PlanSpec>, IStatus<V1beta1PlanStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigtable.cnrm.cloud.google.com;
+/// <summary>A list of Autoscaling configurations. Only one element is used and allowed.</summary>
 public partial class V1beta1BigtableInstanceSpecClusterAutoscalingConfig
 {
     /// <summary>The target CPU utilization for autoscaling. Value must be between 10 and 80.</summary>
@@ -27,6 +28,7 @@ public partial class V1beta1BigtableInstanceSpecClusterAutoscalingConfig
     public long? StorageTarget { get; set; }
 }
 
+/// <summary>Describes the Cloud KMS encryption key that will be used to protect the destination Bigtable cluster. The requirements for this key are:  1) The Cloud Bigtable service account associated with the project that contains this cluster must be granted the cloudkms.cryptoKeyEncrypterDecrypter role on the CMEK key. 2) Only regional keys can be used and the region of the CMEK key must match the region of the cluster. 3) All clusters within an instance must use the same CMEK key access to this encryption key.</summary>
 public partial class V1beta1BigtableInstanceSpecClusterKmsKeyRef
 {
     /// <summary>A reference to an externally managed KMSCryptoKey. Should be in the format `projects/[kms_project_id]/locations/[region]/keyRings/[key_ring_id]/cryptoKeys/[key]`.</summary>
@@ -42,6 +44,7 @@ public partial class V1beta1BigtableInstanceSpecClusterKmsKeyRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BigtableInstanceSpecCluster
 {
     /// <summary>A list of Autoscaling configurations. Only one element is used and allowed.</summary>
@@ -69,6 +72,7 @@ public partial class V1beta1BigtableInstanceSpecCluster
     public string Zone { get; set; }
 }
 
+/// <summary>BigtableInstanceSpec defines the desired state of BigtableInstance</summary>
 public partial class V1beta1BigtableInstanceSpec
 {
     /// <summary>A block of cluster configuration options. This can be specified at least once.</summary>
@@ -92,6 +96,7 @@ public partial class V1beta1BigtableInstanceSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BigtableInstanceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -115,6 +120,7 @@ public partial class V1beta1BigtableInstanceStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary>BigtableInstanceStatus defines the config connector machine state of BigtableInstance</summary>
 public partial class V1beta1BigtableInstanceStatus
 {
     /// <summary>Conditions represent the latest available observations of the object's current state.</summary>
@@ -127,6 +133,7 @@ public partial class V1beta1BigtableInstanceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>BigtableInstance is the Schema for the BigtableInstance API</summary>
 public partial class V1beta1BigtableInstance : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BigtableInstanceSpec>, IStatus<V1beta1BigtableInstanceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

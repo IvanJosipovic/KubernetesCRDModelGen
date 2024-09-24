@@ -18,6 +18,7 @@ public enum V1beta1BackupPolicyKubernetesClusterSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderDefaultRetentionRuleLifeCycle
 {
     /// <summary>The type of data store. The only possible value is OperationalStore. Changing this forces a new resource to be created.</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderDefaultR
     public string? Duration { get; set; }
 }
 
+/// <summary>A default_retention_rule block as defined below. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderDefaultRetentionRule
 {
     /// <summary>A life_cycle block as defined below. Changing this forces a new resource to be created.</summary>
@@ -56,6 +58,7 @@ public enum V1beta1BackupPolicyKubernetesClusterSpecForProviderResourceGroupName
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -69,6 +72,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderResource
     public V1beta1BackupPolicyKubernetesClusterSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -100,6 +104,7 @@ public enum V1beta1BackupPolicyKubernetesClusterSpecForProviderResourceGroupName
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -113,6 +118,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderResource
     public V1beta1BackupPolicyKubernetesClusterSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -128,6 +134,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderResource
     public V1beta1BackupPolicyKubernetesClusterSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>A criteria block as defined below. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderRetentionRuleCriteria
 {
     /// <summary>Possible values are AllBackup, FirstOfDay, FirstOfWeek, FirstOfMonth and FirstOfYear. These values mean the first successful backup of the day/week/month/year. Changing this forces a new resource to be created.</summary>
@@ -151,6 +158,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderRetentio
     public IList<string>? WeeksOfMonth { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderRetentionRuleLifeCycle
 {
     /// <summary>The type of data store. The only possible value is OperationalStore. Changing this forces a new resource to be created.</summary>
@@ -162,6 +170,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderRetentio
     public string? Duration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderRetentionRule
 {
     /// <summary>A criteria block as defined below. Changing this forces a new resource to be created.</summary>
@@ -201,6 +210,7 @@ public enum V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNameRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -214,6 +224,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNam
     public V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a BackupVault in dataprotection to populate vaultName.</summary>
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -245,6 +256,7 @@ public enum V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNameSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -258,6 +270,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNam
     public V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a BackupVault in dataprotection to populate vaultName.</summary>
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -273,6 +286,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNam
     public V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupPolicyKubernetesClusterSpecForProvider
 {
     /// <summary>Specifies a list of repeating time interval. It supports weekly back. It should follow ISO 8601 repeating time interval. Changing this forces a new resource to be created.</summary>
@@ -316,6 +330,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecForProvider
     public V1beta1BackupPolicyKubernetesClusterSpecForProviderVaultNameSelector? VaultNameSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupPolicyKubernetesClusterSpecInitProviderDefaultRetentionRuleLifeCycle
 {
     /// <summary>The type of data store. The only possible value is OperationalStore. Changing this forces a new resource to be created.</summary>
@@ -327,6 +342,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecInitProviderDefault
     public string? Duration { get; set; }
 }
 
+/// <summary>A default_retention_rule block as defined below. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1BackupPolicyKubernetesClusterSpecInitProviderDefaultRetentionRule
 {
     /// <summary>A life_cycle block as defined below. Changing this forces a new resource to be created.</summary>
@@ -334,6 +350,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecInitProviderDefault
     public IList<V1beta1BackupPolicyKubernetesClusterSpecInitProviderDefaultRetentionRuleLifeCycle>? LifeCycle { get; set; }
 }
 
+/// <summary>A criteria block as defined below. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1BackupPolicyKubernetesClusterSpecInitProviderRetentionRuleCriteria
 {
     /// <summary>Possible values are AllBackup, FirstOfDay, FirstOfWeek, FirstOfMonth and FirstOfYear. These values mean the first successful backup of the day/week/month/year. Changing this forces a new resource to be created.</summary>
@@ -357,6 +374,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecInitProviderRetenti
     public IList<string>? WeeksOfMonth { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupPolicyKubernetesClusterSpecInitProviderRetentionRuleLifeCycle
 {
     /// <summary>The type of data store. The only possible value is OperationalStore. Changing this forces a new resource to be created.</summary>
@@ -368,6 +386,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecInitProviderRetenti
     public string? Duration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupPolicyKubernetesClusterSpecInitProviderRetentionRule
 {
     /// <summary>A criteria block as defined below. Changing this forces a new resource to be created.</summary>
@@ -387,6 +406,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecInitProviderRetenti
     public double? Priority { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1BackupPolicyKubernetesClusterSpecInitProvider
 {
     /// <summary>Specifies a list of repeating time interval. It supports weekly back. It should follow ISO 8601 repeating time interval. Changing this forces a new resource to be created.</summary>
@@ -448,6 +468,7 @@ public enum V1beta1BackupPolicyKubernetesClusterSpecProviderConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupPolicyKubernetesClusterSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -461,6 +482,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecProviderConfigRefPo
     public V1beta1BackupPolicyKubernetesClusterSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1BackupPolicyKubernetesClusterSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -492,6 +514,7 @@ public enum V1beta1BackupPolicyKubernetesClusterSpecPublishConnectionDetailsToCo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupPolicyKubernetesClusterSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -505,6 +528,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecPublishConnectionDe
     public V1beta1BackupPolicyKubernetesClusterSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1BackupPolicyKubernetesClusterSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -516,6 +540,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecPublishConnectionDe
     public V1beta1BackupPolicyKubernetesClusterSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1BackupPolicyKubernetesClusterSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -531,6 +556,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecPublishConnectionDe
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1BackupPolicyKubernetesClusterSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -546,6 +572,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecPublishConnectionDe
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1BackupPolicyKubernetesClusterSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -557,6 +584,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpecWriteConnectionSecr
     public string Namespace { get; set; }
 }
 
+/// <summary>BackupPolicyKubernetesClusterSpec defines the desired state of BackupPolicyKubernetesCluster</summary>
 public partial class V1beta1BackupPolicyKubernetesClusterSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -589,6 +617,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterSpec
     public V1beta1BackupPolicyKubernetesClusterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupPolicyKubernetesClusterStatusAtProviderDefaultRetentionRuleLifeCycle
 {
     /// <summary>The type of data store. The only possible value is OperationalStore. Changing this forces a new resource to be created.</summary>
@@ -600,6 +629,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterStatusAtProviderDefault
     public string? Duration { get; set; }
 }
 
+/// <summary>A default_retention_rule block as defined below. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1BackupPolicyKubernetesClusterStatusAtProviderDefaultRetentionRule
 {
     /// <summary>A life_cycle block as defined below. Changing this forces a new resource to be created.</summary>
@@ -607,6 +637,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterStatusAtProviderDefault
     public IList<V1beta1BackupPolicyKubernetesClusterStatusAtProviderDefaultRetentionRuleLifeCycle>? LifeCycle { get; set; }
 }
 
+/// <summary>A criteria block as defined below. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1BackupPolicyKubernetesClusterStatusAtProviderRetentionRuleCriteria
 {
     /// <summary>Possible values are AllBackup, FirstOfDay, FirstOfWeek, FirstOfMonth and FirstOfYear. These values mean the first successful backup of the day/week/month/year. Changing this forces a new resource to be created.</summary>
@@ -630,6 +661,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterStatusAtProviderRetenti
     public IList<string>? WeeksOfMonth { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupPolicyKubernetesClusterStatusAtProviderRetentionRuleLifeCycle
 {
     /// <summary>The type of data store. The only possible value is OperationalStore. Changing this forces a new resource to be created.</summary>
@@ -641,6 +673,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterStatusAtProviderRetenti
     public string? Duration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupPolicyKubernetesClusterStatusAtProviderRetentionRule
 {
     /// <summary>A criteria block as defined below. Changing this forces a new resource to be created.</summary>
@@ -660,6 +693,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterStatusAtProviderRetenti
     public double? Priority { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupPolicyKubernetesClusterStatusAtProvider
 {
     /// <summary>Specifies a list of repeating time interval. It supports weekly back. It should follow ISO 8601 repeating time interval. Changing this forces a new resource to be created.</summary>
@@ -691,6 +725,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterStatusAtProvider
     public string? VaultName { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1BackupPolicyKubernetesClusterStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -718,6 +753,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>BackupPolicyKubernetesClusterStatus defines the observed state of BackupPolicyKubernetesCluster.</summary>
 public partial class V1beta1BackupPolicyKubernetesClusterStatus
 {
     /// <summary></summary>
@@ -734,6 +770,7 @@ public partial class V1beta1BackupPolicyKubernetesClusterStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>BackupPolicyKubernetesCluster is the Schema for the BackupPolicyKubernetesClusters API. Manages a Backup Policy to back up Kubernetes Cluster.</summary>
 public partial class V1beta1BackupPolicyKubernetesCluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BackupPolicyKubernetesClusterSpec>, IStatus<V1beta1BackupPolicyKubernetesClusterStatus>
 {
     public const string KubeApiVersion = "v1beta1";

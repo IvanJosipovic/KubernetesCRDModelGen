@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.logging.cnrm.cloud.google.com;
+/// <summary>Options that affect sinks exporting data to BigQuery.</summary>
 public partial class V1beta1LoggingLogSinkSpecBigqueryOptions
 {
     /// <summary>Whether to use BigQuery's partition tables. By default, Logging creates dated tables based on the log entries' timestamps, e.g. syslog_20170523. With partitioned tables the date suffix is no longer present and special query syntax has to be used instead. In both cases, tables are sharded based on UTC timezone.</summary>
@@ -15,6 +16,7 @@ public partial class V1beta1LoggingLogSinkSpecBigqueryOptions
     public bool UsePartitionedTables { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LoggingLogSinkSpecDestinationBigQueryDatasetRef
 {
     /// <summary>Allowed value: string of the format `bigquery.googleapis.com/projects/{{project}}/datasets/{{value}}`, where {{value}} is the `name` field of a `BigQueryDataset` resource.</summary>
@@ -30,6 +32,7 @@ public partial class V1beta1LoggingLogSinkSpecDestinationBigQueryDatasetRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Only `external` field is supported to configure the reference.</summary>
 public partial class V1beta1LoggingLogSinkSpecDestinationLoggingLogBucketRef
 {
     /// <summary>Allowed value: string of the format `logging.googleapis.com/projects/{{project}}/locations/{{location}}/buckets/{{value}}`, where {{value}} is the `name` field of a `LoggingLogBucket` resource.</summary>
@@ -45,6 +48,7 @@ public partial class V1beta1LoggingLogSinkSpecDestinationLoggingLogBucketRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LoggingLogSinkSpecDestinationPubSubTopicRef
 {
     /// <summary>Allowed value: string of the format `pubsub.googleapis.com/projects/{{project}}/topics/{{value}}`, where {{value}} is the `name` field of a `PubSubTopic` resource.</summary>
@@ -60,6 +64,7 @@ public partial class V1beta1LoggingLogSinkSpecDestinationPubSubTopicRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LoggingLogSinkSpecDestinationStorageBucketRef
 {
     /// <summary>Allowed value: string of the format `storage.googleapis.com/{{value}}`, where {{value}} is the `name` field of a `StorageBucket` resource.</summary>
@@ -75,6 +80,7 @@ public partial class V1beta1LoggingLogSinkSpecDestinationStorageBucketRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LoggingLogSinkSpecDestination
 {
     /// <summary></summary>
@@ -94,6 +100,7 @@ public partial class V1beta1LoggingLogSinkSpecDestination
     public V1beta1LoggingLogSinkSpecDestinationStorageBucketRef? StorageBucketRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LoggingLogSinkSpecExclusions
 {
     /// <summary>A description of this exclusion.</summary>
@@ -113,6 +120,7 @@ public partial class V1beta1LoggingLogSinkSpecExclusions
     public string Name { get; set; }
 }
 
+/// <summary>The folder in which to create the sink. Only one of projectRef, folderRef, or organizationRef may be specified.</summary>
 public partial class V1beta1LoggingLogSinkSpecFolderRef
 {
     /// <summary>Allowed value: The `folderId` field of a `Folder` resource.</summary>
@@ -128,6 +136,7 @@ public partial class V1beta1LoggingLogSinkSpecFolderRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The organization in which to create the sink. Only one of projectRef, folderRef, or organizationRef may be specified.</summary>
 public partial class V1beta1LoggingLogSinkSpecOrganizationRef
 {
     /// <summary>Allowed value: The `name` field of an `Organization` resource.</summary>
@@ -143,6 +152,7 @@ public partial class V1beta1LoggingLogSinkSpecOrganizationRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The project in which to create the sink. Only one of projectRef, folderRef, or organizationRef may be specified.</summary>
 public partial class V1beta1LoggingLogSinkSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -158,6 +168,7 @@ public partial class V1beta1LoggingLogSinkSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LoggingLogSinkSpec
 {
     /// <summary>Options that affect sinks exporting data to BigQuery.</summary>
@@ -209,6 +220,7 @@ public partial class V1beta1LoggingLogSinkSpec
     public bool? UniqueWriterIdentity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LoggingLogSinkStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -232,6 +244,7 @@ public partial class V1beta1LoggingLogSinkStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LoggingLogSinkStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -248,6 +261,7 @@ public partial class V1beta1LoggingLogSinkStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1LoggingLogSink : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LoggingLogSinkSpec>, IStatus<V1beta1LoggingLogSinkStatus>
 {
     public const string KubeApiVersion = "v1beta1";

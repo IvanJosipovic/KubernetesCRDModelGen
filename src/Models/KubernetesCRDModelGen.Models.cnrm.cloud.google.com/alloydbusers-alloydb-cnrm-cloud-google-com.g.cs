@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.alloydb.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1AlloyDBUserSpecClusterRef
 {
     /// <summary>Allowed value: The `name` field of an `AlloyDBCluster` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1AlloyDBUserSpecClusterRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 public partial class V1beta1AlloyDBUserSpecPasswordValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -34,6 +36,7 @@ public partial class V1beta1AlloyDBUserSpecPasswordValueFromSecretKeyRef
     public string Name { get; set; }
 }
 
+/// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 public partial class V1beta1AlloyDBUserSpecPasswordValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -41,6 +44,7 @@ public partial class V1beta1AlloyDBUserSpecPasswordValueFrom
     public V1beta1AlloyDBUserSpecPasswordValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary>Password for this database user.</summary>
 public partial class V1beta1AlloyDBUserSpecPassword
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -52,6 +56,7 @@ public partial class V1beta1AlloyDBUserSpecPassword
     public V1beta1AlloyDBUserSpecPasswordValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AlloyDBUserSpec
 {
     /// <summary></summary>
@@ -75,6 +80,7 @@ public partial class V1beta1AlloyDBUserSpec
     public string UserType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AlloyDBUserStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -98,6 +104,7 @@ public partial class V1beta1AlloyDBUserStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AlloyDBUserStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -114,6 +121,7 @@ public partial class V1beta1AlloyDBUserStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1AlloyDBUser : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AlloyDBUserSpec>, IStatus<V1beta1AlloyDBUserStatus>
 {
     public const string KubeApiVersion = "v1beta1";

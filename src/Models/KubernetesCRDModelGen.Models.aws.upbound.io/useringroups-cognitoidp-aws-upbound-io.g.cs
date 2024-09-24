@@ -38,6 +38,7 @@ public enum V1beta1UserInGroupSpecForProviderGroupNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserInGroupSpecForProviderGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1UserInGroupSpecForProviderGroupNameRefPolicy
     public V1beta1UserInGroupSpecForProviderGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserGroup in cognitoidp to populate groupName.</summary>
 public partial class V1beta1UserInGroupSpecForProviderGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1UserInGroupSpecForProviderGroupNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserInGroupSpecForProviderGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1UserInGroupSpecForProviderGroupNameSelectorPolicy
     public V1beta1UserInGroupSpecForProviderGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserGroup in cognitoidp to populate groupName.</summary>
 public partial class V1beta1UserInGroupSpecForProviderGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1UserInGroupSpecForProviderUserPoolIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserInGroupSpecForProviderUserPoolIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1UserInGroupSpecForProviderUserPoolIdRefPolicy
     public V1beta1UserInGroupSpecForProviderUserPoolIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserPool in cognitoidp to populate userPoolId.</summary>
 public partial class V1beta1UserInGroupSpecForProviderUserPoolIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1UserInGroupSpecForProviderUserPoolIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserInGroupSpecForProviderUserPoolIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1UserInGroupSpecForProviderUserPoolIdSelectorPolicy
     public V1beta1UserInGroupSpecForProviderUserPoolIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserPool in cognitoidp to populate userPoolId.</summary>
 public partial class V1beta1UserInGroupSpecForProviderUserPoolIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1UserInGroupSpecForProviderUsernameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserInGroupSpecForProviderUsernameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1UserInGroupSpecForProviderUsernameRefPolicy
     public V1beta1UserInGroupSpecForProviderUsernameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a User in cognitoidp to populate username.</summary>
 public partial class V1beta1UserInGroupSpecForProviderUsernameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1UserInGroupSpecForProviderUsernameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserInGroupSpecForProviderUsernameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1UserInGroupSpecForProviderUsernameSelectorPolicy
     public V1beta1UserInGroupSpecForProviderUsernameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a User in cognitoidp to populate username.</summary>
 public partial class V1beta1UserInGroupSpecForProviderUsernameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1UserInGroupSpecForProviderUsernameSelector
     public V1beta1UserInGroupSpecForProviderUsernameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserInGroupSpecForProvider
 {
     /// <summary>The name of the group to which the user is to be added.</summary>
@@ -357,6 +370,7 @@ public enum V1beta1UserInGroupSpecInitProviderGroupNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserInGroupSpecInitProviderGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -370,6 +384,7 @@ public partial class V1beta1UserInGroupSpecInitProviderGroupNameRefPolicy
     public V1beta1UserInGroupSpecInitProviderGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserGroup in cognitoidp to populate groupName.</summary>
 public partial class V1beta1UserInGroupSpecInitProviderGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -401,6 +416,7 @@ public enum V1beta1UserInGroupSpecInitProviderGroupNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserInGroupSpecInitProviderGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -414,6 +430,7 @@ public partial class V1beta1UserInGroupSpecInitProviderGroupNameSelectorPolicy
     public V1beta1UserInGroupSpecInitProviderGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserGroup in cognitoidp to populate groupName.</summary>
 public partial class V1beta1UserInGroupSpecInitProviderGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -449,6 +466,7 @@ public enum V1beta1UserInGroupSpecInitProviderUserPoolIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserInGroupSpecInitProviderUserPoolIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -462,6 +480,7 @@ public partial class V1beta1UserInGroupSpecInitProviderUserPoolIdRefPolicy
     public V1beta1UserInGroupSpecInitProviderUserPoolIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserPool in cognitoidp to populate userPoolId.</summary>
 public partial class V1beta1UserInGroupSpecInitProviderUserPoolIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -493,6 +512,7 @@ public enum V1beta1UserInGroupSpecInitProviderUserPoolIdSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserInGroupSpecInitProviderUserPoolIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -506,6 +526,7 @@ public partial class V1beta1UserInGroupSpecInitProviderUserPoolIdSelectorPolicy
     public V1beta1UserInGroupSpecInitProviderUserPoolIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserPool in cognitoidp to populate userPoolId.</summary>
 public partial class V1beta1UserInGroupSpecInitProviderUserPoolIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -541,6 +562,7 @@ public enum V1beta1UserInGroupSpecInitProviderUsernameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserInGroupSpecInitProviderUsernameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -554,6 +576,7 @@ public partial class V1beta1UserInGroupSpecInitProviderUsernameRefPolicy
     public V1beta1UserInGroupSpecInitProviderUsernameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a User in cognitoidp to populate username.</summary>
 public partial class V1beta1UserInGroupSpecInitProviderUsernameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -585,6 +608,7 @@ public enum V1beta1UserInGroupSpecInitProviderUsernameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserInGroupSpecInitProviderUsernameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -598,6 +622,7 @@ public partial class V1beta1UserInGroupSpecInitProviderUsernameSelectorPolicy
     public V1beta1UserInGroupSpecInitProviderUsernameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a User in cognitoidp to populate username.</summary>
 public partial class V1beta1UserInGroupSpecInitProviderUsernameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -613,6 +638,7 @@ public partial class V1beta1UserInGroupSpecInitProviderUsernameSelector
     public V1beta1UserInGroupSpecInitProviderUsernameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1UserInGroupSpecInitProvider
 {
     /// <summary>The name of the group to which the user is to be added.</summary>
@@ -694,6 +720,7 @@ public enum V1beta1UserInGroupSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserInGroupSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -707,6 +734,7 @@ public partial class V1beta1UserInGroupSpecProviderConfigRefPolicy
     public V1beta1UserInGroupSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1UserInGroupSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -738,6 +766,7 @@ public enum V1beta1UserInGroupSpecPublishConnectionDetailsToConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserInGroupSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -751,6 +780,7 @@ public partial class V1beta1UserInGroupSpecPublishConnectionDetailsToConfigRefPo
     public V1beta1UserInGroupSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1UserInGroupSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -762,6 +792,7 @@ public partial class V1beta1UserInGroupSpecPublishConnectionDetailsToConfigRef
     public V1beta1UserInGroupSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1UserInGroupSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -777,6 +808,7 @@ public partial class V1beta1UserInGroupSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1UserInGroupSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -792,6 +824,7 @@ public partial class V1beta1UserInGroupSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1UserInGroupSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -803,6 +836,7 @@ public partial class V1beta1UserInGroupSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>UserInGroupSpec defines the desired state of UserInGroup</summary>
 public partial class V1beta1UserInGroupSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -835,6 +869,7 @@ public partial class V1beta1UserInGroupSpec
     public V1beta1UserInGroupSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserInGroupStatusAtProvider
 {
     /// <summary>The name of the group to which the user is to be added.</summary>
@@ -854,6 +889,7 @@ public partial class V1beta1UserInGroupStatusAtProvider
     public string? Username { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1UserInGroupStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -881,6 +917,7 @@ public partial class V1beta1UserInGroupStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>UserInGroupStatus defines the observed state of UserInGroup.</summary>
 public partial class V1beta1UserInGroupStatus
 {
     /// <summary></summary>
@@ -897,6 +934,7 @@ public partial class V1beta1UserInGroupStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>UserInGroup is the Schema for the UserInGroups API. Adds the specified user to the specified group.</summary>
 public partial class V1beta1UserInGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1UserInGroupSpec>, IStatus<V1beta1UserInGroupStatus>
 {
     public const string KubeApiVersion = "v1beta1";

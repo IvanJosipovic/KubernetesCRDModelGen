@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.configcontroller.cnrm.cloud.google.com;
+/// <summary>Immutable.</summary>
 public partial class V1beta1ConfigControllerInstanceSpecManagementConfigFullManagementConfigNetworkRef
 {
     /// <summary>Existing VPC Network to put the GKE cluster and nodes in.  Allowed value: The Google Cloud resource name of a `ComputeNetwork` resource (format: `projects/{{project}}/global/networks/{{name}}`).</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1ConfigControllerInstanceSpecManagementConfigFullMana
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. Configuration of the full (Autopilot) cluster management</summary>
 public partial class V1beta1ConfigControllerInstanceSpecManagementConfigFullManagementConfig
 {
     /// <summary>Immutable. The IP address range for the cluster pod IPs. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14) to have a range chosen with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks (e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to pick a specific range to use.</summary>
@@ -54,6 +56,7 @@ public partial class V1beta1ConfigControllerInstanceSpecManagementConfigFullMana
     public string? ServicesNamedRange { get; set; }
 }
 
+/// <summary>Immutable.</summary>
 public partial class V1beta1ConfigControllerInstanceSpecManagementConfigStandardManagementConfigNetworkRef
 {
     /// <summary>Existing VPC Network to put the GKE cluster and nodes in.  Allowed value: The Google Cloud resource name of a `ComputeNetwork` resource (format: `projects/{{project}}/global/networks/{{name}}`).</summary>
@@ -69,6 +72,7 @@ public partial class V1beta1ConfigControllerInstanceSpecManagementConfigStandard
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. Configuration of the standard (GKE) cluster management</summary>
 public partial class V1beta1ConfigControllerInstanceSpecManagementConfigStandardManagementConfig
 {
     /// <summary>Immutable. The IP address range for the cluster pod IPs. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14) to have a range chosen with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks (e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to pick a specific range to use.</summary>
@@ -100,6 +104,7 @@ public partial class V1beta1ConfigControllerInstanceSpecManagementConfigStandard
     public string? ServicesNamedRange { get; set; }
 }
 
+/// <summary>Immutable. Configuration of the cluster management</summary>
 public partial class V1beta1ConfigControllerInstanceSpecManagementConfig
 {
     /// <summary>Immutable. Configuration of the full (Autopilot) cluster management</summary>
@@ -111,6 +116,7 @@ public partial class V1beta1ConfigControllerInstanceSpecManagementConfig
     public V1beta1ConfigControllerInstanceSpecManagementConfigStandardManagementConfig? StandardManagementConfig { get; set; }
 }
 
+/// <summary>Immutable. The Project that this resource belongs to.</summary>
 public partial class V1beta1ConfigControllerInstanceSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -126,6 +132,7 @@ public partial class V1beta1ConfigControllerInstanceSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConfigControllerInstanceSpec
 {
     /// <summary>Immutable. The location for the resource</summary>
@@ -149,6 +156,7 @@ public partial class V1beta1ConfigControllerInstanceSpec
     public bool? UsePrivateEndpoint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConfigControllerInstanceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -172,6 +180,7 @@ public partial class V1beta1ConfigControllerInstanceStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConfigControllerInstanceStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -192,6 +201,7 @@ public partial class V1beta1ConfigControllerInstanceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ConfigControllerInstance : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ConfigControllerInstanceSpec>, IStatus<V1beta1ConfigControllerInstanceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

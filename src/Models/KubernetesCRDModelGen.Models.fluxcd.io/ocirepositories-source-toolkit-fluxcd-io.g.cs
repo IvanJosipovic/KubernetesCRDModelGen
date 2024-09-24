@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.source.toolkit.fluxcd.io;
+/// <summary>CertSecretRef can be given the name of a Secret containing either or both of   - a PEM-encoded client certificate (`tls.crt`) and private key (`tls.key`); - a PEM-encoded CA certificate (`ca.crt`)   and whichever are supplied, will be used for connecting to the registry. The client cert and key are useful if you are authenticating with a certificate; the CA cert is useful if you are using a self-signed server certificate. The Secret must be of type `Opaque` or `kubernetes.io/tls`.   Note: Support for the `caFile`, `certFile` and `keyFile` keys have been deprecated.</summary>
 public partial class V1beta2OCIRepositorySpecCertSecretRef
 {
     /// <summary>Name of the referent.</summary>
@@ -25,6 +26,7 @@ public enum V1beta2OCIRepositorySpecLayerSelectorOperationEnum
     Copy
 }
 
+/// <summary>LayerSelector specifies which layer should be extracted from the OCI artifact. When not specified, the first layer found in the artifact is selected.</summary>
 public partial class V1beta2OCIRepositorySpecLayerSelector
 {
     /// <summary>MediaType specifies the OCI media type of the layer which should be extracted from the OCI Artifact. The first layer matching this type is selected.</summary>
@@ -53,6 +55,7 @@ public enum V1beta2OCIRepositorySpecProviderEnum
     Gcp
 }
 
+/// <summary>The OCI reference to pull and monitor for changes, defaults to the latest tag.</summary>
 public partial class V1beta2OCIRepositorySpecRef
 {
     /// <summary>Digest is the image digest to pull, takes precedence over SemVer. The value should be in the format 'sha256:&lt;HASH&gt;'.</summary>
@@ -72,6 +75,7 @@ public partial class V1beta2OCIRepositorySpecRef
     public string? Tag { get; set; }
 }
 
+/// <summary>SecretRef contains the secret name containing the registry login credentials to resolve image metadata. The secret must be of type kubernetes.io/dockerconfigjson.</summary>
 public partial class V1beta2OCIRepositorySpecSecretRef
 {
     /// <summary>Name of the referent.</summary>
@@ -79,6 +83,7 @@ public partial class V1beta2OCIRepositorySpecSecretRef
     public string Name { get; set; }
 }
 
+/// <summary>OIDCIdentityMatch specifies options for verifying the certificate identity, i.e. the issuer and the subject of the certificate.</summary>
 public partial class V1beta2OCIRepositorySpecVerifyMatchOIDCIdentity
 {
     /// <summary>Issuer specifies the regex pattern to match against to verify the OIDC issuer in the Fulcio certificate. The pattern must be a valid Go regular expression.</summary>
@@ -100,6 +105,7 @@ public enum V1beta2OCIRepositorySpecVerifyProviderEnum
     Notation
 }
 
+/// <summary>SecretRef specifies the Kubernetes Secret containing the trusted public keys.</summary>
 public partial class V1beta2OCIRepositorySpecVerifySecretRef
 {
     /// <summary>Name of the referent.</summary>
@@ -107,6 +113,7 @@ public partial class V1beta2OCIRepositorySpecVerifySecretRef
     public string Name { get; set; }
 }
 
+/// <summary>Verify contains the secret name containing the trusted public keys used to verify the signature and specifies which provider to use to check whether OCI image is authentic.</summary>
 public partial class V1beta2OCIRepositorySpecVerify
 {
     /// <summary>MatchOIDCIdentity specifies the identity matching criteria to use while verifying an OCI artifact which was signed using Cosign keyless signing. The artifact's identity is deemed to be verified if any of the specified matchers match against the identity.</summary>
@@ -123,6 +130,7 @@ public partial class V1beta2OCIRepositorySpecVerify
     public V1beta2OCIRepositorySpecVerifySecretRef? SecretRef { get; set; }
 }
 
+/// <summary>OCIRepositorySpec defines the desired state of OCIRepository</summary>
 public partial class V1beta2OCIRepositorySpec
 {
     /// <summary>CertSecretRef can be given the name of a Secret containing either or both of   - a PEM-encoded client certificate (`tls.crt`) and private key (`tls.key`); - a PEM-encoded CA certificate (`ca.crt`)   and whichever are supplied, will be used for connecting to the registry. The client cert and key are useful if you are authenticating with a certificate; the CA cert is useful if you are using a self-signed server certificate. The Secret must be of type `Opaque` or `kubernetes.io/tls`.   Note: Support for the `caFile`, `certFile` and `keyFile` keys have been deprecated.</summary>
@@ -179,6 +187,7 @@ public partial class V1beta2OCIRepositorySpec
     public V1beta2OCIRepositorySpecVerify? Verify { get; set; }
 }
 
+/// <summary>Artifact represents the output of the last successful OCI Repository sync.</summary>
 public partial class V1beta2OCIRepositoryStatusArtifact
 {
     /// <summary>Digest is the digest of the file in the form of '&lt;algorithm&gt;:&lt;checksum&gt;'.</summary>
@@ -223,6 +232,7 @@ public enum V1beta2OCIRepositoryStatusConditionsStatusEnum
     Unknown
 }
 
+/// <summary>Condition contains details for one aspect of the current state of this API Resource. --- This struct is intended for direct use as an array at the field path .status.conditions.  For example,   	type FooStatus struct{ 	    // Represents the observations of a foo's current state. 	    // Known .status.conditions.type are: "Available", "Progressing", and "Degraded" 	    // +patchMergeKey=type 	    // +patchStrategy=merge 	    // +listType=map 	    // +listMapKey=type 	    Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`   	    // other fields 	}</summary>
 public partial class V1beta2OCIRepositoryStatusConditions
 {
     /// <summary>lastTransitionTime is the last time the condition transitioned from one status to another. This should be when the underlying condition changed.  If that is not known, then using the time when the API field changed is acceptable.</summary>
@@ -261,6 +271,7 @@ public enum V1beta2OCIRepositoryStatusObservedLayerSelectorOperationEnum
     Copy
 }
 
+/// <summary>ObservedLayerSelector is the observed layer selector used for constructing the source artifact.</summary>
 public partial class V1beta2OCIRepositoryStatusObservedLayerSelector
 {
     /// <summary>MediaType specifies the OCI media type of the layer which should be extracted from the OCI Artifact. The first layer matching this type is selected.</summary>
@@ -273,6 +284,7 @@ public partial class V1beta2OCIRepositoryStatusObservedLayerSelector
     public V1beta2OCIRepositoryStatusObservedLayerSelectorOperationEnum? Operation { get; set; }
 }
 
+/// <summary>OCIRepositoryStatus defines the observed state of OCIRepository</summary>
 public partial class V1beta2OCIRepositoryStatus
 {
     /// <summary>Artifact represents the output of the last successful OCI Repository sync.</summary>
@@ -309,6 +321,7 @@ public partial class V1beta2OCIRepositoryStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>OCIRepository is the Schema for the ocirepositories API</summary>
 public partial class V1beta2OCIRepository : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta2OCIRepositorySpec>, IStatus<V1beta2OCIRepositoryStatus>
 {
     public const string KubeApiVersion = "v1beta2";

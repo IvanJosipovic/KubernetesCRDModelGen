@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containerservice.azure.com;
+/// <summary>CapacityReservationGroupReference: AKS will associate the specified agent pool with the Capacity Reservation Group.</summary>
 public partial class V1api20231001storageManagedClustersAgentPoolSpecCapacityReservationGroupReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -27,6 +28,7 @@ public partial class V1api20231001storageManagedClustersAgentPoolSpecCapacityRes
     public string? Name { get; set; }
 }
 
+/// <summary>SourceResourceReference: This is the ARM ID of the source object to be used to create the target object.</summary>
 public partial class V1api20231001storageManagedClustersAgentPoolSpecCreationDataSourceResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -46,6 +48,7 @@ public partial class V1api20231001storageManagedClustersAgentPoolSpecCreationDat
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.CreationData Data used when creating a target resource from a source resource.</summary>
 public partial class V1api20231001storageManagedClustersAgentPoolSpecCreationData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -57,6 +60,7 @@ public partial class V1api20231001storageManagedClustersAgentPoolSpecCreationDat
     public V1api20231001storageManagedClustersAgentPoolSpecCreationDataSourceResourceReference? SourceResourceReference { get; set; }
 }
 
+/// <summary>HostGroupReference: This is of the form: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/hostGroups/{hostGroupName}. For more information see [Azure dedicated hosts](https://docs.microsoft.com/azure/virtual-machines/dedicated-hosts).</summary>
 public partial class V1api20231001storageManagedClustersAgentPoolSpecHostGroupReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -76,6 +80,7 @@ public partial class V1api20231001storageManagedClustersAgentPoolSpecHostGroupRe
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.KubeletConfig See [AKS custom node configuration](https://docs.microsoft.com/azure/aks/custom-node-configuration) for more details.</summary>
 public partial class V1api20231001storageManagedClustersAgentPoolSpecKubeletConfig
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -127,6 +132,7 @@ public partial class V1api20231001storageManagedClustersAgentPoolSpecKubeletConf
     public string? TopologyManagerPolicy { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.SysctlConfig Sysctl settings for Linux agent nodes.</summary>
 public partial class V1api20231001storageManagedClustersAgentPoolSpecLinuxOSConfigSysctls
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -246,6 +252,7 @@ public partial class V1api20231001storageManagedClustersAgentPoolSpecLinuxOSConf
     public int? VmVfsCachePressure { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.LinuxOSConfig See [AKS custom node configuration](https://docs.microsoft.com/azure/aks/custom-node-configuration) for more details.</summary>
 public partial class V1api20231001storageManagedClustersAgentPoolSpecLinuxOSConfig
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -269,6 +276,7 @@ public partial class V1api20231001storageManagedClustersAgentPoolSpecLinuxOSConf
     public string? TransparentHugePageEnabled { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.PortRange The port range.</summary>
 public partial class V1api20231001storageManagedClustersAgentPoolSpecNetworkProfileAllowedHostPorts
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -288,6 +296,7 @@ public partial class V1api20231001storageManagedClustersAgentPoolSpecNetworkProf
     public string? Protocol { get; set; }
 }
 
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 public partial class V1api20231001storageManagedClustersAgentPoolSpecNetworkProfileApplicationSecurityGroupsReferences
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -307,6 +316,7 @@ public partial class V1api20231001storageManagedClustersAgentPoolSpecNetworkProf
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.IPTag Contains the IPTag associated with the object.</summary>
 public partial class V1api20231001storageManagedClustersAgentPoolSpecNetworkProfileNodePublicIPTags
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -322,6 +332,7 @@ public partial class V1api20231001storageManagedClustersAgentPoolSpecNetworkProf
     public string? Tag { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.AgentPoolNetworkProfile Network settings of an agent pool.</summary>
 public partial class V1api20231001storageManagedClustersAgentPoolSpecNetworkProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -341,6 +352,7 @@ public partial class V1api20231001storageManagedClustersAgentPoolSpecNetworkProf
     public IList<V1api20231001storageManagedClustersAgentPoolSpecNetworkProfileNodePublicIPTags>? NodePublicIPTags { get; set; }
 }
 
+/// <summary>NodePublicIPPrefixReference: This is of the form: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPPrefixes/{publicIPPrefixName}</summary>
 public partial class V1api20231001storageManagedClustersAgentPoolSpecNodePublicIPPrefixReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -360,6 +372,7 @@ public partial class V1api20231001storageManagedClustersAgentPoolSpecNodePublicI
     public string? Name { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a containerservice.azure.com/ManagedCluster resource</summary>
 public partial class V1api20231001storageManagedClustersAgentPoolSpecOwner
 {
     /// <summary></summary>
@@ -371,6 +384,7 @@ public partial class V1api20231001storageManagedClustersAgentPoolSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>PodSubnetReference: If omitted, pod IPs are statically assigned on the node subnet (see vnetSubnetID for more details). This is of the form: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}</summary>
 public partial class V1api20231001storageManagedClustersAgentPoolSpecPodSubnetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -390,6 +404,7 @@ public partial class V1api20231001storageManagedClustersAgentPoolSpecPodSubnetRe
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.PowerState Describes the Power State of the cluster</summary>
 public partial class V1api20231001storageManagedClustersAgentPoolSpecPowerState
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -401,6 +416,7 @@ public partial class V1api20231001storageManagedClustersAgentPoolSpecPowerState
     public string? Code { get; set; }
 }
 
+/// <summary>ProximityPlacementGroupReference: The ID for Proximity Placement Group.</summary>
 public partial class V1api20231001storageManagedClustersAgentPoolSpecProximityPlacementGroupReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -420,6 +436,7 @@ public partial class V1api20231001storageManagedClustersAgentPoolSpecProximityPl
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.AgentPoolUpgradeSettings Settings for upgrading an agentpool</summary>
 public partial class V1api20231001storageManagedClustersAgentPoolSpecUpgradeSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -435,6 +452,7 @@ public partial class V1api20231001storageManagedClustersAgentPoolSpecUpgradeSett
     public string? MaxSurge { get; set; }
 }
 
+/// <summary>VnetSubnetReference: If this is not specified, a VNET and subnet will be generated and used. If no podSubnetID is specified, this applies to nodes and pods, otherwise it applies to just nodes. This is of the form: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}</summary>
 public partial class V1api20231001storageManagedClustersAgentPoolSpecVnetSubnetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -454,6 +472,7 @@ public partial class V1api20231001storageManagedClustersAgentPoolSpecVnetSubnetR
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusters_AgentPool_Spec</summary>
 public partial class V1api20231001storageManagedClustersAgentPoolSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -633,6 +652,7 @@ public partial class V1api20231001storageManagedClustersAgentPoolSpec
     public string? WorkloadRuntime { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20231001storageManagedClustersAgentPoolStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -664,6 +684,7 @@ public partial class V1api20231001storageManagedClustersAgentPoolStatusCondition
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.CreationData_STATUS Data used when creating a target resource from a source resource.</summary>
 public partial class V1api20231001storageManagedClustersAgentPoolStatusCreationData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -675,6 +696,7 @@ public partial class V1api20231001storageManagedClustersAgentPoolStatusCreationD
     public string? SourceResourceId { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.KubeletConfig_STATUS See [AKS custom node configuration](https://docs.microsoft.com/azure/aks/custom-node-configuration) for more details.</summary>
 public partial class V1api20231001storageManagedClustersAgentPoolStatusKubeletConfig
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -726,6 +748,7 @@ public partial class V1api20231001storageManagedClustersAgentPoolStatusKubeletCo
     public string? TopologyManagerPolicy { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.SysctlConfig_STATUS Sysctl settings for Linux agent nodes.</summary>
 public partial class V1api20231001storageManagedClustersAgentPoolStatusLinuxOSConfigSysctls
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -845,6 +868,7 @@ public partial class V1api20231001storageManagedClustersAgentPoolStatusLinuxOSCo
     public int? VmVfsCachePressure { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.LinuxOSConfig_STATUS See [AKS custom node configuration](https://docs.microsoft.com/azure/aks/custom-node-configuration) for more details.</summary>
 public partial class V1api20231001storageManagedClustersAgentPoolStatusLinuxOSConfig
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -868,6 +892,7 @@ public partial class V1api20231001storageManagedClustersAgentPoolStatusLinuxOSCo
     public string? TransparentHugePageEnabled { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.PortRange_STATUS The port range.</summary>
 public partial class V1api20231001storageManagedClustersAgentPoolStatusNetworkProfileAllowedHostPorts
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -887,6 +912,7 @@ public partial class V1api20231001storageManagedClustersAgentPoolStatusNetworkPr
     public string? Protocol { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.IPTag_STATUS Contains the IPTag associated with the object.</summary>
 public partial class V1api20231001storageManagedClustersAgentPoolStatusNetworkProfileNodePublicIPTags
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -902,6 +928,7 @@ public partial class V1api20231001storageManagedClustersAgentPoolStatusNetworkPr
     public string? Tag { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.AgentPoolNetworkProfile_STATUS Network settings of an agent pool.</summary>
 public partial class V1api20231001storageManagedClustersAgentPoolStatusNetworkProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -921,6 +948,7 @@ public partial class V1api20231001storageManagedClustersAgentPoolStatusNetworkPr
     public IList<V1api20231001storageManagedClustersAgentPoolStatusNetworkProfileNodePublicIPTags>? NodePublicIPTags { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.PowerState_STATUS Describes the Power State of the cluster</summary>
 public partial class V1api20231001storageManagedClustersAgentPoolStatusPowerState
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -932,6 +960,7 @@ public partial class V1api20231001storageManagedClustersAgentPoolStatusPowerStat
     public string? Code { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.AgentPoolUpgradeSettings_STATUS Settings for upgrading an agentpool</summary>
 public partial class V1api20231001storageManagedClustersAgentPoolStatusUpgradeSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -947,6 +976,7 @@ public partial class V1api20231001storageManagedClustersAgentPoolStatusUpgradeSe
     public string? MaxSurge { get; set; }
 }
 
+/// <summary>Storage version of v1api20231001.ManagedClusters_AgentPool_STATUS</summary>
 public partial class V1api20231001storageManagedClustersAgentPoolStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1143,6 +1173,7 @@ public partial class V1api20231001storageManagedClustersAgentPoolStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20231001.ManagedClustersAgentPool Generator information: - Generated from: /containerservice/resource-manager/Microsoft.ContainerService/aks/stable/2023-10-01/managedClusters.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/managedClusters/{resourceName}/agentPools/{agentPoolName}</summary>
 public partial class V1api20231001storageManagedClustersAgentPool : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20231001storageManagedClustersAgentPoolSpec>, IStatus<V1api20231001storageManagedClustersAgentPoolStatus>
 {
     public const string KubeApiVersion = "v1api20231001storage";

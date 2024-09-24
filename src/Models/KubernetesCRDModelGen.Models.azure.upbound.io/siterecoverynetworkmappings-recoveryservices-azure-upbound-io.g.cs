@@ -38,6 +38,7 @@ public enum V1beta1SiteRecoveryNetworkMappingSpecForProviderRecoveryVaultNameRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderRecoveryVaultNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderRecoveryVau
     public V1beta1SiteRecoveryNetworkMappingSpecForProviderRecoveryVaultNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Vault in recoveryservices to populate recoveryVaultName.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderRecoveryVaultNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1SiteRecoveryNetworkMappingSpecForProviderRecoveryVaultNameSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderRecoveryVaultNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderRecoveryVau
     public V1beta1SiteRecoveryNetworkMappingSpecForProviderRecoveryVaultNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Vault in recoveryservices to populate recoveryVaultName.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderRecoveryVaultNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1SiteRecoveryNetworkMappingSpecForProviderResourceGroupNameRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderResourceGro
     public V1beta1SiteRecoveryNetworkMappingSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1SiteRecoveryNetworkMappingSpecForProviderResourceGroupNameSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderResourceGro
     public V1beta1SiteRecoveryNetworkMappingSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1SiteRecoveryNetworkMappingSpecForProviderSourceNetworkIdRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderSourceNetworkIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderSourceNetwo
     public V1beta1SiteRecoveryNetworkMappingSpecForProviderSourceNetworkIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VirtualNetwork in network to populate sourceNetworkId.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderSourceNetworkIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1SiteRecoveryNetworkMappingSpecForProviderSourceNetworkIdSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderSourceNetworkIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderSourceNetwo
     public V1beta1SiteRecoveryNetworkMappingSpecForProviderSourceNetworkIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VirtualNetwork in network to populate sourceNetworkId.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderSourceNetworkIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -314,6 +326,7 @@ public enum V1beta1SiteRecoveryNetworkMappingSpecForProviderTargetNetworkIdRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderTargetNetworkIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -327,6 +340,7 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderTargetNetwo
     public V1beta1SiteRecoveryNetworkMappingSpecForProviderTargetNetworkIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VirtualNetwork in network to populate targetNetworkId.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderTargetNetworkIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -358,6 +372,7 @@ public enum V1beta1SiteRecoveryNetworkMappingSpecForProviderTargetNetworkIdSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderTargetNetworkIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -371,6 +386,7 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderTargetNetwo
     public V1beta1SiteRecoveryNetworkMappingSpecForProviderTargetNetworkIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VirtualNetwork in network to populate targetNetworkId.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderTargetNetworkIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -386,6 +402,7 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderTargetNetwo
     public V1beta1SiteRecoveryNetworkMappingSpecForProviderTargetNetworkIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecForProvider
 {
     /// <summary>The name of the network mapping. Changing this forces a new resource to be created.</summary>
@@ -469,6 +486,7 @@ public enum V1beta1SiteRecoveryNetworkMappingSpecInitProviderRecoveryVaultNameRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderRecoveryVaultNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -482,6 +500,7 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderRecoveryVa
     public V1beta1SiteRecoveryNetworkMappingSpecInitProviderRecoveryVaultNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Vault in recoveryservices to populate recoveryVaultName.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderRecoveryVaultNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -513,6 +532,7 @@ public enum V1beta1SiteRecoveryNetworkMappingSpecInitProviderRecoveryVaultNameSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderRecoveryVaultNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -526,6 +546,7 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderRecoveryVa
     public V1beta1SiteRecoveryNetworkMappingSpecInitProviderRecoveryVaultNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Vault in recoveryservices to populate recoveryVaultName.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderRecoveryVaultNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -561,6 +582,7 @@ public enum V1beta1SiteRecoveryNetworkMappingSpecInitProviderResourceGroupNameRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -574,6 +596,7 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderResourceGr
     public V1beta1SiteRecoveryNetworkMappingSpecInitProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -605,6 +628,7 @@ public enum V1beta1SiteRecoveryNetworkMappingSpecInitProviderResourceGroupNameSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -618,6 +642,7 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderResourceGr
     public V1beta1SiteRecoveryNetworkMappingSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -653,6 +678,7 @@ public enum V1beta1SiteRecoveryNetworkMappingSpecInitProviderSourceNetworkIdRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderSourceNetworkIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -666,6 +692,7 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderSourceNetw
     public V1beta1SiteRecoveryNetworkMappingSpecInitProviderSourceNetworkIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VirtualNetwork in network to populate sourceNetworkId.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderSourceNetworkIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -697,6 +724,7 @@ public enum V1beta1SiteRecoveryNetworkMappingSpecInitProviderSourceNetworkIdSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderSourceNetworkIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -710,6 +738,7 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderSourceNetw
     public V1beta1SiteRecoveryNetworkMappingSpecInitProviderSourceNetworkIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VirtualNetwork in network to populate sourceNetworkId.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderSourceNetworkIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -745,6 +774,7 @@ public enum V1beta1SiteRecoveryNetworkMappingSpecInitProviderTargetNetworkIdRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderTargetNetworkIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -758,6 +788,7 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderTargetNetw
     public V1beta1SiteRecoveryNetworkMappingSpecInitProviderTargetNetworkIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VirtualNetwork in network to populate targetNetworkId.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderTargetNetworkIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -789,6 +820,7 @@ public enum V1beta1SiteRecoveryNetworkMappingSpecInitProviderTargetNetworkIdSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderTargetNetworkIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -802,6 +834,7 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderTargetNetw
     public V1beta1SiteRecoveryNetworkMappingSpecInitProviderTargetNetworkIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VirtualNetwork in network to populate targetNetworkId.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderTargetNetworkIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -817,6 +850,7 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderTargetNetw
     public V1beta1SiteRecoveryNetworkMappingSpecInitProviderTargetNetworkIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProvider
 {
     /// <summary>The name of the network mapping. Changing this forces a new resource to be created.</summary>
@@ -922,6 +956,7 @@ public enum V1beta1SiteRecoveryNetworkMappingSpecProviderConfigRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -935,6 +970,7 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecProviderConfigRefPolic
     public V1beta1SiteRecoveryNetworkMappingSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -966,6 +1002,7 @@ public enum V1beta1SiteRecoveryNetworkMappingSpecPublishConnectionDetailsToConfi
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -979,6 +1016,7 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecPublishConnectionDetai
     public V1beta1SiteRecoveryNetworkMappingSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -990,6 +1028,7 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecPublishConnectionDetai
     public V1beta1SiteRecoveryNetworkMappingSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1005,6 +1044,7 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecPublishConnectionDetai
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1020,6 +1060,7 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecPublishConnectionDetai
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1031,6 +1072,7 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecWriteConnectionSecretT
     public string Namespace { get; set; }
 }
 
+/// <summary>SiteRecoveryNetworkMappingSpec defines the desired state of SiteRecoveryNetworkMapping</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1063,6 +1105,7 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpec
     public V1beta1SiteRecoveryNetworkMappingSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SiteRecoveryNetworkMappingStatusAtProvider
 {
     /// <summary>The ID of the Site Recovery Network Mapping.</summary>
@@ -1098,6 +1141,7 @@ public partial class V1beta1SiteRecoveryNetworkMappingStatusAtProvider
     public string? TargetRecoveryFabricName { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1125,6 +1169,7 @@ public partial class V1beta1SiteRecoveryNetworkMappingStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>SiteRecoveryNetworkMappingStatus defines the observed state of SiteRecoveryNetworkMapping.</summary>
 public partial class V1beta1SiteRecoveryNetworkMappingStatus
 {
     /// <summary></summary>
@@ -1141,6 +1186,7 @@ public partial class V1beta1SiteRecoveryNetworkMappingStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>SiteRecoveryNetworkMapping is the Schema for the SiteRecoveryNetworkMappings API. Manages a site recovery network mapping on Azure.</summary>
 public partial class V1beta1SiteRecoveryNetworkMapping : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SiteRecoveryNetworkMappingSpec>, IStatus<V1beta1SiteRecoveryNetworkMappingStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -38,6 +38,7 @@ public enum V1beta1LifecyclePolicySpecForProviderExecutionRoleArnRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LifecyclePolicySpecForProviderExecutionRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1LifecyclePolicySpecForProviderExecutionRoleArnRefPol
     public V1beta1LifecyclePolicySpecForProviderExecutionRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate executionRoleArn.</summary>
 public partial class V1beta1LifecyclePolicySpecForProviderExecutionRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1LifecyclePolicySpecForProviderExecutionRoleArnSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LifecyclePolicySpecForProviderExecutionRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1LifecyclePolicySpecForProviderExecutionRoleArnSelect
     public V1beta1LifecyclePolicySpecForProviderExecutionRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate executionRoleArn.</summary>
 public partial class V1beta1LifecyclePolicySpecForProviderExecutionRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1LifecyclePolicySpecForProviderExecutionRoleArnSelect
     public V1beta1LifecyclePolicySpecForProviderExecutionRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsActionCrossRegionCopyEncryptionConfiguration
 {
     /// <summary>The Amazon Resource Name (ARN) of the AWS KMS key to use for EBS encryption. If this parameter is not specified, the default KMS key for the account is used.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsActionCro
     public bool? Encrypted { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsActionCrossRegionCopyRetainRule
 {
     /// <summary>How often this lifecycle policy should be evaluated. 1, 2,3,4,6,8,12 or 24 are valid values. Conflicts with cron_expression. If set, interval_unit and times must also be set.</summary>
@@ -132,6 +138,7 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsActionCro
     public string? IntervalUnit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsActionCrossRegionCopy
 {
     /// <summary>The encryption settings for the copied snapshot. See the encryption_configuration block. Max of 1 per action.</summary>
@@ -147,6 +154,7 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsActionCro
     public string? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsAction
 {
     /// <summary>The rule for copying shared snapshots across Regions. See the cross_region_copy configuration block.</summary>
@@ -158,6 +166,7 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsAction
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsEventSourceParameters
 {
     /// <summary>The snapshot description that can trigger the policy. The description pattern is specified using a regular expression. The policy runs only if a snapshot with a description that matches the specified pattern is shared with your account.</summary>
@@ -173,6 +182,7 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsEventSour
     public IList<string>? SnapshotOwner { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsEventSource
 {
     /// <summary>A set of optional parameters for snapshot and AMI lifecycle policies. See the parameters configuration block.</summary>
@@ -184,6 +194,7 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsEventSour
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsParameters
 {
     /// <summary>Indicates whether to exclude the root volume from snapshots created using CreateSnapshots. The default is false.</summary>
@@ -195,6 +206,7 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsParameter
     public bool? NoReboot { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleCreateRule
 {
     /// <summary>The schedule, as a Cron expression. The schedule interval must be between 1 hour and 1 year. Conflicts with interval, interval_unit, and times.</summary>
@@ -238,6 +250,7 @@ public enum V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleCrossRegio
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleCrossRegionCopyRuleCmkArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -251,6 +264,7 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleC
     public V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleCrossRegionCopyRuleCmkArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate cmkArn.</summary>
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleCrossRegionCopyRuleCmkArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -282,6 +296,7 @@ public enum V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleCrossRegio
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleCrossRegionCopyRuleCmkArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -295,6 +310,7 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleC
     public V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleCrossRegionCopyRuleCmkArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate cmkArn.</summary>
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleCrossRegionCopyRuleCmkArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -310,6 +326,7 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleC
     public V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleCrossRegionCopyRuleCmkArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRule
 {
     /// <summary>How often this lifecycle policy should be evaluated. 1, 2,3,4,6,8,12 or 24 are valid values. Conflicts with cron_expression. If set, interval_unit and times must also be set.</summary>
@@ -321,6 +338,7 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleC
     public string? IntervalUnit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleCrossRegionCopyRuleRetainRule
 {
     /// <summary>How often this lifecycle policy should be evaluated. 1, 2,3,4,6,8,12 or 24 are valid values. Conflicts with cron_expression. If set, interval_unit and times must also be set.</summary>
@@ -332,6 +350,7 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleC
     public string? IntervalUnit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleCrossRegionCopyRule
 {
     /// <summary>The Amazon Resource Name (ARN) of the AWS KMS key to use for EBS encryption. If this parameter is not specified, the default KMS key for the account is used.</summary>
@@ -367,6 +386,7 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleC
     public string? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleDeprecateRule
 {
     /// <summary>Specifies the number of oldest AMIs to deprecate. Must be an integer between 1 and 1000. Conflicts with interval and interval_unit.</summary>
@@ -382,6 +402,7 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleD
     public string? IntervalUnit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleFastRestoreRule
 {
     /// <summary>The Availability Zones in which to enable fast snapshot restore.</summary>
@@ -401,6 +422,7 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleF
     public string? IntervalUnit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleRetainRule
 {
     /// <summary>Specifies the number of oldest AMIs to deprecate. Must be an integer between 1 and 1000. Conflicts with interval and interval_unit.</summary>
@@ -416,6 +438,7 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleR
     public string? IntervalUnit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleShareRule
 {
     /// <summary>The IDs of the AWS accounts with which to share the snapshots.</summary>
@@ -431,6 +454,7 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleS
     public string? UnshareIntervalUnit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsSchedule
 {
     /// <summary>Copy all user-defined tags on a source volume to snapshots of the volume created by this policy.</summary>
@@ -474,6 +498,7 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsSchedule
     public IDictionary<string, string>? VariableTags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetails
 {
     /// <summary>The actions to be performed when the event-based policy is triggered. You can specify only one action per policy. This parameter is required for event-based policies only. If you are creating a snapshot or AMI policy, omit this parameter. See the action configuration block.</summary>
@@ -509,6 +534,7 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetails
     public IDictionary<string, string>? TargetTags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicySpecForProvider
 {
     /// <summary>A description for the DLM lifecycle policy.</summary>
@@ -564,6 +590,7 @@ public enum V1beta1LifecyclePolicySpecInitProviderExecutionRoleArnRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LifecyclePolicySpecInitProviderExecutionRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -577,6 +604,7 @@ public partial class V1beta1LifecyclePolicySpecInitProviderExecutionRoleArnRefPo
     public V1beta1LifecyclePolicySpecInitProviderExecutionRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate executionRoleArn.</summary>
 public partial class V1beta1LifecyclePolicySpecInitProviderExecutionRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -608,6 +636,7 @@ public enum V1beta1LifecyclePolicySpecInitProviderExecutionRoleArnSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LifecyclePolicySpecInitProviderExecutionRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -621,6 +650,7 @@ public partial class V1beta1LifecyclePolicySpecInitProviderExecutionRoleArnSelec
     public V1beta1LifecyclePolicySpecInitProviderExecutionRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate executionRoleArn.</summary>
 public partial class V1beta1LifecyclePolicySpecInitProviderExecutionRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -636,6 +666,7 @@ public partial class V1beta1LifecyclePolicySpecInitProviderExecutionRoleArnSelec
     public V1beta1LifecyclePolicySpecInitProviderExecutionRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsActionCrossRegionCopyEncryptionConfiguration
 {
     /// <summary>The Amazon Resource Name (ARN) of the AWS KMS key to use for EBS encryption. If this parameter is not specified, the default KMS key for the account is used.</summary>
@@ -647,6 +678,7 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsActionCr
     public bool? Encrypted { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsActionCrossRegionCopyRetainRule
 {
     /// <summary>How often this lifecycle policy should be evaluated. 1, 2,3,4,6,8,12 or 24 are valid values. Conflicts with cron_expression. If set, interval_unit and times must also be set.</summary>
@@ -658,6 +690,7 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsActionCr
     public string? IntervalUnit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsActionCrossRegionCopy
 {
     /// <summary>The encryption settings for the copied snapshot. See the encryption_configuration block. Max of 1 per action.</summary>
@@ -673,6 +706,7 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsActionCr
     public string? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsAction
 {
     /// <summary>The rule for copying shared snapshots across Regions. See the cross_region_copy configuration block.</summary>
@@ -684,6 +718,7 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsAction
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsEventSourceParameters
 {
     /// <summary>The snapshot description that can trigger the policy. The description pattern is specified using a regular expression. The policy runs only if a snapshot with a description that matches the specified pattern is shared with your account.</summary>
@@ -699,6 +734,7 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsEventSou
     public IList<string>? SnapshotOwner { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsEventSource
 {
     /// <summary>A set of optional parameters for snapshot and AMI lifecycle policies. See the parameters configuration block.</summary>
@@ -710,6 +746,7 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsEventSou
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsParameters
 {
     /// <summary>Indicates whether to exclude the root volume from snapshots created using CreateSnapshots. The default is false.</summary>
@@ -721,6 +758,7 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsParamete
     public bool? NoReboot { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsScheduleCreateRule
 {
     /// <summary>The schedule, as a Cron expression. The schedule interval must be between 1 hour and 1 year. Conflicts with interval, interval_unit, and times.</summary>
@@ -764,6 +802,7 @@ public enum V1beta1LifecyclePolicySpecInitProviderPolicyDetailsScheduleCrossRegi
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsScheduleCrossRegionCopyRuleCmkArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -777,6 +816,7 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsSchedule
     public V1beta1LifecyclePolicySpecInitProviderPolicyDetailsScheduleCrossRegionCopyRuleCmkArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate cmkArn.</summary>
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsScheduleCrossRegionCopyRuleCmkArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -808,6 +848,7 @@ public enum V1beta1LifecyclePolicySpecInitProviderPolicyDetailsScheduleCrossRegi
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsScheduleCrossRegionCopyRuleCmkArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -821,6 +862,7 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsSchedule
     public V1beta1LifecyclePolicySpecInitProviderPolicyDetailsScheduleCrossRegionCopyRuleCmkArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate cmkArn.</summary>
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsScheduleCrossRegionCopyRuleCmkArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -836,6 +878,7 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsSchedule
     public V1beta1LifecyclePolicySpecInitProviderPolicyDetailsScheduleCrossRegionCopyRuleCmkArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRule
 {
     /// <summary>How often this lifecycle policy should be evaluated. 1, 2,3,4,6,8,12 or 24 are valid values. Conflicts with cron_expression. If set, interval_unit and times must also be set.</summary>
@@ -847,6 +890,7 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsSchedule
     public string? IntervalUnit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsScheduleCrossRegionCopyRuleRetainRule
 {
     /// <summary>How often this lifecycle policy should be evaluated. 1, 2,3,4,6,8,12 or 24 are valid values. Conflicts with cron_expression. If set, interval_unit and times must also be set.</summary>
@@ -858,6 +902,7 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsSchedule
     public string? IntervalUnit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsScheduleCrossRegionCopyRule
 {
     /// <summary>The Amazon Resource Name (ARN) of the AWS KMS key to use for EBS encryption. If this parameter is not specified, the default KMS key for the account is used.</summary>
@@ -893,6 +938,7 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsSchedule
     public string? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsScheduleDeprecateRule
 {
     /// <summary>Specifies the number of oldest AMIs to deprecate. Must be an integer between 1 and 1000. Conflicts with interval and interval_unit.</summary>
@@ -908,6 +954,7 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsSchedule
     public string? IntervalUnit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsScheduleFastRestoreRule
 {
     /// <summary>The Availability Zones in which to enable fast snapshot restore.</summary>
@@ -927,6 +974,7 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsSchedule
     public string? IntervalUnit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsScheduleRetainRule
 {
     /// <summary>Specifies the number of oldest AMIs to deprecate. Must be an integer between 1 and 1000. Conflicts with interval and interval_unit.</summary>
@@ -942,6 +990,7 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsSchedule
     public string? IntervalUnit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsScheduleShareRule
 {
     /// <summary>The IDs of the AWS accounts with which to share the snapshots.</summary>
@@ -957,6 +1006,7 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsSchedule
     public string? UnshareIntervalUnit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsSchedule
 {
     /// <summary>Copy all user-defined tags on a source volume to snapshots of the volume created by this policy.</summary>
@@ -1000,6 +1050,7 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsSchedule
     public IDictionary<string, string>? VariableTags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetails
 {
     /// <summary>The actions to be performed when the event-based policy is triggered. You can specify only one action per policy. This parameter is required for event-based policies only. If you are creating a snapshot or AMI policy, omit this parameter. See the action configuration block.</summary>
@@ -1035,6 +1086,7 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetails
     public IDictionary<string, string>? TargetTags { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1LifecyclePolicySpecInitProvider
 {
     /// <summary>A description for the DLM lifecycle policy.</summary>
@@ -1108,6 +1160,7 @@ public enum V1beta1LifecyclePolicySpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LifecyclePolicySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1121,6 +1174,7 @@ public partial class V1beta1LifecyclePolicySpecProviderConfigRefPolicy
     public V1beta1LifecyclePolicySpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1LifecyclePolicySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1152,6 +1206,7 @@ public enum V1beta1LifecyclePolicySpecPublishConnectionDetailsToConfigRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LifecyclePolicySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1165,6 +1220,7 @@ public partial class V1beta1LifecyclePolicySpecPublishConnectionDetailsToConfigR
     public V1beta1LifecyclePolicySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1LifecyclePolicySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1176,6 +1232,7 @@ public partial class V1beta1LifecyclePolicySpecPublishConnectionDetailsToConfigR
     public V1beta1LifecyclePolicySpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1LifecyclePolicySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1191,6 +1248,7 @@ public partial class V1beta1LifecyclePolicySpecPublishConnectionDetailsToMetadat
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1LifecyclePolicySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1206,6 +1264,7 @@ public partial class V1beta1LifecyclePolicySpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1LifecyclePolicySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1217,6 +1276,7 @@ public partial class V1beta1LifecyclePolicySpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>LifecyclePolicySpec defines the desired state of LifecyclePolicy</summary>
 public partial class V1beta1LifecyclePolicySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1249,6 +1309,7 @@ public partial class V1beta1LifecyclePolicySpec
     public V1beta1LifecyclePolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsActionCrossRegionCopyEncryptionConfiguration
 {
     /// <summary>The Amazon Resource Name (ARN) of the AWS KMS key to use for EBS encryption. If this parameter is not specified, the default KMS key for the account is used.</summary>
@@ -1260,6 +1321,7 @@ public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsActionCr
     public bool? Encrypted { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsActionCrossRegionCopyRetainRule
 {
     /// <summary>How often this lifecycle policy should be evaluated. 1, 2,3,4,6,8,12 or 24 are valid values. Conflicts with cron_expression. If set, interval_unit and times must also be set.</summary>
@@ -1271,6 +1333,7 @@ public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsActionCr
     public string? IntervalUnit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsActionCrossRegionCopy
 {
     /// <summary>The encryption settings for the copied snapshot. See the encryption_configuration block. Max of 1 per action.</summary>
@@ -1286,6 +1349,7 @@ public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsActionCr
     public string? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsAction
 {
     /// <summary>The rule for copying shared snapshots across Regions. See the cross_region_copy configuration block.</summary>
@@ -1297,6 +1361,7 @@ public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsAction
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsEventSourceParameters
 {
     /// <summary>The snapshot description that can trigger the policy. The description pattern is specified using a regular expression. The policy runs only if a snapshot with a description that matches the specified pattern is shared with your account.</summary>
@@ -1312,6 +1377,7 @@ public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsEventSou
     public IList<string>? SnapshotOwner { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsEventSource
 {
     /// <summary>A set of optional parameters for snapshot and AMI lifecycle policies. See the parameters configuration block.</summary>
@@ -1323,6 +1389,7 @@ public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsEventSou
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsParameters
 {
     /// <summary>Indicates whether to exclude the root volume from snapshots created using CreateSnapshots. The default is false.</summary>
@@ -1334,6 +1401,7 @@ public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsParamete
     public bool? NoReboot { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsScheduleCreateRule
 {
     /// <summary>The schedule, as a Cron expression. The schedule interval must be between 1 hour and 1 year. Conflicts with interval, interval_unit, and times.</summary>
@@ -1357,6 +1425,7 @@ public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsSchedule
     public IList<string>? Times { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRule
 {
     /// <summary>How often this lifecycle policy should be evaluated. 1, 2,3,4,6,8,12 or 24 are valid values. Conflicts with cron_expression. If set, interval_unit and times must also be set.</summary>
@@ -1368,6 +1437,7 @@ public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsSchedule
     public string? IntervalUnit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsScheduleCrossRegionCopyRuleRetainRule
 {
     /// <summary>How often this lifecycle policy should be evaluated. 1, 2,3,4,6,8,12 or 24 are valid values. Conflicts with cron_expression. If set, interval_unit and times must also be set.</summary>
@@ -1379,6 +1449,7 @@ public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsSchedule
     public string? IntervalUnit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsScheduleCrossRegionCopyRule
 {
     /// <summary>The Amazon Resource Name (ARN) of the AWS KMS key to use for EBS encryption. If this parameter is not specified, the default KMS key for the account is used.</summary>
@@ -1406,6 +1477,7 @@ public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsSchedule
     public string? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsScheduleDeprecateRule
 {
     /// <summary>Specifies the number of oldest AMIs to deprecate. Must be an integer between 1 and 1000. Conflicts with interval and interval_unit.</summary>
@@ -1421,6 +1493,7 @@ public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsSchedule
     public string? IntervalUnit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsScheduleFastRestoreRule
 {
     /// <summary>The Availability Zones in which to enable fast snapshot restore.</summary>
@@ -1440,6 +1513,7 @@ public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsSchedule
     public string? IntervalUnit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsScheduleRetainRule
 {
     /// <summary>Specifies the number of oldest AMIs to deprecate. Must be an integer between 1 and 1000. Conflicts with interval and interval_unit.</summary>
@@ -1455,6 +1529,7 @@ public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsSchedule
     public string? IntervalUnit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsScheduleShareRule
 {
     /// <summary>The IDs of the AWS accounts with which to share the snapshots.</summary>
@@ -1470,6 +1545,7 @@ public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsSchedule
     public string? UnshareIntervalUnit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsSchedule
 {
     /// <summary>Copy all user-defined tags on a source volume to snapshots of the volume created by this policy.</summary>
@@ -1513,6 +1589,7 @@ public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsSchedule
     public IDictionary<string, string>? VariableTags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetails
 {
     /// <summary>The actions to be performed when the event-based policy is triggered. You can specify only one action per policy. This parameter is required for event-based policies only. If you are creating a snapshot or AMI policy, omit this parameter. See the action configuration block.</summary>
@@ -1548,6 +1625,7 @@ public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetails
     public IDictionary<string, string>? TargetTags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LifecyclePolicyStatusAtProvider
 {
     /// <summary>Amazon Resource Name (ARN) of the DLM Lifecycle Policy.</summary>
@@ -1583,6 +1661,7 @@ public partial class V1beta1LifecyclePolicyStatusAtProvider
     public IDictionary<string, string>? TagsAll { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1LifecyclePolicyStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1610,6 +1689,7 @@ public partial class V1beta1LifecyclePolicyStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>LifecyclePolicyStatus defines the observed state of LifecyclePolicy.</summary>
 public partial class V1beta1LifecyclePolicyStatus
 {
     /// <summary></summary>
@@ -1626,6 +1706,7 @@ public partial class V1beta1LifecyclePolicyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>LifecyclePolicy is the Schema for the LifecyclePolicys API. Provides a Data Lifecycle Manager (DLM) lifecycle policy for managing snapshots.</summary>
 public partial class V1beta1LifecyclePolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LifecyclePolicySpec>, IStatus<V1beta1LifecyclePolicyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

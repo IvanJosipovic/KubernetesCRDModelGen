@@ -18,6 +18,7 @@ public enum V1beta1LinuxVirtualMachineScaleSetSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderAdditionalCapabilities
 {
     /// <summary>Should the capacity to enable Data Disks of the UltraSSD_LRS storage account type be supported on this Virtual Machine Scale Set? Possible values are true or false. Defaults to false. Changing this forces a new resource to be created.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderAdditional
     public bool? UltraSsdEnabled { get; set; }
 }
 
+/// <summary>The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderAdminPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -40,6 +42,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderAdminPassw
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderAdminSshKey
 {
     /// <summary>The Public Key which should be used for authentication, which needs to be at least 2048-bit and in ssh-rsa format.</summary>
@@ -51,6 +54,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderAdminSshKe
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderAutomaticInstanceRepair
 {
     /// <summary>Should the automatic instance repair be enabled on this Virtual Machine Scale Set?</summary>
@@ -62,6 +66,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderAutomaticI
     public string? GracePeriod { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderAutomaticOsUpgradePolicy
 {
     /// <summary>Should automatic rollbacks be disabled?</summary>
@@ -73,6 +78,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderAutomaticO
     public bool? EnableAutomaticOsUpgrade { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderBootDiagnostics
 {
     /// <summary>The Primary/Secondary Endpoint for the Azure Storage Account which should be used to store Boot Diagnostics, including Console Output and Screenshots from the Hypervisor.</summary>
@@ -80,6 +86,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderBootDiagno
     public string? StorageAccountUri { get; set; }
 }
 
+/// <summary>The Base64-Encoded Custom Data which should be used for this Virtual Machine Scale Set.</summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderCustomDataSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -95,6 +102,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderCustomData
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderDataDisk
 {
     /// <summary>The type of Caching which should be used for this Data Disk. Possible values are None, ReadOnly and ReadWrite.</summary>
@@ -138,6 +146,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderDataDisk
     public bool? WriteAcceleratorEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderExtensionProtectedSettingsFromKeyVault
 {
     /// <summary>The URL to the Key Vault Secret which stores the protected settings.</summary>
@@ -149,6 +158,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderExtensionP
     public string? SourceVaultId { get; set; }
 }
 
+/// <summary>A JSON String which specifies Sensitive Settings (such as Passwords) for the Extension.</summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderExtensionProtectedSettingsSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -164,6 +174,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderExtensionP
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderExtension
 {
     /// <summary>Should the latest version of the Extension be used at Deployment Time, if one is available? This won't auto-update the extension on existing installation. Defaults to true.</summary>
@@ -211,6 +222,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderExtension
     public string? TypeHandlerVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderGalleryApplication
 {
     /// <summary>Specifies the URI to an Azure Blob that will replace the default configuration for the package if provided. Changing this forces a new resource to be created.</summary>
@@ -230,6 +242,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderGalleryApp
     public string? VersionId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderGalleryApplications
 {
     /// <summary></summary>
@@ -249,6 +262,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderGalleryApp
     public string? Tag { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Linux Virtual Machine Scale Set.</summary>
@@ -260,6 +274,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderNetworkInterfaceIpConfigurationPublicIpAddressIpTag
 {
     /// <summary>The IP Tag associated with the Public IP, such as SQL or Storage. Changing this forces a new resource to be created.</summary>
@@ -271,6 +286,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderNetworkInt
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderNetworkInterfaceIpConfigurationPublicIpAddress
 {
     /// <summary>The Prefix which should be used for the Domain Name Label for each Virtual Machine Instance. Azure concatenates the Domain Name Label and Virtual Machine Index to create a unique Domain Name Label for each Virtual Machine.</summary>
@@ -318,6 +334,7 @@ public enum V1beta1LinuxVirtualMachineScaleSetSpecForProviderNetworkInterfaceIpC
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderNetworkInterfaceIpConfigurationSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -331,6 +348,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderNetworkInt
     public V1beta1LinuxVirtualMachineScaleSetSpecForProviderNetworkInterfaceIpConfigurationSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderNetworkInterfaceIpConfigurationSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -362,6 +380,7 @@ public enum V1beta1LinuxVirtualMachineScaleSetSpecForProviderNetworkInterfaceIpC
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderNetworkInterfaceIpConfigurationSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -375,6 +394,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderNetworkInt
     public V1beta1LinuxVirtualMachineScaleSetSpecForProviderNetworkInterfaceIpConfigurationSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderNetworkInterfaceIpConfigurationSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -390,6 +410,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderNetworkInt
     public V1beta1LinuxVirtualMachineScaleSetSpecForProviderNetworkInterfaceIpConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderNetworkInterfaceIpConfiguration
 {
     /// <summary>A list of Backend Address Pools ID's from a Application Gateway which this Virtual Machine Scale Set should be connected to.</summary>
@@ -437,6 +458,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderNetworkInt
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderNetworkInterface
 {
     /// <summary>A list of IP Addresses of DNS Servers which should be assigned to the Network Interface.</summary>
@@ -468,6 +490,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderNetworkInt
     public bool? Primary { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderOsDiskDiffDiskSettings
 {
     /// <summary>Specifies the Ephemeral Disk Settings for the OS Disk. At this time the only possible value is Local. Changing this forces a new resource to be created.</summary>
@@ -479,6 +502,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderOsDiskDiff
     public string? Placement { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderOsDisk
 {
     /// <summary>The Type of Caching which should be used for the Internal OS Disk. Possible values are None, ReadOnly and ReadWrite.</summary>
@@ -514,6 +538,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderOsDisk
     public bool? WriteAcceleratorEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderPlan
 {
     /// <summary>Specifies the name of the image from the marketplace. Changing this forces a new resource to be created.</summary>
@@ -549,6 +574,7 @@ public enum V1beta1LinuxVirtualMachineScaleSetSpecForProviderResourceGroupNameRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -562,6 +588,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderResourceGr
     public V1beta1LinuxVirtualMachineScaleSetSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -593,6 +620,7 @@ public enum V1beta1LinuxVirtualMachineScaleSetSpecForProviderResourceGroupNameSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -606,6 +634,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderResourceGr
     public V1beta1LinuxVirtualMachineScaleSetSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -621,6 +650,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderResourceGr
     public V1beta1LinuxVirtualMachineScaleSetSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderRollingUpgradePolicy
 {
     /// <summary>Should the Virtual Machine Scale Set ignore the Azure Zone boundaries when constructing upgrade batches? Possible values are true or false.</summary>
@@ -648,6 +678,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderRollingUpg
     public bool? PrioritizeUnhealthyInstancesEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderScaleIn
 {
     /// <summary>Should the virtual machines chosen for removal be force deleted when the virtual machine scale set is being scaled-in? Possible values are true or false. Defaults to false.</summary>
@@ -659,6 +690,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderScaleIn
     public string? Rule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderSecretCertificate
 {
     /// <summary>The Secret URL of a Key Vault Certificate.</summary>
@@ -666,6 +698,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderSecretCert
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderSecret
 {
     /// <summary>One or more certificate blocks as defined above.</summary>
@@ -677,6 +710,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderSecret
     public string? KeyVaultId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderSourceImageReference
 {
     /// <summary>Specifies the offer of the image used to create the virtual machines. Changing this forces a new resource to be created.</summary>
@@ -696,6 +730,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderSourceImag
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderSpotRestore
 {
     /// <summary>Should the Spot-Try-Restore feature be enabled? The Spot-Try-Restore feature will attempt to automatically restore the evicted Spot Virtual Machine Scale Set VM instances opportunistically based on capacity availability and pricing constraints. Possible values are true or false. Defaults to false. Changing this forces a new resource to be created.</summary>
@@ -707,6 +742,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderSpotRestor
     public string? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderTerminateNotification
 {
     /// <summary>Should the terminate notification be enabled on this Virtual Machine Scale Set?</summary>
@@ -718,6 +754,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderTerminateN
     public string? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderTerminationNotification
 {
     /// <summary>Should the termination notification be enabled on this Virtual Machine Scale Set?</summary>
@@ -729,6 +766,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderTerminatio
     public string? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProvider
 {
     /// <summary>An additional_capabilities block as defined below.</summary>
@@ -952,6 +990,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProvider
     public IList<string>? Zones { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderAdditionalCapabilities
 {
     /// <summary>Should the capacity to enable Data Disks of the UltraSSD_LRS storage account type be supported on this Virtual Machine Scale Set? Possible values are true or false. Defaults to false. Changing this forces a new resource to be created.</summary>
@@ -959,6 +998,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderAdditiona
     public bool? UltraSsdEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderAdminSshKey
 {
     /// <summary>The Public Key which should be used for authentication, which needs to be at least 2048-bit and in ssh-rsa format.</summary>
@@ -970,6 +1010,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderAdminSshK
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderAutomaticInstanceRepair
 {
     /// <summary>Should the automatic instance repair be enabled on this Virtual Machine Scale Set?</summary>
@@ -981,6 +1022,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderAutomatic
     public string? GracePeriod { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderAutomaticOsUpgradePolicy
 {
     /// <summary>Should automatic rollbacks be disabled?</summary>
@@ -992,6 +1034,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderAutomatic
     public bool? EnableAutomaticOsUpgrade { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderBootDiagnostics
 {
     /// <summary>The Primary/Secondary Endpoint for the Azure Storage Account which should be used to store Boot Diagnostics, including Console Output and Screenshots from the Hypervisor.</summary>
@@ -999,6 +1042,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderBootDiagn
     public string? StorageAccountUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderDataDisk
 {
     /// <summary>The type of Caching which should be used for this Data Disk. Possible values are None, ReadOnly and ReadWrite.</summary>
@@ -1042,6 +1086,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderDataDisk
     public bool? WriteAcceleratorEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderExtensionProtectedSettingsFromKeyVault
 {
     /// <summary>The URL to the Key Vault Secret which stores the protected settings.</summary>
@@ -1053,6 +1098,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderExtension
     public string? SourceVaultId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderExtension
 {
     /// <summary>Should the latest version of the Extension be used at Deployment Time, if one is available? This won't auto-update the extension on existing installation. Defaults to true.</summary>
@@ -1096,6 +1142,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderExtension
     public string? TypeHandlerVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderGalleryApplication
 {
     /// <summary>Specifies the URI to an Azure Blob that will replace the default configuration for the package if provided. Changing this forces a new resource to be created.</summary>
@@ -1115,6 +1162,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderGalleryAp
     public string? VersionId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderGalleryApplications
 {
     /// <summary></summary>
@@ -1134,6 +1182,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderGalleryAp
     public string? Tag { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Linux Virtual Machine Scale Set.</summary>
@@ -1145,6 +1194,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderNetworkInterfaceIpConfigurationPublicIpAddressIpTag
 {
     /// <summary>The IP Tag associated with the Public IP, such as SQL or Storage. Changing this forces a new resource to be created.</summary>
@@ -1156,6 +1206,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderNetworkIn
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderNetworkInterfaceIpConfigurationPublicIpAddress
 {
     /// <summary>The Prefix which should be used for the Domain Name Label for each Virtual Machine Instance. Azure concatenates the Domain Name Label and Virtual Machine Index to create a unique Domain Name Label for each Virtual Machine.</summary>
@@ -1203,6 +1254,7 @@ public enum V1beta1LinuxVirtualMachineScaleSetSpecInitProviderNetworkInterfaceIp
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderNetworkInterfaceIpConfigurationSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1216,6 +1268,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderNetworkIn
     public V1beta1LinuxVirtualMachineScaleSetSpecInitProviderNetworkInterfaceIpConfigurationSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderNetworkInterfaceIpConfigurationSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1247,6 +1300,7 @@ public enum V1beta1LinuxVirtualMachineScaleSetSpecInitProviderNetworkInterfaceIp
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderNetworkInterfaceIpConfigurationSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1260,6 +1314,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderNetworkIn
     public V1beta1LinuxVirtualMachineScaleSetSpecInitProviderNetworkInterfaceIpConfigurationSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderNetworkInterfaceIpConfigurationSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1275,6 +1330,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderNetworkIn
     public V1beta1LinuxVirtualMachineScaleSetSpecInitProviderNetworkInterfaceIpConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderNetworkInterfaceIpConfiguration
 {
     /// <summary>A list of Backend Address Pools ID's from a Application Gateway which this Virtual Machine Scale Set should be connected to.</summary>
@@ -1322,6 +1378,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderNetworkIn
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderNetworkInterface
 {
     /// <summary>A list of IP Addresses of DNS Servers which should be assigned to the Network Interface.</summary>
@@ -1353,6 +1410,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderNetworkIn
     public bool? Primary { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderOsDiskDiffDiskSettings
 {
     /// <summary>Specifies the Ephemeral Disk Settings for the OS Disk. At this time the only possible value is Local. Changing this forces a new resource to be created.</summary>
@@ -1364,6 +1422,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderOsDiskDif
     public string? Placement { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderOsDisk
 {
     /// <summary>The Type of Caching which should be used for the Internal OS Disk. Possible values are None, ReadOnly and ReadWrite.</summary>
@@ -1399,6 +1458,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderOsDisk
     public bool? WriteAcceleratorEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderPlan
 {
     /// <summary>Specifies the name of the image from the marketplace. Changing this forces a new resource to be created.</summary>
@@ -1414,6 +1474,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderPlan
     public string? Publisher { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderRollingUpgradePolicy
 {
     /// <summary>Should the Virtual Machine Scale Set ignore the Azure Zone boundaries when constructing upgrade batches? Possible values are true or false.</summary>
@@ -1441,6 +1502,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderRollingUp
     public bool? PrioritizeUnhealthyInstancesEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderScaleIn
 {
     /// <summary>Should the virtual machines chosen for removal be force deleted when the virtual machine scale set is being scaled-in? Possible values are true or false. Defaults to false.</summary>
@@ -1452,6 +1514,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderScaleIn
     public string? Rule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderSecretCertificate
 {
     /// <summary>The Secret URL of a Key Vault Certificate.</summary>
@@ -1459,6 +1522,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderSecretCer
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderSecret
 {
     /// <summary>One or more certificate blocks as defined above.</summary>
@@ -1470,6 +1534,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderSecret
     public string? KeyVaultId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderSourceImageReference
 {
     /// <summary>Specifies the offer of the image used to create the virtual machines. Changing this forces a new resource to be created.</summary>
@@ -1489,6 +1554,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderSourceIma
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderSpotRestore
 {
     /// <summary>Should the Spot-Try-Restore feature be enabled? The Spot-Try-Restore feature will attempt to automatically restore the evicted Spot Virtual Machine Scale Set VM instances opportunistically based on capacity availability and pricing constraints. Possible values are true or false. Defaults to false. Changing this forces a new resource to be created.</summary>
@@ -1500,6 +1566,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderSpotResto
     public string? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderTerminateNotification
 {
     /// <summary>Should the terminate notification be enabled on this Virtual Machine Scale Set?</summary>
@@ -1511,6 +1578,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderTerminate
     public string? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderTerminationNotification
 {
     /// <summary>Should the termination notification be enabled on this Virtual Machine Scale Set?</summary>
@@ -1522,6 +1590,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderTerminati
     public string? Timeout { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProvider
 {
     /// <summary>An additional_capabilities block as defined below.</summary>
@@ -1767,6 +1836,7 @@ public enum V1beta1LinuxVirtualMachineScaleSetSpecProviderConfigRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1780,6 +1850,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecProviderConfigRefPoli
     public V1beta1LinuxVirtualMachineScaleSetSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1811,6 +1882,7 @@ public enum V1beta1LinuxVirtualMachineScaleSetSpecPublishConnectionDetailsToConf
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1824,6 +1896,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecPublishConnectionDeta
     public V1beta1LinuxVirtualMachineScaleSetSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1835,6 +1908,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecPublishConnectionDeta
     public V1beta1LinuxVirtualMachineScaleSetSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1850,6 +1924,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecPublishConnectionDeta
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1865,6 +1940,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecPublishConnectionDeta
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1876,6 +1952,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecWriteConnectionSecret
     public string Namespace { get; set; }
 }
 
+/// <summary>LinuxVirtualMachineScaleSetSpec defines the desired state of LinuxVirtualMachineScaleSet</summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1908,6 +1985,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpec
     public V1beta1LinuxVirtualMachineScaleSetSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderAdditionalCapabilities
 {
     /// <summary>Should the capacity to enable Data Disks of the UltraSSD_LRS storage account type be supported on this Virtual Machine Scale Set? Possible values are true or false. Defaults to false. Changing this forces a new resource to be created.</summary>
@@ -1915,6 +1993,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderAdditiona
     public bool? UltraSsdEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderAdminSshKey
 {
     /// <summary>The Public Key which should be used for authentication, which needs to be at least 2048-bit and in ssh-rsa format.</summary>
@@ -1926,6 +2005,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderAdminSshK
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderAutomaticInstanceRepair
 {
     /// <summary>Should the automatic instance repair be enabled on this Virtual Machine Scale Set?</summary>
@@ -1937,6 +2017,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderAutomatic
     public string? GracePeriod { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderAutomaticOsUpgradePolicy
 {
     /// <summary>Should automatic rollbacks be disabled?</summary>
@@ -1948,6 +2029,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderAutomatic
     public bool? EnableAutomaticOsUpgrade { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderBootDiagnostics
 {
     /// <summary>The Primary/Secondary Endpoint for the Azure Storage Account which should be used to store Boot Diagnostics, including Console Output and Screenshots from the Hypervisor.</summary>
@@ -1955,6 +2037,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderBootDiagn
     public string? StorageAccountUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderDataDisk
 {
     /// <summary>The type of Caching which should be used for this Data Disk. Possible values are None, ReadOnly and ReadWrite.</summary>
@@ -1998,6 +2081,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderDataDisk
     public bool? WriteAcceleratorEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderExtensionProtectedSettingsFromKeyVault
 {
     /// <summary>The URL to the Key Vault Secret which stores the protected settings.</summary>
@@ -2009,6 +2093,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderExtension
     public string? SourceVaultId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderExtension
 {
     /// <summary>Should the latest version of the Extension be used at Deployment Time, if one is available? This won't auto-update the extension on existing installation. Defaults to true.</summary>
@@ -2052,6 +2137,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderExtension
     public string? TypeHandlerVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderGalleryApplication
 {
     /// <summary>Specifies the URI to an Azure Blob that will replace the default configuration for the package if provided. Changing this forces a new resource to be created.</summary>
@@ -2071,6 +2157,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderGalleryAp
     public string? VersionId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderGalleryApplications
 {
     /// <summary></summary>
@@ -2090,6 +2177,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderGalleryAp
     public string? Tag { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Linux Virtual Machine Scale Set.</summary>
@@ -2109,6 +2197,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderNetworkInterfaceIpConfigurationPublicIpAddressIpTag
 {
     /// <summary>The IP Tag associated with the Public IP, such as SQL or Storage. Changing this forces a new resource to be created.</summary>
@@ -2120,6 +2209,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderNetworkIn
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderNetworkInterfaceIpConfigurationPublicIpAddress
 {
     /// <summary>The Prefix which should be used for the Domain Name Label for each Virtual Machine Instance. Azure concatenates the Domain Name Label and Virtual Machine Index to create a unique Domain Name Label for each Virtual Machine.</summary>
@@ -2147,6 +2237,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderNetworkIn
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderNetworkInterfaceIpConfiguration
 {
     /// <summary>A list of Backend Address Pools ID's from a Application Gateway which this Virtual Machine Scale Set should be connected to.</summary>
@@ -2186,6 +2277,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderNetworkIn
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderNetworkInterface
 {
     /// <summary>A list of IP Addresses of DNS Servers which should be assigned to the Network Interface.</summary>
@@ -2217,6 +2309,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderNetworkIn
     public bool? Primary { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderOsDiskDiffDiskSettings
 {
     /// <summary>Specifies the Ephemeral Disk Settings for the OS Disk. At this time the only possible value is Local. Changing this forces a new resource to be created.</summary>
@@ -2228,6 +2321,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderOsDiskDif
     public string? Placement { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderOsDisk
 {
     /// <summary>The Type of Caching which should be used for the Internal OS Disk. Possible values are None, ReadOnly and ReadWrite.</summary>
@@ -2263,6 +2357,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderOsDisk
     public bool? WriteAcceleratorEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderPlan
 {
     /// <summary>Specifies the name of the image from the marketplace. Changing this forces a new resource to be created.</summary>
@@ -2278,6 +2373,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderPlan
     public string? Publisher { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderRollingUpgradePolicy
 {
     /// <summary>Should the Virtual Machine Scale Set ignore the Azure Zone boundaries when constructing upgrade batches? Possible values are true or false.</summary>
@@ -2305,6 +2401,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderRollingUp
     public bool? PrioritizeUnhealthyInstancesEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderScaleIn
 {
     /// <summary>Should the virtual machines chosen for removal be force deleted when the virtual machine scale set is being scaled-in? Possible values are true or false. Defaults to false.</summary>
@@ -2316,6 +2413,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderScaleIn
     public string? Rule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderSecretCertificate
 {
     /// <summary>The Secret URL of a Key Vault Certificate.</summary>
@@ -2323,6 +2421,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderSecretCer
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderSecret
 {
     /// <summary>One or more certificate blocks as defined above.</summary>
@@ -2334,6 +2433,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderSecret
     public string? KeyVaultId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderSourceImageReference
 {
     /// <summary>Specifies the offer of the image used to create the virtual machines. Changing this forces a new resource to be created.</summary>
@@ -2353,6 +2453,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderSourceIma
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderSpotRestore
 {
     /// <summary>Should the Spot-Try-Restore feature be enabled? The Spot-Try-Restore feature will attempt to automatically restore the evicted Spot Virtual Machine Scale Set VM instances opportunistically based on capacity availability and pricing constraints. Possible values are true or false. Defaults to false. Changing this forces a new resource to be created.</summary>
@@ -2364,6 +2465,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderSpotResto
     public string? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderTerminateNotification
 {
     /// <summary>Should the terminate notification be enabled on this Virtual Machine Scale Set?</summary>
@@ -2375,6 +2477,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderTerminate
     public string? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderTerminationNotification
 {
     /// <summary>Should the termination notification be enabled on this Virtual Machine Scale Set?</summary>
@@ -2386,6 +2489,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderTerminati
     public string? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProvider
 {
     /// <summary>An additional_capabilities block as defined below.</summary>
@@ -2605,6 +2709,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProvider
     public IList<string>? Zones { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2632,6 +2737,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>LinuxVirtualMachineScaleSetStatus defines the observed state of LinuxVirtualMachineScaleSet.</summary>
 public partial class V1beta1LinuxVirtualMachineScaleSetStatus
 {
     /// <summary></summary>
@@ -2648,6 +2754,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>LinuxVirtualMachineScaleSet is the Schema for the LinuxVirtualMachineScaleSets API. Manages a Linux Virtual Machine Scale Set.</summary>
 public partial class V1beta1LinuxVirtualMachineScaleSet : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LinuxVirtualMachineScaleSetSpec>, IStatus<V1beta1LinuxVirtualMachineScaleSetStatus>
 {
     public const string KubeApiVersion = "v1beta1";

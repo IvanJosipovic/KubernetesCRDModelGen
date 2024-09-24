@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datacatalog.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1DataCatalogPolicyTagSpecParentPolicyTagRef
 {
     /// <summary>Allowed value: The `name` field of a `DataCatalogPolicyTag` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1DataCatalogPolicyTagSpecParentPolicyTagRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataCatalogPolicyTagSpecTaxonomyRef
 {
     /// <summary>Allowed value: The `name` field of a `DataCatalogTaxonomy` resource.</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1DataCatalogPolicyTagSpecTaxonomyRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataCatalogPolicyTagSpec
 {
     /// <summary>Description of this policy tag. It must: contain only unicode characters, tabs, newlines, carriage returns and page breaks; and be at most 2000 bytes long when encoded in UTF-8. If not set, defaults to an empty description. If not set, defaults to an empty description.</summary>
@@ -61,6 +64,7 @@ public partial class V1beta1DataCatalogPolicyTagSpec
     public V1beta1DataCatalogPolicyTagSpecTaxonomyRef TaxonomyRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataCatalogPolicyTagStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -84,6 +88,7 @@ public partial class V1beta1DataCatalogPolicyTagStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataCatalogPolicyTagStatus
 {
     /// <summary>Resource names of child policy tags of this policy tag.</summary>
@@ -104,6 +109,7 @@ public partial class V1beta1DataCatalogPolicyTagStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1DataCatalogPolicyTag : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DataCatalogPolicyTagSpec>, IStatus<V1beta1DataCatalogPolicyTagStatus>
 {
     public const string KubeApiVersion = "v1beta1";

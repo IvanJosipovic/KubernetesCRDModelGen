@@ -38,6 +38,7 @@ public enum V1beta1PerInstanceConfigSpecForProviderInstanceGroupManagerRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PerInstanceConfigSpecForProviderInstanceGroupManagerRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1PerInstanceConfigSpecForProviderInstanceGroupManager
     public V1beta1PerInstanceConfigSpecForProviderInstanceGroupManagerRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a InstanceGroupManager in compute to populate instanceGroupManager.</summary>
 public partial class V1beta1PerInstanceConfigSpecForProviderInstanceGroupManagerRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1PerInstanceConfigSpecForProviderInstanceGroupManagerSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PerInstanceConfigSpecForProviderInstanceGroupManagerSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1PerInstanceConfigSpecForProviderInstanceGroupManager
     public V1beta1PerInstanceConfigSpecForProviderInstanceGroupManagerSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a InstanceGroupManager in compute to populate instanceGroupManager.</summary>
 public partial class V1beta1PerInstanceConfigSpecForProviderInstanceGroupManagerSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1PerInstanceConfigSpecForProviderPreservedStateDiskSourceRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PerInstanceConfigSpecForProviderPreservedStateDiskSourceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1PerInstanceConfigSpecForProviderPreservedStateDiskSo
     public V1beta1PerInstanceConfigSpecForProviderPreservedStateDiskSourceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Disk in compute to populate source.</summary>
 public partial class V1beta1PerInstanceConfigSpecForProviderPreservedStateDiskSourceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1PerInstanceConfigSpecForProviderPreservedStateDiskSourceSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PerInstanceConfigSpecForProviderPreservedStateDiskSourceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1PerInstanceConfigSpecForProviderPreservedStateDiskSo
     public V1beta1PerInstanceConfigSpecForProviderPreservedStateDiskSourceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Disk in compute to populate source.</summary>
 public partial class V1beta1PerInstanceConfigSpecForProviderPreservedStateDiskSourceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1PerInstanceConfigSpecForProviderPreservedStateDiskSo
     public V1beta1PerInstanceConfigSpecForProviderPreservedStateDiskSourceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PerInstanceConfigSpecForProviderPreservedStateDisk
 {
     /// <summary>A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are NEVER and ON_PERMANENT_INSTANCE_DELETION. NEVER - detach the disk when the VM is deleted, but do not delete the disk. ON_PERMANENT_INSTANCE_DELETION will delete the stateful disk when the VM is permanently deleted from the instance group. Default value is NEVER. Possible values are: NEVER, ON_PERMANENT_INSTANCE_DELETION.</summary>
@@ -229,6 +238,7 @@ public partial class V1beta1PerInstanceConfigSpecForProviderPreservedStateDisk
     public V1beta1PerInstanceConfigSpecForProviderPreservedStateDiskSourceSelector? SourceSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PerInstanceConfigSpecForProviderPreservedStateExternalIpIpAddress
 {
     /// <summary>The URL of the reservation for this IP address.</summary>
@@ -236,6 +246,7 @@ public partial class V1beta1PerInstanceConfigSpecForProviderPreservedStateExtern
     public string? Address { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PerInstanceConfigSpecForProviderPreservedStateExternalIp
 {
     /// <summary>These stateful IPs will never be released during autohealing, update or VM instance recreate operations. This flag is used to configure if the IP reservation should be deleted after it is no longer used by the group, e.g. when the given instance or the whole group is deleted. Default value is NEVER. Possible values are: NEVER, ON_PERMANENT_INSTANCE_DELETION.</summary>
@@ -251,6 +262,7 @@ public partial class V1beta1PerInstanceConfigSpecForProviderPreservedStateExtern
     public IList<V1beta1PerInstanceConfigSpecForProviderPreservedStateExternalIpIpAddress>? IpAddress { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PerInstanceConfigSpecForProviderPreservedStateInternalIpIpAddress
 {
     /// <summary>The URL of the reservation for this IP address.</summary>
@@ -258,6 +270,7 @@ public partial class V1beta1PerInstanceConfigSpecForProviderPreservedStateIntern
     public string? Address { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PerInstanceConfigSpecForProviderPreservedStateInternalIp
 {
     /// <summary>These stateful IPs will never be released during autohealing, update or VM instance recreate operations. This flag is used to configure if the IP reservation should be deleted after it is no longer used by the group, e.g. when the given instance or the whole group is deleted. Default value is NEVER. Possible values are: NEVER, ON_PERMANENT_INSTANCE_DELETION.</summary>
@@ -273,6 +286,7 @@ public partial class V1beta1PerInstanceConfigSpecForProviderPreservedStateIntern
     public IList<V1beta1PerInstanceConfigSpecForProviderPreservedStateInternalIpIpAddress>? IpAddress { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PerInstanceConfigSpecForProviderPreservedState
 {
     /// <summary>Stateful disks for the instance. Structure is documented below.</summary>
@@ -312,6 +326,7 @@ public enum V1beta1PerInstanceConfigSpecForProviderZoneRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PerInstanceConfigSpecForProviderZoneRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -325,6 +340,7 @@ public partial class V1beta1PerInstanceConfigSpecForProviderZoneRefPolicy
     public V1beta1PerInstanceConfigSpecForProviderZoneRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a InstanceGroupManager in compute to populate zone.</summary>
 public partial class V1beta1PerInstanceConfigSpecForProviderZoneRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -356,6 +372,7 @@ public enum V1beta1PerInstanceConfigSpecForProviderZoneSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PerInstanceConfigSpecForProviderZoneSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -369,6 +386,7 @@ public partial class V1beta1PerInstanceConfigSpecForProviderZoneSelectorPolicy
     public V1beta1PerInstanceConfigSpecForProviderZoneSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a InstanceGroupManager in compute to populate zone.</summary>
 public partial class V1beta1PerInstanceConfigSpecForProviderZoneSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -384,6 +402,7 @@ public partial class V1beta1PerInstanceConfigSpecForProviderZoneSelector
     public V1beta1PerInstanceConfigSpecForProviderZoneSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PerInstanceConfigSpecForProvider
 {
     /// <summary>The instance group manager this instance config is part of.</summary>
@@ -459,6 +478,7 @@ public enum V1beta1PerInstanceConfigSpecInitProviderInstanceGroupManagerRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PerInstanceConfigSpecInitProviderInstanceGroupManagerRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -472,6 +492,7 @@ public partial class V1beta1PerInstanceConfigSpecInitProviderInstanceGroupManage
     public V1beta1PerInstanceConfigSpecInitProviderInstanceGroupManagerRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a InstanceGroupManager in compute to populate instanceGroupManager.</summary>
 public partial class V1beta1PerInstanceConfigSpecInitProviderInstanceGroupManagerRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -503,6 +524,7 @@ public enum V1beta1PerInstanceConfigSpecInitProviderInstanceGroupManagerSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PerInstanceConfigSpecInitProviderInstanceGroupManagerSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -516,6 +538,7 @@ public partial class V1beta1PerInstanceConfigSpecInitProviderInstanceGroupManage
     public V1beta1PerInstanceConfigSpecInitProviderInstanceGroupManagerSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a InstanceGroupManager in compute to populate instanceGroupManager.</summary>
 public partial class V1beta1PerInstanceConfigSpecInitProviderInstanceGroupManagerSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -551,6 +574,7 @@ public enum V1beta1PerInstanceConfigSpecInitProviderPreservedStateDiskSourceRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PerInstanceConfigSpecInitProviderPreservedStateDiskSourceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -564,6 +588,7 @@ public partial class V1beta1PerInstanceConfigSpecInitProviderPreservedStateDiskS
     public V1beta1PerInstanceConfigSpecInitProviderPreservedStateDiskSourceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Disk in compute to populate source.</summary>
 public partial class V1beta1PerInstanceConfigSpecInitProviderPreservedStateDiskSourceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -595,6 +620,7 @@ public enum V1beta1PerInstanceConfigSpecInitProviderPreservedStateDiskSourceSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PerInstanceConfigSpecInitProviderPreservedStateDiskSourceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -608,6 +634,7 @@ public partial class V1beta1PerInstanceConfigSpecInitProviderPreservedStateDiskS
     public V1beta1PerInstanceConfigSpecInitProviderPreservedStateDiskSourceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Disk in compute to populate source.</summary>
 public partial class V1beta1PerInstanceConfigSpecInitProviderPreservedStateDiskSourceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -623,6 +650,7 @@ public partial class V1beta1PerInstanceConfigSpecInitProviderPreservedStateDiskS
     public V1beta1PerInstanceConfigSpecInitProviderPreservedStateDiskSourceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PerInstanceConfigSpecInitProviderPreservedStateDisk
 {
     /// <summary>A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are NEVER and ON_PERMANENT_INSTANCE_DELETION. NEVER - detach the disk when the VM is deleted, but do not delete the disk. ON_PERMANENT_INSTANCE_DELETION will delete the stateful disk when the VM is permanently deleted from the instance group. Default value is NEVER. Possible values are: NEVER, ON_PERMANENT_INSTANCE_DELETION.</summary>
@@ -650,6 +678,7 @@ public partial class V1beta1PerInstanceConfigSpecInitProviderPreservedStateDisk
     public V1beta1PerInstanceConfigSpecInitProviderPreservedStateDiskSourceSelector? SourceSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PerInstanceConfigSpecInitProviderPreservedStateExternalIpIpAddress
 {
     /// <summary>The URL of the reservation for this IP address.</summary>
@@ -657,6 +686,7 @@ public partial class V1beta1PerInstanceConfigSpecInitProviderPreservedStateExter
     public string? Address { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PerInstanceConfigSpecInitProviderPreservedStateExternalIp
 {
     /// <summary>These stateful IPs will never be released during autohealing, update or VM instance recreate operations. This flag is used to configure if the IP reservation should be deleted after it is no longer used by the group, e.g. when the given instance or the whole group is deleted. Default value is NEVER. Possible values are: NEVER, ON_PERMANENT_INSTANCE_DELETION.</summary>
@@ -672,6 +702,7 @@ public partial class V1beta1PerInstanceConfigSpecInitProviderPreservedStateExter
     public IList<V1beta1PerInstanceConfigSpecInitProviderPreservedStateExternalIpIpAddress>? IpAddress { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PerInstanceConfigSpecInitProviderPreservedStateInternalIpIpAddress
 {
     /// <summary>The URL of the reservation for this IP address.</summary>
@@ -679,6 +710,7 @@ public partial class V1beta1PerInstanceConfigSpecInitProviderPreservedStateInter
     public string? Address { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PerInstanceConfigSpecInitProviderPreservedStateInternalIp
 {
     /// <summary>These stateful IPs will never be released during autohealing, update or VM instance recreate operations. This flag is used to configure if the IP reservation should be deleted after it is no longer used by the group, e.g. when the given instance or the whole group is deleted. Default value is NEVER. Possible values are: NEVER, ON_PERMANENT_INSTANCE_DELETION.</summary>
@@ -694,6 +726,7 @@ public partial class V1beta1PerInstanceConfigSpecInitProviderPreservedStateInter
     public IList<V1beta1PerInstanceConfigSpecInitProviderPreservedStateInternalIpIpAddress>? IpAddress { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PerInstanceConfigSpecInitProviderPreservedState
 {
     /// <summary>Stateful disks for the instance. Structure is documented below.</summary>
@@ -733,6 +766,7 @@ public enum V1beta1PerInstanceConfigSpecInitProviderZoneRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PerInstanceConfigSpecInitProviderZoneRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -746,6 +780,7 @@ public partial class V1beta1PerInstanceConfigSpecInitProviderZoneRefPolicy
     public V1beta1PerInstanceConfigSpecInitProviderZoneRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a InstanceGroupManager in compute to populate zone.</summary>
 public partial class V1beta1PerInstanceConfigSpecInitProviderZoneRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -777,6 +812,7 @@ public enum V1beta1PerInstanceConfigSpecInitProviderZoneSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PerInstanceConfigSpecInitProviderZoneSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -790,6 +826,7 @@ public partial class V1beta1PerInstanceConfigSpecInitProviderZoneSelectorPolicy
     public V1beta1PerInstanceConfigSpecInitProviderZoneSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a InstanceGroupManager in compute to populate zone.</summary>
 public partial class V1beta1PerInstanceConfigSpecInitProviderZoneSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -805,6 +842,7 @@ public partial class V1beta1PerInstanceConfigSpecInitProviderZoneSelector
     public V1beta1PerInstanceConfigSpecInitProviderZoneSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1PerInstanceConfigSpecInitProvider
 {
     /// <summary>The instance group manager this instance config is part of.</summary>
@@ -902,6 +940,7 @@ public enum V1beta1PerInstanceConfigSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PerInstanceConfigSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -915,6 +954,7 @@ public partial class V1beta1PerInstanceConfigSpecProviderConfigRefPolicy
     public V1beta1PerInstanceConfigSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1PerInstanceConfigSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -946,6 +986,7 @@ public enum V1beta1PerInstanceConfigSpecPublishConnectionDetailsToConfigRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PerInstanceConfigSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -959,6 +1000,7 @@ public partial class V1beta1PerInstanceConfigSpecPublishConnectionDetailsToConfi
     public V1beta1PerInstanceConfigSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1PerInstanceConfigSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -970,6 +1012,7 @@ public partial class V1beta1PerInstanceConfigSpecPublishConnectionDetailsToConfi
     public V1beta1PerInstanceConfigSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1PerInstanceConfigSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -985,6 +1028,7 @@ public partial class V1beta1PerInstanceConfigSpecPublishConnectionDetailsToMetad
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1PerInstanceConfigSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1000,6 +1044,7 @@ public partial class V1beta1PerInstanceConfigSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1PerInstanceConfigSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1011,6 +1056,7 @@ public partial class V1beta1PerInstanceConfigSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>PerInstanceConfigSpec defines the desired state of PerInstanceConfig</summary>
 public partial class V1beta1PerInstanceConfigSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1043,6 +1089,7 @@ public partial class V1beta1PerInstanceConfigSpec
     public V1beta1PerInstanceConfigSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PerInstanceConfigStatusAtProviderPreservedStateDisk
 {
     /// <summary>A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are NEVER and ON_PERMANENT_INSTANCE_DELETION. NEVER - detach the disk when the VM is deleted, but do not delete the disk. ON_PERMANENT_INSTANCE_DELETION will delete the stateful disk when the VM is permanently deleted from the instance group. Default value is NEVER. Possible values are: NEVER, ON_PERMANENT_INSTANCE_DELETION.</summary>
@@ -1062,6 +1109,7 @@ public partial class V1beta1PerInstanceConfigStatusAtProviderPreservedStateDisk
     public string? Source { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PerInstanceConfigStatusAtProviderPreservedStateExternalIpIpAddress
 {
     /// <summary>The URL of the reservation for this IP address.</summary>
@@ -1069,6 +1117,7 @@ public partial class V1beta1PerInstanceConfigStatusAtProviderPreservedStateExter
     public string? Address { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PerInstanceConfigStatusAtProviderPreservedStateExternalIp
 {
     /// <summary>These stateful IPs will never be released during autohealing, update or VM instance recreate operations. This flag is used to configure if the IP reservation should be deleted after it is no longer used by the group, e.g. when the given instance or the whole group is deleted. Default value is NEVER. Possible values are: NEVER, ON_PERMANENT_INSTANCE_DELETION.</summary>
@@ -1084,6 +1133,7 @@ public partial class V1beta1PerInstanceConfigStatusAtProviderPreservedStateExter
     public IList<V1beta1PerInstanceConfigStatusAtProviderPreservedStateExternalIpIpAddress>? IpAddress { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PerInstanceConfigStatusAtProviderPreservedStateInternalIpIpAddress
 {
     /// <summary>The URL of the reservation for this IP address.</summary>
@@ -1091,6 +1141,7 @@ public partial class V1beta1PerInstanceConfigStatusAtProviderPreservedStateInter
     public string? Address { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PerInstanceConfigStatusAtProviderPreservedStateInternalIp
 {
     /// <summary>These stateful IPs will never be released during autohealing, update or VM instance recreate operations. This flag is used to configure if the IP reservation should be deleted after it is no longer used by the group, e.g. when the given instance or the whole group is deleted. Default value is NEVER. Possible values are: NEVER, ON_PERMANENT_INSTANCE_DELETION.</summary>
@@ -1106,6 +1157,7 @@ public partial class V1beta1PerInstanceConfigStatusAtProviderPreservedStateInter
     public IList<V1beta1PerInstanceConfigStatusAtProviderPreservedStateInternalIpIpAddress>? IpAddress { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PerInstanceConfigStatusAtProviderPreservedState
 {
     /// <summary>Stateful disks for the instance. Structure is documented below.</summary>
@@ -1125,6 +1177,7 @@ public partial class V1beta1PerInstanceConfigStatusAtProviderPreservedState
     public IDictionary<string, string>? Metadata { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PerInstanceConfigStatusAtProvider
 {
     /// <summary>an identifier for the resource with format {{project}}/{{zone}}/{{instance_group_manager}}/{{name}}</summary>
@@ -1168,6 +1221,7 @@ public partial class V1beta1PerInstanceConfigStatusAtProvider
     public string? Zone { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1PerInstanceConfigStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1195,6 +1249,7 @@ public partial class V1beta1PerInstanceConfigStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>PerInstanceConfigStatus defines the observed state of PerInstanceConfig.</summary>
 public partial class V1beta1PerInstanceConfigStatus
 {
     /// <summary></summary>
@@ -1211,6 +1266,7 @@ public partial class V1beta1PerInstanceConfigStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>PerInstanceConfig is the Schema for the PerInstanceConfigs API. A config defined for a single managed instance that belongs to an instance group manager.</summary>
 public partial class V1beta1PerInstanceConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1PerInstanceConfigSpec>, IStatus<V1beta1PerInstanceConfigStatus>
 {
     public const string KubeApiVersion = "v1beta1";

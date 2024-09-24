@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigquery.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1BigQueryRoutineSpecArguments
 {
     /// <summary>Defaults to FIXED_TYPE. Default value: "FIXED_TYPE" Possible values: ["FIXED_TYPE", "ANY_TYPE"].</summary>
@@ -27,6 +28,7 @@ public partial class V1beta1BigQueryRoutineSpecArguments
     public string? Name { get; set; }
 }
 
+/// <summary>The ID of the dataset containing this routine.</summary>
 public partial class V1beta1BigQueryRoutineSpecDatasetRef
 {
     /// <summary>Allowed value: The `name` field of a `BigQueryDataset` resource.</summary>
@@ -42,6 +44,7 @@ public partial class V1beta1BigQueryRoutineSpecDatasetRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1beta1BigQueryRoutineSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -57,6 +60,7 @@ public partial class V1beta1BigQueryRoutineSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BigQueryRoutineSpec
 {
     /// <summary>Input/output argument of a function or a stored procedure.</summary>
@@ -108,6 +112,7 @@ public partial class V1beta1BigQueryRoutineSpec
     public string? RoutineType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BigQueryRoutineStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -131,6 +136,7 @@ public partial class V1beta1BigQueryRoutineStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BigQueryRoutineStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -151,6 +157,7 @@ public partial class V1beta1BigQueryRoutineStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1BigQueryRoutine : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BigQueryRoutineSpec>, IStatus<V1beta1BigQueryRoutineStatus>
 {
     public const string KubeApiVersion = "v1beta1";

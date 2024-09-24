@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dbforpostgresql.azure.com;
+/// <summary>Password is the password to use for the user</summary>
 public partial class V1UserSpecLocalUserPassword
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -19,6 +20,7 @@ public partial class V1UserSpecLocalUserPassword
     public string Name { get; set; }
 }
 
+/// <summary>ServerAdminPassword is a reference to a secret containing the servers administrator password</summary>
 public partial class V1UserSpecLocalUserServerAdminPassword
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -30,6 +32,7 @@ public partial class V1UserSpecLocalUserServerAdminPassword
     public string Name { get; set; }
 }
 
+/// <summary>LocalUser contains details for creating a standard (non-aad) postgresql User</summary>
 public partial class V1UserSpecLocalUser
 {
     /// <summary>Password is the password to use for the user</summary>
@@ -45,6 +48,7 @@ public partial class V1UserSpecLocalUser
     public string ServerAdminUsername { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a dbforpostgresql.azure.com/FlexibleServer resource</summary>
 public partial class V1UserSpecOwner
 {
     /// <summary>This is the name of the Kubernetes resource to reference.</summary>
@@ -52,6 +56,7 @@ public partial class V1UserSpecOwner
     public string Name { get; set; }
 }
 
+/// <summary>The with options of the user role.</summary>
 public partial class V1UserSpecRoleOptions
 {
     /// <summary>WITH CREATEDB or NOCREATEDB</summary>
@@ -71,6 +76,7 @@ public partial class V1UserSpecRoleOptions
     public bool? Replication { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1UserSpec
 {
     /// <summary>AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be.</summary>
@@ -94,6 +100,7 @@ public partial class V1UserSpec
     public IList<string>? Roles { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1UserStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -125,6 +132,7 @@ public partial class V1UserStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1UserStatus
 {
     /// <summary>Conditions: The observed state of the resource</summary>
@@ -133,6 +141,7 @@ public partial class V1UserStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>User is a postgresql user</summary>
 public partial class V1User : IKubernetesObject<V1ObjectMeta>, ISpec<V1UserSpec>, IStatus<V1UserStatus>
 {
     public const string KubeApiVersion = "v1";

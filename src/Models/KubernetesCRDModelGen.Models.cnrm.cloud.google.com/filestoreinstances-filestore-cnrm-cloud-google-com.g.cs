@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.filestore.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1FilestoreInstanceSpecFileSharesNfsExportOptions
 {
     /// <summary>Either READ_ONLY, for allowing only read requests on the exported directory, or READ_WRITE, for allowing both read and write requests. The default is READ_WRITE. Possible values: ACCESS_MODE_UNSPECIFIED, READ_ONLY, READ_WRITE</summary>
@@ -31,6 +32,7 @@ public partial class V1beta1FilestoreInstanceSpecFileSharesNfsExportOptions
     public string? SquashMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FilestoreInstanceSpecFileSharesSourceBackupRef
 {
     /// <summary>The resource name of the backup, in the format `projects/{project_number}/locations/{location_id}/backups/{backup_id}`, that this file share has been restored from.  Allowed value: The Google Cloud resource name of a `FilestoreBackup` resource (format: `projects/{{project}}/locations/{{location}}/backups/{{name}}`).</summary>
@@ -46,6 +48,7 @@ public partial class V1beta1FilestoreInstanceSpecFileSharesSourceBackupRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FilestoreInstanceSpecFileShares
 {
     /// <summary>File share capacity in gigabytes (GB). Cloud Filestore defines 1 GB as 1024^3 bytes.</summary>
@@ -65,6 +68,7 @@ public partial class V1beta1FilestoreInstanceSpecFileShares
     public V1beta1FilestoreInstanceSpecFileSharesSourceBackupRef? SourceBackupRef { get; set; }
 }
 
+/// <summary>Immutable.</summary>
 public partial class V1beta1FilestoreInstanceSpecNetworksNetworkRef
 {
     /// <summary>The name of the Google Compute Engine [VPC network](https://cloud.google.com/vpc/docs/vpc) to which the instance is connected.  Allowed value: The Google Cloud resource name of a `ComputeNetwork` resource (format: `projects/{{project}}/global/networks/{{name}}`).</summary>
@@ -80,6 +84,7 @@ public partial class V1beta1FilestoreInstanceSpecNetworksNetworkRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FilestoreInstanceSpecNetworks
 {
     /// <summary>Immutable. Output only. IPv4 addresses in the format `{octet1}.{octet2}.{octet3}.{octet4}` or IPv6 addresses in the format `{block1}:{block2}:{block3}:{block4}:{block5}:{block6}:{block7}:{block8}`.</summary>
@@ -99,6 +104,7 @@ public partial class V1beta1FilestoreInstanceSpecNetworks
     public string? ReservedIPRange { get; set; }
 }
 
+/// <summary>Immutable. The Project that this resource belongs to.</summary>
 public partial class V1beta1FilestoreInstanceSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -114,6 +120,7 @@ public partial class V1beta1FilestoreInstanceSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FilestoreInstanceSpec
 {
     /// <summary>The description of the instance (2048 characters or less).</summary>
@@ -145,6 +152,7 @@ public partial class V1beta1FilestoreInstanceSpec
     public string? Tier { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FilestoreInstanceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -168,6 +176,7 @@ public partial class V1beta1FilestoreInstanceStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FilestoreInstanceStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -196,6 +205,7 @@ public partial class V1beta1FilestoreInstanceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1FilestoreInstance : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FilestoreInstanceSpec>, IStatus<V1beta1FilestoreInstanceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

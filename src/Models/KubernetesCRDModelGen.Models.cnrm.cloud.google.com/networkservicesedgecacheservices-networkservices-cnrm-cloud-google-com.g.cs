@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkservices.cnrm.cloud.google.com;
+/// <summary>Specifies the logging options for the traffic served by this service. If logging is enabled, logs will be exported to Cloud Logging.</summary>
 public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecLogConfig
 {
     /// <summary>Specifies whether to enable logging for traffic served by this service.</summary>
@@ -19,6 +20,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecLogConfig
     public double? SampleRate { get; set; }
 }
 
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -34,6 +36,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingHostRule
 {
     /// <summary>A human-readable description of the hostRule.</summary>
@@ -49,6 +52,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingHostRule
     public string PathMatcher { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAdd
 {
     /// <summary>The name of the header to add.</summary>
@@ -64,6 +68,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatch
     public bool? Replace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemove
 {
     /// <summary>The name of the header to remove.</summary>
@@ -71,6 +76,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatch
     public string HeaderName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAdd
 {
     /// <summary>The name of the header to add.</summary>
@@ -86,6 +92,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatch
     public bool? Replace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove
 {
     /// <summary>Headers to remove from the response prior to sending it back to the client.  Response headers are only sent to the client, and do not have an effect on the cache serving the response.</summary>
@@ -93,6 +100,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatch
     public string HeaderName { get; set; }
 }
 
+/// <summary>The header actions, including adding &amp; removing headers, for requests that match this route.</summary>
 public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleHeaderAction
 {
     /// <summary>Describes a header to add.</summary>
@@ -112,6 +120,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatch
     public IList<V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove>? ResponseHeaderToRemove { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleMatchRuleHeaderMatch
 {
     /// <summary>The value of the header should exactly match contents of exactMatch.</summary>
@@ -139,6 +148,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatch
     public string? SuffixMatch { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch
 {
     /// <summary>The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch.</summary>
@@ -154,6 +164,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatch
     public bool? PresentMatch { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleMatchRule
 {
     /// <summary>For satisfying the matchRule condition, the path of the request must exactly match the value specified in fullPathMatch after removing any query parameters and anchor that may be part of the original URL.</summary>
@@ -181,6 +192,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatch
     public IList<V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch>? QueryParameterMatch { get; set; }
 }
 
+/// <summary>Enable signature generation or propagation on this route.  This field may only be specified when signedRequestMode is set to REQUIRE_TOKENS.</summary>
 public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleRouteActionCdnPolicyAddSignatures
 {
     /// <summary>The actions to take to add signatures to responses. Possible values: ["GENERATE_COOKIE", "GENERATE_TOKEN_HLS_COOKIELESS", "PROPAGATE_TOKEN_HLS_COOKIELESS"].</summary>
@@ -204,6 +216,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatch
     public string? TokenTtl { get; set; }
 }
 
+/// <summary>Defines the request parameters that contribute to the cache key.</summary>
 public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy
 {
     /// <summary>If true, requests to different hosts will be cached separately.  Note: this should only be enabled if hosts share the same origin and content. Removing the host from the cache key may inadvertently result in different objects being cached than intended, depending on which route the first user matched.</summary>
@@ -235,6 +248,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatch
     public IList<string>? IncludedQueryParameters { get; set; }
 }
 
+/// <summary>Additional options for signed tokens.  signedTokenOptions may only be specified when signedRequestMode is REQUIRE_TOKENS.</summary>
 public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleRouteActionCdnPolicySignedTokenOptions
 {
     /// <summary>The allowed signature algorithms to use.  Defaults to using only ED25519.  You may specify up to 3 signature algorithms to use. Possible values: ["ED25519", "HMAC_SHA_256", "HMAC_SHA1"].</summary>
@@ -246,6 +260,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatch
     public string? TokenQueryParameter { get; set; }
 }
 
+/// <summary>The policy to use for defining caching and signed request behaviour for requests that match this route.</summary>
 public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleRouteActionCdnPolicy
 {
     /// <summary>Enable signature generation or propagation on this route.  This field may only be specified when signedRequestMode is set to REQUIRE_TOKENS.</summary>
@@ -297,6 +312,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatch
     public V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleRouteActionCdnPolicySignedTokenOptions? SignedTokenOptions { get; set; }
 }
 
+/// <summary>CORSPolicy defines Cross-Origin-Resource-Sharing configuration, including which CORS response headers will be set.</summary>
 public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleRouteActionCorsPolicy
 {
     /// <summary>In response to a preflight request, setting this to true indicates that the actual request can include user credentials.  This translates to the Access-Control-Allow-Credentials response header.</summary>
@@ -328,6 +344,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatch
     public string MaxAge { get; set; }
 }
 
+/// <summary>The URL rewrite configuration for requests that match this route.</summary>
 public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleRouteActionUrlRewrite
 {
     /// <summary>Prior to forwarding the request to the selected origin, the request's host header is replaced with contents of hostRewrite.</summary>
@@ -343,6 +360,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatch
     public string? PathTemplateRewrite { get; set; }
 }
 
+/// <summary>In response to a matching path, the routeAction performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected origin.</summary>
 public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleRouteAction
 {
     /// <summary>The policy to use for defining caching and signed request behaviour for requests that match this route.</summary>
@@ -358,6 +376,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatch
     public V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleRouteActionUrlRewrite? UrlRewrite { get; set; }
 }
 
+/// <summary>The URL redirect configuration for requests that match this route.</summary>
 public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleUrlRedirect
 {
     /// <summary>The host that will be used in the redirect response instead of the one that was supplied in the request.</summary>
@@ -385,6 +404,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatch
     public bool? StripQuery { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRule
 {
     /// <summary>A human-readable description of the routeRule.</summary>
@@ -416,6 +436,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatch
     public V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleUrlRedirect? UrlRedirect { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcher
 {
     /// <summary>A human-readable description of the resource.</summary>
@@ -431,6 +452,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatch
     public IList<V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRule> RouteRule { get; set; }
 }
 
+/// <summary>Defines how requests are routed, modified, cached and/or which origin content is filled from.</summary>
 public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRouting
 {
     /// <summary>The list of hostRules to match against. These rules define which hostnames the EdgeCacheService will match against, and which route configurations apply.</summary>
@@ -442,6 +464,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRouting
     public IList<V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcher> PathMatcher { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1NetworkServicesEdgeCacheServiceSpec
 {
     /// <summary>A human-readable description of the resource.</summary>
@@ -489,6 +512,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheServiceSpec
     public string? SslPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1NetworkServicesEdgeCacheServiceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -512,6 +536,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheServiceStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1NetworkServicesEdgeCacheServiceStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -532,6 +557,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheServiceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1NetworkServicesEdgeCacheService : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1NetworkServicesEdgeCacheServiceSpec>, IStatus<V1alpha1NetworkServicesEdgeCacheServiceStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

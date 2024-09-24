@@ -38,6 +38,7 @@ public enum V1beta1BastionHostSpecForProviderIpConfigurationPublicIpAddressIdRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BastionHostSpecForProviderIpConfigurationPublicIpAddressIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1BastionHostSpecForProviderIpConfigurationPublicIpAdd
     public V1beta1BastionHostSpecForProviderIpConfigurationPublicIpAddressIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a PublicIP in network to populate publicIpAddressId.</summary>
 public partial class V1beta1BastionHostSpecForProviderIpConfigurationPublicIpAddressIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1BastionHostSpecForProviderIpConfigurationPublicIpAddressIdSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BastionHostSpecForProviderIpConfigurationPublicIpAddressIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1BastionHostSpecForProviderIpConfigurationPublicIpAdd
     public V1beta1BastionHostSpecForProviderIpConfigurationPublicIpAddressIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a PublicIP in network to populate publicIpAddressId.</summary>
 public partial class V1beta1BastionHostSpecForProviderIpConfigurationPublicIpAddressIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1BastionHostSpecForProviderIpConfigurationSubnetIdRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BastionHostSpecForProviderIpConfigurationSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1BastionHostSpecForProviderIpConfigurationSubnetIdRef
     public V1beta1BastionHostSpecForProviderIpConfigurationSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1BastionHostSpecForProviderIpConfigurationSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1BastionHostSpecForProviderIpConfigurationSubnetIdSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BastionHostSpecForProviderIpConfigurationSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1BastionHostSpecForProviderIpConfigurationSubnetIdSel
     public V1beta1BastionHostSpecForProviderIpConfigurationSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1BastionHostSpecForProviderIpConfigurationSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1BastionHostSpecForProviderIpConfigurationSubnetIdSel
     public V1beta1BastionHostSpecForProviderIpConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>A ip_configuration block as defined below. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1BastionHostSpecForProviderIpConfiguration
 {
     /// <summary>The name of the IP configuration. Changing this forces a new resource to be created.</summary>
@@ -253,6 +262,7 @@ public enum V1beta1BastionHostSpecForProviderResourceGroupNameRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BastionHostSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -266,6 +276,7 @@ public partial class V1beta1BastionHostSpecForProviderResourceGroupNameRefPolicy
     public V1beta1BastionHostSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1BastionHostSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -297,6 +308,7 @@ public enum V1beta1BastionHostSpecForProviderResourceGroupNameSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BastionHostSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -310,6 +322,7 @@ public partial class V1beta1BastionHostSpecForProviderResourceGroupNameSelectorP
     public V1beta1BastionHostSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1BastionHostSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -325,6 +338,7 @@ public partial class V1beta1BastionHostSpecForProviderResourceGroupNameSelector
     public V1beta1BastionHostSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BastionHostSpecForProvider
 {
     /// <summary>Is Copy/Paste feature enabled for the Bastion Host. Defaults to true.</summary>
@@ -400,6 +414,7 @@ public enum V1beta1BastionHostSpecInitProviderIpConfigurationPublicIpAddressIdRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BastionHostSpecInitProviderIpConfigurationPublicIpAddressIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -413,6 +428,7 @@ public partial class V1beta1BastionHostSpecInitProviderIpConfigurationPublicIpAd
     public V1beta1BastionHostSpecInitProviderIpConfigurationPublicIpAddressIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a PublicIP in network to populate publicIpAddressId.</summary>
 public partial class V1beta1BastionHostSpecInitProviderIpConfigurationPublicIpAddressIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -444,6 +460,7 @@ public enum V1beta1BastionHostSpecInitProviderIpConfigurationPublicIpAddressIdSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BastionHostSpecInitProviderIpConfigurationPublicIpAddressIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -457,6 +474,7 @@ public partial class V1beta1BastionHostSpecInitProviderIpConfigurationPublicIpAd
     public V1beta1BastionHostSpecInitProviderIpConfigurationPublicIpAddressIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a PublicIP in network to populate publicIpAddressId.</summary>
 public partial class V1beta1BastionHostSpecInitProviderIpConfigurationPublicIpAddressIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -492,6 +510,7 @@ public enum V1beta1BastionHostSpecInitProviderIpConfigurationSubnetIdRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BastionHostSpecInitProviderIpConfigurationSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -505,6 +524,7 @@ public partial class V1beta1BastionHostSpecInitProviderIpConfigurationSubnetIdRe
     public V1beta1BastionHostSpecInitProviderIpConfigurationSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1BastionHostSpecInitProviderIpConfigurationSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -536,6 +556,7 @@ public enum V1beta1BastionHostSpecInitProviderIpConfigurationSubnetIdSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BastionHostSpecInitProviderIpConfigurationSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -549,6 +570,7 @@ public partial class V1beta1BastionHostSpecInitProviderIpConfigurationSubnetIdSe
     public V1beta1BastionHostSpecInitProviderIpConfigurationSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1BastionHostSpecInitProviderIpConfigurationSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -564,6 +586,7 @@ public partial class V1beta1BastionHostSpecInitProviderIpConfigurationSubnetIdSe
     public V1beta1BastionHostSpecInitProviderIpConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>A ip_configuration block as defined below. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1BastionHostSpecInitProviderIpConfiguration
 {
     /// <summary>The name of the IP configuration. Changing this forces a new resource to be created.</summary>
@@ -595,6 +618,7 @@ public partial class V1beta1BastionHostSpecInitProviderIpConfiguration
     public V1beta1BastionHostSpecInitProviderIpConfigurationSubnetIdSelector? SubnetIdSelector { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1BastionHostSpecInitProvider
 {
     /// <summary>Is Copy/Paste feature enabled for the Bastion Host. Defaults to true.</summary>
@@ -680,6 +704,7 @@ public enum V1beta1BastionHostSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BastionHostSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -693,6 +718,7 @@ public partial class V1beta1BastionHostSpecProviderConfigRefPolicy
     public V1beta1BastionHostSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1BastionHostSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -724,6 +750,7 @@ public enum V1beta1BastionHostSpecPublishConnectionDetailsToConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BastionHostSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -737,6 +764,7 @@ public partial class V1beta1BastionHostSpecPublishConnectionDetailsToConfigRefPo
     public V1beta1BastionHostSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1BastionHostSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -748,6 +776,7 @@ public partial class V1beta1BastionHostSpecPublishConnectionDetailsToConfigRef
     public V1beta1BastionHostSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1BastionHostSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -763,6 +792,7 @@ public partial class V1beta1BastionHostSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1BastionHostSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -778,6 +808,7 @@ public partial class V1beta1BastionHostSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1BastionHostSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -789,6 +820,7 @@ public partial class V1beta1BastionHostSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>BastionHostSpec defines the desired state of BastionHost</summary>
 public partial class V1beta1BastionHostSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -821,6 +853,7 @@ public partial class V1beta1BastionHostSpec
     public V1beta1BastionHostSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary>A ip_configuration block as defined below. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1BastionHostStatusAtProviderIpConfiguration
 {
     /// <summary>The name of the IP configuration. Changing this forces a new resource to be created.</summary>
@@ -836,6 +869,7 @@ public partial class V1beta1BastionHostStatusAtProviderIpConfiguration
     public string? SubnetId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BastionHostStatusAtProvider
 {
     /// <summary>Is Copy/Paste feature enabled for the Bastion Host. Defaults to true.</summary>
@@ -891,6 +925,7 @@ public partial class V1beta1BastionHostStatusAtProvider
     public bool? TunnelingEnabled { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1BastionHostStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -918,6 +953,7 @@ public partial class V1beta1BastionHostStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>BastionHostStatus defines the observed state of BastionHost.</summary>
 public partial class V1beta1BastionHostStatus
 {
     /// <summary></summary>
@@ -934,6 +970,7 @@ public partial class V1beta1BastionHostStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>BastionHost is the Schema for the BastionHosts API. Manages a Bastion Host.</summary>
 public partial class V1beta1BastionHost : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BastionHostSpec>, IStatus<V1beta1BastionHostStatus>
 {
     public const string KubeApiVersion = "v1beta1";

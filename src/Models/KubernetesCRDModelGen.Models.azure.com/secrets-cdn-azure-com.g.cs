@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cdn.azure.com;
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a cdn.azure.com/Profile resource</summary>
 public partial class V1api20230501storageSecretSpecOwner
 {
     /// <summary></summary>
@@ -19,6 +20,7 @@ public partial class V1api20230501storageSecretSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.AzureFirstPartyManagedCertificateParameters</summary>
 public partial class V1api20230501storageSecretSpecParametersAzureFirstPartyManagedCertificate
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -34,6 +36,7 @@ public partial class V1api20230501storageSecretSpecParametersAzureFirstPartyMana
     public string? Type { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20230501storageSecretSpecParametersCustomerCertificateSecretSourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -53,6 +56,7 @@ public partial class V1api20230501storageSecretSpecParametersCustomerCertificate
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.ResourceReference Reference to another resource.</summary>
 public partial class V1api20230501storageSecretSpecParametersCustomerCertificateSecretSource
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -64,6 +68,7 @@ public partial class V1api20230501storageSecretSpecParametersCustomerCertificate
     public V1api20230501storageSecretSpecParametersCustomerCertificateSecretSourceReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.CustomerCertificateParameters</summary>
 public partial class V1api20230501storageSecretSpecParametersCustomerCertificate
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -91,6 +96,7 @@ public partial class V1api20230501storageSecretSpecParametersCustomerCertificate
     public bool? UseLatestVersion { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.ManagedCertificateParameters</summary>
 public partial class V1api20230501storageSecretSpecParametersManagedCertificate
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -102,6 +108,7 @@ public partial class V1api20230501storageSecretSpecParametersManagedCertificate
     public string? Type { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20230501storageSecretSpecParametersUrlSigningKeySecretSourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -121,6 +128,7 @@ public partial class V1api20230501storageSecretSpecParametersUrlSigningKeySecret
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.ResourceReference Reference to another resource.</summary>
 public partial class V1api20230501storageSecretSpecParametersUrlSigningKeySecretSource
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -132,6 +140,7 @@ public partial class V1api20230501storageSecretSpecParametersUrlSigningKeySecret
     public V1api20230501storageSecretSpecParametersUrlSigningKeySecretSourceReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.UrlSigningKeyParameters</summary>
 public partial class V1api20230501storageSecretSpecParametersUrlSigningKey
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -155,6 +164,7 @@ public partial class V1api20230501storageSecretSpecParametersUrlSigningKey
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.SecretParameters</summary>
 public partial class V1api20230501storageSecretSpecParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -178,6 +188,7 @@ public partial class V1api20230501storageSecretSpecParameters
     public V1api20230501storageSecretSpecParametersUrlSigningKey? UrlSigningKey { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.Profiles_Secret_Spec</summary>
 public partial class V1api20230501storageSecretSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -201,6 +212,7 @@ public partial class V1api20230501storageSecretSpec
     public V1api20230501storageSecretSpecParameters? Parameters { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20230501storageSecretStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -232,6 +244,7 @@ public partial class V1api20230501storageSecretStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.ResourceReference_STATUS Reference to another resource.</summary>
 public partial class V1api20230501storageSecretStatusParametersAzureFirstPartyManagedCertificateSecretSource
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -243,6 +256,7 @@ public partial class V1api20230501storageSecretStatusParametersAzureFirstPartyMa
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.AzureFirstPartyManagedCertificateParameters_STATUS</summary>
 public partial class V1api20230501storageSecretStatusParametersAzureFirstPartyManagedCertificate
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -278,6 +292,7 @@ public partial class V1api20230501storageSecretStatusParametersAzureFirstPartyMa
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.ResourceReference_STATUS Reference to another resource.</summary>
 public partial class V1api20230501storageSecretStatusParametersCustomerCertificateSecretSource
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -289,6 +304,7 @@ public partial class V1api20230501storageSecretStatusParametersCustomerCertifica
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.CustomerCertificateParameters_STATUS</summary>
 public partial class V1api20230501storageSecretStatusParametersCustomerCertificate
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -332,6 +348,7 @@ public partial class V1api20230501storageSecretStatusParametersCustomerCertifica
     public bool? UseLatestVersion { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.ManagedCertificateParameters_STATUS</summary>
 public partial class V1api20230501storageSecretStatusParametersManagedCertificate
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -351,6 +368,7 @@ public partial class V1api20230501storageSecretStatusParametersManagedCertificat
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.ResourceReference_STATUS Reference to another resource.</summary>
 public partial class V1api20230501storageSecretStatusParametersUrlSigningKeySecretSource
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -362,6 +380,7 @@ public partial class V1api20230501storageSecretStatusParametersUrlSigningKeySecr
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.UrlSigningKeyParameters_STATUS</summary>
 public partial class V1api20230501storageSecretStatusParametersUrlSigningKey
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -385,6 +404,7 @@ public partial class V1api20230501storageSecretStatusParametersUrlSigningKey
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.SecretParameters_STATUS</summary>
 public partial class V1api20230501storageSecretStatusParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -408,6 +428,7 @@ public partial class V1api20230501storageSecretStatusParameters
     public V1api20230501storageSecretStatusParametersUrlSigningKey? UrlSigningKey { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.SystemData_STATUS Read only system data</summary>
 public partial class V1api20230501storageSecretStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -439,6 +460,7 @@ public partial class V1api20230501storageSecretStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.Profiles_Secret_STATUS</summary>
 public partial class V1api20230501storageSecretStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -483,6 +505,7 @@ public partial class V1api20230501storageSecretStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20230501.Secret Generator information: - Generated from: /cdn/resource-manager/Microsoft.Cdn/stable/2023-05-01/afdx.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/secrets/{secretName}</summary>
 public partial class V1api20230501storageSecret : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230501storageSecretSpec>, IStatus<V1api20230501storageSecretStatus>
 {
     public const string KubeApiVersion = "v1api20230501storage";

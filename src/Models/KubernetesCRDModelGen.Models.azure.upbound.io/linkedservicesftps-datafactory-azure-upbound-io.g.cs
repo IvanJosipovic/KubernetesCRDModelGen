@@ -38,6 +38,7 @@ public enum V1beta1LinkedServiceSFTPSpecForProviderDataFactoryIdRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinkedServiceSFTPSpecForProviderDataFactoryIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1LinkedServiceSFTPSpecForProviderDataFactoryIdRefPoli
     public V1beta1LinkedServiceSFTPSpecForProviderDataFactoryIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Factory in datafactory to populate dataFactoryId.</summary>
 public partial class V1beta1LinkedServiceSFTPSpecForProviderDataFactoryIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1LinkedServiceSFTPSpecForProviderDataFactoryIdSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinkedServiceSFTPSpecForProviderDataFactoryIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1LinkedServiceSFTPSpecForProviderDataFactoryIdSelecto
     public V1beta1LinkedServiceSFTPSpecForProviderDataFactoryIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Factory in datafactory to populate dataFactoryId.</summary>
 public partial class V1beta1LinkedServiceSFTPSpecForProviderDataFactoryIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1LinkedServiceSFTPSpecForProviderDataFactoryIdSelecto
     public V1beta1LinkedServiceSFTPSpecForProviderDataFactoryIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Password to logon to the SFTP Server for Basic Authentication.</summary>
 public partial class V1beta1LinkedServiceSFTPSpecForProviderPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1LinkedServiceSFTPSpecForProviderPasswordSecretRef
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinkedServiceSFTPSpecForProvider
 {
     /// <summary>A map of additional properties to associate with the Data Factory Linked Service.</summary>
@@ -188,6 +194,7 @@ public partial class V1beta1LinkedServiceSFTPSpecForProvider
     public string? Username { get; set; }
 }
 
+/// <summary>Password to logon to the SFTP Server for Basic Authentication.</summary>
 public partial class V1beta1LinkedServiceSFTPSpecInitProviderPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -203,6 +210,7 @@ public partial class V1beta1LinkedServiceSFTPSpecInitProviderPasswordSecretRef
     public string Namespace { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1LinkedServiceSFTPSpecInitProvider
 {
     /// <summary>A map of additional properties to associate with the Data Factory Linked Service.</summary>
@@ -296,6 +304,7 @@ public enum V1beta1LinkedServiceSFTPSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinkedServiceSFTPSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -309,6 +318,7 @@ public partial class V1beta1LinkedServiceSFTPSpecProviderConfigRefPolicy
     public V1beta1LinkedServiceSFTPSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1LinkedServiceSFTPSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -340,6 +350,7 @@ public enum V1beta1LinkedServiceSFTPSpecPublishConnectionDetailsToConfigRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinkedServiceSFTPSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -353,6 +364,7 @@ public partial class V1beta1LinkedServiceSFTPSpecPublishConnectionDetailsToConfi
     public V1beta1LinkedServiceSFTPSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1LinkedServiceSFTPSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -364,6 +376,7 @@ public partial class V1beta1LinkedServiceSFTPSpecPublishConnectionDetailsToConfi
     public V1beta1LinkedServiceSFTPSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1LinkedServiceSFTPSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -379,6 +392,7 @@ public partial class V1beta1LinkedServiceSFTPSpecPublishConnectionDetailsToMetad
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1LinkedServiceSFTPSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -394,6 +408,7 @@ public partial class V1beta1LinkedServiceSFTPSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1LinkedServiceSFTPSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -405,6 +420,7 @@ public partial class V1beta1LinkedServiceSFTPSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>LinkedServiceSFTPSpec defines the desired state of LinkedServiceSFTP</summary>
 public partial class V1beta1LinkedServiceSFTPSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -437,6 +453,7 @@ public partial class V1beta1LinkedServiceSFTPSpec
     public V1beta1LinkedServiceSFTPSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinkedServiceSFTPStatusAtProvider
 {
     /// <summary>A map of additional properties to associate with the Data Factory Linked Service.</summary>
@@ -492,6 +509,7 @@ public partial class V1beta1LinkedServiceSFTPStatusAtProvider
     public string? Username { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1LinkedServiceSFTPStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -519,6 +537,7 @@ public partial class V1beta1LinkedServiceSFTPStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>LinkedServiceSFTPStatus defines the observed state of LinkedServiceSFTP.</summary>
 public partial class V1beta1LinkedServiceSFTPStatus
 {
     /// <summary></summary>
@@ -535,6 +554,7 @@ public partial class V1beta1LinkedServiceSFTPStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>LinkedServiceSFTP is the Schema for the LinkedServiceSFTPs API. Manages a Linked Service (connection) between an SFTP Server and Azure Data Factory.</summary>
 public partial class V1beta1LinkedServiceSFTP : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LinkedServiceSFTPSpec>, IStatus<V1beta1LinkedServiceSFTPStatus>
 {
     public const string KubeApiVersion = "v1beta1";

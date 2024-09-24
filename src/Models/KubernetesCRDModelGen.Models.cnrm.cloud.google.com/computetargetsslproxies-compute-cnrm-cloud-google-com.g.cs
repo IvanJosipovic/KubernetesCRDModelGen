@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary>A reference to the ComputeBackendService resource.</summary>
 public partial class V1beta1ComputeTargetSSLProxySpecBackendServiceRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeBackendService` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1ComputeTargetSSLProxySpecBackendServiceRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>A reference to the CertificateMap resource uri that identifies a certificate map associated with the given target proxy. This field can only be set for global target proxies. Accepted format is '//certificatemanager.googleapis.com/projects/{project}/locations/{location}/certificateMaps/{resourceName}'.</summary>
 public partial class V1beta1ComputeTargetSSLProxySpecCertificateMapRef
 {
     /// <summary>Allowed value: The `name` field of a `CertificateManagerCertificateMap` resource.</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1ComputeTargetSSLProxySpecCertificateMapRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>A list of ComputeSSLCertificate resources that are used to authenticate connections between users and the load balancer. Currently, exactly one SSL certificate must be specified.</summary>
 public partial class V1beta1ComputeTargetSSLProxySpecSslCertificates
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeSSLCertificate` resource.</summary>
@@ -53,6 +56,7 @@ public partial class V1beta1ComputeTargetSSLProxySpecSslCertificates
     public string? Namespace { get; set; }
 }
 
+/// <summary>A reference to the ComputeSSLPolicy resource that will be associated with the TargetSslProxy resource. If not set, the ComputeTargetSSLProxy resource will not have any SSL policy configured.</summary>
 public partial class V1beta1ComputeTargetSSLProxySpecSslPolicyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeSSLPolicy` resource.</summary>
@@ -68,6 +72,7 @@ public partial class V1beta1ComputeTargetSSLProxySpecSslPolicyRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeTargetSSLProxySpec
 {
     /// <summary>A reference to the ComputeBackendService resource.</summary>
@@ -99,6 +104,7 @@ public partial class V1beta1ComputeTargetSSLProxySpec
     public V1beta1ComputeTargetSSLProxySpecSslPolicyRef? SslPolicyRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeTargetSSLProxyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -122,6 +128,7 @@ public partial class V1beta1ComputeTargetSSLProxyStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeTargetSSLProxyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -146,6 +153,7 @@ public partial class V1beta1ComputeTargetSSLProxyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ComputeTargetSSLProxy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeTargetSSLProxySpec>, IStatus<V1beta1ComputeTargetSSLProxyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

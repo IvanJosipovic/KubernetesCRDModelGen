@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20201101storageNetworkSecurityGroupsSecurityRuleSpecDestinationApplicationSecurityGroupsReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -27,6 +28,7 @@ public partial class V1api20201101storageNetworkSecurityGroupsSecurityRuleSpecDe
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.ApplicationSecurityGroupSpec_NetworkSecurityGroups_SecurityRule_SubResourceEmbedded An application security group in a resource group.</summary>
 public partial class V1api20201101storageNetworkSecurityGroupsSecurityRuleSpecDestinationApplicationSecurityGroups
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -38,6 +40,7 @@ public partial class V1api20201101storageNetworkSecurityGroupsSecurityRuleSpecDe
     public V1api20201101storageNetworkSecurityGroupsSecurityRuleSpecDestinationApplicationSecurityGroupsReference? Reference { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a network.azure.com/NetworkSecurityGroup resource</summary>
 public partial class V1api20201101storageNetworkSecurityGroupsSecurityRuleSpecOwner
 {
     /// <summary></summary>
@@ -49,6 +52,7 @@ public partial class V1api20201101storageNetworkSecurityGroupsSecurityRuleSpecOw
     public string? Name { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20201101storageNetworkSecurityGroupsSecurityRuleSpecSourceApplicationSecurityGroupsReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -68,6 +72,7 @@ public partial class V1api20201101storageNetworkSecurityGroupsSecurityRuleSpecSo
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.ApplicationSecurityGroupSpec_NetworkSecurityGroups_SecurityRule_SubResourceEmbedded An application security group in a resource group.</summary>
 public partial class V1api20201101storageNetworkSecurityGroupsSecurityRuleSpecSourceApplicationSecurityGroups
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -79,6 +84,7 @@ public partial class V1api20201101storageNetworkSecurityGroupsSecurityRuleSpecSo
     public V1api20201101storageNetworkSecurityGroupsSecurityRuleSpecSourceApplicationSecurityGroupsReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.NetworkSecurityGroups_SecurityRule_Spec</summary>
 public partial class V1api20201101storageNetworkSecurityGroupsSecurityRuleSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -158,6 +164,7 @@ public partial class V1api20201101storageNetworkSecurityGroupsSecurityRuleSpec
     public IList<string>? SourcePortRanges { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20201101storageNetworkSecurityGroupsSecurityRuleStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -189,6 +196,7 @@ public partial class V1api20201101storageNetworkSecurityGroupsSecurityRuleStatus
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.ApplicationSecurityGroup_STATUS_NetworkSecurityGroups_SecurityRule_SubResourceEmbedded An application security group in a resource group.</summary>
 public partial class V1api20201101storageNetworkSecurityGroupsSecurityRuleStatusDestinationApplicationSecurityGroups
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -200,6 +208,7 @@ public partial class V1api20201101storageNetworkSecurityGroupsSecurityRuleStatus
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.ApplicationSecurityGroup_STATUS_NetworkSecurityGroups_SecurityRule_SubResourceEmbedded An application security group in a resource group.</summary>
 public partial class V1api20201101storageNetworkSecurityGroupsSecurityRuleStatusSourceApplicationSecurityGroups
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -211,6 +220,7 @@ public partial class V1api20201101storageNetworkSecurityGroupsSecurityRuleStatus
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.NetworkSecurityGroups_SecurityRule_STATUS</summary>
 public partial class V1api20201101storageNetworkSecurityGroupsSecurityRuleStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -303,6 +313,7 @@ public partial class V1api20201101storageNetworkSecurityGroupsSecurityRuleStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20201101.NetworkSecurityGroupsSecurityRule Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/networkSecurityGroup.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkSecurityGroups/{networkSecurityGroupName}/securityRules/{securityRuleName}</summary>
 public partial class V1api20201101storageNetworkSecurityGroupsSecurityRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20201101storageNetworkSecurityGroupsSecurityRuleSpec>, IStatus<V1api20201101storageNetworkSecurityGroupsSecurityRuleStatus>
 {
     public const string KubeApiVersion = "v1api20201101storage";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sources.knative.dev;
+/// <summary>Auth provides the relevant information for OIDC authentication.</summary>
 public partial class V1ApiServerSourceStatusAuth
 {
     /// <summary>ServiceAccountName is the name of the generated service account used for this components OIDC authentication.</summary>
@@ -19,6 +20,7 @@ public partial class V1ApiServerSourceStatusAuth
     public IList<string>? ServiceAccountNames { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1ApiServerSourceStatusCeAttributes
 {
     /// <summary>Source is the CloudEvents source attribute.</summary>
@@ -30,6 +32,7 @@ public partial class V1ApiServerSourceStatusCeAttributes
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1ApiServerSourceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another. We use VolatileTime in place of metav1.Time to exclude this from creating equality.Semantic differences (all other things held constant).</summary>
@@ -57,6 +60,7 @@ public partial class V1ApiServerSourceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1ApiServerSourceStatus
 {
     /// <summary>Annotations is additional Status fields for the Resource to save some additional State as well as convey more information to the user. This is roughly akin to Annotations on any k8s resource, just the reconciler conveying richer information outwards.</summary>
@@ -97,6 +101,7 @@ public partial class V1ApiServerSourceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ApiServerSource is an event source that brings Kubernetes API server events into Knative.</summary>
 public partial class V1ApiServerSource : IKubernetesObject<V1ObjectMeta>, ISpec<JsonNode>, IStatus<V1ApiServerSourceStatus>
 {
     public const string KubeApiVersion = "v1";

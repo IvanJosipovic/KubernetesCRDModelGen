@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1ComputeNetworkPeeringSpecNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1ComputeNetworkPeeringSpecNetworkRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeNetworkPeeringSpecPeerNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1ComputeNetworkPeeringSpecPeerNetworkRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeNetworkPeeringSpec
 {
     /// <summary>Whether to export the custom routes to the peer network. Defaults to false.</summary>
@@ -73,6 +76,7 @@ public partial class V1beta1ComputeNetworkPeeringSpec
     public string? StackType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeNetworkPeeringStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -96,6 +100,7 @@ public partial class V1beta1ComputeNetworkPeeringStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeNetworkPeeringStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -116,6 +121,7 @@ public partial class V1beta1ComputeNetworkPeeringStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ComputeNetworkPeering : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeNetworkPeeringSpec>, IStatus<V1beta1ComputeNetworkPeeringStatus>
 {
     public const string KubeApiVersion = "v1beta1";

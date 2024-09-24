@@ -38,6 +38,7 @@ public enum V1beta1GatewayAssociationSpecForProviderAssociatedGatewayIdRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GatewayAssociationSpecForProviderAssociatedGatewayIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1GatewayAssociationSpecForProviderAssociatedGatewayId
     public V1beta1GatewayAssociationSpecForProviderAssociatedGatewayIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPNGateway in ec2 to populate associatedGatewayId.</summary>
 public partial class V1beta1GatewayAssociationSpecForProviderAssociatedGatewayIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1GatewayAssociationSpecForProviderAssociatedGatewayIdSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GatewayAssociationSpecForProviderAssociatedGatewayIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1GatewayAssociationSpecForProviderAssociatedGatewayId
     public V1beta1GatewayAssociationSpecForProviderAssociatedGatewayIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPNGateway in ec2 to populate associatedGatewayId.</summary>
 public partial class V1beta1GatewayAssociationSpecForProviderAssociatedGatewayIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1GatewayAssociationSpecForProviderDxGatewayIdRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GatewayAssociationSpecForProviderDxGatewayIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1GatewayAssociationSpecForProviderDxGatewayIdRefPolic
     public V1beta1GatewayAssociationSpecForProviderDxGatewayIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Gateway in directconnect to populate dxGatewayId.</summary>
 public partial class V1beta1GatewayAssociationSpecForProviderDxGatewayIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1GatewayAssociationSpecForProviderDxGatewayIdSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GatewayAssociationSpecForProviderDxGatewayIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1GatewayAssociationSpecForProviderDxGatewayIdSelector
     public V1beta1GatewayAssociationSpecForProviderDxGatewayIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Gateway in directconnect to populate dxGatewayId.</summary>
 public partial class V1beta1GatewayAssociationSpecForProviderDxGatewayIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1GatewayAssociationSpecForProviderDxGatewayIdSelector
     public V1beta1GatewayAssociationSpecForProviderDxGatewayIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayAssociationSpecForProvider
 {
     /// <summary>VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the CIDR block of the VPC associated with the Virtual Gateway. To enable drift detection, must be configured.</summary>
@@ -269,6 +278,7 @@ public enum V1beta1GatewayAssociationSpecInitProviderAssociatedGatewayIdRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GatewayAssociationSpecInitProviderAssociatedGatewayIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -282,6 +292,7 @@ public partial class V1beta1GatewayAssociationSpecInitProviderAssociatedGatewayI
     public V1beta1GatewayAssociationSpecInitProviderAssociatedGatewayIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPNGateway in ec2 to populate associatedGatewayId.</summary>
 public partial class V1beta1GatewayAssociationSpecInitProviderAssociatedGatewayIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -313,6 +324,7 @@ public enum V1beta1GatewayAssociationSpecInitProviderAssociatedGatewayIdSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GatewayAssociationSpecInitProviderAssociatedGatewayIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -326,6 +338,7 @@ public partial class V1beta1GatewayAssociationSpecInitProviderAssociatedGatewayI
     public V1beta1GatewayAssociationSpecInitProviderAssociatedGatewayIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPNGateway in ec2 to populate associatedGatewayId.</summary>
 public partial class V1beta1GatewayAssociationSpecInitProviderAssociatedGatewayIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -361,6 +374,7 @@ public enum V1beta1GatewayAssociationSpecInitProviderDxGatewayIdRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GatewayAssociationSpecInitProviderDxGatewayIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -374,6 +388,7 @@ public partial class V1beta1GatewayAssociationSpecInitProviderDxGatewayIdRefPoli
     public V1beta1GatewayAssociationSpecInitProviderDxGatewayIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Gateway in directconnect to populate dxGatewayId.</summary>
 public partial class V1beta1GatewayAssociationSpecInitProviderDxGatewayIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -405,6 +420,7 @@ public enum V1beta1GatewayAssociationSpecInitProviderDxGatewayIdSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GatewayAssociationSpecInitProviderDxGatewayIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -418,6 +434,7 @@ public partial class V1beta1GatewayAssociationSpecInitProviderDxGatewayIdSelecto
     public V1beta1GatewayAssociationSpecInitProviderDxGatewayIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Gateway in directconnect to populate dxGatewayId.</summary>
 public partial class V1beta1GatewayAssociationSpecInitProviderDxGatewayIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -433,6 +450,7 @@ public partial class V1beta1GatewayAssociationSpecInitProviderDxGatewayIdSelecto
     public V1beta1GatewayAssociationSpecInitProviderDxGatewayIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1GatewayAssociationSpecInitProvider
 {
     /// <summary>VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the CIDR block of the VPC associated with the Virtual Gateway. To enable drift detection, must be configured.</summary>
@@ -518,6 +536,7 @@ public enum V1beta1GatewayAssociationSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GatewayAssociationSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -531,6 +550,7 @@ public partial class V1beta1GatewayAssociationSpecProviderConfigRefPolicy
     public V1beta1GatewayAssociationSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1GatewayAssociationSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -562,6 +582,7 @@ public enum V1beta1GatewayAssociationSpecPublishConnectionDetailsToConfigRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GatewayAssociationSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -575,6 +596,7 @@ public partial class V1beta1GatewayAssociationSpecPublishConnectionDetailsToConf
     public V1beta1GatewayAssociationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1GatewayAssociationSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -586,6 +608,7 @@ public partial class V1beta1GatewayAssociationSpecPublishConnectionDetailsToConf
     public V1beta1GatewayAssociationSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1GatewayAssociationSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -601,6 +624,7 @@ public partial class V1beta1GatewayAssociationSpecPublishConnectionDetailsToMeta
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1GatewayAssociationSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -616,6 +640,7 @@ public partial class V1beta1GatewayAssociationSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1GatewayAssociationSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -627,6 +652,7 @@ public partial class V1beta1GatewayAssociationSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>GatewayAssociationSpec defines the desired state of GatewayAssociation</summary>
 public partial class V1beta1GatewayAssociationSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -659,6 +685,7 @@ public partial class V1beta1GatewayAssociationSpec
     public V1beta1GatewayAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewayAssociationStatusAtProvider
 {
     /// <summary>VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the CIDR block of the VPC associated with the Virtual Gateway. To enable drift detection, must be configured.</summary>
@@ -702,6 +729,7 @@ public partial class V1beta1GatewayAssociationStatusAtProvider
     public string? VpnGatewayId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1GatewayAssociationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -729,6 +757,7 @@ public partial class V1beta1GatewayAssociationStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>GatewayAssociationStatus defines the observed state of GatewayAssociation.</summary>
 public partial class V1beta1GatewayAssociationStatus
 {
     /// <summary></summary>
@@ -745,6 +774,7 @@ public partial class V1beta1GatewayAssociationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>GatewayAssociation is the Schema for the GatewayAssociations API. Associates a Direct Connect Gateway with a VGW or transit gateway.</summary>
 public partial class V1beta1GatewayAssociation : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1GatewayAssociationSpec>, IStatus<V1beta1GatewayAssociationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

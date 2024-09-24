@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.argoproj.io;
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceLabelSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceLabelSelector
 {
     /// <summary></summary>
@@ -34,6 +36,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateMetadata
 {
     /// <summary></summary>
@@ -57,6 +60,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecDestination
 {
     /// <summary></summary>
@@ -72,6 +76,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public string? Server { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecIgnoreDifferences
 {
     /// <summary></summary>
@@ -103,6 +108,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecInfo
 {
     /// <summary></summary>
@@ -114,6 +120,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourceDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -129,6 +136,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourceDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -144,6 +152,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourceDirectoryJsonnet
 {
     /// <summary></summary>
@@ -159,6 +168,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public IList<V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourceDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourceDirectory
 {
     /// <summary></summary>
@@ -178,6 +188,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourceHelmFileParameters
 {
     /// <summary></summary>
@@ -189,6 +200,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourceHelmParameters
 {
     /// <summary></summary>
@@ -204,6 +216,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourceHelm
 {
     /// <summary></summary>
@@ -247,6 +260,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourceKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -278,6 +292,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourceKustomizePatches
 {
     /// <summary></summary>
@@ -297,6 +312,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourceKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourceKustomizeReplicas
 {
     /// <summary></summary>
@@ -308,6 +324,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourceKustomize
 {
     /// <summary></summary>
@@ -367,6 +384,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourcePluginEnv
 {
     /// <summary></summary>
@@ -378,6 +396,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourcePluginParameters
 {
     /// <summary></summary>
@@ -397,6 +416,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourcePlugin
 {
     /// <summary></summary>
@@ -412,6 +432,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public IList<V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourcePluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSource
 {
     /// <summary></summary>
@@ -451,6 +472,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourcesDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -466,6 +488,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourcesDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -481,6 +504,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourcesDirectoryJsonnet
 {
     /// <summary></summary>
@@ -496,6 +520,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public IList<V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourcesDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourcesDirectory
 {
     /// <summary></summary>
@@ -515,6 +540,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourcesHelmFileParameters
 {
     /// <summary></summary>
@@ -526,6 +552,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourcesHelmParameters
 {
     /// <summary></summary>
@@ -541,6 +568,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourcesHelm
 {
     /// <summary></summary>
@@ -584,6 +612,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourcesKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -615,6 +644,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourcesKustomizePatches
 {
     /// <summary></summary>
@@ -634,6 +664,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourcesKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourcesKustomizeReplicas
 {
     /// <summary></summary>
@@ -645,6 +676,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
@@ -704,6 +736,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourcesPluginEnv
 {
     /// <summary></summary>
@@ -715,6 +748,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourcesPluginParameters
 {
     /// <summary></summary>
@@ -734,6 +768,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourcesPlugin
 {
     /// <summary></summary>
@@ -749,6 +784,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public IList<V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourcesPluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSources
 {
     /// <summary></summary>
@@ -788,6 +824,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSyncPolicyAutomated
 {
     /// <summary></summary>
@@ -803,6 +840,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public bool? SelfHeal { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSyncPolicyManagedNamespaceMetadata
 {
     /// <summary></summary>
@@ -814,6 +852,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSyncPolicyRetryBackoff
 {
     /// <summary></summary>
@@ -829,6 +868,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public string? MaxDuration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSyncPolicyRetry
 {
     /// <summary></summary>
@@ -840,6 +880,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public long? Limit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSyncPolicy
 {
     /// <summary></summary>
@@ -859,6 +900,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public IList<string>? SyncOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpec
 {
     /// <summary></summary>
@@ -894,6 +936,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSyncPolicy? SyncPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplate
 {
     /// <summary></summary>
@@ -905,6 +948,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpec Spec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
 {
     /// <summary></summary>
@@ -932,6 +976,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public IDictionary<string, string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -947,6 +992,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersSelectorMatchEx
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersSelector
 {
     /// <summary></summary>
@@ -958,6 +1004,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersSelector
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateMetadata
 {
     /// <summary></summary>
@@ -981,6 +1028,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateMetadat
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecDestination
 {
     /// <summary></summary>
@@ -996,6 +1044,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecDes
     public string? Server { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecIgnoreDifferences
 {
     /// <summary></summary>
@@ -1027,6 +1076,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecIgn
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecInfo
 {
     /// <summary></summary>
@@ -1038,6 +1088,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecInf
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourceDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -1053,6 +1104,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourceDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -1068,6 +1120,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourceDirectoryJsonnet
 {
     /// <summary></summary>
@@ -1083,6 +1136,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     public IList<V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourceDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourceDirectory
 {
     /// <summary></summary>
@@ -1102,6 +1156,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourceHelmFileParameters
 {
     /// <summary></summary>
@@ -1113,6 +1168,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourceHelmParameters
 {
     /// <summary></summary>
@@ -1128,6 +1184,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourceHelm
 {
     /// <summary></summary>
@@ -1171,6 +1228,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourceKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -1202,6 +1260,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourceKustomizePatches
 {
     /// <summary></summary>
@@ -1221,6 +1280,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     public V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourceKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourceKustomizeReplicas
 {
     /// <summary></summary>
@@ -1232,6 +1292,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourceKustomize
 {
     /// <summary></summary>
@@ -1291,6 +1352,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourcePluginEnv
 {
     /// <summary></summary>
@@ -1302,6 +1364,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourcePluginParameters
 {
     /// <summary></summary>
@@ -1321,6 +1384,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourcePlugin
 {
     /// <summary></summary>
@@ -1336,6 +1400,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     public IList<V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourcePluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSource
 {
     /// <summary></summary>
@@ -1375,6 +1440,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourcesDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -1390,6 +1456,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourcesDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -1405,6 +1472,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourcesDirectoryJsonnet
 {
     /// <summary></summary>
@@ -1420,6 +1488,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     public IList<V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourcesDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourcesDirectory
 {
     /// <summary></summary>
@@ -1439,6 +1508,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourcesHelmFileParameters
 {
     /// <summary></summary>
@@ -1450,6 +1520,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourcesHelmParameters
 {
     /// <summary></summary>
@@ -1465,6 +1536,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourcesHelm
 {
     /// <summary></summary>
@@ -1508,6 +1580,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourcesKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -1539,6 +1612,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourcesKustomizePatches
 {
     /// <summary></summary>
@@ -1558,6 +1632,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     public V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourcesKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourcesKustomizeReplicas
 {
     /// <summary></summary>
@@ -1569,6 +1644,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
@@ -1628,6 +1704,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourcesPluginEnv
 {
     /// <summary></summary>
@@ -1639,6 +1716,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourcesPluginParameters
 {
     /// <summary></summary>
@@ -1658,6 +1736,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourcesPlugin
 {
     /// <summary></summary>
@@ -1673,6 +1752,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     public IList<V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourcesPluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSources
 {
     /// <summary></summary>
@@ -1712,6 +1792,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSyncPolicyAutomated
 {
     /// <summary></summary>
@@ -1727,6 +1808,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSyn
     public bool? SelfHeal { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSyncPolicyManagedNamespaceMetadata
 {
     /// <summary></summary>
@@ -1738,6 +1820,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSyn
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSyncPolicyRetryBackoff
 {
     /// <summary></summary>
@@ -1753,6 +1836,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSyn
     public string? MaxDuration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSyncPolicyRetry
 {
     /// <summary></summary>
@@ -1764,6 +1848,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSyn
     public long? Limit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSyncPolicy
 {
     /// <summary></summary>
@@ -1783,6 +1868,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSyn
     public IList<string>? SyncOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpec
 {
     /// <summary></summary>
@@ -1818,6 +1904,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpec
     public V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSyncPolicy? SyncPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplate
 {
     /// <summary></summary>
@@ -1829,6 +1916,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplate
     public V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpec Spec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusters
 {
     /// <summary></summary>
@@ -1844,6 +1932,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusters
     public IDictionary<string, string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitDirectories
 {
     /// <summary></summary>
@@ -1855,6 +1944,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitDirectories
     public string Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitFiles
 {
     /// <summary></summary>
@@ -1862,6 +1952,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitFiles
     public string Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateMetadata
 {
     /// <summary></summary>
@@ -1885,6 +1976,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateMetadata
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecDestination
 {
     /// <summary></summary>
@@ -1900,6 +1992,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecDestinat
     public string? Server { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecIgnoreDifferences
 {
     /// <summary></summary>
@@ -1931,6 +2024,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecIgnoreDi
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecInfo
 {
     /// <summary></summary>
@@ -1942,6 +2036,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecInfo
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -1957,6 +2052,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceDi
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -1972,6 +2068,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceDi
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceDirectoryJsonnet
 {
     /// <summary></summary>
@@ -1987,6 +2084,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceDi
     public IList<V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceDirectory
 {
     /// <summary></summary>
@@ -2006,6 +2104,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceDi
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceHelmFileParameters
 {
     /// <summary></summary>
@@ -2017,6 +2116,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceHe
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceHelmParameters
 {
     /// <summary></summary>
@@ -2032,6 +2132,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceHe
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceHelm
 {
     /// <summary></summary>
@@ -2075,6 +2176,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceHe
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -2106,6 +2208,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceKu
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceKustomizePatches
 {
     /// <summary></summary>
@@ -2125,6 +2228,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceKu
     public V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceKustomizeReplicas
 {
     /// <summary></summary>
@@ -2136,6 +2240,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceKu
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceKustomize
 {
     /// <summary></summary>
@@ -2195,6 +2300,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceKu
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcePluginEnv
 {
     /// <summary></summary>
@@ -2206,6 +2312,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcePl
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcePluginParameters
 {
     /// <summary></summary>
@@ -2225,6 +2332,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcePl
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcePlugin
 {
     /// <summary></summary>
@@ -2240,6 +2348,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcePl
     public IList<V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcePluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSource
 {
     /// <summary></summary>
@@ -2279,6 +2388,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSource
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -2294,6 +2404,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesD
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -2309,6 +2420,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesD
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesDirectoryJsonnet
 {
     /// <summary></summary>
@@ -2324,6 +2436,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesD
     public IList<V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesDirectory
 {
     /// <summary></summary>
@@ -2343,6 +2456,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesD
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesHelmFileParameters
 {
     /// <summary></summary>
@@ -2354,6 +2468,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesH
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesHelmParameters
 {
     /// <summary></summary>
@@ -2369,6 +2484,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesH
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesHelm
 {
     /// <summary></summary>
@@ -2412,6 +2528,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesH
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -2443,6 +2560,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesK
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesKustomizePatches
 {
     /// <summary></summary>
@@ -2462,6 +2580,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesK
     public V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesKustomizeReplicas
 {
     /// <summary></summary>
@@ -2473,6 +2592,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesK
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
@@ -2532,6 +2652,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesK
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesPluginEnv
 {
     /// <summary></summary>
@@ -2543,6 +2664,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesP
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesPluginParameters
 {
     /// <summary></summary>
@@ -2562,6 +2684,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesP
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesPlugin
 {
     /// <summary></summary>
@@ -2577,6 +2700,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesP
     public IList<V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesPluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSources
 {
     /// <summary></summary>
@@ -2616,6 +2740,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSources
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSyncPolicyAutomated
 {
     /// <summary></summary>
@@ -2631,6 +2756,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSyncPoli
     public bool? SelfHeal { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSyncPolicyManagedNamespaceMetadata
 {
     /// <summary></summary>
@@ -2642,6 +2768,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSyncPoli
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSyncPolicyRetryBackoff
 {
     /// <summary></summary>
@@ -2657,6 +2784,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSyncPoli
     public string? MaxDuration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSyncPolicyRetry
 {
     /// <summary></summary>
@@ -2668,6 +2796,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSyncPoli
     public long? Limit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSyncPolicy
 {
     /// <summary></summary>
@@ -2687,6 +2816,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSyncPoli
     public IList<string>? SyncOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpec
 {
     /// <summary></summary>
@@ -2722,6 +2852,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpec
     public V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSyncPolicy? SyncPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplate
 {
     /// <summary></summary>
@@ -2733,6 +2864,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplate
     public V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpec Spec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsGit
 {
     /// <summary></summary>
@@ -2768,6 +2900,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGit
     public IDictionary<string, string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateMetadata
 {
     /// <summary></summary>
@@ -2791,6 +2924,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateMetadata
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecDestination
 {
     /// <summary></summary>
@@ -2806,6 +2940,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecDestina
     public string? Server { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecIgnoreDifferences
 {
     /// <summary></summary>
@@ -2837,6 +2972,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecIgnoreD
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecInfo
 {
     /// <summary></summary>
@@ -2848,6 +2984,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecInfo
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -2863,6 +3000,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceD
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -2878,6 +3016,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceD
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceDirectoryJsonnet
 {
     /// <summary></summary>
@@ -2893,6 +3032,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceD
     public IList<V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceDirectory
 {
     /// <summary></summary>
@@ -2912,6 +3052,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceD
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceHelmFileParameters
 {
     /// <summary></summary>
@@ -2923,6 +3064,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceH
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceHelmParameters
 {
     /// <summary></summary>
@@ -2938,6 +3080,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceH
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceHelm
 {
     /// <summary></summary>
@@ -2981,6 +3124,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceH
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -3012,6 +3156,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceK
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceKustomizePatches
 {
     /// <summary></summary>
@@ -3031,6 +3176,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceK
     public V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceKustomizeReplicas
 {
     /// <summary></summary>
@@ -3042,6 +3188,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceK
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceKustomize
 {
     /// <summary></summary>
@@ -3101,6 +3248,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceK
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourcePluginEnv
 {
     /// <summary></summary>
@@ -3112,6 +3260,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceP
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourcePluginParameters
 {
     /// <summary></summary>
@@ -3131,6 +3280,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceP
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourcePlugin
 {
     /// <summary></summary>
@@ -3146,6 +3296,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceP
     public IList<V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourcePluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSource
 {
     /// <summary></summary>
@@ -3185,6 +3336,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSource
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourcesDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -3200,6 +3352,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSources
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourcesDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -3215,6 +3368,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSources
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourcesDirectoryJsonnet
 {
     /// <summary></summary>
@@ -3230,6 +3384,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSources
     public IList<V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourcesDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourcesDirectory
 {
     /// <summary></summary>
@@ -3249,6 +3404,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSources
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourcesHelmFileParameters
 {
     /// <summary></summary>
@@ -3260,6 +3416,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSources
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourcesHelmParameters
 {
     /// <summary></summary>
@@ -3275,6 +3432,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSources
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourcesHelm
 {
     /// <summary></summary>
@@ -3318,6 +3476,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSources
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourcesKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -3349,6 +3508,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSources
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourcesKustomizePatches
 {
     /// <summary></summary>
@@ -3368,6 +3528,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSources
     public V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourcesKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourcesKustomizeReplicas
 {
     /// <summary></summary>
@@ -3379,6 +3540,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSources
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
@@ -3438,6 +3600,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSources
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourcesPluginEnv
 {
     /// <summary></summary>
@@ -3449,6 +3612,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSources
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourcesPluginParameters
 {
     /// <summary></summary>
@@ -3468,6 +3632,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSources
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourcesPlugin
 {
     /// <summary></summary>
@@ -3483,6 +3648,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSources
     public IList<V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourcesPluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSources
 {
     /// <summary></summary>
@@ -3522,6 +3688,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSources
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSyncPolicyAutomated
 {
     /// <summary></summary>
@@ -3537,6 +3704,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSyncPol
     public bool? SelfHeal { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSyncPolicyManagedNamespaceMetadata
 {
     /// <summary></summary>
@@ -3548,6 +3716,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSyncPol
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSyncPolicyRetryBackoff
 {
     /// <summary></summary>
@@ -3563,6 +3732,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSyncPol
     public string? MaxDuration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSyncPolicyRetry
 {
     /// <summary></summary>
@@ -3574,6 +3744,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSyncPol
     public long? Limit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSyncPolicy
 {
     /// <summary></summary>
@@ -3593,6 +3764,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSyncPol
     public IList<string>? SyncOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpec
 {
     /// <summary></summary>
@@ -3628,6 +3800,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpec
     public V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSyncPolicy? SyncPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplate
 {
     /// <summary></summary>
@@ -3639,6 +3812,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplate
     public V1alpha1ApplicationSetSpecGeneratorsListTemplateSpec Spec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsList
 {
     /// <summary></summary>
@@ -3654,6 +3828,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsList
     public V1alpha1ApplicationSetSpecGeneratorsListTemplate? Template { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceLabelSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -3669,6 +3844,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceLabelSelector
 {
     /// <summary></summary>
@@ -3680,6 +3856,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateMetadata
 {
     /// <summary></summary>
@@ -3703,6 +3880,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecDestination
 {
     /// <summary></summary>
@@ -3718,6 +3896,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string? Server { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecIgnoreDifferences
 {
     /// <summary></summary>
@@ -3749,6 +3928,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecInfo
 {
     /// <summary></summary>
@@ -3760,6 +3940,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourceDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -3775,6 +3956,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourceDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -3790,6 +3972,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourceDirectoryJsonnet
 {
     /// <summary></summary>
@@ -3805,6 +3988,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourceDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourceDirectory
 {
     /// <summary></summary>
@@ -3824,6 +4008,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourceHelmFileParameters
 {
     /// <summary></summary>
@@ -3835,6 +4020,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourceHelmParameters
 {
     /// <summary></summary>
@@ -3850,6 +4036,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourceHelm
 {
     /// <summary></summary>
@@ -3893,6 +4080,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourceKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -3924,6 +4112,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourceKustomizePatches
 {
     /// <summary></summary>
@@ -3943,6 +4132,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourceKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourceKustomizeReplicas
 {
     /// <summary></summary>
@@ -3954,6 +4144,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourceKustomize
 {
     /// <summary></summary>
@@ -4013,6 +4204,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourcePluginEnv
 {
     /// <summary></summary>
@@ -4024,6 +4216,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourcePluginParameters
 {
     /// <summary></summary>
@@ -4043,6 +4236,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourcePlugin
 {
     /// <summary></summary>
@@ -4058,6 +4252,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourcePluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSource
 {
     /// <summary></summary>
@@ -4097,6 +4292,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourcesDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -4112,6 +4308,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourcesDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -4127,6 +4324,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourcesDirectoryJsonnet
 {
     /// <summary></summary>
@@ -4142,6 +4340,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourcesDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourcesDirectory
 {
     /// <summary></summary>
@@ -4161,6 +4360,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourcesHelmFileParameters
 {
     /// <summary></summary>
@@ -4172,6 +4372,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourcesHelmParameters
 {
     /// <summary></summary>
@@ -4187,6 +4388,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourcesHelm
 {
     /// <summary></summary>
@@ -4230,6 +4432,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourcesKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -4261,6 +4464,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourcesKustomizePatches
 {
     /// <summary></summary>
@@ -4280,6 +4484,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourcesKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourcesKustomizeReplicas
 {
     /// <summary></summary>
@@ -4291,6 +4496,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
@@ -4350,6 +4556,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourcesPluginEnv
 {
     /// <summary></summary>
@@ -4361,6 +4568,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourcesPluginParameters
 {
     /// <summary></summary>
@@ -4380,6 +4588,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourcesPlugin
 {
     /// <summary></summary>
@@ -4395,6 +4604,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourcesPluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSources
 {
     /// <summary></summary>
@@ -4434,6 +4644,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSyncPolicyAutomated
 {
     /// <summary></summary>
@@ -4449,6 +4660,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public bool? SelfHeal { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSyncPolicyManagedNamespaceMetadata
 {
     /// <summary></summary>
@@ -4460,6 +4672,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSyncPolicyRetryBackoff
 {
     /// <summary></summary>
@@ -4475,6 +4688,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string? MaxDuration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSyncPolicyRetry
 {
     /// <summary></summary>
@@ -4486,6 +4700,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public long? Limit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSyncPolicy
 {
     /// <summary></summary>
@@ -4505,6 +4720,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public IList<string>? SyncOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpec
 {
     /// <summary></summary>
@@ -4540,6 +4756,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSyncPolicy? SyncPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplate
 {
     /// <summary></summary>
@@ -4551,6 +4768,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpec Spec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResource
 {
     /// <summary></summary>
@@ -4578,6 +4796,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public IDictionary<string, string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -4593,6 +4812,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersSelector
 {
     /// <summary></summary>
@@ -4604,6 +4824,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateMetadata
 {
     /// <summary></summary>
@@ -4627,6 +4848,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecDestination
 {
     /// <summary></summary>
@@ -4642,6 +4864,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string? Server { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecIgnoreDifferences
 {
     /// <summary></summary>
@@ -4673,6 +4896,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecInfo
 {
     /// <summary></summary>
@@ -4684,6 +4908,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourceDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -4699,6 +4924,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourceDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -4714,6 +4940,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourceDirectoryJsonnet
 {
     /// <summary></summary>
@@ -4729,6 +4956,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourceDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourceDirectory
 {
     /// <summary></summary>
@@ -4748,6 +4976,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourceHelmFileParameters
 {
     /// <summary></summary>
@@ -4759,6 +4988,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourceHelmParameters
 {
     /// <summary></summary>
@@ -4774,6 +5004,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourceHelm
 {
     /// <summary></summary>
@@ -4817,6 +5048,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourceKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -4848,6 +5080,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourceKustomizePatches
 {
     /// <summary></summary>
@@ -4867,6 +5100,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourceKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourceKustomizeReplicas
 {
     /// <summary></summary>
@@ -4878,6 +5112,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourceKustomize
 {
     /// <summary></summary>
@@ -4937,6 +5172,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourcePluginEnv
 {
     /// <summary></summary>
@@ -4948,6 +5184,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourcePluginParameters
 {
     /// <summary></summary>
@@ -4967,6 +5204,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourcePlugin
 {
     /// <summary></summary>
@@ -4982,6 +5220,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourcePluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSource
 {
     /// <summary></summary>
@@ -5021,6 +5260,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourcesDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -5036,6 +5276,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourcesDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -5051,6 +5292,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourcesDirectoryJsonnet
 {
     /// <summary></summary>
@@ -5066,6 +5308,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourcesDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourcesDirectory
 {
     /// <summary></summary>
@@ -5085,6 +5328,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourcesHelmFileParameters
 {
     /// <summary></summary>
@@ -5096,6 +5340,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourcesHelmParameters
 {
     /// <summary></summary>
@@ -5111,6 +5356,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourcesHelm
 {
     /// <summary></summary>
@@ -5154,6 +5400,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourcesKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -5185,6 +5432,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourcesKustomizePatches
 {
     /// <summary></summary>
@@ -5204,6 +5452,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourcesKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourcesKustomizeReplicas
 {
     /// <summary></summary>
@@ -5215,6 +5464,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
@@ -5274,6 +5524,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourcesPluginEnv
 {
     /// <summary></summary>
@@ -5285,6 +5536,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourcesPluginParameters
 {
     /// <summary></summary>
@@ -5304,6 +5556,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourcesPlugin
 {
     /// <summary></summary>
@@ -5319,6 +5572,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourcesPluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSources
 {
     /// <summary></summary>
@@ -5358,6 +5612,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSyncPolicyAutomated
 {
     /// <summary></summary>
@@ -5373,6 +5628,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public bool? SelfHeal { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSyncPolicyManagedNamespaceMetadata
 {
     /// <summary></summary>
@@ -5384,6 +5640,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSyncPolicyRetryBackoff
 {
     /// <summary></summary>
@@ -5399,6 +5656,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public string? MaxDuration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSyncPolicyRetry
 {
     /// <summary></summary>
@@ -5410,6 +5668,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public long? Limit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSyncPolicy
 {
     /// <summary></summary>
@@ -5429,6 +5688,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public IList<string>? SyncOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpec
 {
     /// <summary></summary>
@@ -5464,6 +5724,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSyncPolicy? SyncPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplate
 {
     /// <summary></summary>
@@ -5475,6 +5736,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpec Spec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusters
 {
     /// <summary></summary>
@@ -5490,6 +5752,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public IDictionary<string, string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitDirectories
 {
     /// <summary></summary>
@@ -5501,6 +5764,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitDire
     public string Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitFiles
 {
     /// <summary></summary>
@@ -5508,6 +5772,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitFile
     public string Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateMetadata
 {
     /// <summary></summary>
@@ -5531,6 +5796,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecDestination
 {
     /// <summary></summary>
@@ -5546,6 +5812,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public string? Server { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecIgnoreDifferences
 {
     /// <summary></summary>
@@ -5577,6 +5844,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecInfo
 {
     /// <summary></summary>
@@ -5588,6 +5856,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourceDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -5603,6 +5872,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourceDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -5618,6 +5888,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourceDirectoryJsonnet
 {
     /// <summary></summary>
@@ -5633,6 +5904,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourceDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourceDirectory
 {
     /// <summary></summary>
@@ -5652,6 +5924,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourceHelmFileParameters
 {
     /// <summary></summary>
@@ -5663,6 +5936,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourceHelmParameters
 {
     /// <summary></summary>
@@ -5678,6 +5952,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourceHelm
 {
     /// <summary></summary>
@@ -5721,6 +5996,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourceKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -5752,6 +6028,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourceKustomizePatches
 {
     /// <summary></summary>
@@ -5771,6 +6048,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourceKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourceKustomizeReplicas
 {
     /// <summary></summary>
@@ -5782,6 +6060,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourceKustomize
 {
     /// <summary></summary>
@@ -5841,6 +6120,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourcePluginEnv
 {
     /// <summary></summary>
@@ -5852,6 +6132,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourcePluginParameters
 {
     /// <summary></summary>
@@ -5871,6 +6152,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourcePlugin
 {
     /// <summary></summary>
@@ -5886,6 +6168,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourcePluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSource
 {
     /// <summary></summary>
@@ -5925,6 +6208,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourcesDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -5940,6 +6224,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourcesDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -5955,6 +6240,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourcesDirectoryJsonnet
 {
     /// <summary></summary>
@@ -5970,6 +6256,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourcesDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourcesDirectory
 {
     /// <summary></summary>
@@ -5989,6 +6276,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourcesHelmFileParameters
 {
     /// <summary></summary>
@@ -6000,6 +6288,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourcesHelmParameters
 {
     /// <summary></summary>
@@ -6015,6 +6304,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourcesHelm
 {
     /// <summary></summary>
@@ -6058,6 +6348,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourcesKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -6089,6 +6380,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourcesKustomizePatches
 {
     /// <summary></summary>
@@ -6108,6 +6400,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourcesKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourcesKustomizeReplicas
 {
     /// <summary></summary>
@@ -6119,6 +6412,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
@@ -6178,6 +6472,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourcesPluginEnv
 {
     /// <summary></summary>
@@ -6189,6 +6484,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourcesPluginParameters
 {
     /// <summary></summary>
@@ -6208,6 +6504,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourcesPlugin
 {
     /// <summary></summary>
@@ -6223,6 +6520,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourcesPluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSources
 {
     /// <summary></summary>
@@ -6262,6 +6560,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSyncPolicyAutomated
 {
     /// <summary></summary>
@@ -6277,6 +6576,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public bool? SelfHeal { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSyncPolicyManagedNamespaceMetadata
 {
     /// <summary></summary>
@@ -6288,6 +6588,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSyncPolicyRetryBackoff
 {
     /// <summary></summary>
@@ -6303,6 +6604,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public string? MaxDuration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSyncPolicyRetry
 {
     /// <summary></summary>
@@ -6314,6 +6616,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public long? Limit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSyncPolicy
 {
     /// <summary></summary>
@@ -6333,6 +6636,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public IList<string>? SyncOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpec
 {
     /// <summary></summary>
@@ -6368,6 +6672,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSyncPolicy? SyncPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplate
 {
     /// <summary></summary>
@@ -6379,6 +6684,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpec Spec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGit
 {
     /// <summary></summary>
@@ -6414,6 +6720,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGit
     public IDictionary<string, string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateMetadata
 {
     /// <summary></summary>
@@ -6437,6 +6744,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecDestination
 {
     /// <summary></summary>
@@ -6452,6 +6760,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public string? Server { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecIgnoreDifferences
 {
     /// <summary></summary>
@@ -6483,6 +6792,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecInfo
 {
     /// <summary></summary>
@@ -6494,6 +6804,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourceDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -6509,6 +6820,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourceDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -6524,6 +6836,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourceDirectoryJsonnet
 {
     /// <summary></summary>
@@ -6539,6 +6852,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourceDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourceDirectory
 {
     /// <summary></summary>
@@ -6558,6 +6872,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourceHelmFileParameters
 {
     /// <summary></summary>
@@ -6569,6 +6884,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourceHelmParameters
 {
     /// <summary></summary>
@@ -6584,6 +6900,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourceHelm
 {
     /// <summary></summary>
@@ -6627,6 +6944,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourceKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -6658,6 +6976,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourceKustomizePatches
 {
     /// <summary></summary>
@@ -6677,6 +6996,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourceKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourceKustomizeReplicas
 {
     /// <summary></summary>
@@ -6688,6 +7008,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourceKustomize
 {
     /// <summary></summary>
@@ -6747,6 +7068,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourcePluginEnv
 {
     /// <summary></summary>
@@ -6758,6 +7080,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourcePluginParameters
 {
     /// <summary></summary>
@@ -6777,6 +7100,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourcePlugin
 {
     /// <summary></summary>
@@ -6792,6 +7116,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourcePluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSource
 {
     /// <summary></summary>
@@ -6831,6 +7156,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourcesDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -6846,6 +7172,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourcesDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -6861,6 +7188,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourcesDirectoryJsonnet
 {
     /// <summary></summary>
@@ -6876,6 +7204,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourcesDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourcesDirectory
 {
     /// <summary></summary>
@@ -6895,6 +7224,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourcesHelmFileParameters
 {
     /// <summary></summary>
@@ -6906,6 +7236,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourcesHelmParameters
 {
     /// <summary></summary>
@@ -6921,6 +7252,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourcesHelm
 {
     /// <summary></summary>
@@ -6964,6 +7296,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourcesKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -6995,6 +7328,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourcesKustomizePatches
 {
     /// <summary></summary>
@@ -7014,6 +7348,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourcesKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourcesKustomizeReplicas
 {
     /// <summary></summary>
@@ -7025,6 +7360,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
@@ -7084,6 +7420,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourcesPluginEnv
 {
     /// <summary></summary>
@@ -7095,6 +7432,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourcesPluginParameters
 {
     /// <summary></summary>
@@ -7114,6 +7452,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourcesPlugin
 {
     /// <summary></summary>
@@ -7129,6 +7468,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourcesPluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSources
 {
     /// <summary></summary>
@@ -7168,6 +7508,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSyncPolicyAutomated
 {
     /// <summary></summary>
@@ -7183,6 +7524,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public bool? SelfHeal { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSyncPolicyManagedNamespaceMetadata
 {
     /// <summary></summary>
@@ -7194,6 +7536,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSyncPolicyRetryBackoff
 {
     /// <summary></summary>
@@ -7209,6 +7552,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public string? MaxDuration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSyncPolicyRetry
 {
     /// <summary></summary>
@@ -7220,6 +7564,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public long? Limit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSyncPolicy
 {
     /// <summary></summary>
@@ -7239,6 +7584,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public IList<string>? SyncOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpec
 {
     /// <summary></summary>
@@ -7274,6 +7620,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSyncPolicy? SyncPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplate
 {
     /// <summary></summary>
@@ -7285,6 +7632,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpec Spec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsList
 {
     /// <summary></summary>
@@ -7300,6 +7648,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsList
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplate? Template { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginConfigMapRef
 {
     /// <summary></summary>
@@ -7307,6 +7656,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginC
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginInput
 {
     /// <summary></summary>
@@ -7314,6 +7664,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginI
     public IDictionary<string, JsonNode>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateMetadata
 {
     /// <summary></summary>
@@ -7337,6 +7688,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecDestination
 {
     /// <summary></summary>
@@ -7352,6 +7704,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public string? Server { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecIgnoreDifferences
 {
     /// <summary></summary>
@@ -7383,6 +7736,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecInfo
 {
     /// <summary></summary>
@@ -7394,6 +7748,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourceDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -7409,6 +7764,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourceDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -7424,6 +7780,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourceDirectoryJsonnet
 {
     /// <summary></summary>
@@ -7439,6 +7796,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourceDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourceDirectory
 {
     /// <summary></summary>
@@ -7458,6 +7816,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourceHelmFileParameters
 {
     /// <summary></summary>
@@ -7469,6 +7828,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourceHelmParameters
 {
     /// <summary></summary>
@@ -7484,6 +7844,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourceHelm
 {
     /// <summary></summary>
@@ -7527,6 +7888,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourceKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -7558,6 +7920,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourceKustomizePatches
 {
     /// <summary></summary>
@@ -7577,6 +7940,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourceKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourceKustomizeReplicas
 {
     /// <summary></summary>
@@ -7588,6 +7952,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourceKustomize
 {
     /// <summary></summary>
@@ -7647,6 +8012,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourcePluginEnv
 {
     /// <summary></summary>
@@ -7658,6 +8024,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourcePluginParameters
 {
     /// <summary></summary>
@@ -7677,6 +8044,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourcePlugin
 {
     /// <summary></summary>
@@ -7692,6 +8060,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourcePluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSource
 {
     /// <summary></summary>
@@ -7731,6 +8100,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourcesDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -7746,6 +8116,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourcesDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -7761,6 +8132,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourcesDirectoryJsonnet
 {
     /// <summary></summary>
@@ -7776,6 +8148,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourcesDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourcesDirectory
 {
     /// <summary></summary>
@@ -7795,6 +8168,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourcesHelmFileParameters
 {
     /// <summary></summary>
@@ -7806,6 +8180,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourcesHelmParameters
 {
     /// <summary></summary>
@@ -7821,6 +8196,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourcesHelm
 {
     /// <summary></summary>
@@ -7864,6 +8240,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourcesKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -7895,6 +8272,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourcesKustomizePatches
 {
     /// <summary></summary>
@@ -7914,6 +8292,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourcesKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourcesKustomizeReplicas
 {
     /// <summary></summary>
@@ -7925,6 +8304,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
@@ -7984,6 +8364,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourcesPluginEnv
 {
     /// <summary></summary>
@@ -7995,6 +8376,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourcesPluginParameters
 {
     /// <summary></summary>
@@ -8014,6 +8396,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourcesPlugin
 {
     /// <summary></summary>
@@ -8029,6 +8412,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourcesPluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSources
 {
     /// <summary></summary>
@@ -8068,6 +8452,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSyncPolicyAutomated
 {
     /// <summary></summary>
@@ -8083,6 +8468,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public bool? SelfHeal { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSyncPolicyManagedNamespaceMetadata
 {
     /// <summary></summary>
@@ -8094,6 +8480,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSyncPolicyRetryBackoff
 {
     /// <summary></summary>
@@ -8109,6 +8496,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public string? MaxDuration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSyncPolicyRetry
 {
     /// <summary></summary>
@@ -8120,6 +8508,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public long? Limit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSyncPolicy
 {
     /// <summary></summary>
@@ -8139,6 +8528,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public IList<string>? SyncOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpec
 {
     /// <summary></summary>
@@ -8174,6 +8564,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSyncPolicy? SyncPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplate
 {
     /// <summary></summary>
@@ -8185,6 +8576,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpec Spec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPlugin
 {
     /// <summary></summary>
@@ -8208,6 +8600,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPlugin
     public IDictionary<string, string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestAzuredevopsTokenRef
 {
     /// <summary></summary>
@@ -8219,6 +8612,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestAzuredevops
 {
     /// <summary></summary>
@@ -8246,6 +8640,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestAzuredevopsTokenRef? TokenRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestBitbucketBasicAuthPasswordRef
 {
     /// <summary></summary>
@@ -8257,6 +8652,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestBitbucketBasicAuth
 {
     /// <summary></summary>
@@ -8268,6 +8664,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestBitbucketBearerTokenTokenRef
 {
     /// <summary></summary>
@@ -8279,6 +8676,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestBitbucketBearerToken
 {
     /// <summary></summary>
@@ -8286,6 +8684,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestBitbucketBearerTokenTokenRef TokenRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestBitbucket
 {
     /// <summary></summary>
@@ -8309,6 +8708,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string Repo { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestBitbucketServerBasicAuthPasswordRef
 {
     /// <summary></summary>
@@ -8320,6 +8720,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestBitbucketServerBasicAuth
 {
     /// <summary></summary>
@@ -8331,6 +8732,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestBitbucketServer
 {
     /// <summary></summary>
@@ -8350,6 +8752,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string Repo { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestFilters
 {
     /// <summary></summary>
@@ -8361,6 +8764,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string? TargetBranchMatch { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestGiteaTokenRef
 {
     /// <summary></summary>
@@ -8372,6 +8776,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestGitea
 {
     /// <summary></summary>
@@ -8395,6 +8800,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestGiteaTokenRef? TokenRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestGithubTokenRef
 {
     /// <summary></summary>
@@ -8406,6 +8812,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestGithub
 {
     /// <summary></summary>
@@ -8433,6 +8840,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestGithubTokenRef? TokenRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestGitlabTokenRef
 {
     /// <summary></summary>
@@ -8444,6 +8852,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestGitlab
 {
     /// <summary></summary>
@@ -8471,6 +8880,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestGitlabTokenRef? TokenRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateMetadata
 {
     /// <summary></summary>
@@ -8494,6 +8904,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecDestination
 {
     /// <summary></summary>
@@ -8509,6 +8920,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string? Server { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecIgnoreDifferences
 {
     /// <summary></summary>
@@ -8540,6 +8952,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecInfo
 {
     /// <summary></summary>
@@ -8551,6 +8964,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourceDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -8566,6 +8980,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourceDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -8581,6 +8996,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourceDirectoryJsonnet
 {
     /// <summary></summary>
@@ -8596,6 +9012,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourceDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourceDirectory
 {
     /// <summary></summary>
@@ -8615,6 +9032,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourceHelmFileParameters
 {
     /// <summary></summary>
@@ -8626,6 +9044,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourceHelmParameters
 {
     /// <summary></summary>
@@ -8641,6 +9060,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourceHelm
 {
     /// <summary></summary>
@@ -8684,6 +9104,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourceKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -8715,6 +9136,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourceKustomizePatches
 {
     /// <summary></summary>
@@ -8734,6 +9156,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourceKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourceKustomizeReplicas
 {
     /// <summary></summary>
@@ -8745,6 +9168,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourceKustomize
 {
     /// <summary></summary>
@@ -8804,6 +9228,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourcePluginEnv
 {
     /// <summary></summary>
@@ -8815,6 +9240,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourcePluginParameters
 {
     /// <summary></summary>
@@ -8834,6 +9260,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourcePlugin
 {
     /// <summary></summary>
@@ -8849,6 +9276,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourcePluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSource
 {
     /// <summary></summary>
@@ -8888,6 +9316,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourcesDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -8903,6 +9332,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourcesDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -8918,6 +9348,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourcesDirectoryJsonnet
 {
     /// <summary></summary>
@@ -8933,6 +9364,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourcesDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourcesDirectory
 {
     /// <summary></summary>
@@ -8952,6 +9384,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourcesHelmFileParameters
 {
     /// <summary></summary>
@@ -8963,6 +9396,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourcesHelmParameters
 {
     /// <summary></summary>
@@ -8978,6 +9412,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourcesHelm
 {
     /// <summary></summary>
@@ -9021,6 +9456,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourcesKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -9052,6 +9488,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourcesKustomizePatches
 {
     /// <summary></summary>
@@ -9071,6 +9508,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourcesKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourcesKustomizeReplicas
 {
     /// <summary></summary>
@@ -9082,6 +9520,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
@@ -9141,6 +9580,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourcesPluginEnv
 {
     /// <summary></summary>
@@ -9152,6 +9592,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourcesPluginParameters
 {
     /// <summary></summary>
@@ -9171,6 +9612,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourcesPlugin
 {
     /// <summary></summary>
@@ -9186,6 +9628,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourcesPluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSources
 {
     /// <summary></summary>
@@ -9225,6 +9668,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSyncPolicyAutomated
 {
     /// <summary></summary>
@@ -9240,6 +9684,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public bool? SelfHeal { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSyncPolicyManagedNamespaceMetadata
 {
     /// <summary></summary>
@@ -9251,6 +9696,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSyncPolicyRetryBackoff
 {
     /// <summary></summary>
@@ -9266,6 +9712,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public string? MaxDuration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSyncPolicyRetry
 {
     /// <summary></summary>
@@ -9277,6 +9724,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public long? Limit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSyncPolicy
 {
     /// <summary></summary>
@@ -9296,6 +9744,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public IList<string>? SyncOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpec
 {
     /// <summary></summary>
@@ -9331,6 +9780,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSyncPolicy? SyncPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplate
 {
     /// <summary></summary>
@@ -9342,6 +9792,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpec Spec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequest
 {
     /// <summary></summary>
@@ -9381,6 +9832,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplate? Template { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderAwsCodeCommitTagFilters
 {
     /// <summary></summary>
@@ -9392,6 +9844,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderAwsCodeCommit
 {
     /// <summary></summary>
@@ -9411,6 +9864,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderAwsCodeCommitTagFilters>? TagFilters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderAzureDevOpsAccessTokenRef
 {
     /// <summary></summary>
@@ -9422,6 +9876,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderAzureDevOps
 {
     /// <summary></summary>
@@ -9445,6 +9900,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string TeamProject { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderBitbucketAppPasswordRef
 {
     /// <summary></summary>
@@ -9456,6 +9912,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderBitbucket
 {
     /// <summary></summary>
@@ -9475,6 +9932,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string User { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderBitbucketServerBasicAuthPasswordRef
 {
     /// <summary></summary>
@@ -9486,6 +9944,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderBitbucketServerBasicAuth
 {
     /// <summary></summary>
@@ -9497,6 +9956,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderBitbucketServer
 {
     /// <summary></summary>
@@ -9516,6 +9976,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string Project { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderFilters
 {
     /// <summary></summary>
@@ -9539,6 +10000,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string? RepositoryMatch { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderGiteaTokenRef
 {
     /// <summary></summary>
@@ -9550,6 +10012,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderGitea
 {
     /// <summary></summary>
@@ -9573,6 +10036,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderGiteaTokenRef? TokenRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderGithubTokenRef
 {
     /// <summary></summary>
@@ -9584,6 +10048,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderGithub
 {
     /// <summary></summary>
@@ -9607,6 +10072,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderGithubTokenRef? TokenRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderGitlabTokenRef
 {
     /// <summary></summary>
@@ -9618,6 +10084,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderGitlab
 {
     /// <summary></summary>
@@ -9653,6 +10120,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string? Topic { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateMetadata
 {
     /// <summary></summary>
@@ -9676,6 +10144,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecDestination
 {
     /// <summary></summary>
@@ -9691,6 +10160,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string? Server { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecIgnoreDifferences
 {
     /// <summary></summary>
@@ -9722,6 +10192,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecInfo
 {
     /// <summary></summary>
@@ -9733,6 +10204,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourceDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -9748,6 +10220,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourceDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -9763,6 +10236,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourceDirectoryJsonnet
 {
     /// <summary></summary>
@@ -9778,6 +10252,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourceDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourceDirectory
 {
     /// <summary></summary>
@@ -9797,6 +10272,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourceHelmFileParameters
 {
     /// <summary></summary>
@@ -9808,6 +10284,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourceHelmParameters
 {
     /// <summary></summary>
@@ -9823,6 +10300,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourceHelm
 {
     /// <summary></summary>
@@ -9866,6 +10344,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourceKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -9897,6 +10376,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourceKustomizePatches
 {
     /// <summary></summary>
@@ -9916,6 +10396,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourceKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourceKustomizeReplicas
 {
     /// <summary></summary>
@@ -9927,6 +10408,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourceKustomize
 {
     /// <summary></summary>
@@ -9986,6 +10468,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourcePluginEnv
 {
     /// <summary></summary>
@@ -9997,6 +10480,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourcePluginParameters
 {
     /// <summary></summary>
@@ -10016,6 +10500,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourcePlugin
 {
     /// <summary></summary>
@@ -10031,6 +10516,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourcePluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSource
 {
     /// <summary></summary>
@@ -10070,6 +10556,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourcesDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -10085,6 +10572,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourcesDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -10100,6 +10588,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourcesDirectoryJsonnet
 {
     /// <summary></summary>
@@ -10115,6 +10604,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourcesDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourcesDirectory
 {
     /// <summary></summary>
@@ -10134,6 +10624,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourcesHelmFileParameters
 {
     /// <summary></summary>
@@ -10145,6 +10636,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourcesHelmParameters
 {
     /// <summary></summary>
@@ -10160,6 +10652,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourcesHelm
 {
     /// <summary></summary>
@@ -10203,6 +10696,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourcesKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -10234,6 +10728,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourcesKustomizePatches
 {
     /// <summary></summary>
@@ -10253,6 +10748,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourcesKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourcesKustomizeReplicas
 {
     /// <summary></summary>
@@ -10264,6 +10760,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
@@ -10323,6 +10820,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourcesPluginEnv
 {
     /// <summary></summary>
@@ -10334,6 +10832,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourcesPluginParameters
 {
     /// <summary></summary>
@@ -10353,6 +10852,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourcesPlugin
 {
     /// <summary></summary>
@@ -10368,6 +10868,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourcesPluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSources
 {
     /// <summary></summary>
@@ -10407,6 +10908,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSyncPolicyAutomated
 {
     /// <summary></summary>
@@ -10422,6 +10924,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public bool? SelfHeal { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSyncPolicyManagedNamespaceMetadata
 {
     /// <summary></summary>
@@ -10433,6 +10936,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSyncPolicyRetryBackoff
 {
     /// <summary></summary>
@@ -10448,6 +10952,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public string? MaxDuration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSyncPolicyRetry
 {
     /// <summary></summary>
@@ -10459,6 +10964,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public long? Limit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSyncPolicy
 {
     /// <summary></summary>
@@ -10478,6 +10984,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public IList<string>? SyncOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpec
 {
     /// <summary></summary>
@@ -10513,6 +11020,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSyncPolicy? SyncPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplate
 {
     /// <summary></summary>
@@ -10524,6 +11032,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpec Spec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProvider
 {
     /// <summary></summary>
@@ -10575,6 +11084,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public IDictionary<string, string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -10590,6 +11100,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsSelecto
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsSelector
 {
     /// <summary></summary>
@@ -10601,6 +11112,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsSelecto
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGenerators
 {
     /// <summary></summary>
@@ -10644,6 +11156,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGenerators
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsSelector? Selector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateMetadata
 {
     /// <summary></summary>
@@ -10667,6 +11180,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateMetadata
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecDestination
 {
     /// <summary></summary>
@@ -10682,6 +11196,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecDesti
     public string? Server { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecIgnoreDifferences
 {
     /// <summary></summary>
@@ -10713,6 +11228,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecIgnor
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecInfo
 {
     /// <summary></summary>
@@ -10724,6 +11240,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecInfo
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourceDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -10739,6 +11256,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourceDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -10754,6 +11272,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourceDirectoryJsonnet
 {
     /// <summary></summary>
@@ -10769,6 +11288,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourceDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourceDirectory
 {
     /// <summary></summary>
@@ -10788,6 +11308,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourceHelmFileParameters
 {
     /// <summary></summary>
@@ -10799,6 +11320,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourceHelmParameters
 {
     /// <summary></summary>
@@ -10814,6 +11336,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourceHelm
 {
     /// <summary></summary>
@@ -10857,6 +11380,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourceKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -10888,6 +11412,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourceKustomizePatches
 {
     /// <summary></summary>
@@ -10907,6 +11432,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     public V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourceKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourceKustomizeReplicas
 {
     /// <summary></summary>
@@ -10918,6 +11444,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourceKustomize
 {
     /// <summary></summary>
@@ -10977,6 +11504,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourcePluginEnv
 {
     /// <summary></summary>
@@ -10988,6 +11516,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourcePluginParameters
 {
     /// <summary></summary>
@@ -11007,6 +11536,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourcePlugin
 {
     /// <summary></summary>
@@ -11022,6 +11552,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourcePluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSource
 {
     /// <summary></summary>
@@ -11061,6 +11592,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourcesDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -11076,6 +11608,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourcesDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -11091,6 +11624,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourcesDirectoryJsonnet
 {
     /// <summary></summary>
@@ -11106,6 +11640,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourcesDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourcesDirectory
 {
     /// <summary></summary>
@@ -11125,6 +11660,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourcesHelmFileParameters
 {
     /// <summary></summary>
@@ -11136,6 +11672,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourcesHelmParameters
 {
     /// <summary></summary>
@@ -11151,6 +11688,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourcesHelm
 {
     /// <summary></summary>
@@ -11194,6 +11732,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourcesKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -11225,6 +11764,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourcesKustomizePatches
 {
     /// <summary></summary>
@@ -11244,6 +11784,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     public V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourcesKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourcesKustomizeReplicas
 {
     /// <summary></summary>
@@ -11255,6 +11796,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
@@ -11314,6 +11856,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourcesPluginEnv
 {
     /// <summary></summary>
@@ -11325,6 +11868,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourcesPluginParameters
 {
     /// <summary></summary>
@@ -11344,6 +11888,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourcesPlugin
 {
     /// <summary></summary>
@@ -11359,6 +11904,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourcesPluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSources
 {
     /// <summary></summary>
@@ -11398,6 +11944,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSyncPolicyAutomated
 {
     /// <summary></summary>
@@ -11413,6 +11960,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSyncP
     public bool? SelfHeal { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSyncPolicyManagedNamespaceMetadata
 {
     /// <summary></summary>
@@ -11424,6 +11972,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSyncP
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSyncPolicyRetryBackoff
 {
     /// <summary></summary>
@@ -11439,6 +11988,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSyncP
     public string? MaxDuration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSyncPolicyRetry
 {
     /// <summary></summary>
@@ -11450,6 +12000,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSyncP
     public long? Limit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSyncPolicy
 {
     /// <summary></summary>
@@ -11469,6 +12020,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSyncP
     public IList<string>? SyncOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpec
 {
     /// <summary></summary>
@@ -11504,6 +12056,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpec
     public V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSyncPolicy? SyncPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplate
 {
     /// <summary></summary>
@@ -11515,6 +12068,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplate
     public V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpec Spec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrix
 {
     /// <summary></summary>
@@ -11526,6 +12080,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrix
     public V1alpha1ApplicationSetSpecGeneratorsMatrixTemplate? Template { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceLabelSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -11541,6 +12096,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceLabelSelector
 {
     /// <summary></summary>
@@ -11552,6 +12108,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateMetadata
 {
     /// <summary></summary>
@@ -11575,6 +12132,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecDestination
 {
     /// <summary></summary>
@@ -11590,6 +12148,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public string? Server { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecIgnoreDifferences
 {
     /// <summary></summary>
@@ -11621,6 +12180,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecInfo
 {
     /// <summary></summary>
@@ -11632,6 +12192,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourceDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -11647,6 +12208,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourceDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -11662,6 +12224,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourceDirectoryJsonnet
 {
     /// <summary></summary>
@@ -11677,6 +12240,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourceDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourceDirectory
 {
     /// <summary></summary>
@@ -11696,6 +12260,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourceHelmFileParameters
 {
     /// <summary></summary>
@@ -11707,6 +12272,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourceHelmParameters
 {
     /// <summary></summary>
@@ -11722,6 +12288,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourceHelm
 {
     /// <summary></summary>
@@ -11765,6 +12332,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourceKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -11796,6 +12364,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourceKustomizePatches
 {
     /// <summary></summary>
@@ -11815,6 +12384,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourceKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourceKustomizeReplicas
 {
     /// <summary></summary>
@@ -11826,6 +12396,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourceKustomize
 {
     /// <summary></summary>
@@ -11885,6 +12456,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourcePluginEnv
 {
     /// <summary></summary>
@@ -11896,6 +12468,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourcePluginParameters
 {
     /// <summary></summary>
@@ -11915,6 +12488,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourcePlugin
 {
     /// <summary></summary>
@@ -11930,6 +12504,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourcePluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSource
 {
     /// <summary></summary>
@@ -11969,6 +12544,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourcesDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -11984,6 +12560,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourcesDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -11999,6 +12576,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourcesDirectoryJsonnet
 {
     /// <summary></summary>
@@ -12014,6 +12592,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourcesDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourcesDirectory
 {
     /// <summary></summary>
@@ -12033,6 +12612,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourcesHelmFileParameters
 {
     /// <summary></summary>
@@ -12044,6 +12624,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourcesHelmParameters
 {
     /// <summary></summary>
@@ -12059,6 +12640,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourcesHelm
 {
     /// <summary></summary>
@@ -12102,6 +12684,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourcesKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -12133,6 +12716,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourcesKustomizePatches
 {
     /// <summary></summary>
@@ -12152,6 +12736,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourcesKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourcesKustomizeReplicas
 {
     /// <summary></summary>
@@ -12163,6 +12748,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
@@ -12222,6 +12808,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourcesPluginEnv
 {
     /// <summary></summary>
@@ -12233,6 +12820,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourcesPluginParameters
 {
     /// <summary></summary>
@@ -12252,6 +12840,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourcesPlugin
 {
     /// <summary></summary>
@@ -12267,6 +12856,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourcesPluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSources
 {
     /// <summary></summary>
@@ -12306,6 +12896,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSyncPolicyAutomated
 {
     /// <summary></summary>
@@ -12321,6 +12912,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public bool? SelfHeal { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSyncPolicyManagedNamespaceMetadata
 {
     /// <summary></summary>
@@ -12332,6 +12924,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSyncPolicyRetryBackoff
 {
     /// <summary></summary>
@@ -12347,6 +12940,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public string? MaxDuration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSyncPolicyRetry
 {
     /// <summary></summary>
@@ -12358,6 +12952,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public long? Limit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSyncPolicy
 {
     /// <summary></summary>
@@ -12377,6 +12972,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public IList<string>? SyncOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpec
 {
     /// <summary></summary>
@@ -12412,6 +13008,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSyncPolicy? SyncPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplate
 {
     /// <summary></summary>
@@ -12423,6 +13020,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpec Spec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResource
 {
     /// <summary></summary>
@@ -12450,6 +13048,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public IDictionary<string, string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -12465,6 +13064,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersSelector
 {
     /// <summary></summary>
@@ -12476,6 +13076,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateMetadata
 {
     /// <summary></summary>
@@ -12499,6 +13100,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecDestination
 {
     /// <summary></summary>
@@ -12514,6 +13116,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public string? Server { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecIgnoreDifferences
 {
     /// <summary></summary>
@@ -12545,6 +13148,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecInfo
 {
     /// <summary></summary>
@@ -12556,6 +13160,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourceDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -12571,6 +13176,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourceDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -12586,6 +13192,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourceDirectoryJsonnet
 {
     /// <summary></summary>
@@ -12601,6 +13208,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourceDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourceDirectory
 {
     /// <summary></summary>
@@ -12620,6 +13228,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourceHelmFileParameters
 {
     /// <summary></summary>
@@ -12631,6 +13240,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourceHelmParameters
 {
     /// <summary></summary>
@@ -12646,6 +13256,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourceHelm
 {
     /// <summary></summary>
@@ -12689,6 +13300,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourceKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -12720,6 +13332,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourceKustomizePatches
 {
     /// <summary></summary>
@@ -12739,6 +13352,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourceKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourceKustomizeReplicas
 {
     /// <summary></summary>
@@ -12750,6 +13364,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourceKustomize
 {
     /// <summary></summary>
@@ -12809,6 +13424,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourcePluginEnv
 {
     /// <summary></summary>
@@ -12820,6 +13436,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourcePluginParameters
 {
     /// <summary></summary>
@@ -12839,6 +13456,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourcePlugin
 {
     /// <summary></summary>
@@ -12854,6 +13472,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourcePluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSource
 {
     /// <summary></summary>
@@ -12893,6 +13512,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourcesDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -12908,6 +13528,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourcesDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -12923,6 +13544,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourcesDirectoryJsonnet
 {
     /// <summary></summary>
@@ -12938,6 +13560,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourcesDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourcesDirectory
 {
     /// <summary></summary>
@@ -12957,6 +13580,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourcesHelmFileParameters
 {
     /// <summary></summary>
@@ -12968,6 +13592,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourcesHelmParameters
 {
     /// <summary></summary>
@@ -12983,6 +13608,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourcesHelm
 {
     /// <summary></summary>
@@ -13026,6 +13652,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourcesKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -13057,6 +13684,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourcesKustomizePatches
 {
     /// <summary></summary>
@@ -13076,6 +13704,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourcesKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourcesKustomizeReplicas
 {
     /// <summary></summary>
@@ -13087,6 +13716,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
@@ -13146,6 +13776,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourcesPluginEnv
 {
     /// <summary></summary>
@@ -13157,6 +13788,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourcesPluginParameters
 {
     /// <summary></summary>
@@ -13176,6 +13808,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourcesPlugin
 {
     /// <summary></summary>
@@ -13191,6 +13824,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourcesPluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSources
 {
     /// <summary></summary>
@@ -13230,6 +13864,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSyncPolicyAutomated
 {
     /// <summary></summary>
@@ -13245,6 +13880,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public bool? SelfHeal { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSyncPolicyManagedNamespaceMetadata
 {
     /// <summary></summary>
@@ -13256,6 +13892,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSyncPolicyRetryBackoff
 {
     /// <summary></summary>
@@ -13271,6 +13908,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public string? MaxDuration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSyncPolicyRetry
 {
     /// <summary></summary>
@@ -13282,6 +13920,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public long? Limit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSyncPolicy
 {
     /// <summary></summary>
@@ -13301,6 +13940,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public IList<string>? SyncOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpec
 {
     /// <summary></summary>
@@ -13336,6 +13976,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSyncPolicy? SyncPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplate
 {
     /// <summary></summary>
@@ -13347,6 +13988,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpec Spec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
 {
     /// <summary></summary>
@@ -13362,6 +14004,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public IDictionary<string, string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitDirectories
 {
     /// <summary></summary>
@@ -13373,6 +14016,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitDirec
     public string Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitFiles
 {
     /// <summary></summary>
@@ -13380,6 +14024,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitFiles
     public string Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateMetadata
 {
     /// <summary></summary>
@@ -13403,6 +14048,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecDestination
 {
     /// <summary></summary>
@@ -13418,6 +14064,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public string? Server { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecIgnoreDifferences
 {
     /// <summary></summary>
@@ -13449,6 +14096,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecInfo
 {
     /// <summary></summary>
@@ -13460,6 +14108,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourceDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -13475,6 +14124,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourceDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -13490,6 +14140,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourceDirectoryJsonnet
 {
     /// <summary></summary>
@@ -13505,6 +14156,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourceDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourceDirectory
 {
     /// <summary></summary>
@@ -13524,6 +14176,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourceHelmFileParameters
 {
     /// <summary></summary>
@@ -13535,6 +14188,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourceHelmParameters
 {
     /// <summary></summary>
@@ -13550,6 +14204,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourceHelm
 {
     /// <summary></summary>
@@ -13593,6 +14248,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourceKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -13624,6 +14280,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourceKustomizePatches
 {
     /// <summary></summary>
@@ -13643,6 +14300,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourceKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourceKustomizeReplicas
 {
     /// <summary></summary>
@@ -13654,6 +14312,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourceKustomize
 {
     /// <summary></summary>
@@ -13713,6 +14372,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourcePluginEnv
 {
     /// <summary></summary>
@@ -13724,6 +14384,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourcePluginParameters
 {
     /// <summary></summary>
@@ -13743,6 +14404,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourcePlugin
 {
     /// <summary></summary>
@@ -13758,6 +14420,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourcePluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSource
 {
     /// <summary></summary>
@@ -13797,6 +14460,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourcesDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -13812,6 +14476,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourcesDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -13827,6 +14492,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourcesDirectoryJsonnet
 {
     /// <summary></summary>
@@ -13842,6 +14508,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourcesDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourcesDirectory
 {
     /// <summary></summary>
@@ -13861,6 +14528,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourcesHelmFileParameters
 {
     /// <summary></summary>
@@ -13872,6 +14540,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourcesHelmParameters
 {
     /// <summary></summary>
@@ -13887,6 +14556,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourcesHelm
 {
     /// <summary></summary>
@@ -13930,6 +14600,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourcesKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -13961,6 +14632,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourcesKustomizePatches
 {
     /// <summary></summary>
@@ -13980,6 +14652,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourcesKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourcesKustomizeReplicas
 {
     /// <summary></summary>
@@ -13991,6 +14664,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
@@ -14050,6 +14724,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourcesPluginEnv
 {
     /// <summary></summary>
@@ -14061,6 +14736,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourcesPluginParameters
 {
     /// <summary></summary>
@@ -14080,6 +14756,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourcesPlugin
 {
     /// <summary></summary>
@@ -14095,6 +14772,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourcesPluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSources
 {
     /// <summary></summary>
@@ -14134,6 +14812,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSyncPolicyAutomated
 {
     /// <summary></summary>
@@ -14149,6 +14828,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public bool? SelfHeal { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSyncPolicyManagedNamespaceMetadata
 {
     /// <summary></summary>
@@ -14160,6 +14840,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSyncPolicyRetryBackoff
 {
     /// <summary></summary>
@@ -14175,6 +14856,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public string? MaxDuration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSyncPolicyRetry
 {
     /// <summary></summary>
@@ -14186,6 +14868,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public long? Limit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSyncPolicy
 {
     /// <summary></summary>
@@ -14205,6 +14888,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public IList<string>? SyncOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpec
 {
     /// <summary></summary>
@@ -14240,6 +14924,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSyncPolicy? SyncPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplate
 {
     /// <summary></summary>
@@ -14251,6 +14936,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpec Spec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGit
 {
     /// <summary></summary>
@@ -14286,6 +14972,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGit
     public IDictionary<string, string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateMetadata
 {
     /// <summary></summary>
@@ -14309,6 +14996,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecDestination
 {
     /// <summary></summary>
@@ -14324,6 +15012,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public string? Server { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecIgnoreDifferences
 {
     /// <summary></summary>
@@ -14355,6 +15044,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecInfo
 {
     /// <summary></summary>
@@ -14366,6 +15056,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourceDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -14381,6 +15072,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourceDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -14396,6 +15088,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourceDirectoryJsonnet
 {
     /// <summary></summary>
@@ -14411,6 +15104,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourceDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourceDirectory
 {
     /// <summary></summary>
@@ -14430,6 +15124,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourceHelmFileParameters
 {
     /// <summary></summary>
@@ -14441,6 +15136,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourceHelmParameters
 {
     /// <summary></summary>
@@ -14456,6 +15152,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourceHelm
 {
     /// <summary></summary>
@@ -14499,6 +15196,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourceKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -14530,6 +15228,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourceKustomizePatches
 {
     /// <summary></summary>
@@ -14549,6 +15248,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourceKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourceKustomizeReplicas
 {
     /// <summary></summary>
@@ -14560,6 +15260,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourceKustomize
 {
     /// <summary></summary>
@@ -14619,6 +15320,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourcePluginEnv
 {
     /// <summary></summary>
@@ -14630,6 +15332,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourcePluginParameters
 {
     /// <summary></summary>
@@ -14649,6 +15352,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourcePlugin
 {
     /// <summary></summary>
@@ -14664,6 +15368,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourcePluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSource
 {
     /// <summary></summary>
@@ -14703,6 +15408,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourcesDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -14718,6 +15424,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourcesDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -14733,6 +15440,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourcesDirectoryJsonnet
 {
     /// <summary></summary>
@@ -14748,6 +15456,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourcesDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourcesDirectory
 {
     /// <summary></summary>
@@ -14767,6 +15476,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourcesHelmFileParameters
 {
     /// <summary></summary>
@@ -14778,6 +15488,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourcesHelmParameters
 {
     /// <summary></summary>
@@ -14793,6 +15504,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourcesHelm
 {
     /// <summary></summary>
@@ -14836,6 +15548,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourcesKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -14867,6 +15580,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourcesKustomizePatches
 {
     /// <summary></summary>
@@ -14886,6 +15600,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourcesKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourcesKustomizeReplicas
 {
     /// <summary></summary>
@@ -14897,6 +15612,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
@@ -14956,6 +15672,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourcesPluginEnv
 {
     /// <summary></summary>
@@ -14967,6 +15684,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourcesPluginParameters
 {
     /// <summary></summary>
@@ -14986,6 +15704,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourcesPlugin
 {
     /// <summary></summary>
@@ -15001,6 +15720,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourcesPluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSources
 {
     /// <summary></summary>
@@ -15040,6 +15760,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSyncPolicyAutomated
 {
     /// <summary></summary>
@@ -15055,6 +15776,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public bool? SelfHeal { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSyncPolicyManagedNamespaceMetadata
 {
     /// <summary></summary>
@@ -15066,6 +15788,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSyncPolicyRetryBackoff
 {
     /// <summary></summary>
@@ -15081,6 +15804,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public string? MaxDuration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSyncPolicyRetry
 {
     /// <summary></summary>
@@ -15092,6 +15816,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public long? Limit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSyncPolicy
 {
     /// <summary></summary>
@@ -15111,6 +15836,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public IList<string>? SyncOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpec
 {
     /// <summary></summary>
@@ -15146,6 +15872,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSyncPolicy? SyncPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplate
 {
     /// <summary></summary>
@@ -15157,6 +15884,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpec Spec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsList
 {
     /// <summary></summary>
@@ -15172,6 +15900,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsList
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplate? Template { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginConfigMapRef
 {
     /// <summary></summary>
@@ -15179,6 +15908,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginCo
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginInput
 {
     /// <summary></summary>
@@ -15186,6 +15916,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginIn
     public IDictionary<string, JsonNode>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateMetadata
 {
     /// <summary></summary>
@@ -15209,6 +15940,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecDestination
 {
     /// <summary></summary>
@@ -15224,6 +15956,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public string? Server { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecIgnoreDifferences
 {
     /// <summary></summary>
@@ -15255,6 +15988,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecInfo
 {
     /// <summary></summary>
@@ -15266,6 +16000,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourceDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -15281,6 +16016,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourceDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -15296,6 +16032,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourceDirectoryJsonnet
 {
     /// <summary></summary>
@@ -15311,6 +16048,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourceDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourceDirectory
 {
     /// <summary></summary>
@@ -15330,6 +16068,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourceHelmFileParameters
 {
     /// <summary></summary>
@@ -15341,6 +16080,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourceHelmParameters
 {
     /// <summary></summary>
@@ -15356,6 +16096,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourceHelm
 {
     /// <summary></summary>
@@ -15399,6 +16140,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourceKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -15430,6 +16172,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourceKustomizePatches
 {
     /// <summary></summary>
@@ -15449,6 +16192,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourceKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourceKustomizeReplicas
 {
     /// <summary></summary>
@@ -15460,6 +16204,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourceKustomize
 {
     /// <summary></summary>
@@ -15519,6 +16264,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourcePluginEnv
 {
     /// <summary></summary>
@@ -15530,6 +16276,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourcePluginParameters
 {
     /// <summary></summary>
@@ -15549,6 +16296,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourcePlugin
 {
     /// <summary></summary>
@@ -15564,6 +16312,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourcePluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSource
 {
     /// <summary></summary>
@@ -15603,6 +16352,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourcesDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -15618,6 +16368,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourcesDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -15633,6 +16384,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourcesDirectoryJsonnet
 {
     /// <summary></summary>
@@ -15648,6 +16400,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourcesDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourcesDirectory
 {
     /// <summary></summary>
@@ -15667,6 +16420,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourcesHelmFileParameters
 {
     /// <summary></summary>
@@ -15678,6 +16432,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourcesHelmParameters
 {
     /// <summary></summary>
@@ -15693,6 +16448,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourcesHelm
 {
     /// <summary></summary>
@@ -15736,6 +16492,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourcesKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -15767,6 +16524,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourcesKustomizePatches
 {
     /// <summary></summary>
@@ -15786,6 +16544,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourcesKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourcesKustomizeReplicas
 {
     /// <summary></summary>
@@ -15797,6 +16556,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
@@ -15856,6 +16616,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourcesPluginEnv
 {
     /// <summary></summary>
@@ -15867,6 +16628,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourcesPluginParameters
 {
     /// <summary></summary>
@@ -15886,6 +16648,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourcesPlugin
 {
     /// <summary></summary>
@@ -15901,6 +16664,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourcesPluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSources
 {
     /// <summary></summary>
@@ -15940,6 +16704,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSyncPolicyAutomated
 {
     /// <summary></summary>
@@ -15955,6 +16720,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public bool? SelfHeal { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSyncPolicyManagedNamespaceMetadata
 {
     /// <summary></summary>
@@ -15966,6 +16732,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSyncPolicyRetryBackoff
 {
     /// <summary></summary>
@@ -15981,6 +16748,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public string? MaxDuration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSyncPolicyRetry
 {
     /// <summary></summary>
@@ -15992,6 +16760,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public long? Limit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSyncPolicy
 {
     /// <summary></summary>
@@ -16011,6 +16780,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public IList<string>? SyncOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpec
 {
     /// <summary></summary>
@@ -16046,6 +16816,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSyncPolicy? SyncPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplate
 {
     /// <summary></summary>
@@ -16057,6 +16828,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpec Spec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPlugin
 {
     /// <summary></summary>
@@ -16080,6 +16852,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPlugin
     public IDictionary<string, string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestAzuredevopsTokenRef
 {
     /// <summary></summary>
@@ -16091,6 +16864,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestAzuredevops
 {
     /// <summary></summary>
@@ -16118,6 +16892,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestAzuredevopsTokenRef? TokenRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestBitbucketBasicAuthPasswordRef
 {
     /// <summary></summary>
@@ -16129,6 +16904,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestBitbucketBasicAuth
 {
     /// <summary></summary>
@@ -16140,6 +16916,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestBitbucketBearerTokenTokenRef
 {
     /// <summary></summary>
@@ -16151,6 +16928,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestBitbucketBearerToken
 {
     /// <summary></summary>
@@ -16158,6 +16936,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestBitbucketBearerTokenTokenRef TokenRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestBitbucket
 {
     /// <summary></summary>
@@ -16181,6 +16960,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string Repo { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestBitbucketServerBasicAuthPasswordRef
 {
     /// <summary></summary>
@@ -16192,6 +16972,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestBitbucketServerBasicAuth
 {
     /// <summary></summary>
@@ -16203,6 +16984,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestBitbucketServer
 {
     /// <summary></summary>
@@ -16222,6 +17004,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string Repo { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestFilters
 {
     /// <summary></summary>
@@ -16233,6 +17016,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string? TargetBranchMatch { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestGiteaTokenRef
 {
     /// <summary></summary>
@@ -16244,6 +17028,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestGitea
 {
     /// <summary></summary>
@@ -16267,6 +17052,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestGiteaTokenRef? TokenRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestGithubTokenRef
 {
     /// <summary></summary>
@@ -16278,6 +17064,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestGithub
 {
     /// <summary></summary>
@@ -16305,6 +17092,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestGithubTokenRef? TokenRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestGitlabTokenRef
 {
     /// <summary></summary>
@@ -16316,6 +17104,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestGitlab
 {
     /// <summary></summary>
@@ -16343,6 +17132,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestGitlabTokenRef? TokenRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateMetadata
 {
     /// <summary></summary>
@@ -16366,6 +17156,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecDestination
 {
     /// <summary></summary>
@@ -16381,6 +17172,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string? Server { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecIgnoreDifferences
 {
     /// <summary></summary>
@@ -16412,6 +17204,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecInfo
 {
     /// <summary></summary>
@@ -16423,6 +17216,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourceDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -16438,6 +17232,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourceDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -16453,6 +17248,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourceDirectoryJsonnet
 {
     /// <summary></summary>
@@ -16468,6 +17264,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourceDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourceDirectory
 {
     /// <summary></summary>
@@ -16487,6 +17284,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourceHelmFileParameters
 {
     /// <summary></summary>
@@ -16498,6 +17296,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourceHelmParameters
 {
     /// <summary></summary>
@@ -16513,6 +17312,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourceHelm
 {
     /// <summary></summary>
@@ -16556,6 +17356,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourceKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -16587,6 +17388,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourceKustomizePatches
 {
     /// <summary></summary>
@@ -16606,6 +17408,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourceKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourceKustomizeReplicas
 {
     /// <summary></summary>
@@ -16617,6 +17420,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourceKustomize
 {
     /// <summary></summary>
@@ -16676,6 +17480,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourcePluginEnv
 {
     /// <summary></summary>
@@ -16687,6 +17492,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourcePluginParameters
 {
     /// <summary></summary>
@@ -16706,6 +17512,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourcePlugin
 {
     /// <summary></summary>
@@ -16721,6 +17528,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourcePluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSource
 {
     /// <summary></summary>
@@ -16760,6 +17568,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourcesDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -16775,6 +17584,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourcesDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -16790,6 +17600,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourcesDirectoryJsonnet
 {
     /// <summary></summary>
@@ -16805,6 +17616,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourcesDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourcesDirectory
 {
     /// <summary></summary>
@@ -16824,6 +17636,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourcesHelmFileParameters
 {
     /// <summary></summary>
@@ -16835,6 +17648,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourcesHelmParameters
 {
     /// <summary></summary>
@@ -16850,6 +17664,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourcesHelm
 {
     /// <summary></summary>
@@ -16893,6 +17708,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourcesKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -16924,6 +17740,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourcesKustomizePatches
 {
     /// <summary></summary>
@@ -16943,6 +17760,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourcesKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourcesKustomizeReplicas
 {
     /// <summary></summary>
@@ -16954,6 +17772,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
@@ -17013,6 +17832,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourcesPluginEnv
 {
     /// <summary></summary>
@@ -17024,6 +17844,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourcesPluginParameters
 {
     /// <summary></summary>
@@ -17043,6 +17864,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourcesPlugin
 {
     /// <summary></summary>
@@ -17058,6 +17880,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourcesPluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSources
 {
     /// <summary></summary>
@@ -17097,6 +17920,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSyncPolicyAutomated
 {
     /// <summary></summary>
@@ -17112,6 +17936,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public bool? SelfHeal { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSyncPolicyManagedNamespaceMetadata
 {
     /// <summary></summary>
@@ -17123,6 +17948,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSyncPolicyRetryBackoff
 {
     /// <summary></summary>
@@ -17138,6 +17964,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public string? MaxDuration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSyncPolicyRetry
 {
     /// <summary></summary>
@@ -17149,6 +17976,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public long? Limit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSyncPolicy
 {
     /// <summary></summary>
@@ -17168,6 +17996,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public IList<string>? SyncOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpec
 {
     /// <summary></summary>
@@ -17203,6 +18032,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSyncPolicy? SyncPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplate
 {
     /// <summary></summary>
@@ -17214,6 +18044,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpec Spec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequest
 {
     /// <summary></summary>
@@ -17253,6 +18084,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplate? Template { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderAwsCodeCommitTagFilters
 {
     /// <summary></summary>
@@ -17264,6 +18096,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderAwsCodeCommit
 {
     /// <summary></summary>
@@ -17283,6 +18116,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderAwsCodeCommitTagFilters>? TagFilters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderAzureDevOpsAccessTokenRef
 {
     /// <summary></summary>
@@ -17294,6 +18128,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderAzureDevOps
 {
     /// <summary></summary>
@@ -17317,6 +18152,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string TeamProject { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderBitbucketAppPasswordRef
 {
     /// <summary></summary>
@@ -17328,6 +18164,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderBitbucket
 {
     /// <summary></summary>
@@ -17347,6 +18184,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string User { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderBitbucketServerBasicAuthPasswordRef
 {
     /// <summary></summary>
@@ -17358,6 +18196,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderBitbucketServerBasicAuth
 {
     /// <summary></summary>
@@ -17369,6 +18208,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderBitbucketServer
 {
     /// <summary></summary>
@@ -17388,6 +18228,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string Project { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderFilters
 {
     /// <summary></summary>
@@ -17411,6 +18252,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string? RepositoryMatch { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderGiteaTokenRef
 {
     /// <summary></summary>
@@ -17422,6 +18264,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderGitea
 {
     /// <summary></summary>
@@ -17445,6 +18288,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderGiteaTokenRef? TokenRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderGithubTokenRef
 {
     /// <summary></summary>
@@ -17456,6 +18300,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderGithub
 {
     /// <summary></summary>
@@ -17479,6 +18324,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderGithubTokenRef? TokenRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderGitlabTokenRef
 {
     /// <summary></summary>
@@ -17490,6 +18336,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderGitlab
 {
     /// <summary></summary>
@@ -17525,6 +18372,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string? Topic { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateMetadata
 {
     /// <summary></summary>
@@ -17548,6 +18396,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecDestination
 {
     /// <summary></summary>
@@ -17563,6 +18412,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string? Server { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecIgnoreDifferences
 {
     /// <summary></summary>
@@ -17594,6 +18444,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecInfo
 {
     /// <summary></summary>
@@ -17605,6 +18456,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourceDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -17620,6 +18472,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourceDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -17635,6 +18488,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourceDirectoryJsonnet
 {
     /// <summary></summary>
@@ -17650,6 +18504,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourceDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourceDirectory
 {
     /// <summary></summary>
@@ -17669,6 +18524,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourceHelmFileParameters
 {
     /// <summary></summary>
@@ -17680,6 +18536,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourceHelmParameters
 {
     /// <summary></summary>
@@ -17695,6 +18552,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourceHelm
 {
     /// <summary></summary>
@@ -17738,6 +18596,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourceKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -17769,6 +18628,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourceKustomizePatches
 {
     /// <summary></summary>
@@ -17788,6 +18648,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourceKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourceKustomizeReplicas
 {
     /// <summary></summary>
@@ -17799,6 +18660,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourceKustomize
 {
     /// <summary></summary>
@@ -17858,6 +18720,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourcePluginEnv
 {
     /// <summary></summary>
@@ -17869,6 +18732,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourcePluginParameters
 {
     /// <summary></summary>
@@ -17888,6 +18752,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourcePlugin
 {
     /// <summary></summary>
@@ -17903,6 +18768,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourcePluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSource
 {
     /// <summary></summary>
@@ -17942,6 +18808,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourcesDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -17957,6 +18824,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourcesDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -17972,6 +18840,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourcesDirectoryJsonnet
 {
     /// <summary></summary>
@@ -17987,6 +18856,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourcesDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourcesDirectory
 {
     /// <summary></summary>
@@ -18006,6 +18876,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourcesHelmFileParameters
 {
     /// <summary></summary>
@@ -18017,6 +18888,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourcesHelmParameters
 {
     /// <summary></summary>
@@ -18032,6 +18904,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourcesHelm
 {
     /// <summary></summary>
@@ -18075,6 +18948,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourcesKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -18106,6 +18980,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourcesKustomizePatches
 {
     /// <summary></summary>
@@ -18125,6 +19000,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourcesKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourcesKustomizeReplicas
 {
     /// <summary></summary>
@@ -18136,6 +19012,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
@@ -18195,6 +19072,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourcesPluginEnv
 {
     /// <summary></summary>
@@ -18206,6 +19084,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourcesPluginParameters
 {
     /// <summary></summary>
@@ -18225,6 +19104,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourcesPlugin
 {
     /// <summary></summary>
@@ -18240,6 +19120,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourcesPluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSources
 {
     /// <summary></summary>
@@ -18279,6 +19160,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSyncPolicyAutomated
 {
     /// <summary></summary>
@@ -18294,6 +19176,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public bool? SelfHeal { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSyncPolicyManagedNamespaceMetadata
 {
     /// <summary></summary>
@@ -18305,6 +19188,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSyncPolicyRetryBackoff
 {
     /// <summary></summary>
@@ -18320,6 +19204,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public string? MaxDuration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSyncPolicyRetry
 {
     /// <summary></summary>
@@ -18331,6 +19216,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public long? Limit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSyncPolicy
 {
     /// <summary></summary>
@@ -18350,6 +19236,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public IList<string>? SyncOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpec
 {
     /// <summary></summary>
@@ -18385,6 +19272,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSyncPolicy? SyncPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplate
 {
     /// <summary></summary>
@@ -18396,6 +19284,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpec Spec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvider
 {
     /// <summary></summary>
@@ -18447,6 +19336,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public IDictionary<string, string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -18462,6 +19352,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsSelector
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsSelector
 {
     /// <summary></summary>
@@ -18473,6 +19364,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsSelector
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGenerators
 {
     /// <summary></summary>
@@ -18516,6 +19408,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGenerators
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsSelector? Selector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateMetadata
 {
     /// <summary></summary>
@@ -18539,6 +19432,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateMetadata
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecDestination
 {
     /// <summary></summary>
@@ -18554,6 +19448,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecDestin
     public string? Server { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecIgnoreDifferences
 {
     /// <summary></summary>
@@ -18585,6 +19480,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecIgnore
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecInfo
 {
     /// <summary></summary>
@@ -18596,6 +19492,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecInfo
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourceDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -18611,6 +19508,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourceDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -18626,6 +19524,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourceDirectoryJsonnet
 {
     /// <summary></summary>
@@ -18641,6 +19540,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourceDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourceDirectory
 {
     /// <summary></summary>
@@ -18660,6 +19560,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourceHelmFileParameters
 {
     /// <summary></summary>
@@ -18671,6 +19572,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourceHelmParameters
 {
     /// <summary></summary>
@@ -18686,6 +19588,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourceHelm
 {
     /// <summary></summary>
@@ -18729,6 +19632,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourceKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -18760,6 +19664,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourceKustomizePatches
 {
     /// <summary></summary>
@@ -18779,6 +19684,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     public V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourceKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourceKustomizeReplicas
 {
     /// <summary></summary>
@@ -18790,6 +19696,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourceKustomize
 {
     /// <summary></summary>
@@ -18849,6 +19756,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourcePluginEnv
 {
     /// <summary></summary>
@@ -18860,6 +19768,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourcePluginParameters
 {
     /// <summary></summary>
@@ -18879,6 +19788,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourcePlugin
 {
     /// <summary></summary>
@@ -18894,6 +19804,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourcePluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
 {
     /// <summary></summary>
@@ -18933,6 +19844,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourcesDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -18948,6 +19860,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourcesDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -18963,6 +19876,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourcesDirectoryJsonnet
 {
     /// <summary></summary>
@@ -18978,6 +19892,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourcesDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourcesDirectory
 {
     /// <summary></summary>
@@ -18997,6 +19912,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourcesHelmFileParameters
 {
     /// <summary></summary>
@@ -19008,6 +19924,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourcesHelmParameters
 {
     /// <summary></summary>
@@ -19023,6 +19940,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourcesHelm
 {
     /// <summary></summary>
@@ -19066,6 +19984,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourcesKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -19097,6 +20016,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourcesKustomizePatches
 {
     /// <summary></summary>
@@ -19116,6 +20036,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     public V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourcesKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourcesKustomizeReplicas
 {
     /// <summary></summary>
@@ -19127,6 +20048,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
@@ -19186,6 +20108,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourcesPluginEnv
 {
     /// <summary></summary>
@@ -19197,6 +20120,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourcesPluginParameters
 {
     /// <summary></summary>
@@ -19216,6 +20140,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourcesPlugin
 {
     /// <summary></summary>
@@ -19231,6 +20156,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourcesPluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSources
 {
     /// <summary></summary>
@@ -19270,6 +20196,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSyncPolicyAutomated
 {
     /// <summary></summary>
@@ -19285,6 +20212,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSyncPo
     public bool? SelfHeal { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSyncPolicyManagedNamespaceMetadata
 {
     /// <summary></summary>
@@ -19296,6 +20224,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSyncPo
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSyncPolicyRetryBackoff
 {
     /// <summary></summary>
@@ -19311,6 +20240,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSyncPo
     public string? MaxDuration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSyncPolicyRetry
 {
     /// <summary></summary>
@@ -19322,6 +20252,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSyncPo
     public long? Limit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSyncPolicy
 {
     /// <summary></summary>
@@ -19341,6 +20272,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSyncPo
     public IList<string>? SyncOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpec
 {
     /// <summary></summary>
@@ -19376,6 +20308,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpec
     public V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSyncPolicy? SyncPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplate
 {
     /// <summary></summary>
@@ -19387,6 +20320,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplate
     public V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpec Spec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsMerge
 {
     /// <summary></summary>
@@ -19402,6 +20336,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMerge
     public V1alpha1ApplicationSetSpecGeneratorsMergeTemplate? Template { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginConfigMapRef
 {
     /// <summary></summary>
@@ -19409,6 +20344,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginConfigMapRef
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginInput
 {
     /// <summary></summary>
@@ -19416,6 +20352,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginInput
     public IDictionary<string, JsonNode>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateMetadata
 {
     /// <summary></summary>
@@ -19439,6 +20376,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateMetadata
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecDestination
 {
     /// <summary></summary>
@@ -19454,6 +20392,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecDesti
     public string? Server { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecIgnoreDifferences
 {
     /// <summary></summary>
@@ -19485,6 +20424,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecIgnor
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecInfo
 {
     /// <summary></summary>
@@ -19496,6 +20436,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecInfo
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourceDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -19511,6 +20452,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourceDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -19526,6 +20468,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourceDirectoryJsonnet
 {
     /// <summary></summary>
@@ -19541,6 +20484,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     public IList<V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourceDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourceDirectory
 {
     /// <summary></summary>
@@ -19560,6 +20504,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourceHelmFileParameters
 {
     /// <summary></summary>
@@ -19571,6 +20516,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourceHelmParameters
 {
     /// <summary></summary>
@@ -19586,6 +20532,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourceHelm
 {
     /// <summary></summary>
@@ -19629,6 +20576,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourceKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -19660,6 +20608,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourceKustomizePatches
 {
     /// <summary></summary>
@@ -19679,6 +20628,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     public V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourceKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourceKustomizeReplicas
 {
     /// <summary></summary>
@@ -19690,6 +20640,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourceKustomize
 {
     /// <summary></summary>
@@ -19749,6 +20700,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourcePluginEnv
 {
     /// <summary></summary>
@@ -19760,6 +20712,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourcePluginParameters
 {
     /// <summary></summary>
@@ -19779,6 +20732,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourcePlugin
 {
     /// <summary></summary>
@@ -19794,6 +20748,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     public IList<V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourcePluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSource
 {
     /// <summary></summary>
@@ -19833,6 +20788,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourcesDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -19848,6 +20804,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourcesDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -19863,6 +20820,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourcesDirectoryJsonnet
 {
     /// <summary></summary>
@@ -19878,6 +20836,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     public IList<V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourcesDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourcesDirectory
 {
     /// <summary></summary>
@@ -19897,6 +20856,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourcesHelmFileParameters
 {
     /// <summary></summary>
@@ -19908,6 +20868,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourcesHelmParameters
 {
     /// <summary></summary>
@@ -19923,6 +20884,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourcesHelm
 {
     /// <summary></summary>
@@ -19966,6 +20928,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourcesKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -19997,6 +20960,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourcesKustomizePatches
 {
     /// <summary></summary>
@@ -20016,6 +20980,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     public V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourcesKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourcesKustomizeReplicas
 {
     /// <summary></summary>
@@ -20027,6 +20992,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
@@ -20086,6 +21052,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourcesPluginEnv
 {
     /// <summary></summary>
@@ -20097,6 +21064,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourcesPluginParameters
 {
     /// <summary></summary>
@@ -20116,6 +21084,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourcesPlugin
 {
     /// <summary></summary>
@@ -20131,6 +21100,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     public IList<V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourcesPluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSources
 {
     /// <summary></summary>
@@ -20170,6 +21140,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSyncPolicyAutomated
 {
     /// <summary></summary>
@@ -20185,6 +21156,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSyncP
     public bool? SelfHeal { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSyncPolicyManagedNamespaceMetadata
 {
     /// <summary></summary>
@@ -20196,6 +21168,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSyncP
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSyncPolicyRetryBackoff
 {
     /// <summary></summary>
@@ -20211,6 +21184,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSyncP
     public string? MaxDuration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSyncPolicyRetry
 {
     /// <summary></summary>
@@ -20222,6 +21196,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSyncP
     public long? Limit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSyncPolicy
 {
     /// <summary></summary>
@@ -20241,6 +21216,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSyncP
     public IList<string>? SyncOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpec
 {
     /// <summary></summary>
@@ -20276,6 +21252,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpec
     public V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSyncPolicy? SyncPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplate
 {
     /// <summary></summary>
@@ -20287,6 +21264,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplate
     public V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpec Spec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPlugin
 {
     /// <summary></summary>
@@ -20310,6 +21288,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPlugin
     public IDictionary<string, string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestAzuredevopsTokenRef
 {
     /// <summary></summary>
@@ -20321,6 +21300,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestAzuredevopsT
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestAzuredevops
 {
     /// <summary></summary>
@@ -20348,6 +21328,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestAzuredevops
     public V1alpha1ApplicationSetSpecGeneratorsPullRequestAzuredevopsTokenRef? TokenRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestBitbucketBasicAuthPasswordRef
 {
     /// <summary></summary>
@@ -20359,6 +21340,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestBitbucketBas
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestBitbucketBasicAuth
 {
     /// <summary></summary>
@@ -20370,6 +21352,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestBitbucketBas
     public string Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestBitbucketBearerTokenTokenRef
 {
     /// <summary></summary>
@@ -20381,6 +21364,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestBitbucketBea
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestBitbucketBearerToken
 {
     /// <summary></summary>
@@ -20388,6 +21372,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestBitbucketBea
     public V1alpha1ApplicationSetSpecGeneratorsPullRequestBitbucketBearerTokenTokenRef TokenRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestBitbucket
 {
     /// <summary></summary>
@@ -20411,6 +21396,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestBitbucket
     public string Repo { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestBitbucketServerBasicAuthPasswordRef
 {
     /// <summary></summary>
@@ -20422,6 +21408,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestBitbucketSer
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestBitbucketServerBasicAuth
 {
     /// <summary></summary>
@@ -20433,6 +21420,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestBitbucketSer
     public string Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestBitbucketServer
 {
     /// <summary></summary>
@@ -20452,6 +21440,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestBitbucketSer
     public string Repo { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestFilters
 {
     /// <summary></summary>
@@ -20463,6 +21452,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestFilters
     public string? TargetBranchMatch { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestGiteaTokenRef
 {
     /// <summary></summary>
@@ -20474,6 +21464,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestGiteaTokenRe
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestGitea
 {
     /// <summary></summary>
@@ -20497,6 +21488,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestGitea
     public V1alpha1ApplicationSetSpecGeneratorsPullRequestGiteaTokenRef? TokenRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestGithubTokenRef
 {
     /// <summary></summary>
@@ -20508,6 +21500,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestGithubTokenR
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestGithub
 {
     /// <summary></summary>
@@ -20535,6 +21528,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestGithub
     public V1alpha1ApplicationSetSpecGeneratorsPullRequestGithubTokenRef? TokenRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestGitlabTokenRef
 {
     /// <summary></summary>
@@ -20546,6 +21540,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestGitlabTokenR
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestGitlab
 {
     /// <summary></summary>
@@ -20573,6 +21568,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestGitlab
     public V1alpha1ApplicationSetSpecGeneratorsPullRequestGitlabTokenRef? TokenRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateMetadata
 {
     /// <summary></summary>
@@ -20596,6 +21592,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateMeta
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecDestination
 {
     /// <summary></summary>
@@ -20611,6 +21608,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public string? Server { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecIgnoreDifferences
 {
     /// <summary></summary>
@@ -20642,6 +21640,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecInfo
 {
     /// <summary></summary>
@@ -20653,6 +21652,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourceDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -20668,6 +21668,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourceDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -20683,6 +21684,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourceDirectoryJsonnet
 {
     /// <summary></summary>
@@ -20698,6 +21700,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public IList<V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourceDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourceDirectory
 {
     /// <summary></summary>
@@ -20717,6 +21720,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourceHelmFileParameters
 {
     /// <summary></summary>
@@ -20728,6 +21732,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourceHelmParameters
 {
     /// <summary></summary>
@@ -20743,6 +21748,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourceHelm
 {
     /// <summary></summary>
@@ -20786,6 +21792,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourceKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -20817,6 +21824,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourceKustomizePatches
 {
     /// <summary></summary>
@@ -20836,6 +21844,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourceKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourceKustomizeReplicas
 {
     /// <summary></summary>
@@ -20847,6 +21856,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourceKustomize
 {
     /// <summary></summary>
@@ -20906,6 +21916,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourcePluginEnv
 {
     /// <summary></summary>
@@ -20917,6 +21928,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourcePluginParameters
 {
     /// <summary></summary>
@@ -20936,6 +21948,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourcePlugin
 {
     /// <summary></summary>
@@ -20951,6 +21964,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public IList<V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourcePluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSource
 {
     /// <summary></summary>
@@ -20990,6 +22004,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourcesDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -21005,6 +22020,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourcesDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -21020,6 +22036,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourcesDirectoryJsonnet
 {
     /// <summary></summary>
@@ -21035,6 +22052,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public IList<V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourcesDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourcesDirectory
 {
     /// <summary></summary>
@@ -21054,6 +22072,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourcesHelmFileParameters
 {
     /// <summary></summary>
@@ -21065,6 +22084,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourcesHelmParameters
 {
     /// <summary></summary>
@@ -21080,6 +22100,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourcesHelm
 {
     /// <summary></summary>
@@ -21123,6 +22144,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourcesKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -21154,6 +22176,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourcesKustomizePatches
 {
     /// <summary></summary>
@@ -21173,6 +22196,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourcesKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourcesKustomizeReplicas
 {
     /// <summary></summary>
@@ -21184,6 +22208,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
@@ -21243,6 +22268,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourcesPluginEnv
 {
     /// <summary></summary>
@@ -21254,6 +22280,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourcesPluginParameters
 {
     /// <summary></summary>
@@ -21273,6 +22300,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourcesPlugin
 {
     /// <summary></summary>
@@ -21288,6 +22316,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public IList<V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourcesPluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSources
 {
     /// <summary></summary>
@@ -21327,6 +22356,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSyncPolicyAutomated
 {
     /// <summary></summary>
@@ -21342,6 +22372,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public bool? SelfHeal { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSyncPolicyManagedNamespaceMetadata
 {
     /// <summary></summary>
@@ -21353,6 +22384,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSyncPolicyRetryBackoff
 {
     /// <summary></summary>
@@ -21368,6 +22400,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public string? MaxDuration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSyncPolicyRetry
 {
     /// <summary></summary>
@@ -21379,6 +22412,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public long? Limit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSyncPolicy
 {
     /// <summary></summary>
@@ -21398,6 +22432,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public IList<string>? SyncOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
 {
     /// <summary></summary>
@@ -21433,6 +22468,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSyncPolicy? SyncPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplate
 {
     /// <summary></summary>
@@ -21444,6 +22480,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplate
     public V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec Spec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequest
 {
     /// <summary></summary>
@@ -21483,6 +22520,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequest
     public V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplate? Template { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderAwsCodeCommitTagFilters
 {
     /// <summary></summary>
@@ -21494,6 +22532,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderAwsCodeCommi
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderAwsCodeCommit
 {
     /// <summary></summary>
@@ -21513,6 +22552,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderAwsCodeCommi
     public IList<V1alpha1ApplicationSetSpecGeneratorsScmProviderAwsCodeCommitTagFilters>? TagFilters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderAzureDevOpsAccessTokenRef
 {
     /// <summary></summary>
@@ -21524,6 +22564,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderAzureDevOpsA
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderAzureDevOps
 {
     /// <summary></summary>
@@ -21547,6 +22588,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderAzureDevOps
     public string TeamProject { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderBitbucketAppPasswordRef
 {
     /// <summary></summary>
@@ -21558,6 +22600,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderBitbucketApp
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderBitbucket
 {
     /// <summary></summary>
@@ -21577,6 +22620,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderBitbucket
     public string User { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderBitbucketServerBasicAuthPasswordRef
 {
     /// <summary></summary>
@@ -21588,6 +22632,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderBitbucketSer
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderBitbucketServerBasicAuth
 {
     /// <summary></summary>
@@ -21599,6 +22644,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderBitbucketSer
     public string Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderBitbucketServer
 {
     /// <summary></summary>
@@ -21618,6 +22664,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderBitbucketSer
     public string Project { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderFilters
 {
     /// <summary></summary>
@@ -21641,6 +22688,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderFilters
     public string? RepositoryMatch { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderGiteaTokenRef
 {
     /// <summary></summary>
@@ -21652,6 +22700,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderGiteaTokenRe
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderGitea
 {
     /// <summary></summary>
@@ -21675,6 +22724,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderGitea
     public V1alpha1ApplicationSetSpecGeneratorsScmProviderGiteaTokenRef? TokenRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderGithubTokenRef
 {
     /// <summary></summary>
@@ -21686,6 +22736,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderGithubTokenR
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderGithub
 {
     /// <summary></summary>
@@ -21709,6 +22760,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderGithub
     public V1alpha1ApplicationSetSpecGeneratorsScmProviderGithubTokenRef? TokenRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderGitlabTokenRef
 {
     /// <summary></summary>
@@ -21720,6 +22772,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderGitlabTokenR
     public string SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderGitlab
 {
     /// <summary></summary>
@@ -21755,6 +22808,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderGitlab
     public string? Topic { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateMetadata
 {
     /// <summary></summary>
@@ -21778,6 +22832,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateMeta
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecDestination
 {
     /// <summary></summary>
@@ -21793,6 +22848,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public string? Server { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecIgnoreDifferences
 {
     /// <summary></summary>
@@ -21824,6 +22880,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecInfo
 {
     /// <summary></summary>
@@ -21835,6 +22892,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourceDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -21850,6 +22908,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourceDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -21865,6 +22924,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourceDirectoryJsonnet
 {
     /// <summary></summary>
@@ -21880,6 +22940,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public IList<V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourceDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourceDirectory
 {
     /// <summary></summary>
@@ -21899,6 +22960,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourceHelmFileParameters
 {
     /// <summary></summary>
@@ -21910,6 +22972,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourceHelmParameters
 {
     /// <summary></summary>
@@ -21925,6 +22988,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourceHelm
 {
     /// <summary></summary>
@@ -21968,6 +23032,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourceKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -21999,6 +23064,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourceKustomizePatches
 {
     /// <summary></summary>
@@ -22018,6 +23084,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourceKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourceKustomizeReplicas
 {
     /// <summary></summary>
@@ -22029,6 +23096,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourceKustomize
 {
     /// <summary></summary>
@@ -22088,6 +23156,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourcePluginEnv
 {
     /// <summary></summary>
@@ -22099,6 +23168,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourcePluginParameters
 {
     /// <summary></summary>
@@ -22118,6 +23188,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourcePlugin
 {
     /// <summary></summary>
@@ -22133,6 +23204,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public IList<V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourcePluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSource
 {
     /// <summary></summary>
@@ -22172,6 +23244,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourcesDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -22187,6 +23260,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourcesDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -22202,6 +23276,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourcesDirectoryJsonnet
 {
     /// <summary></summary>
@@ -22217,6 +23292,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public IList<V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourcesDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourcesDirectory
 {
     /// <summary></summary>
@@ -22236,6 +23312,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourcesHelmFileParameters
 {
     /// <summary></summary>
@@ -22247,6 +23324,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourcesHelmParameters
 {
     /// <summary></summary>
@@ -22262,6 +23340,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourcesHelm
 {
     /// <summary></summary>
@@ -22305,6 +23384,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourcesKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -22336,6 +23416,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourcesKustomizePatches
 {
     /// <summary></summary>
@@ -22355,6 +23436,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourcesKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourcesKustomizeReplicas
 {
     /// <summary></summary>
@@ -22366,6 +23448,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
@@ -22425,6 +23508,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourcesPluginEnv
 {
     /// <summary></summary>
@@ -22436,6 +23520,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourcesPluginParameters
 {
     /// <summary></summary>
@@ -22455,6 +23540,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourcesPlugin
 {
     /// <summary></summary>
@@ -22470,6 +23556,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public IList<V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourcesPluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSources
 {
     /// <summary></summary>
@@ -22509,6 +23596,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSyncPolicyAutomated
 {
     /// <summary></summary>
@@ -22524,6 +23612,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public bool? SelfHeal { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSyncPolicyManagedNamespaceMetadata
 {
     /// <summary></summary>
@@ -22535,6 +23624,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSyncPolicyRetryBackoff
 {
     /// <summary></summary>
@@ -22550,6 +23640,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public string? MaxDuration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSyncPolicyRetry
 {
     /// <summary></summary>
@@ -22561,6 +23652,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public long? Limit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSyncPolicy
 {
     /// <summary></summary>
@@ -22580,6 +23672,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public IList<string>? SyncOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
 {
     /// <summary></summary>
@@ -22615,6 +23708,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSyncPolicy? SyncPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplate
 {
     /// <summary></summary>
@@ -22626,6 +23720,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplate
     public V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec Spec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProvider
 {
     /// <summary></summary>
@@ -22677,6 +23772,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProvider
     public IDictionary<string, string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -22692,6 +23788,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsSelectorMatchExpression
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGeneratorsSelector
 {
     /// <summary></summary>
@@ -22703,6 +23800,7 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsSelector
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecGenerators
 {
     /// <summary></summary>
@@ -22746,6 +23844,7 @@ public partial class V1alpha1ApplicationSetSpecGenerators
     public V1alpha1ApplicationSetSpecGeneratorsSelector? Selector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecIgnoreApplicationDifferences
 {
     /// <summary></summary>
@@ -22761,6 +23860,7 @@ public partial class V1alpha1ApplicationSetSpecIgnoreApplicationDifferences
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecPreservedFields
 {
     /// <summary></summary>
@@ -22772,6 +23872,7 @@ public partial class V1alpha1ApplicationSetSpecPreservedFields
     public IList<string>? Labels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecStrategyRollingSyncStepsMatchExpressions
 {
     /// <summary></summary>
@@ -22787,6 +23888,7 @@ public partial class V1alpha1ApplicationSetSpecStrategyRollingSyncStepsMatchExpr
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecStrategyRollingSyncSteps
 {
     /// <summary></summary>
@@ -22798,6 +23900,7 @@ public partial class V1alpha1ApplicationSetSpecStrategyRollingSyncSteps
     public IntstrIntOrString? MaxUpdate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecStrategyRollingSync
 {
     /// <summary></summary>
@@ -22805,6 +23908,7 @@ public partial class V1alpha1ApplicationSetSpecStrategyRollingSync
     public IList<V1alpha1ApplicationSetSpecStrategyRollingSyncSteps>? Steps { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecStrategy
 {
     /// <summary></summary>
@@ -22832,6 +23936,7 @@ public enum V1alpha1ApplicationSetSpecSyncPolicyApplicationsSyncEnum
     Sync
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecSyncPolicy
 {
     /// <summary></summary>
@@ -22844,6 +23949,7 @@ public partial class V1alpha1ApplicationSetSpecSyncPolicy
     public bool? PreserveResourcesOnDeletion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateMetadata
 {
     /// <summary></summary>
@@ -22867,6 +23973,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateMetadata
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpecDestination
 {
     /// <summary></summary>
@@ -22882,6 +23989,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecDestination
     public string? Server { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpecIgnoreDifferences
 {
     /// <summary></summary>
@@ -22913,6 +24021,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecIgnoreDifferences
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpecInfo
 {
     /// <summary></summary>
@@ -22924,6 +24033,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecInfo
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSourceDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -22939,6 +24049,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourceDirectoryJsonne
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSourceDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -22954,6 +24065,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourceDirectoryJsonne
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSourceDirectoryJsonnet
 {
     /// <summary></summary>
@@ -22969,6 +24081,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourceDirectoryJsonne
     public IList<V1alpha1ApplicationSetSpecTemplateSpecSourceDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSourceDirectory
 {
     /// <summary></summary>
@@ -22988,6 +24101,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourceDirectory
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSourceHelmFileParameters
 {
     /// <summary></summary>
@@ -22999,6 +24113,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourceHelmFileParamet
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSourceHelmParameters
 {
     /// <summary></summary>
@@ -23014,6 +24129,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourceHelmParameters
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSourceHelm
 {
     /// <summary></summary>
@@ -23057,6 +24173,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourceHelm
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSourceKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -23088,6 +24205,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourceKustomizePatche
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSourceKustomizePatches
 {
     /// <summary></summary>
@@ -23107,6 +24225,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourceKustomizePatche
     public V1alpha1ApplicationSetSpecTemplateSpecSourceKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSourceKustomizeReplicas
 {
     /// <summary></summary>
@@ -23118,6 +24237,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourceKustomizeReplic
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSourceKustomize
 {
     /// <summary></summary>
@@ -23177,6 +24297,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourceKustomize
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcePluginEnv
 {
     /// <summary></summary>
@@ -23188,6 +24309,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcePluginEnv
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcePluginParameters
 {
     /// <summary></summary>
@@ -23207,6 +24329,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcePluginParameter
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcePlugin
 {
     /// <summary></summary>
@@ -23222,6 +24345,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcePlugin
     public IList<V1alpha1ApplicationSetSpecTemplateSpecSourcePluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSource
 {
     /// <summary></summary>
@@ -23261,6 +24385,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSource
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcesDirectoryJsonnetExtVars
 {
     /// <summary></summary>
@@ -23276,6 +24401,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcesDirectoryJsonn
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcesDirectoryJsonnetTlas
 {
     /// <summary></summary>
@@ -23291,6 +24417,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcesDirectoryJsonn
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcesDirectoryJsonnet
 {
     /// <summary></summary>
@@ -23306,6 +24433,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcesDirectoryJsonn
     public IList<V1alpha1ApplicationSetSpecTemplateSpecSourcesDirectoryJsonnetTlas>? Tlas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcesDirectory
 {
     /// <summary></summary>
@@ -23325,6 +24453,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcesDirectory
     public bool? Recurse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcesHelmFileParameters
 {
     /// <summary></summary>
@@ -23336,6 +24465,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcesHelmFileParame
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcesHelmParameters
 {
     /// <summary></summary>
@@ -23351,6 +24481,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcesHelmParameters
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcesHelm
 {
     /// <summary></summary>
@@ -23394,6 +24525,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcesHelm
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcesKustomizePatchesTarget
 {
     /// <summary></summary>
@@ -23425,6 +24557,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcesKustomizePatch
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcesKustomizePatches
 {
     /// <summary></summary>
@@ -23444,6 +24577,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcesKustomizePatch
     public V1alpha1ApplicationSetSpecTemplateSpecSourcesKustomizePatchesTarget? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcesKustomizeReplicas
 {
     /// <summary></summary>
@@ -23455,6 +24589,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcesKustomizeRepli
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
@@ -23514,6 +24649,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcesKustomize
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcesPluginEnv
 {
     /// <summary></summary>
@@ -23525,6 +24661,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcesPluginEnv
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcesPluginParameters
 {
     /// <summary></summary>
@@ -23544,6 +24681,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcesPluginParamete
     public string? String { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcesPlugin
 {
     /// <summary></summary>
@@ -23559,6 +24697,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcesPlugin
     public IList<V1alpha1ApplicationSetSpecTemplateSpecSourcesPluginParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSources
 {
     /// <summary></summary>
@@ -23598,6 +24737,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSources
     public string? TargetRevision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSyncPolicyAutomated
 {
     /// <summary></summary>
@@ -23613,6 +24753,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSyncPolicyAutomated
     public bool? SelfHeal { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSyncPolicyManagedNamespaceMetadata
 {
     /// <summary></summary>
@@ -23624,6 +24765,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSyncPolicyManagedName
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSyncPolicyRetryBackoff
 {
     /// <summary></summary>
@@ -23639,6 +24781,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSyncPolicyRetryBackof
     public string? MaxDuration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSyncPolicyRetry
 {
     /// <summary></summary>
@@ -23650,6 +24793,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSyncPolicyRetry
     public long? Limit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSyncPolicy
 {
     /// <summary></summary>
@@ -23669,6 +24813,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSyncPolicy
     public IList<string>? SyncOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplateSpec
 {
     /// <summary></summary>
@@ -23704,6 +24849,7 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpec
     public V1alpha1ApplicationSetSpecTemplateSpecSyncPolicy? SyncPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpecTemplate
 {
     /// <summary></summary>
@@ -23715,6 +24861,7 @@ public partial class V1alpha1ApplicationSetSpecTemplate
     public V1alpha1ApplicationSetSpecTemplateSpec Spec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetSpec
 {
     /// <summary></summary>
@@ -23758,6 +24905,7 @@ public partial class V1alpha1ApplicationSetSpec
     public string? TemplatePatch { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetStatusApplicationStatus
 {
     /// <summary></summary>
@@ -23785,6 +24933,7 @@ public partial class V1alpha1ApplicationSetStatusApplicationStatus
     public IList<string> TargetRevisions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetStatusConditions
 {
     /// <summary></summary>
@@ -23808,6 +24957,7 @@ public partial class V1alpha1ApplicationSetStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetStatusResourcesHealth
 {
     /// <summary></summary>
@@ -23819,6 +24969,7 @@ public partial class V1alpha1ApplicationSetStatusResourcesHealth
     public string? Status { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetStatusResources
 {
     /// <summary></summary>
@@ -23862,6 +25013,7 @@ public partial class V1alpha1ApplicationSetStatusResources
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApplicationSetStatus
 {
     /// <summary></summary>
@@ -23878,6 +25030,7 @@ public partial class V1alpha1ApplicationSetStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1ApplicationSet : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ApplicationSetSpec>, IStatus<V1alpha1ApplicationSetStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

@@ -38,6 +38,7 @@ public enum V1beta1AuthorizerSpecForProviderApiIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AuthorizerSpecForProviderApiIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1AuthorizerSpecForProviderApiIdRefPolicy
     public V1beta1AuthorizerSpecForProviderApiIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a API in apigatewayv2 to populate apiId.</summary>
 public partial class V1beta1AuthorizerSpecForProviderApiIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1AuthorizerSpecForProviderApiIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AuthorizerSpecForProviderApiIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1AuthorizerSpecForProviderApiIdSelectorPolicy
     public V1beta1AuthorizerSpecForProviderApiIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a API in apigatewayv2 to populate apiId.</summary>
 public partial class V1beta1AuthorizerSpecForProviderApiIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1AuthorizerSpecForProviderAuthorizerUriRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AuthorizerSpecForProviderAuthorizerUriRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1AuthorizerSpecForProviderAuthorizerUriRefPolicy
     public V1beta1AuthorizerSpecForProviderAuthorizerUriRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in lambda to populate authorizerUri.</summary>
 public partial class V1beta1AuthorizerSpecForProviderAuthorizerUriRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1AuthorizerSpecForProviderAuthorizerUriSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AuthorizerSpecForProviderAuthorizerUriSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1AuthorizerSpecForProviderAuthorizerUriSelectorPolicy
     public V1beta1AuthorizerSpecForProviderAuthorizerUriSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in lambda to populate authorizerUri.</summary>
 public partial class V1beta1AuthorizerSpecForProviderAuthorizerUriSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1AuthorizerSpecForProviderAuthorizerUriSelector
     public V1beta1AuthorizerSpecForProviderAuthorizerUriSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AuthorizerSpecForProviderJwtConfiguration
 {
     /// <summary>List of the intended recipients of the JWT. A valid JWT must provide an aud that matches at least one entry in this list.</summary>
@@ -213,6 +222,7 @@ public partial class V1beta1AuthorizerSpecForProviderJwtConfiguration
     public string? Issuer { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AuthorizerSpecForProvider
 {
     /// <summary>API identifier.</summary>
@@ -296,6 +306,7 @@ public enum V1beta1AuthorizerSpecInitProviderApiIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AuthorizerSpecInitProviderApiIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -309,6 +320,7 @@ public partial class V1beta1AuthorizerSpecInitProviderApiIdRefPolicy
     public V1beta1AuthorizerSpecInitProviderApiIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a API in apigatewayv2 to populate apiId.</summary>
 public partial class V1beta1AuthorizerSpecInitProviderApiIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -340,6 +352,7 @@ public enum V1beta1AuthorizerSpecInitProviderApiIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AuthorizerSpecInitProviderApiIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -353,6 +366,7 @@ public partial class V1beta1AuthorizerSpecInitProviderApiIdSelectorPolicy
     public V1beta1AuthorizerSpecInitProviderApiIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a API in apigatewayv2 to populate apiId.</summary>
 public partial class V1beta1AuthorizerSpecInitProviderApiIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -388,6 +402,7 @@ public enum V1beta1AuthorizerSpecInitProviderAuthorizerUriRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AuthorizerSpecInitProviderAuthorizerUriRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -401,6 +416,7 @@ public partial class V1beta1AuthorizerSpecInitProviderAuthorizerUriRefPolicy
     public V1beta1AuthorizerSpecInitProviderAuthorizerUriRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in lambda to populate authorizerUri.</summary>
 public partial class V1beta1AuthorizerSpecInitProviderAuthorizerUriRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -432,6 +448,7 @@ public enum V1beta1AuthorizerSpecInitProviderAuthorizerUriSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AuthorizerSpecInitProviderAuthorizerUriSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -445,6 +462,7 @@ public partial class V1beta1AuthorizerSpecInitProviderAuthorizerUriSelectorPolic
     public V1beta1AuthorizerSpecInitProviderAuthorizerUriSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in lambda to populate authorizerUri.</summary>
 public partial class V1beta1AuthorizerSpecInitProviderAuthorizerUriSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -460,6 +478,7 @@ public partial class V1beta1AuthorizerSpecInitProviderAuthorizerUriSelector
     public V1beta1AuthorizerSpecInitProviderAuthorizerUriSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AuthorizerSpecInitProviderJwtConfiguration
 {
     /// <summary>List of the intended recipients of the JWT. A valid JWT must provide an aud that matches at least one entry in this list.</summary>
@@ -471,6 +490,7 @@ public partial class V1beta1AuthorizerSpecInitProviderJwtConfiguration
     public string? Issuer { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1AuthorizerSpecInitProvider
 {
     /// <summary>API identifier.</summary>
@@ -572,6 +592,7 @@ public enum V1beta1AuthorizerSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AuthorizerSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -585,6 +606,7 @@ public partial class V1beta1AuthorizerSpecProviderConfigRefPolicy
     public V1beta1AuthorizerSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1AuthorizerSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -616,6 +638,7 @@ public enum V1beta1AuthorizerSpecPublishConnectionDetailsToConfigRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AuthorizerSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -629,6 +652,7 @@ public partial class V1beta1AuthorizerSpecPublishConnectionDetailsToConfigRefPol
     public V1beta1AuthorizerSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1AuthorizerSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -640,6 +664,7 @@ public partial class V1beta1AuthorizerSpecPublishConnectionDetailsToConfigRef
     public V1beta1AuthorizerSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1AuthorizerSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -655,6 +680,7 @@ public partial class V1beta1AuthorizerSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1AuthorizerSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -670,6 +696,7 @@ public partial class V1beta1AuthorizerSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1AuthorizerSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -681,6 +708,7 @@ public partial class V1beta1AuthorizerSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>AuthorizerSpec defines the desired state of Authorizer</summary>
 public partial class V1beta1AuthorizerSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -713,6 +741,7 @@ public partial class V1beta1AuthorizerSpec
     public V1beta1AuthorizerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AuthorizerStatusAtProviderJwtConfiguration
 {
     /// <summary>List of the intended recipients of the JWT. A valid JWT must provide an aud that matches at least one entry in this list.</summary>
@@ -724,6 +753,7 @@ public partial class V1beta1AuthorizerStatusAtProviderJwtConfiguration
     public string? Issuer { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AuthorizerStatusAtProvider
 {
     /// <summary>API identifier.</summary>
@@ -771,6 +801,7 @@ public partial class V1beta1AuthorizerStatusAtProvider
     public string? Name { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1AuthorizerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -798,6 +829,7 @@ public partial class V1beta1AuthorizerStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>AuthorizerStatus defines the observed state of Authorizer.</summary>
 public partial class V1beta1AuthorizerStatus
 {
     /// <summary></summary>
@@ -814,6 +846,7 @@ public partial class V1beta1AuthorizerStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Authorizer is the Schema for the Authorizers API. Manages an Amazon API Gateway Version 2 authorizer.</summary>
 public partial class V1beta1Authorizer : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AuthorizerSpec>, IStatus<V1beta1AuthorizerStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -18,6 +18,7 @@ public enum V1beta1AccessLevelSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelSpecForProviderBasicConditionsDevicePolicyOsConstraints
 {
     /// <summary>The minimum allowed OS version. If not set, any version of this OS satisfies the constraint. Format: "major.minor.patch" such as "10.5.301", "9.2.1".</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1AccessLevelSpecForProviderBasicConditionsDevicePolic
     public bool? RequireVerifiedChromeOs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelSpecForProviderBasicConditionsDevicePolicy
 {
     /// <summary>A list of allowed device management levels. An empty list allows all management levels. Each value may be one of: MANAGEMENT_UNSPECIFIED, NONE, BASIC, COMPLETE.</summary>
@@ -60,6 +62,7 @@ public partial class V1beta1AccessLevelSpecForProviderBasicConditionsDevicePolic
     public bool? RequireScreenLock { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelSpecForProviderBasicConditionsVpcNetworkSourcesVpcSubnetwork
 {
     /// <summary>Required. Network name to be allowed by this Access Level. Networks of foreign organizations requires compute.network.get permission to be granted to caller.</summary>
@@ -71,6 +74,7 @@ public partial class V1beta1AccessLevelSpecForProviderBasicConditionsVpcNetworkS
     public IList<string>? VpcIpSubnetworks { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelSpecForProviderBasicConditionsVpcNetworkSources
 {
     /// <summary>Sub networks within a VPC network. Structure is documented below.</summary>
@@ -78,6 +82,7 @@ public partial class V1beta1AccessLevelSpecForProviderBasicConditionsVpcNetworkS
     public IList<V1beta1AccessLevelSpecForProviderBasicConditionsVpcNetworkSourcesVpcSubnetwork>? VpcSubnetwork { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelSpecForProviderBasicConditions
 {
     /// <summary>Device specific restrictions, all restrictions must hold for the Condition to be true. If not specified, all devices are allowed. Structure is documented below.</summary>
@@ -109,6 +114,7 @@ public partial class V1beta1AccessLevelSpecForProviderBasicConditions
     public IList<V1beta1AccessLevelSpecForProviderBasicConditionsVpcNetworkSources>? VpcNetworkSources { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelSpecForProviderBasic
 {
     /// <summary>How the conditions list should be combined to determine if a request is granted this AccessLevel. If AND is used, each Condition in conditions must be satisfied for the AccessLevel to be applied. If OR is used, at least one Condition in conditions must be satisfied for the AccessLevel to be applied. Default value is AND. Possible values are: AND, OR.</summary>
@@ -120,6 +126,7 @@ public partial class V1beta1AccessLevelSpecForProviderBasic
     public IList<V1beta1AccessLevelSpecForProviderBasicConditions>? Conditions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelSpecForProviderCustomExpr
 {
     /// <summary>Description of the expression</summary>
@@ -139,6 +146,7 @@ public partial class V1beta1AccessLevelSpecForProviderCustomExpr
     public string? Title { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelSpecForProviderCustom
 {
     /// <summary>Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language. This page details the objects and attributes that are used to the build the CEL expressions for custom access levels - https://cloud.google.com/access-context-manager/docs/custom-access-level-spec. Structure is documented below.</summary>
@@ -146,6 +154,7 @@ public partial class V1beta1AccessLevelSpecForProviderCustom
     public IList<V1beta1AccessLevelSpecForProviderCustomExpr>? Expr { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelSpecForProvider
 {
     /// <summary>A set of predefined conditions for the access level and a combining function. Structure is documented below.</summary>
@@ -173,6 +182,7 @@ public partial class V1beta1AccessLevelSpecForProvider
     public string? Title { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelSpecInitProviderBasicConditionsDevicePolicyOsConstraints
 {
     /// <summary>The minimum allowed OS version. If not set, any version of this OS satisfies the constraint. Format: "major.minor.patch" such as "10.5.301", "9.2.1".</summary>
@@ -188,6 +198,7 @@ public partial class V1beta1AccessLevelSpecInitProviderBasicConditionsDevicePoli
     public bool? RequireVerifiedChromeOs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelSpecInitProviderBasicConditionsDevicePolicy
 {
     /// <summary>A list of allowed device management levels. An empty list allows all management levels. Each value may be one of: MANAGEMENT_UNSPECIFIED, NONE, BASIC, COMPLETE.</summary>
@@ -215,6 +226,7 @@ public partial class V1beta1AccessLevelSpecInitProviderBasicConditionsDevicePoli
     public bool? RequireScreenLock { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelSpecInitProviderBasicConditionsVpcNetworkSourcesVpcSubnetwork
 {
     /// <summary>Required. Network name to be allowed by this Access Level. Networks of foreign organizations requires compute.network.get permission to be granted to caller.</summary>
@@ -226,6 +238,7 @@ public partial class V1beta1AccessLevelSpecInitProviderBasicConditionsVpcNetwork
     public IList<string>? VpcIpSubnetworks { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelSpecInitProviderBasicConditionsVpcNetworkSources
 {
     /// <summary>Sub networks within a VPC network. Structure is documented below.</summary>
@@ -233,6 +246,7 @@ public partial class V1beta1AccessLevelSpecInitProviderBasicConditionsVpcNetwork
     public IList<V1beta1AccessLevelSpecInitProviderBasicConditionsVpcNetworkSourcesVpcSubnetwork>? VpcSubnetwork { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelSpecInitProviderBasicConditions
 {
     /// <summary>Device specific restrictions, all restrictions must hold for the Condition to be true. If not specified, all devices are allowed. Structure is documented below.</summary>
@@ -264,6 +278,7 @@ public partial class V1beta1AccessLevelSpecInitProviderBasicConditions
     public IList<V1beta1AccessLevelSpecInitProviderBasicConditionsVpcNetworkSources>? VpcNetworkSources { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelSpecInitProviderBasic
 {
     /// <summary>How the conditions list should be combined to determine if a request is granted this AccessLevel. If AND is used, each Condition in conditions must be satisfied for the AccessLevel to be applied. If OR is used, at least one Condition in conditions must be satisfied for the AccessLevel to be applied. Default value is AND. Possible values are: AND, OR.</summary>
@@ -275,6 +290,7 @@ public partial class V1beta1AccessLevelSpecInitProviderBasic
     public IList<V1beta1AccessLevelSpecInitProviderBasicConditions>? Conditions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelSpecInitProviderCustomExpr
 {
     /// <summary>Description of the expression</summary>
@@ -294,6 +310,7 @@ public partial class V1beta1AccessLevelSpecInitProviderCustomExpr
     public string? Title { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelSpecInitProviderCustom
 {
     /// <summary>Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language. This page details the objects and attributes that are used to the build the CEL expressions for custom access levels - https://cloud.google.com/access-context-manager/docs/custom-access-level-spec. Structure is documented below.</summary>
@@ -301,6 +318,7 @@ public partial class V1beta1AccessLevelSpecInitProviderCustom
     public IList<V1beta1AccessLevelSpecInitProviderCustomExpr>? Expr { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1AccessLevelSpecInitProvider
 {
     /// <summary>A set of predefined conditions for the access level and a combining function. Structure is documented below.</summary>
@@ -370,6 +388,7 @@ public enum V1beta1AccessLevelSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AccessLevelSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -383,6 +402,7 @@ public partial class V1beta1AccessLevelSpecProviderConfigRefPolicy
     public V1beta1AccessLevelSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1AccessLevelSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -414,6 +434,7 @@ public enum V1beta1AccessLevelSpecPublishConnectionDetailsToConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AccessLevelSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -427,6 +448,7 @@ public partial class V1beta1AccessLevelSpecPublishConnectionDetailsToConfigRefPo
     public V1beta1AccessLevelSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1AccessLevelSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -438,6 +460,7 @@ public partial class V1beta1AccessLevelSpecPublishConnectionDetailsToConfigRef
     public V1beta1AccessLevelSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1AccessLevelSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -453,6 +476,7 @@ public partial class V1beta1AccessLevelSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1AccessLevelSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -468,6 +492,7 @@ public partial class V1beta1AccessLevelSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1AccessLevelSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -479,6 +504,7 @@ public partial class V1beta1AccessLevelSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>AccessLevelSpec defines the desired state of AccessLevel</summary>
 public partial class V1beta1AccessLevelSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -511,6 +537,7 @@ public partial class V1beta1AccessLevelSpec
     public V1beta1AccessLevelSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelStatusAtProviderBasicConditionsDevicePolicyOsConstraints
 {
     /// <summary>The minimum allowed OS version. If not set, any version of this OS satisfies the constraint. Format: "major.minor.patch" such as "10.5.301", "9.2.1".</summary>
@@ -526,6 +553,7 @@ public partial class V1beta1AccessLevelStatusAtProviderBasicConditionsDevicePoli
     public bool? RequireVerifiedChromeOs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelStatusAtProviderBasicConditionsDevicePolicy
 {
     /// <summary>A list of allowed device management levels. An empty list allows all management levels. Each value may be one of: MANAGEMENT_UNSPECIFIED, NONE, BASIC, COMPLETE.</summary>
@@ -553,6 +581,7 @@ public partial class V1beta1AccessLevelStatusAtProviderBasicConditionsDevicePoli
     public bool? RequireScreenLock { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelStatusAtProviderBasicConditionsVpcNetworkSourcesVpcSubnetwork
 {
     /// <summary>Required. Network name to be allowed by this Access Level. Networks of foreign organizations requires compute.network.get permission to be granted to caller.</summary>
@@ -564,6 +593,7 @@ public partial class V1beta1AccessLevelStatusAtProviderBasicConditionsVpcNetwork
     public IList<string>? VpcIpSubnetworks { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelStatusAtProviderBasicConditionsVpcNetworkSources
 {
     /// <summary>Sub networks within a VPC network. Structure is documented below.</summary>
@@ -571,6 +601,7 @@ public partial class V1beta1AccessLevelStatusAtProviderBasicConditionsVpcNetwork
     public IList<V1beta1AccessLevelStatusAtProviderBasicConditionsVpcNetworkSourcesVpcSubnetwork>? VpcSubnetwork { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelStatusAtProviderBasicConditions
 {
     /// <summary>Device specific restrictions, all restrictions must hold for the Condition to be true. If not specified, all devices are allowed. Structure is documented below.</summary>
@@ -602,6 +633,7 @@ public partial class V1beta1AccessLevelStatusAtProviderBasicConditions
     public IList<V1beta1AccessLevelStatusAtProviderBasicConditionsVpcNetworkSources>? VpcNetworkSources { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelStatusAtProviderBasic
 {
     /// <summary>How the conditions list should be combined to determine if a request is granted this AccessLevel. If AND is used, each Condition in conditions must be satisfied for the AccessLevel to be applied. If OR is used, at least one Condition in conditions must be satisfied for the AccessLevel to be applied. Default value is AND. Possible values are: AND, OR.</summary>
@@ -613,6 +645,7 @@ public partial class V1beta1AccessLevelStatusAtProviderBasic
     public IList<V1beta1AccessLevelStatusAtProviderBasicConditions>? Conditions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelStatusAtProviderCustomExpr
 {
     /// <summary>Description of the expression</summary>
@@ -632,6 +665,7 @@ public partial class V1beta1AccessLevelStatusAtProviderCustomExpr
     public string? Title { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelStatusAtProviderCustom
 {
     /// <summary>Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language. This page details the objects and attributes that are used to the build the CEL expressions for custom access levels - https://cloud.google.com/access-context-manager/docs/custom-access-level-spec. Structure is documented below.</summary>
@@ -639,6 +673,7 @@ public partial class V1beta1AccessLevelStatusAtProviderCustom
     public IList<V1beta1AccessLevelStatusAtProviderCustomExpr>? Expr { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelStatusAtProvider
 {
     /// <summary>A set of predefined conditions for the access level and a combining function. Structure is documented below.</summary>
@@ -670,6 +705,7 @@ public partial class V1beta1AccessLevelStatusAtProvider
     public string? Title { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1AccessLevelStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -697,6 +733,7 @@ public partial class V1beta1AccessLevelStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>AccessLevelStatus defines the observed state of AccessLevel.</summary>
 public partial class V1beta1AccessLevelStatus
 {
     /// <summary></summary>
@@ -713,6 +750,7 @@ public partial class V1beta1AccessLevelStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>AccessLevel is the Schema for the AccessLevels API. An AccessLevel is a label that can be applied to requests to GCP services, along with a list of requirements necessary for the label to be applied.</summary>
 public partial class V1beta1AccessLevel : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AccessLevelSpec>, IStatus<V1beta1AccessLevelStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary>Controls for advanced machine-related behavior features.</summary>
 public partial class V1beta1ComputeInstanceSpecAdvancedMachineFeatures
 {
     /// <summary>Whether to enable nested virtualization or not.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1ComputeInstanceSpecAdvancedMachineFeatures
     public int? VisibleCoreCount { get; set; }
 }
 
+/// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 public partial class V1beta1ComputeInstanceSpecAttachedDiskDiskEncryptionKeyRawValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -34,6 +36,7 @@ public partial class V1beta1ComputeInstanceSpecAttachedDiskDiskEncryptionKeyRawV
     public string Name { get; set; }
 }
 
+/// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 public partial class V1beta1ComputeInstanceSpecAttachedDiskDiskEncryptionKeyRawValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -41,6 +44,7 @@ public partial class V1beta1ComputeInstanceSpecAttachedDiskDiskEncryptionKeyRawV
     public V1beta1ComputeInstanceSpecAttachedDiskDiskEncryptionKeyRawValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary>A 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to encrypt this disk. Only one of kms_key_self_link and disk_encryption_key_raw may be set.</summary>
 public partial class V1beta1ComputeInstanceSpecAttachedDiskDiskEncryptionKeyRaw
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -52,6 +56,7 @@ public partial class V1beta1ComputeInstanceSpecAttachedDiskDiskEncryptionKeyRaw
     public V1beta1ComputeInstanceSpecAttachedDiskDiskEncryptionKeyRawValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceSpecAttachedDiskKmsKeyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
@@ -67,6 +72,7 @@ public partial class V1beta1ComputeInstanceSpecAttachedDiskKmsKeyRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceSpecAttachedDiskSourceDiskRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeDisk` resource.</summary>
@@ -82,6 +88,7 @@ public partial class V1beta1ComputeInstanceSpecAttachedDiskSourceDiskRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceSpecAttachedDisk
 {
     /// <summary>Name with which the attached disk is accessible under /dev/disk/by-id/.</summary>
@@ -109,6 +116,7 @@ public partial class V1beta1ComputeInstanceSpecAttachedDisk
     public V1beta1ComputeInstanceSpecAttachedDiskSourceDiskRef SourceDiskRef { get; set; }
 }
 
+/// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 public partial class V1beta1ComputeInstanceSpecBootDiskDiskEncryptionKeyRawValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -120,6 +128,7 @@ public partial class V1beta1ComputeInstanceSpecBootDiskDiskEncryptionKeyRawValue
     public string Name { get; set; }
 }
 
+/// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 public partial class V1beta1ComputeInstanceSpecBootDiskDiskEncryptionKeyRawValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -127,6 +136,7 @@ public partial class V1beta1ComputeInstanceSpecBootDiskDiskEncryptionKeyRawValue
     public V1beta1ComputeInstanceSpecBootDiskDiskEncryptionKeyRawValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary>Immutable. A 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to encrypt this disk. Only one of kms_key_self_link and disk_encryption_key_raw may be set.</summary>
 public partial class V1beta1ComputeInstanceSpecBootDiskDiskEncryptionKeyRaw
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -138,6 +148,7 @@ public partial class V1beta1ComputeInstanceSpecBootDiskDiskEncryptionKeyRaw
     public V1beta1ComputeInstanceSpecBootDiskDiskEncryptionKeyRawValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary>Immutable. The image from which to initialize this disk.</summary>
 public partial class V1beta1ComputeInstanceSpecBootDiskInitializeParamsSourceImageRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeImage` resource.</summary>
@@ -153,6 +164,7 @@ public partial class V1beta1ComputeInstanceSpecBootDiskInitializeParamsSourceIma
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. Parameters with which a disk was created alongside the instance.</summary>
 public partial class V1beta1ComputeInstanceSpecBootDiskInitializeParams
 {
     /// <summary>Immutable. A set of key/value label pairs assigned to the disk.</summary>
@@ -176,6 +188,7 @@ public partial class V1beta1ComputeInstanceSpecBootDiskInitializeParams
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceSpecBootDiskKmsKeyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
@@ -191,6 +204,7 @@ public partial class V1beta1ComputeInstanceSpecBootDiskKmsKeyRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. The source disk used to create this disk.</summary>
 public partial class V1beta1ComputeInstanceSpecBootDiskSourceDiskRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeDisk` resource.</summary>
@@ -206,6 +220,7 @@ public partial class V1beta1ComputeInstanceSpecBootDiskSourceDiskRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. The boot disk for the instance.</summary>
 public partial class V1beta1ComputeInstanceSpecBootDisk
 {
     /// <summary>Immutable. Whether the disk will be auto-deleted when the instance is deleted.</summary>
@@ -241,6 +256,7 @@ public partial class V1beta1ComputeInstanceSpecBootDisk
     public V1beta1ComputeInstanceSpecBootDiskSourceDiskRef? SourceDiskRef { get; set; }
 }
 
+/// <summary>Immutable. The Confidential VM config being used by the instance.  on_host_maintenance has to be set to TERMINATE or this will fail to create.</summary>
 public partial class V1beta1ComputeInstanceSpecConfidentialInstanceConfig
 {
     /// <summary>Defines whether the instance should have confidential compute enabled.</summary>
@@ -248,6 +264,7 @@ public partial class V1beta1ComputeInstanceSpecConfidentialInstanceConfig
     public bool EnableConfidentialCompute { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceSpecGuestAccelerator
 {
     /// <summary>Immutable. The number of the guest accelerator cards exposed to this instance.</summary>
@@ -259,6 +276,7 @@ public partial class V1beta1ComputeInstanceSpecGuestAccelerator
     public string Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceSpecInstanceTemplateRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeInstanceTemplate` resource.</summary>
@@ -274,6 +292,7 @@ public partial class V1beta1ComputeInstanceSpecInstanceTemplateRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceSpecMetadata
 {
     /// <summary></summary>
@@ -285,6 +304,7 @@ public partial class V1beta1ComputeInstanceSpecMetadata
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceSpecNetworkInterfaceAccessConfigNatIpRef
 {
     /// <summary>Allowed value: The `address` field of a `ComputeAddress` resource.</summary>
@@ -300,6 +320,7 @@ public partial class V1beta1ComputeInstanceSpecNetworkInterfaceAccessConfigNatIp
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceSpecNetworkInterfaceAccessConfig
 {
     /// <summary></summary>
@@ -315,6 +336,7 @@ public partial class V1beta1ComputeInstanceSpecNetworkInterfaceAccessConfig
     public string? PublicPtrDomainName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceSpecNetworkInterfaceAliasIpRange
 {
     /// <summary>The IP CIDR range represented by this alias IP range.</summary>
@@ -326,6 +348,7 @@ public partial class V1beta1ComputeInstanceSpecNetworkInterfaceAliasIpRange
     public string? SubnetworkRangeName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceSpecNetworkInterfaceIpv6AccessConfig
 {
     /// <summary>Immutable. The first IPv6 address of the external IPv6 range associated with this instance, prefix length is stored in externalIpv6PrefixLength in ipv6AccessConfig. To use a static external IP address, it must be unused and in the same region as the instance's zone. If not specified, Google Cloud will automatically assign an external IPv6 address from the instance's subnetwork.</summary>
@@ -349,6 +372,7 @@ public partial class V1beta1ComputeInstanceSpecNetworkInterfaceIpv6AccessConfig
     public string? PublicPtrDomainName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceSpecNetworkInterfaceNetworkIpRef
 {
     /// <summary>Allowed value: The `address` field of a `ComputeAddress` resource.</summary>
@@ -368,6 +392,7 @@ public partial class V1beta1ComputeInstanceSpecNetworkInterfaceNetworkIpRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceSpecNetworkInterfaceNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
@@ -383,6 +408,7 @@ public partial class V1beta1ComputeInstanceSpecNetworkInterfaceNetworkRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceSpecNetworkInterfaceSubnetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeSubnetwork` resource.</summary>
@@ -398,6 +424,7 @@ public partial class V1beta1ComputeInstanceSpecNetworkInterfaceSubnetworkRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceSpecNetworkInterface
 {
     /// <summary>Access configurations, i.e. IPs via which this instance can be accessed via the Internet.</summary>
@@ -461,6 +488,7 @@ public partial class V1beta1ComputeInstanceSpecNetworkInterface
     public V1beta1ComputeInstanceSpecNetworkInterfaceSubnetworkRef? SubnetworkRef { get; set; }
 }
 
+/// <summary>Immutable. Configures network performance settings for the instance. If not specified, the instance will be created with its default network performance configuration.</summary>
 public partial class V1beta1ComputeInstanceSpecNetworkPerformanceConfig
 {
     /// <summary>Immutable. The egress bandwidth tier to enable. Possible values:TIER_1, DEFAULT.</summary>
@@ -468,6 +496,7 @@ public partial class V1beta1ComputeInstanceSpecNetworkPerformanceConfig
     public string TotalEgressBandwidthTier { get; set; }
 }
 
+/// <summary>Immutable. Stores additional params passed with the request, but not persisted as part of resource payload.</summary>
 public partial class V1beta1ComputeInstanceSpecParams
 {
     /// <summary>Immutable. A map of resource manager tags. Resource manager tag keys and values have the same definition as resource manager tags. Keys must be in the format tagKeys/{tag_key_id}, and values are in the format tagValues/456. The field is ignored (both PUT &amp; PATCH) when empty.</summary>
@@ -475,6 +504,7 @@ public partial class V1beta1ComputeInstanceSpecParams
     public JsonNode? ResourceManagerTags { get; set; }
 }
 
+/// <summary>Immutable. Specifies the label selector for the reservation to use.</summary>
 public partial class V1beta1ComputeInstanceSpecReservationAffinitySpecificReservation
 {
     /// <summary>Immutable. Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.</summary>
@@ -486,6 +516,7 @@ public partial class V1beta1ComputeInstanceSpecReservationAffinitySpecificReserv
     public IList<string> Values { get; set; }
 }
 
+/// <summary>Immutable. Specifies the reservations that this instance can consume from.</summary>
 public partial class V1beta1ComputeInstanceSpecReservationAffinity
 {
     /// <summary>Immutable. Specifies the label selector for the reservation to use.</summary>
@@ -497,6 +528,7 @@ public partial class V1beta1ComputeInstanceSpecReservationAffinity
     public string Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceSpecResourcePolicies
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeResourcePolicy` resource.</summary>
@@ -512,6 +544,7 @@ public partial class V1beta1ComputeInstanceSpecResourcePolicies
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. Specifies the maximum amount of time a Local Ssd Vm should wait while   recovery of the Local Ssd state is attempted. Its value should be in   between 0 and 168 hours with hour granularity and the default value being 1   hour.</summary>
 public partial class V1beta1ComputeInstanceSpecSchedulingLocalSsdRecoveryTimeout
 {
     /// <summary>Immutable. Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -523,6 +556,7 @@ public partial class V1beta1ComputeInstanceSpecSchedulingLocalSsdRecoveryTimeout
     public int Seconds { get; set; }
 }
 
+/// <summary>Immutable. The timeout for new network connections to hosts.</summary>
 public partial class V1beta1ComputeInstanceSpecSchedulingMaxRunDuration
 {
     /// <summary>Immutable. Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -534,6 +568,7 @@ public partial class V1beta1ComputeInstanceSpecSchedulingMaxRunDuration
     public int Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceSpecSchedulingNodeAffinities
 {
     /// <summary></summary>
@@ -541,6 +576,7 @@ public partial class V1beta1ComputeInstanceSpecSchedulingNodeAffinities
     public JsonNode? Value { get; set; }
 }
 
+/// <summary>The scheduling strategy being used by the instance.</summary>
 public partial class V1beta1ComputeInstanceSpecScheduling
 {
     /// <summary>Specifies if the instance should be restarted if it was terminated by Compute Engine (not a user).</summary>
@@ -584,6 +620,7 @@ public partial class V1beta1ComputeInstanceSpecScheduling
     public string? ProvisioningModel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceSpecScratchDisk
 {
     /// <summary>The disk interface used for attaching this disk. One of SCSI or NVME.</summary>
@@ -595,6 +632,7 @@ public partial class V1beta1ComputeInstanceSpecScratchDisk
     public int? Size { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceSpecServiceAccountServiceAccountRef
 {
     /// <summary>Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
@@ -610,6 +648,7 @@ public partial class V1beta1ComputeInstanceSpecServiceAccountServiceAccountRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The service account to attach to the instance.</summary>
 public partial class V1beta1ComputeInstanceSpecServiceAccount
 {
     /// <summary>A list of service scopes.</summary>
@@ -621,6 +660,7 @@ public partial class V1beta1ComputeInstanceSpecServiceAccount
     public V1beta1ComputeInstanceSpecServiceAccountServiceAccountRef? ServiceAccountRef { get; set; }
 }
 
+/// <summary>The shielded vm config being used by the instance.</summary>
 public partial class V1beta1ComputeInstanceSpecShieldedInstanceConfig
 {
     /// <summary>Whether integrity monitoring is enabled for the instance.</summary>
@@ -636,6 +676,7 @@ public partial class V1beta1ComputeInstanceSpecShieldedInstanceConfig
     public bool? EnableVtpm { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceSpec
 {
     /// <summary>Controls for advanced machine-related behavior features.</summary>
@@ -751,6 +792,7 @@ public partial class V1beta1ComputeInstanceSpec
     public string? Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -774,6 +816,7 @@ public partial class V1beta1ComputeInstanceStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeInstanceStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -814,6 +857,7 @@ public partial class V1beta1ComputeInstanceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ComputeInstance : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeInstanceSpec>, IStatus<V1beta1ComputeInstanceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -38,6 +38,7 @@ public enum V1beta1TagSpecForProviderResourceArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TagSpecForProviderResourceArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1TagSpecForProviderResourceArnRefPolicy
     public V1beta1TagSpecForProviderResourceArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Server in transfer to populate resourceArn.</summary>
 public partial class V1beta1TagSpecForProviderResourceArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1TagSpecForProviderResourceArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TagSpecForProviderResourceArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1TagSpecForProviderResourceArnSelectorPolicy
     public V1beta1TagSpecForProviderResourceArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Server in transfer to populate resourceArn.</summary>
 public partial class V1beta1TagSpecForProviderResourceArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1TagSpecForProviderResourceArnSelector
     public V1beta1TagSpecForProviderResourceArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TagSpecForProvider
 {
     /// <summary>Tag name.</summary>
@@ -157,6 +162,7 @@ public enum V1beta1TagSpecInitProviderResourceArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TagSpecInitProviderResourceArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -170,6 +176,7 @@ public partial class V1beta1TagSpecInitProviderResourceArnRefPolicy
     public V1beta1TagSpecInitProviderResourceArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Server in transfer to populate resourceArn.</summary>
 public partial class V1beta1TagSpecInitProviderResourceArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -201,6 +208,7 @@ public enum V1beta1TagSpecInitProviderResourceArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TagSpecInitProviderResourceArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -214,6 +222,7 @@ public partial class V1beta1TagSpecInitProviderResourceArnSelectorPolicy
     public V1beta1TagSpecInitProviderResourceArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Server in transfer to populate resourceArn.</summary>
 public partial class V1beta1TagSpecInitProviderResourceArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -229,6 +238,7 @@ public partial class V1beta1TagSpecInitProviderResourceArnSelector
     public V1beta1TagSpecInitProviderResourceArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1TagSpecInitProvider
 {
     /// <summary>Tag name.</summary>
@@ -294,6 +304,7 @@ public enum V1beta1TagSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TagSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -307,6 +318,7 @@ public partial class V1beta1TagSpecProviderConfigRefPolicy
     public V1beta1TagSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1TagSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -338,6 +350,7 @@ public enum V1beta1TagSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TagSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -351,6 +364,7 @@ public partial class V1beta1TagSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1TagSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1TagSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -362,6 +376,7 @@ public partial class V1beta1TagSpecPublishConnectionDetailsToConfigRef
     public V1beta1TagSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1TagSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -377,6 +392,7 @@ public partial class V1beta1TagSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1TagSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -392,6 +408,7 @@ public partial class V1beta1TagSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1TagSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -403,6 +420,7 @@ public partial class V1beta1TagSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>TagSpec defines the desired state of Tag</summary>
 public partial class V1beta1TagSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -435,6 +453,7 @@ public partial class V1beta1TagSpec
     public V1beta1TagSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TagStatusAtProvider
 {
     /// <summary>Transfer Family resource identifier and key, separated by a comma (,)</summary>
@@ -454,6 +473,7 @@ public partial class V1beta1TagStatusAtProvider
     public string? Value { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1TagStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -481,6 +501,7 @@ public partial class V1beta1TagStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>TagStatus defines the observed state of Tag.</summary>
 public partial class V1beta1TagStatus
 {
     /// <summary></summary>
@@ -497,6 +518,7 @@ public partial class V1beta1TagStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Tag is the Schema for the Tags API. Manages an individual Transfer Family resource tag</summary>
 public partial class V1beta1Tag : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1TagSpec>, IStatus<V1beta1TagStatus>
 {
     public const string KubeApiVersion = "v1beta1";

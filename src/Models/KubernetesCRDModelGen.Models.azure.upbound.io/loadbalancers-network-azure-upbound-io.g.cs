@@ -38,6 +38,7 @@ public enum V1beta1LoadBalancerSpecForProviderFrontendIpConfigurationPublicIpAdd
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LoadBalancerSpecForProviderFrontendIpConfigurationPublicIpAddressIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1LoadBalancerSpecForProviderFrontendIpConfigurationPu
     public V1beta1LoadBalancerSpecForProviderFrontendIpConfigurationPublicIpAddressIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a PublicIP in network to populate publicIpAddressId.</summary>
 public partial class V1beta1LoadBalancerSpecForProviderFrontendIpConfigurationPublicIpAddressIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1LoadBalancerSpecForProviderFrontendIpConfigurationPublicIpAdd
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LoadBalancerSpecForProviderFrontendIpConfigurationPublicIpAddressIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1LoadBalancerSpecForProviderFrontendIpConfigurationPu
     public V1beta1LoadBalancerSpecForProviderFrontendIpConfigurationPublicIpAddressIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a PublicIP in network to populate publicIpAddressId.</summary>
 public partial class V1beta1LoadBalancerSpecForProviderFrontendIpConfigurationPublicIpAddressIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1LoadBalancerSpecForProviderFrontendIpConfigurationSubnetIdRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LoadBalancerSpecForProviderFrontendIpConfigurationSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1LoadBalancerSpecForProviderFrontendIpConfigurationSu
     public V1beta1LoadBalancerSpecForProviderFrontendIpConfigurationSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1LoadBalancerSpecForProviderFrontendIpConfigurationSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1LoadBalancerSpecForProviderFrontendIpConfigurationSubnetIdSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LoadBalancerSpecForProviderFrontendIpConfigurationSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1LoadBalancerSpecForProviderFrontendIpConfigurationSu
     public V1beta1LoadBalancerSpecForProviderFrontendIpConfigurationSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1LoadBalancerSpecForProviderFrontendIpConfigurationSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1LoadBalancerSpecForProviderFrontendIpConfigurationSu
     public V1beta1LoadBalancerSpecForProviderFrontendIpConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LoadBalancerSpecForProviderFrontendIpConfiguration
 {
     /// <summary>The Frontend IP Configuration ID of a Gateway SKU Load Balancer.</summary>
@@ -277,6 +286,7 @@ public enum V1beta1LoadBalancerSpecForProviderResourceGroupNameRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LoadBalancerSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -290,6 +300,7 @@ public partial class V1beta1LoadBalancerSpecForProviderResourceGroupNameRefPolic
     public V1beta1LoadBalancerSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1LoadBalancerSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -321,6 +332,7 @@ public enum V1beta1LoadBalancerSpecForProviderResourceGroupNameSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LoadBalancerSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -334,6 +346,7 @@ public partial class V1beta1LoadBalancerSpecForProviderResourceGroupNameSelector
     public V1beta1LoadBalancerSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1LoadBalancerSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -349,6 +362,7 @@ public partial class V1beta1LoadBalancerSpecForProviderResourceGroupNameSelector
     public V1beta1LoadBalancerSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LoadBalancerSpecForProvider
 {
     /// <summary>Specifies the Edge Zone within the Azure Region where this Load Balancer should exist. Changing this forces a new Load Balancer to be created.</summary>
@@ -408,6 +422,7 @@ public enum V1beta1LoadBalancerSpecInitProviderFrontendIpConfigurationPublicIpAd
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LoadBalancerSpecInitProviderFrontendIpConfigurationPublicIpAddressIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -421,6 +436,7 @@ public partial class V1beta1LoadBalancerSpecInitProviderFrontendIpConfigurationP
     public V1beta1LoadBalancerSpecInitProviderFrontendIpConfigurationPublicIpAddressIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a PublicIP in network to populate publicIpAddressId.</summary>
 public partial class V1beta1LoadBalancerSpecInitProviderFrontendIpConfigurationPublicIpAddressIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -452,6 +468,7 @@ public enum V1beta1LoadBalancerSpecInitProviderFrontendIpConfigurationPublicIpAd
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LoadBalancerSpecInitProviderFrontendIpConfigurationPublicIpAddressIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -465,6 +482,7 @@ public partial class V1beta1LoadBalancerSpecInitProviderFrontendIpConfigurationP
     public V1beta1LoadBalancerSpecInitProviderFrontendIpConfigurationPublicIpAddressIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a PublicIP in network to populate publicIpAddressId.</summary>
 public partial class V1beta1LoadBalancerSpecInitProviderFrontendIpConfigurationPublicIpAddressIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -500,6 +518,7 @@ public enum V1beta1LoadBalancerSpecInitProviderFrontendIpConfigurationSubnetIdRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LoadBalancerSpecInitProviderFrontendIpConfigurationSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -513,6 +532,7 @@ public partial class V1beta1LoadBalancerSpecInitProviderFrontendIpConfigurationS
     public V1beta1LoadBalancerSpecInitProviderFrontendIpConfigurationSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1LoadBalancerSpecInitProviderFrontendIpConfigurationSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -544,6 +564,7 @@ public enum V1beta1LoadBalancerSpecInitProviderFrontendIpConfigurationSubnetIdSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LoadBalancerSpecInitProviderFrontendIpConfigurationSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -557,6 +578,7 @@ public partial class V1beta1LoadBalancerSpecInitProviderFrontendIpConfigurationS
     public V1beta1LoadBalancerSpecInitProviderFrontendIpConfigurationSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1LoadBalancerSpecInitProviderFrontendIpConfigurationSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -572,6 +594,7 @@ public partial class V1beta1LoadBalancerSpecInitProviderFrontendIpConfigurationS
     public V1beta1LoadBalancerSpecInitProviderFrontendIpConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LoadBalancerSpecInitProviderFrontendIpConfiguration
 {
     /// <summary>The Frontend IP Configuration ID of a Gateway SKU Load Balancer.</summary>
@@ -627,6 +650,7 @@ public partial class V1beta1LoadBalancerSpecInitProviderFrontendIpConfiguration
     public IList<string>? Zones { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1LoadBalancerSpecInitProvider
 {
     /// <summary>Specifies the Edge Zone within the Azure Region where this Load Balancer should exist. Changing this forces a new Load Balancer to be created.</summary>
@@ -696,6 +720,7 @@ public enum V1beta1LoadBalancerSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LoadBalancerSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -709,6 +734,7 @@ public partial class V1beta1LoadBalancerSpecProviderConfigRefPolicy
     public V1beta1LoadBalancerSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1LoadBalancerSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -740,6 +766,7 @@ public enum V1beta1LoadBalancerSpecPublishConnectionDetailsToConfigRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LoadBalancerSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -753,6 +780,7 @@ public partial class V1beta1LoadBalancerSpecPublishConnectionDetailsToConfigRefP
     public V1beta1LoadBalancerSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1LoadBalancerSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -764,6 +792,7 @@ public partial class V1beta1LoadBalancerSpecPublishConnectionDetailsToConfigRef
     public V1beta1LoadBalancerSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1LoadBalancerSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -779,6 +808,7 @@ public partial class V1beta1LoadBalancerSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1LoadBalancerSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -794,6 +824,7 @@ public partial class V1beta1LoadBalancerSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1LoadBalancerSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -805,6 +836,7 @@ public partial class V1beta1LoadBalancerSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>LoadBalancerSpec defines the desired state of LoadBalancer</summary>
 public partial class V1beta1LoadBalancerSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -837,6 +869,7 @@ public partial class V1beta1LoadBalancerSpec
     public V1beta1LoadBalancerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LoadBalancerStatusAtProviderFrontendIpConfiguration
 {
     /// <summary>The Frontend IP Configuration ID of a Gateway SKU Load Balancer.</summary>
@@ -892,6 +925,7 @@ public partial class V1beta1LoadBalancerStatusAtProviderFrontendIpConfiguration
     public IList<string>? Zones { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LoadBalancerStatusAtProvider
 {
     /// <summary>Specifies the Edge Zone within the Azure Region where this Load Balancer should exist. Changing this forces a new Load Balancer to be created.</summary>
@@ -935,6 +969,7 @@ public partial class V1beta1LoadBalancerStatusAtProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1LoadBalancerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -962,6 +997,7 @@ public partial class V1beta1LoadBalancerStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>LoadBalancerStatus defines the observed state of LoadBalancer.</summary>
 public partial class V1beta1LoadBalancerStatus
 {
     /// <summary></summary>
@@ -978,6 +1014,7 @@ public partial class V1beta1LoadBalancerStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>LoadBalancer is the Schema for the LoadBalancers API. Manages a Load Balancer Resource.</summary>
 public partial class V1beta1LoadBalancer : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LoadBalancerSpec>, IStatus<V1beta1LoadBalancerStatus>
 {
     public const string KubeApiVersion = "v1beta1";

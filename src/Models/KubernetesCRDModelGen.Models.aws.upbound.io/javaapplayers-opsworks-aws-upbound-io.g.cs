@@ -18,6 +18,7 @@ public enum V1beta1JavaAppLayerSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1JavaAppLayerSpecForProviderCloudwatchConfigurationLogStreams
 {
     /// <summary></summary>
@@ -65,6 +66,7 @@ public partial class V1beta1JavaAppLayerSpecForProviderCloudwatchConfigurationLo
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JavaAppLayerSpecForProviderCloudwatchConfiguration
 {
     /// <summary></summary>
@@ -96,6 +98,7 @@ public enum V1beta1JavaAppLayerSpecForProviderCustomSecurityGroupIdRefsPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JavaAppLayerSpecForProviderCustomSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -109,6 +112,7 @@ public partial class V1beta1JavaAppLayerSpecForProviderCustomSecurityGroupIdRefs
     public V1beta1JavaAppLayerSpecForProviderCustomSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1JavaAppLayerSpecForProviderCustomSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -140,6 +144,7 @@ public enum V1beta1JavaAppLayerSpecForProviderCustomSecurityGroupIdSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JavaAppLayerSpecForProviderCustomSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -153,6 +158,7 @@ public partial class V1beta1JavaAppLayerSpecForProviderCustomSecurityGroupIdSele
     public V1beta1JavaAppLayerSpecForProviderCustomSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate customSecurityGroupIds.</summary>
 public partial class V1beta1JavaAppLayerSpecForProviderCustomSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -168,6 +174,7 @@ public partial class V1beta1JavaAppLayerSpecForProviderCustomSecurityGroupIdSele
     public V1beta1JavaAppLayerSpecForProviderCustomSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JavaAppLayerSpecForProviderEbsVolume
 {
     /// <summary></summary>
@@ -199,6 +206,7 @@ public partial class V1beta1JavaAppLayerSpecForProviderEbsVolume
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JavaAppLayerSpecForProviderLoadBasedAutoScalingDownscaling
 {
     /// <summary></summary>
@@ -230,6 +238,7 @@ public partial class V1beta1JavaAppLayerSpecForProviderLoadBasedAutoScalingDowns
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JavaAppLayerSpecForProviderLoadBasedAutoScalingUpscaling
 {
     /// <summary></summary>
@@ -261,6 +270,7 @@ public partial class V1beta1JavaAppLayerSpecForProviderLoadBasedAutoScalingUpsca
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JavaAppLayerSpecForProviderLoadBasedAutoScaling
 {
     /// <summary></summary>
@@ -296,6 +306,7 @@ public enum V1beta1JavaAppLayerSpecForProviderStackIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JavaAppLayerSpecForProviderStackIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -309,6 +320,7 @@ public partial class V1beta1JavaAppLayerSpecForProviderStackIdRefPolicy
     public V1beta1JavaAppLayerSpecForProviderStackIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Stack in opsworks to populate stackId.</summary>
 public partial class V1beta1JavaAppLayerSpecForProviderStackIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -340,6 +352,7 @@ public enum V1beta1JavaAppLayerSpecForProviderStackIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JavaAppLayerSpecForProviderStackIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -353,6 +366,7 @@ public partial class V1beta1JavaAppLayerSpecForProviderStackIdSelectorPolicy
     public V1beta1JavaAppLayerSpecForProviderStackIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Stack in opsworks to populate stackId.</summary>
 public partial class V1beta1JavaAppLayerSpecForProviderStackIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -368,6 +382,7 @@ public partial class V1beta1JavaAppLayerSpecForProviderStackIdSelector
     public V1beta1JavaAppLayerSpecForProviderStackIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JavaAppLayerSpecForProvider
 {
     /// <summary>Keyword for the application container to use. Defaults to "tomcat".</summary>
@@ -499,6 +514,7 @@ public partial class V1beta1JavaAppLayerSpecForProvider
     public bool? UseEbsOptimizedInstances { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JavaAppLayerSpecInitProviderCloudwatchConfigurationLogStreams
 {
     /// <summary></summary>
@@ -546,6 +562,7 @@ public partial class V1beta1JavaAppLayerSpecInitProviderCloudwatchConfigurationL
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JavaAppLayerSpecInitProviderCloudwatchConfiguration
 {
     /// <summary></summary>
@@ -577,6 +594,7 @@ public enum V1beta1JavaAppLayerSpecInitProviderCustomSecurityGroupIdRefsPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JavaAppLayerSpecInitProviderCustomSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -590,6 +608,7 @@ public partial class V1beta1JavaAppLayerSpecInitProviderCustomSecurityGroupIdRef
     public V1beta1JavaAppLayerSpecInitProviderCustomSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1JavaAppLayerSpecInitProviderCustomSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -621,6 +640,7 @@ public enum V1beta1JavaAppLayerSpecInitProviderCustomSecurityGroupIdSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JavaAppLayerSpecInitProviderCustomSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -634,6 +654,7 @@ public partial class V1beta1JavaAppLayerSpecInitProviderCustomSecurityGroupIdSel
     public V1beta1JavaAppLayerSpecInitProviderCustomSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate customSecurityGroupIds.</summary>
 public partial class V1beta1JavaAppLayerSpecInitProviderCustomSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -649,6 +670,7 @@ public partial class V1beta1JavaAppLayerSpecInitProviderCustomSecurityGroupIdSel
     public V1beta1JavaAppLayerSpecInitProviderCustomSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JavaAppLayerSpecInitProviderEbsVolume
 {
     /// <summary></summary>
@@ -680,6 +702,7 @@ public partial class V1beta1JavaAppLayerSpecInitProviderEbsVolume
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JavaAppLayerSpecInitProviderLoadBasedAutoScalingDownscaling
 {
     /// <summary></summary>
@@ -711,6 +734,7 @@ public partial class V1beta1JavaAppLayerSpecInitProviderLoadBasedAutoScalingDown
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JavaAppLayerSpecInitProviderLoadBasedAutoScalingUpscaling
 {
     /// <summary></summary>
@@ -742,6 +766,7 @@ public partial class V1beta1JavaAppLayerSpecInitProviderLoadBasedAutoScalingUpsc
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JavaAppLayerSpecInitProviderLoadBasedAutoScaling
 {
     /// <summary></summary>
@@ -777,6 +802,7 @@ public enum V1beta1JavaAppLayerSpecInitProviderStackIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JavaAppLayerSpecInitProviderStackIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -790,6 +816,7 @@ public partial class V1beta1JavaAppLayerSpecInitProviderStackIdRefPolicy
     public V1beta1JavaAppLayerSpecInitProviderStackIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Stack in opsworks to populate stackId.</summary>
 public partial class V1beta1JavaAppLayerSpecInitProviderStackIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -821,6 +848,7 @@ public enum V1beta1JavaAppLayerSpecInitProviderStackIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JavaAppLayerSpecInitProviderStackIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -834,6 +862,7 @@ public partial class V1beta1JavaAppLayerSpecInitProviderStackIdSelectorPolicy
     public V1beta1JavaAppLayerSpecInitProviderStackIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Stack in opsworks to populate stackId.</summary>
 public partial class V1beta1JavaAppLayerSpecInitProviderStackIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -849,6 +878,7 @@ public partial class V1beta1JavaAppLayerSpecInitProviderStackIdSelector
     public V1beta1JavaAppLayerSpecInitProviderStackIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1JavaAppLayerSpecInitProvider
 {
     /// <summary>Keyword for the application container to use. Defaults to "tomcat".</summary>
@@ -1022,6 +1052,7 @@ public enum V1beta1JavaAppLayerSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JavaAppLayerSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1035,6 +1066,7 @@ public partial class V1beta1JavaAppLayerSpecProviderConfigRefPolicy
     public V1beta1JavaAppLayerSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1JavaAppLayerSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1066,6 +1098,7 @@ public enum V1beta1JavaAppLayerSpecPublishConnectionDetailsToConfigRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JavaAppLayerSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1079,6 +1112,7 @@ public partial class V1beta1JavaAppLayerSpecPublishConnectionDetailsToConfigRefP
     public V1beta1JavaAppLayerSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1JavaAppLayerSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1090,6 +1124,7 @@ public partial class V1beta1JavaAppLayerSpecPublishConnectionDetailsToConfigRef
     public V1beta1JavaAppLayerSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1JavaAppLayerSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1105,6 +1140,7 @@ public partial class V1beta1JavaAppLayerSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1JavaAppLayerSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1120,6 +1156,7 @@ public partial class V1beta1JavaAppLayerSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1JavaAppLayerSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1131,6 +1168,7 @@ public partial class V1beta1JavaAppLayerSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>JavaAppLayerSpec defines the desired state of JavaAppLayer</summary>
 public partial class V1beta1JavaAppLayerSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1163,6 +1201,7 @@ public partial class V1beta1JavaAppLayerSpec
     public V1beta1JavaAppLayerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JavaAppLayerStatusAtProviderCloudwatchConfigurationLogStreams
 {
     /// <summary></summary>
@@ -1210,6 +1249,7 @@ public partial class V1beta1JavaAppLayerStatusAtProviderCloudwatchConfigurationL
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JavaAppLayerStatusAtProviderCloudwatchConfiguration
 {
     /// <summary></summary>
@@ -1221,6 +1261,7 @@ public partial class V1beta1JavaAppLayerStatusAtProviderCloudwatchConfiguration
     public IList<V1beta1JavaAppLayerStatusAtProviderCloudwatchConfigurationLogStreams>? LogStreams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JavaAppLayerStatusAtProviderEbsVolume
 {
     /// <summary></summary>
@@ -1252,6 +1293,7 @@ public partial class V1beta1JavaAppLayerStatusAtProviderEbsVolume
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JavaAppLayerStatusAtProviderLoadBasedAutoScalingDownscaling
 {
     /// <summary></summary>
@@ -1283,6 +1325,7 @@ public partial class V1beta1JavaAppLayerStatusAtProviderLoadBasedAutoScalingDown
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JavaAppLayerStatusAtProviderLoadBasedAutoScalingUpscaling
 {
     /// <summary></summary>
@@ -1314,6 +1357,7 @@ public partial class V1beta1JavaAppLayerStatusAtProviderLoadBasedAutoScalingUpsc
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JavaAppLayerStatusAtProviderLoadBasedAutoScaling
 {
     /// <summary></summary>
@@ -1329,6 +1373,7 @@ public partial class V1beta1JavaAppLayerStatusAtProviderLoadBasedAutoScaling
     public IList<V1beta1JavaAppLayerStatusAtProviderLoadBasedAutoScalingUpscaling>? Upscaling { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JavaAppLayerStatusAtProvider
 {
     /// <summary>Keyword for the application container to use. Defaults to "tomcat".</summary>
@@ -1456,6 +1501,7 @@ public partial class V1beta1JavaAppLayerStatusAtProvider
     public bool? UseEbsOptimizedInstances { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1JavaAppLayerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1483,6 +1529,7 @@ public partial class V1beta1JavaAppLayerStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>JavaAppLayerStatus defines the observed state of JavaAppLayer.</summary>
 public partial class V1beta1JavaAppLayerStatus
 {
     /// <summary></summary>
@@ -1499,6 +1546,7 @@ public partial class V1beta1JavaAppLayerStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>JavaAppLayer is the Schema for the JavaAppLayers API. Provides an OpsWorks Java application layer resource.</summary>
 public partial class V1beta1JavaAppLayer : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1JavaAppLayerSpec>, IStatus<V1beta1JavaAppLayerStatus>
 {
     public const string KubeApiVersion = "v1beta1";

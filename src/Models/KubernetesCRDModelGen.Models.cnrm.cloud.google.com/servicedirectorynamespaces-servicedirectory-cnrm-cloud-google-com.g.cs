@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.servicedirectory.cnrm.cloud.google.com;
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1beta1ServiceDirectoryNamespaceSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1ServiceDirectoryNamespaceSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceDirectoryNamespaceSpec
 {
     /// <summary>Immutable. The location for the Namespace. A full list of valid locations can be found by running 'gcloud beta service-directory locations list'.</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1ServiceDirectoryNamespaceSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceDirectoryNamespaceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -61,6 +64,7 @@ public partial class V1beta1ServiceDirectoryNamespaceStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceDirectoryNamespaceStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -77,6 +81,7 @@ public partial class V1beta1ServiceDirectoryNamespaceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ServiceDirectoryNamespace : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ServiceDirectoryNamespaceSpec>, IStatus<V1beta1ServiceDirectoryNamespaceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

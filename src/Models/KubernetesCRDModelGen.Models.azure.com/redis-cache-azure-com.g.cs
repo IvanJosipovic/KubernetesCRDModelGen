@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cache.azure.com;
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 public partial class V1api20230401storageRedisSpecIdentityUserAssignedIdentitiesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -27,6 +28,7 @@ public partial class V1api20230401storageRedisSpecIdentityUserAssignedIdentities
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230401.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
 public partial class V1api20230401storageRedisSpecIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -38,6 +40,7 @@ public partial class V1api20230401storageRedisSpecIdentityUserAssignedIdentities
     public V1api20230401storageRedisSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20230401.ManagedServiceIdentity Managed service identity (system assigned and/or user assigned identities)</summary>
 public partial class V1api20230401storageRedisSpecIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -53,6 +56,7 @@ public partial class V1api20230401storageRedisSpecIdentity
     public IList<V1api20230401storageRedisSpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20230401storageRedisSpecOperatorSpecSecretsHostName
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -64,6 +68,7 @@ public partial class V1api20230401storageRedisSpecOperatorSpecSecretsHostName
     public string Name { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20230401storageRedisSpecOperatorSpecSecretsPort
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -75,6 +80,7 @@ public partial class V1api20230401storageRedisSpecOperatorSpecSecretsPort
     public string Name { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20230401storageRedisSpecOperatorSpecSecretsPrimaryKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -86,6 +92,7 @@ public partial class V1api20230401storageRedisSpecOperatorSpecSecretsPrimaryKey
     public string Name { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20230401storageRedisSpecOperatorSpecSecretsSecondaryKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -97,6 +104,7 @@ public partial class V1api20230401storageRedisSpecOperatorSpecSecretsSecondaryKe
     public string Name { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20230401storageRedisSpecOperatorSpecSecretsSslPort
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -108,6 +116,7 @@ public partial class V1api20230401storageRedisSpecOperatorSpecSecretsSslPort
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230401.RedisOperatorSecrets</summary>
 public partial class V1api20230401storageRedisSpecOperatorSpecSecrets
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -135,6 +144,7 @@ public partial class V1api20230401storageRedisSpecOperatorSpecSecrets
     public V1api20230401storageRedisSpecOperatorSpecSecretsSslPort? SslPort { get; set; }
 }
 
+/// <summary>Storage version of v1api20230401.RedisOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 public partial class V1api20230401storageRedisSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -146,6 +156,7 @@ public partial class V1api20230401storageRedisSpecOperatorSpec
     public V1api20230401storageRedisSpecOperatorSpecSecrets? Secrets { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20230401storageRedisSpecOwner
 {
     /// <summary></summary>
@@ -157,6 +168,7 @@ public partial class V1api20230401storageRedisSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230401.RedisCreateProperties_RedisConfiguration</summary>
 public partial class V1api20230401storageRedisSpecRedisConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -220,6 +232,7 @@ public partial class V1api20230401storageRedisSpecRedisConfiguration
     public string? StorageSubscriptionId { get; set; }
 }
 
+/// <summary>Storage version of v1api20230401.Sku SKU parameters supplied to the create Redis operation.</summary>
 public partial class V1api20230401storageRedisSpecSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -239,6 +252,7 @@ public partial class V1api20230401storageRedisSpecSku
     public string? Name { get; set; }
 }
 
+/// <summary>SubnetReference: The full resource ID of a subnet in a virtual network to deploy the Redis cache in. Example format: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/Microsoft.{Network|ClassicNetwork}/VirtualNetworks/vnet1/subnets/subnet1</summary>
 public partial class V1api20230401storageRedisSpecSubnetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -258,6 +272,7 @@ public partial class V1api20230401storageRedisSpecSubnetReference
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230401.Redis_Spec</summary>
 public partial class V1api20230401storageRedisSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -345,6 +360,7 @@ public partial class V1api20230401storageRedisSpec
     public IList<string>? Zones { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20230401storageRedisStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -376,6 +392,7 @@ public partial class V1api20230401storageRedisStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230401.UserAssignedIdentity_STATUS User assigned identity properties</summary>
 public partial class V1api20230401storageRedisStatusIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -391,6 +408,7 @@ public partial class V1api20230401storageRedisStatusIdentityUserAssignedIdentiti
     public string? PrincipalId { get; set; }
 }
 
+/// <summary>Storage version of v1api20230401.ManagedServiceIdentity_STATUS Managed service identity (system assigned and/or user assigned identities)</summary>
 public partial class V1api20230401storageRedisStatusIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -414,6 +432,7 @@ public partial class V1api20230401storageRedisStatusIdentity
     public IDictionary<string, V1api20230401storageRedisStatusIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
+/// <summary>Storage version of v1api20230401.RedisInstanceDetails_STATUS Details of single instance of redis.</summary>
 public partial class V1api20230401storageRedisStatusInstances
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -445,6 +464,7 @@ public partial class V1api20230401storageRedisStatusInstances
     public string? Zone { get; set; }
 }
 
+/// <summary>Storage version of v1api20230401.RedisLinkedServer_STATUS Linked server Id</summary>
 public partial class V1api20230401storageRedisStatusLinkedServers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -456,6 +476,7 @@ public partial class V1api20230401storageRedisStatusLinkedServers
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20230401.PrivateEndpointConnection_STATUS The Private Endpoint Connection resource.</summary>
 public partial class V1api20230401storageRedisStatusPrivateEndpointConnections
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -467,6 +488,7 @@ public partial class V1api20230401storageRedisStatusPrivateEndpointConnections
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20230401.RedisProperties_RedisConfiguration_STATUS</summary>
 public partial class V1api20230401storageRedisStatusRedisConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -542,6 +564,7 @@ public partial class V1api20230401storageRedisStatusRedisConfiguration
     public string? ZonalConfiguration { get; set; }
 }
 
+/// <summary>Storage version of v1api20230401.Sku_STATUS SKU parameters supplied to the create Redis operation.</summary>
 public partial class V1api20230401storageRedisStatusSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -561,6 +584,7 @@ public partial class V1api20230401storageRedisStatusSku
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230401.Redis_STATUS</summary>
 public partial class V1api20230401storageRedisStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -677,6 +701,7 @@ public partial class V1api20230401storageRedisStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20230401.Redis Generator information: - Generated from: /redis/resource-manager/Microsoft.Cache/stable/2023-04-01/redis.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}</summary>
 public partial class V1api20230401storageRedis : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230401storageRedisSpec>, IStatus<V1api20230401storageRedisStatus>
 {
     public const string KubeApiVersion = "v1api20230401storage";

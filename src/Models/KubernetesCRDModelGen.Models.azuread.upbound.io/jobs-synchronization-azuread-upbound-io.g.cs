@@ -38,6 +38,7 @@ public enum V1beta1JobSpecForProviderServicePrincipalIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecForProviderServicePrincipalIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1JobSpecForProviderServicePrincipalIdRefPolicy
     public V1beta1JobSpecForProviderServicePrincipalIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Principal in serviceprincipals to populate servicePrincipalId.</summary>
 public partial class V1beta1JobSpecForProviderServicePrincipalIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1JobSpecForProviderServicePrincipalIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobSpecForProviderServicePrincipalIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1JobSpecForProviderServicePrincipalIdSelectorPolicy
     public V1beta1JobSpecForProviderServicePrincipalIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Principal in serviceprincipals to populate servicePrincipalId.</summary>
 public partial class V1beta1JobSpecForProviderServicePrincipalIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1JobSpecForProviderServicePrincipalIdSelector
     public V1beta1JobSpecForProviderServicePrincipalIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProvider
 {
     /// <summary>Whether or not the provisioning job is enabled. Default state is true. Whether or not the synchronization job is enabled</summary>
@@ -153,6 +158,7 @@ public enum V1beta1JobSpecInitProviderServicePrincipalIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecInitProviderServicePrincipalIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -166,6 +172,7 @@ public partial class V1beta1JobSpecInitProviderServicePrincipalIdRefPolicy
     public V1beta1JobSpecInitProviderServicePrincipalIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Principal in serviceprincipals to populate servicePrincipalId.</summary>
 public partial class V1beta1JobSpecInitProviderServicePrincipalIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -197,6 +204,7 @@ public enum V1beta1JobSpecInitProviderServicePrincipalIdSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobSpecInitProviderServicePrincipalIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -210,6 +218,7 @@ public partial class V1beta1JobSpecInitProviderServicePrincipalIdSelectorPolicy
     public V1beta1JobSpecInitProviderServicePrincipalIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Principal in serviceprincipals to populate servicePrincipalId.</summary>
 public partial class V1beta1JobSpecInitProviderServicePrincipalIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -225,6 +234,7 @@ public partial class V1beta1JobSpecInitProviderServicePrincipalIdSelector
     public V1beta1JobSpecInitProviderServicePrincipalIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1JobSpecInitProvider
 {
     /// <summary>Whether or not the provisioning job is enabled. Default state is true. Whether or not the synchronization job is enabled</summary>
@@ -290,6 +300,7 @@ public enum V1beta1JobSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -303,6 +314,7 @@ public partial class V1beta1JobSpecProviderConfigRefPolicy
     public V1beta1JobSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1JobSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -334,6 +346,7 @@ public enum V1beta1JobSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -347,6 +360,7 @@ public partial class V1beta1JobSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1JobSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1JobSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -358,6 +372,7 @@ public partial class V1beta1JobSpecPublishConnectionDetailsToConfigRef
     public V1beta1JobSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1JobSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -373,6 +388,7 @@ public partial class V1beta1JobSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1JobSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -388,6 +404,7 @@ public partial class V1beta1JobSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1JobSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -399,6 +416,7 @@ public partial class V1beta1JobSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>JobSpec defines the desired state of Job</summary>
 public partial class V1beta1JobSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -431,6 +449,7 @@ public partial class V1beta1JobSpec
     public V1beta1JobSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderSchedule
 {
     /// <summary>Date and time when this job will expire, formatted as an RFC3339 date string (e.g. 2018-01-01T01:02:03Z).</summary>
@@ -446,6 +465,7 @@ public partial class V1beta1JobStatusAtProviderSchedule
     public string? State { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProvider
 {
     /// <summary>Whether or not the provisioning job is enabled. Default state is true. Whether or not the synchronization job is enabled</summary>
@@ -469,6 +489,7 @@ public partial class V1beta1JobStatusAtProvider
     public string? TemplateId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1JobStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -496,6 +517,7 @@ public partial class V1beta1JobStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>JobStatus defines the observed state of Job.</summary>
 public partial class V1beta1JobStatus
 {
     /// <summary></summary>
@@ -512,6 +534,7 @@ public partial class V1beta1JobStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Job is the Schema for the Jobs API.</summary>
 public partial class V1beta1Job : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1JobSpec>, IStatus<V1beta1JobStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -18,6 +18,7 @@ public enum V1beta1WorkspaceSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkspaceSpecForProviderAadAdmin
 {
     /// <summary>The login name of the Azure AD Administrator of this Synapse Workspace.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1WorkspaceSpecForProviderAadAdmin
     public string? TenantId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkspaceSpecForProviderAzureDevopsRepo
 {
     /// <summary>Specifies the Azure DevOps account name.</summary>
@@ -84,6 +86,7 @@ public enum V1beta1WorkspaceSpecForProviderComputeSubnetIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkspaceSpecForProviderComputeSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -97,6 +100,7 @@ public partial class V1beta1WorkspaceSpecForProviderComputeSubnetIdRefPolicy
     public V1beta1WorkspaceSpecForProviderComputeSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate computeSubnetId.</summary>
 public partial class V1beta1WorkspaceSpecForProviderComputeSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -128,6 +132,7 @@ public enum V1beta1WorkspaceSpecForProviderComputeSubnetIdSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkspaceSpecForProviderComputeSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -141,6 +146,7 @@ public partial class V1beta1WorkspaceSpecForProviderComputeSubnetIdSelectorPolic
     public V1beta1WorkspaceSpecForProviderComputeSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate computeSubnetId.</summary>
 public partial class V1beta1WorkspaceSpecForProviderComputeSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -176,6 +182,7 @@ public enum V1beta1WorkspaceSpecForProviderCustomerManagedKeyKeyVersionlessIdRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkspaceSpecForProviderCustomerManagedKeyKeyVersionlessIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -189,6 +196,7 @@ public partial class V1beta1WorkspaceSpecForProviderCustomerManagedKeyKeyVersion
     public V1beta1WorkspaceSpecForProviderCustomerManagedKeyKeyVersionlessIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in keyvault to populate keyVersionlessId.</summary>
 public partial class V1beta1WorkspaceSpecForProviderCustomerManagedKeyKeyVersionlessIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -220,6 +228,7 @@ public enum V1beta1WorkspaceSpecForProviderCustomerManagedKeyKeyVersionlessIdSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkspaceSpecForProviderCustomerManagedKeyKeyVersionlessIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -233,6 +242,7 @@ public partial class V1beta1WorkspaceSpecForProviderCustomerManagedKeyKeyVersion
     public V1beta1WorkspaceSpecForProviderCustomerManagedKeyKeyVersionlessIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in keyvault to populate keyVersionlessId.</summary>
 public partial class V1beta1WorkspaceSpecForProviderCustomerManagedKeyKeyVersionlessIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -248,6 +258,7 @@ public partial class V1beta1WorkspaceSpecForProviderCustomerManagedKeyKeyVersion
     public V1beta1WorkspaceSpecForProviderCustomerManagedKeyKeyVersionlessIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkspaceSpecForProviderCustomerManagedKey
 {
     /// <summary>An identifier for the key. Name needs to match the name of the key used with the azurerm_synapse_workspace_key resource. Defaults to "cmk" if not specified.</summary>
@@ -271,6 +282,7 @@ public partial class V1beta1WorkspaceSpecForProviderCustomerManagedKey
     public string? UserAssignedIdentityId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkspaceSpecForProviderGithubRepo
 {
     /// <summary>Specifies the GitHub account name.</summary>
@@ -298,6 +310,7 @@ public partial class V1beta1WorkspaceSpecForProviderGithubRepo
     public string? RootFolder { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkspaceSpecForProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Synapse Workspace.</summary>
@@ -329,6 +342,7 @@ public enum V1beta1WorkspaceSpecForProviderManagedResourceGroupNameRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkspaceSpecForProviderManagedResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -342,6 +356,7 @@ public partial class V1beta1WorkspaceSpecForProviderManagedResourceGroupNameRefP
     public V1beta1WorkspaceSpecForProviderManagedResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate managedResourceGroupName.</summary>
 public partial class V1beta1WorkspaceSpecForProviderManagedResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -373,6 +388,7 @@ public enum V1beta1WorkspaceSpecForProviderManagedResourceGroupNameSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkspaceSpecForProviderManagedResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -386,6 +402,7 @@ public partial class V1beta1WorkspaceSpecForProviderManagedResourceGroupNameSele
     public V1beta1WorkspaceSpecForProviderManagedResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate managedResourceGroupName.</summary>
 public partial class V1beta1WorkspaceSpecForProviderManagedResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -421,6 +438,7 @@ public enum V1beta1WorkspaceSpecForProviderResourceGroupNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkspaceSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -434,6 +452,7 @@ public partial class V1beta1WorkspaceSpecForProviderResourceGroupNameRefPolicy
     public V1beta1WorkspaceSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1WorkspaceSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -465,6 +484,7 @@ public enum V1beta1WorkspaceSpecForProviderResourceGroupNameSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkspaceSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -478,6 +498,7 @@ public partial class V1beta1WorkspaceSpecForProviderResourceGroupNameSelectorPol
     public V1beta1WorkspaceSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1WorkspaceSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -493,6 +514,7 @@ public partial class V1beta1WorkspaceSpecForProviderResourceGroupNameSelector
     public V1beta1WorkspaceSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkspaceSpecForProviderSqlAadAdmin
 {
     /// <summary>The login name of the Azure AD Administrator of this Synapse Workspace SQL.</summary>
@@ -508,6 +530,7 @@ public partial class V1beta1WorkspaceSpecForProviderSqlAadAdmin
     public string? TenantId { get; set; }
 }
 
+/// <summary>The Password associated with the sql_administrator_login for the SQL administrator. If this is not provided aad_admin or customer_managed_key must be provided.</summary>
 public partial class V1beta1WorkspaceSpecForProviderSqlAdministratorLoginPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -543,6 +566,7 @@ public enum V1beta1WorkspaceSpecForProviderStorageDataLakeGen2FilesystemIdRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkspaceSpecForProviderStorageDataLakeGen2FilesystemIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -556,6 +580,7 @@ public partial class V1beta1WorkspaceSpecForProviderStorageDataLakeGen2Filesyste
     public V1beta1WorkspaceSpecForProviderStorageDataLakeGen2FilesystemIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a DataLakeGen2FileSystem in storage to populate storageDataLakeGen2FilesystemId.</summary>
 public partial class V1beta1WorkspaceSpecForProviderStorageDataLakeGen2FilesystemIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -587,6 +612,7 @@ public enum V1beta1WorkspaceSpecForProviderStorageDataLakeGen2FilesystemIdSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkspaceSpecForProviderStorageDataLakeGen2FilesystemIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -600,6 +626,7 @@ public partial class V1beta1WorkspaceSpecForProviderStorageDataLakeGen2Filesyste
     public V1beta1WorkspaceSpecForProviderStorageDataLakeGen2FilesystemIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a DataLakeGen2FileSystem in storage to populate storageDataLakeGen2FilesystemId.</summary>
 public partial class V1beta1WorkspaceSpecForProviderStorageDataLakeGen2FilesystemIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -615,6 +642,7 @@ public partial class V1beta1WorkspaceSpecForProviderStorageDataLakeGen2Filesyste
     public V1beta1WorkspaceSpecForProviderStorageDataLakeGen2FilesystemIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkspaceSpecForProvider
 {
     /// <summary>An aad_admin block as defined below.</summary>
@@ -734,6 +762,7 @@ public partial class V1beta1WorkspaceSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkspaceSpecInitProviderAadAdmin
 {
     /// <summary>The login name of the Azure AD Administrator of this Synapse Workspace.</summary>
@@ -749,6 +778,7 @@ public partial class V1beta1WorkspaceSpecInitProviderAadAdmin
     public string? TenantId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkspaceSpecInitProviderAzureDevopsRepo
 {
     /// <summary>Specifies the Azure DevOps account name.</summary>
@@ -800,6 +830,7 @@ public enum V1beta1WorkspaceSpecInitProviderComputeSubnetIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderComputeSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -813,6 +844,7 @@ public partial class V1beta1WorkspaceSpecInitProviderComputeSubnetIdRefPolicy
     public V1beta1WorkspaceSpecInitProviderComputeSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate computeSubnetId.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderComputeSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -844,6 +876,7 @@ public enum V1beta1WorkspaceSpecInitProviderComputeSubnetIdSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderComputeSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -857,6 +890,7 @@ public partial class V1beta1WorkspaceSpecInitProviderComputeSubnetIdSelectorPoli
     public V1beta1WorkspaceSpecInitProviderComputeSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate computeSubnetId.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderComputeSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -892,6 +926,7 @@ public enum V1beta1WorkspaceSpecInitProviderCustomerManagedKeyKeyVersionlessIdRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderCustomerManagedKeyKeyVersionlessIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -905,6 +940,7 @@ public partial class V1beta1WorkspaceSpecInitProviderCustomerManagedKeyKeyVersio
     public V1beta1WorkspaceSpecInitProviderCustomerManagedKeyKeyVersionlessIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in keyvault to populate keyVersionlessId.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderCustomerManagedKeyKeyVersionlessIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -936,6 +972,7 @@ public enum V1beta1WorkspaceSpecInitProviderCustomerManagedKeyKeyVersionlessIdSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderCustomerManagedKeyKeyVersionlessIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -949,6 +986,7 @@ public partial class V1beta1WorkspaceSpecInitProviderCustomerManagedKeyKeyVersio
     public V1beta1WorkspaceSpecInitProviderCustomerManagedKeyKeyVersionlessIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in keyvault to populate keyVersionlessId.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderCustomerManagedKeyKeyVersionlessIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -964,6 +1002,7 @@ public partial class V1beta1WorkspaceSpecInitProviderCustomerManagedKeyKeyVersio
     public V1beta1WorkspaceSpecInitProviderCustomerManagedKeyKeyVersionlessIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkspaceSpecInitProviderCustomerManagedKey
 {
     /// <summary>An identifier for the key. Name needs to match the name of the key used with the azurerm_synapse_workspace_key resource. Defaults to "cmk" if not specified.</summary>
@@ -987,6 +1026,7 @@ public partial class V1beta1WorkspaceSpecInitProviderCustomerManagedKey
     public string? UserAssignedIdentityId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkspaceSpecInitProviderGithubRepo
 {
     /// <summary>Specifies the GitHub account name.</summary>
@@ -1014,6 +1054,7 @@ public partial class V1beta1WorkspaceSpecInitProviderGithubRepo
     public string? RootFolder { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkspaceSpecInitProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Synapse Workspace.</summary>
@@ -1045,6 +1086,7 @@ public enum V1beta1WorkspaceSpecInitProviderManagedResourceGroupNameRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderManagedResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1058,6 +1100,7 @@ public partial class V1beta1WorkspaceSpecInitProviderManagedResourceGroupNameRef
     public V1beta1WorkspaceSpecInitProviderManagedResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate managedResourceGroupName.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderManagedResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1089,6 +1132,7 @@ public enum V1beta1WorkspaceSpecInitProviderManagedResourceGroupNameSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderManagedResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1102,6 +1146,7 @@ public partial class V1beta1WorkspaceSpecInitProviderManagedResourceGroupNameSel
     public V1beta1WorkspaceSpecInitProviderManagedResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate managedResourceGroupName.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderManagedResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1117,6 +1162,7 @@ public partial class V1beta1WorkspaceSpecInitProviderManagedResourceGroupNameSel
     public V1beta1WorkspaceSpecInitProviderManagedResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkspaceSpecInitProviderSqlAadAdmin
 {
     /// <summary>The login name of the Azure AD Administrator of this Synapse Workspace SQL.</summary>
@@ -1152,6 +1198,7 @@ public enum V1beta1WorkspaceSpecInitProviderStorageDataLakeGen2FilesystemIdRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderStorageDataLakeGen2FilesystemIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1165,6 +1212,7 @@ public partial class V1beta1WorkspaceSpecInitProviderStorageDataLakeGen2Filesyst
     public V1beta1WorkspaceSpecInitProviderStorageDataLakeGen2FilesystemIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a DataLakeGen2FileSystem in storage to populate storageDataLakeGen2FilesystemId.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderStorageDataLakeGen2FilesystemIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1196,6 +1244,7 @@ public enum V1beta1WorkspaceSpecInitProviderStorageDataLakeGen2FilesystemIdSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderStorageDataLakeGen2FilesystemIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1209,6 +1258,7 @@ public partial class V1beta1WorkspaceSpecInitProviderStorageDataLakeGen2Filesyst
     public V1beta1WorkspaceSpecInitProviderStorageDataLakeGen2FilesystemIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a DataLakeGen2FileSystem in storage to populate storageDataLakeGen2FilesystemId.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderStorageDataLakeGen2FilesystemIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1224,6 +1274,7 @@ public partial class V1beta1WorkspaceSpecInitProviderStorageDataLakeGen2Filesyst
     public V1beta1WorkspaceSpecInitProviderStorageDataLakeGen2FilesystemIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1WorkspaceSpecInitProvider
 {
     /// <summary>An aad_admin block as defined below.</summary>
@@ -1369,6 +1420,7 @@ public enum V1beta1WorkspaceSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkspaceSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1382,6 +1434,7 @@ public partial class V1beta1WorkspaceSpecProviderConfigRefPolicy
     public V1beta1WorkspaceSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1WorkspaceSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1413,6 +1466,7 @@ public enum V1beta1WorkspaceSpecPublishConnectionDetailsToConfigRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkspaceSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1426,6 +1480,7 @@ public partial class V1beta1WorkspaceSpecPublishConnectionDetailsToConfigRefPoli
     public V1beta1WorkspaceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1WorkspaceSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1437,6 +1492,7 @@ public partial class V1beta1WorkspaceSpecPublishConnectionDetailsToConfigRef
     public V1beta1WorkspaceSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1WorkspaceSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1452,6 +1508,7 @@ public partial class V1beta1WorkspaceSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1WorkspaceSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1467,6 +1524,7 @@ public partial class V1beta1WorkspaceSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1WorkspaceSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1478,6 +1536,7 @@ public partial class V1beta1WorkspaceSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>WorkspaceSpec defines the desired state of Workspace</summary>
 public partial class V1beta1WorkspaceSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1510,6 +1569,7 @@ public partial class V1beta1WorkspaceSpec
     public V1beta1WorkspaceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkspaceStatusAtProviderAadAdmin
 {
     /// <summary>The login name of the Azure AD Administrator of this Synapse Workspace.</summary>
@@ -1525,6 +1585,7 @@ public partial class V1beta1WorkspaceStatusAtProviderAadAdmin
     public string? TenantId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkspaceStatusAtProviderAzureDevopsRepo
 {
     /// <summary>Specifies the Azure DevOps account name.</summary>
@@ -1556,6 +1617,7 @@ public partial class V1beta1WorkspaceStatusAtProviderAzureDevopsRepo
     public string? TenantId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkspaceStatusAtProviderCustomerManagedKey
 {
     /// <summary>An identifier for the key. Name needs to match the name of the key used with the azurerm_synapse_workspace_key resource. Defaults to "cmk" if not specified.</summary>
@@ -1571,6 +1633,7 @@ public partial class V1beta1WorkspaceStatusAtProviderCustomerManagedKey
     public string? UserAssignedIdentityId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkspaceStatusAtProviderGithubRepo
 {
     /// <summary>Specifies the GitHub account name.</summary>
@@ -1598,6 +1661,7 @@ public partial class V1beta1WorkspaceStatusAtProviderGithubRepo
     public string? RootFolder { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkspaceStatusAtProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Synapse Workspace.</summary>
@@ -1617,6 +1681,7 @@ public partial class V1beta1WorkspaceStatusAtProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkspaceStatusAtProviderSqlAadAdmin
 {
     /// <summary>The login name of the Azure AD Administrator of this Synapse Workspace SQL.</summary>
@@ -1632,6 +1697,7 @@ public partial class V1beta1WorkspaceStatusAtProviderSqlAadAdmin
     public string? TenantId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkspaceStatusAtProvider
 {
     /// <summary>An aad_admin block as defined below.</summary>
@@ -1723,6 +1789,7 @@ public partial class V1beta1WorkspaceStatusAtProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1WorkspaceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1750,6 +1817,7 @@ public partial class V1beta1WorkspaceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>WorkspaceStatus defines the observed state of Workspace.</summary>
 public partial class V1beta1WorkspaceStatus
 {
     /// <summary></summary>
@@ -1766,6 +1834,7 @@ public partial class V1beta1WorkspaceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Workspace is the Schema for the Workspaces API. Manages a Synapse Workspace.</summary>
 public partial class V1beta1Workspace : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1WorkspaceSpec>, IStatus<V1beta1WorkspaceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

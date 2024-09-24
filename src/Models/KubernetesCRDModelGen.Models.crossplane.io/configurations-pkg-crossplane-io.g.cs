@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.pkg.crossplane.io;
+/// <summary>LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.</summary>
 public partial class V1ConfigurationSpecPackagePullSecrets
 {
     /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. TODO: Add other useful fields. apiVersion, kind, uid? More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Drop `kubebuilder:default` when controller-gen doesn't need it https://github.com/kubernetes-sigs/kubebuilder/issues/3896.</summary>
@@ -15,6 +16,7 @@ public partial class V1ConfigurationSpecPackagePullSecrets
     public string? Name { get; set; }
 }
 
+/// <summary>ConfigurationSpec specifies details about a request to install a configuration to Crossplane.</summary>
 public partial class V1ConfigurationSpec
 {
     /// <summary>Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/</summary>
@@ -50,6 +52,7 @@ public partial class V1ConfigurationSpec
     public bool? SkipDependencyResolution { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1ConfigurationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -77,6 +80,7 @@ public partial class V1ConfigurationStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ConfigurationStatus represents the observed state of a Configuration.</summary>
 public partial class V1ConfigurationStatus
 {
     /// <summary>Conditions of the resource.</summary>
@@ -93,6 +97,7 @@ public partial class V1ConfigurationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>A Configuration installs an OCI compatible Crossplane package, extending Crossplane with support for new kinds of CompositeResourceDefinitions and Compositions.   Read the Crossplane documentation for [more information about Configuration packages](https://docs.crossplane.io/latest/concepts/packages).</summary>
 public partial class V1Configuration : IKubernetesObject<V1ObjectMeta>, ISpec<V1ConfigurationSpec>, IStatus<V1ConfigurationStatus>
 {
     public const string KubeApiVersion = "v1";

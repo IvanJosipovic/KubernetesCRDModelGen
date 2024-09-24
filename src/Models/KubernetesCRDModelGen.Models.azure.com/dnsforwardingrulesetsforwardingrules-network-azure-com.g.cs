@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a network.azure.com/DnsForwardingRuleset resource</summary>
 public partial class V1api20220701storageDnsForwardingRuleSetsForwardingRuleSpecOwner
 {
     /// <summary></summary>
@@ -19,6 +20,7 @@ public partial class V1api20220701storageDnsForwardingRuleSetsForwardingRuleSpec
     public string? Name { get; set; }
 }
 
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20220701storageDnsForwardingRuleSetsForwardingRuleSpecTargetDnsServersIpAddressFromConfig
 {
     /// <summary>Key is the key in the Kubernetes configmap being referenced</summary>
@@ -30,6 +32,7 @@ public partial class V1api20220701storageDnsForwardingRuleSetsForwardingRuleSpec
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.TargetDnsServer Describes a server to forward the DNS queries to.</summary>
 public partial class V1api20220701storageDnsForwardingRuleSetsForwardingRuleSpecTargetDnsServers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -49,6 +52,7 @@ public partial class V1api20220701storageDnsForwardingRuleSetsForwardingRuleSpec
     public int? Port { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.DnsForwardingRulesets_ForwardingRule_Spec</summary>
 public partial class V1api20220701storageDnsForwardingRuleSetsForwardingRuleSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -84,6 +88,7 @@ public partial class V1api20220701storageDnsForwardingRuleSetsForwardingRuleSpec
     public IList<V1api20220701storageDnsForwardingRuleSetsForwardingRuleSpecTargetDnsServers>? TargetDnsServers { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20220701storageDnsForwardingRuleSetsForwardingRuleStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -115,6 +120,7 @@ public partial class V1api20220701storageDnsForwardingRuleSetsForwardingRuleStat
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 public partial class V1api20220701storageDnsForwardingRuleSetsForwardingRuleStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -146,6 +152,7 @@ public partial class V1api20220701storageDnsForwardingRuleSetsForwardingRuleStat
     public string? LastModifiedByType { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.TargetDnsServer_STATUS Describes a server to forward the DNS queries to.</summary>
 public partial class V1api20220701storageDnsForwardingRuleSetsForwardingRuleStatusTargetDnsServers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -161,6 +168,7 @@ public partial class V1api20220701storageDnsForwardingRuleSetsForwardingRuleStat
     public int? Port { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.DnsForwardingRulesets_ForwardingRule_STATUS</summary>
 public partial class V1api20220701storageDnsForwardingRuleSetsForwardingRuleStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -213,6 +221,7 @@ public partial class V1api20220701storageDnsForwardingRuleSetsForwardingRuleStat
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20220701.DnsForwardingRuleSetsForwardingRule Generator information: - Generated from: /dnsresolver/resource-manager/Microsoft.Network/stable/2022-07-01/dnsresolver.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsForwardingRulesets/{dnsForwardingRulesetName}/forwardingRules/{forwardingRuleName}</summary>
 public partial class V1api20220701storageDnsForwardingRuleSetsForwardingRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20220701storageDnsForwardingRuleSetsForwardingRuleSpec>, IStatus<V1api20220701storageDnsForwardingRuleSetsForwardingRuleStatus>
 {
     public const string KubeApiVersion = "v1api20220701storage";

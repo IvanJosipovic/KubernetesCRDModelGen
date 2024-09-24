@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containerregistry.azure.com;
+/// <summary>Storage version of v1api20210901.KeyVaultProperties</summary>
 public partial class V1api20210901storageRegistrySpecEncryptionKeyVaultProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -23,6 +24,7 @@ public partial class V1api20210901storageRegistrySpecEncryptionKeyVaultPropertie
     public string? KeyIdentifier { get; set; }
 }
 
+/// <summary>Storage version of v1api20210901.EncryptionProperty</summary>
 public partial class V1api20210901storageRegistrySpecEncryption
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -38,6 +40,7 @@ public partial class V1api20210901storageRegistrySpecEncryption
     public string? Status { get; set; }
 }
 
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 public partial class V1api20210901storageRegistrySpecIdentityUserAssignedIdentitiesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -57,6 +60,7 @@ public partial class V1api20210901storageRegistrySpecIdentityUserAssignedIdentit
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20210901.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
 public partial class V1api20210901storageRegistrySpecIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -68,6 +72,7 @@ public partial class V1api20210901storageRegistrySpecIdentityUserAssignedIdentit
     public V1api20210901storageRegistrySpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20210901.IdentityProperties Managed identity for the resource.</summary>
 public partial class V1api20210901storageRegistrySpecIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -91,6 +96,7 @@ public partial class V1api20210901storageRegistrySpecIdentity
     public IList<V1api20210901storageRegistrySpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
+/// <summary>Storage version of v1api20210901.IPRule IP rule with specific IP or IP range in CIDR format.</summary>
 public partial class V1api20210901storageRegistrySpecNetworkRuleSetIpRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -106,6 +112,7 @@ public partial class V1api20210901storageRegistrySpecNetworkRuleSetIpRules
     public string? Value { get; set; }
 }
 
+/// <summary>Storage version of v1api20210901.NetworkRuleSet The network rule set for a container registry.</summary>
 public partial class V1api20210901storageRegistrySpecNetworkRuleSet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -121,6 +128,7 @@ public partial class V1api20210901storageRegistrySpecNetworkRuleSet
     public IList<V1api20210901storageRegistrySpecNetworkRuleSetIpRules>? IpRules { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20210901storageRegistrySpecOwner
 {
     /// <summary></summary>
@@ -132,6 +140,7 @@ public partial class V1api20210901storageRegistrySpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20210901.ExportPolicy The export policy for a container registry.</summary>
 public partial class V1api20210901storageRegistrySpecPoliciesExportPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -143,6 +152,7 @@ public partial class V1api20210901storageRegistrySpecPoliciesExportPolicy
     public string? Status { get; set; }
 }
 
+/// <summary>Storage version of v1api20210901.QuarantinePolicy The quarantine policy for a container registry.</summary>
 public partial class V1api20210901storageRegistrySpecPoliciesQuarantinePolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -154,6 +164,7 @@ public partial class V1api20210901storageRegistrySpecPoliciesQuarantinePolicy
     public string? Status { get; set; }
 }
 
+/// <summary>Storage version of v1api20210901.RetentionPolicy The retention policy for a container registry.</summary>
 public partial class V1api20210901storageRegistrySpecPoliciesRetentionPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -169,6 +180,7 @@ public partial class V1api20210901storageRegistrySpecPoliciesRetentionPolicy
     public string? Status { get; set; }
 }
 
+/// <summary>Storage version of v1api20210901.TrustPolicy The content trust policy for a container registry.</summary>
 public partial class V1api20210901storageRegistrySpecPoliciesTrustPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -184,6 +196,7 @@ public partial class V1api20210901storageRegistrySpecPoliciesTrustPolicy
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20210901.Policies The policies for a container registry.</summary>
 public partial class V1api20210901storageRegistrySpecPolicies
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -207,6 +220,7 @@ public partial class V1api20210901storageRegistrySpecPolicies
     public V1api20210901storageRegistrySpecPoliciesTrustPolicy? TrustPolicy { get; set; }
 }
 
+/// <summary>Storage version of v1api20210901.Sku The SKU of a container registry.</summary>
 public partial class V1api20210901storageRegistrySpecSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -218,6 +232,7 @@ public partial class V1api20210901storageRegistrySpecSku
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20210901.Registry_Spec</summary>
 public partial class V1api20210901storageRegistrySpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -285,6 +300,7 @@ public partial class V1api20210901storageRegistrySpec
     public string? ZoneRedundancy { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20210901storageRegistryStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -316,6 +332,7 @@ public partial class V1api20210901storageRegistryStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20210901.KeyVaultProperties_STATUS</summary>
 public partial class V1api20210901storageRegistryStatusEncryptionKeyVaultProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -343,6 +360,7 @@ public partial class V1api20210901storageRegistryStatusEncryptionKeyVaultPropert
     public string? VersionedKeyIdentifier { get; set; }
 }
 
+/// <summary>Storage version of v1api20210901.EncryptionProperty_STATUS</summary>
 public partial class V1api20210901storageRegistryStatusEncryption
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -358,6 +376,7 @@ public partial class V1api20210901storageRegistryStatusEncryption
     public string? Status { get; set; }
 }
 
+/// <summary>Storage version of v1api20210901.UserIdentityProperties_STATUS</summary>
 public partial class V1api20210901storageRegistryStatusIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -373,6 +392,7 @@ public partial class V1api20210901storageRegistryStatusIdentityUserAssignedIdent
     public string? PrincipalId { get; set; }
 }
 
+/// <summary>Storage version of v1api20210901.IdentityProperties_STATUS Managed identity for the resource.</summary>
 public partial class V1api20210901storageRegistryStatusIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -396,6 +416,7 @@ public partial class V1api20210901storageRegistryStatusIdentity
     public IDictionary<string, V1api20210901storageRegistryStatusIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
+/// <summary>Storage version of v1api20210901.IPRule_STATUS IP rule with specific IP or IP range in CIDR format.</summary>
 public partial class V1api20210901storageRegistryStatusNetworkRuleSetIpRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -411,6 +432,7 @@ public partial class V1api20210901storageRegistryStatusNetworkRuleSetIpRules
     public string? Value { get; set; }
 }
 
+/// <summary>Storage version of v1api20210901.NetworkRuleSet_STATUS The network rule set for a container registry.</summary>
 public partial class V1api20210901storageRegistryStatusNetworkRuleSet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -426,6 +448,7 @@ public partial class V1api20210901storageRegistryStatusNetworkRuleSet
     public IList<V1api20210901storageRegistryStatusNetworkRuleSetIpRules>? IpRules { get; set; }
 }
 
+/// <summary>Storage version of v1api20210901.ExportPolicy_STATUS The export policy for a container registry.</summary>
 public partial class V1api20210901storageRegistryStatusPoliciesExportPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -437,6 +460,7 @@ public partial class V1api20210901storageRegistryStatusPoliciesExportPolicy
     public string? Status { get; set; }
 }
 
+/// <summary>Storage version of v1api20210901.QuarantinePolicy_STATUS The quarantine policy for a container registry.</summary>
 public partial class V1api20210901storageRegistryStatusPoliciesQuarantinePolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -448,6 +472,7 @@ public partial class V1api20210901storageRegistryStatusPoliciesQuarantinePolicy
     public string? Status { get; set; }
 }
 
+/// <summary>Storage version of v1api20210901.RetentionPolicy_STATUS The retention policy for a container registry.</summary>
 public partial class V1api20210901storageRegistryStatusPoliciesRetentionPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -467,6 +492,7 @@ public partial class V1api20210901storageRegistryStatusPoliciesRetentionPolicy
     public string? Status { get; set; }
 }
 
+/// <summary>Storage version of v1api20210901.TrustPolicy_STATUS The content trust policy for a container registry.</summary>
 public partial class V1api20210901storageRegistryStatusPoliciesTrustPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -482,6 +508,7 @@ public partial class V1api20210901storageRegistryStatusPoliciesTrustPolicy
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20210901.Policies_STATUS The policies for a container registry.</summary>
 public partial class V1api20210901storageRegistryStatusPolicies
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -505,6 +532,7 @@ public partial class V1api20210901storageRegistryStatusPolicies
     public V1api20210901storageRegistryStatusPoliciesTrustPolicy? TrustPolicy { get; set; }
 }
 
+/// <summary>Storage version of v1api20210901.PrivateEndpointConnection_STATUS An object that represents a private endpoint connection for a container registry.</summary>
 public partial class V1api20210901storageRegistryStatusPrivateEndpointConnections
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -516,6 +544,7 @@ public partial class V1api20210901storageRegistryStatusPrivateEndpointConnection
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20210901.Sku_STATUS The SKU of a container registry.</summary>
 public partial class V1api20210901storageRegistryStatusSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -531,6 +560,7 @@ public partial class V1api20210901storageRegistryStatusSku
     public string? Tier { get; set; }
 }
 
+/// <summary>Storage version of v1api20210901.Status_STATUS The status of an Azure resource at the time the operation was called.</summary>
 public partial class V1api20210901storageRegistryStatusStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -550,6 +580,7 @@ public partial class V1api20210901storageRegistryStatusStatus
     public string? Timestamp { get; set; }
 }
 
+/// <summary>Storage version of v1api20210901.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 public partial class V1api20210901storageRegistryStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -581,6 +612,7 @@ public partial class V1api20210901storageRegistryStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
+/// <summary>Storage version of v1api20210901.Registry_STATUS An object that represents a container registry.</summary>
 public partial class V1api20210901storageRegistryStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -681,6 +713,7 @@ public partial class V1api20210901storageRegistryStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20210901.Registry Generator information: - Generated from: /containerregistry/resource-manager/Microsoft.ContainerRegistry/stable/2021-09-01/containerregistry.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerRegistry/registries/{registryName}</summary>
 public partial class V1api20210901storageRegistry : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20210901storageRegistrySpec>, IStatus<V1api20210901storageRegistryStatus>
 {
     public const string KubeApiVersion = "v1api20210901storage";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.serviceusage.cnrm.cloud.google.com;
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1beta1ServiceIdentitySpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1ServiceIdentitySpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceIdentitySpec
 {
     /// <summary>The project that this resource belongs to.</summary>
@@ -34,6 +36,7 @@ public partial class V1beta1ServiceIdentitySpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceIdentityStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -57,6 +60,7 @@ public partial class V1beta1ServiceIdentityStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceIdentityStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -73,6 +77,7 @@ public partial class V1beta1ServiceIdentityStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ServiceIdentity : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ServiceIdentitySpec>, IStatus<V1beta1ServiceIdentityStatus>
 {
     public const string KubeApiVersion = "v1beta1";

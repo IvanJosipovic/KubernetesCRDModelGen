@@ -38,6 +38,7 @@ public enum V1beta1SQLRoleAssignmentSpecForProviderAccountNameRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecForProviderAccountNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1SQLRoleAssignmentSpecForProviderAccountNameRefPolicy
     public V1beta1SQLRoleAssignmentSpecForProviderAccountNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in cosmosdb to populate accountName.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecForProviderAccountNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1SQLRoleAssignmentSpecForProviderAccountNameSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecForProviderAccountNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1SQLRoleAssignmentSpecForProviderAccountNameSelectorP
     public V1beta1SQLRoleAssignmentSpecForProviderAccountNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in cosmosdb to populate accountName.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecForProviderAccountNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1SQLRoleAssignmentSpecForProviderResourceGroupNameRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1SQLRoleAssignmentSpecForProviderResourceGroupNameRef
     public V1beta1SQLRoleAssignmentSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1SQLRoleAssignmentSpecForProviderResourceGroupNameSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1SQLRoleAssignmentSpecForProviderResourceGroupNameSel
     public V1beta1SQLRoleAssignmentSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1SQLRoleAssignmentSpecForProviderRoleDefinitionIdRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecForProviderRoleDefinitionIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1SQLRoleAssignmentSpecForProviderRoleDefinitionIdRefP
     public V1beta1SQLRoleAssignmentSpecForProviderRoleDefinitionIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SQLRoleDefinition in cosmosdb to populate roleDefinitionId.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecForProviderRoleDefinitionIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1SQLRoleAssignmentSpecForProviderRoleDefinitionIdSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecForProviderRoleDefinitionIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1SQLRoleAssignmentSpecForProviderRoleDefinitionIdSele
     public V1beta1SQLRoleAssignmentSpecForProviderRoleDefinitionIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SQLRoleDefinition in cosmosdb to populate roleDefinitionId.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecForProviderRoleDefinitionIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -314,6 +326,7 @@ public enum V1beta1SQLRoleAssignmentSpecForProviderScopeRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecForProviderScopeRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -327,6 +340,7 @@ public partial class V1beta1SQLRoleAssignmentSpecForProviderScopeRefPolicy
     public V1beta1SQLRoleAssignmentSpecForProviderScopeRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in cosmosdb to populate scope.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecForProviderScopeRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -358,6 +372,7 @@ public enum V1beta1SQLRoleAssignmentSpecForProviderScopeSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecForProviderScopeSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -371,6 +386,7 @@ public partial class V1beta1SQLRoleAssignmentSpecForProviderScopeSelectorPolicy
     public V1beta1SQLRoleAssignmentSpecForProviderScopeSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in cosmosdb to populate scope.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecForProviderScopeSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -386,6 +402,7 @@ public partial class V1beta1SQLRoleAssignmentSpecForProviderScopeSelector
     public V1beta1SQLRoleAssignmentSpecForProviderScopeSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLRoleAssignmentSpecForProvider
 {
     /// <summary>The name of the Cosmos DB Account. Changing this forces a new resource to be created.</summary>
@@ -465,6 +482,7 @@ public enum V1beta1SQLRoleAssignmentSpecInitProviderAccountNameRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecInitProviderAccountNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -478,6 +496,7 @@ public partial class V1beta1SQLRoleAssignmentSpecInitProviderAccountNameRefPolic
     public V1beta1SQLRoleAssignmentSpecInitProviderAccountNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in cosmosdb to populate accountName.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecInitProviderAccountNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -509,6 +528,7 @@ public enum V1beta1SQLRoleAssignmentSpecInitProviderAccountNameSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecInitProviderAccountNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -522,6 +542,7 @@ public partial class V1beta1SQLRoleAssignmentSpecInitProviderAccountNameSelector
     public V1beta1SQLRoleAssignmentSpecInitProviderAccountNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in cosmosdb to populate accountName.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecInitProviderAccountNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -557,6 +578,7 @@ public enum V1beta1SQLRoleAssignmentSpecInitProviderResourceGroupNameRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecInitProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -570,6 +592,7 @@ public partial class V1beta1SQLRoleAssignmentSpecInitProviderResourceGroupNameRe
     public V1beta1SQLRoleAssignmentSpecInitProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecInitProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -601,6 +624,7 @@ public enum V1beta1SQLRoleAssignmentSpecInitProviderResourceGroupNameSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecInitProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -614,6 +638,7 @@ public partial class V1beta1SQLRoleAssignmentSpecInitProviderResourceGroupNameSe
     public V1beta1SQLRoleAssignmentSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecInitProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -649,6 +674,7 @@ public enum V1beta1SQLRoleAssignmentSpecInitProviderRoleDefinitionIdRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecInitProviderRoleDefinitionIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -662,6 +688,7 @@ public partial class V1beta1SQLRoleAssignmentSpecInitProviderRoleDefinitionIdRef
     public V1beta1SQLRoleAssignmentSpecInitProviderRoleDefinitionIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SQLRoleDefinition in cosmosdb to populate roleDefinitionId.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecInitProviderRoleDefinitionIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -693,6 +720,7 @@ public enum V1beta1SQLRoleAssignmentSpecInitProviderRoleDefinitionIdSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecInitProviderRoleDefinitionIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -706,6 +734,7 @@ public partial class V1beta1SQLRoleAssignmentSpecInitProviderRoleDefinitionIdSel
     public V1beta1SQLRoleAssignmentSpecInitProviderRoleDefinitionIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SQLRoleDefinition in cosmosdb to populate roleDefinitionId.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecInitProviderRoleDefinitionIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -741,6 +770,7 @@ public enum V1beta1SQLRoleAssignmentSpecInitProviderScopeRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecInitProviderScopeRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -754,6 +784,7 @@ public partial class V1beta1SQLRoleAssignmentSpecInitProviderScopeRefPolicy
     public V1beta1SQLRoleAssignmentSpecInitProviderScopeRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in cosmosdb to populate scope.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecInitProviderScopeRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -785,6 +816,7 @@ public enum V1beta1SQLRoleAssignmentSpecInitProviderScopeSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecInitProviderScopeSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -798,6 +830,7 @@ public partial class V1beta1SQLRoleAssignmentSpecInitProviderScopeSelectorPolicy
     public V1beta1SQLRoleAssignmentSpecInitProviderScopeSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in cosmosdb to populate scope.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecInitProviderScopeSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -813,6 +846,7 @@ public partial class V1beta1SQLRoleAssignmentSpecInitProviderScopeSelector
     public V1beta1SQLRoleAssignmentSpecInitProviderScopeSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecInitProvider
 {
     /// <summary>The name of the Cosmos DB Account. Changing this forces a new resource to be created.</summary>
@@ -914,6 +948,7 @@ public enum V1beta1SQLRoleAssignmentSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -927,6 +962,7 @@ public partial class V1beta1SQLRoleAssignmentSpecProviderConfigRefPolicy
     public V1beta1SQLRoleAssignmentSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -958,6 +994,7 @@ public enum V1beta1SQLRoleAssignmentSpecPublishConnectionDetailsToConfigRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -971,6 +1008,7 @@ public partial class V1beta1SQLRoleAssignmentSpecPublishConnectionDetailsToConfi
     public V1beta1SQLRoleAssignmentSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -982,6 +1020,7 @@ public partial class V1beta1SQLRoleAssignmentSpecPublishConnectionDetailsToConfi
     public V1beta1SQLRoleAssignmentSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -997,6 +1036,7 @@ public partial class V1beta1SQLRoleAssignmentSpecPublishConnectionDetailsToMetad
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1012,6 +1052,7 @@ public partial class V1beta1SQLRoleAssignmentSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1SQLRoleAssignmentSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1023,6 +1064,7 @@ public partial class V1beta1SQLRoleAssignmentSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>SQLRoleAssignmentSpec defines the desired state of SQLRoleAssignment</summary>
 public partial class V1beta1SQLRoleAssignmentSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1055,6 +1097,7 @@ public partial class V1beta1SQLRoleAssignmentSpec
     public V1beta1SQLRoleAssignmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLRoleAssignmentStatusAtProvider
 {
     /// <summary>The name of the Cosmos DB Account. Changing this forces a new resource to be created.</summary>
@@ -1086,6 +1129,7 @@ public partial class V1beta1SQLRoleAssignmentStatusAtProvider
     public string? Scope { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1SQLRoleAssignmentStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1113,6 +1157,7 @@ public partial class V1beta1SQLRoleAssignmentStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>SQLRoleAssignmentStatus defines the observed state of SQLRoleAssignment.</summary>
 public partial class V1beta1SQLRoleAssignmentStatus
 {
     /// <summary></summary>
@@ -1129,6 +1174,7 @@ public partial class V1beta1SQLRoleAssignmentStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>SQLRoleAssignment is the Schema for the SQLRoleAssignments API. Manages a Cosmos DB SQL Role Assignment.</summary>
 public partial class V1beta1SQLRoleAssignment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SQLRoleAssignmentSpec>, IStatus<V1beta1SQLRoleAssignmentStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -18,6 +18,7 @@ public enum V1beta1CertificateAuthoritySpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthoritySpecForProviderConfigSubjectConfigSubject
 {
     /// <summary>The common name of the distinguished name.</summary>
@@ -53,6 +54,7 @@ public partial class V1beta1CertificateAuthoritySpecForProviderConfigSubjectConf
     public string? StreetAddress { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthoritySpecForProviderConfigSubjectConfigSubjectAltName
 {
     /// <summary>Contains only valid, fully-qualified host names.</summary>
@@ -72,6 +74,7 @@ public partial class V1beta1CertificateAuthoritySpecForProviderConfigSubjectConf
     public IList<string>? Uris { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthoritySpecForProviderConfigSubjectConfig
 {
     /// <summary>Contains distinguished name fields such as the location and organization. Structure is documented below.</summary>
@@ -83,6 +86,7 @@ public partial class V1beta1CertificateAuthoritySpecForProviderConfigSubjectConf
     public IList<V1beta1CertificateAuthoritySpecForProviderConfigSubjectConfigSubjectAltName>? SubjectAltName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthoritySpecForProviderConfigSubjectKeyId
 {
     /// <summary>The value of the KeyId in lowercase hexidecimal.</summary>
@@ -90,6 +94,7 @@ public partial class V1beta1CertificateAuthoritySpecForProviderConfigSubjectKeyI
     public string? KeyId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigAdditionalExtensionsObjectId
 {
     /// <summary>An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.</summary>
@@ -97,6 +102,7 @@ public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigA
     public IList<double>? ObjectIdPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigAdditionalExtensions
 {
     /// <summary>Indicates whether or not the name constraints are marked critical.</summary>
@@ -112,6 +118,7 @@ public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigA
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigCaOptions
 {
     /// <summary>When true, the "CA" in Basic Constraints extension will be set to true.</summary>
@@ -131,6 +138,7 @@ public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigC
     public bool? ZeroMaxIssuerPathLength { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigKeyUsageBaseKeyUsage
 {
     /// <summary>The key may be used to sign certificates.</summary>
@@ -170,6 +178,7 @@ public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigK
     public bool? KeyEncipherment { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigKeyUsageExtendedKeyUsage
 {
     /// <summary>Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.</summary>
@@ -197,6 +206,7 @@ public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigK
     public bool? TimeStamping { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigKeyUsageUnknownExtendedKeyUsages
 {
     /// <summary>An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.</summary>
@@ -204,6 +214,7 @@ public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigK
     public IList<double>? ObjectIdPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigKeyUsage
 {
     /// <summary>Describes high-level ways in which a key may be used. Structure is documented below.</summary>
@@ -219,6 +230,7 @@ public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigK
     public IList<V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigKeyUsageUnknownExtendedKeyUsages>? UnknownExtendedKeyUsages { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigNameConstraints
 {
     /// <summary>Indicates whether or not the name constraints are marked critical.</summary>
@@ -258,6 +270,7 @@ public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigN
     public IList<string>? PermittedUris { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigPolicyIds
 {
     /// <summary>An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.</summary>
@@ -265,6 +278,7 @@ public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigP
     public IList<double>? ObjectIdPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509Config
 {
     /// <summary>Specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs. Structure is documented below.</summary>
@@ -292,6 +306,7 @@ public partial class V1beta1CertificateAuthoritySpecForProviderConfigX509Config
     public IList<V1beta1CertificateAuthoritySpecForProviderConfigX509ConfigPolicyIds>? PolicyIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthoritySpecForProviderConfig
 {
     /// <summary>Specifies some of the values in a certificate that are related to the subject. Structure is documented below.</summary>
@@ -307,6 +322,7 @@ public partial class V1beta1CertificateAuthoritySpecForProviderConfig
     public IList<V1beta1CertificateAuthoritySpecForProviderConfigX509Config>? X509Config { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthoritySpecForProviderKeySpec
 {
     /// <summary>The algorithm to use for creating a managed Cloud KMS key for a for a simplified experience. All managed keys will be have their ProtectionLevel as HSM. Possible values are: SIGN_HASH_ALGORITHM_UNSPECIFIED, RSA_PSS_2048_SHA256, RSA_PSS_3072_SHA256, RSA_PSS_4096_SHA256, RSA_PKCS1_2048_SHA256, RSA_PKCS1_3072_SHA256, RSA_PKCS1_4096_SHA256, EC_P256_SHA256, EC_P384_SHA384.</summary>
@@ -338,6 +354,7 @@ public enum V1beta1CertificateAuthoritySpecForProviderPoolRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CertificateAuthoritySpecForProviderPoolRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -351,6 +368,7 @@ public partial class V1beta1CertificateAuthoritySpecForProviderPoolRefPolicy
     public V1beta1CertificateAuthoritySpecForProviderPoolRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a CAPool in privateca to populate pool.</summary>
 public partial class V1beta1CertificateAuthoritySpecForProviderPoolRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -382,6 +400,7 @@ public enum V1beta1CertificateAuthoritySpecForProviderPoolSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CertificateAuthoritySpecForProviderPoolSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -395,6 +414,7 @@ public partial class V1beta1CertificateAuthoritySpecForProviderPoolSelectorPolic
     public V1beta1CertificateAuthoritySpecForProviderPoolSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a CAPool in privateca to populate pool.</summary>
 public partial class V1beta1CertificateAuthoritySpecForProviderPoolSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -430,6 +450,7 @@ public enum V1beta1CertificateAuthoritySpecForProviderSubordinateConfigCertifica
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CertificateAuthoritySpecForProviderSubordinateConfigCertificateAuthorityRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -443,6 +464,7 @@ public partial class V1beta1CertificateAuthoritySpecForProviderSubordinateConfig
     public V1beta1CertificateAuthoritySpecForProviderSubordinateConfigCertificateAuthorityRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a CertificateAuthority in privateca to populate certificateAuthority.</summary>
 public partial class V1beta1CertificateAuthoritySpecForProviderSubordinateConfigCertificateAuthorityRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -474,6 +496,7 @@ public enum V1beta1CertificateAuthoritySpecForProviderSubordinateConfigCertifica
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CertificateAuthoritySpecForProviderSubordinateConfigCertificateAuthoritySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -487,6 +510,7 @@ public partial class V1beta1CertificateAuthoritySpecForProviderSubordinateConfig
     public V1beta1CertificateAuthoritySpecForProviderSubordinateConfigCertificateAuthoritySelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a CertificateAuthority in privateca to populate certificateAuthority.</summary>
 public partial class V1beta1CertificateAuthoritySpecForProviderSubordinateConfigCertificateAuthoritySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -502,6 +526,7 @@ public partial class V1beta1CertificateAuthoritySpecForProviderSubordinateConfig
     public V1beta1CertificateAuthoritySpecForProviderSubordinateConfigCertificateAuthoritySelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthoritySpecForProviderSubordinateConfigPemIssuerChain
 {
     /// <summary>Expected to be in leaf-to-root order according to RFC 5246.</summary>
@@ -509,6 +534,7 @@ public partial class V1beta1CertificateAuthoritySpecForProviderSubordinateConfig
     public IList<string>? PemCertificates { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthoritySpecForProviderSubordinateConfig
 {
     /// <summary>This can refer to a CertificateAuthority that was used to create a subordinate CertificateAuthority. This field is used for information and usability purposes only. The resource name is in the format projects/*/locations/*/caPools/*/certificateAuthorities/*.</summary>
@@ -528,6 +554,7 @@ public partial class V1beta1CertificateAuthoritySpecForProviderSubordinateConfig
     public IList<V1beta1CertificateAuthoritySpecForProviderSubordinateConfigPemIssuerChain>? PemIssuerChain { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthoritySpecForProvider
 {
     /// <summary>The config used to create a self-signed X.509 certificate or CSR. Structure is documented below.</summary>
@@ -599,6 +626,7 @@ public partial class V1beta1CertificateAuthoritySpecForProvider
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthoritySpecInitProviderConfigSubjectConfigSubject
 {
     /// <summary>The common name of the distinguished name.</summary>
@@ -634,6 +662,7 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderConfigSubjectCon
     public string? StreetAddress { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthoritySpecInitProviderConfigSubjectConfigSubjectAltName
 {
     /// <summary>Contains only valid, fully-qualified host names.</summary>
@@ -653,6 +682,7 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderConfigSubjectCon
     public IList<string>? Uris { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthoritySpecInitProviderConfigSubjectConfig
 {
     /// <summary>Contains distinguished name fields such as the location and organization. Structure is documented below.</summary>
@@ -664,6 +694,7 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderConfigSubjectCon
     public IList<V1beta1CertificateAuthoritySpecInitProviderConfigSubjectConfigSubjectAltName>? SubjectAltName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthoritySpecInitProviderConfigSubjectKeyId
 {
     /// <summary>The value of the KeyId in lowercase hexidecimal.</summary>
@@ -671,6 +702,7 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderConfigSubjectKey
     public string? KeyId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509ConfigAdditionalExtensionsObjectId
 {
     /// <summary>An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.</summary>
@@ -678,6 +710,7 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509Config
     public IList<double>? ObjectIdPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509ConfigAdditionalExtensions
 {
     /// <summary>Indicates whether or not the name constraints are marked critical.</summary>
@@ -693,6 +726,7 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509Config
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509ConfigCaOptions
 {
     /// <summary>When true, the "CA" in Basic Constraints extension will be set to true.</summary>
@@ -712,6 +746,7 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509Config
     public bool? ZeroMaxIssuerPathLength { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509ConfigKeyUsageBaseKeyUsage
 {
     /// <summary>The key may be used to sign certificates.</summary>
@@ -751,6 +786,7 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509Config
     public bool? KeyEncipherment { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509ConfigKeyUsageExtendedKeyUsage
 {
     /// <summary>Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.</summary>
@@ -778,6 +814,7 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509Config
     public bool? TimeStamping { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509ConfigKeyUsageUnknownExtendedKeyUsages
 {
     /// <summary>An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.</summary>
@@ -785,6 +822,7 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509Config
     public IList<double>? ObjectIdPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509ConfigKeyUsage
 {
     /// <summary>Describes high-level ways in which a key may be used. Structure is documented below.</summary>
@@ -800,6 +838,7 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509Config
     public IList<V1beta1CertificateAuthoritySpecInitProviderConfigX509ConfigKeyUsageUnknownExtendedKeyUsages>? UnknownExtendedKeyUsages { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509ConfigNameConstraints
 {
     /// <summary>Indicates whether or not the name constraints are marked critical.</summary>
@@ -839,6 +878,7 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509Config
     public IList<string>? PermittedUris { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509ConfigPolicyIds
 {
     /// <summary>An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.</summary>
@@ -846,6 +886,7 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509Config
     public IList<double>? ObjectIdPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509Config
 {
     /// <summary>Specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs. Structure is documented below.</summary>
@@ -873,6 +914,7 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderConfigX509Config
     public IList<V1beta1CertificateAuthoritySpecInitProviderConfigX509ConfigPolicyIds>? PolicyIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthoritySpecInitProviderConfig
 {
     /// <summary>Specifies some of the values in a certificate that are related to the subject. Structure is documented below.</summary>
@@ -888,6 +930,7 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderConfig
     public IList<V1beta1CertificateAuthoritySpecInitProviderConfigX509Config>? X509Config { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthoritySpecInitProviderKeySpec
 {
     /// <summary>The algorithm to use for creating a managed Cloud KMS key for a for a simplified experience. All managed keys will be have their ProtectionLevel as HSM. Possible values are: SIGN_HASH_ALGORITHM_UNSPECIFIED, RSA_PSS_2048_SHA256, RSA_PSS_3072_SHA256, RSA_PSS_4096_SHA256, RSA_PKCS1_2048_SHA256, RSA_PKCS1_3072_SHA256, RSA_PKCS1_4096_SHA256, EC_P256_SHA256, EC_P384_SHA384.</summary>
@@ -919,6 +962,7 @@ public enum V1beta1CertificateAuthoritySpecInitProviderSubordinateConfigCertific
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CertificateAuthoritySpecInitProviderSubordinateConfigCertificateAuthorityRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -932,6 +976,7 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderSubordinateConfi
     public V1beta1CertificateAuthoritySpecInitProviderSubordinateConfigCertificateAuthorityRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a CertificateAuthority in privateca to populate certificateAuthority.</summary>
 public partial class V1beta1CertificateAuthoritySpecInitProviderSubordinateConfigCertificateAuthorityRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -963,6 +1008,7 @@ public enum V1beta1CertificateAuthoritySpecInitProviderSubordinateConfigCertific
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CertificateAuthoritySpecInitProviderSubordinateConfigCertificateAuthoritySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -976,6 +1022,7 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderSubordinateConfi
     public V1beta1CertificateAuthoritySpecInitProviderSubordinateConfigCertificateAuthoritySelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a CertificateAuthority in privateca to populate certificateAuthority.</summary>
 public partial class V1beta1CertificateAuthoritySpecInitProviderSubordinateConfigCertificateAuthoritySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -991,6 +1038,7 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderSubordinateConfi
     public V1beta1CertificateAuthoritySpecInitProviderSubordinateConfigCertificateAuthoritySelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthoritySpecInitProviderSubordinateConfigPemIssuerChain
 {
     /// <summary>Expected to be in leaf-to-root order according to RFC 5246.</summary>
@@ -998,6 +1046,7 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderSubordinateConfi
     public IList<string>? PemCertificates { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthoritySpecInitProviderSubordinateConfig
 {
     /// <summary>This can refer to a CertificateAuthority that was used to create a subordinate CertificateAuthority. This field is used for information and usability purposes only. The resource name is in the format projects/*/locations/*/caPools/*/certificateAuthorities/*.</summary>
@@ -1017,6 +1066,7 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderSubordinateConfi
     public IList<V1beta1CertificateAuthoritySpecInitProviderSubordinateConfigPemIssuerChain>? PemIssuerChain { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1CertificateAuthoritySpecInitProvider
 {
     /// <summary>The config used to create a self-signed X.509 certificate or CSR. Structure is documented below.</summary>
@@ -1114,6 +1164,7 @@ public enum V1beta1CertificateAuthoritySpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CertificateAuthoritySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1127,6 +1178,7 @@ public partial class V1beta1CertificateAuthoritySpecProviderConfigRefPolicy
     public V1beta1CertificateAuthoritySpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1CertificateAuthoritySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1158,6 +1210,7 @@ public enum V1beta1CertificateAuthoritySpecPublishConnectionDetailsToConfigRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CertificateAuthoritySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1171,6 +1224,7 @@ public partial class V1beta1CertificateAuthoritySpecPublishConnectionDetailsToCo
     public V1beta1CertificateAuthoritySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1CertificateAuthoritySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1182,6 +1236,7 @@ public partial class V1beta1CertificateAuthoritySpecPublishConnectionDetailsToCo
     public V1beta1CertificateAuthoritySpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1CertificateAuthoritySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1197,6 +1252,7 @@ public partial class V1beta1CertificateAuthoritySpecPublishConnectionDetailsToMe
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1CertificateAuthoritySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1212,6 +1268,7 @@ public partial class V1beta1CertificateAuthoritySpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1CertificateAuthoritySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1223,6 +1280,7 @@ public partial class V1beta1CertificateAuthoritySpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>CertificateAuthoritySpec defines the desired state of CertificateAuthority</summary>
 public partial class V1beta1CertificateAuthoritySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1255,6 +1313,7 @@ public partial class V1beta1CertificateAuthoritySpec
     public V1beta1CertificateAuthoritySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthorityStatusAtProviderAccessUrls
 {
     /// <summary>(Output) The URL where this CertificateAuthority's CA certificate is published. This will only be set for CAs that have been activated.</summary>
@@ -1266,6 +1325,7 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderAccessUrls
     public IList<string>? CrlAccessUrls { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthorityStatusAtProviderConfigSubjectConfigSubject
 {
     /// <summary>The common name of the distinguished name.</summary>
@@ -1301,6 +1361,7 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderConfigSubjectCon
     public string? StreetAddress { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthorityStatusAtProviderConfigSubjectConfigSubjectAltName
 {
     /// <summary>Contains only valid, fully-qualified host names.</summary>
@@ -1320,6 +1381,7 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderConfigSubjectCon
     public IList<string>? Uris { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthorityStatusAtProviderConfigSubjectConfig
 {
     /// <summary>Contains distinguished name fields such as the location and organization. Structure is documented below.</summary>
@@ -1331,6 +1393,7 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderConfigSubjectCon
     public IList<V1beta1CertificateAuthorityStatusAtProviderConfigSubjectConfigSubjectAltName>? SubjectAltName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthorityStatusAtProviderConfigSubjectKeyId
 {
     /// <summary>The value of the KeyId in lowercase hexidecimal.</summary>
@@ -1338,6 +1401,7 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderConfigSubjectKey
     public string? KeyId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509ConfigAdditionalExtensionsObjectId
 {
     /// <summary>An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.</summary>
@@ -1345,6 +1409,7 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509Config
     public IList<double>? ObjectIdPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509ConfigAdditionalExtensions
 {
     /// <summary>Indicates whether or not the name constraints are marked critical.</summary>
@@ -1360,6 +1425,7 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509Config
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509ConfigCaOptions
 {
     /// <summary>When true, the "CA" in Basic Constraints extension will be set to true.</summary>
@@ -1379,6 +1445,7 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509Config
     public bool? ZeroMaxIssuerPathLength { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509ConfigKeyUsageBaseKeyUsage
 {
     /// <summary>The key may be used to sign certificates.</summary>
@@ -1418,6 +1485,7 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509Config
     public bool? KeyEncipherment { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509ConfigKeyUsageExtendedKeyUsage
 {
     /// <summary>Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.</summary>
@@ -1445,6 +1513,7 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509Config
     public bool? TimeStamping { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509ConfigKeyUsageUnknownExtendedKeyUsages
 {
     /// <summary>An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.</summary>
@@ -1452,6 +1521,7 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509Config
     public IList<double>? ObjectIdPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509ConfigKeyUsage
 {
     /// <summary>Describes high-level ways in which a key may be used. Structure is documented below.</summary>
@@ -1467,6 +1537,7 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509Config
     public IList<V1beta1CertificateAuthorityStatusAtProviderConfigX509ConfigKeyUsageUnknownExtendedKeyUsages>? UnknownExtendedKeyUsages { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509ConfigNameConstraints
 {
     /// <summary>Indicates whether or not the name constraints are marked critical.</summary>
@@ -1506,6 +1577,7 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509Config
     public IList<string>? PermittedUris { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509ConfigPolicyIds
 {
     /// <summary>An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.</summary>
@@ -1513,6 +1585,7 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509Config
     public IList<double>? ObjectIdPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509Config
 {
     /// <summary>Specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs. Structure is documented below.</summary>
@@ -1540,6 +1613,7 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderConfigX509Config
     public IList<V1beta1CertificateAuthorityStatusAtProviderConfigX509ConfigPolicyIds>? PolicyIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthorityStatusAtProviderConfig
 {
     /// <summary>Specifies some of the values in a certificate that are related to the subject. Structure is documented below.</summary>
@@ -1555,6 +1629,7 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderConfig
     public IList<V1beta1CertificateAuthorityStatusAtProviderConfigX509Config>? X509Config { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthorityStatusAtProviderKeySpec
 {
     /// <summary>The algorithm to use for creating a managed Cloud KMS key for a for a simplified experience. All managed keys will be have their ProtectionLevel as HSM. Possible values are: SIGN_HASH_ALGORITHM_UNSPECIFIED, RSA_PSS_2048_SHA256, RSA_PSS_3072_SHA256, RSA_PSS_4096_SHA256, RSA_PKCS1_2048_SHA256, RSA_PKCS1_3072_SHA256, RSA_PKCS1_4096_SHA256, EC_P256_SHA256, EC_P384_SHA384.</summary>
@@ -1566,6 +1641,7 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderKeySpec
     public string? CloudKmsKeyVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthorityStatusAtProviderSubordinateConfigPemIssuerChain
 {
     /// <summary>Expected to be in leaf-to-root order according to RFC 5246.</summary>
@@ -1573,6 +1649,7 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderSubordinateConfi
     public IList<string>? PemCertificates { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthorityStatusAtProviderSubordinateConfig
 {
     /// <summary>This can refer to a CertificateAuthority that was used to create a subordinate CertificateAuthority. This field is used for information and usability purposes only. The resource name is in the format projects/*/locations/*/caPools/*/certificateAuthorities/*.</summary>
@@ -1584,6 +1661,7 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderSubordinateConfi
     public IList<V1beta1CertificateAuthorityStatusAtProviderSubordinateConfigPemIssuerChain>? PemIssuerChain { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateAuthorityStatusAtProvider
 {
     /// <summary>URLs for accessing content published by this CA, such as the CA certificate and CRLs. Structure is documented below.</summary>
@@ -1683,6 +1761,7 @@ public partial class V1beta1CertificateAuthorityStatusAtProvider
     public string? UpdateTime { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1CertificateAuthorityStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1710,6 +1789,7 @@ public partial class V1beta1CertificateAuthorityStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>CertificateAuthorityStatus defines the observed state of CertificateAuthority.</summary>
 public partial class V1beta1CertificateAuthorityStatus
 {
     /// <summary></summary>
@@ -1726,6 +1806,7 @@ public partial class V1beta1CertificateAuthorityStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>CertificateAuthority is the Schema for the CertificateAuthoritys API. A CertificateAuthority represents an individual Certificate Authority.</summary>
 public partial class V1beta1CertificateAuthority : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1CertificateAuthoritySpec>, IStatus<V1beta1CertificateAuthorityStatus>
 {
     public const string KubeApiVersion = "v1beta1";

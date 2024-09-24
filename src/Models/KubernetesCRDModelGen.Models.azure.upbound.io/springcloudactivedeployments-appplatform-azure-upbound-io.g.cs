@@ -38,6 +38,7 @@ public enum V1beta1SpringCloudActiveDeploymentSpecForProviderDeploymentNameRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpringCloudActiveDeploymentSpecForProviderDeploymentNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1SpringCloudActiveDeploymentSpecForProviderDeployment
     public V1beta1SpringCloudActiveDeploymentSpecForProviderDeploymentNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SpringCloudJavaDeployment in appplatform to populate deploymentName.</summary>
 public partial class V1beta1SpringCloudActiveDeploymentSpecForProviderDeploymentNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1SpringCloudActiveDeploymentSpecForProviderDeploymentNameSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SpringCloudActiveDeploymentSpecForProviderDeploymentNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1SpringCloudActiveDeploymentSpecForProviderDeployment
     public V1beta1SpringCloudActiveDeploymentSpecForProviderDeploymentNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SpringCloudJavaDeployment in appplatform to populate deploymentName.</summary>
 public partial class V1beta1SpringCloudActiveDeploymentSpecForProviderDeploymentNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1SpringCloudActiveDeploymentSpecForProviderSpringCloudAppIdRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpringCloudActiveDeploymentSpecForProviderSpringCloudAppIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1SpringCloudActiveDeploymentSpecForProviderSpringClou
     public V1beta1SpringCloudActiveDeploymentSpecForProviderSpringCloudAppIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SpringCloudApp in appplatform to populate springCloudAppId.</summary>
 public partial class V1beta1SpringCloudActiveDeploymentSpecForProviderSpringCloudAppIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1SpringCloudActiveDeploymentSpecForProviderSpringCloudAppIdSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SpringCloudActiveDeploymentSpecForProviderSpringCloudAppIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1SpringCloudActiveDeploymentSpecForProviderSpringClou
     public V1beta1SpringCloudActiveDeploymentSpecForProviderSpringCloudAppIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SpringCloudApp in appplatform to populate springCloudAppId.</summary>
 public partial class V1beta1SpringCloudActiveDeploymentSpecForProviderSpringCloudAppIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1SpringCloudActiveDeploymentSpecForProviderSpringClou
     public V1beta1SpringCloudActiveDeploymentSpecForProviderSpringCloudAppIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudActiveDeploymentSpecForProvider
 {
     /// <summary>Specifies the name of Spring Cloud Deployment which is going to be active.</summary>
@@ -249,6 +258,7 @@ public enum V1beta1SpringCloudActiveDeploymentSpecInitProviderDeploymentNameRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpringCloudActiveDeploymentSpecInitProviderDeploymentNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -262,6 +272,7 @@ public partial class V1beta1SpringCloudActiveDeploymentSpecInitProviderDeploymen
     public V1beta1SpringCloudActiveDeploymentSpecInitProviderDeploymentNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SpringCloudJavaDeployment in appplatform to populate deploymentName.</summary>
 public partial class V1beta1SpringCloudActiveDeploymentSpecInitProviderDeploymentNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -293,6 +304,7 @@ public enum V1beta1SpringCloudActiveDeploymentSpecInitProviderDeploymentNameSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SpringCloudActiveDeploymentSpecInitProviderDeploymentNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -306,6 +318,7 @@ public partial class V1beta1SpringCloudActiveDeploymentSpecInitProviderDeploymen
     public V1beta1SpringCloudActiveDeploymentSpecInitProviderDeploymentNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SpringCloudJavaDeployment in appplatform to populate deploymentName.</summary>
 public partial class V1beta1SpringCloudActiveDeploymentSpecInitProviderDeploymentNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -341,6 +354,7 @@ public enum V1beta1SpringCloudActiveDeploymentSpecInitProviderSpringCloudAppIdRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpringCloudActiveDeploymentSpecInitProviderSpringCloudAppIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -354,6 +368,7 @@ public partial class V1beta1SpringCloudActiveDeploymentSpecInitProviderSpringClo
     public V1beta1SpringCloudActiveDeploymentSpecInitProviderSpringCloudAppIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SpringCloudApp in appplatform to populate springCloudAppId.</summary>
 public partial class V1beta1SpringCloudActiveDeploymentSpecInitProviderSpringCloudAppIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -385,6 +400,7 @@ public enum V1beta1SpringCloudActiveDeploymentSpecInitProviderSpringCloudAppIdSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SpringCloudActiveDeploymentSpecInitProviderSpringCloudAppIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -398,6 +414,7 @@ public partial class V1beta1SpringCloudActiveDeploymentSpecInitProviderSpringClo
     public V1beta1SpringCloudActiveDeploymentSpecInitProviderSpringCloudAppIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SpringCloudApp in appplatform to populate springCloudAppId.</summary>
 public partial class V1beta1SpringCloudActiveDeploymentSpecInitProviderSpringCloudAppIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -413,6 +430,7 @@ public partial class V1beta1SpringCloudActiveDeploymentSpecInitProviderSpringClo
     public V1beta1SpringCloudActiveDeploymentSpecInitProviderSpringCloudAppIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1SpringCloudActiveDeploymentSpecInitProvider
 {
     /// <summary>Specifies the name of Spring Cloud Deployment which is going to be active.</summary>
@@ -482,6 +500,7 @@ public enum V1beta1SpringCloudActiveDeploymentSpecProviderConfigRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpringCloudActiveDeploymentSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -495,6 +514,7 @@ public partial class V1beta1SpringCloudActiveDeploymentSpecProviderConfigRefPoli
     public V1beta1SpringCloudActiveDeploymentSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1SpringCloudActiveDeploymentSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -526,6 +546,7 @@ public enum V1beta1SpringCloudActiveDeploymentSpecPublishConnectionDetailsToConf
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpringCloudActiveDeploymentSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -539,6 +560,7 @@ public partial class V1beta1SpringCloudActiveDeploymentSpecPublishConnectionDeta
     public V1beta1SpringCloudActiveDeploymentSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1SpringCloudActiveDeploymentSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -550,6 +572,7 @@ public partial class V1beta1SpringCloudActiveDeploymentSpecPublishConnectionDeta
     public V1beta1SpringCloudActiveDeploymentSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1SpringCloudActiveDeploymentSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -565,6 +588,7 @@ public partial class V1beta1SpringCloudActiveDeploymentSpecPublishConnectionDeta
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1SpringCloudActiveDeploymentSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -580,6 +604,7 @@ public partial class V1beta1SpringCloudActiveDeploymentSpecPublishConnectionDeta
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1SpringCloudActiveDeploymentSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -591,6 +616,7 @@ public partial class V1beta1SpringCloudActiveDeploymentSpecWriteConnectionSecret
     public string Namespace { get; set; }
 }
 
+/// <summary>SpringCloudActiveDeploymentSpec defines the desired state of SpringCloudActiveDeployment</summary>
 public partial class V1beta1SpringCloudActiveDeploymentSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -623,6 +649,7 @@ public partial class V1beta1SpringCloudActiveDeploymentSpec
     public V1beta1SpringCloudActiveDeploymentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudActiveDeploymentStatusAtProvider
 {
     /// <summary>Specifies the name of Spring Cloud Deployment which is going to be active.</summary>
@@ -638,6 +665,7 @@ public partial class V1beta1SpringCloudActiveDeploymentStatusAtProvider
     public string? SpringCloudAppId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1SpringCloudActiveDeploymentStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -665,6 +693,7 @@ public partial class V1beta1SpringCloudActiveDeploymentStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>SpringCloudActiveDeploymentStatus defines the observed state of SpringCloudActiveDeployment.</summary>
 public partial class V1beta1SpringCloudActiveDeploymentStatus
 {
     /// <summary></summary>
@@ -681,6 +710,7 @@ public partial class V1beta1SpringCloudActiveDeploymentStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>SpringCloudActiveDeployment is the Schema for the SpringCloudActiveDeployments API. Manages an Active Azure Spring Cloud Deployment.</summary>
 public partial class V1beta1SpringCloudActiveDeployment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SpringCloudActiveDeploymentSpec>, IStatus<V1beta1SpringCloudActiveDeploymentStatus>
 {
     public const string KubeApiVersion = "v1beta1";

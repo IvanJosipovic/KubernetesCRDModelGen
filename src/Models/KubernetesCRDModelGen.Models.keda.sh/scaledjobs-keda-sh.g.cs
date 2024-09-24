@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.keda.sh;
+/// <summary>Represents the requirement on the container exit codes.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefPodFailurePolicyRulesOnExitCodes
 {
     /// <summary>Restricts the check for exit codes to the container with the specified name. When null, the rule applies to all containers. When specified, it should match one the container or initContainer names in the pod template.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefPodFailurePolicyRulesOnExi
     public IList<int> Values { get; set; }
 }
 
+/// <summary>PodFailurePolicyOnPodConditionsPattern describes a pattern for matching an actual pod condition type.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefPodFailurePolicyRulesOnPodConditions
 {
     /// <summary>Specifies the required Pod condition status. To match a pod condition it is required that the specified status equals the pod condition status. Defaults to True.</summary>
@@ -34,6 +36,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefPodFailurePolicyRulesOnPod
     public string Type { get; set; }
 }
 
+/// <summary>PodFailurePolicyRule describes how a pod failure is handled when the requirements are met. One of onExitCodes and onPodConditions, but not both, can be used in each rule.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefPodFailurePolicyRules
 {
     /// <summary>Specifies the action taken on a pod failure when the requirements are satisfied. Possible values are:   - FailJob: indicates that the pod's job is marked as Failed and all   running pods are terminated. - FailIndex: indicates that the pod's index is marked as Failed and will   not be restarted.   This value is beta-level. It can be used when the   `JobBackoffLimitPerIndex` feature gate is enabled (enabled by default). - Ignore: indicates that the counter towards the .backoffLimit is not   incremented and a replacement pod is created. - Count: indicates that the pod is handled in the default way - the   counter towards the .backoffLimit is incremented. Additional values are considered to be added in the future. Clients should react to an unknown action by skipping the rule.</summary>
@@ -49,6 +52,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefPodFailurePolicyRules
     public IList<V1alpha1ScaledJobSpecJobTargetRefPodFailurePolicyRulesOnPodConditions>? OnPodConditions { get; set; }
 }
 
+/// <summary>Specifies the policy of handling failed pods. In particular, it allows to specify the set of actions and conditions which need to be satisfied to take the associated action. If empty, the default behaviour applies - the counter of failed pods, represented by the jobs's .status.failed field, is incremented and it is checked against the backoffLimit. This field cannot be used in combination with restartPolicy=OnFailure.   This field is beta-level. It can be used when the `JobPodFailurePolicy` feature gate is enabled (enabled by default).</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefPodFailurePolicy
 {
     /// <summary>A list of pod failure policy rules. The rules are evaluated in order. Once a rule matches a Pod failure, the remaining of the rules are ignored. When no rule matches the Pod failure, the default handling applies - the counter of pod failures is incremented and it is checked against the backoffLimit. At most 20 elements are allowed.</summary>
@@ -56,6 +60,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefPodFailurePolicy
     public IList<V1alpha1ScaledJobSpecJobTargetRefPodFailurePolicyRules> Rules { get; set; }
 }
 
+/// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -71,6 +76,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefSelectorMatchExpressions
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>A label query over pods that should match the pod count. Normally, the system sets this field for you. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -82,6 +88,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefSelector
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchExpressions
 {
     /// <summary>The label key that the selector applies to.</summary>
@@ -97,6 +104,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAf
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchFields
 {
     /// <summary>The label key that the selector applies to.</summary>
@@ -112,6 +120,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAf
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>A node selector term, associated with the corresponding weight.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreference
 {
     /// <summary>A list of node selector requirements by node's labels.</summary>
@@ -123,6 +132,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAf
     public IList<V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchFields>? MatchFields { get; set; }
 }
 
+/// <summary>An empty preferred scheduling term matches all objects with implicit weight 0 (i.e. it's a no-op). A null preferred scheduling term matches no objects (i.e. is also a no-op).</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>A node selector term, associated with the corresponding weight.</summary>
@@ -134,6 +144,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAf
     public int Weight { get; set; }
 }
 
+/// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchExpressions
 {
     /// <summary>The label key that the selector applies to.</summary>
@@ -149,6 +160,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAf
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchFields
 {
     /// <summary>The label key that the selector applies to.</summary>
@@ -164,6 +176,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAf
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>A null or empty node selector term matches no objects. The requirements of them are ANDed. The TopologySelectorTerm type implements a subset of the NodeSelectorTerm.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTerms
 {
     /// <summary>A list of node selector requirements by node's labels.</summary>
@@ -175,6 +188,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAf
     public IList<V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchFields>? MatchFields { get; set; }
 }
 
+/// <summary>If the affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to an update), the system may or may not try to eventually evict the pod from its node.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>Required. A list of node selector terms. The terms are ORed.</summary>
@@ -182,6 +196,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAf
     public IList<V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTerms> NodeSelectorTerms { get; set; }
 }
 
+/// <summary>Describes node affinity scheduling rules for the pod.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAffinity
 {
     /// <summary>The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding "weight" to the sum if the node matches the corresponding matchExpressions; the node(s) with the highest sum are the most preferred.</summary>
@@ -193,6 +208,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAf
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecution? RequiredDuringSchedulingIgnoredDuringExecution { get; set; }
 }
 
+/// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -208,6 +224,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAff
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -219,6 +236,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAff
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -234,6 +252,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAff
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -245,6 +264,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAff
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>Required. A pod affinity term, associated with the corresponding weight.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm
 {
     /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
@@ -272,6 +292,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAff
     public string TopologyKey { get; set; }
 }
 
+/// <summary>The weights of all of the matched WeightedPodAffinityTerm fields are added per-node to find the most preferred node(s)</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>Required. A pod affinity term, associated with the corresponding weight.</summary>
@@ -283,6 +304,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAff
     public int Weight { get; set; }
 }
 
+/// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -298,6 +320,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAff
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -309,6 +332,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAff
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -324,6 +348,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAff
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -335,6 +360,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAff
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>Defines a set of pods (namely those matching the labelSelector relative to the given namespace(s)) that this pod should be co-located (affinity) or not co-located (anti-affinity) with, where co-located is defined as running on a node whose value of the label with key &lt;topologyKey&gt; matches that of any node on which a pod of the set of pods is running</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
@@ -362,6 +388,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAff
     public string TopologyKey { get; set; }
 }
 
+/// <summary>Describes pod affinity scheduling rules (e.g. co-locate this pod in the same node, zone, etc. as some other pod(s)).</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAffinity
 {
     /// <summary>The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding "weight" to the sum if the node has pods which matches the corresponding podAffinityTerm; the node(s) with the highest sum are the most preferred.</summary>
@@ -373,6 +400,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAff
     public IList<V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecution>? RequiredDuringSchedulingIgnoredDuringExecution { get; set; }
 }
 
+/// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -388,6 +416,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAnt
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -399,6 +428,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAnt
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -414,6 +444,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAnt
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -425,6 +456,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAnt
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>Required. A pod affinity term, associated with the corresponding weight.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm
 {
     /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
@@ -452,6 +484,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAnt
     public string TopologyKey { get; set; }
 }
 
+/// <summary>The weights of all of the matched WeightedPodAffinityTerm fields are added per-node to find the most preferred node(s)</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>Required. A pod affinity term, associated with the corresponding weight.</summary>
@@ -463,6 +496,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAnt
     public int Weight { get; set; }
 }
 
+/// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -478,6 +512,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAnt
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -489,6 +524,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAnt
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -504,6 +540,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAnt
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -515,6 +552,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAnt
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>Defines a set of pods (namely those matching the labelSelector relative to the given namespace(s)) that this pod should be co-located (affinity) or not co-located (anti-affinity) with, where co-located is defined as running on a node whose value of the label with key &lt;topologyKey&gt; matches that of any node on which a pod of the set of pods is running</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
@@ -542,6 +580,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAnt
     public string TopologyKey { get; set; }
 }
 
+/// <summary>Describes pod anti-affinity scheduling rules (e.g. avoid putting this pod in the same node, zone, etc. as some other pod(s)).</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAntiAffinity
 {
     /// <summary>The scheduler will prefer to schedule pods to nodes that satisfy the anti-affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling anti-affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding "weight" to the sum if the node has pods which matches the corresponding podAffinityTerm; the node(s) with the highest sum are the most preferred.</summary>
@@ -553,6 +592,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAnt
     public IList<V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecution>? RequiredDuringSchedulingIgnoredDuringExecution { get; set; }
 }
 
+/// <summary>If specified, the pod's scheduling constraints</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinity
 {
     /// <summary>Describes node affinity scheduling rules for the pod.</summary>
@@ -568,6 +608,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinity
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAntiAffinity? PodAntiAffinity { get; set; }
 }
 
+/// <summary>Selects a key of a ConfigMap.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnvValueFromConfigMapKeyRef
 {
     /// <summary>The key to select.</summary>
@@ -583,6 +624,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnvV
     public bool? Optional { get; set; }
 }
 
+/// <summary>Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['&lt;KEY&gt;']`, `metadata.annotations['&lt;KEY&gt;']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnvValueFromFieldRef
 {
     /// <summary>Version of the schema the FieldPath is written in terms of, defaults to "v1".</summary>
@@ -594,6 +636,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnvV
     public string FieldPath { get; set; }
 }
 
+/// <summary>Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnvValueFromResourceFieldRef
 {
     /// <summary>Container name: required for volumes, optional for env vars</summary>
@@ -609,6 +652,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnvV
     public string Resource { get; set; }
 }
 
+/// <summary>Selects a key of a secret in the pod's namespace</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnvValueFromSecretKeyRef
 {
     /// <summary>The key of the secret to select from.  Must be a valid secret key.</summary>
@@ -624,6 +668,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnvV
     public bool? Optional { get; set; }
 }
 
+/// <summary>Source for the environment variable's value. Cannot be used if value is not empty.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnvValueFrom
 {
     /// <summary>Selects a key of a ConfigMap.</summary>
@@ -643,6 +688,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnvV
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnvValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary>EnvVar represents an environment variable present in a Container.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnv
 {
     /// <summary>Name of the environment variable. Must be a C_IDENTIFIER.</summary>
@@ -658,6 +704,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnv
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnvValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary>The ConfigMap to select from</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnvFromConfigMapRef
 {
     /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?</summary>
@@ -669,6 +716,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnvF
     public bool? Optional { get; set; }
 }
 
+/// <summary>The Secret to select from</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnvFromSecretRef
 {
     /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?</summary>
@@ -680,6 +728,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnvF
     public bool? Optional { get; set; }
 }
 
+/// <summary>EnvFromSource represents the source of a set of ConfigMaps</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnvFrom
 {
     /// <summary>The ConfigMap to select from</summary>
@@ -695,6 +744,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnvF
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnvFromSecretRef? SecretRef { get; set; }
 }
 
+/// <summary>Exec specifies the action to take.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLifecyclePostStartExec
 {
     /// <summary>Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.</summary>
@@ -702,6 +752,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLife
     public IList<string>? Command { get; set; }
 }
 
+/// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLifecyclePostStartHttpGetHttpHeaders
 {
     /// <summary>The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header.</summary>
@@ -713,6 +764,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLife
     public string Value { get; set; }
 }
 
+/// <summary>HTTPGet specifies the http request to perform.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLifecyclePostStartHttpGet
 {
     /// <summary>Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.</summary>
@@ -736,6 +788,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLife
     public string? Scheme { get; set; }
 }
 
+/// <summary>Sleep represents the duration that the container should sleep before being terminated.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLifecyclePostStartSleep
 {
     /// <summary>Seconds is the number of seconds to sleep.</summary>
@@ -743,6 +796,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLife
     public long Seconds { get; set; }
 }
 
+/// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLifecyclePostStartTcpSocket
 {
     /// <summary>Optional: Host name to connect to, defaults to the pod IP.</summary>
@@ -754,6 +808,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLife
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary>PostStart is called immediately after a container is created. If the handler fails, the container is terminated and restarted according to its restart policy. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLifecyclePostStart
 {
     /// <summary>Exec specifies the action to take.</summary>
@@ -773,6 +828,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLife
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLifecyclePostStartTcpSocket? TcpSocket { get; set; }
 }
 
+/// <summary>Exec specifies the action to take.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLifecyclePreStopExec
 {
     /// <summary>Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.</summary>
@@ -780,6 +836,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLife
     public IList<string>? Command { get; set; }
 }
 
+/// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLifecyclePreStopHttpGetHttpHeaders
 {
     /// <summary>The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header.</summary>
@@ -791,6 +848,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLife
     public string Value { get; set; }
 }
 
+/// <summary>HTTPGet specifies the http request to perform.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLifecyclePreStopHttpGet
 {
     /// <summary>Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.</summary>
@@ -814,6 +872,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLife
     public string? Scheme { get; set; }
 }
 
+/// <summary>Sleep represents the duration that the container should sleep before being terminated.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLifecyclePreStopSleep
 {
     /// <summary>Seconds is the number of seconds to sleep.</summary>
@@ -821,6 +880,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLife
     public long Seconds { get; set; }
 }
 
+/// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLifecyclePreStopTcpSocket
 {
     /// <summary>Optional: Host name to connect to, defaults to the pod IP.</summary>
@@ -832,6 +892,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLife
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary>PreStop is called immediately before a container is terminated due to an API request or management event such as liveness/startup probe failure, preemption, resource contention, etc. The handler is not called if the container crashes or exits. The Pod's termination grace period countdown begins before the PreStop hook is executed. Regardless of the outcome of the handler, the container will eventually terminate within the Pod's termination grace period (unless delayed by finalizers). Other management of the container blocks until the hook completes or until the termination grace period is reached. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLifecyclePreStop
 {
     /// <summary>Exec specifies the action to take.</summary>
@@ -851,6 +912,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLife
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLifecyclePreStopTcpSocket? TcpSocket { get; set; }
 }
 
+/// <summary>Actions that the management system should take in response to container lifecycle events. Cannot be updated.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLifecycle
 {
     /// <summary>PostStart is called immediately after a container is created. If the handler fails, the container is terminated and restarted according to its restart policy. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks</summary>
@@ -862,6 +924,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLife
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLifecyclePreStop? PreStop { get; set; }
 }
 
+/// <summary>Exec specifies the action to take.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLivenessProbeExec
 {
     /// <summary>Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.</summary>
@@ -869,6 +932,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLive
     public IList<string>? Command { get; set; }
 }
 
+/// <summary>GRPC specifies an action involving a GRPC port.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLivenessProbeGrpc
 {
     /// <summary>Port number of the gRPC service. Number must be in the range 1 to 65535.</summary>
@@ -880,6 +944,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLive
     public string? Service { get; set; }
 }
 
+/// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLivenessProbeHttpGetHttpHeaders
 {
     /// <summary>The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header.</summary>
@@ -891,6 +956,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLive
     public string Value { get; set; }
 }
 
+/// <summary>HTTPGet specifies the http request to perform.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLivenessProbeHttpGet
 {
     /// <summary>Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.</summary>
@@ -914,6 +980,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLive
     public string? Scheme { get; set; }
 }
 
+/// <summary>TCPSocket specifies an action involving a TCP port.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLivenessProbeTcpSocket
 {
     /// <summary>Optional: Host name to connect to, defaults to the pod IP.</summary>
@@ -925,6 +992,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLive
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary>Periodic probe of container liveness. Container will be restarted if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLivenessProbe
 {
     /// <summary>Exec specifies the action to take.</summary>
@@ -968,6 +1036,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLive
     public int? TimeoutSeconds { get; set; }
 }
 
+/// <summary>ContainerPort represents a network port in a single container.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersPorts
 {
     /// <summary>Number of port to expose on the pod's IP address. This must be a valid port number, 0 &lt; x &lt; 65536.</summary>
@@ -991,6 +1060,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersPort
     public string Protocol { get; set; }
 }
 
+/// <summary>Exec specifies the action to take.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersReadinessProbeExec
 {
     /// <summary>Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.</summary>
@@ -998,6 +1068,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersRead
     public IList<string>? Command { get; set; }
 }
 
+/// <summary>GRPC specifies an action involving a GRPC port.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersReadinessProbeGrpc
 {
     /// <summary>Port number of the gRPC service. Number must be in the range 1 to 65535.</summary>
@@ -1009,6 +1080,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersRead
     public string? Service { get; set; }
 }
 
+/// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersReadinessProbeHttpGetHttpHeaders
 {
     /// <summary>The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header.</summary>
@@ -1020,6 +1092,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersRead
     public string Value { get; set; }
 }
 
+/// <summary>HTTPGet specifies the http request to perform.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersReadinessProbeHttpGet
 {
     /// <summary>Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.</summary>
@@ -1043,6 +1116,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersRead
     public string? Scheme { get; set; }
 }
 
+/// <summary>TCPSocket specifies an action involving a TCP port.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersReadinessProbeTcpSocket
 {
     /// <summary>Optional: Host name to connect to, defaults to the pod IP.</summary>
@@ -1054,6 +1128,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersRead
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary>Periodic probe of container service readiness. Container will be removed from service endpoints if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersReadinessProbe
 {
     /// <summary>Exec specifies the action to take.</summary>
@@ -1097,6 +1172,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersRead
     public int? TimeoutSeconds { get; set; }
 }
 
+/// <summary>ContainerResizePolicy represents resource resize policy for the container.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersResizePolicy
 {
     /// <summary>Name of the resource to which this resource resize policy applies. Supported values: cpu, memory.</summary>
@@ -1108,6 +1184,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersResi
     public string RestartPolicy { get; set; }
 }
 
+/// <summary>ResourceClaim references one entry in PodSpec.ResourceClaims.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersResourcesClaims
 {
     /// <summary>Name must match the name of one entry in pod.spec.resourceClaims of the Pod where this field is used. It makes that resource available inside a container.</summary>
@@ -1115,6 +1192,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersReso
     public string Name { get; set; }
 }
 
+/// <summary>Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersResources
 {
     /// <summary>Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container.   This is an alpha field and requires enabling the DynamicResourceAllocation feature gate.   This field is immutable. It can only be set for containers.</summary>
@@ -1130,6 +1208,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersReso
     public IDictionary<string, IntstrIntOrString>? Requests { get; set; }
 }
 
+/// <summary>The capabilities to add/drop when running containers. Defaults to the default set of capabilities granted by the container runtime. Note that this field cannot be set when spec.os.name is windows.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersSecurityContextCapabilities
 {
     /// <summary>Added capabilities</summary>
@@ -1141,6 +1220,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersSecu
     public IList<string>? Drop { get; set; }
 }
 
+/// <summary>The SELinux context to be applied to the container. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is windows.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersSecurityContextSeLinuxOptions
 {
     /// <summary>Level is SELinux level label that applies to the container.</summary>
@@ -1160,6 +1240,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersSecu
     public string? User { get; set; }
 }
 
+/// <summary>The seccomp options to use by this container. If seccomp options are provided at both the pod &amp; container level, the container options override the pod options. Note that this field cannot be set when spec.os.name is windows.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersSecurityContextSeccompProfile
 {
     /// <summary>localhostProfile indicates a profile defined in a file on the node should be used. The profile must be preconfigured on the node to work. Must be a descending path, relative to the kubelet's configured seccomp profile location. Must be set if type is "Localhost". Must NOT be set for any other type.</summary>
@@ -1171,6 +1252,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersSecu
     public string Type { get; set; }
 }
 
+/// <summary>The Windows specific settings applied to all containers. If unspecified, the options from the PodSecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is linux.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersSecurityContextWindowsOptions
 {
     /// <summary>GMSACredentialSpec is where the GMSA admission webhook (https://github.com/kubernetes-sigs/windows-gmsa) inlines the contents of the GMSA credential spec named by the GMSACredentialSpecName field.</summary>
@@ -1190,6 +1272,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersSecu
     public string? RunAsUserName { get; set; }
 }
 
+/// <summary>SecurityContext defines the security options the container should be run with. If set, the fields of SecurityContext override the equivalent fields of PodSecurityContext. More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersSecurityContext
 {
     /// <summary>AllowPrivilegeEscalation controls whether a process can gain more privileges than its parent process. This bool directly controls if the no_new_privs flag will be set on the container process. AllowPrivilegeEscalation is true always when the container is: 1) run as Privileged 2) has CAP_SYS_ADMIN Note that this field cannot be set when spec.os.name is windows.</summary>
@@ -1237,6 +1320,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersSecu
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersSecurityContextWindowsOptions? WindowsOptions { get; set; }
 }
 
+/// <summary>Exec specifies the action to take.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersStartupProbeExec
 {
     /// <summary>Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.</summary>
@@ -1244,6 +1328,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersStar
     public IList<string>? Command { get; set; }
 }
 
+/// <summary>GRPC specifies an action involving a GRPC port.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersStartupProbeGrpc
 {
     /// <summary>Port number of the gRPC service. Number must be in the range 1 to 65535.</summary>
@@ -1255,6 +1340,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersStar
     public string? Service { get; set; }
 }
 
+/// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersStartupProbeHttpGetHttpHeaders
 {
     /// <summary>The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header.</summary>
@@ -1266,6 +1352,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersStar
     public string Value { get; set; }
 }
 
+/// <summary>HTTPGet specifies the http request to perform.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersStartupProbeHttpGet
 {
     /// <summary>Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.</summary>
@@ -1289,6 +1376,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersStar
     public string? Scheme { get; set; }
 }
 
+/// <summary>TCPSocket specifies an action involving a TCP port.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersStartupProbeTcpSocket
 {
     /// <summary>Optional: Host name to connect to, defaults to the pod IP.</summary>
@@ -1300,6 +1388,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersStar
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary>StartupProbe indicates that the Pod has successfully initialized. If specified, no other probes are executed until this completes successfully. If this probe fails, the Pod will be restarted, just as if the livenessProbe failed. This can be used to provide different probe parameters at the beginning of a Pod's lifecycle, when it might take a long time to load data or warm a cache, than during steady-state operation. This cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersStartupProbe
 {
     /// <summary>Exec specifies the action to take.</summary>
@@ -1343,6 +1432,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersStar
     public int? TimeoutSeconds { get; set; }
 }
 
+/// <summary>volumeDevice describes a mapping of a raw block device within a container.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersVolumeDevices
 {
     /// <summary>devicePath is the path inside of the container that the device will be mapped to.</summary>
@@ -1354,6 +1444,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersVolu
     public string Name { get; set; }
 }
 
+/// <summary>VolumeMount describes a mounting of a Volume within a container.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersVolumeMounts
 {
     /// <summary>Path within the container at which the volume should be mounted.  Must not contain ':'.</summary>
@@ -1381,6 +1472,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersVolu
     public string? SubPathExpr { get; set; }
 }
 
+/// <summary>A single application container that you want to run within a pod.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainers
 {
     /// <summary>Arguments to the entrypoint. The container image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell</summary>
@@ -1480,6 +1572,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainers
     public string? WorkingDir { get; set; }
 }
 
+/// <summary>PodDNSConfigOption defines DNS resolver options of a pod.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecDnsConfigOptions
 {
     /// <summary>Required.</summary>
@@ -1491,6 +1584,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecDnsConfigOptio
     public string? Value { get; set; }
 }
 
+/// <summary>Specifies the DNS parameters of a pod. Parameters specified here will be merged to the generated DNS configuration based on DNSPolicy.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecDnsConfig
 {
     /// <summary>A list of DNS name server IP addresses. This will be appended to the base nameservers generated from DNSPolicy. Duplicated nameservers will be removed.</summary>
@@ -1506,6 +1600,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecDnsConfig
     public IList<string>? Searches { get; set; }
 }
 
+/// <summary>Selects a key of a ConfigMap.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersEnvValueFromConfigMapKeyRef
 {
     /// <summary>The key to select.</summary>
@@ -1521,6 +1616,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public bool? Optional { get; set; }
 }
 
+/// <summary>Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['&lt;KEY&gt;']`, `metadata.annotations['&lt;KEY&gt;']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersEnvValueFromFieldRef
 {
     /// <summary>Version of the schema the FieldPath is written in terms of, defaults to "v1".</summary>
@@ -1532,6 +1628,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public string FieldPath { get; set; }
 }
 
+/// <summary>Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersEnvValueFromResourceFieldRef
 {
     /// <summary>Container name: required for volumes, optional for env vars</summary>
@@ -1547,6 +1644,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public string Resource { get; set; }
 }
 
+/// <summary>Selects a key of a secret in the pod's namespace</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersEnvValueFromSecretKeyRef
 {
     /// <summary>The key of the secret to select from.  Must be a valid secret key.</summary>
@@ -1562,6 +1660,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public bool? Optional { get; set; }
 }
 
+/// <summary>Source for the environment variable's value. Cannot be used if value is not empty.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersEnvValueFrom
 {
     /// <summary>Selects a key of a ConfigMap.</summary>
@@ -1581,6 +1680,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersEnvValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary>EnvVar represents an environment variable present in a Container.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersEnv
 {
     /// <summary>Name of the environment variable. Must be a C_IDENTIFIER.</summary>
@@ -1596,6 +1696,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersEnvValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary>The ConfigMap to select from</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersEnvFromConfigMapRef
 {
     /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?</summary>
@@ -1607,6 +1708,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public bool? Optional { get; set; }
 }
 
+/// <summary>The Secret to select from</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersEnvFromSecretRef
 {
     /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?</summary>
@@ -1618,6 +1720,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public bool? Optional { get; set; }
 }
 
+/// <summary>EnvFromSource represents the source of a set of ConfigMaps</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersEnvFrom
 {
     /// <summary>The ConfigMap to select from</summary>
@@ -1633,6 +1736,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersEnvFromSecretRef? SecretRef { get; set; }
 }
 
+/// <summary>Exec specifies the action to take.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLifecyclePostStartExec
 {
     /// <summary>Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.</summary>
@@ -1640,6 +1744,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public IList<string>? Command { get; set; }
 }
 
+/// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLifecyclePostStartHttpGetHttpHeaders
 {
     /// <summary>The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header.</summary>
@@ -1651,6 +1756,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public string Value { get; set; }
 }
 
+/// <summary>HTTPGet specifies the http request to perform.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLifecyclePostStartHttpGet
 {
     /// <summary>Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.</summary>
@@ -1674,6 +1780,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public string? Scheme { get; set; }
 }
 
+/// <summary>Sleep represents the duration that the container should sleep before being terminated.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLifecyclePostStartSleep
 {
     /// <summary>Seconds is the number of seconds to sleep.</summary>
@@ -1681,6 +1788,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public long Seconds { get; set; }
 }
 
+/// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLifecyclePostStartTcpSocket
 {
     /// <summary>Optional: Host name to connect to, defaults to the pod IP.</summary>
@@ -1692,6 +1800,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary>PostStart is called immediately after a container is created. If the handler fails, the container is terminated and restarted according to its restart policy. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLifecyclePostStart
 {
     /// <summary>Exec specifies the action to take.</summary>
@@ -1711,6 +1820,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLifecyclePostStartTcpSocket? TcpSocket { get; set; }
 }
 
+/// <summary>Exec specifies the action to take.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLifecyclePreStopExec
 {
     /// <summary>Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.</summary>
@@ -1718,6 +1828,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public IList<string>? Command { get; set; }
 }
 
+/// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLifecyclePreStopHttpGetHttpHeaders
 {
     /// <summary>The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header.</summary>
@@ -1729,6 +1840,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public string Value { get; set; }
 }
 
+/// <summary>HTTPGet specifies the http request to perform.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLifecyclePreStopHttpGet
 {
     /// <summary>Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.</summary>
@@ -1752,6 +1864,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public string? Scheme { get; set; }
 }
 
+/// <summary>Sleep represents the duration that the container should sleep before being terminated.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLifecyclePreStopSleep
 {
     /// <summary>Seconds is the number of seconds to sleep.</summary>
@@ -1759,6 +1872,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public long Seconds { get; set; }
 }
 
+/// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLifecyclePreStopTcpSocket
 {
     /// <summary>Optional: Host name to connect to, defaults to the pod IP.</summary>
@@ -1770,6 +1884,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary>PreStop is called immediately before a container is terminated due to an API request or management event such as liveness/startup probe failure, preemption, resource contention, etc. The handler is not called if the container crashes or exits. The Pod's termination grace period countdown begins before the PreStop hook is executed. Regardless of the outcome of the handler, the container will eventually terminate within the Pod's termination grace period (unless delayed by finalizers). Other management of the container blocks until the hook completes or until the termination grace period is reached. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLifecyclePreStop
 {
     /// <summary>Exec specifies the action to take.</summary>
@@ -1789,6 +1904,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLifecyclePreStopTcpSocket? TcpSocket { get; set; }
 }
 
+/// <summary>Lifecycle is not allowed for ephemeral containers.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLifecycle
 {
     /// <summary>PostStart is called immediately after a container is created. If the handler fails, the container is terminated and restarted according to its restart policy. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks</summary>
@@ -1800,6 +1916,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLifecyclePreStop? PreStop { get; set; }
 }
 
+/// <summary>Exec specifies the action to take.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLivenessProbeExec
 {
     /// <summary>Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.</summary>
@@ -1807,6 +1924,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public IList<string>? Command { get; set; }
 }
 
+/// <summary>GRPC specifies an action involving a GRPC port.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLivenessProbeGrpc
 {
     /// <summary>Port number of the gRPC service. Number must be in the range 1 to 65535.</summary>
@@ -1818,6 +1936,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public string? Service { get; set; }
 }
 
+/// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLivenessProbeHttpGetHttpHeaders
 {
     /// <summary>The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header.</summary>
@@ -1829,6 +1948,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public string Value { get; set; }
 }
 
+/// <summary>HTTPGet specifies the http request to perform.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLivenessProbeHttpGet
 {
     /// <summary>Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.</summary>
@@ -1852,6 +1972,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public string? Scheme { get; set; }
 }
 
+/// <summary>TCPSocket specifies an action involving a TCP port.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLivenessProbeTcpSocket
 {
     /// <summary>Optional: Host name to connect to, defaults to the pod IP.</summary>
@@ -1863,6 +1984,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary>Probes are not allowed for ephemeral containers.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLivenessProbe
 {
     /// <summary>Exec specifies the action to take.</summary>
@@ -1906,6 +2028,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public int? TimeoutSeconds { get; set; }
 }
 
+/// <summary>ContainerPort represents a network port in a single container.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersPorts
 {
     /// <summary>Number of port to expose on the pod's IP address. This must be a valid port number, 0 &lt; x &lt; 65536.</summary>
@@ -1929,6 +2052,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public string Protocol { get; set; }
 }
 
+/// <summary>Exec specifies the action to take.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersReadinessProbeExec
 {
     /// <summary>Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.</summary>
@@ -1936,6 +2060,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public IList<string>? Command { get; set; }
 }
 
+/// <summary>GRPC specifies an action involving a GRPC port.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersReadinessProbeGrpc
 {
     /// <summary>Port number of the gRPC service. Number must be in the range 1 to 65535.</summary>
@@ -1947,6 +2072,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public string? Service { get; set; }
 }
 
+/// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersReadinessProbeHttpGetHttpHeaders
 {
     /// <summary>The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header.</summary>
@@ -1958,6 +2084,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public string Value { get; set; }
 }
 
+/// <summary>HTTPGet specifies the http request to perform.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersReadinessProbeHttpGet
 {
     /// <summary>Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.</summary>
@@ -1981,6 +2108,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public string? Scheme { get; set; }
 }
 
+/// <summary>TCPSocket specifies an action involving a TCP port.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersReadinessProbeTcpSocket
 {
     /// <summary>Optional: Host name to connect to, defaults to the pod IP.</summary>
@@ -1992,6 +2120,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary>Probes are not allowed for ephemeral containers.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersReadinessProbe
 {
     /// <summary>Exec specifies the action to take.</summary>
@@ -2035,6 +2164,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public int? TimeoutSeconds { get; set; }
 }
 
+/// <summary>ContainerResizePolicy represents resource resize policy for the container.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersResizePolicy
 {
     /// <summary>Name of the resource to which this resource resize policy applies. Supported values: cpu, memory.</summary>
@@ -2046,6 +2176,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public string RestartPolicy { get; set; }
 }
 
+/// <summary>ResourceClaim references one entry in PodSpec.ResourceClaims.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersResourcesClaims
 {
     /// <summary>Name must match the name of one entry in pod.spec.resourceClaims of the Pod where this field is used. It makes that resource available inside a container.</summary>
@@ -2053,6 +2184,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public string Name { get; set; }
 }
 
+/// <summary>Resources are not allowed for ephemeral containers. Ephemeral containers use spare resources already allocated to the pod.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersResources
 {
     /// <summary>Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container.   This is an alpha field and requires enabling the DynamicResourceAllocation feature gate.   This field is immutable. It can only be set for containers.</summary>
@@ -2068,6 +2200,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public IDictionary<string, IntstrIntOrString>? Requests { get; set; }
 }
 
+/// <summary>The capabilities to add/drop when running containers. Defaults to the default set of capabilities granted by the container runtime. Note that this field cannot be set when spec.os.name is windows.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersSecurityContextCapabilities
 {
     /// <summary>Added capabilities</summary>
@@ -2079,6 +2212,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public IList<string>? Drop { get; set; }
 }
 
+/// <summary>The SELinux context to be applied to the container. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is windows.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersSecurityContextSeLinuxOptions
 {
     /// <summary>Level is SELinux level label that applies to the container.</summary>
@@ -2098,6 +2232,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public string? User { get; set; }
 }
 
+/// <summary>The seccomp options to use by this container. If seccomp options are provided at both the pod &amp; container level, the container options override the pod options. Note that this field cannot be set when spec.os.name is windows.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersSecurityContextSeccompProfile
 {
     /// <summary>localhostProfile indicates a profile defined in a file on the node should be used. The profile must be preconfigured on the node to work. Must be a descending path, relative to the kubelet's configured seccomp profile location. Must be set if type is "Localhost". Must NOT be set for any other type.</summary>
@@ -2109,6 +2244,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public string Type { get; set; }
 }
 
+/// <summary>The Windows specific settings applied to all containers. If unspecified, the options from the PodSecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is linux.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersSecurityContextWindowsOptions
 {
     /// <summary>GMSACredentialSpec is where the GMSA admission webhook (https://github.com/kubernetes-sigs/windows-gmsa) inlines the contents of the GMSA credential spec named by the GMSACredentialSpecName field.</summary>
@@ -2128,6 +2264,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public string? RunAsUserName { get; set; }
 }
 
+/// <summary>Optional: SecurityContext defines the security options the ephemeral container should be run with. If set, the fields of SecurityContext override the equivalent fields of PodSecurityContext.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersSecurityContext
 {
     /// <summary>AllowPrivilegeEscalation controls whether a process can gain more privileges than its parent process. This bool directly controls if the no_new_privs flag will be set on the container process. AllowPrivilegeEscalation is true always when the container is: 1) run as Privileged 2) has CAP_SYS_ADMIN Note that this field cannot be set when spec.os.name is windows.</summary>
@@ -2175,6 +2312,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersSecurityContextWindowsOptions? WindowsOptions { get; set; }
 }
 
+/// <summary>Exec specifies the action to take.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersStartupProbeExec
 {
     /// <summary>Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.</summary>
@@ -2182,6 +2320,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public IList<string>? Command { get; set; }
 }
 
+/// <summary>GRPC specifies an action involving a GRPC port.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersStartupProbeGrpc
 {
     /// <summary>Port number of the gRPC service. Number must be in the range 1 to 65535.</summary>
@@ -2193,6 +2332,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public string? Service { get; set; }
 }
 
+/// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersStartupProbeHttpGetHttpHeaders
 {
     /// <summary>The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header.</summary>
@@ -2204,6 +2344,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public string Value { get; set; }
 }
 
+/// <summary>HTTPGet specifies the http request to perform.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersStartupProbeHttpGet
 {
     /// <summary>Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.</summary>
@@ -2227,6 +2368,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public string? Scheme { get; set; }
 }
 
+/// <summary>TCPSocket specifies an action involving a TCP port.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersStartupProbeTcpSocket
 {
     /// <summary>Optional: Host name to connect to, defaults to the pod IP.</summary>
@@ -2238,6 +2380,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary>Probes are not allowed for ephemeral containers.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersStartupProbe
 {
     /// <summary>Exec specifies the action to take.</summary>
@@ -2281,6 +2424,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public int? TimeoutSeconds { get; set; }
 }
 
+/// <summary>volumeDevice describes a mapping of a raw block device within a container.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersVolumeDevices
 {
     /// <summary>devicePath is the path inside of the container that the device will be mapped to.</summary>
@@ -2292,6 +2436,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public string Name { get; set; }
 }
 
+/// <summary>VolumeMount describes a mounting of a Volume within a container.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersVolumeMounts
 {
     /// <summary>Path within the container at which the volume should be mounted.  Must not contain ':'.</summary>
@@ -2319,6 +2464,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public string? SubPathExpr { get; set; }
 }
 
+/// <summary>An EphemeralContainer is a temporary container that you may add to an existing Pod for user-initiated activities such as debugging. Ephemeral containers have no resource or scheduling guarantees, and they will not be restarted when they exit or when a Pod is removed or restarted. The kubelet may evict a Pod if an ephemeral container causes the Pod to exceed its resource allocation.   To add an ephemeral container, use the ephemeralcontainers subresource of an existing Pod. Ephemeral containers may not be removed or restarted.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainers
 {
     /// <summary>Arguments to the entrypoint. The image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell</summary>
@@ -2422,6 +2568,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     public string? WorkingDir { get; set; }
 }
 
+/// <summary>HostAlias holds the mapping between IP and hostnames that will be injected as an entry in the pod's hosts file.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecHostAliases
 {
     /// <summary>Hostnames for the above IP address.</summary>
@@ -2433,6 +2580,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecHostAliases
     public string? Ip { get; set; }
 }
 
+/// <summary>LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecImagePullSecrets
 {
     /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?</summary>
@@ -2440,6 +2588,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecImagePullSecre
     public string? Name { get; set; }
 }
 
+/// <summary>Selects a key of a ConfigMap.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersEnvValueFromConfigMapKeyRef
 {
     /// <summary>The key to select.</summary>
@@ -2455,6 +2604,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public bool? Optional { get; set; }
 }
 
+/// <summary>Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['&lt;KEY&gt;']`, `metadata.annotations['&lt;KEY&gt;']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersEnvValueFromFieldRef
 {
     /// <summary>Version of the schema the FieldPath is written in terms of, defaults to "v1".</summary>
@@ -2466,6 +2616,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public string FieldPath { get; set; }
 }
 
+/// <summary>Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersEnvValueFromResourceFieldRef
 {
     /// <summary>Container name: required for volumes, optional for env vars</summary>
@@ -2481,6 +2632,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public string Resource { get; set; }
 }
 
+/// <summary>Selects a key of a secret in the pod's namespace</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersEnvValueFromSecretKeyRef
 {
     /// <summary>The key of the secret to select from.  Must be a valid secret key.</summary>
@@ -2496,6 +2648,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public bool? Optional { get; set; }
 }
 
+/// <summary>Source for the environment variable's value. Cannot be used if value is not empty.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersEnvValueFrom
 {
     /// <summary>Selects a key of a ConfigMap.</summary>
@@ -2515,6 +2668,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersEnvValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary>EnvVar represents an environment variable present in a Container.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersEnv
 {
     /// <summary>Name of the environment variable. Must be a C_IDENTIFIER.</summary>
@@ -2530,6 +2684,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersEnvValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary>The ConfigMap to select from</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersEnvFromConfigMapRef
 {
     /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?</summary>
@@ -2541,6 +2696,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public bool? Optional { get; set; }
 }
 
+/// <summary>The Secret to select from</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersEnvFromSecretRef
 {
     /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?</summary>
@@ -2552,6 +2708,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public bool? Optional { get; set; }
 }
 
+/// <summary>EnvFromSource represents the source of a set of ConfigMaps</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersEnvFrom
 {
     /// <summary>The ConfigMap to select from</summary>
@@ -2567,6 +2724,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersEnvFromSecretRef? SecretRef { get; set; }
 }
 
+/// <summary>Exec specifies the action to take.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLifecyclePostStartExec
 {
     /// <summary>Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.</summary>
@@ -2574,6 +2732,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public IList<string>? Command { get; set; }
 }
 
+/// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLifecyclePostStartHttpGetHttpHeaders
 {
     /// <summary>The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header.</summary>
@@ -2585,6 +2744,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public string Value { get; set; }
 }
 
+/// <summary>HTTPGet specifies the http request to perform.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLifecyclePostStartHttpGet
 {
     /// <summary>Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.</summary>
@@ -2608,6 +2768,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public string? Scheme { get; set; }
 }
 
+/// <summary>Sleep represents the duration that the container should sleep before being terminated.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLifecyclePostStartSleep
 {
     /// <summary>Seconds is the number of seconds to sleep.</summary>
@@ -2615,6 +2776,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public long Seconds { get; set; }
 }
 
+/// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLifecyclePostStartTcpSocket
 {
     /// <summary>Optional: Host name to connect to, defaults to the pod IP.</summary>
@@ -2626,6 +2788,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary>PostStart is called immediately after a container is created. If the handler fails, the container is terminated and restarted according to its restart policy. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLifecyclePostStart
 {
     /// <summary>Exec specifies the action to take.</summary>
@@ -2645,6 +2808,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLifecyclePostStartTcpSocket? TcpSocket { get; set; }
 }
 
+/// <summary>Exec specifies the action to take.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLifecyclePreStopExec
 {
     /// <summary>Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.</summary>
@@ -2652,6 +2816,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public IList<string>? Command { get; set; }
 }
 
+/// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLifecyclePreStopHttpGetHttpHeaders
 {
     /// <summary>The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header.</summary>
@@ -2663,6 +2828,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public string Value { get; set; }
 }
 
+/// <summary>HTTPGet specifies the http request to perform.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLifecyclePreStopHttpGet
 {
     /// <summary>Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.</summary>
@@ -2686,6 +2852,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public string? Scheme { get; set; }
 }
 
+/// <summary>Sleep represents the duration that the container should sleep before being terminated.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLifecyclePreStopSleep
 {
     /// <summary>Seconds is the number of seconds to sleep.</summary>
@@ -2693,6 +2860,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public long Seconds { get; set; }
 }
 
+/// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLifecyclePreStopTcpSocket
 {
     /// <summary>Optional: Host name to connect to, defaults to the pod IP.</summary>
@@ -2704,6 +2872,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary>PreStop is called immediately before a container is terminated due to an API request or management event such as liveness/startup probe failure, preemption, resource contention, etc. The handler is not called if the container crashes or exits. The Pod's termination grace period countdown begins before the PreStop hook is executed. Regardless of the outcome of the handler, the container will eventually terminate within the Pod's termination grace period (unless delayed by finalizers). Other management of the container blocks until the hook completes or until the termination grace period is reached. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLifecyclePreStop
 {
     /// <summary>Exec specifies the action to take.</summary>
@@ -2723,6 +2892,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLifecyclePreStopTcpSocket? TcpSocket { get; set; }
 }
 
+/// <summary>Actions that the management system should take in response to container lifecycle events. Cannot be updated.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLifecycle
 {
     /// <summary>PostStart is called immediately after a container is created. If the handler fails, the container is terminated and restarted according to its restart policy. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks</summary>
@@ -2734,6 +2904,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLifecyclePreStop? PreStop { get; set; }
 }
 
+/// <summary>Exec specifies the action to take.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLivenessProbeExec
 {
     /// <summary>Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.</summary>
@@ -2741,6 +2912,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public IList<string>? Command { get; set; }
 }
 
+/// <summary>GRPC specifies an action involving a GRPC port.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLivenessProbeGrpc
 {
     /// <summary>Port number of the gRPC service. Number must be in the range 1 to 65535.</summary>
@@ -2752,6 +2924,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public string? Service { get; set; }
 }
 
+/// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLivenessProbeHttpGetHttpHeaders
 {
     /// <summary>The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header.</summary>
@@ -2763,6 +2936,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public string Value { get; set; }
 }
 
+/// <summary>HTTPGet specifies the http request to perform.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLivenessProbeHttpGet
 {
     /// <summary>Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.</summary>
@@ -2786,6 +2960,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public string? Scheme { get; set; }
 }
 
+/// <summary>TCPSocket specifies an action involving a TCP port.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLivenessProbeTcpSocket
 {
     /// <summary>Optional: Host name to connect to, defaults to the pod IP.</summary>
@@ -2797,6 +2972,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary>Periodic probe of container liveness. Container will be restarted if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLivenessProbe
 {
     /// <summary>Exec specifies the action to take.</summary>
@@ -2840,6 +3016,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public int? TimeoutSeconds { get; set; }
 }
 
+/// <summary>ContainerPort represents a network port in a single container.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersPorts
 {
     /// <summary>Number of port to expose on the pod's IP address. This must be a valid port number, 0 &lt; x &lt; 65536.</summary>
@@ -2863,6 +3040,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public string Protocol { get; set; }
 }
 
+/// <summary>Exec specifies the action to take.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersReadinessProbeExec
 {
     /// <summary>Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.</summary>
@@ -2870,6 +3048,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public IList<string>? Command { get; set; }
 }
 
+/// <summary>GRPC specifies an action involving a GRPC port.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersReadinessProbeGrpc
 {
     /// <summary>Port number of the gRPC service. Number must be in the range 1 to 65535.</summary>
@@ -2881,6 +3060,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public string? Service { get; set; }
 }
 
+/// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersReadinessProbeHttpGetHttpHeaders
 {
     /// <summary>The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header.</summary>
@@ -2892,6 +3072,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public string Value { get; set; }
 }
 
+/// <summary>HTTPGet specifies the http request to perform.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersReadinessProbeHttpGet
 {
     /// <summary>Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.</summary>
@@ -2915,6 +3096,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public string? Scheme { get; set; }
 }
 
+/// <summary>TCPSocket specifies an action involving a TCP port.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersReadinessProbeTcpSocket
 {
     /// <summary>Optional: Host name to connect to, defaults to the pod IP.</summary>
@@ -2926,6 +3108,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary>Periodic probe of container service readiness. Container will be removed from service endpoints if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersReadinessProbe
 {
     /// <summary>Exec specifies the action to take.</summary>
@@ -2969,6 +3152,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public int? TimeoutSeconds { get; set; }
 }
 
+/// <summary>ContainerResizePolicy represents resource resize policy for the container.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersResizePolicy
 {
     /// <summary>Name of the resource to which this resource resize policy applies. Supported values: cpu, memory.</summary>
@@ -2980,6 +3164,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public string RestartPolicy { get; set; }
 }
 
+/// <summary>ResourceClaim references one entry in PodSpec.ResourceClaims.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersResourcesClaims
 {
     /// <summary>Name must match the name of one entry in pod.spec.resourceClaims of the Pod where this field is used. It makes that resource available inside a container.</summary>
@@ -2987,6 +3172,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public string Name { get; set; }
 }
 
+/// <summary>Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersResources
 {
     /// <summary>Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container.   This is an alpha field and requires enabling the DynamicResourceAllocation feature gate.   This field is immutable. It can only be set for containers.</summary>
@@ -3002,6 +3188,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public IDictionary<string, IntstrIntOrString>? Requests { get; set; }
 }
 
+/// <summary>The capabilities to add/drop when running containers. Defaults to the default set of capabilities granted by the container runtime. Note that this field cannot be set when spec.os.name is windows.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersSecurityContextCapabilities
 {
     /// <summary>Added capabilities</summary>
@@ -3013,6 +3200,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public IList<string>? Drop { get; set; }
 }
 
+/// <summary>The SELinux context to be applied to the container. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is windows.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersSecurityContextSeLinuxOptions
 {
     /// <summary>Level is SELinux level label that applies to the container.</summary>
@@ -3032,6 +3220,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public string? User { get; set; }
 }
 
+/// <summary>The seccomp options to use by this container. If seccomp options are provided at both the pod &amp; container level, the container options override the pod options. Note that this field cannot be set when spec.os.name is windows.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersSecurityContextSeccompProfile
 {
     /// <summary>localhostProfile indicates a profile defined in a file on the node should be used. The profile must be preconfigured on the node to work. Must be a descending path, relative to the kubelet's configured seccomp profile location. Must be set if type is "Localhost". Must NOT be set for any other type.</summary>
@@ -3043,6 +3232,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public string Type { get; set; }
 }
 
+/// <summary>The Windows specific settings applied to all containers. If unspecified, the options from the PodSecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is linux.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersSecurityContextWindowsOptions
 {
     /// <summary>GMSACredentialSpec is where the GMSA admission webhook (https://github.com/kubernetes-sigs/windows-gmsa) inlines the contents of the GMSA credential spec named by the GMSACredentialSpecName field.</summary>
@@ -3062,6 +3252,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public string? RunAsUserName { get; set; }
 }
 
+/// <summary>SecurityContext defines the security options the container should be run with. If set, the fields of SecurityContext override the equivalent fields of PodSecurityContext. More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersSecurityContext
 {
     /// <summary>AllowPrivilegeEscalation controls whether a process can gain more privileges than its parent process. This bool directly controls if the no_new_privs flag will be set on the container process. AllowPrivilegeEscalation is true always when the container is: 1) run as Privileged 2) has CAP_SYS_ADMIN Note that this field cannot be set when spec.os.name is windows.</summary>
@@ -3109,6 +3300,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersSecurityContextWindowsOptions? WindowsOptions { get; set; }
 }
 
+/// <summary>Exec specifies the action to take.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersStartupProbeExec
 {
     /// <summary>Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.</summary>
@@ -3116,6 +3308,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public IList<string>? Command { get; set; }
 }
 
+/// <summary>GRPC specifies an action involving a GRPC port.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersStartupProbeGrpc
 {
     /// <summary>Port number of the gRPC service. Number must be in the range 1 to 65535.</summary>
@@ -3127,6 +3320,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public string? Service { get; set; }
 }
 
+/// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersStartupProbeHttpGetHttpHeaders
 {
     /// <summary>The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header.</summary>
@@ -3138,6 +3332,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public string Value { get; set; }
 }
 
+/// <summary>HTTPGet specifies the http request to perform.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersStartupProbeHttpGet
 {
     /// <summary>Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.</summary>
@@ -3161,6 +3356,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public string? Scheme { get; set; }
 }
 
+/// <summary>TCPSocket specifies an action involving a TCP port.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersStartupProbeTcpSocket
 {
     /// <summary>Optional: Host name to connect to, defaults to the pod IP.</summary>
@@ -3172,6 +3368,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary>StartupProbe indicates that the Pod has successfully initialized. If specified, no other probes are executed until this completes successfully. If this probe fails, the Pod will be restarted, just as if the livenessProbe failed. This can be used to provide different probe parameters at the beginning of a Pod's lifecycle, when it might take a long time to load data or warm a cache, than during steady-state operation. This cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersStartupProbe
 {
     /// <summary>Exec specifies the action to take.</summary>
@@ -3215,6 +3412,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public int? TimeoutSeconds { get; set; }
 }
 
+/// <summary>volumeDevice describes a mapping of a raw block device within a container.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersVolumeDevices
 {
     /// <summary>devicePath is the path inside of the container that the device will be mapped to.</summary>
@@ -3226,6 +3424,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public string Name { get; set; }
 }
 
+/// <summary>VolumeMount describes a mounting of a Volume within a container.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersVolumeMounts
 {
     /// <summary>Path within the container at which the volume should be mounted.  Must not contain ':'.</summary>
@@ -3253,6 +3452,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public string? SubPathExpr { get; set; }
 }
 
+/// <summary>A single application container that you want to run within a pod.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
 {
     /// <summary>Arguments to the entrypoint. The container image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell</summary>
@@ -3352,6 +3552,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     public string? WorkingDir { get; set; }
 }
 
+/// <summary>Specifies the OS of the containers in the pod. Some pod and container fields are restricted if this is set.   If the OS field is set to linux, the following fields must be unset: -securityContext.windowsOptions   If the OS field is set to windows, following fields must be unset: - spec.hostPID - spec.hostIPC - spec.hostUsers - spec.securityContext.seLinuxOptions - spec.securityContext.seccompProfile - spec.securityContext.fsGroup - spec.securityContext.fsGroupChangePolicy - spec.securityContext.sysctls - spec.shareProcessNamespace - spec.securityContext.runAsUser - spec.securityContext.runAsGroup - spec.securityContext.supplementalGroups - spec.containers[*].securityContext.seLinuxOptions - spec.containers[*].securityContext.seccompProfile - spec.containers[*].securityContext.capabilities - spec.containers[*].securityContext.readOnlyRootFilesystem - spec.containers[*].securityContext.privileged - spec.containers[*].securityContext.allowPrivilegeEscalation - spec.containers[*].securityContext.procMount - spec.containers[*].securityContext.runAsUser - spec.containers[*].securityContext.runAsGroup</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecOs
 {
     /// <summary>Name is the name of the operating system. The currently supported values are linux and windows. Additional value may be defined in future and can be one of: https://github.com/opencontainers/runtime-spec/blob/master/config.md#platform-specific-configuration Clients should expect to handle additional values and treat unrecognized values in this field as os: null</summary>
@@ -3359,6 +3560,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecOs
     public string Name { get; set; }
 }
 
+/// <summary>PodReadinessGate contains the reference to a pod condition</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecReadinessGates
 {
     /// <summary>ConditionType refers to a condition in the pod's condition list with matching type.</summary>
@@ -3366,6 +3568,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecReadinessGates
     public string ConditionType { get; set; }
 }
 
+/// <summary>Source describes where to find the ResourceClaim.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecResourceClaimsSource
 {
     /// <summary>ResourceClaimName is the name of a ResourceClaim object in the same namespace as this pod.</summary>
@@ -3377,6 +3580,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecResourceClaims
     public string? ResourceClaimTemplateName { get; set; }
 }
 
+/// <summary>PodResourceClaim references exactly one ResourceClaim through a ClaimSource. It adds a name to it that uniquely identifies the ResourceClaim inside the Pod. Containers that need access to the ResourceClaim reference it with this name.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecResourceClaims
 {
     /// <summary>Name uniquely identifies this resource claim inside the pod. This must be a DNS_LABEL.</summary>
@@ -3388,6 +3592,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecResourceClaims
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecResourceClaimsSource? Source { get; set; }
 }
 
+/// <summary>PodSchedulingGate is associated to a Pod to guard its scheduling.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecSchedulingGates
 {
     /// <summary>Name of the scheduling gate. Each scheduling gate must have a unique name field.</summary>
@@ -3395,6 +3600,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecSchedulingGate
     public string Name { get; set; }
 }
 
+/// <summary>The SELinux context to be applied to all containers. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in SecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence for that container. Note that this field cannot be set when spec.os.name is windows.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecSecurityContextSeLinuxOptions
 {
     /// <summary>Level is SELinux level label that applies to the container.</summary>
@@ -3414,6 +3620,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecSecurityContex
     public string? User { get; set; }
 }
 
+/// <summary>The seccomp options to use by the containers in this pod. Note that this field cannot be set when spec.os.name is windows.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecSecurityContextSeccompProfile
 {
     /// <summary>localhostProfile indicates a profile defined in a file on the node should be used. The profile must be preconfigured on the node to work. Must be a descending path, relative to the kubelet's configured seccomp profile location. Must be set if type is "Localhost". Must NOT be set for any other type.</summary>
@@ -3425,6 +3632,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecSecurityContex
     public string Type { get; set; }
 }
 
+/// <summary>Sysctl defines a kernel parameter to be set</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecSecurityContextSysctls
 {
     /// <summary>Name of a property to set</summary>
@@ -3436,6 +3644,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecSecurityContex
     public string Value { get; set; }
 }
 
+/// <summary>The Windows specific settings applied to all containers. If unspecified, the options within a container's SecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is linux.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecSecurityContextWindowsOptions
 {
     /// <summary>GMSACredentialSpec is where the GMSA admission webhook (https://github.com/kubernetes-sigs/windows-gmsa) inlines the contents of the GMSA credential spec named by the GMSACredentialSpecName field.</summary>
@@ -3455,6 +3664,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecSecurityContex
     public string? RunAsUserName { get; set; }
 }
 
+/// <summary>SecurityContext holds pod-level security attributes and common container settings. Optional: Defaults to empty.  See type description for default values of each field.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecSecurityContext
 {
     /// <summary>A special supplemental group that applies to all containers in a pod. Some volume types allow the Kubelet to change the ownership of that volume to be owned by the pod:   1. The owning GID will be the FSGroup 2. The setgid bit is set (new files created in the volume will be owned by FSGroup) 3. The permission bits are OR'd with rw-rw----   If unset, the Kubelet will not modify the ownership and permissions of any volume. Note that this field cannot be set when spec.os.name is windows.</summary>
@@ -3498,6 +3708,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecSecurityContex
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecSecurityContextWindowsOptions? WindowsOptions { get; set; }
 }
 
+/// <summary>The pod this Toleration is attached to tolerates any taint that matches the triple &lt;key,value,effect&gt; using the matching operator &lt;operator&gt;.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecTolerations
 {
     /// <summary>Effect indicates the taint effect to match. Empty means match all taint effects. When specified, allowed values are NoSchedule, PreferNoSchedule and NoExecute.</summary>
@@ -3521,6 +3732,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecTolerations
     public string? Value { get; set; }
 }
 
+/// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecTopologySpreadConstraintsLabelSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -3536,6 +3748,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecTopologySpread
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>LabelSelector is used to find matching pods. Pods that match this label selector are counted to determine the number of pods in their corresponding topology domain.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecTopologySpreadConstraintsLabelSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -3547,6 +3760,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecTopologySpread
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>TopologySpreadConstraint specifies how to spread matching pods among the given topology.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecTopologySpreadConstraints
 {
     /// <summary>LabelSelector is used to find matching pods. Pods that match this label selector are counted to determine the number of pods in their corresponding topology domain.</summary>
@@ -3582,6 +3796,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecTopologySpread
     public string WhenUnsatisfiable { get; set; }
 }
 
+/// <summary>awsElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesAwsElasticBlockStore
 {
     /// <summary>fsType is the filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore TODO: how do we prevent errors in the filesystem from compromising the machine</summary>
@@ -3601,6 +3816,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesAwsElas
     public string VolumeID { get; set; }
 }
 
+/// <summary>azureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesAzureDisk
 {
     /// <summary>cachingMode is the Host Caching mode: None, Read Only, Read Write.</summary>
@@ -3628,6 +3844,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesAzureDi
     public bool? ReadOnly { get; set; }
 }
 
+/// <summary>azureFile represents an Azure File Service mount on the host and bind mount to the pod.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesAzureFile
 {
     /// <summary>readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.</summary>
@@ -3643,6 +3860,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesAzureFi
     public string ShareName { get; set; }
 }
 
+/// <summary>secretRef is Optional: SecretRef is reference to the authentication secret for User, default is empty. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesCephfsSecretRef
 {
     /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?</summary>
@@ -3650,6 +3868,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesCephfsS
     public string? Name { get; set; }
 }
 
+/// <summary>cephFS represents a Ceph FS mount on the host that shares a pod's lifetime</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesCephfs
 {
     /// <summary>monitors is Required: Monitors is a collection of Ceph monitors More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it</summary>
@@ -3677,6 +3896,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesCephfs
     public string? User { get; set; }
 }
 
+/// <summary>secretRef is optional: points to a secret object containing parameters used to connect to OpenStack.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesCinderSecretRef
 {
     /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?</summary>
@@ -3684,6 +3904,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesCinderS
     public string? Name { get; set; }
 }
 
+/// <summary>cinder represents a cinder volume attached and mounted on kubelets host machine. More info: https://examples.k8s.io/mysql-cinder-pd/README.md</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesCinder
 {
     /// <summary>fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://examples.k8s.io/mysql-cinder-pd/README.md</summary>
@@ -3703,6 +3924,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesCinder
     public string VolumeID { get; set; }
 }
 
+/// <summary>Maps a string key to a path within a volume.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesConfigMapItems
 {
     /// <summary>key is the key to project.</summary>
@@ -3718,6 +3940,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesConfigM
     public string Path { get; set; }
 }
 
+/// <summary>configMap represents a configMap that should populate this volume</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesConfigMap
 {
     /// <summary>defaultMode is optional: mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.</summary>
@@ -3737,6 +3960,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesConfigM
     public bool? Optional { get; set; }
 }
 
+/// <summary>nodePublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodePublishVolume and NodeUnpublishVolume calls. This field is optional, and  may be empty if no secret is required. If the secret object contains more than one secret, all secret references are passed.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesCsiNodePublishSecretRef
 {
     /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?</summary>
@@ -3744,6 +3968,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesCsiNode
     public string? Name { get; set; }
 }
 
+/// <summary>csi (Container Storage Interface) represents ephemeral storage that is handled by certain external CSI drivers (Beta feature).</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesCsi
 {
     /// <summary>driver is the name of the CSI driver that handles this volume. Consult with your admin for the correct name as registered in the cluster.</summary>
@@ -3767,6 +3992,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesCsi
     public IDictionary<string, string>? VolumeAttributes { get; set; }
 }
 
+/// <summary>Required: Selects a field of the pod: only annotations, labels, name and namespace are supported.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesDownwardAPIItemsFieldRef
 {
     /// <summary>Version of the schema the FieldPath is written in terms of, defaults to "v1".</summary>
@@ -3778,6 +4004,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesDownwar
     public string FieldPath { get; set; }
 }
 
+/// <summary>Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, requests.cpu and requests.memory) are currently supported.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesDownwardAPIItemsResourceFieldRef
 {
     /// <summary>Container name: required for volumes, optional for env vars</summary>
@@ -3793,6 +4020,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesDownwar
     public string Resource { get; set; }
 }
 
+/// <summary>DownwardAPIVolumeFile represents information to create the file containing the pod field</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesDownwardAPIItems
 {
     /// <summary>Required: Selects a field of the pod: only annotations, labels, name and namespace are supported.</summary>
@@ -3812,6 +4040,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesDownwar
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesDownwardAPIItemsResourceFieldRef? ResourceFieldRef { get; set; }
 }
 
+/// <summary>downwardAPI represents downward API about the pod that should populate this volume</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesDownwardAPI
 {
     /// <summary>Optional: mode bits to use on created files by default. Must be a Optional: mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.</summary>
@@ -3823,6 +4052,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesDownwar
     public IList<V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesDownwardAPIItems>? Items { get; set; }
 }
 
+/// <summary>emptyDir represents a temporary directory that shares a pod's lifetime. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEmptyDir
 {
     /// <summary>medium represents what type of storage medium should back this directory. The default is "" which means to use the node's default medium. Must be an empty string (default) or Memory. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir</summary>
@@ -3834,10 +4064,12 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEmptyDi
     public IntstrIntOrString? SizeLimit { get; set; }
 }
 
+/// <summary>May contain labels and annotations that will be copied into the PVC when creating it. No other fields are allowed and will be rejected during validation.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemeralVolumeClaimTemplateMetadata
 {
 }
 
+/// <summary>dataSource field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. When the AnyVolumeDataSource feature gate is enabled, dataSource contents will be copied to dataSourceRef, and dataSourceRef contents will be copied to dataSource when dataSourceRef.namespace is not specified. If the namespace is specified, then dataSourceRef will not be copied to dataSource.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemeralVolumeClaimTemplateSpecDataSource
 {
     /// <summary>APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required.</summary>
@@ -3853,6 +4085,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemer
     public string Name { get; set; }
 }
 
+/// <summary>dataSourceRef specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the dataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, when namespace isn't specified in dataSourceRef, both fields (dataSource and dataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. When namespace is specified in dataSourceRef, dataSource isn't set to the same value and must be empty. There are three important differences between dataSource and dataSourceRef: * While dataSource only allows two specific types of objects, dataSourceRef   allows any non-core object, as well as PersistentVolumeClaim objects. * While dataSource ignores disallowed values (dropping them), dataSourceRef   preserves all values, and generates an error if a disallowed value is   specified. * While dataSource only allows local objects, dataSourceRef allows objects   in any namespaces. (Beta) Using this field requires the AnyVolumeDataSource feature gate to be enabled. (Alpha) Using the namespace field of dataSourceRef requires the CrossNamespaceVolumeDataSource feature gate to be enabled.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemeralVolumeClaimTemplateSpecDataSourceRef
 {
     /// <summary>APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required.</summary>
@@ -3872,6 +4105,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemer
     public string? Namespace { get; set; }
 }
 
+/// <summary>resources represents the minimum resources the volume should have. If RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements that are lower than previous value but must still be higher than capacity recorded in the status field of the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemeralVolumeClaimTemplateSpecResources
 {
     /// <summary>Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/</summary>
@@ -3883,6 +4117,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemer
     public IDictionary<string, IntstrIntOrString>? Requests { get; set; }
 }
 
+/// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemeralVolumeClaimTemplateSpecSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -3898,6 +4133,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemer
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>selector is a label query over volumes to consider for binding.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemeralVolumeClaimTemplateSpecSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -3909,6 +4145,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemer
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>The specification for the PersistentVolumeClaim. The entire content is copied unchanged into the PVC that gets created from this template. The same fields as in a PersistentVolumeClaim are also valid here.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemeralVolumeClaimTemplateSpec
 {
     /// <summary>accessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1</summary>
@@ -3948,6 +4185,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemer
     public string? VolumeName { get; set; }
 }
 
+/// <summary>Will be used to create a stand-alone PVC to provision the volume. The pod in which this EphemeralVolumeSource is embedded will be the owner of the PVC, i.e. the PVC will be deleted together with the pod.  The name of the PVC will be `&lt;pod name&gt;-&lt;volume name&gt;` where `&lt;volume name&gt;` is the name from the `PodSpec.Volumes` array entry. Pod validation will reject the pod if the concatenated name is not valid for a PVC (for example, too long).   An existing PVC with that name that is not owned by the pod will *not* be used for the pod to avoid using an unrelated volume by mistake. Starting the pod is then blocked until the unrelated PVC is removed. If such a pre-created PVC is meant to be used by the pod, the PVC has to updated with an owner reference to the pod once the pod exists. Normally this should not be necessary, but it may be useful when manually reconstructing a broken cluster.   This field is read-only and no changes will be made by Kubernetes to the PVC after it has been created.   Required, must not be nil.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemeralVolumeClaimTemplate
 {
     /// <summary>May contain labels and annotations that will be copied into the PVC when creating it. No other fields are allowed and will be rejected during validation.</summary>
@@ -3959,6 +4197,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemer
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemeralVolumeClaimTemplateSpec Spec { get; set; }
 }
 
+/// <summary>ephemeral represents a volume that is handled by a cluster storage driver. The volume's lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.   Use this if: a) the volume is only needed while the pod runs, b) features of normal volumes like restoring from snapshot or capacity    tracking are needed, c) the storage driver is specified through a storage class, and d) the storage driver supports dynamic volume provisioning through    a PersistentVolumeClaim (see EphemeralVolumeSource for more    information on the connection between this volume type    and PersistentVolumeClaim).   Use PersistentVolumeClaim or one of the vendor-specific APIs for volumes that persist for longer than the lifecycle of an individual pod.   Use CSI for light-weight local ephemeral volumes if the CSI driver is meant to be used that way - see the documentation of the driver for more information.   A pod can use both types of ephemeral volumes and persistent volumes at the same time.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemeral
 {
     /// <summary>Will be used to create a stand-alone PVC to provision the volume. The pod in which this EphemeralVolumeSource is embedded will be the owner of the PVC, i.e. the PVC will be deleted together with the pod.  The name of the PVC will be `&lt;pod name&gt;-&lt;volume name&gt;` where `&lt;volume name&gt;` is the name from the `PodSpec.Volumes` array entry. Pod validation will reject the pod if the concatenated name is not valid for a PVC (for example, too long).   An existing PVC with that name that is not owned by the pod will *not* be used for the pod to avoid using an unrelated volume by mistake. Starting the pod is then blocked until the unrelated PVC is removed. If such a pre-created PVC is meant to be used by the pod, the PVC has to updated with an owner reference to the pod once the pod exists. Normally this should not be necessary, but it may be useful when manually reconstructing a broken cluster.   This field is read-only and no changes will be made by Kubernetes to the PVC after it has been created.   Required, must not be nil.</summary>
@@ -3966,6 +4205,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemer
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemeralVolumeClaimTemplate? VolumeClaimTemplate { get; set; }
 }
 
+/// <summary>fc represents a Fibre Channel resource that is attached to a kubelet's host machine and then exposed to the pod.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesFc
 {
     /// <summary>fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. TODO: how do we prevent errors in the filesystem from compromising the machine</summary>
@@ -3989,6 +4229,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesFc
     public IList<string>? Wwids { get; set; }
 }
 
+/// <summary>secretRef is Optional: secretRef is reference to the secret object containing sensitive information to pass to the plugin scripts. This may be empty if no secret object is specified. If the secret object contains more than one secret, all secrets are passed to the plugin scripts.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesFlexVolumeSecretRef
 {
     /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?</summary>
@@ -3996,6 +4237,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesFlexVol
     public string? Name { get; set; }
 }
 
+/// <summary>flexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesFlexVolume
 {
     /// <summary>driver is the name of the driver to use for this volume.</summary>
@@ -4019,6 +4261,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesFlexVol
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesFlexVolumeSecretRef? SecretRef { get; set; }
 }
 
+/// <summary>flocker represents a Flocker volume attached to a kubelet's host machine. This depends on the Flocker control service being running</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesFlocker
 {
     /// <summary>datasetName is Name of the dataset stored as metadata -&gt; name on the dataset for Flocker should be considered as deprecated</summary>
@@ -4030,6 +4273,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesFlocker
     public string? DatasetUUID { get; set; }
 }
 
+/// <summary>gcePersistentDisk represents a GCE Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesGcePersistentDisk
 {
     /// <summary>fsType is filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk TODO: how do we prevent errors in the filesystem from compromising the machine</summary>
@@ -4049,6 +4293,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesGcePers
     public bool? ReadOnly { get; set; }
 }
 
+/// <summary>gitRepo represents a git repository at a particular revision. DEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir into the Pod's container.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesGitRepo
 {
     /// <summary>directory is the target directory name. Must not contain or start with '..'.  If '.' is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.</summary>
@@ -4064,6 +4309,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesGitRepo
     public string? Revision { get; set; }
 }
 
+/// <summary>glusterfs represents a Glusterfs mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/glusterfs/README.md</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesGlusterfs
 {
     /// <summary>endpoints is the endpoint name that details Glusterfs topology. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod</summary>
@@ -4079,6 +4325,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesGluster
     public bool? ReadOnly { get; set; }
 }
 
+/// <summary>hostPath represents a pre-existing file or directory on the host machine that is directly exposed to the container. This is generally used for system agents or other privileged things that are allowed to see the host machine. Most containers will NOT need this. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath --- TODO(jonesdl) We need to restrict who can use host directory mounts and who can/can not mount host directories as read/write.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesHostPath
 {
     /// <summary>path of the directory on the host. If the path is a symlink, it will follow the link to the real path. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath</summary>
@@ -4090,6 +4337,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesHostPat
     public string? Type { get; set; }
 }
 
+/// <summary>secretRef is the CHAP Secret for iSCSI target and initiator authentication</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesIscsiSecretRef
 {
     /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?</summary>
@@ -4097,6 +4345,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesIscsiSe
     public string? Name { get; set; }
 }
 
+/// <summary>iscsi represents an ISCSI Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://examples.k8s.io/volumes/iscsi/README.md</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesIscsi
 {
     /// <summary>chapAuthDiscovery defines whether support iSCSI Discovery CHAP authentication</summary>
@@ -4144,6 +4393,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesIscsi
     public string TargetPortal { get; set; }
 }
 
+/// <summary>nfs represents an NFS mount on the host that shares a pod's lifetime More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesNfs
 {
     /// <summary>path that is exported by the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs</summary>
@@ -4159,6 +4409,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesNfs
     public string Server { get; set; }
 }
 
+/// <summary>persistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesPersistentVolumeClaim
 {
     /// <summary>claimName is the name of a PersistentVolumeClaim in the same namespace as the pod using this volume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims</summary>
@@ -4170,6 +4421,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesPersist
     public bool? ReadOnly { get; set; }
 }
 
+/// <summary>photonPersistentDisk represents a PhotonController persistent disk attached and mounted on kubelets host machine</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesPhotonPersistentDisk
 {
     /// <summary>fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.</summary>
@@ -4181,6 +4433,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesPhotonP
     public string PdID { get; set; }
 }
 
+/// <summary>portworxVolume represents a portworx volume attached and mounted on kubelets host machine</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesPortworxVolume
 {
     /// <summary>fSType represents the filesystem type to mount Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs". Implicitly inferred to be "ext4" if unspecified.</summary>
@@ -4196,6 +4449,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesPortwor
     public string VolumeID { get; set; }
 }
 
+/// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProjectedSourcesClusterTrustBundleLabelSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -4211,6 +4465,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProject
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>Select all ClusterTrustBundles that match this label selector.  Only has effect if signerName is set.  Mutually-exclusive with name.  If unset, interpreted as "match nothing".  If set but empty, interpreted as "match everything".</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProjectedSourcesClusterTrustBundleLabelSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -4222,6 +4477,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProject
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>ClusterTrustBundle allows a pod to access the `.spec.trustBundle` field of ClusterTrustBundle objects in an auto-updating file.   Alpha, gated by the ClusterTrustBundleProjection feature gate.   ClusterTrustBundle objects can either be selected by name, or by the combination of signer name and a label selector.   Kubelet performs aggressive normalization of the PEM contents written into the pod filesystem.  Esoteric PEM features such as inter-block comments and block headers are stripped.  Certificates are deduplicated. The ordering of certificates within the file is arbitrary, and Kubelet may change the order over time.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProjectedSourcesClusterTrustBundle
 {
     /// <summary>Select all ClusterTrustBundles that match this label selector.  Only has effect if signerName is set.  Mutually-exclusive with name.  If unset, interpreted as "match nothing".  If set but empty, interpreted as "match everything".</summary>
@@ -4245,6 +4501,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProject
     public string? SignerName { get; set; }
 }
 
+/// <summary>Maps a string key to a path within a volume.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProjectedSourcesConfigMapItems
 {
     /// <summary>key is the key to project.</summary>
@@ -4260,6 +4517,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProject
     public string Path { get; set; }
 }
 
+/// <summary>configMap information about the configMap data to project</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProjectedSourcesConfigMap
 {
     /// <summary>items if unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'.</summary>
@@ -4275,6 +4533,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProject
     public bool? Optional { get; set; }
 }
 
+/// <summary>Required: Selects a field of the pod: only annotations, labels, name and namespace are supported.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProjectedSourcesDownwardAPIItemsFieldRef
 {
     /// <summary>Version of the schema the FieldPath is written in terms of, defaults to "v1".</summary>
@@ -4286,6 +4545,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProject
     public string FieldPath { get; set; }
 }
 
+/// <summary>Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, requests.cpu and requests.memory) are currently supported.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProjectedSourcesDownwardAPIItemsResourceFieldRef
 {
     /// <summary>Container name: required for volumes, optional for env vars</summary>
@@ -4301,6 +4561,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProject
     public string Resource { get; set; }
 }
 
+/// <summary>DownwardAPIVolumeFile represents information to create the file containing the pod field</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProjectedSourcesDownwardAPIItems
 {
     /// <summary>Required: Selects a field of the pod: only annotations, labels, name and namespace are supported.</summary>
@@ -4320,6 +4581,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProject
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProjectedSourcesDownwardAPIItemsResourceFieldRef? ResourceFieldRef { get; set; }
 }
 
+/// <summary>downwardAPI information about the downwardAPI data to project</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProjectedSourcesDownwardAPI
 {
     /// <summary>Items is a list of DownwardAPIVolume file</summary>
@@ -4327,6 +4589,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProject
     public IList<V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProjectedSourcesDownwardAPIItems>? Items { get; set; }
 }
 
+/// <summary>Maps a string key to a path within a volume.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProjectedSourcesSecretItems
 {
     /// <summary>key is the key to project.</summary>
@@ -4342,6 +4605,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProject
     public string Path { get; set; }
 }
 
+/// <summary>secret information about the secret data to project</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProjectedSourcesSecret
 {
     /// <summary>items if unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'.</summary>
@@ -4357,6 +4621,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProject
     public bool? Optional { get; set; }
 }
 
+/// <summary>serviceAccountToken is information about the serviceAccountToken data to project</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProjectedSourcesServiceAccountToken
 {
     /// <summary>audience is the intended audience of the token. A recipient of a token must identify itself with an identifier specified in the audience of the token, and otherwise should reject the token. The audience defaults to the identifier of the apiserver.</summary>
@@ -4372,6 +4637,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProject
     public string Path { get; set; }
 }
 
+/// <summary>Projection that may be projected along with other supported volume types</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProjectedSources
 {
     /// <summary>ClusterTrustBundle allows a pod to access the `.spec.trustBundle` field of ClusterTrustBundle objects in an auto-updating file.   Alpha, gated by the ClusterTrustBundleProjection feature gate.   ClusterTrustBundle objects can either be selected by name, or by the combination of signer name and a label selector.   Kubelet performs aggressive normalization of the PEM contents written into the pod filesystem.  Esoteric PEM features such as inter-block comments and block headers are stripped.  Certificates are deduplicated. The ordering of certificates within the file is arbitrary, and Kubelet may change the order over time.</summary>
@@ -4395,6 +4661,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProject
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProjectedSourcesServiceAccountToken? ServiceAccountToken { get; set; }
 }
 
+/// <summary>projected items for all in one resources secrets, configmaps, and downward API</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProjected
 {
     /// <summary>defaultMode are the mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.</summary>
@@ -4406,6 +4673,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProject
     public IList<V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProjectedSources>? Sources { get; set; }
 }
 
+/// <summary>quobyte represents a Quobyte mount on the host that shares a pod's lifetime</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesQuobyte
 {
     /// <summary>group to map volume access to Default is no group</summary>
@@ -4433,6 +4701,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesQuobyte
     public string Volume { get; set; }
 }
 
+/// <summary>secretRef is name of the authentication secret for RBDUser. If provided overrides keyring. Default is nil. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesRbdSecretRef
 {
     /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?</summary>
@@ -4440,6 +4709,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesRbdSecr
     public string? Name { get; set; }
 }
 
+/// <summary>rbd represents a Rados Block Device mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesRbd
 {
     /// <summary>fsType is the filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#rbd TODO: how do we prevent errors in the filesystem from compromising the machine</summary>
@@ -4475,6 +4745,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesRbd
     public string? User { get; set; }
 }
 
+/// <summary>secretRef references to the secret for ScaleIO user and other sensitive information. If this is not provided, Login operation will fail.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesScaleIOSecretRef
 {
     /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?</summary>
@@ -4482,6 +4753,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesScaleIO
     public string? Name { get; set; }
 }
 
+/// <summary>scaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesScaleIO
 {
     /// <summary>fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Default is "xfs".</summary>
@@ -4525,6 +4797,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesScaleIO
     public string? VolumeName { get; set; }
 }
 
+/// <summary>Maps a string key to a path within a volume.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesSecretItems
 {
     /// <summary>key is the key to project.</summary>
@@ -4540,6 +4813,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesSecretI
     public string Path { get; set; }
 }
 
+/// <summary>secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesSecret
 {
     /// <summary>defaultMode is Optional: mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.</summary>
@@ -4559,6 +4833,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesSecret
     public string? SecretName { get; set; }
 }
 
+/// <summary>secretRef specifies the secret to use for obtaining the StorageOS API credentials.  If not specified, default values will be attempted.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesStorageosSecretRef
 {
     /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?</summary>
@@ -4566,6 +4841,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesStorage
     public string? Name { get; set; }
 }
 
+/// <summary>storageOS represents a StorageOS volume attached and mounted on Kubernetes nodes.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesStorageos
 {
     /// <summary>fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.</summary>
@@ -4589,6 +4865,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesStorage
     public string? VolumeNamespace { get; set; }
 }
 
+/// <summary>vsphereVolume represents a vSphere volume attached and mounted on kubelets host machine</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesVsphereVolume
 {
     /// <summary>fsType is filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.</summary>
@@ -4608,6 +4885,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesVsphere
     public string VolumePath { get; set; }
 }
 
+/// <summary>Volume represents a named volume in a pod that may be accessed by any container in the pod.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumes
 {
     /// <summary>awsElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore</summary>
@@ -4731,6 +5009,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumes
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesVsphereVolume? VsphereVolume { get; set; }
 }
 
+/// <summary>Specification of the desired behavior of the pod. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpec
 {
     /// <summary>Optional duration in seconds the pod may be active on the node relative to StartTime before the system will actively try to mark it failed and kill associated containers. Value must be a positive integer.</summary>
@@ -4890,6 +5169,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpec
     public IList<V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumes>? Volumes { get; set; }
 }
 
+/// <summary>Describes the pod that will be created when executing a job. The only allowed template.spec.restartPolicy values are "Never" or "OnFailure". More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplate
 {
     /// <summary>Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata</summary>
@@ -4901,6 +5181,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplate
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpec? Spec { get; set; }
 }
 
+/// <summary>JobSpec describes how the job execution will look like.</summary>
 public partial class V1alpha1ScaledJobSpecJobTargetRef
 {
     /// <summary>Specifies the duration in seconds relative to the startTime that the job may be continuously active before the system tries to terminate it; value must be positive integer. If a Job is suspended (at creation or through an update), this timer will effectively be stopped and reset when the Job is resumed again.</summary>
@@ -4960,6 +5241,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRef
     public int? TtlSecondsAfterFinished { get; set; }
 }
 
+/// <summary>Rollout defines the strategy for job rollouts</summary>
 public partial class V1alpha1ScaledJobSpecRollout
 {
     /// <summary></summary>
@@ -4971,6 +5253,7 @@ public partial class V1alpha1ScaledJobSpecRollout
     public string? Strategy { get; set; }
 }
 
+/// <summary>ScalingStrategy defines the strategy of Scaling</summary>
 public partial class V1alpha1ScaledJobSpecScalingStrategy
 {
     /// <summary></summary>
@@ -4994,6 +5277,7 @@ public partial class V1alpha1ScaledJobSpecScalingStrategy
     public string? Strategy { get; set; }
 }
 
+/// <summary>AuthenticationRef points to the TriggerAuthentication or ClusterTriggerAuthentication object that is used to authenticate the scaler with the environment</summary>
 public partial class V1alpha1ScaledJobSpecTriggersAuthenticationRef
 {
     /// <summary>Kind of the resource being referred to. Defaults to TriggerAuthentication.</summary>
@@ -5005,6 +5289,7 @@ public partial class V1alpha1ScaledJobSpecTriggersAuthenticationRef
     public string Name { get; set; }
 }
 
+/// <summary>ScaleTriggers reference the scaler that will be used</summary>
 public partial class V1alpha1ScaledJobSpecTriggers
 {
     /// <summary>AuthenticationRef points to the TriggerAuthentication or ClusterTriggerAuthentication object that is used to authenticate the scaler with the environment</summary>
@@ -5028,6 +5313,7 @@ public partial class V1alpha1ScaledJobSpecTriggers
     public bool? UseCachedMetrics { get; set; }
 }
 
+/// <summary>ScaledJobSpec defines the desired state of ScaledJob</summary>
 public partial class V1alpha1ScaledJobSpec
 {
     /// <summary></summary>
@@ -5075,6 +5361,7 @@ public partial class V1alpha1ScaledJobSpec
     public IList<V1alpha1ScaledJobSpecTriggers> Triggers { get; set; }
 }
 
+/// <summary>Condition to store the condition state</summary>
 public partial class V1alpha1ScaledJobStatusConditions
 {
     /// <summary>A human readable message indicating details about the transition.</summary>
@@ -5094,6 +5381,7 @@ public partial class V1alpha1ScaledJobStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ScaledJobStatus defines the observed state of ScaledJob</summary>
 public partial class V1alpha1ScaledJobStatus
 {
     /// <summary></summary>
@@ -5110,6 +5398,7 @@ public partial class V1alpha1ScaledJobStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ScaledJob is the Schema for the scaledjobs API</summary>
 public partial class V1alpha1ScaledJob : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ScaledJobSpec>, IStatus<V1alpha1ScaledJobStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

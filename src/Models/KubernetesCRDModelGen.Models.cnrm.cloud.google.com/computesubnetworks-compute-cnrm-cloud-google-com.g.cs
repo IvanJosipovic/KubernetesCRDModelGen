@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary>This field denotes the VPC flow logging options for this subnetwork. If logging is enabled, logs are exported to Cloud Logging. Flow logging isn't supported if the subnet 'purpose' field is set to subnetwork is 'REGIONAL_MANAGED_PROXY' or 'GLOBAL_MANAGED_PROXY'.</summary>
 public partial class V1beta1ComputeSubnetworkSpecLogConfig
 {
     /// <summary>Can only be specified if VPC flow logging for this subnetwork is enabled. Toggles the aggregation interval for collecting flow logs. Increasing the interval time will reduce the amount of generated flow logs for long lasting connections. Default is an interval of 5 seconds per connection. Default value: "INTERVAL_5_SEC" Possible values: ["INTERVAL_5_SEC", "INTERVAL_30_SEC", "INTERVAL_1_MIN", "INTERVAL_5_MIN", "INTERVAL_10_MIN", "INTERVAL_15_MIN"].</summary>
@@ -31,6 +32,7 @@ public partial class V1beta1ComputeSubnetworkSpecLogConfig
     public IList<string>? MetadataFields { get; set; }
 }
 
+/// <summary>The network this subnet belongs to. Only networks that are in the distributed mode can have subnetworks.</summary>
 public partial class V1beta1ComputeSubnetworkSpecNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
@@ -46,6 +48,7 @@ public partial class V1beta1ComputeSubnetworkSpecNetworkRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeSubnetworkSpecSecondaryIpRange
 {
     /// <summary>The range of IP addresses belonging to this subnetwork secondary range. Provide this property when you create the subnetwork. Ranges must be unique and non-overlapping with all primary and secondary IP ranges within a network. Only IPv4 is supported.</summary>
@@ -57,6 +60,7 @@ public partial class V1beta1ComputeSubnetworkSpecSecondaryIpRange
     public string RangeName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeSubnetworkSpec
 {
     /// <summary>Immutable. An optional description of this resource. Provide this property when you create the resource. This field can be set only at resource creation time.</summary>
@@ -112,6 +116,7 @@ public partial class V1beta1ComputeSubnetworkSpec
     public string? StackType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeSubnetworkStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -135,6 +140,7 @@ public partial class V1beta1ComputeSubnetworkStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeSubnetworkStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -175,6 +181,7 @@ public partial class V1beta1ComputeSubnetworkStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ComputeSubnetwork : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeSubnetworkSpec>, IStatus<V1beta1ComputeSubnetworkStatus>
 {
     public const string KubeApiVersion = "v1beta1";

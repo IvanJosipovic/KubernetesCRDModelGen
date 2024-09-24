@@ -18,6 +18,7 @@ public enum V1beta1ManagedSSLCertificateSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedSSLCertificateSpecForProviderManaged
 {
     /// <summary>Domains for which a managed SSL certificate will be valid.  Currently, there can be up to 100 domains in this list.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1ManagedSSLCertificateSpecForProviderManaged
     public IList<string>? Domains { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedSSLCertificateSpecForProvider
 {
     /// <summary>The unique identifier for the resource.</summary>
@@ -48,6 +50,7 @@ public partial class V1beta1ManagedSSLCertificateSpecForProvider
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedSSLCertificateSpecInitProviderManaged
 {
     /// <summary>Domains for which a managed SSL certificate will be valid.  Currently, there can be up to 100 domains in this list.</summary>
@@ -55,6 +58,7 @@ public partial class V1beta1ManagedSSLCertificateSpecInitProviderManaged
     public IList<string>? Domains { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ManagedSSLCertificateSpecInitProvider
 {
     /// <summary>The unique identifier for the resource.</summary>
@@ -120,6 +124,7 @@ public enum V1beta1ManagedSSLCertificateSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ManagedSSLCertificateSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -133,6 +138,7 @@ public partial class V1beta1ManagedSSLCertificateSpecProviderConfigRefPolicy
     public V1beta1ManagedSSLCertificateSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ManagedSSLCertificateSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -164,6 +170,7 @@ public enum V1beta1ManagedSSLCertificateSpecPublishConnectionDetailsToConfigRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ManagedSSLCertificateSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -177,6 +184,7 @@ public partial class V1beta1ManagedSSLCertificateSpecPublishConnectionDetailsToC
     public V1beta1ManagedSSLCertificateSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ManagedSSLCertificateSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -188,6 +196,7 @@ public partial class V1beta1ManagedSSLCertificateSpecPublishConnectionDetailsToC
     public V1beta1ManagedSSLCertificateSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ManagedSSLCertificateSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -203,6 +212,7 @@ public partial class V1beta1ManagedSSLCertificateSpecPublishConnectionDetailsToM
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ManagedSSLCertificateSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -218,6 +228,7 @@ public partial class V1beta1ManagedSSLCertificateSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ManagedSSLCertificateSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -229,6 +240,7 @@ public partial class V1beta1ManagedSSLCertificateSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ManagedSSLCertificateSpec defines the desired state of ManagedSSLCertificate</summary>
 public partial class V1beta1ManagedSSLCertificateSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -261,6 +273,7 @@ public partial class V1beta1ManagedSSLCertificateSpec
     public V1beta1ManagedSSLCertificateSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedSSLCertificateStatusAtProviderManaged
 {
     /// <summary>Domains for which a managed SSL certificate will be valid.  Currently, there can be up to 100 domains in this list.</summary>
@@ -268,6 +281,7 @@ public partial class V1beta1ManagedSSLCertificateStatusAtProviderManaged
     public IList<string>? Domains { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedSSLCertificateStatusAtProvider
 {
     /// <summary>The unique identifier for the resource.</summary>
@@ -311,6 +325,7 @@ public partial class V1beta1ManagedSSLCertificateStatusAtProvider
     public string? Type { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ManagedSSLCertificateStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -338,6 +353,7 @@ public partial class V1beta1ManagedSSLCertificateStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ManagedSSLCertificateStatus defines the observed state of ManagedSSLCertificate.</summary>
 public partial class V1beta1ManagedSSLCertificateStatus
 {
     /// <summary></summary>
@@ -354,6 +370,7 @@ public partial class V1beta1ManagedSSLCertificateStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ManagedSSLCertificate is the Schema for the ManagedSSLCertificates API. An SslCertificate resource, used for HTTPS load balancing.</summary>
 public partial class V1beta1ManagedSSLCertificate : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ManagedSSLCertificateSpec>, IStatus<V1beta1ManagedSSLCertificateStatus>
 {
     public const string KubeApiVersion = "v1beta1";

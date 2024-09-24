@@ -42,6 +42,7 @@ public enum V1ReceiverSpecResourcesKindEnum
     OCIRepository
 }
 
+/// <summary>CrossNamespaceObjectReference contains enough information to let you locate the typed referenced object at cluster level</summary>
 public partial class V1ReceiverSpecResources
 {
     /// <summary>API version of the referent</summary>
@@ -66,6 +67,7 @@ public partial class V1ReceiverSpecResources
     public string? Namespace { get; set; }
 }
 
+/// <summary>SecretRef specifies the Secret containing the token used to validate the payload authenticity.</summary>
 public partial class V1ReceiverSpecSecretRef
 {
     /// <summary>Name of the referent.</summary>
@@ -113,6 +115,7 @@ public enum V1ReceiverSpecTypeEnum
     Cdevents
 }
 
+/// <summary>ReceiverSpec defines the desired state of the Receiver.</summary>
 public partial class V1ReceiverSpec
 {
     /// <summary>Events specifies the list of event types to handle, e.g. 'push' for GitHub or 'Push Hook' for GitLab.</summary>
@@ -154,6 +157,7 @@ public enum V1ReceiverStatusConditionsStatusEnum
     Unknown
 }
 
+/// <summary>Condition contains details for one aspect of the current state of this API Resource. --- This struct is intended for direct use as an array at the field path .status.conditions.  For example,   	type FooStatus struct{ 	    // Represents the observations of a foo's current state. 	    // Known .status.conditions.type are: "Available", "Progressing", and "Degraded" 	    // +patchMergeKey=type 	    // +patchStrategy=merge 	    // +listType=map 	    // +listMapKey=type 	    Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`   	    // other fields 	}</summary>
 public partial class V1ReceiverStatusConditions
 {
     /// <summary>lastTransitionTime is the last time the condition transitioned from one status to another. This should be when the underlying condition changed.  If that is not known, then using the time when the API field changed is acceptable.</summary>
@@ -182,6 +186,7 @@ public partial class V1ReceiverStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ReceiverStatus defines the observed state of the Receiver.</summary>
 public partial class V1ReceiverStatus
 {
     /// <summary>Conditions holds the conditions for the Receiver.</summary>
@@ -202,6 +207,7 @@ public partial class V1ReceiverStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Receiver is the Schema for the receivers API.</summary>
 public partial class V1Receiver : IKubernetesObject<V1ObjectMeta>, ISpec<V1ReceiverSpec>, IStatus<V1ReceiverStatus>
 {
     public const string KubeApiVersion = "v1";

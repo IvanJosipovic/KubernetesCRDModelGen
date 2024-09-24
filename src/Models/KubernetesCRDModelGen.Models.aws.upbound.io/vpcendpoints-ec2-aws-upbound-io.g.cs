@@ -18,6 +18,7 @@ public enum V1beta1VPCEndpointSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1VPCEndpointSpecForProviderDnsOptions
 {
     /// <summary>The DNS records created for the endpoint. Valid values are ipv4, dualstack, service-defined, and ipv6.</summary>
@@ -49,6 +50,7 @@ public enum V1beta1VPCEndpointSpecForProviderServiceNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPCEndpointSpecForProviderServiceNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -62,6 +64,7 @@ public partial class V1beta1VPCEndpointSpecForProviderServiceNameRefPolicy
     public V1beta1VPCEndpointSpecForProviderServiceNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPCEndpointService in ec2 to populate serviceName.</summary>
 public partial class V1beta1VPCEndpointSpecForProviderServiceNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -93,6 +96,7 @@ public enum V1beta1VPCEndpointSpecForProviderServiceNameSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VPCEndpointSpecForProviderServiceNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -106,6 +110,7 @@ public partial class V1beta1VPCEndpointSpecForProviderServiceNameSelectorPolicy
     public V1beta1VPCEndpointSpecForProviderServiceNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPCEndpointService in ec2 to populate serviceName.</summary>
 public partial class V1beta1VPCEndpointSpecForProviderServiceNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -141,6 +146,7 @@ public enum V1beta1VPCEndpointSpecForProviderSubnetConfigurationSubnetIdRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPCEndpointSpecForProviderSubnetConfigurationSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -154,6 +160,7 @@ public partial class V1beta1VPCEndpointSpecForProviderSubnetConfigurationSubnetI
     public V1beta1VPCEndpointSpecForProviderSubnetConfigurationSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
 public partial class V1beta1VPCEndpointSpecForProviderSubnetConfigurationSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -185,6 +192,7 @@ public enum V1beta1VPCEndpointSpecForProviderSubnetConfigurationSubnetIdSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VPCEndpointSpecForProviderSubnetConfigurationSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -198,6 +206,7 @@ public partial class V1beta1VPCEndpointSpecForProviderSubnetConfigurationSubnetI
     public V1beta1VPCEndpointSpecForProviderSubnetConfigurationSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
 public partial class V1beta1VPCEndpointSpecForProviderSubnetConfigurationSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -213,6 +222,7 @@ public partial class V1beta1VPCEndpointSpecForProviderSubnetConfigurationSubnetI
     public V1beta1VPCEndpointSpecForProviderSubnetConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPCEndpointSpecForProviderSubnetConfiguration
 {
     /// <summary>The IPv4 address to assign to the endpoint network interface in the subnet. You must provide an IPv4 address if the VPC endpoint supports IPv4.</summary>
@@ -256,6 +266,7 @@ public enum V1beta1VPCEndpointSpecForProviderVpcIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPCEndpointSpecForProviderVpcIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -269,6 +280,7 @@ public partial class V1beta1VPCEndpointSpecForProviderVpcIdRefPolicy
     public V1beta1VPCEndpointSpecForProviderVpcIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1VPCEndpointSpecForProviderVpcIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -300,6 +312,7 @@ public enum V1beta1VPCEndpointSpecForProviderVpcIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VPCEndpointSpecForProviderVpcIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -313,6 +326,7 @@ public partial class V1beta1VPCEndpointSpecForProviderVpcIdSelectorPolicy
     public V1beta1VPCEndpointSpecForProviderVpcIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1VPCEndpointSpecForProviderVpcIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -328,6 +342,7 @@ public partial class V1beta1VPCEndpointSpecForProviderVpcIdSelector
     public V1beta1VPCEndpointSpecForProviderVpcIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPCEndpointSpecForProvider
 {
     /// <summary>Accept the VPC endpoint (the VPC endpoint and service need to be in the same AWS account).</summary>
@@ -391,6 +406,7 @@ public partial class V1beta1VPCEndpointSpecForProvider
     public V1beta1VPCEndpointSpecForProviderVpcIdSelector? VpcIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPCEndpointSpecInitProviderDnsOptions
 {
     /// <summary>The DNS records created for the endpoint. Valid values are ipv4, dualstack, service-defined, and ipv6.</summary>
@@ -422,6 +438,7 @@ public enum V1beta1VPCEndpointSpecInitProviderServiceNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPCEndpointSpecInitProviderServiceNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -435,6 +452,7 @@ public partial class V1beta1VPCEndpointSpecInitProviderServiceNameRefPolicy
     public V1beta1VPCEndpointSpecInitProviderServiceNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPCEndpointService in ec2 to populate serviceName.</summary>
 public partial class V1beta1VPCEndpointSpecInitProviderServiceNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -466,6 +484,7 @@ public enum V1beta1VPCEndpointSpecInitProviderServiceNameSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VPCEndpointSpecInitProviderServiceNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -479,6 +498,7 @@ public partial class V1beta1VPCEndpointSpecInitProviderServiceNameSelectorPolicy
     public V1beta1VPCEndpointSpecInitProviderServiceNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPCEndpointService in ec2 to populate serviceName.</summary>
 public partial class V1beta1VPCEndpointSpecInitProviderServiceNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -514,6 +534,7 @@ public enum V1beta1VPCEndpointSpecInitProviderSubnetConfigurationSubnetIdRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPCEndpointSpecInitProviderSubnetConfigurationSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -527,6 +548,7 @@ public partial class V1beta1VPCEndpointSpecInitProviderSubnetConfigurationSubnet
     public V1beta1VPCEndpointSpecInitProviderSubnetConfigurationSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
 public partial class V1beta1VPCEndpointSpecInitProviderSubnetConfigurationSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -558,6 +580,7 @@ public enum V1beta1VPCEndpointSpecInitProviderSubnetConfigurationSubnetIdSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VPCEndpointSpecInitProviderSubnetConfigurationSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -571,6 +594,7 @@ public partial class V1beta1VPCEndpointSpecInitProviderSubnetConfigurationSubnet
     public V1beta1VPCEndpointSpecInitProviderSubnetConfigurationSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
 public partial class V1beta1VPCEndpointSpecInitProviderSubnetConfigurationSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -586,6 +610,7 @@ public partial class V1beta1VPCEndpointSpecInitProviderSubnetConfigurationSubnet
     public V1beta1VPCEndpointSpecInitProviderSubnetConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPCEndpointSpecInitProviderSubnetConfiguration
 {
     /// <summary>The IPv4 address to assign to the endpoint network interface in the subnet. You must provide an IPv4 address if the VPC endpoint supports IPv4.</summary>
@@ -629,6 +654,7 @@ public enum V1beta1VPCEndpointSpecInitProviderVpcIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPCEndpointSpecInitProviderVpcIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -642,6 +668,7 @@ public partial class V1beta1VPCEndpointSpecInitProviderVpcIdRefPolicy
     public V1beta1VPCEndpointSpecInitProviderVpcIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1VPCEndpointSpecInitProviderVpcIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -673,6 +700,7 @@ public enum V1beta1VPCEndpointSpecInitProviderVpcIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VPCEndpointSpecInitProviderVpcIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -686,6 +714,7 @@ public partial class V1beta1VPCEndpointSpecInitProviderVpcIdSelectorPolicy
     public V1beta1VPCEndpointSpecInitProviderVpcIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1VPCEndpointSpecInitProviderVpcIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -701,6 +730,7 @@ public partial class V1beta1VPCEndpointSpecInitProviderVpcIdSelector
     public V1beta1VPCEndpointSpecInitProviderVpcIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1VPCEndpointSpecInitProvider
 {
     /// <summary>Accept the VPC endpoint (the VPC endpoint and service need to be in the same AWS account).</summary>
@@ -802,6 +832,7 @@ public enum V1beta1VPCEndpointSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPCEndpointSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -815,6 +846,7 @@ public partial class V1beta1VPCEndpointSpecProviderConfigRefPolicy
     public V1beta1VPCEndpointSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1VPCEndpointSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -846,6 +878,7 @@ public enum V1beta1VPCEndpointSpecPublishConnectionDetailsToConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPCEndpointSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -859,6 +892,7 @@ public partial class V1beta1VPCEndpointSpecPublishConnectionDetailsToConfigRefPo
     public V1beta1VPCEndpointSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1VPCEndpointSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -870,6 +904,7 @@ public partial class V1beta1VPCEndpointSpecPublishConnectionDetailsToConfigRef
     public V1beta1VPCEndpointSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1VPCEndpointSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -885,6 +920,7 @@ public partial class V1beta1VPCEndpointSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1VPCEndpointSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -900,6 +936,7 @@ public partial class V1beta1VPCEndpointSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1VPCEndpointSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -911,6 +948,7 @@ public partial class V1beta1VPCEndpointSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>VPCEndpointSpec defines the desired state of VPCEndpoint</summary>
 public partial class V1beta1VPCEndpointSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -943,6 +981,7 @@ public partial class V1beta1VPCEndpointSpec
     public V1beta1VPCEndpointSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPCEndpointStatusAtProviderDnsEntry
 {
     /// <summary>The DNS name.</summary>
@@ -954,6 +993,7 @@ public partial class V1beta1VPCEndpointStatusAtProviderDnsEntry
     public string? HostedZoneId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPCEndpointStatusAtProviderDnsOptions
 {
     /// <summary>The DNS records created for the endpoint. Valid values are ipv4, dualstack, service-defined, and ipv6.</summary>
@@ -965,6 +1005,7 @@ public partial class V1beta1VPCEndpointStatusAtProviderDnsOptions
     public bool? PrivateDnsOnlyForInboundResolverEndpoint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPCEndpointStatusAtProviderSubnetConfiguration
 {
     /// <summary>The IPv4 address to assign to the endpoint network interface in the subnet. You must provide an IPv4 address if the VPC endpoint supports IPv4.</summary>
@@ -980,6 +1021,7 @@ public partial class V1beta1VPCEndpointStatusAtProviderSubnetConfiguration
     public string? SubnetId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPCEndpointStatusAtProvider
 {
     /// <summary>The Amazon Resource Name (ARN) of the VPC endpoint.</summary>
@@ -1075,6 +1117,7 @@ public partial class V1beta1VPCEndpointStatusAtProvider
     public string? VpcId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1VPCEndpointStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1102,6 +1145,7 @@ public partial class V1beta1VPCEndpointStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>VPCEndpointStatus defines the observed state of VPCEndpoint.</summary>
 public partial class V1beta1VPCEndpointStatus
 {
     /// <summary></summary>
@@ -1118,6 +1162,7 @@ public partial class V1beta1VPCEndpointStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>VPCEndpoint is the Schema for the VPCEndpoints API. Provides a VPC Endpoint resource.</summary>
 public partial class V1beta1VPCEndpoint : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1VPCEndpointSpec>, IStatus<V1beta1VPCEndpointStatus>
 {
     public const string KubeApiVersion = "v1beta1";

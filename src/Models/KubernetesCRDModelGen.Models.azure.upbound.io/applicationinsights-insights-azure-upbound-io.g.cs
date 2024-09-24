@@ -38,6 +38,7 @@ public enum V1beta1ApplicationInsightsSpecForProviderResourceGroupNameRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationInsightsSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ApplicationInsightsSpecForProviderResourceGroupNameR
     public V1beta1ApplicationInsightsSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1ApplicationInsightsSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ApplicationInsightsSpecForProviderResourceGroupNameSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ApplicationInsightsSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ApplicationInsightsSpecForProviderResourceGroupNameS
     public V1beta1ApplicationInsightsSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1ApplicationInsightsSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1ApplicationInsightsSpecForProviderWorkspaceIdRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationInsightsSpecForProviderWorkspaceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1ApplicationInsightsSpecForProviderWorkspaceIdRefPoli
     public V1beta1ApplicationInsightsSpecForProviderWorkspaceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Workspace in operationalinsights to populate workspaceId.</summary>
 public partial class V1beta1ApplicationInsightsSpecForProviderWorkspaceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1ApplicationInsightsSpecForProviderWorkspaceIdSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ApplicationInsightsSpecForProviderWorkspaceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1ApplicationInsightsSpecForProviderWorkspaceIdSelecto
     public V1beta1ApplicationInsightsSpecForProviderWorkspaceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Workspace in operationalinsights to populate workspaceId.</summary>
 public partial class V1beta1ApplicationInsightsSpecForProviderWorkspaceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1ApplicationInsightsSpecForProviderWorkspaceIdSelecto
     public V1beta1ApplicationInsightsSpecForProviderWorkspaceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationInsightsSpecForProvider
 {
     /// <summary>Specifies the type of Application Insights to create. Valid values are ios for iOS, java for Java web, MobileCenter for App Center, Node.JS for Node.js, other for General, phone for Windows Phone, store for Windows Store and web for ASP.NET. Please note these values are case sensitive; unmatched values are treated as ASP.NET by Azure. Changing this forces a new resource to be created.</summary>
@@ -297,6 +306,7 @@ public enum V1beta1ApplicationInsightsSpecInitProviderWorkspaceIdRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationInsightsSpecInitProviderWorkspaceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -310,6 +320,7 @@ public partial class V1beta1ApplicationInsightsSpecInitProviderWorkspaceIdRefPol
     public V1beta1ApplicationInsightsSpecInitProviderWorkspaceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Workspace in operationalinsights to populate workspaceId.</summary>
 public partial class V1beta1ApplicationInsightsSpecInitProviderWorkspaceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -341,6 +352,7 @@ public enum V1beta1ApplicationInsightsSpecInitProviderWorkspaceIdSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ApplicationInsightsSpecInitProviderWorkspaceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -354,6 +366,7 @@ public partial class V1beta1ApplicationInsightsSpecInitProviderWorkspaceIdSelect
     public V1beta1ApplicationInsightsSpecInitProviderWorkspaceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Workspace in operationalinsights to populate workspaceId.</summary>
 public partial class V1beta1ApplicationInsightsSpecInitProviderWorkspaceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -369,6 +382,7 @@ public partial class V1beta1ApplicationInsightsSpecInitProviderWorkspaceIdSelect
     public V1beta1ApplicationInsightsSpecInitProviderWorkspaceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ApplicationInsightsSpecInitProvider
 {
     /// <summary>Specifies the type of Application Insights to create. Valid values are ios for iOS, java for Java web, MobileCenter for App Center, Node.JS for Node.js, other for General, phone for Windows Phone, store for Windows Store and web for ASP.NET. Please note these values are case sensitive; unmatched values are treated as ASP.NET by Azure. Changing this forces a new resource to be created.</summary>
@@ -474,6 +488,7 @@ public enum V1beta1ApplicationInsightsSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationInsightsSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -487,6 +502,7 @@ public partial class V1beta1ApplicationInsightsSpecProviderConfigRefPolicy
     public V1beta1ApplicationInsightsSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ApplicationInsightsSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -518,6 +534,7 @@ public enum V1beta1ApplicationInsightsSpecPublishConnectionDetailsToConfigRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationInsightsSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -531,6 +548,7 @@ public partial class V1beta1ApplicationInsightsSpecPublishConnectionDetailsToCon
     public V1beta1ApplicationInsightsSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ApplicationInsightsSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -542,6 +560,7 @@ public partial class V1beta1ApplicationInsightsSpecPublishConnectionDetailsToCon
     public V1beta1ApplicationInsightsSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ApplicationInsightsSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -557,6 +576,7 @@ public partial class V1beta1ApplicationInsightsSpecPublishConnectionDetailsToMet
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ApplicationInsightsSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -572,6 +592,7 @@ public partial class V1beta1ApplicationInsightsSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ApplicationInsightsSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -583,6 +604,7 @@ public partial class V1beta1ApplicationInsightsSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ApplicationInsightsSpec defines the desired state of ApplicationInsights</summary>
 public partial class V1beta1ApplicationInsightsSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -615,6 +637,7 @@ public partial class V1beta1ApplicationInsightsSpec
     public V1beta1ApplicationInsightsSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationInsightsStatusAtProvider
 {
     /// <summary>The App ID associated with this Application Insights component.</summary>
@@ -682,6 +705,7 @@ public partial class V1beta1ApplicationInsightsStatusAtProvider
     public string? WorkspaceId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ApplicationInsightsStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -709,6 +733,7 @@ public partial class V1beta1ApplicationInsightsStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ApplicationInsightsStatus defines the observed state of ApplicationInsights.</summary>
 public partial class V1beta1ApplicationInsightsStatus
 {
     /// <summary></summary>
@@ -725,6 +750,7 @@ public partial class V1beta1ApplicationInsightsStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ApplicationInsights is the Schema for the ApplicationInsightss API. Manages an Application Insights component.</summary>
 public partial class V1beta1ApplicationInsights : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ApplicationInsightsSpec>, IStatus<V1beta1ApplicationInsightsStatus>
 {
     public const string KubeApiVersion = "v1beta1";

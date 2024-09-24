@@ -18,6 +18,7 @@ public enum V1beta1LinkedServiceODataSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>The password associated with the username, which can be used to authenticate to the OData endpoint.</summary>
 public partial class V1beta1LinkedServiceODataSpecForProviderBasicAuthenticationPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1LinkedServiceODataSpecForProviderBasicAuthentication
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinkedServiceODataSpecForProviderBasicAuthentication
 {
     /// <summary>The password associated with the username, which can be used to authenticate to the OData endpoint.</summary>
@@ -64,6 +66,7 @@ public enum V1beta1LinkedServiceODataSpecForProviderDataFactoryIdRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinkedServiceODataSpecForProviderDataFactoryIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -77,6 +80,7 @@ public partial class V1beta1LinkedServiceODataSpecForProviderDataFactoryIdRefPol
     public V1beta1LinkedServiceODataSpecForProviderDataFactoryIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Factory in datafactory to populate dataFactoryId.</summary>
 public partial class V1beta1LinkedServiceODataSpecForProviderDataFactoryIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -108,6 +112,7 @@ public enum V1beta1LinkedServiceODataSpecForProviderDataFactoryIdSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinkedServiceODataSpecForProviderDataFactoryIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1LinkedServiceODataSpecForProviderDataFactoryIdSelect
     public V1beta1LinkedServiceODataSpecForProviderDataFactoryIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Factory in datafactory to populate dataFactoryId.</summary>
 public partial class V1beta1LinkedServiceODataSpecForProviderDataFactoryIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -136,6 +142,7 @@ public partial class V1beta1LinkedServiceODataSpecForProviderDataFactoryIdSelect
     public V1beta1LinkedServiceODataSpecForProviderDataFactoryIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinkedServiceODataSpecForProvider
 {
     /// <summary>A map of additional properties to associate with the Data Factory Linked Service OData.</summary>
@@ -179,6 +186,7 @@ public partial class V1beta1LinkedServiceODataSpecForProvider
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinkedServiceODataSpecInitProviderBasicAuthentication
 {
     /// <summary>The username which can be used to authenticate to the OData endpoint.</summary>
@@ -186,6 +194,7 @@ public partial class V1beta1LinkedServiceODataSpecInitProviderBasicAuthenticatio
     public string? Username { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1LinkedServiceODataSpecInitProvider
 {
     /// <summary>A map of additional properties to associate with the Data Factory Linked Service OData.</summary>
@@ -259,6 +268,7 @@ public enum V1beta1LinkedServiceODataSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinkedServiceODataSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -272,6 +282,7 @@ public partial class V1beta1LinkedServiceODataSpecProviderConfigRefPolicy
     public V1beta1LinkedServiceODataSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1LinkedServiceODataSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -303,6 +314,7 @@ public enum V1beta1LinkedServiceODataSpecPublishConnectionDetailsToConfigRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinkedServiceODataSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -316,6 +328,7 @@ public partial class V1beta1LinkedServiceODataSpecPublishConnectionDetailsToConf
     public V1beta1LinkedServiceODataSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1LinkedServiceODataSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -327,6 +340,7 @@ public partial class V1beta1LinkedServiceODataSpecPublishConnectionDetailsToConf
     public V1beta1LinkedServiceODataSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1LinkedServiceODataSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -342,6 +356,7 @@ public partial class V1beta1LinkedServiceODataSpecPublishConnectionDetailsToMeta
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1LinkedServiceODataSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -357,6 +372,7 @@ public partial class V1beta1LinkedServiceODataSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1LinkedServiceODataSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -368,6 +384,7 @@ public partial class V1beta1LinkedServiceODataSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>LinkedServiceODataSpec defines the desired state of LinkedServiceOData</summary>
 public partial class V1beta1LinkedServiceODataSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -400,6 +417,7 @@ public partial class V1beta1LinkedServiceODataSpec
     public V1beta1LinkedServiceODataSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinkedServiceODataStatusAtProviderBasicAuthentication
 {
     /// <summary>The username which can be used to authenticate to the OData endpoint.</summary>
@@ -407,6 +425,7 @@ public partial class V1beta1LinkedServiceODataStatusAtProviderBasicAuthenticatio
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinkedServiceODataStatusAtProvider
 {
     /// <summary>A map of additional properties to associate with the Data Factory Linked Service OData.</summary>
@@ -446,6 +465,7 @@ public partial class V1beta1LinkedServiceODataStatusAtProvider
     public string? Url { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1LinkedServiceODataStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -473,6 +493,7 @@ public partial class V1beta1LinkedServiceODataStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>LinkedServiceODataStatus defines the observed state of LinkedServiceOData.</summary>
 public partial class V1beta1LinkedServiceODataStatus
 {
     /// <summary></summary>
@@ -489,6 +510,7 @@ public partial class V1beta1LinkedServiceODataStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>LinkedServiceOData is the Schema for the LinkedServiceODatas API. Manages a Linked Service (connection) between a Database and Azure Data Factory through OData protocol.</summary>
 public partial class V1beta1LinkedServiceOData : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LinkedServiceODataSpec>, IStatus<V1beta1LinkedServiceODataStatus>
 {
     public const string KubeApiVersion = "v1beta1";

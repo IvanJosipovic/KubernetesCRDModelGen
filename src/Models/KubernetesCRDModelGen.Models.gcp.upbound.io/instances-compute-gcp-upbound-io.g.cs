@@ -18,6 +18,7 @@ public enum V1beta1InstanceSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderAdvancedMachineFeatures
 {
     /// <summary>Defines whether the instance should have nested virtualization  enabled. Defaults to false.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1InstanceSpecForProviderAdvancedMachineFeatures
     public double? VisibleCoreCount { get; set; }
 }
 
+/// <summary>A 256-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption), encoded in RFC 4648 base64 to encrypt this disk. Only one of kms_key_self_link and disk_encryption_key_raw may be set.</summary>
 public partial class V1beta1InstanceSpecForProviderAttachedDiskDiskEncryptionKeyRawSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -48,6 +50,7 @@ public partial class V1beta1InstanceSpecForProviderAttachedDiskDiskEncryptionKey
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderAttachedDisk
 {
     /// <summary>Name with which the attached disk will be accessible under /dev/disk/by-id/google-*</summary>
@@ -71,6 +74,7 @@ public partial class V1beta1InstanceSpecForProviderAttachedDisk
     public string? Source { get; set; }
 }
 
+/// <summary>A 256-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption), encoded in RFC 4648 base64 to encrypt this disk. Only one of kms_key_self_link and disk_encryption_key_raw may be set.</summary>
 public partial class V1beta1InstanceSpecForProviderBootDiskDiskEncryptionKeyRawSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -106,6 +110,7 @@ public enum V1beta1InstanceSpecForProviderBootDiskInitializeParamsImageRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecForProviderBootDiskInitializeParamsImageRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -119,6 +124,7 @@ public partial class V1beta1InstanceSpecForProviderBootDiskInitializeParamsImage
     public V1beta1InstanceSpecForProviderBootDiskInitializeParamsImageRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Image in compute to populate image.</summary>
 public partial class V1beta1InstanceSpecForProviderBootDiskInitializeParamsImageRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -150,6 +156,7 @@ public enum V1beta1InstanceSpecForProviderBootDiskInitializeParamsImageSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecForProviderBootDiskInitializeParamsImageSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -163,6 +170,7 @@ public partial class V1beta1InstanceSpecForProviderBootDiskInitializeParamsImage
     public V1beta1InstanceSpecForProviderBootDiskInitializeParamsImageSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Image in compute to populate image.</summary>
 public partial class V1beta1InstanceSpecForProviderBootDiskInitializeParamsImageSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -178,6 +186,7 @@ public partial class V1beta1InstanceSpecForProviderBootDiskInitializeParamsImage
     public V1beta1InstanceSpecForProviderBootDiskInitializeParamsImageSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderBootDiskInitializeParams
 {
     /// <summary>Whether this disk is using confidential compute mode. Note: Only supported on hyperdisk skus, disk_encryption_key is required when setting to true.</summary>
@@ -225,6 +234,7 @@ public partial class V1beta1InstanceSpecForProviderBootDiskInitializeParams
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderBootDisk
 {
     /// <summary>Whether the disk will be auto-deleted when the instance is deleted. Defaults to true.</summary>
@@ -256,6 +266,7 @@ public partial class V1beta1InstanceSpecForProviderBootDisk
     public string? Source { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderConfidentialInstanceConfig
 {
     /// <summary>Defines the confidential computing technology the instance uses. SEV is an AMD feature. One of the following values: SEV, SEV_SNP. on_host_maintenance can be set to MIGRATE if confidential_instance_type is set to SEV and min_cpu_platform is set to "AMD Milan". Otherwise, on_host_maintenance has to be set to TERMINATE or this will fail to create the VM. If SEV_SNP, currently min_cpu_platform has to be set to "AMD Milan" or this will fail to create the VM.</summary>
@@ -267,6 +278,7 @@ public partial class V1beta1InstanceSpecForProviderConfidentialInstanceConfig
     public bool? EnableConfidentialCompute { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderGuestAccelerator
 {
     /// <summary>The number of the guest accelerator cards exposed to this instance.</summary>
@@ -278,6 +290,7 @@ public partial class V1beta1InstanceSpecForProviderGuestAccelerator
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderNetworkInterfaceAccessConfig
 {
     /// <summary>If the instance has an access config, either the given external ip (in the nat_ip field) or the ephemeral (generated) ip (if you didn't provide one).</summary>
@@ -293,6 +306,7 @@ public partial class V1beta1InstanceSpecForProviderNetworkInterfaceAccessConfig
     public string? PublicPtrDomainName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderNetworkInterfaceAliasIpRange
 {
     /// <summary>The IP CIDR range represented by this alias IP range. This IP CIDR range must belong to the specified subnetwork and cannot contain IP addresses reserved by system or used by other network interfaces. This range may be a single IP address (e.g. 10.2.3.4), a netmask (e.g. /24) or a CIDR format string (e.g. 10.1.2.0/24).</summary>
@@ -304,6 +318,7 @@ public partial class V1beta1InstanceSpecForProviderNetworkInterfaceAliasIpRange
     public string? SubnetworkRangeName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderNetworkInterfaceIpv6AccessConfig
 {
     /// <summary>The first IPv6 address of the external IPv6 range associated with this instance, prefix length is stored in externalIpv6PrefixLength in ipv6AccessConfig. To use a static external IP address, it must be unused and in the same region as the instance's zone. If not specified, Google Cloud will automatically assign an external IPv6 address from the instance's subnetwork.</summary>
@@ -347,6 +362,7 @@ public enum V1beta1InstanceSpecForProviderNetworkInterfaceNetworkRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecForProviderNetworkInterfaceNetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -360,6 +376,7 @@ public partial class V1beta1InstanceSpecForProviderNetworkInterfaceNetworkRefPol
     public V1beta1InstanceSpecForProviderNetworkInterfaceNetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate network.</summary>
 public partial class V1beta1InstanceSpecForProviderNetworkInterfaceNetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -391,6 +408,7 @@ public enum V1beta1InstanceSpecForProviderNetworkInterfaceNetworkSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecForProviderNetworkInterfaceNetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -404,6 +422,7 @@ public partial class V1beta1InstanceSpecForProviderNetworkInterfaceNetworkSelect
     public V1beta1InstanceSpecForProviderNetworkInterfaceNetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate network.</summary>
 public partial class V1beta1InstanceSpecForProviderNetworkInterfaceNetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -439,6 +458,7 @@ public enum V1beta1InstanceSpecForProviderNetworkInterfaceSubnetworkRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecForProviderNetworkInterfaceSubnetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -452,6 +472,7 @@ public partial class V1beta1InstanceSpecForProviderNetworkInterfaceSubnetworkRef
     public V1beta1InstanceSpecForProviderNetworkInterfaceSubnetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnetwork in compute to populate subnetwork.</summary>
 public partial class V1beta1InstanceSpecForProviderNetworkInterfaceSubnetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -483,6 +504,7 @@ public enum V1beta1InstanceSpecForProviderNetworkInterfaceSubnetworkSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecForProviderNetworkInterfaceSubnetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -496,6 +518,7 @@ public partial class V1beta1InstanceSpecForProviderNetworkInterfaceSubnetworkSel
     public V1beta1InstanceSpecForProviderNetworkInterfaceSubnetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnetwork in compute to populate subnetwork.</summary>
 public partial class V1beta1InstanceSpecForProviderNetworkInterfaceSubnetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -511,6 +534,7 @@ public partial class V1beta1InstanceSpecForProviderNetworkInterfaceSubnetworkSel
     public V1beta1InstanceSpecForProviderNetworkInterfaceSubnetworkSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderNetworkInterface
 {
     /// <summary>Access configurations, i.e. IPs via which this instance can be accessed via the Internet. Omit to ensure that the instance is not accessible from the Internet.g. via tunnel or because it is running on another cloud instance on that network). This block can be repeated multiple times. Structure documented below.</summary>
@@ -578,6 +602,7 @@ public partial class V1beta1InstanceSpecForProviderNetworkInterface
     public V1beta1InstanceSpecForProviderNetworkInterfaceSubnetworkSelector? SubnetworkSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderNetworkPerformanceConfig
 {
     /// <summary>The egress bandwidth tier to enable. Possible values: TIER_1, DEFAULT</summary>
@@ -585,6 +610,7 @@ public partial class V1beta1InstanceSpecForProviderNetworkPerformanceConfig
     public string? TotalEgressBandwidthTier { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderParams
 {
     /// <summary>A tag is a key-value pair that can be attached to a Google Cloud resource. You can use tags to conditionally allow or deny policies based on whether a resource has a specific tag. This value is not returned by the API.</summary>
@@ -592,6 +618,7 @@ public partial class V1beta1InstanceSpecForProviderParams
     public IDictionary<string, string>? ResourceManagerTags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderReservationAffinitySpecificReservation
 {
     /// <summary>Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.</summary>
@@ -603,6 +630,7 @@ public partial class V1beta1InstanceSpecForProviderReservationAffinitySpecificRe
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderReservationAffinity
 {
     /// <summary>Specifies the label selector for the reservation to use.. Structure is documented below.</summary>
@@ -614,6 +642,7 @@ public partial class V1beta1InstanceSpecForProviderReservationAffinity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderSchedulingLocalSsdRecoveryTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -625,6 +654,7 @@ public partial class V1beta1InstanceSpecForProviderSchedulingLocalSsdRecoveryTim
     public double? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderSchedulingMaxRunDuration
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -636,6 +666,7 @@ public partial class V1beta1InstanceSpecForProviderSchedulingMaxRunDuration
     public double? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderSchedulingNodeAffinities
 {
     /// <summary>Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.</summary>
@@ -651,6 +682,7 @@ public partial class V1beta1InstanceSpecForProviderSchedulingNodeAffinities
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderSchedulingOnInstanceStopAction
 {
     /// <summary>Whether to discard local SSDs attached to the VM while terminating using max_run_duration. Only supports true at this point.</summary>
@@ -658,6 +690,7 @@ public partial class V1beta1InstanceSpecForProviderSchedulingOnInstanceStopActio
     public bool? DiscardLocalSsd { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderScheduling
 {
     /// <summary>Specifies if the instance should be restarted if it was terminated by Compute Engine (not a user). Defaults to true.</summary>
@@ -701,6 +734,7 @@ public partial class V1beta1InstanceSpecForProviderScheduling
     public string? ProvisioningModel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderScratchDisk
 {
     /// <summary>Name with which attached disk will be accessible. On the instance, this device will be /dev/disk/by-id/google-{{device_name}}.</summary>
@@ -736,6 +770,7 @@ public enum V1beta1InstanceSpecForProviderServiceAccountEmailRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecForProviderServiceAccountEmailRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -749,6 +784,7 @@ public partial class V1beta1InstanceSpecForProviderServiceAccountEmailRefPolicy
     public V1beta1InstanceSpecForProviderServiceAccountEmailRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ServiceAccount in cloudplatform to populate email.</summary>
 public partial class V1beta1InstanceSpecForProviderServiceAccountEmailRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -780,6 +816,7 @@ public enum V1beta1InstanceSpecForProviderServiceAccountEmailSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecForProviderServiceAccountEmailSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -793,6 +830,7 @@ public partial class V1beta1InstanceSpecForProviderServiceAccountEmailSelectorPo
     public V1beta1InstanceSpecForProviderServiceAccountEmailSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ServiceAccount in cloudplatform to populate email.</summary>
 public partial class V1beta1InstanceSpecForProviderServiceAccountEmailSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -808,6 +846,7 @@ public partial class V1beta1InstanceSpecForProviderServiceAccountEmailSelector
     public V1beta1InstanceSpecForProviderServiceAccountEmailSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderServiceAccount
 {
     /// <summary>The service account e-mail address. Note: allow_stopping_for_update must be set to true or your instance must have a desired_status of TERMINATED in order to update this field.</summary>
@@ -827,6 +866,7 @@ public partial class V1beta1InstanceSpecForProviderServiceAccount
     public IList<string>? Scopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderShieldedInstanceConfig
 {
     /// <summary>- Compare the most recent boot measurements to the integrity policy baseline and return a pair of pass/fail results depending on whether they match or not. Defaults to true. Note: allow_stopping_for_update must be set to true or your instance must have a desired_status of TERMINATED in order to update this field.</summary>
@@ -842,6 +882,7 @@ public partial class V1beta1InstanceSpecForProviderShieldedInstanceConfig
     public bool? EnableVtpm { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProvider
 {
     /// <summary>Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM. Structure is documented below</summary>
@@ -961,6 +1002,7 @@ public partial class V1beta1InstanceSpecForProvider
     public string Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderAdvancedMachineFeatures
 {
     /// <summary>Defines whether the instance should have nested virtualization  enabled. Defaults to false.</summary>
@@ -976,6 +1018,7 @@ public partial class V1beta1InstanceSpecInitProviderAdvancedMachineFeatures
     public double? VisibleCoreCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderAttachedDisk
 {
     /// <summary>Name with which the attached disk will be accessible under /dev/disk/by-id/google-*</summary>
@@ -995,6 +1038,7 @@ public partial class V1beta1InstanceSpecInitProviderAttachedDisk
     public string? Source { get; set; }
 }
 
+/// <summary>A 256-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption), encoded in RFC 4648 base64 to encrypt this disk. Only one of kms_key_self_link and disk_encryption_key_raw may be set.</summary>
 public partial class V1beta1InstanceSpecInitProviderBootDiskDiskEncryptionKeyRawSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1030,6 +1074,7 @@ public enum V1beta1InstanceSpecInitProviderBootDiskInitializeParamsImageRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecInitProviderBootDiskInitializeParamsImageRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1043,6 +1088,7 @@ public partial class V1beta1InstanceSpecInitProviderBootDiskInitializeParamsImag
     public V1beta1InstanceSpecInitProviderBootDiskInitializeParamsImageRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Image in compute to populate image.</summary>
 public partial class V1beta1InstanceSpecInitProviderBootDiskInitializeParamsImageRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1074,6 +1120,7 @@ public enum V1beta1InstanceSpecInitProviderBootDiskInitializeParamsImageSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecInitProviderBootDiskInitializeParamsImageSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1087,6 +1134,7 @@ public partial class V1beta1InstanceSpecInitProviderBootDiskInitializeParamsImag
     public V1beta1InstanceSpecInitProviderBootDiskInitializeParamsImageSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Image in compute to populate image.</summary>
 public partial class V1beta1InstanceSpecInitProviderBootDiskInitializeParamsImageSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1102,6 +1150,7 @@ public partial class V1beta1InstanceSpecInitProviderBootDiskInitializeParamsImag
     public V1beta1InstanceSpecInitProviderBootDiskInitializeParamsImageSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderBootDiskInitializeParams
 {
     /// <summary>Whether this disk is using confidential compute mode. Note: Only supported on hyperdisk skus, disk_encryption_key is required when setting to true.</summary>
@@ -1149,6 +1198,7 @@ public partial class V1beta1InstanceSpecInitProviderBootDiskInitializeParams
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderBootDisk
 {
     /// <summary>Whether the disk will be auto-deleted when the instance is deleted. Defaults to true.</summary>
@@ -1180,6 +1230,7 @@ public partial class V1beta1InstanceSpecInitProviderBootDisk
     public string? Source { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderConfidentialInstanceConfig
 {
     /// <summary>Defines the confidential computing technology the instance uses. SEV is an AMD feature. One of the following values: SEV, SEV_SNP. on_host_maintenance can be set to MIGRATE if confidential_instance_type is set to SEV and min_cpu_platform is set to "AMD Milan". Otherwise, on_host_maintenance has to be set to TERMINATE or this will fail to create the VM. If SEV_SNP, currently min_cpu_platform has to be set to "AMD Milan" or this will fail to create the VM.</summary>
@@ -1191,6 +1242,7 @@ public partial class V1beta1InstanceSpecInitProviderConfidentialInstanceConfig
     public bool? EnableConfidentialCompute { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderGuestAccelerator
 {
     /// <summary>The number of the guest accelerator cards exposed to this instance.</summary>
@@ -1202,6 +1254,7 @@ public partial class V1beta1InstanceSpecInitProviderGuestAccelerator
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderNetworkInterfaceAccessConfig
 {
     /// <summary>If the instance has an access config, either the given external ip (in the nat_ip field) or the ephemeral (generated) ip (if you didn't provide one).</summary>
@@ -1217,6 +1270,7 @@ public partial class V1beta1InstanceSpecInitProviderNetworkInterfaceAccessConfig
     public string? PublicPtrDomainName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderNetworkInterfaceAliasIpRange
 {
     /// <summary>The IP CIDR range represented by this alias IP range. This IP CIDR range must belong to the specified subnetwork and cannot contain IP addresses reserved by system or used by other network interfaces. This range may be a single IP address (e.g. 10.2.3.4), a netmask (e.g. /24) or a CIDR format string (e.g. 10.1.2.0/24).</summary>
@@ -1228,6 +1282,7 @@ public partial class V1beta1InstanceSpecInitProviderNetworkInterfaceAliasIpRange
     public string? SubnetworkRangeName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderNetworkInterfaceIpv6AccessConfig
 {
     /// <summary>The first IPv6 address of the external IPv6 range associated with this instance, prefix length is stored in externalIpv6PrefixLength in ipv6AccessConfig. To use a static external IP address, it must be unused and in the same region as the instance's zone. If not specified, Google Cloud will automatically assign an external IPv6 address from the instance's subnetwork.</summary>
@@ -1271,6 +1326,7 @@ public enum V1beta1InstanceSpecInitProviderNetworkInterfaceNetworkRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecInitProviderNetworkInterfaceNetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1284,6 +1340,7 @@ public partial class V1beta1InstanceSpecInitProviderNetworkInterfaceNetworkRefPo
     public V1beta1InstanceSpecInitProviderNetworkInterfaceNetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate network.</summary>
 public partial class V1beta1InstanceSpecInitProviderNetworkInterfaceNetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1315,6 +1372,7 @@ public enum V1beta1InstanceSpecInitProviderNetworkInterfaceNetworkSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecInitProviderNetworkInterfaceNetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1328,6 +1386,7 @@ public partial class V1beta1InstanceSpecInitProviderNetworkInterfaceNetworkSelec
     public V1beta1InstanceSpecInitProviderNetworkInterfaceNetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate network.</summary>
 public partial class V1beta1InstanceSpecInitProviderNetworkInterfaceNetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1363,6 +1422,7 @@ public enum V1beta1InstanceSpecInitProviderNetworkInterfaceSubnetworkRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecInitProviderNetworkInterfaceSubnetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1376,6 +1436,7 @@ public partial class V1beta1InstanceSpecInitProviderNetworkInterfaceSubnetworkRe
     public V1beta1InstanceSpecInitProviderNetworkInterfaceSubnetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnetwork in compute to populate subnetwork.</summary>
 public partial class V1beta1InstanceSpecInitProviderNetworkInterfaceSubnetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1407,6 +1468,7 @@ public enum V1beta1InstanceSpecInitProviderNetworkInterfaceSubnetworkSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecInitProviderNetworkInterfaceSubnetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1420,6 +1482,7 @@ public partial class V1beta1InstanceSpecInitProviderNetworkInterfaceSubnetworkSe
     public V1beta1InstanceSpecInitProviderNetworkInterfaceSubnetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnetwork in compute to populate subnetwork.</summary>
 public partial class V1beta1InstanceSpecInitProviderNetworkInterfaceSubnetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1435,6 +1498,7 @@ public partial class V1beta1InstanceSpecInitProviderNetworkInterfaceSubnetworkSe
     public V1beta1InstanceSpecInitProviderNetworkInterfaceSubnetworkSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderNetworkInterface
 {
     /// <summary>Access configurations, i.e. IPs via which this instance can be accessed via the Internet. Omit to ensure that the instance is not accessible from the Internet.g. via tunnel or because it is running on another cloud instance on that network). This block can be repeated multiple times. Structure documented below.</summary>
@@ -1502,6 +1566,7 @@ public partial class V1beta1InstanceSpecInitProviderNetworkInterface
     public V1beta1InstanceSpecInitProviderNetworkInterfaceSubnetworkSelector? SubnetworkSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderNetworkPerformanceConfig
 {
     /// <summary>The egress bandwidth tier to enable. Possible values: TIER_1, DEFAULT</summary>
@@ -1509,6 +1574,7 @@ public partial class V1beta1InstanceSpecInitProviderNetworkPerformanceConfig
     public string? TotalEgressBandwidthTier { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderParams
 {
     /// <summary>A tag is a key-value pair that can be attached to a Google Cloud resource. You can use tags to conditionally allow or deny policies based on whether a resource has a specific tag. This value is not returned by the API.</summary>
@@ -1516,6 +1582,7 @@ public partial class V1beta1InstanceSpecInitProviderParams
     public IDictionary<string, string>? ResourceManagerTags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderReservationAffinitySpecificReservation
 {
     /// <summary>Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.</summary>
@@ -1527,6 +1594,7 @@ public partial class V1beta1InstanceSpecInitProviderReservationAffinitySpecificR
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderReservationAffinity
 {
     /// <summary>Specifies the label selector for the reservation to use.. Structure is documented below.</summary>
@@ -1538,6 +1606,7 @@ public partial class V1beta1InstanceSpecInitProviderReservationAffinity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderSchedulingLocalSsdRecoveryTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -1549,6 +1618,7 @@ public partial class V1beta1InstanceSpecInitProviderSchedulingLocalSsdRecoveryTi
     public double? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderSchedulingMaxRunDuration
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -1560,6 +1630,7 @@ public partial class V1beta1InstanceSpecInitProviderSchedulingMaxRunDuration
     public double? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderSchedulingNodeAffinities
 {
     /// <summary>Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.</summary>
@@ -1575,6 +1646,7 @@ public partial class V1beta1InstanceSpecInitProviderSchedulingNodeAffinities
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderSchedulingOnInstanceStopAction
 {
     /// <summary>Whether to discard local SSDs attached to the VM while terminating using max_run_duration. Only supports true at this point.</summary>
@@ -1582,6 +1654,7 @@ public partial class V1beta1InstanceSpecInitProviderSchedulingOnInstanceStopActi
     public bool? DiscardLocalSsd { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderScheduling
 {
     /// <summary>Specifies if the instance should be restarted if it was terminated by Compute Engine (not a user). Defaults to true.</summary>
@@ -1625,6 +1698,7 @@ public partial class V1beta1InstanceSpecInitProviderScheduling
     public string? ProvisioningModel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderScratchDisk
 {
     /// <summary>Name with which attached disk will be accessible. On the instance, this device will be /dev/disk/by-id/google-{{device_name}}.</summary>
@@ -1660,6 +1734,7 @@ public enum V1beta1InstanceSpecInitProviderServiceAccountEmailRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecInitProviderServiceAccountEmailRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1673,6 +1748,7 @@ public partial class V1beta1InstanceSpecInitProviderServiceAccountEmailRefPolicy
     public V1beta1InstanceSpecInitProviderServiceAccountEmailRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ServiceAccount in cloudplatform to populate email.</summary>
 public partial class V1beta1InstanceSpecInitProviderServiceAccountEmailRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1704,6 +1780,7 @@ public enum V1beta1InstanceSpecInitProviderServiceAccountEmailSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecInitProviderServiceAccountEmailSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1717,6 +1794,7 @@ public partial class V1beta1InstanceSpecInitProviderServiceAccountEmailSelectorP
     public V1beta1InstanceSpecInitProviderServiceAccountEmailSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ServiceAccount in cloudplatform to populate email.</summary>
 public partial class V1beta1InstanceSpecInitProviderServiceAccountEmailSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1732,6 +1810,7 @@ public partial class V1beta1InstanceSpecInitProviderServiceAccountEmailSelector
     public V1beta1InstanceSpecInitProviderServiceAccountEmailSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderServiceAccount
 {
     /// <summary>The service account e-mail address. Note: allow_stopping_for_update must be set to true or your instance must have a desired_status of TERMINATED in order to update this field.</summary>
@@ -1751,6 +1830,7 @@ public partial class V1beta1InstanceSpecInitProviderServiceAccount
     public IList<string>? Scopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderShieldedInstanceConfig
 {
     /// <summary>- Compare the most recent boot measurements to the integrity policy baseline and return a pair of pass/fail results depending on whether they match or not. Defaults to true. Note: allow_stopping_for_update must be set to true or your instance must have a desired_status of TERMINATED in order to update this field.</summary>
@@ -1766,6 +1846,7 @@ public partial class V1beta1InstanceSpecInitProviderShieldedInstanceConfig
     public bool? EnableVtpm { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1InstanceSpecInitProvider
 {
     /// <summary>Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM. Structure is documented below</summary>
@@ -1923,6 +2004,7 @@ public enum V1beta1InstanceSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1936,6 +2018,7 @@ public partial class V1beta1InstanceSpecProviderConfigRefPolicy
     public V1beta1InstanceSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1InstanceSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1967,6 +2050,7 @@ public enum V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1980,6 +2064,7 @@ public partial class V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolic
     public V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1InstanceSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1991,6 +2076,7 @@ public partial class V1beta1InstanceSpecPublishConnectionDetailsToConfigRef
     public V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1InstanceSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -2006,6 +2092,7 @@ public partial class V1beta1InstanceSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1InstanceSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -2021,6 +2108,7 @@ public partial class V1beta1InstanceSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1InstanceSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -2032,6 +2120,7 @@ public partial class V1beta1InstanceSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>InstanceSpec defines the desired state of Instance</summary>
 public partial class V1beta1InstanceSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -2064,6 +2153,7 @@ public partial class V1beta1InstanceSpec
     public V1beta1InstanceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderAdvancedMachineFeatures
 {
     /// <summary>Defines whether the instance should have nested virtualization  enabled. Defaults to false.</summary>
@@ -2079,6 +2169,7 @@ public partial class V1beta1InstanceStatusAtProviderAdvancedMachineFeatures
     public double? VisibleCoreCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderAttachedDisk
 {
     /// <summary>Name with which the attached disk will be accessible under /dev/disk/by-id/google-*</summary>
@@ -2102,6 +2193,7 @@ public partial class V1beta1InstanceStatusAtProviderAttachedDisk
     public string? Source { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderBootDiskInitializeParams
 {
     /// <summary>Whether this disk is using confidential compute mode. Note: Only supported on hyperdisk skus, disk_encryption_key is required when setting to true.</summary>
@@ -2141,6 +2233,7 @@ public partial class V1beta1InstanceStatusAtProviderBootDiskInitializeParams
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderBootDisk
 {
     /// <summary>Whether the disk will be auto-deleted when the instance is deleted. Defaults to true.</summary>
@@ -2172,6 +2265,7 @@ public partial class V1beta1InstanceStatusAtProviderBootDisk
     public string? Source { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderConfidentialInstanceConfig
 {
     /// <summary>Defines the confidential computing technology the instance uses. SEV is an AMD feature. One of the following values: SEV, SEV_SNP. on_host_maintenance can be set to MIGRATE if confidential_instance_type is set to SEV and min_cpu_platform is set to "AMD Milan". Otherwise, on_host_maintenance has to be set to TERMINATE or this will fail to create the VM. If SEV_SNP, currently min_cpu_platform has to be set to "AMD Milan" or this will fail to create the VM.</summary>
@@ -2183,6 +2277,7 @@ public partial class V1beta1InstanceStatusAtProviderConfidentialInstanceConfig
     public bool? EnableConfidentialCompute { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderGuestAccelerator
 {
     /// <summary>The number of the guest accelerator cards exposed to this instance.</summary>
@@ -2194,6 +2289,7 @@ public partial class V1beta1InstanceStatusAtProviderGuestAccelerator
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderNetworkInterfaceAccessConfig
 {
     /// <summary>If the instance has an access config, either the given external ip (in the nat_ip field) or the ephemeral (generated) ip (if you didn't provide one).</summary>
@@ -2209,6 +2305,7 @@ public partial class V1beta1InstanceStatusAtProviderNetworkInterfaceAccessConfig
     public string? PublicPtrDomainName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderNetworkInterfaceAliasIpRange
 {
     /// <summary>The IP CIDR range represented by this alias IP range. This IP CIDR range must belong to the specified subnetwork and cannot contain IP addresses reserved by system or used by other network interfaces. This range may be a single IP address (e.g. 10.2.3.4), a netmask (e.g. /24) or a CIDR format string (e.g. 10.1.2.0/24).</summary>
@@ -2220,6 +2317,7 @@ public partial class V1beta1InstanceStatusAtProviderNetworkInterfaceAliasIpRange
     public string? SubnetworkRangeName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderNetworkInterfaceIpv6AccessConfig
 {
     /// <summary>The first IPv6 address of the external IPv6 range associated with this instance, prefix length is stored in externalIpv6PrefixLength in ipv6AccessConfig. To use a static external IP address, it must be unused and in the same region as the instance's zone. If not specified, Google Cloud will automatically assign an external IPv6 address from the instance's subnetwork.</summary>
@@ -2243,6 +2341,7 @@ public partial class V1beta1InstanceStatusAtProviderNetworkInterfaceIpv6AccessCo
     public string? PublicPtrDomainName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderNetworkInterface
 {
     /// <summary>Access configurations, i.e. IPs via which this instance can be accessed via the Internet. Omit to ensure that the instance is not accessible from the Internet.g. via tunnel or because it is running on another cloud instance on that network). This block can be repeated multiple times. Structure documented below.</summary>
@@ -2302,6 +2401,7 @@ public partial class V1beta1InstanceStatusAtProviderNetworkInterface
     public string? SubnetworkProject { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderNetworkPerformanceConfig
 {
     /// <summary>The egress bandwidth tier to enable. Possible values: TIER_1, DEFAULT</summary>
@@ -2309,6 +2409,7 @@ public partial class V1beta1InstanceStatusAtProviderNetworkPerformanceConfig
     public string? TotalEgressBandwidthTier { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderParams
 {
     /// <summary>A tag is a key-value pair that can be attached to a Google Cloud resource. You can use tags to conditionally allow or deny policies based on whether a resource has a specific tag. This value is not returned by the API.</summary>
@@ -2316,6 +2417,7 @@ public partial class V1beta1InstanceStatusAtProviderParams
     public IDictionary<string, string>? ResourceManagerTags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderReservationAffinitySpecificReservation
 {
     /// <summary>Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.</summary>
@@ -2327,6 +2429,7 @@ public partial class V1beta1InstanceStatusAtProviderReservationAffinitySpecificR
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderReservationAffinity
 {
     /// <summary>Specifies the label selector for the reservation to use.. Structure is documented below.</summary>
@@ -2338,6 +2441,7 @@ public partial class V1beta1InstanceStatusAtProviderReservationAffinity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderSchedulingLocalSsdRecoveryTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -2349,6 +2453,7 @@ public partial class V1beta1InstanceStatusAtProviderSchedulingLocalSsdRecoveryTi
     public double? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderSchedulingMaxRunDuration
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
@@ -2360,6 +2465,7 @@ public partial class V1beta1InstanceStatusAtProviderSchedulingMaxRunDuration
     public double? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderSchedulingNodeAffinities
 {
     /// <summary>Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.</summary>
@@ -2375,6 +2481,7 @@ public partial class V1beta1InstanceStatusAtProviderSchedulingNodeAffinities
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderSchedulingOnInstanceStopAction
 {
     /// <summary>Whether to discard local SSDs attached to the VM while terminating using max_run_duration. Only supports true at this point.</summary>
@@ -2382,6 +2489,7 @@ public partial class V1beta1InstanceStatusAtProviderSchedulingOnInstanceStopActi
     public bool? DiscardLocalSsd { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderScheduling
 {
     /// <summary>Specifies if the instance should be restarted if it was terminated by Compute Engine (not a user). Defaults to true.</summary>
@@ -2425,6 +2533,7 @@ public partial class V1beta1InstanceStatusAtProviderScheduling
     public string? ProvisioningModel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderScratchDisk
 {
     /// <summary>Name with which attached disk will be accessible. On the instance, this device will be /dev/disk/by-id/google-{{device_name}}.</summary>
@@ -2440,6 +2549,7 @@ public partial class V1beta1InstanceStatusAtProviderScratchDisk
     public double? Size { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderServiceAccount
 {
     /// <summary>The service account e-mail address. Note: allow_stopping_for_update must be set to true or your instance must have a desired_status of TERMINATED in order to update this field.</summary>
@@ -2451,6 +2561,7 @@ public partial class V1beta1InstanceStatusAtProviderServiceAccount
     public IList<string>? Scopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderShieldedInstanceConfig
 {
     /// <summary>- Compare the most recent boot measurements to the integrity policy baseline and return a pair of pass/fail results depending on whether they match or not. Defaults to true. Note: allow_stopping_for_update must be set to true or your instance must have a desired_status of TERMINATED in order to update this field.</summary>
@@ -2466,6 +2577,7 @@ public partial class V1beta1InstanceStatusAtProviderShieldedInstanceConfig
     public bool? EnableVtpm { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProvider
 {
     /// <summary>Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM. Structure is documented below</summary>
@@ -2625,6 +2737,7 @@ public partial class V1beta1InstanceStatusAtProvider
     public string? Zone { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1InstanceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2652,6 +2765,7 @@ public partial class V1beta1InstanceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>InstanceStatus defines the observed state of Instance.</summary>
 public partial class V1beta1InstanceStatus
 {
     /// <summary></summary>
@@ -2668,6 +2782,7 @@ public partial class V1beta1InstanceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Instance is the Schema for the Instances API. Manages a VM instance resource within GCE.</summary>
 public partial class V1beta1Instance : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1InstanceSpec>, IStatus<V1beta1InstanceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

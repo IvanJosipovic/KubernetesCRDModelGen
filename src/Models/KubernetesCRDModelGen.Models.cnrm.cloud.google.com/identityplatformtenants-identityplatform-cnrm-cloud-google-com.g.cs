@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.identityplatform.cnrm.cloud.google.com;
+/// <summary>The tenant-level configuration of MFA options.</summary>
 public partial class V1beta1IdentityPlatformTenantSpecMfaConfig
 {
     /// <summary>A list of usable second factors for this project.</summary>
@@ -19,6 +20,7 @@ public partial class V1beta1IdentityPlatformTenantSpecMfaConfig
     public string? State { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IdentityPlatformTenantSpec
 {
     /// <summary>Whether to allow email/password user authentication.</summary>
@@ -54,6 +56,7 @@ public partial class V1beta1IdentityPlatformTenantSpec
     public IDictionary<string, string>? TestPhoneNumbers { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IdentityPlatformTenantStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -77,6 +80,7 @@ public partial class V1beta1IdentityPlatformTenantStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IdentityPlatformTenantStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -89,6 +93,7 @@ public partial class V1beta1IdentityPlatformTenantStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1IdentityPlatformTenant : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IdentityPlatformTenantSpec>, IStatus<V1beta1IdentityPlatformTenantStatus>
 {
     public const string KubeApiVersion = "v1beta1";

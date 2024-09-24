@@ -38,6 +38,7 @@ public enum V1beta1RepositorySpecForProviderEncryptionConfigurationKmsKeyRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RepositorySpecForProviderEncryptionConfigurationKmsKeyRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1RepositorySpecForProviderEncryptionConfigurationKmsK
     public V1beta1RepositorySpecForProviderEncryptionConfigurationKmsKeyRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKey.</summary>
 public partial class V1beta1RepositorySpecForProviderEncryptionConfigurationKmsKeyRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1RepositorySpecForProviderEncryptionConfigurationKmsKeySelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RepositorySpecForProviderEncryptionConfigurationKmsKeySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1RepositorySpecForProviderEncryptionConfigurationKmsK
     public V1beta1RepositorySpecForProviderEncryptionConfigurationKmsKeySelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKey.</summary>
 public partial class V1beta1RepositorySpecForProviderEncryptionConfigurationKmsKeySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1RepositorySpecForProviderEncryptionConfigurationKmsK
     public V1beta1RepositorySpecForProviderEncryptionConfigurationKmsKeySelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RepositorySpecForProviderEncryptionConfiguration
 {
     /// <summary>The encryption type to use for the repository. Valid values are AES256 or KMS. Defaults to AES256.</summary>
@@ -129,6 +134,7 @@ public partial class V1beta1RepositorySpecForProviderEncryptionConfiguration
     public V1beta1RepositorySpecForProviderEncryptionConfigurationKmsKeySelector? KmsKeySelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RepositorySpecForProviderImageScanningConfiguration
 {
     /// <summary>Indicates whether images are scanned after being pushed to the repository (true) or not scanned (false).</summary>
@@ -136,6 +142,7 @@ public partial class V1beta1RepositorySpecForProviderImageScanningConfiguration
     public bool? ScanOnPush { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RepositorySpecForProvider
 {
     /// <summary>Encryption configuration for the repository. See below for schema.</summary>
@@ -183,6 +190,7 @@ public enum V1beta1RepositorySpecInitProviderEncryptionConfigurationKmsKeyRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RepositorySpecInitProviderEncryptionConfigurationKmsKeyRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -196,6 +204,7 @@ public partial class V1beta1RepositorySpecInitProviderEncryptionConfigurationKms
     public V1beta1RepositorySpecInitProviderEncryptionConfigurationKmsKeyRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKey.</summary>
 public partial class V1beta1RepositorySpecInitProviderEncryptionConfigurationKmsKeyRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -227,6 +236,7 @@ public enum V1beta1RepositorySpecInitProviderEncryptionConfigurationKmsKeySelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RepositorySpecInitProviderEncryptionConfigurationKmsKeySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -240,6 +250,7 @@ public partial class V1beta1RepositorySpecInitProviderEncryptionConfigurationKms
     public V1beta1RepositorySpecInitProviderEncryptionConfigurationKmsKeySelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKey.</summary>
 public partial class V1beta1RepositorySpecInitProviderEncryptionConfigurationKmsKeySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -255,6 +266,7 @@ public partial class V1beta1RepositorySpecInitProviderEncryptionConfigurationKms
     public V1beta1RepositorySpecInitProviderEncryptionConfigurationKmsKeySelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RepositorySpecInitProviderEncryptionConfiguration
 {
     /// <summary>The encryption type to use for the repository. Valid values are AES256 or KMS. Defaults to AES256.</summary>
@@ -274,6 +286,7 @@ public partial class V1beta1RepositorySpecInitProviderEncryptionConfiguration
     public V1beta1RepositorySpecInitProviderEncryptionConfigurationKmsKeySelector? KmsKeySelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RepositorySpecInitProviderImageScanningConfiguration
 {
     /// <summary>Indicates whether images are scanned after being pushed to the repository (true) or not scanned (false).</summary>
@@ -281,6 +294,7 @@ public partial class V1beta1RepositorySpecInitProviderImageScanningConfiguration
     public bool? ScanOnPush { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1RepositorySpecInitProvider
 {
     /// <summary>Encryption configuration for the repository. See below for schema.</summary>
@@ -346,6 +360,7 @@ public enum V1beta1RepositorySpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RepositorySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -359,6 +374,7 @@ public partial class V1beta1RepositorySpecProviderConfigRefPolicy
     public V1beta1RepositorySpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1RepositorySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -390,6 +406,7 @@ public enum V1beta1RepositorySpecPublishConnectionDetailsToConfigRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RepositorySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -403,6 +420,7 @@ public partial class V1beta1RepositorySpecPublishConnectionDetailsToConfigRefPol
     public V1beta1RepositorySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1RepositorySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -414,6 +432,7 @@ public partial class V1beta1RepositorySpecPublishConnectionDetailsToConfigRef
     public V1beta1RepositorySpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1RepositorySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -429,6 +448,7 @@ public partial class V1beta1RepositorySpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1RepositorySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -444,6 +464,7 @@ public partial class V1beta1RepositorySpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1RepositorySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -455,6 +476,7 @@ public partial class V1beta1RepositorySpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>RepositorySpec defines the desired state of Repository</summary>
 public partial class V1beta1RepositorySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -487,6 +509,7 @@ public partial class V1beta1RepositorySpec
     public V1beta1RepositorySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RepositoryStatusAtProviderEncryptionConfiguration
 {
     /// <summary>The encryption type to use for the repository. Valid values are AES256 or KMS. Defaults to AES256.</summary>
@@ -498,6 +521,7 @@ public partial class V1beta1RepositoryStatusAtProviderEncryptionConfiguration
     public string? KmsKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RepositoryStatusAtProviderImageScanningConfiguration
 {
     /// <summary>Indicates whether images are scanned after being pushed to the repository (true) or not scanned (false).</summary>
@@ -505,6 +529,7 @@ public partial class V1beta1RepositoryStatusAtProviderImageScanningConfiguration
     public bool? ScanOnPush { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RepositoryStatusAtProvider
 {
     /// <summary>Full ARN of the repository.</summary>
@@ -548,6 +573,7 @@ public partial class V1beta1RepositoryStatusAtProvider
     public IDictionary<string, string>? TagsAll { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1RepositoryStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -575,6 +601,7 @@ public partial class V1beta1RepositoryStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>RepositoryStatus defines the observed state of Repository.</summary>
 public partial class V1beta1RepositoryStatus
 {
     /// <summary></summary>
@@ -591,6 +618,7 @@ public partial class V1beta1RepositoryStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Repository is the Schema for the Repositorys API. Provides an Elastic Container Registry Repository.</summary>
 public partial class V1beta1Repository : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1RepositorySpec>, IStatus<V1beta1RepositoryStatus>
 {
     public const string KubeApiVersion = "v1beta1";

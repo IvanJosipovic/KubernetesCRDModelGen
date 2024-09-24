@@ -24,6 +24,7 @@ public enum V1beta1AuthorizationPolicySpecActionEnum
     CUSTOM
 }
 
+/// <summary>Specifies detailed configuration of the CUSTOM action.</summary>
 public partial class V1beta1AuthorizationPolicySpecProvider
 {
     /// <summary>Specifies the name of the extension provider.</summary>
@@ -31,6 +32,7 @@ public partial class V1beta1AuthorizationPolicySpecProvider
     public string? Name { get; set; }
 }
 
+/// <summary>Source specifies the source of a request.</summary>
 public partial class V1beta1AuthorizationPolicySpecRulesFromSource
 {
     /// <summary>Optional.</summary>
@@ -74,6 +76,7 @@ public partial class V1beta1AuthorizationPolicySpecRulesFromSource
     public IList<string>? RequestPrincipals { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AuthorizationPolicySpecRulesFrom
 {
     /// <summary>Source specifies the source of a request.</summary>
@@ -81,6 +84,7 @@ public partial class V1beta1AuthorizationPolicySpecRulesFrom
     public V1beta1AuthorizationPolicySpecRulesFromSource? Source { get; set; }
 }
 
+/// <summary>Operation specifies the operation of a request.</summary>
 public partial class V1beta1AuthorizationPolicySpecRulesToOperation
 {
     /// <summary>Optional.</summary>
@@ -116,6 +120,7 @@ public partial class V1beta1AuthorizationPolicySpecRulesToOperation
     public IList<string>? Ports { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AuthorizationPolicySpecRulesTo
 {
     /// <summary>Operation specifies the operation of a request.</summary>
@@ -123,6 +128,7 @@ public partial class V1beta1AuthorizationPolicySpecRulesTo
     public V1beta1AuthorizationPolicySpecRulesToOperation? Operation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AuthorizationPolicySpecRulesWhen
 {
     /// <summary>The name of an Istio attribute.</summary>
@@ -138,6 +144,7 @@ public partial class V1beta1AuthorizationPolicySpecRulesWhen
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AuthorizationPolicySpecRules
 {
     /// <summary>Optional.</summary>
@@ -153,6 +160,7 @@ public partial class V1beta1AuthorizationPolicySpecRules
     public IList<V1beta1AuthorizationPolicySpecRulesWhen>? When { get; set; }
 }
 
+/// <summary>Optional.</summary>
 public partial class V1beta1AuthorizationPolicySpecSelector
 {
     /// <summary>One or more labels that indicate a specific set of pods/VMs on which a policy should be applied.</summary>
@@ -160,6 +168,7 @@ public partial class V1beta1AuthorizationPolicySpecSelector
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AuthorizationPolicySpecTargetRef
 {
     /// <summary>group is the group of the target resource.</summary>
@@ -179,6 +188,7 @@ public partial class V1beta1AuthorizationPolicySpecTargetRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AuthorizationPolicySpecTargetRefs
 {
     /// <summary>group is the group of the target resource.</summary>
@@ -198,6 +208,7 @@ public partial class V1beta1AuthorizationPolicySpecTargetRefs
     public string? Namespace { get; set; }
 }
 
+/// <summary>Configuration for access control on workloads. See more details at: https://istio.io/docs/reference/config/security/authorization-policy.html</summary>
 public partial class V1beta1AuthorizationPolicySpec
 {
     /// <summary>Optional.  Valid Options: ALLOW, DENY, AUDIT, CUSTOM</summary>
@@ -227,6 +238,7 @@ public partial class V1beta1AuthorizationPolicySpec
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1AuthorizationPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AuthorizationPolicySpec>, IStatus<JsonNode>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -18,6 +18,7 @@ public enum V1beta1OutputMSSQLSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Password used together with username, to login to the Microsoft SQL Server. Required if authentication_mode is ConnectionString.</summary>
 public partial class V1beta1OutputMSSQLSpecForProviderPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -53,6 +54,7 @@ public enum V1beta1OutputMSSQLSpecForProviderResourceGroupNameRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OutputMSSQLSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -66,6 +68,7 @@ public partial class V1beta1OutputMSSQLSpecForProviderResourceGroupNameRefPolicy
     public V1beta1OutputMSSQLSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1OutputMSSQLSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -97,6 +100,7 @@ public enum V1beta1OutputMSSQLSpecForProviderResourceGroupNameSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1OutputMSSQLSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1OutputMSSQLSpecForProviderResourceGroupNameSelectorP
     public V1beta1OutputMSSQLSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1OutputMSSQLSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -145,6 +150,7 @@ public enum V1beta1OutputMSSQLSpecForProviderServerRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OutputMSSQLSpecForProviderServerRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -158,6 +164,7 @@ public partial class V1beta1OutputMSSQLSpecForProviderServerRefPolicy
     public V1beta1OutputMSSQLSpecForProviderServerRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a MSSQLServer in sql to populate server.</summary>
 public partial class V1beta1OutputMSSQLSpecForProviderServerRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -189,6 +196,7 @@ public enum V1beta1OutputMSSQLSpecForProviderServerSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1OutputMSSQLSpecForProviderServerSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1OutputMSSQLSpecForProviderServerSelectorPolicy
     public V1beta1OutputMSSQLSpecForProviderServerSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a MSSQLServer in sql to populate server.</summary>
 public partial class V1beta1OutputMSSQLSpecForProviderServerSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -237,6 +246,7 @@ public enum V1beta1OutputMSSQLSpecForProviderStreamAnalyticsJobNameRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OutputMSSQLSpecForProviderStreamAnalyticsJobNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -250,6 +260,7 @@ public partial class V1beta1OutputMSSQLSpecForProviderStreamAnalyticsJobNameRefP
     public V1beta1OutputMSSQLSpecForProviderStreamAnalyticsJobNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Job in streamanalytics to populate streamAnalyticsJobName.</summary>
 public partial class V1beta1OutputMSSQLSpecForProviderStreamAnalyticsJobNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -281,6 +292,7 @@ public enum V1beta1OutputMSSQLSpecForProviderStreamAnalyticsJobNameSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1OutputMSSQLSpecForProviderStreamAnalyticsJobNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1OutputMSSQLSpecForProviderStreamAnalyticsJobNameSele
     public V1beta1OutputMSSQLSpecForProviderStreamAnalyticsJobNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Job in streamanalytics to populate streamAnalyticsJobName.</summary>
 public partial class V1beta1OutputMSSQLSpecForProviderStreamAnalyticsJobNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -329,6 +342,7 @@ public enum V1beta1OutputMSSQLSpecForProviderTableRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OutputMSSQLSpecForProviderTableRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -342,6 +356,7 @@ public partial class V1beta1OutputMSSQLSpecForProviderTableRefPolicy
     public V1beta1OutputMSSQLSpecForProviderTableRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Table in storage to populate table.</summary>
 public partial class V1beta1OutputMSSQLSpecForProviderTableRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -373,6 +388,7 @@ public enum V1beta1OutputMSSQLSpecForProviderTableSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1OutputMSSQLSpecForProviderTableSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -386,6 +402,7 @@ public partial class V1beta1OutputMSSQLSpecForProviderTableSelectorPolicy
     public V1beta1OutputMSSQLSpecForProviderTableSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Table in storage to populate table.</summary>
 public partial class V1beta1OutputMSSQLSpecForProviderTableSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -401,6 +418,7 @@ public partial class V1beta1OutputMSSQLSpecForProviderTableSelector
     public V1beta1OutputMSSQLSpecForProviderTableSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OutputMSSQLSpecForProvider
 {
     /// <summary>The authentication mode for the Stream Output. Possible values are Msi and ConnectionString. Defaults to ConnectionString.</summary>
@@ -480,6 +498,7 @@ public partial class V1beta1OutputMSSQLSpecForProvider
     public string? User { get; set; }
 }
 
+/// <summary>Password used together with username, to login to the Microsoft SQL Server. Required if authentication_mode is ConnectionString.</summary>
 public partial class V1beta1OutputMSSQLSpecInitProviderPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -515,6 +534,7 @@ public enum V1beta1OutputMSSQLSpecInitProviderResourceGroupNameRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OutputMSSQLSpecInitProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -528,6 +548,7 @@ public partial class V1beta1OutputMSSQLSpecInitProviderResourceGroupNameRefPolic
     public V1beta1OutputMSSQLSpecInitProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1OutputMSSQLSpecInitProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -559,6 +580,7 @@ public enum V1beta1OutputMSSQLSpecInitProviderResourceGroupNameSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1OutputMSSQLSpecInitProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -572,6 +594,7 @@ public partial class V1beta1OutputMSSQLSpecInitProviderResourceGroupNameSelector
     public V1beta1OutputMSSQLSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1OutputMSSQLSpecInitProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -607,6 +630,7 @@ public enum V1beta1OutputMSSQLSpecInitProviderServerRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OutputMSSQLSpecInitProviderServerRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -620,6 +644,7 @@ public partial class V1beta1OutputMSSQLSpecInitProviderServerRefPolicy
     public V1beta1OutputMSSQLSpecInitProviderServerRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a MSSQLServer in sql to populate server.</summary>
 public partial class V1beta1OutputMSSQLSpecInitProviderServerRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -651,6 +676,7 @@ public enum V1beta1OutputMSSQLSpecInitProviderServerSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1OutputMSSQLSpecInitProviderServerSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -664,6 +690,7 @@ public partial class V1beta1OutputMSSQLSpecInitProviderServerSelectorPolicy
     public V1beta1OutputMSSQLSpecInitProviderServerSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a MSSQLServer in sql to populate server.</summary>
 public partial class V1beta1OutputMSSQLSpecInitProviderServerSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -699,6 +726,7 @@ public enum V1beta1OutputMSSQLSpecInitProviderStreamAnalyticsJobNameRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OutputMSSQLSpecInitProviderStreamAnalyticsJobNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -712,6 +740,7 @@ public partial class V1beta1OutputMSSQLSpecInitProviderStreamAnalyticsJobNameRef
     public V1beta1OutputMSSQLSpecInitProviderStreamAnalyticsJobNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Job in streamanalytics to populate streamAnalyticsJobName.</summary>
 public partial class V1beta1OutputMSSQLSpecInitProviderStreamAnalyticsJobNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -743,6 +772,7 @@ public enum V1beta1OutputMSSQLSpecInitProviderStreamAnalyticsJobNameSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1OutputMSSQLSpecInitProviderStreamAnalyticsJobNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -756,6 +786,7 @@ public partial class V1beta1OutputMSSQLSpecInitProviderStreamAnalyticsJobNameSel
     public V1beta1OutputMSSQLSpecInitProviderStreamAnalyticsJobNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Job in streamanalytics to populate streamAnalyticsJobName.</summary>
 public partial class V1beta1OutputMSSQLSpecInitProviderStreamAnalyticsJobNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -791,6 +822,7 @@ public enum V1beta1OutputMSSQLSpecInitProviderTableRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OutputMSSQLSpecInitProviderTableRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -804,6 +836,7 @@ public partial class V1beta1OutputMSSQLSpecInitProviderTableRefPolicy
     public V1beta1OutputMSSQLSpecInitProviderTableRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Table in storage to populate table.</summary>
 public partial class V1beta1OutputMSSQLSpecInitProviderTableRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -835,6 +868,7 @@ public enum V1beta1OutputMSSQLSpecInitProviderTableSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1OutputMSSQLSpecInitProviderTableSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -848,6 +882,7 @@ public partial class V1beta1OutputMSSQLSpecInitProviderTableSelectorPolicy
     public V1beta1OutputMSSQLSpecInitProviderTableSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Table in storage to populate table.</summary>
 public partial class V1beta1OutputMSSQLSpecInitProviderTableSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -863,6 +898,7 @@ public partial class V1beta1OutputMSSQLSpecInitProviderTableSelector
     public V1beta1OutputMSSQLSpecInitProviderTableSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1OutputMSSQLSpecInitProvider
 {
     /// <summary>The authentication mode for the Stream Output. Possible values are Msi and ConnectionString. Defaults to ConnectionString.</summary>
@@ -984,6 +1020,7 @@ public enum V1beta1OutputMSSQLSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OutputMSSQLSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -997,6 +1034,7 @@ public partial class V1beta1OutputMSSQLSpecProviderConfigRefPolicy
     public V1beta1OutputMSSQLSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1OutputMSSQLSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1028,6 +1066,7 @@ public enum V1beta1OutputMSSQLSpecPublishConnectionDetailsToConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OutputMSSQLSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1041,6 +1080,7 @@ public partial class V1beta1OutputMSSQLSpecPublishConnectionDetailsToConfigRefPo
     public V1beta1OutputMSSQLSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1OutputMSSQLSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1052,6 +1092,7 @@ public partial class V1beta1OutputMSSQLSpecPublishConnectionDetailsToConfigRef
     public V1beta1OutputMSSQLSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1OutputMSSQLSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1067,6 +1108,7 @@ public partial class V1beta1OutputMSSQLSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1OutputMSSQLSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1082,6 +1124,7 @@ public partial class V1beta1OutputMSSQLSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1OutputMSSQLSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1093,6 +1136,7 @@ public partial class V1beta1OutputMSSQLSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>OutputMSSQLSpec defines the desired state of OutputMSSQL</summary>
 public partial class V1beta1OutputMSSQLSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1125,6 +1169,7 @@ public partial class V1beta1OutputMSSQLSpec
     public V1beta1OutputMSSQLSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OutputMSSQLStatusAtProvider
 {
     /// <summary>The authentication mode for the Stream Output. Possible values are Msi and ConnectionString. Defaults to ConnectionString.</summary>
@@ -1172,6 +1217,7 @@ public partial class V1beta1OutputMSSQLStatusAtProvider
     public string? User { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1OutputMSSQLStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1199,6 +1245,7 @@ public partial class V1beta1OutputMSSQLStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>OutputMSSQLStatus defines the observed state of OutputMSSQL.</summary>
 public partial class V1beta1OutputMSSQLStatus
 {
     /// <summary></summary>
@@ -1215,6 +1262,7 @@ public partial class V1beta1OutputMSSQLStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>OutputMSSQL is the Schema for the OutputMSSQLs API. Manages a Stream Analytics Output to Microsoft SQL Server Database.</summary>
 public partial class V1beta1OutputMSSQL : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1OutputMSSQLSpec>, IStatus<V1beta1OutputMSSQLStatus>
 {
     public const string KubeApiVersion = "v1beta1";

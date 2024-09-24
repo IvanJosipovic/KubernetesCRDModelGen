@@ -38,6 +38,7 @@ public enum V1beta1VirtualNetworkPeeringSpecForProviderRemoteVirtualNetworkIdRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualNetworkPeeringSpecForProviderRemoteVirtualNetworkIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1VirtualNetworkPeeringSpecForProviderRemoteVirtualNet
     public V1beta1VirtualNetworkPeeringSpecForProviderRemoteVirtualNetworkIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VirtualNetwork in network to populate remoteVirtualNetworkId.</summary>
 public partial class V1beta1VirtualNetworkPeeringSpecForProviderRemoteVirtualNetworkIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1VirtualNetworkPeeringSpecForProviderRemoteVirtualNetworkIdSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VirtualNetworkPeeringSpecForProviderRemoteVirtualNetworkIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1VirtualNetworkPeeringSpecForProviderRemoteVirtualNet
     public V1beta1VirtualNetworkPeeringSpecForProviderRemoteVirtualNetworkIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VirtualNetwork in network to populate remoteVirtualNetworkId.</summary>
 public partial class V1beta1VirtualNetworkPeeringSpecForProviderRemoteVirtualNetworkIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1VirtualNetworkPeeringSpecForProviderResourceGroupNameRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualNetworkPeeringSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1VirtualNetworkPeeringSpecForProviderResourceGroupNam
     public V1beta1VirtualNetworkPeeringSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1VirtualNetworkPeeringSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1VirtualNetworkPeeringSpecForProviderResourceGroupNameSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VirtualNetworkPeeringSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1VirtualNetworkPeeringSpecForProviderResourceGroupNam
     public V1beta1VirtualNetworkPeeringSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1VirtualNetworkPeeringSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1VirtualNetworkPeeringSpecForProviderVirtualNetworkNameRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualNetworkPeeringSpecForProviderVirtualNetworkNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1VirtualNetworkPeeringSpecForProviderVirtualNetworkNa
     public V1beta1VirtualNetworkPeeringSpecForProviderVirtualNetworkNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VirtualNetwork in network to populate virtualNetworkName.</summary>
 public partial class V1beta1VirtualNetworkPeeringSpecForProviderVirtualNetworkNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1VirtualNetworkPeeringSpecForProviderVirtualNetworkNameSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VirtualNetworkPeeringSpecForProviderVirtualNetworkNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1VirtualNetworkPeeringSpecForProviderVirtualNetworkNa
     public V1beta1VirtualNetworkPeeringSpecForProviderVirtualNetworkNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VirtualNetwork in network to populate virtualNetworkName.</summary>
 public partial class V1beta1VirtualNetworkPeeringSpecForProviderVirtualNetworkNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1VirtualNetworkPeeringSpecForProviderVirtualNetworkNa
     public V1beta1VirtualNetworkPeeringSpecForProviderVirtualNetworkNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkPeeringSpecForProvider
 {
     /// <summary>Controls if forwarded traffic from VMs in the remote virtual network is allowed. Defaults to false.</summary>
@@ -373,6 +386,7 @@ public enum V1beta1VirtualNetworkPeeringSpecInitProviderRemoteVirtualNetworkIdRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualNetworkPeeringSpecInitProviderRemoteVirtualNetworkIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -386,6 +400,7 @@ public partial class V1beta1VirtualNetworkPeeringSpecInitProviderRemoteVirtualNe
     public V1beta1VirtualNetworkPeeringSpecInitProviderRemoteVirtualNetworkIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VirtualNetwork in network to populate remoteVirtualNetworkId.</summary>
 public partial class V1beta1VirtualNetworkPeeringSpecInitProviderRemoteVirtualNetworkIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -417,6 +432,7 @@ public enum V1beta1VirtualNetworkPeeringSpecInitProviderRemoteVirtualNetworkIdSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VirtualNetworkPeeringSpecInitProviderRemoteVirtualNetworkIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -430,6 +446,7 @@ public partial class V1beta1VirtualNetworkPeeringSpecInitProviderRemoteVirtualNe
     public V1beta1VirtualNetworkPeeringSpecInitProviderRemoteVirtualNetworkIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VirtualNetwork in network to populate remoteVirtualNetworkId.</summary>
 public partial class V1beta1VirtualNetworkPeeringSpecInitProviderRemoteVirtualNetworkIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -445,6 +462,7 @@ public partial class V1beta1VirtualNetworkPeeringSpecInitProviderRemoteVirtualNe
     public V1beta1VirtualNetworkPeeringSpecInitProviderRemoteVirtualNetworkIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1VirtualNetworkPeeringSpecInitProvider
 {
     /// <summary>Controls if forwarded traffic from VMs in the remote virtual network is allowed. Defaults to false.</summary>
@@ -522,6 +540,7 @@ public enum V1beta1VirtualNetworkPeeringSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualNetworkPeeringSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -535,6 +554,7 @@ public partial class V1beta1VirtualNetworkPeeringSpecProviderConfigRefPolicy
     public V1beta1VirtualNetworkPeeringSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1VirtualNetworkPeeringSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -566,6 +586,7 @@ public enum V1beta1VirtualNetworkPeeringSpecPublishConnectionDetailsToConfigRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualNetworkPeeringSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -579,6 +600,7 @@ public partial class V1beta1VirtualNetworkPeeringSpecPublishConnectionDetailsToC
     public V1beta1VirtualNetworkPeeringSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1VirtualNetworkPeeringSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -590,6 +612,7 @@ public partial class V1beta1VirtualNetworkPeeringSpecPublishConnectionDetailsToC
     public V1beta1VirtualNetworkPeeringSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1VirtualNetworkPeeringSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -605,6 +628,7 @@ public partial class V1beta1VirtualNetworkPeeringSpecPublishConnectionDetailsToM
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1VirtualNetworkPeeringSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -620,6 +644,7 @@ public partial class V1beta1VirtualNetworkPeeringSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1VirtualNetworkPeeringSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -631,6 +656,7 @@ public partial class V1beta1VirtualNetworkPeeringSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>VirtualNetworkPeeringSpec defines the desired state of VirtualNetworkPeering</summary>
 public partial class V1beta1VirtualNetworkPeeringSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -663,6 +689,7 @@ public partial class V1beta1VirtualNetworkPeeringSpec
     public V1beta1VirtualNetworkPeeringSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNetworkPeeringStatusAtProvider
 {
     /// <summary>Controls if forwarded traffic from VMs in the remote virtual network is allowed. Defaults to false.</summary>
@@ -702,6 +729,7 @@ public partial class V1beta1VirtualNetworkPeeringStatusAtProvider
     public string? VirtualNetworkName { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1VirtualNetworkPeeringStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -729,6 +757,7 @@ public partial class V1beta1VirtualNetworkPeeringStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>VirtualNetworkPeeringStatus defines the observed state of VirtualNetworkPeering.</summary>
 public partial class V1beta1VirtualNetworkPeeringStatus
 {
     /// <summary></summary>
@@ -745,6 +774,7 @@ public partial class V1beta1VirtualNetworkPeeringStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>VirtualNetworkPeering is the Schema for the VirtualNetworkPeerings API. Manages a virtual network peering which allows resources to access other resources in the linked virtual network.</summary>
 public partial class V1beta1VirtualNetworkPeering : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1VirtualNetworkPeeringSpec>, IStatus<V1beta1VirtualNetworkPeeringStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -18,6 +18,7 @@ public enum V1beta1ConnectorSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecForProviderCapacityAutoscalingScaleInPolicy
 {
     /// <summary>The CPU utilization percentage threshold at which you want connector scale out to be triggered.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1ConnectorSpecForProviderCapacityAutoscalingScaleInPo
     public double? CpuUtilizationPercentage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecForProviderCapacityAutoscalingScaleOutPolicy
 {
     /// <summary>The CPU utilization percentage threshold at which you want connector scale out to be triggered.</summary>
@@ -32,6 +34,7 @@ public partial class V1beta1ConnectorSpecForProviderCapacityAutoscalingScaleOutP
     public double? CpuUtilizationPercentage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecForProviderCapacityAutoscaling
 {
     /// <summary>The maximum number of workers allocated to the connector.</summary>
@@ -55,6 +58,7 @@ public partial class V1beta1ConnectorSpecForProviderCapacityAutoscaling
     public IList<V1beta1ConnectorSpecForProviderCapacityAutoscalingScaleOutPolicy>? ScaleOutPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecForProviderCapacityProvisionedCapacity
 {
     /// <summary>The number of microcontroller units (MCUs) allocated to each connector worker. Valid values: 1, 2, 4, 8. The default value is 1.</summary>
@@ -66,6 +70,7 @@ public partial class V1beta1ConnectorSpecForProviderCapacityProvisionedCapacity
     public double? WorkerCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecForProviderCapacity
 {
     /// <summary>Information about the auto scaling parameters for the connector. See below.</summary>
@@ -97,6 +102,7 @@ public enum V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClusterVpcSecu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClusterVpcSecurityGroupRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -110,6 +116,7 @@ public partial class V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClust
     public V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClusterVpcSecurityGroupRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClusterVpcSecurityGroupRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -141,6 +148,7 @@ public enum V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClusterVpcSecu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClusterVpcSecurityGroupSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -154,6 +162,7 @@ public partial class V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClust
     public V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClusterVpcSecurityGroupSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroups.</summary>
 public partial class V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClusterVpcSecurityGroupSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -189,6 +198,7 @@ public enum V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClusterVpcSubn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClusterVpcSubnetRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -202,6 +212,7 @@ public partial class V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClust
     public V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClusterVpcSubnetRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClusterVpcSubnetRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -233,6 +244,7 @@ public enum V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClusterVpcSubn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClusterVpcSubnetSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -246,6 +258,7 @@ public partial class V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClust
     public V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClusterVpcSubnetSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnets.</summary>
 public partial class V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClusterVpcSubnetSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -261,6 +274,7 @@ public partial class V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClust
     public V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClusterVpcSubnetSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClusterVpc
 {
     /// <summary>References to SecurityGroup in ec2 to populate securityGroups.</summary>
@@ -288,6 +302,7 @@ public partial class V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClust
     public IList<string>? Subnets { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaCluster
 {
     /// <summary>The bootstrap servers of the cluster.</summary>
@@ -299,6 +314,7 @@ public partial class V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClust
     public IList<V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaClusterVpc>? Vpc { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecForProviderKafkaCluster
 {
     /// <summary>The Apache Kafka cluster to which the connector is connected.</summary>
@@ -306,6 +322,7 @@ public partial class V1beta1ConnectorSpecForProviderKafkaCluster
     public IList<V1beta1ConnectorSpecForProviderKafkaClusterApacheKafkaCluster>? ApacheKafkaCluster { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecForProviderKafkaClusterClientAuthentication
 {
     /// <summary>The type of client authentication used to connect to the Apache Kafka cluster. Valid values: IAM, NONE. A value of NONE means that no client authentication is used. The default value is NONE.</summary>
@@ -313,6 +330,7 @@ public partial class V1beta1ConnectorSpecForProviderKafkaClusterClientAuthentica
     public string? AuthenticationType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecForProviderKafkaClusterEncryptionInTransit
 {
     /// <summary>The type of encryption in transit to the Apache Kafka cluster. Valid values: PLAINTEXT, TLS. The default values is PLAINTEXT.</summary>
@@ -340,6 +358,7 @@ public enum V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryCloudwatc
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryCloudwatchLogsLogGroupRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -353,6 +372,7 @@ public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDelivery
     public V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryCloudwatchLogsLogGroupRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Group in cloudwatchlogs to populate logGroup.</summary>
 public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryCloudwatchLogsLogGroupRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -384,6 +404,7 @@ public enum V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryCloudwatc
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryCloudwatchLogsLogGroupSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -397,6 +418,7 @@ public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDelivery
     public V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryCloudwatchLogsLogGroupSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Group in cloudwatchlogs to populate logGroup.</summary>
 public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryCloudwatchLogsLogGroupSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -412,6 +434,7 @@ public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDelivery
     public V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryCloudwatchLogsLogGroupSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryCloudwatchLogs
 {
     /// <summary>Specifies whether connector logs get sent to the specified Amazon S3 destination.</summary>
@@ -451,6 +474,7 @@ public enum V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryFirehoseD
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryFirehoseDeliveryStreamRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -464,6 +488,7 @@ public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDelivery
     public V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryFirehoseDeliveryStreamRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a DeliveryStream in firehose to populate deliveryStream.</summary>
 public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryFirehoseDeliveryStreamRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -495,6 +520,7 @@ public enum V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryFirehoseD
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryFirehoseDeliveryStreamSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -508,6 +534,7 @@ public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDelivery
     public V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryFirehoseDeliveryStreamSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a DeliveryStream in firehose to populate deliveryStream.</summary>
 public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryFirehoseDeliveryStreamSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -523,6 +550,7 @@ public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDelivery
     public V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryFirehoseDeliveryStreamSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryFirehose
 {
     /// <summary>The name of the Kinesis Data Firehose delivery stream that is the destination for log delivery.</summary>
@@ -562,6 +590,7 @@ public enum V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryS3BucketR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryS3BucketRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -575,6 +604,7 @@ public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDelivery
     public V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryS3BucketRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryS3BucketRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -606,6 +636,7 @@ public enum V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryS3BucketS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryS3BucketSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -619,6 +650,7 @@ public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDelivery
     public V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryS3BucketSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryS3BucketSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -634,6 +666,7 @@ public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDelivery
     public V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryS3BucketSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryS3
 {
     /// <summary>The name of the S3 bucket that is the destination for log delivery.</summary>
@@ -657,6 +690,7 @@ public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDelivery
     public string? Prefix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDelivery
 {
     /// <summary>Details about delivering logs to Amazon CloudWatch Logs. See below.</summary>
@@ -672,6 +706,7 @@ public partial class V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDelivery
     public IList<V1beta1ConnectorSpecForProviderLogDeliveryWorkerLogDeliveryS3>? S3 { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecForProviderLogDelivery
 {
     /// <summary>The workers can send worker logs to different destination types. This configuration specifies the details of these destinations. See below.</summary>
@@ -699,6 +734,7 @@ public enum V1beta1ConnectorSpecForProviderPluginCustomPluginArnRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectorSpecForProviderPluginCustomPluginArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -712,6 +748,7 @@ public partial class V1beta1ConnectorSpecForProviderPluginCustomPluginArnRefPoli
     public V1beta1ConnectorSpecForProviderPluginCustomPluginArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a CustomPlugin in kafkaconnect to populate arn.</summary>
 public partial class V1beta1ConnectorSpecForProviderPluginCustomPluginArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -743,6 +780,7 @@ public enum V1beta1ConnectorSpecForProviderPluginCustomPluginArnSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectorSpecForProviderPluginCustomPluginArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -756,6 +794,7 @@ public partial class V1beta1ConnectorSpecForProviderPluginCustomPluginArnSelecto
     public V1beta1ConnectorSpecForProviderPluginCustomPluginArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a CustomPlugin in kafkaconnect to populate arn.</summary>
 public partial class V1beta1ConnectorSpecForProviderPluginCustomPluginArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -771,6 +810,7 @@ public partial class V1beta1ConnectorSpecForProviderPluginCustomPluginArnSelecto
     public V1beta1ConnectorSpecForProviderPluginCustomPluginArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecForProviderPluginCustomPlugin
 {
     /// <summary>The Amazon Resource Name (ARN) of the worker configuration.</summary>
@@ -790,6 +830,7 @@ public partial class V1beta1ConnectorSpecForProviderPluginCustomPlugin
     public double? Revision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecForProviderPlugin
 {
     /// <summary>Details about a custom plugin. See below.</summary>
@@ -817,6 +858,7 @@ public enum V1beta1ConnectorSpecForProviderServiceExecutionRoleArnRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectorSpecForProviderServiceExecutionRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -830,6 +872,7 @@ public partial class V1beta1ConnectorSpecForProviderServiceExecutionRoleArnRefPo
     public V1beta1ConnectorSpecForProviderServiceExecutionRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate serviceExecutionRoleArn.</summary>
 public partial class V1beta1ConnectorSpecForProviderServiceExecutionRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -861,6 +904,7 @@ public enum V1beta1ConnectorSpecForProviderServiceExecutionRoleArnSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectorSpecForProviderServiceExecutionRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -874,6 +918,7 @@ public partial class V1beta1ConnectorSpecForProviderServiceExecutionRoleArnSelec
     public V1beta1ConnectorSpecForProviderServiceExecutionRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate serviceExecutionRoleArn.</summary>
 public partial class V1beta1ConnectorSpecForProviderServiceExecutionRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -909,6 +954,7 @@ public enum V1beta1ConnectorSpecForProviderWorkerConfigurationArnRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectorSpecForProviderWorkerConfigurationArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -922,6 +968,7 @@ public partial class V1beta1ConnectorSpecForProviderWorkerConfigurationArnRefPol
     public V1beta1ConnectorSpecForProviderWorkerConfigurationArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a WorkerConfiguration in kafkaconnect to populate arn.</summary>
 public partial class V1beta1ConnectorSpecForProviderWorkerConfigurationArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -953,6 +1000,7 @@ public enum V1beta1ConnectorSpecForProviderWorkerConfigurationArnSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectorSpecForProviderWorkerConfigurationArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -966,6 +1014,7 @@ public partial class V1beta1ConnectorSpecForProviderWorkerConfigurationArnSelect
     public V1beta1ConnectorSpecForProviderWorkerConfigurationArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a WorkerConfiguration in kafkaconnect to populate arn.</summary>
 public partial class V1beta1ConnectorSpecForProviderWorkerConfigurationArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -981,6 +1030,7 @@ public partial class V1beta1ConnectorSpecForProviderWorkerConfigurationArnSelect
     public V1beta1ConnectorSpecForProviderWorkerConfigurationArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecForProviderWorkerConfiguration
 {
     /// <summary>The Amazon Resource Name (ARN) of the worker configuration.</summary>
@@ -1000,6 +1050,7 @@ public partial class V1beta1ConnectorSpecForProviderWorkerConfiguration
     public double? Revision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecForProvider
 {
     /// <summary>Information about the capacity allocated to the connector. See below.</summary>
@@ -1067,6 +1118,7 @@ public partial class V1beta1ConnectorSpecForProvider
     public IList<V1beta1ConnectorSpecForProviderWorkerConfiguration>? WorkerConfiguration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecInitProviderCapacityAutoscalingScaleInPolicy
 {
     /// <summary>The CPU utilization percentage threshold at which you want connector scale out to be triggered.</summary>
@@ -1074,6 +1126,7 @@ public partial class V1beta1ConnectorSpecInitProviderCapacityAutoscalingScaleInP
     public double? CpuUtilizationPercentage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecInitProviderCapacityAutoscalingScaleOutPolicy
 {
     /// <summary>The CPU utilization percentage threshold at which you want connector scale out to be triggered.</summary>
@@ -1081,6 +1134,7 @@ public partial class V1beta1ConnectorSpecInitProviderCapacityAutoscalingScaleOut
     public double? CpuUtilizationPercentage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecInitProviderCapacityAutoscaling
 {
     /// <summary>The maximum number of workers allocated to the connector.</summary>
@@ -1104,6 +1158,7 @@ public partial class V1beta1ConnectorSpecInitProviderCapacityAutoscaling
     public IList<V1beta1ConnectorSpecInitProviderCapacityAutoscalingScaleOutPolicy>? ScaleOutPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecInitProviderCapacityProvisionedCapacity
 {
     /// <summary>The number of microcontroller units (MCUs) allocated to each connector worker. Valid values: 1, 2, 4, 8. The default value is 1.</summary>
@@ -1115,6 +1170,7 @@ public partial class V1beta1ConnectorSpecInitProviderCapacityProvisionedCapacity
     public double? WorkerCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecInitProviderCapacity
 {
     /// <summary>Information about the auto scaling parameters for the connector. See below.</summary>
@@ -1146,6 +1202,7 @@ public enum V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClusterVpcSec
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClusterVpcSecurityGroupRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1159,6 +1216,7 @@ public partial class V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClus
     public V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClusterVpcSecurityGroupRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClusterVpcSecurityGroupRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1190,6 +1248,7 @@ public enum V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClusterVpcSec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClusterVpcSecurityGroupSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1203,6 +1262,7 @@ public partial class V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClus
     public V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClusterVpcSecurityGroupSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroups.</summary>
 public partial class V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClusterVpcSecurityGroupSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1238,6 +1298,7 @@ public enum V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClusterVpcSub
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClusterVpcSubnetRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1251,6 +1312,7 @@ public partial class V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClus
     public V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClusterVpcSubnetRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClusterVpcSubnetRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1282,6 +1344,7 @@ public enum V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClusterVpcSub
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClusterVpcSubnetSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1295,6 +1358,7 @@ public partial class V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClus
     public V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClusterVpcSubnetSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnets.</summary>
 public partial class V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClusterVpcSubnetSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1310,6 +1374,7 @@ public partial class V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClus
     public V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClusterVpcSubnetSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClusterVpc
 {
     /// <summary>References to SecurityGroup in ec2 to populate securityGroups.</summary>
@@ -1337,6 +1402,7 @@ public partial class V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClus
     public IList<string>? Subnets { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaCluster
 {
     /// <summary>The bootstrap servers of the cluster.</summary>
@@ -1348,6 +1414,7 @@ public partial class V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClus
     public IList<V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaClusterVpc>? Vpc { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecInitProviderKafkaCluster
 {
     /// <summary>The Apache Kafka cluster to which the connector is connected.</summary>
@@ -1355,6 +1422,7 @@ public partial class V1beta1ConnectorSpecInitProviderKafkaCluster
     public IList<V1beta1ConnectorSpecInitProviderKafkaClusterApacheKafkaCluster>? ApacheKafkaCluster { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecInitProviderKafkaClusterClientAuthentication
 {
     /// <summary>The type of client authentication used to connect to the Apache Kafka cluster. Valid values: IAM, NONE. A value of NONE means that no client authentication is used. The default value is NONE.</summary>
@@ -1362,6 +1430,7 @@ public partial class V1beta1ConnectorSpecInitProviderKafkaClusterClientAuthentic
     public string? AuthenticationType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecInitProviderKafkaClusterEncryptionInTransit
 {
     /// <summary>The type of encryption in transit to the Apache Kafka cluster. Valid values: PLAINTEXT, TLS. The default values is PLAINTEXT.</summary>
@@ -1389,6 +1458,7 @@ public enum V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryCloudwat
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryCloudwatchLogsLogGroupRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1402,6 +1472,7 @@ public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliver
     public V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryCloudwatchLogsLogGroupRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Group in cloudwatchlogs to populate logGroup.</summary>
 public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryCloudwatchLogsLogGroupRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1433,6 +1504,7 @@ public enum V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryCloudwat
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryCloudwatchLogsLogGroupSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1446,6 +1518,7 @@ public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliver
     public V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryCloudwatchLogsLogGroupSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Group in cloudwatchlogs to populate logGroup.</summary>
 public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryCloudwatchLogsLogGroupSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1461,6 +1534,7 @@ public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliver
     public V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryCloudwatchLogsLogGroupSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryCloudwatchLogs
 {
     /// <summary>Specifies whether connector logs get sent to the specified Amazon S3 destination.</summary>
@@ -1500,6 +1574,7 @@ public enum V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryFirehose
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryFirehoseDeliveryStreamRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1513,6 +1588,7 @@ public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliver
     public V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryFirehoseDeliveryStreamRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a DeliveryStream in firehose to populate deliveryStream.</summary>
 public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryFirehoseDeliveryStreamRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1544,6 +1620,7 @@ public enum V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryFirehose
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryFirehoseDeliveryStreamSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1557,6 +1634,7 @@ public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliver
     public V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryFirehoseDeliveryStreamSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a DeliveryStream in firehose to populate deliveryStream.</summary>
 public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryFirehoseDeliveryStreamSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1572,6 +1650,7 @@ public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliver
     public V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryFirehoseDeliveryStreamSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryFirehose
 {
     /// <summary>The name of the Kinesis Data Firehose delivery stream that is the destination for log delivery.</summary>
@@ -1611,6 +1690,7 @@ public enum V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryS3Bucket
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryS3BucketRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1624,6 +1704,7 @@ public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliver
     public V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryS3BucketRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryS3BucketRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1655,6 +1736,7 @@ public enum V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryS3Bucket
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryS3BucketSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1668,6 +1750,7 @@ public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliver
     public V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryS3BucketSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryS3BucketSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1683,6 +1766,7 @@ public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliver
     public V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryS3BucketSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryS3
 {
     /// <summary>The name of the S3 bucket that is the destination for log delivery.</summary>
@@ -1706,6 +1790,7 @@ public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliver
     public string? Prefix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDelivery
 {
     /// <summary>Details about delivering logs to Amazon CloudWatch Logs. See below.</summary>
@@ -1721,6 +1806,7 @@ public partial class V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliver
     public IList<V1beta1ConnectorSpecInitProviderLogDeliveryWorkerLogDeliveryS3>? S3 { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecInitProviderLogDelivery
 {
     /// <summary>The workers can send worker logs to different destination types. This configuration specifies the details of these destinations. See below.</summary>
@@ -1748,6 +1834,7 @@ public enum V1beta1ConnectorSpecInitProviderPluginCustomPluginArnRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectorSpecInitProviderPluginCustomPluginArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1761,6 +1848,7 @@ public partial class V1beta1ConnectorSpecInitProviderPluginCustomPluginArnRefPol
     public V1beta1ConnectorSpecInitProviderPluginCustomPluginArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a CustomPlugin in kafkaconnect to populate arn.</summary>
 public partial class V1beta1ConnectorSpecInitProviderPluginCustomPluginArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1792,6 +1880,7 @@ public enum V1beta1ConnectorSpecInitProviderPluginCustomPluginArnSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectorSpecInitProviderPluginCustomPluginArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1805,6 +1894,7 @@ public partial class V1beta1ConnectorSpecInitProviderPluginCustomPluginArnSelect
     public V1beta1ConnectorSpecInitProviderPluginCustomPluginArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a CustomPlugin in kafkaconnect to populate arn.</summary>
 public partial class V1beta1ConnectorSpecInitProviderPluginCustomPluginArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1820,6 +1910,7 @@ public partial class V1beta1ConnectorSpecInitProviderPluginCustomPluginArnSelect
     public V1beta1ConnectorSpecInitProviderPluginCustomPluginArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecInitProviderPluginCustomPlugin
 {
     /// <summary>The Amazon Resource Name (ARN) of the worker configuration.</summary>
@@ -1839,6 +1930,7 @@ public partial class V1beta1ConnectorSpecInitProviderPluginCustomPlugin
     public double? Revision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecInitProviderPlugin
 {
     /// <summary>Details about a custom plugin. See below.</summary>
@@ -1866,6 +1958,7 @@ public enum V1beta1ConnectorSpecInitProviderServiceExecutionRoleArnRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectorSpecInitProviderServiceExecutionRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1879,6 +1972,7 @@ public partial class V1beta1ConnectorSpecInitProviderServiceExecutionRoleArnRefP
     public V1beta1ConnectorSpecInitProviderServiceExecutionRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate serviceExecutionRoleArn.</summary>
 public partial class V1beta1ConnectorSpecInitProviderServiceExecutionRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1910,6 +2004,7 @@ public enum V1beta1ConnectorSpecInitProviderServiceExecutionRoleArnSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectorSpecInitProviderServiceExecutionRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1923,6 +2018,7 @@ public partial class V1beta1ConnectorSpecInitProviderServiceExecutionRoleArnSele
     public V1beta1ConnectorSpecInitProviderServiceExecutionRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate serviceExecutionRoleArn.</summary>
 public partial class V1beta1ConnectorSpecInitProviderServiceExecutionRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1958,6 +2054,7 @@ public enum V1beta1ConnectorSpecInitProviderWorkerConfigurationArnRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectorSpecInitProviderWorkerConfigurationArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1971,6 +2068,7 @@ public partial class V1beta1ConnectorSpecInitProviderWorkerConfigurationArnRefPo
     public V1beta1ConnectorSpecInitProviderWorkerConfigurationArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a WorkerConfiguration in kafkaconnect to populate arn.</summary>
 public partial class V1beta1ConnectorSpecInitProviderWorkerConfigurationArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2002,6 +2100,7 @@ public enum V1beta1ConnectorSpecInitProviderWorkerConfigurationArnSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectorSpecInitProviderWorkerConfigurationArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2015,6 +2114,7 @@ public partial class V1beta1ConnectorSpecInitProviderWorkerConfigurationArnSelec
     public V1beta1ConnectorSpecInitProviderWorkerConfigurationArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a WorkerConfiguration in kafkaconnect to populate arn.</summary>
 public partial class V1beta1ConnectorSpecInitProviderWorkerConfigurationArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2030,6 +2130,7 @@ public partial class V1beta1ConnectorSpecInitProviderWorkerConfigurationArnSelec
     public V1beta1ConnectorSpecInitProviderWorkerConfigurationArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecInitProviderWorkerConfiguration
 {
     /// <summary>The Amazon Resource Name (ARN) of the worker configuration.</summary>
@@ -2049,6 +2150,7 @@ public partial class V1beta1ConnectorSpecInitProviderWorkerConfiguration
     public double? Revision { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ConnectorSpecInitProvider
 {
     /// <summary>Information about the capacity allocated to the connector. See below.</summary>
@@ -2150,6 +2252,7 @@ public enum V1beta1ConnectorSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectorSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2163,6 +2266,7 @@ public partial class V1beta1ConnectorSpecProviderConfigRefPolicy
     public V1beta1ConnectorSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ConnectorSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2194,6 +2298,7 @@ public enum V1beta1ConnectorSpecPublishConnectionDetailsToConfigRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectorSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2207,6 +2312,7 @@ public partial class V1beta1ConnectorSpecPublishConnectionDetailsToConfigRefPoli
     public V1beta1ConnectorSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ConnectorSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2218,6 +2324,7 @@ public partial class V1beta1ConnectorSpecPublishConnectionDetailsToConfigRef
     public V1beta1ConnectorSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ConnectorSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -2233,6 +2340,7 @@ public partial class V1beta1ConnectorSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ConnectorSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -2248,6 +2356,7 @@ public partial class V1beta1ConnectorSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ConnectorSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -2259,6 +2368,7 @@ public partial class V1beta1ConnectorSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ConnectorSpec defines the desired state of Connector</summary>
 public partial class V1beta1ConnectorSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -2291,6 +2401,7 @@ public partial class V1beta1ConnectorSpec
     public V1beta1ConnectorSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorStatusAtProviderCapacityAutoscalingScaleInPolicy
 {
     /// <summary>The CPU utilization percentage threshold at which you want connector scale out to be triggered.</summary>
@@ -2298,6 +2409,7 @@ public partial class V1beta1ConnectorStatusAtProviderCapacityAutoscalingScaleInP
     public double? CpuUtilizationPercentage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorStatusAtProviderCapacityAutoscalingScaleOutPolicy
 {
     /// <summary>The CPU utilization percentage threshold at which you want connector scale out to be triggered.</summary>
@@ -2305,6 +2417,7 @@ public partial class V1beta1ConnectorStatusAtProviderCapacityAutoscalingScaleOut
     public double? CpuUtilizationPercentage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorStatusAtProviderCapacityAutoscaling
 {
     /// <summary>The maximum number of workers allocated to the connector.</summary>
@@ -2328,6 +2441,7 @@ public partial class V1beta1ConnectorStatusAtProviderCapacityAutoscaling
     public IList<V1beta1ConnectorStatusAtProviderCapacityAutoscalingScaleOutPolicy>? ScaleOutPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorStatusAtProviderCapacityProvisionedCapacity
 {
     /// <summary>The number of microcontroller units (MCUs) allocated to each connector worker. Valid values: 1, 2, 4, 8. The default value is 1.</summary>
@@ -2339,6 +2453,7 @@ public partial class V1beta1ConnectorStatusAtProviderCapacityProvisionedCapacity
     public double? WorkerCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorStatusAtProviderCapacity
 {
     /// <summary>Information about the auto scaling parameters for the connector. See below.</summary>
@@ -2350,6 +2465,7 @@ public partial class V1beta1ConnectorStatusAtProviderCapacity
     public IList<V1beta1ConnectorStatusAtProviderCapacityProvisionedCapacity>? ProvisionedCapacity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorStatusAtProviderKafkaClusterApacheKafkaClusterVpc
 {
     /// <summary>The security groups for the connector.</summary>
@@ -2361,6 +2477,7 @@ public partial class V1beta1ConnectorStatusAtProviderKafkaClusterApacheKafkaClus
     public IList<string>? Subnets { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorStatusAtProviderKafkaClusterApacheKafkaCluster
 {
     /// <summary>The bootstrap servers of the cluster.</summary>
@@ -2372,6 +2489,7 @@ public partial class V1beta1ConnectorStatusAtProviderKafkaClusterApacheKafkaClus
     public IList<V1beta1ConnectorStatusAtProviderKafkaClusterApacheKafkaClusterVpc>? Vpc { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorStatusAtProviderKafkaCluster
 {
     /// <summary>The Apache Kafka cluster to which the connector is connected.</summary>
@@ -2379,6 +2497,7 @@ public partial class V1beta1ConnectorStatusAtProviderKafkaCluster
     public IList<V1beta1ConnectorStatusAtProviderKafkaClusterApacheKafkaCluster>? ApacheKafkaCluster { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorStatusAtProviderKafkaClusterClientAuthentication
 {
     /// <summary>The type of client authentication used to connect to the Apache Kafka cluster. Valid values: IAM, NONE. A value of NONE means that no client authentication is used. The default value is NONE.</summary>
@@ -2386,6 +2505,7 @@ public partial class V1beta1ConnectorStatusAtProviderKafkaClusterClientAuthentic
     public string? AuthenticationType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorStatusAtProviderKafkaClusterEncryptionInTransit
 {
     /// <summary>The type of encryption in transit to the Apache Kafka cluster. Valid values: PLAINTEXT, TLS. The default values is PLAINTEXT.</summary>
@@ -2393,6 +2513,7 @@ public partial class V1beta1ConnectorStatusAtProviderKafkaClusterEncryptionInTra
     public string? EncryptionType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorStatusAtProviderLogDeliveryWorkerLogDeliveryCloudwatchLogs
 {
     /// <summary>Specifies whether connector logs get sent to the specified Amazon S3 destination.</summary>
@@ -2404,6 +2525,7 @@ public partial class V1beta1ConnectorStatusAtProviderLogDeliveryWorkerLogDeliver
     public string? LogGroup { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorStatusAtProviderLogDeliveryWorkerLogDeliveryFirehose
 {
     /// <summary>The name of the Kinesis Data Firehose delivery stream that is the destination for log delivery.</summary>
@@ -2415,6 +2537,7 @@ public partial class V1beta1ConnectorStatusAtProviderLogDeliveryWorkerLogDeliver
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorStatusAtProviderLogDeliveryWorkerLogDeliveryS3
 {
     /// <summary>The name of the S3 bucket that is the destination for log delivery.</summary>
@@ -2430,6 +2553,7 @@ public partial class V1beta1ConnectorStatusAtProviderLogDeliveryWorkerLogDeliver
     public string? Prefix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorStatusAtProviderLogDeliveryWorkerLogDelivery
 {
     /// <summary>Details about delivering logs to Amazon CloudWatch Logs. See below.</summary>
@@ -2445,6 +2569,7 @@ public partial class V1beta1ConnectorStatusAtProviderLogDeliveryWorkerLogDeliver
     public IList<V1beta1ConnectorStatusAtProviderLogDeliveryWorkerLogDeliveryS3>? S3 { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorStatusAtProviderLogDelivery
 {
     /// <summary>The workers can send worker logs to different destination types. This configuration specifies the details of these destinations. See below.</summary>
@@ -2452,6 +2577,7 @@ public partial class V1beta1ConnectorStatusAtProviderLogDelivery
     public IList<V1beta1ConnectorStatusAtProviderLogDeliveryWorkerLogDelivery>? WorkerLogDelivery { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorStatusAtProviderPluginCustomPlugin
 {
     /// <summary>The Amazon Resource Name (ARN) of the worker configuration.</summary>
@@ -2463,6 +2589,7 @@ public partial class V1beta1ConnectorStatusAtProviderPluginCustomPlugin
     public double? Revision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorStatusAtProviderPlugin
 {
     /// <summary>Details about a custom plugin. See below.</summary>
@@ -2470,6 +2597,7 @@ public partial class V1beta1ConnectorStatusAtProviderPlugin
     public IList<V1beta1ConnectorStatusAtProviderPluginCustomPlugin>? CustomPlugin { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorStatusAtProviderWorkerConfiguration
 {
     /// <summary>The Amazon Resource Name (ARN) of the worker configuration.</summary>
@@ -2481,6 +2609,7 @@ public partial class V1beta1ConnectorStatusAtProviderWorkerConfiguration
     public double? Revision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorStatusAtProvider
 {
     /// <summary>The Amazon Resource Name (ARN) of the custom plugin.</summary>
@@ -2552,6 +2681,7 @@ public partial class V1beta1ConnectorStatusAtProvider
     public IList<V1beta1ConnectorStatusAtProviderWorkerConfiguration>? WorkerConfiguration { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ConnectorStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2579,6 +2709,7 @@ public partial class V1beta1ConnectorStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ConnectorStatus defines the observed state of Connector.</summary>
 public partial class V1beta1ConnectorStatus
 {
     /// <summary></summary>
@@ -2595,6 +2726,7 @@ public partial class V1beta1ConnectorStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Connector is the Schema for the Connectors API. Provides an Amazon MSK Connect Connector resource. Changes to any parameter besides "scaling" will be rejected. Instead you must create a new resource.</summary>
 public partial class V1beta1Connector : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ConnectorSpec>, IStatus<V1beta1ConnectorStatus>
 {
     public const string KubeApiVersion = "v1beta1";

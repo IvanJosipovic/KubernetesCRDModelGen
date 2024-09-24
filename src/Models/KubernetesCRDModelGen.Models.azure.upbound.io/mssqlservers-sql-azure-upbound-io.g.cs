@@ -18,6 +18,7 @@ public enum V1beta1MSSQLServerSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>The password associated with the administrator_login user. Needs to comply with Azure's Password Policy. Required unless azuread_authentication_only in the azuread_administrator block is true.</summary>
 public partial class V1beta1MSSQLServerSpecForProviderAdministratorLoginPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -53,6 +54,7 @@ public enum V1beta1MSSQLServerSpecForProviderAzureadAdministratorLoginUsernameRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MSSQLServerSpecForProviderAzureadAdministratorLoginUsernameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -66,6 +68,7 @@ public partial class V1beta1MSSQLServerSpecForProviderAzureadAdministratorLoginU
     public V1beta1MSSQLServerSpecForProviderAzureadAdministratorLoginUsernameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserAssignedIdentity in managedidentity to populate loginUsername.</summary>
 public partial class V1beta1MSSQLServerSpecForProviderAzureadAdministratorLoginUsernameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -97,6 +100,7 @@ public enum V1beta1MSSQLServerSpecForProviderAzureadAdministratorLoginUsernameSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MSSQLServerSpecForProviderAzureadAdministratorLoginUsernameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1MSSQLServerSpecForProviderAzureadAdministratorLoginU
     public V1beta1MSSQLServerSpecForProviderAzureadAdministratorLoginUsernameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserAssignedIdentity in managedidentity to populate loginUsername.</summary>
 public partial class V1beta1MSSQLServerSpecForProviderAzureadAdministratorLoginUsernameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -145,6 +150,7 @@ public enum V1beta1MSSQLServerSpecForProviderAzureadAdministratorObjectIdRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MSSQLServerSpecForProviderAzureadAdministratorObjectIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -158,6 +164,7 @@ public partial class V1beta1MSSQLServerSpecForProviderAzureadAdministratorObject
     public V1beta1MSSQLServerSpecForProviderAzureadAdministratorObjectIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserAssignedIdentity in managedidentity to populate objectId.</summary>
 public partial class V1beta1MSSQLServerSpecForProviderAzureadAdministratorObjectIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -189,6 +196,7 @@ public enum V1beta1MSSQLServerSpecForProviderAzureadAdministratorObjectIdSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MSSQLServerSpecForProviderAzureadAdministratorObjectIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1MSSQLServerSpecForProviderAzureadAdministratorObject
     public V1beta1MSSQLServerSpecForProviderAzureadAdministratorObjectIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserAssignedIdentity in managedidentity to populate objectId.</summary>
 public partial class V1beta1MSSQLServerSpecForProviderAzureadAdministratorObjectIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -217,6 +226,7 @@ public partial class V1beta1MSSQLServerSpecForProviderAzureadAdministratorObject
     public V1beta1MSSQLServerSpecForProviderAzureadAdministratorObjectIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MSSQLServerSpecForProviderAzureadAdministrator
 {
     /// <summary>Specifies whether only AD Users and administrators (e.g. azuread_administrator[0].login_username) can be used to login, or also local database users (e.g. administrator_login). When true, the administrator_login and administrator_login_password properties can be omitted.</summary>
@@ -252,6 +262,7 @@ public partial class V1beta1MSSQLServerSpecForProviderAzureadAdministrator
     public string? TenantId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MSSQLServerSpecForProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this SQL Server.</summary>
@@ -283,6 +294,7 @@ public enum V1beta1MSSQLServerSpecForProviderPrimaryUserAssignedIdentityIdRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MSSQLServerSpecForProviderPrimaryUserAssignedIdentityIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -296,6 +308,7 @@ public partial class V1beta1MSSQLServerSpecForProviderPrimaryUserAssignedIdentit
     public V1beta1MSSQLServerSpecForProviderPrimaryUserAssignedIdentityIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserAssignedIdentity in managedidentity to populate primaryUserAssignedIdentityId.</summary>
 public partial class V1beta1MSSQLServerSpecForProviderPrimaryUserAssignedIdentityIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -327,6 +340,7 @@ public enum V1beta1MSSQLServerSpecForProviderPrimaryUserAssignedIdentityIdSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MSSQLServerSpecForProviderPrimaryUserAssignedIdentityIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -340,6 +354,7 @@ public partial class V1beta1MSSQLServerSpecForProviderPrimaryUserAssignedIdentit
     public V1beta1MSSQLServerSpecForProviderPrimaryUserAssignedIdentityIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserAssignedIdentity in managedidentity to populate primaryUserAssignedIdentityId.</summary>
 public partial class V1beta1MSSQLServerSpecForProviderPrimaryUserAssignedIdentityIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -375,6 +390,7 @@ public enum V1beta1MSSQLServerSpecForProviderResourceGroupNameRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MSSQLServerSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -388,6 +404,7 @@ public partial class V1beta1MSSQLServerSpecForProviderResourceGroupNameRefPolicy
     public V1beta1MSSQLServerSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1MSSQLServerSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -419,6 +436,7 @@ public enum V1beta1MSSQLServerSpecForProviderResourceGroupNameSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MSSQLServerSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -432,6 +450,7 @@ public partial class V1beta1MSSQLServerSpecForProviderResourceGroupNameSelectorP
     public V1beta1MSSQLServerSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1MSSQLServerSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -467,6 +486,7 @@ public enum V1beta1MSSQLServerSpecForProviderTransparentDataEncryptionKeyVaultKe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MSSQLServerSpecForProviderTransparentDataEncryptionKeyVaultKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -480,6 +500,7 @@ public partial class V1beta1MSSQLServerSpecForProviderTransparentDataEncryptionK
     public V1beta1MSSQLServerSpecForProviderTransparentDataEncryptionKeyVaultKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in keyvault to populate transparentDataEncryptionKeyVaultKeyId.</summary>
 public partial class V1beta1MSSQLServerSpecForProviderTransparentDataEncryptionKeyVaultKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -511,6 +532,7 @@ public enum V1beta1MSSQLServerSpecForProviderTransparentDataEncryptionKeyVaultKe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MSSQLServerSpecForProviderTransparentDataEncryptionKeyVaultKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -524,6 +546,7 @@ public partial class V1beta1MSSQLServerSpecForProviderTransparentDataEncryptionK
     public V1beta1MSSQLServerSpecForProviderTransparentDataEncryptionKeyVaultKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in keyvault to populate transparentDataEncryptionKeyVaultKeyId.</summary>
 public partial class V1beta1MSSQLServerSpecForProviderTransparentDataEncryptionKeyVaultKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -539,6 +562,7 @@ public partial class V1beta1MSSQLServerSpecForProviderTransparentDataEncryptionK
     public V1beta1MSSQLServerSpecForProviderTransparentDataEncryptionKeyVaultKeyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MSSQLServerSpecForProvider
 {
     /// <summary>The administrator login name for the new server. Required unless azuread_authentication_only in the azuread_administrator block is true. When omitted, Azure will generate a default username which cannot be subsequently changed. Changing this forces a new resource to be created.</summary>
@@ -642,6 +666,7 @@ public enum V1beta1MSSQLServerSpecInitProviderAzureadAdministratorLoginUsernameR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MSSQLServerSpecInitProviderAzureadAdministratorLoginUsernameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -655,6 +680,7 @@ public partial class V1beta1MSSQLServerSpecInitProviderAzureadAdministratorLogin
     public V1beta1MSSQLServerSpecInitProviderAzureadAdministratorLoginUsernameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserAssignedIdentity in managedidentity to populate loginUsername.</summary>
 public partial class V1beta1MSSQLServerSpecInitProviderAzureadAdministratorLoginUsernameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -686,6 +712,7 @@ public enum V1beta1MSSQLServerSpecInitProviderAzureadAdministratorLoginUsernameS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MSSQLServerSpecInitProviderAzureadAdministratorLoginUsernameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -699,6 +726,7 @@ public partial class V1beta1MSSQLServerSpecInitProviderAzureadAdministratorLogin
     public V1beta1MSSQLServerSpecInitProviderAzureadAdministratorLoginUsernameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserAssignedIdentity in managedidentity to populate loginUsername.</summary>
 public partial class V1beta1MSSQLServerSpecInitProviderAzureadAdministratorLoginUsernameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -734,6 +762,7 @@ public enum V1beta1MSSQLServerSpecInitProviderAzureadAdministratorObjectIdRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MSSQLServerSpecInitProviderAzureadAdministratorObjectIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -747,6 +776,7 @@ public partial class V1beta1MSSQLServerSpecInitProviderAzureadAdministratorObjec
     public V1beta1MSSQLServerSpecInitProviderAzureadAdministratorObjectIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserAssignedIdentity in managedidentity to populate objectId.</summary>
 public partial class V1beta1MSSQLServerSpecInitProviderAzureadAdministratorObjectIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -778,6 +808,7 @@ public enum V1beta1MSSQLServerSpecInitProviderAzureadAdministratorObjectIdSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MSSQLServerSpecInitProviderAzureadAdministratorObjectIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -791,6 +822,7 @@ public partial class V1beta1MSSQLServerSpecInitProviderAzureadAdministratorObjec
     public V1beta1MSSQLServerSpecInitProviderAzureadAdministratorObjectIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserAssignedIdentity in managedidentity to populate objectId.</summary>
 public partial class V1beta1MSSQLServerSpecInitProviderAzureadAdministratorObjectIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -806,6 +838,7 @@ public partial class V1beta1MSSQLServerSpecInitProviderAzureadAdministratorObjec
     public V1beta1MSSQLServerSpecInitProviderAzureadAdministratorObjectIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MSSQLServerSpecInitProviderAzureadAdministrator
 {
     /// <summary>Specifies whether only AD Users and administrators (e.g. azuread_administrator[0].login_username) can be used to login, or also local database users (e.g. administrator_login). When true, the administrator_login and administrator_login_password properties can be omitted.</summary>
@@ -841,6 +874,7 @@ public partial class V1beta1MSSQLServerSpecInitProviderAzureadAdministrator
     public string? TenantId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MSSQLServerSpecInitProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this SQL Server.</summary>
@@ -872,6 +906,7 @@ public enum V1beta1MSSQLServerSpecInitProviderPrimaryUserAssignedIdentityIdRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MSSQLServerSpecInitProviderPrimaryUserAssignedIdentityIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -885,6 +920,7 @@ public partial class V1beta1MSSQLServerSpecInitProviderPrimaryUserAssignedIdenti
     public V1beta1MSSQLServerSpecInitProviderPrimaryUserAssignedIdentityIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserAssignedIdentity in managedidentity to populate primaryUserAssignedIdentityId.</summary>
 public partial class V1beta1MSSQLServerSpecInitProviderPrimaryUserAssignedIdentityIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -916,6 +952,7 @@ public enum V1beta1MSSQLServerSpecInitProviderPrimaryUserAssignedIdentityIdSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MSSQLServerSpecInitProviderPrimaryUserAssignedIdentityIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -929,6 +966,7 @@ public partial class V1beta1MSSQLServerSpecInitProviderPrimaryUserAssignedIdenti
     public V1beta1MSSQLServerSpecInitProviderPrimaryUserAssignedIdentityIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserAssignedIdentity in managedidentity to populate primaryUserAssignedIdentityId.</summary>
 public partial class V1beta1MSSQLServerSpecInitProviderPrimaryUserAssignedIdentityIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -964,6 +1002,7 @@ public enum V1beta1MSSQLServerSpecInitProviderTransparentDataEncryptionKeyVaultK
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MSSQLServerSpecInitProviderTransparentDataEncryptionKeyVaultKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -977,6 +1016,7 @@ public partial class V1beta1MSSQLServerSpecInitProviderTransparentDataEncryption
     public V1beta1MSSQLServerSpecInitProviderTransparentDataEncryptionKeyVaultKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in keyvault to populate transparentDataEncryptionKeyVaultKeyId.</summary>
 public partial class V1beta1MSSQLServerSpecInitProviderTransparentDataEncryptionKeyVaultKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1008,6 +1048,7 @@ public enum V1beta1MSSQLServerSpecInitProviderTransparentDataEncryptionKeyVaultK
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MSSQLServerSpecInitProviderTransparentDataEncryptionKeyVaultKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1021,6 +1062,7 @@ public partial class V1beta1MSSQLServerSpecInitProviderTransparentDataEncryption
     public V1beta1MSSQLServerSpecInitProviderTransparentDataEncryptionKeyVaultKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in keyvault to populate transparentDataEncryptionKeyVaultKeyId.</summary>
 public partial class V1beta1MSSQLServerSpecInitProviderTransparentDataEncryptionKeyVaultKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1036,6 +1078,7 @@ public partial class V1beta1MSSQLServerSpecInitProviderTransparentDataEncryption
     public V1beta1MSSQLServerSpecInitProviderTransparentDataEncryptionKeyVaultKeyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1MSSQLServerSpecInitProvider
 {
     /// <summary>The administrator login name for the new server. Required unless azuread_authentication_only in the azuread_administrator block is true. When omitted, Azure will generate a default username which cannot be subsequently changed. Changing this forces a new resource to be created.</summary>
@@ -1145,6 +1188,7 @@ public enum V1beta1MSSQLServerSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MSSQLServerSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1158,6 +1202,7 @@ public partial class V1beta1MSSQLServerSpecProviderConfigRefPolicy
     public V1beta1MSSQLServerSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1MSSQLServerSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1189,6 +1234,7 @@ public enum V1beta1MSSQLServerSpecPublishConnectionDetailsToConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MSSQLServerSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1202,6 +1248,7 @@ public partial class V1beta1MSSQLServerSpecPublishConnectionDetailsToConfigRefPo
     public V1beta1MSSQLServerSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1MSSQLServerSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1213,6 +1260,7 @@ public partial class V1beta1MSSQLServerSpecPublishConnectionDetailsToConfigRef
     public V1beta1MSSQLServerSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1MSSQLServerSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1228,6 +1276,7 @@ public partial class V1beta1MSSQLServerSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1MSSQLServerSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1243,6 +1292,7 @@ public partial class V1beta1MSSQLServerSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1MSSQLServerSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1254,6 +1304,7 @@ public partial class V1beta1MSSQLServerSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>MSSQLServerSpec defines the desired state of MSSQLServer</summary>
 public partial class V1beta1MSSQLServerSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1286,6 +1337,7 @@ public partial class V1beta1MSSQLServerSpec
     public V1beta1MSSQLServerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MSSQLServerStatusAtProviderAzureadAdministrator
 {
     /// <summary>Specifies whether only AD Users and administrators (e.g. azuread_administrator[0].login_username) can be used to login, or also local database users (e.g. administrator_login). When true, the administrator_login and administrator_login_password properties can be omitted.</summary>
@@ -1305,6 +1357,7 @@ public partial class V1beta1MSSQLServerStatusAtProviderAzureadAdministrator
     public string? TenantId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MSSQLServerStatusAtProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this SQL Server.</summary>
@@ -1324,6 +1377,7 @@ public partial class V1beta1MSSQLServerStatusAtProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MSSQLServerStatusAtProvider
 {
     /// <summary>The administrator login name for the new server. Required unless azuread_authentication_only in the azuread_administrator block is true. When omitted, Azure will generate a default username which cannot be subsequently changed. Changing this forces a new resource to be created.</summary>
@@ -1391,6 +1445,7 @@ public partial class V1beta1MSSQLServerStatusAtProvider
     public string? Version { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1MSSQLServerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1418,6 +1473,7 @@ public partial class V1beta1MSSQLServerStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>MSSQLServerStatus defines the observed state of MSSQLServer.</summary>
 public partial class V1beta1MSSQLServerStatus
 {
     /// <summary></summary>
@@ -1434,6 +1490,7 @@ public partial class V1beta1MSSQLServerStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>MSSQLServer is the Schema for the MSSQLServers API. Manages a Microsoft SQL Azure Database Server.</summary>
 public partial class V1beta1MSSQLServer : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MSSQLServerSpec>, IStatus<V1beta1MSSQLServerStatus>
 {
     public const string KubeApiVersion = "v1beta1";

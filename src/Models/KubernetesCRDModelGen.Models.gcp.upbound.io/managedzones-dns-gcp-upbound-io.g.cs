@@ -18,6 +18,7 @@ public enum V1beta1ManagedZoneSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedZoneSpecForProviderCloudLoggingConfig
 {
     /// <summary>If set, enable query logging for this ManagedZone. False by default, making logging opt-in.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1ManagedZoneSpecForProviderCloudLoggingConfig
     public bool? EnableLogging { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedZoneSpecForProviderDnssecConfigDefaultKeySpecs
 {
     /// <summary>String mnemonic specifying the DNSSEC algorithm of this key Possible values are: ecdsap256sha256, ecdsap384sha384, rsasha1, rsasha256, rsasha512.</summary>
@@ -44,6 +46,7 @@ public partial class V1beta1ManagedZoneSpecForProviderDnssecConfigDefaultKeySpec
     public string? Kind { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedZoneSpecForProviderDnssecConfig
 {
     /// <summary>Specifies parameters that will be used for generating initial DnsKeys for this ManagedZone. If you provide a spec for keySigning or zoneSigning, you must also provide one for the other. default_key_specs can only be updated when the state is off. Structure is documented below.</summary>
@@ -63,6 +66,7 @@ public partial class V1beta1ManagedZoneSpecForProviderDnssecConfig
     public string? State { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedZoneSpecForProviderForwardingConfigTargetNameServers
 {
     /// <summary>Forwarding path for this TargetNameServer. If unset or default Cloud DNS will make forwarding decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go to the Internet. When set to private, Cloud DNS will always send queries through VPC for this target Possible values are: default, private.</summary>
@@ -74,6 +78,7 @@ public partial class V1beta1ManagedZoneSpecForProviderForwardingConfigTargetName
     public string? Ipv4Address { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedZoneSpecForProviderForwardingConfig
 {
     /// <summary>List of target name servers to forward to. Cloud DNS will select the best available name server if more than one target is given. Structure is documented below.</summary>
@@ -101,6 +106,7 @@ public enum V1beta1ManagedZoneSpecForProviderPeeringConfigTargetNetworkNetworkUr
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ManagedZoneSpecForProviderPeeringConfigTargetNetworkNetworkUrlRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -114,6 +120,7 @@ public partial class V1beta1ManagedZoneSpecForProviderPeeringConfigTargetNetwork
     public V1beta1ManagedZoneSpecForProviderPeeringConfigTargetNetworkNetworkUrlRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate networkUrl.</summary>
 public partial class V1beta1ManagedZoneSpecForProviderPeeringConfigTargetNetworkNetworkUrlRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -145,6 +152,7 @@ public enum V1beta1ManagedZoneSpecForProviderPeeringConfigTargetNetworkNetworkUr
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ManagedZoneSpecForProviderPeeringConfigTargetNetworkNetworkUrlSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -158,6 +166,7 @@ public partial class V1beta1ManagedZoneSpecForProviderPeeringConfigTargetNetwork
     public V1beta1ManagedZoneSpecForProviderPeeringConfigTargetNetworkNetworkUrlSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate networkUrl.</summary>
 public partial class V1beta1ManagedZoneSpecForProviderPeeringConfigTargetNetworkNetworkUrlSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -173,6 +182,7 @@ public partial class V1beta1ManagedZoneSpecForProviderPeeringConfigTargetNetwork
     public V1beta1ManagedZoneSpecForProviderPeeringConfigTargetNetworkNetworkUrlSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedZoneSpecForProviderPeeringConfigTargetNetwork
 {
     /// <summary>The id or fully qualified URL of the VPC network to forward queries to. This should be formatted like projects/{project}/global/networks/{network} or https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}</summary>
@@ -188,6 +198,7 @@ public partial class V1beta1ManagedZoneSpecForProviderPeeringConfigTargetNetwork
     public V1beta1ManagedZoneSpecForProviderPeeringConfigTargetNetworkNetworkUrlSelector? NetworkUrlSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedZoneSpecForProviderPeeringConfig
 {
     /// <summary>The network with which to peer. Structure is documented below.</summary>
@@ -215,6 +226,7 @@ public enum V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigGkeClustersG
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigGkeClustersGkeClusterNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -228,6 +240,7 @@ public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigGke
     public V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigGkeClustersGkeClusterNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in container to populate gkeClusterName.</summary>
 public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigGkeClustersGkeClusterNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -259,6 +272,7 @@ public enum V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigGkeClustersG
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigGkeClustersGkeClusterNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -272,6 +286,7 @@ public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigGke
     public V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigGkeClustersGkeClusterNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in container to populate gkeClusterName.</summary>
 public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigGkeClustersGkeClusterNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -287,6 +302,7 @@ public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigGke
     public V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigGkeClustersGkeClusterNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigGkeClusters
 {
     /// <summary>The resource name of the cluster to bind this ManagedZone to. This should be specified in the format like projects/*/locations/*/clusters/*</summary>
@@ -322,6 +338,7 @@ public enum V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigNetworksNetw
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigNetworksNetworkUrlRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -335,6 +352,7 @@ public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigNet
     public V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigNetworksNetworkUrlRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate networkUrl.</summary>
 public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigNetworksNetworkUrlRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -366,6 +384,7 @@ public enum V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigNetworksNetw
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigNetworksNetworkUrlSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -379,6 +398,7 @@ public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigNet
     public V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigNetworksNetworkUrlSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate networkUrl.</summary>
 public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigNetworksNetworkUrlSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -394,6 +414,7 @@ public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigNet
     public V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigNetworksNetworkUrlSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigNetworks
 {
     /// <summary>The id or fully qualified URL of the VPC network to forward queries to. This should be formatted like projects/{project}/global/networks/{network} or https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}</summary>
@@ -409,6 +430,7 @@ public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigNet
     public V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigNetworksNetworkUrlSelector? NetworkUrlSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfig
 {
     /// <summary>The list of Google Kubernetes Engine clusters that can see this zone. Structure is documented below.</summary>
@@ -420,6 +442,7 @@ public partial class V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfig
     public IList<V1beta1ManagedZoneSpecForProviderPrivateVisibilityConfigNetworks>? Networks { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedZoneSpecForProvider
 {
     /// <summary>Cloud logging configuration Structure is documented below.</summary>
@@ -467,6 +490,7 @@ public partial class V1beta1ManagedZoneSpecForProvider
     public string? Visibility { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedZoneSpecInitProviderCloudLoggingConfig
 {
     /// <summary>If set, enable query logging for this ManagedZone. False by default, making logging opt-in.</summary>
@@ -474,6 +498,7 @@ public partial class V1beta1ManagedZoneSpecInitProviderCloudLoggingConfig
     public bool? EnableLogging { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedZoneSpecInitProviderDnssecConfigDefaultKeySpecs
 {
     /// <summary>String mnemonic specifying the DNSSEC algorithm of this key Possible values are: ecdsap256sha256, ecdsap384sha384, rsasha1, rsasha256, rsasha512.</summary>
@@ -493,6 +518,7 @@ public partial class V1beta1ManagedZoneSpecInitProviderDnssecConfigDefaultKeySpe
     public string? Kind { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedZoneSpecInitProviderDnssecConfig
 {
     /// <summary>Specifies parameters that will be used for generating initial DnsKeys for this ManagedZone. If you provide a spec for keySigning or zoneSigning, you must also provide one for the other. default_key_specs can only be updated when the state is off. Structure is documented below.</summary>
@@ -512,6 +538,7 @@ public partial class V1beta1ManagedZoneSpecInitProviderDnssecConfig
     public string? State { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedZoneSpecInitProviderForwardingConfigTargetNameServers
 {
     /// <summary>Forwarding path for this TargetNameServer. If unset or default Cloud DNS will make forwarding decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go to the Internet. When set to private, Cloud DNS will always send queries through VPC for this target Possible values are: default, private.</summary>
@@ -523,6 +550,7 @@ public partial class V1beta1ManagedZoneSpecInitProviderForwardingConfigTargetNam
     public string? Ipv4Address { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedZoneSpecInitProviderForwardingConfig
 {
     /// <summary>List of target name servers to forward to. Cloud DNS will select the best available name server if more than one target is given. Structure is documented below.</summary>
@@ -550,6 +578,7 @@ public enum V1beta1ManagedZoneSpecInitProviderPeeringConfigTargetNetworkNetworkU
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ManagedZoneSpecInitProviderPeeringConfigTargetNetworkNetworkUrlRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -563,6 +592,7 @@ public partial class V1beta1ManagedZoneSpecInitProviderPeeringConfigTargetNetwor
     public V1beta1ManagedZoneSpecInitProviderPeeringConfigTargetNetworkNetworkUrlRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate networkUrl.</summary>
 public partial class V1beta1ManagedZoneSpecInitProviderPeeringConfigTargetNetworkNetworkUrlRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -594,6 +624,7 @@ public enum V1beta1ManagedZoneSpecInitProviderPeeringConfigTargetNetworkNetworkU
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ManagedZoneSpecInitProviderPeeringConfigTargetNetworkNetworkUrlSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -607,6 +638,7 @@ public partial class V1beta1ManagedZoneSpecInitProviderPeeringConfigTargetNetwor
     public V1beta1ManagedZoneSpecInitProviderPeeringConfigTargetNetworkNetworkUrlSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate networkUrl.</summary>
 public partial class V1beta1ManagedZoneSpecInitProviderPeeringConfigTargetNetworkNetworkUrlSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -622,6 +654,7 @@ public partial class V1beta1ManagedZoneSpecInitProviderPeeringConfigTargetNetwor
     public V1beta1ManagedZoneSpecInitProviderPeeringConfigTargetNetworkNetworkUrlSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedZoneSpecInitProviderPeeringConfigTargetNetwork
 {
     /// <summary>The id or fully qualified URL of the VPC network to forward queries to. This should be formatted like projects/{project}/global/networks/{network} or https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}</summary>
@@ -637,6 +670,7 @@ public partial class V1beta1ManagedZoneSpecInitProviderPeeringConfigTargetNetwor
     public V1beta1ManagedZoneSpecInitProviderPeeringConfigTargetNetworkNetworkUrlSelector? NetworkUrlSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedZoneSpecInitProviderPeeringConfig
 {
     /// <summary>The network with which to peer. Structure is documented below.</summary>
@@ -664,6 +698,7 @@ public enum V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigGkeClusters
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigGkeClustersGkeClusterNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -677,6 +712,7 @@ public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigGk
     public V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigGkeClustersGkeClusterNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in container to populate gkeClusterName.</summary>
 public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigGkeClustersGkeClusterNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -708,6 +744,7 @@ public enum V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigGkeClusters
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigGkeClustersGkeClusterNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -721,6 +758,7 @@ public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigGk
     public V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigGkeClustersGkeClusterNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in container to populate gkeClusterName.</summary>
 public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigGkeClustersGkeClusterNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -736,6 +774,7 @@ public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigGk
     public V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigGkeClustersGkeClusterNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigGkeClusters
 {
     /// <summary>The resource name of the cluster to bind this ManagedZone to. This should be specified in the format like projects/*/locations/*/clusters/*</summary>
@@ -771,6 +810,7 @@ public enum V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigNetworksNet
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigNetworksNetworkUrlRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -784,6 +824,7 @@ public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigNe
     public V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigNetworksNetworkUrlRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate networkUrl.</summary>
 public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigNetworksNetworkUrlRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -815,6 +856,7 @@ public enum V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigNetworksNet
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigNetworksNetworkUrlSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -828,6 +870,7 @@ public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigNe
     public V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigNetworksNetworkUrlSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate networkUrl.</summary>
 public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigNetworksNetworkUrlSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -843,6 +886,7 @@ public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigNe
     public V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigNetworksNetworkUrlSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigNetworks
 {
     /// <summary>The id or fully qualified URL of the VPC network to forward queries to. This should be formatted like projects/{project}/global/networks/{network} or https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}</summary>
@@ -858,6 +902,7 @@ public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigNe
     public V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigNetworksNetworkUrlSelector? NetworkUrlSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfig
 {
     /// <summary>The list of Google Kubernetes Engine clusters that can see this zone. Structure is documented below.</summary>
@@ -869,6 +914,7 @@ public partial class V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfig
     public IList<V1beta1ManagedZoneSpecInitProviderPrivateVisibilityConfigNetworks>? Networks { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ManagedZoneSpecInitProvider
 {
     /// <summary>Cloud logging configuration Structure is documented below.</summary>
@@ -958,6 +1004,7 @@ public enum V1beta1ManagedZoneSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ManagedZoneSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -971,6 +1018,7 @@ public partial class V1beta1ManagedZoneSpecProviderConfigRefPolicy
     public V1beta1ManagedZoneSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ManagedZoneSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1002,6 +1050,7 @@ public enum V1beta1ManagedZoneSpecPublishConnectionDetailsToConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ManagedZoneSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1015,6 +1064,7 @@ public partial class V1beta1ManagedZoneSpecPublishConnectionDetailsToConfigRefPo
     public V1beta1ManagedZoneSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ManagedZoneSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1026,6 +1076,7 @@ public partial class V1beta1ManagedZoneSpecPublishConnectionDetailsToConfigRef
     public V1beta1ManagedZoneSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ManagedZoneSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1041,6 +1092,7 @@ public partial class V1beta1ManagedZoneSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ManagedZoneSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1056,6 +1108,7 @@ public partial class V1beta1ManagedZoneSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ManagedZoneSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1067,6 +1120,7 @@ public partial class V1beta1ManagedZoneSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ManagedZoneSpec defines the desired state of ManagedZone</summary>
 public partial class V1beta1ManagedZoneSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1099,6 +1153,7 @@ public partial class V1beta1ManagedZoneSpec
     public V1beta1ManagedZoneSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedZoneStatusAtProviderCloudLoggingConfig
 {
     /// <summary>If set, enable query logging for this ManagedZone. False by default, making logging opt-in.</summary>
@@ -1106,6 +1161,7 @@ public partial class V1beta1ManagedZoneStatusAtProviderCloudLoggingConfig
     public bool? EnableLogging { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedZoneStatusAtProviderDnssecConfigDefaultKeySpecs
 {
     /// <summary>String mnemonic specifying the DNSSEC algorithm of this key Possible values are: ecdsap256sha256, ecdsap384sha384, rsasha1, rsasha256, rsasha512.</summary>
@@ -1125,6 +1181,7 @@ public partial class V1beta1ManagedZoneStatusAtProviderDnssecConfigDefaultKeySpe
     public string? Kind { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedZoneStatusAtProviderDnssecConfig
 {
     /// <summary>Specifies parameters that will be used for generating initial DnsKeys for this ManagedZone. If you provide a spec for keySigning or zoneSigning, you must also provide one for the other. default_key_specs can only be updated when the state is off. Structure is documented below.</summary>
@@ -1144,6 +1201,7 @@ public partial class V1beta1ManagedZoneStatusAtProviderDnssecConfig
     public string? State { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedZoneStatusAtProviderForwardingConfigTargetNameServers
 {
     /// <summary>Forwarding path for this TargetNameServer. If unset or default Cloud DNS will make forwarding decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go to the Internet. When set to private, Cloud DNS will always send queries through VPC for this target Possible values are: default, private.</summary>
@@ -1155,6 +1213,7 @@ public partial class V1beta1ManagedZoneStatusAtProviderForwardingConfigTargetNam
     public string? Ipv4Address { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedZoneStatusAtProviderForwardingConfig
 {
     /// <summary>List of target name servers to forward to. Cloud DNS will select the best available name server if more than one target is given. Structure is documented below.</summary>
@@ -1162,6 +1221,7 @@ public partial class V1beta1ManagedZoneStatusAtProviderForwardingConfig
     public IList<V1beta1ManagedZoneStatusAtProviderForwardingConfigTargetNameServers>? TargetNameServers { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedZoneStatusAtProviderPeeringConfigTargetNetwork
 {
     /// <summary>The id or fully qualified URL of the VPC network to forward queries to. This should be formatted like projects/{project}/global/networks/{network} or https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}</summary>
@@ -1169,6 +1229,7 @@ public partial class V1beta1ManagedZoneStatusAtProviderPeeringConfigTargetNetwor
     public string? NetworkUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedZoneStatusAtProviderPeeringConfig
 {
     /// <summary>The network with which to peer. Structure is documented below.</summary>
@@ -1176,6 +1237,7 @@ public partial class V1beta1ManagedZoneStatusAtProviderPeeringConfig
     public IList<V1beta1ManagedZoneStatusAtProviderPeeringConfigTargetNetwork>? TargetNetwork { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedZoneStatusAtProviderPrivateVisibilityConfigGkeClusters
 {
     /// <summary>The resource name of the cluster to bind this ManagedZone to. This should be specified in the format like projects/*/locations/*/clusters/*</summary>
@@ -1183,6 +1245,7 @@ public partial class V1beta1ManagedZoneStatusAtProviderPrivateVisibilityConfigGk
     public string? GkeClusterName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedZoneStatusAtProviderPrivateVisibilityConfigNetworks
 {
     /// <summary>The id or fully qualified URL of the VPC network to forward queries to. This should be formatted like projects/{project}/global/networks/{network} or https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}</summary>
@@ -1190,6 +1253,7 @@ public partial class V1beta1ManagedZoneStatusAtProviderPrivateVisibilityConfigNe
     public string? NetworkUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedZoneStatusAtProviderPrivateVisibilityConfig
 {
     /// <summary>The list of Google Kubernetes Engine clusters that can see this zone. Structure is documented below.</summary>
@@ -1201,6 +1265,7 @@ public partial class V1beta1ManagedZoneStatusAtProviderPrivateVisibilityConfig
     public IList<V1beta1ManagedZoneStatusAtProviderPrivateVisibilityConfigNetworks>? Networks { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedZoneStatusAtProvider
 {
     /// <summary>Cloud logging configuration Structure is documented below.</summary>
@@ -1272,6 +1337,7 @@ public partial class V1beta1ManagedZoneStatusAtProvider
     public string? Visibility { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ManagedZoneStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1299,6 +1365,7 @@ public partial class V1beta1ManagedZoneStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ManagedZoneStatus defines the observed state of ManagedZone.</summary>
 public partial class V1beta1ManagedZoneStatus
 {
     /// <summary></summary>
@@ -1315,6 +1382,7 @@ public partial class V1beta1ManagedZoneStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ManagedZone is the Schema for the ManagedZones API. A zone is a subtree of the DNS namespace under one administrative responsibility.</summary>
 public partial class V1beta1ManagedZone : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ManagedZoneSpec>, IStatus<V1beta1ManagedZoneStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -38,6 +38,7 @@ public enum V1beta1EventSourceEventHubSpecForProviderConsumerGroupNameRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EventSourceEventHubSpecForProviderConsumerGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1EventSourceEventHubSpecForProviderConsumerGroupNameR
     public V1beta1EventSourceEventHubSpecForProviderConsumerGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ConsumerGroup in eventhub to populate consumerGroupName.</summary>
 public partial class V1beta1EventSourceEventHubSpecForProviderConsumerGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1EventSourceEventHubSpecForProviderConsumerGroupNameSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EventSourceEventHubSpecForProviderConsumerGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1EventSourceEventHubSpecForProviderConsumerGroupNameS
     public V1beta1EventSourceEventHubSpecForProviderConsumerGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ConsumerGroup in eventhub to populate consumerGroupName.</summary>
 public partial class V1beta1EventSourceEventHubSpecForProviderConsumerGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1EventSourceEventHubSpecForProviderEnvironmentIdRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EventSourceEventHubSpecForProviderEnvironmentIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1EventSourceEventHubSpecForProviderEnvironmentIdRefPo
     public V1beta1EventSourceEventHubSpecForProviderEnvironmentIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Gen2Environment in timeseriesinsights to populate environmentId.</summary>
 public partial class V1beta1EventSourceEventHubSpecForProviderEnvironmentIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1EventSourceEventHubSpecForProviderEnvironmentIdSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EventSourceEventHubSpecForProviderEnvironmentIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1EventSourceEventHubSpecForProviderEnvironmentIdSelec
     public V1beta1EventSourceEventHubSpecForProviderEnvironmentIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Gen2Environment in timeseriesinsights to populate environmentId.</summary>
 public partial class V1beta1EventSourceEventHubSpecForProviderEnvironmentIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1EventSourceEventHubSpecForProviderEventSourceResourceIdRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EventSourceEventHubSpecForProviderEventSourceResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1EventSourceEventHubSpecForProviderEventSourceResourc
     public V1beta1EventSourceEventHubSpecForProviderEventSourceResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a EventHub in eventhub to populate eventSourceResourceId.</summary>
 public partial class V1beta1EventSourceEventHubSpecForProviderEventSourceResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1EventSourceEventHubSpecForProviderEventSourceResourceIdSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EventSourceEventHubSpecForProviderEventSourceResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1EventSourceEventHubSpecForProviderEventSourceResourc
     public V1beta1EventSourceEventHubSpecForProviderEventSourceResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a EventHub in eventhub to populate eventSourceResourceId.</summary>
 public partial class V1beta1EventSourceEventHubSpecForProviderEventSourceResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -314,6 +326,7 @@ public enum V1beta1EventSourceEventHubSpecForProviderEventhubNameRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EventSourceEventHubSpecForProviderEventhubNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -327,6 +340,7 @@ public partial class V1beta1EventSourceEventHubSpecForProviderEventhubNameRefPol
     public V1beta1EventSourceEventHubSpecForProviderEventhubNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a EventHub in eventhub to populate eventhubName.</summary>
 public partial class V1beta1EventSourceEventHubSpecForProviderEventhubNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -358,6 +372,7 @@ public enum V1beta1EventSourceEventHubSpecForProviderEventhubNameSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EventSourceEventHubSpecForProviderEventhubNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -371,6 +386,7 @@ public partial class V1beta1EventSourceEventHubSpecForProviderEventhubNameSelect
     public V1beta1EventSourceEventHubSpecForProviderEventhubNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a EventHub in eventhub to populate eventhubName.</summary>
 public partial class V1beta1EventSourceEventHubSpecForProviderEventhubNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -406,6 +422,7 @@ public enum V1beta1EventSourceEventHubSpecForProviderNamespaceNameRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EventSourceEventHubSpecForProviderNamespaceNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -419,6 +436,7 @@ public partial class V1beta1EventSourceEventHubSpecForProviderNamespaceNameRefPo
     public V1beta1EventSourceEventHubSpecForProviderNamespaceNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a EventHubNamespace in eventhub to populate namespaceName.</summary>
 public partial class V1beta1EventSourceEventHubSpecForProviderNamespaceNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -450,6 +468,7 @@ public enum V1beta1EventSourceEventHubSpecForProviderNamespaceNameSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EventSourceEventHubSpecForProviderNamespaceNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -463,6 +482,7 @@ public partial class V1beta1EventSourceEventHubSpecForProviderNamespaceNameSelec
     public V1beta1EventSourceEventHubSpecForProviderNamespaceNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a EventHubNamespace in eventhub to populate namespaceName.</summary>
 public partial class V1beta1EventSourceEventHubSpecForProviderNamespaceNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -498,6 +518,7 @@ public enum V1beta1EventSourceEventHubSpecForProviderSharedAccessKeyNameRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EventSourceEventHubSpecForProviderSharedAccessKeyNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -511,6 +532,7 @@ public partial class V1beta1EventSourceEventHubSpecForProviderSharedAccessKeyNam
     public V1beta1EventSourceEventHubSpecForProviderSharedAccessKeyNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a AuthorizationRule in eventhub to populate sharedAccessKeyName.</summary>
 public partial class V1beta1EventSourceEventHubSpecForProviderSharedAccessKeyNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -542,6 +564,7 @@ public enum V1beta1EventSourceEventHubSpecForProviderSharedAccessKeyNameSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EventSourceEventHubSpecForProviderSharedAccessKeyNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -555,6 +578,7 @@ public partial class V1beta1EventSourceEventHubSpecForProviderSharedAccessKeyNam
     public V1beta1EventSourceEventHubSpecForProviderSharedAccessKeyNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a AuthorizationRule in eventhub to populate sharedAccessKeyName.</summary>
 public partial class V1beta1EventSourceEventHubSpecForProviderSharedAccessKeyNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -570,6 +594,7 @@ public partial class V1beta1EventSourceEventHubSpecForProviderSharedAccessKeyNam
     public V1beta1EventSourceEventHubSpecForProviderSharedAccessKeyNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Specifies the value of the Shared Access Policy key that grants the Time Series Insights service read access to the EventHub.</summary>
 public partial class V1beta1EventSourceEventHubSpecForProviderSharedAccessKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -585,6 +610,7 @@ public partial class V1beta1EventSourceEventHubSpecForProviderSharedAccessKeySec
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EventSourceEventHubSpecForProvider
 {
     /// <summary>Specifies the name of the EventHub Consumer Group that holds the partitions from which events will be read.</summary>
@@ -696,6 +722,7 @@ public enum V1beta1EventSourceEventHubSpecInitProviderConsumerGroupNameRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EventSourceEventHubSpecInitProviderConsumerGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -709,6 +736,7 @@ public partial class V1beta1EventSourceEventHubSpecInitProviderConsumerGroupName
     public V1beta1EventSourceEventHubSpecInitProviderConsumerGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ConsumerGroup in eventhub to populate consumerGroupName.</summary>
 public partial class V1beta1EventSourceEventHubSpecInitProviderConsumerGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -740,6 +768,7 @@ public enum V1beta1EventSourceEventHubSpecInitProviderConsumerGroupNameSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EventSourceEventHubSpecInitProviderConsumerGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -753,6 +782,7 @@ public partial class V1beta1EventSourceEventHubSpecInitProviderConsumerGroupName
     public V1beta1EventSourceEventHubSpecInitProviderConsumerGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ConsumerGroup in eventhub to populate consumerGroupName.</summary>
 public partial class V1beta1EventSourceEventHubSpecInitProviderConsumerGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -788,6 +818,7 @@ public enum V1beta1EventSourceEventHubSpecInitProviderEventSourceResourceIdRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EventSourceEventHubSpecInitProviderEventSourceResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -801,6 +832,7 @@ public partial class V1beta1EventSourceEventHubSpecInitProviderEventSourceResour
     public V1beta1EventSourceEventHubSpecInitProviderEventSourceResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a EventHub in eventhub to populate eventSourceResourceId.</summary>
 public partial class V1beta1EventSourceEventHubSpecInitProviderEventSourceResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -832,6 +864,7 @@ public enum V1beta1EventSourceEventHubSpecInitProviderEventSourceResourceIdSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EventSourceEventHubSpecInitProviderEventSourceResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -845,6 +878,7 @@ public partial class V1beta1EventSourceEventHubSpecInitProviderEventSourceResour
     public V1beta1EventSourceEventHubSpecInitProviderEventSourceResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a EventHub in eventhub to populate eventSourceResourceId.</summary>
 public partial class V1beta1EventSourceEventHubSpecInitProviderEventSourceResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -880,6 +914,7 @@ public enum V1beta1EventSourceEventHubSpecInitProviderEventhubNameRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EventSourceEventHubSpecInitProviderEventhubNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -893,6 +928,7 @@ public partial class V1beta1EventSourceEventHubSpecInitProviderEventhubNameRefPo
     public V1beta1EventSourceEventHubSpecInitProviderEventhubNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a EventHub in eventhub to populate eventhubName.</summary>
 public partial class V1beta1EventSourceEventHubSpecInitProviderEventhubNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -924,6 +960,7 @@ public enum V1beta1EventSourceEventHubSpecInitProviderEventhubNameSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EventSourceEventHubSpecInitProviderEventhubNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -937,6 +974,7 @@ public partial class V1beta1EventSourceEventHubSpecInitProviderEventhubNameSelec
     public V1beta1EventSourceEventHubSpecInitProviderEventhubNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a EventHub in eventhub to populate eventhubName.</summary>
 public partial class V1beta1EventSourceEventHubSpecInitProviderEventhubNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -972,6 +1010,7 @@ public enum V1beta1EventSourceEventHubSpecInitProviderNamespaceNameRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EventSourceEventHubSpecInitProviderNamespaceNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -985,6 +1024,7 @@ public partial class V1beta1EventSourceEventHubSpecInitProviderNamespaceNameRefP
     public V1beta1EventSourceEventHubSpecInitProviderNamespaceNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a EventHubNamespace in eventhub to populate namespaceName.</summary>
 public partial class V1beta1EventSourceEventHubSpecInitProviderNamespaceNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1016,6 +1056,7 @@ public enum V1beta1EventSourceEventHubSpecInitProviderNamespaceNameSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EventSourceEventHubSpecInitProviderNamespaceNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1029,6 +1070,7 @@ public partial class V1beta1EventSourceEventHubSpecInitProviderNamespaceNameSele
     public V1beta1EventSourceEventHubSpecInitProviderNamespaceNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a EventHubNamespace in eventhub to populate namespaceName.</summary>
 public partial class V1beta1EventSourceEventHubSpecInitProviderNamespaceNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1064,6 +1106,7 @@ public enum V1beta1EventSourceEventHubSpecInitProviderSharedAccessKeyNameRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EventSourceEventHubSpecInitProviderSharedAccessKeyNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1077,6 +1120,7 @@ public partial class V1beta1EventSourceEventHubSpecInitProviderSharedAccessKeyNa
     public V1beta1EventSourceEventHubSpecInitProviderSharedAccessKeyNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a AuthorizationRule in eventhub to populate sharedAccessKeyName.</summary>
 public partial class V1beta1EventSourceEventHubSpecInitProviderSharedAccessKeyNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1108,6 +1152,7 @@ public enum V1beta1EventSourceEventHubSpecInitProviderSharedAccessKeyNameSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EventSourceEventHubSpecInitProviderSharedAccessKeyNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1121,6 +1166,7 @@ public partial class V1beta1EventSourceEventHubSpecInitProviderSharedAccessKeyNa
     public V1beta1EventSourceEventHubSpecInitProviderSharedAccessKeyNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a AuthorizationRule in eventhub to populate sharedAccessKeyName.</summary>
 public partial class V1beta1EventSourceEventHubSpecInitProviderSharedAccessKeyNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1136,6 +1182,7 @@ public partial class V1beta1EventSourceEventHubSpecInitProviderSharedAccessKeyNa
     public V1beta1EventSourceEventHubSpecInitProviderSharedAccessKeyNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Specifies the value of the Shared Access Policy key that grants the Time Series Insights service read access to the EventHub.</summary>
 public partial class V1beta1EventSourceEventHubSpecInitProviderSharedAccessKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1151,6 +1198,7 @@ public partial class V1beta1EventSourceEventHubSpecInitProviderSharedAccessKeySe
     public string Namespace { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1EventSourceEventHubSpecInitProvider
 {
     /// <summary>Specifies the name of the EventHub Consumer Group that holds the partitions from which events will be read.</summary>
@@ -1272,6 +1320,7 @@ public enum V1beta1EventSourceEventHubSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EventSourceEventHubSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1285,6 +1334,7 @@ public partial class V1beta1EventSourceEventHubSpecProviderConfigRefPolicy
     public V1beta1EventSourceEventHubSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1EventSourceEventHubSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1316,6 +1366,7 @@ public enum V1beta1EventSourceEventHubSpecPublishConnectionDetailsToConfigRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EventSourceEventHubSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1329,6 +1380,7 @@ public partial class V1beta1EventSourceEventHubSpecPublishConnectionDetailsToCon
     public V1beta1EventSourceEventHubSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1EventSourceEventHubSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1340,6 +1392,7 @@ public partial class V1beta1EventSourceEventHubSpecPublishConnectionDetailsToCon
     public V1beta1EventSourceEventHubSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1EventSourceEventHubSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1355,6 +1408,7 @@ public partial class V1beta1EventSourceEventHubSpecPublishConnectionDetailsToMet
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1EventSourceEventHubSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1370,6 +1424,7 @@ public partial class V1beta1EventSourceEventHubSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1EventSourceEventHubSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1381,6 +1436,7 @@ public partial class V1beta1EventSourceEventHubSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>EventSourceEventHubSpec defines the desired state of EventSourceEventHub</summary>
 public partial class V1beta1EventSourceEventHubSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1413,6 +1469,7 @@ public partial class V1beta1EventSourceEventHubSpec
     public V1beta1EventSourceEventHubSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EventSourceEventHubStatusAtProvider
 {
     /// <summary>Specifies the name of the EventHub Consumer Group that holds the partitions from which events will be read.</summary>
@@ -1456,6 +1513,7 @@ public partial class V1beta1EventSourceEventHubStatusAtProvider
     public string? TimestampPropertyName { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1EventSourceEventHubStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1483,6 +1541,7 @@ public partial class V1beta1EventSourceEventHubStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>EventSourceEventHubStatus defines the observed state of EventSourceEventHub.</summary>
 public partial class V1beta1EventSourceEventHubStatus
 {
     /// <summary></summary>
@@ -1499,6 +1558,7 @@ public partial class V1beta1EventSourceEventHubStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>EventSourceEventHub is the Schema for the EventSourceEventHubs API. Manages an Azure IoT Time Series Insights EventHub Event Source.</summary>
 public partial class V1beta1EventSourceEventHub : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1EventSourceEventHubSpec>, IStatus<V1beta1EventSourceEventHubStatus>
 {
     public const string KubeApiVersion = "v1beta1";

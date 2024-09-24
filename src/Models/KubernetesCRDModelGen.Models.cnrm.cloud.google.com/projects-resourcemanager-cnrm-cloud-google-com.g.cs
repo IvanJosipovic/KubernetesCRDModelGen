@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.resourcemanager.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1ProjectSpecBillingAccountRef
 {
     /// <summary>Allowed value: The `name` field of a `BillingAccount` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1ProjectSpecBillingAccountRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The folder that this resource belongs to. Changing this forces the resource to be migrated to the newly specified folder. Only one of folderRef or organizationRef may be specified.</summary>
 public partial class V1beta1ProjectSpecFolderRef
 {
     /// <summary>Allowed value: The `folderId` field of a `Folder` resource.</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1ProjectSpecFolderRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The organization that this resource belongs to. Changing this forces the resource to be migrated to the newly specified organization. Only one of folderRef or organizationRef may be specified.</summary>
 public partial class V1beta1ProjectSpecOrganizationRef
 {
     /// <summary>Allowed value: The `name` field of an `Organization` resource.</summary>
@@ -53,6 +56,7 @@ public partial class V1beta1ProjectSpecOrganizationRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ProjectSpec
 {
     /// <summary></summary>
@@ -76,6 +80,7 @@ public partial class V1beta1ProjectSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ProjectStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -99,6 +104,7 @@ public partial class V1beta1ProjectStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ProjectStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -115,6 +121,7 @@ public partial class V1beta1ProjectStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1Project : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ProjectSpec>, IStatus<V1beta1ProjectStatus>
 {
     public const string KubeApiVersion = "v1beta1";

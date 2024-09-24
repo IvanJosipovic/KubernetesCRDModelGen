@@ -18,6 +18,7 @@ public enum V1beta1GlobalVMShutdownScheduleSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1GlobalVMShutdownScheduleSpecForProviderNotificationSettings
 {
     /// <summary>E-mail address to which the notification will be sent.</summary>
@@ -57,6 +58,7 @@ public enum V1beta1GlobalVMShutdownScheduleSpecForProviderVirtualMachineIdRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GlobalVMShutdownScheduleSpecForProviderVirtualMachineIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -70,6 +72,7 @@ public partial class V1beta1GlobalVMShutdownScheduleSpecForProviderVirtualMachin
     public V1beta1GlobalVMShutdownScheduleSpecForProviderVirtualMachineIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LinuxVirtualMachine in compute to populate virtualMachineId.</summary>
 public partial class V1beta1GlobalVMShutdownScheduleSpecForProviderVirtualMachineIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -101,6 +104,7 @@ public enum V1beta1GlobalVMShutdownScheduleSpecForProviderVirtualMachineIdSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GlobalVMShutdownScheduleSpecForProviderVirtualMachineIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -114,6 +118,7 @@ public partial class V1beta1GlobalVMShutdownScheduleSpecForProviderVirtualMachin
     public V1beta1GlobalVMShutdownScheduleSpecForProviderVirtualMachineIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LinuxVirtualMachine in compute to populate virtualMachineId.</summary>
 public partial class V1beta1GlobalVMShutdownScheduleSpecForProviderVirtualMachineIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -129,6 +134,7 @@ public partial class V1beta1GlobalVMShutdownScheduleSpecForProviderVirtualMachin
     public V1beta1GlobalVMShutdownScheduleSpecForProviderVirtualMachineIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GlobalVMShutdownScheduleSpecForProvider
 {
     /// <summary>The time each day when the schedule takes effect. Must match the format HHmm where HH is 00-23 and mm is 00-59 (e.g. 0930, 2300, etc.)</summary>
@@ -168,6 +174,7 @@ public partial class V1beta1GlobalVMShutdownScheduleSpecForProvider
     public V1beta1GlobalVMShutdownScheduleSpecForProviderVirtualMachineIdSelector? VirtualMachineIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GlobalVMShutdownScheduleSpecInitProviderNotificationSettings
 {
     /// <summary>E-mail address to which the notification will be sent.</summary>
@@ -207,6 +214,7 @@ public enum V1beta1GlobalVMShutdownScheduleSpecInitProviderVirtualMachineIdRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GlobalVMShutdownScheduleSpecInitProviderVirtualMachineIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -220,6 +228,7 @@ public partial class V1beta1GlobalVMShutdownScheduleSpecInitProviderVirtualMachi
     public V1beta1GlobalVMShutdownScheduleSpecInitProviderVirtualMachineIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LinuxVirtualMachine in compute to populate virtualMachineId.</summary>
 public partial class V1beta1GlobalVMShutdownScheduleSpecInitProviderVirtualMachineIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -251,6 +260,7 @@ public enum V1beta1GlobalVMShutdownScheduleSpecInitProviderVirtualMachineIdSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GlobalVMShutdownScheduleSpecInitProviderVirtualMachineIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -264,6 +274,7 @@ public partial class V1beta1GlobalVMShutdownScheduleSpecInitProviderVirtualMachi
     public V1beta1GlobalVMShutdownScheduleSpecInitProviderVirtualMachineIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LinuxVirtualMachine in compute to populate virtualMachineId.</summary>
 public partial class V1beta1GlobalVMShutdownScheduleSpecInitProviderVirtualMachineIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1GlobalVMShutdownScheduleSpecInitProviderVirtualMachi
     public V1beta1GlobalVMShutdownScheduleSpecInitProviderVirtualMachineIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1GlobalVMShutdownScheduleSpecInitProvider
 {
     /// <summary>The time each day when the schedule takes effect. Must match the format HHmm where HH is 00-23 and mm is 00-59 (e.g. 0930, 2300, etc.)</summary>
@@ -360,6 +372,7 @@ public enum V1beta1GlobalVMShutdownScheduleSpecProviderConfigRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GlobalVMShutdownScheduleSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -373,6 +386,7 @@ public partial class V1beta1GlobalVMShutdownScheduleSpecProviderConfigRefPolicy
     public V1beta1GlobalVMShutdownScheduleSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1GlobalVMShutdownScheduleSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -404,6 +418,7 @@ public enum V1beta1GlobalVMShutdownScheduleSpecPublishConnectionDetailsToConfigR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GlobalVMShutdownScheduleSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -417,6 +432,7 @@ public partial class V1beta1GlobalVMShutdownScheduleSpecPublishConnectionDetails
     public V1beta1GlobalVMShutdownScheduleSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1GlobalVMShutdownScheduleSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -428,6 +444,7 @@ public partial class V1beta1GlobalVMShutdownScheduleSpecPublishConnectionDetails
     public V1beta1GlobalVMShutdownScheduleSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1GlobalVMShutdownScheduleSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -443,6 +460,7 @@ public partial class V1beta1GlobalVMShutdownScheduleSpecPublishConnectionDetails
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1GlobalVMShutdownScheduleSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -458,6 +476,7 @@ public partial class V1beta1GlobalVMShutdownScheduleSpecPublishConnectionDetails
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1GlobalVMShutdownScheduleSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -469,6 +488,7 @@ public partial class V1beta1GlobalVMShutdownScheduleSpecWriteConnectionSecretToR
     public string Namespace { get; set; }
 }
 
+/// <summary>GlobalVMShutdownScheduleSpec defines the desired state of GlobalVMShutdownSchedule</summary>
 public partial class V1beta1GlobalVMShutdownScheduleSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -501,6 +521,7 @@ public partial class V1beta1GlobalVMShutdownScheduleSpec
     public V1beta1GlobalVMShutdownScheduleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GlobalVMShutdownScheduleStatusAtProviderNotificationSettings
 {
     /// <summary>E-mail address to which the notification will be sent.</summary>
@@ -520,6 +541,7 @@ public partial class V1beta1GlobalVMShutdownScheduleStatusAtProviderNotification
     public string? WebhookUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GlobalVMShutdownScheduleStatusAtProvider
 {
     /// <summary>The time each day when the schedule takes effect. Must match the format HHmm where HH is 00-23 and mm is 00-59 (e.g. 0930, 2300, etc.)</summary>
@@ -555,6 +577,7 @@ public partial class V1beta1GlobalVMShutdownScheduleStatusAtProvider
     public string? VirtualMachineId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1GlobalVMShutdownScheduleStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -582,6 +605,7 @@ public partial class V1beta1GlobalVMShutdownScheduleStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>GlobalVMShutdownScheduleStatus defines the observed state of GlobalVMShutdownSchedule.</summary>
 public partial class V1beta1GlobalVMShutdownScheduleStatus
 {
     /// <summary></summary>
@@ -598,6 +622,7 @@ public partial class V1beta1GlobalVMShutdownScheduleStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>GlobalVMShutdownSchedule is the Schema for the GlobalVMShutdownSchedules API. Manages automated shutdown schedules for Azure Resource Manager VMs outside of Dev Test Labs.</summary>
 public partial class V1beta1GlobalVMShutdownSchedule : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1GlobalVMShutdownScheduleSpec>, IStatus<V1beta1GlobalVMShutdownScheduleStatus>
 {
     public const string KubeApiVersion = "v1beta1";

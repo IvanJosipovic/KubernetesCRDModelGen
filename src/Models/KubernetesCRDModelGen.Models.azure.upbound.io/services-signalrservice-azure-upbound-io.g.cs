@@ -18,6 +18,7 @@ public enum V1beta1ServiceSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderCors
 {
     /// <summary>A list of origins which should be able to make cross-origin calls. * can be used to allow all calls.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1ServiceSpecForProviderCors
     public IList<string>? AllowedOrigins { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this signalR.</summary>
@@ -36,6 +38,7 @@ public partial class V1beta1ServiceSpecForProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderLiveTrace
 {
     /// <summary>Whether the log category ConnectivityLogs is enabled? Defaults to true</summary>
@@ -75,6 +78,7 @@ public enum V1beta1ServiceSpecForProviderResourceGroupNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -88,6 +92,7 @@ public partial class V1beta1ServiceSpecForProviderResourceGroupNameRefPolicy
     public V1beta1ServiceSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1ServiceSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -119,6 +124,7 @@ public enum V1beta1ServiceSpecForProviderResourceGroupNameSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServiceSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -132,6 +138,7 @@ public partial class V1beta1ServiceSpecForProviderResourceGroupNameSelectorPolic
     public V1beta1ServiceSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1ServiceSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -147,6 +154,7 @@ public partial class V1beta1ServiceSpecForProviderResourceGroupNameSelector
     public V1beta1ServiceSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderSku
 {
     /// <summary>Specifies the number of units associated with this SignalR service. Valid values are 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 30, 40, 50, 60, 70, 80, 90 and 100.</summary>
@@ -158,6 +166,7 @@ public partial class V1beta1ServiceSpecForProviderSku
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderUpstreamEndpoint
 {
     /// <summary>The categories to match on, or * for all.</summary>
@@ -181,6 +190,7 @@ public partial class V1beta1ServiceSpecForProviderUpstreamEndpoint
     public string? UserAssignedIdentityId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProvider
 {
     /// <summary>Whether to enable AAD auth? Defaults to true.</summary>
@@ -264,6 +274,7 @@ public partial class V1beta1ServiceSpecForProvider
     public IList<V1beta1ServiceSpecForProviderUpstreamEndpoint>? UpstreamEndpoint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderCors
 {
     /// <summary>A list of origins which should be able to make cross-origin calls. * can be used to allow all calls.</summary>
@@ -271,6 +282,7 @@ public partial class V1beta1ServiceSpecInitProviderCors
     public IList<string>? AllowedOrigins { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this signalR.</summary>
@@ -282,6 +294,7 @@ public partial class V1beta1ServiceSpecInitProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderLiveTrace
 {
     /// <summary>Whether the log category ConnectivityLogs is enabled? Defaults to true</summary>
@@ -301,6 +314,7 @@ public partial class V1beta1ServiceSpecInitProviderLiveTrace
     public bool? MessagingLogsEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderSku
 {
     /// <summary>Specifies the number of units associated with this SignalR service. Valid values are 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 30, 40, 50, 60, 70, 80, 90 and 100.</summary>
@@ -312,6 +326,7 @@ public partial class V1beta1ServiceSpecInitProviderSku
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderUpstreamEndpoint
 {
     /// <summary>The categories to match on, or * for all.</summary>
@@ -335,6 +350,7 @@ public partial class V1beta1ServiceSpecInitProviderUpstreamEndpoint
     public string? UserAssignedIdentityId { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ServiceSpecInitProvider
 {
     /// <summary>Whether to enable AAD auth? Defaults to true.</summary>
@@ -448,6 +464,7 @@ public enum V1beta1ServiceSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -461,6 +478,7 @@ public partial class V1beta1ServiceSpecProviderConfigRefPolicy
     public V1beta1ServiceSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ServiceSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -492,6 +510,7 @@ public enum V1beta1ServiceSpecPublishConnectionDetailsToConfigRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -505,6 +524,7 @@ public partial class V1beta1ServiceSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1ServiceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ServiceSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -516,6 +536,7 @@ public partial class V1beta1ServiceSpecPublishConnectionDetailsToConfigRef
     public V1beta1ServiceSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ServiceSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -531,6 +552,7 @@ public partial class V1beta1ServiceSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ServiceSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -546,6 +568,7 @@ public partial class V1beta1ServiceSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ServiceSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -557,6 +580,7 @@ public partial class V1beta1ServiceSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ServiceSpec defines the desired state of Service</summary>
 public partial class V1beta1ServiceSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -589,6 +613,7 @@ public partial class V1beta1ServiceSpec
     public V1beta1ServiceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderCors
 {
     /// <summary>A list of origins which should be able to make cross-origin calls. * can be used to allow all calls.</summary>
@@ -596,6 +621,7 @@ public partial class V1beta1ServiceStatusAtProviderCors
     public IList<string>? AllowedOrigins { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this signalR.</summary>
@@ -615,6 +641,7 @@ public partial class V1beta1ServiceStatusAtProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderLiveTrace
 {
     /// <summary>Whether the log category ConnectivityLogs is enabled? Defaults to true</summary>
@@ -634,6 +661,7 @@ public partial class V1beta1ServiceStatusAtProviderLiveTrace
     public bool? MessagingLogsEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderSku
 {
     /// <summary>Specifies the number of units associated with this SignalR service. Valid values are 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 30, 40, 50, 60, 70, 80, 90 and 100.</summary>
@@ -645,6 +673,7 @@ public partial class V1beta1ServiceStatusAtProviderSku
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderUpstreamEndpoint
 {
     /// <summary>The categories to match on, or * for all.</summary>
@@ -668,6 +697,7 @@ public partial class V1beta1ServiceStatusAtProviderUpstreamEndpoint
     public string? UserAssignedIdentityId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProvider
 {
     /// <summary>Whether to enable AAD auth? Defaults to true.</summary>
@@ -763,6 +793,7 @@ public partial class V1beta1ServiceStatusAtProvider
     public IList<V1beta1ServiceStatusAtProviderUpstreamEndpoint>? UpstreamEndpoint { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ServiceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -790,6 +821,7 @@ public partial class V1beta1ServiceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ServiceStatus defines the observed state of Service.</summary>
 public partial class V1beta1ServiceStatus
 {
     /// <summary></summary>
@@ -806,6 +838,7 @@ public partial class V1beta1ServiceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Service is the Schema for the Services API. Manages an Azure SignalR service.</summary>
 public partial class V1beta1Service : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ServiceSpec>, IStatus<V1beta1ServiceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

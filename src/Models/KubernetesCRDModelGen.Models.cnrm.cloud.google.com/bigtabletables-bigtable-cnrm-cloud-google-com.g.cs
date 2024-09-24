@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigtable.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1BigtableTableSpecColumnFamily
 {
     /// <summary>The name of the column family.</summary>
@@ -15,6 +16,7 @@ public partial class V1beta1BigtableTableSpecColumnFamily
     public string Family { get; set; }
 }
 
+/// <summary>The name of the Bigtable instance.</summary>
 public partial class V1beta1BigtableTableSpecInstanceRef
 {
     /// <summary>Allowed value: The `name` field of a `BigtableInstance` resource.</summary>
@@ -30,6 +32,7 @@ public partial class V1beta1BigtableTableSpecInstanceRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BigtableTableSpec
 {
     /// <summary>Duration to retain change stream data for the table. Set to 0 to disable. Must be between 1 and 7 days.</summary>
@@ -57,6 +60,7 @@ public partial class V1beta1BigtableTableSpec
     public IList<string>? SplitKeys { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BigtableTableStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -80,6 +84,7 @@ public partial class V1beta1BigtableTableStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BigtableTableStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -92,6 +97,7 @@ public partial class V1beta1BigtableTableStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1BigtableTable : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BigtableTableSpec>, IStatus<V1beta1BigtableTableStatus>
 {
     public const string KubeApiVersion = "v1beta1";

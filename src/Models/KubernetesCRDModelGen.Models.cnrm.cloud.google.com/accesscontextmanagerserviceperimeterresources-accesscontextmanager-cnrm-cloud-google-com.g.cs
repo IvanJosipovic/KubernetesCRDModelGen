@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.accesscontextmanager.cnrm.cloud.google.com;
+/// <summary>Only the `external` field is supported to configure the reference.  The name of the Service Perimeter to add this resource to.  Referencing a resource name leads to recursive reference and Config Connector does not support the feature for now.</summary>
 public partial class V1alpha1AccessContextManagerServicePerimeterResourceSpecPerimeterNameRef
 {
     /// <summary>Allowed value: The `name` field of an `AccessContextManagerServicePerimeter` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1AccessContextManagerServicePerimeterResourceSpecPer
     public string? Namespace { get; set; }
 }
 
+/// <summary>A GCP resource that is inside of the service perimeter.</summary>
 public partial class V1alpha1AccessContextManagerServicePerimeterResourceSpecResourceRef
 {
     /// <summary>Allowed value: string of the format `projects/{{value}}`, where {{value}} is the `number` field of a `Project` resource.</summary>
@@ -38,6 +40,7 @@ public partial class V1alpha1AccessContextManagerServicePerimeterResourceSpecRes
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AccessContextManagerServicePerimeterResourceSpec
 {
     /// <summary>Only the `external` field is supported to configure the reference.  The name of the Service Perimeter to add this resource to.  Referencing a resource name leads to recursive reference and Config Connector does not support the feature for now.</summary>
@@ -49,6 +52,7 @@ public partial class V1alpha1AccessContextManagerServicePerimeterResourceSpec
     public V1alpha1AccessContextManagerServicePerimeterResourceSpecResourceRef ResourceRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AccessContextManagerServicePerimeterResourceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -72,6 +76,7 @@ public partial class V1alpha1AccessContextManagerServicePerimeterResourceStatusC
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AccessContextManagerServicePerimeterResourceStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -84,6 +89,7 @@ public partial class V1alpha1AccessContextManagerServicePerimeterResourceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1AccessContextManagerServicePerimeterResource : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1AccessContextManagerServicePerimeterResourceSpec>, IStatus<V1alpha1AccessContextManagerServicePerimeterResourceStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appengine.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1alpha1AppEngineFirewallRuleSpec
 {
     /// <summary>The action to take if this rule matches. Possible values: ["UNSPECIFIED_ACTION", "ALLOW", "DENY"].</summary>
@@ -31,6 +32,7 @@ public partial class V1alpha1AppEngineFirewallRuleSpec
     public string SourceRange { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AppEngineFirewallRuleStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -54,6 +56,7 @@ public partial class V1alpha1AppEngineFirewallRuleStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AppEngineFirewallRuleStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -66,6 +69,7 @@ public partial class V1alpha1AppEngineFirewallRuleStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1AppEngineFirewallRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1AppEngineFirewallRuleSpec>, IStatus<V1alpha1AppEngineFirewallRuleStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

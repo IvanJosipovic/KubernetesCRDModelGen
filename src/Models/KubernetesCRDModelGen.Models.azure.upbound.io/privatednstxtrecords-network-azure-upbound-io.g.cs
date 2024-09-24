@@ -18,6 +18,7 @@ public enum V1beta1PrivateDNSTXTRecordSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateDNSTXTRecordSpecForProviderRecord
 {
     /// <summary>The value of the TXT record. Max length: 1024 characters</summary>
@@ -45,6 +46,7 @@ public enum V1beta1PrivateDNSTXTRecordSpecForProviderResourceGroupNameRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PrivateDNSTXTRecordSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -58,6 +60,7 @@ public partial class V1beta1PrivateDNSTXTRecordSpecForProviderResourceGroupNameR
     public V1beta1PrivateDNSTXTRecordSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1PrivateDNSTXTRecordSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -89,6 +92,7 @@ public enum V1beta1PrivateDNSTXTRecordSpecForProviderResourceGroupNameSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PrivateDNSTXTRecordSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -102,6 +106,7 @@ public partial class V1beta1PrivateDNSTXTRecordSpecForProviderResourceGroupNameS
     public V1beta1PrivateDNSTXTRecordSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1PrivateDNSTXTRecordSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -137,6 +142,7 @@ public enum V1beta1PrivateDNSTXTRecordSpecForProviderZoneNameRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PrivateDNSTXTRecordSpecForProviderZoneNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -150,6 +156,7 @@ public partial class V1beta1PrivateDNSTXTRecordSpecForProviderZoneNameRefPolicy
     public V1beta1PrivateDNSTXTRecordSpecForProviderZoneNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a PrivateDNSZone in network to populate zoneName.</summary>
 public partial class V1beta1PrivateDNSTXTRecordSpecForProviderZoneNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -181,6 +188,7 @@ public enum V1beta1PrivateDNSTXTRecordSpecForProviderZoneNameSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PrivateDNSTXTRecordSpecForProviderZoneNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -194,6 +202,7 @@ public partial class V1beta1PrivateDNSTXTRecordSpecForProviderZoneNameSelectorPo
     public V1beta1PrivateDNSTXTRecordSpecForProviderZoneNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a PrivateDNSZone in network to populate zoneName.</summary>
 public partial class V1beta1PrivateDNSTXTRecordSpecForProviderZoneNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -209,6 +218,7 @@ public partial class V1beta1PrivateDNSTXTRecordSpecForProviderZoneNameSelector
     public V1beta1PrivateDNSTXTRecordSpecForProviderZoneNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateDNSTXTRecordSpecForProvider
 {
     /// <summary>One or more record blocks as defined below.</summary>
@@ -248,6 +258,7 @@ public partial class V1beta1PrivateDNSTXTRecordSpecForProvider
     public V1beta1PrivateDNSTXTRecordSpecForProviderZoneNameSelector? ZoneNameSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateDNSTXTRecordSpecInitProviderRecord
 {
     /// <summary>The value of the TXT record. Max length: 1024 characters</summary>
@@ -255,6 +266,7 @@ public partial class V1beta1PrivateDNSTXTRecordSpecInitProviderRecord
     public string? Value { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1PrivateDNSTXTRecordSpecInitProvider
 {
     /// <summary>One or more record blocks as defined below.</summary>
@@ -312,6 +324,7 @@ public enum V1beta1PrivateDNSTXTRecordSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PrivateDNSTXTRecordSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -325,6 +338,7 @@ public partial class V1beta1PrivateDNSTXTRecordSpecProviderConfigRefPolicy
     public V1beta1PrivateDNSTXTRecordSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1PrivateDNSTXTRecordSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -356,6 +370,7 @@ public enum V1beta1PrivateDNSTXTRecordSpecPublishConnectionDetailsToConfigRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PrivateDNSTXTRecordSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -369,6 +384,7 @@ public partial class V1beta1PrivateDNSTXTRecordSpecPublishConnectionDetailsToCon
     public V1beta1PrivateDNSTXTRecordSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1PrivateDNSTXTRecordSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -380,6 +396,7 @@ public partial class V1beta1PrivateDNSTXTRecordSpecPublishConnectionDetailsToCon
     public V1beta1PrivateDNSTXTRecordSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1PrivateDNSTXTRecordSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -395,6 +412,7 @@ public partial class V1beta1PrivateDNSTXTRecordSpecPublishConnectionDetailsToMet
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1PrivateDNSTXTRecordSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -410,6 +428,7 @@ public partial class V1beta1PrivateDNSTXTRecordSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1PrivateDNSTXTRecordSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -421,6 +440,7 @@ public partial class V1beta1PrivateDNSTXTRecordSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>PrivateDNSTXTRecordSpec defines the desired state of PrivateDNSTXTRecord</summary>
 public partial class V1beta1PrivateDNSTXTRecordSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -453,6 +473,7 @@ public partial class V1beta1PrivateDNSTXTRecordSpec
     public V1beta1PrivateDNSTXTRecordSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateDNSTXTRecordStatusAtProviderRecord
 {
     /// <summary>The value of the TXT record. Max length: 1024 characters</summary>
@@ -460,6 +481,7 @@ public partial class V1beta1PrivateDNSTXTRecordStatusAtProviderRecord
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateDNSTXTRecordStatusAtProvider
 {
     /// <summary>The FQDN of the DNS TXT Record.</summary>
@@ -491,6 +513,7 @@ public partial class V1beta1PrivateDNSTXTRecordStatusAtProvider
     public string? ZoneName { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1PrivateDNSTXTRecordStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -518,6 +541,7 @@ public partial class V1beta1PrivateDNSTXTRecordStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>PrivateDNSTXTRecordStatus defines the observed state of PrivateDNSTXTRecord.</summary>
 public partial class V1beta1PrivateDNSTXTRecordStatus
 {
     /// <summary></summary>
@@ -534,6 +558,7 @@ public partial class V1beta1PrivateDNSTXTRecordStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>PrivateDNSTXTRecord is the Schema for the PrivateDNSTXTRecords API. Manages a Private DNS TXT Record.</summary>
 public partial class V1beta1PrivateDNSTXTRecord : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1PrivateDNSTXTRecordSpec>, IStatus<V1beta1PrivateDNSTXTRecordStatus>
 {
     public const string KubeApiVersion = "v1beta1";

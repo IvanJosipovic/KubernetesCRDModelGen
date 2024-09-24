@@ -38,6 +38,7 @@ public enum V1beta1InstanceSpecForProviderAuthorizedNetworkRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecForProviderAuthorizedNetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1InstanceSpecForProviderAuthorizedNetworkRefPolicy
     public V1beta1InstanceSpecForProviderAuthorizedNetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate authorizedNetwork.</summary>
 public partial class V1beta1InstanceSpecForProviderAuthorizedNetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1InstanceSpecForProviderAuthorizedNetworkSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecForProviderAuthorizedNetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1InstanceSpecForProviderAuthorizedNetworkSelectorPoli
     public V1beta1InstanceSpecForProviderAuthorizedNetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate authorizedNetwork.</summary>
 public partial class V1beta1InstanceSpecForProviderAuthorizedNetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1InstanceSpecForProviderCustomerManagedKeyRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecForProviderCustomerManagedKeyRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1InstanceSpecForProviderCustomerManagedKeyRefPolicy
     public V1beta1InstanceSpecForProviderCustomerManagedKeyRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a CryptoKey in kms to populate customerManagedKey.</summary>
 public partial class V1beta1InstanceSpecForProviderCustomerManagedKeyRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1InstanceSpecForProviderCustomerManagedKeySelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecForProviderCustomerManagedKeySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1InstanceSpecForProviderCustomerManagedKeySelectorPol
     public V1beta1InstanceSpecForProviderCustomerManagedKeySelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a CryptoKey in kms to populate customerManagedKey.</summary>
 public partial class V1beta1InstanceSpecForProviderCustomerManagedKeySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1InstanceSpecForProviderCustomerManagedKeySelector
     public V1beta1InstanceSpecForProviderCustomerManagedKeySelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderMaintenancePolicyWeeklyMaintenanceWindowStartTime
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
@@ -221,6 +230,7 @@ public partial class V1beta1InstanceSpecForProviderMaintenancePolicyWeeklyMainte
     public double? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderMaintenancePolicyWeeklyMaintenanceWindow
 {
     /// <summary>Required. The day of week that maintenance updates occur.</summary>
@@ -232,6 +242,7 @@ public partial class V1beta1InstanceSpecForProviderMaintenancePolicyWeeklyMainte
     public IList<V1beta1InstanceSpecForProviderMaintenancePolicyWeeklyMaintenanceWindowStartTime>? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderMaintenancePolicy
 {
     /// <summary>Optional. Description of what this policy is for. Create/Update methods return INVALID_ARGUMENT if the length is greater than 512.</summary>
@@ -243,6 +254,7 @@ public partial class V1beta1InstanceSpecForProviderMaintenancePolicy
     public IList<V1beta1InstanceSpecForProviderMaintenancePolicyWeeklyMaintenanceWindow>? WeeklyMaintenanceWindow { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderPersistenceConfig
 {
     /// <summary>Optional. Controls whether Persistence features are enabled. If not provided, the existing value will be used.</summary>
@@ -258,6 +270,7 @@ public partial class V1beta1InstanceSpecForProviderPersistenceConfig
     public string? RdbSnapshotStartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProvider
 {
     /// <summary>Only applicable to STANDARD_HA tier which protects the instance against zonal failures by provisioning it across two zones. If provided, it must be a different zone from the one provided in [locationId].</summary>
@@ -385,6 +398,7 @@ public enum V1beta1InstanceSpecInitProviderAuthorizedNetworkRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecInitProviderAuthorizedNetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -398,6 +412,7 @@ public partial class V1beta1InstanceSpecInitProviderAuthorizedNetworkRefPolicy
     public V1beta1InstanceSpecInitProviderAuthorizedNetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate authorizedNetwork.</summary>
 public partial class V1beta1InstanceSpecInitProviderAuthorizedNetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -429,6 +444,7 @@ public enum V1beta1InstanceSpecInitProviderAuthorizedNetworkSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecInitProviderAuthorizedNetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -442,6 +458,7 @@ public partial class V1beta1InstanceSpecInitProviderAuthorizedNetworkSelectorPol
     public V1beta1InstanceSpecInitProviderAuthorizedNetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate authorizedNetwork.</summary>
 public partial class V1beta1InstanceSpecInitProviderAuthorizedNetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -477,6 +494,7 @@ public enum V1beta1InstanceSpecInitProviderCustomerManagedKeyRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecInitProviderCustomerManagedKeyRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -490,6 +508,7 @@ public partial class V1beta1InstanceSpecInitProviderCustomerManagedKeyRefPolicy
     public V1beta1InstanceSpecInitProviderCustomerManagedKeyRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a CryptoKey in kms to populate customerManagedKey.</summary>
 public partial class V1beta1InstanceSpecInitProviderCustomerManagedKeyRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -521,6 +540,7 @@ public enum V1beta1InstanceSpecInitProviderCustomerManagedKeySelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecInitProviderCustomerManagedKeySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -534,6 +554,7 @@ public partial class V1beta1InstanceSpecInitProviderCustomerManagedKeySelectorPo
     public V1beta1InstanceSpecInitProviderCustomerManagedKeySelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a CryptoKey in kms to populate customerManagedKey.</summary>
 public partial class V1beta1InstanceSpecInitProviderCustomerManagedKeySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -549,6 +570,7 @@ public partial class V1beta1InstanceSpecInitProviderCustomerManagedKeySelector
     public V1beta1InstanceSpecInitProviderCustomerManagedKeySelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderMaintenancePolicyWeeklyMaintenanceWindowStartTime
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
@@ -568,6 +590,7 @@ public partial class V1beta1InstanceSpecInitProviderMaintenancePolicyWeeklyMaint
     public double? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderMaintenancePolicyWeeklyMaintenanceWindow
 {
     /// <summary>Required. The day of week that maintenance updates occur.</summary>
@@ -579,6 +602,7 @@ public partial class V1beta1InstanceSpecInitProviderMaintenancePolicyWeeklyMaint
     public IList<V1beta1InstanceSpecInitProviderMaintenancePolicyWeeklyMaintenanceWindowStartTime>? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderMaintenancePolicy
 {
     /// <summary>Optional. Description of what this policy is for. Create/Update methods return INVALID_ARGUMENT if the length is greater than 512.</summary>
@@ -590,6 +614,7 @@ public partial class V1beta1InstanceSpecInitProviderMaintenancePolicy
     public IList<V1beta1InstanceSpecInitProviderMaintenancePolicyWeeklyMaintenanceWindow>? WeeklyMaintenanceWindow { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderPersistenceConfig
 {
     /// <summary>Optional. Controls whether Persistence features are enabled. If not provided, the existing value will be used.</summary>
@@ -605,6 +630,7 @@ public partial class V1beta1InstanceSpecInitProviderPersistenceConfig
     public string? RdbSnapshotStartTime { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1InstanceSpecInitProvider
 {
     /// <summary>Only applicable to STANDARD_HA tier which protects the instance against zonal failures by provisioning it across two zones. If provided, it must be a different zone from the one provided in [locationId].</summary>
@@ -750,6 +776,7 @@ public enum V1beta1InstanceSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -763,6 +790,7 @@ public partial class V1beta1InstanceSpecProviderConfigRefPolicy
     public V1beta1InstanceSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1InstanceSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -794,6 +822,7 @@ public enum V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -807,6 +836,7 @@ public partial class V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolic
     public V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1InstanceSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -818,6 +848,7 @@ public partial class V1beta1InstanceSpecPublishConnectionDetailsToConfigRef
     public V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1InstanceSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -833,6 +864,7 @@ public partial class V1beta1InstanceSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1InstanceSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -848,6 +880,7 @@ public partial class V1beta1InstanceSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1InstanceSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -859,6 +892,7 @@ public partial class V1beta1InstanceSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>InstanceSpec defines the desired state of Instance</summary>
 public partial class V1beta1InstanceSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -891,6 +925,7 @@ public partial class V1beta1InstanceSpec
     public V1beta1InstanceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderMaintenancePolicyWeeklyMaintenanceWindowStartTime
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
@@ -910,6 +945,7 @@ public partial class V1beta1InstanceStatusAtProviderMaintenancePolicyWeeklyMaint
     public double? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderMaintenancePolicyWeeklyMaintenanceWindow
 {
     /// <summary>Required. The day of week that maintenance updates occur.</summary>
@@ -925,6 +961,7 @@ public partial class V1beta1InstanceStatusAtProviderMaintenancePolicyWeeklyMaint
     public IList<V1beta1InstanceStatusAtProviderMaintenancePolicyWeeklyMaintenanceWindowStartTime>? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderMaintenancePolicy
 {
     /// <summary>(Output) Output only. The time when the policy was created. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.</summary>
@@ -944,6 +981,7 @@ public partial class V1beta1InstanceStatusAtProviderMaintenancePolicy
     public IList<V1beta1InstanceStatusAtProviderMaintenancePolicyWeeklyMaintenanceWindow>? WeeklyMaintenanceWindow { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderMaintenanceSchedule
 {
     /// <summary>(Output) Output only. The end time of any upcoming scheduled maintenance for this instance. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.</summary>
@@ -959,6 +997,7 @@ public partial class V1beta1InstanceStatusAtProviderMaintenanceSchedule
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderNodes
 {
     /// <summary>(Output) Node identifying string. e.g. 'node-0', 'node-1'</summary>
@@ -970,6 +1009,7 @@ public partial class V1beta1InstanceStatusAtProviderNodes
     public string? Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderPersistenceConfig
 {
     /// <summary>Optional. Controls whether Persistence features are enabled. If not provided, the existing value will be used.</summary>
@@ -989,6 +1029,7 @@ public partial class V1beta1InstanceStatusAtProviderPersistenceConfig
     public string? RdbSnapshotStartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderServerCaCerts
 {
     /// <summary>(Output) The certificate data in PEM format.</summary>
@@ -1012,6 +1053,7 @@ public partial class V1beta1InstanceStatusAtProviderServerCaCerts
     public string? Sha1Fingerprint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProvider
 {
     /// <summary>Only applicable to STANDARD_HA tier which protects the instance against zonal failures by provisioning it across two zones. If provided, it must be a different zone from the one provided in [locationId].</summary>
@@ -1155,6 +1197,7 @@ public partial class V1beta1InstanceStatusAtProvider
     public string? TransitEncryptionMode { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1InstanceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1182,6 +1225,7 @@ public partial class V1beta1InstanceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>InstanceStatus defines the observed state of Instance.</summary>
 public partial class V1beta1InstanceStatus
 {
     /// <summary></summary>
@@ -1198,6 +1242,7 @@ public partial class V1beta1InstanceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Instance is the Schema for the Instances API. A Google Cloud Redis instance.</summary>
 public partial class V1beta1Instance : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1InstanceSpec>, IStatus<V1beta1InstanceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

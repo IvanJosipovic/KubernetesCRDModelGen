@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary>The network this VPN gateway is accepting traffic for.</summary>
 public partial class V1beta1ComputeTargetVPNGatewaySpecNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1ComputeTargetVPNGatewaySpecNetworkRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeTargetVPNGatewaySpec
 {
     /// <summary>Immutable. An optional description of this resource.</summary>
@@ -42,6 +44,7 @@ public partial class V1beta1ComputeTargetVPNGatewaySpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeTargetVPNGatewayStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -65,6 +68,7 @@ public partial class V1beta1ComputeTargetVPNGatewayStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeTargetVPNGatewayStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -89,6 +93,7 @@ public partial class V1beta1ComputeTargetVPNGatewayStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ComputeTargetVPNGateway : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeTargetVPNGatewaySpec>, IStatus<V1beta1ComputeTargetVPNGatewayStatus>
 {
     public const string KubeApiVersion = "v1beta1";

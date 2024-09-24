@@ -38,6 +38,7 @@ public enum V1beta1VirtualNodeSpecForProviderMeshNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualNodeSpecForProviderMeshNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1VirtualNodeSpecForProviderMeshNameRefPolicy
     public V1beta1VirtualNodeSpecForProviderMeshNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Mesh in appmesh to populate meshName.</summary>
 public partial class V1beta1VirtualNodeSpecForProviderMeshNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1VirtualNodeSpecForProviderMeshNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VirtualNodeSpecForProviderMeshNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1VirtualNodeSpecForProviderMeshNameSelectorPolicy
     public V1beta1VirtualNodeSpecForProviderMeshNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Mesh in appmesh to populate meshName.</summary>
 public partial class V1beta1VirtualNodeSpecForProviderMeshNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1VirtualNodeSpecForProviderMeshNameSelector
     public V1beta1VirtualNodeSpecForProviderMeshNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceClientPolicyTlsCertificateFile
 {
     /// <summary>Certificate chain for the certificate.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceC
     public string? PrivateKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceClientPolicyTlsCertificateSds
 {
     /// <summary>Name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.</summary>
@@ -128,6 +134,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceC
     public string? SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceClientPolicyTlsCertificate
 {
     /// <summary>Local file certificate.</summary>
@@ -139,6 +146,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceC
     public IList<V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceClientPolicyTlsCertificateSds>? Sds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesMatch
 {
     /// <summary>Values sent must match the specified values exactly.</summary>
@@ -146,6 +154,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceC
     public IList<string>? Exact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNames
 {
     /// <summary>Criteria for determining a SAN's match.</summary>
@@ -153,6 +162,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceC
     public IList<V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesMatch>? Match { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceClientPolicyTlsValidationTrustAcm
 {
     /// <summary>One or more ACM ARNs.</summary>
@@ -160,6 +170,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceC
     public IList<string>? CertificateAuthorityArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceClientPolicyTlsValidationTrustFile
 {
     /// <summary>Certificate chain for the certificate.</summary>
@@ -167,6 +178,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceC
     public string? CertificateChain { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceClientPolicyTlsValidationTrustSds
 {
     /// <summary>Name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.</summary>
@@ -174,6 +186,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceC
     public string? SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceClientPolicyTlsValidationTrust
 {
     /// <summary>TLS validation context trust for an AWS Certificate Manager (ACM) certificate.</summary>
@@ -189,6 +202,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceC
     public IList<V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceClientPolicyTlsValidationTrustSds>? Sds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceClientPolicyTlsValidation
 {
     /// <summary>SANs for a TLS validation context.</summary>
@@ -200,6 +214,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceC
     public IList<V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceClientPolicyTlsValidationTrust>? Trust { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceClientPolicyTls
 {
     /// <summary>Virtual node's client's Transport Layer Security (TLS) certificate.</summary>
@@ -219,6 +234,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceC
     public IList<V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceClientPolicyTlsValidation>? Validation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceClientPolicy
 {
     /// <summary>Transport Layer Security (TLS) client policy.</summary>
@@ -226,6 +242,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceC
     public IList<V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceClientPolicyTls>? Tls { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualService
 {
     /// <summary>Client policy for the backend.</summary>
@@ -237,6 +254,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualService
     public string? VirtualServiceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackend
 {
     /// <summary>Virtual service to use as a backend for a virtual node.</summary>
@@ -244,6 +262,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackend
     public IList<V1beta1VirtualNodeSpecForProviderSpecBackendVirtualService>? VirtualService { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientPolicyTlsCertificateFile
 {
     /// <summary>Certificate chain for the certificate.</summary>
@@ -255,6 +274,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientP
     public string? PrivateKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientPolicyTlsCertificateSds
 {
     /// <summary>Name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.</summary>
@@ -262,6 +282,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientP
     public string? SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientPolicyTlsCertificate
 {
     /// <summary>Local file certificate.</summary>
@@ -273,6 +294,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientP
     public IList<V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientPolicyTlsCertificateSds>? Sds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch
 {
     /// <summary>Values sent must match the specified values exactly.</summary>
@@ -280,6 +302,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientP
     public IList<string>? Exact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNames
 {
     /// <summary>Criteria for determining a SAN's match.</summary>
@@ -287,6 +310,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientP
     public IList<V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch>? Match { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientPolicyTlsValidationTrustAcm
 {
     /// <summary>One or more ACM ARNs.</summary>
@@ -294,6 +318,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientP
     public IList<string>? CertificateAuthorityArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientPolicyTlsValidationTrustFile
 {
     /// <summary>Certificate chain for the certificate.</summary>
@@ -301,6 +326,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientP
     public string? CertificateChain { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientPolicyTlsValidationTrustSds
 {
     /// <summary>Name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.</summary>
@@ -308,6 +334,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientP
     public string? SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientPolicyTlsValidationTrust
 {
     /// <summary>TLS validation context trust for an AWS Certificate Manager (ACM) certificate.</summary>
@@ -323,6 +350,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientP
     public IList<V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientPolicyTlsValidationTrustSds>? Sds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientPolicyTlsValidation
 {
     /// <summary>SANs for a TLS validation context.</summary>
@@ -334,6 +362,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientP
     public IList<V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientPolicyTlsValidationTrust>? Trust { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientPolicyTls
 {
     /// <summary>Virtual node's client's Transport Layer Security (TLS) certificate.</summary>
@@ -353,6 +382,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientP
     public IList<V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientPolicyTlsValidation>? Validation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientPolicy
 {
     /// <summary>Transport Layer Security (TLS) client policy.</summary>
@@ -360,6 +390,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientP
     public IList<V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientPolicyTls>? Tls { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaults
 {
     /// <summary>Client policy for the backend.</summary>
@@ -367,6 +398,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaults
     public IList<V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientPolicy>? ClientPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerConnectionPoolGrpc
 {
     /// <summary>Maximum number of inflight requests Envoy can concurrently support across hosts in upstream cluster. Minimum value of 1.</summary>
@@ -374,6 +406,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerConnectionPool
     public double? MaxRequests { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerConnectionPoolHttp
 {
     /// <summary>Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts in upstream cluster. Minimum value of 1.</summary>
@@ -385,6 +418,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerConnectionPool
     public double? MaxPendingRequests { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerConnectionPoolHttp2
 {
     /// <summary>Maximum number of inflight requests Envoy can concurrently support across hosts in upstream cluster. Minimum value of 1.</summary>
@@ -392,6 +426,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerConnectionPool
     public double? MaxRequests { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerConnectionPoolTcp
 {
     /// <summary>Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts in upstream cluster. Minimum value of 1.</summary>
@@ -399,6 +434,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerConnectionPool
     public double? MaxConnections { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerConnectionPool
 {
     /// <summary>Connection pool information for gRPC listeners.</summary>
@@ -418,6 +454,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerConnectionPool
     public IList<V1beta1VirtualNodeSpecForProviderSpecListenerConnectionPoolTcp>? Tcp { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerHealthCheck
 {
     /// <summary>Number of consecutive successful health checks that must occur before declaring listener healthy.</summary>
@@ -449,6 +486,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerHealthCheck
     public double? UnhealthyThreshold { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerOutlierDetectionBaseEjectionDuration
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -460,6 +498,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerOutlierDetecti
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerOutlierDetectionInterval
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -471,6 +510,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerOutlierDetecti
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerOutlierDetection
 {
     /// <summary>Base amount of time for which a host is ejected.</summary>
@@ -490,6 +530,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerOutlierDetecti
     public double? MaxServerErrors { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerPortMapping
 {
     /// <summary>Port used for the port mapping.</summary>
@@ -501,6 +542,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerPortMapping
     public string? Protocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutGrpcIdle
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -512,6 +554,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutGrpcIdl
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutGrpcPerRequest
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -523,6 +566,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutGrpcPer
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutGrpc
 {
     /// <summary>Idle timeout. An idle timeout bounds the amount of time that a connection may be idle.</summary>
@@ -534,6 +578,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutGrpc
     public IList<V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutGrpcPerRequest>? PerRequest { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutHttpIdle
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -545,6 +590,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutHttpIdl
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutHttpPerRequest
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -556,6 +602,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutHttpPer
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutHttp
 {
     /// <summary>Idle timeout. An idle timeout bounds the amount of time that a connection may be idle.</summary>
@@ -567,6 +614,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutHttp
     public IList<V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutHttpPerRequest>? PerRequest { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutHttp2Idle
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -578,6 +626,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutHttp2Id
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutHttp2PerRequest
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -589,6 +638,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutHttp2Pe
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutHttp2
 {
     /// <summary>Idle timeout. An idle timeout bounds the amount of time that a connection may be idle.</summary>
@@ -600,6 +650,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutHttp2
     public IList<V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutHttp2PerRequest>? PerRequest { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutTcpIdle
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -611,6 +662,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutTcpIdle
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutTcp
 {
     /// <summary>Idle timeout. An idle timeout bounds the amount of time that a connection may be idle.</summary>
@@ -618,6 +670,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutTcp
     public IList<V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutTcpIdle>? Idle { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeout
 {
     /// <summary>Connection pool information for gRPC listeners.</summary>
@@ -637,6 +690,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeout
     public IList<V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutTcp>? Tcp { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsCertificateAcm
 {
     /// <summary>ARN for the certificate.</summary>
@@ -644,6 +698,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsCertificate
     public string? CertificateArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsCertificateFile
 {
     /// <summary>Certificate chain for the certificate.</summary>
@@ -655,6 +710,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsCertificate
     public string? PrivateKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsCertificateSds
 {
     /// <summary>Name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.</summary>
@@ -662,6 +718,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsCertificate
     public string? SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsCertificate
 {
     /// <summary>TLS validation context trust for an AWS Certificate Manager (ACM) certificate.</summary>
@@ -677,6 +734,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsCertificate
     public IList<V1beta1VirtualNodeSpecForProviderSpecListenerTlsCertificateSds>? Sds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsValidationSubjectAlternativeNamesMatch
 {
     /// <summary>Values sent must match the specified values exactly.</summary>
@@ -684,6 +742,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsValidationS
     public IList<string>? Exact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsValidationSubjectAlternativeNames
 {
     /// <summary>Criteria for determining a SAN's match.</summary>
@@ -691,6 +750,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsValidationS
     public IList<V1beta1VirtualNodeSpecForProviderSpecListenerTlsValidationSubjectAlternativeNamesMatch>? Match { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsValidationTrustFile
 {
     /// <summary>Certificate chain for the certificate.</summary>
@@ -698,6 +758,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsValidationT
     public string? CertificateChain { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsValidationTrustSds
 {
     /// <summary>Name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.</summary>
@@ -705,6 +766,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsValidationT
     public string? SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsValidationTrust
 {
     /// <summary>Local file certificate.</summary>
@@ -716,6 +778,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsValidationT
     public IList<V1beta1VirtualNodeSpecForProviderSpecListenerTlsValidationTrustSds>? Sds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsValidation
 {
     /// <summary>SANs for a TLS validation context.</summary>
@@ -727,6 +790,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsValidation
     public IList<V1beta1VirtualNodeSpecForProviderSpecListenerTlsValidationTrust>? Trust { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTls
 {
     /// <summary>Virtual node's client's Transport Layer Security (TLS) certificate.</summary>
@@ -742,6 +806,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTls
     public IList<V1beta1VirtualNodeSpecForProviderSpecListenerTlsValidation>? Validation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecListener
 {
     /// <summary>Connection pool information for the listener.</summary>
@@ -769,6 +834,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListener
     public IList<V1beta1VirtualNodeSpecForProviderSpecListenerTls>? Tls { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecLoggingAccessLogFileFormatJson
 {
     /// <summary>The specified key for the JSON. Must be between 1 and 100 characters in length.</summary>
@@ -780,6 +846,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecLoggingAccessLogFileFo
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecLoggingAccessLogFileFormat
 {
     /// <summary>The logging format for JSON.</summary>
@@ -791,6 +858,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecLoggingAccessLogFileFo
     public string? Text { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecLoggingAccessLogFile
 {
     /// <summary>The specified format for the logs.</summary>
@@ -802,6 +870,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecLoggingAccessLogFile
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecLoggingAccessLog
 {
     /// <summary>Local file certificate.</summary>
@@ -809,6 +878,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecLoggingAccessLog
     public IList<V1beta1VirtualNodeSpecForProviderSpecLoggingAccessLogFile>? File { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecLogging
 {
     /// <summary>Access log configuration for a virtual node.</summary>
@@ -836,6 +906,7 @@ public enum V1beta1VirtualNodeSpecForProviderSpecServiceDiscoveryAwsCloudMapName
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecServiceDiscoveryAwsCloudMapNamespaceNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -849,6 +920,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecServiceDiscoveryAwsClo
     public V1beta1VirtualNodeSpecForProviderSpecServiceDiscoveryAwsCloudMapNamespaceNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a HTTPNamespace in servicediscovery to populate namespaceName.</summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecServiceDiscoveryAwsCloudMapNamespaceNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -880,6 +952,7 @@ public enum V1beta1VirtualNodeSpecForProviderSpecServiceDiscoveryAwsCloudMapName
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecServiceDiscoveryAwsCloudMapNamespaceNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -893,6 +966,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecServiceDiscoveryAwsClo
     public V1beta1VirtualNodeSpecForProviderSpecServiceDiscoveryAwsCloudMapNamespaceNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a HTTPNamespace in servicediscovery to populate namespaceName.</summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecServiceDiscoveryAwsCloudMapNamespaceNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -908,6 +982,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecServiceDiscoveryAwsClo
     public V1beta1VirtualNodeSpecForProviderSpecServiceDiscoveryAwsCloudMapNamespaceNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecServiceDiscoveryAwsCloudMap
 {
     /// <summary>String map that contains attributes with values that you can use to filter instances by any custom attribute that you specified when you registered the instance. Only instances that match all of the specified key/value pairs will be returned.</summary>
@@ -931,6 +1006,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecServiceDiscoveryAwsClo
     public string? ServiceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecServiceDiscoveryDns
 {
     /// <summary>DNS host name for your virtual node.</summary>
@@ -946,6 +1022,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecServiceDiscoveryDns
     public string? ResponseType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpecServiceDiscovery
 {
     /// <summary>Any AWS Cloud Map information for the virtual node.</summary>
@@ -957,6 +1034,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecServiceDiscovery
     public IList<V1beta1VirtualNodeSpecForProviderSpecServiceDiscoveryDns>? Dns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProviderSpec
 {
     /// <summary>Backends to which the virtual node is expected to send outbound traffic.</summary>
@@ -980,6 +1058,7 @@ public partial class V1beta1VirtualNodeSpecForProviderSpec
     public IList<V1beta1VirtualNodeSpecForProviderSpecServiceDiscovery>? ServiceDiscovery { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecForProvider
 {
     /// <summary>Name of the service mesh in which to create the virtual node. Must be between 1 and 255 characters in length.</summary>
@@ -1035,6 +1114,7 @@ public enum V1beta1VirtualNodeSpecInitProviderMeshNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualNodeSpecInitProviderMeshNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1048,6 +1128,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderMeshNameRefPolicy
     public V1beta1VirtualNodeSpecInitProviderMeshNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Mesh in appmesh to populate meshName.</summary>
 public partial class V1beta1VirtualNodeSpecInitProviderMeshNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1079,6 +1160,7 @@ public enum V1beta1VirtualNodeSpecInitProviderMeshNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VirtualNodeSpecInitProviderMeshNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1092,6 +1174,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderMeshNameSelectorPolicy
     public V1beta1VirtualNodeSpecInitProviderMeshNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Mesh in appmesh to populate meshName.</summary>
 public partial class V1beta1VirtualNodeSpecInitProviderMeshNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1107,6 +1190,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderMeshNameSelector
     public V1beta1VirtualNodeSpecInitProviderMeshNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualServiceClientPolicyTlsCertificateFile
 {
     /// <summary>Certificate chain for the certificate.</summary>
@@ -1118,6 +1202,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualService
     public string? PrivateKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualServiceClientPolicyTlsCertificateSds
 {
     /// <summary>Name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.</summary>
@@ -1125,6 +1210,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualService
     public string? SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualServiceClientPolicyTlsCertificate
 {
     /// <summary>Local file certificate.</summary>
@@ -1136,6 +1222,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualService
     public IList<V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualServiceClientPolicyTlsCertificateSds>? Sds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesMatch
 {
     /// <summary>Values sent must match the specified values exactly.</summary>
@@ -1143,6 +1230,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualService
     public IList<string>? Exact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNames
 {
     /// <summary>Criteria for determining a SAN's match.</summary>
@@ -1150,6 +1238,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualService
     public IList<V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesMatch>? Match { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualServiceClientPolicyTlsValidationTrustAcm
 {
     /// <summary>One or more ACM ARNs.</summary>
@@ -1157,6 +1246,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualService
     public IList<string>? CertificateAuthorityArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualServiceClientPolicyTlsValidationTrustFile
 {
     /// <summary>Certificate chain for the certificate.</summary>
@@ -1164,6 +1254,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualService
     public string? CertificateChain { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualServiceClientPolicyTlsValidationTrustSds
 {
     /// <summary>Name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.</summary>
@@ -1171,6 +1262,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualService
     public string? SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualServiceClientPolicyTlsValidationTrust
 {
     /// <summary>TLS validation context trust for an AWS Certificate Manager (ACM) certificate.</summary>
@@ -1186,6 +1278,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualService
     public IList<V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualServiceClientPolicyTlsValidationTrustSds>? Sds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualServiceClientPolicyTlsValidation
 {
     /// <summary>SANs for a TLS validation context.</summary>
@@ -1197,6 +1290,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualService
     public IList<V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualServiceClientPolicyTlsValidationTrust>? Trust { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualServiceClientPolicyTls
 {
     /// <summary>Virtual node's client's Transport Layer Security (TLS) certificate.</summary>
@@ -1216,6 +1310,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualService
     public IList<V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualServiceClientPolicyTlsValidation>? Validation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualServiceClientPolicy
 {
     /// <summary>Transport Layer Security (TLS) client policy.</summary>
@@ -1223,6 +1318,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualService
     public IList<V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualServiceClientPolicyTls>? Tls { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualService
 {
     /// <summary>Client policy for the backend.</summary>
@@ -1234,6 +1330,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualService
     public string? VirtualServiceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackend
 {
     /// <summary>Virtual service to use as a backend for a virtual node.</summary>
@@ -1241,6 +1338,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackend
     public IList<V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualService>? VirtualService { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClientPolicyTlsCertificateFile
 {
     /// <summary>Certificate chain for the certificate.</summary>
@@ -1252,6 +1350,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClient
     public string? PrivateKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClientPolicyTlsCertificateSds
 {
     /// <summary>Name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.</summary>
@@ -1259,6 +1358,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClient
     public string? SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClientPolicyTlsCertificate
 {
     /// <summary>Local file certificate.</summary>
@@ -1270,6 +1370,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClient
     public IList<V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClientPolicyTlsCertificateSds>? Sds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch
 {
     /// <summary>Values sent must match the specified values exactly.</summary>
@@ -1277,6 +1378,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClient
     public IList<string>? Exact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNames
 {
     /// <summary>Criteria for determining a SAN's match.</summary>
@@ -1284,6 +1386,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClient
     public IList<V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch>? Match { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClientPolicyTlsValidationTrustAcm
 {
     /// <summary>One or more ACM ARNs.</summary>
@@ -1291,6 +1394,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClient
     public IList<string>? CertificateAuthorityArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClientPolicyTlsValidationTrustFile
 {
     /// <summary>Certificate chain for the certificate.</summary>
@@ -1298,6 +1402,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClient
     public string? CertificateChain { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClientPolicyTlsValidationTrustSds
 {
     /// <summary>Name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.</summary>
@@ -1305,6 +1410,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClient
     public string? SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClientPolicyTlsValidationTrust
 {
     /// <summary>TLS validation context trust for an AWS Certificate Manager (ACM) certificate.</summary>
@@ -1320,6 +1426,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClient
     public IList<V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClientPolicyTlsValidationTrustSds>? Sds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClientPolicyTlsValidation
 {
     /// <summary>SANs for a TLS validation context.</summary>
@@ -1331,6 +1438,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClient
     public IList<V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClientPolicyTlsValidationTrust>? Trust { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClientPolicyTls
 {
     /// <summary>Virtual node's client's Transport Layer Security (TLS) certificate.</summary>
@@ -1350,6 +1458,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClient
     public IList<V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClientPolicyTlsValidation>? Validation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClientPolicy
 {
     /// <summary>Transport Layer Security (TLS) client policy.</summary>
@@ -1357,6 +1466,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClient
     public IList<V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClientPolicyTls>? Tls { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaults
 {
     /// <summary>Client policy for the backend.</summary>
@@ -1364,6 +1474,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaults
     public IList<V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClientPolicy>? ClientPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerConnectionPoolGrpc
 {
     /// <summary>Maximum number of inflight requests Envoy can concurrently support across hosts in upstream cluster. Minimum value of 1.</summary>
@@ -1371,6 +1482,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerConnectionPoo
     public double? MaxRequests { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerConnectionPoolHttp
 {
     /// <summary>Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts in upstream cluster. Minimum value of 1.</summary>
@@ -1382,6 +1494,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerConnectionPoo
     public double? MaxPendingRequests { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerConnectionPoolHttp2
 {
     /// <summary>Maximum number of inflight requests Envoy can concurrently support across hosts in upstream cluster. Minimum value of 1.</summary>
@@ -1389,6 +1502,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerConnectionPoo
     public double? MaxRequests { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerConnectionPoolTcp
 {
     /// <summary>Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts in upstream cluster. Minimum value of 1.</summary>
@@ -1396,6 +1510,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerConnectionPoo
     public double? MaxConnections { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerConnectionPool
 {
     /// <summary>Connection pool information for gRPC listeners.</summary>
@@ -1415,6 +1530,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerConnectionPoo
     public IList<V1beta1VirtualNodeSpecInitProviderSpecListenerConnectionPoolTcp>? Tcp { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerHealthCheck
 {
     /// <summary>Number of consecutive successful health checks that must occur before declaring listener healthy.</summary>
@@ -1446,6 +1562,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerHealthCheck
     public double? UnhealthyThreshold { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerOutlierDetectionBaseEjectionDuration
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -1457,6 +1574,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerOutlierDetect
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerOutlierDetectionInterval
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -1468,6 +1586,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerOutlierDetect
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerOutlierDetection
 {
     /// <summary>Base amount of time for which a host is ejected.</summary>
@@ -1487,6 +1606,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerOutlierDetect
     public double? MaxServerErrors { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerPortMapping
 {
     /// <summary>Port used for the port mapping.</summary>
@@ -1498,6 +1618,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerPortMapping
     public string? Protocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutGrpcIdle
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -1509,6 +1630,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutGrpcId
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutGrpcPerRequest
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -1520,6 +1642,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutGrpcPe
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutGrpc
 {
     /// <summary>Idle timeout. An idle timeout bounds the amount of time that a connection may be idle.</summary>
@@ -1531,6 +1654,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutGrpc
     public IList<V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutGrpcPerRequest>? PerRequest { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutHttpIdle
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -1542,6 +1666,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutHttpId
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutHttpPerRequest
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -1553,6 +1678,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutHttpPe
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutHttp
 {
     /// <summary>Idle timeout. An idle timeout bounds the amount of time that a connection may be idle.</summary>
@@ -1564,6 +1690,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutHttp
     public IList<V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutHttpPerRequest>? PerRequest { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutHttp2Idle
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -1575,6 +1702,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutHttp2I
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutHttp2PerRequest
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -1586,6 +1714,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutHttp2P
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutHttp2
 {
     /// <summary>Idle timeout. An idle timeout bounds the amount of time that a connection may be idle.</summary>
@@ -1597,6 +1726,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutHttp2
     public IList<V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutHttp2PerRequest>? PerRequest { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutTcpIdle
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -1608,6 +1738,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutTcpIdl
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutTcp
 {
     /// <summary>Idle timeout. An idle timeout bounds the amount of time that a connection may be idle.</summary>
@@ -1615,6 +1746,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutTcp
     public IList<V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutTcpIdle>? Idle { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeout
 {
     /// <summary>Connection pool information for gRPC listeners.</summary>
@@ -1634,6 +1766,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeout
     public IList<V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutTcp>? Tcp { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsCertificateAcm
 {
     /// <summary>ARN for the certificate.</summary>
@@ -1641,6 +1774,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsCertificat
     public string? CertificateArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsCertificateFile
 {
     /// <summary>Certificate chain for the certificate.</summary>
@@ -1652,6 +1786,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsCertificat
     public string? PrivateKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsCertificateSds
 {
     /// <summary>Name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.</summary>
@@ -1659,6 +1794,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsCertificat
     public string? SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsCertificate
 {
     /// <summary>TLS validation context trust for an AWS Certificate Manager (ACM) certificate.</summary>
@@ -1674,6 +1810,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsCertificat
     public IList<V1beta1VirtualNodeSpecInitProviderSpecListenerTlsCertificateSds>? Sds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsValidationSubjectAlternativeNamesMatch
 {
     /// <summary>Values sent must match the specified values exactly.</summary>
@@ -1681,6 +1818,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsValidation
     public IList<string>? Exact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsValidationSubjectAlternativeNames
 {
     /// <summary>Criteria for determining a SAN's match.</summary>
@@ -1688,6 +1826,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsValidation
     public IList<V1beta1VirtualNodeSpecInitProviderSpecListenerTlsValidationSubjectAlternativeNamesMatch>? Match { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsValidationTrustFile
 {
     /// <summary>Certificate chain for the certificate.</summary>
@@ -1695,6 +1834,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsValidation
     public string? CertificateChain { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsValidationTrustSds
 {
     /// <summary>Name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.</summary>
@@ -1702,6 +1842,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsValidation
     public string? SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsValidationTrust
 {
     /// <summary>Local file certificate.</summary>
@@ -1713,6 +1854,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsValidation
     public IList<V1beta1VirtualNodeSpecInitProviderSpecListenerTlsValidationTrustSds>? Sds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsValidation
 {
     /// <summary>SANs for a TLS validation context.</summary>
@@ -1724,6 +1866,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsValidation
     public IList<V1beta1VirtualNodeSpecInitProviderSpecListenerTlsValidationTrust>? Trust { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTls
 {
     /// <summary>Virtual node's client's Transport Layer Security (TLS) certificate.</summary>
@@ -1739,6 +1882,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTls
     public IList<V1beta1VirtualNodeSpecInitProviderSpecListenerTlsValidation>? Validation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListener
 {
     /// <summary>Connection pool information for the listener.</summary>
@@ -1766,6 +1910,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListener
     public IList<V1beta1VirtualNodeSpecInitProviderSpecListenerTls>? Tls { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecLoggingAccessLogFileFormatJson
 {
     /// <summary>The specified key for the JSON. Must be between 1 and 100 characters in length.</summary>
@@ -1777,6 +1922,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecLoggingAccessLogFileF
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecLoggingAccessLogFileFormat
 {
     /// <summary>The logging format for JSON.</summary>
@@ -1788,6 +1934,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecLoggingAccessLogFileF
     public string? Text { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecLoggingAccessLogFile
 {
     /// <summary>The specified format for the logs.</summary>
@@ -1799,6 +1946,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecLoggingAccessLogFile
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecLoggingAccessLog
 {
     /// <summary>Local file certificate.</summary>
@@ -1806,6 +1954,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecLoggingAccessLog
     public IList<V1beta1VirtualNodeSpecInitProviderSpecLoggingAccessLogFile>? File { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecLogging
 {
     /// <summary>Access log configuration for a virtual node.</summary>
@@ -1833,6 +1982,7 @@ public enum V1beta1VirtualNodeSpecInitProviderSpecServiceDiscoveryAwsCloudMapNam
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecServiceDiscoveryAwsCloudMapNamespaceNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1846,6 +1996,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecServiceDiscoveryAwsCl
     public V1beta1VirtualNodeSpecInitProviderSpecServiceDiscoveryAwsCloudMapNamespaceNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a HTTPNamespace in servicediscovery to populate namespaceName.</summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecServiceDiscoveryAwsCloudMapNamespaceNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1877,6 +2028,7 @@ public enum V1beta1VirtualNodeSpecInitProviderSpecServiceDiscoveryAwsCloudMapNam
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecServiceDiscoveryAwsCloudMapNamespaceNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1890,6 +2042,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecServiceDiscoveryAwsCl
     public V1beta1VirtualNodeSpecInitProviderSpecServiceDiscoveryAwsCloudMapNamespaceNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a HTTPNamespace in servicediscovery to populate namespaceName.</summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecServiceDiscoveryAwsCloudMapNamespaceNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1905,6 +2058,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecServiceDiscoveryAwsCl
     public V1beta1VirtualNodeSpecInitProviderSpecServiceDiscoveryAwsCloudMapNamespaceNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecServiceDiscoveryAwsCloudMap
 {
     /// <summary>String map that contains attributes with values that you can use to filter instances by any custom attribute that you specified when you registered the instance. Only instances that match all of the specified key/value pairs will be returned.</summary>
@@ -1928,6 +2082,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecServiceDiscoveryAwsCl
     public string? ServiceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecServiceDiscoveryDns
 {
     /// <summary>DNS host name for your virtual node.</summary>
@@ -1943,6 +2098,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecServiceDiscoveryDns
     public string? ResponseType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpecServiceDiscovery
 {
     /// <summary>Any AWS Cloud Map information for the virtual node.</summary>
@@ -1954,6 +2110,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecServiceDiscovery
     public IList<V1beta1VirtualNodeSpecInitProviderSpecServiceDiscoveryDns>? Dns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeSpecInitProviderSpec
 {
     /// <summary>Backends to which the virtual node is expected to send outbound traffic.</summary>
@@ -1977,6 +2134,7 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpec
     public IList<V1beta1VirtualNodeSpecInitProviderSpecServiceDiscovery>? ServiceDiscovery { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1VirtualNodeSpecInitProvider
 {
     /// <summary>Name of the service mesh in which to create the virtual node. Must be between 1 and 255 characters in length.</summary>
@@ -2050,6 +2208,7 @@ public enum V1beta1VirtualNodeSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualNodeSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2063,6 +2222,7 @@ public partial class V1beta1VirtualNodeSpecProviderConfigRefPolicy
     public V1beta1VirtualNodeSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1VirtualNodeSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2094,6 +2254,7 @@ public enum V1beta1VirtualNodeSpecPublishConnectionDetailsToConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VirtualNodeSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2107,6 +2268,7 @@ public partial class V1beta1VirtualNodeSpecPublishConnectionDetailsToConfigRefPo
     public V1beta1VirtualNodeSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1VirtualNodeSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2118,6 +2280,7 @@ public partial class V1beta1VirtualNodeSpecPublishConnectionDetailsToConfigRef
     public V1beta1VirtualNodeSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1VirtualNodeSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -2133,6 +2296,7 @@ public partial class V1beta1VirtualNodeSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1VirtualNodeSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -2148,6 +2312,7 @@ public partial class V1beta1VirtualNodeSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1VirtualNodeSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -2159,6 +2324,7 @@ public partial class V1beta1VirtualNodeSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>VirtualNodeSpec defines the desired state of VirtualNode</summary>
 public partial class V1beta1VirtualNodeSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -2191,6 +2357,7 @@ public partial class V1beta1VirtualNodeSpec
     public V1beta1VirtualNodeSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualServiceClientPolicyTlsCertificateFile
 {
     /// <summary>Certificate chain for the certificate.</summary>
@@ -2202,6 +2369,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualService
     public string? PrivateKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualServiceClientPolicyTlsCertificateSds
 {
     /// <summary>Name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.</summary>
@@ -2209,6 +2377,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualService
     public string? SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualServiceClientPolicyTlsCertificate
 {
     /// <summary>Local file certificate.</summary>
@@ -2220,6 +2389,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualService
     public IList<V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualServiceClientPolicyTlsCertificateSds>? Sds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesMatch
 {
     /// <summary>Values sent must match the specified values exactly.</summary>
@@ -2227,6 +2397,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualService
     public IList<string>? Exact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNames
 {
     /// <summary>Criteria for determining a SAN's match.</summary>
@@ -2234,6 +2405,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualService
     public IList<V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesMatch>? Match { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualServiceClientPolicyTlsValidationTrustAcm
 {
     /// <summary>One or more ACM ARNs.</summary>
@@ -2241,6 +2413,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualService
     public IList<string>? CertificateAuthorityArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualServiceClientPolicyTlsValidationTrustFile
 {
     /// <summary>Certificate chain for the certificate.</summary>
@@ -2248,6 +2421,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualService
     public string? CertificateChain { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualServiceClientPolicyTlsValidationTrustSds
 {
     /// <summary>Name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.</summary>
@@ -2255,6 +2429,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualService
     public string? SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualServiceClientPolicyTlsValidationTrust
 {
     /// <summary>TLS validation context trust for an AWS Certificate Manager (ACM) certificate.</summary>
@@ -2270,6 +2445,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualService
     public IList<V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualServiceClientPolicyTlsValidationTrustSds>? Sds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualServiceClientPolicyTlsValidation
 {
     /// <summary>SANs for a TLS validation context.</summary>
@@ -2281,6 +2457,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualService
     public IList<V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualServiceClientPolicyTlsValidationTrust>? Trust { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualServiceClientPolicyTls
 {
     /// <summary>Virtual node's client's Transport Layer Security (TLS) certificate.</summary>
@@ -2300,6 +2477,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualService
     public IList<V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualServiceClientPolicyTlsValidation>? Validation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualServiceClientPolicy
 {
     /// <summary>Transport Layer Security (TLS) client policy.</summary>
@@ -2307,6 +2485,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualService
     public IList<V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualServiceClientPolicyTls>? Tls { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualService
 {
     /// <summary>Client policy for the backend.</summary>
@@ -2318,6 +2497,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualService
     public string? VirtualServiceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackend
 {
     /// <summary>Virtual service to use as a backend for a virtual node.</summary>
@@ -2325,6 +2505,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackend
     public IList<V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualService>? VirtualService { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClientPolicyTlsCertificateFile
 {
     /// <summary>Certificate chain for the certificate.</summary>
@@ -2336,6 +2517,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClient
     public string? PrivateKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClientPolicyTlsCertificateSds
 {
     /// <summary>Name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.</summary>
@@ -2343,6 +2525,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClient
     public string? SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClientPolicyTlsCertificate
 {
     /// <summary>Local file certificate.</summary>
@@ -2354,6 +2537,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClient
     public IList<V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClientPolicyTlsCertificateSds>? Sds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch
 {
     /// <summary>Values sent must match the specified values exactly.</summary>
@@ -2361,6 +2545,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClient
     public IList<string>? Exact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNames
 {
     /// <summary>Criteria for determining a SAN's match.</summary>
@@ -2368,6 +2553,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClient
     public IList<V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch>? Match { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidationTrustAcm
 {
     /// <summary>One or more ACM ARNs.</summary>
@@ -2375,6 +2561,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClient
     public IList<string>? CertificateAuthorityArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidationTrustFile
 {
     /// <summary>Certificate chain for the certificate.</summary>
@@ -2382,6 +2569,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClient
     public string? CertificateChain { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidationTrustSds
 {
     /// <summary>Name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.</summary>
@@ -2389,6 +2577,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClient
     public string? SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidationTrust
 {
     /// <summary>TLS validation context trust for an AWS Certificate Manager (ACM) certificate.</summary>
@@ -2404,6 +2593,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClient
     public IList<V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidationTrustSds>? Sds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidation
 {
     /// <summary>SANs for a TLS validation context.</summary>
@@ -2415,6 +2605,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClient
     public IList<V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidationTrust>? Trust { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClientPolicyTls
 {
     /// <summary>Virtual node's client's Transport Layer Security (TLS) certificate.</summary>
@@ -2434,6 +2625,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClient
     public IList<V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidation>? Validation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClientPolicy
 {
     /// <summary>Transport Layer Security (TLS) client policy.</summary>
@@ -2441,6 +2633,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClient
     public IList<V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClientPolicyTls>? Tls { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaults
 {
     /// <summary>Client policy for the backend.</summary>
@@ -2448,6 +2641,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaults
     public IList<V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClientPolicy>? ClientPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerConnectionPoolGrpc
 {
     /// <summary>Maximum number of inflight requests Envoy can concurrently support across hosts in upstream cluster. Minimum value of 1.</summary>
@@ -2455,6 +2649,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerConnectionPoo
     public double? MaxRequests { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerConnectionPoolHttp
 {
     /// <summary>Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts in upstream cluster. Minimum value of 1.</summary>
@@ -2466,6 +2661,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerConnectionPoo
     public double? MaxPendingRequests { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerConnectionPoolHttp2
 {
     /// <summary>Maximum number of inflight requests Envoy can concurrently support across hosts in upstream cluster. Minimum value of 1.</summary>
@@ -2473,6 +2669,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerConnectionPoo
     public double? MaxRequests { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerConnectionPoolTcp
 {
     /// <summary>Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts in upstream cluster. Minimum value of 1.</summary>
@@ -2480,6 +2677,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerConnectionPoo
     public double? MaxConnections { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerConnectionPool
 {
     /// <summary>Connection pool information for gRPC listeners.</summary>
@@ -2499,6 +2697,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerConnectionPoo
     public IList<V1beta1VirtualNodeStatusAtProviderSpecListenerConnectionPoolTcp>? Tcp { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerHealthCheck
 {
     /// <summary>Number of consecutive successful health checks that must occur before declaring listener healthy.</summary>
@@ -2530,6 +2729,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerHealthCheck
     public double? UnhealthyThreshold { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerOutlierDetectionBaseEjectionDuration
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -2541,6 +2741,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerOutlierDetect
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerOutlierDetectionInterval
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -2552,6 +2753,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerOutlierDetect
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerOutlierDetection
 {
     /// <summary>Base amount of time for which a host is ejected.</summary>
@@ -2571,6 +2773,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerOutlierDetect
     public double? MaxServerErrors { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerPortMapping
 {
     /// <summary>Port used for the port mapping.</summary>
@@ -2582,6 +2785,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerPortMapping
     public string? Protocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutGrpcIdle
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -2593,6 +2797,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutGrpcId
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutGrpcPerRequest
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -2604,6 +2809,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutGrpcPe
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutGrpc
 {
     /// <summary>Idle timeout. An idle timeout bounds the amount of time that a connection may be idle.</summary>
@@ -2615,6 +2821,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutGrpc
     public IList<V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutGrpcPerRequest>? PerRequest { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutHttpIdle
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -2626,6 +2833,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutHttpId
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutHttpPerRequest
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -2637,6 +2845,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutHttpPe
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutHttp
 {
     /// <summary>Idle timeout. An idle timeout bounds the amount of time that a connection may be idle.</summary>
@@ -2648,6 +2857,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutHttp
     public IList<V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutHttpPerRequest>? PerRequest { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutHttp2Idle
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -2659,6 +2869,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutHttp2I
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutHttp2PerRequest
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -2670,6 +2881,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutHttp2P
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutHttp2
 {
     /// <summary>Idle timeout. An idle timeout bounds the amount of time that a connection may be idle.</summary>
@@ -2681,6 +2893,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutHttp2
     public IList<V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutHttp2PerRequest>? PerRequest { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutTcpIdle
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -2692,6 +2905,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutTcpIdl
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutTcp
 {
     /// <summary>Idle timeout. An idle timeout bounds the amount of time that a connection may be idle.</summary>
@@ -2699,6 +2913,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutTcp
     public IList<V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutTcpIdle>? Idle { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeout
 {
     /// <summary>Connection pool information for gRPC listeners.</summary>
@@ -2718,6 +2933,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeout
     public IList<V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutTcp>? Tcp { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsCertificateAcm
 {
     /// <summary>ARN for the certificate.</summary>
@@ -2725,6 +2941,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsCertificat
     public string? CertificateArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsCertificateFile
 {
     /// <summary>Certificate chain for the certificate.</summary>
@@ -2736,6 +2953,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsCertificat
     public string? PrivateKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsCertificateSds
 {
     /// <summary>Name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.</summary>
@@ -2743,6 +2961,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsCertificat
     public string? SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsCertificate
 {
     /// <summary>TLS validation context trust for an AWS Certificate Manager (ACM) certificate.</summary>
@@ -2758,6 +2977,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsCertificat
     public IList<V1beta1VirtualNodeStatusAtProviderSpecListenerTlsCertificateSds>? Sds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsValidationSubjectAlternativeNamesMatch
 {
     /// <summary>Values sent must match the specified values exactly.</summary>
@@ -2765,6 +2985,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsValidation
     public IList<string>? Exact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsValidationSubjectAlternativeNames
 {
     /// <summary>Criteria for determining a SAN's match.</summary>
@@ -2772,6 +2993,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsValidation
     public IList<V1beta1VirtualNodeStatusAtProviderSpecListenerTlsValidationSubjectAlternativeNamesMatch>? Match { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsValidationTrustFile
 {
     /// <summary>Certificate chain for the certificate.</summary>
@@ -2779,6 +3001,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsValidation
     public string? CertificateChain { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsValidationTrustSds
 {
     /// <summary>Name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.</summary>
@@ -2786,6 +3009,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsValidation
     public string? SecretName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsValidationTrust
 {
     /// <summary>Local file certificate.</summary>
@@ -2797,6 +3021,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsValidation
     public IList<V1beta1VirtualNodeStatusAtProviderSpecListenerTlsValidationTrustSds>? Sds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsValidation
 {
     /// <summary>SANs for a TLS validation context.</summary>
@@ -2808,6 +3033,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsValidation
     public IList<V1beta1VirtualNodeStatusAtProviderSpecListenerTlsValidationTrust>? Trust { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTls
 {
     /// <summary>Virtual node's client's Transport Layer Security (TLS) certificate.</summary>
@@ -2823,6 +3049,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTls
     public IList<V1beta1VirtualNodeStatusAtProviderSpecListenerTlsValidation>? Validation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListener
 {
     /// <summary>Connection pool information for the listener.</summary>
@@ -2850,6 +3077,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListener
     public IList<V1beta1VirtualNodeStatusAtProviderSpecListenerTls>? Tls { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecLoggingAccessLogFileFormatJson
 {
     /// <summary>The specified key for the JSON. Must be between 1 and 100 characters in length.</summary>
@@ -2861,6 +3089,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecLoggingAccessLogFileF
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecLoggingAccessLogFileFormat
 {
     /// <summary>The logging format for JSON.</summary>
@@ -2872,6 +3101,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecLoggingAccessLogFileF
     public string? Text { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecLoggingAccessLogFile
 {
     /// <summary>The specified format for the logs.</summary>
@@ -2883,6 +3113,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecLoggingAccessLogFile
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecLoggingAccessLog
 {
     /// <summary>Local file certificate.</summary>
@@ -2890,6 +3121,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecLoggingAccessLog
     public IList<V1beta1VirtualNodeStatusAtProviderSpecLoggingAccessLogFile>? File { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecLogging
 {
     /// <summary>Access log configuration for a virtual node.</summary>
@@ -2897,6 +3129,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecLogging
     public IList<V1beta1VirtualNodeStatusAtProviderSpecLoggingAccessLog>? AccessLog { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecServiceDiscoveryAwsCloudMap
 {
     /// <summary>String map that contains attributes with values that you can use to filter instances by any custom attribute that you specified when you registered the instance. Only instances that match all of the specified key/value pairs will be returned.</summary>
@@ -2912,6 +3145,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecServiceDiscoveryAwsCl
     public string? ServiceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecServiceDiscoveryDns
 {
     /// <summary>DNS host name for your virtual node.</summary>
@@ -2927,6 +3161,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecServiceDiscoveryDns
     public string? ResponseType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpecServiceDiscovery
 {
     /// <summary>Any AWS Cloud Map information for the virtual node.</summary>
@@ -2938,6 +3173,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecServiceDiscovery
     public IList<V1beta1VirtualNodeStatusAtProviderSpecServiceDiscoveryDns>? Dns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProviderSpec
 {
     /// <summary>Backends to which the virtual node is expected to send outbound traffic.</summary>
@@ -2961,6 +3197,7 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpec
     public IList<V1beta1VirtualNodeStatusAtProviderSpecServiceDiscovery>? ServiceDiscovery { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VirtualNodeStatusAtProvider
 {
     /// <summary>ARN of the virtual node.</summary>
@@ -3008,6 +3245,7 @@ public partial class V1beta1VirtualNodeStatusAtProvider
     public IDictionary<string, string>? TagsAll { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1VirtualNodeStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -3035,6 +3273,7 @@ public partial class V1beta1VirtualNodeStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>VirtualNodeStatus defines the observed state of VirtualNode.</summary>
 public partial class V1beta1VirtualNodeStatus
 {
     /// <summary></summary>
@@ -3051,6 +3290,7 @@ public partial class V1beta1VirtualNodeStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>VirtualNode is the Schema for the VirtualNodes API. Provides an AWS App Mesh virtual node resource.</summary>
 public partial class V1beta1VirtualNode : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1VirtualNodeSpec>, IStatus<V1beta1VirtualNodeStatus>
 {
     public const string KubeApiVersion = "v1beta1";

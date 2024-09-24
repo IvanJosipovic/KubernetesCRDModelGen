@@ -18,6 +18,7 @@ public enum V1beta1JobTriggerSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobActionsDeidentifyTransformationConfig
 {
     /// <summary>If this template is specified, it will serve as the default de-identify template.</summary>
@@ -53,6 +54,7 @@ public enum V1beta1JobTriggerSpecForProviderInspectJobActionsDeidentifyTransform
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfigTableDatasetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -66,6 +68,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobActionsDeidentify
     public V1beta1JobTriggerSpecForProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfigTableDatasetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Dataset in bigquery to populate datasetId.</summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfigTableDatasetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -97,6 +100,7 @@ public enum V1beta1JobTriggerSpecForProviderInspectJobActionsDeidentifyTransform
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfigTableDatasetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobActionsDeidentify
     public V1beta1JobTriggerSpecForProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfigTableDatasetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Dataset in bigquery to populate datasetId.</summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfigTableDatasetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -145,6 +150,7 @@ public enum V1beta1JobTriggerSpecForProviderInspectJobActionsDeidentifyTransform
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfigTableTableIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -158,6 +164,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobActionsDeidentify
     public V1beta1JobTriggerSpecForProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfigTableTableIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Table in bigquery to populate tableId.</summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfigTableTableIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -189,6 +196,7 @@ public enum V1beta1JobTriggerSpecForProviderInspectJobActionsDeidentifyTransform
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfigTableTableIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobActionsDeidentify
     public V1beta1JobTriggerSpecForProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfigTableTableIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Table in bigquery to populate tableId.</summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfigTableTableIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -217,6 +226,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobActionsDeidentify
     public V1beta1JobTriggerSpecForProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfigTableTableIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfigTable
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -248,6 +258,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobActionsDeidentify
     public V1beta1JobTriggerSpecForProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfigTableTableIdSelector? TableIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfig
 {
     /// <summary>The BigQuery table in which to store the output. Structure is documented below.</summary>
@@ -255,6 +266,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobActionsDeidentify
     public IList<V1beta1JobTriggerSpecForProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfigTable>? Table { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobActionsDeidentify
 {
     /// <summary>User settable Cloud Storage bucket and folders to store de-identified files. This field must be set for cloud storage deidentification. The output Cloud Storage bucket must be different from the input bucket. De-identified files will overwrite files in the output path. Form of: gs://bucket/folder/ or gs://bucket</summary>
@@ -274,10 +286,12 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobActionsDeidentify
     public IList<V1beta1JobTriggerSpecForProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfig>? TransformationDetailsStorageConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobActionsJobNotificationEmails
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobActionsPubSub
 {
     /// <summary>Cloud Pub/Sub topic to send notifications to.</summary>
@@ -285,18 +299,22 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobActionsPubSub
     public string? Topic { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobActionsPublishFindingsToCloudDataCatalog
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobActionsPublishSummaryToCscc
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobActionsPublishToStackdriver
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobActionsSaveFindingsOutputConfigTable
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -312,6 +330,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobActionsSaveFindin
     public string? TableId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobActionsSaveFindingsOutputConfig
 {
     /// <summary>Schema used for writing the findings for Inspect jobs. This field is only used for Inspect and must be unspecified for Risk jobs. Columns are derived from the Finding object. If appending to an existing table, any columns from the predefined schema that are missing will be added. No columns in the existing table will be deleted. If unspecified, then all available columns will be used for a new table or an (existing) table with no schema, and no changes will be made to an existing table that has a schema. Only for use with external storage. Possible values are: BASIC_COLUMNS, GCS_COLUMNS, DATASTORE_COLUMNS, BIG_QUERY_COLUMNS, ALL_COLUMNS.</summary>
@@ -323,6 +342,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobActionsSaveFindin
     public IList<V1beta1JobTriggerSpecForProviderInspectJobActionsSaveFindingsOutputConfigTable>? Table { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobActionsSaveFindings
 {
     /// <summary>Information on where to store output Structure is documented below.</summary>
@@ -330,6 +350,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobActionsSaveFindin
     public IList<V1beta1JobTriggerSpecForProviderInspectJobActionsSaveFindingsOutputConfig>? OutputConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobActions
 {
     /// <summary>Create a de-identified copy of the requested table or files. Structure is documented below.</summary>
@@ -361,6 +382,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobActions
     public IList<V1beta1JobTriggerSpecForProviderInspectJobActionsSaveFindings>? SaveFindings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigCustomInfoTypesDictionaryCloudStoragePath
 {
     /// <summary>A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt</summary>
@@ -368,6 +390,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigCust
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigCustomInfoTypesDictionaryWordList
 {
     /// <summary>Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits.</summary>
@@ -375,6 +398,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigCust
     public IList<string>? Words { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigCustomInfoTypesDictionary
 {
     /// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted. Structure is documented below.</summary>
@@ -386,6 +410,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigCust
     public IList<V1beta1JobTriggerSpecForProviderInspectJobInspectConfigCustomInfoTypesDictionaryWordList>? WordList { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigCustomInfoTypesInfoTypeSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -393,6 +418,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigCust
     public string? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigCustomInfoTypesInfoType
 {
     /// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: Required to filter out rows based on the given start and end times. If not specified and the table was modified between the given start and end times, the entire table will be scanned. The valid data types of the timestamp field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column. For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the timestamp property does not exist or its value is empty or invalid.</summary>
@@ -408,6 +434,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigCust
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigCustomInfoTypesRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -419,6 +446,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigCust
     public string? Pattern { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigCustomInfoTypesSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -426,6 +454,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigCust
     public string? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigCustomInfoTypesStoredType
 {
     /// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: Required to filter out rows based on the given start and end times. If not specified and the table was modified between the given start and end times, the entire table will be scanned. The valid data types of the timestamp field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column. For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the timestamp property does not exist or its value is empty or invalid.</summary>
@@ -433,10 +462,12 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigCust
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigCustomInfoTypesSurrogateType
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigCustomInfoTypes
 {
     /// <summary>Dictionary which defines the rule. Structure is documented below.</summary>
@@ -472,6 +503,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigCust
     public IList<V1beta1JobTriggerSpecForProviderInspectJobInspectConfigCustomInfoTypesSurrogateType>? SurrogateType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigInfoTypesSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -479,6 +511,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigInfo
     public string? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigInfoTypes
 {
     /// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: Required to filter out rows based on the given start and end times. If not specified and the table was modified between the given start and end times, the entire table will be scanned. The valid data types of the timestamp field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column. For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the timestamp property does not exist or its value is empty or invalid.</summary>
@@ -494,6 +527,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigInfo
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -501,6 +535,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigLimi
     public string? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeInfoType
 {
     /// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: Required to filter out rows based on the given start and end times. If not specified and the table was modified between the given start and end times, the entire table will be scanned. The valid data types of the timestamp field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column. For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the timestamp property does not exist or its value is empty or invalid.</summary>
@@ -516,6 +551,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigLimi
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigLimitsMaxFindingsPerInfoType
 {
     /// <summary>Type of information the findings limit applies to. Only one limit per infoType should be provided. If InfoTypeLimit does not have an infoType, the DLP API applies the limit against all infoTypes that are found but not specified in another InfoTypeLimit. Structure is documented below.</summary>
@@ -527,6 +563,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigLimi
     public double? MaxFindings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigLimits
 {
     /// <summary>Configuration of findings limit given for specified infoTypes. Structure is documented below.</summary>
@@ -542,6 +579,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigLimi
     public double? MaxFindingsPerRequest { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRuleSetInfoTypesSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -549,6 +587,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRule
     public string? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRuleSetInfoTypes
 {
     /// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: Required to filter out rows based on the given start and end times. If not specified and the table was modified between the given start and end times, the entire table will be scanned. The valid data types of the timestamp field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column. For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the timestamp property does not exist or its value is empty or invalid.</summary>
@@ -564,6 +603,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRule
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath
 {
     /// <summary>A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt</summary>
@@ -571,6 +611,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRule
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryWordList
 {
     /// <summary>Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits.</summary>
@@ -578,6 +619,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRule
     public IList<string>? Words { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRuleSetRulesExclusionRuleDictionary
 {
     /// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted. Structure is documented below.</summary>
@@ -589,6 +631,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRule
     public IList<V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryWordList>? WordList { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordHotwordRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -600,6 +643,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRule
     public string? Pattern { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordProximity
 {
     /// <summary>Number of characters after the finding to consider. Either this or window_before must be specified</summary>
@@ -611,6 +655,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRule
     public double? WindowBefore { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotword
 {
     /// <summary>Regular expression pattern defining what qualifies as a hotword. Structure is documented below.</summary>
@@ -622,6 +667,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRule
     public IList<V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordProximity>? Proximity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -629,6 +675,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRule
     public string? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes
 {
     /// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: Required to filter out rows based on the given start and end times. If not specified and the table was modified between the given start and end times, the entire table will be scanned. The valid data types of the timestamp field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column. For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the timestamp property does not exist or its value is empty or invalid.</summary>
@@ -644,6 +691,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRule
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes
 {
     /// <summary>List of infoTypes this rule set is applied to. Structure is documented below.</summary>
@@ -651,6 +699,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRule
     public IList<V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes>? InfoTypes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRuleSetRulesExclusionRuleRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -662,6 +711,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRule
     public string? Pattern { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRuleSetRulesExclusionRule
 {
     /// <summary>Dictionary which defines the rule. Structure is documented below.</summary>
@@ -685,6 +735,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRule
     public IList<V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRuleSetRulesExclusionRuleRegex>? Regex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRuleSetRulesHotwordRuleHotwordRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -696,6 +747,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRule
     public string? Pattern { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment
 {
     /// <summary>Set the likelihood of a finding to a fixed value. Either this or relative_likelihood can be set. Possible values are: VERY_UNLIKELY, UNLIKELY, POSSIBLE, LIKELY, VERY_LIKELY.</summary>
@@ -707,6 +759,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRule
     public double? RelativeLikelihood { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRuleSetRulesHotwordRuleProximity
 {
     /// <summary>Number of characters after the finding to consider. Either this or window_before must be specified</summary>
@@ -718,6 +771,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRule
     public double? WindowBefore { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRuleSetRulesHotwordRule
 {
     /// <summary>Regular expression pattern defining what qualifies as a hotword. Structure is documented below.</summary>
@@ -733,6 +787,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRule
     public IList<V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRuleSetRulesHotwordRuleProximity>? Proximity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRuleSetRules
 {
     /// <summary>The rule that specifies conditions when findings of infoTypes specified in InspectionRuleSet are removed from results. Structure is documented below.</summary>
@@ -744,6 +799,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRule
     public IList<V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRuleSetRulesHotwordRule>? HotwordRule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRuleSet
 {
     /// <summary>List of infoTypes this rule set is applied to. Structure is documented below.</summary>
@@ -755,6 +811,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRule
     public IList<V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRuleSetRules>? Rules { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfig
 {
     /// <summary>Custom info types to be used. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more. Structure is documented below.</summary>
@@ -786,6 +843,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobInspectConfig
     public IList<V1beta1JobTriggerSpecForProviderInspectJobInspectConfigRuleSet>? RuleSet { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobStorageConfigBigQueryOptionsExcludedFields
 {
     /// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: Required to filter out rows based on the given start and end times. If not specified and the table was modified between the given start and end times, the entire table will be scanned. The valid data types of the timestamp field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column. For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the timestamp property does not exist or its value is empty or invalid.</summary>
@@ -793,6 +851,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobStorageConfigBigQ
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobStorageConfigBigQueryOptionsIdentifyingFields
 {
     /// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: Required to filter out rows based on the given start and end times. If not specified and the table was modified between the given start and end times, the entire table will be scanned. The valid data types of the timestamp field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column. For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the timestamp property does not exist or its value is empty or invalid.</summary>
@@ -800,6 +859,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobStorageConfigBigQ
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobStorageConfigBigQueryOptionsIncludedFields
 {
     /// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: Required to filter out rows based on the given start and end times. If not specified and the table was modified between the given start and end times, the entire table will be scanned. The valid data types of the timestamp field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column. For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the timestamp property does not exist or its value is empty or invalid.</summary>
@@ -807,6 +867,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobStorageConfigBigQ
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobStorageConfigBigQueryOptionsTableReference
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -822,6 +883,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobStorageConfigBigQ
     public string? TableId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobStorageConfigBigQueryOptions
 {
     /// <summary>References to fields excluded from scanning. This allows you to skip inspection of entire columns which you know have no findings. Structure is documented below.</summary>
@@ -853,6 +915,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobStorageConfigBigQ
     public IList<V1beta1JobTriggerSpecForProviderInspectJobStorageConfigBigQueryOptionsTableReference>? TableReference { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet
 {
     /// <summary>The name of a Cloud Storage bucket.</summary>
@@ -868,6 +931,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobStorageConfigClou
     public IList<string>? IncludeRegex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobStorageConfigCloudStorageOptionsFileSet
 {
     /// <summary>The regex-filtered set of files to scan. Structure is documented below.</summary>
@@ -879,6 +943,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobStorageConfigClou
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobStorageConfigCloudStorageOptions
 {
     /// <summary>Max number of bytes to scan from a file. If a scanned file's size is bigger than this value then the rest of the bytes are omitted.</summary>
@@ -906,6 +971,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobStorageConfigClou
     public string? SampleMethod { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobStorageConfigDatastoreOptionsKind
 {
     /// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: Required to filter out rows based on the given start and end times. If not specified and the table was modified between the given start and end times, the entire table will be scanned. The valid data types of the timestamp field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column. For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the timestamp property does not exist or its value is empty or invalid.</summary>
@@ -913,6 +979,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobStorageConfigData
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobStorageConfigDatastoreOptionsPartitionId
 {
     /// <summary>If not empty, the ID of the namespace to which the entities belong.</summary>
@@ -924,6 +991,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobStorageConfigData
     public string? ProjectId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobStorageConfigDatastoreOptions
 {
     /// <summary>A representation of a Datastore kind. Structure is documented below.</summary>
@@ -935,6 +1003,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobStorageConfigData
     public IList<V1beta1JobTriggerSpecForProviderInspectJobStorageConfigDatastoreOptionsPartitionId>? PartitionId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobStorageConfigHybridOptionsTableOptionsIdentifyingFields
 {
     /// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: Required to filter out rows based on the given start and end times. If not specified and the table was modified between the given start and end times, the entire table will be scanned. The valid data types of the timestamp field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column. For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the timestamp property does not exist or its value is empty or invalid.</summary>
@@ -942,6 +1011,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobStorageConfigHybr
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobStorageConfigHybridOptionsTableOptions
 {
     /// <summary>The columns that are the primary keys for table objects included in ContentItem. A copy of this cell's value will stored alongside alongside each finding so that the finding can be traced to the specific row it came from. No more than 3 may be provided. Structure is documented below.</summary>
@@ -949,6 +1019,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobStorageConfigHybr
     public IList<V1beta1JobTriggerSpecForProviderInspectJobStorageConfigHybridOptionsTableOptionsIdentifyingFields>? IdentifyingFields { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobStorageConfigHybridOptions
 {
     /// <summary>A description of the job trigger.</summary>
@@ -968,6 +1039,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobStorageConfigHybr
     public IList<V1beta1JobTriggerSpecForProviderInspectJobStorageConfigHybridOptionsTableOptions>? TableOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobStorageConfigTimespanConfigTimestampField
 {
     /// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: Required to filter out rows based on the given start and end times. If not specified and the table was modified between the given start and end times, the entire table will be scanned. The valid data types of the timestamp field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column. For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the timestamp property does not exist or its value is empty or invalid.</summary>
@@ -975,6 +1047,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobStorageConfigTime
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobStorageConfigTimespanConfig
 {
     /// <summary>When the job is started by a JobTrigger we will automatically figure out a valid startTime to avoid scanning files that have not been modified since the last time the JobTrigger executed. This will be based on the time of the execution of the last run of the JobTrigger or the timespan endTime used in the last run of the JobTrigger.</summary>
@@ -994,6 +1067,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobStorageConfigTime
     public IList<V1beta1JobTriggerSpecForProviderInspectJobStorageConfigTimespanConfigTimestampField>? TimestampField { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJobStorageConfig
 {
     /// <summary>Options defining BigQuery table and row identifiers. Structure is documented below.</summary>
@@ -1017,6 +1091,7 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJobStorageConfig
     public IList<V1beta1JobTriggerSpecForProviderInspectJobStorageConfigTimespanConfig>? TimespanConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderInspectJob
 {
     /// <summary>Configuration block for the actions to execute on the completion of a job. Can be specified multiple times, but only one for each type. Each action block supports fields documented below. This argument is processed in attribute-as-blocks mode. Structure is documented below.</summary>
@@ -1036,10 +1111,12 @@ public partial class V1beta1JobTriggerSpecForProviderInspectJob
     public IList<V1beta1JobTriggerSpecForProviderInspectJobStorageConfig>? StorageConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderTriggersManual
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderTriggersSchedule
 {
     /// <summary>With this option a job is started a regular periodic basis. For example: every day (86400 seconds). A scheduled start time will be skipped if the previous execution has not ended when its scheduled time occurs. This value must be set to a time duration greater than or equal to 1 day and can be no longer than 60 days. A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".</summary>
@@ -1047,6 +1124,7 @@ public partial class V1beta1JobTriggerSpecForProviderTriggersSchedule
     public string? RecurrencePeriodDuration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProviderTriggers
 {
     /// <summary>For use with hybrid jobs. Jobs must be manually created and finished.</summary>
@@ -1058,6 +1136,7 @@ public partial class V1beta1JobTriggerSpecForProviderTriggers
     public IList<V1beta1JobTriggerSpecForProviderTriggersSchedule>? Schedule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecForProvider
 {
     /// <summary>A description of the job trigger.</summary>
@@ -1089,6 +1168,7 @@ public partial class V1beta1JobTriggerSpecForProvider
     public IList<V1beta1JobTriggerSpecForProviderTriggers>? Triggers { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobActionsDeidentifyTransformationConfig
 {
     /// <summary>If this template is specified, it will serve as the default de-identify template.</summary>
@@ -1124,6 +1204,7 @@ public enum V1beta1JobTriggerSpecInitProviderInspectJobActionsDeidentifyTransfor
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfigTableDatasetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1137,6 +1218,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobActionsDeidentif
     public V1beta1JobTriggerSpecInitProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfigTableDatasetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Dataset in bigquery to populate datasetId.</summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfigTableDatasetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1168,6 +1250,7 @@ public enum V1beta1JobTriggerSpecInitProviderInspectJobActionsDeidentifyTransfor
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfigTableDatasetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1181,6 +1264,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobActionsDeidentif
     public V1beta1JobTriggerSpecInitProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfigTableDatasetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Dataset in bigquery to populate datasetId.</summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfigTableDatasetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1216,6 +1300,7 @@ public enum V1beta1JobTriggerSpecInitProviderInspectJobActionsDeidentifyTransfor
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfigTableTableIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1229,6 +1314,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobActionsDeidentif
     public V1beta1JobTriggerSpecInitProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfigTableTableIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Table in bigquery to populate tableId.</summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfigTableTableIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1260,6 +1346,7 @@ public enum V1beta1JobTriggerSpecInitProviderInspectJobActionsDeidentifyTransfor
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfigTableTableIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1273,6 +1360,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobActionsDeidentif
     public V1beta1JobTriggerSpecInitProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfigTableTableIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Table in bigquery to populate tableId.</summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfigTableTableIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1288,6 +1376,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobActionsDeidentif
     public V1beta1JobTriggerSpecInitProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfigTableTableIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfigTable
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -1319,6 +1408,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobActionsDeidentif
     public V1beta1JobTriggerSpecInitProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfigTableTableIdSelector? TableIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfig
 {
     /// <summary>The BigQuery table in which to store the output. Structure is documented below.</summary>
@@ -1326,6 +1416,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobActionsDeidentif
     public IList<V1beta1JobTriggerSpecInitProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfigTable>? Table { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobActionsDeidentify
 {
     /// <summary>User settable Cloud Storage bucket and folders to store de-identified files. This field must be set for cloud storage deidentification. The output Cloud Storage bucket must be different from the input bucket. De-identified files will overwrite files in the output path. Form of: gs://bucket/folder/ or gs://bucket</summary>
@@ -1345,10 +1436,12 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobActionsDeidentif
     public IList<V1beta1JobTriggerSpecInitProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfig>? TransformationDetailsStorageConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobActionsJobNotificationEmails
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobActionsPubSub
 {
     /// <summary>Cloud Pub/Sub topic to send notifications to.</summary>
@@ -1356,18 +1449,22 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobActionsPubSub
     public string? Topic { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobActionsPublishFindingsToCloudDataCatalog
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobActionsPublishSummaryToCscc
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobActionsPublishToStackdriver
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobActionsSaveFindingsOutputConfigTable
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -1383,6 +1480,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobActionsSaveFindi
     public string? TableId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobActionsSaveFindingsOutputConfig
 {
     /// <summary>Schema used for writing the findings for Inspect jobs. This field is only used for Inspect and must be unspecified for Risk jobs. Columns are derived from the Finding object. If appending to an existing table, any columns from the predefined schema that are missing will be added. No columns in the existing table will be deleted. If unspecified, then all available columns will be used for a new table or an (existing) table with no schema, and no changes will be made to an existing table that has a schema. Only for use with external storage. Possible values are: BASIC_COLUMNS, GCS_COLUMNS, DATASTORE_COLUMNS, BIG_QUERY_COLUMNS, ALL_COLUMNS.</summary>
@@ -1394,6 +1492,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobActionsSaveFindi
     public IList<V1beta1JobTriggerSpecInitProviderInspectJobActionsSaveFindingsOutputConfigTable>? Table { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobActionsSaveFindings
 {
     /// <summary>Information on where to store output Structure is documented below.</summary>
@@ -1401,6 +1500,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobActionsSaveFindi
     public IList<V1beta1JobTriggerSpecInitProviderInspectJobActionsSaveFindingsOutputConfig>? OutputConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobActions
 {
     /// <summary>Create a de-identified copy of the requested table or files. Structure is documented below.</summary>
@@ -1432,6 +1532,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobActions
     public IList<V1beta1JobTriggerSpecInitProviderInspectJobActionsSaveFindings>? SaveFindings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigCustomInfoTypesDictionaryCloudStoragePath
 {
     /// <summary>A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt</summary>
@@ -1439,6 +1540,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigCus
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigCustomInfoTypesDictionaryWordList
 {
     /// <summary>Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits.</summary>
@@ -1446,6 +1548,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigCus
     public IList<string>? Words { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigCustomInfoTypesDictionary
 {
     /// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted. Structure is documented below.</summary>
@@ -1457,6 +1560,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigCus
     public IList<V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigCustomInfoTypesDictionaryWordList>? WordList { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigCustomInfoTypesInfoTypeSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -1464,6 +1568,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigCus
     public string? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigCustomInfoTypesInfoType
 {
     /// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: Required to filter out rows based on the given start and end times. If not specified and the table was modified between the given start and end times, the entire table will be scanned. The valid data types of the timestamp field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column. For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the timestamp property does not exist or its value is empty or invalid.</summary>
@@ -1479,6 +1584,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigCus
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigCustomInfoTypesRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -1490,6 +1596,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigCus
     public string? Pattern { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigCustomInfoTypesSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -1497,6 +1604,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigCus
     public string? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigCustomInfoTypesStoredType
 {
     /// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: Required to filter out rows based on the given start and end times. If not specified and the table was modified between the given start and end times, the entire table will be scanned. The valid data types of the timestamp field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column. For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the timestamp property does not exist or its value is empty or invalid.</summary>
@@ -1504,10 +1612,12 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigCus
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigCustomInfoTypesSurrogateType
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigCustomInfoTypes
 {
     /// <summary>Dictionary which defines the rule. Structure is documented below.</summary>
@@ -1543,6 +1653,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigCus
     public IList<V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigCustomInfoTypesSurrogateType>? SurrogateType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigInfoTypesSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -1550,6 +1661,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigInf
     public string? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigInfoTypes
 {
     /// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: Required to filter out rows based on the given start and end times. If not specified and the table was modified between the given start and end times, the entire table will be scanned. The valid data types of the timestamp field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column. For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the timestamp property does not exist or its value is empty or invalid.</summary>
@@ -1565,6 +1677,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigInf
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -1572,6 +1685,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigLim
     public string? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeInfoType
 {
     /// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: Required to filter out rows based on the given start and end times. If not specified and the table was modified between the given start and end times, the entire table will be scanned. The valid data types of the timestamp field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column. For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the timestamp property does not exist or its value is empty or invalid.</summary>
@@ -1587,6 +1701,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigLim
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigLimitsMaxFindingsPerInfoType
 {
     /// <summary>Type of information the findings limit applies to. Only one limit per infoType should be provided. If InfoTypeLimit does not have an infoType, the DLP API applies the limit against all infoTypes that are found but not specified in another InfoTypeLimit. Structure is documented below.</summary>
@@ -1598,6 +1713,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigLim
     public double? MaxFindings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigLimits
 {
     /// <summary>Configuration of findings limit given for specified infoTypes. Structure is documented below.</summary>
@@ -1613,6 +1729,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigLim
     public double? MaxFindingsPerRequest { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRuleSetInfoTypesSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -1620,6 +1737,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRul
     public string? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRuleSetInfoTypes
 {
     /// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: Required to filter out rows based on the given start and end times. If not specified and the table was modified between the given start and end times, the entire table will be scanned. The valid data types of the timestamp field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column. For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the timestamp property does not exist or its value is empty or invalid.</summary>
@@ -1635,6 +1753,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRul
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath
 {
     /// <summary>A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt</summary>
@@ -1642,6 +1761,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRul
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryWordList
 {
     /// <summary>Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits.</summary>
@@ -1649,6 +1769,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRul
     public IList<string>? Words { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRuleSetRulesExclusionRuleDictionary
 {
     /// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted. Structure is documented below.</summary>
@@ -1660,6 +1781,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRul
     public IList<V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryWordList>? WordList { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordHotwordRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -1671,6 +1793,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRul
     public string? Pattern { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordProximity
 {
     /// <summary>Number of characters after the finding to consider. Either this or window_before must be specified</summary>
@@ -1682,6 +1805,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRul
     public double? WindowBefore { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotword
 {
     /// <summary>Regular expression pattern defining what qualifies as a hotword. Structure is documented below.</summary>
@@ -1693,6 +1817,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRul
     public IList<V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordProximity>? Proximity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -1700,6 +1825,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRul
     public string? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes
 {
     /// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: Required to filter out rows based on the given start and end times. If not specified and the table was modified between the given start and end times, the entire table will be scanned. The valid data types of the timestamp field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column. For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the timestamp property does not exist or its value is empty or invalid.</summary>
@@ -1715,6 +1841,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRul
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes
 {
     /// <summary>List of infoTypes this rule set is applied to. Structure is documented below.</summary>
@@ -1722,6 +1849,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRul
     public IList<V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes>? InfoTypes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRuleSetRulesExclusionRuleRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -1733,6 +1861,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRul
     public string? Pattern { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRuleSetRulesExclusionRule
 {
     /// <summary>Dictionary which defines the rule. Structure is documented below.</summary>
@@ -1756,6 +1885,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRul
     public IList<V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRuleSetRulesExclusionRuleRegex>? Regex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRuleSetRulesHotwordRuleHotwordRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -1767,6 +1897,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRul
     public string? Pattern { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment
 {
     /// <summary>Set the likelihood of a finding to a fixed value. Either this or relative_likelihood can be set. Possible values are: VERY_UNLIKELY, UNLIKELY, POSSIBLE, LIKELY, VERY_LIKELY.</summary>
@@ -1778,6 +1909,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRul
     public double? RelativeLikelihood { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRuleSetRulesHotwordRuleProximity
 {
     /// <summary>Number of characters after the finding to consider. Either this or window_before must be specified</summary>
@@ -1789,6 +1921,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRul
     public double? WindowBefore { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRuleSetRulesHotwordRule
 {
     /// <summary>Regular expression pattern defining what qualifies as a hotword. Structure is documented below.</summary>
@@ -1804,6 +1937,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRul
     public IList<V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRuleSetRulesHotwordRuleProximity>? Proximity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRuleSetRules
 {
     /// <summary>The rule that specifies conditions when findings of infoTypes specified in InspectionRuleSet are removed from results. Structure is documented below.</summary>
@@ -1815,6 +1949,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRul
     public IList<V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRuleSetRulesHotwordRule>? HotwordRule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRuleSet
 {
     /// <summary>List of infoTypes this rule set is applied to. Structure is documented below.</summary>
@@ -1826,6 +1961,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRul
     public IList<V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRuleSetRules>? Rules { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfig
 {
     /// <summary>Custom info types to be used. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more. Structure is documented below.</summary>
@@ -1857,6 +1993,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobInspectConfig
     public IList<V1beta1JobTriggerSpecInitProviderInspectJobInspectConfigRuleSet>? RuleSet { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigBigQueryOptionsExcludedFields
 {
     /// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: Required to filter out rows based on the given start and end times. If not specified and the table was modified between the given start and end times, the entire table will be scanned. The valid data types of the timestamp field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column. For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the timestamp property does not exist or its value is empty or invalid.</summary>
@@ -1864,6 +2001,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigBig
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigBigQueryOptionsIdentifyingFields
 {
     /// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: Required to filter out rows based on the given start and end times. If not specified and the table was modified between the given start and end times, the entire table will be scanned. The valid data types of the timestamp field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column. For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the timestamp property does not exist or its value is empty or invalid.</summary>
@@ -1871,6 +2009,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigBig
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigBigQueryOptionsIncludedFields
 {
     /// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: Required to filter out rows based on the given start and end times. If not specified and the table was modified between the given start and end times, the entire table will be scanned. The valid data types of the timestamp field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column. For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the timestamp property does not exist or its value is empty or invalid.</summary>
@@ -1878,6 +2017,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigBig
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigBigQueryOptionsTableReference
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -1893,6 +2033,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigBig
     public string? TableId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigBigQueryOptions
 {
     /// <summary>References to fields excluded from scanning. This allows you to skip inspection of entire columns which you know have no findings. Structure is documented below.</summary>
@@ -1924,6 +2065,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigBig
     public IList<V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigBigQueryOptionsTableReference>? TableReference { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet
 {
     /// <summary>The name of a Cloud Storage bucket.</summary>
@@ -1939,6 +2081,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigClo
     public IList<string>? IncludeRegex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigCloudStorageOptionsFileSet
 {
     /// <summary>The regex-filtered set of files to scan. Structure is documented below.</summary>
@@ -1950,6 +2093,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigClo
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigCloudStorageOptions
 {
     /// <summary>Max number of bytes to scan from a file. If a scanned file's size is bigger than this value then the rest of the bytes are omitted.</summary>
@@ -1977,6 +2121,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigClo
     public string? SampleMethod { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigDatastoreOptionsKind
 {
     /// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: Required to filter out rows based on the given start and end times. If not specified and the table was modified between the given start and end times, the entire table will be scanned. The valid data types of the timestamp field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column. For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the timestamp property does not exist or its value is empty or invalid.</summary>
@@ -1984,6 +2129,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigDat
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigDatastoreOptionsPartitionId
 {
     /// <summary>If not empty, the ID of the namespace to which the entities belong.</summary>
@@ -1995,6 +2141,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigDat
     public string? ProjectId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigDatastoreOptions
 {
     /// <summary>A representation of a Datastore kind. Structure is documented below.</summary>
@@ -2006,6 +2153,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigDat
     public IList<V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigDatastoreOptionsPartitionId>? PartitionId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigHybridOptionsTableOptionsIdentifyingFields
 {
     /// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: Required to filter out rows based on the given start and end times. If not specified and the table was modified between the given start and end times, the entire table will be scanned. The valid data types of the timestamp field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column. For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the timestamp property does not exist or its value is empty or invalid.</summary>
@@ -2013,6 +2161,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigHyb
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigHybridOptionsTableOptions
 {
     /// <summary>The columns that are the primary keys for table objects included in ContentItem. A copy of this cell's value will stored alongside alongside each finding so that the finding can be traced to the specific row it came from. No more than 3 may be provided. Structure is documented below.</summary>
@@ -2020,6 +2169,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigHyb
     public IList<V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigHybridOptionsTableOptionsIdentifyingFields>? IdentifyingFields { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigHybridOptions
 {
     /// <summary>A description of the job trigger.</summary>
@@ -2039,6 +2189,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigHyb
     public IList<V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigHybridOptionsTableOptions>? TableOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigTimespanConfigTimestampField
 {
     /// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: Required to filter out rows based on the given start and end times. If not specified and the table was modified between the given start and end times, the entire table will be scanned. The valid data types of the timestamp field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column. For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the timestamp property does not exist or its value is empty or invalid.</summary>
@@ -2046,6 +2197,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigTim
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigTimespanConfig
 {
     /// <summary>When the job is started by a JobTrigger we will automatically figure out a valid startTime to avoid scanning files that have not been modified since the last time the JobTrigger executed. This will be based on the time of the execution of the last run of the JobTrigger or the timespan endTime used in the last run of the JobTrigger.</summary>
@@ -2065,6 +2217,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigTim
     public IList<V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigTimespanConfigTimestampField>? TimestampField { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJobStorageConfig
 {
     /// <summary>Options defining BigQuery table and row identifiers. Structure is documented below.</summary>
@@ -2088,6 +2241,7 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJobStorageConfig
     public IList<V1beta1JobTriggerSpecInitProviderInspectJobStorageConfigTimespanConfig>? TimespanConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderInspectJob
 {
     /// <summary>Configuration block for the actions to execute on the completion of a job. Can be specified multiple times, but only one for each type. Each action block supports fields documented below. This argument is processed in attribute-as-blocks mode. Structure is documented below.</summary>
@@ -2107,10 +2261,12 @@ public partial class V1beta1JobTriggerSpecInitProviderInspectJob
     public IList<V1beta1JobTriggerSpecInitProviderInspectJobStorageConfig>? StorageConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderTriggersManual
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderTriggersSchedule
 {
     /// <summary>With this option a job is started a regular periodic basis. For example: every day (86400 seconds). A scheduled start time will be skipped if the previous execution has not ended when its scheduled time occurs. This value must be set to a time duration greater than or equal to 1 day and can be no longer than 60 days. A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".</summary>
@@ -2118,6 +2274,7 @@ public partial class V1beta1JobTriggerSpecInitProviderTriggersSchedule
     public string? RecurrencePeriodDuration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerSpecInitProviderTriggers
 {
     /// <summary>For use with hybrid jobs. Jobs must be manually created and finished.</summary>
@@ -2129,6 +2286,7 @@ public partial class V1beta1JobTriggerSpecInitProviderTriggers
     public IList<V1beta1JobTriggerSpecInitProviderTriggersSchedule>? Schedule { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1JobTriggerSpecInitProvider
 {
     /// <summary>A description of the job trigger.</summary>
@@ -2202,6 +2360,7 @@ public enum V1beta1JobTriggerSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobTriggerSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2215,6 +2374,7 @@ public partial class V1beta1JobTriggerSpecProviderConfigRefPolicy
     public V1beta1JobTriggerSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1JobTriggerSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2246,6 +2406,7 @@ public enum V1beta1JobTriggerSpecPublishConnectionDetailsToConfigRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobTriggerSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2259,6 +2420,7 @@ public partial class V1beta1JobTriggerSpecPublishConnectionDetailsToConfigRefPol
     public V1beta1JobTriggerSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1JobTriggerSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2270,6 +2432,7 @@ public partial class V1beta1JobTriggerSpecPublishConnectionDetailsToConfigRef
     public V1beta1JobTriggerSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1JobTriggerSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -2285,6 +2448,7 @@ public partial class V1beta1JobTriggerSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1JobTriggerSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -2300,6 +2464,7 @@ public partial class V1beta1JobTriggerSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1JobTriggerSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -2311,6 +2476,7 @@ public partial class V1beta1JobTriggerSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>JobTriggerSpec defines the desired state of JobTrigger</summary>
 public partial class V1beta1JobTriggerSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -2343,6 +2509,7 @@ public partial class V1beta1JobTriggerSpec
     public V1beta1JobTriggerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobActionsDeidentifyTransformationConfig
 {
     /// <summary>If this template is specified, it will serve as the default de-identify template.</summary>
@@ -2358,6 +2525,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobActionsDeidentif
     public string? StructuredDeidentifyTemplate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfigTable
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -2373,6 +2541,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobActionsDeidentif
     public string? TableId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfig
 {
     /// <summary>The BigQuery table in which to store the output. Structure is documented below.</summary>
@@ -2380,6 +2549,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobActionsDeidentif
     public IList<V1beta1JobTriggerStatusAtProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfigTable>? Table { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobActionsDeidentify
 {
     /// <summary>User settable Cloud Storage bucket and folders to store de-identified files. This field must be set for cloud storage deidentification. The output Cloud Storage bucket must be different from the input bucket. De-identified files will overwrite files in the output path. Form of: gs://bucket/folder/ or gs://bucket</summary>
@@ -2399,10 +2569,12 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobActionsDeidentif
     public IList<V1beta1JobTriggerStatusAtProviderInspectJobActionsDeidentifyTransformationDetailsStorageConfig>? TransformationDetailsStorageConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobActionsJobNotificationEmails
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobActionsPubSub
 {
     /// <summary>Cloud Pub/Sub topic to send notifications to.</summary>
@@ -2410,18 +2582,22 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobActionsPubSub
     public string? Topic { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobActionsPublishFindingsToCloudDataCatalog
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobActionsPublishSummaryToCscc
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobActionsPublishToStackdriver
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobActionsSaveFindingsOutputConfigTable
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -2437,6 +2613,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobActionsSaveFindi
     public string? TableId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobActionsSaveFindingsOutputConfig
 {
     /// <summary>Schema used for writing the findings for Inspect jobs. This field is only used for Inspect and must be unspecified for Risk jobs. Columns are derived from the Finding object. If appending to an existing table, any columns from the predefined schema that are missing will be added. No columns in the existing table will be deleted. If unspecified, then all available columns will be used for a new table or an (existing) table with no schema, and no changes will be made to an existing table that has a schema. Only for use with external storage. Possible values are: BASIC_COLUMNS, GCS_COLUMNS, DATASTORE_COLUMNS, BIG_QUERY_COLUMNS, ALL_COLUMNS.</summary>
@@ -2448,6 +2625,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobActionsSaveFindi
     public IList<V1beta1JobTriggerStatusAtProviderInspectJobActionsSaveFindingsOutputConfigTable>? Table { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobActionsSaveFindings
 {
     /// <summary>Information on where to store output Structure is documented below.</summary>
@@ -2455,6 +2633,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobActionsSaveFindi
     public IList<V1beta1JobTriggerStatusAtProviderInspectJobActionsSaveFindingsOutputConfig>? OutputConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobActions
 {
     /// <summary>Create a de-identified copy of the requested table or files. Structure is documented below.</summary>
@@ -2486,6 +2665,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobActions
     public IList<V1beta1JobTriggerStatusAtProviderInspectJobActionsSaveFindings>? SaveFindings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigCustomInfoTypesDictionaryCloudStoragePath
 {
     /// <summary>A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt</summary>
@@ -2493,6 +2673,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigCus
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigCustomInfoTypesDictionaryWordList
 {
     /// <summary>Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits.</summary>
@@ -2500,6 +2681,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigCus
     public IList<string>? Words { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigCustomInfoTypesDictionary
 {
     /// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted. Structure is documented below.</summary>
@@ -2511,6 +2693,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigCus
     public IList<V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigCustomInfoTypesDictionaryWordList>? WordList { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigCustomInfoTypesInfoTypeSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -2518,6 +2701,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigCus
     public string? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigCustomInfoTypesInfoType
 {
     /// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: Required to filter out rows based on the given start and end times. If not specified and the table was modified between the given start and end times, the entire table will be scanned. The valid data types of the timestamp field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column. For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the timestamp property does not exist or its value is empty or invalid.</summary>
@@ -2533,6 +2717,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigCus
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigCustomInfoTypesRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -2544,6 +2729,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigCus
     public string? Pattern { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigCustomInfoTypesSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -2551,6 +2737,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigCus
     public string? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigCustomInfoTypesStoredType
 {
     /// <summary>(Output) The creation timestamp of an inspectTemplate. Set by the server.</summary>
@@ -2562,10 +2749,12 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigCus
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigCustomInfoTypesSurrogateType
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigCustomInfoTypes
 {
     /// <summary>Dictionary which defines the rule. Structure is documented below.</summary>
@@ -2601,6 +2790,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigCus
     public IList<V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigCustomInfoTypesSurrogateType>? SurrogateType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigInfoTypesSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -2608,6 +2798,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigInf
     public string? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigInfoTypes
 {
     /// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: Required to filter out rows based on the given start and end times. If not specified and the table was modified between the given start and end times, the entire table will be scanned. The valid data types of the timestamp field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column. For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the timestamp property does not exist or its value is empty or invalid.</summary>
@@ -2623,6 +2814,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigInf
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -2630,6 +2822,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigLim
     public string? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeInfoType
 {
     /// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: Required to filter out rows based on the given start and end times. If not specified and the table was modified between the given start and end times, the entire table will be scanned. The valid data types of the timestamp field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column. For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the timestamp property does not exist or its value is empty or invalid.</summary>
@@ -2645,6 +2838,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigLim
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigLimitsMaxFindingsPerInfoType
 {
     /// <summary>Type of information the findings limit applies to. Only one limit per infoType should be provided. If InfoTypeLimit does not have an infoType, the DLP API applies the limit against all infoTypes that are found but not specified in another InfoTypeLimit. Structure is documented below.</summary>
@@ -2656,6 +2850,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigLim
     public double? MaxFindings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigLimits
 {
     /// <summary>Configuration of findings limit given for specified infoTypes. Structure is documented below.</summary>
@@ -2671,6 +2866,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigLim
     public double? MaxFindingsPerRequest { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRuleSetInfoTypesSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -2678,6 +2874,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRul
     public string? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRuleSetInfoTypes
 {
     /// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: Required to filter out rows based on the given start and end times. If not specified and the table was modified between the given start and end times, the entire table will be scanned. The valid data types of the timestamp field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column. For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the timestamp property does not exist or its value is empty or invalid.</summary>
@@ -2693,6 +2890,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRul
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath
 {
     /// <summary>A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt</summary>
@@ -2700,6 +2898,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRul
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryWordList
 {
     /// <summary>Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits.</summary>
@@ -2707,6 +2906,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRul
     public IList<string>? Words { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRuleSetRulesExclusionRuleDictionary
 {
     /// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted. Structure is documented below.</summary>
@@ -2718,6 +2918,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRul
     public IList<V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryWordList>? WordList { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordHotwordRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -2729,6 +2930,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRul
     public string? Pattern { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordProximity
 {
     /// <summary>Number of characters after the finding to consider. Either this or window_before must be specified</summary>
@@ -2740,6 +2942,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRul
     public double? WindowBefore { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotword
 {
     /// <summary>Regular expression pattern defining what qualifies as a hotword. Structure is documented below.</summary>
@@ -2751,6 +2954,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRul
     public IList<V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordProximity>? Proximity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesSensitivityScore
 {
     /// <summary>The sensitivity score applied to the resource. Possible values are: SENSITIVITY_LOW, SENSITIVITY_MODERATE, SENSITIVITY_HIGH.</summary>
@@ -2758,6 +2962,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRul
     public string? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes
 {
     /// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: Required to filter out rows based on the given start and end times. If not specified and the table was modified between the given start and end times, the entire table will be scanned. The valid data types of the timestamp field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column. For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the timestamp property does not exist or its value is empty or invalid.</summary>
@@ -2773,6 +2978,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRul
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes
 {
     /// <summary>List of infoTypes this rule set is applied to. Structure is documented below.</summary>
@@ -2780,6 +2986,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRul
     public IList<V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes>? InfoTypes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRuleSetRulesExclusionRuleRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -2791,6 +2998,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRul
     public string? Pattern { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRuleSetRulesExclusionRule
 {
     /// <summary>Dictionary which defines the rule. Structure is documented below.</summary>
@@ -2814,6 +3022,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRul
     public IList<V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRuleSetRulesExclusionRuleRegex>? Regex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRuleSetRulesHotwordRuleHotwordRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -2825,6 +3034,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRul
     public string? Pattern { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment
 {
     /// <summary>Set the likelihood of a finding to a fixed value. Either this or relative_likelihood can be set. Possible values are: VERY_UNLIKELY, UNLIKELY, POSSIBLE, LIKELY, VERY_LIKELY.</summary>
@@ -2836,6 +3046,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRul
     public double? RelativeLikelihood { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRuleSetRulesHotwordRuleProximity
 {
     /// <summary>Number of characters after the finding to consider. Either this or window_before must be specified</summary>
@@ -2847,6 +3058,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRul
     public double? WindowBefore { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRuleSetRulesHotwordRule
 {
     /// <summary>Regular expression pattern defining what qualifies as a hotword. Structure is documented below.</summary>
@@ -2862,6 +3074,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRul
     public IList<V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRuleSetRulesHotwordRuleProximity>? Proximity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRuleSetRules
 {
     /// <summary>The rule that specifies conditions when findings of infoTypes specified in InspectionRuleSet are removed from results. Structure is documented below.</summary>
@@ -2873,6 +3086,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRul
     public IList<V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRuleSetRulesHotwordRule>? HotwordRule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRuleSet
 {
     /// <summary>List of infoTypes this rule set is applied to. Structure is documented below.</summary>
@@ -2884,6 +3098,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRul
     public IList<V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRuleSetRules>? Rules { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfig
 {
     /// <summary>Custom info types to be used. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more. Structure is documented below.</summary>
@@ -2915,6 +3130,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobInspectConfig
     public IList<V1beta1JobTriggerStatusAtProviderInspectJobInspectConfigRuleSet>? RuleSet { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigBigQueryOptionsExcludedFields
 {
     /// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: Required to filter out rows based on the given start and end times. If not specified and the table was modified between the given start and end times, the entire table will be scanned. The valid data types of the timestamp field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column. For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the timestamp property does not exist or its value is empty or invalid.</summary>
@@ -2922,6 +3138,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigBig
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigBigQueryOptionsIdentifyingFields
 {
     /// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: Required to filter out rows based on the given start and end times. If not specified and the table was modified between the given start and end times, the entire table will be scanned. The valid data types of the timestamp field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column. For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the timestamp property does not exist or its value is empty or invalid.</summary>
@@ -2929,6 +3146,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigBig
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigBigQueryOptionsIncludedFields
 {
     /// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: Required to filter out rows based on the given start and end times. If not specified and the table was modified between the given start and end times, the entire table will be scanned. The valid data types of the timestamp field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column. For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the timestamp property does not exist or its value is empty or invalid.</summary>
@@ -2936,6 +3154,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigBig
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigBigQueryOptionsTableReference
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -2951,6 +3170,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigBig
     public string? TableId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigBigQueryOptions
 {
     /// <summary>References to fields excluded from scanning. This allows you to skip inspection of entire columns which you know have no findings. Structure is documented below.</summary>
@@ -2982,6 +3202,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigBig
     public IList<V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigBigQueryOptionsTableReference>? TableReference { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet
 {
     /// <summary>The name of a Cloud Storage bucket.</summary>
@@ -2997,6 +3218,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigClo
     public IList<string>? IncludeRegex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigCloudStorageOptionsFileSet
 {
     /// <summary>The regex-filtered set of files to scan. Structure is documented below.</summary>
@@ -3008,6 +3230,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigClo
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigCloudStorageOptions
 {
     /// <summary>Max number of bytes to scan from a file. If a scanned file's size is bigger than this value then the rest of the bytes are omitted.</summary>
@@ -3035,6 +3258,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigClo
     public string? SampleMethod { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigDatastoreOptionsKind
 {
     /// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: Required to filter out rows based on the given start and end times. If not specified and the table was modified between the given start and end times, the entire table will be scanned. The valid data types of the timestamp field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column. For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the timestamp property does not exist or its value is empty or invalid.</summary>
@@ -3042,6 +3266,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigDat
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigDatastoreOptionsPartitionId
 {
     /// <summary>If not empty, the ID of the namespace to which the entities belong.</summary>
@@ -3053,6 +3278,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigDat
     public string? ProjectId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigDatastoreOptions
 {
     /// <summary>A representation of a Datastore kind. Structure is documented below.</summary>
@@ -3064,6 +3290,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigDat
     public IList<V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigDatastoreOptionsPartitionId>? PartitionId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigHybridOptionsTableOptionsIdentifyingFields
 {
     /// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: Required to filter out rows based on the given start and end times. If not specified and the table was modified between the given start and end times, the entire table will be scanned. The valid data types of the timestamp field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column. For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the timestamp property does not exist or its value is empty or invalid.</summary>
@@ -3071,6 +3298,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigHyb
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigHybridOptionsTableOptions
 {
     /// <summary>The columns that are the primary keys for table objects included in ContentItem. A copy of this cell's value will stored alongside alongside each finding so that the finding can be traced to the specific row it came from. No more than 3 may be provided. Structure is documented below.</summary>
@@ -3078,6 +3306,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigHyb
     public IList<V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigHybridOptionsTableOptionsIdentifyingFields>? IdentifyingFields { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigHybridOptions
 {
     /// <summary>A description of the job trigger.</summary>
@@ -3097,6 +3326,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigHyb
     public IList<V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigHybridOptionsTableOptions>? TableOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigTimespanConfigTimestampField
 {
     /// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: Required to filter out rows based on the given start and end times. If not specified and the table was modified between the given start and end times, the entire table will be scanned. The valid data types of the timestamp field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column. For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the timestamp property does not exist or its value is empty or invalid.</summary>
@@ -3104,6 +3334,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigTim
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigTimespanConfig
 {
     /// <summary>When the job is started by a JobTrigger we will automatically figure out a valid startTime to avoid scanning files that have not been modified since the last time the JobTrigger executed. This will be based on the time of the execution of the last run of the JobTrigger or the timespan endTime used in the last run of the JobTrigger.</summary>
@@ -3123,6 +3354,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigTim
     public IList<V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigTimespanConfigTimestampField>? TimestampField { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJobStorageConfig
 {
     /// <summary>Options defining BigQuery table and row identifiers. Structure is documented below.</summary>
@@ -3146,6 +3378,7 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJobStorageConfig
     public IList<V1beta1JobTriggerStatusAtProviderInspectJobStorageConfigTimespanConfig>? TimespanConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderInspectJob
 {
     /// <summary>Configuration block for the actions to execute on the completion of a job. Can be specified multiple times, but only one for each type. Each action block supports fields documented below. This argument is processed in attribute-as-blocks mode. Structure is documented below.</summary>
@@ -3165,10 +3398,12 @@ public partial class V1beta1JobTriggerStatusAtProviderInspectJob
     public IList<V1beta1JobTriggerStatusAtProviderInspectJobStorageConfig>? StorageConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderTriggersManual
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderTriggersSchedule
 {
     /// <summary>With this option a job is started a regular periodic basis. For example: every day (86400 seconds). A scheduled start time will be skipped if the previous execution has not ended when its scheduled time occurs. This value must be set to a time duration greater than or equal to 1 day and can be no longer than 60 days. A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".</summary>
@@ -3176,6 +3411,7 @@ public partial class V1beta1JobTriggerStatusAtProviderTriggersSchedule
     public string? RecurrencePeriodDuration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProviderTriggers
 {
     /// <summary>For use with hybrid jobs. Jobs must be manually created and finished.</summary>
@@ -3187,6 +3423,7 @@ public partial class V1beta1JobTriggerStatusAtProviderTriggers
     public IList<V1beta1JobTriggerStatusAtProviderTriggersSchedule>? Schedule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobTriggerStatusAtProvider
 {
     /// <summary>The creation timestamp of an inspectTemplate. Set by the server.</summary>
@@ -3238,6 +3475,7 @@ public partial class V1beta1JobTriggerStatusAtProvider
     public string? UpdateTime { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1JobTriggerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -3265,6 +3503,7 @@ public partial class V1beta1JobTriggerStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>JobTriggerStatus defines the observed state of JobTrigger.</summary>
 public partial class V1beta1JobTriggerStatus
 {
     /// <summary></summary>
@@ -3281,6 +3520,7 @@ public partial class V1beta1JobTriggerStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>JobTrigger is the Schema for the JobTriggers API. A job trigger configuration.</summary>
 public partial class V1beta1JobTrigger : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1JobTriggerSpec>, IStatus<V1beta1JobTriggerStatus>
 {
     public const string KubeApiVersion = "v1beta1";

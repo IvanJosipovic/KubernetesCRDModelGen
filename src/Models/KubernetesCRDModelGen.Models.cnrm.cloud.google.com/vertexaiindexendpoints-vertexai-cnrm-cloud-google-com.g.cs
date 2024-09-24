@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.vertexai.cnrm.cloud.google.com;
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1VertexAIIndexEndpointSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1VertexAIIndexEndpointSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1VertexAIIndexEndpointSpec
 {
     /// <summary>The description of the Index.</summary>
@@ -54,6 +56,7 @@ public partial class V1alpha1VertexAIIndexEndpointSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1VertexAIIndexEndpointStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -77,6 +80,7 @@ public partial class V1alpha1VertexAIIndexEndpointStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1VertexAIIndexEndpointStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -109,6 +113,7 @@ public partial class V1alpha1VertexAIIndexEndpointStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1VertexAIIndexEndpoint : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1VertexAIIndexEndpointSpec>, IStatus<V1alpha1VertexAIIndexEndpointStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

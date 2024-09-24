@@ -18,10 +18,12 @@ public enum V1beta1AMICopySpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1AMICopySpecForProviderEbsBlockDevice
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1AMICopySpecForProviderEphemeralBlockDevice
 {
 }
@@ -46,6 +48,7 @@ public enum V1beta1AMICopySpecForProviderKmsKeyIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AMICopySpecForProviderKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -59,6 +62,7 @@ public partial class V1beta1AMICopySpecForProviderKmsKeyIdRefPolicy
     public V1beta1AMICopySpecForProviderKmsKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1AMICopySpecForProviderKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -90,6 +94,7 @@ public enum V1beta1AMICopySpecForProviderKmsKeyIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AMICopySpecForProviderKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -103,6 +108,7 @@ public partial class V1beta1AMICopySpecForProviderKmsKeyIdSelectorPolicy
     public V1beta1AMICopySpecForProviderKmsKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1AMICopySpecForProviderKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -138,6 +144,7 @@ public enum V1beta1AMICopySpecForProviderSourceAmiIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AMICopySpecForProviderSourceAmiIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -151,6 +158,7 @@ public partial class V1beta1AMICopySpecForProviderSourceAmiIdRefPolicy
     public V1beta1AMICopySpecForProviderSourceAmiIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a AMI in ec2 to populate sourceAmiId.</summary>
 public partial class V1beta1AMICopySpecForProviderSourceAmiIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -182,6 +190,7 @@ public enum V1beta1AMICopySpecForProviderSourceAmiIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AMICopySpecForProviderSourceAmiIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -195,6 +204,7 @@ public partial class V1beta1AMICopySpecForProviderSourceAmiIdSelectorPolicy
     public V1beta1AMICopySpecForProviderSourceAmiIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a AMI in ec2 to populate sourceAmiId.</summary>
 public partial class V1beta1AMICopySpecForProviderSourceAmiIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -210,6 +220,7 @@ public partial class V1beta1AMICopySpecForProviderSourceAmiIdSelector
     public V1beta1AMICopySpecForProviderSourceAmiIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AMICopySpecForProvider
 {
     /// <summary></summary>
@@ -277,10 +288,12 @@ public partial class V1beta1AMICopySpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AMICopySpecInitProviderEbsBlockDevice
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1AMICopySpecInitProviderEphemeralBlockDevice
 {
 }
@@ -305,6 +318,7 @@ public enum V1beta1AMICopySpecInitProviderKmsKeyIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AMICopySpecInitProviderKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -318,6 +332,7 @@ public partial class V1beta1AMICopySpecInitProviderKmsKeyIdRefPolicy
     public V1beta1AMICopySpecInitProviderKmsKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1AMICopySpecInitProviderKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -349,6 +364,7 @@ public enum V1beta1AMICopySpecInitProviderKmsKeyIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AMICopySpecInitProviderKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -362,6 +378,7 @@ public partial class V1beta1AMICopySpecInitProviderKmsKeyIdSelectorPolicy
     public V1beta1AMICopySpecInitProviderKmsKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1AMICopySpecInitProviderKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -397,6 +414,7 @@ public enum V1beta1AMICopySpecInitProviderSourceAmiIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AMICopySpecInitProviderSourceAmiIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -410,6 +428,7 @@ public partial class V1beta1AMICopySpecInitProviderSourceAmiIdRefPolicy
     public V1beta1AMICopySpecInitProviderSourceAmiIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a AMI in ec2 to populate sourceAmiId.</summary>
 public partial class V1beta1AMICopySpecInitProviderSourceAmiIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -441,6 +460,7 @@ public enum V1beta1AMICopySpecInitProviderSourceAmiIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AMICopySpecInitProviderSourceAmiIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -454,6 +474,7 @@ public partial class V1beta1AMICopySpecInitProviderSourceAmiIdSelectorPolicy
     public V1beta1AMICopySpecInitProviderSourceAmiIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a AMI in ec2 to populate sourceAmiId.</summary>
 public partial class V1beta1AMICopySpecInitProviderSourceAmiIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -469,6 +490,7 @@ public partial class V1beta1AMICopySpecInitProviderSourceAmiIdSelector
     public V1beta1AMICopySpecInitProviderSourceAmiIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1AMICopySpecInitProvider
 {
     /// <summary></summary>
@@ -574,6 +596,7 @@ public enum V1beta1AMICopySpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AMICopySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -587,6 +610,7 @@ public partial class V1beta1AMICopySpecProviderConfigRefPolicy
     public V1beta1AMICopySpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1AMICopySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -618,6 +642,7 @@ public enum V1beta1AMICopySpecPublishConnectionDetailsToConfigRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AMICopySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -631,6 +656,7 @@ public partial class V1beta1AMICopySpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1AMICopySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1AMICopySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -642,6 +668,7 @@ public partial class V1beta1AMICopySpecPublishConnectionDetailsToConfigRef
     public V1beta1AMICopySpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1AMICopySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -657,6 +684,7 @@ public partial class V1beta1AMICopySpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1AMICopySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -672,6 +700,7 @@ public partial class V1beta1AMICopySpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1AMICopySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -683,6 +712,7 @@ public partial class V1beta1AMICopySpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>AMICopySpec defines the desired state of AMICopy</summary>
 public partial class V1beta1AMICopySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -715,6 +745,7 @@ public partial class V1beta1AMICopySpec
     public V1beta1AMICopySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AMICopyStatusAtProviderEbsBlockDevice
 {
     /// <summary></summary>
@@ -754,6 +785,7 @@ public partial class V1beta1AMICopyStatusAtProviderEbsBlockDevice
     public string? VolumeType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AMICopyStatusAtProviderEphemeralBlockDevice
 {
     /// <summary>Region-unique name for the AMI.</summary>
@@ -765,6 +797,7 @@ public partial class V1beta1AMICopyStatusAtProviderEphemeralBlockDevice
     public string? VirtualName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AMICopyStatusAtProvider
 {
     /// <summary></summary>
@@ -908,6 +941,7 @@ public partial class V1beta1AMICopyStatusAtProvider
     public string? VirtualizationType { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1AMICopyStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -935,6 +969,7 @@ public partial class V1beta1AMICopyStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>AMICopyStatus defines the observed state of AMICopy.</summary>
 public partial class V1beta1AMICopyStatus
 {
     /// <summary></summary>
@@ -951,6 +986,7 @@ public partial class V1beta1AMICopyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>AMICopy is the Schema for the AMICopys API. Duplicates an existing Amazon Machine Image (AMI)</summary>
 public partial class V1beta1AMICopy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AMICopySpec>, IStatus<V1beta1AMICopyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -38,6 +38,7 @@ public enum V1beta1BackendServiceSignedURLKeySpecForProviderBackendServiceRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackendServiceSignedURLKeySpecForProviderBackendServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1BackendServiceSignedURLKeySpecForProviderBackendServ
     public V1beta1BackendServiceSignedURLKeySpecForProviderBackendServiceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a BackendService in compute to populate backendService.</summary>
 public partial class V1beta1BackendServiceSignedURLKeySpecForProviderBackendServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1BackendServiceSignedURLKeySpecForProviderBackendServiceSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackendServiceSignedURLKeySpecForProviderBackendServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1BackendServiceSignedURLKeySpecForProviderBackendServ
     public V1beta1BackendServiceSignedURLKeySpecForProviderBackendServiceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a BackendService in compute to populate backendService.</summary>
 public partial class V1beta1BackendServiceSignedURLKeySpecForProviderBackendServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1BackendServiceSignedURLKeySpecForProviderBackendServ
     public V1beta1BackendServiceSignedURLKeySpecForProviderBackendServiceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>128-bit key value used for signing the URL. The key value must be a valid RFC 4648 Section 5 base64url encoded string. Note: This property is sensitive and will not be displayed in the plan.</summary>
 public partial class V1beta1BackendServiceSignedURLKeySpecForProviderKeyValueSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1BackendServiceSignedURLKeySpecForProviderKeyValueSec
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSignedURLKeySpecForProvider
 {
     /// <summary>The backend service this signed URL key belongs.</summary>
@@ -172,6 +178,7 @@ public enum V1beta1BackendServiceSignedURLKeySpecInitProviderBackendServiceRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackendServiceSignedURLKeySpecInitProviderBackendServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -185,6 +192,7 @@ public partial class V1beta1BackendServiceSignedURLKeySpecInitProviderBackendSer
     public V1beta1BackendServiceSignedURLKeySpecInitProviderBackendServiceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a BackendService in compute to populate backendService.</summary>
 public partial class V1beta1BackendServiceSignedURLKeySpecInitProviderBackendServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -216,6 +224,7 @@ public enum V1beta1BackendServiceSignedURLKeySpecInitProviderBackendServiceSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackendServiceSignedURLKeySpecInitProviderBackendServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -229,6 +238,7 @@ public partial class V1beta1BackendServiceSignedURLKeySpecInitProviderBackendSer
     public V1beta1BackendServiceSignedURLKeySpecInitProviderBackendServiceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a BackendService in compute to populate backendService.</summary>
 public partial class V1beta1BackendServiceSignedURLKeySpecInitProviderBackendServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -244,6 +254,7 @@ public partial class V1beta1BackendServiceSignedURLKeySpecInitProviderBackendSer
     public V1beta1BackendServiceSignedURLKeySpecInitProviderBackendServiceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>128-bit key value used for signing the URL. The key value must be a valid RFC 4648 Section 5 base64url encoded string. Note: This property is sensitive and will not be displayed in the plan.</summary>
 public partial class V1beta1BackendServiceSignedURLKeySpecInitProviderKeyValueSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -259,6 +270,7 @@ public partial class V1beta1BackendServiceSignedURLKeySpecInitProviderKeyValueSe
     public string Namespace { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1BackendServiceSignedURLKeySpecInitProvider
 {
     /// <summary>The backend service this signed URL key belongs.</summary>
@@ -328,6 +340,7 @@ public enum V1beta1BackendServiceSignedURLKeySpecProviderConfigRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackendServiceSignedURLKeySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -341,6 +354,7 @@ public partial class V1beta1BackendServiceSignedURLKeySpecProviderConfigRefPolic
     public V1beta1BackendServiceSignedURLKeySpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1BackendServiceSignedURLKeySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -372,6 +386,7 @@ public enum V1beta1BackendServiceSignedURLKeySpecPublishConnectionDetailsToConfi
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackendServiceSignedURLKeySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -385,6 +400,7 @@ public partial class V1beta1BackendServiceSignedURLKeySpecPublishConnectionDetai
     public V1beta1BackendServiceSignedURLKeySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1BackendServiceSignedURLKeySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -396,6 +412,7 @@ public partial class V1beta1BackendServiceSignedURLKeySpecPublishConnectionDetai
     public V1beta1BackendServiceSignedURLKeySpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1BackendServiceSignedURLKeySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -411,6 +428,7 @@ public partial class V1beta1BackendServiceSignedURLKeySpecPublishConnectionDetai
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1BackendServiceSignedURLKeySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -426,6 +444,7 @@ public partial class V1beta1BackendServiceSignedURLKeySpecPublishConnectionDetai
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1BackendServiceSignedURLKeySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -437,6 +456,7 @@ public partial class V1beta1BackendServiceSignedURLKeySpecWriteConnectionSecretT
     public string Namespace { get; set; }
 }
 
+/// <summary>BackendServiceSignedURLKeySpec defines the desired state of BackendServiceSignedURLKey</summary>
 public partial class V1beta1BackendServiceSignedURLKeySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -469,6 +489,7 @@ public partial class V1beta1BackendServiceSignedURLKeySpec
     public V1beta1BackendServiceSignedURLKeySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackendServiceSignedURLKeyStatusAtProvider
 {
     /// <summary>The backend service this signed URL key belongs.</summary>
@@ -488,6 +509,7 @@ public partial class V1beta1BackendServiceSignedURLKeyStatusAtProvider
     public string? Project { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1BackendServiceSignedURLKeyStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -515,6 +537,7 @@ public partial class V1beta1BackendServiceSignedURLKeyStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>BackendServiceSignedURLKeyStatus defines the observed state of BackendServiceSignedURLKey.</summary>
 public partial class V1beta1BackendServiceSignedURLKeyStatus
 {
     /// <summary></summary>
@@ -531,6 +554,7 @@ public partial class V1beta1BackendServiceSignedURLKeyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>BackendServiceSignedURLKey is the Schema for the BackendServiceSignedURLKeys API. A key for signing Cloud CDN signed URLs for Backend Services.</summary>
 public partial class V1beta1BackendServiceSignedURLKey : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BackendServiceSignedURLKeySpec>, IStatus<V1beta1BackendServiceSignedURLKeyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

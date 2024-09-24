@@ -38,6 +38,7 @@ public enum V1beta1ContainerRecipeSpecForProviderComponentComponentArnRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ContainerRecipeSpecForProviderComponentComponentArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ContainerRecipeSpecForProviderComponentComponentArnR
     public V1beta1ContainerRecipeSpecForProviderComponentComponentArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Component in imagebuilder to populate componentArn.</summary>
 public partial class V1beta1ContainerRecipeSpecForProviderComponentComponentArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ContainerRecipeSpecForProviderComponentComponentArnSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ContainerRecipeSpecForProviderComponentComponentArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ContainerRecipeSpecForProviderComponentComponentArnS
     public V1beta1ContainerRecipeSpecForProviderComponentComponentArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Component in imagebuilder to populate componentArn.</summary>
 public partial class V1beta1ContainerRecipeSpecForProviderComponentComponentArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1ContainerRecipeSpecForProviderComponentComponentArnS
     public V1beta1ContainerRecipeSpecForProviderComponentComponentArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerRecipeSpecForProviderComponentParameter
 {
     /// <summary>The name of the component parameter.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1ContainerRecipeSpecForProviderComponentParameter
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerRecipeSpecForProviderComponent
 {
     /// <summary>Amazon Resource Name (ARN) of the Image Builder Component to associate.</summary>
@@ -140,6 +146,7 @@ public partial class V1beta1ContainerRecipeSpecForProviderComponent
     public IList<V1beta1ContainerRecipeSpecForProviderComponentParameter>? Parameter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerRecipeSpecForProviderInstanceConfigurationBlockDeviceMappingEbs
 {
     /// <summary>Whether to delete the volume on termination. Defaults to unset, which is the value inherited from the parent image.</summary>
@@ -175,6 +182,7 @@ public partial class V1beta1ContainerRecipeSpecForProviderInstanceConfigurationB
     public string? VolumeType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerRecipeSpecForProviderInstanceConfigurationBlockDeviceMapping
 {
     /// <summary>Name of the device. For example, /dev/sda or /dev/xvdb.</summary>
@@ -194,6 +202,7 @@ public partial class V1beta1ContainerRecipeSpecForProviderInstanceConfigurationB
     public string? VirtualName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerRecipeSpecForProviderInstanceConfiguration
 {
     /// <summary>Configuration block(s) with block device mappings for the container recipe. Detailed below.</summary>
@@ -225,6 +234,7 @@ public enum V1beta1ContainerRecipeSpecForProviderKmsKeyIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ContainerRecipeSpecForProviderKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -238,6 +248,7 @@ public partial class V1beta1ContainerRecipeSpecForProviderKmsKeyIdRefPolicy
     public V1beta1ContainerRecipeSpecForProviderKmsKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1ContainerRecipeSpecForProviderKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -269,6 +280,7 @@ public enum V1beta1ContainerRecipeSpecForProviderKmsKeyIdSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ContainerRecipeSpecForProviderKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -282,6 +294,7 @@ public partial class V1beta1ContainerRecipeSpecForProviderKmsKeyIdSelectorPolicy
     public V1beta1ContainerRecipeSpecForProviderKmsKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1ContainerRecipeSpecForProviderKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -317,6 +330,7 @@ public enum V1beta1ContainerRecipeSpecForProviderTargetRepositoryRepositoryNameR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ContainerRecipeSpecForProviderTargetRepositoryRepositoryNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -330,6 +344,7 @@ public partial class V1beta1ContainerRecipeSpecForProviderTargetRepositoryReposi
     public V1beta1ContainerRecipeSpecForProviderTargetRepositoryRepositoryNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Repository in ecr to populate repositoryName.</summary>
 public partial class V1beta1ContainerRecipeSpecForProviderTargetRepositoryRepositoryNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -361,6 +376,7 @@ public enum V1beta1ContainerRecipeSpecForProviderTargetRepositoryRepositoryNameS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ContainerRecipeSpecForProviderTargetRepositoryRepositoryNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -374,6 +390,7 @@ public partial class V1beta1ContainerRecipeSpecForProviderTargetRepositoryReposi
     public V1beta1ContainerRecipeSpecForProviderTargetRepositoryRepositoryNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Repository in ecr to populate repositoryName.</summary>
 public partial class V1beta1ContainerRecipeSpecForProviderTargetRepositoryRepositoryNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -389,6 +406,7 @@ public partial class V1beta1ContainerRecipeSpecForProviderTargetRepositoryReposi
     public V1beta1ContainerRecipeSpecForProviderTargetRepositoryRepositoryNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerRecipeSpecForProviderTargetRepository
 {
     /// <summary>The name of the container repository where the output container image is stored. This name is prefixed by the repository location.</summary>
@@ -408,6 +426,7 @@ public partial class V1beta1ContainerRecipeSpecForProviderTargetRepository
     public string? Service { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerRecipeSpecForProvider
 {
     /// <summary>Ordered configuration block(s) with components for the container recipe. Detailed below.</summary>
@@ -499,6 +518,7 @@ public enum V1beta1ContainerRecipeSpecInitProviderComponentComponentArnRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ContainerRecipeSpecInitProviderComponentComponentArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -512,6 +532,7 @@ public partial class V1beta1ContainerRecipeSpecInitProviderComponentComponentArn
     public V1beta1ContainerRecipeSpecInitProviderComponentComponentArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Component in imagebuilder to populate componentArn.</summary>
 public partial class V1beta1ContainerRecipeSpecInitProviderComponentComponentArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -543,6 +564,7 @@ public enum V1beta1ContainerRecipeSpecInitProviderComponentComponentArnSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ContainerRecipeSpecInitProviderComponentComponentArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -556,6 +578,7 @@ public partial class V1beta1ContainerRecipeSpecInitProviderComponentComponentArn
     public V1beta1ContainerRecipeSpecInitProviderComponentComponentArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Component in imagebuilder to populate componentArn.</summary>
 public partial class V1beta1ContainerRecipeSpecInitProviderComponentComponentArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -571,6 +594,7 @@ public partial class V1beta1ContainerRecipeSpecInitProviderComponentComponentArn
     public V1beta1ContainerRecipeSpecInitProviderComponentComponentArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerRecipeSpecInitProviderComponentParameter
 {
     /// <summary>The name of the component parameter.</summary>
@@ -582,6 +606,7 @@ public partial class V1beta1ContainerRecipeSpecInitProviderComponentParameter
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerRecipeSpecInitProviderComponent
 {
     /// <summary>Amazon Resource Name (ARN) of the Image Builder Component to associate.</summary>
@@ -601,6 +626,7 @@ public partial class V1beta1ContainerRecipeSpecInitProviderComponent
     public IList<V1beta1ContainerRecipeSpecInitProviderComponentParameter>? Parameter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerRecipeSpecInitProviderInstanceConfigurationBlockDeviceMappingEbs
 {
     /// <summary>Whether to delete the volume on termination. Defaults to unset, which is the value inherited from the parent image.</summary>
@@ -636,6 +662,7 @@ public partial class V1beta1ContainerRecipeSpecInitProviderInstanceConfiguration
     public string? VolumeType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerRecipeSpecInitProviderInstanceConfigurationBlockDeviceMapping
 {
     /// <summary>Name of the device. For example, /dev/sda or /dev/xvdb.</summary>
@@ -655,6 +682,7 @@ public partial class V1beta1ContainerRecipeSpecInitProviderInstanceConfiguration
     public string? VirtualName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerRecipeSpecInitProviderInstanceConfiguration
 {
     /// <summary>Configuration block(s) with block device mappings for the container recipe. Detailed below.</summary>
@@ -686,6 +714,7 @@ public enum V1beta1ContainerRecipeSpecInitProviderKmsKeyIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ContainerRecipeSpecInitProviderKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -699,6 +728,7 @@ public partial class V1beta1ContainerRecipeSpecInitProviderKmsKeyIdRefPolicy
     public V1beta1ContainerRecipeSpecInitProviderKmsKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1ContainerRecipeSpecInitProviderKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -730,6 +760,7 @@ public enum V1beta1ContainerRecipeSpecInitProviderKmsKeyIdSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ContainerRecipeSpecInitProviderKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -743,6 +774,7 @@ public partial class V1beta1ContainerRecipeSpecInitProviderKmsKeyIdSelectorPolic
     public V1beta1ContainerRecipeSpecInitProviderKmsKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1ContainerRecipeSpecInitProviderKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -778,6 +810,7 @@ public enum V1beta1ContainerRecipeSpecInitProviderTargetRepositoryRepositoryName
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ContainerRecipeSpecInitProviderTargetRepositoryRepositoryNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -791,6 +824,7 @@ public partial class V1beta1ContainerRecipeSpecInitProviderTargetRepositoryRepos
     public V1beta1ContainerRecipeSpecInitProviderTargetRepositoryRepositoryNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Repository in ecr to populate repositoryName.</summary>
 public partial class V1beta1ContainerRecipeSpecInitProviderTargetRepositoryRepositoryNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -822,6 +856,7 @@ public enum V1beta1ContainerRecipeSpecInitProviderTargetRepositoryRepositoryName
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ContainerRecipeSpecInitProviderTargetRepositoryRepositoryNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -835,6 +870,7 @@ public partial class V1beta1ContainerRecipeSpecInitProviderTargetRepositoryRepos
     public V1beta1ContainerRecipeSpecInitProviderTargetRepositoryRepositoryNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Repository in ecr to populate repositoryName.</summary>
 public partial class V1beta1ContainerRecipeSpecInitProviderTargetRepositoryRepositoryNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -850,6 +886,7 @@ public partial class V1beta1ContainerRecipeSpecInitProviderTargetRepositoryRepos
     public V1beta1ContainerRecipeSpecInitProviderTargetRepositoryRepositoryNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerRecipeSpecInitProviderTargetRepository
 {
     /// <summary>The name of the container repository where the output container image is stored. This name is prefixed by the repository location.</summary>
@@ -869,6 +906,7 @@ public partial class V1beta1ContainerRecipeSpecInitProviderTargetRepository
     public string? Service { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ContainerRecipeSpecInitProvider
 {
     /// <summary>Ordered configuration block(s) with components for the container recipe. Detailed below.</summary>
@@ -978,6 +1016,7 @@ public enum V1beta1ContainerRecipeSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ContainerRecipeSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -991,6 +1030,7 @@ public partial class V1beta1ContainerRecipeSpecProviderConfigRefPolicy
     public V1beta1ContainerRecipeSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ContainerRecipeSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1022,6 +1062,7 @@ public enum V1beta1ContainerRecipeSpecPublishConnectionDetailsToConfigRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ContainerRecipeSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1035,6 +1076,7 @@ public partial class V1beta1ContainerRecipeSpecPublishConnectionDetailsToConfigR
     public V1beta1ContainerRecipeSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ContainerRecipeSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1046,6 +1088,7 @@ public partial class V1beta1ContainerRecipeSpecPublishConnectionDetailsToConfigR
     public V1beta1ContainerRecipeSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ContainerRecipeSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1061,6 +1104,7 @@ public partial class V1beta1ContainerRecipeSpecPublishConnectionDetailsToMetadat
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ContainerRecipeSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1076,6 +1120,7 @@ public partial class V1beta1ContainerRecipeSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ContainerRecipeSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1087,6 +1132,7 @@ public partial class V1beta1ContainerRecipeSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ContainerRecipeSpec defines the desired state of ContainerRecipe</summary>
 public partial class V1beta1ContainerRecipeSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1119,6 +1165,7 @@ public partial class V1beta1ContainerRecipeSpec
     public V1beta1ContainerRecipeSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerRecipeStatusAtProviderComponentParameter
 {
     /// <summary>The name of the component parameter.</summary>
@@ -1130,6 +1177,7 @@ public partial class V1beta1ContainerRecipeStatusAtProviderComponentParameter
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerRecipeStatusAtProviderComponent
 {
     /// <summary>Amazon Resource Name (ARN) of the Image Builder Component to associate.</summary>
@@ -1141,6 +1189,7 @@ public partial class V1beta1ContainerRecipeStatusAtProviderComponent
     public IList<V1beta1ContainerRecipeStatusAtProviderComponentParameter>? Parameter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerRecipeStatusAtProviderInstanceConfigurationBlockDeviceMappingEbs
 {
     /// <summary>Whether to delete the volume on termination. Defaults to unset, which is the value inherited from the parent image.</summary>
@@ -1176,6 +1225,7 @@ public partial class V1beta1ContainerRecipeStatusAtProviderInstanceConfiguration
     public string? VolumeType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerRecipeStatusAtProviderInstanceConfigurationBlockDeviceMapping
 {
     /// <summary>Name of the device. For example, /dev/sda or /dev/xvdb.</summary>
@@ -1195,6 +1245,7 @@ public partial class V1beta1ContainerRecipeStatusAtProviderInstanceConfiguration
     public string? VirtualName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerRecipeStatusAtProviderInstanceConfiguration
 {
     /// <summary>Configuration block(s) with block device mappings for the container recipe. Detailed below.</summary>
@@ -1206,6 +1257,7 @@ public partial class V1beta1ContainerRecipeStatusAtProviderInstanceConfiguration
     public string? Image { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerRecipeStatusAtProviderTargetRepository
 {
     /// <summary>The name of the container repository where the output container image is stored. This name is prefixed by the repository location.</summary>
@@ -1217,6 +1269,7 @@ public partial class V1beta1ContainerRecipeStatusAtProviderTargetRepository
     public string? Service { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerRecipeStatusAtProvider
 {
     /// <summary>Amazon Resource Name (ARN) of the container recipe.</summary>
@@ -1304,6 +1357,7 @@ public partial class V1beta1ContainerRecipeStatusAtProvider
     public string? WorkingDirectory { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ContainerRecipeStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1331,6 +1385,7 @@ public partial class V1beta1ContainerRecipeStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ContainerRecipeStatus defines the observed state of ContainerRecipe.</summary>
 public partial class V1beta1ContainerRecipeStatus
 {
     /// <summary></summary>
@@ -1347,6 +1402,7 @@ public partial class V1beta1ContainerRecipeStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ContainerRecipe is the Schema for the ContainerRecipes API. Manage an Image Builder Container Recipe</summary>
 public partial class V1beta1ContainerRecipe : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ContainerRecipeSpec>, IStatus<V1beta1ContainerRecipeStatus>
 {
     public const string KubeApiVersion = "v1beta1";

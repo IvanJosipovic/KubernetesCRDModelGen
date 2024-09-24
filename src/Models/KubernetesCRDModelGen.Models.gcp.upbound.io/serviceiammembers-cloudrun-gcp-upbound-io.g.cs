@@ -18,6 +18,7 @@ public enum V1beta1ServiceIAMMemberSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceIAMMemberSpecForProviderCondition
 {
     /// <summary></summary>
@@ -53,6 +54,7 @@ public enum V1beta1ServiceIAMMemberSpecForProviderProjectRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceIAMMemberSpecForProviderProjectRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -66,6 +68,7 @@ public partial class V1beta1ServiceIAMMemberSpecForProviderProjectRefPolicy
     public V1beta1ServiceIAMMemberSpecForProviderProjectRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Project in cloudplatform to populate project.</summary>
 public partial class V1beta1ServiceIAMMemberSpecForProviderProjectRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -97,6 +100,7 @@ public enum V1beta1ServiceIAMMemberSpecForProviderProjectSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServiceIAMMemberSpecForProviderProjectSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1ServiceIAMMemberSpecForProviderProjectSelectorPolicy
     public V1beta1ServiceIAMMemberSpecForProviderProjectSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Project in cloudplatform to populate project.</summary>
 public partial class V1beta1ServiceIAMMemberSpecForProviderProjectSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -145,6 +150,7 @@ public enum V1beta1ServiceIAMMemberSpecForProviderServiceRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceIAMMemberSpecForProviderServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -158,6 +164,7 @@ public partial class V1beta1ServiceIAMMemberSpecForProviderServiceRefPolicy
     public V1beta1ServiceIAMMemberSpecForProviderServiceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Service in cloudrun to populate service.</summary>
 public partial class V1beta1ServiceIAMMemberSpecForProviderServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -189,6 +196,7 @@ public enum V1beta1ServiceIAMMemberSpecForProviderServiceSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServiceIAMMemberSpecForProviderServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1ServiceIAMMemberSpecForProviderServiceSelectorPolicy
     public V1beta1ServiceIAMMemberSpecForProviderServiceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Service in cloudrun to populate service.</summary>
 public partial class V1beta1ServiceIAMMemberSpecForProviderServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -217,6 +226,7 @@ public partial class V1beta1ServiceIAMMemberSpecForProviderServiceSelector
     public V1beta1ServiceIAMMemberSpecForProviderServiceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceIAMMemberSpecForProvider
 {
     /// <summary></summary>
@@ -260,6 +270,7 @@ public partial class V1beta1ServiceIAMMemberSpecForProvider
     public V1beta1ServiceIAMMemberSpecForProviderServiceSelector? ServiceSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceIAMMemberSpecInitProviderCondition
 {
     /// <summary></summary>
@@ -295,6 +306,7 @@ public enum V1beta1ServiceIAMMemberSpecInitProviderProjectRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceIAMMemberSpecInitProviderProjectRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -308,6 +320,7 @@ public partial class V1beta1ServiceIAMMemberSpecInitProviderProjectRefPolicy
     public V1beta1ServiceIAMMemberSpecInitProviderProjectRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Project in cloudplatform to populate project.</summary>
 public partial class V1beta1ServiceIAMMemberSpecInitProviderProjectRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -339,6 +352,7 @@ public enum V1beta1ServiceIAMMemberSpecInitProviderProjectSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServiceIAMMemberSpecInitProviderProjectSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -352,6 +366,7 @@ public partial class V1beta1ServiceIAMMemberSpecInitProviderProjectSelectorPolic
     public V1beta1ServiceIAMMemberSpecInitProviderProjectSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Project in cloudplatform to populate project.</summary>
 public partial class V1beta1ServiceIAMMemberSpecInitProviderProjectSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -387,6 +402,7 @@ public enum V1beta1ServiceIAMMemberSpecInitProviderServiceRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceIAMMemberSpecInitProviderServiceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -400,6 +416,7 @@ public partial class V1beta1ServiceIAMMemberSpecInitProviderServiceRefPolicy
     public V1beta1ServiceIAMMemberSpecInitProviderServiceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Service in cloudrun to populate service.</summary>
 public partial class V1beta1ServiceIAMMemberSpecInitProviderServiceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -431,6 +448,7 @@ public enum V1beta1ServiceIAMMemberSpecInitProviderServiceSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServiceIAMMemberSpecInitProviderServiceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -444,6 +462,7 @@ public partial class V1beta1ServiceIAMMemberSpecInitProviderServiceSelectorPolic
     public V1beta1ServiceIAMMemberSpecInitProviderServiceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Service in cloudrun to populate service.</summary>
 public partial class V1beta1ServiceIAMMemberSpecInitProviderServiceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -459,6 +478,7 @@ public partial class V1beta1ServiceIAMMemberSpecInitProviderServiceSelector
     public V1beta1ServiceIAMMemberSpecInitProviderServiceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ServiceIAMMemberSpecInitProvider
 {
     /// <summary></summary>
@@ -544,6 +564,7 @@ public enum V1beta1ServiceIAMMemberSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceIAMMemberSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -557,6 +578,7 @@ public partial class V1beta1ServiceIAMMemberSpecProviderConfigRefPolicy
     public V1beta1ServiceIAMMemberSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ServiceIAMMemberSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -588,6 +610,7 @@ public enum V1beta1ServiceIAMMemberSpecPublishConnectionDetailsToConfigRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceIAMMemberSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -601,6 +624,7 @@ public partial class V1beta1ServiceIAMMemberSpecPublishConnectionDetailsToConfig
     public V1beta1ServiceIAMMemberSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ServiceIAMMemberSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -612,6 +636,7 @@ public partial class V1beta1ServiceIAMMemberSpecPublishConnectionDetailsToConfig
     public V1beta1ServiceIAMMemberSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ServiceIAMMemberSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -627,6 +652,7 @@ public partial class V1beta1ServiceIAMMemberSpecPublishConnectionDetailsToMetada
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ServiceIAMMemberSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -642,6 +668,7 @@ public partial class V1beta1ServiceIAMMemberSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ServiceIAMMemberSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -653,6 +680,7 @@ public partial class V1beta1ServiceIAMMemberSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ServiceIAMMemberSpec defines the desired state of ServiceIAMMember</summary>
 public partial class V1beta1ServiceIAMMemberSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -685,6 +713,7 @@ public partial class V1beta1ServiceIAMMemberSpec
     public V1beta1ServiceIAMMemberSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceIAMMemberStatusAtProviderCondition
 {
     /// <summary></summary>
@@ -700,6 +729,7 @@ public partial class V1beta1ServiceIAMMemberStatusAtProviderCondition
     public string? Title { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceIAMMemberStatusAtProvider
 {
     /// <summary></summary>
@@ -735,6 +765,7 @@ public partial class V1beta1ServiceIAMMemberStatusAtProvider
     public string? Service { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ServiceIAMMemberStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -762,6 +793,7 @@ public partial class V1beta1ServiceIAMMemberStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ServiceIAMMemberStatus defines the observed state of ServiceIAMMember.</summary>
 public partial class V1beta1ServiceIAMMemberStatus
 {
     /// <summary></summary>
@@ -778,6 +810,7 @@ public partial class V1beta1ServiceIAMMemberStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ServiceIAMMember is the Schema for the ServiceIAMMembers API. &lt;no value&gt;</summary>
 public partial class V1beta1ServiceIAMMember : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ServiceIAMMemberSpec>, IStatus<V1beta1ServiceIAMMemberStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -38,6 +38,7 @@ public enum V1beta1RouteSpecForProviderMeshNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RouteSpecForProviderMeshNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1RouteSpecForProviderMeshNameRefPolicy
     public V1beta1RouteSpecForProviderMeshNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Mesh in appmesh to populate meshName.</summary>
 public partial class V1beta1RouteSpecForProviderMeshNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1RouteSpecForProviderMeshNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RouteSpecForProviderMeshNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1RouteSpecForProviderMeshNameSelectorPolicy
     public V1beta1RouteSpecForProviderMeshNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Mesh in appmesh to populate meshName.</summary>
 public partial class V1beta1RouteSpecForProviderMeshNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1RouteSpecForProviderMeshNameSelector
     public V1beta1RouteSpecForProviderMeshNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecGrpcRouteActionWeightedTarget
 {
     /// <summary>The port number to match from the request.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1RouteSpecForProviderSpecGrpcRouteActionWeightedTarge
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecGrpcRouteAction
 {
     /// <summary>Targets that traffic is routed to when a request matches the route. You can specify one or more targets and their relative weights with which to distribute traffic.</summary>
@@ -132,6 +138,7 @@ public partial class V1beta1RouteSpecForProviderSpecGrpcRouteAction
     public IList<V1beta1RouteSpecForProviderSpecGrpcRouteActionWeightedTarget>? WeightedTarget { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecGrpcRouteMatchMetadataMatchRange
 {
     /// <summary>End of the range.</summary>
@@ -143,6 +150,7 @@ public partial class V1beta1RouteSpecForProviderSpecGrpcRouteMatchMetadataMatchR
     public double? Start { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecGrpcRouteMatchMetadataMatch
 {
     /// <summary>Value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.</summary>
@@ -166,6 +174,7 @@ public partial class V1beta1RouteSpecForProviderSpecGrpcRouteMatchMetadataMatch
     public string? Suffix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecGrpcRouteMatchMetadata
 {
     /// <summary>If true, the match is on the opposite of the match criteria. Default is false.</summary>
@@ -181,6 +190,7 @@ public partial class V1beta1RouteSpecForProviderSpecGrpcRouteMatchMetadata
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecGrpcRouteMatch
 {
     /// <summary>Data to match from the gRPC request.</summary>
@@ -204,6 +214,7 @@ public partial class V1beta1RouteSpecForProviderSpecGrpcRouteMatch
     public string? ServiceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecGrpcRouteRetryPolicyPerRetryTimeout
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -215,6 +226,7 @@ public partial class V1beta1RouteSpecForProviderSpecGrpcRouteRetryPolicyPerRetry
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecGrpcRouteRetryPolicy
 {
     /// <summary>List of gRPC retry events. Valid values: cancelled, deadline-exceeded, internal, resource-exhausted, unavailable.</summary>
@@ -238,6 +250,7 @@ public partial class V1beta1RouteSpecForProviderSpecGrpcRouteRetryPolicy
     public IList<string>? TcpRetryEvents { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecGrpcRouteTimeoutIdle
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -249,6 +262,7 @@ public partial class V1beta1RouteSpecForProviderSpecGrpcRouteTimeoutIdle
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecGrpcRouteTimeoutPerRequest
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -260,6 +274,7 @@ public partial class V1beta1RouteSpecForProviderSpecGrpcRouteTimeoutPerRequest
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecGrpcRouteTimeout
 {
     /// <summary>Idle timeout. An idle timeout bounds the amount of time that a connection may be idle.</summary>
@@ -271,6 +286,7 @@ public partial class V1beta1RouteSpecForProviderSpecGrpcRouteTimeout
     public IList<V1beta1RouteSpecForProviderSpecGrpcRouteTimeoutPerRequest>? PerRequest { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecGrpcRoute
 {
     /// <summary>Action to take if a match is determined.</summary>
@@ -290,6 +306,7 @@ public partial class V1beta1RouteSpecForProviderSpecGrpcRoute
     public IList<V1beta1RouteSpecForProviderSpecGrpcRouteTimeout>? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecHttp2RouteActionWeightedTarget
 {
     /// <summary>The port number to match from the request.</summary>
@@ -305,6 +322,7 @@ public partial class V1beta1RouteSpecForProviderSpecHttp2RouteActionWeightedTarg
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecHttp2RouteAction
 {
     /// <summary>Targets that traffic is routed to when a request matches the route. You can specify one or more targets and their relative weights with which to distribute traffic.</summary>
@@ -312,6 +330,7 @@ public partial class V1beta1RouteSpecForProviderSpecHttp2RouteAction
     public IList<V1beta1RouteSpecForProviderSpecHttp2RouteActionWeightedTarget>? WeightedTarget { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecHttp2RouteMatchHeaderMatchRange
 {
     /// <summary>End of the range.</summary>
@@ -323,6 +342,7 @@ public partial class V1beta1RouteSpecForProviderSpecHttp2RouteMatchHeaderMatchRa
     public double? Start { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecHttp2RouteMatchHeaderMatch
 {
     /// <summary>Value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.</summary>
@@ -346,6 +366,7 @@ public partial class V1beta1RouteSpecForProviderSpecHttp2RouteMatchHeaderMatch
     public string? Suffix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecHttp2RouteMatchHeader
 {
     /// <summary>If true, the match is on the opposite of the match criteria. Default is false.</summary>
@@ -361,6 +382,7 @@ public partial class V1beta1RouteSpecForProviderSpecHttp2RouteMatchHeader
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecHttp2RouteMatchPath
 {
     /// <summary>Value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.</summary>
@@ -372,6 +394,7 @@ public partial class V1beta1RouteSpecForProviderSpecHttp2RouteMatchPath
     public string? Regex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecHttp2RouteMatchQueryParameterMatch
 {
     /// <summary>Value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.</summary>
@@ -379,6 +402,7 @@ public partial class V1beta1RouteSpecForProviderSpecHttp2RouteMatchQueryParamete
     public string? Exact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecHttp2RouteMatchQueryParameter
 {
     /// <summary>Criteria for determining an gRPC request match.</summary>
@@ -390,6 +414,7 @@ public partial class V1beta1RouteSpecForProviderSpecHttp2RouteMatchQueryParamete
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecHttp2RouteMatch
 {
     /// <summary>Client request headers to match on.</summary>
@@ -421,6 +446,7 @@ public partial class V1beta1RouteSpecForProviderSpecHttp2RouteMatch
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecHttp2RouteRetryPolicyPerRetryTimeout
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -432,6 +458,7 @@ public partial class V1beta1RouteSpecForProviderSpecHttp2RouteRetryPolicyPerRetr
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecHttp2RouteRetryPolicy
 {
     /// <summary>List of HTTP retry events. Valid values: client-error (HTTP status code 409), gateway-error (HTTP status codes 502, 503, and 504), server-error (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), stream-error (retry on refused stream).</summary>
@@ -451,6 +478,7 @@ public partial class V1beta1RouteSpecForProviderSpecHttp2RouteRetryPolicy
     public IList<string>? TcpRetryEvents { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecHttp2RouteTimeoutIdle
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -462,6 +490,7 @@ public partial class V1beta1RouteSpecForProviderSpecHttp2RouteTimeoutIdle
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecHttp2RouteTimeoutPerRequest
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -473,6 +502,7 @@ public partial class V1beta1RouteSpecForProviderSpecHttp2RouteTimeoutPerRequest
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecHttp2RouteTimeout
 {
     /// <summary>Idle timeout. An idle timeout bounds the amount of time that a connection may be idle.</summary>
@@ -484,6 +514,7 @@ public partial class V1beta1RouteSpecForProviderSpecHttp2RouteTimeout
     public IList<V1beta1RouteSpecForProviderSpecHttp2RouteTimeoutPerRequest>? PerRequest { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecHttp2Route
 {
     /// <summary>Action to take if a match is determined.</summary>
@@ -523,6 +554,7 @@ public enum V1beta1RouteSpecForProviderSpecHttpRouteActionWeightedTargetVirtualN
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RouteSpecForProviderSpecHttpRouteActionWeightedTargetVirtualNodeRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -536,6 +568,7 @@ public partial class V1beta1RouteSpecForProviderSpecHttpRouteActionWeightedTarge
     public V1beta1RouteSpecForProviderSpecHttpRouteActionWeightedTargetVirtualNodeRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VirtualNode in appmesh to populate virtualNode.</summary>
 public partial class V1beta1RouteSpecForProviderSpecHttpRouteActionWeightedTargetVirtualNodeRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -567,6 +600,7 @@ public enum V1beta1RouteSpecForProviderSpecHttpRouteActionWeightedTargetVirtualN
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RouteSpecForProviderSpecHttpRouteActionWeightedTargetVirtualNodeSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -580,6 +614,7 @@ public partial class V1beta1RouteSpecForProviderSpecHttpRouteActionWeightedTarge
     public V1beta1RouteSpecForProviderSpecHttpRouteActionWeightedTargetVirtualNodeSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VirtualNode in appmesh to populate virtualNode.</summary>
 public partial class V1beta1RouteSpecForProviderSpecHttpRouteActionWeightedTargetVirtualNodeSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -595,6 +630,7 @@ public partial class V1beta1RouteSpecForProviderSpecHttpRouteActionWeightedTarge
     public V1beta1RouteSpecForProviderSpecHttpRouteActionWeightedTargetVirtualNodeSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecHttpRouteActionWeightedTarget
 {
     /// <summary>The port number to match from the request.</summary>
@@ -618,6 +654,7 @@ public partial class V1beta1RouteSpecForProviderSpecHttpRouteActionWeightedTarge
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecHttpRouteAction
 {
     /// <summary>Targets that traffic is routed to when a request matches the route. You can specify one or more targets and their relative weights with which to distribute traffic.</summary>
@@ -625,6 +662,7 @@ public partial class V1beta1RouteSpecForProviderSpecHttpRouteAction
     public IList<V1beta1RouteSpecForProviderSpecHttpRouteActionWeightedTarget>? WeightedTarget { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecHttpRouteMatchHeaderMatchRange
 {
     /// <summary>End of the range.</summary>
@@ -636,6 +674,7 @@ public partial class V1beta1RouteSpecForProviderSpecHttpRouteMatchHeaderMatchRan
     public double? Start { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecHttpRouteMatchHeaderMatch
 {
     /// <summary>Value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.</summary>
@@ -659,6 +698,7 @@ public partial class V1beta1RouteSpecForProviderSpecHttpRouteMatchHeaderMatch
     public string? Suffix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecHttpRouteMatchHeader
 {
     /// <summary>If true, the match is on the opposite of the match criteria. Default is false.</summary>
@@ -674,6 +714,7 @@ public partial class V1beta1RouteSpecForProviderSpecHttpRouteMatchHeader
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecHttpRouteMatchPath
 {
     /// <summary>Value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.</summary>
@@ -685,6 +726,7 @@ public partial class V1beta1RouteSpecForProviderSpecHttpRouteMatchPath
     public string? Regex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecHttpRouteMatchQueryParameterMatch
 {
     /// <summary>Value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.</summary>
@@ -692,6 +734,7 @@ public partial class V1beta1RouteSpecForProviderSpecHttpRouteMatchQueryParameter
     public string? Exact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecHttpRouteMatchQueryParameter
 {
     /// <summary>Criteria for determining an gRPC request match.</summary>
@@ -703,6 +746,7 @@ public partial class V1beta1RouteSpecForProviderSpecHttpRouteMatchQueryParameter
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecHttpRouteMatch
 {
     /// <summary>Client request headers to match on.</summary>
@@ -734,6 +778,7 @@ public partial class V1beta1RouteSpecForProviderSpecHttpRouteMatch
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecHttpRouteRetryPolicyPerRetryTimeout
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -745,6 +790,7 @@ public partial class V1beta1RouteSpecForProviderSpecHttpRouteRetryPolicyPerRetry
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecHttpRouteRetryPolicy
 {
     /// <summary>List of HTTP retry events. Valid values: client-error (HTTP status code 409), gateway-error (HTTP status codes 502, 503, and 504), server-error (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), stream-error (retry on refused stream).</summary>
@@ -764,6 +810,7 @@ public partial class V1beta1RouteSpecForProviderSpecHttpRouteRetryPolicy
     public IList<string>? TcpRetryEvents { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecHttpRouteTimeoutIdle
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -775,6 +822,7 @@ public partial class V1beta1RouteSpecForProviderSpecHttpRouteTimeoutIdle
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecHttpRouteTimeoutPerRequest
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -786,6 +834,7 @@ public partial class V1beta1RouteSpecForProviderSpecHttpRouteTimeoutPerRequest
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecHttpRouteTimeout
 {
     /// <summary>Idle timeout. An idle timeout bounds the amount of time that a connection may be idle.</summary>
@@ -797,6 +846,7 @@ public partial class V1beta1RouteSpecForProviderSpecHttpRouteTimeout
     public IList<V1beta1RouteSpecForProviderSpecHttpRouteTimeoutPerRequest>? PerRequest { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecHttpRoute
 {
     /// <summary>Action to take if a match is determined.</summary>
@@ -836,6 +886,7 @@ public enum V1beta1RouteSpecForProviderSpecTcpRouteActionWeightedTargetVirtualNo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RouteSpecForProviderSpecTcpRouteActionWeightedTargetVirtualNodeRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -849,6 +900,7 @@ public partial class V1beta1RouteSpecForProviderSpecTcpRouteActionWeightedTarget
     public V1beta1RouteSpecForProviderSpecTcpRouteActionWeightedTargetVirtualNodeRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VirtualNode in appmesh to populate virtualNode.</summary>
 public partial class V1beta1RouteSpecForProviderSpecTcpRouteActionWeightedTargetVirtualNodeRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -880,6 +932,7 @@ public enum V1beta1RouteSpecForProviderSpecTcpRouteActionWeightedTargetVirtualNo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RouteSpecForProviderSpecTcpRouteActionWeightedTargetVirtualNodeSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -893,6 +946,7 @@ public partial class V1beta1RouteSpecForProviderSpecTcpRouteActionWeightedTarget
     public V1beta1RouteSpecForProviderSpecTcpRouteActionWeightedTargetVirtualNodeSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VirtualNode in appmesh to populate virtualNode.</summary>
 public partial class V1beta1RouteSpecForProviderSpecTcpRouteActionWeightedTargetVirtualNodeSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -908,6 +962,7 @@ public partial class V1beta1RouteSpecForProviderSpecTcpRouteActionWeightedTarget
     public V1beta1RouteSpecForProviderSpecTcpRouteActionWeightedTargetVirtualNodeSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecTcpRouteActionWeightedTarget
 {
     /// <summary>The port number to match from the request.</summary>
@@ -931,6 +986,7 @@ public partial class V1beta1RouteSpecForProviderSpecTcpRouteActionWeightedTarget
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecTcpRouteAction
 {
     /// <summary>Targets that traffic is routed to when a request matches the route. You can specify one or more targets and their relative weights with which to distribute traffic.</summary>
@@ -938,6 +994,7 @@ public partial class V1beta1RouteSpecForProviderSpecTcpRouteAction
     public IList<V1beta1RouteSpecForProviderSpecTcpRouteActionWeightedTarget>? WeightedTarget { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecTcpRouteMatch
 {
     /// <summary>The port number to match from the request.</summary>
@@ -945,6 +1002,7 @@ public partial class V1beta1RouteSpecForProviderSpecTcpRouteMatch
     public double? Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecTcpRouteTimeoutIdle
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -956,6 +1014,7 @@ public partial class V1beta1RouteSpecForProviderSpecTcpRouteTimeoutIdle
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecTcpRouteTimeout
 {
     /// <summary>Idle timeout. An idle timeout bounds the amount of time that a connection may be idle.</summary>
@@ -963,6 +1022,7 @@ public partial class V1beta1RouteSpecForProviderSpecTcpRouteTimeout
     public IList<V1beta1RouteSpecForProviderSpecTcpRouteTimeoutIdle>? Idle { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpecTcpRoute
 {
     /// <summary>Action to take if a match is determined.</summary>
@@ -978,6 +1038,7 @@ public partial class V1beta1RouteSpecForProviderSpecTcpRoute
     public IList<V1beta1RouteSpecForProviderSpecTcpRouteTimeout>? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProviderSpec
 {
     /// <summary>GRPC routing information for the route.</summary>
@@ -1021,6 +1082,7 @@ public enum V1beta1RouteSpecForProviderVirtualRouterNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RouteSpecForProviderVirtualRouterNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1034,6 +1096,7 @@ public partial class V1beta1RouteSpecForProviderVirtualRouterNameRefPolicy
     public V1beta1RouteSpecForProviderVirtualRouterNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VirtualRouter in appmesh to populate virtualRouterName.</summary>
 public partial class V1beta1RouteSpecForProviderVirtualRouterNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1065,6 +1128,7 @@ public enum V1beta1RouteSpecForProviderVirtualRouterNameSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RouteSpecForProviderVirtualRouterNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1078,6 +1142,7 @@ public partial class V1beta1RouteSpecForProviderVirtualRouterNameSelectorPolicy
     public V1beta1RouteSpecForProviderVirtualRouterNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VirtualRouter in appmesh to populate virtualRouterName.</summary>
 public partial class V1beta1RouteSpecForProviderVirtualRouterNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1093,6 +1158,7 @@ public partial class V1beta1RouteSpecForProviderVirtualRouterNameSelector
     public V1beta1RouteSpecForProviderVirtualRouterNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecForProvider
 {
     /// <summary>Name of the service mesh in which to create the route. Must be between 1 and 255 characters in length.</summary>
@@ -1160,6 +1226,7 @@ public enum V1beta1RouteSpecInitProviderMeshNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RouteSpecInitProviderMeshNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1173,6 +1240,7 @@ public partial class V1beta1RouteSpecInitProviderMeshNameRefPolicy
     public V1beta1RouteSpecInitProviderMeshNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Mesh in appmesh to populate meshName.</summary>
 public partial class V1beta1RouteSpecInitProviderMeshNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1204,6 +1272,7 @@ public enum V1beta1RouteSpecInitProviderMeshNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RouteSpecInitProviderMeshNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1217,6 +1286,7 @@ public partial class V1beta1RouteSpecInitProviderMeshNameSelectorPolicy
     public V1beta1RouteSpecInitProviderMeshNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Mesh in appmesh to populate meshName.</summary>
 public partial class V1beta1RouteSpecInitProviderMeshNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1232,6 +1302,7 @@ public partial class V1beta1RouteSpecInitProviderMeshNameSelector
     public V1beta1RouteSpecInitProviderMeshNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecGrpcRouteActionWeightedTarget
 {
     /// <summary>The port number to match from the request.</summary>
@@ -1247,6 +1318,7 @@ public partial class V1beta1RouteSpecInitProviderSpecGrpcRouteActionWeightedTarg
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecGrpcRouteAction
 {
     /// <summary>Targets that traffic is routed to when a request matches the route. You can specify one or more targets and their relative weights with which to distribute traffic.</summary>
@@ -1254,6 +1326,7 @@ public partial class V1beta1RouteSpecInitProviderSpecGrpcRouteAction
     public IList<V1beta1RouteSpecInitProviderSpecGrpcRouteActionWeightedTarget>? WeightedTarget { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecGrpcRouteMatchMetadataMatchRange
 {
     /// <summary>End of the range.</summary>
@@ -1265,6 +1338,7 @@ public partial class V1beta1RouteSpecInitProviderSpecGrpcRouteMatchMetadataMatch
     public double? Start { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecGrpcRouteMatchMetadataMatch
 {
     /// <summary>Value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.</summary>
@@ -1288,6 +1362,7 @@ public partial class V1beta1RouteSpecInitProviderSpecGrpcRouteMatchMetadataMatch
     public string? Suffix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecGrpcRouteMatchMetadata
 {
     /// <summary>If true, the match is on the opposite of the match criteria. Default is false.</summary>
@@ -1303,6 +1378,7 @@ public partial class V1beta1RouteSpecInitProviderSpecGrpcRouteMatchMetadata
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecGrpcRouteMatch
 {
     /// <summary>Data to match from the gRPC request.</summary>
@@ -1326,6 +1402,7 @@ public partial class V1beta1RouteSpecInitProviderSpecGrpcRouteMatch
     public string? ServiceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecGrpcRouteRetryPolicyPerRetryTimeout
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -1337,6 +1414,7 @@ public partial class V1beta1RouteSpecInitProviderSpecGrpcRouteRetryPolicyPerRetr
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecGrpcRouteRetryPolicy
 {
     /// <summary>List of gRPC retry events. Valid values: cancelled, deadline-exceeded, internal, resource-exhausted, unavailable.</summary>
@@ -1360,6 +1438,7 @@ public partial class V1beta1RouteSpecInitProviderSpecGrpcRouteRetryPolicy
     public IList<string>? TcpRetryEvents { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecGrpcRouteTimeoutIdle
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -1371,6 +1450,7 @@ public partial class V1beta1RouteSpecInitProviderSpecGrpcRouteTimeoutIdle
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecGrpcRouteTimeoutPerRequest
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -1382,6 +1462,7 @@ public partial class V1beta1RouteSpecInitProviderSpecGrpcRouteTimeoutPerRequest
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecGrpcRouteTimeout
 {
     /// <summary>Idle timeout. An idle timeout bounds the amount of time that a connection may be idle.</summary>
@@ -1393,6 +1474,7 @@ public partial class V1beta1RouteSpecInitProviderSpecGrpcRouteTimeout
     public IList<V1beta1RouteSpecInitProviderSpecGrpcRouteTimeoutPerRequest>? PerRequest { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecGrpcRoute
 {
     /// <summary>Action to take if a match is determined.</summary>
@@ -1412,6 +1494,7 @@ public partial class V1beta1RouteSpecInitProviderSpecGrpcRoute
     public IList<V1beta1RouteSpecInitProviderSpecGrpcRouteTimeout>? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecHttp2RouteActionWeightedTarget
 {
     /// <summary>The port number to match from the request.</summary>
@@ -1427,6 +1510,7 @@ public partial class V1beta1RouteSpecInitProviderSpecHttp2RouteActionWeightedTar
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecHttp2RouteAction
 {
     /// <summary>Targets that traffic is routed to when a request matches the route. You can specify one or more targets and their relative weights with which to distribute traffic.</summary>
@@ -1434,6 +1518,7 @@ public partial class V1beta1RouteSpecInitProviderSpecHttp2RouteAction
     public IList<V1beta1RouteSpecInitProviderSpecHttp2RouteActionWeightedTarget>? WeightedTarget { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecHttp2RouteMatchHeaderMatchRange
 {
     /// <summary>End of the range.</summary>
@@ -1445,6 +1530,7 @@ public partial class V1beta1RouteSpecInitProviderSpecHttp2RouteMatchHeaderMatchR
     public double? Start { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecHttp2RouteMatchHeaderMatch
 {
     /// <summary>Value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.</summary>
@@ -1468,6 +1554,7 @@ public partial class V1beta1RouteSpecInitProviderSpecHttp2RouteMatchHeaderMatch
     public string? Suffix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecHttp2RouteMatchHeader
 {
     /// <summary>If true, the match is on the opposite of the match criteria. Default is false.</summary>
@@ -1483,6 +1570,7 @@ public partial class V1beta1RouteSpecInitProviderSpecHttp2RouteMatchHeader
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecHttp2RouteMatchPath
 {
     /// <summary>Value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.</summary>
@@ -1494,6 +1582,7 @@ public partial class V1beta1RouteSpecInitProviderSpecHttp2RouteMatchPath
     public string? Regex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecHttp2RouteMatchQueryParameterMatch
 {
     /// <summary>Value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.</summary>
@@ -1501,6 +1590,7 @@ public partial class V1beta1RouteSpecInitProviderSpecHttp2RouteMatchQueryParamet
     public string? Exact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecHttp2RouteMatchQueryParameter
 {
     /// <summary>Criteria for determining an gRPC request match.</summary>
@@ -1512,6 +1602,7 @@ public partial class V1beta1RouteSpecInitProviderSpecHttp2RouteMatchQueryParamet
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecHttp2RouteMatch
 {
     /// <summary>Client request headers to match on.</summary>
@@ -1543,6 +1634,7 @@ public partial class V1beta1RouteSpecInitProviderSpecHttp2RouteMatch
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecHttp2RouteRetryPolicyPerRetryTimeout
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -1554,6 +1646,7 @@ public partial class V1beta1RouteSpecInitProviderSpecHttp2RouteRetryPolicyPerRet
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecHttp2RouteRetryPolicy
 {
     /// <summary>List of HTTP retry events. Valid values: client-error (HTTP status code 409), gateway-error (HTTP status codes 502, 503, and 504), server-error (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), stream-error (retry on refused stream).</summary>
@@ -1573,6 +1666,7 @@ public partial class V1beta1RouteSpecInitProviderSpecHttp2RouteRetryPolicy
     public IList<string>? TcpRetryEvents { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecHttp2RouteTimeoutIdle
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -1584,6 +1678,7 @@ public partial class V1beta1RouteSpecInitProviderSpecHttp2RouteTimeoutIdle
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecHttp2RouteTimeoutPerRequest
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -1595,6 +1690,7 @@ public partial class V1beta1RouteSpecInitProviderSpecHttp2RouteTimeoutPerRequest
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecHttp2RouteTimeout
 {
     /// <summary>Idle timeout. An idle timeout bounds the amount of time that a connection may be idle.</summary>
@@ -1606,6 +1702,7 @@ public partial class V1beta1RouteSpecInitProviderSpecHttp2RouteTimeout
     public IList<V1beta1RouteSpecInitProviderSpecHttp2RouteTimeoutPerRequest>? PerRequest { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecHttp2Route
 {
     /// <summary>Action to take if a match is determined.</summary>
@@ -1645,6 +1742,7 @@ public enum V1beta1RouteSpecInitProviderSpecHttpRouteActionWeightedTargetVirtual
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RouteSpecInitProviderSpecHttpRouteActionWeightedTargetVirtualNodeRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1658,6 +1756,7 @@ public partial class V1beta1RouteSpecInitProviderSpecHttpRouteActionWeightedTarg
     public V1beta1RouteSpecInitProviderSpecHttpRouteActionWeightedTargetVirtualNodeRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VirtualNode in appmesh to populate virtualNode.</summary>
 public partial class V1beta1RouteSpecInitProviderSpecHttpRouteActionWeightedTargetVirtualNodeRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1689,6 +1788,7 @@ public enum V1beta1RouteSpecInitProviderSpecHttpRouteActionWeightedTargetVirtual
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RouteSpecInitProviderSpecHttpRouteActionWeightedTargetVirtualNodeSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1702,6 +1802,7 @@ public partial class V1beta1RouteSpecInitProviderSpecHttpRouteActionWeightedTarg
     public V1beta1RouteSpecInitProviderSpecHttpRouteActionWeightedTargetVirtualNodeSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VirtualNode in appmesh to populate virtualNode.</summary>
 public partial class V1beta1RouteSpecInitProviderSpecHttpRouteActionWeightedTargetVirtualNodeSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1717,6 +1818,7 @@ public partial class V1beta1RouteSpecInitProviderSpecHttpRouteActionWeightedTarg
     public V1beta1RouteSpecInitProviderSpecHttpRouteActionWeightedTargetVirtualNodeSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecHttpRouteActionWeightedTarget
 {
     /// <summary>The port number to match from the request.</summary>
@@ -1740,6 +1842,7 @@ public partial class V1beta1RouteSpecInitProviderSpecHttpRouteActionWeightedTarg
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecHttpRouteAction
 {
     /// <summary>Targets that traffic is routed to when a request matches the route. You can specify one or more targets and their relative weights with which to distribute traffic.</summary>
@@ -1747,6 +1850,7 @@ public partial class V1beta1RouteSpecInitProviderSpecHttpRouteAction
     public IList<V1beta1RouteSpecInitProviderSpecHttpRouteActionWeightedTarget>? WeightedTarget { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecHttpRouteMatchHeaderMatchRange
 {
     /// <summary>End of the range.</summary>
@@ -1758,6 +1862,7 @@ public partial class V1beta1RouteSpecInitProviderSpecHttpRouteMatchHeaderMatchRa
     public double? Start { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecHttpRouteMatchHeaderMatch
 {
     /// <summary>Value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.</summary>
@@ -1781,6 +1886,7 @@ public partial class V1beta1RouteSpecInitProviderSpecHttpRouteMatchHeaderMatch
     public string? Suffix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecHttpRouteMatchHeader
 {
     /// <summary>If true, the match is on the opposite of the match criteria. Default is false.</summary>
@@ -1796,6 +1902,7 @@ public partial class V1beta1RouteSpecInitProviderSpecHttpRouteMatchHeader
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecHttpRouteMatchPath
 {
     /// <summary>Value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.</summary>
@@ -1807,6 +1914,7 @@ public partial class V1beta1RouteSpecInitProviderSpecHttpRouteMatchPath
     public string? Regex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecHttpRouteMatchQueryParameterMatch
 {
     /// <summary>Value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.</summary>
@@ -1814,6 +1922,7 @@ public partial class V1beta1RouteSpecInitProviderSpecHttpRouteMatchQueryParamete
     public string? Exact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecHttpRouteMatchQueryParameter
 {
     /// <summary>Criteria for determining an gRPC request match.</summary>
@@ -1825,6 +1934,7 @@ public partial class V1beta1RouteSpecInitProviderSpecHttpRouteMatchQueryParamete
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecHttpRouteMatch
 {
     /// <summary>Client request headers to match on.</summary>
@@ -1856,6 +1966,7 @@ public partial class V1beta1RouteSpecInitProviderSpecHttpRouteMatch
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecHttpRouteRetryPolicyPerRetryTimeout
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -1867,6 +1978,7 @@ public partial class V1beta1RouteSpecInitProviderSpecHttpRouteRetryPolicyPerRetr
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecHttpRouteRetryPolicy
 {
     /// <summary>List of HTTP retry events. Valid values: client-error (HTTP status code 409), gateway-error (HTTP status codes 502, 503, and 504), server-error (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), stream-error (retry on refused stream).</summary>
@@ -1886,6 +1998,7 @@ public partial class V1beta1RouteSpecInitProviderSpecHttpRouteRetryPolicy
     public IList<string>? TcpRetryEvents { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecHttpRouteTimeoutIdle
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -1897,6 +2010,7 @@ public partial class V1beta1RouteSpecInitProviderSpecHttpRouteTimeoutIdle
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecHttpRouteTimeoutPerRequest
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -1908,6 +2022,7 @@ public partial class V1beta1RouteSpecInitProviderSpecHttpRouteTimeoutPerRequest
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecHttpRouteTimeout
 {
     /// <summary>Idle timeout. An idle timeout bounds the amount of time that a connection may be idle.</summary>
@@ -1919,6 +2034,7 @@ public partial class V1beta1RouteSpecInitProviderSpecHttpRouteTimeout
     public IList<V1beta1RouteSpecInitProviderSpecHttpRouteTimeoutPerRequest>? PerRequest { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecHttpRoute
 {
     /// <summary>Action to take if a match is determined.</summary>
@@ -1958,6 +2074,7 @@ public enum V1beta1RouteSpecInitProviderSpecTcpRouteActionWeightedTargetVirtualN
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RouteSpecInitProviderSpecTcpRouteActionWeightedTargetVirtualNodeRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1971,6 +2088,7 @@ public partial class V1beta1RouteSpecInitProviderSpecTcpRouteActionWeightedTarge
     public V1beta1RouteSpecInitProviderSpecTcpRouteActionWeightedTargetVirtualNodeRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VirtualNode in appmesh to populate virtualNode.</summary>
 public partial class V1beta1RouteSpecInitProviderSpecTcpRouteActionWeightedTargetVirtualNodeRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2002,6 +2120,7 @@ public enum V1beta1RouteSpecInitProviderSpecTcpRouteActionWeightedTargetVirtualN
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RouteSpecInitProviderSpecTcpRouteActionWeightedTargetVirtualNodeSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2015,6 +2134,7 @@ public partial class V1beta1RouteSpecInitProviderSpecTcpRouteActionWeightedTarge
     public V1beta1RouteSpecInitProviderSpecTcpRouteActionWeightedTargetVirtualNodeSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VirtualNode in appmesh to populate virtualNode.</summary>
 public partial class V1beta1RouteSpecInitProviderSpecTcpRouteActionWeightedTargetVirtualNodeSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2030,6 +2150,7 @@ public partial class V1beta1RouteSpecInitProviderSpecTcpRouteActionWeightedTarge
     public V1beta1RouteSpecInitProviderSpecTcpRouteActionWeightedTargetVirtualNodeSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecTcpRouteActionWeightedTarget
 {
     /// <summary>The port number to match from the request.</summary>
@@ -2053,6 +2174,7 @@ public partial class V1beta1RouteSpecInitProviderSpecTcpRouteActionWeightedTarge
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecTcpRouteAction
 {
     /// <summary>Targets that traffic is routed to when a request matches the route. You can specify one or more targets and their relative weights with which to distribute traffic.</summary>
@@ -2060,6 +2182,7 @@ public partial class V1beta1RouteSpecInitProviderSpecTcpRouteAction
     public IList<V1beta1RouteSpecInitProviderSpecTcpRouteActionWeightedTarget>? WeightedTarget { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecTcpRouteMatch
 {
     /// <summary>The port number to match from the request.</summary>
@@ -2067,6 +2190,7 @@ public partial class V1beta1RouteSpecInitProviderSpecTcpRouteMatch
     public double? Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecTcpRouteTimeoutIdle
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -2078,6 +2202,7 @@ public partial class V1beta1RouteSpecInitProviderSpecTcpRouteTimeoutIdle
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecTcpRouteTimeout
 {
     /// <summary>Idle timeout. An idle timeout bounds the amount of time that a connection may be idle.</summary>
@@ -2085,6 +2210,7 @@ public partial class V1beta1RouteSpecInitProviderSpecTcpRouteTimeout
     public IList<V1beta1RouteSpecInitProviderSpecTcpRouteTimeoutIdle>? Idle { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpecTcpRoute
 {
     /// <summary>Action to take if a match is determined.</summary>
@@ -2100,6 +2226,7 @@ public partial class V1beta1RouteSpecInitProviderSpecTcpRoute
     public IList<V1beta1RouteSpecInitProviderSpecTcpRouteTimeout>? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteSpecInitProviderSpec
 {
     /// <summary>GRPC routing information for the route.</summary>
@@ -2143,6 +2270,7 @@ public enum V1beta1RouteSpecInitProviderVirtualRouterNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RouteSpecInitProviderVirtualRouterNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2156,6 +2284,7 @@ public partial class V1beta1RouteSpecInitProviderVirtualRouterNameRefPolicy
     public V1beta1RouteSpecInitProviderVirtualRouterNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VirtualRouter in appmesh to populate virtualRouterName.</summary>
 public partial class V1beta1RouteSpecInitProviderVirtualRouterNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2187,6 +2316,7 @@ public enum V1beta1RouteSpecInitProviderVirtualRouterNameSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RouteSpecInitProviderVirtualRouterNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2200,6 +2330,7 @@ public partial class V1beta1RouteSpecInitProviderVirtualRouterNameSelectorPolicy
     public V1beta1RouteSpecInitProviderVirtualRouterNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VirtualRouter in appmesh to populate virtualRouterName.</summary>
 public partial class V1beta1RouteSpecInitProviderVirtualRouterNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2215,6 +2346,7 @@ public partial class V1beta1RouteSpecInitProviderVirtualRouterNameSelector
     public V1beta1RouteSpecInitProviderVirtualRouterNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1RouteSpecInitProvider
 {
     /// <summary>Name of the service mesh in which to create the route. Must be between 1 and 255 characters in length.</summary>
@@ -2300,6 +2432,7 @@ public enum V1beta1RouteSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RouteSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2313,6 +2446,7 @@ public partial class V1beta1RouteSpecProviderConfigRefPolicy
     public V1beta1RouteSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1RouteSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2344,6 +2478,7 @@ public enum V1beta1RouteSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RouteSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2357,6 +2492,7 @@ public partial class V1beta1RouteSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1RouteSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1RouteSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2368,6 +2504,7 @@ public partial class V1beta1RouteSpecPublishConnectionDetailsToConfigRef
     public V1beta1RouteSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1RouteSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -2383,6 +2520,7 @@ public partial class V1beta1RouteSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1RouteSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -2398,6 +2536,7 @@ public partial class V1beta1RouteSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1RouteSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -2409,6 +2548,7 @@ public partial class V1beta1RouteSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>RouteSpec defines the desired state of Route</summary>
 public partial class V1beta1RouteSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -2441,6 +2581,7 @@ public partial class V1beta1RouteSpec
     public V1beta1RouteSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecGrpcRouteActionWeightedTarget
 {
     /// <summary>The port number to match from the request.</summary>
@@ -2456,6 +2597,7 @@ public partial class V1beta1RouteStatusAtProviderSpecGrpcRouteActionWeightedTarg
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecGrpcRouteAction
 {
     /// <summary>Targets that traffic is routed to when a request matches the route. You can specify one or more targets and their relative weights with which to distribute traffic.</summary>
@@ -2463,6 +2605,7 @@ public partial class V1beta1RouteStatusAtProviderSpecGrpcRouteAction
     public IList<V1beta1RouteStatusAtProviderSpecGrpcRouteActionWeightedTarget>? WeightedTarget { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecGrpcRouteMatchMetadataMatchRange
 {
     /// <summary>End of the range.</summary>
@@ -2474,6 +2617,7 @@ public partial class V1beta1RouteStatusAtProviderSpecGrpcRouteMatchMetadataMatch
     public double? Start { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecGrpcRouteMatchMetadataMatch
 {
     /// <summary>Value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.</summary>
@@ -2497,6 +2641,7 @@ public partial class V1beta1RouteStatusAtProviderSpecGrpcRouteMatchMetadataMatch
     public string? Suffix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecGrpcRouteMatchMetadata
 {
     /// <summary>If true, the match is on the opposite of the match criteria. Default is false.</summary>
@@ -2512,6 +2657,7 @@ public partial class V1beta1RouteStatusAtProviderSpecGrpcRouteMatchMetadata
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecGrpcRouteMatch
 {
     /// <summary>Data to match from the gRPC request.</summary>
@@ -2535,6 +2681,7 @@ public partial class V1beta1RouteStatusAtProviderSpecGrpcRouteMatch
     public string? ServiceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecGrpcRouteRetryPolicyPerRetryTimeout
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -2546,6 +2693,7 @@ public partial class V1beta1RouteStatusAtProviderSpecGrpcRouteRetryPolicyPerRetr
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecGrpcRouteRetryPolicy
 {
     /// <summary>List of gRPC retry events. Valid values: cancelled, deadline-exceeded, internal, resource-exhausted, unavailable.</summary>
@@ -2569,6 +2717,7 @@ public partial class V1beta1RouteStatusAtProviderSpecGrpcRouteRetryPolicy
     public IList<string>? TcpRetryEvents { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecGrpcRouteTimeoutIdle
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -2580,6 +2729,7 @@ public partial class V1beta1RouteStatusAtProviderSpecGrpcRouteTimeoutIdle
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecGrpcRouteTimeoutPerRequest
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -2591,6 +2741,7 @@ public partial class V1beta1RouteStatusAtProviderSpecGrpcRouteTimeoutPerRequest
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecGrpcRouteTimeout
 {
     /// <summary>Idle timeout. An idle timeout bounds the amount of time that a connection may be idle.</summary>
@@ -2602,6 +2753,7 @@ public partial class V1beta1RouteStatusAtProviderSpecGrpcRouteTimeout
     public IList<V1beta1RouteStatusAtProviderSpecGrpcRouteTimeoutPerRequest>? PerRequest { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecGrpcRoute
 {
     /// <summary>Action to take if a match is determined.</summary>
@@ -2621,6 +2773,7 @@ public partial class V1beta1RouteStatusAtProviderSpecGrpcRoute
     public IList<V1beta1RouteStatusAtProviderSpecGrpcRouteTimeout>? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecHttp2RouteActionWeightedTarget
 {
     /// <summary>The port number to match from the request.</summary>
@@ -2636,6 +2789,7 @@ public partial class V1beta1RouteStatusAtProviderSpecHttp2RouteActionWeightedTar
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecHttp2RouteAction
 {
     /// <summary>Targets that traffic is routed to when a request matches the route. You can specify one or more targets and their relative weights with which to distribute traffic.</summary>
@@ -2643,6 +2797,7 @@ public partial class V1beta1RouteStatusAtProviderSpecHttp2RouteAction
     public IList<V1beta1RouteStatusAtProviderSpecHttp2RouteActionWeightedTarget>? WeightedTarget { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecHttp2RouteMatchHeaderMatchRange
 {
     /// <summary>End of the range.</summary>
@@ -2654,6 +2809,7 @@ public partial class V1beta1RouteStatusAtProviderSpecHttp2RouteMatchHeaderMatchR
     public double? Start { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecHttp2RouteMatchHeaderMatch
 {
     /// <summary>Value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.</summary>
@@ -2677,6 +2833,7 @@ public partial class V1beta1RouteStatusAtProviderSpecHttp2RouteMatchHeaderMatch
     public string? Suffix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecHttp2RouteMatchHeader
 {
     /// <summary>If true, the match is on the opposite of the match criteria. Default is false.</summary>
@@ -2692,6 +2849,7 @@ public partial class V1beta1RouteStatusAtProviderSpecHttp2RouteMatchHeader
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecHttp2RouteMatchPath
 {
     /// <summary>Value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.</summary>
@@ -2703,6 +2861,7 @@ public partial class V1beta1RouteStatusAtProviderSpecHttp2RouteMatchPath
     public string? Regex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecHttp2RouteMatchQueryParameterMatch
 {
     /// <summary>Value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.</summary>
@@ -2710,6 +2869,7 @@ public partial class V1beta1RouteStatusAtProviderSpecHttp2RouteMatchQueryParamet
     public string? Exact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecHttp2RouteMatchQueryParameter
 {
     /// <summary>Criteria for determining an gRPC request match.</summary>
@@ -2721,6 +2881,7 @@ public partial class V1beta1RouteStatusAtProviderSpecHttp2RouteMatchQueryParamet
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecHttp2RouteMatch
 {
     /// <summary>Client request headers to match on.</summary>
@@ -2752,6 +2913,7 @@ public partial class V1beta1RouteStatusAtProviderSpecHttp2RouteMatch
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecHttp2RouteRetryPolicyPerRetryTimeout
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -2763,6 +2925,7 @@ public partial class V1beta1RouteStatusAtProviderSpecHttp2RouteRetryPolicyPerRet
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecHttp2RouteRetryPolicy
 {
     /// <summary>List of HTTP retry events. Valid values: client-error (HTTP status code 409), gateway-error (HTTP status codes 502, 503, and 504), server-error (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), stream-error (retry on refused stream).</summary>
@@ -2782,6 +2945,7 @@ public partial class V1beta1RouteStatusAtProviderSpecHttp2RouteRetryPolicy
     public IList<string>? TcpRetryEvents { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecHttp2RouteTimeoutIdle
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -2793,6 +2957,7 @@ public partial class V1beta1RouteStatusAtProviderSpecHttp2RouteTimeoutIdle
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecHttp2RouteTimeoutPerRequest
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -2804,6 +2969,7 @@ public partial class V1beta1RouteStatusAtProviderSpecHttp2RouteTimeoutPerRequest
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecHttp2RouteTimeout
 {
     /// <summary>Idle timeout. An idle timeout bounds the amount of time that a connection may be idle.</summary>
@@ -2815,6 +2981,7 @@ public partial class V1beta1RouteStatusAtProviderSpecHttp2RouteTimeout
     public IList<V1beta1RouteStatusAtProviderSpecHttp2RouteTimeoutPerRequest>? PerRequest { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecHttp2Route
 {
     /// <summary>Action to take if a match is determined.</summary>
@@ -2834,6 +3001,7 @@ public partial class V1beta1RouteStatusAtProviderSpecHttp2Route
     public IList<V1beta1RouteStatusAtProviderSpecHttp2RouteTimeout>? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecHttpRouteActionWeightedTarget
 {
     /// <summary>The port number to match from the request.</summary>
@@ -2849,6 +3017,7 @@ public partial class V1beta1RouteStatusAtProviderSpecHttpRouteActionWeightedTarg
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecHttpRouteAction
 {
     /// <summary>Targets that traffic is routed to when a request matches the route. You can specify one or more targets and their relative weights with which to distribute traffic.</summary>
@@ -2856,6 +3025,7 @@ public partial class V1beta1RouteStatusAtProviderSpecHttpRouteAction
     public IList<V1beta1RouteStatusAtProviderSpecHttpRouteActionWeightedTarget>? WeightedTarget { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecHttpRouteMatchHeaderMatchRange
 {
     /// <summary>End of the range.</summary>
@@ -2867,6 +3037,7 @@ public partial class V1beta1RouteStatusAtProviderSpecHttpRouteMatchHeaderMatchRa
     public double? Start { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecHttpRouteMatchHeaderMatch
 {
     /// <summary>Value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.</summary>
@@ -2890,6 +3061,7 @@ public partial class V1beta1RouteStatusAtProviderSpecHttpRouteMatchHeaderMatch
     public string? Suffix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecHttpRouteMatchHeader
 {
     /// <summary>If true, the match is on the opposite of the match criteria. Default is false.</summary>
@@ -2905,6 +3077,7 @@ public partial class V1beta1RouteStatusAtProviderSpecHttpRouteMatchHeader
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecHttpRouteMatchPath
 {
     /// <summary>Value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.</summary>
@@ -2916,6 +3089,7 @@ public partial class V1beta1RouteStatusAtProviderSpecHttpRouteMatchPath
     public string? Regex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecHttpRouteMatchQueryParameterMatch
 {
     /// <summary>Value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.</summary>
@@ -2923,6 +3097,7 @@ public partial class V1beta1RouteStatusAtProviderSpecHttpRouteMatchQueryParamete
     public string? Exact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecHttpRouteMatchQueryParameter
 {
     /// <summary>Criteria for determining an gRPC request match.</summary>
@@ -2934,6 +3109,7 @@ public partial class V1beta1RouteStatusAtProviderSpecHttpRouteMatchQueryParamete
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecHttpRouteMatch
 {
     /// <summary>Client request headers to match on.</summary>
@@ -2965,6 +3141,7 @@ public partial class V1beta1RouteStatusAtProviderSpecHttpRouteMatch
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecHttpRouteRetryPolicyPerRetryTimeout
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -2976,6 +3153,7 @@ public partial class V1beta1RouteStatusAtProviderSpecHttpRouteRetryPolicyPerRetr
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecHttpRouteRetryPolicy
 {
     /// <summary>List of HTTP retry events. Valid values: client-error (HTTP status code 409), gateway-error (HTTP status codes 502, 503, and 504), server-error (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), stream-error (retry on refused stream).</summary>
@@ -2995,6 +3173,7 @@ public partial class V1beta1RouteStatusAtProviderSpecHttpRouteRetryPolicy
     public IList<string>? TcpRetryEvents { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecHttpRouteTimeoutIdle
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -3006,6 +3185,7 @@ public partial class V1beta1RouteStatusAtProviderSpecHttpRouteTimeoutIdle
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecHttpRouteTimeoutPerRequest
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -3017,6 +3197,7 @@ public partial class V1beta1RouteStatusAtProviderSpecHttpRouteTimeoutPerRequest
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecHttpRouteTimeout
 {
     /// <summary>Idle timeout. An idle timeout bounds the amount of time that a connection may be idle.</summary>
@@ -3028,6 +3209,7 @@ public partial class V1beta1RouteStatusAtProviderSpecHttpRouteTimeout
     public IList<V1beta1RouteStatusAtProviderSpecHttpRouteTimeoutPerRequest>? PerRequest { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecHttpRoute
 {
     /// <summary>Action to take if a match is determined.</summary>
@@ -3047,6 +3229,7 @@ public partial class V1beta1RouteStatusAtProviderSpecHttpRoute
     public IList<V1beta1RouteStatusAtProviderSpecHttpRouteTimeout>? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecTcpRouteActionWeightedTarget
 {
     /// <summary>The port number to match from the request.</summary>
@@ -3062,6 +3245,7 @@ public partial class V1beta1RouteStatusAtProviderSpecTcpRouteActionWeightedTarge
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecTcpRouteAction
 {
     /// <summary>Targets that traffic is routed to when a request matches the route. You can specify one or more targets and their relative weights with which to distribute traffic.</summary>
@@ -3069,6 +3253,7 @@ public partial class V1beta1RouteStatusAtProviderSpecTcpRouteAction
     public IList<V1beta1RouteStatusAtProviderSpecTcpRouteActionWeightedTarget>? WeightedTarget { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecTcpRouteMatch
 {
     /// <summary>The port number to match from the request.</summary>
@@ -3076,6 +3261,7 @@ public partial class V1beta1RouteStatusAtProviderSpecTcpRouteMatch
     public double? Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecTcpRouteTimeoutIdle
 {
     /// <summary>Unit of time. Valid values: ms, s.</summary>
@@ -3087,6 +3273,7 @@ public partial class V1beta1RouteStatusAtProviderSpecTcpRouteTimeoutIdle
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecTcpRouteTimeout
 {
     /// <summary>Idle timeout. An idle timeout bounds the amount of time that a connection may be idle.</summary>
@@ -3094,6 +3281,7 @@ public partial class V1beta1RouteStatusAtProviderSpecTcpRouteTimeout
     public IList<V1beta1RouteStatusAtProviderSpecTcpRouteTimeoutIdle>? Idle { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpecTcpRoute
 {
     /// <summary>Action to take if a match is determined.</summary>
@@ -3109,6 +3297,7 @@ public partial class V1beta1RouteStatusAtProviderSpecTcpRoute
     public IList<V1beta1RouteStatusAtProviderSpecTcpRouteTimeout>? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProviderSpec
 {
     /// <summary>GRPC routing information for the route.</summary>
@@ -3132,6 +3321,7 @@ public partial class V1beta1RouteStatusAtProviderSpec
     public IList<V1beta1RouteStatusAtProviderSpecTcpRoute>? TcpRoute { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteStatusAtProvider
 {
     /// <summary>ARN of the route.</summary>
@@ -3183,6 +3373,7 @@ public partial class V1beta1RouteStatusAtProvider
     public string? VirtualRouterName { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1RouteStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -3210,6 +3401,7 @@ public partial class V1beta1RouteStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>RouteStatus defines the observed state of Route.</summary>
 public partial class V1beta1RouteStatus
 {
     /// <summary></summary>
@@ -3226,6 +3418,7 @@ public partial class V1beta1RouteStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Route is the Schema for the Routes API. Provides an AWS App Mesh route resource.</summary>
 public partial class V1beta1Route : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1RouteSpec>, IStatus<V1beta1RouteStatus>
 {
     public const string KubeApiVersion = "v1beta1";

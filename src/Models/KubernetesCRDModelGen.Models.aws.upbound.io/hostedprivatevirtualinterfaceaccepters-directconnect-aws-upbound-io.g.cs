@@ -38,6 +38,7 @@ public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVirtualIn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVirtualInterfaceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProvider
     public V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVirtualInterfaceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a HostedPrivateVirtualInterface in directconnect to populate virtualInterfaceId.</summary>
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVirtualInterfaceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVirtualIn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVirtualInterfaceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProvider
     public V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVirtualInterfaceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a HostedPrivateVirtualInterface in directconnect to populate virtualInterfaceId.</summary>
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVirtualInterfaceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVpnGatewa
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVpnGatewayIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProvider
     public V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVpnGatewayIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPNGateway in ec2 to populate vpnGatewayId.</summary>
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVpnGatewayIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVpnGatewa
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVpnGatewayIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProvider
     public V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVpnGatewayIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPNGateway in ec2 to populate vpnGatewayId.</summary>
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVpnGatewayIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProvider
     public V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProviderVpnGatewayIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecForProvider
 {
     /// <summary>The ID of the Direct Connect gateway to which to connect the virtual interface.</summary>
@@ -261,6 +270,7 @@ public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVirtualI
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVirtualInterfaceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -274,6 +284,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProvide
     public V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVirtualInterfaceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a HostedPrivateVirtualInterface in directconnect to populate virtualInterfaceId.</summary>
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVirtualInterfaceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -305,6 +316,7 @@ public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVirtualI
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVirtualInterfaceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -318,6 +330,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProvide
     public V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVirtualInterfaceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a HostedPrivateVirtualInterface in directconnect to populate virtualInterfaceId.</summary>
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVirtualInterfaceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -353,6 +366,7 @@ public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVpnGatew
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVpnGatewayIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -366,6 +380,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProvide
     public V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVpnGatewayIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPNGateway in ec2 to populate vpnGatewayId.</summary>
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVpnGatewayIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -397,6 +412,7 @@ public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVpnGatew
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVpnGatewayIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -410,6 +426,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProvide
     public V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVpnGatewayIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPNGateway in ec2 to populate vpnGatewayId.</summary>
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVpnGatewayIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -425,6 +442,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProvide
     public V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProviderVpnGatewayIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecInitProvider
 {
     /// <summary>The ID of the Direct Connect gateway to which to connect the virtual interface.</summary>
@@ -502,6 +520,7 @@ public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecProviderConfigRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -515,6 +534,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecProviderCon
     public V1beta1HostedPrivateVirtualInterfaceAccepterSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -546,6 +566,7 @@ public enum V1beta1HostedPrivateVirtualInterfaceAccepterSpecPublishConnectionDet
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -559,6 +580,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecPublishConn
     public V1beta1HostedPrivateVirtualInterfaceAccepterSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -570,6 +592,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecPublishConn
     public V1beta1HostedPrivateVirtualInterfaceAccepterSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -585,6 +608,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecPublishConn
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -600,6 +624,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecPublishConn
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -611,6 +636,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpecWriteConnec
     public string Namespace { get; set; }
 }
 
+/// <summary>HostedPrivateVirtualInterfaceAccepterSpec defines the desired state of HostedPrivateVirtualInterfaceAccepter</summary>
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -643,6 +669,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterSpec
     public V1beta1HostedPrivateVirtualInterfaceAccepterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterStatusAtProvider
 {
     /// <summary>The ARN of the virtual interface.</summary>
@@ -674,6 +701,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterStatusAtProvide
     public string? VpnGatewayId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -701,6 +729,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterStatusCondition
     public string Type { get; set; }
 }
 
+/// <summary>HostedPrivateVirtualInterfaceAccepterStatus defines the observed state of HostedPrivateVirtualInterfaceAccepter.</summary>
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepterStatus
 {
     /// <summary></summary>
@@ -717,6 +746,7 @@ public partial class V1beta1HostedPrivateVirtualInterfaceAccepterStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>HostedPrivateVirtualInterfaceAccepter is the Schema for the HostedPrivateVirtualInterfaceAccepters API. Provides a resource to manage the accepter's side of a Direct Connect hosted private virtual interface.</summary>
 public partial class V1beta1HostedPrivateVirtualInterfaceAccepter : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1HostedPrivateVirtualInterfaceAccepterSpec>, IStatus<V1beta1HostedPrivateVirtualInterfaceAccepterStatus>
 {
     public const string KubeApiVersion = "v1beta1";

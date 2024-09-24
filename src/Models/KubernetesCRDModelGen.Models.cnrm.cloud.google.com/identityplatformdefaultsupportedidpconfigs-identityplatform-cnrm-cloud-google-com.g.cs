@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.identityplatform.cnrm.cloud.google.com;
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1IdentityPlatformDefaultSupportedIDPConfigSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1IdentityPlatformDefaultSupportedIDPConfigSpecProjec
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1IdentityPlatformDefaultSupportedIDPConfigSpec
 {
     /// <summary>OAuth client ID.</summary>
@@ -46,6 +48,7 @@ public partial class V1alpha1IdentityPlatformDefaultSupportedIDPConfigSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1IdentityPlatformDefaultSupportedIDPConfigStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -69,6 +72,7 @@ public partial class V1alpha1IdentityPlatformDefaultSupportedIDPConfigStatusCond
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1IdentityPlatformDefaultSupportedIDPConfigStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -85,6 +89,7 @@ public partial class V1alpha1IdentityPlatformDefaultSupportedIDPConfigStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1IdentityPlatformDefaultSupportedIDPConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1IdentityPlatformDefaultSupportedIDPConfigSpec>, IStatus<V1alpha1IdentityPlatformDefaultSupportedIDPConfigStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

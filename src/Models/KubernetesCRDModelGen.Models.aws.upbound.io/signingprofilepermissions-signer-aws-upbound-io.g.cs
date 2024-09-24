@@ -38,6 +38,7 @@ public enum V1beta1SigningProfilePermissionSpecForProviderProfileNameRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SigningProfilePermissionSpecForProviderProfileNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1SigningProfilePermissionSpecForProviderProfileNameRe
     public V1beta1SigningProfilePermissionSpecForProviderProfileNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SigningProfile in signer to populate profileName.</summary>
 public partial class V1beta1SigningProfilePermissionSpecForProviderProfileNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1SigningProfilePermissionSpecForProviderProfileNameSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SigningProfilePermissionSpecForProviderProfileNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1SigningProfilePermissionSpecForProviderProfileNameSe
     public V1beta1SigningProfilePermissionSpecForProviderProfileNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SigningProfile in signer to populate profileName.</summary>
 public partial class V1beta1SigningProfilePermissionSpecForProviderProfileNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1SigningProfilePermissionSpecForProviderProfileVersionRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SigningProfilePermissionSpecForProviderProfileVersionRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1SigningProfilePermissionSpecForProviderProfileVersio
     public V1beta1SigningProfilePermissionSpecForProviderProfileVersionRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SigningProfile in signer to populate profileVersion.</summary>
 public partial class V1beta1SigningProfilePermissionSpecForProviderProfileVersionRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1SigningProfilePermissionSpecForProviderProfileVersionSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SigningProfilePermissionSpecForProviderProfileVersionSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1SigningProfilePermissionSpecForProviderProfileVersio
     public V1beta1SigningProfilePermissionSpecForProviderProfileVersionSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SigningProfile in signer to populate profileVersion.</summary>
 public partial class V1beta1SigningProfilePermissionSpecForProviderProfileVersionSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1SigningProfilePermissionSpecForProviderProfileVersio
     public V1beta1SigningProfilePermissionSpecForProviderProfileVersionSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SigningProfilePermissionSpecForProvider
 {
     /// <summary>An AWS Signer action permitted as part of cross-account permissions. Valid values: signer:StartSigningJob, signer:GetSigningProfile, signer:RevokeSignature, or signer:SignPayload.</summary>
@@ -269,6 +278,7 @@ public enum V1beta1SigningProfilePermissionSpecInitProviderProfileVersionRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SigningProfilePermissionSpecInitProviderProfileVersionRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -282,6 +292,7 @@ public partial class V1beta1SigningProfilePermissionSpecInitProviderProfileVersi
     public V1beta1SigningProfilePermissionSpecInitProviderProfileVersionRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SigningProfile in signer to populate profileVersion.</summary>
 public partial class V1beta1SigningProfilePermissionSpecInitProviderProfileVersionRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -313,6 +324,7 @@ public enum V1beta1SigningProfilePermissionSpecInitProviderProfileVersionSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SigningProfilePermissionSpecInitProviderProfileVersionSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -326,6 +338,7 @@ public partial class V1beta1SigningProfilePermissionSpecInitProviderProfileVersi
     public V1beta1SigningProfilePermissionSpecInitProviderProfileVersionSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SigningProfile in signer to populate profileVersion.</summary>
 public partial class V1beta1SigningProfilePermissionSpecInitProviderProfileVersionSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -341,6 +354,7 @@ public partial class V1beta1SigningProfilePermissionSpecInitProviderProfileVersi
     public V1beta1SigningProfilePermissionSpecInitProviderProfileVersionSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1SigningProfilePermissionSpecInitProvider
 {
     /// <summary>An AWS Signer action permitted as part of cross-account permissions. Valid values: signer:StartSigningJob, signer:GetSigningProfile, signer:RevokeSignature, or signer:SignPayload.</summary>
@@ -410,6 +424,7 @@ public enum V1beta1SigningProfilePermissionSpecProviderConfigRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SigningProfilePermissionSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -423,6 +438,7 @@ public partial class V1beta1SigningProfilePermissionSpecProviderConfigRefPolicy
     public V1beta1SigningProfilePermissionSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1SigningProfilePermissionSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -454,6 +470,7 @@ public enum V1beta1SigningProfilePermissionSpecPublishConnectionDetailsToConfigR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SigningProfilePermissionSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -467,6 +484,7 @@ public partial class V1beta1SigningProfilePermissionSpecPublishConnectionDetails
     public V1beta1SigningProfilePermissionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1SigningProfilePermissionSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -478,6 +496,7 @@ public partial class V1beta1SigningProfilePermissionSpecPublishConnectionDetails
     public V1beta1SigningProfilePermissionSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1SigningProfilePermissionSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -493,6 +512,7 @@ public partial class V1beta1SigningProfilePermissionSpecPublishConnectionDetails
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1SigningProfilePermissionSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -508,6 +528,7 @@ public partial class V1beta1SigningProfilePermissionSpecPublishConnectionDetails
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1SigningProfilePermissionSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -519,6 +540,7 @@ public partial class V1beta1SigningProfilePermissionSpecWriteConnectionSecretToR
     public string Namespace { get; set; }
 }
 
+/// <summary>SigningProfilePermissionSpec defines the desired state of SigningProfilePermission</summary>
 public partial class V1beta1SigningProfilePermissionSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -551,6 +573,7 @@ public partial class V1beta1SigningProfilePermissionSpec
     public V1beta1SigningProfilePermissionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SigningProfilePermissionStatusAtProvider
 {
     /// <summary>An AWS Signer action permitted as part of cross-account permissions. Valid values: signer:StartSigningJob, signer:GetSigningProfile, signer:RevokeSignature, or signer:SignPayload.</summary>
@@ -582,6 +605,7 @@ public partial class V1beta1SigningProfilePermissionStatusAtProvider
     public string? StatementIdPrefix { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1SigningProfilePermissionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -609,6 +633,7 @@ public partial class V1beta1SigningProfilePermissionStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>SigningProfilePermissionStatus defines the observed state of SigningProfilePermission.</summary>
 public partial class V1beta1SigningProfilePermissionStatus
 {
     /// <summary></summary>
@@ -625,6 +650,7 @@ public partial class V1beta1SigningProfilePermissionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>SigningProfilePermission is the Schema for the SigningProfilePermissions API. Creates a Signer Signing Profile Permission.</summary>
 public partial class V1beta1SigningProfilePermission : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SigningProfilePermissionSpec>, IStatus<V1beta1SigningProfilePermissionStatus>
 {
     public const string KubeApiVersion = "v1beta1";

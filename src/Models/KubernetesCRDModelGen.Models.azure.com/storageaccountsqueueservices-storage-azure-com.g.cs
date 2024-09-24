@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.azure.com;
+/// <summary>Storage version of v1api20230101.CorsRule Specifies a CORS rule for the Blob service.</summary>
 public partial class V1api20230101storageStorageAccountsQueueServiceSpecCorsCorsRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -35,6 +36,7 @@ public partial class V1api20230101storageStorageAccountsQueueServiceSpecCorsCors
     public int? MaxAgeInSeconds { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.CorsRules Sets the CORS rules. You can include up to five CorsRule elements in the request.</summary>
 public partial class V1api20230101storageStorageAccountsQueueServiceSpecCors
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -46,6 +48,7 @@ public partial class V1api20230101storageStorageAccountsQueueServiceSpecCors
     public IList<V1api20230101storageStorageAccountsQueueServiceSpecCorsCorsRules>? CorsRules { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a storage.azure.com/StorageAccount resource</summary>
 public partial class V1api20230101storageStorageAccountsQueueServiceSpecOwner
 {
     /// <summary></summary>
@@ -57,6 +60,7 @@ public partial class V1api20230101storageStorageAccountsQueueServiceSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.StorageAccounts_QueueService_Spec</summary>
 public partial class V1api20230101storageStorageAccountsQueueServiceSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -76,6 +80,7 @@ public partial class V1api20230101storageStorageAccountsQueueServiceSpec
     public V1api20230101storageStorageAccountsQueueServiceSpecOwner Owner { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20230101storageStorageAccountsQueueServiceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -107,6 +112,7 @@ public partial class V1api20230101storageStorageAccountsQueueServiceStatusCondit
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.CorsRule_STATUS Specifies a CORS rule for the Blob service.</summary>
 public partial class V1api20230101storageStorageAccountsQueueServiceStatusCorsCorsRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -134,6 +140,7 @@ public partial class V1api20230101storageStorageAccountsQueueServiceStatusCorsCo
     public int? MaxAgeInSeconds { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.CorsRules_STATUS Sets the CORS rules. You can include up to five CorsRule elements in the request.</summary>
 public partial class V1api20230101storageStorageAccountsQueueServiceStatusCors
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -145,6 +152,7 @@ public partial class V1api20230101storageStorageAccountsQueueServiceStatusCors
     public IList<V1api20230101storageStorageAccountsQueueServiceStatusCorsCorsRules>? CorsRules { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.StorageAccounts_QueueService_STATUS</summary>
 public partial class V1api20230101storageStorageAccountsQueueServiceStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -173,6 +181,7 @@ public partial class V1api20230101storageStorageAccountsQueueServiceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20230101.StorageAccountsQueueService Generator information: - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2023-01-01/queue.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/queueServices/default</summary>
 public partial class V1api20230101storageStorageAccountsQueueService : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230101storageStorageAccountsQueueServiceSpec>, IStatus<V1api20230101storageStorageAccountsQueueServiceStatus>
 {
     public const string KubeApiVersion = "v1api20230101storage";

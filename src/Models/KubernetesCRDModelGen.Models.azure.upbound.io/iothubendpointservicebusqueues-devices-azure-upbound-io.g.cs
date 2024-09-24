@@ -18,6 +18,7 @@ public enum V1beta1IOTHubEndpointServiceBusQueueSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>The connection string for the endpoint. This attribute can only be specified and is mandatory when authentication_type is keyBased.</summary>
 public partial class V1beta1IOTHubEndpointServiceBusQueueSpecForProviderConnectionStringSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -53,6 +54,7 @@ public enum V1beta1IOTHubEndpointServiceBusQueueSpecForProviderIothubIdRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTHubEndpointServiceBusQueueSpecForProviderIothubIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -66,6 +68,7 @@ public partial class V1beta1IOTHubEndpointServiceBusQueueSpecForProviderIothubId
     public V1beta1IOTHubEndpointServiceBusQueueSpecForProviderIothubIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a IOTHub in devices to populate iothubId.</summary>
 public partial class V1beta1IOTHubEndpointServiceBusQueueSpecForProviderIothubIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -97,6 +100,7 @@ public enum V1beta1IOTHubEndpointServiceBusQueueSpecForProviderIothubIdSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IOTHubEndpointServiceBusQueueSpecForProviderIothubIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1IOTHubEndpointServiceBusQueueSpecForProviderIothubId
     public V1beta1IOTHubEndpointServiceBusQueueSpecForProviderIothubIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a IOTHub in devices to populate iothubId.</summary>
 public partial class V1beta1IOTHubEndpointServiceBusQueueSpecForProviderIothubIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -145,6 +150,7 @@ public enum V1beta1IOTHubEndpointServiceBusQueueSpecForProviderResourceGroupName
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTHubEndpointServiceBusQueueSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -158,6 +164,7 @@ public partial class V1beta1IOTHubEndpointServiceBusQueueSpecForProviderResource
     public V1beta1IOTHubEndpointServiceBusQueueSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1IOTHubEndpointServiceBusQueueSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -189,6 +196,7 @@ public enum V1beta1IOTHubEndpointServiceBusQueueSpecForProviderResourceGroupName
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IOTHubEndpointServiceBusQueueSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1IOTHubEndpointServiceBusQueueSpecForProviderResource
     public V1beta1IOTHubEndpointServiceBusQueueSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1IOTHubEndpointServiceBusQueueSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -217,6 +226,7 @@ public partial class V1beta1IOTHubEndpointServiceBusQueueSpecForProviderResource
     public V1beta1IOTHubEndpointServiceBusQueueSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IOTHubEndpointServiceBusQueueSpecForProvider
 {
     /// <summary>Type used to authenticate against the Service Bus Queue endpoint. Possible values are keyBased and identityBased. Defaults to keyBased.</summary>
@@ -264,6 +274,7 @@ public partial class V1beta1IOTHubEndpointServiceBusQueueSpecForProvider
     public V1beta1IOTHubEndpointServiceBusQueueSpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 }
 
+/// <summary>The connection string for the endpoint. This attribute can only be specified and is mandatory when authentication_type is keyBased.</summary>
 public partial class V1beta1IOTHubEndpointServiceBusQueueSpecInitProviderConnectionStringSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -299,6 +310,7 @@ public enum V1beta1IOTHubEndpointServiceBusQueueSpecInitProviderResourceGroupNam
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTHubEndpointServiceBusQueueSpecInitProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -312,6 +324,7 @@ public partial class V1beta1IOTHubEndpointServiceBusQueueSpecInitProviderResourc
     public V1beta1IOTHubEndpointServiceBusQueueSpecInitProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1IOTHubEndpointServiceBusQueueSpecInitProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -343,6 +356,7 @@ public enum V1beta1IOTHubEndpointServiceBusQueueSpecInitProviderResourceGroupNam
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IOTHubEndpointServiceBusQueueSpecInitProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -356,6 +370,7 @@ public partial class V1beta1IOTHubEndpointServiceBusQueueSpecInitProviderResourc
     public V1beta1IOTHubEndpointServiceBusQueueSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1IOTHubEndpointServiceBusQueueSpecInitProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -371,6 +386,7 @@ public partial class V1beta1IOTHubEndpointServiceBusQueueSpecInitProviderResourc
     public V1beta1IOTHubEndpointServiceBusQueueSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1IOTHubEndpointServiceBusQueueSpecInitProvider
 {
     /// <summary>Type used to authenticate against the Service Bus Queue endpoint. Possible values are keyBased and identityBased. Defaults to keyBased.</summary>
@@ -448,6 +464,7 @@ public enum V1beta1IOTHubEndpointServiceBusQueueSpecProviderConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTHubEndpointServiceBusQueueSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -461,6 +478,7 @@ public partial class V1beta1IOTHubEndpointServiceBusQueueSpecProviderConfigRefPo
     public V1beta1IOTHubEndpointServiceBusQueueSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1IOTHubEndpointServiceBusQueueSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -492,6 +510,7 @@ public enum V1beta1IOTHubEndpointServiceBusQueueSpecPublishConnectionDetailsToCo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTHubEndpointServiceBusQueueSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -505,6 +524,7 @@ public partial class V1beta1IOTHubEndpointServiceBusQueueSpecPublishConnectionDe
     public V1beta1IOTHubEndpointServiceBusQueueSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1IOTHubEndpointServiceBusQueueSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -516,6 +536,7 @@ public partial class V1beta1IOTHubEndpointServiceBusQueueSpecPublishConnectionDe
     public V1beta1IOTHubEndpointServiceBusQueueSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1IOTHubEndpointServiceBusQueueSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -531,6 +552,7 @@ public partial class V1beta1IOTHubEndpointServiceBusQueueSpecPublishConnectionDe
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1IOTHubEndpointServiceBusQueueSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -546,6 +568,7 @@ public partial class V1beta1IOTHubEndpointServiceBusQueueSpecPublishConnectionDe
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1IOTHubEndpointServiceBusQueueSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -557,6 +580,7 @@ public partial class V1beta1IOTHubEndpointServiceBusQueueSpecWriteConnectionSecr
     public string Namespace { get; set; }
 }
 
+/// <summary>IOTHubEndpointServiceBusQueueSpec defines the desired state of IOTHubEndpointServiceBusQueue</summary>
 public partial class V1beta1IOTHubEndpointServiceBusQueueSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -589,6 +613,7 @@ public partial class V1beta1IOTHubEndpointServiceBusQueueSpec
     public V1beta1IOTHubEndpointServiceBusQueueSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IOTHubEndpointServiceBusQueueStatusAtProvider
 {
     /// <summary>Type used to authenticate against the Service Bus Queue endpoint. Possible values are keyBased and identityBased. Defaults to keyBased.</summary>
@@ -620,6 +645,7 @@ public partial class V1beta1IOTHubEndpointServiceBusQueueStatusAtProvider
     public string? ResourceGroupName { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1IOTHubEndpointServiceBusQueueStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -647,6 +673,7 @@ public partial class V1beta1IOTHubEndpointServiceBusQueueStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>IOTHubEndpointServiceBusQueueStatus defines the observed state of IOTHubEndpointServiceBusQueue.</summary>
 public partial class V1beta1IOTHubEndpointServiceBusQueueStatus
 {
     /// <summary></summary>
@@ -663,6 +690,7 @@ public partial class V1beta1IOTHubEndpointServiceBusQueueStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>IOTHubEndpointServiceBusQueue is the Schema for the IOTHubEndpointServiceBusQueues API. Manages an IotHub ServiceBus Queue Endpoint</summary>
 public partial class V1beta1IOTHubEndpointServiceBusQueue : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IOTHubEndpointServiceBusQueueSpec>, IStatus<V1beta1IOTHubEndpointServiceBusQueueStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.machinelearningservices.azure.com;
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a machinelearningservices.azure.com/Workspace resource</summary>
 public partial class V1api20210701storageWorkspacesConnectionSpecOwner
 {
     /// <summary></summary>
@@ -19,6 +20,7 @@ public partial class V1api20210701storageWorkspacesConnectionSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20210701.Workspaces_Connection_Spec</summary>
 public partial class V1api20210701storageWorkspacesConnectionSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -58,6 +60,7 @@ public partial class V1api20210701storageWorkspacesConnectionSpec
     public string? ValueFormat { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20210701storageWorkspacesConnectionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -89,6 +92,7 @@ public partial class V1api20210701storageWorkspacesConnectionStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20210701.Workspaces_Connection_STATUS</summary>
 public partial class V1api20210701storageWorkspacesConnectionStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -133,6 +137,7 @@ public partial class V1api20210701storageWorkspacesConnectionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20210701.WorkspacesConnection Generator information: - Generated from: /machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2021-07-01/machineLearningServices.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/connections/{connectionName}</summary>
 public partial class V1api20210701storageWorkspacesConnection : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20210701storageWorkspacesConnectionSpec>, IStatus<V1api20210701storageWorkspacesConnectionStatus>
 {
     public const string KubeApiVersion = "v1api20210701storage";

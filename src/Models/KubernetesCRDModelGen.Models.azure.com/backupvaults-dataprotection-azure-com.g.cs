@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataprotection.azure.com;
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 public partial class V1api20231101storageBackupVaultSpecIdentityUserAssignedIdentitiesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -27,6 +28,7 @@ public partial class V1api20231101storageBackupVaultSpecIdentityUserAssignedIden
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231101.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
 public partial class V1api20231101storageBackupVaultSpecIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -38,6 +40,7 @@ public partial class V1api20231101storageBackupVaultSpecIdentityUserAssignedIden
     public V1api20231101storageBackupVaultSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20231101.DppIdentityDetails Identity details</summary>
 public partial class V1api20231101storageBackupVaultSpecIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -53,6 +56,7 @@ public partial class V1api20231101storageBackupVaultSpecIdentity
     public IList<V1api20231101storageBackupVaultSpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
+/// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20231101storageBackupVaultSpecOperatorSpecConfigMapsPrincipalId
 {
     /// <summary>Key is the key in the ConfigMap being referenced</summary>
@@ -64,6 +68,7 @@ public partial class V1api20231101storageBackupVaultSpecOperatorSpecConfigMapsPr
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231101.BackupVaultOperatorConfigMaps</summary>
 public partial class V1api20231101storageBackupVaultSpecOperatorSpecConfigMaps
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -75,6 +80,7 @@ public partial class V1api20231101storageBackupVaultSpecOperatorSpecConfigMaps
     public V1api20231101storageBackupVaultSpecOperatorSpecConfigMapsPrincipalId? PrincipalId { get; set; }
 }
 
+/// <summary>Storage version of v1api20231101.BackupVaultOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 public partial class V1api20231101storageBackupVaultSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -86,6 +92,7 @@ public partial class V1api20231101storageBackupVaultSpecOperatorSpec
     public V1api20231101storageBackupVaultSpecOperatorSpecConfigMaps? ConfigMaps { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20231101storageBackupVaultSpecOwner
 {
     /// <summary></summary>
@@ -97,6 +104,7 @@ public partial class V1api20231101storageBackupVaultSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231101.CrossRegionRestoreSettings</summary>
 public partial class V1api20231101storageBackupVaultSpecPropertiesFeatureSettingsCrossRegionRestoreSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -108,6 +116,7 @@ public partial class V1api20231101storageBackupVaultSpecPropertiesFeatureSetting
     public string? State { get; set; }
 }
 
+/// <summary>Storage version of v1api20231101.CrossSubscriptionRestoreSettings CrossSubscriptionRestore Settings</summary>
 public partial class V1api20231101storageBackupVaultSpecPropertiesFeatureSettingsCrossSubscriptionRestoreSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -119,6 +128,7 @@ public partial class V1api20231101storageBackupVaultSpecPropertiesFeatureSetting
     public string? State { get; set; }
 }
 
+/// <summary>Storage version of v1api20231101.FeatureSettings Class containing feature settings of vault</summary>
 public partial class V1api20231101storageBackupVaultSpecPropertiesFeatureSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -134,6 +144,7 @@ public partial class V1api20231101storageBackupVaultSpecPropertiesFeatureSetting
     public V1api20231101storageBackupVaultSpecPropertiesFeatureSettingsCrossSubscriptionRestoreSettings? CrossSubscriptionRestoreSettings { get; set; }
 }
 
+/// <summary>Storage version of v1api20231101.AzureMonitorAlertSettings Settings for Azure Monitor based alerts</summary>
 public partial class V1api20231101storageBackupVaultSpecPropertiesMonitoringSettingsAzureMonitorAlertSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -145,6 +156,7 @@ public partial class V1api20231101storageBackupVaultSpecPropertiesMonitoringSett
     public string? AlertsForAllJobFailures { get; set; }
 }
 
+/// <summary>Storage version of v1api20231101.MonitoringSettings Monitoring Settings</summary>
 public partial class V1api20231101storageBackupVaultSpecPropertiesMonitoringSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -156,6 +168,7 @@ public partial class V1api20231101storageBackupVaultSpecPropertiesMonitoringSett
     public V1api20231101storageBackupVaultSpecPropertiesMonitoringSettingsAzureMonitorAlertSettings? AzureMonitorAlertSettings { get; set; }
 }
 
+/// <summary>Storage version of v1api20231101.ImmutabilitySettings Immutability Settings at vault level</summary>
 public partial class V1api20231101storageBackupVaultSpecPropertiesSecuritySettingsImmutabilitySettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -167,6 +180,7 @@ public partial class V1api20231101storageBackupVaultSpecPropertiesSecuritySettin
     public string? State { get; set; }
 }
 
+/// <summary>Storage version of v1api20231101.SoftDeleteSettings Soft delete related settings</summary>
 public partial class V1api20231101storageBackupVaultSpecPropertiesSecuritySettingsSoftDeleteSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -182,6 +196,7 @@ public partial class V1api20231101storageBackupVaultSpecPropertiesSecuritySettin
     public string? State { get; set; }
 }
 
+/// <summary>Storage version of v1api20231101.SecuritySettings Class containing security settings of vault</summary>
 public partial class V1api20231101storageBackupVaultSpecPropertiesSecuritySettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -197,6 +212,7 @@ public partial class V1api20231101storageBackupVaultSpecPropertiesSecuritySettin
     public V1api20231101storageBackupVaultSpecPropertiesSecuritySettingsSoftDeleteSettings? SoftDeleteSettings { get; set; }
 }
 
+/// <summary>Storage version of v1api20231101.StorageSetting Storage setting</summary>
 public partial class V1api20231101storageBackupVaultSpecPropertiesStorageSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -212,6 +228,7 @@ public partial class V1api20231101storageBackupVaultSpecPropertiesStorageSetting
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20231101.BackupVaultSpec Backup Vault</summary>
 public partial class V1api20231101storageBackupVaultSpecProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -239,6 +256,7 @@ public partial class V1api20231101storageBackupVaultSpecProperties
     public IList<V1api20231101storageBackupVaultSpecPropertiesStorageSettings>? StorageSettings { get; set; }
 }
 
+/// <summary>Storage version of v1api20231101.BackupVault_Spec</summary>
 public partial class V1api20231101storageBackupVaultSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -278,6 +296,7 @@ public partial class V1api20231101storageBackupVaultSpec
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20231101storageBackupVaultStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -309,6 +328,7 @@ public partial class V1api20231101storageBackupVaultStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20231101.UserAssignedIdentity_STATUS User assigned identity properties</summary>
 public partial class V1api20231101storageBackupVaultStatusIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -324,6 +344,7 @@ public partial class V1api20231101storageBackupVaultStatusIdentityUserAssignedId
     public string? PrincipalId { get; set; }
 }
 
+/// <summary>Storage version of v1api20231101.DppIdentityDetails_STATUS Identity details</summary>
 public partial class V1api20231101storageBackupVaultStatusIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -347,6 +368,7 @@ public partial class V1api20231101storageBackupVaultStatusIdentity
     public IDictionary<string, V1api20231101storageBackupVaultStatusIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
+/// <summary>Storage version of v1api20231101.CrossRegionRestoreSettings_STATUS</summary>
 public partial class V1api20231101storageBackupVaultStatusPropertiesFeatureSettingsCrossRegionRestoreSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -358,6 +380,7 @@ public partial class V1api20231101storageBackupVaultStatusPropertiesFeatureSetti
     public string? State { get; set; }
 }
 
+/// <summary>Storage version of v1api20231101.CrossSubscriptionRestoreSettings_STATUS CrossSubscriptionRestore Settings</summary>
 public partial class V1api20231101storageBackupVaultStatusPropertiesFeatureSettingsCrossSubscriptionRestoreSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -369,6 +392,7 @@ public partial class V1api20231101storageBackupVaultStatusPropertiesFeatureSetti
     public string? State { get; set; }
 }
 
+/// <summary>Storage version of v1api20231101.FeatureSettings_STATUS Class containing feature settings of vault</summary>
 public partial class V1api20231101storageBackupVaultStatusPropertiesFeatureSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -384,6 +408,7 @@ public partial class V1api20231101storageBackupVaultStatusPropertiesFeatureSetti
     public V1api20231101storageBackupVaultStatusPropertiesFeatureSettingsCrossSubscriptionRestoreSettings? CrossSubscriptionRestoreSettings { get; set; }
 }
 
+/// <summary>Storage version of v1api20231101.AzureMonitorAlertSettings_STATUS Settings for Azure Monitor based alerts</summary>
 public partial class V1api20231101storageBackupVaultStatusPropertiesMonitoringSettingsAzureMonitorAlertSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -395,6 +420,7 @@ public partial class V1api20231101storageBackupVaultStatusPropertiesMonitoringSe
     public string? AlertsForAllJobFailures { get; set; }
 }
 
+/// <summary>Storage version of v1api20231101.MonitoringSettings_STATUS Monitoring Settings</summary>
 public partial class V1api20231101storageBackupVaultStatusPropertiesMonitoringSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -406,6 +432,7 @@ public partial class V1api20231101storageBackupVaultStatusPropertiesMonitoringSe
     public V1api20231101storageBackupVaultStatusPropertiesMonitoringSettingsAzureMonitorAlertSettings? AzureMonitorAlertSettings { get; set; }
 }
 
+/// <summary>Storage version of v1api20231101.ResourceMoveDetails_STATUS ResourceMoveDetails will be returned in response to GetResource call from ARM</summary>
 public partial class V1api20231101storageBackupVaultStatusPropertiesResourceMoveDetails
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -433,6 +460,7 @@ public partial class V1api20231101storageBackupVaultStatusPropertiesResourceMove
     public string? TargetResourcePath { get; set; }
 }
 
+/// <summary>Storage version of v1api20231101.ImmutabilitySettings_STATUS Immutability Settings at vault level</summary>
 public partial class V1api20231101storageBackupVaultStatusPropertiesSecuritySettingsImmutabilitySettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -444,6 +472,7 @@ public partial class V1api20231101storageBackupVaultStatusPropertiesSecuritySett
     public string? State { get; set; }
 }
 
+/// <summary>Storage version of v1api20231101.SoftDeleteSettings_STATUS Soft delete related settings</summary>
 public partial class V1api20231101storageBackupVaultStatusPropertiesSecuritySettingsSoftDeleteSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -459,6 +488,7 @@ public partial class V1api20231101storageBackupVaultStatusPropertiesSecuritySett
     public string? State { get; set; }
 }
 
+/// <summary>Storage version of v1api20231101.SecuritySettings_STATUS Class containing security settings of vault</summary>
 public partial class V1api20231101storageBackupVaultStatusPropertiesSecuritySettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -474,6 +504,7 @@ public partial class V1api20231101storageBackupVaultStatusPropertiesSecuritySett
     public V1api20231101storageBackupVaultStatusPropertiesSecuritySettingsSoftDeleteSettings? SoftDeleteSettings { get; set; }
 }
 
+/// <summary>Storage version of v1api20231101.StorageSetting_STATUS Storage setting</summary>
 public partial class V1api20231101storageBackupVaultStatusPropertiesStorageSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -489,6 +520,7 @@ public partial class V1api20231101storageBackupVaultStatusPropertiesStorageSetti
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20231101.BackupVault_STATUS Backup Vault</summary>
 public partial class V1api20231101storageBackupVaultStatusProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -536,6 +568,7 @@ public partial class V1api20231101storageBackupVaultStatusProperties
     public IList<V1api20231101storageBackupVaultStatusPropertiesStorageSettings>? StorageSettings { get; set; }
 }
 
+/// <summary>Storage version of v1api20231101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 public partial class V1api20231101storageBackupVaultStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -567,6 +600,7 @@ public partial class V1api20231101storageBackupVaultStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
+/// <summary>Storage version of v1api20231101.BackupVaultResource_STATUS Backup Vault Resource</summary>
 public partial class V1api20231101storageBackupVaultStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -615,6 +649,7 @@ public partial class V1api20231101storageBackupVaultStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20231101.BackupVault Generator information: - Generated from: /dataprotection/resource-manager/Microsoft.DataProtection/stable/2023-11-01/dataprotection.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataProtection/backupVaults/{vaultName}</summary>
 public partial class V1api20231101storageBackupVault : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20231101storageBackupVaultSpec>, IStatus<V1api20231101storageBackupVaultStatus>
 {
     public const string KubeApiVersion = "v1api20231101storage";

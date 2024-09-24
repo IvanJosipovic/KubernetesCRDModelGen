@@ -38,6 +38,7 @@ public enum V1beta1UsagePlanSpecForProviderApiStagesApiIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UsagePlanSpecForProviderApiStagesApiIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1UsagePlanSpecForProviderApiStagesApiIdRefPolicy
     public V1beta1UsagePlanSpecForProviderApiStagesApiIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RestAPI in apigateway to populate apiId.</summary>
 public partial class V1beta1UsagePlanSpecForProviderApiStagesApiIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1UsagePlanSpecForProviderApiStagesApiIdSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UsagePlanSpecForProviderApiStagesApiIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1UsagePlanSpecForProviderApiStagesApiIdSelectorPolicy
     public V1beta1UsagePlanSpecForProviderApiStagesApiIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RestAPI in apigateway to populate apiId.</summary>
 public partial class V1beta1UsagePlanSpecForProviderApiStagesApiIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1UsagePlanSpecForProviderApiStagesStageRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UsagePlanSpecForProviderApiStagesStageRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1UsagePlanSpecForProviderApiStagesStageRefPolicy
     public V1beta1UsagePlanSpecForProviderApiStagesStageRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Stage in apigateway to populate stage.</summary>
 public partial class V1beta1UsagePlanSpecForProviderApiStagesStageRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1UsagePlanSpecForProviderApiStagesStageSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UsagePlanSpecForProviderApiStagesStageSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1UsagePlanSpecForProviderApiStagesStageSelectorPolicy
     public V1beta1UsagePlanSpecForProviderApiStagesStageSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Stage in apigateway to populate stage.</summary>
 public partial class V1beta1UsagePlanSpecForProviderApiStagesStageSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1UsagePlanSpecForProviderApiStagesStageSelector
     public V1beta1UsagePlanSpecForProviderApiStagesStageSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UsagePlanSpecForProviderApiStagesThrottle
 {
     /// <summary>The API request burst limit, the maximum rate limit over a time ranging from one to a few seconds, depending upon whether the underlying token bucket is at its full capacity.</summary>
@@ -217,6 +226,7 @@ public partial class V1beta1UsagePlanSpecForProviderApiStagesThrottle
     public double? RateLimit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UsagePlanSpecForProviderApiStages
 {
     /// <summary>API Id of the associated API stage in a usage plan.</summary>
@@ -248,6 +258,7 @@ public partial class V1beta1UsagePlanSpecForProviderApiStages
     public IList<V1beta1UsagePlanSpecForProviderApiStagesThrottle>? Throttle { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UsagePlanSpecForProviderQuotaSettings
 {
     /// <summary>Maximum number of requests that can be made in a given time period.</summary>
@@ -263,6 +274,7 @@ public partial class V1beta1UsagePlanSpecForProviderQuotaSettings
     public string? Period { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UsagePlanSpecForProviderThrottleSettings
 {
     /// <summary>The API request burst limit, the maximum rate limit over a time ranging from one to a few seconds, depending upon whether the underlying token bucket is at its full capacity.</summary>
@@ -274,6 +286,7 @@ public partial class V1beta1UsagePlanSpecForProviderThrottleSettings
     public double? RateLimit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UsagePlanSpecForProvider
 {
     /// <summary>Associated API stages of the usage plan.</summary>
@@ -329,6 +342,7 @@ public enum V1beta1UsagePlanSpecInitProviderApiStagesApiIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UsagePlanSpecInitProviderApiStagesApiIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -342,6 +356,7 @@ public partial class V1beta1UsagePlanSpecInitProviderApiStagesApiIdRefPolicy
     public V1beta1UsagePlanSpecInitProviderApiStagesApiIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RestAPI in apigateway to populate apiId.</summary>
 public partial class V1beta1UsagePlanSpecInitProviderApiStagesApiIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -373,6 +388,7 @@ public enum V1beta1UsagePlanSpecInitProviderApiStagesApiIdSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UsagePlanSpecInitProviderApiStagesApiIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -386,6 +402,7 @@ public partial class V1beta1UsagePlanSpecInitProviderApiStagesApiIdSelectorPolic
     public V1beta1UsagePlanSpecInitProviderApiStagesApiIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RestAPI in apigateway to populate apiId.</summary>
 public partial class V1beta1UsagePlanSpecInitProviderApiStagesApiIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -421,6 +438,7 @@ public enum V1beta1UsagePlanSpecInitProviderApiStagesStageRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UsagePlanSpecInitProviderApiStagesStageRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -434,6 +452,7 @@ public partial class V1beta1UsagePlanSpecInitProviderApiStagesStageRefPolicy
     public V1beta1UsagePlanSpecInitProviderApiStagesStageRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Stage in apigateway to populate stage.</summary>
 public partial class V1beta1UsagePlanSpecInitProviderApiStagesStageRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -465,6 +484,7 @@ public enum V1beta1UsagePlanSpecInitProviderApiStagesStageSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UsagePlanSpecInitProviderApiStagesStageSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -478,6 +498,7 @@ public partial class V1beta1UsagePlanSpecInitProviderApiStagesStageSelectorPolic
     public V1beta1UsagePlanSpecInitProviderApiStagesStageSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Stage in apigateway to populate stage.</summary>
 public partial class V1beta1UsagePlanSpecInitProviderApiStagesStageSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -493,6 +514,7 @@ public partial class V1beta1UsagePlanSpecInitProviderApiStagesStageSelector
     public V1beta1UsagePlanSpecInitProviderApiStagesStageSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UsagePlanSpecInitProviderApiStagesThrottle
 {
     /// <summary>The API request burst limit, the maximum rate limit over a time ranging from one to a few seconds, depending upon whether the underlying token bucket is at its full capacity.</summary>
@@ -508,6 +530,7 @@ public partial class V1beta1UsagePlanSpecInitProviderApiStagesThrottle
     public double? RateLimit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UsagePlanSpecInitProviderApiStages
 {
     /// <summary>API Id of the associated API stage in a usage plan.</summary>
@@ -539,6 +562,7 @@ public partial class V1beta1UsagePlanSpecInitProviderApiStages
     public IList<V1beta1UsagePlanSpecInitProviderApiStagesThrottle>? Throttle { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UsagePlanSpecInitProviderQuotaSettings
 {
     /// <summary>Maximum number of requests that can be made in a given time period.</summary>
@@ -554,6 +578,7 @@ public partial class V1beta1UsagePlanSpecInitProviderQuotaSettings
     public string? Period { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UsagePlanSpecInitProviderThrottleSettings
 {
     /// <summary>The API request burst limit, the maximum rate limit over a time ranging from one to a few seconds, depending upon whether the underlying token bucket is at its full capacity.</summary>
@@ -565,6 +590,7 @@ public partial class V1beta1UsagePlanSpecInitProviderThrottleSettings
     public double? RateLimit { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1UsagePlanSpecInitProvider
 {
     /// <summary>Associated API stages of the usage plan.</summary>
@@ -638,6 +664,7 @@ public enum V1beta1UsagePlanSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UsagePlanSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -651,6 +678,7 @@ public partial class V1beta1UsagePlanSpecProviderConfigRefPolicy
     public V1beta1UsagePlanSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1UsagePlanSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -682,6 +710,7 @@ public enum V1beta1UsagePlanSpecPublishConnectionDetailsToConfigRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UsagePlanSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -695,6 +724,7 @@ public partial class V1beta1UsagePlanSpecPublishConnectionDetailsToConfigRefPoli
     public V1beta1UsagePlanSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1UsagePlanSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -706,6 +736,7 @@ public partial class V1beta1UsagePlanSpecPublishConnectionDetailsToConfigRef
     public V1beta1UsagePlanSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1UsagePlanSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -721,6 +752,7 @@ public partial class V1beta1UsagePlanSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1UsagePlanSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -736,6 +768,7 @@ public partial class V1beta1UsagePlanSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1UsagePlanSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -747,6 +780,7 @@ public partial class V1beta1UsagePlanSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>UsagePlanSpec defines the desired state of UsagePlan</summary>
 public partial class V1beta1UsagePlanSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -779,6 +813,7 @@ public partial class V1beta1UsagePlanSpec
     public V1beta1UsagePlanSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UsagePlanStatusAtProviderApiStagesThrottle
 {
     /// <summary>The API request burst limit, the maximum rate limit over a time ranging from one to a few seconds, depending upon whether the underlying token bucket is at its full capacity.</summary>
@@ -794,6 +829,7 @@ public partial class V1beta1UsagePlanStatusAtProviderApiStagesThrottle
     public double? RateLimit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UsagePlanStatusAtProviderApiStages
 {
     /// <summary>API Id of the associated API stage in a usage plan.</summary>
@@ -809,6 +845,7 @@ public partial class V1beta1UsagePlanStatusAtProviderApiStages
     public IList<V1beta1UsagePlanStatusAtProviderApiStagesThrottle>? Throttle { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UsagePlanStatusAtProviderQuotaSettings
 {
     /// <summary>Maximum number of requests that can be made in a given time period.</summary>
@@ -824,6 +861,7 @@ public partial class V1beta1UsagePlanStatusAtProviderQuotaSettings
     public string? Period { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UsagePlanStatusAtProviderThrottleSettings
 {
     /// <summary>The API request burst limit, the maximum rate limit over a time ranging from one to a few seconds, depending upon whether the underlying token bucket is at its full capacity.</summary>
@@ -835,6 +873,7 @@ public partial class V1beta1UsagePlanStatusAtProviderThrottleSettings
     public double? RateLimit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UsagePlanStatusAtProvider
 {
     /// <summary>Associated API stages of the usage plan.</summary>
@@ -878,6 +917,7 @@ public partial class V1beta1UsagePlanStatusAtProvider
     public IList<V1beta1UsagePlanStatusAtProviderThrottleSettings>? ThrottleSettings { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1UsagePlanStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -905,6 +945,7 @@ public partial class V1beta1UsagePlanStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>UsagePlanStatus defines the observed state of UsagePlan.</summary>
 public partial class V1beta1UsagePlanStatus
 {
     /// <summary></summary>
@@ -921,6 +962,7 @@ public partial class V1beta1UsagePlanStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>UsagePlan is the Schema for the UsagePlans API. Provides an API Gateway Usage Plan.</summary>
 public partial class V1beta1UsagePlan : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1UsagePlanSpec>, IStatus<V1beta1UsagePlanStatus>
 {
     public const string KubeApiVersion = "v1beta1";

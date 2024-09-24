@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1alpha1ComputeOrganizationSecurityPolicyRuleSpecMatchConfigLayer4Config
 {
     /// <summary>The IP protocol to which this rule applies. The protocol type is required when creating a firewall rule. This value can either be one of the following well known protocol strings (tcp, udp, icmp, esp, ah, ipip, sctp), or the IP protocol number.</summary>
@@ -19,6 +20,7 @@ public partial class V1alpha1ComputeOrganizationSecurityPolicyRuleSpecMatchConfi
     public IList<string>? Ports { get; set; }
 }
 
+/// <summary>The configuration options for matching the rule.</summary>
 public partial class V1alpha1ComputeOrganizationSecurityPolicyRuleSpecMatchConfig
 {
     /// <summary>Destination IP address range in CIDR format. Required for EGRESS rules.</summary>
@@ -34,6 +36,7 @@ public partial class V1alpha1ComputeOrganizationSecurityPolicyRuleSpecMatchConfi
     public IList<string>? SrcIpRanges { get; set; }
 }
 
+/// <summary>A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.</summary>
 public partial class V1alpha1ComputeOrganizationSecurityPolicyRuleSpecMatch
 {
     /// <summary>The configuration options for matching the rule.</summary>
@@ -49,6 +52,7 @@ public partial class V1alpha1ComputeOrganizationSecurityPolicyRuleSpecMatch
     public string? VersionedExpr { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputeOrganizationSecurityPolicyRuleSpec
 {
     /// <summary>The Action to perform when the client connection triggers the rule. Can currently be either "allow", "deny" or "goto_next".</summary>
@@ -92,6 +96,7 @@ public partial class V1alpha1ComputeOrganizationSecurityPolicyRuleSpec
     public IList<string>? TargetServiceAccounts { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputeOrganizationSecurityPolicyRuleStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -115,6 +120,7 @@ public partial class V1alpha1ComputeOrganizationSecurityPolicyRuleStatusConditio
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputeOrganizationSecurityPolicyRuleStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -127,6 +133,7 @@ public partial class V1alpha1ComputeOrganizationSecurityPolicyRuleStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1ComputeOrganizationSecurityPolicyRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ComputeOrganizationSecurityPolicyRuleSpec>, IStatus<V1alpha1ComputeOrganizationSecurityPolicyRuleStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

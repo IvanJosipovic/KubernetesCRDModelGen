@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.keda.sh;
+/// <summary>HPAScalingPolicy is a single policy which must hold true for a specified past interval.</summary>
 public partial class V1alpha1ScaledObjectSpecAdvancedHorizontalPodAutoscalerConfigBehaviorScaleDownPolicies
 {
     /// <summary>periodSeconds specifies the window of time for which the policy should hold true. PeriodSeconds must be greater than zero and less than or equal to 1800 (30 min).</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1ScaledObjectSpecAdvancedHorizontalPodAutoscalerConf
     public int Value { get; set; }
 }
 
+/// <summary>scaleDown is scaling policy for scaling Down. If not set, the default value is to allow to scale down to minReplicas pods, with a 300 second stabilization window (i.e., the highest recommendation for the last 300sec is used).</summary>
 public partial class V1alpha1ScaledObjectSpecAdvancedHorizontalPodAutoscalerConfigBehaviorScaleDown
 {
     /// <summary>policies is a list of potential scaling polices which can be used during scaling. At least one policy must be specified, otherwise the HPAScalingRules will be discarded as invalid</summary>
@@ -38,6 +40,7 @@ public partial class V1alpha1ScaledObjectSpecAdvancedHorizontalPodAutoscalerConf
     public int? StabilizationWindowSeconds { get; set; }
 }
 
+/// <summary>HPAScalingPolicy is a single policy which must hold true for a specified past interval.</summary>
 public partial class V1alpha1ScaledObjectSpecAdvancedHorizontalPodAutoscalerConfigBehaviorScaleUpPolicies
 {
     /// <summary>periodSeconds specifies the window of time for which the policy should hold true. PeriodSeconds must be greater than zero and less than or equal to 1800 (30 min).</summary>
@@ -53,6 +56,7 @@ public partial class V1alpha1ScaledObjectSpecAdvancedHorizontalPodAutoscalerConf
     public int Value { get; set; }
 }
 
+/// <summary>scaleUp is scaling policy for scaling Up. If not set, the default value is the higher of:   * increase no more than 4 pods per 60 seconds   * double the number of pods per 60 seconds No stabilization is used.</summary>
 public partial class V1alpha1ScaledObjectSpecAdvancedHorizontalPodAutoscalerConfigBehaviorScaleUp
 {
     /// <summary>policies is a list of potential scaling polices which can be used during scaling. At least one policy must be specified, otherwise the HPAScalingRules will be discarded as invalid</summary>
@@ -68,6 +72,7 @@ public partial class V1alpha1ScaledObjectSpecAdvancedHorizontalPodAutoscalerConf
     public int? StabilizationWindowSeconds { get; set; }
 }
 
+/// <summary>HorizontalPodAutoscalerBehavior configures the scaling behavior of the target in both Up and Down directions (scaleUp and scaleDown fields respectively).</summary>
 public partial class V1alpha1ScaledObjectSpecAdvancedHorizontalPodAutoscalerConfigBehavior
 {
     /// <summary>scaleDown is scaling policy for scaling Down. If not set, the default value is to allow to scale down to minReplicas pods, with a 300 second stabilization window (i.e., the highest recommendation for the last 300sec is used).</summary>
@@ -79,6 +84,7 @@ public partial class V1alpha1ScaledObjectSpecAdvancedHorizontalPodAutoscalerConf
     public V1alpha1ScaledObjectSpecAdvancedHorizontalPodAutoscalerConfigBehaviorScaleUp? ScaleUp { get; set; }
 }
 
+/// <summary>HorizontalPodAutoscalerConfig specifies horizontal scale config</summary>
 public partial class V1alpha1ScaledObjectSpecAdvancedHorizontalPodAutoscalerConfig
 {
     /// <summary>HorizontalPodAutoscalerBehavior configures the scaling behavior of the target in both Up and Down directions (scaleUp and scaleDown fields respectively).</summary>
@@ -90,6 +96,7 @@ public partial class V1alpha1ScaledObjectSpecAdvancedHorizontalPodAutoscalerConf
     public string? Name { get; set; }
 }
 
+/// <summary>ScalingModifiers describes advanced scaling logic options like formula</summary>
 public partial class V1alpha1ScaledObjectSpecAdvancedScalingModifiers
 {
     /// <summary></summary>
@@ -109,6 +116,7 @@ public partial class V1alpha1ScaledObjectSpecAdvancedScalingModifiers
     public string? Target { get; set; }
 }
 
+/// <summary>AdvancedConfig specifies advance scaling options</summary>
 public partial class V1alpha1ScaledObjectSpecAdvanced
 {
     /// <summary>HorizontalPodAutoscalerConfig specifies horizontal scale config</summary>
@@ -124,6 +132,7 @@ public partial class V1alpha1ScaledObjectSpecAdvanced
     public V1alpha1ScaledObjectSpecAdvancedScalingModifiers? ScalingModifiers { get; set; }
 }
 
+/// <summary>Fallback is the spec for fallback options</summary>
 public partial class V1alpha1ScaledObjectSpecFallback
 {
     /// <summary></summary>
@@ -135,6 +144,7 @@ public partial class V1alpha1ScaledObjectSpecFallback
     public int Replicas { get; set; }
 }
 
+/// <summary>ScaleTarget holds the reference to the scale target Object</summary>
 public partial class V1alpha1ScaledObjectSpecScaleTargetRef
 {
     /// <summary></summary>
@@ -154,6 +164,7 @@ public partial class V1alpha1ScaledObjectSpecScaleTargetRef
     public string Name { get; set; }
 }
 
+/// <summary>AuthenticationRef points to the TriggerAuthentication or ClusterTriggerAuthentication object that is used to authenticate the scaler with the environment</summary>
 public partial class V1alpha1ScaledObjectSpecTriggersAuthenticationRef
 {
     /// <summary>Kind of the resource being referred to. Defaults to TriggerAuthentication.</summary>
@@ -165,6 +176,7 @@ public partial class V1alpha1ScaledObjectSpecTriggersAuthenticationRef
     public string Name { get; set; }
 }
 
+/// <summary>ScaleTriggers reference the scaler that will be used</summary>
 public partial class V1alpha1ScaledObjectSpecTriggers
 {
     /// <summary>AuthenticationRef points to the TriggerAuthentication or ClusterTriggerAuthentication object that is used to authenticate the scaler with the environment</summary>
@@ -192,6 +204,7 @@ public partial class V1alpha1ScaledObjectSpecTriggers
     public bool? UseCachedMetrics { get; set; }
 }
 
+/// <summary>ScaledObjectSpec is the spec for a ScaledObject resource</summary>
 public partial class V1alpha1ScaledObjectSpec
 {
     /// <summary>AdvancedConfig specifies advance scaling options</summary>
@@ -235,6 +248,7 @@ public partial class V1alpha1ScaledObjectSpec
     public IList<V1alpha1ScaledObjectSpecTriggers> Triggers { get; set; }
 }
 
+/// <summary>Condition to store the condition state</summary>
 public partial class V1alpha1ScaledObjectStatusConditions
 {
     /// <summary>A human readable message indicating details about the transition.</summary>
@@ -254,6 +268,7 @@ public partial class V1alpha1ScaledObjectStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>HealthStatus is the status for a ScaledObject's health</summary>
 public partial class V1alpha1ScaledObjectStatusHealth
 {
     /// <summary></summary>
@@ -265,6 +280,7 @@ public partial class V1alpha1ScaledObjectStatusHealth
     public string? Status { get; set; }
 }
 
+/// <summary>GroupVersionKindResource provides unified structure for schema.GroupVersionKind and Resource</summary>
 public partial class V1alpha1ScaledObjectStatusScaleTargetGVKR
 {
     /// <summary></summary>
@@ -284,6 +300,7 @@ public partial class V1alpha1ScaledObjectStatusScaleTargetGVKR
     public string Version { get; set; }
 }
 
+/// <summary>ScaledObjectStatus is the status for a ScaledObject resource</summary>
 public partial class V1alpha1ScaledObjectStatus
 {
     /// <summary></summary>
@@ -332,6 +349,7 @@ public partial class V1alpha1ScaledObjectStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ScaledObject is a specification for a ScaledObject resource</summary>
 public partial class V1alpha1ScaledObject : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ScaledObjectSpec>, IStatus<V1alpha1ScaledObjectStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

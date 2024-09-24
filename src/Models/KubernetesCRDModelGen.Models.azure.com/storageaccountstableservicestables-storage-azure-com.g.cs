@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.azure.com;
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a storage.azure.com/StorageAccountsTableService resource</summary>
 public partial class V1api20230101storageStorageAccountsTableServicesTableSpecOwner
 {
     /// <summary></summary>
@@ -19,6 +20,7 @@ public partial class V1api20230101storageStorageAccountsTableServicesTableSpecOw
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.TableAccessPolicy Table Access Policy Properties Object.</summary>
 public partial class V1api20230101storageStorageAccountsTableServicesTableSpecSignedIdentifiersAccessPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -38,6 +40,7 @@ public partial class V1api20230101storageStorageAccountsTableServicesTableSpecSi
     public string? StartTime { get; set; }
 }
 
+/// <summary>Reference: unique-64-character-value of the stored access policy.</summary>
 public partial class V1api20230101storageStorageAccountsTableServicesTableSpecSignedIdentifiersReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -57,6 +60,7 @@ public partial class V1api20230101storageStorageAccountsTableServicesTableSpecSi
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.TableSignedIdentifier Object to set Table Access Policy.</summary>
 public partial class V1api20230101storageStorageAccountsTableServicesTableSpecSignedIdentifiers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -72,6 +76,7 @@ public partial class V1api20230101storageStorageAccountsTableServicesTableSpecSi
     public V1api20230101storageStorageAccountsTableServicesTableSpecSignedIdentifiersReference Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.StorageAccounts_TableServices_Table_Spec</summary>
 public partial class V1api20230101storageStorageAccountsTableServicesTableSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -95,6 +100,7 @@ public partial class V1api20230101storageStorageAccountsTableServicesTableSpec
     public IList<V1api20230101storageStorageAccountsTableServicesTableSpecSignedIdentifiers>? SignedIdentifiers { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20230101storageStorageAccountsTableServicesTableStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -126,6 +132,7 @@ public partial class V1api20230101storageStorageAccountsTableServicesTableStatus
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.TableAccessPolicy_STATUS Table Access Policy Properties Object.</summary>
 public partial class V1api20230101storageStorageAccountsTableServicesTableStatusSignedIdentifiersAccessPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -145,6 +152,7 @@ public partial class V1api20230101storageStorageAccountsTableServicesTableStatus
     public string? StartTime { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.TableSignedIdentifier_STATUS Object to set Table Access Policy.</summary>
 public partial class V1api20230101storageStorageAccountsTableServicesTableStatusSignedIdentifiers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -160,6 +168,7 @@ public partial class V1api20230101storageStorageAccountsTableServicesTableStatus
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.StorageAccounts_TableServices_Table_STATUS</summary>
 public partial class V1api20230101storageStorageAccountsTableServicesTableStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -192,6 +201,7 @@ public partial class V1api20230101storageStorageAccountsTableServicesTableStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20230101.StorageAccountsTableServicesTable Generator information: - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2023-01-01/table.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/tableServices/default/tables/{tableName}</summary>
 public partial class V1api20230101storageStorageAccountsTableServicesTable : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230101storageStorageAccountsTableServicesTableSpec>, IStatus<V1api20230101storageStorageAccountsTableServicesTableStatus>
 {
     public const string KubeApiVersion = "v1api20230101storage";

@@ -18,6 +18,7 @@ public enum V1beta1FunctionSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecForProviderBuildConfigAutomaticUpdatePolicy
 {
 }
@@ -42,6 +43,7 @@ public enum V1beta1FunctionSpecForProviderBuildConfigDockerRepositoryRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecForProviderBuildConfigDockerRepositoryRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -55,6 +57,7 @@ public partial class V1beta1FunctionSpecForProviderBuildConfigDockerRepositoryRe
     public V1beta1FunctionSpecForProviderBuildConfigDockerRepositoryRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RegistryRepository in artifact to populate dockerRepository.</summary>
 public partial class V1beta1FunctionSpecForProviderBuildConfigDockerRepositoryRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -86,6 +89,7 @@ public enum V1beta1FunctionSpecForProviderBuildConfigDockerRepositorySelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionSpecForProviderBuildConfigDockerRepositorySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -99,6 +103,7 @@ public partial class V1beta1FunctionSpecForProviderBuildConfigDockerRepositorySe
     public V1beta1FunctionSpecForProviderBuildConfigDockerRepositorySelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RegistryRepository in artifact to populate dockerRepository.</summary>
 public partial class V1beta1FunctionSpecForProviderBuildConfigDockerRepositorySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -114,6 +119,7 @@ public partial class V1beta1FunctionSpecForProviderBuildConfigDockerRepositorySe
     public V1beta1FunctionSpecForProviderBuildConfigDockerRepositorySelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecForProviderBuildConfigOnDeployUpdatePolicy
 {
 }
@@ -138,6 +144,7 @@ public enum V1beta1FunctionSpecForProviderBuildConfigServiceAccountRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecForProviderBuildConfigServiceAccountRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -151,6 +158,7 @@ public partial class V1beta1FunctionSpecForProviderBuildConfigServiceAccountRefP
     public V1beta1FunctionSpecForProviderBuildConfigServiceAccountRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
 public partial class V1beta1FunctionSpecForProviderBuildConfigServiceAccountRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -182,6 +190,7 @@ public enum V1beta1FunctionSpecForProviderBuildConfigServiceAccountSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionSpecForProviderBuildConfigServiceAccountSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -195,6 +204,7 @@ public partial class V1beta1FunctionSpecForProviderBuildConfigServiceAccountSele
     public V1beta1FunctionSpecForProviderBuildConfigServiceAccountSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
 public partial class V1beta1FunctionSpecForProviderBuildConfigServiceAccountSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -210,6 +220,7 @@ public partial class V1beta1FunctionSpecForProviderBuildConfigServiceAccountSele
     public V1beta1FunctionSpecForProviderBuildConfigServiceAccountSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecForProviderBuildConfigSourceRepoSource
 {
     /// <summary>Regex matching branches to build.</summary>
@@ -261,6 +272,7 @@ public enum V1beta1FunctionSpecForProviderBuildConfigSourceStorageSourceBucketRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecForProviderBuildConfigSourceStorageSourceBucketRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -274,6 +286,7 @@ public partial class V1beta1FunctionSpecForProviderBuildConfigSourceStorageSourc
     public V1beta1FunctionSpecForProviderBuildConfigSourceStorageSourceBucketRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in storage to populate bucket.</summary>
 public partial class V1beta1FunctionSpecForProviderBuildConfigSourceStorageSourceBucketRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -305,6 +318,7 @@ public enum V1beta1FunctionSpecForProviderBuildConfigSourceStorageSourceBucketSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionSpecForProviderBuildConfigSourceStorageSourceBucketSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -318,6 +332,7 @@ public partial class V1beta1FunctionSpecForProviderBuildConfigSourceStorageSourc
     public V1beta1FunctionSpecForProviderBuildConfigSourceStorageSourceBucketSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in storage to populate bucket.</summary>
 public partial class V1beta1FunctionSpecForProviderBuildConfigSourceStorageSourceBucketSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -353,6 +368,7 @@ public enum V1beta1FunctionSpecForProviderBuildConfigSourceStorageSourceObjectRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecForProviderBuildConfigSourceStorageSourceObjectRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -366,6 +382,7 @@ public partial class V1beta1FunctionSpecForProviderBuildConfigSourceStorageSourc
     public V1beta1FunctionSpecForProviderBuildConfigSourceStorageSourceObjectRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a BucketObject in storage to populate object.</summary>
 public partial class V1beta1FunctionSpecForProviderBuildConfigSourceStorageSourceObjectRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -397,6 +414,7 @@ public enum V1beta1FunctionSpecForProviderBuildConfigSourceStorageSourceObjectSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionSpecForProviderBuildConfigSourceStorageSourceObjectSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -410,6 +428,7 @@ public partial class V1beta1FunctionSpecForProviderBuildConfigSourceStorageSourc
     public V1beta1FunctionSpecForProviderBuildConfigSourceStorageSourceObjectSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a BucketObject in storage to populate object.</summary>
 public partial class V1beta1FunctionSpecForProviderBuildConfigSourceStorageSourceObjectSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -425,6 +444,7 @@ public partial class V1beta1FunctionSpecForProviderBuildConfigSourceStorageSourc
     public V1beta1FunctionSpecForProviderBuildConfigSourceStorageSourceObjectSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecForProviderBuildConfigSourceStorageSource
 {
     /// <summary>Google Cloud Storage bucket containing the source</summary>
@@ -456,6 +476,7 @@ public partial class V1beta1FunctionSpecForProviderBuildConfigSourceStorageSourc
     public V1beta1FunctionSpecForProviderBuildConfigSourceStorageSourceObjectSelector? ObjectSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecForProviderBuildConfigSource
 {
     /// <summary>If provided, get the source from this location in a Cloud Source Repository. Structure is documented below.</summary>
@@ -487,6 +508,7 @@ public enum V1beta1FunctionSpecForProviderBuildConfigWorkerPoolRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecForProviderBuildConfigWorkerPoolRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -500,6 +522,7 @@ public partial class V1beta1FunctionSpecForProviderBuildConfigWorkerPoolRefPolic
     public V1beta1FunctionSpecForProviderBuildConfigWorkerPoolRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a WorkerPool in cloudbuild to populate workerPool.</summary>
 public partial class V1beta1FunctionSpecForProviderBuildConfigWorkerPoolRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -531,6 +554,7 @@ public enum V1beta1FunctionSpecForProviderBuildConfigWorkerPoolSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionSpecForProviderBuildConfigWorkerPoolSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -544,6 +568,7 @@ public partial class V1beta1FunctionSpecForProviderBuildConfigWorkerPoolSelector
     public V1beta1FunctionSpecForProviderBuildConfigWorkerPoolSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a WorkerPool in cloudbuild to populate workerPool.</summary>
 public partial class V1beta1FunctionSpecForProviderBuildConfigWorkerPoolSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -559,6 +584,7 @@ public partial class V1beta1FunctionSpecForProviderBuildConfigWorkerPoolSelector
     public V1beta1FunctionSpecForProviderBuildConfigWorkerPoolSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecForProviderBuildConfig
 {
     /// <summary>Security patches are applied automatically to the runtime without requiring the function to be redeployed.</summary>
@@ -642,6 +668,7 @@ public enum V1beta1FunctionSpecForProviderEventTriggerEventFiltersValueRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecForProviderEventTriggerEventFiltersValueRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -655,6 +682,7 @@ public partial class V1beta1FunctionSpecForProviderEventTriggerEventFiltersValue
     public V1beta1FunctionSpecForProviderEventTriggerEventFiltersValueRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in storage to populate value.</summary>
 public partial class V1beta1FunctionSpecForProviderEventTriggerEventFiltersValueRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -686,6 +714,7 @@ public enum V1beta1FunctionSpecForProviderEventTriggerEventFiltersValueSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionSpecForProviderEventTriggerEventFiltersValueSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -699,6 +728,7 @@ public partial class V1beta1FunctionSpecForProviderEventTriggerEventFiltersValue
     public V1beta1FunctionSpecForProviderEventTriggerEventFiltersValueSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in storage to populate value.</summary>
 public partial class V1beta1FunctionSpecForProviderEventTriggerEventFiltersValueSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -714,6 +744,7 @@ public partial class V1beta1FunctionSpecForProviderEventTriggerEventFiltersValue
     public V1beta1FunctionSpecForProviderEventTriggerEventFiltersValueSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecForProviderEventTriggerEventFilters
 {
     /// <summary>'Required. The name of a CloudEvents attribute. Currently, only a subset of attributes are supported for filtering. Use the gcloud eventarc providers describe command to learn more about events and their attributes. Do not filter for the 'type' attribute here, as this is already achieved by the resource's event_type attribute.</summary>
@@ -757,6 +788,7 @@ public enum V1beta1FunctionSpecForProviderEventTriggerPubsubTopicRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecForProviderEventTriggerPubsubTopicRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -770,6 +802,7 @@ public partial class V1beta1FunctionSpecForProviderEventTriggerPubsubTopicRefPol
     public V1beta1FunctionSpecForProviderEventTriggerPubsubTopicRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Topic in pubsub to populate pubsubTopic.</summary>
 public partial class V1beta1FunctionSpecForProviderEventTriggerPubsubTopicRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -801,6 +834,7 @@ public enum V1beta1FunctionSpecForProviderEventTriggerPubsubTopicSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionSpecForProviderEventTriggerPubsubTopicSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -814,6 +848,7 @@ public partial class V1beta1FunctionSpecForProviderEventTriggerPubsubTopicSelect
     public V1beta1FunctionSpecForProviderEventTriggerPubsubTopicSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Topic in pubsub to populate pubsubTopic.</summary>
 public partial class V1beta1FunctionSpecForProviderEventTriggerPubsubTopicSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -849,6 +884,7 @@ public enum V1beta1FunctionSpecForProviderEventTriggerServiceAccountEmailRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecForProviderEventTriggerServiceAccountEmailRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -862,6 +898,7 @@ public partial class V1beta1FunctionSpecForProviderEventTriggerServiceAccountEma
     public V1beta1FunctionSpecForProviderEventTriggerServiceAccountEmailRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
 public partial class V1beta1FunctionSpecForProviderEventTriggerServiceAccountEmailRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -893,6 +930,7 @@ public enum V1beta1FunctionSpecForProviderEventTriggerServiceAccountEmailSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionSpecForProviderEventTriggerServiceAccountEmailSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -906,6 +944,7 @@ public partial class V1beta1FunctionSpecForProviderEventTriggerServiceAccountEma
     public V1beta1FunctionSpecForProviderEventTriggerServiceAccountEmailSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
 public partial class V1beta1FunctionSpecForProviderEventTriggerServiceAccountEmailSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -921,6 +960,7 @@ public partial class V1beta1FunctionSpecForProviderEventTriggerServiceAccountEma
     public V1beta1FunctionSpecForProviderEventTriggerServiceAccountEmailSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecForProviderEventTrigger
 {
     /// <summary>Criteria used to filter events. Structure is documented below.</summary>
@@ -984,6 +1024,7 @@ public enum V1beta1FunctionSpecForProviderServiceConfigSecretEnvironmentVariable
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecForProviderServiceConfigSecretEnvironmentVariablesSecretRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -997,6 +1038,7 @@ public partial class V1beta1FunctionSpecForProviderServiceConfigSecretEnvironmen
     public V1beta1FunctionSpecForProviderServiceConfigSecretEnvironmentVariablesSecretRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Secret in secretmanager to populate secret.</summary>
 public partial class V1beta1FunctionSpecForProviderServiceConfigSecretEnvironmentVariablesSecretRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1028,6 +1070,7 @@ public enum V1beta1FunctionSpecForProviderServiceConfigSecretEnvironmentVariable
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionSpecForProviderServiceConfigSecretEnvironmentVariablesSecretSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1041,6 +1084,7 @@ public partial class V1beta1FunctionSpecForProviderServiceConfigSecretEnvironmen
     public V1beta1FunctionSpecForProviderServiceConfigSecretEnvironmentVariablesSecretSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Secret in secretmanager to populate secret.</summary>
 public partial class V1beta1FunctionSpecForProviderServiceConfigSecretEnvironmentVariablesSecretSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1056,6 +1100,7 @@ public partial class V1beta1FunctionSpecForProviderServiceConfigSecretEnvironmen
     public V1beta1FunctionSpecForProviderServiceConfigSecretEnvironmentVariablesSecretSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecForProviderServiceConfigSecretEnvironmentVariables
 {
     /// <summary>Name of the environment variable.</summary>
@@ -1103,6 +1148,7 @@ public enum V1beta1FunctionSpecForProviderServiceConfigSecretVolumesSecretRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecForProviderServiceConfigSecretVolumesSecretRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1116,6 +1162,7 @@ public partial class V1beta1FunctionSpecForProviderServiceConfigSecretVolumesSec
     public V1beta1FunctionSpecForProviderServiceConfigSecretVolumesSecretRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Secret in secretmanager to populate secret.</summary>
 public partial class V1beta1FunctionSpecForProviderServiceConfigSecretVolumesSecretRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1147,6 +1194,7 @@ public enum V1beta1FunctionSpecForProviderServiceConfigSecretVolumesSecretSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionSpecForProviderServiceConfigSecretVolumesSecretSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1160,6 +1208,7 @@ public partial class V1beta1FunctionSpecForProviderServiceConfigSecretVolumesSec
     public V1beta1FunctionSpecForProviderServiceConfigSecretVolumesSecretSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Secret in secretmanager to populate secret.</summary>
 public partial class V1beta1FunctionSpecForProviderServiceConfigSecretVolumesSecretSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1175,6 +1224,7 @@ public partial class V1beta1FunctionSpecForProviderServiceConfigSecretVolumesSec
     public V1beta1FunctionSpecForProviderServiceConfigSecretVolumesSecretSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecForProviderServiceConfigSecretVolumesVersions
 {
     /// <summary>Relative path of the file under the mount path where the secret value for this version will be fetched and made available. For example, setting the mountPath as '/etc/secrets' and path as secret_foo would mount the secret value file at /etc/secrets/secret_foo.</summary>
@@ -1186,6 +1236,7 @@ public partial class V1beta1FunctionSpecForProviderServiceConfigSecretVolumesVer
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecForProviderServiceConfigSecretVolumes
 {
     /// <summary>The path within the container to mount the secret volume. For example, setting the mountPath as /etc/secrets would mount the secret value files under the /etc/secrets directory. This directory will also be completely shadowed and unavailable to mount any other secrets. Recommended mount path: /etc/secrets</summary>
@@ -1233,6 +1284,7 @@ public enum V1beta1FunctionSpecForProviderServiceConfigServiceAccountEmailRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecForProviderServiceConfigServiceAccountEmailRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1246,6 +1298,7 @@ public partial class V1beta1FunctionSpecForProviderServiceConfigServiceAccountEm
     public V1beta1FunctionSpecForProviderServiceConfigServiceAccountEmailRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
 public partial class V1beta1FunctionSpecForProviderServiceConfigServiceAccountEmailRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1277,6 +1330,7 @@ public enum V1beta1FunctionSpecForProviderServiceConfigServiceAccountEmailSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionSpecForProviderServiceConfigServiceAccountEmailSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1290,6 +1344,7 @@ public partial class V1beta1FunctionSpecForProviderServiceConfigServiceAccountEm
     public V1beta1FunctionSpecForProviderServiceConfigServiceAccountEmailSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
 public partial class V1beta1FunctionSpecForProviderServiceConfigServiceAccountEmailSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1305,6 +1360,7 @@ public partial class V1beta1FunctionSpecForProviderServiceConfigServiceAccountEm
     public V1beta1FunctionSpecForProviderServiceConfigServiceAccountEmailSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecForProviderServiceConfig
 {
     /// <summary>Whether 100% of traffic is routed to the latest revision. Defaults to true.</summary>
@@ -1376,6 +1432,7 @@ public partial class V1beta1FunctionSpecForProviderServiceConfig
     public string? VpcConnectorEgressSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecForProvider
 {
     /// <summary>Describes the Build step of the function that builds a container from the given source. Structure is documented below.</summary>
@@ -1411,6 +1468,7 @@ public partial class V1beta1FunctionSpecForProvider
     public IList<V1beta1FunctionSpecForProviderServiceConfig>? ServiceConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecInitProviderBuildConfigAutomaticUpdatePolicy
 {
 }
@@ -1435,6 +1493,7 @@ public enum V1beta1FunctionSpecInitProviderBuildConfigDockerRepositoryRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecInitProviderBuildConfigDockerRepositoryRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1448,6 +1507,7 @@ public partial class V1beta1FunctionSpecInitProviderBuildConfigDockerRepositoryR
     public V1beta1FunctionSpecInitProviderBuildConfigDockerRepositoryRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RegistryRepository in artifact to populate dockerRepository.</summary>
 public partial class V1beta1FunctionSpecInitProviderBuildConfigDockerRepositoryRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1479,6 +1539,7 @@ public enum V1beta1FunctionSpecInitProviderBuildConfigDockerRepositorySelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionSpecInitProviderBuildConfigDockerRepositorySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1492,6 +1553,7 @@ public partial class V1beta1FunctionSpecInitProviderBuildConfigDockerRepositoryS
     public V1beta1FunctionSpecInitProviderBuildConfigDockerRepositorySelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RegistryRepository in artifact to populate dockerRepository.</summary>
 public partial class V1beta1FunctionSpecInitProviderBuildConfigDockerRepositorySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1507,6 +1569,7 @@ public partial class V1beta1FunctionSpecInitProviderBuildConfigDockerRepositoryS
     public V1beta1FunctionSpecInitProviderBuildConfigDockerRepositorySelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecInitProviderBuildConfigOnDeployUpdatePolicy
 {
 }
@@ -1531,6 +1594,7 @@ public enum V1beta1FunctionSpecInitProviderBuildConfigServiceAccountRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecInitProviderBuildConfigServiceAccountRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1544,6 +1608,7 @@ public partial class V1beta1FunctionSpecInitProviderBuildConfigServiceAccountRef
     public V1beta1FunctionSpecInitProviderBuildConfigServiceAccountRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
 public partial class V1beta1FunctionSpecInitProviderBuildConfigServiceAccountRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1575,6 +1640,7 @@ public enum V1beta1FunctionSpecInitProviderBuildConfigServiceAccountSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionSpecInitProviderBuildConfigServiceAccountSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1588,6 +1654,7 @@ public partial class V1beta1FunctionSpecInitProviderBuildConfigServiceAccountSel
     public V1beta1FunctionSpecInitProviderBuildConfigServiceAccountSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
 public partial class V1beta1FunctionSpecInitProviderBuildConfigServiceAccountSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1603,6 +1670,7 @@ public partial class V1beta1FunctionSpecInitProviderBuildConfigServiceAccountSel
     public V1beta1FunctionSpecInitProviderBuildConfigServiceAccountSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecInitProviderBuildConfigSourceRepoSource
 {
     /// <summary>Regex matching branches to build.</summary>
@@ -1654,6 +1722,7 @@ public enum V1beta1FunctionSpecInitProviderBuildConfigSourceStorageSourceBucketR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecInitProviderBuildConfigSourceStorageSourceBucketRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1667,6 +1736,7 @@ public partial class V1beta1FunctionSpecInitProviderBuildConfigSourceStorageSour
     public V1beta1FunctionSpecInitProviderBuildConfigSourceStorageSourceBucketRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in storage to populate bucket.</summary>
 public partial class V1beta1FunctionSpecInitProviderBuildConfigSourceStorageSourceBucketRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1698,6 +1768,7 @@ public enum V1beta1FunctionSpecInitProviderBuildConfigSourceStorageSourceBucketS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionSpecInitProviderBuildConfigSourceStorageSourceBucketSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1711,6 +1782,7 @@ public partial class V1beta1FunctionSpecInitProviderBuildConfigSourceStorageSour
     public V1beta1FunctionSpecInitProviderBuildConfigSourceStorageSourceBucketSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in storage to populate bucket.</summary>
 public partial class V1beta1FunctionSpecInitProviderBuildConfigSourceStorageSourceBucketSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1746,6 +1818,7 @@ public enum V1beta1FunctionSpecInitProviderBuildConfigSourceStorageSourceObjectR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecInitProviderBuildConfigSourceStorageSourceObjectRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1759,6 +1832,7 @@ public partial class V1beta1FunctionSpecInitProviderBuildConfigSourceStorageSour
     public V1beta1FunctionSpecInitProviderBuildConfigSourceStorageSourceObjectRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a BucketObject in storage to populate object.</summary>
 public partial class V1beta1FunctionSpecInitProviderBuildConfigSourceStorageSourceObjectRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1790,6 +1864,7 @@ public enum V1beta1FunctionSpecInitProviderBuildConfigSourceStorageSourceObjectS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionSpecInitProviderBuildConfigSourceStorageSourceObjectSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1803,6 +1878,7 @@ public partial class V1beta1FunctionSpecInitProviderBuildConfigSourceStorageSour
     public V1beta1FunctionSpecInitProviderBuildConfigSourceStorageSourceObjectSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a BucketObject in storage to populate object.</summary>
 public partial class V1beta1FunctionSpecInitProviderBuildConfigSourceStorageSourceObjectSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1818,6 +1894,7 @@ public partial class V1beta1FunctionSpecInitProviderBuildConfigSourceStorageSour
     public V1beta1FunctionSpecInitProviderBuildConfigSourceStorageSourceObjectSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecInitProviderBuildConfigSourceStorageSource
 {
     /// <summary>Google Cloud Storage bucket containing the source</summary>
@@ -1849,6 +1926,7 @@ public partial class V1beta1FunctionSpecInitProviderBuildConfigSourceStorageSour
     public V1beta1FunctionSpecInitProviderBuildConfigSourceStorageSourceObjectSelector? ObjectSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecInitProviderBuildConfigSource
 {
     /// <summary>If provided, get the source from this location in a Cloud Source Repository. Structure is documented below.</summary>
@@ -1880,6 +1958,7 @@ public enum V1beta1FunctionSpecInitProviderBuildConfigWorkerPoolRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecInitProviderBuildConfigWorkerPoolRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1893,6 +1972,7 @@ public partial class V1beta1FunctionSpecInitProviderBuildConfigWorkerPoolRefPoli
     public V1beta1FunctionSpecInitProviderBuildConfigWorkerPoolRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a WorkerPool in cloudbuild to populate workerPool.</summary>
 public partial class V1beta1FunctionSpecInitProviderBuildConfigWorkerPoolRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1924,6 +2004,7 @@ public enum V1beta1FunctionSpecInitProviderBuildConfigWorkerPoolSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionSpecInitProviderBuildConfigWorkerPoolSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1937,6 +2018,7 @@ public partial class V1beta1FunctionSpecInitProviderBuildConfigWorkerPoolSelecto
     public V1beta1FunctionSpecInitProviderBuildConfigWorkerPoolSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a WorkerPool in cloudbuild to populate workerPool.</summary>
 public partial class V1beta1FunctionSpecInitProviderBuildConfigWorkerPoolSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1952,6 +2034,7 @@ public partial class V1beta1FunctionSpecInitProviderBuildConfigWorkerPoolSelecto
     public V1beta1FunctionSpecInitProviderBuildConfigWorkerPoolSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecInitProviderBuildConfig
 {
     /// <summary>Security patches are applied automatically to the runtime without requiring the function to be redeployed.</summary>
@@ -2035,6 +2118,7 @@ public enum V1beta1FunctionSpecInitProviderEventTriggerEventFiltersValueRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecInitProviderEventTriggerEventFiltersValueRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2048,6 +2132,7 @@ public partial class V1beta1FunctionSpecInitProviderEventTriggerEventFiltersValu
     public V1beta1FunctionSpecInitProviderEventTriggerEventFiltersValueRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in storage to populate value.</summary>
 public partial class V1beta1FunctionSpecInitProviderEventTriggerEventFiltersValueRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2079,6 +2164,7 @@ public enum V1beta1FunctionSpecInitProviderEventTriggerEventFiltersValueSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionSpecInitProviderEventTriggerEventFiltersValueSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2092,6 +2178,7 @@ public partial class V1beta1FunctionSpecInitProviderEventTriggerEventFiltersValu
     public V1beta1FunctionSpecInitProviderEventTriggerEventFiltersValueSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in storage to populate value.</summary>
 public partial class V1beta1FunctionSpecInitProviderEventTriggerEventFiltersValueSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2107,6 +2194,7 @@ public partial class V1beta1FunctionSpecInitProviderEventTriggerEventFiltersValu
     public V1beta1FunctionSpecInitProviderEventTriggerEventFiltersValueSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecInitProviderEventTriggerEventFilters
 {
     /// <summary>'Required. The name of a CloudEvents attribute. Currently, only a subset of attributes are supported for filtering. Use the gcloud eventarc providers describe command to learn more about events and their attributes. Do not filter for the 'type' attribute here, as this is already achieved by the resource's event_type attribute.</summary>
@@ -2150,6 +2238,7 @@ public enum V1beta1FunctionSpecInitProviderEventTriggerPubsubTopicRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecInitProviderEventTriggerPubsubTopicRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2163,6 +2252,7 @@ public partial class V1beta1FunctionSpecInitProviderEventTriggerPubsubTopicRefPo
     public V1beta1FunctionSpecInitProviderEventTriggerPubsubTopicRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Topic in pubsub to populate pubsubTopic.</summary>
 public partial class V1beta1FunctionSpecInitProviderEventTriggerPubsubTopicRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2194,6 +2284,7 @@ public enum V1beta1FunctionSpecInitProviderEventTriggerPubsubTopicSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionSpecInitProviderEventTriggerPubsubTopicSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2207,6 +2298,7 @@ public partial class V1beta1FunctionSpecInitProviderEventTriggerPubsubTopicSelec
     public V1beta1FunctionSpecInitProviderEventTriggerPubsubTopicSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Topic in pubsub to populate pubsubTopic.</summary>
 public partial class V1beta1FunctionSpecInitProviderEventTriggerPubsubTopicSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2242,6 +2334,7 @@ public enum V1beta1FunctionSpecInitProviderEventTriggerServiceAccountEmailRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecInitProviderEventTriggerServiceAccountEmailRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2255,6 +2348,7 @@ public partial class V1beta1FunctionSpecInitProviderEventTriggerServiceAccountEm
     public V1beta1FunctionSpecInitProviderEventTriggerServiceAccountEmailRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
 public partial class V1beta1FunctionSpecInitProviderEventTriggerServiceAccountEmailRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2286,6 +2380,7 @@ public enum V1beta1FunctionSpecInitProviderEventTriggerServiceAccountEmailSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionSpecInitProviderEventTriggerServiceAccountEmailSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2299,6 +2394,7 @@ public partial class V1beta1FunctionSpecInitProviderEventTriggerServiceAccountEm
     public V1beta1FunctionSpecInitProviderEventTriggerServiceAccountEmailSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
 public partial class V1beta1FunctionSpecInitProviderEventTriggerServiceAccountEmailSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2314,6 +2410,7 @@ public partial class V1beta1FunctionSpecInitProviderEventTriggerServiceAccountEm
     public V1beta1FunctionSpecInitProviderEventTriggerServiceAccountEmailSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecInitProviderEventTrigger
 {
     /// <summary>Criteria used to filter events. Structure is documented below.</summary>
@@ -2377,6 +2474,7 @@ public enum V1beta1FunctionSpecInitProviderServiceConfigSecretEnvironmentVariabl
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecInitProviderServiceConfigSecretEnvironmentVariablesSecretRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2390,6 +2488,7 @@ public partial class V1beta1FunctionSpecInitProviderServiceConfigSecretEnvironme
     public V1beta1FunctionSpecInitProviderServiceConfigSecretEnvironmentVariablesSecretRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Secret in secretmanager to populate secret.</summary>
 public partial class V1beta1FunctionSpecInitProviderServiceConfigSecretEnvironmentVariablesSecretRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2421,6 +2520,7 @@ public enum V1beta1FunctionSpecInitProviderServiceConfigSecretEnvironmentVariabl
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionSpecInitProviderServiceConfigSecretEnvironmentVariablesSecretSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2434,6 +2534,7 @@ public partial class V1beta1FunctionSpecInitProviderServiceConfigSecretEnvironme
     public V1beta1FunctionSpecInitProviderServiceConfigSecretEnvironmentVariablesSecretSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Secret in secretmanager to populate secret.</summary>
 public partial class V1beta1FunctionSpecInitProviderServiceConfigSecretEnvironmentVariablesSecretSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2449,6 +2550,7 @@ public partial class V1beta1FunctionSpecInitProviderServiceConfigSecretEnvironme
     public V1beta1FunctionSpecInitProviderServiceConfigSecretEnvironmentVariablesSecretSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecInitProviderServiceConfigSecretEnvironmentVariables
 {
     /// <summary>Name of the environment variable.</summary>
@@ -2496,6 +2598,7 @@ public enum V1beta1FunctionSpecInitProviderServiceConfigSecretVolumesSecretRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecInitProviderServiceConfigSecretVolumesSecretRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2509,6 +2612,7 @@ public partial class V1beta1FunctionSpecInitProviderServiceConfigSecretVolumesSe
     public V1beta1FunctionSpecInitProviderServiceConfigSecretVolumesSecretRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Secret in secretmanager to populate secret.</summary>
 public partial class V1beta1FunctionSpecInitProviderServiceConfigSecretVolumesSecretRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2540,6 +2644,7 @@ public enum V1beta1FunctionSpecInitProviderServiceConfigSecretVolumesSecretSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionSpecInitProviderServiceConfigSecretVolumesSecretSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2553,6 +2658,7 @@ public partial class V1beta1FunctionSpecInitProviderServiceConfigSecretVolumesSe
     public V1beta1FunctionSpecInitProviderServiceConfigSecretVolumesSecretSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Secret in secretmanager to populate secret.</summary>
 public partial class V1beta1FunctionSpecInitProviderServiceConfigSecretVolumesSecretSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2568,6 +2674,7 @@ public partial class V1beta1FunctionSpecInitProviderServiceConfigSecretVolumesSe
     public V1beta1FunctionSpecInitProviderServiceConfigSecretVolumesSecretSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecInitProviderServiceConfigSecretVolumesVersions
 {
     /// <summary>Relative path of the file under the mount path where the secret value for this version will be fetched and made available. For example, setting the mountPath as '/etc/secrets' and path as secret_foo would mount the secret value file at /etc/secrets/secret_foo.</summary>
@@ -2579,6 +2686,7 @@ public partial class V1beta1FunctionSpecInitProviderServiceConfigSecretVolumesVe
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecInitProviderServiceConfigSecretVolumes
 {
     /// <summary>The path within the container to mount the secret volume. For example, setting the mountPath as /etc/secrets would mount the secret value files under the /etc/secrets directory. This directory will also be completely shadowed and unavailable to mount any other secrets. Recommended mount path: /etc/secrets</summary>
@@ -2626,6 +2734,7 @@ public enum V1beta1FunctionSpecInitProviderServiceConfigServiceAccountEmailRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecInitProviderServiceConfigServiceAccountEmailRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2639,6 +2748,7 @@ public partial class V1beta1FunctionSpecInitProviderServiceConfigServiceAccountE
     public V1beta1FunctionSpecInitProviderServiceConfigServiceAccountEmailRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
 public partial class V1beta1FunctionSpecInitProviderServiceConfigServiceAccountEmailRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2670,6 +2780,7 @@ public enum V1beta1FunctionSpecInitProviderServiceConfigServiceAccountEmailSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionSpecInitProviderServiceConfigServiceAccountEmailSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2683,6 +2794,7 @@ public partial class V1beta1FunctionSpecInitProviderServiceConfigServiceAccountE
     public V1beta1FunctionSpecInitProviderServiceConfigServiceAccountEmailSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
 public partial class V1beta1FunctionSpecInitProviderServiceConfigServiceAccountEmailSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2698,6 +2810,7 @@ public partial class V1beta1FunctionSpecInitProviderServiceConfigServiceAccountE
     public V1beta1FunctionSpecInitProviderServiceConfigServiceAccountEmailSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecInitProviderServiceConfig
 {
     /// <summary>Whether 100% of traffic is routed to the latest revision. Defaults to true.</summary>
@@ -2769,6 +2882,7 @@ public partial class V1beta1FunctionSpecInitProviderServiceConfig
     public string? VpcConnectorEgressSettings { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1FunctionSpecInitProvider
 {
     /// <summary>Describes the Build step of the function that builds a container from the given source. Structure is documented below.</summary>
@@ -2842,6 +2956,7 @@ public enum V1beta1FunctionSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2855,6 +2970,7 @@ public partial class V1beta1FunctionSpecProviderConfigRefPolicy
     public V1beta1FunctionSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1FunctionSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2886,6 +3002,7 @@ public enum V1beta1FunctionSpecPublishConnectionDetailsToConfigRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2899,6 +3016,7 @@ public partial class V1beta1FunctionSpecPublishConnectionDetailsToConfigRefPolic
     public V1beta1FunctionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1FunctionSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2910,6 +3028,7 @@ public partial class V1beta1FunctionSpecPublishConnectionDetailsToConfigRef
     public V1beta1FunctionSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1FunctionSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -2925,6 +3044,7 @@ public partial class V1beta1FunctionSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1FunctionSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -2940,6 +3060,7 @@ public partial class V1beta1FunctionSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1FunctionSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -2951,6 +3072,7 @@ public partial class V1beta1FunctionSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>FunctionSpec defines the desired state of Function</summary>
 public partial class V1beta1FunctionSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -2983,10 +3105,12 @@ public partial class V1beta1FunctionSpec
     public V1beta1FunctionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionStatusAtProviderBuildConfigAutomaticUpdatePolicy
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionStatusAtProviderBuildConfigOnDeployUpdatePolicy
 {
     /// <summary>(Output) The runtime version which was used during latest function deployment.</summary>
@@ -2994,6 +3118,7 @@ public partial class V1beta1FunctionStatusAtProviderBuildConfigOnDeployUpdatePol
     public string? RuntimeVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionStatusAtProviderBuildConfigSourceRepoSource
 {
     /// <summary>Regex matching branches to build.</summary>
@@ -3025,6 +3150,7 @@ public partial class V1beta1FunctionStatusAtProviderBuildConfigSourceRepoSource
     public string? TagName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionStatusAtProviderBuildConfigSourceStorageSource
 {
     /// <summary>Google Cloud Storage bucket containing the source</summary>
@@ -3040,6 +3166,7 @@ public partial class V1beta1FunctionStatusAtProviderBuildConfigSourceStorageSour
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionStatusAtProviderBuildConfigSource
 {
     /// <summary>If provided, get the source from this location in a Cloud Source Repository. Structure is documented below.</summary>
@@ -3051,6 +3178,7 @@ public partial class V1beta1FunctionStatusAtProviderBuildConfigSource
     public IList<V1beta1FunctionStatusAtProviderBuildConfigSourceStorageSource>? StorageSource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionStatusAtProviderBuildConfig
 {
     /// <summary>Security patches are applied automatically to the runtime without requiring the function to be redeployed.</summary>
@@ -3094,6 +3222,7 @@ public partial class V1beta1FunctionStatusAtProviderBuildConfig
     public string? WorkerPool { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionStatusAtProviderEventTriggerEventFilters
 {
     /// <summary>'Required. The name of a CloudEvents attribute. Currently, only a subset of attributes are supported for filtering. Use the gcloud eventarc providers describe command to learn more about events and their attributes. Do not filter for the 'type' attribute here, as this is already achieved by the resource's event_type attribute.</summary>
@@ -3109,6 +3238,7 @@ public partial class V1beta1FunctionStatusAtProviderEventTriggerEventFilters
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionStatusAtProviderEventTrigger
 {
     /// <summary>Criteria used to filter events. Structure is documented below.</summary>
@@ -3140,6 +3270,7 @@ public partial class V1beta1FunctionStatusAtProviderEventTrigger
     public string? TriggerRegion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionStatusAtProviderServiceConfigSecretEnvironmentVariables
 {
     /// <summary>Name of the environment variable.</summary>
@@ -3159,6 +3290,7 @@ public partial class V1beta1FunctionStatusAtProviderServiceConfigSecretEnvironme
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionStatusAtProviderServiceConfigSecretVolumesVersions
 {
     /// <summary>Relative path of the file under the mount path where the secret value for this version will be fetched and made available. For example, setting the mountPath as '/etc/secrets' and path as secret_foo would mount the secret value file at /etc/secrets/secret_foo.</summary>
@@ -3170,6 +3302,7 @@ public partial class V1beta1FunctionStatusAtProviderServiceConfigSecretVolumesVe
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionStatusAtProviderServiceConfigSecretVolumes
 {
     /// <summary>The path within the container to mount the secret volume. For example, setting the mountPath as /etc/secrets would mount the secret value files under the /etc/secrets directory. This directory will also be completely shadowed and unavailable to mount any other secrets. Recommended mount path: /etc/secrets</summary>
@@ -3189,6 +3322,7 @@ public partial class V1beta1FunctionStatusAtProviderServiceConfigSecretVolumes
     public IList<V1beta1FunctionStatusAtProviderServiceConfigSecretVolumesVersions>? Versions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionStatusAtProviderServiceConfig
 {
     /// <summary>Whether 100% of traffic is routed to the latest revision. Defaults to true.</summary>
@@ -3260,6 +3394,7 @@ public partial class V1beta1FunctionStatusAtProviderServiceConfig
     public string? VpcConnectorEgressSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionStatusAtProvider
 {
     /// <summary>Describes the Build step of the function that builds a container from the given source. Structure is documented below.</summary>
@@ -3323,6 +3458,7 @@ public partial class V1beta1FunctionStatusAtProvider
     public string? Url { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1FunctionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -3350,6 +3486,7 @@ public partial class V1beta1FunctionStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>FunctionStatus defines the observed state of Function.</summary>
 public partial class V1beta1FunctionStatus
 {
     /// <summary></summary>
@@ -3366,6 +3503,7 @@ public partial class V1beta1FunctionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Function is the Schema for the Functions API. A Cloud Function that contains user computation executed in response to an event.</summary>
 public partial class V1beta1Function : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FunctionSpec>, IStatus<V1beta1FunctionStatus>
 {
     public const string KubeApiVersion = "v1beta1";

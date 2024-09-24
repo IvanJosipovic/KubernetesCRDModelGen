@@ -18,6 +18,7 @@ public enum V1beta1ExperienceSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperienceSpecForProviderConfigurationContentSourceConfiguration
 {
     /// <summary>The identifiers of the data sources you want to use for your Amazon Kendra experience. Maximum number of 100 items.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1ExperienceSpecForProviderConfigurationContentSourceC
     public IList<string>? FaqIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperienceSpecForProviderConfigurationUserIdentityConfiguration
 {
     /// <summary>The AWS SSO field name that contains the identifiers of your users, such as their emails.</summary>
@@ -40,6 +42,7 @@ public partial class V1beta1ExperienceSpecForProviderConfigurationUserIdentityCo
     public string? IdentityAttributeName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperienceSpecForProviderConfiguration
 {
     /// <summary>The identifiers of your data sources and FAQs. Or, you can specify that you want to use documents indexed via the BatchPutDocument API. Detailed below.</summary>
@@ -71,6 +74,7 @@ public enum V1beta1ExperienceSpecForProviderIndexIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ExperienceSpecForProviderIndexIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -84,6 +88,7 @@ public partial class V1beta1ExperienceSpecForProviderIndexIdRefPolicy
     public V1beta1ExperienceSpecForProviderIndexIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Index in kendra to populate indexId.</summary>
 public partial class V1beta1ExperienceSpecForProviderIndexIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -115,6 +120,7 @@ public enum V1beta1ExperienceSpecForProviderIndexIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ExperienceSpecForProviderIndexIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -128,6 +134,7 @@ public partial class V1beta1ExperienceSpecForProviderIndexIdSelectorPolicy
     public V1beta1ExperienceSpecForProviderIndexIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Index in kendra to populate indexId.</summary>
 public partial class V1beta1ExperienceSpecForProviderIndexIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -163,6 +170,7 @@ public enum V1beta1ExperienceSpecForProviderRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ExperienceSpecForProviderRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -176,6 +184,7 @@ public partial class V1beta1ExperienceSpecForProviderRoleArnRefPolicy
     public V1beta1ExperienceSpecForProviderRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ExperienceSpecForProviderRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -207,6 +216,7 @@ public enum V1beta1ExperienceSpecForProviderRoleArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ExperienceSpecForProviderRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -220,6 +230,7 @@ public partial class V1beta1ExperienceSpecForProviderRoleArnSelectorPolicy
     public V1beta1ExperienceSpecForProviderRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ExperienceSpecForProviderRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -235,6 +246,7 @@ public partial class V1beta1ExperienceSpecForProviderRoleArnSelector
     public V1beta1ExperienceSpecForProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperienceSpecForProvider
 {
     /// <summary>Configuration information for your Amazon Kendra experience. Detailed below.</summary>
@@ -278,6 +290,7 @@ public partial class V1beta1ExperienceSpecForProvider
     public V1beta1ExperienceSpecForProviderRoleArnSelector? RoleArnSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperienceSpecInitProviderConfigurationContentSourceConfiguration
 {
     /// <summary>The identifiers of the data sources you want to use for your Amazon Kendra experience. Maximum number of 100 items.</summary>
@@ -293,6 +306,7 @@ public partial class V1beta1ExperienceSpecInitProviderConfigurationContentSource
     public IList<string>? FaqIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperienceSpecInitProviderConfigurationUserIdentityConfiguration
 {
     /// <summary>The AWS SSO field name that contains the identifiers of your users, such as their emails.</summary>
@@ -300,6 +314,7 @@ public partial class V1beta1ExperienceSpecInitProviderConfigurationUserIdentityC
     public string? IdentityAttributeName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperienceSpecInitProviderConfiguration
 {
     /// <summary>The identifiers of your data sources and FAQs. Or, you can specify that you want to use documents indexed via the BatchPutDocument API. Detailed below.</summary>
@@ -331,6 +346,7 @@ public enum V1beta1ExperienceSpecInitProviderIndexIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ExperienceSpecInitProviderIndexIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -344,6 +360,7 @@ public partial class V1beta1ExperienceSpecInitProviderIndexIdRefPolicy
     public V1beta1ExperienceSpecInitProviderIndexIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Index in kendra to populate indexId.</summary>
 public partial class V1beta1ExperienceSpecInitProviderIndexIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -375,6 +392,7 @@ public enum V1beta1ExperienceSpecInitProviderIndexIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ExperienceSpecInitProviderIndexIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -388,6 +406,7 @@ public partial class V1beta1ExperienceSpecInitProviderIndexIdSelectorPolicy
     public V1beta1ExperienceSpecInitProviderIndexIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Index in kendra to populate indexId.</summary>
 public partial class V1beta1ExperienceSpecInitProviderIndexIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -423,6 +442,7 @@ public enum V1beta1ExperienceSpecInitProviderRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ExperienceSpecInitProviderRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -436,6 +456,7 @@ public partial class V1beta1ExperienceSpecInitProviderRoleArnRefPolicy
     public V1beta1ExperienceSpecInitProviderRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ExperienceSpecInitProviderRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -467,6 +488,7 @@ public enum V1beta1ExperienceSpecInitProviderRoleArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ExperienceSpecInitProviderRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -480,6 +502,7 @@ public partial class V1beta1ExperienceSpecInitProviderRoleArnSelectorPolicy
     public V1beta1ExperienceSpecInitProviderRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ExperienceSpecInitProviderRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -495,6 +518,7 @@ public partial class V1beta1ExperienceSpecInitProviderRoleArnSelector
     public V1beta1ExperienceSpecInitProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ExperienceSpecInitProvider
 {
     /// <summary>Configuration information for your Amazon Kendra experience. Detailed below.</summary>
@@ -576,6 +600,7 @@ public enum V1beta1ExperienceSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ExperienceSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -589,6 +614,7 @@ public partial class V1beta1ExperienceSpecProviderConfigRefPolicy
     public V1beta1ExperienceSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ExperienceSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -620,6 +646,7 @@ public enum V1beta1ExperienceSpecPublishConnectionDetailsToConfigRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ExperienceSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -633,6 +660,7 @@ public partial class V1beta1ExperienceSpecPublishConnectionDetailsToConfigRefPol
     public V1beta1ExperienceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ExperienceSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -644,6 +672,7 @@ public partial class V1beta1ExperienceSpecPublishConnectionDetailsToConfigRef
     public V1beta1ExperienceSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ExperienceSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -659,6 +688,7 @@ public partial class V1beta1ExperienceSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ExperienceSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -674,6 +704,7 @@ public partial class V1beta1ExperienceSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ExperienceSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -685,6 +716,7 @@ public partial class V1beta1ExperienceSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ExperienceSpec defines the desired state of Experience</summary>
 public partial class V1beta1ExperienceSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -717,6 +749,7 @@ public partial class V1beta1ExperienceSpec
     public V1beta1ExperienceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperienceStatusAtProviderConfigurationContentSourceConfiguration
 {
     /// <summary>The identifiers of the data sources you want to use for your Amazon Kendra experience. Maximum number of 100 items.</summary>
@@ -732,6 +765,7 @@ public partial class V1beta1ExperienceStatusAtProviderConfigurationContentSource
     public IList<string>? FaqIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperienceStatusAtProviderConfigurationUserIdentityConfiguration
 {
     /// <summary>The AWS SSO field name that contains the identifiers of your users, such as their emails.</summary>
@@ -739,6 +773,7 @@ public partial class V1beta1ExperienceStatusAtProviderConfigurationUserIdentityC
     public string? IdentityAttributeName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperienceStatusAtProviderConfiguration
 {
     /// <summary>The identifiers of your data sources and FAQs. Or, you can specify that you want to use documents indexed via the BatchPutDocument API. Detailed below.</summary>
@@ -750,6 +785,7 @@ public partial class V1beta1ExperienceStatusAtProviderConfiguration
     public IList<V1beta1ExperienceStatusAtProviderConfigurationUserIdentityConfiguration>? UserIdentityConfiguration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperienceStatusAtProviderEndpoints
 {
     /// <summary>The endpoint of your Amazon Kendra experience.</summary>
@@ -761,6 +797,7 @@ public partial class V1beta1ExperienceStatusAtProviderEndpoints
     public string? EndpointType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperienceStatusAtProvider
 {
     /// <summary>ARN of the Experience.</summary>
@@ -804,6 +841,7 @@ public partial class V1beta1ExperienceStatusAtProvider
     public string? Status { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ExperienceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -831,6 +869,7 @@ public partial class V1beta1ExperienceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ExperienceStatus defines the observed state of Experience.</summary>
 public partial class V1beta1ExperienceStatus
 {
     /// <summary></summary>
@@ -847,6 +886,7 @@ public partial class V1beta1ExperienceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Experience is the Schema for the Experiences API.</summary>
 public partial class V1beta1Experience : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ExperienceSpec>, IStatus<V1beta1ExperienceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

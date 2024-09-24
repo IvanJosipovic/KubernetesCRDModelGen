@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.binaryauthorization.cnrm.cloud.google.com;
+/// <summary>Immutable. The Project that this resource belongs to.</summary>
 public partial class V1beta1BinaryAuthorizationAttestorSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1BinaryAuthorizationAttestorSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable.</summary>
 public partial class V1beta1BinaryAuthorizationAttestorSpecUserOwnedDrydockNoteNoteRef
 {
     /// <summary>Required. The Drydock resource name of a Attestation. Authority Note, created by the user, in the format: `projects/*/notes/*`. This field may not be updated. An attestation by this attestor is stored as a Grafeas Attestation. Authority Occurrence that names a container image and that links to this Note. Grafeas is an external dependency.  Allowed value: The Google Cloud resource name of a `ContainerAnalysisNote` resource (format: `projects/{{project}}/notes/{{name}}`).</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1BinaryAuthorizationAttestorSpecUserOwnedDrydockNoteN
     public string? Namespace { get; set; }
 }
 
+/// <summary>A raw PKIX SubjectPublicKeyInfo format public key. NOTE: `id` may be explicitly provided by the caller when using this type of public key, but it MUST be a valid RFC3986 URI. If `id` is left blank, a default one will be computed based on the digest of the DER encoding of the public key.</summary>
 public partial class V1beta1BinaryAuthorizationAttestorSpecUserOwnedDrydockNotePublicKeysPkixPublicKey
 {
     /// <summary>A PEM-encoded public key, as described in https://tools.ietf.org/html/rfc7468#section-13</summary>
@@ -49,6 +52,7 @@ public partial class V1beta1BinaryAuthorizationAttestorSpecUserOwnedDrydockNoteP
     public string? SignatureAlgorithm { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BinaryAuthorizationAttestorSpecUserOwnedDrydockNotePublicKeys
 {
     /// <summary>ASCII-armored representation of a PGP public key, as the entire output by the command `gpg --export --armor foo@example.com` (either LF or CRLF line endings). When using this field, `id` should be left blank. The BinAuthz API handlers will calculate the ID and fill it in automatically. BinAuthz computes this ID as the OpenPGP RFC4880 V4 fingerprint, represented as upper-case hex. If `id` is provided by the caller, it will be overwritten by the API-calculated ID.</summary>
@@ -68,6 +72,7 @@ public partial class V1beta1BinaryAuthorizationAttestorSpecUserOwnedDrydockNoteP
     public V1beta1BinaryAuthorizationAttestorSpecUserOwnedDrydockNotePublicKeysPkixPublicKey? PkixPublicKey { get; set; }
 }
 
+/// <summary>This specifies how an attestation will be read, and how it will be used during policy enforcement.</summary>
 public partial class V1beta1BinaryAuthorizationAttestorSpecUserOwnedDrydockNote
 {
     /// <summary>Immutable.</summary>
@@ -79,6 +84,7 @@ public partial class V1beta1BinaryAuthorizationAttestorSpecUserOwnedDrydockNote
     public IList<V1beta1BinaryAuthorizationAttestorSpecUserOwnedDrydockNotePublicKeys>? PublicKeys { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BinaryAuthorizationAttestorSpec
 {
     /// <summary>Optional. A descriptive comment. This field may be updated. The field may be displayed in chooser dialogs.</summary>
@@ -98,6 +104,7 @@ public partial class V1beta1BinaryAuthorizationAttestorSpec
     public V1beta1BinaryAuthorizationAttestorSpecUserOwnedDrydockNote? UserOwnedDrydockNote { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BinaryAuthorizationAttestorStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -121,6 +128,7 @@ public partial class V1beta1BinaryAuthorizationAttestorStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BinaryAuthorizationAttestorStatusUserOwnedDrydockNote
 {
     /// <summary>Output only. This field will contain the service account email address that this Attestor will use as the principal when querying Container Analysis. Attestor administrators must grant this service account the IAM role needed to read attestations from the in Container Analysis (`containeranalysis.notes.occurrences.viewer`). This email address is fixed for the lifetime of the Attestor, but callers should not make any other assumptions about the service account email; future versions may use an email based on a different naming pattern.</summary>
@@ -128,6 +136,7 @@ public partial class V1beta1BinaryAuthorizationAttestorStatusUserOwnedDrydockNot
     public string? DelegationServiceAccountEmail { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BinaryAuthorizationAttestorStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -148,6 +157,7 @@ public partial class V1beta1BinaryAuthorizationAttestorStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1BinaryAuthorizationAttestor : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BinaryAuthorizationAttestorSpec>, IStatus<V1beta1BinaryAuthorizationAttestorStatus>
 {
     public const string KubeApiVersion = "v1beta1";

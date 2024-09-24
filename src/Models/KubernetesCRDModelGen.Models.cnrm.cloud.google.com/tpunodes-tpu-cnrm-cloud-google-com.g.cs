@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.tpu.cnrm.cloud.google.com;
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1TPUNodeSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1TPUNodeSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. Sets the scheduling options for this TPU instance.</summary>
 public partial class V1alpha1TPUNodeSpecSchedulingConfig
 {
     /// <summary>Immutable. Defines whether the TPU instance is preemptible.</summary>
@@ -30,6 +32,7 @@ public partial class V1alpha1TPUNodeSpecSchedulingConfig
     public bool Preemptible { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1TPUNodeSpec
 {
     /// <summary>Immutable. The type of hardware accelerators associated with this node.</summary>
@@ -73,6 +76,7 @@ public partial class V1alpha1TPUNodeSpec
     public string Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1TPUNodeStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -96,6 +100,7 @@ public partial class V1alpha1TPUNodeStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1TPUNodeStatusNetworkEndpoints
 {
     /// <summary>The IP address of this network endpoint.</summary>
@@ -107,6 +112,7 @@ public partial class V1alpha1TPUNodeStatusNetworkEndpoints
     public int? Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1TPUNodeStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -127,6 +133,7 @@ public partial class V1alpha1TPUNodeStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1TPUNode : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1TPUNodeSpec>, IStatus<V1alpha1TPUNodeStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

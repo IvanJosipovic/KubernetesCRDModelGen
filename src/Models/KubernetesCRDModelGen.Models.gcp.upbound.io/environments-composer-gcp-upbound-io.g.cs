@@ -18,6 +18,7 @@ public enum V1beta1EnvironmentSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecForProviderConfigDataRetentionConfigTaskLogsRetentionConfig
 {
     /// <summary>The mode of storage for Airflow workers task logs. Values for storage mode are CLOUD_LOGGING_ONLY to only store logs in cloud logging and CLOUD_LOGGING_AND_CLOUD_STORAGE to store logs in cloud logging and cloud storage.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1EnvironmentSpecForProviderConfigDataRetentionConfigT
     public string? StorageMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecForProviderConfigDataRetentionConfig
 {
     /// <summary>The configuration setting for Task Logs. Structure is documented below.</summary>
@@ -32,6 +34,7 @@ public partial class V1beta1EnvironmentSpecForProviderConfigDataRetentionConfig
     public IList<V1beta1EnvironmentSpecForProviderConfigDataRetentionConfigTaskLogsRetentionConfig>? TaskLogsRetentionConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecForProviderConfigDatabaseConfig
 {
     /// <summary>Machine type on which Airflow web server is running. It has to be one of: composer-n1-webserver-2, composer-n1-webserver-4 or composer-n1-webserver-8. Value custom is returned only in response, if Airflow web server parameters were manually changed to a non-standard values.</summary>
@@ -43,6 +46,7 @@ public partial class V1beta1EnvironmentSpecForProviderConfigDatabaseConfig
     public string? Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecForProviderConfigEncryptionConfig
 {
     /// <summary>Customer-managed Encryption Key available through Google's Key Management Service. It must be the fully qualified resource name, i.e. projects/project-id/locations/location/keyRings/keyring/cryptoKeys/key. Cannot be updated.</summary>
@@ -50,6 +54,7 @@ public partial class V1beta1EnvironmentSpecForProviderConfigEncryptionConfig
     public string? KmsKeyName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecForProviderConfigMaintenanceWindow
 {
     /// <summary>Maintenance window end time. It is used only to calculate the duration of the maintenance window. The value for end-time must be in the future, relative to 'start_time'.</summary>
@@ -65,6 +70,7 @@ public partial class V1beta1EnvironmentSpecForProviderConfigMaintenanceWindow
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecForProviderConfigMasterAuthorizedNetworksConfigCidrBlocks
 {
     /// <summary>cidr_block must be specified in CIDR notation.</summary>
@@ -76,6 +82,7 @@ public partial class V1beta1EnvironmentSpecForProviderConfigMasterAuthorizedNetw
     public string? DisplayName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecForProviderConfigMasterAuthorizedNetworksConfig
 {
     /// <summary>cidr_blocks define up to 50 external networks that could access Kubernetes master through HTTPS. Structure is documented below.</summary>
@@ -87,6 +94,7 @@ public partial class V1beta1EnvironmentSpecForProviderConfigMasterAuthorizedNetw
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecForProviderConfigNodeConfigIpAllocationPolicy
 {
     /// <summary>The IP address range used to allocate IP addresses to pods in the cluster. For Cloud Composer 1 environments, this field is applicable only when use_ip_aliases is true. Set to blank to have GKE choose a range with the default size. Set to /netmask (e.g. /14) to have GKE choose a range with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks (e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to pick a specific range to use. Specify either cluster_secondary_range_name or cluster_ipv4_cidr_block but not both.</summary>
@@ -130,6 +138,7 @@ public enum V1beta1EnvironmentSpecForProviderConfigNodeConfigNetworkRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EnvironmentSpecForProviderConfigNodeConfigNetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +152,7 @@ public partial class V1beta1EnvironmentSpecForProviderConfigNodeConfigNetworkRef
     public V1beta1EnvironmentSpecForProviderConfigNodeConfigNetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate network.</summary>
 public partial class V1beta1EnvironmentSpecForProviderConfigNodeConfigNetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +184,7 @@ public enum V1beta1EnvironmentSpecForProviderConfigNodeConfigNetworkSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EnvironmentSpecForProviderConfigNodeConfigNetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +198,7 @@ public partial class V1beta1EnvironmentSpecForProviderConfigNodeConfigNetworkSel
     public V1beta1EnvironmentSpecForProviderConfigNodeConfigNetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate network.</summary>
 public partial class V1beta1EnvironmentSpecForProviderConfigNodeConfigNetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +234,7 @@ public enum V1beta1EnvironmentSpecForProviderConfigNodeConfigServiceAccountRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EnvironmentSpecForProviderConfigNodeConfigServiceAccountRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +248,7 @@ public partial class V1beta1EnvironmentSpecForProviderConfigNodeConfigServiceAcc
     public V1beta1EnvironmentSpecForProviderConfigNodeConfigServiceAccountRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
 public partial class V1beta1EnvironmentSpecForProviderConfigNodeConfigServiceAccountRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +280,7 @@ public enum V1beta1EnvironmentSpecForProviderConfigNodeConfigServiceAccountSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EnvironmentSpecForProviderConfigNodeConfigServiceAccountSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +294,7 @@ public partial class V1beta1EnvironmentSpecForProviderConfigNodeConfigServiceAcc
     public V1beta1EnvironmentSpecForProviderConfigNodeConfigServiceAccountSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
 public partial class V1beta1EnvironmentSpecForProviderConfigNodeConfigServiceAccountSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -314,6 +330,7 @@ public enum V1beta1EnvironmentSpecForProviderConfigNodeConfigSubnetworkRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EnvironmentSpecForProviderConfigNodeConfigSubnetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -327,6 +344,7 @@ public partial class V1beta1EnvironmentSpecForProviderConfigNodeConfigSubnetwork
     public V1beta1EnvironmentSpecForProviderConfigNodeConfigSubnetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnetwork in compute to populate subnetwork.</summary>
 public partial class V1beta1EnvironmentSpecForProviderConfigNodeConfigSubnetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -358,6 +376,7 @@ public enum V1beta1EnvironmentSpecForProviderConfigNodeConfigSubnetworkSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EnvironmentSpecForProviderConfigNodeConfigSubnetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -371,6 +390,7 @@ public partial class V1beta1EnvironmentSpecForProviderConfigNodeConfigSubnetwork
     public V1beta1EnvironmentSpecForProviderConfigNodeConfigSubnetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnetwork in compute to populate subnetwork.</summary>
 public partial class V1beta1EnvironmentSpecForProviderConfigNodeConfigSubnetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -386,6 +406,7 @@ public partial class V1beta1EnvironmentSpecForProviderConfigNodeConfigSubnetwork
     public V1beta1EnvironmentSpecForProviderConfigNodeConfigSubnetworkSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecForProviderConfigNodeConfig
 {
     /// <summary>The disk size in GB used for node VMs. Minimum size is 20GB. If unspecified, defaults to 100GB. Cannot be updated.</summary>
@@ -453,6 +474,7 @@ public partial class V1beta1EnvironmentSpecForProviderConfigNodeConfig
     public string? Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecForProviderConfigPrivateEnvironmentConfig
 {
     /// <summary>When specified, the environment will use Private Service Connect instead of VPC peerings to connect to Cloud SQL in the Tenant Project, and the PSC endpoint in the Customer Project will use an IP address from this subnetwork. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.</summary>
@@ -488,6 +510,7 @@ public partial class V1beta1EnvironmentSpecForProviderConfigPrivateEnvironmentCo
     public string? WebServerIpv4CidrBlock { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecForProviderConfigRecoveryConfigScheduledSnapshotsConfig
 {
     /// <summary>When enabled, Cloud Composer periodically saves snapshots of your environment to a Cloud Storage bucket.</summary>
@@ -507,6 +530,7 @@ public partial class V1beta1EnvironmentSpecForProviderConfigRecoveryConfigSchedu
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecForProviderConfigRecoveryConfig
 {
     /// <summary>The recovery configuration settings for the Cloud Composer environment.</summary>
@@ -514,6 +538,7 @@ public partial class V1beta1EnvironmentSpecForProviderConfigRecoveryConfig
     public IList<V1beta1EnvironmentSpecForProviderConfigRecoveryConfigScheduledSnapshotsConfig>? ScheduledSnapshotsConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecForProviderConfigSoftwareConfig
 {
     /// <summary>Apache Airflow configuration properties to override. Property keys contain the section and property names, separated by a hyphen, for example "core-dags_are_paused_at_creation".</summary>
@@ -541,6 +566,7 @@ public partial class V1beta1EnvironmentSpecForProviderConfigSoftwareConfig
     public double? SchedulerCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecForProviderConfigWebServerConfig
 {
     /// <summary>Machine type on which Airflow web server is running. It has to be one of: composer-n1-webserver-2, composer-n1-webserver-4 or composer-n1-webserver-8. Value custom is returned only in response, if Airflow web server parameters were manually changed to a non-standard values.</summary>
@@ -548,6 +574,7 @@ public partial class V1beta1EnvironmentSpecForProviderConfigWebServerConfig
     public string? MachineType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecForProviderConfigWebServerNetworkAccessControlAllowedIpRange
 {
     /// <summary>A description of this ip range.</summary>
@@ -559,6 +586,7 @@ public partial class V1beta1EnvironmentSpecForProviderConfigWebServerNetworkAcce
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecForProviderConfigWebServerNetworkAccessControl
 {
     /// <summary>A collection of allowed IP ranges with descriptions. Structure is documented below.</summary>
@@ -566,6 +594,7 @@ public partial class V1beta1EnvironmentSpecForProviderConfigWebServerNetworkAcce
     public IList<V1beta1EnvironmentSpecForProviderConfigWebServerNetworkAccessControlAllowedIpRange>? AllowedIpRange { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecForProviderConfigWorkloadsConfigScheduler
 {
     /// <summary>The number of Airflow triggerers.</summary>
@@ -585,6 +614,7 @@ public partial class V1beta1EnvironmentSpecForProviderConfigWorkloadsConfigSched
     public double? StorageGb { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecForProviderConfigWorkloadsConfigTriggerer
 {
     /// <summary>The number of Airflow triggerers.</summary>
@@ -600,6 +630,7 @@ public partial class V1beta1EnvironmentSpecForProviderConfigWorkloadsConfigTrigg
     public double? MemoryGb { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecForProviderConfigWorkloadsConfigWebServer
 {
     /// <summary>The number of CPUs for a single Airflow worker.</summary>
@@ -615,6 +646,7 @@ public partial class V1beta1EnvironmentSpecForProviderConfigWorkloadsConfigWebSe
     public double? StorageGb { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecForProviderConfigWorkloadsConfigWorker
 {
     /// <summary>The number of CPUs for a single Airflow worker.</summary>
@@ -638,6 +670,7 @@ public partial class V1beta1EnvironmentSpecForProviderConfigWorkloadsConfigWorke
     public double? StorageGb { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecForProviderConfigWorkloadsConfig
 {
     /// <summary>Configuration for resources used by Airflow schedulers.</summary>
@@ -657,6 +690,7 @@ public partial class V1beta1EnvironmentSpecForProviderConfigWorkloadsConfig
     public IList<V1beta1EnvironmentSpecForProviderConfigWorkloadsConfigWorker>? Worker { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecForProviderConfig
 {
     /// <summary>Configuration setting for airflow data rentention mechanism. Structure is documented below.</summary>
@@ -740,6 +774,7 @@ public enum V1beta1EnvironmentSpecForProviderProjectRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EnvironmentSpecForProviderProjectRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -753,6 +788,7 @@ public partial class V1beta1EnvironmentSpecForProviderProjectRefPolicy
     public V1beta1EnvironmentSpecForProviderProjectRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Project in cloudplatform to populate project.</summary>
 public partial class V1beta1EnvironmentSpecForProviderProjectRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -784,6 +820,7 @@ public enum V1beta1EnvironmentSpecForProviderProjectSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EnvironmentSpecForProviderProjectSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -797,6 +834,7 @@ public partial class V1beta1EnvironmentSpecForProviderProjectSelectorPolicy
     public V1beta1EnvironmentSpecForProviderProjectSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Project in cloudplatform to populate project.</summary>
 public partial class V1beta1EnvironmentSpecForProviderProjectSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -812,6 +850,7 @@ public partial class V1beta1EnvironmentSpecForProviderProjectSelector
     public V1beta1EnvironmentSpecForProviderProjectSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecForProviderStorageConfig
 {
     /// <summary>Name of an existing Cloud Storage bucket to be used by the environment.</summary>
@@ -819,6 +858,7 @@ public partial class V1beta1EnvironmentSpecForProviderStorageConfig
     public string? Bucket { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecForProvider
 {
     /// <summary>Configuration parameters for this environment  Structure is documented below.</summary>
@@ -850,6 +890,7 @@ public partial class V1beta1EnvironmentSpecForProvider
     public IList<V1beta1EnvironmentSpecForProviderStorageConfig>? StorageConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecInitProviderConfigDataRetentionConfigTaskLogsRetentionConfig
 {
     /// <summary>The mode of storage for Airflow workers task logs. Values for storage mode are CLOUD_LOGGING_ONLY to only store logs in cloud logging and CLOUD_LOGGING_AND_CLOUD_STORAGE to store logs in cloud logging and cloud storage.</summary>
@@ -857,6 +898,7 @@ public partial class V1beta1EnvironmentSpecInitProviderConfigDataRetentionConfig
     public string? StorageMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecInitProviderConfigDataRetentionConfig
 {
     /// <summary>The configuration setting for Task Logs. Structure is documented below.</summary>
@@ -864,6 +906,7 @@ public partial class V1beta1EnvironmentSpecInitProviderConfigDataRetentionConfig
     public IList<V1beta1EnvironmentSpecInitProviderConfigDataRetentionConfigTaskLogsRetentionConfig>? TaskLogsRetentionConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecInitProviderConfigDatabaseConfig
 {
     /// <summary>Machine type on which Airflow web server is running. It has to be one of: composer-n1-webserver-2, composer-n1-webserver-4 or composer-n1-webserver-8. Value custom is returned only in response, if Airflow web server parameters were manually changed to a non-standard values.</summary>
@@ -875,6 +918,7 @@ public partial class V1beta1EnvironmentSpecInitProviderConfigDatabaseConfig
     public string? Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecInitProviderConfigEncryptionConfig
 {
     /// <summary>Customer-managed Encryption Key available through Google's Key Management Service. It must be the fully qualified resource name, i.e. projects/project-id/locations/location/keyRings/keyring/cryptoKeys/key. Cannot be updated.</summary>
@@ -882,6 +926,7 @@ public partial class V1beta1EnvironmentSpecInitProviderConfigEncryptionConfig
     public string? KmsKeyName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecInitProviderConfigMaintenanceWindow
 {
     /// <summary>Maintenance window end time. It is used only to calculate the duration of the maintenance window. The value for end-time must be in the future, relative to 'start_time'.</summary>
@@ -897,6 +942,7 @@ public partial class V1beta1EnvironmentSpecInitProviderConfigMaintenanceWindow
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecInitProviderConfigMasterAuthorizedNetworksConfigCidrBlocks
 {
     /// <summary>cidr_block must be specified in CIDR notation.</summary>
@@ -908,6 +954,7 @@ public partial class V1beta1EnvironmentSpecInitProviderConfigMasterAuthorizedNet
     public string? DisplayName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecInitProviderConfigMasterAuthorizedNetworksConfig
 {
     /// <summary>cidr_blocks define up to 50 external networks that could access Kubernetes master through HTTPS. Structure is documented below.</summary>
@@ -919,6 +966,7 @@ public partial class V1beta1EnvironmentSpecInitProviderConfigMasterAuthorizedNet
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecInitProviderConfigNodeConfigIpAllocationPolicy
 {
     /// <summary>The IP address range used to allocate IP addresses to pods in the cluster. For Cloud Composer 1 environments, this field is applicable only when use_ip_aliases is true. Set to blank to have GKE choose a range with the default size. Set to /netmask (e.g. /14) to have GKE choose a range with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks (e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to pick a specific range to use. Specify either cluster_secondary_range_name or cluster_ipv4_cidr_block but not both.</summary>
@@ -962,6 +1010,7 @@ public enum V1beta1EnvironmentSpecInitProviderConfigNodeConfigNetworkRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderConfigNodeConfigNetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -975,6 +1024,7 @@ public partial class V1beta1EnvironmentSpecInitProviderConfigNodeConfigNetworkRe
     public V1beta1EnvironmentSpecInitProviderConfigNodeConfigNetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate network.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderConfigNodeConfigNetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1006,6 +1056,7 @@ public enum V1beta1EnvironmentSpecInitProviderConfigNodeConfigNetworkSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderConfigNodeConfigNetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1019,6 +1070,7 @@ public partial class V1beta1EnvironmentSpecInitProviderConfigNodeConfigNetworkSe
     public V1beta1EnvironmentSpecInitProviderConfigNodeConfigNetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate network.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderConfigNodeConfigNetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1054,6 +1106,7 @@ public enum V1beta1EnvironmentSpecInitProviderConfigNodeConfigServiceAccountRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderConfigNodeConfigServiceAccountRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1067,6 +1120,7 @@ public partial class V1beta1EnvironmentSpecInitProviderConfigNodeConfigServiceAc
     public V1beta1EnvironmentSpecInitProviderConfigNodeConfigServiceAccountRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderConfigNodeConfigServiceAccountRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1098,6 +1152,7 @@ public enum V1beta1EnvironmentSpecInitProviderConfigNodeConfigServiceAccountSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderConfigNodeConfigServiceAccountSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1111,6 +1166,7 @@ public partial class V1beta1EnvironmentSpecInitProviderConfigNodeConfigServiceAc
     public V1beta1EnvironmentSpecInitProviderConfigNodeConfigServiceAccountSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderConfigNodeConfigServiceAccountSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1146,6 +1202,7 @@ public enum V1beta1EnvironmentSpecInitProviderConfigNodeConfigSubnetworkRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderConfigNodeConfigSubnetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1159,6 +1216,7 @@ public partial class V1beta1EnvironmentSpecInitProviderConfigNodeConfigSubnetwor
     public V1beta1EnvironmentSpecInitProviderConfigNodeConfigSubnetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnetwork in compute to populate subnetwork.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderConfigNodeConfigSubnetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1190,6 +1248,7 @@ public enum V1beta1EnvironmentSpecInitProviderConfigNodeConfigSubnetworkSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderConfigNodeConfigSubnetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1203,6 +1262,7 @@ public partial class V1beta1EnvironmentSpecInitProviderConfigNodeConfigSubnetwor
     public V1beta1EnvironmentSpecInitProviderConfigNodeConfigSubnetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnetwork in compute to populate subnetwork.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderConfigNodeConfigSubnetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1218,6 +1278,7 @@ public partial class V1beta1EnvironmentSpecInitProviderConfigNodeConfigSubnetwor
     public V1beta1EnvironmentSpecInitProviderConfigNodeConfigSubnetworkSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecInitProviderConfigNodeConfig
 {
     /// <summary>The disk size in GB used for node VMs. Minimum size is 20GB. If unspecified, defaults to 100GB. Cannot be updated.</summary>
@@ -1285,6 +1346,7 @@ public partial class V1beta1EnvironmentSpecInitProviderConfigNodeConfig
     public string? Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecInitProviderConfigPrivateEnvironmentConfig
 {
     /// <summary>When specified, the environment will use Private Service Connect instead of VPC peerings to connect to Cloud SQL in the Tenant Project, and the PSC endpoint in the Customer Project will use an IP address from this subnetwork. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.</summary>
@@ -1320,6 +1382,7 @@ public partial class V1beta1EnvironmentSpecInitProviderConfigPrivateEnvironmentC
     public string? WebServerIpv4CidrBlock { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecInitProviderConfigRecoveryConfigScheduledSnapshotsConfig
 {
     /// <summary>When enabled, Cloud Composer periodically saves snapshots of your environment to a Cloud Storage bucket.</summary>
@@ -1339,6 +1402,7 @@ public partial class V1beta1EnvironmentSpecInitProviderConfigRecoveryConfigSched
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecInitProviderConfigRecoveryConfig
 {
     /// <summary>The recovery configuration settings for the Cloud Composer environment.</summary>
@@ -1346,6 +1410,7 @@ public partial class V1beta1EnvironmentSpecInitProviderConfigRecoveryConfig
     public IList<V1beta1EnvironmentSpecInitProviderConfigRecoveryConfigScheduledSnapshotsConfig>? ScheduledSnapshotsConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecInitProviderConfigSoftwareConfig
 {
     /// <summary>Apache Airflow configuration properties to override. Property keys contain the section and property names, separated by a hyphen, for example "core-dags_are_paused_at_creation".</summary>
@@ -1373,6 +1438,7 @@ public partial class V1beta1EnvironmentSpecInitProviderConfigSoftwareConfig
     public double? SchedulerCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecInitProviderConfigWebServerConfig
 {
     /// <summary>Machine type on which Airflow web server is running. It has to be one of: composer-n1-webserver-2, composer-n1-webserver-4 or composer-n1-webserver-8. Value custom is returned only in response, if Airflow web server parameters were manually changed to a non-standard values.</summary>
@@ -1380,6 +1446,7 @@ public partial class V1beta1EnvironmentSpecInitProviderConfigWebServerConfig
     public string? MachineType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecInitProviderConfigWebServerNetworkAccessControlAllowedIpRange
 {
     /// <summary>A description of this ip range.</summary>
@@ -1391,6 +1458,7 @@ public partial class V1beta1EnvironmentSpecInitProviderConfigWebServerNetworkAcc
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecInitProviderConfigWebServerNetworkAccessControl
 {
     /// <summary>A collection of allowed IP ranges with descriptions. Structure is documented below.</summary>
@@ -1398,6 +1466,7 @@ public partial class V1beta1EnvironmentSpecInitProviderConfigWebServerNetworkAcc
     public IList<V1beta1EnvironmentSpecInitProviderConfigWebServerNetworkAccessControlAllowedIpRange>? AllowedIpRange { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecInitProviderConfigWorkloadsConfigScheduler
 {
     /// <summary>The number of Airflow triggerers.</summary>
@@ -1417,6 +1486,7 @@ public partial class V1beta1EnvironmentSpecInitProviderConfigWorkloadsConfigSche
     public double? StorageGb { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecInitProviderConfigWorkloadsConfigTriggerer
 {
     /// <summary>The number of Airflow triggerers.</summary>
@@ -1432,6 +1502,7 @@ public partial class V1beta1EnvironmentSpecInitProviderConfigWorkloadsConfigTrig
     public double? MemoryGb { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecInitProviderConfigWorkloadsConfigWebServer
 {
     /// <summary>The number of CPUs for a single Airflow worker.</summary>
@@ -1447,6 +1518,7 @@ public partial class V1beta1EnvironmentSpecInitProviderConfigWorkloadsConfigWebS
     public double? StorageGb { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecInitProviderConfigWorkloadsConfigWorker
 {
     /// <summary>The number of CPUs for a single Airflow worker.</summary>
@@ -1470,6 +1542,7 @@ public partial class V1beta1EnvironmentSpecInitProviderConfigWorkloadsConfigWork
     public double? StorageGb { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecInitProviderConfigWorkloadsConfig
 {
     /// <summary>Configuration for resources used by Airflow schedulers.</summary>
@@ -1489,6 +1562,7 @@ public partial class V1beta1EnvironmentSpecInitProviderConfigWorkloadsConfig
     public IList<V1beta1EnvironmentSpecInitProviderConfigWorkloadsConfigWorker>? Worker { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecInitProviderConfig
 {
     /// <summary>Configuration setting for airflow data rentention mechanism. Structure is documented below.</summary>
@@ -1572,6 +1646,7 @@ public enum V1beta1EnvironmentSpecInitProviderProjectRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderProjectRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1585,6 +1660,7 @@ public partial class V1beta1EnvironmentSpecInitProviderProjectRefPolicy
     public V1beta1EnvironmentSpecInitProviderProjectRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Project in cloudplatform to populate project.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderProjectRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1616,6 +1692,7 @@ public enum V1beta1EnvironmentSpecInitProviderProjectSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderProjectSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1629,6 +1706,7 @@ public partial class V1beta1EnvironmentSpecInitProviderProjectSelectorPolicy
     public V1beta1EnvironmentSpecInitProviderProjectSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Project in cloudplatform to populate project.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderProjectSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1644,6 +1722,7 @@ public partial class V1beta1EnvironmentSpecInitProviderProjectSelector
     public V1beta1EnvironmentSpecInitProviderProjectSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecInitProviderStorageConfig
 {
     /// <summary>Name of an existing Cloud Storage bucket to be used by the environment.</summary>
@@ -1651,6 +1730,7 @@ public partial class V1beta1EnvironmentSpecInitProviderStorageConfig
     public string? Bucket { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1EnvironmentSpecInitProvider
 {
     /// <summary>Configuration parameters for this environment  Structure is documented below.</summary>
@@ -1720,6 +1800,7 @@ public enum V1beta1EnvironmentSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EnvironmentSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1733,6 +1814,7 @@ public partial class V1beta1EnvironmentSpecProviderConfigRefPolicy
     public V1beta1EnvironmentSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1EnvironmentSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1764,6 +1846,7 @@ public enum V1beta1EnvironmentSpecPublishConnectionDetailsToConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EnvironmentSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1777,6 +1860,7 @@ public partial class V1beta1EnvironmentSpecPublishConnectionDetailsToConfigRefPo
     public V1beta1EnvironmentSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1EnvironmentSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1788,6 +1872,7 @@ public partial class V1beta1EnvironmentSpecPublishConnectionDetailsToConfigRef
     public V1beta1EnvironmentSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1EnvironmentSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1803,6 +1888,7 @@ public partial class V1beta1EnvironmentSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1EnvironmentSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1818,6 +1904,7 @@ public partial class V1beta1EnvironmentSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1EnvironmentSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1829,6 +1916,7 @@ public partial class V1beta1EnvironmentSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>EnvironmentSpec defines the desired state of Environment</summary>
 public partial class V1beta1EnvironmentSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1861,6 +1949,7 @@ public partial class V1beta1EnvironmentSpec
     public V1beta1EnvironmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentStatusAtProviderConfigDataRetentionConfigTaskLogsRetentionConfig
 {
     /// <summary>The mode of storage for Airflow workers task logs. Values for storage mode are CLOUD_LOGGING_ONLY to only store logs in cloud logging and CLOUD_LOGGING_AND_CLOUD_STORAGE to store logs in cloud logging and cloud storage.</summary>
@@ -1868,6 +1957,7 @@ public partial class V1beta1EnvironmentStatusAtProviderConfigDataRetentionConfig
     public string? StorageMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentStatusAtProviderConfigDataRetentionConfig
 {
     /// <summary>The configuration setting for Task Logs. Structure is documented below.</summary>
@@ -1875,6 +1965,7 @@ public partial class V1beta1EnvironmentStatusAtProviderConfigDataRetentionConfig
     public IList<V1beta1EnvironmentStatusAtProviderConfigDataRetentionConfigTaskLogsRetentionConfig>? TaskLogsRetentionConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentStatusAtProviderConfigDatabaseConfig
 {
     /// <summary>Machine type on which Airflow web server is running. It has to be one of: composer-n1-webserver-2, composer-n1-webserver-4 or composer-n1-webserver-8. Value custom is returned only in response, if Airflow web server parameters were manually changed to a non-standard values.</summary>
@@ -1886,6 +1977,7 @@ public partial class V1beta1EnvironmentStatusAtProviderConfigDatabaseConfig
     public string? Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentStatusAtProviderConfigEncryptionConfig
 {
     /// <summary>Customer-managed Encryption Key available through Google's Key Management Service. It must be the fully qualified resource name, i.e. projects/project-id/locations/location/keyRings/keyring/cryptoKeys/key. Cannot be updated.</summary>
@@ -1893,6 +1985,7 @@ public partial class V1beta1EnvironmentStatusAtProviderConfigEncryptionConfig
     public string? KmsKeyName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentStatusAtProviderConfigMaintenanceWindow
 {
     /// <summary>Maintenance window end time. It is used only to calculate the duration of the maintenance window. The value for end-time must be in the future, relative to 'start_time'.</summary>
@@ -1908,6 +2001,7 @@ public partial class V1beta1EnvironmentStatusAtProviderConfigMaintenanceWindow
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentStatusAtProviderConfigMasterAuthorizedNetworksConfigCidrBlocks
 {
     /// <summary>cidr_block must be specified in CIDR notation.</summary>
@@ -1919,6 +2013,7 @@ public partial class V1beta1EnvironmentStatusAtProviderConfigMasterAuthorizedNet
     public string? DisplayName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentStatusAtProviderConfigMasterAuthorizedNetworksConfig
 {
     /// <summary>cidr_blocks define up to 50 external networks that could access Kubernetes master through HTTPS. Structure is documented below.</summary>
@@ -1930,6 +2025,7 @@ public partial class V1beta1EnvironmentStatusAtProviderConfigMasterAuthorizedNet
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentStatusAtProviderConfigNodeConfigIpAllocationPolicy
 {
     /// <summary>The IP address range used to allocate IP addresses to pods in the cluster. For Cloud Composer 1 environments, this field is applicable only when use_ip_aliases is true. Set to blank to have GKE choose a range with the default size. Set to /netmask (e.g. /14) to have GKE choose a range with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks (e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to pick a specific range to use. Specify either cluster_secondary_range_name or cluster_ipv4_cidr_block but not both.</summary>
@@ -1953,6 +2049,7 @@ public partial class V1beta1EnvironmentStatusAtProviderConfigNodeConfigIpAllocat
     public bool? UseIpAliases { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentStatusAtProviderConfigNodeConfig
 {
     /// <summary>The disk size in GB used for node VMs. Minimum size is 20GB. If unspecified, defaults to 100GB. Cannot be updated.</summary>
@@ -1996,6 +2093,7 @@ public partial class V1beta1EnvironmentStatusAtProviderConfigNodeConfig
     public string? Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentStatusAtProviderConfigPrivateEnvironmentConfig
 {
     /// <summary>When specified, the environment will use Private Service Connect instead of VPC peerings to connect to Cloud SQL in the Tenant Project, and the PSC endpoint in the Customer Project will use an IP address from this subnetwork. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.</summary>
@@ -2031,6 +2129,7 @@ public partial class V1beta1EnvironmentStatusAtProviderConfigPrivateEnvironmentC
     public string? WebServerIpv4CidrBlock { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentStatusAtProviderConfigRecoveryConfigScheduledSnapshotsConfig
 {
     /// <summary>When enabled, Cloud Composer periodically saves snapshots of your environment to a Cloud Storage bucket.</summary>
@@ -2050,6 +2149,7 @@ public partial class V1beta1EnvironmentStatusAtProviderConfigRecoveryConfigSched
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentStatusAtProviderConfigRecoveryConfig
 {
     /// <summary>The recovery configuration settings for the Cloud Composer environment.</summary>
@@ -2057,6 +2157,7 @@ public partial class V1beta1EnvironmentStatusAtProviderConfigRecoveryConfig
     public IList<V1beta1EnvironmentStatusAtProviderConfigRecoveryConfigScheduledSnapshotsConfig>? ScheduledSnapshotsConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentStatusAtProviderConfigSoftwareConfig
 {
     /// <summary>Apache Airflow configuration properties to override. Property keys contain the section and property names, separated by a hyphen, for example "core-dags_are_paused_at_creation".</summary>
@@ -2084,6 +2185,7 @@ public partial class V1beta1EnvironmentStatusAtProviderConfigSoftwareConfig
     public double? SchedulerCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentStatusAtProviderConfigWebServerConfig
 {
     /// <summary>Machine type on which Airflow web server is running. It has to be one of: composer-n1-webserver-2, composer-n1-webserver-4 or composer-n1-webserver-8. Value custom is returned only in response, if Airflow web server parameters were manually changed to a non-standard values.</summary>
@@ -2091,6 +2193,7 @@ public partial class V1beta1EnvironmentStatusAtProviderConfigWebServerConfig
     public string? MachineType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentStatusAtProviderConfigWebServerNetworkAccessControlAllowedIpRange
 {
     /// <summary>A description of this ip range.</summary>
@@ -2102,6 +2205,7 @@ public partial class V1beta1EnvironmentStatusAtProviderConfigWebServerNetworkAcc
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentStatusAtProviderConfigWebServerNetworkAccessControl
 {
     /// <summary>A collection of allowed IP ranges with descriptions. Structure is documented below.</summary>
@@ -2109,6 +2213,7 @@ public partial class V1beta1EnvironmentStatusAtProviderConfigWebServerNetworkAcc
     public IList<V1beta1EnvironmentStatusAtProviderConfigWebServerNetworkAccessControlAllowedIpRange>? AllowedIpRange { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentStatusAtProviderConfigWorkloadsConfigScheduler
 {
     /// <summary>The number of Airflow triggerers.</summary>
@@ -2128,6 +2233,7 @@ public partial class V1beta1EnvironmentStatusAtProviderConfigWorkloadsConfigSche
     public double? StorageGb { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentStatusAtProviderConfigWorkloadsConfigTriggerer
 {
     /// <summary>The number of Airflow triggerers.</summary>
@@ -2143,6 +2249,7 @@ public partial class V1beta1EnvironmentStatusAtProviderConfigWorkloadsConfigTrig
     public double? MemoryGb { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentStatusAtProviderConfigWorkloadsConfigWebServer
 {
     /// <summary>The number of CPUs for a single Airflow worker.</summary>
@@ -2158,6 +2265,7 @@ public partial class V1beta1EnvironmentStatusAtProviderConfigWorkloadsConfigWebS
     public double? StorageGb { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentStatusAtProviderConfigWorkloadsConfigWorker
 {
     /// <summary>The number of CPUs for a single Airflow worker.</summary>
@@ -2181,6 +2289,7 @@ public partial class V1beta1EnvironmentStatusAtProviderConfigWorkloadsConfigWork
     public double? StorageGb { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentStatusAtProviderConfigWorkloadsConfig
 {
     /// <summary>Configuration for resources used by Airflow schedulers.</summary>
@@ -2200,6 +2309,7 @@ public partial class V1beta1EnvironmentStatusAtProviderConfigWorkloadsConfig
     public IList<V1beta1EnvironmentStatusAtProviderConfigWorkloadsConfigWorker>? Worker { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentStatusAtProviderConfig
 {
     /// <summary>The URI of the Apache Airflow Web UI hosted within this environment.</summary>
@@ -2275,6 +2385,7 @@ public partial class V1beta1EnvironmentStatusAtProviderConfig
     public IList<V1beta1EnvironmentStatusAtProviderConfigWorkloadsConfig>? WorkloadsConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentStatusAtProviderStorageConfig
 {
     /// <summary>Name of an existing Cloud Storage bucket to be used by the environment.</summary>
@@ -2282,6 +2393,7 @@ public partial class V1beta1EnvironmentStatusAtProviderStorageConfig
     public string? Bucket { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentStatusAtProvider
 {
     /// <summary>Configuration parameters for this environment  Structure is documented below.</summary>
@@ -2317,6 +2429,7 @@ public partial class V1beta1EnvironmentStatusAtProvider
     public IDictionary<string, string>? TerraformLabels { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1EnvironmentStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2344,6 +2457,7 @@ public partial class V1beta1EnvironmentStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>EnvironmentStatus defines the observed state of Environment.</summary>
 public partial class V1beta1EnvironmentStatus
 {
     /// <summary></summary>
@@ -2360,6 +2474,7 @@ public partial class V1beta1EnvironmentStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Environment is the Schema for the Environments API. An environment for running orchestration tasks.</summary>
 public partial class V1beta1Environment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1EnvironmentSpec>, IStatus<V1beta1EnvironmentStatus>
 {
     public const string KubeApiVersion = "v1beta1";

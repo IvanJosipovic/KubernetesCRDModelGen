@@ -18,6 +18,7 @@ public enum V1beta1CertificateContactsSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateContactsSpecForProviderContact
 {
     /// <summary>E-mail address of the contact.</summary>
@@ -53,6 +54,7 @@ public enum V1beta1CertificateContactsSpecForProviderKeyVaultIdRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CertificateContactsSpecForProviderKeyVaultIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -66,6 +68,7 @@ public partial class V1beta1CertificateContactsSpecForProviderKeyVaultIdRefPolic
     public V1beta1CertificateContactsSpecForProviderKeyVaultIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Vault in keyvault to populate keyVaultId.</summary>
 public partial class V1beta1CertificateContactsSpecForProviderKeyVaultIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -97,6 +100,7 @@ public enum V1beta1CertificateContactsSpecForProviderKeyVaultIdSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CertificateContactsSpecForProviderKeyVaultIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1CertificateContactsSpecForProviderKeyVaultIdSelector
     public V1beta1CertificateContactsSpecForProviderKeyVaultIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Vault in keyvault to populate keyVaultId.</summary>
 public partial class V1beta1CertificateContactsSpecForProviderKeyVaultIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1CertificateContactsSpecForProviderKeyVaultIdSelector
     public V1beta1CertificateContactsSpecForProviderKeyVaultIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateContactsSpecForProvider
 {
     /// <summary>One or more contact blocks as defined below.</summary>
@@ -144,6 +150,7 @@ public partial class V1beta1CertificateContactsSpecForProvider
     public V1beta1CertificateContactsSpecForProviderKeyVaultIdSelector? KeyVaultIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateContactsSpecInitProviderContact
 {
     /// <summary>E-mail address of the contact.</summary>
@@ -179,6 +186,7 @@ public enum V1beta1CertificateContactsSpecInitProviderKeyVaultIdRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CertificateContactsSpecInitProviderKeyVaultIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -192,6 +200,7 @@ public partial class V1beta1CertificateContactsSpecInitProviderKeyVaultIdRefPoli
     public V1beta1CertificateContactsSpecInitProviderKeyVaultIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Vault in keyvault to populate keyVaultId.</summary>
 public partial class V1beta1CertificateContactsSpecInitProviderKeyVaultIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -223,6 +232,7 @@ public enum V1beta1CertificateContactsSpecInitProviderKeyVaultIdSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CertificateContactsSpecInitProviderKeyVaultIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -236,6 +246,7 @@ public partial class V1beta1CertificateContactsSpecInitProviderKeyVaultIdSelecto
     public V1beta1CertificateContactsSpecInitProviderKeyVaultIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Vault in keyvault to populate keyVaultId.</summary>
 public partial class V1beta1CertificateContactsSpecInitProviderKeyVaultIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -251,6 +262,7 @@ public partial class V1beta1CertificateContactsSpecInitProviderKeyVaultIdSelecto
     public V1beta1CertificateContactsSpecInitProviderKeyVaultIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1CertificateContactsSpecInitProvider
 {
     /// <summary>One or more contact blocks as defined below.</summary>
@@ -312,6 +324,7 @@ public enum V1beta1CertificateContactsSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CertificateContactsSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -325,6 +338,7 @@ public partial class V1beta1CertificateContactsSpecProviderConfigRefPolicy
     public V1beta1CertificateContactsSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1CertificateContactsSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -356,6 +370,7 @@ public enum V1beta1CertificateContactsSpecPublishConnectionDetailsToConfigRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CertificateContactsSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -369,6 +384,7 @@ public partial class V1beta1CertificateContactsSpecPublishConnectionDetailsToCon
     public V1beta1CertificateContactsSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1CertificateContactsSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -380,6 +396,7 @@ public partial class V1beta1CertificateContactsSpecPublishConnectionDetailsToCon
     public V1beta1CertificateContactsSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1CertificateContactsSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -395,6 +412,7 @@ public partial class V1beta1CertificateContactsSpecPublishConnectionDetailsToMet
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1CertificateContactsSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -410,6 +428,7 @@ public partial class V1beta1CertificateContactsSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1CertificateContactsSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -421,6 +440,7 @@ public partial class V1beta1CertificateContactsSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>CertificateContactsSpec defines the desired state of CertificateContacts</summary>
 public partial class V1beta1CertificateContactsSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -453,6 +473,7 @@ public partial class V1beta1CertificateContactsSpec
     public V1beta1CertificateContactsSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateContactsStatusAtProviderContact
 {
     /// <summary>E-mail address of the contact.</summary>
@@ -468,6 +489,7 @@ public partial class V1beta1CertificateContactsStatusAtProviderContact
     public string? Phone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateContactsStatusAtProvider
 {
     /// <summary>One or more contact blocks as defined below.</summary>
@@ -483,6 +505,7 @@ public partial class V1beta1CertificateContactsStatusAtProvider
     public string? KeyVaultId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1CertificateContactsStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -510,6 +533,7 @@ public partial class V1beta1CertificateContactsStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>CertificateContactsStatus defines the observed state of CertificateContacts.</summary>
 public partial class V1beta1CertificateContactsStatus
 {
     /// <summary></summary>
@@ -526,6 +550,7 @@ public partial class V1beta1CertificateContactsStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>CertificateContacts is the Schema for the CertificateContactss API. Manages Key Vault Certificate Contacts.</summary>
 public partial class V1beta1CertificateContacts : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1CertificateContactsSpec>, IStatus<V1beta1CertificateContactsStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -38,6 +38,7 @@ public enum V1beta1APISpecForProviderApiManagementNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1APISpecForProviderApiManagementNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1APISpecForProviderApiManagementNameRefPolicy
     public V1beta1APISpecForProviderApiManagementNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Management in apimanagement to populate apiManagementName.</summary>
 public partial class V1beta1APISpecForProviderApiManagementNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1APISpecForProviderApiManagementNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1APISpecForProviderApiManagementNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1APISpecForProviderApiManagementNameSelectorPolicy
     public V1beta1APISpecForProviderApiManagementNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Management in apimanagement to populate apiManagementName.</summary>
 public partial class V1beta1APISpecForProviderApiManagementNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1APISpecForProviderApiManagementNameSelector
     public V1beta1APISpecForProviderApiManagementNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APISpecForProviderContact
 {
     /// <summary>The email address of the contact person/organization.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1APISpecForProviderContact
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APISpecForProviderImportWsdlSelector
 {
     /// <summary>The name of endpoint (port) to import from WSDL.</summary>
@@ -136,6 +142,7 @@ public partial class V1beta1APISpecForProviderImportWsdlSelector
     public string? ServiceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APISpecForProviderImport
 {
     /// <summary>The format of the content from which the API Definition should be imported. Possible values are: openapi, openapi+json, openapi+json-link, openapi-link, swagger-json, swagger-link-json, wadl-link-json, wadl-xml, wsdl and wsdl-link.</summary>
@@ -151,6 +158,7 @@ public partial class V1beta1APISpecForProviderImport
     public IList<V1beta1APISpecForProviderImportWsdlSelector>? WsdlSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APISpecForProviderLicense
 {
     /// <summary>The name of the license .</summary>
@@ -162,6 +170,7 @@ public partial class V1beta1APISpecForProviderLicense
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APISpecForProviderOauth2Authorization
 {
     /// <summary>OAuth authorization server identifier. The name of an OAuth2 Authorization Server.</summary>
@@ -173,6 +182,7 @@ public partial class V1beta1APISpecForProviderOauth2Authorization
     public string? Scope { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APISpecForProviderOpenidAuthentication
 {
     /// <summary>How to send token to the server. A list of zero or more methods. Valid values are authorizationHeader and query.</summary>
@@ -204,6 +214,7 @@ public enum V1beta1APISpecForProviderResourceGroupNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1APISpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -217,6 +228,7 @@ public partial class V1beta1APISpecForProviderResourceGroupNameRefPolicy
     public V1beta1APISpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1APISpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -248,6 +260,7 @@ public enum V1beta1APISpecForProviderResourceGroupNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1APISpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -261,6 +274,7 @@ public partial class V1beta1APISpecForProviderResourceGroupNameSelectorPolicy
     public V1beta1APISpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1APISpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -276,6 +290,7 @@ public partial class V1beta1APISpecForProviderResourceGroupNameSelector
     public V1beta1APISpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APISpecForProviderSubscriptionKeyParameterNames
 {
     /// <summary>The name of the HTTP Header which should be used for the Subscription Key.</summary>
@@ -287,6 +302,7 @@ public partial class V1beta1APISpecForProviderSubscriptionKeyParameterNames
     public string? Query { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APISpecForProvider
 {
     /// <summary>The Name of the API Management Service where this API should be created. Changing this forces a new resource to be created.</summary>
@@ -398,6 +414,7 @@ public partial class V1beta1APISpecForProvider
     public string? VersionSetId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APISpecInitProviderContact
 {
     /// <summary>The email address of the contact person/organization.</summary>
@@ -413,6 +430,7 @@ public partial class V1beta1APISpecInitProviderContact
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APISpecInitProviderImportWsdlSelector
 {
     /// <summary>The name of endpoint (port) to import from WSDL.</summary>
@@ -424,6 +442,7 @@ public partial class V1beta1APISpecInitProviderImportWsdlSelector
     public string? ServiceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APISpecInitProviderImport
 {
     /// <summary>The format of the content from which the API Definition should be imported. Possible values are: openapi, openapi+json, openapi+json-link, openapi-link, swagger-json, swagger-link-json, wadl-link-json, wadl-xml, wsdl and wsdl-link.</summary>
@@ -439,6 +458,7 @@ public partial class V1beta1APISpecInitProviderImport
     public IList<V1beta1APISpecInitProviderImportWsdlSelector>? WsdlSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APISpecInitProviderLicense
 {
     /// <summary>The name of the license .</summary>
@@ -450,6 +470,7 @@ public partial class V1beta1APISpecInitProviderLicense
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APISpecInitProviderOauth2Authorization
 {
     /// <summary>OAuth authorization server identifier. The name of an OAuth2 Authorization Server.</summary>
@@ -461,6 +482,7 @@ public partial class V1beta1APISpecInitProviderOauth2Authorization
     public string? Scope { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APISpecInitProviderOpenidAuthentication
 {
     /// <summary>How to send token to the server. A list of zero or more methods. Valid values are authorizationHeader and query.</summary>
@@ -472,6 +494,7 @@ public partial class V1beta1APISpecInitProviderOpenidAuthentication
     public string? OpenidProviderName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APISpecInitProviderSubscriptionKeyParameterNames
 {
     /// <summary>The name of the HTTP Header which should be used for the Subscription Key.</summary>
@@ -483,6 +506,7 @@ public partial class V1beta1APISpecInitProviderSubscriptionKeyParameterNames
     public string? Query { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1APISpecInitProvider
 {
     /// <summary>Type of API. Possible values are graphql, http, soap, and websocket. Defaults to http.</summary>
@@ -608,6 +632,7 @@ public enum V1beta1APISpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1APISpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -621,6 +646,7 @@ public partial class V1beta1APISpecProviderConfigRefPolicy
     public V1beta1APISpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1APISpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -652,6 +678,7 @@ public enum V1beta1APISpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1APISpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -665,6 +692,7 @@ public partial class V1beta1APISpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1APISpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1APISpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -676,6 +704,7 @@ public partial class V1beta1APISpecPublishConnectionDetailsToConfigRef
     public V1beta1APISpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1APISpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -691,6 +720,7 @@ public partial class V1beta1APISpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1APISpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -706,6 +736,7 @@ public partial class V1beta1APISpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1APISpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -717,6 +748,7 @@ public partial class V1beta1APISpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>APISpec defines the desired state of API</summary>
 public partial class V1beta1APISpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -749,6 +781,7 @@ public partial class V1beta1APISpec
     public V1beta1APISpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIStatusAtProviderContact
 {
     /// <summary>The email address of the contact person/organization.</summary>
@@ -764,6 +797,7 @@ public partial class V1beta1APIStatusAtProviderContact
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIStatusAtProviderImportWsdlSelector
 {
     /// <summary>The name of endpoint (port) to import from WSDL.</summary>
@@ -775,6 +809,7 @@ public partial class V1beta1APIStatusAtProviderImportWsdlSelector
     public string? ServiceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIStatusAtProviderImport
 {
     /// <summary>The format of the content from which the API Definition should be imported. Possible values are: openapi, openapi+json, openapi+json-link, openapi-link, swagger-json, swagger-link-json, wadl-link-json, wadl-xml, wsdl and wsdl-link.</summary>
@@ -790,6 +825,7 @@ public partial class V1beta1APIStatusAtProviderImport
     public IList<V1beta1APIStatusAtProviderImportWsdlSelector>? WsdlSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIStatusAtProviderLicense
 {
     /// <summary>The name of the license .</summary>
@@ -801,6 +837,7 @@ public partial class V1beta1APIStatusAtProviderLicense
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIStatusAtProviderOauth2Authorization
 {
     /// <summary>OAuth authorization server identifier. The name of an OAuth2 Authorization Server.</summary>
@@ -812,6 +849,7 @@ public partial class V1beta1APIStatusAtProviderOauth2Authorization
     public string? Scope { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIStatusAtProviderOpenidAuthentication
 {
     /// <summary>How to send token to the server. A list of zero or more methods. Valid values are authorizationHeader and query.</summary>
@@ -823,6 +861,7 @@ public partial class V1beta1APIStatusAtProviderOpenidAuthentication
     public string? OpenidProviderName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIStatusAtProviderSubscriptionKeyParameterNames
 {
     /// <summary>The name of the HTTP Header which should be used for the Subscription Key.</summary>
@@ -834,6 +873,7 @@ public partial class V1beta1APIStatusAtProviderSubscriptionKeyParameterNames
     public string? Query { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIStatusAtProvider
 {
     /// <summary>The Name of the API Management Service where this API should be created. Changing this forces a new resource to be created.</summary>
@@ -941,6 +981,7 @@ public partial class V1beta1APIStatusAtProvider
     public string? VersionSetId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1APIStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -968,6 +1009,7 @@ public partial class V1beta1APIStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>APIStatus defines the observed state of API.</summary>
 public partial class V1beta1APIStatus
 {
     /// <summary></summary>
@@ -984,6 +1026,7 @@ public partial class V1beta1APIStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>API is the Schema for the APIs API. Manages an API within an API Management Service.</summary>
 public partial class V1beta1API : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1APISpec>, IStatus<V1beta1APIStatus>
 {
     public const string KubeApiVersion = "v1beta1";

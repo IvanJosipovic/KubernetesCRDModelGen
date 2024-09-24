@@ -18,6 +18,7 @@ public enum V1beta1MembershipIAMMemberSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1MembershipIAMMemberSpecForProviderCondition
 {
     /// <summary></summary>
@@ -53,6 +54,7 @@ public enum V1beta1MembershipIAMMemberSpecForProviderMembershipIdRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MembershipIAMMemberSpecForProviderMembershipIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -66,6 +68,7 @@ public partial class V1beta1MembershipIAMMemberSpecForProviderMembershipIdRefPol
     public V1beta1MembershipIAMMemberSpecForProviderMembershipIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Membership in gkehub to populate membershipId.</summary>
 public partial class V1beta1MembershipIAMMemberSpecForProviderMembershipIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -97,6 +100,7 @@ public enum V1beta1MembershipIAMMemberSpecForProviderMembershipIdSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MembershipIAMMemberSpecForProviderMembershipIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1MembershipIAMMemberSpecForProviderMembershipIdSelect
     public V1beta1MembershipIAMMemberSpecForProviderMembershipIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Membership in gkehub to populate membershipId.</summary>
 public partial class V1beta1MembershipIAMMemberSpecForProviderMembershipIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1MembershipIAMMemberSpecForProviderMembershipIdSelect
     public V1beta1MembershipIAMMemberSpecForProviderMembershipIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MembershipIAMMemberSpecForProvider
 {
     /// <summary></summary>
@@ -160,6 +166,7 @@ public partial class V1beta1MembershipIAMMemberSpecForProvider
     public string? Role { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MembershipIAMMemberSpecInitProviderCondition
 {
     /// <summary></summary>
@@ -195,6 +202,7 @@ public enum V1beta1MembershipIAMMemberSpecInitProviderMembershipIdRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MembershipIAMMemberSpecInitProviderMembershipIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -208,6 +216,7 @@ public partial class V1beta1MembershipIAMMemberSpecInitProviderMembershipIdRefPo
     public V1beta1MembershipIAMMemberSpecInitProviderMembershipIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Membership in gkehub to populate membershipId.</summary>
 public partial class V1beta1MembershipIAMMemberSpecInitProviderMembershipIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -239,6 +248,7 @@ public enum V1beta1MembershipIAMMemberSpecInitProviderMembershipIdSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MembershipIAMMemberSpecInitProviderMembershipIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -252,6 +262,7 @@ public partial class V1beta1MembershipIAMMemberSpecInitProviderMembershipIdSelec
     public V1beta1MembershipIAMMemberSpecInitProviderMembershipIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Membership in gkehub to populate membershipId.</summary>
 public partial class V1beta1MembershipIAMMemberSpecInitProviderMembershipIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -267,6 +278,7 @@ public partial class V1beta1MembershipIAMMemberSpecInitProviderMembershipIdSelec
     public V1beta1MembershipIAMMemberSpecInitProviderMembershipIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1MembershipIAMMemberSpecInitProvider
 {
     /// <summary></summary>
@@ -344,6 +356,7 @@ public enum V1beta1MembershipIAMMemberSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MembershipIAMMemberSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -357,6 +370,7 @@ public partial class V1beta1MembershipIAMMemberSpecProviderConfigRefPolicy
     public V1beta1MembershipIAMMemberSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1MembershipIAMMemberSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -388,6 +402,7 @@ public enum V1beta1MembershipIAMMemberSpecPublishConnectionDetailsToConfigRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MembershipIAMMemberSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -401,6 +416,7 @@ public partial class V1beta1MembershipIAMMemberSpecPublishConnectionDetailsToCon
     public V1beta1MembershipIAMMemberSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1MembershipIAMMemberSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -412,6 +428,7 @@ public partial class V1beta1MembershipIAMMemberSpecPublishConnectionDetailsToCon
     public V1beta1MembershipIAMMemberSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1MembershipIAMMemberSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -427,6 +444,7 @@ public partial class V1beta1MembershipIAMMemberSpecPublishConnectionDetailsToMet
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1MembershipIAMMemberSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -442,6 +460,7 @@ public partial class V1beta1MembershipIAMMemberSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1MembershipIAMMemberSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -453,6 +472,7 @@ public partial class V1beta1MembershipIAMMemberSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>MembershipIAMMemberSpec defines the desired state of MembershipIAMMember</summary>
 public partial class V1beta1MembershipIAMMemberSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -485,6 +505,7 @@ public partial class V1beta1MembershipIAMMemberSpec
     public V1beta1MembershipIAMMemberSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MembershipIAMMemberStatusAtProviderCondition
 {
     /// <summary></summary>
@@ -500,6 +521,7 @@ public partial class V1beta1MembershipIAMMemberStatusAtProviderCondition
     public string? Title { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MembershipIAMMemberStatusAtProvider
 {
     /// <summary></summary>
@@ -535,6 +557,7 @@ public partial class V1beta1MembershipIAMMemberStatusAtProvider
     public string? Role { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1MembershipIAMMemberStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -562,6 +585,7 @@ public partial class V1beta1MembershipIAMMemberStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>MembershipIAMMemberStatus defines the observed state of MembershipIAMMember.</summary>
 public partial class V1beta1MembershipIAMMemberStatus
 {
     /// <summary></summary>
@@ -578,6 +602,7 @@ public partial class V1beta1MembershipIAMMemberStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>MembershipIAMMember is the Schema for the MembershipIAMMembers API. &lt;no value&gt;</summary>
 public partial class V1beta1MembershipIAMMember : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MembershipIAMMemberSpec>, IStatus<V1beta1MembershipIAMMemberStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -38,6 +38,7 @@ public enum V1beta1ReplicationInstanceSpecForProviderKmsKeyArnRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ReplicationInstanceSpecForProviderKmsKeyArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ReplicationInstanceSpecForProviderKmsKeyArnRefPolicy
     public V1beta1ReplicationInstanceSpecForProviderKmsKeyArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyArn.</summary>
 public partial class V1beta1ReplicationInstanceSpecForProviderKmsKeyArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ReplicationInstanceSpecForProviderKmsKeyArnSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ReplicationInstanceSpecForProviderKmsKeyArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ReplicationInstanceSpecForProviderKmsKeyArnSelectorP
     public V1beta1ReplicationInstanceSpecForProviderKmsKeyArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyArn.</summary>
 public partial class V1beta1ReplicationInstanceSpecForProviderKmsKeyArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1ReplicationInstanceSpecForProviderReplicationSubnetGroupIdRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ReplicationInstanceSpecForProviderReplicationSubnetGroupIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1ReplicationInstanceSpecForProviderReplicationSubnetG
     public V1beta1ReplicationInstanceSpecForProviderReplicationSubnetGroupIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ReplicationSubnetGroup in dms to populate replicationSubnetGroupId.</summary>
 public partial class V1beta1ReplicationInstanceSpecForProviderReplicationSubnetGroupIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1ReplicationInstanceSpecForProviderReplicationSubnetGroupIdSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ReplicationInstanceSpecForProviderReplicationSubnetGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1ReplicationInstanceSpecForProviderReplicationSubnetG
     public V1beta1ReplicationInstanceSpecForProviderReplicationSubnetGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ReplicationSubnetGroup in dms to populate replicationSubnetGroupId.</summary>
 public partial class V1beta1ReplicationInstanceSpecForProviderReplicationSubnetGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1ReplicationInstanceSpecForProviderVpcSecurityGroupIdRefsPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ReplicationInstanceSpecForProviderVpcSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1ReplicationInstanceSpecForProviderVpcSecurityGroupId
     public V1beta1ReplicationInstanceSpecForProviderVpcSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1ReplicationInstanceSpecForProviderVpcSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1ReplicationInstanceSpecForProviderVpcSecurityGroupIdSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ReplicationInstanceSpecForProviderVpcSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1ReplicationInstanceSpecForProviderVpcSecurityGroupId
     public V1beta1ReplicationInstanceSpecForProviderVpcSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate vpcSecurityGroupIds.</summary>
 public partial class V1beta1ReplicationInstanceSpecForProviderVpcSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1ReplicationInstanceSpecForProviderVpcSecurityGroupId
     public V1beta1ReplicationInstanceSpecForProviderVpcSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ReplicationInstanceSpecForProvider
 {
     /// <summary>The amount of storage (in gigabytes) to be initially allocated for the replication instance.</summary>
@@ -405,6 +418,7 @@ public enum V1beta1ReplicationInstanceSpecInitProviderKmsKeyArnRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ReplicationInstanceSpecInitProviderKmsKeyArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -418,6 +432,7 @@ public partial class V1beta1ReplicationInstanceSpecInitProviderKmsKeyArnRefPolic
     public V1beta1ReplicationInstanceSpecInitProviderKmsKeyArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyArn.</summary>
 public partial class V1beta1ReplicationInstanceSpecInitProviderKmsKeyArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -449,6 +464,7 @@ public enum V1beta1ReplicationInstanceSpecInitProviderKmsKeyArnSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ReplicationInstanceSpecInitProviderKmsKeyArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -462,6 +478,7 @@ public partial class V1beta1ReplicationInstanceSpecInitProviderKmsKeyArnSelector
     public V1beta1ReplicationInstanceSpecInitProviderKmsKeyArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyArn.</summary>
 public partial class V1beta1ReplicationInstanceSpecInitProviderKmsKeyArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -497,6 +514,7 @@ public enum V1beta1ReplicationInstanceSpecInitProviderReplicationSubnetGroupIdRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ReplicationInstanceSpecInitProviderReplicationSubnetGroupIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -510,6 +528,7 @@ public partial class V1beta1ReplicationInstanceSpecInitProviderReplicationSubnet
     public V1beta1ReplicationInstanceSpecInitProviderReplicationSubnetGroupIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ReplicationSubnetGroup in dms to populate replicationSubnetGroupId.</summary>
 public partial class V1beta1ReplicationInstanceSpecInitProviderReplicationSubnetGroupIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -541,6 +560,7 @@ public enum V1beta1ReplicationInstanceSpecInitProviderReplicationSubnetGroupIdSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ReplicationInstanceSpecInitProviderReplicationSubnetGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -554,6 +574,7 @@ public partial class V1beta1ReplicationInstanceSpecInitProviderReplicationSubnet
     public V1beta1ReplicationInstanceSpecInitProviderReplicationSubnetGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ReplicationSubnetGroup in dms to populate replicationSubnetGroupId.</summary>
 public partial class V1beta1ReplicationInstanceSpecInitProviderReplicationSubnetGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -589,6 +610,7 @@ public enum V1beta1ReplicationInstanceSpecInitProviderVpcSecurityGroupIdRefsPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ReplicationInstanceSpecInitProviderVpcSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -602,6 +624,7 @@ public partial class V1beta1ReplicationInstanceSpecInitProviderVpcSecurityGroupI
     public V1beta1ReplicationInstanceSpecInitProviderVpcSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1ReplicationInstanceSpecInitProviderVpcSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -633,6 +656,7 @@ public enum V1beta1ReplicationInstanceSpecInitProviderVpcSecurityGroupIdSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ReplicationInstanceSpecInitProviderVpcSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -646,6 +670,7 @@ public partial class V1beta1ReplicationInstanceSpecInitProviderVpcSecurityGroupI
     public V1beta1ReplicationInstanceSpecInitProviderVpcSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate vpcSecurityGroupIds.</summary>
 public partial class V1beta1ReplicationInstanceSpecInitProviderVpcSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -661,6 +686,7 @@ public partial class V1beta1ReplicationInstanceSpecInitProviderVpcSecurityGroupI
     public V1beta1ReplicationInstanceSpecInitProviderVpcSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ReplicationInstanceSpecInitProvider
 {
     /// <summary>The amount of storage (in gigabytes) to be initially allocated for the replication instance.</summary>
@@ -790,6 +816,7 @@ public enum V1beta1ReplicationInstanceSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ReplicationInstanceSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -803,6 +830,7 @@ public partial class V1beta1ReplicationInstanceSpecProviderConfigRefPolicy
     public V1beta1ReplicationInstanceSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ReplicationInstanceSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -834,6 +862,7 @@ public enum V1beta1ReplicationInstanceSpecPublishConnectionDetailsToConfigRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ReplicationInstanceSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -847,6 +876,7 @@ public partial class V1beta1ReplicationInstanceSpecPublishConnectionDetailsToCon
     public V1beta1ReplicationInstanceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ReplicationInstanceSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -858,6 +888,7 @@ public partial class V1beta1ReplicationInstanceSpecPublishConnectionDetailsToCon
     public V1beta1ReplicationInstanceSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ReplicationInstanceSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -873,6 +904,7 @@ public partial class V1beta1ReplicationInstanceSpecPublishConnectionDetailsToMet
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ReplicationInstanceSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -888,6 +920,7 @@ public partial class V1beta1ReplicationInstanceSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ReplicationInstanceSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -899,6 +932,7 @@ public partial class V1beta1ReplicationInstanceSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ReplicationInstanceSpec defines the desired state of ReplicationInstance</summary>
 public partial class V1beta1ReplicationInstanceSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -931,6 +965,7 @@ public partial class V1beta1ReplicationInstanceSpec
     public V1beta1ReplicationInstanceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ReplicationInstanceStatusAtProvider
 {
     /// <summary>The amount of storage (in gigabytes) to be initially allocated for the replication instance.</summary>
@@ -1014,6 +1049,7 @@ public partial class V1beta1ReplicationInstanceStatusAtProvider
     public IList<string>? VpcSecurityGroupIds { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ReplicationInstanceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1041,6 +1077,7 @@ public partial class V1beta1ReplicationInstanceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ReplicationInstanceStatus defines the observed state of ReplicationInstance.</summary>
 public partial class V1beta1ReplicationInstanceStatus
 {
     /// <summary></summary>
@@ -1057,6 +1094,7 @@ public partial class V1beta1ReplicationInstanceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ReplicationInstance is the Schema for the ReplicationInstances API. Provides a DMS (Data Migration Service) replication instance resource.</summary>
 public partial class V1beta1ReplicationInstance : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ReplicationInstanceSpec>, IStatus<V1beta1ReplicationInstanceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

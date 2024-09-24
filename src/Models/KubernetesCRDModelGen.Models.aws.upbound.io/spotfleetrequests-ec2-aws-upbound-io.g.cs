@@ -18,6 +18,7 @@ public enum V1beta1SpotFleetRequestSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationEbsBlockDevice
 {
     /// <summary></summary>
@@ -57,6 +58,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationEb
     public string? VolumeType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationEphemeralBlockDevice
 {
     /// <summary>The name of the launch template. Conflicts with id.</summary>
@@ -88,6 +90,7 @@ public enum V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationIamInstance
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationIamInstanceProfileArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -101,6 +104,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationIa
     public V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationIamInstanceProfileArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a InstanceProfile in iam to populate iamInstanceProfileArn.</summary>
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationIamInstanceProfileArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -132,6 +136,7 @@ public enum V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationIamInstance
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationIamInstanceProfileArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -145,6 +150,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationIa
     public V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationIamInstanceProfileArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a InstanceProfile in iam to populate iamInstanceProfileArn.</summary>
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationIamInstanceProfileArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -160,6 +166,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationIa
     public V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationIamInstanceProfileArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationRootBlockDevice
 {
     /// <summary></summary>
@@ -191,6 +198,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchSpecificationRo
     public string? VolumeType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchSpecification
 {
     /// <summary></summary>
@@ -302,6 +310,7 @@ public enum V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemp
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -315,6 +324,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigL
     public V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LaunchTemplate in ec2 to populate id.</summary>
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -346,6 +356,7 @@ public enum V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemp
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -359,6 +370,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigL
     public V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LaunchTemplate in ec2 to populate id.</summary>
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -394,6 +406,7 @@ public enum V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemp
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -407,6 +420,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigL
     public V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LaunchTemplate in ec2 to populate version.</summary>
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -438,6 +452,7 @@ public enum V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemp
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -451,6 +466,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigL
     public V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LaunchTemplate in ec2 to populate version.</summary>
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -466,6 +482,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigL
     public V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemplateSpecification
 {
     /// <summary>The ID of the launch template. Conflicts with name.</summary>
@@ -497,6 +514,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigL
     public V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionSelector? VersionSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigOverridesInstanceRequirementsAcceleratorCount
 {
     /// <summary>Maximum.</summary>
@@ -508,6 +526,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigO
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigOverridesInstanceRequirementsAcceleratorTotalMemoryMib
 {
     /// <summary>Maximum.</summary>
@@ -519,6 +538,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigO
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigOverridesInstanceRequirementsBaselineEbsBandwidthMbps
 {
     /// <summary>Maximum.</summary>
@@ -530,6 +550,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigO
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigOverridesInstanceRequirementsMemoryGibPerVcpu
 {
     /// <summary>Maximum.</summary>
@@ -541,6 +562,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigO
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigOverridesInstanceRequirementsMemoryMib
 {
     /// <summary>Maximum.</summary>
@@ -552,6 +574,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigO
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigOverridesInstanceRequirementsNetworkBandwidthGbps
 {
     /// <summary>Maximum.</summary>
@@ -563,6 +586,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigO
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigOverridesInstanceRequirementsNetworkInterfaceCount
 {
     /// <summary>Maximum.</summary>
@@ -574,6 +598,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigO
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigOverridesInstanceRequirementsTotalLocalStorageGb
 {
     /// <summary>Maximum.</summary>
@@ -585,6 +610,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigO
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigOverridesInstanceRequirementsVcpuCount
 {
     /// <summary>Maximum.</summary>
@@ -596,6 +622,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigO
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigOverridesInstanceRequirements
 {
     /// <summary>Block describing the minimum and maximum number of accelerators (GPUs, FPGAs, or AWS Inferentia chips). Default is no minimum or maximum.</summary>
@@ -691,6 +718,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigO
     public IList<V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigOverridesInstanceRequirementsVcpuCount>? VcpuCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigOverrides
 {
     /// <summary>The availability zone in which to place the request.</summary>
@@ -722,6 +750,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigO
     public double? WeightedCapacity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfig
 {
     /// <summary>Launch template specification. See Launch Template Specification below for more details.</summary>
@@ -733,6 +762,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfig
     public IList<V1beta1SpotFleetRequestSpecForProviderLaunchTemplateConfigOverrides>? Overrides { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecForProviderSpotMaintenanceStrategiesCapacityRebalance
 {
     /// <summary>The replacement strategy to use. Only available for spot fleets with fleet_type set to maintain. Valid values: launch.</summary>
@@ -740,6 +770,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderSpotMaintenanceStrate
     public string? ReplacementStrategy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecForProviderSpotMaintenanceStrategies
 {
     /// <summary>Nested argument containing the capacity rebalance for your fleet request. Defined below.</summary>
@@ -747,6 +778,7 @@ public partial class V1beta1SpotFleetRequestSpecForProviderSpotMaintenanceStrate
     public IList<V1beta1SpotFleetRequestSpecForProviderSpotMaintenanceStrategiesCapacityRebalance>? CapacityRebalance { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecForProvider
 {
     /// <summary>Indicates how to allocate the target capacity across the Spot pools specified by the Spot fleet request. Valid values: lowestPrice, diversified, capacityOptimized, capacityOptimizedPrioritized, and priceCapacityOptimized. The default is lowestPrice.</summary>
@@ -854,6 +886,7 @@ public partial class V1beta1SpotFleetRequestSpecForProvider
     public bool? WaitForFulfillment { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationEbsBlockDevice
 {
     /// <summary></summary>
@@ -893,6 +926,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationE
     public string? VolumeType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationEphemeralBlockDevice
 {
     /// <summary>The name of the launch template. Conflicts with id.</summary>
@@ -924,6 +958,7 @@ public enum V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationIamInstanc
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationIamInstanceProfileArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -937,6 +972,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationI
     public V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationIamInstanceProfileArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a InstanceProfile in iam to populate iamInstanceProfileArn.</summary>
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationIamInstanceProfileArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -968,6 +1004,7 @@ public enum V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationIamInstanc
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationIamInstanceProfileArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -981,6 +1018,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationI
     public V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationIamInstanceProfileArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a InstanceProfile in iam to populate iamInstanceProfileArn.</summary>
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationIamInstanceProfileArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -996,6 +1034,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationI
     public V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationIamInstanceProfileArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationRootBlockDevice
 {
     /// <summary></summary>
@@ -1027,6 +1066,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchSpecificationR
     public string? VolumeType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchSpecification
 {
     /// <summary></summary>
@@ -1138,6 +1178,7 @@ public enum V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTem
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1151,6 +1192,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
     public V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LaunchTemplate in ec2 to populate id.</summary>
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1182,6 +1224,7 @@ public enum V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTem
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1195,6 +1238,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
     public V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LaunchTemplate in ec2 to populate id.</summary>
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1230,6 +1274,7 @@ public enum V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTem
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1243,6 +1288,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
     public V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LaunchTemplate in ec2 to populate version.</summary>
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1274,6 +1320,7 @@ public enum V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTem
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1287,6 +1334,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
     public V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LaunchTemplate in ec2 to populate version.</summary>
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1302,6 +1350,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
     public V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecification
 {
     /// <summary>The ID of the launch template. Conflicts with name.</summary>
@@ -1333,6 +1382,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
     public V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionSelector? VersionSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigOverridesInstanceRequirementsAcceleratorCount
 {
     /// <summary>Maximum.</summary>
@@ -1344,6 +1394,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigOverridesInstanceRequirementsAcceleratorTotalMemoryMib
 {
     /// <summary>Maximum.</summary>
@@ -1355,6 +1406,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigOverridesInstanceRequirementsBaselineEbsBandwidthMbps
 {
     /// <summary>Maximum.</summary>
@@ -1366,6 +1418,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigOverridesInstanceRequirementsMemoryGibPerVcpu
 {
     /// <summary>Maximum.</summary>
@@ -1377,6 +1430,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigOverridesInstanceRequirementsMemoryMib
 {
     /// <summary>Maximum.</summary>
@@ -1388,6 +1442,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigOverridesInstanceRequirementsNetworkBandwidthGbps
 {
     /// <summary>Maximum.</summary>
@@ -1399,6 +1454,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigOverridesInstanceRequirementsNetworkInterfaceCount
 {
     /// <summary>Maximum.</summary>
@@ -1410,6 +1466,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigOverridesInstanceRequirementsTotalLocalStorageGb
 {
     /// <summary>Maximum.</summary>
@@ -1421,6 +1478,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigOverridesInstanceRequirementsVcpuCount
 {
     /// <summary>Maximum.</summary>
@@ -1432,6 +1490,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigOverridesInstanceRequirements
 {
     /// <summary>Block describing the minimum and maximum number of accelerators (GPUs, FPGAs, or AWS Inferentia chips). Default is no minimum or maximum.</summary>
@@ -1527,6 +1586,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
     public IList<V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigOverridesInstanceRequirementsVcpuCount>? VcpuCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigOverrides
 {
     /// <summary>The availability zone in which to place the request.</summary>
@@ -1558,6 +1618,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
     public double? WeightedCapacity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
 {
     /// <summary>Launch template specification. See Launch Template Specification below for more details.</summary>
@@ -1569,6 +1630,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfig
     public IList<V1beta1SpotFleetRequestSpecInitProviderLaunchTemplateConfigOverrides>? Overrides { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecInitProviderSpotMaintenanceStrategiesCapacityRebalance
 {
     /// <summary>The replacement strategy to use. Only available for spot fleets with fleet_type set to maintain. Valid values: launch.</summary>
@@ -1576,6 +1638,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderSpotMaintenanceStrat
     public string? ReplacementStrategy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestSpecInitProviderSpotMaintenanceStrategies
 {
     /// <summary>Nested argument containing the capacity rebalance for your fleet request. Defined below.</summary>
@@ -1583,6 +1646,7 @@ public partial class V1beta1SpotFleetRequestSpecInitProviderSpotMaintenanceStrat
     public IList<V1beta1SpotFleetRequestSpecInitProviderSpotMaintenanceStrategiesCapacityRebalance>? CapacityRebalance { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1SpotFleetRequestSpecInitProvider
 {
     /// <summary>Indicates how to allocate the target capacity across the Spot pools specified by the Spot fleet request. Valid values: lowestPrice, diversified, capacityOptimized, capacityOptimizedPrioritized, and priceCapacityOptimized. The default is lowestPrice.</summary>
@@ -1728,6 +1792,7 @@ public enum V1beta1SpotFleetRequestSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpotFleetRequestSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1741,6 +1806,7 @@ public partial class V1beta1SpotFleetRequestSpecProviderConfigRefPolicy
     public V1beta1SpotFleetRequestSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1SpotFleetRequestSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1772,6 +1838,7 @@ public enum V1beta1SpotFleetRequestSpecPublishConnectionDetailsToConfigRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpotFleetRequestSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1785,6 +1852,7 @@ public partial class V1beta1SpotFleetRequestSpecPublishConnectionDetailsToConfig
     public V1beta1SpotFleetRequestSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1SpotFleetRequestSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1796,6 +1864,7 @@ public partial class V1beta1SpotFleetRequestSpecPublishConnectionDetailsToConfig
     public V1beta1SpotFleetRequestSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1SpotFleetRequestSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1811,6 +1880,7 @@ public partial class V1beta1SpotFleetRequestSpecPublishConnectionDetailsToMetada
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1SpotFleetRequestSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1826,6 +1896,7 @@ public partial class V1beta1SpotFleetRequestSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1SpotFleetRequestSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1837,6 +1908,7 @@ public partial class V1beta1SpotFleetRequestSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>SpotFleetRequestSpec defines the desired state of SpotFleetRequest</summary>
 public partial class V1beta1SpotFleetRequestSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1869,6 +1941,7 @@ public partial class V1beta1SpotFleetRequestSpec
     public V1beta1SpotFleetRequestSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchSpecificationEbsBlockDevice
 {
     /// <summary></summary>
@@ -1908,6 +1981,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchSpecificationE
     public string? VolumeType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchSpecificationEphemeralBlockDevice
 {
     /// <summary>The name of the launch template. Conflicts with id.</summary>
@@ -1919,6 +1993,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchSpecificationE
     public string? VirtualName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchSpecificationRootBlockDevice
 {
     /// <summary></summary>
@@ -1950,6 +2025,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchSpecificationR
     public string? VolumeType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchSpecification
 {
     /// <summary></summary>
@@ -2033,6 +2109,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchSpecification
     public string? WeightedCapacity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfigLaunchTemplateSpecification
 {
     /// <summary>The ID of the launch template. Conflicts with name.</summary>
@@ -2048,6 +2125,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfig
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfigOverridesInstanceRequirementsAcceleratorCount
 {
     /// <summary>Maximum.</summary>
@@ -2059,6 +2137,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfig
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfigOverridesInstanceRequirementsAcceleratorTotalMemoryMib
 {
     /// <summary>Maximum.</summary>
@@ -2070,6 +2149,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfig
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfigOverridesInstanceRequirementsBaselineEbsBandwidthMbps
 {
     /// <summary>Maximum.</summary>
@@ -2081,6 +2161,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfig
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfigOverridesInstanceRequirementsMemoryGibPerVcpu
 {
     /// <summary>Maximum.</summary>
@@ -2092,6 +2173,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfig
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfigOverridesInstanceRequirementsMemoryMib
 {
     /// <summary>Maximum.</summary>
@@ -2103,6 +2185,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfig
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfigOverridesInstanceRequirementsNetworkBandwidthGbps
 {
     /// <summary>Maximum.</summary>
@@ -2114,6 +2197,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfig
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfigOverridesInstanceRequirementsNetworkInterfaceCount
 {
     /// <summary>Maximum.</summary>
@@ -2125,6 +2209,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfig
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfigOverridesInstanceRequirementsTotalLocalStorageGb
 {
     /// <summary>Maximum.</summary>
@@ -2136,6 +2221,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfig
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfigOverridesInstanceRequirementsVcpuCount
 {
     /// <summary>Maximum.</summary>
@@ -2147,6 +2233,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfig
     public double? Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfigOverridesInstanceRequirements
 {
     /// <summary>Block describing the minimum and maximum number of accelerators (GPUs, FPGAs, or AWS Inferentia chips). Default is no minimum or maximum.</summary>
@@ -2242,6 +2329,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfig
     public IList<V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfigOverridesInstanceRequirementsVcpuCount>? VcpuCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfigOverrides
 {
     /// <summary>The availability zone in which to place the request.</summary>
@@ -2273,6 +2361,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfig
     public double? WeightedCapacity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfig
 {
     /// <summary>Launch template specification. See Launch Template Specification below for more details.</summary>
@@ -2284,6 +2373,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfig
     public IList<V1beta1SpotFleetRequestStatusAtProviderLaunchTemplateConfigOverrides>? Overrides { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestStatusAtProviderSpotMaintenanceStrategiesCapacityRebalance
 {
     /// <summary>The replacement strategy to use. Only available for spot fleets with fleet_type set to maintain. Valid values: launch.</summary>
@@ -2291,6 +2381,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProviderSpotMaintenanceStrat
     public string? ReplacementStrategy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestStatusAtProviderSpotMaintenanceStrategies
 {
     /// <summary>Nested argument containing the capacity rebalance for your fleet request. Defined below.</summary>
@@ -2298,6 +2389,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProviderSpotMaintenanceStrat
     public IList<V1beta1SpotFleetRequestStatusAtProviderSpotMaintenanceStrategiesCapacityRebalance>? CapacityRebalance { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotFleetRequestStatusAtProvider
 {
     /// <summary>Indicates how to allocate the target capacity across the Spot pools specified by the Spot fleet request. Valid values: lowestPrice, diversified, capacityOptimized, capacityOptimizedPrioritized, and priceCapacityOptimized. The default is lowestPrice.</summary>
@@ -2417,6 +2509,7 @@ public partial class V1beta1SpotFleetRequestStatusAtProvider
     public bool? WaitForFulfillment { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1SpotFleetRequestStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2444,6 +2537,7 @@ public partial class V1beta1SpotFleetRequestStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>SpotFleetRequestStatus defines the observed state of SpotFleetRequest.</summary>
 public partial class V1beta1SpotFleetRequestStatus
 {
     /// <summary></summary>
@@ -2460,6 +2554,7 @@ public partial class V1beta1SpotFleetRequestStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>SpotFleetRequest is the Schema for the SpotFleetRequests API. Provides a Spot Fleet Request resource.</summary>
 public partial class V1beta1SpotFleetRequest : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SpotFleetRequestSpec>, IStatus<V1beta1SpotFleetRequestStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.eventgrid.azure.com;
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a eventgrid.azure.com/Domain resource</summary>
 public partial class V1api20200601storageDomainsTopicSpecOwner
 {
     /// <summary></summary>
@@ -19,6 +20,7 @@ public partial class V1api20200601storageDomainsTopicSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.Domains_Topic_Spec</summary>
 public partial class V1api20200601storageDomainsTopicSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -38,6 +40,7 @@ public partial class V1api20200601storageDomainsTopicSpec
     public V1api20200601storageDomainsTopicSpecOwner Owner { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20200601storageDomainsTopicStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -69,6 +72,7 @@ public partial class V1api20200601storageDomainsTopicStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 public partial class V1api20200601storageDomainsTopicStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -100,6 +104,7 @@ public partial class V1api20200601storageDomainsTopicStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.Domains_Topic_STATUS</summary>
 public partial class V1api20200601storageDomainsTopicStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -132,6 +137,7 @@ public partial class V1api20200601storageDomainsTopicStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20200601.DomainsTopic Generator information: - Generated from: /eventgrid/resource-manager/Microsoft.EventGrid/stable/2020-06-01/EventGrid.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/domains/{domainName}/topics/{domainTopicName}</summary>
 public partial class V1api20200601storageDomainsTopic : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20200601storageDomainsTopicSpec>, IStatus<V1api20200601storageDomainsTopicStatus>
 {
     public const string KubeApiVersion = "v1api20200601storage";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apimanagement.azure.com;
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20220801storageNamedValueSpecKeyVaultIdentityClientIdFromConfig
 {
     /// <summary>Key is the key in the Kubernetes configmap being referenced</summary>
@@ -19,6 +20,7 @@ public partial class V1api20220801storageNamedValueSpecKeyVaultIdentityClientIdF
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.KeyVaultContractCreateProperties Create keyVault contract details.</summary>
 public partial class V1api20220801storageNamedValueSpecKeyVault
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -38,6 +40,7 @@ public partial class V1api20220801storageNamedValueSpecKeyVault
     public string? SecretIdentifier { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a apimanagement.azure.com/Service resource</summary>
 public partial class V1api20220801storageNamedValueSpecOwner
 {
     /// <summary></summary>
@@ -49,6 +52,7 @@ public partial class V1api20220801storageNamedValueSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.Service_NamedValue_Spec</summary>
 public partial class V1api20220801storageNamedValueSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -88,6 +92,7 @@ public partial class V1api20220801storageNamedValueSpec
     public string? Value { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20220801storageNamedValueStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -119,6 +124,7 @@ public partial class V1api20220801storageNamedValueStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.KeyVaultLastAccessStatusContractProperties_STATUS Issue contract Update Properties.</summary>
 public partial class V1api20220801storageNamedValueStatusKeyVaultLastStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -138,6 +144,7 @@ public partial class V1api20220801storageNamedValueStatusKeyVaultLastStatus
     public string? TimeStampUtc { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.KeyVaultContractProperties_STATUS KeyVault contract details.</summary>
 public partial class V1api20220801storageNamedValueStatusKeyVault
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -157,6 +164,7 @@ public partial class V1api20220801storageNamedValueStatusKeyVault
     public string? SecretIdentifier { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.Service_NamedValue_STATUS</summary>
 public partial class V1api20220801storageNamedValueStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -201,6 +209,7 @@ public partial class V1api20220801storageNamedValueStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20220801.NamedValue Generator information: - Generated from: /apimanagement/resource-manager/Microsoft.ApiManagement/stable/2022-08-01/apimnamedvalues.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/namedValues/{namedValueId}</summary>
 public partial class V1api20220801storageNamedValue : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20220801storageNamedValueSpec>, IStatus<V1api20220801storageNamedValueStatus>
 {
     public const string KubeApiVersion = "v1api20220801storage";

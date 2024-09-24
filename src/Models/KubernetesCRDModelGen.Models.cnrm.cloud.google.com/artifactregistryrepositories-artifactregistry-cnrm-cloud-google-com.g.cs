@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.artifactregistry.cnrm.cloud.google.com;
+/// <summary>Policy condition for matching versions.</summary>
 public partial class V1beta1ArtifactRegistryRepositorySpecCleanupPoliciesCondition
 {
     /// <summary>Match versions newer than a duration.</summary>
@@ -35,6 +36,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecCleanupPoliciesConditi
     public IList<string>? VersionNamePrefixes { get; set; }
 }
 
+/// <summary>Policy condition for retaining a minimum number of versions. May only be specified with a Keep action.</summary>
 public partial class V1beta1ArtifactRegistryRepositorySpecCleanupPoliciesMostRecentVersions
 {
     /// <summary>Minimum number of versions to keep.</summary>
@@ -46,6 +48,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecCleanupPoliciesMostRec
     public IList<string>? PackageNamePrefixes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ArtifactRegistryRepositorySpecCleanupPolicies
 {
     /// <summary>Policy action. Possible values: ["DELETE", "KEEP"].</summary>
@@ -65,6 +68,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecCleanupPolicies
     public V1beta1ArtifactRegistryRepositorySpecCleanupPoliciesMostRecentVersions? MostRecentVersions { get; set; }
 }
 
+/// <summary>Docker repository config contains repository level configuration for the repositories of docker type.</summary>
 public partial class V1beta1ArtifactRegistryRepositorySpecDockerConfig
 {
     /// <summary>The repository which enabled this flag prevents all tags from being modified, moved or deleted. This does not prevent tags from being created.</summary>
@@ -72,6 +76,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecDockerConfig
     public bool? ImmutableTags { get; set; }
 }
 
+/// <summary>The customer managed encryption key that’s used to encrypt the contents of the Repository.</summary>
 public partial class V1beta1ArtifactRegistryRepositorySpecKmsKeyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
@@ -87,6 +92,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecKmsKeyRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>MavenRepositoryConfig is maven related repository details. Provides additional configuration details for repositories of the maven format type.</summary>
 public partial class V1beta1ArtifactRegistryRepositorySpecMavenConfig
 {
     /// <summary>Immutable. The repository with this flag will allow publishing the same snapshot versions.</summary>
@@ -98,6 +104,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecMavenConfig
     public string? VersionPolicy { get; set; }
 }
 
+/// <summary>Immutable. Specific settings for a Docker remote repository.</summary>
 public partial class V1beta1ArtifactRegistryRepositorySpecRemoteRepositoryConfigDockerRepository
 {
     /// <summary>Immutable. Address of the remote repository. Default value: "DOCKER_HUB" Possible values: ["DOCKER_HUB"].</summary>
@@ -105,6 +112,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecRemoteRepositoryConfig
     public string? PublicRepository { get; set; }
 }
 
+/// <summary>Immutable. Specific settings for a Maven remote repository.</summary>
 public partial class V1beta1ArtifactRegistryRepositorySpecRemoteRepositoryConfigMavenRepository
 {
     /// <summary>Immutable. Address of the remote repository. Default value: "MAVEN_CENTRAL" Possible values: ["MAVEN_CENTRAL"].</summary>
@@ -112,6 +120,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecRemoteRepositoryConfig
     public string? PublicRepository { get; set; }
 }
 
+/// <summary>Immutable. Specific settings for an Npm remote repository.</summary>
 public partial class V1beta1ArtifactRegistryRepositorySpecRemoteRepositoryConfigNpmRepository
 {
     /// <summary>Immutable. Address of the remote repository. Default value: "NPMJS" Possible values: ["NPMJS"].</summary>
@@ -119,6 +128,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecRemoteRepositoryConfig
     public string? PublicRepository { get; set; }
 }
 
+/// <summary>Immutable. Specific settings for a Python remote repository.</summary>
 public partial class V1beta1ArtifactRegistryRepositorySpecRemoteRepositoryConfigPythonRepository
 {
     /// <summary>Immutable. Address of the remote repository. Default value: "PYPI" Possible values: ["PYPI"].</summary>
@@ -126,6 +136,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecRemoteRepositoryConfig
     public string? PublicRepository { get; set; }
 }
 
+/// <summary>Immutable. Configuration specific for a Remote Repository.</summary>
 public partial class V1beta1ArtifactRegistryRepositorySpecRemoteRepositoryConfig
 {
     /// <summary>Immutable. The description of the remote source.</summary>
@@ -149,6 +160,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecRemoteRepositoryConfig
     public V1beta1ArtifactRegistryRepositorySpecRemoteRepositoryConfigPythonRepository? PythonRepository { get; set; }
 }
 
+/// <summary>A reference to the repository resource, for example: "projects/p1/locations/us-central1/repositories/repo1".</summary>
 public partial class V1beta1ArtifactRegistryRepositorySpecVirtualRepositoryConfigUpstreamPoliciesRepositoryRef
 {
     /// <summary>Allowed value: string of the format `projects/{{project}}/locations/{{location}}/repositories/{{value}}`, where {{value}} is the `name` field of an `ArtifactRegistryRepository` resource.</summary>
@@ -164,6 +176,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecVirtualRepositoryConfi
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ArtifactRegistryRepositorySpecVirtualRepositoryConfigUpstreamPolicies
 {
     /// <summary>The user-provided ID of the upstream policy.</summary>
@@ -179,6 +192,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecVirtualRepositoryConfi
     public V1beta1ArtifactRegistryRepositorySpecVirtualRepositoryConfigUpstreamPoliciesRepositoryRef? RepositoryRef { get; set; }
 }
 
+/// <summary>Configuration specific for a Virtual Repository.</summary>
 public partial class V1beta1ArtifactRegistryRepositorySpecVirtualRepositoryConfig
 {
     /// <summary>Policies that configure the upstream artifacts distributed by the Virtual Repository. Upstream policies cannot be set on a standard repository.</summary>
@@ -186,6 +200,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecVirtualRepositoryConfi
     public IList<V1beta1ArtifactRegistryRepositorySpecVirtualRepositoryConfigUpstreamPolicies>? UpstreamPolicies { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ArtifactRegistryRepositorySpec
 {
     /// <summary>Cleanup policies for this repository. Cleanup policies indicate when certain package versions can be automatically deleted. Map keys are policy IDs supplied by users during policy creation. They must unique within a repository and be under 128 characters in length.</summary>
@@ -237,6 +252,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpec
     public V1beta1ArtifactRegistryRepositorySpecVirtualRepositoryConfig? VirtualRepositoryConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ArtifactRegistryRepositoryStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -260,6 +276,7 @@ public partial class V1beta1ArtifactRegistryRepositoryStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ArtifactRegistryRepositoryStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -284,6 +301,7 @@ public partial class V1beta1ArtifactRegistryRepositoryStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ArtifactRegistryRepository : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ArtifactRegistryRepositorySpec>, IStatus<V1beta1ArtifactRegistryRepositoryStatus>
 {
     public const string KubeApiVersion = "v1beta1";

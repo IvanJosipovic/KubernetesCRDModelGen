@@ -18,6 +18,7 @@ public enum V1beta1LinuxFunctionAppSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The Client Secret for the Client ID. Cannot be used with `client_secret_setting_name`.</summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsActiveDirectoryClientSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsActiveDir
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsActiveDirectory
 {
     /// <summary>Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. Specifies a list of Allowed audience values to consider when validating JWTs issued by Azure Active Directory.</summary>
@@ -52,6 +54,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsActiveDir
     public string? ClientSecretSettingName { get; set; }
 }
 
+/// <summary>The App Secret of the Facebook app used for Facebook login. Cannot be specified with app_secret_setting_name. The App Secret of the Facebook app used for Facebook Login. Cannot be specified with `app_secret_setting_name`.</summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsFacebookAppSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -67,6 +70,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsFacebookA
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsFacebook
 {
     /// <summary>The App ID of the Facebook app used for login. The App ID of the Facebook app used for login.</summary>
@@ -86,6 +90,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsFacebook
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The Client Secret of the GitHub app used for GitHub Login. Cannot be specified with `client_secret_setting_name`.</summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsGithubClientSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -101,6 +106,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsGithubCli
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsGithub
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the GitHub app used for login.</summary>
@@ -120,6 +126,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsGithub
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The client secret associated with the Google web application.  Cannot be specified with `client_secret_setting_name`.</summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsGoogleClientSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -135,6 +142,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsGoogleCli
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsGoogle
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The OpenID Connect Client ID for the Google web application.</summary>
@@ -154,6 +162,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsGoogle
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with `client_secret_setting_name`.</summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsMicrosoftClientSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -169,6 +178,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsMicrosoft
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsMicrosoft
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The OAuth 2.0 client ID that was created for the app used for authentication.</summary>
@@ -188,6 +198,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsMicrosoft
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary>The OAuth 1.0a consumer secret of the Twitter application used for sign-in. Cannot be specified with consumer_secret_setting_name. The OAuth 1.0a consumer secret of the Twitter application used for sign-in. Cannot be specified with `consumer_secret_setting_name`.</summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsTwitterConsumerSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -203,6 +214,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsTwitterCo
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsTwitter
 {
     /// <summary>The OAuth 1.0a consumer key of the Twitter application used for sign-in. The OAuth 1.0a consumer key of the Twitter application used for sign-in.</summary>
@@ -218,6 +230,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsTwitter
     public string? ConsumerSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettings
 {
     /// <summary>An active_directory block as defined above.</summary>
@@ -281,6 +294,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettings
     public string? UnauthenticatedClientAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsV2ActiveDirectoryV2
 {
     /// <summary>The list of allowed Applications for the Default Authorisation Policy. The list of allowed Applications for the Default Authorisation Policy.</summary>
@@ -332,6 +346,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsV2ActiveD
     public bool? WwwAuthenticationDisabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsV2AppleV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The OpenID Connect Client ID for the Apple web application.</summary>
@@ -343,6 +358,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsV2AppleV2
     public string? ClientSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsV2AzureStaticWebAppV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the Client to use to authenticate with Azure Static Web App Authentication.</summary>
@@ -350,6 +366,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsV2AzureSt
     public string? ClientId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsV2CustomOidcV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the Client to use to authenticate with this Custom OIDC.</summary>
@@ -373,6 +390,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsV2CustomO
     public IList<string>? Scopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsV2FacebookV2
 {
     /// <summary>The App ID of the Facebook app used for login. The App ID of the Facebook app used for login.</summary>
@@ -392,6 +410,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsV2Faceboo
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsV2GithubV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the GitHub app used for login.</summary>
@@ -407,6 +426,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsV2GithubV
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsV2GoogleV2
 {
     /// <summary>Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. Specifies a list of Allowed Audiences that will be requested as part of Google Sign-In authentication.</summary>
@@ -426,6 +446,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsV2GoogleV
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsV2Login
 {
     /// <summary>External URLs that can be redirected to as part of logging in or logging out of the app. This is an advanced setting typically only needed by Windows Store application backends. External URLs that can be redirected to as part of logging in or logging out of the app. This is an advanced setting typically only needed by Windows Store application backends. **Note:** URLs within the current domain are always implicitly allowed.</summary>
@@ -473,6 +494,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsV2Login
     public bool? ValidateNonce { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsV2MicrosoftV2
 {
     /// <summary>Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication.</summary>
@@ -492,6 +514,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsV2Microso
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsV2TwitterV2
 {
     /// <summary>The OAuth 1.0a consumer key of the Twitter application used for sign-in. The OAuth 1.0a consumer key of the Twitter application used for sign-in.</summary>
@@ -503,6 +526,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsV2Twitter
     public string? ConsumerSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsV2
 {
     /// <summary>An active_directory_v2 block as defined below.</summary>
@@ -594,6 +618,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsV2
     public string? UnauthenticatedAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderBackupSchedule
 {
     /// <summary>How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and frequency_unit should be set to Day). How often the backup should be executed (e.g. for weekly backup, this should be set to `7` and `frequency_unit` should be set to `Day`).</summary>
@@ -617,6 +642,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderBackupSchedule
     public string? StartTime { get; set; }
 }
 
+/// <summary>The SAS URL to the container. The SAS URL to the container.</summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderBackupStorageAccountUrlSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -632,6 +658,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderBackupStorageAccountU
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderBackup
 {
     /// <summary>Should this backup job be enabled? Defaults to true. Should this backup job be enabled?</summary>
@@ -651,6 +678,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderBackup
     public V1beta1LinuxFunctionAppSpecForProviderBackupStorageAccountUrlSecretRef StorageAccountUrlSecretRef { get; set; }
 }
 
+/// <summary>The connection string value. The connection string value.</summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderConnectionStringValueSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -666,6 +694,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderConnectionStringValue
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderConnectionString
 {
     /// <summary>The name which should be used for this Connection. The name which should be used for this Connection.</summary>
@@ -681,6 +710,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderConnectionString
     public V1beta1LinuxFunctionAppSpecForProviderConnectionStringValueSecretRef ValueSecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderIdentity
 {
     /// <summary>A list of User Assigned Managed Identity IDs to be assigned to this Linux Function App.</summary>
@@ -712,6 +742,7 @@ public enum V1beta1LinuxFunctionAppSpecForProviderResourceGroupNameRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -725,6 +756,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderResourceGroupNameRefP
     public V1beta1LinuxFunctionAppSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -756,6 +788,7 @@ public enum V1beta1LinuxFunctionAppSpecForProviderResourceGroupNameSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -769,6 +802,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderResourceGroupNameSele
     public V1beta1LinuxFunctionAppSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -804,6 +838,7 @@ public enum V1beta1LinuxFunctionAppSpecForProviderServicePlanIdRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderServicePlanIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -817,6 +852,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderServicePlanIdRefPolic
     public V1beta1LinuxFunctionAppSpecForProviderServicePlanIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ServicePlan in web to populate servicePlanId.</summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderServicePlanIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -848,6 +884,7 @@ public enum V1beta1LinuxFunctionAppSpecForProviderServicePlanIdSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderServicePlanIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -861,6 +898,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderServicePlanIdSelector
     public V1beta1LinuxFunctionAppSpecForProviderServicePlanIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ServicePlan in web to populate servicePlanId.</summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderServicePlanIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -876,6 +914,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderServicePlanIdSelector
     public V1beta1LinuxFunctionAppSpecForProviderServicePlanIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfigAppServiceLogs
 {
     /// <summary>The amount of disk space to use for logs. Valid values are between 25 and 100. Defaults to 35. The amount of disk space to use for logs. Valid values are between `25` and `100`.</summary>
@@ -887,6 +926,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfigAppServiceL
     public double? RetentionPeriodDays { get; set; }
 }
 
+/// <summary>The Connection String for linking the Linux Function App to Application Insights. The Connection String for linking the Linux Function App to Application Insights.</summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfigApplicationInsightsConnectionStringSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -902,6 +942,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfigApplication
     public string Namespace { get; set; }
 }
 
+/// <summary>The Instrumentation Key for connecting the Linux Function App to Application Insights. The Instrumentation Key for connecting the Linux Function App to Application Insights.</summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfigApplicationInsightsKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -917,6 +958,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfigApplication
     public string Namespace { get; set; }
 }
 
+/// <summary>The password for the account to use to connect to the registry. The password for the account to use to connect to the registry.</summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfigApplicationStackDockerRegistryPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -932,6 +974,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfigApplication
     public string Namespace { get; set; }
 }
 
+/// <summary>The username to use for connections to the registry. The username to use for connections to the registry.</summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfigApplicationStackDockerRegistryUsernameSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -947,6 +990,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfigApplication
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfigApplicationStackDocker
 {
     /// <summary>The name of the Docker image to use. The name of the Docker image to use.</summary>
@@ -970,6 +1014,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfigApplication
     public V1beta1LinuxFunctionAppSpecForProviderSiteConfigApplicationStackDockerRegistryUsernameSecretRef? RegistryUsernameSecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfigApplicationStack
 {
     /// <summary>One or more docker blocks as defined below. A docker block</summary>
@@ -1005,6 +1050,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfigApplication
     public bool? UseDotnetIsolatedRuntime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfigCors
 {
     /// <summary>Specifies a list of origins that should be allowed to make cross-origin calls. Specifies a list of origins that should be allowed to make cross-origin calls.</summary>
@@ -1016,6 +1062,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfigCors
     public bool? SupportCredentials { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfigIpRestrictionHeaders
 {
     /// <summary>Specifies a list of Azure Front Door IDs.</summary>
@@ -1055,6 +1102,7 @@ public enum V1beta1LinuxFunctionAppSpecForProviderSiteConfigIpRestrictionVirtual
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1068,6 +1116,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfigIpRestricti
     public V1beta1LinuxFunctionAppSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1099,6 +1148,7 @@ public enum V1beta1LinuxFunctionAppSpecForProviderSiteConfigIpRestrictionVirtual
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1112,6 +1162,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfigIpRestricti
     public V1beta1LinuxFunctionAppSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1127,6 +1178,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfigIpRestricti
     public V1beta1LinuxFunctionAppSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfigIpRestriction
 {
     /// <summary>The action to take. Possible values are Allow or Deny. Defaults to Allow. The action to take. Possible values are `Allow` or `Deny`.</summary>
@@ -1170,6 +1222,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfigIpRestricti
     public V1beta1LinuxFunctionAppSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelector? VirtualNetworkSubnetIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfigScmIpRestrictionHeaders
 {
     /// <summary>Specifies a list of Azure Front Door IDs.</summary>
@@ -1209,6 +1262,7 @@ public enum V1beta1LinuxFunctionAppSpecForProviderSiteConfigScmIpRestrictionVirt
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1222,6 +1276,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfigScmIpRestri
     public V1beta1LinuxFunctionAppSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1253,6 +1308,7 @@ public enum V1beta1LinuxFunctionAppSpecForProviderSiteConfigScmIpRestrictionVirt
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1266,6 +1322,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfigScmIpRestri
     public V1beta1LinuxFunctionAppSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1281,6 +1338,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfigScmIpRestri
     public V1beta1LinuxFunctionAppSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfigScmIpRestriction
 {
     /// <summary>The action to take. Possible values are Allow or Deny. Defaults to Allow. The action to take. Possible values are `Allow` or `Deny`.</summary>
@@ -1324,6 +1382,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfigScmIpRestri
     public V1beta1LinuxFunctionAppSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelector? VirtualNetworkSubnetIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfig
 {
     /// <summary>If this Linux Web App is Always On enabled. Defaults to false. If this Linux Web App is Always On enabled. Defaults to `false`.</summary>
@@ -1467,6 +1526,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfig
     public double? WorkerCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderStickySettings
 {
     /// <summary>A list of app_setting names that the Linux Function App will not swap between Slots when a swap operation is triggered.</summary>
@@ -1478,6 +1538,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderStickySettings
     public IList<string>? ConnectionStringNames { get; set; }
 }
 
+/// <summary>The Access key for the storage account.</summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderStorageAccountAccessKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1493,6 +1554,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderStorageAccountAccessK
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderStorageAccount
 {
     /// <summary>The Access key for the storage account.</summary>
@@ -1540,6 +1602,7 @@ public enum V1beta1LinuxFunctionAppSpecForProviderStorageAccountNameRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderStorageAccountNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1553,6 +1616,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderStorageAccountNameRef
     public V1beta1LinuxFunctionAppSpecForProviderStorageAccountNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in storage to populate storageAccountName.</summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderStorageAccountNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1584,6 +1648,7 @@ public enum V1beta1LinuxFunctionAppSpecForProviderStorageAccountNameSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderStorageAccountNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1597,6 +1662,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderStorageAccountNameSel
     public V1beta1LinuxFunctionAppSpecForProviderStorageAccountNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in storage to populate storageAccountName.</summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderStorageAccountNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1632,6 +1698,7 @@ public enum V1beta1LinuxFunctionAppSpecForProviderVirtualNetworkSubnetIdRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderVirtualNetworkSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1645,6 +1712,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderVirtualNetworkSubnetI
     public V1beta1LinuxFunctionAppSpecForProviderVirtualNetworkSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderVirtualNetworkSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1676,6 +1744,7 @@ public enum V1beta1LinuxFunctionAppSpecForProviderVirtualNetworkSubnetIdSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderVirtualNetworkSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1689,6 +1758,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderVirtualNetworkSubnetI
     public V1beta1LinuxFunctionAppSpecForProviderVirtualNetworkSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1LinuxFunctionAppSpecForProviderVirtualNetworkSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1704,6 +1774,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderVirtualNetworkSubnetI
     public V1beta1LinuxFunctionAppSpecForProviderVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecForProvider
 {
     /// <summary>A map of key-value pairs for App Settings and custom values. A map of key-value pairs for [App Settings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-app-settings) and custom values.</summary>
@@ -1871,6 +1942,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProvider
     public string? ZipDeployFile { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderAuthSettingsActiveDirectory
 {
     /// <summary>Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. Specifies a list of Allowed audience values to consider when validating JWTs issued by Azure Active Directory.</summary>
@@ -1886,6 +1958,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderAuthSettingsActiveDi
     public string? ClientSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderAuthSettingsFacebook
 {
     /// <summary>The App ID of the Facebook app used for login. The App ID of the Facebook app used for login.</summary>
@@ -1901,6 +1974,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderAuthSettingsFacebook
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderAuthSettingsGithub
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the GitHub app used for login.</summary>
@@ -1916,6 +1990,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderAuthSettingsGithub
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderAuthSettingsGoogle
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The OpenID Connect Client ID for the Google web application.</summary>
@@ -1931,6 +2006,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderAuthSettingsGoogle
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderAuthSettingsMicrosoft
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The OAuth 2.0 client ID that was created for the app used for authentication.</summary>
@@ -1946,6 +2022,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderAuthSettingsMicrosof
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderAuthSettingsTwitter
 {
     /// <summary>The OAuth 1.0a consumer key of the Twitter application used for sign-in. The OAuth 1.0a consumer key of the Twitter application used for sign-in.</summary>
@@ -1957,6 +2034,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderAuthSettingsTwitter
     public string? ConsumerSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderAuthSettings
 {
     /// <summary>An active_directory block as defined above.</summary>
@@ -2020,6 +2098,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderAuthSettings
     public string? UnauthenticatedClientAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderAuthSettingsV2ActiveDirectoryV2
 {
     /// <summary>The list of allowed Applications for the Default Authorisation Policy. The list of allowed Applications for the Default Authorisation Policy.</summary>
@@ -2071,6 +2150,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderAuthSettingsV2Active
     public bool? WwwAuthenticationDisabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderAuthSettingsV2AppleV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The OpenID Connect Client ID for the Apple web application.</summary>
@@ -2082,6 +2162,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderAuthSettingsV2AppleV
     public string? ClientSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderAuthSettingsV2AzureStaticWebAppV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the Client to use to authenticate with Azure Static Web App Authentication.</summary>
@@ -2089,6 +2170,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderAuthSettingsV2AzureS
     public string? ClientId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderAuthSettingsV2CustomOidcV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the Client to use to authenticate with this Custom OIDC.</summary>
@@ -2112,6 +2194,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderAuthSettingsV2Custom
     public IList<string>? Scopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderAuthSettingsV2FacebookV2
 {
     /// <summary>The App ID of the Facebook app used for login. The App ID of the Facebook app used for login.</summary>
@@ -2131,6 +2214,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderAuthSettingsV2Facebo
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderAuthSettingsV2GithubV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the GitHub app used for login.</summary>
@@ -2146,6 +2230,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderAuthSettingsV2Github
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderAuthSettingsV2GoogleV2
 {
     /// <summary>Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. Specifies a list of Allowed Audiences that will be requested as part of Google Sign-In authentication.</summary>
@@ -2165,6 +2250,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderAuthSettingsV2Google
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderAuthSettingsV2Login
 {
     /// <summary>External URLs that can be redirected to as part of logging in or logging out of the app. This is an advanced setting typically only needed by Windows Store application backends. External URLs that can be redirected to as part of logging in or logging out of the app. This is an advanced setting typically only needed by Windows Store application backends. **Note:** URLs within the current domain are always implicitly allowed.</summary>
@@ -2212,6 +2298,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderAuthSettingsV2Login
     public bool? ValidateNonce { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderAuthSettingsV2MicrosoftV2
 {
     /// <summary>Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication.</summary>
@@ -2231,6 +2318,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderAuthSettingsV2Micros
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderAuthSettingsV2TwitterV2
 {
     /// <summary>The OAuth 1.0a consumer key of the Twitter application used for sign-in. The OAuth 1.0a consumer key of the Twitter application used for sign-in.</summary>
@@ -2242,6 +2330,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderAuthSettingsV2Twitte
     public string? ConsumerSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderAuthSettingsV2
 {
     /// <summary>An active_directory_v2 block as defined below.</summary>
@@ -2333,6 +2422,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderAuthSettingsV2
     public string? UnauthenticatedAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderBackupSchedule
 {
     /// <summary>How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and frequency_unit should be set to Day). How often the backup should be executed (e.g. for weekly backup, this should be set to `7` and `frequency_unit` should be set to `Day`).</summary>
@@ -2356,6 +2446,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderBackupSchedule
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderBackup
 {
     /// <summary>Should this backup job be enabled? Defaults to true. Should this backup job be enabled?</summary>
@@ -2371,6 +2462,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderBackup
     public IList<V1beta1LinuxFunctionAppSpecInitProviderBackupSchedule>? Schedule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderConnectionString
 {
     /// <summary>The name which should be used for this Connection. The name which should be used for this Connection.</summary>
@@ -2382,6 +2474,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderConnectionString
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderIdentity
 {
     /// <summary>A list of User Assigned Managed Identity IDs to be assigned to this Linux Function App.</summary>
@@ -2413,6 +2506,7 @@ public enum V1beta1LinuxFunctionAppSpecInitProviderResourceGroupNameRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2426,6 +2520,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderResourceGroupNameRef
     public V1beta1LinuxFunctionAppSpecInitProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2457,6 +2552,7 @@ public enum V1beta1LinuxFunctionAppSpecInitProviderResourceGroupNameSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2470,6 +2566,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderResourceGroupNameSel
     public V1beta1LinuxFunctionAppSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2505,6 +2602,7 @@ public enum V1beta1LinuxFunctionAppSpecInitProviderServicePlanIdRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderServicePlanIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2518,6 +2616,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderServicePlanIdRefPoli
     public V1beta1LinuxFunctionAppSpecInitProviderServicePlanIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ServicePlan in web to populate servicePlanId.</summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderServicePlanIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2549,6 +2648,7 @@ public enum V1beta1LinuxFunctionAppSpecInitProviderServicePlanIdSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderServicePlanIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2562,6 +2662,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderServicePlanIdSelecto
     public V1beta1LinuxFunctionAppSpecInitProviderServicePlanIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ServicePlan in web to populate servicePlanId.</summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderServicePlanIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2577,6 +2678,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderServicePlanIdSelecto
     public V1beta1LinuxFunctionAppSpecInitProviderServicePlanIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderSiteConfigAppServiceLogs
 {
     /// <summary>The amount of disk space to use for logs. Valid values are between 25 and 100. Defaults to 35. The amount of disk space to use for logs. Valid values are between `25` and `100`.</summary>
@@ -2588,6 +2690,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderSiteConfigAppService
     public double? RetentionPeriodDays { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderSiteConfigApplicationStackDocker
 {
     /// <summary>The name of the Docker image to use. The name of the Docker image to use.</summary>
@@ -2603,6 +2706,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderSiteConfigApplicatio
     public string? RegistryUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderSiteConfigApplicationStack
 {
     /// <summary>One or more docker blocks as defined below. A docker block</summary>
@@ -2638,6 +2742,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderSiteConfigApplicatio
     public bool? UseDotnetIsolatedRuntime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderSiteConfigCors
 {
     /// <summary>Specifies a list of origins that should be allowed to make cross-origin calls. Specifies a list of origins that should be allowed to make cross-origin calls.</summary>
@@ -2649,6 +2754,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderSiteConfigCors
     public bool? SupportCredentials { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderSiteConfigIpRestrictionHeaders
 {
     /// <summary>Specifies a list of Azure Front Door IDs.</summary>
@@ -2688,6 +2794,7 @@ public enum V1beta1LinuxFunctionAppSpecInitProviderSiteConfigIpRestrictionVirtua
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2701,6 +2808,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderSiteConfigIpRestrict
     public V1beta1LinuxFunctionAppSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2732,6 +2840,7 @@ public enum V1beta1LinuxFunctionAppSpecInitProviderSiteConfigIpRestrictionVirtua
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2745,6 +2854,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderSiteConfigIpRestrict
     public V1beta1LinuxFunctionAppSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2760,6 +2870,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderSiteConfigIpRestrict
     public V1beta1LinuxFunctionAppSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderSiteConfigIpRestriction
 {
     /// <summary>The action to take. Possible values are Allow or Deny. Defaults to Allow. The action to take. Possible values are `Allow` or `Deny`.</summary>
@@ -2803,6 +2914,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderSiteConfigIpRestrict
     public V1beta1LinuxFunctionAppSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelector? VirtualNetworkSubnetIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderSiteConfigScmIpRestrictionHeaders
 {
     /// <summary>Specifies a list of Azure Front Door IDs.</summary>
@@ -2842,6 +2954,7 @@ public enum V1beta1LinuxFunctionAppSpecInitProviderSiteConfigScmIpRestrictionVir
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2855,6 +2968,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderSiteConfigScmIpRestr
     public V1beta1LinuxFunctionAppSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2886,6 +3000,7 @@ public enum V1beta1LinuxFunctionAppSpecInitProviderSiteConfigScmIpRestrictionVir
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2899,6 +3014,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderSiteConfigScmIpRestr
     public V1beta1LinuxFunctionAppSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2914,6 +3030,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderSiteConfigScmIpRestr
     public V1beta1LinuxFunctionAppSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderSiteConfigScmIpRestriction
 {
     /// <summary>The action to take. Possible values are Allow or Deny. Defaults to Allow. The action to take. Possible values are `Allow` or `Deny`.</summary>
@@ -2957,6 +3074,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderSiteConfigScmIpRestr
     public V1beta1LinuxFunctionAppSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelector? VirtualNetworkSubnetIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderSiteConfig
 {
     /// <summary>If this Linux Web App is Always On enabled. Defaults to false. If this Linux Web App is Always On enabled. Defaults to `false`.</summary>
@@ -3092,6 +3210,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderSiteConfig
     public double? WorkerCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderStickySettings
 {
     /// <summary>A list of app_setting names that the Linux Function App will not swap between Slots when a swap operation is triggered.</summary>
@@ -3103,6 +3222,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderStickySettings
     public IList<string>? ConnectionStringNames { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderStorageAccount
 {
     /// <summary>The Name of the Storage Account.</summary>
@@ -3146,6 +3266,7 @@ public enum V1beta1LinuxFunctionAppSpecInitProviderStorageAccountNameRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderStorageAccountNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3159,6 +3280,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderStorageAccountNameRe
     public V1beta1LinuxFunctionAppSpecInitProviderStorageAccountNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in storage to populate storageAccountName.</summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderStorageAccountNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3190,6 +3312,7 @@ public enum V1beta1LinuxFunctionAppSpecInitProviderStorageAccountNameSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderStorageAccountNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3203,6 +3326,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderStorageAccountNameSe
     public V1beta1LinuxFunctionAppSpecInitProviderStorageAccountNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in storage to populate storageAccountName.</summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderStorageAccountNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -3238,6 +3362,7 @@ public enum V1beta1LinuxFunctionAppSpecInitProviderVirtualNetworkSubnetIdRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderVirtualNetworkSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3251,6 +3376,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderVirtualNetworkSubnet
     public V1beta1LinuxFunctionAppSpecInitProviderVirtualNetworkSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderVirtualNetworkSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3282,6 +3408,7 @@ public enum V1beta1LinuxFunctionAppSpecInitProviderVirtualNetworkSubnetIdSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderVirtualNetworkSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3295,6 +3422,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderVirtualNetworkSubnet
     public V1beta1LinuxFunctionAppSpecInitProviderVirtualNetworkSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProviderVirtualNetworkSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -3310,6 +3438,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderVirtualNetworkSubnet
     public V1beta1LinuxFunctionAppSpecInitProviderVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1LinuxFunctionAppSpecInitProvider
 {
     /// <summary>A map of key-value pairs for App Settings and custom values. A map of key-value pairs for [App Settings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-app-settings) and custom values.</summary>
@@ -3515,6 +3644,7 @@ public enum V1beta1LinuxFunctionAppSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxFunctionAppSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3528,6 +3658,7 @@ public partial class V1beta1LinuxFunctionAppSpecProviderConfigRefPolicy
     public V1beta1LinuxFunctionAppSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1LinuxFunctionAppSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3559,6 +3690,7 @@ public enum V1beta1LinuxFunctionAppSpecPublishConnectionDetailsToConfigRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxFunctionAppSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3572,6 +3704,7 @@ public partial class V1beta1LinuxFunctionAppSpecPublishConnectionDetailsToConfig
     public V1beta1LinuxFunctionAppSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1LinuxFunctionAppSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3583,6 +3716,7 @@ public partial class V1beta1LinuxFunctionAppSpecPublishConnectionDetailsToConfig
     public V1beta1LinuxFunctionAppSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1LinuxFunctionAppSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -3598,6 +3732,7 @@ public partial class V1beta1LinuxFunctionAppSpecPublishConnectionDetailsToMetada
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1LinuxFunctionAppSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -3613,6 +3748,7 @@ public partial class V1beta1LinuxFunctionAppSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1LinuxFunctionAppSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -3624,6 +3760,7 @@ public partial class V1beta1LinuxFunctionAppSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>LinuxFunctionAppSpec defines the desired state of LinuxFunctionApp</summary>
 public partial class V1beta1LinuxFunctionAppSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -3656,6 +3793,7 @@ public partial class V1beta1LinuxFunctionAppSpec
     public V1beta1LinuxFunctionAppSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppStatusAtProviderAuthSettingsActiveDirectory
 {
     /// <summary>Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. Specifies a list of Allowed audience values to consider when validating JWTs issued by Azure Active Directory.</summary>
@@ -3671,6 +3809,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderAuthSettingsActiveDi
     public string? ClientSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppStatusAtProviderAuthSettingsFacebook
 {
     /// <summary>The App ID of the Facebook app used for login. The App ID of the Facebook app used for login.</summary>
@@ -3686,6 +3825,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderAuthSettingsFacebook
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppStatusAtProviderAuthSettingsGithub
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the GitHub app used for login.</summary>
@@ -3701,6 +3841,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderAuthSettingsGithub
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppStatusAtProviderAuthSettingsGoogle
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The OpenID Connect Client ID for the Google web application.</summary>
@@ -3716,6 +3857,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderAuthSettingsGoogle
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppStatusAtProviderAuthSettingsMicrosoft
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The OAuth 2.0 client ID that was created for the app used for authentication.</summary>
@@ -3731,6 +3873,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderAuthSettingsMicrosof
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppStatusAtProviderAuthSettingsTwitter
 {
     /// <summary>The OAuth 1.0a consumer key of the Twitter application used for sign-in. The OAuth 1.0a consumer key of the Twitter application used for sign-in.</summary>
@@ -3742,6 +3885,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderAuthSettingsTwitter
     public string? ConsumerSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppStatusAtProviderAuthSettings
 {
     /// <summary>An active_directory block as defined above.</summary>
@@ -3805,6 +3949,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderAuthSettings
     public string? UnauthenticatedClientAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppStatusAtProviderAuthSettingsV2ActiveDirectoryV2
 {
     /// <summary>The list of allowed Applications for the Default Authorisation Policy. The list of allowed Applications for the Default Authorisation Policy.</summary>
@@ -3856,6 +4001,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderAuthSettingsV2Active
     public bool? WwwAuthenticationDisabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppStatusAtProviderAuthSettingsV2AppleV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The OpenID Connect Client ID for the Apple web application.</summary>
@@ -3871,6 +4017,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderAuthSettingsV2AppleV
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppStatusAtProviderAuthSettingsV2AzureStaticWebAppV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the Client to use to authenticate with Azure Static Web App Authentication.</summary>
@@ -3878,6 +4025,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderAuthSettingsV2AzureS
     public string? ClientId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppStatusAtProviderAuthSettingsV2CustomOidcV2
 {
     /// <summary>The endpoint to make the Authorisation Request as supplied by openid_configuration_endpoint response. The endpoint to make the Authorisation Request.</summary>
@@ -3925,6 +4073,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderAuthSettingsV2Custom
     public string? TokenEndpoint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppStatusAtProviderAuthSettingsV2FacebookV2
 {
     /// <summary>The App ID of the Facebook app used for login. The App ID of the Facebook app used for login.</summary>
@@ -3944,6 +4093,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderAuthSettingsV2Facebo
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppStatusAtProviderAuthSettingsV2GithubV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the GitHub app used for login.</summary>
@@ -3959,6 +4109,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderAuthSettingsV2Github
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppStatusAtProviderAuthSettingsV2GoogleV2
 {
     /// <summary>Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. Specifies a list of Allowed Audiences that will be requested as part of Google Sign-In authentication.</summary>
@@ -3978,6 +4129,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderAuthSettingsV2Google
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppStatusAtProviderAuthSettingsV2Login
 {
     /// <summary>External URLs that can be redirected to as part of logging in or logging out of the app. This is an advanced setting typically only needed by Windows Store application backends. External URLs that can be redirected to as part of logging in or logging out of the app. This is an advanced setting typically only needed by Windows Store application backends. **Note:** URLs within the current domain are always implicitly allowed.</summary>
@@ -4025,6 +4177,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderAuthSettingsV2Login
     public bool? ValidateNonce { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppStatusAtProviderAuthSettingsV2MicrosoftV2
 {
     /// <summary>Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication.</summary>
@@ -4044,6 +4197,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderAuthSettingsV2Micros
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppStatusAtProviderAuthSettingsV2TwitterV2
 {
     /// <summary>The OAuth 1.0a consumer key of the Twitter application used for sign-in. The OAuth 1.0a consumer key of the Twitter application used for sign-in.</summary>
@@ -4055,6 +4209,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderAuthSettingsV2Twitte
     public string? ConsumerSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppStatusAtProviderAuthSettingsV2
 {
     /// <summary>An active_directory_v2 block as defined below.</summary>
@@ -4146,6 +4301,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderAuthSettingsV2
     public string? UnauthenticatedAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppStatusAtProviderBackupSchedule
 {
     /// <summary>How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and frequency_unit should be set to Day). How often the backup should be executed (e.g. for weekly backup, this should be set to `7` and `frequency_unit` should be set to `Day`).</summary>
@@ -4173,6 +4329,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderBackupSchedule
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppStatusAtProviderBackup
 {
     /// <summary>Should this backup job be enabled? Defaults to true. Should this backup job be enabled?</summary>
@@ -4188,6 +4345,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderBackup
     public IList<V1beta1LinuxFunctionAppStatusAtProviderBackupSchedule>? Schedule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppStatusAtProviderConnectionString
 {
     /// <summary>The name which should be used for this Connection. The name which should be used for this Connection.</summary>
@@ -4199,6 +4357,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderConnectionString
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppStatusAtProviderIdentity
 {
     /// <summary>A list of User Assigned Managed Identity IDs to be assigned to this Linux Function App.</summary>
@@ -4218,6 +4377,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppStatusAtProviderSiteConfigAppServiceLogs
 {
     /// <summary>The amount of disk space to use for logs. Valid values are between 25 and 100. Defaults to 35. The amount of disk space to use for logs. Valid values are between `25` and `100`.</summary>
@@ -4229,6 +4389,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderSiteConfigAppService
     public double? RetentionPeriodDays { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppStatusAtProviderSiteConfigApplicationStackDocker
 {
     /// <summary>The name of the Docker image to use. The name of the Docker image to use.</summary>
@@ -4244,6 +4405,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderSiteConfigApplicatio
     public string? RegistryUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppStatusAtProviderSiteConfigApplicationStack
 {
     /// <summary>One or more docker blocks as defined below. A docker block</summary>
@@ -4279,6 +4441,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderSiteConfigApplicatio
     public bool? UseDotnetIsolatedRuntime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppStatusAtProviderSiteConfigCors
 {
     /// <summary>Specifies a list of origins that should be allowed to make cross-origin calls. Specifies a list of origins that should be allowed to make cross-origin calls.</summary>
@@ -4290,6 +4453,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderSiteConfigCors
     public bool? SupportCredentials { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppStatusAtProviderSiteConfigIpRestrictionHeaders
 {
     /// <summary>Specifies a list of Azure Front Door IDs.</summary>
@@ -4309,6 +4473,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderSiteConfigIpRestrict
     public IList<string>? XForwardedHost { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppStatusAtProviderSiteConfigIpRestriction
 {
     /// <summary>The action to take. Possible values are Allow or Deny. Defaults to Allow. The action to take. Possible values are `Allow` or `Deny`.</summary>
@@ -4344,6 +4509,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderSiteConfigIpRestrict
     public string? VirtualNetworkSubnetId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppStatusAtProviderSiteConfigScmIpRestrictionHeaders
 {
     /// <summary>Specifies a list of Azure Front Door IDs.</summary>
@@ -4363,6 +4529,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderSiteConfigScmIpRestr
     public IList<string>? XForwardedHost { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppStatusAtProviderSiteConfigScmIpRestriction
 {
     /// <summary>The action to take. Possible values are Allow or Deny. Defaults to Allow. The action to take. Possible values are `Allow` or `Deny`.</summary>
@@ -4398,6 +4565,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderSiteConfigScmIpRestr
     public string? VirtualNetworkSubnetId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppStatusAtProviderSiteConfig
 {
     /// <summary>If this Linux Web App is Always On enabled. Defaults to false. If this Linux Web App is Always On enabled. Defaults to `false`.</summary>
@@ -4545,6 +4713,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderSiteConfig
     public double? WorkerCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppStatusAtProviderStickySettings
 {
     /// <summary>A list of app_setting names that the Linux Function App will not swap between Slots when a swap operation is triggered.</summary>
@@ -4556,6 +4725,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderStickySettings
     public IList<string>? ConnectionStringNames { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppStatusAtProviderStorageAccount
 {
     /// <summary>The Name of the Storage Account.</summary>
@@ -4579,6 +4749,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderStorageAccount
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppStatusAtProvider
 {
     /// <summary>A map of key-value pairs for App Settings and custom values. A map of key-value pairs for [App Settings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-app-settings) and custom values.</summary>
@@ -4742,6 +4913,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProvider
     public string? ZipDeployFile { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1LinuxFunctionAppStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -4769,6 +4941,7 @@ public partial class V1beta1LinuxFunctionAppStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>LinuxFunctionAppStatus defines the observed state of LinuxFunctionApp.</summary>
 public partial class V1beta1LinuxFunctionAppStatus
 {
     /// <summary></summary>
@@ -4785,6 +4958,7 @@ public partial class V1beta1LinuxFunctionAppStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>LinuxFunctionApp is the Schema for the LinuxFunctionApps API. Manages a Linux Function App.</summary>
 public partial class V1beta1LinuxFunctionApp : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LinuxFunctionAppSpec>, IStatus<V1beta1LinuxFunctionAppStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -38,6 +38,7 @@ public enum V1beta1IOTHubDataConnectionSpecForProviderClusterNameRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecForProviderClusterNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1IOTHubDataConnectionSpecForProviderClusterNameRefPol
     public V1beta1IOTHubDataConnectionSpecForProviderClusterNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in kusto to populate clusterName.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecForProviderClusterNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1IOTHubDataConnectionSpecForProviderClusterNameSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecForProviderClusterNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1IOTHubDataConnectionSpecForProviderClusterNameSelect
     public V1beta1IOTHubDataConnectionSpecForProviderClusterNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in kusto to populate clusterName.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecForProviderClusterNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1IOTHubDataConnectionSpecForProviderConsumerGroupRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecForProviderConsumerGroupRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1IOTHubDataConnectionSpecForProviderConsumerGroupRefP
     public V1beta1IOTHubDataConnectionSpecForProviderConsumerGroupRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a IOTHubConsumerGroup in devices to populate consumerGroup.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecForProviderConsumerGroupRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1IOTHubDataConnectionSpecForProviderConsumerGroupSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecForProviderConsumerGroupSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1IOTHubDataConnectionSpecForProviderConsumerGroupSele
     public V1beta1IOTHubDataConnectionSpecForProviderConsumerGroupSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a IOTHubConsumerGroup in devices to populate consumerGroup.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecForProviderConsumerGroupSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1IOTHubDataConnectionSpecForProviderDatabaseNameRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecForProviderDatabaseNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1IOTHubDataConnectionSpecForProviderDatabaseNameRefPo
     public V1beta1IOTHubDataConnectionSpecForProviderDatabaseNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Database in kusto to populate databaseName.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecForProviderDatabaseNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1IOTHubDataConnectionSpecForProviderDatabaseNameSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecForProviderDatabaseNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1IOTHubDataConnectionSpecForProviderDatabaseNameSelec
     public V1beta1IOTHubDataConnectionSpecForProviderDatabaseNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Database in kusto to populate databaseName.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecForProviderDatabaseNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -314,6 +326,7 @@ public enum V1beta1IOTHubDataConnectionSpecForProviderIothubIdRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecForProviderIothubIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -327,6 +340,7 @@ public partial class V1beta1IOTHubDataConnectionSpecForProviderIothubIdRefPolicy
     public V1beta1IOTHubDataConnectionSpecForProviderIothubIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a IOTHub in devices to populate iothubId.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecForProviderIothubIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -358,6 +372,7 @@ public enum V1beta1IOTHubDataConnectionSpecForProviderIothubIdSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecForProviderIothubIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -371,6 +386,7 @@ public partial class V1beta1IOTHubDataConnectionSpecForProviderIothubIdSelectorP
     public V1beta1IOTHubDataConnectionSpecForProviderIothubIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a IOTHub in devices to populate iothubId.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecForProviderIothubIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -406,6 +422,7 @@ public enum V1beta1IOTHubDataConnectionSpecForProviderResourceGroupNameRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -419,6 +436,7 @@ public partial class V1beta1IOTHubDataConnectionSpecForProviderResourceGroupName
     public V1beta1IOTHubDataConnectionSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -450,6 +468,7 @@ public enum V1beta1IOTHubDataConnectionSpecForProviderResourceGroupNameSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -463,6 +482,7 @@ public partial class V1beta1IOTHubDataConnectionSpecForProviderResourceGroupName
     public V1beta1IOTHubDataConnectionSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -498,6 +518,7 @@ public enum V1beta1IOTHubDataConnectionSpecForProviderSharedAccessPolicyNameRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecForProviderSharedAccessPolicyNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -511,6 +532,7 @@ public partial class V1beta1IOTHubDataConnectionSpecForProviderSharedAccessPolic
     public V1beta1IOTHubDataConnectionSpecForProviderSharedAccessPolicyNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a IOTHubSharedAccessPolicy in devices to populate sharedAccessPolicyName.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecForProviderSharedAccessPolicyNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -542,6 +564,7 @@ public enum V1beta1IOTHubDataConnectionSpecForProviderSharedAccessPolicyNameSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecForProviderSharedAccessPolicyNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -555,6 +578,7 @@ public partial class V1beta1IOTHubDataConnectionSpecForProviderSharedAccessPolic
     public V1beta1IOTHubDataConnectionSpecForProviderSharedAccessPolicyNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a IOTHubSharedAccessPolicy in devices to populate sharedAccessPolicyName.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecForProviderSharedAccessPolicyNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -570,6 +594,7 @@ public partial class V1beta1IOTHubDataConnectionSpecForProviderSharedAccessPolic
     public V1beta1IOTHubDataConnectionSpecForProviderSharedAccessPolicyNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IOTHubDataConnectionSpecForProvider
 {
     /// <summary>Specifies the name of the Kusto Cluster this data connection will be added to. Changing this forces a new resource to be created.</summary>
@@ -693,6 +718,7 @@ public enum V1beta1IOTHubDataConnectionSpecInitProviderClusterNameRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderClusterNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -706,6 +732,7 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProviderClusterNameRefPo
     public V1beta1IOTHubDataConnectionSpecInitProviderClusterNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in kusto to populate clusterName.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderClusterNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -737,6 +764,7 @@ public enum V1beta1IOTHubDataConnectionSpecInitProviderClusterNameSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderClusterNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -750,6 +778,7 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProviderClusterNameSelec
     public V1beta1IOTHubDataConnectionSpecInitProviderClusterNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in kusto to populate clusterName.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderClusterNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -785,6 +814,7 @@ public enum V1beta1IOTHubDataConnectionSpecInitProviderConsumerGroupRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderConsumerGroupRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -798,6 +828,7 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProviderConsumerGroupRef
     public V1beta1IOTHubDataConnectionSpecInitProviderConsumerGroupRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a IOTHubConsumerGroup in devices to populate consumerGroup.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderConsumerGroupRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -829,6 +860,7 @@ public enum V1beta1IOTHubDataConnectionSpecInitProviderConsumerGroupSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderConsumerGroupSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -842,6 +874,7 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProviderConsumerGroupSel
     public V1beta1IOTHubDataConnectionSpecInitProviderConsumerGroupSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a IOTHubConsumerGroup in devices to populate consumerGroup.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderConsumerGroupSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -877,6 +910,7 @@ public enum V1beta1IOTHubDataConnectionSpecInitProviderDatabaseNameRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderDatabaseNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -890,6 +924,7 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProviderDatabaseNameRefP
     public V1beta1IOTHubDataConnectionSpecInitProviderDatabaseNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Database in kusto to populate databaseName.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderDatabaseNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -921,6 +956,7 @@ public enum V1beta1IOTHubDataConnectionSpecInitProviderDatabaseNameSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderDatabaseNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -934,6 +970,7 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProviderDatabaseNameSele
     public V1beta1IOTHubDataConnectionSpecInitProviderDatabaseNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Database in kusto to populate databaseName.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderDatabaseNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -969,6 +1006,7 @@ public enum V1beta1IOTHubDataConnectionSpecInitProviderIothubIdRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderIothubIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -982,6 +1020,7 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProviderIothubIdRefPolic
     public V1beta1IOTHubDataConnectionSpecInitProviderIothubIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a IOTHub in devices to populate iothubId.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderIothubIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1013,6 +1052,7 @@ public enum V1beta1IOTHubDataConnectionSpecInitProviderIothubIdSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderIothubIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1026,6 +1066,7 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProviderIothubIdSelector
     public V1beta1IOTHubDataConnectionSpecInitProviderIothubIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a IOTHub in devices to populate iothubId.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderIothubIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1061,6 +1102,7 @@ public enum V1beta1IOTHubDataConnectionSpecInitProviderResourceGroupNameRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1074,6 +1116,7 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProviderResourceGroupNam
     public V1beta1IOTHubDataConnectionSpecInitProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1105,6 +1148,7 @@ public enum V1beta1IOTHubDataConnectionSpecInitProviderResourceGroupNameSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1118,6 +1162,7 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProviderResourceGroupNam
     public V1beta1IOTHubDataConnectionSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1153,6 +1198,7 @@ public enum V1beta1IOTHubDataConnectionSpecInitProviderSharedAccessPolicyNameRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderSharedAccessPolicyNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1166,6 +1212,7 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProviderSharedAccessPoli
     public V1beta1IOTHubDataConnectionSpecInitProviderSharedAccessPolicyNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a IOTHubSharedAccessPolicy in devices to populate sharedAccessPolicyName.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderSharedAccessPolicyNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1197,6 +1244,7 @@ public enum V1beta1IOTHubDataConnectionSpecInitProviderSharedAccessPolicyNameSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderSharedAccessPolicyNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1210,6 +1258,7 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProviderSharedAccessPoli
     public V1beta1IOTHubDataConnectionSpecInitProviderSharedAccessPolicyNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a IOTHubSharedAccessPolicy in devices to populate sharedAccessPolicyName.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecInitProviderSharedAccessPolicyNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1225,6 +1274,7 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProviderSharedAccessPoli
     public V1beta1IOTHubDataConnectionSpecInitProviderSharedAccessPolicyNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecInitProvider
 {
     /// <summary>Specifies the name of the Kusto Cluster this data connection will be added to. Changing this forces a new resource to be created.</summary>
@@ -1370,6 +1420,7 @@ public enum V1beta1IOTHubDataConnectionSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1383,6 +1434,7 @@ public partial class V1beta1IOTHubDataConnectionSpecProviderConfigRefPolicy
     public V1beta1IOTHubDataConnectionSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1414,6 +1466,7 @@ public enum V1beta1IOTHubDataConnectionSpecPublishConnectionDetailsToConfigRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1427,6 +1480,7 @@ public partial class V1beta1IOTHubDataConnectionSpecPublishConnectionDetailsToCo
     public V1beta1IOTHubDataConnectionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1438,6 +1492,7 @@ public partial class V1beta1IOTHubDataConnectionSpecPublishConnectionDetailsToCo
     public V1beta1IOTHubDataConnectionSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1453,6 +1508,7 @@ public partial class V1beta1IOTHubDataConnectionSpecPublishConnectionDetailsToMe
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1468,6 +1524,7 @@ public partial class V1beta1IOTHubDataConnectionSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1IOTHubDataConnectionSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1479,6 +1536,7 @@ public partial class V1beta1IOTHubDataConnectionSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>IOTHubDataConnectionSpec defines the desired state of IOTHubDataConnection</summary>
 public partial class V1beta1IOTHubDataConnectionSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1511,6 +1569,7 @@ public partial class V1beta1IOTHubDataConnectionSpec
     public V1beta1IOTHubDataConnectionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IOTHubDataConnectionStatusAtProvider
 {
     /// <summary>Specifies the name of the Kusto Cluster this data connection will be added to. Changing this forces a new resource to be created.</summary>
@@ -1570,6 +1629,7 @@ public partial class V1beta1IOTHubDataConnectionStatusAtProvider
     public string? TableName { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1IOTHubDataConnectionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1597,6 +1657,7 @@ public partial class V1beta1IOTHubDataConnectionStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>IOTHubDataConnectionStatus defines the observed state of IOTHubDataConnection.</summary>
 public partial class V1beta1IOTHubDataConnectionStatus
 {
     /// <summary></summary>
@@ -1613,6 +1674,7 @@ public partial class V1beta1IOTHubDataConnectionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>IOTHubDataConnection is the Schema for the IOTHubDataConnections API. Manages Kusto / Data Explorer IotHub Data Connection</summary>
 public partial class V1beta1IOTHubDataConnection : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IOTHubDataConnectionSpec>, IStatus<V1beta1IOTHubDataConnectionStatus>
 {
     public const string KubeApiVersion = "v1beta1";

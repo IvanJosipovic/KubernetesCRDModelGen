@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.insights.azure.com;
+/// <summary>Storage version of v1api20180301.MetricAlertAction An alert action.</summary>
 public partial class V1api20180301storageMetricAlertSpecActions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -23,6 +24,7 @@ public partial class V1api20180301storageMetricAlertSpecActions
     public IDictionary<string, string>? WebHookProperties { get; set; }
 }
 
+/// <summary>Storage version of v1api20180301.MetricDimension Specifies a metric dimension.</summary>
 public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMonitorMultipleResourceMultipleMetricCriteriaAllOfDynamicThresholdCriterionDimensions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -42,6 +44,7 @@ public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMo
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>Storage version of v1api20180301.DynamicThresholdFailingPeriods The minimum number of violations required within the selected lookback time window required to raise an alert.</summary>
 public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMonitorMultipleResourceMultipleMetricCriteriaAllOfDynamicThresholdCriterionFailingPeriods
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -57,6 +60,7 @@ public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMo
     public double? NumberOfEvaluationPeriods { get; set; }
 }
 
+/// <summary>Storage version of v1api20180301.DynamicMetricCriteria</summary>
 public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMonitorMultipleResourceMultipleMetricCriteriaAllOfDynamicThresholdCriterion
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -112,6 +116,7 @@ public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMo
     public string? TimeAggregation { get; set; }
 }
 
+/// <summary>Storage version of v1api20180301.MetricDimension Specifies a metric dimension.</summary>
 public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMonitorMultipleResourceMultipleMetricCriteriaAllOfStaticThresholdCriterionDimensions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -131,6 +136,7 @@ public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMo
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>Storage version of v1api20180301.MetricCriteria</summary>
 public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMonitorMultipleResourceMultipleMetricCriteriaAllOfStaticThresholdCriterion
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -178,6 +184,7 @@ public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMo
     public string? TimeAggregation { get; set; }
 }
 
+/// <summary>Storage version of v1api20180301.MultiMetricCriteria</summary>
 public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMonitorMultipleResourceMultipleMetricCriteriaAllOf
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -193,6 +200,7 @@ public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMo
     public V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMonitorMultipleResourceMultipleMetricCriteriaAllOfStaticThresholdCriterion? StaticThresholdCriterion { get; set; }
 }
 
+/// <summary>Storage version of v1api20180301.MetricAlertMultipleResourceMultipleMetricCriteria</summary>
 public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMonitorMultipleResourceMultipleMetricCriteria
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -212,6 +220,7 @@ public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMo
     public string? OdataType { get; set; }
 }
 
+/// <summary>Storage version of v1api20180301.MetricDimension Specifies a metric dimension.</summary>
 public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMonitorSingleResourceMultipleMetricCriteriaAllOfDimensions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -231,6 +240,7 @@ public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMo
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>Storage version of v1api20180301.MetricCriteria</summary>
 public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMonitorSingleResourceMultipleMetricCriteriaAllOf
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -278,6 +288,7 @@ public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMo
     public string? TimeAggregation { get; set; }
 }
 
+/// <summary>Storage version of v1api20180301.MetricAlertSingleResourceMultipleMetricCriteria</summary>
 public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMonitorSingleResourceMultipleMetricCriteria
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -297,6 +308,7 @@ public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMo
     public string? OdataType { get; set; }
 }
 
+/// <summary>ComponentReference: The Application Insights resource Id.</summary>
 public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMonitorWebtestLocationAvailabilityCriteriaComponentReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -316,6 +328,7 @@ public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMo
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20180301.WebtestLocationAvailabilityCriteria</summary>
 public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMonitorWebtestLocationAvailabilityCriteria
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -343,6 +356,7 @@ public partial class V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMo
     public string? WebTestId { get; set; }
 }
 
+/// <summary>Storage version of v1api20180301.MetricAlertCriteria</summary>
 public partial class V1api20180301storageMetricAlertSpecCriteria
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -362,6 +376,7 @@ public partial class V1api20180301storageMetricAlertSpecCriteria
     public V1api20180301storageMetricAlertSpecCriteriaMicrosoftAzureMonitorWebtestLocationAvailabilityCriteria? MicrosoftAzureMonitorWebtestLocationAvailabilityCriteria { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20180301storageMetricAlertSpecOwner
 {
     /// <summary></summary>
@@ -373,6 +388,7 @@ public partial class V1api20180301storageMetricAlertSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 public partial class V1api20180301storageMetricAlertSpecScopesReferences
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -392,6 +408,7 @@ public partial class V1api20180301storageMetricAlertSpecScopesReferences
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20180301.MetricAlert_Spec</summary>
 public partial class V1api20180301storageMetricAlertSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -463,6 +480,7 @@ public partial class V1api20180301storageMetricAlertSpec
     public string? WindowSize { get; set; }
 }
 
+/// <summary>Storage version of v1api20180301.MetricAlertAction_STATUS An alert action.</summary>
 public partial class V1api20180301storageMetricAlertStatusActions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -478,6 +496,7 @@ public partial class V1api20180301storageMetricAlertStatusActions
     public IDictionary<string, string>? WebHookProperties { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20180301storageMetricAlertStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -509,6 +528,7 @@ public partial class V1api20180301storageMetricAlertStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20180301.MetricDimension_STATUS Specifies a metric dimension.</summary>
 public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzureMonitorMultipleResourceMultipleMetricCriteriaAllOfDynamicThresholdCriterionDimensions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -528,6 +548,7 @@ public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzure
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>Storage version of v1api20180301.DynamicThresholdFailingPeriods_STATUS The minimum number of violations required within the selected lookback time window required to raise an alert.</summary>
 public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzureMonitorMultipleResourceMultipleMetricCriteriaAllOfDynamicThresholdCriterionFailingPeriods
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -543,6 +564,7 @@ public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzure
     public double? NumberOfEvaluationPeriods { get; set; }
 }
 
+/// <summary>Storage version of v1api20180301.DynamicMetricCriteria_STATUS</summary>
 public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzureMonitorMultipleResourceMultipleMetricCriteriaAllOfDynamicThresholdCriterion
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -598,6 +620,7 @@ public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzure
     public string? TimeAggregation { get; set; }
 }
 
+/// <summary>Storage version of v1api20180301.MetricDimension_STATUS Specifies a metric dimension.</summary>
 public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzureMonitorMultipleResourceMultipleMetricCriteriaAllOfStaticThresholdCriterionDimensions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -617,6 +640,7 @@ public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzure
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>Storage version of v1api20180301.MetricCriteria_STATUS</summary>
 public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzureMonitorMultipleResourceMultipleMetricCriteriaAllOfStaticThresholdCriterion
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -664,6 +688,7 @@ public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzure
     public string? TimeAggregation { get; set; }
 }
 
+/// <summary>Storage version of v1api20180301.MultiMetricCriteria_STATUS</summary>
 public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzureMonitorMultipleResourceMultipleMetricCriteriaAllOf
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -679,6 +704,7 @@ public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzure
     public V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzureMonitorMultipleResourceMultipleMetricCriteriaAllOfStaticThresholdCriterion? StaticThresholdCriterion { get; set; }
 }
 
+/// <summary>Storage version of v1api20180301.MetricAlertMultipleResourceMultipleMetricCriteria_STATUS</summary>
 public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzureMonitorMultipleResourceMultipleMetricCriteria
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -698,6 +724,7 @@ public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzure
     public string? OdataType { get; set; }
 }
 
+/// <summary>Storage version of v1api20180301.MetricDimension_STATUS Specifies a metric dimension.</summary>
 public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzureMonitorSingleResourceMultipleMetricCriteriaAllOfDimensions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -717,6 +744,7 @@ public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzure
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>Storage version of v1api20180301.MetricCriteria_STATUS</summary>
 public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzureMonitorSingleResourceMultipleMetricCriteriaAllOf
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -764,6 +792,7 @@ public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzure
     public string? TimeAggregation { get; set; }
 }
 
+/// <summary>Storage version of v1api20180301.MetricAlertSingleResourceMultipleMetricCriteria_STATUS</summary>
 public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzureMonitorSingleResourceMultipleMetricCriteria
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -783,6 +812,7 @@ public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzure
     public string? OdataType { get; set; }
 }
 
+/// <summary>Storage version of v1api20180301.WebtestLocationAvailabilityCriteria_STATUS</summary>
 public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzureMonitorWebtestLocationAvailabilityCriteria
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -810,6 +840,7 @@ public partial class V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzure
     public string? WebTestId { get; set; }
 }
 
+/// <summary>Storage version of v1api20180301.MetricAlertCriteria_STATUS</summary>
 public partial class V1api20180301storageMetricAlertStatusCriteria
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -829,6 +860,7 @@ public partial class V1api20180301storageMetricAlertStatusCriteria
     public V1api20180301storageMetricAlertStatusCriteriaMicrosoftAzureMonitorWebtestLocationAvailabilityCriteria? MicrosoftAzureMonitorWebtestLocationAvailabilityCriteria { get; set; }
 }
 
+/// <summary>Storage version of v1api20180301.MetricAlert_STATUS</summary>
 public partial class V1api20180301storageMetricAlertStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -913,6 +945,7 @@ public partial class V1api20180301storageMetricAlertStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20180301.MetricAlert Generator information: - Generated from: /monitor/resource-manager/Microsoft.Insights/stable/2018-03-01/metricAlert_API.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/metricAlerts/{ruleName}</summary>
 public partial class V1api20180301storageMetricAlert : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20180301storageMetricAlertSpec>, IStatus<V1api20180301storageMetricAlertStatus>
 {
     public const string KubeApiVersion = "v1api20180301storage";

@@ -38,6 +38,7 @@ public enum V1beta1ContentKeyPolicySpecForProviderMediaServicesAccountNameRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ContentKeyPolicySpecForProviderMediaServicesAccountNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ContentKeyPolicySpecForProviderMediaServicesAccountN
     public V1beta1ContentKeyPolicySpecForProviderMediaServicesAccountNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ServicesAccount in media to populate mediaServicesAccountName.</summary>
 public partial class V1beta1ContentKeyPolicySpecForProviderMediaServicesAccountNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ContentKeyPolicySpecForProviderMediaServicesAccountNameSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ContentKeyPolicySpecForProviderMediaServicesAccountNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ContentKeyPolicySpecForProviderMediaServicesAccountN
     public V1beta1ContentKeyPolicySpecForProviderMediaServicesAccountNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ServicesAccount in media to populate mediaServicesAccountName.</summary>
 public partial class V1beta1ContentKeyPolicySpecForProviderMediaServicesAccountNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1ContentKeyPolicySpecForProviderMediaServicesAccountN
     public V1beta1ContentKeyPolicySpecForProviderMediaServicesAccountNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>The key that must be used as FairPlay Application Secret key.</summary>
 public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionFairplayConfigurationAskSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionFairplayC
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionFairplayConfigurationOfflineRentalConfiguration
 {
     /// <summary>Playback duration.</summary>
@@ -136,6 +142,7 @@ public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionFairplayC
     public double? StorageDurationSeconds { get; set; }
 }
 
+/// <summary>The password encrypting FairPlay certificate in PKCS 12 (pfx) format.</summary>
 public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionFairplayConfigurationPfxPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -151,6 +158,7 @@ public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionFairplayC
     public string Namespace { get; set; }
 }
 
+/// <summary>The Base64 representation of FairPlay certificate in PKCS 12 (pfx) format (including private key).</summary>
 public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionFairplayConfigurationPfxSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -166,6 +174,7 @@ public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionFairplayC
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionFairplayConfiguration
 {
     /// <summary>The key that must be used as FairPlay Application Secret key.</summary>
@@ -193,6 +202,7 @@ public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionFairplayC
     public double? RentalDurationSeconds { get; set; }
 }
 
+/// <summary>The grace period of license.</summary>
 public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionPlayreadyConfigurationLicenseGracePeriodSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -208,6 +218,7 @@ public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionPlayready
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionPlayreadyConfigurationLicensePlayRightExplicitAnalogTelevisionOutputRestriction
 {
     /// <summary>Indicates whether this restriction is enforced on a best effort basis. Possible values are true or false. Defaults to false.</summary>
@@ -219,6 +230,7 @@ public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionPlayready
     public double? ControlBits { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionPlayreadyConfigurationLicensePlayRight
 {
     /// <summary>Configures Automatic Gain Control (AGC) and Color Stripe in the license. Must be between 0 and 3 inclusive.</summary>
@@ -274,6 +286,7 @@ public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionPlayready
     public double? UncompressedDigitalVideoOpl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionPlayreadyConfigurationLicense
 {
     /// <summary>A flag indicating whether test devices can use the license.</summary>
@@ -325,6 +338,7 @@ public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionPlayready
     public string? SecurityLevel { get; set; }
 }
 
+/// <summary>The RSA parameter exponent.</summary>
 public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionTokenRestrictionAlternateKeyRsaTokenKeyExponentSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -340,6 +354,7 @@ public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionTokenRest
     public string Namespace { get; set; }
 }
 
+/// <summary>The RSA parameter modulus.</summary>
 public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionTokenRestrictionAlternateKeyRsaTokenKeyModulusSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -355,6 +370,7 @@ public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionTokenRest
     public string Namespace { get; set; }
 }
 
+/// <summary>The key value of the key. Specifies a symmetric key for token validation.</summary>
 public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionTokenRestrictionAlternateKeySymmetricTokenKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -370,6 +386,7 @@ public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionTokenRest
     public string Namespace { get; set; }
 }
 
+/// <summary>The raw data field of a certificate in PKCS 12 format (X509Certificate2 in .NET). Specifies a certificate for token validation.</summary>
 public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionTokenRestrictionAlternateKeyX509TokenKeyRawSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -385,6 +402,7 @@ public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionTokenRest
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionTokenRestrictionAlternateKey
 {
     /// <summary>The RSA parameter exponent.</summary>
@@ -404,6 +422,7 @@ public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionTokenRest
     public V1beta1ContentKeyPolicySpecForProviderPolicyOptionTokenRestrictionAlternateKeyX509TokenKeyRawSecretRef? X509TokenKeyRawSecretRef { get; set; }
 }
 
+/// <summary>The RSA parameter exponent.</summary>
 public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionTokenRestrictionPrimaryRsaTokenKeyExponentSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -419,6 +438,7 @@ public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionTokenRest
     public string Namespace { get; set; }
 }
 
+/// <summary>The RSA parameter modulus.</summary>
 public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionTokenRestrictionPrimaryRsaTokenKeyModulusSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -434,6 +454,7 @@ public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionTokenRest
     public string Namespace { get; set; }
 }
 
+/// <summary>The key value of the key. Specifies a symmetric key for token validation.</summary>
 public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionTokenRestrictionPrimarySymmetricTokenKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -449,6 +470,7 @@ public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionTokenRest
     public string Namespace { get; set; }
 }
 
+/// <summary>The raw data field of a certificate in PKCS 12 format (X509Certificate2 in .NET). Specifies a certificate for token validation.</summary>
 public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionTokenRestrictionPrimaryX509TokenKeyRawSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -464,6 +486,7 @@ public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionTokenRest
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionTokenRestrictionRequiredClaim
 {
     /// <summary>Token claim type.</summary>
@@ -475,6 +498,7 @@ public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionTokenRest
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionTokenRestriction
 {
     /// <summary>One or more alternate_key block as defined above.</summary>
@@ -518,6 +542,7 @@ public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOptionTokenRest
     public string? TokenType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContentKeyPolicySpecForProviderPolicyOption
 {
     /// <summary>Enable a configuration for non-DRM keys.</summary>
@@ -573,6 +598,7 @@ public enum V1beta1ContentKeyPolicySpecForProviderResourceGroupNameRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ContentKeyPolicySpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -586,6 +612,7 @@ public partial class V1beta1ContentKeyPolicySpecForProviderResourceGroupNameRefP
     public V1beta1ContentKeyPolicySpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1ContentKeyPolicySpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -617,6 +644,7 @@ public enum V1beta1ContentKeyPolicySpecForProviderResourceGroupNameSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ContentKeyPolicySpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -630,6 +658,7 @@ public partial class V1beta1ContentKeyPolicySpecForProviderResourceGroupNameSele
     public V1beta1ContentKeyPolicySpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1ContentKeyPolicySpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -645,6 +674,7 @@ public partial class V1beta1ContentKeyPolicySpecForProviderResourceGroupNameSele
     public V1beta1ContentKeyPolicySpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContentKeyPolicySpecForProvider
 {
     /// <summary>A description for the Policy.</summary>
@@ -680,6 +710,7 @@ public partial class V1beta1ContentKeyPolicySpecForProvider
     public V1beta1ContentKeyPolicySpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContentKeyPolicySpecInitProviderPolicyOptionFairplayConfigurationOfflineRentalConfiguration
 {
     /// <summary>Playback duration.</summary>
@@ -691,6 +722,7 @@ public partial class V1beta1ContentKeyPolicySpecInitProviderPolicyOptionFairplay
     public double? StorageDurationSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContentKeyPolicySpecInitProviderPolicyOptionFairplayConfiguration
 {
     /// <summary>A offline_rental_configuration block as defined below.</summary>
@@ -706,6 +738,7 @@ public partial class V1beta1ContentKeyPolicySpecInitProviderPolicyOptionFairplay
     public double? RentalDurationSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContentKeyPolicySpecInitProviderPolicyOptionPlayreadyConfigurationLicensePlayRightExplicitAnalogTelevisionOutputRestriction
 {
     /// <summary>Indicates whether this restriction is enforced on a best effort basis. Possible values are true or false. Defaults to false.</summary>
@@ -717,6 +750,7 @@ public partial class V1beta1ContentKeyPolicySpecInitProviderPolicyOptionPlayread
     public double? ControlBits { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContentKeyPolicySpecInitProviderPolicyOptionPlayreadyConfigurationLicensePlayRight
 {
     /// <summary>Configures Automatic Gain Control (AGC) and Color Stripe in the license. Must be between 0 and 3 inclusive.</summary>
@@ -772,6 +806,7 @@ public partial class V1beta1ContentKeyPolicySpecInitProviderPolicyOptionPlayread
     public double? UncompressedDigitalVideoOpl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContentKeyPolicySpecInitProviderPolicyOptionPlayreadyConfigurationLicense
 {
     /// <summary>A flag indicating whether test devices can use the license.</summary>
@@ -819,10 +854,12 @@ public partial class V1beta1ContentKeyPolicySpecInitProviderPolicyOptionPlayread
     public string? SecurityLevel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContentKeyPolicySpecInitProviderPolicyOptionTokenRestrictionAlternateKey
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ContentKeyPolicySpecInitProviderPolicyOptionTokenRestrictionRequiredClaim
 {
     /// <summary>Token claim type.</summary>
@@ -834,6 +871,7 @@ public partial class V1beta1ContentKeyPolicySpecInitProviderPolicyOptionTokenRes
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContentKeyPolicySpecInitProviderPolicyOptionTokenRestriction
 {
     /// <summary>One or more alternate_key block as defined above.</summary>
@@ -861,6 +899,7 @@ public partial class V1beta1ContentKeyPolicySpecInitProviderPolicyOptionTokenRes
     public string? TokenType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContentKeyPolicySpecInitProviderPolicyOption
 {
     /// <summary>Enable a configuration for non-DRM keys.</summary>
@@ -896,6 +935,7 @@ public partial class V1beta1ContentKeyPolicySpecInitProviderPolicyOption
     public string? WidevineConfigurationTemplate { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ContentKeyPolicySpecInitProvider
 {
     /// <summary>A description for the Policy.</summary>
@@ -949,6 +989,7 @@ public enum V1beta1ContentKeyPolicySpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ContentKeyPolicySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -962,6 +1003,7 @@ public partial class V1beta1ContentKeyPolicySpecProviderConfigRefPolicy
     public V1beta1ContentKeyPolicySpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ContentKeyPolicySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -993,6 +1035,7 @@ public enum V1beta1ContentKeyPolicySpecPublishConnectionDetailsToConfigRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ContentKeyPolicySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1006,6 +1049,7 @@ public partial class V1beta1ContentKeyPolicySpecPublishConnectionDetailsToConfig
     public V1beta1ContentKeyPolicySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ContentKeyPolicySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1017,6 +1061,7 @@ public partial class V1beta1ContentKeyPolicySpecPublishConnectionDetailsToConfig
     public V1beta1ContentKeyPolicySpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ContentKeyPolicySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1032,6 +1077,7 @@ public partial class V1beta1ContentKeyPolicySpecPublishConnectionDetailsToMetada
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ContentKeyPolicySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1047,6 +1093,7 @@ public partial class V1beta1ContentKeyPolicySpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ContentKeyPolicySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1058,6 +1105,7 @@ public partial class V1beta1ContentKeyPolicySpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ContentKeyPolicySpec defines the desired state of ContentKeyPolicy</summary>
 public partial class V1beta1ContentKeyPolicySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1090,6 +1138,7 @@ public partial class V1beta1ContentKeyPolicySpec
     public V1beta1ContentKeyPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContentKeyPolicyStatusAtProviderPolicyOptionFairplayConfigurationOfflineRentalConfiguration
 {
     /// <summary>Playback duration.</summary>
@@ -1101,6 +1150,7 @@ public partial class V1beta1ContentKeyPolicyStatusAtProviderPolicyOptionFairplay
     public double? StorageDurationSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContentKeyPolicyStatusAtProviderPolicyOptionFairplayConfiguration
 {
     /// <summary>A offline_rental_configuration block as defined below.</summary>
@@ -1116,6 +1166,7 @@ public partial class V1beta1ContentKeyPolicyStatusAtProviderPolicyOptionFairplay
     public double? RentalDurationSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContentKeyPolicyStatusAtProviderPolicyOptionPlayreadyConfigurationLicensePlayRightExplicitAnalogTelevisionOutputRestriction
 {
     /// <summary>Indicates whether this restriction is enforced on a best effort basis. Possible values are true or false. Defaults to false.</summary>
@@ -1127,6 +1178,7 @@ public partial class V1beta1ContentKeyPolicyStatusAtProviderPolicyOptionPlayread
     public double? ControlBits { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContentKeyPolicyStatusAtProviderPolicyOptionPlayreadyConfigurationLicensePlayRight
 {
     /// <summary>Configures Automatic Gain Control (AGC) and Color Stripe in the license. Must be between 0 and 3 inclusive.</summary>
@@ -1182,6 +1234,7 @@ public partial class V1beta1ContentKeyPolicyStatusAtProviderPolicyOptionPlayread
     public double? UncompressedDigitalVideoOpl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContentKeyPolicyStatusAtProviderPolicyOptionPlayreadyConfigurationLicense
 {
     /// <summary>A flag indicating whether test devices can use the license.</summary>
@@ -1229,6 +1282,7 @@ public partial class V1beta1ContentKeyPolicyStatusAtProviderPolicyOptionPlayread
     public string? SecurityLevel { get; set; }
 }
 
+/// <summary>The RSA parameter exponent.</summary>
 public partial class V1beta1ContentKeyPolicyStatusAtProviderPolicyOptionTokenRestrictionAlternateKeyRsaTokenKeyExponentSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1244,6 +1298,7 @@ public partial class V1beta1ContentKeyPolicyStatusAtProviderPolicyOptionTokenRes
     public string Namespace { get; set; }
 }
 
+/// <summary>The RSA parameter modulus.</summary>
 public partial class V1beta1ContentKeyPolicyStatusAtProviderPolicyOptionTokenRestrictionAlternateKeyRsaTokenKeyModulusSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1259,6 +1314,7 @@ public partial class V1beta1ContentKeyPolicyStatusAtProviderPolicyOptionTokenRes
     public string Namespace { get; set; }
 }
 
+/// <summary>The key value of the key. Specifies a symmetric key for token validation.</summary>
 public partial class V1beta1ContentKeyPolicyStatusAtProviderPolicyOptionTokenRestrictionAlternateKeySymmetricTokenKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1274,6 +1330,7 @@ public partial class V1beta1ContentKeyPolicyStatusAtProviderPolicyOptionTokenRes
     public string Namespace { get; set; }
 }
 
+/// <summary>The raw data field of a certificate in PKCS 12 format (X509Certificate2 in .NET). Specifies a certificate for token validation.</summary>
 public partial class V1beta1ContentKeyPolicyStatusAtProviderPolicyOptionTokenRestrictionAlternateKeyX509TokenKeyRawSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1289,6 +1346,7 @@ public partial class V1beta1ContentKeyPolicyStatusAtProviderPolicyOptionTokenRes
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContentKeyPolicyStatusAtProviderPolicyOptionTokenRestrictionAlternateKey
 {
     /// <summary>The RSA parameter exponent.</summary>
@@ -1308,6 +1366,7 @@ public partial class V1beta1ContentKeyPolicyStatusAtProviderPolicyOptionTokenRes
     public V1beta1ContentKeyPolicyStatusAtProviderPolicyOptionTokenRestrictionAlternateKeyX509TokenKeyRawSecretRef? X509TokenKeyRawSecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContentKeyPolicyStatusAtProviderPolicyOptionTokenRestrictionRequiredClaim
 {
     /// <summary>Token claim type.</summary>
@@ -1319,6 +1378,7 @@ public partial class V1beta1ContentKeyPolicyStatusAtProviderPolicyOptionTokenRes
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContentKeyPolicyStatusAtProviderPolicyOptionTokenRestriction
 {
     /// <summary>One or more alternate_key block as defined above.</summary>
@@ -1346,6 +1406,7 @@ public partial class V1beta1ContentKeyPolicyStatusAtProviderPolicyOptionTokenRes
     public string? TokenType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContentKeyPolicyStatusAtProviderPolicyOption
 {
     /// <summary>Enable a configuration for non-DRM keys.</summary>
@@ -1381,6 +1442,7 @@ public partial class V1beta1ContentKeyPolicyStatusAtProviderPolicyOption
     public string? WidevineConfigurationTemplate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContentKeyPolicyStatusAtProvider
 {
     /// <summary>A description for the Policy.</summary>
@@ -1404,6 +1466,7 @@ public partial class V1beta1ContentKeyPolicyStatusAtProvider
     public string? ResourceGroupName { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ContentKeyPolicyStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1431,6 +1494,7 @@ public partial class V1beta1ContentKeyPolicyStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ContentKeyPolicyStatus defines the observed state of ContentKeyPolicy.</summary>
 public partial class V1beta1ContentKeyPolicyStatus
 {
     /// <summary></summary>
@@ -1447,6 +1511,7 @@ public partial class V1beta1ContentKeyPolicyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ContentKeyPolicy is the Schema for the ContentKeyPolicys API. Manages a Content Key Policy.</summary>
 public partial class V1beta1ContentKeyPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ContentKeyPolicySpec>, IStatus<V1beta1ContentKeyPolicyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cdn.azure.com;
+/// <summary>Storage version of v1api20230501.CacheExpirationActionParameters Defines the parameters for the cache expiration action.</summary>
 public partial class V1api20230501storageRuleSpecActionsCacheExpirationParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -31,6 +32,7 @@ public partial class V1api20230501storageRuleSpecActionsCacheExpirationParameter
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleCacheExpirationAction</summary>
 public partial class V1api20230501storageRuleSpecActionsCacheExpiration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -46,6 +48,7 @@ public partial class V1api20230501storageRuleSpecActionsCacheExpiration
     public V1api20230501storageRuleSpecActionsCacheExpirationParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.CacheKeyQueryStringActionParameters Defines the parameters for the cache-key query string action.</summary>
 public partial class V1api20230501storageRuleSpecActionsCacheKeyQueryStringParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -65,6 +68,7 @@ public partial class V1api20230501storageRuleSpecActionsCacheKeyQueryStringParam
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleCacheKeyQueryStringAction</summary>
 public partial class V1api20230501storageRuleSpecActionsCacheKeyQueryString
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -80,6 +84,7 @@ public partial class V1api20230501storageRuleSpecActionsCacheKeyQueryString
     public V1api20230501storageRuleSpecActionsCacheKeyQueryStringParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.HeaderActionParameters Defines the parameters for the request header action.</summary>
 public partial class V1api20230501storageRuleSpecActionsModifyRequestHeaderParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -103,6 +108,7 @@ public partial class V1api20230501storageRuleSpecActionsModifyRequestHeaderParam
     public string? Value { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleRequestHeaderAction</summary>
 public partial class V1api20230501storageRuleSpecActionsModifyRequestHeader
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -118,6 +124,7 @@ public partial class V1api20230501storageRuleSpecActionsModifyRequestHeader
     public V1api20230501storageRuleSpecActionsModifyRequestHeaderParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.HeaderActionParameters Defines the parameters for the request header action.</summary>
 public partial class V1api20230501storageRuleSpecActionsModifyResponseHeaderParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -141,6 +148,7 @@ public partial class V1api20230501storageRuleSpecActionsModifyResponseHeaderPara
     public string? Value { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleResponseHeaderAction</summary>
 public partial class V1api20230501storageRuleSpecActionsModifyResponseHeader
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -156,6 +164,7 @@ public partial class V1api20230501storageRuleSpecActionsModifyResponseHeader
     public V1api20230501storageRuleSpecActionsModifyResponseHeaderParameters? Parameters { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20230501storageRuleSpecActionsOriginGroupOverrideParametersOriginGroupReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -175,6 +184,7 @@ public partial class V1api20230501storageRuleSpecActionsOriginGroupOverrideParam
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.ResourceReference Reference to another resource.</summary>
 public partial class V1api20230501storageRuleSpecActionsOriginGroupOverrideParametersOriginGroup
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -186,6 +196,7 @@ public partial class V1api20230501storageRuleSpecActionsOriginGroupOverrideParam
     public V1api20230501storageRuleSpecActionsOriginGroupOverrideParametersOriginGroupReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.OriginGroupOverrideActionParameters Defines the parameters for the origin group override action.</summary>
 public partial class V1api20230501storageRuleSpecActionsOriginGroupOverrideParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -201,6 +212,7 @@ public partial class V1api20230501storageRuleSpecActionsOriginGroupOverrideParam
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.OriginGroupOverrideAction</summary>
 public partial class V1api20230501storageRuleSpecActionsOriginGroupOverride
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -216,6 +228,7 @@ public partial class V1api20230501storageRuleSpecActionsOriginGroupOverride
     public V1api20230501storageRuleSpecActionsOriginGroupOverrideParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.CacheConfiguration Caching settings for a caching-type route. To disable caching, do not provide a cacheConfiguration object.</summary>
 public partial class V1api20230501storageRuleSpecActionsRouteConfigurationOverrideParametersCacheConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -243,6 +256,7 @@ public partial class V1api20230501storageRuleSpecActionsRouteConfigurationOverri
     public string? QueryStringCachingBehavior { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20230501storageRuleSpecActionsRouteConfigurationOverrideParametersOriginGroupOverrideOriginGroupReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -262,6 +276,7 @@ public partial class V1api20230501storageRuleSpecActionsRouteConfigurationOverri
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.ResourceReference Reference to another resource.</summary>
 public partial class V1api20230501storageRuleSpecActionsRouteConfigurationOverrideParametersOriginGroupOverrideOriginGroup
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -273,6 +288,7 @@ public partial class V1api20230501storageRuleSpecActionsRouteConfigurationOverri
     public V1api20230501storageRuleSpecActionsRouteConfigurationOverrideParametersOriginGroupOverrideOriginGroupReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.OriginGroupOverride Defines the parameters for the origin group override configuration.</summary>
 public partial class V1api20230501storageRuleSpecActionsRouteConfigurationOverrideParametersOriginGroupOverride
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -288,6 +304,7 @@ public partial class V1api20230501storageRuleSpecActionsRouteConfigurationOverri
     public V1api20230501storageRuleSpecActionsRouteConfigurationOverrideParametersOriginGroupOverrideOriginGroup? OriginGroup { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.RouteConfigurationOverrideActionParameters Defines the parameters for the route configuration override action.</summary>
 public partial class V1api20230501storageRuleSpecActionsRouteConfigurationOverrideParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -307,6 +324,7 @@ public partial class V1api20230501storageRuleSpecActionsRouteConfigurationOverri
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleRouteConfigurationOverrideAction</summary>
 public partial class V1api20230501storageRuleSpecActionsRouteConfigurationOverride
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -322,6 +340,7 @@ public partial class V1api20230501storageRuleSpecActionsRouteConfigurationOverri
     public V1api20230501storageRuleSpecActionsRouteConfigurationOverrideParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.UrlRedirectActionParameters Defines the parameters for the url redirect action.</summary>
 public partial class V1api20230501storageRuleSpecActionsUrlRedirectParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -357,6 +376,7 @@ public partial class V1api20230501storageRuleSpecActionsUrlRedirectParameters
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.UrlRedirectAction</summary>
 public partial class V1api20230501storageRuleSpecActionsUrlRedirect
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -372,6 +392,7 @@ public partial class V1api20230501storageRuleSpecActionsUrlRedirect
     public V1api20230501storageRuleSpecActionsUrlRedirectParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.UrlRewriteActionParameters Defines the parameters for the url rewrite action.</summary>
 public partial class V1api20230501storageRuleSpecActionsUrlRewriteParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -395,6 +416,7 @@ public partial class V1api20230501storageRuleSpecActionsUrlRewriteParameters
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.UrlRewriteAction</summary>
 public partial class V1api20230501storageRuleSpecActionsUrlRewrite
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -410,6 +432,7 @@ public partial class V1api20230501storageRuleSpecActionsUrlRewrite
     public V1api20230501storageRuleSpecActionsUrlRewriteParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.UrlSigningParamIdentifier Defines how to identify a parameter for a specific purpose e.g. expires</summary>
 public partial class V1api20230501storageRuleSpecActionsUrlSigningParametersParameterNameOverride
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -425,6 +448,7 @@ public partial class V1api20230501storageRuleSpecActionsUrlSigningParametersPara
     public string? ParamName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.UrlSigningActionParameters Defines the parameters for the Url Signing action.</summary>
 public partial class V1api20230501storageRuleSpecActionsUrlSigningParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -444,6 +468,7 @@ public partial class V1api20230501storageRuleSpecActionsUrlSigningParameters
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.UrlSigningAction</summary>
 public partial class V1api20230501storageRuleSpecActionsUrlSigning
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -459,6 +484,7 @@ public partial class V1api20230501storageRuleSpecActionsUrlSigning
     public V1api20230501storageRuleSpecActionsUrlSigningParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleAction An action for the delivery rule.</summary>
 public partial class V1api20230501storageRuleSpecActions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -502,6 +528,7 @@ public partial class V1api20230501storageRuleSpecActions
     public V1api20230501storageRuleSpecActionsUrlSigning? UrlSigning { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a cdn.azure.com/RuleSet resource</summary>
 public partial class V1api20230501storageRuleSpecOwner
 {
     /// <summary></summary>
@@ -513,6 +540,7 @@ public partial class V1api20230501storageRuleSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.ClientPortMatchConditionParameters Defines the parameters for ClientPort match conditions</summary>
 public partial class V1api20230501storageRuleSpecRuleconditionsClientPortParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -540,6 +568,7 @@ public partial class V1api20230501storageRuleSpecRuleconditionsClientPortParamet
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleClientPortCondition</summary>
 public partial class V1api20230501storageRuleSpecRuleconditionsClientPort
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -555,6 +584,7 @@ public partial class V1api20230501storageRuleSpecRuleconditionsClientPort
     public V1api20230501storageRuleSpecRuleconditionsClientPortParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.CookiesMatchConditionParameters Defines the parameters for Cookies match conditions</summary>
 public partial class V1api20230501storageRuleSpecRuleconditionsCookiesParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -586,6 +616,7 @@ public partial class V1api20230501storageRuleSpecRuleconditionsCookiesParameters
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleCookiesCondition</summary>
 public partial class V1api20230501storageRuleSpecRuleconditionsCookies
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -601,6 +632,7 @@ public partial class V1api20230501storageRuleSpecRuleconditionsCookies
     public V1api20230501storageRuleSpecRuleconditionsCookiesParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.HostNameMatchConditionParameters Defines the parameters for HostName match conditions</summary>
 public partial class V1api20230501storageRuleSpecRuleconditionsHostNameParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -628,6 +660,7 @@ public partial class V1api20230501storageRuleSpecRuleconditionsHostNameParameter
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleHostNameCondition</summary>
 public partial class V1api20230501storageRuleSpecRuleconditionsHostName
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -643,6 +676,7 @@ public partial class V1api20230501storageRuleSpecRuleconditionsHostName
     public V1api20230501storageRuleSpecRuleconditionsHostNameParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.HttpVersionMatchConditionParameters Defines the parameters for HttpVersion match conditions</summary>
 public partial class V1api20230501storageRuleSpecRuleconditionsHttpVersionParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -670,6 +704,7 @@ public partial class V1api20230501storageRuleSpecRuleconditionsHttpVersionParame
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleHttpVersionCondition</summary>
 public partial class V1api20230501storageRuleSpecRuleconditionsHttpVersion
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -685,6 +720,7 @@ public partial class V1api20230501storageRuleSpecRuleconditionsHttpVersion
     public V1api20230501storageRuleSpecRuleconditionsHttpVersionParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.IsDeviceMatchConditionParameters Defines the parameters for IsDevice match conditions</summary>
 public partial class V1api20230501storageRuleSpecRuleconditionsIsDeviceParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -712,6 +748,7 @@ public partial class V1api20230501storageRuleSpecRuleconditionsIsDeviceParameter
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleIsDeviceCondition</summary>
 public partial class V1api20230501storageRuleSpecRuleconditionsIsDevice
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -727,6 +764,7 @@ public partial class V1api20230501storageRuleSpecRuleconditionsIsDevice
     public V1api20230501storageRuleSpecRuleconditionsIsDeviceParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.PostArgsMatchConditionParameters Defines the parameters for PostArgs match conditions</summary>
 public partial class V1api20230501storageRuleSpecRuleconditionsPostArgsParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -758,6 +796,7 @@ public partial class V1api20230501storageRuleSpecRuleconditionsPostArgsParameter
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRulePostArgsCondition</summary>
 public partial class V1api20230501storageRuleSpecRuleconditionsPostArgs
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -773,6 +812,7 @@ public partial class V1api20230501storageRuleSpecRuleconditionsPostArgs
     public V1api20230501storageRuleSpecRuleconditionsPostArgsParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.QueryStringMatchConditionParameters Defines the parameters for QueryString match conditions</summary>
 public partial class V1api20230501storageRuleSpecRuleconditionsQueryStringParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -800,6 +840,7 @@ public partial class V1api20230501storageRuleSpecRuleconditionsQueryStringParame
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleQueryStringCondition</summary>
 public partial class V1api20230501storageRuleSpecRuleconditionsQueryString
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -815,6 +856,7 @@ public partial class V1api20230501storageRuleSpecRuleconditionsQueryString
     public V1api20230501storageRuleSpecRuleconditionsQueryStringParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.RemoteAddressMatchConditionParameters Defines the parameters for RemoteAddress match conditions</summary>
 public partial class V1api20230501storageRuleSpecRuleconditionsRemoteAddressParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -842,6 +884,7 @@ public partial class V1api20230501storageRuleSpecRuleconditionsRemoteAddressPara
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleRemoteAddressCondition</summary>
 public partial class V1api20230501storageRuleSpecRuleconditionsRemoteAddress
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -857,6 +900,7 @@ public partial class V1api20230501storageRuleSpecRuleconditionsRemoteAddress
     public V1api20230501storageRuleSpecRuleconditionsRemoteAddressParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.RequestBodyMatchConditionParameters Defines the parameters for RequestBody match conditions</summary>
 public partial class V1api20230501storageRuleSpecRuleconditionsRequestBodyParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -884,6 +928,7 @@ public partial class V1api20230501storageRuleSpecRuleconditionsRequestBodyParame
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleRequestBodyCondition</summary>
 public partial class V1api20230501storageRuleSpecRuleconditionsRequestBody
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -899,6 +944,7 @@ public partial class V1api20230501storageRuleSpecRuleconditionsRequestBody
     public V1api20230501storageRuleSpecRuleconditionsRequestBodyParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.RequestHeaderMatchConditionParameters Defines the parameters for RequestHeader match conditions</summary>
 public partial class V1api20230501storageRuleSpecRuleconditionsRequestHeaderParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -930,6 +976,7 @@ public partial class V1api20230501storageRuleSpecRuleconditionsRequestHeaderPara
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleRequestHeaderCondition</summary>
 public partial class V1api20230501storageRuleSpecRuleconditionsRequestHeader
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -945,6 +992,7 @@ public partial class V1api20230501storageRuleSpecRuleconditionsRequestHeader
     public V1api20230501storageRuleSpecRuleconditionsRequestHeaderParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.RequestMethodMatchConditionParameters Defines the parameters for RequestMethod match conditions</summary>
 public partial class V1api20230501storageRuleSpecRuleconditionsRequestMethodParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -972,6 +1020,7 @@ public partial class V1api20230501storageRuleSpecRuleconditionsRequestMethodPara
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleRequestMethodCondition</summary>
 public partial class V1api20230501storageRuleSpecRuleconditionsRequestMethod
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -987,6 +1036,7 @@ public partial class V1api20230501storageRuleSpecRuleconditionsRequestMethod
     public V1api20230501storageRuleSpecRuleconditionsRequestMethodParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.RequestSchemeMatchConditionParameters Defines the parameters for RequestScheme match conditions</summary>
 public partial class V1api20230501storageRuleSpecRuleconditionsRequestSchemeParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1014,6 +1064,7 @@ public partial class V1api20230501storageRuleSpecRuleconditionsRequestSchemePara
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleRequestSchemeCondition</summary>
 public partial class V1api20230501storageRuleSpecRuleconditionsRequestScheme
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1029,6 +1080,7 @@ public partial class V1api20230501storageRuleSpecRuleconditionsRequestScheme
     public V1api20230501storageRuleSpecRuleconditionsRequestSchemeParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.RequestUriMatchConditionParameters Defines the parameters for RequestUri match conditions</summary>
 public partial class V1api20230501storageRuleSpecRuleconditionsRequestUriParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1056,6 +1108,7 @@ public partial class V1api20230501storageRuleSpecRuleconditionsRequestUriParamet
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleRequestUriCondition</summary>
 public partial class V1api20230501storageRuleSpecRuleconditionsRequestUri
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1071,6 +1124,7 @@ public partial class V1api20230501storageRuleSpecRuleconditionsRequestUri
     public V1api20230501storageRuleSpecRuleconditionsRequestUriParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.ServerPortMatchConditionParameters Defines the parameters for ServerPort match conditions</summary>
 public partial class V1api20230501storageRuleSpecRuleconditionsServerPortParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1098,6 +1152,7 @@ public partial class V1api20230501storageRuleSpecRuleconditionsServerPortParamet
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleServerPortCondition</summary>
 public partial class V1api20230501storageRuleSpecRuleconditionsServerPort
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1113,6 +1168,7 @@ public partial class V1api20230501storageRuleSpecRuleconditionsServerPort
     public V1api20230501storageRuleSpecRuleconditionsServerPortParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.SocketAddrMatchConditionParameters Defines the parameters for SocketAddress match conditions</summary>
 public partial class V1api20230501storageRuleSpecRuleconditionsSocketAddrParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1140,6 +1196,7 @@ public partial class V1api20230501storageRuleSpecRuleconditionsSocketAddrParamet
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleSocketAddrCondition</summary>
 public partial class V1api20230501storageRuleSpecRuleconditionsSocketAddr
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1155,6 +1212,7 @@ public partial class V1api20230501storageRuleSpecRuleconditionsSocketAddr
     public V1api20230501storageRuleSpecRuleconditionsSocketAddrParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.SslProtocolMatchConditionParameters Defines the parameters for SslProtocol match conditions</summary>
 public partial class V1api20230501storageRuleSpecRuleconditionsSslProtocolParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1182,6 +1240,7 @@ public partial class V1api20230501storageRuleSpecRuleconditionsSslProtocolParame
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleSslProtocolCondition</summary>
 public partial class V1api20230501storageRuleSpecRuleconditionsSslProtocol
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1197,6 +1256,7 @@ public partial class V1api20230501storageRuleSpecRuleconditionsSslProtocol
     public V1api20230501storageRuleSpecRuleconditionsSslProtocolParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.UrlFileExtensionMatchConditionParameters Defines the parameters for UrlFileExtension match conditions</summary>
 public partial class V1api20230501storageRuleSpecRuleconditionsUrlFileExtensionParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1224,6 +1284,7 @@ public partial class V1api20230501storageRuleSpecRuleconditionsUrlFileExtensionP
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleUrlFileExtensionCondition</summary>
 public partial class V1api20230501storageRuleSpecRuleconditionsUrlFileExtension
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1239,6 +1300,7 @@ public partial class V1api20230501storageRuleSpecRuleconditionsUrlFileExtension
     public V1api20230501storageRuleSpecRuleconditionsUrlFileExtensionParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.UrlFileNameMatchConditionParameters Defines the parameters for UrlFilename match conditions</summary>
 public partial class V1api20230501storageRuleSpecRuleconditionsUrlFileNameParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1266,6 +1328,7 @@ public partial class V1api20230501storageRuleSpecRuleconditionsUrlFileNameParame
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleUrlFileNameCondition</summary>
 public partial class V1api20230501storageRuleSpecRuleconditionsUrlFileName
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1281,6 +1344,7 @@ public partial class V1api20230501storageRuleSpecRuleconditionsUrlFileName
     public V1api20230501storageRuleSpecRuleconditionsUrlFileNameParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.UrlPathMatchConditionParameters Defines the parameters for UrlPath match conditions</summary>
 public partial class V1api20230501storageRuleSpecRuleconditionsUrlPathParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1308,6 +1372,7 @@ public partial class V1api20230501storageRuleSpecRuleconditionsUrlPathParameters
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleUrlPathCondition</summary>
 public partial class V1api20230501storageRuleSpecRuleconditionsUrlPath
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1323,6 +1388,7 @@ public partial class V1api20230501storageRuleSpecRuleconditionsUrlPath
     public V1api20230501storageRuleSpecRuleconditionsUrlPathParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleCondition A condition for the delivery rule.</summary>
 public partial class V1api20230501storageRuleSpecRuleconditions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1406,6 +1472,7 @@ public partial class V1api20230501storageRuleSpecRuleconditions
     public V1api20230501storageRuleSpecRuleconditionsUrlPath? UrlPath { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.Profiles_RuleSets_Rule_Spec</summary>
 public partial class V1api20230501storageRuleSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1441,6 +1508,7 @@ public partial class V1api20230501storageRuleSpec
     public IList<V1api20230501storageRuleSpecRuleconditions>? Ruleconditions { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.CacheExpirationActionParameters_STATUS Defines the parameters for the cache expiration action.</summary>
 public partial class V1api20230501storageRuleStatusActionsCacheExpirationParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1464,6 +1532,7 @@ public partial class V1api20230501storageRuleStatusActionsCacheExpirationParamet
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleCacheExpirationAction_STATUS</summary>
 public partial class V1api20230501storageRuleStatusActionsCacheExpiration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1479,6 +1548,7 @@ public partial class V1api20230501storageRuleStatusActionsCacheExpiration
     public V1api20230501storageRuleStatusActionsCacheExpirationParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.CacheKeyQueryStringActionParameters_STATUS Defines the parameters for the cache-key query string action.</summary>
 public partial class V1api20230501storageRuleStatusActionsCacheKeyQueryStringParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1498,6 +1568,7 @@ public partial class V1api20230501storageRuleStatusActionsCacheKeyQueryStringPar
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleCacheKeyQueryStringAction_STATUS</summary>
 public partial class V1api20230501storageRuleStatusActionsCacheKeyQueryString
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1513,6 +1584,7 @@ public partial class V1api20230501storageRuleStatusActionsCacheKeyQueryString
     public V1api20230501storageRuleStatusActionsCacheKeyQueryStringParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.HeaderActionParameters_STATUS Defines the parameters for the request header action.</summary>
 public partial class V1api20230501storageRuleStatusActionsModifyRequestHeaderParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1536,6 +1608,7 @@ public partial class V1api20230501storageRuleStatusActionsModifyRequestHeaderPar
     public string? Value { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleRequestHeaderAction_STATUS</summary>
 public partial class V1api20230501storageRuleStatusActionsModifyRequestHeader
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1551,6 +1624,7 @@ public partial class V1api20230501storageRuleStatusActionsModifyRequestHeader
     public V1api20230501storageRuleStatusActionsModifyRequestHeaderParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.HeaderActionParameters_STATUS Defines the parameters for the request header action.</summary>
 public partial class V1api20230501storageRuleStatusActionsModifyResponseHeaderParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1574,6 +1648,7 @@ public partial class V1api20230501storageRuleStatusActionsModifyResponseHeaderPa
     public string? Value { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleResponseHeaderAction_STATUS</summary>
 public partial class V1api20230501storageRuleStatusActionsModifyResponseHeader
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1589,6 +1664,7 @@ public partial class V1api20230501storageRuleStatusActionsModifyResponseHeader
     public V1api20230501storageRuleStatusActionsModifyResponseHeaderParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.ResourceReference_STATUS Reference to another resource.</summary>
 public partial class V1api20230501storageRuleStatusActionsOriginGroupOverrideParametersOriginGroup
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1600,6 +1676,7 @@ public partial class V1api20230501storageRuleStatusActionsOriginGroupOverridePar
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.OriginGroupOverrideActionParameters_STATUS Defines the parameters for the origin group override action.</summary>
 public partial class V1api20230501storageRuleStatusActionsOriginGroupOverrideParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1615,6 +1692,7 @@ public partial class V1api20230501storageRuleStatusActionsOriginGroupOverridePar
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.OriginGroupOverrideAction_STATUS</summary>
 public partial class V1api20230501storageRuleStatusActionsOriginGroupOverride
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1630,6 +1708,7 @@ public partial class V1api20230501storageRuleStatusActionsOriginGroupOverride
     public V1api20230501storageRuleStatusActionsOriginGroupOverrideParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.CacheConfiguration_STATUS Caching settings for a caching-type route. To disable caching, do not provide a cacheConfiguration object.</summary>
 public partial class V1api20230501storageRuleStatusActionsRouteConfigurationOverrideParametersCacheConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1657,6 +1736,7 @@ public partial class V1api20230501storageRuleStatusActionsRouteConfigurationOver
     public string? QueryStringCachingBehavior { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.ResourceReference_STATUS Reference to another resource.</summary>
 public partial class V1api20230501storageRuleStatusActionsRouteConfigurationOverrideParametersOriginGroupOverrideOriginGroup
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1668,6 +1748,7 @@ public partial class V1api20230501storageRuleStatusActionsRouteConfigurationOver
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.OriginGroupOverride_STATUS Defines the parameters for the origin group override configuration.</summary>
 public partial class V1api20230501storageRuleStatusActionsRouteConfigurationOverrideParametersOriginGroupOverride
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1683,6 +1764,7 @@ public partial class V1api20230501storageRuleStatusActionsRouteConfigurationOver
     public V1api20230501storageRuleStatusActionsRouteConfigurationOverrideParametersOriginGroupOverrideOriginGroup? OriginGroup { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.RouteConfigurationOverrideActionParameters_STATUS Defines the parameters for the route configuration override action.</summary>
 public partial class V1api20230501storageRuleStatusActionsRouteConfigurationOverrideParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1702,6 +1784,7 @@ public partial class V1api20230501storageRuleStatusActionsRouteConfigurationOver
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleRouteConfigurationOverrideAction_STATUS</summary>
 public partial class V1api20230501storageRuleStatusActionsRouteConfigurationOverride
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1717,6 +1800,7 @@ public partial class V1api20230501storageRuleStatusActionsRouteConfigurationOver
     public V1api20230501storageRuleStatusActionsRouteConfigurationOverrideParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.UrlRedirectActionParameters_STATUS Defines the parameters for the url redirect action.</summary>
 public partial class V1api20230501storageRuleStatusActionsUrlRedirectParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1752,6 +1836,7 @@ public partial class V1api20230501storageRuleStatusActionsUrlRedirectParameters
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.UrlRedirectAction_STATUS</summary>
 public partial class V1api20230501storageRuleStatusActionsUrlRedirect
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1767,6 +1852,7 @@ public partial class V1api20230501storageRuleStatusActionsUrlRedirect
     public V1api20230501storageRuleStatusActionsUrlRedirectParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.UrlRewriteActionParameters_STATUS Defines the parameters for the url rewrite action.</summary>
 public partial class V1api20230501storageRuleStatusActionsUrlRewriteParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1790,6 +1876,7 @@ public partial class V1api20230501storageRuleStatusActionsUrlRewriteParameters
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.UrlRewriteAction_STATUS</summary>
 public partial class V1api20230501storageRuleStatusActionsUrlRewrite
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1805,6 +1892,7 @@ public partial class V1api20230501storageRuleStatusActionsUrlRewrite
     public V1api20230501storageRuleStatusActionsUrlRewriteParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.UrlSigningParamIdentifier_STATUS Defines how to identify a parameter for a specific purpose e.g. expires</summary>
 public partial class V1api20230501storageRuleStatusActionsUrlSigningParametersParameterNameOverride
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1820,6 +1908,7 @@ public partial class V1api20230501storageRuleStatusActionsUrlSigningParametersPa
     public string? ParamName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.UrlSigningActionParameters_STATUS Defines the parameters for the Url Signing action.</summary>
 public partial class V1api20230501storageRuleStatusActionsUrlSigningParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1839,6 +1928,7 @@ public partial class V1api20230501storageRuleStatusActionsUrlSigningParameters
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.UrlSigningAction_STATUS</summary>
 public partial class V1api20230501storageRuleStatusActionsUrlSigning
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1854,6 +1944,7 @@ public partial class V1api20230501storageRuleStatusActionsUrlSigning
     public V1api20230501storageRuleStatusActionsUrlSigningParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleAction_STATUS An action for the delivery rule.</summary>
 public partial class V1api20230501storageRuleStatusActions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1897,6 +1988,7 @@ public partial class V1api20230501storageRuleStatusActions
     public V1api20230501storageRuleStatusActionsUrlSigning? UrlSigning { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20230501storageRuleStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -1928,6 +2020,7 @@ public partial class V1api20230501storageRuleStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.ClientPortMatchConditionParameters_STATUS Defines the parameters for ClientPort match conditions</summary>
 public partial class V1api20230501storageRuleStatusRuleconditionsClientPortParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1955,6 +2048,7 @@ public partial class V1api20230501storageRuleStatusRuleconditionsClientPortParam
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleClientPortCondition_STATUS</summary>
 public partial class V1api20230501storageRuleStatusRuleconditionsClientPort
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1970,6 +2064,7 @@ public partial class V1api20230501storageRuleStatusRuleconditionsClientPort
     public V1api20230501storageRuleStatusRuleconditionsClientPortParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.CookiesMatchConditionParameters_STATUS Defines the parameters for Cookies match conditions</summary>
 public partial class V1api20230501storageRuleStatusRuleconditionsCookiesParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2001,6 +2096,7 @@ public partial class V1api20230501storageRuleStatusRuleconditionsCookiesParamete
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleCookiesCondition_STATUS</summary>
 public partial class V1api20230501storageRuleStatusRuleconditionsCookies
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2016,6 +2112,7 @@ public partial class V1api20230501storageRuleStatusRuleconditionsCookies
     public V1api20230501storageRuleStatusRuleconditionsCookiesParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.HostNameMatchConditionParameters_STATUS Defines the parameters for HostName match conditions</summary>
 public partial class V1api20230501storageRuleStatusRuleconditionsHostNameParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2043,6 +2140,7 @@ public partial class V1api20230501storageRuleStatusRuleconditionsHostNameParamet
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleHostNameCondition_STATUS</summary>
 public partial class V1api20230501storageRuleStatusRuleconditionsHostName
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2058,6 +2156,7 @@ public partial class V1api20230501storageRuleStatusRuleconditionsHostName
     public V1api20230501storageRuleStatusRuleconditionsHostNameParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.HttpVersionMatchConditionParameters_STATUS Defines the parameters for HttpVersion match conditions</summary>
 public partial class V1api20230501storageRuleStatusRuleconditionsHttpVersionParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2085,6 +2184,7 @@ public partial class V1api20230501storageRuleStatusRuleconditionsHttpVersionPara
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleHttpVersionCondition_STATUS</summary>
 public partial class V1api20230501storageRuleStatusRuleconditionsHttpVersion
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2100,6 +2200,7 @@ public partial class V1api20230501storageRuleStatusRuleconditionsHttpVersion
     public V1api20230501storageRuleStatusRuleconditionsHttpVersionParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.IsDeviceMatchConditionParameters_STATUS Defines the parameters for IsDevice match conditions</summary>
 public partial class V1api20230501storageRuleStatusRuleconditionsIsDeviceParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2127,6 +2228,7 @@ public partial class V1api20230501storageRuleStatusRuleconditionsIsDeviceParamet
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleIsDeviceCondition_STATUS</summary>
 public partial class V1api20230501storageRuleStatusRuleconditionsIsDevice
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2142,6 +2244,7 @@ public partial class V1api20230501storageRuleStatusRuleconditionsIsDevice
     public V1api20230501storageRuleStatusRuleconditionsIsDeviceParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.PostArgsMatchConditionParameters_STATUS Defines the parameters for PostArgs match conditions</summary>
 public partial class V1api20230501storageRuleStatusRuleconditionsPostArgsParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2173,6 +2276,7 @@ public partial class V1api20230501storageRuleStatusRuleconditionsPostArgsParamet
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRulePostArgsCondition_STATUS</summary>
 public partial class V1api20230501storageRuleStatusRuleconditionsPostArgs
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2188,6 +2292,7 @@ public partial class V1api20230501storageRuleStatusRuleconditionsPostArgs
     public V1api20230501storageRuleStatusRuleconditionsPostArgsParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.QueryStringMatchConditionParameters_STATUS Defines the parameters for QueryString match conditions</summary>
 public partial class V1api20230501storageRuleStatusRuleconditionsQueryStringParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2215,6 +2320,7 @@ public partial class V1api20230501storageRuleStatusRuleconditionsQueryStringPara
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleQueryStringCondition_STATUS</summary>
 public partial class V1api20230501storageRuleStatusRuleconditionsQueryString
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2230,6 +2336,7 @@ public partial class V1api20230501storageRuleStatusRuleconditionsQueryString
     public V1api20230501storageRuleStatusRuleconditionsQueryStringParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.RemoteAddressMatchConditionParameters_STATUS Defines the parameters for RemoteAddress match conditions</summary>
 public partial class V1api20230501storageRuleStatusRuleconditionsRemoteAddressParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2257,6 +2364,7 @@ public partial class V1api20230501storageRuleStatusRuleconditionsRemoteAddressPa
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleRemoteAddressCondition_STATUS</summary>
 public partial class V1api20230501storageRuleStatusRuleconditionsRemoteAddress
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2272,6 +2380,7 @@ public partial class V1api20230501storageRuleStatusRuleconditionsRemoteAddress
     public V1api20230501storageRuleStatusRuleconditionsRemoteAddressParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.RequestBodyMatchConditionParameters_STATUS Defines the parameters for RequestBody match conditions</summary>
 public partial class V1api20230501storageRuleStatusRuleconditionsRequestBodyParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2299,6 +2408,7 @@ public partial class V1api20230501storageRuleStatusRuleconditionsRequestBodyPara
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleRequestBodyCondition_STATUS</summary>
 public partial class V1api20230501storageRuleStatusRuleconditionsRequestBody
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2314,6 +2424,7 @@ public partial class V1api20230501storageRuleStatusRuleconditionsRequestBody
     public V1api20230501storageRuleStatusRuleconditionsRequestBodyParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.RequestHeaderMatchConditionParameters_STATUS Defines the parameters for RequestHeader match conditions</summary>
 public partial class V1api20230501storageRuleStatusRuleconditionsRequestHeaderParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2345,6 +2456,7 @@ public partial class V1api20230501storageRuleStatusRuleconditionsRequestHeaderPa
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleRequestHeaderCondition_STATUS</summary>
 public partial class V1api20230501storageRuleStatusRuleconditionsRequestHeader
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2360,6 +2472,7 @@ public partial class V1api20230501storageRuleStatusRuleconditionsRequestHeader
     public V1api20230501storageRuleStatusRuleconditionsRequestHeaderParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.RequestMethodMatchConditionParameters_STATUS Defines the parameters for RequestMethod match conditions</summary>
 public partial class V1api20230501storageRuleStatusRuleconditionsRequestMethodParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2387,6 +2500,7 @@ public partial class V1api20230501storageRuleStatusRuleconditionsRequestMethodPa
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleRequestMethodCondition_STATUS</summary>
 public partial class V1api20230501storageRuleStatusRuleconditionsRequestMethod
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2402,6 +2516,7 @@ public partial class V1api20230501storageRuleStatusRuleconditionsRequestMethod
     public V1api20230501storageRuleStatusRuleconditionsRequestMethodParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.RequestSchemeMatchConditionParameters_STATUS Defines the parameters for RequestScheme match conditions</summary>
 public partial class V1api20230501storageRuleStatusRuleconditionsRequestSchemeParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2429,6 +2544,7 @@ public partial class V1api20230501storageRuleStatusRuleconditionsRequestSchemePa
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleRequestSchemeCondition_STATUS</summary>
 public partial class V1api20230501storageRuleStatusRuleconditionsRequestScheme
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2444,6 +2560,7 @@ public partial class V1api20230501storageRuleStatusRuleconditionsRequestScheme
     public V1api20230501storageRuleStatusRuleconditionsRequestSchemeParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.RequestUriMatchConditionParameters_STATUS Defines the parameters for RequestUri match conditions</summary>
 public partial class V1api20230501storageRuleStatusRuleconditionsRequestUriParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2471,6 +2588,7 @@ public partial class V1api20230501storageRuleStatusRuleconditionsRequestUriParam
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleRequestUriCondition_STATUS</summary>
 public partial class V1api20230501storageRuleStatusRuleconditionsRequestUri
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2486,6 +2604,7 @@ public partial class V1api20230501storageRuleStatusRuleconditionsRequestUri
     public V1api20230501storageRuleStatusRuleconditionsRequestUriParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.ServerPortMatchConditionParameters_STATUS Defines the parameters for ServerPort match conditions</summary>
 public partial class V1api20230501storageRuleStatusRuleconditionsServerPortParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2513,6 +2632,7 @@ public partial class V1api20230501storageRuleStatusRuleconditionsServerPortParam
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleServerPortCondition_STATUS</summary>
 public partial class V1api20230501storageRuleStatusRuleconditionsServerPort
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2528,6 +2648,7 @@ public partial class V1api20230501storageRuleStatusRuleconditionsServerPort
     public V1api20230501storageRuleStatusRuleconditionsServerPortParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.SocketAddrMatchConditionParameters_STATUS Defines the parameters for SocketAddress match conditions</summary>
 public partial class V1api20230501storageRuleStatusRuleconditionsSocketAddrParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2555,6 +2676,7 @@ public partial class V1api20230501storageRuleStatusRuleconditionsSocketAddrParam
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleSocketAddrCondition_STATUS</summary>
 public partial class V1api20230501storageRuleStatusRuleconditionsSocketAddr
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2570,6 +2692,7 @@ public partial class V1api20230501storageRuleStatusRuleconditionsSocketAddr
     public V1api20230501storageRuleStatusRuleconditionsSocketAddrParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.SslProtocolMatchConditionParameters_STATUS Defines the parameters for SslProtocol match conditions</summary>
 public partial class V1api20230501storageRuleStatusRuleconditionsSslProtocolParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2597,6 +2720,7 @@ public partial class V1api20230501storageRuleStatusRuleconditionsSslProtocolPara
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleSslProtocolCondition_STATUS</summary>
 public partial class V1api20230501storageRuleStatusRuleconditionsSslProtocol
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2612,6 +2736,7 @@ public partial class V1api20230501storageRuleStatusRuleconditionsSslProtocol
     public V1api20230501storageRuleStatusRuleconditionsSslProtocolParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.UrlFileExtensionMatchConditionParameters_STATUS Defines the parameters for UrlFileExtension match conditions</summary>
 public partial class V1api20230501storageRuleStatusRuleconditionsUrlFileExtensionParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2639,6 +2764,7 @@ public partial class V1api20230501storageRuleStatusRuleconditionsUrlFileExtensio
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleUrlFileExtensionCondition_STATUS</summary>
 public partial class V1api20230501storageRuleStatusRuleconditionsUrlFileExtension
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2654,6 +2780,7 @@ public partial class V1api20230501storageRuleStatusRuleconditionsUrlFileExtensio
     public V1api20230501storageRuleStatusRuleconditionsUrlFileExtensionParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.UrlFileNameMatchConditionParameters_STATUS Defines the parameters for UrlFilename match conditions</summary>
 public partial class V1api20230501storageRuleStatusRuleconditionsUrlFileNameParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2681,6 +2808,7 @@ public partial class V1api20230501storageRuleStatusRuleconditionsUrlFileNamePara
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleUrlFileNameCondition_STATUS</summary>
 public partial class V1api20230501storageRuleStatusRuleconditionsUrlFileName
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2696,6 +2824,7 @@ public partial class V1api20230501storageRuleStatusRuleconditionsUrlFileName
     public V1api20230501storageRuleStatusRuleconditionsUrlFileNameParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.UrlPathMatchConditionParameters_STATUS Defines the parameters for UrlPath match conditions</summary>
 public partial class V1api20230501storageRuleStatusRuleconditionsUrlPathParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2723,6 +2852,7 @@ public partial class V1api20230501storageRuleStatusRuleconditionsUrlPathParamete
     public string? TypeName { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleUrlPathCondition_STATUS</summary>
 public partial class V1api20230501storageRuleStatusRuleconditionsUrlPath
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2738,6 +2868,7 @@ public partial class V1api20230501storageRuleStatusRuleconditionsUrlPath
     public V1api20230501storageRuleStatusRuleconditionsUrlPathParameters? Parameters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.DeliveryRuleCondition_STATUS A condition for the delivery rule.</summary>
 public partial class V1api20230501storageRuleStatusRuleconditions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2821,6 +2952,7 @@ public partial class V1api20230501storageRuleStatusRuleconditions
     public V1api20230501storageRuleStatusRuleconditionsUrlPath? UrlPath { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.SystemData_STATUS Read only system data</summary>
 public partial class V1api20230501storageRuleStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2852,6 +2984,7 @@ public partial class V1api20230501storageRuleStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.Profiles_RuleSets_Rule_STATUS</summary>
 public partial class V1api20230501storageRuleStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -2908,6 +3041,7 @@ public partial class V1api20230501storageRuleStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20230501.Rule Generator information: - Generated from: /cdn/resource-manager/Microsoft.Cdn/stable/2023-05-01/afdx.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/ruleSets/{ruleSetName}/rules/{ruleName}</summary>
 public partial class V1api20230501storageRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230501storageRuleSpec>, IStatus<V1api20230501storageRuleStatus>
 {
     public const string KubeApiVersion = "v1api20230501storage";

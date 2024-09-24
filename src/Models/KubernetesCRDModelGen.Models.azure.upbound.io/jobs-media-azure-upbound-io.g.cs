@@ -38,6 +38,7 @@ public enum V1beta1JobSpecForProviderInputAssetNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecForProviderInputAssetNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1JobSpecForProviderInputAssetNameRefPolicy
     public V1beta1JobSpecForProviderInputAssetNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Asset in media to populate name.</summary>
 public partial class V1beta1JobSpecForProviderInputAssetNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1JobSpecForProviderInputAssetNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobSpecForProviderInputAssetNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1JobSpecForProviderInputAssetNameSelectorPolicy
     public V1beta1JobSpecForProviderInputAssetNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Asset in media to populate name.</summary>
 public partial class V1beta1JobSpecForProviderInputAssetNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1JobSpecForProviderInputAssetNameSelector
     public V1beta1JobSpecForProviderInputAssetNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderInputAsset
 {
     /// <summary>A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'. Changing this forces a new resource to be created.</summary>
@@ -149,6 +154,7 @@ public enum V1beta1JobSpecForProviderMediaServicesAccountNameRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecForProviderMediaServicesAccountNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -162,6 +168,7 @@ public partial class V1beta1JobSpecForProviderMediaServicesAccountNameRefPolicy
     public V1beta1JobSpecForProviderMediaServicesAccountNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ServicesAccount in media to populate mediaServicesAccountName.</summary>
 public partial class V1beta1JobSpecForProviderMediaServicesAccountNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -193,6 +200,7 @@ public enum V1beta1JobSpecForProviderMediaServicesAccountNameSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobSpecForProviderMediaServicesAccountNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -206,6 +214,7 @@ public partial class V1beta1JobSpecForProviderMediaServicesAccountNameSelectorPo
     public V1beta1JobSpecForProviderMediaServicesAccountNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ServicesAccount in media to populate mediaServicesAccountName.</summary>
 public partial class V1beta1JobSpecForProviderMediaServicesAccountNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -241,6 +250,7 @@ public enum V1beta1JobSpecForProviderOutputAssetNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecForProviderOutputAssetNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -254,6 +264,7 @@ public partial class V1beta1JobSpecForProviderOutputAssetNameRefPolicy
     public V1beta1JobSpecForProviderOutputAssetNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Asset in media to populate name.</summary>
 public partial class V1beta1JobSpecForProviderOutputAssetNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -285,6 +296,7 @@ public enum V1beta1JobSpecForProviderOutputAssetNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobSpecForProviderOutputAssetNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -298,6 +310,7 @@ public partial class V1beta1JobSpecForProviderOutputAssetNameSelectorPolicy
     public V1beta1JobSpecForProviderOutputAssetNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Asset in media to populate name.</summary>
 public partial class V1beta1JobSpecForProviderOutputAssetNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -313,6 +326,7 @@ public partial class V1beta1JobSpecForProviderOutputAssetNameSelector
     public V1beta1JobSpecForProviderOutputAssetNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderOutputAsset
 {
     /// <summary>A label that is assigned to a JobOutput in order to help uniquely identify it. This is useful when your Transform has more than one TransformOutput, whereby your Job has more than one JobOutput. In such cases, when you submit the Job, you will add two or more JobOutputs, in the same order as TransformOutputs in the Transform. Subsequently, when you retrieve the Job, either through events or on a GET request, you can use the label to easily identify the JobOutput. If a label is not provided, a default value of '{presetName}_{outputIndex}' will be used, where the preset name is the name of the preset in the corresponding TransformOutput and the output index is the relative index of the this JobOutput within the Job. Note that this index is the same as the relative index of the corresponding TransformOutput within its Transform. Changing this forces a new resource to be created.</summary>
@@ -352,6 +366,7 @@ public enum V1beta1JobSpecForProviderResourceGroupNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -365,6 +380,7 @@ public partial class V1beta1JobSpecForProviderResourceGroupNameRefPolicy
     public V1beta1JobSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1JobSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -396,6 +412,7 @@ public enum V1beta1JobSpecForProviderResourceGroupNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -409,6 +426,7 @@ public partial class V1beta1JobSpecForProviderResourceGroupNameSelectorPolicy
     public V1beta1JobSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1JobSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -444,6 +462,7 @@ public enum V1beta1JobSpecForProviderTransformNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecForProviderTransformNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -457,6 +476,7 @@ public partial class V1beta1JobSpecForProviderTransformNameRefPolicy
     public V1beta1JobSpecForProviderTransformNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Transform in media to populate transformName.</summary>
 public partial class V1beta1JobSpecForProviderTransformNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -488,6 +508,7 @@ public enum V1beta1JobSpecForProviderTransformNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobSpecForProviderTransformNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -501,6 +522,7 @@ public partial class V1beta1JobSpecForProviderTransformNameSelectorPolicy
     public V1beta1JobSpecForProviderTransformNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Transform in media to populate transformName.</summary>
 public partial class V1beta1JobSpecForProviderTransformNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -516,6 +538,7 @@ public partial class V1beta1JobSpecForProviderTransformNameSelector
     public V1beta1JobSpecForProviderTransformNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProvider
 {
     /// <summary>Optional customer supplied description of the Job.</summary>
@@ -591,6 +614,7 @@ public enum V1beta1JobSpecInitProviderInputAssetNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecInitProviderInputAssetNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -604,6 +628,7 @@ public partial class V1beta1JobSpecInitProviderInputAssetNameRefPolicy
     public V1beta1JobSpecInitProviderInputAssetNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Asset in media to populate name.</summary>
 public partial class V1beta1JobSpecInitProviderInputAssetNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -635,6 +660,7 @@ public enum V1beta1JobSpecInitProviderInputAssetNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobSpecInitProviderInputAssetNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -648,6 +674,7 @@ public partial class V1beta1JobSpecInitProviderInputAssetNameSelectorPolicy
     public V1beta1JobSpecInitProviderInputAssetNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Asset in media to populate name.</summary>
 public partial class V1beta1JobSpecInitProviderInputAssetNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -663,6 +690,7 @@ public partial class V1beta1JobSpecInitProviderInputAssetNameSelector
     public V1beta1JobSpecInitProviderInputAssetNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderInputAsset
 {
     /// <summary>A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'. Changing this forces a new resource to be created.</summary>
@@ -702,6 +730,7 @@ public enum V1beta1JobSpecInitProviderOutputAssetNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecInitProviderOutputAssetNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -715,6 +744,7 @@ public partial class V1beta1JobSpecInitProviderOutputAssetNameRefPolicy
     public V1beta1JobSpecInitProviderOutputAssetNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Asset in media to populate name.</summary>
 public partial class V1beta1JobSpecInitProviderOutputAssetNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -746,6 +776,7 @@ public enum V1beta1JobSpecInitProviderOutputAssetNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobSpecInitProviderOutputAssetNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -759,6 +790,7 @@ public partial class V1beta1JobSpecInitProviderOutputAssetNameSelectorPolicy
     public V1beta1JobSpecInitProviderOutputAssetNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Asset in media to populate name.</summary>
 public partial class V1beta1JobSpecInitProviderOutputAssetNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -774,6 +806,7 @@ public partial class V1beta1JobSpecInitProviderOutputAssetNameSelector
     public V1beta1JobSpecInitProviderOutputAssetNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderOutputAsset
 {
     /// <summary>A label that is assigned to a JobOutput in order to help uniquely identify it. This is useful when your Transform has more than one TransformOutput, whereby your Job has more than one JobOutput. In such cases, when you submit the Job, you will add two or more JobOutputs, in the same order as TransformOutputs in the Transform. Subsequently, when you retrieve the Job, either through events or on a GET request, you can use the label to easily identify the JobOutput. If a label is not provided, a default value of '{presetName}_{outputIndex}' will be used, where the preset name is the name of the preset in the corresponding TransformOutput and the output index is the relative index of the this JobOutput within the Job. Note that this index is the same as the relative index of the corresponding TransformOutput within its Transform. Changing this forces a new resource to be created.</summary>
@@ -793,6 +826,7 @@ public partial class V1beta1JobSpecInitProviderOutputAsset
     public V1beta1JobSpecInitProviderOutputAssetNameSelector? NameSelector { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1JobSpecInitProvider
 {
     /// <summary>Optional customer supplied description of the Job.</summary>
@@ -854,6 +888,7 @@ public enum V1beta1JobSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -867,6 +902,7 @@ public partial class V1beta1JobSpecProviderConfigRefPolicy
     public V1beta1JobSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1JobSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -898,6 +934,7 @@ public enum V1beta1JobSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -911,6 +948,7 @@ public partial class V1beta1JobSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1JobSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1JobSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -922,6 +960,7 @@ public partial class V1beta1JobSpecPublishConnectionDetailsToConfigRef
     public V1beta1JobSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1JobSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -937,6 +976,7 @@ public partial class V1beta1JobSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1JobSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -952,6 +992,7 @@ public partial class V1beta1JobSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1JobSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -963,6 +1004,7 @@ public partial class V1beta1JobSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>JobSpec defines the desired state of Job</summary>
 public partial class V1beta1JobSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -995,6 +1037,7 @@ public partial class V1beta1JobSpec
     public V1beta1JobSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderInputAsset
 {
     /// <summary>A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'. Changing this forces a new resource to be created.</summary>
@@ -1006,6 +1049,7 @@ public partial class V1beta1JobStatusAtProviderInputAsset
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderOutputAsset
 {
     /// <summary>A label that is assigned to a JobOutput in order to help uniquely identify it. This is useful when your Transform has more than one TransformOutput, whereby your Job has more than one JobOutput. In such cases, when you submit the Job, you will add two or more JobOutputs, in the same order as TransformOutputs in the Transform. Subsequently, when you retrieve the Job, either through events or on a GET request, you can use the label to easily identify the JobOutput. If a label is not provided, a default value of '{presetName}_{outputIndex}' will be used, where the preset name is the name of the preset in the corresponding TransformOutput and the output index is the relative index of the this JobOutput within the Job. Note that this index is the same as the relative index of the corresponding TransformOutput within its Transform. Changing this forces a new resource to be created.</summary>
@@ -1017,6 +1061,7 @@ public partial class V1beta1JobStatusAtProviderOutputAsset
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProvider
 {
     /// <summary>Optional customer supplied description of the Job.</summary>
@@ -1052,6 +1097,7 @@ public partial class V1beta1JobStatusAtProvider
     public string? TransformName { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1JobStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1079,6 +1125,7 @@ public partial class V1beta1JobStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>JobStatus defines the observed state of Job.</summary>
 public partial class V1beta1JobStatus
 {
     /// <summary></summary>
@@ -1095,6 +1142,7 @@ public partial class V1beta1JobStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Job is the Schema for the Jobs API. Manages a Media Job.</summary>
 public partial class V1beta1Job : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1JobSpec>, IStatus<V1beta1JobStatus>
 {
     public const string KubeApiVersion = "v1beta1";

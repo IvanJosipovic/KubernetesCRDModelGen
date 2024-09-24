@@ -38,6 +38,7 @@ public enum V1beta1RegistrySpecForProviderEncryptionIdentityClientIdRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegistrySpecForProviderEncryptionIdentityClientIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1RegistrySpecForProviderEncryptionIdentityClientIdRef
     public V1beta1RegistrySpecForProviderEncryptionIdentityClientIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserAssignedIdentity in managedidentity to populate identityClientId.</summary>
 public partial class V1beta1RegistrySpecForProviderEncryptionIdentityClientIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1RegistrySpecForProviderEncryptionIdentityClientIdSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegistrySpecForProviderEncryptionIdentityClientIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1RegistrySpecForProviderEncryptionIdentityClientIdSel
     public V1beta1RegistrySpecForProviderEncryptionIdentityClientIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserAssignedIdentity in managedidentity to populate identityClientId.</summary>
 public partial class V1beta1RegistrySpecForProviderEncryptionIdentityClientIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1RegistrySpecForProviderEncryptionIdentityClientIdSel
     public V1beta1RegistrySpecForProviderEncryptionIdentityClientIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegistrySpecForProviderEncryption
 {
     /// <summary>Boolean value that indicates whether encryption is enabled.</summary>
@@ -133,6 +138,7 @@ public partial class V1beta1RegistrySpecForProviderEncryption
     public string? KeyVaultKeyId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegistrySpecForProviderGeoreplications
 {
     /// <summary>A location where the container registry should be geo-replicated.</summary>
@@ -152,6 +158,7 @@ public partial class V1beta1RegistrySpecForProviderGeoreplications
     public bool? ZoneRedundancyEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegistrySpecForProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Container Registry.</summary>
@@ -163,6 +170,7 @@ public partial class V1beta1RegistrySpecForProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegistrySpecForProviderNetworkRuleSetIpRule
 {
     /// <summary>The behaviour for requests matching this rule. At this time the only supported value is Allow</summary>
@@ -194,6 +202,7 @@ public enum V1beta1RegistrySpecForProviderNetworkRuleSetVirtualNetworkSubnetIdRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegistrySpecForProviderNetworkRuleSetVirtualNetworkSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -207,6 +216,7 @@ public partial class V1beta1RegistrySpecForProviderNetworkRuleSetVirtualNetworkS
     public V1beta1RegistrySpecForProviderNetworkRuleSetVirtualNetworkSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1RegistrySpecForProviderNetworkRuleSetVirtualNetworkSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -238,6 +248,7 @@ public enum V1beta1RegistrySpecForProviderNetworkRuleSetVirtualNetworkSubnetIdSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegistrySpecForProviderNetworkRuleSetVirtualNetworkSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -251,6 +262,7 @@ public partial class V1beta1RegistrySpecForProviderNetworkRuleSetVirtualNetworkS
     public V1beta1RegistrySpecForProviderNetworkRuleSetVirtualNetworkSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1RegistrySpecForProviderNetworkRuleSetVirtualNetworkSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -266,6 +278,7 @@ public partial class V1beta1RegistrySpecForProviderNetworkRuleSetVirtualNetworkS
     public V1beta1RegistrySpecForProviderNetworkRuleSetVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegistrySpecForProviderNetworkRuleSetVirtualNetwork
 {
     /// <summary>The behaviour for requests matching this rule. At this time the only supported value is Allow</summary>
@@ -285,6 +298,7 @@ public partial class V1beta1RegistrySpecForProviderNetworkRuleSetVirtualNetwork
     public V1beta1RegistrySpecForProviderNetworkRuleSetVirtualNetworkSubnetIdSelector? SubnetIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegistrySpecForProviderNetworkRuleSet
 {
     /// <summary>The behaviour for requests matching no rules. Either Allow or Deny. Defaults to Allow</summary>
@@ -320,6 +334,7 @@ public enum V1beta1RegistrySpecForProviderResourceGroupNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegistrySpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -333,6 +348,7 @@ public partial class V1beta1RegistrySpecForProviderResourceGroupNameRefPolicy
     public V1beta1RegistrySpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1RegistrySpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -364,6 +380,7 @@ public enum V1beta1RegistrySpecForProviderResourceGroupNameSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegistrySpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -377,6 +394,7 @@ public partial class V1beta1RegistrySpecForProviderResourceGroupNameSelectorPoli
     public V1beta1RegistrySpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1RegistrySpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -392,6 +410,7 @@ public partial class V1beta1RegistrySpecForProviderResourceGroupNameSelector
     public V1beta1RegistrySpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegistrySpecForProviderRetentionPolicy
 {
     /// <summary>The number of days to retain an untagged manifest after which it gets purged. Default is 7.</summary>
@@ -403,6 +422,7 @@ public partial class V1beta1RegistrySpecForProviderRetentionPolicy
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegistrySpecForProviderTrustPolicy
 {
     /// <summary>Boolean value that indicates whether the policy is enabled.</summary>
@@ -410,6 +430,7 @@ public partial class V1beta1RegistrySpecForProviderTrustPolicy
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegistrySpecForProvider
 {
     /// <summary>Specifies whether the admin user is enabled. Defaults to false.</summary>
@@ -513,6 +534,7 @@ public enum V1beta1RegistrySpecInitProviderEncryptionIdentityClientIdRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegistrySpecInitProviderEncryptionIdentityClientIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -526,6 +548,7 @@ public partial class V1beta1RegistrySpecInitProviderEncryptionIdentityClientIdRe
     public V1beta1RegistrySpecInitProviderEncryptionIdentityClientIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserAssignedIdentity in managedidentity to populate identityClientId.</summary>
 public partial class V1beta1RegistrySpecInitProviderEncryptionIdentityClientIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -557,6 +580,7 @@ public enum V1beta1RegistrySpecInitProviderEncryptionIdentityClientIdSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegistrySpecInitProviderEncryptionIdentityClientIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -570,6 +594,7 @@ public partial class V1beta1RegistrySpecInitProviderEncryptionIdentityClientIdSe
     public V1beta1RegistrySpecInitProviderEncryptionIdentityClientIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserAssignedIdentity in managedidentity to populate identityClientId.</summary>
 public partial class V1beta1RegistrySpecInitProviderEncryptionIdentityClientIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -585,6 +610,7 @@ public partial class V1beta1RegistrySpecInitProviderEncryptionIdentityClientIdSe
     public V1beta1RegistrySpecInitProviderEncryptionIdentityClientIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegistrySpecInitProviderEncryption
 {
     /// <summary>Boolean value that indicates whether encryption is enabled.</summary>
@@ -608,6 +634,7 @@ public partial class V1beta1RegistrySpecInitProviderEncryption
     public string? KeyVaultKeyId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegistrySpecInitProviderGeoreplications
 {
     /// <summary>A location where the container registry should be geo-replicated.</summary>
@@ -627,6 +654,7 @@ public partial class V1beta1RegistrySpecInitProviderGeoreplications
     public bool? ZoneRedundancyEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegistrySpecInitProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Container Registry.</summary>
@@ -638,6 +666,7 @@ public partial class V1beta1RegistrySpecInitProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegistrySpecInitProviderNetworkRuleSetIpRule
 {
     /// <summary>The behaviour for requests matching this rule. At this time the only supported value is Allow</summary>
@@ -669,6 +698,7 @@ public enum V1beta1RegistrySpecInitProviderNetworkRuleSetVirtualNetworkSubnetIdR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegistrySpecInitProviderNetworkRuleSetVirtualNetworkSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -682,6 +712,7 @@ public partial class V1beta1RegistrySpecInitProviderNetworkRuleSetVirtualNetwork
     public V1beta1RegistrySpecInitProviderNetworkRuleSetVirtualNetworkSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1RegistrySpecInitProviderNetworkRuleSetVirtualNetworkSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -713,6 +744,7 @@ public enum V1beta1RegistrySpecInitProviderNetworkRuleSetVirtualNetworkSubnetIdS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegistrySpecInitProviderNetworkRuleSetVirtualNetworkSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -726,6 +758,7 @@ public partial class V1beta1RegistrySpecInitProviderNetworkRuleSetVirtualNetwork
     public V1beta1RegistrySpecInitProviderNetworkRuleSetVirtualNetworkSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1RegistrySpecInitProviderNetworkRuleSetVirtualNetworkSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -741,6 +774,7 @@ public partial class V1beta1RegistrySpecInitProviderNetworkRuleSetVirtualNetwork
     public V1beta1RegistrySpecInitProviderNetworkRuleSetVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegistrySpecInitProviderNetworkRuleSetVirtualNetwork
 {
     /// <summary>The behaviour for requests matching this rule. At this time the only supported value is Allow</summary>
@@ -760,6 +794,7 @@ public partial class V1beta1RegistrySpecInitProviderNetworkRuleSetVirtualNetwork
     public V1beta1RegistrySpecInitProviderNetworkRuleSetVirtualNetworkSubnetIdSelector? SubnetIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegistrySpecInitProviderNetworkRuleSet
 {
     /// <summary>The behaviour for requests matching no rules. Either Allow or Deny. Defaults to Allow</summary>
@@ -775,6 +810,7 @@ public partial class V1beta1RegistrySpecInitProviderNetworkRuleSet
     public IList<V1beta1RegistrySpecInitProviderNetworkRuleSetVirtualNetwork>? VirtualNetwork { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegistrySpecInitProviderRetentionPolicy
 {
     /// <summary>The number of days to retain an untagged manifest after which it gets purged. Default is 7.</summary>
@@ -786,6 +822,7 @@ public partial class V1beta1RegistrySpecInitProviderRetentionPolicy
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegistrySpecInitProviderTrustPolicy
 {
     /// <summary>Boolean value that indicates whether the policy is enabled.</summary>
@@ -793,6 +830,7 @@ public partial class V1beta1RegistrySpecInitProviderTrustPolicy
     public bool? Enabled { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1RegistrySpecInitProvider
 {
     /// <summary>Specifies whether the admin user is enabled. Defaults to false.</summary>
@@ -906,6 +944,7 @@ public enum V1beta1RegistrySpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegistrySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -919,6 +958,7 @@ public partial class V1beta1RegistrySpecProviderConfigRefPolicy
     public V1beta1RegistrySpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1RegistrySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -950,6 +990,7 @@ public enum V1beta1RegistrySpecPublishConnectionDetailsToConfigRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegistrySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -963,6 +1004,7 @@ public partial class V1beta1RegistrySpecPublishConnectionDetailsToConfigRefPolic
     public V1beta1RegistrySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1RegistrySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -974,6 +1016,7 @@ public partial class V1beta1RegistrySpecPublishConnectionDetailsToConfigRef
     public V1beta1RegistrySpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1RegistrySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -989,6 +1032,7 @@ public partial class V1beta1RegistrySpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1RegistrySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1004,6 +1048,7 @@ public partial class V1beta1RegistrySpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1RegistrySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1015,6 +1060,7 @@ public partial class V1beta1RegistrySpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>RegistrySpec defines the desired state of Registry</summary>
 public partial class V1beta1RegistrySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1047,6 +1093,7 @@ public partial class V1beta1RegistrySpec
     public V1beta1RegistrySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegistryStatusAtProviderEncryption
 {
     /// <summary>Boolean value that indicates whether encryption is enabled.</summary>
@@ -1062,6 +1109,7 @@ public partial class V1beta1RegistryStatusAtProviderEncryption
     public string? KeyVaultKeyId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegistryStatusAtProviderGeoreplications
 {
     /// <summary>A location where the container registry should be geo-replicated.</summary>
@@ -1081,6 +1129,7 @@ public partial class V1beta1RegistryStatusAtProviderGeoreplications
     public bool? ZoneRedundancyEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegistryStatusAtProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Container Registry.</summary>
@@ -1100,6 +1149,7 @@ public partial class V1beta1RegistryStatusAtProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegistryStatusAtProviderNetworkRuleSetIpRule
 {
     /// <summary>The behaviour for requests matching this rule. At this time the only supported value is Allow</summary>
@@ -1111,6 +1161,7 @@ public partial class V1beta1RegistryStatusAtProviderNetworkRuleSetIpRule
     public string? IpRange { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegistryStatusAtProviderNetworkRuleSetVirtualNetwork
 {
     /// <summary>The behaviour for requests matching this rule. At this time the only supported value is Allow</summary>
@@ -1122,6 +1173,7 @@ public partial class V1beta1RegistryStatusAtProviderNetworkRuleSetVirtualNetwork
     public string? SubnetId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegistryStatusAtProviderNetworkRuleSet
 {
     /// <summary>The behaviour for requests matching no rules. Either Allow or Deny. Defaults to Allow</summary>
@@ -1137,6 +1189,7 @@ public partial class V1beta1RegistryStatusAtProviderNetworkRuleSet
     public IList<V1beta1RegistryStatusAtProviderNetworkRuleSetVirtualNetwork>? VirtualNetwork { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegistryStatusAtProviderRetentionPolicy
 {
     /// <summary>The number of days to retain an untagged manifest after which it gets purged. Default is 7.</summary>
@@ -1148,6 +1201,7 @@ public partial class V1beta1RegistryStatusAtProviderRetentionPolicy
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegistryStatusAtProviderTrustPolicy
 {
     /// <summary>Boolean value that indicates whether the policy is enabled.</summary>
@@ -1155,6 +1209,7 @@ public partial class V1beta1RegistryStatusAtProviderTrustPolicy
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegistryStatusAtProvider
 {
     /// <summary>Specifies whether the admin user is enabled. Defaults to false.</summary>
@@ -1242,6 +1297,7 @@ public partial class V1beta1RegistryStatusAtProvider
     public bool? ZoneRedundancyEnabled { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1RegistryStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1269,6 +1325,7 @@ public partial class V1beta1RegistryStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>RegistryStatus defines the observed state of Registry.</summary>
 public partial class V1beta1RegistryStatus
 {
     /// <summary></summary>
@@ -1285,6 +1342,7 @@ public partial class V1beta1RegistryStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Registry is the Schema for the Registrys API. Manages an Azure Container Registry.</summary>
 public partial class V1beta1Registry : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1RegistrySpec>, IStatus<V1beta1RegistryStatus>
 {
     public const string KubeApiVersion = "v1beta1";

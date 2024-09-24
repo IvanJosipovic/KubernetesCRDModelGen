@@ -18,6 +18,7 @@ public enum V1beta1RecordSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSpecForProviderAlias
 {
     /// <summary>Set to true if you want Route 53 to determine whether to respond to DNS queries using this resource record set by checking the health of the resource record set. Some resources have special requirements, see related part of documentation.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1RecordSpecForProviderAlias
     public string? ZoneId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSpecForProviderCidrRoutingPolicy
 {
     /// <summary>The CIDR collection ID. See the aws_route53_cidr_collection resource for more details.</summary>
@@ -44,6 +46,7 @@ public partial class V1beta1RecordSpecForProviderCidrRoutingPolicy
     public string? LocationName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSpecForProviderFailoverRoutingPolicy
 {
     /// <summary>The record type. Valid values are A, AAAA, CAA, CNAME, DS, MX, NAPTR, NS, PTR, SOA, SPF, SRV and TXT.</summary>
@@ -51,6 +54,7 @@ public partial class V1beta1RecordSpecForProviderFailoverRoutingPolicy
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSpecForProviderGeolocationRoutingPolicy
 {
     /// <summary>A two-letter continent code. See http://docs.aws.amazon.com/Route53/latest/APIReference/API_GetGeoLocation.html for code details. Either continent or country must be specified.</summary>
@@ -66,6 +70,7 @@ public partial class V1beta1RecordSpecForProviderGeolocationRoutingPolicy
     public string? Subdivision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSpecForProviderGeoproximityRoutingPolicyCoordinates
 {
     /// <summary></summary>
@@ -77,6 +82,7 @@ public partial class V1beta1RecordSpecForProviderGeoproximityRoutingPolicyCoordi
     public string? Longitude { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSpecForProviderGeoproximityRoutingPolicy
 {
     /// <summary>A AWS region where the resource is present.</summary>
@@ -116,6 +122,7 @@ public enum V1beta1RecordSpecForProviderHealthCheckIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RecordSpecForProviderHealthCheckIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -129,6 +136,7 @@ public partial class V1beta1RecordSpecForProviderHealthCheckIdRefPolicy
     public V1beta1RecordSpecForProviderHealthCheckIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a HealthCheck in route53 to populate healthCheckId.</summary>
 public partial class V1beta1RecordSpecForProviderHealthCheckIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -160,6 +168,7 @@ public enum V1beta1RecordSpecForProviderHealthCheckIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RecordSpecForProviderHealthCheckIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -173,6 +182,7 @@ public partial class V1beta1RecordSpecForProviderHealthCheckIdSelectorPolicy
     public V1beta1RecordSpecForProviderHealthCheckIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a HealthCheck in route53 to populate healthCheckId.</summary>
 public partial class V1beta1RecordSpecForProviderHealthCheckIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -188,6 +198,7 @@ public partial class V1beta1RecordSpecForProviderHealthCheckIdSelector
     public V1beta1RecordSpecForProviderHealthCheckIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSpecForProviderLatencyRoutingPolicy
 {
     /// <summary>An AWS region from which to measure latency. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-latency</summary>
@@ -195,6 +206,7 @@ public partial class V1beta1RecordSpecForProviderLatencyRoutingPolicy
     public string Region { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSpecForProviderWeightedRoutingPolicy
 {
     /// <summary>A numeric value indicating the relative weight of the record. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-weighted.</summary>
@@ -222,6 +234,7 @@ public enum V1beta1RecordSpecForProviderZoneIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RecordSpecForProviderZoneIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +248,7 @@ public partial class V1beta1RecordSpecForProviderZoneIdRefPolicy
     public V1beta1RecordSpecForProviderZoneIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Zone in route53 to populate zoneId.</summary>
 public partial class V1beta1RecordSpecForProviderZoneIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +280,7 @@ public enum V1beta1RecordSpecForProviderZoneIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RecordSpecForProviderZoneIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +294,7 @@ public partial class V1beta1RecordSpecForProviderZoneIdSelectorPolicy
     public V1beta1RecordSpecForProviderZoneIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Zone in route53 to populate zoneId.</summary>
 public partial class V1beta1RecordSpecForProviderZoneIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -294,6 +310,7 @@ public partial class V1beta1RecordSpecForProviderZoneIdSelector
     public V1beta1RecordSpecForProviderZoneIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSpecForProvider
 {
     /// <summary>An alias block. Conflicts with ttl &amp; records. Documented below.</summary>
@@ -381,6 +398,7 @@ public partial class V1beta1RecordSpecForProvider
     public V1beta1RecordSpecForProviderZoneIdSelector? ZoneIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSpecInitProviderAlias
 {
     /// <summary>Set to true if you want Route 53 to determine whether to respond to DNS queries using this resource record set by checking the health of the resource record set. Some resources have special requirements, see related part of documentation.</summary>
@@ -396,6 +414,7 @@ public partial class V1beta1RecordSpecInitProviderAlias
     public string? ZoneId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSpecInitProviderCidrRoutingPolicy
 {
     /// <summary>The CIDR collection ID. See the aws_route53_cidr_collection resource for more details.</summary>
@@ -407,6 +426,7 @@ public partial class V1beta1RecordSpecInitProviderCidrRoutingPolicy
     public string? LocationName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSpecInitProviderFailoverRoutingPolicy
 {
     /// <summary>The record type. Valid values are A, AAAA, CAA, CNAME, DS, MX, NAPTR, NS, PTR, SOA, SPF, SRV and TXT.</summary>
@@ -414,6 +434,7 @@ public partial class V1beta1RecordSpecInitProviderFailoverRoutingPolicy
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSpecInitProviderGeolocationRoutingPolicy
 {
     /// <summary>A two-letter continent code. See http://docs.aws.amazon.com/Route53/latest/APIReference/API_GetGeoLocation.html for code details. Either continent or country must be specified.</summary>
@@ -429,6 +450,7 @@ public partial class V1beta1RecordSpecInitProviderGeolocationRoutingPolicy
     public string? Subdivision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSpecInitProviderGeoproximityRoutingPolicyCoordinates
 {
     /// <summary></summary>
@@ -440,6 +462,7 @@ public partial class V1beta1RecordSpecInitProviderGeoproximityRoutingPolicyCoord
     public string? Longitude { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSpecInitProviderGeoproximityRoutingPolicy
 {
     /// <summary>A AWS region where the resource is present.</summary>
@@ -479,6 +502,7 @@ public enum V1beta1RecordSpecInitProviderHealthCheckIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RecordSpecInitProviderHealthCheckIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -492,6 +516,7 @@ public partial class V1beta1RecordSpecInitProviderHealthCheckIdRefPolicy
     public V1beta1RecordSpecInitProviderHealthCheckIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a HealthCheck in route53 to populate healthCheckId.</summary>
 public partial class V1beta1RecordSpecInitProviderHealthCheckIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -523,6 +548,7 @@ public enum V1beta1RecordSpecInitProviderHealthCheckIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RecordSpecInitProviderHealthCheckIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -536,6 +562,7 @@ public partial class V1beta1RecordSpecInitProviderHealthCheckIdSelectorPolicy
     public V1beta1RecordSpecInitProviderHealthCheckIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a HealthCheck in route53 to populate healthCheckId.</summary>
 public partial class V1beta1RecordSpecInitProviderHealthCheckIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -551,10 +578,12 @@ public partial class V1beta1RecordSpecInitProviderHealthCheckIdSelector
     public V1beta1RecordSpecInitProviderHealthCheckIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSpecInitProviderLatencyRoutingPolicy
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordSpecInitProviderWeightedRoutingPolicy
 {
     /// <summary>A numeric value indicating the relative weight of the record. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-weighted.</summary>
@@ -582,6 +611,7 @@ public enum V1beta1RecordSpecInitProviderZoneIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RecordSpecInitProviderZoneIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -595,6 +625,7 @@ public partial class V1beta1RecordSpecInitProviderZoneIdRefPolicy
     public V1beta1RecordSpecInitProviderZoneIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Zone in route53 to populate zoneId.</summary>
 public partial class V1beta1RecordSpecInitProviderZoneIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -626,6 +657,7 @@ public enum V1beta1RecordSpecInitProviderZoneIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RecordSpecInitProviderZoneIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -639,6 +671,7 @@ public partial class V1beta1RecordSpecInitProviderZoneIdSelectorPolicy
     public V1beta1RecordSpecInitProviderZoneIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Zone in route53 to populate zoneId.</summary>
 public partial class V1beta1RecordSpecInitProviderZoneIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -654,6 +687,7 @@ public partial class V1beta1RecordSpecInitProviderZoneIdSelector
     public V1beta1RecordSpecInitProviderZoneIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1RecordSpecInitProvider
 {
     /// <summary>An alias block. Conflicts with ttl &amp; records. Documented below.</summary>
@@ -779,6 +813,7 @@ public enum V1beta1RecordSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RecordSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -792,6 +827,7 @@ public partial class V1beta1RecordSpecProviderConfigRefPolicy
     public V1beta1RecordSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1RecordSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -823,6 +859,7 @@ public enum V1beta1RecordSpecPublishConnectionDetailsToConfigRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RecordSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -836,6 +873,7 @@ public partial class V1beta1RecordSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1RecordSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1RecordSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -847,6 +885,7 @@ public partial class V1beta1RecordSpecPublishConnectionDetailsToConfigRef
     public V1beta1RecordSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1RecordSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -862,6 +901,7 @@ public partial class V1beta1RecordSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1RecordSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -877,6 +917,7 @@ public partial class V1beta1RecordSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1RecordSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -888,6 +929,7 @@ public partial class V1beta1RecordSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>RecordSpec defines the desired state of Record</summary>
 public partial class V1beta1RecordSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -920,6 +962,7 @@ public partial class V1beta1RecordSpec
     public V1beta1RecordSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordStatusAtProviderAlias
 {
     /// <summary>Set to true if you want Route 53 to determine whether to respond to DNS queries using this resource record set by checking the health of the resource record set. Some resources have special requirements, see related part of documentation.</summary>
@@ -935,6 +978,7 @@ public partial class V1beta1RecordStatusAtProviderAlias
     public string? ZoneId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordStatusAtProviderCidrRoutingPolicy
 {
     /// <summary>The CIDR collection ID. See the aws_route53_cidr_collection resource for more details.</summary>
@@ -946,6 +990,7 @@ public partial class V1beta1RecordStatusAtProviderCidrRoutingPolicy
     public string? LocationName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordStatusAtProviderFailoverRoutingPolicy
 {
     /// <summary>The record type. Valid values are A, AAAA, CAA, CNAME, DS, MX, NAPTR, NS, PTR, SOA, SPF, SRV and TXT.</summary>
@@ -953,6 +998,7 @@ public partial class V1beta1RecordStatusAtProviderFailoverRoutingPolicy
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordStatusAtProviderGeolocationRoutingPolicy
 {
     /// <summary>A two-letter continent code. See http://docs.aws.amazon.com/Route53/latest/APIReference/API_GetGeoLocation.html for code details. Either continent or country must be specified.</summary>
@@ -968,6 +1014,7 @@ public partial class V1beta1RecordStatusAtProviderGeolocationRoutingPolicy
     public string? Subdivision { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordStatusAtProviderGeoproximityRoutingPolicyCoordinates
 {
     /// <summary></summary>
@@ -979,6 +1026,7 @@ public partial class V1beta1RecordStatusAtProviderGeoproximityRoutingPolicyCoord
     public string? Longitude { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordStatusAtProviderGeoproximityRoutingPolicy
 {
     /// <summary>A AWS region where the resource is present.</summary>
@@ -998,6 +1046,7 @@ public partial class V1beta1RecordStatusAtProviderGeoproximityRoutingPolicy
     public string? LocalZoneGroup { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordStatusAtProviderLatencyRoutingPolicy
 {
     /// <summary>An AWS region from which to measure latency. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-latency</summary>
@@ -1005,6 +1054,7 @@ public partial class V1beta1RecordStatusAtProviderLatencyRoutingPolicy
     public string? Region { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordStatusAtProviderWeightedRoutingPolicy
 {
     /// <summary>A numeric value indicating the relative weight of the record. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-weighted.</summary>
@@ -1012,6 +1062,7 @@ public partial class V1beta1RecordStatusAtProviderWeightedRoutingPolicy
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RecordStatusAtProvider
 {
     /// <summary>An alias block. Conflicts with ttl &amp; records. Documented below.</summary>
@@ -1087,6 +1138,7 @@ public partial class V1beta1RecordStatusAtProvider
     public string? ZoneId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1RecordStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1114,6 +1166,7 @@ public partial class V1beta1RecordStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>RecordStatus defines the observed state of Record.</summary>
 public partial class V1beta1RecordStatus
 {
     /// <summary></summary>
@@ -1130,6 +1183,7 @@ public partial class V1beta1RecordStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Record is the Schema for the Records API. Provides a Route53 record resource.</summary>
 public partial class V1beta1Record : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1RecordSpec>, IStatus<V1beta1RecordStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -38,6 +38,7 @@ public enum V1beta1ConnectionAssociationSpecForProviderConnectionIdRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectionAssociationSpecForProviderConnectionIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ConnectionAssociationSpecForProviderConnectionIdRefP
     public V1beta1ConnectionAssociationSpecForProviderConnectionIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Connection in directconnect to populate connectionId.</summary>
 public partial class V1beta1ConnectionAssociationSpecForProviderConnectionIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ConnectionAssociationSpecForProviderConnectionIdSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectionAssociationSpecForProviderConnectionIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ConnectionAssociationSpecForProviderConnectionIdSele
     public V1beta1ConnectionAssociationSpecForProviderConnectionIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Connection in directconnect to populate connectionId.</summary>
 public partial class V1beta1ConnectionAssociationSpecForProviderConnectionIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1ConnectionAssociationSpecForProviderLagIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectionAssociationSpecForProviderLagIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1ConnectionAssociationSpecForProviderLagIdRefPolicy
     public V1beta1ConnectionAssociationSpecForProviderLagIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Lag in directconnect to populate lagId.</summary>
 public partial class V1beta1ConnectionAssociationSpecForProviderLagIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1ConnectionAssociationSpecForProviderLagIdSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectionAssociationSpecForProviderLagIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1ConnectionAssociationSpecForProviderLagIdSelectorPol
     public V1beta1ConnectionAssociationSpecForProviderLagIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Lag in directconnect to populate lagId.</summary>
 public partial class V1beta1ConnectionAssociationSpecForProviderLagIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1ConnectionAssociationSpecForProviderLagIdSelector
     public V1beta1ConnectionAssociationSpecForProviderLagIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectionAssociationSpecForProvider
 {
     /// <summary>The ID of the connection.</summary>
@@ -253,6 +262,7 @@ public enum V1beta1ConnectionAssociationSpecInitProviderConnectionIdRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectionAssociationSpecInitProviderConnectionIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -266,6 +276,7 @@ public partial class V1beta1ConnectionAssociationSpecInitProviderConnectionIdRef
     public V1beta1ConnectionAssociationSpecInitProviderConnectionIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Connection in directconnect to populate connectionId.</summary>
 public partial class V1beta1ConnectionAssociationSpecInitProviderConnectionIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -297,6 +308,7 @@ public enum V1beta1ConnectionAssociationSpecInitProviderConnectionIdSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectionAssociationSpecInitProviderConnectionIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -310,6 +322,7 @@ public partial class V1beta1ConnectionAssociationSpecInitProviderConnectionIdSel
     public V1beta1ConnectionAssociationSpecInitProviderConnectionIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Connection in directconnect to populate connectionId.</summary>
 public partial class V1beta1ConnectionAssociationSpecInitProviderConnectionIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -345,6 +358,7 @@ public enum V1beta1ConnectionAssociationSpecInitProviderLagIdRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectionAssociationSpecInitProviderLagIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -358,6 +372,7 @@ public partial class V1beta1ConnectionAssociationSpecInitProviderLagIdRefPolicy
     public V1beta1ConnectionAssociationSpecInitProviderLagIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Lag in directconnect to populate lagId.</summary>
 public partial class V1beta1ConnectionAssociationSpecInitProviderLagIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -389,6 +404,7 @@ public enum V1beta1ConnectionAssociationSpecInitProviderLagIdSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectionAssociationSpecInitProviderLagIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -402,6 +418,7 @@ public partial class V1beta1ConnectionAssociationSpecInitProviderLagIdSelectorPo
     public V1beta1ConnectionAssociationSpecInitProviderLagIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Lag in directconnect to populate lagId.</summary>
 public partial class V1beta1ConnectionAssociationSpecInitProviderLagIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -417,6 +434,7 @@ public partial class V1beta1ConnectionAssociationSpecInitProviderLagIdSelector
     public V1beta1ConnectionAssociationSpecInitProviderLagIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ConnectionAssociationSpecInitProvider
 {
     /// <summary>The ID of the connection.</summary>
@@ -486,6 +504,7 @@ public enum V1beta1ConnectionAssociationSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectionAssociationSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -499,6 +518,7 @@ public partial class V1beta1ConnectionAssociationSpecProviderConfigRefPolicy
     public V1beta1ConnectionAssociationSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ConnectionAssociationSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -530,6 +550,7 @@ public enum V1beta1ConnectionAssociationSpecPublishConnectionDetailsToConfigRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectionAssociationSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -543,6 +564,7 @@ public partial class V1beta1ConnectionAssociationSpecPublishConnectionDetailsToC
     public V1beta1ConnectionAssociationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ConnectionAssociationSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -554,6 +576,7 @@ public partial class V1beta1ConnectionAssociationSpecPublishConnectionDetailsToC
     public V1beta1ConnectionAssociationSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ConnectionAssociationSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -569,6 +592,7 @@ public partial class V1beta1ConnectionAssociationSpecPublishConnectionDetailsToM
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ConnectionAssociationSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -584,6 +608,7 @@ public partial class V1beta1ConnectionAssociationSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ConnectionAssociationSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -595,6 +620,7 @@ public partial class V1beta1ConnectionAssociationSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ConnectionAssociationSpec defines the desired state of ConnectionAssociation</summary>
 public partial class V1beta1ConnectionAssociationSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -627,6 +653,7 @@ public partial class V1beta1ConnectionAssociationSpec
     public V1beta1ConnectionAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectionAssociationStatusAtProvider
 {
     /// <summary>The ID of the connection.</summary>
@@ -642,6 +669,7 @@ public partial class V1beta1ConnectionAssociationStatusAtProvider
     public string? LagId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ConnectionAssociationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -669,6 +697,7 @@ public partial class V1beta1ConnectionAssociationStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ConnectionAssociationStatus defines the observed state of ConnectionAssociation.</summary>
 public partial class V1beta1ConnectionAssociationStatus
 {
     /// <summary></summary>
@@ -685,6 +714,7 @@ public partial class V1beta1ConnectionAssociationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ConnectionAssociation is the Schema for the ConnectionAssociations API. Associates a Direct Connect Connection with a LAG.</summary>
 public partial class V1beta1ConnectionAssociation : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ConnectionAssociationSpec>, IStatus<V1beta1ConnectionAssociationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

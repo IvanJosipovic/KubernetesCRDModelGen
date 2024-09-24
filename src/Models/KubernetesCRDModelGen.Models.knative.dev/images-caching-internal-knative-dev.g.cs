@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.caching.@internal.knative.dev;
+/// <summary>LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.</summary>
 public partial class V1alpha1ImageSpecImagePullSecrets
 {
     /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?</summary>
@@ -15,6 +16,7 @@ public partial class V1alpha1ImageSpecImagePullSecrets
     public string? Name { get; set; }
 }
 
+/// <summary>Spec holds the desired state of the Image (from the client).</summary>
 public partial class V1alpha1ImageSpec
 {
     /// <summary>Image is the name of the container image url to cache across the cluster.</summary>
@@ -30,6 +32,7 @@ public partial class V1alpha1ImageSpec
     public string? ServiceAccountName { get; set; }
 }
 
+/// <summary>Condition defines a readiness condition for a Knative resource. See: https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md#typical-status-properties</summary>
 public partial class V1alpha1ImageStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another. We use VolatileTime in place of metav1.Time to exclude this from creating equality.Semantic differences (all other things held constant).</summary>
@@ -57,6 +60,7 @@ public partial class V1alpha1ImageStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Status communicates the observed state of the Image (from the controller).</summary>
 public partial class V1alpha1ImageStatus
 {
     /// <summary>Annotations is additional Status fields for the Resource to save some additional State as well as convey more information to the user. This is roughly akin to Annotations on any k8s resource, just the reconciler conveying richer information outwards.</summary>
@@ -73,6 +77,7 @@ public partial class V1alpha1ImageStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Image is a Knative abstraction that encapsulates the interface by which Knative components express a desire to have a particular image cached.</summary>
 public partial class V1alpha1Image : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ImageSpec>, IStatus<V1alpha1ImageStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

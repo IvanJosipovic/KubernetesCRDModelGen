@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.eventgrid.azure.com;
+/// <summary>ResourceReference: The Azure Resource ID of the storage account that is the destination of the deadletter events</summary>
 public partial class V1api20200601storageEventSubscriptionSpecDeadLetterDestinationStorageBlobResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -27,6 +28,7 @@ public partial class V1api20200601storageEventSubscriptionSpecDeadLetterDestinat
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.StorageBlobDeadLetterDestination</summary>
 public partial class V1api20200601storageEventSubscriptionSpecDeadLetterDestinationStorageBlob
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -46,6 +48,7 @@ public partial class V1api20200601storageEventSubscriptionSpecDeadLetterDestinat
     public V1api20200601storageEventSubscriptionSpecDeadLetterDestinationStorageBlobResourceReference? ResourceReference { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.DeadLetterDestination</summary>
 public partial class V1api20200601storageEventSubscriptionSpecDeadLetterDestination
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -57,6 +60,7 @@ public partial class V1api20200601storageEventSubscriptionSpecDeadLetterDestinat
     public V1api20200601storageEventSubscriptionSpecDeadLetterDestinationStorageBlob? StorageBlob { get; set; }
 }
 
+/// <summary>ResourceReference: The Azure Resource Id that represents the endpoint of the Azure Function destination of an event subscription.</summary>
 public partial class V1api20200601storageEventSubscriptionSpecDestinationAzureFunctionResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -76,6 +80,7 @@ public partial class V1api20200601storageEventSubscriptionSpecDestinationAzureFu
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.AzureFunctionEventSubscriptionDestination</summary>
 public partial class V1api20200601storageEventSubscriptionSpecDestinationAzureFunction
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -99,6 +104,7 @@ public partial class V1api20200601storageEventSubscriptionSpecDestinationAzureFu
     public V1api20200601storageEventSubscriptionSpecDestinationAzureFunctionResourceReference? ResourceReference { get; set; }
 }
 
+/// <summary>ResourceReference: The Azure Resource Id that represents the endpoint of an Event Hub destination of an event subscription.</summary>
 public partial class V1api20200601storageEventSubscriptionSpecDestinationEventHubResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -118,6 +124,7 @@ public partial class V1api20200601storageEventSubscriptionSpecDestinationEventHu
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.EventHubEventSubscriptionDestination</summary>
 public partial class V1api20200601storageEventSubscriptionSpecDestinationEventHub
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -133,6 +140,7 @@ public partial class V1api20200601storageEventSubscriptionSpecDestinationEventHu
     public V1api20200601storageEventSubscriptionSpecDestinationEventHubResourceReference? ResourceReference { get; set; }
 }
 
+/// <summary>ResourceReference: The Azure Resource ID of an hybrid connection that is the destination of an event subscription.</summary>
 public partial class V1api20200601storageEventSubscriptionSpecDestinationHybridConnectionResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -152,6 +160,7 @@ public partial class V1api20200601storageEventSubscriptionSpecDestinationHybridC
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.HybridConnectionEventSubscriptionDestination</summary>
 public partial class V1api20200601storageEventSubscriptionSpecDestinationHybridConnection
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -167,6 +176,7 @@ public partial class V1api20200601storageEventSubscriptionSpecDestinationHybridC
     public V1api20200601storageEventSubscriptionSpecDestinationHybridConnectionResourceReference? ResourceReference { get; set; }
 }
 
+/// <summary>ResourceReference: The Azure Resource Id that represents the endpoint of the Service Bus destination of an event subscription.</summary>
 public partial class V1api20200601storageEventSubscriptionSpecDestinationServiceBusQueueResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -186,6 +196,7 @@ public partial class V1api20200601storageEventSubscriptionSpecDestinationService
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.ServiceBusQueueEventSubscriptionDestination</summary>
 public partial class V1api20200601storageEventSubscriptionSpecDestinationServiceBusQueue
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -201,6 +212,7 @@ public partial class V1api20200601storageEventSubscriptionSpecDestinationService
     public V1api20200601storageEventSubscriptionSpecDestinationServiceBusQueueResourceReference? ResourceReference { get; set; }
 }
 
+/// <summary>ResourceReference: The Azure Resource Id that represents the endpoint of the Service Bus Topic destination of an event subscription.</summary>
 public partial class V1api20200601storageEventSubscriptionSpecDestinationServiceBusTopicResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -220,6 +232,7 @@ public partial class V1api20200601storageEventSubscriptionSpecDestinationService
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.ServiceBusTopicEventSubscriptionDestination</summary>
 public partial class V1api20200601storageEventSubscriptionSpecDestinationServiceBusTopic
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -235,6 +248,7 @@ public partial class V1api20200601storageEventSubscriptionSpecDestinationService
     public V1api20200601storageEventSubscriptionSpecDestinationServiceBusTopicResourceReference? ResourceReference { get; set; }
 }
 
+/// <summary>ResourceReference: The Azure Resource ID of the storage account that contains the queue that is the destination of an event subscription.</summary>
 public partial class V1api20200601storageEventSubscriptionSpecDestinationStorageQueueResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -254,6 +268,7 @@ public partial class V1api20200601storageEventSubscriptionSpecDestinationStorage
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.StorageQueueEventSubscriptionDestination</summary>
 public partial class V1api20200601storageEventSubscriptionSpecDestinationStorageQueue
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -273,6 +288,7 @@ public partial class V1api20200601storageEventSubscriptionSpecDestinationStorage
     public V1api20200601storageEventSubscriptionSpecDestinationStorageQueueResourceReference? ResourceReference { get; set; }
 }
 
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20200601storageEventSubscriptionSpecDestinationWebHookEndpointUrl
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -284,6 +300,7 @@ public partial class V1api20200601storageEventSubscriptionSpecDestinationWebHook
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.WebHookEventSubscriptionDestination</summary>
 public partial class V1api20200601storageEventSubscriptionSpecDestinationWebHook
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -315,6 +332,7 @@ public partial class V1api20200601storageEventSubscriptionSpecDestinationWebHook
     public int? PreferredBatchSizeInKilobytes { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.EventSubscriptionDestination</summary>
 public partial class V1api20200601storageEventSubscriptionSpecDestination
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -350,6 +368,7 @@ public partial class V1api20200601storageEventSubscriptionSpecDestination
     public V1api20200601storageEventSubscriptionSpecDestinationWebHook? WebHook { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.BoolEqualsAdvancedFilter</summary>
 public partial class V1api20200601storageEventSubscriptionSpecFilterAdvancedFiltersBoolEquals
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -369,6 +388,7 @@ public partial class V1api20200601storageEventSubscriptionSpecFilterAdvancedFilt
     public bool? Value { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.NumberGreaterThanAdvancedFilter</summary>
 public partial class V1api20200601storageEventSubscriptionSpecFilterAdvancedFiltersNumberGreaterThan
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -388,6 +408,7 @@ public partial class V1api20200601storageEventSubscriptionSpecFilterAdvancedFilt
     public double? Value { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.NumberGreaterThanOrEqualsAdvancedFilter</summary>
 public partial class V1api20200601storageEventSubscriptionSpecFilterAdvancedFiltersNumberGreaterThanOrEquals
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -407,6 +428,7 @@ public partial class V1api20200601storageEventSubscriptionSpecFilterAdvancedFilt
     public double? Value { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.NumberInAdvancedFilter</summary>
 public partial class V1api20200601storageEventSubscriptionSpecFilterAdvancedFiltersNumberIn
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -426,6 +448,7 @@ public partial class V1api20200601storageEventSubscriptionSpecFilterAdvancedFilt
     public IList<double>? Values { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.NumberLessThanAdvancedFilter</summary>
 public partial class V1api20200601storageEventSubscriptionSpecFilterAdvancedFiltersNumberLessThan
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -445,6 +468,7 @@ public partial class V1api20200601storageEventSubscriptionSpecFilterAdvancedFilt
     public double? Value { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.NumberLessThanOrEqualsAdvancedFilter</summary>
 public partial class V1api20200601storageEventSubscriptionSpecFilterAdvancedFiltersNumberLessThanOrEquals
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -464,6 +488,7 @@ public partial class V1api20200601storageEventSubscriptionSpecFilterAdvancedFilt
     public double? Value { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.NumberNotInAdvancedFilter</summary>
 public partial class V1api20200601storageEventSubscriptionSpecFilterAdvancedFiltersNumberNotIn
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -483,6 +508,7 @@ public partial class V1api20200601storageEventSubscriptionSpecFilterAdvancedFilt
     public IList<double>? Values { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.StringBeginsWithAdvancedFilter</summary>
 public partial class V1api20200601storageEventSubscriptionSpecFilterAdvancedFiltersStringBeginsWith
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -502,6 +528,7 @@ public partial class V1api20200601storageEventSubscriptionSpecFilterAdvancedFilt
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.StringContainsAdvancedFilter</summary>
 public partial class V1api20200601storageEventSubscriptionSpecFilterAdvancedFiltersStringContains
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -521,6 +548,7 @@ public partial class V1api20200601storageEventSubscriptionSpecFilterAdvancedFilt
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.StringEndsWithAdvancedFilter</summary>
 public partial class V1api20200601storageEventSubscriptionSpecFilterAdvancedFiltersStringEndsWith
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -540,6 +568,7 @@ public partial class V1api20200601storageEventSubscriptionSpecFilterAdvancedFilt
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.StringInAdvancedFilter</summary>
 public partial class V1api20200601storageEventSubscriptionSpecFilterAdvancedFiltersStringIn
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -559,6 +588,7 @@ public partial class V1api20200601storageEventSubscriptionSpecFilterAdvancedFilt
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.StringNotInAdvancedFilter</summary>
 public partial class V1api20200601storageEventSubscriptionSpecFilterAdvancedFiltersStringNotIn
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -578,6 +608,7 @@ public partial class V1api20200601storageEventSubscriptionSpecFilterAdvancedFilt
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.AdvancedFilter</summary>
 public partial class V1api20200601storageEventSubscriptionSpecFilterAdvancedFilters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -633,6 +664,7 @@ public partial class V1api20200601storageEventSubscriptionSpecFilterAdvancedFilt
     public V1api20200601storageEventSubscriptionSpecFilterAdvancedFiltersStringNotIn? StringNotIn { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.EventSubscriptionFilter Filter for the Event Subscription.</summary>
 public partial class V1api20200601storageEventSubscriptionSpecFilter
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -660,6 +692,7 @@ public partial class V1api20200601storageEventSubscriptionSpecFilter
     public string? SubjectEndsWith { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. This resource is an extension resource, which means that any other Azure resource can be its owner.</summary>
 public partial class V1api20200601storageEventSubscriptionSpecOwner
 {
     /// <summary>Ownership across namespaces is not supported.</summary>
@@ -679,6 +712,7 @@ public partial class V1api20200601storageEventSubscriptionSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.RetryPolicy Information about the retry policy for an event subscription.</summary>
 public partial class V1api20200601storageEventSubscriptionSpecRetryPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -694,6 +728,7 @@ public partial class V1api20200601storageEventSubscriptionSpecRetryPolicy
     public int? MaxDeliveryAttempts { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.EventSubscription_Spec</summary>
 public partial class V1api20200601storageEventSubscriptionSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -741,6 +776,7 @@ public partial class V1api20200601storageEventSubscriptionSpec
     public V1api20200601storageEventSubscriptionSpecRetryPolicy? RetryPolicy { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20200601storageEventSubscriptionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -772,6 +808,7 @@ public partial class V1api20200601storageEventSubscriptionStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.StorageBlobDeadLetterDestination_STATUS</summary>
 public partial class V1api20200601storageEventSubscriptionStatusDeadLetterDestinationStorageBlob
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -791,6 +828,7 @@ public partial class V1api20200601storageEventSubscriptionStatusDeadLetterDestin
     public string? ResourceId { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.DeadLetterDestination_STATUS</summary>
 public partial class V1api20200601storageEventSubscriptionStatusDeadLetterDestination
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -802,6 +840,7 @@ public partial class V1api20200601storageEventSubscriptionStatusDeadLetterDestin
     public V1api20200601storageEventSubscriptionStatusDeadLetterDestinationStorageBlob? StorageBlob { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.AzureFunctionEventSubscriptionDestination_STATUS</summary>
 public partial class V1api20200601storageEventSubscriptionStatusDestinationAzureFunction
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -825,6 +864,7 @@ public partial class V1api20200601storageEventSubscriptionStatusDestinationAzure
     public string? ResourceId { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.EventHubEventSubscriptionDestination_STATUS</summary>
 public partial class V1api20200601storageEventSubscriptionStatusDestinationEventHub
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -840,6 +880,7 @@ public partial class V1api20200601storageEventSubscriptionStatusDestinationEvent
     public string? ResourceId { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.HybridConnectionEventSubscriptionDestination_STATUS</summary>
 public partial class V1api20200601storageEventSubscriptionStatusDestinationHybridConnection
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -855,6 +896,7 @@ public partial class V1api20200601storageEventSubscriptionStatusDestinationHybri
     public string? ResourceId { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.ServiceBusQueueEventSubscriptionDestination_STATUS</summary>
 public partial class V1api20200601storageEventSubscriptionStatusDestinationServiceBusQueue
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -870,6 +912,7 @@ public partial class V1api20200601storageEventSubscriptionStatusDestinationServi
     public string? ResourceId { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.ServiceBusTopicEventSubscriptionDestination_STATUS</summary>
 public partial class V1api20200601storageEventSubscriptionStatusDestinationServiceBusTopic
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -885,6 +928,7 @@ public partial class V1api20200601storageEventSubscriptionStatusDestinationServi
     public string? ResourceId { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.StorageQueueEventSubscriptionDestination_STATUS</summary>
 public partial class V1api20200601storageEventSubscriptionStatusDestinationStorageQueue
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -904,6 +948,7 @@ public partial class V1api20200601storageEventSubscriptionStatusDestinationStora
     public string? ResourceId { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.WebHookEventSubscriptionDestination_STATUS</summary>
 public partial class V1api20200601storageEventSubscriptionStatusDestinationWebHook
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -935,6 +980,7 @@ public partial class V1api20200601storageEventSubscriptionStatusDestinationWebHo
     public int? PreferredBatchSizeInKilobytes { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.EventSubscriptionDestination_STATUS</summary>
 public partial class V1api20200601storageEventSubscriptionStatusDestination
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -970,6 +1016,7 @@ public partial class V1api20200601storageEventSubscriptionStatusDestination
     public V1api20200601storageEventSubscriptionStatusDestinationWebHook? WebHook { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.BoolEqualsAdvancedFilter_STATUS</summary>
 public partial class V1api20200601storageEventSubscriptionStatusFilterAdvancedFiltersBoolEquals
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -989,6 +1036,7 @@ public partial class V1api20200601storageEventSubscriptionStatusFilterAdvancedFi
     public bool? Value { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.NumberGreaterThanAdvancedFilter_STATUS</summary>
 public partial class V1api20200601storageEventSubscriptionStatusFilterAdvancedFiltersNumberGreaterThan
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1008,6 +1056,7 @@ public partial class V1api20200601storageEventSubscriptionStatusFilterAdvancedFi
     public double? Value { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.NumberGreaterThanOrEqualsAdvancedFilter_STATUS</summary>
 public partial class V1api20200601storageEventSubscriptionStatusFilterAdvancedFiltersNumberGreaterThanOrEquals
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1027,6 +1076,7 @@ public partial class V1api20200601storageEventSubscriptionStatusFilterAdvancedFi
     public double? Value { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.NumberInAdvancedFilter_STATUS</summary>
 public partial class V1api20200601storageEventSubscriptionStatusFilterAdvancedFiltersNumberIn
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1046,6 +1096,7 @@ public partial class V1api20200601storageEventSubscriptionStatusFilterAdvancedFi
     public IList<double>? Values { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.NumberLessThanAdvancedFilter_STATUS</summary>
 public partial class V1api20200601storageEventSubscriptionStatusFilterAdvancedFiltersNumberLessThan
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1065,6 +1116,7 @@ public partial class V1api20200601storageEventSubscriptionStatusFilterAdvancedFi
     public double? Value { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.NumberLessThanOrEqualsAdvancedFilter_STATUS</summary>
 public partial class V1api20200601storageEventSubscriptionStatusFilterAdvancedFiltersNumberLessThanOrEquals
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1084,6 +1136,7 @@ public partial class V1api20200601storageEventSubscriptionStatusFilterAdvancedFi
     public double? Value { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.NumberNotInAdvancedFilter_STATUS</summary>
 public partial class V1api20200601storageEventSubscriptionStatusFilterAdvancedFiltersNumberNotIn
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1103,6 +1156,7 @@ public partial class V1api20200601storageEventSubscriptionStatusFilterAdvancedFi
     public IList<double>? Values { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.StringBeginsWithAdvancedFilter_STATUS</summary>
 public partial class V1api20200601storageEventSubscriptionStatusFilterAdvancedFiltersStringBeginsWith
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1122,6 +1176,7 @@ public partial class V1api20200601storageEventSubscriptionStatusFilterAdvancedFi
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.StringContainsAdvancedFilter_STATUS</summary>
 public partial class V1api20200601storageEventSubscriptionStatusFilterAdvancedFiltersStringContains
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1141,6 +1196,7 @@ public partial class V1api20200601storageEventSubscriptionStatusFilterAdvancedFi
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.StringEndsWithAdvancedFilter_STATUS</summary>
 public partial class V1api20200601storageEventSubscriptionStatusFilterAdvancedFiltersStringEndsWith
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1160,6 +1216,7 @@ public partial class V1api20200601storageEventSubscriptionStatusFilterAdvancedFi
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.StringInAdvancedFilter_STATUS</summary>
 public partial class V1api20200601storageEventSubscriptionStatusFilterAdvancedFiltersStringIn
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1179,6 +1236,7 @@ public partial class V1api20200601storageEventSubscriptionStatusFilterAdvancedFi
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.StringNotInAdvancedFilter_STATUS</summary>
 public partial class V1api20200601storageEventSubscriptionStatusFilterAdvancedFiltersStringNotIn
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1198,6 +1256,7 @@ public partial class V1api20200601storageEventSubscriptionStatusFilterAdvancedFi
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.AdvancedFilter_STATUS</summary>
 public partial class V1api20200601storageEventSubscriptionStatusFilterAdvancedFilters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1253,6 +1312,7 @@ public partial class V1api20200601storageEventSubscriptionStatusFilterAdvancedFi
     public V1api20200601storageEventSubscriptionStatusFilterAdvancedFiltersStringNotIn? StringNotIn { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.EventSubscriptionFilter_STATUS Filter for the Event Subscription.</summary>
 public partial class V1api20200601storageEventSubscriptionStatusFilter
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1280,6 +1340,7 @@ public partial class V1api20200601storageEventSubscriptionStatusFilter
     public string? SubjectEndsWith { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.RetryPolicy_STATUS Information about the retry policy for an event subscription.</summary>
 public partial class V1api20200601storageEventSubscriptionStatusRetryPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1295,6 +1356,7 @@ public partial class V1api20200601storageEventSubscriptionStatusRetryPolicy
     public int? MaxDeliveryAttempts { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 public partial class V1api20200601storageEventSubscriptionStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1326,6 +1388,7 @@ public partial class V1api20200601storageEventSubscriptionStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.EventSubscription_STATUS Event Subscription</summary>
 public partial class V1api20200601storageEventSubscriptionStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1390,6 +1453,7 @@ public partial class V1api20200601storageEventSubscriptionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20200601.EventSubscription Generator information: - Generated from: /eventgrid/resource-manager/Microsoft.EventGrid/stable/2020-06-01/EventGrid.json - ARM URI: /{scope}/providers/Microsoft.EventGrid/eventSubscriptions/{eventSubscriptionName}</summary>
 public partial class V1api20200601storageEventSubscription : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20200601storageEventSubscriptionSpec>, IStatus<V1api20200601storageEventSubscriptionStatus>
 {
     public const string KubeApiVersion = "v1api20200601storage";

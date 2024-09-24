@@ -18,6 +18,7 @@ public enum V1beta1ResourceDeploymentScriptAzurePowerShellSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecForProviderContainer
 {
     /// <summary>Container group name, if not specified then the name will get auto-generated. For more information, please refer to the Container Configuration documentation.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecForProvid
     public string? ContainerGroupName { get; set; }
 }
 
+/// <summary>Specifies the value of the secure environment variable.</summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecForProviderEnvironmentVariableSecureValueSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -40,6 +42,7 @@ public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecForProvid
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecForProviderEnvironmentVariable
 {
     /// <summary>Specifies the name of the environment variable.</summary>
@@ -75,6 +78,7 @@ public enum V1beta1ResourceDeploymentScriptAzurePowerShellSpecForProviderIdentit
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecForProviderIdentityIdentityIdsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -88,6 +92,7 @@ public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecForProvid
     public V1beta1ResourceDeploymentScriptAzurePowerShellSpecForProviderIdentityIdentityIdsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecForProviderIdentityIdentityIdsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -119,6 +124,7 @@ public enum V1beta1ResourceDeploymentScriptAzurePowerShellSpecForProviderIdentit
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecForProviderIdentityIdentityIdsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -132,6 +138,7 @@ public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecForProvid
     public V1beta1ResourceDeploymentScriptAzurePowerShellSpecForProviderIdentityIdentityIdsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of UserAssignedIdentity in managedidentity to populate identityIds.</summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecForProviderIdentityIdentityIdsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -147,6 +154,7 @@ public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecForProvid
     public V1beta1ResourceDeploymentScriptAzurePowerShellSpecForProviderIdentityIdentityIdsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecForProviderIdentity
 {
     /// <summary>Specifies the list of user-assigned managed identity IDs associated with the resource. Changing this forces a new resource to be created.</summary>
@@ -186,6 +194,7 @@ public enum V1beta1ResourceDeploymentScriptAzurePowerShellSpecForProviderResourc
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -199,6 +208,7 @@ public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecForProvid
     public V1beta1ResourceDeploymentScriptAzurePowerShellSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -230,6 +240,7 @@ public enum V1beta1ResourceDeploymentScriptAzurePowerShellSpecForProviderResourc
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -243,6 +254,7 @@ public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecForProvid
     public V1beta1ResourceDeploymentScriptAzurePowerShellSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -258,6 +270,7 @@ public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecForProvid
     public V1beta1ResourceDeploymentScriptAzurePowerShellSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Specifies the storage account access key.</summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecForProviderStorageAccountKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -273,6 +286,7 @@ public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecForProvid
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecForProviderStorageAccount
 {
     /// <summary>Specifies the storage account access key.</summary>
@@ -284,6 +298,7 @@ public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecForProvid
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecForProvider
 {
     /// <summary>Specifies the cleanup preference when the script execution gets in a terminal state. Possible values are Always, OnExpiration, OnSuccess. Defaults to Always. Changing this forces a new Resource Deployment Script to be created.</summary>
@@ -363,6 +378,7 @@ public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecForProvid
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecInitProviderContainer
 {
     /// <summary>Container group name, if not specified then the name will get auto-generated. For more information, please refer to the Container Configuration documentation.</summary>
@@ -370,6 +386,7 @@ public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecInitProvi
     public string? ContainerGroupName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecInitProviderEnvironmentVariable
 {
     /// <summary>Specifies the name of the environment variable.</summary>
@@ -401,6 +418,7 @@ public enum V1beta1ResourceDeploymentScriptAzurePowerShellSpecInitProviderIdenti
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecInitProviderIdentityIdentityIdsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -414,6 +432,7 @@ public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecInitProvi
     public V1beta1ResourceDeploymentScriptAzurePowerShellSpecInitProviderIdentityIdentityIdsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecInitProviderIdentityIdentityIdsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -445,6 +464,7 @@ public enum V1beta1ResourceDeploymentScriptAzurePowerShellSpecInitProviderIdenti
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecInitProviderIdentityIdentityIdsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -458,6 +478,7 @@ public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecInitProvi
     public V1beta1ResourceDeploymentScriptAzurePowerShellSpecInitProviderIdentityIdentityIdsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of UserAssignedIdentity in managedidentity to populate identityIds.</summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecInitProviderIdentityIdentityIdsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -473,6 +494,7 @@ public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecInitProvi
     public V1beta1ResourceDeploymentScriptAzurePowerShellSpecInitProviderIdentityIdentityIdsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecInitProviderIdentity
 {
     /// <summary>Specifies the list of user-assigned managed identity IDs associated with the resource. Changing this forces a new resource to be created.</summary>
@@ -512,6 +534,7 @@ public enum V1beta1ResourceDeploymentScriptAzurePowerShellSpecInitProviderResour
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecInitProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -525,6 +548,7 @@ public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecInitProvi
     public V1beta1ResourceDeploymentScriptAzurePowerShellSpecInitProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecInitProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -556,6 +580,7 @@ public enum V1beta1ResourceDeploymentScriptAzurePowerShellSpecInitProviderResour
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecInitProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -569,6 +594,7 @@ public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecInitProvi
     public V1beta1ResourceDeploymentScriptAzurePowerShellSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecInitProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -584,6 +610,7 @@ public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecInitProvi
     public V1beta1ResourceDeploymentScriptAzurePowerShellSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecInitProviderStorageAccount
 {
     /// <summary>Specifies the storage account name.</summary>
@@ -591,6 +618,7 @@ public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecInitProvi
     public string? Name { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecInitProvider
 {
     /// <summary>Specifies the cleanup preference when the script execution gets in a terminal state. Possible values are Always, OnExpiration, OnSuccess. Defaults to Always. Changing this forces a new Resource Deployment Script to be created.</summary>
@@ -712,6 +740,7 @@ public enum V1beta1ResourceDeploymentScriptAzurePowerShellSpecProviderConfigRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -725,6 +754,7 @@ public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecProviderC
     public V1beta1ResourceDeploymentScriptAzurePowerShellSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -756,6 +786,7 @@ public enum V1beta1ResourceDeploymentScriptAzurePowerShellSpecPublishConnectionD
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -769,6 +800,7 @@ public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecPublishCo
     public V1beta1ResourceDeploymentScriptAzurePowerShellSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -780,6 +812,7 @@ public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecPublishCo
     public V1beta1ResourceDeploymentScriptAzurePowerShellSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -795,6 +828,7 @@ public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecPublishCo
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -810,6 +844,7 @@ public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecPublishCo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -821,6 +856,7 @@ public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpecWriteConn
     public string Namespace { get; set; }
 }
 
+/// <summary>ResourceDeploymentScriptAzurePowerShellSpec defines the desired state of ResourceDeploymentScriptAzurePowerShell</summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -853,6 +889,7 @@ public partial class V1beta1ResourceDeploymentScriptAzurePowerShellSpec
     public V1beta1ResourceDeploymentScriptAzurePowerShellSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellStatusAtProviderContainer
 {
     /// <summary>Container group name, if not specified then the name will get auto-generated. For more information, please refer to the Container Configuration documentation.</summary>
@@ -860,6 +897,7 @@ public partial class V1beta1ResourceDeploymentScriptAzurePowerShellStatusAtProvi
     public string? ContainerGroupName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellStatusAtProviderEnvironmentVariable
 {
     /// <summary>Specifies the name of the environment variable.</summary>
@@ -871,6 +909,7 @@ public partial class V1beta1ResourceDeploymentScriptAzurePowerShellStatusAtProvi
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellStatusAtProviderIdentity
 {
     /// <summary>Specifies the list of user-assigned managed identity IDs associated with the resource. Changing this forces a new resource to be created.</summary>
@@ -882,6 +921,7 @@ public partial class V1beta1ResourceDeploymentScriptAzurePowerShellStatusAtProvi
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellStatusAtProviderStorageAccount
 {
     /// <summary>Specifies the storage account name.</summary>
@@ -889,6 +929,7 @@ public partial class V1beta1ResourceDeploymentScriptAzurePowerShellStatusAtProvi
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellStatusAtProvider
 {
     /// <summary>Specifies the cleanup preference when the script execution gets in a terminal state. Possible values are Always, OnExpiration, OnSuccess. Defaults to Always. Changing this forces a new Resource Deployment Script to be created.</summary>
@@ -968,6 +1009,7 @@ public partial class V1beta1ResourceDeploymentScriptAzurePowerShellStatusAtProvi
     public string? Version { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -995,6 +1037,7 @@ public partial class V1beta1ResourceDeploymentScriptAzurePowerShellStatusConditi
     public string Type { get; set; }
 }
 
+/// <summary>ResourceDeploymentScriptAzurePowerShellStatus defines the observed state of ResourceDeploymentScriptAzurePowerShell.</summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShellStatus
 {
     /// <summary></summary>
@@ -1011,6 +1054,7 @@ public partial class V1beta1ResourceDeploymentScriptAzurePowerShellStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ResourceDeploymentScriptAzurePowerShell is the Schema for the ResourceDeploymentScriptAzurePowerShells API. Manages a Resource Deployment Script of Azure PowerShell.</summary>
 public partial class V1beta1ResourceDeploymentScriptAzurePowerShell : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ResourceDeploymentScriptAzurePowerShellSpec>, IStatus<V1beta1ResourceDeploymentScriptAzurePowerShellStatus>
 {
     public const string KubeApiVersion = "v1beta1";

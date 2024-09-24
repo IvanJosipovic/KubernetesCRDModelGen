@@ -38,6 +38,7 @@ public enum V1beta1BackupInstancePostgreSQLSpecForProviderBackupPolicyIdRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupInstancePostgreSQLSpecForProviderBackupPolicyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1BackupInstancePostgreSQLSpecForProviderBackupPolicyI
     public V1beta1BackupInstancePostgreSQLSpecForProviderBackupPolicyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a BackupPolicyPostgreSQL in dataprotection to populate backupPolicyId.</summary>
 public partial class V1beta1BackupInstancePostgreSQLSpecForProviderBackupPolicyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1BackupInstancePostgreSQLSpecForProviderBackupPolicyIdSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupInstancePostgreSQLSpecForProviderBackupPolicyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1BackupInstancePostgreSQLSpecForProviderBackupPolicyI
     public V1beta1BackupInstancePostgreSQLSpecForProviderBackupPolicyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a BackupPolicyPostgreSQL in dataprotection to populate backupPolicyId.</summary>
 public partial class V1beta1BackupInstancePostgreSQLSpecForProviderBackupPolicyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseCredentialKeyV
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseCredentialKeyVaultSecretIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseCrede
     public V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseCredentialKeyVaultSecretIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Secret in keyvault to populate databaseCredentialKeyVaultSecretId.</summary>
 public partial class V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseCredentialKeyVaultSecretIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseCredentialKeyV
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseCredentialKeyVaultSecretIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseCrede
     public V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseCredentialKeyVaultSecretIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Secret in keyvault to populate databaseCredentialKeyVaultSecretId.</summary>
 public partial class V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseCredentialKeyVaultSecretIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseIdRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseIdRef
     public V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Database in dbforpostgresql to populate databaseId.</summary>
 public partial class V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseIdSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseIdSel
     public V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Database in dbforpostgresql to populate databaseId.</summary>
 public partial class V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -314,6 +326,7 @@ public enum V1beta1BackupInstancePostgreSQLSpecForProviderVaultIdRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupInstancePostgreSQLSpecForProviderVaultIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -327,6 +340,7 @@ public partial class V1beta1BackupInstancePostgreSQLSpecForProviderVaultIdRefPol
     public V1beta1BackupInstancePostgreSQLSpecForProviderVaultIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a BackupVault in dataprotection to populate vaultId.</summary>
 public partial class V1beta1BackupInstancePostgreSQLSpecForProviderVaultIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -358,6 +372,7 @@ public enum V1beta1BackupInstancePostgreSQLSpecForProviderVaultIdSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupInstancePostgreSQLSpecForProviderVaultIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -371,6 +386,7 @@ public partial class V1beta1BackupInstancePostgreSQLSpecForProviderVaultIdSelect
     public V1beta1BackupInstancePostgreSQLSpecForProviderVaultIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a BackupVault in dataprotection to populate vaultId.</summary>
 public partial class V1beta1BackupInstancePostgreSQLSpecForProviderVaultIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -386,6 +402,7 @@ public partial class V1beta1BackupInstancePostgreSQLSpecForProviderVaultIdSelect
     public V1beta1BackupInstancePostgreSQLSpecForProviderVaultIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupInstancePostgreSQLSpecForProvider
 {
     /// <summary>The ID of the Backup Policy.</summary>
@@ -461,6 +478,7 @@ public enum V1beta1BackupInstancePostgreSQLSpecInitProviderBackupPolicyIdRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderBackupPolicyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -474,6 +492,7 @@ public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderBackupPolicy
     public V1beta1BackupInstancePostgreSQLSpecInitProviderBackupPolicyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a BackupPolicyPostgreSQL in dataprotection to populate backupPolicyId.</summary>
 public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderBackupPolicyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -505,6 +524,7 @@ public enum V1beta1BackupInstancePostgreSQLSpecInitProviderBackupPolicyIdSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderBackupPolicyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -518,6 +538,7 @@ public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderBackupPolicy
     public V1beta1BackupInstancePostgreSQLSpecInitProviderBackupPolicyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a BackupPolicyPostgreSQL in dataprotection to populate backupPolicyId.</summary>
 public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderBackupPolicyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -553,6 +574,7 @@ public enum V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseCredentialKey
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseCredentialKeyVaultSecretIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -566,6 +588,7 @@ public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseCred
     public V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseCredentialKeyVaultSecretIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Secret in keyvault to populate databaseCredentialKeyVaultSecretId.</summary>
 public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseCredentialKeyVaultSecretIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -597,6 +620,7 @@ public enum V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseCredentialKey
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseCredentialKeyVaultSecretIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -610,6 +634,7 @@ public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseCred
     public V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseCredentialKeyVaultSecretIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Secret in keyvault to populate databaseCredentialKeyVaultSecretId.</summary>
 public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseCredentialKeyVaultSecretIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -645,6 +670,7 @@ public enum V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseIdRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -658,6 +684,7 @@ public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseIdRe
     public V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Database in dbforpostgresql to populate databaseId.</summary>
 public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -689,6 +716,7 @@ public enum V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseIdSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -702,6 +730,7 @@ public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseIdSe
     public V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Database in dbforpostgresql to populate databaseId.</summary>
 public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -717,6 +746,7 @@ public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseIdSe
     public V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1BackupInstancePostgreSQLSpecInitProvider
 {
     /// <summary>The ID of the Backup Policy.</summary>
@@ -802,6 +832,7 @@ public enum V1beta1BackupInstancePostgreSQLSpecProviderConfigRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupInstancePostgreSQLSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -815,6 +846,7 @@ public partial class V1beta1BackupInstancePostgreSQLSpecProviderConfigRefPolicy
     public V1beta1BackupInstancePostgreSQLSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1BackupInstancePostgreSQLSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -846,6 +878,7 @@ public enum V1beta1BackupInstancePostgreSQLSpecPublishConnectionDetailsToConfigR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupInstancePostgreSQLSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -859,6 +892,7 @@ public partial class V1beta1BackupInstancePostgreSQLSpecPublishConnectionDetails
     public V1beta1BackupInstancePostgreSQLSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1BackupInstancePostgreSQLSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -870,6 +904,7 @@ public partial class V1beta1BackupInstancePostgreSQLSpecPublishConnectionDetails
     public V1beta1BackupInstancePostgreSQLSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1BackupInstancePostgreSQLSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -885,6 +920,7 @@ public partial class V1beta1BackupInstancePostgreSQLSpecPublishConnectionDetails
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1BackupInstancePostgreSQLSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -900,6 +936,7 @@ public partial class V1beta1BackupInstancePostgreSQLSpecPublishConnectionDetails
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1BackupInstancePostgreSQLSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -911,6 +948,7 @@ public partial class V1beta1BackupInstancePostgreSQLSpecWriteConnectionSecretToR
     public string Namespace { get; set; }
 }
 
+/// <summary>BackupInstancePostgreSQLSpec defines the desired state of BackupInstancePostgreSQL</summary>
 public partial class V1beta1BackupInstancePostgreSQLSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -943,6 +981,7 @@ public partial class V1beta1BackupInstancePostgreSQLSpec
     public V1beta1BackupInstancePostgreSQLSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupInstancePostgreSQLStatusAtProvider
 {
     /// <summary>The ID of the Backup Policy.</summary>
@@ -970,6 +1009,7 @@ public partial class V1beta1BackupInstancePostgreSQLStatusAtProvider
     public string? VaultId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1BackupInstancePostgreSQLStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -997,6 +1037,7 @@ public partial class V1beta1BackupInstancePostgreSQLStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>BackupInstancePostgreSQLStatus defines the observed state of BackupInstancePostgreSQL.</summary>
 public partial class V1beta1BackupInstancePostgreSQLStatus
 {
     /// <summary></summary>
@@ -1013,6 +1054,7 @@ public partial class V1beta1BackupInstancePostgreSQLStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>BackupInstancePostgreSQL is the Schema for the BackupInstancePostgreSQLs API. Manages a Backup Instance to back up PostgreSQL.</summary>
 public partial class V1beta1BackupInstancePostgreSQL : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BackupInstancePostgreSQLSpec>, IStatus<V1beta1BackupInstancePostgreSQLStatus>
 {
     public const string KubeApiVersion = "v1beta1";

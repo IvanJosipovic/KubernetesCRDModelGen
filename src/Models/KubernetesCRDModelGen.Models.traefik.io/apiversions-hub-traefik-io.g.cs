@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.hub.traefik.io;
+/// <summary>OperationMatcher defines criteria for matching an OpenAPI operation.</summary>
 public partial class V1alpha1APIVersionSpecOpenApiSpecOperationSetsMatchers
 {
     /// <summary>Methods specifies the HTTP methods to be included for selection.</summary>
@@ -27,6 +28,7 @@ public partial class V1alpha1APIVersionSpecOpenApiSpecOperationSetsMatchers
     public string? PathRegex { get; set; }
 }
 
+/// <summary>OperationSet gives a name to a set of matching OpenAPI operations. This set of operations can then be referenced for granular filtering in APIAccesses.</summary>
 public partial class V1alpha1APIVersionSpecOpenApiSpecOperationSets
 {
     /// <summary>Matchers defines a list of alternative rules for matching OpenAPI operations.</summary>
@@ -38,6 +40,7 @@ public partial class V1alpha1APIVersionSpecOpenApiSpecOperationSets
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1APIVersionSpecOpenApiSpecOverrideServers
 {
     /// <summary></summary>
@@ -45,6 +48,7 @@ public partial class V1alpha1APIVersionSpecOpenApiSpecOverrideServers
     public string Url { get; set; }
 }
 
+/// <summary>Override holds data used to override OpenAPI specification.</summary>
 public partial class V1alpha1APIVersionSpecOpenApiSpecOverride
 {
     /// <summary></summary>
@@ -52,6 +56,7 @@ public partial class V1alpha1APIVersionSpecOpenApiSpecOverride
     public IList<V1alpha1APIVersionSpecOpenApiSpecOverrideServers> Servers { get; set; }
 }
 
+/// <summary>OpenAPISpec defines the API contract as an OpenAPI specification.</summary>
 public partial class V1alpha1APIVersionSpecOpenApiSpec
 {
     /// <summary>OperationSets defines the sets of operations to be referenced for granular filtering in APIAccesses.</summary>
@@ -71,6 +76,7 @@ public partial class V1alpha1APIVersionSpecOpenApiSpec
     public string? Url { get; set; }
 }
 
+/// <summary>The desired behavior of this APIVersion.</summary>
 public partial class V1alpha1APIVersionSpec
 {
     /// <summary>OpenAPISpec defines the API contract as an OpenAPI specification.</summary>
@@ -86,6 +92,7 @@ public partial class V1alpha1APIVersionSpec
     public string? Title { get; set; }
 }
 
+/// <summary>The current status of this APIVersion.</summary>
 public partial class V1alpha1APIVersionStatus
 {
     /// <summary>Hash is a hash representing the APIVersion.</summary>
@@ -102,6 +109,7 @@ public partial class V1alpha1APIVersionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>APIVersion defines a version of an API.</summary>
 public partial class V1alpha1APIVersion : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1APIVersionSpec>, IStatus<V1alpha1APIVersionStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

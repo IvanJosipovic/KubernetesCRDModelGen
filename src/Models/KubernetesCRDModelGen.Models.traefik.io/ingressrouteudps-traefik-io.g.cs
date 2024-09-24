@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.traefik.io;
+/// <summary>ServiceUDP defines an upstream UDP service to proxy traffic to.</summary>
 public partial class V1alpha1IngressRouteUDPSpecRoutesServices
 {
     /// <summary>Name defines the name of the referenced Kubernetes Service.</summary>
@@ -35,6 +36,7 @@ public partial class V1alpha1IngressRouteUDPSpecRoutesServices
     public int? Weight { get; set; }
 }
 
+/// <summary>RouteUDP holds the UDP route configuration.</summary>
 public partial class V1alpha1IngressRouteUDPSpecRoutes
 {
     /// <summary>Services defines the list of UDP services.</summary>
@@ -42,6 +44,7 @@ public partial class V1alpha1IngressRouteUDPSpecRoutes
     public IList<V1alpha1IngressRouteUDPSpecRoutesServices>? Services { get; set; }
 }
 
+/// <summary>IngressRouteUDPSpec defines the desired state of a IngressRouteUDP.</summary>
 public partial class V1alpha1IngressRouteUDPSpec
 {
     /// <summary>EntryPoints defines the list of entry point names to bind to. Entry points have to be configured in the static configuration. More info: https://doc.traefik.io/traefik/v3.1/routing/entrypoints/ Default: all.</summary>
@@ -54,6 +57,7 @@ public partial class V1alpha1IngressRouteUDPSpec
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>IngressRouteUDP is a CRD implementation of a Traefik UDP Router.</summary>
 public partial class V1alpha1IngressRouteUDP : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1IngressRouteUDPSpec>
 {
     public const string KubeApiVersion = "v1alpha1";

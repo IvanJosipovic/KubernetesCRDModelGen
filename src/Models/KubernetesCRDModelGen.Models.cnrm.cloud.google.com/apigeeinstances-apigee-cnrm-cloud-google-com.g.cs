@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigee.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1alpha1ApigeeInstanceSpec
 {
     /// <summary>Immutable. Optional. Customer accept list represents the list of projects (id/number) on customer side that can privately connect to the service attachment. It is an optional field which the customers can provide during the instance creation. By default, the customer project associated with the Apigee organization will be included to the list.</summary>
@@ -47,6 +48,7 @@ public partial class V1alpha1ApigeeInstanceSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApigeeInstanceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -70,6 +72,7 @@ public partial class V1alpha1ApigeeInstanceStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApigeeInstanceStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -94,6 +97,7 @@ public partial class V1alpha1ApigeeInstanceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1ApigeeInstance : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ApigeeInstanceSpec>, IStatus<V1alpha1ApigeeInstanceStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

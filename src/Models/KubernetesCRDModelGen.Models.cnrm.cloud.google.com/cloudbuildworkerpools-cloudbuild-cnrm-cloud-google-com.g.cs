@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudbuild.cnrm.cloud.google.com;
+/// <summary>Immutable. The network definition that the workers are peered to. If this section is left empty, the workers will be peered to `WorkerPool.project_id` on the service producer network.</summary>
 public partial class V1beta1CloudBuildWorkerPoolSpecPrivatePoolV1ConfigNetworkConfigPeeredNetworkRef
 {
     /// <summary>A reference to an externally managed Compute Network resource. Should be in the format `projects/&lt;projectID&gt;/global/networks/&lt;network&gt;`.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1CloudBuildWorkerPoolSpecPrivatePoolV1ConfigNetworkCo
     public string? Namespace { get; set; }
 }
 
+/// <summary>Network configuration for the pool.</summary>
 public partial class V1beta1CloudBuildWorkerPoolSpecPrivatePoolV1ConfigNetworkConfig
 {
     /// <summary>Option to configure network egress for the workers.</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1CloudBuildWorkerPoolSpecPrivatePoolV1ConfigNetworkCo
     public V1beta1CloudBuildWorkerPoolSpecPrivatePoolV1ConfigNetworkConfigPeeredNetworkRef? PeeredNetworkRef { get; set; }
 }
 
+/// <summary>Machine configuration for the workers in the pool.</summary>
 public partial class V1beta1CloudBuildWorkerPoolSpecPrivatePoolV1ConfigWorkerConfig
 {
     /// <summary>Size of the disk attached to the worker, in GB. See [Worker pool config file](https://cloud.google.com/build/docs/private-pools/worker-pool-config-file-schema). Specify a value of up to 2000. If `0` is specified, Cloud Build will use a standard disk size.</summary>
@@ -49,6 +52,7 @@ public partial class V1beta1CloudBuildWorkerPoolSpecPrivatePoolV1ConfigWorkerCon
     public string? MachineType { get; set; }
 }
 
+/// <summary>Legacy Private Pool configuration.</summary>
 public partial class V1beta1CloudBuildWorkerPoolSpecPrivatePoolV1Config
 {
     /// <summary>Network configuration for the pool.</summary>
@@ -60,6 +64,7 @@ public partial class V1beta1CloudBuildWorkerPoolSpecPrivatePoolV1Config
     public V1beta1CloudBuildWorkerPoolSpecPrivatePoolV1ConfigWorkerConfig WorkerConfig { get; set; }
 }
 
+/// <summary>The Project that this resource belongs to.</summary>
 public partial class V1beta1CloudBuildWorkerPoolSpecProjectRef
 {
     /// <summary>The `projectID` field of a project, when not managed by Config Connector.</summary>
@@ -79,6 +84,7 @@ public partial class V1beta1CloudBuildWorkerPoolSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>CloudBuildWorkerPoolSpec defines the desired state of Instance</summary>
 public partial class V1beta1CloudBuildWorkerPoolSpec
 {
     /// <summary>A user-specified, human-readable name for the `WorkerPool`. If provided, this value must be 1-63 characters.</summary>
@@ -102,6 +108,7 @@ public partial class V1beta1CloudBuildWorkerPoolSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CloudBuildWorkerPoolStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -125,6 +132,7 @@ public partial class V1beta1CloudBuildWorkerPoolStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary>Network configuration for the pool.</summary>
 public partial class V1beta1CloudBuildWorkerPoolStatusObservedStateNetworkConfig
 {
     /// <summary>Option to configure network egress for the workers.</summary>
@@ -140,6 +148,7 @@ public partial class V1beta1CloudBuildWorkerPoolStatusObservedStateNetworkConfig
     public string? PeeredNetworkIPRange { get; set; }
 }
 
+/// <summary>Machine configuration for the workers in the pool.</summary>
 public partial class V1beta1CloudBuildWorkerPoolStatusObservedStateWorkerConfig
 {
     /// <summary>Size of the disk attached to the worker, in GB. See [Worker pool config file](https://cloud.google.com/build/docs/private-pools/worker-pool-config-file-schema). Specify a value of up to 2000. If `0` is specified, Cloud Build will use a standard disk size.</summary>
@@ -151,6 +160,7 @@ public partial class V1beta1CloudBuildWorkerPoolStatusObservedStateWorkerConfig
     public string? MachineType { get; set; }
 }
 
+/// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 public partial class V1beta1CloudBuildWorkerPoolStatusObservedState
 {
     /// <summary>The creation timestamp of the workerpool.</summary>
@@ -174,6 +184,7 @@ public partial class V1beta1CloudBuildWorkerPoolStatusObservedState
     public V1beta1CloudBuildWorkerPoolStatusObservedStateWorkerConfig WorkerConfig { get; set; }
 }
 
+/// <summary>CloudBuildWorkerPoolStatus defines the observed state of Instance</summary>
 public partial class V1beta1CloudBuildWorkerPoolStatus
 {
     /// <summary>Conditions represent the latest available observations of the object's current state.</summary>
@@ -194,6 +205,7 @@ public partial class V1beta1CloudBuildWorkerPoolStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>CloudBuildWorkerPool is the Schema for the CloudBuild WorkerPool API</summary>
 public partial class V1beta1CloudBuildWorkerPool : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1CloudBuildWorkerPoolSpec>, IStatus<V1beta1CloudBuildWorkerPoolStatus>
 {
     public const string KubeApiVersion = "v1beta1";

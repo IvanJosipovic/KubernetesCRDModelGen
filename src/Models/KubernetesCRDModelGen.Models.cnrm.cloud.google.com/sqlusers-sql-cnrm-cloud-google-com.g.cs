@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1SQLUserSpecInstanceRef
 {
     /// <summary>Allowed value: The `name` field of a `SQLInstance` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1SQLUserSpecInstanceRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 public partial class V1beta1SQLUserSpecPasswordValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -34,6 +36,7 @@ public partial class V1beta1SQLUserSpecPasswordValueFromSecretKeyRef
     public string Name { get; set; }
 }
 
+/// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 public partial class V1beta1SQLUserSpecPasswordValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -41,6 +44,7 @@ public partial class V1beta1SQLUserSpecPasswordValueFrom
     public V1beta1SQLUserSpecPasswordValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary>The password for the user. Can be updated. For Postgres instances this is a Required field, unless type is set to                 either CLOUD_IAM_USER or CLOUD_IAM_SERVICE_ACCOUNT.</summary>
 public partial class V1beta1SQLUserSpecPassword
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -52,6 +56,7 @@ public partial class V1beta1SQLUserSpecPassword
     public V1beta1SQLUserSpecPasswordValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLUserSpecPasswordPolicyStatus
 {
     /// <summary>If true, user does not have login privileges.</summary>
@@ -63,6 +68,7 @@ public partial class V1beta1SQLUserSpecPasswordPolicyStatus
     public string? PasswordExpirationTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLUserSpecPasswordPolicy
 {
     /// <summary>Number of failed attempts allowed before the user get locked.</summary>
@@ -86,6 +92,7 @@ public partial class V1beta1SQLUserSpecPasswordPolicy
     public IList<V1beta1SQLUserSpecPasswordPolicyStatus>? Status { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLUserSpec
 {
     /// <summary>Immutable. The host the user can connect from. This is only supported for MySQL instances. Don't set this field for PostgreSQL instances. Can be an IP address. Changing this forces a new resource to be created.</summary>
@@ -113,6 +120,7 @@ public partial class V1beta1SQLUserSpec
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLUserStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -136,6 +144,7 @@ public partial class V1beta1SQLUserStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLUserStatusSqlServerUserDetails
 {
     /// <summary>If the user has been disabled.</summary>
@@ -147,6 +156,7 @@ public partial class V1beta1SQLUserStatusSqlServerUserDetails
     public IList<string>? ServerRoles { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLUserStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -163,6 +173,7 @@ public partial class V1beta1SQLUserStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1SQLUser : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SQLUserSpec>, IStatus<V1beta1SQLUserStatus>
 {
     public const string KubeApiVersion = "v1beta1";

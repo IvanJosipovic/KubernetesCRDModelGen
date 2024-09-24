@@ -38,6 +38,7 @@ public enum V1beta1RolePolicyAttachmentSpecForProviderPolicyArnRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RolePolicyAttachmentSpecForProviderPolicyArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1RolePolicyAttachmentSpecForProviderPolicyArnRefPolic
     public V1beta1RolePolicyAttachmentSpecForProviderPolicyArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Policy in iam to populate policyArn.</summary>
 public partial class V1beta1RolePolicyAttachmentSpecForProviderPolicyArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1RolePolicyAttachmentSpecForProviderPolicyArnSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RolePolicyAttachmentSpecForProviderPolicyArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1RolePolicyAttachmentSpecForProviderPolicyArnSelector
     public V1beta1RolePolicyAttachmentSpecForProviderPolicyArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Policy in iam to populate policyArn.</summary>
 public partial class V1beta1RolePolicyAttachmentSpecForProviderPolicyArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1RolePolicyAttachmentSpecForProviderRoleRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RolePolicyAttachmentSpecForProviderRoleRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1RolePolicyAttachmentSpecForProviderRoleRefPolicy
     public V1beta1RolePolicyAttachmentSpecForProviderRoleRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate role.</summary>
 public partial class V1beta1RolePolicyAttachmentSpecForProviderRoleRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1RolePolicyAttachmentSpecForProviderRoleSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RolePolicyAttachmentSpecForProviderRoleSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1RolePolicyAttachmentSpecForProviderRoleSelectorPolic
     public V1beta1RolePolicyAttachmentSpecForProviderRoleSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate role.</summary>
 public partial class V1beta1RolePolicyAttachmentSpecForProviderRoleSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1RolePolicyAttachmentSpecForProviderRoleSelector
     public V1beta1RolePolicyAttachmentSpecForProviderRoleSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RolePolicyAttachmentSpecForProvider
 {
     /// <summary>The ARN of the policy you want to apply</summary>
@@ -249,6 +258,7 @@ public enum V1beta1RolePolicyAttachmentSpecInitProviderPolicyArnRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RolePolicyAttachmentSpecInitProviderPolicyArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -262,6 +272,7 @@ public partial class V1beta1RolePolicyAttachmentSpecInitProviderPolicyArnRefPoli
     public V1beta1RolePolicyAttachmentSpecInitProviderPolicyArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Policy in iam to populate policyArn.</summary>
 public partial class V1beta1RolePolicyAttachmentSpecInitProviderPolicyArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -293,6 +304,7 @@ public enum V1beta1RolePolicyAttachmentSpecInitProviderPolicyArnSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RolePolicyAttachmentSpecInitProviderPolicyArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -306,6 +318,7 @@ public partial class V1beta1RolePolicyAttachmentSpecInitProviderPolicyArnSelecto
     public V1beta1RolePolicyAttachmentSpecInitProviderPolicyArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Policy in iam to populate policyArn.</summary>
 public partial class V1beta1RolePolicyAttachmentSpecInitProviderPolicyArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -341,6 +354,7 @@ public enum V1beta1RolePolicyAttachmentSpecInitProviderRoleRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RolePolicyAttachmentSpecInitProviderRoleRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -354,6 +368,7 @@ public partial class V1beta1RolePolicyAttachmentSpecInitProviderRoleRefPolicy
     public V1beta1RolePolicyAttachmentSpecInitProviderRoleRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate role.</summary>
 public partial class V1beta1RolePolicyAttachmentSpecInitProviderRoleRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -385,6 +400,7 @@ public enum V1beta1RolePolicyAttachmentSpecInitProviderRoleSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RolePolicyAttachmentSpecInitProviderRoleSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -398,6 +414,7 @@ public partial class V1beta1RolePolicyAttachmentSpecInitProviderRoleSelectorPoli
     public V1beta1RolePolicyAttachmentSpecInitProviderRoleSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate role.</summary>
 public partial class V1beta1RolePolicyAttachmentSpecInitProviderRoleSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -413,6 +430,7 @@ public partial class V1beta1RolePolicyAttachmentSpecInitProviderRoleSelector
     public V1beta1RolePolicyAttachmentSpecInitProviderRoleSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1RolePolicyAttachmentSpecInitProvider
 {
     /// <summary>The ARN of the policy you want to apply</summary>
@@ -482,6 +500,7 @@ public enum V1beta1RolePolicyAttachmentSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RolePolicyAttachmentSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -495,6 +514,7 @@ public partial class V1beta1RolePolicyAttachmentSpecProviderConfigRefPolicy
     public V1beta1RolePolicyAttachmentSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1RolePolicyAttachmentSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -526,6 +546,7 @@ public enum V1beta1RolePolicyAttachmentSpecPublishConnectionDetailsToConfigRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RolePolicyAttachmentSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -539,6 +560,7 @@ public partial class V1beta1RolePolicyAttachmentSpecPublishConnectionDetailsToCo
     public V1beta1RolePolicyAttachmentSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1RolePolicyAttachmentSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -550,6 +572,7 @@ public partial class V1beta1RolePolicyAttachmentSpecPublishConnectionDetailsToCo
     public V1beta1RolePolicyAttachmentSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1RolePolicyAttachmentSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -565,6 +588,7 @@ public partial class V1beta1RolePolicyAttachmentSpecPublishConnectionDetailsToMe
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1RolePolicyAttachmentSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -580,6 +604,7 @@ public partial class V1beta1RolePolicyAttachmentSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1RolePolicyAttachmentSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -591,6 +616,7 @@ public partial class V1beta1RolePolicyAttachmentSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>RolePolicyAttachmentSpec defines the desired state of RolePolicyAttachment</summary>
 public partial class V1beta1RolePolicyAttachmentSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -623,6 +649,7 @@ public partial class V1beta1RolePolicyAttachmentSpec
     public V1beta1RolePolicyAttachmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RolePolicyAttachmentStatusAtProvider
 {
     /// <summary></summary>
@@ -638,6 +665,7 @@ public partial class V1beta1RolePolicyAttachmentStatusAtProvider
     public string? Role { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1RolePolicyAttachmentStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -665,6 +693,7 @@ public partial class V1beta1RolePolicyAttachmentStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>RolePolicyAttachmentStatus defines the observed state of RolePolicyAttachment.</summary>
 public partial class V1beta1RolePolicyAttachmentStatus
 {
     /// <summary></summary>
@@ -681,6 +710,7 @@ public partial class V1beta1RolePolicyAttachmentStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>RolePolicyAttachment is the Schema for the RolePolicyAttachments API. Attaches a Managed IAM Policy to an IAM role</summary>
 public partial class V1beta1RolePolicyAttachment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1RolePolicyAttachmentSpec>, IStatus<V1beta1RolePolicyAttachmentStatus>
 {
     public const string KubeApiVersion = "v1beta1";

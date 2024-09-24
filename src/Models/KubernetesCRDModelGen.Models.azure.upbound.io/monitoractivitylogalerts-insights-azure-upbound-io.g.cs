@@ -38,6 +38,7 @@ public enum V1beta1MonitorActivityLogAlertSpecForProviderActionActionGroupIdRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderActionActionGroupIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1MonitorActivityLogAlertSpecForProviderActionActionGr
     public V1beta1MonitorActivityLogAlertSpecForProviderActionActionGroupIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a MonitorActionGroup in insights to populate actionGroupId.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderActionActionGroupIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1MonitorActivityLogAlertSpecForProviderActionActionGroupIdSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderActionActionGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1MonitorActivityLogAlertSpecForProviderActionActionGr
     public V1beta1MonitorActivityLogAlertSpecForProviderActionActionGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a MonitorActionGroup in insights to populate actionGroupId.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderActionActionGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1MonitorActivityLogAlertSpecForProviderActionActionGr
     public V1beta1MonitorActivityLogAlertSpecForProviderActionActionGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderAction
 {
     /// <summary>The ID of the Action Group can be sourced from the .</summary>
@@ -129,6 +134,7 @@ public partial class V1beta1MonitorActivityLogAlertSpecForProviderAction
     public IDictionary<string, string>? WebhookProperties { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderCriteriaResourceHealth
 {
     /// <summary>The current resource health statuses that will log an alert. Possible values are Available, Degraded, Unavailable and Unknown.</summary>
@@ -164,6 +170,7 @@ public enum V1beta1MonitorActivityLogAlertSpecForProviderCriteriaResourceIdRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderCriteriaResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -177,6 +184,7 @@ public partial class V1beta1MonitorActivityLogAlertSpecForProviderCriteriaResour
     public V1beta1MonitorActivityLogAlertSpecForProviderCriteriaResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in storage to populate resourceId.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderCriteriaResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -208,6 +216,7 @@ public enum V1beta1MonitorActivityLogAlertSpecForProviderCriteriaResourceIdSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderCriteriaResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -221,6 +230,7 @@ public partial class V1beta1MonitorActivityLogAlertSpecForProviderCriteriaResour
     public V1beta1MonitorActivityLogAlertSpecForProviderCriteriaResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in storage to populate resourceId.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderCriteriaResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -236,6 +246,7 @@ public partial class V1beta1MonitorActivityLogAlertSpecForProviderCriteriaResour
     public V1beta1MonitorActivityLogAlertSpecForProviderCriteriaResourceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderCriteriaServiceHealth
 {
     /// <summary>Events this alert will monitor Possible values are Incident, Maintenance, Informational, ActionRequired and Security.</summary>
@@ -251,6 +262,7 @@ public partial class V1beta1MonitorActivityLogAlertSpecForProviderCriteriaServic
     public IList<string>? Services { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderCriteria
 {
     /// <summary>The email address or Azure Active Directory identifier of the user who performed the operation.</summary>
@@ -370,6 +382,7 @@ public enum V1beta1MonitorActivityLogAlertSpecForProviderResourceGroupNameRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -383,6 +396,7 @@ public partial class V1beta1MonitorActivityLogAlertSpecForProviderResourceGroupN
     public V1beta1MonitorActivityLogAlertSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -414,6 +428,7 @@ public enum V1beta1MonitorActivityLogAlertSpecForProviderResourceGroupNameSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -427,6 +442,7 @@ public partial class V1beta1MonitorActivityLogAlertSpecForProviderResourceGroupN
     public V1beta1MonitorActivityLogAlertSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -462,6 +478,7 @@ public enum V1beta1MonitorActivityLogAlertSpecForProviderScopesRefsPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderScopesRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -475,6 +492,7 @@ public partial class V1beta1MonitorActivityLogAlertSpecForProviderScopesRefsPoli
     public V1beta1MonitorActivityLogAlertSpecForProviderScopesRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderScopesRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -506,6 +524,7 @@ public enum V1beta1MonitorActivityLogAlertSpecForProviderScopesSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderScopesSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -519,6 +538,7 @@ public partial class V1beta1MonitorActivityLogAlertSpecForProviderScopesSelector
     public V1beta1MonitorActivityLogAlertSpecForProviderScopesSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of ResourceGroup in azure to populate scopes.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecForProviderScopesSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -534,6 +554,7 @@ public partial class V1beta1MonitorActivityLogAlertSpecForProviderScopesSelector
     public V1beta1MonitorActivityLogAlertSpecForProviderScopesSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActivityLogAlertSpecForProvider
 {
     /// <summary>One or more action blocks as defined below.</summary>
@@ -605,6 +626,7 @@ public enum V1beta1MonitorActivityLogAlertSpecInitProviderActionActionGroupIdRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderActionActionGroupIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -618,6 +640,7 @@ public partial class V1beta1MonitorActivityLogAlertSpecInitProviderActionActionG
     public V1beta1MonitorActivityLogAlertSpecInitProviderActionActionGroupIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a MonitorActionGroup in insights to populate actionGroupId.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderActionActionGroupIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -649,6 +672,7 @@ public enum V1beta1MonitorActivityLogAlertSpecInitProviderActionActionGroupIdSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderActionActionGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -662,6 +686,7 @@ public partial class V1beta1MonitorActivityLogAlertSpecInitProviderActionActionG
     public V1beta1MonitorActivityLogAlertSpecInitProviderActionActionGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a MonitorActionGroup in insights to populate actionGroupId.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderActionActionGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -677,6 +702,7 @@ public partial class V1beta1MonitorActivityLogAlertSpecInitProviderActionActionG
     public V1beta1MonitorActivityLogAlertSpecInitProviderActionActionGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderAction
 {
     /// <summary>The ID of the Action Group can be sourced from the .</summary>
@@ -696,6 +722,7 @@ public partial class V1beta1MonitorActivityLogAlertSpecInitProviderAction
     public IDictionary<string, string>? WebhookProperties { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderCriteriaResourceHealth
 {
     /// <summary>The current resource health statuses that will log an alert. Possible values are Available, Degraded, Unavailable and Unknown.</summary>
@@ -731,6 +758,7 @@ public enum V1beta1MonitorActivityLogAlertSpecInitProviderCriteriaResourceIdRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderCriteriaResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -744,6 +772,7 @@ public partial class V1beta1MonitorActivityLogAlertSpecInitProviderCriteriaResou
     public V1beta1MonitorActivityLogAlertSpecInitProviderCriteriaResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in storage to populate resourceId.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderCriteriaResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -775,6 +804,7 @@ public enum V1beta1MonitorActivityLogAlertSpecInitProviderCriteriaResourceIdSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderCriteriaResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -788,6 +818,7 @@ public partial class V1beta1MonitorActivityLogAlertSpecInitProviderCriteriaResou
     public V1beta1MonitorActivityLogAlertSpecInitProviderCriteriaResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in storage to populate resourceId.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderCriteriaResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -803,6 +834,7 @@ public partial class V1beta1MonitorActivityLogAlertSpecInitProviderCriteriaResou
     public V1beta1MonitorActivityLogAlertSpecInitProviderCriteriaResourceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderCriteriaServiceHealth
 {
     /// <summary>Events this alert will monitor Possible values are Incident, Maintenance, Informational, ActionRequired and Security.</summary>
@@ -818,6 +850,7 @@ public partial class V1beta1MonitorActivityLogAlertSpecInitProviderCriteriaServi
     public IList<string>? Services { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderCriteria
 {
     /// <summary>The email address or Azure Active Directory identifier of the user who performed the operation.</summary>
@@ -937,6 +970,7 @@ public enum V1beta1MonitorActivityLogAlertSpecInitProviderResourceGroupNameRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -950,6 +984,7 @@ public partial class V1beta1MonitorActivityLogAlertSpecInitProviderResourceGroup
     public V1beta1MonitorActivityLogAlertSpecInitProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -981,6 +1016,7 @@ public enum V1beta1MonitorActivityLogAlertSpecInitProviderResourceGroupNameSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -994,6 +1030,7 @@ public partial class V1beta1MonitorActivityLogAlertSpecInitProviderResourceGroup
     public V1beta1MonitorActivityLogAlertSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1029,6 +1066,7 @@ public enum V1beta1MonitorActivityLogAlertSpecInitProviderScopesRefsPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderScopesRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1042,6 +1080,7 @@ public partial class V1beta1MonitorActivityLogAlertSpecInitProviderScopesRefsPol
     public V1beta1MonitorActivityLogAlertSpecInitProviderScopesRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderScopesRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1073,6 +1112,7 @@ public enum V1beta1MonitorActivityLogAlertSpecInitProviderScopesSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderScopesSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1086,6 +1126,7 @@ public partial class V1beta1MonitorActivityLogAlertSpecInitProviderScopesSelecto
     public V1beta1MonitorActivityLogAlertSpecInitProviderScopesSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of ResourceGroup in azure to populate scopes.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecInitProviderScopesSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1101,6 +1142,7 @@ public partial class V1beta1MonitorActivityLogAlertSpecInitProviderScopesSelecto
     public V1beta1MonitorActivityLogAlertSpecInitProviderScopesSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecInitProvider
 {
     /// <summary>One or more action blocks as defined below.</summary>
@@ -1194,6 +1236,7 @@ public enum V1beta1MonitorActivityLogAlertSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1207,6 +1250,7 @@ public partial class V1beta1MonitorActivityLogAlertSpecProviderConfigRefPolicy
     public V1beta1MonitorActivityLogAlertSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1238,6 +1282,7 @@ public enum V1beta1MonitorActivityLogAlertSpecPublishConnectionDetailsToConfigRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1251,6 +1296,7 @@ public partial class V1beta1MonitorActivityLogAlertSpecPublishConnectionDetailsT
     public V1beta1MonitorActivityLogAlertSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1262,6 +1308,7 @@ public partial class V1beta1MonitorActivityLogAlertSpecPublishConnectionDetailsT
     public V1beta1MonitorActivityLogAlertSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1277,6 +1324,7 @@ public partial class V1beta1MonitorActivityLogAlertSpecPublishConnectionDetailsT
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1292,6 +1340,7 @@ public partial class V1beta1MonitorActivityLogAlertSpecPublishConnectionDetailsT
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1MonitorActivityLogAlertSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1303,6 +1352,7 @@ public partial class V1beta1MonitorActivityLogAlertSpecWriteConnectionSecretToRe
     public string Namespace { get; set; }
 }
 
+/// <summary>MonitorActivityLogAlertSpec defines the desired state of MonitorActivityLogAlert</summary>
 public partial class V1beta1MonitorActivityLogAlertSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1335,6 +1385,7 @@ public partial class V1beta1MonitorActivityLogAlertSpec
     public V1beta1MonitorActivityLogAlertSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActivityLogAlertStatusAtProviderAction
 {
     /// <summary>The ID of the Action Group can be sourced from the .</summary>
@@ -1346,6 +1397,7 @@ public partial class V1beta1MonitorActivityLogAlertStatusAtProviderAction
     public IDictionary<string, string>? WebhookProperties { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActivityLogAlertStatusAtProviderCriteriaResourceHealth
 {
     /// <summary>The current resource health statuses that will log an alert. Possible values are Available, Degraded, Unavailable and Unknown.</summary>
@@ -1361,6 +1413,7 @@ public partial class V1beta1MonitorActivityLogAlertStatusAtProviderCriteriaResou
     public IList<string>? Reason { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActivityLogAlertStatusAtProviderCriteriaServiceHealth
 {
     /// <summary>Events this alert will monitor Possible values are Incident, Maintenance, Informational, ActionRequired and Security.</summary>
@@ -1376,6 +1429,7 @@ public partial class V1beta1MonitorActivityLogAlertStatusAtProviderCriteriaServi
     public IList<string>? Services { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActivityLogAlertStatusAtProviderCriteria
 {
     /// <summary>The email address or Azure Active Directory identifier of the user who performed the operation.</summary>
@@ -1467,6 +1521,7 @@ public partial class V1beta1MonitorActivityLogAlertStatusAtProviderCriteria
     public IList<string>? SubStatuses { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActivityLogAlertStatusAtProvider
 {
     /// <summary>One or more action blocks as defined below.</summary>
@@ -1506,6 +1561,7 @@ public partial class V1beta1MonitorActivityLogAlertStatusAtProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1MonitorActivityLogAlertStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1533,6 +1589,7 @@ public partial class V1beta1MonitorActivityLogAlertStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>MonitorActivityLogAlertStatus defines the observed state of MonitorActivityLogAlert.</summary>
 public partial class V1beta1MonitorActivityLogAlertStatus
 {
     /// <summary></summary>
@@ -1549,6 +1606,7 @@ public partial class V1beta1MonitorActivityLogAlertStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>MonitorActivityLogAlert is the Schema for the MonitorActivityLogAlerts API. Manages an Activity Log Alert within Azure Monitor</summary>
 public partial class V1beta1MonitorActivityLogAlert : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MonitorActivityLogAlertSpec>, IStatus<V1beta1MonitorActivityLogAlertStatus>
 {
     public const string KubeApiVersion = "v1beta1";

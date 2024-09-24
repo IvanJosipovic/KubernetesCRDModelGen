@@ -18,6 +18,7 @@ public enum V1beta1ChannelSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderCdiInputSpecification
 {
     /// <summary>- Maximum CDI input resolution.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1ChannelSpecForProviderCdiInputSpecification
     public string? Resolution { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderDestinationsMediaPackageSettings
 {
     /// <summary>ID of the channel in MediaPackage that is the destination for this output group.</summary>
@@ -32,6 +34,7 @@ public partial class V1beta1ChannelSpecForProviderDestinationsMediaPackageSettin
     public string? ChannelId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderDestinationsMultiplexSettings
 {
     /// <summary>The ID of the Multiplex that the encoder is providing output to.</summary>
@@ -43,6 +46,7 @@ public partial class V1beta1ChannelSpecForProviderDestinationsMultiplexSettings
     public string? ProgramName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderDestinationsSettings
 {
     /// <summary>Key used to extract the password from EC2 Parameter store.</summary>
@@ -62,6 +66,7 @@ public partial class V1beta1ChannelSpecForProviderDestinationsSettings
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderDestinations
 {
     /// <summary>User-specified id. Ths is used in an output group or an output.</summary>
@@ -81,6 +86,7 @@ public partial class V1beta1ChannelSpecForProviderDestinations
     public IList<V1beta1ChannelSpecForProviderDestinationsSettings>? Settings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptionsAudioNormalizationSettings
 {
     /// <summary>Audio normalization algorithm to use. itu17701 conforms to the CALM Act specification, itu17702 to the EBU R-128 specification.</summary>
@@ -96,6 +102,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptio
     public double? TargetLkfs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptionsAudioWatermarkSettingsNielsenWatermarksSettingsNielsenCbetSettings
 {
     /// <summary></summary>
@@ -111,6 +118,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptio
     public string? Csid { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptionsAudioWatermarkSettingsNielsenWatermarksSettingsNielsenNaesIiNwSettings
 {
     /// <summary></summary>
@@ -122,6 +130,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptio
     public double? Sid { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptionsAudioWatermarkSettingsNielsenWatermarksSettings
 {
     /// <summary>Used to insert watermarks of type Nielsen CBET. See Nielsen CBET Settings for more details.</summary>
@@ -137,6 +146,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptio
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptionsAudioWatermarkSettingsNielsenWatermarksSettingsNielsenNaesIiNwSettings>? NielsenNaesIiNwSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptionsAudioWatermarkSettings
 {
     /// <summary>Destination settings for a standard output; one destination for each redundant encoder. See Settings for more details.</summary>
@@ -144,6 +154,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptio
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptionsAudioWatermarkSettingsNielsenWatermarksSettings>? NielsenWatermarksSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptionsCodecSettingsAacSettings
 {
     /// <summary>Average bitrate in bits/second.</summary>
@@ -183,6 +194,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptio
     public string? VbrQuality { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptionsCodecSettingsAc3Settings
 {
     /// <summary>Average bitrate in bits/second.</summary>
@@ -214,6 +226,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptio
     public string? MetadataControl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptionsCodecSettingsEac3AtmosSettings
 {
     /// <summary>Average bitrate in bits/second.</summary>
@@ -245,6 +258,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptio
     public double? SurroundTrim { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptionsCodecSettingsEac3Settings
 {
     /// <summary>Sets the attenuation control.</summary>
@@ -328,6 +342,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptio
     public string? SurroundMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptionsCodecSettingsMp2Settings
 {
     /// <summary>Average bitrate in bits/second.</summary>
@@ -343,10 +358,12 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptio
     public double? SampleRate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptionsCodecSettingsPassThroughSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptionsCodecSettingsWavSettings
 {
     /// <summary></summary>
@@ -362,6 +379,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptio
     public double? SampleRate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptionsCodecSettings
 {
     /// <summary>Aac Settings. See AAC Settings for more details.</summary>
@@ -393,6 +411,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptio
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptionsCodecSettingsWavSettings>? WavSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptionsRemixSettingsChannelMappingsInputChannelLevels
 {
     /// <summary></summary>
@@ -404,6 +423,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptio
     public double? InputChannel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptionsRemixSettingsChannelMappings
 {
     /// <summary></summary>
@@ -415,6 +435,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptio
     public double? OutputChannel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptionsRemixSettings
 {
     /// <summary></summary>
@@ -430,6 +451,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptio
     public double? ChannelsOut { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptions
 {
     /// <summary>Advanced audio normalization settings. See Audio Normalization Settings for more details.</summary>
@@ -477,6 +499,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsAudioDescriptio
     public string? StreamName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsAvailBlankingAvailBlankingImage
 {
     /// <summary>Key used to extract the password from EC2 Parameter store.</summary>
@@ -492,6 +515,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsAvailBlankingAv
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsAvailBlanking
 {
     /// <summary>Blanking image to be used. See Avail Blanking Image for more details.</summary>
@@ -503,10 +527,12 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsAvailBlanking
     public string? State { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsAribDestinationSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettingsFont
 {
     /// <summary>Key used to extract the password from EC2 Parameter store.</summary>
@@ -522,6 +548,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescript
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettings
 {
     /// <summary>justify live subtitles and center-justify pre-recorded subtitles. All burn-in and DVB-Sub font settings must match.</summary>
@@ -593,6 +620,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescript
     public double? YPosition { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettingsFont
 {
     /// <summary>Key used to extract the password from EC2 Parameter store.</summary>
@@ -608,6 +636,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescript
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettings
 {
     /// <summary>justify live subtitles and center-justify pre-recorded subtitles. All burn-in and DVB-Sub font settings must match.</summary>
@@ -679,6 +708,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescript
     public double? YPosition { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsEbuTtDDestinationSettings
 {
     /// <summary>–  Complete this field if you want to include the name of the copyright holder in the copyright tag in the captions metadata.</summary>
@@ -698,34 +728,42 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescript
     public string? StyleControl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsEmbeddedDestinationSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsEmbeddedPlusScte20DestinationSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsRtmpCaptionInfoDestinationSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsScte20PlusEmbeddedDestinationSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsScte27DestinationSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsSmpteTtDestinationSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsTeletextDestinationSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsTtmlDestinationSettings
 {
     /// <summary>TT captions. - include: Take the style information (font color, font position, and so on) from the source captions and include that information in the font data attached to the EBU-TT captions. This option is valid only if the source captions are Embedded or Teletext. - exclude: In the font data attached to the EBU-TT captions, set the font family to “monospaced”. Do not include any other style information.</summary>
@@ -733,6 +771,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescript
     public string? StyleControl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsWebvttDestinationSettings
 {
     /// <summary>TT captions. - include: Take the style information (font color, font position, and so on) from the source captions and include that information in the font data attached to the EBU-TT captions. This option is valid only if the source captions are Embedded or Teletext. - exclude: In the font data attached to the EBU-TT captions, set the font family to “monospaced”. Do not include any other style information.</summary>
@@ -740,6 +779,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescript
     public string? StyleControl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettings
 {
     /// <summary>ARIB Destination Settings.</summary>
@@ -795,6 +835,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescript
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsWebvttDestinationSettings>? WebvttDestinationSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptions
 {
     /// <summary>Indicates whether the caption track implements accessibility features such as written descriptions of spoken dialog, music, and sounds.</summary>
@@ -822,6 +863,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescript
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsGlobalConfigurationInputLossBehaviorInputLossImageSlate
 {
     /// <summary>Key used to extract the password from EC2 Parameter store.</summary>
@@ -837,6 +879,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsGlobalConfigura
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsGlobalConfigurationInputLossBehavior
 {
     /// <summary></summary>
@@ -860,6 +903,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsGlobalConfigura
     public double? RepeatFrameMsec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsGlobalConfiguration
 {
     /// <summary>–  Value to set the initial audio gain for the Live Event.</summary>
@@ -887,10 +931,12 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsGlobalConfigura
     public string? SupportLowFramerateInputs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsMotionGraphicsConfigurationMotionGraphicsSettingsHtmlMotionGraphicsSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsMotionGraphicsConfigurationMotionGraphicsSettings
 {
     /// <summary>–  Html Motion Graphics Settings.</summary>
@@ -898,6 +944,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsMotionGraphicsC
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsMotionGraphicsConfigurationMotionGraphicsSettingsHtmlMotionGraphicsSettings>? HtmlMotionGraphicsSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsMotionGraphicsConfiguration
 {
     /// <summary>–  Motion Graphics Insertion.</summary>
@@ -909,6 +956,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsMotionGraphicsC
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsMotionGraphicsConfigurationMotionGraphicsSettings>? MotionGraphicsSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsNielsenConfiguration
 {
     /// <summary>–  Enter the Distributor ID assigned to your organization by Nielsen.</summary>
@@ -920,6 +968,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsNielsenConfigur
     public string? NielsenPcmToId3Tagging { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsArchiveCdnSettingsArchiveS3Settings
 {
     /// <summary>Specify the canned ACL to apply to each S3 request.</summary>
@@ -927,6 +976,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public string? CannedAcl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsArchiveCdnSettings
 {
     /// <summary>Archive S3 Settings. See Archive S3 Settings for more details.</summary>
@@ -934,6 +984,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsArchiveCdnSettingsArchiveS3Settings>? ArchiveS3Settings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsDestination
 {
     /// <summary>Reference ID for the destination.</summary>
@@ -941,6 +992,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public string? DestinationRefId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettings
 {
     /// <summary>Parameters that control the interactions with the CDN. See Archive CDN Settings for more details.</summary>
@@ -956,6 +1008,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public double? RolloverInterval { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsDestination
 {
     /// <summary>Reference ID for the destination.</summary>
@@ -963,6 +1016,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public string? DestinationRefId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsFrameCaptureCdnSettingsFrameCaptureS3Settings
 {
     /// <summary>Specify the canned ACL to apply to each S3 request.</summary>
@@ -970,6 +1024,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public string? CannedAcl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsFrameCaptureCdnSettings
 {
     /// <summary>Destination settings for a standard output; one destination for each redundant encoder. See Settings for more details.</summary>
@@ -977,6 +1032,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsFrameCaptureCdnSettingsFrameCaptureS3Settings>? FrameCaptureS3Settings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettings
 {
     /// <summary>A director and base filename where archive files should be written. See Destination for more details.</summary>
@@ -988,6 +1044,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsFrameCaptureCdnSettings>? FrameCaptureCdnSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsCaptionLanguageMappings
 {
     /// <summary></summary>
@@ -1003,6 +1060,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public string? LanguageDescription { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsDestination
 {
     /// <summary>Reference ID for the destination.</summary>
@@ -1010,6 +1068,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public string? DestinationRefId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsAkamaiSettings
 {
     /// <summary>Number of seconds to wait before retrying connection to the flash media server if the connection is lost.</summary>
@@ -1041,6 +1100,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public string? Token { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsBasicPutSettings
 {
     /// <summary>Number of seconds to wait before retrying connection to the flash media server if the connection is lost.</summary>
@@ -1060,6 +1120,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public double? RestartDelay { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsMediaStoreSettings
 {
     /// <summary>Number of seconds to wait before retrying connection to the flash media server if the connection is lost.</summary>
@@ -1083,6 +1144,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public double? RestartDelay { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsS3Settings
 {
     /// <summary>Specify the canned ACL to apply to each S3 request.</summary>
@@ -1090,6 +1152,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public string? CannedAcl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsWebdavSettings
 {
     /// <summary>Number of seconds to wait before retrying connection to the flash media server if the connection is lost.</summary>
@@ -1113,6 +1176,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public double? RestartDelay { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettings
 {
     /// <summary>Destination settings for a standard output; one destination for each redundant encoder. See Settings for more details.</summary>
@@ -1136,6 +1200,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsWebdavSettings>? HlsWebdavSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsKeyProviderSettingsStaticKeySettingsKeyProviderServer
 {
     /// <summary>Key used to extract the password from EC2 Parameter store.</summary>
@@ -1151,6 +1216,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsKeyProviderSettingsStaticKeySettings
 {
     /// <summary></summary>
@@ -1162,6 +1228,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public string? StaticKeyValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsKeyProviderSettings
 {
     /// <summary>Destination settings for a standard output; one destination for each redundant encoder. See Settings for more details.</summary>
@@ -1169,6 +1236,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsKeyProviderSettingsStaticKeySettings>? StaticKeySettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettings
 {
     /// <summary>The ad marker type for this output group.</summary>
@@ -1340,6 +1408,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public string? TsFileMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettingsDestination
 {
     /// <summary>Reference ID for the destination.</summary>
@@ -1347,6 +1416,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public string? DestinationRefId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettings
 {
     /// <summary>A director and base filename where archive files should be written. See Destination for more details.</summary>
@@ -1354,6 +1424,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettingsDestination>? Destination { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsMsSmoothGroupSettingsDestination
 {
     /// <summary>Reference ID for the destination.</summary>
@@ -1361,6 +1432,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public string? DestinationRefId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsMsSmoothGroupSettings
 {
     /// <summary>User-specified id. Ths is used in an output group or an output.</summary>
@@ -1440,10 +1512,12 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public string? TimestampOffsetMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsMultiplexGroupSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsRtmpGroupSettings
 {
     /// <summary>The ad marker type for this output group.</summary>
@@ -1475,6 +1549,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public double? RestartDelay { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsUdpGroupSettings
 {
     /// <summary>Controls the behavior of the RTMP group if input becomes unavailable.</summary>
@@ -1490,6 +1565,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public double? TimedMetadataId3Period { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettings
 {
     /// <summary>Archive group settings. See Archive Group Settings for more details.</summary>
@@ -1525,6 +1601,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputGroupSettingsUdpGroupSettings>? UdpGroupSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbNitSettings
 {
     /// <summary>User-specified id. Ths is used in an output group or an output.</summary>
@@ -1540,6 +1617,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public double? RepInterval { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettings
 {
     /// <summary></summary>
@@ -1559,6 +1637,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public string? ServiceProviderName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettings
 {
     /// <summary></summary>
@@ -1566,6 +1645,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public double? RepInterval { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettings
 {
     /// <summary></summary>
@@ -1757,10 +1837,12 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public string? VideoPid { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsRawSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettings
 {
     /// <summary>M2TS Settings. See M2TS Settings for more details.</summary>
@@ -1772,6 +1854,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsRawSettings>? RawSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettings
 {
     /// <summary>Settings specific to the container type of the file. See Container Settings for more details.</summary>
@@ -1787,6 +1870,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public string? NameModifier { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsFrameCaptureOutputSettings
 {
     /// <summary>String concatenated to the end of the destination filename. Required for multiple outputs of the same type.</summary>
@@ -1794,6 +1878,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public string? NameModifier { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsAudioOnlyHlsSettingsAudioOnlyImage
 {
     /// <summary>Key used to extract the password from EC2 Parameter store.</summary>
@@ -1809,6 +1894,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsAudioOnlyHlsSettings
 {
     /// <summary>Specifies the GROUP-ID in the #EXT-X-MEDIA tag of the target HLS audio rendition.</summary>
@@ -1828,6 +1914,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public string? SegmentType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsFmp4HlsSettings
 {
     /// <summary></summary>
@@ -1843,10 +1930,12 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public string? TimedMetadataBehavior { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsFrameCaptureHlsSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsStandardHlsSettingsM3u8Settings
 {
     /// <summary></summary>
@@ -1918,6 +2007,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public string? VideoPid { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsStandardHlsSettings
 {
     /// <summary></summary>
@@ -1929,6 +2019,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsStandardHlsSettingsM3u8Settings>? M3u8Settings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettings
 {
     /// <summary>Destination settings for a standard output; one destination for each redundant encoder. See Settings for more details.</summary>
@@ -1948,6 +2039,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsStandardHlsSettings>? StandardHlsSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettings
 {
     /// <summary></summary>
@@ -1967,10 +2059,12 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public string? SegmentModifier { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsMediaPackageOutputSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsMsSmoothOutputSettings
 {
     /// <summary></summary>
@@ -1982,6 +2076,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public string? NameModifier { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsMultiplexOutputSettingsDestination
 {
     /// <summary>Reference ID for the destination.</summary>
@@ -1989,6 +2084,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public string? DestinationRefId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsMultiplexOutputSettings
 {
     /// <summary>A director and base filename where archive files should be written. See Destination for more details.</summary>
@@ -1996,6 +2092,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsMultiplexOutputSettingsDestination>? Destination { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsRtmpOutputSettingsDestination
 {
     /// <summary>Reference ID for the destination.</summary>
@@ -2003,6 +2100,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public string? DestinationRefId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsRtmpOutputSettings
 {
     /// <summary>Setting to allow self signed or verified RTMP certificates.</summary>
@@ -2022,6 +2120,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public double? NumRetries { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbNitSettings
 {
     /// <summary>User-specified id. Ths is used in an output group or an output.</summary>
@@ -2037,6 +2136,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public double? RepInterval { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettings
 {
     /// <summary></summary>
@@ -2056,6 +2156,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public string? ServiceProviderName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettings
 {
     /// <summary></summary>
@@ -2063,6 +2164,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public double? RepInterval { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettings
 {
     /// <summary></summary>
@@ -2254,6 +2356,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public string? VideoPid { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettings
 {
     /// <summary>M2TS Settings. See M2TS Settings for more details.</summary>
@@ -2261,6 +2364,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettings>? M2tsSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsDestination
 {
     /// <summary>Reference ID for the destination.</summary>
@@ -2268,6 +2372,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public string? DestinationRefId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsFecOutputSettings
 {
     /// <summary>The height of the FEC protection matrix.</summary>
@@ -2283,6 +2388,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public double? RowLength { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettings
 {
     /// <summary>UDP output buffering in milliseconds.</summary>
@@ -2302,6 +2408,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsFecOutputSettings>? FecOutputSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettings
 {
     /// <summary>Archive output settings. See Archive Output Settings for more details.</summary>
@@ -2337,6 +2444,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettings>? UdpOutputSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputs
 {
     /// <summary>The names of the audio descriptions used as audio sources for the output.</summary>
@@ -2360,6 +2468,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     public string? VideoDescriptionName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroups
 {
     /// <summary>Name of the Channel.</summary>
@@ -2375,6 +2484,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroups
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOutputs>? Outputs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsTimecodeConfig
 {
     /// <summary>The source for the timecode that will be associated with the events outputs.</summary>
@@ -2386,6 +2496,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsTimecodeConfig
     public double? SyncThreshold { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettingsFrameCaptureSettings
 {
     /// <summary>The frequency at which to capture frames for inclusion in the output.</summary>
@@ -2397,6 +2508,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptio
     public string? CaptureIntervalUnits { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsTemporalFilterSettings
 {
     /// <summary>Post filter sharpening.</summary>
@@ -2408,6 +2520,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptio
     public string? Strength { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettings
 {
     /// <summary>Temporal filter settings. See Temporal Filter Settings</summary>
@@ -2415,6 +2528,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptio
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsTemporalFilterSettings>? TemporalFilterSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettingsH264Settings
 {
     /// <summary>Enables or disables adaptive quantization.</summary>
@@ -2578,14 +2692,17 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptio
     public string? TimecodeInsertion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsColorSpacePassthroughSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsDolbyVision81Settings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsHdr10Settings
 {
     /// <summary>Sets the MaxCLL value for HDR10.</summary>
@@ -2597,14 +2714,17 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptio
     public double? MaxFall { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsRec601Settings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsRec709Settings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettings
 {
     /// <summary>Sets the colorspace metadata to be passed through.</summary>
@@ -2628,6 +2748,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptio
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsRec709Settings>? Rec709Settings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsTemporalFilterSettings
 {
     /// <summary>Post filter sharpening.</summary>
@@ -2639,6 +2760,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptio
     public string? Strength { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettings
 {
     /// <summary>Temporal filter settings. See Temporal Filter Settings</summary>
@@ -2646,6 +2768,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptio
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsTemporalFilterSettings>? TemporalFilterSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsTimecodeBurninSettings
 {
     /// <summary>Set a prefix on the burned in timecode.</summary>
@@ -2661,6 +2784,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptio
     public string? TimecodeBurninPosition { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettingsH265Settings
 {
     /// <summary>Enables or disables adaptive quantization.</summary>
@@ -2784,6 +2908,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptio
     public string? TimecodeInsertion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettings
 {
     /// <summary>Frame capture settings. See Frame Capture Settings for more details.</summary>
@@ -2799,6 +2924,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptio
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettingsH265Settings>? H265Settings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptions
 {
     /// <summary>Audio codec settings. See Audio Codec Settings for more details.</summary>
@@ -2830,6 +2956,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptio
     public double? Width { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderEncoderSettings
 {
     /// <summary>Audio descriptions for the channel. See Audio Descriptions for more details.</summary>
@@ -2869,6 +2996,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettings
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptions>? VideoDescriptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettingsAudioSilenceSettings
 {
     /// <summary>The name of the audio selector in the input that MediaLive should monitor to detect silence. Select your most important rendition. If you didn't create an audio selector in this input, leave blank.</summary>
@@ -2880,6 +3008,7 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsAutomaticInput
     public double? AudioSilenceThresholdMsec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettingsInputLossSettings
 {
     /// <summary>The amount of time (in milliseconds) that no input is detected. After that time, an input failover will occur.</summary>
@@ -2887,6 +3016,7 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsAutomaticInput
     public double? InputLossThresholdMsec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettingsVideoBlackSettings
 {
     /// <summary>A value used in calculating the threshold below which MediaLive considers a pixel to be 'black'. For the input to be considered black, every pixel in a frame must be below this threshold. The threshold is calculated as a percentage (expressed as a decimal) of white. Therefore .1 means 10% white (or 90% black). Note how the formula works for any color depth. For example, if you set this field to 0.1 in 10-bit color depth: (10230.1=102.3), which means a pixel value of 102 or less is 'black'. If you set this field to .1 in an 8-bit color depth: (2550.1=25.5), which means a pixel value of 25 or less is 'black'. The range is 0.0 to 1.0, with any number of decimal places.</summary>
@@ -2898,6 +3028,7 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsAutomaticInput
     public double? VideoBlackThresholdMsec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettings
 {
     /// <summary>MediaLive will perform a failover if the specified audio selector is silent for the specified period. See Audio Silence Failover Settings for more details.</summary>
@@ -2913,6 +3044,7 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsAutomaticInput
     public IList<V1beta1ChannelSpecForProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettingsVideoBlackSettings>? VideoBlackSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverCondition
 {
     /// <summary>Failover condition type-specific settings. See Failover Condition Settings for more details.</summary>
@@ -2920,6 +3052,7 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsAutomaticInput
     public IList<V1beta1ChannelSpecForProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettings>? FailoverConditionSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsAutomaticInputFailoverSettings
 {
     /// <summary>This clear time defines the requirement a recovered input must meet to be considered healthy. The input must have no failover conditions for this length of time. Enter a time in milliseconds. This value is particularly important if the input_preference for the failover pair is set to PRIMARY_INPUT_PREFERRED, because after this time, MediaLive will switch back to the primary input.</summary>
@@ -2959,6 +3092,7 @@ public enum V1beta1ChannelSpecForProviderInputAttachmentsInputIdRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2972,6 +3106,7 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputIdRefPoli
     public V1beta1ChannelSpecForProviderInputAttachmentsInputIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Input in medialive to populate inputId.</summary>
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3003,6 +3138,7 @@ public enum V1beta1ChannelSpecForProviderInputAttachmentsInputIdSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3016,6 +3152,7 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputIdSelecto
     public V1beta1ChannelSpecForProviderInputAttachmentsInputIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Input in medialive to populate inputId.</summary>
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -3031,6 +3168,7 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputIdSelecto
     public V1beta1ChannelSpecForProviderInputAttachmentsInputIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioHlsRenditionSelection
 {
     /// <summary>Specifies the GROUP-ID in the #EXT-X-MEDIA tag of the target HLS audio rendition.</summary>
@@ -3042,6 +3180,7 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsA
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioLanguageSelection
 {
     /// <summary>Selects a specific three-letter language code from within an audio source.</summary>
@@ -3053,6 +3192,7 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsA
     public string? LanguageSelectionPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioPidSelection
 {
     /// <summary>Selects a specific PID from within a source.</summary>
@@ -3060,6 +3200,7 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsA
     public double? Pid { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioTrackSelectionDolbyEDecode
 {
     /// <summary>Applies only to Dolby E. Enter the program ID (according to the metadata in the audio) of the Dolby E program to extract from the specified track. One program extracted per audio selector. To select multiple programs, create multiple selectors with the same Track and different Program numbers. “All channels” means to ignore the program IDs and include all the channels in this selector; useful if metadata is known to be incorrect.</summary>
@@ -3067,6 +3208,7 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsA
     public string? ProgramSelection { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioTrackSelectionTracks
 {
     /// <summary>1-based integer value that maps to a specific audio track.</summary>
@@ -3074,6 +3216,7 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsA
     public double? Track { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioTrackSelection
 {
     /// <summary>Configure decoding options for Dolby E streams - these should be Dolby E frames carried in PCM streams tagged with SMPTE-337. See Dolby E Decode for more details.</summary>
@@ -3085,6 +3228,7 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsA
     public IList<V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioTrackSelectionTracks>? Tracks { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettings
 {
     /// <summary>Audio HLS Rendition Selection. See Audio HLS Rendition Selection for more details.</summary>
@@ -3104,6 +3248,7 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsA
     public IList<V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioTrackSelection>? AudioTrackSelection { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsAudioSelector
 {
     /// <summary>Name of the Channel.</summary>
@@ -3115,6 +3260,7 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsA
     public IList<V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettings>? SelectorSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsAncillarySourceSettings
 {
     /// <summary>Specifies the number (1 to 4) of the captions channel you want to extract from the ancillary captions. If you plan to convert the ancillary captions to another format, complete this field. If you plan to choose Embedded as the captions destination in the output (to pass through all the channels in the ancillary captions), leave this field blank because MediaLive ignores the field.</summary>
@@ -3122,10 +3268,12 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsC
     public double? SourceAncillaryChannelNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsAribSourceSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsDvbSubSourceSettings
 {
     /// <summary>If you will configure a WebVTT caption description that references this caption selector, use this field to provide the language to consider when translating the image-based source to text.</summary>
@@ -3137,6 +3285,7 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsC
     public double? Pid { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsEmbeddedSourceSettings
 {
     /// <summary>If upconvert, 608 data is both passed through via the “608 compatibility bytes” fields of the 708 wrapper as well as translated into 708. 708 data present in the source content will be discarded.</summary>
@@ -3152,6 +3301,7 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsC
     public double? Source608ChannelNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsScte20SourceSettings
 {
     /// <summary>If upconvert, 608 data is both passed through via the “608 compatibility bytes” fields of the 708 wrapper as well as translated into 708. 708 data present in the source content will be discarded.</summary>
@@ -3163,6 +3313,7 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsC
     public double? Source608ChannelNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsScte27SourceSettings
 {
     /// <summary>If you will configure a WebVTT caption description that references this caption selector, use this field to provide the language to consider when translating the image-based source to text.</summary>
@@ -3174,6 +3325,7 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsC
     public double? Pid { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsTeletextSourceSettingsOutputRectangle
 {
     /// <summary>See the description in left_offset. For height, specify the entire height of the rectangle as a percentage of the underlying frame height. For example, "80" means the rectangle height is 80% of the underlying frame height. The top_offset and rectangle_height must add up to 100% or less. This field corresponds to tts:extent - Y in the TTML standard.</summary>
@@ -3193,6 +3345,7 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsC
     public double? Width { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsTeletextSourceSettings
 {
     /// <summary>Optionally defines a region where TTML style captions will be displayed. See Caption Rectangle for more details.</summary>
@@ -3204,6 +3357,7 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsC
     public string? PageNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettings
 {
     /// <summary>Ancillary Source Settings. See Ancillary Source Settings for more details.</summary>
@@ -3235,6 +3389,7 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsC
     public IList<V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsTeletextSourceSettings>? TeletextSourceSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsCaptionSelector
 {
     /// <summary>Selects a specific three-letter language code from within an audio source.</summary>
@@ -3250,6 +3405,7 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsC
     public IList<V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettings>? SelectorSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsNetworkInputSettingsHlsInputSettings
 {
     /// <summary>The bitrate is specified in bits per second, as in an HLS manifest.</summary>
@@ -3273,6 +3429,7 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsN
     public string? Scte35Source { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsNetworkInputSettings
 {
     /// <summary>Specifies HLS input settings when the uri is for a HLS manifest. See HLS Input Settings for more details.</summary>
@@ -3284,6 +3441,7 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsN
     public string? ServerValidation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsVideoSelector
 {
     /// <summary></summary>
@@ -3295,6 +3453,7 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsV
     public string? ColorSpaceUsage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettings
 {
     /// <summary></summary>
@@ -3342,6 +3501,7 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettings
     public IList<V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsVideoSelector>? VideoSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderInputAttachments
 {
     /// <summary>User-specified settings for defining what the conditions are for declaring the input unhealthy and failing over to a different input. See Automatic Input Failover Settings for more details.</summary>
@@ -3369,6 +3529,7 @@ public partial class V1beta1ChannelSpecForProviderInputAttachments
     public IList<V1beta1ChannelSpecForProviderInputAttachmentsInputSettings>? InputSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderInputSpecification
 {
     /// <summary></summary>
@@ -3384,6 +3545,7 @@ public partial class V1beta1ChannelSpecForProviderInputSpecification
     public string? MaximumBitrate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderMaintenance
 {
     /// <summary>The day of the week to use for maintenance.</summary>
@@ -3415,6 +3577,7 @@ public enum V1beta1ChannelSpecForProviderRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ChannelSpecForProviderRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3428,6 +3591,7 @@ public partial class V1beta1ChannelSpecForProviderRoleArnRefPolicy
     public V1beta1ChannelSpecForProviderRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ChannelSpecForProviderRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3459,6 +3623,7 @@ public enum V1beta1ChannelSpecForProviderRoleArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ChannelSpecForProviderRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3472,6 +3637,7 @@ public partial class V1beta1ChannelSpecForProviderRoleArnSelectorPolicy
     public V1beta1ChannelSpecForProviderRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ChannelSpecForProviderRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -3487,6 +3653,7 @@ public partial class V1beta1ChannelSpecForProviderRoleArnSelector
     public V1beta1ChannelSpecForProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProviderVpc
 {
     /// <summary>List of public address allocation ids to associate with ENIs that will be created in Output VPC. Must specify one for SINGLE_PIPELINE, two for STANDARD channels.</summary>
@@ -3502,6 +3669,7 @@ public partial class V1beta1ChannelSpecForProviderVpc
     public IList<string>? SubnetIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecForProvider
 {
     /// <summary>Specification of CDI inputs for this channel. See CDI Input Specification for more details.</summary>
@@ -3569,6 +3737,7 @@ public partial class V1beta1ChannelSpecForProvider
     public IList<V1beta1ChannelSpecForProviderVpc>? Vpc { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderCdiInputSpecification
 {
     /// <summary>- Maximum CDI input resolution.</summary>
@@ -3576,6 +3745,7 @@ public partial class V1beta1ChannelSpecInitProviderCdiInputSpecification
     public string? Resolution { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderDestinationsMediaPackageSettings
 {
     /// <summary>ID of the channel in MediaPackage that is the destination for this output group.</summary>
@@ -3583,6 +3753,7 @@ public partial class V1beta1ChannelSpecInitProviderDestinationsMediaPackageSetti
     public string? ChannelId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderDestinationsMultiplexSettings
 {
     /// <summary>The ID of the Multiplex that the encoder is providing output to.</summary>
@@ -3594,6 +3765,7 @@ public partial class V1beta1ChannelSpecInitProviderDestinationsMultiplexSettings
     public string? ProgramName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderDestinationsSettings
 {
     /// <summary>Key used to extract the password from EC2 Parameter store.</summary>
@@ -3613,6 +3785,7 @@ public partial class V1beta1ChannelSpecInitProviderDestinationsSettings
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderDestinations
 {
     /// <summary>User-specified id. Ths is used in an output group or an output.</summary>
@@ -3632,6 +3805,7 @@ public partial class V1beta1ChannelSpecInitProviderDestinations
     public IList<V1beta1ChannelSpecInitProviderDestinationsSettings>? Settings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptionsAudioNormalizationSettings
 {
     /// <summary>Audio normalization algorithm to use. itu17701 conforms to the CALM Act specification, itu17702 to the EBU R-128 specification.</summary>
@@ -3647,6 +3821,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescripti
     public double? TargetLkfs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptionsAudioWatermarkSettingsNielsenWatermarksSettingsNielsenCbetSettings
 {
     /// <summary></summary>
@@ -3662,6 +3837,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescripti
     public string? Csid { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptionsAudioWatermarkSettingsNielsenWatermarksSettingsNielsenNaesIiNwSettings
 {
     /// <summary></summary>
@@ -3673,6 +3849,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescripti
     public double? Sid { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptionsAudioWatermarkSettingsNielsenWatermarksSettings
 {
     /// <summary>Used to insert watermarks of type Nielsen CBET. See Nielsen CBET Settings for more details.</summary>
@@ -3688,6 +3865,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescripti
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptionsAudioWatermarkSettingsNielsenWatermarksSettingsNielsenNaesIiNwSettings>? NielsenNaesIiNwSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptionsAudioWatermarkSettings
 {
     /// <summary>Destination settings for a standard output; one destination for each redundant encoder. See Settings for more details.</summary>
@@ -3695,6 +3873,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescripti
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptionsAudioWatermarkSettingsNielsenWatermarksSettings>? NielsenWatermarksSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptionsCodecSettingsAacSettings
 {
     /// <summary>Average bitrate in bits/second.</summary>
@@ -3734,6 +3913,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescripti
     public string? VbrQuality { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptionsCodecSettingsAc3Settings
 {
     /// <summary>Average bitrate in bits/second.</summary>
@@ -3765,6 +3945,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescripti
     public string? MetadataControl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptionsCodecSettingsEac3AtmosSettings
 {
     /// <summary>Average bitrate in bits/second.</summary>
@@ -3796,6 +3977,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescripti
     public double? SurroundTrim { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptionsCodecSettingsEac3Settings
 {
     /// <summary>Sets the attenuation control.</summary>
@@ -3879,6 +4061,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescripti
     public string? SurroundMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptionsCodecSettingsMp2Settings
 {
     /// <summary>Average bitrate in bits/second.</summary>
@@ -3894,10 +4077,12 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescripti
     public double? SampleRate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptionsCodecSettingsPassThroughSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptionsCodecSettingsWavSettings
 {
     /// <summary></summary>
@@ -3913,6 +4098,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescripti
     public double? SampleRate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptionsCodecSettings
 {
     /// <summary>Aac Settings. See AAC Settings for more details.</summary>
@@ -3944,6 +4130,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescripti
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptionsCodecSettingsWavSettings>? WavSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptionsRemixSettingsChannelMappingsInputChannelLevels
 {
     /// <summary></summary>
@@ -3955,6 +4142,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescripti
     public double? InputChannel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptionsRemixSettingsChannelMappings
 {
     /// <summary></summary>
@@ -3966,6 +4154,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescripti
     public double? OutputChannel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptionsRemixSettings
 {
     /// <summary></summary>
@@ -3981,6 +4170,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescripti
     public double? ChannelsOut { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescriptions
 {
     /// <summary>Advanced audio normalization settings. See Audio Normalization Settings for more details.</summary>
@@ -4028,6 +4218,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAudioDescripti
     public string? StreamName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAvailBlankingAvailBlankingImage
 {
     /// <summary>Key used to extract the password from EC2 Parameter store.</summary>
@@ -4043,6 +4234,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAvailBlankingA
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAvailBlanking
 {
     /// <summary>Blanking image to be used. See Avail Blanking Image for more details.</summary>
@@ -4054,10 +4246,12 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAvailBlanking
     public string? State { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsAribDestinationSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettingsFont
 {
     /// <summary>Key used to extract the password from EC2 Parameter store.</summary>
@@ -4073,6 +4267,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescrip
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettings
 {
     /// <summary>justify live subtitles and center-justify pre-recorded subtitles. All burn-in and DVB-Sub font settings must match.</summary>
@@ -4144,6 +4339,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescrip
     public double? YPosition { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettingsFont
 {
     /// <summary>Key used to extract the password from EC2 Parameter store.</summary>
@@ -4159,6 +4355,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescrip
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettings
 {
     /// <summary>justify live subtitles and center-justify pre-recorded subtitles. All burn-in and DVB-Sub font settings must match.</summary>
@@ -4230,6 +4427,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescrip
     public double? YPosition { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsEbuTtDDestinationSettings
 {
     /// <summary>–  Complete this field if you want to include the name of the copyright holder in the copyright tag in the captions metadata.</summary>
@@ -4249,34 +4447,42 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescrip
     public string? StyleControl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsEmbeddedDestinationSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsEmbeddedPlusScte20DestinationSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsRtmpCaptionInfoDestinationSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsScte20PlusEmbeddedDestinationSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsScte27DestinationSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsSmpteTtDestinationSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsTeletextDestinationSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsTtmlDestinationSettings
 {
     /// <summary>TT captions. - include: Take the style information (font color, font position, and so on) from the source captions and include that information in the font data attached to the EBU-TT captions. This option is valid only if the source captions are Embedded or Teletext. - exclude: In the font data attached to the EBU-TT captions, set the font family to “monospaced”. Do not include any other style information.</summary>
@@ -4284,6 +4490,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescrip
     public string? StyleControl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsWebvttDestinationSettings
 {
     /// <summary>TT captions. - include: Take the style information (font color, font position, and so on) from the source captions and include that information in the font data attached to the EBU-TT captions. This option is valid only if the source captions are Embedded or Teletext. - exclude: In the font data attached to the EBU-TT captions, set the font family to “monospaced”. Do not include any other style information.</summary>
@@ -4291,6 +4498,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescrip
     public string? StyleControl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettings
 {
     /// <summary>ARIB Destination Settings.</summary>
@@ -4346,6 +4554,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescrip
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsWebvttDestinationSettings>? WebvttDestinationSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptions
 {
     /// <summary>Indicates whether the caption track implements accessibility features such as written descriptions of spoken dialog, music, and sounds.</summary>
@@ -4373,6 +4582,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescrip
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsGlobalConfigurationInputLossBehaviorInputLossImageSlate
 {
     /// <summary>Key used to extract the password from EC2 Parameter store.</summary>
@@ -4388,6 +4598,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsGlobalConfigur
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsGlobalConfigurationInputLossBehavior
 {
     /// <summary></summary>
@@ -4411,6 +4622,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsGlobalConfigur
     public double? RepeatFrameMsec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsGlobalConfiguration
 {
     /// <summary>–  Value to set the initial audio gain for the Live Event.</summary>
@@ -4438,10 +4650,12 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsGlobalConfigur
     public string? SupportLowFramerateInputs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsMotionGraphicsConfigurationMotionGraphicsSettingsHtmlMotionGraphicsSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsMotionGraphicsConfigurationMotionGraphicsSettings
 {
     /// <summary>–  Html Motion Graphics Settings.</summary>
@@ -4449,6 +4663,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsMotionGraphics
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsMotionGraphicsConfigurationMotionGraphicsSettingsHtmlMotionGraphicsSettings>? HtmlMotionGraphicsSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsMotionGraphicsConfiguration
 {
     /// <summary>–  Motion Graphics Insertion.</summary>
@@ -4460,6 +4675,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsMotionGraphics
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsMotionGraphicsConfigurationMotionGraphicsSettings>? MotionGraphicsSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsNielsenConfiguration
 {
     /// <summary>–  Enter the Distributor ID assigned to your organization by Nielsen.</summary>
@@ -4471,6 +4687,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsNielsenConfigu
     public string? NielsenPcmToId3Tagging { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsArchiveCdnSettingsArchiveS3Settings
 {
     /// <summary>Specify the canned ACL to apply to each S3 request.</summary>
@@ -4478,6 +4695,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public string? CannedAcl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsArchiveCdnSettings
 {
     /// <summary>Archive S3 Settings. See Archive S3 Settings for more details.</summary>
@@ -4485,6 +4703,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsArchiveCdnSettingsArchiveS3Settings>? ArchiveS3Settings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsDestination
 {
     /// <summary>Reference ID for the destination.</summary>
@@ -4492,6 +4711,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public string? DestinationRefId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettings
 {
     /// <summary>Parameters that control the interactions with the CDN. See Archive CDN Settings for more details.</summary>
@@ -4507,6 +4727,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public double? RolloverInterval { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsDestination
 {
     /// <summary>Reference ID for the destination.</summary>
@@ -4514,6 +4735,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public string? DestinationRefId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsFrameCaptureCdnSettingsFrameCaptureS3Settings
 {
     /// <summary>Specify the canned ACL to apply to each S3 request.</summary>
@@ -4521,6 +4743,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public string? CannedAcl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsFrameCaptureCdnSettings
 {
     /// <summary>Destination settings for a standard output; one destination for each redundant encoder. See Settings for more details.</summary>
@@ -4528,6 +4751,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsFrameCaptureCdnSettingsFrameCaptureS3Settings>? FrameCaptureS3Settings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettings
 {
     /// <summary>A director and base filename where archive files should be written. See Destination for more details.</summary>
@@ -4539,6 +4763,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsFrameCaptureCdnSettings>? FrameCaptureCdnSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsCaptionLanguageMappings
 {
     /// <summary></summary>
@@ -4554,6 +4779,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public string? LanguageDescription { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsDestination
 {
     /// <summary>Reference ID for the destination.</summary>
@@ -4561,6 +4787,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public string? DestinationRefId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsAkamaiSettings
 {
     /// <summary>Number of seconds to wait before retrying connection to the flash media server if the connection is lost.</summary>
@@ -4592,6 +4819,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public string? Token { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsBasicPutSettings
 {
     /// <summary>Number of seconds to wait before retrying connection to the flash media server if the connection is lost.</summary>
@@ -4611,6 +4839,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public double? RestartDelay { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsMediaStoreSettings
 {
     /// <summary>Number of seconds to wait before retrying connection to the flash media server if the connection is lost.</summary>
@@ -4634,6 +4863,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public double? RestartDelay { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsS3Settings
 {
     /// <summary>Specify the canned ACL to apply to each S3 request.</summary>
@@ -4641,6 +4871,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public string? CannedAcl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsWebdavSettings
 {
     /// <summary>Number of seconds to wait before retrying connection to the flash media server if the connection is lost.</summary>
@@ -4664,6 +4895,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public double? RestartDelay { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettings
 {
     /// <summary>Destination settings for a standard output; one destination for each redundant encoder. See Settings for more details.</summary>
@@ -4687,6 +4919,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsWebdavSettings>? HlsWebdavSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsKeyProviderSettingsStaticKeySettingsKeyProviderServer
 {
     /// <summary>Key used to extract the password from EC2 Parameter store.</summary>
@@ -4702,6 +4935,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsKeyProviderSettingsStaticKeySettings
 {
     /// <summary></summary>
@@ -4713,6 +4947,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public string? StaticKeyValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsKeyProviderSettings
 {
     /// <summary>Destination settings for a standard output; one destination for each redundant encoder. See Settings for more details.</summary>
@@ -4720,6 +4955,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsKeyProviderSettingsStaticKeySettings>? StaticKeySettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettings
 {
     /// <summary>The ad marker type for this output group.</summary>
@@ -4891,6 +5127,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public string? TsFileMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettingsDestination
 {
     /// <summary>Reference ID for the destination.</summary>
@@ -4898,6 +5135,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public string? DestinationRefId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettings
 {
     /// <summary>A director and base filename where archive files should be written. See Destination for more details.</summary>
@@ -4905,6 +5143,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettingsDestination>? Destination { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsMsSmoothGroupSettingsDestination
 {
     /// <summary>Reference ID for the destination.</summary>
@@ -4912,6 +5151,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public string? DestinationRefId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsMsSmoothGroupSettings
 {
     /// <summary>User-specified id. Ths is used in an output group or an output.</summary>
@@ -4991,10 +5231,12 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public string? TimestampOffsetMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsMultiplexGroupSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsRtmpGroupSettings
 {
     /// <summary>The ad marker type for this output group.</summary>
@@ -5026,6 +5268,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public double? RestartDelay { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsUdpGroupSettings
 {
     /// <summary>Controls the behavior of the RTMP group if input becomes unavailable.</summary>
@@ -5041,6 +5284,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public double? TimedMetadataId3Period { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettings
 {
     /// <summary>Archive group settings. See Archive Group Settings for more details.</summary>
@@ -5076,6 +5320,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputGroupSettingsUdpGroupSettings>? UdpGroupSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbNitSettings
 {
     /// <summary>User-specified id. Ths is used in an output group or an output.</summary>
@@ -5091,6 +5336,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public double? RepInterval { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettings
 {
     /// <summary></summary>
@@ -5110,6 +5356,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public string? ServiceProviderName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettings
 {
     /// <summary></summary>
@@ -5117,6 +5364,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public double? RepInterval { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettings
 {
     /// <summary></summary>
@@ -5308,10 +5556,12 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public string? VideoPid { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsRawSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettings
 {
     /// <summary>M2TS Settings. See M2TS Settings for more details.</summary>
@@ -5323,6 +5573,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsRawSettings>? RawSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettings
 {
     /// <summary>Settings specific to the container type of the file. See Container Settings for more details.</summary>
@@ -5338,6 +5589,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public string? NameModifier { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsFrameCaptureOutputSettings
 {
     /// <summary>String concatenated to the end of the destination filename. Required for multiple outputs of the same type.</summary>
@@ -5345,6 +5597,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public string? NameModifier { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsAudioOnlyHlsSettingsAudioOnlyImage
 {
     /// <summary>Key used to extract the password from EC2 Parameter store.</summary>
@@ -5360,6 +5613,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsAudioOnlyHlsSettings
 {
     /// <summary>Specifies the GROUP-ID in the #EXT-X-MEDIA tag of the target HLS audio rendition.</summary>
@@ -5379,6 +5633,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public string? SegmentType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsFmp4HlsSettings
 {
     /// <summary></summary>
@@ -5394,10 +5649,12 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public string? TimedMetadataBehavior { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsFrameCaptureHlsSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsStandardHlsSettingsM3u8Settings
 {
     /// <summary></summary>
@@ -5469,6 +5726,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public string? VideoPid { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsStandardHlsSettings
 {
     /// <summary></summary>
@@ -5480,6 +5738,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsStandardHlsSettingsM3u8Settings>? M3u8Settings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettings
 {
     /// <summary>Destination settings for a standard output; one destination for each redundant encoder. See Settings for more details.</summary>
@@ -5499,6 +5758,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsStandardHlsSettings>? StandardHlsSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettings
 {
     /// <summary></summary>
@@ -5518,10 +5778,12 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public string? SegmentModifier { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsMediaPackageOutputSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsMsSmoothOutputSettings
 {
     /// <summary></summary>
@@ -5533,6 +5795,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public string? NameModifier { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsMultiplexOutputSettingsDestination
 {
     /// <summary>Reference ID for the destination.</summary>
@@ -5540,6 +5803,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public string? DestinationRefId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsMultiplexOutputSettings
 {
     /// <summary>A director and base filename where archive files should be written. See Destination for more details.</summary>
@@ -5547,6 +5811,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsMultiplexOutputSettingsDestination>? Destination { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsRtmpOutputSettingsDestination
 {
     /// <summary>Reference ID for the destination.</summary>
@@ -5554,6 +5819,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public string? DestinationRefId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsRtmpOutputSettings
 {
     /// <summary>Setting to allow self signed or verified RTMP certificates.</summary>
@@ -5573,6 +5839,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public double? NumRetries { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbNitSettings
 {
     /// <summary>User-specified id. Ths is used in an output group or an output.</summary>
@@ -5588,6 +5855,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public double? RepInterval { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettings
 {
     /// <summary></summary>
@@ -5607,6 +5875,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public string? ServiceProviderName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettings
 {
     /// <summary></summary>
@@ -5614,6 +5883,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public double? RepInterval { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettings
 {
     /// <summary></summary>
@@ -5805,6 +6075,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public string? VideoPid { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettings
 {
     /// <summary>M2TS Settings. See M2TS Settings for more details.</summary>
@@ -5812,6 +6083,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettings>? M2tsSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsDestination
 {
     /// <summary>Reference ID for the destination.</summary>
@@ -5819,6 +6091,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public string? DestinationRefId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsFecOutputSettings
 {
     /// <summary>The height of the FEC protection matrix.</summary>
@@ -5834,6 +6107,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public double? RowLength { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettings
 {
     /// <summary>UDP output buffering in milliseconds.</summary>
@@ -5853,6 +6127,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsFecOutputSettings>? FecOutputSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettings
 {
     /// <summary>Archive output settings. See Archive Output Settings for more details.</summary>
@@ -5888,6 +6163,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettings>? UdpOutputSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputs
 {
     /// <summary>The names of the audio descriptions used as audio sources for the output.</summary>
@@ -5911,6 +6187,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     public string? VideoDescriptionName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroups
 {
     /// <summary>Name of the Channel.</summary>
@@ -5926,6 +6203,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroups
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOutputs>? Outputs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsTimecodeConfig
 {
     /// <summary>The source for the timecode that will be associated with the events outputs.</summary>
@@ -5937,6 +6215,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsTimecodeConfig
     public double? SyncThreshold { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettingsFrameCaptureSettings
 {
     /// <summary>The frequency at which to capture frames for inclusion in the output.</summary>
@@ -5948,6 +6227,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescripti
     public string? CaptureIntervalUnits { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsTemporalFilterSettings
 {
     /// <summary>Post filter sharpening.</summary>
@@ -5959,6 +6239,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescripti
     public string? Strength { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettings
 {
     /// <summary>Temporal filter settings. See Temporal Filter Settings</summary>
@@ -5966,6 +6247,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescripti
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsTemporalFilterSettings>? TemporalFilterSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettingsH264Settings
 {
     /// <summary>Enables or disables adaptive quantization.</summary>
@@ -6129,14 +6411,17 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescripti
     public string? TimecodeInsertion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsColorSpacePassthroughSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsDolbyVision81Settings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsHdr10Settings
 {
     /// <summary>Sets the MaxCLL value for HDR10.</summary>
@@ -6148,14 +6433,17 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescripti
     public double? MaxFall { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsRec601Settings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsRec709Settings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettings
 {
     /// <summary>Sets the colorspace metadata to be passed through.</summary>
@@ -6179,6 +6467,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescripti
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsRec709Settings>? Rec709Settings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsTemporalFilterSettings
 {
     /// <summary>Post filter sharpening.</summary>
@@ -6190,6 +6479,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescripti
     public string? Strength { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettings
 {
     /// <summary>Temporal filter settings. See Temporal Filter Settings</summary>
@@ -6197,6 +6487,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescripti
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsTemporalFilterSettings>? TemporalFilterSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsTimecodeBurninSettings
 {
     /// <summary>Set a prefix on the burned in timecode.</summary>
@@ -6212,6 +6503,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescripti
     public string? TimecodeBurninPosition { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettingsH265Settings
 {
     /// <summary>Enables or disables adaptive quantization.</summary>
@@ -6335,6 +6627,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescripti
     public string? TimecodeInsertion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettings
 {
     /// <summary>Frame capture settings. See Frame Capture Settings for more details.</summary>
@@ -6350,6 +6643,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescripti
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettingsH265Settings>? H265Settings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptions
 {
     /// <summary>Audio codec settings. See Audio Codec Settings for more details.</summary>
@@ -6381,6 +6675,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescripti
     public double? Width { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderEncoderSettings
 {
     /// <summary>Audio descriptions for the channel. See Audio Descriptions for more details.</summary>
@@ -6420,6 +6715,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettings
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptions>? VideoDescriptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettingsAudioSilenceSettings
 {
     /// <summary>The name of the audio selector in the input that MediaLive should monitor to detect silence. Select your most important rendition. If you didn't create an audio selector in this input, leave blank.</summary>
@@ -6431,6 +6727,7 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsAutomaticInpu
     public double? AudioSilenceThresholdMsec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettingsInputLossSettings
 {
     /// <summary>The amount of time (in milliseconds) that no input is detected. After that time, an input failover will occur.</summary>
@@ -6438,6 +6735,7 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsAutomaticInpu
     public double? InputLossThresholdMsec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettingsVideoBlackSettings
 {
     /// <summary>A value used in calculating the threshold below which MediaLive considers a pixel to be 'black'. For the input to be considered black, every pixel in a frame must be below this threshold. The threshold is calculated as a percentage (expressed as a decimal) of white. Therefore .1 means 10% white (or 90% black). Note how the formula works for any color depth. For example, if you set this field to 0.1 in 10-bit color depth: (10230.1=102.3), which means a pixel value of 102 or less is 'black'. If you set this field to .1 in an 8-bit color depth: (2550.1=25.5), which means a pixel value of 25 or less is 'black'. The range is 0.0 to 1.0, with any number of decimal places.</summary>
@@ -6449,6 +6747,7 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsAutomaticInpu
     public double? VideoBlackThresholdMsec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettings
 {
     /// <summary>MediaLive will perform a failover if the specified audio selector is silent for the specified period. See Audio Silence Failover Settings for more details.</summary>
@@ -6464,6 +6763,7 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsAutomaticInpu
     public IList<V1beta1ChannelSpecInitProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettingsVideoBlackSettings>? VideoBlackSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverCondition
 {
     /// <summary>Failover condition type-specific settings. See Failover Condition Settings for more details.</summary>
@@ -6471,6 +6771,7 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsAutomaticInpu
     public IList<V1beta1ChannelSpecInitProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettings>? FailoverConditionSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsAutomaticInputFailoverSettings
 {
     /// <summary>This clear time defines the requirement a recovered input must meet to be considered healthy. The input must have no failover conditions for this length of time. Enter a time in milliseconds. This value is particularly important if the input_preference for the failover pair is set to PRIMARY_INPUT_PREFERRED, because after this time, MediaLive will switch back to the primary input.</summary>
@@ -6510,6 +6811,7 @@ public enum V1beta1ChannelSpecInitProviderInputAttachmentsInputIdRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -6523,6 +6825,7 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputIdRefPol
     public V1beta1ChannelSpecInitProviderInputAttachmentsInputIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Input in medialive to populate inputId.</summary>
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -6554,6 +6857,7 @@ public enum V1beta1ChannelSpecInitProviderInputAttachmentsInputIdSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -6567,6 +6871,7 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputIdSelect
     public V1beta1ChannelSpecInitProviderInputAttachmentsInputIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Input in medialive to populate inputId.</summary>
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -6582,6 +6887,7 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputIdSelect
     public V1beta1ChannelSpecInitProviderInputAttachmentsInputIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioHlsRenditionSelection
 {
     /// <summary>Specifies the GROUP-ID in the #EXT-X-MEDIA tag of the target HLS audio rendition.</summary>
@@ -6593,6 +6899,7 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioLanguageSelection
 {
     /// <summary>Selects a specific three-letter language code from within an audio source.</summary>
@@ -6604,6 +6911,7 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     public string? LanguageSelectionPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioPidSelection
 {
     /// <summary>Selects a specific PID from within a source.</summary>
@@ -6611,6 +6919,7 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     public double? Pid { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioTrackSelectionDolbyEDecode
 {
     /// <summary>Applies only to Dolby E. Enter the program ID (according to the metadata in the audio) of the Dolby E program to extract from the specified track. One program extracted per audio selector. To select multiple programs, create multiple selectors with the same Track and different Program numbers. “All channels” means to ignore the program IDs and include all the channels in this selector; useful if metadata is known to be incorrect.</summary>
@@ -6618,6 +6927,7 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     public string? ProgramSelection { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioTrackSelectionTracks
 {
     /// <summary>1-based integer value that maps to a specific audio track.</summary>
@@ -6625,6 +6935,7 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     public double? Track { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioTrackSelection
 {
     /// <summary>Configure decoding options for Dolby E streams - these should be Dolby E frames carried in PCM streams tagged with SMPTE-337. See Dolby E Decode for more details.</summary>
@@ -6636,6 +6947,7 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     public IList<V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioTrackSelectionTracks>? Tracks { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettings
 {
     /// <summary>Audio HLS Rendition Selection. See Audio HLS Rendition Selection for more details.</summary>
@@ -6655,6 +6967,7 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     public IList<V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioTrackSelection>? AudioTrackSelection { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsAudioSelector
 {
     /// <summary>Name of the Channel.</summary>
@@ -6666,6 +6979,7 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     public IList<V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettings>? SelectorSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsAncillarySourceSettings
 {
     /// <summary>Specifies the number (1 to 4) of the captions channel you want to extract from the ancillary captions. If you plan to convert the ancillary captions to another format, complete this field. If you plan to choose Embedded as the captions destination in the output (to pass through all the channels in the ancillary captions), leave this field blank because MediaLive ignores the field.</summary>
@@ -6673,10 +6987,12 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     public double? SourceAncillaryChannelNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsAribSourceSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsDvbSubSourceSettings
 {
     /// <summary>If you will configure a WebVTT caption description that references this caption selector, use this field to provide the language to consider when translating the image-based source to text.</summary>
@@ -6688,6 +7004,7 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     public double? Pid { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsEmbeddedSourceSettings
 {
     /// <summary>If upconvert, 608 data is both passed through via the “608 compatibility bytes” fields of the 708 wrapper as well as translated into 708. 708 data present in the source content will be discarded.</summary>
@@ -6703,6 +7020,7 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     public double? Source608ChannelNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsScte20SourceSettings
 {
     /// <summary>If upconvert, 608 data is both passed through via the “608 compatibility bytes” fields of the 708 wrapper as well as translated into 708. 708 data present in the source content will be discarded.</summary>
@@ -6714,6 +7032,7 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     public double? Source608ChannelNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsScte27SourceSettings
 {
     /// <summary>If you will configure a WebVTT caption description that references this caption selector, use this field to provide the language to consider when translating the image-based source to text.</summary>
@@ -6725,6 +7044,7 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     public double? Pid { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsTeletextSourceSettingsOutputRectangle
 {
     /// <summary>See the description in left_offset. For height, specify the entire height of the rectangle as a percentage of the underlying frame height. For example, "80" means the rectangle height is 80% of the underlying frame height. The top_offset and rectangle_height must add up to 100% or less. This field corresponds to tts:extent - Y in the TTML standard.</summary>
@@ -6744,6 +7064,7 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     public double? Width { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsTeletextSourceSettings
 {
     /// <summary>Optionally defines a region where TTML style captions will be displayed. See Caption Rectangle for more details.</summary>
@@ -6755,6 +7076,7 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     public string? PageNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettings
 {
     /// <summary>Ancillary Source Settings. See Ancillary Source Settings for more details.</summary>
@@ -6786,6 +7108,7 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     public IList<V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsTeletextSourceSettings>? TeletextSourceSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsCaptionSelector
 {
     /// <summary>Selects a specific three-letter language code from within an audio source.</summary>
@@ -6801,6 +7124,7 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     public IList<V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettings>? SelectorSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsNetworkInputSettingsHlsInputSettings
 {
     /// <summary>The bitrate is specified in bits per second, as in an HLS manifest.</summary>
@@ -6824,6 +7148,7 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     public string? Scte35Source { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsNetworkInputSettings
 {
     /// <summary>Specifies HLS input settings when the uri is for a HLS manifest. See HLS Input Settings for more details.</summary>
@@ -6835,6 +7160,7 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     public string? ServerValidation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsVideoSelector
 {
     /// <summary></summary>
@@ -6846,6 +7172,7 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     public string? ColorSpaceUsage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
 {
     /// <summary></summary>
@@ -6893,6 +7220,7 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
     public IList<V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsVideoSelector>? VideoSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderInputAttachments
 {
     /// <summary>User-specified settings for defining what the conditions are for declaring the input unhealthy and failing over to a different input. See Automatic Input Failover Settings for more details.</summary>
@@ -6920,6 +7248,7 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachments
     public IList<V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings>? InputSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderInputSpecification
 {
     /// <summary></summary>
@@ -6935,6 +7264,7 @@ public partial class V1beta1ChannelSpecInitProviderInputSpecification
     public string? MaximumBitrate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderMaintenance
 {
     /// <summary>The day of the week to use for maintenance.</summary>
@@ -6966,6 +7296,7 @@ public enum V1beta1ChannelSpecInitProviderRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ChannelSpecInitProviderRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -6979,6 +7310,7 @@ public partial class V1beta1ChannelSpecInitProviderRoleArnRefPolicy
     public V1beta1ChannelSpecInitProviderRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ChannelSpecInitProviderRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -7010,6 +7342,7 @@ public enum V1beta1ChannelSpecInitProviderRoleArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ChannelSpecInitProviderRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -7023,6 +7356,7 @@ public partial class V1beta1ChannelSpecInitProviderRoleArnSelectorPolicy
     public V1beta1ChannelSpecInitProviderRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ChannelSpecInitProviderRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -7038,6 +7372,7 @@ public partial class V1beta1ChannelSpecInitProviderRoleArnSelector
     public V1beta1ChannelSpecInitProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelSpecInitProviderVpc
 {
     /// <summary>List of public address allocation ids to associate with ENIs that will be created in Output VPC. Must specify one for SINGLE_PIPELINE, two for STANDARD channels.</summary>
@@ -7053,6 +7388,7 @@ public partial class V1beta1ChannelSpecInitProviderVpc
     public IList<string>? SubnetIds { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ChannelSpecInitProvider
 {
     /// <summary>Specification of CDI inputs for this channel. See CDI Input Specification for more details.</summary>
@@ -7158,6 +7494,7 @@ public enum V1beta1ChannelSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ChannelSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -7171,6 +7508,7 @@ public partial class V1beta1ChannelSpecProviderConfigRefPolicy
     public V1beta1ChannelSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ChannelSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -7202,6 +7540,7 @@ public enum V1beta1ChannelSpecPublishConnectionDetailsToConfigRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ChannelSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -7215,6 +7554,7 @@ public partial class V1beta1ChannelSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1ChannelSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ChannelSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -7226,6 +7566,7 @@ public partial class V1beta1ChannelSpecPublishConnectionDetailsToConfigRef
     public V1beta1ChannelSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ChannelSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -7241,6 +7582,7 @@ public partial class V1beta1ChannelSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ChannelSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -7256,6 +7598,7 @@ public partial class V1beta1ChannelSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ChannelSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -7267,6 +7610,7 @@ public partial class V1beta1ChannelSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ChannelSpec defines the desired state of Channel</summary>
 public partial class V1beta1ChannelSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -7299,6 +7643,7 @@ public partial class V1beta1ChannelSpec
     public V1beta1ChannelSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderCdiInputSpecification
 {
     /// <summary>- Maximum CDI input resolution.</summary>
@@ -7306,6 +7651,7 @@ public partial class V1beta1ChannelStatusAtProviderCdiInputSpecification
     public string? Resolution { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderDestinationsMediaPackageSettings
 {
     /// <summary>ID of the channel in MediaPackage that is the destination for this output group.</summary>
@@ -7313,6 +7659,7 @@ public partial class V1beta1ChannelStatusAtProviderDestinationsMediaPackageSetti
     public string? ChannelId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderDestinationsMultiplexSettings
 {
     /// <summary>The ID of the Multiplex that the encoder is providing output to.</summary>
@@ -7324,6 +7671,7 @@ public partial class V1beta1ChannelStatusAtProviderDestinationsMultiplexSettings
     public string? ProgramName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderDestinationsSettings
 {
     /// <summary>Key used to extract the password from EC2 Parameter store.</summary>
@@ -7343,6 +7691,7 @@ public partial class V1beta1ChannelStatusAtProviderDestinationsSettings
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderDestinations
 {
     /// <summary>User-specified id. Ths is used in an output group or an output.</summary>
@@ -7362,6 +7711,7 @@ public partial class V1beta1ChannelStatusAtProviderDestinations
     public IList<V1beta1ChannelStatusAtProviderDestinationsSettings>? Settings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptionsAudioNormalizationSettings
 {
     /// <summary>Audio normalization algorithm to use. itu17701 conforms to the CALM Act specification, itu17702 to the EBU R-128 specification.</summary>
@@ -7377,6 +7727,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescripti
     public double? TargetLkfs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptionsAudioWatermarkSettingsNielsenWatermarksSettingsNielsenCbetSettings
 {
     /// <summary></summary>
@@ -7392,6 +7743,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescripti
     public string? Csid { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptionsAudioWatermarkSettingsNielsenWatermarksSettingsNielsenNaesIiNwSettings
 {
     /// <summary></summary>
@@ -7403,6 +7755,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescripti
     public double? Sid { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptionsAudioWatermarkSettingsNielsenWatermarksSettings
 {
     /// <summary>Used to insert watermarks of type Nielsen CBET. See Nielsen CBET Settings for more details.</summary>
@@ -7418,6 +7771,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescripti
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptionsAudioWatermarkSettingsNielsenWatermarksSettingsNielsenNaesIiNwSettings>? NielsenNaesIiNwSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptionsAudioWatermarkSettings
 {
     /// <summary>Destination settings for a standard output; one destination for each redundant encoder. See Settings for more details.</summary>
@@ -7425,6 +7779,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescripti
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptionsAudioWatermarkSettingsNielsenWatermarksSettings>? NielsenWatermarksSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptionsCodecSettingsAacSettings
 {
     /// <summary>Average bitrate in bits/second.</summary>
@@ -7464,6 +7819,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescripti
     public string? VbrQuality { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptionsCodecSettingsAc3Settings
 {
     /// <summary>Average bitrate in bits/second.</summary>
@@ -7495,6 +7851,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescripti
     public string? MetadataControl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptionsCodecSettingsEac3AtmosSettings
 {
     /// <summary>Average bitrate in bits/second.</summary>
@@ -7526,6 +7883,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescripti
     public double? SurroundTrim { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptionsCodecSettingsEac3Settings
 {
     /// <summary>Sets the attenuation control.</summary>
@@ -7609,6 +7967,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescripti
     public string? SurroundMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptionsCodecSettingsMp2Settings
 {
     /// <summary>Average bitrate in bits/second.</summary>
@@ -7624,10 +7983,12 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescripti
     public double? SampleRate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptionsCodecSettingsPassThroughSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptionsCodecSettingsWavSettings
 {
     /// <summary></summary>
@@ -7643,6 +8004,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescripti
     public double? SampleRate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptionsCodecSettings
 {
     /// <summary>Aac Settings. See AAC Settings for more details.</summary>
@@ -7674,6 +8036,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescripti
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptionsCodecSettingsWavSettings>? WavSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptionsRemixSettingsChannelMappingsInputChannelLevels
 {
     /// <summary></summary>
@@ -7685,6 +8048,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescripti
     public double? InputChannel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptionsRemixSettingsChannelMappings
 {
     /// <summary></summary>
@@ -7696,6 +8060,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescripti
     public double? OutputChannel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptionsRemixSettings
 {
     /// <summary></summary>
@@ -7711,6 +8076,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescripti
     public double? ChannelsOut { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescriptions
 {
     /// <summary>Advanced audio normalization settings. See Audio Normalization Settings for more details.</summary>
@@ -7758,6 +8124,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAudioDescripti
     public string? StreamName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAvailBlankingAvailBlankingImage
 {
     /// <summary>Key used to extract the password from EC2 Parameter store.</summary>
@@ -7773,6 +8140,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAvailBlankingA
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAvailBlanking
 {
     /// <summary>Blanking image to be used. See Avail Blanking Image for more details.</summary>
@@ -7784,10 +8152,12 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAvailBlanking
     public string? State { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsAribDestinationSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettingsFont
 {
     /// <summary>Key used to extract the password from EC2 Parameter store.</summary>
@@ -7803,6 +8173,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescrip
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettings
 {
     /// <summary>justify live subtitles and center-justify pre-recorded subtitles. All burn-in and DVB-Sub font settings must match.</summary>
@@ -7874,6 +8245,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescrip
     public double? YPosition { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettingsFont
 {
     /// <summary>Key used to extract the password from EC2 Parameter store.</summary>
@@ -7889,6 +8261,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescrip
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettings
 {
     /// <summary>justify live subtitles and center-justify pre-recorded subtitles. All burn-in and DVB-Sub font settings must match.</summary>
@@ -7960,6 +8333,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescrip
     public double? YPosition { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsEbuTtDDestinationSettings
 {
     /// <summary>–  Complete this field if you want to include the name of the copyright holder in the copyright tag in the captions metadata.</summary>
@@ -7979,34 +8353,42 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescrip
     public string? StyleControl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsEmbeddedDestinationSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsEmbeddedPlusScte20DestinationSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsRtmpCaptionInfoDestinationSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsScte20PlusEmbeddedDestinationSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsScte27DestinationSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsSmpteTtDestinationSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsTeletextDestinationSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsTtmlDestinationSettings
 {
     /// <summary>TT captions. - include: Take the style information (font color, font position, and so on) from the source captions and include that information in the font data attached to the EBU-TT captions. This option is valid only if the source captions are Embedded or Teletext. - exclude: In the font data attached to the EBU-TT captions, set the font family to “monospaced”. Do not include any other style information.</summary>
@@ -8014,6 +8396,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescrip
     public string? StyleControl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsWebvttDestinationSettings
 {
     /// <summary>TT captions. - include: Take the style information (font color, font position, and so on) from the source captions and include that information in the font data attached to the EBU-TT captions. This option is valid only if the source captions are Embedded or Teletext. - exclude: In the font data attached to the EBU-TT captions, set the font family to “monospaced”. Do not include any other style information.</summary>
@@ -8021,6 +8404,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescrip
     public string? StyleControl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettings
 {
     /// <summary>ARIB Destination Settings.</summary>
@@ -8076,6 +8460,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescrip
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsWebvttDestinationSettings>? WebvttDestinationSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptions
 {
     /// <summary>Indicates whether the caption track implements accessibility features such as written descriptions of spoken dialog, music, and sounds.</summary>
@@ -8103,6 +8488,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescrip
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsGlobalConfigurationInputLossBehaviorInputLossImageSlate
 {
     /// <summary>Key used to extract the password from EC2 Parameter store.</summary>
@@ -8118,6 +8504,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsGlobalConfigur
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsGlobalConfigurationInputLossBehavior
 {
     /// <summary></summary>
@@ -8141,6 +8528,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsGlobalConfigur
     public double? RepeatFrameMsec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsGlobalConfiguration
 {
     /// <summary>–  Value to set the initial audio gain for the Live Event.</summary>
@@ -8168,10 +8556,12 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsGlobalConfigur
     public string? SupportLowFramerateInputs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsMotionGraphicsConfigurationMotionGraphicsSettingsHtmlMotionGraphicsSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsMotionGraphicsConfigurationMotionGraphicsSettings
 {
     /// <summary>–  Html Motion Graphics Settings.</summary>
@@ -8179,6 +8569,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsMotionGraphics
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsMotionGraphicsConfigurationMotionGraphicsSettingsHtmlMotionGraphicsSettings>? HtmlMotionGraphicsSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsMotionGraphicsConfiguration
 {
     /// <summary>–  Motion Graphics Insertion.</summary>
@@ -8190,6 +8581,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsMotionGraphics
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsMotionGraphicsConfigurationMotionGraphicsSettings>? MotionGraphicsSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsNielsenConfiguration
 {
     /// <summary>–  Enter the Distributor ID assigned to your organization by Nielsen.</summary>
@@ -8201,6 +8593,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsNielsenConfigu
     public string? NielsenPcmToId3Tagging { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsArchiveCdnSettingsArchiveS3Settings
 {
     /// <summary>Specify the canned ACL to apply to each S3 request.</summary>
@@ -8208,6 +8601,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public string? CannedAcl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsArchiveCdnSettings
 {
     /// <summary>Archive S3 Settings. See Archive S3 Settings for more details.</summary>
@@ -8215,6 +8609,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsArchiveCdnSettingsArchiveS3Settings>? ArchiveS3Settings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsDestination
 {
     /// <summary>Reference ID for the destination.</summary>
@@ -8222,6 +8617,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public string? DestinationRefId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettings
 {
     /// <summary>Parameters that control the interactions with the CDN. See Archive CDN Settings for more details.</summary>
@@ -8237,6 +8633,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public double? RolloverInterval { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsDestination
 {
     /// <summary>Reference ID for the destination.</summary>
@@ -8244,6 +8641,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public string? DestinationRefId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsFrameCaptureCdnSettingsFrameCaptureS3Settings
 {
     /// <summary>Specify the canned ACL to apply to each S3 request.</summary>
@@ -8251,6 +8649,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public string? CannedAcl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsFrameCaptureCdnSettings
 {
     /// <summary>Destination settings for a standard output; one destination for each redundant encoder. See Settings for more details.</summary>
@@ -8258,6 +8657,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsFrameCaptureCdnSettingsFrameCaptureS3Settings>? FrameCaptureS3Settings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettings
 {
     /// <summary>A director and base filename where archive files should be written. See Destination for more details.</summary>
@@ -8269,6 +8669,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsFrameCaptureCdnSettings>? FrameCaptureCdnSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsCaptionLanguageMappings
 {
     /// <summary></summary>
@@ -8284,6 +8685,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public string? LanguageDescription { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsDestination
 {
     /// <summary>Reference ID for the destination.</summary>
@@ -8291,6 +8693,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public string? DestinationRefId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsAkamaiSettings
 {
     /// <summary>Number of seconds to wait before retrying connection to the flash media server if the connection is lost.</summary>
@@ -8322,6 +8725,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public string? Token { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsBasicPutSettings
 {
     /// <summary>Number of seconds to wait before retrying connection to the flash media server if the connection is lost.</summary>
@@ -8341,6 +8745,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public double? RestartDelay { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsMediaStoreSettings
 {
     /// <summary>Number of seconds to wait before retrying connection to the flash media server if the connection is lost.</summary>
@@ -8364,6 +8769,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public double? RestartDelay { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsS3Settings
 {
     /// <summary>Specify the canned ACL to apply to each S3 request.</summary>
@@ -8371,6 +8777,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public string? CannedAcl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsWebdavSettings
 {
     /// <summary>Number of seconds to wait before retrying connection to the flash media server if the connection is lost.</summary>
@@ -8394,6 +8801,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public double? RestartDelay { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettings
 {
     /// <summary>Destination settings for a standard output; one destination for each redundant encoder. See Settings for more details.</summary>
@@ -8417,6 +8825,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsWebdavSettings>? HlsWebdavSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsKeyProviderSettingsStaticKeySettingsKeyProviderServer
 {
     /// <summary>Key used to extract the password from EC2 Parameter store.</summary>
@@ -8432,6 +8841,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsKeyProviderSettingsStaticKeySettings
 {
     /// <summary></summary>
@@ -8443,6 +8853,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public string? StaticKeyValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsKeyProviderSettings
 {
     /// <summary>Destination settings for a standard output; one destination for each redundant encoder. See Settings for more details.</summary>
@@ -8450,6 +8861,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsKeyProviderSettingsStaticKeySettings>? StaticKeySettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettings
 {
     /// <summary>The ad marker type for this output group.</summary>
@@ -8621,6 +9033,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public string? TsFileMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettingsDestination
 {
     /// <summary>Reference ID for the destination.</summary>
@@ -8628,6 +9041,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public string? DestinationRefId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettings
 {
     /// <summary>A director and base filename where archive files should be written. See Destination for more details.</summary>
@@ -8635,6 +9049,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettingsDestination>? Destination { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsMsSmoothGroupSettingsDestination
 {
     /// <summary>Reference ID for the destination.</summary>
@@ -8642,6 +9057,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public string? DestinationRefId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsMsSmoothGroupSettings
 {
     /// <summary>User-specified id. Ths is used in an output group or an output.</summary>
@@ -8721,10 +9137,12 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public string? TimestampOffsetMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsMultiplexGroupSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsRtmpGroupSettings
 {
     /// <summary>The ad marker type for this output group.</summary>
@@ -8756,6 +9174,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public double? RestartDelay { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsUdpGroupSettings
 {
     /// <summary>Controls the behavior of the RTMP group if input becomes unavailable.</summary>
@@ -8771,6 +9190,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public double? TimedMetadataId3Period { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettings
 {
     /// <summary>Archive group settings. See Archive Group Settings for more details.</summary>
@@ -8806,6 +9226,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputGroupSettingsUdpGroupSettings>? UdpGroupSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbNitSettings
 {
     /// <summary>User-specified id. Ths is used in an output group or an output.</summary>
@@ -8821,6 +9242,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public double? RepInterval { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettings
 {
     /// <summary></summary>
@@ -8840,6 +9262,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public string? ServiceProviderName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettings
 {
     /// <summary></summary>
@@ -8847,6 +9270,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public double? RepInterval { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettings
 {
     /// <summary></summary>
@@ -9038,10 +9462,12 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public string? VideoPid { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsRawSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettings
 {
     /// <summary>M2TS Settings. See M2TS Settings for more details.</summary>
@@ -9053,6 +9479,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettingsContainerSettingsRawSettings>? RawSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsArchiveOutputSettings
 {
     /// <summary>Settings specific to the container type of the file. See Container Settings for more details.</summary>
@@ -9068,6 +9495,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public string? NameModifier { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsFrameCaptureOutputSettings
 {
     /// <summary>String concatenated to the end of the destination filename. Required for multiple outputs of the same type.</summary>
@@ -9075,6 +9503,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public string? NameModifier { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsAudioOnlyHlsSettingsAudioOnlyImage
 {
     /// <summary>Key used to extract the password from EC2 Parameter store.</summary>
@@ -9090,6 +9519,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsAudioOnlyHlsSettings
 {
     /// <summary>Specifies the GROUP-ID in the #EXT-X-MEDIA tag of the target HLS audio rendition.</summary>
@@ -9109,6 +9539,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public string? SegmentType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsFmp4HlsSettings
 {
     /// <summary></summary>
@@ -9124,10 +9555,12 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public string? TimedMetadataBehavior { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsFrameCaptureHlsSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsStandardHlsSettingsM3u8Settings
 {
     /// <summary></summary>
@@ -9199,6 +9632,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public string? VideoPid { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsStandardHlsSettings
 {
     /// <summary></summary>
@@ -9210,6 +9644,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsStandardHlsSettingsM3u8Settings>? M3u8Settings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettings
 {
     /// <summary>Destination settings for a standard output; one destination for each redundant encoder. See Settings for more details.</summary>
@@ -9229,6 +9664,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettingsHlsSettingsStandardHlsSettings>? StandardHlsSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsHlsOutputSettings
 {
     /// <summary></summary>
@@ -9248,10 +9684,12 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public string? SegmentModifier { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsMediaPackageOutputSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsMsSmoothOutputSettings
 {
     /// <summary></summary>
@@ -9263,6 +9701,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public string? NameModifier { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsMultiplexOutputSettingsDestination
 {
     /// <summary>Reference ID for the destination.</summary>
@@ -9270,6 +9709,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public string? DestinationRefId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsMultiplexOutputSettings
 {
     /// <summary>A director and base filename where archive files should be written. See Destination for more details.</summary>
@@ -9277,6 +9717,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsMultiplexOutputSettingsDestination>? Destination { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsRtmpOutputSettingsDestination
 {
     /// <summary>Reference ID for the destination.</summary>
@@ -9284,6 +9725,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public string? DestinationRefId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsRtmpOutputSettings
 {
     /// <summary>Setting to allow self signed or verified RTMP certificates.</summary>
@@ -9303,6 +9745,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public double? NumRetries { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbNitSettings
 {
     /// <summary>User-specified id. Ths is used in an output group or an output.</summary>
@@ -9318,6 +9761,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public double? RepInterval { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettings
 {
     /// <summary></summary>
@@ -9337,6 +9781,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public string? ServiceProviderName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettings
 {
     /// <summary></summary>
@@ -9344,6 +9789,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public double? RepInterval { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettings
 {
     /// <summary></summary>
@@ -9535,6 +9981,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public string? VideoPid { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettings
 {
     /// <summary>M2TS Settings. See M2TS Settings for more details.</summary>
@@ -9542,6 +9989,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettings>? M2tsSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsDestination
 {
     /// <summary>Reference ID for the destination.</summary>
@@ -9549,6 +9997,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public string? DestinationRefId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsFecOutputSettings
 {
     /// <summary>The height of the FEC protection matrix.</summary>
@@ -9564,6 +10013,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public double? RowLength { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettings
 {
     /// <summary>UDP output buffering in milliseconds.</summary>
@@ -9583,6 +10033,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettingsFecOutputSettings>? FecOutputSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettings
 {
     /// <summary>Archive output settings. See Archive Output Settings for more details.</summary>
@@ -9618,6 +10069,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputsOutputSettingsUdpOutputSettings>? UdpOutputSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputs
 {
     /// <summary>The names of the audio descriptions used as audio sources for the output.</summary>
@@ -9641,6 +10093,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     public string? VideoDescriptionName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroups
 {
     /// <summary>Name of the Channel.</summary>
@@ -9656,6 +10109,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroups
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOutputs>? Outputs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsTimecodeConfig
 {
     /// <summary>The source for the timecode that will be associated with the events outputs.</summary>
@@ -9667,6 +10121,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsTimecodeConfig
     public double? SyncThreshold { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettingsFrameCaptureSettings
 {
     /// <summary>The frequency at which to capture frames for inclusion in the output.</summary>
@@ -9678,6 +10133,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescripti
     public string? CaptureIntervalUnits { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsTemporalFilterSettings
 {
     /// <summary>Post filter sharpening.</summary>
@@ -9689,6 +10145,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescripti
     public string? Strength { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettings
 {
     /// <summary>Temporal filter settings. See Temporal Filter Settings</summary>
@@ -9696,6 +10153,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescripti
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsTemporalFilterSettings>? TemporalFilterSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettingsH264Settings
 {
     /// <summary>Enables or disables adaptive quantization.</summary>
@@ -9859,14 +10317,17 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescripti
     public string? TimecodeInsertion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsColorSpacePassthroughSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsDolbyVision81Settings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsHdr10Settings
 {
     /// <summary>Sets the MaxCLL value for HDR10.</summary>
@@ -9878,14 +10339,17 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescripti
     public double? MaxFall { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsRec601Settings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsRec709Settings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettings
 {
     /// <summary>Sets the colorspace metadata to be passed through.</summary>
@@ -9909,6 +10373,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescripti
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsRec709Settings>? Rec709Settings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsTemporalFilterSettings
 {
     /// <summary>Post filter sharpening.</summary>
@@ -9920,6 +10385,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescripti
     public string? Strength { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettings
 {
     /// <summary>Temporal filter settings. See Temporal Filter Settings</summary>
@@ -9927,6 +10393,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescripti
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsTemporalFilterSettings>? TemporalFilterSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsTimecodeBurninSettings
 {
     /// <summary>Set a prefix on the burned in timecode.</summary>
@@ -9942,6 +10409,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescripti
     public string? TimecodeBurninPosition { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettingsH265Settings
 {
     /// <summary>Enables or disables adaptive quantization.</summary>
@@ -10065,6 +10533,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescripti
     public string? TimecodeInsertion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettings
 {
     /// <summary>Frame capture settings. See Frame Capture Settings for more details.</summary>
@@ -10080,6 +10549,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescripti
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettingsH265Settings>? H265Settings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptions
 {
     /// <summary>Audio codec settings. See Audio Codec Settings for more details.</summary>
@@ -10111,6 +10581,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescripti
     public double? Width { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderEncoderSettings
 {
     /// <summary>Audio descriptions for the channel. See Audio Descriptions for more details.</summary>
@@ -10150,6 +10621,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettings
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptions>? VideoDescriptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettingsAudioSilenceSettings
 {
     /// <summary>The name of the audio selector in the input that MediaLive should monitor to detect silence. Select your most important rendition. If you didn't create an audio selector in this input, leave blank.</summary>
@@ -10161,6 +10633,7 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsAutomaticInpu
     public double? AudioSilenceThresholdMsec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettingsInputLossSettings
 {
     /// <summary>The amount of time (in milliseconds) that no input is detected. After that time, an input failover will occur.</summary>
@@ -10168,6 +10641,7 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsAutomaticInpu
     public double? InputLossThresholdMsec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettingsVideoBlackSettings
 {
     /// <summary>A value used in calculating the threshold below which MediaLive considers a pixel to be 'black'. For the input to be considered black, every pixel in a frame must be below this threshold. The threshold is calculated as a percentage (expressed as a decimal) of white. Therefore .1 means 10% white (or 90% black). Note how the formula works for any color depth. For example, if you set this field to 0.1 in 10-bit color depth: (10230.1=102.3), which means a pixel value of 102 or less is 'black'. If you set this field to .1 in an 8-bit color depth: (2550.1=25.5), which means a pixel value of 25 or less is 'black'. The range is 0.0 to 1.0, with any number of decimal places.</summary>
@@ -10179,6 +10653,7 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsAutomaticInpu
     public double? VideoBlackThresholdMsec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettings
 {
     /// <summary>MediaLive will perform a failover if the specified audio selector is silent for the specified period. See Audio Silence Failover Settings for more details.</summary>
@@ -10194,6 +10669,7 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsAutomaticInpu
     public IList<V1beta1ChannelStatusAtProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettingsVideoBlackSettings>? VideoBlackSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverCondition
 {
     /// <summary>Failover condition type-specific settings. See Failover Condition Settings for more details.</summary>
@@ -10201,6 +10677,7 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsAutomaticInpu
     public IList<V1beta1ChannelStatusAtProviderInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettings>? FailoverConditionSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsAutomaticInputFailoverSettings
 {
     /// <summary>This clear time defines the requirement a recovered input must meet to be considered healthy. The input must have no failover conditions for this length of time. Enter a time in milliseconds. This value is particularly important if the input_preference for the failover pair is set to PRIMARY_INPUT_PREFERRED, because after this time, MediaLive will switch back to the primary input.</summary>
@@ -10220,6 +10697,7 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsAutomaticInpu
     public string? SecondaryInputId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioHlsRenditionSelection
 {
     /// <summary>Specifies the GROUP-ID in the #EXT-X-MEDIA tag of the target HLS audio rendition.</summary>
@@ -10231,6 +10709,7 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioLanguageSelection
 {
     /// <summary>Selects a specific three-letter language code from within an audio source.</summary>
@@ -10242,6 +10721,7 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     public string? LanguageSelectionPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioPidSelection
 {
     /// <summary>Selects a specific PID from within a source.</summary>
@@ -10249,6 +10729,7 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     public double? Pid { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioTrackSelectionDolbyEDecode
 {
     /// <summary>Applies only to Dolby E. Enter the program ID (according to the metadata in the audio) of the Dolby E program to extract from the specified track. One program extracted per audio selector. To select multiple programs, create multiple selectors with the same Track and different Program numbers. “All channels” means to ignore the program IDs and include all the channels in this selector; useful if metadata is known to be incorrect.</summary>
@@ -10256,6 +10737,7 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     public string? ProgramSelection { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioTrackSelectionTracks
 {
     /// <summary>1-based integer value that maps to a specific audio track.</summary>
@@ -10263,6 +10745,7 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     public double? Track { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioTrackSelection
 {
     /// <summary>Configure decoding options for Dolby E streams - these should be Dolby E frames carried in PCM streams tagged with SMPTE-337. See Dolby E Decode for more details.</summary>
@@ -10274,6 +10757,7 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     public IList<V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioTrackSelectionTracks>? Tracks { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettings
 {
     /// <summary>Audio HLS Rendition Selection. See Audio HLS Rendition Selection for more details.</summary>
@@ -10293,6 +10777,7 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     public IList<V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioTrackSelection>? AudioTrackSelection { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsAudioSelector
 {
     /// <summary>Name of the Channel.</summary>
@@ -10304,6 +10789,7 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     public IList<V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsAudioSelectorSelectorSettings>? SelectorSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsAncillarySourceSettings
 {
     /// <summary>Specifies the number (1 to 4) of the captions channel you want to extract from the ancillary captions. If you plan to convert the ancillary captions to another format, complete this field. If you plan to choose Embedded as the captions destination in the output (to pass through all the channels in the ancillary captions), leave this field blank because MediaLive ignores the field.</summary>
@@ -10311,10 +10797,12 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     public double? SourceAncillaryChannelNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsAribSourceSettings
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsDvbSubSourceSettings
 {
     /// <summary>If you will configure a WebVTT caption description that references this caption selector, use this field to provide the language to consider when translating the image-based source to text.</summary>
@@ -10326,6 +10814,7 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     public double? Pid { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsEmbeddedSourceSettings
 {
     /// <summary>If upconvert, 608 data is both passed through via the “608 compatibility bytes” fields of the 708 wrapper as well as translated into 708. 708 data present in the source content will be discarded.</summary>
@@ -10341,6 +10830,7 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     public double? Source608ChannelNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsScte20SourceSettings
 {
     /// <summary>If upconvert, 608 data is both passed through via the “608 compatibility bytes” fields of the 708 wrapper as well as translated into 708. 708 data present in the source content will be discarded.</summary>
@@ -10352,6 +10842,7 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     public double? Source608ChannelNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsScte27SourceSettings
 {
     /// <summary>If you will configure a WebVTT caption description that references this caption selector, use this field to provide the language to consider when translating the image-based source to text.</summary>
@@ -10363,6 +10854,7 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     public double? Pid { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsTeletextSourceSettingsOutputRectangle
 {
     /// <summary>See the description in left_offset. For height, specify the entire height of the rectangle as a percentage of the underlying frame height. For example, "80" means the rectangle height is 80% of the underlying frame height. The top_offset and rectangle_height must add up to 100% or less. This field corresponds to tts:extent - Y in the TTML standard.</summary>
@@ -10382,6 +10874,7 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     public double? Width { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsTeletextSourceSettings
 {
     /// <summary>Optionally defines a region where TTML style captions will be displayed. See Caption Rectangle for more details.</summary>
@@ -10393,6 +10886,7 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     public string? PageNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettings
 {
     /// <summary>Ancillary Source Settings. See Ancillary Source Settings for more details.</summary>
@@ -10424,6 +10918,7 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     public IList<V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsTeletextSourceSettings>? TeletextSourceSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsCaptionSelector
 {
     /// <summary>Selects a specific three-letter language code from within an audio source.</summary>
@@ -10439,6 +10934,7 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     public IList<V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsCaptionSelectorSelectorSettings>? SelectorSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsNetworkInputSettingsHlsInputSettings
 {
     /// <summary>The bitrate is specified in bits per second, as in an HLS manifest.</summary>
@@ -10462,6 +10958,7 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     public string? Scte35Source { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsNetworkInputSettings
 {
     /// <summary>Specifies HLS input settings when the uri is for a HLS manifest. See HLS Input Settings for more details.</summary>
@@ -10473,6 +10970,7 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     public string? ServerValidation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsVideoSelector
 {
     /// <summary></summary>
@@ -10484,6 +10982,7 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     public string? ColorSpaceUsage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
 {
     /// <summary></summary>
@@ -10531,6 +11030,7 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
     public IList<V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsVideoSelector>? VideoSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderInputAttachments
 {
     /// <summary>User-specified settings for defining what the conditions are for declaring the input unhealthy and failing over to a different input. See Automatic Input Failover Settings for more details.</summary>
@@ -10550,6 +11050,7 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachments
     public IList<V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings>? InputSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderInputSpecification
 {
     /// <summary></summary>
@@ -10565,6 +11066,7 @@ public partial class V1beta1ChannelStatusAtProviderInputSpecification
     public string? MaximumBitrate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderMaintenance
 {
     /// <summary>The day of the week to use for maintenance.</summary>
@@ -10576,6 +11078,7 @@ public partial class V1beta1ChannelStatusAtProviderMaintenance
     public string? MaintenanceStartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProviderVpc
 {
     /// <summary></summary>
@@ -10599,6 +11102,7 @@ public partial class V1beta1ChannelStatusAtProviderVpc
     public IList<string>? SubnetIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ChannelStatusAtProvider
 {
     /// <summary>ARN of the Channel.</summary>
@@ -10670,6 +11174,7 @@ public partial class V1beta1ChannelStatusAtProvider
     public IList<V1beta1ChannelStatusAtProviderVpc>? Vpc { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ChannelStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -10697,6 +11202,7 @@ public partial class V1beta1ChannelStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ChannelStatus defines the observed state of Channel.</summary>
 public partial class V1beta1ChannelStatus
 {
     /// <summary></summary>
@@ -10713,6 +11219,7 @@ public partial class V1beta1ChannelStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Channel is the Schema for the Channels API.</summary>
 public partial class V1beta1Channel : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ChannelSpec>, IStatus<V1beta1ChannelStatus>
 {
     public const string KubeApiVersion = "v1beta1";

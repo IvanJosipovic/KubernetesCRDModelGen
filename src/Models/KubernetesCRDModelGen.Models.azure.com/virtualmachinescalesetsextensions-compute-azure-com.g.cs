@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.azure.com;
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a compute.azure.com/VirtualMachineScaleSet resource</summary>
 public partial class V1api20220301storageVirtualMachineScaleSetsExtensionSpecOwner
 {
     /// <summary></summary>
@@ -19,6 +20,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetsExtensionSpecOwn
     public string? Name { get; set; }
 }
 
+/// <summary>SecretMapReference is a reference to a Kubernetes secret in the same namespace as the resource it is on.</summary>
 public partial class V1api20220301storageVirtualMachineScaleSetsExtensionSpecProtectedSettings
 {
     /// <summary>Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource</summary>
@@ -26,6 +28,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetsExtensionSpecPro
     public string Name { get; set; }
 }
 
+/// <summary>Reference: Resource Id</summary>
 public partial class V1api20220301storageVirtualMachineScaleSetsExtensionSpecProtectedSettingsFromKeyVaultSourceVaultReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -45,6 +48,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetsExtensionSpecPro
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource</summary>
 public partial class V1api20220301storageVirtualMachineScaleSetsExtensionSpecProtectedSettingsFromKeyVaultSourceVault
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -56,6 +60,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetsExtensionSpecPro
     public V1api20220301storageVirtualMachineScaleSetsExtensionSpecProtectedSettingsFromKeyVaultSourceVaultReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.KeyVaultSecretReference Describes a reference to Key Vault Secret</summary>
 public partial class V1api20220301storageVirtualMachineScaleSetsExtensionSpecProtectedSettingsFromKeyVault
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -71,6 +76,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetsExtensionSpecPro
     public V1api20220301storageVirtualMachineScaleSetsExtensionSpecProtectedSettingsFromKeyVaultSourceVault? SourceVault { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualMachineScaleSets_Extension_Spec</summary>
 public partial class V1api20220301storageVirtualMachineScaleSetsExtensionSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -134,6 +140,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetsExtensionSpec
     public string? TypeHandlerVersion { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20220301storageVirtualMachineScaleSetsExtensionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -165,6 +172,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetsExtensionStatusC
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.SubResource_STATUS</summary>
 public partial class V1api20220301storageVirtualMachineScaleSetsExtensionStatusProtectedSettingsFromKeyVaultSourceVault
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -176,6 +184,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetsExtensionStatusP
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.KeyVaultSecretReference_STATUS Describes a reference to Key Vault Secret</summary>
 public partial class V1api20220301storageVirtualMachineScaleSetsExtensionStatusProtectedSettingsFromKeyVault
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -191,6 +200,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetsExtensionStatusP
     public V1api20220301storageVirtualMachineScaleSetsExtensionStatusProtectedSettingsFromKeyVaultSourceVault? SourceVault { get; set; }
 }
 
+/// <summary>Storage version of v1api20220301.VirtualMachineScaleSets_Extension_STATUS</summary>
 public partial class V1api20220301storageVirtualMachineScaleSetsExtensionStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -259,6 +269,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetsExtensionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20220301.VirtualMachineScaleSetsExtension Generator information: - Generated from: /compute/resource-manager/Microsoft.Compute/ComputeRP/stable/2022-03-01/virtualMachineScaleSet.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/extensions/{vmssExtensionName}</summary>
 public partial class V1api20220301storageVirtualMachineScaleSetsExtension : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20220301storageVirtualMachineScaleSetsExtensionSpec>, IStatus<V1api20220301storageVirtualMachineScaleSetsExtensionStatus>
 {
     public const string KubeApiVersion = "v1api20220301storage";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.billingbudgets.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1BillingBudgetsBudgetSpecAllUpdatesRuleMonitoringNotificationChannels
 {
     /// <summary>Allowed value: The Google Cloud resource name of a `MonitoringNotificationChannel` resource (format: `projects/{{project}}/notificationChannels/{{name}}`).</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1BillingBudgetsBudgetSpecAllUpdatesRuleMonitoringNoti
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BillingBudgetsBudgetSpecAllUpdatesRulePubsubTopicRef
 {
     /// <summary>Optional. The name of the Pub/Sub topic where budget related messages will be published, in the form `projects/{project_id}/topics/{topic_id}`. Updates are sent at regular intervals to the topic. The topic needs to be created before the budget is created; see https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications for more details. Caller is expected to have `pubsub.topics.setIamPolicy` permission on the topic when it's set for a budget, otherwise, the API call will fail with PERMISSION_DENIED. See https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications#permissions_required_for_this_task for more details on Pub/Sub roles and permissions.  Allowed value: The Google Cloud resource name of a `PubSubTopic` resource (format: `projects/{{project}}/topics/{{name}}`).</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1BillingBudgetsBudgetSpecAllUpdatesRulePubsubTopicRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Optional. Rules to apply to notifications sent based on budget spend and thresholds.</summary>
 public partial class V1beta1BillingBudgetsBudgetSpecAllUpdatesRule
 {
     /// <summary>Optional. When set to true, disables default notifications sent when a threshold is exceeded. Default notifications are sent to those with Billing Account Administrator and Billing Account User IAM roles for the target account.</summary>
@@ -57,6 +60,7 @@ public partial class V1beta1BillingBudgetsBudgetSpecAllUpdatesRule
     public string? SchemaVersion { get; set; }
 }
 
+/// <summary>A specified amount to use as the budget. `currency_code` is optional. If specified when creating a budget, it must match the currency of the billing account. If specified when updating a budget, it must match the currency_code of the existing budget. The `currency_code` is provided on output.</summary>
 public partial class V1beta1BillingBudgetsBudgetSpecAmountSpecifiedAmount
 {
     /// <summary>Immutable. The three-letter currency code defined in ISO 4217.</summary>
@@ -72,6 +76,7 @@ public partial class V1beta1BillingBudgetsBudgetSpecAmountSpecifiedAmount
     public long? Units { get; set; }
 }
 
+/// <summary>Required. Budgeted amount.</summary>
 public partial class V1beta1BillingBudgetsBudgetSpecAmount
 {
     /// <summary>Use the last period's actual spend as the budget for the present period. LastPeriodAmount can only be set when the budget's time period is a .</summary>
@@ -83,6 +88,7 @@ public partial class V1beta1BillingBudgetsBudgetSpecAmount
     public V1beta1BillingBudgetsBudgetSpecAmountSpecifiedAmount? SpecifiedAmount { get; set; }
 }
 
+/// <summary>Immutable.</summary>
 public partial class V1beta1BillingBudgetsBudgetSpecBillingAccountRef
 {
     /// <summary>The billing account of the resource  Allowed value: The Google Cloud resource name of a Google Cloud Billing Account (format: `billingAccounts/{{name}}`).</summary>
@@ -98,6 +104,7 @@ public partial class V1beta1BillingBudgetsBudgetSpecBillingAccountRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. Optional. The end date of the time period. Budgets with elapsed end date won't be processed. If unset, specifies to track all usage incurred since the start_date.</summary>
 public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilterCustomPeriodEndDate
 {
     /// <summary>Immutable. Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
@@ -113,6 +120,7 @@ public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilterCustomPeriodEndD
     public long? Year { get; set; }
 }
 
+/// <summary>Immutable. Required. The start date must be after January 1, 2017.</summary>
 public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilterCustomPeriodStartDate
 {
     /// <summary>Immutable. Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
@@ -128,6 +136,7 @@ public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilterCustomPeriodStar
     public long? Year { get; set; }
 }
 
+/// <summary>Optional. Specifies to track usage from any start date (required) to any end date (optional). This time period is static, it does not recur.</summary>
 public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilterCustomPeriod
 {
     /// <summary>Immutable. Optional. The end date of the time period. Budgets with elapsed end date won't be processed. If unset, specifies to track all usage incurred since the start_date.</summary>
@@ -139,6 +148,7 @@ public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilterCustomPeriod
     public V1beta1BillingBudgetsBudgetSpecBudgetFilterCustomPeriodStartDate StartDate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilterLabels
 {
     /// <summary>Immutable. The values of the label</summary>
@@ -146,6 +156,7 @@ public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilterLabels
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilterProjects
 {
     /// <summary>Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -161,6 +172,7 @@ public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilterProjects
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilterSubaccounts
 {
     /// <summary></summary>
@@ -176,6 +188,7 @@ public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilterSubaccounts
     public string? Namespace { get; set; }
 }
 
+/// <summary>Optional. Filters that define which resources are used to compute the actual spend against the budget amount, such as projects, services, and the budget's time period, as well as other filters.</summary>
 public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilter
 {
     /// <summary>Optional. Specifies to track usage for recurring calendar period. For example, assume that CalendarPeriod.QUARTER is set. The budget will track usage from April 1 to June 30, when the current calendar month is April, May, June. After that, it will track usage from July 1 to September 30 when the current calendar month is July, August, September, so on. Possible values: CALENDAR_PERIOD_UNSPECIFIED, MONTH, QUARTER, YEAR</summary>
@@ -211,6 +224,7 @@ public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilter
     public IList<V1beta1BillingBudgetsBudgetSpecBudgetFilterSubaccounts>? Subaccounts { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BillingBudgetsBudgetSpecThresholdRules
 {
     /// <summary>Optional. The type of basis used to determine if spend has passed the threshold. Behavior defaults to CURRENT_SPEND if not set. Possible values: BASIS_UNSPECIFIED, CURRENT_SPEND, FORECASTED_SPEND</summary>
@@ -222,6 +236,7 @@ public partial class V1beta1BillingBudgetsBudgetSpecThresholdRules
     public double ThresholdPercent { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BillingBudgetsBudgetSpec
 {
     /// <summary>Optional. Rules to apply to notifications sent based on budget spend and thresholds.</summary>
@@ -253,6 +268,7 @@ public partial class V1beta1BillingBudgetsBudgetSpec
     public IList<V1beta1BillingBudgetsBudgetSpecThresholdRules>? ThresholdRules { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BillingBudgetsBudgetStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -276,6 +292,7 @@ public partial class V1beta1BillingBudgetsBudgetStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BillingBudgetsBudgetStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -292,6 +309,7 @@ public partial class V1beta1BillingBudgetsBudgetStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1BillingBudgetsBudget : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BillingBudgetsBudgetSpec>, IStatus<V1beta1BillingBudgetsBudgetStatus>
 {
     public const string KubeApiVersion = "v1beta1";

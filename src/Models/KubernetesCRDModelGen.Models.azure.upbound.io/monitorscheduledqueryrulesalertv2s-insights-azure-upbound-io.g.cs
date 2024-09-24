@@ -18,6 +18,7 @@ public enum V1beta1MonitorScheduledQueryRulesAlertV2SpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecForProviderAction
 {
     /// <summary>List of Action Group resource IDs to invoke when the alert fires.</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecForProviderActi
     public IDictionary<string, string>? CustomProperties { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecForProviderCriteriaDimension
 {
     /// <summary>Specifies the name which should be used for this Monitor Scheduled Query Rule. Changing this forces a new resource to be created.</summary>
@@ -44,6 +46,7 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecForProviderCrit
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecForProviderCriteriaFailingPeriods
 {
     /// <summary>Specifies the number of violations to trigger an alert. Should be smaller or equal to number_of_evaluation_periods. Possible value is integer between 1 and 6.</summary>
@@ -55,6 +58,7 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecForProviderCrit
     public double? NumberOfEvaluationPeriods { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecForProviderCriteria
 {
     /// <summary>A dimension block as defined below.</summary>
@@ -110,6 +114,7 @@ public enum V1beta1MonitorScheduledQueryRulesAlertV2SpecForProviderResourceGroup
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -123,6 +128,7 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecForProviderReso
     public V1beta1MonitorScheduledQueryRulesAlertV2SpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -154,6 +160,7 @@ public enum V1beta1MonitorScheduledQueryRulesAlertV2SpecForProviderResourceGroup
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -167,6 +174,7 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecForProviderReso
     public V1beta1MonitorScheduledQueryRulesAlertV2SpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public enum V1beta1MonitorScheduledQueryRulesAlertV2SpecForProviderScopesRefsPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecForProviderScopesRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -215,6 +224,7 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecForProviderScop
     public V1beta1MonitorScheduledQueryRulesAlertV2SpecForProviderScopesRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecForProviderScopesRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -246,6 +256,7 @@ public enum V1beta1MonitorScheduledQueryRulesAlertV2SpecForProviderScopesSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecForProviderScopesSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -259,6 +270,7 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecForProviderScop
     public V1beta1MonitorScheduledQueryRulesAlertV2SpecForProviderScopesSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of ApplicationInsights in insights to populate scopes.</summary>
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecForProviderScopesSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -274,6 +286,7 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecForProviderScop
     public V1beta1MonitorScheduledQueryRulesAlertV2SpecForProviderScopesSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecForProvider
 {
     /// <summary>An action block as defined below.</summary>
@@ -365,6 +378,7 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecForProvider
     public bool? WorkspaceAlertsStorageEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecInitProviderAction
 {
     /// <summary>List of Action Group resource IDs to invoke when the alert fires.</summary>
@@ -376,6 +390,7 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecInitProviderAct
     public IDictionary<string, string>? CustomProperties { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecInitProviderCriteriaDimension
 {
     /// <summary>Specifies the name which should be used for this Monitor Scheduled Query Rule. Changing this forces a new resource to be created.</summary>
@@ -391,6 +406,7 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecInitProviderCri
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecInitProviderCriteriaFailingPeriods
 {
     /// <summary>Specifies the number of violations to trigger an alert. Should be smaller or equal to number_of_evaluation_periods. Possible value is integer between 1 and 6.</summary>
@@ -402,6 +418,7 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecInitProviderCri
     public double? NumberOfEvaluationPeriods { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecInitProviderCriteria
 {
     /// <summary>A dimension block as defined below.</summary>
@@ -457,6 +474,7 @@ public enum V1beta1MonitorScheduledQueryRulesAlertV2SpecInitProviderScopesRefsPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecInitProviderScopesRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -470,6 +488,7 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecInitProviderSco
     public V1beta1MonitorScheduledQueryRulesAlertV2SpecInitProviderScopesRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecInitProviderScopesRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -501,6 +520,7 @@ public enum V1beta1MonitorScheduledQueryRulesAlertV2SpecInitProviderScopesSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecInitProviderScopesSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -514,6 +534,7 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecInitProviderSco
     public V1beta1MonitorScheduledQueryRulesAlertV2SpecInitProviderScopesSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of ApplicationInsights in insights to populate scopes.</summary>
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecInitProviderScopesSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -529,6 +550,7 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecInitProviderSco
     public V1beta1MonitorScheduledQueryRulesAlertV2SpecInitProviderScopesSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecInitProvider
 {
     /// <summary>An action block as defined below.</summary>
@@ -650,6 +672,7 @@ public enum V1beta1MonitorScheduledQueryRulesAlertV2SpecProviderConfigRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -663,6 +686,7 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecProviderConfigR
     public V1beta1MonitorScheduledQueryRulesAlertV2SpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -694,6 +718,7 @@ public enum V1beta1MonitorScheduledQueryRulesAlertV2SpecPublishConnectionDetails
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -707,6 +732,7 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecPublishConnecti
     public V1beta1MonitorScheduledQueryRulesAlertV2SpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -718,6 +744,7 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecPublishConnecti
     public V1beta1MonitorScheduledQueryRulesAlertV2SpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -733,6 +760,7 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecPublishConnecti
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -748,6 +776,7 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecPublishConnecti
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -759,6 +788,7 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecWriteConnection
     public string Namespace { get; set; }
 }
 
+/// <summary>MonitorScheduledQueryRulesAlertV2Spec defines the desired state of MonitorScheduledQueryRulesAlertV2</summary>
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2Spec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -791,6 +821,7 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertV2Spec
     public V1beta1MonitorScheduledQueryRulesAlertV2SpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2StatusAtProviderAction
 {
     /// <summary>List of Action Group resource IDs to invoke when the alert fires.</summary>
@@ -802,6 +833,7 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertV2StatusAtProviderAct
     public IDictionary<string, string>? CustomProperties { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2StatusAtProviderCriteriaDimension
 {
     /// <summary>Specifies the name which should be used for this Monitor Scheduled Query Rule. Changing this forces a new resource to be created.</summary>
@@ -817,6 +849,7 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertV2StatusAtProviderCri
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2StatusAtProviderCriteriaFailingPeriods
 {
     /// <summary>Specifies the number of violations to trigger an alert. Should be smaller or equal to number_of_evaluation_periods. Possible value is integer between 1 and 6.</summary>
@@ -828,6 +861,7 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertV2StatusAtProviderCri
     public double? NumberOfEvaluationPeriods { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2StatusAtProviderCriteria
 {
     /// <summary>A dimension block as defined below.</summary>
@@ -863,6 +897,7 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertV2StatusAtProviderCri
     public string? TimeAggregationMethod { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2StatusAtProvider
 {
     /// <summary>An action block as defined below.</summary>
@@ -954,6 +989,7 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertV2StatusAtProvider
     public bool? WorkspaceAlertsStorageEnabled { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2StatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -981,6 +1017,7 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertV2StatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>MonitorScheduledQueryRulesAlertV2Status defines the observed state of MonitorScheduledQueryRulesAlertV2.</summary>
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2Status
 {
     /// <summary></summary>
@@ -997,6 +1034,7 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertV2Status
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>MonitorScheduledQueryRulesAlertV2 is the Schema for the MonitorScheduledQueryRulesAlertV2s API. Manages an AlertingAction Scheduled Query Rules Version 2 resource within Azure Monitor</summary>
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2 : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MonitorScheduledQueryRulesAlertV2Spec>, IStatus<V1beta1MonitorScheduledQueryRulesAlertV2Status>
 {
     public const string KubeApiVersion = "v1beta1";

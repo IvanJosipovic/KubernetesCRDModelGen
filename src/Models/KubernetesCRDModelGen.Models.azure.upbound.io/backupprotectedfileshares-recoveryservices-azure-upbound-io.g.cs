@@ -38,6 +38,7 @@ public enum V1beta1BackupProtectedFileShareSpecForProviderBackupPolicyIdRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecForProviderBackupPolicyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1BackupProtectedFileShareSpecForProviderBackupPolicyI
     public V1beta1BackupProtectedFileShareSpecForProviderBackupPolicyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a BackupPolicyFileShare in recoveryservices to populate backupPolicyId.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecForProviderBackupPolicyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1BackupProtectedFileShareSpecForProviderBackupPolicyIdSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecForProviderBackupPolicyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1BackupProtectedFileShareSpecForProviderBackupPolicyI
     public V1beta1BackupProtectedFileShareSpecForProviderBackupPolicyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a BackupPolicyFileShare in recoveryservices to populate backupPolicyId.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecForProviderBackupPolicyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1BackupProtectedFileShareSpecForProviderRecoveryVaultNameRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecForProviderRecoveryVaultNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1BackupProtectedFileShareSpecForProviderRecoveryVault
     public V1beta1BackupProtectedFileShareSpecForProviderRecoveryVaultNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Vault in recoveryservices to populate recoveryVaultName.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecForProviderRecoveryVaultNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1BackupProtectedFileShareSpecForProviderRecoveryVaultNameSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecForProviderRecoveryVaultNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1BackupProtectedFileShareSpecForProviderRecoveryVault
     public V1beta1BackupProtectedFileShareSpecForProviderRecoveryVaultNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Vault in recoveryservices to populate recoveryVaultName.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecForProviderRecoveryVaultNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1BackupProtectedFileShareSpecForProviderResourceGroupNameRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1BackupProtectedFileShareSpecForProviderResourceGroup
     public V1beta1BackupProtectedFileShareSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1BackupProtectedFileShareSpecForProviderResourceGroupNameSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1BackupProtectedFileShareSpecForProviderResourceGroup
     public V1beta1BackupProtectedFileShareSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -314,6 +326,7 @@ public enum V1beta1BackupProtectedFileShareSpecForProviderSourceFileShareNameRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecForProviderSourceFileShareNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -327,6 +340,7 @@ public partial class V1beta1BackupProtectedFileShareSpecForProviderSourceFileSha
     public V1beta1BackupProtectedFileShareSpecForProviderSourceFileShareNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Share in storage to populate sourceFileShareName.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecForProviderSourceFileShareNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -358,6 +372,7 @@ public enum V1beta1BackupProtectedFileShareSpecForProviderSourceFileShareNameSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecForProviderSourceFileShareNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -371,6 +386,7 @@ public partial class V1beta1BackupProtectedFileShareSpecForProviderSourceFileSha
     public V1beta1BackupProtectedFileShareSpecForProviderSourceFileShareNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Share in storage to populate sourceFileShareName.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecForProviderSourceFileShareNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -406,6 +422,7 @@ public enum V1beta1BackupProtectedFileShareSpecForProviderSourceStorageAccountId
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecForProviderSourceStorageAccountIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -419,6 +436,7 @@ public partial class V1beta1BackupProtectedFileShareSpecForProviderSourceStorage
     public V1beta1BackupProtectedFileShareSpecForProviderSourceStorageAccountIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a BackupContainerStorageAccount in recoveryservices to populate sourceStorageAccountId.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecForProviderSourceStorageAccountIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -450,6 +468,7 @@ public enum V1beta1BackupProtectedFileShareSpecForProviderSourceStorageAccountId
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecForProviderSourceStorageAccountIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -463,6 +482,7 @@ public partial class V1beta1BackupProtectedFileShareSpecForProviderSourceStorage
     public V1beta1BackupProtectedFileShareSpecForProviderSourceStorageAccountIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a BackupContainerStorageAccount in recoveryservices to populate sourceStorageAccountId.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecForProviderSourceStorageAccountIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -478,6 +498,7 @@ public partial class V1beta1BackupProtectedFileShareSpecForProviderSourceStorage
     public V1beta1BackupProtectedFileShareSpecForProviderSourceStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupProtectedFileShareSpecForProvider
 {
     /// <summary>Specifies the ID of the backup policy to use. The policy must be an Azure File Share backup policy. Other types are not supported.</summary>
@@ -561,6 +582,7 @@ public enum V1beta1BackupProtectedFileShareSpecInitProviderBackupPolicyIdRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderBackupPolicyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -574,6 +596,7 @@ public partial class V1beta1BackupProtectedFileShareSpecInitProviderBackupPolicy
     public V1beta1BackupProtectedFileShareSpecInitProviderBackupPolicyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a BackupPolicyFileShare in recoveryservices to populate backupPolicyId.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderBackupPolicyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -605,6 +628,7 @@ public enum V1beta1BackupProtectedFileShareSpecInitProviderBackupPolicyIdSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderBackupPolicyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -618,6 +642,7 @@ public partial class V1beta1BackupProtectedFileShareSpecInitProviderBackupPolicy
     public V1beta1BackupProtectedFileShareSpecInitProviderBackupPolicyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a BackupPolicyFileShare in recoveryservices to populate backupPolicyId.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderBackupPolicyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -653,6 +678,7 @@ public enum V1beta1BackupProtectedFileShareSpecInitProviderRecoveryVaultNameRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderRecoveryVaultNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -666,6 +692,7 @@ public partial class V1beta1BackupProtectedFileShareSpecInitProviderRecoveryVaul
     public V1beta1BackupProtectedFileShareSpecInitProviderRecoveryVaultNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Vault in recoveryservices to populate recoveryVaultName.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderRecoveryVaultNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -697,6 +724,7 @@ public enum V1beta1BackupProtectedFileShareSpecInitProviderRecoveryVaultNameSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderRecoveryVaultNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -710,6 +738,7 @@ public partial class V1beta1BackupProtectedFileShareSpecInitProviderRecoveryVaul
     public V1beta1BackupProtectedFileShareSpecInitProviderRecoveryVaultNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Vault in recoveryservices to populate recoveryVaultName.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderRecoveryVaultNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -745,6 +774,7 @@ public enum V1beta1BackupProtectedFileShareSpecInitProviderResourceGroupNameRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -758,6 +788,7 @@ public partial class V1beta1BackupProtectedFileShareSpecInitProviderResourceGrou
     public V1beta1BackupProtectedFileShareSpecInitProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -789,6 +820,7 @@ public enum V1beta1BackupProtectedFileShareSpecInitProviderResourceGroupNameSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -802,6 +834,7 @@ public partial class V1beta1BackupProtectedFileShareSpecInitProviderResourceGrou
     public V1beta1BackupProtectedFileShareSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -837,6 +870,7 @@ public enum V1beta1BackupProtectedFileShareSpecInitProviderSourceFileShareNameRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderSourceFileShareNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -850,6 +884,7 @@ public partial class V1beta1BackupProtectedFileShareSpecInitProviderSourceFileSh
     public V1beta1BackupProtectedFileShareSpecInitProviderSourceFileShareNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Share in storage to populate sourceFileShareName.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderSourceFileShareNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -881,6 +916,7 @@ public enum V1beta1BackupProtectedFileShareSpecInitProviderSourceFileShareNameSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderSourceFileShareNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -894,6 +930,7 @@ public partial class V1beta1BackupProtectedFileShareSpecInitProviderSourceFileSh
     public V1beta1BackupProtectedFileShareSpecInitProviderSourceFileShareNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Share in storage to populate sourceFileShareName.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderSourceFileShareNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -929,6 +966,7 @@ public enum V1beta1BackupProtectedFileShareSpecInitProviderSourceStorageAccountI
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderSourceStorageAccountIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -942,6 +980,7 @@ public partial class V1beta1BackupProtectedFileShareSpecInitProviderSourceStorag
     public V1beta1BackupProtectedFileShareSpecInitProviderSourceStorageAccountIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a BackupContainerStorageAccount in recoveryservices to populate sourceStorageAccountId.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderSourceStorageAccountIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -973,6 +1012,7 @@ public enum V1beta1BackupProtectedFileShareSpecInitProviderSourceStorageAccountI
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderSourceStorageAccountIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -986,6 +1026,7 @@ public partial class V1beta1BackupProtectedFileShareSpecInitProviderSourceStorag
     public V1beta1BackupProtectedFileShareSpecInitProviderSourceStorageAccountIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a BackupContainerStorageAccount in recoveryservices to populate sourceStorageAccountId.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderSourceStorageAccountIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1001,6 +1042,7 @@ public partial class V1beta1BackupProtectedFileShareSpecInitProviderSourceStorag
     public V1beta1BackupProtectedFileShareSpecInitProviderSourceStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecInitProvider
 {
     /// <summary>Specifies the ID of the backup policy to use. The policy must be an Azure File Share backup policy. Other types are not supported.</summary>
@@ -1106,6 +1148,7 @@ public enum V1beta1BackupProtectedFileShareSpecProviderConfigRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1119,6 +1162,7 @@ public partial class V1beta1BackupProtectedFileShareSpecProviderConfigRefPolicy
     public V1beta1BackupProtectedFileShareSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1150,6 +1194,7 @@ public enum V1beta1BackupProtectedFileShareSpecPublishConnectionDetailsToConfigR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1163,6 +1208,7 @@ public partial class V1beta1BackupProtectedFileShareSpecPublishConnectionDetails
     public V1beta1BackupProtectedFileShareSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1174,6 +1220,7 @@ public partial class V1beta1BackupProtectedFileShareSpecPublishConnectionDetails
     public V1beta1BackupProtectedFileShareSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1189,6 +1236,7 @@ public partial class V1beta1BackupProtectedFileShareSpecPublishConnectionDetails
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1204,6 +1252,7 @@ public partial class V1beta1BackupProtectedFileShareSpecPublishConnectionDetails
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1BackupProtectedFileShareSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1215,6 +1264,7 @@ public partial class V1beta1BackupProtectedFileShareSpecWriteConnectionSecretToR
     public string Namespace { get; set; }
 }
 
+/// <summary>BackupProtectedFileShareSpec defines the desired state of BackupProtectedFileShare</summary>
 public partial class V1beta1BackupProtectedFileShareSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1247,6 +1297,7 @@ public partial class V1beta1BackupProtectedFileShareSpec
     public V1beta1BackupProtectedFileShareSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupProtectedFileShareStatusAtProvider
 {
     /// <summary>Specifies the ID of the backup policy to use. The policy must be an Azure File Share backup policy. Other types are not supported.</summary>
@@ -1274,6 +1325,7 @@ public partial class V1beta1BackupProtectedFileShareStatusAtProvider
     public string? SourceStorageAccountId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1BackupProtectedFileShareStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1301,6 +1353,7 @@ public partial class V1beta1BackupProtectedFileShareStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>BackupProtectedFileShareStatus defines the observed state of BackupProtectedFileShare.</summary>
 public partial class V1beta1BackupProtectedFileShareStatus
 {
     /// <summary></summary>
@@ -1317,6 +1370,7 @@ public partial class V1beta1BackupProtectedFileShareStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>BackupProtectedFileShare is the Schema for the BackupProtectedFileShares API. Manages an Azure Backup Protected File Share.</summary>
 public partial class V1beta1BackupProtectedFileShare : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BackupProtectedFileShareSpec>, IStatus<V1beta1BackupProtectedFileShareStatus>
 {
     public const string KubeApiVersion = "v1beta1";

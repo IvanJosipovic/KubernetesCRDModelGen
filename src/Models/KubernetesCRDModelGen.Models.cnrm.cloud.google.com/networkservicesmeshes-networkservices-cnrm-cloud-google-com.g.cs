@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkservices.cnrm.cloud.google.com;
+/// <summary>Immutable. The Project that this resource belongs to.</summary>
 public partial class V1beta1NetworkServicesMeshSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1NetworkServicesMeshSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkServicesMeshSpec
 {
     /// <summary>Optional. A free-text description of the resource. Max length 1024 characters.</summary>
@@ -46,6 +48,7 @@ public partial class V1beta1NetworkServicesMeshSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkServicesMeshStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -69,6 +72,7 @@ public partial class V1beta1NetworkServicesMeshStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkServicesMeshStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -93,6 +97,7 @@ public partial class V1beta1NetworkServicesMeshStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1NetworkServicesMesh : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1NetworkServicesMeshSpec>, IStatus<V1beta1NetworkServicesMeshStatus>
 {
     public const string KubeApiVersion = "v1beta1";

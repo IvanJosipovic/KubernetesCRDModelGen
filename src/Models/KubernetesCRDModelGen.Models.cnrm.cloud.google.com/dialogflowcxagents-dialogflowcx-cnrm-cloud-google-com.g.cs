@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dialogflowcx.cnrm.cloud.google.com;
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1DialogflowCXAgentSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1DialogflowCXAgentSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Settings related to speech recognition.</summary>
 public partial class V1alpha1DialogflowCXAgentSpecSpeechToTextSettings
 {
     /// <summary>Whether to use speech adaptation for speech recognition.</summary>
@@ -30,6 +32,7 @@ public partial class V1alpha1DialogflowCXAgentSpecSpeechToTextSettings
     public bool? EnableSpeechAdaptation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DialogflowCXAgentSpec
 {
     /// <summary>The URI of the agent's avatar. Avatars are used throughout the Dialogflow console and in the self-hosted Web Demo integration.</summary>
@@ -85,6 +88,7 @@ public partial class V1alpha1DialogflowCXAgentSpec
     public string TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DialogflowCXAgentStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -108,6 +112,7 @@ public partial class V1alpha1DialogflowCXAgentStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DialogflowCXAgentStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -128,6 +133,7 @@ public partial class V1alpha1DialogflowCXAgentStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1DialogflowCXAgent : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DialogflowCXAgentSpec>, IStatus<V1alpha1DialogflowCXAgentStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

@@ -38,6 +38,7 @@ public enum V1beta1SubscriptionSpecForProviderApiManagementNameRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SubscriptionSpecForProviderApiManagementNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1SubscriptionSpecForProviderApiManagementNameRefPolic
     public V1beta1SubscriptionSpecForProviderApiManagementNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Management in apimanagement to populate apiManagementName.</summary>
 public partial class V1beta1SubscriptionSpecForProviderApiManagementNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1SubscriptionSpecForProviderApiManagementNameSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SubscriptionSpecForProviderApiManagementNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1SubscriptionSpecForProviderApiManagementNameSelector
     public V1beta1SubscriptionSpecForProviderApiManagementNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Management in apimanagement to populate apiManagementName.</summary>
 public partial class V1beta1SubscriptionSpecForProviderApiManagementNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1SubscriptionSpecForProviderApiManagementNameSelector
     public V1beta1SubscriptionSpecForProviderApiManagementNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>The primary subscription key to use for the subscription.</summary>
 public partial class V1beta1SubscriptionSpecForProviderPrimaryKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -145,6 +150,7 @@ public enum V1beta1SubscriptionSpecForProviderProductIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SubscriptionSpecForProviderProductIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -158,6 +164,7 @@ public partial class V1beta1SubscriptionSpecForProviderProductIdRefPolicy
     public V1beta1SubscriptionSpecForProviderProductIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Product in apimanagement to populate productId.</summary>
 public partial class V1beta1SubscriptionSpecForProviderProductIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -189,6 +196,7 @@ public enum V1beta1SubscriptionSpecForProviderProductIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SubscriptionSpecForProviderProductIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1SubscriptionSpecForProviderProductIdSelectorPolicy
     public V1beta1SubscriptionSpecForProviderProductIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Product in apimanagement to populate productId.</summary>
 public partial class V1beta1SubscriptionSpecForProviderProductIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -237,6 +246,7 @@ public enum V1beta1SubscriptionSpecForProviderResourceGroupNameRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SubscriptionSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -250,6 +260,7 @@ public partial class V1beta1SubscriptionSpecForProviderResourceGroupNameRefPolic
     public V1beta1SubscriptionSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1SubscriptionSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -281,6 +292,7 @@ public enum V1beta1SubscriptionSpecForProviderResourceGroupNameSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SubscriptionSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1SubscriptionSpecForProviderResourceGroupNameSelector
     public V1beta1SubscriptionSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1SubscriptionSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -309,6 +322,7 @@ public partial class V1beta1SubscriptionSpecForProviderResourceGroupNameSelector
     public V1beta1SubscriptionSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>The secondary subscription key to use for the subscription.</summary>
 public partial class V1beta1SubscriptionSpecForProviderSecondaryKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -344,6 +358,7 @@ public enum V1beta1SubscriptionSpecForProviderUserIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SubscriptionSpecForProviderUserIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -357,6 +372,7 @@ public partial class V1beta1SubscriptionSpecForProviderUserIdRefPolicy
     public V1beta1SubscriptionSpecForProviderUserIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a User in apimanagement to populate userId.</summary>
 public partial class V1beta1SubscriptionSpecForProviderUserIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -388,6 +404,7 @@ public enum V1beta1SubscriptionSpecForProviderUserIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SubscriptionSpecForProviderUserIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -401,6 +418,7 @@ public partial class V1beta1SubscriptionSpecForProviderUserIdSelectorPolicy
     public V1beta1SubscriptionSpecForProviderUserIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a User in apimanagement to populate userId.</summary>
 public partial class V1beta1SubscriptionSpecForProviderUserIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -416,6 +434,7 @@ public partial class V1beta1SubscriptionSpecForProviderUserIdSelector
     public V1beta1SubscriptionSpecForProviderUserIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubscriptionSpecForProvider
 {
     /// <summary>Determines whether tracing can be enabled. Defaults to true.</summary>
@@ -491,6 +510,7 @@ public partial class V1beta1SubscriptionSpecForProvider
     public V1beta1SubscriptionSpecForProviderUserIdSelector? UserIdSelector { get; set; }
 }
 
+/// <summary>The primary subscription key to use for the subscription.</summary>
 public partial class V1beta1SubscriptionSpecInitProviderPrimaryKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -526,6 +546,7 @@ public enum V1beta1SubscriptionSpecInitProviderProductIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SubscriptionSpecInitProviderProductIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -539,6 +560,7 @@ public partial class V1beta1SubscriptionSpecInitProviderProductIdRefPolicy
     public V1beta1SubscriptionSpecInitProviderProductIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Product in apimanagement to populate productId.</summary>
 public partial class V1beta1SubscriptionSpecInitProviderProductIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -570,6 +592,7 @@ public enum V1beta1SubscriptionSpecInitProviderProductIdSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SubscriptionSpecInitProviderProductIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -583,6 +606,7 @@ public partial class V1beta1SubscriptionSpecInitProviderProductIdSelectorPolicy
     public V1beta1SubscriptionSpecInitProviderProductIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Product in apimanagement to populate productId.</summary>
 public partial class V1beta1SubscriptionSpecInitProviderProductIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -598,6 +622,7 @@ public partial class V1beta1SubscriptionSpecInitProviderProductIdSelector
     public V1beta1SubscriptionSpecInitProviderProductIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>The secondary subscription key to use for the subscription.</summary>
 public partial class V1beta1SubscriptionSpecInitProviderSecondaryKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -633,6 +658,7 @@ public enum V1beta1SubscriptionSpecInitProviderUserIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SubscriptionSpecInitProviderUserIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -646,6 +672,7 @@ public partial class V1beta1SubscriptionSpecInitProviderUserIdRefPolicy
     public V1beta1SubscriptionSpecInitProviderUserIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a User in apimanagement to populate userId.</summary>
 public partial class V1beta1SubscriptionSpecInitProviderUserIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -677,6 +704,7 @@ public enum V1beta1SubscriptionSpecInitProviderUserIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SubscriptionSpecInitProviderUserIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -690,6 +718,7 @@ public partial class V1beta1SubscriptionSpecInitProviderUserIdSelectorPolicy
     public V1beta1SubscriptionSpecInitProviderUserIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a User in apimanagement to populate userId.</summary>
 public partial class V1beta1SubscriptionSpecInitProviderUserIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -705,6 +734,7 @@ public partial class V1beta1SubscriptionSpecInitProviderUserIdSelector
     public V1beta1SubscriptionSpecInitProviderUserIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1SubscriptionSpecInitProvider
 {
     /// <summary>Determines whether tracing can be enabled. Defaults to true.</summary>
@@ -798,6 +828,7 @@ public enum V1beta1SubscriptionSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SubscriptionSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -811,6 +842,7 @@ public partial class V1beta1SubscriptionSpecProviderConfigRefPolicy
     public V1beta1SubscriptionSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1SubscriptionSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -842,6 +874,7 @@ public enum V1beta1SubscriptionSpecPublishConnectionDetailsToConfigRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SubscriptionSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -855,6 +888,7 @@ public partial class V1beta1SubscriptionSpecPublishConnectionDetailsToConfigRefP
     public V1beta1SubscriptionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1SubscriptionSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -866,6 +900,7 @@ public partial class V1beta1SubscriptionSpecPublishConnectionDetailsToConfigRef
     public V1beta1SubscriptionSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1SubscriptionSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -881,6 +916,7 @@ public partial class V1beta1SubscriptionSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1SubscriptionSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -896,6 +932,7 @@ public partial class V1beta1SubscriptionSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1SubscriptionSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -907,6 +944,7 @@ public partial class V1beta1SubscriptionSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>SubscriptionSpec defines the desired state of Subscription</summary>
 public partial class V1beta1SubscriptionSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -939,6 +977,7 @@ public partial class V1beta1SubscriptionSpec
     public V1beta1SubscriptionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubscriptionStatusAtProvider
 {
     /// <summary>Determines whether tracing can be enabled. Defaults to true.</summary>
@@ -978,6 +1017,7 @@ public partial class V1beta1SubscriptionStatusAtProvider
     public string? UserId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1SubscriptionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1005,6 +1045,7 @@ public partial class V1beta1SubscriptionStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>SubscriptionStatus defines the observed state of Subscription.</summary>
 public partial class V1beta1SubscriptionStatus
 {
     /// <summary></summary>
@@ -1021,6 +1062,7 @@ public partial class V1beta1SubscriptionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Subscription is the Schema for the Subscriptions API. Manages a Subscription within a API Management Service.</summary>
 public partial class V1beta1Subscription : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SubscriptionSpec>, IStatus<V1beta1SubscriptionStatus>
 {
     public const string KubeApiVersion = "v1beta1";

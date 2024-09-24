@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networking.istio.io;
+/// <summary>Specifies the details of the proxy image.</summary>
 public partial class V1beta1ProxyConfigSpecImage
 {
     /// <summary>The image type of the image.</summary>
@@ -15,6 +16,7 @@ public partial class V1beta1ProxyConfigSpecImage
     public string? ImageType { get; set; }
 }
 
+/// <summary>Optional.</summary>
 public partial class V1beta1ProxyConfigSpecSelector
 {
     /// <summary>One or more labels that indicate a specific set of pods/VMs on which a policy should be applied.</summary>
@@ -22,6 +24,7 @@ public partial class V1beta1ProxyConfigSpecSelector
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>Provides configuration for individual workloads. See more details at: https://istio.io/docs/reference/config/networking/proxy-config.html</summary>
 public partial class V1beta1ProxyConfigSpec
 {
     /// <summary>The number of worker threads to run.</summary>
@@ -42,6 +45,7 @@ public partial class V1beta1ProxyConfigSpec
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ProxyConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ProxyConfigSpec>, IStatus<JsonNode>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.crd.projectcalico.org;
+/// <summary>Namespace enables and configures the namespace controller. Enabled by default, set to nil to disable.</summary>
 public partial class V1KubeControllersConfigurationSpecControllersNamespace
 {
     /// <summary>ReconcilerPeriod is the period to perform reconciliation with the Calico datastore. [Default: 5m]</summary>
@@ -15,6 +16,7 @@ public partial class V1KubeControllersConfigurationSpecControllersNamespace
     public string? ReconcilerPeriod { get; set; }
 }
 
+/// <summary>HostEndpoint controls syncing nodes to host endpoints. Disabled by default, set to nil to disable.</summary>
 public partial class V1KubeControllersConfigurationSpecControllersNodeHostEndpoint
 {
     /// <summary>AutoCreate enables automatic creation of host endpoints for every node. [Default: Disabled]</summary>
@@ -22,6 +24,7 @@ public partial class V1KubeControllersConfigurationSpecControllersNodeHostEndpoi
     public string? AutoCreate { get; set; }
 }
 
+/// <summary>Node enables and configures the node controller. Enabled by default, set to nil to disable.</summary>
 public partial class V1KubeControllersConfigurationSpecControllersNode
 {
     /// <summary>HostEndpoint controls syncing nodes to host endpoints. Disabled by default, set to nil to disable.</summary>
@@ -41,6 +44,7 @@ public partial class V1KubeControllersConfigurationSpecControllersNode
     public string? SyncLabels { get; set; }
 }
 
+/// <summary>Policy enables and configures the policy controller. Enabled by default, set to nil to disable.</summary>
 public partial class V1KubeControllersConfigurationSpecControllersPolicy
 {
     /// <summary>ReconcilerPeriod is the period to perform reconciliation with the Calico datastore. [Default: 5m]</summary>
@@ -48,6 +52,7 @@ public partial class V1KubeControllersConfigurationSpecControllersPolicy
     public string? ReconcilerPeriod { get; set; }
 }
 
+/// <summary>ServiceAccount enables and configures the service account controller. Enabled by default, set to nil to disable.</summary>
 public partial class V1KubeControllersConfigurationSpecControllersServiceAccount
 {
     /// <summary>ReconcilerPeriod is the period to perform reconciliation with the Calico datastore. [Default: 5m]</summary>
@@ -55,6 +60,7 @@ public partial class V1KubeControllersConfigurationSpecControllersServiceAccount
     public string? ReconcilerPeriod { get; set; }
 }
 
+/// <summary>WorkloadEndpoint enables and configures the workload endpoint controller. Enabled by default, set to nil to disable.</summary>
 public partial class V1KubeControllersConfigurationSpecControllersWorkloadEndpoint
 {
     /// <summary>ReconcilerPeriod is the period to perform reconciliation with the Calico datastore. [Default: 5m]</summary>
@@ -62,6 +68,7 @@ public partial class V1KubeControllersConfigurationSpecControllersWorkloadEndpoi
     public string? ReconcilerPeriod { get; set; }
 }
 
+/// <summary>Controllers enables and configures individual Kubernetes controllers</summary>
 public partial class V1KubeControllersConfigurationSpecControllers
 {
     /// <summary>Namespace enables and configures the namespace controller. Enabled by default, set to nil to disable.</summary>
@@ -85,6 +92,7 @@ public partial class V1KubeControllersConfigurationSpecControllers
     public V1KubeControllersConfigurationSpecControllersWorkloadEndpoint? WorkloadEndpoint { get; set; }
 }
 
+/// <summary>KubeControllersConfigurationSpec contains the values of the Kubernetes controllers configuration.</summary>
 public partial class V1KubeControllersConfigurationSpec
 {
     /// <summary>Controllers enables and configures individual Kubernetes controllers</summary>
@@ -112,6 +120,7 @@ public partial class V1KubeControllersConfigurationSpec
     public int? PrometheusMetricsPort { get; set; }
 }
 
+/// <summary>Namespace enables and configures the namespace controller. Enabled by default, set to nil to disable.</summary>
 public partial class V1KubeControllersConfigurationStatusRunningConfigControllersNamespace
 {
     /// <summary>ReconcilerPeriod is the period to perform reconciliation with the Calico datastore. [Default: 5m]</summary>
@@ -119,6 +128,7 @@ public partial class V1KubeControllersConfigurationStatusRunningConfigController
     public string? ReconcilerPeriod { get; set; }
 }
 
+/// <summary>HostEndpoint controls syncing nodes to host endpoints. Disabled by default, set to nil to disable.</summary>
 public partial class V1KubeControllersConfigurationStatusRunningConfigControllersNodeHostEndpoint
 {
     /// <summary>AutoCreate enables automatic creation of host endpoints for every node. [Default: Disabled]</summary>
@@ -126,6 +136,7 @@ public partial class V1KubeControllersConfigurationStatusRunningConfigController
     public string? AutoCreate { get; set; }
 }
 
+/// <summary>Node enables and configures the node controller. Enabled by default, set to nil to disable.</summary>
 public partial class V1KubeControllersConfigurationStatusRunningConfigControllersNode
 {
     /// <summary>HostEndpoint controls syncing nodes to host endpoints. Disabled by default, set to nil to disable.</summary>
@@ -145,6 +156,7 @@ public partial class V1KubeControllersConfigurationStatusRunningConfigController
     public string? SyncLabels { get; set; }
 }
 
+/// <summary>Policy enables and configures the policy controller. Enabled by default, set to nil to disable.</summary>
 public partial class V1KubeControllersConfigurationStatusRunningConfigControllersPolicy
 {
     /// <summary>ReconcilerPeriod is the period to perform reconciliation with the Calico datastore. [Default: 5m]</summary>
@@ -152,6 +164,7 @@ public partial class V1KubeControllersConfigurationStatusRunningConfigController
     public string? ReconcilerPeriod { get; set; }
 }
 
+/// <summary>ServiceAccount enables and configures the service account controller. Enabled by default, set to nil to disable.</summary>
 public partial class V1KubeControllersConfigurationStatusRunningConfigControllersServiceAccount
 {
     /// <summary>ReconcilerPeriod is the period to perform reconciliation with the Calico datastore. [Default: 5m]</summary>
@@ -159,6 +172,7 @@ public partial class V1KubeControllersConfigurationStatusRunningConfigController
     public string? ReconcilerPeriod { get; set; }
 }
 
+/// <summary>WorkloadEndpoint enables and configures the workload endpoint controller. Enabled by default, set to nil to disable.</summary>
 public partial class V1KubeControllersConfigurationStatusRunningConfigControllersWorkloadEndpoint
 {
     /// <summary>ReconcilerPeriod is the period to perform reconciliation with the Calico datastore. [Default: 5m]</summary>
@@ -166,6 +180,7 @@ public partial class V1KubeControllersConfigurationStatusRunningConfigController
     public string? ReconcilerPeriod { get; set; }
 }
 
+/// <summary>Controllers enables and configures individual Kubernetes controllers</summary>
 public partial class V1KubeControllersConfigurationStatusRunningConfigControllers
 {
     /// <summary>Namespace enables and configures the namespace controller. Enabled by default, set to nil to disable.</summary>
@@ -189,6 +204,7 @@ public partial class V1KubeControllersConfigurationStatusRunningConfigController
     public V1KubeControllersConfigurationStatusRunningConfigControllersWorkloadEndpoint? WorkloadEndpoint { get; set; }
 }
 
+/// <summary>RunningConfig contains the effective config that is running in the kube-controllers pod, after merging the API resource with any environment variables.</summary>
 public partial class V1KubeControllersConfigurationStatusRunningConfig
 {
     /// <summary>Controllers enables and configures individual Kubernetes controllers</summary>
@@ -216,6 +232,7 @@ public partial class V1KubeControllersConfigurationStatusRunningConfig
     public int? PrometheusMetricsPort { get; set; }
 }
 
+/// <summary>KubeControllersConfigurationStatus represents the status of the configuration. It's useful for admins to be able to see the actual config that was applied, which can be modified by environment variables on the kube-controllers process.</summary>
 public partial class V1KubeControllersConfigurationStatus
 {
     /// <summary>EnvironmentVars contains the environment variables on the kube-controllers that influenced the RunningConfig.</summary>
@@ -228,6 +245,7 @@ public partial class V1KubeControllersConfigurationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1KubeControllersConfiguration : IKubernetesObject<V1ObjectMeta>, ISpec<V1KubeControllersConfigurationSpec>, IStatus<V1KubeControllersConfigurationStatus>
 {
     public const string KubeApiVersion = "v1";

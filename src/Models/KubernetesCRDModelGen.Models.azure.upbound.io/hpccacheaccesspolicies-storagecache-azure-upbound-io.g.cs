@@ -18,6 +18,7 @@ public enum V1beta1HPCCacheAccessPolicySpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1HPCCacheAccessPolicySpecForProviderAccessRule
 {
     /// <summary>The access level for this rule. Possible values are: rw, ro, no.</summary>
@@ -73,6 +74,7 @@ public enum V1beta1HPCCacheAccessPolicySpecForProviderHpcCacheIdRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HPCCacheAccessPolicySpecForProviderHpcCacheIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -86,6 +88,7 @@ public partial class V1beta1HPCCacheAccessPolicySpecForProviderHpcCacheIdRefPoli
     public V1beta1HPCCacheAccessPolicySpecForProviderHpcCacheIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a HPCCache in storagecache to populate hpcCacheId.</summary>
 public partial class V1beta1HPCCacheAccessPolicySpecForProviderHpcCacheIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -117,6 +120,7 @@ public enum V1beta1HPCCacheAccessPolicySpecForProviderHpcCacheIdSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1HPCCacheAccessPolicySpecForProviderHpcCacheIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -130,6 +134,7 @@ public partial class V1beta1HPCCacheAccessPolicySpecForProviderHpcCacheIdSelecto
     public V1beta1HPCCacheAccessPolicySpecForProviderHpcCacheIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a HPCCache in storagecache to populate hpcCacheId.</summary>
 public partial class V1beta1HPCCacheAccessPolicySpecForProviderHpcCacheIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -145,6 +150,7 @@ public partial class V1beta1HPCCacheAccessPolicySpecForProviderHpcCacheIdSelecto
     public V1beta1HPCCacheAccessPolicySpecForProviderHpcCacheIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HPCCacheAccessPolicySpecForProvider
 {
     /// <summary>One or more access_rule blocks (up to three) as defined below.</summary>
@@ -164,6 +170,7 @@ public partial class V1beta1HPCCacheAccessPolicySpecForProvider
     public V1beta1HPCCacheAccessPolicySpecForProviderHpcCacheIdSelector? HpcCacheIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HPCCacheAccessPolicySpecInitProviderAccessRule
 {
     /// <summary>The access level for this rule. Possible values are: rw, ro, no.</summary>
@@ -219,6 +226,7 @@ public enum V1beta1HPCCacheAccessPolicySpecInitProviderHpcCacheIdRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HPCCacheAccessPolicySpecInitProviderHpcCacheIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -232,6 +240,7 @@ public partial class V1beta1HPCCacheAccessPolicySpecInitProviderHpcCacheIdRefPol
     public V1beta1HPCCacheAccessPolicySpecInitProviderHpcCacheIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a HPCCache in storagecache to populate hpcCacheId.</summary>
 public partial class V1beta1HPCCacheAccessPolicySpecInitProviderHpcCacheIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -263,6 +272,7 @@ public enum V1beta1HPCCacheAccessPolicySpecInitProviderHpcCacheIdSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1HPCCacheAccessPolicySpecInitProviderHpcCacheIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -276,6 +286,7 @@ public partial class V1beta1HPCCacheAccessPolicySpecInitProviderHpcCacheIdSelect
     public V1beta1HPCCacheAccessPolicySpecInitProviderHpcCacheIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a HPCCache in storagecache to populate hpcCacheId.</summary>
 public partial class V1beta1HPCCacheAccessPolicySpecInitProviderHpcCacheIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -291,6 +302,7 @@ public partial class V1beta1HPCCacheAccessPolicySpecInitProviderHpcCacheIdSelect
     public V1beta1HPCCacheAccessPolicySpecInitProviderHpcCacheIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1HPCCacheAccessPolicySpecInitProvider
 {
     /// <summary>One or more access_rule blocks (up to three) as defined below.</summary>
@@ -352,6 +364,7 @@ public enum V1beta1HPCCacheAccessPolicySpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HPCCacheAccessPolicySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -365,6 +378,7 @@ public partial class V1beta1HPCCacheAccessPolicySpecProviderConfigRefPolicy
     public V1beta1HPCCacheAccessPolicySpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1HPCCacheAccessPolicySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -396,6 +410,7 @@ public enum V1beta1HPCCacheAccessPolicySpecPublishConnectionDetailsToConfigRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HPCCacheAccessPolicySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -409,6 +424,7 @@ public partial class V1beta1HPCCacheAccessPolicySpecPublishConnectionDetailsToCo
     public V1beta1HPCCacheAccessPolicySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1HPCCacheAccessPolicySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -420,6 +436,7 @@ public partial class V1beta1HPCCacheAccessPolicySpecPublishConnectionDetailsToCo
     public V1beta1HPCCacheAccessPolicySpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1HPCCacheAccessPolicySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -435,6 +452,7 @@ public partial class V1beta1HPCCacheAccessPolicySpecPublishConnectionDetailsToMe
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1HPCCacheAccessPolicySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -450,6 +468,7 @@ public partial class V1beta1HPCCacheAccessPolicySpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1HPCCacheAccessPolicySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -461,6 +480,7 @@ public partial class V1beta1HPCCacheAccessPolicySpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>HPCCacheAccessPolicySpec defines the desired state of HPCCacheAccessPolicy</summary>
 public partial class V1beta1HPCCacheAccessPolicySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -493,6 +513,7 @@ public partial class V1beta1HPCCacheAccessPolicySpec
     public V1beta1HPCCacheAccessPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HPCCacheAccessPolicyStatusAtProviderAccessRule
 {
     /// <summary>The access level for this rule. Possible values are: rw, ro, no.</summary>
@@ -528,6 +549,7 @@ public partial class V1beta1HPCCacheAccessPolicyStatusAtProviderAccessRule
     public bool? SuidEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HPCCacheAccessPolicyStatusAtProvider
 {
     /// <summary>One or more access_rule blocks (up to three) as defined below.</summary>
@@ -543,6 +565,7 @@ public partial class V1beta1HPCCacheAccessPolicyStatusAtProvider
     public string? Id { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1HPCCacheAccessPolicyStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -570,6 +593,7 @@ public partial class V1beta1HPCCacheAccessPolicyStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>HPCCacheAccessPolicyStatus defines the observed state of HPCCacheAccessPolicy.</summary>
 public partial class V1beta1HPCCacheAccessPolicyStatus
 {
     /// <summary></summary>
@@ -586,6 +610,7 @@ public partial class V1beta1HPCCacheAccessPolicyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>HPCCacheAccessPolicy is the Schema for the HPCCacheAccessPolicys API. Manages a HPC Cache Access Policy.</summary>
 public partial class V1beta1HPCCacheAccessPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1HPCCacheAccessPolicySpec>, IStatus<V1beta1HPCCacheAccessPolicyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

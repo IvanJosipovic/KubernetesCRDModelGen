@@ -18,6 +18,7 @@ public enum V1beta1TriggerSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecForProviderApprovalConfig
 {
     /// <summary>Whether or not approval is needed. If this is set on a build, it will become pending when run, and will need to be explicitly approved to start.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1TriggerSpecForProviderApprovalConfig
     public bool? ApprovalRequired { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecForProviderBitbucketServerTriggerConfigPullRequest
 {
     /// <summary>Regex of branches to match. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax</summary>
@@ -40,6 +42,7 @@ public partial class V1beta1TriggerSpecForProviderBitbucketServerTriggerConfigPu
     public bool? InvertRegex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecForProviderBitbucketServerTriggerConfigPush
 {
     /// <summary>Regex of branches to match. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax</summary>
@@ -55,6 +58,7 @@ public partial class V1beta1TriggerSpecForProviderBitbucketServerTriggerConfigPu
     public string? Tag { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecForProviderBitbucketServerTriggerConfig
 {
     /// <summary>The Bitbucket server config resource that this trigger config maps to.</summary>
@@ -78,6 +82,7 @@ public partial class V1beta1TriggerSpecForProviderBitbucketServerTriggerConfig
     public string? RepoSlug { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecForProviderBuildArtifactsMavenArtifacts
 {
     /// <summary>Maven artifactId value used when uploading the artifact to Artifact Registry.</summary>
@@ -101,6 +106,7 @@ public partial class V1beta1TriggerSpecForProviderBuildArtifactsMavenArtifacts
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecForProviderBuildArtifactsNpmPackages
 {
     /// <summary>Path to the package.json. e.g. workspace/path/to/package</summary>
@@ -112,6 +118,7 @@ public partial class V1beta1TriggerSpecForProviderBuildArtifactsNpmPackages
     public string? Repository { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecForProviderBuildArtifactsObjects
 {
     /// <summary>Cloud Storage bucket and optional object path, in the form "gs://bucket/path/to/somewhere/". Files in the workspace matching any path pattern will be uploaded to Cloud Storage with this location as a prefix.</summary>
@@ -123,6 +130,7 @@ public partial class V1beta1TriggerSpecForProviderBuildArtifactsObjects
     public IList<string>? Paths { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecForProviderBuildArtifactsPythonPackages
 {
     /// <summary>Path globs used to match files in the build's workspace. For Python/ Twine, this is usually dist/*, and sometimes additionally an .asc file.</summary>
@@ -134,6 +142,7 @@ public partial class V1beta1TriggerSpecForProviderBuildArtifactsPythonPackages
     public string? Repository { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecForProviderBuildArtifacts
 {
     /// <summary>A list of images to be pushed upon the successful completion of all build steps. The images are pushed using the builder service account's credentials. The digests of the pushed images will be stored in the Build resource's results field. If any of the images fail to be pushed, the build status is marked FAILURE.</summary>
@@ -157,6 +166,7 @@ public partial class V1beta1TriggerSpecForProviderBuildArtifacts
     public IList<V1beta1TriggerSpecForProviderBuildArtifactsPythonPackages>? PythonPackages { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecForProviderBuildAvailableSecretsSecretManager
 {
     /// <summary>A list of environment variable definitions to be used when running a step. The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".</summary>
@@ -168,6 +178,7 @@ public partial class V1beta1TriggerSpecForProviderBuildAvailableSecretsSecretMan
     public string? VersionName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecForProviderBuildAvailableSecrets
 {
     /// <summary>Pairs a secret environment variable with a SecretVersion in Secret Manager. Structure is documented below.</summary>
@@ -175,6 +186,7 @@ public partial class V1beta1TriggerSpecForProviderBuildAvailableSecrets
     public IList<V1beta1TriggerSpecForProviderBuildAvailableSecretsSecretManager>? SecretManager { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecForProviderBuildOptionsVolumes
 {
     /// <summary>Name of the volume to mount. Volume names must be unique per build step and must be valid names for Docker volumes. Each named volume must be used by at least two build steps.</summary>
@@ -186,6 +198,7 @@ public partial class V1beta1TriggerSpecForProviderBuildOptionsVolumes
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecForProviderBuildOptions
 {
     /// <summary>Requested disk size for the VM that runs the build. Note that this is NOT "disk free"; some of the space will be used by the operating system and build utilities. Also note that this is the minimum disk size that will be allocated for the build -- the build may run with a larger disk than requested. At present, the maximum disk size is 1000GB; builds that request more than the maximum are rejected with an error.</summary>
@@ -237,6 +250,7 @@ public partial class V1beta1TriggerSpecForProviderBuildOptions
     public string? WorkerPool { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecForProviderBuildSecret
 {
     /// <summary>Cloud KMS key name to use to decrypt these envs.</summary>
@@ -248,6 +262,7 @@ public partial class V1beta1TriggerSpecForProviderBuildSecret
     public IDictionary<string, string>? SecretEnv { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecForProviderBuildSourceRepoSource
 {
     /// <summary>Name of the branch to build. Exactly one a of branch name, tag, or commit SHA must be provided. This field is a regular expression.</summary>
@@ -283,6 +298,7 @@ public partial class V1beta1TriggerSpecForProviderBuildSourceRepoSource
     public string? TagName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecForProviderBuildSourceStorageSource
 {
     /// <summary>Google Cloud Storage bucket containing the source.</summary>
@@ -298,6 +314,7 @@ public partial class V1beta1TriggerSpecForProviderBuildSourceStorageSource
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecForProviderBuildSource
 {
     /// <summary>Location of the source in a Google Cloud Source Repository. Structure is documented below.</summary>
@@ -309,6 +326,7 @@ public partial class V1beta1TriggerSpecForProviderBuildSource
     public IList<V1beta1TriggerSpecForProviderBuildSourceStorageSource>? StorageSource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecForProviderBuildStepVolumes
 {
     /// <summary>Name of the volume to mount. Volume names must be unique per build step and must be valid names for Docker volumes. Each named volume must be used by at least two build steps.</summary>
@@ -320,6 +338,7 @@ public partial class V1beta1TriggerSpecForProviderBuildStepVolumes
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecForProviderBuildStep
 {
     /// <summary>Allow this build step to fail without failing the entire build if and only if the exit code is one of the specified codes. If allowFailure is also specified, this field will take precedence.</summary>
@@ -379,6 +398,7 @@ public partial class V1beta1TriggerSpecForProviderBuildStep
     public IList<string>? WaitFor { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecForProviderBuild
 {
     /// <summary>Artifacts produced by the build that should be uploaded upon successful completion of all build steps. Structure is documented below.</summary>
@@ -430,6 +450,7 @@ public partial class V1beta1TriggerSpecForProviderBuild
     public string? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecForProviderGitFileSource
 {
     /// <summary>The full resource name of the bitbucket server config. Format: projects/{project}/locations/{location}/bitbucketServerConfigs/{id}.</summary>
@@ -461,6 +482,7 @@ public partial class V1beta1TriggerSpecForProviderGitFileSource
     public string? Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecForProviderGithubPullRequest
 {
     /// <summary>Regex of branches to match. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax</summary>
@@ -476,6 +498,7 @@ public partial class V1beta1TriggerSpecForProviderGithubPullRequest
     public bool? InvertRegex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecForProviderGithubPush
 {
     /// <summary>Regex of branches to match. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax</summary>
@@ -491,6 +514,7 @@ public partial class V1beta1TriggerSpecForProviderGithubPush
     public string? Tag { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecForProviderGithub
 {
     /// <summary>The resource name of the github enterprise config that should be applied to this installation. For example: "projects/{$projectId}/locations/{$locationId}/githubEnterpriseConfigs/{$configId}"</summary>
@@ -534,6 +558,7 @@ public enum V1beta1TriggerSpecForProviderPubsubConfigTopicRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TriggerSpecForProviderPubsubConfigTopicRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -547,6 +572,7 @@ public partial class V1beta1TriggerSpecForProviderPubsubConfigTopicRefPolicy
     public V1beta1TriggerSpecForProviderPubsubConfigTopicRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Topic in pubsub to populate topic.</summary>
 public partial class V1beta1TriggerSpecForProviderPubsubConfigTopicRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -578,6 +604,7 @@ public enum V1beta1TriggerSpecForProviderPubsubConfigTopicSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TriggerSpecForProviderPubsubConfigTopicSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -591,6 +618,7 @@ public partial class V1beta1TriggerSpecForProviderPubsubConfigTopicSelectorPolic
     public V1beta1TriggerSpecForProviderPubsubConfigTopicSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Topic in pubsub to populate topic.</summary>
 public partial class V1beta1TriggerSpecForProviderPubsubConfigTopicSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -606,6 +634,7 @@ public partial class V1beta1TriggerSpecForProviderPubsubConfigTopicSelector
     public V1beta1TriggerSpecForProviderPubsubConfigTopicSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecForProviderPubsubConfig
 {
     /// <summary>Service account that will make the push request.</summary>
@@ -625,6 +654,7 @@ public partial class V1beta1TriggerSpecForProviderPubsubConfig
     public V1beta1TriggerSpecForProviderPubsubConfigTopicSelector? TopicSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecForProviderRepositoryEventConfigPullRequest
 {
     /// <summary>Regex of branches to match. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax</summary>
@@ -640,6 +670,7 @@ public partial class V1beta1TriggerSpecForProviderRepositoryEventConfigPullReque
     public bool? InvertRegex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecForProviderRepositoryEventConfigPush
 {
     /// <summary>Regex of branches to match. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax</summary>
@@ -655,6 +686,7 @@ public partial class V1beta1TriggerSpecForProviderRepositoryEventConfigPush
     public string? Tag { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecForProviderRepositoryEventConfig
 {
     /// <summary>Contains filter properties for matching Pull Requests. Structure is documented below.</summary>
@@ -690,6 +722,7 @@ public enum V1beta1TriggerSpecForProviderServiceAccountRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TriggerSpecForProviderServiceAccountRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -703,6 +736,7 @@ public partial class V1beta1TriggerSpecForProviderServiceAccountRefPolicy
     public V1beta1TriggerSpecForProviderServiceAccountRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
 public partial class V1beta1TriggerSpecForProviderServiceAccountRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -734,6 +768,7 @@ public enum V1beta1TriggerSpecForProviderServiceAccountSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TriggerSpecForProviderServiceAccountSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -747,6 +782,7 @@ public partial class V1beta1TriggerSpecForProviderServiceAccountSelectorPolicy
     public V1beta1TriggerSpecForProviderServiceAccountSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
 public partial class V1beta1TriggerSpecForProviderServiceAccountSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -762,6 +798,7 @@ public partial class V1beta1TriggerSpecForProviderServiceAccountSelector
     public V1beta1TriggerSpecForProviderServiceAccountSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecForProviderSourceToBuild
 {
     /// <summary>The full resource name of the bitbucket server config. Format: projects/{project}/locations/{location}/bitbucketServerConfigs/{id}.</summary>
@@ -789,6 +826,7 @@ public partial class V1beta1TriggerSpecForProviderSourceToBuild
     public string? Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecForProviderTriggerTemplate
 {
     /// <summary>Name of the branch to build. Exactly one a of branch name, tag, or commit SHA must be provided. This field is a regular expression.</summary>
@@ -840,6 +878,7 @@ public enum V1beta1TriggerSpecForProviderWebhookConfigSecretRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TriggerSpecForProviderWebhookConfigSecretRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -853,6 +892,7 @@ public partial class V1beta1TriggerSpecForProviderWebhookConfigSecretRefPolicy
     public V1beta1TriggerSpecForProviderWebhookConfigSecretRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SecretVersion in secretmanager to populate secret.</summary>
 public partial class V1beta1TriggerSpecForProviderWebhookConfigSecretRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -884,6 +924,7 @@ public enum V1beta1TriggerSpecForProviderWebhookConfigSecretSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TriggerSpecForProviderWebhookConfigSecretSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -897,6 +938,7 @@ public partial class V1beta1TriggerSpecForProviderWebhookConfigSecretSelectorPol
     public V1beta1TriggerSpecForProviderWebhookConfigSecretSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SecretVersion in secretmanager to populate secret.</summary>
 public partial class V1beta1TriggerSpecForProviderWebhookConfigSecretSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -912,6 +954,7 @@ public partial class V1beta1TriggerSpecForProviderWebhookConfigSecretSelector
     public V1beta1TriggerSpecForProviderWebhookConfigSecretSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecForProviderWebhookConfig
 {
     /// <summary>Resource name for the secret required as a URL parameter.</summary>
@@ -927,6 +970,7 @@ public partial class V1beta1TriggerSpecForProviderWebhookConfig
     public V1beta1TriggerSpecForProviderWebhookConfigSecretSelector? SecretSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecForProvider
 {
     /// <summary>Configuration for manual approval to start a build invocation of this BuildTrigger. Builds created by this trigger will require approval before they execute. Any user with a Cloud Build Approver role for the project can approve a build. Structure is documented below.</summary>
@@ -1030,6 +1074,7 @@ public partial class V1beta1TriggerSpecForProvider
     public IList<V1beta1TriggerSpecForProviderWebhookConfig>? WebhookConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecInitProviderApprovalConfig
 {
     /// <summary>Whether or not approval is needed. If this is set on a build, it will become pending when run, and will need to be explicitly approved to start.</summary>
@@ -1037,6 +1082,7 @@ public partial class V1beta1TriggerSpecInitProviderApprovalConfig
     public bool? ApprovalRequired { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecInitProviderBitbucketServerTriggerConfigPullRequest
 {
     /// <summary>Regex of branches to match. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax</summary>
@@ -1052,6 +1098,7 @@ public partial class V1beta1TriggerSpecInitProviderBitbucketServerTriggerConfigP
     public bool? InvertRegex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecInitProviderBitbucketServerTriggerConfigPush
 {
     /// <summary>Regex of branches to match. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax</summary>
@@ -1067,6 +1114,7 @@ public partial class V1beta1TriggerSpecInitProviderBitbucketServerTriggerConfigP
     public string? Tag { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecInitProviderBitbucketServerTriggerConfig
 {
     /// <summary>The Bitbucket server config resource that this trigger config maps to.</summary>
@@ -1090,6 +1138,7 @@ public partial class V1beta1TriggerSpecInitProviderBitbucketServerTriggerConfig
     public string? RepoSlug { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecInitProviderBuildArtifactsMavenArtifacts
 {
     /// <summary>Maven artifactId value used when uploading the artifact to Artifact Registry.</summary>
@@ -1113,6 +1162,7 @@ public partial class V1beta1TriggerSpecInitProviderBuildArtifactsMavenArtifacts
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecInitProviderBuildArtifactsNpmPackages
 {
     /// <summary>Path to the package.json. e.g. workspace/path/to/package</summary>
@@ -1124,6 +1174,7 @@ public partial class V1beta1TriggerSpecInitProviderBuildArtifactsNpmPackages
     public string? Repository { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecInitProviderBuildArtifactsObjects
 {
     /// <summary>Cloud Storage bucket and optional object path, in the form "gs://bucket/path/to/somewhere/". Files in the workspace matching any path pattern will be uploaded to Cloud Storage with this location as a prefix.</summary>
@@ -1135,6 +1186,7 @@ public partial class V1beta1TriggerSpecInitProviderBuildArtifactsObjects
     public IList<string>? Paths { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecInitProviderBuildArtifactsPythonPackages
 {
     /// <summary>Path globs used to match files in the build's workspace. For Python/ Twine, this is usually dist/*, and sometimes additionally an .asc file.</summary>
@@ -1146,6 +1198,7 @@ public partial class V1beta1TriggerSpecInitProviderBuildArtifactsPythonPackages
     public string? Repository { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecInitProviderBuildArtifacts
 {
     /// <summary>A list of images to be pushed upon the successful completion of all build steps. The images are pushed using the builder service account's credentials. The digests of the pushed images will be stored in the Build resource's results field. If any of the images fail to be pushed, the build status is marked FAILURE.</summary>
@@ -1169,6 +1222,7 @@ public partial class V1beta1TriggerSpecInitProviderBuildArtifacts
     public IList<V1beta1TriggerSpecInitProviderBuildArtifactsPythonPackages>? PythonPackages { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecInitProviderBuildAvailableSecretsSecretManager
 {
     /// <summary>A list of environment variable definitions to be used when running a step. The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".</summary>
@@ -1180,6 +1234,7 @@ public partial class V1beta1TriggerSpecInitProviderBuildAvailableSecretsSecretMa
     public string? VersionName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecInitProviderBuildAvailableSecrets
 {
     /// <summary>Pairs a secret environment variable with a SecretVersion in Secret Manager. Structure is documented below.</summary>
@@ -1187,6 +1242,7 @@ public partial class V1beta1TriggerSpecInitProviderBuildAvailableSecrets
     public IList<V1beta1TriggerSpecInitProviderBuildAvailableSecretsSecretManager>? SecretManager { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecInitProviderBuildOptionsVolumes
 {
     /// <summary>Name of the volume to mount. Volume names must be unique per build step and must be valid names for Docker volumes. Each named volume must be used by at least two build steps.</summary>
@@ -1198,6 +1254,7 @@ public partial class V1beta1TriggerSpecInitProviderBuildOptionsVolumes
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecInitProviderBuildOptions
 {
     /// <summary>Requested disk size for the VM that runs the build. Note that this is NOT "disk free"; some of the space will be used by the operating system and build utilities. Also note that this is the minimum disk size that will be allocated for the build -- the build may run with a larger disk than requested. At present, the maximum disk size is 1000GB; builds that request more than the maximum are rejected with an error.</summary>
@@ -1249,6 +1306,7 @@ public partial class V1beta1TriggerSpecInitProviderBuildOptions
     public string? WorkerPool { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecInitProviderBuildSecret
 {
     /// <summary>Cloud KMS key name to use to decrypt these envs.</summary>
@@ -1260,6 +1318,7 @@ public partial class V1beta1TriggerSpecInitProviderBuildSecret
     public IDictionary<string, string>? SecretEnv { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecInitProviderBuildSourceRepoSource
 {
     /// <summary>Name of the branch to build. Exactly one a of branch name, tag, or commit SHA must be provided. This field is a regular expression.</summary>
@@ -1295,6 +1354,7 @@ public partial class V1beta1TriggerSpecInitProviderBuildSourceRepoSource
     public string? TagName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecInitProviderBuildSourceStorageSource
 {
     /// <summary>Google Cloud Storage bucket containing the source.</summary>
@@ -1310,6 +1370,7 @@ public partial class V1beta1TriggerSpecInitProviderBuildSourceStorageSource
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecInitProviderBuildSource
 {
     /// <summary>Location of the source in a Google Cloud Source Repository. Structure is documented below.</summary>
@@ -1321,6 +1382,7 @@ public partial class V1beta1TriggerSpecInitProviderBuildSource
     public IList<V1beta1TriggerSpecInitProviderBuildSourceStorageSource>? StorageSource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecInitProviderBuildStepVolumes
 {
     /// <summary>Name of the volume to mount. Volume names must be unique per build step and must be valid names for Docker volumes. Each named volume must be used by at least two build steps.</summary>
@@ -1332,6 +1394,7 @@ public partial class V1beta1TriggerSpecInitProviderBuildStepVolumes
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecInitProviderBuildStep
 {
     /// <summary>Allow this build step to fail without failing the entire build if and only if the exit code is one of the specified codes. If allowFailure is also specified, this field will take precedence.</summary>
@@ -1391,6 +1454,7 @@ public partial class V1beta1TriggerSpecInitProviderBuildStep
     public IList<string>? WaitFor { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecInitProviderBuild
 {
     /// <summary>Artifacts produced by the build that should be uploaded upon successful completion of all build steps. Structure is documented below.</summary>
@@ -1442,6 +1506,7 @@ public partial class V1beta1TriggerSpecInitProviderBuild
     public string? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecInitProviderGitFileSource
 {
     /// <summary>The full resource name of the bitbucket server config. Format: projects/{project}/locations/{location}/bitbucketServerConfigs/{id}.</summary>
@@ -1473,6 +1538,7 @@ public partial class V1beta1TriggerSpecInitProviderGitFileSource
     public string? Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecInitProviderGithubPullRequest
 {
     /// <summary>Regex of branches to match. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax</summary>
@@ -1488,6 +1554,7 @@ public partial class V1beta1TriggerSpecInitProviderGithubPullRequest
     public bool? InvertRegex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecInitProviderGithubPush
 {
     /// <summary>Regex of branches to match. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax</summary>
@@ -1503,6 +1570,7 @@ public partial class V1beta1TriggerSpecInitProviderGithubPush
     public string? Tag { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecInitProviderGithub
 {
     /// <summary>The resource name of the github enterprise config that should be applied to this installation. For example: "projects/{$projectId}/locations/{$locationId}/githubEnterpriseConfigs/{$configId}"</summary>
@@ -1546,6 +1614,7 @@ public enum V1beta1TriggerSpecInitProviderPubsubConfigTopicRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TriggerSpecInitProviderPubsubConfigTopicRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1559,6 +1628,7 @@ public partial class V1beta1TriggerSpecInitProviderPubsubConfigTopicRefPolicy
     public V1beta1TriggerSpecInitProviderPubsubConfigTopicRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Topic in pubsub to populate topic.</summary>
 public partial class V1beta1TriggerSpecInitProviderPubsubConfigTopicRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1590,6 +1660,7 @@ public enum V1beta1TriggerSpecInitProviderPubsubConfigTopicSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TriggerSpecInitProviderPubsubConfigTopicSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1603,6 +1674,7 @@ public partial class V1beta1TriggerSpecInitProviderPubsubConfigTopicSelectorPoli
     public V1beta1TriggerSpecInitProviderPubsubConfigTopicSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Topic in pubsub to populate topic.</summary>
 public partial class V1beta1TriggerSpecInitProviderPubsubConfigTopicSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1618,6 +1690,7 @@ public partial class V1beta1TriggerSpecInitProviderPubsubConfigTopicSelector
     public V1beta1TriggerSpecInitProviderPubsubConfigTopicSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecInitProviderPubsubConfig
 {
     /// <summary>Service account that will make the push request.</summary>
@@ -1637,6 +1710,7 @@ public partial class V1beta1TriggerSpecInitProviderPubsubConfig
     public V1beta1TriggerSpecInitProviderPubsubConfigTopicSelector? TopicSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecInitProviderRepositoryEventConfigPullRequest
 {
     /// <summary>Regex of branches to match. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax</summary>
@@ -1652,6 +1726,7 @@ public partial class V1beta1TriggerSpecInitProviderRepositoryEventConfigPullRequ
     public bool? InvertRegex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecInitProviderRepositoryEventConfigPush
 {
     /// <summary>Regex of branches to match. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax</summary>
@@ -1667,6 +1742,7 @@ public partial class V1beta1TriggerSpecInitProviderRepositoryEventConfigPush
     public string? Tag { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecInitProviderRepositoryEventConfig
 {
     /// <summary>Contains filter properties for matching Pull Requests. Structure is documented below.</summary>
@@ -1702,6 +1778,7 @@ public enum V1beta1TriggerSpecInitProviderServiceAccountRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TriggerSpecInitProviderServiceAccountRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1715,6 +1792,7 @@ public partial class V1beta1TriggerSpecInitProviderServiceAccountRefPolicy
     public V1beta1TriggerSpecInitProviderServiceAccountRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
 public partial class V1beta1TriggerSpecInitProviderServiceAccountRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1746,6 +1824,7 @@ public enum V1beta1TriggerSpecInitProviderServiceAccountSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TriggerSpecInitProviderServiceAccountSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1759,6 +1838,7 @@ public partial class V1beta1TriggerSpecInitProviderServiceAccountSelectorPolicy
     public V1beta1TriggerSpecInitProviderServiceAccountSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
 public partial class V1beta1TriggerSpecInitProviderServiceAccountSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1774,6 +1854,7 @@ public partial class V1beta1TriggerSpecInitProviderServiceAccountSelector
     public V1beta1TriggerSpecInitProviderServiceAccountSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecInitProviderSourceToBuild
 {
     /// <summary>The full resource name of the bitbucket server config. Format: projects/{project}/locations/{location}/bitbucketServerConfigs/{id}.</summary>
@@ -1801,6 +1882,7 @@ public partial class V1beta1TriggerSpecInitProviderSourceToBuild
     public string? Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecInitProviderTriggerTemplate
 {
     /// <summary>Name of the branch to build. Exactly one a of branch name, tag, or commit SHA must be provided. This field is a regular expression.</summary>
@@ -1852,6 +1934,7 @@ public enum V1beta1TriggerSpecInitProviderWebhookConfigSecretRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TriggerSpecInitProviderWebhookConfigSecretRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1865,6 +1948,7 @@ public partial class V1beta1TriggerSpecInitProviderWebhookConfigSecretRefPolicy
     public V1beta1TriggerSpecInitProviderWebhookConfigSecretRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SecretVersion in secretmanager to populate secret.</summary>
 public partial class V1beta1TriggerSpecInitProviderWebhookConfigSecretRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1896,6 +1980,7 @@ public enum V1beta1TriggerSpecInitProviderWebhookConfigSecretSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TriggerSpecInitProviderWebhookConfigSecretSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1909,6 +1994,7 @@ public partial class V1beta1TriggerSpecInitProviderWebhookConfigSecretSelectorPo
     public V1beta1TriggerSpecInitProviderWebhookConfigSecretSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SecretVersion in secretmanager to populate secret.</summary>
 public partial class V1beta1TriggerSpecInitProviderWebhookConfigSecretSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1924,6 +2010,7 @@ public partial class V1beta1TriggerSpecInitProviderWebhookConfigSecretSelector
     public V1beta1TriggerSpecInitProviderWebhookConfigSecretSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerSpecInitProviderWebhookConfig
 {
     /// <summary>Resource name for the secret required as a URL parameter.</summary>
@@ -1939,6 +2026,7 @@ public partial class V1beta1TriggerSpecInitProviderWebhookConfig
     public V1beta1TriggerSpecInitProviderWebhookConfigSecretSelector? SecretSelector { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1TriggerSpecInitProvider
 {
     /// <summary>Configuration for manual approval to start a build invocation of this BuildTrigger. Builds created by this trigger will require approval before they execute. Any user with a Cloud Build Approver role for the project can approve a build. Structure is documented below.</summary>
@@ -2084,6 +2172,7 @@ public enum V1beta1TriggerSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TriggerSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2097,6 +2186,7 @@ public partial class V1beta1TriggerSpecProviderConfigRefPolicy
     public V1beta1TriggerSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1TriggerSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2128,6 +2218,7 @@ public enum V1beta1TriggerSpecPublishConnectionDetailsToConfigRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TriggerSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2141,6 +2232,7 @@ public partial class V1beta1TriggerSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1TriggerSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1TriggerSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2152,6 +2244,7 @@ public partial class V1beta1TriggerSpecPublishConnectionDetailsToConfigRef
     public V1beta1TriggerSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1TriggerSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -2167,6 +2260,7 @@ public partial class V1beta1TriggerSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1TriggerSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -2182,6 +2276,7 @@ public partial class V1beta1TriggerSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1TriggerSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -2193,6 +2288,7 @@ public partial class V1beta1TriggerSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>TriggerSpec defines the desired state of Trigger</summary>
 public partial class V1beta1TriggerSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -2225,6 +2321,7 @@ public partial class V1beta1TriggerSpec
     public V1beta1TriggerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProviderApprovalConfig
 {
     /// <summary>Whether or not approval is needed. If this is set on a build, it will become pending when run, and will need to be explicitly approved to start.</summary>
@@ -2232,6 +2329,7 @@ public partial class V1beta1TriggerStatusAtProviderApprovalConfig
     public bool? ApprovalRequired { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProviderBitbucketServerTriggerConfigPullRequest
 {
     /// <summary>Regex of branches to match. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax</summary>
@@ -2247,6 +2345,7 @@ public partial class V1beta1TriggerStatusAtProviderBitbucketServerTriggerConfigP
     public bool? InvertRegex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProviderBitbucketServerTriggerConfigPush
 {
     /// <summary>Regex of branches to match. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax</summary>
@@ -2262,6 +2361,7 @@ public partial class V1beta1TriggerStatusAtProviderBitbucketServerTriggerConfigP
     public string? Tag { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProviderBitbucketServerTriggerConfig
 {
     /// <summary>The Bitbucket server config resource that this trigger config maps to.</summary>
@@ -2285,6 +2385,7 @@ public partial class V1beta1TriggerStatusAtProviderBitbucketServerTriggerConfig
     public string? RepoSlug { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProviderBuildArtifactsMavenArtifacts
 {
     /// <summary>Maven artifactId value used when uploading the artifact to Artifact Registry.</summary>
@@ -2308,6 +2409,7 @@ public partial class V1beta1TriggerStatusAtProviderBuildArtifactsMavenArtifacts
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProviderBuildArtifactsNpmPackages
 {
     /// <summary>Path to the package.json. e.g. workspace/path/to/package</summary>
@@ -2319,6 +2421,7 @@ public partial class V1beta1TriggerStatusAtProviderBuildArtifactsNpmPackages
     public string? Repository { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProviderBuildArtifactsObjectsTiming
 {
     /// <summary>End of time span. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".</summary>
@@ -2330,6 +2433,7 @@ public partial class V1beta1TriggerStatusAtProviderBuildArtifactsObjectsTiming
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProviderBuildArtifactsObjects
 {
     /// <summary>Cloud Storage bucket and optional object path, in the form "gs://bucket/path/to/somewhere/". Files in the workspace matching any path pattern will be uploaded to Cloud Storage with this location as a prefix.</summary>
@@ -2345,6 +2449,7 @@ public partial class V1beta1TriggerStatusAtProviderBuildArtifactsObjects
     public IList<V1beta1TriggerStatusAtProviderBuildArtifactsObjectsTiming>? Timing { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProviderBuildArtifactsPythonPackages
 {
     /// <summary>Path globs used to match files in the build's workspace. For Python/ Twine, this is usually dist/*, and sometimes additionally an .asc file.</summary>
@@ -2356,6 +2461,7 @@ public partial class V1beta1TriggerStatusAtProviderBuildArtifactsPythonPackages
     public string? Repository { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProviderBuildArtifacts
 {
     /// <summary>A list of images to be pushed upon the successful completion of all build steps. The images are pushed using the builder service account's credentials. The digests of the pushed images will be stored in the Build resource's results field. If any of the images fail to be pushed, the build status is marked FAILURE.</summary>
@@ -2379,6 +2485,7 @@ public partial class V1beta1TriggerStatusAtProviderBuildArtifacts
     public IList<V1beta1TriggerStatusAtProviderBuildArtifactsPythonPackages>? PythonPackages { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProviderBuildAvailableSecretsSecretManager
 {
     /// <summary>A list of environment variable definitions to be used when running a step. The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".</summary>
@@ -2390,6 +2497,7 @@ public partial class V1beta1TriggerStatusAtProviderBuildAvailableSecretsSecretMa
     public string? VersionName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProviderBuildAvailableSecrets
 {
     /// <summary>Pairs a secret environment variable with a SecretVersion in Secret Manager. Structure is documented below.</summary>
@@ -2397,6 +2505,7 @@ public partial class V1beta1TriggerStatusAtProviderBuildAvailableSecrets
     public IList<V1beta1TriggerStatusAtProviderBuildAvailableSecretsSecretManager>? SecretManager { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProviderBuildOptionsVolumes
 {
     /// <summary>Name of the volume to mount. Volume names must be unique per build step and must be valid names for Docker volumes. Each named volume must be used by at least two build steps.</summary>
@@ -2408,6 +2517,7 @@ public partial class V1beta1TriggerStatusAtProviderBuildOptionsVolumes
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProviderBuildOptions
 {
     /// <summary>Requested disk size for the VM that runs the build. Note that this is NOT "disk free"; some of the space will be used by the operating system and build utilities. Also note that this is the minimum disk size that will be allocated for the build -- the build may run with a larger disk than requested. At present, the maximum disk size is 1000GB; builds that request more than the maximum are rejected with an error.</summary>
@@ -2459,6 +2569,7 @@ public partial class V1beta1TriggerStatusAtProviderBuildOptions
     public string? WorkerPool { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProviderBuildSecret
 {
     /// <summary>Cloud KMS key name to use to decrypt these envs.</summary>
@@ -2470,6 +2581,7 @@ public partial class V1beta1TriggerStatusAtProviderBuildSecret
     public IDictionary<string, string>? SecretEnv { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProviderBuildSourceRepoSource
 {
     /// <summary>Name of the branch to build. Exactly one a of branch name, tag, or commit SHA must be provided. This field is a regular expression.</summary>
@@ -2505,6 +2617,7 @@ public partial class V1beta1TriggerStatusAtProviderBuildSourceRepoSource
     public string? TagName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProviderBuildSourceStorageSource
 {
     /// <summary>Google Cloud Storage bucket containing the source.</summary>
@@ -2520,6 +2633,7 @@ public partial class V1beta1TriggerStatusAtProviderBuildSourceStorageSource
     public string? Object { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProviderBuildSource
 {
     /// <summary>Location of the source in a Google Cloud Source Repository. Structure is documented below.</summary>
@@ -2531,6 +2645,7 @@ public partial class V1beta1TriggerStatusAtProviderBuildSource
     public IList<V1beta1TriggerStatusAtProviderBuildSourceStorageSource>? StorageSource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProviderBuildStepVolumes
 {
     /// <summary>Name of the volume to mount. Volume names must be unique per build step and must be valid names for Docker volumes. Each named volume must be used by at least two build steps.</summary>
@@ -2542,6 +2657,7 @@ public partial class V1beta1TriggerStatusAtProviderBuildStepVolumes
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProviderBuildStep
 {
     /// <summary>Allow this build step to fail without failing the entire build if and only if the exit code is one of the specified codes. If allowFailure is also specified, this field will take precedence.</summary>
@@ -2601,6 +2717,7 @@ public partial class V1beta1TriggerStatusAtProviderBuildStep
     public IList<string>? WaitFor { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProviderBuild
 {
     /// <summary>Artifacts produced by the build that should be uploaded upon successful completion of all build steps. Structure is documented below.</summary>
@@ -2652,6 +2769,7 @@ public partial class V1beta1TriggerStatusAtProviderBuild
     public string? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProviderGitFileSource
 {
     /// <summary>The full resource name of the bitbucket server config. Format: projects/{project}/locations/{location}/bitbucketServerConfigs/{id}.</summary>
@@ -2683,6 +2801,7 @@ public partial class V1beta1TriggerStatusAtProviderGitFileSource
     public string? Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProviderGithubPullRequest
 {
     /// <summary>Regex of branches to match. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax</summary>
@@ -2698,6 +2817,7 @@ public partial class V1beta1TriggerStatusAtProviderGithubPullRequest
     public bool? InvertRegex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProviderGithubPush
 {
     /// <summary>Regex of branches to match. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax</summary>
@@ -2713,6 +2833,7 @@ public partial class V1beta1TriggerStatusAtProviderGithubPush
     public string? Tag { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProviderGithub
 {
     /// <summary>The resource name of the github enterprise config that should be applied to this installation. For example: "projects/{$projectId}/locations/{$locationId}/githubEnterpriseConfigs/{$configId}"</summary>
@@ -2736,6 +2857,7 @@ public partial class V1beta1TriggerStatusAtProviderGithub
     public IList<V1beta1TriggerStatusAtProviderGithubPush>? Push { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProviderPubsubConfig
 {
     /// <summary>Service account that will make the push request.</summary>
@@ -2755,6 +2877,7 @@ public partial class V1beta1TriggerStatusAtProviderPubsubConfig
     public string? Topic { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProviderRepositoryEventConfigPullRequest
 {
     /// <summary>Regex of branches to match. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax</summary>
@@ -2770,6 +2893,7 @@ public partial class V1beta1TriggerStatusAtProviderRepositoryEventConfigPullRequ
     public bool? InvertRegex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProviderRepositoryEventConfigPush
 {
     /// <summary>Regex of branches to match. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax</summary>
@@ -2785,6 +2909,7 @@ public partial class V1beta1TriggerStatusAtProviderRepositoryEventConfigPush
     public string? Tag { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProviderRepositoryEventConfig
 {
     /// <summary>Contains filter properties for matching Pull Requests. Structure is documented below.</summary>
@@ -2800,6 +2925,7 @@ public partial class V1beta1TriggerStatusAtProviderRepositoryEventConfig
     public string? Repository { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProviderSourceToBuild
 {
     /// <summary>The full resource name of the bitbucket server config. Format: projects/{project}/locations/{location}/bitbucketServerConfigs/{id}.</summary>
@@ -2827,6 +2953,7 @@ public partial class V1beta1TriggerStatusAtProviderSourceToBuild
     public string? Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProviderTriggerTemplate
 {
     /// <summary>Name of the branch to build. Exactly one a of branch name, tag, or commit SHA must be provided. This field is a regular expression.</summary>
@@ -2858,6 +2985,7 @@ public partial class V1beta1TriggerStatusAtProviderTriggerTemplate
     public string? TagName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProviderWebhookConfig
 {
     /// <summary>Resource name for the secret required as a URL parameter.</summary>
@@ -2869,6 +2997,7 @@ public partial class V1beta1TriggerStatusAtProviderWebhookConfig
     public string? State { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerStatusAtProvider
 {
     /// <summary>Configuration for manual approval to start a build invocation of this BuildTrigger. Builds created by this trigger will require approval before they execute. Any user with a Cloud Build Approver role for the project can approve a build. Structure is documented below.</summary>
@@ -2976,6 +3105,7 @@ public partial class V1beta1TriggerStatusAtProvider
     public IList<V1beta1TriggerStatusAtProviderWebhookConfig>? WebhookConfig { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1TriggerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -3003,6 +3133,7 @@ public partial class V1beta1TriggerStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>TriggerStatus defines the observed state of Trigger.</summary>
 public partial class V1beta1TriggerStatus
 {
     /// <summary></summary>
@@ -3019,6 +3150,7 @@ public partial class V1beta1TriggerStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Trigger is the Schema for the Triggers API. Configuration for an automated build in response to source repository changes.</summary>
 public partial class V1beta1Trigger : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1TriggerSpec>, IStatus<V1beta1TriggerStatus>
 {
     public const string KubeApiVersion = "v1beta1";

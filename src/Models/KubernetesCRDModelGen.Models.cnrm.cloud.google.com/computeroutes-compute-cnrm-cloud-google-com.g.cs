@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary>The network that this route applies to.</summary>
 public partial class V1beta1ComputeRouteSpecNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1ComputeRouteSpecNetworkRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>A forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets.  Note that this can only be used when the destinationRange is a public (non-RFC 1918) IP CIDR range.</summary>
 public partial class V1beta1ComputeRouteSpecNextHopILBRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeForwardingRule` resource.</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1ComputeRouteSpecNextHopILBRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Instance that should handle matching packets.</summary>
 public partial class V1beta1ComputeRouteSpecNextHopInstanceRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeInstance` resource.</summary>
@@ -53,6 +56,7 @@ public partial class V1beta1ComputeRouteSpecNextHopInstanceRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The ComputeVPNTunnel that should handle matching packets</summary>
 public partial class V1beta1ComputeRouteSpecNextHopVPNTunnelRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeVPNTunnel` resource.</summary>
@@ -68,6 +72,7 @@ public partial class V1beta1ComputeRouteSpecNextHopVPNTunnelRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeRouteSpec
 {
     /// <summary>Immutable. An optional description of this resource. Provide this property when you create the resource.</summary>
@@ -115,6 +120,7 @@ public partial class V1beta1ComputeRouteSpec
     public IList<string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeRouteStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -138,6 +144,7 @@ public partial class V1beta1ComputeRouteStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeRouteStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -158,6 +165,7 @@ public partial class V1beta1ComputeRouteStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ComputeRoute : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeRouteSpec>, IStatus<V1beta1ComputeRouteStatus>
 {
     public const string KubeApiVersion = "v1beta1";

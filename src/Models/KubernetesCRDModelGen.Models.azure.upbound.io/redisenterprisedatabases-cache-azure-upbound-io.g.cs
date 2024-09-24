@@ -38,6 +38,7 @@ public enum V1beta1RedisEnterpriseDatabaseSpecForProviderClusterIdRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RedisEnterpriseDatabaseSpecForProviderClusterIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1RedisEnterpriseDatabaseSpecForProviderClusterIdRefPo
     public V1beta1RedisEnterpriseDatabaseSpecForProviderClusterIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RedisEnterpriseCluster in cache to populate clusterId.</summary>
 public partial class V1beta1RedisEnterpriseDatabaseSpecForProviderClusterIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1RedisEnterpriseDatabaseSpecForProviderClusterIdSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RedisEnterpriseDatabaseSpecForProviderClusterIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1RedisEnterpriseDatabaseSpecForProviderClusterIdSelec
     public V1beta1RedisEnterpriseDatabaseSpecForProviderClusterIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RedisEnterpriseCluster in cache to populate clusterId.</summary>
 public partial class V1beta1RedisEnterpriseDatabaseSpecForProviderClusterIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1RedisEnterpriseDatabaseSpecForProviderClusterIdSelec
     public V1beta1RedisEnterpriseDatabaseSpecForProviderClusterIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RedisEnterpriseDatabaseSpecForProviderModule
 {
     /// <summary>Configuration options for the module (e.g. ERROR_RATE 0.00 INITIAL_SIZE 400). Changing this forces a new resource to be created. Defaults to "".</summary>
@@ -141,6 +146,7 @@ public enum V1beta1RedisEnterpriseDatabaseSpecForProviderResourceGroupNameRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RedisEnterpriseDatabaseSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -154,6 +160,7 @@ public partial class V1beta1RedisEnterpriseDatabaseSpecForProviderResourceGroupN
     public V1beta1RedisEnterpriseDatabaseSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1RedisEnterpriseDatabaseSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -185,6 +192,7 @@ public enum V1beta1RedisEnterpriseDatabaseSpecForProviderResourceGroupNameSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RedisEnterpriseDatabaseSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -198,6 +206,7 @@ public partial class V1beta1RedisEnterpriseDatabaseSpecForProviderResourceGroupN
     public V1beta1RedisEnterpriseDatabaseSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1RedisEnterpriseDatabaseSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -213,6 +222,7 @@ public partial class V1beta1RedisEnterpriseDatabaseSpecForProviderResourceGroupN
     public V1beta1RedisEnterpriseDatabaseSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RedisEnterpriseDatabaseSpecForProvider
 {
     /// <summary>Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Possible values are Encrypted and Plaintext. Defaults to Encrypted. Changing this forces a new Redis Enterprise Database to be created.</summary>
@@ -268,6 +278,7 @@ public partial class V1beta1RedisEnterpriseDatabaseSpecForProvider
     public V1beta1RedisEnterpriseDatabaseSpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RedisEnterpriseDatabaseSpecInitProviderModule
 {
     /// <summary>Configuration options for the module (e.g. ERROR_RATE 0.00 INITIAL_SIZE 400). Changing this forces a new resource to be created. Defaults to "".</summary>
@@ -299,6 +310,7 @@ public enum V1beta1RedisEnterpriseDatabaseSpecInitProviderResourceGroupNameRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RedisEnterpriseDatabaseSpecInitProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -312,6 +324,7 @@ public partial class V1beta1RedisEnterpriseDatabaseSpecInitProviderResourceGroup
     public V1beta1RedisEnterpriseDatabaseSpecInitProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1RedisEnterpriseDatabaseSpecInitProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -343,6 +356,7 @@ public enum V1beta1RedisEnterpriseDatabaseSpecInitProviderResourceGroupNameSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RedisEnterpriseDatabaseSpecInitProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -356,6 +370,7 @@ public partial class V1beta1RedisEnterpriseDatabaseSpecInitProviderResourceGroup
     public V1beta1RedisEnterpriseDatabaseSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1RedisEnterpriseDatabaseSpecInitProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -371,6 +386,7 @@ public partial class V1beta1RedisEnterpriseDatabaseSpecInitProviderResourceGroup
     public V1beta1RedisEnterpriseDatabaseSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1RedisEnterpriseDatabaseSpecInitProvider
 {
     /// <summary>Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Possible values are Encrypted and Plaintext. Defaults to Encrypted. Changing this forces a new Redis Enterprise Database to be created.</summary>
@@ -456,6 +472,7 @@ public enum V1beta1RedisEnterpriseDatabaseSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RedisEnterpriseDatabaseSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -469,6 +486,7 @@ public partial class V1beta1RedisEnterpriseDatabaseSpecProviderConfigRefPolicy
     public V1beta1RedisEnterpriseDatabaseSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1RedisEnterpriseDatabaseSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -500,6 +518,7 @@ public enum V1beta1RedisEnterpriseDatabaseSpecPublishConnectionDetailsToConfigRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RedisEnterpriseDatabaseSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -513,6 +532,7 @@ public partial class V1beta1RedisEnterpriseDatabaseSpecPublishConnectionDetailsT
     public V1beta1RedisEnterpriseDatabaseSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1RedisEnterpriseDatabaseSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -524,6 +544,7 @@ public partial class V1beta1RedisEnterpriseDatabaseSpecPublishConnectionDetailsT
     public V1beta1RedisEnterpriseDatabaseSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1RedisEnterpriseDatabaseSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -539,6 +560,7 @@ public partial class V1beta1RedisEnterpriseDatabaseSpecPublishConnectionDetailsT
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1RedisEnterpriseDatabaseSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -554,6 +576,7 @@ public partial class V1beta1RedisEnterpriseDatabaseSpecPublishConnectionDetailsT
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1RedisEnterpriseDatabaseSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -565,6 +588,7 @@ public partial class V1beta1RedisEnterpriseDatabaseSpecWriteConnectionSecretToRe
     public string Namespace { get; set; }
 }
 
+/// <summary>RedisEnterpriseDatabaseSpec defines the desired state of RedisEnterpriseDatabase</summary>
 public partial class V1beta1RedisEnterpriseDatabaseSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -597,6 +621,7 @@ public partial class V1beta1RedisEnterpriseDatabaseSpec
     public V1beta1RedisEnterpriseDatabaseSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RedisEnterpriseDatabaseStatusAtProviderModule
 {
     /// <summary>Configuration options for the module (e.g. ERROR_RATE 0.00 INITIAL_SIZE 400). Changing this forces a new resource to be created. Defaults to "".</summary>
@@ -612,6 +637,7 @@ public partial class V1beta1RedisEnterpriseDatabaseStatusAtProviderModule
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RedisEnterpriseDatabaseStatusAtProvider
 {
     /// <summary>Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Possible values are Encrypted and Plaintext. Defaults to Encrypted. Changing this forces a new Redis Enterprise Database to be created.</summary>
@@ -655,6 +681,7 @@ public partial class V1beta1RedisEnterpriseDatabaseStatusAtProvider
     public string? ResourceGroupName { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1RedisEnterpriseDatabaseStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -682,6 +709,7 @@ public partial class V1beta1RedisEnterpriseDatabaseStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>RedisEnterpriseDatabaseStatus defines the observed state of RedisEnterpriseDatabase.</summary>
 public partial class V1beta1RedisEnterpriseDatabaseStatus
 {
     /// <summary></summary>
@@ -698,6 +726,7 @@ public partial class V1beta1RedisEnterpriseDatabaseStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>RedisEnterpriseDatabase is the Schema for the RedisEnterpriseDatabases API. Manages a Redis Enterprise Database.</summary>
 public partial class V1beta1RedisEnterpriseDatabase : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1RedisEnterpriseDatabaseSpec>, IStatus<V1beta1RedisEnterpriseDatabaseStatus>
 {
     public const string KubeApiVersion = "v1beta1";

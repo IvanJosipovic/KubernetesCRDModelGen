@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.hub.traefik.io;
+/// <summary>KeySource defines how to extract API keys from requests.</summary>
 public partial class V1alpha1AccessControlPolicySpecApiKeyKeySource
 {
     /// <summary>Cookie is the name of a cookie.</summary>
@@ -27,6 +28,7 @@ public partial class V1alpha1AccessControlPolicySpecApiKeyKeySource
     public string? Query { get; set; }
 }
 
+/// <summary>AccessControlPolicyAPIKeyKey defines an API key.</summary>
 public partial class V1alpha1AccessControlPolicySpecApiKeyKeys
 {
     /// <summary>ID is the unique identifier of the key.</summary>
@@ -42,6 +44,7 @@ public partial class V1alpha1AccessControlPolicySpecApiKeyKeys
     public string Value { get; set; }
 }
 
+/// <summary>AccessControlPolicyAPIKey configure an APIKey control policy.</summary>
 public partial class V1alpha1AccessControlPolicySpecApiKey
 {
     /// <summary>ForwardHeaders instructs the middleware to forward key metadata as header values upon successful authentication.</summary>
@@ -57,6 +60,7 @@ public partial class V1alpha1AccessControlPolicySpecApiKey
     public IList<V1alpha1AccessControlPolicySpecApiKeyKeys>? Keys { get; set; }
 }
 
+/// <summary>AccessControlPolicyBasicAuth holds the HTTP basic authentication configuration.</summary>
 public partial class V1alpha1AccessControlPolicySpecBasicAuth
 {
     /// <summary></summary>
@@ -76,6 +80,7 @@ public partial class V1alpha1AccessControlPolicySpecBasicAuth
     public IList<string>? Users { get; set; }
 }
 
+/// <summary>AccessControlPolicyJWT configures a JWT access control policy.</summary>
 public partial class V1alpha1AccessControlPolicySpecJwt
 {
     /// <summary></summary>
@@ -115,6 +120,7 @@ public partial class V1alpha1AccessControlPolicySpecJwt
     public string? TokenQueryKey { get; set; }
 }
 
+/// <summary>TLS configures TLS communication with the Authorization Server.</summary>
 public partial class V1alpha1AccessControlPolicySpecOAuthIntroClientConfigTls
 {
     /// <summary>CA sets the CA bundle used to sign the Authorization Server certificate.</summary>
@@ -126,6 +132,7 @@ public partial class V1alpha1AccessControlPolicySpecOAuthIntroClientConfigTls
     public bool? InsecureSkipVerify { get; set; }
 }
 
+/// <summary>AccessControlOAuthIntroClientConfig configures the OAuth 2.0 client for issuing token introspection requests.</summary>
 public partial class V1alpha1AccessControlPolicySpecOAuthIntroClientConfig
 {
     /// <summary>Headers to set when sending requests to the Authorization Server.</summary>
@@ -153,6 +160,7 @@ public partial class V1alpha1AccessControlPolicySpecOAuthIntroClientConfig
     public string Url { get; set; }
 }
 
+/// <summary>TokenSource describes how to extract tokens from HTTP requests. If multiple sources are set, the order is the following: header &gt; query &gt; cookie.</summary>
 public partial class V1alpha1AccessControlPolicySpecOAuthIntroTokenSource
 {
     /// <summary>Cookie is the name of a cookie.</summary>
@@ -172,6 +180,7 @@ public partial class V1alpha1AccessControlPolicySpecOAuthIntroTokenSource
     public string? Query { get; set; }
 }
 
+/// <summary>AccessControlOAuthIntro configures an OAuth 2.0 Token Introspection access control policy.</summary>
 public partial class V1alpha1AccessControlPolicySpecOAuthIntro
 {
     /// <summary></summary>
@@ -191,6 +200,7 @@ public partial class V1alpha1AccessControlPolicySpecOAuthIntro
     public V1alpha1AccessControlPolicySpecOAuthIntroTokenSource TokenSource { get; set; }
 }
 
+/// <summary>SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace</summary>
 public partial class V1alpha1AccessControlPolicySpecOidcSecret
 {
     /// <summary>name is unique within a namespace to reference a secret resource.</summary>
@@ -202,6 +212,7 @@ public partial class V1alpha1AccessControlPolicySpecOidcSecret
     public string? Namespace { get; set; }
 }
 
+/// <summary>Session holds session configuration.</summary>
 public partial class V1alpha1AccessControlPolicySpecOidcSession
 {
     /// <summary></summary>
@@ -225,6 +236,7 @@ public partial class V1alpha1AccessControlPolicySpecOidcSession
     public bool? Secure { get; set; }
 }
 
+/// <summary>StateCookie holds state cookie configuration.</summary>
 public partial class V1alpha1AccessControlPolicySpecOidcStateCookie
 {
     /// <summary></summary>
@@ -244,6 +256,7 @@ public partial class V1alpha1AccessControlPolicySpecOidcStateCookie
     public bool? Secure { get; set; }
 }
 
+/// <summary>AccessControlPolicyOIDC holds the OIDC authentication configuration.</summary>
 public partial class V1alpha1AccessControlPolicySpecOidc
 {
     /// <summary></summary>
@@ -295,6 +308,7 @@ public partial class V1alpha1AccessControlPolicySpecOidc
     public V1alpha1AccessControlPolicySpecOidcStateCookie? StateCookie { get; set; }
 }
 
+/// <summary>SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace</summary>
 public partial class V1alpha1AccessControlPolicySpecOidcGoogleSecret
 {
     /// <summary>name is unique within a namespace to reference a secret resource.</summary>
@@ -306,6 +320,7 @@ public partial class V1alpha1AccessControlPolicySpecOidcGoogleSecret
     public string? Namespace { get; set; }
 }
 
+/// <summary>Session holds session configuration.</summary>
 public partial class V1alpha1AccessControlPolicySpecOidcGoogleSession
 {
     /// <summary></summary>
@@ -329,6 +344,7 @@ public partial class V1alpha1AccessControlPolicySpecOidcGoogleSession
     public bool? Secure { get; set; }
 }
 
+/// <summary>StateCookie holds state cookie configuration.</summary>
 public partial class V1alpha1AccessControlPolicySpecOidcGoogleStateCookie
 {
     /// <summary></summary>
@@ -348,6 +364,7 @@ public partial class V1alpha1AccessControlPolicySpecOidcGoogleStateCookie
     public bool? Secure { get; set; }
 }
 
+/// <summary>AccessControlPolicyOIDCGoogle holds the Google OIDC authentication configuration.</summary>
 public partial class V1alpha1AccessControlPolicySpecOidcGoogle
 {
     /// <summary></summary>
@@ -387,6 +404,7 @@ public partial class V1alpha1AccessControlPolicySpecOidcGoogle
     public V1alpha1AccessControlPolicySpecOidcGoogleStateCookie? StateCookie { get; set; }
 }
 
+/// <summary>AccessControlPolicySpec configures an access control policy.</summary>
 public partial class V1alpha1AccessControlPolicySpec
 {
     /// <summary>AccessControlPolicyAPIKey configure an APIKey control policy.</summary>
@@ -414,6 +432,7 @@ public partial class V1alpha1AccessControlPolicySpec
     public V1alpha1AccessControlPolicySpecOidcGoogle? OidcGoogle { get; set; }
 }
 
+/// <summary>The current status of this access control policy.</summary>
 public partial class V1alpha1AccessControlPolicyStatus
 {
     /// <summary></summary>
@@ -430,6 +449,7 @@ public partial class V1alpha1AccessControlPolicyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>AccessControlPolicy defines an access control policy.</summary>
 public partial class V1alpha1AccessControlPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1AccessControlPolicySpec>, IStatus<V1alpha1AccessControlPolicyStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

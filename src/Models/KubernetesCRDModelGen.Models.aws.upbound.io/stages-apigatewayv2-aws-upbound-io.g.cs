@@ -18,6 +18,7 @@ public enum V1beta1StageSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1StageSpecForProviderAccessLogSettings
 {
     /// <summary>ARN of the CloudWatch Logs log group to receive access logs. Any trailing :* is trimmed from the ARN.</summary>
@@ -49,6 +50,7 @@ public enum V1beta1StageSpecForProviderApiIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1StageSpecForProviderApiIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -62,6 +64,7 @@ public partial class V1beta1StageSpecForProviderApiIdRefPolicy
     public V1beta1StageSpecForProviderApiIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a API in apigatewayv2 to populate apiId.</summary>
 public partial class V1beta1StageSpecForProviderApiIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -93,6 +96,7 @@ public enum V1beta1StageSpecForProviderApiIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1StageSpecForProviderApiIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -106,6 +110,7 @@ public partial class V1beta1StageSpecForProviderApiIdSelectorPolicy
     public V1beta1StageSpecForProviderApiIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a API in apigatewayv2 to populate apiId.</summary>
 public partial class V1beta1StageSpecForProviderApiIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1StageSpecForProviderApiIdSelector
     public V1beta1StageSpecForProviderApiIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StageSpecForProviderDefaultRouteSettings
 {
     /// <summary>Whether data trace logging is enabled for the default route. Affects the log entries pushed to Amazon CloudWatch Logs. Defaults to false. Supported only for WebSocket APIs.</summary>
@@ -164,6 +170,7 @@ public enum V1beta1StageSpecForProviderDeploymentIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1StageSpecForProviderDeploymentIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -177,6 +184,7 @@ public partial class V1beta1StageSpecForProviderDeploymentIdRefPolicy
     public V1beta1StageSpecForProviderDeploymentIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Deployment in apigatewayv2 to populate deploymentId.</summary>
 public partial class V1beta1StageSpecForProviderDeploymentIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -208,6 +216,7 @@ public enum V1beta1StageSpecForProviderDeploymentIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1StageSpecForProviderDeploymentIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -221,6 +230,7 @@ public partial class V1beta1StageSpecForProviderDeploymentIdSelectorPolicy
     public V1beta1StageSpecForProviderDeploymentIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Deployment in apigatewayv2 to populate deploymentId.</summary>
 public partial class V1beta1StageSpecForProviderDeploymentIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -236,6 +246,7 @@ public partial class V1beta1StageSpecForProviderDeploymentIdSelector
     public V1beta1StageSpecForProviderDeploymentIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StageSpecForProviderRouteSettings
 {
     /// <summary>Whether data trace logging is enabled for the route. Affects the log entries pushed to Amazon CloudWatch Logs. Defaults to false. Supported only for WebSocket APIs.</summary>
@@ -263,6 +274,7 @@ public partial class V1beta1StageSpecForProviderRouteSettings
     public double? ThrottlingRateLimit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StageSpecForProvider
 {
     /// <summary>Settings for logging access in this stage. Use the aws_api_gateway_account resource to configure permissions for CloudWatch Logging.</summary>
@@ -326,6 +338,7 @@ public partial class V1beta1StageSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StageSpecInitProviderAccessLogSettings
 {
     /// <summary>ARN of the CloudWatch Logs log group to receive access logs. Any trailing :* is trimmed from the ARN.</summary>
@@ -357,6 +370,7 @@ public enum V1beta1StageSpecInitProviderApiIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1StageSpecInitProviderApiIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -370,6 +384,7 @@ public partial class V1beta1StageSpecInitProviderApiIdRefPolicy
     public V1beta1StageSpecInitProviderApiIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a API in apigatewayv2 to populate apiId.</summary>
 public partial class V1beta1StageSpecInitProviderApiIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -401,6 +416,7 @@ public enum V1beta1StageSpecInitProviderApiIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1StageSpecInitProviderApiIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -414,6 +430,7 @@ public partial class V1beta1StageSpecInitProviderApiIdSelectorPolicy
     public V1beta1StageSpecInitProviderApiIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a API in apigatewayv2 to populate apiId.</summary>
 public partial class V1beta1StageSpecInitProviderApiIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -429,6 +446,7 @@ public partial class V1beta1StageSpecInitProviderApiIdSelector
     public V1beta1StageSpecInitProviderApiIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StageSpecInitProviderDefaultRouteSettings
 {
     /// <summary>Whether data trace logging is enabled for the default route. Affects the log entries pushed to Amazon CloudWatch Logs. Defaults to false. Supported only for WebSocket APIs.</summary>
@@ -472,6 +490,7 @@ public enum V1beta1StageSpecInitProviderDeploymentIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1StageSpecInitProviderDeploymentIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -485,6 +504,7 @@ public partial class V1beta1StageSpecInitProviderDeploymentIdRefPolicy
     public V1beta1StageSpecInitProviderDeploymentIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Deployment in apigatewayv2 to populate deploymentId.</summary>
 public partial class V1beta1StageSpecInitProviderDeploymentIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -516,6 +536,7 @@ public enum V1beta1StageSpecInitProviderDeploymentIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1StageSpecInitProviderDeploymentIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -529,6 +550,7 @@ public partial class V1beta1StageSpecInitProviderDeploymentIdSelectorPolicy
     public V1beta1StageSpecInitProviderDeploymentIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Deployment in apigatewayv2 to populate deploymentId.</summary>
 public partial class V1beta1StageSpecInitProviderDeploymentIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -544,6 +566,7 @@ public partial class V1beta1StageSpecInitProviderDeploymentIdSelector
     public V1beta1StageSpecInitProviderDeploymentIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StageSpecInitProviderRouteSettings
 {
     /// <summary>Whether data trace logging is enabled for the route. Affects the log entries pushed to Amazon CloudWatch Logs. Defaults to false. Supported only for WebSocket APIs.</summary>
@@ -571,6 +594,7 @@ public partial class V1beta1StageSpecInitProviderRouteSettings
     public double? ThrottlingRateLimit { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1StageSpecInitProvider
 {
     /// <summary>Settings for logging access in this stage. Use the aws_api_gateway_account resource to configure permissions for CloudWatch Logging.</summary>
@@ -672,6 +696,7 @@ public enum V1beta1StageSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1StageSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -685,6 +710,7 @@ public partial class V1beta1StageSpecProviderConfigRefPolicy
     public V1beta1StageSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1StageSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -716,6 +742,7 @@ public enum V1beta1StageSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1StageSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -729,6 +756,7 @@ public partial class V1beta1StageSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1StageSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1StageSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -740,6 +768,7 @@ public partial class V1beta1StageSpecPublishConnectionDetailsToConfigRef
     public V1beta1StageSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1StageSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -755,6 +784,7 @@ public partial class V1beta1StageSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1StageSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -770,6 +800,7 @@ public partial class V1beta1StageSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1StageSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -781,6 +812,7 @@ public partial class V1beta1StageSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>StageSpec defines the desired state of Stage</summary>
 public partial class V1beta1StageSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -813,6 +845,7 @@ public partial class V1beta1StageSpec
     public V1beta1StageSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StageStatusAtProviderAccessLogSettings
 {
     /// <summary>ARN of the CloudWatch Logs log group to receive access logs. Any trailing :* is trimmed from the ARN.</summary>
@@ -824,6 +857,7 @@ public partial class V1beta1StageStatusAtProviderAccessLogSettings
     public string? Format { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StageStatusAtProviderDefaultRouteSettings
 {
     /// <summary>Whether data trace logging is enabled for the default route. Affects the log entries pushed to Amazon CloudWatch Logs. Defaults to false. Supported only for WebSocket APIs.</summary>
@@ -847,6 +881,7 @@ public partial class V1beta1StageStatusAtProviderDefaultRouteSettings
     public double? ThrottlingRateLimit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StageStatusAtProviderRouteSettings
 {
     /// <summary>Whether data trace logging is enabled for the route. Affects the log entries pushed to Amazon CloudWatch Logs. Defaults to false. Supported only for WebSocket APIs.</summary>
@@ -874,6 +909,7 @@ public partial class V1beta1StageStatusAtProviderRouteSettings
     public double? ThrottlingRateLimit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StageStatusAtProvider
 {
     /// <summary>Settings for logging access in this stage. Use the aws_api_gateway_account resource to configure permissions for CloudWatch Logging.</summary>
@@ -937,6 +973,7 @@ public partial class V1beta1StageStatusAtProvider
     public IDictionary<string, string>? TagsAll { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1StageStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -964,6 +1001,7 @@ public partial class V1beta1StageStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>StageStatus defines the observed state of Stage.</summary>
 public partial class V1beta1StageStatus
 {
     /// <summary></summary>
@@ -980,6 +1018,7 @@ public partial class V1beta1StageStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Stage is the Schema for the Stages API. Manages an Amazon API Gateway Version 2 stage.</summary>
 public partial class V1beta1Stage : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1StageSpec>, IStatus<V1beta1StageStatus>
 {
     public const string KubeApiVersion = "v1beta1";

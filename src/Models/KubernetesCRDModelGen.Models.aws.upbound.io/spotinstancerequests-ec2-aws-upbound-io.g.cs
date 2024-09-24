@@ -18,6 +18,7 @@ public enum V1beta1SpotInstanceRequestSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestSpecForProviderCapacityReservationSpecificationCapacityReservationTarget
 {
     /// <summary>The Spot Instance Request ID.</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1SpotInstanceRequestSpecForProviderCapacityReservatio
     public string? CapacityReservationResourceGroupArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestSpecForProviderCapacityReservationSpecification
 {
     /// <summary></summary>
@@ -40,6 +42,7 @@ public partial class V1beta1SpotInstanceRequestSpecForProviderCapacityReservatio
     public IList<V1beta1SpotInstanceRequestSpecForProviderCapacityReservationSpecificationCapacityReservationTarget>? CapacityReservationTarget { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestSpecForProviderCpuOptions
 {
     /// <summary></summary>
@@ -55,6 +58,7 @@ public partial class V1beta1SpotInstanceRequestSpecForProviderCpuOptions
     public double? ThreadsPerCore { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestSpecForProviderCreditSpecification
 {
     /// <summary></summary>
@@ -62,6 +66,7 @@ public partial class V1beta1SpotInstanceRequestSpecForProviderCreditSpecificatio
     public string? CpuCredits { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestSpecForProviderEbsBlockDevice
 {
     /// <summary></summary>
@@ -109,6 +114,7 @@ public partial class V1beta1SpotInstanceRequestSpecForProviderEbsBlockDevice
     public string? VolumeType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestSpecForProviderEnclaveOptions
 {
     /// <summary></summary>
@@ -116,6 +122,7 @@ public partial class V1beta1SpotInstanceRequestSpecForProviderEnclaveOptions
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestSpecForProviderEphemeralBlockDevice
 {
     /// <summary></summary>
@@ -131,6 +138,7 @@ public partial class V1beta1SpotInstanceRequestSpecForProviderEphemeralBlockDevi
     public string? VirtualName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestSpecForProviderLaunchTemplate
 {
     /// <summary>The Spot Instance Request ID.</summary>
@@ -146,6 +154,7 @@ public partial class V1beta1SpotInstanceRequestSpecForProviderLaunchTemplate
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestSpecForProviderMaintenanceOptions
 {
     /// <summary></summary>
@@ -153,6 +162,7 @@ public partial class V1beta1SpotInstanceRequestSpecForProviderMaintenanceOptions
     public string? AutoRecovery { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestSpecForProviderMetadataOptions
 {
     /// <summary></summary>
@@ -176,6 +186,7 @@ public partial class V1beta1SpotInstanceRequestSpecForProviderMetadataOptions
     public string? InstanceMetadataTags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestSpecForProviderNetworkInterface
 {
     /// <summary></summary>
@@ -195,6 +206,7 @@ public partial class V1beta1SpotInstanceRequestSpecForProviderNetworkInterface
     public string? NetworkInterfaceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestSpecForProviderPrivateDnsNameOptions
 {
     /// <summary></summary>
@@ -210,6 +222,7 @@ public partial class V1beta1SpotInstanceRequestSpecForProviderPrivateDnsNameOpti
     public string? HostnameType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestSpecForProviderRootBlockDevice
 {
     /// <summary></summary>
@@ -269,6 +282,7 @@ public enum V1beta1SpotInstanceRequestSpecForProviderSubnetIdRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpotInstanceRequestSpecForProviderSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -282,6 +296,7 @@ public partial class V1beta1SpotInstanceRequestSpecForProviderSubnetIdRefPolicy
     public V1beta1SpotInstanceRequestSpecForProviderSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
 public partial class V1beta1SpotInstanceRequestSpecForProviderSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -313,6 +328,7 @@ public enum V1beta1SpotInstanceRequestSpecForProviderSubnetIdSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SpotInstanceRequestSpecForProviderSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -326,6 +342,7 @@ public partial class V1beta1SpotInstanceRequestSpecForProviderSubnetIdSelectorPo
     public V1beta1SpotInstanceRequestSpecForProviderSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
 public partial class V1beta1SpotInstanceRequestSpecForProviderSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -361,6 +378,7 @@ public enum V1beta1SpotInstanceRequestSpecForProviderVpcSecurityGroupIdRefsPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpotInstanceRequestSpecForProviderVpcSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -374,6 +392,7 @@ public partial class V1beta1SpotInstanceRequestSpecForProviderVpcSecurityGroupId
     public V1beta1SpotInstanceRequestSpecForProviderVpcSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1SpotInstanceRequestSpecForProviderVpcSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -405,6 +424,7 @@ public enum V1beta1SpotInstanceRequestSpecForProviderVpcSecurityGroupIdSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SpotInstanceRequestSpecForProviderVpcSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -418,6 +438,7 @@ public partial class V1beta1SpotInstanceRequestSpecForProviderVpcSecurityGroupId
     public V1beta1SpotInstanceRequestSpecForProviderVpcSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate vpcSecurityGroupIds.</summary>
 public partial class V1beta1SpotInstanceRequestSpecForProviderVpcSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -433,6 +454,7 @@ public partial class V1beta1SpotInstanceRequestSpecForProviderVpcSecurityGroupId
     public V1beta1SpotInstanceRequestSpecForProviderVpcSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestSpecForProvider
 {
     /// <summary></summary>
@@ -668,6 +690,7 @@ public partial class V1beta1SpotInstanceRequestSpecForProvider
     public bool? WaitForFulfillment { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestSpecInitProviderCapacityReservationSpecificationCapacityReservationTarget
 {
     /// <summary>The Spot Instance Request ID.</summary>
@@ -679,6 +702,7 @@ public partial class V1beta1SpotInstanceRequestSpecInitProviderCapacityReservati
     public string? CapacityReservationResourceGroupArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestSpecInitProviderCapacityReservationSpecification
 {
     /// <summary></summary>
@@ -690,6 +714,7 @@ public partial class V1beta1SpotInstanceRequestSpecInitProviderCapacityReservati
     public IList<V1beta1SpotInstanceRequestSpecInitProviderCapacityReservationSpecificationCapacityReservationTarget>? CapacityReservationTarget { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestSpecInitProviderCpuOptions
 {
     /// <summary></summary>
@@ -705,6 +730,7 @@ public partial class V1beta1SpotInstanceRequestSpecInitProviderCpuOptions
     public double? ThreadsPerCore { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestSpecInitProviderCreditSpecification
 {
     /// <summary></summary>
@@ -712,6 +738,7 @@ public partial class V1beta1SpotInstanceRequestSpecInitProviderCreditSpecificati
     public string? CpuCredits { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestSpecInitProviderEbsBlockDevice
 {
     /// <summary></summary>
@@ -759,6 +786,7 @@ public partial class V1beta1SpotInstanceRequestSpecInitProviderEbsBlockDevice
     public string? VolumeType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestSpecInitProviderEnclaveOptions
 {
     /// <summary></summary>
@@ -766,6 +794,7 @@ public partial class V1beta1SpotInstanceRequestSpecInitProviderEnclaveOptions
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestSpecInitProviderEphemeralBlockDevice
 {
     /// <summary></summary>
@@ -781,6 +810,7 @@ public partial class V1beta1SpotInstanceRequestSpecInitProviderEphemeralBlockDev
     public string? VirtualName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestSpecInitProviderLaunchTemplate
 {
     /// <summary>The Spot Instance Request ID.</summary>
@@ -796,6 +826,7 @@ public partial class V1beta1SpotInstanceRequestSpecInitProviderLaunchTemplate
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestSpecInitProviderMaintenanceOptions
 {
     /// <summary></summary>
@@ -803,6 +834,7 @@ public partial class V1beta1SpotInstanceRequestSpecInitProviderMaintenanceOption
     public string? AutoRecovery { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestSpecInitProviderMetadataOptions
 {
     /// <summary></summary>
@@ -826,6 +858,7 @@ public partial class V1beta1SpotInstanceRequestSpecInitProviderMetadataOptions
     public string? InstanceMetadataTags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestSpecInitProviderNetworkInterface
 {
     /// <summary></summary>
@@ -845,6 +878,7 @@ public partial class V1beta1SpotInstanceRequestSpecInitProviderNetworkInterface
     public string? NetworkInterfaceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestSpecInitProviderPrivateDnsNameOptions
 {
     /// <summary></summary>
@@ -860,6 +894,7 @@ public partial class V1beta1SpotInstanceRequestSpecInitProviderPrivateDnsNameOpt
     public string? HostnameType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestSpecInitProviderRootBlockDevice
 {
     /// <summary></summary>
@@ -919,6 +954,7 @@ public enum V1beta1SpotInstanceRequestSpecInitProviderSubnetIdRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpotInstanceRequestSpecInitProviderSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -932,6 +968,7 @@ public partial class V1beta1SpotInstanceRequestSpecInitProviderSubnetIdRefPolicy
     public V1beta1SpotInstanceRequestSpecInitProviderSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
 public partial class V1beta1SpotInstanceRequestSpecInitProviderSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -963,6 +1000,7 @@ public enum V1beta1SpotInstanceRequestSpecInitProviderSubnetIdSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SpotInstanceRequestSpecInitProviderSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -976,6 +1014,7 @@ public partial class V1beta1SpotInstanceRequestSpecInitProviderSubnetIdSelectorP
     public V1beta1SpotInstanceRequestSpecInitProviderSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
 public partial class V1beta1SpotInstanceRequestSpecInitProviderSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1011,6 +1050,7 @@ public enum V1beta1SpotInstanceRequestSpecInitProviderVpcSecurityGroupIdRefsPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpotInstanceRequestSpecInitProviderVpcSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1024,6 +1064,7 @@ public partial class V1beta1SpotInstanceRequestSpecInitProviderVpcSecurityGroupI
     public V1beta1SpotInstanceRequestSpecInitProviderVpcSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1SpotInstanceRequestSpecInitProviderVpcSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1055,6 +1096,7 @@ public enum V1beta1SpotInstanceRequestSpecInitProviderVpcSecurityGroupIdSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SpotInstanceRequestSpecInitProviderVpcSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1068,6 +1110,7 @@ public partial class V1beta1SpotInstanceRequestSpecInitProviderVpcSecurityGroupI
     public V1beta1SpotInstanceRequestSpecInitProviderVpcSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate vpcSecurityGroupIds.</summary>
 public partial class V1beta1SpotInstanceRequestSpecInitProviderVpcSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1083,6 +1126,7 @@ public partial class V1beta1SpotInstanceRequestSpecInitProviderVpcSecurityGroupI
     public V1beta1SpotInstanceRequestSpecInitProviderVpcSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1SpotInstanceRequestSpecInitProvider
 {
     /// <summary></summary>
@@ -1356,6 +1400,7 @@ public enum V1beta1SpotInstanceRequestSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpotInstanceRequestSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1369,6 +1414,7 @@ public partial class V1beta1SpotInstanceRequestSpecProviderConfigRefPolicy
     public V1beta1SpotInstanceRequestSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1SpotInstanceRequestSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1400,6 +1446,7 @@ public enum V1beta1SpotInstanceRequestSpecPublishConnectionDetailsToConfigRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpotInstanceRequestSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1413,6 +1460,7 @@ public partial class V1beta1SpotInstanceRequestSpecPublishConnectionDetailsToCon
     public V1beta1SpotInstanceRequestSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1SpotInstanceRequestSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1424,6 +1472,7 @@ public partial class V1beta1SpotInstanceRequestSpecPublishConnectionDetailsToCon
     public V1beta1SpotInstanceRequestSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1SpotInstanceRequestSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1439,6 +1488,7 @@ public partial class V1beta1SpotInstanceRequestSpecPublishConnectionDetailsToMet
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1SpotInstanceRequestSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1454,6 +1504,7 @@ public partial class V1beta1SpotInstanceRequestSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1SpotInstanceRequestSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1465,6 +1516,7 @@ public partial class V1beta1SpotInstanceRequestSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>SpotInstanceRequestSpec defines the desired state of SpotInstanceRequest</summary>
 public partial class V1beta1SpotInstanceRequestSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1497,6 +1549,7 @@ public partial class V1beta1SpotInstanceRequestSpec
     public V1beta1SpotInstanceRequestSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestStatusAtProviderCapacityReservationSpecificationCapacityReservationTarget
 {
     /// <summary>The Spot Instance Request ID.</summary>
@@ -1508,6 +1561,7 @@ public partial class V1beta1SpotInstanceRequestStatusAtProviderCapacityReservati
     public string? CapacityReservationResourceGroupArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestStatusAtProviderCapacityReservationSpecification
 {
     /// <summary></summary>
@@ -1519,6 +1573,7 @@ public partial class V1beta1SpotInstanceRequestStatusAtProviderCapacityReservati
     public IList<V1beta1SpotInstanceRequestStatusAtProviderCapacityReservationSpecificationCapacityReservationTarget>? CapacityReservationTarget { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestStatusAtProviderCpuOptions
 {
     /// <summary></summary>
@@ -1534,6 +1589,7 @@ public partial class V1beta1SpotInstanceRequestStatusAtProviderCpuOptions
     public double? ThreadsPerCore { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestStatusAtProviderCreditSpecification
 {
     /// <summary></summary>
@@ -1541,6 +1597,7 @@ public partial class V1beta1SpotInstanceRequestStatusAtProviderCreditSpecificati
     public string? CpuCredits { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestStatusAtProviderEbsBlockDevice
 {
     /// <summary></summary>
@@ -1592,6 +1649,7 @@ public partial class V1beta1SpotInstanceRequestStatusAtProviderEbsBlockDevice
     public string? VolumeType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestStatusAtProviderEnclaveOptions
 {
     /// <summary></summary>
@@ -1599,6 +1657,7 @@ public partial class V1beta1SpotInstanceRequestStatusAtProviderEnclaveOptions
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestStatusAtProviderEphemeralBlockDevice
 {
     /// <summary></summary>
@@ -1614,6 +1673,7 @@ public partial class V1beta1SpotInstanceRequestStatusAtProviderEphemeralBlockDev
     public string? VirtualName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestStatusAtProviderLaunchTemplate
 {
     /// <summary>The Spot Instance Request ID.</summary>
@@ -1629,6 +1689,7 @@ public partial class V1beta1SpotInstanceRequestStatusAtProviderLaunchTemplate
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestStatusAtProviderMaintenanceOptions
 {
     /// <summary></summary>
@@ -1636,6 +1697,7 @@ public partial class V1beta1SpotInstanceRequestStatusAtProviderMaintenanceOption
     public string? AutoRecovery { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestStatusAtProviderMetadataOptions
 {
     /// <summary></summary>
@@ -1659,6 +1721,7 @@ public partial class V1beta1SpotInstanceRequestStatusAtProviderMetadataOptions
     public string? InstanceMetadataTags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestStatusAtProviderNetworkInterface
 {
     /// <summary></summary>
@@ -1678,6 +1741,7 @@ public partial class V1beta1SpotInstanceRequestStatusAtProviderNetworkInterface
     public string? NetworkInterfaceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestStatusAtProviderPrivateDnsNameOptions
 {
     /// <summary></summary>
@@ -1693,6 +1757,7 @@ public partial class V1beta1SpotInstanceRequestStatusAtProviderPrivateDnsNameOpt
     public string? HostnameType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestStatusAtProviderRootBlockDevice
 {
     /// <summary></summary>
@@ -1740,6 +1805,7 @@ public partial class V1beta1SpotInstanceRequestStatusAtProviderRootBlockDevice
     public string? VolumeType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpotInstanceRequestStatusAtProvider
 {
     /// <summary></summary>
@@ -2007,6 +2073,7 @@ public partial class V1beta1SpotInstanceRequestStatusAtProvider
     public bool? WaitForFulfillment { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1SpotInstanceRequestStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2034,6 +2101,7 @@ public partial class V1beta1SpotInstanceRequestStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>SpotInstanceRequestStatus defines the observed state of SpotInstanceRequest.</summary>
 public partial class V1beta1SpotInstanceRequestStatus
 {
     /// <summary></summary>
@@ -2050,6 +2118,7 @@ public partial class V1beta1SpotInstanceRequestStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>SpotInstanceRequest is the Schema for the SpotInstanceRequests API. Provides a Spot Instance Request resource.</summary>
 public partial class V1beta1SpotInstanceRequest : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SpotInstanceRequestSpec>, IStatus<V1beta1SpotInstanceRequestStatus>
 {
     public const string KubeApiVersion = "v1beta1";

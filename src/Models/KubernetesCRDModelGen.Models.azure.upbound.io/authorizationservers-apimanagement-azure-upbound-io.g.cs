@@ -38,6 +38,7 @@ public enum V1beta1AuthorizationServerSpecForProviderApiManagementNameRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AuthorizationServerSpecForProviderApiManagementNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1AuthorizationServerSpecForProviderApiManagementNameR
     public V1beta1AuthorizationServerSpecForProviderApiManagementNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Management in apimanagement to populate apiManagementName.</summary>
 public partial class V1beta1AuthorizationServerSpecForProviderApiManagementNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1AuthorizationServerSpecForProviderApiManagementNameSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AuthorizationServerSpecForProviderApiManagementNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1AuthorizationServerSpecForProviderApiManagementNameS
     public V1beta1AuthorizationServerSpecForProviderApiManagementNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Management in apimanagement to populate apiManagementName.</summary>
 public partial class V1beta1AuthorizationServerSpecForProviderApiManagementNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1AuthorizationServerSpecForProviderApiManagementNameS
     public V1beta1AuthorizationServerSpecForProviderApiManagementNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>The Client/App Secret registered with this Authorization Server.</summary>
 public partial class V1beta1AuthorizationServerSpecForProviderClientSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -145,6 +150,7 @@ public enum V1beta1AuthorizationServerSpecForProviderResourceGroupNameRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AuthorizationServerSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -158,6 +164,7 @@ public partial class V1beta1AuthorizationServerSpecForProviderResourceGroupNameR
     public V1beta1AuthorizationServerSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1AuthorizationServerSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -189,6 +196,7 @@ public enum V1beta1AuthorizationServerSpecForProviderResourceGroupNameSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AuthorizationServerSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1AuthorizationServerSpecForProviderResourceGroupNameS
     public V1beta1AuthorizationServerSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1AuthorizationServerSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -217,6 +226,7 @@ public partial class V1beta1AuthorizationServerSpecForProviderResourceGroupNameS
     public V1beta1AuthorizationServerSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>The password associated with the Resource Owner.</summary>
 public partial class V1beta1AuthorizationServerSpecForProviderResourceOwnerPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -232,6 +242,7 @@ public partial class V1beta1AuthorizationServerSpecForProviderResourceOwnerPassw
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AuthorizationServerSpecForProviderTokenBodyParameter
 {
     /// <summary>The Name of the Parameter.</summary>
@@ -243,6 +254,7 @@ public partial class V1beta1AuthorizationServerSpecForProviderTokenBodyParameter
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AuthorizationServerSpecForProvider
 {
     /// <summary>The name of the API Management Service in which this Authorization Server should be created. Changing this forces a new resource to be created.</summary>
@@ -334,6 +346,7 @@ public partial class V1beta1AuthorizationServerSpecForProvider
     public string? TokenEndpoint { get; set; }
 }
 
+/// <summary>The Client/App Secret registered with this Authorization Server.</summary>
 public partial class V1beta1AuthorizationServerSpecInitProviderClientSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -349,6 +362,7 @@ public partial class V1beta1AuthorizationServerSpecInitProviderClientSecretSecre
     public string Namespace { get; set; }
 }
 
+/// <summary>The password associated with the Resource Owner.</summary>
 public partial class V1beta1AuthorizationServerSpecInitProviderResourceOwnerPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -364,6 +378,7 @@ public partial class V1beta1AuthorizationServerSpecInitProviderResourceOwnerPass
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AuthorizationServerSpecInitProviderTokenBodyParameter
 {
     /// <summary>The Name of the Parameter.</summary>
@@ -375,6 +390,7 @@ public partial class V1beta1AuthorizationServerSpecInitProviderTokenBodyParamete
     public string? Value { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1AuthorizationServerSpecInitProvider
 {
     /// <summary>The OAUTH Authorization Endpoint.</summary>
@@ -484,6 +500,7 @@ public enum V1beta1AuthorizationServerSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AuthorizationServerSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -497,6 +514,7 @@ public partial class V1beta1AuthorizationServerSpecProviderConfigRefPolicy
     public V1beta1AuthorizationServerSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1AuthorizationServerSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -528,6 +546,7 @@ public enum V1beta1AuthorizationServerSpecPublishConnectionDetailsToConfigRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AuthorizationServerSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -541,6 +560,7 @@ public partial class V1beta1AuthorizationServerSpecPublishConnectionDetailsToCon
     public V1beta1AuthorizationServerSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1AuthorizationServerSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -552,6 +572,7 @@ public partial class V1beta1AuthorizationServerSpecPublishConnectionDetailsToCon
     public V1beta1AuthorizationServerSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1AuthorizationServerSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -567,6 +588,7 @@ public partial class V1beta1AuthorizationServerSpecPublishConnectionDetailsToMet
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1AuthorizationServerSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -582,6 +604,7 @@ public partial class V1beta1AuthorizationServerSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1AuthorizationServerSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -593,6 +616,7 @@ public partial class V1beta1AuthorizationServerSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>AuthorizationServerSpec defines the desired state of AuthorizationServer</summary>
 public partial class V1beta1AuthorizationServerSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -625,6 +649,7 @@ public partial class V1beta1AuthorizationServerSpec
     public V1beta1AuthorizationServerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AuthorizationServerStatusAtProviderTokenBodyParameter
 {
     /// <summary>The Name of the Parameter.</summary>
@@ -636,6 +661,7 @@ public partial class V1beta1AuthorizationServerStatusAtProviderTokenBodyParamete
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AuthorizationServerStatusAtProvider
 {
     /// <summary>The name of the API Management Service in which this Authorization Server should be created. Changing this forces a new resource to be created.</summary>
@@ -707,6 +733,7 @@ public partial class V1beta1AuthorizationServerStatusAtProvider
     public string? TokenEndpoint { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1AuthorizationServerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -734,6 +761,7 @@ public partial class V1beta1AuthorizationServerStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>AuthorizationServerStatus defines the observed state of AuthorizationServer.</summary>
 public partial class V1beta1AuthorizationServerStatus
 {
     /// <summary></summary>
@@ -750,6 +778,7 @@ public partial class V1beta1AuthorizationServerStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>AuthorizationServer is the Schema for the AuthorizationServers API. Manages an Authorization Server within an API Management Service.</summary>
 public partial class V1beta1AuthorizationServer : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AuthorizationServerSpec>, IStatus<V1beta1AuthorizationServerStatus>
 {
     public const string KubeApiVersion = "v1beta1";

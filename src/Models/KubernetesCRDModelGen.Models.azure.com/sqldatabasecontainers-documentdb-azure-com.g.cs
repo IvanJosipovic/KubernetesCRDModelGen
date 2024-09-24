@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.documentdb.azure.com;
+/// <summary>Storage version of v1api20231115.AutoscaleSettings</summary>
 public partial class V1api20231115storageSqlDatabaseContainerSpecOptionsAutoscaleSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -19,6 +20,7 @@ public partial class V1api20231115storageSqlDatabaseContainerSpecOptionsAutoscal
     public int? MaxThroughput { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.CreateUpdateOptions CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"</summary>
 public partial class V1api20231115storageSqlDatabaseContainerSpecOptions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -34,6 +36,7 @@ public partial class V1api20231115storageSqlDatabaseContainerSpecOptions
     public int? Throughput { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a documentdb.azure.com/SqlDatabase resource</summary>
 public partial class V1api20231115storageSqlDatabaseContainerSpecOwner
 {
     /// <summary></summary>
@@ -45,6 +48,7 @@ public partial class V1api20231115storageSqlDatabaseContainerSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.ClientEncryptionIncludedPath .</summary>
 public partial class V1api20231115storageSqlDatabaseContainerSpecResourceClientEncryptionPolicyIncludedPaths
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -68,6 +72,7 @@ public partial class V1api20231115storageSqlDatabaseContainerSpecResourceClientE
     public string? Path { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.ClientEncryptionPolicy Cosmos DB client encryption policy.</summary>
 public partial class V1api20231115storageSqlDatabaseContainerSpecResourceClientEncryptionPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -83,6 +88,7 @@ public partial class V1api20231115storageSqlDatabaseContainerSpecResourceClientE
     public int? PolicyFormatVersion { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.ComputedProperty The definition of a computed property</summary>
 public partial class V1api20231115storageSqlDatabaseContainerSpecResourceComputedProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -98,6 +104,7 @@ public partial class V1api20231115storageSqlDatabaseContainerSpecResourceCompute
     public string? Query { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.ConflictResolutionPolicy The conflict resolution policy for the container.</summary>
 public partial class V1api20231115storageSqlDatabaseContainerSpecResourceConflictResolutionPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -117,6 +124,7 @@ public partial class V1api20231115storageSqlDatabaseContainerSpecResourceConflic
     public string? Mode { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.CompositePath</summary>
 public partial class V1api20231115storageSqlDatabaseContainerSpecResourceIndexingPolicyCompositeIndexes
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -132,6 +140,7 @@ public partial class V1api20231115storageSqlDatabaseContainerSpecResourceIndexin
     public string? Path { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.ExcludedPath</summary>
 public partial class V1api20231115storageSqlDatabaseContainerSpecResourceIndexingPolicyExcludedPaths
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -143,6 +152,7 @@ public partial class V1api20231115storageSqlDatabaseContainerSpecResourceIndexin
     public string? Path { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.Indexes The indexes for the path.</summary>
 public partial class V1api20231115storageSqlDatabaseContainerSpecResourceIndexingPolicyIncludedPathsIndexes
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -162,6 +172,7 @@ public partial class V1api20231115storageSqlDatabaseContainerSpecResourceIndexin
     public int? Precision { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.IncludedPath The paths that are included in indexing</summary>
 public partial class V1api20231115storageSqlDatabaseContainerSpecResourceIndexingPolicyIncludedPaths
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -177,6 +188,7 @@ public partial class V1api20231115storageSqlDatabaseContainerSpecResourceIndexin
     public string? Path { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.SpatialSpec</summary>
 public partial class V1api20231115storageSqlDatabaseContainerSpecResourceIndexingPolicySpatialIndexes
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -192,6 +204,7 @@ public partial class V1api20231115storageSqlDatabaseContainerSpecResourceIndexin
     public IList<string>? Types { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.IndexingPolicy Cosmos DB indexing policy</summary>
 public partial class V1api20231115storageSqlDatabaseContainerSpecResourceIndexingPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -223,6 +236,7 @@ public partial class V1api20231115storageSqlDatabaseContainerSpecResourceIndexin
     public IList<V1api20231115storageSqlDatabaseContainerSpecResourceIndexingPolicySpatialIndexes>? SpatialIndexes { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.ContainerPartitionKey The configuration of the partition key to be used for partitioning data into multiple partitions</summary>
 public partial class V1api20231115storageSqlDatabaseContainerSpecResourcePartitionKey
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -242,6 +256,7 @@ public partial class V1api20231115storageSqlDatabaseContainerSpecResourcePartiti
     public int? Version { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.RestoreParametersBase Parameters to indicate the information about the restore.</summary>
 public partial class V1api20231115storageSqlDatabaseContainerSpecResourceRestoreParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -257,6 +272,7 @@ public partial class V1api20231115storageSqlDatabaseContainerSpecResourceRestore
     public string? RestoreTimestampInUtc { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.UniqueKey The unique key on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.</summary>
 public partial class V1api20231115storageSqlDatabaseContainerSpecResourceUniqueKeyPolicyUniqueKeys
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -268,6 +284,7 @@ public partial class V1api20231115storageSqlDatabaseContainerSpecResourceUniqueK
     public IList<string>? Paths { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.UniqueKeyPolicy The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.</summary>
 public partial class V1api20231115storageSqlDatabaseContainerSpecResourceUniqueKeyPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -279,6 +296,7 @@ public partial class V1api20231115storageSqlDatabaseContainerSpecResourceUniqueK
     public IList<V1api20231115storageSqlDatabaseContainerSpecResourceUniqueKeyPolicyUniqueKeys>? UniqueKeys { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.SqlContainerResource Cosmos DB SQL container resource object</summary>
 public partial class V1api20231115storageSqlDatabaseContainerSpecResource
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -330,6 +348,7 @@ public partial class V1api20231115storageSqlDatabaseContainerSpecResource
     public V1api20231115storageSqlDatabaseContainerSpecResourceUniqueKeyPolicy? UniqueKeyPolicy { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.DatabaseAccounts_SqlDatabases_Container_Spec</summary>
 public partial class V1api20231115storageSqlDatabaseContainerSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -365,6 +384,7 @@ public partial class V1api20231115storageSqlDatabaseContainerSpec
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20231115storageSqlDatabaseContainerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -396,6 +416,7 @@ public partial class V1api20231115storageSqlDatabaseContainerStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.AutoscaleSettings_STATUS</summary>
 public partial class V1api20231115storageSqlDatabaseContainerStatusOptionsAutoscaleSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -407,6 +428,7 @@ public partial class V1api20231115storageSqlDatabaseContainerStatusOptionsAutosc
     public int? MaxThroughput { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.OptionsResource_STATUS Cosmos DB options resource object</summary>
 public partial class V1api20231115storageSqlDatabaseContainerStatusOptions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -422,6 +444,7 @@ public partial class V1api20231115storageSqlDatabaseContainerStatusOptions
     public int? Throughput { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.ClientEncryptionIncludedPath_STATUS .</summary>
 public partial class V1api20231115storageSqlDatabaseContainerStatusResourceClientEncryptionPolicyIncludedPaths
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -445,6 +468,7 @@ public partial class V1api20231115storageSqlDatabaseContainerStatusResourceClien
     public string? Path { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.ClientEncryptionPolicy_STATUS Cosmos DB client encryption policy.</summary>
 public partial class V1api20231115storageSqlDatabaseContainerStatusResourceClientEncryptionPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -460,6 +484,7 @@ public partial class V1api20231115storageSqlDatabaseContainerStatusResourceClien
     public int? PolicyFormatVersion { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.ComputedProperty_STATUS The definition of a computed property</summary>
 public partial class V1api20231115storageSqlDatabaseContainerStatusResourceComputedProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -475,6 +500,7 @@ public partial class V1api20231115storageSqlDatabaseContainerStatusResourceCompu
     public string? Query { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.ConflictResolutionPolicy_STATUS The conflict resolution policy for the container.</summary>
 public partial class V1api20231115storageSqlDatabaseContainerStatusResourceConflictResolutionPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -494,6 +520,7 @@ public partial class V1api20231115storageSqlDatabaseContainerStatusResourceConfl
     public string? Mode { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.CompositePath_STATUS</summary>
 public partial class V1api20231115storageSqlDatabaseContainerStatusResourceIndexingPolicyCompositeIndexes
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -509,6 +536,7 @@ public partial class V1api20231115storageSqlDatabaseContainerStatusResourceIndex
     public string? Path { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.ExcludedPath_STATUS</summary>
 public partial class V1api20231115storageSqlDatabaseContainerStatusResourceIndexingPolicyExcludedPaths
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -520,6 +548,7 @@ public partial class V1api20231115storageSqlDatabaseContainerStatusResourceIndex
     public string? Path { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.Indexes_STATUS The indexes for the path.</summary>
 public partial class V1api20231115storageSqlDatabaseContainerStatusResourceIndexingPolicyIncludedPathsIndexes
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -539,6 +568,7 @@ public partial class V1api20231115storageSqlDatabaseContainerStatusResourceIndex
     public int? Precision { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.IncludedPath_STATUS The paths that are included in indexing</summary>
 public partial class V1api20231115storageSqlDatabaseContainerStatusResourceIndexingPolicyIncludedPaths
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -554,6 +584,7 @@ public partial class V1api20231115storageSqlDatabaseContainerStatusResourceIndex
     public string? Path { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.SpatialSpec_STATUS</summary>
 public partial class V1api20231115storageSqlDatabaseContainerStatusResourceIndexingPolicySpatialIndexes
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -569,6 +600,7 @@ public partial class V1api20231115storageSqlDatabaseContainerStatusResourceIndex
     public IList<string>? Types { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.IndexingPolicy_STATUS Cosmos DB indexing policy</summary>
 public partial class V1api20231115storageSqlDatabaseContainerStatusResourceIndexingPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -600,6 +632,7 @@ public partial class V1api20231115storageSqlDatabaseContainerStatusResourceIndex
     public IList<V1api20231115storageSqlDatabaseContainerStatusResourceIndexingPolicySpatialIndexes>? SpatialIndexes { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.ContainerPartitionKey_STATUS The configuration of the partition key to be used for partitioning data into multiple partitions</summary>
 public partial class V1api20231115storageSqlDatabaseContainerStatusResourcePartitionKey
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -623,6 +656,7 @@ public partial class V1api20231115storageSqlDatabaseContainerStatusResourceParti
     public int? Version { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.RestoreParametersBase_STATUS Parameters to indicate the information about the restore.</summary>
 public partial class V1api20231115storageSqlDatabaseContainerStatusResourceRestoreParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -638,6 +672,7 @@ public partial class V1api20231115storageSqlDatabaseContainerStatusResourceResto
     public string? RestoreTimestampInUtc { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.UniqueKey_STATUS The unique key on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.</summary>
 public partial class V1api20231115storageSqlDatabaseContainerStatusResourceUniqueKeyPolicyUniqueKeys
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -649,6 +684,7 @@ public partial class V1api20231115storageSqlDatabaseContainerStatusResourceUniqu
     public IList<string>? Paths { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.UniqueKeyPolicy_STATUS The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.</summary>
 public partial class V1api20231115storageSqlDatabaseContainerStatusResourceUniqueKeyPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -660,6 +696,7 @@ public partial class V1api20231115storageSqlDatabaseContainerStatusResourceUniqu
     public IList<V1api20231115storageSqlDatabaseContainerStatusResourceUniqueKeyPolicyUniqueKeys>? UniqueKeys { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.SqlContainerGetProperties_Resource_STATUS</summary>
 public partial class V1api20231115storageSqlDatabaseContainerStatusResource
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -723,6 +760,7 @@ public partial class V1api20231115storageSqlDatabaseContainerStatusResource
     public V1api20231115storageSqlDatabaseContainerStatusResourceUniqueKeyPolicy? UniqueKeyPolicy { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.DatabaseAccounts_SqlDatabases_Container_STATUS</summary>
 public partial class V1api20231115storageSqlDatabaseContainerStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -763,6 +801,7 @@ public partial class V1api20231115storageSqlDatabaseContainerStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20231115.SqlDatabaseContainer Generator information: - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2023-11-15/cosmos-db.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/containers/{containerName}</summary>
 public partial class V1api20231115storageSqlDatabaseContainer : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20231115storageSqlDatabaseContainerSpec>, IStatus<V1api20231115storageSqlDatabaseContainerStatus>
 {
     public const string KubeApiVersion = "v1api20231115storage";

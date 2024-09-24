@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.eventing.knative.dev;
+/// <summary>Reference a resource. For example, Broker.</summary>
 public partial class V1beta2EventTypeSpecReference
 {
     /// <summary>API version of the referent.</summary>
@@ -31,6 +32,7 @@ public partial class V1beta2EventTypeSpecReference
     public string? Address { get; set; }
 }
 
+/// <summary>Spec defines the desired state of the EventType.</summary>
 public partial class V1beta2EventTypeSpec
 {
     /// <summary></summary>
@@ -62,6 +64,7 @@ public partial class V1beta2EventTypeSpec
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2EventTypeStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another. We use VolatileTime in place of metav1.Time to exclude this from creating equality.Semantic differences (all other things held constant).</summary>
@@ -89,6 +92,7 @@ public partial class V1beta2EventTypeStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Status represents the current state of the EventType. This data may be out of date.</summary>
 public partial class V1beta2EventTypeStatus
 {
     /// <summary>Annotations is additional Status fields for the Resource to save some additional State as well as convey more information to the user. This is roughly akin to Annotations on any k8s resource, just the reconciler conveying richer information outwards.</summary>
@@ -105,6 +109,7 @@ public partial class V1beta2EventTypeStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>EventType represents a type of event that can be consumed from a resource.</summary>
 public partial class V1beta2EventType : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta2EventTypeSpec>, IStatus<V1beta2EventTypeStatus>
 {
     public const string KubeApiVersion = "v1beta2";

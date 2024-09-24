@@ -38,6 +38,7 @@ public enum V1beta1ClusterAuthSpecForProviderClusterNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClusterAuthSpecForProviderClusterNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ClusterAuthSpecForProviderClusterNameRefPolicy
     public V1beta1ClusterAuthSpecForProviderClusterNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster to populate clusterName. Either ClusterName, ClusterNameRef or ClusterNameSelector has to be given.</summary>
 public partial class V1beta1ClusterAuthSpecForProviderClusterNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ClusterAuthSpecForProviderClusterNameSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ClusterAuthSpecForProviderClusterNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ClusterAuthSpecForProviderClusterNameSelectorPolicy
     public V1beta1ClusterAuthSpecForProviderClusterNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster to populate clusterName. Either ClusterName, ClusterNameRef or ClusterNameSelector has to be given.</summary>
 public partial class V1beta1ClusterAuthSpecForProviderClusterNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1ClusterAuthSpecForProviderClusterNameSelector
     public V1beta1ClusterAuthSpecForProviderClusterNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterAuthSpecForProvider
 {
     /// <summary>ClusterName is the name of the cluster you'd like to fetch Kubeconfig of. Either ClusterName, ClusterNameRef or ClusterNameSelector has to be given.</summary>
@@ -175,6 +180,7 @@ public enum V1beta1ClusterAuthSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClusterAuthSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -188,6 +194,7 @@ public partial class V1beta1ClusterAuthSpecProviderConfigRefPolicy
     public V1beta1ClusterAuthSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ClusterAuthSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -219,6 +226,7 @@ public enum V1beta1ClusterAuthSpecPublishConnectionDetailsToConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClusterAuthSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -232,6 +240,7 @@ public partial class V1beta1ClusterAuthSpecPublishConnectionDetailsToConfigRefPo
     public V1beta1ClusterAuthSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ClusterAuthSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -243,6 +252,7 @@ public partial class V1beta1ClusterAuthSpecPublishConnectionDetailsToConfigRef
     public V1beta1ClusterAuthSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ClusterAuthSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -258,6 +268,7 @@ public partial class V1beta1ClusterAuthSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ClusterAuthSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -273,6 +284,7 @@ public partial class V1beta1ClusterAuthSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ClusterAuthSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -284,6 +296,7 @@ public partial class V1beta1ClusterAuthSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ClusterAuthSpec defines the desired state of ClusterAuth</summary>
 public partial class V1beta1ClusterAuthSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -312,6 +325,7 @@ public partial class V1beta1ClusterAuthSpec
     public V1beta1ClusterAuthSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterAuthStatusAtProvider
 {
     /// <summary>LastRefreshTime is the time when the token was refreshed.</summary>
@@ -319,6 +333,7 @@ public partial class V1beta1ClusterAuthStatusAtProvider
     public string? LastRefreshTime { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ClusterAuthStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -346,6 +361,7 @@ public partial class V1beta1ClusterAuthStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ClusterAuthStatus defines the observed state of ClusterAuth.</summary>
 public partial class V1beta1ClusterAuthStatus
 {
     /// <summary></summary>
@@ -362,6 +378,7 @@ public partial class V1beta1ClusterAuthStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ClusterAuth is used to retrieve Kubeconfig of given EKS cluster.</summary>
 public partial class V1beta1ClusterAuth : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ClusterAuthSpec>, IStatus<V1beta1ClusterAuthStatus>
 {
     public const string KubeApiVersion = "v1beta1";

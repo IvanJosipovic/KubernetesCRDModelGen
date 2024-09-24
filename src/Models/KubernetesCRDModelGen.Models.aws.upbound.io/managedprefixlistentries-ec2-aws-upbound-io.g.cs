@@ -38,6 +38,7 @@ public enum V1beta1ManagedPrefixListEntrySpecForProviderCidrRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ManagedPrefixListEntrySpecForProviderCidrRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ManagedPrefixListEntrySpecForProviderCidrRefPolicy
     public V1beta1ManagedPrefixListEntrySpecForProviderCidrRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPC in ec2 to populate cidr.</summary>
 public partial class V1beta1ManagedPrefixListEntrySpecForProviderCidrRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ManagedPrefixListEntrySpecForProviderCidrSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ManagedPrefixListEntrySpecForProviderCidrSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ManagedPrefixListEntrySpecForProviderCidrSelectorPol
     public V1beta1ManagedPrefixListEntrySpecForProviderCidrSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPC in ec2 to populate cidr.</summary>
 public partial class V1beta1ManagedPrefixListEntrySpecForProviderCidrSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1ManagedPrefixListEntrySpecForProviderPrefixListIdRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ManagedPrefixListEntrySpecForProviderPrefixListIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1ManagedPrefixListEntrySpecForProviderPrefixListIdRef
     public V1beta1ManagedPrefixListEntrySpecForProviderPrefixListIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ManagedPrefixList in ec2 to populate prefixListId.</summary>
 public partial class V1beta1ManagedPrefixListEntrySpecForProviderPrefixListIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1ManagedPrefixListEntrySpecForProviderPrefixListIdSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ManagedPrefixListEntrySpecForProviderPrefixListIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1ManagedPrefixListEntrySpecForProviderPrefixListIdSel
     public V1beta1ManagedPrefixListEntrySpecForProviderPrefixListIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ManagedPrefixList in ec2 to populate prefixListId.</summary>
 public partial class V1beta1ManagedPrefixListEntrySpecForProviderPrefixListIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1ManagedPrefixListEntrySpecForProviderPrefixListIdSel
     public V1beta1ManagedPrefixListEntrySpecForProviderPrefixListIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedPrefixListEntrySpecForProvider
 {
     /// <summary>CIDR block of this entry.</summary>
@@ -257,6 +266,7 @@ public enum V1beta1ManagedPrefixListEntrySpecInitProviderCidrRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ManagedPrefixListEntrySpecInitProviderCidrRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -270,6 +280,7 @@ public partial class V1beta1ManagedPrefixListEntrySpecInitProviderCidrRefPolicy
     public V1beta1ManagedPrefixListEntrySpecInitProviderCidrRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPC in ec2 to populate cidr.</summary>
 public partial class V1beta1ManagedPrefixListEntrySpecInitProviderCidrRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -301,6 +312,7 @@ public enum V1beta1ManagedPrefixListEntrySpecInitProviderCidrSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ManagedPrefixListEntrySpecInitProviderCidrSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -314,6 +326,7 @@ public partial class V1beta1ManagedPrefixListEntrySpecInitProviderCidrSelectorPo
     public V1beta1ManagedPrefixListEntrySpecInitProviderCidrSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPC in ec2 to populate cidr.</summary>
 public partial class V1beta1ManagedPrefixListEntrySpecInitProviderCidrSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -349,6 +362,7 @@ public enum V1beta1ManagedPrefixListEntrySpecInitProviderPrefixListIdRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ManagedPrefixListEntrySpecInitProviderPrefixListIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -362,6 +376,7 @@ public partial class V1beta1ManagedPrefixListEntrySpecInitProviderPrefixListIdRe
     public V1beta1ManagedPrefixListEntrySpecInitProviderPrefixListIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ManagedPrefixList in ec2 to populate prefixListId.</summary>
 public partial class V1beta1ManagedPrefixListEntrySpecInitProviderPrefixListIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -393,6 +408,7 @@ public enum V1beta1ManagedPrefixListEntrySpecInitProviderPrefixListIdSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ManagedPrefixListEntrySpecInitProviderPrefixListIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -406,6 +422,7 @@ public partial class V1beta1ManagedPrefixListEntrySpecInitProviderPrefixListIdSe
     public V1beta1ManagedPrefixListEntrySpecInitProviderPrefixListIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ManagedPrefixList in ec2 to populate prefixListId.</summary>
 public partial class V1beta1ManagedPrefixListEntrySpecInitProviderPrefixListIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -421,6 +438,7 @@ public partial class V1beta1ManagedPrefixListEntrySpecInitProviderPrefixListIdSe
     public V1beta1ManagedPrefixListEntrySpecInitProviderPrefixListIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ManagedPrefixListEntrySpecInitProvider
 {
     /// <summary>CIDR block of this entry.</summary>
@@ -494,6 +512,7 @@ public enum V1beta1ManagedPrefixListEntrySpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ManagedPrefixListEntrySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -507,6 +526,7 @@ public partial class V1beta1ManagedPrefixListEntrySpecProviderConfigRefPolicy
     public V1beta1ManagedPrefixListEntrySpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ManagedPrefixListEntrySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -538,6 +558,7 @@ public enum V1beta1ManagedPrefixListEntrySpecPublishConnectionDetailsToConfigRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ManagedPrefixListEntrySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -551,6 +572,7 @@ public partial class V1beta1ManagedPrefixListEntrySpecPublishConnectionDetailsTo
     public V1beta1ManagedPrefixListEntrySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ManagedPrefixListEntrySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -562,6 +584,7 @@ public partial class V1beta1ManagedPrefixListEntrySpecPublishConnectionDetailsTo
     public V1beta1ManagedPrefixListEntrySpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ManagedPrefixListEntrySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -577,6 +600,7 @@ public partial class V1beta1ManagedPrefixListEntrySpecPublishConnectionDetailsTo
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ManagedPrefixListEntrySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -592,6 +616,7 @@ public partial class V1beta1ManagedPrefixListEntrySpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ManagedPrefixListEntrySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -603,6 +628,7 @@ public partial class V1beta1ManagedPrefixListEntrySpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ManagedPrefixListEntrySpec defines the desired state of ManagedPrefixListEntry</summary>
 public partial class V1beta1ManagedPrefixListEntrySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -635,6 +661,7 @@ public partial class V1beta1ManagedPrefixListEntrySpec
     public V1beta1ManagedPrefixListEntrySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ManagedPrefixListEntryStatusAtProvider
 {
     /// <summary>CIDR block of this entry.</summary>
@@ -654,6 +681,7 @@ public partial class V1beta1ManagedPrefixListEntryStatusAtProvider
     public string? PrefixListId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ManagedPrefixListEntryStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -681,6 +709,7 @@ public partial class V1beta1ManagedPrefixListEntryStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ManagedPrefixListEntryStatus defines the observed state of ManagedPrefixListEntry.</summary>
 public partial class V1beta1ManagedPrefixListEntryStatus
 {
     /// <summary></summary>
@@ -697,6 +726,7 @@ public partial class V1beta1ManagedPrefixListEntryStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ManagedPrefixListEntry is the Schema for the ManagedPrefixListEntrys API. Use the</summary>
 public partial class V1beta1ManagedPrefixListEntry : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ManagedPrefixListEntrySpec>, IStatus<V1beta1ManagedPrefixListEntryStatus>
 {
     public const string KubeApiVersion = "v1beta1";

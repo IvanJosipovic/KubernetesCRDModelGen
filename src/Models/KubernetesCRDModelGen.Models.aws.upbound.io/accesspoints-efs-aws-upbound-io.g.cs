@@ -38,6 +38,7 @@ public enum V1beta1AccessPointSpecForProviderFileSystemIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AccessPointSpecForProviderFileSystemIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1AccessPointSpecForProviderFileSystemIdRefPolicy
     public V1beta1AccessPointSpecForProviderFileSystemIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a FileSystem in efs to populate fileSystemId.</summary>
 public partial class V1beta1AccessPointSpecForProviderFileSystemIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1AccessPointSpecForProviderFileSystemIdSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AccessPointSpecForProviderFileSystemIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1AccessPointSpecForProviderFileSystemIdSelectorPolicy
     public V1beta1AccessPointSpecForProviderFileSystemIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a FileSystem in efs to populate fileSystemId.</summary>
 public partial class V1beta1AccessPointSpecForProviderFileSystemIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1AccessPointSpecForProviderFileSystemIdSelector
     public V1beta1AccessPointSpecForProviderFileSystemIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPointSpecForProviderPosixUser
 {
     /// <summary>POSIX group ID used for all file system operations using this access point.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1AccessPointSpecForProviderPosixUser
     public double? Uid { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPointSpecForProviderRootDirectoryCreationInfo
 {
     /// <summary>POSIX group ID to apply to the root_directory.</summary>
@@ -140,6 +146,7 @@ public partial class V1beta1AccessPointSpecForProviderRootDirectoryCreationInfo
     public string? Permissions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPointSpecForProviderRootDirectory
 {
     /// <summary>POSIX IDs and permissions to apply to the access point's Root Directory. See Creation Info below.</summary>
@@ -151,6 +158,7 @@ public partial class V1beta1AccessPointSpecForProviderRootDirectory
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPointSpecForProvider
 {
     /// <summary>ID of the file system for which the access point is intended.</summary>
@@ -202,6 +210,7 @@ public enum V1beta1AccessPointSpecInitProviderFileSystemIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AccessPointSpecInitProviderFileSystemIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -215,6 +224,7 @@ public partial class V1beta1AccessPointSpecInitProviderFileSystemIdRefPolicy
     public V1beta1AccessPointSpecInitProviderFileSystemIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a FileSystem in efs to populate fileSystemId.</summary>
 public partial class V1beta1AccessPointSpecInitProviderFileSystemIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -246,6 +256,7 @@ public enum V1beta1AccessPointSpecInitProviderFileSystemIdSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AccessPointSpecInitProviderFileSystemIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -259,6 +270,7 @@ public partial class V1beta1AccessPointSpecInitProviderFileSystemIdSelectorPolic
     public V1beta1AccessPointSpecInitProviderFileSystemIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a FileSystem in efs to populate fileSystemId.</summary>
 public partial class V1beta1AccessPointSpecInitProviderFileSystemIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -274,6 +286,7 @@ public partial class V1beta1AccessPointSpecInitProviderFileSystemIdSelector
     public V1beta1AccessPointSpecInitProviderFileSystemIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPointSpecInitProviderPosixUser
 {
     /// <summary>POSIX group ID used for all file system operations using this access point.</summary>
@@ -289,6 +302,7 @@ public partial class V1beta1AccessPointSpecInitProviderPosixUser
     public double? Uid { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPointSpecInitProviderRootDirectoryCreationInfo
 {
     /// <summary>POSIX group ID to apply to the root_directory.</summary>
@@ -304,6 +318,7 @@ public partial class V1beta1AccessPointSpecInitProviderRootDirectoryCreationInfo
     public string? Permissions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPointSpecInitProviderRootDirectory
 {
     /// <summary>POSIX IDs and permissions to apply to the access point's Root Directory. See Creation Info below.</summary>
@@ -315,6 +330,7 @@ public partial class V1beta1AccessPointSpecInitProviderRootDirectory
     public string? Path { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1AccessPointSpecInitProvider
 {
     /// <summary>ID of the file system for which the access point is intended.</summary>
@@ -384,6 +400,7 @@ public enum V1beta1AccessPointSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AccessPointSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -397,6 +414,7 @@ public partial class V1beta1AccessPointSpecProviderConfigRefPolicy
     public V1beta1AccessPointSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1AccessPointSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -428,6 +446,7 @@ public enum V1beta1AccessPointSpecPublishConnectionDetailsToConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AccessPointSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -441,6 +460,7 @@ public partial class V1beta1AccessPointSpecPublishConnectionDetailsToConfigRefPo
     public V1beta1AccessPointSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1AccessPointSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -452,6 +472,7 @@ public partial class V1beta1AccessPointSpecPublishConnectionDetailsToConfigRef
     public V1beta1AccessPointSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1AccessPointSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -467,6 +488,7 @@ public partial class V1beta1AccessPointSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1AccessPointSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -482,6 +504,7 @@ public partial class V1beta1AccessPointSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1AccessPointSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -493,6 +516,7 @@ public partial class V1beta1AccessPointSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>AccessPointSpec defines the desired state of AccessPoint</summary>
 public partial class V1beta1AccessPointSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -525,6 +549,7 @@ public partial class V1beta1AccessPointSpec
     public V1beta1AccessPointSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPointStatusAtProviderPosixUser
 {
     /// <summary>POSIX group ID used for all file system operations using this access point.</summary>
@@ -540,6 +565,7 @@ public partial class V1beta1AccessPointStatusAtProviderPosixUser
     public double? Uid { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPointStatusAtProviderRootDirectoryCreationInfo
 {
     /// <summary>POSIX group ID to apply to the root_directory.</summary>
@@ -555,6 +581,7 @@ public partial class V1beta1AccessPointStatusAtProviderRootDirectoryCreationInfo
     public string? Permissions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPointStatusAtProviderRootDirectory
 {
     /// <summary>POSIX IDs and permissions to apply to the access point's Root Directory. See Creation Info below.</summary>
@@ -566,6 +593,7 @@ public partial class V1beta1AccessPointStatusAtProviderRootDirectory
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPointStatusAtProvider
 {
     /// <summary>ARN of the access point.</summary>
@@ -605,6 +633,7 @@ public partial class V1beta1AccessPointStatusAtProvider
     public IDictionary<string, string>? TagsAll { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1AccessPointStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -632,6 +661,7 @@ public partial class V1beta1AccessPointStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>AccessPointStatus defines the observed state of AccessPoint.</summary>
 public partial class V1beta1AccessPointStatus
 {
     /// <summary></summary>
@@ -648,6 +678,7 @@ public partial class V1beta1AccessPointStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>AccessPoint is the Schema for the AccessPoints API. Provides an Elastic File System (EFS) access point.</summary>
 public partial class V1beta1AccessPoint : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AccessPointSpec>, IStatus<V1beta1AccessPointStatus>
 {
     public const string KubeApiVersion = "v1beta1";

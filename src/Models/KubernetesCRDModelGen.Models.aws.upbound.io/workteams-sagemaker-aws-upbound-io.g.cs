@@ -38,6 +38,7 @@ public enum V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitio
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionClientIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMember
     public V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionClientIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserPoolClient in cognitoidp to populate clientId.</summary>
 public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionClientIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitio
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionClientIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMember
     public V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionClientIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserPoolClient in cognitoidp to populate clientId.</summary>
 public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionClientIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitio
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionUserGroupRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMember
     public V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionUserGroupRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserGroup in cognitoidp to populate userGroup.</summary>
 public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionUserGroupRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitio
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionUserGroupSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMember
     public V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionUserGroupSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserGroup in cognitoidp to populate userGroup.</summary>
 public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionUserGroupSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitio
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionUserPoolRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMember
     public V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionUserPoolRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserPoolDomain in cognitoidp to populate userPool.</summary>
 public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionUserPoolRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitio
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionUserPoolSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMember
     public V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionUserPoolSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserPoolDomain in cognitoidp to populate userPool.</summary>
 public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionUserPoolSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMember
     public V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionUserPoolSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinition
 {
     /// <summary>An identifier for an application client. You must create the app client ID using Amazon Cognito.</summary>
@@ -333,6 +346,7 @@ public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMember
     public V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionUserPoolSelector? UserPoolSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkteamSpecForProviderMemberDefinitionOidcMemberDefinition
 {
     /// <summary>A list of comma separated strings that identifies user groups in your OIDC IdP. Each user group is made up of a group of private workers.</summary>
@@ -340,6 +354,7 @@ public partial class V1beta1WorkteamSpecForProviderMemberDefinitionOidcMemberDef
     public IList<string>? Groups { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkteamSpecForProviderMemberDefinition
 {
     /// <summary>The Amazon Cognito user group that is part of the work team. See Cognito Member Definition details below.</summary>
@@ -351,6 +366,7 @@ public partial class V1beta1WorkteamSpecForProviderMemberDefinition
     public IList<V1beta1WorkteamSpecForProviderMemberDefinitionOidcMemberDefinition>? OidcMemberDefinition { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkteamSpecForProviderNotificationConfiguration
 {
     /// <summary>The ARN for the SNS topic to which notifications should be published.</summary>
@@ -358,6 +374,7 @@ public partial class V1beta1WorkteamSpecForProviderNotificationConfiguration
     public string? NotificationTopicArn { get; set; }
 }
 
+/// <summary>Use this parameter to specify the allowed request source. Possible sources are either SourceIp or VpcSourceIp. see IAM Policy Constraints details below.</summary>
 public partial class V1beta1WorkteamSpecForProviderWorkerAccessConfigurationS3PresignIamPolicyConstraints
 {
     /// <summary>When SourceIp is Enabled the worker's IP address when a task is rendered in the worker portal is added to the IAM policy as a Condition used to generate the Amazon S3 presigned URL. This IP address is checked by Amazon S3 and must match in order for the Amazon S3 resource to be rendered in the worker portal. Valid values are Enabled or Disabled</summary>
@@ -369,6 +386,7 @@ public partial class V1beta1WorkteamSpecForProviderWorkerAccessConfigurationS3Pr
     public string? VpcSourceIp { get; set; }
 }
 
+/// <summary>Defines any Amazon S3 resource constraints. see S3 Presign details below.</summary>
 public partial class V1beta1WorkteamSpecForProviderWorkerAccessConfigurationS3Presign
 {
     /// <summary>Use this parameter to specify the allowed request source. Possible sources are either SourceIp or VpcSourceIp. see IAM Policy Constraints details below.</summary>
@@ -376,6 +394,7 @@ public partial class V1beta1WorkteamSpecForProviderWorkerAccessConfigurationS3Pr
     public V1beta1WorkteamSpecForProviderWorkerAccessConfigurationS3PresignIamPolicyConstraints? IamPolicyConstraints { get; set; }
 }
 
+/// <summary>Use this optional parameter to constrain access to an Amazon S3 resource based on the IP address using supported IAM global condition keys. The Amazon S3 resource is accessed in the worker portal using a Amazon S3 presigned URL. see Worker Access Configuration details below.</summary>
 public partial class V1beta1WorkteamSpecForProviderWorkerAccessConfiguration
 {
     /// <summary>Defines any Amazon S3 resource constraints. see S3 Presign details below.</summary>
@@ -403,6 +422,7 @@ public enum V1beta1WorkteamSpecForProviderWorkforceNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkteamSpecForProviderWorkforceNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -416,6 +436,7 @@ public partial class V1beta1WorkteamSpecForProviderWorkforceNameRefPolicy
     public V1beta1WorkteamSpecForProviderWorkforceNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Workforce in sagemaker to populate workforceName.</summary>
 public partial class V1beta1WorkteamSpecForProviderWorkforceNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -447,6 +468,7 @@ public enum V1beta1WorkteamSpecForProviderWorkforceNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkteamSpecForProviderWorkforceNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -460,6 +482,7 @@ public partial class V1beta1WorkteamSpecForProviderWorkforceNameSelectorPolicy
     public V1beta1WorkteamSpecForProviderWorkforceNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Workforce in sagemaker to populate workforceName.</summary>
 public partial class V1beta1WorkteamSpecForProviderWorkforceNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -475,6 +498,7 @@ public partial class V1beta1WorkteamSpecForProviderWorkforceNameSelector
     public V1beta1WorkteamSpecForProviderWorkforceNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkteamSpecForProvider
 {
     /// <summary>A description of the work team.</summary>
@@ -534,6 +558,7 @@ public enum V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefiniti
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionClientIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -547,6 +572,7 @@ public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMembe
     public V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionClientIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserPoolClient in cognitoidp to populate clientId.</summary>
 public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionClientIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -578,6 +604,7 @@ public enum V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefiniti
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionClientIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -591,6 +618,7 @@ public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMembe
     public V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionClientIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserPoolClient in cognitoidp to populate clientId.</summary>
 public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionClientIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -626,6 +654,7 @@ public enum V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefiniti
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionUserGroupRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -639,6 +668,7 @@ public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMembe
     public V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionUserGroupRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserGroup in cognitoidp to populate userGroup.</summary>
 public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionUserGroupRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -670,6 +700,7 @@ public enum V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefiniti
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionUserGroupSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -683,6 +714,7 @@ public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMembe
     public V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionUserGroupSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserGroup in cognitoidp to populate userGroup.</summary>
 public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionUserGroupSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -718,6 +750,7 @@ public enum V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefiniti
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionUserPoolRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -731,6 +764,7 @@ public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMembe
     public V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionUserPoolRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserPoolDomain in cognitoidp to populate userPool.</summary>
 public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionUserPoolRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -762,6 +796,7 @@ public enum V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefiniti
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionUserPoolSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -775,6 +810,7 @@ public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMembe
     public V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionUserPoolSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserPoolDomain in cognitoidp to populate userPool.</summary>
 public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionUserPoolSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -790,6 +826,7 @@ public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMembe
     public V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionUserPoolSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinition
 {
     /// <summary>An identifier for an application client. You must create the app client ID using Amazon Cognito.</summary>
@@ -829,6 +866,7 @@ public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMembe
     public V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionUserPoolSelector? UserPoolSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionOidcMemberDefinition
 {
     /// <summary>A list of comma separated strings that identifies user groups in your OIDC IdP. Each user group is made up of a group of private workers.</summary>
@@ -836,6 +874,7 @@ public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionOidcMemberDe
     public IList<string>? Groups { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkteamSpecInitProviderMemberDefinition
 {
     /// <summary>The Amazon Cognito user group that is part of the work team. See Cognito Member Definition details below.</summary>
@@ -847,6 +886,7 @@ public partial class V1beta1WorkteamSpecInitProviderMemberDefinition
     public IList<V1beta1WorkteamSpecInitProviderMemberDefinitionOidcMemberDefinition>? OidcMemberDefinition { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkteamSpecInitProviderNotificationConfiguration
 {
     /// <summary>The ARN for the SNS topic to which notifications should be published.</summary>
@@ -854,6 +894,7 @@ public partial class V1beta1WorkteamSpecInitProviderNotificationConfiguration
     public string? NotificationTopicArn { get; set; }
 }
 
+/// <summary>Use this parameter to specify the allowed request source. Possible sources are either SourceIp or VpcSourceIp. see IAM Policy Constraints details below.</summary>
 public partial class V1beta1WorkteamSpecInitProviderWorkerAccessConfigurationS3PresignIamPolicyConstraints
 {
     /// <summary>When SourceIp is Enabled the worker's IP address when a task is rendered in the worker portal is added to the IAM policy as a Condition used to generate the Amazon S3 presigned URL. This IP address is checked by Amazon S3 and must match in order for the Amazon S3 resource to be rendered in the worker portal. Valid values are Enabled or Disabled</summary>
@@ -865,6 +906,7 @@ public partial class V1beta1WorkteamSpecInitProviderWorkerAccessConfigurationS3P
     public string? VpcSourceIp { get; set; }
 }
 
+/// <summary>Defines any Amazon S3 resource constraints. see S3 Presign details below.</summary>
 public partial class V1beta1WorkteamSpecInitProviderWorkerAccessConfigurationS3Presign
 {
     /// <summary>Use this parameter to specify the allowed request source. Possible sources are either SourceIp or VpcSourceIp. see IAM Policy Constraints details below.</summary>
@@ -872,6 +914,7 @@ public partial class V1beta1WorkteamSpecInitProviderWorkerAccessConfigurationS3P
     public V1beta1WorkteamSpecInitProviderWorkerAccessConfigurationS3PresignIamPolicyConstraints? IamPolicyConstraints { get; set; }
 }
 
+/// <summary>Use this optional parameter to constrain access to an Amazon S3 resource based on the IP address using supported IAM global condition keys. The Amazon S3 resource is accessed in the worker portal using a Amazon S3 presigned URL. see Worker Access Configuration details below.</summary>
 public partial class V1beta1WorkteamSpecInitProviderWorkerAccessConfiguration
 {
     /// <summary>Defines any Amazon S3 resource constraints. see S3 Presign details below.</summary>
@@ -899,6 +942,7 @@ public enum V1beta1WorkteamSpecInitProviderWorkforceNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkteamSpecInitProviderWorkforceNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -912,6 +956,7 @@ public partial class V1beta1WorkteamSpecInitProviderWorkforceNameRefPolicy
     public V1beta1WorkteamSpecInitProviderWorkforceNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Workforce in sagemaker to populate workforceName.</summary>
 public partial class V1beta1WorkteamSpecInitProviderWorkforceNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -943,6 +988,7 @@ public enum V1beta1WorkteamSpecInitProviderWorkforceNameSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkteamSpecInitProviderWorkforceNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -956,6 +1002,7 @@ public partial class V1beta1WorkteamSpecInitProviderWorkforceNameSelectorPolicy
     public V1beta1WorkteamSpecInitProviderWorkforceNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Workforce in sagemaker to populate workforceName.</summary>
 public partial class V1beta1WorkteamSpecInitProviderWorkforceNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -971,6 +1018,7 @@ public partial class V1beta1WorkteamSpecInitProviderWorkforceNameSelector
     public V1beta1WorkteamSpecInitProviderWorkforceNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1WorkteamSpecInitProvider
 {
     /// <summary>A description of the work team.</summary>
@@ -1048,6 +1096,7 @@ public enum V1beta1WorkteamSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkteamSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1061,6 +1110,7 @@ public partial class V1beta1WorkteamSpecProviderConfigRefPolicy
     public V1beta1WorkteamSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1WorkteamSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1092,6 +1142,7 @@ public enum V1beta1WorkteamSpecPublishConnectionDetailsToConfigRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkteamSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1105,6 +1156,7 @@ public partial class V1beta1WorkteamSpecPublishConnectionDetailsToConfigRefPolic
     public V1beta1WorkteamSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1WorkteamSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1116,6 +1168,7 @@ public partial class V1beta1WorkteamSpecPublishConnectionDetailsToConfigRef
     public V1beta1WorkteamSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1WorkteamSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1131,6 +1184,7 @@ public partial class V1beta1WorkteamSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1WorkteamSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1146,6 +1200,7 @@ public partial class V1beta1WorkteamSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1WorkteamSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1157,6 +1212,7 @@ public partial class V1beta1WorkteamSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>WorkteamSpec defines the desired state of Workteam</summary>
 public partial class V1beta1WorkteamSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1189,6 +1245,7 @@ public partial class V1beta1WorkteamSpec
     public V1beta1WorkteamSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkteamStatusAtProviderMemberDefinitionCognitoMemberDefinition
 {
     /// <summary>An identifier for an application client. You must create the app client ID using Amazon Cognito.</summary>
@@ -1204,6 +1261,7 @@ public partial class V1beta1WorkteamStatusAtProviderMemberDefinitionCognitoMembe
     public string? UserPool { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkteamStatusAtProviderMemberDefinitionOidcMemberDefinition
 {
     /// <summary>A list of comma separated strings that identifies user groups in your OIDC IdP. Each user group is made up of a group of private workers.</summary>
@@ -1211,6 +1269,7 @@ public partial class V1beta1WorkteamStatusAtProviderMemberDefinitionOidcMemberDe
     public IList<string>? Groups { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkteamStatusAtProviderMemberDefinition
 {
     /// <summary>The Amazon Cognito user group that is part of the work team. See Cognito Member Definition details below.</summary>
@@ -1222,6 +1281,7 @@ public partial class V1beta1WorkteamStatusAtProviderMemberDefinition
     public IList<V1beta1WorkteamStatusAtProviderMemberDefinitionOidcMemberDefinition>? OidcMemberDefinition { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkteamStatusAtProviderNotificationConfiguration
 {
     /// <summary>The ARN for the SNS topic to which notifications should be published.</summary>
@@ -1229,6 +1289,7 @@ public partial class V1beta1WorkteamStatusAtProviderNotificationConfiguration
     public string? NotificationTopicArn { get; set; }
 }
 
+/// <summary>Use this parameter to specify the allowed request source. Possible sources are either SourceIp or VpcSourceIp. see IAM Policy Constraints details below.</summary>
 public partial class V1beta1WorkteamStatusAtProviderWorkerAccessConfigurationS3PresignIamPolicyConstraints
 {
     /// <summary>When SourceIp is Enabled the worker's IP address when a task is rendered in the worker portal is added to the IAM policy as a Condition used to generate the Amazon S3 presigned URL. This IP address is checked by Amazon S3 and must match in order for the Amazon S3 resource to be rendered in the worker portal. Valid values are Enabled or Disabled</summary>
@@ -1240,6 +1301,7 @@ public partial class V1beta1WorkteamStatusAtProviderWorkerAccessConfigurationS3P
     public string? VpcSourceIp { get; set; }
 }
 
+/// <summary>Defines any Amazon S3 resource constraints. see S3 Presign details below.</summary>
 public partial class V1beta1WorkteamStatusAtProviderWorkerAccessConfigurationS3Presign
 {
     /// <summary>Use this parameter to specify the allowed request source. Possible sources are either SourceIp or VpcSourceIp. see IAM Policy Constraints details below.</summary>
@@ -1247,6 +1309,7 @@ public partial class V1beta1WorkteamStatusAtProviderWorkerAccessConfigurationS3P
     public V1beta1WorkteamStatusAtProviderWorkerAccessConfigurationS3PresignIamPolicyConstraints? IamPolicyConstraints { get; set; }
 }
 
+/// <summary>Use this optional parameter to constrain access to an Amazon S3 resource based on the IP address using supported IAM global condition keys. The Amazon S3 resource is accessed in the worker portal using a Amazon S3 presigned URL. see Worker Access Configuration details below.</summary>
 public partial class V1beta1WorkteamStatusAtProviderWorkerAccessConfiguration
 {
     /// <summary>Defines any Amazon S3 resource constraints. see S3 Presign details below.</summary>
@@ -1254,6 +1317,7 @@ public partial class V1beta1WorkteamStatusAtProviderWorkerAccessConfiguration
     public V1beta1WorkteamStatusAtProviderWorkerAccessConfigurationS3Presign? S3Presign { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkteamStatusAtProvider
 {
     /// <summary>The Amazon Resource Name (ARN) assigned by AWS to this Workteam.</summary>
@@ -1297,6 +1361,7 @@ public partial class V1beta1WorkteamStatusAtProvider
     public string? WorkforceName { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1WorkteamStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1324,6 +1389,7 @@ public partial class V1beta1WorkteamStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>WorkteamStatus defines the observed state of Workteam.</summary>
 public partial class V1beta1WorkteamStatus
 {
     /// <summary></summary>
@@ -1340,6 +1406,7 @@ public partial class V1beta1WorkteamStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Workteam is the Schema for the Workteams API. Provides a SageMaker Workteam resource.</summary>
 public partial class V1beta1Workteam : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1WorkteamSpec>, IStatus<V1beta1WorkteamStatus>
 {
     public const string KubeApiVersion = "v1beta1";

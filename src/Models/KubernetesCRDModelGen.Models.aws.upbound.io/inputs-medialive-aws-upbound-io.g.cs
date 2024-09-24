@@ -18,6 +18,7 @@ public enum V1beta1InputSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1InputSpecForProviderDestinations
 {
     /// <summary>A unique name for the location the RTMP stream is being pushed to.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1InputSpecForProviderDestinations
     public string? StreamName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InputSpecForProviderInputDevices
 {
     /// <summary>The unique ID for the device.</summary>
@@ -32,6 +34,7 @@ public partial class V1beta1InputSpecForProviderInputDevices
     public string? Id { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InputSpecForProviderMediaConnectFlows
 {
     /// <summary>The ARN of the MediaConnect Flow</summary>
@@ -59,6 +62,7 @@ public enum V1beta1InputSpecForProviderRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InputSpecForProviderRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -72,6 +76,7 @@ public partial class V1beta1InputSpecForProviderRoleArnRefPolicy
     public V1beta1InputSpecForProviderRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1InputSpecForProviderRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -103,6 +108,7 @@ public enum V1beta1InputSpecForProviderRoleArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InputSpecForProviderRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -116,6 +122,7 @@ public partial class V1beta1InputSpecForProviderRoleArnSelectorPolicy
     public V1beta1InputSpecForProviderRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1InputSpecForProviderRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -131,6 +138,7 @@ public partial class V1beta1InputSpecForProviderRoleArnSelector
     public V1beta1InputSpecForProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InputSpecForProviderSources
 {
     /// <summary>The key used to extract the password from EC2 Parameter store.</summary>
@@ -146,6 +154,7 @@ public partial class V1beta1InputSpecForProviderSources
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InputSpecForProviderVpc
 {
     /// <summary>A list of up to 5 EC2 VPC security group IDs to attach to the Input.</summary>
@@ -157,6 +166,7 @@ public partial class V1beta1InputSpecForProviderVpc
     public IList<string>? SubnetIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InputSpecForProvider
 {
     /// <summary>Destination settings for PUSH type inputs. See Destinations for more details.</summary>
@@ -212,6 +222,7 @@ public partial class V1beta1InputSpecForProvider
     public IList<V1beta1InputSpecForProviderVpc>? Vpc { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InputSpecInitProviderDestinations
 {
     /// <summary>A unique name for the location the RTMP stream is being pushed to.</summary>
@@ -219,6 +230,7 @@ public partial class V1beta1InputSpecInitProviderDestinations
     public string? StreamName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InputSpecInitProviderInputDevices
 {
     /// <summary>The unique ID for the device.</summary>
@@ -226,6 +238,7 @@ public partial class V1beta1InputSpecInitProviderInputDevices
     public string? Id { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InputSpecInitProviderMediaConnectFlows
 {
     /// <summary>The ARN of the MediaConnect Flow</summary>
@@ -253,6 +266,7 @@ public enum V1beta1InputSpecInitProviderRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InputSpecInitProviderRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -266,6 +280,7 @@ public partial class V1beta1InputSpecInitProviderRoleArnRefPolicy
     public V1beta1InputSpecInitProviderRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1InputSpecInitProviderRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -297,6 +312,7 @@ public enum V1beta1InputSpecInitProviderRoleArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InputSpecInitProviderRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -310,6 +326,7 @@ public partial class V1beta1InputSpecInitProviderRoleArnSelectorPolicy
     public V1beta1InputSpecInitProviderRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1InputSpecInitProviderRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -325,6 +342,7 @@ public partial class V1beta1InputSpecInitProviderRoleArnSelector
     public V1beta1InputSpecInitProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InputSpecInitProviderSources
 {
     /// <summary>The key used to extract the password from EC2 Parameter store.</summary>
@@ -340,6 +358,7 @@ public partial class V1beta1InputSpecInitProviderSources
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InputSpecInitProviderVpc
 {
     /// <summary>A list of up to 5 EC2 VPC security group IDs to attach to the Input.</summary>
@@ -351,6 +370,7 @@ public partial class V1beta1InputSpecInitProviderVpc
     public IList<string>? SubnetIds { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1InputSpecInitProvider
 {
     /// <summary>Destination settings for PUSH type inputs. See Destinations for more details.</summary>
@@ -444,6 +464,7 @@ public enum V1beta1InputSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InputSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -457,6 +478,7 @@ public partial class V1beta1InputSpecProviderConfigRefPolicy
     public V1beta1InputSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1InputSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -488,6 +510,7 @@ public enum V1beta1InputSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InputSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -501,6 +524,7 @@ public partial class V1beta1InputSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1InputSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1InputSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -512,6 +536,7 @@ public partial class V1beta1InputSpecPublishConnectionDetailsToConfigRef
     public V1beta1InputSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1InputSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -527,6 +552,7 @@ public partial class V1beta1InputSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1InputSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -542,6 +568,7 @@ public partial class V1beta1InputSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1InputSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -553,6 +580,7 @@ public partial class V1beta1InputSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>InputSpec defines the desired state of Input</summary>
 public partial class V1beta1InputSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -585,6 +613,7 @@ public partial class V1beta1InputSpec
     public V1beta1InputSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InputStatusAtProviderDestinations
 {
     /// <summary>A unique name for the location the RTMP stream is being pushed to.</summary>
@@ -592,6 +621,7 @@ public partial class V1beta1InputStatusAtProviderDestinations
     public string? StreamName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InputStatusAtProviderInputDevices
 {
     /// <summary>The unique ID for the device.</summary>
@@ -599,6 +629,7 @@ public partial class V1beta1InputStatusAtProviderInputDevices
     public string? Id { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InputStatusAtProviderMediaConnectFlows
 {
     /// <summary>The ARN of the MediaConnect Flow</summary>
@@ -606,6 +637,7 @@ public partial class V1beta1InputStatusAtProviderMediaConnectFlows
     public string? FlowArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InputStatusAtProviderSources
 {
     /// <summary>The key used to extract the password from EC2 Parameter store.</summary>
@@ -621,6 +653,7 @@ public partial class V1beta1InputStatusAtProviderSources
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InputStatusAtProviderVpc
 {
     /// <summary>A list of up to 5 EC2 VPC security group IDs to attach to the Input.</summary>
@@ -632,6 +665,7 @@ public partial class V1beta1InputStatusAtProviderVpc
     public IList<string>? SubnetIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InputStatusAtProvider
 {
     /// <summary>ARN of the Input.</summary>
@@ -703,6 +737,7 @@ public partial class V1beta1InputStatusAtProvider
     public IList<V1beta1InputStatusAtProviderVpc>? Vpc { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1InputStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -730,6 +765,7 @@ public partial class V1beta1InputStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>InputStatus defines the observed state of Input.</summary>
 public partial class V1beta1InputStatus
 {
     /// <summary></summary>
@@ -746,6 +782,7 @@ public partial class V1beta1InputStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Input is the Schema for the Inputs API.</summary>
 public partial class V1beta1Input : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1InputSpec>, IStatus<V1beta1InputStatus>
 {
     public const string KubeApiVersion = "v1beta1";

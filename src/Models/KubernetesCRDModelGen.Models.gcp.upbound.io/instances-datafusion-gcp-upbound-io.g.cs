@@ -18,6 +18,7 @@ public enum V1beta1InstanceSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderAccelerators
 {
     /// <summary>The type of an accelator for a CDF instance. Possible values are: CDC, HEALTHCARE, CCAI_INSIGHTS.</summary>
@@ -49,6 +50,7 @@ public enum V1beta1InstanceSpecForProviderCryptoKeyConfigKeyReferenceRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecForProviderCryptoKeyConfigKeyReferenceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -62,6 +64,7 @@ public partial class V1beta1InstanceSpecForProviderCryptoKeyConfigKeyReferenceRe
     public V1beta1InstanceSpecForProviderCryptoKeyConfigKeyReferenceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a CryptoKey in kms to populate keyReference.</summary>
 public partial class V1beta1InstanceSpecForProviderCryptoKeyConfigKeyReferenceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -93,6 +96,7 @@ public enum V1beta1InstanceSpecForProviderCryptoKeyConfigKeyReferenceSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecForProviderCryptoKeyConfigKeyReferenceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -106,6 +110,7 @@ public partial class V1beta1InstanceSpecForProviderCryptoKeyConfigKeyReferenceSe
     public V1beta1InstanceSpecForProviderCryptoKeyConfigKeyReferenceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a CryptoKey in kms to populate keyReference.</summary>
 public partial class V1beta1InstanceSpecForProviderCryptoKeyConfigKeyReferenceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1InstanceSpecForProviderCryptoKeyConfigKeyReferenceSe
     public V1beta1InstanceSpecForProviderCryptoKeyConfigKeyReferenceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderCryptoKeyConfig
 {
     /// <summary>The name of the key which is used to encrypt/decrypt customer data. For key in Cloud KMS, the key should be in the format of projects//locations//keyRings//cryptoKeys/.</summary>
@@ -156,6 +162,7 @@ public enum V1beta1InstanceSpecForProviderEventPublishConfigTopicRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecForProviderEventPublishConfigTopicRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -169,6 +176,7 @@ public partial class V1beta1InstanceSpecForProviderEventPublishConfigTopicRefPol
     public V1beta1InstanceSpecForProviderEventPublishConfigTopicRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Topic in pubsub to populate topic.</summary>
 public partial class V1beta1InstanceSpecForProviderEventPublishConfigTopicRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -200,6 +208,7 @@ public enum V1beta1InstanceSpecForProviderEventPublishConfigTopicSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecForProviderEventPublishConfigTopicSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -213,6 +222,7 @@ public partial class V1beta1InstanceSpecForProviderEventPublishConfigTopicSelect
     public V1beta1InstanceSpecForProviderEventPublishConfigTopicSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Topic in pubsub to populate topic.</summary>
 public partial class V1beta1InstanceSpecForProviderEventPublishConfigTopicSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -228,6 +238,7 @@ public partial class V1beta1InstanceSpecForProviderEventPublishConfigTopicSelect
     public V1beta1InstanceSpecForProviderEventPublishConfigTopicSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderEventPublishConfig
 {
     /// <summary>Option to enable Event Publishing.</summary>
@@ -247,6 +258,7 @@ public partial class V1beta1InstanceSpecForProviderEventPublishConfig
     public V1beta1InstanceSpecForProviderEventPublishConfigTopicSelector? TopicSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderNetworkConfigPrivateServiceConnectConfig
 {
     /// <summary>Optional. The reference to the network attachment used to establish private connectivity. It will be of the form projects/{project-id}/regions/{region}/networkAttachments/{network-attachment-id}. This is required only when using connection type PRIVATE_SERVICE_CONNECT_INTERFACES.</summary>
@@ -258,6 +270,7 @@ public partial class V1beta1InstanceSpecForProviderNetworkConfigPrivateServiceCo
     public string? UnreachableCidrBlock { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderNetworkConfig
 {
     /// <summary>Optional. Type of connection for establishing private IP connectivity between the Data Fusion customer project VPC and the corresponding tenant project from a predefined list of available connection modes. If this field is unspecified for a private instance, VPC peering is used. Possible values are: VPC_PEERING, PRIVATE_SERVICE_CONNECT_INTERFACES.</summary>
@@ -277,6 +290,7 @@ public partial class V1beta1InstanceSpecForProviderNetworkConfig
     public IList<V1beta1InstanceSpecForProviderNetworkConfigPrivateServiceConnectConfig>? PrivateServiceConnectConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProvider
 {
     /// <summary>List of accelerators enabled for this CDF instance. If accelerators are enabled it is possible a permadiff will be created with the Options field. Users will need to either manually update their state file to include these diffed options, or include the field in a lifecycle ignore changes block. Structure is documented below.</summary>
@@ -352,6 +366,7 @@ public partial class V1beta1InstanceSpecForProvider
     public string? Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderAccelerators
 {
     /// <summary>The type of an accelator for a CDF instance. Possible values are: CDC, HEALTHCARE, CCAI_INSIGHTS.</summary>
@@ -383,6 +398,7 @@ public enum V1beta1InstanceSpecInitProviderCryptoKeyConfigKeyReferenceRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecInitProviderCryptoKeyConfigKeyReferenceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -396,6 +412,7 @@ public partial class V1beta1InstanceSpecInitProviderCryptoKeyConfigKeyReferenceR
     public V1beta1InstanceSpecInitProviderCryptoKeyConfigKeyReferenceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a CryptoKey in kms to populate keyReference.</summary>
 public partial class V1beta1InstanceSpecInitProviderCryptoKeyConfigKeyReferenceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -427,6 +444,7 @@ public enum V1beta1InstanceSpecInitProviderCryptoKeyConfigKeyReferenceSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecInitProviderCryptoKeyConfigKeyReferenceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -440,6 +458,7 @@ public partial class V1beta1InstanceSpecInitProviderCryptoKeyConfigKeyReferenceS
     public V1beta1InstanceSpecInitProviderCryptoKeyConfigKeyReferenceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a CryptoKey in kms to populate keyReference.</summary>
 public partial class V1beta1InstanceSpecInitProviderCryptoKeyConfigKeyReferenceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -455,6 +474,7 @@ public partial class V1beta1InstanceSpecInitProviderCryptoKeyConfigKeyReferenceS
     public V1beta1InstanceSpecInitProviderCryptoKeyConfigKeyReferenceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderCryptoKeyConfig
 {
     /// <summary>The name of the key which is used to encrypt/decrypt customer data. For key in Cloud KMS, the key should be in the format of projects//locations//keyRings//cryptoKeys/.</summary>
@@ -490,6 +510,7 @@ public enum V1beta1InstanceSpecInitProviderEventPublishConfigTopicRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecInitProviderEventPublishConfigTopicRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -503,6 +524,7 @@ public partial class V1beta1InstanceSpecInitProviderEventPublishConfigTopicRefPo
     public V1beta1InstanceSpecInitProviderEventPublishConfigTopicRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Topic in pubsub to populate topic.</summary>
 public partial class V1beta1InstanceSpecInitProviderEventPublishConfigTopicRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -534,6 +556,7 @@ public enum V1beta1InstanceSpecInitProviderEventPublishConfigTopicSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceSpecInitProviderEventPublishConfigTopicSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -547,6 +570,7 @@ public partial class V1beta1InstanceSpecInitProviderEventPublishConfigTopicSelec
     public V1beta1InstanceSpecInitProviderEventPublishConfigTopicSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Topic in pubsub to populate topic.</summary>
 public partial class V1beta1InstanceSpecInitProviderEventPublishConfigTopicSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -562,6 +586,7 @@ public partial class V1beta1InstanceSpecInitProviderEventPublishConfigTopicSelec
     public V1beta1InstanceSpecInitProviderEventPublishConfigTopicSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderEventPublishConfig
 {
     /// <summary>Option to enable Event Publishing.</summary>
@@ -581,6 +606,7 @@ public partial class V1beta1InstanceSpecInitProviderEventPublishConfig
     public V1beta1InstanceSpecInitProviderEventPublishConfigTopicSelector? TopicSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderNetworkConfigPrivateServiceConnectConfig
 {
     /// <summary>Optional. The reference to the network attachment used to establish private connectivity. It will be of the form projects/{project-id}/regions/{region}/networkAttachments/{network-attachment-id}. This is required only when using connection type PRIVATE_SERVICE_CONNECT_INTERFACES.</summary>
@@ -592,6 +618,7 @@ public partial class V1beta1InstanceSpecInitProviderNetworkConfigPrivateServiceC
     public string? UnreachableCidrBlock { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderNetworkConfig
 {
     /// <summary>Optional. Type of connection for establishing private IP connectivity between the Data Fusion customer project VPC and the corresponding tenant project from a predefined list of available connection modes. If this field is unspecified for a private instance, VPC peering is used. Possible values are: VPC_PEERING, PRIVATE_SERVICE_CONNECT_INTERFACES.</summary>
@@ -611,6 +638,7 @@ public partial class V1beta1InstanceSpecInitProviderNetworkConfig
     public IList<V1beta1InstanceSpecInitProviderNetworkConfigPrivateServiceConnectConfig>? PrivateServiceConnectConfig { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1InstanceSpecInitProvider
 {
     /// <summary>List of accelerators enabled for this CDF instance. If accelerators are enabled it is possible a permadiff will be created with the Options field. Users will need to either manually update their state file to include these diffed options, or include the field in a lifecycle ignore changes block. Structure is documented below.</summary>
@@ -724,6 +752,7 @@ public enum V1beta1InstanceSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -737,6 +766,7 @@ public partial class V1beta1InstanceSpecProviderConfigRefPolicy
     public V1beta1InstanceSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1InstanceSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -768,6 +798,7 @@ public enum V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -781,6 +812,7 @@ public partial class V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolic
     public V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1InstanceSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -792,6 +824,7 @@ public partial class V1beta1InstanceSpecPublishConnectionDetailsToConfigRef
     public V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1InstanceSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -807,6 +840,7 @@ public partial class V1beta1InstanceSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1InstanceSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -822,6 +856,7 @@ public partial class V1beta1InstanceSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1InstanceSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -833,6 +868,7 @@ public partial class V1beta1InstanceSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>InstanceSpec defines the desired state of Instance</summary>
 public partial class V1beta1InstanceSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -865,6 +901,7 @@ public partial class V1beta1InstanceSpec
     public V1beta1InstanceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderAccelerators
 {
     /// <summary>The type of an accelator for a CDF instance. Possible values are: CDC, HEALTHCARE, CCAI_INSIGHTS.</summary>
@@ -876,6 +913,7 @@ public partial class V1beta1InstanceStatusAtProviderAccelerators
     public string? State { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderCryptoKeyConfig
 {
     /// <summary>The name of the key which is used to encrypt/decrypt customer data. For key in Cloud KMS, the key should be in the format of projects//locations//keyRings//cryptoKeys/.</summary>
@@ -883,6 +921,7 @@ public partial class V1beta1InstanceStatusAtProviderCryptoKeyConfig
     public string? KeyReference { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderEventPublishConfig
 {
     /// <summary>Option to enable Event Publishing.</summary>
@@ -894,6 +933,7 @@ public partial class V1beta1InstanceStatusAtProviderEventPublishConfig
     public string? Topic { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderNetworkConfigPrivateServiceConnectConfig
 {
     /// <summary>(Output) Output only. The CIDR block to which the CDF instance can't route traffic to in the consumer project VPC. The size of this block is /25. The format of this field is governed by RFC 4632.</summary>
@@ -909,6 +949,7 @@ public partial class V1beta1InstanceStatusAtProviderNetworkConfigPrivateServiceC
     public string? UnreachableCidrBlock { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderNetworkConfig
 {
     /// <summary>Optional. Type of connection for establishing private IP connectivity between the Data Fusion customer project VPC and the corresponding tenant project from a predefined list of available connection modes. If this field is unspecified for a private instance, VPC peering is used. Possible values are: VPC_PEERING, PRIVATE_SERVICE_CONNECT_INTERFACES.</summary>
@@ -928,6 +969,7 @@ public partial class V1beta1InstanceStatusAtProviderNetworkConfig
     public IList<V1beta1InstanceStatusAtProviderNetworkConfigPrivateServiceConnectConfig>? PrivateServiceConnectConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProvider
 {
     /// <summary>List of accelerators enabled for this CDF instance. If accelerators are enabled it is possible a permadiff will be created with the Options field. Users will need to either manually update their state file to include these diffed options, or include the field in a lifecycle ignore changes block. Structure is documented below.</summary>
@@ -1051,6 +1093,7 @@ public partial class V1beta1InstanceStatusAtProvider
     public string? Zone { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1InstanceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1078,6 +1121,7 @@ public partial class V1beta1InstanceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>InstanceStatus defines the observed state of Instance.</summary>
 public partial class V1beta1InstanceStatus
 {
     /// <summary></summary>
@@ -1094,6 +1138,7 @@ public partial class V1beta1InstanceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Instance is the Schema for the Instances API. Represents a Data Fusion instance.</summary>
 public partial class V1beta1Instance : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1InstanceSpec>, IStatus<V1beta1InstanceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

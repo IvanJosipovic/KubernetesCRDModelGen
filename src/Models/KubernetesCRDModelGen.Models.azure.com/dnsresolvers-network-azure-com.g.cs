@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20220701storageDnsResolverSpecOwner
 {
     /// <summary></summary>
@@ -19,6 +20,7 @@ public partial class V1api20220701storageDnsResolverSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20220701storageDnsResolverSpecVirtualNetworkReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -38,6 +40,7 @@ public partial class V1api20220701storageDnsResolverSpecVirtualNetworkReference
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.DnsresolverSubResource Reference to another ARM resource.</summary>
 public partial class V1api20220701storageDnsResolverSpecVirtualNetwork
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -49,6 +52,7 @@ public partial class V1api20220701storageDnsResolverSpecVirtualNetwork
     public V1api20220701storageDnsResolverSpecVirtualNetworkReference Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.DnsResolver_Spec</summary>
 public partial class V1api20220701storageDnsResolverSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -80,6 +84,7 @@ public partial class V1api20220701storageDnsResolverSpec
     public V1api20220701storageDnsResolverSpecVirtualNetwork? VirtualNetwork { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20220701storageDnsResolverStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -111,6 +116,7 @@ public partial class V1api20220701storageDnsResolverStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 public partial class V1api20220701storageDnsResolverStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -142,6 +148,7 @@ public partial class V1api20220701storageDnsResolverStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.DnsresolverSubResource_STATUS Reference to another ARM resource.</summary>
 public partial class V1api20220701storageDnsResolverStatusVirtualNetwork
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -153,6 +160,7 @@ public partial class V1api20220701storageDnsResolverStatusVirtualNetwork
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.DnsResolver_STATUS Describes a DNS resolver.</summary>
 public partial class V1api20220701storageDnsResolverStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -209,6 +217,7 @@ public partial class V1api20220701storageDnsResolverStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20220701.DnsResolver Generator information: - Generated from: /dnsresolver/resource-manager/Microsoft.Network/stable/2022-07-01/dnsresolver.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsResolvers/{dnsResolverName}</summary>
 public partial class V1api20220701storageDnsResolver : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20220701storageDnsResolverSpec>, IStatus<V1api20220701storageDnsResolverStatus>
 {
     public const string KubeApiVersion = "v1api20220701storage";

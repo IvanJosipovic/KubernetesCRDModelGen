@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.redhatopenshift.azure.com;
+/// <summary>Storage version of v1api20231122.APIServerProfile APIServerProfile represents an API server profile.</summary>
 public partial class V1api20231122storageOpenShiftClusterSpecApiserverProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -19,6 +20,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecApiserverProfile
     public string? Visibility { get; set; }
 }
 
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20231122storageOpenShiftClusterSpecClusterProfilePullSecret
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -30,6 +32,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecClusterProfilePullS
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231122.ClusterProfile ClusterProfile represents a cluster profile.</summary>
 public partial class V1api20231122storageOpenShiftClusterSpecClusterProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -57,6 +60,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecClusterProfile
     public string? Version { get; set; }
 }
 
+/// <summary>Storage version of v1api20231122.IngressProfile IngressProfile represents an ingress profile.</summary>
 public partial class V1api20231122storageOpenShiftClusterSpecIngressProfiles
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -72,6 +76,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecIngressProfiles
     public string? Visibility { get; set; }
 }
 
+/// <summary>DiskEncryptionSetReference: The resource ID of an associated DiskEncryptionSet, if applicable.</summary>
 public partial class V1api20231122storageOpenShiftClusterSpecMasterProfileDiskEncryptionSetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -91,6 +96,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecMasterProfileDiskEn
     public string? Name { get; set; }
 }
 
+/// <summary>SubnetReference: The Azure resource ID of the master subnet.</summary>
 public partial class V1api20231122storageOpenShiftClusterSpecMasterProfileSubnetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -110,6 +116,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecMasterProfileSubnet
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231122.MasterProfile MasterProfile represents a master profile.</summary>
 public partial class V1api20231122storageOpenShiftClusterSpecMasterProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -133,6 +140,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecMasterProfile
     public string? VmSize { get; set; }
 }
 
+/// <summary>Storage version of v1api20231122.ManagedOutboundIPs ManagedOutboundIPs represents the desired managed outbound IPs for the cluster public load balancer.</summary>
 public partial class V1api20231122storageOpenShiftClusterSpecNetworkProfileLoadBalancerProfileManagedOutboundIps
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -144,6 +152,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecNetworkProfileLoadB
     public int? Count { get; set; }
 }
 
+/// <summary>Storage version of v1api20231122.LoadBalancerProfile LoadBalancerProfile represents the profile of the cluster public load balancer.</summary>
 public partial class V1api20231122storageOpenShiftClusterSpecNetworkProfileLoadBalancerProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -155,6 +164,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecNetworkProfileLoadB
     public V1api20231122storageOpenShiftClusterSpecNetworkProfileLoadBalancerProfileManagedOutboundIps? ManagedOutboundIps { get; set; }
 }
 
+/// <summary>Storage version of v1api20231122.NetworkProfile NetworkProfile represents a network profile.</summary>
 public partial class V1api20231122storageOpenShiftClusterSpecNetworkProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -182,6 +192,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecNetworkProfile
     public string? ServiceCidr { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20231122storageOpenShiftClusterSpecOwner
 {
     /// <summary></summary>
@@ -193,6 +204,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20231122storageOpenShiftClusterSpecServicePrincipalProfileClientIdFromConfig
 {
     /// <summary>Key is the key in the Kubernetes configmap being referenced</summary>
@@ -204,6 +216,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecServicePrincipalPro
     public string Name { get; set; }
 }
 
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20231122storageOpenShiftClusterSpecServicePrincipalProfileClientSecret
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -215,6 +228,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecServicePrincipalPro
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231122.ServicePrincipalProfile ServicePrincipalProfile represents a service principal profile.</summary>
 public partial class V1api20231122storageOpenShiftClusterSpecServicePrincipalProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -234,6 +248,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecServicePrincipalPro
     public V1api20231122storageOpenShiftClusterSpecServicePrincipalProfileClientSecret? ClientSecret { get; set; }
 }
 
+/// <summary>DiskEncryptionSetReference: The resource ID of an associated DiskEncryptionSet, if applicable.</summary>
 public partial class V1api20231122storageOpenShiftClusterSpecWorkerProfilesDiskEncryptionSetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -253,6 +268,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecWorkerProfilesDiskE
     public string? Name { get; set; }
 }
 
+/// <summary>SubnetReference: The Azure resource ID of the worker subnet.</summary>
 public partial class V1api20231122storageOpenShiftClusterSpecWorkerProfilesSubnetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -272,6 +288,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecWorkerProfilesSubne
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231122.WorkerProfile WorkerProfile represents a worker profile.</summary>
 public partial class V1api20231122storageOpenShiftClusterSpecWorkerProfiles
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -307,6 +324,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecWorkerProfiles
     public string? VmSize { get; set; }
 }
 
+/// <summary>Storage version of v1api20231122.OpenShiftCluster_Spec</summary>
 public partial class V1api20231122storageOpenShiftClusterSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -362,6 +380,7 @@ public partial class V1api20231122storageOpenShiftClusterSpec
     public IList<V1api20231122storageOpenShiftClusterSpecWorkerProfiles>? WorkerProfiles { get; set; }
 }
 
+/// <summary>Storage version of v1api20231122.APIServerProfile_STATUS APIServerProfile represents an API server profile.</summary>
 public partial class V1api20231122storageOpenShiftClusterStatusApiserverProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -381,6 +400,7 @@ public partial class V1api20231122storageOpenShiftClusterStatusApiserverProfile
     public string? Visibility { get; set; }
 }
 
+/// <summary>Storage version of v1api20231122.ClusterProfile_STATUS ClusterProfile represents a cluster profile.</summary>
 public partial class V1api20231122storageOpenShiftClusterStatusClusterProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -404,6 +424,7 @@ public partial class V1api20231122storageOpenShiftClusterStatusClusterProfile
     public string? Version { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20231122storageOpenShiftClusterStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -435,6 +456,7 @@ public partial class V1api20231122storageOpenShiftClusterStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20231122.ConsoleProfile_STATUS ConsoleProfile represents a console profile.</summary>
 public partial class V1api20231122storageOpenShiftClusterStatusConsoleProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -446,6 +468,7 @@ public partial class V1api20231122storageOpenShiftClusterStatusConsoleProfile
     public string? Url { get; set; }
 }
 
+/// <summary>Storage version of v1api20231122.IngressProfile_STATUS IngressProfile represents an ingress profile.</summary>
 public partial class V1api20231122storageOpenShiftClusterStatusIngressProfiles
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -465,6 +488,7 @@ public partial class V1api20231122storageOpenShiftClusterStatusIngressProfiles
     public string? Visibility { get; set; }
 }
 
+/// <summary>Storage version of v1api20231122.MasterProfile_STATUS MasterProfile represents a master profile.</summary>
 public partial class V1api20231122storageOpenShiftClusterStatusMasterProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -488,6 +512,7 @@ public partial class V1api20231122storageOpenShiftClusterStatusMasterProfile
     public string? VmSize { get; set; }
 }
 
+/// <summary>Storage version of v1api20231122.EffectiveOutboundIP_STATUS EffectiveOutboundIP represents an effective outbound IP resource of the cluster public load balancer.</summary>
 public partial class V1api20231122storageOpenShiftClusterStatusNetworkProfileLoadBalancerProfileEffectiveOutboundIps
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -499,6 +524,7 @@ public partial class V1api20231122storageOpenShiftClusterStatusNetworkProfileLoa
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20231122.ManagedOutboundIPs_STATUS ManagedOutboundIPs represents the desired managed outbound IPs for the cluster public load balancer.</summary>
 public partial class V1api20231122storageOpenShiftClusterStatusNetworkProfileLoadBalancerProfileManagedOutboundIps
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -510,6 +536,7 @@ public partial class V1api20231122storageOpenShiftClusterStatusNetworkProfileLoa
     public int? Count { get; set; }
 }
 
+/// <summary>Storage version of v1api20231122.LoadBalancerProfile_STATUS LoadBalancerProfile represents the profile of the cluster public load balancer.</summary>
 public partial class V1api20231122storageOpenShiftClusterStatusNetworkProfileLoadBalancerProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -525,6 +552,7 @@ public partial class V1api20231122storageOpenShiftClusterStatusNetworkProfileLoa
     public V1api20231122storageOpenShiftClusterStatusNetworkProfileLoadBalancerProfileManagedOutboundIps? ManagedOutboundIps { get; set; }
 }
 
+/// <summary>Storage version of v1api20231122.NetworkProfile_STATUS NetworkProfile represents a network profile.</summary>
 public partial class V1api20231122storageOpenShiftClusterStatusNetworkProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -552,6 +580,7 @@ public partial class V1api20231122storageOpenShiftClusterStatusNetworkProfile
     public string? ServiceCidr { get; set; }
 }
 
+/// <summary>Storage version of v1api20231122.ServicePrincipalProfile_STATUS ServicePrincipalProfile represents a service principal profile.</summary>
 public partial class V1api20231122storageOpenShiftClusterStatusServicePrincipalProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -563,6 +592,7 @@ public partial class V1api20231122storageOpenShiftClusterStatusServicePrincipalP
     public string? ClientId { get; set; }
 }
 
+/// <summary>Storage version of v1api20231122.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 public partial class V1api20231122storageOpenShiftClusterStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -594,6 +624,7 @@ public partial class V1api20231122storageOpenShiftClusterStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
+/// <summary>Storage version of v1api20231122.WorkerProfile_STATUS WorkerProfile represents a worker profile.</summary>
 public partial class V1api20231122storageOpenShiftClusterStatusWorkerProfiles
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -629,6 +660,7 @@ public partial class V1api20231122storageOpenShiftClusterStatusWorkerProfiles
     public string? VmSize { get; set; }
 }
 
+/// <summary>Storage version of v1api20231122.WorkerProfile_STATUS WorkerProfile represents a worker profile.</summary>
 public partial class V1api20231122storageOpenShiftClusterStatusWorkerProfilesStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -664,6 +696,7 @@ public partial class V1api20231122storageOpenShiftClusterStatusWorkerProfilesSta
     public string? VmSize { get; set; }
 }
 
+/// <summary>Storage version of v1api20231122.OpenShiftCluster_STATUS OpenShiftCluster represents an Azure Red Hat OpenShift cluster.</summary>
 public partial class V1api20231122storageOpenShiftClusterStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -740,6 +773,7 @@ public partial class V1api20231122storageOpenShiftClusterStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20231122.OpenShiftCluster Generator information: - Generated from: /redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/openshiftclusters/stable/2023-11-22/redhatopenshift.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.RedHatOpenShift/openShiftClusters/{resourceName}</summary>
 public partial class V1api20231122storageOpenShiftCluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20231122storageOpenShiftClusterSpec>, IStatus<V1api20231122storageOpenShiftClusterStatus>
 {
     public const string KubeApiVersion = "v1api20231122storage";

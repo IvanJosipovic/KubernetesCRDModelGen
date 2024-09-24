@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.helm.crossplane.io;
+/// <summary>Env is a reference to an environment variable that contains credentials that must be used to connect to the provider.</summary>
 public partial class V1beta1ProviderConfigSpecCredentialsEnv
 {
     /// <summary>Name is the name of an environment variable.</summary>
@@ -15,6 +16,7 @@ public partial class V1beta1ProviderConfigSpecCredentialsEnv
     public string Name { get; set; }
 }
 
+/// <summary>Fs is a reference to a filesystem location that contains credentials that must be used to connect to the provider.</summary>
 public partial class V1beta1ProviderConfigSpecCredentialsFs
 {
     /// <summary>Path is a filesystem path.</summary>
@@ -22,6 +24,7 @@ public partial class V1beta1ProviderConfigSpecCredentialsFs
     public string Path { get; set; }
 }
 
+/// <summary>A SecretRef is a reference to a secret key that contains the credentials that must be used to connect to the provider.</summary>
 public partial class V1beta1ProviderConfigSpecCredentialsSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -56,6 +59,7 @@ public enum V1beta1ProviderConfigSpecCredentialsSourceEnum
     Filesystem
 }
 
+/// <summary>Credentials used to connect to the Kubernetes API. Typically a kubeconfig file. Use InjectedIdentity for in-cluster config.</summary>
 public partial class V1beta1ProviderConfigSpecCredentials
 {
     /// <summary>Env is a reference to an environment variable that contains credentials that must be used to connect to the provider.</summary>
@@ -76,6 +80,7 @@ public partial class V1beta1ProviderConfigSpecCredentials
     public V1beta1ProviderConfigSpecCredentialsSourceEnum Source { get; set; }
 }
 
+/// <summary>Env is a reference to an environment variable that contains credentials that must be used to connect to the provider.</summary>
 public partial class V1beta1ProviderConfigSpecIdentityEnv
 {
     /// <summary>Name is the name of an environment variable.</summary>
@@ -83,6 +88,7 @@ public partial class V1beta1ProviderConfigSpecIdentityEnv
     public string Name { get; set; }
 }
 
+/// <summary>Fs is a reference to a filesystem location that contains credentials that must be used to connect to the provider.</summary>
 public partial class V1beta1ProviderConfigSpecIdentityFs
 {
     /// <summary>Path is a filesystem path.</summary>
@@ -90,6 +96,7 @@ public partial class V1beta1ProviderConfigSpecIdentityFs
     public string Path { get; set; }
 }
 
+/// <summary>A SecretRef is a reference to a secret key that contains the credentials that must be used to connect to the provider.</summary>
 public partial class V1beta1ProviderConfigSpecIdentitySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -140,6 +147,7 @@ public enum V1beta1ProviderConfigSpecIdentityTypeEnum
     UpboundTokens
 }
 
+/// <summary>Identity used to authenticate to the Kubernetes API. The identity credentials can be used to supplement kubeconfig 'credentials', for example by configuring a bearer token source such as OAuth.</summary>
 public partial class V1beta1ProviderConfigSpecIdentity
 {
     /// <summary>Env is a reference to an environment variable that contains credentials that must be used to connect to the provider.</summary>
@@ -165,6 +173,7 @@ public partial class V1beta1ProviderConfigSpecIdentity
     public V1beta1ProviderConfigSpecIdentityTypeEnum Type { get; set; }
 }
 
+/// <summary>A ProviderConfigSpec defines the desired state of a ProviderConfig.</summary>
 public partial class V1beta1ProviderConfigSpec
 {
     /// <summary>Credentials used to connect to the Kubernetes API. Typically a kubeconfig file. Use InjectedIdentity for in-cluster config.</summary>
@@ -176,6 +185,7 @@ public partial class V1beta1ProviderConfigSpec
     public V1beta1ProviderConfigSpecIdentity? Identity { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ProviderConfigStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -203,6 +213,7 @@ public partial class V1beta1ProviderConfigStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>A ProviderConfigStatus defines the status of a Provider.</summary>
 public partial class V1beta1ProviderConfigStatus
 {
     /// <summary>Conditions of the resource.</summary>
@@ -215,6 +226,7 @@ public partial class V1beta1ProviderConfigStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>A ProviderConfig configures a Helm 'provider', i.e. a connection to a particular</summary>
 public partial class V1beta1ProviderConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ProviderConfigSpec>, IStatus<V1beta1ProviderConfigStatus>
 {
     public const string KubeApiVersion = "v1beta1";

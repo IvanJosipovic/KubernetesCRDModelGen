@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.insights.azure.com;
+/// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20200202storageComponentSpecOperatorSpecConfigMapsConnectionString
 {
     /// <summary>Key is the key in the ConfigMap being referenced</summary>
@@ -19,6 +20,7 @@ public partial class V1api20200202storageComponentSpecOperatorSpecConfigMapsConn
     public string Name { get; set; }
 }
 
+/// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20200202storageComponentSpecOperatorSpecConfigMapsInstrumentationKey
 {
     /// <summary>Key is the key in the ConfigMap being referenced</summary>
@@ -30,6 +32,7 @@ public partial class V1api20200202storageComponentSpecOperatorSpecConfigMapsInst
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20200202.ComponentOperatorConfigMaps</summary>
 public partial class V1api20200202storageComponentSpecOperatorSpecConfigMaps
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -45,6 +48,7 @@ public partial class V1api20200202storageComponentSpecOperatorSpecConfigMaps
     public V1api20200202storageComponentSpecOperatorSpecConfigMapsInstrumentationKey? InstrumentationKey { get; set; }
 }
 
+/// <summary>Storage version of v1api20200202.ComponentOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 public partial class V1api20200202storageComponentSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -56,6 +60,7 @@ public partial class V1api20200202storageComponentSpecOperatorSpec
     public V1api20200202storageComponentSpecOperatorSpecConfigMaps? ConfigMaps { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20200202storageComponentSpecOwner
 {
     /// <summary></summary>
@@ -67,6 +72,7 @@ public partial class V1api20200202storageComponentSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>WorkspaceResourceReference: Resource Id of the log analytics workspace which the data will be ingested to. This property is required to create an application with this API version. Applications from older versions will not have this property.</summary>
 public partial class V1api20200202storageComponentSpecWorkspaceResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -86,6 +92,7 @@ public partial class V1api20200202storageComponentSpecWorkspaceResourceReference
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20200202.Component_Spec</summary>
 public partial class V1api20200202storageComponentSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -181,6 +188,7 @@ public partial class V1api20200202storageComponentSpec
     public V1api20200202storageComponentSpecWorkspaceResourceReference? WorkspaceResourceReference { get; set; }
 }
 
+/// <summary>Storage version of v1api20200202.PrivateLinkScopedResource_STATUS The private link scope resource reference.</summary>
 public partial class V1api20200202storageComponentStatusPrivateLinkScopedResources
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -196,6 +204,7 @@ public partial class V1api20200202storageComponentStatusPrivateLinkScopedResourc
     public string? ScopeId { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20200202storageComponentStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -227,6 +236,7 @@ public partial class V1api20200202storageComponentStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20200202.Component_STATUS</summary>
 public partial class V1api20200202storageComponentStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -367,6 +377,7 @@ public partial class V1api20200202storageComponentStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20200202.Component Generator information: - Generated from: /applicationinsights/resource-manager/Microsoft.Insights/stable/2020-02-02/components_API.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/components/{resourceName}</summary>
 public partial class V1api20200202storageComponent : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20200202storageComponentSpec>, IStatus<V1api20200202storageComponentStatus>
 {
     public const string KubeApiVersion = "v1api20200202storage";

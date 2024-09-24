@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary>Immutable. Replication consistency group for asynchronous disk replication.</summary>
 public partial class V1beta1ComputeResourcePolicySpecDiskConsistencyGroupPolicy
 {
     /// <summary>Immutable. Enable disk consistency on the resource policy.</summary>
@@ -15,6 +16,7 @@ public partial class V1beta1ComputeResourcePolicySpecDiskConsistencyGroupPolicy
     public bool Enabled { get; set; }
 }
 
+/// <summary>Immutable. Resource policy for instances used for placement configuration.</summary>
 public partial class V1beta1ComputeResourcePolicySpecGroupPlacementPolicy
 {
     /// <summary>Immutable. The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network.</summary>
@@ -34,6 +36,7 @@ public partial class V1beta1ComputeResourcePolicySpecGroupPlacementPolicy
     public int? VmCount { get; set; }
 }
 
+/// <summary>Immutable. Specifies the schedule for starting instances.</summary>
 public partial class V1beta1ComputeResourcePolicySpecInstanceSchedulePolicyVmStartSchedule
 {
     /// <summary>Immutable. Specifies the frequency for the operation, using the unix-cron format.</summary>
@@ -41,6 +44,7 @@ public partial class V1beta1ComputeResourcePolicySpecInstanceSchedulePolicyVmSta
     public string Schedule { get; set; }
 }
 
+/// <summary>Immutable. Specifies the schedule for stopping instances.</summary>
 public partial class V1beta1ComputeResourcePolicySpecInstanceSchedulePolicyVmStopSchedule
 {
     /// <summary>Immutable. Specifies the frequency for the operation, using the unix-cron format.</summary>
@@ -48,6 +52,7 @@ public partial class V1beta1ComputeResourcePolicySpecInstanceSchedulePolicyVmSto
     public string Schedule { get; set; }
 }
 
+/// <summary>Immutable. Resource policy for scheduling instance operations.</summary>
 public partial class V1beta1ComputeResourcePolicySpecInstanceSchedulePolicy
 {
     /// <summary>Immutable. The expiration time of the schedule. The timestamp is an RFC3339 string.</summary>
@@ -71,6 +76,7 @@ public partial class V1beta1ComputeResourcePolicySpecInstanceSchedulePolicy
     public V1beta1ComputeResourcePolicySpecInstanceSchedulePolicyVmStopSchedule? VmStopSchedule { get; set; }
 }
 
+/// <summary>Immutable. Retention policy applied to snapshots created by this resource policy.</summary>
 public partial class V1beta1ComputeResourcePolicySpecSnapshotSchedulePolicyRetentionPolicy
 {
     /// <summary>Immutable. Maximum age of the snapshot that is allowed to be kept.</summary>
@@ -82,6 +88,7 @@ public partial class V1beta1ComputeResourcePolicySpecSnapshotSchedulePolicyReten
     public string? OnSourceDiskDelete { get; set; }
 }
 
+/// <summary>Immutable. The policy will execute every nth day at the specified time.</summary>
 public partial class V1beta1ComputeResourcePolicySpecSnapshotSchedulePolicyScheduleDailySchedule
 {
     /// <summary>Immutable. Defines a schedule with units measured in days. The value determines how many days pass between the start of each cycle. Days in cycle for snapshot schedule policy must be 1.</summary>
@@ -93,6 +100,7 @@ public partial class V1beta1ComputeResourcePolicySpecSnapshotSchedulePolicySched
     public string StartTime { get; set; }
 }
 
+/// <summary>Immutable. The policy will execute every nth hour starting at the specified time.</summary>
 public partial class V1beta1ComputeResourcePolicySpecSnapshotSchedulePolicyScheduleHourlySchedule
 {
     /// <summary>Immutable. The number of hours between snapshots.</summary>
@@ -104,6 +112,7 @@ public partial class V1beta1ComputeResourcePolicySpecSnapshotSchedulePolicySched
     public string StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeResourcePolicySpecSnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeks
 {
     /// <summary>Immutable. The day of the week to create the snapshot. e.g. MONDAY Possible values: ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"].</summary>
@@ -115,6 +124,7 @@ public partial class V1beta1ComputeResourcePolicySpecSnapshotSchedulePolicySched
     public string StartTime { get; set; }
 }
 
+/// <summary>Immutable. Allows specifying a snapshot time for each day of the week.</summary>
 public partial class V1beta1ComputeResourcePolicySpecSnapshotSchedulePolicyScheduleWeeklySchedule
 {
     /// <summary>Immutable. May contain up to seven (one for each day of the week) snapshot times.</summary>
@@ -122,6 +132,7 @@ public partial class V1beta1ComputeResourcePolicySpecSnapshotSchedulePolicySched
     public IList<V1beta1ComputeResourcePolicySpecSnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeks> DayOfWeeks { get; set; }
 }
 
+/// <summary>Immutable. Contains one of an 'hourlySchedule', 'dailySchedule', or 'weeklySchedule'.</summary>
 public partial class V1beta1ComputeResourcePolicySpecSnapshotSchedulePolicySchedule
 {
     /// <summary>Immutable. The policy will execute every nth day at the specified time.</summary>
@@ -137,6 +148,7 @@ public partial class V1beta1ComputeResourcePolicySpecSnapshotSchedulePolicySched
     public V1beta1ComputeResourcePolicySpecSnapshotSchedulePolicyScheduleWeeklySchedule? WeeklySchedule { get; set; }
 }
 
+/// <summary>Immutable. Properties with which the snapshots are created, such as labels.</summary>
 public partial class V1beta1ComputeResourcePolicySpecSnapshotSchedulePolicySnapshotProperties
 {
     /// <summary>Immutable. Creates the new snapshot in the snapshot chain labeled with the specified name. The chain name must be 1-63 characters long and comply with RFC1035.</summary>
@@ -156,6 +168,7 @@ public partial class V1beta1ComputeResourcePolicySpecSnapshotSchedulePolicySnaps
     public IList<string>? StorageLocations { get; set; }
 }
 
+/// <summary>Immutable. Policy for creating snapshots of persistent disks.</summary>
 public partial class V1beta1ComputeResourcePolicySpecSnapshotSchedulePolicy
 {
     /// <summary>Immutable. Retention policy applied to snapshots created by this resource policy.</summary>
@@ -171,6 +184,7 @@ public partial class V1beta1ComputeResourcePolicySpecSnapshotSchedulePolicy
     public V1beta1ComputeResourcePolicySpecSnapshotSchedulePolicySnapshotProperties? SnapshotProperties { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeResourcePolicySpec
 {
     /// <summary>Immutable. An optional description of this resource. Provide this property when you create the resource.</summary>
@@ -202,6 +216,7 @@ public partial class V1beta1ComputeResourcePolicySpec
     public V1beta1ComputeResourcePolicySpecSnapshotSchedulePolicy? SnapshotSchedulePolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeResourcePolicyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -225,6 +240,7 @@ public partial class V1beta1ComputeResourcePolicyStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeResourcePolicyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -241,6 +257,7 @@ public partial class V1beta1ComputeResourcePolicyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ComputeResourcePolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeResourcePolicySpec>, IStatus<V1beta1ComputeResourcePolicyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

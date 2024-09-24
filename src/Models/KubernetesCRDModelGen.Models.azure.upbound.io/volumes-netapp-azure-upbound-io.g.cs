@@ -38,6 +38,7 @@ public enum V1beta1VolumeSpecForProviderAccountNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VolumeSpecForProviderAccountNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1VolumeSpecForProviderAccountNameRefPolicy
     public V1beta1VolumeSpecForProviderAccountNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in netapp to populate accountName.</summary>
 public partial class V1beta1VolumeSpecForProviderAccountNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1VolumeSpecForProviderAccountNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VolumeSpecForProviderAccountNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1VolumeSpecForProviderAccountNameSelectorPolicy
     public V1beta1VolumeSpecForProviderAccountNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in netapp to populate accountName.</summary>
 public partial class V1beta1VolumeSpecForProviderAccountNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1VolumeSpecForProviderCreateFromSnapshotResourceIdRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VolumeSpecForProviderCreateFromSnapshotResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1VolumeSpecForProviderCreateFromSnapshotResourceIdRef
     public V1beta1VolumeSpecForProviderCreateFromSnapshotResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Snapshot in netapp to populate createFromSnapshotResourceId.</summary>
 public partial class V1beta1VolumeSpecForProviderCreateFromSnapshotResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1VolumeSpecForProviderCreateFromSnapshotResourceIdSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VolumeSpecForProviderCreateFromSnapshotResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1VolumeSpecForProviderCreateFromSnapshotResourceIdSel
     public V1beta1VolumeSpecForProviderCreateFromSnapshotResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Snapshot in netapp to populate createFromSnapshotResourceId.</summary>
 public partial class V1beta1VolumeSpecForProviderCreateFromSnapshotResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1VolumeSpecForProviderDataProtectionReplicationRemoteVolumeRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VolumeSpecForProviderDataProtectionReplicationRemoteVolumeResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1VolumeSpecForProviderDataProtectionReplicationRemote
     public V1beta1VolumeSpecForProviderDataProtectionReplicationRemoteVolumeResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Volume in netapp to populate remoteVolumeResourceId.</summary>
 public partial class V1beta1VolumeSpecForProviderDataProtectionReplicationRemoteVolumeResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1VolumeSpecForProviderDataProtectionReplicationRemoteVolumeRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VolumeSpecForProviderDataProtectionReplicationRemoteVolumeResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1VolumeSpecForProviderDataProtectionReplicationRemote
     public V1beta1VolumeSpecForProviderDataProtectionReplicationRemoteVolumeResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Volume in netapp to populate remoteVolumeResourceId.</summary>
 public partial class V1beta1VolumeSpecForProviderDataProtectionReplicationRemoteVolumeResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1VolumeSpecForProviderDataProtectionReplicationRemote
     public V1beta1VolumeSpecForProviderDataProtectionReplicationRemoteVolumeResourceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VolumeSpecForProviderDataProtectionReplication
 {
     /// <summary>The endpoint type, default value is dst for destination.</summary>
@@ -341,6 +354,7 @@ public enum V1beta1VolumeSpecForProviderDataProtectionSnapshotPolicySnapshotPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VolumeSpecForProviderDataProtectionSnapshotPolicySnapshotPolicyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -354,6 +368,7 @@ public partial class V1beta1VolumeSpecForProviderDataProtectionSnapshotPolicySna
     public V1beta1VolumeSpecForProviderDataProtectionSnapshotPolicySnapshotPolicyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SnapshotPolicy in netapp to populate snapshotPolicyId.</summary>
 public partial class V1beta1VolumeSpecForProviderDataProtectionSnapshotPolicySnapshotPolicyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -385,6 +400,7 @@ public enum V1beta1VolumeSpecForProviderDataProtectionSnapshotPolicySnapshotPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VolumeSpecForProviderDataProtectionSnapshotPolicySnapshotPolicyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -398,6 +414,7 @@ public partial class V1beta1VolumeSpecForProviderDataProtectionSnapshotPolicySna
     public V1beta1VolumeSpecForProviderDataProtectionSnapshotPolicySnapshotPolicyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SnapshotPolicy in netapp to populate snapshotPolicyId.</summary>
 public partial class V1beta1VolumeSpecForProviderDataProtectionSnapshotPolicySnapshotPolicyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -413,6 +430,7 @@ public partial class V1beta1VolumeSpecForProviderDataProtectionSnapshotPolicySna
     public V1beta1VolumeSpecForProviderDataProtectionSnapshotPolicySnapshotPolicyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VolumeSpecForProviderDataProtectionSnapshotPolicy
 {
     /// <summary>Resource ID of the snapshot policy to apply to the volume.</summary>
@@ -428,6 +446,7 @@ public partial class V1beta1VolumeSpecForProviderDataProtectionSnapshotPolicy
     public V1beta1VolumeSpecForProviderDataProtectionSnapshotPolicySnapshotPolicyIdSelector? SnapshotPolicyIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VolumeSpecForProviderExportPolicyRule
 {
     /// <summary>A list of allowed clients IPv4 addresses.</summary>
@@ -475,6 +494,7 @@ public enum V1beta1VolumeSpecForProviderPoolNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VolumeSpecForProviderPoolNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -488,6 +508,7 @@ public partial class V1beta1VolumeSpecForProviderPoolNameRefPolicy
     public V1beta1VolumeSpecForProviderPoolNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Pool in netapp to populate poolName.</summary>
 public partial class V1beta1VolumeSpecForProviderPoolNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -519,6 +540,7 @@ public enum V1beta1VolumeSpecForProviderPoolNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VolumeSpecForProviderPoolNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -532,6 +554,7 @@ public partial class V1beta1VolumeSpecForProviderPoolNameSelectorPolicy
     public V1beta1VolumeSpecForProviderPoolNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Pool in netapp to populate poolName.</summary>
 public partial class V1beta1VolumeSpecForProviderPoolNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -567,6 +590,7 @@ public enum V1beta1VolumeSpecForProviderResourceGroupNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VolumeSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -580,6 +604,7 @@ public partial class V1beta1VolumeSpecForProviderResourceGroupNameRefPolicy
     public V1beta1VolumeSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1VolumeSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -611,6 +636,7 @@ public enum V1beta1VolumeSpecForProviderResourceGroupNameSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VolumeSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -624,6 +650,7 @@ public partial class V1beta1VolumeSpecForProviderResourceGroupNameSelectorPolicy
     public V1beta1VolumeSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1VolumeSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -659,6 +686,7 @@ public enum V1beta1VolumeSpecForProviderSubnetIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VolumeSpecForProviderSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -672,6 +700,7 @@ public partial class V1beta1VolumeSpecForProviderSubnetIdRefPolicy
     public V1beta1VolumeSpecForProviderSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1VolumeSpecForProviderSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -703,6 +732,7 @@ public enum V1beta1VolumeSpecForProviderSubnetIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VolumeSpecForProviderSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -716,6 +746,7 @@ public partial class V1beta1VolumeSpecForProviderSubnetIdSelectorPolicy
     public V1beta1VolumeSpecForProviderSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1VolumeSpecForProviderSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -731,6 +762,7 @@ public partial class V1beta1VolumeSpecForProviderSubnetIdSelector
     public V1beta1VolumeSpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VolumeSpecForProvider
 {
     /// <summary>The name of the NetApp account in which the NetApp Pool should be created. Changing this forces a new resource to be created.</summary>
@@ -890,6 +922,7 @@ public enum V1beta1VolumeSpecInitProviderCreateFromSnapshotResourceIdRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VolumeSpecInitProviderCreateFromSnapshotResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -903,6 +936,7 @@ public partial class V1beta1VolumeSpecInitProviderCreateFromSnapshotResourceIdRe
     public V1beta1VolumeSpecInitProviderCreateFromSnapshotResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Snapshot in netapp to populate createFromSnapshotResourceId.</summary>
 public partial class V1beta1VolumeSpecInitProviderCreateFromSnapshotResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -934,6 +968,7 @@ public enum V1beta1VolumeSpecInitProviderCreateFromSnapshotResourceIdSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VolumeSpecInitProviderCreateFromSnapshotResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -947,6 +982,7 @@ public partial class V1beta1VolumeSpecInitProviderCreateFromSnapshotResourceIdSe
     public V1beta1VolumeSpecInitProviderCreateFromSnapshotResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Snapshot in netapp to populate createFromSnapshotResourceId.</summary>
 public partial class V1beta1VolumeSpecInitProviderCreateFromSnapshotResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -982,6 +1018,7 @@ public enum V1beta1VolumeSpecInitProviderDataProtectionReplicationRemoteVolumeRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VolumeSpecInitProviderDataProtectionReplicationRemoteVolumeResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -995,6 +1032,7 @@ public partial class V1beta1VolumeSpecInitProviderDataProtectionReplicationRemot
     public V1beta1VolumeSpecInitProviderDataProtectionReplicationRemoteVolumeResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Volume in netapp to populate remoteVolumeResourceId.</summary>
 public partial class V1beta1VolumeSpecInitProviderDataProtectionReplicationRemoteVolumeResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1026,6 +1064,7 @@ public enum V1beta1VolumeSpecInitProviderDataProtectionReplicationRemoteVolumeRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VolumeSpecInitProviderDataProtectionReplicationRemoteVolumeResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1039,6 +1078,7 @@ public partial class V1beta1VolumeSpecInitProviderDataProtectionReplicationRemot
     public V1beta1VolumeSpecInitProviderDataProtectionReplicationRemoteVolumeResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Volume in netapp to populate remoteVolumeResourceId.</summary>
 public partial class V1beta1VolumeSpecInitProviderDataProtectionReplicationRemoteVolumeResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1054,6 +1094,7 @@ public partial class V1beta1VolumeSpecInitProviderDataProtectionReplicationRemot
     public V1beta1VolumeSpecInitProviderDataProtectionReplicationRemoteVolumeResourceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VolumeSpecInitProviderDataProtectionReplication
 {
     /// <summary>The endpoint type, default value is dst for destination.</summary>
@@ -1101,6 +1142,7 @@ public enum V1beta1VolumeSpecInitProviderDataProtectionSnapshotPolicySnapshotPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VolumeSpecInitProviderDataProtectionSnapshotPolicySnapshotPolicyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1114,6 +1156,7 @@ public partial class V1beta1VolumeSpecInitProviderDataProtectionSnapshotPolicySn
     public V1beta1VolumeSpecInitProviderDataProtectionSnapshotPolicySnapshotPolicyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SnapshotPolicy in netapp to populate snapshotPolicyId.</summary>
 public partial class V1beta1VolumeSpecInitProviderDataProtectionSnapshotPolicySnapshotPolicyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1145,6 +1188,7 @@ public enum V1beta1VolumeSpecInitProviderDataProtectionSnapshotPolicySnapshotPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VolumeSpecInitProviderDataProtectionSnapshotPolicySnapshotPolicyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1158,6 +1202,7 @@ public partial class V1beta1VolumeSpecInitProviderDataProtectionSnapshotPolicySn
     public V1beta1VolumeSpecInitProviderDataProtectionSnapshotPolicySnapshotPolicyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SnapshotPolicy in netapp to populate snapshotPolicyId.</summary>
 public partial class V1beta1VolumeSpecInitProviderDataProtectionSnapshotPolicySnapshotPolicyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1173,6 +1218,7 @@ public partial class V1beta1VolumeSpecInitProviderDataProtectionSnapshotPolicySn
     public V1beta1VolumeSpecInitProviderDataProtectionSnapshotPolicySnapshotPolicyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VolumeSpecInitProviderDataProtectionSnapshotPolicy
 {
     /// <summary>Resource ID of the snapshot policy to apply to the volume.</summary>
@@ -1188,6 +1234,7 @@ public partial class V1beta1VolumeSpecInitProviderDataProtectionSnapshotPolicy
     public V1beta1VolumeSpecInitProviderDataProtectionSnapshotPolicySnapshotPolicyIdSelector? SnapshotPolicyIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VolumeSpecInitProviderExportPolicyRule
 {
     /// <summary>A list of allowed clients IPv4 addresses.</summary>
@@ -1235,6 +1282,7 @@ public enum V1beta1VolumeSpecInitProviderSubnetIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VolumeSpecInitProviderSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1248,6 +1296,7 @@ public partial class V1beta1VolumeSpecInitProviderSubnetIdRefPolicy
     public V1beta1VolumeSpecInitProviderSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1VolumeSpecInitProviderSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1279,6 +1328,7 @@ public enum V1beta1VolumeSpecInitProviderSubnetIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VolumeSpecInitProviderSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1292,6 +1342,7 @@ public partial class V1beta1VolumeSpecInitProviderSubnetIdSelectorPolicy
     public V1beta1VolumeSpecInitProviderSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1VolumeSpecInitProviderSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1307,6 +1358,7 @@ public partial class V1beta1VolumeSpecInitProviderSubnetIdSelector
     public V1beta1VolumeSpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1VolumeSpecInitProvider
 {
     /// <summary>Is the NetApp Volume enabled for Azure VMware Solution (AVS) datastore purpose. Defaults to false. Changing this forces a new resource to be created.</summary>
@@ -1452,6 +1504,7 @@ public enum V1beta1VolumeSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VolumeSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1465,6 +1518,7 @@ public partial class V1beta1VolumeSpecProviderConfigRefPolicy
     public V1beta1VolumeSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1VolumeSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1496,6 +1550,7 @@ public enum V1beta1VolumeSpecPublishConnectionDetailsToConfigRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VolumeSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1509,6 +1564,7 @@ public partial class V1beta1VolumeSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1VolumeSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1VolumeSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1520,6 +1576,7 @@ public partial class V1beta1VolumeSpecPublishConnectionDetailsToConfigRef
     public V1beta1VolumeSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1VolumeSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1535,6 +1592,7 @@ public partial class V1beta1VolumeSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1VolumeSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1550,6 +1608,7 @@ public partial class V1beta1VolumeSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1VolumeSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1561,6 +1620,7 @@ public partial class V1beta1VolumeSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>VolumeSpec defines the desired state of Volume</summary>
 public partial class V1beta1VolumeSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1593,6 +1653,7 @@ public partial class V1beta1VolumeSpec
     public V1beta1VolumeSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VolumeStatusAtProviderDataProtectionReplication
 {
     /// <summary>The endpoint type, default value is dst for destination.</summary>
@@ -1612,6 +1673,7 @@ public partial class V1beta1VolumeStatusAtProviderDataProtectionReplication
     public string? ReplicationFrequency { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VolumeStatusAtProviderDataProtectionSnapshotPolicy
 {
     /// <summary>Resource ID of the snapshot policy to apply to the volume.</summary>
@@ -1619,6 +1681,7 @@ public partial class V1beta1VolumeStatusAtProviderDataProtectionSnapshotPolicy
     public string? SnapshotPolicyId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VolumeStatusAtProviderExportPolicyRule
 {
     /// <summary>A list of allowed clients IPv4 addresses.</summary>
@@ -1646,6 +1709,7 @@ public partial class V1beta1VolumeStatusAtProviderExportPolicyRule
     public bool? UnixReadWrite { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VolumeStatusAtProvider
 {
     /// <summary>The name of the NetApp account in which the NetApp Pool should be created. Changing this forces a new resource to be created.</summary>
@@ -1753,6 +1817,7 @@ public partial class V1beta1VolumeStatusAtProvider
     public string? Zone { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1VolumeStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1780,6 +1845,7 @@ public partial class V1beta1VolumeStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>VolumeStatus defines the observed state of Volume.</summary>
 public partial class V1beta1VolumeStatus
 {
     /// <summary></summary>
@@ -1796,6 +1862,7 @@ public partial class V1beta1VolumeStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Volume is the Schema for the Volumes API. Manages a NetApp Volume.</summary>
 public partial class V1beta1Volume : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1VolumeSpec>, IStatus<V1beta1VolumeStatus>
 {
     public const string KubeApiVersion = "v1beta1";

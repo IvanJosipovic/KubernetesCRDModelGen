@@ -38,6 +38,7 @@ public enum V1beta1PolicyAttachmentSpecForProviderPolicyIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PolicyAttachmentSpecForProviderPolicyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1PolicyAttachmentSpecForProviderPolicyIdRefPolicy
     public V1beta1PolicyAttachmentSpecForProviderPolicyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Policy in organizations to populate policyId.</summary>
 public partial class V1beta1PolicyAttachmentSpecForProviderPolicyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1PolicyAttachmentSpecForProviderPolicyIdSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PolicyAttachmentSpecForProviderPolicyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1PolicyAttachmentSpecForProviderPolicyIdSelectorPolic
     public V1beta1PolicyAttachmentSpecForProviderPolicyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Policy in organizations to populate policyId.</summary>
 public partial class V1beta1PolicyAttachmentSpecForProviderPolicyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1PolicyAttachmentSpecForProviderPolicyIdSelector
     public V1beta1PolicyAttachmentSpecForProviderPolicyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PolicyAttachmentSpecForProvider
 {
     /// <summary>The unique identifier (ID) of the policy that you want to attach to the target.</summary>
@@ -157,6 +162,7 @@ public enum V1beta1PolicyAttachmentSpecInitProviderPolicyIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PolicyAttachmentSpecInitProviderPolicyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -170,6 +176,7 @@ public partial class V1beta1PolicyAttachmentSpecInitProviderPolicyIdRefPolicy
     public V1beta1PolicyAttachmentSpecInitProviderPolicyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Policy in organizations to populate policyId.</summary>
 public partial class V1beta1PolicyAttachmentSpecInitProviderPolicyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -201,6 +208,7 @@ public enum V1beta1PolicyAttachmentSpecInitProviderPolicyIdSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PolicyAttachmentSpecInitProviderPolicyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -214,6 +222,7 @@ public partial class V1beta1PolicyAttachmentSpecInitProviderPolicyIdSelectorPoli
     public V1beta1PolicyAttachmentSpecInitProviderPolicyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Policy in organizations to populate policyId.</summary>
 public partial class V1beta1PolicyAttachmentSpecInitProviderPolicyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -229,6 +238,7 @@ public partial class V1beta1PolicyAttachmentSpecInitProviderPolicyIdSelector
     public V1beta1PolicyAttachmentSpecInitProviderPolicyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1PolicyAttachmentSpecInitProvider
 {
     /// <summary>The unique identifier (ID) of the policy that you want to attach to the target.</summary>
@@ -294,6 +304,7 @@ public enum V1beta1PolicyAttachmentSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PolicyAttachmentSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -307,6 +318,7 @@ public partial class V1beta1PolicyAttachmentSpecProviderConfigRefPolicy
     public V1beta1PolicyAttachmentSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1PolicyAttachmentSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -338,6 +350,7 @@ public enum V1beta1PolicyAttachmentSpecPublishConnectionDetailsToConfigRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PolicyAttachmentSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -351,6 +364,7 @@ public partial class V1beta1PolicyAttachmentSpecPublishConnectionDetailsToConfig
     public V1beta1PolicyAttachmentSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1PolicyAttachmentSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -362,6 +376,7 @@ public partial class V1beta1PolicyAttachmentSpecPublishConnectionDetailsToConfig
     public V1beta1PolicyAttachmentSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1PolicyAttachmentSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -377,6 +392,7 @@ public partial class V1beta1PolicyAttachmentSpecPublishConnectionDetailsToMetada
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1PolicyAttachmentSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -392,6 +408,7 @@ public partial class V1beta1PolicyAttachmentSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1PolicyAttachmentSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -403,6 +420,7 @@ public partial class V1beta1PolicyAttachmentSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>PolicyAttachmentSpec defines the desired state of PolicyAttachment</summary>
 public partial class V1beta1PolicyAttachmentSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -435,6 +453,7 @@ public partial class V1beta1PolicyAttachmentSpec
     public V1beta1PolicyAttachmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PolicyAttachmentStatusAtProvider
 {
     /// <summary></summary>
@@ -454,6 +473,7 @@ public partial class V1beta1PolicyAttachmentStatusAtProvider
     public string? TargetId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1PolicyAttachmentStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -481,6 +501,7 @@ public partial class V1beta1PolicyAttachmentStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>PolicyAttachmentStatus defines the observed state of PolicyAttachment.</summary>
 public partial class V1beta1PolicyAttachmentStatus
 {
     /// <summary></summary>
@@ -497,6 +518,7 @@ public partial class V1beta1PolicyAttachmentStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>PolicyAttachment is the Schema for the PolicyAttachments API. Provides a resource to attach an AWS Organizations policy to an organization account, root, or unit.</summary>
 public partial class V1beta1PolicyAttachment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1PolicyAttachmentSpec>, IStatus<V1beta1PolicyAttachmentStatus>
 {
     public const string KubeApiVersion = "v1beta1";

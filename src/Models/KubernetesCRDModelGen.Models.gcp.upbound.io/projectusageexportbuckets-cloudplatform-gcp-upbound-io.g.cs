@@ -38,6 +38,7 @@ public enum V1beta1ProjectUsageExportBucketSpecForProviderBucketNameRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ProjectUsageExportBucketSpecForProviderBucketNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ProjectUsageExportBucketSpecForProviderBucketNameRef
     public V1beta1ProjectUsageExportBucketSpecForProviderBucketNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in storage to populate bucketName.</summary>
 public partial class V1beta1ProjectUsageExportBucketSpecForProviderBucketNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ProjectUsageExportBucketSpecForProviderBucketNameSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ProjectUsageExportBucketSpecForProviderBucketNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ProjectUsageExportBucketSpecForProviderBucketNameSel
     public V1beta1ProjectUsageExportBucketSpecForProviderBucketNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in storage to populate bucketName.</summary>
 public partial class V1beta1ProjectUsageExportBucketSpecForProviderBucketNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1ProjectUsageExportBucketSpecForProviderProjectRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ProjectUsageExportBucketSpecForProviderProjectRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1ProjectUsageExportBucketSpecForProviderProjectRefPol
     public V1beta1ProjectUsageExportBucketSpecForProviderProjectRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Project in cloudplatform to populate project.</summary>
 public partial class V1beta1ProjectUsageExportBucketSpecForProviderProjectRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1ProjectUsageExportBucketSpecForProviderProjectSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ProjectUsageExportBucketSpecForProviderProjectSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1ProjectUsageExportBucketSpecForProviderProjectSelect
     public V1beta1ProjectUsageExportBucketSpecForProviderProjectSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Project in cloudplatform to populate project.</summary>
 public partial class V1beta1ProjectUsageExportBucketSpecForProviderProjectSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1ProjectUsageExportBucketSpecForProviderProjectSelect
     public V1beta1ProjectUsageExportBucketSpecForProviderProjectSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ProjectUsageExportBucketSpecForProvider
 {
     /// <summary>:  The bucket to store reports in.</summary>
@@ -253,6 +262,7 @@ public enum V1beta1ProjectUsageExportBucketSpecInitProviderBucketNameRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ProjectUsageExportBucketSpecInitProviderBucketNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -266,6 +276,7 @@ public partial class V1beta1ProjectUsageExportBucketSpecInitProviderBucketNameRe
     public V1beta1ProjectUsageExportBucketSpecInitProviderBucketNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in storage to populate bucketName.</summary>
 public partial class V1beta1ProjectUsageExportBucketSpecInitProviderBucketNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -297,6 +308,7 @@ public enum V1beta1ProjectUsageExportBucketSpecInitProviderBucketNameSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ProjectUsageExportBucketSpecInitProviderBucketNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -310,6 +322,7 @@ public partial class V1beta1ProjectUsageExportBucketSpecInitProviderBucketNameSe
     public V1beta1ProjectUsageExportBucketSpecInitProviderBucketNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in storage to populate bucketName.</summary>
 public partial class V1beta1ProjectUsageExportBucketSpecInitProviderBucketNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -345,6 +358,7 @@ public enum V1beta1ProjectUsageExportBucketSpecInitProviderProjectRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ProjectUsageExportBucketSpecInitProviderProjectRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -358,6 +372,7 @@ public partial class V1beta1ProjectUsageExportBucketSpecInitProviderProjectRefPo
     public V1beta1ProjectUsageExportBucketSpecInitProviderProjectRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Project in cloudplatform to populate project.</summary>
 public partial class V1beta1ProjectUsageExportBucketSpecInitProviderProjectRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -389,6 +404,7 @@ public enum V1beta1ProjectUsageExportBucketSpecInitProviderProjectSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ProjectUsageExportBucketSpecInitProviderProjectSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -402,6 +418,7 @@ public partial class V1beta1ProjectUsageExportBucketSpecInitProviderProjectSelec
     public V1beta1ProjectUsageExportBucketSpecInitProviderProjectSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Project in cloudplatform to populate project.</summary>
 public partial class V1beta1ProjectUsageExportBucketSpecInitProviderProjectSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -417,6 +434,7 @@ public partial class V1beta1ProjectUsageExportBucketSpecInitProviderProjectSelec
     public V1beta1ProjectUsageExportBucketSpecInitProviderProjectSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ProjectUsageExportBucketSpecInitProvider
 {
     /// <summary>:  The bucket to store reports in.</summary>
@@ -490,6 +508,7 @@ public enum V1beta1ProjectUsageExportBucketSpecProviderConfigRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ProjectUsageExportBucketSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -503,6 +522,7 @@ public partial class V1beta1ProjectUsageExportBucketSpecProviderConfigRefPolicy
     public V1beta1ProjectUsageExportBucketSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ProjectUsageExportBucketSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -534,6 +554,7 @@ public enum V1beta1ProjectUsageExportBucketSpecPublishConnectionDetailsToConfigR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ProjectUsageExportBucketSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -547,6 +568,7 @@ public partial class V1beta1ProjectUsageExportBucketSpecPublishConnectionDetails
     public V1beta1ProjectUsageExportBucketSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ProjectUsageExportBucketSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -558,6 +580,7 @@ public partial class V1beta1ProjectUsageExportBucketSpecPublishConnectionDetails
     public V1beta1ProjectUsageExportBucketSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ProjectUsageExportBucketSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -573,6 +596,7 @@ public partial class V1beta1ProjectUsageExportBucketSpecPublishConnectionDetails
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ProjectUsageExportBucketSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -588,6 +612,7 @@ public partial class V1beta1ProjectUsageExportBucketSpecPublishConnectionDetails
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ProjectUsageExportBucketSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -599,6 +624,7 @@ public partial class V1beta1ProjectUsageExportBucketSpecWriteConnectionSecretToR
     public string Namespace { get; set; }
 }
 
+/// <summary>ProjectUsageExportBucketSpec defines the desired state of ProjectUsageExportBucket</summary>
 public partial class V1beta1ProjectUsageExportBucketSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -631,6 +657,7 @@ public partial class V1beta1ProjectUsageExportBucketSpec
     public V1beta1ProjectUsageExportBucketSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ProjectUsageExportBucketStatusAtProvider
 {
     /// <summary>:  The bucket to store reports in.</summary>
@@ -650,6 +677,7 @@ public partial class V1beta1ProjectUsageExportBucketStatusAtProvider
     public string? Project { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ProjectUsageExportBucketStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -677,6 +705,7 @@ public partial class V1beta1ProjectUsageExportBucketStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ProjectUsageExportBucketStatus defines the observed state of ProjectUsageExportBucket.</summary>
 public partial class V1beta1ProjectUsageExportBucketStatus
 {
     /// <summary></summary>
@@ -693,6 +722,7 @@ public partial class V1beta1ProjectUsageExportBucketStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ProjectUsageExportBucket is the Schema for the ProjectUsageExportBuckets API. Manages a project's usage export bucket.</summary>
 public partial class V1beta1ProjectUsageExportBucket : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ProjectUsageExportBucketSpec>, IStatus<V1beta1ProjectUsageExportBucketStatus>
 {
     public const string KubeApiVersion = "v1beta1";

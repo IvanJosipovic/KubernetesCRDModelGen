@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dns.cnrm.cloud.google.com;
+/// <summary>Cloud logging configuration.</summary>
 public partial class V1beta1DNSManagedZoneSpecCloudLoggingConfig
 {
     /// <summary>If set, enable query logging for this ManagedZone. False by default, making logging opt-in.</summary>
@@ -15,6 +16,7 @@ public partial class V1beta1DNSManagedZoneSpecCloudLoggingConfig
     public bool EnableLogging { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSManagedZoneSpecDnssecConfigDefaultKeySpecs
 {
     /// <summary>String mnemonic specifying the DNSSEC algorithm of this key Possible values: ["ecdsap256sha256", "ecdsap384sha384", "rsasha1", "rsasha256", "rsasha512"].</summary>
@@ -34,6 +36,7 @@ public partial class V1beta1DNSManagedZoneSpecDnssecConfigDefaultKeySpecs
     public string? Kind { get; set; }
 }
 
+/// <summary>DNSSEC configuration.</summary>
 public partial class V1beta1DNSManagedZoneSpecDnssecConfig
 {
     /// <summary>Specifies parameters that will be used for generating initial DnsKeys for this ManagedZone. If you provide a spec for keySigning or zoneSigning, you must also provide one for the other. default_key_specs can only be updated when the state is 'off'.</summary>
@@ -53,6 +56,7 @@ public partial class V1beta1DNSManagedZoneSpecDnssecConfig
     public string? State { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSManagedZoneSpecForwardingConfigTargetNameServers
 {
     /// <summary>Forwarding path for this TargetNameServer. If unset or 'default' Cloud DNS will make forwarding decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go to the Internet. When set to 'private', Cloud DNS will always send queries through VPC for this target Possible values: ["default", "private"].</summary>
@@ -64,6 +68,7 @@ public partial class V1beta1DNSManagedZoneSpecForwardingConfigTargetNameServers
     public string Ipv4Address { get; set; }
 }
 
+/// <summary>The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field contains the set of destinations to forward to.</summary>
 public partial class V1beta1DNSManagedZoneSpecForwardingConfig
 {
     /// <summary>List of target name servers to forward to. Cloud DNS will select the best available name server if more than one target is given.</summary>
@@ -71,6 +76,7 @@ public partial class V1beta1DNSManagedZoneSpecForwardingConfig
     public IList<V1beta1DNSManagedZoneSpecForwardingConfigTargetNameServers> TargetNameServers { get; set; }
 }
 
+/// <summary>VPC network to forward queries to.</summary>
 public partial class V1beta1DNSManagedZoneSpecPeeringConfigTargetNetworkNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
@@ -86,6 +92,7 @@ public partial class V1beta1DNSManagedZoneSpecPeeringConfigTargetNetworkNetworkR
     public string? Namespace { get; set; }
 }
 
+/// <summary>The network with which to peer.</summary>
 public partial class V1beta1DNSManagedZoneSpecPeeringConfigTargetNetwork
 {
     /// <summary>VPC network to forward queries to.</summary>
@@ -93,6 +100,7 @@ public partial class V1beta1DNSManagedZoneSpecPeeringConfigTargetNetwork
     public V1beta1DNSManagedZoneSpecPeeringConfigTargetNetworkNetworkRef NetworkRef { get; set; }
 }
 
+/// <summary>The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the network to peer with.</summary>
 public partial class V1beta1DNSManagedZoneSpecPeeringConfig
 {
     /// <summary>The network with which to peer.</summary>
@@ -100,6 +108,7 @@ public partial class V1beta1DNSManagedZoneSpecPeeringConfig
     public V1beta1DNSManagedZoneSpecPeeringConfigTargetNetwork TargetNetwork { get; set; }
 }
 
+/// <summary>The resource name of the cluster to bind this ManagedZone to. This should be specified in the format like 'projects/*/locations/*/clusters/*'.</summary>
 public partial class V1beta1DNSManagedZoneSpecPrivateVisibilityConfigGkeClustersGkeClusterNameRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ContainerCluster` resource.</summary>
@@ -115,6 +124,7 @@ public partial class V1beta1DNSManagedZoneSpecPrivateVisibilityConfigGkeClusters
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSManagedZoneSpecPrivateVisibilityConfigGkeClusters
 {
     /// <summary>The resource name of the cluster to bind this ManagedZone to. This should be specified in the format like 'projects/*/locations/*/clusters/*'.</summary>
@@ -122,6 +132,7 @@ public partial class V1beta1DNSManagedZoneSpecPrivateVisibilityConfigGkeClusters
     public V1beta1DNSManagedZoneSpecPrivateVisibilityConfigGkeClustersGkeClusterNameRef GkeClusterNameRef { get; set; }
 }
 
+/// <summary>VPC network to bind to.</summary>
 public partial class V1beta1DNSManagedZoneSpecPrivateVisibilityConfigNetworksNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
@@ -137,6 +148,7 @@ public partial class V1beta1DNSManagedZoneSpecPrivateVisibilityConfigNetworksNet
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSManagedZoneSpecPrivateVisibilityConfigNetworks
 {
     /// <summary>VPC network to bind to.</summary>
@@ -144,6 +156,7 @@ public partial class V1beta1DNSManagedZoneSpecPrivateVisibilityConfigNetworks
     public V1beta1DNSManagedZoneSpecPrivateVisibilityConfigNetworksNetworkRef NetworkRef { get; set; }
 }
 
+/// <summary>For privately visible zones, the set of Virtual Private Cloud resources that the zone is visible from. At least one of 'gke_clusters' or 'networks' must be specified.</summary>
 public partial class V1beta1DNSManagedZoneSpecPrivateVisibilityConfig
 {
     /// <summary>The list of Google Kubernetes Engine clusters that can see this zone.</summary>
@@ -155,6 +168,7 @@ public partial class V1beta1DNSManagedZoneSpecPrivateVisibilityConfig
     public IList<V1beta1DNSManagedZoneSpecPrivateVisibilityConfigNetworks>? Networks { get; set; }
 }
 
+/// <summary>The namespace associated with the zone.</summary>
 public partial class V1beta1DNSManagedZoneSpecServiceDirectoryConfigNamespace
 {
     /// <summary>The fully qualified or partial URL of the service directory namespace that should be associated with the zone. This should be formatted like 'https://servicedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespaces/{namespace_id}' or simply 'projects/{project}/locations/{location}/namespaces/{namespace_id}' Ignored for 'public' visibility zones.</summary>
@@ -162,6 +176,7 @@ public partial class V1beta1DNSManagedZoneSpecServiceDirectoryConfigNamespace
     public string NamespaceUrl { get; set; }
 }
 
+/// <summary>Immutable. The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.</summary>
 public partial class V1beta1DNSManagedZoneSpecServiceDirectoryConfig
 {
     /// <summary>The namespace associated with the zone.</summary>
@@ -169,6 +184,7 @@ public partial class V1beta1DNSManagedZoneSpecServiceDirectoryConfig
     public V1beta1DNSManagedZoneSpecServiceDirectoryConfigNamespace Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSManagedZoneSpec
 {
     /// <summary>Cloud logging configuration.</summary>
@@ -216,6 +232,7 @@ public partial class V1beta1DNSManagedZoneSpec
     public string? Visibility { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSManagedZoneStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -239,6 +256,7 @@ public partial class V1beta1DNSManagedZoneStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSManagedZoneStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -263,6 +281,7 @@ public partial class V1beta1DNSManagedZoneStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1DNSManagedZone : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DNSManagedZoneSpec>, IStatus<V1beta1DNSManagedZoneStatus>
 {
     public const string KubeApiVersion = "v1beta1";

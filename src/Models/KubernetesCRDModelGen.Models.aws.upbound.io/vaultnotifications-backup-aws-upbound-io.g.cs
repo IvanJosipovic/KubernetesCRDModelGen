@@ -38,6 +38,7 @@ public enum V1beta1VaultNotificationsSpecForProviderBackupVaultNameRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VaultNotificationsSpecForProviderBackupVaultNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1VaultNotificationsSpecForProviderBackupVaultNameRefP
     public V1beta1VaultNotificationsSpecForProviderBackupVaultNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Vault in backup to populate backupVaultName.</summary>
 public partial class V1beta1VaultNotificationsSpecForProviderBackupVaultNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1VaultNotificationsSpecForProviderBackupVaultNameSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VaultNotificationsSpecForProviderBackupVaultNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1VaultNotificationsSpecForProviderBackupVaultNameSele
     public V1beta1VaultNotificationsSpecForProviderBackupVaultNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Vault in backup to populate backupVaultName.</summary>
 public partial class V1beta1VaultNotificationsSpecForProviderBackupVaultNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1VaultNotificationsSpecForProviderSnsTopicArnRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VaultNotificationsSpecForProviderSnsTopicArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1VaultNotificationsSpecForProviderSnsTopicArnRefPolic
     public V1beta1VaultNotificationsSpecForProviderSnsTopicArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Topic in sns to populate snsTopicArn.</summary>
 public partial class V1beta1VaultNotificationsSpecForProviderSnsTopicArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1VaultNotificationsSpecForProviderSnsTopicArnSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VaultNotificationsSpecForProviderSnsTopicArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1VaultNotificationsSpecForProviderSnsTopicArnSelector
     public V1beta1VaultNotificationsSpecForProviderSnsTopicArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Topic in sns to populate snsTopicArn.</summary>
 public partial class V1beta1VaultNotificationsSpecForProviderSnsTopicArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1VaultNotificationsSpecForProviderSnsTopicArnSelector
     public V1beta1VaultNotificationsSpecForProviderSnsTopicArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VaultNotificationsSpecForProvider
 {
     /// <summary>An array of events that indicate the status of jobs to back up resources to the backup vault.</summary>
@@ -257,6 +266,7 @@ public enum V1beta1VaultNotificationsSpecInitProviderBackupVaultNameRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VaultNotificationsSpecInitProviderBackupVaultNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -270,6 +280,7 @@ public partial class V1beta1VaultNotificationsSpecInitProviderBackupVaultNameRef
     public V1beta1VaultNotificationsSpecInitProviderBackupVaultNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Vault in backup to populate backupVaultName.</summary>
 public partial class V1beta1VaultNotificationsSpecInitProviderBackupVaultNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -301,6 +312,7 @@ public enum V1beta1VaultNotificationsSpecInitProviderBackupVaultNameSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VaultNotificationsSpecInitProviderBackupVaultNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -314,6 +326,7 @@ public partial class V1beta1VaultNotificationsSpecInitProviderBackupVaultNameSel
     public V1beta1VaultNotificationsSpecInitProviderBackupVaultNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Vault in backup to populate backupVaultName.</summary>
 public partial class V1beta1VaultNotificationsSpecInitProviderBackupVaultNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -349,6 +362,7 @@ public enum V1beta1VaultNotificationsSpecInitProviderSnsTopicArnRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VaultNotificationsSpecInitProviderSnsTopicArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -362,6 +376,7 @@ public partial class V1beta1VaultNotificationsSpecInitProviderSnsTopicArnRefPoli
     public V1beta1VaultNotificationsSpecInitProviderSnsTopicArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Topic in sns to populate snsTopicArn.</summary>
 public partial class V1beta1VaultNotificationsSpecInitProviderSnsTopicArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -393,6 +408,7 @@ public enum V1beta1VaultNotificationsSpecInitProviderSnsTopicArnSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VaultNotificationsSpecInitProviderSnsTopicArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -406,6 +422,7 @@ public partial class V1beta1VaultNotificationsSpecInitProviderSnsTopicArnSelecto
     public V1beta1VaultNotificationsSpecInitProviderSnsTopicArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Topic in sns to populate snsTopicArn.</summary>
 public partial class V1beta1VaultNotificationsSpecInitProviderSnsTopicArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -421,6 +438,7 @@ public partial class V1beta1VaultNotificationsSpecInitProviderSnsTopicArnSelecto
     public V1beta1VaultNotificationsSpecInitProviderSnsTopicArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1VaultNotificationsSpecInitProvider
 {
     /// <summary>An array of events that indicate the status of jobs to back up resources to the backup vault.</summary>
@@ -494,6 +512,7 @@ public enum V1beta1VaultNotificationsSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VaultNotificationsSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -507,6 +526,7 @@ public partial class V1beta1VaultNotificationsSpecProviderConfigRefPolicy
     public V1beta1VaultNotificationsSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1VaultNotificationsSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -538,6 +558,7 @@ public enum V1beta1VaultNotificationsSpecPublishConnectionDetailsToConfigRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VaultNotificationsSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -551,6 +572,7 @@ public partial class V1beta1VaultNotificationsSpecPublishConnectionDetailsToConf
     public V1beta1VaultNotificationsSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1VaultNotificationsSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -562,6 +584,7 @@ public partial class V1beta1VaultNotificationsSpecPublishConnectionDetailsToConf
     public V1beta1VaultNotificationsSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1VaultNotificationsSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -577,6 +600,7 @@ public partial class V1beta1VaultNotificationsSpecPublishConnectionDetailsToMeta
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1VaultNotificationsSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -592,6 +616,7 @@ public partial class V1beta1VaultNotificationsSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1VaultNotificationsSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -603,6 +628,7 @@ public partial class V1beta1VaultNotificationsSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>VaultNotificationsSpec defines the desired state of VaultNotifications</summary>
 public partial class V1beta1VaultNotificationsSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -635,6 +661,7 @@ public partial class V1beta1VaultNotificationsSpec
     public V1beta1VaultNotificationsSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VaultNotificationsStatusAtProvider
 {
     /// <summary>The ARN of the vault.</summary>
@@ -658,6 +685,7 @@ public partial class V1beta1VaultNotificationsStatusAtProvider
     public string? SnsTopicArn { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1VaultNotificationsStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -685,6 +713,7 @@ public partial class V1beta1VaultNotificationsStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>VaultNotificationsStatus defines the observed state of VaultNotifications.</summary>
 public partial class V1beta1VaultNotificationsStatus
 {
     /// <summary></summary>
@@ -701,6 +730,7 @@ public partial class V1beta1VaultNotificationsStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>VaultNotifications is the Schema for the VaultNotificationss API. Provides an AWS Backup vault notifications resource.</summary>
 public partial class V1beta1VaultNotifications : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1VaultNotificationsSpec>, IStatus<V1beta1VaultNotificationsStatus>
 {
     public const string KubeApiVersion = "v1beta1";

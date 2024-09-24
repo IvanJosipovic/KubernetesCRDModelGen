@@ -38,6 +38,7 @@ public enum V1beta1SharedImageSpecForProviderGalleryNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SharedImageSpecForProviderGalleryNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1SharedImageSpecForProviderGalleryNameRefPolicy
     public V1beta1SharedImageSpecForProviderGalleryNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SharedImageGallery in compute to populate galleryName.</summary>
 public partial class V1beta1SharedImageSpecForProviderGalleryNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1SharedImageSpecForProviderGalleryNameSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SharedImageSpecForProviderGalleryNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1SharedImageSpecForProviderGalleryNameSelectorPolicy
     public V1beta1SharedImageSpecForProviderGalleryNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SharedImageGallery in compute to populate galleryName.</summary>
 public partial class V1beta1SharedImageSpecForProviderGalleryNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1SharedImageSpecForProviderGalleryNameSelector
     public V1beta1SharedImageSpecForProviderGalleryNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SharedImageSpecForProviderIdentifier
 {
     /// <summary>The Offer Name for this Shared Image. Changing this forces a new resource to be created.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1SharedImageSpecForProviderIdentifier
     public string? Sku { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SharedImageSpecForProviderPurchasePlan
 {
     /// <summary>The Purchase Plan Name for this Shared Image. Changing this forces a new resource to be created.</summary>
@@ -160,6 +166,7 @@ public enum V1beta1SharedImageSpecForProviderResourceGroupNameRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SharedImageSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -173,6 +180,7 @@ public partial class V1beta1SharedImageSpecForProviderResourceGroupNameRefPolicy
     public V1beta1SharedImageSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1SharedImageSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -204,6 +212,7 @@ public enum V1beta1SharedImageSpecForProviderResourceGroupNameSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SharedImageSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -217,6 +226,7 @@ public partial class V1beta1SharedImageSpecForProviderResourceGroupNameSelectorP
     public V1beta1SharedImageSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1SharedImageSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -232,6 +242,7 @@ public partial class V1beta1SharedImageSpecForProviderResourceGroupNameSelector
     public V1beta1SharedImageSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SharedImageSpecForProvider
 {
     /// <summary>Specifies if the Shared Image supports Accelerated Network. Changing this forces a new resource to be created.</summary>
@@ -351,6 +362,7 @@ public partial class V1beta1SharedImageSpecForProvider
     public bool? TrustedLaunchSupported { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SharedImageSpecInitProviderIdentifier
 {
     /// <summary>The Offer Name for this Shared Image. Changing this forces a new resource to be created.</summary>
@@ -366,6 +378,7 @@ public partial class V1beta1SharedImageSpecInitProviderIdentifier
     public string? Sku { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SharedImageSpecInitProviderPurchasePlan
 {
     /// <summary>The Purchase Plan Name for this Shared Image. Changing this forces a new resource to be created.</summary>
@@ -381,6 +394,7 @@ public partial class V1beta1SharedImageSpecInitProviderPurchasePlan
     public string? Publisher { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1SharedImageSpecInitProvider
 {
     /// <summary>Specifies if the Shared Image supports Accelerated Network. Changing this forces a new resource to be created.</summary>
@@ -518,6 +532,7 @@ public enum V1beta1SharedImageSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SharedImageSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -531,6 +546,7 @@ public partial class V1beta1SharedImageSpecProviderConfigRefPolicy
     public V1beta1SharedImageSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1SharedImageSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -562,6 +578,7 @@ public enum V1beta1SharedImageSpecPublishConnectionDetailsToConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SharedImageSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -575,6 +592,7 @@ public partial class V1beta1SharedImageSpecPublishConnectionDetailsToConfigRefPo
     public V1beta1SharedImageSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1SharedImageSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -586,6 +604,7 @@ public partial class V1beta1SharedImageSpecPublishConnectionDetailsToConfigRef
     public V1beta1SharedImageSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1SharedImageSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -601,6 +620,7 @@ public partial class V1beta1SharedImageSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1SharedImageSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -616,6 +636,7 @@ public partial class V1beta1SharedImageSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1SharedImageSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -627,6 +648,7 @@ public partial class V1beta1SharedImageSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>SharedImageSpec defines the desired state of SharedImage</summary>
 public partial class V1beta1SharedImageSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -659,6 +681,7 @@ public partial class V1beta1SharedImageSpec
     public V1beta1SharedImageSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SharedImageStatusAtProviderIdentifier
 {
     /// <summary>The Offer Name for this Shared Image. Changing this forces a new resource to be created.</summary>
@@ -674,6 +697,7 @@ public partial class V1beta1SharedImageStatusAtProviderIdentifier
     public string? Sku { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SharedImageStatusAtProviderPurchasePlan
 {
     /// <summary>The Purchase Plan Name for this Shared Image. Changing this forces a new resource to be created.</summary>
@@ -689,6 +713,7 @@ public partial class V1beta1SharedImageStatusAtProviderPurchasePlan
     public string? Publisher { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SharedImageStatusAtProvider
 {
     /// <summary>Specifies if the Shared Image supports Accelerated Network. Changing this forces a new resource to be created.</summary>
@@ -796,6 +821,7 @@ public partial class V1beta1SharedImageStatusAtProvider
     public bool? TrustedLaunchSupported { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1SharedImageStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -823,6 +849,7 @@ public partial class V1beta1SharedImageStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>SharedImageStatus defines the observed state of SharedImage.</summary>
 public partial class V1beta1SharedImageStatus
 {
     /// <summary></summary>
@@ -839,6 +866,7 @@ public partial class V1beta1SharedImageStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>SharedImage is the Schema for the SharedImages API. Manages a Shared Image within a Shared Image Gallery.</summary>
 public partial class V1beta1SharedImage : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SharedImageSpec>, IStatus<V1beta1SharedImageStatus>
 {
     public const string KubeApiVersion = "v1beta1";

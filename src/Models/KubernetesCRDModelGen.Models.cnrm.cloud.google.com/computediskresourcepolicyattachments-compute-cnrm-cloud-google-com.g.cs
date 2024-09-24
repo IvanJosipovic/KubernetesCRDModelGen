@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1alpha1ComputeDiskResourcePolicyAttachmentSpecDiskRef
 {
     /// <summary>Allowed value: The `name` field of a `ComputeDisk` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1ComputeDiskResourcePolicyAttachmentSpecDiskRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1ComputeDiskResourcePolicyAttachmentSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -38,6 +40,7 @@ public partial class V1alpha1ComputeDiskResourcePolicyAttachmentSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputeDiskResourcePolicyAttachmentSpec
 {
     /// <summary></summary>
@@ -57,6 +60,7 @@ public partial class V1alpha1ComputeDiskResourcePolicyAttachmentSpec
     public string Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputeDiskResourcePolicyAttachmentStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -80,6 +84,7 @@ public partial class V1alpha1ComputeDiskResourcePolicyAttachmentStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputeDiskResourcePolicyAttachmentStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -92,6 +97,7 @@ public partial class V1alpha1ComputeDiskResourcePolicyAttachmentStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1ComputeDiskResourcePolicyAttachment : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ComputeDiskResourcePolicyAttachmentSpec>, IStatus<V1alpha1ComputeDiskResourcePolicyAttachmentStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

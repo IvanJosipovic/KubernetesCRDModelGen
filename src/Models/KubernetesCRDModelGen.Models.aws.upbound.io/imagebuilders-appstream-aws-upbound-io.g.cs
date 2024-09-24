@@ -18,6 +18,7 @@ public enum V1beta1ImageBuilderSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageBuilderSpecForProviderAccessEndpoint
 {
     /// <summary>Type of interface endpoint. For valid values, refer to the AWS documentation.</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1ImageBuilderSpecForProviderAccessEndpoint
     public string? VpceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageBuilderSpecForProviderDomainJoinInfo
 {
     /// <summary>Fully qualified name of the directory (for example, corp.example.com).</summary>
@@ -60,6 +62,7 @@ public enum V1beta1ImageBuilderSpecForProviderIamRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ImageBuilderSpecForProviderIamRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -73,6 +76,7 @@ public partial class V1beta1ImageBuilderSpecForProviderIamRoleArnRefPolicy
     public V1beta1ImageBuilderSpecForProviderIamRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate iamRoleArn.</summary>
 public partial class V1beta1ImageBuilderSpecForProviderIamRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -104,6 +108,7 @@ public enum V1beta1ImageBuilderSpecForProviderIamRoleArnSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ImageBuilderSpecForProviderIamRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -117,6 +122,7 @@ public partial class V1beta1ImageBuilderSpecForProviderIamRoleArnSelectorPolicy
     public V1beta1ImageBuilderSpecForProviderIamRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate iamRoleArn.</summary>
 public partial class V1beta1ImageBuilderSpecForProviderIamRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -152,6 +158,7 @@ public enum V1beta1ImageBuilderSpecForProviderVpcConfigSubnetIdRefsPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ImageBuilderSpecForProviderVpcConfigSubnetIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -165,6 +172,7 @@ public partial class V1beta1ImageBuilderSpecForProviderVpcConfigSubnetIdRefsPoli
     public V1beta1ImageBuilderSpecForProviderVpcConfigSubnetIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1ImageBuilderSpecForProviderVpcConfigSubnetIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -196,6 +204,7 @@ public enum V1beta1ImageBuilderSpecForProviderVpcConfigSubnetIdSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ImageBuilderSpecForProviderVpcConfigSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -209,6 +218,7 @@ public partial class V1beta1ImageBuilderSpecForProviderVpcConfigSubnetIdSelector
     public V1beta1ImageBuilderSpecForProviderVpcConfigSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 public partial class V1beta1ImageBuilderSpecForProviderVpcConfigSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -224,6 +234,7 @@ public partial class V1beta1ImageBuilderSpecForProviderVpcConfigSubnetIdSelector
     public V1beta1ImageBuilderSpecForProviderVpcConfigSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageBuilderSpecForProviderVpcConfig
 {
     /// <summary>Identifiers of the security groups for the image builder or image builder.</summary>
@@ -243,6 +254,7 @@ public partial class V1beta1ImageBuilderSpecForProviderVpcConfig
     public IList<string>? SubnetIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageBuilderSpecForProvider
 {
     /// <summary>Set of interface VPC endpoint (interface endpoint) objects. Maximum of 4. See below.</summary>
@@ -302,6 +314,7 @@ public partial class V1beta1ImageBuilderSpecForProvider
     public IList<V1beta1ImageBuilderSpecForProviderVpcConfig>? VpcConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageBuilderSpecInitProviderAccessEndpoint
 {
     /// <summary>Type of interface endpoint. For valid values, refer to the AWS documentation.</summary>
@@ -313,6 +326,7 @@ public partial class V1beta1ImageBuilderSpecInitProviderAccessEndpoint
     public string? VpceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageBuilderSpecInitProviderDomainJoinInfo
 {
     /// <summary>Fully qualified name of the directory (for example, corp.example.com).</summary>
@@ -344,6 +358,7 @@ public enum V1beta1ImageBuilderSpecInitProviderIamRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ImageBuilderSpecInitProviderIamRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -357,6 +372,7 @@ public partial class V1beta1ImageBuilderSpecInitProviderIamRoleArnRefPolicy
     public V1beta1ImageBuilderSpecInitProviderIamRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate iamRoleArn.</summary>
 public partial class V1beta1ImageBuilderSpecInitProviderIamRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -388,6 +404,7 @@ public enum V1beta1ImageBuilderSpecInitProviderIamRoleArnSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ImageBuilderSpecInitProviderIamRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -401,6 +418,7 @@ public partial class V1beta1ImageBuilderSpecInitProviderIamRoleArnSelectorPolicy
     public V1beta1ImageBuilderSpecInitProviderIamRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate iamRoleArn.</summary>
 public partial class V1beta1ImageBuilderSpecInitProviderIamRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -436,6 +454,7 @@ public enum V1beta1ImageBuilderSpecInitProviderVpcConfigSubnetIdRefsPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ImageBuilderSpecInitProviderVpcConfigSubnetIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -449,6 +468,7 @@ public partial class V1beta1ImageBuilderSpecInitProviderVpcConfigSubnetIdRefsPol
     public V1beta1ImageBuilderSpecInitProviderVpcConfigSubnetIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1ImageBuilderSpecInitProviderVpcConfigSubnetIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -480,6 +500,7 @@ public enum V1beta1ImageBuilderSpecInitProviderVpcConfigSubnetIdSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ImageBuilderSpecInitProviderVpcConfigSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -493,6 +514,7 @@ public partial class V1beta1ImageBuilderSpecInitProviderVpcConfigSubnetIdSelecto
     public V1beta1ImageBuilderSpecInitProviderVpcConfigSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 public partial class V1beta1ImageBuilderSpecInitProviderVpcConfigSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -508,6 +530,7 @@ public partial class V1beta1ImageBuilderSpecInitProviderVpcConfigSubnetIdSelecto
     public V1beta1ImageBuilderSpecInitProviderVpcConfigSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageBuilderSpecInitProviderVpcConfig
 {
     /// <summary>Identifiers of the security groups for the image builder or image builder.</summary>
@@ -527,6 +550,7 @@ public partial class V1beta1ImageBuilderSpecInitProviderVpcConfig
     public IList<string>? SubnetIds { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ImageBuilderSpecInitProvider
 {
     /// <summary>Set of interface VPC endpoint (interface endpoint) objects. Maximum of 4. See below.</summary>
@@ -624,6 +648,7 @@ public enum V1beta1ImageBuilderSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ImageBuilderSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -637,6 +662,7 @@ public partial class V1beta1ImageBuilderSpecProviderConfigRefPolicy
     public V1beta1ImageBuilderSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ImageBuilderSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -668,6 +694,7 @@ public enum V1beta1ImageBuilderSpecPublishConnectionDetailsToConfigRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ImageBuilderSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -681,6 +708,7 @@ public partial class V1beta1ImageBuilderSpecPublishConnectionDetailsToConfigRefP
     public V1beta1ImageBuilderSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ImageBuilderSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -692,6 +720,7 @@ public partial class V1beta1ImageBuilderSpecPublishConnectionDetailsToConfigRef
     public V1beta1ImageBuilderSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ImageBuilderSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -707,6 +736,7 @@ public partial class V1beta1ImageBuilderSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ImageBuilderSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -722,6 +752,7 @@ public partial class V1beta1ImageBuilderSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ImageBuilderSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -733,6 +764,7 @@ public partial class V1beta1ImageBuilderSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ImageBuilderSpec defines the desired state of ImageBuilder</summary>
 public partial class V1beta1ImageBuilderSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -765,6 +797,7 @@ public partial class V1beta1ImageBuilderSpec
     public V1beta1ImageBuilderSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageBuilderStatusAtProviderAccessEndpoint
 {
     /// <summary>Type of interface endpoint. For valid values, refer to the AWS documentation.</summary>
@@ -776,6 +809,7 @@ public partial class V1beta1ImageBuilderStatusAtProviderAccessEndpoint
     public string? VpceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageBuilderStatusAtProviderDomainJoinInfo
 {
     /// <summary>Fully qualified name of the directory (for example, corp.example.com).</summary>
@@ -787,6 +821,7 @@ public partial class V1beta1ImageBuilderStatusAtProviderDomainJoinInfo
     public string? OrganizationalUnitDistinguishedName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageBuilderStatusAtProviderVpcConfig
 {
     /// <summary>Identifiers of the security groups for the image builder or image builder.</summary>
@@ -798,6 +833,7 @@ public partial class V1beta1ImageBuilderStatusAtProviderVpcConfig
     public IList<string>? SubnetIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageBuilderStatusAtProvider
 {
     /// <summary>Set of interface VPC endpoint (interface endpoint) objects. Maximum of 4. See below.</summary>
@@ -869,6 +905,7 @@ public partial class V1beta1ImageBuilderStatusAtProvider
     public IList<V1beta1ImageBuilderStatusAtProviderVpcConfig>? VpcConfig { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ImageBuilderStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -896,6 +933,7 @@ public partial class V1beta1ImageBuilderStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ImageBuilderStatus defines the observed state of ImageBuilder.</summary>
 public partial class V1beta1ImageBuilderStatus
 {
     /// <summary></summary>
@@ -912,6 +950,7 @@ public partial class V1beta1ImageBuilderStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ImageBuilder is the Schema for the ImageBuilders API. Provides an AppStream image builder</summary>
 public partial class V1beta1ImageBuilder : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ImageBuilderSpec>, IStatus<V1beta1ImageBuilderStatus>
 {
     public const string KubeApiVersion = "v1beta1";

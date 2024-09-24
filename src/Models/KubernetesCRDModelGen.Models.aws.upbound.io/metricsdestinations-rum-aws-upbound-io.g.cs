@@ -38,6 +38,7 @@ public enum V1beta1MetricsDestinationSpecForProviderAppMonitorNameRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MetricsDestinationSpecForProviderAppMonitorNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1MetricsDestinationSpecForProviderAppMonitorNameRefPo
     public V1beta1MetricsDestinationSpecForProviderAppMonitorNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a AppMonitor in rum to populate appMonitorName.</summary>
 public partial class V1beta1MetricsDestinationSpecForProviderAppMonitorNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1MetricsDestinationSpecForProviderAppMonitorNameSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MetricsDestinationSpecForProviderAppMonitorNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1MetricsDestinationSpecForProviderAppMonitorNameSelec
     public V1beta1MetricsDestinationSpecForProviderAppMonitorNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a AppMonitor in rum to populate appMonitorName.</summary>
 public partial class V1beta1MetricsDestinationSpecForProviderAppMonitorNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1MetricsDestinationSpecForProviderIamRoleArnRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MetricsDestinationSpecForProviderIamRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1MetricsDestinationSpecForProviderIamRoleArnRefPolicy
     public V1beta1MetricsDestinationSpecForProviderIamRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate iamRoleArn.</summary>
 public partial class V1beta1MetricsDestinationSpecForProviderIamRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1MetricsDestinationSpecForProviderIamRoleArnSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MetricsDestinationSpecForProviderIamRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1MetricsDestinationSpecForProviderIamRoleArnSelectorP
     public V1beta1MetricsDestinationSpecForProviderIamRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate iamRoleArn.</summary>
 public partial class V1beta1MetricsDestinationSpecForProviderIamRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1MetricsDestinationSpecForProviderIamRoleArnSelector
     public V1beta1MetricsDestinationSpecForProviderIamRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetricsDestinationSpecForProvider
 {
     /// <summary>The name of the CloudWatch RUM app monitor that will send the metrics.</summary>
@@ -261,6 +270,7 @@ public enum V1beta1MetricsDestinationSpecInitProviderAppMonitorNameRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MetricsDestinationSpecInitProviderAppMonitorNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -274,6 +284,7 @@ public partial class V1beta1MetricsDestinationSpecInitProviderAppMonitorNameRefP
     public V1beta1MetricsDestinationSpecInitProviderAppMonitorNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a AppMonitor in rum to populate appMonitorName.</summary>
 public partial class V1beta1MetricsDestinationSpecInitProviderAppMonitorNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -305,6 +316,7 @@ public enum V1beta1MetricsDestinationSpecInitProviderAppMonitorNameSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MetricsDestinationSpecInitProviderAppMonitorNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -318,6 +330,7 @@ public partial class V1beta1MetricsDestinationSpecInitProviderAppMonitorNameSele
     public V1beta1MetricsDestinationSpecInitProviderAppMonitorNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a AppMonitor in rum to populate appMonitorName.</summary>
 public partial class V1beta1MetricsDestinationSpecInitProviderAppMonitorNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -353,6 +366,7 @@ public enum V1beta1MetricsDestinationSpecInitProviderIamRoleArnRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MetricsDestinationSpecInitProviderIamRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -366,6 +380,7 @@ public partial class V1beta1MetricsDestinationSpecInitProviderIamRoleArnRefPolic
     public V1beta1MetricsDestinationSpecInitProviderIamRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate iamRoleArn.</summary>
 public partial class V1beta1MetricsDestinationSpecInitProviderIamRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -397,6 +412,7 @@ public enum V1beta1MetricsDestinationSpecInitProviderIamRoleArnSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MetricsDestinationSpecInitProviderIamRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -410,6 +426,7 @@ public partial class V1beta1MetricsDestinationSpecInitProviderIamRoleArnSelector
     public V1beta1MetricsDestinationSpecInitProviderIamRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate iamRoleArn.</summary>
 public partial class V1beta1MetricsDestinationSpecInitProviderIamRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -425,6 +442,7 @@ public partial class V1beta1MetricsDestinationSpecInitProviderIamRoleArnSelector
     public V1beta1MetricsDestinationSpecInitProviderIamRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1MetricsDestinationSpecInitProvider
 {
     /// <summary>The name of the CloudWatch RUM app monitor that will send the metrics.</summary>
@@ -502,6 +520,7 @@ public enum V1beta1MetricsDestinationSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MetricsDestinationSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -515,6 +534,7 @@ public partial class V1beta1MetricsDestinationSpecProviderConfigRefPolicy
     public V1beta1MetricsDestinationSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1MetricsDestinationSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -546,6 +566,7 @@ public enum V1beta1MetricsDestinationSpecPublishConnectionDetailsToConfigRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MetricsDestinationSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -559,6 +580,7 @@ public partial class V1beta1MetricsDestinationSpecPublishConnectionDetailsToConf
     public V1beta1MetricsDestinationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1MetricsDestinationSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -570,6 +592,7 @@ public partial class V1beta1MetricsDestinationSpecPublishConnectionDetailsToConf
     public V1beta1MetricsDestinationSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1MetricsDestinationSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -585,6 +608,7 @@ public partial class V1beta1MetricsDestinationSpecPublishConnectionDetailsToMeta
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1MetricsDestinationSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -600,6 +624,7 @@ public partial class V1beta1MetricsDestinationSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1MetricsDestinationSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -611,6 +636,7 @@ public partial class V1beta1MetricsDestinationSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>MetricsDestinationSpec defines the desired state of MetricsDestination</summary>
 public partial class V1beta1MetricsDestinationSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -643,6 +669,7 @@ public partial class V1beta1MetricsDestinationSpec
     public V1beta1MetricsDestinationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetricsDestinationStatusAtProvider
 {
     /// <summary>The name of the CloudWatch RUM app monitor that will send the metrics.</summary>
@@ -666,6 +693,7 @@ public partial class V1beta1MetricsDestinationStatusAtProvider
     public string? Id { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1MetricsDestinationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -693,6 +721,7 @@ public partial class V1beta1MetricsDestinationStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>MetricsDestinationStatus defines the observed state of MetricsDestination.</summary>
 public partial class V1beta1MetricsDestinationStatus
 {
     /// <summary></summary>
@@ -709,6 +738,7 @@ public partial class V1beta1MetricsDestinationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>MetricsDestination is the Schema for the MetricsDestinations API. Provides a CloudWatch RUM Metrics Destination resource.</summary>
 public partial class V1beta1MetricsDestination : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MetricsDestinationSpec>, IStatus<V1beta1MetricsDestinationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

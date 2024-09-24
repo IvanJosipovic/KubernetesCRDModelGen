@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.eventgrid.azure.com;
+/// <summary>Storage version of v1api20200601.InboundIpRule</summary>
 public partial class V1api20200601storageTopicSpecInboundIpRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -23,6 +24,7 @@ public partial class V1api20200601storageTopicSpecInboundIpRules
     public string? IpMask { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.JsonFieldWithDefault This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'subject', 'eventtype' and 'dataversion' properties. This represents a field in the input event schema along with a default value to be used, and at least one of these two properties should be provided.</summary>
 public partial class V1api20200601storageTopicSpecInputSchemaMappingJsonDataVersion
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -38,6 +40,7 @@ public partial class V1api20200601storageTopicSpecInputSchemaMappingJsonDataVers
     public string? SourceField { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.JsonField This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'id', 'topic' and 'eventtime' properties. This represents a field in the input event schema.</summary>
 public partial class V1api20200601storageTopicSpecInputSchemaMappingJsonEventTime
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -49,6 +52,7 @@ public partial class V1api20200601storageTopicSpecInputSchemaMappingJsonEventTim
     public string? SourceField { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.JsonFieldWithDefault This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'subject', 'eventtype' and 'dataversion' properties. This represents a field in the input event schema along with a default value to be used, and at least one of these two properties should be provided.</summary>
 public partial class V1api20200601storageTopicSpecInputSchemaMappingJsonEventType
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -64,6 +68,7 @@ public partial class V1api20200601storageTopicSpecInputSchemaMappingJsonEventTyp
     public string? SourceField { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.JsonField This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'id', 'topic' and 'eventtime' properties. This represents a field in the input event schema.</summary>
 public partial class V1api20200601storageTopicSpecInputSchemaMappingJsonId
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -75,6 +80,7 @@ public partial class V1api20200601storageTopicSpecInputSchemaMappingJsonId
     public string? SourceField { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.JsonFieldWithDefault This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'subject', 'eventtype' and 'dataversion' properties. This represents a field in the input event schema along with a default value to be used, and at least one of these two properties should be provided.</summary>
 public partial class V1api20200601storageTopicSpecInputSchemaMappingJsonSubject
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -90,6 +96,7 @@ public partial class V1api20200601storageTopicSpecInputSchemaMappingJsonSubject
     public string? SourceField { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.JsonField This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'id', 'topic' and 'eventtime' properties. This represents a field in the input event schema.</summary>
 public partial class V1api20200601storageTopicSpecInputSchemaMappingJsonTopic
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -101,6 +108,7 @@ public partial class V1api20200601storageTopicSpecInputSchemaMappingJsonTopic
     public string? SourceField { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.JsonInputSchemaMapping</summary>
 public partial class V1api20200601storageTopicSpecInputSchemaMappingJson
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -136,6 +144,7 @@ public partial class V1api20200601storageTopicSpecInputSchemaMappingJson
     public V1api20200601storageTopicSpecInputSchemaMappingJsonTopic? Topic { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.InputSchemaMapping</summary>
 public partial class V1api20200601storageTopicSpecInputSchemaMapping
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -147,6 +156,7 @@ public partial class V1api20200601storageTopicSpecInputSchemaMapping
     public V1api20200601storageTopicSpecInputSchemaMappingJson? Json { get; set; }
 }
 
+/// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20200601storageTopicSpecOperatorSpecConfigMapsEndpoint
 {
     /// <summary>Key is the key in the ConfigMap being referenced</summary>
@@ -158,6 +168,7 @@ public partial class V1api20200601storageTopicSpecOperatorSpecConfigMapsEndpoint
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.TopicOperatorConfigMaps</summary>
 public partial class V1api20200601storageTopicSpecOperatorSpecConfigMaps
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -169,6 +180,7 @@ public partial class V1api20200601storageTopicSpecOperatorSpecConfigMaps
     public V1api20200601storageTopicSpecOperatorSpecConfigMapsEndpoint? Endpoint { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20200601storageTopicSpecOperatorSpecSecretsKey1
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -180,6 +192,7 @@ public partial class V1api20200601storageTopicSpecOperatorSpecSecretsKey1
     public string Name { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20200601storageTopicSpecOperatorSpecSecretsKey2
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -191,6 +204,7 @@ public partial class V1api20200601storageTopicSpecOperatorSpecSecretsKey2
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.TopicOperatorSecrets</summary>
 public partial class V1api20200601storageTopicSpecOperatorSpecSecrets
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -206,6 +220,7 @@ public partial class V1api20200601storageTopicSpecOperatorSpecSecrets
     public V1api20200601storageTopicSpecOperatorSpecSecretsKey2? Key2 { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.TopicOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 public partial class V1api20200601storageTopicSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -221,6 +236,7 @@ public partial class V1api20200601storageTopicSpecOperatorSpec
     public V1api20200601storageTopicSpecOperatorSpecSecrets? Secrets { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20200601storageTopicSpecOwner
 {
     /// <summary></summary>
@@ -232,6 +248,7 @@ public partial class V1api20200601storageTopicSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.Topic_Spec</summary>
 public partial class V1api20200601storageTopicSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -279,6 +296,7 @@ public partial class V1api20200601storageTopicSpec
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20200601storageTopicStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -310,6 +328,7 @@ public partial class V1api20200601storageTopicStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.InboundIpRule_STATUS</summary>
 public partial class V1api20200601storageTopicStatusInboundIpRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -325,6 +344,7 @@ public partial class V1api20200601storageTopicStatusInboundIpRules
     public string? IpMask { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.JsonFieldWithDefault_STATUS This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'subject', 'eventtype' and 'dataversion' properties. This represents a field in the input event schema along with a default value to be used, and at least one of these two properties should be provided.</summary>
 public partial class V1api20200601storageTopicStatusInputSchemaMappingJsonDataVersion
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -340,6 +360,7 @@ public partial class V1api20200601storageTopicStatusInputSchemaMappingJsonDataVe
     public string? SourceField { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.JsonField_STATUS This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'id', 'topic' and 'eventtime' properties. This represents a field in the input event schema.</summary>
 public partial class V1api20200601storageTopicStatusInputSchemaMappingJsonEventTime
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -351,6 +372,7 @@ public partial class V1api20200601storageTopicStatusInputSchemaMappingJsonEventT
     public string? SourceField { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.JsonFieldWithDefault_STATUS This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'subject', 'eventtype' and 'dataversion' properties. This represents a field in the input event schema along with a default value to be used, and at least one of these two properties should be provided.</summary>
 public partial class V1api20200601storageTopicStatusInputSchemaMappingJsonEventType
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -366,6 +388,7 @@ public partial class V1api20200601storageTopicStatusInputSchemaMappingJsonEventT
     public string? SourceField { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.JsonField_STATUS This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'id', 'topic' and 'eventtime' properties. This represents a field in the input event schema.</summary>
 public partial class V1api20200601storageTopicStatusInputSchemaMappingJsonId
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -377,6 +400,7 @@ public partial class V1api20200601storageTopicStatusInputSchemaMappingJsonId
     public string? SourceField { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.JsonFieldWithDefault_STATUS This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'subject', 'eventtype' and 'dataversion' properties. This represents a field in the input event schema along with a default value to be used, and at least one of these two properties should be provided.</summary>
 public partial class V1api20200601storageTopicStatusInputSchemaMappingJsonSubject
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -392,6 +416,7 @@ public partial class V1api20200601storageTopicStatusInputSchemaMappingJsonSubjec
     public string? SourceField { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.JsonField_STATUS This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'id', 'topic' and 'eventtime' properties. This represents a field in the input event schema.</summary>
 public partial class V1api20200601storageTopicStatusInputSchemaMappingJsonTopic
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -403,6 +428,7 @@ public partial class V1api20200601storageTopicStatusInputSchemaMappingJsonTopic
     public string? SourceField { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.JsonInputSchemaMapping_STATUS</summary>
 public partial class V1api20200601storageTopicStatusInputSchemaMappingJson
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -438,6 +464,7 @@ public partial class V1api20200601storageTopicStatusInputSchemaMappingJson
     public V1api20200601storageTopicStatusInputSchemaMappingJsonTopic? Topic { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.InputSchemaMapping_STATUS</summary>
 public partial class V1api20200601storageTopicStatusInputSchemaMapping
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -449,6 +476,7 @@ public partial class V1api20200601storageTopicStatusInputSchemaMapping
     public V1api20200601storageTopicStatusInputSchemaMappingJson? Json { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.PrivateEndpointConnection_STATUS_Topic_SubResourceEmbedded</summary>
 public partial class V1api20200601storageTopicStatusPrivateEndpointConnections
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -460,6 +488,7 @@ public partial class V1api20200601storageTopicStatusPrivateEndpointConnections
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 public partial class V1api20200601storageTopicStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -491,6 +520,7 @@ public partial class V1api20200601storageTopicStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.Topic_STATUS EventGrid Topic</summary>
 public partial class V1api20200601storageTopicStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -559,6 +589,7 @@ public partial class V1api20200601storageTopicStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20200601.Topic Generator information: - Generated from: /eventgrid/resource-manager/Microsoft.EventGrid/stable/2020-06-01/EventGrid.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}</summary>
 public partial class V1api20200601storageTopic : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20200601storageTopicSpec>, IStatus<V1api20200601storageTopicStatus>
 {
     public const string KubeApiVersion = "v1api20200601storage";

@@ -38,6 +38,7 @@ public enum V1beta1DomainMailFromSpecForProviderDomainRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DomainMailFromSpecForProviderDomainRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1DomainMailFromSpecForProviderDomainRefPolicy
     public V1beta1DomainMailFromSpecForProviderDomainRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a DomainIdentity in ses to populate domain.</summary>
 public partial class V1beta1DomainMailFromSpecForProviderDomainRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1DomainMailFromSpecForProviderDomainSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DomainMailFromSpecForProviderDomainSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1DomainMailFromSpecForProviderDomainSelectorPolicy
     public V1beta1DomainMailFromSpecForProviderDomainSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a DomainIdentity in ses to populate domain.</summary>
 public partial class V1beta1DomainMailFromSpecForProviderDomainSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1DomainMailFromSpecForProviderDomainSelector
     public V1beta1DomainMailFromSpecForProviderDomainSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainMailFromSpecForProvider
 {
     /// <summary>The action that you want Amazon SES to take if it cannot successfully read the required MX record when you send an email. Defaults to UseDefaultValue. See the SES API documentation for more information.</summary>
@@ -157,6 +162,7 @@ public enum V1beta1DomainMailFromSpecInitProviderDomainRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DomainMailFromSpecInitProviderDomainRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -170,6 +176,7 @@ public partial class V1beta1DomainMailFromSpecInitProviderDomainRefPolicy
     public V1beta1DomainMailFromSpecInitProviderDomainRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a DomainIdentity in ses to populate domain.</summary>
 public partial class V1beta1DomainMailFromSpecInitProviderDomainRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -201,6 +208,7 @@ public enum V1beta1DomainMailFromSpecInitProviderDomainSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DomainMailFromSpecInitProviderDomainSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -214,6 +222,7 @@ public partial class V1beta1DomainMailFromSpecInitProviderDomainSelectorPolicy
     public V1beta1DomainMailFromSpecInitProviderDomainSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a DomainIdentity in ses to populate domain.</summary>
 public partial class V1beta1DomainMailFromSpecInitProviderDomainSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -229,6 +238,7 @@ public partial class V1beta1DomainMailFromSpecInitProviderDomainSelector
     public V1beta1DomainMailFromSpecInitProviderDomainSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1DomainMailFromSpecInitProvider
 {
     /// <summary>The action that you want Amazon SES to take if it cannot successfully read the required MX record when you send an email. Defaults to UseDefaultValue. See the SES API documentation for more information.</summary>
@@ -294,6 +304,7 @@ public enum V1beta1DomainMailFromSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DomainMailFromSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -307,6 +318,7 @@ public partial class V1beta1DomainMailFromSpecProviderConfigRefPolicy
     public V1beta1DomainMailFromSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1DomainMailFromSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -338,6 +350,7 @@ public enum V1beta1DomainMailFromSpecPublishConnectionDetailsToConfigRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DomainMailFromSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -351,6 +364,7 @@ public partial class V1beta1DomainMailFromSpecPublishConnectionDetailsToConfigRe
     public V1beta1DomainMailFromSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1DomainMailFromSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -362,6 +376,7 @@ public partial class V1beta1DomainMailFromSpecPublishConnectionDetailsToConfigRe
     public V1beta1DomainMailFromSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1DomainMailFromSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -377,6 +392,7 @@ public partial class V1beta1DomainMailFromSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1DomainMailFromSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -392,6 +408,7 @@ public partial class V1beta1DomainMailFromSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1DomainMailFromSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -403,6 +420,7 @@ public partial class V1beta1DomainMailFromSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>DomainMailFromSpec defines the desired state of DomainMailFrom</summary>
 public partial class V1beta1DomainMailFromSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -435,6 +453,7 @@ public partial class V1beta1DomainMailFromSpec
     public V1beta1DomainMailFromSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainMailFromStatusAtProvider
 {
     /// <summary>The action that you want Amazon SES to take if it cannot successfully read the required MX record when you send an email. Defaults to UseDefaultValue. See the SES API documentation for more information.</summary>
@@ -454,6 +473,7 @@ public partial class V1beta1DomainMailFromStatusAtProvider
     public string? MailFromDomain { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1DomainMailFromStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -481,6 +501,7 @@ public partial class V1beta1DomainMailFromStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>DomainMailFromStatus defines the observed state of DomainMailFrom.</summary>
 public partial class V1beta1DomainMailFromStatus
 {
     /// <summary></summary>
@@ -497,6 +518,7 @@ public partial class V1beta1DomainMailFromStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>DomainMailFrom is the Schema for the DomainMailFroms API. Provides an SES domain MAIL FROM resource</summary>
 public partial class V1beta1DomainMailFrom : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DomainMailFromSpec>, IStatus<V1beta1DomainMailFromStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -38,6 +38,7 @@ public enum V1beta1DeploymentSpecForProviderApplicationIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DeploymentSpecForProviderApplicationIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1DeploymentSpecForProviderApplicationIdRefPolicy
     public V1beta1DeploymentSpecForProviderApplicationIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Application in appconfig to populate applicationId.</summary>
 public partial class V1beta1DeploymentSpecForProviderApplicationIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1DeploymentSpecForProviderApplicationIdSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DeploymentSpecForProviderApplicationIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1DeploymentSpecForProviderApplicationIdSelectorPolicy
     public V1beta1DeploymentSpecForProviderApplicationIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Application in appconfig to populate applicationId.</summary>
 public partial class V1beta1DeploymentSpecForProviderApplicationIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1DeploymentSpecForProviderConfigurationProfileIdRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DeploymentSpecForProviderConfigurationProfileIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1DeploymentSpecForProviderConfigurationProfileIdRefPo
     public V1beta1DeploymentSpecForProviderConfigurationProfileIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ConfigurationProfile in appconfig to populate configurationProfileId.</summary>
 public partial class V1beta1DeploymentSpecForProviderConfigurationProfileIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1DeploymentSpecForProviderConfigurationProfileIdSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DeploymentSpecForProviderConfigurationProfileIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1DeploymentSpecForProviderConfigurationProfileIdSelec
     public V1beta1DeploymentSpecForProviderConfigurationProfileIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ConfigurationProfile in appconfig to populate configurationProfileId.</summary>
 public partial class V1beta1DeploymentSpecForProviderConfigurationProfileIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1DeploymentSpecForProviderConfigurationVersionRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DeploymentSpecForProviderConfigurationVersionRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1DeploymentSpecForProviderConfigurationVersionRefPoli
     public V1beta1DeploymentSpecForProviderConfigurationVersionRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a HostedConfigurationVersion in appconfig to populate configurationVersion.</summary>
 public partial class V1beta1DeploymentSpecForProviderConfigurationVersionRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1DeploymentSpecForProviderConfigurationVersionSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DeploymentSpecForProviderConfigurationVersionSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1DeploymentSpecForProviderConfigurationVersionSelecto
     public V1beta1DeploymentSpecForProviderConfigurationVersionSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a HostedConfigurationVersion in appconfig to populate configurationVersion.</summary>
 public partial class V1beta1DeploymentSpecForProviderConfigurationVersionSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -314,6 +326,7 @@ public enum V1beta1DeploymentSpecForProviderDeploymentStrategyIdRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DeploymentSpecForProviderDeploymentStrategyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -327,6 +340,7 @@ public partial class V1beta1DeploymentSpecForProviderDeploymentStrategyIdRefPoli
     public V1beta1DeploymentSpecForProviderDeploymentStrategyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a DeploymentStrategy in appconfig to populate deploymentStrategyId.</summary>
 public partial class V1beta1DeploymentSpecForProviderDeploymentStrategyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -358,6 +372,7 @@ public enum V1beta1DeploymentSpecForProviderDeploymentStrategyIdSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DeploymentSpecForProviderDeploymentStrategyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -371,6 +386,7 @@ public partial class V1beta1DeploymentSpecForProviderDeploymentStrategyIdSelecto
     public V1beta1DeploymentSpecForProviderDeploymentStrategyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a DeploymentStrategy in appconfig to populate deploymentStrategyId.</summary>
 public partial class V1beta1DeploymentSpecForProviderDeploymentStrategyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -406,6 +422,7 @@ public enum V1beta1DeploymentSpecForProviderEnvironmentIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DeploymentSpecForProviderEnvironmentIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -419,6 +436,7 @@ public partial class V1beta1DeploymentSpecForProviderEnvironmentIdRefPolicy
     public V1beta1DeploymentSpecForProviderEnvironmentIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Environment in appconfig to populate environmentId.</summary>
 public partial class V1beta1DeploymentSpecForProviderEnvironmentIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -450,6 +468,7 @@ public enum V1beta1DeploymentSpecForProviderEnvironmentIdSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DeploymentSpecForProviderEnvironmentIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -463,6 +482,7 @@ public partial class V1beta1DeploymentSpecForProviderEnvironmentIdSelectorPolicy
     public V1beta1DeploymentSpecForProviderEnvironmentIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Environment in appconfig to populate environmentId.</summary>
 public partial class V1beta1DeploymentSpecForProviderEnvironmentIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -498,6 +518,7 @@ public enum V1beta1DeploymentSpecForProviderKmsKeyIdentifierRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DeploymentSpecForProviderKmsKeyIdentifierRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -511,6 +532,7 @@ public partial class V1beta1DeploymentSpecForProviderKmsKeyIdentifierRefPolicy
     public V1beta1DeploymentSpecForProviderKmsKeyIdentifierRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyIdentifier.</summary>
 public partial class V1beta1DeploymentSpecForProviderKmsKeyIdentifierRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -542,6 +564,7 @@ public enum V1beta1DeploymentSpecForProviderKmsKeyIdentifierSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DeploymentSpecForProviderKmsKeyIdentifierSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -555,6 +578,7 @@ public partial class V1beta1DeploymentSpecForProviderKmsKeyIdentifierSelectorPol
     public V1beta1DeploymentSpecForProviderKmsKeyIdentifierSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyIdentifier.</summary>
 public partial class V1beta1DeploymentSpecForProviderKmsKeyIdentifierSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -570,6 +594,7 @@ public partial class V1beta1DeploymentSpecForProviderKmsKeyIdentifierSelector
     public V1beta1DeploymentSpecForProviderKmsKeyIdentifierSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DeploymentSpecForProvider
 {
     /// <summary>Application ID. Must be between 4 and 7 characters in length.</summary>
@@ -677,6 +702,7 @@ public enum V1beta1DeploymentSpecInitProviderApplicationIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DeploymentSpecInitProviderApplicationIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -690,6 +716,7 @@ public partial class V1beta1DeploymentSpecInitProviderApplicationIdRefPolicy
     public V1beta1DeploymentSpecInitProviderApplicationIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Application in appconfig to populate applicationId.</summary>
 public partial class V1beta1DeploymentSpecInitProviderApplicationIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -721,6 +748,7 @@ public enum V1beta1DeploymentSpecInitProviderApplicationIdSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DeploymentSpecInitProviderApplicationIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -734,6 +762,7 @@ public partial class V1beta1DeploymentSpecInitProviderApplicationIdSelectorPolic
     public V1beta1DeploymentSpecInitProviderApplicationIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Application in appconfig to populate applicationId.</summary>
 public partial class V1beta1DeploymentSpecInitProviderApplicationIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -769,6 +798,7 @@ public enum V1beta1DeploymentSpecInitProviderConfigurationProfileIdRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DeploymentSpecInitProviderConfigurationProfileIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -782,6 +812,7 @@ public partial class V1beta1DeploymentSpecInitProviderConfigurationProfileIdRefP
     public V1beta1DeploymentSpecInitProviderConfigurationProfileIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ConfigurationProfile in appconfig to populate configurationProfileId.</summary>
 public partial class V1beta1DeploymentSpecInitProviderConfigurationProfileIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -813,6 +844,7 @@ public enum V1beta1DeploymentSpecInitProviderConfigurationProfileIdSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DeploymentSpecInitProviderConfigurationProfileIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -826,6 +858,7 @@ public partial class V1beta1DeploymentSpecInitProviderConfigurationProfileIdSele
     public V1beta1DeploymentSpecInitProviderConfigurationProfileIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ConfigurationProfile in appconfig to populate configurationProfileId.</summary>
 public partial class V1beta1DeploymentSpecInitProviderConfigurationProfileIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -861,6 +894,7 @@ public enum V1beta1DeploymentSpecInitProviderConfigurationVersionRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DeploymentSpecInitProviderConfigurationVersionRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -874,6 +908,7 @@ public partial class V1beta1DeploymentSpecInitProviderConfigurationVersionRefPol
     public V1beta1DeploymentSpecInitProviderConfigurationVersionRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a HostedConfigurationVersion in appconfig to populate configurationVersion.</summary>
 public partial class V1beta1DeploymentSpecInitProviderConfigurationVersionRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -905,6 +940,7 @@ public enum V1beta1DeploymentSpecInitProviderConfigurationVersionSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DeploymentSpecInitProviderConfigurationVersionSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -918,6 +954,7 @@ public partial class V1beta1DeploymentSpecInitProviderConfigurationVersionSelect
     public V1beta1DeploymentSpecInitProviderConfigurationVersionSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a HostedConfigurationVersion in appconfig to populate configurationVersion.</summary>
 public partial class V1beta1DeploymentSpecInitProviderConfigurationVersionSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -953,6 +990,7 @@ public enum V1beta1DeploymentSpecInitProviderDeploymentStrategyIdRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DeploymentSpecInitProviderDeploymentStrategyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -966,6 +1004,7 @@ public partial class V1beta1DeploymentSpecInitProviderDeploymentStrategyIdRefPol
     public V1beta1DeploymentSpecInitProviderDeploymentStrategyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a DeploymentStrategy in appconfig to populate deploymentStrategyId.</summary>
 public partial class V1beta1DeploymentSpecInitProviderDeploymentStrategyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -997,6 +1036,7 @@ public enum V1beta1DeploymentSpecInitProviderDeploymentStrategyIdSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DeploymentSpecInitProviderDeploymentStrategyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1010,6 +1050,7 @@ public partial class V1beta1DeploymentSpecInitProviderDeploymentStrategyIdSelect
     public V1beta1DeploymentSpecInitProviderDeploymentStrategyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a DeploymentStrategy in appconfig to populate deploymentStrategyId.</summary>
 public partial class V1beta1DeploymentSpecInitProviderDeploymentStrategyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1045,6 +1086,7 @@ public enum V1beta1DeploymentSpecInitProviderEnvironmentIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DeploymentSpecInitProviderEnvironmentIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1058,6 +1100,7 @@ public partial class V1beta1DeploymentSpecInitProviderEnvironmentIdRefPolicy
     public V1beta1DeploymentSpecInitProviderEnvironmentIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Environment in appconfig to populate environmentId.</summary>
 public partial class V1beta1DeploymentSpecInitProviderEnvironmentIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1089,6 +1132,7 @@ public enum V1beta1DeploymentSpecInitProviderEnvironmentIdSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DeploymentSpecInitProviderEnvironmentIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1102,6 +1146,7 @@ public partial class V1beta1DeploymentSpecInitProviderEnvironmentIdSelectorPolic
     public V1beta1DeploymentSpecInitProviderEnvironmentIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Environment in appconfig to populate environmentId.</summary>
 public partial class V1beta1DeploymentSpecInitProviderEnvironmentIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1137,6 +1182,7 @@ public enum V1beta1DeploymentSpecInitProviderKmsKeyIdentifierRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DeploymentSpecInitProviderKmsKeyIdentifierRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1150,6 +1196,7 @@ public partial class V1beta1DeploymentSpecInitProviderKmsKeyIdentifierRefPolicy
     public V1beta1DeploymentSpecInitProviderKmsKeyIdentifierRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyIdentifier.</summary>
 public partial class V1beta1DeploymentSpecInitProviderKmsKeyIdentifierRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1181,6 +1228,7 @@ public enum V1beta1DeploymentSpecInitProviderKmsKeyIdentifierSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DeploymentSpecInitProviderKmsKeyIdentifierSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1194,6 +1242,7 @@ public partial class V1beta1DeploymentSpecInitProviderKmsKeyIdentifierSelectorPo
     public V1beta1DeploymentSpecInitProviderKmsKeyIdentifierSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyIdentifier.</summary>
 public partial class V1beta1DeploymentSpecInitProviderKmsKeyIdentifierSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1209,6 +1258,7 @@ public partial class V1beta1DeploymentSpecInitProviderKmsKeyIdentifierSelector
     public V1beta1DeploymentSpecInitProviderKmsKeyIdentifierSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1DeploymentSpecInitProvider
 {
     /// <summary>Application ID. Must be between 4 and 7 characters in length.</summary>
@@ -1334,6 +1384,7 @@ public enum V1beta1DeploymentSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DeploymentSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1347,6 +1398,7 @@ public partial class V1beta1DeploymentSpecProviderConfigRefPolicy
     public V1beta1DeploymentSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1DeploymentSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1378,6 +1430,7 @@ public enum V1beta1DeploymentSpecPublishConnectionDetailsToConfigRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DeploymentSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1391,6 +1444,7 @@ public partial class V1beta1DeploymentSpecPublishConnectionDetailsToConfigRefPol
     public V1beta1DeploymentSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1DeploymentSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1402,6 +1456,7 @@ public partial class V1beta1DeploymentSpecPublishConnectionDetailsToConfigRef
     public V1beta1DeploymentSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1DeploymentSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1417,6 +1472,7 @@ public partial class V1beta1DeploymentSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1DeploymentSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1432,6 +1488,7 @@ public partial class V1beta1DeploymentSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1DeploymentSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1443,6 +1500,7 @@ public partial class V1beta1DeploymentSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>DeploymentSpec defines the desired state of Deployment</summary>
 public partial class V1beta1DeploymentSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1475,6 +1533,7 @@ public partial class V1beta1DeploymentSpec
     public V1beta1DeploymentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DeploymentStatusAtProvider
 {
     /// <summary>Application ID. Must be between 4 and 7 characters in length.</summary>
@@ -1534,6 +1593,7 @@ public partial class V1beta1DeploymentStatusAtProvider
     public IDictionary<string, string>? TagsAll { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1DeploymentStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1561,6 +1621,7 @@ public partial class V1beta1DeploymentStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>DeploymentStatus defines the observed state of Deployment.</summary>
 public partial class V1beta1DeploymentStatus
 {
     /// <summary></summary>
@@ -1577,6 +1638,7 @@ public partial class V1beta1DeploymentStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Deployment is the Schema for the Deployments API. Provides an AppConfig Deployment resource.</summary>
 public partial class V1beta1Deployment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DeploymentSpec>, IStatus<V1beta1DeploymentStatus>
 {
     public const string KubeApiVersion = "v1beta1";

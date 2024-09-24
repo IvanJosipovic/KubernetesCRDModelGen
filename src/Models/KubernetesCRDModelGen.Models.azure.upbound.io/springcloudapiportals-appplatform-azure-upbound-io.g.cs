@@ -38,6 +38,7 @@ public enum V1beta1SpringCloudAPIPortalSpecForProviderGatewayIdsRefsPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpringCloudAPIPortalSpecForProviderGatewayIdsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1SpringCloudAPIPortalSpecForProviderGatewayIdsRefsPol
     public V1beta1SpringCloudAPIPortalSpecForProviderGatewayIdsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1SpringCloudAPIPortalSpecForProviderGatewayIdsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1SpringCloudAPIPortalSpecForProviderGatewayIdsSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SpringCloudAPIPortalSpecForProviderGatewayIdsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1SpringCloudAPIPortalSpecForProviderGatewayIdsSelecto
     public V1beta1SpringCloudAPIPortalSpecForProviderGatewayIdsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SpringCloudGateway in appplatform to populate gatewayIds.</summary>
 public partial class V1beta1SpringCloudAPIPortalSpecForProviderGatewayIdsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1SpringCloudAPIPortalSpecForProviderSpringCloudServiceIdRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpringCloudAPIPortalSpecForProviderSpringCloudServiceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1SpringCloudAPIPortalSpecForProviderSpringCloudServic
     public V1beta1SpringCloudAPIPortalSpecForProviderSpringCloudServiceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SpringCloudService in appplatform to populate springCloudServiceId.</summary>
 public partial class V1beta1SpringCloudAPIPortalSpecForProviderSpringCloudServiceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1SpringCloudAPIPortalSpecForProviderSpringCloudServiceIdSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SpringCloudAPIPortalSpecForProviderSpringCloudServiceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1SpringCloudAPIPortalSpecForProviderSpringCloudServic
     public V1beta1SpringCloudAPIPortalSpecForProviderSpringCloudServiceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SpringCloudService in appplatform to populate springCloudServiceId.</summary>
 public partial class V1beta1SpringCloudAPIPortalSpecForProviderSpringCloudServiceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1SpringCloudAPIPortalSpecForProviderSpringCloudServic
     public V1beta1SpringCloudAPIPortalSpecForProviderSpringCloudServiceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudAPIPortalSpecForProviderSso
 {
     /// <summary>The public identifier for the application.</summary>
@@ -221,6 +230,7 @@ public partial class V1beta1SpringCloudAPIPortalSpecForProviderSso
     public IList<string>? Scope { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudAPIPortalSpecForProvider
 {
     /// <summary>Specifies whether the API try-out feature is enabled. When enabled, users can try out the API by sending requests and viewing responses in API portal.</summary>
@@ -288,6 +298,7 @@ public enum V1beta1SpringCloudAPIPortalSpecInitProviderGatewayIdsRefsPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpringCloudAPIPortalSpecInitProviderGatewayIdsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -301,6 +312,7 @@ public partial class V1beta1SpringCloudAPIPortalSpecInitProviderGatewayIdsRefsPo
     public V1beta1SpringCloudAPIPortalSpecInitProviderGatewayIdsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1SpringCloudAPIPortalSpecInitProviderGatewayIdsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -332,6 +344,7 @@ public enum V1beta1SpringCloudAPIPortalSpecInitProviderGatewayIdsSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SpringCloudAPIPortalSpecInitProviderGatewayIdsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -345,6 +358,7 @@ public partial class V1beta1SpringCloudAPIPortalSpecInitProviderGatewayIdsSelect
     public V1beta1SpringCloudAPIPortalSpecInitProviderGatewayIdsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SpringCloudGateway in appplatform to populate gatewayIds.</summary>
 public partial class V1beta1SpringCloudAPIPortalSpecInitProviderGatewayIdsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -360,6 +374,7 @@ public partial class V1beta1SpringCloudAPIPortalSpecInitProviderGatewayIdsSelect
     public V1beta1SpringCloudAPIPortalSpecInitProviderGatewayIdsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudAPIPortalSpecInitProviderSso
 {
     /// <summary>The public identifier for the application.</summary>
@@ -379,6 +394,7 @@ public partial class V1beta1SpringCloudAPIPortalSpecInitProviderSso
     public IList<string>? Scope { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1SpringCloudAPIPortalSpecInitProvider
 {
     /// <summary>Specifies whether the API try-out feature is enabled. When enabled, users can try out the API by sending requests and viewing responses in API portal.</summary>
@@ -456,6 +472,7 @@ public enum V1beta1SpringCloudAPIPortalSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpringCloudAPIPortalSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -469,6 +486,7 @@ public partial class V1beta1SpringCloudAPIPortalSpecProviderConfigRefPolicy
     public V1beta1SpringCloudAPIPortalSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1SpringCloudAPIPortalSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -500,6 +518,7 @@ public enum V1beta1SpringCloudAPIPortalSpecPublishConnectionDetailsToConfigRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpringCloudAPIPortalSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -513,6 +532,7 @@ public partial class V1beta1SpringCloudAPIPortalSpecPublishConnectionDetailsToCo
     public V1beta1SpringCloudAPIPortalSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1SpringCloudAPIPortalSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -524,6 +544,7 @@ public partial class V1beta1SpringCloudAPIPortalSpecPublishConnectionDetailsToCo
     public V1beta1SpringCloudAPIPortalSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1SpringCloudAPIPortalSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -539,6 +560,7 @@ public partial class V1beta1SpringCloudAPIPortalSpecPublishConnectionDetailsToMe
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1SpringCloudAPIPortalSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -554,6 +576,7 @@ public partial class V1beta1SpringCloudAPIPortalSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1SpringCloudAPIPortalSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -565,6 +588,7 @@ public partial class V1beta1SpringCloudAPIPortalSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>SpringCloudAPIPortalSpec defines the desired state of SpringCloudAPIPortal</summary>
 public partial class V1beta1SpringCloudAPIPortalSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -597,6 +621,7 @@ public partial class V1beta1SpringCloudAPIPortalSpec
     public V1beta1SpringCloudAPIPortalSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudAPIPortalStatusAtProviderSso
 {
     /// <summary>The public identifier for the application.</summary>
@@ -616,6 +641,7 @@ public partial class V1beta1SpringCloudAPIPortalStatusAtProviderSso
     public IList<string>? Scope { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudAPIPortalStatusAtProvider
 {
     /// <summary>Specifies whether the API try-out feature is enabled. When enabled, users can try out the API by sending requests and viewing responses in API portal.</summary>
@@ -655,6 +681,7 @@ public partial class V1beta1SpringCloudAPIPortalStatusAtProvider
     public string? Url { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1SpringCloudAPIPortalStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -682,6 +709,7 @@ public partial class V1beta1SpringCloudAPIPortalStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>SpringCloudAPIPortalStatus defines the observed state of SpringCloudAPIPortal.</summary>
 public partial class V1beta1SpringCloudAPIPortalStatus
 {
     /// <summary></summary>
@@ -698,6 +726,7 @@ public partial class V1beta1SpringCloudAPIPortalStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>SpringCloudAPIPortal is the Schema for the SpringCloudAPIPortals API. Manages a Spring Cloud API Portal.</summary>
 public partial class V1beta1SpringCloudAPIPortal : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SpringCloudAPIPortalSpec>, IStatus<V1beta1SpringCloudAPIPortalStatus>
 {
     public const string KubeApiVersion = "v1beta1";

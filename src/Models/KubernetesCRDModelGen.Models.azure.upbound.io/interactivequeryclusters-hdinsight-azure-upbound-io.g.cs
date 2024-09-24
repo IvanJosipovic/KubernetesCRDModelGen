@@ -18,6 +18,7 @@ public enum V1beta1InteractiveQueryClusterSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderComponentVersion
 {
     /// <summary>The version of Interactive Query which should be used for this HDInsight Interactive Query Cluster. Changing this forces a new resource to be created.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderComponentVersi
     public string? InteractiveHive { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderComputeIsolation
 {
     /// <summary>This field indicates whether enable compute isolation or not. Possible values are true or false.</summary>
@@ -36,6 +38,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderComputeIsolati
     public string? HostSku { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderDiskEncryption
 {
     /// <summary>This is an algorithm identifier for encryption. Possible values are RSA1_5, RSA-OAEP, RSA-OAEP-256.</summary>
@@ -55,6 +58,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderDiskEncryption
     public string? KeyVaultManagedIdentityId { get; set; }
 }
 
+/// <summary>The workspace key of the log analytics extension.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderExtensionPrimaryKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -70,6 +74,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderExtensionPrima
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderExtension
 {
     /// <summary>The workspace ID of the log analytics extension.</summary>
@@ -81,6 +86,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderExtension
     public V1beta1InteractiveQueryClusterSpecForProviderExtensionPrimaryKeySecretRef PrimaryKeySecretRef { get; set; }
 }
 
+/// <summary>The password used for the Ambari Portal.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderGatewayPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -96,6 +102,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderGatewayPasswor
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderGateway
 {
     /// <summary>The password used for the Ambari Portal.</summary>
@@ -107,6 +114,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderGateway
     public string? Username { get; set; }
 }
 
+/// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderMetastoresAmbariPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -122,6 +130,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderMetastoresAmba
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderMetastoresAmbari
 {
     /// <summary>The external Oozie metastore's existing SQL database. Changing this forces a new resource to be created.</summary>
@@ -141,6 +150,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderMetastoresAmba
     public string? Username { get; set; }
 }
 
+/// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderMetastoresHivePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -156,6 +166,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderMetastoresHive
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderMetastoresHive
 {
     /// <summary>The external Oozie metastore's existing SQL database. Changing this forces a new resource to be created.</summary>
@@ -175,6 +186,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderMetastoresHive
     public string? Username { get; set; }
 }
 
+/// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderMetastoresOoziePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -190,6 +202,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderMetastoresOozi
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderMetastoresOozie
 {
     /// <summary>The external Oozie metastore's existing SQL database. Changing this forces a new resource to be created.</summary>
@@ -209,6 +222,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderMetastoresOozi
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderMetastores
 {
     /// <summary>An ambari block as defined below.</summary>
@@ -224,6 +238,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderMetastores
     public IList<V1beta1InteractiveQueryClusterSpecForProviderMetastoresOozie>? Oozie { get; set; }
 }
 
+/// <summary>The Operations Management Suite (OMS) workspace key.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderMonitorPrimaryKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -239,6 +254,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderMonitorPrimary
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderMonitor
 {
     /// <summary>The Operations Management Suite (OMS) workspace ID.</summary>
@@ -250,6 +266,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderMonitor
     public V1beta1InteractiveQueryClusterSpecForProviderMonitorPrimaryKeySecretRef PrimaryKeySecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderNetwork
 {
     /// <summary>The direction of the resource provider connection. Possible values include Inbound or Outbound. Defaults to Inbound. Changing this forces a new resource to be created.</summary>
@@ -281,6 +298,7 @@ public enum V1beta1InteractiveQueryClusterSpecForProviderResourceGroupNameRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -294,6 +312,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderResourceGroupN
     public V1beta1InteractiveQueryClusterSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -325,6 +344,7 @@ public enum V1beta1InteractiveQueryClusterSpecForProviderResourceGroupNameSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -338,6 +358,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderResourceGroupN
     public V1beta1InteractiveQueryClusterSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -353,6 +374,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderResourceGroupN
     public V1beta1InteractiveQueryClusterSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesHeadNodePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -368,6 +390,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesHeadNodeP
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesHeadNodeScriptActions
 {
     /// <summary>The name of the script action.</summary>
@@ -403,6 +426,7 @@ public enum V1beta1InteractiveQueryClusterSpecForProviderRolesHeadNodeSubnetIdRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesHeadNodeSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -416,6 +440,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesHeadNodeS
     public V1beta1InteractiveQueryClusterSpecForProviderRolesHeadNodeSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesHeadNodeSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -447,6 +472,7 @@ public enum V1beta1InteractiveQueryClusterSpecForProviderRolesHeadNodeSubnetIdSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesHeadNodeSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -460,6 +486,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesHeadNodeS
     public V1beta1InteractiveQueryClusterSpecForProviderRolesHeadNodeSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesHeadNodeSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -475,6 +502,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesHeadNodeS
     public V1beta1InteractiveQueryClusterSpecForProviderRolesHeadNodeSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesHeadNode
 {
     /// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
@@ -514,6 +542,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesHeadNode
     public string? VmSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesWorkerNodeAutoscaleCapacity
 {
     /// <summary></summary>
@@ -525,6 +554,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesWorkerNod
     public double? MinInstanceCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesWorkerNodeAutoscaleRecurrenceSchedule
 {
     /// <summary>The days of the week to perform autoscale. Possible values are Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday.</summary>
@@ -540,6 +570,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesWorkerNod
     public string? Time { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesWorkerNodeAutoscaleRecurrence
 {
     /// <summary>A list of schedule blocks as defined below.</summary>
@@ -551,6 +582,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesWorkerNod
     public string? Timezone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesWorkerNodeAutoscale
 {
     /// <summary></summary>
@@ -562,6 +594,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesWorkerNod
     public IList<V1beta1InteractiveQueryClusterSpecForProviderRolesWorkerNodeAutoscaleRecurrence>? Recurrence { get; set; }
 }
 
+/// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesWorkerNodePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -577,6 +610,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesWorkerNod
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesWorkerNodeScriptActions
 {
     /// <summary>The name of the script action.</summary>
@@ -612,6 +646,7 @@ public enum V1beta1InteractiveQueryClusterSpecForProviderRolesWorkerNodeSubnetId
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesWorkerNodeSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -625,6 +660,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesWorkerNod
     public V1beta1InteractiveQueryClusterSpecForProviderRolesWorkerNodeSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesWorkerNodeSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -656,6 +692,7 @@ public enum V1beta1InteractiveQueryClusterSpecForProviderRolesWorkerNodeSubnetId
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesWorkerNodeSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -669,6 +706,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesWorkerNod
     public V1beta1InteractiveQueryClusterSpecForProviderRolesWorkerNodeSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesWorkerNodeSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -684,6 +722,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesWorkerNod
     public V1beta1InteractiveQueryClusterSpecForProviderRolesWorkerNodeSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesWorkerNode
 {
     /// <summary>A autoscale block as defined below.</summary>
@@ -731,6 +770,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesWorkerNod
     public string? VmSize { get; set; }
 }
 
+/// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesZookeeperNodePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -746,6 +786,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesZookeeper
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesZookeeperNodeScriptActions
 {
     /// <summary>The name of the script action.</summary>
@@ -781,6 +822,7 @@ public enum V1beta1InteractiveQueryClusterSpecForProviderRolesZookeeperNodeSubne
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesZookeeperNodeSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -794,6 +836,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesZookeeper
     public V1beta1InteractiveQueryClusterSpecForProviderRolesZookeeperNodeSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesZookeeperNodeSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -825,6 +868,7 @@ public enum V1beta1InteractiveQueryClusterSpecForProviderRolesZookeeperNodeSubne
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesZookeeperNodeSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -838,6 +882,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesZookeeper
     public V1beta1InteractiveQueryClusterSpecForProviderRolesZookeeperNodeSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesZookeeperNodeSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -853,6 +898,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesZookeeper
     public V1beta1InteractiveQueryClusterSpecForProviderRolesZookeeperNodeSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesZookeeperNode
 {
     /// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
@@ -892,6 +938,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderRolesZookeeper
     public string? VmSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderRoles
 {
     /// <summary>A head_node block as defined above.</summary>
@@ -907,6 +954,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderRoles
     public IList<V1beta1InteractiveQueryClusterSpecForProviderRolesZookeeperNode>? ZookeeperNode { get; set; }
 }
 
+/// <summary>The user password of the Azure Active Directory Domain. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderSecurityProfileDomainUserPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -922,6 +970,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderSecurityProfil
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderSecurityProfile
 {
     /// <summary>The resource ID of the Azure Active Directory Domain Service. Changing this forces a new resource to be created.</summary>
@@ -953,6 +1002,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderSecurityProfil
     public string? MsiResourceId { get; set; }
 }
 
+/// <summary>The Access Key which should be used to connect to the Storage Account. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderStorageAccountStorageAccountKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -988,6 +1038,7 @@ public enum V1beta1InteractiveQueryClusterSpecForProviderStorageAccountStorageCo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderStorageAccountStorageContainerIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1001,6 +1052,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderStorageAccount
     public V1beta1InteractiveQueryClusterSpecForProviderStorageAccountStorageContainerIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Container in storage to populate storageContainerId.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderStorageAccountStorageContainerIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1032,6 +1084,7 @@ public enum V1beta1InteractiveQueryClusterSpecForProviderStorageAccountStorageCo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderStorageAccountStorageContainerIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1045,6 +1098,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderStorageAccount
     public V1beta1InteractiveQueryClusterSpecForProviderStorageAccountStorageContainerIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Container in storage to populate storageContainerId.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderStorageAccountStorageContainerIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1060,6 +1114,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderStorageAccount
     public V1beta1InteractiveQueryClusterSpecForProviderStorageAccountStorageContainerIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderStorageAccount
 {
     /// <summary>Is this the Default Storage Account for the HDInsight Hadoop Cluster? Changing this forces a new resource to be created.</summary>
@@ -1087,6 +1142,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderStorageAccount
     public string? StorageResourceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProviderStorageAccountGen2
 {
     /// <summary>The ID of the Gen2 Filesystem. Changing this forces a new resource to be created.</summary>
@@ -1106,6 +1162,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProviderStorageAccount
     public string? StorageResourceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecForProvider
 {
     /// <summary>Specifies the Version of HDInsights which should be used for this Cluster. Changing this forces a new resource to be created.</summary>
@@ -1193,6 +1250,7 @@ public partial class V1beta1InteractiveQueryClusterSpecForProvider
     public string? TlsMinVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderComponentVersion
 {
     /// <summary>The version of Interactive Query which should be used for this HDInsight Interactive Query Cluster. Changing this forces a new resource to be created.</summary>
@@ -1200,6 +1258,7 @@ public partial class V1beta1InteractiveQueryClusterSpecInitProviderComponentVers
     public string? InteractiveHive { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderComputeIsolation
 {
     /// <summary>This field indicates whether enable compute isolation or not. Possible values are true or false.</summary>
@@ -1211,6 +1270,7 @@ public partial class V1beta1InteractiveQueryClusterSpecInitProviderComputeIsolat
     public string? HostSku { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderDiskEncryption
 {
     /// <summary>This is an algorithm identifier for encryption. Possible values are RSA1_5, RSA-OAEP, RSA-OAEP-256.</summary>
@@ -1230,6 +1290,7 @@ public partial class V1beta1InteractiveQueryClusterSpecInitProviderDiskEncryptio
     public string? KeyVaultManagedIdentityId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderExtension
 {
     /// <summary>The workspace ID of the log analytics extension.</summary>
@@ -1237,6 +1298,7 @@ public partial class V1beta1InteractiveQueryClusterSpecInitProviderExtension
     public string? LogAnalyticsWorkspaceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderGateway
 {
     /// <summary>The username used for the Ambari Portal. Changing this forces a new resource to be created.</summary>
@@ -1244,6 +1306,7 @@ public partial class V1beta1InteractiveQueryClusterSpecInitProviderGateway
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderMetastoresAmbari
 {
     /// <summary>The external Oozie metastore's existing SQL database. Changing this forces a new resource to be created.</summary>
@@ -1259,6 +1322,7 @@ public partial class V1beta1InteractiveQueryClusterSpecInitProviderMetastoresAmb
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderMetastoresHive
 {
     /// <summary>The external Oozie metastore's existing SQL database. Changing this forces a new resource to be created.</summary>
@@ -1274,6 +1338,7 @@ public partial class V1beta1InteractiveQueryClusterSpecInitProviderMetastoresHiv
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderMetastoresOozie
 {
     /// <summary>The external Oozie metastore's existing SQL database. Changing this forces a new resource to be created.</summary>
@@ -1289,6 +1354,7 @@ public partial class V1beta1InteractiveQueryClusterSpecInitProviderMetastoresOoz
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderMetastores
 {
     /// <summary>An ambari block as defined below.</summary>
@@ -1304,6 +1370,7 @@ public partial class V1beta1InteractiveQueryClusterSpecInitProviderMetastores
     public IList<V1beta1InteractiveQueryClusterSpecInitProviderMetastoresOozie>? Oozie { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderMonitor
 {
     /// <summary>The Operations Management Suite (OMS) workspace ID.</summary>
@@ -1311,6 +1378,7 @@ public partial class V1beta1InteractiveQueryClusterSpecInitProviderMonitor
     public string? LogAnalyticsWorkspaceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderNetwork
 {
     /// <summary>The direction of the resource provider connection. Possible values include Inbound or Outbound. Defaults to Inbound. Changing this forces a new resource to be created.</summary>
@@ -1322,6 +1390,7 @@ public partial class V1beta1InteractiveQueryClusterSpecInitProviderNetwork
     public bool? PrivateLinkEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderRolesHeadNodeScriptActions
 {
     /// <summary>The name of the script action.</summary>
@@ -1357,6 +1426,7 @@ public enum V1beta1InteractiveQueryClusterSpecInitProviderRolesHeadNodeSubnetIdR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderRolesHeadNodeSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1370,6 +1440,7 @@ public partial class V1beta1InteractiveQueryClusterSpecInitProviderRolesHeadNode
     public V1beta1InteractiveQueryClusterSpecInitProviderRolesHeadNodeSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderRolesHeadNodeSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1401,6 +1472,7 @@ public enum V1beta1InteractiveQueryClusterSpecInitProviderRolesHeadNodeSubnetIdS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderRolesHeadNodeSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1414,6 +1486,7 @@ public partial class V1beta1InteractiveQueryClusterSpecInitProviderRolesHeadNode
     public V1beta1InteractiveQueryClusterSpecInitProviderRolesHeadNodeSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderRolesHeadNodeSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1429,6 +1502,7 @@ public partial class V1beta1InteractiveQueryClusterSpecInitProviderRolesHeadNode
     public V1beta1InteractiveQueryClusterSpecInitProviderRolesHeadNodeSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderRolesHeadNode
 {
     /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined above.</summary>
@@ -1464,6 +1538,7 @@ public partial class V1beta1InteractiveQueryClusterSpecInitProviderRolesHeadNode
     public string? VmSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderRolesWorkerNodeAutoscaleCapacity
 {
     /// <summary></summary>
@@ -1475,6 +1550,7 @@ public partial class V1beta1InteractiveQueryClusterSpecInitProviderRolesWorkerNo
     public double? MinInstanceCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderRolesWorkerNodeAutoscaleRecurrenceSchedule
 {
     /// <summary>The days of the week to perform autoscale. Possible values are Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday.</summary>
@@ -1490,6 +1566,7 @@ public partial class V1beta1InteractiveQueryClusterSpecInitProviderRolesWorkerNo
     public string? Time { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderRolesWorkerNodeAutoscaleRecurrence
 {
     /// <summary>A list of schedule blocks as defined below.</summary>
@@ -1501,6 +1578,7 @@ public partial class V1beta1InteractiveQueryClusterSpecInitProviderRolesWorkerNo
     public string? Timezone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderRolesWorkerNodeAutoscale
 {
     /// <summary></summary>
@@ -1512,6 +1590,7 @@ public partial class V1beta1InteractiveQueryClusterSpecInitProviderRolesWorkerNo
     public IList<V1beta1InteractiveQueryClusterSpecInitProviderRolesWorkerNodeAutoscaleRecurrence>? Recurrence { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderRolesWorkerNodeScriptActions
 {
     /// <summary>The name of the script action.</summary>
@@ -1547,6 +1626,7 @@ public enum V1beta1InteractiveQueryClusterSpecInitProviderRolesWorkerNodeSubnetI
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderRolesWorkerNodeSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1560,6 +1640,7 @@ public partial class V1beta1InteractiveQueryClusterSpecInitProviderRolesWorkerNo
     public V1beta1InteractiveQueryClusterSpecInitProviderRolesWorkerNodeSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderRolesWorkerNodeSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1591,6 +1672,7 @@ public enum V1beta1InteractiveQueryClusterSpecInitProviderRolesWorkerNodeSubnetI
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderRolesWorkerNodeSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1604,6 +1686,7 @@ public partial class V1beta1InteractiveQueryClusterSpecInitProviderRolesWorkerNo
     public V1beta1InteractiveQueryClusterSpecInitProviderRolesWorkerNodeSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderRolesWorkerNodeSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1619,6 +1702,7 @@ public partial class V1beta1InteractiveQueryClusterSpecInitProviderRolesWorkerNo
     public V1beta1InteractiveQueryClusterSpecInitProviderRolesWorkerNodeSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderRolesWorkerNode
 {
     /// <summary>A autoscale block as defined below.</summary>
@@ -1662,6 +1746,7 @@ public partial class V1beta1InteractiveQueryClusterSpecInitProviderRolesWorkerNo
     public string? VmSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderRolesZookeeperNodeScriptActions
 {
     /// <summary>The name of the script action.</summary>
@@ -1697,6 +1782,7 @@ public enum V1beta1InteractiveQueryClusterSpecInitProviderRolesZookeeperNodeSubn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderRolesZookeeperNodeSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1710,6 +1796,7 @@ public partial class V1beta1InteractiveQueryClusterSpecInitProviderRolesZookeepe
     public V1beta1InteractiveQueryClusterSpecInitProviderRolesZookeeperNodeSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderRolesZookeeperNodeSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1741,6 +1828,7 @@ public enum V1beta1InteractiveQueryClusterSpecInitProviderRolesZookeeperNodeSubn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderRolesZookeeperNodeSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1754,6 +1842,7 @@ public partial class V1beta1InteractiveQueryClusterSpecInitProviderRolesZookeepe
     public V1beta1InteractiveQueryClusterSpecInitProviderRolesZookeeperNodeSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderRolesZookeeperNodeSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1769,6 +1858,7 @@ public partial class V1beta1InteractiveQueryClusterSpecInitProviderRolesZookeepe
     public V1beta1InteractiveQueryClusterSpecInitProviderRolesZookeeperNodeSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderRolesZookeeperNode
 {
     /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined above.</summary>
@@ -1804,6 +1894,7 @@ public partial class V1beta1InteractiveQueryClusterSpecInitProviderRolesZookeepe
     public string? VmSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderRoles
 {
     /// <summary>A head_node block as defined above.</summary>
@@ -1819,6 +1910,7 @@ public partial class V1beta1InteractiveQueryClusterSpecInitProviderRoles
     public IList<V1beta1InteractiveQueryClusterSpecInitProviderRolesZookeeperNode>? ZookeeperNode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderSecurityProfile
 {
     /// <summary>The resource ID of the Azure Active Directory Domain Service. Changing this forces a new resource to be created.</summary>
@@ -1866,6 +1958,7 @@ public enum V1beta1InteractiveQueryClusterSpecInitProviderStorageAccountStorageC
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderStorageAccountStorageContainerIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1879,6 +1972,7 @@ public partial class V1beta1InteractiveQueryClusterSpecInitProviderStorageAccoun
     public V1beta1InteractiveQueryClusterSpecInitProviderStorageAccountStorageContainerIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Container in storage to populate storageContainerId.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderStorageAccountStorageContainerIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1910,6 +2004,7 @@ public enum V1beta1InteractiveQueryClusterSpecInitProviderStorageAccountStorageC
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderStorageAccountStorageContainerIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1923,6 +2018,7 @@ public partial class V1beta1InteractiveQueryClusterSpecInitProviderStorageAccoun
     public V1beta1InteractiveQueryClusterSpecInitProviderStorageAccountStorageContainerIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Container in storage to populate storageContainerId.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderStorageAccountStorageContainerIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1938,6 +2034,7 @@ public partial class V1beta1InteractiveQueryClusterSpecInitProviderStorageAccoun
     public V1beta1InteractiveQueryClusterSpecInitProviderStorageAccountStorageContainerIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderStorageAccount
 {
     /// <summary>Is this the Default Storage Account for the HDInsight Hadoop Cluster? Changing this forces a new resource to be created.</summary>
@@ -1961,6 +2058,7 @@ public partial class V1beta1InteractiveQueryClusterSpecInitProviderStorageAccoun
     public string? StorageResourceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProviderStorageAccountGen2
 {
     /// <summary>The ID of the Gen2 Filesystem. Changing this forces a new resource to be created.</summary>
@@ -1980,6 +2078,7 @@ public partial class V1beta1InteractiveQueryClusterSpecInitProviderStorageAccoun
     public string? StorageResourceId { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecInitProvider
 {
     /// <summary>Specifies the Version of HDInsights which should be used for this Cluster. Changing this forces a new resource to be created.</summary>
@@ -2097,6 +2196,7 @@ public enum V1beta1InteractiveQueryClusterSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2110,6 +2210,7 @@ public partial class V1beta1InteractiveQueryClusterSpecProviderConfigRefPolicy
     public V1beta1InteractiveQueryClusterSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2141,6 +2242,7 @@ public enum V1beta1InteractiveQueryClusterSpecPublishConnectionDetailsToConfigRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2154,6 +2256,7 @@ public partial class V1beta1InteractiveQueryClusterSpecPublishConnectionDetailsT
     public V1beta1InteractiveQueryClusterSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2165,6 +2268,7 @@ public partial class V1beta1InteractiveQueryClusterSpecPublishConnectionDetailsT
     public V1beta1InteractiveQueryClusterSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -2180,6 +2284,7 @@ public partial class V1beta1InteractiveQueryClusterSpecPublishConnectionDetailsT
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -2195,6 +2300,7 @@ public partial class V1beta1InteractiveQueryClusterSpecPublishConnectionDetailsT
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1InteractiveQueryClusterSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -2206,6 +2312,7 @@ public partial class V1beta1InteractiveQueryClusterSpecWriteConnectionSecretToRe
     public string Namespace { get; set; }
 }
 
+/// <summary>InteractiveQueryClusterSpec defines the desired state of InteractiveQueryCluster</summary>
 public partial class V1beta1InteractiveQueryClusterSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -2238,6 +2345,7 @@ public partial class V1beta1InteractiveQueryClusterSpec
     public V1beta1InteractiveQueryClusterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterStatusAtProviderComponentVersion
 {
     /// <summary>The version of Interactive Query which should be used for this HDInsight Interactive Query Cluster. Changing this forces a new resource to be created.</summary>
@@ -2245,6 +2353,7 @@ public partial class V1beta1InteractiveQueryClusterStatusAtProviderComponentVers
     public string? InteractiveHive { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterStatusAtProviderComputeIsolation
 {
     /// <summary>This field indicates whether enable compute isolation or not. Possible values are true or false.</summary>
@@ -2256,6 +2365,7 @@ public partial class V1beta1InteractiveQueryClusterStatusAtProviderComputeIsolat
     public string? HostSku { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterStatusAtProviderDiskEncryption
 {
     /// <summary>This is an algorithm identifier for encryption. Possible values are RSA1_5, RSA-OAEP, RSA-OAEP-256.</summary>
@@ -2275,6 +2385,7 @@ public partial class V1beta1InteractiveQueryClusterStatusAtProviderDiskEncryptio
     public string? KeyVaultManagedIdentityId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterStatusAtProviderExtension
 {
     /// <summary>The workspace ID of the log analytics extension.</summary>
@@ -2282,6 +2393,7 @@ public partial class V1beta1InteractiveQueryClusterStatusAtProviderExtension
     public string? LogAnalyticsWorkspaceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterStatusAtProviderGateway
 {
     /// <summary>The username used for the Ambari Portal. Changing this forces a new resource to be created.</summary>
@@ -2289,6 +2401,7 @@ public partial class V1beta1InteractiveQueryClusterStatusAtProviderGateway
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterStatusAtProviderMetastoresAmbari
 {
     /// <summary>The external Oozie metastore's existing SQL database. Changing this forces a new resource to be created.</summary>
@@ -2304,6 +2417,7 @@ public partial class V1beta1InteractiveQueryClusterStatusAtProviderMetastoresAmb
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterStatusAtProviderMetastoresHive
 {
     /// <summary>The external Oozie metastore's existing SQL database. Changing this forces a new resource to be created.</summary>
@@ -2319,6 +2433,7 @@ public partial class V1beta1InteractiveQueryClusterStatusAtProviderMetastoresHiv
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterStatusAtProviderMetastoresOozie
 {
     /// <summary>The external Oozie metastore's existing SQL database. Changing this forces a new resource to be created.</summary>
@@ -2334,6 +2449,7 @@ public partial class V1beta1InteractiveQueryClusterStatusAtProviderMetastoresOoz
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterStatusAtProviderMetastores
 {
     /// <summary>An ambari block as defined below.</summary>
@@ -2349,6 +2465,7 @@ public partial class V1beta1InteractiveQueryClusterStatusAtProviderMetastores
     public IList<V1beta1InteractiveQueryClusterStatusAtProviderMetastoresOozie>? Oozie { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterStatusAtProviderMonitor
 {
     /// <summary>The Operations Management Suite (OMS) workspace ID.</summary>
@@ -2356,6 +2473,7 @@ public partial class V1beta1InteractiveQueryClusterStatusAtProviderMonitor
     public string? LogAnalyticsWorkspaceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterStatusAtProviderNetwork
 {
     /// <summary>The direction of the resource provider connection. Possible values include Inbound or Outbound. Defaults to Inbound. Changing this forces a new resource to be created.</summary>
@@ -2367,6 +2485,7 @@ public partial class V1beta1InteractiveQueryClusterStatusAtProviderNetwork
     public bool? PrivateLinkEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterStatusAtProviderRolesHeadNodeScriptActions
 {
     /// <summary>The name of the script action.</summary>
@@ -2382,6 +2501,7 @@ public partial class V1beta1InteractiveQueryClusterStatusAtProviderRolesHeadNode
     public string? Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterStatusAtProviderRolesHeadNode
 {
     /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined above.</summary>
@@ -2409,6 +2529,7 @@ public partial class V1beta1InteractiveQueryClusterStatusAtProviderRolesHeadNode
     public string? VmSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterStatusAtProviderRolesWorkerNodeAutoscaleCapacity
 {
     /// <summary></summary>
@@ -2420,6 +2541,7 @@ public partial class V1beta1InteractiveQueryClusterStatusAtProviderRolesWorkerNo
     public double? MinInstanceCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterStatusAtProviderRolesWorkerNodeAutoscaleRecurrenceSchedule
 {
     /// <summary>The days of the week to perform autoscale. Possible values are Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday.</summary>
@@ -2435,6 +2557,7 @@ public partial class V1beta1InteractiveQueryClusterStatusAtProviderRolesWorkerNo
     public string? Time { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterStatusAtProviderRolesWorkerNodeAutoscaleRecurrence
 {
     /// <summary>A list of schedule blocks as defined below.</summary>
@@ -2446,6 +2569,7 @@ public partial class V1beta1InteractiveQueryClusterStatusAtProviderRolesWorkerNo
     public string? Timezone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterStatusAtProviderRolesWorkerNodeAutoscale
 {
     /// <summary></summary>
@@ -2457,6 +2581,7 @@ public partial class V1beta1InteractiveQueryClusterStatusAtProviderRolesWorkerNo
     public IList<V1beta1InteractiveQueryClusterStatusAtProviderRolesWorkerNodeAutoscaleRecurrence>? Recurrence { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterStatusAtProviderRolesWorkerNodeScriptActions
 {
     /// <summary>The name of the script action.</summary>
@@ -2472,6 +2597,7 @@ public partial class V1beta1InteractiveQueryClusterStatusAtProviderRolesWorkerNo
     public string? Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterStatusAtProviderRolesWorkerNode
 {
     /// <summary>A autoscale block as defined below.</summary>
@@ -2507,6 +2633,7 @@ public partial class V1beta1InteractiveQueryClusterStatusAtProviderRolesWorkerNo
     public string? VmSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterStatusAtProviderRolesZookeeperNodeScriptActions
 {
     /// <summary>The name of the script action.</summary>
@@ -2522,6 +2649,7 @@ public partial class V1beta1InteractiveQueryClusterStatusAtProviderRolesZookeepe
     public string? Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterStatusAtProviderRolesZookeeperNode
 {
     /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined above.</summary>
@@ -2549,6 +2677,7 @@ public partial class V1beta1InteractiveQueryClusterStatusAtProviderRolesZookeepe
     public string? VmSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterStatusAtProviderRoles
 {
     /// <summary>A head_node block as defined above.</summary>
@@ -2564,6 +2693,7 @@ public partial class V1beta1InteractiveQueryClusterStatusAtProviderRoles
     public IList<V1beta1InteractiveQueryClusterStatusAtProviderRolesZookeeperNode>? ZookeeperNode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterStatusAtProviderSecurityProfile
 {
     /// <summary>The resource ID of the Azure Active Directory Domain Service. Changing this forces a new resource to be created.</summary>
@@ -2591,6 +2721,7 @@ public partial class V1beta1InteractiveQueryClusterStatusAtProviderSecurityProfi
     public string? MsiResourceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterStatusAtProviderStorageAccount
 {
     /// <summary>Is this the Default Storage Account for the HDInsight Hadoop Cluster? Changing this forces a new resource to be created.</summary>
@@ -2606,6 +2737,7 @@ public partial class V1beta1InteractiveQueryClusterStatusAtProviderStorageAccoun
     public string? StorageResourceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterStatusAtProviderStorageAccountGen2
 {
     /// <summary>The ID of the Gen2 Filesystem. Changing this forces a new resource to be created.</summary>
@@ -2625,6 +2757,7 @@ public partial class V1beta1InteractiveQueryClusterStatusAtProviderStorageAccoun
     public string? StorageResourceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InteractiveQueryClusterStatusAtProvider
 {
     /// <summary>Specifies the Version of HDInsights which should be used for this Cluster. Changing this forces a new resource to be created.</summary>
@@ -2716,6 +2849,7 @@ public partial class V1beta1InteractiveQueryClusterStatusAtProvider
     public string? TlsMinVersion { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1InteractiveQueryClusterStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2743,6 +2877,7 @@ public partial class V1beta1InteractiveQueryClusterStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>InteractiveQueryClusterStatus defines the observed state of InteractiveQueryCluster.</summary>
 public partial class V1beta1InteractiveQueryClusterStatus
 {
     /// <summary></summary>
@@ -2759,6 +2894,7 @@ public partial class V1beta1InteractiveQueryClusterStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>InteractiveQueryCluster is the Schema for the InteractiveQueryClusters API. Manages a HDInsight Interactive Query Cluster.</summary>
 public partial class V1beta1InteractiveQueryCluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1InteractiveQueryClusterSpec>, IStatus<V1beta1InteractiveQueryClusterStatus>
 {
     public const string KubeApiVersion = "v1beta1";

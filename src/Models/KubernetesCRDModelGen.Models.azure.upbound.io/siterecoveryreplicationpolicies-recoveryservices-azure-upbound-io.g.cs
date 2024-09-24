@@ -38,6 +38,7 @@ public enum V1beta1SiteRecoveryReplicationPolicySpecForProviderRecoveryVaultName
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SiteRecoveryReplicationPolicySpecForProviderRecoveryVaultNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1SiteRecoveryReplicationPolicySpecForProviderRecovery
     public V1beta1SiteRecoveryReplicationPolicySpecForProviderRecoveryVaultNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Vault in recoveryservices to populate recoveryVaultName.</summary>
 public partial class V1beta1SiteRecoveryReplicationPolicySpecForProviderRecoveryVaultNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1SiteRecoveryReplicationPolicySpecForProviderRecoveryVaultName
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SiteRecoveryReplicationPolicySpecForProviderRecoveryVaultNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1SiteRecoveryReplicationPolicySpecForProviderRecovery
     public V1beta1SiteRecoveryReplicationPolicySpecForProviderRecoveryVaultNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Vault in recoveryservices to populate recoveryVaultName.</summary>
 public partial class V1beta1SiteRecoveryReplicationPolicySpecForProviderRecoveryVaultNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1SiteRecoveryReplicationPolicySpecForProviderResourceGroupName
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SiteRecoveryReplicationPolicySpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1SiteRecoveryReplicationPolicySpecForProviderResource
     public V1beta1SiteRecoveryReplicationPolicySpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1SiteRecoveryReplicationPolicySpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1SiteRecoveryReplicationPolicySpecForProviderResourceGroupName
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SiteRecoveryReplicationPolicySpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1SiteRecoveryReplicationPolicySpecForProviderResource
     public V1beta1SiteRecoveryReplicationPolicySpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1SiteRecoveryReplicationPolicySpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1SiteRecoveryReplicationPolicySpecForProviderResource
     public V1beta1SiteRecoveryReplicationPolicySpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SiteRecoveryReplicationPolicySpecForProvider
 {
     /// <summary>Specifies the frequency(in minutes) at which to create application consistent recovery points.</summary>
@@ -237,6 +246,7 @@ public partial class V1beta1SiteRecoveryReplicationPolicySpecForProvider
     public V1beta1SiteRecoveryReplicationPolicySpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1SiteRecoveryReplicationPolicySpecInitProvider
 {
     /// <summary>Specifies the frequency(in minutes) at which to create application consistent recovery points.</summary>
@@ -290,6 +300,7 @@ public enum V1beta1SiteRecoveryReplicationPolicySpecProviderConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SiteRecoveryReplicationPolicySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -303,6 +314,7 @@ public partial class V1beta1SiteRecoveryReplicationPolicySpecProviderConfigRefPo
     public V1beta1SiteRecoveryReplicationPolicySpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1SiteRecoveryReplicationPolicySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -334,6 +346,7 @@ public enum V1beta1SiteRecoveryReplicationPolicySpecPublishConnectionDetailsToCo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SiteRecoveryReplicationPolicySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -347,6 +360,7 @@ public partial class V1beta1SiteRecoveryReplicationPolicySpecPublishConnectionDe
     public V1beta1SiteRecoveryReplicationPolicySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1SiteRecoveryReplicationPolicySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -358,6 +372,7 @@ public partial class V1beta1SiteRecoveryReplicationPolicySpecPublishConnectionDe
     public V1beta1SiteRecoveryReplicationPolicySpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1SiteRecoveryReplicationPolicySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -373,6 +388,7 @@ public partial class V1beta1SiteRecoveryReplicationPolicySpecPublishConnectionDe
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1SiteRecoveryReplicationPolicySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -388,6 +404,7 @@ public partial class V1beta1SiteRecoveryReplicationPolicySpecPublishConnectionDe
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1SiteRecoveryReplicationPolicySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -399,6 +416,7 @@ public partial class V1beta1SiteRecoveryReplicationPolicySpecWriteConnectionSecr
     public string Namespace { get; set; }
 }
 
+/// <summary>SiteRecoveryReplicationPolicySpec defines the desired state of SiteRecoveryReplicationPolicy</summary>
 public partial class V1beta1SiteRecoveryReplicationPolicySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -431,6 +449,7 @@ public partial class V1beta1SiteRecoveryReplicationPolicySpec
     public V1beta1SiteRecoveryReplicationPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SiteRecoveryReplicationPolicyStatusAtProvider
 {
     /// <summary>Specifies the frequency(in minutes) at which to create application consistent recovery points.</summary>
@@ -454,6 +473,7 @@ public partial class V1beta1SiteRecoveryReplicationPolicyStatusAtProvider
     public string? ResourceGroupName { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1SiteRecoveryReplicationPolicyStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -481,6 +501,7 @@ public partial class V1beta1SiteRecoveryReplicationPolicyStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>SiteRecoveryReplicationPolicyStatus defines the observed state of SiteRecoveryReplicationPolicy.</summary>
 public partial class V1beta1SiteRecoveryReplicationPolicyStatus
 {
     /// <summary></summary>
@@ -497,6 +518,7 @@ public partial class V1beta1SiteRecoveryReplicationPolicyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>SiteRecoveryReplicationPolicy is the Schema for the SiteRecoveryReplicationPolicys API. Manages an Azure Site Recovery replication policy on Azure.</summary>
 public partial class V1beta1SiteRecoveryReplicationPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SiteRecoveryReplicationPolicySpec>, IStatus<V1beta1SiteRecoveryReplicationPolicyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

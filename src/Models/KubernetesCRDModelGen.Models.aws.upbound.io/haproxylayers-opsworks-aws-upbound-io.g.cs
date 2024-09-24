@@ -18,6 +18,7 @@ public enum V1beta1HAProxyLayerSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1HAProxyLayerSpecForProviderCloudwatchConfigurationLogStreams
 {
     /// <summary></summary>
@@ -65,6 +66,7 @@ public partial class V1beta1HAProxyLayerSpecForProviderCloudwatchConfigurationLo
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HAProxyLayerSpecForProviderCloudwatchConfiguration
 {
     /// <summary></summary>
@@ -96,6 +98,7 @@ public enum V1beta1HAProxyLayerSpecForProviderCustomSecurityGroupIdRefsPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HAProxyLayerSpecForProviderCustomSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -109,6 +112,7 @@ public partial class V1beta1HAProxyLayerSpecForProviderCustomSecurityGroupIdRefs
     public V1beta1HAProxyLayerSpecForProviderCustomSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1HAProxyLayerSpecForProviderCustomSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -140,6 +144,7 @@ public enum V1beta1HAProxyLayerSpecForProviderCustomSecurityGroupIdSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1HAProxyLayerSpecForProviderCustomSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -153,6 +158,7 @@ public partial class V1beta1HAProxyLayerSpecForProviderCustomSecurityGroupIdSele
     public V1beta1HAProxyLayerSpecForProviderCustomSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate customSecurityGroupIds.</summary>
 public partial class V1beta1HAProxyLayerSpecForProviderCustomSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -168,6 +174,7 @@ public partial class V1beta1HAProxyLayerSpecForProviderCustomSecurityGroupIdSele
     public V1beta1HAProxyLayerSpecForProviderCustomSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HAProxyLayerSpecForProviderEbsVolume
 {
     /// <summary></summary>
@@ -199,6 +206,7 @@ public partial class V1beta1HAProxyLayerSpecForProviderEbsVolume
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HAProxyLayerSpecForProviderLoadBasedAutoScalingDownscaling
 {
     /// <summary></summary>
@@ -230,6 +238,7 @@ public partial class V1beta1HAProxyLayerSpecForProviderLoadBasedAutoScalingDowns
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HAProxyLayerSpecForProviderLoadBasedAutoScalingUpscaling
 {
     /// <summary></summary>
@@ -261,6 +270,7 @@ public partial class V1beta1HAProxyLayerSpecForProviderLoadBasedAutoScalingUpsca
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HAProxyLayerSpecForProviderLoadBasedAutoScaling
 {
     /// <summary></summary>
@@ -296,6 +306,7 @@ public enum V1beta1HAProxyLayerSpecForProviderStackIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HAProxyLayerSpecForProviderStackIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -309,6 +320,7 @@ public partial class V1beta1HAProxyLayerSpecForProviderStackIdRefPolicy
     public V1beta1HAProxyLayerSpecForProviderStackIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Stack in opsworks to populate stackId.</summary>
 public partial class V1beta1HAProxyLayerSpecForProviderStackIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -340,6 +352,7 @@ public enum V1beta1HAProxyLayerSpecForProviderStackIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1HAProxyLayerSpecForProviderStackIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -353,6 +366,7 @@ public partial class V1beta1HAProxyLayerSpecForProviderStackIdSelectorPolicy
     public V1beta1HAProxyLayerSpecForProviderStackIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Stack in opsworks to populate stackId.</summary>
 public partial class V1beta1HAProxyLayerSpecForProviderStackIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -368,6 +382,7 @@ public partial class V1beta1HAProxyLayerSpecForProviderStackIdSelector
     public V1beta1HAProxyLayerSpecForProviderStackIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HAProxyLayerSpecForProvider
 {
     /// <summary>Whether to automatically assign an elastic IP address to the layer's instances.</summary>
@@ -503,6 +518,7 @@ public partial class V1beta1HAProxyLayerSpecForProvider
     public bool? UseEbsOptimizedInstances { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HAProxyLayerSpecInitProviderCloudwatchConfigurationLogStreams
 {
     /// <summary></summary>
@@ -550,6 +566,7 @@ public partial class V1beta1HAProxyLayerSpecInitProviderCloudwatchConfigurationL
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HAProxyLayerSpecInitProviderCloudwatchConfiguration
 {
     /// <summary></summary>
@@ -581,6 +598,7 @@ public enum V1beta1HAProxyLayerSpecInitProviderCustomSecurityGroupIdRefsPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HAProxyLayerSpecInitProviderCustomSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -594,6 +612,7 @@ public partial class V1beta1HAProxyLayerSpecInitProviderCustomSecurityGroupIdRef
     public V1beta1HAProxyLayerSpecInitProviderCustomSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1HAProxyLayerSpecInitProviderCustomSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -625,6 +644,7 @@ public enum V1beta1HAProxyLayerSpecInitProviderCustomSecurityGroupIdSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1HAProxyLayerSpecInitProviderCustomSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -638,6 +658,7 @@ public partial class V1beta1HAProxyLayerSpecInitProviderCustomSecurityGroupIdSel
     public V1beta1HAProxyLayerSpecInitProviderCustomSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate customSecurityGroupIds.</summary>
 public partial class V1beta1HAProxyLayerSpecInitProviderCustomSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -653,6 +674,7 @@ public partial class V1beta1HAProxyLayerSpecInitProviderCustomSecurityGroupIdSel
     public V1beta1HAProxyLayerSpecInitProviderCustomSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HAProxyLayerSpecInitProviderEbsVolume
 {
     /// <summary></summary>
@@ -684,6 +706,7 @@ public partial class V1beta1HAProxyLayerSpecInitProviderEbsVolume
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HAProxyLayerSpecInitProviderLoadBasedAutoScalingDownscaling
 {
     /// <summary></summary>
@@ -715,6 +738,7 @@ public partial class V1beta1HAProxyLayerSpecInitProviderLoadBasedAutoScalingDown
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HAProxyLayerSpecInitProviderLoadBasedAutoScalingUpscaling
 {
     /// <summary></summary>
@@ -746,6 +770,7 @@ public partial class V1beta1HAProxyLayerSpecInitProviderLoadBasedAutoScalingUpsc
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HAProxyLayerSpecInitProviderLoadBasedAutoScaling
 {
     /// <summary></summary>
@@ -781,6 +806,7 @@ public enum V1beta1HAProxyLayerSpecInitProviderStackIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HAProxyLayerSpecInitProviderStackIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -794,6 +820,7 @@ public partial class V1beta1HAProxyLayerSpecInitProviderStackIdRefPolicy
     public V1beta1HAProxyLayerSpecInitProviderStackIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Stack in opsworks to populate stackId.</summary>
 public partial class V1beta1HAProxyLayerSpecInitProviderStackIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -825,6 +852,7 @@ public enum V1beta1HAProxyLayerSpecInitProviderStackIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1HAProxyLayerSpecInitProviderStackIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -838,6 +866,7 @@ public partial class V1beta1HAProxyLayerSpecInitProviderStackIdSelectorPolicy
     public V1beta1HAProxyLayerSpecInitProviderStackIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Stack in opsworks to populate stackId.</summary>
 public partial class V1beta1HAProxyLayerSpecInitProviderStackIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -853,6 +882,7 @@ public partial class V1beta1HAProxyLayerSpecInitProviderStackIdSelector
     public V1beta1HAProxyLayerSpecInitProviderStackIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1HAProxyLayerSpecInitProvider
 {
     /// <summary>Whether to automatically assign an elastic IP address to the layer's instances.</summary>
@@ -1030,6 +1060,7 @@ public enum V1beta1HAProxyLayerSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HAProxyLayerSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1043,6 +1074,7 @@ public partial class V1beta1HAProxyLayerSpecProviderConfigRefPolicy
     public V1beta1HAProxyLayerSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1HAProxyLayerSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1074,6 +1106,7 @@ public enum V1beta1HAProxyLayerSpecPublishConnectionDetailsToConfigRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HAProxyLayerSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1087,6 +1120,7 @@ public partial class V1beta1HAProxyLayerSpecPublishConnectionDetailsToConfigRefP
     public V1beta1HAProxyLayerSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1HAProxyLayerSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1098,6 +1132,7 @@ public partial class V1beta1HAProxyLayerSpecPublishConnectionDetailsToConfigRef
     public V1beta1HAProxyLayerSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1HAProxyLayerSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1113,6 +1148,7 @@ public partial class V1beta1HAProxyLayerSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1HAProxyLayerSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1128,6 +1164,7 @@ public partial class V1beta1HAProxyLayerSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1HAProxyLayerSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1139,6 +1176,7 @@ public partial class V1beta1HAProxyLayerSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>HAProxyLayerSpec defines the desired state of HAProxyLayer</summary>
 public partial class V1beta1HAProxyLayerSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1171,6 +1209,7 @@ public partial class V1beta1HAProxyLayerSpec
     public V1beta1HAProxyLayerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HAProxyLayerStatusAtProviderCloudwatchConfigurationLogStreams
 {
     /// <summary></summary>
@@ -1218,6 +1257,7 @@ public partial class V1beta1HAProxyLayerStatusAtProviderCloudwatchConfigurationL
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HAProxyLayerStatusAtProviderCloudwatchConfiguration
 {
     /// <summary></summary>
@@ -1229,6 +1269,7 @@ public partial class V1beta1HAProxyLayerStatusAtProviderCloudwatchConfiguration
     public IList<V1beta1HAProxyLayerStatusAtProviderCloudwatchConfigurationLogStreams>? LogStreams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HAProxyLayerStatusAtProviderEbsVolume
 {
     /// <summary></summary>
@@ -1260,6 +1301,7 @@ public partial class V1beta1HAProxyLayerStatusAtProviderEbsVolume
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HAProxyLayerStatusAtProviderLoadBasedAutoScalingDownscaling
 {
     /// <summary></summary>
@@ -1291,6 +1333,7 @@ public partial class V1beta1HAProxyLayerStatusAtProviderLoadBasedAutoScalingDown
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HAProxyLayerStatusAtProviderLoadBasedAutoScalingUpscaling
 {
     /// <summary></summary>
@@ -1322,6 +1365,7 @@ public partial class V1beta1HAProxyLayerStatusAtProviderLoadBasedAutoScalingUpsc
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HAProxyLayerStatusAtProviderLoadBasedAutoScaling
 {
     /// <summary></summary>
@@ -1337,6 +1381,7 @@ public partial class V1beta1HAProxyLayerStatusAtProviderLoadBasedAutoScaling
     public IList<V1beta1HAProxyLayerStatusAtProviderLoadBasedAutoScalingUpscaling>? Upscaling { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HAProxyLayerStatusAtProvider
 {
     /// <summary>The Amazon Resource Name(ARN) of the layer.</summary>
@@ -1468,6 +1513,7 @@ public partial class V1beta1HAProxyLayerStatusAtProvider
     public bool? UseEbsOptimizedInstances { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1HAProxyLayerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1495,6 +1541,7 @@ public partial class V1beta1HAProxyLayerStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>HAProxyLayerStatus defines the observed state of HAProxyLayer.</summary>
 public partial class V1beta1HAProxyLayerStatus
 {
     /// <summary></summary>
@@ -1511,6 +1558,7 @@ public partial class V1beta1HAProxyLayerStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>HAProxyLayer is the Schema for the HAProxyLayers API. Provides an OpsWorks HAProxy layer resource.</summary>
 public partial class V1beta1HAProxyLayer : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1HAProxyLayerSpec>, IStatus<V1beta1HAProxyLayerStatus>
 {
     public const string KubeApiVersion = "v1beta1";

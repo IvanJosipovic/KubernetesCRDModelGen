@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kms.cnrm.cloud.google.com;
+/// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 public partial class V1alpha1KMSSecretCiphertextSpecAdditionalAuthenticatedDataValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -19,6 +20,7 @@ public partial class V1alpha1KMSSecretCiphertextSpecAdditionalAuthenticatedDataV
     public string Name { get; set; }
 }
 
+/// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 public partial class V1alpha1KMSSecretCiphertextSpecAdditionalAuthenticatedDataValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -26,6 +28,7 @@ public partial class V1alpha1KMSSecretCiphertextSpecAdditionalAuthenticatedDataV
     public V1alpha1KMSSecretCiphertextSpecAdditionalAuthenticatedDataValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary>Immutable. The additional authenticated data used for integrity checks during encryption and decryption.</summary>
 public partial class V1alpha1KMSSecretCiphertextSpecAdditionalAuthenticatedData
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -37,6 +40,7 @@ public partial class V1alpha1KMSSecretCiphertextSpecAdditionalAuthenticatedData
     public V1alpha1KMSSecretCiphertextSpecAdditionalAuthenticatedDataValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 public partial class V1alpha1KMSSecretCiphertextSpecPlaintextValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -48,6 +52,7 @@ public partial class V1alpha1KMSSecretCiphertextSpecPlaintextValueFromSecretKeyR
     public string Name { get; set; }
 }
 
+/// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 public partial class V1alpha1KMSSecretCiphertextSpecPlaintextValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -55,6 +60,7 @@ public partial class V1alpha1KMSSecretCiphertextSpecPlaintextValueFrom
     public V1alpha1KMSSecretCiphertextSpecPlaintextValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary>Immutable. The plaintext to be encrypted.</summary>
 public partial class V1alpha1KMSSecretCiphertextSpecPlaintext
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -66,6 +72,7 @@ public partial class V1alpha1KMSSecretCiphertextSpecPlaintext
     public V1alpha1KMSSecretCiphertextSpecPlaintextValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1KMSSecretCiphertextSpec
 {
     /// <summary>Immutable. The additional authenticated data used for integrity checks during encryption and decryption.</summary>
@@ -85,6 +92,7 @@ public partial class V1alpha1KMSSecretCiphertextSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1KMSSecretCiphertextStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -108,6 +116,7 @@ public partial class V1alpha1KMSSecretCiphertextStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1KMSSecretCiphertextStatus
 {
     /// <summary>Contains the result of encrypting the provided plaintext, encoded in base64.</summary>
@@ -124,6 +133,7 @@ public partial class V1alpha1KMSSecretCiphertextStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1KMSSecretCiphertext : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1KMSSecretCiphertextSpec>, IStatus<V1alpha1KMSSecretCiphertextStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

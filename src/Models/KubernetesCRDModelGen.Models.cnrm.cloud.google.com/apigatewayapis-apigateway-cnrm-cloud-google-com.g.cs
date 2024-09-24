@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigateway.cnrm.cloud.google.com;
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1APIGatewayAPISpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1APIGatewayAPISpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1APIGatewayAPISpec
 {
     /// <summary>A user-visible name for the API.</summary>
@@ -42,6 +44,7 @@ public partial class V1alpha1APIGatewayAPISpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1APIGatewayAPIStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -65,6 +68,7 @@ public partial class V1alpha1APIGatewayAPIStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1APIGatewayAPIStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -85,6 +89,7 @@ public partial class V1alpha1APIGatewayAPIStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1APIGatewayAPI : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1APIGatewayAPISpec>, IStatus<V1alpha1APIGatewayAPIStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

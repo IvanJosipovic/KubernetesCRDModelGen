@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.gkehub.cnrm.cloud.google.com;
+/// <summary>Immutable. The Project that this resource belongs to.</summary>
 public partial class V1beta1GKEHubFeatureSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1GKEHubFeatureSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Specified if applying the default routing config to logs not specified in other configs.</summary>
 public partial class V1beta1GKEHubFeatureSpecSpecFleetobservabilityLoggingConfigDefaultConfig
 {
     /// <summary>The logs routing mode Possible values: MODE_UNSPECIFIED, COPY, MOVE</summary>
@@ -30,6 +32,7 @@ public partial class V1beta1GKEHubFeatureSpecSpecFleetobservabilityLoggingConfig
     public string? Mode { get; set; }
 }
 
+/// <summary>Specified if applying the routing config to all logs for all fleet scopes.</summary>
 public partial class V1beta1GKEHubFeatureSpecSpecFleetobservabilityLoggingConfigFleetScopeLogsConfig
 {
     /// <summary>The logs routing mode Possible values: MODE_UNSPECIFIED, COPY, MOVE</summary>
@@ -37,6 +40,7 @@ public partial class V1beta1GKEHubFeatureSpecSpecFleetobservabilityLoggingConfig
     public string? Mode { get; set; }
 }
 
+/// <summary>Fleet Observability Logging-specific spec.</summary>
 public partial class V1beta1GKEHubFeatureSpecSpecFleetobservabilityLoggingConfig
 {
     /// <summary>Specified if applying the default routing config to logs not specified in other configs.</summary>
@@ -48,6 +52,7 @@ public partial class V1beta1GKEHubFeatureSpecSpecFleetobservabilityLoggingConfig
     public V1beta1GKEHubFeatureSpecSpecFleetobservabilityLoggingConfigFleetScopeLogsConfig? FleetScopeLogsConfig { get; set; }
 }
 
+/// <summary>Fleet Observability spec.</summary>
 public partial class V1beta1GKEHubFeatureSpecSpecFleetobservability
 {
     /// <summary>Fleet Observability Logging-specific spec.</summary>
@@ -55,6 +60,7 @@ public partial class V1beta1GKEHubFeatureSpecSpecFleetobservability
     public V1beta1GKEHubFeatureSpecSpecFleetobservabilityLoggingConfig? LoggingConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GKEHubFeatureSpecSpecMulticlusteringressConfigMembershipRef
 {
     /// <summary>Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example: `projects/foo-proj/locations/global/memberships/bar`  Allowed value: The Google Cloud resource name of a `GKEHubMembership` resource (format: `projects/{{project}}/locations/{{location}}/memberships/{{name}}`).</summary>
@@ -70,6 +76,7 @@ public partial class V1beta1GKEHubFeatureSpecSpecMulticlusteringressConfigMember
     public string? Namespace { get; set; }
 }
 
+/// <summary>Multicluster Ingress-specific spec.</summary>
 public partial class V1beta1GKEHubFeatureSpecSpecMulticlusteringress
 {
     /// <summary></summary>
@@ -77,6 +84,7 @@ public partial class V1beta1GKEHubFeatureSpecSpecMulticlusteringress
     public V1beta1GKEHubFeatureSpecSpecMulticlusteringressConfigMembershipRef ConfigMembershipRef { get; set; }
 }
 
+/// <summary>Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused.</summary>
 public partial class V1beta1GKEHubFeatureSpecSpec
 {
     /// <summary>Fleet Observability spec.</summary>
@@ -88,6 +96,7 @@ public partial class V1beta1GKEHubFeatureSpecSpec
     public V1beta1GKEHubFeatureSpecSpecMulticlusteringress? Multiclusteringress { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GKEHubFeatureSpec
 {
     /// <summary>Immutable. The location for the resource</summary>
@@ -107,6 +116,7 @@ public partial class V1beta1GKEHubFeatureSpec
     public V1beta1GKEHubFeatureSpecSpec? Spec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GKEHubFeatureStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -130,6 +140,7 @@ public partial class V1beta1GKEHubFeatureStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary>State of the Feature resource itself.</summary>
 public partial class V1beta1GKEHubFeatureStatusResourceState
 {
     /// <summary>Whether this Feature has outstanding resources that need to be cleaned up before it can be disabled.</summary>
@@ -141,6 +152,7 @@ public partial class V1beta1GKEHubFeatureStatusResourceState
     public string? State { get; set; }
 }
 
+/// <summary>Output only. The "running state" of the Feature in this Hub.</summary>
 public partial class V1beta1GKEHubFeatureStatusStateState
 {
     /// <summary>The high-level, machine-readable status of this Feature. Possible values: CODE_UNSPECIFIED, OK, WARNING, ERROR</summary>
@@ -156,6 +168,7 @@ public partial class V1beta1GKEHubFeatureStatusStateState
     public string? UpdateTime { get; set; }
 }
 
+/// <summary>Output only. The Hub-wide Feature state</summary>
 public partial class V1beta1GKEHubFeatureStatusState
 {
     /// <summary>Output only. The "running state" of the Feature in this Hub.</summary>
@@ -163,6 +176,7 @@ public partial class V1beta1GKEHubFeatureStatusState
     public V1beta1GKEHubFeatureStatusStateState? State { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GKEHubFeatureStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -195,6 +209,7 @@ public partial class V1beta1GKEHubFeatureStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1GKEHubFeature : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1GKEHubFeatureSpec>, IStatus<V1beta1GKEHubFeatureStatus>
 {
     public const string KubeApiVersion = "v1beta1";

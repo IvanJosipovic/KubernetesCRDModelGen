@@ -38,6 +38,7 @@ public enum V1beta1GlobalForwardingRuleSpecForProviderIpAddressRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecForProviderIpAddressRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1GlobalForwardingRuleSpecForProviderIpAddressRefPolic
     public V1beta1GlobalForwardingRuleSpecForProviderIpAddressRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a GlobalAddress in compute to populate ipAddress.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecForProviderIpAddressRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1GlobalForwardingRuleSpecForProviderIpAddressSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecForProviderIpAddressSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1GlobalForwardingRuleSpecForProviderIpAddressSelector
     public V1beta1GlobalForwardingRuleSpecForProviderIpAddressSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a GlobalAddress in compute to populate ipAddress.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecForProviderIpAddressSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1GlobalForwardingRuleSpecForProviderIpAddressSelector
     public V1beta1GlobalForwardingRuleSpecForProviderIpAddressSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GlobalForwardingRuleSpecForProviderMetadataFiltersFilterLabels
 {
     /// <summary>Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression [a-z]([-a-z0-9]*[a-z0-9])? which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash. For Private Service Connect forwarding rules that forward traffic to Google APIs, the forwarding rule name must be a 1-20 characters string with lowercase letters and numbers and must start with a letter.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1GlobalForwardingRuleSpecForProviderMetadataFiltersFi
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GlobalForwardingRuleSpecForProviderMetadataFilters
 {
     /// <summary>The list of label value pairs that must match labels in the provided metadata based on filterMatchCriteria This list must not be empty and can have at the most 64 entries. Structure is documented below.</summary>
@@ -152,6 +158,7 @@ public enum V1beta1GlobalForwardingRuleSpecForProviderNetworkRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecForProviderNetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -165,6 +172,7 @@ public partial class V1beta1GlobalForwardingRuleSpecForProviderNetworkRefPolicy
     public V1beta1GlobalForwardingRuleSpecForProviderNetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate network.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecForProviderNetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -196,6 +204,7 @@ public enum V1beta1GlobalForwardingRuleSpecForProviderNetworkSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecForProviderNetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -209,6 +218,7 @@ public partial class V1beta1GlobalForwardingRuleSpecForProviderNetworkSelectorPo
     public V1beta1GlobalForwardingRuleSpecForProviderNetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate network.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecForProviderNetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -244,6 +254,7 @@ public enum V1beta1GlobalForwardingRuleSpecForProviderProjectRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecForProviderProjectRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -257,6 +268,7 @@ public partial class V1beta1GlobalForwardingRuleSpecForProviderProjectRefPolicy
     public V1beta1GlobalForwardingRuleSpecForProviderProjectRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate project.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecForProviderProjectRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -288,6 +300,7 @@ public enum V1beta1GlobalForwardingRuleSpecForProviderProjectSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecForProviderProjectSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -301,6 +314,7 @@ public partial class V1beta1GlobalForwardingRuleSpecForProviderProjectSelectorPo
     public V1beta1GlobalForwardingRuleSpecForProviderProjectSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate project.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecForProviderProjectSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -316,6 +330,7 @@ public partial class V1beta1GlobalForwardingRuleSpecForProviderProjectSelector
     public V1beta1GlobalForwardingRuleSpecForProviderProjectSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GlobalForwardingRuleSpecForProviderServiceDirectoryRegistrations
 {
     /// <summary>Service Directory namespace to register the forwarding rule under.</summary>
@@ -347,6 +362,7 @@ public enum V1beta1GlobalForwardingRuleSpecForProviderSubnetworkRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecForProviderSubnetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -360,6 +376,7 @@ public partial class V1beta1GlobalForwardingRuleSpecForProviderSubnetworkRefPoli
     public V1beta1GlobalForwardingRuleSpecForProviderSubnetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnetwork in compute to populate subnetwork.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecForProviderSubnetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -391,6 +408,7 @@ public enum V1beta1GlobalForwardingRuleSpecForProviderSubnetworkSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecForProviderSubnetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -404,6 +422,7 @@ public partial class V1beta1GlobalForwardingRuleSpecForProviderSubnetworkSelecto
     public V1beta1GlobalForwardingRuleSpecForProviderSubnetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnetwork in compute to populate subnetwork.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecForProviderSubnetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -439,6 +458,7 @@ public enum V1beta1GlobalForwardingRuleSpecForProviderTargetRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecForProviderTargetRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -452,6 +472,7 @@ public partial class V1beta1GlobalForwardingRuleSpecForProviderTargetRefPolicy
     public V1beta1GlobalForwardingRuleSpecForProviderTargetRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a TargetSSLProxy in compute to populate target.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecForProviderTargetRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -483,6 +504,7 @@ public enum V1beta1GlobalForwardingRuleSpecForProviderTargetSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecForProviderTargetSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -496,6 +518,7 @@ public partial class V1beta1GlobalForwardingRuleSpecForProviderTargetSelectorPol
     public V1beta1GlobalForwardingRuleSpecForProviderTargetSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a TargetSSLProxy in compute to populate target.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecForProviderTargetSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -511,6 +534,7 @@ public partial class V1beta1GlobalForwardingRuleSpecForProviderTargetSelector
     public V1beta1GlobalForwardingRuleSpecForProviderTargetSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GlobalForwardingRuleSpecForProvider
 {
     /// <summary>An optional description of this resource. Provide this property when you create the resource.</summary>
@@ -634,6 +658,7 @@ public enum V1beta1GlobalForwardingRuleSpecInitProviderIpAddressRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderIpAddressRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -647,6 +672,7 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProviderIpAddressRefPoli
     public V1beta1GlobalForwardingRuleSpecInitProviderIpAddressRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a GlobalAddress in compute to populate ipAddress.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderIpAddressRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -678,6 +704,7 @@ public enum V1beta1GlobalForwardingRuleSpecInitProviderIpAddressSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderIpAddressSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -691,6 +718,7 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProviderIpAddressSelecto
     public V1beta1GlobalForwardingRuleSpecInitProviderIpAddressSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a GlobalAddress in compute to populate ipAddress.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderIpAddressSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -706,6 +734,7 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProviderIpAddressSelecto
     public V1beta1GlobalForwardingRuleSpecInitProviderIpAddressSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderMetadataFiltersFilterLabels
 {
     /// <summary>Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression [a-z]([-a-z0-9]*[a-z0-9])? which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash. For Private Service Connect forwarding rules that forward traffic to Google APIs, the forwarding rule name must be a 1-20 characters string with lowercase letters and numbers and must start with a letter.</summary>
@@ -717,6 +746,7 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProviderMetadataFiltersF
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderMetadataFilters
 {
     /// <summary>The list of label value pairs that must match labels in the provided metadata based on filterMatchCriteria This list must not be empty and can have at the most 64 entries. Structure is documented below.</summary>
@@ -748,6 +778,7 @@ public enum V1beta1GlobalForwardingRuleSpecInitProviderNetworkRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderNetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -761,6 +792,7 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProviderNetworkRefPolicy
     public V1beta1GlobalForwardingRuleSpecInitProviderNetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate network.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderNetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -792,6 +824,7 @@ public enum V1beta1GlobalForwardingRuleSpecInitProviderNetworkSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderNetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -805,6 +838,7 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProviderNetworkSelectorP
     public V1beta1GlobalForwardingRuleSpecInitProviderNetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate network.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderNetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -840,6 +874,7 @@ public enum V1beta1GlobalForwardingRuleSpecInitProviderProjectRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderProjectRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -853,6 +888,7 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProviderProjectRefPolicy
     public V1beta1GlobalForwardingRuleSpecInitProviderProjectRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate project.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderProjectRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -884,6 +920,7 @@ public enum V1beta1GlobalForwardingRuleSpecInitProviderProjectSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderProjectSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -897,6 +934,7 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProviderProjectSelectorP
     public V1beta1GlobalForwardingRuleSpecInitProviderProjectSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate project.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderProjectSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -912,6 +950,7 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProviderProjectSelector
     public V1beta1GlobalForwardingRuleSpecInitProviderProjectSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderServiceDirectoryRegistrations
 {
     /// <summary>Service Directory namespace to register the forwarding rule under.</summary>
@@ -943,6 +982,7 @@ public enum V1beta1GlobalForwardingRuleSpecInitProviderSubnetworkRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderSubnetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -956,6 +996,7 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProviderSubnetworkRefPol
     public V1beta1GlobalForwardingRuleSpecInitProviderSubnetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnetwork in compute to populate subnetwork.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderSubnetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -987,6 +1028,7 @@ public enum V1beta1GlobalForwardingRuleSpecInitProviderSubnetworkSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderSubnetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1000,6 +1042,7 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProviderSubnetworkSelect
     public V1beta1GlobalForwardingRuleSpecInitProviderSubnetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnetwork in compute to populate subnetwork.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderSubnetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1035,6 +1078,7 @@ public enum V1beta1GlobalForwardingRuleSpecInitProviderTargetRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderTargetRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1048,6 +1092,7 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProviderTargetRefPolicy
     public V1beta1GlobalForwardingRuleSpecInitProviderTargetRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a TargetSSLProxy in compute to populate target.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderTargetRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1079,6 +1124,7 @@ public enum V1beta1GlobalForwardingRuleSpecInitProviderTargetSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderTargetSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1092,6 +1138,7 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProviderTargetSelectorPo
     public V1beta1GlobalForwardingRuleSpecInitProviderTargetSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a TargetSSLProxy in compute to populate target.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecInitProviderTargetSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1107,6 +1154,7 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProviderTargetSelector
     public V1beta1GlobalForwardingRuleSpecInitProviderTargetSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecInitProvider
 {
     /// <summary>An optional description of this resource. Provide this property when you create the resource.</summary>
@@ -1252,6 +1300,7 @@ public enum V1beta1GlobalForwardingRuleSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1265,6 +1314,7 @@ public partial class V1beta1GlobalForwardingRuleSpecProviderConfigRefPolicy
     public V1beta1GlobalForwardingRuleSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1296,6 +1346,7 @@ public enum V1beta1GlobalForwardingRuleSpecPublishConnectionDetailsToConfigRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1309,6 +1360,7 @@ public partial class V1beta1GlobalForwardingRuleSpecPublishConnectionDetailsToCo
     public V1beta1GlobalForwardingRuleSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1320,6 +1372,7 @@ public partial class V1beta1GlobalForwardingRuleSpecPublishConnectionDetailsToCo
     public V1beta1GlobalForwardingRuleSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1335,6 +1388,7 @@ public partial class V1beta1GlobalForwardingRuleSpecPublishConnectionDetailsToMe
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1350,6 +1404,7 @@ public partial class V1beta1GlobalForwardingRuleSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1GlobalForwardingRuleSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1361,6 +1416,7 @@ public partial class V1beta1GlobalForwardingRuleSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>GlobalForwardingRuleSpec defines the desired state of GlobalForwardingRule</summary>
 public partial class V1beta1GlobalForwardingRuleSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1393,6 +1449,7 @@ public partial class V1beta1GlobalForwardingRuleSpec
     public V1beta1GlobalForwardingRuleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GlobalForwardingRuleStatusAtProviderMetadataFiltersFilterLabels
 {
     /// <summary>Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression [a-z]([-a-z0-9]*[a-z0-9])? which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash. For Private Service Connect forwarding rules that forward traffic to Google APIs, the forwarding rule name must be a 1-20 characters string with lowercase letters and numbers and must start with a letter.</summary>
@@ -1404,6 +1461,7 @@ public partial class V1beta1GlobalForwardingRuleStatusAtProviderMetadataFiltersF
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GlobalForwardingRuleStatusAtProviderMetadataFilters
 {
     /// <summary>The list of label value pairs that must match labels in the provided metadata based on filterMatchCriteria This list must not be empty and can have at the most 64 entries. Structure is documented below.</summary>
@@ -1415,6 +1473,7 @@ public partial class V1beta1GlobalForwardingRuleStatusAtProviderMetadataFilters
     public string? FilterMatchCriteria { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GlobalForwardingRuleStatusAtProviderServiceDirectoryRegistrations
 {
     /// <summary>Service Directory namespace to register the forwarding rule under.</summary>
@@ -1426,6 +1485,7 @@ public partial class V1beta1GlobalForwardingRuleStatusAtProviderServiceDirectory
     public string? ServiceDirectoryRegion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GlobalForwardingRuleStatusAtProvider
 {
     /// <summary>[Output Only] The URL for the corresponding base Forwarding Rule. By base Forwarding Rule, we mean the Forwarding Rule that has the same IP address, protocol, and port settings with the current Forwarding Rule, but without sourceIPRanges specified. Always empty if the current Forwarding Rule does not have sourceIPRanges specified.</summary>
@@ -1521,6 +1581,7 @@ public partial class V1beta1GlobalForwardingRuleStatusAtProvider
     public IDictionary<string, string>? TerraformLabels { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1GlobalForwardingRuleStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1548,6 +1609,7 @@ public partial class V1beta1GlobalForwardingRuleStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>GlobalForwardingRuleStatus defines the observed state of GlobalForwardingRule.</summary>
 public partial class V1beta1GlobalForwardingRuleStatus
 {
     /// <summary></summary>
@@ -1564,6 +1626,7 @@ public partial class V1beta1GlobalForwardingRuleStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>GlobalForwardingRule is the Schema for the GlobalForwardingRules API. Represents a GlobalForwardingRule resource.</summary>
 public partial class V1beta1GlobalForwardingRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1GlobalForwardingRuleSpec>, IStatus<V1beta1GlobalForwardingRuleStatus>
 {
     public const string KubeApiVersion = "v1beta1";

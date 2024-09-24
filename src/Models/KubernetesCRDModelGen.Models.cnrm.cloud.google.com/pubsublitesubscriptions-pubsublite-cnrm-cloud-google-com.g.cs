@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.pubsublite.cnrm.cloud.google.com;
+/// <summary>The settings for this subscription's message delivery.</summary>
 public partial class V1alpha1PubSubLiteSubscriptionSpecDeliveryConfig
 {
     /// <summary>When this subscription should send messages to subscribers relative to messages persistence in storage. Possible values: ["DELIVER_IMMEDIATELY", "DELIVER_AFTER_STORED", "DELIVERY_REQUIREMENT_UNSPECIFIED"].</summary>
@@ -15,6 +16,7 @@ public partial class V1alpha1PubSubLiteSubscriptionSpecDeliveryConfig
     public string DeliveryRequirement { get; set; }
 }
 
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1PubSubLiteSubscriptionSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -30,6 +32,7 @@ public partial class V1alpha1PubSubLiteSubscriptionSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1PubSubLiteSubscriptionSpec
 {
     /// <summary>The settings for this subscription's message delivery.</summary>
@@ -57,6 +60,7 @@ public partial class V1alpha1PubSubLiteSubscriptionSpec
     public string Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1PubSubLiteSubscriptionStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -80,6 +84,7 @@ public partial class V1alpha1PubSubLiteSubscriptionStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1PubSubLiteSubscriptionStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -92,6 +97,7 @@ public partial class V1alpha1PubSubLiteSubscriptionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1PubSubLiteSubscription : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1PubSubLiteSubscriptionSpec>, IStatus<V1alpha1PubSubLiteSubscriptionStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

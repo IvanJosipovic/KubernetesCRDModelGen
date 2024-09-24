@@ -18,6 +18,7 @@ public enum V1beta1SpringCloudJavaDeploymentSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudJavaDeploymentSpecForProviderQuota
 {
     /// <summary>Specifies the required cpu of the Spring Cloud Deployment. Possible Values are 500m, 1, 2, 3 and 4. Defaults to 1 if not specified.</summary>
@@ -49,6 +50,7 @@ public enum V1beta1SpringCloudJavaDeploymentSpecForProviderSpringCloudAppIdRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpringCloudJavaDeploymentSpecForProviderSpringCloudAppIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -62,6 +64,7 @@ public partial class V1beta1SpringCloudJavaDeploymentSpecForProviderSpringCloudA
     public V1beta1SpringCloudJavaDeploymentSpecForProviderSpringCloudAppIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SpringCloudApp in appplatform to populate springCloudAppId.</summary>
 public partial class V1beta1SpringCloudJavaDeploymentSpecForProviderSpringCloudAppIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -93,6 +96,7 @@ public enum V1beta1SpringCloudJavaDeploymentSpecForProviderSpringCloudAppIdSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SpringCloudJavaDeploymentSpecForProviderSpringCloudAppIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -106,6 +110,7 @@ public partial class V1beta1SpringCloudJavaDeploymentSpecForProviderSpringCloudA
     public V1beta1SpringCloudJavaDeploymentSpecForProviderSpringCloudAppIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SpringCloudApp in appplatform to populate springCloudAppId.</summary>
 public partial class V1beta1SpringCloudJavaDeploymentSpecForProviderSpringCloudAppIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1SpringCloudJavaDeploymentSpecForProviderSpringCloudA
     public V1beta1SpringCloudJavaDeploymentSpecForProviderSpringCloudAppIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudJavaDeploymentSpecForProvider
 {
     /// <summary>Specifies the environment variables of the Spring Cloud Deployment as a map of key-value pairs.</summary>
@@ -156,6 +162,7 @@ public partial class V1beta1SpringCloudJavaDeploymentSpecForProvider
     public V1beta1SpringCloudJavaDeploymentSpecForProviderSpringCloudAppIdSelector? SpringCloudAppIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudJavaDeploymentSpecInitProviderQuota
 {
     /// <summary>Specifies the required cpu of the Spring Cloud Deployment. Possible Values are 500m, 1, 2, 3 and 4. Defaults to 1 if not specified.</summary>
@@ -167,6 +174,7 @@ public partial class V1beta1SpringCloudJavaDeploymentSpecInitProviderQuota
     public string? Memory { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1SpringCloudJavaDeploymentSpecInitProvider
 {
     /// <summary>Specifies the environment variables of the Spring Cloud Deployment as a map of key-value pairs.</summary>
@@ -232,6 +240,7 @@ public enum V1beta1SpringCloudJavaDeploymentSpecProviderConfigRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpringCloudJavaDeploymentSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -245,6 +254,7 @@ public partial class V1beta1SpringCloudJavaDeploymentSpecProviderConfigRefPolicy
     public V1beta1SpringCloudJavaDeploymentSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1SpringCloudJavaDeploymentSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -276,6 +286,7 @@ public enum V1beta1SpringCloudJavaDeploymentSpecPublishConnectionDetailsToConfig
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpringCloudJavaDeploymentSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -289,6 +300,7 @@ public partial class V1beta1SpringCloudJavaDeploymentSpecPublishConnectionDetail
     public V1beta1SpringCloudJavaDeploymentSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1SpringCloudJavaDeploymentSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -300,6 +312,7 @@ public partial class V1beta1SpringCloudJavaDeploymentSpecPublishConnectionDetail
     public V1beta1SpringCloudJavaDeploymentSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1SpringCloudJavaDeploymentSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -315,6 +328,7 @@ public partial class V1beta1SpringCloudJavaDeploymentSpecPublishConnectionDetail
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1SpringCloudJavaDeploymentSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -330,6 +344,7 @@ public partial class V1beta1SpringCloudJavaDeploymentSpecPublishConnectionDetail
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1SpringCloudJavaDeploymentSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -341,6 +356,7 @@ public partial class V1beta1SpringCloudJavaDeploymentSpecWriteConnectionSecretTo
     public string Namespace { get; set; }
 }
 
+/// <summary>SpringCloudJavaDeploymentSpec defines the desired state of SpringCloudJavaDeployment</summary>
 public partial class V1beta1SpringCloudJavaDeploymentSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -373,6 +389,7 @@ public partial class V1beta1SpringCloudJavaDeploymentSpec
     public V1beta1SpringCloudJavaDeploymentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudJavaDeploymentStatusAtProviderQuota
 {
     /// <summary>Specifies the required cpu of the Spring Cloud Deployment. Possible Values are 500m, 1, 2, 3 and 4. Defaults to 1 if not specified.</summary>
@@ -384,6 +401,7 @@ public partial class V1beta1SpringCloudJavaDeploymentStatusAtProviderQuota
     public string? Memory { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudJavaDeploymentStatusAtProvider
 {
     /// <summary>Specifies the environment variables of the Spring Cloud Deployment as a map of key-value pairs.</summary>
@@ -415,6 +433,7 @@ public partial class V1beta1SpringCloudJavaDeploymentStatusAtProvider
     public string? SpringCloudAppId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1SpringCloudJavaDeploymentStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -442,6 +461,7 @@ public partial class V1beta1SpringCloudJavaDeploymentStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>SpringCloudJavaDeploymentStatus defines the observed state of SpringCloudJavaDeployment.</summary>
 public partial class V1beta1SpringCloudJavaDeploymentStatus
 {
     /// <summary></summary>
@@ -458,6 +478,7 @@ public partial class V1beta1SpringCloudJavaDeploymentStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>SpringCloudJavaDeployment is the Schema for the SpringCloudJavaDeployments API. Manages an Azure Spring Cloud Deployment with a Java runtime.</summary>
 public partial class V1beta1SpringCloudJavaDeployment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SpringCloudJavaDeploymentSpec>, IStatus<V1beta1SpringCloudJavaDeploymentStatus>
 {
     public const string KubeApiVersion = "v1beta1";

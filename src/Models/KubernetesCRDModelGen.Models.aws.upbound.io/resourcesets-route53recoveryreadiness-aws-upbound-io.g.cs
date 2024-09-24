@@ -18,6 +18,7 @@ public enum V1beta1ResourceSetSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceSetSpecForProviderResourcesDnsTargetResourceTargetResourceNlbResource
 {
     /// <summary>NLB resource ARN.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1ResourceSetSpecForProviderResourcesDnsTargetResource
     public string? Arn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceSetSpecForProviderResourcesDnsTargetResourceTargetResourceR53Resource
 {
     /// <summary>Domain name that is targeted.</summary>
@@ -36,6 +38,7 @@ public partial class V1beta1ResourceSetSpecForProviderResourcesDnsTargetResource
     public string? RecordSetId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceSetSpecForProviderResourcesDnsTargetResourceTargetResource
 {
     /// <summary>NLB resource a DNS Target Resource points to. Required if r53_resource is not set.</summary>
@@ -47,6 +50,7 @@ public partial class V1beta1ResourceSetSpecForProviderResourcesDnsTargetResource
     public IList<V1beta1ResourceSetSpecForProviderResourcesDnsTargetResourceTargetResourceR53Resource>? R53Resource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceSetSpecForProviderResourcesDnsTargetResource
 {
     /// <summary>DNS Name that acts as the ingress point to a portion of application.</summary>
@@ -90,6 +94,7 @@ public enum V1beta1ResourceSetSpecForProviderResourcesResourceArnRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ResourceSetSpecForProviderResourcesResourceArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -103,6 +108,7 @@ public partial class V1beta1ResourceSetSpecForProviderResourcesResourceArnRefPol
     public V1beta1ResourceSetSpecForProviderResourcesResourceArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a MetricAlarm in cloudwatch to populate resourceArn.</summary>
 public partial class V1beta1ResourceSetSpecForProviderResourcesResourceArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -134,6 +140,7 @@ public enum V1beta1ResourceSetSpecForProviderResourcesResourceArnSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ResourceSetSpecForProviderResourcesResourceArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -147,6 +154,7 @@ public partial class V1beta1ResourceSetSpecForProviderResourcesResourceArnSelect
     public V1beta1ResourceSetSpecForProviderResourcesResourceArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a MetricAlarm in cloudwatch to populate resourceArn.</summary>
 public partial class V1beta1ResourceSetSpecForProviderResourcesResourceArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -162,6 +170,7 @@ public partial class V1beta1ResourceSetSpecForProviderResourcesResourceArnSelect
     public V1beta1ResourceSetSpecForProviderResourcesResourceArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceSetSpecForProviderResources
 {
     /// <summary>Component for DNS/Routing Control Readiness Checks.</summary>
@@ -185,6 +194,7 @@ public partial class V1beta1ResourceSetSpecForProviderResources
     public V1beta1ResourceSetSpecForProviderResourcesResourceArnSelector? ResourceArnSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceSetSpecForProvider
 {
     /// <summary>Region is the region you'd like your resource to be created in.</summary>
@@ -204,6 +214,7 @@ public partial class V1beta1ResourceSetSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceSetSpecInitProviderResourcesDnsTargetResourceTargetResourceNlbResource
 {
     /// <summary>NLB resource ARN.</summary>
@@ -211,6 +222,7 @@ public partial class V1beta1ResourceSetSpecInitProviderResourcesDnsTargetResourc
     public string? Arn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceSetSpecInitProviderResourcesDnsTargetResourceTargetResourceR53Resource
 {
     /// <summary>Domain name that is targeted.</summary>
@@ -222,6 +234,7 @@ public partial class V1beta1ResourceSetSpecInitProviderResourcesDnsTargetResourc
     public string? RecordSetId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceSetSpecInitProviderResourcesDnsTargetResourceTargetResource
 {
     /// <summary>NLB resource a DNS Target Resource points to. Required if r53_resource is not set.</summary>
@@ -233,6 +246,7 @@ public partial class V1beta1ResourceSetSpecInitProviderResourcesDnsTargetResourc
     public IList<V1beta1ResourceSetSpecInitProviderResourcesDnsTargetResourceTargetResourceR53Resource>? R53Resource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceSetSpecInitProviderResourcesDnsTargetResource
 {
     /// <summary>DNS Name that acts as the ingress point to a portion of application.</summary>
@@ -276,6 +290,7 @@ public enum V1beta1ResourceSetSpecInitProviderResourcesResourceArnRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ResourceSetSpecInitProviderResourcesResourceArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -289,6 +304,7 @@ public partial class V1beta1ResourceSetSpecInitProviderResourcesResourceArnRefPo
     public V1beta1ResourceSetSpecInitProviderResourcesResourceArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a MetricAlarm in cloudwatch to populate resourceArn.</summary>
 public partial class V1beta1ResourceSetSpecInitProviderResourcesResourceArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -320,6 +336,7 @@ public enum V1beta1ResourceSetSpecInitProviderResourcesResourceArnSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ResourceSetSpecInitProviderResourcesResourceArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -333,6 +350,7 @@ public partial class V1beta1ResourceSetSpecInitProviderResourcesResourceArnSelec
     public V1beta1ResourceSetSpecInitProviderResourcesResourceArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a MetricAlarm in cloudwatch to populate resourceArn.</summary>
 public partial class V1beta1ResourceSetSpecInitProviderResourcesResourceArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -348,6 +366,7 @@ public partial class V1beta1ResourceSetSpecInitProviderResourcesResourceArnSelec
     public V1beta1ResourceSetSpecInitProviderResourcesResourceArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceSetSpecInitProviderResources
 {
     /// <summary>Component for DNS/Routing Control Readiness Checks.</summary>
@@ -371,6 +390,7 @@ public partial class V1beta1ResourceSetSpecInitProviderResources
     public V1beta1ResourceSetSpecInitProviderResourcesResourceArnSelector? ResourceArnSelector { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ResourceSetSpecInitProvider
 {
     /// <summary>Type of the resources in the resource set.</summary>
@@ -428,6 +448,7 @@ public enum V1beta1ResourceSetSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ResourceSetSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -441,6 +462,7 @@ public partial class V1beta1ResourceSetSpecProviderConfigRefPolicy
     public V1beta1ResourceSetSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ResourceSetSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -472,6 +494,7 @@ public enum V1beta1ResourceSetSpecPublishConnectionDetailsToConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ResourceSetSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -485,6 +508,7 @@ public partial class V1beta1ResourceSetSpecPublishConnectionDetailsToConfigRefPo
     public V1beta1ResourceSetSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ResourceSetSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -496,6 +520,7 @@ public partial class V1beta1ResourceSetSpecPublishConnectionDetailsToConfigRef
     public V1beta1ResourceSetSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ResourceSetSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -511,6 +536,7 @@ public partial class V1beta1ResourceSetSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ResourceSetSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -526,6 +552,7 @@ public partial class V1beta1ResourceSetSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ResourceSetSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -537,6 +564,7 @@ public partial class V1beta1ResourceSetSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ResourceSetSpec defines the desired state of ResourceSet</summary>
 public partial class V1beta1ResourceSetSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -569,6 +597,7 @@ public partial class V1beta1ResourceSetSpec
     public V1beta1ResourceSetSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceSetStatusAtProviderResourcesDnsTargetResourceTargetResourceNlbResource
 {
     /// <summary>NLB resource ARN.</summary>
@@ -576,6 +605,7 @@ public partial class V1beta1ResourceSetStatusAtProviderResourcesDnsTargetResourc
     public string? Arn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceSetStatusAtProviderResourcesDnsTargetResourceTargetResourceR53Resource
 {
     /// <summary>Domain name that is targeted.</summary>
@@ -587,6 +617,7 @@ public partial class V1beta1ResourceSetStatusAtProviderResourcesDnsTargetResourc
     public string? RecordSetId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceSetStatusAtProviderResourcesDnsTargetResourceTargetResource
 {
     /// <summary>NLB resource a DNS Target Resource points to. Required if r53_resource is not set.</summary>
@@ -598,6 +629,7 @@ public partial class V1beta1ResourceSetStatusAtProviderResourcesDnsTargetResourc
     public IList<V1beta1ResourceSetStatusAtProviderResourcesDnsTargetResourceTargetResourceR53Resource>? R53Resource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceSetStatusAtProviderResourcesDnsTargetResource
 {
     /// <summary>DNS Name that acts as the ingress point to a portion of application.</summary>
@@ -621,6 +653,7 @@ public partial class V1beta1ResourceSetStatusAtProviderResourcesDnsTargetResourc
     public IList<V1beta1ResourceSetStatusAtProviderResourcesDnsTargetResourceTargetResource>? TargetResource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceSetStatusAtProviderResources
 {
     /// <summary>Unique identified for DNS Target Resources, use for readiness checks.</summary>
@@ -640,6 +673,7 @@ public partial class V1beta1ResourceSetStatusAtProviderResources
     public string? ResourceArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceSetStatusAtProvider
 {
     /// <summary>ARN of the resource set</summary>
@@ -667,6 +701,7 @@ public partial class V1beta1ResourceSetStatusAtProvider
     public IDictionary<string, string>? TagsAll { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ResourceSetStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -694,6 +729,7 @@ public partial class V1beta1ResourceSetStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ResourceSetStatus defines the observed state of ResourceSet.</summary>
 public partial class V1beta1ResourceSetStatus
 {
     /// <summary></summary>
@@ -710,6 +746,7 @@ public partial class V1beta1ResourceSetStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ResourceSet is the Schema for the ResourceSets API. Provides an AWS Route 53 Recovery Readiness Resource Set</summary>
 public partial class V1beta1ResourceSet : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ResourceSetSpec>, IStatus<V1beta1ResourceSetStatus>
 {
     public const string KubeApiVersion = "v1beta1";

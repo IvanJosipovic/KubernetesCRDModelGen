@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.secretsstore.csi.xk8s.io;
+/// <summary>SecretProviderClassObject defines the object fetched from external secrets store</summary>
 public partial class V1SecretProviderClassPodStatusStatusObjects
 {
     /// <summary></summary>
@@ -19,6 +20,7 @@ public partial class V1SecretProviderClassPodStatusStatusObjects
     public string? Version { get; set; }
 }
 
+/// <summary>SecretProviderClassPodStatusStatus defines the observed state of SecretProviderClassPodStatus</summary>
 public partial class V1SecretProviderClassPodStatusStatus
 {
     /// <summary></summary>
@@ -43,6 +45,7 @@ public partial class V1SecretProviderClassPodStatusStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>SecretProviderClassPodStatus is the Schema for the secretproviderclassespodstatus API</summary>
 public partial class V1SecretProviderClassPodStatus : IKubernetesObject<V1ObjectMeta>, IStatus<V1SecretProviderClassPodStatusStatus>
 {
     public const string KubeApiVersion = "v1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.firebasehosting.cnrm.cloud.google.com;
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1FirebaseHostingSiteSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1FirebaseHostingSiteSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1FirebaseHostingSiteSpec
 {
     /// <summary>Optional. The [ID of a Web App](https://firebase.google.com/docs/reference/firebase-management/rest/v1beta1/projects.webApps#WebApp.FIELDS.app_id) associated with the Hosting site.</summary>
@@ -38,6 +40,7 @@ public partial class V1alpha1FirebaseHostingSiteSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1FirebaseHostingSiteStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -61,6 +64,7 @@ public partial class V1alpha1FirebaseHostingSiteStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1FirebaseHostingSiteStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -81,6 +85,7 @@ public partial class V1alpha1FirebaseHostingSiteStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1FirebaseHostingSite : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1FirebaseHostingSiteSpec>, IStatus<V1alpha1FirebaseHostingSiteStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

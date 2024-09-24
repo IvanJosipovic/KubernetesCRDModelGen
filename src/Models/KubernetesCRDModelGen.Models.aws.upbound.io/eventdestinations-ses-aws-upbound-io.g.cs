@@ -18,6 +18,7 @@ public enum V1beta1EventDestinationSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1EventDestinationSpecForProviderCloudwatchDestination
 {
     /// <summary>The default value for the event</summary>
@@ -53,6 +54,7 @@ public enum V1beta1EventDestinationSpecForProviderConfigurationSetNameRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EventDestinationSpecForProviderConfigurationSetNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -66,6 +68,7 @@ public partial class V1beta1EventDestinationSpecForProviderConfigurationSetNameR
     public V1beta1EventDestinationSpecForProviderConfigurationSetNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ConfigurationSet in ses to populate configurationSetName.</summary>
 public partial class V1beta1EventDestinationSpecForProviderConfigurationSetNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -97,6 +100,7 @@ public enum V1beta1EventDestinationSpecForProviderConfigurationSetNameSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EventDestinationSpecForProviderConfigurationSetNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1EventDestinationSpecForProviderConfigurationSetNameS
     public V1beta1EventDestinationSpecForProviderConfigurationSetNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ConfigurationSet in ses to populate configurationSetName.</summary>
 public partial class V1beta1EventDestinationSpecForProviderConfigurationSetNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -145,6 +150,7 @@ public enum V1beta1EventDestinationSpecForProviderKinesisDestinationRoleArnRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EventDestinationSpecForProviderKinesisDestinationRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -158,6 +164,7 @@ public partial class V1beta1EventDestinationSpecForProviderKinesisDestinationRol
     public V1beta1EventDestinationSpecForProviderKinesisDestinationRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1EventDestinationSpecForProviderKinesisDestinationRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -189,6 +196,7 @@ public enum V1beta1EventDestinationSpecForProviderKinesisDestinationRoleArnSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EventDestinationSpecForProviderKinesisDestinationRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1EventDestinationSpecForProviderKinesisDestinationRol
     public V1beta1EventDestinationSpecForProviderKinesisDestinationRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1EventDestinationSpecForProviderKinesisDestinationRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -237,6 +246,7 @@ public enum V1beta1EventDestinationSpecForProviderKinesisDestinationStreamArnRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EventDestinationSpecForProviderKinesisDestinationStreamArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -250,6 +260,7 @@ public partial class V1beta1EventDestinationSpecForProviderKinesisDestinationStr
     public V1beta1EventDestinationSpecForProviderKinesisDestinationStreamArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a DeliveryStream in firehose to populate streamArn.</summary>
 public partial class V1beta1EventDestinationSpecForProviderKinesisDestinationStreamArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -281,6 +292,7 @@ public enum V1beta1EventDestinationSpecForProviderKinesisDestinationStreamArnSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EventDestinationSpecForProviderKinesisDestinationStreamArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1EventDestinationSpecForProviderKinesisDestinationStr
     public V1beta1EventDestinationSpecForProviderKinesisDestinationStreamArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a DeliveryStream in firehose to populate streamArn.</summary>
 public partial class V1beta1EventDestinationSpecForProviderKinesisDestinationStreamArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -309,6 +322,7 @@ public partial class V1beta1EventDestinationSpecForProviderKinesisDestinationStr
     public V1beta1EventDestinationSpecForProviderKinesisDestinationStreamArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EventDestinationSpecForProviderKinesisDestination
 {
     /// <summary>The ARN of the role that has permissions to access the Kinesis Stream</summary>
@@ -356,6 +370,7 @@ public enum V1beta1EventDestinationSpecForProviderSnsDestinationTopicArnRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EventDestinationSpecForProviderSnsDestinationTopicArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -369,6 +384,7 @@ public partial class V1beta1EventDestinationSpecForProviderSnsDestinationTopicAr
     public V1beta1EventDestinationSpecForProviderSnsDestinationTopicArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Topic in sns to populate topicArn.</summary>
 public partial class V1beta1EventDestinationSpecForProviderSnsDestinationTopicArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -400,6 +416,7 @@ public enum V1beta1EventDestinationSpecForProviderSnsDestinationTopicArnSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EventDestinationSpecForProviderSnsDestinationTopicArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -413,6 +430,7 @@ public partial class V1beta1EventDestinationSpecForProviderSnsDestinationTopicAr
     public V1beta1EventDestinationSpecForProviderSnsDestinationTopicArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Topic in sns to populate topicArn.</summary>
 public partial class V1beta1EventDestinationSpecForProviderSnsDestinationTopicArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -428,6 +446,7 @@ public partial class V1beta1EventDestinationSpecForProviderSnsDestinationTopicAr
     public V1beta1EventDestinationSpecForProviderSnsDestinationTopicArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EventDestinationSpecForProviderSnsDestination
 {
     /// <summary>The ARN of the SNS topic</summary>
@@ -443,6 +462,7 @@ public partial class V1beta1EventDestinationSpecForProviderSnsDestination
     public V1beta1EventDestinationSpecForProviderSnsDestinationTopicArnSelector? TopicArnSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EventDestinationSpecForProvider
 {
     /// <summary>CloudWatch destination for the events</summary>
@@ -482,6 +502,7 @@ public partial class V1beta1EventDestinationSpecForProvider
     public IList<V1beta1EventDestinationSpecForProviderSnsDestination>? SnsDestination { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EventDestinationSpecInitProviderCloudwatchDestination
 {
     /// <summary>The default value for the event</summary>
@@ -517,6 +538,7 @@ public enum V1beta1EventDestinationSpecInitProviderConfigurationSetNameRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EventDestinationSpecInitProviderConfigurationSetNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -530,6 +552,7 @@ public partial class V1beta1EventDestinationSpecInitProviderConfigurationSetName
     public V1beta1EventDestinationSpecInitProviderConfigurationSetNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ConfigurationSet in ses to populate configurationSetName.</summary>
 public partial class V1beta1EventDestinationSpecInitProviderConfigurationSetNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -561,6 +584,7 @@ public enum V1beta1EventDestinationSpecInitProviderConfigurationSetNameSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EventDestinationSpecInitProviderConfigurationSetNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -574,6 +598,7 @@ public partial class V1beta1EventDestinationSpecInitProviderConfigurationSetName
     public V1beta1EventDestinationSpecInitProviderConfigurationSetNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ConfigurationSet in ses to populate configurationSetName.</summary>
 public partial class V1beta1EventDestinationSpecInitProviderConfigurationSetNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -609,6 +634,7 @@ public enum V1beta1EventDestinationSpecInitProviderKinesisDestinationRoleArnRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EventDestinationSpecInitProviderKinesisDestinationRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -622,6 +648,7 @@ public partial class V1beta1EventDestinationSpecInitProviderKinesisDestinationRo
     public V1beta1EventDestinationSpecInitProviderKinesisDestinationRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1EventDestinationSpecInitProviderKinesisDestinationRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -653,6 +680,7 @@ public enum V1beta1EventDestinationSpecInitProviderKinesisDestinationRoleArnSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EventDestinationSpecInitProviderKinesisDestinationRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -666,6 +694,7 @@ public partial class V1beta1EventDestinationSpecInitProviderKinesisDestinationRo
     public V1beta1EventDestinationSpecInitProviderKinesisDestinationRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1EventDestinationSpecInitProviderKinesisDestinationRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -701,6 +730,7 @@ public enum V1beta1EventDestinationSpecInitProviderKinesisDestinationStreamArnRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EventDestinationSpecInitProviderKinesisDestinationStreamArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -714,6 +744,7 @@ public partial class V1beta1EventDestinationSpecInitProviderKinesisDestinationSt
     public V1beta1EventDestinationSpecInitProviderKinesisDestinationStreamArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a DeliveryStream in firehose to populate streamArn.</summary>
 public partial class V1beta1EventDestinationSpecInitProviderKinesisDestinationStreamArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -745,6 +776,7 @@ public enum V1beta1EventDestinationSpecInitProviderKinesisDestinationStreamArnSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EventDestinationSpecInitProviderKinesisDestinationStreamArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -758,6 +790,7 @@ public partial class V1beta1EventDestinationSpecInitProviderKinesisDestinationSt
     public V1beta1EventDestinationSpecInitProviderKinesisDestinationStreamArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a DeliveryStream in firehose to populate streamArn.</summary>
 public partial class V1beta1EventDestinationSpecInitProviderKinesisDestinationStreamArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -773,6 +806,7 @@ public partial class V1beta1EventDestinationSpecInitProviderKinesisDestinationSt
     public V1beta1EventDestinationSpecInitProviderKinesisDestinationStreamArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EventDestinationSpecInitProviderKinesisDestination
 {
     /// <summary>The ARN of the role that has permissions to access the Kinesis Stream</summary>
@@ -820,6 +854,7 @@ public enum V1beta1EventDestinationSpecInitProviderSnsDestinationTopicArnRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EventDestinationSpecInitProviderSnsDestinationTopicArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -833,6 +868,7 @@ public partial class V1beta1EventDestinationSpecInitProviderSnsDestinationTopicA
     public V1beta1EventDestinationSpecInitProviderSnsDestinationTopicArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Topic in sns to populate topicArn.</summary>
 public partial class V1beta1EventDestinationSpecInitProviderSnsDestinationTopicArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -864,6 +900,7 @@ public enum V1beta1EventDestinationSpecInitProviderSnsDestinationTopicArnSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EventDestinationSpecInitProviderSnsDestinationTopicArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -877,6 +914,7 @@ public partial class V1beta1EventDestinationSpecInitProviderSnsDestinationTopicA
     public V1beta1EventDestinationSpecInitProviderSnsDestinationTopicArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Topic in sns to populate topicArn.</summary>
 public partial class V1beta1EventDestinationSpecInitProviderSnsDestinationTopicArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -892,6 +930,7 @@ public partial class V1beta1EventDestinationSpecInitProviderSnsDestinationTopicA
     public V1beta1EventDestinationSpecInitProviderSnsDestinationTopicArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EventDestinationSpecInitProviderSnsDestination
 {
     /// <summary>The ARN of the SNS topic</summary>
@@ -907,6 +946,7 @@ public partial class V1beta1EventDestinationSpecInitProviderSnsDestination
     public V1beta1EventDestinationSpecInitProviderSnsDestinationTopicArnSelector? TopicArnSelector { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1EventDestinationSpecInitProvider
 {
     /// <summary>CloudWatch destination for the events</summary>
@@ -984,6 +1024,7 @@ public enum V1beta1EventDestinationSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EventDestinationSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -997,6 +1038,7 @@ public partial class V1beta1EventDestinationSpecProviderConfigRefPolicy
     public V1beta1EventDestinationSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1EventDestinationSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1028,6 +1070,7 @@ public enum V1beta1EventDestinationSpecPublishConnectionDetailsToConfigRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EventDestinationSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1041,6 +1084,7 @@ public partial class V1beta1EventDestinationSpecPublishConnectionDetailsToConfig
     public V1beta1EventDestinationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1EventDestinationSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1052,6 +1096,7 @@ public partial class V1beta1EventDestinationSpecPublishConnectionDetailsToConfig
     public V1beta1EventDestinationSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1EventDestinationSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1067,6 +1112,7 @@ public partial class V1beta1EventDestinationSpecPublishConnectionDetailsToMetada
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1EventDestinationSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1082,6 +1128,7 @@ public partial class V1beta1EventDestinationSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1EventDestinationSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1093,6 +1140,7 @@ public partial class V1beta1EventDestinationSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>EventDestinationSpec defines the desired state of EventDestination</summary>
 public partial class V1beta1EventDestinationSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1125,6 +1173,7 @@ public partial class V1beta1EventDestinationSpec
     public V1beta1EventDestinationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EventDestinationStatusAtProviderCloudwatchDestination
 {
     /// <summary>The default value for the event</summary>
@@ -1140,6 +1189,7 @@ public partial class V1beta1EventDestinationStatusAtProviderCloudwatchDestinatio
     public string? ValueSource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EventDestinationStatusAtProviderKinesisDestination
 {
     /// <summary>The ARN of the role that has permissions to access the Kinesis Stream</summary>
@@ -1151,6 +1201,7 @@ public partial class V1beta1EventDestinationStatusAtProviderKinesisDestination
     public string? StreamArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EventDestinationStatusAtProviderSnsDestination
 {
     /// <summary>The ARN of the SNS topic</summary>
@@ -1158,6 +1209,7 @@ public partial class V1beta1EventDestinationStatusAtProviderSnsDestination
     public string? TopicArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EventDestinationStatusAtProvider
 {
     /// <summary>The SES event destination ARN.</summary>
@@ -1193,6 +1245,7 @@ public partial class V1beta1EventDestinationStatusAtProvider
     public IList<V1beta1EventDestinationStatusAtProviderSnsDestination>? SnsDestination { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1EventDestinationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1220,6 +1273,7 @@ public partial class V1beta1EventDestinationStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>EventDestinationStatus defines the observed state of EventDestination.</summary>
 public partial class V1beta1EventDestinationStatus
 {
     /// <summary></summary>
@@ -1236,6 +1290,7 @@ public partial class V1beta1EventDestinationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>EventDestination is the Schema for the EventDestinations API. Provides an SES event destination</summary>
 public partial class V1beta1EventDestination : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1EventDestinationSpec>, IStatus<V1beta1EventDestinationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

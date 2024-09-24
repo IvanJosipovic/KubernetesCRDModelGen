@@ -38,6 +38,7 @@ public enum V1beta1OutputServiceBusQueueSpecForProviderQueueNameRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecForProviderQueueNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1OutputServiceBusQueueSpecForProviderQueueNameRefPoli
     public V1beta1OutputServiceBusQueueSpecForProviderQueueNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Queue in servicebus to populate queueName.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecForProviderQueueNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1OutputServiceBusQueueSpecForProviderQueueNameSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecForProviderQueueNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1OutputServiceBusQueueSpecForProviderQueueNameSelecto
     public V1beta1OutputServiceBusQueueSpecForProviderQueueNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Queue in servicebus to populate queueName.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecForProviderQueueNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1OutputServiceBusQueueSpecForProviderResourceGroupNameRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1OutputServiceBusQueueSpecForProviderResourceGroupNam
     public V1beta1OutputServiceBusQueueSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1OutputServiceBusQueueSpecForProviderResourceGroupNameSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1OutputServiceBusQueueSpecForProviderResourceGroupNam
     public V1beta1OutputServiceBusQueueSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1OutputServiceBusQueueSpecForProviderResourceGroupNam
     public V1beta1OutputServiceBusQueueSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OutputServiceBusQueueSpecForProviderSerialization
 {
     /// <summary>The encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. It currently can only be set to UTF8.</summary>
@@ -241,6 +250,7 @@ public enum V1beta1OutputServiceBusQueueSpecForProviderServicebusNamespaceRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecForProviderServicebusNamespaceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -254,6 +264,7 @@ public partial class V1beta1OutputServiceBusQueueSpecForProviderServicebusNamesp
     public V1beta1OutputServiceBusQueueSpecForProviderServicebusNamespaceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ServiceBusNamespace in servicebus to populate servicebusNamespace.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecForProviderServicebusNamespaceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -285,6 +296,7 @@ public enum V1beta1OutputServiceBusQueueSpecForProviderServicebusNamespaceSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecForProviderServicebusNamespaceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -298,6 +310,7 @@ public partial class V1beta1OutputServiceBusQueueSpecForProviderServicebusNamesp
     public V1beta1OutputServiceBusQueueSpecForProviderServicebusNamespaceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ServiceBusNamespace in servicebus to populate servicebusNamespace.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecForProviderServicebusNamespaceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -313,6 +326,7 @@ public partial class V1beta1OutputServiceBusQueueSpecForProviderServicebusNamesp
     public V1beta1OutputServiceBusQueueSpecForProviderServicebusNamespaceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>The shared access policy key for the specified shared access policy. Required if authentication_mode is ConnectionString.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecForProviderSharedAccessPolicyKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -348,6 +362,7 @@ public enum V1beta1OutputServiceBusQueueSpecForProviderStreamAnalyticsJobNameRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecForProviderStreamAnalyticsJobNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -361,6 +376,7 @@ public partial class V1beta1OutputServiceBusQueueSpecForProviderStreamAnalyticsJ
     public V1beta1OutputServiceBusQueueSpecForProviderStreamAnalyticsJobNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Job in streamanalytics to populate streamAnalyticsJobName.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecForProviderStreamAnalyticsJobNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -392,6 +408,7 @@ public enum V1beta1OutputServiceBusQueueSpecForProviderStreamAnalyticsJobNameSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecForProviderStreamAnalyticsJobNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -405,6 +422,7 @@ public partial class V1beta1OutputServiceBusQueueSpecForProviderStreamAnalyticsJ
     public V1beta1OutputServiceBusQueueSpecForProviderStreamAnalyticsJobNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Job in streamanalytics to populate streamAnalyticsJobName.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecForProviderStreamAnalyticsJobNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -420,6 +438,7 @@ public partial class V1beta1OutputServiceBusQueueSpecForProviderStreamAnalyticsJ
     public V1beta1OutputServiceBusQueueSpecForProviderStreamAnalyticsJobNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OutputServiceBusQueueSpecForProvider
 {
     /// <summary>The authentication mode for the Stream Output. Possible values are Msi and ConnectionString. Defaults to ConnectionString.</summary>
@@ -519,6 +538,7 @@ public enum V1beta1OutputServiceBusQueueSpecInitProviderQueueNameRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecInitProviderQueueNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -532,6 +552,7 @@ public partial class V1beta1OutputServiceBusQueueSpecInitProviderQueueNameRefPol
     public V1beta1OutputServiceBusQueueSpecInitProviderQueueNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Queue in servicebus to populate queueName.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecInitProviderQueueNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -563,6 +584,7 @@ public enum V1beta1OutputServiceBusQueueSpecInitProviderQueueNameSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecInitProviderQueueNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -576,6 +598,7 @@ public partial class V1beta1OutputServiceBusQueueSpecInitProviderQueueNameSelect
     public V1beta1OutputServiceBusQueueSpecInitProviderQueueNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Queue in servicebus to populate queueName.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecInitProviderQueueNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -611,6 +634,7 @@ public enum V1beta1OutputServiceBusQueueSpecInitProviderResourceGroupNameRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecInitProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -624,6 +648,7 @@ public partial class V1beta1OutputServiceBusQueueSpecInitProviderResourceGroupNa
     public V1beta1OutputServiceBusQueueSpecInitProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecInitProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -655,6 +680,7 @@ public enum V1beta1OutputServiceBusQueueSpecInitProviderResourceGroupNameSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecInitProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -668,6 +694,7 @@ public partial class V1beta1OutputServiceBusQueueSpecInitProviderResourceGroupNa
     public V1beta1OutputServiceBusQueueSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecInitProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -683,6 +710,7 @@ public partial class V1beta1OutputServiceBusQueueSpecInitProviderResourceGroupNa
     public V1beta1OutputServiceBusQueueSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OutputServiceBusQueueSpecInitProviderSerialization
 {
     /// <summary>The encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. It currently can only be set to UTF8.</summary>
@@ -722,6 +750,7 @@ public enum V1beta1OutputServiceBusQueueSpecInitProviderServicebusNamespaceRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecInitProviderServicebusNamespaceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -735,6 +764,7 @@ public partial class V1beta1OutputServiceBusQueueSpecInitProviderServicebusNames
     public V1beta1OutputServiceBusQueueSpecInitProviderServicebusNamespaceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ServiceBusNamespace in servicebus to populate servicebusNamespace.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecInitProviderServicebusNamespaceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -766,6 +796,7 @@ public enum V1beta1OutputServiceBusQueueSpecInitProviderServicebusNamespaceSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecInitProviderServicebusNamespaceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -779,6 +810,7 @@ public partial class V1beta1OutputServiceBusQueueSpecInitProviderServicebusNames
     public V1beta1OutputServiceBusQueueSpecInitProviderServicebusNamespaceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ServiceBusNamespace in servicebus to populate servicebusNamespace.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecInitProviderServicebusNamespaceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -814,6 +846,7 @@ public enum V1beta1OutputServiceBusQueueSpecInitProviderStreamAnalyticsJobNameRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecInitProviderStreamAnalyticsJobNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -827,6 +860,7 @@ public partial class V1beta1OutputServiceBusQueueSpecInitProviderStreamAnalytics
     public V1beta1OutputServiceBusQueueSpecInitProviderStreamAnalyticsJobNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Job in streamanalytics to populate streamAnalyticsJobName.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecInitProviderStreamAnalyticsJobNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -858,6 +892,7 @@ public enum V1beta1OutputServiceBusQueueSpecInitProviderStreamAnalyticsJobNameSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecInitProviderStreamAnalyticsJobNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -871,6 +906,7 @@ public partial class V1beta1OutputServiceBusQueueSpecInitProviderStreamAnalytics
     public V1beta1OutputServiceBusQueueSpecInitProviderStreamAnalyticsJobNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Job in streamanalytics to populate streamAnalyticsJobName.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecInitProviderStreamAnalyticsJobNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -886,6 +922,7 @@ public partial class V1beta1OutputServiceBusQueueSpecInitProviderStreamAnalytics
     public V1beta1OutputServiceBusQueueSpecInitProviderStreamAnalyticsJobNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecInitProvider
 {
     /// <summary>The authentication mode for the Stream Output. Possible values are Msi and ConnectionString. Defaults to ConnectionString.</summary>
@@ -1003,6 +1040,7 @@ public enum V1beta1OutputServiceBusQueueSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1016,6 +1054,7 @@ public partial class V1beta1OutputServiceBusQueueSpecProviderConfigRefPolicy
     public V1beta1OutputServiceBusQueueSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1047,6 +1086,7 @@ public enum V1beta1OutputServiceBusQueueSpecPublishConnectionDetailsToConfigRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1060,6 +1100,7 @@ public partial class V1beta1OutputServiceBusQueueSpecPublishConnectionDetailsToC
     public V1beta1OutputServiceBusQueueSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1071,6 +1112,7 @@ public partial class V1beta1OutputServiceBusQueueSpecPublishConnectionDetailsToC
     public V1beta1OutputServiceBusQueueSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1086,6 +1128,7 @@ public partial class V1beta1OutputServiceBusQueueSpecPublishConnectionDetailsToM
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1101,6 +1144,7 @@ public partial class V1beta1OutputServiceBusQueueSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1OutputServiceBusQueueSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1112,6 +1156,7 @@ public partial class V1beta1OutputServiceBusQueueSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>OutputServiceBusQueueSpec defines the desired state of OutputServiceBusQueue</summary>
 public partial class V1beta1OutputServiceBusQueueSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1144,6 +1189,7 @@ public partial class V1beta1OutputServiceBusQueueSpec
     public V1beta1OutputServiceBusQueueSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OutputServiceBusQueueStatusAtProviderSerialization
 {
     /// <summary>The encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. It currently can only be set to UTF8.</summary>
@@ -1163,6 +1209,7 @@ public partial class V1beta1OutputServiceBusQueueStatusAtProviderSerialization
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OutputServiceBusQueueStatusAtProvider
 {
     /// <summary>The authentication mode for the Stream Output. Possible values are Msi and ConnectionString. Defaults to ConnectionString.</summary>
@@ -1210,6 +1257,7 @@ public partial class V1beta1OutputServiceBusQueueStatusAtProvider
     public IDictionary<string, string>? SystemPropertyColumns { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1OutputServiceBusQueueStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1237,6 +1285,7 @@ public partial class V1beta1OutputServiceBusQueueStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>OutputServiceBusQueueStatus defines the observed state of OutputServiceBusQueue.</summary>
 public partial class V1beta1OutputServiceBusQueueStatus
 {
     /// <summary></summary>
@@ -1253,6 +1302,7 @@ public partial class V1beta1OutputServiceBusQueueStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>OutputServiceBusQueue is the Schema for the OutputServiceBusQueues API. Manages a Stream Analytics Output to a ServiceBus Queue.</summary>
 public partial class V1beta1OutputServiceBusQueue : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1OutputServiceBusQueueSpec>, IStatus<V1beta1OutputServiceBusQueueStatus>
 {
     public const string KubeApiVersion = "v1beta1";

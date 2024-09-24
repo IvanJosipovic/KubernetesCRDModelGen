@@ -38,6 +38,7 @@ public enum V1beta1CustomerGatewayAssociationSpecForProviderCustomerGatewayArnRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CustomerGatewayAssociationSpecForProviderCustomerGatewayArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1CustomerGatewayAssociationSpecForProviderCustomerGat
     public V1beta1CustomerGatewayAssociationSpecForProviderCustomerGatewayArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a CustomerGateway in ec2 to populate customerGatewayArn.</summary>
 public partial class V1beta1CustomerGatewayAssociationSpecForProviderCustomerGatewayArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1CustomerGatewayAssociationSpecForProviderCustomerGatewayArnSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CustomerGatewayAssociationSpecForProviderCustomerGatewayArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1CustomerGatewayAssociationSpecForProviderCustomerGat
     public V1beta1CustomerGatewayAssociationSpecForProviderCustomerGatewayArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a CustomerGateway in ec2 to populate customerGatewayArn.</summary>
 public partial class V1beta1CustomerGatewayAssociationSpecForProviderCustomerGatewayArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1CustomerGatewayAssociationSpecForProviderDeviceIdRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CustomerGatewayAssociationSpecForProviderDeviceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1CustomerGatewayAssociationSpecForProviderDeviceIdRef
     public V1beta1CustomerGatewayAssociationSpecForProviderDeviceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Device in networkmanager to populate deviceId.</summary>
 public partial class V1beta1CustomerGatewayAssociationSpecForProviderDeviceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1CustomerGatewayAssociationSpecForProviderDeviceIdSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CustomerGatewayAssociationSpecForProviderDeviceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1CustomerGatewayAssociationSpecForProviderDeviceIdSel
     public V1beta1CustomerGatewayAssociationSpecForProviderDeviceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Device in networkmanager to populate deviceId.</summary>
 public partial class V1beta1CustomerGatewayAssociationSpecForProviderDeviceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1CustomerGatewayAssociationSpecForProviderGlobalNetworkIdRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CustomerGatewayAssociationSpecForProviderGlobalNetworkIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1CustomerGatewayAssociationSpecForProviderGlobalNetwo
     public V1beta1CustomerGatewayAssociationSpecForProviderGlobalNetworkIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a GlobalNetwork in networkmanager to populate globalNetworkId.</summary>
 public partial class V1beta1CustomerGatewayAssociationSpecForProviderGlobalNetworkIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1CustomerGatewayAssociationSpecForProviderGlobalNetworkIdSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CustomerGatewayAssociationSpecForProviderGlobalNetworkIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1CustomerGatewayAssociationSpecForProviderGlobalNetwo
     public V1beta1CustomerGatewayAssociationSpecForProviderGlobalNetworkIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a GlobalNetwork in networkmanager to populate globalNetworkId.</summary>
 public partial class V1beta1CustomerGatewayAssociationSpecForProviderGlobalNetworkIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1CustomerGatewayAssociationSpecForProviderGlobalNetwo
     public V1beta1CustomerGatewayAssociationSpecForProviderGlobalNetworkIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomerGatewayAssociationSpecForProvider
 {
     /// <summary>The Amazon Resource Name (ARN) of the customer gateway.</summary>
@@ -361,6 +374,7 @@ public enum V1beta1CustomerGatewayAssociationSpecInitProviderDeviceIdRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CustomerGatewayAssociationSpecInitProviderDeviceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -374,6 +388,7 @@ public partial class V1beta1CustomerGatewayAssociationSpecInitProviderDeviceIdRe
     public V1beta1CustomerGatewayAssociationSpecInitProviderDeviceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Device in networkmanager to populate deviceId.</summary>
 public partial class V1beta1CustomerGatewayAssociationSpecInitProviderDeviceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -405,6 +420,7 @@ public enum V1beta1CustomerGatewayAssociationSpecInitProviderDeviceIdSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CustomerGatewayAssociationSpecInitProviderDeviceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -418,6 +434,7 @@ public partial class V1beta1CustomerGatewayAssociationSpecInitProviderDeviceIdSe
     public V1beta1CustomerGatewayAssociationSpecInitProviderDeviceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Device in networkmanager to populate deviceId.</summary>
 public partial class V1beta1CustomerGatewayAssociationSpecInitProviderDeviceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -433,6 +450,7 @@ public partial class V1beta1CustomerGatewayAssociationSpecInitProviderDeviceIdSe
     public V1beta1CustomerGatewayAssociationSpecInitProviderDeviceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1CustomerGatewayAssociationSpecInitProvider
 {
     /// <summary>The ID of the device.</summary>
@@ -494,6 +512,7 @@ public enum V1beta1CustomerGatewayAssociationSpecProviderConfigRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CustomerGatewayAssociationSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -507,6 +526,7 @@ public partial class V1beta1CustomerGatewayAssociationSpecProviderConfigRefPolic
     public V1beta1CustomerGatewayAssociationSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1CustomerGatewayAssociationSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -538,6 +558,7 @@ public enum V1beta1CustomerGatewayAssociationSpecPublishConnectionDetailsToConfi
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CustomerGatewayAssociationSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -551,6 +572,7 @@ public partial class V1beta1CustomerGatewayAssociationSpecPublishConnectionDetai
     public V1beta1CustomerGatewayAssociationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1CustomerGatewayAssociationSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -562,6 +584,7 @@ public partial class V1beta1CustomerGatewayAssociationSpecPublishConnectionDetai
     public V1beta1CustomerGatewayAssociationSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1CustomerGatewayAssociationSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -577,6 +600,7 @@ public partial class V1beta1CustomerGatewayAssociationSpecPublishConnectionDetai
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1CustomerGatewayAssociationSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -592,6 +616,7 @@ public partial class V1beta1CustomerGatewayAssociationSpecPublishConnectionDetai
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1CustomerGatewayAssociationSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -603,6 +628,7 @@ public partial class V1beta1CustomerGatewayAssociationSpecWriteConnectionSecretT
     public string Namespace { get; set; }
 }
 
+/// <summary>CustomerGatewayAssociationSpec defines the desired state of CustomerGatewayAssociation</summary>
 public partial class V1beta1CustomerGatewayAssociationSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -635,6 +661,7 @@ public partial class V1beta1CustomerGatewayAssociationSpec
     public V1beta1CustomerGatewayAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomerGatewayAssociationStatusAtProvider
 {
     /// <summary>The Amazon Resource Name (ARN) of the customer gateway.</summary>
@@ -658,6 +685,7 @@ public partial class V1beta1CustomerGatewayAssociationStatusAtProvider
     public string? LinkId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1CustomerGatewayAssociationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -685,6 +713,7 @@ public partial class V1beta1CustomerGatewayAssociationStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>CustomerGatewayAssociationStatus defines the observed state of CustomerGatewayAssociation.</summary>
 public partial class V1beta1CustomerGatewayAssociationStatus
 {
     /// <summary></summary>
@@ -701,6 +730,7 @@ public partial class V1beta1CustomerGatewayAssociationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>CustomerGatewayAssociation is the Schema for the CustomerGatewayAssociations API. Associates a customer gateway with a device and optionally, with a link.</summary>
 public partial class V1beta1CustomerGatewayAssociation : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1CustomerGatewayAssociationSpec>, IStatus<V1beta1CustomerGatewayAssociationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.gateway.networking.k8s.io;
+/// <summary>GatewayAddress describes an address that can be bound to a Gateway.</summary>
 public partial class V1GatewaySpecAddresses
 {
     /// <summary>Type of the address.</summary>
@@ -19,6 +20,7 @@ public partial class V1GatewaySpecAddresses
     public string Value { get; set; }
 }
 
+/// <summary>RouteGroupKind indicates the group and kind of a Route resource.</summary>
 public partial class V1GatewaySpecListenersAllowedRoutesKinds
 {
     /// <summary>Group is the group of the Route.</summary>
@@ -43,6 +45,7 @@ public enum V1GatewaySpecListenersAllowedRoutesNamespacesFromEnum
     Same
 }
 
+/// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1GatewaySpecListenersAllowedRoutesNamespacesSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -58,6 +61,7 @@ public partial class V1GatewaySpecListenersAllowedRoutesNamespacesSelectorMatchE
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>Selector must be specified when From is set to "Selector". In that case, only Routes in Namespaces matching this Selector will be selected by this Gateway. This field is ignored for other values of "From".   Support: Core</summary>
 public partial class V1GatewaySpecListenersAllowedRoutesNamespacesSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -69,6 +73,7 @@ public partial class V1GatewaySpecListenersAllowedRoutesNamespacesSelector
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>Namespaces indicates namespaces from which Routes may be attached to this Listener. This is restricted to the namespace of this Gateway by default.   Support: Core</summary>
 public partial class V1GatewaySpecListenersAllowedRoutesNamespaces
 {
     /// <summary>From indicates where Routes will be selected for this Gateway. Possible values are:   * All: Routes in all namespaces may be used by this Gateway. * Selector: Routes in namespaces selected by the selector may be used by   this Gateway. * Same: Only Routes in the same namespace may be used by this Gateway.   Support: Core</summary>
@@ -81,6 +86,7 @@ public partial class V1GatewaySpecListenersAllowedRoutesNamespaces
     public V1GatewaySpecListenersAllowedRoutesNamespacesSelector? Selector { get; set; }
 }
 
+/// <summary>AllowedRoutes defines the types of routes that MAY be attached to a Listener and the trusted namespaces where those Route resources MAY be present.   Although a client request may match multiple route rules, only one rule may ultimately receive the request. Matching precedence MUST be determined in order of the following criteria:   * The most specific match as defined by the Route type. * The oldest Route based on creation timestamp. For example, a Route with   a creation timestamp of "2020-09-08 01:02:03" is given precedence over   a Route with a creation timestamp of "2020-09-08 01:02:04". * If everything else is equivalent, the Route appearing first in   alphabetical order (namespace/name) should be given precedence. For   example, foo/bar is given precedence over foo/baz.   All valid rules within a Route attached to this Listener should be implemented. Invalid Route rules can be ignored (sometimes that will mean the full Route). If a Route rule transitions from valid to invalid, support for that Route rule should be dropped to ensure consistency. For example, even if a filter specified by a Route rule is invalid, the rest of the rules within that Route should still be supported.   Support: Core</summary>
 public partial class V1GatewaySpecListenersAllowedRoutes
 {
     /// <summary>Kinds specifies the groups and kinds of Routes that are allowed to bind to this Gateway Listener. When unspecified or empty, the kinds of Routes selected are determined using the Listener protocol.   A RouteGroupKind MUST correspond to kinds of Routes that are compatible with the application protocol specified in the Listener's Protocol field. If an implementation does not support or recognize this resource type, it MUST set the "ResolvedRefs" condition to False for this Listener with the "InvalidRouteKinds" reason.   Support: Core</summary>
@@ -92,6 +98,7 @@ public partial class V1GatewaySpecListenersAllowedRoutes
     public V1GatewaySpecListenersAllowedRoutesNamespaces? Namespaces { get; set; }
 }
 
+/// <summary>SecretObjectReference identifies an API object including its namespace, defaulting to Secret.   The API object must be valid in the cluster; the Group and Kind must be registered in the cluster for this reference to be valid.   References to objects with invalid Group and Kind are not valid, and must be rejected by the implementation, with appropriate Conditions set on the containing object.</summary>
 public partial class V1GatewaySpecListenersTlsCertificateRefs
 {
     /// <summary>Group is the group of the referent. For example, "gateway.networking.k8s.io". When unspecified or empty string, core API group is inferred.</summary>
@@ -121,6 +128,7 @@ public enum V1GatewaySpecListenersTlsModeEnum
     Passthrough
 }
 
+/// <summary>TLS is the TLS configuration for the Listener. This field is required if the Protocol field is "HTTPS" or "TLS". It is invalid to set this field if the Protocol field is "HTTP", "TCP", or "UDP".   The association of SNIs to Certificate defined in GatewayTLSConfig is defined based on the Hostname field for this listener.   The GatewayClass MUST use the longest matching SNI out of all available certificates for any TLS handshake.   Support: Core</summary>
 public partial class V1GatewaySpecListenersTls
 {
     /// <summary>CertificateRefs contains a series of references to Kubernetes objects that contains TLS certificates and private keys. These certificates are used to establish a TLS handshake for requests that match the hostname of the associated listener.   A single CertificateRef to a Kubernetes Secret has "Core" support. Implementations MAY choose to support attaching multiple certificates to a Listener, but this behavior is implementation-specific.   References to a resource in different namespace are invalid UNLESS there is a ReferenceGrant in the target namespace that allows the certificate to be attached. If a ReferenceGrant does not allow this reference, the "ResolvedRefs" condition MUST be set to False for this listener with the "RefNotPermitted" reason.   This field is required to have at least one element when the mode is set to "Terminate" (default) and is optional otherwise.   CertificateRefs can reference to standard Kubernetes resources, i.e. Secret, or implementation-specific custom resources.   Support: Core - A single reference to a Kubernetes Secret of type kubernetes.io/tls   Support: Implementation-specific (More than one reference or other resource types)</summary>
@@ -137,6 +145,7 @@ public partial class V1GatewaySpecListenersTls
     public IDictionary<string, string>? Options { get; set; }
 }
 
+/// <summary>Listener embodies the concept of a logical endpoint where a Gateway accepts network connections.</summary>
 public partial class V1GatewaySpecListeners
 {
     /// <summary>AllowedRoutes defines the types of routes that MAY be attached to a Listener and the trusted namespaces where those Route resources MAY be present.   Although a client request may match multiple route rules, only one rule may ultimately receive the request. Matching precedence MUST be determined in order of the following criteria:   * The most specific match as defined by the Route type. * The oldest Route based on creation timestamp. For example, a Route with   a creation timestamp of "2020-09-08 01:02:03" is given precedence over   a Route with a creation timestamp of "2020-09-08 01:02:04". * If everything else is equivalent, the Route appearing first in   alphabetical order (namespace/name) should be given precedence. For   example, foo/bar is given precedence over foo/baz.   All valid rules within a Route attached to this Listener should be implemented. Invalid Route rules can be ignored (sometimes that will mean the full Route). If a Route rule transitions from valid to invalid, support for that Route rule should be dropped to ensure consistency. For example, even if a filter specified by a Route rule is invalid, the rest of the rules within that Route should still be supported.   Support: Core</summary>
@@ -164,6 +173,7 @@ public partial class V1GatewaySpecListeners
     public V1GatewaySpecListenersTls? Tls { get; set; }
 }
 
+/// <summary>Spec defines the desired state of Gateway.</summary>
 public partial class V1GatewaySpec
 {
     /// <summary>Addresses requested for this Gateway. This is optional and behavior can depend on the implementation. If a value is set in the spec and the requested address is invalid or unavailable, the implementation MUST indicate this in the associated entry in GatewayStatus.Addresses.   The Addresses field represents a request for the address(es) on the "outside of the Gateway", that traffic bound for this Gateway will use. This could be the IP address or hostname of an external load balancer or other networking infrastructure, or some other address that traffic will be sent to.   If no Addresses are specified, the implementation MAY schedule the Gateway in an implementation-specific manner, assigning an appropriate set of Addresses.   The implementation MUST bind all Listeners to every GatewayAddress that it assigns to the Gateway and add a corresponding entry in GatewayStatus.Addresses.   Support: Extended   </summary>
@@ -179,6 +189,7 @@ public partial class V1GatewaySpec
     public IList<V1GatewaySpecListeners> Listeners { get; set; }
 }
 
+/// <summary>GatewayStatusAddress describes a network address that is bound to a Gateway.</summary>
 public partial class V1GatewayStatusAddresses
 {
     /// <summary>Type of the address.</summary>
@@ -203,6 +214,7 @@ public enum V1GatewayStatusConditionsStatusEnum
     Unknown
 }
 
+/// <summary>Condition contains details for one aspect of the current state of this API Resource. --- This struct is intended for direct use as an array at the field path .status.conditions.  For example,   	type FooStatus struct{ 	    // Represents the observations of a foo's current state. 	    // Known .status.conditions.type are: "Available", "Progressing", and "Degraded" 	    // +patchMergeKey=type 	    // +patchStrategy=merge 	    // +listType=map 	    // +listMapKey=type 	    Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`   	    // other fields 	}</summary>
 public partial class V1GatewayStatusConditions
 {
     /// <summary>lastTransitionTime is the last time the condition transitioned from one status to another. This should be when the underlying condition changed.  If that is not known, then using the time when the API field changed is acceptable.</summary>
@@ -244,6 +256,7 @@ public enum V1GatewayStatusListenersConditionsStatusEnum
     Unknown
 }
 
+/// <summary>Condition contains details for one aspect of the current state of this API Resource. --- This struct is intended for direct use as an array at the field path .status.conditions.  For example,   	type FooStatus struct{ 	    // Represents the observations of a foo's current state. 	    // Known .status.conditions.type are: "Available", "Progressing", and "Degraded" 	    // +patchMergeKey=type 	    // +patchStrategy=merge 	    // +listType=map 	    // +listMapKey=type 	    Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`   	    // other fields 	}</summary>
 public partial class V1GatewayStatusListenersConditions
 {
     /// <summary>lastTransitionTime is the last time the condition transitioned from one status to another. This should be when the underlying condition changed.  If that is not known, then using the time when the API field changed is acceptable.</summary>
@@ -272,6 +285,7 @@ public partial class V1GatewayStatusListenersConditions
     public string Type { get; set; }
 }
 
+/// <summary>RouteGroupKind indicates the group and kind of a Route resource.</summary>
 public partial class V1GatewayStatusListenersSupportedKinds
 {
     /// <summary>Group is the group of the Route.</summary>
@@ -283,6 +297,7 @@ public partial class V1GatewayStatusListenersSupportedKinds
     public string Kind { get; set; }
 }
 
+/// <summary>ListenerStatus is the status associated with a Listener.</summary>
 public partial class V1GatewayStatusListeners
 {
     /// <summary>AttachedRoutes represents the total number of Routes that have been successfully attached to this Listener.   Successful attachment of a Route to a Listener is based solely on the combination of the AllowedRoutes field on the corresponding Listener and the Route's ParentRefs field. A Route is successfully attached to a Listener when it is selected by the Listener's AllowedRoutes field AND the Route has a valid ParentRef selecting the whole Gateway resource or a specific Listener as a parent resource (more detail on attachment semantics can be found in the documentation on the various Route kinds ParentRefs fields). Listener or Route status does not impact successful attachment, i.e. the AttachedRoutes field count MUST be set for Listeners with condition Accepted: false and MUST count successfully attached Routes that may themselves have Accepted: false conditions.   Uses for this field include troubleshooting Route attachment and measuring blast radius/impact of changes to a Listener.</summary>
@@ -302,6 +317,7 @@ public partial class V1GatewayStatusListeners
     public IList<V1GatewayStatusListenersSupportedKinds> SupportedKinds { get; set; }
 }
 
+/// <summary>Status defines the current state of Gateway.</summary>
 public partial class V1GatewayStatus
 {
     /// <summary>Addresses lists the network addresses that have been bound to the Gateway.   This list may differ from the addresses provided in the spec under some conditions:     * no addresses are specified, all addresses are dynamically assigned   * a combination of specified and dynamic addresses are assigned   * a specified address was unusable (e.g. already in use)   </summary>
@@ -318,6 +334,7 @@ public partial class V1GatewayStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Gateway represents an instance of a service-traffic handling infrastructure by binding Listeners to a set of IP addresses.</summary>
 public partial class V1Gateway : IKubernetesObject<V1ObjectMeta>, ISpec<V1GatewaySpec>, IStatus<V1GatewayStatus>
 {
     public const string KubeApiVersion = "v1";

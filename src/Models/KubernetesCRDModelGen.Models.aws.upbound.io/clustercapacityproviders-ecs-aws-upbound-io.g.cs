@@ -38,6 +38,7 @@ public enum V1beta1ClusterCapacityProvidersSpecForProviderClusterNameRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClusterCapacityProvidersSpecForProviderClusterNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ClusterCapacityProvidersSpecForProviderClusterNameRe
     public V1beta1ClusterCapacityProvidersSpecForProviderClusterNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in ecs to populate clusterName.</summary>
 public partial class V1beta1ClusterCapacityProvidersSpecForProviderClusterNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ClusterCapacityProvidersSpecForProviderClusterNameSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ClusterCapacityProvidersSpecForProviderClusterNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ClusterCapacityProvidersSpecForProviderClusterNameSe
     public V1beta1ClusterCapacityProvidersSpecForProviderClusterNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in ecs to populate clusterName.</summary>
 public partial class V1beta1ClusterCapacityProvidersSpecForProviderClusterNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1ClusterCapacityProvidersSpecForProviderClusterNameSe
     public V1beta1ClusterCapacityProvidersSpecForProviderClusterNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterCapacityProvidersSpecForProviderDefaultCapacityProviderStrategy
 {
     /// <summary>The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined. Defaults to 0.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1ClusterCapacityProvidersSpecForProviderDefaultCapaci
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterCapacityProvidersSpecForProvider
 {
     /// <summary>Set of names of one or more capacity providers to associate with the cluster. Valid values also include FARGATE and FARGATE_SPOT.</summary>
@@ -172,6 +178,7 @@ public enum V1beta1ClusterCapacityProvidersSpecInitProviderClusterNameRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClusterCapacityProvidersSpecInitProviderClusterNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -185,6 +192,7 @@ public partial class V1beta1ClusterCapacityProvidersSpecInitProviderClusterNameR
     public V1beta1ClusterCapacityProvidersSpecInitProviderClusterNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in ecs to populate clusterName.</summary>
 public partial class V1beta1ClusterCapacityProvidersSpecInitProviderClusterNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -216,6 +224,7 @@ public enum V1beta1ClusterCapacityProvidersSpecInitProviderClusterNameSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ClusterCapacityProvidersSpecInitProviderClusterNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -229,6 +238,7 @@ public partial class V1beta1ClusterCapacityProvidersSpecInitProviderClusterNameS
     public V1beta1ClusterCapacityProvidersSpecInitProviderClusterNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in ecs to populate clusterName.</summary>
 public partial class V1beta1ClusterCapacityProvidersSpecInitProviderClusterNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -244,6 +254,7 @@ public partial class V1beta1ClusterCapacityProvidersSpecInitProviderClusterNameS
     public V1beta1ClusterCapacityProvidersSpecInitProviderClusterNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterCapacityProvidersSpecInitProviderDefaultCapacityProviderStrategy
 {
     /// <summary>The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined. Defaults to 0.</summary>
@@ -259,6 +270,7 @@ public partial class V1beta1ClusterCapacityProvidersSpecInitProviderDefaultCapac
     public double? Weight { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ClusterCapacityProvidersSpecInitProvider
 {
     /// <summary>Set of names of one or more capacity providers to associate with the cluster. Valid values also include FARGATE and FARGATE_SPOT.</summary>
@@ -324,6 +336,7 @@ public enum V1beta1ClusterCapacityProvidersSpecProviderConfigRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClusterCapacityProvidersSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -337,6 +350,7 @@ public partial class V1beta1ClusterCapacityProvidersSpecProviderConfigRefPolicy
     public V1beta1ClusterCapacityProvidersSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ClusterCapacityProvidersSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -368,6 +382,7 @@ public enum V1beta1ClusterCapacityProvidersSpecPublishConnectionDetailsToConfigR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClusterCapacityProvidersSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -381,6 +396,7 @@ public partial class V1beta1ClusterCapacityProvidersSpecPublishConnectionDetails
     public V1beta1ClusterCapacityProvidersSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ClusterCapacityProvidersSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -392,6 +408,7 @@ public partial class V1beta1ClusterCapacityProvidersSpecPublishConnectionDetails
     public V1beta1ClusterCapacityProvidersSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ClusterCapacityProvidersSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -407,6 +424,7 @@ public partial class V1beta1ClusterCapacityProvidersSpecPublishConnectionDetails
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ClusterCapacityProvidersSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -422,6 +440,7 @@ public partial class V1beta1ClusterCapacityProvidersSpecPublishConnectionDetails
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ClusterCapacityProvidersSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -433,6 +452,7 @@ public partial class V1beta1ClusterCapacityProvidersSpecWriteConnectionSecretToR
     public string Namespace { get; set; }
 }
 
+/// <summary>ClusterCapacityProvidersSpec defines the desired state of ClusterCapacityProviders</summary>
 public partial class V1beta1ClusterCapacityProvidersSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -465,6 +485,7 @@ public partial class V1beta1ClusterCapacityProvidersSpec
     public V1beta1ClusterCapacityProvidersSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterCapacityProvidersStatusAtProviderDefaultCapacityProviderStrategy
 {
     /// <summary>The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined. Defaults to 0.</summary>
@@ -480,6 +501,7 @@ public partial class V1beta1ClusterCapacityProvidersStatusAtProviderDefaultCapac
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterCapacityProvidersStatusAtProvider
 {
     /// <summary>Set of names of one or more capacity providers to associate with the cluster. Valid values also include FARGATE and FARGATE_SPOT.</summary>
@@ -499,6 +521,7 @@ public partial class V1beta1ClusterCapacityProvidersStatusAtProvider
     public string? Id { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ClusterCapacityProvidersStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -526,6 +549,7 @@ public partial class V1beta1ClusterCapacityProvidersStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ClusterCapacityProvidersStatus defines the observed state of ClusterCapacityProviders.</summary>
 public partial class V1beta1ClusterCapacityProvidersStatus
 {
     /// <summary></summary>
@@ -542,6 +566,7 @@ public partial class V1beta1ClusterCapacityProvidersStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ClusterCapacityProviders is the Schema for the ClusterCapacityProviderss API. Provides an ECS cluster capacity providers resource.</summary>
 public partial class V1beta1ClusterCapacityProviders : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ClusterCapacityProvidersSpec>, IStatus<V1beta1ClusterCapacityProvidersStatus>
 {
     public const string KubeApiVersion = "v1beta1";

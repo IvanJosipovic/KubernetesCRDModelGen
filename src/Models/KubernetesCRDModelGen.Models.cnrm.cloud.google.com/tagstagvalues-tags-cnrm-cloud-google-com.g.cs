@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.tags.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1TagsTagValueSpecParentRef
 {
     /// <summary>Allowed value: string of the format `tagKeys/{{value}}`, where {{value}} is the `name` field of a `TagsTagKey` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1TagsTagValueSpecParentRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TagsTagValueSpec
 {
     /// <summary>User-assigned description of the TagValue. Must not exceed 256 characters.</summary>
@@ -42,6 +44,7 @@ public partial class V1beta1TagsTagValueSpec
     public string ShortName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TagsTagValueStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -65,6 +68,7 @@ public partial class V1beta1TagsTagValueStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TagsTagValueStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -93,6 +97,7 @@ public partial class V1beta1TagsTagValueStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1TagsTagValue : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1TagsTagValueSpec>, IStatus<V1beta1TagsTagValueStatus>
 {
     public const string KubeApiVersion = "v1beta1";

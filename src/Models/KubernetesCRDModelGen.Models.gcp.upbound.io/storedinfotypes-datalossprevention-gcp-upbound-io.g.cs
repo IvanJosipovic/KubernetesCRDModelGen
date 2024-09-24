@@ -18,6 +18,7 @@ public enum V1beta1StoredInfoTypeSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1StoredInfoTypeSpecForProviderDictionaryCloudStoragePath
 {
     /// <summary>A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1StoredInfoTypeSpecForProviderDictionaryCloudStorageP
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StoredInfoTypeSpecForProviderDictionaryWordList
 {
     /// <summary>Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits.</summary>
@@ -32,6 +34,7 @@ public partial class V1beta1StoredInfoTypeSpecForProviderDictionaryWordList
     public IList<string>? Words { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StoredInfoTypeSpecForProviderDictionary
 {
     /// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted. Structure is documented below.</summary>
@@ -43,6 +46,7 @@ public partial class V1beta1StoredInfoTypeSpecForProviderDictionary
     public IList<V1beta1StoredInfoTypeSpecForProviderDictionaryWordList>? WordList { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StoredInfoTypeSpecForProviderLargeCustomDictionaryBigQueryFieldField
 {
     /// <summary>The resource name of the info type. Set by the server.</summary>
@@ -50,6 +54,7 @@ public partial class V1beta1StoredInfoTypeSpecForProviderLargeCustomDictionaryBi
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StoredInfoTypeSpecForProviderLargeCustomDictionaryBigQueryFieldTable
 {
     /// <summary>The dataset ID of the table.</summary>
@@ -65,6 +70,7 @@ public partial class V1beta1StoredInfoTypeSpecForProviderLargeCustomDictionaryBi
     public string? TableId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StoredInfoTypeSpecForProviderLargeCustomDictionaryBigQueryField
 {
     /// <summary>Designated field in the BigQuery table. Structure is documented below.</summary>
@@ -76,6 +82,7 @@ public partial class V1beta1StoredInfoTypeSpecForProviderLargeCustomDictionaryBi
     public IList<V1beta1StoredInfoTypeSpecForProviderLargeCustomDictionaryBigQueryFieldTable>? Table { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StoredInfoTypeSpecForProviderLargeCustomDictionaryCloudStorageFileSet
 {
     /// <summary>The url, in the format gs://&lt;bucket&gt;/&lt;path&gt;. Trailing wildcard in the path is allowed.</summary>
@@ -83,6 +90,7 @@ public partial class V1beta1StoredInfoTypeSpecForProviderLargeCustomDictionaryCl
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StoredInfoTypeSpecForProviderLargeCustomDictionaryOutputPath
 {
     /// <summary>A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt</summary>
@@ -90,6 +98,7 @@ public partial class V1beta1StoredInfoTypeSpecForProviderLargeCustomDictionaryOu
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StoredInfoTypeSpecForProviderLargeCustomDictionary
 {
     /// <summary>Field in a BigQuery table where each cell represents a dictionary phrase. Structure is documented below.</summary>
@@ -105,6 +114,7 @@ public partial class V1beta1StoredInfoTypeSpecForProviderLargeCustomDictionary
     public IList<V1beta1StoredInfoTypeSpecForProviderLargeCustomDictionaryOutputPath>? OutputPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StoredInfoTypeSpecForProviderRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -116,6 +126,7 @@ public partial class V1beta1StoredInfoTypeSpecForProviderRegex
     public string? Pattern { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StoredInfoTypeSpecForProvider
 {
     /// <summary>A description of the info type.</summary>
@@ -147,6 +158,7 @@ public partial class V1beta1StoredInfoTypeSpecForProvider
     public string? StoredInfoTypeId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StoredInfoTypeSpecInitProviderDictionaryCloudStoragePath
 {
     /// <summary>A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt</summary>
@@ -154,6 +166,7 @@ public partial class V1beta1StoredInfoTypeSpecInitProviderDictionaryCloudStorage
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StoredInfoTypeSpecInitProviderDictionaryWordList
 {
     /// <summary>Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits.</summary>
@@ -161,6 +174,7 @@ public partial class V1beta1StoredInfoTypeSpecInitProviderDictionaryWordList
     public IList<string>? Words { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StoredInfoTypeSpecInitProviderDictionary
 {
     /// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted. Structure is documented below.</summary>
@@ -172,6 +186,7 @@ public partial class V1beta1StoredInfoTypeSpecInitProviderDictionary
     public IList<V1beta1StoredInfoTypeSpecInitProviderDictionaryWordList>? WordList { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StoredInfoTypeSpecInitProviderLargeCustomDictionaryBigQueryFieldField
 {
     /// <summary>The resource name of the info type. Set by the server.</summary>
@@ -179,6 +194,7 @@ public partial class V1beta1StoredInfoTypeSpecInitProviderLargeCustomDictionaryB
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StoredInfoTypeSpecInitProviderLargeCustomDictionaryBigQueryFieldTable
 {
     /// <summary>The dataset ID of the table.</summary>
@@ -194,6 +210,7 @@ public partial class V1beta1StoredInfoTypeSpecInitProviderLargeCustomDictionaryB
     public string? TableId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StoredInfoTypeSpecInitProviderLargeCustomDictionaryBigQueryField
 {
     /// <summary>Designated field in the BigQuery table. Structure is documented below.</summary>
@@ -205,6 +222,7 @@ public partial class V1beta1StoredInfoTypeSpecInitProviderLargeCustomDictionaryB
     public IList<V1beta1StoredInfoTypeSpecInitProviderLargeCustomDictionaryBigQueryFieldTable>? Table { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StoredInfoTypeSpecInitProviderLargeCustomDictionaryCloudStorageFileSet
 {
     /// <summary>The url, in the format gs://&lt;bucket&gt;/&lt;path&gt;. Trailing wildcard in the path is allowed.</summary>
@@ -212,6 +230,7 @@ public partial class V1beta1StoredInfoTypeSpecInitProviderLargeCustomDictionaryC
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StoredInfoTypeSpecInitProviderLargeCustomDictionaryOutputPath
 {
     /// <summary>A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt</summary>
@@ -219,6 +238,7 @@ public partial class V1beta1StoredInfoTypeSpecInitProviderLargeCustomDictionaryO
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StoredInfoTypeSpecInitProviderLargeCustomDictionary
 {
     /// <summary>Field in a BigQuery table where each cell represents a dictionary phrase. Structure is documented below.</summary>
@@ -234,6 +254,7 @@ public partial class V1beta1StoredInfoTypeSpecInitProviderLargeCustomDictionary
     public IList<V1beta1StoredInfoTypeSpecInitProviderLargeCustomDictionaryOutputPath>? OutputPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StoredInfoTypeSpecInitProviderRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -245,6 +266,7 @@ public partial class V1beta1StoredInfoTypeSpecInitProviderRegex
     public string? Pattern { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1StoredInfoTypeSpecInitProvider
 {
     /// <summary>A description of the info type.</summary>
@@ -318,6 +340,7 @@ public enum V1beta1StoredInfoTypeSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1StoredInfoTypeSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -331,6 +354,7 @@ public partial class V1beta1StoredInfoTypeSpecProviderConfigRefPolicy
     public V1beta1StoredInfoTypeSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1StoredInfoTypeSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -362,6 +386,7 @@ public enum V1beta1StoredInfoTypeSpecPublishConnectionDetailsToConfigRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1StoredInfoTypeSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -375,6 +400,7 @@ public partial class V1beta1StoredInfoTypeSpecPublishConnectionDetailsToConfigRe
     public V1beta1StoredInfoTypeSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1StoredInfoTypeSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -386,6 +412,7 @@ public partial class V1beta1StoredInfoTypeSpecPublishConnectionDetailsToConfigRe
     public V1beta1StoredInfoTypeSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1StoredInfoTypeSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -401,6 +428,7 @@ public partial class V1beta1StoredInfoTypeSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1StoredInfoTypeSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -416,6 +444,7 @@ public partial class V1beta1StoredInfoTypeSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1StoredInfoTypeSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -427,6 +456,7 @@ public partial class V1beta1StoredInfoTypeSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>StoredInfoTypeSpec defines the desired state of StoredInfoType</summary>
 public partial class V1beta1StoredInfoTypeSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -459,6 +489,7 @@ public partial class V1beta1StoredInfoTypeSpec
     public V1beta1StoredInfoTypeSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StoredInfoTypeStatusAtProviderDictionaryCloudStoragePath
 {
     /// <summary>A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt</summary>
@@ -466,6 +497,7 @@ public partial class V1beta1StoredInfoTypeStatusAtProviderDictionaryCloudStorage
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StoredInfoTypeStatusAtProviderDictionaryWordList
 {
     /// <summary>Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits.</summary>
@@ -473,6 +505,7 @@ public partial class V1beta1StoredInfoTypeStatusAtProviderDictionaryWordList
     public IList<string>? Words { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StoredInfoTypeStatusAtProviderDictionary
 {
     /// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted. Structure is documented below.</summary>
@@ -484,6 +517,7 @@ public partial class V1beta1StoredInfoTypeStatusAtProviderDictionary
     public IList<V1beta1StoredInfoTypeStatusAtProviderDictionaryWordList>? WordList { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StoredInfoTypeStatusAtProviderLargeCustomDictionaryBigQueryFieldField
 {
     /// <summary>The resource name of the info type. Set by the server.</summary>
@@ -491,6 +525,7 @@ public partial class V1beta1StoredInfoTypeStatusAtProviderLargeCustomDictionaryB
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StoredInfoTypeStatusAtProviderLargeCustomDictionaryBigQueryFieldTable
 {
     /// <summary>The dataset ID of the table.</summary>
@@ -506,6 +541,7 @@ public partial class V1beta1StoredInfoTypeStatusAtProviderLargeCustomDictionaryB
     public string? TableId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StoredInfoTypeStatusAtProviderLargeCustomDictionaryBigQueryField
 {
     /// <summary>Designated field in the BigQuery table. Structure is documented below.</summary>
@@ -517,6 +553,7 @@ public partial class V1beta1StoredInfoTypeStatusAtProviderLargeCustomDictionaryB
     public IList<V1beta1StoredInfoTypeStatusAtProviderLargeCustomDictionaryBigQueryFieldTable>? Table { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StoredInfoTypeStatusAtProviderLargeCustomDictionaryCloudStorageFileSet
 {
     /// <summary>The url, in the format gs://&lt;bucket&gt;/&lt;path&gt;. Trailing wildcard in the path is allowed.</summary>
@@ -524,6 +561,7 @@ public partial class V1beta1StoredInfoTypeStatusAtProviderLargeCustomDictionaryC
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StoredInfoTypeStatusAtProviderLargeCustomDictionaryOutputPath
 {
     /// <summary>A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt</summary>
@@ -531,6 +569,7 @@ public partial class V1beta1StoredInfoTypeStatusAtProviderLargeCustomDictionaryO
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StoredInfoTypeStatusAtProviderLargeCustomDictionary
 {
     /// <summary>Field in a BigQuery table where each cell represents a dictionary phrase. Structure is documented below.</summary>
@@ -546,6 +585,7 @@ public partial class V1beta1StoredInfoTypeStatusAtProviderLargeCustomDictionary
     public IList<V1beta1StoredInfoTypeStatusAtProviderLargeCustomDictionaryOutputPath>? OutputPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StoredInfoTypeStatusAtProviderRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -557,6 +597,7 @@ public partial class V1beta1StoredInfoTypeStatusAtProviderRegex
     public string? Pattern { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StoredInfoTypeStatusAtProvider
 {
     /// <summary>A description of the info type.</summary>
@@ -596,6 +637,7 @@ public partial class V1beta1StoredInfoTypeStatusAtProvider
     public string? StoredInfoTypeId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1StoredInfoTypeStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -623,6 +665,7 @@ public partial class V1beta1StoredInfoTypeStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>StoredInfoTypeStatus defines the observed state of StoredInfoType.</summary>
 public partial class V1beta1StoredInfoTypeStatus
 {
     /// <summary></summary>
@@ -639,6 +682,7 @@ public partial class V1beta1StoredInfoTypeStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>StoredInfoType is the Schema for the StoredInfoTypes API. Allows creation of custom info types.</summary>
 public partial class V1beta1StoredInfoType : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1StoredInfoTypeSpec>, IStatus<V1beta1StoredInfoTypeStatus>
 {
     public const string KubeApiVersion = "v1beta1";

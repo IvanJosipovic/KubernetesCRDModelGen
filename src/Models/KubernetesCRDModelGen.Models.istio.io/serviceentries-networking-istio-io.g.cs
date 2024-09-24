@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networking.istio.io;
+/// <summary></summary>
 public partial class V1beta1ServiceEntrySpecEndpoints
 {
     /// <summary>Address associated with the network endpoint without the port.</summary>
@@ -49,6 +50,7 @@ public enum V1beta1ServiceEntrySpecLocationEnum
     MESHINTERNAL
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceEntrySpecPorts
 {
     /// <summary>Label assigned to the port.</summary>
@@ -84,6 +86,7 @@ public enum V1beta1ServiceEntrySpecResolutionEnum
     DNSROUNDROBIN
 }
 
+/// <summary>Applicable only for MESH_INTERNAL services.</summary>
 public partial class V1beta1ServiceEntrySpecWorkloadSelector
 {
     /// <summary>One or more labels that indicate a specific set of pods/VMs on which the configuration should be applied.</summary>
@@ -91,6 +94,7 @@ public partial class V1beta1ServiceEntrySpecWorkloadSelector
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary>Configuration affecting service registry. See more details at: https://istio.io/docs/reference/config/networking/service-entry.html</summary>
 public partial class V1beta1ServiceEntrySpec
 {
     /// <summary>The virtual IP addresses associated with the service.</summary>
@@ -133,6 +137,7 @@ public partial class V1beta1ServiceEntrySpec
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ServiceEntry : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ServiceEntrySpec>, IStatus<JsonNode>
 {
     public const string KubeApiVersion = "v1beta1";

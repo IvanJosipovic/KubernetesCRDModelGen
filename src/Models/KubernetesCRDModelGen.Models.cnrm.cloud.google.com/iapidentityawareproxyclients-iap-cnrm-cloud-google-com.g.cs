@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iap.cnrm.cloud.google.com;
+/// <summary>Immutable.</summary>
 public partial class V1beta1IAPIdentityAwareProxyClientSpecBrandRef
 {
     /// <summary>The brand for the resource  Allowed value: The Google Cloud resource name of an `IAPBrand` resource (format: `projects/{{project}}/brands/{{name}}`).</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1IAPIdentityAwareProxyClientSpecBrandRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IAPIdentityAwareProxyClientSpec
 {
     /// <summary>Immutable.</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1IAPIdentityAwareProxyClientSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IAPIdentityAwareProxyClientStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -61,6 +64,7 @@ public partial class V1beta1IAPIdentityAwareProxyClientStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IAPIdentityAwareProxyClientStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -77,6 +81,7 @@ public partial class V1beta1IAPIdentityAwareProxyClientStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1IAPIdentityAwareProxyClient : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IAPIdentityAwareProxyClientSpec>, IStatus<V1beta1IAPIdentityAwareProxyClientStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary>Immutable.</summary>
 public partial class V1beta1ComputeFirewallPolicyAssociationSpecAttachmentTargetRef
 {
     /// <summary>The target that the firewall policy is attached to.  Allowed values: * The Google Cloud resource name of a `Folder` resource (format: `folders/{{name}}`). * The Google Cloud resource name of a Google Cloud Organization (format: `organizations/{{name}}`).</summary>
@@ -27,6 +28,7 @@ public partial class V1beta1ComputeFirewallPolicyAssociationSpecAttachmentTarget
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable.</summary>
 public partial class V1beta1ComputeFirewallPolicyAssociationSpecFirewallPolicyRef
 {
     /// <summary>The firewall policy ID of the association.  Allowed value: The Google Cloud resource name of a `ComputeFirewallPolicy` resource (format: `locations/global/firewallPolicies/{{name}}`).</summary>
@@ -42,6 +44,7 @@ public partial class V1beta1ComputeFirewallPolicyAssociationSpecFirewallPolicyRe
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeFirewallPolicyAssociationSpec
 {
     /// <summary>Immutable.</summary>
@@ -57,6 +60,7 @@ public partial class V1beta1ComputeFirewallPolicyAssociationSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeFirewallPolicyAssociationStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -80,6 +84,7 @@ public partial class V1beta1ComputeFirewallPolicyAssociationStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeFirewallPolicyAssociationStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -96,6 +101,7 @@ public partial class V1beta1ComputeFirewallPolicyAssociationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ComputeFirewallPolicyAssociation : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeFirewallPolicyAssociationSpec>, IStatus<V1beta1ComputeFirewallPolicyAssociationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

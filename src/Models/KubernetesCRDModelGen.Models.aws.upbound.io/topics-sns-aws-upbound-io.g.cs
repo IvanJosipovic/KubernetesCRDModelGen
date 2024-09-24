@@ -38,6 +38,7 @@ public enum V1beta1TopicSpecForProviderApplicationFailureFeedbackRoleArnRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TopicSpecForProviderApplicationFailureFeedbackRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1TopicSpecForProviderApplicationFailureFeedbackRoleAr
     public V1beta1TopicSpecForProviderApplicationFailureFeedbackRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate applicationFailureFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecForProviderApplicationFailureFeedbackRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1TopicSpecForProviderApplicationFailureFeedbackRoleArnSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TopicSpecForProviderApplicationFailureFeedbackRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1TopicSpecForProviderApplicationFailureFeedbackRoleAr
     public V1beta1TopicSpecForProviderApplicationFailureFeedbackRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate applicationFailureFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecForProviderApplicationFailureFeedbackRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1TopicSpecForProviderApplicationSuccessFeedbackRoleArnRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TopicSpecForProviderApplicationSuccessFeedbackRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1TopicSpecForProviderApplicationSuccessFeedbackRoleAr
     public V1beta1TopicSpecForProviderApplicationSuccessFeedbackRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate applicationSuccessFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecForProviderApplicationSuccessFeedbackRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1TopicSpecForProviderApplicationSuccessFeedbackRoleArnSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TopicSpecForProviderApplicationSuccessFeedbackRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1TopicSpecForProviderApplicationSuccessFeedbackRoleAr
     public V1beta1TopicSpecForProviderApplicationSuccessFeedbackRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate applicationSuccessFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecForProviderApplicationSuccessFeedbackRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1TopicSpecForProviderFirehoseFailureFeedbackRoleArnRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TopicSpecForProviderFirehoseFailureFeedbackRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1TopicSpecForProviderFirehoseFailureFeedbackRoleArnRe
     public V1beta1TopicSpecForProviderFirehoseFailureFeedbackRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate firehoseFailureFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecForProviderFirehoseFailureFeedbackRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1TopicSpecForProviderFirehoseFailureFeedbackRoleArnSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TopicSpecForProviderFirehoseFailureFeedbackRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1TopicSpecForProviderFirehoseFailureFeedbackRoleArnSe
     public V1beta1TopicSpecForProviderFirehoseFailureFeedbackRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate firehoseFailureFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecForProviderFirehoseFailureFeedbackRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -314,6 +326,7 @@ public enum V1beta1TopicSpecForProviderFirehoseSuccessFeedbackRoleArnRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TopicSpecForProviderFirehoseSuccessFeedbackRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -327,6 +340,7 @@ public partial class V1beta1TopicSpecForProviderFirehoseSuccessFeedbackRoleArnRe
     public V1beta1TopicSpecForProviderFirehoseSuccessFeedbackRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate firehoseSuccessFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecForProviderFirehoseSuccessFeedbackRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -358,6 +372,7 @@ public enum V1beta1TopicSpecForProviderFirehoseSuccessFeedbackRoleArnSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TopicSpecForProviderFirehoseSuccessFeedbackRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -371,6 +386,7 @@ public partial class V1beta1TopicSpecForProviderFirehoseSuccessFeedbackRoleArnSe
     public V1beta1TopicSpecForProviderFirehoseSuccessFeedbackRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate firehoseSuccessFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecForProviderFirehoseSuccessFeedbackRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -406,6 +422,7 @@ public enum V1beta1TopicSpecForProviderHttpFailureFeedbackRoleArnRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TopicSpecForProviderHttpFailureFeedbackRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -419,6 +436,7 @@ public partial class V1beta1TopicSpecForProviderHttpFailureFeedbackRoleArnRefPol
     public V1beta1TopicSpecForProviderHttpFailureFeedbackRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate httpFailureFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecForProviderHttpFailureFeedbackRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -450,6 +468,7 @@ public enum V1beta1TopicSpecForProviderHttpFailureFeedbackRoleArnSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TopicSpecForProviderHttpFailureFeedbackRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -463,6 +482,7 @@ public partial class V1beta1TopicSpecForProviderHttpFailureFeedbackRoleArnSelect
     public V1beta1TopicSpecForProviderHttpFailureFeedbackRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate httpFailureFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecForProviderHttpFailureFeedbackRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -498,6 +518,7 @@ public enum V1beta1TopicSpecForProviderHttpSuccessFeedbackRoleArnRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TopicSpecForProviderHttpSuccessFeedbackRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -511,6 +532,7 @@ public partial class V1beta1TopicSpecForProviderHttpSuccessFeedbackRoleArnRefPol
     public V1beta1TopicSpecForProviderHttpSuccessFeedbackRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate httpSuccessFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecForProviderHttpSuccessFeedbackRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -542,6 +564,7 @@ public enum V1beta1TopicSpecForProviderHttpSuccessFeedbackRoleArnSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TopicSpecForProviderHttpSuccessFeedbackRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -555,6 +578,7 @@ public partial class V1beta1TopicSpecForProviderHttpSuccessFeedbackRoleArnSelect
     public V1beta1TopicSpecForProviderHttpSuccessFeedbackRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate httpSuccessFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecForProviderHttpSuccessFeedbackRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -590,6 +614,7 @@ public enum V1beta1TopicSpecForProviderLambdaFailureFeedbackRoleArnRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TopicSpecForProviderLambdaFailureFeedbackRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -603,6 +628,7 @@ public partial class V1beta1TopicSpecForProviderLambdaFailureFeedbackRoleArnRefP
     public V1beta1TopicSpecForProviderLambdaFailureFeedbackRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate lambdaFailureFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecForProviderLambdaFailureFeedbackRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -634,6 +660,7 @@ public enum V1beta1TopicSpecForProviderLambdaFailureFeedbackRoleArnSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TopicSpecForProviderLambdaFailureFeedbackRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -647,6 +674,7 @@ public partial class V1beta1TopicSpecForProviderLambdaFailureFeedbackRoleArnSele
     public V1beta1TopicSpecForProviderLambdaFailureFeedbackRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate lambdaFailureFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecForProviderLambdaFailureFeedbackRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -682,6 +710,7 @@ public enum V1beta1TopicSpecForProviderLambdaSuccessFeedbackRoleArnRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TopicSpecForProviderLambdaSuccessFeedbackRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -695,6 +724,7 @@ public partial class V1beta1TopicSpecForProviderLambdaSuccessFeedbackRoleArnRefP
     public V1beta1TopicSpecForProviderLambdaSuccessFeedbackRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate lambdaSuccessFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecForProviderLambdaSuccessFeedbackRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -726,6 +756,7 @@ public enum V1beta1TopicSpecForProviderLambdaSuccessFeedbackRoleArnSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TopicSpecForProviderLambdaSuccessFeedbackRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -739,6 +770,7 @@ public partial class V1beta1TopicSpecForProviderLambdaSuccessFeedbackRoleArnSele
     public V1beta1TopicSpecForProviderLambdaSuccessFeedbackRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate lambdaSuccessFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecForProviderLambdaSuccessFeedbackRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -774,6 +806,7 @@ public enum V1beta1TopicSpecForProviderSqsFailureFeedbackRoleArnRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TopicSpecForProviderSqsFailureFeedbackRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -787,6 +820,7 @@ public partial class V1beta1TopicSpecForProviderSqsFailureFeedbackRoleArnRefPoli
     public V1beta1TopicSpecForProviderSqsFailureFeedbackRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate sqsFailureFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecForProviderSqsFailureFeedbackRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -818,6 +852,7 @@ public enum V1beta1TopicSpecForProviderSqsFailureFeedbackRoleArnSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TopicSpecForProviderSqsFailureFeedbackRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -831,6 +866,7 @@ public partial class V1beta1TopicSpecForProviderSqsFailureFeedbackRoleArnSelecto
     public V1beta1TopicSpecForProviderSqsFailureFeedbackRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate sqsFailureFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecForProviderSqsFailureFeedbackRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -866,6 +902,7 @@ public enum V1beta1TopicSpecForProviderSqsSuccessFeedbackRoleArnRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TopicSpecForProviderSqsSuccessFeedbackRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -879,6 +916,7 @@ public partial class V1beta1TopicSpecForProviderSqsSuccessFeedbackRoleArnRefPoli
     public V1beta1TopicSpecForProviderSqsSuccessFeedbackRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate sqsSuccessFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecForProviderSqsSuccessFeedbackRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -910,6 +948,7 @@ public enum V1beta1TopicSpecForProviderSqsSuccessFeedbackRoleArnSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TopicSpecForProviderSqsSuccessFeedbackRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -923,6 +962,7 @@ public partial class V1beta1TopicSpecForProviderSqsSuccessFeedbackRoleArnSelecto
     public V1beta1TopicSpecForProviderSqsSuccessFeedbackRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate sqsSuccessFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecForProviderSqsSuccessFeedbackRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -938,6 +978,7 @@ public partial class V1beta1TopicSpecForProviderSqsSuccessFeedbackRoleArnSelecto
     public V1beta1TopicSpecForProviderSqsSuccessFeedbackRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicSpecForProvider
 {
     /// <summary>IAM role for failure feedback</summary>
@@ -1145,6 +1186,7 @@ public enum V1beta1TopicSpecInitProviderApplicationFailureFeedbackRoleArnRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TopicSpecInitProviderApplicationFailureFeedbackRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1158,6 +1200,7 @@ public partial class V1beta1TopicSpecInitProviderApplicationFailureFeedbackRoleA
     public V1beta1TopicSpecInitProviderApplicationFailureFeedbackRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate applicationFailureFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecInitProviderApplicationFailureFeedbackRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1189,6 +1232,7 @@ public enum V1beta1TopicSpecInitProviderApplicationFailureFeedbackRoleArnSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TopicSpecInitProviderApplicationFailureFeedbackRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1202,6 +1246,7 @@ public partial class V1beta1TopicSpecInitProviderApplicationFailureFeedbackRoleA
     public V1beta1TopicSpecInitProviderApplicationFailureFeedbackRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate applicationFailureFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecInitProviderApplicationFailureFeedbackRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1237,6 +1282,7 @@ public enum V1beta1TopicSpecInitProviderApplicationSuccessFeedbackRoleArnRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TopicSpecInitProviderApplicationSuccessFeedbackRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1250,6 +1296,7 @@ public partial class V1beta1TopicSpecInitProviderApplicationSuccessFeedbackRoleA
     public V1beta1TopicSpecInitProviderApplicationSuccessFeedbackRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate applicationSuccessFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecInitProviderApplicationSuccessFeedbackRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1281,6 +1328,7 @@ public enum V1beta1TopicSpecInitProviderApplicationSuccessFeedbackRoleArnSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TopicSpecInitProviderApplicationSuccessFeedbackRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1294,6 +1342,7 @@ public partial class V1beta1TopicSpecInitProviderApplicationSuccessFeedbackRoleA
     public V1beta1TopicSpecInitProviderApplicationSuccessFeedbackRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate applicationSuccessFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecInitProviderApplicationSuccessFeedbackRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1329,6 +1378,7 @@ public enum V1beta1TopicSpecInitProviderFirehoseFailureFeedbackRoleArnRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TopicSpecInitProviderFirehoseFailureFeedbackRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1342,6 +1392,7 @@ public partial class V1beta1TopicSpecInitProviderFirehoseFailureFeedbackRoleArnR
     public V1beta1TopicSpecInitProviderFirehoseFailureFeedbackRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate firehoseFailureFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecInitProviderFirehoseFailureFeedbackRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1373,6 +1424,7 @@ public enum V1beta1TopicSpecInitProviderFirehoseFailureFeedbackRoleArnSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TopicSpecInitProviderFirehoseFailureFeedbackRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1386,6 +1438,7 @@ public partial class V1beta1TopicSpecInitProviderFirehoseFailureFeedbackRoleArnS
     public V1beta1TopicSpecInitProviderFirehoseFailureFeedbackRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate firehoseFailureFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecInitProviderFirehoseFailureFeedbackRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1421,6 +1474,7 @@ public enum V1beta1TopicSpecInitProviderFirehoseSuccessFeedbackRoleArnRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TopicSpecInitProviderFirehoseSuccessFeedbackRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1434,6 +1488,7 @@ public partial class V1beta1TopicSpecInitProviderFirehoseSuccessFeedbackRoleArnR
     public V1beta1TopicSpecInitProviderFirehoseSuccessFeedbackRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate firehoseSuccessFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecInitProviderFirehoseSuccessFeedbackRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1465,6 +1520,7 @@ public enum V1beta1TopicSpecInitProviderFirehoseSuccessFeedbackRoleArnSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TopicSpecInitProviderFirehoseSuccessFeedbackRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1478,6 +1534,7 @@ public partial class V1beta1TopicSpecInitProviderFirehoseSuccessFeedbackRoleArnS
     public V1beta1TopicSpecInitProviderFirehoseSuccessFeedbackRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate firehoseSuccessFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecInitProviderFirehoseSuccessFeedbackRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1513,6 +1570,7 @@ public enum V1beta1TopicSpecInitProviderHttpFailureFeedbackRoleArnRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TopicSpecInitProviderHttpFailureFeedbackRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1526,6 +1584,7 @@ public partial class V1beta1TopicSpecInitProviderHttpFailureFeedbackRoleArnRefPo
     public V1beta1TopicSpecInitProviderHttpFailureFeedbackRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate httpFailureFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecInitProviderHttpFailureFeedbackRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1557,6 +1616,7 @@ public enum V1beta1TopicSpecInitProviderHttpFailureFeedbackRoleArnSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TopicSpecInitProviderHttpFailureFeedbackRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1570,6 +1630,7 @@ public partial class V1beta1TopicSpecInitProviderHttpFailureFeedbackRoleArnSelec
     public V1beta1TopicSpecInitProviderHttpFailureFeedbackRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate httpFailureFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecInitProviderHttpFailureFeedbackRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1605,6 +1666,7 @@ public enum V1beta1TopicSpecInitProviderHttpSuccessFeedbackRoleArnRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TopicSpecInitProviderHttpSuccessFeedbackRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1618,6 +1680,7 @@ public partial class V1beta1TopicSpecInitProviderHttpSuccessFeedbackRoleArnRefPo
     public V1beta1TopicSpecInitProviderHttpSuccessFeedbackRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate httpSuccessFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecInitProviderHttpSuccessFeedbackRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1649,6 +1712,7 @@ public enum V1beta1TopicSpecInitProviderHttpSuccessFeedbackRoleArnSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TopicSpecInitProviderHttpSuccessFeedbackRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1662,6 +1726,7 @@ public partial class V1beta1TopicSpecInitProviderHttpSuccessFeedbackRoleArnSelec
     public V1beta1TopicSpecInitProviderHttpSuccessFeedbackRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate httpSuccessFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecInitProviderHttpSuccessFeedbackRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1697,6 +1762,7 @@ public enum V1beta1TopicSpecInitProviderLambdaFailureFeedbackRoleArnRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TopicSpecInitProviderLambdaFailureFeedbackRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1710,6 +1776,7 @@ public partial class V1beta1TopicSpecInitProviderLambdaFailureFeedbackRoleArnRef
     public V1beta1TopicSpecInitProviderLambdaFailureFeedbackRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate lambdaFailureFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecInitProviderLambdaFailureFeedbackRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1741,6 +1808,7 @@ public enum V1beta1TopicSpecInitProviderLambdaFailureFeedbackRoleArnSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TopicSpecInitProviderLambdaFailureFeedbackRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1754,6 +1822,7 @@ public partial class V1beta1TopicSpecInitProviderLambdaFailureFeedbackRoleArnSel
     public V1beta1TopicSpecInitProviderLambdaFailureFeedbackRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate lambdaFailureFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecInitProviderLambdaFailureFeedbackRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1789,6 +1858,7 @@ public enum V1beta1TopicSpecInitProviderLambdaSuccessFeedbackRoleArnRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TopicSpecInitProviderLambdaSuccessFeedbackRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1802,6 +1872,7 @@ public partial class V1beta1TopicSpecInitProviderLambdaSuccessFeedbackRoleArnRef
     public V1beta1TopicSpecInitProviderLambdaSuccessFeedbackRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate lambdaSuccessFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecInitProviderLambdaSuccessFeedbackRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1833,6 +1904,7 @@ public enum V1beta1TopicSpecInitProviderLambdaSuccessFeedbackRoleArnSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TopicSpecInitProviderLambdaSuccessFeedbackRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1846,6 +1918,7 @@ public partial class V1beta1TopicSpecInitProviderLambdaSuccessFeedbackRoleArnSel
     public V1beta1TopicSpecInitProviderLambdaSuccessFeedbackRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate lambdaSuccessFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecInitProviderLambdaSuccessFeedbackRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1881,6 +1954,7 @@ public enum V1beta1TopicSpecInitProviderSqsFailureFeedbackRoleArnRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TopicSpecInitProviderSqsFailureFeedbackRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1894,6 +1968,7 @@ public partial class V1beta1TopicSpecInitProviderSqsFailureFeedbackRoleArnRefPol
     public V1beta1TopicSpecInitProviderSqsFailureFeedbackRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate sqsFailureFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecInitProviderSqsFailureFeedbackRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1925,6 +2000,7 @@ public enum V1beta1TopicSpecInitProviderSqsFailureFeedbackRoleArnSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TopicSpecInitProviderSqsFailureFeedbackRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1938,6 +2014,7 @@ public partial class V1beta1TopicSpecInitProviderSqsFailureFeedbackRoleArnSelect
     public V1beta1TopicSpecInitProviderSqsFailureFeedbackRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate sqsFailureFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecInitProviderSqsFailureFeedbackRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1973,6 +2050,7 @@ public enum V1beta1TopicSpecInitProviderSqsSuccessFeedbackRoleArnRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TopicSpecInitProviderSqsSuccessFeedbackRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1986,6 +2064,7 @@ public partial class V1beta1TopicSpecInitProviderSqsSuccessFeedbackRoleArnRefPol
     public V1beta1TopicSpecInitProviderSqsSuccessFeedbackRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate sqsSuccessFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecInitProviderSqsSuccessFeedbackRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2017,6 +2096,7 @@ public enum V1beta1TopicSpecInitProviderSqsSuccessFeedbackRoleArnSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TopicSpecInitProviderSqsSuccessFeedbackRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2030,6 +2110,7 @@ public partial class V1beta1TopicSpecInitProviderSqsSuccessFeedbackRoleArnSelect
     public V1beta1TopicSpecInitProviderSqsSuccessFeedbackRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate sqsSuccessFeedbackRoleArn.</summary>
 public partial class V1beta1TopicSpecInitProviderSqsSuccessFeedbackRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2045,6 +2126,7 @@ public partial class V1beta1TopicSpecInitProviderSqsSuccessFeedbackRoleArnSelect
     public V1beta1TopicSpecInitProviderSqsSuccessFeedbackRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1TopicSpecInitProvider
 {
     /// <summary>IAM role for failure feedback</summary>
@@ -2270,6 +2352,7 @@ public enum V1beta1TopicSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TopicSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2283,6 +2366,7 @@ public partial class V1beta1TopicSpecProviderConfigRefPolicy
     public V1beta1TopicSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1TopicSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2314,6 +2398,7 @@ public enum V1beta1TopicSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TopicSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2327,6 +2412,7 @@ public partial class V1beta1TopicSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1TopicSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1TopicSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2338,6 +2424,7 @@ public partial class V1beta1TopicSpecPublishConnectionDetailsToConfigRef
     public V1beta1TopicSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1TopicSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -2353,6 +2440,7 @@ public partial class V1beta1TopicSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1TopicSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -2368,6 +2456,7 @@ public partial class V1beta1TopicSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1TopicSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -2379,6 +2468,7 @@ public partial class V1beta1TopicSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>TopicSpec defines the desired state of Topic</summary>
 public partial class V1beta1TopicSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -2411,6 +2501,7 @@ public partial class V1beta1TopicSpec
     public V1beta1TopicSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TopicStatusAtProvider
 {
     /// <summary>IAM role for failure feedback</summary>
@@ -2534,6 +2625,7 @@ public partial class V1beta1TopicStatusAtProvider
     public string? TracingConfig { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1TopicStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2561,6 +2653,7 @@ public partial class V1beta1TopicStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>TopicStatus defines the observed state of Topic.</summary>
 public partial class V1beta1TopicStatus
 {
     /// <summary></summary>
@@ -2577,6 +2670,7 @@ public partial class V1beta1TopicStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Topic is the Schema for the Topics API. Provides an SNS topic resource.</summary>
 public partial class V1beta1Topic : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1TopicSpec>, IStatus<V1beta1TopicStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datafactory.azure.com;
+/// <summary>UserAssignedIdentityReference: The resource id of the user assigned identity to authenticate to customer's key vault.</summary>
 public partial class V1api20180601storageFactorySpecEncryptionIdentityUserAssignedIdentityReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -27,6 +28,7 @@ public partial class V1api20180601storageFactorySpecEncryptionIdentityUserAssign
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.CMKIdentityDefinition Managed Identity used for CMK.</summary>
 public partial class V1api20180601storageFactorySpecEncryptionIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -38,6 +40,7 @@ public partial class V1api20180601storageFactorySpecEncryptionIdentity
     public V1api20180601storageFactorySpecEncryptionIdentityUserAssignedIdentityReference? UserAssignedIdentityReference { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.EncryptionConfiguration Definition of CMK for the factory.</summary>
 public partial class V1api20180601storageFactorySpecEncryption
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -61,6 +64,7 @@ public partial class V1api20180601storageFactorySpecEncryption
     public string? VaultBaseUrl { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.GlobalParameterSpecification Definition of a single parameter for an entity.</summary>
 public partial class V1api20180601storageFactorySpecGlobalParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -76,6 +80,7 @@ public partial class V1api20180601storageFactorySpecGlobalParameters
     public IDictionary<string, JsonNode>? Value { get; set; }
 }
 
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 public partial class V1api20180601storageFactorySpecIdentityUserAssignedIdentitiesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -95,6 +100,7 @@ public partial class V1api20180601storageFactorySpecIdentityUserAssignedIdentiti
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
 public partial class V1api20180601storageFactorySpecIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -106,6 +112,7 @@ public partial class V1api20180601storageFactorySpecIdentityUserAssignedIdentiti
     public V1api20180601storageFactorySpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.FactoryIdentity Identity properties of the factory resource.</summary>
 public partial class V1api20180601storageFactorySpecIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -121,6 +128,7 @@ public partial class V1api20180601storageFactorySpecIdentity
     public IList<V1api20180601storageFactorySpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20180601storageFactorySpecOwner
 {
     /// <summary></summary>
@@ -132,6 +140,7 @@ public partial class V1api20180601storageFactorySpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>PurviewResourceReference: Purview resource id.</summary>
 public partial class V1api20180601storageFactorySpecPurviewConfigurationPurviewResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -151,6 +160,7 @@ public partial class V1api20180601storageFactorySpecPurviewConfigurationPurviewR
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.PurviewConfiguration Purview configuration.</summary>
 public partial class V1api20180601storageFactorySpecPurviewConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -162,6 +172,7 @@ public partial class V1api20180601storageFactorySpecPurviewConfiguration
     public V1api20180601storageFactorySpecPurviewConfigurationPurviewResourceReference? PurviewResourceReference { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.GitHubClientSecret Client secret information for factory's bring your own app repository configuration.</summary>
 public partial class V1api20180601storageFactorySpecRepoConfigurationFactoryGitHubConfigurationClientSecret
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -177,6 +188,7 @@ public partial class V1api20180601storageFactorySpecRepoConfigurationFactoryGitH
     public string? ByoaSecretName { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.FactoryGitHubConfiguration</summary>
 public partial class V1api20180601storageFactorySpecRepoConfigurationFactoryGitHubConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -224,6 +236,7 @@ public partial class V1api20180601storageFactorySpecRepoConfigurationFactoryGitH
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.FactoryVSTSConfiguration</summary>
 public partial class V1api20180601storageFactorySpecRepoConfigurationFactoryVSTSConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -267,6 +280,7 @@ public partial class V1api20180601storageFactorySpecRepoConfigurationFactoryVSTS
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.FactoryRepoConfiguration</summary>
 public partial class V1api20180601storageFactorySpecRepoConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -282,6 +296,7 @@ public partial class V1api20180601storageFactorySpecRepoConfiguration
     public V1api20180601storageFactorySpecRepoConfigurationFactoryVSTSConfiguration? FactoryVSTSConfiguration { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.Factory_Spec</summary>
 public partial class V1api20180601storageFactorySpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -337,6 +352,7 @@ public partial class V1api20180601storageFactorySpec
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20180601storageFactoryStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -368,6 +384,7 @@ public partial class V1api20180601storageFactoryStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.CMKIdentityDefinition_STATUS Managed Identity used for CMK.</summary>
 public partial class V1api20180601storageFactoryStatusEncryptionIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -379,6 +396,7 @@ public partial class V1api20180601storageFactoryStatusEncryptionIdentity
     public string? UserAssignedIdentity { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.EncryptionConfiguration_STATUS Definition of CMK for the factory.</summary>
 public partial class V1api20180601storageFactoryStatusEncryption
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -402,6 +420,7 @@ public partial class V1api20180601storageFactoryStatusEncryption
     public string? VaultBaseUrl { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.GlobalParameterSpecification_STATUS Definition of a single parameter for an entity.</summary>
 public partial class V1api20180601storageFactoryStatusGlobalParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -417,6 +436,7 @@ public partial class V1api20180601storageFactoryStatusGlobalParameters
     public IDictionary<string, JsonNode>? Value { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.FactoryIdentity_STATUS Identity properties of the factory resource.</summary>
 public partial class V1api20180601storageFactoryStatusIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -440,6 +460,7 @@ public partial class V1api20180601storageFactoryStatusIdentity
     public IDictionary<string, JsonNode>? UserAssignedIdentities { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.PurviewConfiguration_STATUS Purview configuration.</summary>
 public partial class V1api20180601storageFactoryStatusPurviewConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -451,6 +472,7 @@ public partial class V1api20180601storageFactoryStatusPurviewConfiguration
     public string? PurviewResourceId { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.GitHubClientSecret_STATUS Client secret information for factory's bring your own app repository configuration.</summary>
 public partial class V1api20180601storageFactoryStatusRepoConfigurationFactoryGitHubConfigurationClientSecret
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -466,6 +488,7 @@ public partial class V1api20180601storageFactoryStatusRepoConfigurationFactoryGi
     public string? ByoaSecretName { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.FactoryGitHubConfiguration_STATUS</summary>
 public partial class V1api20180601storageFactoryStatusRepoConfigurationFactoryGitHubConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -513,6 +536,7 @@ public partial class V1api20180601storageFactoryStatusRepoConfigurationFactoryGi
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.FactoryVSTSConfiguration_STATUS</summary>
 public partial class V1api20180601storageFactoryStatusRepoConfigurationFactoryVSTSConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -556,6 +580,7 @@ public partial class V1api20180601storageFactoryStatusRepoConfigurationFactoryVS
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.FactoryRepoConfiguration_STATUS</summary>
 public partial class V1api20180601storageFactoryStatusRepoConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -571,6 +596,7 @@ public partial class V1api20180601storageFactoryStatusRepoConfiguration
     public V1api20180601storageFactoryStatusRepoConfigurationFactoryVSTSConfiguration? FactoryVSTSConfiguration { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.Factory_STATUS Factory resource type.</summary>
 public partial class V1api20180601storageFactoryStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -647,6 +673,7 @@ public partial class V1api20180601storageFactoryStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20180601.Factory Generator information: - Generated from: /datafactory/resource-manager/Microsoft.DataFactory/stable/2018-06-01/datafactory.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataFactory/factories/{factoryName}</summary>
 public partial class V1api20180601storageFactory : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20180601storageFactorySpec>, IStatus<V1api20180601storageFactoryStatus>
 {
     public const string KubeApiVersion = "v1api20180601storage";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20220701storageDnsForwardingRulesetSpecDnsResolverOutboundEndpointsReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -27,6 +28,7 @@ public partial class V1api20220701storageDnsForwardingRulesetSpecDnsResolverOutb
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.DnsresolverSubResource Reference to another ARM resource.</summary>
 public partial class V1api20220701storageDnsForwardingRulesetSpecDnsResolverOutboundEndpoints
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -38,6 +40,7 @@ public partial class V1api20220701storageDnsForwardingRulesetSpecDnsResolverOutb
     public V1api20220701storageDnsForwardingRulesetSpecDnsResolverOutboundEndpointsReference Reference { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20220701storageDnsForwardingRulesetSpecOwner
 {
     /// <summary></summary>
@@ -49,6 +52,7 @@ public partial class V1api20220701storageDnsForwardingRulesetSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.DnsForwardingRuleset_Spec</summary>
 public partial class V1api20220701storageDnsForwardingRulesetSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -80,6 +84,7 @@ public partial class V1api20220701storageDnsForwardingRulesetSpec
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20220701storageDnsForwardingRulesetStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -111,6 +116,7 @@ public partial class V1api20220701storageDnsForwardingRulesetStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.DnsresolverSubResource_STATUS Reference to another ARM resource.</summary>
 public partial class V1api20220701storageDnsForwardingRulesetStatusDnsResolverOutboundEndpoints
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -122,6 +128,7 @@ public partial class V1api20220701storageDnsForwardingRulesetStatusDnsResolverOu
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 public partial class V1api20220701storageDnsForwardingRulesetStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -153,6 +160,7 @@ public partial class V1api20220701storageDnsForwardingRulesetStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.DnsForwardingRuleset_STATUS Describes a DNS forwarding ruleset.</summary>
 public partial class V1api20220701storageDnsForwardingRulesetStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -205,6 +213,7 @@ public partial class V1api20220701storageDnsForwardingRulesetStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20220701.DnsForwardingRuleset Generator information: - Generated from: /dnsresolver/resource-manager/Microsoft.Network/stable/2022-07-01/dnsresolver.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsForwardingRulesets/{dnsForwardingRulesetName}</summary>
 public partial class V1api20220701storageDnsForwardingRuleset : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20220701storageDnsForwardingRulesetSpec>, IStatus<V1api20220701storageDnsForwardingRulesetStatus>
 {
     public const string KubeApiVersion = "v1api20220701storage";

@@ -38,6 +38,7 @@ public enum V1beta1CrawlerSpecForProviderCatalogTargetDatabaseNameRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CrawlerSpecForProviderCatalogTargetDatabaseNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1CrawlerSpecForProviderCatalogTargetDatabaseNameRefPo
     public V1beta1CrawlerSpecForProviderCatalogTargetDatabaseNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a CatalogDatabase in glue to populate databaseName.</summary>
 public partial class V1beta1CrawlerSpecForProviderCatalogTargetDatabaseNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1CrawlerSpecForProviderCatalogTargetDatabaseNameSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CrawlerSpecForProviderCatalogTargetDatabaseNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1CrawlerSpecForProviderCatalogTargetDatabaseNameSelec
     public V1beta1CrawlerSpecForProviderCatalogTargetDatabaseNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a CatalogDatabase in glue to populate databaseName.</summary>
 public partial class V1beta1CrawlerSpecForProviderCatalogTargetDatabaseNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1CrawlerSpecForProviderCatalogTargetDatabaseNameSelec
     public V1beta1CrawlerSpecForProviderCatalogTargetDatabaseNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CrawlerSpecForProviderCatalogTarget
 {
     /// <summary>The name of the connection to use to connect to the JDBC target.</summary>
@@ -161,6 +166,7 @@ public enum V1beta1CrawlerSpecForProviderDatabaseNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CrawlerSpecForProviderDatabaseNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -174,6 +180,7 @@ public partial class V1beta1CrawlerSpecForProviderDatabaseNameRefPolicy
     public V1beta1CrawlerSpecForProviderDatabaseNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a CatalogDatabase in glue to populate databaseName.</summary>
 public partial class V1beta1CrawlerSpecForProviderDatabaseNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -205,6 +212,7 @@ public enum V1beta1CrawlerSpecForProviderDatabaseNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CrawlerSpecForProviderDatabaseNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -218,6 +226,7 @@ public partial class V1beta1CrawlerSpecForProviderDatabaseNameSelectorPolicy
     public V1beta1CrawlerSpecForProviderDatabaseNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a CatalogDatabase in glue to populate databaseName.</summary>
 public partial class V1beta1CrawlerSpecForProviderDatabaseNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -233,6 +242,7 @@ public partial class V1beta1CrawlerSpecForProviderDatabaseNameSelector
     public V1beta1CrawlerSpecForProviderDatabaseNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CrawlerSpecForProviderDeltaTarget
 {
     /// <summary>The name of the connection to use to connect to the JDBC target.</summary>
@@ -252,6 +262,7 @@ public partial class V1beta1CrawlerSpecForProviderDeltaTarget
     public bool? WriteManifest { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CrawlerSpecForProviderDynamodbTarget
 {
     /// <summary>The name of the DynamoDB table to crawl.</summary>
@@ -267,6 +278,7 @@ public partial class V1beta1CrawlerSpecForProviderDynamodbTarget
     public double? ScanRate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CrawlerSpecForProviderHudiTarget
 {
     /// <summary>The name of the connection to use to connect to the JDBC target.</summary>
@@ -286,6 +298,7 @@ public partial class V1beta1CrawlerSpecForProviderHudiTarget
     public IList<string>? Paths { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CrawlerSpecForProviderIcebergTarget
 {
     /// <summary>The name of the connection to use to connect to the JDBC target.</summary>
@@ -325,6 +338,7 @@ public enum V1beta1CrawlerSpecForProviderJdbcTargetConnectionNameRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CrawlerSpecForProviderJdbcTargetConnectionNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -338,6 +352,7 @@ public partial class V1beta1CrawlerSpecForProviderJdbcTargetConnectionNameRefPol
     public V1beta1CrawlerSpecForProviderJdbcTargetConnectionNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Connection in glue to populate connectionName.</summary>
 public partial class V1beta1CrawlerSpecForProviderJdbcTargetConnectionNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -369,6 +384,7 @@ public enum V1beta1CrawlerSpecForProviderJdbcTargetConnectionNameSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CrawlerSpecForProviderJdbcTargetConnectionNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -382,6 +398,7 @@ public partial class V1beta1CrawlerSpecForProviderJdbcTargetConnectionNameSelect
     public V1beta1CrawlerSpecForProviderJdbcTargetConnectionNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Connection in glue to populate connectionName.</summary>
 public partial class V1beta1CrawlerSpecForProviderJdbcTargetConnectionNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -397,6 +414,7 @@ public partial class V1beta1CrawlerSpecForProviderJdbcTargetConnectionNameSelect
     public V1beta1CrawlerSpecForProviderJdbcTargetConnectionNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CrawlerSpecForProviderJdbcTarget
 {
     /// <summary>The name of the connection to use to connect to the JDBC target.</summary>
@@ -424,6 +442,7 @@ public partial class V1beta1CrawlerSpecForProviderJdbcTarget
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CrawlerSpecForProviderLakeFormationConfiguration
 {
     /// <summary>Required for cross account crawls. For same account crawls as the target data, this can omitted.</summary>
@@ -435,6 +454,7 @@ public partial class V1beta1CrawlerSpecForProviderLakeFormationConfiguration
     public bool? UseLakeFormationCredentials { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CrawlerSpecForProviderLineageConfiguration
 {
     /// <summary>Specifies whether data lineage is enabled for the crawler. Valid values are: ENABLE and DISABLE. Default value is DISABLE.</summary>
@@ -462,6 +482,7 @@ public enum V1beta1CrawlerSpecForProviderMongodbTargetConnectionNameRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CrawlerSpecForProviderMongodbTargetConnectionNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -475,6 +496,7 @@ public partial class V1beta1CrawlerSpecForProviderMongodbTargetConnectionNameRef
     public V1beta1CrawlerSpecForProviderMongodbTargetConnectionNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Connection in glue to populate connectionName.</summary>
 public partial class V1beta1CrawlerSpecForProviderMongodbTargetConnectionNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -506,6 +528,7 @@ public enum V1beta1CrawlerSpecForProviderMongodbTargetConnectionNameSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CrawlerSpecForProviderMongodbTargetConnectionNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -519,6 +542,7 @@ public partial class V1beta1CrawlerSpecForProviderMongodbTargetConnectionNameSel
     public V1beta1CrawlerSpecForProviderMongodbTargetConnectionNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Connection in glue to populate connectionName.</summary>
 public partial class V1beta1CrawlerSpecForProviderMongodbTargetConnectionNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -534,6 +558,7 @@ public partial class V1beta1CrawlerSpecForProviderMongodbTargetConnectionNameSel
     public V1beta1CrawlerSpecForProviderMongodbTargetConnectionNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CrawlerSpecForProviderMongodbTarget
 {
     /// <summary>The name of the connection to use to connect to the JDBC target.</summary>
@@ -557,6 +582,7 @@ public partial class V1beta1CrawlerSpecForProviderMongodbTarget
     public bool? ScanAll { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CrawlerSpecForProviderRecrawlPolicy
 {
     /// <summary>Specifies whether to crawl the entire dataset again, crawl only folders that were added since the last crawler run, or crawl what S3 notifies the crawler of via SQS. Valid Values are: CRAWL_EVENT_MODE, CRAWL_EVERYTHING and CRAWL_NEW_FOLDERS_ONLY. Default value is CRAWL_EVERYTHING.</summary>
@@ -584,6 +610,7 @@ public enum V1beta1CrawlerSpecForProviderRoleRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CrawlerSpecForProviderRoleRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -597,6 +624,7 @@ public partial class V1beta1CrawlerSpecForProviderRoleRefPolicy
     public V1beta1CrawlerSpecForProviderRoleRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate role.</summary>
 public partial class V1beta1CrawlerSpecForProviderRoleRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -628,6 +656,7 @@ public enum V1beta1CrawlerSpecForProviderRoleSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CrawlerSpecForProviderRoleSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -641,6 +670,7 @@ public partial class V1beta1CrawlerSpecForProviderRoleSelectorPolicy
     public V1beta1CrawlerSpecForProviderRoleSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate role.</summary>
 public partial class V1beta1CrawlerSpecForProviderRoleSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -656,6 +686,7 @@ public partial class V1beta1CrawlerSpecForProviderRoleSelector
     public V1beta1CrawlerSpecForProviderRoleSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CrawlerSpecForProviderS3Target
 {
     /// <summary>The name of the connection to use to connect to the JDBC target.</summary>
@@ -683,6 +714,7 @@ public partial class V1beta1CrawlerSpecForProviderS3Target
     public double? SampleSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CrawlerSpecForProviderSchemaChangePolicy
 {
     /// <summary>The deletion behavior when the crawler finds a deleted object. Valid values: LOG, DELETE_FROM_DATABASE, or DEPRECATE_IN_DATABASE. Defaults to DEPRECATE_IN_DATABASE.</summary>
@@ -694,6 +726,7 @@ public partial class V1beta1CrawlerSpecForProviderSchemaChangePolicy
     public string? UpdateBehavior { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CrawlerSpecForProvider
 {
     /// <summary>List of nested AWS Glue Data Catalog target arguments. See Catalog Target below.</summary>
@@ -821,6 +854,7 @@ public enum V1beta1CrawlerSpecInitProviderCatalogTargetDatabaseNameRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CrawlerSpecInitProviderCatalogTargetDatabaseNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -834,6 +868,7 @@ public partial class V1beta1CrawlerSpecInitProviderCatalogTargetDatabaseNameRefP
     public V1beta1CrawlerSpecInitProviderCatalogTargetDatabaseNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a CatalogDatabase in glue to populate databaseName.</summary>
 public partial class V1beta1CrawlerSpecInitProviderCatalogTargetDatabaseNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -865,6 +900,7 @@ public enum V1beta1CrawlerSpecInitProviderCatalogTargetDatabaseNameSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CrawlerSpecInitProviderCatalogTargetDatabaseNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -878,6 +914,7 @@ public partial class V1beta1CrawlerSpecInitProviderCatalogTargetDatabaseNameSele
     public V1beta1CrawlerSpecInitProviderCatalogTargetDatabaseNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a CatalogDatabase in glue to populate databaseName.</summary>
 public partial class V1beta1CrawlerSpecInitProviderCatalogTargetDatabaseNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -893,6 +930,7 @@ public partial class V1beta1CrawlerSpecInitProviderCatalogTargetDatabaseNameSele
     public V1beta1CrawlerSpecInitProviderCatalogTargetDatabaseNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CrawlerSpecInitProviderCatalogTarget
 {
     /// <summary>The name of the connection to use to connect to the JDBC target.</summary>
@@ -944,6 +982,7 @@ public enum V1beta1CrawlerSpecInitProviderDatabaseNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CrawlerSpecInitProviderDatabaseNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -957,6 +996,7 @@ public partial class V1beta1CrawlerSpecInitProviderDatabaseNameRefPolicy
     public V1beta1CrawlerSpecInitProviderDatabaseNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a CatalogDatabase in glue to populate databaseName.</summary>
 public partial class V1beta1CrawlerSpecInitProviderDatabaseNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -988,6 +1028,7 @@ public enum V1beta1CrawlerSpecInitProviderDatabaseNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CrawlerSpecInitProviderDatabaseNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1001,6 +1042,7 @@ public partial class V1beta1CrawlerSpecInitProviderDatabaseNameSelectorPolicy
     public V1beta1CrawlerSpecInitProviderDatabaseNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a CatalogDatabase in glue to populate databaseName.</summary>
 public partial class V1beta1CrawlerSpecInitProviderDatabaseNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1016,6 +1058,7 @@ public partial class V1beta1CrawlerSpecInitProviderDatabaseNameSelector
     public V1beta1CrawlerSpecInitProviderDatabaseNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CrawlerSpecInitProviderDeltaTarget
 {
     /// <summary>The name of the connection to use to connect to the JDBC target.</summary>
@@ -1035,6 +1078,7 @@ public partial class V1beta1CrawlerSpecInitProviderDeltaTarget
     public bool? WriteManifest { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CrawlerSpecInitProviderDynamodbTarget
 {
     /// <summary>The name of the DynamoDB table to crawl.</summary>
@@ -1050,6 +1094,7 @@ public partial class V1beta1CrawlerSpecInitProviderDynamodbTarget
     public double? ScanRate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CrawlerSpecInitProviderHudiTarget
 {
     /// <summary>The name of the connection to use to connect to the JDBC target.</summary>
@@ -1069,6 +1114,7 @@ public partial class V1beta1CrawlerSpecInitProviderHudiTarget
     public IList<string>? Paths { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CrawlerSpecInitProviderIcebergTarget
 {
     /// <summary>The name of the connection to use to connect to the JDBC target.</summary>
@@ -1108,6 +1154,7 @@ public enum V1beta1CrawlerSpecInitProviderJdbcTargetConnectionNameRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CrawlerSpecInitProviderJdbcTargetConnectionNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1121,6 +1168,7 @@ public partial class V1beta1CrawlerSpecInitProviderJdbcTargetConnectionNameRefPo
     public V1beta1CrawlerSpecInitProviderJdbcTargetConnectionNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Connection in glue to populate connectionName.</summary>
 public partial class V1beta1CrawlerSpecInitProviderJdbcTargetConnectionNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1152,6 +1200,7 @@ public enum V1beta1CrawlerSpecInitProviderJdbcTargetConnectionNameSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CrawlerSpecInitProviderJdbcTargetConnectionNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1165,6 +1214,7 @@ public partial class V1beta1CrawlerSpecInitProviderJdbcTargetConnectionNameSelec
     public V1beta1CrawlerSpecInitProviderJdbcTargetConnectionNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Connection in glue to populate connectionName.</summary>
 public partial class V1beta1CrawlerSpecInitProviderJdbcTargetConnectionNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1180,6 +1230,7 @@ public partial class V1beta1CrawlerSpecInitProviderJdbcTargetConnectionNameSelec
     public V1beta1CrawlerSpecInitProviderJdbcTargetConnectionNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CrawlerSpecInitProviderJdbcTarget
 {
     /// <summary>The name of the connection to use to connect to the JDBC target.</summary>
@@ -1207,6 +1258,7 @@ public partial class V1beta1CrawlerSpecInitProviderJdbcTarget
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CrawlerSpecInitProviderLakeFormationConfiguration
 {
     /// <summary>Required for cross account crawls. For same account crawls as the target data, this can omitted.</summary>
@@ -1218,6 +1270,7 @@ public partial class V1beta1CrawlerSpecInitProviderLakeFormationConfiguration
     public bool? UseLakeFormationCredentials { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CrawlerSpecInitProviderLineageConfiguration
 {
     /// <summary>Specifies whether data lineage is enabled for the crawler. Valid values are: ENABLE and DISABLE. Default value is DISABLE.</summary>
@@ -1245,6 +1298,7 @@ public enum V1beta1CrawlerSpecInitProviderMongodbTargetConnectionNameRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CrawlerSpecInitProviderMongodbTargetConnectionNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1258,6 +1312,7 @@ public partial class V1beta1CrawlerSpecInitProviderMongodbTargetConnectionNameRe
     public V1beta1CrawlerSpecInitProviderMongodbTargetConnectionNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Connection in glue to populate connectionName.</summary>
 public partial class V1beta1CrawlerSpecInitProviderMongodbTargetConnectionNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1289,6 +1344,7 @@ public enum V1beta1CrawlerSpecInitProviderMongodbTargetConnectionNameSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CrawlerSpecInitProviderMongodbTargetConnectionNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1302,6 +1358,7 @@ public partial class V1beta1CrawlerSpecInitProviderMongodbTargetConnectionNameSe
     public V1beta1CrawlerSpecInitProviderMongodbTargetConnectionNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Connection in glue to populate connectionName.</summary>
 public partial class V1beta1CrawlerSpecInitProviderMongodbTargetConnectionNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1317,6 +1374,7 @@ public partial class V1beta1CrawlerSpecInitProviderMongodbTargetConnectionNameSe
     public V1beta1CrawlerSpecInitProviderMongodbTargetConnectionNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CrawlerSpecInitProviderMongodbTarget
 {
     /// <summary>The name of the connection to use to connect to the JDBC target.</summary>
@@ -1340,6 +1398,7 @@ public partial class V1beta1CrawlerSpecInitProviderMongodbTarget
     public bool? ScanAll { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CrawlerSpecInitProviderRecrawlPolicy
 {
     /// <summary>Specifies whether to crawl the entire dataset again, crawl only folders that were added since the last crawler run, or crawl what S3 notifies the crawler of via SQS. Valid Values are: CRAWL_EVENT_MODE, CRAWL_EVERYTHING and CRAWL_NEW_FOLDERS_ONLY. Default value is CRAWL_EVERYTHING.</summary>
@@ -1367,6 +1426,7 @@ public enum V1beta1CrawlerSpecInitProviderRoleRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CrawlerSpecInitProviderRoleRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1380,6 +1440,7 @@ public partial class V1beta1CrawlerSpecInitProviderRoleRefPolicy
     public V1beta1CrawlerSpecInitProviderRoleRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate role.</summary>
 public partial class V1beta1CrawlerSpecInitProviderRoleRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1411,6 +1472,7 @@ public enum V1beta1CrawlerSpecInitProviderRoleSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CrawlerSpecInitProviderRoleSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1424,6 +1486,7 @@ public partial class V1beta1CrawlerSpecInitProviderRoleSelectorPolicy
     public V1beta1CrawlerSpecInitProviderRoleSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate role.</summary>
 public partial class V1beta1CrawlerSpecInitProviderRoleSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1439,6 +1502,7 @@ public partial class V1beta1CrawlerSpecInitProviderRoleSelector
     public V1beta1CrawlerSpecInitProviderRoleSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CrawlerSpecInitProviderS3Target
 {
     /// <summary>The name of the connection to use to connect to the JDBC target.</summary>
@@ -1466,6 +1530,7 @@ public partial class V1beta1CrawlerSpecInitProviderS3Target
     public double? SampleSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CrawlerSpecInitProviderSchemaChangePolicy
 {
     /// <summary>The deletion behavior when the crawler finds a deleted object. Valid values: LOG, DELETE_FROM_DATABASE, or DEPRECATE_IN_DATABASE. Defaults to DEPRECATE_IN_DATABASE.</summary>
@@ -1477,6 +1542,7 @@ public partial class V1beta1CrawlerSpecInitProviderSchemaChangePolicy
     public string? UpdateBehavior { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1CrawlerSpecInitProvider
 {
     /// <summary>List of nested AWS Glue Data Catalog target arguments. See Catalog Target below.</summary>
@@ -1622,6 +1688,7 @@ public enum V1beta1CrawlerSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CrawlerSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1635,6 +1702,7 @@ public partial class V1beta1CrawlerSpecProviderConfigRefPolicy
     public V1beta1CrawlerSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1CrawlerSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1666,6 +1734,7 @@ public enum V1beta1CrawlerSpecPublishConnectionDetailsToConfigRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CrawlerSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1679,6 +1748,7 @@ public partial class V1beta1CrawlerSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1CrawlerSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1CrawlerSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1690,6 +1760,7 @@ public partial class V1beta1CrawlerSpecPublishConnectionDetailsToConfigRef
     public V1beta1CrawlerSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1CrawlerSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1705,6 +1776,7 @@ public partial class V1beta1CrawlerSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1CrawlerSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1720,6 +1792,7 @@ public partial class V1beta1CrawlerSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1CrawlerSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1731,6 +1804,7 @@ public partial class V1beta1CrawlerSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>CrawlerSpec defines the desired state of Crawler</summary>
 public partial class V1beta1CrawlerSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1763,6 +1837,7 @@ public partial class V1beta1CrawlerSpec
     public V1beta1CrawlerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CrawlerStatusAtProviderCatalogTarget
 {
     /// <summary>The name of the connection to use to connect to the JDBC target.</summary>
@@ -1786,6 +1861,7 @@ public partial class V1beta1CrawlerStatusAtProviderCatalogTarget
     public IList<string>? Tables { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CrawlerStatusAtProviderDeltaTarget
 {
     /// <summary>The name of the connection to use to connect to the JDBC target.</summary>
@@ -1805,6 +1881,7 @@ public partial class V1beta1CrawlerStatusAtProviderDeltaTarget
     public bool? WriteManifest { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CrawlerStatusAtProviderDynamodbTarget
 {
     /// <summary>The name of the DynamoDB table to crawl.</summary>
@@ -1820,6 +1897,7 @@ public partial class V1beta1CrawlerStatusAtProviderDynamodbTarget
     public double? ScanRate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CrawlerStatusAtProviderHudiTarget
 {
     /// <summary>The name of the connection to use to connect to the JDBC target.</summary>
@@ -1839,6 +1917,7 @@ public partial class V1beta1CrawlerStatusAtProviderHudiTarget
     public IList<string>? Paths { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CrawlerStatusAtProviderIcebergTarget
 {
     /// <summary>The name of the connection to use to connect to the JDBC target.</summary>
@@ -1858,6 +1937,7 @@ public partial class V1beta1CrawlerStatusAtProviderIcebergTarget
     public IList<string>? Paths { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CrawlerStatusAtProviderJdbcTarget
 {
     /// <summary>The name of the connection to use to connect to the JDBC target.</summary>
@@ -1877,6 +1957,7 @@ public partial class V1beta1CrawlerStatusAtProviderJdbcTarget
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CrawlerStatusAtProviderLakeFormationConfiguration
 {
     /// <summary>Required for cross account crawls. For same account crawls as the target data, this can omitted.</summary>
@@ -1888,6 +1969,7 @@ public partial class V1beta1CrawlerStatusAtProviderLakeFormationConfiguration
     public bool? UseLakeFormationCredentials { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CrawlerStatusAtProviderLineageConfiguration
 {
     /// <summary>Specifies whether data lineage is enabled for the crawler. Valid values are: ENABLE and DISABLE. Default value is DISABLE.</summary>
@@ -1895,6 +1977,7 @@ public partial class V1beta1CrawlerStatusAtProviderLineageConfiguration
     public string? CrawlerLineageSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CrawlerStatusAtProviderMongodbTarget
 {
     /// <summary>The name of the connection to use to connect to the JDBC target.</summary>
@@ -1910,6 +1993,7 @@ public partial class V1beta1CrawlerStatusAtProviderMongodbTarget
     public bool? ScanAll { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CrawlerStatusAtProviderRecrawlPolicy
 {
     /// <summary>Specifies whether to crawl the entire dataset again, crawl only folders that were added since the last crawler run, or crawl what S3 notifies the crawler of via SQS. Valid Values are: CRAWL_EVENT_MODE, CRAWL_EVERYTHING and CRAWL_NEW_FOLDERS_ONLY. Default value is CRAWL_EVERYTHING.</summary>
@@ -1917,6 +2001,7 @@ public partial class V1beta1CrawlerStatusAtProviderRecrawlPolicy
     public string? RecrawlBehavior { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CrawlerStatusAtProviderS3Target
 {
     /// <summary>The name of the connection to use to connect to the JDBC target.</summary>
@@ -1944,6 +2029,7 @@ public partial class V1beta1CrawlerStatusAtProviderS3Target
     public double? SampleSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CrawlerStatusAtProviderSchemaChangePolicy
 {
     /// <summary>The deletion behavior when the crawler finds a deleted object. Valid values: LOG, DELETE_FROM_DATABASE, or DEPRECATE_IN_DATABASE. Defaults to DEPRECATE_IN_DATABASE.</summary>
@@ -1955,6 +2041,7 @@ public partial class V1beta1CrawlerStatusAtProviderSchemaChangePolicy
     public string? UpdateBehavior { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CrawlerStatusAtProvider
 {
     /// <summary>The ARN of the crawler</summary>
@@ -2054,6 +2141,7 @@ public partial class V1beta1CrawlerStatusAtProvider
     public IDictionary<string, string>? TagsAll { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1CrawlerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2081,6 +2169,7 @@ public partial class V1beta1CrawlerStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>CrawlerStatus defines the observed state of Crawler.</summary>
 public partial class V1beta1CrawlerStatus
 {
     /// <summary></summary>
@@ -2097,6 +2186,7 @@ public partial class V1beta1CrawlerStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Crawler is the Schema for the Crawlers API. Manages a Glue Crawler</summary>
 public partial class V1beta1Crawler : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1CrawlerSpec>, IStatus<V1beta1CrawlerStatus>
 {
     public const string KubeApiVersion = "v1beta1";

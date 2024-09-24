@@ -18,6 +18,7 @@ public enum V1beta1ClusterSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderAuthorization
 {
     /// <summary>Groups that can perform operations as a cluster admin. A managed ClusterRoleBinding will be created to grant the cluster-admin ClusterRole to the groups. Up to ten admin groups can be provided. For more info on RBAC, see https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1ClusterSpecForProviderAuthorization
     public IList<string>? AdminUsers { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderBinaryAuthorization
 {
     /// <summary>Configure Binary Authorization evaluation mode. Possible values are: DISABLED, PROJECT_SINGLETON_POLICY_ENFORCE.</summary>
@@ -36,6 +38,7 @@ public partial class V1beta1ClusterSpecForProviderBinaryAuthorization
     public string? EvaluationMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderFleet
 {
     /// <summary>The number of the Fleet host project where this cluster will be registered.</summary>
@@ -43,6 +46,7 @@ public partial class V1beta1ClusterSpecForProviderFleet
     public string? Project { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderLoggingConfigComponentConfig
 {
     /// <summary>The components to be enabled. Each value may be one of: SYSTEM_COMPONENTS, WORKLOADS.</summary>
@@ -50,6 +54,7 @@ public partial class V1beta1ClusterSpecForProviderLoggingConfigComponentConfig
     public IList<string>? EnableComponents { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderLoggingConfig
 {
     /// <summary>The configuration of the logging components Structure is documented below.</summary>
@@ -57,6 +62,7 @@ public partial class V1beta1ClusterSpecForProviderLoggingConfig
     public IList<V1beta1ClusterSpecForProviderLoggingConfigComponentConfig>? ComponentConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderMonitoringConfigManagedPrometheusConfig
 {
     /// <summary>Enable Managed Collection.</summary>
@@ -64,6 +70,7 @@ public partial class V1beta1ClusterSpecForProviderMonitoringConfigManagedPrometh
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderMonitoringConfig
 {
     /// <summary>Enable Google Cloud Managed Service for Prometheus in the cluster. Structure is documented below.</summary>
@@ -71,6 +78,7 @@ public partial class V1beta1ClusterSpecForProviderMonitoringConfig
     public IList<V1beta1ClusterSpecForProviderMonitoringConfigManagedPrometheusConfig>? ManagedPrometheusConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderOidcConfig
 {
     /// <summary>A JSON Web Token (JWT) issuer URI. issuer must start with https://</summary>
@@ -82,6 +90,7 @@ public partial class V1beta1ClusterSpecForProviderOidcConfig
     public string? Jwks { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderProxyConfigKubernetesSecret
 {
     /// <summary>Name of the kubernetes secret containing the proxy config.</summary>
@@ -93,6 +102,7 @@ public partial class V1beta1ClusterSpecForProviderProxyConfigKubernetesSecret
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderProxyConfig
 {
     /// <summary>The Kubernetes Secret resource that contains the HTTP(S) proxy configuration. Structure is documented below.</summary>
@@ -100,6 +110,7 @@ public partial class V1beta1ClusterSpecForProviderProxyConfig
     public IList<V1beta1ClusterSpecForProviderProxyConfigKubernetesSecret>? KubernetesSecret { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProvider
 {
     /// <summary>Optional. Annotations on the cluster. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Key can have 2 segments: prefix and name , separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.</summary>
@@ -159,6 +170,7 @@ public partial class V1beta1ClusterSpecForProvider
     public IList<V1beta1ClusterSpecForProviderProxyConfig>? ProxyConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderAuthorization
 {
     /// <summary>Groups that can perform operations as a cluster admin. A managed ClusterRoleBinding will be created to grant the cluster-admin ClusterRole to the groups. Up to ten admin groups can be provided. For more info on RBAC, see https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles</summary>
@@ -170,6 +182,7 @@ public partial class V1beta1ClusterSpecInitProviderAuthorization
     public IList<string>? AdminUsers { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderBinaryAuthorization
 {
     /// <summary>Configure Binary Authorization evaluation mode. Possible values are: DISABLED, PROJECT_SINGLETON_POLICY_ENFORCE.</summary>
@@ -177,6 +190,7 @@ public partial class V1beta1ClusterSpecInitProviderBinaryAuthorization
     public string? EvaluationMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderFleet
 {
     /// <summary>The number of the Fleet host project where this cluster will be registered.</summary>
@@ -184,6 +198,7 @@ public partial class V1beta1ClusterSpecInitProviderFleet
     public string? Project { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderLoggingConfigComponentConfig
 {
     /// <summary>The components to be enabled. Each value may be one of: SYSTEM_COMPONENTS, WORKLOADS.</summary>
@@ -191,6 +206,7 @@ public partial class V1beta1ClusterSpecInitProviderLoggingConfigComponentConfig
     public IList<string>? EnableComponents { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderLoggingConfig
 {
     /// <summary>The configuration of the logging components Structure is documented below.</summary>
@@ -198,6 +214,7 @@ public partial class V1beta1ClusterSpecInitProviderLoggingConfig
     public IList<V1beta1ClusterSpecInitProviderLoggingConfigComponentConfig>? ComponentConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderMonitoringConfigManagedPrometheusConfig
 {
     /// <summary>Enable Managed Collection.</summary>
@@ -205,6 +222,7 @@ public partial class V1beta1ClusterSpecInitProviderMonitoringConfigManagedPromet
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderMonitoringConfig
 {
     /// <summary>Enable Google Cloud Managed Service for Prometheus in the cluster. Structure is documented below.</summary>
@@ -212,6 +230,7 @@ public partial class V1beta1ClusterSpecInitProviderMonitoringConfig
     public IList<V1beta1ClusterSpecInitProviderMonitoringConfigManagedPrometheusConfig>? ManagedPrometheusConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderOidcConfig
 {
     /// <summary>A JSON Web Token (JWT) issuer URI. issuer must start with https://</summary>
@@ -223,6 +242,7 @@ public partial class V1beta1ClusterSpecInitProviderOidcConfig
     public string? Jwks { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderProxyConfigKubernetesSecret
 {
     /// <summary>Name of the kubernetes secret containing the proxy config.</summary>
@@ -234,6 +254,7 @@ public partial class V1beta1ClusterSpecInitProviderProxyConfigKubernetesSecret
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderProxyConfig
 {
     /// <summary>The Kubernetes Secret resource that contains the HTTP(S) proxy configuration. Structure is documented below.</summary>
@@ -241,6 +262,7 @@ public partial class V1beta1ClusterSpecInitProviderProxyConfig
     public IList<V1beta1ClusterSpecInitProviderProxyConfigKubernetesSecret>? KubernetesSecret { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ClusterSpecInitProvider
 {
     /// <summary>Optional. Annotations on the cluster. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Key can have 2 segments: prefix and name , separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.</summary>
@@ -338,6 +360,7 @@ public enum V1beta1ClusterSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClusterSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -351,6 +374,7 @@ public partial class V1beta1ClusterSpecProviderConfigRefPolicy
     public V1beta1ClusterSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ClusterSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -382,6 +406,7 @@ public enum V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -395,6 +420,7 @@ public partial class V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ClusterSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -406,6 +432,7 @@ public partial class V1beta1ClusterSpecPublishConnectionDetailsToConfigRef
     public V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ClusterSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -421,6 +448,7 @@ public partial class V1beta1ClusterSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ClusterSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -436,6 +464,7 @@ public partial class V1beta1ClusterSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ClusterSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -447,6 +476,7 @@ public partial class V1beta1ClusterSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ClusterSpec defines the desired state of Cluster</summary>
 public partial class V1beta1ClusterSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -479,6 +509,7 @@ public partial class V1beta1ClusterSpec
     public V1beta1ClusterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderAuthorization
 {
     /// <summary>Groups that can perform operations as a cluster admin. A managed ClusterRoleBinding will be created to grant the cluster-admin ClusterRole to the groups. Up to ten admin groups can be provided. For more info on RBAC, see https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles</summary>
@@ -490,6 +521,7 @@ public partial class V1beta1ClusterStatusAtProviderAuthorization
     public IList<string>? AdminUsers { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderBinaryAuthorization
 {
     /// <summary>Configure Binary Authorization evaluation mode. Possible values are: DISABLED, PROJECT_SINGLETON_POLICY_ENFORCE.</summary>
@@ -497,6 +529,7 @@ public partial class V1beta1ClusterStatusAtProviderBinaryAuthorization
     public string? EvaluationMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderErrors
 {
     /// <summary>Human-friendly description of the error.</summary>
@@ -504,6 +537,7 @@ public partial class V1beta1ClusterStatusAtProviderErrors
     public string? Message { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderFleet
 {
     /// <summary>(Output) The name of the managed Hub Membership resource associated to this cluster. Membership names are formatted as projects//locations/global/membership/.</summary>
@@ -515,6 +549,7 @@ public partial class V1beta1ClusterStatusAtProviderFleet
     public string? Project { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderLoggingConfigComponentConfig
 {
     /// <summary>The components to be enabled. Each value may be one of: SYSTEM_COMPONENTS, WORKLOADS.</summary>
@@ -522,6 +557,7 @@ public partial class V1beta1ClusterStatusAtProviderLoggingConfigComponentConfig
     public IList<string>? EnableComponents { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderLoggingConfig
 {
     /// <summary>The configuration of the logging components Structure is documented below.</summary>
@@ -529,6 +565,7 @@ public partial class V1beta1ClusterStatusAtProviderLoggingConfig
     public IList<V1beta1ClusterStatusAtProviderLoggingConfigComponentConfig>? ComponentConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderMonitoringConfigManagedPrometheusConfig
 {
     /// <summary>Enable Managed Collection.</summary>
@@ -536,6 +573,7 @@ public partial class V1beta1ClusterStatusAtProviderMonitoringConfigManagedPromet
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderMonitoringConfig
 {
     /// <summary>Enable Google Cloud Managed Service for Prometheus in the cluster. Structure is documented below.</summary>
@@ -543,6 +581,7 @@ public partial class V1beta1ClusterStatusAtProviderMonitoringConfig
     public IList<V1beta1ClusterStatusAtProviderMonitoringConfigManagedPrometheusConfig>? ManagedPrometheusConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderOidcConfig
 {
     /// <summary>A JSON Web Token (JWT) issuer URI. issuer must start with https://</summary>
@@ -554,6 +593,7 @@ public partial class V1beta1ClusterStatusAtProviderOidcConfig
     public string? Jwks { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderProxyConfigKubernetesSecret
 {
     /// <summary>Name of the kubernetes secret containing the proxy config.</summary>
@@ -565,6 +605,7 @@ public partial class V1beta1ClusterStatusAtProviderProxyConfigKubernetesSecret
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderProxyConfig
 {
     /// <summary>The Kubernetes Secret resource that contains the HTTP(S) proxy configuration. Structure is documented below.</summary>
@@ -572,6 +613,7 @@ public partial class V1beta1ClusterStatusAtProviderProxyConfig
     public IList<V1beta1ClusterStatusAtProviderProxyConfigKubernetesSecret>? KubernetesSecret { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderWorkloadIdentityConfig
 {
     /// <summary>The ID of the OIDC Identity Provider (IdP) associated to the Workload Identity Pool.</summary>
@@ -587,6 +629,7 @@ public partial class V1beta1ClusterStatusAtProviderWorkloadIdentityConfig
     public string? WorkloadPool { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProvider
 {
     /// <summary>Optional. Annotations on the cluster. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Key can have 2 segments: prefix and name , separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.</summary>
@@ -690,6 +733,7 @@ public partial class V1beta1ClusterStatusAtProvider
     public IList<V1beta1ClusterStatusAtProviderWorkloadIdentityConfig>? WorkloadIdentityConfig { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ClusterStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -717,6 +761,7 @@ public partial class V1beta1ClusterStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ClusterStatus defines the observed state of Cluster.</summary>
 public partial class V1beta1ClusterStatus
 {
     /// <summary></summary>
@@ -733,6 +778,7 @@ public partial class V1beta1ClusterStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Cluster is the Schema for the Clusters API. An Anthos cluster running on customer owned infrastructure.</summary>
 public partial class V1beta1Cluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ClusterSpec>, IStatus<V1beta1ClusterStatus>
 {
     public const string KubeApiVersion = "v1beta1";

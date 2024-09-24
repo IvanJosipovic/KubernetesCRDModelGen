@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.pubsub.cnrm.cloud.google.com;
+/// <summary>The KMSCryptoKey to be used to protect access to messages published on this topic. Your project's Pub/Sub service account ('service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com') must have 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature.</summary>
 public partial class V1beta1PubSubTopicSpecKmsKeyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1PubSubTopicSpecKmsKeyRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Policy constraining the set of Google Cloud Platform regions where messages published to the topic may be stored. If not present, then no constraints are in effect.</summary>
 public partial class V1beta1PubSubTopicSpecMessageStoragePolicy
 {
     /// <summary>A list of IDs of GCP regions where messages that are published to the topic may be persisted in storage. Messages published by publishers running in non-allowed GCP regions (or running outside of GCP altogether) will be routed for storage in one of the allowed regions. An empty list means that no regions are allowed, and is not a valid configuration.</summary>
@@ -30,6 +32,7 @@ public partial class V1beta1PubSubTopicSpecMessageStoragePolicy
     public IList<string> AllowedPersistenceRegions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PubSubTopicSpecSchemaSettingsSchemaRef
 {
     /// <summary>Allowed value: string of the format `projects/{{project}}/schemas/{{value}}`, where {{value}} is the `name` field of a `PubSubSchema` resource.</summary>
@@ -45,6 +48,7 @@ public partial class V1beta1PubSubTopicSpecSchemaSettingsSchemaRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Settings for validating messages published against a schema.</summary>
 public partial class V1beta1PubSubTopicSpecSchemaSettings
 {
     /// <summary>The encoding of messages validated against schema. Default value: "ENCODING_UNSPECIFIED" Possible values: ["ENCODING_UNSPECIFIED", "JSON", "BINARY"].</summary>
@@ -56,6 +60,7 @@ public partial class V1beta1PubSubTopicSpecSchemaSettings
     public V1beta1PubSubTopicSpecSchemaSettingsSchemaRef SchemaRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PubSubTopicSpec
 {
     /// <summary>The KMSCryptoKey to be used to protect access to messages published on this topic. Your project's Pub/Sub service account ('service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com') must have 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature.</summary>
@@ -79,6 +84,7 @@ public partial class V1beta1PubSubTopicSpec
     public V1beta1PubSubTopicSpecSchemaSettings? SchemaSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PubSubTopicStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -102,6 +108,7 @@ public partial class V1beta1PubSubTopicStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PubSubTopicStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -114,6 +121,7 @@ public partial class V1beta1PubSubTopicStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1PubSubTopic : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1PubSubTopicSpec>, IStatus<V1beta1PubSubTopicStatus>
 {
     public const string KubeApiVersion = "v1beta1";

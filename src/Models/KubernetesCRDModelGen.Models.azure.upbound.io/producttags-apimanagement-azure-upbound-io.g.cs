@@ -38,6 +38,7 @@ public enum V1beta1ProductTagSpecForProviderApiManagementNameRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ProductTagSpecForProviderApiManagementNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ProductTagSpecForProviderApiManagementNameRefPolicy
     public V1beta1ProductTagSpecForProviderApiManagementNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Management in apimanagement to populate apiManagementName.</summary>
 public partial class V1beta1ProductTagSpecForProviderApiManagementNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ProductTagSpecForProviderApiManagementNameSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ProductTagSpecForProviderApiManagementNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ProductTagSpecForProviderApiManagementNameSelectorPo
     public V1beta1ProductTagSpecForProviderApiManagementNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Management in apimanagement to populate apiManagementName.</summary>
 public partial class V1beta1ProductTagSpecForProviderApiManagementNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1ProductTagSpecForProviderApiManagementProductIdRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ProductTagSpecForProviderApiManagementProductIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1ProductTagSpecForProviderApiManagementProductIdRefPo
     public V1beta1ProductTagSpecForProviderApiManagementProductIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Product in apimanagement to populate apiManagementProductId.</summary>
 public partial class V1beta1ProductTagSpecForProviderApiManagementProductIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1ProductTagSpecForProviderApiManagementProductIdSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ProductTagSpecForProviderApiManagementProductIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1ProductTagSpecForProviderApiManagementProductIdSelec
     public V1beta1ProductTagSpecForProviderApiManagementProductIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Product in apimanagement to populate apiManagementProductId.</summary>
 public partial class V1beta1ProductTagSpecForProviderApiManagementProductIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1ProductTagSpecForProviderNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ProductTagSpecForProviderNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1ProductTagSpecForProviderNameRefPolicy
     public V1beta1ProductTagSpecForProviderNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Tag in apimanagement to populate name.</summary>
 public partial class V1beta1ProductTagSpecForProviderNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1ProductTagSpecForProviderNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ProductTagSpecForProviderNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1ProductTagSpecForProviderNameSelectorPolicy
     public V1beta1ProductTagSpecForProviderNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Tag in apimanagement to populate name.</summary>
 public partial class V1beta1ProductTagSpecForProviderNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -314,6 +326,7 @@ public enum V1beta1ProductTagSpecForProviderResourceGroupNameRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ProductTagSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -327,6 +340,7 @@ public partial class V1beta1ProductTagSpecForProviderResourceGroupNameRefPolicy
     public V1beta1ProductTagSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1ProductTagSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -358,6 +372,7 @@ public enum V1beta1ProductTagSpecForProviderResourceGroupNameSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ProductTagSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -371,6 +386,7 @@ public partial class V1beta1ProductTagSpecForProviderResourceGroupNameSelectorPo
     public V1beta1ProductTagSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1ProductTagSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -386,6 +402,7 @@ public partial class V1beta1ProductTagSpecForProviderResourceGroupNameSelector
     public V1beta1ProductTagSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ProductTagSpecForProvider
 {
     /// <summary>The name of the API Management Service. Changing this forces a new resource to be created.</summary>
@@ -457,6 +474,7 @@ public enum V1beta1ProductTagSpecInitProviderApiManagementNameRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ProductTagSpecInitProviderApiManagementNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -470,6 +488,7 @@ public partial class V1beta1ProductTagSpecInitProviderApiManagementNameRefPolicy
     public V1beta1ProductTagSpecInitProviderApiManagementNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Management in apimanagement to populate apiManagementName.</summary>
 public partial class V1beta1ProductTagSpecInitProviderApiManagementNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -501,6 +520,7 @@ public enum V1beta1ProductTagSpecInitProviderApiManagementNameSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ProductTagSpecInitProviderApiManagementNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -514,6 +534,7 @@ public partial class V1beta1ProductTagSpecInitProviderApiManagementNameSelectorP
     public V1beta1ProductTagSpecInitProviderApiManagementNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Management in apimanagement to populate apiManagementName.</summary>
 public partial class V1beta1ProductTagSpecInitProviderApiManagementNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -549,6 +570,7 @@ public enum V1beta1ProductTagSpecInitProviderApiManagementProductIdRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ProductTagSpecInitProviderApiManagementProductIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -562,6 +584,7 @@ public partial class V1beta1ProductTagSpecInitProviderApiManagementProductIdRefP
     public V1beta1ProductTagSpecInitProviderApiManagementProductIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Product in apimanagement to populate apiManagementProductId.</summary>
 public partial class V1beta1ProductTagSpecInitProviderApiManagementProductIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -593,6 +616,7 @@ public enum V1beta1ProductTagSpecInitProviderApiManagementProductIdSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ProductTagSpecInitProviderApiManagementProductIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -606,6 +630,7 @@ public partial class V1beta1ProductTagSpecInitProviderApiManagementProductIdSele
     public V1beta1ProductTagSpecInitProviderApiManagementProductIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Product in apimanagement to populate apiManagementProductId.</summary>
 public partial class V1beta1ProductTagSpecInitProviderApiManagementProductIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -641,6 +666,7 @@ public enum V1beta1ProductTagSpecInitProviderNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ProductTagSpecInitProviderNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -654,6 +680,7 @@ public partial class V1beta1ProductTagSpecInitProviderNameRefPolicy
     public V1beta1ProductTagSpecInitProviderNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Tag in apimanagement to populate name.</summary>
 public partial class V1beta1ProductTagSpecInitProviderNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -685,6 +712,7 @@ public enum V1beta1ProductTagSpecInitProviderNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ProductTagSpecInitProviderNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -698,6 +726,7 @@ public partial class V1beta1ProductTagSpecInitProviderNameSelectorPolicy
     public V1beta1ProductTagSpecInitProviderNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Tag in apimanagement to populate name.</summary>
 public partial class V1beta1ProductTagSpecInitProviderNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -733,6 +762,7 @@ public enum V1beta1ProductTagSpecInitProviderResourceGroupNameRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ProductTagSpecInitProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -746,6 +776,7 @@ public partial class V1beta1ProductTagSpecInitProviderResourceGroupNameRefPolicy
     public V1beta1ProductTagSpecInitProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1ProductTagSpecInitProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -777,6 +808,7 @@ public enum V1beta1ProductTagSpecInitProviderResourceGroupNameSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ProductTagSpecInitProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -790,6 +822,7 @@ public partial class V1beta1ProductTagSpecInitProviderResourceGroupNameSelectorP
     public V1beta1ProductTagSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1ProductTagSpecInitProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -805,6 +838,7 @@ public partial class V1beta1ProductTagSpecInitProviderResourceGroupNameSelector
     public V1beta1ProductTagSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ProductTagSpecInitProvider
 {
     /// <summary>The name of the API Management Service. Changing this forces a new resource to be created.</summary>
@@ -898,6 +932,7 @@ public enum V1beta1ProductTagSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ProductTagSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -911,6 +946,7 @@ public partial class V1beta1ProductTagSpecProviderConfigRefPolicy
     public V1beta1ProductTagSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ProductTagSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -942,6 +978,7 @@ public enum V1beta1ProductTagSpecPublishConnectionDetailsToConfigRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ProductTagSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -955,6 +992,7 @@ public partial class V1beta1ProductTagSpecPublishConnectionDetailsToConfigRefPol
     public V1beta1ProductTagSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ProductTagSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -966,6 +1004,7 @@ public partial class V1beta1ProductTagSpecPublishConnectionDetailsToConfigRef
     public V1beta1ProductTagSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ProductTagSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -981,6 +1020,7 @@ public partial class V1beta1ProductTagSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ProductTagSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -996,6 +1036,7 @@ public partial class V1beta1ProductTagSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ProductTagSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1007,6 +1048,7 @@ public partial class V1beta1ProductTagSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ProductTagSpec defines the desired state of ProductTag</summary>
 public partial class V1beta1ProductTagSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1039,6 +1081,7 @@ public partial class V1beta1ProductTagSpec
     public V1beta1ProductTagSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ProductTagStatusAtProvider
 {
     /// <summary>The name of the API Management Service. Changing this forces a new resource to be created.</summary>
@@ -1062,6 +1105,7 @@ public partial class V1beta1ProductTagStatusAtProvider
     public string? ResourceGroupName { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ProductTagStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1089,6 +1133,7 @@ public partial class V1beta1ProductTagStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ProductTagStatus defines the observed state of ProductTag.</summary>
 public partial class V1beta1ProductTagStatus
 {
     /// <summary></summary>
@@ -1105,6 +1150,7 @@ public partial class V1beta1ProductTagStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ProductTag is the Schema for the ProductTags API. Manages an API Management Product tag</summary>
 public partial class V1beta1ProductTag : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ProductTagSpec>, IStatus<V1beta1ProductTagStatus>
 {
     public const string KubeApiVersion = "v1beta1";

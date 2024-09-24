@@ -38,6 +38,7 @@ public enum V1beta1MongoCollectionSpecForProviderAccountNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MongoCollectionSpecForProviderAccountNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1MongoCollectionSpecForProviderAccountNameRefPolicy
     public V1beta1MongoCollectionSpecForProviderAccountNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in cosmosdb to populate accountName.</summary>
 public partial class V1beta1MongoCollectionSpecForProviderAccountNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1MongoCollectionSpecForProviderAccountNameSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MongoCollectionSpecForProviderAccountNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1MongoCollectionSpecForProviderAccountNameSelectorPol
     public V1beta1MongoCollectionSpecForProviderAccountNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in cosmosdb to populate accountName.</summary>
 public partial class V1beta1MongoCollectionSpecForProviderAccountNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1MongoCollectionSpecForProviderAccountNameSelector
     public V1beta1MongoCollectionSpecForProviderAccountNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MongoCollectionSpecForProviderAutoscaleSettings
 {
     /// <summary>The maximum throughput of the MongoDB collection (RU/s). Must be between 1,000 and 1,000,000. Must be set in increments of 1,000. Conflicts with throughput.</summary>
@@ -137,6 +142,7 @@ public enum V1beta1MongoCollectionSpecForProviderDatabaseNameRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MongoCollectionSpecForProviderDatabaseNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -150,6 +156,7 @@ public partial class V1beta1MongoCollectionSpecForProviderDatabaseNameRefPolicy
     public V1beta1MongoCollectionSpecForProviderDatabaseNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a MongoDatabase in cosmosdb to populate databaseName.</summary>
 public partial class V1beta1MongoCollectionSpecForProviderDatabaseNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -181,6 +188,7 @@ public enum V1beta1MongoCollectionSpecForProviderDatabaseNameSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MongoCollectionSpecForProviderDatabaseNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -194,6 +202,7 @@ public partial class V1beta1MongoCollectionSpecForProviderDatabaseNameSelectorPo
     public V1beta1MongoCollectionSpecForProviderDatabaseNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a MongoDatabase in cosmosdb to populate databaseName.</summary>
 public partial class V1beta1MongoCollectionSpecForProviderDatabaseNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -209,6 +218,7 @@ public partial class V1beta1MongoCollectionSpecForProviderDatabaseNameSelector
     public V1beta1MongoCollectionSpecForProviderDatabaseNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MongoCollectionSpecForProviderIndex
 {
     /// <summary>Specifies the list of user settable keys for each Cosmos DB Mongo Collection.</summary>
@@ -240,6 +250,7 @@ public enum V1beta1MongoCollectionSpecForProviderResourceGroupNameRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MongoCollectionSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -253,6 +264,7 @@ public partial class V1beta1MongoCollectionSpecForProviderResourceGroupNameRefPo
     public V1beta1MongoCollectionSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1MongoCollectionSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -284,6 +296,7 @@ public enum V1beta1MongoCollectionSpecForProviderResourceGroupNameSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MongoCollectionSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -297,6 +310,7 @@ public partial class V1beta1MongoCollectionSpecForProviderResourceGroupNameSelec
     public V1beta1MongoCollectionSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1MongoCollectionSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -312,6 +326,7 @@ public partial class V1beta1MongoCollectionSpecForProviderResourceGroupNameSelec
     public V1beta1MongoCollectionSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MongoCollectionSpecForProvider
 {
     /// <summary>The name of the Cosmos DB Account in which the Cosmos DB Mongo Collection is created. Changing this forces a new resource to be created.</summary>
@@ -375,6 +390,7 @@ public partial class V1beta1MongoCollectionSpecForProvider
     public double? Throughput { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MongoCollectionSpecInitProviderAutoscaleSettings
 {
     /// <summary>The maximum throughput of the MongoDB collection (RU/s). Must be between 1,000 and 1,000,000. Must be set in increments of 1,000. Conflicts with throughput.</summary>
@@ -382,6 +398,7 @@ public partial class V1beta1MongoCollectionSpecInitProviderAutoscaleSettings
     public double? MaxThroughput { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MongoCollectionSpecInitProviderIndex
 {
     /// <summary>Specifies the list of user settable keys for each Cosmos DB Mongo Collection.</summary>
@@ -393,6 +410,7 @@ public partial class V1beta1MongoCollectionSpecInitProviderIndex
     public bool? Unique { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1MongoCollectionSpecInitProvider
 {
     /// <summary>The default time to live of Analytical Storage for this Mongo Collection. If present and the value is set to -1, it is equal to infinity, and items don’t expire by default. If present and the value is set to some number n – items will expire n seconds after their last modified time.</summary>
@@ -462,6 +480,7 @@ public enum V1beta1MongoCollectionSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MongoCollectionSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -475,6 +494,7 @@ public partial class V1beta1MongoCollectionSpecProviderConfigRefPolicy
     public V1beta1MongoCollectionSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1MongoCollectionSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -506,6 +526,7 @@ public enum V1beta1MongoCollectionSpecPublishConnectionDetailsToConfigRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MongoCollectionSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -519,6 +540,7 @@ public partial class V1beta1MongoCollectionSpecPublishConnectionDetailsToConfigR
     public V1beta1MongoCollectionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1MongoCollectionSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -530,6 +552,7 @@ public partial class V1beta1MongoCollectionSpecPublishConnectionDetailsToConfigR
     public V1beta1MongoCollectionSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1MongoCollectionSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -545,6 +568,7 @@ public partial class V1beta1MongoCollectionSpecPublishConnectionDetailsToMetadat
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1MongoCollectionSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -560,6 +584,7 @@ public partial class V1beta1MongoCollectionSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1MongoCollectionSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -571,6 +596,7 @@ public partial class V1beta1MongoCollectionSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>MongoCollectionSpec defines the desired state of MongoCollection</summary>
 public partial class V1beta1MongoCollectionSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -603,6 +629,7 @@ public partial class V1beta1MongoCollectionSpec
     public V1beta1MongoCollectionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MongoCollectionStatusAtProviderAutoscaleSettings
 {
     /// <summary>The maximum throughput of the MongoDB collection (RU/s). Must be between 1,000 and 1,000,000. Must be set in increments of 1,000. Conflicts with throughput.</summary>
@@ -610,6 +637,7 @@ public partial class V1beta1MongoCollectionStatusAtProviderAutoscaleSettings
     public double? MaxThroughput { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MongoCollectionStatusAtProviderIndex
 {
     /// <summary>Specifies the list of user settable keys for each Cosmos DB Mongo Collection.</summary>
@@ -621,6 +649,7 @@ public partial class V1beta1MongoCollectionStatusAtProviderIndex
     public bool? Unique { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MongoCollectionStatusAtProviderSystemIndexes
 {
     /// <summary>The list of system keys which are not settable for each Cosmos DB Mongo Collection.</summary>
@@ -632,6 +661,7 @@ public partial class V1beta1MongoCollectionStatusAtProviderSystemIndexes
     public bool? Unique { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MongoCollectionStatusAtProvider
 {
     /// <summary>The name of the Cosmos DB Account in which the Cosmos DB Mongo Collection is created. Changing this forces a new resource to be created.</summary>
@@ -679,6 +709,7 @@ public partial class V1beta1MongoCollectionStatusAtProvider
     public double? Throughput { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1MongoCollectionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -706,6 +737,7 @@ public partial class V1beta1MongoCollectionStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>MongoCollectionStatus defines the observed state of MongoCollection.</summary>
 public partial class V1beta1MongoCollectionStatus
 {
     /// <summary></summary>
@@ -722,6 +754,7 @@ public partial class V1beta1MongoCollectionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>MongoCollection is the Schema for the MongoCollections API. Manages a Mongo Collection within a Cosmos DB Account.</summary>
 public partial class V1beta1MongoCollection : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MongoCollectionSpec>, IStatus<V1beta1MongoCollectionStatus>
 {
     public const string KubeApiVersion = "v1beta1";

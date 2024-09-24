@@ -38,6 +38,7 @@ public enum V1beta1AlertManagerDefinitionSpecForProviderWorkspaceIdRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AlertManagerDefinitionSpecForProviderWorkspaceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1AlertManagerDefinitionSpecForProviderWorkspaceIdRefP
     public V1beta1AlertManagerDefinitionSpecForProviderWorkspaceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Workspace in amp to populate workspaceId.</summary>
 public partial class V1beta1AlertManagerDefinitionSpecForProviderWorkspaceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1AlertManagerDefinitionSpecForProviderWorkspaceIdSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AlertManagerDefinitionSpecForProviderWorkspaceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1AlertManagerDefinitionSpecForProviderWorkspaceIdSele
     public V1beta1AlertManagerDefinitionSpecForProviderWorkspaceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Workspace in amp to populate workspaceId.</summary>
 public partial class V1beta1AlertManagerDefinitionSpecForProviderWorkspaceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1AlertManagerDefinitionSpecForProviderWorkspaceIdSele
     public V1beta1AlertManagerDefinitionSpecForProviderWorkspaceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AlertManagerDefinitionSpecForProvider
 {
     /// <summary>the alert manager definition that you want to be applied. See more in AWS Docs.</summary>
@@ -153,6 +158,7 @@ public enum V1beta1AlertManagerDefinitionSpecInitProviderWorkspaceIdRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AlertManagerDefinitionSpecInitProviderWorkspaceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -166,6 +172,7 @@ public partial class V1beta1AlertManagerDefinitionSpecInitProviderWorkspaceIdRef
     public V1beta1AlertManagerDefinitionSpecInitProviderWorkspaceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Workspace in amp to populate workspaceId.</summary>
 public partial class V1beta1AlertManagerDefinitionSpecInitProviderWorkspaceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -197,6 +204,7 @@ public enum V1beta1AlertManagerDefinitionSpecInitProviderWorkspaceIdSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AlertManagerDefinitionSpecInitProviderWorkspaceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -210,6 +218,7 @@ public partial class V1beta1AlertManagerDefinitionSpecInitProviderWorkspaceIdSel
     public V1beta1AlertManagerDefinitionSpecInitProviderWorkspaceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Workspace in amp to populate workspaceId.</summary>
 public partial class V1beta1AlertManagerDefinitionSpecInitProviderWorkspaceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -225,6 +234,7 @@ public partial class V1beta1AlertManagerDefinitionSpecInitProviderWorkspaceIdSel
     public V1beta1AlertManagerDefinitionSpecInitProviderWorkspaceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1AlertManagerDefinitionSpecInitProvider
 {
     /// <summary>the alert manager definition that you want to be applied. See more in AWS Docs.</summary>
@@ -286,6 +296,7 @@ public enum V1beta1AlertManagerDefinitionSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AlertManagerDefinitionSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -299,6 +310,7 @@ public partial class V1beta1AlertManagerDefinitionSpecProviderConfigRefPolicy
     public V1beta1AlertManagerDefinitionSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1AlertManagerDefinitionSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -330,6 +342,7 @@ public enum V1beta1AlertManagerDefinitionSpecPublishConnectionDetailsToConfigRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AlertManagerDefinitionSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -343,6 +356,7 @@ public partial class V1beta1AlertManagerDefinitionSpecPublishConnectionDetailsTo
     public V1beta1AlertManagerDefinitionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1AlertManagerDefinitionSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -354,6 +368,7 @@ public partial class V1beta1AlertManagerDefinitionSpecPublishConnectionDetailsTo
     public V1beta1AlertManagerDefinitionSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1AlertManagerDefinitionSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -369,6 +384,7 @@ public partial class V1beta1AlertManagerDefinitionSpecPublishConnectionDetailsTo
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1AlertManagerDefinitionSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -384,6 +400,7 @@ public partial class V1beta1AlertManagerDefinitionSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1AlertManagerDefinitionSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -395,6 +412,7 @@ public partial class V1beta1AlertManagerDefinitionSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>AlertManagerDefinitionSpec defines the desired state of AlertManagerDefinition</summary>
 public partial class V1beta1AlertManagerDefinitionSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -427,6 +445,7 @@ public partial class V1beta1AlertManagerDefinitionSpec
     public V1beta1AlertManagerDefinitionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AlertManagerDefinitionStatusAtProvider
 {
     /// <summary>the alert manager definition that you want to be applied. See more in AWS Docs.</summary>
@@ -442,6 +461,7 @@ public partial class V1beta1AlertManagerDefinitionStatusAtProvider
     public string? WorkspaceId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1AlertManagerDefinitionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -469,6 +489,7 @@ public partial class V1beta1AlertManagerDefinitionStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>AlertManagerDefinitionStatus defines the observed state of AlertManagerDefinition.</summary>
 public partial class V1beta1AlertManagerDefinitionStatus
 {
     /// <summary></summary>
@@ -485,6 +506,7 @@ public partial class V1beta1AlertManagerDefinitionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>AlertManagerDefinition is the Schema for the AlertManagerDefinitions API. Manages an Amazon Managed Service for Prometheus (AMP) Alert Manager Definition</summary>
 public partial class V1beta1AlertManagerDefinition : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AlertManagerDefinitionSpec>, IStatus<V1beta1AlertManagerDefinitionStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.vertexai.cnrm.cloud.google.com;
+/// <summary>Immutable. Customer-managed encryption key spec for a MetadataStore. If set, this MetadataStore and all sub-resources of this MetadataStore will be secured by this key.</summary>
 public partial class V1alpha1VertexAIMetadataStoreSpecEncryptionSpec
 {
     /// <summary>Immutable. Required. The Cloud KMS resource identifier of the customer managed encryption key used to protect a resource. Has the form: projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key. The key needs to be in the same region as where the resource is created.</summary>
@@ -15,6 +16,7 @@ public partial class V1alpha1VertexAIMetadataStoreSpecEncryptionSpec
     public string? KmsKeyName { get; set; }
 }
 
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1VertexAIMetadataStoreSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -30,6 +32,7 @@ public partial class V1alpha1VertexAIMetadataStoreSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1VertexAIMetadataStoreSpec
 {
     /// <summary>Immutable. Description of the MetadataStore.</summary>
@@ -53,6 +56,7 @@ public partial class V1alpha1VertexAIMetadataStoreSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1VertexAIMetadataStoreStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -76,6 +80,7 @@ public partial class V1alpha1VertexAIMetadataStoreStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1VertexAIMetadataStoreStatusState
 {
     /// <summary>The disk utilization of the MetadataStore in bytes.</summary>
@@ -83,6 +88,7 @@ public partial class V1alpha1VertexAIMetadataStoreStatusState
     public string? DiskUtilizationBytes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1VertexAIMetadataStoreStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -107,6 +113,7 @@ public partial class V1alpha1VertexAIMetadataStoreStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1VertexAIMetadataStore : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1VertexAIMetadataStoreSpec>, IStatus<V1alpha1VertexAIMetadataStoreStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

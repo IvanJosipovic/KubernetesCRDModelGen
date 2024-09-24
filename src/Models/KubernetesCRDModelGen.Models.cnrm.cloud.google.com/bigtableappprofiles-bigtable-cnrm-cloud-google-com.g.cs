@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigtable.cnrm.cloud.google.com;
+/// <summary>The instance to create the app profile within.</summary>
 public partial class V1beta1BigtableAppProfileSpecInstanceRef
 {
     /// <summary>Allowed value: The `name` field of a `BigtableInstance` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1BigtableAppProfileSpecInstanceRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Use a single-cluster routing policy.</summary>
 public partial class V1beta1BigtableAppProfileSpecSingleClusterRouting
 {
     /// <summary>If true, CheckAndMutateRow and ReadModifyWriteRow requests are allowed by this app profile. It is unsafe to send these requests to the same table/row/column in multiple clusters.</summary>
@@ -34,6 +36,7 @@ public partial class V1beta1BigtableAppProfileSpecSingleClusterRouting
     public string ClusterId { get; set; }
 }
 
+/// <summary>The standard options used for isolating this app profile's traffic from other use cases.</summary>
 public partial class V1beta1BigtableAppProfileSpecStandardIsolation
 {
     /// <summary>The priority of requests sent using this app profile. Possible values: ["PRIORITY_LOW", "PRIORITY_MEDIUM", "PRIORITY_HIGH"].</summary>
@@ -41,6 +44,7 @@ public partial class V1beta1BigtableAppProfileSpecStandardIsolation
     public string Priority { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BigtableAppProfileSpec
 {
     /// <summary>Long form description of the use case for this app profile.</summary>
@@ -72,6 +76,7 @@ public partial class V1beta1BigtableAppProfileSpec
     public V1beta1BigtableAppProfileSpecStandardIsolation? StandardIsolation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BigtableAppProfileStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -95,6 +100,7 @@ public partial class V1beta1BigtableAppProfileStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BigtableAppProfileStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -111,6 +117,7 @@ public partial class V1beta1BigtableAppProfileStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1BigtableAppProfile : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BigtableAppProfileSpec>, IStatus<V1beta1BigtableAppProfileStatus>
 {
     public const string KubeApiVersion = "v1beta1";

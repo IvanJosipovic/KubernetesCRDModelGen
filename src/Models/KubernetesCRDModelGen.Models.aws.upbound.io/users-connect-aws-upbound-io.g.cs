@@ -18,6 +18,7 @@ public enum V1beta1UserSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1UserSpecForProviderIdentityInfo
 {
     /// <summary>The email address. If you are using SAML for identity management and include this parameter, an error is returned. Note that updates to the email is supported. From the UpdateUserIdentityInfo API documentation it is strongly recommended to limit who has the ability to invoke UpdateUserIdentityInfo. Someone with that ability can change the login credentials of other users by changing their email address. This poses a security risk to your organization. They can change the email address of a user to the attacker's email address, and then reset the password through email. For more information, see Best Practices for Security Profiles in the Amazon Connect Administrator Guide.</summary>
@@ -53,6 +54,7 @@ public enum V1beta1UserSpecForProviderInstanceIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserSpecForProviderInstanceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -66,6 +68,7 @@ public partial class V1beta1UserSpecForProviderInstanceIdRefPolicy
     public V1beta1UserSpecForProviderInstanceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Instance in connect to populate instanceId.</summary>
 public partial class V1beta1UserSpecForProviderInstanceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -97,6 +100,7 @@ public enum V1beta1UserSpecForProviderInstanceIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserSpecForProviderInstanceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1UserSpecForProviderInstanceIdSelectorPolicy
     public V1beta1UserSpecForProviderInstanceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Instance in connect to populate instanceId.</summary>
 public partial class V1beta1UserSpecForProviderInstanceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1UserSpecForProviderInstanceIdSelector
     public V1beta1UserSpecForProviderInstanceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>The password for the user account. A password is required if you are using Amazon Connect for identity management. Otherwise, it is an error to include a password.</summary>
 public partial class V1beta1UserSpecForProviderPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -140,6 +146,7 @@ public partial class V1beta1UserSpecForProviderPasswordSecretRef
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserSpecForProviderPhoneConfig
 {
     /// <summary>The After Call Work (ACW) timeout setting, in seconds. Minimum value of 0.</summary>
@@ -179,6 +186,7 @@ public enum V1beta1UserSpecForProviderRoutingProfileIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserSpecForProviderRoutingProfileIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -192,6 +200,7 @@ public partial class V1beta1UserSpecForProviderRoutingProfileIdRefPolicy
     public V1beta1UserSpecForProviderRoutingProfileIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RoutingProfile in connect to populate routingProfileId.</summary>
 public partial class V1beta1UserSpecForProviderRoutingProfileIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -223,6 +232,7 @@ public enum V1beta1UserSpecForProviderRoutingProfileIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserSpecForProviderRoutingProfileIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -236,6 +246,7 @@ public partial class V1beta1UserSpecForProviderRoutingProfileIdSelectorPolicy
     public V1beta1UserSpecForProviderRoutingProfileIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RoutingProfile in connect to populate routingProfileId.</summary>
 public partial class V1beta1UserSpecForProviderRoutingProfileIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -251,6 +262,7 @@ public partial class V1beta1UserSpecForProviderRoutingProfileIdSelector
     public V1beta1UserSpecForProviderRoutingProfileIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserSpecForProvider
 {
     /// <summary>The identifier of the user account in the directory used for identity management. If Amazon Connect cannot access the directory, you can specify this identifier to authenticate users. If you include the identifier, we assume that Amazon Connect cannot access the directory. Otherwise, the identity information is used to authenticate users from your directory. This parameter is required if you are using an existing directory for identity management in Amazon Connect when Amazon Connect cannot access your directory to authenticate users. If you are using SAML for identity management and include this parameter, an error is returned.</summary>
@@ -314,6 +326,7 @@ public partial class V1beta1UserSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserSpecInitProviderIdentityInfo
 {
     /// <summary>The email address. If you are using SAML for identity management and include this parameter, an error is returned. Note that updates to the email is supported. From the UpdateUserIdentityInfo API documentation it is strongly recommended to limit who has the ability to invoke UpdateUserIdentityInfo. Someone with that ability can change the login credentials of other users by changing their email address. This poses a security risk to your organization. They can change the email address of a user to the attacker's email address, and then reset the password through email. For more information, see Best Practices for Security Profiles in the Amazon Connect Administrator Guide.</summary>
@@ -349,6 +362,7 @@ public enum V1beta1UserSpecInitProviderInstanceIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserSpecInitProviderInstanceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -362,6 +376,7 @@ public partial class V1beta1UserSpecInitProviderInstanceIdRefPolicy
     public V1beta1UserSpecInitProviderInstanceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Instance in connect to populate instanceId.</summary>
 public partial class V1beta1UserSpecInitProviderInstanceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -393,6 +408,7 @@ public enum V1beta1UserSpecInitProviderInstanceIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserSpecInitProviderInstanceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -406,6 +422,7 @@ public partial class V1beta1UserSpecInitProviderInstanceIdSelectorPolicy
     public V1beta1UserSpecInitProviderInstanceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Instance in connect to populate instanceId.</summary>
 public partial class V1beta1UserSpecInitProviderInstanceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -421,6 +438,7 @@ public partial class V1beta1UserSpecInitProviderInstanceIdSelector
     public V1beta1UserSpecInitProviderInstanceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>The password for the user account. A password is required if you are using Amazon Connect for identity management. Otherwise, it is an error to include a password.</summary>
 public partial class V1beta1UserSpecInitProviderPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -436,6 +454,7 @@ public partial class V1beta1UserSpecInitProviderPasswordSecretRef
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserSpecInitProviderPhoneConfig
 {
     /// <summary>The After Call Work (ACW) timeout setting, in seconds. Minimum value of 0.</summary>
@@ -475,6 +494,7 @@ public enum V1beta1UserSpecInitProviderRoutingProfileIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserSpecInitProviderRoutingProfileIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -488,6 +508,7 @@ public partial class V1beta1UserSpecInitProviderRoutingProfileIdRefPolicy
     public V1beta1UserSpecInitProviderRoutingProfileIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RoutingProfile in connect to populate routingProfileId.</summary>
 public partial class V1beta1UserSpecInitProviderRoutingProfileIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -519,6 +540,7 @@ public enum V1beta1UserSpecInitProviderRoutingProfileIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserSpecInitProviderRoutingProfileIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -532,6 +554,7 @@ public partial class V1beta1UserSpecInitProviderRoutingProfileIdSelectorPolicy
     public V1beta1UserSpecInitProviderRoutingProfileIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RoutingProfile in connect to populate routingProfileId.</summary>
 public partial class V1beta1UserSpecInitProviderRoutingProfileIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -547,6 +570,7 @@ public partial class V1beta1UserSpecInitProviderRoutingProfileIdSelector
     public V1beta1UserSpecInitProviderRoutingProfileIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1UserSpecInitProvider
 {
     /// <summary>The identifier of the user account in the directory used for identity management. If Amazon Connect cannot access the directory, you can specify this identifier to authenticate users. If you include the identifier, we assume that Amazon Connect cannot access the directory. Otherwise, the identity information is used to authenticate users from your directory. This parameter is required if you are using an existing directory for identity management in Amazon Connect when Amazon Connect cannot access your directory to authenticate users. If you are using SAML for identity management and include this parameter, an error is returned.</summary>
@@ -648,6 +672,7 @@ public enum V1beta1UserSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -661,6 +686,7 @@ public partial class V1beta1UserSpecProviderConfigRefPolicy
     public V1beta1UserSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1UserSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -692,6 +718,7 @@ public enum V1beta1UserSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -705,6 +732,7 @@ public partial class V1beta1UserSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1UserSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1UserSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -716,6 +744,7 @@ public partial class V1beta1UserSpecPublishConnectionDetailsToConfigRef
     public V1beta1UserSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1UserSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -731,6 +760,7 @@ public partial class V1beta1UserSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1UserSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -746,6 +776,7 @@ public partial class V1beta1UserSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1UserSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -757,6 +788,7 @@ public partial class V1beta1UserSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>UserSpec defines the desired state of User</summary>
 public partial class V1beta1UserSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -789,6 +821,7 @@ public partial class V1beta1UserSpec
     public V1beta1UserSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserStatusAtProviderIdentityInfo
 {
     /// <summary>The email address. If you are using SAML for identity management and include this parameter, an error is returned. Note that updates to the email is supported. From the UpdateUserIdentityInfo API documentation it is strongly recommended to limit who has the ability to invoke UpdateUserIdentityInfo. Someone with that ability can change the login credentials of other users by changing their email address. This poses a security risk to your organization. They can change the email address of a user to the attacker's email address, and then reset the password through email. For more information, see Best Practices for Security Profiles in the Amazon Connect Administrator Guide.</summary>
@@ -804,6 +837,7 @@ public partial class V1beta1UserStatusAtProviderIdentityInfo
     public string? LastName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserStatusAtProviderPhoneConfig
 {
     /// <summary>The After Call Work (ACW) timeout setting, in seconds. Minimum value of 0.</summary>
@@ -823,6 +857,7 @@ public partial class V1beta1UserStatusAtProviderPhoneConfig
     public string? PhoneType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserStatusAtProvider
 {
     /// <summary>The Amazon Resource Name (ARN) of the user.</summary>
@@ -878,6 +913,7 @@ public partial class V1beta1UserStatusAtProvider
     public string? UserId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1UserStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -905,6 +941,7 @@ public partial class V1beta1UserStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>UserStatus defines the observed state of User.</summary>
 public partial class V1beta1UserStatus
 {
     /// <summary></summary>
@@ -921,6 +958,7 @@ public partial class V1beta1UserStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>User is the Schema for the Users API. Provides details about a specific Amazon Connect User</summary>
 public partial class V1beta1User : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1UserSpec>, IStatus<V1beta1UserStatus>
 {
     public const string KubeApiVersion = "v1beta1";

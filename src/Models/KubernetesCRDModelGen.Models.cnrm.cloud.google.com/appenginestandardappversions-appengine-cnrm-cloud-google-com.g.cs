@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appengine.cnrm.cloud.google.com;
+/// <summary>Scheduler settings for standard environment.</summary>
 public partial class V1alpha1AppEngineStandardAppVersionSpecAutomaticScalingStandardSchedulerSettings
 {
     /// <summary>Maximum number of instances to run for this version. Set to zero to disable maxInstances configuration.</summary>
@@ -27,6 +28,7 @@ public partial class V1alpha1AppEngineStandardAppVersionSpecAutomaticScalingStan
     public double? TargetThroughputUtilization { get; set; }
 }
 
+/// <summary>Automatic scaling is based on request rate, response latencies, and other application metrics.</summary>
 public partial class V1alpha1AppEngineStandardAppVersionSpecAutomaticScaling
 {
     /// <summary>Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.  Defaults to a runtime-specific value.</summary>
@@ -54,6 +56,7 @@ public partial class V1alpha1AppEngineStandardAppVersionSpecAutomaticScaling
     public V1alpha1AppEngineStandardAppVersionSpecAutomaticScalingStandardSchedulerSettings? StandardSchedulerSettings { get; set; }
 }
 
+/// <summary>Basic scaling creates instances when your application receives requests. Each instance will be shut down when the application becomes idle. Basic scaling is ideal for work that is intermittent or driven by user activity.</summary>
 public partial class V1alpha1AppEngineStandardAppVersionSpecBasicScaling
 {
     /// <summary>Duration of time after the last request that an instance must wait before the instance is shut down. A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". Defaults to 900s.</summary>
@@ -65,6 +68,7 @@ public partial class V1alpha1AppEngineStandardAppVersionSpecBasicScaling
     public int MaxInstances { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AppEngineStandardAppVersionSpecDeploymentFiles
 {
     /// <summary></summary>
@@ -80,6 +84,7 @@ public partial class V1alpha1AppEngineStandardAppVersionSpecDeploymentFiles
     public string SourceUrl { get; set; }
 }
 
+/// <summary>Zip File.</summary>
 public partial class V1alpha1AppEngineStandardAppVersionSpecDeploymentZip
 {
     /// <summary>files count.</summary>
@@ -91,6 +96,7 @@ public partial class V1alpha1AppEngineStandardAppVersionSpecDeploymentZip
     public string SourceUrl { get; set; }
 }
 
+/// <summary>Code and application artifacts that make up this version.</summary>
 public partial class V1alpha1AppEngineStandardAppVersionSpecDeployment
 {
     /// <summary>Manifest of the files stored in Google Cloud Storage that are included as part of this version. All files must be readable using the credentials supplied with this call.</summary>
@@ -102,6 +108,7 @@ public partial class V1alpha1AppEngineStandardAppVersionSpecDeployment
     public V1alpha1AppEngineStandardAppVersionSpecDeploymentZip? Zip { get; set; }
 }
 
+/// <summary>The entrypoint for the application.</summary>
 public partial class V1alpha1AppEngineStandardAppVersionSpecEntrypoint
 {
     /// <summary>The format should be a shell command that can be fed to bash -c.</summary>
@@ -109,6 +116,7 @@ public partial class V1alpha1AppEngineStandardAppVersionSpecEntrypoint
     public string Shell { get; set; }
 }
 
+/// <summary>Executes a script to handle the requests that match this URL pattern. Only the auto value is supported for Node.js in the App Engine standard environment, for example "script:" "auto".</summary>
 public partial class V1alpha1AppEngineStandardAppVersionSpecHandlersScript
 {
     /// <summary>Path to the script from the application root directory.</summary>
@@ -116,6 +124,7 @@ public partial class V1alpha1AppEngineStandardAppVersionSpecHandlersScript
     public string ScriptPath { get; set; }
 }
 
+/// <summary>Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files. Static file handlers describe which files in the application directory are static files, and which URLs serve them.</summary>
 public partial class V1alpha1AppEngineStandardAppVersionSpecHandlersStaticFiles
 {
     /// <summary>Whether files should also be uploaded as code data. By default, files declared in static file handlers are uploaded as static data and are only served to end users; they cannot be read by the application. If enabled, uploads are charged against both your code and static data storage resource quotas.</summary>
@@ -147,6 +156,7 @@ public partial class V1alpha1AppEngineStandardAppVersionSpecHandlersStaticFiles
     public string? UploadPathRegex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AppEngineStandardAppVersionSpecHandlers
 {
     /// <summary>Actions to take when the user is not logged in. Possible values: ["AUTH_FAIL_ACTION_REDIRECT", "AUTH_FAIL_ACTION_UNAUTHORIZED"].</summary>
@@ -178,6 +188,7 @@ public partial class V1alpha1AppEngineStandardAppVersionSpecHandlers
     public string? UrlRegex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AppEngineStandardAppVersionSpecLibraries
 {
     /// <summary>Name of the library. Example "django".</summary>
@@ -189,6 +200,7 @@ public partial class V1alpha1AppEngineStandardAppVersionSpecLibraries
     public string? Version { get; set; }
 }
 
+/// <summary>A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.</summary>
 public partial class V1alpha1AppEngineStandardAppVersionSpecManualScaling
 {
     /// <summary>Number of instances to assign to the service at the start.  **Note:** When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2 Modules API set_num_instances() you must use 'lifecycle.ignore_changes = ["manual_scaling"[0].instances]' to prevent drift detection.</summary>
@@ -196,6 +208,7 @@ public partial class V1alpha1AppEngineStandardAppVersionSpecManualScaling
     public int Instances { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AppEngineStandardAppVersionSpecServiceRef
 {
     /// <summary>Allowed value: The `name` field of an `AppEngineService` resource.</summary>
@@ -211,6 +224,7 @@ public partial class V1alpha1AppEngineStandardAppVersionSpecServiceRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Enables VPC connectivity for standard apps.</summary>
 public partial class V1alpha1AppEngineStandardAppVersionSpecVpcAccessConnector
 {
     /// <summary>The egress setting for the connector, controlling what traffic is diverted through it.</summary>
@@ -222,6 +236,7 @@ public partial class V1alpha1AppEngineStandardAppVersionSpecVpcAccessConnector
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AppEngineStandardAppVersionSpec
 {
     /// <summary>Allows App Engine second generation runtimes to access the legacy bundled services.</summary>
@@ -309,6 +324,7 @@ public partial class V1alpha1AppEngineStandardAppVersionSpec
     public V1alpha1AppEngineStandardAppVersionSpecVpcAccessConnector? VpcAccessConnector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AppEngineStandardAppVersionStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -332,6 +348,7 @@ public partial class V1alpha1AppEngineStandardAppVersionStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AppEngineStandardAppVersionStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -348,6 +365,7 @@ public partial class V1alpha1AppEngineStandardAppVersionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1AppEngineStandardAppVersion : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1AppEngineStandardAppVersionSpec>, IStatus<V1alpha1AppEngineStandardAppVersionStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

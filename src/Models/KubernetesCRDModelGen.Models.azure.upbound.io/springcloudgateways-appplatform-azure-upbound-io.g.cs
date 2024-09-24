@@ -18,6 +18,7 @@ public enum V1beta1SpringCloudGatewaySpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudGatewaySpecForProviderApiMetadata
 {
     /// <summary>Detailed description of the APIs available on the Gateway instance.</summary>
@@ -41,6 +42,7 @@ public partial class V1beta1SpringCloudGatewaySpecForProviderApiMetadata
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudGatewaySpecForProviderClientAuthorization
 {
     /// <summary>Specifies the Spring Cloud Certificate IDs of the Spring Cloud Gateway.</summary>
@@ -52,6 +54,7 @@ public partial class V1beta1SpringCloudGatewaySpecForProviderClientAuthorization
     public bool? VerificationEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudGatewaySpecForProviderCors
 {
     /// <summary>Allowed headers in cross-site requests. The special value * allows actual requests to send any header.</summary>
@@ -83,6 +86,7 @@ public partial class V1beta1SpringCloudGatewaySpecForProviderCors
     public double? MaxAgeSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudGatewaySpecForProviderLocalResponseCachePerInstance
 {
     /// <summary>Specifies the maximum size of cache (10MB, 900KB, 1GB...) to determine if the cache needs to evict some entries.</summary>
@@ -94,6 +98,7 @@ public partial class V1beta1SpringCloudGatewaySpecForProviderLocalResponseCacheP
     public string? TimeToLive { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudGatewaySpecForProviderLocalResponseCachePerRoute
 {
     /// <summary>Specifies the maximum size of cache (10MB, 900KB, 1GB...) to determine if the cache needs to evict some entries.</summary>
@@ -105,6 +110,7 @@ public partial class V1beta1SpringCloudGatewaySpecForProviderLocalResponseCacheP
     public string? TimeToLive { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudGatewaySpecForProviderQuota
 {
     /// <summary>Specifies the required cpu of the Spring Cloud Deployment. Possible Values are 500m, 1, 2, 3 and 4. Defaults to 1 if not specified.</summary>
@@ -116,6 +122,7 @@ public partial class V1beta1SpringCloudGatewaySpecForProviderQuota
     public string? Memory { get; set; }
 }
 
+/// <summary>Specifies the sensitive environment variables of the Spring Cloud Gateway as a map of key-value pairs. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1SpringCloudGatewaySpecForProviderSensitiveEnvironmentVariablesSecretRef
 {
     /// <summary>Name of the secret.</summary>
@@ -147,6 +154,7 @@ public enum V1beta1SpringCloudGatewaySpecForProviderSpringCloudServiceIdRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpringCloudGatewaySpecForProviderSpringCloudServiceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -160,6 +168,7 @@ public partial class V1beta1SpringCloudGatewaySpecForProviderSpringCloudServiceI
     public V1beta1SpringCloudGatewaySpecForProviderSpringCloudServiceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SpringCloudService in appplatform to populate springCloudServiceId.</summary>
 public partial class V1beta1SpringCloudGatewaySpecForProviderSpringCloudServiceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -191,6 +200,7 @@ public enum V1beta1SpringCloudGatewaySpecForProviderSpringCloudServiceIdSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SpringCloudGatewaySpecForProviderSpringCloudServiceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -204,6 +214,7 @@ public partial class V1beta1SpringCloudGatewaySpecForProviderSpringCloudServiceI
     public V1beta1SpringCloudGatewaySpecForProviderSpringCloudServiceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SpringCloudService in appplatform to populate springCloudServiceId.</summary>
 public partial class V1beta1SpringCloudGatewaySpecForProviderSpringCloudServiceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -219,6 +230,7 @@ public partial class V1beta1SpringCloudGatewaySpecForProviderSpringCloudServiceI
     public V1beta1SpringCloudGatewaySpecForProviderSpringCloudServiceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudGatewaySpecForProviderSso
 {
     /// <summary>The public identifier for the application.</summary>
@@ -238,6 +250,7 @@ public partial class V1beta1SpringCloudGatewaySpecForProviderSso
     public IList<string>? Scope { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudGatewaySpecForProvider
 {
     /// <summary>A api_metadata block as defined below.</summary>
@@ -309,6 +322,7 @@ public partial class V1beta1SpringCloudGatewaySpecForProvider
     public IList<V1beta1SpringCloudGatewaySpecForProviderSso>? Sso { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudGatewaySpecInitProviderApiMetadata
 {
     /// <summary>Detailed description of the APIs available on the Gateway instance.</summary>
@@ -332,6 +346,7 @@ public partial class V1beta1SpringCloudGatewaySpecInitProviderApiMetadata
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudGatewaySpecInitProviderClientAuthorization
 {
     /// <summary>Specifies the Spring Cloud Certificate IDs of the Spring Cloud Gateway.</summary>
@@ -343,6 +358,7 @@ public partial class V1beta1SpringCloudGatewaySpecInitProviderClientAuthorizatio
     public bool? VerificationEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudGatewaySpecInitProviderCors
 {
     /// <summary>Allowed headers in cross-site requests. The special value * allows actual requests to send any header.</summary>
@@ -374,6 +390,7 @@ public partial class V1beta1SpringCloudGatewaySpecInitProviderCors
     public double? MaxAgeSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudGatewaySpecInitProviderLocalResponseCachePerInstance
 {
     /// <summary>Specifies the maximum size of cache (10MB, 900KB, 1GB...) to determine if the cache needs to evict some entries.</summary>
@@ -385,6 +402,7 @@ public partial class V1beta1SpringCloudGatewaySpecInitProviderLocalResponseCache
     public string? TimeToLive { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudGatewaySpecInitProviderLocalResponseCachePerRoute
 {
     /// <summary>Specifies the maximum size of cache (10MB, 900KB, 1GB...) to determine if the cache needs to evict some entries.</summary>
@@ -396,6 +414,7 @@ public partial class V1beta1SpringCloudGatewaySpecInitProviderLocalResponseCache
     public string? TimeToLive { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudGatewaySpecInitProviderQuota
 {
     /// <summary>Specifies the required cpu of the Spring Cloud Deployment. Possible Values are 500m, 1, 2, 3 and 4. Defaults to 1 if not specified.</summary>
@@ -407,6 +426,7 @@ public partial class V1beta1SpringCloudGatewaySpecInitProviderQuota
     public string? Memory { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudGatewaySpecInitProviderSso
 {
     /// <summary>The public identifier for the application.</summary>
@@ -426,6 +446,7 @@ public partial class V1beta1SpringCloudGatewaySpecInitProviderSso
     public IList<string>? Scope { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1SpringCloudGatewaySpecInitProvider
 {
     /// <summary>A api_metadata block as defined below.</summary>
@@ -523,6 +544,7 @@ public enum V1beta1SpringCloudGatewaySpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpringCloudGatewaySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -536,6 +558,7 @@ public partial class V1beta1SpringCloudGatewaySpecProviderConfigRefPolicy
     public V1beta1SpringCloudGatewaySpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1SpringCloudGatewaySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -567,6 +590,7 @@ public enum V1beta1SpringCloudGatewaySpecPublishConnectionDetailsToConfigRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpringCloudGatewaySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -580,6 +604,7 @@ public partial class V1beta1SpringCloudGatewaySpecPublishConnectionDetailsToConf
     public V1beta1SpringCloudGatewaySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1SpringCloudGatewaySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -591,6 +616,7 @@ public partial class V1beta1SpringCloudGatewaySpecPublishConnectionDetailsToConf
     public V1beta1SpringCloudGatewaySpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1SpringCloudGatewaySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -606,6 +632,7 @@ public partial class V1beta1SpringCloudGatewaySpecPublishConnectionDetailsToMeta
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1SpringCloudGatewaySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -621,6 +648,7 @@ public partial class V1beta1SpringCloudGatewaySpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1SpringCloudGatewaySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -632,6 +660,7 @@ public partial class V1beta1SpringCloudGatewaySpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>SpringCloudGatewaySpec defines the desired state of SpringCloudGateway</summary>
 public partial class V1beta1SpringCloudGatewaySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -664,6 +693,7 @@ public partial class V1beta1SpringCloudGatewaySpec
     public V1beta1SpringCloudGatewaySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudGatewayStatusAtProviderApiMetadata
 {
     /// <summary>Detailed description of the APIs available on the Gateway instance.</summary>
@@ -687,6 +717,7 @@ public partial class V1beta1SpringCloudGatewayStatusAtProviderApiMetadata
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudGatewayStatusAtProviderClientAuthorization
 {
     /// <summary>Specifies the Spring Cloud Certificate IDs of the Spring Cloud Gateway.</summary>
@@ -698,6 +729,7 @@ public partial class V1beta1SpringCloudGatewayStatusAtProviderClientAuthorizatio
     public bool? VerificationEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudGatewayStatusAtProviderCors
 {
     /// <summary>Allowed headers in cross-site requests. The special value * allows actual requests to send any header.</summary>
@@ -729,6 +761,7 @@ public partial class V1beta1SpringCloudGatewayStatusAtProviderCors
     public double? MaxAgeSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudGatewayStatusAtProviderLocalResponseCachePerInstance
 {
     /// <summary>Specifies the maximum size of cache (10MB, 900KB, 1GB...) to determine if the cache needs to evict some entries.</summary>
@@ -740,6 +773,7 @@ public partial class V1beta1SpringCloudGatewayStatusAtProviderLocalResponseCache
     public string? TimeToLive { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudGatewayStatusAtProviderLocalResponseCachePerRoute
 {
     /// <summary>Specifies the maximum size of cache (10MB, 900KB, 1GB...) to determine if the cache needs to evict some entries.</summary>
@@ -751,6 +785,7 @@ public partial class V1beta1SpringCloudGatewayStatusAtProviderLocalResponseCache
     public string? TimeToLive { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudGatewayStatusAtProviderQuota
 {
     /// <summary>Specifies the required cpu of the Spring Cloud Deployment. Possible Values are 500m, 1, 2, 3 and 4. Defaults to 1 if not specified.</summary>
@@ -762,6 +797,7 @@ public partial class V1beta1SpringCloudGatewayStatusAtProviderQuota
     public string? Memory { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudGatewayStatusAtProviderSso
 {
     /// <summary>The public identifier for the application.</summary>
@@ -781,6 +817,7 @@ public partial class V1beta1SpringCloudGatewayStatusAtProviderSso
     public IList<string>? Scope { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudGatewayStatusAtProvider
 {
     /// <summary>A api_metadata block as defined below.</summary>
@@ -848,6 +885,7 @@ public partial class V1beta1SpringCloudGatewayStatusAtProvider
     public string? Url { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1SpringCloudGatewayStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -875,6 +913,7 @@ public partial class V1beta1SpringCloudGatewayStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>SpringCloudGatewayStatus defines the observed state of SpringCloudGateway.</summary>
 public partial class V1beta1SpringCloudGatewayStatus
 {
     /// <summary></summary>
@@ -891,6 +930,7 @@ public partial class V1beta1SpringCloudGatewayStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>SpringCloudGateway is the Schema for the SpringCloudGateways API. Manages a Spring Cloud Gateway.</summary>
 public partial class V1beta1SpringCloudGateway : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SpringCloudGatewaySpec>, IStatus<V1beta1SpringCloudGatewayStatus>
 {
     public const string KubeApiVersion = "v1beta1";

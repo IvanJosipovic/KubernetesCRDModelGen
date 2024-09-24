@@ -18,6 +18,7 @@ public enum V1beta1LiteTopicSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1LiteTopicSpecForProviderPartitionConfigCapacity
 {
     /// <summary>Subscribe throughput capacity per partition in MiB/s. Must be &gt;= 4 and &lt;= 16.</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1LiteTopicSpecForProviderPartitionConfigCapacity
     public double? SubscribeMibPerSec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LiteTopicSpecForProviderPartitionConfig
 {
     /// <summary>The capacity configuration. Structure is documented below.</summary>
@@ -60,6 +62,7 @@ public enum V1beta1LiteTopicSpecForProviderReservationConfigThroughputReservatio
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LiteTopicSpecForProviderReservationConfigThroughputReservationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -73,6 +76,7 @@ public partial class V1beta1LiteTopicSpecForProviderReservationConfigThroughputR
     public V1beta1LiteTopicSpecForProviderReservationConfigThroughputReservationRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LiteReservation in pubsub to populate throughputReservation.</summary>
 public partial class V1beta1LiteTopicSpecForProviderReservationConfigThroughputReservationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -104,6 +108,7 @@ public enum V1beta1LiteTopicSpecForProviderReservationConfigThroughputReservatio
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LiteTopicSpecForProviderReservationConfigThroughputReservationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -117,6 +122,7 @@ public partial class V1beta1LiteTopicSpecForProviderReservationConfigThroughputR
     public V1beta1LiteTopicSpecForProviderReservationConfigThroughputReservationSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LiteReservation in pubsub to populate throughputReservation.</summary>
 public partial class V1beta1LiteTopicSpecForProviderReservationConfigThroughputReservationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -132,6 +138,7 @@ public partial class V1beta1LiteTopicSpecForProviderReservationConfigThroughputR
     public V1beta1LiteTopicSpecForProviderReservationConfigThroughputReservationSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LiteTopicSpecForProviderReservationConfig
 {
     /// <summary>The Reservation to use for this topic's throughput capacity.</summary>
@@ -147,6 +154,7 @@ public partial class V1beta1LiteTopicSpecForProviderReservationConfig
     public V1beta1LiteTopicSpecForProviderReservationConfigThroughputReservationSelector? ThroughputReservationSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LiteTopicSpecForProviderRetentionConfig
 {
     /// <summary>The provisioned storage, in bytes, per partition. If the number of bytes stored in any of the topic's partitions grows beyond this value, older messages will be dropped to make room for newer ones, regardless of the value of period.</summary>
@@ -158,6 +166,7 @@ public partial class V1beta1LiteTopicSpecForProviderRetentionConfig
     public string? Period { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LiteTopicSpecForProvider
 {
     /// <summary>The settings for this topic's partitions. Structure is documented below.</summary>
@@ -185,6 +194,7 @@ public partial class V1beta1LiteTopicSpecForProvider
     public string Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LiteTopicSpecInitProviderPartitionConfigCapacity
 {
     /// <summary>Subscribe throughput capacity per partition in MiB/s. Must be &gt;= 4 and &lt;= 16.</summary>
@@ -196,6 +206,7 @@ public partial class V1beta1LiteTopicSpecInitProviderPartitionConfigCapacity
     public double? SubscribeMibPerSec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LiteTopicSpecInitProviderPartitionConfig
 {
     /// <summary>The capacity configuration. Structure is documented below.</summary>
@@ -227,6 +238,7 @@ public enum V1beta1LiteTopicSpecInitProviderReservationConfigThroughputReservati
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LiteTopicSpecInitProviderReservationConfigThroughputReservationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -240,6 +252,7 @@ public partial class V1beta1LiteTopicSpecInitProviderReservationConfigThroughput
     public V1beta1LiteTopicSpecInitProviderReservationConfigThroughputReservationRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LiteReservation in pubsub to populate throughputReservation.</summary>
 public partial class V1beta1LiteTopicSpecInitProviderReservationConfigThroughputReservationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -271,6 +284,7 @@ public enum V1beta1LiteTopicSpecInitProviderReservationConfigThroughputReservati
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LiteTopicSpecInitProviderReservationConfigThroughputReservationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -284,6 +298,7 @@ public partial class V1beta1LiteTopicSpecInitProviderReservationConfigThroughput
     public V1beta1LiteTopicSpecInitProviderReservationConfigThroughputReservationSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LiteReservation in pubsub to populate throughputReservation.</summary>
 public partial class V1beta1LiteTopicSpecInitProviderReservationConfigThroughputReservationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -299,6 +314,7 @@ public partial class V1beta1LiteTopicSpecInitProviderReservationConfigThroughput
     public V1beta1LiteTopicSpecInitProviderReservationConfigThroughputReservationSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LiteTopicSpecInitProviderReservationConfig
 {
     /// <summary>The Reservation to use for this topic's throughput capacity.</summary>
@@ -314,6 +330,7 @@ public partial class V1beta1LiteTopicSpecInitProviderReservationConfig
     public V1beta1LiteTopicSpecInitProviderReservationConfigThroughputReservationSelector? ThroughputReservationSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LiteTopicSpecInitProviderRetentionConfig
 {
     /// <summary>The provisioned storage, in bytes, per partition. If the number of bytes stored in any of the topic's partitions grows beyond this value, older messages will be dropped to make room for newer ones, regardless of the value of period.</summary>
@@ -325,6 +342,7 @@ public partial class V1beta1LiteTopicSpecInitProviderRetentionConfig
     public string? Period { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1LiteTopicSpecInitProvider
 {
     /// <summary>The settings for this topic's partitions. Structure is documented below.</summary>
@@ -390,6 +408,7 @@ public enum V1beta1LiteTopicSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LiteTopicSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -403,6 +422,7 @@ public partial class V1beta1LiteTopicSpecProviderConfigRefPolicy
     public V1beta1LiteTopicSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1LiteTopicSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -434,6 +454,7 @@ public enum V1beta1LiteTopicSpecPublishConnectionDetailsToConfigRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LiteTopicSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -447,6 +468,7 @@ public partial class V1beta1LiteTopicSpecPublishConnectionDetailsToConfigRefPoli
     public V1beta1LiteTopicSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1LiteTopicSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -458,6 +480,7 @@ public partial class V1beta1LiteTopicSpecPublishConnectionDetailsToConfigRef
     public V1beta1LiteTopicSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1LiteTopicSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -473,6 +496,7 @@ public partial class V1beta1LiteTopicSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1LiteTopicSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -488,6 +512,7 @@ public partial class V1beta1LiteTopicSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1LiteTopicSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -499,6 +524,7 @@ public partial class V1beta1LiteTopicSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>LiteTopicSpec defines the desired state of LiteTopic</summary>
 public partial class V1beta1LiteTopicSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -531,6 +557,7 @@ public partial class V1beta1LiteTopicSpec
     public V1beta1LiteTopicSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LiteTopicStatusAtProviderPartitionConfigCapacity
 {
     /// <summary>Subscribe throughput capacity per partition in MiB/s. Must be &gt;= 4 and &lt;= 16.</summary>
@@ -542,6 +569,7 @@ public partial class V1beta1LiteTopicStatusAtProviderPartitionConfigCapacity
     public double? SubscribeMibPerSec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LiteTopicStatusAtProviderPartitionConfig
 {
     /// <summary>The capacity configuration. Structure is documented below.</summary>
@@ -553,6 +581,7 @@ public partial class V1beta1LiteTopicStatusAtProviderPartitionConfig
     public double? Count { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LiteTopicStatusAtProviderReservationConfig
 {
     /// <summary>The Reservation to use for this topic's throughput capacity.</summary>
@@ -560,6 +589,7 @@ public partial class V1beta1LiteTopicStatusAtProviderReservationConfig
     public string? ThroughputReservation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LiteTopicStatusAtProviderRetentionConfig
 {
     /// <summary>The provisioned storage, in bytes, per partition. If the number of bytes stored in any of the topic's partitions grows beyond this value, older messages will be dropped to make room for newer ones, regardless of the value of period.</summary>
@@ -571,6 +601,7 @@ public partial class V1beta1LiteTopicStatusAtProviderRetentionConfig
     public string? Period { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LiteTopicStatusAtProvider
 {
     /// <summary>an identifier for the resource with format projects/{{project}}/locations/{{zone}}/topics/{{name}}</summary>
@@ -602,6 +633,7 @@ public partial class V1beta1LiteTopicStatusAtProvider
     public string? Zone { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1LiteTopicStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -629,6 +661,7 @@ public partial class V1beta1LiteTopicStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>LiteTopicStatus defines the observed state of LiteTopic.</summary>
 public partial class V1beta1LiteTopicStatus
 {
     /// <summary></summary>
@@ -645,6 +678,7 @@ public partial class V1beta1LiteTopicStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>LiteTopic is the Schema for the LiteTopics API. A named resource to which messages are sent by publishers.</summary>
 public partial class V1beta1LiteTopic : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LiteTopicSpec>, IStatus<V1beta1LiteTopicStatus>
 {
     public const string KubeApiVersion = "v1beta1";

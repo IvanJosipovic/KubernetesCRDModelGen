@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.gateway.networking.k8s.io;
+/// <summary>ParametersRef is a reference to a resource that contains the configuration parameters corresponding to the GatewayClass. This is optional if the controller does not require any additional configuration.   ParametersRef can reference a standard Kubernetes resource, i.e. ConfigMap, or an implementation-specific custom resource. The resource can be cluster-scoped or namespace-scoped.   If the referent cannot be found, the GatewayClass's "InvalidParameters" status condition will be true.   A Gateway for this GatewayClass may provide its own `parametersRef`. When both are specified, the merging behavior is implementation specific. It is generally recommended that GatewayClass provides defaults that can be overridden by a Gateway.   Support: Implementation-specific</summary>
 public partial class V1GatewayClassSpecParametersRef
 {
     /// <summary>Group is the group of the referent.</summary>
@@ -27,6 +28,7 @@ public partial class V1GatewayClassSpecParametersRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Spec defines the desired state of GatewayClass.</summary>
 public partial class V1GatewayClassSpec
 {
     /// <summary>ControllerName is the name of the controller that is managing Gateways of this class. The value of this field MUST be a domain prefixed path.   Example: "example.net/gateway-controller".   This field is not mutable and cannot be empty.   Support: Core</summary>
@@ -55,6 +57,7 @@ public enum V1GatewayClassStatusConditionsStatusEnum
     Unknown
 }
 
+/// <summary>Condition contains details for one aspect of the current state of this API Resource. --- This struct is intended for direct use as an array at the field path .status.conditions.  For example,   	type FooStatus struct{ 	    // Represents the observations of a foo's current state. 	    // Known .status.conditions.type are: "Available", "Progressing", and "Degraded" 	    // +patchMergeKey=type 	    // +patchStrategy=merge 	    // +listType=map 	    // +listMapKey=type 	    Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`   	    // other fields 	}</summary>
 public partial class V1GatewayClassStatusConditions
 {
     /// <summary>lastTransitionTime is the last time the condition transitioned from one status to another. This should be when the underlying condition changed.  If that is not known, then using the time when the API field changed is acceptable.</summary>
@@ -83,6 +86,7 @@ public partial class V1GatewayClassStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Status defines the current state of GatewayClass.   Implementations MUST populate status on all GatewayClass resources which specify their controller name.</summary>
 public partial class V1GatewayClassStatus
 {
     /// <summary>Conditions is the current status from the controller for this GatewayClass.   Controllers should prefer to publish conditions using values of GatewayClassConditionType for the type of each Condition.</summary>
@@ -91,6 +95,7 @@ public partial class V1GatewayClassStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>GatewayClass describes a class of Gateways available to the user for creating Gateway resources.   It is recommended that this resource be used as a template for Gateways. This means that a Gateway is based on the state of the GatewayClass at the time it was created and changes to the GatewayClass or associated parameters are not propagated down to existing Gateways. This recommendation is intended to limit the blast radius of changes to GatewayClass or associated parameters. If implementations choose to propagate GatewayClass changes to existing Gateways, that MUST be clearly documented by the implementation.   Whenever one or more Gateways are using a GatewayClass, implementations SHOULD add the `gateway-exists-finalizer.gateway.networking.k8s.io` finalizer on the associated GatewayClass. This ensures that a GatewayClass associated with a Gateway is not deleted while in use.   GatewayClass is a Cluster level resource.</summary>
 public partial class V1GatewayClass : IKubernetesObject<V1ObjectMeta>, ISpec<V1GatewayClassSpec>, IStatus<V1GatewayClassStatus>
 {
     public const string KubeApiVersion = "v1";

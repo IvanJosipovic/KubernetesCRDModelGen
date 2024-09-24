@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cache.azure.com;
+/// <summary>Reference: Resource ID of a database resource to link with this database.</summary>
 public partial class V1api20230701storageRedisEnterpriseDatabaseSpecGeoReplicationLinkedDatabasesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -27,6 +28,7 @@ public partial class V1api20230701storageRedisEnterpriseDatabaseSpecGeoReplicati
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230701.LinkedDatabase Specifies details of a linked database resource.</summary>
 public partial class V1api20230701storageRedisEnterpriseDatabaseSpecGeoReplicationLinkedDatabases
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -38,6 +40,7 @@ public partial class V1api20230701storageRedisEnterpriseDatabaseSpecGeoReplicati
     public V1api20230701storageRedisEnterpriseDatabaseSpecGeoReplicationLinkedDatabasesReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20230701.DatabaseProperties_GeoReplication</summary>
 public partial class V1api20230701storageRedisEnterpriseDatabaseSpecGeoReplication
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -53,6 +56,7 @@ public partial class V1api20230701storageRedisEnterpriseDatabaseSpecGeoReplicati
     public IList<V1api20230701storageRedisEnterpriseDatabaseSpecGeoReplicationLinkedDatabases>? LinkedDatabases { get; set; }
 }
 
+/// <summary>Storage version of v1api20230701.Module Specifies configuration of a redis module</summary>
 public partial class V1api20230701storageRedisEnterpriseDatabaseSpecModules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -68,6 +72,7 @@ public partial class V1api20230701storageRedisEnterpriseDatabaseSpecModules
     public string? Name { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a cache.azure.com/RedisEnterprise resource</summary>
 public partial class V1api20230701storageRedisEnterpriseDatabaseSpecOwner
 {
     /// <summary></summary>
@@ -79,6 +84,7 @@ public partial class V1api20230701storageRedisEnterpriseDatabaseSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230701.Persistence Persistence-related configuration for the RedisEnterprise database</summary>
 public partial class V1api20230701storageRedisEnterpriseDatabaseSpecPersistence
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -102,6 +108,7 @@ public partial class V1api20230701storageRedisEnterpriseDatabaseSpecPersistence
     public string? RdbFrequency { get; set; }
 }
 
+/// <summary>Storage version of v1api20230701.RedisEnterprise_Database_Spec</summary>
 public partial class V1api20230701storageRedisEnterpriseDatabaseSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -149,6 +156,7 @@ public partial class V1api20230701storageRedisEnterpriseDatabaseSpec
     public int? Port { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20230701storageRedisEnterpriseDatabaseStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -180,6 +188,7 @@ public partial class V1api20230701storageRedisEnterpriseDatabaseStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230701.LinkedDatabase_STATUS Specifies details of a linked database resource.</summary>
 public partial class V1api20230701storageRedisEnterpriseDatabaseStatusGeoReplicationLinkedDatabases
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -195,6 +204,7 @@ public partial class V1api20230701storageRedisEnterpriseDatabaseStatusGeoReplica
     public string? State { get; set; }
 }
 
+/// <summary>Storage version of v1api20230701.DatabaseProperties_GeoReplication_STATUS</summary>
 public partial class V1api20230701storageRedisEnterpriseDatabaseStatusGeoReplication
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -210,6 +220,7 @@ public partial class V1api20230701storageRedisEnterpriseDatabaseStatusGeoReplica
     public IList<V1api20230701storageRedisEnterpriseDatabaseStatusGeoReplicationLinkedDatabases>? LinkedDatabases { get; set; }
 }
 
+/// <summary>Storage version of v1api20230701.Module_STATUS Specifies configuration of a redis module</summary>
 public partial class V1api20230701storageRedisEnterpriseDatabaseStatusModules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -229,6 +240,7 @@ public partial class V1api20230701storageRedisEnterpriseDatabaseStatusModules
     public string? Version { get; set; }
 }
 
+/// <summary>Storage version of v1api20230701.Persistence_STATUS Persistence-related configuration for the RedisEnterprise database</summary>
 public partial class V1api20230701storageRedisEnterpriseDatabaseStatusPersistence
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -252,6 +264,7 @@ public partial class V1api20230701storageRedisEnterpriseDatabaseStatusPersistenc
     public string? RdbFrequency { get; set; }
 }
 
+/// <summary>Storage version of v1api20230701.RedisEnterprise_Database_STATUS</summary>
 public partial class V1api20230701storageRedisEnterpriseDatabaseStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -312,6 +325,7 @@ public partial class V1api20230701storageRedisEnterpriseDatabaseStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20230701.RedisEnterpriseDatabase Generator information: - Generated from: /redisenterprise/resource-manager/Microsoft.Cache/stable/2023-07-01/redisenterprise.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redisEnterprise/{clusterName}/databases/{databaseName}</summary>
 public partial class V1api20230701storageRedisEnterpriseDatabase : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230701storageRedisEnterpriseDatabaseSpec>, IStatus<V1api20230701storageRedisEnterpriseDatabaseStatus>
 {
     public const string KubeApiVersion = "v1api20230701storage";

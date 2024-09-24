@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appengine.cnrm.cloud.google.com;
+/// <summary>SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.</summary>
 public partial class V1alpha1AppEngineDomainMappingSpecSslSettings
 {
     /// <summary>ID of the AuthorizedCertificate resource configuring SSL for the application. Clearing this field will remove SSL support. By default, a managed certificate is automatically created for every domain mapping. To omit SSL support or to configure SSL manually, specify 'SslManagementType.MANUAL' on a 'CREATE' or 'UPDATE' request. You must be authorized to administer the 'AuthorizedCertificate' resource to manually map it to a DomainMapping resource. Example: 12345.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1AppEngineDomainMappingSpecSslSettings
     public string SslManagementType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AppEngineDomainMappingSpec
 {
     /// <summary>Whether the domain creation should override any existing mappings for this domain. By default, overrides are rejected. Default value: "STRICT" Possible values: ["STRICT", "OVERRIDE"].</summary>
@@ -42,6 +44,7 @@ public partial class V1alpha1AppEngineDomainMappingSpec
     public V1alpha1AppEngineDomainMappingSpecSslSettings? SslSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AppEngineDomainMappingStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -65,6 +68,7 @@ public partial class V1alpha1AppEngineDomainMappingStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AppEngineDomainMappingStatusResourceRecords
 {
     /// <summary>Relative name of the object affected by this record. Only applicable for CNAME records. Example: 'www'.</summary>
@@ -80,6 +84,7 @@ public partial class V1alpha1AppEngineDomainMappingStatusResourceRecords
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AppEngineDomainMappingStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -100,6 +105,7 @@ public partial class V1alpha1AppEngineDomainMappingStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1AppEngineDomainMapping : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1AppEngineDomainMappingSpec>, IStatus<V1alpha1AppEngineDomainMappingStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.beyondcorp.cnrm.cloud.google.com;
+/// <summary>ServiceAccount represents a GCP service account.</summary>
 public partial class V1alpha1BeyondCorpAppConnectorSpecPrincipalInfoServiceAccount
 {
     /// <summary>Email address of the service account.</summary>
@@ -15,6 +16,7 @@ public partial class V1alpha1BeyondCorpAppConnectorSpecPrincipalInfoServiceAccou
     public string Email { get; set; }
 }
 
+/// <summary>Principal information about the Identity of the AppConnector.</summary>
 public partial class V1alpha1BeyondCorpAppConnectorSpecPrincipalInfo
 {
     /// <summary>ServiceAccount represents a GCP service account.</summary>
@@ -22,6 +24,7 @@ public partial class V1alpha1BeyondCorpAppConnectorSpecPrincipalInfo
     public V1alpha1BeyondCorpAppConnectorSpecPrincipalInfoServiceAccount ServiceAccount { get; set; }
 }
 
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1BeyondCorpAppConnectorSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -37,6 +40,7 @@ public partial class V1alpha1BeyondCorpAppConnectorSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1BeyondCorpAppConnectorSpec
 {
     /// <summary>An arbitrary user-provided name for the AppConnector.</summary>
@@ -60,6 +64,7 @@ public partial class V1alpha1BeyondCorpAppConnectorSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1BeyondCorpAppConnectorStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -83,6 +88,7 @@ public partial class V1alpha1BeyondCorpAppConnectorStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1BeyondCorpAppConnectorStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -99,6 +105,7 @@ public partial class V1alpha1BeyondCorpAppConnectorStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1BeyondCorpAppConnector : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1BeyondCorpAppConnectorSpec>, IStatus<V1alpha1BeyondCorpAppConnectorStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

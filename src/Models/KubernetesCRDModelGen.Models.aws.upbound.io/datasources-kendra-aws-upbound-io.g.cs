@@ -18,6 +18,7 @@ public enum V1beta1DataSourceSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecForProviderConfigurationS3ConfigurationAccessControlListConfiguration
 {
     /// <summary>Path to the AWS S3 bucket that contains the ACL files.</summary>
@@ -45,6 +46,7 @@ public enum V1beta1DataSourceSpecForProviderConfigurationS3ConfigurationBucketNa
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DataSourceSpecForProviderConfigurationS3ConfigurationBucketNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -58,6 +60,7 @@ public partial class V1beta1DataSourceSpecForProviderConfigurationS3Configuratio
     public V1beta1DataSourceSpecForProviderConfigurationS3ConfigurationBucketNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate bucketName.</summary>
 public partial class V1beta1DataSourceSpecForProviderConfigurationS3ConfigurationBucketNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -89,6 +92,7 @@ public enum V1beta1DataSourceSpecForProviderConfigurationS3ConfigurationBucketNa
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DataSourceSpecForProviderConfigurationS3ConfigurationBucketNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -102,6 +106,7 @@ public partial class V1beta1DataSourceSpecForProviderConfigurationS3Configuratio
     public V1beta1DataSourceSpecForProviderConfigurationS3ConfigurationBucketNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate bucketName.</summary>
 public partial class V1beta1DataSourceSpecForProviderConfigurationS3ConfigurationBucketNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -117,6 +122,7 @@ public partial class V1beta1DataSourceSpecForProviderConfigurationS3Configuratio
     public V1beta1DataSourceSpecForProviderConfigurationS3ConfigurationBucketNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecForProviderConfigurationS3ConfigurationDocumentsMetadataConfiguration
 {
     /// <summary>A prefix used to filter metadata configuration files in the AWS S3 bucket. The S3 bucket might contain multiple metadata files. Use s3_prefix to include only the desired metadata files.</summary>
@@ -124,6 +130,7 @@ public partial class V1beta1DataSourceSpecForProviderConfigurationS3Configuratio
     public string? S3Prefix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecForProviderConfigurationS3Configuration
 {
     /// <summary>A block that provides the path to the S3 bucket that contains the user context filtering files for the data source. For the format of the file, see Access control for S3 data sources. Detailed below.</summary>
@@ -179,6 +186,7 @@ public enum V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConfiguration
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthenticationCredentialsRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -192,6 +200,7 @@ public partial class V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConf
     public V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthenticationCredentialsRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Secret in secretsmanager to populate credentials.</summary>
 public partial class V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthenticationCredentialsRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -223,6 +232,7 @@ public enum V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConfiguration
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthenticationCredentialsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -236,6 +246,7 @@ public partial class V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConf
     public V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthenticationCredentialsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Secret in secretsmanager to populate credentials.</summary>
 public partial class V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthenticationCredentialsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -251,6 +262,7 @@ public partial class V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConf
     public V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthenticationCredentialsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthentication
 {
     /// <summary>Your secret ARN, which you can create in AWS Secrets Manager. You use a secret if basic authentication credentials are required to connect to a website. The secret stores your credentials of user name and password.</summary>
@@ -274,6 +286,7 @@ public partial class V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConf
     public double? Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConfigurationAuthenticationConfiguration
 {
     /// <summary>The list of configuration information that's required to connect to and crawl a website host using basic authentication credentials. The list includes the name and port number of the website host. Detailed below.</summary>
@@ -301,6 +314,7 @@ public enum V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConfiguration
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConfigurationProxyConfigurationCredentialsRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -314,6 +328,7 @@ public partial class V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConf
     public V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConfigurationProxyConfigurationCredentialsRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Secret in secretsmanager to populate credentials.</summary>
 public partial class V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConfigurationProxyConfigurationCredentialsRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -345,6 +360,7 @@ public enum V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConfiguration
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConfigurationProxyConfigurationCredentialsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -358,6 +374,7 @@ public partial class V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConf
     public V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConfigurationProxyConfigurationCredentialsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Secret in secretsmanager to populate credentials.</summary>
 public partial class V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConfigurationProxyConfigurationCredentialsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -373,6 +390,7 @@ public partial class V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConf
     public V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConfigurationProxyConfigurationCredentialsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConfigurationProxyConfiguration
 {
     /// <summary>Your secret ARN, which you can create in AWS Secrets Manager. You use a secret if basic authentication credentials are required to connect to a website. The secret stores your credentials of user name and password.</summary>
@@ -396,6 +414,7 @@ public partial class V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConf
     public double? Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConfigurationUrlsSeedUrlConfiguration
 {
     /// <summary>The list of seed or starting point URLs of the websites you want to crawl. The list can include a maximum of 100 seed URLs. Array Members: Minimum number of 0 items. Maximum number of 100 items. Length Constraints: Minimum length of 1. Maximum length of 2048.</summary>
@@ -407,6 +426,7 @@ public partial class V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConf
     public string? WebCrawlerMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConfigurationUrlsSiteMapsConfiguration
 {
     /// <summary>The list of sitemap URLs of the websites you want to crawl. The list can include a maximum of 3 sitemap URLs.</summary>
@@ -414,6 +434,7 @@ public partial class V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConf
     public IList<string>? SiteMaps { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConfigurationUrls
 {
     /// <summary>A block that specifies the configuration of the seed or starting point URLs of the websites you want to crawl. You can choose to crawl only the website host names, or the website host names with subdomains, or the website host names with subdomains and other domains that the webpages link to. You can list up to 100 seed URLs. Detailed below.</summary>
@@ -425,6 +446,7 @@ public partial class V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConf
     public IList<V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConfigurationUrlsSiteMapsConfiguration>? SiteMapsConfiguration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConfiguration
 {
     /// <summary>A block with the configuration information required to connect to websites using authentication. You can connect to websites using basic authentication of user name and password. You use a secret in AWS Secrets Manager to store your authentication credentials. You must provide the website host name and port number. For example, the host name of https://a.example.com/page1.html is "a.example.com" and the port is 443, the standard port for HTTPS. Detailed below.</summary>
@@ -464,6 +486,7 @@ public partial class V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConf
     public IList<V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConfigurationUrls>? Urls { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecForProviderConfiguration
 {
     /// <summary>A block that provides the configuration information to connect to an Amazon S3 bucket as your data source. Detailed below.</summary>
@@ -475,6 +498,7 @@ public partial class V1beta1DataSourceSpecForProviderConfiguration
     public IList<V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConfiguration>? WebCrawlerConfiguration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecForProviderCustomDocumentEnrichmentConfigurationInlineConfigurationsConditionConditionOnValue
 {
     /// <summary>A date expressed as an ISO 8601 string. It is important for the time zone to be included in the ISO 8601 date-time format. As of this writing only UTC is supported. For example, 2012-03-25T12:30:10+00:00.</summary>
@@ -494,6 +518,7 @@ public partial class V1beta1DataSourceSpecForProviderCustomDocumentEnrichmentCon
     public string? StringValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecForProviderCustomDocumentEnrichmentConfigurationInlineConfigurationsCondition
 {
     /// <summary>The identifier of the document attribute used for the condition. For example, _source_uri could be an identifier for the attribute or metadata field that contains source URIs associated with the documents. Amazon Kendra currently does not support _document_body as an attribute key used for the condition.</summary>
@@ -509,6 +534,7 @@ public partial class V1beta1DataSourceSpecForProviderCustomDocumentEnrichmentCon
     public string? Operator { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecForProviderCustomDocumentEnrichmentConfigurationInlineConfigurationsTargetTargetDocumentAttributeValue
 {
     /// <summary>A date expressed as an ISO 8601 string. It is important for the time zone to be included in the ISO 8601 date-time format. As of this writing only UTC is supported. For example, 2012-03-25T12:30:10+00:00.</summary>
@@ -528,6 +554,7 @@ public partial class V1beta1DataSourceSpecForProviderCustomDocumentEnrichmentCon
     public string? StringValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecForProviderCustomDocumentEnrichmentConfigurationInlineConfigurationsTarget
 {
     /// <summary>The identifier of the target document attribute or metadata field. For example, 'Department' could be an identifier for the target attribute or metadata field that includes the department names associated with the documents.</summary>
@@ -543,6 +570,7 @@ public partial class V1beta1DataSourceSpecForProviderCustomDocumentEnrichmentCon
     public bool? TargetDocumentAttributeValueDeletion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecForProviderCustomDocumentEnrichmentConfigurationInlineConfigurations
 {
     /// <summary>Configuration of the condition used for the target document attribute or metadata field when ingesting documents into Amazon Kendra. See condition.</summary>
@@ -558,6 +586,7 @@ public partial class V1beta1DataSourceSpecForProviderCustomDocumentEnrichmentCon
     public IList<V1beta1DataSourceSpecForProviderCustomDocumentEnrichmentConfigurationInlineConfigurationsTarget>? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecForProviderCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationConditionConditionOnValue
 {
     /// <summary>A date expressed as an ISO 8601 string. It is important for the time zone to be included in the ISO 8601 date-time format. As of this writing only UTC is supported. For example, 2012-03-25T12:30:10+00:00.</summary>
@@ -577,6 +606,7 @@ public partial class V1beta1DataSourceSpecForProviderCustomDocumentEnrichmentCon
     public string? StringValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecForProviderCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationCondition
 {
     /// <summary>The identifier of the document attribute used for the condition. For example, _source_uri could be an identifier for the attribute or metadata field that contains source URIs associated with the documents. Amazon Kendra currently does not support _document_body as an attribute key used for the condition.</summary>
@@ -592,6 +622,7 @@ public partial class V1beta1DataSourceSpecForProviderCustomDocumentEnrichmentCon
     public string? Operator { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecForProviderCustomDocumentEnrichmentConfigurationPostExtractionHookConfiguration
 {
     /// <summary>A block that specifies the condition used for when a Lambda function should be invoked. For example, you can specify a condition that if there are empty date-time values, then Amazon Kendra should invoke a function that inserts the current date-time. See invocation_condition.</summary>
@@ -607,6 +638,7 @@ public partial class V1beta1DataSourceSpecForProviderCustomDocumentEnrichmentCon
     public string? S3Bucket { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecForProviderCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInvocationConditionConditionOnValue
 {
     /// <summary>A date expressed as an ISO 8601 string. It is important for the time zone to be included in the ISO 8601 date-time format. As of this writing only UTC is supported. For example, 2012-03-25T12:30:10+00:00.</summary>
@@ -626,6 +658,7 @@ public partial class V1beta1DataSourceSpecForProviderCustomDocumentEnrichmentCon
     public string? StringValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecForProviderCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInvocationCondition
 {
     /// <summary>The identifier of the document attribute used for the condition. For example, _source_uri could be an identifier for the attribute or metadata field that contains source URIs associated with the documents. Amazon Kendra currently does not support _document_body as an attribute key used for the condition.</summary>
@@ -641,6 +674,7 @@ public partial class V1beta1DataSourceSpecForProviderCustomDocumentEnrichmentCon
     public string? Operator { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecForProviderCustomDocumentEnrichmentConfigurationPreExtractionHookConfiguration
 {
     /// <summary>A block that specifies the condition used for when a Lambda function should be invoked. For example, you can specify a condition that if there are empty date-time values, then Amazon Kendra should invoke a function that inserts the current date-time. See invocation_condition.</summary>
@@ -656,6 +690,7 @@ public partial class V1beta1DataSourceSpecForProviderCustomDocumentEnrichmentCon
     public string? S3Bucket { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecForProviderCustomDocumentEnrichmentConfiguration
 {
     /// <summary>Configuration information to alter document attributes or metadata fields and content when ingesting documents into Amazon Kendra. Minimum number of 0 items. Maximum number of 100 items. Detailed below.</summary>
@@ -695,6 +730,7 @@ public enum V1beta1DataSourceSpecForProviderIndexIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DataSourceSpecForProviderIndexIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -708,6 +744,7 @@ public partial class V1beta1DataSourceSpecForProviderIndexIdRefPolicy
     public V1beta1DataSourceSpecForProviderIndexIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Index in kendra to populate indexId.</summary>
 public partial class V1beta1DataSourceSpecForProviderIndexIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -739,6 +776,7 @@ public enum V1beta1DataSourceSpecForProviderIndexIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DataSourceSpecForProviderIndexIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -752,6 +790,7 @@ public partial class V1beta1DataSourceSpecForProviderIndexIdSelectorPolicy
     public V1beta1DataSourceSpecForProviderIndexIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Index in kendra to populate indexId.</summary>
 public partial class V1beta1DataSourceSpecForProviderIndexIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -787,6 +826,7 @@ public enum V1beta1DataSourceSpecForProviderRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DataSourceSpecForProviderRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -800,6 +840,7 @@ public partial class V1beta1DataSourceSpecForProviderRoleArnRefPolicy
     public V1beta1DataSourceSpecForProviderRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1DataSourceSpecForProviderRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -831,6 +872,7 @@ public enum V1beta1DataSourceSpecForProviderRoleArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DataSourceSpecForProviderRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -844,6 +886,7 @@ public partial class V1beta1DataSourceSpecForProviderRoleArnSelectorPolicy
     public V1beta1DataSourceSpecForProviderRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1DataSourceSpecForProviderRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -859,6 +902,7 @@ public partial class V1beta1DataSourceSpecForProviderRoleArnSelector
     public V1beta1DataSourceSpecForProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecForProvider
 {
     /// <summary>A block with the configuration information to connect to your Data Source repository. You can't specify the configuration block when the type parameter is set to CUSTOM. Detailed below.</summary>
@@ -922,6 +966,7 @@ public partial class V1beta1DataSourceSpecForProvider
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecInitProviderConfigurationS3ConfigurationAccessControlListConfiguration
 {
     /// <summary>Path to the AWS S3 bucket that contains the ACL files.</summary>
@@ -949,6 +994,7 @@ public enum V1beta1DataSourceSpecInitProviderConfigurationS3ConfigurationBucketN
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DataSourceSpecInitProviderConfigurationS3ConfigurationBucketNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -962,6 +1008,7 @@ public partial class V1beta1DataSourceSpecInitProviderConfigurationS3Configurati
     public V1beta1DataSourceSpecInitProviderConfigurationS3ConfigurationBucketNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate bucketName.</summary>
 public partial class V1beta1DataSourceSpecInitProviderConfigurationS3ConfigurationBucketNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -993,6 +1040,7 @@ public enum V1beta1DataSourceSpecInitProviderConfigurationS3ConfigurationBucketN
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DataSourceSpecInitProviderConfigurationS3ConfigurationBucketNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1006,6 +1054,7 @@ public partial class V1beta1DataSourceSpecInitProviderConfigurationS3Configurati
     public V1beta1DataSourceSpecInitProviderConfigurationS3ConfigurationBucketNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate bucketName.</summary>
 public partial class V1beta1DataSourceSpecInitProviderConfigurationS3ConfigurationBucketNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1021,6 +1070,7 @@ public partial class V1beta1DataSourceSpecInitProviderConfigurationS3Configurati
     public V1beta1DataSourceSpecInitProviderConfigurationS3ConfigurationBucketNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecInitProviderConfigurationS3ConfigurationDocumentsMetadataConfiguration
 {
     /// <summary>A prefix used to filter metadata configuration files in the AWS S3 bucket. The S3 bucket might contain multiple metadata files. Use s3_prefix to include only the desired metadata files.</summary>
@@ -1028,6 +1078,7 @@ public partial class V1beta1DataSourceSpecInitProviderConfigurationS3Configurati
     public string? S3Prefix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecInitProviderConfigurationS3Configuration
 {
     /// <summary>A block that provides the path to the S3 bucket that contains the user context filtering files for the data source. For the format of the file, see Access control for S3 data sources. Detailed below.</summary>
@@ -1083,6 +1134,7 @@ public enum V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerConfiguratio
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthenticationCredentialsRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1096,6 +1148,7 @@ public partial class V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerCon
     public V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthenticationCredentialsRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Secret in secretsmanager to populate credentials.</summary>
 public partial class V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthenticationCredentialsRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1127,6 +1180,7 @@ public enum V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerConfiguratio
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthenticationCredentialsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1140,6 +1194,7 @@ public partial class V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerCon
     public V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthenticationCredentialsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Secret in secretsmanager to populate credentials.</summary>
 public partial class V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthenticationCredentialsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1155,6 +1210,7 @@ public partial class V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerCon
     public V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthenticationCredentialsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthentication
 {
     /// <summary>Your secret ARN, which you can create in AWS Secrets Manager. You use a secret if basic authentication credentials are required to connect to a website. The secret stores your credentials of user name and password.</summary>
@@ -1178,6 +1234,7 @@ public partial class V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerCon
     public double? Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerConfigurationAuthenticationConfiguration
 {
     /// <summary>The list of configuration information that's required to connect to and crawl a website host using basic authentication credentials. The list includes the name and port number of the website host. Detailed below.</summary>
@@ -1205,6 +1262,7 @@ public enum V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerConfiguratio
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerConfigurationProxyConfigurationCredentialsRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1218,6 +1276,7 @@ public partial class V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerCon
     public V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerConfigurationProxyConfigurationCredentialsRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Secret in secretsmanager to populate credentials.</summary>
 public partial class V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerConfigurationProxyConfigurationCredentialsRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1249,6 +1308,7 @@ public enum V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerConfiguratio
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerConfigurationProxyConfigurationCredentialsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1262,6 +1322,7 @@ public partial class V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerCon
     public V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerConfigurationProxyConfigurationCredentialsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Secret in secretsmanager to populate credentials.</summary>
 public partial class V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerConfigurationProxyConfigurationCredentialsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1277,6 +1338,7 @@ public partial class V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerCon
     public V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerConfigurationProxyConfigurationCredentialsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerConfigurationProxyConfiguration
 {
     /// <summary>Your secret ARN, which you can create in AWS Secrets Manager. You use a secret if basic authentication credentials are required to connect to a website. The secret stores your credentials of user name and password.</summary>
@@ -1300,6 +1362,7 @@ public partial class V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerCon
     public double? Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerConfigurationUrlsSeedUrlConfiguration
 {
     /// <summary>The list of seed or starting point URLs of the websites you want to crawl. The list can include a maximum of 100 seed URLs. Array Members: Minimum number of 0 items. Maximum number of 100 items. Length Constraints: Minimum length of 1. Maximum length of 2048.</summary>
@@ -1311,6 +1374,7 @@ public partial class V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerCon
     public string? WebCrawlerMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerConfigurationUrlsSiteMapsConfiguration
 {
     /// <summary>The list of sitemap URLs of the websites you want to crawl. The list can include a maximum of 3 sitemap URLs.</summary>
@@ -1318,6 +1382,7 @@ public partial class V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerCon
     public IList<string>? SiteMaps { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerConfigurationUrls
 {
     /// <summary>A block that specifies the configuration of the seed or starting point URLs of the websites you want to crawl. You can choose to crawl only the website host names, or the website host names with subdomains, or the website host names with subdomains and other domains that the webpages link to. You can list up to 100 seed URLs. Detailed below.</summary>
@@ -1329,6 +1394,7 @@ public partial class V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerCon
     public IList<V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerConfigurationUrlsSiteMapsConfiguration>? SiteMapsConfiguration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerConfiguration
 {
     /// <summary>A block with the configuration information required to connect to websites using authentication. You can connect to websites using basic authentication of user name and password. You use a secret in AWS Secrets Manager to store your authentication credentials. You must provide the website host name and port number. For example, the host name of https://a.example.com/page1.html is "a.example.com" and the port is 443, the standard port for HTTPS. Detailed below.</summary>
@@ -1368,6 +1434,7 @@ public partial class V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerCon
     public IList<V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerConfigurationUrls>? Urls { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecInitProviderConfiguration
 {
     /// <summary>A block that provides the configuration information to connect to an Amazon S3 bucket as your data source. Detailed below.</summary>
@@ -1379,6 +1446,7 @@ public partial class V1beta1DataSourceSpecInitProviderConfiguration
     public IList<V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerConfiguration>? WebCrawlerConfiguration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecInitProviderCustomDocumentEnrichmentConfigurationInlineConfigurationsConditionConditionOnValue
 {
     /// <summary>A date expressed as an ISO 8601 string. It is important for the time zone to be included in the ISO 8601 date-time format. As of this writing only UTC is supported. For example, 2012-03-25T12:30:10+00:00.</summary>
@@ -1398,6 +1466,7 @@ public partial class V1beta1DataSourceSpecInitProviderCustomDocumentEnrichmentCo
     public string? StringValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecInitProviderCustomDocumentEnrichmentConfigurationInlineConfigurationsCondition
 {
     /// <summary>The identifier of the document attribute used for the condition. For example, _source_uri could be an identifier for the attribute or metadata field that contains source URIs associated with the documents. Amazon Kendra currently does not support _document_body as an attribute key used for the condition.</summary>
@@ -1413,6 +1482,7 @@ public partial class V1beta1DataSourceSpecInitProviderCustomDocumentEnrichmentCo
     public string? Operator { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecInitProviderCustomDocumentEnrichmentConfigurationInlineConfigurationsTargetTargetDocumentAttributeValue
 {
     /// <summary>A date expressed as an ISO 8601 string. It is important for the time zone to be included in the ISO 8601 date-time format. As of this writing only UTC is supported. For example, 2012-03-25T12:30:10+00:00.</summary>
@@ -1432,6 +1502,7 @@ public partial class V1beta1DataSourceSpecInitProviderCustomDocumentEnrichmentCo
     public string? StringValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecInitProviderCustomDocumentEnrichmentConfigurationInlineConfigurationsTarget
 {
     /// <summary>The identifier of the target document attribute or metadata field. For example, 'Department' could be an identifier for the target attribute or metadata field that includes the department names associated with the documents.</summary>
@@ -1447,6 +1518,7 @@ public partial class V1beta1DataSourceSpecInitProviderCustomDocumentEnrichmentCo
     public bool? TargetDocumentAttributeValueDeletion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecInitProviderCustomDocumentEnrichmentConfigurationInlineConfigurations
 {
     /// <summary>Configuration of the condition used for the target document attribute or metadata field when ingesting documents into Amazon Kendra. See condition.</summary>
@@ -1462,6 +1534,7 @@ public partial class V1beta1DataSourceSpecInitProviderCustomDocumentEnrichmentCo
     public IList<V1beta1DataSourceSpecInitProviderCustomDocumentEnrichmentConfigurationInlineConfigurationsTarget>? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecInitProviderCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationConditionConditionOnValue
 {
     /// <summary>A date expressed as an ISO 8601 string. It is important for the time zone to be included in the ISO 8601 date-time format. As of this writing only UTC is supported. For example, 2012-03-25T12:30:10+00:00.</summary>
@@ -1481,6 +1554,7 @@ public partial class V1beta1DataSourceSpecInitProviderCustomDocumentEnrichmentCo
     public string? StringValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecInitProviderCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationCondition
 {
     /// <summary>The identifier of the document attribute used for the condition. For example, _source_uri could be an identifier for the attribute or metadata field that contains source URIs associated with the documents. Amazon Kendra currently does not support _document_body as an attribute key used for the condition.</summary>
@@ -1496,6 +1570,7 @@ public partial class V1beta1DataSourceSpecInitProviderCustomDocumentEnrichmentCo
     public string? Operator { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecInitProviderCustomDocumentEnrichmentConfigurationPostExtractionHookConfiguration
 {
     /// <summary>A block that specifies the condition used for when a Lambda function should be invoked. For example, you can specify a condition that if there are empty date-time values, then Amazon Kendra should invoke a function that inserts the current date-time. See invocation_condition.</summary>
@@ -1511,6 +1586,7 @@ public partial class V1beta1DataSourceSpecInitProviderCustomDocumentEnrichmentCo
     public string? S3Bucket { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecInitProviderCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInvocationConditionConditionOnValue
 {
     /// <summary>A date expressed as an ISO 8601 string. It is important for the time zone to be included in the ISO 8601 date-time format. As of this writing only UTC is supported. For example, 2012-03-25T12:30:10+00:00.</summary>
@@ -1530,6 +1606,7 @@ public partial class V1beta1DataSourceSpecInitProviderCustomDocumentEnrichmentCo
     public string? StringValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecInitProviderCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInvocationCondition
 {
     /// <summary>The identifier of the document attribute used for the condition. For example, _source_uri could be an identifier for the attribute or metadata field that contains source URIs associated with the documents. Amazon Kendra currently does not support _document_body as an attribute key used for the condition.</summary>
@@ -1545,6 +1622,7 @@ public partial class V1beta1DataSourceSpecInitProviderCustomDocumentEnrichmentCo
     public string? Operator { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecInitProviderCustomDocumentEnrichmentConfigurationPreExtractionHookConfiguration
 {
     /// <summary>A block that specifies the condition used for when a Lambda function should be invoked. For example, you can specify a condition that if there are empty date-time values, then Amazon Kendra should invoke a function that inserts the current date-time. See invocation_condition.</summary>
@@ -1560,6 +1638,7 @@ public partial class V1beta1DataSourceSpecInitProviderCustomDocumentEnrichmentCo
     public string? S3Bucket { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceSpecInitProviderCustomDocumentEnrichmentConfiguration
 {
     /// <summary>Configuration information to alter document attributes or metadata fields and content when ingesting documents into Amazon Kendra. Minimum number of 0 items. Maximum number of 100 items. Detailed below.</summary>
@@ -1599,6 +1678,7 @@ public enum V1beta1DataSourceSpecInitProviderIndexIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DataSourceSpecInitProviderIndexIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1612,6 +1692,7 @@ public partial class V1beta1DataSourceSpecInitProviderIndexIdRefPolicy
     public V1beta1DataSourceSpecInitProviderIndexIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Index in kendra to populate indexId.</summary>
 public partial class V1beta1DataSourceSpecInitProviderIndexIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1643,6 +1724,7 @@ public enum V1beta1DataSourceSpecInitProviderIndexIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DataSourceSpecInitProviderIndexIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1656,6 +1738,7 @@ public partial class V1beta1DataSourceSpecInitProviderIndexIdSelectorPolicy
     public V1beta1DataSourceSpecInitProviderIndexIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Index in kendra to populate indexId.</summary>
 public partial class V1beta1DataSourceSpecInitProviderIndexIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1691,6 +1774,7 @@ public enum V1beta1DataSourceSpecInitProviderRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DataSourceSpecInitProviderRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1704,6 +1788,7 @@ public partial class V1beta1DataSourceSpecInitProviderRoleArnRefPolicy
     public V1beta1DataSourceSpecInitProviderRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1DataSourceSpecInitProviderRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1735,6 +1820,7 @@ public enum V1beta1DataSourceSpecInitProviderRoleArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DataSourceSpecInitProviderRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1748,6 +1834,7 @@ public partial class V1beta1DataSourceSpecInitProviderRoleArnSelectorPolicy
     public V1beta1DataSourceSpecInitProviderRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1DataSourceSpecInitProviderRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1763,6 +1850,7 @@ public partial class V1beta1DataSourceSpecInitProviderRoleArnSelector
     public V1beta1DataSourceSpecInitProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1DataSourceSpecInitProvider
 {
     /// <summary>A block with the configuration information to connect to your Data Source repository. You can't specify the configuration block when the type parameter is set to CUSTOM. Detailed below.</summary>
@@ -1864,6 +1952,7 @@ public enum V1beta1DataSourceSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DataSourceSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1877,6 +1966,7 @@ public partial class V1beta1DataSourceSpecProviderConfigRefPolicy
     public V1beta1DataSourceSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1DataSourceSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1908,6 +1998,7 @@ public enum V1beta1DataSourceSpecPublishConnectionDetailsToConfigRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DataSourceSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1921,6 +2012,7 @@ public partial class V1beta1DataSourceSpecPublishConnectionDetailsToConfigRefPol
     public V1beta1DataSourceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1DataSourceSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1932,6 +2024,7 @@ public partial class V1beta1DataSourceSpecPublishConnectionDetailsToConfigRef
     public V1beta1DataSourceSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1DataSourceSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1947,6 +2040,7 @@ public partial class V1beta1DataSourceSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1DataSourceSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1962,6 +2056,7 @@ public partial class V1beta1DataSourceSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1DataSourceSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1973,6 +2068,7 @@ public partial class V1beta1DataSourceSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>DataSourceSpec defines the desired state of DataSource</summary>
 public partial class V1beta1DataSourceSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -2005,6 +2101,7 @@ public partial class V1beta1DataSourceSpec
     public V1beta1DataSourceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceStatusAtProviderConfigurationS3ConfigurationAccessControlListConfiguration
 {
     /// <summary>Path to the AWS S3 bucket that contains the ACL files.</summary>
@@ -2012,6 +2109,7 @@ public partial class V1beta1DataSourceStatusAtProviderConfigurationS3Configurati
     public string? KeyPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceStatusAtProviderConfigurationS3ConfigurationDocumentsMetadataConfiguration
 {
     /// <summary>A prefix used to filter metadata configuration files in the AWS S3 bucket. The S3 bucket might contain multiple metadata files. Use s3_prefix to include only the desired metadata files.</summary>
@@ -2019,6 +2117,7 @@ public partial class V1beta1DataSourceStatusAtProviderConfigurationS3Configurati
     public string? S3Prefix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceStatusAtProviderConfigurationS3Configuration
 {
     /// <summary>A block that provides the path to the S3 bucket that contains the user context filtering files for the data source. For the format of the file, see Access control for S3 data sources. Detailed below.</summary>
@@ -2046,6 +2145,7 @@ public partial class V1beta1DataSourceStatusAtProviderConfigurationS3Configurati
     public IList<string>? InclusionPrefixes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceStatusAtProviderConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthentication
 {
     /// <summary>Your secret ARN, which you can create in AWS Secrets Manager. You use a secret if basic authentication credentials are required to connect to a website. The secret stores your credentials of user name and password.</summary>
@@ -2061,6 +2161,7 @@ public partial class V1beta1DataSourceStatusAtProviderConfigurationWebCrawlerCon
     public double? Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceStatusAtProviderConfigurationWebCrawlerConfigurationAuthenticationConfiguration
 {
     /// <summary>The list of configuration information that's required to connect to and crawl a website host using basic authentication credentials. The list includes the name and port number of the website host. Detailed below.</summary>
@@ -2068,6 +2169,7 @@ public partial class V1beta1DataSourceStatusAtProviderConfigurationWebCrawlerCon
     public IList<V1beta1DataSourceStatusAtProviderConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthentication>? BasicAuthentication { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceStatusAtProviderConfigurationWebCrawlerConfigurationProxyConfiguration
 {
     /// <summary>Your secret ARN, which you can create in AWS Secrets Manager. You use a secret if basic authentication credentials are required to connect to a website. The secret stores your credentials of user name and password.</summary>
@@ -2083,6 +2185,7 @@ public partial class V1beta1DataSourceStatusAtProviderConfigurationWebCrawlerCon
     public double? Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceStatusAtProviderConfigurationWebCrawlerConfigurationUrlsSeedUrlConfiguration
 {
     /// <summary>The list of seed or starting point URLs of the websites you want to crawl. The list can include a maximum of 100 seed URLs. Array Members: Minimum number of 0 items. Maximum number of 100 items. Length Constraints: Minimum length of 1. Maximum length of 2048.</summary>
@@ -2094,6 +2197,7 @@ public partial class V1beta1DataSourceStatusAtProviderConfigurationWebCrawlerCon
     public string? WebCrawlerMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceStatusAtProviderConfigurationWebCrawlerConfigurationUrlsSiteMapsConfiguration
 {
     /// <summary>The list of sitemap URLs of the websites you want to crawl. The list can include a maximum of 3 sitemap URLs.</summary>
@@ -2101,6 +2205,7 @@ public partial class V1beta1DataSourceStatusAtProviderConfigurationWebCrawlerCon
     public IList<string>? SiteMaps { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceStatusAtProviderConfigurationWebCrawlerConfigurationUrls
 {
     /// <summary>A block that specifies the configuration of the seed or starting point URLs of the websites you want to crawl. You can choose to crawl only the website host names, or the website host names with subdomains, or the website host names with subdomains and other domains that the webpages link to. You can list up to 100 seed URLs. Detailed below.</summary>
@@ -2112,6 +2217,7 @@ public partial class V1beta1DataSourceStatusAtProviderConfigurationWebCrawlerCon
     public IList<V1beta1DataSourceStatusAtProviderConfigurationWebCrawlerConfigurationUrlsSiteMapsConfiguration>? SiteMapsConfiguration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceStatusAtProviderConfigurationWebCrawlerConfiguration
 {
     /// <summary>A block with the configuration information required to connect to websites using authentication. You can connect to websites using basic authentication of user name and password. You use a secret in AWS Secrets Manager to store your authentication credentials. You must provide the website host name and port number. For example, the host name of https://a.example.com/page1.html is "a.example.com" and the port is 443, the standard port for HTTPS. Detailed below.</summary>
@@ -2151,6 +2257,7 @@ public partial class V1beta1DataSourceStatusAtProviderConfigurationWebCrawlerCon
     public IList<V1beta1DataSourceStatusAtProviderConfigurationWebCrawlerConfigurationUrls>? Urls { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceStatusAtProviderConfiguration
 {
     /// <summary>A block that provides the configuration information to connect to an Amazon S3 bucket as your data source. Detailed below.</summary>
@@ -2162,6 +2269,7 @@ public partial class V1beta1DataSourceStatusAtProviderConfiguration
     public IList<V1beta1DataSourceStatusAtProviderConfigurationWebCrawlerConfiguration>? WebCrawlerConfiguration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceStatusAtProviderCustomDocumentEnrichmentConfigurationInlineConfigurationsConditionConditionOnValue
 {
     /// <summary>A date expressed as an ISO 8601 string. It is important for the time zone to be included in the ISO 8601 date-time format. As of this writing only UTC is supported. For example, 2012-03-25T12:30:10+00:00.</summary>
@@ -2181,6 +2289,7 @@ public partial class V1beta1DataSourceStatusAtProviderCustomDocumentEnrichmentCo
     public string? StringValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceStatusAtProviderCustomDocumentEnrichmentConfigurationInlineConfigurationsCondition
 {
     /// <summary>The identifier of the document attribute used for the condition. For example, _source_uri could be an identifier for the attribute or metadata field that contains source URIs associated with the documents. Amazon Kendra currently does not support _document_body as an attribute key used for the condition.</summary>
@@ -2196,6 +2305,7 @@ public partial class V1beta1DataSourceStatusAtProviderCustomDocumentEnrichmentCo
     public string? Operator { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceStatusAtProviderCustomDocumentEnrichmentConfigurationInlineConfigurationsTargetTargetDocumentAttributeValue
 {
     /// <summary>A date expressed as an ISO 8601 string. It is important for the time zone to be included in the ISO 8601 date-time format. As of this writing only UTC is supported. For example, 2012-03-25T12:30:10+00:00.</summary>
@@ -2215,6 +2325,7 @@ public partial class V1beta1DataSourceStatusAtProviderCustomDocumentEnrichmentCo
     public string? StringValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceStatusAtProviderCustomDocumentEnrichmentConfigurationInlineConfigurationsTarget
 {
     /// <summary>The identifier of the target document attribute or metadata field. For example, 'Department' could be an identifier for the target attribute or metadata field that includes the department names associated with the documents.</summary>
@@ -2230,6 +2341,7 @@ public partial class V1beta1DataSourceStatusAtProviderCustomDocumentEnrichmentCo
     public bool? TargetDocumentAttributeValueDeletion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceStatusAtProviderCustomDocumentEnrichmentConfigurationInlineConfigurations
 {
     /// <summary>Configuration of the condition used for the target document attribute or metadata field when ingesting documents into Amazon Kendra. See condition.</summary>
@@ -2245,6 +2357,7 @@ public partial class V1beta1DataSourceStatusAtProviderCustomDocumentEnrichmentCo
     public IList<V1beta1DataSourceStatusAtProviderCustomDocumentEnrichmentConfigurationInlineConfigurationsTarget>? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceStatusAtProviderCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationConditionConditionOnValue
 {
     /// <summary>A date expressed as an ISO 8601 string. It is important for the time zone to be included in the ISO 8601 date-time format. As of this writing only UTC is supported. For example, 2012-03-25T12:30:10+00:00.</summary>
@@ -2264,6 +2377,7 @@ public partial class V1beta1DataSourceStatusAtProviderCustomDocumentEnrichmentCo
     public string? StringValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceStatusAtProviderCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationCondition
 {
     /// <summary>The identifier of the document attribute used for the condition. For example, _source_uri could be an identifier for the attribute or metadata field that contains source URIs associated with the documents. Amazon Kendra currently does not support _document_body as an attribute key used for the condition.</summary>
@@ -2279,6 +2393,7 @@ public partial class V1beta1DataSourceStatusAtProviderCustomDocumentEnrichmentCo
     public string? Operator { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceStatusAtProviderCustomDocumentEnrichmentConfigurationPostExtractionHookConfiguration
 {
     /// <summary>A block that specifies the condition used for when a Lambda function should be invoked. For example, you can specify a condition that if there are empty date-time values, then Amazon Kendra should invoke a function that inserts the current date-time. See invocation_condition.</summary>
@@ -2294,6 +2409,7 @@ public partial class V1beta1DataSourceStatusAtProviderCustomDocumentEnrichmentCo
     public string? S3Bucket { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceStatusAtProviderCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInvocationConditionConditionOnValue
 {
     /// <summary>A date expressed as an ISO 8601 string. It is important for the time zone to be included in the ISO 8601 date-time format. As of this writing only UTC is supported. For example, 2012-03-25T12:30:10+00:00.</summary>
@@ -2313,6 +2429,7 @@ public partial class V1beta1DataSourceStatusAtProviderCustomDocumentEnrichmentCo
     public string? StringValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceStatusAtProviderCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInvocationCondition
 {
     /// <summary>The identifier of the document attribute used for the condition. For example, _source_uri could be an identifier for the attribute or metadata field that contains source URIs associated with the documents. Amazon Kendra currently does not support _document_body as an attribute key used for the condition.</summary>
@@ -2328,6 +2445,7 @@ public partial class V1beta1DataSourceStatusAtProviderCustomDocumentEnrichmentCo
     public string? Operator { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceStatusAtProviderCustomDocumentEnrichmentConfigurationPreExtractionHookConfiguration
 {
     /// <summary>A block that specifies the condition used for when a Lambda function should be invoked. For example, you can specify a condition that if there are empty date-time values, then Amazon Kendra should invoke a function that inserts the current date-time. See invocation_condition.</summary>
@@ -2343,6 +2461,7 @@ public partial class V1beta1DataSourceStatusAtProviderCustomDocumentEnrichmentCo
     public string? S3Bucket { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceStatusAtProviderCustomDocumentEnrichmentConfiguration
 {
     /// <summary>Configuration information to alter document attributes or metadata fields and content when ingesting documents into Amazon Kendra. Minimum number of 0 items. Maximum number of 100 items. Detailed below.</summary>
@@ -2362,6 +2481,7 @@ public partial class V1beta1DataSourceStatusAtProviderCustomDocumentEnrichmentCo
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataSourceStatusAtProvider
 {
     /// <summary>ARN of the Data Source.</summary>
@@ -2437,6 +2557,7 @@ public partial class V1beta1DataSourceStatusAtProvider
     public string? UpdatedAt { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1DataSourceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2464,6 +2585,7 @@ public partial class V1beta1DataSourceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>DataSourceStatus defines the observed state of DataSource.</summary>
 public partial class V1beta1DataSourceStatus
 {
     /// <summary></summary>
@@ -2480,6 +2602,7 @@ public partial class V1beta1DataSourceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>DataSource is the Schema for the DataSources API.</summary>
 public partial class V1beta1DataSource : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DataSourceSpec>, IStatus<V1beta1DataSourceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

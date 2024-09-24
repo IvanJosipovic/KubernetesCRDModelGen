@@ -38,6 +38,7 @@ public enum V1beta1HostedTransitVirtualInterfaceAccepterSpecForProviderDxGateway
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecForProviderDxGatewayIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecForProvider
     public V1beta1HostedTransitVirtualInterfaceAccepterSpecForProviderDxGatewayIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Gateway in directconnect to populate dxGatewayId.</summary>
 public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecForProviderDxGatewayIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1HostedTransitVirtualInterfaceAccepterSpecForProviderDxGateway
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecForProviderDxGatewayIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecForProvider
     public V1beta1HostedTransitVirtualInterfaceAccepterSpecForProviderDxGatewayIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Gateway in directconnect to populate dxGatewayId.</summary>
 public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecForProviderDxGatewayIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1HostedTransitVirtualInterfaceAccepterSpecForProviderVirtualIn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecForProviderVirtualInterfaceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecForProvider
     public V1beta1HostedTransitVirtualInterfaceAccepterSpecForProviderVirtualInterfaceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a HostedTransitVirtualInterface in directconnect to populate virtualInterfaceId.</summary>
 public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecForProviderVirtualInterfaceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1HostedTransitVirtualInterfaceAccepterSpecForProviderVirtualIn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecForProviderVirtualInterfaceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecForProvider
     public V1beta1HostedTransitVirtualInterfaceAccepterSpecForProviderVirtualInterfaceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a HostedTransitVirtualInterface in directconnect to populate virtualInterfaceId.</summary>
 public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecForProviderVirtualInterfaceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecForProvider
     public V1beta1HostedTransitVirtualInterfaceAccepterSpecForProviderVirtualInterfaceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecForProvider
 {
     /// <summary>The ID of the Direct Connect gateway to which to connect the virtual interface.</summary>
@@ -257,6 +266,7 @@ public enum V1beta1HostedTransitVirtualInterfaceAccepterSpecInitProviderDxGatewa
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecInitProviderDxGatewayIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -270,6 +280,7 @@ public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecInitProvide
     public V1beta1HostedTransitVirtualInterfaceAccepterSpecInitProviderDxGatewayIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Gateway in directconnect to populate dxGatewayId.</summary>
 public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecInitProviderDxGatewayIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -301,6 +312,7 @@ public enum V1beta1HostedTransitVirtualInterfaceAccepterSpecInitProviderDxGatewa
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecInitProviderDxGatewayIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -314,6 +326,7 @@ public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecInitProvide
     public V1beta1HostedTransitVirtualInterfaceAccepterSpecInitProviderDxGatewayIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Gateway in directconnect to populate dxGatewayId.</summary>
 public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecInitProviderDxGatewayIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -349,6 +362,7 @@ public enum V1beta1HostedTransitVirtualInterfaceAccepterSpecInitProviderVirtualI
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecInitProviderVirtualInterfaceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -362,6 +376,7 @@ public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecInitProvide
     public V1beta1HostedTransitVirtualInterfaceAccepterSpecInitProviderVirtualInterfaceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a HostedTransitVirtualInterface in directconnect to populate virtualInterfaceId.</summary>
 public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecInitProviderVirtualInterfaceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -393,6 +408,7 @@ public enum V1beta1HostedTransitVirtualInterfaceAccepterSpecInitProviderVirtualI
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecInitProviderVirtualInterfaceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -406,6 +422,7 @@ public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecInitProvide
     public V1beta1HostedTransitVirtualInterfaceAccepterSpecInitProviderVirtualInterfaceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a HostedTransitVirtualInterface in directconnect to populate virtualInterfaceId.</summary>
 public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecInitProviderVirtualInterfaceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -421,6 +438,7 @@ public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecInitProvide
     public V1beta1HostedTransitVirtualInterfaceAccepterSpecInitProviderVirtualInterfaceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecInitProvider
 {
     /// <summary>The ID of the Direct Connect gateway to which to connect the virtual interface.</summary>
@@ -494,6 +512,7 @@ public enum V1beta1HostedTransitVirtualInterfaceAccepterSpecProviderConfigRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -507,6 +526,7 @@ public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecProviderCon
     public V1beta1HostedTransitVirtualInterfaceAccepterSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -538,6 +558,7 @@ public enum V1beta1HostedTransitVirtualInterfaceAccepterSpecPublishConnectionDet
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -551,6 +572,7 @@ public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecPublishConn
     public V1beta1HostedTransitVirtualInterfaceAccepterSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -562,6 +584,7 @@ public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecPublishConn
     public V1beta1HostedTransitVirtualInterfaceAccepterSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -577,6 +600,7 @@ public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecPublishConn
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -592,6 +616,7 @@ public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecPublishConn
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -603,6 +628,7 @@ public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecWriteConnec
     public string Namespace { get; set; }
 }
 
+/// <summary>HostedTransitVirtualInterfaceAccepterSpec defines the desired state of HostedTransitVirtualInterfaceAccepter</summary>
 public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -635,6 +661,7 @@ public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpec
     public V1beta1HostedTransitVirtualInterfaceAccepterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HostedTransitVirtualInterfaceAccepterStatusAtProvider
 {
     /// <summary>The ARN of the virtual interface.</summary>
@@ -662,6 +689,7 @@ public partial class V1beta1HostedTransitVirtualInterfaceAccepterStatusAtProvide
     public string? VirtualInterfaceId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1HostedTransitVirtualInterfaceAccepterStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -689,6 +717,7 @@ public partial class V1beta1HostedTransitVirtualInterfaceAccepterStatusCondition
     public string Type { get; set; }
 }
 
+/// <summary>HostedTransitVirtualInterfaceAccepterStatus defines the observed state of HostedTransitVirtualInterfaceAccepter.</summary>
 public partial class V1beta1HostedTransitVirtualInterfaceAccepterStatus
 {
     /// <summary></summary>
@@ -705,6 +734,7 @@ public partial class V1beta1HostedTransitVirtualInterfaceAccepterStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>HostedTransitVirtualInterfaceAccepter is the Schema for the HostedTransitVirtualInterfaceAccepters API. Provides a resource to manage the accepter's side of a Direct Connect hosted transit virtual interface.</summary>
 public partial class V1beta1HostedTransitVirtualInterfaceAccepter : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1HostedTransitVirtualInterfaceAccepterSpec>, IStatus<V1beta1HostedTransitVirtualInterfaceAccepterStatus>
 {
     public const string KubeApiVersion = "v1beta1";

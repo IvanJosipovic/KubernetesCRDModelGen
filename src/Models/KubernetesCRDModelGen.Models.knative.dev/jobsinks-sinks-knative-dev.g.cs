@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sinks.knative.dev;
+/// <summary>Spec defines the desired state of the JobSink.</summary>
 public partial class V1alpha1JobSinkSpec
 {
     /// <summary>Full Job resource object, see https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#job-v1-batch for more details.</summary>
@@ -15,6 +16,7 @@ public partial class V1alpha1JobSinkSpec
     public JsonNode? Job { get; set; }
 }
 
+/// <summary>JobSink is Addressable. It exposes the endpoint as an URI to schedule long running jobs when an even occurs.</summary>
 public partial class V1alpha1JobSinkStatusAddress
 {
     /// <summary></summary>
@@ -34,6 +36,7 @@ public partial class V1alpha1JobSinkStatusAddress
     public string? Audience { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1JobSinkStatusAddresses
 {
     /// <summary></summary>
@@ -53,6 +56,7 @@ public partial class V1alpha1JobSinkStatusAddresses
     public string? Audience { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1JobSinkStatusJob
 {
     /// <summary>Label selector for all scheduled jobs</summary>
@@ -60,6 +64,7 @@ public partial class V1alpha1JobSinkStatusJob
     public string? Selector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1JobSinkStatusPolicies
 {
     /// <summary>The API version of the applied EventPolicy. This indicates, which version of EventPolicy is supported by the resource.</summary>
@@ -71,6 +76,7 @@ public partial class V1alpha1JobSinkStatusPolicies
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1JobSinkStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another. We use VolatileTime in place of metav1.Time to exclude this from creating equality.Semantic differences (all other things held constant).</summary>
@@ -98,6 +104,7 @@ public partial class V1alpha1JobSinkStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Status represents the current state of the JobSink. This data may be out of date.</summary>
 public partial class V1alpha1JobSinkStatus
 {
     /// <summary>JobSink is Addressable. It exposes the endpoint as an URI to schedule long running jobs when an even occurs.</summary>
@@ -126,6 +133,7 @@ public partial class V1alpha1JobSinkStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>JobSink triggers long-running jobs when an event occur.</summary>
 public partial class V1alpha1JobSink : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1JobSinkSpec>, IStatus<V1alpha1JobSinkStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

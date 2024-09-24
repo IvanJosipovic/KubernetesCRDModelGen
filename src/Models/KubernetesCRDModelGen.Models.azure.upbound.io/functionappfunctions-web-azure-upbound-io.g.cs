@@ -18,6 +18,7 @@ public enum V1beta1FunctionAppFunctionSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppFunctionSpecForProviderFile
 {
     /// <summary>The content of the file. Changing this forces a new resource to be created. The content of the file.</summary>
@@ -49,6 +50,7 @@ public enum V1beta1FunctionAppFunctionSpecForProviderFunctionAppIdRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionAppFunctionSpecForProviderFunctionAppIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -62,6 +64,7 @@ public partial class V1beta1FunctionAppFunctionSpecForProviderFunctionAppIdRefPo
     public V1beta1FunctionAppFunctionSpecForProviderFunctionAppIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LinuxFunctionApp in web to populate functionAppId.</summary>
 public partial class V1beta1FunctionAppFunctionSpecForProviderFunctionAppIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -93,6 +96,7 @@ public enum V1beta1FunctionAppFunctionSpecForProviderFunctionAppIdSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionAppFunctionSpecForProviderFunctionAppIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -106,6 +110,7 @@ public partial class V1beta1FunctionAppFunctionSpecForProviderFunctionAppIdSelec
     public V1beta1FunctionAppFunctionSpecForProviderFunctionAppIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LinuxFunctionApp in web to populate functionAppId.</summary>
 public partial class V1beta1FunctionAppFunctionSpecForProviderFunctionAppIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1FunctionAppFunctionSpecForProviderFunctionAppIdSelec
     public V1beta1FunctionAppFunctionSpecForProviderFunctionAppIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppFunctionSpecForProvider
 {
     /// <summary>The config for this Function in JSON format. The config for this Function in JSON format.</summary>
@@ -160,6 +166,7 @@ public partial class V1beta1FunctionAppFunctionSpecForProvider
     public string? TestData { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppFunctionSpecInitProviderFile
 {
     /// <summary>The content of the file. Changing this forces a new resource to be created. The content of the file.</summary>
@@ -191,6 +198,7 @@ public enum V1beta1FunctionAppFunctionSpecInitProviderFunctionAppIdRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionAppFunctionSpecInitProviderFunctionAppIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -204,6 +212,7 @@ public partial class V1beta1FunctionAppFunctionSpecInitProviderFunctionAppIdRefP
     public V1beta1FunctionAppFunctionSpecInitProviderFunctionAppIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LinuxFunctionApp in web to populate functionAppId.</summary>
 public partial class V1beta1FunctionAppFunctionSpecInitProviderFunctionAppIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -235,6 +244,7 @@ public enum V1beta1FunctionAppFunctionSpecInitProviderFunctionAppIdSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionAppFunctionSpecInitProviderFunctionAppIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -248,6 +258,7 @@ public partial class V1beta1FunctionAppFunctionSpecInitProviderFunctionAppIdSele
     public V1beta1FunctionAppFunctionSpecInitProviderFunctionAppIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LinuxFunctionApp in web to populate functionAppId.</summary>
 public partial class V1beta1FunctionAppFunctionSpecInitProviderFunctionAppIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -263,6 +274,7 @@ public partial class V1beta1FunctionAppFunctionSpecInitProviderFunctionAppIdSele
     public V1beta1FunctionAppFunctionSpecInitProviderFunctionAppIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1FunctionAppFunctionSpecInitProvider
 {
     /// <summary>The config for this Function in JSON format. The config for this Function in JSON format.</summary>
@@ -344,6 +356,7 @@ public enum V1beta1FunctionAppFunctionSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionAppFunctionSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -357,6 +370,7 @@ public partial class V1beta1FunctionAppFunctionSpecProviderConfigRefPolicy
     public V1beta1FunctionAppFunctionSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1FunctionAppFunctionSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -388,6 +402,7 @@ public enum V1beta1FunctionAppFunctionSpecPublishConnectionDetailsToConfigRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionAppFunctionSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -401,6 +416,7 @@ public partial class V1beta1FunctionAppFunctionSpecPublishConnectionDetailsToCon
     public V1beta1FunctionAppFunctionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1FunctionAppFunctionSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -412,6 +428,7 @@ public partial class V1beta1FunctionAppFunctionSpecPublishConnectionDetailsToCon
     public V1beta1FunctionAppFunctionSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1FunctionAppFunctionSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -427,6 +444,7 @@ public partial class V1beta1FunctionAppFunctionSpecPublishConnectionDetailsToMet
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1FunctionAppFunctionSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -442,6 +460,7 @@ public partial class V1beta1FunctionAppFunctionSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1FunctionAppFunctionSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -453,6 +472,7 @@ public partial class V1beta1FunctionAppFunctionSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>FunctionAppFunctionSpec defines the desired state of FunctionAppFunction</summary>
 public partial class V1beta1FunctionAppFunctionSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -485,6 +505,7 @@ public partial class V1beta1FunctionAppFunctionSpec
     public V1beta1FunctionAppFunctionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppFunctionStatusAtProviderFile
 {
     /// <summary>The content of the file. Changing this forces a new resource to be created. The content of the file.</summary>
@@ -496,6 +517,7 @@ public partial class V1beta1FunctionAppFunctionStatusAtProviderFile
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionAppFunctionStatusAtProvider
 {
     /// <summary>The config for this Function in JSON format. The config for this Function in JSON format.</summary>
@@ -559,6 +581,7 @@ public partial class V1beta1FunctionAppFunctionStatusAtProvider
     public string? Url { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1FunctionAppFunctionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -586,6 +609,7 @@ public partial class V1beta1FunctionAppFunctionStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>FunctionAppFunctionStatus defines the observed state of FunctionAppFunction.</summary>
 public partial class V1beta1FunctionAppFunctionStatus
 {
     /// <summary></summary>
@@ -602,6 +626,7 @@ public partial class V1beta1FunctionAppFunctionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>FunctionAppFunction is the Schema for the FunctionAppFunctions API. Manages a Function App Function.</summary>
 public partial class V1beta1FunctionAppFunction : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FunctionAppFunctionSpec>, IStatus<V1beta1FunctionAppFunctionStatus>
 {
     public const string KubeApiVersion = "v1beta1";

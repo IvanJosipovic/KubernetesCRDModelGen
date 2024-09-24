@@ -18,6 +18,7 @@ public enum V1beta1CustomProviderSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomProviderSpecForProviderAction
 {
     /// <summary>Specifies the endpoint of the action.</summary>
@@ -49,6 +50,7 @@ public enum V1beta1CustomProviderSpecForProviderResourceGroupNameRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CustomProviderSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -62,6 +64,7 @@ public partial class V1beta1CustomProviderSpecForProviderResourceGroupNameRefPol
     public V1beta1CustomProviderSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1CustomProviderSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -93,6 +96,7 @@ public enum V1beta1CustomProviderSpecForProviderResourceGroupNameSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CustomProviderSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -106,6 +110,7 @@ public partial class V1beta1CustomProviderSpecForProviderResourceGroupNameSelect
     public V1beta1CustomProviderSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1CustomProviderSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1CustomProviderSpecForProviderResourceGroupNameSelect
     public V1beta1CustomProviderSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomProviderSpecForProviderResourceType
 {
     /// <summary>Specifies the endpoint of the route definition.</summary>
@@ -136,6 +142,7 @@ public partial class V1beta1CustomProviderSpecForProviderResourceType
     public string? RoutingType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomProviderSpecForProviderValidation
 {
     /// <summary>The endpoint where the validation specification is located.</summary>
@@ -143,6 +150,7 @@ public partial class V1beta1CustomProviderSpecForProviderValidation
     public string? Specification { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomProviderSpecForProvider
 {
     /// <summary>Any number of action block as defined below. One of resource_type or action must be specified.</summary>
@@ -178,6 +186,7 @@ public partial class V1beta1CustomProviderSpecForProvider
     public IList<V1beta1CustomProviderSpecForProviderValidation>? Validation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomProviderSpecInitProviderAction
 {
     /// <summary>Specifies the endpoint of the action.</summary>
@@ -189,6 +198,7 @@ public partial class V1beta1CustomProviderSpecInitProviderAction
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomProviderSpecInitProviderResourceType
 {
     /// <summary>Specifies the endpoint of the route definition.</summary>
@@ -204,6 +214,7 @@ public partial class V1beta1CustomProviderSpecInitProviderResourceType
     public string? RoutingType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomProviderSpecInitProviderValidation
 {
     /// <summary>The endpoint where the validation specification is located.</summary>
@@ -211,6 +222,7 @@ public partial class V1beta1CustomProviderSpecInitProviderValidation
     public string? Specification { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1CustomProviderSpecInitProvider
 {
     /// <summary>Any number of action block as defined below. One of resource_type or action must be specified.</summary>
@@ -276,6 +288,7 @@ public enum V1beta1CustomProviderSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CustomProviderSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -289,6 +302,7 @@ public partial class V1beta1CustomProviderSpecProviderConfigRefPolicy
     public V1beta1CustomProviderSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1CustomProviderSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -320,6 +334,7 @@ public enum V1beta1CustomProviderSpecPublishConnectionDetailsToConfigRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CustomProviderSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -333,6 +348,7 @@ public partial class V1beta1CustomProviderSpecPublishConnectionDetailsToConfigRe
     public V1beta1CustomProviderSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1CustomProviderSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -344,6 +360,7 @@ public partial class V1beta1CustomProviderSpecPublishConnectionDetailsToConfigRe
     public V1beta1CustomProviderSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1CustomProviderSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -359,6 +376,7 @@ public partial class V1beta1CustomProviderSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1CustomProviderSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -374,6 +392,7 @@ public partial class V1beta1CustomProviderSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1CustomProviderSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -385,6 +404,7 @@ public partial class V1beta1CustomProviderSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>CustomProviderSpec defines the desired state of CustomProvider</summary>
 public partial class V1beta1CustomProviderSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -417,6 +437,7 @@ public partial class V1beta1CustomProviderSpec
     public V1beta1CustomProviderSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomProviderStatusAtProviderAction
 {
     /// <summary>Specifies the endpoint of the action.</summary>
@@ -428,6 +449,7 @@ public partial class V1beta1CustomProviderStatusAtProviderAction
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomProviderStatusAtProviderResourceType
 {
     /// <summary>Specifies the endpoint of the route definition.</summary>
@@ -443,6 +465,7 @@ public partial class V1beta1CustomProviderStatusAtProviderResourceType
     public string? RoutingType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomProviderStatusAtProviderValidation
 {
     /// <summary>The endpoint where the validation specification is located.</summary>
@@ -450,6 +473,7 @@ public partial class V1beta1CustomProviderStatusAtProviderValidation
     public string? Specification { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomProviderStatusAtProvider
 {
     /// <summary>Any number of action block as defined below. One of resource_type or action must be specified.</summary>
@@ -481,6 +505,7 @@ public partial class V1beta1CustomProviderStatusAtProvider
     public IList<V1beta1CustomProviderStatusAtProviderValidation>? Validation { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1CustomProviderStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -508,6 +533,7 @@ public partial class V1beta1CustomProviderStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>CustomProviderStatus defines the observed state of CustomProvider.</summary>
 public partial class V1beta1CustomProviderStatus
 {
     /// <summary></summary>
@@ -524,6 +550,7 @@ public partial class V1beta1CustomProviderStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>CustomProvider is the Schema for the CustomProviders API. Manages an Azure Custom Provider.</summary>
 public partial class V1beta1CustomProvider : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1CustomProviderSpec>, IStatus<V1beta1CustomProviderStatus>
 {
     public const string KubeApiVersion = "v1beta1";

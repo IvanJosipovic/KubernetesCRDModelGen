@@ -18,6 +18,7 @@ public enum V1beta1EndpointSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderDeploymentConfigAutoRollbackConfigurationAlarms
 {
     /// <summary>The name of a CloudWatch alarm in your account.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1EndpointSpecForProviderDeploymentConfigAutoRollbackC
     public string? AlarmName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderDeploymentConfigAutoRollbackConfiguration
 {
     /// <summary>List of CloudWatch alarms in your account that are configured to monitor metrics on an endpoint. If any alarms are tripped during a deployment, SageMaker rolls back the deployment. See Alarms.</summary>
@@ -32,6 +34,7 @@ public partial class V1beta1EndpointSpecForProviderDeploymentConfigAutoRollbackC
     public IList<V1beta1EndpointSpecForProviderDeploymentConfigAutoRollbackConfigurationAlarms>? Alarms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySize
 {
     /// <summary>Traffic routing strategy type. Valid values are: ALL_AT_ONCE, CANARY, and LINEAR.</summary>
@@ -43,6 +46,7 @@ public partial class V1beta1EndpointSpecForProviderDeploymentConfigBlueGreenUpda
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSize
 {
     /// <summary>Traffic routing strategy type. Valid values are: ALL_AT_ONCE, CANARY, and LINEAR.</summary>
@@ -54,6 +58,7 @@ public partial class V1beta1EndpointSpecForProviderDeploymentConfigBlueGreenUpda
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfiguration
 {
     /// <summary>Batch size for the first step to turn on traffic on the new endpoint fleet. Value must be less than or equal to 50% of the variant's total instance count. See Canary Size.</summary>
@@ -73,6 +78,7 @@ public partial class V1beta1EndpointSpecForProviderDeploymentConfigBlueGreenUpda
     public double? WaitIntervalInSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderDeploymentConfigBlueGreenUpdatePolicy
 {
     /// <summary>Maximum execution timeout for the deployment. Note that the timeout value should be larger than the total waiting time specified in termination_wait_in_seconds and wait_interval_in_seconds. Valid values are between 600 and 14400.</summary>
@@ -88,6 +94,7 @@ public partial class V1beta1EndpointSpecForProviderDeploymentConfigBlueGreenUpda
     public IList<V1beta1EndpointSpecForProviderDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfiguration>? TrafficRoutingConfiguration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderDeploymentConfigRollingUpdatePolicyMaximumBatchSize
 {
     /// <summary>Traffic routing strategy type. Valid values are: ALL_AT_ONCE, CANARY, and LINEAR.</summary>
@@ -99,6 +106,7 @@ public partial class V1beta1EndpointSpecForProviderDeploymentConfigRollingUpdate
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderDeploymentConfigRollingUpdatePolicyRollbackMaximumBatchSize
 {
     /// <summary>Traffic routing strategy type. Valid values are: ALL_AT_ONCE, CANARY, and LINEAR.</summary>
@@ -110,6 +118,7 @@ public partial class V1beta1EndpointSpecForProviderDeploymentConfigRollingUpdate
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderDeploymentConfigRollingUpdatePolicy
 {
     /// <summary>Batch size for each rolling step to provision capacity and turn on traffic on the new endpoint fleet, and terminate capacity on the old endpoint fleet. Value must be between 5% to 50% of the variant's total instance count. See Maximum Batch Size.</summary>
@@ -129,6 +138,7 @@ public partial class V1beta1EndpointSpecForProviderDeploymentConfigRollingUpdate
     public double? WaitIntervalInSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderDeploymentConfig
 {
     /// <summary>Automatic rollback configuration for handling endpoint deployment failures and recovery. See Auto Rollback Configuration.</summary>
@@ -164,6 +174,7 @@ public enum V1beta1EndpointSpecForProviderEndpointConfigNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EndpointSpecForProviderEndpointConfigNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -177,6 +188,7 @@ public partial class V1beta1EndpointSpecForProviderEndpointConfigNameRefPolicy
     public V1beta1EndpointSpecForProviderEndpointConfigNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a EndpointConfiguration in sagemaker to populate endpointConfigName.</summary>
 public partial class V1beta1EndpointSpecForProviderEndpointConfigNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -208,6 +220,7 @@ public enum V1beta1EndpointSpecForProviderEndpointConfigNameSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EndpointSpecForProviderEndpointConfigNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -221,6 +234,7 @@ public partial class V1beta1EndpointSpecForProviderEndpointConfigNameSelectorPol
     public V1beta1EndpointSpecForProviderEndpointConfigNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a EndpointConfiguration in sagemaker to populate endpointConfigName.</summary>
 public partial class V1beta1EndpointSpecForProviderEndpointConfigNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -236,6 +250,7 @@ public partial class V1beta1EndpointSpecForProviderEndpointConfigNameSelector
     public V1beta1EndpointSpecForProviderEndpointConfigNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProvider
 {
     /// <summary>The deployment configuration for an endpoint, which contains the desired deployment strategy and rollback configurations. See Deployment Config.</summary>
@@ -263,6 +278,7 @@ public partial class V1beta1EndpointSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderDeploymentConfigAutoRollbackConfigurationAlarms
 {
     /// <summary>The name of a CloudWatch alarm in your account.</summary>
@@ -270,6 +286,7 @@ public partial class V1beta1EndpointSpecInitProviderDeploymentConfigAutoRollback
     public string? AlarmName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderDeploymentConfigAutoRollbackConfiguration
 {
     /// <summary>List of CloudWatch alarms in your account that are configured to monitor metrics on an endpoint. If any alarms are tripped during a deployment, SageMaker rolls back the deployment. See Alarms.</summary>
@@ -277,6 +294,7 @@ public partial class V1beta1EndpointSpecInitProviderDeploymentConfigAutoRollback
     public IList<V1beta1EndpointSpecInitProviderDeploymentConfigAutoRollbackConfigurationAlarms>? Alarms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySize
 {
     /// <summary>Traffic routing strategy type. Valid values are: ALL_AT_ONCE, CANARY, and LINEAR.</summary>
@@ -288,6 +306,7 @@ public partial class V1beta1EndpointSpecInitProviderDeploymentConfigBlueGreenUpd
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSize
 {
     /// <summary>Traffic routing strategy type. Valid values are: ALL_AT_ONCE, CANARY, and LINEAR.</summary>
@@ -299,6 +318,7 @@ public partial class V1beta1EndpointSpecInitProviderDeploymentConfigBlueGreenUpd
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfiguration
 {
     /// <summary>Batch size for the first step to turn on traffic on the new endpoint fleet. Value must be less than or equal to 50% of the variant's total instance count. See Canary Size.</summary>
@@ -318,6 +338,7 @@ public partial class V1beta1EndpointSpecInitProviderDeploymentConfigBlueGreenUpd
     public double? WaitIntervalInSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderDeploymentConfigBlueGreenUpdatePolicy
 {
     /// <summary>Maximum execution timeout for the deployment. Note that the timeout value should be larger than the total waiting time specified in termination_wait_in_seconds and wait_interval_in_seconds. Valid values are between 600 and 14400.</summary>
@@ -333,6 +354,7 @@ public partial class V1beta1EndpointSpecInitProviderDeploymentConfigBlueGreenUpd
     public IList<V1beta1EndpointSpecInitProviderDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfiguration>? TrafficRoutingConfiguration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderDeploymentConfigRollingUpdatePolicyMaximumBatchSize
 {
     /// <summary>Traffic routing strategy type. Valid values are: ALL_AT_ONCE, CANARY, and LINEAR.</summary>
@@ -344,6 +366,7 @@ public partial class V1beta1EndpointSpecInitProviderDeploymentConfigRollingUpdat
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderDeploymentConfigRollingUpdatePolicyRollbackMaximumBatchSize
 {
     /// <summary>Traffic routing strategy type. Valid values are: ALL_AT_ONCE, CANARY, and LINEAR.</summary>
@@ -355,6 +378,7 @@ public partial class V1beta1EndpointSpecInitProviderDeploymentConfigRollingUpdat
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderDeploymentConfigRollingUpdatePolicy
 {
     /// <summary>Batch size for each rolling step to provision capacity and turn on traffic on the new endpoint fleet, and terminate capacity on the old endpoint fleet. Value must be between 5% to 50% of the variant's total instance count. See Maximum Batch Size.</summary>
@@ -374,6 +398,7 @@ public partial class V1beta1EndpointSpecInitProviderDeploymentConfigRollingUpdat
     public double? WaitIntervalInSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderDeploymentConfig
 {
     /// <summary>Automatic rollback configuration for handling endpoint deployment failures and recovery. See Auto Rollback Configuration.</summary>
@@ -409,6 +434,7 @@ public enum V1beta1EndpointSpecInitProviderEndpointConfigNameRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EndpointSpecInitProviderEndpointConfigNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -422,6 +448,7 @@ public partial class V1beta1EndpointSpecInitProviderEndpointConfigNameRefPolicy
     public V1beta1EndpointSpecInitProviderEndpointConfigNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a EndpointConfiguration in sagemaker to populate endpointConfigName.</summary>
 public partial class V1beta1EndpointSpecInitProviderEndpointConfigNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -453,6 +480,7 @@ public enum V1beta1EndpointSpecInitProviderEndpointConfigNameSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EndpointSpecInitProviderEndpointConfigNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -466,6 +494,7 @@ public partial class V1beta1EndpointSpecInitProviderEndpointConfigNameSelectorPo
     public V1beta1EndpointSpecInitProviderEndpointConfigNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a EndpointConfiguration in sagemaker to populate endpointConfigName.</summary>
 public partial class V1beta1EndpointSpecInitProviderEndpointConfigNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -481,6 +510,7 @@ public partial class V1beta1EndpointSpecInitProviderEndpointConfigNameSelector
     public V1beta1EndpointSpecInitProviderEndpointConfigNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1EndpointSpecInitProvider
 {
     /// <summary>The deployment configuration for an endpoint, which contains the desired deployment strategy and rollback configurations. See Deployment Config.</summary>
@@ -546,6 +576,7 @@ public enum V1beta1EndpointSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EndpointSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -559,6 +590,7 @@ public partial class V1beta1EndpointSpecProviderConfigRefPolicy
     public V1beta1EndpointSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1EndpointSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -590,6 +622,7 @@ public enum V1beta1EndpointSpecPublishConnectionDetailsToConfigRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EndpointSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -603,6 +636,7 @@ public partial class V1beta1EndpointSpecPublishConnectionDetailsToConfigRefPolic
     public V1beta1EndpointSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1EndpointSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -614,6 +648,7 @@ public partial class V1beta1EndpointSpecPublishConnectionDetailsToConfigRef
     public V1beta1EndpointSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1EndpointSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -629,6 +664,7 @@ public partial class V1beta1EndpointSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1EndpointSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -644,6 +680,7 @@ public partial class V1beta1EndpointSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1EndpointSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -655,6 +692,7 @@ public partial class V1beta1EndpointSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>EndpointSpec defines the desired state of Endpoint</summary>
 public partial class V1beta1EndpointSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -687,6 +725,7 @@ public partial class V1beta1EndpointSpec
     public V1beta1EndpointSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderDeploymentConfigAutoRollbackConfigurationAlarms
 {
     /// <summary>The name of a CloudWatch alarm in your account.</summary>
@@ -694,6 +733,7 @@ public partial class V1beta1EndpointStatusAtProviderDeploymentConfigAutoRollback
     public string? AlarmName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderDeploymentConfigAutoRollbackConfiguration
 {
     /// <summary>List of CloudWatch alarms in your account that are configured to monitor metrics on an endpoint. If any alarms are tripped during a deployment, SageMaker rolls back the deployment. See Alarms.</summary>
@@ -701,6 +741,7 @@ public partial class V1beta1EndpointStatusAtProviderDeploymentConfigAutoRollback
     public IList<V1beta1EndpointStatusAtProviderDeploymentConfigAutoRollbackConfigurationAlarms>? Alarms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySize
 {
     /// <summary>Traffic routing strategy type. Valid values are: ALL_AT_ONCE, CANARY, and LINEAR.</summary>
@@ -712,6 +753,7 @@ public partial class V1beta1EndpointStatusAtProviderDeploymentConfigBlueGreenUpd
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSize
 {
     /// <summary>Traffic routing strategy type. Valid values are: ALL_AT_ONCE, CANARY, and LINEAR.</summary>
@@ -723,6 +765,7 @@ public partial class V1beta1EndpointStatusAtProviderDeploymentConfigBlueGreenUpd
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfiguration
 {
     /// <summary>Batch size for the first step to turn on traffic on the new endpoint fleet. Value must be less than or equal to 50% of the variant's total instance count. See Canary Size.</summary>
@@ -742,6 +785,7 @@ public partial class V1beta1EndpointStatusAtProviderDeploymentConfigBlueGreenUpd
     public double? WaitIntervalInSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderDeploymentConfigBlueGreenUpdatePolicy
 {
     /// <summary>Maximum execution timeout for the deployment. Note that the timeout value should be larger than the total waiting time specified in termination_wait_in_seconds and wait_interval_in_seconds. Valid values are between 600 and 14400.</summary>
@@ -757,6 +801,7 @@ public partial class V1beta1EndpointStatusAtProviderDeploymentConfigBlueGreenUpd
     public IList<V1beta1EndpointStatusAtProviderDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfiguration>? TrafficRoutingConfiguration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderDeploymentConfigRollingUpdatePolicyMaximumBatchSize
 {
     /// <summary>Traffic routing strategy type. Valid values are: ALL_AT_ONCE, CANARY, and LINEAR.</summary>
@@ -768,6 +813,7 @@ public partial class V1beta1EndpointStatusAtProviderDeploymentConfigRollingUpdat
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderDeploymentConfigRollingUpdatePolicyRollbackMaximumBatchSize
 {
     /// <summary>Traffic routing strategy type. Valid values are: ALL_AT_ONCE, CANARY, and LINEAR.</summary>
@@ -779,6 +825,7 @@ public partial class V1beta1EndpointStatusAtProviderDeploymentConfigRollingUpdat
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderDeploymentConfigRollingUpdatePolicy
 {
     /// <summary>Batch size for each rolling step to provision capacity and turn on traffic on the new endpoint fleet, and terminate capacity on the old endpoint fleet. Value must be between 5% to 50% of the variant's total instance count. See Maximum Batch Size.</summary>
@@ -798,6 +845,7 @@ public partial class V1beta1EndpointStatusAtProviderDeploymentConfigRollingUpdat
     public double? WaitIntervalInSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderDeploymentConfig
 {
     /// <summary>Automatic rollback configuration for handling endpoint deployment failures and recovery. See Auto Rollback Configuration.</summary>
@@ -813,6 +861,7 @@ public partial class V1beta1EndpointStatusAtProviderDeploymentConfig
     public IList<V1beta1EndpointStatusAtProviderDeploymentConfigRollingUpdatePolicy>? RollingUpdatePolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProvider
 {
     /// <summary>The Amazon Resource Name (ARN) assigned by AWS to this endpoint.</summary>
@@ -840,6 +889,7 @@ public partial class V1beta1EndpointStatusAtProvider
     public IDictionary<string, string>? TagsAll { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1EndpointStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -867,6 +917,7 @@ public partial class V1beta1EndpointStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>EndpointStatus defines the observed state of Endpoint.</summary>
 public partial class V1beta1EndpointStatus
 {
     /// <summary></summary>
@@ -883,6 +934,7 @@ public partial class V1beta1EndpointStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Endpoint is the Schema for the Endpoints API. Provides a SageMaker Endpoint resource.</summary>
 public partial class V1beta1Endpoint : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1EndpointSpec>, IStatus<V1beta1EndpointStatus>
 {
     public const string KubeApiVersion = "v1beta1";

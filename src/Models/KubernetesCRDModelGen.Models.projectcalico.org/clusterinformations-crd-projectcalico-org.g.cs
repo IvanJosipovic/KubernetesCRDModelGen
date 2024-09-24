@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.crd.projectcalico.org;
+/// <summary>ClusterInformationSpec contains the values of describing the cluster.</summary>
 public partial class V1ClusterInformationSpec
 {
     /// <summary>CalicoVersion is the version of Calico that the cluster is running</summary>
@@ -32,6 +33,7 @@ public partial class V1ClusterInformationSpec
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ClusterInformation contains the cluster specific information.</summary>
 public partial class V1ClusterInformation : IKubernetesObject<V1ObjectMeta>, ISpec<V1ClusterInformationSpec>
 {
     public const string KubeApiVersion = "v1";

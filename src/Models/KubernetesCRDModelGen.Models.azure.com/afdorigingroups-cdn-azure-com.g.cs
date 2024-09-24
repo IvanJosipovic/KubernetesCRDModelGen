@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cdn.azure.com;
+/// <summary>Storage version of v1api20230501.HealthProbeParameters The JSON object that contains the properties to send health probes to origin.</summary>
 public partial class V1api20230501storageAfdOriginGroupSpecHealthProbeSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -31,6 +32,7 @@ public partial class V1api20230501storageAfdOriginGroupSpecHealthProbeSettings
     public string? ProbeRequestType { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.LoadBalancingSettingsParameters Round-Robin load balancing settings for a backend pool</summary>
 public partial class V1api20230501storageAfdOriginGroupSpecLoadBalancingSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -50,6 +52,7 @@ public partial class V1api20230501storageAfdOriginGroupSpecLoadBalancingSettings
     public int? SuccessfulSamplesRequired { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a cdn.azure.com/Profile resource</summary>
 public partial class V1api20230501storageAfdOriginGroupSpecOwner
 {
     /// <summary></summary>
@@ -61,6 +64,7 @@ public partial class V1api20230501storageAfdOriginGroupSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.Profiles_OriginGroup_Spec</summary>
 public partial class V1api20230501storageAfdOriginGroupSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -96,6 +100,7 @@ public partial class V1api20230501storageAfdOriginGroupSpec
     public int? TrafficRestorationTimeToHealedOrNewEndpointsInMinutes { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20230501storageAfdOriginGroupStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -127,6 +132,7 @@ public partial class V1api20230501storageAfdOriginGroupStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.HealthProbeParameters_STATUS The JSON object that contains the properties to send health probes to origin.</summary>
 public partial class V1api20230501storageAfdOriginGroupStatusHealthProbeSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -150,6 +156,7 @@ public partial class V1api20230501storageAfdOriginGroupStatusHealthProbeSettings
     public string? ProbeRequestType { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.LoadBalancingSettingsParameters_STATUS Round-Robin load balancing settings for a backend pool</summary>
 public partial class V1api20230501storageAfdOriginGroupStatusLoadBalancingSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -169,6 +176,7 @@ public partial class V1api20230501storageAfdOriginGroupStatusLoadBalancingSettin
     public int? SuccessfulSamplesRequired { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.SystemData_STATUS Read only system data</summary>
 public partial class V1api20230501storageAfdOriginGroupStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -200,6 +208,7 @@ public partial class V1api20230501storageAfdOriginGroupStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
+/// <summary>Storage version of v1api20230501.Profiles_OriginGroup_STATUS</summary>
 public partial class V1api20230501storageAfdOriginGroupStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -256,6 +265,7 @@ public partial class V1api20230501storageAfdOriginGroupStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20230501.AfdOriginGroup Generator information: - Generated from: /cdn/resource-manager/Microsoft.Cdn/stable/2023-05-01/afdx.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/originGroups/{originGroupName}</summary>
 public partial class V1api20230501storageAfdOriginGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230501storageAfdOriginGroupSpec>, IStatus<V1api20230501storageAfdOriginGroupStatus>
 {
     public const string KubeApiVersion = "v1api20230501storage";

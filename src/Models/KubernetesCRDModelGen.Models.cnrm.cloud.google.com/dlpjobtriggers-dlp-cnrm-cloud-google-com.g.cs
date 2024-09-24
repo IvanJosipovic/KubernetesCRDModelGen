@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dlp.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobActionsPubSubTopicRef
 {
     /// <summary>Cloud Pub/Sub topic to send notifications to. The topic must have given publishing access rights to the DLP API service account executing the long running DlpJob sending the notifications. Format is projects/{project}/topics/{topic}.  Allowed value: The Google Cloud resource name of a `PubSubTopic` resource (format: `projects/{{project}}/topics/{{name}}`).</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobActionsPubSubTopicRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Publish a notification to a pubsub topic.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobActionsPubSub
 {
     /// <summary></summary>
@@ -30,6 +32,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobActionsPubSub
     public V1beta1DLPJobTriggerSpecInspectJobActionsPubSubTopicRef? TopicRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutputConfigTableDatasetRef
 {
     /// <summary>Dataset ID of the table.  Allowed value: The Google Cloud resource name of a `BigQueryDataset` resource (format: `projects/{{project}}/datasets/{{name}}`).</summary>
@@ -45,6 +48,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutput
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutputConfigTableProjectRef
 {
     /// <summary>The Google Cloud Platform project ID of the project containing the table. If omitted, project ID is inferred from the API call.  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -60,6 +64,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutput
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutputConfigTableTableRef
 {
     /// <summary>Name of the table.  Allowed value: The Google Cloud resource name of a `BigQueryTable` resource (format: `projects/{{project}}/datasets/{{dataset_id}}/tables/{{name}}`).</summary>
@@ -75,6 +80,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutput
     public string? Namespace { get; set; }
 }
 
+/// <summary>Store findings in an existing table or a new table in an existing dataset. If table_id is not set a new one will be generated for you with the following format: dlp_googleapis_yyyy_mm_dd_[dlp_job_id]. Pacific timezone will be used for generating the date details. For Inspect, each column in an existing output table must have the same name, type, and mode of a field in the `Finding` object. For Risk, an existing output table should be the output of a previous Risk analysis job run on the same source table, with the same privacy metric and quasi-identifiers. Risk jobs that analyze the same table but compute a different privacy metric, or use different sets of quasi-identifiers, cannot store their results in the same table.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutputConfigTable
 {
     /// <summary></summary>
@@ -90,6 +96,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutput
     public V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutputConfigTableTableRef? TableRef { get; set; }
 }
 
+/// <summary>Location to store findings outside of DLP.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutputConfig
 {
     /// <summary>Store findings directly to DLP. If neither this or bigquery is chosen only summary stats of total infotype count will be stored. Quotes will not be stored to dlp findings. If quotes are needed, store to BigQuery. Currently only for inspect jobs.</summary>
@@ -105,6 +112,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutput
     public V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutputConfigTable? Table { get; set; }
 }
 
+/// <summary>Save resulting findings in a provided location.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindings
 {
     /// <summary>Location to store findings outside of DLP.</summary>
@@ -112,6 +120,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindings
     public V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutputConfig? OutputConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobActions
 {
     /// <summary>Enable email notification for project owners and editors on job's completion/failure.</summary>
@@ -139,6 +148,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobActions
     public V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindings? SaveFindings { get; set; }
 }
 
+/// <summary>Regular expression pattern defining what qualifies as a hotword.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDetectionRulesHotwordRuleHotwordRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -150,6 +160,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTy
     public string? Pattern { get; set; }
 }
 
+/// <summary>Likelihood adjustment to apply to all matching findings.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDetectionRulesHotwordRuleLikelihoodAdjustment
 {
     /// <summary>Set the likelihood of a finding to a fixed value. Possible values: LIKELIHOOD_UNSPECIFIED, VERY_UNLIKELY, UNLIKELY, POSSIBLE, LIKELY, VERY_LIKELY</summary>
@@ -161,6 +172,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTy
     public long? RelativeLikelihood { get; set; }
 }
 
+/// <summary>Proximity of the finding within which the entire hotword must reside. The total length of the window cannot exceed 1000 characters. Note that the finding itself will be included in the window, so that hotwords may be used to match substrings of the finding itself. For example, the certainty of a phone number regex "(d{3}) d{3}-d{4}" could be adjusted upwards if the area code is known to be the local area code of a company office using the hotword regex "(xxx)", where "xxx" is the area code in question.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDetectionRulesHotwordRuleProximity
 {
     /// <summary>Number of characters after the finding to consider.</summary>
@@ -172,6 +184,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTy
     public long? WindowBefore { get; set; }
 }
 
+/// <summary>Hotword-based detection rule.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDetectionRulesHotwordRule
 {
     /// <summary>Regular expression pattern defining what qualifies as a hotword.</summary>
@@ -187,6 +200,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTy
     public V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDetectionRulesHotwordRuleProximity? Proximity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDetectionRules
 {
     /// <summary>Hotword-based detection rule.</summary>
@@ -194,6 +208,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTy
     public V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDetectionRulesHotwordRule? HotwordRule { get; set; }
 }
 
+/// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDictionaryCloudStoragePath
 {
     /// <summary>A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt</summary>
@@ -201,6 +216,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTy
     public string? Path { get; set; }
 }
 
+/// <summary>List of words or phrases to search for.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDictionaryWordList
 {
     /// <summary>Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits. [required]</summary>
@@ -208,6 +224,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTy
     public IList<string>? Words { get; set; }
 }
 
+/// <summary>A list of phrases to detect as a CustomInfoType.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDictionary
 {
     /// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted.</summary>
@@ -219,6 +236,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTy
     public V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDictionaryWordList? WordList { get; set; }
 }
 
+/// <summary>CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing infoTypes and that infoType is specified in `InspectContent.info_types` field. Specifying the latter adds findings to the one detected by the system. If built-in info type is not specified in `InspectContent.info_types` list then the name is treated as a custom info type.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesInfoType
 {
     /// <summary>Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.</summary>
@@ -230,6 +248,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTy
     public string? Version { get; set; }
 }
 
+/// <summary>Regular expression based CustomInfoType.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -241,6 +260,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTy
     public string? Pattern { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesStoredTypeNameRef
 {
     /// <summary>Resource name of the requested `StoredInfoType`, for example `organizations/433245324/storedInfoTypes/432452342` or `projects/project-id/storedInfoTypes/432452342`.  Allowed value: The Google Cloud resource name of a `DLPStoredInfoType` resource (format: `{{parent}}/storedInfoTypes/{{name}}`).</summary>
@@ -256,6 +276,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTy
     public string? Namespace { get; set; }
 }
 
+/// <summary>Load an existing `StoredInfoType` resource for use in `InspectDataSource`. Not currently supported in `InspectContent`.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesStoredType
 {
     /// <summary>Timestamp indicating when the version of the `StoredInfoType` used for inspection was created. Output-only field, populated by the system.</summary>
@@ -267,6 +288,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTy
     public V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesStoredTypeNameRef? NameRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypes
 {
     /// <summary>Set of detection rules to apply to all findings of this CustomInfoType. Rules are applied in order that they are specified. Not supported for the `surrogate_type` CustomInfoType.</summary>
@@ -302,6 +324,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTy
     public JsonNode? SurrogateType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigInfoTypes
 {
     /// <summary>Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.</summary>
@@ -309,6 +332,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigInfoTypes
     public string? Name { get; set; }
 }
 
+/// <summary>Type of information the findings limit applies to. Only one limit per info_type should be provided. If InfoTypeLimit does not have an info_type, the DLP API applies the limit against all info_types that are found but not specified in another InfoTypeLimit.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeInfoType
 {
     /// <summary>Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.</summary>
@@ -320,6 +344,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigLimitsMaxFin
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigLimitsMaxFindingsPerInfoType
 {
     /// <summary>Type of information the findings limit applies to. Only one limit per info_type should be provided. If InfoTypeLimit does not have an info_type, the DLP API applies the limit against all info_types that are found but not specified in another InfoTypeLimit.</summary>
@@ -331,6 +356,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigLimitsMaxFin
     public long? MaxFindings { get; set; }
 }
 
+/// <summary>Configuration to control the number of findings returned. This is not used for data profiling.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigLimits
 {
     /// <summary>Configuration of findings limit given for specified infoTypes.</summary>
@@ -346,6 +372,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigLimits
     public long? MaxFindingsPerRequest { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetInfoTypes
 {
     /// <summary>Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.</summary>
@@ -357,6 +384,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetInfoT
     public string? Version { get; set; }
 }
 
+/// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath
 {
     /// <summary>A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt</summary>
@@ -364,6 +392,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules
     public string? Path { get; set; }
 }
 
+/// <summary>List of words or phrases to search for.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryWordList
 {
     /// <summary>Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits. [required]</summary>
@@ -371,6 +400,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules
     public IList<string>? Words { get; set; }
 }
 
+/// <summary>Dictionary which defines the rule.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleDictionary
 {
     /// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted.</summary>
@@ -382,6 +412,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules
     public V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryWordList? WordList { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes
 {
     /// <summary>Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.</summary>
@@ -393,6 +424,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules
     public string? Version { get; set; }
 }
 
+/// <summary>Set of infoTypes for which findings would affect this rule.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes
 {
     /// <summary>InfoType list in ExclusionRule rule drops a finding when it overlaps or contained within with a finding of an infoType from this list. For example, for `InspectionRuleSet.info_types` containing "PHONE_NUMBER"` and `exclusion_rule` containing `exclude_info_types.info_types` with "EMAIL_ADDRESS" the phone number findings are dropped if they overlap with EMAIL_ADDRESS finding. That leads to "555-222-2222@example.org" to generate only a single finding, namely email address.</summary>
@@ -400,6 +432,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules
     public IList<V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes>? InfoTypes { get; set; }
 }
 
+/// <summary>Regular expression which defines the rule.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -411,6 +444,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules
     public string? Pattern { get; set; }
 }
 
+/// <summary>Exclusion rule.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRule
 {
     /// <summary>Dictionary which defines the rule.</summary>
@@ -430,6 +464,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules
     public V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleRegex? Regex { get; set; }
 }
 
+/// <summary>Regular expression pattern defining what qualifies as a hotword.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesHotwordRuleHotwordRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
@@ -441,6 +476,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules
     public string? Pattern { get; set; }
 }
 
+/// <summary>Likelihood adjustment to apply to all matching findings.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment
 {
     /// <summary>Set the likelihood of a finding to a fixed value. Possible values: LIKELIHOOD_UNSPECIFIED, VERY_UNLIKELY, UNLIKELY, POSSIBLE, LIKELY, VERY_LIKELY</summary>
@@ -452,6 +488,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules
     public long? RelativeLikelihood { get; set; }
 }
 
+/// <summary>Proximity of the finding within which the entire hotword must reside. The total length of the window cannot exceed 1000 characters. Note that the finding itself will be included in the window, so that hotwords may be used to match substrings of the finding itself. For example, the certainty of a phone number regex "(d{3}) d{3}-d{4}" could be adjusted upwards if the area code is known to be the local area code of a company office using the hotword regex "(xxx)", where "xxx" is the area code in question.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesHotwordRuleProximity
 {
     /// <summary>Number of characters after the finding to consider.</summary>
@@ -463,6 +500,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules
     public long? WindowBefore { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesHotwordRule
 {
     /// <summary>Regular expression pattern defining what qualifies as a hotword.</summary>
@@ -478,6 +516,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules
     public V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesHotwordRuleProximity? Proximity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules
 {
     /// <summary>Exclusion rule.</summary>
@@ -489,6 +528,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules
     public V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesHotwordRule? HotwordRule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSet
 {
     /// <summary>List of infoTypes this rule set is applied to.</summary>
@@ -500,6 +540,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSet
     public IList<V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules>? Rules { get; set; }
 }
 
+/// <summary>How and what to scan for.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfig
 {
     /// <summary>CustomInfoTypes provided by the user. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.</summary>
@@ -531,6 +572,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfig
     public IList<V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSet>? RuleSet { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobInspectTemplateRef
 {
     /// <summary>If provided, will be used as the default for all values in InspectConfig. `inspect_config` will be merged into the values persisted as part of the template.  Allowed value: The Google Cloud resource name of a `DLPInspectTemplate` resource (format: `{{parent}}/inspectTemplates/{{name}}`).</summary>
@@ -546,6 +588,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectTemplateRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsExcludedFields
 {
     /// <summary>Name describing the field.</summary>
@@ -553,6 +596,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOpti
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsIdentifyingFields
 {
     /// <summary>Name describing the field.</summary>
@@ -560,6 +604,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOpti
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsIncludedFields
 {
     /// <summary>Name describing the field.</summary>
@@ -567,6 +612,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOpti
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsTableReferenceDatasetRef
 {
     /// <summary>Dataset ID of the table.  Allowed value: The Google Cloud resource name of a `BigQueryDataset` resource (format: `projects/{{project}}/datasets/{{name}}`).</summary>
@@ -582,6 +628,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOpti
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsTableReferenceProjectRef
 {
     /// <summary>The Google Cloud Platform project ID of the project containing the table. If omitted, project ID is inferred from the API call.  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -597,6 +644,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOpti
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsTableReferenceTableRef
 {
     /// <summary>Name of the table.  Allowed value: The Google Cloud resource name of a `BigQueryTable` resource (format: `projects/{{project}}/datasets/{{dataset_id}}/tables/{{name}}`).</summary>
@@ -612,6 +660,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOpti
     public string? Namespace { get; set; }
 }
 
+/// <summary>Complete BigQuery table reference.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsTableReference
 {
     /// <summary></summary>
@@ -627,6 +676,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOpti
     public V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsTableReferenceTableRef? TableRef { get; set; }
 }
 
+/// <summary>BigQuery options.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptions
 {
     /// <summary>References to fields excluded from scanning. This allows you to skip inspection of entire columns which you know have no findings.</summary>
@@ -658,6 +708,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOpti
     public V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsTableReference TableReference { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetBucketRef
 {
     /// <summary>The name of a Cloud Storage bucket. Required.  Allowed value: The Google Cloud resource name of a `StorageBucket` resource (format: `{{name}}`).</summary>
@@ -673,6 +724,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigCloudStorage
     public string? Namespace { get; set; }
 }
 
+/// <summary>The regex-filtered set of files to scan. Exactly one of `url` or `regex_file_set` must be set.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet
 {
     /// <summary></summary>
@@ -688,6 +740,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigCloudStorage
     public IList<string>? IncludeRegex { get; set; }
 }
 
+/// <summary>The set of one or more files to scan.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigCloudStorageOptionsFileSet
 {
     /// <summary>The regex-filtered set of files to scan. Exactly one of `url` or `regex_file_set` must be set.</summary>
@@ -699,6 +752,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigCloudStorage
     public string? Url { get; set; }
 }
 
+/// <summary>Google Cloud Storage options.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigCloudStorageOptions
 {
     /// <summary>Max number of bytes to scan from a file. If a scanned file's size is bigger than this value then the rest of the bytes are omitted. Only one of bytes_limit_per_file and bytes_limit_per_file_percent can be specified. Cannot be set if de-identification is requested.</summary>
@@ -726,6 +780,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigCloudStorage
     public string? SampleMethod { get; set; }
 }
 
+/// <summary>The kind to process.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigDatastoreOptionsKind
 {
     /// <summary>The name of the kind.</summary>
@@ -733,6 +788,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigDatastoreOpt
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigDatastoreOptionsPartitionIdProjectRef
 {
     /// <summary>The ID of the project to which the entities belong.  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -748,6 +804,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigDatastoreOpt
     public string? Namespace { get; set; }
 }
 
+/// <summary>A partition ID identifies a grouping of entities. The grouping is always by project namespace ID may be empty.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigDatastoreOptionsPartitionId
 {
     /// <summary>If not empty, the ID of the namespace to which the entities belong.</summary>
@@ -759,6 +816,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigDatastoreOpt
     public V1beta1DLPJobTriggerSpecInspectJobStorageConfigDatastoreOptionsPartitionIdProjectRef? ProjectRef { get; set; }
 }
 
+/// <summary>Google Cloud Datastore options.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigDatastoreOptions
 {
     /// <summary>The kind to process.</summary>
@@ -770,6 +828,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigDatastoreOpt
     public V1beta1DLPJobTriggerSpecInspectJobStorageConfigDatastoreOptionsPartitionId? PartitionId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigHybridOptionsTableOptionsIdentifyingFields
 {
     /// <summary>Name describing the field.</summary>
@@ -777,6 +836,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigHybridOption
     public string? Name { get; set; }
 }
 
+/// <summary>If the container is a table, additional information to make findings meaningful such as the columns that are primary keys.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigHybridOptionsTableOptions
 {
     /// <summary>The columns that are the primary keys for table objects included in ContentItem. A copy of this cell's value will stored alongside alongside each finding so that the finding can be traced to the specific row it came from. No more than 3 may be provided.</summary>
@@ -784,6 +844,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigHybridOption
     public IList<V1beta1DLPJobTriggerSpecInspectJobStorageConfigHybridOptionsTableOptionsIdentifyingFields>? IdentifyingFields { get; set; }
 }
 
+/// <summary>Hybrid inspection options.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigHybridOptions
 {
     /// <summary>A short description of where the data is coming from. Will be stored once in the job. 256 max length.</summary>
@@ -803,6 +864,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigHybridOption
     public V1beta1DLPJobTriggerSpecInspectJobStorageConfigHybridOptionsTableOptions? TableOptions { get; set; }
 }
 
+/// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: If this value is not specified and the table was modified between the given start and end times, the entire table will be scanned. If this value is specified, then rows are filtered based on the given start and end times. Rows with a `NULL` value in the provided BigQuery column are skipped. Valid data types of the provided BigQuery column are: `INTEGER`, `DATE`, `TIMESTAMP`, and `DATETIME`. For Datastore: If this value is specified, then entities are filtered based on the given start and end times. If an entity does not contain the provided timestamp property or contains empty or invalid values, then it is included. Valid data types of the provided timestamp property are: `TIMESTAMP`.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigTimespanConfigTimestampField
 {
     /// <summary>Name describing the field.</summary>
@@ -810,6 +872,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigTimespanConf
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigTimespanConfig
 {
     /// <summary>When the job is started by a JobTrigger we will automatically figure out a valid start_time to avoid scanning files that have not been modified since the last time the JobTrigger executed. This will be based on the time of the execution of the last run of the JobTrigger.</summary>
@@ -829,6 +892,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigTimespanConf
     public V1beta1DLPJobTriggerSpecInspectJobStorageConfigTimespanConfigTimestampField? TimestampField { get; set; }
 }
 
+/// <summary>The data to scan.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfig
 {
     /// <summary>BigQuery options.</summary>
@@ -852,6 +916,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfig
     public V1beta1DLPJobTriggerSpecInspectJobStorageConfigTimespanConfig? TimespanConfig { get; set; }
 }
 
+/// <summary>For inspect jobs, a snapshot of the configuration.</summary>
 public partial class V1beta1DLPJobTriggerSpecInspectJob
 {
     /// <summary>Actions to execute at the completion of the job.</summary>
@@ -871,6 +936,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJob
     public V1beta1DLPJobTriggerSpecInspectJobStorageConfig StorageConfig { get; set; }
 }
 
+/// <summary>Immutable. The Project that this resource belongs to. Only one of [projectRef] may be specified.</summary>
 public partial class V1beta1DLPJobTriggerSpecProjectRef
 {
     /// <summary>Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -886,6 +952,7 @@ public partial class V1beta1DLPJobTriggerSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Create a job on a repeating basis based on the elapse of time.</summary>
 public partial class V1beta1DLPJobTriggerSpecTriggersSchedule
 {
     /// <summary>With this option a job is started a regular periodic basis. For example: every day (86400 seconds). A scheduled start time will be skipped if the previous execution has not ended when its scheduled time occurs. This value must be set to a time duration greater than or equal to 1 day and can be no longer than 60 days.</summary>
@@ -893,6 +960,7 @@ public partial class V1beta1DLPJobTriggerSpecTriggersSchedule
     public string? RecurrencePeriodDuration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPJobTriggerSpecTriggers
 {
     /// <summary>For use with hybrid jobs. Jobs must be manually created and finished.</summary>
@@ -904,6 +972,7 @@ public partial class V1beta1DLPJobTriggerSpecTriggers
     public V1beta1DLPJobTriggerSpecTriggersSchedule? Schedule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPJobTriggerSpec
 {
     /// <summary>User provided description (max 256 chars)</summary>
@@ -939,6 +1008,7 @@ public partial class V1beta1DLPJobTriggerSpec
     public IList<V1beta1DLPJobTriggerSpecTriggers> Triggers { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPJobTriggerStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -962,6 +1032,7 @@ public partial class V1beta1DLPJobTriggerStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPJobTriggerStatusErrorsDetailsDetails
 {
     /// <summary>A URL/resource name that uniquely identifies the type of the serialized protocol buffer message. This string must contain at least one "/" character. The last segment of the URL's path must represent the fully qualified name of the type (as in `path/google.protobuf.Duration`). The name should be in a canonical form (e.g., leading "." is not accepted). In practice, teams usually precompile into the binary all types that they expect it to use in the context of Any. However, for URLs which use the scheme `http`, `https`, or no scheme, one can optionally set up a type server that maps type URLs to message definitions as follows: * If no scheme is provided, `https` is assumed. * An HTTP GET on the URL must yield a google.protobuf.Type value in binary format, or produce an error. * Applications are allowed to cache lookup results based on the URL, or have them precompiled into a binary to avoid any lookup. Therefore, binary compatibility needs to be preserved on changes to types. (Use versioned type names to manage breaking changes.) Note: this functionality is not currently available in the official protobuf release, and it is not used for type URLs beginning with type.googleapis.com. Schemes other than `http`, `https` (or the empty scheme) might be used with implementation specific semantics.</summary>
@@ -973,6 +1044,7 @@ public partial class V1beta1DLPJobTriggerStatusErrorsDetailsDetails
     public string? Value { get; set; }
 }
 
+/// <summary>Detailed error codes and messages.</summary>
 public partial class V1beta1DLPJobTriggerStatusErrorsDetails
 {
     /// <summary>The status code, which should be an enum value of google.rpc.Code.</summary>
@@ -988,6 +1060,7 @@ public partial class V1beta1DLPJobTriggerStatusErrorsDetails
     public string? Message { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPJobTriggerStatusErrors
 {
     /// <summary>Detailed error codes and messages.</summary>
@@ -999,6 +1072,7 @@ public partial class V1beta1DLPJobTriggerStatusErrors
     public IList<string>? Timestamps { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPJobTriggerStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -1031,6 +1105,7 @@ public partial class V1beta1DLPJobTriggerStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1DLPJobTrigger : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DLPJobTriggerSpec>, IStatus<V1beta1DLPJobTriggerStatus>
 {
     public const string KubeApiVersion = "v1beta1";

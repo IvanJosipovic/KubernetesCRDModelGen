@@ -38,6 +38,7 @@ public enum V1beta1UserPoolClientSpecForProviderAnalyticsConfigurationApplicatio
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserPoolClientSpecForProviderAnalyticsConfigurationApplicationIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1UserPoolClientSpecForProviderAnalyticsConfigurationA
     public V1beta1UserPoolClientSpecForProviderAnalyticsConfigurationApplicationIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a App in pinpoint to populate applicationId.</summary>
 public partial class V1beta1UserPoolClientSpecForProviderAnalyticsConfigurationApplicationIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1UserPoolClientSpecForProviderAnalyticsConfigurationApplicatio
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserPoolClientSpecForProviderAnalyticsConfigurationApplicationIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1UserPoolClientSpecForProviderAnalyticsConfigurationA
     public V1beta1UserPoolClientSpecForProviderAnalyticsConfigurationApplicationIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a App in pinpoint to populate applicationId.</summary>
 public partial class V1beta1UserPoolClientSpecForProviderAnalyticsConfigurationApplicationIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1UserPoolClientSpecForProviderAnalyticsConfigurationRoleArnRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserPoolClientSpecForProviderAnalyticsConfigurationRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1UserPoolClientSpecForProviderAnalyticsConfigurationR
     public V1beta1UserPoolClientSpecForProviderAnalyticsConfigurationRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1UserPoolClientSpecForProviderAnalyticsConfigurationRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1UserPoolClientSpecForProviderAnalyticsConfigurationRoleArnSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserPoolClientSpecForProviderAnalyticsConfigurationRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1UserPoolClientSpecForProviderAnalyticsConfigurationR
     public V1beta1UserPoolClientSpecForProviderAnalyticsConfigurationRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1UserPoolClientSpecForProviderAnalyticsConfigurationRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1UserPoolClientSpecForProviderAnalyticsConfigurationR
     public V1beta1UserPoolClientSpecForProviderAnalyticsConfigurationRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolClientSpecForProviderAnalyticsConfiguration
 {
     /// <summary>Application ARN for an Amazon Pinpoint application. Conflicts with external_id and role_arn.</summary>
@@ -241,6 +250,7 @@ public partial class V1beta1UserPoolClientSpecForProviderAnalyticsConfiguration
     public bool? UserDataShared { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolClientSpecForProviderTokenValidityUnits
 {
     /// <summary>Time unit in for the value in access_token_validity, defaults to hours.</summary>
@@ -276,6 +286,7 @@ public enum V1beta1UserPoolClientSpecForProviderUserPoolIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserPoolClientSpecForProviderUserPoolIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -289,6 +300,7 @@ public partial class V1beta1UserPoolClientSpecForProviderUserPoolIdRefPolicy
     public V1beta1UserPoolClientSpecForProviderUserPoolIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserPool in cognitoidp to populate userPoolId.</summary>
 public partial class V1beta1UserPoolClientSpecForProviderUserPoolIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -320,6 +332,7 @@ public enum V1beta1UserPoolClientSpecForProviderUserPoolIdSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserPoolClientSpecForProviderUserPoolIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -333,6 +346,7 @@ public partial class V1beta1UserPoolClientSpecForProviderUserPoolIdSelectorPolic
     public V1beta1UserPoolClientSpecForProviderUserPoolIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserPool in cognitoidp to populate userPoolId.</summary>
 public partial class V1beta1UserPoolClientSpecForProviderUserPoolIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -348,6 +362,7 @@ public partial class V1beta1UserPoolClientSpecForProviderUserPoolIdSelector
     public V1beta1UserPoolClientSpecForProviderUserPoolIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolClientSpecForProvider
 {
     /// <summary>Time limit, between 5 minutes and 1 day, after which the access token is no longer valid and cannot be used. By default, the unit is hours. The unit can be overridden by a value in token_validity_units.access_token.</summary>
@@ -471,6 +486,7 @@ public enum V1beta1UserPoolClientSpecInitProviderAnalyticsConfigurationApplicati
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserPoolClientSpecInitProviderAnalyticsConfigurationApplicationIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -484,6 +500,7 @@ public partial class V1beta1UserPoolClientSpecInitProviderAnalyticsConfiguration
     public V1beta1UserPoolClientSpecInitProviderAnalyticsConfigurationApplicationIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a App in pinpoint to populate applicationId.</summary>
 public partial class V1beta1UserPoolClientSpecInitProviderAnalyticsConfigurationApplicationIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -515,6 +532,7 @@ public enum V1beta1UserPoolClientSpecInitProviderAnalyticsConfigurationApplicati
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserPoolClientSpecInitProviderAnalyticsConfigurationApplicationIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -528,6 +546,7 @@ public partial class V1beta1UserPoolClientSpecInitProviderAnalyticsConfiguration
     public V1beta1UserPoolClientSpecInitProviderAnalyticsConfigurationApplicationIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a App in pinpoint to populate applicationId.</summary>
 public partial class V1beta1UserPoolClientSpecInitProviderAnalyticsConfigurationApplicationIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -563,6 +582,7 @@ public enum V1beta1UserPoolClientSpecInitProviderAnalyticsConfigurationRoleArnRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserPoolClientSpecInitProviderAnalyticsConfigurationRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -576,6 +596,7 @@ public partial class V1beta1UserPoolClientSpecInitProviderAnalyticsConfiguration
     public V1beta1UserPoolClientSpecInitProviderAnalyticsConfigurationRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1UserPoolClientSpecInitProviderAnalyticsConfigurationRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -607,6 +628,7 @@ public enum V1beta1UserPoolClientSpecInitProviderAnalyticsConfigurationRoleArnSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserPoolClientSpecInitProviderAnalyticsConfigurationRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -620,6 +642,7 @@ public partial class V1beta1UserPoolClientSpecInitProviderAnalyticsConfiguration
     public V1beta1UserPoolClientSpecInitProviderAnalyticsConfigurationRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1UserPoolClientSpecInitProviderAnalyticsConfigurationRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -635,6 +658,7 @@ public partial class V1beta1UserPoolClientSpecInitProviderAnalyticsConfiguration
     public V1beta1UserPoolClientSpecInitProviderAnalyticsConfigurationRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolClientSpecInitProviderAnalyticsConfiguration
 {
     /// <summary>Application ARN for an Amazon Pinpoint application. Conflicts with external_id and role_arn.</summary>
@@ -674,6 +698,7 @@ public partial class V1beta1UserPoolClientSpecInitProviderAnalyticsConfiguration
     public bool? UserDataShared { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolClientSpecInitProviderTokenValidityUnits
 {
     /// <summary>Time unit in for the value in access_token_validity, defaults to hours.</summary>
@@ -709,6 +734,7 @@ public enum V1beta1UserPoolClientSpecInitProviderUserPoolIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserPoolClientSpecInitProviderUserPoolIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -722,6 +748,7 @@ public partial class V1beta1UserPoolClientSpecInitProviderUserPoolIdRefPolicy
     public V1beta1UserPoolClientSpecInitProviderUserPoolIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserPool in cognitoidp to populate userPoolId.</summary>
 public partial class V1beta1UserPoolClientSpecInitProviderUserPoolIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -753,6 +780,7 @@ public enum V1beta1UserPoolClientSpecInitProviderUserPoolIdSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserPoolClientSpecInitProviderUserPoolIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -766,6 +794,7 @@ public partial class V1beta1UserPoolClientSpecInitProviderUserPoolIdSelectorPoli
     public V1beta1UserPoolClientSpecInitProviderUserPoolIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserPool in cognitoidp to populate userPoolId.</summary>
 public partial class V1beta1UserPoolClientSpecInitProviderUserPoolIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -781,6 +810,7 @@ public partial class V1beta1UserPoolClientSpecInitProviderUserPoolIdSelector
     public V1beta1UserPoolClientSpecInitProviderUserPoolIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1UserPoolClientSpecInitProvider
 {
     /// <summary>Time limit, between 5 minutes and 1 day, after which the access token is no longer valid and cannot be used. By default, the unit is hours. The unit can be overridden by a value in token_validity_units.access_token.</summary>
@@ -922,6 +952,7 @@ public enum V1beta1UserPoolClientSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserPoolClientSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -935,6 +966,7 @@ public partial class V1beta1UserPoolClientSpecProviderConfigRefPolicy
     public V1beta1UserPoolClientSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1UserPoolClientSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -966,6 +998,7 @@ public enum V1beta1UserPoolClientSpecPublishConnectionDetailsToConfigRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserPoolClientSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -979,6 +1012,7 @@ public partial class V1beta1UserPoolClientSpecPublishConnectionDetailsToConfigRe
     public V1beta1UserPoolClientSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1UserPoolClientSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -990,6 +1024,7 @@ public partial class V1beta1UserPoolClientSpecPublishConnectionDetailsToConfigRe
     public V1beta1UserPoolClientSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1UserPoolClientSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1005,6 +1040,7 @@ public partial class V1beta1UserPoolClientSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1UserPoolClientSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1020,6 +1056,7 @@ public partial class V1beta1UserPoolClientSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1UserPoolClientSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1031,6 +1068,7 @@ public partial class V1beta1UserPoolClientSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>UserPoolClientSpec defines the desired state of UserPoolClient</summary>
 public partial class V1beta1UserPoolClientSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1063,6 +1101,7 @@ public partial class V1beta1UserPoolClientSpec
     public V1beta1UserPoolClientSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolClientStatusAtProviderAnalyticsConfiguration
 {
     /// <summary>Application ARN for an Amazon Pinpoint application. Conflicts with external_id and role_arn.</summary>
@@ -1086,6 +1125,7 @@ public partial class V1beta1UserPoolClientStatusAtProviderAnalyticsConfiguration
     public bool? UserDataShared { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolClientStatusAtProviderTokenValidityUnits
 {
     /// <summary>Time unit in for the value in access_token_validity, defaults to hours.</summary>
@@ -1101,6 +1141,7 @@ public partial class V1beta1UserPoolClientStatusAtProviderTokenValidityUnits
     public string? RefreshToken { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolClientStatusAtProvider
 {
     /// <summary>Time limit, between 5 minutes and 1 day, after which the access token is no longer valid and cannot be used. By default, the unit is hours. The unit can be overridden by a value in token_validity_units.access_token.</summary>
@@ -1196,6 +1237,7 @@ public partial class V1beta1UserPoolClientStatusAtProvider
     public IList<string>? WriteAttributes { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1UserPoolClientStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1223,6 +1265,7 @@ public partial class V1beta1UserPoolClientStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>UserPoolClientStatus defines the observed state of UserPoolClient.</summary>
 public partial class V1beta1UserPoolClientStatus
 {
     /// <summary></summary>
@@ -1239,6 +1282,7 @@ public partial class V1beta1UserPoolClientStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>UserPoolClient is the Schema for the UserPoolClients API. Provides a Cognito User Pool Client resource.</summary>
 public partial class V1beta1UserPoolClient : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1UserPoolClientSpec>, IStatus<V1beta1UserPoolClientStatus>
 {
     public const string KubeApiVersion = "v1beta1";

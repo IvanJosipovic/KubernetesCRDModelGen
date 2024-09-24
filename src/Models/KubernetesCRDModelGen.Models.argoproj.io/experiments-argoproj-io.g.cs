@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.argoproj.io;
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecAnalysesArgsValueFromFieldRef
 {
     /// <summary></summary>
@@ -15,6 +16,7 @@ public partial class V1alpha1ExperimentSpecAnalysesArgsValueFromFieldRef
     public string FieldPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecAnalysesArgsValueFromSecretKeyRef
 {
     /// <summary></summary>
@@ -26,6 +28,7 @@ public partial class V1alpha1ExperimentSpecAnalysesArgsValueFromSecretKeyRef
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecAnalysesArgsValueFrom
 {
     /// <summary></summary>
@@ -37,6 +40,7 @@ public partial class V1alpha1ExperimentSpecAnalysesArgsValueFrom
     public V1alpha1ExperimentSpecAnalysesArgsValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecAnalysesArgs
 {
     /// <summary></summary>
@@ -52,6 +56,7 @@ public partial class V1alpha1ExperimentSpecAnalysesArgs
     public V1alpha1ExperimentSpecAnalysesArgsValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecAnalyses
 {
     /// <summary></summary>
@@ -75,6 +80,7 @@ public partial class V1alpha1ExperimentSpecAnalyses
     public string TemplateName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecAnalysisRunMetadata
 {
     /// <summary></summary>
@@ -86,6 +92,7 @@ public partial class V1alpha1ExperimentSpecAnalysisRunMetadata
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecDryRun
 {
     /// <summary></summary>
@@ -93,6 +100,7 @@ public partial class V1alpha1ExperimentSpecDryRun
     public string MetricName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecMeasurementRetention
 {
     /// <summary></summary>
@@ -104,6 +112,7 @@ public partial class V1alpha1ExperimentSpecMeasurementRetention
     public string MetricName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -119,6 +128,7 @@ public partial class V1alpha1ExperimentSpecTemplatesSelectorMatchExpressions
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesSelector
 {
     /// <summary></summary>
@@ -130,6 +140,7 @@ public partial class V1alpha1ExperimentSpecTemplatesSelector
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesService
 {
     /// <summary></summary>
@@ -137,6 +148,7 @@ public partial class V1alpha1ExperimentSpecTemplatesService
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateMetadata
 {
     /// <summary></summary>
@@ -148,6 +160,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateMetadata
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchExpressions
 {
     /// <summary></summary>
@@ -163,6 +176,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityNodeAffi
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchFields
 {
     /// <summary></summary>
@@ -178,6 +192,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityNodeAffi
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreference
 {
     /// <summary></summary>
@@ -189,6 +204,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityNodeAffi
     public IList<V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchFields>? MatchFields { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary></summary>
@@ -200,6 +216,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityNodeAffi
     public int Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchExpressions
 {
     /// <summary></summary>
@@ -215,6 +232,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityNodeAffi
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchFields
 {
     /// <summary></summary>
@@ -230,6 +248,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityNodeAffi
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTerms
 {
     /// <summary></summary>
@@ -241,6 +260,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityNodeAffi
     public IList<V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchFields>? MatchFields { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary></summary>
@@ -248,6 +268,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityNodeAffi
     public IList<V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTerms> NodeSelectorTerms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityNodeAffinity
 {
     /// <summary></summary>
@@ -259,6 +280,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityNodeAffi
     public V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecution? RequiredDuringSchedulingIgnoredDuringExecution { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -274,6 +296,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAffin
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector
 {
     /// <summary></summary>
@@ -285,6 +308,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAffin
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -300,6 +324,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAffin
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector
 {
     /// <summary></summary>
@@ -311,6 +336,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAffin
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm
 {
     /// <summary></summary>
@@ -338,6 +364,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAffin
     public string TopologyKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary></summary>
@@ -349,6 +376,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAffin
     public int Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -364,6 +392,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAffin
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector
 {
     /// <summary></summary>
@@ -375,6 +404,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAffin
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -390,6 +420,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAffin
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector
 {
     /// <summary></summary>
@@ -401,6 +432,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAffin
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary></summary>
@@ -428,6 +460,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAffin
     public string TopologyKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAffinity
 {
     /// <summary></summary>
@@ -439,6 +472,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAffin
     public IList<V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecution>? RequiredDuringSchedulingIgnoredDuringExecution { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -454,6 +488,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAntiA
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector
 {
     /// <summary></summary>
@@ -465,6 +500,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAntiA
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -480,6 +516,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAntiA
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector
 {
     /// <summary></summary>
@@ -491,6 +528,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAntiA
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm
 {
     /// <summary></summary>
@@ -518,6 +556,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAntiA
     public string TopologyKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary></summary>
@@ -529,6 +568,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAntiA
     public int Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -544,6 +584,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAntiA
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector
 {
     /// <summary></summary>
@@ -555,6 +596,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAntiA
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -570,6 +612,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAntiA
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector
 {
     /// <summary></summary>
@@ -581,6 +624,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAntiA
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary></summary>
@@ -608,6 +652,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAntiA
     public string TopologyKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAntiAffinity
 {
     /// <summary></summary>
@@ -619,6 +664,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAntiA
     public IList<V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecution>? RequiredDuringSchedulingIgnoredDuringExecution { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinity
 {
     /// <summary></summary>
@@ -634,6 +680,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecAffinity
     public V1alpha1ExperimentSpecTemplatesTemplateSpecAffinityPodAntiAffinity? PodAntiAffinity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersEnvValueFromConfigMapKeyRef
 {
     /// <summary></summary>
@@ -649,6 +696,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersEnvVal
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersEnvValueFromFieldRef
 {
     /// <summary></summary>
@@ -660,6 +708,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersEnvVal
     public string FieldPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersEnvValueFromResourceFieldRef
 {
     /// <summary></summary>
@@ -675,6 +724,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersEnvVal
     public string Resource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersEnvValueFromSecretKeyRef
 {
     /// <summary></summary>
@@ -690,6 +740,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersEnvVal
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersEnvValueFrom
 {
     /// <summary></summary>
@@ -709,6 +760,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersEnvVal
     public V1alpha1ExperimentSpecTemplatesTemplateSpecContainersEnvValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersEnv
 {
     /// <summary></summary>
@@ -724,6 +776,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersEnv
     public V1alpha1ExperimentSpecTemplatesTemplateSpecContainersEnvValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersEnvFromConfigMapRef
 {
     /// <summary></summary>
@@ -735,6 +788,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersEnvFro
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersEnvFromSecretRef
 {
     /// <summary></summary>
@@ -746,6 +800,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersEnvFro
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersEnvFrom
 {
     /// <summary></summary>
@@ -761,6 +816,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersEnvFro
     public V1alpha1ExperimentSpecTemplatesTemplateSpecContainersEnvFromSecretRef? SecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLifecyclePostStartExec
 {
     /// <summary></summary>
@@ -768,6 +824,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLifecy
     public IList<string>? Command { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLifecyclePostStartHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -779,6 +836,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLifecy
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLifecyclePostStartHttpGet
 {
     /// <summary></summary>
@@ -802,6 +860,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLifecy
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLifecyclePostStartSleep
 {
     /// <summary></summary>
@@ -809,6 +868,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLifecy
     public long Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLifecyclePostStartTcpSocket
 {
     /// <summary></summary>
@@ -820,6 +880,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLifecy
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLifecyclePostStart
 {
     /// <summary></summary>
@@ -839,6 +900,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLifecy
     public V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLifecyclePostStartTcpSocket? TcpSocket { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLifecyclePreStopExec
 {
     /// <summary></summary>
@@ -846,6 +908,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLifecy
     public IList<string>? Command { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLifecyclePreStopHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -857,6 +920,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLifecy
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLifecyclePreStopHttpGet
 {
     /// <summary></summary>
@@ -880,6 +944,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLifecy
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLifecyclePreStopSleep
 {
     /// <summary></summary>
@@ -887,6 +952,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLifecy
     public long Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLifecyclePreStopTcpSocket
 {
     /// <summary></summary>
@@ -898,6 +964,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLifecy
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLifecyclePreStop
 {
     /// <summary></summary>
@@ -917,6 +984,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLifecy
     public V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLifecyclePreStopTcpSocket? TcpSocket { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLifecycle
 {
     /// <summary></summary>
@@ -928,6 +996,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLifecy
     public V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLifecyclePreStop? PreStop { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLivenessProbeExec
 {
     /// <summary></summary>
@@ -935,6 +1004,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLivene
     public IList<string>? Command { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLivenessProbeGrpc
 {
     /// <summary></summary>
@@ -946,6 +1016,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLivene
     public string? Service { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLivenessProbeHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -957,6 +1028,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLivene
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLivenessProbeHttpGet
 {
     /// <summary></summary>
@@ -980,6 +1052,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLivene
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLivenessProbeTcpSocket
 {
     /// <summary></summary>
@@ -991,6 +1064,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLivene
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLivenessProbe
 {
     /// <summary></summary>
@@ -1034,6 +1108,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersLivene
     public int? TimeoutSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersPorts
 {
     /// <summary></summary>
@@ -1057,6 +1132,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersPorts
     public string? Protocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersReadinessProbeExec
 {
     /// <summary></summary>
@@ -1064,6 +1140,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersReadin
     public IList<string>? Command { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersReadinessProbeGrpc
 {
     /// <summary></summary>
@@ -1075,6 +1152,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersReadin
     public string? Service { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersReadinessProbeHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -1086,6 +1164,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersReadin
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersReadinessProbeHttpGet
 {
     /// <summary></summary>
@@ -1109,6 +1188,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersReadin
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersReadinessProbeTcpSocket
 {
     /// <summary></summary>
@@ -1120,6 +1200,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersReadin
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersReadinessProbe
 {
     /// <summary></summary>
@@ -1163,6 +1244,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersReadin
     public int? TimeoutSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersResizePolicy
 {
     /// <summary></summary>
@@ -1174,6 +1256,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersResize
     public string RestartPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersResourcesClaims
 {
     /// <summary></summary>
@@ -1181,6 +1264,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersResour
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersResources
 {
     /// <summary></summary>
@@ -1196,6 +1280,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersResour
     public JsonNode? Requests { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersSecurityContextCapabilities
 {
     /// <summary></summary>
@@ -1207,6 +1292,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersSecuri
     public IList<string>? Drop { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersSecurityContextSeLinuxOptions
 {
     /// <summary></summary>
@@ -1226,6 +1312,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersSecuri
     public string? User { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersSecurityContextSeccompProfile
 {
     /// <summary></summary>
@@ -1237,6 +1324,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersSecuri
     public string Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersSecurityContextWindowsOptions
 {
     /// <summary></summary>
@@ -1256,6 +1344,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersSecuri
     public string? RunAsUserName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersSecurityContext
 {
     /// <summary></summary>
@@ -1303,6 +1392,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersSecuri
     public V1alpha1ExperimentSpecTemplatesTemplateSpecContainersSecurityContextWindowsOptions? WindowsOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersStartupProbeExec
 {
     /// <summary></summary>
@@ -1310,6 +1400,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersStartu
     public IList<string>? Command { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersStartupProbeGrpc
 {
     /// <summary></summary>
@@ -1321,6 +1412,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersStartu
     public string? Service { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersStartupProbeHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -1332,6 +1424,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersStartu
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersStartupProbeHttpGet
 {
     /// <summary></summary>
@@ -1355,6 +1448,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersStartu
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersStartupProbeTcpSocket
 {
     /// <summary></summary>
@@ -1366,6 +1460,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersStartu
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersStartupProbe
 {
     /// <summary></summary>
@@ -1409,6 +1504,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersStartu
     public int? TimeoutSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersVolumeDevices
 {
     /// <summary></summary>
@@ -1420,6 +1516,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersVolume
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersVolumeMounts
 {
     /// <summary></summary>
@@ -1447,6 +1544,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainersVolume
     public string? SubPathExpr { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainers
 {
     /// <summary></summary>
@@ -1546,6 +1644,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecContainers
     public string? WorkingDir { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecDnsConfigOptions
 {
     /// <summary></summary>
@@ -1557,6 +1656,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecDnsConfigOptions
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecDnsConfig
 {
     /// <summary></summary>
@@ -1572,6 +1672,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecDnsConfig
     public IList<string>? Searches { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersEnvValueFromConfigMapKeyRef
 {
     /// <summary></summary>
@@ -1587,6 +1688,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersEnvValueFromFieldRef
 {
     /// <summary></summary>
@@ -1598,6 +1700,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public string FieldPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersEnvValueFromResourceFieldRef
 {
     /// <summary></summary>
@@ -1613,6 +1716,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public string Resource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersEnvValueFromSecretKeyRef
 {
     /// <summary></summary>
@@ -1628,6 +1732,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersEnvValueFrom
 {
     /// <summary></summary>
@@ -1647,6 +1752,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersEnvValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersEnv
 {
     /// <summary></summary>
@@ -1662,6 +1768,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersEnvValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersEnvFromConfigMapRef
 {
     /// <summary></summary>
@@ -1673,6 +1780,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersEnvFromSecretRef
 {
     /// <summary></summary>
@@ -1684,6 +1792,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersEnvFrom
 {
     /// <summary></summary>
@@ -1699,6 +1808,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersEnvFromSecretRef? SecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersLifecyclePostStartExec
 {
     /// <summary></summary>
@@ -1706,6 +1816,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public IList<string>? Command { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersLifecyclePostStartHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -1717,6 +1828,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersLifecyclePostStartHttpGet
 {
     /// <summary></summary>
@@ -1740,6 +1852,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersLifecyclePostStartSleep
 {
     /// <summary></summary>
@@ -1747,6 +1860,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public long Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersLifecyclePostStartTcpSocket
 {
     /// <summary></summary>
@@ -1758,6 +1872,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersLifecyclePostStart
 {
     /// <summary></summary>
@@ -1777,6 +1892,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersLifecyclePostStartTcpSocket? TcpSocket { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersLifecyclePreStopExec
 {
     /// <summary></summary>
@@ -1784,6 +1900,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public IList<string>? Command { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersLifecyclePreStopHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -1795,6 +1912,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersLifecyclePreStopHttpGet
 {
     /// <summary></summary>
@@ -1818,6 +1936,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersLifecyclePreStopSleep
 {
     /// <summary></summary>
@@ -1825,6 +1944,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public long Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersLifecyclePreStopTcpSocket
 {
     /// <summary></summary>
@@ -1836,6 +1956,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersLifecyclePreStop
 {
     /// <summary></summary>
@@ -1855,6 +1976,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersLifecyclePreStopTcpSocket? TcpSocket { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersLifecycle
 {
     /// <summary></summary>
@@ -1866,6 +1988,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersLifecyclePreStop? PreStop { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersLivenessProbeExec
 {
     /// <summary></summary>
@@ -1873,6 +1996,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public IList<string>? Command { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersLivenessProbeGrpc
 {
     /// <summary></summary>
@@ -1884,6 +2008,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public string? Service { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersLivenessProbeHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -1895,6 +2020,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersLivenessProbeHttpGet
 {
     /// <summary></summary>
@@ -1918,6 +2044,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersLivenessProbeTcpSocket
 {
     /// <summary></summary>
@@ -1929,6 +2056,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersLivenessProbe
 {
     /// <summary></summary>
@@ -1972,6 +2100,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public int? TimeoutSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersPorts
 {
     /// <summary></summary>
@@ -1995,6 +2124,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public string? Protocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersReadinessProbeExec
 {
     /// <summary></summary>
@@ -2002,6 +2132,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public IList<string>? Command { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersReadinessProbeGrpc
 {
     /// <summary></summary>
@@ -2013,6 +2144,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public string? Service { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersReadinessProbeHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -2024,6 +2156,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersReadinessProbeHttpGet
 {
     /// <summary></summary>
@@ -2047,6 +2180,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersReadinessProbeTcpSocket
 {
     /// <summary></summary>
@@ -2058,6 +2192,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersReadinessProbe
 {
     /// <summary></summary>
@@ -2101,6 +2236,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public int? TimeoutSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersResizePolicy
 {
     /// <summary></summary>
@@ -2112,6 +2248,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public string RestartPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersResourcesClaims
 {
     /// <summary></summary>
@@ -2119,6 +2256,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersResources
 {
     /// <summary></summary>
@@ -2134,6 +2272,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public JsonNode? Requests { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersSecurityContextCapabilities
 {
     /// <summary></summary>
@@ -2145,6 +2284,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public IList<string>? Drop { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersSecurityContextSeLinuxOptions
 {
     /// <summary></summary>
@@ -2164,6 +2304,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public string? User { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersSecurityContextSeccompProfile
 {
     /// <summary></summary>
@@ -2175,6 +2316,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public string Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersSecurityContextWindowsOptions
 {
     /// <summary></summary>
@@ -2194,6 +2336,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public string? RunAsUserName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersSecurityContext
 {
     /// <summary></summary>
@@ -2241,6 +2384,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersSecurityContextWindowsOptions? WindowsOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersStartupProbeExec
 {
     /// <summary></summary>
@@ -2248,6 +2392,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public IList<string>? Command { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersStartupProbeGrpc
 {
     /// <summary></summary>
@@ -2259,6 +2404,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public string? Service { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersStartupProbeHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -2270,6 +2416,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersStartupProbeHttpGet
 {
     /// <summary></summary>
@@ -2293,6 +2440,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersStartupProbeTcpSocket
 {
     /// <summary></summary>
@@ -2304,6 +2452,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersStartupProbe
 {
     /// <summary></summary>
@@ -2347,6 +2496,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public int? TimeoutSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersVolumeDevices
 {
     /// <summary></summary>
@@ -2358,6 +2508,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainersVolumeMounts
 {
     /// <summary></summary>
@@ -2385,6 +2536,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public string? SubPathExpr { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContainers
 {
     /// <summary></summary>
@@ -2488,6 +2640,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecEphemeralContain
     public string? WorkingDir { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecHostAliases
 {
     /// <summary></summary>
@@ -2499,6 +2652,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecHostAliases
     public string? Ip { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecImagePullSecrets
 {
     /// <summary></summary>
@@ -2506,6 +2660,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecImagePullSecrets
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersEnvValueFromConfigMapKeyRef
 {
     /// <summary></summary>
@@ -2521,6 +2676,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersEn
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersEnvValueFromFieldRef
 {
     /// <summary></summary>
@@ -2532,6 +2688,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersEn
     public string FieldPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersEnvValueFromResourceFieldRef
 {
     /// <summary></summary>
@@ -2547,6 +2704,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersEn
     public string Resource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersEnvValueFromSecretKeyRef
 {
     /// <summary></summary>
@@ -2562,6 +2720,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersEn
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersEnvValueFrom
 {
     /// <summary></summary>
@@ -2581,6 +2740,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersEn
     public V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersEnvValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersEnv
 {
     /// <summary></summary>
@@ -2596,6 +2756,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersEn
     public V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersEnvValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersEnvFromConfigMapRef
 {
     /// <summary></summary>
@@ -2607,6 +2768,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersEn
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersEnvFromSecretRef
 {
     /// <summary></summary>
@@ -2618,6 +2780,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersEn
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersEnvFrom
 {
     /// <summary></summary>
@@ -2633,6 +2796,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersEn
     public V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersEnvFromSecretRef? SecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLifecyclePostStartExec
 {
     /// <summary></summary>
@@ -2640,6 +2804,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLi
     public IList<string>? Command { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLifecyclePostStartHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -2651,6 +2816,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLi
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLifecyclePostStartHttpGet
 {
     /// <summary></summary>
@@ -2674,6 +2840,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLi
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLifecyclePostStartSleep
 {
     /// <summary></summary>
@@ -2681,6 +2848,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLi
     public long Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLifecyclePostStartTcpSocket
 {
     /// <summary></summary>
@@ -2692,6 +2860,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLi
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLifecyclePostStart
 {
     /// <summary></summary>
@@ -2711,6 +2880,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLi
     public V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLifecyclePostStartTcpSocket? TcpSocket { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLifecyclePreStopExec
 {
     /// <summary></summary>
@@ -2718,6 +2888,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLi
     public IList<string>? Command { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLifecyclePreStopHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -2729,6 +2900,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLi
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLifecyclePreStopHttpGet
 {
     /// <summary></summary>
@@ -2752,6 +2924,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLi
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLifecyclePreStopSleep
 {
     /// <summary></summary>
@@ -2759,6 +2932,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLi
     public long Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLifecyclePreStopTcpSocket
 {
     /// <summary></summary>
@@ -2770,6 +2944,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLi
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLifecyclePreStop
 {
     /// <summary></summary>
@@ -2789,6 +2964,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLi
     public V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLifecyclePreStopTcpSocket? TcpSocket { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLifecycle
 {
     /// <summary></summary>
@@ -2800,6 +2976,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLi
     public V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLifecyclePreStop? PreStop { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLivenessProbeExec
 {
     /// <summary></summary>
@@ -2807,6 +2984,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLi
     public IList<string>? Command { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLivenessProbeGrpc
 {
     /// <summary></summary>
@@ -2818,6 +2996,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLi
     public string? Service { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLivenessProbeHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -2829,6 +3008,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLi
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLivenessProbeHttpGet
 {
     /// <summary></summary>
@@ -2852,6 +3032,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLi
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLivenessProbeTcpSocket
 {
     /// <summary></summary>
@@ -2863,6 +3044,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLi
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLivenessProbe
 {
     /// <summary></summary>
@@ -2906,6 +3088,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersLi
     public int? TimeoutSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersPorts
 {
     /// <summary></summary>
@@ -2929,6 +3112,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersPo
     public string? Protocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersReadinessProbeExec
 {
     /// <summary></summary>
@@ -2936,6 +3120,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersRe
     public IList<string>? Command { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersReadinessProbeGrpc
 {
     /// <summary></summary>
@@ -2947,6 +3132,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersRe
     public string? Service { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersReadinessProbeHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -2958,6 +3144,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersRe
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersReadinessProbeHttpGet
 {
     /// <summary></summary>
@@ -2981,6 +3168,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersRe
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersReadinessProbeTcpSocket
 {
     /// <summary></summary>
@@ -2992,6 +3180,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersRe
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersReadinessProbe
 {
     /// <summary></summary>
@@ -3035,6 +3224,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersRe
     public int? TimeoutSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersResizePolicy
 {
     /// <summary></summary>
@@ -3046,6 +3236,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersRe
     public string RestartPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersResourcesClaims
 {
     /// <summary></summary>
@@ -3053,6 +3244,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersRe
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersResources
 {
     /// <summary></summary>
@@ -3068,6 +3260,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersRe
     public JsonNode? Requests { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersSecurityContextCapabilities
 {
     /// <summary></summary>
@@ -3079,6 +3272,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersSe
     public IList<string>? Drop { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersSecurityContextSeLinuxOptions
 {
     /// <summary></summary>
@@ -3098,6 +3292,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersSe
     public string? User { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersSecurityContextSeccompProfile
 {
     /// <summary></summary>
@@ -3109,6 +3304,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersSe
     public string Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersSecurityContextWindowsOptions
 {
     /// <summary></summary>
@@ -3128,6 +3324,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersSe
     public string? RunAsUserName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersSecurityContext
 {
     /// <summary></summary>
@@ -3175,6 +3372,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersSe
     public V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersSecurityContextWindowsOptions? WindowsOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersStartupProbeExec
 {
     /// <summary></summary>
@@ -3182,6 +3380,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersSt
     public IList<string>? Command { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersStartupProbeGrpc
 {
     /// <summary></summary>
@@ -3193,6 +3392,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersSt
     public string? Service { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersStartupProbeHttpGetHttpHeaders
 {
     /// <summary></summary>
@@ -3204,6 +3404,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersSt
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersStartupProbeHttpGet
 {
     /// <summary></summary>
@@ -3227,6 +3428,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersSt
     public string? Scheme { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersStartupProbeTcpSocket
 {
     /// <summary></summary>
@@ -3238,6 +3440,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersSt
     public IntstrIntOrString Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersStartupProbe
 {
     /// <summary></summary>
@@ -3281,6 +3484,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersSt
     public int? TimeoutSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersVolumeDevices
 {
     /// <summary></summary>
@@ -3292,6 +3496,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersVo
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersVolumeMounts
 {
     /// <summary></summary>
@@ -3319,6 +3524,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainersVo
     public string? SubPathExpr { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainers
 {
     /// <summary></summary>
@@ -3418,6 +3624,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecInitContainers
     public string? WorkingDir { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecOs
 {
     /// <summary></summary>
@@ -3425,6 +3632,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecOs
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecReadinessGates
 {
     /// <summary></summary>
@@ -3432,6 +3640,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecReadinessGates
     public string ConditionType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecResourceClaimsSource
 {
     /// <summary></summary>
@@ -3443,6 +3652,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecResourceClaimsSo
     public string? ResourceClaimTemplateName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecResourceClaims
 {
     /// <summary></summary>
@@ -3454,6 +3664,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecResourceClaims
     public V1alpha1ExperimentSpecTemplatesTemplateSpecResourceClaimsSource? Source { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecSchedulingGates
 {
     /// <summary></summary>
@@ -3461,6 +3672,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecSchedulingGates
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecSecurityContextSeLinuxOptions
 {
     /// <summary></summary>
@@ -3480,6 +3692,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecSecurityContextS
     public string? User { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecSecurityContextSeccompProfile
 {
     /// <summary></summary>
@@ -3491,6 +3704,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecSecurityContextS
     public string Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecSecurityContextSysctls
 {
     /// <summary></summary>
@@ -3502,6 +3716,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecSecurityContextS
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecSecurityContextWindowsOptions
 {
     /// <summary></summary>
@@ -3521,6 +3736,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecSecurityContextW
     public string? RunAsUserName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecSecurityContext
 {
     /// <summary></summary>
@@ -3564,6 +3780,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecSecurityContext
     public V1alpha1ExperimentSpecTemplatesTemplateSpecSecurityContextWindowsOptions? WindowsOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecTolerations
 {
     /// <summary></summary>
@@ -3587,6 +3804,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecTolerations
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecTopologySpreadConstraintsLabelSelectorMatchExpressions
 {
     /// <summary></summary>
@@ -3602,6 +3820,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecTopologySpreadCo
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecTopologySpreadConstraintsLabelSelector
 {
     /// <summary></summary>
@@ -3613,6 +3832,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecTopologySpreadCo
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecTopologySpreadConstraints
 {
     /// <summary></summary>
@@ -3648,6 +3868,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpecTopologySpreadCo
     public string WhenUnsatisfiable { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplateSpec
 {
     /// <summary></summary>
@@ -3807,6 +4028,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplateSpec
     public JsonNode? Volumes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplatesTemplate
 {
     /// <summary></summary>
@@ -3818,6 +4040,7 @@ public partial class V1alpha1ExperimentSpecTemplatesTemplate
     public V1alpha1ExperimentSpecTemplatesTemplateSpec? Spec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpecTemplates
 {
     /// <summary></summary>
@@ -3845,6 +4068,7 @@ public partial class V1alpha1ExperimentSpecTemplates
     public V1alpha1ExperimentSpecTemplatesTemplate Template { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentSpec
 {
     /// <summary></summary>
@@ -3884,6 +4108,7 @@ public partial class V1alpha1ExperimentSpec
     public bool? Terminate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentStatusAnalysisRuns
 {
     /// <summary></summary>
@@ -3903,6 +4128,7 @@ public partial class V1alpha1ExperimentStatusAnalysisRuns
     public string Phase { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentStatusConditions
 {
     /// <summary></summary>
@@ -3930,6 +4156,7 @@ public partial class V1alpha1ExperimentStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentStatusTemplateStatuses
 {
     /// <summary></summary>
@@ -3977,6 +4204,7 @@ public partial class V1alpha1ExperimentStatusTemplateStatuses
     public int UpdatedReplicas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ExperimentStatus
 {
     /// <summary></summary>
@@ -4005,6 +4233,7 @@ public partial class V1alpha1ExperimentStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1Experiment : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ExperimentSpec>, IStatus<V1alpha1ExperimentStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

@@ -38,6 +38,7 @@ public enum V1beta1GremlinGraphSpecForProviderAccountNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GremlinGraphSpecForProviderAccountNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1GremlinGraphSpecForProviderAccountNameRefPolicy
     public V1beta1GremlinGraphSpecForProviderAccountNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in cosmosdb to populate accountName.</summary>
 public partial class V1beta1GremlinGraphSpecForProviderAccountNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1GremlinGraphSpecForProviderAccountNameSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GremlinGraphSpecForProviderAccountNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1GremlinGraphSpecForProviderAccountNameSelectorPolicy
     public V1beta1GremlinGraphSpecForProviderAccountNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in cosmosdb to populate accountName.</summary>
 public partial class V1beta1GremlinGraphSpecForProviderAccountNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1GremlinGraphSpecForProviderAccountNameSelector
     public V1beta1GremlinGraphSpecForProviderAccountNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GremlinGraphSpecForProviderAutoscaleSettings
 {
     /// <summary>The maximum throughput of the Gremlin graph (RU/s). Must be between 1,000 and 1,000,000. Must be set in increments of 1,000. Conflicts with throughput.</summary>
@@ -117,6 +122,7 @@ public partial class V1beta1GremlinGraphSpecForProviderAutoscaleSettings
     public double? MaxThroughput { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GremlinGraphSpecForProviderConflictResolutionPolicy
 {
     /// <summary>The conflict resolution path in the case of LastWriterWins mode.</summary>
@@ -152,6 +158,7 @@ public enum V1beta1GremlinGraphSpecForProviderDatabaseNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GremlinGraphSpecForProviderDatabaseNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -165,6 +172,7 @@ public partial class V1beta1GremlinGraphSpecForProviderDatabaseNameRefPolicy
     public V1beta1GremlinGraphSpecForProviderDatabaseNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a GremlinDatabase in cosmosdb to populate databaseName.</summary>
 public partial class V1beta1GremlinGraphSpecForProviderDatabaseNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -196,6 +204,7 @@ public enum V1beta1GremlinGraphSpecForProviderDatabaseNameSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GremlinGraphSpecForProviderDatabaseNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -209,6 +218,7 @@ public partial class V1beta1GremlinGraphSpecForProviderDatabaseNameSelectorPolic
     public V1beta1GremlinGraphSpecForProviderDatabaseNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a GremlinDatabase in cosmosdb to populate databaseName.</summary>
 public partial class V1beta1GremlinGraphSpecForProviderDatabaseNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -224,6 +234,7 @@ public partial class V1beta1GremlinGraphSpecForProviderDatabaseNameSelector
     public V1beta1GremlinGraphSpecForProviderDatabaseNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GremlinGraphSpecForProviderIndexPolicyCompositeIndexIndex
 {
     /// <summary>Order of the index. Possible values are Ascending or Descending.</summary>
@@ -235,6 +246,7 @@ public partial class V1beta1GremlinGraphSpecForProviderIndexPolicyCompositeIndex
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GremlinGraphSpecForProviderIndexPolicyCompositeIndex
 {
     /// <summary>One or more index blocks as defined below.</summary>
@@ -242,6 +254,7 @@ public partial class V1beta1GremlinGraphSpecForProviderIndexPolicyCompositeIndex
     public IList<V1beta1GremlinGraphSpecForProviderIndexPolicyCompositeIndexIndex>? Index { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GremlinGraphSpecForProviderIndexPolicySpatialIndex
 {
     /// <summary>Path for which the indexing behaviour applies to. According to the service design, all spatial types including LineString, MultiPolygon, Point, and Polygon will be applied to the path.</summary>
@@ -249,6 +262,7 @@ public partial class V1beta1GremlinGraphSpecForProviderIndexPolicySpatialIndex
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GremlinGraphSpecForProviderIndexPolicy
 {
     /// <summary>Indicates if the indexing policy is automatic. Defaults to true.</summary>
@@ -296,6 +310,7 @@ public enum V1beta1GremlinGraphSpecForProviderResourceGroupNameRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GremlinGraphSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -309,6 +324,7 @@ public partial class V1beta1GremlinGraphSpecForProviderResourceGroupNameRefPolic
     public V1beta1GremlinGraphSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1GremlinGraphSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -340,6 +356,7 @@ public enum V1beta1GremlinGraphSpecForProviderResourceGroupNameSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GremlinGraphSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -353,6 +370,7 @@ public partial class V1beta1GremlinGraphSpecForProviderResourceGroupNameSelector
     public V1beta1GremlinGraphSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1GremlinGraphSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -368,6 +386,7 @@ public partial class V1beta1GremlinGraphSpecForProviderResourceGroupNameSelector
     public V1beta1GremlinGraphSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GremlinGraphSpecForProviderUniqueKey
 {
     /// <summary>A list of paths to use for this unique key. Changing this forces a new resource to be created.</summary>
@@ -375,6 +394,7 @@ public partial class V1beta1GremlinGraphSpecForProviderUniqueKey
     public IList<string>? Paths { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GremlinGraphSpecForProvider
 {
     /// <summary>The name of the CosmosDB Account to create the Gremlin Graph within. Changing this forces a new resource to be created.</summary>
@@ -450,6 +470,7 @@ public partial class V1beta1GremlinGraphSpecForProvider
     public IList<V1beta1GremlinGraphSpecForProviderUniqueKey>? UniqueKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GremlinGraphSpecInitProviderAutoscaleSettings
 {
     /// <summary>The maximum throughput of the Gremlin graph (RU/s). Must be between 1,000 and 1,000,000. Must be set in increments of 1,000. Conflicts with throughput.</summary>
@@ -457,6 +478,7 @@ public partial class V1beta1GremlinGraphSpecInitProviderAutoscaleSettings
     public double? MaxThroughput { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GremlinGraphSpecInitProviderConflictResolutionPolicy
 {
     /// <summary>The conflict resolution path in the case of LastWriterWins mode.</summary>
@@ -472,6 +494,7 @@ public partial class V1beta1GremlinGraphSpecInitProviderConflictResolutionPolicy
     public string? Mode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GremlinGraphSpecInitProviderIndexPolicyCompositeIndexIndex
 {
     /// <summary>Order of the index. Possible values are Ascending or Descending.</summary>
@@ -483,6 +506,7 @@ public partial class V1beta1GremlinGraphSpecInitProviderIndexPolicyCompositeInde
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GremlinGraphSpecInitProviderIndexPolicyCompositeIndex
 {
     /// <summary>One or more index blocks as defined below.</summary>
@@ -490,6 +514,7 @@ public partial class V1beta1GremlinGraphSpecInitProviderIndexPolicyCompositeInde
     public IList<V1beta1GremlinGraphSpecInitProviderIndexPolicyCompositeIndexIndex>? Index { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GremlinGraphSpecInitProviderIndexPolicySpatialIndex
 {
     /// <summary>Path for which the indexing behaviour applies to. According to the service design, all spatial types including LineString, MultiPolygon, Point, and Polygon will be applied to the path.</summary>
@@ -497,6 +522,7 @@ public partial class V1beta1GremlinGraphSpecInitProviderIndexPolicySpatialIndex
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GremlinGraphSpecInitProviderIndexPolicy
 {
     /// <summary>Indicates if the indexing policy is automatic. Defaults to true.</summary>
@@ -524,6 +550,7 @@ public partial class V1beta1GremlinGraphSpecInitProviderIndexPolicy
     public IList<V1beta1GremlinGraphSpecInitProviderIndexPolicySpatialIndex>? SpatialIndex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GremlinGraphSpecInitProviderUniqueKey
 {
     /// <summary>A list of paths to use for this unique key. Changing this forces a new resource to be created.</summary>
@@ -531,6 +558,7 @@ public partial class V1beta1GremlinGraphSpecInitProviderUniqueKey
     public IList<string>? Paths { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1GremlinGraphSpecInitProvider
 {
     /// <summary>The time to live of Analytical Storage for this Cosmos DB Gremlin Graph. Possible values are between -1 to 2147483647 not including 0. If present and the value is set to -1, it means never expire.</summary>
@@ -612,6 +640,7 @@ public enum V1beta1GremlinGraphSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GremlinGraphSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -625,6 +654,7 @@ public partial class V1beta1GremlinGraphSpecProviderConfigRefPolicy
     public V1beta1GremlinGraphSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1GremlinGraphSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -656,6 +686,7 @@ public enum V1beta1GremlinGraphSpecPublishConnectionDetailsToConfigRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GremlinGraphSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -669,6 +700,7 @@ public partial class V1beta1GremlinGraphSpecPublishConnectionDetailsToConfigRefP
     public V1beta1GremlinGraphSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1GremlinGraphSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -680,6 +712,7 @@ public partial class V1beta1GremlinGraphSpecPublishConnectionDetailsToConfigRef
     public V1beta1GremlinGraphSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1GremlinGraphSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -695,6 +728,7 @@ public partial class V1beta1GremlinGraphSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1GremlinGraphSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -710,6 +744,7 @@ public partial class V1beta1GremlinGraphSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1GremlinGraphSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -721,6 +756,7 @@ public partial class V1beta1GremlinGraphSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>GremlinGraphSpec defines the desired state of GremlinGraph</summary>
 public partial class V1beta1GremlinGraphSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -753,6 +789,7 @@ public partial class V1beta1GremlinGraphSpec
     public V1beta1GremlinGraphSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GremlinGraphStatusAtProviderAutoscaleSettings
 {
     /// <summary>The maximum throughput of the Gremlin graph (RU/s). Must be between 1,000 and 1,000,000. Must be set in increments of 1,000. Conflicts with throughput.</summary>
@@ -760,6 +797,7 @@ public partial class V1beta1GremlinGraphStatusAtProviderAutoscaleSettings
     public double? MaxThroughput { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GremlinGraphStatusAtProviderConflictResolutionPolicy
 {
     /// <summary>The conflict resolution path in the case of LastWriterWins mode.</summary>
@@ -775,6 +813,7 @@ public partial class V1beta1GremlinGraphStatusAtProviderConflictResolutionPolicy
     public string? Mode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GremlinGraphStatusAtProviderIndexPolicyCompositeIndexIndex
 {
     /// <summary>Order of the index. Possible values are Ascending or Descending.</summary>
@@ -786,6 +825,7 @@ public partial class V1beta1GremlinGraphStatusAtProviderIndexPolicyCompositeInde
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GremlinGraphStatusAtProviderIndexPolicyCompositeIndex
 {
     /// <summary>One or more index blocks as defined below.</summary>
@@ -793,6 +833,7 @@ public partial class V1beta1GremlinGraphStatusAtProviderIndexPolicyCompositeInde
     public IList<V1beta1GremlinGraphStatusAtProviderIndexPolicyCompositeIndexIndex>? Index { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GremlinGraphStatusAtProviderIndexPolicySpatialIndex
 {
     /// <summary>Path for which the indexing behaviour applies to. According to the service design, all spatial types including LineString, MultiPolygon, Point, and Polygon will be applied to the path.</summary>
@@ -804,6 +845,7 @@ public partial class V1beta1GremlinGraphStatusAtProviderIndexPolicySpatialIndex
     public IList<string>? Types { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GremlinGraphStatusAtProviderIndexPolicy
 {
     /// <summary>Indicates if the indexing policy is automatic. Defaults to true.</summary>
@@ -831,6 +873,7 @@ public partial class V1beta1GremlinGraphStatusAtProviderIndexPolicy
     public IList<V1beta1GremlinGraphStatusAtProviderIndexPolicySpatialIndex>? SpatialIndex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GremlinGraphStatusAtProviderUniqueKey
 {
     /// <summary>A list of paths to use for this unique key. Changing this forces a new resource to be created.</summary>
@@ -838,6 +881,7 @@ public partial class V1beta1GremlinGraphStatusAtProviderUniqueKey
     public IList<string>? Paths { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GremlinGraphStatusAtProvider
 {
     /// <summary>The name of the CosmosDB Account to create the Gremlin Graph within. Changing this forces a new resource to be created.</summary>
@@ -893,6 +937,7 @@ public partial class V1beta1GremlinGraphStatusAtProvider
     public IList<V1beta1GremlinGraphStatusAtProviderUniqueKey>? UniqueKey { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1GremlinGraphStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -920,6 +965,7 @@ public partial class V1beta1GremlinGraphStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>GremlinGraphStatus defines the observed state of GremlinGraph.</summary>
 public partial class V1beta1GremlinGraphStatus
 {
     /// <summary></summary>
@@ -936,6 +982,7 @@ public partial class V1beta1GremlinGraphStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>GremlinGraph is the Schema for the GremlinGraphs API. Manages a Gremlin Graph within a Cosmos DB Account.</summary>
 public partial class V1beta1GremlinGraph : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1GremlinGraphSpec>, IStatus<V1beta1GremlinGraphStatus>
 {
     public const string KubeApiVersion = "v1beta1";

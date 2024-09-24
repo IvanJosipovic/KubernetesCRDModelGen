@@ -18,6 +18,7 @@ public enum V1beta1ShareSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1ShareSpecForProviderAclAccessPolicy
 {
     /// <summary>The time at which this Access Policy should be valid until, in ISO8601 format.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1ShareSpecForProviderAclAccessPolicy
     public string? Start { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ShareSpecForProviderAcl
 {
     /// <summary>An access_policy block as defined below.</summary>
@@ -64,6 +66,7 @@ public enum V1beta1ShareSpecForProviderStorageAccountNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ShareSpecForProviderStorageAccountNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -77,6 +80,7 @@ public partial class V1beta1ShareSpecForProviderStorageAccountNameRefPolicy
     public V1beta1ShareSpecForProviderStorageAccountNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in storage to populate storageAccountName.</summary>
 public partial class V1beta1ShareSpecForProviderStorageAccountNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -108,6 +112,7 @@ public enum V1beta1ShareSpecForProviderStorageAccountNameSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ShareSpecForProviderStorageAccountNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1ShareSpecForProviderStorageAccountNameSelectorPolicy
     public V1beta1ShareSpecForProviderStorageAccountNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in storage to populate storageAccountName.</summary>
 public partial class V1beta1ShareSpecForProviderStorageAccountNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -136,6 +142,7 @@ public partial class V1beta1ShareSpecForProviderStorageAccountNameSelector
     public V1beta1ShareSpecForProviderStorageAccountNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ShareSpecForProvider
 {
     /// <summary>The access tier of the File Share. Possible values are Hot, Cool and TransactionOptimized, Premium.</summary>
@@ -171,6 +178,7 @@ public partial class V1beta1ShareSpecForProvider
     public V1beta1ShareSpecForProviderStorageAccountNameSelector? StorageAccountNameSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ShareSpecInitProviderAclAccessPolicy
 {
     /// <summary>The time at which this Access Policy should be valid until, in ISO8601 format.</summary>
@@ -186,6 +194,7 @@ public partial class V1beta1ShareSpecInitProviderAclAccessPolicy
     public string? Start { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ShareSpecInitProviderAcl
 {
     /// <summary>An access_policy block as defined below.</summary>
@@ -197,6 +206,7 @@ public partial class V1beta1ShareSpecInitProviderAcl
     public string? Id { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ShareSpecInitProvider
 {
     /// <summary>The access tier of the File Share. Possible values are Hot, Cool and TransactionOptimized, Premium.</summary>
@@ -262,6 +272,7 @@ public enum V1beta1ShareSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ShareSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -275,6 +286,7 @@ public partial class V1beta1ShareSpecProviderConfigRefPolicy
     public V1beta1ShareSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ShareSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -306,6 +318,7 @@ public enum V1beta1ShareSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ShareSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -319,6 +332,7 @@ public partial class V1beta1ShareSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1ShareSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ShareSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -330,6 +344,7 @@ public partial class V1beta1ShareSpecPublishConnectionDetailsToConfigRef
     public V1beta1ShareSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ShareSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -345,6 +360,7 @@ public partial class V1beta1ShareSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ShareSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -360,6 +376,7 @@ public partial class V1beta1ShareSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ShareSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -371,6 +388,7 @@ public partial class V1beta1ShareSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ShareSpec defines the desired state of Share</summary>
 public partial class V1beta1ShareSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -403,6 +421,7 @@ public partial class V1beta1ShareSpec
     public V1beta1ShareSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ShareStatusAtProviderAclAccessPolicy
 {
     /// <summary>The time at which this Access Policy should be valid until, in ISO8601 format.</summary>
@@ -418,6 +437,7 @@ public partial class V1beta1ShareStatusAtProviderAclAccessPolicy
     public string? Start { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ShareStatusAtProviderAcl
 {
     /// <summary>An access_policy block as defined below.</summary>
@@ -429,6 +449,7 @@ public partial class V1beta1ShareStatusAtProviderAcl
     public string? Id { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ShareStatusAtProvider
 {
     /// <summary>The access tier of the File Share. Possible values are Hot, Cool and TransactionOptimized, Premium.</summary>
@@ -468,6 +489,7 @@ public partial class V1beta1ShareStatusAtProvider
     public string? Url { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ShareStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -495,6 +517,7 @@ public partial class V1beta1ShareStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ShareStatus defines the observed state of Share.</summary>
 public partial class V1beta1ShareStatus
 {
     /// <summary></summary>
@@ -511,6 +534,7 @@ public partial class V1beta1ShareStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Share is the Schema for the Shares API. Manages a File Share within Azure Storage.</summary>
 public partial class V1beta1Share : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ShareSpec>, IStatus<V1beta1ShareStatus>
 {
     public const string KubeApiVersion = "v1beta1";

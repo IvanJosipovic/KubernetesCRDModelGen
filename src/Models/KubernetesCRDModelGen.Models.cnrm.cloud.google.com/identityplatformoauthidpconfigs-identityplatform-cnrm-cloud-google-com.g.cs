@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.identityplatform.cnrm.cloud.google.com;
+/// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 public partial class V1beta1IdentityPlatformOAuthIDPConfigSpecClientSecretValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -19,6 +20,7 @@ public partial class V1beta1IdentityPlatformOAuthIDPConfigSpecClientSecretValueF
     public string Name { get; set; }
 }
 
+/// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 public partial class V1beta1IdentityPlatformOAuthIDPConfigSpecClientSecretValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -26,6 +28,7 @@ public partial class V1beta1IdentityPlatformOAuthIDPConfigSpecClientSecretValueF
     public V1beta1IdentityPlatformOAuthIDPConfigSpecClientSecretValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary>The client secret of the OAuth client, to enable OIDC code flow.</summary>
 public partial class V1beta1IdentityPlatformOAuthIDPConfigSpecClientSecret
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -37,6 +40,7 @@ public partial class V1beta1IdentityPlatformOAuthIDPConfigSpecClientSecret
     public V1beta1IdentityPlatformOAuthIDPConfigSpecClientSecretValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary>The multiple response type to request for in the OAuth authorization flow. This can possibly be a combination of set bits (e.g.: {id\_token, token}).</summary>
 public partial class V1beta1IdentityPlatformOAuthIDPConfigSpecResponseType
 {
     /// <summary>If true, authorization code is returned from IdP's authorization endpoint.</summary>
@@ -52,6 +56,7 @@ public partial class V1beta1IdentityPlatformOAuthIDPConfigSpecResponseType
     public bool? Token { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IdentityPlatformOAuthIDPConfigSpec
 {
     /// <summary>The client id of an OAuth client.</summary>
@@ -83,6 +88,7 @@ public partial class V1beta1IdentityPlatformOAuthIDPConfigSpec
     public V1beta1IdentityPlatformOAuthIDPConfigSpecResponseType? ResponseType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IdentityPlatformOAuthIDPConfigStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -106,6 +112,7 @@ public partial class V1beta1IdentityPlatformOAuthIDPConfigStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IdentityPlatformOAuthIDPConfigStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -118,6 +125,7 @@ public partial class V1beta1IdentityPlatformOAuthIDPConfigStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1IdentityPlatformOAuthIDPConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IdentityPlatformOAuthIDPConfigSpec>, IStatus<V1beta1IdentityPlatformOAuthIDPConfigStatus>
 {
     public const string KubeApiVersion = "v1beta1";

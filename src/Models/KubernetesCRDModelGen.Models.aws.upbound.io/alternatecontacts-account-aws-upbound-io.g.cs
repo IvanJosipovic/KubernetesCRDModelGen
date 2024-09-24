@@ -18,6 +18,7 @@ public enum V1beta1AlternateContactSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1AlternateContactSpecForProvider
 {
     /// <summary>ID of the target account when managing member accounts. Will manage current user's account by default if omitted.</summary>
@@ -49,6 +50,7 @@ public partial class V1beta1AlternateContactSpecForProvider
     public string? Title { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1AlternateContactSpecInitProvider
 {
     /// <summary>ID of the target account when managing member accounts. Will manage current user's account by default if omitted.</summary>
@@ -114,6 +116,7 @@ public enum V1beta1AlternateContactSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AlternateContactSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -127,6 +130,7 @@ public partial class V1beta1AlternateContactSpecProviderConfigRefPolicy
     public V1beta1AlternateContactSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1AlternateContactSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -158,6 +162,7 @@ public enum V1beta1AlternateContactSpecPublishConnectionDetailsToConfigRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AlternateContactSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -171,6 +176,7 @@ public partial class V1beta1AlternateContactSpecPublishConnectionDetailsToConfig
     public V1beta1AlternateContactSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1AlternateContactSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -182,6 +188,7 @@ public partial class V1beta1AlternateContactSpecPublishConnectionDetailsToConfig
     public V1beta1AlternateContactSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1AlternateContactSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -197,6 +204,7 @@ public partial class V1beta1AlternateContactSpecPublishConnectionDetailsToMetada
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1AlternateContactSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -212,6 +220,7 @@ public partial class V1beta1AlternateContactSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1AlternateContactSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -223,6 +232,7 @@ public partial class V1beta1AlternateContactSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>AlternateContactSpec defines the desired state of AlternateContact</summary>
 public partial class V1beta1AlternateContactSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -255,6 +265,7 @@ public partial class V1beta1AlternateContactSpec
     public V1beta1AlternateContactSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AlternateContactStatusAtProvider
 {
     /// <summary>ID of the target account when managing member accounts. Will manage current user's account by default if omitted.</summary>
@@ -286,6 +297,7 @@ public partial class V1beta1AlternateContactStatusAtProvider
     public string? Title { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1AlternateContactStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -313,6 +325,7 @@ public partial class V1beta1AlternateContactStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>AlternateContactStatus defines the observed state of AlternateContact.</summary>
 public partial class V1beta1AlternateContactStatus
 {
     /// <summary></summary>
@@ -329,6 +342,7 @@ public partial class V1beta1AlternateContactStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>AlternateContact is the Schema for the AlternateContacts API. Manages the specified alternate contact attached to an AWS Account.</summary>
 public partial class V1beta1AlternateContact : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AlternateContactSpec>, IStatus<V1beta1AlternateContactStatus>
 {
     public const string KubeApiVersion = "v1beta1";

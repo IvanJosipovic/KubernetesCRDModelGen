@@ -18,6 +18,7 @@ public enum V1beta1RoutineSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1RoutineSpecForProviderArguments
 {
     /// <summary>Defaults to FIXED_TYPE. Default value is FIXED_TYPE. Possible values are: FIXED_TYPE, ANY_TYPE.</summary>
@@ -57,6 +58,7 @@ public enum V1beta1RoutineSpecForProviderDatasetIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RoutineSpecForProviderDatasetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -70,6 +72,7 @@ public partial class V1beta1RoutineSpecForProviderDatasetIdRefPolicy
     public V1beta1RoutineSpecForProviderDatasetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Dataset in bigquery to populate datasetId.</summary>
 public partial class V1beta1RoutineSpecForProviderDatasetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -101,6 +104,7 @@ public enum V1beta1RoutineSpecForProviderDatasetIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RoutineSpecForProviderDatasetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -114,6 +118,7 @@ public partial class V1beta1RoutineSpecForProviderDatasetIdSelectorPolicy
     public V1beta1RoutineSpecForProviderDatasetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Dataset in bigquery to populate datasetId.</summary>
 public partial class V1beta1RoutineSpecForProviderDatasetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -149,6 +154,7 @@ public enum V1beta1RoutineSpecForProviderRemoteFunctionOptionsConnectionRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RoutineSpecForProviderRemoteFunctionOptionsConnectionRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -162,6 +168,7 @@ public partial class V1beta1RoutineSpecForProviderRemoteFunctionOptionsConnectio
     public V1beta1RoutineSpecForProviderRemoteFunctionOptionsConnectionRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Connection in bigquery to populate connection.</summary>
 public partial class V1beta1RoutineSpecForProviderRemoteFunctionOptionsConnectionRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -193,6 +200,7 @@ public enum V1beta1RoutineSpecForProviderRemoteFunctionOptionsConnectionSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RoutineSpecForProviderRemoteFunctionOptionsConnectionSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -206,6 +214,7 @@ public partial class V1beta1RoutineSpecForProviderRemoteFunctionOptionsConnectio
     public V1beta1RoutineSpecForProviderRemoteFunctionOptionsConnectionSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Connection in bigquery to populate connection.</summary>
 public partial class V1beta1RoutineSpecForProviderRemoteFunctionOptionsConnectionSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -221,6 +230,7 @@ public partial class V1beta1RoutineSpecForProviderRemoteFunctionOptionsConnectio
     public V1beta1RoutineSpecForProviderRemoteFunctionOptionsConnectionSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RoutineSpecForProviderRemoteFunctionOptions
 {
     /// <summary>Fully qualified name of the user-provided connection object which holds the authentication information to send requests to the remote service. Format: "projects/{projectId}/locations/{locationId}/connections/{connectionId}"</summary>
@@ -268,6 +278,7 @@ public enum V1beta1RoutineSpecForProviderSparkOptionsConnectionRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RoutineSpecForProviderSparkOptionsConnectionRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -281,6 +292,7 @@ public partial class V1beta1RoutineSpecForProviderSparkOptionsConnectionRefPolic
     public V1beta1RoutineSpecForProviderSparkOptionsConnectionRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Connection in bigquery to populate connection.</summary>
 public partial class V1beta1RoutineSpecForProviderSparkOptionsConnectionRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -312,6 +324,7 @@ public enum V1beta1RoutineSpecForProviderSparkOptionsConnectionSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RoutineSpecForProviderSparkOptionsConnectionSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -325,6 +338,7 @@ public partial class V1beta1RoutineSpecForProviderSparkOptionsConnectionSelector
     public V1beta1RoutineSpecForProviderSparkOptionsConnectionSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Connection in bigquery to populate connection.</summary>
 public partial class V1beta1RoutineSpecForProviderSparkOptionsConnectionSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -340,6 +354,7 @@ public partial class V1beta1RoutineSpecForProviderSparkOptionsConnectionSelector
     public V1beta1RoutineSpecForProviderSparkOptionsConnectionSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RoutineSpecForProviderSparkOptions
 {
     /// <summary>Archive files to be extracted into the working directory of each executor. For more information about Apache Spark, see Apache Spark.</summary>
@@ -391,6 +406,7 @@ public partial class V1beta1RoutineSpecForProviderSparkOptions
     public string? RuntimeVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RoutineSpecForProvider
 {
     /// <summary>Input/output argument of a function or a stored procedure. Structure is documented below.</summary>
@@ -458,6 +474,7 @@ public partial class V1beta1RoutineSpecForProvider
     public IList<V1beta1RoutineSpecForProviderSparkOptions>? SparkOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RoutineSpecInitProviderArguments
 {
     /// <summary>Defaults to FIXED_TYPE. Default value is FIXED_TYPE. Possible values are: FIXED_TYPE, ANY_TYPE.</summary>
@@ -497,6 +514,7 @@ public enum V1beta1RoutineSpecInitProviderRemoteFunctionOptionsConnectionRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RoutineSpecInitProviderRemoteFunctionOptionsConnectionRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -510,6 +528,7 @@ public partial class V1beta1RoutineSpecInitProviderRemoteFunctionOptionsConnecti
     public V1beta1RoutineSpecInitProviderRemoteFunctionOptionsConnectionRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Connection in bigquery to populate connection.</summary>
 public partial class V1beta1RoutineSpecInitProviderRemoteFunctionOptionsConnectionRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -541,6 +560,7 @@ public enum V1beta1RoutineSpecInitProviderRemoteFunctionOptionsConnectionSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RoutineSpecInitProviderRemoteFunctionOptionsConnectionSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -554,6 +574,7 @@ public partial class V1beta1RoutineSpecInitProviderRemoteFunctionOptionsConnecti
     public V1beta1RoutineSpecInitProviderRemoteFunctionOptionsConnectionSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Connection in bigquery to populate connection.</summary>
 public partial class V1beta1RoutineSpecInitProviderRemoteFunctionOptionsConnectionSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -569,6 +590,7 @@ public partial class V1beta1RoutineSpecInitProviderRemoteFunctionOptionsConnecti
     public V1beta1RoutineSpecInitProviderRemoteFunctionOptionsConnectionSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RoutineSpecInitProviderRemoteFunctionOptions
 {
     /// <summary>Fully qualified name of the user-provided connection object which holds the authentication information to send requests to the remote service. Format: "projects/{projectId}/locations/{locationId}/connections/{connectionId}"</summary>
@@ -616,6 +638,7 @@ public enum V1beta1RoutineSpecInitProviderSparkOptionsConnectionRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RoutineSpecInitProviderSparkOptionsConnectionRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -629,6 +652,7 @@ public partial class V1beta1RoutineSpecInitProviderSparkOptionsConnectionRefPoli
     public V1beta1RoutineSpecInitProviderSparkOptionsConnectionRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Connection in bigquery to populate connection.</summary>
 public partial class V1beta1RoutineSpecInitProviderSparkOptionsConnectionRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -660,6 +684,7 @@ public enum V1beta1RoutineSpecInitProviderSparkOptionsConnectionSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RoutineSpecInitProviderSparkOptionsConnectionSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -673,6 +698,7 @@ public partial class V1beta1RoutineSpecInitProviderSparkOptionsConnectionSelecto
     public V1beta1RoutineSpecInitProviderSparkOptionsConnectionSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Connection in bigquery to populate connection.</summary>
 public partial class V1beta1RoutineSpecInitProviderSparkOptionsConnectionSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -688,6 +714,7 @@ public partial class V1beta1RoutineSpecInitProviderSparkOptionsConnectionSelecto
     public V1beta1RoutineSpecInitProviderSparkOptionsConnectionSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RoutineSpecInitProviderSparkOptions
 {
     /// <summary>Archive files to be extracted into the working directory of each executor. For more information about Apache Spark, see Apache Spark.</summary>
@@ -739,6 +766,7 @@ public partial class V1beta1RoutineSpecInitProviderSparkOptions
     public string? RuntimeVersion { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1RoutineSpecInitProvider
 {
     /// <summary>Input/output argument of a function or a stored procedure. Structure is documented below.</summary>
@@ -836,6 +864,7 @@ public enum V1beta1RoutineSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RoutineSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -849,6 +878,7 @@ public partial class V1beta1RoutineSpecProviderConfigRefPolicy
     public V1beta1RoutineSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1RoutineSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -880,6 +910,7 @@ public enum V1beta1RoutineSpecPublishConnectionDetailsToConfigRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RoutineSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -893,6 +924,7 @@ public partial class V1beta1RoutineSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1RoutineSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1RoutineSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -904,6 +936,7 @@ public partial class V1beta1RoutineSpecPublishConnectionDetailsToConfigRef
     public V1beta1RoutineSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1RoutineSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -919,6 +952,7 @@ public partial class V1beta1RoutineSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1RoutineSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -934,6 +968,7 @@ public partial class V1beta1RoutineSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1RoutineSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -945,6 +980,7 @@ public partial class V1beta1RoutineSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>RoutineSpec defines the desired state of Routine</summary>
 public partial class V1beta1RoutineSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -977,6 +1013,7 @@ public partial class V1beta1RoutineSpec
     public V1beta1RoutineSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RoutineStatusAtProviderArguments
 {
     /// <summary>Defaults to FIXED_TYPE. Default value is FIXED_TYPE. Possible values are: FIXED_TYPE, ANY_TYPE.</summary>
@@ -996,6 +1033,7 @@ public partial class V1beta1RoutineStatusAtProviderArguments
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RoutineStatusAtProviderRemoteFunctionOptions
 {
     /// <summary>Fully qualified name of the user-provided connection object which holds the authentication information to send requests to the remote service. Format: "projects/{projectId}/locations/{locationId}/connections/{connectionId}"</summary>
@@ -1015,6 +1053,7 @@ public partial class V1beta1RoutineStatusAtProviderRemoteFunctionOptions
     public IDictionary<string, string>? UserDefinedContext { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RoutineStatusAtProviderSparkOptions
 {
     /// <summary>Archive files to be extracted into the working directory of each executor. For more information about Apache Spark, see Apache Spark.</summary>
@@ -1058,6 +1097,7 @@ public partial class V1beta1RoutineStatusAtProviderSparkOptions
     public string? RuntimeVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RoutineStatusAtProvider
 {
     /// <summary>Input/output argument of a function or a stored procedure. Structure is documented below.</summary>
@@ -1129,6 +1169,7 @@ public partial class V1beta1RoutineStatusAtProvider
     public IList<V1beta1RoutineStatusAtProviderSparkOptions>? SparkOptions { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1RoutineStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1156,6 +1197,7 @@ public partial class V1beta1RoutineStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>RoutineStatus defines the observed state of Routine.</summary>
 public partial class V1beta1RoutineStatus
 {
     /// <summary></summary>
@@ -1172,6 +1214,7 @@ public partial class V1beta1RoutineStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Routine is the Schema for the Routines API. A user-defined function or a stored procedure that belongs to a Dataset</summary>
 public partial class V1beta1Routine : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1RoutineSpec>, IStatus<V1beta1RoutineStatus>
 {
     public const string KubeApiVersion = "v1beta1";

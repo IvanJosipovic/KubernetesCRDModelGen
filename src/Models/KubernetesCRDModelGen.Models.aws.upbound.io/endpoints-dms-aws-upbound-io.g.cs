@@ -18,6 +18,7 @@ public enum V1beta1EndpointSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderElasticsearchSettings
 {
     /// <summary>Endpoint for the OpenSearch cluster.</summary>
@@ -41,6 +42,7 @@ public partial class V1beta1EndpointSpecForProviderElasticsearchSettings
     public bool? UseNewMappingType { get; set; }
 }
 
+/// <summary>Secure password you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.</summary>
 public partial class V1beta1EndpointSpecForProviderKafkaSettingsSaslPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -56,6 +58,7 @@ public partial class V1beta1EndpointSpecForProviderKafkaSettingsSaslPasswordSecr
     public string Namespace { get; set; }
 }
 
+/// <summary>Password for the client private key used to securely connect to a Kafka target endpoint.</summary>
 public partial class V1beta1EndpointSpecForProviderKafkaSettingsSslClientKeyPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -71,6 +74,7 @@ public partial class V1beta1EndpointSpecForProviderKafkaSettingsSslClientKeyPass
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderKafkaSettings
 {
     /// <summary>Kafka broker location. Specify in the form broker-hostname-or-ip:port.</summary>
@@ -146,6 +150,7 @@ public partial class V1beta1EndpointSpecForProviderKafkaSettings
     public string? Topic { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderKinesisSettings
 {
     /// <summary>Shows detailed control information for table definition, column definition, and table and column changes in the Kinesis message output. Default is false.</summary>
@@ -205,6 +210,7 @@ public enum V1beta1EndpointSpecForProviderKmsKeyArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EndpointSpecForProviderKmsKeyArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -218,6 +224,7 @@ public partial class V1beta1EndpointSpecForProviderKmsKeyArnRefPolicy
     public V1beta1EndpointSpecForProviderKmsKeyArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyArn.</summary>
 public partial class V1beta1EndpointSpecForProviderKmsKeyArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -249,6 +256,7 @@ public enum V1beta1EndpointSpecForProviderKmsKeyArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EndpointSpecForProviderKmsKeyArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -262,6 +270,7 @@ public partial class V1beta1EndpointSpecForProviderKmsKeyArnSelectorPolicy
     public V1beta1EndpointSpecForProviderKmsKeyArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyArn.</summary>
 public partial class V1beta1EndpointSpecForProviderKmsKeyArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -277,6 +286,7 @@ public partial class V1beta1EndpointSpecForProviderKmsKeyArnSelector
     public V1beta1EndpointSpecForProviderKmsKeyArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderMongodbSettings
 {
     /// <summary>Authentication mechanism to access the MongoDB source endpoint. Default is default.</summary>
@@ -304,6 +314,7 @@ public partial class V1beta1EndpointSpecForProviderMongodbSettings
     public string? NestingLevel { get; set; }
 }
 
+/// <summary>Password to be used to login to the endpoint database.</summary>
 public partial class V1beta1EndpointSpecForProviderPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -319,6 +330,7 @@ public partial class V1beta1EndpointSpecForProviderPasswordSecretRef
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderPostgresSettings
 {
     /// <summary>For use with change data capture (CDC) only, this attribute has AWS DMS bypass foreign keys and user triggers to reduce the time it takes to bulk load data.</summary>
@@ -386,6 +398,7 @@ public partial class V1beta1EndpointSpecForProviderPostgresSettings
     public string? SlotName { get; set; }
 }
 
+/// <summary>The password provided with the auth-role and auth-token options of the AuthType setting for a Redis target endpoint.</summary>
 public partial class V1beta1EndpointSpecForProviderRedisSettingsAuthPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -401,6 +414,7 @@ public partial class V1beta1EndpointSpecForProviderRedisSettingsAuthPasswordSecr
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderRedisSettings
 {
     /// <summary>The password provided with the auth-role and auth-token options of the AuthType setting for a Redis target endpoint.</summary>
@@ -432,6 +446,7 @@ public partial class V1beta1EndpointSpecForProviderRedisSettings
     public string? SslSecurityProtocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderRedshiftSettings
 {
     /// <summary>Custom S3 Bucket Object prefix for intermediate storage.</summary>
@@ -455,6 +470,7 @@ public partial class V1beta1EndpointSpecForProviderRedshiftSettings
     public string? ServiceAccessRoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProviderS3Settings
 {
     /// <summary>Whether to add column name information to the .csv output file. Default is false.</summary>
@@ -630,6 +646,7 @@ public enum V1beta1EndpointSpecForProviderSecretsManagerAccessRoleArnRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EndpointSpecForProviderSecretsManagerAccessRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -643,6 +660,7 @@ public partial class V1beta1EndpointSpecForProviderSecretsManagerAccessRoleArnRe
     public V1beta1EndpointSpecForProviderSecretsManagerAccessRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate secretsManagerAccessRoleArn.</summary>
 public partial class V1beta1EndpointSpecForProviderSecretsManagerAccessRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -674,6 +692,7 @@ public enum V1beta1EndpointSpecForProviderSecretsManagerAccessRoleArnSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EndpointSpecForProviderSecretsManagerAccessRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -687,6 +706,7 @@ public partial class V1beta1EndpointSpecForProviderSecretsManagerAccessRoleArnSe
     public V1beta1EndpointSpecForProviderSecretsManagerAccessRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate secretsManagerAccessRoleArn.</summary>
 public partial class V1beta1EndpointSpecForProviderSecretsManagerAccessRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -722,6 +742,7 @@ public enum V1beta1EndpointSpecForProviderServiceAccessRoleRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EndpointSpecForProviderServiceAccessRoleRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -735,6 +756,7 @@ public partial class V1beta1EndpointSpecForProviderServiceAccessRoleRefPolicy
     public V1beta1EndpointSpecForProviderServiceAccessRoleRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate serviceAccessRole.</summary>
 public partial class V1beta1EndpointSpecForProviderServiceAccessRoleRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -766,6 +788,7 @@ public enum V1beta1EndpointSpecForProviderServiceAccessRoleSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EndpointSpecForProviderServiceAccessRoleSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -779,6 +802,7 @@ public partial class V1beta1EndpointSpecForProviderServiceAccessRoleSelectorPoli
     public V1beta1EndpointSpecForProviderServiceAccessRoleSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate serviceAccessRole.</summary>
 public partial class V1beta1EndpointSpecForProviderServiceAccessRoleSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -794,6 +818,7 @@ public partial class V1beta1EndpointSpecForProviderServiceAccessRoleSelector
     public V1beta1EndpointSpecForProviderServiceAccessRoleSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecForProvider
 {
     /// <summary>ARN for the certificate.</summary>
@@ -921,6 +946,7 @@ public partial class V1beta1EndpointSpecForProvider
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderElasticsearchSettings
 {
     /// <summary>Endpoint for the OpenSearch cluster.</summary>
@@ -944,6 +970,7 @@ public partial class V1beta1EndpointSpecInitProviderElasticsearchSettings
     public bool? UseNewMappingType { get; set; }
 }
 
+/// <summary>Secure password you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.</summary>
 public partial class V1beta1EndpointSpecInitProviderKafkaSettingsSaslPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -959,6 +986,7 @@ public partial class V1beta1EndpointSpecInitProviderKafkaSettingsSaslPasswordSec
     public string Namespace { get; set; }
 }
 
+/// <summary>Password for the client private key used to securely connect to a Kafka target endpoint.</summary>
 public partial class V1beta1EndpointSpecInitProviderKafkaSettingsSslClientKeyPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -974,6 +1002,7 @@ public partial class V1beta1EndpointSpecInitProviderKafkaSettingsSslClientKeyPas
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderKafkaSettings
 {
     /// <summary>Kafka broker location. Specify in the form broker-hostname-or-ip:port.</summary>
@@ -1049,6 +1078,7 @@ public partial class V1beta1EndpointSpecInitProviderKafkaSettings
     public string? Topic { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderKinesisSettings
 {
     /// <summary>Shows detailed control information for table definition, column definition, and table and column changes in the Kinesis message output. Default is false.</summary>
@@ -1108,6 +1138,7 @@ public enum V1beta1EndpointSpecInitProviderKmsKeyArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EndpointSpecInitProviderKmsKeyArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1121,6 +1152,7 @@ public partial class V1beta1EndpointSpecInitProviderKmsKeyArnRefPolicy
     public V1beta1EndpointSpecInitProviderKmsKeyArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyArn.</summary>
 public partial class V1beta1EndpointSpecInitProviderKmsKeyArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1152,6 +1184,7 @@ public enum V1beta1EndpointSpecInitProviderKmsKeyArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EndpointSpecInitProviderKmsKeyArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1165,6 +1198,7 @@ public partial class V1beta1EndpointSpecInitProviderKmsKeyArnSelectorPolicy
     public V1beta1EndpointSpecInitProviderKmsKeyArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyArn.</summary>
 public partial class V1beta1EndpointSpecInitProviderKmsKeyArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1180,6 +1214,7 @@ public partial class V1beta1EndpointSpecInitProviderKmsKeyArnSelector
     public V1beta1EndpointSpecInitProviderKmsKeyArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderMongodbSettings
 {
     /// <summary>Authentication mechanism to access the MongoDB source endpoint. Default is default.</summary>
@@ -1207,6 +1242,7 @@ public partial class V1beta1EndpointSpecInitProviderMongodbSettings
     public string? NestingLevel { get; set; }
 }
 
+/// <summary>Password to be used to login to the endpoint database.</summary>
 public partial class V1beta1EndpointSpecInitProviderPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1222,6 +1258,7 @@ public partial class V1beta1EndpointSpecInitProviderPasswordSecretRef
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderPostgresSettings
 {
     /// <summary>For use with change data capture (CDC) only, this attribute has AWS DMS bypass foreign keys and user triggers to reduce the time it takes to bulk load data.</summary>
@@ -1289,6 +1326,7 @@ public partial class V1beta1EndpointSpecInitProviderPostgresSettings
     public string? SlotName { get; set; }
 }
 
+/// <summary>The password provided with the auth-role and auth-token options of the AuthType setting for a Redis target endpoint.</summary>
 public partial class V1beta1EndpointSpecInitProviderRedisSettingsAuthPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1304,6 +1342,7 @@ public partial class V1beta1EndpointSpecInitProviderRedisSettingsAuthPasswordSec
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderRedisSettings
 {
     /// <summary>The password provided with the auth-role and auth-token options of the AuthType setting for a Redis target endpoint.</summary>
@@ -1335,6 +1374,7 @@ public partial class V1beta1EndpointSpecInitProviderRedisSettings
     public string? SslSecurityProtocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderRedshiftSettings
 {
     /// <summary>Custom S3 Bucket Object prefix for intermediate storage.</summary>
@@ -1358,6 +1398,7 @@ public partial class V1beta1EndpointSpecInitProviderRedshiftSettings
     public string? ServiceAccessRoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointSpecInitProviderS3Settings
 {
     /// <summary>Whether to add column name information to the .csv output file. Default is false.</summary>
@@ -1533,6 +1574,7 @@ public enum V1beta1EndpointSpecInitProviderSecretsManagerAccessRoleArnRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EndpointSpecInitProviderSecretsManagerAccessRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1546,6 +1588,7 @@ public partial class V1beta1EndpointSpecInitProviderSecretsManagerAccessRoleArnR
     public V1beta1EndpointSpecInitProviderSecretsManagerAccessRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate secretsManagerAccessRoleArn.</summary>
 public partial class V1beta1EndpointSpecInitProviderSecretsManagerAccessRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1577,6 +1620,7 @@ public enum V1beta1EndpointSpecInitProviderSecretsManagerAccessRoleArnSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EndpointSpecInitProviderSecretsManagerAccessRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1590,6 +1634,7 @@ public partial class V1beta1EndpointSpecInitProviderSecretsManagerAccessRoleArnS
     public V1beta1EndpointSpecInitProviderSecretsManagerAccessRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate secretsManagerAccessRoleArn.</summary>
 public partial class V1beta1EndpointSpecInitProviderSecretsManagerAccessRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1625,6 +1670,7 @@ public enum V1beta1EndpointSpecInitProviderServiceAccessRoleRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EndpointSpecInitProviderServiceAccessRoleRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1638,6 +1684,7 @@ public partial class V1beta1EndpointSpecInitProviderServiceAccessRoleRefPolicy
     public V1beta1EndpointSpecInitProviderServiceAccessRoleRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate serviceAccessRole.</summary>
 public partial class V1beta1EndpointSpecInitProviderServiceAccessRoleRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1669,6 +1716,7 @@ public enum V1beta1EndpointSpecInitProviderServiceAccessRoleSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EndpointSpecInitProviderServiceAccessRoleSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1682,6 +1730,7 @@ public partial class V1beta1EndpointSpecInitProviderServiceAccessRoleSelectorPol
     public V1beta1EndpointSpecInitProviderServiceAccessRoleSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate serviceAccessRole.</summary>
 public partial class V1beta1EndpointSpecInitProviderServiceAccessRoleSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1697,6 +1746,7 @@ public partial class V1beta1EndpointSpecInitProviderServiceAccessRoleSelector
     public V1beta1EndpointSpecInitProviderServiceAccessRoleSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1EndpointSpecInitProvider
 {
     /// <summary>ARN for the certificate.</summary>
@@ -1862,6 +1912,7 @@ public enum V1beta1EndpointSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EndpointSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1875,6 +1926,7 @@ public partial class V1beta1EndpointSpecProviderConfigRefPolicy
     public V1beta1EndpointSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1EndpointSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1906,6 +1958,7 @@ public enum V1beta1EndpointSpecPublishConnectionDetailsToConfigRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EndpointSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1919,6 +1972,7 @@ public partial class V1beta1EndpointSpecPublishConnectionDetailsToConfigRefPolic
     public V1beta1EndpointSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1EndpointSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1930,6 +1984,7 @@ public partial class V1beta1EndpointSpecPublishConnectionDetailsToConfigRef
     public V1beta1EndpointSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1EndpointSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1945,6 +2000,7 @@ public partial class V1beta1EndpointSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1EndpointSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1960,6 +2016,7 @@ public partial class V1beta1EndpointSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1EndpointSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1971,6 +2028,7 @@ public partial class V1beta1EndpointSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>EndpointSpec defines the desired state of Endpoint</summary>
 public partial class V1beta1EndpointSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -2003,6 +2061,7 @@ public partial class V1beta1EndpointSpec
     public V1beta1EndpointSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderElasticsearchSettings
 {
     /// <summary>Endpoint for the OpenSearch cluster.</summary>
@@ -2026,6 +2085,7 @@ public partial class V1beta1EndpointStatusAtProviderElasticsearchSettings
     public bool? UseNewMappingType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderKafkaSettings
 {
     /// <summary>Kafka broker location. Specify in the form broker-hostname-or-ip:port.</summary>
@@ -2093,6 +2153,7 @@ public partial class V1beta1EndpointStatusAtProviderKafkaSettings
     public string? Topic { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderKinesisSettings
 {
     /// <summary>Shows detailed control information for table definition, column definition, and table and column changes in the Kinesis message output. Default is false.</summary>
@@ -2132,6 +2193,7 @@ public partial class V1beta1EndpointStatusAtProviderKinesisSettings
     public string? StreamArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderMongodbSettings
 {
     /// <summary>Authentication mechanism to access the MongoDB source endpoint. Default is default.</summary>
@@ -2159,6 +2221,7 @@ public partial class V1beta1EndpointStatusAtProviderMongodbSettings
     public string? NestingLevel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderPostgresSettings
 {
     /// <summary>For use with change data capture (CDC) only, this attribute has AWS DMS bypass foreign keys and user triggers to reduce the time it takes to bulk load data.</summary>
@@ -2226,6 +2289,7 @@ public partial class V1beta1EndpointStatusAtProviderPostgresSettings
     public string? SlotName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderRedisSettings
 {
     /// <summary>Authentication type to access the MongoDB source endpoint. Default is password.</summary>
@@ -2253,6 +2317,7 @@ public partial class V1beta1EndpointStatusAtProviderRedisSettings
     public string? SslSecurityProtocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderRedshiftSettings
 {
     /// <summary>Custom S3 Bucket Object prefix for intermediate storage.</summary>
@@ -2276,6 +2341,7 @@ public partial class V1beta1EndpointStatusAtProviderRedshiftSettings
     public string? ServiceAccessRoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProviderS3Settings
 {
     /// <summary>Whether to add column name information to the .csv output file. Default is false.</summary>
@@ -2431,6 +2497,7 @@ public partial class V1beta1EndpointStatusAtProviderS3Settings
     public bool? UseTaskStartTimeForFullLoadTimestamp { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointStatusAtProvider
 {
     /// <summary>ARN for the certificate.</summary>
@@ -2538,6 +2605,7 @@ public partial class V1beta1EndpointStatusAtProvider
     public string? Username { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1EndpointStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2565,6 +2633,7 @@ public partial class V1beta1EndpointStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>EndpointStatus defines the observed state of Endpoint.</summary>
 public partial class V1beta1EndpointStatus
 {
     /// <summary></summary>
@@ -2581,6 +2650,7 @@ public partial class V1beta1EndpointStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Endpoint is the Schema for the Endpoints API. Provides a DMS (Data Migration Service) endpoint resource.</summary>
 public partial class V1beta1Endpoint : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1EndpointSpec>, IStatus<V1beta1EndpointStatus>
 {
     public const string KubeApiVersion = "v1beta1";

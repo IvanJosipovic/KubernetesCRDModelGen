@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.documentai.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1alpha1DocumentAIProcessorDefaultVersionSpec
 {
     /// <summary>Immutable. Optional. The processor of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
@@ -19,6 +20,7 @@ public partial class V1alpha1DocumentAIProcessorDefaultVersionSpec
     public string Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DocumentAIProcessorDefaultVersionStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -42,6 +44,7 @@ public partial class V1alpha1DocumentAIProcessorDefaultVersionStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DocumentAIProcessorDefaultVersionStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -54,6 +57,7 @@ public partial class V1alpha1DocumentAIProcessorDefaultVersionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1DocumentAIProcessorDefaultVersion : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DocumentAIProcessorDefaultVersionSpec>, IStatus<V1alpha1DocumentAIProcessorDefaultVersionStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

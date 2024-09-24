@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1beta1ComputeNetworkFirewallPolicySpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1ComputeNetworkFirewallPolicySpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeNetworkFirewallPolicySpec
 {
     /// <summary>An optional description of this resource. Provide this property when you create the resource.</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1ComputeNetworkFirewallPolicySpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeNetworkFirewallPolicyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -61,6 +64,7 @@ public partial class V1beta1ComputeNetworkFirewallPolicyStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeNetworkFirewallPolicyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -97,6 +101,7 @@ public partial class V1beta1ComputeNetworkFirewallPolicyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ComputeNetworkFirewallPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeNetworkFirewallPolicySpec>, IStatus<V1beta1ComputeNetworkFirewallPolicyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

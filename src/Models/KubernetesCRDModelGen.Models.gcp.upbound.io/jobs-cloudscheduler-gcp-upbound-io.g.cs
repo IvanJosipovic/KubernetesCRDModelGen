@@ -18,6 +18,7 @@ public enum V1beta1JobSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderAppEngineHttpTargetAppEngineRouting
 {
     /// <summary>App instance. By default, the job is sent to an instance which is available when the job is attempted.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1JobSpecForProviderAppEngineHttpTargetAppEngineRoutin
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderAppEngineHttpTarget
 {
     /// <summary>App Engine Routing setting for the job. Structure is documented below.</summary>
@@ -56,6 +58,7 @@ public partial class V1beta1JobSpecForProviderAppEngineHttpTarget
     public string? RelativeUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderHttpTargetOauthToken
 {
     /// <summary>OAuth scope to be used for generating OAuth access token. If not specified, "https://www.googleapis.com/auth/cloud-platform" will be used.</summary>
@@ -67,6 +70,7 @@ public partial class V1beta1JobSpecForProviderHttpTargetOauthToken
     public string? ServiceAccountEmail { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderHttpTargetOidcToken
 {
     /// <summary>Audience to be used when generating OIDC token. If not specified, the URI specified in target will be used.</summary>
@@ -78,6 +82,7 @@ public partial class V1beta1JobSpecForProviderHttpTargetOidcToken
     public string? ServiceAccountEmail { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderHttpTarget
 {
     /// <summary>HTTP request body. A request body is allowed only if the HTTP method is POST, PUT, or PATCH. It is an error to set body on a job with an incompatible HttpMethod. A base64-encoded string.</summary>
@@ -125,6 +130,7 @@ public enum V1beta1JobSpecForProviderPubsubTargetTopicNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecForProviderPubsubTargetTopicNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -138,6 +144,7 @@ public partial class V1beta1JobSpecForProviderPubsubTargetTopicNameRefPolicy
     public V1beta1JobSpecForProviderPubsubTargetTopicNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Topic in pubsub to populate topicName.</summary>
 public partial class V1beta1JobSpecForProviderPubsubTargetTopicNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -169,6 +176,7 @@ public enum V1beta1JobSpecForProviderPubsubTargetTopicNameSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobSpecForProviderPubsubTargetTopicNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -182,6 +190,7 @@ public partial class V1beta1JobSpecForProviderPubsubTargetTopicNameSelectorPolic
     public V1beta1JobSpecForProviderPubsubTargetTopicNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Topic in pubsub to populate topicName.</summary>
 public partial class V1beta1JobSpecForProviderPubsubTargetTopicNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -197,6 +206,7 @@ public partial class V1beta1JobSpecForProviderPubsubTargetTopicNameSelector
     public V1beta1JobSpecForProviderPubsubTargetTopicNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderPubsubTarget
 {
     /// <summary>Attributes for PubsubMessage. Pubsub message must contain either non-empty data, or at least one attribute.</summary>
@@ -220,6 +230,7 @@ public partial class V1beta1JobSpecForProviderPubsubTarget
     public V1beta1JobSpecForProviderPubsubTargetTopicNameSelector? TopicNameSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderRetryConfig
 {
     /// <summary>The maximum amount of time to wait before retrying a job after it fails. A duration in seconds with up to nine fractional digits, terminated by 's'.</summary>
@@ -243,6 +254,7 @@ public partial class V1beta1JobSpecForProviderRetryConfig
     public double? RetryCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProvider
 {
     /// <summary>App Engine HTTP target. If the job providers a App Engine HTTP target the cron will send a request to the service instance Structure is documented below.</summary>
@@ -290,6 +302,7 @@ public partial class V1beta1JobSpecForProvider
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderAppEngineHttpTargetAppEngineRouting
 {
     /// <summary>App instance. By default, the job is sent to an instance which is available when the job is attempted.</summary>
@@ -305,6 +318,7 @@ public partial class V1beta1JobSpecInitProviderAppEngineHttpTargetAppEngineRouti
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderAppEngineHttpTarget
 {
     /// <summary>App Engine Routing setting for the job. Structure is documented below.</summary>
@@ -328,6 +342,7 @@ public partial class V1beta1JobSpecInitProviderAppEngineHttpTarget
     public string? RelativeUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderHttpTargetOauthToken
 {
     /// <summary>OAuth scope to be used for generating OAuth access token. If not specified, "https://www.googleapis.com/auth/cloud-platform" will be used.</summary>
@@ -339,6 +354,7 @@ public partial class V1beta1JobSpecInitProviderHttpTargetOauthToken
     public string? ServiceAccountEmail { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderHttpTargetOidcToken
 {
     /// <summary>Audience to be used when generating OIDC token. If not specified, the URI specified in target will be used.</summary>
@@ -350,6 +366,7 @@ public partial class V1beta1JobSpecInitProviderHttpTargetOidcToken
     public string? ServiceAccountEmail { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderHttpTarget
 {
     /// <summary>HTTP request body. A request body is allowed only if the HTTP method is POST, PUT, or PATCH. It is an error to set body on a job with an incompatible HttpMethod. A base64-encoded string.</summary>
@@ -397,6 +414,7 @@ public enum V1beta1JobSpecInitProviderPubsubTargetTopicNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecInitProviderPubsubTargetTopicNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -410,6 +428,7 @@ public partial class V1beta1JobSpecInitProviderPubsubTargetTopicNameRefPolicy
     public V1beta1JobSpecInitProviderPubsubTargetTopicNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Topic in pubsub to populate topicName.</summary>
 public partial class V1beta1JobSpecInitProviderPubsubTargetTopicNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -441,6 +460,7 @@ public enum V1beta1JobSpecInitProviderPubsubTargetTopicNameSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobSpecInitProviderPubsubTargetTopicNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -454,6 +474,7 @@ public partial class V1beta1JobSpecInitProviderPubsubTargetTopicNameSelectorPoli
     public V1beta1JobSpecInitProviderPubsubTargetTopicNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Topic in pubsub to populate topicName.</summary>
 public partial class V1beta1JobSpecInitProviderPubsubTargetTopicNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -469,6 +490,7 @@ public partial class V1beta1JobSpecInitProviderPubsubTargetTopicNameSelector
     public V1beta1JobSpecInitProviderPubsubTargetTopicNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderPubsubTarget
 {
     /// <summary>Attributes for PubsubMessage. Pubsub message must contain either non-empty data, or at least one attribute.</summary>
@@ -492,6 +514,7 @@ public partial class V1beta1JobSpecInitProviderPubsubTarget
     public V1beta1JobSpecInitProviderPubsubTargetTopicNameSelector? TopicNameSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderRetryConfig
 {
     /// <summary>The maximum amount of time to wait before retrying a job after it fails. A duration in seconds with up to nine fractional digits, terminated by 's'.</summary>
@@ -515,6 +538,7 @@ public partial class V1beta1JobSpecInitProviderRetryConfig
     public double? RetryCount { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1JobSpecInitProvider
 {
     /// <summary>App Engine HTTP target. If the job providers a App Engine HTTP target the cron will send a request to the service instance Structure is documented below.</summary>
@@ -600,6 +624,7 @@ public enum V1beta1JobSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -613,6 +638,7 @@ public partial class V1beta1JobSpecProviderConfigRefPolicy
     public V1beta1JobSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1JobSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -644,6 +670,7 @@ public enum V1beta1JobSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -657,6 +684,7 @@ public partial class V1beta1JobSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1JobSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1JobSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -668,6 +696,7 @@ public partial class V1beta1JobSpecPublishConnectionDetailsToConfigRef
     public V1beta1JobSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1JobSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -683,6 +712,7 @@ public partial class V1beta1JobSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1JobSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -698,6 +728,7 @@ public partial class V1beta1JobSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1JobSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -709,6 +740,7 @@ public partial class V1beta1JobSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>JobSpec defines the desired state of Job</summary>
 public partial class V1beta1JobSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -741,6 +773,7 @@ public partial class V1beta1JobSpec
     public V1beta1JobSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderAppEngineHttpTargetAppEngineRouting
 {
     /// <summary>App instance. By default, the job is sent to an instance which is available when the job is attempted.</summary>
@@ -756,6 +789,7 @@ public partial class V1beta1JobStatusAtProviderAppEngineHttpTargetAppEngineRouti
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderAppEngineHttpTarget
 {
     /// <summary>App Engine Routing setting for the job. Structure is documented below.</summary>
@@ -779,6 +813,7 @@ public partial class V1beta1JobStatusAtProviderAppEngineHttpTarget
     public string? RelativeUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderHttpTargetOauthToken
 {
     /// <summary>OAuth scope to be used for generating OAuth access token. If not specified, "https://www.googleapis.com/auth/cloud-platform" will be used.</summary>
@@ -790,6 +825,7 @@ public partial class V1beta1JobStatusAtProviderHttpTargetOauthToken
     public string? ServiceAccountEmail { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderHttpTargetOidcToken
 {
     /// <summary>Audience to be used when generating OIDC token. If not specified, the URI specified in target will be used.</summary>
@@ -801,6 +837,7 @@ public partial class V1beta1JobStatusAtProviderHttpTargetOidcToken
     public string? ServiceAccountEmail { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderHttpTarget
 {
     /// <summary>HTTP request body. A request body is allowed only if the HTTP method is POST, PUT, or PATCH. It is an error to set body on a job with an incompatible HttpMethod. A base64-encoded string.</summary>
@@ -828,6 +865,7 @@ public partial class V1beta1JobStatusAtProviderHttpTarget
     public string? Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderPubsubTarget
 {
     /// <summary>Attributes for PubsubMessage. Pubsub message must contain either non-empty data, or at least one attribute.</summary>
@@ -843,6 +881,7 @@ public partial class V1beta1JobStatusAtProviderPubsubTarget
     public string? TopicName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderRetryConfig
 {
     /// <summary>The maximum amount of time to wait before retrying a job after it fails. A duration in seconds with up to nine fractional digits, terminated by 's'.</summary>
@@ -866,6 +905,7 @@ public partial class V1beta1JobStatusAtProviderRetryConfig
     public double? RetryCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProvider
 {
     /// <summary>App Engine HTTP target. If the job providers a App Engine HTTP target the cron will send a request to the service instance Structure is documented below.</summary>
@@ -921,6 +961,7 @@ public partial class V1beta1JobStatusAtProvider
     public string? TimeZone { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1JobStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -948,6 +989,7 @@ public partial class V1beta1JobStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>JobStatus defines the observed state of Job.</summary>
 public partial class V1beta1JobStatus
 {
     /// <summary></summary>
@@ -964,6 +1006,7 @@ public partial class V1beta1JobStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Job is the Schema for the Jobs API. A scheduled job that can publish a PubSub message or an HTTP request every X interval of time, using a crontab format string.</summary>
 public partial class V1beta1Job : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1JobSpec>, IStatus<V1beta1JobStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.crd.projectcalico.org;
+/// <summary>IPAMConfigSpec contains the specification for an IPAMConfig resource.</summary>
 public partial class V1IPAMConfigSpec
 {
     /// <summary></summary>
@@ -24,6 +25,7 @@ public partial class V1IPAMConfigSpec
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1IPAMConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1IPAMConfigSpec>
 {
     public const string KubeApiVersion = "v1";

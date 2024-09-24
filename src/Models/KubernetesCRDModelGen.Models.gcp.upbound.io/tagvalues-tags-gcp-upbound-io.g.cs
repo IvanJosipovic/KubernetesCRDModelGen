@@ -38,6 +38,7 @@ public enum V1beta1TagValueSpecForProviderParentRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TagValueSpecForProviderParentRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1TagValueSpecForProviderParentRefPolicy
     public V1beta1TagValueSpecForProviderParentRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a TagKey in tags to populate parent.</summary>
 public partial class V1beta1TagValueSpecForProviderParentRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1TagValueSpecForProviderParentSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TagValueSpecForProviderParentSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1TagValueSpecForProviderParentSelectorPolicy
     public V1beta1TagValueSpecForProviderParentSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a TagKey in tags to populate parent.</summary>
 public partial class V1beta1TagValueSpecForProviderParentSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1TagValueSpecForProviderParentSelector
     public V1beta1TagValueSpecForProviderParentSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TagValueSpecForProvider
 {
     /// <summary>User-assigned description of the TagValue. Must not exceed 256 characters.</summary>
@@ -153,6 +158,7 @@ public enum V1beta1TagValueSpecInitProviderParentRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TagValueSpecInitProviderParentRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -166,6 +172,7 @@ public partial class V1beta1TagValueSpecInitProviderParentRefPolicy
     public V1beta1TagValueSpecInitProviderParentRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a TagKey in tags to populate parent.</summary>
 public partial class V1beta1TagValueSpecInitProviderParentRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -197,6 +204,7 @@ public enum V1beta1TagValueSpecInitProviderParentSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TagValueSpecInitProviderParentSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -210,6 +218,7 @@ public partial class V1beta1TagValueSpecInitProviderParentSelectorPolicy
     public V1beta1TagValueSpecInitProviderParentSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a TagKey in tags to populate parent.</summary>
 public partial class V1beta1TagValueSpecInitProviderParentSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -225,6 +234,7 @@ public partial class V1beta1TagValueSpecInitProviderParentSelector
     public V1beta1TagValueSpecInitProviderParentSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1TagValueSpecInitProvider
 {
     /// <summary>User-assigned description of the TagValue. Must not exceed 256 characters.</summary>
@@ -290,6 +300,7 @@ public enum V1beta1TagValueSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TagValueSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -303,6 +314,7 @@ public partial class V1beta1TagValueSpecProviderConfigRefPolicy
     public V1beta1TagValueSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1TagValueSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -334,6 +346,7 @@ public enum V1beta1TagValueSpecPublishConnectionDetailsToConfigRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TagValueSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -347,6 +360,7 @@ public partial class V1beta1TagValueSpecPublishConnectionDetailsToConfigRefPolic
     public V1beta1TagValueSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1TagValueSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -358,6 +372,7 @@ public partial class V1beta1TagValueSpecPublishConnectionDetailsToConfigRef
     public V1beta1TagValueSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1TagValueSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -373,6 +388,7 @@ public partial class V1beta1TagValueSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1TagValueSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -388,6 +404,7 @@ public partial class V1beta1TagValueSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1TagValueSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -399,6 +416,7 @@ public partial class V1beta1TagValueSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>TagValueSpec defines the desired state of TagValue</summary>
 public partial class V1beta1TagValueSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -431,6 +449,7 @@ public partial class V1beta1TagValueSpec
     public V1beta1TagValueSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TagValueStatusAtProvider
 {
     /// <summary>Output only. Creation time. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".</summary>
@@ -466,6 +485,7 @@ public partial class V1beta1TagValueStatusAtProvider
     public string? UpdateTime { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1TagValueStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -493,6 +513,7 @@ public partial class V1beta1TagValueStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>TagValueStatus defines the observed state of TagValue.</summary>
 public partial class V1beta1TagValueStatus
 {
     /// <summary></summary>
@@ -509,6 +530,7 @@ public partial class V1beta1TagValueStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>TagValue is the Schema for the TagValues API. A TagValue is a child of a particular TagKey.</summary>
 public partial class V1beta1TagValue : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1TagValueSpec>, IStatus<V1beta1TagValueStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -21,6 +21,7 @@ public enum V1beta1SidecarSpecEgressCaptureModeEnum
     NONE
 }
 
+/// <summary>The port associated with the listener.</summary>
 public partial class V1beta1SidecarSpecEgressPort
 {
     /// <summary>Label assigned to the port.</summary>
@@ -40,6 +41,7 @@ public partial class V1beta1SidecarSpecEgressPort
     public int? TargetPort { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SidecarSpecEgress
 {
     /// <summary>The IP(IPv4 or IPv6) or the Unix domain socket to which the listener should be bound to.</summary>
@@ -73,6 +75,7 @@ public enum V1beta1SidecarSpecInboundConnectionPoolHttpH2UpgradePolicyEnum
     UPGRADE
 }
 
+/// <summary>HTTP connection pool settings.</summary>
 public partial class V1beta1SidecarSpecInboundConnectionPoolHttp
 {
     /// <summary>Specify if http1.1 connection should be upgraded to http2 for the associated destination.  Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE</summary>
@@ -109,6 +112,7 @@ public partial class V1beta1SidecarSpecInboundConnectionPoolHttp
     public bool? UseClientProtocol { get; set; }
 }
 
+/// <summary>If set then set SO_KEEPALIVE on the socket to enable TCP Keepalives.</summary>
 public partial class V1beta1SidecarSpecInboundConnectionPoolTcpTcpKeepalive
 {
     /// <summary>The time duration between keep-alive probes.</summary>
@@ -124,6 +128,7 @@ public partial class V1beta1SidecarSpecInboundConnectionPoolTcpTcpKeepalive
     public string? Time { get; set; }
 }
 
+/// <summary>Settings common to both HTTP and TCP upstream connections.</summary>
 public partial class V1beta1SidecarSpecInboundConnectionPoolTcp
 {
     /// <summary>TCP connection timeout.</summary>
@@ -147,6 +152,7 @@ public partial class V1beta1SidecarSpecInboundConnectionPoolTcp
     public V1beta1SidecarSpecInboundConnectionPoolTcpTcpKeepalive? TcpKeepalive { get; set; }
 }
 
+/// <summary>Settings controlling the volume of connections Envoy will accept from the network.</summary>
 public partial class V1beta1SidecarSpecInboundConnectionPool
 {
     /// <summary>HTTP connection pool settings.</summary>
@@ -184,6 +190,7 @@ public enum V1beta1SidecarSpecIngressConnectionPoolHttpH2UpgradePolicyEnum
     UPGRADE
 }
 
+/// <summary>HTTP connection pool settings.</summary>
 public partial class V1beta1SidecarSpecIngressConnectionPoolHttp
 {
     /// <summary>Specify if http1.1 connection should be upgraded to http2 for the associated destination.  Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE</summary>
@@ -220,6 +227,7 @@ public partial class V1beta1SidecarSpecIngressConnectionPoolHttp
     public bool? UseClientProtocol { get; set; }
 }
 
+/// <summary>If set then set SO_KEEPALIVE on the socket to enable TCP Keepalives.</summary>
 public partial class V1beta1SidecarSpecIngressConnectionPoolTcpTcpKeepalive
 {
     /// <summary>The time duration between keep-alive probes.</summary>
@@ -235,6 +243,7 @@ public partial class V1beta1SidecarSpecIngressConnectionPoolTcpTcpKeepalive
     public string? Time { get; set; }
 }
 
+/// <summary>Settings common to both HTTP and TCP upstream connections.</summary>
 public partial class V1beta1SidecarSpecIngressConnectionPoolTcp
 {
     /// <summary>TCP connection timeout.</summary>
@@ -258,6 +267,7 @@ public partial class V1beta1SidecarSpecIngressConnectionPoolTcp
     public V1beta1SidecarSpecIngressConnectionPoolTcpTcpKeepalive? TcpKeepalive { get; set; }
 }
 
+/// <summary>Settings controlling the volume of connections Envoy will accept from the network.</summary>
 public partial class V1beta1SidecarSpecIngressConnectionPool
 {
     /// <summary>HTTP connection pool settings.</summary>
@@ -269,6 +279,7 @@ public partial class V1beta1SidecarSpecIngressConnectionPool
     public V1beta1SidecarSpecIngressConnectionPoolTcp? Tcp { get; set; }
 }
 
+/// <summary>The port associated with the listener.</summary>
 public partial class V1beta1SidecarSpecIngressPort
 {
     /// <summary>Label assigned to the port.</summary>
@@ -348,6 +359,7 @@ public enum V1beta1SidecarSpecIngressTlsModeEnum
     OPTIONALMUTUAL
 }
 
+/// <summary>Set of TLS related options that will enable TLS termination on the sidecar for requests originating from outside the mesh.</summary>
 public partial class V1beta1SidecarSpecIngressTls
 {
     /// <summary>REQUIRED if mode is `MUTUAL` or `OPTIONAL_MUTUAL`.</summary>
@@ -406,6 +418,7 @@ public partial class V1beta1SidecarSpecIngressTls
     public IList<string>? VerifyCertificateSpki { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SidecarSpecIngress
 {
     /// <summary>The IP(IPv4 or IPv6) to which the listener should be bound.</summary>
@@ -434,6 +447,7 @@ public partial class V1beta1SidecarSpecIngress
     public V1beta1SidecarSpecIngressTls? Tls { get; set; }
 }
 
+/// <summary>Specifies the port on the host that is being addressed.</summary>
 public partial class V1beta1SidecarSpecOutboundTrafficPolicyEgressProxyPort
 {
     /// <summary></summary>
@@ -441,6 +455,7 @@ public partial class V1beta1SidecarSpecOutboundTrafficPolicyEgressProxyPort
     public int? Number { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SidecarSpecOutboundTrafficPolicyEgressProxy
 {
     /// <summary>The name of a service from the service registry.</summary>
@@ -466,6 +481,7 @@ public enum V1beta1SidecarSpecOutboundTrafficPolicyModeEnum
     ALLOWANY
 }
 
+/// <summary>Configuration for the outbound traffic policy.</summary>
 public partial class V1beta1SidecarSpecOutboundTrafficPolicy
 {
     /// <summary></summary>
@@ -478,6 +494,7 @@ public partial class V1beta1SidecarSpecOutboundTrafficPolicy
     public V1beta1SidecarSpecOutboundTrafficPolicyModeEnum? Mode { get; set; }
 }
 
+/// <summary>Criteria used to select the specific set of pods/VMs on which this `Sidecar` configuration should be applied.</summary>
 public partial class V1beta1SidecarSpecWorkloadSelector
 {
     /// <summary>One or more labels that indicate a specific set of pods/VMs on which the configuration should be applied.</summary>
@@ -485,6 +502,7 @@ public partial class V1beta1SidecarSpecWorkloadSelector
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary>Configuration affecting network reachability of a sidecar. See more details at: https://istio.io/docs/reference/config/networking/sidecar.html</summary>
 public partial class V1beta1SidecarSpec
 {
     /// <summary>Egress specifies the configuration of the sidecar for processing outbound traffic from the attached workload instance to other services in the mesh.</summary>
@@ -509,6 +527,7 @@ public partial class V1beta1SidecarSpec
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1Sidecar : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SidecarSpec>, IStatus<JsonNode>
 {
     public const string KubeApiVersion = "v1beta1";

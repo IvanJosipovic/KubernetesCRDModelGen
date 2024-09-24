@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.firebasehosting.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1alpha1FirebaseHostingChannelSpec
 {
     /// <summary>The time at which the channel will be automatically deleted. If null, the channel will not be automatically deleted. This field is present in the output whether it's set directly or via the 'ttl' field.</summary>
@@ -31,6 +32,7 @@ public partial class V1alpha1FirebaseHostingChannelSpec
     public string? Ttl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1FirebaseHostingChannelStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -54,6 +56,7 @@ public partial class V1alpha1FirebaseHostingChannelStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1FirebaseHostingChannelStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -70,6 +73,7 @@ public partial class V1alpha1FirebaseHostingChannelStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1FirebaseHostingChannel : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1FirebaseHostingChannelSpec>, IStatus<V1alpha1FirebaseHostingChannelStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

@@ -38,6 +38,7 @@ public enum V1beta1ConnectivityTestSpecForProviderDestinationInstanceRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectivityTestSpecForProviderDestinationInstanceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ConnectivityTestSpecForProviderDestinationInstanceRe
     public V1beta1ConnectivityTestSpecForProviderDestinationInstanceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Instance in compute to populate instance.</summary>
 public partial class V1beta1ConnectivityTestSpecForProviderDestinationInstanceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ConnectivityTestSpecForProviderDestinationInstanceSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectivityTestSpecForProviderDestinationInstanceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ConnectivityTestSpecForProviderDestinationInstanceSe
     public V1beta1ConnectivityTestSpecForProviderDestinationInstanceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Instance in compute to populate instance.</summary>
 public partial class V1beta1ConnectivityTestSpecForProviderDestinationInstanceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1ConnectivityTestSpecForProviderDestinationIpAddressRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectivityTestSpecForProviderDestinationIpAddressRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1ConnectivityTestSpecForProviderDestinationIpAddressR
     public V1beta1ConnectivityTestSpecForProviderDestinationIpAddressRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Address in compute to populate ipAddress.</summary>
 public partial class V1beta1ConnectivityTestSpecForProviderDestinationIpAddressRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1ConnectivityTestSpecForProviderDestinationIpAddressSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectivityTestSpecForProviderDestinationIpAddressSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1ConnectivityTestSpecForProviderDestinationIpAddressS
     public V1beta1ConnectivityTestSpecForProviderDestinationIpAddressSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Address in compute to populate ipAddress.</summary>
 public partial class V1beta1ConnectivityTestSpecForProviderDestinationIpAddressSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1ConnectivityTestSpecForProviderDestinationNetworkRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectivityTestSpecForProviderDestinationNetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1ConnectivityTestSpecForProviderDestinationNetworkRef
     public V1beta1ConnectivityTestSpecForProviderDestinationNetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate network.</summary>
 public partial class V1beta1ConnectivityTestSpecForProviderDestinationNetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1ConnectivityTestSpecForProviderDestinationNetworkSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectivityTestSpecForProviderDestinationNetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1ConnectivityTestSpecForProviderDestinationNetworkSel
     public V1beta1ConnectivityTestSpecForProviderDestinationNetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate network.</summary>
 public partial class V1beta1ConnectivityTestSpecForProviderDestinationNetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -314,6 +326,7 @@ public enum V1beta1ConnectivityTestSpecForProviderDestinationProjectIdRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectivityTestSpecForProviderDestinationProjectIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -327,6 +340,7 @@ public partial class V1beta1ConnectivityTestSpecForProviderDestinationProjectIdR
     public V1beta1ConnectivityTestSpecForProviderDestinationProjectIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Address in compute to populate projectId.</summary>
 public partial class V1beta1ConnectivityTestSpecForProviderDestinationProjectIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -358,6 +372,7 @@ public enum V1beta1ConnectivityTestSpecForProviderDestinationProjectIdSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectivityTestSpecForProviderDestinationProjectIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -371,6 +386,7 @@ public partial class V1beta1ConnectivityTestSpecForProviderDestinationProjectIdS
     public V1beta1ConnectivityTestSpecForProviderDestinationProjectIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Address in compute to populate projectId.</summary>
 public partial class V1beta1ConnectivityTestSpecForProviderDestinationProjectIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -386,6 +402,7 @@ public partial class V1beta1ConnectivityTestSpecForProviderDestinationProjectIdS
     public V1beta1ConnectivityTestSpecForProviderDestinationProjectIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectivityTestSpecForProviderDestination
 {
     /// <summary>A Compute Engine instance URI.</summary>
@@ -461,6 +478,7 @@ public enum V1beta1ConnectivityTestSpecForProviderSourceInstanceRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectivityTestSpecForProviderSourceInstanceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -474,6 +492,7 @@ public partial class V1beta1ConnectivityTestSpecForProviderSourceInstanceRefPoli
     public V1beta1ConnectivityTestSpecForProviderSourceInstanceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Instance in compute to populate instance.</summary>
 public partial class V1beta1ConnectivityTestSpecForProviderSourceInstanceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -505,6 +524,7 @@ public enum V1beta1ConnectivityTestSpecForProviderSourceInstanceSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectivityTestSpecForProviderSourceInstanceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -518,6 +538,7 @@ public partial class V1beta1ConnectivityTestSpecForProviderSourceInstanceSelecto
     public V1beta1ConnectivityTestSpecForProviderSourceInstanceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Instance in compute to populate instance.</summary>
 public partial class V1beta1ConnectivityTestSpecForProviderSourceInstanceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -553,6 +574,7 @@ public enum V1beta1ConnectivityTestSpecForProviderSourceIpAddressRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectivityTestSpecForProviderSourceIpAddressRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -566,6 +588,7 @@ public partial class V1beta1ConnectivityTestSpecForProviderSourceIpAddressRefPol
     public V1beta1ConnectivityTestSpecForProviderSourceIpAddressRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Address in compute to populate ipAddress.</summary>
 public partial class V1beta1ConnectivityTestSpecForProviderSourceIpAddressRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -597,6 +620,7 @@ public enum V1beta1ConnectivityTestSpecForProviderSourceIpAddressSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectivityTestSpecForProviderSourceIpAddressSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -610,6 +634,7 @@ public partial class V1beta1ConnectivityTestSpecForProviderSourceIpAddressSelect
     public V1beta1ConnectivityTestSpecForProviderSourceIpAddressSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Address in compute to populate ipAddress.</summary>
 public partial class V1beta1ConnectivityTestSpecForProviderSourceIpAddressSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -645,6 +670,7 @@ public enum V1beta1ConnectivityTestSpecForProviderSourceNetworkRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectivityTestSpecForProviderSourceNetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -658,6 +684,7 @@ public partial class V1beta1ConnectivityTestSpecForProviderSourceNetworkRefPolic
     public V1beta1ConnectivityTestSpecForProviderSourceNetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate network.</summary>
 public partial class V1beta1ConnectivityTestSpecForProviderSourceNetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -689,6 +716,7 @@ public enum V1beta1ConnectivityTestSpecForProviderSourceNetworkSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectivityTestSpecForProviderSourceNetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -702,6 +730,7 @@ public partial class V1beta1ConnectivityTestSpecForProviderSourceNetworkSelector
     public V1beta1ConnectivityTestSpecForProviderSourceNetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate network.</summary>
 public partial class V1beta1ConnectivityTestSpecForProviderSourceNetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -737,6 +766,7 @@ public enum V1beta1ConnectivityTestSpecForProviderSourceProjectIdRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectivityTestSpecForProviderSourceProjectIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -750,6 +780,7 @@ public partial class V1beta1ConnectivityTestSpecForProviderSourceProjectIdRefPol
     public V1beta1ConnectivityTestSpecForProviderSourceProjectIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Address in compute to populate projectId.</summary>
 public partial class V1beta1ConnectivityTestSpecForProviderSourceProjectIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -781,6 +812,7 @@ public enum V1beta1ConnectivityTestSpecForProviderSourceProjectIdSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectivityTestSpecForProviderSourceProjectIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -794,6 +826,7 @@ public partial class V1beta1ConnectivityTestSpecForProviderSourceProjectIdSelect
     public V1beta1ConnectivityTestSpecForProviderSourceProjectIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Address in compute to populate projectId.</summary>
 public partial class V1beta1ConnectivityTestSpecForProviderSourceProjectIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -809,6 +842,7 @@ public partial class V1beta1ConnectivityTestSpecForProviderSourceProjectIdSelect
     public V1beta1ConnectivityTestSpecForProviderSourceProjectIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectivityTestSpecForProviderSource
 {
     /// <summary>A Compute Engine instance URI.</summary>
@@ -868,6 +902,7 @@ public partial class V1beta1ConnectivityTestSpecForProviderSource
     public V1beta1ConnectivityTestSpecForProviderSourceProjectIdSelector? ProjectIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectivityTestSpecForProvider
 {
     /// <summary>The user-supplied description of the Connectivity Test. Maximum of 512 characters.</summary>
@@ -923,6 +958,7 @@ public enum V1beta1ConnectivityTestSpecInitProviderDestinationInstanceRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectivityTestSpecInitProviderDestinationInstanceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -936,6 +972,7 @@ public partial class V1beta1ConnectivityTestSpecInitProviderDestinationInstanceR
     public V1beta1ConnectivityTestSpecInitProviderDestinationInstanceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Instance in compute to populate instance.</summary>
 public partial class V1beta1ConnectivityTestSpecInitProviderDestinationInstanceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -967,6 +1004,7 @@ public enum V1beta1ConnectivityTestSpecInitProviderDestinationInstanceSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectivityTestSpecInitProviderDestinationInstanceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -980,6 +1018,7 @@ public partial class V1beta1ConnectivityTestSpecInitProviderDestinationInstanceS
     public V1beta1ConnectivityTestSpecInitProviderDestinationInstanceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Instance in compute to populate instance.</summary>
 public partial class V1beta1ConnectivityTestSpecInitProviderDestinationInstanceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1015,6 +1054,7 @@ public enum V1beta1ConnectivityTestSpecInitProviderDestinationIpAddressRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectivityTestSpecInitProviderDestinationIpAddressRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1028,6 +1068,7 @@ public partial class V1beta1ConnectivityTestSpecInitProviderDestinationIpAddress
     public V1beta1ConnectivityTestSpecInitProviderDestinationIpAddressRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Address in compute to populate ipAddress.</summary>
 public partial class V1beta1ConnectivityTestSpecInitProviderDestinationIpAddressRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1059,6 +1100,7 @@ public enum V1beta1ConnectivityTestSpecInitProviderDestinationIpAddressSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectivityTestSpecInitProviderDestinationIpAddressSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1072,6 +1114,7 @@ public partial class V1beta1ConnectivityTestSpecInitProviderDestinationIpAddress
     public V1beta1ConnectivityTestSpecInitProviderDestinationIpAddressSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Address in compute to populate ipAddress.</summary>
 public partial class V1beta1ConnectivityTestSpecInitProviderDestinationIpAddressSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1107,6 +1150,7 @@ public enum V1beta1ConnectivityTestSpecInitProviderDestinationNetworkRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectivityTestSpecInitProviderDestinationNetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1120,6 +1164,7 @@ public partial class V1beta1ConnectivityTestSpecInitProviderDestinationNetworkRe
     public V1beta1ConnectivityTestSpecInitProviderDestinationNetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate network.</summary>
 public partial class V1beta1ConnectivityTestSpecInitProviderDestinationNetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1151,6 +1196,7 @@ public enum V1beta1ConnectivityTestSpecInitProviderDestinationNetworkSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectivityTestSpecInitProviderDestinationNetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1164,6 +1210,7 @@ public partial class V1beta1ConnectivityTestSpecInitProviderDestinationNetworkSe
     public V1beta1ConnectivityTestSpecInitProviderDestinationNetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate network.</summary>
 public partial class V1beta1ConnectivityTestSpecInitProviderDestinationNetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1199,6 +1246,7 @@ public enum V1beta1ConnectivityTestSpecInitProviderDestinationProjectIdRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectivityTestSpecInitProviderDestinationProjectIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1212,6 +1260,7 @@ public partial class V1beta1ConnectivityTestSpecInitProviderDestinationProjectId
     public V1beta1ConnectivityTestSpecInitProviderDestinationProjectIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Address in compute to populate projectId.</summary>
 public partial class V1beta1ConnectivityTestSpecInitProviderDestinationProjectIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1243,6 +1292,7 @@ public enum V1beta1ConnectivityTestSpecInitProviderDestinationProjectIdSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectivityTestSpecInitProviderDestinationProjectIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1256,6 +1306,7 @@ public partial class V1beta1ConnectivityTestSpecInitProviderDestinationProjectId
     public V1beta1ConnectivityTestSpecInitProviderDestinationProjectIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Address in compute to populate projectId.</summary>
 public partial class V1beta1ConnectivityTestSpecInitProviderDestinationProjectIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1271,6 +1322,7 @@ public partial class V1beta1ConnectivityTestSpecInitProviderDestinationProjectId
     public V1beta1ConnectivityTestSpecInitProviderDestinationProjectIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectivityTestSpecInitProviderDestination
 {
     /// <summary>A Compute Engine instance URI.</summary>
@@ -1346,6 +1398,7 @@ public enum V1beta1ConnectivityTestSpecInitProviderSourceInstanceRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectivityTestSpecInitProviderSourceInstanceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1359,6 +1412,7 @@ public partial class V1beta1ConnectivityTestSpecInitProviderSourceInstanceRefPol
     public V1beta1ConnectivityTestSpecInitProviderSourceInstanceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Instance in compute to populate instance.</summary>
 public partial class V1beta1ConnectivityTestSpecInitProviderSourceInstanceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1390,6 +1444,7 @@ public enum V1beta1ConnectivityTestSpecInitProviderSourceInstanceSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectivityTestSpecInitProviderSourceInstanceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1403,6 +1458,7 @@ public partial class V1beta1ConnectivityTestSpecInitProviderSourceInstanceSelect
     public V1beta1ConnectivityTestSpecInitProviderSourceInstanceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Instance in compute to populate instance.</summary>
 public partial class V1beta1ConnectivityTestSpecInitProviderSourceInstanceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1438,6 +1494,7 @@ public enum V1beta1ConnectivityTestSpecInitProviderSourceIpAddressRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectivityTestSpecInitProviderSourceIpAddressRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1451,6 +1508,7 @@ public partial class V1beta1ConnectivityTestSpecInitProviderSourceIpAddressRefPo
     public V1beta1ConnectivityTestSpecInitProviderSourceIpAddressRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Address in compute to populate ipAddress.</summary>
 public partial class V1beta1ConnectivityTestSpecInitProviderSourceIpAddressRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1482,6 +1540,7 @@ public enum V1beta1ConnectivityTestSpecInitProviderSourceIpAddressSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectivityTestSpecInitProviderSourceIpAddressSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1495,6 +1554,7 @@ public partial class V1beta1ConnectivityTestSpecInitProviderSourceIpAddressSelec
     public V1beta1ConnectivityTestSpecInitProviderSourceIpAddressSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Address in compute to populate ipAddress.</summary>
 public partial class V1beta1ConnectivityTestSpecInitProviderSourceIpAddressSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1530,6 +1590,7 @@ public enum V1beta1ConnectivityTestSpecInitProviderSourceNetworkRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectivityTestSpecInitProviderSourceNetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1543,6 +1604,7 @@ public partial class V1beta1ConnectivityTestSpecInitProviderSourceNetworkRefPoli
     public V1beta1ConnectivityTestSpecInitProviderSourceNetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate network.</summary>
 public partial class V1beta1ConnectivityTestSpecInitProviderSourceNetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1574,6 +1636,7 @@ public enum V1beta1ConnectivityTestSpecInitProviderSourceNetworkSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectivityTestSpecInitProviderSourceNetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1587,6 +1650,7 @@ public partial class V1beta1ConnectivityTestSpecInitProviderSourceNetworkSelecto
     public V1beta1ConnectivityTestSpecInitProviderSourceNetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate network.</summary>
 public partial class V1beta1ConnectivityTestSpecInitProviderSourceNetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1622,6 +1686,7 @@ public enum V1beta1ConnectivityTestSpecInitProviderSourceProjectIdRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectivityTestSpecInitProviderSourceProjectIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1635,6 +1700,7 @@ public partial class V1beta1ConnectivityTestSpecInitProviderSourceProjectIdRefPo
     public V1beta1ConnectivityTestSpecInitProviderSourceProjectIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Address in compute to populate projectId.</summary>
 public partial class V1beta1ConnectivityTestSpecInitProviderSourceProjectIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1666,6 +1732,7 @@ public enum V1beta1ConnectivityTestSpecInitProviderSourceProjectIdSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectivityTestSpecInitProviderSourceProjectIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1679,6 +1746,7 @@ public partial class V1beta1ConnectivityTestSpecInitProviderSourceProjectIdSelec
     public V1beta1ConnectivityTestSpecInitProviderSourceProjectIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Address in compute to populate projectId.</summary>
 public partial class V1beta1ConnectivityTestSpecInitProviderSourceProjectIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1694,6 +1762,7 @@ public partial class V1beta1ConnectivityTestSpecInitProviderSourceProjectIdSelec
     public V1beta1ConnectivityTestSpecInitProviderSourceProjectIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectivityTestSpecInitProviderSource
 {
     /// <summary>A Compute Engine instance URI.</summary>
@@ -1753,6 +1822,7 @@ public partial class V1beta1ConnectivityTestSpecInitProviderSource
     public V1beta1ConnectivityTestSpecInitProviderSourceProjectIdSelector? ProjectIdSelector { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ConnectivityTestSpecInitProvider
 {
     /// <summary>The user-supplied description of the Connectivity Test. Maximum of 512 characters.</summary>
@@ -1830,6 +1900,7 @@ public enum V1beta1ConnectivityTestSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectivityTestSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1843,6 +1914,7 @@ public partial class V1beta1ConnectivityTestSpecProviderConfigRefPolicy
     public V1beta1ConnectivityTestSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ConnectivityTestSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1874,6 +1946,7 @@ public enum V1beta1ConnectivityTestSpecPublishConnectionDetailsToConfigRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectivityTestSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1887,6 +1960,7 @@ public partial class V1beta1ConnectivityTestSpecPublishConnectionDetailsToConfig
     public V1beta1ConnectivityTestSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ConnectivityTestSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1898,6 +1972,7 @@ public partial class V1beta1ConnectivityTestSpecPublishConnectionDetailsToConfig
     public V1beta1ConnectivityTestSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ConnectivityTestSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1913,6 +1988,7 @@ public partial class V1beta1ConnectivityTestSpecPublishConnectionDetailsToMetada
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ConnectivityTestSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1928,6 +2004,7 @@ public partial class V1beta1ConnectivityTestSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ConnectivityTestSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1939,6 +2016,7 @@ public partial class V1beta1ConnectivityTestSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ConnectivityTestSpec defines the desired state of ConnectivityTest</summary>
 public partial class V1beta1ConnectivityTestSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1971,6 +2049,7 @@ public partial class V1beta1ConnectivityTestSpec
     public V1beta1ConnectivityTestSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectivityTestStatusAtProviderDestination
 {
     /// <summary>A Compute Engine instance URI.</summary>
@@ -1994,6 +2073,7 @@ public partial class V1beta1ConnectivityTestStatusAtProviderDestination
     public string? ProjectId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectivityTestStatusAtProviderSource
 {
     /// <summary>A Compute Engine instance URI.</summary>
@@ -2021,6 +2101,7 @@ public partial class V1beta1ConnectivityTestStatusAtProviderSource
     public string? ProjectId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectivityTestStatusAtProvider
 {
     /// <summary>The user-supplied description of the Connectivity Test. Maximum of 512 characters.</summary>
@@ -2068,6 +2149,7 @@ public partial class V1beta1ConnectivityTestStatusAtProvider
     public IDictionary<string, string>? TerraformLabels { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ConnectivityTestStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2095,6 +2177,7 @@ public partial class V1beta1ConnectivityTestStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ConnectivityTestStatus defines the observed state of ConnectivityTest.</summary>
 public partial class V1beta1ConnectivityTestStatus
 {
     /// <summary></summary>
@@ -2111,6 +2194,7 @@ public partial class V1beta1ConnectivityTestStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ConnectivityTest is the Schema for the ConnectivityTests API. A connectivity test are a static analysis of your resource configurations that enables you to evaluate connectivity to and from Google Cloud resources in your Virtual Private Cloud (VPC) network.</summary>
 public partial class V1beta1ConnectivityTest : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ConnectivityTestSpec>, IStatus<V1beta1ConnectivityTestStatus>
 {
     public const string KubeApiVersion = "v1beta1";

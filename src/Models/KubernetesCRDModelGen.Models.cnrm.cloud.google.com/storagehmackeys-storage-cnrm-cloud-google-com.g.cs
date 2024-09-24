@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.cnrm.cloud.google.com;
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1StorageHMACKeySpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1StorageHMACKeySpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1StorageHMACKeySpec
 {
     /// <summary>The project that this resource belongs to.</summary>
@@ -42,6 +44,7 @@ public partial class V1alpha1StorageHMACKeySpec
     public string? State { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1StorageHMACKeyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -65,6 +68,7 @@ public partial class V1alpha1StorageHMACKeyStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1StorageHMACKeyStatus
 {
     /// <summary>The access ID of the HMAC Key.</summary>
@@ -93,6 +97,7 @@ public partial class V1alpha1StorageHMACKeyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1StorageHMACKey : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1StorageHMACKeySpec>, IStatus<V1alpha1StorageHMACKeyStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

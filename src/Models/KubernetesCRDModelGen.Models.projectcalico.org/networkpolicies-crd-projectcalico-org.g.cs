@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.crd.projectcalico.org;
+/// <summary>ServiceAccounts is an optional field that restricts the rule to only apply to traffic that originates from (or terminates at) a pod running as a matching service account.</summary>
 public partial class V1NetworkPolicySpecEgressDestinationServiceAccounts
 {
     /// <summary>Names is an optional field that restricts the rule to only apply to traffic that originates from (or terminates at) a pod running as a service account whose name is in the list.</summary>
@@ -19,6 +20,7 @@ public partial class V1NetworkPolicySpecEgressDestinationServiceAccounts
     public string? Selector { get; set; }
 }
 
+/// <summary>Services is an optional field that contains options for matching Kubernetes Services. If specified, only traffic that originates from or terminates at endpoints within the selected service(s) will be matched, and only to/from each endpoint's port.   Services cannot be specified on the same rule as Selector, NotSelector, NamespaceSelector, Nets, NotNets or ServiceAccounts.   Ports and NotPorts can only be specified with Services on ingress rules.</summary>
 public partial class V1NetworkPolicySpecEgressDestinationServices
 {
     /// <summary>Name specifies the name of a Kubernetes Service to match.</summary>
@@ -30,6 +32,7 @@ public partial class V1NetworkPolicySpecEgressDestinationServices
     public string? Namespace { get; set; }
 }
 
+/// <summary>Destination contains the match criteria that apply to destination entity.</summary>
 public partial class V1NetworkPolicySpecEgressDestination
 {
     /// <summary>NamespaceSelector is an optional field that contains a selector expression. Only traffic that originates from (or terminates at) endpoints within the selected namespaces will be matched. When both NamespaceSelector and another selector are defined on the same rule, then only workload endpoints that are matched by both selectors will be selected by the rule.   For NetworkPolicy, an empty NamespaceSelector implies that the Selector is limited to selecting only workload endpoints in the same namespace as the NetworkPolicy.   For NetworkPolicy, `global()` NamespaceSelector implies that the Selector is limited to selecting only GlobalNetworkSet or HostEndpoint.   For GlobalNetworkPolicy, an empty NamespaceSelector implies the Selector applies to workload endpoints across all namespaces.</summary>
@@ -69,6 +72,7 @@ public partial class V1NetworkPolicySpecEgressDestination
     public V1NetworkPolicySpecEgressDestinationServices? Services { get; set; }
 }
 
+/// <summary>HTTPPath specifies an HTTP path to match. It may be either of the form: exact: &lt;path&gt;: which matches the path exactly or prefix: &lt;path-prefix&gt;: which matches the path prefix</summary>
 public partial class V1NetworkPolicySpecEgressHttpPaths
 {
     /// <summary></summary>
@@ -80,6 +84,7 @@ public partial class V1NetworkPolicySpecEgressHttpPaths
     public string? Prefix { get; set; }
 }
 
+/// <summary>HTTP contains match criteria that apply to HTTP requests.</summary>
 public partial class V1NetworkPolicySpecEgressHttp
 {
     /// <summary>Methods is an optional field that restricts the rule to apply only to HTTP requests that use one of the listed HTTP Methods (e.g. GET, PUT, etc.) Multiple methods are OR'd together.</summary>
@@ -91,6 +96,7 @@ public partial class V1NetworkPolicySpecEgressHttp
     public IList<V1NetworkPolicySpecEgressHttpPaths>? Paths { get; set; }
 }
 
+/// <summary>ICMP is an optional field that restricts the rule to apply to a specific type and code of ICMP traffic.  This should only be specified if the Protocol field is set to "ICMP" or "ICMPv6".</summary>
 public partial class V1NetworkPolicySpecEgressIcmp
 {
     /// <summary>Match on a specific ICMP code.  If specified, the Type value must also be specified. This is a technical limitation imposed by the kernel's iptables firewall, which Calico uses to enforce the rule.</summary>
@@ -102,6 +108,7 @@ public partial class V1NetworkPolicySpecEgressIcmp
     public int? Type { get; set; }
 }
 
+/// <summary>Metadata contains additional information for this rule</summary>
 public partial class V1NetworkPolicySpecEgressMetadata
 {
     /// <summary>Annotations is a set of key value pairs that give extra information about the rule</summary>
@@ -109,6 +116,7 @@ public partial class V1NetworkPolicySpecEgressMetadata
     public IDictionary<string, string>? Annotations { get; set; }
 }
 
+/// <summary>NotICMP is the negated version of the ICMP field.</summary>
 public partial class V1NetworkPolicySpecEgressNotICMP
 {
     /// <summary>Match on a specific ICMP code.  If specified, the Type value must also be specified. This is a technical limitation imposed by the kernel's iptables firewall, which Calico uses to enforce the rule.</summary>
@@ -120,6 +128,7 @@ public partial class V1NetworkPolicySpecEgressNotICMP
     public int? Type { get; set; }
 }
 
+/// <summary>ServiceAccounts is an optional field that restricts the rule to only apply to traffic that originates from (or terminates at) a pod running as a matching service account.</summary>
 public partial class V1NetworkPolicySpecEgressSourceServiceAccounts
 {
     /// <summary>Names is an optional field that restricts the rule to only apply to traffic that originates from (or terminates at) a pod running as a service account whose name is in the list.</summary>
@@ -131,6 +140,7 @@ public partial class V1NetworkPolicySpecEgressSourceServiceAccounts
     public string? Selector { get; set; }
 }
 
+/// <summary>Services is an optional field that contains options for matching Kubernetes Services. If specified, only traffic that originates from or terminates at endpoints within the selected service(s) will be matched, and only to/from each endpoint's port.   Services cannot be specified on the same rule as Selector, NotSelector, NamespaceSelector, Nets, NotNets or ServiceAccounts.   Ports and NotPorts can only be specified with Services on ingress rules.</summary>
 public partial class V1NetworkPolicySpecEgressSourceServices
 {
     /// <summary>Name specifies the name of a Kubernetes Service to match.</summary>
@@ -142,6 +152,7 @@ public partial class V1NetworkPolicySpecEgressSourceServices
     public string? Namespace { get; set; }
 }
 
+/// <summary>Source contains the match criteria that apply to source entity.</summary>
 public partial class V1NetworkPolicySpecEgressSource
 {
     /// <summary>NamespaceSelector is an optional field that contains a selector expression. Only traffic that originates from (or terminates at) endpoints within the selected namespaces will be matched. When both NamespaceSelector and another selector are defined on the same rule, then only workload endpoints that are matched by both selectors will be selected by the rule.   For NetworkPolicy, an empty NamespaceSelector implies that the Selector is limited to selecting only workload endpoints in the same namespace as the NetworkPolicy.   For NetworkPolicy, `global()` NamespaceSelector implies that the Selector is limited to selecting only GlobalNetworkSet or HostEndpoint.   For GlobalNetworkPolicy, an empty NamespaceSelector implies the Selector applies to workload endpoints across all namespaces.</summary>
@@ -181,6 +192,7 @@ public partial class V1NetworkPolicySpecEgressSource
     public V1NetworkPolicySpecEgressSourceServices? Services { get; set; }
 }
 
+/// <summary>A Rule encapsulates a set of match criteria and an action.  Both selector-based security Policy and security Profiles reference rules - separated out as a list of rules for both ingress and egress packet matching.   Each positive match criteria has a negated version, prefixed with "Not". All the match criteria within a rule must be satisfied for a packet to match. A single rule can contain the positive and negative version of a match and both must be satisfied for the rule to match.</summary>
 public partial class V1NetworkPolicySpecEgress
 {
     /// <summary></summary>
@@ -224,6 +236,7 @@ public partial class V1NetworkPolicySpecEgress
     public V1NetworkPolicySpecEgressSource? Source { get; set; }
 }
 
+/// <summary>ServiceAccounts is an optional field that restricts the rule to only apply to traffic that originates from (or terminates at) a pod running as a matching service account.</summary>
 public partial class V1NetworkPolicySpecIngressDestinationServiceAccounts
 {
     /// <summary>Names is an optional field that restricts the rule to only apply to traffic that originates from (or terminates at) a pod running as a service account whose name is in the list.</summary>
@@ -235,6 +248,7 @@ public partial class V1NetworkPolicySpecIngressDestinationServiceAccounts
     public string? Selector { get; set; }
 }
 
+/// <summary>Services is an optional field that contains options for matching Kubernetes Services. If specified, only traffic that originates from or terminates at endpoints within the selected service(s) will be matched, and only to/from each endpoint's port.   Services cannot be specified on the same rule as Selector, NotSelector, NamespaceSelector, Nets, NotNets or ServiceAccounts.   Ports and NotPorts can only be specified with Services on ingress rules.</summary>
 public partial class V1NetworkPolicySpecIngressDestinationServices
 {
     /// <summary>Name specifies the name of a Kubernetes Service to match.</summary>
@@ -246,6 +260,7 @@ public partial class V1NetworkPolicySpecIngressDestinationServices
     public string? Namespace { get; set; }
 }
 
+/// <summary>Destination contains the match criteria that apply to destination entity.</summary>
 public partial class V1NetworkPolicySpecIngressDestination
 {
     /// <summary>NamespaceSelector is an optional field that contains a selector expression. Only traffic that originates from (or terminates at) endpoints within the selected namespaces will be matched. When both NamespaceSelector and another selector are defined on the same rule, then only workload endpoints that are matched by both selectors will be selected by the rule.   For NetworkPolicy, an empty NamespaceSelector implies that the Selector is limited to selecting only workload endpoints in the same namespace as the NetworkPolicy.   For NetworkPolicy, `global()` NamespaceSelector implies that the Selector is limited to selecting only GlobalNetworkSet or HostEndpoint.   For GlobalNetworkPolicy, an empty NamespaceSelector implies the Selector applies to workload endpoints across all namespaces.</summary>
@@ -285,6 +300,7 @@ public partial class V1NetworkPolicySpecIngressDestination
     public V1NetworkPolicySpecIngressDestinationServices? Services { get; set; }
 }
 
+/// <summary>HTTPPath specifies an HTTP path to match. It may be either of the form: exact: &lt;path&gt;: which matches the path exactly or prefix: &lt;path-prefix&gt;: which matches the path prefix</summary>
 public partial class V1NetworkPolicySpecIngressHttpPaths
 {
     /// <summary></summary>
@@ -296,6 +312,7 @@ public partial class V1NetworkPolicySpecIngressHttpPaths
     public string? Prefix { get; set; }
 }
 
+/// <summary>HTTP contains match criteria that apply to HTTP requests.</summary>
 public partial class V1NetworkPolicySpecIngressHttp
 {
     /// <summary>Methods is an optional field that restricts the rule to apply only to HTTP requests that use one of the listed HTTP Methods (e.g. GET, PUT, etc.) Multiple methods are OR'd together.</summary>
@@ -307,6 +324,7 @@ public partial class V1NetworkPolicySpecIngressHttp
     public IList<V1NetworkPolicySpecIngressHttpPaths>? Paths { get; set; }
 }
 
+/// <summary>ICMP is an optional field that restricts the rule to apply to a specific type and code of ICMP traffic.  This should only be specified if the Protocol field is set to "ICMP" or "ICMPv6".</summary>
 public partial class V1NetworkPolicySpecIngressIcmp
 {
     /// <summary>Match on a specific ICMP code.  If specified, the Type value must also be specified. This is a technical limitation imposed by the kernel's iptables firewall, which Calico uses to enforce the rule.</summary>
@@ -318,6 +336,7 @@ public partial class V1NetworkPolicySpecIngressIcmp
     public int? Type { get; set; }
 }
 
+/// <summary>Metadata contains additional information for this rule</summary>
 public partial class V1NetworkPolicySpecIngressMetadata
 {
     /// <summary>Annotations is a set of key value pairs that give extra information about the rule</summary>
@@ -325,6 +344,7 @@ public partial class V1NetworkPolicySpecIngressMetadata
     public IDictionary<string, string>? Annotations { get; set; }
 }
 
+/// <summary>NotICMP is the negated version of the ICMP field.</summary>
 public partial class V1NetworkPolicySpecIngressNotICMP
 {
     /// <summary>Match on a specific ICMP code.  If specified, the Type value must also be specified. This is a technical limitation imposed by the kernel's iptables firewall, which Calico uses to enforce the rule.</summary>
@@ -336,6 +356,7 @@ public partial class V1NetworkPolicySpecIngressNotICMP
     public int? Type { get; set; }
 }
 
+/// <summary>ServiceAccounts is an optional field that restricts the rule to only apply to traffic that originates from (or terminates at) a pod running as a matching service account.</summary>
 public partial class V1NetworkPolicySpecIngressSourceServiceAccounts
 {
     /// <summary>Names is an optional field that restricts the rule to only apply to traffic that originates from (or terminates at) a pod running as a service account whose name is in the list.</summary>
@@ -347,6 +368,7 @@ public partial class V1NetworkPolicySpecIngressSourceServiceAccounts
     public string? Selector { get; set; }
 }
 
+/// <summary>Services is an optional field that contains options for matching Kubernetes Services. If specified, only traffic that originates from or terminates at endpoints within the selected service(s) will be matched, and only to/from each endpoint's port.   Services cannot be specified on the same rule as Selector, NotSelector, NamespaceSelector, Nets, NotNets or ServiceAccounts.   Ports and NotPorts can only be specified with Services on ingress rules.</summary>
 public partial class V1NetworkPolicySpecIngressSourceServices
 {
     /// <summary>Name specifies the name of a Kubernetes Service to match.</summary>
@@ -358,6 +380,7 @@ public partial class V1NetworkPolicySpecIngressSourceServices
     public string? Namespace { get; set; }
 }
 
+/// <summary>Source contains the match criteria that apply to source entity.</summary>
 public partial class V1NetworkPolicySpecIngressSource
 {
     /// <summary>NamespaceSelector is an optional field that contains a selector expression. Only traffic that originates from (or terminates at) endpoints within the selected namespaces will be matched. When both NamespaceSelector and another selector are defined on the same rule, then only workload endpoints that are matched by both selectors will be selected by the rule.   For NetworkPolicy, an empty NamespaceSelector implies that the Selector is limited to selecting only workload endpoints in the same namespace as the NetworkPolicy.   For NetworkPolicy, `global()` NamespaceSelector implies that the Selector is limited to selecting only GlobalNetworkSet or HostEndpoint.   For GlobalNetworkPolicy, an empty NamespaceSelector implies the Selector applies to workload endpoints across all namespaces.</summary>
@@ -397,6 +420,7 @@ public partial class V1NetworkPolicySpecIngressSource
     public V1NetworkPolicySpecIngressSourceServices? Services { get; set; }
 }
 
+/// <summary>A Rule encapsulates a set of match criteria and an action.  Both selector-based security Policy and security Profiles reference rules - separated out as a list of rules for both ingress and egress packet matching.   Each positive match criteria has a negated version, prefixed with "Not". All the match criteria within a rule must be satisfied for a packet to match. A single rule can contain the positive and negative version of a match and both must be satisfied for the rule to match.</summary>
 public partial class V1NetworkPolicySpecIngress
 {
     /// <summary></summary>
@@ -440,6 +464,7 @@ public partial class V1NetworkPolicySpecIngress
     public V1NetworkPolicySpecIngressSource? Source { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1NetworkPolicySpec
 {
     /// <summary>The ordered set of egress rules.  Each rule contains a set of packet match criteria and a corresponding action to apply.</summary>
@@ -476,6 +501,7 @@ public partial class V1NetworkPolicySpec
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1NetworkPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1NetworkPolicySpec>
 {
     public const string KubeApiVersion = "v1";

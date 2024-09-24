@@ -18,6 +18,7 @@ public enum V1beta1FunctionJavascriptUdaSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionJavascriptUdaSpecForProviderInput
 {
     /// <summary>Is this input parameter a configuration parameter? Defaults to false.</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1FunctionJavascriptUdaSpecForProviderInput
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionJavascriptUdaSpecForProviderOutput
 {
     /// <summary>The output data type from this JavaScript Function. Possible values include any, array, bigint, datetime, float, nvarchar(max) and record.</summary>
@@ -56,6 +58,7 @@ public enum V1beta1FunctionJavascriptUdaSpecForProviderStreamAnalyticsJobIdRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionJavascriptUdaSpecForProviderStreamAnalyticsJobIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -69,6 +72,7 @@ public partial class V1beta1FunctionJavascriptUdaSpecForProviderStreamAnalyticsJ
     public V1beta1FunctionJavascriptUdaSpecForProviderStreamAnalyticsJobIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Job in streamanalytics to populate streamAnalyticsJobId.</summary>
 public partial class V1beta1FunctionJavascriptUdaSpecForProviderStreamAnalyticsJobIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -100,6 +104,7 @@ public enum V1beta1FunctionJavascriptUdaSpecForProviderStreamAnalyticsJobIdSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionJavascriptUdaSpecForProviderStreamAnalyticsJobIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -113,6 +118,7 @@ public partial class V1beta1FunctionJavascriptUdaSpecForProviderStreamAnalyticsJ
     public V1beta1FunctionJavascriptUdaSpecForProviderStreamAnalyticsJobIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Job in streamanalytics to populate streamAnalyticsJobId.</summary>
 public partial class V1beta1FunctionJavascriptUdaSpecForProviderStreamAnalyticsJobIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -128,6 +134,7 @@ public partial class V1beta1FunctionJavascriptUdaSpecForProviderStreamAnalyticsJ
     public V1beta1FunctionJavascriptUdaSpecForProviderStreamAnalyticsJobIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionJavascriptUdaSpecForProvider
 {
     /// <summary>One or more input blocks as defined below.</summary>
@@ -155,6 +162,7 @@ public partial class V1beta1FunctionJavascriptUdaSpecForProvider
     public V1beta1FunctionJavascriptUdaSpecForProviderStreamAnalyticsJobIdSelector? StreamAnalyticsJobIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionJavascriptUdaSpecInitProviderInput
 {
     /// <summary>Is this input parameter a configuration parameter? Defaults to false.</summary>
@@ -166,6 +174,7 @@ public partial class V1beta1FunctionJavascriptUdaSpecInitProviderInput
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionJavascriptUdaSpecInitProviderOutput
 {
     /// <summary>The output data type from this JavaScript Function. Possible values include any, array, bigint, datetime, float, nvarchar(max) and record.</summary>
@@ -193,6 +202,7 @@ public enum V1beta1FunctionJavascriptUdaSpecInitProviderStreamAnalyticsJobIdRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionJavascriptUdaSpecInitProviderStreamAnalyticsJobIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -206,6 +216,7 @@ public partial class V1beta1FunctionJavascriptUdaSpecInitProviderStreamAnalytics
     public V1beta1FunctionJavascriptUdaSpecInitProviderStreamAnalyticsJobIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Job in streamanalytics to populate streamAnalyticsJobId.</summary>
 public partial class V1beta1FunctionJavascriptUdaSpecInitProviderStreamAnalyticsJobIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -237,6 +248,7 @@ public enum V1beta1FunctionJavascriptUdaSpecInitProviderStreamAnalyticsJobIdSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionJavascriptUdaSpecInitProviderStreamAnalyticsJobIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -250,6 +262,7 @@ public partial class V1beta1FunctionJavascriptUdaSpecInitProviderStreamAnalytics
     public V1beta1FunctionJavascriptUdaSpecInitProviderStreamAnalyticsJobIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Job in streamanalytics to populate streamAnalyticsJobId.</summary>
 public partial class V1beta1FunctionJavascriptUdaSpecInitProviderStreamAnalyticsJobIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -265,6 +278,7 @@ public partial class V1beta1FunctionJavascriptUdaSpecInitProviderStreamAnalytics
     public V1beta1FunctionJavascriptUdaSpecInitProviderStreamAnalyticsJobIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1FunctionJavascriptUdaSpecInitProvider
 {
     /// <summary>One or more input blocks as defined below.</summary>
@@ -334,6 +348,7 @@ public enum V1beta1FunctionJavascriptUdaSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionJavascriptUdaSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -347,6 +362,7 @@ public partial class V1beta1FunctionJavascriptUdaSpecProviderConfigRefPolicy
     public V1beta1FunctionJavascriptUdaSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1FunctionJavascriptUdaSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -378,6 +394,7 @@ public enum V1beta1FunctionJavascriptUdaSpecPublishConnectionDetailsToConfigRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionJavascriptUdaSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -391,6 +408,7 @@ public partial class V1beta1FunctionJavascriptUdaSpecPublishConnectionDetailsToC
     public V1beta1FunctionJavascriptUdaSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1FunctionJavascriptUdaSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -402,6 +420,7 @@ public partial class V1beta1FunctionJavascriptUdaSpecPublishConnectionDetailsToC
     public V1beta1FunctionJavascriptUdaSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1FunctionJavascriptUdaSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -417,6 +436,7 @@ public partial class V1beta1FunctionJavascriptUdaSpecPublishConnectionDetailsToM
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1FunctionJavascriptUdaSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -432,6 +452,7 @@ public partial class V1beta1FunctionJavascriptUdaSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1FunctionJavascriptUdaSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -443,6 +464,7 @@ public partial class V1beta1FunctionJavascriptUdaSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>FunctionJavascriptUdaSpec defines the desired state of FunctionJavascriptUda</summary>
 public partial class V1beta1FunctionJavascriptUdaSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -475,6 +497,7 @@ public partial class V1beta1FunctionJavascriptUdaSpec
     public V1beta1FunctionJavascriptUdaSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionJavascriptUdaStatusAtProviderInput
 {
     /// <summary>Is this input parameter a configuration parameter? Defaults to false.</summary>
@@ -486,6 +509,7 @@ public partial class V1beta1FunctionJavascriptUdaStatusAtProviderInput
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionJavascriptUdaStatusAtProviderOutput
 {
     /// <summary>The output data type from this JavaScript Function. Possible values include any, array, bigint, datetime, float, nvarchar(max) and record.</summary>
@@ -493,6 +517,7 @@ public partial class V1beta1FunctionJavascriptUdaStatusAtProviderOutput
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionJavascriptUdaStatusAtProvider
 {
     /// <summary>The ID of the Stream Analytics JavaScript UDA Function.</summary>
@@ -516,6 +541,7 @@ public partial class V1beta1FunctionJavascriptUdaStatusAtProvider
     public string? StreamAnalyticsJobId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1FunctionJavascriptUdaStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -543,6 +569,7 @@ public partial class V1beta1FunctionJavascriptUdaStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>FunctionJavascriptUdaStatus defines the observed state of FunctionJavascriptUda.</summary>
 public partial class V1beta1FunctionJavascriptUdaStatus
 {
     /// <summary></summary>
@@ -559,6 +586,7 @@ public partial class V1beta1FunctionJavascriptUdaStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>FunctionJavascriptUda is the Schema for the FunctionJavascriptUdas API. Manages a JavaScript UDA Function within a Stream Analytics Streaming Job.</summary>
 public partial class V1beta1FunctionJavascriptUda : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FunctionJavascriptUdaSpec>, IStatus<V1beta1FunctionJavascriptUdaStatus>
 {
     public const string KubeApiVersion = "v1beta1";

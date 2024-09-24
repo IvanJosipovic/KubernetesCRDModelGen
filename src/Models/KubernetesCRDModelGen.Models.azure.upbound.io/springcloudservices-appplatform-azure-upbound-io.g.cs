@@ -18,6 +18,7 @@ public enum V1beta1SpringCloudServiceSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>The password used to access the Git repository server, required when the Git repository server supports HTTP Basic Authentication.</summary>
 public partial class V1beta1SpringCloudServiceSpecForProviderConfigServerGitSettingHttpBasicAuthPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1SpringCloudServiceSpecForProviderConfigServerGitSett
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudServiceSpecForProviderConfigServerGitSettingHttpBasicAuth
 {
     /// <summary>The password used to access the Git repository server, required when the Git repository server supports HTTP Basic Authentication.</summary>
@@ -44,6 +46,7 @@ public partial class V1beta1SpringCloudServiceSpecForProviderConfigServerGitSett
     public string? Username { get; set; }
 }
 
+/// <summary>The password used to access the Git repository server, required when the Git repository server supports HTTP Basic Authentication.</summary>
 public partial class V1beta1SpringCloudServiceSpecForProviderConfigServerGitSettingRepositoryHttpBasicAuthPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -59,6 +62,7 @@ public partial class V1beta1SpringCloudServiceSpecForProviderConfigServerGitSett
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudServiceSpecForProviderConfigServerGitSettingRepositoryHttpBasicAuth
 {
     /// <summary>The password used to access the Git repository server, required when the Git repository server supports HTTP Basic Authentication.</summary>
@@ -70,6 +74,7 @@ public partial class V1beta1SpringCloudServiceSpecForProviderConfigServerGitSett
     public string? Username { get; set; }
 }
 
+/// <summary>The host key of the Git repository server, should not include the algorithm prefix as covered by host-key-algorithm.</summary>
 public partial class V1beta1SpringCloudServiceSpecForProviderConfigServerGitSettingRepositorySshAuthHostKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -85,6 +90,7 @@ public partial class V1beta1SpringCloudServiceSpecForProviderConfigServerGitSett
     public string Namespace { get; set; }
 }
 
+/// <summary>The SSH private key to access the Git repository, required when the URI starts with git@ or ssh://.</summary>
 public partial class V1beta1SpringCloudServiceSpecForProviderConfigServerGitSettingRepositorySshAuthPrivateKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -100,6 +106,7 @@ public partial class V1beta1SpringCloudServiceSpecForProviderConfigServerGitSett
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudServiceSpecForProviderConfigServerGitSettingRepositorySshAuth
 {
     /// <summary>The host key algorithm, should be ssh-dss, ssh-rsa, ecdsa-sha2-nistp256, ecdsa-sha2-nistp384, or ecdsa-sha2-nistp521. Required only if host-key exists.</summary>
@@ -119,6 +126,7 @@ public partial class V1beta1SpringCloudServiceSpecForProviderConfigServerGitSett
     public bool? StrictHostKeyCheckingEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudServiceSpecForProviderConfigServerGitSettingRepository
 {
     /// <summary>A http_basic_auth block as defined below.</summary>
@@ -150,6 +158,7 @@ public partial class V1beta1SpringCloudServiceSpecForProviderConfigServerGitSett
     public string? Uri { get; set; }
 }
 
+/// <summary>The host key of the Git repository server, should not include the algorithm prefix as covered by host-key-algorithm.</summary>
 public partial class V1beta1SpringCloudServiceSpecForProviderConfigServerGitSettingSshAuthHostKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -165,6 +174,7 @@ public partial class V1beta1SpringCloudServiceSpecForProviderConfigServerGitSett
     public string Namespace { get; set; }
 }
 
+/// <summary>The SSH private key to access the Git repository, required when the URI starts with git@ or ssh://.</summary>
 public partial class V1beta1SpringCloudServiceSpecForProviderConfigServerGitSettingSshAuthPrivateKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -180,6 +190,7 @@ public partial class V1beta1SpringCloudServiceSpecForProviderConfigServerGitSett
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudServiceSpecForProviderConfigServerGitSettingSshAuth
 {
     /// <summary>The host key algorithm, should be ssh-dss, ssh-rsa, ecdsa-sha2-nistp256, ecdsa-sha2-nistp384, or ecdsa-sha2-nistp521. Required only if host-key exists.</summary>
@@ -199,6 +210,7 @@ public partial class V1beta1SpringCloudServiceSpecForProviderConfigServerGitSett
     public bool? StrictHostKeyCheckingEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudServiceSpecForProviderConfigServerGitSetting
 {
     /// <summary>A http_basic_auth block as defined below.</summary>
@@ -226,6 +238,7 @@ public partial class V1beta1SpringCloudServiceSpecForProviderConfigServerGitSett
     public string? Uri { get; set; }
 }
 
+/// <summary>Specifies the password of the container registry.</summary>
 public partial class V1beta1SpringCloudServiceSpecForProviderContainerRegistryPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -241,6 +254,7 @@ public partial class V1beta1SpringCloudServiceSpecForProviderContainerRegistryPa
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudServiceSpecForProviderContainerRegistry
 {
     /// <summary>Specifies the name of the container registry.</summary>
@@ -260,6 +274,7 @@ public partial class V1beta1SpringCloudServiceSpecForProviderContainerRegistry
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudServiceSpecForProviderDefaultBuildService
 {
     /// <summary>Specifies the name of the container registry used in the default build service.</summary>
@@ -267,6 +282,7 @@ public partial class V1beta1SpringCloudServiceSpecForProviderDefaultBuildService
     public string? ContainerRegistryName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudServiceSpecForProviderMarketplace
 {
     /// <summary>Specifies the plan ID of the 3rd Party Artifact that is being procured.</summary>
@@ -302,6 +318,7 @@ public enum V1beta1SpringCloudServiceSpecForProviderNetworkAppSubnetIdRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpringCloudServiceSpecForProviderNetworkAppSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -315,6 +332,7 @@ public partial class V1beta1SpringCloudServiceSpecForProviderNetworkAppSubnetIdR
     public V1beta1SpringCloudServiceSpecForProviderNetworkAppSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate appSubnetId.</summary>
 public partial class V1beta1SpringCloudServiceSpecForProviderNetworkAppSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -346,6 +364,7 @@ public enum V1beta1SpringCloudServiceSpecForProviderNetworkAppSubnetIdSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SpringCloudServiceSpecForProviderNetworkAppSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -359,6 +378,7 @@ public partial class V1beta1SpringCloudServiceSpecForProviderNetworkAppSubnetIdS
     public V1beta1SpringCloudServiceSpecForProviderNetworkAppSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate appSubnetId.</summary>
 public partial class V1beta1SpringCloudServiceSpecForProviderNetworkAppSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -394,6 +414,7 @@ public enum V1beta1SpringCloudServiceSpecForProviderNetworkServiceRuntimeSubnetI
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpringCloudServiceSpecForProviderNetworkServiceRuntimeSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -407,6 +428,7 @@ public partial class V1beta1SpringCloudServiceSpecForProviderNetworkServiceRunti
     public V1beta1SpringCloudServiceSpecForProviderNetworkServiceRuntimeSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate serviceRuntimeSubnetId.</summary>
 public partial class V1beta1SpringCloudServiceSpecForProviderNetworkServiceRuntimeSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -438,6 +460,7 @@ public enum V1beta1SpringCloudServiceSpecForProviderNetworkServiceRuntimeSubnetI
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SpringCloudServiceSpecForProviderNetworkServiceRuntimeSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -451,6 +474,7 @@ public partial class V1beta1SpringCloudServiceSpecForProviderNetworkServiceRunti
     public V1beta1SpringCloudServiceSpecForProviderNetworkServiceRuntimeSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate serviceRuntimeSubnetId.</summary>
 public partial class V1beta1SpringCloudServiceSpecForProviderNetworkServiceRuntimeSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -466,6 +490,7 @@ public partial class V1beta1SpringCloudServiceSpecForProviderNetworkServiceRunti
     public V1beta1SpringCloudServiceSpecForProviderNetworkServiceRuntimeSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudServiceSpecForProviderNetwork
 {
     /// <summary>Specifies the Name of the resource group containing network resources of Azure Spring Cloud Apps. Changing this forces a new resource to be created.</summary>
@@ -533,6 +558,7 @@ public enum V1beta1SpringCloudServiceSpecForProviderResourceGroupNameRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpringCloudServiceSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -546,6 +572,7 @@ public partial class V1beta1SpringCloudServiceSpecForProviderResourceGroupNameRe
     public V1beta1SpringCloudServiceSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1SpringCloudServiceSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -577,6 +604,7 @@ public enum V1beta1SpringCloudServiceSpecForProviderResourceGroupNameSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SpringCloudServiceSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -590,6 +618,7 @@ public partial class V1beta1SpringCloudServiceSpecForProviderResourceGroupNameSe
     public V1beta1SpringCloudServiceSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1SpringCloudServiceSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -625,6 +654,7 @@ public enum V1beta1SpringCloudServiceSpecForProviderTraceConnectionStringRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpringCloudServiceSpecForProviderTraceConnectionStringRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -638,6 +668,7 @@ public partial class V1beta1SpringCloudServiceSpecForProviderTraceConnectionStri
     public V1beta1SpringCloudServiceSpecForProviderTraceConnectionStringRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ApplicationInsights in insights to populate connectionString.</summary>
 public partial class V1beta1SpringCloudServiceSpecForProviderTraceConnectionStringRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -669,6 +700,7 @@ public enum V1beta1SpringCloudServiceSpecForProviderTraceConnectionStringSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SpringCloudServiceSpecForProviderTraceConnectionStringSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -682,6 +714,7 @@ public partial class V1beta1SpringCloudServiceSpecForProviderTraceConnectionStri
     public V1beta1SpringCloudServiceSpecForProviderTraceConnectionStringSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ApplicationInsights in insights to populate connectionString.</summary>
 public partial class V1beta1SpringCloudServiceSpecForProviderTraceConnectionStringSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -697,6 +730,7 @@ public partial class V1beta1SpringCloudServiceSpecForProviderTraceConnectionStri
     public V1beta1SpringCloudServiceSpecForProviderTraceConnectionStringSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudServiceSpecForProviderTrace
 {
     /// <summary>The connection string used for Application Insights.</summary>
@@ -716,6 +750,7 @@ public partial class V1beta1SpringCloudServiceSpecForProviderTrace
     public double? SampleRate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudServiceSpecForProvider
 {
     /// <summary>Specifies the size for this Spring Cloud Service's default build agent pool. Possible values are S1, S2, S3, S4 and S5. This field is applicable only for Spring Cloud Service with enterprise tier.</summary>
@@ -791,6 +826,7 @@ public partial class V1beta1SpringCloudServiceSpecForProvider
     public bool? ZoneRedundant { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudServiceSpecInitProviderConfigServerGitSettingHttpBasicAuth
 {
     /// <summary>The username that's used to access the Git repository server, required when the Git repository server supports HTTP Basic Authentication.</summary>
@@ -798,6 +834,7 @@ public partial class V1beta1SpringCloudServiceSpecInitProviderConfigServerGitSet
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudServiceSpecInitProviderConfigServerGitSettingRepositoryHttpBasicAuth
 {
     /// <summary>The username that's used to access the Git repository server, required when the Git repository server supports HTTP Basic Authentication.</summary>
@@ -805,6 +842,7 @@ public partial class V1beta1SpringCloudServiceSpecInitProviderConfigServerGitSet
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudServiceSpecInitProviderConfigServerGitSettingRepositorySshAuth
 {
     /// <summary>The host key algorithm, should be ssh-dss, ssh-rsa, ecdsa-sha2-nistp256, ecdsa-sha2-nistp384, or ecdsa-sha2-nistp521. Required only if host-key exists.</summary>
@@ -816,6 +854,7 @@ public partial class V1beta1SpringCloudServiceSpecInitProviderConfigServerGitSet
     public bool? StrictHostKeyCheckingEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudServiceSpecInitProviderConfigServerGitSettingRepository
 {
     /// <summary>A http_basic_auth block as defined below.</summary>
@@ -847,6 +886,7 @@ public partial class V1beta1SpringCloudServiceSpecInitProviderConfigServerGitSet
     public string? Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudServiceSpecInitProviderConfigServerGitSettingSshAuth
 {
     /// <summary>The host key algorithm, should be ssh-dss, ssh-rsa, ecdsa-sha2-nistp256, ecdsa-sha2-nistp384, or ecdsa-sha2-nistp521. Required only if host-key exists.</summary>
@@ -858,6 +898,7 @@ public partial class V1beta1SpringCloudServiceSpecInitProviderConfigServerGitSet
     public bool? StrictHostKeyCheckingEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudServiceSpecInitProviderConfigServerGitSetting
 {
     /// <summary>A http_basic_auth block as defined below.</summary>
@@ -885,6 +926,7 @@ public partial class V1beta1SpringCloudServiceSpecInitProviderConfigServerGitSet
     public string? Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudServiceSpecInitProviderContainerRegistry
 {
     /// <summary>Specifies the name of the container registry.</summary>
@@ -900,6 +942,7 @@ public partial class V1beta1SpringCloudServiceSpecInitProviderContainerRegistry
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudServiceSpecInitProviderDefaultBuildService
 {
     /// <summary>Specifies the name of the container registry used in the default build service.</summary>
@@ -907,6 +950,7 @@ public partial class V1beta1SpringCloudServiceSpecInitProviderDefaultBuildServic
     public string? ContainerRegistryName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudServiceSpecInitProviderMarketplace
 {
     /// <summary>Specifies the plan ID of the 3rd Party Artifact that is being procured.</summary>
@@ -942,6 +986,7 @@ public enum V1beta1SpringCloudServiceSpecInitProviderNetworkAppSubnetIdRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpringCloudServiceSpecInitProviderNetworkAppSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -955,6 +1000,7 @@ public partial class V1beta1SpringCloudServiceSpecInitProviderNetworkAppSubnetId
     public V1beta1SpringCloudServiceSpecInitProviderNetworkAppSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate appSubnetId.</summary>
 public partial class V1beta1SpringCloudServiceSpecInitProviderNetworkAppSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -986,6 +1032,7 @@ public enum V1beta1SpringCloudServiceSpecInitProviderNetworkAppSubnetIdSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SpringCloudServiceSpecInitProviderNetworkAppSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -999,6 +1046,7 @@ public partial class V1beta1SpringCloudServiceSpecInitProviderNetworkAppSubnetId
     public V1beta1SpringCloudServiceSpecInitProviderNetworkAppSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate appSubnetId.</summary>
 public partial class V1beta1SpringCloudServiceSpecInitProviderNetworkAppSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1034,6 +1082,7 @@ public enum V1beta1SpringCloudServiceSpecInitProviderNetworkServiceRuntimeSubnet
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpringCloudServiceSpecInitProviderNetworkServiceRuntimeSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1047,6 +1096,7 @@ public partial class V1beta1SpringCloudServiceSpecInitProviderNetworkServiceRunt
     public V1beta1SpringCloudServiceSpecInitProviderNetworkServiceRuntimeSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate serviceRuntimeSubnetId.</summary>
 public partial class V1beta1SpringCloudServiceSpecInitProviderNetworkServiceRuntimeSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1078,6 +1128,7 @@ public enum V1beta1SpringCloudServiceSpecInitProviderNetworkServiceRuntimeSubnet
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SpringCloudServiceSpecInitProviderNetworkServiceRuntimeSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1091,6 +1142,7 @@ public partial class V1beta1SpringCloudServiceSpecInitProviderNetworkServiceRunt
     public V1beta1SpringCloudServiceSpecInitProviderNetworkServiceRuntimeSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate serviceRuntimeSubnetId.</summary>
 public partial class V1beta1SpringCloudServiceSpecInitProviderNetworkServiceRuntimeSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1106,6 +1158,7 @@ public partial class V1beta1SpringCloudServiceSpecInitProviderNetworkServiceRunt
     public V1beta1SpringCloudServiceSpecInitProviderNetworkServiceRuntimeSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudServiceSpecInitProviderNetwork
 {
     /// <summary>Specifies the Name of the resource group containing network resources of Azure Spring Cloud Apps. Changing this forces a new resource to be created.</summary>
@@ -1173,6 +1226,7 @@ public enum V1beta1SpringCloudServiceSpecInitProviderTraceConnectionStringRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpringCloudServiceSpecInitProviderTraceConnectionStringRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1186,6 +1240,7 @@ public partial class V1beta1SpringCloudServiceSpecInitProviderTraceConnectionStr
     public V1beta1SpringCloudServiceSpecInitProviderTraceConnectionStringRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ApplicationInsights in insights to populate connectionString.</summary>
 public partial class V1beta1SpringCloudServiceSpecInitProviderTraceConnectionStringRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1217,6 +1272,7 @@ public enum V1beta1SpringCloudServiceSpecInitProviderTraceConnectionStringSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SpringCloudServiceSpecInitProviderTraceConnectionStringSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1230,6 +1286,7 @@ public partial class V1beta1SpringCloudServiceSpecInitProviderTraceConnectionStr
     public V1beta1SpringCloudServiceSpecInitProviderTraceConnectionStringSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ApplicationInsights in insights to populate connectionString.</summary>
 public partial class V1beta1SpringCloudServiceSpecInitProviderTraceConnectionStringSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1245,6 +1302,7 @@ public partial class V1beta1SpringCloudServiceSpecInitProviderTraceConnectionStr
     public V1beta1SpringCloudServiceSpecInitProviderTraceConnectionStringSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudServiceSpecInitProviderTrace
 {
     /// <summary>The connection string used for Application Insights.</summary>
@@ -1264,6 +1322,7 @@ public partial class V1beta1SpringCloudServiceSpecInitProviderTrace
     public double? SampleRate { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1SpringCloudServiceSpecInitProvider
 {
     /// <summary>Specifies the size for this Spring Cloud Service's default build agent pool. Possible values are S1, S2, S3, S4 and S5. This field is applicable only for Spring Cloud Service with enterprise tier.</summary>
@@ -1369,6 +1428,7 @@ public enum V1beta1SpringCloudServiceSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpringCloudServiceSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1382,6 +1442,7 @@ public partial class V1beta1SpringCloudServiceSpecProviderConfigRefPolicy
     public V1beta1SpringCloudServiceSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1SpringCloudServiceSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1413,6 +1474,7 @@ public enum V1beta1SpringCloudServiceSpecPublishConnectionDetailsToConfigRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpringCloudServiceSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1426,6 +1488,7 @@ public partial class V1beta1SpringCloudServiceSpecPublishConnectionDetailsToConf
     public V1beta1SpringCloudServiceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1SpringCloudServiceSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1437,6 +1500,7 @@ public partial class V1beta1SpringCloudServiceSpecPublishConnectionDetailsToConf
     public V1beta1SpringCloudServiceSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1SpringCloudServiceSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1452,6 +1516,7 @@ public partial class V1beta1SpringCloudServiceSpecPublishConnectionDetailsToMeta
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1SpringCloudServiceSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1467,6 +1532,7 @@ public partial class V1beta1SpringCloudServiceSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1SpringCloudServiceSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1478,6 +1544,7 @@ public partial class V1beta1SpringCloudServiceSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>SpringCloudServiceSpec defines the desired state of SpringCloudService</summary>
 public partial class V1beta1SpringCloudServiceSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1510,6 +1577,7 @@ public partial class V1beta1SpringCloudServiceSpec
     public V1beta1SpringCloudServiceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudServiceStatusAtProviderConfigServerGitSettingHttpBasicAuth
 {
     /// <summary>The username that's used to access the Git repository server, required when the Git repository server supports HTTP Basic Authentication.</summary>
@@ -1517,6 +1585,7 @@ public partial class V1beta1SpringCloudServiceStatusAtProviderConfigServerGitSet
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudServiceStatusAtProviderConfigServerGitSettingRepositoryHttpBasicAuth
 {
     /// <summary>The username that's used to access the Git repository server, required when the Git repository server supports HTTP Basic Authentication.</summary>
@@ -1524,6 +1593,7 @@ public partial class V1beta1SpringCloudServiceStatusAtProviderConfigServerGitSet
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudServiceStatusAtProviderConfigServerGitSettingRepositorySshAuth
 {
     /// <summary>The host key algorithm, should be ssh-dss, ssh-rsa, ecdsa-sha2-nistp256, ecdsa-sha2-nistp384, or ecdsa-sha2-nistp521. Required only if host-key exists.</summary>
@@ -1535,6 +1605,7 @@ public partial class V1beta1SpringCloudServiceStatusAtProviderConfigServerGitSet
     public bool? StrictHostKeyCheckingEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudServiceStatusAtProviderConfigServerGitSettingRepository
 {
     /// <summary>A http_basic_auth block as defined below.</summary>
@@ -1566,6 +1637,7 @@ public partial class V1beta1SpringCloudServiceStatusAtProviderConfigServerGitSet
     public string? Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudServiceStatusAtProviderConfigServerGitSettingSshAuth
 {
     /// <summary>The host key algorithm, should be ssh-dss, ssh-rsa, ecdsa-sha2-nistp256, ecdsa-sha2-nistp384, or ecdsa-sha2-nistp521. Required only if host-key exists.</summary>
@@ -1577,6 +1649,7 @@ public partial class V1beta1SpringCloudServiceStatusAtProviderConfigServerGitSet
     public bool? StrictHostKeyCheckingEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudServiceStatusAtProviderConfigServerGitSetting
 {
     /// <summary>A http_basic_auth block as defined below.</summary>
@@ -1604,6 +1677,7 @@ public partial class V1beta1SpringCloudServiceStatusAtProviderConfigServerGitSet
     public string? Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudServiceStatusAtProviderContainerRegistry
 {
     /// <summary>Specifies the name of the container registry.</summary>
@@ -1619,6 +1693,7 @@ public partial class V1beta1SpringCloudServiceStatusAtProviderContainerRegistry
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudServiceStatusAtProviderDefaultBuildService
 {
     /// <summary>Specifies the name of the container registry used in the default build service.</summary>
@@ -1626,6 +1701,7 @@ public partial class V1beta1SpringCloudServiceStatusAtProviderDefaultBuildServic
     public string? ContainerRegistryName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudServiceStatusAtProviderMarketplace
 {
     /// <summary>Specifies the plan ID of the 3rd Party Artifact that is being procured.</summary>
@@ -1641,6 +1717,7 @@ public partial class V1beta1SpringCloudServiceStatusAtProviderMarketplace
     public string? Publisher { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudServiceStatusAtProviderNetwork
 {
     /// <summary>Specifies the Name of the resource group containing network resources of Azure Spring Cloud Apps. Changing this forces a new resource to be created.</summary>
@@ -1672,6 +1749,7 @@ public partial class V1beta1SpringCloudServiceStatusAtProviderNetwork
     public string? ServiceRuntimeSubnetId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudServiceStatusAtProviderRequiredNetworkTrafficRules
 {
     /// <summary>The direction of required traffic. Possible values are Inbound, Outbound.</summary>
@@ -1695,6 +1773,7 @@ public partial class V1beta1SpringCloudServiceStatusAtProviderRequiredNetworkTra
     public string? Protocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudServiceStatusAtProviderTrace
 {
     /// <summary>The connection string used for Application Insights.</summary>
@@ -1706,6 +1785,7 @@ public partial class V1beta1SpringCloudServiceStatusAtProviderTrace
     public double? SampleRate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudServiceStatusAtProvider
 {
     /// <summary>Specifies the size for this Spring Cloud Service's default build agent pool. Possible values are S1, S2, S3, S4 and S5. This field is applicable only for Spring Cloud Service with enterprise tier.</summary>
@@ -1789,6 +1869,7 @@ public partial class V1beta1SpringCloudServiceStatusAtProvider
     public bool? ZoneRedundant { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1SpringCloudServiceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1816,6 +1897,7 @@ public partial class V1beta1SpringCloudServiceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>SpringCloudServiceStatus defines the observed state of SpringCloudService.</summary>
 public partial class V1beta1SpringCloudServiceStatus
 {
     /// <summary></summary>
@@ -1832,6 +1914,7 @@ public partial class V1beta1SpringCloudServiceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>SpringCloudService is the Schema for the SpringCloudServices API. Manages an Azure Spring Cloud Service.</summary>
 public partial class V1beta1SpringCloudService : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SpringCloudServiceSpec>, IStatus<V1beta1SpringCloudServiceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

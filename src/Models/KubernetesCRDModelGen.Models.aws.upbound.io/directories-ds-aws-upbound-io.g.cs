@@ -38,6 +38,7 @@ public enum V1beta1DirectorySpecForProviderConnectSettingsSubnetIdsRefsPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DirectorySpecForProviderConnectSettingsSubnetIdsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1DirectorySpecForProviderConnectSettingsSubnetIdsRefs
     public V1beta1DirectorySpecForProviderConnectSettingsSubnetIdsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1DirectorySpecForProviderConnectSettingsSubnetIdsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1DirectorySpecForProviderConnectSettingsSubnetIdsSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DirectorySpecForProviderConnectSettingsSubnetIdsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1DirectorySpecForProviderConnectSettingsSubnetIdsSele
     public V1beta1DirectorySpecForProviderConnectSettingsSubnetIdsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 public partial class V1beta1DirectorySpecForProviderConnectSettingsSubnetIdsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1DirectorySpecForProviderConnectSettingsVpcIdRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DirectorySpecForProviderConnectSettingsVpcIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1DirectorySpecForProviderConnectSettingsVpcIdRefPolic
     public V1beta1DirectorySpecForProviderConnectSettingsVpcIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1DirectorySpecForProviderConnectSettingsVpcIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1DirectorySpecForProviderConnectSettingsVpcIdSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DirectorySpecForProviderConnectSettingsVpcIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1DirectorySpecForProviderConnectSettingsVpcIdSelector
     public V1beta1DirectorySpecForProviderConnectSettingsVpcIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1DirectorySpecForProviderConnectSettingsVpcIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1DirectorySpecForProviderConnectSettingsVpcIdSelector
     public V1beta1DirectorySpecForProviderConnectSettingsVpcIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DirectorySpecForProviderConnectSettings
 {
     /// <summary>The DNS IP addresses of the domain to connect to.</summary>
@@ -237,6 +246,7 @@ public partial class V1beta1DirectorySpecForProviderConnectSettings
     public V1beta1DirectorySpecForProviderConnectSettingsVpcIdSelector? VpcIdSelector { get; set; }
 }
 
+/// <summary>The password for the directory administrator or connector user.</summary>
 public partial class V1beta1DirectorySpecForProviderPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -272,6 +282,7 @@ public enum V1beta1DirectorySpecForProviderVpcSettingsSubnetIdsRefsPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DirectorySpecForProviderVpcSettingsSubnetIdsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -285,6 +296,7 @@ public partial class V1beta1DirectorySpecForProviderVpcSettingsSubnetIdsRefsPoli
     public V1beta1DirectorySpecForProviderVpcSettingsSubnetIdsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1DirectorySpecForProviderVpcSettingsSubnetIdsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -316,6 +328,7 @@ public enum V1beta1DirectorySpecForProviderVpcSettingsSubnetIdsSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DirectorySpecForProviderVpcSettingsSubnetIdsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -329,6 +342,7 @@ public partial class V1beta1DirectorySpecForProviderVpcSettingsSubnetIdsSelector
     public V1beta1DirectorySpecForProviderVpcSettingsSubnetIdsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 public partial class V1beta1DirectorySpecForProviderVpcSettingsSubnetIdsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -364,6 +378,7 @@ public enum V1beta1DirectorySpecForProviderVpcSettingsVpcIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DirectorySpecForProviderVpcSettingsVpcIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -377,6 +392,7 @@ public partial class V1beta1DirectorySpecForProviderVpcSettingsVpcIdRefPolicy
     public V1beta1DirectorySpecForProviderVpcSettingsVpcIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1DirectorySpecForProviderVpcSettingsVpcIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -408,6 +424,7 @@ public enum V1beta1DirectorySpecForProviderVpcSettingsVpcIdSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DirectorySpecForProviderVpcSettingsVpcIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -421,6 +438,7 @@ public partial class V1beta1DirectorySpecForProviderVpcSettingsVpcIdSelectorPoli
     public V1beta1DirectorySpecForProviderVpcSettingsVpcIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1DirectorySpecForProviderVpcSettingsVpcIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -436,6 +454,7 @@ public partial class V1beta1DirectorySpecForProviderVpcSettingsVpcIdSelector
     public V1beta1DirectorySpecForProviderVpcSettingsVpcIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DirectorySpecForProviderVpcSettings
 {
     /// <summary>The identifiers of the subnets for the directory servers (2 subnets in 2 different AZs).</summary>
@@ -463,6 +482,7 @@ public partial class V1beta1DirectorySpecForProviderVpcSettings
     public V1beta1DirectorySpecForProviderVpcSettingsVpcIdSelector? VpcIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DirectorySpecForProvider
 {
     /// <summary>The alias for the directory (must be unique amongst all aliases in AWS). Required for enable_sso.</summary>
@@ -542,6 +562,7 @@ public enum V1beta1DirectorySpecInitProviderConnectSettingsSubnetIdsRefsPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DirectorySpecInitProviderConnectSettingsSubnetIdsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -555,6 +576,7 @@ public partial class V1beta1DirectorySpecInitProviderConnectSettingsSubnetIdsRef
     public V1beta1DirectorySpecInitProviderConnectSettingsSubnetIdsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1DirectorySpecInitProviderConnectSettingsSubnetIdsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -586,6 +608,7 @@ public enum V1beta1DirectorySpecInitProviderConnectSettingsSubnetIdsSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DirectorySpecInitProviderConnectSettingsSubnetIdsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -599,6 +622,7 @@ public partial class V1beta1DirectorySpecInitProviderConnectSettingsSubnetIdsSel
     public V1beta1DirectorySpecInitProviderConnectSettingsSubnetIdsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 public partial class V1beta1DirectorySpecInitProviderConnectSettingsSubnetIdsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -634,6 +658,7 @@ public enum V1beta1DirectorySpecInitProviderConnectSettingsVpcIdRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DirectorySpecInitProviderConnectSettingsVpcIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -647,6 +672,7 @@ public partial class V1beta1DirectorySpecInitProviderConnectSettingsVpcIdRefPoli
     public V1beta1DirectorySpecInitProviderConnectSettingsVpcIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1DirectorySpecInitProviderConnectSettingsVpcIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -678,6 +704,7 @@ public enum V1beta1DirectorySpecInitProviderConnectSettingsVpcIdSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DirectorySpecInitProviderConnectSettingsVpcIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -691,6 +718,7 @@ public partial class V1beta1DirectorySpecInitProviderConnectSettingsVpcIdSelecto
     public V1beta1DirectorySpecInitProviderConnectSettingsVpcIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1DirectorySpecInitProviderConnectSettingsVpcIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -706,6 +734,7 @@ public partial class V1beta1DirectorySpecInitProviderConnectSettingsVpcIdSelecto
     public V1beta1DirectorySpecInitProviderConnectSettingsVpcIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DirectorySpecInitProviderConnectSettings
 {
     /// <summary>The DNS IP addresses of the domain to connect to.</summary>
@@ -741,6 +770,7 @@ public partial class V1beta1DirectorySpecInitProviderConnectSettings
     public V1beta1DirectorySpecInitProviderConnectSettingsVpcIdSelector? VpcIdSelector { get; set; }
 }
 
+/// <summary>The password for the directory administrator or connector user.</summary>
 public partial class V1beta1DirectorySpecInitProviderPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -776,6 +806,7 @@ public enum V1beta1DirectorySpecInitProviderVpcSettingsSubnetIdsRefsPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DirectorySpecInitProviderVpcSettingsSubnetIdsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -789,6 +820,7 @@ public partial class V1beta1DirectorySpecInitProviderVpcSettingsSubnetIdsRefsPol
     public V1beta1DirectorySpecInitProviderVpcSettingsSubnetIdsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1DirectorySpecInitProviderVpcSettingsSubnetIdsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -820,6 +852,7 @@ public enum V1beta1DirectorySpecInitProviderVpcSettingsSubnetIdsSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DirectorySpecInitProviderVpcSettingsSubnetIdsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -833,6 +866,7 @@ public partial class V1beta1DirectorySpecInitProviderVpcSettingsSubnetIdsSelecto
     public V1beta1DirectorySpecInitProviderVpcSettingsSubnetIdsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 public partial class V1beta1DirectorySpecInitProviderVpcSettingsSubnetIdsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -868,6 +902,7 @@ public enum V1beta1DirectorySpecInitProviderVpcSettingsVpcIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DirectorySpecInitProviderVpcSettingsVpcIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -881,6 +916,7 @@ public partial class V1beta1DirectorySpecInitProviderVpcSettingsVpcIdRefPolicy
     public V1beta1DirectorySpecInitProviderVpcSettingsVpcIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1DirectorySpecInitProviderVpcSettingsVpcIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -912,6 +948,7 @@ public enum V1beta1DirectorySpecInitProviderVpcSettingsVpcIdSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DirectorySpecInitProviderVpcSettingsVpcIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -925,6 +962,7 @@ public partial class V1beta1DirectorySpecInitProviderVpcSettingsVpcIdSelectorPol
     public V1beta1DirectorySpecInitProviderVpcSettingsVpcIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1DirectorySpecInitProviderVpcSettingsVpcIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -940,6 +978,7 @@ public partial class V1beta1DirectorySpecInitProviderVpcSettingsVpcIdSelector
     public V1beta1DirectorySpecInitProviderVpcSettingsVpcIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DirectorySpecInitProviderVpcSettings
 {
     /// <summary>The identifiers of the subnets for the directory servers (2 subnets in 2 different AZs).</summary>
@@ -967,6 +1006,7 @@ public partial class V1beta1DirectorySpecInitProviderVpcSettings
     public V1beta1DirectorySpecInitProviderVpcSettingsVpcIdSelector? VpcIdSelector { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1DirectorySpecInitProvider
 {
     /// <summary>The alias for the directory (must be unique amongst all aliases in AWS). Required for enable_sso.</summary>
@@ -1064,6 +1104,7 @@ public enum V1beta1DirectorySpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DirectorySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1077,6 +1118,7 @@ public partial class V1beta1DirectorySpecProviderConfigRefPolicy
     public V1beta1DirectorySpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1DirectorySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1108,6 +1150,7 @@ public enum V1beta1DirectorySpecPublishConnectionDetailsToConfigRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DirectorySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1121,6 +1164,7 @@ public partial class V1beta1DirectorySpecPublishConnectionDetailsToConfigRefPoli
     public V1beta1DirectorySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1DirectorySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1132,6 +1176,7 @@ public partial class V1beta1DirectorySpecPublishConnectionDetailsToConfigRef
     public V1beta1DirectorySpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1DirectorySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1147,6 +1192,7 @@ public partial class V1beta1DirectorySpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1DirectorySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1162,6 +1208,7 @@ public partial class V1beta1DirectorySpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1DirectorySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1173,6 +1220,7 @@ public partial class V1beta1DirectorySpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>DirectorySpec defines the desired state of Directory</summary>
 public partial class V1beta1DirectorySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1205,6 +1253,7 @@ public partial class V1beta1DirectorySpec
     public V1beta1DirectorySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DirectoryStatusAtProviderConnectSettings
 {
     /// <summary></summary>
@@ -1232,6 +1281,7 @@ public partial class V1beta1DirectoryStatusAtProviderConnectSettings
     public string? VpcId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DirectoryStatusAtProviderVpcSettings
 {
     /// <summary></summary>
@@ -1247,6 +1297,7 @@ public partial class V1beta1DirectoryStatusAtProviderVpcSettings
     public string? VpcId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DirectoryStatusAtProvider
 {
     /// <summary>The access URL for the directory, such as http://alias.awsapps.com.</summary>
@@ -1318,6 +1369,7 @@ public partial class V1beta1DirectoryStatusAtProvider
     public IList<V1beta1DirectoryStatusAtProviderVpcSettings>? VpcSettings { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1DirectoryStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1345,6 +1397,7 @@ public partial class V1beta1DirectoryStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>DirectoryStatus defines the observed state of Directory.</summary>
 public partial class V1beta1DirectoryStatus
 {
     /// <summary></summary>
@@ -1361,6 +1414,7 @@ public partial class V1beta1DirectoryStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Directory is the Schema for the Directorys API. Provides a directory in AWS Directory Service.</summary>
 public partial class V1beta1Directory : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DirectorySpec>, IStatus<V1beta1DirectoryStatus>
 {
     public const string KubeApiVersion = "v1beta1";

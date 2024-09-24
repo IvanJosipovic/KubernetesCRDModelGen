@@ -38,6 +38,7 @@ public enum V1beta1KubernetesClusterSpecForProviderAciConnectorLinuxSubnetNameRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KubernetesClusterSpecForProviderAciConnectorLinuxSubnetNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderAciConnectorLinuxSub
     public V1beta1KubernetesClusterSpecForProviderAciConnectorLinuxSubnetNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetName.</summary>
 public partial class V1beta1KubernetesClusterSpecForProviderAciConnectorLinuxSubnetNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1KubernetesClusterSpecForProviderAciConnectorLinuxSubnetNameSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1KubernetesClusterSpecForProviderAciConnectorLinuxSubnetNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderAciConnectorLinuxSub
     public V1beta1KubernetesClusterSpecForProviderAciConnectorLinuxSubnetNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetName.</summary>
 public partial class V1beta1KubernetesClusterSpecForProviderAciConnectorLinuxSubnetNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderAciConnectorLinuxSub
     public V1beta1KubernetesClusterSpecForProviderAciConnectorLinuxSubnetNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderAciConnectorLinux
 {
     /// <summary>The subnet name for the virtual nodes to run.</summary>
@@ -145,6 +150,7 @@ public enum V1beta1KubernetesClusterSpecForProviderApiServerAccessProfileSubnetI
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KubernetesClusterSpecForProviderApiServerAccessProfileSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -158,6 +164,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderApiServerAccessProfi
     public V1beta1KubernetesClusterSpecForProviderApiServerAccessProfileSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1KubernetesClusterSpecForProviderApiServerAccessProfileSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -189,6 +196,7 @@ public enum V1beta1KubernetesClusterSpecForProviderApiServerAccessProfileSubnetI
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1KubernetesClusterSpecForProviderApiServerAccessProfileSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderApiServerAccessProfi
     public V1beta1KubernetesClusterSpecForProviderApiServerAccessProfileSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1KubernetesClusterSpecForProviderApiServerAccessProfileSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -217,6 +226,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderApiServerAccessProfi
     public V1beta1KubernetesClusterSpecForProviderApiServerAccessProfileSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderApiServerAccessProfile
 {
     /// <summary>Set of authorized IP ranges to allow access to API server, e.g. ["198.51.100.0/24"].</summary>
@@ -240,6 +250,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderApiServerAccessProfi
     public bool? VnetIntegrationEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderAutoScalerProfile
 {
     /// <summary>Detect similar node groups and balance the number of nodes between them. Defaults to false.</summary>
@@ -311,6 +322,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderAutoScalerProfile
     public bool? SkipNodesWithSystemPods { get; set; }
 }
 
+/// <summary>The Server Secret of an Azure Active Directory Application.</summary>
 public partial class V1beta1KubernetesClusterSpecForProviderAzureActiveDirectoryRoleBasedAccessControlServerAppSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -326,6 +338,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderAzureActiveDirectory
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderAzureActiveDirectoryRoleBasedAccessControl
 {
     /// <summary>A list of Object IDs of Azure Active Directory Groups which should have Admin Role on the Cluster.</summary>
@@ -357,6 +370,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderAzureActiveDirectory
     public string? TenantId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderConfidentialComputing
 {
     /// <summary>Should the SGX quote helper be enabled?</summary>
@@ -364,6 +378,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderConfidentialComputin
     public bool? SgxQuoteHelperEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolKubeletConfig
 {
     /// <summary>Specifies the allow list of unsafe sysctls command or patterns (ending in *).</summary>
@@ -407,6 +422,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolKubel
     public string? TopologyManagerPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolLinuxOsConfigSysctlConfig
 {
     /// <summary>The sysctl setting fs.aio-max-nr. Must be between 65536 and 6553500.</summary>
@@ -526,6 +542,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolLinux
     public double? VmVfsCachePressure { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolLinuxOsConfig
 {
     /// <summary>Specifies the size of the swap file on each node in MB.</summary>
@@ -545,6 +562,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolLinux
     public string? TransparentHugePageEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolNodeNetworkProfileAllowedHostPorts
 {
     /// <summary>Specifies the end of the port range.</summary>
@@ -560,6 +578,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolNodeN
     public string? Protocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolNodeNetworkProfile
 {
     /// <summary>One or more allowed_host_ports blocks as defined below.</summary>
@@ -595,6 +614,7 @@ public enum V1beta1KubernetesClusterSpecForProviderDefaultNodePoolPodSubnetIdRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolPodSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -608,6 +628,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolPodSu
     public V1beta1KubernetesClusterSpecForProviderDefaultNodePoolPodSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate podSubnetId.</summary>
 public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolPodSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -639,6 +660,7 @@ public enum V1beta1KubernetesClusterSpecForProviderDefaultNodePoolPodSubnetIdSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolPodSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -652,6 +674,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolPodSu
     public V1beta1KubernetesClusterSpecForProviderDefaultNodePoolPodSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate podSubnetId.</summary>
 public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolPodSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -667,6 +690,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolPodSu
     public V1beta1KubernetesClusterSpecForProviderDefaultNodePoolPodSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolUpgradeSettings
 {
     /// <summary>The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.</summary>
@@ -694,6 +718,7 @@ public enum V1beta1KubernetesClusterSpecForProviderDefaultNodePoolVnetSubnetIdRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolVnetSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -707,6 +732,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolVnetS
     public V1beta1KubernetesClusterSpecForProviderDefaultNodePoolVnetSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate vnetSubnetId.</summary>
 public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolVnetSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -738,6 +764,7 @@ public enum V1beta1KubernetesClusterSpecForProviderDefaultNodePoolVnetSubnetIdSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolVnetSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -751,6 +778,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolVnetS
     public V1beta1KubernetesClusterSpecForProviderDefaultNodePoolVnetSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate vnetSubnetId.</summary>
 public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolVnetSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -766,6 +794,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolVnetS
     public V1beta1KubernetesClusterSpecForProviderDefaultNodePoolVnetSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePool
 {
     /// <summary>Specifies the ID of the Capacity Reservation Group within which this AKS Cluster should be created. Changing this forces a new resource to be created.</summary>
@@ -941,6 +970,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePool
     public IList<string>? Zones { get; set; }
 }
 
+/// <summary>The base64 encoded alternative CA certificate content in PEM format.</summary>
 public partial class V1beta1KubernetesClusterSpecForProviderHttpProxyConfigTrustedCaSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -956,6 +986,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderHttpProxyConfigTrust
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderHttpProxyConfig
 {
     /// <summary>The proxy address to be used when communicating over HTTP.</summary>
@@ -975,6 +1006,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderHttpProxyConfig
     public V1beta1KubernetesClusterSpecForProviderHttpProxyConfigTrustedCaSecretRef? TrustedCaSecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Kubernetes Cluster.</summary>
@@ -1006,6 +1038,7 @@ public enum V1beta1KubernetesClusterSpecForProviderIngressApplicationGatewaySubn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KubernetesClusterSpecForProviderIngressApplicationGatewaySubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1019,6 +1052,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderIngressApplicationGa
     public V1beta1KubernetesClusterSpecForProviderIngressApplicationGatewaySubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1KubernetesClusterSpecForProviderIngressApplicationGatewaySubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1050,6 +1084,7 @@ public enum V1beta1KubernetesClusterSpecForProviderIngressApplicationGatewaySubn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1KubernetesClusterSpecForProviderIngressApplicationGatewaySubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1063,6 +1098,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderIngressApplicationGa
     public V1beta1KubernetesClusterSpecForProviderIngressApplicationGatewaySubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1KubernetesClusterSpecForProviderIngressApplicationGatewaySubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1078,6 +1114,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderIngressApplicationGa
     public V1beta1KubernetesClusterSpecForProviderIngressApplicationGatewaySubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderIngressApplicationGateway
 {
     /// <summary>The ID of the Application Gateway to integrate with the ingress controller of this Kubernetes Cluster. See this page for further details.</summary>
@@ -1105,6 +1142,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderIngressApplicationGa
     public V1beta1KubernetesClusterSpecForProviderIngressApplicationGatewaySubnetIdSelector? SubnetIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderKeyManagementService
 {
     /// <summary>Identifier of Azure Key Vault key. See key identifier format for more details.</summary>
@@ -1116,6 +1154,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderKeyManagementService
     public string? KeyVaultNetworkAccess { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderKeyVaultSecretsProvider
 {
     /// <summary>Should the secret store CSI driver on the AKS cluster be enabled?</summary>
@@ -1127,6 +1166,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderKeyVaultSecretsProvi
     public string? SecretRotationInterval { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderKubeletIdentity
 {
     /// <summary>The Client ID of the user-defined Managed Identity to be assigned to the Kubelets. If not specified a Managed Identity is created automatically. Changing this forces a new resource to be created.</summary>
@@ -1142,6 +1182,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderKubeletIdentity
     public string? UserAssignedIdentityId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderLinuxProfileSshKey
 {
     /// <summary>The Public SSH Key used to access the cluster.</summary>
@@ -1149,6 +1190,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderLinuxProfileSshKey
     public string? KeyData { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderLinuxProfile
 {
     /// <summary>The Admin Username for the Cluster. Changing this forces a new resource to be created.</summary>
@@ -1160,6 +1202,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderLinuxProfile
     public IList<V1beta1KubernetesClusterSpecForProviderLinuxProfileSshKey>? SshKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderMaintenanceWindowAllowed
 {
     /// <summary>A day in a week. Possible values are Sunday, Monday, Tuesday, Wednesday, Thursday, Friday and Saturday.</summary>
@@ -1171,6 +1214,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderMaintenanceWindowAll
     public IList<double>? Hours { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderMaintenanceWindowNotAllowed
 {
     /// <summary>The end of a time span, formatted as an RFC3339 string.</summary>
@@ -1182,6 +1226,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderMaintenanceWindowNot
     public string? Start { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderMaintenanceWindow
 {
     /// <summary>One or more allowed blocks as defined below.</summary>
@@ -1193,6 +1238,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderMaintenanceWindow
     public IList<V1beta1KubernetesClusterSpecForProviderMaintenanceWindowNotAllowed>? NotAllowed { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderMaintenanceWindowAutoUpgradeNotAllowed
 {
     /// <summary>The end of a time span, formatted as an RFC3339 string.</summary>
@@ -1204,6 +1250,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderMaintenanceWindowAut
     public string? Start { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderMaintenanceWindowAutoUpgrade
 {
     /// <summary>The day of the month for the maintenance run. Required in combination with RelativeMonthly frequency. Value between 0 and 31 (inclusive).</summary>
@@ -1247,6 +1294,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderMaintenanceWindowAut
     public string? WeekIndex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderMaintenanceWindowNodeOsNotAllowed
 {
     /// <summary>The end of a time span, formatted as an RFC3339 string.</summary>
@@ -1258,6 +1306,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderMaintenanceWindowNod
     public string? Start { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderMaintenanceWindowNodeOs
 {
     /// <summary>The day of the month for the maintenance run. Required in combination with RelativeMonthly frequency. Value between 0 and 31 (inclusive).</summary>
@@ -1301,6 +1350,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderMaintenanceWindowNod
     public string? WeekIndex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderMicrosoftDefender
 {
     /// <summary>Specifies the ID of the Log Analytics Workspace where the audit logs collected by Microsoft Defender should be sent to.</summary>
@@ -1308,6 +1358,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderMicrosoftDefender
     public string? LogAnalyticsWorkspaceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderMonitorMetrics
 {
     /// <summary>Specifies a comma-separated list of Kubernetes annotation keys that will be used in the resource's labels metric.</summary>
@@ -1319,6 +1370,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderMonitorMetrics
     public string? LabelsAllowed { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderNetworkProfileLoadBalancerProfile
 {
     /// <summary>Desired outbound flow idle timeout in minutes for the cluster load balancer. Must be between 4 and 120 inclusive. Defaults to 4.</summary>
@@ -1346,6 +1398,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderNetworkProfileLoadBa
     public double? OutboundPortsAllocated { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderNetworkProfileNatGatewayProfile
 {
     /// <summary>Desired outbound flow idle timeout in minutes for the cluster load balancer. Must be between 4 and 120 inclusive. Defaults to 4.</summary>
@@ -1357,6 +1410,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderNetworkProfileNatGat
     public double? ManagedOutboundIpCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderNetworkProfile
 {
     /// <summary>IP address within the Kubernetes service address range that will be used by cluster service discovery (kube-dns). Changing this forces a new resource to be created.</summary>
@@ -1424,6 +1478,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderNetworkProfile
     public IList<string>? ServiceCidrs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderOmsAgent
 {
     /// <summary>The ID of the Log Analytics Workspace which the OMS Agent should send data to.</summary>
@@ -1455,6 +1510,7 @@ public enum V1beta1KubernetesClusterSpecForProviderPrivateDnsZoneIdRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KubernetesClusterSpecForProviderPrivateDnsZoneIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1468,6 +1524,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderPrivateDnsZoneIdRefP
     public V1beta1KubernetesClusterSpecForProviderPrivateDnsZoneIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a PrivateDNSZone in network to populate privateDnsZoneId.</summary>
 public partial class V1beta1KubernetesClusterSpecForProviderPrivateDnsZoneIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1499,6 +1556,7 @@ public enum V1beta1KubernetesClusterSpecForProviderPrivateDnsZoneIdSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1KubernetesClusterSpecForProviderPrivateDnsZoneIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1512,6 +1570,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderPrivateDnsZoneIdSele
     public V1beta1KubernetesClusterSpecForProviderPrivateDnsZoneIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a PrivateDNSZone in network to populate privateDnsZoneId.</summary>
 public partial class V1beta1KubernetesClusterSpecForProviderPrivateDnsZoneIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1547,6 +1606,7 @@ public enum V1beta1KubernetesClusterSpecForProviderResourceGroupNameRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KubernetesClusterSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1560,6 +1620,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderResourceGroupNameRef
     public V1beta1KubernetesClusterSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1KubernetesClusterSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1591,6 +1652,7 @@ public enum V1beta1KubernetesClusterSpecForProviderResourceGroupNameSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1KubernetesClusterSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1604,6 +1666,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderResourceGroupNameSel
     public V1beta1KubernetesClusterSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1KubernetesClusterSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1619,6 +1682,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderResourceGroupNameSel
     public V1beta1KubernetesClusterSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderServiceMeshProfile
 {
     /// <summary>Is Istio External Ingress Gateway enabled?</summary>
@@ -1634,6 +1698,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderServiceMeshProfile
     public string? Mode { get; set; }
 }
 
+/// <summary>The Client Secret for the Service Principal.</summary>
 public partial class V1beta1KubernetesClusterSpecForProviderServicePrincipalClientSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1649,6 +1714,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderServicePrincipalClie
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderServicePrincipal
 {
     /// <summary>The Client ID for the Service Principal.</summary>
@@ -1660,6 +1726,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderServicePrincipal
     public V1beta1KubernetesClusterSpecForProviderServicePrincipalClientSecretSecretRef ClientSecretSecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderStorageProfile
 {
     /// <summary>Is the Blob CSI driver enabled? Defaults to false.</summary>
@@ -1683,6 +1750,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderStorageProfile
     public bool? SnapshotControllerEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderWebAppRouting
 {
     /// <summary>Specifies the ID of the DNS Zone in which DNS entries are created for applications deployed to the cluster when Web App Routing is enabled. For Bring-Your-Own DNS zones this property should be set to an empty string "".</summary>
@@ -1690,6 +1758,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderWebAppRouting
     public string? DnsZoneId { get; set; }
 }
 
+/// <summary>The Admin Password for Windows VMs. Length must be between 14 and 123 characters.</summary>
 public partial class V1beta1KubernetesClusterSpecForProviderWindowsProfileAdminPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1705,6 +1774,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderWindowsProfileAdminP
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderWindowsProfileGmsa
 {
     /// <summary>Specifies the DNS server for Windows gMSA. Set this to an empty string if you have configured the DNS server in the VNet which was used to create the managed cluster.</summary>
@@ -1716,6 +1786,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderWindowsProfileGmsa
     public string? RootDomain { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderWindowsProfile
 {
     /// <summary>The Admin Password for Windows VMs. Length must be between 14 and 123 characters.</summary>
@@ -1735,6 +1806,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderWindowsProfile
     public string? License { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProviderWorkloadAutoscalerProfile
 {
     /// <summary>Specifies whether KEDA Autoscaler can be used for workloads.</summary>
@@ -1746,6 +1818,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderWorkloadAutoscalerPr
     public bool? VerticalPodAutoscalerEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecForProvider
 {
     /// <summary>A aci_connector_linux block as defined below. For more details, please visit Create and configure an AKS cluster to use virtual nodes.</summary>
@@ -2009,6 +2082,7 @@ public enum V1beta1KubernetesClusterSpecInitProviderAciConnectorLinuxSubnetNameR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderAciConnectorLinuxSubnetNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2022,6 +2096,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderAciConnectorLinuxSu
     public V1beta1KubernetesClusterSpecInitProviderAciConnectorLinuxSubnetNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetName.</summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderAciConnectorLinuxSubnetNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2053,6 +2128,7 @@ public enum V1beta1KubernetesClusterSpecInitProviderAciConnectorLinuxSubnetNameS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderAciConnectorLinuxSubnetNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2066,6 +2142,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderAciConnectorLinuxSu
     public V1beta1KubernetesClusterSpecInitProviderAciConnectorLinuxSubnetNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetName.</summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderAciConnectorLinuxSubnetNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2081,6 +2158,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderAciConnectorLinuxSu
     public V1beta1KubernetesClusterSpecInitProviderAciConnectorLinuxSubnetNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderAciConnectorLinux
 {
     /// <summary>The subnet name for the virtual nodes to run.</summary>
@@ -2116,6 +2194,7 @@ public enum V1beta1KubernetesClusterSpecInitProviderApiServerAccessProfileSubnet
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderApiServerAccessProfileSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2129,6 +2208,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderApiServerAccessProf
     public V1beta1KubernetesClusterSpecInitProviderApiServerAccessProfileSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderApiServerAccessProfileSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2160,6 +2240,7 @@ public enum V1beta1KubernetesClusterSpecInitProviderApiServerAccessProfileSubnet
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderApiServerAccessProfileSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2173,6 +2254,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderApiServerAccessProf
     public V1beta1KubernetesClusterSpecInitProviderApiServerAccessProfileSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderApiServerAccessProfileSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2188,6 +2270,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderApiServerAccessProf
     public V1beta1KubernetesClusterSpecInitProviderApiServerAccessProfileSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderApiServerAccessProfile
 {
     /// <summary>Set of authorized IP ranges to allow access to API server, e.g. ["198.51.100.0/24"].</summary>
@@ -2211,6 +2294,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderApiServerAccessProf
     public bool? VnetIntegrationEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderAutoScalerProfile
 {
     /// <summary>Detect similar node groups and balance the number of nodes between them. Defaults to false.</summary>
@@ -2282,6 +2366,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderAutoScalerProfile
     public bool? SkipNodesWithSystemPods { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderAzureActiveDirectoryRoleBasedAccessControl
 {
     /// <summary>A list of Object IDs of Azure Active Directory Groups which should have Admin Role on the Cluster.</summary>
@@ -2309,6 +2394,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderAzureActiveDirector
     public string? TenantId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderConfidentialComputing
 {
     /// <summary>Should the SGX quote helper be enabled?</summary>
@@ -2316,6 +2402,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderConfidentialComputi
     public bool? SgxQuoteHelperEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolKubeletConfig
 {
     /// <summary>Specifies the allow list of unsafe sysctls command or patterns (ending in *).</summary>
@@ -2359,6 +2446,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolKube
     public string? TopologyManagerPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolLinuxOsConfigSysctlConfig
 {
     /// <summary>The sysctl setting fs.aio-max-nr. Must be between 65536 and 6553500.</summary>
@@ -2478,6 +2566,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolLinu
     public double? VmVfsCachePressure { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolLinuxOsConfig
 {
     /// <summary>Specifies the size of the swap file on each node in MB.</summary>
@@ -2497,6 +2586,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolLinu
     public string? TransparentHugePageEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolNodeNetworkProfileAllowedHostPorts
 {
     /// <summary>Specifies the end of the port range.</summary>
@@ -2512,6 +2602,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolNode
     public string? Protocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolNodeNetworkProfile
 {
     /// <summary>One or more allowed_host_ports blocks as defined below.</summary>
@@ -2547,6 +2638,7 @@ public enum V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolPodSubnetIdRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolPodSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2560,6 +2652,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolPodS
     public V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolPodSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate podSubnetId.</summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolPodSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2591,6 +2684,7 @@ public enum V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolPodSubnetIdSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolPodSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2604,6 +2698,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolPodS
     public V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolPodSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate podSubnetId.</summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolPodSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2619,6 +2714,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolPodS
     public V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolPodSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolUpgradeSettings
 {
     /// <summary>The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.</summary>
@@ -2646,6 +2742,7 @@ public enum V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolVnetSubnetIdR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolVnetSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2659,6 +2756,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolVnet
     public V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolVnetSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate vnetSubnetId.</summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolVnetSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2690,6 +2788,7 @@ public enum V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolVnetSubnetIdS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolVnetSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2703,6 +2802,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolVnet
     public V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolVnetSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate vnetSubnetId.</summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolVnetSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2718,6 +2818,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolVnet
     public V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolVnetSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePool
 {
     /// <summary>Specifies the ID of the Capacity Reservation Group within which this AKS Cluster should be created. Changing this forces a new resource to be created.</summary>
@@ -2893,6 +2994,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePool
     public IList<string>? Zones { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderHttpProxyConfig
 {
     /// <summary>The proxy address to be used when communicating over HTTP.</summary>
@@ -2908,6 +3010,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderHttpProxyConfig
     public IList<string>? NoProxy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Kubernetes Cluster.</summary>
@@ -2939,6 +3042,7 @@ public enum V1beta1KubernetesClusterSpecInitProviderIngressApplicationGatewaySub
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderIngressApplicationGatewaySubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2952,6 +3056,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderIngressApplicationG
     public V1beta1KubernetesClusterSpecInitProviderIngressApplicationGatewaySubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderIngressApplicationGatewaySubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2983,6 +3088,7 @@ public enum V1beta1KubernetesClusterSpecInitProviderIngressApplicationGatewaySub
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderIngressApplicationGatewaySubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2996,6 +3102,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderIngressApplicationG
     public V1beta1KubernetesClusterSpecInitProviderIngressApplicationGatewaySubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderIngressApplicationGatewaySubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -3011,6 +3118,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderIngressApplicationG
     public V1beta1KubernetesClusterSpecInitProviderIngressApplicationGatewaySubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderIngressApplicationGateway
 {
     /// <summary>The ID of the Application Gateway to integrate with the ingress controller of this Kubernetes Cluster. See this page for further details.</summary>
@@ -3038,6 +3146,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderIngressApplicationG
     public V1beta1KubernetesClusterSpecInitProviderIngressApplicationGatewaySubnetIdSelector? SubnetIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderKeyManagementService
 {
     /// <summary>Identifier of Azure Key Vault key. See key identifier format for more details.</summary>
@@ -3049,6 +3158,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderKeyManagementServic
     public string? KeyVaultNetworkAccess { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderKeyVaultSecretsProvider
 {
     /// <summary>Should the secret store CSI driver on the AKS cluster be enabled?</summary>
@@ -3060,6 +3170,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderKeyVaultSecretsProv
     public string? SecretRotationInterval { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderKubeletIdentity
 {
     /// <summary>The Client ID of the user-defined Managed Identity to be assigned to the Kubelets. If not specified a Managed Identity is created automatically. Changing this forces a new resource to be created.</summary>
@@ -3075,6 +3186,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderKubeletIdentity
     public string? UserAssignedIdentityId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderLinuxProfileSshKey
 {
     /// <summary>The Public SSH Key used to access the cluster.</summary>
@@ -3082,6 +3194,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderLinuxProfileSshKey
     public string? KeyData { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderLinuxProfile
 {
     /// <summary>The Admin Username for the Cluster. Changing this forces a new resource to be created.</summary>
@@ -3093,6 +3206,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderLinuxProfile
     public IList<V1beta1KubernetesClusterSpecInitProviderLinuxProfileSshKey>? SshKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderMaintenanceWindowAllowed
 {
     /// <summary>A day in a week. Possible values are Sunday, Monday, Tuesday, Wednesday, Thursday, Friday and Saturday.</summary>
@@ -3104,6 +3218,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderMaintenanceWindowAl
     public IList<double>? Hours { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderMaintenanceWindowNotAllowed
 {
     /// <summary>The end of a time span, formatted as an RFC3339 string.</summary>
@@ -3115,6 +3230,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderMaintenanceWindowNo
     public string? Start { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderMaintenanceWindow
 {
     /// <summary>One or more allowed blocks as defined below.</summary>
@@ -3126,6 +3242,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderMaintenanceWindow
     public IList<V1beta1KubernetesClusterSpecInitProviderMaintenanceWindowNotAllowed>? NotAllowed { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderMaintenanceWindowAutoUpgradeNotAllowed
 {
     /// <summary>The end of a time span, formatted as an RFC3339 string.</summary>
@@ -3137,6 +3254,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderMaintenanceWindowAu
     public string? Start { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderMaintenanceWindowAutoUpgrade
 {
     /// <summary>The day of the month for the maintenance run. Required in combination with RelativeMonthly frequency. Value between 0 and 31 (inclusive).</summary>
@@ -3180,6 +3298,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderMaintenanceWindowAu
     public string? WeekIndex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderMaintenanceWindowNodeOsNotAllowed
 {
     /// <summary>The end of a time span, formatted as an RFC3339 string.</summary>
@@ -3191,6 +3310,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderMaintenanceWindowNo
     public string? Start { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderMaintenanceWindowNodeOs
 {
     /// <summary>The day of the month for the maintenance run. Required in combination with RelativeMonthly frequency. Value between 0 and 31 (inclusive).</summary>
@@ -3234,6 +3354,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderMaintenanceWindowNo
     public string? WeekIndex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderMicrosoftDefender
 {
     /// <summary>Specifies the ID of the Log Analytics Workspace where the audit logs collected by Microsoft Defender should be sent to.</summary>
@@ -3241,6 +3362,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderMicrosoftDefender
     public string? LogAnalyticsWorkspaceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderMonitorMetrics
 {
     /// <summary>Specifies a comma-separated list of Kubernetes annotation keys that will be used in the resource's labels metric.</summary>
@@ -3252,6 +3374,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderMonitorMetrics
     public string? LabelsAllowed { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderNetworkProfileLoadBalancerProfile
 {
     /// <summary>Desired outbound flow idle timeout in minutes for the cluster load balancer. Must be between 4 and 120 inclusive. Defaults to 4.</summary>
@@ -3279,6 +3402,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderNetworkProfileLoadB
     public double? OutboundPortsAllocated { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderNetworkProfileNatGatewayProfile
 {
     /// <summary>Desired outbound flow idle timeout in minutes for the cluster load balancer. Must be between 4 and 120 inclusive. Defaults to 4.</summary>
@@ -3290,6 +3414,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderNetworkProfileNatGa
     public double? ManagedOutboundIpCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderNetworkProfile
 {
     /// <summary>IP address within the Kubernetes service address range that will be used by cluster service discovery (kube-dns). Changing this forces a new resource to be created.</summary>
@@ -3357,6 +3482,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderNetworkProfile
     public IList<string>? ServiceCidrs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderOmsAgent
 {
     /// <summary>The ID of the Log Analytics Workspace which the OMS Agent should send data to.</summary>
@@ -3388,6 +3514,7 @@ public enum V1beta1KubernetesClusterSpecInitProviderPrivateDnsZoneIdRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderPrivateDnsZoneIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3401,6 +3528,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderPrivateDnsZoneIdRef
     public V1beta1KubernetesClusterSpecInitProviderPrivateDnsZoneIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a PrivateDNSZone in network to populate privateDnsZoneId.</summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderPrivateDnsZoneIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3432,6 +3560,7 @@ public enum V1beta1KubernetesClusterSpecInitProviderPrivateDnsZoneIdSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderPrivateDnsZoneIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3445,6 +3574,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderPrivateDnsZoneIdSel
     public V1beta1KubernetesClusterSpecInitProviderPrivateDnsZoneIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a PrivateDNSZone in network to populate privateDnsZoneId.</summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderPrivateDnsZoneIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -3460,6 +3590,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderPrivateDnsZoneIdSel
     public V1beta1KubernetesClusterSpecInitProviderPrivateDnsZoneIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderServiceMeshProfile
 {
     /// <summary>Is Istio External Ingress Gateway enabled?</summary>
@@ -3475,6 +3606,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderServiceMeshProfile
     public string? Mode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderServicePrincipal
 {
     /// <summary>The Client ID for the Service Principal.</summary>
@@ -3482,6 +3614,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderServicePrincipal
     public string? ClientId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderStorageProfile
 {
     /// <summary>Is the Blob CSI driver enabled? Defaults to false.</summary>
@@ -3505,6 +3638,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderStorageProfile
     public bool? SnapshotControllerEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderWebAppRouting
 {
     /// <summary>Specifies the ID of the DNS Zone in which DNS entries are created for applications deployed to the cluster when Web App Routing is enabled. For Bring-Your-Own DNS zones this property should be set to an empty string "".</summary>
@@ -3512,6 +3646,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderWebAppRouting
     public string? DnsZoneId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderWindowsProfileGmsa
 {
     /// <summary>Specifies the DNS server for Windows gMSA. Set this to an empty string if you have configured the DNS server in the VNet which was used to create the managed cluster.</summary>
@@ -3523,6 +3658,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderWindowsProfileGmsa
     public string? RootDomain { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderWindowsProfile
 {
     /// <summary>The Admin Username for Windows VMs. Changing this forces a new resource to be created.</summary>
@@ -3538,6 +3674,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderWindowsProfile
     public string? License { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterSpecInitProviderWorkloadAutoscalerProfile
 {
     /// <summary>Specifies whether KEDA Autoscaler can be used for workloads.</summary>
@@ -3549,6 +3686,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderWorkloadAutoscalerP
     public bool? VerticalPodAutoscalerEnabled { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1KubernetesClusterSpecInitProvider
 {
     /// <summary>A aci_connector_linux block as defined below. For more details, please visit Create and configure an AKS cluster to use virtual nodes.</summary>
@@ -3822,6 +3960,7 @@ public enum V1beta1KubernetesClusterSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KubernetesClusterSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3835,6 +3974,7 @@ public partial class V1beta1KubernetesClusterSpecProviderConfigRefPolicy
     public V1beta1KubernetesClusterSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1KubernetesClusterSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3866,6 +4006,7 @@ public enum V1beta1KubernetesClusterSpecPublishConnectionDetailsToConfigRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1KubernetesClusterSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3879,6 +4020,7 @@ public partial class V1beta1KubernetesClusterSpecPublishConnectionDetailsToConfi
     public V1beta1KubernetesClusterSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1KubernetesClusterSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3890,6 +4032,7 @@ public partial class V1beta1KubernetesClusterSpecPublishConnectionDetailsToConfi
     public V1beta1KubernetesClusterSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1KubernetesClusterSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -3905,6 +4048,7 @@ public partial class V1beta1KubernetesClusterSpecPublishConnectionDetailsToMetad
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1KubernetesClusterSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -3920,6 +4064,7 @@ public partial class V1beta1KubernetesClusterSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1KubernetesClusterSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -3931,6 +4076,7 @@ public partial class V1beta1KubernetesClusterSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>KubernetesClusterSpec defines the desired state of KubernetesCluster</summary>
 public partial class V1beta1KubernetesClusterSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -3963,6 +4109,7 @@ public partial class V1beta1KubernetesClusterSpec
     public V1beta1KubernetesClusterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderAciConnectorLinuxConnectorIdentity
 {
     /// <summary>The Client ID of the user-defined Managed Identity used by the ACI Connector.</summary>
@@ -3978,6 +4125,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderAciConnectorLinuxCo
     public string? UserAssignedIdentityId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderAciConnectorLinux
 {
     /// <summary>A connector_identity block is exported. The exported attributes are defined below.</summary>
@@ -3989,6 +4137,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderAciConnectorLinux
     public string? SubnetName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderApiServerAccessProfile
 {
     /// <summary>Set of authorized IP ranges to allow access to API server, e.g. ["198.51.100.0/24"].</summary>
@@ -4004,6 +4153,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderApiServerAccessProf
     public bool? VnetIntegrationEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderAutoScalerProfile
 {
     /// <summary>Detect similar node groups and balance the number of nodes between them. Defaults to false.</summary>
@@ -4075,6 +4225,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderAutoScalerProfile
     public bool? SkipNodesWithSystemPods { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderAzureActiveDirectoryRoleBasedAccessControl
 {
     /// <summary>A list of Object IDs of Azure Active Directory Groups which should have Admin Role on the Cluster.</summary>
@@ -4102,6 +4253,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderAzureActiveDirector
     public string? TenantId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderConfidentialComputing
 {
     /// <summary>Should the SGX quote helper be enabled?</summary>
@@ -4109,6 +4261,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderConfidentialComputi
     public bool? SgxQuoteHelperEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePoolKubeletConfig
 {
     /// <summary>Specifies the allow list of unsafe sysctls command or patterns (ending in *).</summary>
@@ -4152,6 +4305,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePoolKube
     public string? TopologyManagerPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePoolLinuxOsConfigSysctlConfig
 {
     /// <summary>The sysctl setting fs.aio-max-nr. Must be between 65536 and 6553500.</summary>
@@ -4271,6 +4425,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePoolLinu
     public double? VmVfsCachePressure { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePoolLinuxOsConfig
 {
     /// <summary>Specifies the size of the swap file on each node in MB.</summary>
@@ -4290,6 +4445,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePoolLinu
     public string? TransparentHugePageEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePoolNodeNetworkProfileAllowedHostPorts
 {
     /// <summary>Specifies the end of the port range.</summary>
@@ -4305,6 +4461,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePoolNode
     public string? Protocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePoolNodeNetworkProfile
 {
     /// <summary>One or more allowed_host_ports blocks as defined below.</summary>
@@ -4320,6 +4477,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePoolNode
     public IDictionary<string, string>? NodePublicIpTags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePoolUpgradeSettings
 {
     /// <summary>The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.</summary>
@@ -4327,6 +4485,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePoolUpgr
     public string? MaxSurge { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePool
 {
     /// <summary>Specifies the ID of the Capacity Reservation Group within which this AKS Cluster should be created. Changing this forces a new resource to be created.</summary>
@@ -4486,6 +4645,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePool
     public IList<string>? Zones { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderHttpProxyConfig
 {
     /// <summary>The proxy address to be used when communicating over HTTP.</summary>
@@ -4501,6 +4661,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderHttpProxyConfig
     public IList<string>? NoProxy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Kubernetes Cluster.</summary>
@@ -4520,6 +4681,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderIngressApplicationGatewayIngressApplicationGatewayIdentity
 {
     /// <summary>The Client ID of the user-defined Managed Identity used for Web App Routing.</summary>
@@ -4535,6 +4697,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderIngressApplicationG
     public string? UserAssignedIdentityId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderIngressApplicationGateway
 {
     /// <summary>The ID of the Application Gateway associated with the ingress controller deployed to this Kubernetes Cluster.</summary>
@@ -4562,6 +4725,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderIngressApplicationG
     public string? SubnetId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderKeyManagementService
 {
     /// <summary>Identifier of Azure Key Vault key. See key identifier format for more details.</summary>
@@ -4573,6 +4737,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderKeyManagementServic
     public string? KeyVaultNetworkAccess { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderKeyVaultSecretsProviderSecretIdentity
 {
     /// <summary>The Client ID of the user-defined Managed Identity used by the Secret Provider.</summary>
@@ -4588,6 +4753,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderKeyVaultSecretsProv
     public string? UserAssignedIdentityId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderKeyVaultSecretsProvider
 {
     /// <summary>An secret_identity block is exported. The exported attributes are defined below.</summary>
@@ -4603,6 +4769,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderKeyVaultSecretsProv
     public string? SecretRotationInterval { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderKubeletIdentity
 {
     /// <summary>The Client ID of the user-defined Managed Identity to be assigned to the Kubelets. If not specified a Managed Identity is created automatically. Changing this forces a new resource to be created.</summary>
@@ -4618,6 +4785,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderKubeletIdentity
     public string? UserAssignedIdentityId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderLinuxProfileSshKey
 {
     /// <summary>The Public SSH Key used to access the cluster.</summary>
@@ -4625,6 +4793,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderLinuxProfileSshKey
     public string? KeyData { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderLinuxProfile
 {
     /// <summary>The Admin Username for the Cluster. Changing this forces a new resource to be created.</summary>
@@ -4636,6 +4805,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderLinuxProfile
     public IList<V1beta1KubernetesClusterStatusAtProviderLinuxProfileSshKey>? SshKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderMaintenanceWindowAllowed
 {
     /// <summary>A day in a week. Possible values are Sunday, Monday, Tuesday, Wednesday, Thursday, Friday and Saturday.</summary>
@@ -4647,6 +4817,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderMaintenanceWindowAl
     public IList<double>? Hours { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderMaintenanceWindowNotAllowed
 {
     /// <summary>The end of a time span, formatted as an RFC3339 string.</summary>
@@ -4658,6 +4829,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderMaintenanceWindowNo
     public string? Start { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderMaintenanceWindow
 {
     /// <summary>One or more allowed blocks as defined below.</summary>
@@ -4669,6 +4841,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderMaintenanceWindow
     public IList<V1beta1KubernetesClusterStatusAtProviderMaintenanceWindowNotAllowed>? NotAllowed { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderMaintenanceWindowAutoUpgradeNotAllowed
 {
     /// <summary>The end of a time span, formatted as an RFC3339 string.</summary>
@@ -4680,6 +4853,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderMaintenanceWindowAu
     public string? Start { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderMaintenanceWindowAutoUpgrade
 {
     /// <summary>The day of the month for the maintenance run. Required in combination with RelativeMonthly frequency. Value between 0 and 31 (inclusive).</summary>
@@ -4723,6 +4897,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderMaintenanceWindowAu
     public string? WeekIndex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderMaintenanceWindowNodeOsNotAllowed
 {
     /// <summary>The end of a time span, formatted as an RFC3339 string.</summary>
@@ -4734,6 +4909,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderMaintenanceWindowNo
     public string? Start { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderMaintenanceWindowNodeOs
 {
     /// <summary>The day of the month for the maintenance run. Required in combination with RelativeMonthly frequency. Value between 0 and 31 (inclusive).</summary>
@@ -4777,6 +4953,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderMaintenanceWindowNo
     public string? WeekIndex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderMicrosoftDefender
 {
     /// <summary>Specifies the ID of the Log Analytics Workspace where the audit logs collected by Microsoft Defender should be sent to.</summary>
@@ -4784,6 +4961,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderMicrosoftDefender
     public string? LogAnalyticsWorkspaceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderMonitorMetrics
 {
     /// <summary>Specifies a comma-separated list of Kubernetes annotation keys that will be used in the resource's labels metric.</summary>
@@ -4795,6 +4973,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderMonitorMetrics
     public string? LabelsAllowed { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderNetworkProfileLoadBalancerProfile
 {
     /// <summary>The outcome (resource IDs) of the specified arguments.</summary>
@@ -4826,6 +5005,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderNetworkProfileLoadB
     public double? OutboundPortsAllocated { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderNetworkProfileNatGatewayProfile
 {
     /// <summary>The outcome (resource IDs) of the specified arguments.</summary>
@@ -4841,6 +5021,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderNetworkProfileNatGa
     public double? ManagedOutboundIpCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderNetworkProfile
 {
     /// <summary>IP address within the Kubernetes service address range that will be used by cluster service discovery (kube-dns). Changing this forces a new resource to be created.</summary>
@@ -4908,6 +5089,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderNetworkProfile
     public IList<string>? ServiceCidrs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderOmsAgentOmsAgentIdentity
 {
     /// <summary>The Client ID of the user-defined Managed Identity used by the OMS Agents.</summary>
@@ -4923,6 +5105,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderOmsAgentOmsAgentIde
     public string? UserAssignedIdentityId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderOmsAgent
 {
     /// <summary>The ID of the Log Analytics Workspace which the OMS Agent should send data to.</summary>
@@ -4938,6 +5121,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderOmsAgent
     public IList<V1beta1KubernetesClusterStatusAtProviderOmsAgentOmsAgentIdentity>? OmsAgentIdentity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderServiceMeshProfile
 {
     /// <summary>Is Istio External Ingress Gateway enabled?</summary>
@@ -4953,6 +5137,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderServiceMeshProfile
     public string? Mode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderServicePrincipal
 {
     /// <summary>The Client ID for the Service Principal.</summary>
@@ -4960,6 +5145,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderServicePrincipal
     public string? ClientId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderStorageProfile
 {
     /// <summary>Is the Blob CSI driver enabled? Defaults to false.</summary>
@@ -4983,6 +5169,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderStorageProfile
     public bool? SnapshotControllerEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderWebAppRoutingWebAppRoutingIdentity
 {
     /// <summary>The Client ID of the user-defined Managed Identity used for Web App Routing.</summary>
@@ -4998,6 +5185,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderWebAppRoutingWebApp
     public string? UserAssignedIdentityId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderWebAppRouting
 {
     /// <summary>Specifies the ID of the DNS Zone in which DNS entries are created for applications deployed to the cluster when Web App Routing is enabled. For Bring-Your-Own DNS zones this property should be set to an empty string "".</summary>
@@ -5009,6 +5197,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderWebAppRouting
     public IList<V1beta1KubernetesClusterStatusAtProviderWebAppRoutingWebAppRoutingIdentity>? WebAppRoutingIdentity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderWindowsProfileGmsa
 {
     /// <summary>Specifies the DNS server for Windows gMSA. Set this to an empty string if you have configured the DNS server in the VNet which was used to create the managed cluster.</summary>
@@ -5020,6 +5209,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderWindowsProfileGmsa
     public string? RootDomain { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderWindowsProfile
 {
     /// <summary>The Admin Username for Windows VMs. Changing this forces a new resource to be created.</summary>
@@ -5035,6 +5225,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderWindowsProfile
     public string? License { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProviderWorkloadAutoscalerProfile
 {
     /// <summary>Specifies whether KEDA Autoscaler can be used for workloads.</summary>
@@ -5054,6 +5245,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderWorkloadAutoscalerP
     public string? VerticalPodAutoscalerUpdateMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1KubernetesClusterStatusAtProvider
 {
     /// <summary>A aci_connector_linux block as defined below. For more details, please visit Create and configure an AKS cluster to use virtual nodes.</summary>
@@ -5313,6 +5505,7 @@ public partial class V1beta1KubernetesClusterStatusAtProvider
     public bool? WorkloadIdentityEnabled { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1KubernetesClusterStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -5340,6 +5533,7 @@ public partial class V1beta1KubernetesClusterStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>KubernetesClusterStatus defines the observed state of KubernetesCluster.</summary>
 public partial class V1beta1KubernetesClusterStatus
 {
     /// <summary></summary>
@@ -5356,6 +5550,7 @@ public partial class V1beta1KubernetesClusterStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>KubernetesCluster is the Schema for the KubernetesClusters API. Manages a managed Kubernetes Cluster (also known as AKS / Azure Kubernetes Service)</summary>
 public partial class V1beta1KubernetesCluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1KubernetesClusterSpec>, IStatus<V1beta1KubernetesClusterStatus>
 {
     public const string KubeApiVersion = "v1beta1";

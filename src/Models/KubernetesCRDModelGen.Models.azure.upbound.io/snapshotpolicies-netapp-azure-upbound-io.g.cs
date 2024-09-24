@@ -38,6 +38,7 @@ public enum V1beta1SnapshotPolicySpecForProviderAccountNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SnapshotPolicySpecForProviderAccountNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1SnapshotPolicySpecForProviderAccountNameRefPolicy
     public V1beta1SnapshotPolicySpecForProviderAccountNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in netapp to populate accountName.</summary>
 public partial class V1beta1SnapshotPolicySpecForProviderAccountNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1SnapshotPolicySpecForProviderAccountNameSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SnapshotPolicySpecForProviderAccountNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1SnapshotPolicySpecForProviderAccountNameSelectorPoli
     public V1beta1SnapshotPolicySpecForProviderAccountNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in netapp to populate accountName.</summary>
 public partial class V1beta1SnapshotPolicySpecForProviderAccountNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1SnapshotPolicySpecForProviderAccountNameSelector
     public V1beta1SnapshotPolicySpecForProviderAccountNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SnapshotPolicySpecForProviderDailySchedule
 {
     /// <summary>Hour of the day that the snapshots will be created, valid range is from 0 to 23.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1SnapshotPolicySpecForProviderDailySchedule
     public double? SnapshotsToKeep { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SnapshotPolicySpecForProviderHourlySchedule
 {
     /// <summary>Minute of the hour that the snapshots will be created, valid range is from 0 to 59.</summary>
@@ -136,6 +142,7 @@ public partial class V1beta1SnapshotPolicySpecForProviderHourlySchedule
     public double? SnapshotsToKeep { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SnapshotPolicySpecForProviderMonthlySchedule
 {
     /// <summary>List of the days of the month when the snapshots will be created, valid range is from 1 to 30.</summary>
@@ -175,6 +182,7 @@ public enum V1beta1SnapshotPolicySpecForProviderResourceGroupNameRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SnapshotPolicySpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -188,6 +196,7 @@ public partial class V1beta1SnapshotPolicySpecForProviderResourceGroupNameRefPol
     public V1beta1SnapshotPolicySpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1SnapshotPolicySpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -219,6 +228,7 @@ public enum V1beta1SnapshotPolicySpecForProviderResourceGroupNameSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SnapshotPolicySpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -232,6 +242,7 @@ public partial class V1beta1SnapshotPolicySpecForProviderResourceGroupNameSelect
     public V1beta1SnapshotPolicySpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1SnapshotPolicySpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -247,6 +258,7 @@ public partial class V1beta1SnapshotPolicySpecForProviderResourceGroupNameSelect
     public V1beta1SnapshotPolicySpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SnapshotPolicySpecForProviderWeeklySchedule
 {
     /// <summary>List of the week days using English names when the snapshots will be created.</summary>
@@ -266,6 +278,7 @@ public partial class V1beta1SnapshotPolicySpecForProviderWeeklySchedule
     public double? SnapshotsToKeep { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SnapshotPolicySpecForProvider
 {
     /// <summary>The name of the NetApp Account in which the NetApp Snapshot Policy should be created. Changing this forces a new resource to be created.</summary>
@@ -321,6 +334,7 @@ public partial class V1beta1SnapshotPolicySpecForProvider
     public IList<V1beta1SnapshotPolicySpecForProviderWeeklySchedule>? WeeklySchedule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SnapshotPolicySpecInitProviderDailySchedule
 {
     /// <summary>Hour of the day that the snapshots will be created, valid range is from 0 to 23.</summary>
@@ -336,6 +350,7 @@ public partial class V1beta1SnapshotPolicySpecInitProviderDailySchedule
     public double? SnapshotsToKeep { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SnapshotPolicySpecInitProviderHourlySchedule
 {
     /// <summary>Minute of the hour that the snapshots will be created, valid range is from 0 to 59.</summary>
@@ -347,6 +362,7 @@ public partial class V1beta1SnapshotPolicySpecInitProviderHourlySchedule
     public double? SnapshotsToKeep { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SnapshotPolicySpecInitProviderMonthlySchedule
 {
     /// <summary>List of the days of the month when the snapshots will be created, valid range is from 1 to 30.</summary>
@@ -366,6 +382,7 @@ public partial class V1beta1SnapshotPolicySpecInitProviderMonthlySchedule
     public double? SnapshotsToKeep { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SnapshotPolicySpecInitProviderWeeklySchedule
 {
     /// <summary>List of the week days using English names when the snapshots will be created.</summary>
@@ -385,6 +402,7 @@ public partial class V1beta1SnapshotPolicySpecInitProviderWeeklySchedule
     public double? SnapshotsToKeep { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1SnapshotPolicySpecInitProvider
 {
     /// <summary>Sets a daily snapshot schedule. A daily_schedule block as defined below.</summary>
@@ -458,6 +476,7 @@ public enum V1beta1SnapshotPolicySpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SnapshotPolicySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -471,6 +490,7 @@ public partial class V1beta1SnapshotPolicySpecProviderConfigRefPolicy
     public V1beta1SnapshotPolicySpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1SnapshotPolicySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -502,6 +522,7 @@ public enum V1beta1SnapshotPolicySpecPublishConnectionDetailsToConfigRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SnapshotPolicySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -515,6 +536,7 @@ public partial class V1beta1SnapshotPolicySpecPublishConnectionDetailsToConfigRe
     public V1beta1SnapshotPolicySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1SnapshotPolicySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -526,6 +548,7 @@ public partial class V1beta1SnapshotPolicySpecPublishConnectionDetailsToConfigRe
     public V1beta1SnapshotPolicySpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1SnapshotPolicySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -541,6 +564,7 @@ public partial class V1beta1SnapshotPolicySpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1SnapshotPolicySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -556,6 +580,7 @@ public partial class V1beta1SnapshotPolicySpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1SnapshotPolicySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -567,6 +592,7 @@ public partial class V1beta1SnapshotPolicySpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>SnapshotPolicySpec defines the desired state of SnapshotPolicy</summary>
 public partial class V1beta1SnapshotPolicySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -599,6 +625,7 @@ public partial class V1beta1SnapshotPolicySpec
     public V1beta1SnapshotPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SnapshotPolicyStatusAtProviderDailySchedule
 {
     /// <summary>Hour of the day that the snapshots will be created, valid range is from 0 to 23.</summary>
@@ -614,6 +641,7 @@ public partial class V1beta1SnapshotPolicyStatusAtProviderDailySchedule
     public double? SnapshotsToKeep { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SnapshotPolicyStatusAtProviderHourlySchedule
 {
     /// <summary>Minute of the hour that the snapshots will be created, valid range is from 0 to 59.</summary>
@@ -625,6 +653,7 @@ public partial class V1beta1SnapshotPolicyStatusAtProviderHourlySchedule
     public double? SnapshotsToKeep { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SnapshotPolicyStatusAtProviderMonthlySchedule
 {
     /// <summary>List of the days of the month when the snapshots will be created, valid range is from 1 to 30.</summary>
@@ -644,6 +673,7 @@ public partial class V1beta1SnapshotPolicyStatusAtProviderMonthlySchedule
     public double? SnapshotsToKeep { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SnapshotPolicyStatusAtProviderWeeklySchedule
 {
     /// <summary>List of the week days using English names when the snapshots will be created.</summary>
@@ -663,6 +693,7 @@ public partial class V1beta1SnapshotPolicyStatusAtProviderWeeklySchedule
     public double? SnapshotsToKeep { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SnapshotPolicyStatusAtProvider
 {
     /// <summary>The name of the NetApp Account in which the NetApp Snapshot Policy should be created. Changing this forces a new resource to be created.</summary>
@@ -706,6 +737,7 @@ public partial class V1beta1SnapshotPolicyStatusAtProvider
     public IList<V1beta1SnapshotPolicyStatusAtProviderWeeklySchedule>? WeeklySchedule { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1SnapshotPolicyStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -733,6 +765,7 @@ public partial class V1beta1SnapshotPolicyStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>SnapshotPolicyStatus defines the observed state of SnapshotPolicy.</summary>
 public partial class V1beta1SnapshotPolicyStatus
 {
     /// <summary></summary>
@@ -749,6 +782,7 @@ public partial class V1beta1SnapshotPolicyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>SnapshotPolicy is the Schema for the SnapshotPolicys API. Manages a NetApp Snapshot Policy.</summary>
 public partial class V1beta1SnapshotPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SnapshotPolicySpec>, IStatus<V1beta1SnapshotPolicyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

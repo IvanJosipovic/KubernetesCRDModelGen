@@ -18,6 +18,7 @@ public enum V1beta1DetectorSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1DetectorSpecForProviderDatasourcesKubernetesAuditLogs
 {
     /// <summary>If true, enables Malware Protection as data source for the detector. Defaults to true.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1DetectorSpecForProviderDatasourcesKubernetesAuditLog
     public bool? Enable { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DetectorSpecForProviderDatasourcesKubernetes
 {
     /// <summary>Configures Kubernetes audit logs as a data source for Kubernetes protection. See Kubernetes Audit Logs below for more details.</summary>
@@ -32,6 +34,7 @@ public partial class V1beta1DetectorSpecForProviderDatasourcesKubernetes
     public IList<V1beta1DetectorSpecForProviderDatasourcesKubernetesAuditLogs>? AuditLogs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DetectorSpecForProviderDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumes
 {
     /// <summary>If true, enables Malware Protection as data source for the detector. Defaults to true.</summary>
@@ -39,6 +42,7 @@ public partial class V1beta1DetectorSpecForProviderDatasourcesMalwareProtectionS
     public bool? Enable { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DetectorSpecForProviderDatasourcesMalwareProtectionScanEc2InstanceWithFindings
 {
     /// <summary>Configure whether scanning EBS volumes is enabled as data source for the detector for instances with findings. See EBS volumes below for more details.</summary>
@@ -46,6 +50,7 @@ public partial class V1beta1DetectorSpecForProviderDatasourcesMalwareProtectionS
     public IList<V1beta1DetectorSpecForProviderDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumes>? EbsVolumes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DetectorSpecForProviderDatasourcesMalwareProtection
 {
     /// <summary>Configure whether Malware Protection is enabled as data source for EC2 instances with findings for the detector. See Scan EC2 instance with findings below for more details.</summary>
@@ -53,6 +58,7 @@ public partial class V1beta1DetectorSpecForProviderDatasourcesMalwareProtection
     public IList<V1beta1DetectorSpecForProviderDatasourcesMalwareProtectionScanEc2InstanceWithFindings>? ScanEc2InstanceWithFindings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DetectorSpecForProviderDatasourcesS3Logs
 {
     /// <summary>If true, enables S3 protection. Defaults to true.</summary>
@@ -60,6 +66,7 @@ public partial class V1beta1DetectorSpecForProviderDatasourcesS3Logs
     public bool? Enable { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DetectorSpecForProviderDatasources
 {
     /// <summary>Configures Kubernetes protection. See Kubernetes and Kubernetes Audit Logs below for more details.</summary>
@@ -75,6 +82,7 @@ public partial class V1beta1DetectorSpecForProviderDatasources
     public IList<V1beta1DetectorSpecForProviderDatasourcesS3Logs>? S3Logs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DetectorSpecForProvider
 {
     /// <summary>Describes which data sources will be enabled for the detector. See Data Sources below for more details. Deprecated in favor of aws_guardduty_detector_feature resources.</summary>
@@ -98,6 +106,7 @@ public partial class V1beta1DetectorSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DetectorSpecInitProviderDatasourcesKubernetesAuditLogs
 {
     /// <summary>If true, enables Malware Protection as data source for the detector. Defaults to true.</summary>
@@ -105,6 +114,7 @@ public partial class V1beta1DetectorSpecInitProviderDatasourcesKubernetesAuditLo
     public bool? Enable { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DetectorSpecInitProviderDatasourcesKubernetes
 {
     /// <summary>Configures Kubernetes audit logs as a data source for Kubernetes protection. See Kubernetes Audit Logs below for more details.</summary>
@@ -112,6 +122,7 @@ public partial class V1beta1DetectorSpecInitProviderDatasourcesKubernetes
     public IList<V1beta1DetectorSpecInitProviderDatasourcesKubernetesAuditLogs>? AuditLogs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DetectorSpecInitProviderDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumes
 {
     /// <summary>If true, enables Malware Protection as data source for the detector. Defaults to true.</summary>
@@ -119,6 +130,7 @@ public partial class V1beta1DetectorSpecInitProviderDatasourcesMalwareProtection
     public bool? Enable { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DetectorSpecInitProviderDatasourcesMalwareProtectionScanEc2InstanceWithFindings
 {
     /// <summary>Configure whether scanning EBS volumes is enabled as data source for the detector for instances with findings. See EBS volumes below for more details.</summary>
@@ -126,6 +138,7 @@ public partial class V1beta1DetectorSpecInitProviderDatasourcesMalwareProtection
     public IList<V1beta1DetectorSpecInitProviderDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumes>? EbsVolumes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DetectorSpecInitProviderDatasourcesMalwareProtection
 {
     /// <summary>Configure whether Malware Protection is enabled as data source for EC2 instances with findings for the detector. See Scan EC2 instance with findings below for more details.</summary>
@@ -133,6 +146,7 @@ public partial class V1beta1DetectorSpecInitProviderDatasourcesMalwareProtection
     public IList<V1beta1DetectorSpecInitProviderDatasourcesMalwareProtectionScanEc2InstanceWithFindings>? ScanEc2InstanceWithFindings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DetectorSpecInitProviderDatasourcesS3Logs
 {
     /// <summary>If true, enables S3 protection. Defaults to true.</summary>
@@ -140,6 +154,7 @@ public partial class V1beta1DetectorSpecInitProviderDatasourcesS3Logs
     public bool? Enable { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DetectorSpecInitProviderDatasources
 {
     /// <summary>Configures Kubernetes protection. See Kubernetes and Kubernetes Audit Logs below for more details.</summary>
@@ -155,6 +170,7 @@ public partial class V1beta1DetectorSpecInitProviderDatasources
     public IList<V1beta1DetectorSpecInitProviderDatasourcesS3Logs>? S3Logs { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1DetectorSpecInitProvider
 {
     /// <summary>Describes which data sources will be enabled for the detector. See Data Sources below for more details. Deprecated in favor of aws_guardduty_detector_feature resources.</summary>
@@ -216,6 +232,7 @@ public enum V1beta1DetectorSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DetectorSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -229,6 +246,7 @@ public partial class V1beta1DetectorSpecProviderConfigRefPolicy
     public V1beta1DetectorSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1DetectorSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -260,6 +278,7 @@ public enum V1beta1DetectorSpecPublishConnectionDetailsToConfigRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DetectorSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -273,6 +292,7 @@ public partial class V1beta1DetectorSpecPublishConnectionDetailsToConfigRefPolic
     public V1beta1DetectorSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1DetectorSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -284,6 +304,7 @@ public partial class V1beta1DetectorSpecPublishConnectionDetailsToConfigRef
     public V1beta1DetectorSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1DetectorSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -299,6 +320,7 @@ public partial class V1beta1DetectorSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1DetectorSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -314,6 +336,7 @@ public partial class V1beta1DetectorSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1DetectorSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -325,6 +348,7 @@ public partial class V1beta1DetectorSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>DetectorSpec defines the desired state of Detector</summary>
 public partial class V1beta1DetectorSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -357,6 +381,7 @@ public partial class V1beta1DetectorSpec
     public V1beta1DetectorSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DetectorStatusAtProviderDatasourcesKubernetesAuditLogs
 {
     /// <summary>If true, enables Malware Protection as data source for the detector. Defaults to true.</summary>
@@ -364,6 +389,7 @@ public partial class V1beta1DetectorStatusAtProviderDatasourcesKubernetesAuditLo
     public bool? Enable { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DetectorStatusAtProviderDatasourcesKubernetes
 {
     /// <summary>Configures Kubernetes audit logs as a data source for Kubernetes protection. See Kubernetes Audit Logs below for more details.</summary>
@@ -371,6 +397,7 @@ public partial class V1beta1DetectorStatusAtProviderDatasourcesKubernetes
     public IList<V1beta1DetectorStatusAtProviderDatasourcesKubernetesAuditLogs>? AuditLogs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DetectorStatusAtProviderDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumes
 {
     /// <summary>If true, enables Malware Protection as data source for the detector. Defaults to true.</summary>
@@ -378,6 +405,7 @@ public partial class V1beta1DetectorStatusAtProviderDatasourcesMalwareProtection
     public bool? Enable { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DetectorStatusAtProviderDatasourcesMalwareProtectionScanEc2InstanceWithFindings
 {
     /// <summary>Configure whether scanning EBS volumes is enabled as data source for the detector for instances with findings. See EBS volumes below for more details.</summary>
@@ -385,6 +413,7 @@ public partial class V1beta1DetectorStatusAtProviderDatasourcesMalwareProtection
     public IList<V1beta1DetectorStatusAtProviderDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumes>? EbsVolumes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DetectorStatusAtProviderDatasourcesMalwareProtection
 {
     /// <summary>Configure whether Malware Protection is enabled as data source for EC2 instances with findings for the detector. See Scan EC2 instance with findings below for more details.</summary>
@@ -392,6 +421,7 @@ public partial class V1beta1DetectorStatusAtProviderDatasourcesMalwareProtection
     public IList<V1beta1DetectorStatusAtProviderDatasourcesMalwareProtectionScanEc2InstanceWithFindings>? ScanEc2InstanceWithFindings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DetectorStatusAtProviderDatasourcesS3Logs
 {
     /// <summary>If true, enables S3 protection. Defaults to true.</summary>
@@ -399,6 +429,7 @@ public partial class V1beta1DetectorStatusAtProviderDatasourcesS3Logs
     public bool? Enable { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DetectorStatusAtProviderDatasources
 {
     /// <summary>Configures Kubernetes protection. See Kubernetes and Kubernetes Audit Logs below for more details.</summary>
@@ -414,6 +445,7 @@ public partial class V1beta1DetectorStatusAtProviderDatasources
     public IList<V1beta1DetectorStatusAtProviderDatasourcesS3Logs>? S3Logs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DetectorStatusAtProvider
 {
     /// <summary>The AWS account ID of the GuardDuty detector</summary>
@@ -449,6 +481,7 @@ public partial class V1beta1DetectorStatusAtProvider
     public IDictionary<string, string>? TagsAll { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1DetectorStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -476,6 +509,7 @@ public partial class V1beta1DetectorStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>DetectorStatus defines the observed state of Detector.</summary>
 public partial class V1beta1DetectorStatus
 {
     /// <summary></summary>
@@ -492,6 +526,7 @@ public partial class V1beta1DetectorStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Detector is the Schema for the Detectors API. Provides a resource to manage an Amazon GuardDuty detector</summary>
 public partial class V1beta1Detector : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DetectorSpec>, IStatus<V1beta1DetectorStatus>
 {
     public const string KubeApiVersion = "v1beta1";

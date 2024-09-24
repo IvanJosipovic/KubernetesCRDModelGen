@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.azure.com;
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20240302storageDiskEncryptionSetSpecActiveKeyKeyUrlFromConfig
 {
     /// <summary>Key is the key in the Kubernetes configmap being referenced</summary>
@@ -19,6 +20,7 @@ public partial class V1api20240302storageDiskEncryptionSetSpecActiveKeyKeyUrlFro
     public string Name { get; set; }
 }
 
+/// <summary>Reference: Resource Id</summary>
 public partial class V1api20240302storageDiskEncryptionSetSpecActiveKeySourceVaultReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -38,6 +40,7 @@ public partial class V1api20240302storageDiskEncryptionSetSpecActiveKeySourceVau
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.SourceVault The vault id is an Azure Resource Manager Resource id in the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}</summary>
 public partial class V1api20240302storageDiskEncryptionSetSpecActiveKeySourceVault
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -49,6 +52,7 @@ public partial class V1api20240302storageDiskEncryptionSetSpecActiveKeySourceVau
     public V1api20240302storageDiskEncryptionSetSpecActiveKeySourceVaultReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.KeyForDiskEncryptionSet Key Vault Key Url to be used for server side encryption of Managed Disks and Snapshots</summary>
 public partial class V1api20240302storageDiskEncryptionSetSpecActiveKey
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -68,6 +72,7 @@ public partial class V1api20240302storageDiskEncryptionSetSpecActiveKey
     public V1api20240302storageDiskEncryptionSetSpecActiveKeySourceVault? SourceVault { get; set; }
 }
 
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20240302storageDiskEncryptionSetSpecFederatedClientIdFromConfig
 {
     /// <summary>Key is the key in the Kubernetes configmap being referenced</summary>
@@ -79,6 +84,7 @@ public partial class V1api20240302storageDiskEncryptionSetSpecFederatedClientIdF
     public string Name { get; set; }
 }
 
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 public partial class V1api20240302storageDiskEncryptionSetSpecIdentityUserAssignedIdentitiesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -98,6 +104,7 @@ public partial class V1api20240302storageDiskEncryptionSetSpecIdentityUserAssign
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
 public partial class V1api20240302storageDiskEncryptionSetSpecIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -109,6 +116,7 @@ public partial class V1api20240302storageDiskEncryptionSetSpecIdentityUserAssign
     public V1api20240302storageDiskEncryptionSetSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.EncryptionSetIdentity The managed identity for the disk encryption set. It should be given permission on the key vault before it can be used to encrypt disks.</summary>
 public partial class V1api20240302storageDiskEncryptionSetSpecIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -124,6 +132,7 @@ public partial class V1api20240302storageDiskEncryptionSetSpecIdentity
     public IList<V1api20240302storageDiskEncryptionSetSpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20240302storageDiskEncryptionSetSpecOwner
 {
     /// <summary></summary>
@@ -135,6 +144,7 @@ public partial class V1api20240302storageDiskEncryptionSetSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.DiskEncryptionSet_Spec</summary>
 public partial class V1api20240302storageDiskEncryptionSetSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -186,6 +196,7 @@ public partial class V1api20240302storageDiskEncryptionSetSpec
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.SourceVault_STATUS The vault id is an Azure Resource Manager Resource id in the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}</summary>
 public partial class V1api20240302storageDiskEncryptionSetStatusActiveKeySourceVault
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -197,6 +208,7 @@ public partial class V1api20240302storageDiskEncryptionSetStatusActiveKeySourceV
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.KeyForDiskEncryptionSet_STATUS Key Vault Key Url to be used for server side encryption of Managed Disks and Snapshots</summary>
 public partial class V1api20240302storageDiskEncryptionSetStatusActiveKey
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -212,6 +224,7 @@ public partial class V1api20240302storageDiskEncryptionSetStatusActiveKey
     public V1api20240302storageDiskEncryptionSetStatusActiveKeySourceVault? SourceVault { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.ApiErrorBase_STATUS Api error base.</summary>
 public partial class V1api20240302storageDiskEncryptionSetStatusAutoKeyRotationErrorDetails
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -231,6 +244,7 @@ public partial class V1api20240302storageDiskEncryptionSetStatusAutoKeyRotationE
     public string? Target { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.InnerError_STATUS Inner error details.</summary>
 public partial class V1api20240302storageDiskEncryptionSetStatusAutoKeyRotationErrorInnererror
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -246,6 +260,7 @@ public partial class V1api20240302storageDiskEncryptionSetStatusAutoKeyRotationE
     public string? Exceptiontype { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.ApiError_STATUS Api error.</summary>
 public partial class V1api20240302storageDiskEncryptionSetStatusAutoKeyRotationError
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -273,6 +288,7 @@ public partial class V1api20240302storageDiskEncryptionSetStatusAutoKeyRotationE
     public string? Target { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20240302storageDiskEncryptionSetStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -304,6 +320,7 @@ public partial class V1api20240302storageDiskEncryptionSetStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.EncryptionSetIdentity_UserAssignedIdentities_STATUS</summary>
 public partial class V1api20240302storageDiskEncryptionSetStatusIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -319,6 +336,7 @@ public partial class V1api20240302storageDiskEncryptionSetStatusIdentityUserAssi
     public string? PrincipalId { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.EncryptionSetIdentity_STATUS The managed identity for the disk encryption set. It should be given permission on the key vault before it can be used to encrypt disks.</summary>
 public partial class V1api20240302storageDiskEncryptionSetStatusIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -342,6 +360,7 @@ public partial class V1api20240302storageDiskEncryptionSetStatusIdentity
     public IDictionary<string, V1api20240302storageDiskEncryptionSetStatusIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.SourceVault_STATUS The vault id is an Azure Resource Manager Resource id in the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}</summary>
 public partial class V1api20240302storageDiskEncryptionSetStatusPreviousKeysSourceVault
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -353,6 +372,7 @@ public partial class V1api20240302storageDiskEncryptionSetStatusPreviousKeysSour
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.KeyForDiskEncryptionSet_STATUS Key Vault Key Url to be used for server side encryption of Managed Disks and Snapshots</summary>
 public partial class V1api20240302storageDiskEncryptionSetStatusPreviousKeys
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -368,6 +388,7 @@ public partial class V1api20240302storageDiskEncryptionSetStatusPreviousKeys
     public V1api20240302storageDiskEncryptionSetStatusPreviousKeysSourceVault? SourceVault { get; set; }
 }
 
+/// <summary>Storage version of v1api20240302.DiskEncryptionSet_STATUS disk encryption set resource.</summary>
 public partial class V1api20240302storageDiskEncryptionSetStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -436,6 +457,7 @@ public partial class V1api20240302storageDiskEncryptionSetStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20240302.DiskEncryptionSet Generator information: - Generated from: /compute/resource-manager/Microsoft.Compute/DiskRP/stable/2024-03-02/diskEncryptionSet.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskEncryptionSets/{diskEncryptionSetName}</summary>
 public partial class V1api20240302storageDiskEncryptionSet : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20240302storageDiskEncryptionSetSpec>, IStatus<V1api20240302storageDiskEncryptionSetStatus>
 {
     public const string KubeApiVersion = "v1api20240302storage";

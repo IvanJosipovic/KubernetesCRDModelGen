@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.azure.com;
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a storage.azure.com/StorageAccountsQueueService resource</summary>
 public partial class V1api20230101storageStorageAccountsQueueServicesQueueSpecOwner
 {
     /// <summary></summary>
@@ -19,6 +20,7 @@ public partial class V1api20230101storageStorageAccountsQueueServicesQueueSpecOw
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.StorageAccounts_QueueServices_Queue_Spec</summary>
 public partial class V1api20230101storageStorageAccountsQueueServicesQueueSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -42,6 +44,7 @@ public partial class V1api20230101storageStorageAccountsQueueServicesQueueSpec
     public V1api20230101storageStorageAccountsQueueServicesQueueSpecOwner Owner { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20230101storageStorageAccountsQueueServicesQueueStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -73,6 +76,7 @@ public partial class V1api20230101storageStorageAccountsQueueServicesQueueStatus
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.StorageAccounts_QueueServices_Queue_STATUS</summary>
 public partial class V1api20230101storageStorageAccountsQueueServicesQueueStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -105,6 +109,7 @@ public partial class V1api20230101storageStorageAccountsQueueServicesQueueStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20230101.StorageAccountsQueueServicesQueue Generator information: - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2023-01-01/queue.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/queueServices/default/queues/{queueName}</summary>
 public partial class V1api20230101storageStorageAccountsQueueServicesQueue : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230101storageStorageAccountsQueueServicesQueueSpec>, IStatus<V1api20230101storageStorageAccountsQueueServicesQueueStatus>
 {
     public const string KubeApiVersion = "v1api20230101storage";

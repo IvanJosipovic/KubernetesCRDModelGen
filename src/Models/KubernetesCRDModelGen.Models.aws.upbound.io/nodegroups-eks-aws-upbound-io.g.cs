@@ -38,6 +38,7 @@ public enum V1beta1NodeGroupSpecForProviderClusterNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NodeGroupSpecForProviderClusterNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1NodeGroupSpecForProviderClusterNameRefPolicy
     public V1beta1NodeGroupSpecForProviderClusterNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in eks to populate clusterName.</summary>
 public partial class V1beta1NodeGroupSpecForProviderClusterNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1NodeGroupSpecForProviderClusterNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NodeGroupSpecForProviderClusterNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1NodeGroupSpecForProviderClusterNameSelectorPolicy
     public V1beta1NodeGroupSpecForProviderClusterNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in eks to populate clusterName.</summary>
 public partial class V1beta1NodeGroupSpecForProviderClusterNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1NodeGroupSpecForProviderClusterNameSelector
     public V1beta1NodeGroupSpecForProviderClusterNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeGroupSpecForProviderLaunchTemplate
 {
     /// <summary>Identifier of the EC2 Launch Template. Conflicts with name.</summary>
@@ -145,6 +150,7 @@ public enum V1beta1NodeGroupSpecForProviderNodeRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NodeGroupSpecForProviderNodeRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -158,6 +164,7 @@ public partial class V1beta1NodeGroupSpecForProviderNodeRoleArnRefPolicy
     public V1beta1NodeGroupSpecForProviderNodeRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate nodeRoleArn.</summary>
 public partial class V1beta1NodeGroupSpecForProviderNodeRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -189,6 +196,7 @@ public enum V1beta1NodeGroupSpecForProviderNodeRoleArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NodeGroupSpecForProviderNodeRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1NodeGroupSpecForProviderNodeRoleArnSelectorPolicy
     public V1beta1NodeGroupSpecForProviderNodeRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate nodeRoleArn.</summary>
 public partial class V1beta1NodeGroupSpecForProviderNodeRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -237,6 +246,7 @@ public enum V1beta1NodeGroupSpecForProviderRemoteAccessSourceSecurityGroupIdRefs
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NodeGroupSpecForProviderRemoteAccessSourceSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -250,6 +260,7 @@ public partial class V1beta1NodeGroupSpecForProviderRemoteAccessSourceSecurityGr
     public V1beta1NodeGroupSpecForProviderRemoteAccessSourceSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1NodeGroupSpecForProviderRemoteAccessSourceSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -281,6 +292,7 @@ public enum V1beta1NodeGroupSpecForProviderRemoteAccessSourceSecurityGroupIdSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NodeGroupSpecForProviderRemoteAccessSourceSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1NodeGroupSpecForProviderRemoteAccessSourceSecurityGr
     public V1beta1NodeGroupSpecForProviderRemoteAccessSourceSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate sourceSecurityGroupIds.</summary>
 public partial class V1beta1NodeGroupSpecForProviderRemoteAccessSourceSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -309,6 +322,7 @@ public partial class V1beta1NodeGroupSpecForProviderRemoteAccessSourceSecurityGr
     public V1beta1NodeGroupSpecForProviderRemoteAccessSourceSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeGroupSpecForProviderRemoteAccess
 {
     /// <summary>EC2 Key Pair name that provides access for remote communication with the worker nodes in the EKS Node Group. If you specify this configuration, but do not specify source_security_group_ids when you create an EKS Node Group, either port 3389 for Windows, or port 22 for all other operating systems is opened on the worker nodes to the Internet (0.0.0.0/0). For Windows nodes, this will allow you to use RDP, for all others this allows you to SSH into the worker nodes.</summary>
@@ -328,6 +342,7 @@ public partial class V1beta1NodeGroupSpecForProviderRemoteAccess
     public IList<string>? SourceSecurityGroupIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeGroupSpecForProviderScalingConfig
 {
     /// <summary>Desired number of worker nodes.</summary>
@@ -363,6 +378,7 @@ public enum V1beta1NodeGroupSpecForProviderSubnetIdRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NodeGroupSpecForProviderSubnetIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -376,6 +392,7 @@ public partial class V1beta1NodeGroupSpecForProviderSubnetIdRefsPolicy
     public V1beta1NodeGroupSpecForProviderSubnetIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1NodeGroupSpecForProviderSubnetIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -407,6 +424,7 @@ public enum V1beta1NodeGroupSpecForProviderSubnetIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NodeGroupSpecForProviderSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -420,6 +438,7 @@ public partial class V1beta1NodeGroupSpecForProviderSubnetIdSelectorPolicy
     public V1beta1NodeGroupSpecForProviderSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 public partial class V1beta1NodeGroupSpecForProviderSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -435,6 +454,7 @@ public partial class V1beta1NodeGroupSpecForProviderSubnetIdSelector
     public V1beta1NodeGroupSpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeGroupSpecForProviderTaint
 {
     /// <summary>The effect of the taint. Valid values: NO_SCHEDULE, NO_EXECUTE, PREFER_NO_SCHEDULE.</summary>
@@ -450,6 +470,7 @@ public partial class V1beta1NodeGroupSpecForProviderTaint
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeGroupSpecForProviderUpdateConfig
 {
     /// <summary>Desired max number of unavailable worker nodes during node group update.</summary>
@@ -481,6 +502,7 @@ public enum V1beta1NodeGroupSpecForProviderVersionRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NodeGroupSpecForProviderVersionRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -494,6 +516,7 @@ public partial class V1beta1NodeGroupSpecForProviderVersionRefPolicy
     public V1beta1NodeGroupSpecForProviderVersionRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in eks to populate version.</summary>
 public partial class V1beta1NodeGroupSpecForProviderVersionRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -525,6 +548,7 @@ public enum V1beta1NodeGroupSpecForProviderVersionSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NodeGroupSpecForProviderVersionSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -538,6 +562,7 @@ public partial class V1beta1NodeGroupSpecForProviderVersionSelectorPolicy
     public V1beta1NodeGroupSpecForProviderVersionSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in eks to populate version.</summary>
 public partial class V1beta1NodeGroupSpecForProviderVersionSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -553,6 +578,7 @@ public partial class V1beta1NodeGroupSpecForProviderVersionSelector
     public V1beta1NodeGroupSpecForProviderVersionSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeGroupSpecForProvider
 {
     /// <summary>Type of Amazon Machine Image (AMI) associated with the EKS Node Group. See the AWS documentation for valid values.</summary>
@@ -660,6 +686,7 @@ public partial class V1beta1NodeGroupSpecForProvider
     public V1beta1NodeGroupSpecForProviderVersionSelector? VersionSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeGroupSpecInitProviderLaunchTemplate
 {
     /// <summary>Identifier of the EC2 Launch Template. Conflicts with name.</summary>
@@ -695,6 +722,7 @@ public enum V1beta1NodeGroupSpecInitProviderNodeRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NodeGroupSpecInitProviderNodeRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -708,6 +736,7 @@ public partial class V1beta1NodeGroupSpecInitProviderNodeRoleArnRefPolicy
     public V1beta1NodeGroupSpecInitProviderNodeRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate nodeRoleArn.</summary>
 public partial class V1beta1NodeGroupSpecInitProviderNodeRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -739,6 +768,7 @@ public enum V1beta1NodeGroupSpecInitProviderNodeRoleArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NodeGroupSpecInitProviderNodeRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -752,6 +782,7 @@ public partial class V1beta1NodeGroupSpecInitProviderNodeRoleArnSelectorPolicy
     public V1beta1NodeGroupSpecInitProviderNodeRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate nodeRoleArn.</summary>
 public partial class V1beta1NodeGroupSpecInitProviderNodeRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -787,6 +818,7 @@ public enum V1beta1NodeGroupSpecInitProviderRemoteAccessSourceSecurityGroupIdRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NodeGroupSpecInitProviderRemoteAccessSourceSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -800,6 +832,7 @@ public partial class V1beta1NodeGroupSpecInitProviderRemoteAccessSourceSecurityG
     public V1beta1NodeGroupSpecInitProviderRemoteAccessSourceSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1NodeGroupSpecInitProviderRemoteAccessSourceSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -831,6 +864,7 @@ public enum V1beta1NodeGroupSpecInitProviderRemoteAccessSourceSecurityGroupIdSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NodeGroupSpecInitProviderRemoteAccessSourceSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -844,6 +878,7 @@ public partial class V1beta1NodeGroupSpecInitProviderRemoteAccessSourceSecurityG
     public V1beta1NodeGroupSpecInitProviderRemoteAccessSourceSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate sourceSecurityGroupIds.</summary>
 public partial class V1beta1NodeGroupSpecInitProviderRemoteAccessSourceSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -859,6 +894,7 @@ public partial class V1beta1NodeGroupSpecInitProviderRemoteAccessSourceSecurityG
     public V1beta1NodeGroupSpecInitProviderRemoteAccessSourceSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeGroupSpecInitProviderRemoteAccess
 {
     /// <summary>EC2 Key Pair name that provides access for remote communication with the worker nodes in the EKS Node Group. If you specify this configuration, but do not specify source_security_group_ids when you create an EKS Node Group, either port 3389 for Windows, or port 22 for all other operating systems is opened on the worker nodes to the Internet (0.0.0.0/0). For Windows nodes, this will allow you to use RDP, for all others this allows you to SSH into the worker nodes.</summary>
@@ -878,6 +914,7 @@ public partial class V1beta1NodeGroupSpecInitProviderRemoteAccess
     public IList<string>? SourceSecurityGroupIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeGroupSpecInitProviderScalingConfig
 {
     /// <summary>Desired number of worker nodes.</summary>
@@ -913,6 +950,7 @@ public enum V1beta1NodeGroupSpecInitProviderSubnetIdRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NodeGroupSpecInitProviderSubnetIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -926,6 +964,7 @@ public partial class V1beta1NodeGroupSpecInitProviderSubnetIdRefsPolicy
     public V1beta1NodeGroupSpecInitProviderSubnetIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1NodeGroupSpecInitProviderSubnetIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -957,6 +996,7 @@ public enum V1beta1NodeGroupSpecInitProviderSubnetIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NodeGroupSpecInitProviderSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -970,6 +1010,7 @@ public partial class V1beta1NodeGroupSpecInitProviderSubnetIdSelectorPolicy
     public V1beta1NodeGroupSpecInitProviderSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 public partial class V1beta1NodeGroupSpecInitProviderSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -985,6 +1026,7 @@ public partial class V1beta1NodeGroupSpecInitProviderSubnetIdSelector
     public V1beta1NodeGroupSpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeGroupSpecInitProviderTaint
 {
     /// <summary>The effect of the taint. Valid values: NO_SCHEDULE, NO_EXECUTE, PREFER_NO_SCHEDULE.</summary>
@@ -1000,6 +1042,7 @@ public partial class V1beta1NodeGroupSpecInitProviderTaint
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeGroupSpecInitProviderUpdateConfig
 {
     /// <summary>Desired max number of unavailable worker nodes during node group update.</summary>
@@ -1031,6 +1074,7 @@ public enum V1beta1NodeGroupSpecInitProviderVersionRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NodeGroupSpecInitProviderVersionRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1044,6 +1088,7 @@ public partial class V1beta1NodeGroupSpecInitProviderVersionRefPolicy
     public V1beta1NodeGroupSpecInitProviderVersionRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in eks to populate version.</summary>
 public partial class V1beta1NodeGroupSpecInitProviderVersionRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1075,6 +1120,7 @@ public enum V1beta1NodeGroupSpecInitProviderVersionSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NodeGroupSpecInitProviderVersionSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1088,6 +1134,7 @@ public partial class V1beta1NodeGroupSpecInitProviderVersionSelectorPolicy
     public V1beta1NodeGroupSpecInitProviderVersionSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in eks to populate version.</summary>
 public partial class V1beta1NodeGroupSpecInitProviderVersionSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1103,6 +1150,7 @@ public partial class V1beta1NodeGroupSpecInitProviderVersionSelector
     public V1beta1NodeGroupSpecInitProviderVersionSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1NodeGroupSpecInitProvider
 {
     /// <summary>Type of Amazon Machine Image (AMI) associated with the EKS Node Group. See the AWS documentation for valid values.</summary>
@@ -1236,6 +1284,7 @@ public enum V1beta1NodeGroupSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NodeGroupSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1249,6 +1298,7 @@ public partial class V1beta1NodeGroupSpecProviderConfigRefPolicy
     public V1beta1NodeGroupSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1NodeGroupSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1280,6 +1330,7 @@ public enum V1beta1NodeGroupSpecPublishConnectionDetailsToConfigRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NodeGroupSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1293,6 +1344,7 @@ public partial class V1beta1NodeGroupSpecPublishConnectionDetailsToConfigRefPoli
     public V1beta1NodeGroupSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1NodeGroupSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1304,6 +1356,7 @@ public partial class V1beta1NodeGroupSpecPublishConnectionDetailsToConfigRef
     public V1beta1NodeGroupSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1NodeGroupSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1319,6 +1372,7 @@ public partial class V1beta1NodeGroupSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1NodeGroupSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1334,6 +1388,7 @@ public partial class V1beta1NodeGroupSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1NodeGroupSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1345,6 +1400,7 @@ public partial class V1beta1NodeGroupSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>NodeGroupSpec defines the desired state of NodeGroup</summary>
 public partial class V1beta1NodeGroupSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1377,6 +1433,7 @@ public partial class V1beta1NodeGroupSpec
     public V1beta1NodeGroupSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeGroupStatusAtProviderLaunchTemplate
 {
     /// <summary>Identifier of the EC2 Launch Template. Conflicts with name.</summary>
@@ -1392,6 +1449,7 @@ public partial class V1beta1NodeGroupStatusAtProviderLaunchTemplate
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeGroupStatusAtProviderRemoteAccess
 {
     /// <summary>EC2 Key Pair name that provides access for remote communication with the worker nodes in the EKS Node Group. If you specify this configuration, but do not specify source_security_group_ids when you create an EKS Node Group, either port 3389 for Windows, or port 22 for all other operating systems is opened on the worker nodes to the Internet (0.0.0.0/0). For Windows nodes, this will allow you to use RDP, for all others this allows you to SSH into the worker nodes.</summary>
@@ -1403,6 +1461,7 @@ public partial class V1beta1NodeGroupStatusAtProviderRemoteAccess
     public IList<string>? SourceSecurityGroupIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeGroupStatusAtProviderResourcesAutoscalingGroups
 {
     /// <summary>Name of the AutoScaling Group.</summary>
@@ -1410,6 +1469,7 @@ public partial class V1beta1NodeGroupStatusAtProviderResourcesAutoscalingGroups
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeGroupStatusAtProviderResources
 {
     /// <summary>List of objects containing information about AutoScaling Groups.</summary>
@@ -1421,6 +1481,7 @@ public partial class V1beta1NodeGroupStatusAtProviderResources
     public string? RemoteAccessSecurityGroupId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeGroupStatusAtProviderScalingConfig
 {
     /// <summary>Desired number of worker nodes.</summary>
@@ -1436,6 +1497,7 @@ public partial class V1beta1NodeGroupStatusAtProviderScalingConfig
     public double? MinSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeGroupStatusAtProviderTaint
 {
     /// <summary>The effect of the taint. Valid values: NO_SCHEDULE, NO_EXECUTE, PREFER_NO_SCHEDULE.</summary>
@@ -1451,6 +1513,7 @@ public partial class V1beta1NodeGroupStatusAtProviderTaint
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeGroupStatusAtProviderUpdateConfig
 {
     /// <summary>Desired max number of unavailable worker nodes during node group update.</summary>
@@ -1462,6 +1525,7 @@ public partial class V1beta1NodeGroupStatusAtProviderUpdateConfig
     public double? MaxUnavailablePercentage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeGroupStatusAtProvider
 {
     /// <summary>Type of Amazon Machine Image (AMI) associated with the EKS Node Group. See the AWS documentation for valid values.</summary>
@@ -1553,6 +1617,7 @@ public partial class V1beta1NodeGroupStatusAtProvider
     public string? Version { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1NodeGroupStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1580,6 +1645,7 @@ public partial class V1beta1NodeGroupStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>NodeGroupStatus defines the observed state of NodeGroup.</summary>
 public partial class V1beta1NodeGroupStatus
 {
     /// <summary></summary>
@@ -1596,6 +1662,7 @@ public partial class V1beta1NodeGroupStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>NodeGroup is the Schema for the NodeGroups API. Manages an EKS Node Group</summary>
 public partial class V1beta1NodeGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1NodeGroupSpec>, IStatus<V1beta1NodeGroupStatus>
 {
     public const string KubeApiVersion = "v1beta1";

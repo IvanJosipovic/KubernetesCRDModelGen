@@ -38,6 +38,7 @@ public enum V1beta1GarbageCollectionPolicySpecForProviderInstanceNameRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GarbageCollectionPolicySpecForProviderInstanceNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1GarbageCollectionPolicySpecForProviderInstanceNameRe
     public V1beta1GarbageCollectionPolicySpecForProviderInstanceNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Instance in bigtable to populate instanceName.</summary>
 public partial class V1beta1GarbageCollectionPolicySpecForProviderInstanceNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1GarbageCollectionPolicySpecForProviderInstanceNameSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GarbageCollectionPolicySpecForProviderInstanceNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1GarbageCollectionPolicySpecForProviderInstanceNameSe
     public V1beta1GarbageCollectionPolicySpecForProviderInstanceNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Instance in bigtable to populate instanceName.</summary>
 public partial class V1beta1GarbageCollectionPolicySpecForProviderInstanceNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1GarbageCollectionPolicySpecForProviderInstanceNameSe
     public V1beta1GarbageCollectionPolicySpecForProviderInstanceNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GarbageCollectionPolicySpecForProviderMaxAge
 {
     /// <summary>Number of days before applying GC policy.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1GarbageCollectionPolicySpecForProviderMaxAge
     public string? Duration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GarbageCollectionPolicySpecForProviderMaxVersion
 {
     /// <summary>Number of version before applying the GC policy.</summary>
@@ -148,6 +154,7 @@ public enum V1beta1GarbageCollectionPolicySpecForProviderTableRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GarbageCollectionPolicySpecForProviderTableRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -161,6 +168,7 @@ public partial class V1beta1GarbageCollectionPolicySpecForProviderTableRefPolicy
     public V1beta1GarbageCollectionPolicySpecForProviderTableRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Table in bigtable to populate table.</summary>
 public partial class V1beta1GarbageCollectionPolicySpecForProviderTableRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -192,6 +200,7 @@ public enum V1beta1GarbageCollectionPolicySpecForProviderTableSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GarbageCollectionPolicySpecForProviderTableSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -205,6 +214,7 @@ public partial class V1beta1GarbageCollectionPolicySpecForProviderTableSelectorP
     public V1beta1GarbageCollectionPolicySpecForProviderTableSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Table in bigtable to populate table.</summary>
 public partial class V1beta1GarbageCollectionPolicySpecForProviderTableSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -220,6 +230,7 @@ public partial class V1beta1GarbageCollectionPolicySpecForProviderTableSelector
     public V1beta1GarbageCollectionPolicySpecForProviderTableSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GarbageCollectionPolicySpecForProvider
 {
     /// <summary>The name of the column family.</summary>
@@ -299,6 +310,7 @@ public enum V1beta1GarbageCollectionPolicySpecInitProviderInstanceNameRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GarbageCollectionPolicySpecInitProviderInstanceNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -312,6 +324,7 @@ public partial class V1beta1GarbageCollectionPolicySpecInitProviderInstanceNameR
     public V1beta1GarbageCollectionPolicySpecInitProviderInstanceNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Instance in bigtable to populate instanceName.</summary>
 public partial class V1beta1GarbageCollectionPolicySpecInitProviderInstanceNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -343,6 +356,7 @@ public enum V1beta1GarbageCollectionPolicySpecInitProviderInstanceNameSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GarbageCollectionPolicySpecInitProviderInstanceNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -356,6 +370,7 @@ public partial class V1beta1GarbageCollectionPolicySpecInitProviderInstanceNameS
     public V1beta1GarbageCollectionPolicySpecInitProviderInstanceNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Instance in bigtable to populate instanceName.</summary>
 public partial class V1beta1GarbageCollectionPolicySpecInitProviderInstanceNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -371,6 +386,7 @@ public partial class V1beta1GarbageCollectionPolicySpecInitProviderInstanceNameS
     public V1beta1GarbageCollectionPolicySpecInitProviderInstanceNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GarbageCollectionPolicySpecInitProviderMaxAge
 {
     /// <summary>Number of days before applying GC policy.</summary>
@@ -382,6 +398,7 @@ public partial class V1beta1GarbageCollectionPolicySpecInitProviderMaxAge
     public string? Duration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GarbageCollectionPolicySpecInitProviderMaxVersion
 {
     /// <summary>Number of version before applying the GC policy.</summary>
@@ -409,6 +426,7 @@ public enum V1beta1GarbageCollectionPolicySpecInitProviderTableRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GarbageCollectionPolicySpecInitProviderTableRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -422,6 +440,7 @@ public partial class V1beta1GarbageCollectionPolicySpecInitProviderTableRefPolic
     public V1beta1GarbageCollectionPolicySpecInitProviderTableRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Table in bigtable to populate table.</summary>
 public partial class V1beta1GarbageCollectionPolicySpecInitProviderTableRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -453,6 +472,7 @@ public enum V1beta1GarbageCollectionPolicySpecInitProviderTableSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1GarbageCollectionPolicySpecInitProviderTableSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -466,6 +486,7 @@ public partial class V1beta1GarbageCollectionPolicySpecInitProviderTableSelector
     public V1beta1GarbageCollectionPolicySpecInitProviderTableSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Table in bigtable to populate table.</summary>
 public partial class V1beta1GarbageCollectionPolicySpecInitProviderTableSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -481,6 +502,7 @@ public partial class V1beta1GarbageCollectionPolicySpecInitProviderTableSelector
     public V1beta1GarbageCollectionPolicySpecInitProviderTableSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1GarbageCollectionPolicySpecInitProvider
 {
     /// <summary>The name of the column family.</summary>
@@ -582,6 +604,7 @@ public enum V1beta1GarbageCollectionPolicySpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GarbageCollectionPolicySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -595,6 +618,7 @@ public partial class V1beta1GarbageCollectionPolicySpecProviderConfigRefPolicy
     public V1beta1GarbageCollectionPolicySpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1GarbageCollectionPolicySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -626,6 +650,7 @@ public enum V1beta1GarbageCollectionPolicySpecPublishConnectionDetailsToConfigRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1GarbageCollectionPolicySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -639,6 +664,7 @@ public partial class V1beta1GarbageCollectionPolicySpecPublishConnectionDetailsT
     public V1beta1GarbageCollectionPolicySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1GarbageCollectionPolicySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -650,6 +676,7 @@ public partial class V1beta1GarbageCollectionPolicySpecPublishConnectionDetailsT
     public V1beta1GarbageCollectionPolicySpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1GarbageCollectionPolicySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -665,6 +692,7 @@ public partial class V1beta1GarbageCollectionPolicySpecPublishConnectionDetailsT
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1GarbageCollectionPolicySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -680,6 +708,7 @@ public partial class V1beta1GarbageCollectionPolicySpecPublishConnectionDetailsT
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1GarbageCollectionPolicySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -691,6 +720,7 @@ public partial class V1beta1GarbageCollectionPolicySpecWriteConnectionSecretToRe
     public string Namespace { get; set; }
 }
 
+/// <summary>GarbageCollectionPolicySpec defines the desired state of GarbageCollectionPolicy</summary>
 public partial class V1beta1GarbageCollectionPolicySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -723,6 +753,7 @@ public partial class V1beta1GarbageCollectionPolicySpec
     public V1beta1GarbageCollectionPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GarbageCollectionPolicyStatusAtProviderMaxAge
 {
     /// <summary>Number of days before applying GC policy.</summary>
@@ -734,6 +765,7 @@ public partial class V1beta1GarbageCollectionPolicyStatusAtProviderMaxAge
     public string? Duration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GarbageCollectionPolicyStatusAtProviderMaxVersion
 {
     /// <summary>Number of version before applying the GC policy.</summary>
@@ -741,6 +773,7 @@ public partial class V1beta1GarbageCollectionPolicyStatusAtProviderMaxVersion
     public double? Number { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GarbageCollectionPolicyStatusAtProvider
 {
     /// <summary>The name of the column family.</summary>
@@ -788,6 +821,7 @@ public partial class V1beta1GarbageCollectionPolicyStatusAtProvider
     public string? Table { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1GarbageCollectionPolicyStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -815,6 +849,7 @@ public partial class V1beta1GarbageCollectionPolicyStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>GarbageCollectionPolicyStatus defines the observed state of GarbageCollectionPolicy.</summary>
 public partial class V1beta1GarbageCollectionPolicyStatus
 {
     /// <summary></summary>
@@ -831,6 +866,7 @@ public partial class V1beta1GarbageCollectionPolicyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>GarbageCollectionPolicy is the Schema for the GarbageCollectionPolicys API. Creates a Google Cloud Bigtable GC Policy inside a family.</summary>
 public partial class V1beta1GarbageCollectionPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1GarbageCollectionPolicySpec>, IStatus<V1beta1GarbageCollectionPolicyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

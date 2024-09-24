@@ -38,6 +38,7 @@ public enum V1beta1RegionDiskSpecForProviderAsyncPrimaryDiskDiskRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionDiskSpecForProviderAsyncPrimaryDiskDiskRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1RegionDiskSpecForProviderAsyncPrimaryDiskDiskRefPoli
     public V1beta1RegionDiskSpecForProviderAsyncPrimaryDiskDiskRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RegionDisk in compute to populate disk.</summary>
 public partial class V1beta1RegionDiskSpecForProviderAsyncPrimaryDiskDiskRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1RegionDiskSpecForProviderAsyncPrimaryDiskDiskSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionDiskSpecForProviderAsyncPrimaryDiskDiskSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1RegionDiskSpecForProviderAsyncPrimaryDiskDiskSelecto
     public V1beta1RegionDiskSpecForProviderAsyncPrimaryDiskDiskSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RegionDisk in compute to populate disk.</summary>
 public partial class V1beta1RegionDiskSpecForProviderAsyncPrimaryDiskDiskSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1RegionDiskSpecForProviderAsyncPrimaryDiskDiskSelecto
     public V1beta1RegionDiskSpecForProviderAsyncPrimaryDiskDiskSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionDiskSpecForProviderAsyncPrimaryDisk
 {
     /// <summary>Primary disk for asynchronous disk replication.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1RegionDiskSpecForProviderAsyncPrimaryDisk
     public V1beta1RegionDiskSpecForProviderAsyncPrimaryDiskDiskSelector? DiskSelector { get; set; }
 }
 
+/// <summary>Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. Note: This property is sensitive and will not be displayed in the plan.</summary>
 public partial class V1beta1RegionDiskSpecForProviderDiskEncryptionKeyRawKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -140,6 +146,7 @@ public partial class V1beta1RegionDiskSpecForProviderDiskEncryptionKeyRawKeySecr
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionDiskSpecForProviderDiskEncryptionKey
 {
     /// <summary>The name of the encryption key that is stored in Google Cloud KMS.</summary>
@@ -151,6 +158,7 @@ public partial class V1beta1RegionDiskSpecForProviderDiskEncryptionKey
     public V1beta1RegionDiskSpecForProviderDiskEncryptionKeyRawKeySecretRef? RawKeySecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionDiskSpecForProviderGuestOsFeatures
 {
     /// <summary>The type of supported feature. Read Enabling guest operating system features to see a list of available options. Possible values are: MULTI_IP_SUBNET, SECURE_BOOT, SEV_CAPABLE, UEFI_COMPATIBLE, VIRTIO_SCSI_MULTIQUEUE, WINDOWS, GVNIC, SEV_LIVE_MIGRATABLE, SEV_SNP_CAPABLE, SUSPEND_RESUME_COMPATIBLE, TDX_CAPABLE.</summary>
@@ -178,6 +186,7 @@ public enum V1beta1RegionDiskSpecForProviderSnapshotRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionDiskSpecForProviderSnapshotRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -191,6 +200,7 @@ public partial class V1beta1RegionDiskSpecForProviderSnapshotRefPolicy
     public V1beta1RegionDiskSpecForProviderSnapshotRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Snapshot in compute to populate snapshot.</summary>
 public partial class V1beta1RegionDiskSpecForProviderSnapshotRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -222,6 +232,7 @@ public enum V1beta1RegionDiskSpecForProviderSnapshotSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionDiskSpecForProviderSnapshotSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +246,7 @@ public partial class V1beta1RegionDiskSpecForProviderSnapshotSelectorPolicy
     public V1beta1RegionDiskSpecForProviderSnapshotSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Snapshot in compute to populate snapshot.</summary>
 public partial class V1beta1RegionDiskSpecForProviderSnapshotSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -250,6 +262,7 @@ public partial class V1beta1RegionDiskSpecForProviderSnapshotSelector
     public V1beta1RegionDiskSpecForProviderSnapshotSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionDiskSpecForProviderSourceSnapshotEncryptionKey
 {
     /// <summary>Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource.</summary>
@@ -257,6 +270,7 @@ public partial class V1beta1RegionDiskSpecForProviderSourceSnapshotEncryptionKey
     public string? RawKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionDiskSpecForProvider
 {
     /// <summary>A nested object resource Structure is documented below.</summary>
@@ -348,6 +362,7 @@ public enum V1beta1RegionDiskSpecInitProviderAsyncPrimaryDiskDiskRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionDiskSpecInitProviderAsyncPrimaryDiskDiskRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -361,6 +376,7 @@ public partial class V1beta1RegionDiskSpecInitProviderAsyncPrimaryDiskDiskRefPol
     public V1beta1RegionDiskSpecInitProviderAsyncPrimaryDiskDiskRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RegionDisk in compute to populate disk.</summary>
 public partial class V1beta1RegionDiskSpecInitProviderAsyncPrimaryDiskDiskRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -392,6 +408,7 @@ public enum V1beta1RegionDiskSpecInitProviderAsyncPrimaryDiskDiskSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionDiskSpecInitProviderAsyncPrimaryDiskDiskSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -405,6 +422,7 @@ public partial class V1beta1RegionDiskSpecInitProviderAsyncPrimaryDiskDiskSelect
     public V1beta1RegionDiskSpecInitProviderAsyncPrimaryDiskDiskSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RegionDisk in compute to populate disk.</summary>
 public partial class V1beta1RegionDiskSpecInitProviderAsyncPrimaryDiskDiskSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -420,6 +438,7 @@ public partial class V1beta1RegionDiskSpecInitProviderAsyncPrimaryDiskDiskSelect
     public V1beta1RegionDiskSpecInitProviderAsyncPrimaryDiskDiskSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionDiskSpecInitProviderAsyncPrimaryDisk
 {
     /// <summary>Primary disk for asynchronous disk replication.</summary>
@@ -435,6 +454,7 @@ public partial class V1beta1RegionDiskSpecInitProviderAsyncPrimaryDisk
     public V1beta1RegionDiskSpecInitProviderAsyncPrimaryDiskDiskSelector? DiskSelector { get; set; }
 }
 
+/// <summary>Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. Note: This property is sensitive and will not be displayed in the plan.</summary>
 public partial class V1beta1RegionDiskSpecInitProviderDiskEncryptionKeyRawKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -450,6 +470,7 @@ public partial class V1beta1RegionDiskSpecInitProviderDiskEncryptionKeyRawKeySec
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionDiskSpecInitProviderDiskEncryptionKey
 {
     /// <summary>The name of the encryption key that is stored in Google Cloud KMS.</summary>
@@ -461,6 +482,7 @@ public partial class V1beta1RegionDiskSpecInitProviderDiskEncryptionKey
     public V1beta1RegionDiskSpecInitProviderDiskEncryptionKeyRawKeySecretRef? RawKeySecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionDiskSpecInitProviderGuestOsFeatures
 {
     /// <summary>The type of supported feature. Read Enabling guest operating system features to see a list of available options. Possible values are: MULTI_IP_SUBNET, SECURE_BOOT, SEV_CAPABLE, UEFI_COMPATIBLE, VIRTIO_SCSI_MULTIQUEUE, WINDOWS, GVNIC, SEV_LIVE_MIGRATABLE, SEV_SNP_CAPABLE, SUSPEND_RESUME_COMPATIBLE, TDX_CAPABLE.</summary>
@@ -488,6 +510,7 @@ public enum V1beta1RegionDiskSpecInitProviderSnapshotRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionDiskSpecInitProviderSnapshotRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -501,6 +524,7 @@ public partial class V1beta1RegionDiskSpecInitProviderSnapshotRefPolicy
     public V1beta1RegionDiskSpecInitProviderSnapshotRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Snapshot in compute to populate snapshot.</summary>
 public partial class V1beta1RegionDiskSpecInitProviderSnapshotRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -532,6 +556,7 @@ public enum V1beta1RegionDiskSpecInitProviderSnapshotSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionDiskSpecInitProviderSnapshotSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -545,6 +570,7 @@ public partial class V1beta1RegionDiskSpecInitProviderSnapshotSelectorPolicy
     public V1beta1RegionDiskSpecInitProviderSnapshotSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Snapshot in compute to populate snapshot.</summary>
 public partial class V1beta1RegionDiskSpecInitProviderSnapshotSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -560,6 +586,7 @@ public partial class V1beta1RegionDiskSpecInitProviderSnapshotSelector
     public V1beta1RegionDiskSpecInitProviderSnapshotSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionDiskSpecInitProviderSourceSnapshotEncryptionKey
 {
     /// <summary>Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource.</summary>
@@ -567,6 +594,7 @@ public partial class V1beta1RegionDiskSpecInitProviderSourceSnapshotEncryptionKe
     public string? RawKey { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1RegionDiskSpecInitProvider
 {
     /// <summary>A nested object resource Structure is documented below.</summary>
@@ -676,6 +704,7 @@ public enum V1beta1RegionDiskSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionDiskSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -689,6 +718,7 @@ public partial class V1beta1RegionDiskSpecProviderConfigRefPolicy
     public V1beta1RegionDiskSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1RegionDiskSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -720,6 +750,7 @@ public enum V1beta1RegionDiskSpecPublishConnectionDetailsToConfigRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionDiskSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -733,6 +764,7 @@ public partial class V1beta1RegionDiskSpecPublishConnectionDetailsToConfigRefPol
     public V1beta1RegionDiskSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1RegionDiskSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -744,6 +776,7 @@ public partial class V1beta1RegionDiskSpecPublishConnectionDetailsToConfigRef
     public V1beta1RegionDiskSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1RegionDiskSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -759,6 +792,7 @@ public partial class V1beta1RegionDiskSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1RegionDiskSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -774,6 +808,7 @@ public partial class V1beta1RegionDiskSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1RegionDiskSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -785,6 +820,7 @@ public partial class V1beta1RegionDiskSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>RegionDiskSpec defines the desired state of RegionDisk</summary>
 public partial class V1beta1RegionDiskSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -817,6 +853,7 @@ public partial class V1beta1RegionDiskSpec
     public V1beta1RegionDiskSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionDiskStatusAtProviderAsyncPrimaryDisk
 {
     /// <summary>Primary disk for asynchronous disk replication.</summary>
@@ -824,6 +861,7 @@ public partial class V1beta1RegionDiskStatusAtProviderAsyncPrimaryDisk
     public string? Disk { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionDiskStatusAtProviderDiskEncryptionKey
 {
     /// <summary>The name of the encryption key that is stored in Google Cloud KMS.</summary>
@@ -835,6 +873,7 @@ public partial class V1beta1RegionDiskStatusAtProviderDiskEncryptionKey
     public string? Sha256 { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionDiskStatusAtProviderGuestOsFeatures
 {
     /// <summary>The type of supported feature. Read Enabling guest operating system features to see a list of available options. Possible values are: MULTI_IP_SUBNET, SECURE_BOOT, SEV_CAPABLE, UEFI_COMPATIBLE, VIRTIO_SCSI_MULTIQUEUE, WINDOWS, GVNIC, SEV_LIVE_MIGRATABLE, SEV_SNP_CAPABLE, SUSPEND_RESUME_COMPATIBLE, TDX_CAPABLE.</summary>
@@ -842,6 +881,7 @@ public partial class V1beta1RegionDiskStatusAtProviderGuestOsFeatures
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionDiskStatusAtProviderSourceSnapshotEncryptionKey
 {
     /// <summary>Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource.</summary>
@@ -853,6 +893,7 @@ public partial class V1beta1RegionDiskStatusAtProviderSourceSnapshotEncryptionKe
     public string? Sha256 { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionDiskStatusAtProvider
 {
     /// <summary>A nested object resource Structure is documented below.</summary>
@@ -960,6 +1001,7 @@ public partial class V1beta1RegionDiskStatusAtProvider
     public IList<string>? Users { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1RegionDiskStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -987,6 +1029,7 @@ public partial class V1beta1RegionDiskStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>RegionDiskStatus defines the observed state of RegionDisk.</summary>
 public partial class V1beta1RegionDiskStatus
 {
     /// <summary></summary>
@@ -1003,6 +1046,7 @@ public partial class V1beta1RegionDiskStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>RegionDisk is the Schema for the RegionDisks API. Persistent disks are durable storage devices that function similarly to the physical disks in a desktop or a server.</summary>
 public partial class V1beta1RegionDisk : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1RegionDiskSpec>, IStatus<V1beta1RegionDiskStatus>
 {
     public const string KubeApiVersion = "v1beta1";

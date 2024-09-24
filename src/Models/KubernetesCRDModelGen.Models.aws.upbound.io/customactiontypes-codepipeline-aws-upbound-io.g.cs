@@ -18,6 +18,7 @@ public enum V1beta1CustomActionTypeSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomActionTypeSpecForProviderConfigurationProperty
 {
     /// <summary>The description of the action configuration property.</summary>
@@ -49,6 +50,7 @@ public partial class V1beta1CustomActionTypeSpecForProviderConfigurationProperty
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomActionTypeSpecForProviderInputArtifactDetails
 {
     /// <summary>The maximum number of artifacts allowed for the action type. Min: 0, Max: 5</summary>
@@ -60,6 +62,7 @@ public partial class V1beta1CustomActionTypeSpecForProviderInputArtifactDetails
     public double? MinimumCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomActionTypeSpecForProviderOutputArtifactDetails
 {
     /// <summary>The maximum number of artifacts allowed for the action type. Min: 0, Max: 5</summary>
@@ -71,6 +74,7 @@ public partial class V1beta1CustomActionTypeSpecForProviderOutputArtifactDetails
     public double? MinimumCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomActionTypeSpecForProviderSettings
 {
     /// <summary>The URL returned to the AWS CodePipeline console that provides a deep link to the resources of the external system.</summary>
@@ -90,6 +94,7 @@ public partial class V1beta1CustomActionTypeSpecForProviderSettings
     public string? ThirdPartyConfigurationUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomActionTypeSpecForProvider
 {
     /// <summary>The category of the custom action. Valid values: Source, Build, Deploy, Test, Invoke, Approval</summary>
@@ -129,6 +134,7 @@ public partial class V1beta1CustomActionTypeSpecForProvider
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomActionTypeSpecInitProviderConfigurationProperty
 {
     /// <summary>The description of the action configuration property.</summary>
@@ -160,6 +166,7 @@ public partial class V1beta1CustomActionTypeSpecInitProviderConfigurationPropert
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomActionTypeSpecInitProviderInputArtifactDetails
 {
     /// <summary>The maximum number of artifacts allowed for the action type. Min: 0, Max: 5</summary>
@@ -171,6 +178,7 @@ public partial class V1beta1CustomActionTypeSpecInitProviderInputArtifactDetails
     public double? MinimumCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomActionTypeSpecInitProviderOutputArtifactDetails
 {
     /// <summary>The maximum number of artifacts allowed for the action type. Min: 0, Max: 5</summary>
@@ -182,6 +190,7 @@ public partial class V1beta1CustomActionTypeSpecInitProviderOutputArtifactDetail
     public double? MinimumCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomActionTypeSpecInitProviderSettings
 {
     /// <summary>The URL returned to the AWS CodePipeline console that provides a deep link to the resources of the external system.</summary>
@@ -201,6 +210,7 @@ public partial class V1beta1CustomActionTypeSpecInitProviderSettings
     public string? ThirdPartyConfigurationUrl { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1CustomActionTypeSpecInitProvider
 {
     /// <summary>The category of the custom action. Valid values: Source, Build, Deploy, Test, Invoke, Approval</summary>
@@ -278,6 +288,7 @@ public enum V1beta1CustomActionTypeSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CustomActionTypeSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -291,6 +302,7 @@ public partial class V1beta1CustomActionTypeSpecProviderConfigRefPolicy
     public V1beta1CustomActionTypeSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1CustomActionTypeSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -322,6 +334,7 @@ public enum V1beta1CustomActionTypeSpecPublishConnectionDetailsToConfigRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CustomActionTypeSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -335,6 +348,7 @@ public partial class V1beta1CustomActionTypeSpecPublishConnectionDetailsToConfig
     public V1beta1CustomActionTypeSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1CustomActionTypeSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -346,6 +360,7 @@ public partial class V1beta1CustomActionTypeSpecPublishConnectionDetailsToConfig
     public V1beta1CustomActionTypeSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1CustomActionTypeSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -361,6 +376,7 @@ public partial class V1beta1CustomActionTypeSpecPublishConnectionDetailsToMetada
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1CustomActionTypeSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -376,6 +392,7 @@ public partial class V1beta1CustomActionTypeSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1CustomActionTypeSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -387,6 +404,7 @@ public partial class V1beta1CustomActionTypeSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>CustomActionTypeSpec defines the desired state of CustomActionType</summary>
 public partial class V1beta1CustomActionTypeSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -419,6 +437,7 @@ public partial class V1beta1CustomActionTypeSpec
     public V1beta1CustomActionTypeSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomActionTypeStatusAtProviderConfigurationProperty
 {
     /// <summary>The description of the action configuration property.</summary>
@@ -450,6 +469,7 @@ public partial class V1beta1CustomActionTypeStatusAtProviderConfigurationPropert
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomActionTypeStatusAtProviderInputArtifactDetails
 {
     /// <summary>The maximum number of artifacts allowed for the action type. Min: 0, Max: 5</summary>
@@ -461,6 +481,7 @@ public partial class V1beta1CustomActionTypeStatusAtProviderInputArtifactDetails
     public double? MinimumCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomActionTypeStatusAtProviderOutputArtifactDetails
 {
     /// <summary>The maximum number of artifacts allowed for the action type. Min: 0, Max: 5</summary>
@@ -472,6 +493,7 @@ public partial class V1beta1CustomActionTypeStatusAtProviderOutputArtifactDetail
     public double? MinimumCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomActionTypeStatusAtProviderSettings
 {
     /// <summary>The URL returned to the AWS CodePipeline console that provides a deep link to the resources of the external system.</summary>
@@ -491,6 +513,7 @@ public partial class V1beta1CustomActionTypeStatusAtProviderSettings
     public string? ThirdPartyConfigurationUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomActionTypeStatusAtProvider
 {
     /// <summary>The action ARN.</summary>
@@ -542,6 +565,7 @@ public partial class V1beta1CustomActionTypeStatusAtProvider
     public string? Version { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1CustomActionTypeStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -569,6 +593,7 @@ public partial class V1beta1CustomActionTypeStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>CustomActionTypeStatus defines the observed state of CustomActionType.</summary>
 public partial class V1beta1CustomActionTypeStatus
 {
     /// <summary></summary>
@@ -585,6 +610,7 @@ public partial class V1beta1CustomActionTypeStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>CustomActionType is the Schema for the CustomActionTypes API. Provides a CodePipeline CustomActionType.</summary>
 public partial class V1beta1CustomActionType : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1CustomActionTypeSpec>, IStatus<V1beta1CustomActionTypeStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -18,6 +18,7 @@ public enum V1beta1EventHubNamespaceSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1EventHubNamespaceSpecForProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this EventHub namespace.</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1EventHubNamespaceSpecForProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EventHubNamespaceSpecForProviderNetworkRulesetsIpRule
 {
     /// <summary>The action to take when the rule is matched. Possible values are Allow. Defaults to Allow.</summary>
@@ -60,6 +62,7 @@ public enum V1beta1EventHubNamespaceSpecForProviderNetworkRulesetsVirtualNetwork
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EventHubNamespaceSpecForProviderNetworkRulesetsVirtualNetworkRuleSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -73,6 +76,7 @@ public partial class V1beta1EventHubNamespaceSpecForProviderNetworkRulesetsVirtu
     public V1beta1EventHubNamespaceSpecForProviderNetworkRulesetsVirtualNetworkRuleSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1EventHubNamespaceSpecForProviderNetworkRulesetsVirtualNetworkRuleSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -104,6 +108,7 @@ public enum V1beta1EventHubNamespaceSpecForProviderNetworkRulesetsVirtualNetwork
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EventHubNamespaceSpecForProviderNetworkRulesetsVirtualNetworkRuleSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -117,6 +122,7 @@ public partial class V1beta1EventHubNamespaceSpecForProviderNetworkRulesetsVirtu
     public V1beta1EventHubNamespaceSpecForProviderNetworkRulesetsVirtualNetworkRuleSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1EventHubNamespaceSpecForProviderNetworkRulesetsVirtualNetworkRuleSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -132,6 +138,7 @@ public partial class V1beta1EventHubNamespaceSpecForProviderNetworkRulesetsVirtu
     public V1beta1EventHubNamespaceSpecForProviderNetworkRulesetsVirtualNetworkRuleSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EventHubNamespaceSpecForProviderNetworkRulesetsVirtualNetworkRule
 {
     /// <summary>Are missing virtual network service endpoints ignored?</summary>
@@ -151,6 +158,7 @@ public partial class V1beta1EventHubNamespaceSpecForProviderNetworkRulesetsVirtu
     public V1beta1EventHubNamespaceSpecForProviderNetworkRulesetsVirtualNetworkRuleSubnetIdSelector? SubnetIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EventHubNamespaceSpecForProviderNetworkRulesets
 {
     /// <summary>The default action to take when a rule is not matched. Possible values are Allow and Deny.</summary>
@@ -194,6 +202,7 @@ public enum V1beta1EventHubNamespaceSpecForProviderResourceGroupNameRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EventHubNamespaceSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -207,6 +216,7 @@ public partial class V1beta1EventHubNamespaceSpecForProviderResourceGroupNameRef
     public V1beta1EventHubNamespaceSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1EventHubNamespaceSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -238,6 +248,7 @@ public enum V1beta1EventHubNamespaceSpecForProviderResourceGroupNameSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EventHubNamespaceSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -251,6 +262,7 @@ public partial class V1beta1EventHubNamespaceSpecForProviderResourceGroupNameSel
     public V1beta1EventHubNamespaceSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1EventHubNamespaceSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -266,6 +278,7 @@ public partial class V1beta1EventHubNamespaceSpecForProviderResourceGroupNameSel
     public V1beta1EventHubNamespaceSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EventHubNamespaceSpecForProvider
 {
     /// <summary>Is Auto Inflate enabled for the EventHub Namespace?</summary>
@@ -333,6 +346,7 @@ public partial class V1beta1EventHubNamespaceSpecForProvider
     public bool? ZoneRedundant { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EventHubNamespaceSpecInitProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this EventHub namespace.</summary>
@@ -344,6 +358,7 @@ public partial class V1beta1EventHubNamespaceSpecInitProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EventHubNamespaceSpecInitProviderNetworkRulesetsIpRule
 {
     /// <summary>The action to take when the rule is matched. Possible values are Allow. Defaults to Allow.</summary>
@@ -375,6 +390,7 @@ public enum V1beta1EventHubNamespaceSpecInitProviderNetworkRulesetsVirtualNetwor
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EventHubNamespaceSpecInitProviderNetworkRulesetsVirtualNetworkRuleSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -388,6 +404,7 @@ public partial class V1beta1EventHubNamespaceSpecInitProviderNetworkRulesetsVirt
     public V1beta1EventHubNamespaceSpecInitProviderNetworkRulesetsVirtualNetworkRuleSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1EventHubNamespaceSpecInitProviderNetworkRulesetsVirtualNetworkRuleSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -419,6 +436,7 @@ public enum V1beta1EventHubNamespaceSpecInitProviderNetworkRulesetsVirtualNetwor
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EventHubNamespaceSpecInitProviderNetworkRulesetsVirtualNetworkRuleSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -432,6 +450,7 @@ public partial class V1beta1EventHubNamespaceSpecInitProviderNetworkRulesetsVirt
     public V1beta1EventHubNamespaceSpecInitProviderNetworkRulesetsVirtualNetworkRuleSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1EventHubNamespaceSpecInitProviderNetworkRulesetsVirtualNetworkRuleSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -447,6 +466,7 @@ public partial class V1beta1EventHubNamespaceSpecInitProviderNetworkRulesetsVirt
     public V1beta1EventHubNamespaceSpecInitProviderNetworkRulesetsVirtualNetworkRuleSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EventHubNamespaceSpecInitProviderNetworkRulesetsVirtualNetworkRule
 {
     /// <summary>Are missing virtual network service endpoints ignored?</summary>
@@ -466,6 +486,7 @@ public partial class V1beta1EventHubNamespaceSpecInitProviderNetworkRulesetsVirt
     public V1beta1EventHubNamespaceSpecInitProviderNetworkRulesetsVirtualNetworkRuleSubnetIdSelector? SubnetIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EventHubNamespaceSpecInitProviderNetworkRulesets
 {
     /// <summary>The default action to take when a rule is not matched. Possible values are Allow and Deny.</summary>
@@ -489,6 +510,7 @@ public partial class V1beta1EventHubNamespaceSpecInitProviderNetworkRulesets
     public IList<V1beta1EventHubNamespaceSpecInitProviderNetworkRulesetsVirtualNetworkRule>? VirtualNetworkRule { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1EventHubNamespaceSpecInitProvider
 {
     /// <summary>Is Auto Inflate enabled for the EventHub Namespace?</summary>
@@ -586,6 +608,7 @@ public enum V1beta1EventHubNamespaceSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EventHubNamespaceSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -599,6 +622,7 @@ public partial class V1beta1EventHubNamespaceSpecProviderConfigRefPolicy
     public V1beta1EventHubNamespaceSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1EventHubNamespaceSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -630,6 +654,7 @@ public enum V1beta1EventHubNamespaceSpecPublishConnectionDetailsToConfigRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EventHubNamespaceSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -643,6 +668,7 @@ public partial class V1beta1EventHubNamespaceSpecPublishConnectionDetailsToConfi
     public V1beta1EventHubNamespaceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1EventHubNamespaceSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -654,6 +680,7 @@ public partial class V1beta1EventHubNamespaceSpecPublishConnectionDetailsToConfi
     public V1beta1EventHubNamespaceSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1EventHubNamespaceSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -669,6 +696,7 @@ public partial class V1beta1EventHubNamespaceSpecPublishConnectionDetailsToMetad
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1EventHubNamespaceSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -684,6 +712,7 @@ public partial class V1beta1EventHubNamespaceSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1EventHubNamespaceSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -695,6 +724,7 @@ public partial class V1beta1EventHubNamespaceSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>EventHubNamespaceSpec defines the desired state of EventHubNamespace</summary>
 public partial class V1beta1EventHubNamespaceSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -727,6 +757,7 @@ public partial class V1beta1EventHubNamespaceSpec
     public V1beta1EventHubNamespaceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EventHubNamespaceStatusAtProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this EventHub namespace.</summary>
@@ -746,6 +777,7 @@ public partial class V1beta1EventHubNamespaceStatusAtProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EventHubNamespaceStatusAtProviderNetworkRulesetsIpRule
 {
     /// <summary>The action to take when the rule is matched. Possible values are Allow. Defaults to Allow.</summary>
@@ -757,6 +789,7 @@ public partial class V1beta1EventHubNamespaceStatusAtProviderNetworkRulesetsIpRu
     public string? IpMask { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EventHubNamespaceStatusAtProviderNetworkRulesetsVirtualNetworkRule
 {
     /// <summary>Are missing virtual network service endpoints ignored?</summary>
@@ -768,6 +801,7 @@ public partial class V1beta1EventHubNamespaceStatusAtProviderNetworkRulesetsVirt
     public string? SubnetId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EventHubNamespaceStatusAtProviderNetworkRulesets
 {
     /// <summary>The default action to take when a rule is not matched. Possible values are Allow and Deny.</summary>
@@ -791,6 +825,7 @@ public partial class V1beta1EventHubNamespaceStatusAtProviderNetworkRulesets
     public IList<V1beta1EventHubNamespaceStatusAtProviderNetworkRulesetsVirtualNetworkRule>? VirtualNetworkRule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EventHubNamespaceStatusAtProvider
 {
     /// <summary>Is Auto Inflate enabled for the EventHub Namespace?</summary>
@@ -854,6 +889,7 @@ public partial class V1beta1EventHubNamespaceStatusAtProvider
     public bool? ZoneRedundant { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1EventHubNamespaceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -881,6 +917,7 @@ public partial class V1beta1EventHubNamespaceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>EventHubNamespaceStatus defines the observed state of EventHubNamespace.</summary>
 public partial class V1beta1EventHubNamespaceStatus
 {
     /// <summary></summary>
@@ -897,6 +934,7 @@ public partial class V1beta1EventHubNamespaceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>EventHubNamespace is the Schema for the EventHubNamespaces API. Manages an EventHub Namespace.</summary>
 public partial class V1beta1EventHubNamespace : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1EventHubNamespaceSpec>, IStatus<V1beta1EventHubNamespaceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

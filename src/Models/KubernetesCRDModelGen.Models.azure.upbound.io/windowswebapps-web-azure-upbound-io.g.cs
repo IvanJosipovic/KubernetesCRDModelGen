@@ -18,6 +18,7 @@ public enum V1beta1WindowsWebAppSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The Client Secret for the Client ID. Cannot be used with `client_secret_setting_name`.</summary>
 public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsActiveDirectoryClientSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsActiveDirect
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsActiveDirectory
 {
     /// <summary>Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. Specifies a list of Allowed audience values to consider when validating JWTs issued by Azure Active Directory.</summary>
@@ -52,6 +54,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsActiveDirect
     public string? ClientSecretSettingName { get; set; }
 }
 
+/// <summary>The App Secret of the Facebook app used for Facebook login. Cannot be specified with app_secret_setting_name. The App Secret of the Facebook app used for Facebook Login. Cannot be specified with `app_secret_setting_name`.</summary>
 public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsFacebookAppSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -67,6 +70,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsFacebookAppS
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsFacebook
 {
     /// <summary>The App ID of the Facebook app used for login. The App ID of the Facebook app used for login.</summary>
@@ -86,6 +90,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsFacebook
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The Client Secret of the GitHub app used for GitHub Login. Cannot be specified with `client_secret_setting_name`.</summary>
 public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsGithubClientSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -101,6 +106,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsGithubClient
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsGithub
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the GitHub app used for login.</summary>
@@ -120,6 +126,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsGithub
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The client secret associated with the Google web application.  Cannot be specified with `client_secret_setting_name`.</summary>
 public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsGoogleClientSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -135,6 +142,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsGoogleClient
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsGoogle
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The OpenID Connect Client ID for the Google web application.</summary>
@@ -154,6 +162,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsGoogle
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with `client_secret_setting_name`.</summary>
 public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsMicrosoftClientSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -169,6 +178,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsMicrosoftCli
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsMicrosoft
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The OAuth 2.0 client ID that was created for the app used for authentication.</summary>
@@ -188,6 +198,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsMicrosoft
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary>The OAuth 1.0a consumer secret of the Twitter application used for sign-in. Cannot be specified with consumer_secret_setting_name. The OAuth 1.0a consumer secret of the Twitter application used for sign-in. Cannot be specified with `consumer_secret_setting_name`.</summary>
 public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsTwitterConsumerSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -203,6 +214,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsTwitterConsu
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsTwitter
 {
     /// <summary>The OAuth 1.0a consumer key of the Twitter application used for sign-in. The OAuth 1.0a consumer key of the Twitter application used for sign-in.</summary>
@@ -218,6 +230,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsTwitter
     public string? ConsumerSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderAuthSettings
 {
     /// <summary>An active_directory block as defined above.</summary>
@@ -281,6 +294,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderAuthSettings
     public string? UnauthenticatedClientAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsV2ActiveDirectoryV2
 {
     /// <summary>The list of allowed Applications for the Default Authorisation Policy. The list of allowed Applications for the Default Authorisation Policy.</summary>
@@ -332,6 +346,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsV2ActiveDire
     public bool? WwwAuthenticationDisabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsV2AppleV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The OpenID Connect Client ID for the Apple web application.</summary>
@@ -343,6 +358,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsV2AppleV2
     public string? ClientSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsV2AzureStaticWebAppV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the Client to use to authenticate with Azure Static Web App Authentication.</summary>
@@ -350,6 +366,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsV2AzureStati
     public string? ClientId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsV2CustomOidcV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the Client to use to authenticate with this Custom OIDC.</summary>
@@ -373,6 +390,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsV2CustomOidc
     public IList<string>? Scopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsV2FacebookV2
 {
     /// <summary>The App ID of the Facebook app used for login. The App ID of the Facebook app used for login.</summary>
@@ -392,6 +410,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsV2FacebookV2
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsV2GithubV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the GitHub app used for login.</summary>
@@ -407,6 +426,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsV2GithubV2
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsV2GoogleV2
 {
     /// <summary>Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. Specifies a list of Allowed Audiences that will be requested as part of Google Sign-In authentication.</summary>
@@ -426,6 +446,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsV2GoogleV2
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsV2Login
 {
     /// <summary>External URLs that can be redirected to as part of logging in or logging out of the app. This is an advanced setting typically only needed by Windows Store application backends. External URLs that can be redirected to as part of logging in or logging out of the app. This is an advanced setting typically only needed by Windows Store application backends. **Note:** URLs within the current domain are always implicitly allowed.</summary>
@@ -473,6 +494,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsV2Login
     public bool? ValidateNonce { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsV2MicrosoftV2
 {
     /// <summary>Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication.</summary>
@@ -492,6 +514,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsV2MicrosoftV
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsV2TwitterV2
 {
     /// <summary>The OAuth 1.0a consumer key of the Twitter application used for sign-in. The OAuth 1.0a consumer key of the Twitter application used for sign-in.</summary>
@@ -503,6 +526,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsV2TwitterV2
     public string? ConsumerSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsV2
 {
     /// <summary>An active_directory_v2 block as defined below.</summary>
@@ -594,6 +618,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderAuthSettingsV2
     public string? UnauthenticatedAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderBackupSchedule
 {
     /// <summary>How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and frequency_unit should be set to Day). How often the backup should be executed (e.g. for weekly backup, this should be set to `7` and `frequency_unit` should be set to `Day`).</summary>
@@ -617,6 +642,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderBackupSchedule
     public string? StartTime { get; set; }
 }
 
+/// <summary>The SAS URL to the container. The SAS URL to the container.</summary>
 public partial class V1beta1WindowsWebAppSpecForProviderBackupStorageAccountUrlSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -632,6 +658,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderBackupStorageAccountUrlS
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderBackup
 {
     /// <summary>Should this backup job be enabled? Defaults to true. Should this backup job be enabled?</summary>
@@ -651,6 +678,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderBackup
     public V1beta1WindowsWebAppSpecForProviderBackupStorageAccountUrlSecretRef StorageAccountUrlSecretRef { get; set; }
 }
 
+/// <summary>The connection string value. The connection string value.</summary>
 public partial class V1beta1WindowsWebAppSpecForProviderConnectionStringValueSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -666,6 +694,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderConnectionStringValueSec
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderConnectionString
 {
     /// <summary>The name of the Connection String. The name which should be used for this Connection.</summary>
@@ -681,6 +710,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderConnectionString
     public V1beta1WindowsWebAppSpecForProviderConnectionStringValueSecretRef ValueSecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderIdentity
 {
     /// <summary>A list of User Assigned Managed Identity IDs to be assigned to this Windows Web App.</summary>
@@ -692,6 +722,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderLogsApplicationLogsAzureBlobStorage
 {
     /// <summary>The level at which to log. Possible values include Error, Warning, Information, Verbose and Off. NOTE: this field is not available for http_logs</summary>
@@ -707,6 +738,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderLogsApplicationLogsAzure
     public string? SasUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderLogsApplicationLogs
 {
     /// <summary>A azure_blob_storage_http block as defined above.</summary>
@@ -718,6 +750,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderLogsApplicationLogs
     public string? FileSystemLevel { get; set; }
 }
 
+/// <summary>SAS url to an Azure blob container with read/write/list/delete permissions.</summary>
 public partial class V1beta1WindowsWebAppSpecForProviderLogsHttpLogsAzureBlobStorageSasurlSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -733,6 +766,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderLogsHttpLogsAzureBlobSto
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderLogsHttpLogsAzureBlobStorage
 {
     /// <summary>The retention period in days. A values of 0 means no retention.</summary>
@@ -744,6 +778,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderLogsHttpLogsAzureBlobSto
     public V1beta1WindowsWebAppSpecForProviderLogsHttpLogsAzureBlobStorageSasurlSecretRef SasurlSecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderLogsHttpLogsFileSystem
 {
     /// <summary>The retention period in days. A values of 0 means no retention.</summary>
@@ -755,6 +790,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderLogsHttpLogsFileSystem
     public double? RetentionInMb { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderLogsHttpLogs
 {
     /// <summary>A azure_blob_storage_http block as defined above.</summary>
@@ -766,6 +802,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderLogsHttpLogs
     public IList<V1beta1WindowsWebAppSpecForProviderLogsHttpLogsFileSystem>? FileSystem { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderLogs
 {
     /// <summary>A application_logs block as defined above.</summary>
@@ -805,6 +842,7 @@ public enum V1beta1WindowsWebAppSpecForProviderResourceGroupNameRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsWebAppSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -818,6 +856,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderResourceGroupNameRefPoli
     public V1beta1WindowsWebAppSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1WindowsWebAppSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -849,6 +888,7 @@ public enum V1beta1WindowsWebAppSpecForProviderResourceGroupNameSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsWebAppSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -862,6 +902,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderResourceGroupNameSelecto
     public V1beta1WindowsWebAppSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1WindowsWebAppSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -897,6 +938,7 @@ public enum V1beta1WindowsWebAppSpecForProviderServicePlanIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsWebAppSpecForProviderServicePlanIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -910,6 +952,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderServicePlanIdRefPolicy
     public V1beta1WindowsWebAppSpecForProviderServicePlanIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ServicePlan in web to populate servicePlanId.</summary>
 public partial class V1beta1WindowsWebAppSpecForProviderServicePlanIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -941,6 +984,7 @@ public enum V1beta1WindowsWebAppSpecForProviderServicePlanIdSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsWebAppSpecForProviderServicePlanIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -954,6 +998,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderServicePlanIdSelectorPol
     public V1beta1WindowsWebAppSpecForProviderServicePlanIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ServicePlan in web to populate servicePlanId.</summary>
 public partial class V1beta1WindowsWebAppSpecForProviderServicePlanIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -969,6 +1014,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderServicePlanIdSelector
     public V1beta1WindowsWebAppSpecForProviderServicePlanIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>The User Name to use for authentication against the registry to pull the image.</summary>
 public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigApplicationStackDockerRegistryPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -984,6 +1030,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigApplicationSta
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigApplicationStack
 {
     /// <summary>The Application Stack for the Windows Web App. Possible values include dotnet, dotnetcore, node, python, php, and java.</summary>
@@ -1063,6 +1110,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigApplicationSta
     public string? TomcatVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigAutoHealSettingActionCustomAction
 {
     /// <summary>The executable to run for the custom_action.</summary>
@@ -1074,6 +1122,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigAutoHealSettin
     public string? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigAutoHealSettingAction
 {
     /// <summary>Predefined action to be taken to an Auto Heal trigger. Possible values include: Recycle, LogEvent, and CustomAction.</summary>
@@ -1089,6 +1138,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigAutoHealSettin
     public string? MinimumProcessExecutionTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigAutoHealSettingTriggerRequests
 {
     /// <summary>The number of occurrences of the defined status_code in the specified interval on which to trigger this rule.</summary>
@@ -1100,6 +1150,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigAutoHealSettin
     public string? Interval { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigAutoHealSettingTriggerSlowRequest
 {
     /// <summary>The number of occurrences of the defined status_code in the specified interval on which to trigger this rule.</summary>
@@ -1119,6 +1170,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigAutoHealSettin
     public string? TimeTaken { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigAutoHealSettingTriggerStatusCode
 {
     /// <summary>The number of occurrences of the defined status_code in the specified interval on which to trigger this rule.</summary>
@@ -1146,6 +1198,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigAutoHealSettin
     public double? Win32StatusCode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigAutoHealSettingTrigger
 {
     /// <summary>The amount of Private Memory to be consumed for this rule to trigger. Possible values are between 102400 and 13631488.</summary>
@@ -1165,6 +1218,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigAutoHealSettin
     public IList<V1beta1WindowsWebAppSpecForProviderSiteConfigAutoHealSettingTriggerStatusCode>? StatusCode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigAutoHealSetting
 {
     /// <summary>The action to take. Possible values are Allow or Deny. Defaults to Allow.</summary>
@@ -1176,6 +1230,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigAutoHealSettin
     public IList<V1beta1WindowsWebAppSpecForProviderSiteConfigAutoHealSettingTrigger>? Trigger { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigCors
 {
     /// <summary>Specifies a list of origins that should be allowed to make cross-origin calls. Specifies a list of origins that should be allowed to make cross-origin calls.</summary>
@@ -1187,6 +1242,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigCors
     public bool? SupportCredentials { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigIpRestrictionHeaders
 {
     /// <summary>Specifies a list of Azure Front Door IDs.</summary>
@@ -1226,6 +1282,7 @@ public enum V1beta1WindowsWebAppSpecForProviderSiteConfigIpRestrictionVirtualNet
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1239,6 +1296,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigIpRestrictionV
     public V1beta1WindowsWebAppSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1270,6 +1328,7 @@ public enum V1beta1WindowsWebAppSpecForProviderSiteConfigIpRestrictionVirtualNet
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1283,6 +1342,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigIpRestrictionV
     public V1beta1WindowsWebAppSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1298,6 +1358,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigIpRestrictionV
     public V1beta1WindowsWebAppSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigIpRestriction
 {
     /// <summary>The action to take. Possible values are Allow or Deny. Defaults to Allow. The action to take. Possible values are `Allow` or `Deny`.</summary>
@@ -1341,6 +1402,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigIpRestriction
     public V1beta1WindowsWebAppSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelector? VirtualNetworkSubnetIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigScmIpRestrictionHeaders
 {
     /// <summary>Specifies a list of Azure Front Door IDs.</summary>
@@ -1380,6 +1442,7 @@ public enum V1beta1WindowsWebAppSpecForProviderSiteConfigScmIpRestrictionVirtual
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1393,6 +1456,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigScmIpRestricti
     public V1beta1WindowsWebAppSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1424,6 +1488,7 @@ public enum V1beta1WindowsWebAppSpecForProviderSiteConfigScmIpRestrictionVirtual
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1437,6 +1502,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigScmIpRestricti
     public V1beta1WindowsWebAppSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1452,6 +1518,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigScmIpRestricti
     public V1beta1WindowsWebAppSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigScmIpRestriction
 {
     /// <summary>The action to take. Possible values are Allow or Deny. Defaults to Allow. The action to take. Possible values are `Allow` or `Deny`.</summary>
@@ -1495,6 +1562,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigScmIpRestricti
     public V1beta1WindowsWebAppSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelector? VirtualNetworkSubnetIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigVirtualApplicationVirtualDirectory
 {
     /// <summary>The physical path for the Virtual Application.</summary>
@@ -1506,6 +1574,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigVirtualApplica
     public string? VirtualPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigVirtualApplication
 {
     /// <summary>The physical path for the Virtual Application.</summary>
@@ -1525,6 +1594,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderSiteConfigVirtualApplica
     public string? VirtualPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderSiteConfig
 {
     /// <summary>If this Windows Web App is Always On enabled. Defaults to true.</summary>
@@ -1656,6 +1726,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderSiteConfig
     public double? WorkerCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderStickySettings
 {
     /// <summary>A list of app_setting names that the Windows Web App will not swap between Slots when a swap operation is triggered.</summary>
@@ -1667,6 +1738,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderStickySettings
     public IList<string>? ConnectionStringNames { get; set; }
 }
 
+/// <summary>The Access key for the storage account.</summary>
 public partial class V1beta1WindowsWebAppSpecForProviderStorageAccountAccessKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1682,6 +1754,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderStorageAccountAccessKeyS
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProviderStorageAccount
 {
     /// <summary>The Access key for the storage account.</summary>
@@ -1729,6 +1802,7 @@ public enum V1beta1WindowsWebAppSpecForProviderVirtualNetworkSubnetIdRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsWebAppSpecForProviderVirtualNetworkSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1742,6 +1816,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderVirtualNetworkSubnetIdRe
     public V1beta1WindowsWebAppSpecForProviderVirtualNetworkSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1WindowsWebAppSpecForProviderVirtualNetworkSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1773,6 +1848,7 @@ public enum V1beta1WindowsWebAppSpecForProviderVirtualNetworkSubnetIdSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsWebAppSpecForProviderVirtualNetworkSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1786,6 +1862,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderVirtualNetworkSubnetIdSe
     public V1beta1WindowsWebAppSpecForProviderVirtualNetworkSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1WindowsWebAppSpecForProviderVirtualNetworkSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1801,6 +1878,7 @@ public partial class V1beta1WindowsWebAppSpecForProviderVirtualNetworkSubnetIdSe
     public V1beta1WindowsWebAppSpecForProviderVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecForProvider
 {
     /// <summary>A map of key-value pairs of App Settings.</summary>
@@ -1932,6 +2010,7 @@ public partial class V1beta1WindowsWebAppSpecForProvider
     public string? ZipDeployFile { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderAuthSettingsActiveDirectory
 {
     /// <summary>Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. Specifies a list of Allowed audience values to consider when validating JWTs issued by Azure Active Directory.</summary>
@@ -1947,6 +2026,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderAuthSettingsActiveDirec
     public string? ClientSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderAuthSettingsFacebook
 {
     /// <summary>The App ID of the Facebook app used for login. The App ID of the Facebook app used for login.</summary>
@@ -1962,6 +2042,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderAuthSettingsFacebook
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderAuthSettingsGithub
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the GitHub app used for login.</summary>
@@ -1977,6 +2058,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderAuthSettingsGithub
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderAuthSettingsGoogle
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The OpenID Connect Client ID for the Google web application.</summary>
@@ -1992,6 +2074,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderAuthSettingsGoogle
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderAuthSettingsMicrosoft
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The OAuth 2.0 client ID that was created for the app used for authentication.</summary>
@@ -2007,6 +2090,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderAuthSettingsMicrosoft
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderAuthSettingsTwitter
 {
     /// <summary>The OAuth 1.0a consumer key of the Twitter application used for sign-in. The OAuth 1.0a consumer key of the Twitter application used for sign-in.</summary>
@@ -2018,6 +2102,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderAuthSettingsTwitter
     public string? ConsumerSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderAuthSettings
 {
     /// <summary>An active_directory block as defined above.</summary>
@@ -2081,6 +2166,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderAuthSettings
     public string? UnauthenticatedClientAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderAuthSettingsV2ActiveDirectoryV2
 {
     /// <summary>The list of allowed Applications for the Default Authorisation Policy. The list of allowed Applications for the Default Authorisation Policy.</summary>
@@ -2132,6 +2218,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderAuthSettingsV2ActiveDir
     public bool? WwwAuthenticationDisabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderAuthSettingsV2AppleV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The OpenID Connect Client ID for the Apple web application.</summary>
@@ -2143,6 +2230,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderAuthSettingsV2AppleV2
     public string? ClientSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderAuthSettingsV2AzureStaticWebAppV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the Client to use to authenticate with Azure Static Web App Authentication.</summary>
@@ -2150,6 +2238,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderAuthSettingsV2AzureStat
     public string? ClientId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderAuthSettingsV2CustomOidcV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the Client to use to authenticate with this Custom OIDC.</summary>
@@ -2173,6 +2262,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderAuthSettingsV2CustomOid
     public IList<string>? Scopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderAuthSettingsV2FacebookV2
 {
     /// <summary>The App ID of the Facebook app used for login. The App ID of the Facebook app used for login.</summary>
@@ -2192,6 +2282,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderAuthSettingsV2FacebookV
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderAuthSettingsV2GithubV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the GitHub app used for login.</summary>
@@ -2207,6 +2298,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderAuthSettingsV2GithubV2
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderAuthSettingsV2GoogleV2
 {
     /// <summary>Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. Specifies a list of Allowed Audiences that will be requested as part of Google Sign-In authentication.</summary>
@@ -2226,6 +2318,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderAuthSettingsV2GoogleV2
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderAuthSettingsV2Login
 {
     /// <summary>External URLs that can be redirected to as part of logging in or logging out of the app. This is an advanced setting typically only needed by Windows Store application backends. External URLs that can be redirected to as part of logging in or logging out of the app. This is an advanced setting typically only needed by Windows Store application backends. **Note:** URLs within the current domain are always implicitly allowed.</summary>
@@ -2273,6 +2366,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderAuthSettingsV2Login
     public bool? ValidateNonce { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderAuthSettingsV2MicrosoftV2
 {
     /// <summary>Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication.</summary>
@@ -2292,6 +2386,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderAuthSettingsV2Microsoft
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderAuthSettingsV2TwitterV2
 {
     /// <summary>The OAuth 1.0a consumer key of the Twitter application used for sign-in. The OAuth 1.0a consumer key of the Twitter application used for sign-in.</summary>
@@ -2303,6 +2398,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderAuthSettingsV2TwitterV2
     public string? ConsumerSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderAuthSettingsV2
 {
     /// <summary>An active_directory_v2 block as defined below.</summary>
@@ -2394,6 +2490,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderAuthSettingsV2
     public string? UnauthenticatedAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderBackupSchedule
 {
     /// <summary>How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and frequency_unit should be set to Day). How often the backup should be executed (e.g. for weekly backup, this should be set to `7` and `frequency_unit` should be set to `Day`).</summary>
@@ -2417,6 +2514,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderBackupSchedule
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderBackup
 {
     /// <summary>Should this backup job be enabled? Defaults to true. Should this backup job be enabled?</summary>
@@ -2432,6 +2530,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderBackup
     public IList<V1beta1WindowsWebAppSpecInitProviderBackupSchedule>? Schedule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderConnectionString
 {
     /// <summary>The name of the Connection String. The name which should be used for this Connection.</summary>
@@ -2443,6 +2542,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderConnectionString
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderIdentity
 {
     /// <summary>A list of User Assigned Managed Identity IDs to be assigned to this Windows Web App.</summary>
@@ -2454,6 +2554,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderLogsApplicationLogsAzureBlobStorage
 {
     /// <summary>The level at which to log. Possible values include Error, Warning, Information, Verbose and Off. NOTE: this field is not available for http_logs</summary>
@@ -2469,6 +2570,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderLogsApplicationLogsAzur
     public string? SasUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderLogsApplicationLogs
 {
     /// <summary>A azure_blob_storage_http block as defined above.</summary>
@@ -2480,6 +2582,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderLogsApplicationLogs
     public string? FileSystemLevel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderLogsHttpLogsAzureBlobStorage
 {
     /// <summary>The retention period in days. A values of 0 means no retention.</summary>
@@ -2487,6 +2590,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderLogsHttpLogsAzureBlobSt
     public double? RetentionInDays { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderLogsHttpLogsFileSystem
 {
     /// <summary>The retention period in days. A values of 0 means no retention.</summary>
@@ -2498,6 +2602,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderLogsHttpLogsFileSystem
     public double? RetentionInMb { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderLogsHttpLogs
 {
     /// <summary>A azure_blob_storage_http block as defined above.</summary>
@@ -2509,6 +2614,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderLogsHttpLogs
     public IList<V1beta1WindowsWebAppSpecInitProviderLogsHttpLogsFileSystem>? FileSystem { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderLogs
 {
     /// <summary>A application_logs block as defined above.</summary>
@@ -2548,6 +2654,7 @@ public enum V1beta1WindowsWebAppSpecInitProviderServicePlanIdRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderServicePlanIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2561,6 +2668,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderServicePlanIdRefPolicy
     public V1beta1WindowsWebAppSpecInitProviderServicePlanIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ServicePlan in web to populate servicePlanId.</summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderServicePlanIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2592,6 +2700,7 @@ public enum V1beta1WindowsWebAppSpecInitProviderServicePlanIdSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderServicePlanIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2605,6 +2714,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderServicePlanIdSelectorPo
     public V1beta1WindowsWebAppSpecInitProviderServicePlanIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ServicePlan in web to populate servicePlanId.</summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderServicePlanIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2620,6 +2730,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderServicePlanIdSelector
     public V1beta1WindowsWebAppSpecInitProviderServicePlanIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigApplicationStack
 {
     /// <summary>The Application Stack for the Windows Web App. Possible values include dotnet, dotnetcore, node, python, php, and java.</summary>
@@ -2695,6 +2806,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigApplicationSt
     public string? TomcatVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigAutoHealSettingActionCustomAction
 {
     /// <summary>The executable to run for the custom_action.</summary>
@@ -2706,6 +2818,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigAutoHealSetti
     public string? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigAutoHealSettingAction
 {
     /// <summary>Predefined action to be taken to an Auto Heal trigger. Possible values include: Recycle, LogEvent, and CustomAction.</summary>
@@ -2721,6 +2834,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigAutoHealSetti
     public string? MinimumProcessExecutionTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigAutoHealSettingTriggerRequests
 {
     /// <summary>The number of occurrences of the defined status_code in the specified interval on which to trigger this rule.</summary>
@@ -2732,6 +2846,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigAutoHealSetti
     public string? Interval { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigAutoHealSettingTriggerSlowRequest
 {
     /// <summary>The number of occurrences of the defined status_code in the specified interval on which to trigger this rule.</summary>
@@ -2751,6 +2866,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigAutoHealSetti
     public string? TimeTaken { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigAutoHealSettingTriggerStatusCode
 {
     /// <summary>The number of occurrences of the defined status_code in the specified interval on which to trigger this rule.</summary>
@@ -2778,6 +2894,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigAutoHealSetti
     public double? Win32StatusCode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigAutoHealSettingTrigger
 {
     /// <summary>The amount of Private Memory to be consumed for this rule to trigger. Possible values are between 102400 and 13631488.</summary>
@@ -2797,6 +2914,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigAutoHealSetti
     public IList<V1beta1WindowsWebAppSpecInitProviderSiteConfigAutoHealSettingTriggerStatusCode>? StatusCode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigAutoHealSetting
 {
     /// <summary>The action to take. Possible values are Allow or Deny. Defaults to Allow.</summary>
@@ -2808,6 +2926,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigAutoHealSetti
     public IList<V1beta1WindowsWebAppSpecInitProviderSiteConfigAutoHealSettingTrigger>? Trigger { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigCors
 {
     /// <summary>Specifies a list of origins that should be allowed to make cross-origin calls. Specifies a list of origins that should be allowed to make cross-origin calls.</summary>
@@ -2819,6 +2938,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigCors
     public bool? SupportCredentials { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigIpRestrictionHeaders
 {
     /// <summary>Specifies a list of Azure Front Door IDs.</summary>
@@ -2858,6 +2978,7 @@ public enum V1beta1WindowsWebAppSpecInitProviderSiteConfigIpRestrictionVirtualNe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2871,6 +2992,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigIpRestriction
     public V1beta1WindowsWebAppSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2902,6 +3024,7 @@ public enum V1beta1WindowsWebAppSpecInitProviderSiteConfigIpRestrictionVirtualNe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2915,6 +3038,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigIpRestriction
     public V1beta1WindowsWebAppSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2930,6 +3054,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigIpRestriction
     public V1beta1WindowsWebAppSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigIpRestriction
 {
     /// <summary>The action to take. Possible values are Allow or Deny. Defaults to Allow. The action to take. Possible values are `Allow` or `Deny`.</summary>
@@ -2973,6 +3098,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigIpRestriction
     public V1beta1WindowsWebAppSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelector? VirtualNetworkSubnetIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigScmIpRestrictionHeaders
 {
     /// <summary>Specifies a list of Azure Front Door IDs.</summary>
@@ -3012,6 +3138,7 @@ public enum V1beta1WindowsWebAppSpecInitProviderSiteConfigScmIpRestrictionVirtua
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3025,6 +3152,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigScmIpRestrict
     public V1beta1WindowsWebAppSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3056,6 +3184,7 @@ public enum V1beta1WindowsWebAppSpecInitProviderSiteConfigScmIpRestrictionVirtua
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3069,6 +3198,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigScmIpRestrict
     public V1beta1WindowsWebAppSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -3084,6 +3214,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigScmIpRestrict
     public V1beta1WindowsWebAppSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigScmIpRestriction
 {
     /// <summary>The action to take. Possible values are Allow or Deny. Defaults to Allow. The action to take. Possible values are `Allow` or `Deny`.</summary>
@@ -3127,6 +3258,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigScmIpRestrict
     public V1beta1WindowsWebAppSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelector? VirtualNetworkSubnetIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigVirtualApplicationVirtualDirectory
 {
     /// <summary>The physical path for the Virtual Application.</summary>
@@ -3138,6 +3270,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigVirtualApplic
     public string? VirtualPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigVirtualApplication
 {
     /// <summary>The physical path for the Virtual Application.</summary>
@@ -3157,6 +3290,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfigVirtualApplic
     public string? VirtualPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfig
 {
     /// <summary>If this Windows Web App is Always On enabled. Defaults to true.</summary>
@@ -3288,6 +3422,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderSiteConfig
     public double? WorkerCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderStickySettings
 {
     /// <summary>A list of app_setting names that the Windows Web App will not swap between Slots when a swap operation is triggered.</summary>
@@ -3299,6 +3434,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderStickySettings
     public IList<string>? ConnectionStringNames { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderStorageAccount
 {
     /// <summary>The Name of the Storage Account.</summary>
@@ -3342,6 +3478,7 @@ public enum V1beta1WindowsWebAppSpecInitProviderVirtualNetworkSubnetIdRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderVirtualNetworkSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3355,6 +3492,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderVirtualNetworkSubnetIdR
     public V1beta1WindowsWebAppSpecInitProviderVirtualNetworkSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderVirtualNetworkSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3386,6 +3524,7 @@ public enum V1beta1WindowsWebAppSpecInitProviderVirtualNetworkSubnetIdSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderVirtualNetworkSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3399,6 +3538,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderVirtualNetworkSubnetIdS
     public V1beta1WindowsWebAppSpecInitProviderVirtualNetworkSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1WindowsWebAppSpecInitProviderVirtualNetworkSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -3414,6 +3554,7 @@ public partial class V1beta1WindowsWebAppSpecInitProviderVirtualNetworkSubnetIdS
     public V1beta1WindowsWebAppSpecInitProviderVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1WindowsWebAppSpecInitProvider
 {
     /// <summary>A map of key-value pairs of App Settings.</summary>
@@ -3575,6 +3716,7 @@ public enum V1beta1WindowsWebAppSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsWebAppSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3588,6 +3730,7 @@ public partial class V1beta1WindowsWebAppSpecProviderConfigRefPolicy
     public V1beta1WindowsWebAppSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1WindowsWebAppSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3619,6 +3762,7 @@ public enum V1beta1WindowsWebAppSpecPublishConnectionDetailsToConfigRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsWebAppSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3632,6 +3776,7 @@ public partial class V1beta1WindowsWebAppSpecPublishConnectionDetailsToConfigRef
     public V1beta1WindowsWebAppSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1WindowsWebAppSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3643,6 +3788,7 @@ public partial class V1beta1WindowsWebAppSpecPublishConnectionDetailsToConfigRef
     public V1beta1WindowsWebAppSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1WindowsWebAppSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -3658,6 +3804,7 @@ public partial class V1beta1WindowsWebAppSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1WindowsWebAppSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -3673,6 +3820,7 @@ public partial class V1beta1WindowsWebAppSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1WindowsWebAppSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -3684,6 +3832,7 @@ public partial class V1beta1WindowsWebAppSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>WindowsWebAppSpec defines the desired state of WindowsWebApp</summary>
 public partial class V1beta1WindowsWebAppSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -3716,6 +3865,7 @@ public partial class V1beta1WindowsWebAppSpec
     public V1beta1WindowsWebAppSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderAuthSettingsActiveDirectory
 {
     /// <summary>Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. Specifies a list of Allowed audience values to consider when validating JWTs issued by Azure Active Directory.</summary>
@@ -3731,6 +3881,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderAuthSettingsActiveDirec
     public string? ClientSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderAuthSettingsFacebook
 {
     /// <summary>The App ID of the Facebook app used for login. The App ID of the Facebook app used for login.</summary>
@@ -3746,6 +3897,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderAuthSettingsFacebook
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderAuthSettingsGithub
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the GitHub app used for login.</summary>
@@ -3761,6 +3913,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderAuthSettingsGithub
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderAuthSettingsGoogle
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The OpenID Connect Client ID for the Google web application.</summary>
@@ -3776,6 +3929,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderAuthSettingsGoogle
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderAuthSettingsMicrosoft
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The OAuth 2.0 client ID that was created for the app used for authentication.</summary>
@@ -3791,6 +3945,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderAuthSettingsMicrosoft
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderAuthSettingsTwitter
 {
     /// <summary>The OAuth 1.0a consumer key of the Twitter application used for sign-in. The OAuth 1.0a consumer key of the Twitter application used for sign-in.</summary>
@@ -3802,6 +3957,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderAuthSettingsTwitter
     public string? ConsumerSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderAuthSettings
 {
     /// <summary>An active_directory block as defined above.</summary>
@@ -3865,6 +4021,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderAuthSettings
     public string? UnauthenticatedClientAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderAuthSettingsV2ActiveDirectoryV2
 {
     /// <summary>The list of allowed Applications for the Default Authorisation Policy. The list of allowed Applications for the Default Authorisation Policy.</summary>
@@ -3916,6 +4073,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderAuthSettingsV2ActiveDir
     public bool? WwwAuthenticationDisabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderAuthSettingsV2AppleV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The OpenID Connect Client ID for the Apple web application.</summary>
@@ -3931,6 +4089,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderAuthSettingsV2AppleV2
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderAuthSettingsV2AzureStaticWebAppV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the Client to use to authenticate with Azure Static Web App Authentication.</summary>
@@ -3938,6 +4097,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderAuthSettingsV2AzureStat
     public string? ClientId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderAuthSettingsV2CustomOidcV2
 {
     /// <summary>The endpoint to make the Authorisation Request as supplied by openid_configuration_endpoint response. The endpoint to make the Authorisation Request.</summary>
@@ -3985,6 +4145,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderAuthSettingsV2CustomOid
     public string? TokenEndpoint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderAuthSettingsV2FacebookV2
 {
     /// <summary>The App ID of the Facebook app used for login. The App ID of the Facebook app used for login.</summary>
@@ -4004,6 +4165,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderAuthSettingsV2FacebookV
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderAuthSettingsV2GithubV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the GitHub app used for login.</summary>
@@ -4019,6 +4181,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderAuthSettingsV2GithubV2
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderAuthSettingsV2GoogleV2
 {
     /// <summary>Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. Specifies a list of Allowed Audiences that will be requested as part of Google Sign-In authentication.</summary>
@@ -4038,6 +4201,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderAuthSettingsV2GoogleV2
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderAuthSettingsV2Login
 {
     /// <summary>External URLs that can be redirected to as part of logging in or logging out of the app. This is an advanced setting typically only needed by Windows Store application backends. External URLs that can be redirected to as part of logging in or logging out of the app. This is an advanced setting typically only needed by Windows Store application backends. **Note:** URLs within the current domain are always implicitly allowed.</summary>
@@ -4085,6 +4249,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderAuthSettingsV2Login
     public bool? ValidateNonce { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderAuthSettingsV2MicrosoftV2
 {
     /// <summary>Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication.</summary>
@@ -4104,6 +4269,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderAuthSettingsV2Microsoft
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderAuthSettingsV2TwitterV2
 {
     /// <summary>The OAuth 1.0a consumer key of the Twitter application used for sign-in. The OAuth 1.0a consumer key of the Twitter application used for sign-in.</summary>
@@ -4115,6 +4281,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderAuthSettingsV2TwitterV2
     public string? ConsumerSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderAuthSettingsV2
 {
     /// <summary>An active_directory_v2 block as defined below.</summary>
@@ -4206,6 +4373,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderAuthSettingsV2
     public string? UnauthenticatedAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderBackupSchedule
 {
     /// <summary>How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and frequency_unit should be set to Day). How often the backup should be executed (e.g. for weekly backup, this should be set to `7` and `frequency_unit` should be set to `Day`).</summary>
@@ -4233,6 +4401,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderBackupSchedule
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderBackup
 {
     /// <summary>Should this backup job be enabled? Defaults to true. Should this backup job be enabled?</summary>
@@ -4248,6 +4417,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderBackup
     public IList<V1beta1WindowsWebAppStatusAtProviderBackupSchedule>? Schedule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderConnectionString
 {
     /// <summary>The name of the Connection String. The name which should be used for this Connection.</summary>
@@ -4259,6 +4429,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderConnectionString
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderIdentity
 {
     /// <summary>A list of User Assigned Managed Identity IDs to be assigned to this Windows Web App.</summary>
@@ -4278,6 +4449,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderLogsApplicationLogsAzureBlobStorage
 {
     /// <summary>The level at which to log. Possible values include Error, Warning, Information, Verbose and Off. NOTE: this field is not available for http_logs</summary>
@@ -4293,6 +4465,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderLogsApplicationLogsAzur
     public string? SasUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderLogsApplicationLogs
 {
     /// <summary>A azure_blob_storage_http block as defined above.</summary>
@@ -4304,6 +4477,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderLogsApplicationLogs
     public string? FileSystemLevel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderLogsHttpLogsAzureBlobStorage
 {
     /// <summary>The retention period in days. A values of 0 means no retention.</summary>
@@ -4311,6 +4485,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderLogsHttpLogsAzureBlobSt
     public double? RetentionInDays { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderLogsHttpLogsFileSystem
 {
     /// <summary>The retention period in days. A values of 0 means no retention.</summary>
@@ -4322,6 +4497,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderLogsHttpLogsFileSystem
     public double? RetentionInMb { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderLogsHttpLogs
 {
     /// <summary>A azure_blob_storage_http block as defined above.</summary>
@@ -4333,6 +4509,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderLogsHttpLogs
     public IList<V1beta1WindowsWebAppStatusAtProviderLogsHttpLogsFileSystem>? FileSystem { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderLogs
 {
     /// <summary>A application_logs block as defined above.</summary>
@@ -4352,6 +4529,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderLogs
     public IList<V1beta1WindowsWebAppStatusAtProviderLogsHttpLogs>? HttpLogs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderSiteConfigApplicationStack
 {
     /// <summary>The Application Stack for the Windows Web App. Possible values include dotnet, dotnetcore, node, python, php, and java.</summary>
@@ -4427,6 +4605,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderSiteConfigApplicationSt
     public string? TomcatVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderSiteConfigAutoHealSettingActionCustomAction
 {
     /// <summary>The executable to run for the custom_action.</summary>
@@ -4438,6 +4617,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderSiteConfigAutoHealSetti
     public string? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderSiteConfigAutoHealSettingAction
 {
     /// <summary>Predefined action to be taken to an Auto Heal trigger. Possible values include: Recycle, LogEvent, and CustomAction.</summary>
@@ -4453,6 +4633,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderSiteConfigAutoHealSetti
     public string? MinimumProcessExecutionTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderSiteConfigAutoHealSettingTriggerRequests
 {
     /// <summary>The number of occurrences of the defined status_code in the specified interval on which to trigger this rule.</summary>
@@ -4464,6 +4645,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderSiteConfigAutoHealSetti
     public string? Interval { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderSiteConfigAutoHealSettingTriggerSlowRequest
 {
     /// <summary>The number of occurrences of the defined status_code in the specified interval on which to trigger this rule.</summary>
@@ -4483,6 +4665,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderSiteConfigAutoHealSetti
     public string? TimeTaken { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderSiteConfigAutoHealSettingTriggerStatusCode
 {
     /// <summary>The number of occurrences of the defined status_code in the specified interval on which to trigger this rule.</summary>
@@ -4510,6 +4693,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderSiteConfigAutoHealSetti
     public double? Win32StatusCode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderSiteConfigAutoHealSettingTrigger
 {
     /// <summary>The amount of Private Memory to be consumed for this rule to trigger. Possible values are between 102400 and 13631488.</summary>
@@ -4529,6 +4713,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderSiteConfigAutoHealSetti
     public IList<V1beta1WindowsWebAppStatusAtProviderSiteConfigAutoHealSettingTriggerStatusCode>? StatusCode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderSiteConfigAutoHealSetting
 {
     /// <summary>The action to take. Possible values are Allow or Deny. Defaults to Allow.</summary>
@@ -4540,6 +4725,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderSiteConfigAutoHealSetti
     public IList<V1beta1WindowsWebAppStatusAtProviderSiteConfigAutoHealSettingTrigger>? Trigger { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderSiteConfigCors
 {
     /// <summary>Specifies a list of origins that should be allowed to make cross-origin calls. Specifies a list of origins that should be allowed to make cross-origin calls.</summary>
@@ -4551,6 +4737,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderSiteConfigCors
     public bool? SupportCredentials { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderSiteConfigIpRestrictionHeaders
 {
     /// <summary>Specifies a list of Azure Front Door IDs.</summary>
@@ -4570,6 +4757,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderSiteConfigIpRestriction
     public IList<string>? XForwardedHost { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderSiteConfigIpRestriction
 {
     /// <summary>The action to take. Possible values are Allow or Deny. Defaults to Allow. The action to take. Possible values are `Allow` or `Deny`.</summary>
@@ -4605,6 +4793,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderSiteConfigIpRestriction
     public string? VirtualNetworkSubnetId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderSiteConfigScmIpRestrictionHeaders
 {
     /// <summary>Specifies a list of Azure Front Door IDs.</summary>
@@ -4624,6 +4813,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderSiteConfigScmIpRestrict
     public IList<string>? XForwardedHost { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderSiteConfigScmIpRestriction
 {
     /// <summary>The action to take. Possible values are Allow or Deny. Defaults to Allow. The action to take. Possible values are `Allow` or `Deny`.</summary>
@@ -4659,6 +4849,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderSiteConfigScmIpRestrict
     public string? VirtualNetworkSubnetId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderSiteConfigVirtualApplicationVirtualDirectory
 {
     /// <summary>The physical path for the Virtual Application.</summary>
@@ -4670,6 +4861,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderSiteConfigVirtualApplic
     public string? VirtualPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderSiteConfigVirtualApplication
 {
     /// <summary>The physical path for the Virtual Application.</summary>
@@ -4689,6 +4881,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderSiteConfigVirtualApplic
     public string? VirtualPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderSiteConfig
 {
     /// <summary>If this Windows Web App is Always On enabled. Defaults to true.</summary>
@@ -4836,6 +5029,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderSiteConfig
     public double? WorkerCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderStickySettings
 {
     /// <summary>A list of app_setting names that the Windows Web App will not swap between Slots when a swap operation is triggered.</summary>
@@ -4847,6 +5041,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderStickySettings
     public IList<string>? ConnectionStringNames { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProviderStorageAccount
 {
     /// <summary>The Name of the Storage Account.</summary>
@@ -4870,6 +5065,7 @@ public partial class V1beta1WindowsWebAppStatusAtProviderStorageAccount
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsWebAppStatusAtProvider
 {
     /// <summary>A map of key-value pairs of App Settings.</summary>
@@ -5009,6 +5205,7 @@ public partial class V1beta1WindowsWebAppStatusAtProvider
     public string? ZipDeployFile { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1WindowsWebAppStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -5036,6 +5233,7 @@ public partial class V1beta1WindowsWebAppStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>WindowsWebAppStatus defines the observed state of WindowsWebApp.</summary>
 public partial class V1beta1WindowsWebAppStatus
 {
     /// <summary></summary>
@@ -5052,6 +5250,7 @@ public partial class V1beta1WindowsWebAppStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>WindowsWebApp is the Schema for the WindowsWebApps API. Manages a Windows Web App.</summary>
 public partial class V1beta1WindowsWebApp : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1WindowsWebAppSpec>, IStatus<V1beta1WindowsWebAppStatus>
 {
     public const string KubeApiVersion = "v1beta1";

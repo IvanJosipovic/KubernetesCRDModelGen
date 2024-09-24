@@ -38,6 +38,7 @@ public enum V1beta1BackupInstanceDiskSpecForProviderBackupPolicyIdRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupInstanceDiskSpecForProviderBackupPolicyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1BackupInstanceDiskSpecForProviderBackupPolicyIdRefPo
     public V1beta1BackupInstanceDiskSpecForProviderBackupPolicyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a BackupPolicyDisk in dataprotection to populate backupPolicyId.</summary>
 public partial class V1beta1BackupInstanceDiskSpecForProviderBackupPolicyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1BackupInstanceDiskSpecForProviderBackupPolicyIdSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupInstanceDiskSpecForProviderBackupPolicyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1BackupInstanceDiskSpecForProviderBackupPolicyIdSelec
     public V1beta1BackupInstanceDiskSpecForProviderBackupPolicyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a BackupPolicyDisk in dataprotection to populate backupPolicyId.</summary>
 public partial class V1beta1BackupInstanceDiskSpecForProviderBackupPolicyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1BackupInstanceDiskSpecForProviderDiskIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupInstanceDiskSpecForProviderDiskIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1BackupInstanceDiskSpecForProviderDiskIdRefPolicy
     public V1beta1BackupInstanceDiskSpecForProviderDiskIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ManagedDisk in compute to populate diskId.</summary>
 public partial class V1beta1BackupInstanceDiskSpecForProviderDiskIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1BackupInstanceDiskSpecForProviderDiskIdSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupInstanceDiskSpecForProviderDiskIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1BackupInstanceDiskSpecForProviderDiskIdSelectorPolic
     public V1beta1BackupInstanceDiskSpecForProviderDiskIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ManagedDisk in compute to populate diskId.</summary>
 public partial class V1beta1BackupInstanceDiskSpecForProviderDiskIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1BackupInstanceDiskSpecForProviderSnapshotResourceGroupNameRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupInstanceDiskSpecForProviderSnapshotResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1BackupInstanceDiskSpecForProviderSnapshotResourceGro
     public V1beta1BackupInstanceDiskSpecForProviderSnapshotResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate snapshotResourceGroupName.</summary>
 public partial class V1beta1BackupInstanceDiskSpecForProviderSnapshotResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1BackupInstanceDiskSpecForProviderSnapshotResourceGroupNameSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupInstanceDiskSpecForProviderSnapshotResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1BackupInstanceDiskSpecForProviderSnapshotResourceGro
     public V1beta1BackupInstanceDiskSpecForProviderSnapshotResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate snapshotResourceGroupName.</summary>
 public partial class V1beta1BackupInstanceDiskSpecForProviderSnapshotResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -314,6 +326,7 @@ public enum V1beta1BackupInstanceDiskSpecForProviderVaultIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupInstanceDiskSpecForProviderVaultIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -327,6 +340,7 @@ public partial class V1beta1BackupInstanceDiskSpecForProviderVaultIdRefPolicy
     public V1beta1BackupInstanceDiskSpecForProviderVaultIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a BackupVault in dataprotection to populate vaultId.</summary>
 public partial class V1beta1BackupInstanceDiskSpecForProviderVaultIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -358,6 +372,7 @@ public enum V1beta1BackupInstanceDiskSpecForProviderVaultIdSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupInstanceDiskSpecForProviderVaultIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -371,6 +386,7 @@ public partial class V1beta1BackupInstanceDiskSpecForProviderVaultIdSelectorPoli
     public V1beta1BackupInstanceDiskSpecForProviderVaultIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a BackupVault in dataprotection to populate vaultId.</summary>
 public partial class V1beta1BackupInstanceDiskSpecForProviderVaultIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -386,6 +402,7 @@ public partial class V1beta1BackupInstanceDiskSpecForProviderVaultIdSelector
     public V1beta1BackupInstanceDiskSpecForProviderVaultIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupInstanceDiskSpecForProvider
 {
     /// <summary>The ID of the Backup Policy.</summary>
@@ -461,6 +478,7 @@ public enum V1beta1BackupInstanceDiskSpecInitProviderBackupPolicyIdRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupInstanceDiskSpecInitProviderBackupPolicyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -474,6 +492,7 @@ public partial class V1beta1BackupInstanceDiskSpecInitProviderBackupPolicyIdRefP
     public V1beta1BackupInstanceDiskSpecInitProviderBackupPolicyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a BackupPolicyDisk in dataprotection to populate backupPolicyId.</summary>
 public partial class V1beta1BackupInstanceDiskSpecInitProviderBackupPolicyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -505,6 +524,7 @@ public enum V1beta1BackupInstanceDiskSpecInitProviderBackupPolicyIdSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupInstanceDiskSpecInitProviderBackupPolicyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -518,6 +538,7 @@ public partial class V1beta1BackupInstanceDiskSpecInitProviderBackupPolicyIdSele
     public V1beta1BackupInstanceDiskSpecInitProviderBackupPolicyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a BackupPolicyDisk in dataprotection to populate backupPolicyId.</summary>
 public partial class V1beta1BackupInstanceDiskSpecInitProviderBackupPolicyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -553,6 +574,7 @@ public enum V1beta1BackupInstanceDiskSpecInitProviderDiskIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupInstanceDiskSpecInitProviderDiskIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -566,6 +588,7 @@ public partial class V1beta1BackupInstanceDiskSpecInitProviderDiskIdRefPolicy
     public V1beta1BackupInstanceDiskSpecInitProviderDiskIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ManagedDisk in compute to populate diskId.</summary>
 public partial class V1beta1BackupInstanceDiskSpecInitProviderDiskIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -597,6 +620,7 @@ public enum V1beta1BackupInstanceDiskSpecInitProviderDiskIdSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupInstanceDiskSpecInitProviderDiskIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -610,6 +634,7 @@ public partial class V1beta1BackupInstanceDiskSpecInitProviderDiskIdSelectorPoli
     public V1beta1BackupInstanceDiskSpecInitProviderDiskIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ManagedDisk in compute to populate diskId.</summary>
 public partial class V1beta1BackupInstanceDiskSpecInitProviderDiskIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -645,6 +670,7 @@ public enum V1beta1BackupInstanceDiskSpecInitProviderSnapshotResourceGroupNameRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupInstanceDiskSpecInitProviderSnapshotResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -658,6 +684,7 @@ public partial class V1beta1BackupInstanceDiskSpecInitProviderSnapshotResourceGr
     public V1beta1BackupInstanceDiskSpecInitProviderSnapshotResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate snapshotResourceGroupName.</summary>
 public partial class V1beta1BackupInstanceDiskSpecInitProviderSnapshotResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -689,6 +716,7 @@ public enum V1beta1BackupInstanceDiskSpecInitProviderSnapshotResourceGroupNameSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupInstanceDiskSpecInitProviderSnapshotResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -702,6 +730,7 @@ public partial class V1beta1BackupInstanceDiskSpecInitProviderSnapshotResourceGr
     public V1beta1BackupInstanceDiskSpecInitProviderSnapshotResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate snapshotResourceGroupName.</summary>
 public partial class V1beta1BackupInstanceDiskSpecInitProviderSnapshotResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -717,6 +746,7 @@ public partial class V1beta1BackupInstanceDiskSpecInitProviderSnapshotResourceGr
     public V1beta1BackupInstanceDiskSpecInitProviderSnapshotResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1BackupInstanceDiskSpecInitProvider
 {
     /// <summary>The ID of the Backup Policy.</summary>
@@ -802,6 +832,7 @@ public enum V1beta1BackupInstanceDiskSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupInstanceDiskSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -815,6 +846,7 @@ public partial class V1beta1BackupInstanceDiskSpecProviderConfigRefPolicy
     public V1beta1BackupInstanceDiskSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1BackupInstanceDiskSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -846,6 +878,7 @@ public enum V1beta1BackupInstanceDiskSpecPublishConnectionDetailsToConfigRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupInstanceDiskSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -859,6 +892,7 @@ public partial class V1beta1BackupInstanceDiskSpecPublishConnectionDetailsToConf
     public V1beta1BackupInstanceDiskSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1BackupInstanceDiskSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -870,6 +904,7 @@ public partial class V1beta1BackupInstanceDiskSpecPublishConnectionDetailsToConf
     public V1beta1BackupInstanceDiskSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1BackupInstanceDiskSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -885,6 +920,7 @@ public partial class V1beta1BackupInstanceDiskSpecPublishConnectionDetailsToMeta
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1BackupInstanceDiskSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -900,6 +936,7 @@ public partial class V1beta1BackupInstanceDiskSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1BackupInstanceDiskSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -911,6 +948,7 @@ public partial class V1beta1BackupInstanceDiskSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>BackupInstanceDiskSpec defines the desired state of BackupInstanceDisk</summary>
 public partial class V1beta1BackupInstanceDiskSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -943,6 +981,7 @@ public partial class V1beta1BackupInstanceDiskSpec
     public V1beta1BackupInstanceDiskSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupInstanceDiskStatusAtProvider
 {
     /// <summary>The ID of the Backup Policy.</summary>
@@ -970,6 +1009,7 @@ public partial class V1beta1BackupInstanceDiskStatusAtProvider
     public string? VaultId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1BackupInstanceDiskStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -997,6 +1037,7 @@ public partial class V1beta1BackupInstanceDiskStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>BackupInstanceDiskStatus defines the observed state of BackupInstanceDisk.</summary>
 public partial class V1beta1BackupInstanceDiskStatus
 {
     /// <summary></summary>
@@ -1013,6 +1054,7 @@ public partial class V1beta1BackupInstanceDiskStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>BackupInstanceDisk is the Schema for the BackupInstanceDisks API. Manages a Backup Instance to back up Disk.</summary>
 public partial class V1beta1BackupInstanceDisk : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BackupInstanceDiskSpec>, IStatus<V1beta1BackupInstanceDiskStatus>
 {
     public const string KubeApiVersion = "v1beta1";

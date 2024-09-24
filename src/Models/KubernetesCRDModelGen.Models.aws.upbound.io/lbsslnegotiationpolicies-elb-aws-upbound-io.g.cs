@@ -18,6 +18,7 @@ public enum V1beta1LBSSLNegotiationPolicySpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1LBSSLNegotiationPolicySpecForProviderAttribute
 {
     /// <summary>The name of the SSL negotiation policy.</summary>
@@ -49,6 +50,7 @@ public enum V1beta1LBSSLNegotiationPolicySpecForProviderLoadBalancerRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LBSSLNegotiationPolicySpecForProviderLoadBalancerRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -62,6 +64,7 @@ public partial class V1beta1LBSSLNegotiationPolicySpecForProviderLoadBalancerRef
     public V1beta1LBSSLNegotiationPolicySpecForProviderLoadBalancerRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ELB in elb to populate loadBalancer.</summary>
 public partial class V1beta1LBSSLNegotiationPolicySpecForProviderLoadBalancerRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -93,6 +96,7 @@ public enum V1beta1LBSSLNegotiationPolicySpecForProviderLoadBalancerSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LBSSLNegotiationPolicySpecForProviderLoadBalancerSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -106,6 +110,7 @@ public partial class V1beta1LBSSLNegotiationPolicySpecForProviderLoadBalancerSel
     public V1beta1LBSSLNegotiationPolicySpecForProviderLoadBalancerSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ELB in elb to populate loadBalancer.</summary>
 public partial class V1beta1LBSSLNegotiationPolicySpecForProviderLoadBalancerSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1LBSSLNegotiationPolicySpecForProviderLoadBalancerSel
     public V1beta1LBSSLNegotiationPolicySpecForProviderLoadBalancerSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBSSLNegotiationPolicySpecForProvider
 {
     /// <summary>An SSL Negotiation policy attribute. Each has two properties:</summary>
@@ -156,6 +162,7 @@ public partial class V1beta1LBSSLNegotiationPolicySpecForProvider
     public IDictionary<string, string>? Triggers { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBSSLNegotiationPolicySpecInitProviderAttribute
 {
     /// <summary>The name of the SSL negotiation policy.</summary>
@@ -187,6 +194,7 @@ public enum V1beta1LBSSLNegotiationPolicySpecInitProviderLoadBalancerRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LBSSLNegotiationPolicySpecInitProviderLoadBalancerRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -200,6 +208,7 @@ public partial class V1beta1LBSSLNegotiationPolicySpecInitProviderLoadBalancerRe
     public V1beta1LBSSLNegotiationPolicySpecInitProviderLoadBalancerRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ELB in elb to populate loadBalancer.</summary>
 public partial class V1beta1LBSSLNegotiationPolicySpecInitProviderLoadBalancerRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -231,6 +240,7 @@ public enum V1beta1LBSSLNegotiationPolicySpecInitProviderLoadBalancerSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LBSSLNegotiationPolicySpecInitProviderLoadBalancerSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -244,6 +254,7 @@ public partial class V1beta1LBSSLNegotiationPolicySpecInitProviderLoadBalancerSe
     public V1beta1LBSSLNegotiationPolicySpecInitProviderLoadBalancerSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ELB in elb to populate loadBalancer.</summary>
 public partial class V1beta1LBSSLNegotiationPolicySpecInitProviderLoadBalancerSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -259,6 +270,7 @@ public partial class V1beta1LBSSLNegotiationPolicySpecInitProviderLoadBalancerSe
     public V1beta1LBSSLNegotiationPolicySpecInitProviderLoadBalancerSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1LBSSLNegotiationPolicySpecInitProvider
 {
     /// <summary>An SSL Negotiation policy attribute. Each has two properties:</summary>
@@ -332,6 +344,7 @@ public enum V1beta1LBSSLNegotiationPolicySpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LBSSLNegotiationPolicySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -345,6 +358,7 @@ public partial class V1beta1LBSSLNegotiationPolicySpecProviderConfigRefPolicy
     public V1beta1LBSSLNegotiationPolicySpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1LBSSLNegotiationPolicySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -376,6 +390,7 @@ public enum V1beta1LBSSLNegotiationPolicySpecPublishConnectionDetailsToConfigRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LBSSLNegotiationPolicySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -389,6 +404,7 @@ public partial class V1beta1LBSSLNegotiationPolicySpecPublishConnectionDetailsTo
     public V1beta1LBSSLNegotiationPolicySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1LBSSLNegotiationPolicySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -400,6 +416,7 @@ public partial class V1beta1LBSSLNegotiationPolicySpecPublishConnectionDetailsTo
     public V1beta1LBSSLNegotiationPolicySpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1LBSSLNegotiationPolicySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -415,6 +432,7 @@ public partial class V1beta1LBSSLNegotiationPolicySpecPublishConnectionDetailsTo
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1LBSSLNegotiationPolicySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -430,6 +448,7 @@ public partial class V1beta1LBSSLNegotiationPolicySpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1LBSSLNegotiationPolicySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -441,6 +460,7 @@ public partial class V1beta1LBSSLNegotiationPolicySpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>LBSSLNegotiationPolicySpec defines the desired state of LBSSLNegotiationPolicy</summary>
 public partial class V1beta1LBSSLNegotiationPolicySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -473,6 +493,7 @@ public partial class V1beta1LBSSLNegotiationPolicySpec
     public V1beta1LBSSLNegotiationPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBSSLNegotiationPolicyStatusAtProviderAttribute
 {
     /// <summary>The name of the SSL negotiation policy.</summary>
@@ -484,6 +505,7 @@ public partial class V1beta1LBSSLNegotiationPolicyStatusAtProviderAttribute
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LBSSLNegotiationPolicyStatusAtProvider
 {
     /// <summary>An SSL Negotiation policy attribute. Each has two properties:</summary>
@@ -511,6 +533,7 @@ public partial class V1beta1LBSSLNegotiationPolicyStatusAtProvider
     public IDictionary<string, string>? Triggers { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1LBSSLNegotiationPolicyStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -538,6 +561,7 @@ public partial class V1beta1LBSSLNegotiationPolicyStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>LBSSLNegotiationPolicyStatus defines the observed state of LBSSLNegotiationPolicy.</summary>
 public partial class V1beta1LBSSLNegotiationPolicyStatus
 {
     /// <summary></summary>
@@ -554,6 +578,7 @@ public partial class V1beta1LBSSLNegotiationPolicyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>LBSSLNegotiationPolicy is the Schema for the LBSSLNegotiationPolicys API. Provides a load balancer SSL negotiation policy, which allows an ELB to control which ciphers and protocols are supported during SSL negotiations between a client and a load balancer.</summary>
 public partial class V1beta1LBSSLNegotiationPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LBSSLNegotiationPolicySpec>, IStatus<V1beta1LBSSLNegotiationPolicyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

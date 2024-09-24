@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.managedidentity.azure.com;
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20230131storageFederatedIdentityCredentialSpecIssuerFromConfig
 {
     /// <summary>Key is the key in the Kubernetes configmap being referenced</summary>
@@ -19,6 +20,7 @@ public partial class V1api20230131storageFederatedIdentityCredentialSpecIssuerFr
     public string Name { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a managedidentity.azure.com/UserAssignedIdentity resource</summary>
 public partial class V1api20230131storageFederatedIdentityCredentialSpecOwner
 {
     /// <summary></summary>
@@ -30,6 +32,7 @@ public partial class V1api20230131storageFederatedIdentityCredentialSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20230131storageFederatedIdentityCredentialSpecSubjectFromConfig
 {
     /// <summary>Key is the key in the Kubernetes configmap being referenced</summary>
@@ -41,6 +44,7 @@ public partial class V1api20230131storageFederatedIdentityCredentialSpecSubjectF
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230131.UserAssignedIdentities_FederatedIdentityCredential_Spec</summary>
 public partial class V1api20230131storageFederatedIdentityCredentialSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -80,6 +84,7 @@ public partial class V1api20230131storageFederatedIdentityCredentialSpec
     public V1api20230131storageFederatedIdentityCredentialSpecSubjectFromConfig? SubjectFromConfig { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20230131storageFederatedIdentityCredentialStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -111,6 +116,7 @@ public partial class V1api20230131storageFederatedIdentityCredentialStatusCondit
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230131.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 public partial class V1api20230131storageFederatedIdentityCredentialStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -142,6 +148,7 @@ public partial class V1api20230131storageFederatedIdentityCredentialStatusSystem
     public string? LastModifiedByType { get; set; }
 }
 
+/// <summary>Storage version of v1api20230131.UserAssignedIdentities_FederatedIdentityCredential_STATUS</summary>
 public partial class V1api20230131storageFederatedIdentityCredentialStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -182,6 +189,7 @@ public partial class V1api20230131storageFederatedIdentityCredentialStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20230131.FederatedIdentityCredential Generator information: - Generated from: /msi/resource-manager/Microsoft.ManagedIdentity/stable/2023-01-31/ManagedIdentity.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{resourceName}/federatedIdentityCredentials/{federatedIdentityCredentialResourceName}</summary>
 public partial class V1api20230131storageFederatedIdentityCredential : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230131storageFederatedIdentityCredentialSpec>, IStatus<V1api20230131storageFederatedIdentityCredentialStatus>
 {
     public const string KubeApiVersion = "v1api20230131storage";

@@ -38,6 +38,7 @@ public enum V1beta1FrontdoorRulesEngineSpecForProviderFrontdoorNameRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FrontdoorRulesEngineSpecForProviderFrontdoorNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1FrontdoorRulesEngineSpecForProviderFrontdoorNameRefP
     public V1beta1FrontdoorRulesEngineSpecForProviderFrontdoorNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a FrontDoor in network to populate frontdoorName.</summary>
 public partial class V1beta1FrontdoorRulesEngineSpecForProviderFrontdoorNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1FrontdoorRulesEngineSpecForProviderFrontdoorNameSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FrontdoorRulesEngineSpecForProviderFrontdoorNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1FrontdoorRulesEngineSpecForProviderFrontdoorNameSele
     public V1beta1FrontdoorRulesEngineSpecForProviderFrontdoorNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a FrontDoor in network to populate frontdoorName.</summary>
 public partial class V1beta1FrontdoorRulesEngineSpecForProviderFrontdoorNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1FrontdoorRulesEngineSpecForProviderResourceGroupNameRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FrontdoorRulesEngineSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1FrontdoorRulesEngineSpecForProviderResourceGroupName
     public V1beta1FrontdoorRulesEngineSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1FrontdoorRulesEngineSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1FrontdoorRulesEngineSpecForProviderResourceGroupNameSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FrontdoorRulesEngineSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1FrontdoorRulesEngineSpecForProviderResourceGroupName
     public V1beta1FrontdoorRulesEngineSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1FrontdoorRulesEngineSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1FrontdoorRulesEngineSpecForProviderResourceGroupName
     public V1beta1FrontdoorRulesEngineSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorRulesEngineSpecForProviderRuleActionRequestHeader
 {
     /// <summary>can be set to Overwrite, Append or Delete.</summary>
@@ -217,6 +226,7 @@ public partial class V1beta1FrontdoorRulesEngineSpecForProviderRuleActionRequest
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorRulesEngineSpecForProviderRuleActionResponseHeader
 {
     /// <summary>can be set to Overwrite, Append or Delete.</summary>
@@ -232,6 +242,7 @@ public partial class V1beta1FrontdoorRulesEngineSpecForProviderRuleActionRespons
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorRulesEngineSpecForProviderRuleAction
 {
     /// <summary>A request_header block as defined below.</summary>
@@ -243,6 +254,7 @@ public partial class V1beta1FrontdoorRulesEngineSpecForProviderRuleAction
     public IList<V1beta1FrontdoorRulesEngineSpecForProviderRuleActionResponseHeader>? ResponseHeader { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorRulesEngineSpecForProviderRuleMatchCondition
 {
     /// <summary>can be set to true or false to negate the given condition. Defaults to false.</summary>
@@ -270,6 +282,7 @@ public partial class V1beta1FrontdoorRulesEngineSpecForProviderRuleMatchConditio
     public string? Variable { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorRulesEngineSpecForProviderRule
 {
     /// <summary>An action block as defined below.</summary>
@@ -289,6 +302,7 @@ public partial class V1beta1FrontdoorRulesEngineSpecForProviderRule
     public double? Priority { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorRulesEngineSpecForProvider
 {
     /// <summary>Whether this Rules engine configuration is enabled? Defaults to true.</summary>
@@ -324,6 +338,7 @@ public partial class V1beta1FrontdoorRulesEngineSpecForProvider
     public IList<V1beta1FrontdoorRulesEngineSpecForProviderRule>? Rule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorRulesEngineSpecInitProviderRuleActionRequestHeader
 {
     /// <summary>can be set to Overwrite, Append or Delete.</summary>
@@ -339,6 +354,7 @@ public partial class V1beta1FrontdoorRulesEngineSpecInitProviderRuleActionReques
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorRulesEngineSpecInitProviderRuleActionResponseHeader
 {
     /// <summary>can be set to Overwrite, Append or Delete.</summary>
@@ -354,6 +370,7 @@ public partial class V1beta1FrontdoorRulesEngineSpecInitProviderRuleActionRespon
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorRulesEngineSpecInitProviderRuleAction
 {
     /// <summary>A request_header block as defined below.</summary>
@@ -365,6 +382,7 @@ public partial class V1beta1FrontdoorRulesEngineSpecInitProviderRuleAction
     public IList<V1beta1FrontdoorRulesEngineSpecInitProviderRuleActionResponseHeader>? ResponseHeader { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorRulesEngineSpecInitProviderRuleMatchCondition
 {
     /// <summary>can be set to true or false to negate the given condition. Defaults to false.</summary>
@@ -392,6 +410,7 @@ public partial class V1beta1FrontdoorRulesEngineSpecInitProviderRuleMatchConditi
     public string? Variable { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorRulesEngineSpecInitProviderRule
 {
     /// <summary>An action block as defined below.</summary>
@@ -411,6 +430,7 @@ public partial class V1beta1FrontdoorRulesEngineSpecInitProviderRule
     public double? Priority { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1FrontdoorRulesEngineSpecInitProvider
 {
     /// <summary>Whether this Rules engine configuration is enabled? Defaults to true.</summary>
@@ -464,6 +484,7 @@ public enum V1beta1FrontdoorRulesEngineSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FrontdoorRulesEngineSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -477,6 +498,7 @@ public partial class V1beta1FrontdoorRulesEngineSpecProviderConfigRefPolicy
     public V1beta1FrontdoorRulesEngineSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1FrontdoorRulesEngineSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -508,6 +530,7 @@ public enum V1beta1FrontdoorRulesEngineSpecPublishConnectionDetailsToConfigRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FrontdoorRulesEngineSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -521,6 +544,7 @@ public partial class V1beta1FrontdoorRulesEngineSpecPublishConnectionDetailsToCo
     public V1beta1FrontdoorRulesEngineSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1FrontdoorRulesEngineSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -532,6 +556,7 @@ public partial class V1beta1FrontdoorRulesEngineSpecPublishConnectionDetailsToCo
     public V1beta1FrontdoorRulesEngineSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1FrontdoorRulesEngineSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -547,6 +572,7 @@ public partial class V1beta1FrontdoorRulesEngineSpecPublishConnectionDetailsToMe
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1FrontdoorRulesEngineSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -562,6 +588,7 @@ public partial class V1beta1FrontdoorRulesEngineSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1FrontdoorRulesEngineSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -573,6 +600,7 @@ public partial class V1beta1FrontdoorRulesEngineSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>FrontdoorRulesEngineSpec defines the desired state of FrontdoorRulesEngine</summary>
 public partial class V1beta1FrontdoorRulesEngineSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -605,6 +633,7 @@ public partial class V1beta1FrontdoorRulesEngineSpec
     public V1beta1FrontdoorRulesEngineSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorRulesEngineStatusAtProviderRuleActionRequestHeader
 {
     /// <summary>can be set to Overwrite, Append or Delete.</summary>
@@ -620,6 +649,7 @@ public partial class V1beta1FrontdoorRulesEngineStatusAtProviderRuleActionReques
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorRulesEngineStatusAtProviderRuleActionResponseHeader
 {
     /// <summary>can be set to Overwrite, Append or Delete.</summary>
@@ -635,6 +665,7 @@ public partial class V1beta1FrontdoorRulesEngineStatusAtProviderRuleActionRespon
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorRulesEngineStatusAtProviderRuleAction
 {
     /// <summary>A request_header block as defined below.</summary>
@@ -646,6 +677,7 @@ public partial class V1beta1FrontdoorRulesEngineStatusAtProviderRuleAction
     public IList<V1beta1FrontdoorRulesEngineStatusAtProviderRuleActionResponseHeader>? ResponseHeader { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorRulesEngineStatusAtProviderRuleMatchCondition
 {
     /// <summary>can be set to true or false to negate the given condition. Defaults to false.</summary>
@@ -673,6 +705,7 @@ public partial class V1beta1FrontdoorRulesEngineStatusAtProviderRuleMatchConditi
     public string? Variable { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorRulesEngineStatusAtProviderRule
 {
     /// <summary>An action block as defined below.</summary>
@@ -692,6 +725,7 @@ public partial class V1beta1FrontdoorRulesEngineStatusAtProviderRule
     public double? Priority { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorRulesEngineStatusAtProvider
 {
     /// <summary>Whether this Rules engine configuration is enabled? Defaults to true.</summary>
@@ -719,6 +753,7 @@ public partial class V1beta1FrontdoorRulesEngineStatusAtProvider
     public IList<V1beta1FrontdoorRulesEngineStatusAtProviderRule>? Rule { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1FrontdoorRulesEngineStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -746,6 +781,7 @@ public partial class V1beta1FrontdoorRulesEngineStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>FrontdoorRulesEngineStatus defines the observed state of FrontdoorRulesEngine.</summary>
 public partial class V1beta1FrontdoorRulesEngineStatus
 {
     /// <summary></summary>
@@ -762,6 +798,7 @@ public partial class V1beta1FrontdoorRulesEngineStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>FrontdoorRulesEngine is the Schema for the FrontdoorRulesEngines API. Manages an Azure Front Door (classic) Rules Engine configuration and rules.</summary>
 public partial class V1beta1FrontdoorRulesEngine : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FrontdoorRulesEngineSpec>, IStatus<V1beta1FrontdoorRulesEngineStatus>
 {
     public const string KubeApiVersion = "v1beta1";

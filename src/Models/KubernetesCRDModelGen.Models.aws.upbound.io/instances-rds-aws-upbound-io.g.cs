@@ -18,6 +18,7 @@ public enum V1beta2InstanceSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta2InstanceSpecForProviderBlueGreenUpdate
 {
     /// <summary>Enables low-downtime updates when true. Default is false.</summary>
@@ -45,6 +46,7 @@ public enum V1beta2InstanceSpecForProviderDbSubnetGroupNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2InstanceSpecForProviderDbSubnetGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -58,6 +60,7 @@ public partial class V1beta2InstanceSpecForProviderDbSubnetGroupNameRefPolicy
     public V1beta2InstanceSpecForProviderDbSubnetGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SubnetGroup in rds to populate dbSubnetGroupName.</summary>
 public partial class V1beta2InstanceSpecForProviderDbSubnetGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -89,6 +92,7 @@ public enum V1beta2InstanceSpecForProviderDbSubnetGroupNameSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2InstanceSpecForProviderDbSubnetGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -102,6 +106,7 @@ public partial class V1beta2InstanceSpecForProviderDbSubnetGroupNameSelectorPoli
     public V1beta2InstanceSpecForProviderDbSubnetGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SubnetGroup in rds to populate dbSubnetGroupName.</summary>
 public partial class V1beta2InstanceSpecForProviderDbSubnetGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -137,6 +142,7 @@ public enum V1beta2InstanceSpecForProviderKmsKeyIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2InstanceSpecForProviderKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -150,6 +156,7 @@ public partial class V1beta2InstanceSpecForProviderKmsKeyIdRefPolicy
     public V1beta2InstanceSpecForProviderKmsKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta2InstanceSpecForProviderKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -181,6 +188,7 @@ public enum V1beta2InstanceSpecForProviderKmsKeyIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2InstanceSpecForProviderKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -194,6 +202,7 @@ public partial class V1beta2InstanceSpecForProviderKmsKeyIdSelectorPolicy
     public V1beta2InstanceSpecForProviderKmsKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta2InstanceSpecForProviderKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -229,6 +238,7 @@ public enum V1beta2InstanceSpecForProviderMasterUserSecretKmsKeyIdRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2InstanceSpecForProviderMasterUserSecretKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -242,6 +252,7 @@ public partial class V1beta2InstanceSpecForProviderMasterUserSecretKmsKeyIdRefPo
     public V1beta2InstanceSpecForProviderMasterUserSecretKmsKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate masterUserSecretKmsKeyId.</summary>
 public partial class V1beta2InstanceSpecForProviderMasterUserSecretKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -273,6 +284,7 @@ public enum V1beta2InstanceSpecForProviderMasterUserSecretKmsKeyIdSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2InstanceSpecForProviderMasterUserSecretKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -286,6 +298,7 @@ public partial class V1beta2InstanceSpecForProviderMasterUserSecretKmsKeyIdSelec
     public V1beta2InstanceSpecForProviderMasterUserSecretKmsKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate masterUserSecretKmsKeyId.</summary>
 public partial class V1beta2InstanceSpecForProviderMasterUserSecretKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -321,6 +334,7 @@ public enum V1beta2InstanceSpecForProviderMonitoringRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2InstanceSpecForProviderMonitoringRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -334,6 +348,7 @@ public partial class V1beta2InstanceSpecForProviderMonitoringRoleArnRefPolicy
     public V1beta2InstanceSpecForProviderMonitoringRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate monitoringRoleArn.</summary>
 public partial class V1beta2InstanceSpecForProviderMonitoringRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -365,6 +380,7 @@ public enum V1beta2InstanceSpecForProviderMonitoringRoleArnSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2InstanceSpecForProviderMonitoringRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -378,6 +394,7 @@ public partial class V1beta2InstanceSpecForProviderMonitoringRoleArnSelectorPoli
     public V1beta2InstanceSpecForProviderMonitoringRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate monitoringRoleArn.</summary>
 public partial class V1beta2InstanceSpecForProviderMonitoringRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -413,6 +430,7 @@ public enum V1beta2InstanceSpecForProviderParameterGroupNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2InstanceSpecForProviderParameterGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -426,6 +444,7 @@ public partial class V1beta2InstanceSpecForProviderParameterGroupNameRefPolicy
     public V1beta2InstanceSpecForProviderParameterGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ParameterGroup in rds to populate parameterGroupName.</summary>
 public partial class V1beta2InstanceSpecForProviderParameterGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -457,6 +476,7 @@ public enum V1beta2InstanceSpecForProviderParameterGroupNameSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2InstanceSpecForProviderParameterGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -470,6 +490,7 @@ public partial class V1beta2InstanceSpecForProviderParameterGroupNameSelectorPol
     public V1beta2InstanceSpecForProviderParameterGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ParameterGroup in rds to populate parameterGroupName.</summary>
 public partial class V1beta2InstanceSpecForProviderParameterGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -485,6 +506,7 @@ public partial class V1beta2InstanceSpecForProviderParameterGroupNameSelector
     public V1beta2InstanceSpecForProviderParameterGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Password for the master DB user. Note that this may show up in logs, and it will be stored in the state file. Cannot be set if manage_master_user_password is set to true. Password for the master DB user. If you set autoGeneratePassword to true, the Secret referenced here will be created or updated with generated password if it does not already contain one.</summary>
 public partial class V1beta2InstanceSpecForProviderPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -520,6 +542,7 @@ public enum V1beta2InstanceSpecForProviderReplicateSourceDbRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2InstanceSpecForProviderReplicateSourceDbRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -533,6 +556,7 @@ public partial class V1beta2InstanceSpecForProviderReplicateSourceDbRefPolicy
     public V1beta2InstanceSpecForProviderReplicateSourceDbRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Instance in rds to populate replicateSourceDb.</summary>
 public partial class V1beta2InstanceSpecForProviderReplicateSourceDbRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -564,6 +588,7 @@ public enum V1beta2InstanceSpecForProviderReplicateSourceDbSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2InstanceSpecForProviderReplicateSourceDbSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -577,6 +602,7 @@ public partial class V1beta2InstanceSpecForProviderReplicateSourceDbSelectorPoli
     public V1beta2InstanceSpecForProviderReplicateSourceDbSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Instance in rds to populate replicateSourceDb.</summary>
 public partial class V1beta2InstanceSpecForProviderReplicateSourceDbSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -592,6 +618,7 @@ public partial class V1beta2InstanceSpecForProviderReplicateSourceDbSelector
     public V1beta2InstanceSpecForProviderReplicateSourceDbSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2InstanceSpecForProviderRestoreToPointInTime
 {
     /// <summary>The date and time to restore from. Value must be a time in Universal Coordinated Time (UTC) format and must be before the latest restorable time for the DB instance. Cannot be specified with use_latest_restorable_time.</summary>
@@ -615,6 +642,7 @@ public partial class V1beta2InstanceSpecForProviderRestoreToPointInTime
     public bool? UseLatestRestorableTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2InstanceSpecForProviderS3Import
 {
     /// <summary>The bucket name where your backup is stored</summary>
@@ -658,6 +686,7 @@ public enum V1beta2InstanceSpecForProviderVpcSecurityGroupIdRefsPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2InstanceSpecForProviderVpcSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -671,6 +700,7 @@ public partial class V1beta2InstanceSpecForProviderVpcSecurityGroupIdRefsPolicy
     public V1beta2InstanceSpecForProviderVpcSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta2InstanceSpecForProviderVpcSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -702,6 +732,7 @@ public enum V1beta2InstanceSpecForProviderVpcSecurityGroupIdSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2InstanceSpecForProviderVpcSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -715,6 +746,7 @@ public partial class V1beta2InstanceSpecForProviderVpcSecurityGroupIdSelectorPol
     public V1beta2InstanceSpecForProviderVpcSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate vpcSecurityGroupIds.</summary>
 public partial class V1beta2InstanceSpecForProviderVpcSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -730,6 +762,7 @@ public partial class V1beta2InstanceSpecForProviderVpcSecurityGroupIdSelector
     public V1beta2InstanceSpecForProviderVpcSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2InstanceSpecForProvider
 {
     /// <summary>The allocated storage in gibibytes. If max_allocated_storage is configured, this argument represents the initial storage allocation and differences from the configuration will be ignored automatically when Storage Autoscaling occurs. If replicate_source_db is set, the value is ignored during the creation of the instance.</summary>
@@ -1061,6 +1094,7 @@ public partial class V1beta2InstanceSpecForProvider
     public IList<string>? VpcSecurityGroupIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2InstanceSpecInitProviderBlueGreenUpdate
 {
     /// <summary>Enables low-downtime updates when true. Default is false.</summary>
@@ -1088,6 +1122,7 @@ public enum V1beta2InstanceSpecInitProviderDbSubnetGroupNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2InstanceSpecInitProviderDbSubnetGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1101,6 +1136,7 @@ public partial class V1beta2InstanceSpecInitProviderDbSubnetGroupNameRefPolicy
     public V1beta2InstanceSpecInitProviderDbSubnetGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SubnetGroup in rds to populate dbSubnetGroupName.</summary>
 public partial class V1beta2InstanceSpecInitProviderDbSubnetGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1132,6 +1168,7 @@ public enum V1beta2InstanceSpecInitProviderDbSubnetGroupNameSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2InstanceSpecInitProviderDbSubnetGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1145,6 +1182,7 @@ public partial class V1beta2InstanceSpecInitProviderDbSubnetGroupNameSelectorPol
     public V1beta2InstanceSpecInitProviderDbSubnetGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SubnetGroup in rds to populate dbSubnetGroupName.</summary>
 public partial class V1beta2InstanceSpecInitProviderDbSubnetGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1180,6 +1218,7 @@ public enum V1beta2InstanceSpecInitProviderKmsKeyIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2InstanceSpecInitProviderKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1193,6 +1232,7 @@ public partial class V1beta2InstanceSpecInitProviderKmsKeyIdRefPolicy
     public V1beta2InstanceSpecInitProviderKmsKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta2InstanceSpecInitProviderKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1224,6 +1264,7 @@ public enum V1beta2InstanceSpecInitProviderKmsKeyIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2InstanceSpecInitProviderKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1237,6 +1278,7 @@ public partial class V1beta2InstanceSpecInitProviderKmsKeyIdSelectorPolicy
     public V1beta2InstanceSpecInitProviderKmsKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta2InstanceSpecInitProviderKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1272,6 +1314,7 @@ public enum V1beta2InstanceSpecInitProviderMasterUserSecretKmsKeyIdRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2InstanceSpecInitProviderMasterUserSecretKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1285,6 +1328,7 @@ public partial class V1beta2InstanceSpecInitProviderMasterUserSecretKmsKeyIdRefP
     public V1beta2InstanceSpecInitProviderMasterUserSecretKmsKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate masterUserSecretKmsKeyId.</summary>
 public partial class V1beta2InstanceSpecInitProviderMasterUserSecretKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1316,6 +1360,7 @@ public enum V1beta2InstanceSpecInitProviderMasterUserSecretKmsKeyIdSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2InstanceSpecInitProviderMasterUserSecretKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1329,6 +1374,7 @@ public partial class V1beta2InstanceSpecInitProviderMasterUserSecretKmsKeyIdSele
     public V1beta2InstanceSpecInitProviderMasterUserSecretKmsKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate masterUserSecretKmsKeyId.</summary>
 public partial class V1beta2InstanceSpecInitProviderMasterUserSecretKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1364,6 +1410,7 @@ public enum V1beta2InstanceSpecInitProviderMonitoringRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2InstanceSpecInitProviderMonitoringRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1377,6 +1424,7 @@ public partial class V1beta2InstanceSpecInitProviderMonitoringRoleArnRefPolicy
     public V1beta2InstanceSpecInitProviderMonitoringRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate monitoringRoleArn.</summary>
 public partial class V1beta2InstanceSpecInitProviderMonitoringRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1408,6 +1456,7 @@ public enum V1beta2InstanceSpecInitProviderMonitoringRoleArnSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2InstanceSpecInitProviderMonitoringRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1421,6 +1470,7 @@ public partial class V1beta2InstanceSpecInitProviderMonitoringRoleArnSelectorPol
     public V1beta2InstanceSpecInitProviderMonitoringRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate monitoringRoleArn.</summary>
 public partial class V1beta2InstanceSpecInitProviderMonitoringRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1456,6 +1506,7 @@ public enum V1beta2InstanceSpecInitProviderParameterGroupNameRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2InstanceSpecInitProviderParameterGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1469,6 +1520,7 @@ public partial class V1beta2InstanceSpecInitProviderParameterGroupNameRefPolicy
     public V1beta2InstanceSpecInitProviderParameterGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ParameterGroup in rds to populate parameterGroupName.</summary>
 public partial class V1beta2InstanceSpecInitProviderParameterGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1500,6 +1552,7 @@ public enum V1beta2InstanceSpecInitProviderParameterGroupNameSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2InstanceSpecInitProviderParameterGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1513,6 +1566,7 @@ public partial class V1beta2InstanceSpecInitProviderParameterGroupNameSelectorPo
     public V1beta2InstanceSpecInitProviderParameterGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ParameterGroup in rds to populate parameterGroupName.</summary>
 public partial class V1beta2InstanceSpecInitProviderParameterGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1528,6 +1582,7 @@ public partial class V1beta2InstanceSpecInitProviderParameterGroupNameSelector
     public V1beta2InstanceSpecInitProviderParameterGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Password for the master DB user. Note that this may show up in logs, and it will be stored in the state file. Cannot be set if manage_master_user_password is set to true. Password for the master DB user. If you set autoGeneratePassword to true, the Secret referenced here will be created or updated with generated password if it does not already contain one.</summary>
 public partial class V1beta2InstanceSpecInitProviderPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1563,6 +1618,7 @@ public enum V1beta2InstanceSpecInitProviderReplicateSourceDbRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2InstanceSpecInitProviderReplicateSourceDbRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1576,6 +1632,7 @@ public partial class V1beta2InstanceSpecInitProviderReplicateSourceDbRefPolicy
     public V1beta2InstanceSpecInitProviderReplicateSourceDbRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Instance in rds to populate replicateSourceDb.</summary>
 public partial class V1beta2InstanceSpecInitProviderReplicateSourceDbRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1607,6 +1664,7 @@ public enum V1beta2InstanceSpecInitProviderReplicateSourceDbSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2InstanceSpecInitProviderReplicateSourceDbSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1620,6 +1678,7 @@ public partial class V1beta2InstanceSpecInitProviderReplicateSourceDbSelectorPol
     public V1beta2InstanceSpecInitProviderReplicateSourceDbSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Instance in rds to populate replicateSourceDb.</summary>
 public partial class V1beta2InstanceSpecInitProviderReplicateSourceDbSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1635,6 +1694,7 @@ public partial class V1beta2InstanceSpecInitProviderReplicateSourceDbSelector
     public V1beta2InstanceSpecInitProviderReplicateSourceDbSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2InstanceSpecInitProviderRestoreToPointInTime
 {
     /// <summary>The date and time to restore from. Value must be a time in Universal Coordinated Time (UTC) format and must be before the latest restorable time for the DB instance. Cannot be specified with use_latest_restorable_time.</summary>
@@ -1658,6 +1718,7 @@ public partial class V1beta2InstanceSpecInitProviderRestoreToPointInTime
     public bool? UseLatestRestorableTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2InstanceSpecInitProviderS3Import
 {
     /// <summary>The bucket name where your backup is stored</summary>
@@ -1701,6 +1762,7 @@ public enum V1beta2InstanceSpecInitProviderVpcSecurityGroupIdRefsPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2InstanceSpecInitProviderVpcSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1714,6 +1776,7 @@ public partial class V1beta2InstanceSpecInitProviderVpcSecurityGroupIdRefsPolicy
     public V1beta2InstanceSpecInitProviderVpcSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta2InstanceSpecInitProviderVpcSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1745,6 +1808,7 @@ public enum V1beta2InstanceSpecInitProviderVpcSecurityGroupIdSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta2InstanceSpecInitProviderVpcSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1758,6 +1822,7 @@ public partial class V1beta2InstanceSpecInitProviderVpcSecurityGroupIdSelectorPo
     public V1beta2InstanceSpecInitProviderVpcSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate vpcSecurityGroupIds.</summary>
 public partial class V1beta2InstanceSpecInitProviderVpcSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1773,6 +1838,7 @@ public partial class V1beta2InstanceSpecInitProviderVpcSecurityGroupIdSelector
     public V1beta2InstanceSpecInitProviderVpcSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta2InstanceSpecInitProvider
 {
     /// <summary>The allocated storage in gibibytes. If max_allocated_storage is configured, this argument represents the initial storage allocation and differences from the configuration will be ignored automatically when Storage Autoscaling occurs. If replicate_source_db is set, the value is ignored during the creation of the instance.</summary>
@@ -2138,6 +2204,7 @@ public enum V1beta2InstanceSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2InstanceSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2151,6 +2218,7 @@ public partial class V1beta2InstanceSpecProviderConfigRefPolicy
     public V1beta2InstanceSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta2InstanceSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2182,6 +2250,7 @@ public enum V1beta2InstanceSpecPublishConnectionDetailsToConfigRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta2InstanceSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2195,6 +2264,7 @@ public partial class V1beta2InstanceSpecPublishConnectionDetailsToConfigRefPolic
     public V1beta2InstanceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta2InstanceSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2206,6 +2276,7 @@ public partial class V1beta2InstanceSpecPublishConnectionDetailsToConfigRef
     public V1beta2InstanceSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta2InstanceSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -2221,6 +2292,7 @@ public partial class V1beta2InstanceSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta2InstanceSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -2236,6 +2308,7 @@ public partial class V1beta2InstanceSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta2InstanceSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -2247,6 +2320,7 @@ public partial class V1beta2InstanceSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>InstanceSpec defines the desired state of Instance</summary>
 public partial class V1beta2InstanceSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -2279,6 +2353,7 @@ public partial class V1beta2InstanceSpec
     public V1beta2InstanceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2InstanceStatusAtProviderBlueGreenUpdate
 {
     /// <summary>Enables low-downtime updates when true. Default is false.</summary>
@@ -2286,6 +2361,7 @@ public partial class V1beta2InstanceStatusAtProviderBlueGreenUpdate
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2InstanceStatusAtProviderListenerEndpoint
 {
     /// <summary>The hostname of the RDS instance. See also endpoint and port.</summary>
@@ -2301,6 +2377,7 @@ public partial class V1beta2InstanceStatusAtProviderListenerEndpoint
     public double? Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2InstanceStatusAtProviderMasterUserSecret
 {
     /// <summary>The Amazon Web Services KMS key identifier that is used to encrypt the secret.</summary>
@@ -2316,6 +2393,7 @@ public partial class V1beta2InstanceStatusAtProviderMasterUserSecret
     public string? SecretStatus { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2InstanceStatusAtProviderRestoreToPointInTime
 {
     /// <summary>The date and time to restore from. Value must be a time in Universal Coordinated Time (UTC) format and must be before the latest restorable time for the DB instance. Cannot be specified with use_latest_restorable_time.</summary>
@@ -2339,6 +2417,7 @@ public partial class V1beta2InstanceStatusAtProviderRestoreToPointInTime
     public bool? UseLatestRestorableTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2InstanceStatusAtProviderS3Import
 {
     /// <summary>The bucket name where your backup is stored</summary>
@@ -2362,6 +2441,7 @@ public partial class V1beta2InstanceStatusAtProviderS3Import
     public string? SourceEngineVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta2InstanceStatusAtProvider
 {
     /// <summary>The hostname of the RDS instance. See also endpoint and port.</summary>
@@ -2677,6 +2757,7 @@ public partial class V1beta2InstanceStatusAtProvider
     public IList<string>? VpcSecurityGroupIds { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta2InstanceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2704,6 +2785,7 @@ public partial class V1beta2InstanceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>InstanceStatus defines the observed state of Instance.</summary>
 public partial class V1beta2InstanceStatus
 {
     /// <summary></summary>
@@ -2720,6 +2802,7 @@ public partial class V1beta2InstanceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Instance is the Schema for the Instances API. Provides an RDS instance resource.</summary>
 public partial class V1beta2Instance : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta2InstanceSpec>, IStatus<V1beta2InstanceStatus>
 {
     public const string KubeApiVersion = "v1beta2";

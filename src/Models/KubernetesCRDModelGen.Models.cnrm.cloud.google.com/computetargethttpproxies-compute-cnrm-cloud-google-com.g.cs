@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary>A reference to the ComputeURLMap resource that defines the mapping from URL to the BackendService.</summary>
 public partial class V1beta1ComputeTargetHTTPProxySpecUrlMapRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeURLMap` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1ComputeTargetHTTPProxySpecUrlMapRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeTargetHTTPProxySpec
 {
     /// <summary>Immutable. An optional description of this resource.</summary>
@@ -50,6 +52,7 @@ public partial class V1beta1ComputeTargetHTTPProxySpec
     public V1beta1ComputeTargetHTTPProxySpecUrlMapRef UrlMapRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeTargetHTTPProxyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -73,6 +76,7 @@ public partial class V1beta1ComputeTargetHTTPProxyStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeTargetHTTPProxyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -97,6 +101,7 @@ public partial class V1beta1ComputeTargetHTTPProxyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ComputeTargetHTTPProxy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeTargetHTTPProxySpec>, IStatus<V1beta1ComputeTargetHTTPProxyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

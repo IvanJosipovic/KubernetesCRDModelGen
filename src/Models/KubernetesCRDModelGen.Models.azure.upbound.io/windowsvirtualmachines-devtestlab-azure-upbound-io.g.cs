@@ -18,6 +18,7 @@ public enum V1beta1WindowsVirtualMachineSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderGalleryImageReference
 {
     /// <summary>The Offer of the Gallery Image. Changing this forces a new resource to be created.</summary>
@@ -37,6 +38,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProviderGalleryImageRefe
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderInboundNatRule
 {
     /// <summary>The Backend Port associated with this NAT Rule. Changing this forces a new resource to be created.</summary>
@@ -68,6 +70,7 @@ public enum V1beta1WindowsVirtualMachineSpecForProviderLabNameRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderLabNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -81,6 +84,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProviderLabNameRefPolicy
     public V1beta1WindowsVirtualMachineSpecForProviderLabNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Lab in devtestlab to populate labName.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderLabNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -112,6 +116,7 @@ public enum V1beta1WindowsVirtualMachineSpecForProviderLabNameSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderLabNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProviderLabNameSelectorP
     public V1beta1WindowsVirtualMachineSpecForProviderLabNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Lab in devtestlab to populate labName.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderLabNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -160,6 +166,7 @@ public enum V1beta1WindowsVirtualMachineSpecForProviderLabSubnetNameRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderLabSubnetNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -173,6 +180,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProviderLabSubnetNameRef
     public V1beta1WindowsVirtualMachineSpecForProviderLabSubnetNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate labSubnetName.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderLabSubnetNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -204,6 +212,7 @@ public enum V1beta1WindowsVirtualMachineSpecForProviderLabSubnetNameSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderLabSubnetNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -217,6 +226,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProviderLabSubnetNameSel
     public V1beta1WindowsVirtualMachineSpecForProviderLabSubnetNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate labSubnetName.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderLabSubnetNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -252,6 +262,7 @@ public enum V1beta1WindowsVirtualMachineSpecForProviderLabVirtualNetworkIdRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderLabVirtualNetworkIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -265,6 +276,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProviderLabVirtualNetwor
     public V1beta1WindowsVirtualMachineSpecForProviderLabVirtualNetworkIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VirtualNetwork in devtestlab to populate labVirtualNetworkId.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderLabVirtualNetworkIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -296,6 +308,7 @@ public enum V1beta1WindowsVirtualMachineSpecForProviderLabVirtualNetworkIdSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderLabVirtualNetworkIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -309,6 +322,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProviderLabVirtualNetwor
     public V1beta1WindowsVirtualMachineSpecForProviderLabVirtualNetworkIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VirtualNetwork in devtestlab to populate labVirtualNetworkId.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderLabVirtualNetworkIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -324,6 +338,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProviderLabVirtualNetwor
     public V1beta1WindowsVirtualMachineSpecForProviderLabVirtualNetworkIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>The Password associated with the username used to login to this Virtual Machine. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -359,6 +374,7 @@ public enum V1beta1WindowsVirtualMachineSpecForProviderResourceGroupNameRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -372,6 +388,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProviderResourceGroupNam
     public V1beta1WindowsVirtualMachineSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -403,6 +420,7 @@ public enum V1beta1WindowsVirtualMachineSpecForProviderResourceGroupNameSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -416,6 +434,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProviderResourceGroupNam
     public V1beta1WindowsVirtualMachineSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -431,6 +450,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProviderResourceGroupNam
     public V1beta1WindowsVirtualMachineSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProvider
 {
     /// <summary>Can this Virtual Machine be claimed by users? Defaults to true.</summary>
@@ -530,6 +550,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProvider
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineSpecInitProviderGalleryImageReference
 {
     /// <summary>The Offer of the Gallery Image. Changing this forces a new resource to be created.</summary>
@@ -549,6 +570,7 @@ public partial class V1beta1WindowsVirtualMachineSpecInitProviderGalleryImageRef
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineSpecInitProviderInboundNatRule
 {
     /// <summary>The Backend Port associated with this NAT Rule. Changing this forces a new resource to be created.</summary>
@@ -580,6 +602,7 @@ public enum V1beta1WindowsVirtualMachineSpecInitProviderLabNameRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecInitProviderLabNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -593,6 +616,7 @@ public partial class V1beta1WindowsVirtualMachineSpecInitProviderLabNameRefPolic
     public V1beta1WindowsVirtualMachineSpecInitProviderLabNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Lab in devtestlab to populate labName.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecInitProviderLabNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -624,6 +648,7 @@ public enum V1beta1WindowsVirtualMachineSpecInitProviderLabNameSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecInitProviderLabNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -637,6 +662,7 @@ public partial class V1beta1WindowsVirtualMachineSpecInitProviderLabNameSelector
     public V1beta1WindowsVirtualMachineSpecInitProviderLabNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Lab in devtestlab to populate labName.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecInitProviderLabNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -672,6 +698,7 @@ public enum V1beta1WindowsVirtualMachineSpecInitProviderLabSubnetNameRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecInitProviderLabSubnetNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -685,6 +712,7 @@ public partial class V1beta1WindowsVirtualMachineSpecInitProviderLabSubnetNameRe
     public V1beta1WindowsVirtualMachineSpecInitProviderLabSubnetNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate labSubnetName.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecInitProviderLabSubnetNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -716,6 +744,7 @@ public enum V1beta1WindowsVirtualMachineSpecInitProviderLabSubnetNameSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecInitProviderLabSubnetNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -729,6 +758,7 @@ public partial class V1beta1WindowsVirtualMachineSpecInitProviderLabSubnetNameSe
     public V1beta1WindowsVirtualMachineSpecInitProviderLabSubnetNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate labSubnetName.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecInitProviderLabSubnetNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -764,6 +794,7 @@ public enum V1beta1WindowsVirtualMachineSpecInitProviderLabVirtualNetworkIdRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecInitProviderLabVirtualNetworkIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -777,6 +808,7 @@ public partial class V1beta1WindowsVirtualMachineSpecInitProviderLabVirtualNetwo
     public V1beta1WindowsVirtualMachineSpecInitProviderLabVirtualNetworkIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VirtualNetwork in devtestlab to populate labVirtualNetworkId.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecInitProviderLabVirtualNetworkIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -808,6 +840,7 @@ public enum V1beta1WindowsVirtualMachineSpecInitProviderLabVirtualNetworkIdSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecInitProviderLabVirtualNetworkIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -821,6 +854,7 @@ public partial class V1beta1WindowsVirtualMachineSpecInitProviderLabVirtualNetwo
     public V1beta1WindowsVirtualMachineSpecInitProviderLabVirtualNetworkIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VirtualNetwork in devtestlab to populate labVirtualNetworkId.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecInitProviderLabVirtualNetworkIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -856,6 +890,7 @@ public enum V1beta1WindowsVirtualMachineSpecInitProviderResourceGroupNameRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecInitProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -869,6 +904,7 @@ public partial class V1beta1WindowsVirtualMachineSpecInitProviderResourceGroupNa
     public V1beta1WindowsVirtualMachineSpecInitProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecInitProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -900,6 +936,7 @@ public enum V1beta1WindowsVirtualMachineSpecInitProviderResourceGroupNameSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecInitProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -913,6 +950,7 @@ public partial class V1beta1WindowsVirtualMachineSpecInitProviderResourceGroupNa
     public V1beta1WindowsVirtualMachineSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecInitProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -928,6 +966,7 @@ public partial class V1beta1WindowsVirtualMachineSpecInitProviderResourceGroupNa
     public V1beta1WindowsVirtualMachineSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecInitProvider
 {
     /// <summary>Can this Virtual Machine be claimed by users? Defaults to true.</summary>
@@ -1065,6 +1104,7 @@ public enum V1beta1WindowsVirtualMachineSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1078,6 +1118,7 @@ public partial class V1beta1WindowsVirtualMachineSpecProviderConfigRefPolicy
     public V1beta1WindowsVirtualMachineSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1109,6 +1150,7 @@ public enum V1beta1WindowsVirtualMachineSpecPublishConnectionDetailsToConfigRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1122,6 +1164,7 @@ public partial class V1beta1WindowsVirtualMachineSpecPublishConnectionDetailsToC
     public V1beta1WindowsVirtualMachineSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1133,6 +1176,7 @@ public partial class V1beta1WindowsVirtualMachineSpecPublishConnectionDetailsToC
     public V1beta1WindowsVirtualMachineSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1148,6 +1192,7 @@ public partial class V1beta1WindowsVirtualMachineSpecPublishConnectionDetailsToM
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1163,6 +1208,7 @@ public partial class V1beta1WindowsVirtualMachineSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1174,6 +1220,7 @@ public partial class V1beta1WindowsVirtualMachineSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>WindowsVirtualMachineSpec defines the desired state of WindowsVirtualMachine</summary>
 public partial class V1beta1WindowsVirtualMachineSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1206,6 +1253,7 @@ public partial class V1beta1WindowsVirtualMachineSpec
     public V1beta1WindowsVirtualMachineSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineStatusAtProviderGalleryImageReference
 {
     /// <summary>The Offer of the Gallery Image. Changing this forces a new resource to be created.</summary>
@@ -1225,6 +1273,7 @@ public partial class V1beta1WindowsVirtualMachineStatusAtProviderGalleryImageRef
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineStatusAtProviderInboundNatRule
 {
     /// <summary>The Backend Port associated with this NAT Rule. Changing this forces a new resource to be created.</summary>
@@ -1240,6 +1289,7 @@ public partial class V1beta1WindowsVirtualMachineStatusAtProviderInboundNatRule
     public string? Protocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineStatusAtProvider
 {
     /// <summary>Can this Virtual Machine be claimed by users? Defaults to true.</summary>
@@ -1315,6 +1365,7 @@ public partial class V1beta1WindowsVirtualMachineStatusAtProvider
     public string? Username { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1WindowsVirtualMachineStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1342,6 +1393,7 @@ public partial class V1beta1WindowsVirtualMachineStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>WindowsVirtualMachineStatus defines the observed state of WindowsVirtualMachine.</summary>
 public partial class V1beta1WindowsVirtualMachineStatus
 {
     /// <summary></summary>
@@ -1358,6 +1410,7 @@ public partial class V1beta1WindowsVirtualMachineStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>WindowsVirtualMachine is the Schema for the WindowsVirtualMachines API. Manages a Windows Virtual Machine within a Dev Test Lab.</summary>
 public partial class V1beta1WindowsVirtualMachine : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1WindowsVirtualMachineSpec>, IStatus<V1beta1WindowsVirtualMachineStatus>
 {
     public const string KubeApiVersion = "v1beta1";

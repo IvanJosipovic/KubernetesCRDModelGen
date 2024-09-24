@@ -38,6 +38,7 @@ public enum V1beta1TableReplicaSpecForProviderGlobalTableArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TableReplicaSpecForProviderGlobalTableArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1TableReplicaSpecForProviderGlobalTableArnRefPolicy
     public V1beta1TableReplicaSpecForProviderGlobalTableArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Table in dynamodb to populate globalTableArn.</summary>
 public partial class V1beta1TableReplicaSpecForProviderGlobalTableArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1TableReplicaSpecForProviderGlobalTableArnSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TableReplicaSpecForProviderGlobalTableArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1TableReplicaSpecForProviderGlobalTableArnSelectorPol
     public V1beta1TableReplicaSpecForProviderGlobalTableArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Table in dynamodb to populate globalTableArn.</summary>
 public partial class V1beta1TableReplicaSpecForProviderGlobalTableArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1TableReplicaSpecForProviderKmsKeyArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TableReplicaSpecForProviderKmsKeyArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1TableReplicaSpecForProviderKmsKeyArnRefPolicy
     public V1beta1TableReplicaSpecForProviderKmsKeyArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyArn.</summary>
 public partial class V1beta1TableReplicaSpecForProviderKmsKeyArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1TableReplicaSpecForProviderKmsKeyArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TableReplicaSpecForProviderKmsKeyArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1TableReplicaSpecForProviderKmsKeyArnSelectorPolicy
     public V1beta1TableReplicaSpecForProviderKmsKeyArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyArn.</summary>
 public partial class V1beta1TableReplicaSpecForProviderKmsKeyArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1TableReplicaSpecForProviderKmsKeyArnSelector
     public V1beta1TableReplicaSpecForProviderKmsKeyArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableReplicaSpecForProvider
 {
     /// <summary>ARN of the main or global table which this resource will replicate.</summary>
@@ -265,6 +274,7 @@ public enum V1beta1TableReplicaSpecInitProviderGlobalTableArnRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TableReplicaSpecInitProviderGlobalTableArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -278,6 +288,7 @@ public partial class V1beta1TableReplicaSpecInitProviderGlobalTableArnRefPolicy
     public V1beta1TableReplicaSpecInitProviderGlobalTableArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Table in dynamodb to populate globalTableArn.</summary>
 public partial class V1beta1TableReplicaSpecInitProviderGlobalTableArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -309,6 +320,7 @@ public enum V1beta1TableReplicaSpecInitProviderGlobalTableArnSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TableReplicaSpecInitProviderGlobalTableArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -322,6 +334,7 @@ public partial class V1beta1TableReplicaSpecInitProviderGlobalTableArnSelectorPo
     public V1beta1TableReplicaSpecInitProviderGlobalTableArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Table in dynamodb to populate globalTableArn.</summary>
 public partial class V1beta1TableReplicaSpecInitProviderGlobalTableArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -357,6 +370,7 @@ public enum V1beta1TableReplicaSpecInitProviderKmsKeyArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TableReplicaSpecInitProviderKmsKeyArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -370,6 +384,7 @@ public partial class V1beta1TableReplicaSpecInitProviderKmsKeyArnRefPolicy
     public V1beta1TableReplicaSpecInitProviderKmsKeyArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyArn.</summary>
 public partial class V1beta1TableReplicaSpecInitProviderKmsKeyArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -401,6 +416,7 @@ public enum V1beta1TableReplicaSpecInitProviderKmsKeyArnSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TableReplicaSpecInitProviderKmsKeyArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -414,6 +430,7 @@ public partial class V1beta1TableReplicaSpecInitProviderKmsKeyArnSelectorPolicy
     public V1beta1TableReplicaSpecInitProviderKmsKeyArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyArn.</summary>
 public partial class V1beta1TableReplicaSpecInitProviderKmsKeyArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -429,6 +446,7 @@ public partial class V1beta1TableReplicaSpecInitProviderKmsKeyArnSelector
     public V1beta1TableReplicaSpecInitProviderKmsKeyArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1TableReplicaSpecInitProvider
 {
     /// <summary>ARN of the main or global table which this resource will replicate.</summary>
@@ -510,6 +528,7 @@ public enum V1beta1TableReplicaSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TableReplicaSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -523,6 +542,7 @@ public partial class V1beta1TableReplicaSpecProviderConfigRefPolicy
     public V1beta1TableReplicaSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1TableReplicaSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -554,6 +574,7 @@ public enum V1beta1TableReplicaSpecPublishConnectionDetailsToConfigRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TableReplicaSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -567,6 +588,7 @@ public partial class V1beta1TableReplicaSpecPublishConnectionDetailsToConfigRefP
     public V1beta1TableReplicaSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1TableReplicaSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -578,6 +600,7 @@ public partial class V1beta1TableReplicaSpecPublishConnectionDetailsToConfigRef
     public V1beta1TableReplicaSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1TableReplicaSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -593,6 +616,7 @@ public partial class V1beta1TableReplicaSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1TableReplicaSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -608,6 +632,7 @@ public partial class V1beta1TableReplicaSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1TableReplicaSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -619,6 +644,7 @@ public partial class V1beta1TableReplicaSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>TableReplicaSpec defines the desired state of TableReplica</summary>
 public partial class V1beta1TableReplicaSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -651,6 +677,7 @@ public partial class V1beta1TableReplicaSpec
     public V1beta1TableReplicaSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableReplicaStatusAtProvider
 {
     /// <summary>ARN of the table replica.</summary>
@@ -686,6 +713,7 @@ public partial class V1beta1TableReplicaStatusAtProvider
     public IDictionary<string, string>? TagsAll { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1TableReplicaStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -713,6 +741,7 @@ public partial class V1beta1TableReplicaStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>TableReplicaStatus defines the observed state of TableReplica.</summary>
 public partial class V1beta1TableReplicaStatus
 {
     /// <summary></summary>
@@ -729,6 +758,7 @@ public partial class V1beta1TableReplicaStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>TableReplica is the Schema for the TableReplicas API. Provides a DynamoDB table replica resource</summary>
 public partial class V1beta1TableReplica : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1TableReplicaSpec>, IStatus<V1beta1TableReplicaStatus>
 {
     public const string KubeApiVersion = "v1beta1";

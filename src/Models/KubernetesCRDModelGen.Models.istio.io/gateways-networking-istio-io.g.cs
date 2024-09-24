@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networking.istio.io;
+/// <summary>The Port on which the proxy should listen for incoming connections.</summary>
 public partial class V1beta1GatewaySpecServersPort
 {
     /// <summary>Label assigned to the port.</summary>
@@ -87,6 +88,7 @@ public enum V1beta1GatewaySpecServersTlsModeEnum
     OPTIONALMUTUAL
 }
 
+/// <summary>Set of TLS related options that govern the server's behavior.</summary>
 public partial class V1beta1GatewaySpecServersTls
 {
     /// <summary>REQUIRED if mode is `MUTUAL` or `OPTIONAL_MUTUAL`.</summary>
@@ -145,6 +147,7 @@ public partial class V1beta1GatewaySpecServersTls
     public IList<string>? VerifyCertificateSpki { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GatewaySpecServers
 {
     /// <summary>The ip or the Unix domain socket to which the listener should be bound to.</summary>
@@ -172,6 +175,7 @@ public partial class V1beta1GatewaySpecServers
     public V1beta1GatewaySpecServersTls? Tls { get; set; }
 }
 
+/// <summary>Configuration affecting edge load balancer. See more details at: https://istio.io/docs/reference/config/networking/gateway.html</summary>
 public partial class V1beta1GatewaySpec
 {
     /// <summary>One or more labels that indicate a specific set of pods/VMs on which this gateway configuration should be applied.</summary>
@@ -184,6 +188,7 @@ public partial class V1beta1GatewaySpec
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1Gateway : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1GatewaySpec>, IStatus<JsonNode>
 {
     public const string KubeApiVersion = "v1beta1";

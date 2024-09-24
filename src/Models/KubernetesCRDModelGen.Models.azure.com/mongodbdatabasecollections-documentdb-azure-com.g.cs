@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.documentdb.azure.com;
+/// <summary>Storage version of v1api20231115.AutoscaleSettings</summary>
 public partial class V1api20231115storageMongodbDatabaseCollectionSpecOptionsAutoscaleSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -19,6 +20,7 @@ public partial class V1api20231115storageMongodbDatabaseCollectionSpecOptionsAut
     public int? MaxThroughput { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.CreateUpdateOptions CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"</summary>
 public partial class V1api20231115storageMongodbDatabaseCollectionSpecOptions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -34,6 +36,7 @@ public partial class V1api20231115storageMongodbDatabaseCollectionSpecOptions
     public int? Throughput { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a documentdb.azure.com/MongodbDatabase resource</summary>
 public partial class V1api20231115storageMongodbDatabaseCollectionSpecOwner
 {
     /// <summary></summary>
@@ -45,6 +48,7 @@ public partial class V1api20231115storageMongodbDatabaseCollectionSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.MongoIndexKeys Cosmos DB MongoDB collection resource object</summary>
 public partial class V1api20231115storageMongodbDatabaseCollectionSpecResourceIndexesKey
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -56,6 +60,7 @@ public partial class V1api20231115storageMongodbDatabaseCollectionSpecResourceIn
     public IList<string>? Keys { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.MongoIndexOptions Cosmos DB MongoDB collection index options</summary>
 public partial class V1api20231115storageMongodbDatabaseCollectionSpecResourceIndexesOptions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -71,6 +76,7 @@ public partial class V1api20231115storageMongodbDatabaseCollectionSpecResourceIn
     public bool? Unique { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.MongoIndex Cosmos DB MongoDB collection index key</summary>
 public partial class V1api20231115storageMongodbDatabaseCollectionSpecResourceIndexes
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -86,6 +92,7 @@ public partial class V1api20231115storageMongodbDatabaseCollectionSpecResourceIn
     public V1api20231115storageMongodbDatabaseCollectionSpecResourceIndexesOptions? Options { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.RestoreParametersBase Parameters to indicate the information about the restore.</summary>
 public partial class V1api20231115storageMongodbDatabaseCollectionSpecResourceRestoreParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -101,6 +108,7 @@ public partial class V1api20231115storageMongodbDatabaseCollectionSpecResourceRe
     public string? RestoreTimestampInUtc { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.MongoDBCollectionResource Cosmos DB MongoDB collection resource object</summary>
 public partial class V1api20231115storageMongodbDatabaseCollectionSpecResource
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -132,6 +140,7 @@ public partial class V1api20231115storageMongodbDatabaseCollectionSpecResource
     public IDictionary<string, string>? ShardKey { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.DatabaseAccounts_MongodbDatabases_Collection_Spec</summary>
 public partial class V1api20231115storageMongodbDatabaseCollectionSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -167,6 +176,7 @@ public partial class V1api20231115storageMongodbDatabaseCollectionSpec
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20231115storageMongodbDatabaseCollectionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -198,6 +208,7 @@ public partial class V1api20231115storageMongodbDatabaseCollectionStatusConditio
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.AutoscaleSettings_STATUS</summary>
 public partial class V1api20231115storageMongodbDatabaseCollectionStatusOptionsAutoscaleSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -209,6 +220,7 @@ public partial class V1api20231115storageMongodbDatabaseCollectionStatusOptionsA
     public int? MaxThroughput { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.OptionsResource_STATUS Cosmos DB options resource object</summary>
 public partial class V1api20231115storageMongodbDatabaseCollectionStatusOptions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -224,6 +236,7 @@ public partial class V1api20231115storageMongodbDatabaseCollectionStatusOptions
     public int? Throughput { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.MongoIndexKeys_STATUS Cosmos DB MongoDB collection resource object</summary>
 public partial class V1api20231115storageMongodbDatabaseCollectionStatusResourceIndexesKey
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -235,6 +248,7 @@ public partial class V1api20231115storageMongodbDatabaseCollectionStatusResource
     public IList<string>? Keys { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.MongoIndexOptions_STATUS Cosmos DB MongoDB collection index options</summary>
 public partial class V1api20231115storageMongodbDatabaseCollectionStatusResourceIndexesOptions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -250,6 +264,7 @@ public partial class V1api20231115storageMongodbDatabaseCollectionStatusResource
     public bool? Unique { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.MongoIndex_STATUS Cosmos DB MongoDB collection index key</summary>
 public partial class V1api20231115storageMongodbDatabaseCollectionStatusResourceIndexes
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -265,6 +280,7 @@ public partial class V1api20231115storageMongodbDatabaseCollectionStatusResource
     public V1api20231115storageMongodbDatabaseCollectionStatusResourceIndexesOptions? Options { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.RestoreParametersBase_STATUS Parameters to indicate the information about the restore.</summary>
 public partial class V1api20231115storageMongodbDatabaseCollectionStatusResourceRestoreParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -280,6 +296,7 @@ public partial class V1api20231115storageMongodbDatabaseCollectionStatusResource
     public string? RestoreTimestampInUtc { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.MongoDBCollectionGetProperties_Resource_STATUS</summary>
 public partial class V1api20231115storageMongodbDatabaseCollectionStatusResource
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -323,6 +340,7 @@ public partial class V1api20231115storageMongodbDatabaseCollectionStatusResource
     public IDictionary<string, string>? ShardKey { get; set; }
 }
 
+/// <summary>Storage version of v1api20231115.DatabaseAccounts_MongodbDatabases_Collection_STATUS</summary>
 public partial class V1api20231115storageMongodbDatabaseCollectionStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -363,6 +381,7 @@ public partial class V1api20231115storageMongodbDatabaseCollectionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20231115.MongodbDatabaseCollection Generator information: - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2023-11-15/cosmos-db.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/mongodbDatabases/{databaseName}/collections/{collectionName}</summary>
 public partial class V1api20231115storageMongodbDatabaseCollection : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20231115storageMongodbDatabaseCollectionSpec>, IStatus<V1api20231115storageMongodbDatabaseCollectionStatus>
 {
     public const string KubeApiVersion = "v1api20231115storage";

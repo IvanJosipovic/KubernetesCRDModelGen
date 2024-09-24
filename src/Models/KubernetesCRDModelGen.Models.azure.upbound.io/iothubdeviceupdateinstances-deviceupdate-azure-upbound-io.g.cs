@@ -38,6 +38,7 @@ public enum V1beta1IOTHubDeviceUpdateInstanceSpecForProviderDeviceUpdateAccountI
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTHubDeviceUpdateInstanceSpecForProviderDeviceUpdateAccountIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1IOTHubDeviceUpdateInstanceSpecForProviderDeviceUpdat
     public V1beta1IOTHubDeviceUpdateInstanceSpecForProviderDeviceUpdateAccountIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a IOTHubDeviceUpdateAccount in deviceupdate to populate deviceUpdateAccountId.</summary>
 public partial class V1beta1IOTHubDeviceUpdateInstanceSpecForProviderDeviceUpdateAccountIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1IOTHubDeviceUpdateInstanceSpecForProviderDeviceUpdateAccountI
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IOTHubDeviceUpdateInstanceSpecForProviderDeviceUpdateAccountIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1IOTHubDeviceUpdateInstanceSpecForProviderDeviceUpdat
     public V1beta1IOTHubDeviceUpdateInstanceSpecForProviderDeviceUpdateAccountIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a IOTHubDeviceUpdateAccount in deviceupdate to populate deviceUpdateAccountId.</summary>
 public partial class V1beta1IOTHubDeviceUpdateInstanceSpecForProviderDeviceUpdateAccountIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1IOTHubDeviceUpdateInstanceSpecForProviderDeviceUpdat
     public V1beta1IOTHubDeviceUpdateInstanceSpecForProviderDeviceUpdateAccountIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Connection String of the Diagnostic Storage Account.</summary>
 public partial class V1beta1IOTHubDeviceUpdateInstanceSpecForProviderDiagnosticStorageAccountConnectionStringSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -145,6 +150,7 @@ public enum V1beta1IOTHubDeviceUpdateInstanceSpecForProviderDiagnosticStorageAcc
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTHubDeviceUpdateInstanceSpecForProviderDiagnosticStorageAccountIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -158,6 +164,7 @@ public partial class V1beta1IOTHubDeviceUpdateInstanceSpecForProviderDiagnosticS
     public V1beta1IOTHubDeviceUpdateInstanceSpecForProviderDiagnosticStorageAccountIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in storage to populate id.</summary>
 public partial class V1beta1IOTHubDeviceUpdateInstanceSpecForProviderDiagnosticStorageAccountIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -189,6 +196,7 @@ public enum V1beta1IOTHubDeviceUpdateInstanceSpecForProviderDiagnosticStorageAcc
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IOTHubDeviceUpdateInstanceSpecForProviderDiagnosticStorageAccountIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1IOTHubDeviceUpdateInstanceSpecForProviderDiagnosticS
     public V1beta1IOTHubDeviceUpdateInstanceSpecForProviderDiagnosticStorageAccountIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in storage to populate id.</summary>
 public partial class V1beta1IOTHubDeviceUpdateInstanceSpecForProviderDiagnosticStorageAccountIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -217,6 +226,7 @@ public partial class V1beta1IOTHubDeviceUpdateInstanceSpecForProviderDiagnosticS
     public V1beta1IOTHubDeviceUpdateInstanceSpecForProviderDiagnosticStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IOTHubDeviceUpdateInstanceSpecForProviderDiagnosticStorageAccount
 {
     /// <summary>Connection String of the Diagnostic Storage Account.</summary>
@@ -256,6 +266,7 @@ public enum V1beta1IOTHubDeviceUpdateInstanceSpecForProviderIothubIdRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTHubDeviceUpdateInstanceSpecForProviderIothubIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -269,6 +280,7 @@ public partial class V1beta1IOTHubDeviceUpdateInstanceSpecForProviderIothubIdRef
     public V1beta1IOTHubDeviceUpdateInstanceSpecForProviderIothubIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a IOTHub in devices to populate iothubId.</summary>
 public partial class V1beta1IOTHubDeviceUpdateInstanceSpecForProviderIothubIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -300,6 +312,7 @@ public enum V1beta1IOTHubDeviceUpdateInstanceSpecForProviderIothubIdSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IOTHubDeviceUpdateInstanceSpecForProviderIothubIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -313,6 +326,7 @@ public partial class V1beta1IOTHubDeviceUpdateInstanceSpecForProviderIothubIdSel
     public V1beta1IOTHubDeviceUpdateInstanceSpecForProviderIothubIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a IOTHub in devices to populate iothubId.</summary>
 public partial class V1beta1IOTHubDeviceUpdateInstanceSpecForProviderIothubIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -328,6 +342,7 @@ public partial class V1beta1IOTHubDeviceUpdateInstanceSpecForProviderIothubIdSel
     public V1beta1IOTHubDeviceUpdateInstanceSpecForProviderIothubIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IOTHubDeviceUpdateInstanceSpecForProvider
 {
     /// <summary>Specifies the ID of the IoT Hub Device Update Account where the IoT Hub Device Update Instance exists. Changing this forces a new resource to be created.</summary>
@@ -387,6 +402,7 @@ public enum V1beta1IOTHubDeviceUpdateInstanceSpecInitProviderDiagnosticStorageAc
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTHubDeviceUpdateInstanceSpecInitProviderDiagnosticStorageAccountIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -400,6 +416,7 @@ public partial class V1beta1IOTHubDeviceUpdateInstanceSpecInitProviderDiagnostic
     public V1beta1IOTHubDeviceUpdateInstanceSpecInitProviderDiagnosticStorageAccountIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in storage to populate id.</summary>
 public partial class V1beta1IOTHubDeviceUpdateInstanceSpecInitProviderDiagnosticStorageAccountIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -431,6 +448,7 @@ public enum V1beta1IOTHubDeviceUpdateInstanceSpecInitProviderDiagnosticStorageAc
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IOTHubDeviceUpdateInstanceSpecInitProviderDiagnosticStorageAccountIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -444,6 +462,7 @@ public partial class V1beta1IOTHubDeviceUpdateInstanceSpecInitProviderDiagnostic
     public V1beta1IOTHubDeviceUpdateInstanceSpecInitProviderDiagnosticStorageAccountIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in storage to populate id.</summary>
 public partial class V1beta1IOTHubDeviceUpdateInstanceSpecInitProviderDiagnosticStorageAccountIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -459,6 +478,7 @@ public partial class V1beta1IOTHubDeviceUpdateInstanceSpecInitProviderDiagnostic
     public V1beta1IOTHubDeviceUpdateInstanceSpecInitProviderDiagnosticStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IOTHubDeviceUpdateInstanceSpecInitProviderDiagnosticStorageAccount
 {
     /// <summary>Resource ID of the Diagnostic Storage Account.</summary>
@@ -494,6 +514,7 @@ public enum V1beta1IOTHubDeviceUpdateInstanceSpecInitProviderIothubIdRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTHubDeviceUpdateInstanceSpecInitProviderIothubIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -507,6 +528,7 @@ public partial class V1beta1IOTHubDeviceUpdateInstanceSpecInitProviderIothubIdRe
     public V1beta1IOTHubDeviceUpdateInstanceSpecInitProviderIothubIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a IOTHub in devices to populate iothubId.</summary>
 public partial class V1beta1IOTHubDeviceUpdateInstanceSpecInitProviderIothubIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -538,6 +560,7 @@ public enum V1beta1IOTHubDeviceUpdateInstanceSpecInitProviderIothubIdSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IOTHubDeviceUpdateInstanceSpecInitProviderIothubIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -551,6 +574,7 @@ public partial class V1beta1IOTHubDeviceUpdateInstanceSpecInitProviderIothubIdSe
     public V1beta1IOTHubDeviceUpdateInstanceSpecInitProviderIothubIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a IOTHub in devices to populate iothubId.</summary>
 public partial class V1beta1IOTHubDeviceUpdateInstanceSpecInitProviderIothubIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -566,6 +590,7 @@ public partial class V1beta1IOTHubDeviceUpdateInstanceSpecInitProviderIothubIdSe
     public V1beta1IOTHubDeviceUpdateInstanceSpecInitProviderIothubIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1IOTHubDeviceUpdateInstanceSpecInitProvider
 {
     /// <summary>Whether the diagnostic log collection is enabled. Possible values are true and false. Defaults to false.</summary>
@@ -635,6 +660,7 @@ public enum V1beta1IOTHubDeviceUpdateInstanceSpecProviderConfigRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTHubDeviceUpdateInstanceSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -648,6 +674,7 @@ public partial class V1beta1IOTHubDeviceUpdateInstanceSpecProviderConfigRefPolic
     public V1beta1IOTHubDeviceUpdateInstanceSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1IOTHubDeviceUpdateInstanceSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -679,6 +706,7 @@ public enum V1beta1IOTHubDeviceUpdateInstanceSpecPublishConnectionDetailsToConfi
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTHubDeviceUpdateInstanceSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -692,6 +720,7 @@ public partial class V1beta1IOTHubDeviceUpdateInstanceSpecPublishConnectionDetai
     public V1beta1IOTHubDeviceUpdateInstanceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1IOTHubDeviceUpdateInstanceSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -703,6 +732,7 @@ public partial class V1beta1IOTHubDeviceUpdateInstanceSpecPublishConnectionDetai
     public V1beta1IOTHubDeviceUpdateInstanceSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1IOTHubDeviceUpdateInstanceSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -718,6 +748,7 @@ public partial class V1beta1IOTHubDeviceUpdateInstanceSpecPublishConnectionDetai
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1IOTHubDeviceUpdateInstanceSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -733,6 +764,7 @@ public partial class V1beta1IOTHubDeviceUpdateInstanceSpecPublishConnectionDetai
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1IOTHubDeviceUpdateInstanceSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -744,6 +776,7 @@ public partial class V1beta1IOTHubDeviceUpdateInstanceSpecWriteConnectionSecretT
     public string Namespace { get; set; }
 }
 
+/// <summary>IOTHubDeviceUpdateInstanceSpec defines the desired state of IOTHubDeviceUpdateInstance</summary>
 public partial class V1beta1IOTHubDeviceUpdateInstanceSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -776,6 +809,7 @@ public partial class V1beta1IOTHubDeviceUpdateInstanceSpec
     public V1beta1IOTHubDeviceUpdateInstanceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IOTHubDeviceUpdateInstanceStatusAtProviderDiagnosticStorageAccount
 {
     /// <summary>Resource ID of the Diagnostic Storage Account.</summary>
@@ -783,6 +817,7 @@ public partial class V1beta1IOTHubDeviceUpdateInstanceStatusAtProviderDiagnostic
     public string? Id { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IOTHubDeviceUpdateInstanceStatusAtProvider
 {
     /// <summary>Specifies the ID of the IoT Hub Device Update Account where the IoT Hub Device Update Instance exists. Changing this forces a new resource to be created.</summary>
@@ -810,6 +845,7 @@ public partial class V1beta1IOTHubDeviceUpdateInstanceStatusAtProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1IOTHubDeviceUpdateInstanceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -837,6 +873,7 @@ public partial class V1beta1IOTHubDeviceUpdateInstanceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>IOTHubDeviceUpdateInstanceStatus defines the observed state of IOTHubDeviceUpdateInstance.</summary>
 public partial class V1beta1IOTHubDeviceUpdateInstanceStatus
 {
     /// <summary></summary>
@@ -853,6 +890,7 @@ public partial class V1beta1IOTHubDeviceUpdateInstanceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>IOTHubDeviceUpdateInstance is the Schema for the IOTHubDeviceUpdateInstances API. Manages an IoT Hub Device Update Instance.</summary>
 public partial class V1beta1IOTHubDeviceUpdateInstance : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IOTHubDeviceUpdateInstanceSpec>, IStatus<V1beta1IOTHubDeviceUpdateInstanceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containerinstance.azure.com;
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20211001storageContainerGroupSpecContainersEnvironmentVariablesSecureValue
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -19,6 +20,7 @@ public partial class V1api20211001storageContainerGroupSpecContainersEnvironment
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.EnvironmentVariable The environment variable to set within the container instance.</summary>
 public partial class V1api20211001storageContainerGroupSpecContainersEnvironmentVariables
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -38,6 +40,7 @@ public partial class V1api20211001storageContainerGroupSpecContainersEnvironment
     public string? Value { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.ContainerExec The container execution command, for liveness or readiness probe</summary>
 public partial class V1api20211001storageContainerGroupSpecContainersLivenessProbeExec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -49,6 +52,7 @@ public partial class V1api20211001storageContainerGroupSpecContainersLivenessPro
     public IList<string>? Command { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.HttpHeader The HTTP header.</summary>
 public partial class V1api20211001storageContainerGroupSpecContainersLivenessProbeHttpGetHttpHeaders
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -64,6 +68,7 @@ public partial class V1api20211001storageContainerGroupSpecContainersLivenessPro
     public string? Value { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.ContainerHttpGet The container Http Get settings, for liveness or readiness probe</summary>
 public partial class V1api20211001storageContainerGroupSpecContainersLivenessProbeHttpGet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -87,6 +92,7 @@ public partial class V1api20211001storageContainerGroupSpecContainersLivenessPro
     public string? Scheme { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.ContainerProbe The container probe, for liveness or readiness</summary>
 public partial class V1api20211001storageContainerGroupSpecContainersLivenessProbe
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -122,6 +128,7 @@ public partial class V1api20211001storageContainerGroupSpecContainersLivenessPro
     public int? TimeoutSeconds { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.ContainerPort The port exposed on the container instance.</summary>
 public partial class V1api20211001storageContainerGroupSpecContainersPorts
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -137,6 +144,7 @@ public partial class V1api20211001storageContainerGroupSpecContainersPorts
     public string? Protocol { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.ContainerExec The container execution command, for liveness or readiness probe</summary>
 public partial class V1api20211001storageContainerGroupSpecContainersReadinessProbeExec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -148,6 +156,7 @@ public partial class V1api20211001storageContainerGroupSpecContainersReadinessPr
     public IList<string>? Command { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.HttpHeader The HTTP header.</summary>
 public partial class V1api20211001storageContainerGroupSpecContainersReadinessProbeHttpGetHttpHeaders
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -163,6 +172,7 @@ public partial class V1api20211001storageContainerGroupSpecContainersReadinessPr
     public string? Value { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.ContainerHttpGet The container Http Get settings, for liveness or readiness probe</summary>
 public partial class V1api20211001storageContainerGroupSpecContainersReadinessProbeHttpGet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -186,6 +196,7 @@ public partial class V1api20211001storageContainerGroupSpecContainersReadinessPr
     public string? Scheme { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.ContainerProbe The container probe, for liveness or readiness</summary>
 public partial class V1api20211001storageContainerGroupSpecContainersReadinessProbe
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -221,6 +232,7 @@ public partial class V1api20211001storageContainerGroupSpecContainersReadinessPr
     public int? TimeoutSeconds { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.GpuResource The GPU resource.</summary>
 public partial class V1api20211001storageContainerGroupSpecContainersResourcesLimitsGpu
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -236,6 +248,7 @@ public partial class V1api20211001storageContainerGroupSpecContainersResourcesLi
     public string? Sku { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.ResourceLimits The resource limits.</summary>
 public partial class V1api20211001storageContainerGroupSpecContainersResourcesLimits
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -255,6 +268,7 @@ public partial class V1api20211001storageContainerGroupSpecContainersResourcesLi
     public double? MemoryInGB { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.GpuResource The GPU resource.</summary>
 public partial class V1api20211001storageContainerGroupSpecContainersResourcesRequestsGpu
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -270,6 +284,7 @@ public partial class V1api20211001storageContainerGroupSpecContainersResourcesRe
     public string? Sku { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.ResourceRequests The resource requests.</summary>
 public partial class V1api20211001storageContainerGroupSpecContainersResourcesRequests
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -289,6 +304,7 @@ public partial class V1api20211001storageContainerGroupSpecContainersResourcesRe
     public double? MemoryInGB { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.ResourceRequirements The resource requirements.</summary>
 public partial class V1api20211001storageContainerGroupSpecContainersResources
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -304,6 +320,7 @@ public partial class V1api20211001storageContainerGroupSpecContainersResources
     public V1api20211001storageContainerGroupSpecContainersResourcesRequests? Requests { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.VolumeMount The properties of the volume mount.</summary>
 public partial class V1api20211001storageContainerGroupSpecContainersVolumeMounts
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -323,6 +340,7 @@ public partial class V1api20211001storageContainerGroupSpecContainersVolumeMount
     public bool? ReadOnly { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.Container A container instance.</summary>
 public partial class V1api20211001storageContainerGroupSpecContainers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -366,6 +384,7 @@ public partial class V1api20211001storageContainerGroupSpecContainers
     public IList<V1api20211001storageContainerGroupSpecContainersVolumeMounts>? VolumeMounts { get; set; }
 }
 
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20211001storageContainerGroupSpecDiagnosticsLogAnalyticsWorkspaceKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -377,6 +396,7 @@ public partial class V1api20211001storageContainerGroupSpecDiagnosticsLogAnalyti
     public string Name { get; set; }
 }
 
+/// <summary>WorkspaceResourceReference: The workspace resource id for log analytics</summary>
 public partial class V1api20211001storageContainerGroupSpecDiagnosticsLogAnalyticsWorkspaceResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -396,6 +416,7 @@ public partial class V1api20211001storageContainerGroupSpecDiagnosticsLogAnalyti
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.LogAnalytics Container group log analytics information.</summary>
 public partial class V1api20211001storageContainerGroupSpecDiagnosticsLogAnalytics
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -423,6 +444,7 @@ public partial class V1api20211001storageContainerGroupSpecDiagnosticsLogAnalyti
     public V1api20211001storageContainerGroupSpecDiagnosticsLogAnalyticsWorkspaceResourceReference? WorkspaceResourceReference { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.ContainerGroupDiagnostics Container group diagnostic information.</summary>
 public partial class V1api20211001storageContainerGroupSpecDiagnostics
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -434,6 +456,7 @@ public partial class V1api20211001storageContainerGroupSpecDiagnostics
     public V1api20211001storageContainerGroupSpecDiagnosticsLogAnalytics? LogAnalytics { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.DnsConfiguration DNS configuration for the container group.</summary>
 public partial class V1api20211001storageContainerGroupSpecDnsConfig
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -453,6 +476,7 @@ public partial class V1api20211001storageContainerGroupSpecDnsConfig
     public string? SearchDomains { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.EncryptionProperties The container group encryption properties.</summary>
 public partial class V1api20211001storageContainerGroupSpecEncryptionProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -472,6 +496,7 @@ public partial class V1api20211001storageContainerGroupSpecEncryptionProperties
     public string? VaultBaseUrl { get; set; }
 }
 
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 public partial class V1api20211001storageContainerGroupSpecIdentityUserAssignedIdentitiesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -491,6 +516,7 @@ public partial class V1api20211001storageContainerGroupSpecIdentityUserAssignedI
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
 public partial class V1api20211001storageContainerGroupSpecIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -502,6 +528,7 @@ public partial class V1api20211001storageContainerGroupSpecIdentityUserAssignedI
     public V1api20211001storageContainerGroupSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.ContainerGroupIdentity Identity for the container group.</summary>
 public partial class V1api20211001storageContainerGroupSpecIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -517,6 +544,7 @@ public partial class V1api20211001storageContainerGroupSpecIdentity
     public IList<V1api20211001storageContainerGroupSpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20211001storageContainerGroupSpecImageRegistryCredentialsPassword
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -528,6 +556,7 @@ public partial class V1api20211001storageContainerGroupSpecImageRegistryCredenti
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.ImageRegistryCredential Image registry credential.</summary>
 public partial class V1api20211001storageContainerGroupSpecImageRegistryCredentials
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -555,6 +584,7 @@ public partial class V1api20211001storageContainerGroupSpecImageRegistryCredenti
     public string? Username { get; set; }
 }
 
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20211001storageContainerGroupSpecInitContainersEnvironmentVariablesSecureValue
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -566,6 +596,7 @@ public partial class V1api20211001storageContainerGroupSpecInitContainersEnviron
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.EnvironmentVariable The environment variable to set within the container instance.</summary>
 public partial class V1api20211001storageContainerGroupSpecInitContainersEnvironmentVariables
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -585,6 +616,7 @@ public partial class V1api20211001storageContainerGroupSpecInitContainersEnviron
     public string? Value { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.VolumeMount The properties of the volume mount.</summary>
 public partial class V1api20211001storageContainerGroupSpecInitContainersVolumeMounts
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -604,6 +636,7 @@ public partial class V1api20211001storageContainerGroupSpecInitContainersVolumeM
     public bool? ReadOnly { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.InitContainerDefinition The init container definition.</summary>
 public partial class V1api20211001storageContainerGroupSpecInitContainers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -631,6 +664,7 @@ public partial class V1api20211001storageContainerGroupSpecInitContainers
     public IList<V1api20211001storageContainerGroupSpecInitContainersVolumeMounts>? VolumeMounts { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.Port The port exposed on the container group.</summary>
 public partial class V1api20211001storageContainerGroupSpecIpAddressPorts
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -646,6 +680,7 @@ public partial class V1api20211001storageContainerGroupSpecIpAddressPorts
     public string? Protocol { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.IpAddress IP address for the container group.</summary>
 public partial class V1api20211001storageContainerGroupSpecIpAddress
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -673,6 +708,7 @@ public partial class V1api20211001storageContainerGroupSpecIpAddress
     public string? Type { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20211001storageContainerGroupSpecOwner
 {
     /// <summary></summary>
@@ -684,6 +720,7 @@ public partial class V1api20211001storageContainerGroupSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Reference: Resource ID of virtual network and subnet.</summary>
 public partial class V1api20211001storageContainerGroupSpecSubnetIdsReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -703,6 +740,7 @@ public partial class V1api20211001storageContainerGroupSpecSubnetIdsReference
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.ContainerGroupSubnetId Container group subnet information.</summary>
 public partial class V1api20211001storageContainerGroupSpecSubnetIds
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -718,6 +756,7 @@ public partial class V1api20211001storageContainerGroupSpecSubnetIds
     public V1api20211001storageContainerGroupSpecSubnetIdsReference Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.AzureFileVolume The properties of the Azure File volume. Azure File shares are mounted as volumes.</summary>
 public partial class V1api20211001storageContainerGroupSpecVolumesAzureFile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -741,6 +780,7 @@ public partial class V1api20211001storageContainerGroupSpecVolumesAzureFile
     public string? StorageAccountName { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.GitRepoVolume Represents a volume that is populated with the contents of a git repository</summary>
 public partial class V1api20211001storageContainerGroupSpecVolumesGitRepo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -760,6 +800,7 @@ public partial class V1api20211001storageContainerGroupSpecVolumesGitRepo
     public string? Revision { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.Volume The properties of the volume.</summary>
 public partial class V1api20211001storageContainerGroupSpecVolumes
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -787,6 +828,7 @@ public partial class V1api20211001storageContainerGroupSpecVolumes
     public IDictionary<string, string>? Secret { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.ContainerGroup_Spec</summary>
 public partial class V1api20211001storageContainerGroupSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -870,6 +912,7 @@ public partial class V1api20211001storageContainerGroupSpec
     public IList<string>? Zones { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20211001storageContainerGroupStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -901,6 +944,7 @@ public partial class V1api20211001storageContainerGroupStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.EnvironmentVariable_STATUS The environment variable to set within the container instance.</summary>
 public partial class V1api20211001storageContainerGroupStatusContainersEnvironmentVariables
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -916,6 +960,7 @@ public partial class V1api20211001storageContainerGroupStatusContainersEnvironme
     public string? Value { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.ContainerState_STATUS The container instance state.</summary>
 public partial class V1api20211001storageContainerGroupStatusContainersInstanceViewCurrentState
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -943,6 +988,7 @@ public partial class V1api20211001storageContainerGroupStatusContainersInstanceV
     public string? State { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.Event_STATUS A container group or container instance event.</summary>
 public partial class V1api20211001storageContainerGroupStatusContainersInstanceViewEvents
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -974,6 +1020,7 @@ public partial class V1api20211001storageContainerGroupStatusContainersInstanceV
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.ContainerState_STATUS The container instance state.</summary>
 public partial class V1api20211001storageContainerGroupStatusContainersInstanceViewPreviousState
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1001,6 +1048,7 @@ public partial class V1api20211001storageContainerGroupStatusContainersInstanceV
     public string? State { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.ContainerProperties_InstanceView_STATUS</summary>
 public partial class V1api20211001storageContainerGroupStatusContainersInstanceView
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1024,6 +1072,7 @@ public partial class V1api20211001storageContainerGroupStatusContainersInstanceV
     public int? RestartCount { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.ContainerExec_STATUS The container execution command, for liveness or readiness probe</summary>
 public partial class V1api20211001storageContainerGroupStatusContainersLivenessProbeExec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1035,6 +1084,7 @@ public partial class V1api20211001storageContainerGroupStatusContainersLivenessP
     public IList<string>? Command { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.HttpHeader_STATUS The HTTP header.</summary>
 public partial class V1api20211001storageContainerGroupStatusContainersLivenessProbeHttpGetHttpHeaders
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1050,6 +1100,7 @@ public partial class V1api20211001storageContainerGroupStatusContainersLivenessP
     public string? Value { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.ContainerHttpGet_STATUS The container Http Get settings, for liveness or readiness probe</summary>
 public partial class V1api20211001storageContainerGroupStatusContainersLivenessProbeHttpGet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1073,6 +1124,7 @@ public partial class V1api20211001storageContainerGroupStatusContainersLivenessP
     public string? Scheme { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.ContainerProbe_STATUS The container probe, for liveness or readiness</summary>
 public partial class V1api20211001storageContainerGroupStatusContainersLivenessProbe
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1108,6 +1160,7 @@ public partial class V1api20211001storageContainerGroupStatusContainersLivenessP
     public int? TimeoutSeconds { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.ContainerPort_STATUS The port exposed on the container instance.</summary>
 public partial class V1api20211001storageContainerGroupStatusContainersPorts
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1123,6 +1176,7 @@ public partial class V1api20211001storageContainerGroupStatusContainersPorts
     public string? Protocol { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.ContainerExec_STATUS The container execution command, for liveness or readiness probe</summary>
 public partial class V1api20211001storageContainerGroupStatusContainersReadinessProbeExec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1134,6 +1188,7 @@ public partial class V1api20211001storageContainerGroupStatusContainersReadiness
     public IList<string>? Command { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.HttpHeader_STATUS The HTTP header.</summary>
 public partial class V1api20211001storageContainerGroupStatusContainersReadinessProbeHttpGetHttpHeaders
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1149,6 +1204,7 @@ public partial class V1api20211001storageContainerGroupStatusContainersReadiness
     public string? Value { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.ContainerHttpGet_STATUS The container Http Get settings, for liveness or readiness probe</summary>
 public partial class V1api20211001storageContainerGroupStatusContainersReadinessProbeHttpGet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1172,6 +1228,7 @@ public partial class V1api20211001storageContainerGroupStatusContainersReadiness
     public string? Scheme { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.ContainerProbe_STATUS The container probe, for liveness or readiness</summary>
 public partial class V1api20211001storageContainerGroupStatusContainersReadinessProbe
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1207,6 +1264,7 @@ public partial class V1api20211001storageContainerGroupStatusContainersReadiness
     public int? TimeoutSeconds { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.GpuResource_STATUS The GPU resource.</summary>
 public partial class V1api20211001storageContainerGroupStatusContainersResourcesLimitsGpu
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1222,6 +1280,7 @@ public partial class V1api20211001storageContainerGroupStatusContainersResources
     public string? Sku { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.ResourceLimits_STATUS The resource limits.</summary>
 public partial class V1api20211001storageContainerGroupStatusContainersResourcesLimits
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1241,6 +1300,7 @@ public partial class V1api20211001storageContainerGroupStatusContainersResources
     public double? MemoryInGB { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.GpuResource_STATUS The GPU resource.</summary>
 public partial class V1api20211001storageContainerGroupStatusContainersResourcesRequestsGpu
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1256,6 +1316,7 @@ public partial class V1api20211001storageContainerGroupStatusContainersResources
     public string? Sku { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.ResourceRequests_STATUS The resource requests.</summary>
 public partial class V1api20211001storageContainerGroupStatusContainersResourcesRequests
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1275,6 +1336,7 @@ public partial class V1api20211001storageContainerGroupStatusContainersResources
     public double? MemoryInGB { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.ResourceRequirements_STATUS The resource requirements.</summary>
 public partial class V1api20211001storageContainerGroupStatusContainersResources
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1290,6 +1352,7 @@ public partial class V1api20211001storageContainerGroupStatusContainersResources
     public V1api20211001storageContainerGroupStatusContainersResourcesRequests? Requests { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.VolumeMount_STATUS The properties of the volume mount.</summary>
 public partial class V1api20211001storageContainerGroupStatusContainersVolumeMounts
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1309,6 +1372,7 @@ public partial class V1api20211001storageContainerGroupStatusContainersVolumeMou
     public bool? ReadOnly { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.Container_STATUS A container instance.</summary>
 public partial class V1api20211001storageContainerGroupStatusContainers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1356,6 +1420,7 @@ public partial class V1api20211001storageContainerGroupStatusContainers
     public IList<V1api20211001storageContainerGroupStatusContainersVolumeMounts>? VolumeMounts { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.LogAnalytics_STATUS Container group log analytics information.</summary>
 public partial class V1api20211001storageContainerGroupStatusDiagnosticsLogAnalytics
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1375,6 +1440,7 @@ public partial class V1api20211001storageContainerGroupStatusDiagnosticsLogAnaly
     public string? WorkspaceId { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.ContainerGroupDiagnostics_STATUS Container group diagnostic information.</summary>
 public partial class V1api20211001storageContainerGroupStatusDiagnostics
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1386,6 +1452,7 @@ public partial class V1api20211001storageContainerGroupStatusDiagnostics
     public V1api20211001storageContainerGroupStatusDiagnosticsLogAnalytics? LogAnalytics { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.DnsConfiguration_STATUS DNS configuration for the container group.</summary>
 public partial class V1api20211001storageContainerGroupStatusDnsConfig
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1405,6 +1472,7 @@ public partial class V1api20211001storageContainerGroupStatusDnsConfig
     public string? SearchDomains { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.EncryptionProperties_STATUS The container group encryption properties.</summary>
 public partial class V1api20211001storageContainerGroupStatusEncryptionProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1424,6 +1492,7 @@ public partial class V1api20211001storageContainerGroupStatusEncryptionPropertie
     public string? VaultBaseUrl { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.UserAssignedIdentities_STATUS The list of user identities associated with the container group. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.</summary>
 public partial class V1api20211001storageContainerGroupStatusIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1439,6 +1508,7 @@ public partial class V1api20211001storageContainerGroupStatusIdentityUserAssigne
     public string? PrincipalId { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.ContainerGroupIdentity_STATUS Identity for the container group.</summary>
 public partial class V1api20211001storageContainerGroupStatusIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1462,6 +1532,7 @@ public partial class V1api20211001storageContainerGroupStatusIdentity
     public IDictionary<string, V1api20211001storageContainerGroupStatusIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.ImageRegistryCredential_STATUS Image registry credential.</summary>
 public partial class V1api20211001storageContainerGroupStatusImageRegistryCredentials
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1485,6 +1556,7 @@ public partial class V1api20211001storageContainerGroupStatusImageRegistryCreden
     public string? Username { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.EnvironmentVariable_STATUS The environment variable to set within the container instance.</summary>
 public partial class V1api20211001storageContainerGroupStatusInitContainersEnvironmentVariables
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1500,6 +1572,7 @@ public partial class V1api20211001storageContainerGroupStatusInitContainersEnvir
     public string? Value { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.ContainerState_STATUS The container instance state.</summary>
 public partial class V1api20211001storageContainerGroupStatusInitContainersInstanceViewCurrentState
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1527,6 +1600,7 @@ public partial class V1api20211001storageContainerGroupStatusInitContainersInsta
     public string? State { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.Event_STATUS A container group or container instance event.</summary>
 public partial class V1api20211001storageContainerGroupStatusInitContainersInstanceViewEvents
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1558,6 +1632,7 @@ public partial class V1api20211001storageContainerGroupStatusInitContainersInsta
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.ContainerState_STATUS The container instance state.</summary>
 public partial class V1api20211001storageContainerGroupStatusInitContainersInstanceViewPreviousState
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1585,6 +1660,7 @@ public partial class V1api20211001storageContainerGroupStatusInitContainersInsta
     public string? State { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.InitContainerPropertiesDefinition_InstanceView_STATUS</summary>
 public partial class V1api20211001storageContainerGroupStatusInitContainersInstanceView
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1608,6 +1684,7 @@ public partial class V1api20211001storageContainerGroupStatusInitContainersInsta
     public int? RestartCount { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.VolumeMount_STATUS The properties of the volume mount.</summary>
 public partial class V1api20211001storageContainerGroupStatusInitContainersVolumeMounts
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1627,6 +1704,7 @@ public partial class V1api20211001storageContainerGroupStatusInitContainersVolum
     public bool? ReadOnly { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.InitContainerDefinition_STATUS The init container definition.</summary>
 public partial class V1api20211001storageContainerGroupStatusInitContainers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1658,6 +1736,7 @@ public partial class V1api20211001storageContainerGroupStatusInitContainers
     public IList<V1api20211001storageContainerGroupStatusInitContainersVolumeMounts>? VolumeMounts { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.Event_STATUS A container group or container instance event.</summary>
 public partial class V1api20211001storageContainerGroupStatusInstanceViewEvents
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1689,6 +1768,7 @@ public partial class V1api20211001storageContainerGroupStatusInstanceViewEvents
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.ContainerGroup_Properties_InstanceView_STATUS</summary>
 public partial class V1api20211001storageContainerGroupStatusInstanceView
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1704,6 +1784,7 @@ public partial class V1api20211001storageContainerGroupStatusInstanceView
     public string? State { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.Port_STATUS The port exposed on the container group.</summary>
 public partial class V1api20211001storageContainerGroupStatusIpAddressPorts
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1719,6 +1800,7 @@ public partial class V1api20211001storageContainerGroupStatusIpAddressPorts
     public string? Protocol { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.IpAddress_STATUS IP address for the container group.</summary>
 public partial class V1api20211001storageContainerGroupStatusIpAddress
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1750,6 +1832,7 @@ public partial class V1api20211001storageContainerGroupStatusIpAddress
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.ContainerGroupSubnetId_STATUS Container group subnet information.</summary>
 public partial class V1api20211001storageContainerGroupStatusSubnetIds
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1765,6 +1848,7 @@ public partial class V1api20211001storageContainerGroupStatusSubnetIds
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.AzureFileVolume_STATUS The properties of the Azure File volume. Azure File shares are mounted as volumes.</summary>
 public partial class V1api20211001storageContainerGroupStatusVolumesAzureFile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1788,6 +1872,7 @@ public partial class V1api20211001storageContainerGroupStatusVolumesAzureFile
     public string? StorageAccountName { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.GitRepoVolume_STATUS Represents a volume that is populated with the contents of a git repository</summary>
 public partial class V1api20211001storageContainerGroupStatusVolumesGitRepo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1807,6 +1892,7 @@ public partial class V1api20211001storageContainerGroupStatusVolumesGitRepo
     public string? Revision { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.Volume_STATUS The properties of the volume.</summary>
 public partial class V1api20211001storageContainerGroupStatusVolumes
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1834,6 +1920,7 @@ public partial class V1api20211001storageContainerGroupStatusVolumes
     public IDictionary<string, string>? Secret { get; set; }
 }
 
+/// <summary>Storage version of v1api20211001.ContainerGroup_STATUS A container group.</summary>
 public partial class V1api20211001storageContainerGroupStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1930,6 +2017,7 @@ public partial class V1api20211001storageContainerGroupStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20211001.ContainerGroup Generator information: - Generated from: /containerinstance/resource-manager/Microsoft.ContainerInstance/stable/2021-10-01/containerInstance.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerInstance/containerGroups/{containerGroupName}</summary>
 public partial class V1api20211001storageContainerGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20211001storageContainerGroupSpec>, IStatus<V1api20211001storageContainerGroupStatus>
 {
     public const string KubeApiVersion = "v1api20211001storage";

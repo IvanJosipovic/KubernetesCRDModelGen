@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apimanagement.azure.com;
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a apimanagement.azure.com/Service resource</summary>
 public partial class V1api20220801storageProductSpecOwner
 {
     /// <summary></summary>
@@ -19,6 +20,7 @@ public partial class V1api20220801storageProductSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.Service_Product_Spec</summary>
 public partial class V1api20220801storageProductSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -66,6 +68,7 @@ public partial class V1api20220801storageProductSpec
     public string? Terms { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20220801storageProductStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -97,6 +100,7 @@ public partial class V1api20220801storageProductStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.Service_Product_STATUS</summary>
 public partial class V1api20220801storageProductStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -149,6 +153,7 @@ public partial class V1api20220801storageProductStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20220801.Product Generator information: - Generated from: /apimanagement/resource-manager/Microsoft.ApiManagement/stable/2022-08-01/apimproducts.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}</summary>
 public partial class V1api20220801storageProduct : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20220801storageProductSpec>, IStatus<V1api20220801storageProductStatus>
 {
     public const string KubeApiVersion = "v1api20220801storage";

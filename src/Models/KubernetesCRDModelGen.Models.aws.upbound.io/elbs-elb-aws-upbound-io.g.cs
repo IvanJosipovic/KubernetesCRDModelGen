@@ -18,6 +18,7 @@ public enum V1beta1ELBSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1ELBSpecForProviderAccessLogs
 {
     /// <summary>The S3 bucket name to store the logs in.</summary>
@@ -37,6 +38,7 @@ public partial class V1beta1ELBSpecForProviderAccessLogs
     public double? Interval { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ELBSpecForProviderHealthCheck
 {
     /// <summary>The number of checks before the instance is declared healthy.</summary>
@@ -80,6 +82,7 @@ public enum V1beta1ELBSpecForProviderInstancesRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ELBSpecForProviderInstancesRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -93,6 +96,7 @@ public partial class V1beta1ELBSpecForProviderInstancesRefsPolicy
     public V1beta1ELBSpecForProviderInstancesRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1ELBSpecForProviderInstancesRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -124,6 +128,7 @@ public enum V1beta1ELBSpecForProviderInstancesSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ELBSpecForProviderInstancesSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -137,6 +142,7 @@ public partial class V1beta1ELBSpecForProviderInstancesSelectorPolicy
     public V1beta1ELBSpecForProviderInstancesSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Instance in ec2 to populate instances.</summary>
 public partial class V1beta1ELBSpecForProviderInstancesSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -152,6 +158,7 @@ public partial class V1beta1ELBSpecForProviderInstancesSelector
     public V1beta1ELBSpecForProviderInstancesSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ELBSpecForProviderListener
 {
     /// <summary>The port on the instance to route to</summary>
@@ -195,6 +202,7 @@ public enum V1beta1ELBSpecForProviderSubnetsRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ELBSpecForProviderSubnetsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -208,6 +216,7 @@ public partial class V1beta1ELBSpecForProviderSubnetsRefsPolicy
     public V1beta1ELBSpecForProviderSubnetsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1ELBSpecForProviderSubnetsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -239,6 +248,7 @@ public enum V1beta1ELBSpecForProviderSubnetsSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ELBSpecForProviderSubnetsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -252,6 +262,7 @@ public partial class V1beta1ELBSpecForProviderSubnetsSelectorPolicy
     public V1beta1ELBSpecForProviderSubnetsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnets.</summary>
 public partial class V1beta1ELBSpecForProviderSubnetsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -267,6 +278,7 @@ public partial class V1beta1ELBSpecForProviderSubnetsSelector
     public V1beta1ELBSpecForProviderSubnetsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ELBSpecForProvider
 {
     /// <summary>An Access Logs block. Access Logs documented below.</summary>
@@ -350,6 +362,7 @@ public partial class V1beta1ELBSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ELBSpecInitProviderAccessLogs
 {
     /// <summary>The S3 bucket name to store the logs in.</summary>
@@ -369,6 +382,7 @@ public partial class V1beta1ELBSpecInitProviderAccessLogs
     public double? Interval { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ELBSpecInitProviderHealthCheck
 {
     /// <summary>The number of checks before the instance is declared healthy.</summary>
@@ -412,6 +426,7 @@ public enum V1beta1ELBSpecInitProviderInstancesRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ELBSpecInitProviderInstancesRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -425,6 +440,7 @@ public partial class V1beta1ELBSpecInitProviderInstancesRefsPolicy
     public V1beta1ELBSpecInitProviderInstancesRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1ELBSpecInitProviderInstancesRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -456,6 +472,7 @@ public enum V1beta1ELBSpecInitProviderInstancesSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ELBSpecInitProviderInstancesSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -469,6 +486,7 @@ public partial class V1beta1ELBSpecInitProviderInstancesSelectorPolicy
     public V1beta1ELBSpecInitProviderInstancesSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Instance in ec2 to populate instances.</summary>
 public partial class V1beta1ELBSpecInitProviderInstancesSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -484,6 +502,7 @@ public partial class V1beta1ELBSpecInitProviderInstancesSelector
     public V1beta1ELBSpecInitProviderInstancesSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ELBSpecInitProviderListener
 {
     /// <summary>The port on the instance to route to</summary>
@@ -527,6 +546,7 @@ public enum V1beta1ELBSpecInitProviderSubnetsRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ELBSpecInitProviderSubnetsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -540,6 +560,7 @@ public partial class V1beta1ELBSpecInitProviderSubnetsRefsPolicy
     public V1beta1ELBSpecInitProviderSubnetsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1ELBSpecInitProviderSubnetsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -571,6 +592,7 @@ public enum V1beta1ELBSpecInitProviderSubnetsSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ELBSpecInitProviderSubnetsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -584,6 +606,7 @@ public partial class V1beta1ELBSpecInitProviderSubnetsSelectorPolicy
     public V1beta1ELBSpecInitProviderSubnetsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnets.</summary>
 public partial class V1beta1ELBSpecInitProviderSubnetsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -599,6 +622,7 @@ public partial class V1beta1ELBSpecInitProviderSubnetsSelector
     public V1beta1ELBSpecInitProviderSubnetsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ELBSpecInitProvider
 {
     /// <summary>An Access Logs block. Access Logs documented below.</summary>
@@ -720,6 +744,7 @@ public enum V1beta1ELBSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ELBSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -733,6 +758,7 @@ public partial class V1beta1ELBSpecProviderConfigRefPolicy
     public V1beta1ELBSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ELBSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -764,6 +790,7 @@ public enum V1beta1ELBSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ELBSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -777,6 +804,7 @@ public partial class V1beta1ELBSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1ELBSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ELBSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -788,6 +816,7 @@ public partial class V1beta1ELBSpecPublishConnectionDetailsToConfigRef
     public V1beta1ELBSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ELBSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -803,6 +832,7 @@ public partial class V1beta1ELBSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ELBSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -818,6 +848,7 @@ public partial class V1beta1ELBSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ELBSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -829,6 +860,7 @@ public partial class V1beta1ELBSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ELBSpec defines the desired state of ELB</summary>
 public partial class V1beta1ELBSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -861,6 +893,7 @@ public partial class V1beta1ELBSpec
     public V1beta1ELBSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ELBStatusAtProviderAccessLogs
 {
     /// <summary>The S3 bucket name to store the logs in.</summary>
@@ -880,6 +913,7 @@ public partial class V1beta1ELBStatusAtProviderAccessLogs
     public double? Interval { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ELBStatusAtProviderHealthCheck
 {
     /// <summary>The number of checks before the instance is declared healthy.</summary>
@@ -903,6 +937,7 @@ public partial class V1beta1ELBStatusAtProviderHealthCheck
     public double? UnhealthyThreshold { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ELBStatusAtProviderListener
 {
     /// <summary>The port on the instance to route to</summary>
@@ -926,6 +961,7 @@ public partial class V1beta1ELBStatusAtProviderListener
     public string? SslCertificateId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ELBStatusAtProvider
 {
     /// <summary>An Access Logs block. Access Logs documented below.</summary>
@@ -1013,6 +1049,7 @@ public partial class V1beta1ELBStatusAtProvider
     public string? ZoneId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ELBStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1040,6 +1077,7 @@ public partial class V1beta1ELBStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ELBStatus defines the observed state of ELB.</summary>
 public partial class V1beta1ELBStatus
 {
     /// <summary></summary>
@@ -1056,6 +1094,7 @@ public partial class V1beta1ELBStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ELB is the Schema for the ELBs API. Provides an Elastic Load Balancer resource.</summary>
 public partial class V1beta1ELB : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ELBSpec>, IStatus<V1beta1ELBStatus>
 {
     public const string KubeApiVersion = "v1beta1";

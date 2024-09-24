@@ -38,6 +38,7 @@ public enum V1beta1MetastoreServiceSpecForProviderEncryptionConfigKmsKeyRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MetastoreServiceSpecForProviderEncryptionConfigKmsKeyRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1MetastoreServiceSpecForProviderEncryptionConfigKmsKe
     public V1beta1MetastoreServiceSpecForProviderEncryptionConfigKmsKeyRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a CryptoKey in kms to populate kmsKey.</summary>
 public partial class V1beta1MetastoreServiceSpecForProviderEncryptionConfigKmsKeyRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1MetastoreServiceSpecForProviderEncryptionConfigKmsKeySelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MetastoreServiceSpecForProviderEncryptionConfigKmsKeySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1MetastoreServiceSpecForProviderEncryptionConfigKmsKe
     public V1beta1MetastoreServiceSpecForProviderEncryptionConfigKmsKeySelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a CryptoKey in kms to populate kmsKey.</summary>
 public partial class V1beta1MetastoreServiceSpecForProviderEncryptionConfigKmsKeySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1MetastoreServiceSpecForProviderEncryptionConfigKmsKe
     public V1beta1MetastoreServiceSpecForProviderEncryptionConfigKmsKeySelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceSpecForProviderEncryptionConfig
 {
     /// <summary>The fully qualified customer provided Cloud KMS key name to use for customer data encryption. Use the following format: projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/cryptoKeys/([^/]+)</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1MetastoreServiceSpecForProviderEncryptionConfig
     public V1beta1MetastoreServiceSpecForProviderEncryptionConfigKmsKeySelector? KmsKeySelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceSpecForProviderHiveMetastoreConfigAuxiliaryVersions
 {
     /// <summary>A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore (configured in hive-site.xml). The mappings override system defaults (some keys cannot be overridden)</summary>
@@ -140,6 +146,7 @@ public partial class V1beta1MetastoreServiceSpecForProviderHiveMetastoreConfigAu
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceSpecForProviderHiveMetastoreConfigKerberosConfigKeytab
 {
     /// <summary>The relative resource name of a Secret Manager secret version, in the following form: "projects/{projectNumber}/secrets/{secret_id}/versions/{version_id}".</summary>
@@ -147,6 +154,7 @@ public partial class V1beta1MetastoreServiceSpecForProviderHiveMetastoreConfigKe
     public string? CloudSecret { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceSpecForProviderHiveMetastoreConfigKerberosConfig
 {
     /// <summary>A Kerberos keytab file that can be used to authenticate a service principal with a Kerberos Key Distribution Center (KDC). Structure is documented below.</summary>
@@ -162,6 +170,7 @@ public partial class V1beta1MetastoreServiceSpecForProviderHiveMetastoreConfigKe
     public string? Principal { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceSpecForProviderHiveMetastoreConfig
 {
     /// <summary>A mapping of Hive metastore version to the auxiliary version configuration. When specified, a secondary Hive metastore service is created along with the primary service. All auxiliary versions must be less than the service's primary version. The key is the auxiliary service name and it must match the regular expression a-z?. This means that the first character must be a lowercase letter, and all the following characters must be hyphens, lowercase letters, or digits, except the last character, which cannot be a hyphen. Structure is documented below.</summary>
@@ -185,6 +194,7 @@ public partial class V1beta1MetastoreServiceSpecForProviderHiveMetastoreConfig
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceSpecForProviderMaintenanceWindow
 {
     /// <summary>The day of week, when the window starts. Possible values are: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.</summary>
@@ -196,6 +206,7 @@ public partial class V1beta1MetastoreServiceSpecForProviderMaintenanceWindow
     public double? HourOfDay { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceSpecForProviderMetadataIntegrationDataCatalogConfig
 {
     /// <summary>Defines whether the metastore metadata should be synced to Data Catalog. The default value is to disable syncing metastore metadata to Data Catalog.</summary>
@@ -203,6 +214,7 @@ public partial class V1beta1MetastoreServiceSpecForProviderMetadataIntegrationDa
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceSpecForProviderMetadataIntegration
 {
     /// <summary>The integration config for the Data Catalog service. Structure is documented below.</summary>
@@ -230,6 +242,7 @@ public enum V1beta1MetastoreServiceSpecForProviderNetworkConfigConsumersSubnetwo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MetastoreServiceSpecForProviderNetworkConfigConsumersSubnetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -243,6 +256,7 @@ public partial class V1beta1MetastoreServiceSpecForProviderNetworkConfigConsumer
     public V1beta1MetastoreServiceSpecForProviderNetworkConfigConsumersSubnetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnetwork in compute to populate subnetwork.</summary>
 public partial class V1beta1MetastoreServiceSpecForProviderNetworkConfigConsumersSubnetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -274,6 +288,7 @@ public enum V1beta1MetastoreServiceSpecForProviderNetworkConfigConsumersSubnetwo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MetastoreServiceSpecForProviderNetworkConfigConsumersSubnetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -287,6 +302,7 @@ public partial class V1beta1MetastoreServiceSpecForProviderNetworkConfigConsumer
     public V1beta1MetastoreServiceSpecForProviderNetworkConfigConsumersSubnetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnetwork in compute to populate subnetwork.</summary>
 public partial class V1beta1MetastoreServiceSpecForProviderNetworkConfigConsumersSubnetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -302,6 +318,7 @@ public partial class V1beta1MetastoreServiceSpecForProviderNetworkConfigConsumer
     public V1beta1MetastoreServiceSpecForProviderNetworkConfigConsumersSubnetworkSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceSpecForProviderNetworkConfigConsumers
 {
     /// <summary>The subnetwork of the customer project from which an IP address is reserved and used as the Dataproc Metastore service's endpoint. It is accessible to hosts in the subnet and to all hosts in a subnet in the same region and same network. There must be at least one IP address available in the subnet's primary range. The subnet is specified in the following form: `projects/{projectNumber}/regions/{region_id}/subnetworks/{subnetwork_id}</summary>
@@ -317,6 +334,7 @@ public partial class V1beta1MetastoreServiceSpecForProviderNetworkConfigConsumer
     public V1beta1MetastoreServiceSpecForProviderNetworkConfigConsumersSubnetworkSelector? SubnetworkSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceSpecForProviderNetworkConfig
 {
     /// <summary>The consumer-side network configuration for the Dataproc Metastore instance. Structure is documented below.</summary>
@@ -324,6 +342,7 @@ public partial class V1beta1MetastoreServiceSpecForProviderNetworkConfig
     public IList<V1beta1MetastoreServiceSpecForProviderNetworkConfigConsumers>? Consumers { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceSpecForProviderScalingConfig
 {
     /// <summary>Metastore instance sizes. Possible values are: EXTRA_SMALL, SMALL, MEDIUM, LARGE, EXTRA_LARGE.</summary>
@@ -335,6 +354,7 @@ public partial class V1beta1MetastoreServiceSpecForProviderScalingConfig
     public double? ScalingFactor { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceSpecForProviderScheduledBackup
 {
     /// <summary>A Cloud Storage URI of a folder, in the format gs://&lt;bucket_name&gt;/&lt;path_inside_bucket&gt;. A sub-folder &lt;backup_folder&gt; containing backup files will be stored below it.</summary>
@@ -354,6 +374,7 @@ public partial class V1beta1MetastoreServiceSpecForProviderScheduledBackup
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceSpecForProviderTelemetryConfig
 {
     /// <summary>The output format of the Dataproc Metastore service's logs. Default value is JSON. Possible values are: LEGACY, JSON.</summary>
@@ -361,6 +382,7 @@ public partial class V1beta1MetastoreServiceSpecForProviderTelemetryConfig
     public string? LogFormat { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceSpecForProvider
 {
     /// <summary>The database type that the Metastore service stores its data. Default value is MYSQL. Possible values are: MYSQL, SPANNER.</summary>
@@ -448,6 +470,7 @@ public enum V1beta1MetastoreServiceSpecInitProviderEncryptionConfigKmsKeyRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MetastoreServiceSpecInitProviderEncryptionConfigKmsKeyRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -461,6 +484,7 @@ public partial class V1beta1MetastoreServiceSpecInitProviderEncryptionConfigKmsK
     public V1beta1MetastoreServiceSpecInitProviderEncryptionConfigKmsKeyRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a CryptoKey in kms to populate kmsKey.</summary>
 public partial class V1beta1MetastoreServiceSpecInitProviderEncryptionConfigKmsKeyRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -492,6 +516,7 @@ public enum V1beta1MetastoreServiceSpecInitProviderEncryptionConfigKmsKeySelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MetastoreServiceSpecInitProviderEncryptionConfigKmsKeySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -505,6 +530,7 @@ public partial class V1beta1MetastoreServiceSpecInitProviderEncryptionConfigKmsK
     public V1beta1MetastoreServiceSpecInitProviderEncryptionConfigKmsKeySelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a CryptoKey in kms to populate kmsKey.</summary>
 public partial class V1beta1MetastoreServiceSpecInitProviderEncryptionConfigKmsKeySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -520,6 +546,7 @@ public partial class V1beta1MetastoreServiceSpecInitProviderEncryptionConfigKmsK
     public V1beta1MetastoreServiceSpecInitProviderEncryptionConfigKmsKeySelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceSpecInitProviderEncryptionConfig
 {
     /// <summary>The fully qualified customer provided Cloud KMS key name to use for customer data encryption. Use the following format: projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/cryptoKeys/([^/]+)</summary>
@@ -535,6 +562,7 @@ public partial class V1beta1MetastoreServiceSpecInitProviderEncryptionConfig
     public V1beta1MetastoreServiceSpecInitProviderEncryptionConfigKmsKeySelector? KmsKeySelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceSpecInitProviderHiveMetastoreConfigAuxiliaryVersions
 {
     /// <summary>A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore (configured in hive-site.xml). The mappings override system defaults (some keys cannot be overridden)</summary>
@@ -550,6 +578,7 @@ public partial class V1beta1MetastoreServiceSpecInitProviderHiveMetastoreConfigA
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceSpecInitProviderHiveMetastoreConfigKerberosConfigKeytab
 {
     /// <summary>The relative resource name of a Secret Manager secret version, in the following form: "projects/{projectNumber}/secrets/{secret_id}/versions/{version_id}".</summary>
@@ -557,6 +586,7 @@ public partial class V1beta1MetastoreServiceSpecInitProviderHiveMetastoreConfigK
     public string? CloudSecret { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceSpecInitProviderHiveMetastoreConfigKerberosConfig
 {
     /// <summary>A Kerberos keytab file that can be used to authenticate a service principal with a Kerberos Key Distribution Center (KDC). Structure is documented below.</summary>
@@ -572,6 +602,7 @@ public partial class V1beta1MetastoreServiceSpecInitProviderHiveMetastoreConfigK
     public string? Principal { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceSpecInitProviderHiveMetastoreConfig
 {
     /// <summary>A mapping of Hive metastore version to the auxiliary version configuration. When specified, a secondary Hive metastore service is created along with the primary service. All auxiliary versions must be less than the service's primary version. The key is the auxiliary service name and it must match the regular expression a-z?. This means that the first character must be a lowercase letter, and all the following characters must be hyphens, lowercase letters, or digits, except the last character, which cannot be a hyphen. Structure is documented below.</summary>
@@ -595,6 +626,7 @@ public partial class V1beta1MetastoreServiceSpecInitProviderHiveMetastoreConfig
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceSpecInitProviderMaintenanceWindow
 {
     /// <summary>The day of week, when the window starts. Possible values are: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.</summary>
@@ -606,6 +638,7 @@ public partial class V1beta1MetastoreServiceSpecInitProviderMaintenanceWindow
     public double? HourOfDay { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceSpecInitProviderMetadataIntegrationDataCatalogConfig
 {
     /// <summary>Defines whether the metastore metadata should be synced to Data Catalog. The default value is to disable syncing metastore metadata to Data Catalog.</summary>
@@ -613,6 +646,7 @@ public partial class V1beta1MetastoreServiceSpecInitProviderMetadataIntegrationD
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceSpecInitProviderMetadataIntegration
 {
     /// <summary>The integration config for the Data Catalog service. Structure is documented below.</summary>
@@ -640,6 +674,7 @@ public enum V1beta1MetastoreServiceSpecInitProviderNetworkConfigConsumersSubnetw
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MetastoreServiceSpecInitProviderNetworkConfigConsumersSubnetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -653,6 +688,7 @@ public partial class V1beta1MetastoreServiceSpecInitProviderNetworkConfigConsume
     public V1beta1MetastoreServiceSpecInitProviderNetworkConfigConsumersSubnetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnetwork in compute to populate subnetwork.</summary>
 public partial class V1beta1MetastoreServiceSpecInitProviderNetworkConfigConsumersSubnetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -684,6 +720,7 @@ public enum V1beta1MetastoreServiceSpecInitProviderNetworkConfigConsumersSubnetw
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MetastoreServiceSpecInitProviderNetworkConfigConsumersSubnetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -697,6 +734,7 @@ public partial class V1beta1MetastoreServiceSpecInitProviderNetworkConfigConsume
     public V1beta1MetastoreServiceSpecInitProviderNetworkConfigConsumersSubnetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnetwork in compute to populate subnetwork.</summary>
 public partial class V1beta1MetastoreServiceSpecInitProviderNetworkConfigConsumersSubnetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -712,6 +750,7 @@ public partial class V1beta1MetastoreServiceSpecInitProviderNetworkConfigConsume
     public V1beta1MetastoreServiceSpecInitProviderNetworkConfigConsumersSubnetworkSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceSpecInitProviderNetworkConfigConsumers
 {
     /// <summary>The subnetwork of the customer project from which an IP address is reserved and used as the Dataproc Metastore service's endpoint. It is accessible to hosts in the subnet and to all hosts in a subnet in the same region and same network. There must be at least one IP address available in the subnet's primary range. The subnet is specified in the following form: `projects/{projectNumber}/regions/{region_id}/subnetworks/{subnetwork_id}</summary>
@@ -727,6 +766,7 @@ public partial class V1beta1MetastoreServiceSpecInitProviderNetworkConfigConsume
     public V1beta1MetastoreServiceSpecInitProviderNetworkConfigConsumersSubnetworkSelector? SubnetworkSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceSpecInitProviderNetworkConfig
 {
     /// <summary>The consumer-side network configuration for the Dataproc Metastore instance. Structure is documented below.</summary>
@@ -734,6 +774,7 @@ public partial class V1beta1MetastoreServiceSpecInitProviderNetworkConfig
     public IList<V1beta1MetastoreServiceSpecInitProviderNetworkConfigConsumers>? Consumers { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceSpecInitProviderScalingConfig
 {
     /// <summary>Metastore instance sizes. Possible values are: EXTRA_SMALL, SMALL, MEDIUM, LARGE, EXTRA_LARGE.</summary>
@@ -745,6 +786,7 @@ public partial class V1beta1MetastoreServiceSpecInitProviderScalingConfig
     public double? ScalingFactor { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceSpecInitProviderScheduledBackup
 {
     /// <summary>A Cloud Storage URI of a folder, in the format gs://&lt;bucket_name&gt;/&lt;path_inside_bucket&gt;. A sub-folder &lt;backup_folder&gt; containing backup files will be stored below it.</summary>
@@ -764,6 +806,7 @@ public partial class V1beta1MetastoreServiceSpecInitProviderScheduledBackup
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceSpecInitProviderTelemetryConfig
 {
     /// <summary>The output format of the Dataproc Metastore service's logs. Default value is JSON. Possible values are: LEGACY, JSON.</summary>
@@ -771,6 +814,7 @@ public partial class V1beta1MetastoreServiceSpecInitProviderTelemetryConfig
     public string? LogFormat { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1MetastoreServiceSpecInitProvider
 {
     /// <summary>The database type that the Metastore service stores its data. Default value is MYSQL. Possible values are: MYSQL, SPANNER.</summary>
@@ -876,6 +920,7 @@ public enum V1beta1MetastoreServiceSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MetastoreServiceSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -889,6 +934,7 @@ public partial class V1beta1MetastoreServiceSpecProviderConfigRefPolicy
     public V1beta1MetastoreServiceSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1MetastoreServiceSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -920,6 +966,7 @@ public enum V1beta1MetastoreServiceSpecPublishConnectionDetailsToConfigRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MetastoreServiceSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -933,6 +980,7 @@ public partial class V1beta1MetastoreServiceSpecPublishConnectionDetailsToConfig
     public V1beta1MetastoreServiceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1MetastoreServiceSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -944,6 +992,7 @@ public partial class V1beta1MetastoreServiceSpecPublishConnectionDetailsToConfig
     public V1beta1MetastoreServiceSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1MetastoreServiceSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -959,6 +1008,7 @@ public partial class V1beta1MetastoreServiceSpecPublishConnectionDetailsToMetada
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1MetastoreServiceSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -974,6 +1024,7 @@ public partial class V1beta1MetastoreServiceSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1MetastoreServiceSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -985,6 +1036,7 @@ public partial class V1beta1MetastoreServiceSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>MetastoreServiceSpec defines the desired state of MetastoreService</summary>
 public partial class V1beta1MetastoreServiceSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1017,6 +1069,7 @@ public partial class V1beta1MetastoreServiceSpec
     public V1beta1MetastoreServiceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceStatusAtProviderEncryptionConfig
 {
     /// <summary>The fully qualified customer provided Cloud KMS key name to use for customer data encryption. Use the following format: projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/cryptoKeys/([^/]+)</summary>
@@ -1024,6 +1077,7 @@ public partial class V1beta1MetastoreServiceStatusAtProviderEncryptionConfig
     public string? KmsKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceStatusAtProviderHiveMetastoreConfigAuxiliaryVersions
 {
     /// <summary>A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore (configured in hive-site.xml). The mappings override system defaults (some keys cannot be overridden)</summary>
@@ -1039,6 +1093,7 @@ public partial class V1beta1MetastoreServiceStatusAtProviderHiveMetastoreConfigA
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceStatusAtProviderHiveMetastoreConfigKerberosConfigKeytab
 {
     /// <summary>The relative resource name of a Secret Manager secret version, in the following form: "projects/{projectNumber}/secrets/{secret_id}/versions/{version_id}".</summary>
@@ -1046,6 +1101,7 @@ public partial class V1beta1MetastoreServiceStatusAtProviderHiveMetastoreConfigK
     public string? CloudSecret { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceStatusAtProviderHiveMetastoreConfigKerberosConfig
 {
     /// <summary>A Kerberos keytab file that can be used to authenticate a service principal with a Kerberos Key Distribution Center (KDC). Structure is documented below.</summary>
@@ -1061,6 +1117,7 @@ public partial class V1beta1MetastoreServiceStatusAtProviderHiveMetastoreConfigK
     public string? Principal { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceStatusAtProviderHiveMetastoreConfig
 {
     /// <summary>A mapping of Hive metastore version to the auxiliary version configuration. When specified, a secondary Hive metastore service is created along with the primary service. All auxiliary versions must be less than the service's primary version. The key is the auxiliary service name and it must match the regular expression a-z?. This means that the first character must be a lowercase letter, and all the following characters must be hyphens, lowercase letters, or digits, except the last character, which cannot be a hyphen. Structure is documented below.</summary>
@@ -1084,6 +1141,7 @@ public partial class V1beta1MetastoreServiceStatusAtProviderHiveMetastoreConfig
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceStatusAtProviderMaintenanceWindow
 {
     /// <summary>The day of week, when the window starts. Possible values are: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.</summary>
@@ -1095,6 +1153,7 @@ public partial class V1beta1MetastoreServiceStatusAtProviderMaintenanceWindow
     public double? HourOfDay { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceStatusAtProviderMetadataIntegrationDataCatalogConfig
 {
     /// <summary>Defines whether the metastore metadata should be synced to Data Catalog. The default value is to disable syncing metastore metadata to Data Catalog.</summary>
@@ -1102,6 +1161,7 @@ public partial class V1beta1MetastoreServiceStatusAtProviderMetadataIntegrationD
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceStatusAtProviderMetadataIntegration
 {
     /// <summary>The integration config for the Data Catalog service. Structure is documented below.</summary>
@@ -1109,6 +1169,7 @@ public partial class V1beta1MetastoreServiceStatusAtProviderMetadataIntegration
     public IList<V1beta1MetastoreServiceStatusAtProviderMetadataIntegrationDataCatalogConfig>? DataCatalogConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceStatusAtProviderNetworkConfigConsumers
 {
     /// <summary>The URI of the endpoint used to access the metastore service.</summary>
@@ -1120,6 +1181,7 @@ public partial class V1beta1MetastoreServiceStatusAtProviderNetworkConfigConsume
     public string? Subnetwork { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceStatusAtProviderNetworkConfig
 {
     /// <summary>The consumer-side network configuration for the Dataproc Metastore instance. Structure is documented below.</summary>
@@ -1127,6 +1189,7 @@ public partial class V1beta1MetastoreServiceStatusAtProviderNetworkConfig
     public IList<V1beta1MetastoreServiceStatusAtProviderNetworkConfigConsumers>? Consumers { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceStatusAtProviderScalingConfig
 {
     /// <summary>Metastore instance sizes. Possible values are: EXTRA_SMALL, SMALL, MEDIUM, LARGE, EXTRA_LARGE.</summary>
@@ -1138,6 +1201,7 @@ public partial class V1beta1MetastoreServiceStatusAtProviderScalingConfig
     public double? ScalingFactor { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceStatusAtProviderScheduledBackup
 {
     /// <summary>A Cloud Storage URI of a folder, in the format gs://&lt;bucket_name&gt;/&lt;path_inside_bucket&gt;. A sub-folder &lt;backup_folder&gt; containing backup files will be stored below it.</summary>
@@ -1157,6 +1221,7 @@ public partial class V1beta1MetastoreServiceStatusAtProviderScheduledBackup
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceStatusAtProviderTelemetryConfig
 {
     /// <summary>The output format of the Dataproc Metastore service's logs. Default value is JSON. Possible values are: LEGACY, JSON.</summary>
@@ -1164,6 +1229,7 @@ public partial class V1beta1MetastoreServiceStatusAtProviderTelemetryConfig
     public string? LogFormat { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetastoreServiceStatusAtProvider
 {
     /// <summary>A Cloud Storage URI (starting with gs://) that specifies where artifacts related to the metastore service are stored.</summary>
@@ -1267,6 +1333,7 @@ public partial class V1beta1MetastoreServiceStatusAtProvider
     public string? Uid { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1MetastoreServiceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1294,6 +1361,7 @@ public partial class V1beta1MetastoreServiceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>MetastoreServiceStatus defines the observed state of MetastoreService.</summary>
 public partial class V1beta1MetastoreServiceStatus
 {
     /// <summary></summary>
@@ -1310,6 +1378,7 @@ public partial class V1beta1MetastoreServiceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>MetastoreService is the Schema for the MetastoreServices API. A managed metastore service that serves metadata queries.</summary>
 public partial class V1beta1MetastoreService : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MetastoreServiceSpec>, IStatus<V1beta1MetastoreServiceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -38,6 +38,7 @@ public enum V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderResourceGroupN
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderResou
     public V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderResourceGroupN
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderResou
     public V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderStorageAccount
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderStorageAccountIdsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderStora
     public V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderStorageAccountIdsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderStorageAccountIdsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderStorageAccount
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderStorageAccountIdsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderStora
     public V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderStorageAccountIdsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Account in storage to populate storageAccountIds.</summary>
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderStorageAccountIdsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceResou
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorks
     public V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Workspace in operationalinsights to populate workspaceResourceId.</summary>
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceResou
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorks
     public V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Workspace in operationalinsights to populate workspaceResourceId.</summary>
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorks
     public V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceResourceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProvider
 {
     /// <summary>The data source type which should be used for this Log Analytics Linked Storage Account. Possible values are CustomLogs, AzureWatson, Query, Ingestion and Alerts. Changing this forces a new Log Analytics Linked Storage Account to be created.</summary>
@@ -357,6 +370,7 @@ public enum V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderResourceGroup
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -370,6 +384,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderReso
     public V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -401,6 +416,7 @@ public enum V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderResourceGroup
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -414,6 +430,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderReso
     public V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -449,6 +466,7 @@ public enum V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderStorageAccoun
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderStorageAccountIdsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -462,6 +480,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderStor
     public V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderStorageAccountIdsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderStorageAccountIdsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -493,6 +512,7 @@ public enum V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderStorageAccoun
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderStorageAccountIdsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -506,6 +526,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderStor
     public V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderStorageAccountIdsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Account in storage to populate storageAccountIds.</summary>
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderStorageAccountIdsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -541,6 +562,7 @@ public enum V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -554,6 +576,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWork
     public V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Workspace in operationalinsights to populate workspaceResourceId.</summary>
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -585,6 +608,7 @@ public enum V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -598,6 +622,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWork
     public V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Workspace in operationalinsights to populate workspaceResourceId.</summary>
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -613,6 +638,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWork
     public V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceResourceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProvider
 {
     /// <summary>The data source type which should be used for this Log Analytics Linked Storage Account. Possible values are CustomLogs, AzureWatson, Query, Ingestion and Alerts. Changing this forces a new Log Analytics Linked Storage Account to be created.</summary>
@@ -698,6 +724,7 @@ public enum V1beta1LogAnalyticsLinkedStorageAccountSpecProviderConfigRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -711,6 +738,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecProviderConfigRe
     public V1beta1LogAnalyticsLinkedStorageAccountSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -742,6 +770,7 @@ public enum V1beta1LogAnalyticsLinkedStorageAccountSpecPublishConnectionDetailsT
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -755,6 +784,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecPublishConnectio
     public V1beta1LogAnalyticsLinkedStorageAccountSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -766,6 +796,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecPublishConnectio
     public V1beta1LogAnalyticsLinkedStorageAccountSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -781,6 +812,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecPublishConnectio
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -796,6 +828,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecPublishConnectio
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -807,6 +840,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecWriteConnectionS
     public string Namespace { get; set; }
 }
 
+/// <summary>LogAnalyticsLinkedStorageAccountSpec defines the desired state of LogAnalyticsLinkedStorageAccount</summary>
 public partial class V1beta1LogAnalyticsLinkedStorageAccountSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -839,6 +873,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpec
     public V1beta1LogAnalyticsLinkedStorageAccountSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LogAnalyticsLinkedStorageAccountStatusAtProvider
 {
     /// <summary>The data source type which should be used for this Log Analytics Linked Storage Account. Possible values are CustomLogs, AzureWatson, Query, Ingestion and Alerts. Changing this forces a new Log Analytics Linked Storage Account to be created.</summary>
@@ -862,6 +897,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountStatusAtProvider
     public string? WorkspaceResourceId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1LogAnalyticsLinkedStorageAccountStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -889,6 +925,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>LogAnalyticsLinkedStorageAccountStatus defines the observed state of LogAnalyticsLinkedStorageAccount.</summary>
 public partial class V1beta1LogAnalyticsLinkedStorageAccountStatus
 {
     /// <summary></summary>
@@ -905,6 +942,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>LogAnalyticsLinkedStorageAccount is the Schema for the LogAnalyticsLinkedStorageAccounts API. Manages a Log Analytics Linked Storage Account.</summary>
 public partial class V1beta1LogAnalyticsLinkedStorageAccount : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LogAnalyticsLinkedStorageAccountSpec>, IStatus<V1beta1LogAnalyticsLinkedStorageAccountStatus>
 {
     public const string KubeApiVersion = "v1beta1";

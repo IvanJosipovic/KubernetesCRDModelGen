@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.flows.knative.dev;
+/// <summary>ChannelTemplate specifies which Channel CRD to use. If left unspecified, it is set to the default Channel CRD for the namespace (or cluster, in case there are no defaults for the namespace).</summary>
 public partial class V1SequenceSpecChannelTemplate
 {
     /// <summary>APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources</summary>
@@ -23,6 +24,7 @@ public partial class V1SequenceSpecChannelTemplate
     public JsonNode? Spec { get; set; }
 }
 
+/// <summary>Ref points to an Addressable.</summary>
 public partial class V1SequenceSpecReplyRef
 {
     /// <summary>API version of the referent.</summary>
@@ -42,6 +44,7 @@ public partial class V1SequenceSpecReplyRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Reply is a Reference to where the result of the last Subscriber gets sent to.</summary>
 public partial class V1SequenceSpecReply
 {
     /// <summary>Ref points to an Addressable.</summary>
@@ -61,6 +64,7 @@ public partial class V1SequenceSpecReply
     public string? Audience { get; set; }
 }
 
+/// <summary>Ref points to an Addressable.</summary>
 public partial class V1SequenceSpecStepsRef
 {
     /// <summary>API version of the referent.</summary>
@@ -80,6 +84,7 @@ public partial class V1SequenceSpecStepsRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1SequenceSpecSteps
 {
     /// <summary>Delivery is the delivery specification for events to the subscriber This includes things like retries, DLQ, etc.</summary>
@@ -103,6 +108,7 @@ public partial class V1SequenceSpecSteps
     public string? Audience { get; set; }
 }
 
+/// <summary>Spec defines the desired state of the Sequence.</summary>
 public partial class V1SequenceSpec
 {
     /// <summary>ChannelTemplate specifies which Channel CRD to use. If left unspecified, it is set to the default Channel CRD for the namespace (or cluster, in case there are no defaults for the namespace).</summary>
@@ -118,6 +124,7 @@ public partial class V1SequenceSpec
     public IList<V1SequenceSpecSteps>? Steps { get; set; }
 }
 
+/// <summary>Sequence is Addressable. It exposes the endpoint as an URI to get events delivered into the Sequence.</summary>
 public partial class V1SequenceStatusAddress
 {
     /// <summary></summary>
@@ -137,6 +144,7 @@ public partial class V1SequenceStatusAddress
     public string? Audience { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1SequenceStatusAddresses
 {
     /// <summary></summary>
@@ -156,6 +164,7 @@ public partial class V1SequenceStatusAddresses
     public string? Audience { get; set; }
 }
 
+/// <summary>Auth provides the relevant information for OIDC authentication.</summary>
 public partial class V1SequenceStatusAuth
 {
     /// <summary>ServiceAccountName is the name of the generated service account used for this components OIDC authentication.</summary>
@@ -167,6 +176,7 @@ public partial class V1SequenceStatusAuth
     public IList<string>? ServiceAccountNames { get; set; }
 }
 
+/// <summary>Channel is the reference to the underlying channel.</summary>
 public partial class V1SequenceStatusChannelStatusesChannel
 {
     /// <summary>API version of the referent.</summary>
@@ -198,6 +208,7 @@ public partial class V1SequenceStatusChannelStatusesChannel
     public string? Uid { get; set; }
 }
 
+/// <summary>ReadyCondition indicates whether the Channel is ready or not.</summary>
 public partial class V1SequenceStatusChannelStatusesReady
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another. We use VolatileTime in place of metav1.Time to exclude this from creating equality.Semantic differences (all other things held constant).</summary>
@@ -225,6 +236,7 @@ public partial class V1SequenceStatusChannelStatusesReady
     public string Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1SequenceStatusChannelStatuses
 {
     /// <summary>Channel is the reference to the underlying channel.</summary>
@@ -236,6 +248,7 @@ public partial class V1SequenceStatusChannelStatuses
     public V1SequenceStatusChannelStatusesReady? Ready { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1SequenceStatusPolicies
 {
     /// <summary>The API version of the applied EventPolicy. This indicates, which version of EventPolicy is supported by the resource.</summary>
@@ -247,6 +260,7 @@ public partial class V1SequenceStatusPolicies
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1SequenceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another. We use VolatileTime in place of metav1.Time to exclude this from creating equality.Semantic differences (all other things held constant).</summary>
@@ -274,6 +288,7 @@ public partial class V1SequenceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ReadyCondition indicates whether the Subscription is ready or not.</summary>
 public partial class V1SequenceStatusSubscriptionStatusesReady
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another. We use VolatileTime in place of metav1.Time to exclude this from creating equality.Semantic differences (all other things held constant).</summary>
@@ -301,6 +316,7 @@ public partial class V1SequenceStatusSubscriptionStatusesReady
     public string Type { get; set; }
 }
 
+/// <summary>Subscription is the reference to the underlying Subscription.</summary>
 public partial class V1SequenceStatusSubscriptionStatusesSubscription
 {
     /// <summary>API version of the referent.</summary>
@@ -332,6 +348,7 @@ public partial class V1SequenceStatusSubscriptionStatusesSubscription
     public string? Uid { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1SequenceStatusSubscriptionStatuses
 {
     /// <summary>ReadyCondition indicates whether the Subscription is ready or not.</summary>
@@ -343,6 +360,7 @@ public partial class V1SequenceStatusSubscriptionStatuses
     public V1SequenceStatusSubscriptionStatusesSubscription? Subscription { get; set; }
 }
 
+/// <summary>Status represents the current state of the Sequence. This data may be out of date.</summary>
 public partial class V1SequenceStatus
 {
     /// <summary>Sequence is Addressable. It exposes the endpoint as an URI to get events delivered into the Sequence.</summary>
@@ -383,6 +401,7 @@ public partial class V1SequenceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Sequence defines a sequence of Subscribers that will be wired in series through Channels and Subscriptions.</summary>
 public partial class V1Sequence : IKubernetesObject<V1ObjectMeta>, ISpec<V1SequenceSpec>, IStatus<V1SequenceStatus>
 {
     public const string KubeApiVersion = "v1";

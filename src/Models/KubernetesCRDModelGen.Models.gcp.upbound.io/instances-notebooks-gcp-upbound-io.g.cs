@@ -18,6 +18,7 @@ public enum V1beta1InstanceSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderAcceleratorConfig
 {
     /// <summary>Count of cores of this accelerator.</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1InstanceSpecForProviderAcceleratorConfig
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderContainerImage
 {
     /// <summary>The path to the container image repository. For example: gcr.io/{project_id}/{imageName}</summary>
@@ -40,6 +42,7 @@ public partial class V1beta1InstanceSpecForProviderContainerImage
     public string? Tag { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderReservationAffinity
 {
     /// <summary>The type of Compute Reservation. Possible values are: NO_RESERVATION, ANY_RESERVATION, SPECIFIC_RESERVATION.</summary>
@@ -55,6 +58,7 @@ public partial class V1beta1InstanceSpecForProviderReservationAffinity
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderShieldedInstanceConfig
 {
     /// <summary>Defines whether the instance has integrity monitoring enabled. Enables monitoring and attestation of the boot integrity of the instance. The attestation is performed against the integrity policy baseline. This baseline is initially derived from the implicitly trusted boot image when the instance is created. Enabled by default.</summary>
@@ -70,6 +74,7 @@ public partial class V1beta1InstanceSpecForProviderShieldedInstanceConfig
     public bool? EnableVtpm { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProviderVmImage
 {
     /// <summary>Use this VM image family to find the image; the newest image in this family will be used.</summary>
@@ -85,6 +90,7 @@ public partial class V1beta1InstanceSpecForProviderVmImage
     public string? Project { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecForProvider
 {
     /// <summary>The hardware accelerator used on this instance. If you use accelerators, make sure that your configuration has enough vCPUs and memory to support the machineType you have selected. Structure is documented below.</summary>
@@ -208,6 +214,7 @@ public partial class V1beta1InstanceSpecForProvider
     public IList<V1beta1InstanceSpecForProviderVmImage>? VmImage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderAcceleratorConfig
 {
     /// <summary>Count of cores of this accelerator.</summary>
@@ -219,6 +226,7 @@ public partial class V1beta1InstanceSpecInitProviderAcceleratorConfig
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderContainerImage
 {
     /// <summary>The path to the container image repository. For example: gcr.io/{project_id}/{imageName}</summary>
@@ -230,6 +238,7 @@ public partial class V1beta1InstanceSpecInitProviderContainerImage
     public string? Tag { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderReservationAffinity
 {
     /// <summary>The type of Compute Reservation. Possible values are: NO_RESERVATION, ANY_RESERVATION, SPECIFIC_RESERVATION.</summary>
@@ -245,6 +254,7 @@ public partial class V1beta1InstanceSpecInitProviderReservationAffinity
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderShieldedInstanceConfig
 {
     /// <summary>Defines whether the instance has integrity monitoring enabled. Enables monitoring and attestation of the boot integrity of the instance. The attestation is performed against the integrity policy baseline. This baseline is initially derived from the implicitly trusted boot image when the instance is created. Enabled by default.</summary>
@@ -260,6 +270,7 @@ public partial class V1beta1InstanceSpecInitProviderShieldedInstanceConfig
     public bool? EnableVtpm { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceSpecInitProviderVmImage
 {
     /// <summary>Use this VM image family to find the image; the newest image in this family will be used.</summary>
@@ -275,6 +286,7 @@ public partial class V1beta1InstanceSpecInitProviderVmImage
     public string? Project { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1InstanceSpecInitProvider
 {
     /// <summary>The hardware accelerator used on this instance. If you use accelerators, make sure that your configuration has enough vCPUs and memory to support the machineType you have selected. Structure is documented below.</summary>
@@ -436,6 +448,7 @@ public enum V1beta1InstanceSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -449,6 +462,7 @@ public partial class V1beta1InstanceSpecProviderConfigRefPolicy
     public V1beta1InstanceSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1InstanceSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -480,6 +494,7 @@ public enum V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -493,6 +508,7 @@ public partial class V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolic
     public V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1InstanceSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -504,6 +520,7 @@ public partial class V1beta1InstanceSpecPublishConnectionDetailsToConfigRef
     public V1beta1InstanceSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1InstanceSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -519,6 +536,7 @@ public partial class V1beta1InstanceSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1InstanceSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -534,6 +552,7 @@ public partial class V1beta1InstanceSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1InstanceSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -545,6 +564,7 @@ public partial class V1beta1InstanceSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>InstanceSpec defines the desired state of Instance</summary>
 public partial class V1beta1InstanceSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -577,6 +597,7 @@ public partial class V1beta1InstanceSpec
     public V1beta1InstanceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderAcceleratorConfig
 {
     /// <summary>Count of cores of this accelerator.</summary>
@@ -588,6 +609,7 @@ public partial class V1beta1InstanceStatusAtProviderAcceleratorConfig
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderContainerImage
 {
     /// <summary>The path to the container image repository. For example: gcr.io/{project_id}/{imageName}</summary>
@@ -599,6 +621,7 @@ public partial class V1beta1InstanceStatusAtProviderContainerImage
     public string? Tag { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderReservationAffinity
 {
     /// <summary>The type of Compute Reservation. Possible values are: NO_RESERVATION, ANY_RESERVATION, SPECIFIC_RESERVATION.</summary>
@@ -614,6 +637,7 @@ public partial class V1beta1InstanceStatusAtProviderReservationAffinity
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderShieldedInstanceConfig
 {
     /// <summary>Defines whether the instance has integrity monitoring enabled. Enables monitoring and attestation of the boot integrity of the instance. The attestation is performed against the integrity policy baseline. This baseline is initially derived from the implicitly trusted boot image when the instance is created. Enabled by default.</summary>
@@ -629,6 +653,7 @@ public partial class V1beta1InstanceStatusAtProviderShieldedInstanceConfig
     public bool? EnableVtpm { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProviderVmImage
 {
     /// <summary>Use this VM image family to find the image; the newest image in this family will be used.</summary>
@@ -644,6 +669,7 @@ public partial class V1beta1InstanceStatusAtProviderVmImage
     public string? Project { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceStatusAtProvider
 {
     /// <summary>The hardware accelerator used on this instance. If you use accelerators, make sure that your configuration has enough vCPUs and memory to support the machineType you have selected. Structure is documented below.</summary>
@@ -795,6 +821,7 @@ public partial class V1beta1InstanceStatusAtProvider
     public IList<V1beta1InstanceStatusAtProviderVmImage>? VmImage { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1InstanceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -822,6 +849,7 @@ public partial class V1beta1InstanceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>InstanceStatus defines the observed state of Instance.</summary>
 public partial class V1beta1InstanceStatus
 {
     /// <summary></summary>
@@ -838,6 +866,7 @@ public partial class V1beta1InstanceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Instance is the Schema for the Instances API. A Cloud AI Platform Notebook instance.</summary>
 public partial class V1beta1Instance : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1InstanceSpec>, IStatus<V1beta1InstanceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

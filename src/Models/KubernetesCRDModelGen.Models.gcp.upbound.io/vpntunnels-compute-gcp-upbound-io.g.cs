@@ -38,6 +38,7 @@ public enum V1beta1VPNTunnelSpecForProviderPeerExternalGatewayRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPNTunnelSpecForProviderPeerExternalGatewayRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1VPNTunnelSpecForProviderPeerExternalGatewayRefPolicy
     public V1beta1VPNTunnelSpecForProviderPeerExternalGatewayRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ExternalVPNGateway in compute to populate peerExternalGateway.</summary>
 public partial class V1beta1VPNTunnelSpecForProviderPeerExternalGatewayRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1VPNTunnelSpecForProviderPeerExternalGatewaySelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VPNTunnelSpecForProviderPeerExternalGatewaySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1VPNTunnelSpecForProviderPeerExternalGatewaySelectorP
     public V1beta1VPNTunnelSpecForProviderPeerExternalGatewaySelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ExternalVPNGateway in compute to populate peerExternalGateway.</summary>
 public partial class V1beta1VPNTunnelSpecForProviderPeerExternalGatewaySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1VPNTunnelSpecForProviderRouterRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPNTunnelSpecForProviderRouterRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1VPNTunnelSpecForProviderRouterRefPolicy
     public V1beta1VPNTunnelSpecForProviderRouterRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Router in compute to populate router.</summary>
 public partial class V1beta1VPNTunnelSpecForProviderRouterRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1VPNTunnelSpecForProviderRouterSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VPNTunnelSpecForProviderRouterSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1VPNTunnelSpecForProviderRouterSelectorPolicy
     public V1beta1VPNTunnelSpecForProviderRouterSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Router in compute to populate router.</summary>
 public partial class V1beta1VPNTunnelSpecForProviderRouterSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1VPNTunnelSpecForProviderRouterSelector
     public V1beta1VPNTunnelSpecForProviderRouterSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Shared secret used to set the secure session between the Cloud VPN gateway and the peer VPN gateway. Note: This property is sensitive and will not be displayed in the plan.</summary>
 public partial class V1beta1VPNTunnelSpecForProviderSharedSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -237,6 +246,7 @@ public enum V1beta1VPNTunnelSpecForProviderTargetVpnGatewayRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPNTunnelSpecForProviderTargetVpnGatewayRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -250,6 +260,7 @@ public partial class V1beta1VPNTunnelSpecForProviderTargetVpnGatewayRefPolicy
     public V1beta1VPNTunnelSpecForProviderTargetVpnGatewayRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPNGateway in compute to populate targetVpnGateway.</summary>
 public partial class V1beta1VPNTunnelSpecForProviderTargetVpnGatewayRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -281,6 +292,7 @@ public enum V1beta1VPNTunnelSpecForProviderTargetVpnGatewaySelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VPNTunnelSpecForProviderTargetVpnGatewaySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1VPNTunnelSpecForProviderTargetVpnGatewaySelectorPoli
     public V1beta1VPNTunnelSpecForProviderTargetVpnGatewaySelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPNGateway in compute to populate targetVpnGateway.</summary>
 public partial class V1beta1VPNTunnelSpecForProviderTargetVpnGatewaySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -329,6 +342,7 @@ public enum V1beta1VPNTunnelSpecForProviderVpnGatewayRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPNTunnelSpecForProviderVpnGatewayRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -342,6 +356,7 @@ public partial class V1beta1VPNTunnelSpecForProviderVpnGatewayRefPolicy
     public V1beta1VPNTunnelSpecForProviderVpnGatewayRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a HaVPNGateway in compute to populate vpnGateway.</summary>
 public partial class V1beta1VPNTunnelSpecForProviderVpnGatewayRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -373,6 +388,7 @@ public enum V1beta1VPNTunnelSpecForProviderVpnGatewaySelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VPNTunnelSpecForProviderVpnGatewaySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -386,6 +402,7 @@ public partial class V1beta1VPNTunnelSpecForProviderVpnGatewaySelectorPolicy
     public V1beta1VPNTunnelSpecForProviderVpnGatewaySelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a HaVPNGateway in compute to populate vpnGateway.</summary>
 public partial class V1beta1VPNTunnelSpecForProviderVpnGatewaySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -401,6 +418,7 @@ public partial class V1beta1VPNTunnelSpecForProviderVpnGatewaySelector
     public V1beta1VPNTunnelSpecForProviderVpnGatewaySelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNTunnelSpecForProvider
 {
     /// <summary>An optional description of this resource.</summary>
@@ -520,6 +538,7 @@ public enum V1beta1VPNTunnelSpecInitProviderPeerExternalGatewayRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPNTunnelSpecInitProviderPeerExternalGatewayRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -533,6 +552,7 @@ public partial class V1beta1VPNTunnelSpecInitProviderPeerExternalGatewayRefPolic
     public V1beta1VPNTunnelSpecInitProviderPeerExternalGatewayRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ExternalVPNGateway in compute to populate peerExternalGateway.</summary>
 public partial class V1beta1VPNTunnelSpecInitProviderPeerExternalGatewayRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -564,6 +584,7 @@ public enum V1beta1VPNTunnelSpecInitProviderPeerExternalGatewaySelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VPNTunnelSpecInitProviderPeerExternalGatewaySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -577,6 +598,7 @@ public partial class V1beta1VPNTunnelSpecInitProviderPeerExternalGatewaySelector
     public V1beta1VPNTunnelSpecInitProviderPeerExternalGatewaySelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ExternalVPNGateway in compute to populate peerExternalGateway.</summary>
 public partial class V1beta1VPNTunnelSpecInitProviderPeerExternalGatewaySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -612,6 +634,7 @@ public enum V1beta1VPNTunnelSpecInitProviderRouterRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPNTunnelSpecInitProviderRouterRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -625,6 +648,7 @@ public partial class V1beta1VPNTunnelSpecInitProviderRouterRefPolicy
     public V1beta1VPNTunnelSpecInitProviderRouterRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Router in compute to populate router.</summary>
 public partial class V1beta1VPNTunnelSpecInitProviderRouterRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -656,6 +680,7 @@ public enum V1beta1VPNTunnelSpecInitProviderRouterSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VPNTunnelSpecInitProviderRouterSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -669,6 +694,7 @@ public partial class V1beta1VPNTunnelSpecInitProviderRouterSelectorPolicy
     public V1beta1VPNTunnelSpecInitProviderRouterSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Router in compute to populate router.</summary>
 public partial class V1beta1VPNTunnelSpecInitProviderRouterSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -684,6 +710,7 @@ public partial class V1beta1VPNTunnelSpecInitProviderRouterSelector
     public V1beta1VPNTunnelSpecInitProviderRouterSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Shared secret used to set the secure session between the Cloud VPN gateway and the peer VPN gateway. Note: This property is sensitive and will not be displayed in the plan.</summary>
 public partial class V1beta1VPNTunnelSpecInitProviderSharedSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -719,6 +746,7 @@ public enum V1beta1VPNTunnelSpecInitProviderTargetVpnGatewayRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPNTunnelSpecInitProviderTargetVpnGatewayRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -732,6 +760,7 @@ public partial class V1beta1VPNTunnelSpecInitProviderTargetVpnGatewayRefPolicy
     public V1beta1VPNTunnelSpecInitProviderTargetVpnGatewayRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPNGateway in compute to populate targetVpnGateway.</summary>
 public partial class V1beta1VPNTunnelSpecInitProviderTargetVpnGatewayRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -763,6 +792,7 @@ public enum V1beta1VPNTunnelSpecInitProviderTargetVpnGatewaySelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VPNTunnelSpecInitProviderTargetVpnGatewaySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -776,6 +806,7 @@ public partial class V1beta1VPNTunnelSpecInitProviderTargetVpnGatewaySelectorPol
     public V1beta1VPNTunnelSpecInitProviderTargetVpnGatewaySelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPNGateway in compute to populate targetVpnGateway.</summary>
 public partial class V1beta1VPNTunnelSpecInitProviderTargetVpnGatewaySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -811,6 +842,7 @@ public enum V1beta1VPNTunnelSpecInitProviderVpnGatewayRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPNTunnelSpecInitProviderVpnGatewayRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -824,6 +856,7 @@ public partial class V1beta1VPNTunnelSpecInitProviderVpnGatewayRefPolicy
     public V1beta1VPNTunnelSpecInitProviderVpnGatewayRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a HaVPNGateway in compute to populate vpnGateway.</summary>
 public partial class V1beta1VPNTunnelSpecInitProviderVpnGatewayRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -855,6 +888,7 @@ public enum V1beta1VPNTunnelSpecInitProviderVpnGatewaySelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VPNTunnelSpecInitProviderVpnGatewaySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -868,6 +902,7 @@ public partial class V1beta1VPNTunnelSpecInitProviderVpnGatewaySelectorPolicy
     public V1beta1VPNTunnelSpecInitProviderVpnGatewaySelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a HaVPNGateway in compute to populate vpnGateway.</summary>
 public partial class V1beta1VPNTunnelSpecInitProviderVpnGatewaySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -883,6 +918,7 @@ public partial class V1beta1VPNTunnelSpecInitProviderVpnGatewaySelector
     public V1beta1VPNTunnelSpecInitProviderVpnGatewaySelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1VPNTunnelSpecInitProvider
 {
     /// <summary>An optional description of this resource.</summary>
@@ -1020,6 +1056,7 @@ public enum V1beta1VPNTunnelSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPNTunnelSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1033,6 +1070,7 @@ public partial class V1beta1VPNTunnelSpecProviderConfigRefPolicy
     public V1beta1VPNTunnelSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1VPNTunnelSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1064,6 +1102,7 @@ public enum V1beta1VPNTunnelSpecPublishConnectionDetailsToConfigRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPNTunnelSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1077,6 +1116,7 @@ public partial class V1beta1VPNTunnelSpecPublishConnectionDetailsToConfigRefPoli
     public V1beta1VPNTunnelSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1VPNTunnelSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1088,6 +1128,7 @@ public partial class V1beta1VPNTunnelSpecPublishConnectionDetailsToConfigRef
     public V1beta1VPNTunnelSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1VPNTunnelSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1103,6 +1144,7 @@ public partial class V1beta1VPNTunnelSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1VPNTunnelSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1118,6 +1160,7 @@ public partial class V1beta1VPNTunnelSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1VPNTunnelSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1129,6 +1172,7 @@ public partial class V1beta1VPNTunnelSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>VPNTunnelSpec defines the desired state of VPNTunnel</summary>
 public partial class V1beta1VPNTunnelSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1161,6 +1205,7 @@ public partial class V1beta1VPNTunnelSpec
     public V1beta1VPNTunnelSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNTunnelStatusAtProvider
 {
     /// <summary>Creation timestamp in RFC3339 text format.</summary>
@@ -1260,6 +1305,7 @@ public partial class V1beta1VPNTunnelStatusAtProvider
     public double? VpnGatewayInterface { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1VPNTunnelStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1287,6 +1333,7 @@ public partial class V1beta1VPNTunnelStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>VPNTunnelStatus defines the observed state of VPNTunnel.</summary>
 public partial class V1beta1VPNTunnelStatus
 {
     /// <summary></summary>
@@ -1303,6 +1350,7 @@ public partial class V1beta1VPNTunnelStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>VPNTunnel is the Schema for the VPNTunnels API. VPN tunnel resource.</summary>
 public partial class V1beta1VPNTunnel : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1VPNTunnelSpec>, IStatus<V1beta1VPNTunnelStatus>
 {
     public const string KubeApiVersion = "v1beta1";

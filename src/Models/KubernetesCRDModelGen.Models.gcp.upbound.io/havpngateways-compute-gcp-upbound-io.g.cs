@@ -38,6 +38,7 @@ public enum V1beta1HaVPNGatewaySpecForProviderNetworkRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HaVPNGatewaySpecForProviderNetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1HaVPNGatewaySpecForProviderNetworkRefPolicy
     public V1beta1HaVPNGatewaySpecForProviderNetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate network.</summary>
 public partial class V1beta1HaVPNGatewaySpecForProviderNetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1HaVPNGatewaySpecForProviderNetworkSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1HaVPNGatewaySpecForProviderNetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1HaVPNGatewaySpecForProviderNetworkSelectorPolicy
     public V1beta1HaVPNGatewaySpecForProviderNetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate network.</summary>
 public partial class V1beta1HaVPNGatewaySpecForProviderNetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1HaVPNGatewaySpecForProviderVpnInterfacesInterconnectAttachmen
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HaVPNGatewaySpecForProviderVpnInterfacesInterconnectAttachmentRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1HaVPNGatewaySpecForProviderVpnInterfacesInterconnect
     public V1beta1HaVPNGatewaySpecForProviderVpnInterfacesInterconnectAttachmentRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a InterconnectAttachment in compute to populate interconnectAttachment.</summary>
 public partial class V1beta1HaVPNGatewaySpecForProviderVpnInterfacesInterconnectAttachmentRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1HaVPNGatewaySpecForProviderVpnInterfacesInterconnectAttachmen
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1HaVPNGatewaySpecForProviderVpnInterfacesInterconnectAttachmentSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1HaVPNGatewaySpecForProviderVpnInterfacesInterconnect
     public V1beta1HaVPNGatewaySpecForProviderVpnInterfacesInterconnectAttachmentSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a InterconnectAttachment in compute to populate interconnectAttachment.</summary>
 public partial class V1beta1HaVPNGatewaySpecForProviderVpnInterfacesInterconnectAttachmentSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1HaVPNGatewaySpecForProviderVpnInterfacesInterconnect
     public V1beta1HaVPNGatewaySpecForProviderVpnInterfacesInterconnectAttachmentSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HaVPNGatewaySpecForProviderVpnInterfaces
 {
     /// <summary>The numeric ID of this VPN gateway interface.</summary>
@@ -221,6 +230,7 @@ public partial class V1beta1HaVPNGatewaySpecForProviderVpnInterfaces
     public V1beta1HaVPNGatewaySpecForProviderVpnInterfacesInterconnectAttachmentSelector? InterconnectAttachmentSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HaVPNGatewaySpecForProvider
 {
     /// <summary>An optional description of this resource.</summary>
@@ -276,6 +286,7 @@ public enum V1beta1HaVPNGatewaySpecInitProviderNetworkRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HaVPNGatewaySpecInitProviderNetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -289,6 +300,7 @@ public partial class V1beta1HaVPNGatewaySpecInitProviderNetworkRefPolicy
     public V1beta1HaVPNGatewaySpecInitProviderNetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate network.</summary>
 public partial class V1beta1HaVPNGatewaySpecInitProviderNetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -320,6 +332,7 @@ public enum V1beta1HaVPNGatewaySpecInitProviderNetworkSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1HaVPNGatewaySpecInitProviderNetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -333,6 +346,7 @@ public partial class V1beta1HaVPNGatewaySpecInitProviderNetworkSelectorPolicy
     public V1beta1HaVPNGatewaySpecInitProviderNetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate network.</summary>
 public partial class V1beta1HaVPNGatewaySpecInitProviderNetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -368,6 +382,7 @@ public enum V1beta1HaVPNGatewaySpecInitProviderVpnInterfacesInterconnectAttachme
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HaVPNGatewaySpecInitProviderVpnInterfacesInterconnectAttachmentRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -381,6 +396,7 @@ public partial class V1beta1HaVPNGatewaySpecInitProviderVpnInterfacesInterconnec
     public V1beta1HaVPNGatewaySpecInitProviderVpnInterfacesInterconnectAttachmentRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a InterconnectAttachment in compute to populate interconnectAttachment.</summary>
 public partial class V1beta1HaVPNGatewaySpecInitProviderVpnInterfacesInterconnectAttachmentRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -412,6 +428,7 @@ public enum V1beta1HaVPNGatewaySpecInitProviderVpnInterfacesInterconnectAttachme
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1HaVPNGatewaySpecInitProviderVpnInterfacesInterconnectAttachmentSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -425,6 +442,7 @@ public partial class V1beta1HaVPNGatewaySpecInitProviderVpnInterfacesInterconnec
     public V1beta1HaVPNGatewaySpecInitProviderVpnInterfacesInterconnectAttachmentSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a InterconnectAttachment in compute to populate interconnectAttachment.</summary>
 public partial class V1beta1HaVPNGatewaySpecInitProviderVpnInterfacesInterconnectAttachmentSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -440,6 +458,7 @@ public partial class V1beta1HaVPNGatewaySpecInitProviderVpnInterfacesInterconnec
     public V1beta1HaVPNGatewaySpecInitProviderVpnInterfacesInterconnectAttachmentSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HaVPNGatewaySpecInitProviderVpnInterfaces
 {
     /// <summary>The numeric ID of this VPN gateway interface.</summary>
@@ -459,6 +478,7 @@ public partial class V1beta1HaVPNGatewaySpecInitProviderVpnInterfaces
     public V1beta1HaVPNGatewaySpecInitProviderVpnInterfacesInterconnectAttachmentSelector? InterconnectAttachmentSelector { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1HaVPNGatewaySpecInitProvider
 {
     /// <summary>An optional description of this resource.</summary>
@@ -532,6 +552,7 @@ public enum V1beta1HaVPNGatewaySpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HaVPNGatewaySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -545,6 +566,7 @@ public partial class V1beta1HaVPNGatewaySpecProviderConfigRefPolicy
     public V1beta1HaVPNGatewaySpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1HaVPNGatewaySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -576,6 +598,7 @@ public enum V1beta1HaVPNGatewaySpecPublishConnectionDetailsToConfigRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HaVPNGatewaySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -589,6 +612,7 @@ public partial class V1beta1HaVPNGatewaySpecPublishConnectionDetailsToConfigRefP
     public V1beta1HaVPNGatewaySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1HaVPNGatewaySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -600,6 +624,7 @@ public partial class V1beta1HaVPNGatewaySpecPublishConnectionDetailsToConfigRef
     public V1beta1HaVPNGatewaySpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1HaVPNGatewaySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -615,6 +640,7 @@ public partial class V1beta1HaVPNGatewaySpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1HaVPNGatewaySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -630,6 +656,7 @@ public partial class V1beta1HaVPNGatewaySpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1HaVPNGatewaySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -641,6 +668,7 @@ public partial class V1beta1HaVPNGatewaySpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>HaVPNGatewaySpec defines the desired state of HaVPNGateway</summary>
 public partial class V1beta1HaVPNGatewaySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -673,6 +701,7 @@ public partial class V1beta1HaVPNGatewaySpec
     public V1beta1HaVPNGatewaySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HaVPNGatewayStatusAtProviderVpnInterfaces
 {
     /// <summary>The numeric ID of this VPN gateway interface.</summary>
@@ -688,6 +717,7 @@ public partial class V1beta1HaVPNGatewayStatusAtProviderVpnInterfaces
     public string? IpAddress { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HaVPNGatewayStatusAtProvider
 {
     /// <summary>An optional description of this resource.</summary>
@@ -723,6 +753,7 @@ public partial class V1beta1HaVPNGatewayStatusAtProvider
     public IList<V1beta1HaVPNGatewayStatusAtProviderVpnInterfaces>? VpnInterfaces { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1HaVPNGatewayStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -750,6 +781,7 @@ public partial class V1beta1HaVPNGatewayStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>HaVPNGatewayStatus defines the observed state of HaVPNGateway.</summary>
 public partial class V1beta1HaVPNGatewayStatus
 {
     /// <summary></summary>
@@ -766,6 +798,7 @@ public partial class V1beta1HaVPNGatewayStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>HaVPNGateway is the Schema for the HaVPNGateways API. Represents a VPN gateway running in GCP.</summary>
 public partial class V1beta1HaVPNGateway : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1HaVPNGatewaySpec>, IStatus<V1beta1HaVPNGatewayStatus>
 {
     public const string KubeApiVersion = "v1beta1";

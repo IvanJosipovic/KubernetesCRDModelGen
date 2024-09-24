@@ -38,6 +38,7 @@ public enum V1beta1DirectorySpecForProviderDirectoryIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DirectorySpecForProviderDirectoryIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1DirectorySpecForProviderDirectoryIdRefPolicy
     public V1beta1DirectorySpecForProviderDirectoryIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Directory in ds to populate directoryId.</summary>
 public partial class V1beta1DirectorySpecForProviderDirectoryIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1DirectorySpecForProviderDirectoryIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DirectorySpecForProviderDirectoryIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1DirectorySpecForProviderDirectoryIdSelectorPolicy
     public V1beta1DirectorySpecForProviderDirectoryIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Directory in ds to populate directoryId.</summary>
 public partial class V1beta1DirectorySpecForProviderDirectoryIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1DirectorySpecForProviderDirectoryIdSelector
     public V1beta1DirectorySpecForProviderDirectoryIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DirectorySpecForProviderSelfServicePermissions
 {
     /// <summary>–  Whether WorkSpaces directory users can change the compute type (bundle) for their workspace. Default false.</summary>
@@ -153,6 +158,7 @@ public enum V1beta1DirectorySpecForProviderSubnetIdRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DirectorySpecForProviderSubnetIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -166,6 +172,7 @@ public partial class V1beta1DirectorySpecForProviderSubnetIdRefsPolicy
     public V1beta1DirectorySpecForProviderSubnetIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1DirectorySpecForProviderSubnetIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -197,6 +204,7 @@ public enum V1beta1DirectorySpecForProviderSubnetIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DirectorySpecForProviderSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -210,6 +218,7 @@ public partial class V1beta1DirectorySpecForProviderSubnetIdSelectorPolicy
     public V1beta1DirectorySpecForProviderSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 public partial class V1beta1DirectorySpecForProviderSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -225,6 +234,7 @@ public partial class V1beta1DirectorySpecForProviderSubnetIdSelector
     public V1beta1DirectorySpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DirectorySpecForProviderWorkspaceAccessProperties
 {
     /// <summary>–  Indicates whether users can use Android devices to access their WorkSpaces.</summary>
@@ -280,6 +290,7 @@ public enum V1beta1DirectorySpecForProviderWorkspaceCreationPropertiesCustomSecu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DirectorySpecForProviderWorkspaceCreationPropertiesCustomSecurityGroupIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -293,6 +304,7 @@ public partial class V1beta1DirectorySpecForProviderWorkspaceCreationPropertiesC
     public V1beta1DirectorySpecForProviderWorkspaceCreationPropertiesCustomSecurityGroupIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SecurityGroup in ec2 to populate customSecurityGroupId.</summary>
 public partial class V1beta1DirectorySpecForProviderWorkspaceCreationPropertiesCustomSecurityGroupIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -324,6 +336,7 @@ public enum V1beta1DirectorySpecForProviderWorkspaceCreationPropertiesCustomSecu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DirectorySpecForProviderWorkspaceCreationPropertiesCustomSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -337,6 +350,7 @@ public partial class V1beta1DirectorySpecForProviderWorkspaceCreationPropertiesC
     public V1beta1DirectorySpecForProviderWorkspaceCreationPropertiesCustomSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SecurityGroup in ec2 to populate customSecurityGroupId.</summary>
 public partial class V1beta1DirectorySpecForProviderWorkspaceCreationPropertiesCustomSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -352,6 +366,7 @@ public partial class V1beta1DirectorySpecForProviderWorkspaceCreationPropertiesC
     public V1beta1DirectorySpecForProviderWorkspaceCreationPropertiesCustomSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DirectorySpecForProviderWorkspaceCreationProperties
 {
     /// <summary>–  The identifier of your custom security group. Should relate to the same VPC, where workspaces reside in.</summary>
@@ -383,6 +398,7 @@ public partial class V1beta1DirectorySpecForProviderWorkspaceCreationProperties
     public bool? UserEnabledAsLocalAdministrator { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DirectorySpecForProvider
 {
     /// <summary>The directory identifier for registration in WorkSpaces service.</summary>
@@ -454,6 +470,7 @@ public enum V1beta1DirectorySpecInitProviderDirectoryIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DirectorySpecInitProviderDirectoryIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -467,6 +484,7 @@ public partial class V1beta1DirectorySpecInitProviderDirectoryIdRefPolicy
     public V1beta1DirectorySpecInitProviderDirectoryIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Directory in ds to populate directoryId.</summary>
 public partial class V1beta1DirectorySpecInitProviderDirectoryIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -498,6 +516,7 @@ public enum V1beta1DirectorySpecInitProviderDirectoryIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DirectorySpecInitProviderDirectoryIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -511,6 +530,7 @@ public partial class V1beta1DirectorySpecInitProviderDirectoryIdSelectorPolicy
     public V1beta1DirectorySpecInitProviderDirectoryIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Directory in ds to populate directoryId.</summary>
 public partial class V1beta1DirectorySpecInitProviderDirectoryIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -526,6 +546,7 @@ public partial class V1beta1DirectorySpecInitProviderDirectoryIdSelector
     public V1beta1DirectorySpecInitProviderDirectoryIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DirectorySpecInitProviderSelfServicePermissions
 {
     /// <summary>–  Whether WorkSpaces directory users can change the compute type (bundle) for their workspace. Default false.</summary>
@@ -569,6 +590,7 @@ public enum V1beta1DirectorySpecInitProviderSubnetIdRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DirectorySpecInitProviderSubnetIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -582,6 +604,7 @@ public partial class V1beta1DirectorySpecInitProviderSubnetIdRefsPolicy
     public V1beta1DirectorySpecInitProviderSubnetIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1DirectorySpecInitProviderSubnetIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -613,6 +636,7 @@ public enum V1beta1DirectorySpecInitProviderSubnetIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DirectorySpecInitProviderSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -626,6 +650,7 @@ public partial class V1beta1DirectorySpecInitProviderSubnetIdSelectorPolicy
     public V1beta1DirectorySpecInitProviderSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 public partial class V1beta1DirectorySpecInitProviderSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -641,6 +666,7 @@ public partial class V1beta1DirectorySpecInitProviderSubnetIdSelector
     public V1beta1DirectorySpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DirectorySpecInitProviderWorkspaceAccessProperties
 {
     /// <summary>–  Indicates whether users can use Android devices to access their WorkSpaces.</summary>
@@ -696,6 +722,7 @@ public enum V1beta1DirectorySpecInitProviderWorkspaceCreationPropertiesCustomSec
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DirectorySpecInitProviderWorkspaceCreationPropertiesCustomSecurityGroupIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -709,6 +736,7 @@ public partial class V1beta1DirectorySpecInitProviderWorkspaceCreationProperties
     public V1beta1DirectorySpecInitProviderWorkspaceCreationPropertiesCustomSecurityGroupIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SecurityGroup in ec2 to populate customSecurityGroupId.</summary>
 public partial class V1beta1DirectorySpecInitProviderWorkspaceCreationPropertiesCustomSecurityGroupIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -740,6 +768,7 @@ public enum V1beta1DirectorySpecInitProviderWorkspaceCreationPropertiesCustomSec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DirectorySpecInitProviderWorkspaceCreationPropertiesCustomSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -753,6 +782,7 @@ public partial class V1beta1DirectorySpecInitProviderWorkspaceCreationProperties
     public V1beta1DirectorySpecInitProviderWorkspaceCreationPropertiesCustomSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SecurityGroup in ec2 to populate customSecurityGroupId.</summary>
 public partial class V1beta1DirectorySpecInitProviderWorkspaceCreationPropertiesCustomSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -768,6 +798,7 @@ public partial class V1beta1DirectorySpecInitProviderWorkspaceCreationProperties
     public V1beta1DirectorySpecInitProviderWorkspaceCreationPropertiesCustomSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DirectorySpecInitProviderWorkspaceCreationProperties
 {
     /// <summary>–  The identifier of your custom security group. Should relate to the same VPC, where workspaces reside in.</summary>
@@ -799,6 +830,7 @@ public partial class V1beta1DirectorySpecInitProviderWorkspaceCreationProperties
     public bool? UserEnabledAsLocalAdministrator { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1DirectorySpecInitProvider
 {
     /// <summary>The directory identifier for registration in WorkSpaces service.</summary>
@@ -888,6 +920,7 @@ public enum V1beta1DirectorySpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DirectorySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -901,6 +934,7 @@ public partial class V1beta1DirectorySpecProviderConfigRefPolicy
     public V1beta1DirectorySpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1DirectorySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -932,6 +966,7 @@ public enum V1beta1DirectorySpecPublishConnectionDetailsToConfigRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DirectorySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -945,6 +980,7 @@ public partial class V1beta1DirectorySpecPublishConnectionDetailsToConfigRefPoli
     public V1beta1DirectorySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1DirectorySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -956,6 +992,7 @@ public partial class V1beta1DirectorySpecPublishConnectionDetailsToConfigRef
     public V1beta1DirectorySpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1DirectorySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -971,6 +1008,7 @@ public partial class V1beta1DirectorySpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1DirectorySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -986,6 +1024,7 @@ public partial class V1beta1DirectorySpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1DirectorySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -997,6 +1036,7 @@ public partial class V1beta1DirectorySpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>DirectorySpec defines the desired state of Directory</summary>
 public partial class V1beta1DirectorySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1029,6 +1069,7 @@ public partial class V1beta1DirectorySpec
     public V1beta1DirectorySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DirectoryStatusAtProviderSelfServicePermissions
 {
     /// <summary>–  Whether WorkSpaces directory users can change the compute type (bundle) for their workspace. Default false.</summary>
@@ -1052,6 +1093,7 @@ public partial class V1beta1DirectoryStatusAtProviderSelfServicePermissions
     public bool? SwitchRunningMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DirectoryStatusAtProviderWorkspaceAccessProperties
 {
     /// <summary>–  Indicates whether users can use Android devices to access their WorkSpaces.</summary>
@@ -1087,6 +1129,7 @@ public partial class V1beta1DirectoryStatusAtProviderWorkspaceAccessProperties
     public string? DeviceTypeZeroclient { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DirectoryStatusAtProviderWorkspaceCreationProperties
 {
     /// <summary>–  The identifier of your custom security group. Should relate to the same VPC, where workspaces reside in.</summary>
@@ -1110,6 +1153,7 @@ public partial class V1beta1DirectoryStatusAtProviderWorkspaceCreationProperties
     public bool? UserEnabledAsLocalAdministrator { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DirectoryStatusAtProvider
 {
     /// <summary>The directory alias.</summary>
@@ -1181,6 +1225,7 @@ public partial class V1beta1DirectoryStatusAtProvider
     public string? WorkspaceSecurityGroupId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1DirectoryStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1208,6 +1253,7 @@ public partial class V1beta1DirectoryStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>DirectoryStatus defines the observed state of Directory.</summary>
 public partial class V1beta1DirectoryStatus
 {
     /// <summary></summary>
@@ -1224,6 +1270,7 @@ public partial class V1beta1DirectoryStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Directory is the Schema for the Directorys API. Provides a WorkSpaces directory in AWS WorkSpaces Service.</summary>
 public partial class V1beta1Directory : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DirectorySpec>, IStatus<V1beta1DirectoryStatus>
 {
     public const string KubeApiVersion = "v1beta1";

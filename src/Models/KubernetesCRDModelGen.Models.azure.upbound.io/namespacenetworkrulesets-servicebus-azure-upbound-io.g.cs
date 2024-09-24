@@ -38,6 +38,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecForProviderNamespaceIdRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NamespaceNetworkRuleSetSpecForProviderNamespaceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecForProviderNamespaceIdRef
     public V1beta1NamespaceNetworkRuleSetSpecForProviderNamespaceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ServiceBusNamespace in servicebus to populate namespaceId.</summary>
 public partial class V1beta1NamespaceNetworkRuleSetSpecForProviderNamespaceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecForProviderNamespaceIdSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NamespaceNetworkRuleSetSpecForProviderNamespaceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecForProviderNamespaceIdSel
     public V1beta1NamespaceNetworkRuleSetSpecForProviderNamespaceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ServiceBusNamespace in servicebus to populate namespaceId.</summary>
 public partial class V1beta1NamespaceNetworkRuleSetSpecForProviderNamespaceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRulesSubnetIdRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRulesSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRulesSu
     public V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRulesSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRulesSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRulesSubnetIdSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRulesSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRulesSu
     public V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRulesSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRulesSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRulesSu
     public V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRulesSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRules
 {
     /// <summary>Should the ServiceBus Namespace Network Rule Set ignore missing Virtual Network Service Endpoint option in the Subnet? Defaults to false.</summary>
@@ -221,6 +230,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRules
     public V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRulesSubnetIdSelector? SubnetIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NamespaceNetworkRuleSetSpecForProvider
 {
     /// <summary>Specifies the default action for the ServiceBus Namespace Network Rule Set. Possible values are Allow and Deny. Defaults to Allow.</summary>
@@ -276,6 +286,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecInitProviderNamespaceIdRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NamespaceNetworkRuleSetSpecInitProviderNamespaceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -289,6 +300,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecInitProviderNamespaceIdRe
     public V1beta1NamespaceNetworkRuleSetSpecInitProviderNamespaceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ServiceBusNamespace in servicebus to populate namespaceId.</summary>
 public partial class V1beta1NamespaceNetworkRuleSetSpecInitProviderNamespaceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -320,6 +332,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecInitProviderNamespaceIdSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NamespaceNetworkRuleSetSpecInitProviderNamespaceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -333,6 +346,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecInitProviderNamespaceIdSe
     public V1beta1NamespaceNetworkRuleSetSpecInitProviderNamespaceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ServiceBusNamespace in servicebus to populate namespaceId.</summary>
 public partial class V1beta1NamespaceNetworkRuleSetSpecInitProviderNamespaceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -368,6 +382,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRulesSubnetIdRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRulesSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -381,6 +396,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRulesS
     public V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRulesSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRulesSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -412,6 +428,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRulesSubnetIdSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRulesSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -425,6 +442,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRulesS
     public V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRulesSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRulesSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -440,6 +458,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRulesS
     public V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRulesSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRules
 {
     /// <summary>Should the ServiceBus Namespace Network Rule Set ignore missing Virtual Network Service Endpoint option in the Subnet? Defaults to false.</summary>
@@ -459,6 +478,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRules
     public V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRulesSubnetIdSelector? SubnetIdSelector { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1NamespaceNetworkRuleSetSpecInitProvider
 {
     /// <summary>Specifies the default action for the ServiceBus Namespace Network Rule Set. Possible values are Allow and Deny. Defaults to Allow.</summary>
@@ -536,6 +556,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NamespaceNetworkRuleSetSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -549,6 +570,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecProviderConfigRefPolicy
     public V1beta1NamespaceNetworkRuleSetSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1NamespaceNetworkRuleSetSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -580,6 +602,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecPublishConnectionDetailsToConfigRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NamespaceNetworkRuleSetSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -593,6 +616,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecPublishConnectionDetailsT
     public V1beta1NamespaceNetworkRuleSetSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1NamespaceNetworkRuleSetSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -604,6 +628,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecPublishConnectionDetailsT
     public V1beta1NamespaceNetworkRuleSetSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1NamespaceNetworkRuleSetSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -619,6 +644,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecPublishConnectionDetailsT
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1NamespaceNetworkRuleSetSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -634,6 +660,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecPublishConnectionDetailsT
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1NamespaceNetworkRuleSetSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -645,6 +672,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecWriteConnectionSecretToRe
     public string Namespace { get; set; }
 }
 
+/// <summary>NamespaceNetworkRuleSetSpec defines the desired state of NamespaceNetworkRuleSet</summary>
 public partial class V1beta1NamespaceNetworkRuleSetSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -677,6 +705,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpec
     public V1beta1NamespaceNetworkRuleSetSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NamespaceNetworkRuleSetStatusAtProviderNetworkRules
 {
     /// <summary>Should the ServiceBus Namespace Network Rule Set ignore missing Virtual Network Service Endpoint option in the Subnet? Defaults to false.</summary>
@@ -688,6 +717,7 @@ public partial class V1beta1NamespaceNetworkRuleSetStatusAtProviderNetworkRules
     public string? SubnetId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NamespaceNetworkRuleSetStatusAtProvider
 {
     /// <summary>Specifies the default action for the ServiceBus Namespace Network Rule Set. Possible values are Allow and Deny. Defaults to Allow.</summary>
@@ -719,6 +749,7 @@ public partial class V1beta1NamespaceNetworkRuleSetStatusAtProvider
     public bool? TrustedServicesAllowed { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1NamespaceNetworkRuleSetStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -746,6 +777,7 @@ public partial class V1beta1NamespaceNetworkRuleSetStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>NamespaceNetworkRuleSetStatus defines the observed state of NamespaceNetworkRuleSet.</summary>
 public partial class V1beta1NamespaceNetworkRuleSetStatus
 {
     /// <summary></summary>
@@ -762,6 +794,7 @@ public partial class V1beta1NamespaceNetworkRuleSetStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>NamespaceNetworkRuleSet is the Schema for the NamespaceNetworkRuleSets API. Manages a ServiceBus Namespace Network Rule Set.</summary>
 public partial class V1beta1NamespaceNetworkRuleSet : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1NamespaceNetworkRuleSetSpec>, IStatus<V1beta1NamespaceNetworkRuleSetStatus>
 {
     public const string KubeApiVersion = "v1beta1";

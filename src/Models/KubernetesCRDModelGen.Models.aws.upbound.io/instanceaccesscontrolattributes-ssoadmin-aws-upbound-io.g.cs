@@ -18,6 +18,7 @@ public enum V1beta1InstanceAccessControlAttributesSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceAccessControlAttributesSpecForProviderAttributeValue
 {
     /// <summary>The identity source to use when mapping a specified attribute to AWS SSO.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1InstanceAccessControlAttributesSpecForProviderAttrib
     public IList<string>? Source { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceAccessControlAttributesSpecForProviderAttribute
 {
     /// <summary>The name of the attribute associated with your identities in your identity source. This is used to map a specified attribute in your identity source with an attribute in AWS SSO.</summary>
@@ -36,6 +38,7 @@ public partial class V1beta1InstanceAccessControlAttributesSpecForProviderAttrib
     public IList<V1beta1InstanceAccessControlAttributesSpecForProviderAttributeValue>? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceAccessControlAttributesSpecForProvider
 {
     /// <summary>See AccessControlAttribute for more details.</summary>
@@ -51,6 +54,7 @@ public partial class V1beta1InstanceAccessControlAttributesSpecForProvider
     public string Region { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceAccessControlAttributesSpecInitProviderAttributeValue
 {
     /// <summary>The identity source to use when mapping a specified attribute to AWS SSO.</summary>
@@ -58,6 +62,7 @@ public partial class V1beta1InstanceAccessControlAttributesSpecInitProviderAttri
     public IList<string>? Source { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceAccessControlAttributesSpecInitProviderAttribute
 {
     /// <summary>The name of the attribute associated with your identities in your identity source. This is used to map a specified attribute in your identity source with an attribute in AWS SSO.</summary>
@@ -69,6 +74,7 @@ public partial class V1beta1InstanceAccessControlAttributesSpecInitProviderAttri
     public IList<V1beta1InstanceAccessControlAttributesSpecInitProviderAttributeValue>? Value { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1InstanceAccessControlAttributesSpecInitProvider
 {
     /// <summary>See AccessControlAttribute for more details.</summary>
@@ -118,6 +124,7 @@ public enum V1beta1InstanceAccessControlAttributesSpecProviderConfigRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceAccessControlAttributesSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -131,6 +138,7 @@ public partial class V1beta1InstanceAccessControlAttributesSpecProviderConfigRef
     public V1beta1InstanceAccessControlAttributesSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1InstanceAccessControlAttributesSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -162,6 +170,7 @@ public enum V1beta1InstanceAccessControlAttributesSpecPublishConnectionDetailsTo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceAccessControlAttributesSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -175,6 +184,7 @@ public partial class V1beta1InstanceAccessControlAttributesSpecPublishConnection
     public V1beta1InstanceAccessControlAttributesSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1InstanceAccessControlAttributesSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -186,6 +196,7 @@ public partial class V1beta1InstanceAccessControlAttributesSpecPublishConnection
     public V1beta1InstanceAccessControlAttributesSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1InstanceAccessControlAttributesSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -201,6 +212,7 @@ public partial class V1beta1InstanceAccessControlAttributesSpecPublishConnection
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1InstanceAccessControlAttributesSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -216,6 +228,7 @@ public partial class V1beta1InstanceAccessControlAttributesSpecPublishConnection
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1InstanceAccessControlAttributesSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -227,6 +240,7 @@ public partial class V1beta1InstanceAccessControlAttributesSpecWriteConnectionSe
     public string Namespace { get; set; }
 }
 
+/// <summary>InstanceAccessControlAttributesSpec defines the desired state of InstanceAccessControlAttributes</summary>
 public partial class V1beta1InstanceAccessControlAttributesSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -259,6 +273,7 @@ public partial class V1beta1InstanceAccessControlAttributesSpec
     public V1beta1InstanceAccessControlAttributesSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceAccessControlAttributesStatusAtProviderAttributeValue
 {
     /// <summary>The identity source to use when mapping a specified attribute to AWS SSO.</summary>
@@ -266,6 +281,7 @@ public partial class V1beta1InstanceAccessControlAttributesStatusAtProviderAttri
     public IList<string>? Source { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceAccessControlAttributesStatusAtProviderAttribute
 {
     /// <summary>The name of the attribute associated with your identities in your identity source. This is used to map a specified attribute in your identity source with an attribute in AWS SSO.</summary>
@@ -277,6 +293,7 @@ public partial class V1beta1InstanceAccessControlAttributesStatusAtProviderAttri
     public IList<V1beta1InstanceAccessControlAttributesStatusAtProviderAttributeValue>? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceAccessControlAttributesStatusAtProvider
 {
     /// <summary>See AccessControlAttribute for more details.</summary>
@@ -300,6 +317,7 @@ public partial class V1beta1InstanceAccessControlAttributesStatusAtProvider
     public string? StatusReason { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1InstanceAccessControlAttributesStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -327,6 +345,7 @@ public partial class V1beta1InstanceAccessControlAttributesStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>InstanceAccessControlAttributesStatus defines the observed state of InstanceAccessControlAttributes.</summary>
 public partial class V1beta1InstanceAccessControlAttributesStatus
 {
     /// <summary></summary>
@@ -343,6 +362,7 @@ public partial class V1beta1InstanceAccessControlAttributesStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>InstanceAccessControlAttributes is the Schema for the InstanceAccessControlAttributess API. Provides a Single Sign-On (SSO) ABAC Resource: https://docs.aws.amazon.com/singlesignon/latest/userguide/abac.html</summary>
 public partial class V1beta1InstanceAccessControlAttributes : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1InstanceAccessControlAttributesSpec>, IStatus<V1beta1InstanceAccessControlAttributesStatus>
 {
     public const string KubeApiVersion = "v1beta1";

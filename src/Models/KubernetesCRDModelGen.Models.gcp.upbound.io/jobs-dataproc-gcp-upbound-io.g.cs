@@ -18,6 +18,7 @@ public enum V1beta1JobSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderHadoopConfigLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1JobSpecForProviderHadoopConfigLoggingConfig
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderHadoopConfig
 {
     /// <summary>HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.</summary>
@@ -60,6 +62,7 @@ public partial class V1beta1JobSpecForProviderHadoopConfig
     public IDictionary<string, string>? Properties { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderHiveConfig
 {
     /// <summary>Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false.</summary>
@@ -87,6 +90,7 @@ public partial class V1beta1JobSpecForProviderHiveConfig
     public IDictionary<string, string>? ScriptVariables { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderPigConfigLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -94,6 +98,7 @@ public partial class V1beta1JobSpecForProviderPigConfigLoggingConfig
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderPigConfig
 {
     /// <summary>Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false.</summary>
@@ -145,6 +150,7 @@ public enum V1beta1JobSpecForProviderPlacementClusterNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecForProviderPlacementClusterNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -158,6 +164,7 @@ public partial class V1beta1JobSpecForProviderPlacementClusterNameRefPolicy
     public V1beta1JobSpecForProviderPlacementClusterNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in dataproc to populate clusterName.</summary>
 public partial class V1beta1JobSpecForProviderPlacementClusterNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -189,6 +196,7 @@ public enum V1beta1JobSpecForProviderPlacementClusterNameSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobSpecForProviderPlacementClusterNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1JobSpecForProviderPlacementClusterNameSelectorPolicy
     public V1beta1JobSpecForProviderPlacementClusterNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in dataproc to populate clusterName.</summary>
 public partial class V1beta1JobSpecForProviderPlacementClusterNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -217,6 +226,7 @@ public partial class V1beta1JobSpecForProviderPlacementClusterNameSelector
     public V1beta1JobSpecForProviderPlacementClusterNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderPlacement
 {
     /// <summary>The name of the cluster where the job will be submitted.</summary>
@@ -232,6 +242,7 @@ public partial class V1beta1JobSpecForProviderPlacement
     public V1beta1JobSpecForProviderPlacementClusterNameSelector? ClusterNameSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderPrestoConfigLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -239,6 +250,7 @@ public partial class V1beta1JobSpecForProviderPrestoConfigLoggingConfig
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderPrestoConfig
 {
     /// <summary>Presto client tags to attach to this query.</summary>
@@ -270,6 +282,7 @@ public partial class V1beta1JobSpecForProviderPrestoConfig
     public IList<string>? QueryList { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderPysparkConfigLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -277,6 +290,7 @@ public partial class V1beta1JobSpecForProviderPysparkConfigLoggingConfig
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderPysparkConfig
 {
     /// <summary>HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.</summary>
@@ -312,6 +326,7 @@ public partial class V1beta1JobSpecForProviderPysparkConfig
     public IList<string>? PythonFileUris { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderReference
 {
     /// <summary></summary>
@@ -339,6 +354,7 @@ public enum V1beta1JobSpecForProviderRegionRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecForProviderRegionRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -352,6 +368,7 @@ public partial class V1beta1JobSpecForProviderRegionRefPolicy
     public V1beta1JobSpecForProviderRegionRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in dataproc to populate region.</summary>
 public partial class V1beta1JobSpecForProviderRegionRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -383,6 +400,7 @@ public enum V1beta1JobSpecForProviderRegionSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobSpecForProviderRegionSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -396,6 +414,7 @@ public partial class V1beta1JobSpecForProviderRegionSelectorPolicy
     public V1beta1JobSpecForProviderRegionSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in dataproc to populate region.</summary>
 public partial class V1beta1JobSpecForProviderRegionSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -411,6 +430,7 @@ public partial class V1beta1JobSpecForProviderRegionSelector
     public V1beta1JobSpecForProviderRegionSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderScheduling
 {
     /// <summary>Maximum number of times per hour a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed.</summary>
@@ -422,6 +442,7 @@ public partial class V1beta1JobSpecForProviderScheduling
     public double? MaxFailuresTotal { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderSparkConfigLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -429,6 +450,7 @@ public partial class V1beta1JobSpecForProviderSparkConfigLoggingConfig
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderSparkConfig
 {
     /// <summary>HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.</summary>
@@ -464,6 +486,7 @@ public partial class V1beta1JobSpecForProviderSparkConfig
     public IDictionary<string, string>? Properties { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderSparksqlConfigLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -471,6 +494,7 @@ public partial class V1beta1JobSpecForProviderSparksqlConfigLoggingConfig
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProviderSparksqlConfig
 {
     /// <summary>HCFS URIs of jar files to be added to the Spark CLASSPATH.</summary>
@@ -498,6 +522,7 @@ public partial class V1beta1JobSpecForProviderSparksqlConfig
     public IDictionary<string, string>? ScriptVariables { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecForProvider
 {
     /// <summary>By default, you can only delete inactive jobs within Dataproc. Setting this to true, and calling destroy, will ensure that the job is first cancelled before issuing the delete.</summary>
@@ -565,6 +590,7 @@ public partial class V1beta1JobSpecForProvider
     public IList<V1beta1JobSpecForProviderSparksqlConfig>? SparksqlConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderHadoopConfigLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -572,6 +598,7 @@ public partial class V1beta1JobSpecInitProviderHadoopConfigLoggingConfig
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderHadoopConfig
 {
     /// <summary>HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.</summary>
@@ -607,6 +634,7 @@ public partial class V1beta1JobSpecInitProviderHadoopConfig
     public IDictionary<string, string>? Properties { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderHiveConfig
 {
     /// <summary>Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false.</summary>
@@ -634,6 +662,7 @@ public partial class V1beta1JobSpecInitProviderHiveConfig
     public IDictionary<string, string>? ScriptVariables { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderPigConfigLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -641,6 +670,7 @@ public partial class V1beta1JobSpecInitProviderPigConfigLoggingConfig
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderPigConfig
 {
     /// <summary>Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false.</summary>
@@ -692,6 +722,7 @@ public enum V1beta1JobSpecInitProviderPlacementClusterNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecInitProviderPlacementClusterNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -705,6 +736,7 @@ public partial class V1beta1JobSpecInitProviderPlacementClusterNameRefPolicy
     public V1beta1JobSpecInitProviderPlacementClusterNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in dataproc to populate clusterName.</summary>
 public partial class V1beta1JobSpecInitProviderPlacementClusterNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -736,6 +768,7 @@ public enum V1beta1JobSpecInitProviderPlacementClusterNameSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobSpecInitProviderPlacementClusterNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -749,6 +782,7 @@ public partial class V1beta1JobSpecInitProviderPlacementClusterNameSelectorPolic
     public V1beta1JobSpecInitProviderPlacementClusterNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in dataproc to populate clusterName.</summary>
 public partial class V1beta1JobSpecInitProviderPlacementClusterNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -764,6 +798,7 @@ public partial class V1beta1JobSpecInitProviderPlacementClusterNameSelector
     public V1beta1JobSpecInitProviderPlacementClusterNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderPlacement
 {
     /// <summary>The name of the cluster where the job will be submitted.</summary>
@@ -779,6 +814,7 @@ public partial class V1beta1JobSpecInitProviderPlacement
     public V1beta1JobSpecInitProviderPlacementClusterNameSelector? ClusterNameSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderPrestoConfigLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -786,6 +822,7 @@ public partial class V1beta1JobSpecInitProviderPrestoConfigLoggingConfig
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderPrestoConfig
 {
     /// <summary>Presto client tags to attach to this query.</summary>
@@ -817,6 +854,7 @@ public partial class V1beta1JobSpecInitProviderPrestoConfig
     public IList<string>? QueryList { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderPysparkConfigLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -824,6 +862,7 @@ public partial class V1beta1JobSpecInitProviderPysparkConfigLoggingConfig
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderPysparkConfig
 {
     /// <summary>HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.</summary>
@@ -859,6 +898,7 @@ public partial class V1beta1JobSpecInitProviderPysparkConfig
     public IList<string>? PythonFileUris { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderReference
 {
     /// <summary></summary>
@@ -886,6 +926,7 @@ public enum V1beta1JobSpecInitProviderRegionRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecInitProviderRegionRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -899,6 +940,7 @@ public partial class V1beta1JobSpecInitProviderRegionRefPolicy
     public V1beta1JobSpecInitProviderRegionRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in dataproc to populate region.</summary>
 public partial class V1beta1JobSpecInitProviderRegionRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -930,6 +972,7 @@ public enum V1beta1JobSpecInitProviderRegionSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1JobSpecInitProviderRegionSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -943,6 +986,7 @@ public partial class V1beta1JobSpecInitProviderRegionSelectorPolicy
     public V1beta1JobSpecInitProviderRegionSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in dataproc to populate region.</summary>
 public partial class V1beta1JobSpecInitProviderRegionSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -958,6 +1002,7 @@ public partial class V1beta1JobSpecInitProviderRegionSelector
     public V1beta1JobSpecInitProviderRegionSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderScheduling
 {
     /// <summary>Maximum number of times per hour a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed.</summary>
@@ -969,6 +1014,7 @@ public partial class V1beta1JobSpecInitProviderScheduling
     public double? MaxFailuresTotal { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderSparkConfigLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -976,6 +1022,7 @@ public partial class V1beta1JobSpecInitProviderSparkConfigLoggingConfig
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderSparkConfig
 {
     /// <summary>HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.</summary>
@@ -1011,6 +1058,7 @@ public partial class V1beta1JobSpecInitProviderSparkConfig
     public IDictionary<string, string>? Properties { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderSparksqlConfigLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -1018,6 +1066,7 @@ public partial class V1beta1JobSpecInitProviderSparksqlConfigLoggingConfig
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobSpecInitProviderSparksqlConfig
 {
     /// <summary>HCFS URIs of jar files to be added to the Spark CLASSPATH.</summary>
@@ -1045,6 +1094,7 @@ public partial class V1beta1JobSpecInitProviderSparksqlConfig
     public IDictionary<string, string>? ScriptVariables { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1JobSpecInitProvider
 {
     /// <summary>By default, you can only delete inactive jobs within Dataproc. Setting this to true, and calling destroy, will ensure that the job is first cancelled before issuing the delete.</summary>
@@ -1154,6 +1204,7 @@ public enum V1beta1JobSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1167,6 +1218,7 @@ public partial class V1beta1JobSpecProviderConfigRefPolicy
     public V1beta1JobSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1JobSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1198,6 +1250,7 @@ public enum V1beta1JobSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1JobSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1211,6 +1264,7 @@ public partial class V1beta1JobSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1JobSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1JobSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1222,6 +1276,7 @@ public partial class V1beta1JobSpecPublishConnectionDetailsToConfigRef
     public V1beta1JobSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1JobSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1237,6 +1292,7 @@ public partial class V1beta1JobSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1JobSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1252,6 +1308,7 @@ public partial class V1beta1JobSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1JobSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1263,6 +1320,7 @@ public partial class V1beta1JobSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>JobSpec defines the desired state of Job</summary>
 public partial class V1beta1JobSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1295,6 +1353,7 @@ public partial class V1beta1JobSpec
     public V1beta1JobSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderHadoopConfigLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -1302,6 +1361,7 @@ public partial class V1beta1JobStatusAtProviderHadoopConfigLoggingConfig
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderHadoopConfig
 {
     /// <summary>HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.</summary>
@@ -1337,6 +1397,7 @@ public partial class V1beta1JobStatusAtProviderHadoopConfig
     public IDictionary<string, string>? Properties { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderHiveConfig
 {
     /// <summary>Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false.</summary>
@@ -1364,6 +1425,7 @@ public partial class V1beta1JobStatusAtProviderHiveConfig
     public IDictionary<string, string>? ScriptVariables { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderPigConfigLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -1371,6 +1433,7 @@ public partial class V1beta1JobStatusAtProviderPigConfigLoggingConfig
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderPigConfig
 {
     /// <summary>Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false.</summary>
@@ -1402,6 +1465,7 @@ public partial class V1beta1JobStatusAtProviderPigConfig
     public IDictionary<string, string>? ScriptVariables { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderPlacement
 {
     /// <summary>The name of the cluster where the job will be submitted.</summary>
@@ -1413,6 +1477,7 @@ public partial class V1beta1JobStatusAtProviderPlacement
     public string? ClusterUuid { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderPrestoConfigLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -1420,6 +1485,7 @@ public partial class V1beta1JobStatusAtProviderPrestoConfigLoggingConfig
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderPrestoConfig
 {
     /// <summary>Presto client tags to attach to this query.</summary>
@@ -1451,6 +1517,7 @@ public partial class V1beta1JobStatusAtProviderPrestoConfig
     public IList<string>? QueryList { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderPysparkConfigLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -1458,6 +1525,7 @@ public partial class V1beta1JobStatusAtProviderPysparkConfigLoggingConfig
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderPysparkConfig
 {
     /// <summary>HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.</summary>
@@ -1493,6 +1561,7 @@ public partial class V1beta1JobStatusAtProviderPysparkConfig
     public IList<string>? PythonFileUris { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderReference
 {
     /// <summary></summary>
@@ -1500,6 +1569,7 @@ public partial class V1beta1JobStatusAtProviderReference
     public string? JobId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderScheduling
 {
     /// <summary>Maximum number of times per hour a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed.</summary>
@@ -1511,6 +1581,7 @@ public partial class V1beta1JobStatusAtProviderScheduling
     public double? MaxFailuresTotal { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderSparkConfigLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -1518,6 +1589,7 @@ public partial class V1beta1JobStatusAtProviderSparkConfigLoggingConfig
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderSparkConfig
 {
     /// <summary>HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.</summary>
@@ -1553,6 +1625,7 @@ public partial class V1beta1JobStatusAtProviderSparkConfig
     public IDictionary<string, string>? Properties { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderSparksqlConfigLoggingConfig
 {
     /// <summary>The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
@@ -1560,6 +1633,7 @@ public partial class V1beta1JobStatusAtProviderSparksqlConfigLoggingConfig
     public IDictionary<string, string>? DriverLogLevels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderSparksqlConfig
 {
     /// <summary>HCFS URIs of jar files to be added to the Spark CLASSPATH.</summary>
@@ -1587,6 +1661,7 @@ public partial class V1beta1JobStatusAtProviderSparksqlConfig
     public IDictionary<string, string>? ScriptVariables { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProviderStatus
 {
     /// <summary>Optional job state details, such as an error description if the state is ERROR.</summary>
@@ -1606,6 +1681,7 @@ public partial class V1beta1JobStatusAtProviderStatus
     public string? Substate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1JobStatusAtProvider
 {
     /// <summary>If present, the location of miscellaneous control files which may be used as part of job setup and handling. If not present, control files may be placed in the same location as driver_output_uri.</summary>
@@ -1689,6 +1765,7 @@ public partial class V1beta1JobStatusAtProvider
     public IDictionary<string, string>? TerraformLabels { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1JobStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1716,6 +1793,7 @@ public partial class V1beta1JobStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>JobStatus defines the observed state of Job.</summary>
 public partial class V1beta1JobStatus
 {
     /// <summary></summary>
@@ -1732,6 +1810,7 @@ public partial class V1beta1JobStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Job is the Schema for the Jobs API. Manages a job resource within a Dataproc cluster.</summary>
 public partial class V1beta1Job : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1JobSpec>, IStatus<V1beta1JobStatus>
 {
     public const string KubeApiVersion = "v1beta1";

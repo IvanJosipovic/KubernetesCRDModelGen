@@ -38,6 +38,7 @@ public enum V1beta1VPCIpamPoolSpecForProviderIpamScopeIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPCIpamPoolSpecForProviderIpamScopeIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1VPCIpamPoolSpecForProviderIpamScopeIdRefPolicy
     public V1beta1VPCIpamPoolSpecForProviderIpamScopeIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPCIpamScope in ec2 to populate ipamScopeId.</summary>
 public partial class V1beta1VPCIpamPoolSpecForProviderIpamScopeIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1VPCIpamPoolSpecForProviderIpamScopeIdSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VPCIpamPoolSpecForProviderIpamScopeIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1VPCIpamPoolSpecForProviderIpamScopeIdSelectorPolicy
     public V1beta1VPCIpamPoolSpecForProviderIpamScopeIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPCIpamScope in ec2 to populate ipamScopeId.</summary>
 public partial class V1beta1VPCIpamPoolSpecForProviderIpamScopeIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1VPCIpamPoolSpecForProviderSourceIpamPoolIdRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPCIpamPoolSpecForProviderSourceIpamPoolIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1VPCIpamPoolSpecForProviderSourceIpamPoolIdRefPolicy
     public V1beta1VPCIpamPoolSpecForProviderSourceIpamPoolIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPCIpamPool in ec2 to populate sourceIpamPoolId.</summary>
 public partial class V1beta1VPCIpamPoolSpecForProviderSourceIpamPoolIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1VPCIpamPoolSpecForProviderSourceIpamPoolIdSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VPCIpamPoolSpecForProviderSourceIpamPoolIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1VPCIpamPoolSpecForProviderSourceIpamPoolIdSelectorPo
     public V1beta1VPCIpamPoolSpecForProviderSourceIpamPoolIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPCIpamPool in ec2 to populate sourceIpamPoolId.</summary>
 public partial class V1beta1VPCIpamPoolSpecForProviderSourceIpamPoolIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1VPCIpamPoolSpecForProviderSourceIpamPoolIdSelector
     public V1beta1VPCIpamPoolSpecForProviderSourceIpamPoolIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPCIpamPoolSpecForProvider
 {
     /// <summary>The IP protocol assigned to this pool. You must choose either IPv4 or IPv6 protocol for a pool.</summary>
@@ -305,6 +314,7 @@ public enum V1beta1VPCIpamPoolSpecInitProviderIpamScopeIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPCIpamPoolSpecInitProviderIpamScopeIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -318,6 +328,7 @@ public partial class V1beta1VPCIpamPoolSpecInitProviderIpamScopeIdRefPolicy
     public V1beta1VPCIpamPoolSpecInitProviderIpamScopeIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPCIpamScope in ec2 to populate ipamScopeId.</summary>
 public partial class V1beta1VPCIpamPoolSpecInitProviderIpamScopeIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -349,6 +360,7 @@ public enum V1beta1VPCIpamPoolSpecInitProviderIpamScopeIdSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VPCIpamPoolSpecInitProviderIpamScopeIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -362,6 +374,7 @@ public partial class V1beta1VPCIpamPoolSpecInitProviderIpamScopeIdSelectorPolicy
     public V1beta1VPCIpamPoolSpecInitProviderIpamScopeIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPCIpamScope in ec2 to populate ipamScopeId.</summary>
 public partial class V1beta1VPCIpamPoolSpecInitProviderIpamScopeIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -397,6 +410,7 @@ public enum V1beta1VPCIpamPoolSpecInitProviderSourceIpamPoolIdRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPCIpamPoolSpecInitProviderSourceIpamPoolIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -410,6 +424,7 @@ public partial class V1beta1VPCIpamPoolSpecInitProviderSourceIpamPoolIdRefPolicy
     public V1beta1VPCIpamPoolSpecInitProviderSourceIpamPoolIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPCIpamPool in ec2 to populate sourceIpamPoolId.</summary>
 public partial class V1beta1VPCIpamPoolSpecInitProviderSourceIpamPoolIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -441,6 +456,7 @@ public enum V1beta1VPCIpamPoolSpecInitProviderSourceIpamPoolIdSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VPCIpamPoolSpecInitProviderSourceIpamPoolIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -454,6 +470,7 @@ public partial class V1beta1VPCIpamPoolSpecInitProviderSourceIpamPoolIdSelectorP
     public V1beta1VPCIpamPoolSpecInitProviderSourceIpamPoolIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPCIpamPool in ec2 to populate sourceIpamPoolId.</summary>
 public partial class V1beta1VPCIpamPoolSpecInitProviderSourceIpamPoolIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -469,6 +486,7 @@ public partial class V1beta1VPCIpamPoolSpecInitProviderSourceIpamPoolIdSelector
     public V1beta1VPCIpamPoolSpecInitProviderSourceIpamPoolIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1VPCIpamPoolSpecInitProvider
 {
     /// <summary>The IP protocol assigned to this pool. You must choose either IPv4 or IPv6 protocol for a pool.</summary>
@@ -590,6 +608,7 @@ public enum V1beta1VPCIpamPoolSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPCIpamPoolSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -603,6 +622,7 @@ public partial class V1beta1VPCIpamPoolSpecProviderConfigRefPolicy
     public V1beta1VPCIpamPoolSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1VPCIpamPoolSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -634,6 +654,7 @@ public enum V1beta1VPCIpamPoolSpecPublishConnectionDetailsToConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPCIpamPoolSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -647,6 +668,7 @@ public partial class V1beta1VPCIpamPoolSpecPublishConnectionDetailsToConfigRefPo
     public V1beta1VPCIpamPoolSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1VPCIpamPoolSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -658,6 +680,7 @@ public partial class V1beta1VPCIpamPoolSpecPublishConnectionDetailsToConfigRef
     public V1beta1VPCIpamPoolSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1VPCIpamPoolSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -673,6 +696,7 @@ public partial class V1beta1VPCIpamPoolSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1VPCIpamPoolSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -688,6 +712,7 @@ public partial class V1beta1VPCIpamPoolSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1VPCIpamPoolSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -699,6 +724,7 @@ public partial class V1beta1VPCIpamPoolSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>VPCIpamPoolSpec defines the desired state of VPCIpamPool</summary>
 public partial class V1beta1VPCIpamPoolSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -731,6 +757,7 @@ public partial class V1beta1VPCIpamPoolSpec
     public V1beta1VPCIpamPoolSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPCIpamPoolStatusAtProvider
 {
     /// <summary>The IP protocol assigned to this pool. You must choose either IPv4 or IPv6 protocol for a pool.</summary>
@@ -818,6 +845,7 @@ public partial class V1beta1VPCIpamPoolStatusAtProvider
     public IDictionary<string, string>? TagsAll { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1VPCIpamPoolStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -845,6 +873,7 @@ public partial class V1beta1VPCIpamPoolStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>VPCIpamPoolStatus defines the observed state of VPCIpamPool.</summary>
 public partial class V1beta1VPCIpamPoolStatus
 {
     /// <summary></summary>
@@ -861,6 +890,7 @@ public partial class V1beta1VPCIpamPoolStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>VPCIpamPool is the Schema for the VPCIpamPools API. Provides a IP address pool resource for IPAM.</summary>
 public partial class V1beta1VPCIpamPool : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1VPCIpamPoolSpec>, IStatus<V1beta1VPCIpamPoolStatus>
 {
     public const string KubeApiVersion = "v1beta1";

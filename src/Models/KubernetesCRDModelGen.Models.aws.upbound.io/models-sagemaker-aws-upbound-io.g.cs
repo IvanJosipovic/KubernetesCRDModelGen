@@ -18,6 +18,7 @@ public enum V1beta1ModelSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1ModelSpecForProviderContainerImageConfigRepositoryAuthConfig
 {
     /// <summary>The Amazon Resource Name (ARN) of an AWS Lambda function that provides credentials to authenticate to the private Docker registry where your model image is hosted. For information about how to create an AWS Lambda function, see Create a Lambda function with the console in the AWS Lambda Developer Guide.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1ModelSpecForProviderContainerImageConfigRepositoryAu
     public string? RepositoryCredentialsProviderArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ModelSpecForProviderContainerImageConfig
 {
     /// <summary>Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). Allowed values are: Platform and Vpc.</summary>
@@ -36,6 +38,7 @@ public partial class V1beta1ModelSpecForProviderContainerImageConfig
     public IList<V1beta1ModelSpecForProviderContainerImageConfigRepositoryAuthConfig>? RepositoryAuthConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ModelSpecForProviderContainerModelDataSourceS3DataSource
 {
     /// <summary>How the model data is prepared. Allowed values are: None and Gzip.</summary>
@@ -51,6 +54,7 @@ public partial class V1beta1ModelSpecForProviderContainerModelDataSourceS3DataSo
     public string? S3Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ModelSpecForProviderContainerModelDataSource
 {
     /// <summary>The S3 location of model data to deploy.</summary>
@@ -58,6 +62,7 @@ public partial class V1beta1ModelSpecForProviderContainerModelDataSource
     public IList<V1beta1ModelSpecForProviderContainerModelDataSourceS3DataSource>? S3DataSource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ModelSpecForProviderContainer
 {
     /// <summary>The DNS host name for the container.</summary>
@@ -113,6 +118,7 @@ public enum V1beta1ModelSpecForProviderExecutionRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ModelSpecForProviderExecutionRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -126,6 +132,7 @@ public partial class V1beta1ModelSpecForProviderExecutionRoleArnRefPolicy
     public V1beta1ModelSpecForProviderExecutionRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate executionRoleArn.</summary>
 public partial class V1beta1ModelSpecForProviderExecutionRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -157,6 +164,7 @@ public enum V1beta1ModelSpecForProviderExecutionRoleArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ModelSpecForProviderExecutionRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -170,6 +178,7 @@ public partial class V1beta1ModelSpecForProviderExecutionRoleArnSelectorPolicy
     public V1beta1ModelSpecForProviderExecutionRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate executionRoleArn.</summary>
 public partial class V1beta1ModelSpecForProviderExecutionRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -185,6 +194,7 @@ public partial class V1beta1ModelSpecForProviderExecutionRoleArnSelector
     public V1beta1ModelSpecForProviderExecutionRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ModelSpecForProviderInferenceExecutionConfig
 {
     /// <summary>The container hosts value SingleModel/MultiModel. The default value is SingleModel.</summary>
@@ -192,6 +202,7 @@ public partial class V1beta1ModelSpecForProviderInferenceExecutionConfig
     public string? Mode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ModelSpecForProviderPrimaryContainerImageConfigRepositoryAuthConfig
 {
     /// <summary>The Amazon Resource Name (ARN) of an AWS Lambda function that provides credentials to authenticate to the private Docker registry where your model image is hosted. For information about how to create an AWS Lambda function, see Create a Lambda function with the console in the AWS Lambda Developer Guide.</summary>
@@ -199,6 +210,7 @@ public partial class V1beta1ModelSpecForProviderPrimaryContainerImageConfigRepos
     public string? RepositoryCredentialsProviderArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ModelSpecForProviderPrimaryContainerImageConfig
 {
     /// <summary>Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). Allowed values are: Platform and Vpc.</summary>
@@ -210,6 +222,7 @@ public partial class V1beta1ModelSpecForProviderPrimaryContainerImageConfig
     public IList<V1beta1ModelSpecForProviderPrimaryContainerImageConfigRepositoryAuthConfig>? RepositoryAuthConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ModelSpecForProviderPrimaryContainerModelDataSourceS3DataSource
 {
     /// <summary>How the model data is prepared. Allowed values are: None and Gzip.</summary>
@@ -225,6 +238,7 @@ public partial class V1beta1ModelSpecForProviderPrimaryContainerModelDataSourceS
     public string? S3Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ModelSpecForProviderPrimaryContainerModelDataSource
 {
     /// <summary>The S3 location of model data to deploy.</summary>
@@ -232,6 +246,7 @@ public partial class V1beta1ModelSpecForProviderPrimaryContainerModelDataSource
     public IList<V1beta1ModelSpecForProviderPrimaryContainerModelDataSourceS3DataSource>? S3DataSource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ModelSpecForProviderPrimaryContainer
 {
     /// <summary>The DNS host name for the container.</summary>
@@ -267,6 +282,7 @@ public partial class V1beta1ModelSpecForProviderPrimaryContainer
     public string? ModelPackageName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ModelSpecForProviderVpcConfig
 {
     /// <summary></summary>
@@ -278,6 +294,7 @@ public partial class V1beta1ModelSpecForProviderVpcConfig
     public IList<string>? Subnets { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ModelSpecForProvider
 {
     /// <summary>Specifies containers in the inference pipeline. If not specified, the primary_container argument is required. Fields are documented below.</summary>
@@ -321,6 +338,7 @@ public partial class V1beta1ModelSpecForProvider
     public IList<V1beta1ModelSpecForProviderVpcConfig>? VpcConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ModelSpecInitProviderContainerImageConfigRepositoryAuthConfig
 {
     /// <summary>The Amazon Resource Name (ARN) of an AWS Lambda function that provides credentials to authenticate to the private Docker registry where your model image is hosted. For information about how to create an AWS Lambda function, see Create a Lambda function with the console in the AWS Lambda Developer Guide.</summary>
@@ -328,6 +346,7 @@ public partial class V1beta1ModelSpecInitProviderContainerImageConfigRepositoryA
     public string? RepositoryCredentialsProviderArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ModelSpecInitProviderContainerImageConfig
 {
     /// <summary>Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). Allowed values are: Platform and Vpc.</summary>
@@ -339,6 +358,7 @@ public partial class V1beta1ModelSpecInitProviderContainerImageConfig
     public IList<V1beta1ModelSpecInitProviderContainerImageConfigRepositoryAuthConfig>? RepositoryAuthConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ModelSpecInitProviderContainerModelDataSourceS3DataSource
 {
     /// <summary>How the model data is prepared. Allowed values are: None and Gzip.</summary>
@@ -354,6 +374,7 @@ public partial class V1beta1ModelSpecInitProviderContainerModelDataSourceS3DataS
     public string? S3Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ModelSpecInitProviderContainerModelDataSource
 {
     /// <summary>The S3 location of model data to deploy.</summary>
@@ -361,6 +382,7 @@ public partial class V1beta1ModelSpecInitProviderContainerModelDataSource
     public IList<V1beta1ModelSpecInitProviderContainerModelDataSourceS3DataSource>? S3DataSource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ModelSpecInitProviderContainer
 {
     /// <summary>The DNS host name for the container.</summary>
@@ -416,6 +438,7 @@ public enum V1beta1ModelSpecInitProviderExecutionRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ModelSpecInitProviderExecutionRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -429,6 +452,7 @@ public partial class V1beta1ModelSpecInitProviderExecutionRoleArnRefPolicy
     public V1beta1ModelSpecInitProviderExecutionRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate executionRoleArn.</summary>
 public partial class V1beta1ModelSpecInitProviderExecutionRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -460,6 +484,7 @@ public enum V1beta1ModelSpecInitProviderExecutionRoleArnSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ModelSpecInitProviderExecutionRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -473,6 +498,7 @@ public partial class V1beta1ModelSpecInitProviderExecutionRoleArnSelectorPolicy
     public V1beta1ModelSpecInitProviderExecutionRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate executionRoleArn.</summary>
 public partial class V1beta1ModelSpecInitProviderExecutionRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -488,6 +514,7 @@ public partial class V1beta1ModelSpecInitProviderExecutionRoleArnSelector
     public V1beta1ModelSpecInitProviderExecutionRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ModelSpecInitProviderInferenceExecutionConfig
 {
     /// <summary>The container hosts value SingleModel/MultiModel. The default value is SingleModel.</summary>
@@ -495,6 +522,7 @@ public partial class V1beta1ModelSpecInitProviderInferenceExecutionConfig
     public string? Mode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ModelSpecInitProviderPrimaryContainerImageConfigRepositoryAuthConfig
 {
     /// <summary>The Amazon Resource Name (ARN) of an AWS Lambda function that provides credentials to authenticate to the private Docker registry where your model image is hosted. For information about how to create an AWS Lambda function, see Create a Lambda function with the console in the AWS Lambda Developer Guide.</summary>
@@ -502,6 +530,7 @@ public partial class V1beta1ModelSpecInitProviderPrimaryContainerImageConfigRepo
     public string? RepositoryCredentialsProviderArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ModelSpecInitProviderPrimaryContainerImageConfig
 {
     /// <summary>Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). Allowed values are: Platform and Vpc.</summary>
@@ -513,6 +542,7 @@ public partial class V1beta1ModelSpecInitProviderPrimaryContainerImageConfig
     public IList<V1beta1ModelSpecInitProviderPrimaryContainerImageConfigRepositoryAuthConfig>? RepositoryAuthConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ModelSpecInitProviderPrimaryContainerModelDataSourceS3DataSource
 {
     /// <summary>How the model data is prepared. Allowed values are: None and Gzip.</summary>
@@ -528,6 +558,7 @@ public partial class V1beta1ModelSpecInitProviderPrimaryContainerModelDataSource
     public string? S3Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ModelSpecInitProviderPrimaryContainerModelDataSource
 {
     /// <summary>The S3 location of model data to deploy.</summary>
@@ -535,6 +566,7 @@ public partial class V1beta1ModelSpecInitProviderPrimaryContainerModelDataSource
     public IList<V1beta1ModelSpecInitProviderPrimaryContainerModelDataSourceS3DataSource>? S3DataSource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ModelSpecInitProviderPrimaryContainer
 {
     /// <summary>The DNS host name for the container.</summary>
@@ -570,6 +602,7 @@ public partial class V1beta1ModelSpecInitProviderPrimaryContainer
     public string? ModelPackageName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ModelSpecInitProviderVpcConfig
 {
     /// <summary></summary>
@@ -581,6 +614,7 @@ public partial class V1beta1ModelSpecInitProviderVpcConfig
     public IList<string>? Subnets { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ModelSpecInitProvider
 {
     /// <summary>Specifies containers in the inference pipeline. If not specified, the primary_container argument is required. Fields are documented below.</summary>
@@ -662,6 +696,7 @@ public enum V1beta1ModelSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ModelSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -675,6 +710,7 @@ public partial class V1beta1ModelSpecProviderConfigRefPolicy
     public V1beta1ModelSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ModelSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -706,6 +742,7 @@ public enum V1beta1ModelSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ModelSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -719,6 +756,7 @@ public partial class V1beta1ModelSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1ModelSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ModelSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -730,6 +768,7 @@ public partial class V1beta1ModelSpecPublishConnectionDetailsToConfigRef
     public V1beta1ModelSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ModelSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -745,6 +784,7 @@ public partial class V1beta1ModelSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ModelSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -760,6 +800,7 @@ public partial class V1beta1ModelSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ModelSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -771,6 +812,7 @@ public partial class V1beta1ModelSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ModelSpec defines the desired state of Model</summary>
 public partial class V1beta1ModelSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -803,6 +845,7 @@ public partial class V1beta1ModelSpec
     public V1beta1ModelSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ModelStatusAtProviderContainerImageConfigRepositoryAuthConfig
 {
     /// <summary>The Amazon Resource Name (ARN) of an AWS Lambda function that provides credentials to authenticate to the private Docker registry where your model image is hosted. For information about how to create an AWS Lambda function, see Create a Lambda function with the console in the AWS Lambda Developer Guide.</summary>
@@ -810,6 +853,7 @@ public partial class V1beta1ModelStatusAtProviderContainerImageConfigRepositoryA
     public string? RepositoryCredentialsProviderArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ModelStatusAtProviderContainerImageConfig
 {
     /// <summary>Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). Allowed values are: Platform and Vpc.</summary>
@@ -821,6 +865,7 @@ public partial class V1beta1ModelStatusAtProviderContainerImageConfig
     public IList<V1beta1ModelStatusAtProviderContainerImageConfigRepositoryAuthConfig>? RepositoryAuthConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ModelStatusAtProviderContainerModelDataSourceS3DataSource
 {
     /// <summary>How the model data is prepared. Allowed values are: None and Gzip.</summary>
@@ -836,6 +881,7 @@ public partial class V1beta1ModelStatusAtProviderContainerModelDataSourceS3DataS
     public string? S3Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ModelStatusAtProviderContainerModelDataSource
 {
     /// <summary>The S3 location of model data to deploy.</summary>
@@ -843,6 +889,7 @@ public partial class V1beta1ModelStatusAtProviderContainerModelDataSource
     public IList<V1beta1ModelStatusAtProviderContainerModelDataSourceS3DataSource>? S3DataSource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ModelStatusAtProviderContainer
 {
     /// <summary>The DNS host name for the container.</summary>
@@ -878,6 +925,7 @@ public partial class V1beta1ModelStatusAtProviderContainer
     public string? ModelPackageName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ModelStatusAtProviderInferenceExecutionConfig
 {
     /// <summary>The container hosts value SingleModel/MultiModel. The default value is SingleModel.</summary>
@@ -885,6 +933,7 @@ public partial class V1beta1ModelStatusAtProviderInferenceExecutionConfig
     public string? Mode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ModelStatusAtProviderPrimaryContainerImageConfigRepositoryAuthConfig
 {
     /// <summary>The Amazon Resource Name (ARN) of an AWS Lambda function that provides credentials to authenticate to the private Docker registry where your model image is hosted. For information about how to create an AWS Lambda function, see Create a Lambda function with the console in the AWS Lambda Developer Guide.</summary>
@@ -892,6 +941,7 @@ public partial class V1beta1ModelStatusAtProviderPrimaryContainerImageConfigRepo
     public string? RepositoryCredentialsProviderArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ModelStatusAtProviderPrimaryContainerImageConfig
 {
     /// <summary>Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). Allowed values are: Platform and Vpc.</summary>
@@ -903,6 +953,7 @@ public partial class V1beta1ModelStatusAtProviderPrimaryContainerImageConfig
     public IList<V1beta1ModelStatusAtProviderPrimaryContainerImageConfigRepositoryAuthConfig>? RepositoryAuthConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ModelStatusAtProviderPrimaryContainerModelDataSourceS3DataSource
 {
     /// <summary>How the model data is prepared. Allowed values are: None and Gzip.</summary>
@@ -918,6 +969,7 @@ public partial class V1beta1ModelStatusAtProviderPrimaryContainerModelDataSource
     public string? S3Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ModelStatusAtProviderPrimaryContainerModelDataSource
 {
     /// <summary>The S3 location of model data to deploy.</summary>
@@ -925,6 +977,7 @@ public partial class V1beta1ModelStatusAtProviderPrimaryContainerModelDataSource
     public IList<V1beta1ModelStatusAtProviderPrimaryContainerModelDataSourceS3DataSource>? S3DataSource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ModelStatusAtProviderPrimaryContainer
 {
     /// <summary>The DNS host name for the container.</summary>
@@ -960,6 +1013,7 @@ public partial class V1beta1ModelStatusAtProviderPrimaryContainer
     public string? ModelPackageName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ModelStatusAtProviderVpcConfig
 {
     /// <summary></summary>
@@ -971,6 +1025,7 @@ public partial class V1beta1ModelStatusAtProviderVpcConfig
     public IList<string>? Subnets { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ModelStatusAtProvider
 {
     /// <summary>The Amazon Resource Name (ARN) assigned by AWS to this model.</summary>
@@ -1014,6 +1069,7 @@ public partial class V1beta1ModelStatusAtProvider
     public IList<V1beta1ModelStatusAtProviderVpcConfig>? VpcConfig { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ModelStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1041,6 +1097,7 @@ public partial class V1beta1ModelStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ModelStatus defines the observed state of Model.</summary>
 public partial class V1beta1ModelStatus
 {
     /// <summary></summary>
@@ -1057,6 +1114,7 @@ public partial class V1beta1ModelStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Model is the Schema for the Models API. Provides a SageMaker model resource.</summary>
 public partial class V1beta1Model : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ModelSpec>, IStatus<V1beta1ModelStatus>
 {
     public const string KubeApiVersion = "v1beta1";

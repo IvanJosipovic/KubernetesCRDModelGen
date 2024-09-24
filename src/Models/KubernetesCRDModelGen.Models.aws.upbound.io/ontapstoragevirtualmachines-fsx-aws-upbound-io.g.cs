@@ -18,6 +18,7 @@ public enum V1beta1OntapStorageVirtualMachineSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>The password for the service account on your self-managed AD domain that Amazon FSx will use to join to your AD domain.</summary>
 public partial class V1beta1OntapStorageVirtualMachineSpecForProviderActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1OntapStorageVirtualMachineSpecForProviderActiveDirec
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OntapStorageVirtualMachineSpecForProviderActiveDirectoryConfigurationSelfManagedActiveDirectoryConfiguration
 {
     /// <summary>A list of up to three IP addresses of DNS servers or domain controllers in the self-managed AD directory.</summary>
@@ -60,6 +62,7 @@ public partial class V1beta1OntapStorageVirtualMachineSpecForProviderActiveDirec
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OntapStorageVirtualMachineSpecForProviderActiveDirectoryConfiguration
 {
     /// <summary>The NetBIOS name of the Active Directory computer object that will be created for your SVM. This is often the same as the SVM name but can be different. AWS limits to 15 characters because of standard NetBIOS naming limits.</summary>
@@ -91,6 +94,7 @@ public enum V1beta1OntapStorageVirtualMachineSpecForProviderFileSystemIdRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OntapStorageVirtualMachineSpecForProviderFileSystemIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -104,6 +108,7 @@ public partial class V1beta1OntapStorageVirtualMachineSpecForProviderFileSystemI
     public V1beta1OntapStorageVirtualMachineSpecForProviderFileSystemIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a OntapFileSystem in fsx to populate fileSystemId.</summary>
 public partial class V1beta1OntapStorageVirtualMachineSpecForProviderFileSystemIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -135,6 +140,7 @@ public enum V1beta1OntapStorageVirtualMachineSpecForProviderFileSystemIdSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1OntapStorageVirtualMachineSpecForProviderFileSystemIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -148,6 +154,7 @@ public partial class V1beta1OntapStorageVirtualMachineSpecForProviderFileSystemI
     public V1beta1OntapStorageVirtualMachineSpecForProviderFileSystemIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a OntapFileSystem in fsx to populate fileSystemId.</summary>
 public partial class V1beta1OntapStorageVirtualMachineSpecForProviderFileSystemIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -163,6 +170,7 @@ public partial class V1beta1OntapStorageVirtualMachineSpecForProviderFileSystemI
     public V1beta1OntapStorageVirtualMachineSpecForProviderFileSystemIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
 public partial class V1beta1OntapStorageVirtualMachineSpecForProviderSvmAdminPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -178,6 +186,7 @@ public partial class V1beta1OntapStorageVirtualMachineSpecForProviderSvmAdminPas
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OntapStorageVirtualMachineSpecForProvider
 {
     /// <summary>Configuration block that Amazon FSx uses to join the FSx ONTAP Storage Virtual Machine(SVM) to your Microsoft Active Directory (AD) directory. Detailed below.</summary>
@@ -217,6 +226,7 @@ public partial class V1beta1OntapStorageVirtualMachineSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>The password for the service account on your self-managed AD domain that Amazon FSx will use to join to your AD domain.</summary>
 public partial class V1beta1OntapStorageVirtualMachineSpecInitProviderActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -232,6 +242,7 @@ public partial class V1beta1OntapStorageVirtualMachineSpecInitProviderActiveDire
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OntapStorageVirtualMachineSpecInitProviderActiveDirectoryConfigurationSelfManagedActiveDirectoryConfiguration
 {
     /// <summary>A list of up to three IP addresses of DNS servers or domain controllers in the self-managed AD directory.</summary>
@@ -259,6 +270,7 @@ public partial class V1beta1OntapStorageVirtualMachineSpecInitProviderActiveDire
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OntapStorageVirtualMachineSpecInitProviderActiveDirectoryConfiguration
 {
     /// <summary>The NetBIOS name of the Active Directory computer object that will be created for your SVM. This is often the same as the SVM name but can be different. AWS limits to 15 characters because of standard NetBIOS naming limits.</summary>
@@ -290,6 +302,7 @@ public enum V1beta1OntapStorageVirtualMachineSpecInitProviderFileSystemIdRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OntapStorageVirtualMachineSpecInitProviderFileSystemIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -303,6 +316,7 @@ public partial class V1beta1OntapStorageVirtualMachineSpecInitProviderFileSystem
     public V1beta1OntapStorageVirtualMachineSpecInitProviderFileSystemIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a OntapFileSystem in fsx to populate fileSystemId.</summary>
 public partial class V1beta1OntapStorageVirtualMachineSpecInitProviderFileSystemIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -334,6 +348,7 @@ public enum V1beta1OntapStorageVirtualMachineSpecInitProviderFileSystemIdSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1OntapStorageVirtualMachineSpecInitProviderFileSystemIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -347,6 +362,7 @@ public partial class V1beta1OntapStorageVirtualMachineSpecInitProviderFileSystem
     public V1beta1OntapStorageVirtualMachineSpecInitProviderFileSystemIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a OntapFileSystem in fsx to populate fileSystemId.</summary>
 public partial class V1beta1OntapStorageVirtualMachineSpecInitProviderFileSystemIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -362,6 +378,7 @@ public partial class V1beta1OntapStorageVirtualMachineSpecInitProviderFileSystem
     public V1beta1OntapStorageVirtualMachineSpecInitProviderFileSystemIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
 public partial class V1beta1OntapStorageVirtualMachineSpecInitProviderSvmAdminPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -377,6 +394,7 @@ public partial class V1beta1OntapStorageVirtualMachineSpecInitProviderSvmAdminPa
     public string Namespace { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1OntapStorageVirtualMachineSpecInitProvider
 {
     /// <summary>Configuration block that Amazon FSx uses to join the FSx ONTAP Storage Virtual Machine(SVM) to your Microsoft Active Directory (AD) directory. Detailed below.</summary>
@@ -454,6 +472,7 @@ public enum V1beta1OntapStorageVirtualMachineSpecProviderConfigRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OntapStorageVirtualMachineSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -467,6 +486,7 @@ public partial class V1beta1OntapStorageVirtualMachineSpecProviderConfigRefPolic
     public V1beta1OntapStorageVirtualMachineSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1OntapStorageVirtualMachineSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -498,6 +518,7 @@ public enum V1beta1OntapStorageVirtualMachineSpecPublishConnectionDetailsToConfi
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OntapStorageVirtualMachineSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -511,6 +532,7 @@ public partial class V1beta1OntapStorageVirtualMachineSpecPublishConnectionDetai
     public V1beta1OntapStorageVirtualMachineSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1OntapStorageVirtualMachineSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -522,6 +544,7 @@ public partial class V1beta1OntapStorageVirtualMachineSpecPublishConnectionDetai
     public V1beta1OntapStorageVirtualMachineSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1OntapStorageVirtualMachineSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -537,6 +560,7 @@ public partial class V1beta1OntapStorageVirtualMachineSpecPublishConnectionDetai
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1OntapStorageVirtualMachineSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -552,6 +576,7 @@ public partial class V1beta1OntapStorageVirtualMachineSpecPublishConnectionDetai
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1OntapStorageVirtualMachineSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -563,6 +588,7 @@ public partial class V1beta1OntapStorageVirtualMachineSpecWriteConnectionSecretT
     public string Namespace { get; set; }
 }
 
+/// <summary>OntapStorageVirtualMachineSpec defines the desired state of OntapStorageVirtualMachine</summary>
 public partial class V1beta1OntapStorageVirtualMachineSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -595,6 +621,7 @@ public partial class V1beta1OntapStorageVirtualMachineSpec
     public V1beta1OntapStorageVirtualMachineSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OntapStorageVirtualMachineStatusAtProviderActiveDirectoryConfigurationSelfManagedActiveDirectoryConfiguration
 {
     /// <summary>A list of up to three IP addresses of DNS servers or domain controllers in the self-managed AD directory.</summary>
@@ -618,6 +645,7 @@ public partial class V1beta1OntapStorageVirtualMachineStatusAtProviderActiveDire
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OntapStorageVirtualMachineStatusAtProviderActiveDirectoryConfiguration
 {
     /// <summary>The NetBIOS name of the Active Directory computer object that will be created for your SVM. This is often the same as the SVM name but can be different. AWS limits to 15 characters because of standard NetBIOS naming limits.</summary>
@@ -629,6 +657,7 @@ public partial class V1beta1OntapStorageVirtualMachineStatusAtProviderActiveDire
     public IList<V1beta1OntapStorageVirtualMachineStatusAtProviderActiveDirectoryConfigurationSelfManagedActiveDirectoryConfiguration>? SelfManagedActiveDirectoryConfiguration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OntapStorageVirtualMachineStatusAtProviderEndpointsIscsi
 {
     /// <summary>The Domain Name Service (DNS) name for the storage virtual machine. You can mount your storage virtual machine using its DNS name.</summary>
@@ -640,6 +669,7 @@ public partial class V1beta1OntapStorageVirtualMachineStatusAtProviderEndpointsI
     public IList<string>? IpAddresses { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OntapStorageVirtualMachineStatusAtProviderEndpointsManagement
 {
     /// <summary>The Domain Name Service (DNS) name for the storage virtual machine. You can mount your storage virtual machine using its DNS name.</summary>
@@ -651,6 +681,7 @@ public partial class V1beta1OntapStorageVirtualMachineStatusAtProviderEndpointsM
     public IList<string>? IpAddresses { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OntapStorageVirtualMachineStatusAtProviderEndpointsNfs
 {
     /// <summary>The Domain Name Service (DNS) name for the storage virtual machine. You can mount your storage virtual machine using its DNS name.</summary>
@@ -662,6 +693,7 @@ public partial class V1beta1OntapStorageVirtualMachineStatusAtProviderEndpointsN
     public IList<string>? IpAddresses { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OntapStorageVirtualMachineStatusAtProviderEndpointsSmb
 {
     /// <summary>The Domain Name Service (DNS) name for the storage virtual machine. You can mount your storage virtual machine using its DNS name.</summary>
@@ -673,6 +705,7 @@ public partial class V1beta1OntapStorageVirtualMachineStatusAtProviderEndpointsS
     public IList<string>? IpAddresses { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OntapStorageVirtualMachineStatusAtProviderEndpoints
 {
     /// <summary>An endpoint for accessing data on your storage virtual machine via iSCSI protocol. See Endpoint.</summary>
@@ -692,6 +725,7 @@ public partial class V1beta1OntapStorageVirtualMachineStatusAtProviderEndpoints
     public IList<V1beta1OntapStorageVirtualMachineStatusAtProviderEndpointsSmb>? Smb { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OntapStorageVirtualMachineStatusAtProvider
 {
     /// <summary>Configuration block that Amazon FSx uses to join the FSx ONTAP Storage Virtual Machine(SVM) to your Microsoft Active Directory (AD) directory. Detailed below.</summary>
@@ -739,6 +773,7 @@ public partial class V1beta1OntapStorageVirtualMachineStatusAtProvider
     public string? Uuid { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1OntapStorageVirtualMachineStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -766,6 +801,7 @@ public partial class V1beta1OntapStorageVirtualMachineStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>OntapStorageVirtualMachineStatus defines the observed state of OntapStorageVirtualMachine.</summary>
 public partial class V1beta1OntapStorageVirtualMachineStatus
 {
     /// <summary></summary>
@@ -782,6 +818,7 @@ public partial class V1beta1OntapStorageVirtualMachineStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>OntapStorageVirtualMachine is the Schema for the OntapStorageVirtualMachines API. Manages a FSx Storage Virtual Machine.</summary>
 public partial class V1beta1OntapStorageVirtualMachine : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1OntapStorageVirtualMachineSpec>, IStatus<V1beta1OntapStorageVirtualMachineStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+/// <summary>Storage version of v1api20201101.NetworkInterfaceDnsSettings DNS settings of a network interface.</summary>
 public partial class V1api20201101storageNetworkInterfaceSpecDnsSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -23,6 +24,7 @@ public partial class V1api20201101storageNetworkInterfaceSpecDnsSettings
     public string? InternalDnsNameLabel { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.ExtendedLocation ExtendedLocation complex type.</summary>
 public partial class V1api20201101storageNetworkInterfaceSpecExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -38,6 +40,7 @@ public partial class V1api20201101storageNetworkInterfaceSpecExtendedLocation
     public string? Type { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20201101storageNetworkInterfaceSpecIpConfigurationsApplicationGatewayBackendAddressPoolsReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -57,6 +60,7 @@ public partial class V1api20201101storageNetworkInterfaceSpecIpConfigurationsApp
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.ApplicationGatewayBackendAddressPool_NetworkInterface_SubResourceEmbedded Backend Address Pool of an application gateway.</summary>
 public partial class V1api20201101storageNetworkInterfaceSpecIpConfigurationsApplicationGatewayBackendAddressPools
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -68,6 +72,7 @@ public partial class V1api20201101storageNetworkInterfaceSpecIpConfigurationsApp
     public V1api20201101storageNetworkInterfaceSpecIpConfigurationsApplicationGatewayBackendAddressPoolsReference? Reference { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20201101storageNetworkInterfaceSpecIpConfigurationsApplicationSecurityGroupsReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -87,6 +92,7 @@ public partial class V1api20201101storageNetworkInterfaceSpecIpConfigurationsApp
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.ApplicationSecurityGroupSpec_NetworkInterface_SubResourceEmbedded An application security group in a resource group.</summary>
 public partial class V1api20201101storageNetworkInterfaceSpecIpConfigurationsApplicationSecurityGroups
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -98,6 +104,7 @@ public partial class V1api20201101storageNetworkInterfaceSpecIpConfigurationsApp
     public V1api20201101storageNetworkInterfaceSpecIpConfigurationsApplicationSecurityGroupsReference? Reference { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20201101storageNetworkInterfaceSpecIpConfigurationsLoadBalancerBackendAddressPoolsReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -117,6 +124,7 @@ public partial class V1api20201101storageNetworkInterfaceSpecIpConfigurationsLoa
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.BackendAddressPool_NetworkInterface_SubResourceEmbedded Pool of backend IP addresses.</summary>
 public partial class V1api20201101storageNetworkInterfaceSpecIpConfigurationsLoadBalancerBackendAddressPools
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -128,6 +136,7 @@ public partial class V1api20201101storageNetworkInterfaceSpecIpConfigurationsLoa
     public V1api20201101storageNetworkInterfaceSpecIpConfigurationsLoadBalancerBackendAddressPoolsReference? Reference { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20201101storageNetworkInterfaceSpecIpConfigurationsLoadBalancerInboundNatRulesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -147,6 +156,7 @@ public partial class V1api20201101storageNetworkInterfaceSpecIpConfigurationsLoa
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.InboundNatRule_NetworkInterface_SubResourceEmbedded Inbound NAT rule of the load balancer.</summary>
 public partial class V1api20201101storageNetworkInterfaceSpecIpConfigurationsLoadBalancerInboundNatRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -158,6 +168,7 @@ public partial class V1api20201101storageNetworkInterfaceSpecIpConfigurationsLoa
     public V1api20201101storageNetworkInterfaceSpecIpConfigurationsLoadBalancerInboundNatRulesReference? Reference { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20201101storageNetworkInterfaceSpecIpConfigurationsPublicIPAddressReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -177,6 +188,7 @@ public partial class V1api20201101storageNetworkInterfaceSpecIpConfigurationsPub
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.PublicIPAddressSpec_NetworkInterface_SubResourceEmbedded Public IP address resource.</summary>
 public partial class V1api20201101storageNetworkInterfaceSpecIpConfigurationsPublicIPAddress
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -188,6 +200,7 @@ public partial class V1api20201101storageNetworkInterfaceSpecIpConfigurationsPub
     public V1api20201101storageNetworkInterfaceSpecIpConfigurationsPublicIPAddressReference? Reference { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20201101storageNetworkInterfaceSpecIpConfigurationsSubnetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -207,6 +220,7 @@ public partial class V1api20201101storageNetworkInterfaceSpecIpConfigurationsSub
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.Subnet_NetworkInterface_SubResourceEmbedded Subnet in a virtual network resource.</summary>
 public partial class V1api20201101storageNetworkInterfaceSpecIpConfigurationsSubnet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -218,6 +232,7 @@ public partial class V1api20201101storageNetworkInterfaceSpecIpConfigurationsSub
     public V1api20201101storageNetworkInterfaceSpecIpConfigurationsSubnetReference? Reference { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20201101storageNetworkInterfaceSpecIpConfigurationsVirtualNetworkTapsReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -237,6 +252,7 @@ public partial class V1api20201101storageNetworkInterfaceSpecIpConfigurationsVir
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.VirtualNetworkTapSpec_NetworkInterface_SubResourceEmbedded Virtual Network Tap resource.</summary>
 public partial class V1api20201101storageNetworkInterfaceSpecIpConfigurationsVirtualNetworkTaps
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -248,6 +264,7 @@ public partial class V1api20201101storageNetworkInterfaceSpecIpConfigurationsVir
     public V1api20201101storageNetworkInterfaceSpecIpConfigurationsVirtualNetworkTapsReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.NetworkInterfaceIPConfiguration_NetworkInterface_SubResourceEmbedded IPConfiguration in a network interface.</summary>
 public partial class V1api20201101storageNetworkInterfaceSpecIpConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -303,6 +320,7 @@ public partial class V1api20201101storageNetworkInterfaceSpecIpConfigurations
     public IList<V1api20201101storageNetworkInterfaceSpecIpConfigurationsVirtualNetworkTaps>? VirtualNetworkTaps { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20201101storageNetworkInterfaceSpecNetworkSecurityGroupReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -322,6 +340,7 @@ public partial class V1api20201101storageNetworkInterfaceSpecNetworkSecurityGrou
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.NetworkSecurityGroupSpec_NetworkInterface_SubResourceEmbedded NetworkSecurityGroup resource.</summary>
 public partial class V1api20201101storageNetworkInterfaceSpecNetworkSecurityGroup
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -333,6 +352,7 @@ public partial class V1api20201101storageNetworkInterfaceSpecNetworkSecurityGrou
     public V1api20201101storageNetworkInterfaceSpecNetworkSecurityGroupReference? Reference { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20201101storageNetworkInterfaceSpecOwner
 {
     /// <summary></summary>
@@ -344,6 +364,7 @@ public partial class V1api20201101storageNetworkInterfaceSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20201101storageNetworkInterfaceSpecPrivateLinkServiceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -363,6 +384,7 @@ public partial class V1api20201101storageNetworkInterfaceSpecPrivateLinkServiceR
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.PrivateLinkServiceSpec Private link service resource.</summary>
 public partial class V1api20201101storageNetworkInterfaceSpecPrivateLinkService
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -374,6 +396,7 @@ public partial class V1api20201101storageNetworkInterfaceSpecPrivateLinkService
     public V1api20201101storageNetworkInterfaceSpecPrivateLinkServiceReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.NetworkInterface_Spec</summary>
 public partial class V1api20201101storageNetworkInterfaceSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -433,6 +456,7 @@ public partial class V1api20201101storageNetworkInterfaceSpec
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20201101storageNetworkInterfaceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -464,6 +488,7 @@ public partial class V1api20201101storageNetworkInterfaceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.NetworkInterfaceDnsSettings_STATUS DNS settings of a network interface.</summary>
 public partial class V1api20201101storageNetworkInterfaceStatusDnsSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -491,6 +516,7 @@ public partial class V1api20201101storageNetworkInterfaceStatusDnsSettings
     public string? InternalFqdn { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
 public partial class V1api20201101storageNetworkInterfaceStatusDscpConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -502,6 +528,7 @@ public partial class V1api20201101storageNetworkInterfaceStatusDscpConfiguration
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.ExtendedLocation_STATUS ExtendedLocation complex type.</summary>
 public partial class V1api20201101storageNetworkInterfaceStatusExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -517,6 +544,7 @@ public partial class V1api20201101storageNetworkInterfaceStatusExtendedLocation
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.ApplicationGatewayBackendAddressPool_STATUS_NetworkInterface_SubResourceEmbedded Backend Address Pool of an application gateway.</summary>
 public partial class V1api20201101storageNetworkInterfaceStatusIpConfigurationsApplicationGatewayBackendAddressPools
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -528,6 +556,7 @@ public partial class V1api20201101storageNetworkInterfaceStatusIpConfigurationsA
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.ApplicationSecurityGroup_STATUS_NetworkInterface_SubResourceEmbedded An application security group in a resource group.</summary>
 public partial class V1api20201101storageNetworkInterfaceStatusIpConfigurationsApplicationSecurityGroups
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -539,6 +568,7 @@ public partial class V1api20201101storageNetworkInterfaceStatusIpConfigurationsA
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.BackendAddressPool_STATUS_NetworkInterface_SubResourceEmbedded Pool of backend IP addresses.</summary>
 public partial class V1api20201101storageNetworkInterfaceStatusIpConfigurationsLoadBalancerBackendAddressPools
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -550,6 +580,7 @@ public partial class V1api20201101storageNetworkInterfaceStatusIpConfigurationsL
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.InboundNatRule_STATUS_NetworkInterface_SubResourceEmbedded Inbound NAT rule of the load balancer.</summary>
 public partial class V1api20201101storageNetworkInterfaceStatusIpConfigurationsLoadBalancerInboundNatRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -561,6 +592,7 @@ public partial class V1api20201101storageNetworkInterfaceStatusIpConfigurationsL
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.NetworkInterfaceIPConfigurationPrivateLinkConnectionProperties_STATUS PrivateLinkConnection properties for the network interface.</summary>
 public partial class V1api20201101storageNetworkInterfaceStatusIpConfigurationsPrivateLinkConnectionProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -580,6 +612,7 @@ public partial class V1api20201101storageNetworkInterfaceStatusIpConfigurationsP
     public string? RequiredMemberName { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.PublicIPAddress_STATUS_NetworkInterface_SubResourceEmbedded Public IP address resource.</summary>
 public partial class V1api20201101storageNetworkInterfaceStatusIpConfigurationsPublicIPAddress
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -591,6 +624,7 @@ public partial class V1api20201101storageNetworkInterfaceStatusIpConfigurationsP
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.Subnet_STATUS_NetworkInterface_SubResourceEmbedded Subnet in a virtual network resource.</summary>
 public partial class V1api20201101storageNetworkInterfaceStatusIpConfigurationsSubnet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -602,6 +636,7 @@ public partial class V1api20201101storageNetworkInterfaceStatusIpConfigurationsS
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.VirtualNetworkTap_STATUS_NetworkInterface_SubResourceEmbedded Virtual Network Tap resource.</summary>
 public partial class V1api20201101storageNetworkInterfaceStatusIpConfigurationsVirtualNetworkTaps
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -613,6 +648,7 @@ public partial class V1api20201101storageNetworkInterfaceStatusIpConfigurationsV
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.NetworkInterfaceIPConfiguration_STATUS_NetworkInterface_SubResourceEmbedded IPConfiguration in a network interface.</summary>
 public partial class V1api20201101storageNetworkInterfaceStatusIpConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -688,6 +724,7 @@ public partial class V1api20201101storageNetworkInterfaceStatusIpConfigurations
     public IList<V1api20201101storageNetworkInterfaceStatusIpConfigurationsVirtualNetworkTaps>? VirtualNetworkTaps { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.NetworkSecurityGroup_STATUS_NetworkInterface_SubResourceEmbedded NetworkSecurityGroup resource.</summary>
 public partial class V1api20201101storageNetworkInterfaceStatusNetworkSecurityGroup
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -699,6 +736,7 @@ public partial class V1api20201101storageNetworkInterfaceStatusNetworkSecurityGr
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.PrivateEndpoint_STATUS_NetworkInterface_SubResourceEmbedded Private endpoint resource.</summary>
 public partial class V1api20201101storageNetworkInterfaceStatusPrivateEndpoint
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -710,6 +748,7 @@ public partial class V1api20201101storageNetworkInterfaceStatusPrivateEndpoint
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.PrivateLinkService_STATUS_NetworkInterface_SubResourceEmbedded Private link service resource.</summary>
 public partial class V1api20201101storageNetworkInterfaceStatusPrivateLinkService
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -721,6 +760,7 @@ public partial class V1api20201101storageNetworkInterfaceStatusPrivateLinkServic
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.NetworkInterfaceTapConfiguration_STATUS_NetworkInterface_SubResourceEmbedded Tap configuration in a Network Interface.</summary>
 public partial class V1api20201101storageNetworkInterfaceStatusTapConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -732,6 +772,7 @@ public partial class V1api20201101storageNetworkInterfaceStatusTapConfigurations
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
 public partial class V1api20201101storageNetworkInterfaceStatusVirtualMachine
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -743,6 +784,7 @@ public partial class V1api20201101storageNetworkInterfaceStatusVirtualMachine
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.NetworkInterface_STATUS_NetworkInterface_SubResourceEmbedded A network interface in a resource group.</summary>
 public partial class V1api20201101storageNetworkInterfaceStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -851,6 +893,7 @@ public partial class V1api20201101storageNetworkInterfaceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20201101.NetworkInterface Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/networkInterface.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}</summary>
 public partial class V1api20201101storageNetworkInterface : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20201101storageNetworkInterfaceSpec>, IStatus<V1api20201101storageNetworkInterfaceStatus>
 {
     public const string KubeApiVersion = "v1api20201101storage";

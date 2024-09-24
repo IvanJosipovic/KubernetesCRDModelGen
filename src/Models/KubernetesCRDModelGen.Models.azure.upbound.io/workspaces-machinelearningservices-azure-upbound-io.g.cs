@@ -38,6 +38,7 @@ public enum V1beta1WorkspaceSpecForProviderApplicationInsightsIdRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkspaceSpecForProviderApplicationInsightsIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1WorkspaceSpecForProviderApplicationInsightsIdRefPoli
     public V1beta1WorkspaceSpecForProviderApplicationInsightsIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ApplicationInsights in insights to populate applicationInsightsId.</summary>
 public partial class V1beta1WorkspaceSpecForProviderApplicationInsightsIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1WorkspaceSpecForProviderApplicationInsightsIdSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkspaceSpecForProviderApplicationInsightsIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1WorkspaceSpecForProviderApplicationInsightsIdSelecto
     public V1beta1WorkspaceSpecForProviderApplicationInsightsIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ApplicationInsights in insights to populate applicationInsightsId.</summary>
 public partial class V1beta1WorkspaceSpecForProviderApplicationInsightsIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1WorkspaceSpecForProviderEncryptionKeyIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkspaceSpecForProviderEncryptionKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1WorkspaceSpecForProviderEncryptionKeyIdRefPolicy
     public V1beta1WorkspaceSpecForProviderEncryptionKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in keyvault to populate keyId.</summary>
 public partial class V1beta1WorkspaceSpecForProviderEncryptionKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1WorkspaceSpecForProviderEncryptionKeyIdSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkspaceSpecForProviderEncryptionKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1WorkspaceSpecForProviderEncryptionKeyIdSelectorPolic
     public V1beta1WorkspaceSpecForProviderEncryptionKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in keyvault to populate keyId.</summary>
 public partial class V1beta1WorkspaceSpecForProviderEncryptionKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1WorkspaceSpecForProviderEncryptionKeyVaultIdRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkspaceSpecForProviderEncryptionKeyVaultIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1WorkspaceSpecForProviderEncryptionKeyVaultIdRefPolic
     public V1beta1WorkspaceSpecForProviderEncryptionKeyVaultIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Vault in keyvault to populate keyVaultId.</summary>
 public partial class V1beta1WorkspaceSpecForProviderEncryptionKeyVaultIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1WorkspaceSpecForProviderEncryptionKeyVaultIdSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkspaceSpecForProviderEncryptionKeyVaultIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1WorkspaceSpecForProviderEncryptionKeyVaultIdSelector
     public V1beta1WorkspaceSpecForProviderEncryptionKeyVaultIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Vault in keyvault to populate keyVaultId.</summary>
 public partial class V1beta1WorkspaceSpecForProviderEncryptionKeyVaultIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -314,6 +326,7 @@ public enum V1beta1WorkspaceSpecForProviderEncryptionUserAssignedIdentityIdRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkspaceSpecForProviderEncryptionUserAssignedIdentityIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -327,6 +340,7 @@ public partial class V1beta1WorkspaceSpecForProviderEncryptionUserAssignedIdenti
     public V1beta1WorkspaceSpecForProviderEncryptionUserAssignedIdentityIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserAssignedIdentity in managedidentity to populate userAssignedIdentityId.</summary>
 public partial class V1beta1WorkspaceSpecForProviderEncryptionUserAssignedIdentityIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -358,6 +372,7 @@ public enum V1beta1WorkspaceSpecForProviderEncryptionUserAssignedIdentityIdSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkspaceSpecForProviderEncryptionUserAssignedIdentityIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -371,6 +386,7 @@ public partial class V1beta1WorkspaceSpecForProviderEncryptionUserAssignedIdenti
     public V1beta1WorkspaceSpecForProviderEncryptionUserAssignedIdentityIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserAssignedIdentity in managedidentity to populate userAssignedIdentityId.</summary>
 public partial class V1beta1WorkspaceSpecForProviderEncryptionUserAssignedIdentityIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -386,6 +402,7 @@ public partial class V1beta1WorkspaceSpecForProviderEncryptionUserAssignedIdenti
     public V1beta1WorkspaceSpecForProviderEncryptionUserAssignedIdentityIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkspaceSpecForProviderEncryption
 {
     /// <summary>The Key Vault URI to access the encryption key.</summary>
@@ -425,6 +442,7 @@ public partial class V1beta1WorkspaceSpecForProviderEncryption
     public V1beta1WorkspaceSpecForProviderEncryptionUserAssignedIdentityIdSelector? UserAssignedIdentityIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkspaceSpecForProviderFeatureStore
 {
     /// <summary>The version of Spark runtime.</summary>
@@ -440,6 +458,7 @@ public partial class V1beta1WorkspaceSpecForProviderFeatureStore
     public string? OnlineConnectionName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkspaceSpecForProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Machine Learning Workspace.</summary>
@@ -471,6 +490,7 @@ public enum V1beta1WorkspaceSpecForProviderKeyVaultIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkspaceSpecForProviderKeyVaultIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -484,6 +504,7 @@ public partial class V1beta1WorkspaceSpecForProviderKeyVaultIdRefPolicy
     public V1beta1WorkspaceSpecForProviderKeyVaultIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Vault in keyvault to populate keyVaultId.</summary>
 public partial class V1beta1WorkspaceSpecForProviderKeyVaultIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -515,6 +536,7 @@ public enum V1beta1WorkspaceSpecForProviderKeyVaultIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkspaceSpecForProviderKeyVaultIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -528,6 +550,7 @@ public partial class V1beta1WorkspaceSpecForProviderKeyVaultIdSelectorPolicy
     public V1beta1WorkspaceSpecForProviderKeyVaultIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Vault in keyvault to populate keyVaultId.</summary>
 public partial class V1beta1WorkspaceSpecForProviderKeyVaultIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -543,6 +566,7 @@ public partial class V1beta1WorkspaceSpecForProviderKeyVaultIdSelector
     public V1beta1WorkspaceSpecForProviderKeyVaultIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkspaceSpecForProviderManagedNetwork
 {
     /// <summary>The isolation mode of the Machine Learning Workspace. Possible values are Disabled, AllowOnlyApprovedOutbound, and AllowInternetOutbound</summary>
@@ -570,6 +594,7 @@ public enum V1beta1WorkspaceSpecForProviderPrimaryUserAssignedIdentityRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkspaceSpecForProviderPrimaryUserAssignedIdentityRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -583,6 +608,7 @@ public partial class V1beta1WorkspaceSpecForProviderPrimaryUserAssignedIdentityR
     public V1beta1WorkspaceSpecForProviderPrimaryUserAssignedIdentityRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserAssignedIdentity in managedidentity to populate primaryUserAssignedIdentity.</summary>
 public partial class V1beta1WorkspaceSpecForProviderPrimaryUserAssignedIdentityRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -614,6 +640,7 @@ public enum V1beta1WorkspaceSpecForProviderPrimaryUserAssignedIdentitySelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkspaceSpecForProviderPrimaryUserAssignedIdentitySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -627,6 +654,7 @@ public partial class V1beta1WorkspaceSpecForProviderPrimaryUserAssignedIdentityS
     public V1beta1WorkspaceSpecForProviderPrimaryUserAssignedIdentitySelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserAssignedIdentity in managedidentity to populate primaryUserAssignedIdentity.</summary>
 public partial class V1beta1WorkspaceSpecForProviderPrimaryUserAssignedIdentitySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -662,6 +690,7 @@ public enum V1beta1WorkspaceSpecForProviderResourceGroupNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkspaceSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -675,6 +704,7 @@ public partial class V1beta1WorkspaceSpecForProviderResourceGroupNameRefPolicy
     public V1beta1WorkspaceSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1WorkspaceSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -706,6 +736,7 @@ public enum V1beta1WorkspaceSpecForProviderResourceGroupNameSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkspaceSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -719,6 +750,7 @@ public partial class V1beta1WorkspaceSpecForProviderResourceGroupNameSelectorPol
     public V1beta1WorkspaceSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1WorkspaceSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -754,6 +786,7 @@ public enum V1beta1WorkspaceSpecForProviderStorageAccountIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkspaceSpecForProviderStorageAccountIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -767,6 +800,7 @@ public partial class V1beta1WorkspaceSpecForProviderStorageAccountIdRefPolicy
     public V1beta1WorkspaceSpecForProviderStorageAccountIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
 public partial class V1beta1WorkspaceSpecForProviderStorageAccountIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -798,6 +832,7 @@ public enum V1beta1WorkspaceSpecForProviderStorageAccountIdSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkspaceSpecForProviderStorageAccountIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -811,6 +846,7 @@ public partial class V1beta1WorkspaceSpecForProviderStorageAccountIdSelectorPoli
     public V1beta1WorkspaceSpecForProviderStorageAccountIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
 public partial class V1beta1WorkspaceSpecForProviderStorageAccountIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -826,6 +862,7 @@ public partial class V1beta1WorkspaceSpecForProviderStorageAccountIdSelector
     public V1beta1WorkspaceSpecForProviderStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkspaceSpecForProvider
 {
     /// <summary>The ID of the Application Insights associated with this Machine Learning Workspace. Changing this forces a new resource to be created.</summary>
@@ -973,6 +1010,7 @@ public enum V1beta1WorkspaceSpecInitProviderApplicationInsightsIdRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderApplicationInsightsIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -986,6 +1024,7 @@ public partial class V1beta1WorkspaceSpecInitProviderApplicationInsightsIdRefPol
     public V1beta1WorkspaceSpecInitProviderApplicationInsightsIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ApplicationInsights in insights to populate applicationInsightsId.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderApplicationInsightsIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1017,6 +1056,7 @@ public enum V1beta1WorkspaceSpecInitProviderApplicationInsightsIdSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderApplicationInsightsIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1030,6 +1070,7 @@ public partial class V1beta1WorkspaceSpecInitProviderApplicationInsightsIdSelect
     public V1beta1WorkspaceSpecInitProviderApplicationInsightsIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ApplicationInsights in insights to populate applicationInsightsId.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderApplicationInsightsIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1065,6 +1106,7 @@ public enum V1beta1WorkspaceSpecInitProviderEncryptionKeyIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderEncryptionKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1078,6 +1120,7 @@ public partial class V1beta1WorkspaceSpecInitProviderEncryptionKeyIdRefPolicy
     public V1beta1WorkspaceSpecInitProviderEncryptionKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in keyvault to populate keyId.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderEncryptionKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1109,6 +1152,7 @@ public enum V1beta1WorkspaceSpecInitProviderEncryptionKeyIdSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderEncryptionKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1122,6 +1166,7 @@ public partial class V1beta1WorkspaceSpecInitProviderEncryptionKeyIdSelectorPoli
     public V1beta1WorkspaceSpecInitProviderEncryptionKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in keyvault to populate keyId.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderEncryptionKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1157,6 +1202,7 @@ public enum V1beta1WorkspaceSpecInitProviderEncryptionKeyVaultIdRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderEncryptionKeyVaultIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1170,6 +1216,7 @@ public partial class V1beta1WorkspaceSpecInitProviderEncryptionKeyVaultIdRefPoli
     public V1beta1WorkspaceSpecInitProviderEncryptionKeyVaultIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Vault in keyvault to populate keyVaultId.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderEncryptionKeyVaultIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1201,6 +1248,7 @@ public enum V1beta1WorkspaceSpecInitProviderEncryptionKeyVaultIdSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderEncryptionKeyVaultIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1214,6 +1262,7 @@ public partial class V1beta1WorkspaceSpecInitProviderEncryptionKeyVaultIdSelecto
     public V1beta1WorkspaceSpecInitProviderEncryptionKeyVaultIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Vault in keyvault to populate keyVaultId.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderEncryptionKeyVaultIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1249,6 +1298,7 @@ public enum V1beta1WorkspaceSpecInitProviderEncryptionUserAssignedIdentityIdRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderEncryptionUserAssignedIdentityIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1262,6 +1312,7 @@ public partial class V1beta1WorkspaceSpecInitProviderEncryptionUserAssignedIdent
     public V1beta1WorkspaceSpecInitProviderEncryptionUserAssignedIdentityIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserAssignedIdentity in managedidentity to populate userAssignedIdentityId.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderEncryptionUserAssignedIdentityIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1293,6 +1344,7 @@ public enum V1beta1WorkspaceSpecInitProviderEncryptionUserAssignedIdentityIdSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderEncryptionUserAssignedIdentityIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1306,6 +1358,7 @@ public partial class V1beta1WorkspaceSpecInitProviderEncryptionUserAssignedIdent
     public V1beta1WorkspaceSpecInitProviderEncryptionUserAssignedIdentityIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserAssignedIdentity in managedidentity to populate userAssignedIdentityId.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderEncryptionUserAssignedIdentityIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1321,6 +1374,7 @@ public partial class V1beta1WorkspaceSpecInitProviderEncryptionUserAssignedIdent
     public V1beta1WorkspaceSpecInitProviderEncryptionUserAssignedIdentityIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkspaceSpecInitProviderEncryption
 {
     /// <summary>The Key Vault URI to access the encryption key.</summary>
@@ -1360,6 +1414,7 @@ public partial class V1beta1WorkspaceSpecInitProviderEncryption
     public V1beta1WorkspaceSpecInitProviderEncryptionUserAssignedIdentityIdSelector? UserAssignedIdentityIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkspaceSpecInitProviderFeatureStore
 {
     /// <summary>The version of Spark runtime.</summary>
@@ -1375,6 +1430,7 @@ public partial class V1beta1WorkspaceSpecInitProviderFeatureStore
     public string? OnlineConnectionName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkspaceSpecInitProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Machine Learning Workspace.</summary>
@@ -1406,6 +1462,7 @@ public enum V1beta1WorkspaceSpecInitProviderKeyVaultIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderKeyVaultIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1419,6 +1476,7 @@ public partial class V1beta1WorkspaceSpecInitProviderKeyVaultIdRefPolicy
     public V1beta1WorkspaceSpecInitProviderKeyVaultIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Vault in keyvault to populate keyVaultId.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderKeyVaultIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1450,6 +1508,7 @@ public enum V1beta1WorkspaceSpecInitProviderKeyVaultIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderKeyVaultIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1463,6 +1522,7 @@ public partial class V1beta1WorkspaceSpecInitProviderKeyVaultIdSelectorPolicy
     public V1beta1WorkspaceSpecInitProviderKeyVaultIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Vault in keyvault to populate keyVaultId.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderKeyVaultIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1478,6 +1538,7 @@ public partial class V1beta1WorkspaceSpecInitProviderKeyVaultIdSelector
     public V1beta1WorkspaceSpecInitProviderKeyVaultIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkspaceSpecInitProviderManagedNetwork
 {
     /// <summary>The isolation mode of the Machine Learning Workspace. Possible values are Disabled, AllowOnlyApprovedOutbound, and AllowInternetOutbound</summary>
@@ -1505,6 +1566,7 @@ public enum V1beta1WorkspaceSpecInitProviderPrimaryUserAssignedIdentityRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderPrimaryUserAssignedIdentityRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1518,6 +1580,7 @@ public partial class V1beta1WorkspaceSpecInitProviderPrimaryUserAssignedIdentity
     public V1beta1WorkspaceSpecInitProviderPrimaryUserAssignedIdentityRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserAssignedIdentity in managedidentity to populate primaryUserAssignedIdentity.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderPrimaryUserAssignedIdentityRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1549,6 +1612,7 @@ public enum V1beta1WorkspaceSpecInitProviderPrimaryUserAssignedIdentitySelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderPrimaryUserAssignedIdentitySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1562,6 +1626,7 @@ public partial class V1beta1WorkspaceSpecInitProviderPrimaryUserAssignedIdentity
     public V1beta1WorkspaceSpecInitProviderPrimaryUserAssignedIdentitySelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserAssignedIdentity in managedidentity to populate primaryUserAssignedIdentity.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderPrimaryUserAssignedIdentitySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1597,6 +1662,7 @@ public enum V1beta1WorkspaceSpecInitProviderStorageAccountIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderStorageAccountIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1610,6 +1676,7 @@ public partial class V1beta1WorkspaceSpecInitProviderStorageAccountIdRefPolicy
     public V1beta1WorkspaceSpecInitProviderStorageAccountIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderStorageAccountIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1641,6 +1708,7 @@ public enum V1beta1WorkspaceSpecInitProviderStorageAccountIdSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderStorageAccountIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1654,6 +1722,7 @@ public partial class V1beta1WorkspaceSpecInitProviderStorageAccountIdSelectorPol
     public V1beta1WorkspaceSpecInitProviderStorageAccountIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
 public partial class V1beta1WorkspaceSpecInitProviderStorageAccountIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1669,6 +1738,7 @@ public partial class V1beta1WorkspaceSpecInitProviderStorageAccountIdSelector
     public V1beta1WorkspaceSpecInitProviderStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1WorkspaceSpecInitProvider
 {
     /// <summary>The ID of the Application Insights associated with this Machine Learning Workspace. Changing this forces a new resource to be created.</summary>
@@ -1826,6 +1896,7 @@ public enum V1beta1WorkspaceSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkspaceSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1839,6 +1910,7 @@ public partial class V1beta1WorkspaceSpecProviderConfigRefPolicy
     public V1beta1WorkspaceSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1WorkspaceSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1870,6 +1942,7 @@ public enum V1beta1WorkspaceSpecPublishConnectionDetailsToConfigRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkspaceSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1883,6 +1956,7 @@ public partial class V1beta1WorkspaceSpecPublishConnectionDetailsToConfigRefPoli
     public V1beta1WorkspaceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1WorkspaceSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1894,6 +1968,7 @@ public partial class V1beta1WorkspaceSpecPublishConnectionDetailsToConfigRef
     public V1beta1WorkspaceSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1WorkspaceSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1909,6 +1984,7 @@ public partial class V1beta1WorkspaceSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1WorkspaceSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1924,6 +2000,7 @@ public partial class V1beta1WorkspaceSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1WorkspaceSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1935,6 +2012,7 @@ public partial class V1beta1WorkspaceSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>WorkspaceSpec defines the desired state of Workspace</summary>
 public partial class V1beta1WorkspaceSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1967,6 +2045,7 @@ public partial class V1beta1WorkspaceSpec
     public V1beta1WorkspaceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkspaceStatusAtProviderEncryption
 {
     /// <summary>The Key Vault URI to access the encryption key.</summary>
@@ -1982,6 +2061,7 @@ public partial class V1beta1WorkspaceStatusAtProviderEncryption
     public string? UserAssignedIdentityId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkspaceStatusAtProviderFeatureStore
 {
     /// <summary>The version of Spark runtime.</summary>
@@ -1997,6 +2077,7 @@ public partial class V1beta1WorkspaceStatusAtProviderFeatureStore
     public string? OnlineConnectionName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkspaceStatusAtProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Machine Learning Workspace.</summary>
@@ -2016,6 +2097,7 @@ public partial class V1beta1WorkspaceStatusAtProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkspaceStatusAtProviderManagedNetwork
 {
     /// <summary>The isolation mode of the Machine Learning Workspace. Possible values are Disabled, AllowOnlyApprovedOutbound, and AllowInternetOutbound</summary>
@@ -2023,6 +2105,7 @@ public partial class V1beta1WorkspaceStatusAtProviderManagedNetwork
     public string? IsolationMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkspaceStatusAtProvider
 {
     /// <summary>The ID of the Application Insights associated with this Machine Learning Workspace. Changing this forces a new resource to be created.</summary>
@@ -2122,6 +2205,7 @@ public partial class V1beta1WorkspaceStatusAtProvider
     public string? WorkspaceId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1WorkspaceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2149,6 +2233,7 @@ public partial class V1beta1WorkspaceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>WorkspaceStatus defines the observed state of Workspace.</summary>
 public partial class V1beta1WorkspaceStatus
 {
     /// <summary></summary>
@@ -2165,6 +2250,7 @@ public partial class V1beta1WorkspaceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Workspace is the Schema for the Workspaces API. Manages a Azure Machine Learning Workspace.</summary>
 public partial class V1beta1Workspace : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1WorkspaceSpec>, IStatus<V1beta1WorkspaceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

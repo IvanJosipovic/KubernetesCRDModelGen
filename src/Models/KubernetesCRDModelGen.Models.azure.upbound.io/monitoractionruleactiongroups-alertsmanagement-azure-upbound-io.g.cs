@@ -38,6 +38,7 @@ public enum V1beta1MonitorActionRuleActionGroupSpecForProviderActionGroupIdRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecForProviderActionGroupIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1MonitorActionRuleActionGroupSpecForProviderActionGro
     public V1beta1MonitorActionRuleActionGroupSpecForProviderActionGroupIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a MonitorActionGroup in insights to populate actionGroupId.</summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecForProviderActionGroupIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1MonitorActionRuleActionGroupSpecForProviderActionGroupIdSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecForProviderActionGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1MonitorActionRuleActionGroupSpecForProviderActionGro
     public V1beta1MonitorActionRuleActionGroupSpecForProviderActionGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a MonitorActionGroup in insights to populate actionGroupId.</summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecForProviderActionGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1MonitorActionRuleActionGroupSpecForProviderActionGro
     public V1beta1MonitorActionRuleActionGroupSpecForProviderActionGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecForProviderConditionAlertContext
 {
     /// <summary>The operator for a given condition. Possible values are Equals and NotEquals.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1MonitorActionRuleActionGroupSpecForProviderCondition
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecForProviderConditionAlertRuleId
 {
     /// <summary>The operator for a given condition. Possible values are Equals and NotEquals.</summary>
@@ -132,6 +138,7 @@ public partial class V1beta1MonitorActionRuleActionGroupSpecForProviderCondition
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecForProviderConditionDescription
 {
     /// <summary>The operator for a given condition. Possible values are Equals and NotEquals.</summary>
@@ -143,6 +150,7 @@ public partial class V1beta1MonitorActionRuleActionGroupSpecForProviderCondition
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecForProviderConditionMonitor
 {
     /// <summary>The operator for a given condition. Possible values are Equals and NotEquals.</summary>
@@ -154,6 +162,7 @@ public partial class V1beta1MonitorActionRuleActionGroupSpecForProviderCondition
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecForProviderConditionMonitorService
 {
     /// <summary>The operator for a given condition. Possible values are Equals and NotEquals.</summary>
@@ -165,6 +174,7 @@ public partial class V1beta1MonitorActionRuleActionGroupSpecForProviderCondition
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecForProviderConditionSeverity
 {
     /// <summary>The operator for a given condition. Possible values are Equals and NotEquals.</summary>
@@ -176,6 +186,7 @@ public partial class V1beta1MonitorActionRuleActionGroupSpecForProviderCondition
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecForProviderConditionTargetResourceType
 {
     /// <summary>The operator for a given condition. Possible values are Equals and NotEquals.</summary>
@@ -187,6 +198,7 @@ public partial class V1beta1MonitorActionRuleActionGroupSpecForProviderCondition
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecForProviderCondition
 {
     /// <summary>A alert_context block as defined below.</summary>
@@ -238,6 +250,7 @@ public enum V1beta1MonitorActionRuleActionGroupSpecForProviderResourceGroupNameR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -251,6 +264,7 @@ public partial class V1beta1MonitorActionRuleActionGroupSpecForProviderResourceG
     public V1beta1MonitorActionRuleActionGroupSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -282,6 +296,7 @@ public enum V1beta1MonitorActionRuleActionGroupSpecForProviderResourceGroupNameS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -295,6 +310,7 @@ public partial class V1beta1MonitorActionRuleActionGroupSpecForProviderResourceG
     public V1beta1MonitorActionRuleActionGroupSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -310,6 +326,7 @@ public partial class V1beta1MonitorActionRuleActionGroupSpecForProviderResourceG
     public V1beta1MonitorActionRuleActionGroupSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecForProviderScope
 {
     /// <summary>A list of resource IDs of the given scope type which will be the target of action rule.</summary>
@@ -321,6 +338,7 @@ public partial class V1beta1MonitorActionRuleActionGroupSpecForProviderScope
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecForProvider
 {
     /// <summary>Specifies the resource id of monitor action group.</summary>
@@ -388,6 +406,7 @@ public enum V1beta1MonitorActionRuleActionGroupSpecInitProviderActionGroupIdRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecInitProviderActionGroupIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -401,6 +420,7 @@ public partial class V1beta1MonitorActionRuleActionGroupSpecInitProviderActionGr
     public V1beta1MonitorActionRuleActionGroupSpecInitProviderActionGroupIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a MonitorActionGroup in insights to populate actionGroupId.</summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecInitProviderActionGroupIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -432,6 +452,7 @@ public enum V1beta1MonitorActionRuleActionGroupSpecInitProviderActionGroupIdSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecInitProviderActionGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -445,6 +466,7 @@ public partial class V1beta1MonitorActionRuleActionGroupSpecInitProviderActionGr
     public V1beta1MonitorActionRuleActionGroupSpecInitProviderActionGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a MonitorActionGroup in insights to populate actionGroupId.</summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecInitProviderActionGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -460,6 +482,7 @@ public partial class V1beta1MonitorActionRuleActionGroupSpecInitProviderActionGr
     public V1beta1MonitorActionRuleActionGroupSpecInitProviderActionGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecInitProviderConditionAlertContext
 {
     /// <summary>The operator for a given condition. Possible values are Equals and NotEquals.</summary>
@@ -471,6 +494,7 @@ public partial class V1beta1MonitorActionRuleActionGroupSpecInitProviderConditio
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecInitProviderConditionAlertRuleId
 {
     /// <summary>The operator for a given condition. Possible values are Equals and NotEquals.</summary>
@@ -482,6 +506,7 @@ public partial class V1beta1MonitorActionRuleActionGroupSpecInitProviderConditio
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecInitProviderConditionDescription
 {
     /// <summary>The operator for a given condition. Possible values are Equals and NotEquals.</summary>
@@ -493,6 +518,7 @@ public partial class V1beta1MonitorActionRuleActionGroupSpecInitProviderConditio
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecInitProviderConditionMonitor
 {
     /// <summary>The operator for a given condition. Possible values are Equals and NotEquals.</summary>
@@ -504,6 +530,7 @@ public partial class V1beta1MonitorActionRuleActionGroupSpecInitProviderConditio
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecInitProviderConditionMonitorService
 {
     /// <summary>The operator for a given condition. Possible values are Equals and NotEquals.</summary>
@@ -515,6 +542,7 @@ public partial class V1beta1MonitorActionRuleActionGroupSpecInitProviderConditio
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecInitProviderConditionSeverity
 {
     /// <summary>The operator for a given condition. Possible values are Equals and NotEquals.</summary>
@@ -526,6 +554,7 @@ public partial class V1beta1MonitorActionRuleActionGroupSpecInitProviderConditio
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecInitProviderConditionTargetResourceType
 {
     /// <summary>The operator for a given condition. Possible values are Equals and NotEquals.</summary>
@@ -537,6 +566,7 @@ public partial class V1beta1MonitorActionRuleActionGroupSpecInitProviderConditio
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecInitProviderCondition
 {
     /// <summary>A alert_context block as defined below.</summary>
@@ -568,6 +598,7 @@ public partial class V1beta1MonitorActionRuleActionGroupSpecInitProviderConditio
     public IList<V1beta1MonitorActionRuleActionGroupSpecInitProviderConditionTargetResourceType>? TargetResourceType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecInitProviderScope
 {
     /// <summary>A list of resource IDs of the given scope type which will be the target of action rule.</summary>
@@ -579,6 +610,7 @@ public partial class V1beta1MonitorActionRuleActionGroupSpecInitProviderScope
     public string? Type { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecInitProvider
 {
     /// <summary>Specifies the resource id of monitor action group.</summary>
@@ -656,6 +688,7 @@ public enum V1beta1MonitorActionRuleActionGroupSpecProviderConfigRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -669,6 +702,7 @@ public partial class V1beta1MonitorActionRuleActionGroupSpecProviderConfigRefPol
     public V1beta1MonitorActionRuleActionGroupSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -700,6 +734,7 @@ public enum V1beta1MonitorActionRuleActionGroupSpecPublishConnectionDetailsToCon
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -713,6 +748,7 @@ public partial class V1beta1MonitorActionRuleActionGroupSpecPublishConnectionDet
     public V1beta1MonitorActionRuleActionGroupSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -724,6 +760,7 @@ public partial class V1beta1MonitorActionRuleActionGroupSpecPublishConnectionDet
     public V1beta1MonitorActionRuleActionGroupSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -739,6 +776,7 @@ public partial class V1beta1MonitorActionRuleActionGroupSpecPublishConnectionDet
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -754,6 +792,7 @@ public partial class V1beta1MonitorActionRuleActionGroupSpecPublishConnectionDet
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -765,6 +804,7 @@ public partial class V1beta1MonitorActionRuleActionGroupSpecWriteConnectionSecre
     public string Namespace { get; set; }
 }
 
+/// <summary>MonitorActionRuleActionGroupSpec defines the desired state of MonitorActionRuleActionGroup</summary>
 public partial class V1beta1MonitorActionRuleActionGroupSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -797,6 +837,7 @@ public partial class V1beta1MonitorActionRuleActionGroupSpec
     public V1beta1MonitorActionRuleActionGroupSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionRuleActionGroupStatusAtProviderConditionAlertContext
 {
     /// <summary>The operator for a given condition. Possible values are Equals and NotEquals.</summary>
@@ -808,6 +849,7 @@ public partial class V1beta1MonitorActionRuleActionGroupStatusAtProviderConditio
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionRuleActionGroupStatusAtProviderConditionAlertRuleId
 {
     /// <summary>The operator for a given condition. Possible values are Equals and NotEquals.</summary>
@@ -819,6 +861,7 @@ public partial class V1beta1MonitorActionRuleActionGroupStatusAtProviderConditio
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionRuleActionGroupStatusAtProviderConditionDescription
 {
     /// <summary>The operator for a given condition. Possible values are Equals and NotEquals.</summary>
@@ -830,6 +873,7 @@ public partial class V1beta1MonitorActionRuleActionGroupStatusAtProviderConditio
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionRuleActionGroupStatusAtProviderConditionMonitor
 {
     /// <summary>The operator for a given condition. Possible values are Equals and NotEquals.</summary>
@@ -841,6 +885,7 @@ public partial class V1beta1MonitorActionRuleActionGroupStatusAtProviderConditio
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionRuleActionGroupStatusAtProviderConditionMonitorService
 {
     /// <summary>The operator for a given condition. Possible values are Equals and NotEquals.</summary>
@@ -852,6 +897,7 @@ public partial class V1beta1MonitorActionRuleActionGroupStatusAtProviderConditio
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionRuleActionGroupStatusAtProviderConditionSeverity
 {
     /// <summary>The operator for a given condition. Possible values are Equals and NotEquals.</summary>
@@ -863,6 +909,7 @@ public partial class V1beta1MonitorActionRuleActionGroupStatusAtProviderConditio
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionRuleActionGroupStatusAtProviderConditionTargetResourceType
 {
     /// <summary>The operator for a given condition. Possible values are Equals and NotEquals.</summary>
@@ -874,6 +921,7 @@ public partial class V1beta1MonitorActionRuleActionGroupStatusAtProviderConditio
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionRuleActionGroupStatusAtProviderCondition
 {
     /// <summary>A alert_context block as defined below.</summary>
@@ -905,6 +953,7 @@ public partial class V1beta1MonitorActionRuleActionGroupStatusAtProviderConditio
     public IList<V1beta1MonitorActionRuleActionGroupStatusAtProviderConditionTargetResourceType>? TargetResourceType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionRuleActionGroupStatusAtProviderScope
 {
     /// <summary>A list of resource IDs of the given scope type which will be the target of action rule.</summary>
@@ -916,6 +965,7 @@ public partial class V1beta1MonitorActionRuleActionGroupStatusAtProviderScope
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorActionRuleActionGroupStatusAtProvider
 {
     /// <summary>Specifies the resource id of monitor action group.</summary>
@@ -951,6 +1001,7 @@ public partial class V1beta1MonitorActionRuleActionGroupStatusAtProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1MonitorActionRuleActionGroupStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -978,6 +1029,7 @@ public partial class V1beta1MonitorActionRuleActionGroupStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>MonitorActionRuleActionGroupStatus defines the observed state of MonitorActionRuleActionGroup.</summary>
 public partial class V1beta1MonitorActionRuleActionGroupStatus
 {
     /// <summary></summary>
@@ -994,6 +1046,7 @@ public partial class V1beta1MonitorActionRuleActionGroupStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>MonitorActionRuleActionGroup is the Schema for the MonitorActionRuleActionGroups API. Manages an Monitor Action Rule which type is action group.</summary>
 public partial class V1beta1MonitorActionRuleActionGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MonitorActionRuleActionGroupSpec>, IStatus<V1beta1MonitorActionRuleActionGroupStatus>
 {
     public const string KubeApiVersion = "v1beta1";

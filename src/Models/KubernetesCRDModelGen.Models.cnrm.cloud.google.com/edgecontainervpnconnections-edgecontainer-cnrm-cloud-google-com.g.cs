@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.edgecontainer.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1EdgeContainerVpnConnectionSpecClusterRef
 {
     /// <summary>Allowed value: The `name` field of an `EdgeContainerCluster` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1EdgeContainerVpnConnectionSpecClusterRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1beta1EdgeContainerVpnConnectionSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1EdgeContainerVpnConnectionSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Project detail of the VPC network. Required if VPC is in a different project than the cluster project.</summary>
 public partial class V1beta1EdgeContainerVpnConnectionSpecVpcProject
 {
     /// <summary>Immutable. The project of the VPC to connect to. If not specified, it is the same as the cluster project.</summary>
@@ -45,6 +48,7 @@ public partial class V1beta1EdgeContainerVpnConnectionSpecVpcProject
     public string? ProjectId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EdgeContainerVpnConnectionSpec
 {
     /// <summary></summary>
@@ -84,6 +88,7 @@ public partial class V1beta1EdgeContainerVpnConnectionSpec
     public V1beta1EdgeContainerVpnConnectionSpecVpcProject? VpcProject { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EdgeContainerVpnConnectionStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -107,6 +112,7 @@ public partial class V1beta1EdgeContainerVpnConnectionStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EdgeContainerVpnConnectionStatusDetailsCloudRouter
 {
     /// <summary>The associated Cloud Router name.</summary>
@@ -114,6 +120,7 @@ public partial class V1beta1EdgeContainerVpnConnectionStatusDetailsCloudRouter
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EdgeContainerVpnConnectionStatusDetailsCloudVpns
 {
     /// <summary>The created Cloud VPN gateway name.</summary>
@@ -121,6 +128,7 @@ public partial class V1beta1EdgeContainerVpnConnectionStatusDetailsCloudVpns
     public string? Gateway { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EdgeContainerVpnConnectionStatusDetails
 {
     /// <summary>The Cloud Router info.</summary>
@@ -140,6 +148,7 @@ public partial class V1beta1EdgeContainerVpnConnectionStatusDetails
     public string? State { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EdgeContainerVpnConnectionStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -164,6 +173,7 @@ public partial class V1beta1EdgeContainerVpnConnectionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1EdgeContainerVpnConnection : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1EdgeContainerVpnConnectionSpec>, IStatus<V1beta1EdgeContainerVpnConnectionStatus>
 {
     public const string KubeApiVersion = "v1beta1";

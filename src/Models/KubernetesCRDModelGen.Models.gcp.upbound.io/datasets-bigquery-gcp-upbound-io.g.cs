@@ -38,6 +38,7 @@ public enum V1beta1DatasetSpecForProviderAccessDatasetDatasetDatasetIdRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DatasetSpecForProviderAccessDatasetDatasetDatasetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1DatasetSpecForProviderAccessDatasetDatasetDatasetIdR
     public V1beta1DatasetSpecForProviderAccessDatasetDatasetDatasetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Dataset in bigquery to populate datasetId.</summary>
 public partial class V1beta1DatasetSpecForProviderAccessDatasetDatasetDatasetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1DatasetSpecForProviderAccessDatasetDatasetDatasetIdSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DatasetSpecForProviderAccessDatasetDatasetDatasetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1DatasetSpecForProviderAccessDatasetDatasetDatasetIdS
     public V1beta1DatasetSpecForProviderAccessDatasetDatasetDatasetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Dataset in bigquery to populate datasetId.</summary>
 public partial class V1beta1DatasetSpecForProviderAccessDatasetDatasetDatasetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1DatasetSpecForProviderAccessDatasetDatasetDatasetIdS
     public V1beta1DatasetSpecForProviderAccessDatasetDatasetDatasetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasetSpecForProviderAccessDatasetDataset
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -129,6 +134,7 @@ public partial class V1beta1DatasetSpecForProviderAccessDatasetDataset
     public string? ProjectId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasetSpecForProviderAccessDataset
 {
     /// <summary>The dataset this entry applies to Structure is documented below.</summary>
@@ -160,6 +166,7 @@ public enum V1beta1DatasetSpecForProviderAccessRoutineDatasetIdRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DatasetSpecForProviderAccessRoutineDatasetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -173,6 +180,7 @@ public partial class V1beta1DatasetSpecForProviderAccessRoutineDatasetIdRefPolic
     public V1beta1DatasetSpecForProviderAccessRoutineDatasetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Routine in bigquery to populate datasetId.</summary>
 public partial class V1beta1DatasetSpecForProviderAccessRoutineDatasetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -204,6 +212,7 @@ public enum V1beta1DatasetSpecForProviderAccessRoutineDatasetIdSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DatasetSpecForProviderAccessRoutineDatasetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -217,6 +226,7 @@ public partial class V1beta1DatasetSpecForProviderAccessRoutineDatasetIdSelector
     public V1beta1DatasetSpecForProviderAccessRoutineDatasetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Routine in bigquery to populate datasetId.</summary>
 public partial class V1beta1DatasetSpecForProviderAccessRoutineDatasetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -252,6 +262,7 @@ public enum V1beta1DatasetSpecForProviderAccessRoutineProjectIdRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DatasetSpecForProviderAccessRoutineProjectIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -265,6 +276,7 @@ public partial class V1beta1DatasetSpecForProviderAccessRoutineProjectIdRefPolic
     public V1beta1DatasetSpecForProviderAccessRoutineProjectIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Routine in bigquery to populate projectId.</summary>
 public partial class V1beta1DatasetSpecForProviderAccessRoutineProjectIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -296,6 +308,7 @@ public enum V1beta1DatasetSpecForProviderAccessRoutineProjectIdSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DatasetSpecForProviderAccessRoutineProjectIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -309,6 +322,7 @@ public partial class V1beta1DatasetSpecForProviderAccessRoutineProjectIdSelector
     public V1beta1DatasetSpecForProviderAccessRoutineProjectIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Routine in bigquery to populate projectId.</summary>
 public partial class V1beta1DatasetSpecForProviderAccessRoutineProjectIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -344,6 +358,7 @@ public enum V1beta1DatasetSpecForProviderAccessRoutineRoutineIdRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DatasetSpecForProviderAccessRoutineRoutineIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -357,6 +372,7 @@ public partial class V1beta1DatasetSpecForProviderAccessRoutineRoutineIdRefPolic
     public V1beta1DatasetSpecForProviderAccessRoutineRoutineIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Routine in bigquery to populate routineId.</summary>
 public partial class V1beta1DatasetSpecForProviderAccessRoutineRoutineIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -388,6 +404,7 @@ public enum V1beta1DatasetSpecForProviderAccessRoutineRoutineIdSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DatasetSpecForProviderAccessRoutineRoutineIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -401,6 +418,7 @@ public partial class V1beta1DatasetSpecForProviderAccessRoutineRoutineIdSelector
     public V1beta1DatasetSpecForProviderAccessRoutineRoutineIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Routine in bigquery to populate routineId.</summary>
 public partial class V1beta1DatasetSpecForProviderAccessRoutineRoutineIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -416,6 +434,7 @@ public partial class V1beta1DatasetSpecForProviderAccessRoutineRoutineIdSelector
     public V1beta1DatasetSpecForProviderAccessRoutineRoutineIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasetSpecForProviderAccessRoutine
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -475,6 +494,7 @@ public enum V1beta1DatasetSpecForProviderAccessUserByEmailRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DatasetSpecForProviderAccessUserByEmailRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -488,6 +508,7 @@ public partial class V1beta1DatasetSpecForProviderAccessUserByEmailRefPolicy
     public V1beta1DatasetSpecForProviderAccessUserByEmailRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ServiceAccount in cloudplatform to populate userByEmail.</summary>
 public partial class V1beta1DatasetSpecForProviderAccessUserByEmailRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -519,6 +540,7 @@ public enum V1beta1DatasetSpecForProviderAccessUserByEmailSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DatasetSpecForProviderAccessUserByEmailSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -532,6 +554,7 @@ public partial class V1beta1DatasetSpecForProviderAccessUserByEmailSelectorPolic
     public V1beta1DatasetSpecForProviderAccessUserByEmailSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ServiceAccount in cloudplatform to populate userByEmail.</summary>
 public partial class V1beta1DatasetSpecForProviderAccessUserByEmailSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -547,6 +570,7 @@ public partial class V1beta1DatasetSpecForProviderAccessUserByEmailSelector
     public V1beta1DatasetSpecForProviderAccessUserByEmailSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasetSpecForProviderAccessView
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -562,6 +586,7 @@ public partial class V1beta1DatasetSpecForProviderAccessView
     public string? TableId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasetSpecForProviderAccess
 {
     /// <summary>Grants all resources of particular types in a particular dataset read access to the current dataset. Structure is documented below.</summary>
@@ -629,6 +654,7 @@ public enum V1beta1DatasetSpecForProviderDefaultEncryptionConfigurationKmsKeyNam
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DatasetSpecForProviderDefaultEncryptionConfigurationKmsKeyNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -642,6 +668,7 @@ public partial class V1beta1DatasetSpecForProviderDefaultEncryptionConfiguration
     public V1beta1DatasetSpecForProviderDefaultEncryptionConfigurationKmsKeyNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a CryptoKey in kms to populate kmsKeyName.</summary>
 public partial class V1beta1DatasetSpecForProviderDefaultEncryptionConfigurationKmsKeyNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -673,6 +700,7 @@ public enum V1beta1DatasetSpecForProviderDefaultEncryptionConfigurationKmsKeyNam
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DatasetSpecForProviderDefaultEncryptionConfigurationKmsKeyNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -686,6 +714,7 @@ public partial class V1beta1DatasetSpecForProviderDefaultEncryptionConfiguration
     public V1beta1DatasetSpecForProviderDefaultEncryptionConfigurationKmsKeyNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a CryptoKey in kms to populate kmsKeyName.</summary>
 public partial class V1beta1DatasetSpecForProviderDefaultEncryptionConfigurationKmsKeyNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -701,6 +730,7 @@ public partial class V1beta1DatasetSpecForProviderDefaultEncryptionConfiguration
     public V1beta1DatasetSpecForProviderDefaultEncryptionConfigurationKmsKeyNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasetSpecForProviderDefaultEncryptionConfiguration
 {
     /// <summary>Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.</summary>
@@ -716,6 +746,7 @@ public partial class V1beta1DatasetSpecForProviderDefaultEncryptionConfiguration
     public V1beta1DatasetSpecForProviderDefaultEncryptionConfigurationKmsKeyNameSelector? KmsKeyNameSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasetSpecForProviderExternalDatasetReference
 {
     /// <summary>The connection id that is used to access the externalSource. Format: projects/{projectId}/locations/{locationId}/connections/{connectionId}</summary>
@@ -727,6 +758,7 @@ public partial class V1beta1DatasetSpecForProviderExternalDatasetReference
     public string? ExternalSource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasetSpecForProvider
 {
     /// <summary>An array of objects that define dataset access for one or more entities. Structure is documented below.</summary>
@@ -814,6 +846,7 @@ public enum V1beta1DatasetSpecInitProviderAccessDatasetDatasetDatasetIdRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DatasetSpecInitProviderAccessDatasetDatasetDatasetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -827,6 +860,7 @@ public partial class V1beta1DatasetSpecInitProviderAccessDatasetDatasetDatasetId
     public V1beta1DatasetSpecInitProviderAccessDatasetDatasetDatasetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Dataset in bigquery to populate datasetId.</summary>
 public partial class V1beta1DatasetSpecInitProviderAccessDatasetDatasetDatasetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -858,6 +892,7 @@ public enum V1beta1DatasetSpecInitProviderAccessDatasetDatasetDatasetIdSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DatasetSpecInitProviderAccessDatasetDatasetDatasetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -871,6 +906,7 @@ public partial class V1beta1DatasetSpecInitProviderAccessDatasetDatasetDatasetId
     public V1beta1DatasetSpecInitProviderAccessDatasetDatasetDatasetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Dataset in bigquery to populate datasetId.</summary>
 public partial class V1beta1DatasetSpecInitProviderAccessDatasetDatasetDatasetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -886,6 +922,7 @@ public partial class V1beta1DatasetSpecInitProviderAccessDatasetDatasetDatasetId
     public V1beta1DatasetSpecInitProviderAccessDatasetDatasetDatasetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasetSpecInitProviderAccessDatasetDataset
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -905,6 +942,7 @@ public partial class V1beta1DatasetSpecInitProviderAccessDatasetDataset
     public string? ProjectId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasetSpecInitProviderAccessDataset
 {
     /// <summary>The dataset this entry applies to Structure is documented below.</summary>
@@ -936,6 +974,7 @@ public enum V1beta1DatasetSpecInitProviderAccessRoutineDatasetIdRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DatasetSpecInitProviderAccessRoutineDatasetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -949,6 +988,7 @@ public partial class V1beta1DatasetSpecInitProviderAccessRoutineDatasetIdRefPoli
     public V1beta1DatasetSpecInitProviderAccessRoutineDatasetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Routine in bigquery to populate datasetId.</summary>
 public partial class V1beta1DatasetSpecInitProviderAccessRoutineDatasetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -980,6 +1020,7 @@ public enum V1beta1DatasetSpecInitProviderAccessRoutineDatasetIdSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DatasetSpecInitProviderAccessRoutineDatasetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -993,6 +1034,7 @@ public partial class V1beta1DatasetSpecInitProviderAccessRoutineDatasetIdSelecto
     public V1beta1DatasetSpecInitProviderAccessRoutineDatasetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Routine in bigquery to populate datasetId.</summary>
 public partial class V1beta1DatasetSpecInitProviderAccessRoutineDatasetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1028,6 +1070,7 @@ public enum V1beta1DatasetSpecInitProviderAccessRoutineProjectIdRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DatasetSpecInitProviderAccessRoutineProjectIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1041,6 +1084,7 @@ public partial class V1beta1DatasetSpecInitProviderAccessRoutineProjectIdRefPoli
     public V1beta1DatasetSpecInitProviderAccessRoutineProjectIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Routine in bigquery to populate projectId.</summary>
 public partial class V1beta1DatasetSpecInitProviderAccessRoutineProjectIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1072,6 +1116,7 @@ public enum V1beta1DatasetSpecInitProviderAccessRoutineProjectIdSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DatasetSpecInitProviderAccessRoutineProjectIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1085,6 +1130,7 @@ public partial class V1beta1DatasetSpecInitProviderAccessRoutineProjectIdSelecto
     public V1beta1DatasetSpecInitProviderAccessRoutineProjectIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Routine in bigquery to populate projectId.</summary>
 public partial class V1beta1DatasetSpecInitProviderAccessRoutineProjectIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1120,6 +1166,7 @@ public enum V1beta1DatasetSpecInitProviderAccessRoutineRoutineIdRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DatasetSpecInitProviderAccessRoutineRoutineIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1133,6 +1180,7 @@ public partial class V1beta1DatasetSpecInitProviderAccessRoutineRoutineIdRefPoli
     public V1beta1DatasetSpecInitProviderAccessRoutineRoutineIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Routine in bigquery to populate routineId.</summary>
 public partial class V1beta1DatasetSpecInitProviderAccessRoutineRoutineIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1164,6 +1212,7 @@ public enum V1beta1DatasetSpecInitProviderAccessRoutineRoutineIdSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DatasetSpecInitProviderAccessRoutineRoutineIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1177,6 +1226,7 @@ public partial class V1beta1DatasetSpecInitProviderAccessRoutineRoutineIdSelecto
     public V1beta1DatasetSpecInitProviderAccessRoutineRoutineIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Routine in bigquery to populate routineId.</summary>
 public partial class V1beta1DatasetSpecInitProviderAccessRoutineRoutineIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1192,6 +1242,7 @@ public partial class V1beta1DatasetSpecInitProviderAccessRoutineRoutineIdSelecto
     public V1beta1DatasetSpecInitProviderAccessRoutineRoutineIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasetSpecInitProviderAccessRoutine
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -1251,6 +1302,7 @@ public enum V1beta1DatasetSpecInitProviderAccessUserByEmailRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DatasetSpecInitProviderAccessUserByEmailRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1264,6 +1316,7 @@ public partial class V1beta1DatasetSpecInitProviderAccessUserByEmailRefPolicy
     public V1beta1DatasetSpecInitProviderAccessUserByEmailRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ServiceAccount in cloudplatform to populate userByEmail.</summary>
 public partial class V1beta1DatasetSpecInitProviderAccessUserByEmailRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1295,6 +1348,7 @@ public enum V1beta1DatasetSpecInitProviderAccessUserByEmailSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DatasetSpecInitProviderAccessUserByEmailSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1308,6 +1362,7 @@ public partial class V1beta1DatasetSpecInitProviderAccessUserByEmailSelectorPoli
     public V1beta1DatasetSpecInitProviderAccessUserByEmailSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ServiceAccount in cloudplatform to populate userByEmail.</summary>
 public partial class V1beta1DatasetSpecInitProviderAccessUserByEmailSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1323,6 +1378,7 @@ public partial class V1beta1DatasetSpecInitProviderAccessUserByEmailSelector
     public V1beta1DatasetSpecInitProviderAccessUserByEmailSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasetSpecInitProviderAccessView
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -1338,6 +1394,7 @@ public partial class V1beta1DatasetSpecInitProviderAccessView
     public string? TableId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasetSpecInitProviderAccess
 {
     /// <summary>Grants all resources of particular types in a particular dataset read access to the current dataset. Structure is documented below.</summary>
@@ -1405,6 +1462,7 @@ public enum V1beta1DatasetSpecInitProviderDefaultEncryptionConfigurationKmsKeyNa
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DatasetSpecInitProviderDefaultEncryptionConfigurationKmsKeyNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1418,6 +1476,7 @@ public partial class V1beta1DatasetSpecInitProviderDefaultEncryptionConfiguratio
     public V1beta1DatasetSpecInitProviderDefaultEncryptionConfigurationKmsKeyNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a CryptoKey in kms to populate kmsKeyName.</summary>
 public partial class V1beta1DatasetSpecInitProviderDefaultEncryptionConfigurationKmsKeyNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1449,6 +1508,7 @@ public enum V1beta1DatasetSpecInitProviderDefaultEncryptionConfigurationKmsKeyNa
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DatasetSpecInitProviderDefaultEncryptionConfigurationKmsKeyNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1462,6 +1522,7 @@ public partial class V1beta1DatasetSpecInitProviderDefaultEncryptionConfiguratio
     public V1beta1DatasetSpecInitProviderDefaultEncryptionConfigurationKmsKeyNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a CryptoKey in kms to populate kmsKeyName.</summary>
 public partial class V1beta1DatasetSpecInitProviderDefaultEncryptionConfigurationKmsKeyNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1477,6 +1538,7 @@ public partial class V1beta1DatasetSpecInitProviderDefaultEncryptionConfiguratio
     public V1beta1DatasetSpecInitProviderDefaultEncryptionConfigurationKmsKeyNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasetSpecInitProviderDefaultEncryptionConfiguration
 {
     /// <summary>Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.</summary>
@@ -1492,6 +1554,7 @@ public partial class V1beta1DatasetSpecInitProviderDefaultEncryptionConfiguratio
     public V1beta1DatasetSpecInitProviderDefaultEncryptionConfigurationKmsKeyNameSelector? KmsKeyNameSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasetSpecInitProviderExternalDatasetReference
 {
     /// <summary>The connection id that is used to access the externalSource. Format: projects/{projectId}/locations/{locationId}/connections/{connectionId}</summary>
@@ -1503,6 +1566,7 @@ public partial class V1beta1DatasetSpecInitProviderExternalDatasetReference
     public string? ExternalSource { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1DatasetSpecInitProvider
 {
     /// <summary>An array of objects that define dataset access for one or more entities. Structure is documented below.</summary>
@@ -1608,6 +1672,7 @@ public enum V1beta1DatasetSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DatasetSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1621,6 +1686,7 @@ public partial class V1beta1DatasetSpecProviderConfigRefPolicy
     public V1beta1DatasetSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1DatasetSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1652,6 +1718,7 @@ public enum V1beta1DatasetSpecPublishConnectionDetailsToConfigRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DatasetSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1665,6 +1732,7 @@ public partial class V1beta1DatasetSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1DatasetSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1DatasetSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1676,6 +1744,7 @@ public partial class V1beta1DatasetSpecPublishConnectionDetailsToConfigRef
     public V1beta1DatasetSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1DatasetSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1691,6 +1760,7 @@ public partial class V1beta1DatasetSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1DatasetSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1706,6 +1776,7 @@ public partial class V1beta1DatasetSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1DatasetSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1717,6 +1788,7 @@ public partial class V1beta1DatasetSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>DatasetSpec defines the desired state of Dataset</summary>
 public partial class V1beta1DatasetSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1749,6 +1821,7 @@ public partial class V1beta1DatasetSpec
     public V1beta1DatasetSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasetStatusAtProviderAccessDatasetDataset
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -1760,6 +1833,7 @@ public partial class V1beta1DatasetStatusAtProviderAccessDatasetDataset
     public string? ProjectId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasetStatusAtProviderAccessDataset
 {
     /// <summary>The dataset this entry applies to Structure is documented below.</summary>
@@ -1771,6 +1845,7 @@ public partial class V1beta1DatasetStatusAtProviderAccessDataset
     public IList<string>? TargetTypes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasetStatusAtProviderAccessRoutine
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -1786,6 +1861,7 @@ public partial class V1beta1DatasetStatusAtProviderAccessRoutine
     public string? RoutineId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasetStatusAtProviderAccessView
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -1801,6 +1877,7 @@ public partial class V1beta1DatasetStatusAtProviderAccessView
     public string? TableId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasetStatusAtProviderAccess
 {
     /// <summary>Grants all resources of particular types in a particular dataset read access to the current dataset. Structure is documented below.</summary>
@@ -1840,6 +1917,7 @@ public partial class V1beta1DatasetStatusAtProviderAccess
     public IList<V1beta1DatasetStatusAtProviderAccessView>? View { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasetStatusAtProviderDefaultEncryptionConfiguration
 {
     /// <summary>Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.</summary>
@@ -1847,6 +1925,7 @@ public partial class V1beta1DatasetStatusAtProviderDefaultEncryptionConfiguratio
     public string? KmsKeyName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasetStatusAtProviderExternalDatasetReference
 {
     /// <summary>The connection id that is used to access the externalSource. Format: projects/{projectId}/locations/{locationId}/connections/{connectionId}</summary>
@@ -1858,6 +1937,7 @@ public partial class V1beta1DatasetStatusAtProviderExternalDatasetReference
     public string? ExternalSource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasetStatusAtProvider
 {
     /// <summary>An array of objects that define dataset access for one or more entities. Structure is documented below.</summary>
@@ -1953,6 +2033,7 @@ public partial class V1beta1DatasetStatusAtProvider
     public IDictionary<string, string>? TerraformLabels { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1DatasetStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1980,6 +2061,7 @@ public partial class V1beta1DatasetStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>DatasetStatus defines the observed state of Dataset.</summary>
 public partial class V1beta1DatasetStatus
 {
     /// <summary></summary>
@@ -1996,6 +2078,7 @@ public partial class V1beta1DatasetStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Dataset is the Schema for the Datasets API. Datasets allow you to organize and control access to your tables.</summary>
 public partial class V1beta1Dataset : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DatasetSpec>, IStatus<V1beta1DatasetStatus>
 {
     public const string KubeApiVersion = "v1beta1";

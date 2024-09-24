@@ -18,6 +18,7 @@ public enum V1beta1TableIAMPolicySpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1TableIAMPolicySpecForProvider
 {
     /// <summary>The name or relative resource id of the instance that owns the table.</summary>
@@ -37,6 +38,7 @@ public partial class V1beta1TableIAMPolicySpecForProvider
     public string Table { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1TableIAMPolicySpecInitProvider
 {
     /// <summary>The name or relative resource id of the instance that owns the table.</summary>
@@ -94,6 +96,7 @@ public enum V1beta1TableIAMPolicySpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TableIAMPolicySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -107,6 +110,7 @@ public partial class V1beta1TableIAMPolicySpecProviderConfigRefPolicy
     public V1beta1TableIAMPolicySpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1TableIAMPolicySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -138,6 +142,7 @@ public enum V1beta1TableIAMPolicySpecPublishConnectionDetailsToConfigRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TableIAMPolicySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -151,6 +156,7 @@ public partial class V1beta1TableIAMPolicySpecPublishConnectionDetailsToConfigRe
     public V1beta1TableIAMPolicySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1TableIAMPolicySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -162,6 +168,7 @@ public partial class V1beta1TableIAMPolicySpecPublishConnectionDetailsToConfigRe
     public V1beta1TableIAMPolicySpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1TableIAMPolicySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -177,6 +184,7 @@ public partial class V1beta1TableIAMPolicySpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1TableIAMPolicySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -192,6 +200,7 @@ public partial class V1beta1TableIAMPolicySpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1TableIAMPolicySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -203,6 +212,7 @@ public partial class V1beta1TableIAMPolicySpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>TableIAMPolicySpec defines the desired state of TableIAMPolicy</summary>
 public partial class V1beta1TableIAMPolicySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -235,6 +245,7 @@ public partial class V1beta1TableIAMPolicySpec
     public V1beta1TableIAMPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableIAMPolicyStatusAtProvider
 {
     /// <summary>(Computed) The etag of the tables's IAM policy.</summary>
@@ -262,6 +273,7 @@ public partial class V1beta1TableIAMPolicyStatusAtProvider
     public string? Table { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1TableIAMPolicyStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -289,6 +301,7 @@ public partial class V1beta1TableIAMPolicyStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>TableIAMPolicyStatus defines the observed state of TableIAMPolicy.</summary>
 public partial class V1beta1TableIAMPolicyStatus
 {
     /// <summary></summary>
@@ -305,6 +318,7 @@ public partial class V1beta1TableIAMPolicyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>TableIAMPolicy is the Schema for the TableIAMPolicys API. Collection of resources to manage IAM policy for a Bigtable Table.</summary>
 public partial class V1beta1TableIAMPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1TableIAMPolicySpec>, IStatus<V1beta1TableIAMPolicyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

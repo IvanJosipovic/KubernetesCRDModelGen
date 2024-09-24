@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networking.@internal.knative.dev;
+/// <summary>Spec is the desired state of the Certificate. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
 public partial class V1alpha1CertificateSpec
 {
     /// <summary>DNSNames is a list of DNS names the Certificate could support. The wildcard format of DNSNames (e.g. *.default.example.com) is supported.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1CertificateSpec
     public string SecretName { get; set; }
 }
 
+/// <summary>Condition defines a readiness condition for a Knative resource. See: https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md#typical-status-properties</summary>
 public partial class V1alpha1CertificateStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another. We use VolatileTime in place of metav1.Time to exclude this from creating equality.Semantic differences (all other things held constant).</summary>
@@ -50,6 +52,7 @@ public partial class V1alpha1CertificateStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>HTTP01Challenge defines the status of a HTTP01 challenge that a certificate needs to fulfill.</summary>
 public partial class V1alpha1CertificateStatusHttp01Challenges
 {
     /// <summary>ServiceName is the name of the service to serve HTTP01 challenge requests.</summary>
@@ -69,6 +72,7 @@ public partial class V1alpha1CertificateStatusHttp01Challenges
     public string? Url { get; set; }
 }
 
+/// <summary>Status is the current state of the Certificate. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
 public partial class V1alpha1CertificateStatus
 {
     /// <summary>Annotations is additional Status fields for the Resource to save some additional State as well as convey more information to the user. This is roughly akin to Annotations on any k8s resource, just the reconciler conveying richer information outwards.</summary>
@@ -93,6 +97,7 @@ public partial class V1alpha1CertificateStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Certificate is responsible for provisioning a SSL certificate for the given hosts. It is a Knative abstraction for various SSL certificate provisioning solutions (such as cert-manager or self-signed SSL certificate).</summary>
 public partial class V1alpha1Certificate : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1CertificateSpec>, IStatus<V1alpha1CertificateStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

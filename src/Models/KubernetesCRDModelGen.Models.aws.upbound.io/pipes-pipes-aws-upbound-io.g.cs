@@ -18,6 +18,7 @@ public enum V1beta1PipeSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Contains the HTTP parameters to use when the target is a API Gateway REST endpoint or EventBridge ApiDestination. If you specify an API Gateway REST API or EventBridge ApiDestination as a target, you can use this parameter to specify headers, path parameters, and query string keys/values as part of your target invoking request. If you're using ApiDestinations, the corresponding Connection can also have these values configured. In case of any conflicting keys, values from the Connection take precedence. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderEnrichmentParametersHttpParameters
 {
     /// <summary>Key-value mapping of the headers that need to be sent as part of request invoking the API Gateway REST API or EventBridge ApiDestination.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1PipeSpecForProviderEnrichmentParametersHttpParameter
     public IDictionary<string, string>? QueryStringParameters { get; set; }
 }
 
+/// <summary>Parameters to configure enrichment for your pipe. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderEnrichmentParameters
 {
     /// <summary>Contains the HTTP parameters to use when the target is a API Gateway REST endpoint or EventBridge ApiDestination. If you specify an API Gateway REST API or EventBridge ApiDestination as a target, you can use this parameter to specify headers, path parameters, and query string keys/values as part of your target invoking request. If you're using ApiDestinations, the corresponding Connection can also have these values configured. In case of any conflicting keys, values from the Connection take precedence. Detailed below.</summary>
@@ -64,6 +66,7 @@ public enum V1beta1PipeSpecForProviderEnrichmentRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PipeSpecForProviderEnrichmentRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -77,6 +80,7 @@ public partial class V1beta1PipeSpecForProviderEnrichmentRefPolicy
     public V1beta1PipeSpecForProviderEnrichmentRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a APIDestination in cloudwatchevents to populate enrichment.</summary>
 public partial class V1beta1PipeSpecForProviderEnrichmentRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -108,6 +112,7 @@ public enum V1beta1PipeSpecForProviderEnrichmentSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PipeSpecForProviderEnrichmentSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1PipeSpecForProviderEnrichmentSelectorPolicy
     public V1beta1PipeSpecForProviderEnrichmentSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a APIDestination in cloudwatchevents to populate enrichment.</summary>
 public partial class V1beta1PipeSpecForProviderEnrichmentSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -136,6 +142,7 @@ public partial class V1beta1PipeSpecForProviderEnrichmentSelector
     public V1beta1PipeSpecForProviderEnrichmentSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Amazon CloudWatch Logs logging configuration settings for the pipe. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderLogConfigurationCloudwatchLogsLogDestination
 {
     /// <summary>Amazon Web Services Resource Name (ARN) for the CloudWatch log group to which EventBridge sends the log records.</summary>
@@ -143,6 +150,7 @@ public partial class V1beta1PipeSpecForProviderLogConfigurationCloudwatchLogsLog
     public string? LogGroupArn { get; set; }
 }
 
+/// <summary>Amazon Kinesis Data Firehose logging configuration settings for the pipe. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderLogConfigurationFirehoseLogDestination
 {
     /// <summary>Amazon Resource Name (ARN) of the Kinesis Data Firehose delivery stream to which EventBridge delivers the pipe log records.</summary>
@@ -150,6 +158,7 @@ public partial class V1beta1PipeSpecForProviderLogConfigurationFirehoseLogDestin
     public string? DeliveryStreamArn { get; set; }
 }
 
+/// <summary>Amazon S3 logging configuration settings for the pipe. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderLogConfigurationS3LogDestination
 {
     /// <summary>Name of the Amazon S3 bucket to which EventBridge delivers the log records for the pipe.</summary>
@@ -169,6 +178,7 @@ public partial class V1beta1PipeSpecForProviderLogConfigurationS3LogDestination
     public string? Prefix { get; set; }
 }
 
+/// <summary>Logging configuration settings for the pipe. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderLogConfiguration
 {
     /// <summary>Amazon CloudWatch Logs logging configuration settings for the pipe. Detailed below.</summary>
@@ -208,6 +218,7 @@ public enum V1beta1PipeSpecForProviderRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PipeSpecForProviderRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -221,6 +232,7 @@ public partial class V1beta1PipeSpecForProviderRoleArnRefPolicy
     public V1beta1PipeSpecForProviderRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1PipeSpecForProviderRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -252,6 +264,7 @@ public enum V1beta1PipeSpecForProviderRoleArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PipeSpecForProviderRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -265,6 +278,7 @@ public partial class V1beta1PipeSpecForProviderRoleArnSelectorPolicy
     public V1beta1PipeSpecForProviderRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1PipeSpecForProviderRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -280,6 +294,7 @@ public partial class V1beta1PipeSpecForProviderRoleArnSelector
     public V1beta1PipeSpecForProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>The credentials needed to access the resource. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderSourceParametersActivemqBrokerParametersCredentials
 {
     /// <summary>The ARN of the Secrets Manager secret containing the basic auth credentials.</summary>
@@ -287,6 +302,7 @@ public partial class V1beta1PipeSpecForProviderSourceParametersActivemqBrokerPar
     public string? BasicAuth { get; set; }
 }
 
+/// <summary>The parameters for using an Active MQ broker as a source. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderSourceParametersActivemqBrokerParameters
 {
     /// <summary>The maximum number of records to include in each batch. Maximum value of 10000.</summary>
@@ -306,6 +322,7 @@ public partial class V1beta1PipeSpecForProviderSourceParametersActivemqBrokerPar
     public string? QueueName { get; set; }
 }
 
+/// <summary>Define the target queue to send dead-letter queue events to. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderSourceParametersDynamodbStreamParametersDeadLetterConfig
 {
     /// <summary>The ARN of the Amazon SQS queue specified as the target for the dead-letter queue.</summary>
@@ -313,6 +330,7 @@ public partial class V1beta1PipeSpecForProviderSourceParametersDynamodbStreamPar
     public string? Arn { get; set; }
 }
 
+/// <summary>The parameters for using a DynamoDB stream as a source.  Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderSourceParametersDynamodbStreamParameters
 {
     /// <summary>The maximum number of records to include in each batch. Maximum value of 10000.</summary>
@@ -348,6 +366,7 @@ public partial class V1beta1PipeSpecForProviderSourceParametersDynamodbStreamPar
     public string? StartingPosition { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeSpecForProviderSourceParametersFilterCriteriaFilter
 {
     /// <summary>The event pattern. At most 4096 characters.</summary>
@@ -355,6 +374,7 @@ public partial class V1beta1PipeSpecForProviderSourceParametersFilterCriteriaFil
     public string? Pattern { get; set; }
 }
 
+/// <summary>The collection of event patterns used to filter events. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderSourceParametersFilterCriteria
 {
     /// <summary>An array of up to 5 event patterns. Detailed below.</summary>
@@ -362,6 +382,7 @@ public partial class V1beta1PipeSpecForProviderSourceParametersFilterCriteria
     public IList<V1beta1PipeSpecForProviderSourceParametersFilterCriteriaFilter>? Filter { get; set; }
 }
 
+/// <summary>Define the target queue to send dead-letter queue events to. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderSourceParametersKinesisStreamParametersDeadLetterConfig
 {
     /// <summary>The ARN of the Amazon SQS queue specified as the target for the dead-letter queue.</summary>
@@ -369,6 +390,7 @@ public partial class V1beta1PipeSpecForProviderSourceParametersKinesisStreamPara
     public string? Arn { get; set; }
 }
 
+/// <summary>The parameters for using a Kinesis stream as a source. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderSourceParametersKinesisStreamParameters
 {
     /// <summary>The maximum number of records to include in each batch. Maximum value of 10000.</summary>
@@ -408,6 +430,7 @@ public partial class V1beta1PipeSpecForProviderSourceParametersKinesisStreamPara
     public string? StartingPositionTimestamp { get; set; }
 }
 
+/// <summary>The credentials needed to access the resource. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderSourceParametersManagedStreamingKafkaParametersCredentials
 {
     /// <summary>The ARN of the Secrets Manager secret containing the credentials.</summary>
@@ -419,6 +442,7 @@ public partial class V1beta1PipeSpecForProviderSourceParametersManagedStreamingK
     public string? SaslScram512Auth { get; set; }
 }
 
+/// <summary>The parameters for using an MSK stream as a source. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderSourceParametersManagedStreamingKafkaParameters
 {
     /// <summary>The maximum number of records to include in each batch. Maximum value of 10000.</summary>
@@ -446,6 +470,7 @@ public partial class V1beta1PipeSpecForProviderSourceParametersManagedStreamingK
     public string? TopicName { get; set; }
 }
 
+/// <summary>The credentials needed to access the resource. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderSourceParametersRabbitmqBrokerParametersCredentials
 {
     /// <summary>The ARN of the Secrets Manager secret containing the credentials.</summary>
@@ -453,6 +478,7 @@ public partial class V1beta1PipeSpecForProviderSourceParametersRabbitmqBrokerPar
     public string? BasicAuth { get; set; }
 }
 
+/// <summary>The parameters for using a Rabbit MQ broker as a source. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderSourceParametersRabbitmqBrokerParameters
 {
     /// <summary>The maximum number of records to include in each batch. Maximum value of 10000.</summary>
@@ -476,6 +502,7 @@ public partial class V1beta1PipeSpecForProviderSourceParametersRabbitmqBrokerPar
     public string? VirtualHost { get; set; }
 }
 
+/// <summary>The credentials needed to access the resource. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderSourceParametersSelfManagedKafkaParametersCredentials
 {
     /// <summary>The ARN of the Secrets Manager secret containing the credentials.</summary>
@@ -495,6 +522,7 @@ public partial class V1beta1PipeSpecForProviderSourceParametersSelfManagedKafkaP
     public string? SaslScram512Auth { get; set; }
 }
 
+/// <summary>This structure specifies the VPC subnets and security groups for the stream, and whether a public IP address is to be used. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderSourceParametersSelfManagedKafkaParametersVpc
 {
     /// <summary>List of security groups associated with the stream. These security groups must all be in the same VPC. You can specify as many as five security groups. If you do not specify a security group, the default security group for the VPC is used.</summary>
@@ -506,6 +534,7 @@ public partial class V1beta1PipeSpecForProviderSourceParametersSelfManagedKafkaP
     public IList<string>? Subnets { get; set; }
 }
 
+/// <summary>The parameters for using a self-managed Apache Kafka stream as a source. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderSourceParametersSelfManagedKafkaParameters
 {
     /// <summary>An array of server URLs. Maximum number of 2 items, each of maximum length 300.</summary>
@@ -545,6 +574,7 @@ public partial class V1beta1PipeSpecForProviderSourceParametersSelfManagedKafkaP
     public V1beta1PipeSpecForProviderSourceParametersSelfManagedKafkaParametersVpc? Vpc { get; set; }
 }
 
+/// <summary>The parameters for using a Amazon SQS stream as a source. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderSourceParametersSqsQueueParameters
 {
     /// <summary>The maximum number of records to include in each batch. Maximum value of 10000.</summary>
@@ -556,6 +586,7 @@ public partial class V1beta1PipeSpecForProviderSourceParametersSqsQueueParameter
     public double? MaximumBatchingWindowInSeconds { get; set; }
 }
 
+/// <summary>Parameters to configure a source for the pipe. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderSourceParameters
 {
     /// <summary>The parameters for using an Active MQ broker as a source. Detailed below.</summary>
@@ -611,6 +642,7 @@ public enum V1beta1PipeSpecForProviderSourceRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PipeSpecForProviderSourceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -624,6 +656,7 @@ public partial class V1beta1PipeSpecForProviderSourceRefPolicy
     public V1beta1PipeSpecForProviderSourceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Queue in sqs to populate source.</summary>
 public partial class V1beta1PipeSpecForProviderSourceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -655,6 +688,7 @@ public enum V1beta1PipeSpecForProviderSourceSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PipeSpecForProviderSourceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -668,6 +702,7 @@ public partial class V1beta1PipeSpecForProviderSourceSelectorPolicy
     public V1beta1PipeSpecForProviderSourceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Queue in sqs to populate source.</summary>
 public partial class V1beta1PipeSpecForProviderSourceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -683,6 +718,7 @@ public partial class V1beta1PipeSpecForProviderSourceSelector
     public V1beta1PipeSpecForProviderSourceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>The array properties for the submitted job, such as the size of the array. The array size can be between 2 and 10,000. If you specify array properties for a job, it becomes an array job. This parameter is used only if the target is an AWS Batch job. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderTargetParametersBatchJobParametersArrayProperties
 {
     /// <summary>The size of the array, if this is an array batch job. Minimum value of 2. Maximum value of 10,000.</summary>
@@ -690,6 +726,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersBatchJobParameter
     public double? Size { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeSpecForProviderTargetParametersBatchJobParametersContainerOverridesEnvironment
 {
     /// <summary>The name of the key-value pair. For environment variables, this is the name of the environment variable.</summary>
@@ -701,6 +738,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersBatchJobParameter
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeSpecForProviderTargetParametersBatchJobParametersContainerOverridesResourceRequirement
 {
     /// <summary>The type of resource to assign to a container. The supported resources include GPU, MEMORY, and VCPU.</summary>
@@ -712,6 +750,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersBatchJobParameter
     public string? Value { get; set; }
 }
 
+/// <summary>The overrides that are sent to a container. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderTargetParametersBatchJobParametersContainerOverrides
 {
     /// <summary>List of commands to send to the container that overrides the default command from the Docker image or the task definition.</summary>
@@ -731,6 +770,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersBatchJobParameter
     public IList<V1beta1PipeSpecForProviderTargetParametersBatchJobParametersContainerOverridesResourceRequirement>? ResourceRequirement { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeSpecForProviderTargetParametersBatchJobParametersDependsOn
 {
     /// <summary>The job ID of the AWS Batch job that's associated with this dependency.</summary>
@@ -742,6 +782,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersBatchJobParameter
     public string? Type { get; set; }
 }
 
+/// <summary>The retry strategy to use for failed jobs. When a retry strategy is specified here, it overrides the retry strategy defined in the job definition. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderTargetParametersBatchJobParametersRetryStrategy
 {
     /// <summary>The number of times to move a job to the RUNNABLE status. If the value of attempts is greater than one, the job is retried on failure the same number of attempts as the value. Maximum value of 10.</summary>
@@ -749,6 +790,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersBatchJobParameter
     public double? Attempts { get; set; }
 }
 
+/// <summary>The parameters for using an AWS Batch job as a target. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderTargetParametersBatchJobParameters
 {
     /// <summary>The array properties for the submitted job, such as the size of the array. The array size can be between 2 and 10,000. If you specify array properties for a job, it becomes an array job. This parameter is used only if the target is an AWS Batch job. Detailed below.</summary>
@@ -780,6 +822,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersBatchJobParameter
     public V1beta1PipeSpecForProviderTargetParametersBatchJobParametersRetryStrategy? RetryStrategy { get; set; }
 }
 
+/// <summary>The parameters for using an CloudWatch Logs log stream as a target. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderTargetParametersCloudwatchLogsParameters
 {
     /// <summary>The name of the log stream.</summary>
@@ -791,6 +834,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersCloudwatchLogsPar
     public string? Timestamp { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParametersCapacityProviderStrategy
 {
     /// <summary>The base value designates how many tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined. If no value is specified, the default value of 0 is used. Maximum value of 100,000.</summary>
@@ -806,6 +850,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParameters
     public double? Weight { get; set; }
 }
 
+/// <summary>Use this structure to specify the VPC subnets and security groups for the task, and whether a public IP address is to be used. This structure is relevant only for ECS tasks that use the awsvpc network mode. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParametersNetworkConfigurationAwsVpcConfiguration
 {
     /// <summary>Specifies whether the task's elastic network interface receives a public IP address. You can specify ENABLED only when LaunchType in EcsParameters is set to FARGATE. Valid Values: ENABLED, DISABLED.</summary>
@@ -821,6 +866,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParameters
     public IList<string>? Subnets { get; set; }
 }
 
+/// <summary>Use this structure if the Amazon ECS task uses the awsvpc network mode. This structure specifies the VPC subnets and security groups associated with the task, and whether a public IP address is to be used. This structure is required if LaunchType is FARGATE because the awsvpc mode is required for Fargate tasks. If you specify NetworkConfiguration when the target ECS task does not use the awsvpc network mode, the task fails. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParametersNetworkConfiguration
 {
     /// <summary>Use this structure to specify the VPC subnets and security groups for the task, and whether a public IP address is to be used. This structure is relevant only for ECS tasks that use the awsvpc network mode. Detailed below.</summary>
@@ -828,6 +874,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParameters
     public V1beta1PipeSpecForProviderTargetParametersEcsTaskParametersNetworkConfigurationAwsVpcConfiguration? AwsVpcConfiguration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParametersOverridesContainerOverrideEnvironment
 {
     /// <summary>The name of the key-value pair. For environment variables, this is the name of the environment variable.</summary>
@@ -839,6 +886,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParameters
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParametersOverridesContainerOverrideEnvironmentFile
 {
     /// <summary>The file type to use. The only supported value is s3.</summary>
@@ -850,6 +898,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParameters
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParametersOverridesContainerOverrideResourceRequirement
 {
     /// <summary>The type of resource to assign to a container. The supported values are GPU or InferenceAccelerator.</summary>
@@ -861,6 +910,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParameters
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParametersOverridesContainerOverride
 {
     /// <summary>List of commands to send to the container that overrides the default command from the Docker image or the task definition. You must also specify a container name.</summary>
@@ -896,6 +946,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParameters
     public IList<V1beta1PipeSpecForProviderTargetParametersEcsTaskParametersOverridesContainerOverrideResourceRequirement>? ResourceRequirement { get; set; }
 }
 
+/// <summary>The ephemeral storage setting override for the task.  Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParametersOverridesEphemeralStorage
 {
     /// <summary>The total amount, in GiB, of ephemeral storage to set for the task. The minimum supported value is 21 GiB and the maximum supported value is 200 GiB.</summary>
@@ -903,6 +954,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParameters
     public double? SizeInGib { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParametersOverridesInferenceAcceleratorOverride
 {
     /// <summary>The Elastic Inference accelerator device name to override for the task. This parameter must match a deviceName specified in the task definition.</summary>
@@ -914,6 +966,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParameters
     public string? DeviceType { get; set; }
 }
 
+/// <summary>The overrides that are associated with a task. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParametersOverrides
 {
     /// <summary>One or more container overrides that are sent to a task. Detailed below.</summary>
@@ -945,6 +998,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParameters
     public string? TaskRoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParametersPlacementConstraint
 {
     /// <summary>A cluster query language expression to apply to the constraint. You cannot specify an expression if the constraint type is distinctInstance. Maximum length of 2,000.</summary>
@@ -956,6 +1010,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParameters
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParametersPlacementStrategy
 {
     /// <summary>The field to apply the placement strategy against. For the spread placement strategy, valid values are instanceId (or host, which has the same effect), or any platform or custom attribute that is applied to a container instance, such as attribute:ecs.availability-zone. For the binpack placement strategy, valid values are cpu and memory. For the random placement strategy, this field is not used. Maximum length of 255.</summary>
@@ -967,6 +1022,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParameters
     public string? Type { get; set; }
 }
 
+/// <summary>The parameters for using an Amazon ECS task as a target. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParameters
 {
     /// <summary>List of capacity provider strategies to use for the task. If a capacityProviderStrategy is specified, the launchType parameter must be omitted. If no capacityProviderStrategy or launchType is specified, the defaultCapacityProviderStrategy for the cluster is used. Detailed below.</summary>
@@ -1030,6 +1086,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersEcsTaskParameters
     public string? TaskDefinitionArn { get; set; }
 }
 
+/// <summary>The parameters for using an EventBridge event bus as a target. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderTargetParametersEventbridgeEventBusParameters
 {
     /// <summary>A free-form string, with a maximum of 128 characters, used to decide what fields to expect in the event detail.</summary>
@@ -1053,6 +1110,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersEventbridgeEventB
     public string? Time { get; set; }
 }
 
+/// <summary>These are custom parameter to be used when the target is an API Gateway REST APIs or EventBridge ApiDestinations. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderTargetParametersHttpParameters
 {
     /// <summary>Key-value mapping of the headers that need to be sent as part of request invoking the API Gateway REST API or EventBridge ApiDestination. Detailed below.</summary>
@@ -1068,6 +1126,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersHttpParameters
     public IDictionary<string, string>? QueryStringParameters { get; set; }
 }
 
+/// <summary>The parameters for using a Kinesis stream as a source. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderTargetParametersKinesisStreamParameters
 {
     /// <summary>Determines which shard in the stream the data record is assigned to. Partition keys are Unicode strings with a maximum length limit of 256 characters for each key. Amazon Kinesis Data Streams uses the partition key as input to a hash function that maps the partition key and associated data to a specific shard. Specifically, an MD5 hash function is used to map partition keys to 128-bit integer values and to map associated data records to shards. As a result of this hashing mechanism, all data records with the same partition key map to the same shard within the stream.</summary>
@@ -1075,6 +1134,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersKinesisStreamPara
     public string? PartitionKey { get; set; }
 }
 
+/// <summary>The parameters for using a Lambda function as a target. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderTargetParametersLambdaFunctionParameters
 {
     /// <summary>Specify whether to invoke the function synchronously or asynchronously. Valid Values: REQUEST_RESPONSE, FIRE_AND_FORGET.</summary>
@@ -1082,6 +1142,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersLambdaFunctionPar
     public string? InvocationType { get; set; }
 }
 
+/// <summary>These are custom parameters to be used when the target is a Amazon Redshift cluster to invoke the Amazon Redshift Data API BatchExecuteStatement. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderTargetParametersRedshiftDataParameters
 {
     /// <summary>The name of the database. Required when authenticating using temporary credentials.</summary>
@@ -1109,6 +1170,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersRedshiftDataParam
     public bool? WithEvent { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeSpecForProviderTargetParametersSagemakerPipelineParametersPipelineParameter
 {
     /// <summary>The name of the container that receives the override. This parameter is required if any override is specified.</summary>
@@ -1120,6 +1182,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersSagemakerPipeline
     public string? Value { get; set; }
 }
 
+/// <summary>The parameters for using a SageMaker pipeline as a target. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderTargetParametersSagemakerPipelineParameters
 {
     /// <summary>List of Parameter names and values for SageMaker Model Building Pipeline execution. Detailed below.</summary>
@@ -1127,6 +1190,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersSagemakerPipeline
     public IList<V1beta1PipeSpecForProviderTargetParametersSagemakerPipelineParametersPipelineParameter>? PipelineParameter { get; set; }
 }
 
+/// <summary>The parameters for using a Amazon SQS stream as a target. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderTargetParametersSqsQueueParameters
 {
     /// <summary>This parameter applies only to FIFO (first-in-first-out) queues. The token used for deduplication of sent messages.</summary>
@@ -1138,6 +1202,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersSqsQueueParameter
     public string? MessageGroupId { get; set; }
 }
 
+/// <summary>The parameters for using a Step Functions state machine as a target. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderTargetParametersStepFunctionStateMachineParameters
 {
     /// <summary>Specify whether to invoke the function synchronously or asynchronously. Valid Values: REQUEST_RESPONSE, FIRE_AND_FORGET.</summary>
@@ -1145,6 +1210,7 @@ public partial class V1beta1PipeSpecForProviderTargetParametersStepFunctionState
     public string? InvocationType { get; set; }
 }
 
+/// <summary>Parameters to configure a target for your pipe. Detailed below.</summary>
 public partial class V1beta1PipeSpecForProviderTargetParameters
 {
     /// <summary>The parameters for using an AWS Batch job as a target. Detailed below.</summary>
@@ -1216,6 +1282,7 @@ public enum V1beta1PipeSpecForProviderTargetRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PipeSpecForProviderTargetRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1229,6 +1296,7 @@ public partial class V1beta1PipeSpecForProviderTargetRefPolicy
     public V1beta1PipeSpecForProviderTargetRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Queue in sqs to populate target.</summary>
 public partial class V1beta1PipeSpecForProviderTargetRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1260,6 +1328,7 @@ public enum V1beta1PipeSpecForProviderTargetSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PipeSpecForProviderTargetSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1273,6 +1342,7 @@ public partial class V1beta1PipeSpecForProviderTargetSelectorPolicy
     public V1beta1PipeSpecForProviderTargetSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Queue in sqs to populate target.</summary>
 public partial class V1beta1PipeSpecForProviderTargetSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1288,6 +1358,7 @@ public partial class V1beta1PipeSpecForProviderTargetSelector
     public V1beta1PipeSpecForProviderTargetSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeSpecForProvider
 {
     /// <summary>A description of the pipe. At most 512 characters.</summary>
@@ -1371,6 +1442,7 @@ public partial class V1beta1PipeSpecForProvider
     public V1beta1PipeSpecForProviderTargetSelector? TargetSelector { get; set; }
 }
 
+/// <summary>Contains the HTTP parameters to use when the target is a API Gateway REST endpoint or EventBridge ApiDestination. If you specify an API Gateway REST API or EventBridge ApiDestination as a target, you can use this parameter to specify headers, path parameters, and query string keys/values as part of your target invoking request. If you're using ApiDestinations, the corresponding Connection can also have these values configured. In case of any conflicting keys, values from the Connection take precedence. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderEnrichmentParametersHttpParameters
 {
     /// <summary>Key-value mapping of the headers that need to be sent as part of request invoking the API Gateway REST API or EventBridge ApiDestination.</summary>
@@ -1386,6 +1458,7 @@ public partial class V1beta1PipeSpecInitProviderEnrichmentParametersHttpParamete
     public IDictionary<string, string>? QueryStringParameters { get; set; }
 }
 
+/// <summary>Parameters to configure enrichment for your pipe. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderEnrichmentParameters
 {
     /// <summary>Contains the HTTP parameters to use when the target is a API Gateway REST endpoint or EventBridge ApiDestination. If you specify an API Gateway REST API or EventBridge ApiDestination as a target, you can use this parameter to specify headers, path parameters, and query string keys/values as part of your target invoking request. If you're using ApiDestinations, the corresponding Connection can also have these values configured. In case of any conflicting keys, values from the Connection take precedence. Detailed below.</summary>
@@ -1417,6 +1490,7 @@ public enum V1beta1PipeSpecInitProviderEnrichmentRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PipeSpecInitProviderEnrichmentRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1430,6 +1504,7 @@ public partial class V1beta1PipeSpecInitProviderEnrichmentRefPolicy
     public V1beta1PipeSpecInitProviderEnrichmentRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a APIDestination in cloudwatchevents to populate enrichment.</summary>
 public partial class V1beta1PipeSpecInitProviderEnrichmentRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1461,6 +1536,7 @@ public enum V1beta1PipeSpecInitProviderEnrichmentSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PipeSpecInitProviderEnrichmentSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1474,6 +1550,7 @@ public partial class V1beta1PipeSpecInitProviderEnrichmentSelectorPolicy
     public V1beta1PipeSpecInitProviderEnrichmentSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a APIDestination in cloudwatchevents to populate enrichment.</summary>
 public partial class V1beta1PipeSpecInitProviderEnrichmentSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1489,6 +1566,7 @@ public partial class V1beta1PipeSpecInitProviderEnrichmentSelector
     public V1beta1PipeSpecInitProviderEnrichmentSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Amazon CloudWatch Logs logging configuration settings for the pipe. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderLogConfigurationCloudwatchLogsLogDestination
 {
     /// <summary>Amazon Web Services Resource Name (ARN) for the CloudWatch log group to which EventBridge sends the log records.</summary>
@@ -1496,6 +1574,7 @@ public partial class V1beta1PipeSpecInitProviderLogConfigurationCloudwatchLogsLo
     public string? LogGroupArn { get; set; }
 }
 
+/// <summary>Amazon Kinesis Data Firehose logging configuration settings for the pipe. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderLogConfigurationFirehoseLogDestination
 {
     /// <summary>Amazon Resource Name (ARN) of the Kinesis Data Firehose delivery stream to which EventBridge delivers the pipe log records.</summary>
@@ -1503,6 +1582,7 @@ public partial class V1beta1PipeSpecInitProviderLogConfigurationFirehoseLogDesti
     public string? DeliveryStreamArn { get; set; }
 }
 
+/// <summary>Amazon S3 logging configuration settings for the pipe. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderLogConfigurationS3LogDestination
 {
     /// <summary>Name of the Amazon S3 bucket to which EventBridge delivers the log records for the pipe.</summary>
@@ -1522,6 +1602,7 @@ public partial class V1beta1PipeSpecInitProviderLogConfigurationS3LogDestination
     public string? Prefix { get; set; }
 }
 
+/// <summary>Logging configuration settings for the pipe. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderLogConfiguration
 {
     /// <summary>Amazon CloudWatch Logs logging configuration settings for the pipe. Detailed below.</summary>
@@ -1561,6 +1642,7 @@ public enum V1beta1PipeSpecInitProviderRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PipeSpecInitProviderRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1574,6 +1656,7 @@ public partial class V1beta1PipeSpecInitProviderRoleArnRefPolicy
     public V1beta1PipeSpecInitProviderRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1PipeSpecInitProviderRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1605,6 +1688,7 @@ public enum V1beta1PipeSpecInitProviderRoleArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PipeSpecInitProviderRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1618,6 +1702,7 @@ public partial class V1beta1PipeSpecInitProviderRoleArnSelectorPolicy
     public V1beta1PipeSpecInitProviderRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1PipeSpecInitProviderRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1633,6 +1718,7 @@ public partial class V1beta1PipeSpecInitProviderRoleArnSelector
     public V1beta1PipeSpecInitProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>The credentials needed to access the resource. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderSourceParametersActivemqBrokerParametersCredentials
 {
     /// <summary>The ARN of the Secrets Manager secret containing the basic auth credentials.</summary>
@@ -1640,6 +1726,7 @@ public partial class V1beta1PipeSpecInitProviderSourceParametersActivemqBrokerPa
     public string? BasicAuth { get; set; }
 }
 
+/// <summary>The parameters for using an Active MQ broker as a source. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderSourceParametersActivemqBrokerParameters
 {
     /// <summary>The maximum number of records to include in each batch. Maximum value of 10000.</summary>
@@ -1659,6 +1746,7 @@ public partial class V1beta1PipeSpecInitProviderSourceParametersActivemqBrokerPa
     public string? QueueName { get; set; }
 }
 
+/// <summary>Define the target queue to send dead-letter queue events to. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderSourceParametersDynamodbStreamParametersDeadLetterConfig
 {
     /// <summary>The ARN of the Amazon SQS queue specified as the target for the dead-letter queue.</summary>
@@ -1666,6 +1754,7 @@ public partial class V1beta1PipeSpecInitProviderSourceParametersDynamodbStreamPa
     public string? Arn { get; set; }
 }
 
+/// <summary>The parameters for using a DynamoDB stream as a source.  Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderSourceParametersDynamodbStreamParameters
 {
     /// <summary>The maximum number of records to include in each batch. Maximum value of 10000.</summary>
@@ -1701,6 +1790,7 @@ public partial class V1beta1PipeSpecInitProviderSourceParametersDynamodbStreamPa
     public string? StartingPosition { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeSpecInitProviderSourceParametersFilterCriteriaFilter
 {
     /// <summary>The event pattern. At most 4096 characters.</summary>
@@ -1708,6 +1798,7 @@ public partial class V1beta1PipeSpecInitProviderSourceParametersFilterCriteriaFi
     public string? Pattern { get; set; }
 }
 
+/// <summary>The collection of event patterns used to filter events. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderSourceParametersFilterCriteria
 {
     /// <summary>An array of up to 5 event patterns. Detailed below.</summary>
@@ -1715,6 +1806,7 @@ public partial class V1beta1PipeSpecInitProviderSourceParametersFilterCriteria
     public IList<V1beta1PipeSpecInitProviderSourceParametersFilterCriteriaFilter>? Filter { get; set; }
 }
 
+/// <summary>Define the target queue to send dead-letter queue events to. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderSourceParametersKinesisStreamParametersDeadLetterConfig
 {
     /// <summary>The ARN of the Amazon SQS queue specified as the target for the dead-letter queue.</summary>
@@ -1722,6 +1814,7 @@ public partial class V1beta1PipeSpecInitProviderSourceParametersKinesisStreamPar
     public string? Arn { get; set; }
 }
 
+/// <summary>The parameters for using a Kinesis stream as a source. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderSourceParametersKinesisStreamParameters
 {
     /// <summary>The maximum number of records to include in each batch. Maximum value of 10000.</summary>
@@ -1761,6 +1854,7 @@ public partial class V1beta1PipeSpecInitProviderSourceParametersKinesisStreamPar
     public string? StartingPositionTimestamp { get; set; }
 }
 
+/// <summary>The credentials needed to access the resource. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderSourceParametersManagedStreamingKafkaParametersCredentials
 {
     /// <summary>The ARN of the Secrets Manager secret containing the credentials.</summary>
@@ -1772,6 +1866,7 @@ public partial class V1beta1PipeSpecInitProviderSourceParametersManagedStreaming
     public string? SaslScram512Auth { get; set; }
 }
 
+/// <summary>The parameters for using an MSK stream as a source. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderSourceParametersManagedStreamingKafkaParameters
 {
     /// <summary>The maximum number of records to include in each batch. Maximum value of 10000.</summary>
@@ -1799,6 +1894,7 @@ public partial class V1beta1PipeSpecInitProviderSourceParametersManagedStreaming
     public string? TopicName { get; set; }
 }
 
+/// <summary>The credentials needed to access the resource. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderSourceParametersRabbitmqBrokerParametersCredentials
 {
     /// <summary>The ARN of the Secrets Manager secret containing the credentials.</summary>
@@ -1806,6 +1902,7 @@ public partial class V1beta1PipeSpecInitProviderSourceParametersRabbitmqBrokerPa
     public string? BasicAuth { get; set; }
 }
 
+/// <summary>The parameters for using a Rabbit MQ broker as a source. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderSourceParametersRabbitmqBrokerParameters
 {
     /// <summary>The maximum number of records to include in each batch. Maximum value of 10000.</summary>
@@ -1829,6 +1926,7 @@ public partial class V1beta1PipeSpecInitProviderSourceParametersRabbitmqBrokerPa
     public string? VirtualHost { get; set; }
 }
 
+/// <summary>The credentials needed to access the resource. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderSourceParametersSelfManagedKafkaParametersCredentials
 {
     /// <summary>The ARN of the Secrets Manager secret containing the credentials.</summary>
@@ -1848,6 +1946,7 @@ public partial class V1beta1PipeSpecInitProviderSourceParametersSelfManagedKafka
     public string? SaslScram512Auth { get; set; }
 }
 
+/// <summary>This structure specifies the VPC subnets and security groups for the stream, and whether a public IP address is to be used. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderSourceParametersSelfManagedKafkaParametersVpc
 {
     /// <summary>List of security groups associated with the stream. These security groups must all be in the same VPC. You can specify as many as five security groups. If you do not specify a security group, the default security group for the VPC is used.</summary>
@@ -1859,6 +1958,7 @@ public partial class V1beta1PipeSpecInitProviderSourceParametersSelfManagedKafka
     public IList<string>? Subnets { get; set; }
 }
 
+/// <summary>The parameters for using a self-managed Apache Kafka stream as a source. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderSourceParametersSelfManagedKafkaParameters
 {
     /// <summary>An array of server URLs. Maximum number of 2 items, each of maximum length 300.</summary>
@@ -1898,6 +1998,7 @@ public partial class V1beta1PipeSpecInitProviderSourceParametersSelfManagedKafka
     public V1beta1PipeSpecInitProviderSourceParametersSelfManagedKafkaParametersVpc? Vpc { get; set; }
 }
 
+/// <summary>The parameters for using a Amazon SQS stream as a source. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderSourceParametersSqsQueueParameters
 {
     /// <summary>The maximum number of records to include in each batch. Maximum value of 10000.</summary>
@@ -1909,6 +2010,7 @@ public partial class V1beta1PipeSpecInitProviderSourceParametersSqsQueueParamete
     public double? MaximumBatchingWindowInSeconds { get; set; }
 }
 
+/// <summary>Parameters to configure a source for the pipe. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderSourceParameters
 {
     /// <summary>The parameters for using an Active MQ broker as a source. Detailed below.</summary>
@@ -1964,6 +2066,7 @@ public enum V1beta1PipeSpecInitProviderSourceRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PipeSpecInitProviderSourceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1977,6 +2080,7 @@ public partial class V1beta1PipeSpecInitProviderSourceRefPolicy
     public V1beta1PipeSpecInitProviderSourceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Queue in sqs to populate source.</summary>
 public partial class V1beta1PipeSpecInitProviderSourceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2008,6 +2112,7 @@ public enum V1beta1PipeSpecInitProviderSourceSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PipeSpecInitProviderSourceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2021,6 +2126,7 @@ public partial class V1beta1PipeSpecInitProviderSourceSelectorPolicy
     public V1beta1PipeSpecInitProviderSourceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Queue in sqs to populate source.</summary>
 public partial class V1beta1PipeSpecInitProviderSourceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2036,6 +2142,7 @@ public partial class V1beta1PipeSpecInitProviderSourceSelector
     public V1beta1PipeSpecInitProviderSourceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>The array properties for the submitted job, such as the size of the array. The array size can be between 2 and 10,000. If you specify array properties for a job, it becomes an array job. This parameter is used only if the target is an AWS Batch job. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderTargetParametersBatchJobParametersArrayProperties
 {
     /// <summary>The size of the array, if this is an array batch job. Minimum value of 2. Maximum value of 10,000.</summary>
@@ -2043,6 +2150,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersBatchJobParamete
     public double? Size { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeSpecInitProviderTargetParametersBatchJobParametersContainerOverridesEnvironment
 {
     /// <summary>The name of the key-value pair. For environment variables, this is the name of the environment variable.</summary>
@@ -2054,6 +2162,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersBatchJobParamete
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeSpecInitProviderTargetParametersBatchJobParametersContainerOverridesResourceRequirement
 {
     /// <summary>The type of resource to assign to a container. The supported resources include GPU, MEMORY, and VCPU.</summary>
@@ -2065,6 +2174,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersBatchJobParamete
     public string? Value { get; set; }
 }
 
+/// <summary>The overrides that are sent to a container. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderTargetParametersBatchJobParametersContainerOverrides
 {
     /// <summary>List of commands to send to the container that overrides the default command from the Docker image or the task definition.</summary>
@@ -2084,6 +2194,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersBatchJobParamete
     public IList<V1beta1PipeSpecInitProviderTargetParametersBatchJobParametersContainerOverridesResourceRequirement>? ResourceRequirement { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeSpecInitProviderTargetParametersBatchJobParametersDependsOn
 {
     /// <summary>The job ID of the AWS Batch job that's associated with this dependency.</summary>
@@ -2095,6 +2206,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersBatchJobParamete
     public string? Type { get; set; }
 }
 
+/// <summary>The retry strategy to use for failed jobs. When a retry strategy is specified here, it overrides the retry strategy defined in the job definition. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderTargetParametersBatchJobParametersRetryStrategy
 {
     /// <summary>The number of times to move a job to the RUNNABLE status. If the value of attempts is greater than one, the job is retried on failure the same number of attempts as the value. Maximum value of 10.</summary>
@@ -2102,6 +2214,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersBatchJobParamete
     public double? Attempts { get; set; }
 }
 
+/// <summary>The parameters for using an AWS Batch job as a target. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderTargetParametersBatchJobParameters
 {
     /// <summary>The array properties for the submitted job, such as the size of the array. The array size can be between 2 and 10,000. If you specify array properties for a job, it becomes an array job. This parameter is used only if the target is an AWS Batch job. Detailed below.</summary>
@@ -2133,6 +2246,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersBatchJobParamete
     public V1beta1PipeSpecInitProviderTargetParametersBatchJobParametersRetryStrategy? RetryStrategy { get; set; }
 }
 
+/// <summary>The parameters for using an CloudWatch Logs log stream as a target. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderTargetParametersCloudwatchLogsParameters
 {
     /// <summary>The name of the log stream.</summary>
@@ -2144,6 +2258,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersCloudwatchLogsPa
     public string? Timestamp { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParametersCapacityProviderStrategy
 {
     /// <summary>The base value designates how many tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined. If no value is specified, the default value of 0 is used. Maximum value of 100,000.</summary>
@@ -2159,6 +2274,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParameter
     public double? Weight { get; set; }
 }
 
+/// <summary>Use this structure to specify the VPC subnets and security groups for the task, and whether a public IP address is to be used. This structure is relevant only for ECS tasks that use the awsvpc network mode. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParametersNetworkConfigurationAwsVpcConfiguration
 {
     /// <summary>Specifies whether the task's elastic network interface receives a public IP address. You can specify ENABLED only when LaunchType in EcsParameters is set to FARGATE. Valid Values: ENABLED, DISABLED.</summary>
@@ -2174,6 +2290,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParameter
     public IList<string>? Subnets { get; set; }
 }
 
+/// <summary>Use this structure if the Amazon ECS task uses the awsvpc network mode. This structure specifies the VPC subnets and security groups associated with the task, and whether a public IP address is to be used. This structure is required if LaunchType is FARGATE because the awsvpc mode is required for Fargate tasks. If you specify NetworkConfiguration when the target ECS task does not use the awsvpc network mode, the task fails. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParametersNetworkConfiguration
 {
     /// <summary>Use this structure to specify the VPC subnets and security groups for the task, and whether a public IP address is to be used. This structure is relevant only for ECS tasks that use the awsvpc network mode. Detailed below.</summary>
@@ -2181,6 +2298,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParameter
     public V1beta1PipeSpecInitProviderTargetParametersEcsTaskParametersNetworkConfigurationAwsVpcConfiguration? AwsVpcConfiguration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParametersOverridesContainerOverrideEnvironment
 {
     /// <summary>The name of the key-value pair. For environment variables, this is the name of the environment variable.</summary>
@@ -2192,6 +2310,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParameter
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParametersOverridesContainerOverrideEnvironmentFile
 {
     /// <summary>The file type to use. The only supported value is s3.</summary>
@@ -2203,6 +2322,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParameter
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParametersOverridesContainerOverrideResourceRequirement
 {
     /// <summary>The type of resource to assign to a container. The supported values are GPU or InferenceAccelerator.</summary>
@@ -2214,6 +2334,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParameter
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParametersOverridesContainerOverride
 {
     /// <summary>List of commands to send to the container that overrides the default command from the Docker image or the task definition. You must also specify a container name.</summary>
@@ -2249,6 +2370,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParameter
     public IList<V1beta1PipeSpecInitProviderTargetParametersEcsTaskParametersOverridesContainerOverrideResourceRequirement>? ResourceRequirement { get; set; }
 }
 
+/// <summary>The ephemeral storage setting override for the task.  Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParametersOverridesEphemeralStorage
 {
     /// <summary>The total amount, in GiB, of ephemeral storage to set for the task. The minimum supported value is 21 GiB and the maximum supported value is 200 GiB.</summary>
@@ -2256,6 +2378,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParameter
     public double? SizeInGib { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParametersOverridesInferenceAcceleratorOverride
 {
     /// <summary>The Elastic Inference accelerator device name to override for the task. This parameter must match a deviceName specified in the task definition.</summary>
@@ -2267,6 +2390,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParameter
     public string? DeviceType { get; set; }
 }
 
+/// <summary>The overrides that are associated with a task. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParametersOverrides
 {
     /// <summary>One or more container overrides that are sent to a task. Detailed below.</summary>
@@ -2298,6 +2422,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParameter
     public string? TaskRoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParametersPlacementConstraint
 {
     /// <summary>A cluster query language expression to apply to the constraint. You cannot specify an expression if the constraint type is distinctInstance. Maximum length of 2,000.</summary>
@@ -2309,6 +2434,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParameter
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParametersPlacementStrategy
 {
     /// <summary>The field to apply the placement strategy against. For the spread placement strategy, valid values are instanceId (or host, which has the same effect), or any platform or custom attribute that is applied to a container instance, such as attribute:ecs.availability-zone. For the binpack placement strategy, valid values are cpu and memory. For the random placement strategy, this field is not used. Maximum length of 255.</summary>
@@ -2320,6 +2446,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParameter
     public string? Type { get; set; }
 }
 
+/// <summary>The parameters for using an Amazon ECS task as a target. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParameters
 {
     /// <summary>List of capacity provider strategies to use for the task. If a capacityProviderStrategy is specified, the launchType parameter must be omitted. If no capacityProviderStrategy or launchType is specified, the defaultCapacityProviderStrategy for the cluster is used. Detailed below.</summary>
@@ -2383,6 +2510,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersEcsTaskParameter
     public string? TaskDefinitionArn { get; set; }
 }
 
+/// <summary>The parameters for using an EventBridge event bus as a target. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderTargetParametersEventbridgeEventBusParameters
 {
     /// <summary>A free-form string, with a maximum of 128 characters, used to decide what fields to expect in the event detail.</summary>
@@ -2406,6 +2534,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersEventbridgeEvent
     public string? Time { get; set; }
 }
 
+/// <summary>These are custom parameter to be used when the target is an API Gateway REST APIs or EventBridge ApiDestinations. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderTargetParametersHttpParameters
 {
     /// <summary>Key-value mapping of the headers that need to be sent as part of request invoking the API Gateway REST API or EventBridge ApiDestination. Detailed below.</summary>
@@ -2421,6 +2550,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersHttpParameters
     public IDictionary<string, string>? QueryStringParameters { get; set; }
 }
 
+/// <summary>The parameters for using a Kinesis stream as a source. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderTargetParametersKinesisStreamParameters
 {
     /// <summary>Determines which shard in the stream the data record is assigned to. Partition keys are Unicode strings with a maximum length limit of 256 characters for each key. Amazon Kinesis Data Streams uses the partition key as input to a hash function that maps the partition key and associated data to a specific shard. Specifically, an MD5 hash function is used to map partition keys to 128-bit integer values and to map associated data records to shards. As a result of this hashing mechanism, all data records with the same partition key map to the same shard within the stream.</summary>
@@ -2428,6 +2558,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersKinesisStreamPar
     public string? PartitionKey { get; set; }
 }
 
+/// <summary>The parameters for using a Lambda function as a target. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderTargetParametersLambdaFunctionParameters
 {
     /// <summary>Specify whether to invoke the function synchronously or asynchronously. Valid Values: REQUEST_RESPONSE, FIRE_AND_FORGET.</summary>
@@ -2435,6 +2566,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersLambdaFunctionPa
     public string? InvocationType { get; set; }
 }
 
+/// <summary>These are custom parameters to be used when the target is a Amazon Redshift cluster to invoke the Amazon Redshift Data API BatchExecuteStatement. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderTargetParametersRedshiftDataParameters
 {
     /// <summary>The name of the database. Required when authenticating using temporary credentials.</summary>
@@ -2462,6 +2594,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersRedshiftDataPara
     public bool? WithEvent { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeSpecInitProviderTargetParametersSagemakerPipelineParametersPipelineParameter
 {
     /// <summary>The name of the container that receives the override. This parameter is required if any override is specified.</summary>
@@ -2473,6 +2606,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersSagemakerPipelin
     public string? Value { get; set; }
 }
 
+/// <summary>The parameters for using a SageMaker pipeline as a target. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderTargetParametersSagemakerPipelineParameters
 {
     /// <summary>List of Parameter names and values for SageMaker Model Building Pipeline execution. Detailed below.</summary>
@@ -2480,6 +2614,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersSagemakerPipelin
     public IList<V1beta1PipeSpecInitProviderTargetParametersSagemakerPipelineParametersPipelineParameter>? PipelineParameter { get; set; }
 }
 
+/// <summary>The parameters for using a Amazon SQS stream as a target. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderTargetParametersSqsQueueParameters
 {
     /// <summary>This parameter applies only to FIFO (first-in-first-out) queues. The token used for deduplication of sent messages.</summary>
@@ -2491,6 +2626,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersSqsQueueParamete
     public string? MessageGroupId { get; set; }
 }
 
+/// <summary>The parameters for using a Step Functions state machine as a target. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderTargetParametersStepFunctionStateMachineParameters
 {
     /// <summary>Specify whether to invoke the function synchronously or asynchronously. Valid Values: REQUEST_RESPONSE, FIRE_AND_FORGET.</summary>
@@ -2498,6 +2634,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersStepFunctionStat
     public string? InvocationType { get; set; }
 }
 
+/// <summary>Parameters to configure a target for your pipe. Detailed below.</summary>
 public partial class V1beta1PipeSpecInitProviderTargetParameters
 {
     /// <summary>The parameters for using an AWS Batch job as a target. Detailed below.</summary>
@@ -2569,6 +2706,7 @@ public enum V1beta1PipeSpecInitProviderTargetRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PipeSpecInitProviderTargetRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2582,6 +2720,7 @@ public partial class V1beta1PipeSpecInitProviderTargetRefPolicy
     public V1beta1PipeSpecInitProviderTargetRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Queue in sqs to populate target.</summary>
 public partial class V1beta1PipeSpecInitProviderTargetRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2613,6 +2752,7 @@ public enum V1beta1PipeSpecInitProviderTargetSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PipeSpecInitProviderTargetSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2626,6 +2766,7 @@ public partial class V1beta1PipeSpecInitProviderTargetSelectorPolicy
     public V1beta1PipeSpecInitProviderTargetSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Queue in sqs to populate target.</summary>
 public partial class V1beta1PipeSpecInitProviderTargetSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2641,6 +2782,7 @@ public partial class V1beta1PipeSpecInitProviderTargetSelector
     public V1beta1PipeSpecInitProviderTargetSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1PipeSpecInitProvider
 {
     /// <summary>A description of the pipe. At most 512 characters.</summary>
@@ -2762,6 +2904,7 @@ public enum V1beta1PipeSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PipeSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2775,6 +2918,7 @@ public partial class V1beta1PipeSpecProviderConfigRefPolicy
     public V1beta1PipeSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1PipeSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2806,6 +2950,7 @@ public enum V1beta1PipeSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PipeSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2819,6 +2964,7 @@ public partial class V1beta1PipeSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1PipeSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1PipeSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2830,6 +2976,7 @@ public partial class V1beta1PipeSpecPublishConnectionDetailsToConfigRef
     public V1beta1PipeSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1PipeSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -2845,6 +2992,7 @@ public partial class V1beta1PipeSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1PipeSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -2860,6 +3008,7 @@ public partial class V1beta1PipeSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1PipeSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -2871,6 +3020,7 @@ public partial class V1beta1PipeSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>PipeSpec defines the desired state of Pipe</summary>
 public partial class V1beta1PipeSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -2903,6 +3053,7 @@ public partial class V1beta1PipeSpec
     public V1beta1PipeSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary>Contains the HTTP parameters to use when the target is a API Gateway REST endpoint or EventBridge ApiDestination. If you specify an API Gateway REST API or EventBridge ApiDestination as a target, you can use this parameter to specify headers, path parameters, and query string keys/values as part of your target invoking request. If you're using ApiDestinations, the corresponding Connection can also have these values configured. In case of any conflicting keys, values from the Connection take precedence. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderEnrichmentParametersHttpParameters
 {
     /// <summary>Key-value mapping of the headers that need to be sent as part of request invoking the API Gateway REST API or EventBridge ApiDestination.</summary>
@@ -2918,6 +3069,7 @@ public partial class V1beta1PipeStatusAtProviderEnrichmentParametersHttpParamete
     public IDictionary<string, string>? QueryStringParameters { get; set; }
 }
 
+/// <summary>Parameters to configure enrichment for your pipe. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderEnrichmentParameters
 {
     /// <summary>Contains the HTTP parameters to use when the target is a API Gateway REST endpoint or EventBridge ApiDestination. If you specify an API Gateway REST API or EventBridge ApiDestination as a target, you can use this parameter to specify headers, path parameters, and query string keys/values as part of your target invoking request. If you're using ApiDestinations, the corresponding Connection can also have these values configured. In case of any conflicting keys, values from the Connection take precedence. Detailed below.</summary>
@@ -2929,6 +3081,7 @@ public partial class V1beta1PipeStatusAtProviderEnrichmentParameters
     public string? InputTemplate { get; set; }
 }
 
+/// <summary>Amazon CloudWatch Logs logging configuration settings for the pipe. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderLogConfigurationCloudwatchLogsLogDestination
 {
     /// <summary>Amazon Web Services Resource Name (ARN) for the CloudWatch log group to which EventBridge sends the log records.</summary>
@@ -2936,6 +3089,7 @@ public partial class V1beta1PipeStatusAtProviderLogConfigurationCloudwatchLogsLo
     public string? LogGroupArn { get; set; }
 }
 
+/// <summary>Amazon Kinesis Data Firehose logging configuration settings for the pipe. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderLogConfigurationFirehoseLogDestination
 {
     /// <summary>Amazon Resource Name (ARN) of the Kinesis Data Firehose delivery stream to which EventBridge delivers the pipe log records.</summary>
@@ -2943,6 +3097,7 @@ public partial class V1beta1PipeStatusAtProviderLogConfigurationFirehoseLogDesti
     public string? DeliveryStreamArn { get; set; }
 }
 
+/// <summary>Amazon S3 logging configuration settings for the pipe. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderLogConfigurationS3LogDestination
 {
     /// <summary>Name of the Amazon S3 bucket to which EventBridge delivers the log records for the pipe.</summary>
@@ -2962,6 +3117,7 @@ public partial class V1beta1PipeStatusAtProviderLogConfigurationS3LogDestination
     public string? Prefix { get; set; }
 }
 
+/// <summary>Logging configuration settings for the pipe. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderLogConfiguration
 {
     /// <summary>Amazon CloudWatch Logs logging configuration settings for the pipe. Detailed below.</summary>
@@ -2981,6 +3137,7 @@ public partial class V1beta1PipeStatusAtProviderLogConfiguration
     public V1beta1PipeStatusAtProviderLogConfigurationS3LogDestination? S3LogDestination { get; set; }
 }
 
+/// <summary>The credentials needed to access the resource. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderSourceParametersActivemqBrokerParametersCredentials
 {
     /// <summary>The ARN of the Secrets Manager secret containing the basic auth credentials.</summary>
@@ -2988,6 +3145,7 @@ public partial class V1beta1PipeStatusAtProviderSourceParametersActivemqBrokerPa
     public string? BasicAuth { get; set; }
 }
 
+/// <summary>The parameters for using an Active MQ broker as a source. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderSourceParametersActivemqBrokerParameters
 {
     /// <summary>The maximum number of records to include in each batch. Maximum value of 10000.</summary>
@@ -3007,6 +3165,7 @@ public partial class V1beta1PipeStatusAtProviderSourceParametersActivemqBrokerPa
     public string? QueueName { get; set; }
 }
 
+/// <summary>Define the target queue to send dead-letter queue events to. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderSourceParametersDynamodbStreamParametersDeadLetterConfig
 {
     /// <summary>The ARN of the Amazon SQS queue specified as the target for the dead-letter queue.</summary>
@@ -3014,6 +3173,7 @@ public partial class V1beta1PipeStatusAtProviderSourceParametersDynamodbStreamPa
     public string? Arn { get; set; }
 }
 
+/// <summary>The parameters for using a DynamoDB stream as a source.  Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderSourceParametersDynamodbStreamParameters
 {
     /// <summary>The maximum number of records to include in each batch. Maximum value of 10000.</summary>
@@ -3049,6 +3209,7 @@ public partial class V1beta1PipeStatusAtProviderSourceParametersDynamodbStreamPa
     public string? StartingPosition { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeStatusAtProviderSourceParametersFilterCriteriaFilter
 {
     /// <summary>The event pattern. At most 4096 characters.</summary>
@@ -3056,6 +3217,7 @@ public partial class V1beta1PipeStatusAtProviderSourceParametersFilterCriteriaFi
     public string? Pattern { get; set; }
 }
 
+/// <summary>The collection of event patterns used to filter events. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderSourceParametersFilterCriteria
 {
     /// <summary>An array of up to 5 event patterns. Detailed below.</summary>
@@ -3063,6 +3225,7 @@ public partial class V1beta1PipeStatusAtProviderSourceParametersFilterCriteria
     public IList<V1beta1PipeStatusAtProviderSourceParametersFilterCriteriaFilter>? Filter { get; set; }
 }
 
+/// <summary>Define the target queue to send dead-letter queue events to. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderSourceParametersKinesisStreamParametersDeadLetterConfig
 {
     /// <summary>The ARN of the Amazon SQS queue specified as the target for the dead-letter queue.</summary>
@@ -3070,6 +3233,7 @@ public partial class V1beta1PipeStatusAtProviderSourceParametersKinesisStreamPar
     public string? Arn { get; set; }
 }
 
+/// <summary>The parameters for using a Kinesis stream as a source. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderSourceParametersKinesisStreamParameters
 {
     /// <summary>The maximum number of records to include in each batch. Maximum value of 10000.</summary>
@@ -3109,6 +3273,7 @@ public partial class V1beta1PipeStatusAtProviderSourceParametersKinesisStreamPar
     public string? StartingPositionTimestamp { get; set; }
 }
 
+/// <summary>The credentials needed to access the resource. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderSourceParametersManagedStreamingKafkaParametersCredentials
 {
     /// <summary>The ARN of the Secrets Manager secret containing the credentials.</summary>
@@ -3120,6 +3285,7 @@ public partial class V1beta1PipeStatusAtProviderSourceParametersManagedStreaming
     public string? SaslScram512Auth { get; set; }
 }
 
+/// <summary>The parameters for using an MSK stream as a source. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderSourceParametersManagedStreamingKafkaParameters
 {
     /// <summary>The maximum number of records to include in each batch. Maximum value of 10000.</summary>
@@ -3147,6 +3313,7 @@ public partial class V1beta1PipeStatusAtProviderSourceParametersManagedStreaming
     public string? TopicName { get; set; }
 }
 
+/// <summary>The credentials needed to access the resource. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderSourceParametersRabbitmqBrokerParametersCredentials
 {
     /// <summary>The ARN of the Secrets Manager secret containing the credentials.</summary>
@@ -3154,6 +3321,7 @@ public partial class V1beta1PipeStatusAtProviderSourceParametersRabbitmqBrokerPa
     public string? BasicAuth { get; set; }
 }
 
+/// <summary>The parameters for using a Rabbit MQ broker as a source. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderSourceParametersRabbitmqBrokerParameters
 {
     /// <summary>The maximum number of records to include in each batch. Maximum value of 10000.</summary>
@@ -3177,6 +3345,7 @@ public partial class V1beta1PipeStatusAtProviderSourceParametersRabbitmqBrokerPa
     public string? VirtualHost { get; set; }
 }
 
+/// <summary>The credentials needed to access the resource. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderSourceParametersSelfManagedKafkaParametersCredentials
 {
     /// <summary>The ARN of the Secrets Manager secret containing the credentials.</summary>
@@ -3196,6 +3365,7 @@ public partial class V1beta1PipeStatusAtProviderSourceParametersSelfManagedKafka
     public string? SaslScram512Auth { get; set; }
 }
 
+/// <summary>This structure specifies the VPC subnets and security groups for the stream, and whether a public IP address is to be used. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderSourceParametersSelfManagedKafkaParametersVpc
 {
     /// <summary>List of security groups associated with the stream. These security groups must all be in the same VPC. You can specify as many as five security groups. If you do not specify a security group, the default security group for the VPC is used.</summary>
@@ -3207,6 +3377,7 @@ public partial class V1beta1PipeStatusAtProviderSourceParametersSelfManagedKafka
     public IList<string>? Subnets { get; set; }
 }
 
+/// <summary>The parameters for using a self-managed Apache Kafka stream as a source. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderSourceParametersSelfManagedKafkaParameters
 {
     /// <summary>An array of server URLs. Maximum number of 2 items, each of maximum length 300.</summary>
@@ -3246,6 +3417,7 @@ public partial class V1beta1PipeStatusAtProviderSourceParametersSelfManagedKafka
     public V1beta1PipeStatusAtProviderSourceParametersSelfManagedKafkaParametersVpc? Vpc { get; set; }
 }
 
+/// <summary>The parameters for using a Amazon SQS stream as a source. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderSourceParametersSqsQueueParameters
 {
     /// <summary>The maximum number of records to include in each batch. Maximum value of 10000.</summary>
@@ -3257,6 +3429,7 @@ public partial class V1beta1PipeStatusAtProviderSourceParametersSqsQueueParamete
     public double? MaximumBatchingWindowInSeconds { get; set; }
 }
 
+/// <summary>Parameters to configure a source for the pipe. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderSourceParameters
 {
     /// <summary>The parameters for using an Active MQ broker as a source. Detailed below.</summary>
@@ -3292,6 +3465,7 @@ public partial class V1beta1PipeStatusAtProviderSourceParameters
     public V1beta1PipeStatusAtProviderSourceParametersSqsQueueParameters? SqsQueueParameters { get; set; }
 }
 
+/// <summary>The array properties for the submitted job, such as the size of the array. The array size can be between 2 and 10,000. If you specify array properties for a job, it becomes an array job. This parameter is used only if the target is an AWS Batch job. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderTargetParametersBatchJobParametersArrayProperties
 {
     /// <summary>The size of the array, if this is an array batch job. Minimum value of 2. Maximum value of 10,000.</summary>
@@ -3299,6 +3473,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersBatchJobParamete
     public double? Size { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeStatusAtProviderTargetParametersBatchJobParametersContainerOverridesEnvironment
 {
     /// <summary>The name of the key-value pair. For environment variables, this is the name of the environment variable.</summary>
@@ -3310,6 +3485,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersBatchJobParamete
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeStatusAtProviderTargetParametersBatchJobParametersContainerOverridesResourceRequirement
 {
     /// <summary>The type of resource to assign to a container. The supported resources include GPU, MEMORY, and VCPU.</summary>
@@ -3321,6 +3497,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersBatchJobParamete
     public string? Value { get; set; }
 }
 
+/// <summary>The overrides that are sent to a container. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderTargetParametersBatchJobParametersContainerOverrides
 {
     /// <summary>List of commands to send to the container that overrides the default command from the Docker image or the task definition.</summary>
@@ -3340,6 +3517,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersBatchJobParamete
     public IList<V1beta1PipeStatusAtProviderTargetParametersBatchJobParametersContainerOverridesResourceRequirement>? ResourceRequirement { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeStatusAtProviderTargetParametersBatchJobParametersDependsOn
 {
     /// <summary>The job ID of the AWS Batch job that's associated with this dependency.</summary>
@@ -3351,6 +3529,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersBatchJobParamete
     public string? Type { get; set; }
 }
 
+/// <summary>The retry strategy to use for failed jobs. When a retry strategy is specified here, it overrides the retry strategy defined in the job definition. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderTargetParametersBatchJobParametersRetryStrategy
 {
     /// <summary>The number of times to move a job to the RUNNABLE status. If the value of attempts is greater than one, the job is retried on failure the same number of attempts as the value. Maximum value of 10.</summary>
@@ -3358,6 +3537,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersBatchJobParamete
     public double? Attempts { get; set; }
 }
 
+/// <summary>The parameters for using an AWS Batch job as a target. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderTargetParametersBatchJobParameters
 {
     /// <summary>The array properties for the submitted job, such as the size of the array. The array size can be between 2 and 10,000. If you specify array properties for a job, it becomes an array job. This parameter is used only if the target is an AWS Batch job. Detailed below.</summary>
@@ -3389,6 +3569,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersBatchJobParamete
     public V1beta1PipeStatusAtProviderTargetParametersBatchJobParametersRetryStrategy? RetryStrategy { get; set; }
 }
 
+/// <summary>The parameters for using an CloudWatch Logs log stream as a target. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderTargetParametersCloudwatchLogsParameters
 {
     /// <summary>The name of the log stream.</summary>
@@ -3400,6 +3581,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersCloudwatchLogsPa
     public string? Timestamp { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParametersCapacityProviderStrategy
 {
     /// <summary>The base value designates how many tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined. If no value is specified, the default value of 0 is used. Maximum value of 100,000.</summary>
@@ -3415,6 +3597,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParameter
     public double? Weight { get; set; }
 }
 
+/// <summary>Use this structure to specify the VPC subnets and security groups for the task, and whether a public IP address is to be used. This structure is relevant only for ECS tasks that use the awsvpc network mode. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParametersNetworkConfigurationAwsVpcConfiguration
 {
     /// <summary>Specifies whether the task's elastic network interface receives a public IP address. You can specify ENABLED only when LaunchType in EcsParameters is set to FARGATE. Valid Values: ENABLED, DISABLED.</summary>
@@ -3430,6 +3613,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParameter
     public IList<string>? Subnets { get; set; }
 }
 
+/// <summary>Use this structure if the Amazon ECS task uses the awsvpc network mode. This structure specifies the VPC subnets and security groups associated with the task, and whether a public IP address is to be used. This structure is required if LaunchType is FARGATE because the awsvpc mode is required for Fargate tasks. If you specify NetworkConfiguration when the target ECS task does not use the awsvpc network mode, the task fails. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParametersNetworkConfiguration
 {
     /// <summary>Use this structure to specify the VPC subnets and security groups for the task, and whether a public IP address is to be used. This structure is relevant only for ECS tasks that use the awsvpc network mode. Detailed below.</summary>
@@ -3437,6 +3621,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParameter
     public V1beta1PipeStatusAtProviderTargetParametersEcsTaskParametersNetworkConfigurationAwsVpcConfiguration? AwsVpcConfiguration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParametersOverridesContainerOverrideEnvironment
 {
     /// <summary>The name of the key-value pair. For environment variables, this is the name of the environment variable.</summary>
@@ -3448,6 +3633,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParameter
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParametersOverridesContainerOverrideEnvironmentFile
 {
     /// <summary>The file type to use. The only supported value is s3.</summary>
@@ -3459,6 +3645,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParameter
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParametersOverridesContainerOverrideResourceRequirement
 {
     /// <summary>The type of resource to assign to a container. The supported values are GPU or InferenceAccelerator.</summary>
@@ -3470,6 +3657,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParameter
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParametersOverridesContainerOverride
 {
     /// <summary>List of commands to send to the container that overrides the default command from the Docker image or the task definition. You must also specify a container name.</summary>
@@ -3505,6 +3693,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParameter
     public IList<V1beta1PipeStatusAtProviderTargetParametersEcsTaskParametersOverridesContainerOverrideResourceRequirement>? ResourceRequirement { get; set; }
 }
 
+/// <summary>The ephemeral storage setting override for the task.  Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParametersOverridesEphemeralStorage
 {
     /// <summary>The total amount, in GiB, of ephemeral storage to set for the task. The minimum supported value is 21 GiB and the maximum supported value is 200 GiB.</summary>
@@ -3512,6 +3701,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParameter
     public double? SizeInGib { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParametersOverridesInferenceAcceleratorOverride
 {
     /// <summary>The Elastic Inference accelerator device name to override for the task. This parameter must match a deviceName specified in the task definition.</summary>
@@ -3523,6 +3713,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParameter
     public string? DeviceType { get; set; }
 }
 
+/// <summary>The overrides that are associated with a task. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParametersOverrides
 {
     /// <summary>One or more container overrides that are sent to a task. Detailed below.</summary>
@@ -3554,6 +3745,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParameter
     public string? TaskRoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParametersPlacementConstraint
 {
     /// <summary>A cluster query language expression to apply to the constraint. You cannot specify an expression if the constraint type is distinctInstance. Maximum length of 2,000.</summary>
@@ -3565,6 +3757,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParameter
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParametersPlacementStrategy
 {
     /// <summary>The field to apply the placement strategy against. For the spread placement strategy, valid values are instanceId (or host, which has the same effect), or any platform or custom attribute that is applied to a container instance, such as attribute:ecs.availability-zone. For the binpack placement strategy, valid values are cpu and memory. For the random placement strategy, this field is not used. Maximum length of 255.</summary>
@@ -3576,6 +3769,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParameter
     public string? Type { get; set; }
 }
 
+/// <summary>The parameters for using an Amazon ECS task as a target. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParameters
 {
     /// <summary>List of capacity provider strategies to use for the task. If a capacityProviderStrategy is specified, the launchType parameter must be omitted. If no capacityProviderStrategy or launchType is specified, the defaultCapacityProviderStrategy for the cluster is used. Detailed below.</summary>
@@ -3639,6 +3833,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersEcsTaskParameter
     public string? TaskDefinitionArn { get; set; }
 }
 
+/// <summary>The parameters for using an EventBridge event bus as a target. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderTargetParametersEventbridgeEventBusParameters
 {
     /// <summary>A free-form string, with a maximum of 128 characters, used to decide what fields to expect in the event detail.</summary>
@@ -3662,6 +3857,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersEventbridgeEvent
     public string? Time { get; set; }
 }
 
+/// <summary>These are custom parameter to be used when the target is an API Gateway REST APIs or EventBridge ApiDestinations. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderTargetParametersHttpParameters
 {
     /// <summary>Key-value mapping of the headers that need to be sent as part of request invoking the API Gateway REST API or EventBridge ApiDestination. Detailed below.</summary>
@@ -3677,6 +3873,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersHttpParameters
     public IDictionary<string, string>? QueryStringParameters { get; set; }
 }
 
+/// <summary>The parameters for using a Kinesis stream as a source. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderTargetParametersKinesisStreamParameters
 {
     /// <summary>Determines which shard in the stream the data record is assigned to. Partition keys are Unicode strings with a maximum length limit of 256 characters for each key. Amazon Kinesis Data Streams uses the partition key as input to a hash function that maps the partition key and associated data to a specific shard. Specifically, an MD5 hash function is used to map partition keys to 128-bit integer values and to map associated data records to shards. As a result of this hashing mechanism, all data records with the same partition key map to the same shard within the stream.</summary>
@@ -3684,6 +3881,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersKinesisStreamPar
     public string? PartitionKey { get; set; }
 }
 
+/// <summary>The parameters for using a Lambda function as a target. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderTargetParametersLambdaFunctionParameters
 {
     /// <summary>Specify whether to invoke the function synchronously or asynchronously. Valid Values: REQUEST_RESPONSE, FIRE_AND_FORGET.</summary>
@@ -3691,6 +3889,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersLambdaFunctionPa
     public string? InvocationType { get; set; }
 }
 
+/// <summary>These are custom parameters to be used when the target is a Amazon Redshift cluster to invoke the Amazon Redshift Data API BatchExecuteStatement. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderTargetParametersRedshiftDataParameters
 {
     /// <summary>The name of the database. Required when authenticating using temporary credentials.</summary>
@@ -3718,6 +3917,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersRedshiftDataPara
     public bool? WithEvent { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeStatusAtProviderTargetParametersSagemakerPipelineParametersPipelineParameter
 {
     /// <summary>The name of the container that receives the override. This parameter is required if any override is specified.</summary>
@@ -3729,6 +3929,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersSagemakerPipelin
     public string? Value { get; set; }
 }
 
+/// <summary>The parameters for using a SageMaker pipeline as a target. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderTargetParametersSagemakerPipelineParameters
 {
     /// <summary>List of Parameter names and values for SageMaker Model Building Pipeline execution. Detailed below.</summary>
@@ -3736,6 +3937,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersSagemakerPipelin
     public IList<V1beta1PipeStatusAtProviderTargetParametersSagemakerPipelineParametersPipelineParameter>? PipelineParameter { get; set; }
 }
 
+/// <summary>The parameters for using a Amazon SQS stream as a target. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderTargetParametersSqsQueueParameters
 {
     /// <summary>This parameter applies only to FIFO (first-in-first-out) queues. The token used for deduplication of sent messages.</summary>
@@ -3747,6 +3949,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersSqsQueueParamete
     public string? MessageGroupId { get; set; }
 }
 
+/// <summary>The parameters for using a Step Functions state machine as a target. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderTargetParametersStepFunctionStateMachineParameters
 {
     /// <summary>Specify whether to invoke the function synchronously or asynchronously. Valid Values: REQUEST_RESPONSE, FIRE_AND_FORGET.</summary>
@@ -3754,6 +3957,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersStepFunctionStat
     public string? InvocationType { get; set; }
 }
 
+/// <summary>Parameters to configure a target for your pipe. Detailed below.</summary>
 public partial class V1beta1PipeStatusAtProviderTargetParameters
 {
     /// <summary>The parameters for using an AWS Batch job as a target. Detailed below.</summary>
@@ -3805,6 +4009,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParameters
     public V1beta1PipeStatusAtProviderTargetParametersStepFunctionStateMachineParameters? StepFunctionStateMachineParameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PipeStatusAtProvider
 {
     /// <summary>ARN of this pipe.</summary>
@@ -3864,6 +4069,7 @@ public partial class V1beta1PipeStatusAtProvider
     public V1beta1PipeStatusAtProviderTargetParameters? TargetParameters { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1PipeStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -3891,6 +4097,7 @@ public partial class V1beta1PipeStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>PipeStatus defines the observed state of Pipe.</summary>
 public partial class V1beta1PipeStatus
 {
     /// <summary></summary>
@@ -3907,6 +4114,7 @@ public partial class V1beta1PipeStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Pipe is the Schema for the Pipes API.</summary>
 public partial class V1beta1Pipe : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1PipeSpec>, IStatus<V1beta1PipeStatus>
 {
     public const string KubeApiVersion = "v1beta1";

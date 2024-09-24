@@ -18,6 +18,7 @@ public enum V1beta1DeviceSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1DeviceSpecForProviderAwsLocation
 {
     /// <summary>The Amazon Resource Name (ARN) of the subnet that the device is located in.</summary>
@@ -49,6 +50,7 @@ public enum V1beta1DeviceSpecForProviderGlobalNetworkIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DeviceSpecForProviderGlobalNetworkIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -62,6 +64,7 @@ public partial class V1beta1DeviceSpecForProviderGlobalNetworkIdRefPolicy
     public V1beta1DeviceSpecForProviderGlobalNetworkIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a GlobalNetwork in networkmanager to populate globalNetworkId.</summary>
 public partial class V1beta1DeviceSpecForProviderGlobalNetworkIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -93,6 +96,7 @@ public enum V1beta1DeviceSpecForProviderGlobalNetworkIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DeviceSpecForProviderGlobalNetworkIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -106,6 +110,7 @@ public partial class V1beta1DeviceSpecForProviderGlobalNetworkIdSelectorPolicy
     public V1beta1DeviceSpecForProviderGlobalNetworkIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a GlobalNetwork in networkmanager to populate globalNetworkId.</summary>
 public partial class V1beta1DeviceSpecForProviderGlobalNetworkIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1DeviceSpecForProviderGlobalNetworkIdSelector
     public V1beta1DeviceSpecForProviderGlobalNetworkIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DeviceSpecForProviderLocation
 {
     /// <summary>The physical address.</summary>
@@ -156,6 +162,7 @@ public enum V1beta1DeviceSpecForProviderSiteIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DeviceSpecForProviderSiteIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -169,6 +176,7 @@ public partial class V1beta1DeviceSpecForProviderSiteIdRefPolicy
     public V1beta1DeviceSpecForProviderSiteIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Site in networkmanager to populate siteId.</summary>
 public partial class V1beta1DeviceSpecForProviderSiteIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -200,6 +208,7 @@ public enum V1beta1DeviceSpecForProviderSiteIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DeviceSpecForProviderSiteIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -213,6 +222,7 @@ public partial class V1beta1DeviceSpecForProviderSiteIdSelectorPolicy
     public V1beta1DeviceSpecForProviderSiteIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Site in networkmanager to populate siteId.</summary>
 public partial class V1beta1DeviceSpecForProviderSiteIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -228,6 +238,7 @@ public partial class V1beta1DeviceSpecForProviderSiteIdSelector
     public V1beta1DeviceSpecForProviderSiteIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DeviceSpecForProvider
 {
     /// <summary>The AWS location of the device. Documented below.</summary>
@@ -291,6 +302,7 @@ public partial class V1beta1DeviceSpecForProvider
     public string? Vendor { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DeviceSpecInitProviderAwsLocation
 {
     /// <summary>The Amazon Resource Name (ARN) of the subnet that the device is located in.</summary>
@@ -322,6 +334,7 @@ public enum V1beta1DeviceSpecInitProviderGlobalNetworkIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DeviceSpecInitProviderGlobalNetworkIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -335,6 +348,7 @@ public partial class V1beta1DeviceSpecInitProviderGlobalNetworkIdRefPolicy
     public V1beta1DeviceSpecInitProviderGlobalNetworkIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a GlobalNetwork in networkmanager to populate globalNetworkId.</summary>
 public partial class V1beta1DeviceSpecInitProviderGlobalNetworkIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -366,6 +380,7 @@ public enum V1beta1DeviceSpecInitProviderGlobalNetworkIdSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DeviceSpecInitProviderGlobalNetworkIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -379,6 +394,7 @@ public partial class V1beta1DeviceSpecInitProviderGlobalNetworkIdSelectorPolicy
     public V1beta1DeviceSpecInitProviderGlobalNetworkIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a GlobalNetwork in networkmanager to populate globalNetworkId.</summary>
 public partial class V1beta1DeviceSpecInitProviderGlobalNetworkIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -394,6 +410,7 @@ public partial class V1beta1DeviceSpecInitProviderGlobalNetworkIdSelector
     public V1beta1DeviceSpecInitProviderGlobalNetworkIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DeviceSpecInitProviderLocation
 {
     /// <summary>The physical address.</summary>
@@ -429,6 +446,7 @@ public enum V1beta1DeviceSpecInitProviderSiteIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DeviceSpecInitProviderSiteIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -442,6 +460,7 @@ public partial class V1beta1DeviceSpecInitProviderSiteIdRefPolicy
     public V1beta1DeviceSpecInitProviderSiteIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Site in networkmanager to populate siteId.</summary>
 public partial class V1beta1DeviceSpecInitProviderSiteIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -473,6 +492,7 @@ public enum V1beta1DeviceSpecInitProviderSiteIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DeviceSpecInitProviderSiteIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -486,6 +506,7 @@ public partial class V1beta1DeviceSpecInitProviderSiteIdSelectorPolicy
     public V1beta1DeviceSpecInitProviderSiteIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Site in networkmanager to populate siteId.</summary>
 public partial class V1beta1DeviceSpecInitProviderSiteIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -501,6 +522,7 @@ public partial class V1beta1DeviceSpecInitProviderSiteIdSelector
     public V1beta1DeviceSpecInitProviderSiteIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1DeviceSpecInitProvider
 {
     /// <summary>The AWS location of the device. Documented below.</summary>
@@ -602,6 +624,7 @@ public enum V1beta1DeviceSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DeviceSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -615,6 +638,7 @@ public partial class V1beta1DeviceSpecProviderConfigRefPolicy
     public V1beta1DeviceSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1DeviceSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -646,6 +670,7 @@ public enum V1beta1DeviceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DeviceSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -659,6 +684,7 @@ public partial class V1beta1DeviceSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1DeviceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1DeviceSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -670,6 +696,7 @@ public partial class V1beta1DeviceSpecPublishConnectionDetailsToConfigRef
     public V1beta1DeviceSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1DeviceSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -685,6 +712,7 @@ public partial class V1beta1DeviceSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1DeviceSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -700,6 +728,7 @@ public partial class V1beta1DeviceSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1DeviceSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -711,6 +740,7 @@ public partial class V1beta1DeviceSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>DeviceSpec defines the desired state of Device</summary>
 public partial class V1beta1DeviceSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -743,6 +773,7 @@ public partial class V1beta1DeviceSpec
     public V1beta1DeviceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DeviceStatusAtProviderAwsLocation
 {
     /// <summary>The Amazon Resource Name (ARN) of the subnet that the device is located in.</summary>
@@ -754,6 +785,7 @@ public partial class V1beta1DeviceStatusAtProviderAwsLocation
     public string? Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DeviceStatusAtProviderLocation
 {
     /// <summary>The physical address.</summary>
@@ -769,6 +801,7 @@ public partial class V1beta1DeviceStatusAtProviderLocation
     public string? Longitude { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DeviceStatusAtProvider
 {
     /// <summary>The Amazon Resource Name (ARN) of the device.</summary>
@@ -824,6 +857,7 @@ public partial class V1beta1DeviceStatusAtProvider
     public string? Vendor { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1DeviceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -851,6 +885,7 @@ public partial class V1beta1DeviceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>DeviceStatus defines the observed state of Device.</summary>
 public partial class V1beta1DeviceStatus
 {
     /// <summary></summary>
@@ -867,6 +902,7 @@ public partial class V1beta1DeviceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Device is the Schema for the Devices API. Creates a device in a global network.</summary>
 public partial class V1beta1Device : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DeviceSpec>, IStatus<V1beta1DeviceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

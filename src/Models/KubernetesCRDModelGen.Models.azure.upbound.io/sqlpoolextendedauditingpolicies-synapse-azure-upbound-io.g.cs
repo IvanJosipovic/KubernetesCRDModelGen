@@ -38,6 +38,7 @@ public enum V1beta1SQLPoolExtendedAuditingPolicySpecForProviderSqlPoolIdRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProviderSqlPoolIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProviderSqlPoolI
     public V1beta1SQLPoolExtendedAuditingPolicySpecForProviderSqlPoolIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SQLPool in synapse to populate sqlPoolId.</summary>
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProviderSqlPoolIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1SQLPoolExtendedAuditingPolicySpecForProviderSqlPoolIdSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProviderSqlPoolIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProviderSqlPoolI
     public V1beta1SQLPoolExtendedAuditingPolicySpecForProviderSqlPoolIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SQLPool in synapse to populate sqlPoolId.</summary>
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProviderSqlPoolIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProviderSqlPoolI
     public V1beta1SQLPoolExtendedAuditingPolicySpecForProviderSqlPoolIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>The access key to use for the auditing storage account.</summary>
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProviderStorageAccountAccessKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -145,6 +150,7 @@ public enum V1beta1SQLPoolExtendedAuditingPolicySpecForProviderStorageEndpointRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProviderStorageEndpointRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -158,6 +164,7 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProviderStorageE
     public V1beta1SQLPoolExtendedAuditingPolicySpecForProviderStorageEndpointRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in storage to populate storageEndpoint.</summary>
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProviderStorageEndpointRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -189,6 +196,7 @@ public enum V1beta1SQLPoolExtendedAuditingPolicySpecForProviderStorageEndpointSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProviderStorageEndpointSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProviderStorageE
     public V1beta1SQLPoolExtendedAuditingPolicySpecForProviderStorageEndpointSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in storage to populate storageEndpoint.</summary>
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProviderStorageEndpointSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -217,6 +226,7 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProviderStorageE
     public V1beta1SQLPoolExtendedAuditingPolicySpecForProviderStorageEndpointSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProvider
 {
     /// <summary>Enable audit events to Azure Monitor? To enable server audit events to Azure Monitor, please enable its master database audit events to Azure Monitor. Defaults to true.</summary>
@@ -260,6 +270,7 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProvider
     public V1beta1SQLPoolExtendedAuditingPolicySpecForProviderStorageEndpointSelector? StorageEndpointSelector { get; set; }
 }
 
+/// <summary>The access key to use for the auditing storage account.</summary>
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecInitProviderStorageAccountAccessKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -295,6 +306,7 @@ public enum V1beta1SQLPoolExtendedAuditingPolicySpecInitProviderStorageEndpointR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecInitProviderStorageEndpointRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -308,6 +320,7 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecInitProviderStorage
     public V1beta1SQLPoolExtendedAuditingPolicySpecInitProviderStorageEndpointRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in storage to populate storageEndpoint.</summary>
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecInitProviderStorageEndpointRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -339,6 +352,7 @@ public enum V1beta1SQLPoolExtendedAuditingPolicySpecInitProviderStorageEndpointS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecInitProviderStorageEndpointSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -352,6 +366,7 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecInitProviderStorage
     public V1beta1SQLPoolExtendedAuditingPolicySpecInitProviderStorageEndpointSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in storage to populate storageEndpoint.</summary>
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecInitProviderStorageEndpointSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -367,6 +382,7 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecInitProviderStorage
     public V1beta1SQLPoolExtendedAuditingPolicySpecInitProviderStorageEndpointSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecInitProvider
 {
     /// <summary>Enable audit events to Azure Monitor? To enable server audit events to Azure Monitor, please enable its master database audit events to Azure Monitor. Defaults to true.</summary>
@@ -440,6 +456,7 @@ public enum V1beta1SQLPoolExtendedAuditingPolicySpecProviderConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -453,6 +470,7 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecProviderConfigRefPo
     public V1beta1SQLPoolExtendedAuditingPolicySpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -484,6 +502,7 @@ public enum V1beta1SQLPoolExtendedAuditingPolicySpecPublishConnectionDetailsToCo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -497,6 +516,7 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecPublishConnectionDe
     public V1beta1SQLPoolExtendedAuditingPolicySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -508,6 +528,7 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecPublishConnectionDe
     public V1beta1SQLPoolExtendedAuditingPolicySpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -523,6 +544,7 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecPublishConnectionDe
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -538,6 +560,7 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecPublishConnectionDe
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -549,6 +572,7 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecWriteConnectionSecr
     public string Namespace { get; set; }
 }
 
+/// <summary>SQLPoolExtendedAuditingPolicySpec defines the desired state of SQLPoolExtendedAuditingPolicy</summary>
 public partial class V1beta1SQLPoolExtendedAuditingPolicySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -581,6 +605,7 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpec
     public V1beta1SQLPoolExtendedAuditingPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLPoolExtendedAuditingPolicyStatusAtProvider
 {
     /// <summary>The ID of the Synapse SQL Pool Extended Auditing Policy.</summary>
@@ -608,6 +633,7 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicyStatusAtProvider
     public string? StorageEndpoint { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1SQLPoolExtendedAuditingPolicyStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -635,6 +661,7 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicyStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>SQLPoolExtendedAuditingPolicyStatus defines the observed state of SQLPoolExtendedAuditingPolicy.</summary>
 public partial class V1beta1SQLPoolExtendedAuditingPolicyStatus
 {
     /// <summary></summary>
@@ -651,6 +678,7 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>SQLPoolExtendedAuditingPolicy is the Schema for the SQLPoolExtendedAuditingPolicys API. Manages a Synapse SQL Pool Extended Auditing Policy.</summary>
 public partial class V1beta1SQLPoolExtendedAuditingPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SQLPoolExtendedAuditingPolicySpec>, IStatus<V1beta1SQLPoolExtendedAuditingPolicyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

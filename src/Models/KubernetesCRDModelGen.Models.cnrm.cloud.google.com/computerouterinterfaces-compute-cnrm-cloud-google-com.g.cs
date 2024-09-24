@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1ComputeRouterInterfaceSpecInterconnectAttachmentRef
 {
     /// <summary>Allowed value: The `name` field of a `ComputeInterconnectAttachment` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1ComputeRouterInterfaceSpecInterconnectAttachmentRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeRouterInterfaceSpecPrivateIpAddressRef
 {
     /// <summary>Allowed value: The `address` field of a `ComputeAddress` resource.</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1ComputeRouterInterfaceSpecPrivateIpAddressRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The interface the BGP peer is associated with.</summary>
 public partial class V1beta1ComputeRouterInterfaceSpecRedundantInterfaceRef
 {
     /// <summary>Allowed value: The `name` field of a `ComputeRouterInterface` resource.</summary>
@@ -53,6 +56,7 @@ public partial class V1beta1ComputeRouterInterfaceSpecRedundantInterfaceRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeRouterInterfaceSpecRouterRef
 {
     /// <summary>Allowed value: The `name` field of a `ComputeRouter` resource.</summary>
@@ -68,6 +72,7 @@ public partial class V1beta1ComputeRouterInterfaceSpecRouterRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeRouterInterfaceSpecSubnetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeSubnetwork` resource.</summary>
@@ -83,6 +88,7 @@ public partial class V1beta1ComputeRouterInterfaceSpecSubnetworkRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeRouterInterfaceSpecVpnTunnelRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeVPNTunnel` resource.</summary>
@@ -98,6 +104,7 @@ public partial class V1beta1ComputeRouterInterfaceSpecVpnTunnelRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeRouterInterfaceSpec
 {
     /// <summary></summary>
@@ -137,6 +144,7 @@ public partial class V1beta1ComputeRouterInterfaceSpec
     public V1beta1ComputeRouterInterfaceSpecVpnTunnelRef? VpnTunnelRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeRouterInterfaceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -160,6 +168,7 @@ public partial class V1beta1ComputeRouterInterfaceStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeRouterInterfaceStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -172,6 +181,7 @@ public partial class V1beta1ComputeRouterInterfaceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ComputeRouterInterface : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeRouterInterfaceSpec>, IStatus<V1beta1ComputeRouterInterfaceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -18,6 +18,7 @@ public enum V1beta1RegionAutoscalerSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionAutoscalerSpecForProviderAutoscalingPolicyCpuUtilization
 {
     /// <summary>Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1RegionAutoscalerSpecForProviderAutoscalingPolicyCpuU
     public double? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionAutoscalerSpecForProviderAutoscalingPolicyLoadBalancingUtilization
 {
     /// <summary>URL of the managed instance group that this autoscaler will scale.</summary>
@@ -36,6 +38,7 @@ public partial class V1beta1RegionAutoscalerSpecForProviderAutoscalingPolicyLoad
     public double? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionAutoscalerSpecForProviderAutoscalingPolicyMetric
 {
     /// <summary>A filter string to be used as the filter string for a Stackdriver Monitoring TimeSeries.list API call. This filter is used to select a specific TimeSeries for the purpose of autoscaling and to determine whether the metric is exporting per-instance or per-group data. You can only use the AND operator for joining selectors. You can only use direct equality comparison operator (=) without any functions for each selector. You can specify the metric in both the filter string and in the metric field. However, if specified in both places, the metric must be identical. The monitored resource type determines what kind of values are expected for the metric. If it is a gce_instance, the autoscaler expects the metric to include a separate TimeSeries for each instance in a group. In such a case, you cannot filter on resource labels. If the resource type is any other value, the autoscaler expects this metric to contain values that apply to the entire autoscaled instance group and resource label filtering can be performed to point autoscaler at the correct TimeSeries to scale upon. This is called a per-group metric for the purpose of autoscaling. If not specified, the type defaults to gce_instance. You should provide a filter that is selective enough to pick just one TimeSeries for the autoscaled group or for each of the instances (if you are using gce_instance resource type). If multiple TimeSeries are returned upon the query execution, the autoscaler will sum their respective values to obtain its scaling value.</summary>
@@ -59,6 +62,7 @@ public partial class V1beta1RegionAutoscalerSpecForProviderAutoscalingPolicyMetr
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionAutoscalerSpecForProviderAutoscalingPolicyScaleInControlMaxScaledInReplicas
 {
     /// <summary>Specifies a fixed number of VM instances. This must be a positive integer.</summary>
@@ -70,6 +74,7 @@ public partial class V1beta1RegionAutoscalerSpecForProviderAutoscalingPolicyScal
     public double? Percent { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionAutoscalerSpecForProviderAutoscalingPolicyScaleInControl
 {
     /// <summary>A nested object resource Structure is documented below.</summary>
@@ -81,6 +86,7 @@ public partial class V1beta1RegionAutoscalerSpecForProviderAutoscalingPolicyScal
     public double? TimeWindowSec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionAutoscalerSpecForProviderAutoscalingPolicyScalingSchedules
 {
     /// <summary>A description of a scaling schedule.</summary>
@@ -112,6 +118,7 @@ public partial class V1beta1RegionAutoscalerSpecForProviderAutoscalingPolicyScal
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionAutoscalerSpecForProviderAutoscalingPolicy
 {
     /// <summary>The number of seconds that the autoscaler should wait before it starts collecting information from a new instance. This prevents the autoscaler from collecting information when the instance is initializing, during which the collected usage would not be reliable. The default time autoscaler waits is 60 seconds. Virtual machine initialization times might vary because of numerous factors. We recommend that you test how long an instance may take to initialize. To do this, create an instance and time the startup process.</summary>
@@ -171,6 +178,7 @@ public enum V1beta1RegionAutoscalerSpecForProviderTargetRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionAutoscalerSpecForProviderTargetRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -184,6 +192,7 @@ public partial class V1beta1RegionAutoscalerSpecForProviderTargetRefPolicy
     public V1beta1RegionAutoscalerSpecForProviderTargetRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RegionInstanceGroupManager in compute to populate target.</summary>
 public partial class V1beta1RegionAutoscalerSpecForProviderTargetRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -215,6 +224,7 @@ public enum V1beta1RegionAutoscalerSpecForProviderTargetSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionAutoscalerSpecForProviderTargetSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -228,6 +238,7 @@ public partial class V1beta1RegionAutoscalerSpecForProviderTargetSelectorPolicy
     public V1beta1RegionAutoscalerSpecForProviderTargetSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RegionInstanceGroupManager in compute to populate target.</summary>
 public partial class V1beta1RegionAutoscalerSpecForProviderTargetSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -243,6 +254,7 @@ public partial class V1beta1RegionAutoscalerSpecForProviderTargetSelector
     public V1beta1RegionAutoscalerSpecForProviderTargetSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionAutoscalerSpecForProvider
 {
     /// <summary>The configuration parameters for the autoscaling algorithm. You can define one or more of the policies for an autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization. If none of these are specified, the default will be to autoscale based on cpuUtilization to 0.6 or 60%. Structure is documented below.</summary>
@@ -274,6 +286,7 @@ public partial class V1beta1RegionAutoscalerSpecForProvider
     public V1beta1RegionAutoscalerSpecForProviderTargetSelector? TargetSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionAutoscalerSpecInitProviderAutoscalingPolicyCpuUtilization
 {
     /// <summary>Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:</summary>
@@ -285,6 +298,7 @@ public partial class V1beta1RegionAutoscalerSpecInitProviderAutoscalingPolicyCpu
     public double? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionAutoscalerSpecInitProviderAutoscalingPolicyLoadBalancingUtilization
 {
     /// <summary>URL of the managed instance group that this autoscaler will scale.</summary>
@@ -292,6 +306,7 @@ public partial class V1beta1RegionAutoscalerSpecInitProviderAutoscalingPolicyLoa
     public double? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionAutoscalerSpecInitProviderAutoscalingPolicyMetric
 {
     /// <summary>A filter string to be used as the filter string for a Stackdriver Monitoring TimeSeries.list API call. This filter is used to select a specific TimeSeries for the purpose of autoscaling and to determine whether the metric is exporting per-instance or per-group data. You can only use the AND operator for joining selectors. You can only use direct equality comparison operator (=) without any functions for each selector. You can specify the metric in both the filter string and in the metric field. However, if specified in both places, the metric must be identical. The monitored resource type determines what kind of values are expected for the metric. If it is a gce_instance, the autoscaler expects the metric to include a separate TimeSeries for each instance in a group. In such a case, you cannot filter on resource labels. If the resource type is any other value, the autoscaler expects this metric to contain values that apply to the entire autoscaled instance group and resource label filtering can be performed to point autoscaler at the correct TimeSeries to scale upon. This is called a per-group metric for the purpose of autoscaling. If not specified, the type defaults to gce_instance. You should provide a filter that is selective enough to pick just one TimeSeries for the autoscaled group or for each of the instances (if you are using gce_instance resource type). If multiple TimeSeries are returned upon the query execution, the autoscaler will sum their respective values to obtain its scaling value.</summary>
@@ -315,6 +330,7 @@ public partial class V1beta1RegionAutoscalerSpecInitProviderAutoscalingPolicyMet
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionAutoscalerSpecInitProviderAutoscalingPolicyScaleInControlMaxScaledInReplicas
 {
     /// <summary>Specifies a fixed number of VM instances. This must be a positive integer.</summary>
@@ -326,6 +342,7 @@ public partial class V1beta1RegionAutoscalerSpecInitProviderAutoscalingPolicySca
     public double? Percent { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionAutoscalerSpecInitProviderAutoscalingPolicyScaleInControl
 {
     /// <summary>A nested object resource Structure is documented below.</summary>
@@ -337,6 +354,7 @@ public partial class V1beta1RegionAutoscalerSpecInitProviderAutoscalingPolicySca
     public double? TimeWindowSec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionAutoscalerSpecInitProviderAutoscalingPolicyScalingSchedules
 {
     /// <summary>A description of a scaling schedule.</summary>
@@ -368,6 +386,7 @@ public partial class V1beta1RegionAutoscalerSpecInitProviderAutoscalingPolicySca
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionAutoscalerSpecInitProviderAutoscalingPolicy
 {
     /// <summary>The number of seconds that the autoscaler should wait before it starts collecting information from a new instance. This prevents the autoscaler from collecting information when the instance is initializing, during which the collected usage would not be reliable. The default time autoscaler waits is 60 seconds. Virtual machine initialization times might vary because of numerous factors. We recommend that you test how long an instance may take to initialize. To do this, create an instance and time the startup process.</summary>
@@ -427,6 +446,7 @@ public enum V1beta1RegionAutoscalerSpecInitProviderTargetRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionAutoscalerSpecInitProviderTargetRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -440,6 +460,7 @@ public partial class V1beta1RegionAutoscalerSpecInitProviderTargetRefPolicy
     public V1beta1RegionAutoscalerSpecInitProviderTargetRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RegionInstanceGroupManager in compute to populate target.</summary>
 public partial class V1beta1RegionAutoscalerSpecInitProviderTargetRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -471,6 +492,7 @@ public enum V1beta1RegionAutoscalerSpecInitProviderTargetSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionAutoscalerSpecInitProviderTargetSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -484,6 +506,7 @@ public partial class V1beta1RegionAutoscalerSpecInitProviderTargetSelectorPolicy
     public V1beta1RegionAutoscalerSpecInitProviderTargetSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RegionInstanceGroupManager in compute to populate target.</summary>
 public partial class V1beta1RegionAutoscalerSpecInitProviderTargetSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -499,6 +522,7 @@ public partial class V1beta1RegionAutoscalerSpecInitProviderTargetSelector
     public V1beta1RegionAutoscalerSpecInitProviderTargetSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1RegionAutoscalerSpecInitProvider
 {
     /// <summary>The configuration parameters for the autoscaling algorithm. You can define one or more of the policies for an autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization. If none of these are specified, the default will be to autoscale based on cpuUtilization to 0.6 or 60%. Structure is documented below.</summary>
@@ -568,6 +592,7 @@ public enum V1beta1RegionAutoscalerSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionAutoscalerSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -581,6 +606,7 @@ public partial class V1beta1RegionAutoscalerSpecProviderConfigRefPolicy
     public V1beta1RegionAutoscalerSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1RegionAutoscalerSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -612,6 +638,7 @@ public enum V1beta1RegionAutoscalerSpecPublishConnectionDetailsToConfigRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionAutoscalerSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -625,6 +652,7 @@ public partial class V1beta1RegionAutoscalerSpecPublishConnectionDetailsToConfig
     public V1beta1RegionAutoscalerSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1RegionAutoscalerSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -636,6 +664,7 @@ public partial class V1beta1RegionAutoscalerSpecPublishConnectionDetailsToConfig
     public V1beta1RegionAutoscalerSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1RegionAutoscalerSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -651,6 +680,7 @@ public partial class V1beta1RegionAutoscalerSpecPublishConnectionDetailsToMetada
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1RegionAutoscalerSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -666,6 +696,7 @@ public partial class V1beta1RegionAutoscalerSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1RegionAutoscalerSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -677,6 +708,7 @@ public partial class V1beta1RegionAutoscalerSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>RegionAutoscalerSpec defines the desired state of RegionAutoscaler</summary>
 public partial class V1beta1RegionAutoscalerSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -709,6 +741,7 @@ public partial class V1beta1RegionAutoscalerSpec
     public V1beta1RegionAutoscalerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionAutoscalerStatusAtProviderAutoscalingPolicyCpuUtilization
 {
     /// <summary>Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:</summary>
@@ -720,6 +753,7 @@ public partial class V1beta1RegionAutoscalerStatusAtProviderAutoscalingPolicyCpu
     public double? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionAutoscalerStatusAtProviderAutoscalingPolicyLoadBalancingUtilization
 {
     /// <summary>URL of the managed instance group that this autoscaler will scale.</summary>
@@ -727,6 +761,7 @@ public partial class V1beta1RegionAutoscalerStatusAtProviderAutoscalingPolicyLoa
     public double? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionAutoscalerStatusAtProviderAutoscalingPolicyMetric
 {
     /// <summary>A filter string to be used as the filter string for a Stackdriver Monitoring TimeSeries.list API call. This filter is used to select a specific TimeSeries for the purpose of autoscaling and to determine whether the metric is exporting per-instance or per-group data. You can only use the AND operator for joining selectors. You can only use direct equality comparison operator (=) without any functions for each selector. You can specify the metric in both the filter string and in the metric field. However, if specified in both places, the metric must be identical. The monitored resource type determines what kind of values are expected for the metric. If it is a gce_instance, the autoscaler expects the metric to include a separate TimeSeries for each instance in a group. In such a case, you cannot filter on resource labels. If the resource type is any other value, the autoscaler expects this metric to contain values that apply to the entire autoscaled instance group and resource label filtering can be performed to point autoscaler at the correct TimeSeries to scale upon. This is called a per-group metric for the purpose of autoscaling. If not specified, the type defaults to gce_instance. You should provide a filter that is selective enough to pick just one TimeSeries for the autoscaled group or for each of the instances (if you are using gce_instance resource type). If multiple TimeSeries are returned upon the query execution, the autoscaler will sum their respective values to obtain its scaling value.</summary>
@@ -750,6 +785,7 @@ public partial class V1beta1RegionAutoscalerStatusAtProviderAutoscalingPolicyMet
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionAutoscalerStatusAtProviderAutoscalingPolicyScaleInControlMaxScaledInReplicas
 {
     /// <summary>Specifies a fixed number of VM instances. This must be a positive integer.</summary>
@@ -761,6 +797,7 @@ public partial class V1beta1RegionAutoscalerStatusAtProviderAutoscalingPolicySca
     public double? Percent { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionAutoscalerStatusAtProviderAutoscalingPolicyScaleInControl
 {
     /// <summary>A nested object resource Structure is documented below.</summary>
@@ -772,6 +809,7 @@ public partial class V1beta1RegionAutoscalerStatusAtProviderAutoscalingPolicySca
     public double? TimeWindowSec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionAutoscalerStatusAtProviderAutoscalingPolicyScalingSchedules
 {
     /// <summary>A description of a scaling schedule.</summary>
@@ -803,6 +841,7 @@ public partial class V1beta1RegionAutoscalerStatusAtProviderAutoscalingPolicySca
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionAutoscalerStatusAtProviderAutoscalingPolicy
 {
     /// <summary>The number of seconds that the autoscaler should wait before it starts collecting information from a new instance. This prevents the autoscaler from collecting information when the instance is initializing, during which the collected usage would not be reliable. The default time autoscaler waits is 60 seconds. Virtual machine initialization times might vary because of numerous factors. We recommend that you test how long an instance may take to initialize. To do this, create an instance and time the startup process.</summary>
@@ -842,6 +881,7 @@ public partial class V1beta1RegionAutoscalerStatusAtProviderAutoscalingPolicy
     public IList<V1beta1RegionAutoscalerStatusAtProviderAutoscalingPolicyScalingSchedules>? ScalingSchedules { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionAutoscalerStatusAtProvider
 {
     /// <summary>The configuration parameters for the autoscaling algorithm. You can define one or more of the policies for an autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization. If none of these are specified, the default will be to autoscale based on cpuUtilization to 0.6 or 60%. Structure is documented below.</summary>
@@ -877,6 +917,7 @@ public partial class V1beta1RegionAutoscalerStatusAtProvider
     public string? Target { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1RegionAutoscalerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -904,6 +945,7 @@ public partial class V1beta1RegionAutoscalerStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>RegionAutoscalerStatus defines the observed state of RegionAutoscaler.</summary>
 public partial class V1beta1RegionAutoscalerStatus
 {
     /// <summary></summary>
@@ -920,6 +962,7 @@ public partial class V1beta1RegionAutoscalerStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>RegionAutoscaler is the Schema for the RegionAutoscalers API. Represents an Autoscaler resource.</summary>
 public partial class V1beta1RegionAutoscaler : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1RegionAutoscalerSpec>, IStatus<V1beta1RegionAutoscalerStatus>
 {
     public const string KubeApiVersion = "v1beta1";

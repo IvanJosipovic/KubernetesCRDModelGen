@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networking.@internal.knative.dev;
+/// <summary>Spec is the desired state of the ClusterDomainClaim. More info: https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
 public partial class V1alpha1ClusterDomainClaimSpec
 {
     /// <summary>Namespace is the namespace which is allowed to create a DomainMapping using this ClusterDomainClaim's name.</summary>
@@ -16,6 +17,7 @@ public partial class V1alpha1ClusterDomainClaimSpec
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ClusterDomainClaim is a cluster-wide reservation for a particular domain name.</summary>
 public partial class V1alpha1ClusterDomainClaim : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ClusterDomainClaimSpec>
 {
     public const string KubeApiVersion = "v1alpha1";

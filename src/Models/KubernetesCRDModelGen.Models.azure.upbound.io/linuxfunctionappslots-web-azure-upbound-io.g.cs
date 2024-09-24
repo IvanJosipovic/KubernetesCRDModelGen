@@ -18,6 +18,7 @@ public enum V1beta1LinuxFunctionAppSlotSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The Client Secret for the Client ID. Cannot be used with `client_secret_setting_name`.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsActiveDirectoryClientSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsActiv
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsActiveDirectory
 {
     /// <summary>Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. Specifies a list of Allowed audience values to consider when validating JWTs issued by Azure Active Directory.</summary>
@@ -52,6 +54,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsActiv
     public string? ClientSecretSettingName { get; set; }
 }
 
+/// <summary>The App Secret of the Facebook app used for Facebook login. Cannot be specified with app_secret_setting_name. The App Secret of the Facebook app used for Facebook Login. Cannot be specified with `app_secret_setting_name`.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsFacebookAppSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -67,6 +70,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsFaceb
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsFacebook
 {
     /// <summary>The App ID of the Facebook app used for login. The App ID of the Facebook app used for login.</summary>
@@ -86,6 +90,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsFaceb
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The Client Secret of the GitHub app used for GitHub Login. Cannot be specified with `client_secret_setting_name`.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsGithubClientSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -101,6 +106,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsGithu
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsGithub
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the GitHub app used for login.</summary>
@@ -120,6 +126,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsGithu
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The client secret associated with the Google web application.  Cannot be specified with `client_secret_setting_name`.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsGoogleClientSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -135,6 +142,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsGoogl
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsGoogle
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The OpenID Connect Client ID for the Google web application.</summary>
@@ -154,6 +162,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsGoogl
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with `client_secret_setting_name`.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsMicrosoftClientSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -169,6 +178,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsMicro
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsMicrosoft
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The OAuth 2.0 client ID that was created for the app used for authentication.</summary>
@@ -188,6 +198,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsMicro
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary>The OAuth 1.0a consumer secret of the Twitter application used for sign-in. Cannot be specified with consumer_secret_setting_name. The OAuth 1.0a consumer secret of the Twitter application used for sign-in. Cannot be specified with `consumer_secret_setting_name`.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsTwitterConsumerSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -203,6 +214,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsTwitt
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsTwitter
 {
     /// <summary>The OAuth 1.0a consumer key of the Twitter application used for sign-in. The OAuth 1.0a consumer key of the Twitter application used for sign-in.</summary>
@@ -218,6 +230,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsTwitt
     public string? ConsumerSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettings
 {
     /// <summary>an active_directory block as detailed below.</summary>
@@ -281,6 +294,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettings
     public string? UnauthenticatedClientAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsV2ActiveDirectoryV2
 {
     /// <summary>The list of allowed Applications for the Default Authorisation Policy. The list of allowed Applications for the Default Authorisation Policy.</summary>
@@ -332,6 +346,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsV2Act
     public bool? WwwAuthenticationDisabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsV2AppleV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The OpenID Connect Client ID for the Apple web application.</summary>
@@ -343,6 +358,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsV2App
     public string? ClientSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsV2AzureStaticWebAppV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the Client to use to authenticate with Azure Static Web App Authentication.</summary>
@@ -350,6 +366,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsV2Azu
     public string? ClientId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsV2CustomOidcV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the Client to use to authenticate with this Custom OIDC.</summary>
@@ -373,6 +390,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsV2Cus
     public IList<string>? Scopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsV2FacebookV2
 {
     /// <summary>The App ID of the Facebook app used for login. The App ID of the Facebook app used for login.</summary>
@@ -392,6 +410,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsV2Fac
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsV2GithubV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the GitHub app used for login.</summary>
@@ -407,6 +426,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsV2Git
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsV2GoogleV2
 {
     /// <summary>Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. Specifies a list of Allowed Audiences that will be requested as part of Google Sign-In authentication.</summary>
@@ -426,6 +446,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsV2Goo
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsV2Login
 {
     /// <summary>External URLs that can be redirected to as part of logging in or logging out of the app. This is an advanced setting typically only needed by Windows Store application backends. External URLs that can be redirected to as part of logging in or logging out of the app. This is an advanced setting typically only needed by Windows Store application backends. **Note:** URLs within the current domain are always implicitly allowed.</summary>
@@ -473,6 +494,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsV2Log
     public bool? ValidateNonce { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsV2MicrosoftV2
 {
     /// <summary>Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication.</summary>
@@ -492,6 +514,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsV2Mic
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsV2TwitterV2
 {
     /// <summary>The OAuth 1.0a consumer key of the Twitter application used for sign-in. The OAuth 1.0a consumer key of the Twitter application used for sign-in.</summary>
@@ -503,6 +526,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsV2Twi
     public string? ConsumerSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsV2
 {
     /// <summary>An active_directory_v2 block as defined below.</summary>
@@ -594,6 +618,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderAuthSettingsV2
     public string? UnauthenticatedAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderBackupSchedule
 {
     /// <summary>How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and frequency_unit should be set to Day). How often the backup should be executed (e.g. for weekly backup, this should be set to `7` and `frequency_unit` should be set to `Day`).</summary>
@@ -617,6 +642,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderBackupSchedule
     public string? StartTime { get; set; }
 }
 
+/// <summary>The SAS URL to the container. The SAS URL to the container.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderBackupStorageAccountUrlSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -632,6 +658,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderBackupStorageAcco
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderBackup
 {
     /// <summary>Should this backup job be enabled? Defaults to true. Should this backup job be enabled?</summary>
@@ -651,6 +678,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderBackup
     public V1beta1LinuxFunctionAppSlotSpecForProviderBackupStorageAccountUrlSecretRef StorageAccountUrlSecretRef { get; set; }
 }
 
+/// <summary>The connection string value. The connection string value.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderConnectionStringValueSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -666,6 +694,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderConnectionStringV
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderConnectionString
 {
     /// <summary>The name which should be used for this Connection. The name which should be used for this Connection.</summary>
@@ -701,6 +730,7 @@ public enum V1beta1LinuxFunctionAppSlotSpecForProviderFunctionAppIdRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderFunctionAppIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -714,6 +744,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderFunctionAppIdRefP
     public V1beta1LinuxFunctionAppSlotSpecForProviderFunctionAppIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LinuxFunctionApp in web to populate functionAppId.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderFunctionAppIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -745,6 +776,7 @@ public enum V1beta1LinuxFunctionAppSlotSpecForProviderFunctionAppIdSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderFunctionAppIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -758,6 +790,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderFunctionAppIdSele
     public V1beta1LinuxFunctionAppSlotSpecForProviderFunctionAppIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LinuxFunctionApp in web to populate functionAppId.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderFunctionAppIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -773,6 +806,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderFunctionAppIdSele
     public V1beta1LinuxFunctionAppSlotSpecForProviderFunctionAppIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderIdentity
 {
     /// <summary>A list of User Assigned Managed Identity IDs to be assigned to this Linux Function App Slot.</summary>
@@ -784,6 +818,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigAppServiceLogs
 {
     /// <summary>The amount of disk space to use for logs. Valid values are between 25 and 100. Defaults to 35. The amount of disk space to use for logs. Valid values are between `25` and `100`.</summary>
@@ -795,6 +830,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigAppServ
     public double? RetentionPeriodDays { get; set; }
 }
 
+/// <summary>The Connection String for linking the Linux Function App to Application Insights. The Connection String for linking the Linux Function App to Application Insights.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigApplicationInsightsConnectionStringSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -810,6 +846,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigApplica
     public string Namespace { get; set; }
 }
 
+/// <summary>The Instrumentation Key for connecting the Linux Function App to Application Insights. The Instrumentation Key for connecting the Linux Function App to Application Insights.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigApplicationInsightsKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -825,6 +862,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigApplica
     public string Namespace { get; set; }
 }
 
+/// <summary>The password for the account to use to connect to the registry. The password for the account to use to connect to the registry.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigApplicationStackDockerRegistryPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -840,6 +878,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigApplica
     public string Namespace { get; set; }
 }
 
+/// <summary>The username to use for connections to the registry. The username to use for connections to the registry.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigApplicationStackDockerRegistryUsernameSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -855,6 +894,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigApplica
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigApplicationStackDocker
 {
     /// <summary>The name of the Docker image to use. The name of the Docker image to use.</summary>
@@ -878,6 +918,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigApplica
     public V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigApplicationStackDockerRegistryUsernameSecretRef? RegistryUsernameSecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigApplicationStack
 {
     /// <summary>a docker block as detailed below. A docker block</summary>
@@ -913,6 +954,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigApplica
     public bool? UseDotnetIsolatedRuntime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigCors
 {
     /// <summary>Specifies a list of origins that should be allowed to make cross-origin calls. Specifies a list of origins that should be allowed to make cross-origin calls.</summary>
@@ -924,6 +966,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigCors
     public bool? SupportCredentials { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigIpRestrictionHeaders
 {
     /// <summary>Specifies a list of Azure Front Door IDs.</summary>
@@ -963,6 +1006,7 @@ public enum V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigIpRestrictionVir
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -976,6 +1020,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigIpRestr
     public V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1007,6 +1052,7 @@ public enum V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigIpRestrictionVir
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1020,6 +1066,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigIpRestr
     public V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1035,6 +1082,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigIpRestr
     public V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigIpRestriction
 {
     /// <summary>The action to take. Possible values are Allow or Deny. Defaults to Allow. The action to take. Possible values are `Allow` or `Deny`.</summary>
@@ -1078,6 +1126,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigIpRestr
     public V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelector? VirtualNetworkSubnetIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigScmIpRestrictionHeaders
 {
     /// <summary>Specifies a list of Azure Front Door IDs.</summary>
@@ -1117,6 +1166,7 @@ public enum V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigScmIpRestriction
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1130,6 +1180,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigScmIpRe
     public V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1161,6 +1212,7 @@ public enum V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigScmIpRestriction
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1174,6 +1226,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigScmIpRe
     public V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1189,6 +1242,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigScmIpRe
     public V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigScmIpRestriction
 {
     /// <summary>The action to take. Possible values are Allow or Deny. Defaults to Allow. The action to take. Possible values are `Allow` or `Deny`.</summary>
@@ -1232,6 +1286,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigScmIpRe
     public V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelector? VirtualNetworkSubnetIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfig
 {
     /// <summary>If this Linux Web App is Always On enabled. Defaults to false. If this Linux Web App is Always On enabled. Defaults to `false`.</summary>
@@ -1379,6 +1434,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderSiteConfig
     public double? WorkerCount { get; set; }
 }
 
+/// <summary>The Access key for the storage account.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderStorageAccountAccessKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1394,6 +1450,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderStorageAccountAcc
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderStorageAccount
 {
     /// <summary>The Access key for the storage account.</summary>
@@ -1441,6 +1498,7 @@ public enum V1beta1LinuxFunctionAppSlotSpecForProviderStorageAccountNameRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderStorageAccountNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1454,6 +1512,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderStorageAccountNam
     public V1beta1LinuxFunctionAppSlotSpecForProviderStorageAccountNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in storage to populate storageAccountName.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderStorageAccountNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1485,6 +1544,7 @@ public enum V1beta1LinuxFunctionAppSlotSpecForProviderStorageAccountNameSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderStorageAccountNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1498,6 +1558,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderStorageAccountNam
     public V1beta1LinuxFunctionAppSlotSpecForProviderStorageAccountNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in storage to populate storageAccountName.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderStorageAccountNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1533,6 +1594,7 @@ public enum V1beta1LinuxFunctionAppSlotSpecForProviderVirtualNetworkSubnetIdRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderVirtualNetworkSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1546,6 +1608,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderVirtualNetworkSub
     public V1beta1LinuxFunctionAppSlotSpecForProviderVirtualNetworkSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderVirtualNetworkSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1577,6 +1640,7 @@ public enum V1beta1LinuxFunctionAppSlotSpecForProviderVirtualNetworkSubnetIdSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderVirtualNetworkSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1590,6 +1654,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderVirtualNetworkSub
     public V1beta1LinuxFunctionAppSlotSpecForProviderVirtualNetworkSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProviderVirtualNetworkSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1605,6 +1670,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProviderVirtualNetworkSub
     public V1beta1LinuxFunctionAppSlotSpecForProviderVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecForProvider
 {
     /// <summary>A map of key-value pairs for App Settings and custom values. A map of key-value pairs for [App Settings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-app-settings) and custom values.</summary>
@@ -1748,6 +1814,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecForProvider
     public bool? WebdeployPublishBasicAuthenticationEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderAuthSettingsActiveDirectory
 {
     /// <summary>Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. Specifies a list of Allowed audience values to consider when validating JWTs issued by Azure Active Directory.</summary>
@@ -1763,6 +1830,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderAuthSettingsActi
     public string? ClientSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderAuthSettingsFacebook
 {
     /// <summary>The App ID of the Facebook app used for login. The App ID of the Facebook app used for login.</summary>
@@ -1778,6 +1846,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderAuthSettingsFace
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderAuthSettingsGithub
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the GitHub app used for login.</summary>
@@ -1793,6 +1862,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderAuthSettingsGith
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderAuthSettingsGoogle
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The OpenID Connect Client ID for the Google web application.</summary>
@@ -1808,6 +1878,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderAuthSettingsGoog
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderAuthSettingsMicrosoft
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The OAuth 2.0 client ID that was created for the app used for authentication.</summary>
@@ -1823,6 +1894,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderAuthSettingsMicr
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderAuthSettingsTwitter
 {
     /// <summary>The OAuth 1.0a consumer key of the Twitter application used for sign-in. The OAuth 1.0a consumer key of the Twitter application used for sign-in.</summary>
@@ -1834,6 +1906,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderAuthSettingsTwit
     public string? ConsumerSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderAuthSettings
 {
     /// <summary>an active_directory block as detailed below.</summary>
@@ -1897,6 +1970,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderAuthSettings
     public string? UnauthenticatedClientAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderAuthSettingsV2ActiveDirectoryV2
 {
     /// <summary>The list of allowed Applications for the Default Authorisation Policy. The list of allowed Applications for the Default Authorisation Policy.</summary>
@@ -1948,6 +2022,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderAuthSettingsV2Ac
     public bool? WwwAuthenticationDisabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderAuthSettingsV2AppleV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The OpenID Connect Client ID for the Apple web application.</summary>
@@ -1959,6 +2034,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderAuthSettingsV2Ap
     public string? ClientSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderAuthSettingsV2AzureStaticWebAppV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the Client to use to authenticate with Azure Static Web App Authentication.</summary>
@@ -1966,6 +2042,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderAuthSettingsV2Az
     public string? ClientId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderAuthSettingsV2CustomOidcV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the Client to use to authenticate with this Custom OIDC.</summary>
@@ -1989,6 +2066,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderAuthSettingsV2Cu
     public IList<string>? Scopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderAuthSettingsV2FacebookV2
 {
     /// <summary>The App ID of the Facebook app used for login. The App ID of the Facebook app used for login.</summary>
@@ -2008,6 +2086,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderAuthSettingsV2Fa
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderAuthSettingsV2GithubV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the GitHub app used for login.</summary>
@@ -2023,6 +2102,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderAuthSettingsV2Gi
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderAuthSettingsV2GoogleV2
 {
     /// <summary>Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. Specifies a list of Allowed Audiences that will be requested as part of Google Sign-In authentication.</summary>
@@ -2042,6 +2122,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderAuthSettingsV2Go
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderAuthSettingsV2Login
 {
     /// <summary>External URLs that can be redirected to as part of logging in or logging out of the app. This is an advanced setting typically only needed by Windows Store application backends. External URLs that can be redirected to as part of logging in or logging out of the app. This is an advanced setting typically only needed by Windows Store application backends. **Note:** URLs within the current domain are always implicitly allowed.</summary>
@@ -2089,6 +2170,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderAuthSettingsV2Lo
     public bool? ValidateNonce { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderAuthSettingsV2MicrosoftV2
 {
     /// <summary>Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication.</summary>
@@ -2108,6 +2190,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderAuthSettingsV2Mi
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderAuthSettingsV2TwitterV2
 {
     /// <summary>The OAuth 1.0a consumer key of the Twitter application used for sign-in. The OAuth 1.0a consumer key of the Twitter application used for sign-in.</summary>
@@ -2119,6 +2202,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderAuthSettingsV2Tw
     public string? ConsumerSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderAuthSettingsV2
 {
     /// <summary>An active_directory_v2 block as defined below.</summary>
@@ -2210,6 +2294,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderAuthSettingsV2
     public string? UnauthenticatedAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderBackupSchedule
 {
     /// <summary>How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and frequency_unit should be set to Day). How often the backup should be executed (e.g. for weekly backup, this should be set to `7` and `frequency_unit` should be set to `Day`).</summary>
@@ -2233,6 +2318,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderBackupSchedule
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderBackup
 {
     /// <summary>Should this backup job be enabled? Defaults to true. Should this backup job be enabled?</summary>
@@ -2248,6 +2334,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderBackup
     public IList<V1beta1LinuxFunctionAppSlotSpecInitProviderBackupSchedule>? Schedule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderConnectionString
 {
     /// <summary>The name which should be used for this Connection. The name which should be used for this Connection.</summary>
@@ -2259,6 +2346,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderConnectionString
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderIdentity
 {
     /// <summary>A list of User Assigned Managed Identity IDs to be assigned to this Linux Function App Slot.</summary>
@@ -2270,6 +2358,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigAppServiceLogs
 {
     /// <summary>The amount of disk space to use for logs. Valid values are between 25 and 100. Defaults to 35. The amount of disk space to use for logs. Valid values are between `25` and `100`.</summary>
@@ -2281,6 +2370,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigAppSer
     public double? RetentionPeriodDays { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigApplicationStackDocker
 {
     /// <summary>The name of the Docker image to use. The name of the Docker image to use.</summary>
@@ -2296,6 +2386,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigApplic
     public string? RegistryUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigApplicationStack
 {
     /// <summary>a docker block as detailed below. A docker block</summary>
@@ -2331,6 +2422,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigApplic
     public bool? UseDotnetIsolatedRuntime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigCors
 {
     /// <summary>Specifies a list of origins that should be allowed to make cross-origin calls. Specifies a list of origins that should be allowed to make cross-origin calls.</summary>
@@ -2342,6 +2434,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigCors
     public bool? SupportCredentials { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigIpRestrictionHeaders
 {
     /// <summary>Specifies a list of Azure Front Door IDs.</summary>
@@ -2381,6 +2474,7 @@ public enum V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigIpRestrictionVi
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2394,6 +2488,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigIpRest
     public V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2425,6 +2520,7 @@ public enum V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigIpRestrictionVi
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2438,6 +2534,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigIpRest
     public V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2453,6 +2550,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigIpRest
     public V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigIpRestriction
 {
     /// <summary>The action to take. Possible values are Allow or Deny. Defaults to Allow. The action to take. Possible values are `Allow` or `Deny`.</summary>
@@ -2496,6 +2594,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigIpRest
     public V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigIpRestrictionVirtualNetworkSubnetIdSelector? VirtualNetworkSubnetIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigScmIpRestrictionHeaders
 {
     /// <summary>Specifies a list of Azure Front Door IDs.</summary>
@@ -2535,6 +2634,7 @@ public enum V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigScmIpRestrictio
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2548,6 +2648,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigScmIpR
     public V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2579,6 +2680,7 @@ public enum V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigScmIpRestrictio
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2592,6 +2694,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigScmIpR
     public V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2607,6 +2710,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigScmIpR
     public V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigScmIpRestriction
 {
     /// <summary>The action to take. Possible values are Allow or Deny. Defaults to Allow. The action to take. Possible values are `Allow` or `Deny`.</summary>
@@ -2650,6 +2754,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigScmIpR
     public V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfigScmIpRestrictionVirtualNetworkSubnetIdSelector? VirtualNetworkSubnetIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfig
 {
     /// <summary>If this Linux Web App is Always On enabled. Defaults to false. If this Linux Web App is Always On enabled. Defaults to `false`.</summary>
@@ -2789,6 +2894,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderSiteConfig
     public double? WorkerCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderStorageAccount
 {
     /// <summary>The Name of the Storage Account.</summary>
@@ -2832,6 +2938,7 @@ public enum V1beta1LinuxFunctionAppSlotSpecInitProviderStorageAccountNameRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderStorageAccountNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2845,6 +2952,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderStorageAccountNa
     public V1beta1LinuxFunctionAppSlotSpecInitProviderStorageAccountNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in storage to populate storageAccountName.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderStorageAccountNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2876,6 +2984,7 @@ public enum V1beta1LinuxFunctionAppSlotSpecInitProviderStorageAccountNameSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderStorageAccountNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2889,6 +2998,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderStorageAccountNa
     public V1beta1LinuxFunctionAppSlotSpecInitProviderStorageAccountNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in storage to populate storageAccountName.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderStorageAccountNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2924,6 +3034,7 @@ public enum V1beta1LinuxFunctionAppSlotSpecInitProviderVirtualNetworkSubnetIdRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderVirtualNetworkSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2937,6 +3048,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderVirtualNetworkSu
     public V1beta1LinuxFunctionAppSlotSpecInitProviderVirtualNetworkSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderVirtualNetworkSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2968,6 +3080,7 @@ public enum V1beta1LinuxFunctionAppSlotSpecInitProviderVirtualNetworkSubnetIdSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderVirtualNetworkSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2981,6 +3094,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderVirtualNetworkSu
     public V1beta1LinuxFunctionAppSlotSpecInitProviderVirtualNetworkSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderVirtualNetworkSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2996,6 +3110,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecInitProviderVirtualNetworkSu
     public V1beta1LinuxFunctionAppSlotSpecInitProviderVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecInitProvider
 {
     /// <summary>A map of key-value pairs for App Settings and custom values. A map of key-value pairs for [App Settings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-app-settings) and custom values.</summary>
@@ -3165,6 +3280,7 @@ public enum V1beta1LinuxFunctionAppSlotSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3178,6 +3294,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecProviderConfigRefPolicy
     public V1beta1LinuxFunctionAppSlotSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3209,6 +3326,7 @@ public enum V1beta1LinuxFunctionAppSlotSpecPublishConnectionDetailsToConfigRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3222,6 +3340,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecPublishConnectionDetailsToCo
     public V1beta1LinuxFunctionAppSlotSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3233,6 +3352,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecPublishConnectionDetailsToCo
     public V1beta1LinuxFunctionAppSlotSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -3248,6 +3368,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecPublishConnectionDetailsToMe
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -3263,6 +3384,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -3274,6 +3396,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>LinuxFunctionAppSlotSpec defines the desired state of LinuxFunctionAppSlot</summary>
 public partial class V1beta1LinuxFunctionAppSlotSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -3306,6 +3429,7 @@ public partial class V1beta1LinuxFunctionAppSlotSpec
     public V1beta1LinuxFunctionAppSlotSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderAuthSettingsActiveDirectory
 {
     /// <summary>Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. Specifies a list of Allowed audience values to consider when validating JWTs issued by Azure Active Directory.</summary>
@@ -3321,6 +3445,7 @@ public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderAuthSettingsActi
     public string? ClientSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderAuthSettingsFacebook
 {
     /// <summary>The App ID of the Facebook app used for login. The App ID of the Facebook app used for login.</summary>
@@ -3336,6 +3461,7 @@ public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderAuthSettingsFace
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderAuthSettingsGithub
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the GitHub app used for login.</summary>
@@ -3351,6 +3477,7 @@ public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderAuthSettingsGith
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderAuthSettingsGoogle
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The OpenID Connect Client ID for the Google web application.</summary>
@@ -3366,6 +3493,7 @@ public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderAuthSettingsGoog
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderAuthSettingsMicrosoft
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The OAuth 2.0 client ID that was created for the app used for authentication.</summary>
@@ -3381,6 +3509,7 @@ public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderAuthSettingsMicr
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderAuthSettingsTwitter
 {
     /// <summary>The OAuth 1.0a consumer key of the Twitter application used for sign-in. The OAuth 1.0a consumer key of the Twitter application used for sign-in.</summary>
@@ -3392,6 +3521,7 @@ public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderAuthSettingsTwit
     public string? ConsumerSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderAuthSettings
 {
     /// <summary>an active_directory block as detailed below.</summary>
@@ -3455,6 +3585,7 @@ public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderAuthSettings
     public string? UnauthenticatedClientAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderAuthSettingsV2ActiveDirectoryV2
 {
     /// <summary>The list of allowed Applications for the Default Authorisation Policy. The list of allowed Applications for the Default Authorisation Policy.</summary>
@@ -3506,6 +3637,7 @@ public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderAuthSettingsV2Ac
     public bool? WwwAuthenticationDisabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderAuthSettingsV2AppleV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The OpenID Connect Client ID for the Apple web application.</summary>
@@ -3521,6 +3653,7 @@ public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderAuthSettingsV2Ap
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderAuthSettingsV2AzureStaticWebAppV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the Client to use to authenticate with Azure Static Web App Authentication.</summary>
@@ -3528,6 +3661,7 @@ public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderAuthSettingsV2Az
     public string? ClientId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderAuthSettingsV2CustomOidcV2
 {
     /// <summary>The endpoint to make the Authorisation Request as supplied by openid_configuration_endpoint response. The endpoint to make the Authorisation Request.</summary>
@@ -3575,6 +3709,7 @@ public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderAuthSettingsV2Cu
     public string? TokenEndpoint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderAuthSettingsV2FacebookV2
 {
     /// <summary>The App ID of the Facebook app used for login. The App ID of the Facebook app used for login.</summary>
@@ -3594,6 +3729,7 @@ public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderAuthSettingsV2Fa
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderAuthSettingsV2GithubV2
 {
     /// <summary>The OAuth 2.0 client ID that was created for the app used for authentication. The ID of the GitHub app used for login.</summary>
@@ -3609,6 +3745,7 @@ public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderAuthSettingsV2Gi
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderAuthSettingsV2GoogleV2
 {
     /// <summary>Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. Specifies a list of Allowed Audiences that will be requested as part of Google Sign-In authentication.</summary>
@@ -3628,6 +3765,7 @@ public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderAuthSettingsV2Go
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderAuthSettingsV2Login
 {
     /// <summary>External URLs that can be redirected to as part of logging in or logging out of the app. This is an advanced setting typically only needed by Windows Store application backends. External URLs that can be redirected to as part of logging in or logging out of the app. This is an advanced setting typically only needed by Windows Store application backends. **Note:** URLs within the current domain are always implicitly allowed.</summary>
@@ -3675,6 +3813,7 @@ public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderAuthSettingsV2Lo
     public bool? ValidateNonce { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderAuthSettingsV2MicrosoftV2
 {
     /// <summary>Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication. Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication.</summary>
@@ -3694,6 +3833,7 @@ public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderAuthSettingsV2Mi
     public IList<string>? LoginScopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderAuthSettingsV2TwitterV2
 {
     /// <summary>The OAuth 1.0a consumer key of the Twitter application used for sign-in. The OAuth 1.0a consumer key of the Twitter application used for sign-in.</summary>
@@ -3705,6 +3845,7 @@ public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderAuthSettingsV2Tw
     public string? ConsumerSecretSettingName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderAuthSettingsV2
 {
     /// <summary>An active_directory_v2 block as defined below.</summary>
@@ -3796,6 +3937,7 @@ public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderAuthSettingsV2
     public string? UnauthenticatedAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderBackupSchedule
 {
     /// <summary>How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and frequency_unit should be set to Day). How often the backup should be executed (e.g. for weekly backup, this should be set to `7` and `frequency_unit` should be set to `Day`).</summary>
@@ -3823,6 +3965,7 @@ public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderBackupSchedule
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderBackup
 {
     /// <summary>Should this backup job be enabled? Defaults to true. Should this backup job be enabled?</summary>
@@ -3838,6 +3981,7 @@ public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderBackup
     public IList<V1beta1LinuxFunctionAppSlotStatusAtProviderBackupSchedule>? Schedule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderConnectionString
 {
     /// <summary>The name which should be used for this Connection. The name which should be used for this Connection.</summary>
@@ -3849,6 +3993,7 @@ public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderConnectionString
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderIdentity
 {
     /// <summary>A list of User Assigned Managed Identity IDs to be assigned to this Linux Function App Slot.</summary>
@@ -3868,6 +4013,7 @@ public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderSiteConfigAppServiceLogs
 {
     /// <summary>The amount of disk space to use for logs. Valid values are between 25 and 100. Defaults to 35. The amount of disk space to use for logs. Valid values are between `25` and `100`.</summary>
@@ -3879,6 +4025,7 @@ public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderSiteConfigAppSer
     public double? RetentionPeriodDays { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderSiteConfigApplicationStackDocker
 {
     /// <summary>The name of the Docker image to use. The name of the Docker image to use.</summary>
@@ -3894,6 +4041,7 @@ public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderSiteConfigApplic
     public string? RegistryUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderSiteConfigApplicationStack
 {
     /// <summary>a docker block as detailed below. A docker block</summary>
@@ -3929,6 +4077,7 @@ public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderSiteConfigApplic
     public bool? UseDotnetIsolatedRuntime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderSiteConfigCors
 {
     /// <summary>Specifies a list of origins that should be allowed to make cross-origin calls. Specifies a list of origins that should be allowed to make cross-origin calls.</summary>
@@ -3940,6 +4089,7 @@ public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderSiteConfigCors
     public bool? SupportCredentials { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderSiteConfigIpRestrictionHeaders
 {
     /// <summary>Specifies a list of Azure Front Door IDs.</summary>
@@ -3959,6 +4109,7 @@ public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderSiteConfigIpRest
     public IList<string>? XForwardedHost { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderSiteConfigIpRestriction
 {
     /// <summary>The action to take. Possible values are Allow or Deny. Defaults to Allow. The action to take. Possible values are `Allow` or `Deny`.</summary>
@@ -3994,6 +4145,7 @@ public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderSiteConfigIpRest
     public string? VirtualNetworkSubnetId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderSiteConfigScmIpRestrictionHeaders
 {
     /// <summary>Specifies a list of Azure Front Door IDs.</summary>
@@ -4013,6 +4165,7 @@ public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderSiteConfigScmIpR
     public IList<string>? XForwardedHost { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderSiteConfigScmIpRestriction
 {
     /// <summary>The action to take. Possible values are Allow or Deny. Defaults to Allow. The action to take. Possible values are `Allow` or `Deny`.</summary>
@@ -4048,6 +4201,7 @@ public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderSiteConfigScmIpR
     public string? VirtualNetworkSubnetId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderSiteConfig
 {
     /// <summary>If this Linux Web App is Always On enabled. Defaults to false. If this Linux Web App is Always On enabled. Defaults to `false`.</summary>
@@ -4199,6 +4353,7 @@ public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderSiteConfig
     public double? WorkerCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderStorageAccount
 {
     /// <summary>The Name of the Storage Account.</summary>
@@ -4222,6 +4377,7 @@ public partial class V1beta1LinuxFunctionAppSlotStatusAtProviderStorageAccount
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxFunctionAppSlotStatusAtProvider
 {
     /// <summary>A map of key-value pairs for App Settings and custom values. A map of key-value pairs for [App Settings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-app-settings) and custom values.</summary>
@@ -4369,6 +4525,7 @@ public partial class V1beta1LinuxFunctionAppSlotStatusAtProvider
     public bool? WebdeployPublishBasicAuthenticationEnabled { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1LinuxFunctionAppSlotStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -4396,6 +4553,7 @@ public partial class V1beta1LinuxFunctionAppSlotStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>LinuxFunctionAppSlotStatus defines the observed state of LinuxFunctionAppSlot.</summary>
 public partial class V1beta1LinuxFunctionAppSlotStatus
 {
     /// <summary></summary>
@@ -4412,6 +4570,7 @@ public partial class V1beta1LinuxFunctionAppSlotStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>LinuxFunctionAppSlot is the Schema for the LinuxFunctionAppSlots API. Manages a Linux Function App Slot.</summary>
 public partial class V1beta1LinuxFunctionAppSlot : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LinuxFunctionAppSlotSpec>, IStatus<V1beta1LinuxFunctionAppSlotStatus>
 {
     public const string KubeApiVersion = "v1beta1";

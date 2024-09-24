@@ -18,6 +18,7 @@ public enum V1beta1ResourceGroupCostManagementExportSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceGroupCostManagementExportSpecForProviderExportDataOptions
 {
     /// <summary>The time frame for pulling data for the query. If custom, then a specific time period must be provided. Possible values include: WeekToDate, MonthToDate, BillingMonthToDate, TheLast7Days, TheLastMonth, TheLastBillingMonth, Custom.</summary>
@@ -49,6 +50,7 @@ public enum V1beta1ResourceGroupCostManagementExportSpecForProviderExportDataSto
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ResourceGroupCostManagementExportSpecForProviderExportDataStorageLocationContainerIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -62,6 +64,7 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecForProviderExpo
     public V1beta1ResourceGroupCostManagementExportSpecForProviderExportDataStorageLocationContainerIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Container in storage to populate containerId.</summary>
 public partial class V1beta1ResourceGroupCostManagementExportSpecForProviderExportDataStorageLocationContainerIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -93,6 +96,7 @@ public enum V1beta1ResourceGroupCostManagementExportSpecForProviderExportDataSto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ResourceGroupCostManagementExportSpecForProviderExportDataStorageLocationContainerIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -106,6 +110,7 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecForProviderExpo
     public V1beta1ResourceGroupCostManagementExportSpecForProviderExportDataStorageLocationContainerIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Container in storage to populate containerId.</summary>
 public partial class V1beta1ResourceGroupCostManagementExportSpecForProviderExportDataStorageLocationContainerIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecForProviderExpo
     public V1beta1ResourceGroupCostManagementExportSpecForProviderExportDataStorageLocationContainerIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceGroupCostManagementExportSpecForProviderExportDataStorageLocation
 {
     /// <summary>The Resource Manager ID of the container where exports will be uploaded. Changing this forces a new resource to be created.</summary>
@@ -160,6 +166,7 @@ public enum V1beta1ResourceGroupCostManagementExportSpecForProviderResourceGroup
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ResourceGroupCostManagementExportSpecForProviderResourceGroupIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -173,6 +180,7 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecForProviderReso
     public V1beta1ResourceGroupCostManagementExportSpecForProviderResourceGroupIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupId.</summary>
 public partial class V1beta1ResourceGroupCostManagementExportSpecForProviderResourceGroupIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -204,6 +212,7 @@ public enum V1beta1ResourceGroupCostManagementExportSpecForProviderResourceGroup
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ResourceGroupCostManagementExportSpecForProviderResourceGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -217,6 +226,7 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecForProviderReso
     public V1beta1ResourceGroupCostManagementExportSpecForProviderResourceGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupId.</summary>
 public partial class V1beta1ResourceGroupCostManagementExportSpecForProviderResourceGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -232,6 +242,7 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecForProviderReso
     public V1beta1ResourceGroupCostManagementExportSpecForProviderResourceGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceGroupCostManagementExportSpecForProvider
 {
     /// <summary>Is the cost management export active? Default is true.</summary>
@@ -271,6 +282,7 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecForProvider
     public V1beta1ResourceGroupCostManagementExportSpecForProviderResourceGroupIdSelector? ResourceGroupIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceGroupCostManagementExportSpecInitProviderExportDataOptions
 {
     /// <summary>The time frame for pulling data for the query. If custom, then a specific time period must be provided. Possible values include: WeekToDate, MonthToDate, BillingMonthToDate, TheLast7Days, TheLastMonth, TheLastBillingMonth, Custom.</summary>
@@ -302,6 +314,7 @@ public enum V1beta1ResourceGroupCostManagementExportSpecInitProviderExportDataSt
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ResourceGroupCostManagementExportSpecInitProviderExportDataStorageLocationContainerIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -315,6 +328,7 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecInitProviderExp
     public V1beta1ResourceGroupCostManagementExportSpecInitProviderExportDataStorageLocationContainerIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Container in storage to populate containerId.</summary>
 public partial class V1beta1ResourceGroupCostManagementExportSpecInitProviderExportDataStorageLocationContainerIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -346,6 +360,7 @@ public enum V1beta1ResourceGroupCostManagementExportSpecInitProviderExportDataSt
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ResourceGroupCostManagementExportSpecInitProviderExportDataStorageLocationContainerIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -359,6 +374,7 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecInitProviderExp
     public V1beta1ResourceGroupCostManagementExportSpecInitProviderExportDataStorageLocationContainerIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Container in storage to populate containerId.</summary>
 public partial class V1beta1ResourceGroupCostManagementExportSpecInitProviderExportDataStorageLocationContainerIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -374,6 +390,7 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecInitProviderExp
     public V1beta1ResourceGroupCostManagementExportSpecInitProviderExportDataStorageLocationContainerIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceGroupCostManagementExportSpecInitProviderExportDataStorageLocation
 {
     /// <summary>The Resource Manager ID of the container where exports will be uploaded. Changing this forces a new resource to be created.</summary>
@@ -413,6 +430,7 @@ public enum V1beta1ResourceGroupCostManagementExportSpecInitProviderResourceGrou
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ResourceGroupCostManagementExportSpecInitProviderResourceGroupIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -426,6 +444,7 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecInitProviderRes
     public V1beta1ResourceGroupCostManagementExportSpecInitProviderResourceGroupIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupId.</summary>
 public partial class V1beta1ResourceGroupCostManagementExportSpecInitProviderResourceGroupIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -457,6 +476,7 @@ public enum V1beta1ResourceGroupCostManagementExportSpecInitProviderResourceGrou
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ResourceGroupCostManagementExportSpecInitProviderResourceGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -470,6 +490,7 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecInitProviderRes
     public V1beta1ResourceGroupCostManagementExportSpecInitProviderResourceGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupId.</summary>
 public partial class V1beta1ResourceGroupCostManagementExportSpecInitProviderResourceGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -485,6 +506,7 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecInitProviderRes
     public V1beta1ResourceGroupCostManagementExportSpecInitProviderResourceGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ResourceGroupCostManagementExportSpecInitProvider
 {
     /// <summary>Is the cost management export active? Default is true.</summary>
@@ -566,6 +588,7 @@ public enum V1beta1ResourceGroupCostManagementExportSpecProviderConfigRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ResourceGroupCostManagementExportSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -579,6 +602,7 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecProviderConfigR
     public V1beta1ResourceGroupCostManagementExportSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ResourceGroupCostManagementExportSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -610,6 +634,7 @@ public enum V1beta1ResourceGroupCostManagementExportSpecPublishConnectionDetails
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ResourceGroupCostManagementExportSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -623,6 +648,7 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecPublishConnecti
     public V1beta1ResourceGroupCostManagementExportSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ResourceGroupCostManagementExportSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -634,6 +660,7 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecPublishConnecti
     public V1beta1ResourceGroupCostManagementExportSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ResourceGroupCostManagementExportSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -649,6 +676,7 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecPublishConnecti
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ResourceGroupCostManagementExportSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -664,6 +692,7 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecPublishConnecti
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ResourceGroupCostManagementExportSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -675,6 +704,7 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecWriteConnection
     public string Namespace { get; set; }
 }
 
+/// <summary>ResourceGroupCostManagementExportSpec defines the desired state of ResourceGroupCostManagementExport</summary>
 public partial class V1beta1ResourceGroupCostManagementExportSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -707,6 +737,7 @@ public partial class V1beta1ResourceGroupCostManagementExportSpec
     public V1beta1ResourceGroupCostManagementExportSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceGroupCostManagementExportStatusAtProviderExportDataOptions
 {
     /// <summary>The time frame for pulling data for the query. If custom, then a specific time period must be provided. Possible values include: WeekToDate, MonthToDate, BillingMonthToDate, TheLast7Days, TheLastMonth, TheLastBillingMonth, Custom.</summary>
@@ -718,6 +749,7 @@ public partial class V1beta1ResourceGroupCostManagementExportStatusAtProviderExp
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceGroupCostManagementExportStatusAtProviderExportDataStorageLocation
 {
     /// <summary>The Resource Manager ID of the container where exports will be uploaded. Changing this forces a new resource to be created.</summary>
@@ -729,6 +761,7 @@ public partial class V1beta1ResourceGroupCostManagementExportStatusAtProviderExp
     public string? RootFolderPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceGroupCostManagementExportStatusAtProvider
 {
     /// <summary>Is the cost management export active? Default is true.</summary>
@@ -764,6 +797,7 @@ public partial class V1beta1ResourceGroupCostManagementExportStatusAtProvider
     public string? ResourceGroupId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ResourceGroupCostManagementExportStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -791,6 +825,7 @@ public partial class V1beta1ResourceGroupCostManagementExportStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ResourceGroupCostManagementExportStatus defines the observed state of ResourceGroupCostManagementExport.</summary>
 public partial class V1beta1ResourceGroupCostManagementExportStatus
 {
     /// <summary></summary>
@@ -807,6 +842,7 @@ public partial class V1beta1ResourceGroupCostManagementExportStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ResourceGroupCostManagementExport is the Schema for the ResourceGroupCostManagementExports API. Manages an Azure Cost Management Export for a Resource Group.</summary>
 public partial class V1beta1ResourceGroupCostManagementExport : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ResourceGroupCostManagementExportSpec>, IStatus<V1beta1ResourceGroupCostManagementExportStatus>
 {
     public const string KubeApiVersion = "v1beta1";

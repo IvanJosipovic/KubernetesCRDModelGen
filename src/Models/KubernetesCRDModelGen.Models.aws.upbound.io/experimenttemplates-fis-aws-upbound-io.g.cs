@@ -18,6 +18,7 @@ public enum V1beta1ExperimentTemplateSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperimentTemplateSpecForProviderActionParameter
 {
     /// <summary>Parameter name.</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1ExperimentTemplateSpecForProviderActionParameter
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperimentTemplateSpecForProviderActionTarget
 {
     /// <summary>Tag key.</summary>
@@ -40,6 +42,7 @@ public partial class V1beta1ExperimentTemplateSpecForProviderActionTarget
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperimentTemplateSpecForProviderAction
 {
     /// <summary>ID of the action. To find out what actions are supported see AWS FIS actions reference.</summary>
@@ -67,6 +70,7 @@ public partial class V1beta1ExperimentTemplateSpecForProviderAction
     public IList<V1beta1ExperimentTemplateSpecForProviderActionTarget>? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperimentTemplateSpecForProviderLogConfigurationCloudwatchLogsConfiguration
 {
     /// <summary>The Amazon Resource Name (ARN) of the destination Amazon CloudWatch Logs log group.</summary>
@@ -74,6 +78,7 @@ public partial class V1beta1ExperimentTemplateSpecForProviderLogConfigurationClo
     public string? LogGroupArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperimentTemplateSpecForProviderLogConfigurationS3Configuration
 {
     /// <summary>The name of the destination bucket.</summary>
@@ -85,6 +90,7 @@ public partial class V1beta1ExperimentTemplateSpecForProviderLogConfigurationS3C
     public string? Prefix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperimentTemplateSpecForProviderLogConfiguration
 {
     /// <summary>The configuration for experiment logging to Amazon CloudWatch Logs. See below.</summary>
@@ -120,6 +126,7 @@ public enum V1beta1ExperimentTemplateSpecForProviderRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ExperimentTemplateSpecForProviderRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -133,6 +140,7 @@ public partial class V1beta1ExperimentTemplateSpecForProviderRoleArnRefPolicy
     public V1beta1ExperimentTemplateSpecForProviderRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ExperimentTemplateSpecForProviderRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -164,6 +172,7 @@ public enum V1beta1ExperimentTemplateSpecForProviderRoleArnSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ExperimentTemplateSpecForProviderRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -177,6 +186,7 @@ public partial class V1beta1ExperimentTemplateSpecForProviderRoleArnSelectorPoli
     public V1beta1ExperimentTemplateSpecForProviderRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ExperimentTemplateSpecForProviderRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -192,6 +202,7 @@ public partial class V1beta1ExperimentTemplateSpecForProviderRoleArnSelector
     public V1beta1ExperimentTemplateSpecForProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperimentTemplateSpecForProviderStopCondition
 {
     /// <summary>Source of the condition. One of none, aws:cloudwatch:alarm.</summary>
@@ -203,6 +214,7 @@ public partial class V1beta1ExperimentTemplateSpecForProviderStopCondition
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperimentTemplateSpecForProviderTargetFilter
 {
     /// <summary>Attribute path for the filter.</summary>
@@ -214,6 +226,7 @@ public partial class V1beta1ExperimentTemplateSpecForProviderTargetFilter
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperimentTemplateSpecForProviderTargetResourceTag
 {
     /// <summary>Tag key.</summary>
@@ -225,6 +238,7 @@ public partial class V1beta1ExperimentTemplateSpecForProviderTargetResourceTag
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperimentTemplateSpecForProviderTarget
 {
     /// <summary>Filter(s) for the target. Filters can be used to select resources based on specific attributes returned by the respective describe action of the resource type. For more information, see Targets for AWS FIS. See below.</summary>
@@ -256,6 +270,7 @@ public partial class V1beta1ExperimentTemplateSpecForProviderTarget
     public string? SelectionMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperimentTemplateSpecForProvider
 {
     /// <summary>Action to be performed during an experiment. See below.</summary>
@@ -299,6 +314,7 @@ public partial class V1beta1ExperimentTemplateSpecForProvider
     public IList<V1beta1ExperimentTemplateSpecForProviderTarget>? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperimentTemplateSpecInitProviderActionParameter
 {
     /// <summary>Parameter name.</summary>
@@ -310,6 +326,7 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderActionParameter
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperimentTemplateSpecInitProviderActionTarget
 {
     /// <summary>Tag key.</summary>
@@ -321,6 +338,7 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderActionTarget
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperimentTemplateSpecInitProviderAction
 {
     /// <summary>ID of the action. To find out what actions are supported see AWS FIS actions reference.</summary>
@@ -348,6 +366,7 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderAction
     public IList<V1beta1ExperimentTemplateSpecInitProviderActionTarget>? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperimentTemplateSpecInitProviderLogConfigurationCloudwatchLogsConfiguration
 {
     /// <summary>The Amazon Resource Name (ARN) of the destination Amazon CloudWatch Logs log group.</summary>
@@ -355,6 +374,7 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderLogConfigurationCl
     public string? LogGroupArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperimentTemplateSpecInitProviderLogConfigurationS3Configuration
 {
     /// <summary>The name of the destination bucket.</summary>
@@ -366,6 +386,7 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderLogConfigurationS3
     public string? Prefix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperimentTemplateSpecInitProviderLogConfiguration
 {
     /// <summary>The configuration for experiment logging to Amazon CloudWatch Logs. See below.</summary>
@@ -401,6 +422,7 @@ public enum V1beta1ExperimentTemplateSpecInitProviderRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ExperimentTemplateSpecInitProviderRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -414,6 +436,7 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderRoleArnRefPolicy
     public V1beta1ExperimentTemplateSpecInitProviderRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ExperimentTemplateSpecInitProviderRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -445,6 +468,7 @@ public enum V1beta1ExperimentTemplateSpecInitProviderRoleArnSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ExperimentTemplateSpecInitProviderRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -458,6 +482,7 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderRoleArnSelectorPol
     public V1beta1ExperimentTemplateSpecInitProviderRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ExperimentTemplateSpecInitProviderRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -473,6 +498,7 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderRoleArnSelector
     public V1beta1ExperimentTemplateSpecInitProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperimentTemplateSpecInitProviderStopCondition
 {
     /// <summary>Source of the condition. One of none, aws:cloudwatch:alarm.</summary>
@@ -484,6 +510,7 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderStopCondition
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperimentTemplateSpecInitProviderTargetFilter
 {
     /// <summary>Attribute path for the filter.</summary>
@@ -495,6 +522,7 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderTargetFilter
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperimentTemplateSpecInitProviderTargetResourceTag
 {
     /// <summary>Tag key.</summary>
@@ -506,6 +534,7 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderTargetResourceTag
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperimentTemplateSpecInitProviderTarget
 {
     /// <summary>Filter(s) for the target. Filters can be used to select resources based on specific attributes returned by the respective describe action of the resource type. For more information, see Targets for AWS FIS. See below.</summary>
@@ -537,6 +566,7 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderTarget
     public string? SelectionMode { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ExperimentTemplateSpecInitProvider
 {
     /// <summary>Action to be performed during an experiment. See below.</summary>
@@ -618,6 +648,7 @@ public enum V1beta1ExperimentTemplateSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ExperimentTemplateSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -631,6 +662,7 @@ public partial class V1beta1ExperimentTemplateSpecProviderConfigRefPolicy
     public V1beta1ExperimentTemplateSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ExperimentTemplateSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -662,6 +694,7 @@ public enum V1beta1ExperimentTemplateSpecPublishConnectionDetailsToConfigRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ExperimentTemplateSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -675,6 +708,7 @@ public partial class V1beta1ExperimentTemplateSpecPublishConnectionDetailsToConf
     public V1beta1ExperimentTemplateSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ExperimentTemplateSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -686,6 +720,7 @@ public partial class V1beta1ExperimentTemplateSpecPublishConnectionDetailsToConf
     public V1beta1ExperimentTemplateSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ExperimentTemplateSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -701,6 +736,7 @@ public partial class V1beta1ExperimentTemplateSpecPublishConnectionDetailsToMeta
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ExperimentTemplateSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -716,6 +752,7 @@ public partial class V1beta1ExperimentTemplateSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ExperimentTemplateSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -727,6 +764,7 @@ public partial class V1beta1ExperimentTemplateSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ExperimentTemplateSpec defines the desired state of ExperimentTemplate</summary>
 public partial class V1beta1ExperimentTemplateSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -759,6 +797,7 @@ public partial class V1beta1ExperimentTemplateSpec
     public V1beta1ExperimentTemplateSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperimentTemplateStatusAtProviderActionParameter
 {
     /// <summary>Parameter name.</summary>
@@ -770,6 +809,7 @@ public partial class V1beta1ExperimentTemplateStatusAtProviderActionParameter
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperimentTemplateStatusAtProviderActionTarget
 {
     /// <summary>Tag key.</summary>
@@ -781,6 +821,7 @@ public partial class V1beta1ExperimentTemplateStatusAtProviderActionTarget
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperimentTemplateStatusAtProviderAction
 {
     /// <summary>ID of the action. To find out what actions are supported see AWS FIS actions reference.</summary>
@@ -808,6 +849,7 @@ public partial class V1beta1ExperimentTemplateStatusAtProviderAction
     public IList<V1beta1ExperimentTemplateStatusAtProviderActionTarget>? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperimentTemplateStatusAtProviderLogConfigurationCloudwatchLogsConfiguration
 {
     /// <summary>The Amazon Resource Name (ARN) of the destination Amazon CloudWatch Logs log group.</summary>
@@ -815,6 +857,7 @@ public partial class V1beta1ExperimentTemplateStatusAtProviderLogConfigurationCl
     public string? LogGroupArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperimentTemplateStatusAtProviderLogConfigurationS3Configuration
 {
     /// <summary>The name of the destination bucket.</summary>
@@ -826,6 +869,7 @@ public partial class V1beta1ExperimentTemplateStatusAtProviderLogConfigurationS3
     public string? Prefix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperimentTemplateStatusAtProviderLogConfiguration
 {
     /// <summary>The configuration for experiment logging to Amazon CloudWatch Logs. See below.</summary>
@@ -841,6 +885,7 @@ public partial class V1beta1ExperimentTemplateStatusAtProviderLogConfiguration
     public IList<V1beta1ExperimentTemplateStatusAtProviderLogConfigurationS3Configuration>? S3Configuration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperimentTemplateStatusAtProviderStopCondition
 {
     /// <summary>Source of the condition. One of none, aws:cloudwatch:alarm.</summary>
@@ -852,6 +897,7 @@ public partial class V1beta1ExperimentTemplateStatusAtProviderStopCondition
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperimentTemplateStatusAtProviderTargetFilter
 {
     /// <summary>Attribute path for the filter.</summary>
@@ -863,6 +909,7 @@ public partial class V1beta1ExperimentTemplateStatusAtProviderTargetFilter
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperimentTemplateStatusAtProviderTargetResourceTag
 {
     /// <summary>Tag key.</summary>
@@ -874,6 +921,7 @@ public partial class V1beta1ExperimentTemplateStatusAtProviderTargetResourceTag
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperimentTemplateStatusAtProviderTarget
 {
     /// <summary>Filter(s) for the target. Filters can be used to select resources based on specific attributes returned by the respective describe action of the resource type. For more information, see Targets for AWS FIS. See below.</summary>
@@ -905,6 +953,7 @@ public partial class V1beta1ExperimentTemplateStatusAtProviderTarget
     public string? SelectionMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExperimentTemplateStatusAtProvider
 {
     /// <summary>Action to be performed during an experiment. See below.</summary>
@@ -944,6 +993,7 @@ public partial class V1beta1ExperimentTemplateStatusAtProvider
     public IList<V1beta1ExperimentTemplateStatusAtProviderTarget>? Target { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ExperimentTemplateStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -971,6 +1021,7 @@ public partial class V1beta1ExperimentTemplateStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ExperimentTemplateStatus defines the observed state of ExperimentTemplate.</summary>
 public partial class V1beta1ExperimentTemplateStatus
 {
     /// <summary></summary>
@@ -987,6 +1038,7 @@ public partial class V1beta1ExperimentTemplateStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ExperimentTemplate is the Schema for the ExperimentTemplates API. Provides an FIS Experiment Template.</summary>
 public partial class V1beta1ExperimentTemplate : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ExperimentTemplateSpec>, IStatus<V1beta1ExperimentTemplateStatus>
 {
     public const string KubeApiVersion = "v1beta1";

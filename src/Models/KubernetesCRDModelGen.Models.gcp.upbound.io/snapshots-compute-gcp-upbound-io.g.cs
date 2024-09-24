@@ -18,6 +18,7 @@ public enum V1beta1SnapshotSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. Note: This property is sensitive and will not be displayed in the plan.</summary>
 public partial class V1beta1SnapshotSpecForProviderSnapshotEncryptionKeyRawKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1SnapshotSpecForProviderSnapshotEncryptionKeyRawKeySe
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SnapshotSpecForProviderSnapshotEncryptionKey
 {
     /// <summary>The name of the encryption key that is stored in Google Cloud KMS.</summary>
@@ -48,6 +50,7 @@ public partial class V1beta1SnapshotSpecForProviderSnapshotEncryptionKey
     public V1beta1SnapshotSpecForProviderSnapshotEncryptionKeyRawKeySecretRef? RawKeySecretRef { get; set; }
 }
 
+/// <summary>Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. Note: This property is sensitive and will not be displayed in the plan.</summary>
 public partial class V1beta1SnapshotSpecForProviderSourceDiskEncryptionKeyRawKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -63,6 +66,7 @@ public partial class V1beta1SnapshotSpecForProviderSourceDiskEncryptionKeyRawKey
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SnapshotSpecForProviderSourceDiskEncryptionKey
 {
     /// <summary>The service account used for the encryption request for the given KMS key. If absent, the Compute Engine Service Agent service account is used.</summary>
@@ -94,6 +98,7 @@ public enum V1beta1SnapshotSpecForProviderSourceDiskRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SnapshotSpecForProviderSourceDiskRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -107,6 +112,7 @@ public partial class V1beta1SnapshotSpecForProviderSourceDiskRefPolicy
     public V1beta1SnapshotSpecForProviderSourceDiskRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Disk in compute to populate sourceDisk.</summary>
 public partial class V1beta1SnapshotSpecForProviderSourceDiskRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -138,6 +144,7 @@ public enum V1beta1SnapshotSpecForProviderSourceDiskSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SnapshotSpecForProviderSourceDiskSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -151,6 +158,7 @@ public partial class V1beta1SnapshotSpecForProviderSourceDiskSelectorPolicy
     public V1beta1SnapshotSpecForProviderSourceDiskSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Disk in compute to populate sourceDisk.</summary>
 public partial class V1beta1SnapshotSpecForProviderSourceDiskSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -166,6 +174,7 @@ public partial class V1beta1SnapshotSpecForProviderSourceDiskSelector
     public V1beta1SnapshotSpecForProviderSourceDiskSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SnapshotSpecForProvider
 {
     /// <summary>Creates the new snapshot in the snapshot chain labeled with the specified name. The chain name must be 1-63 characters long and comply with RFC1035. This is an uncommon option only for advanced service owners who needs to create separate snapshot chains, for example, for chargeback tracking.  When you describe your snapshot resource, this field is visible only if it has a non-empty value.</summary>
@@ -213,6 +222,7 @@ public partial class V1beta1SnapshotSpecForProvider
     public string? Zone { get; set; }
 }
 
+/// <summary>Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. Note: This property is sensitive and will not be displayed in the plan.</summary>
 public partial class V1beta1SnapshotSpecInitProviderSnapshotEncryptionKeyRawKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -228,6 +238,7 @@ public partial class V1beta1SnapshotSpecInitProviderSnapshotEncryptionKeyRawKeyS
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SnapshotSpecInitProviderSnapshotEncryptionKey
 {
     /// <summary>The name of the encryption key that is stored in Google Cloud KMS.</summary>
@@ -243,6 +254,7 @@ public partial class V1beta1SnapshotSpecInitProviderSnapshotEncryptionKey
     public V1beta1SnapshotSpecInitProviderSnapshotEncryptionKeyRawKeySecretRef? RawKeySecretRef { get; set; }
 }
 
+/// <summary>Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. Note: This property is sensitive and will not be displayed in the plan.</summary>
 public partial class V1beta1SnapshotSpecInitProviderSourceDiskEncryptionKeyRawKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -258,6 +270,7 @@ public partial class V1beta1SnapshotSpecInitProviderSourceDiskEncryptionKeyRawKe
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SnapshotSpecInitProviderSourceDiskEncryptionKey
 {
     /// <summary>The service account used for the encryption request for the given KMS key. If absent, the Compute Engine Service Agent service account is used.</summary>
@@ -289,6 +302,7 @@ public enum V1beta1SnapshotSpecInitProviderSourceDiskRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SnapshotSpecInitProviderSourceDiskRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -302,6 +316,7 @@ public partial class V1beta1SnapshotSpecInitProviderSourceDiskRefPolicy
     public V1beta1SnapshotSpecInitProviderSourceDiskRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Disk in compute to populate sourceDisk.</summary>
 public partial class V1beta1SnapshotSpecInitProviderSourceDiskRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -333,6 +348,7 @@ public enum V1beta1SnapshotSpecInitProviderSourceDiskSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SnapshotSpecInitProviderSourceDiskSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -346,6 +362,7 @@ public partial class V1beta1SnapshotSpecInitProviderSourceDiskSelectorPolicy
     public V1beta1SnapshotSpecInitProviderSourceDiskSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Disk in compute to populate sourceDisk.</summary>
 public partial class V1beta1SnapshotSpecInitProviderSourceDiskSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -361,6 +378,7 @@ public partial class V1beta1SnapshotSpecInitProviderSourceDiskSelector
     public V1beta1SnapshotSpecInitProviderSourceDiskSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1SnapshotSpecInitProvider
 {
     /// <summary>Creates the new snapshot in the snapshot chain labeled with the specified name. The chain name must be 1-63 characters long and comply with RFC1035. This is an uncommon option only for advanced service owners who needs to create separate snapshot chains, for example, for chargeback tracking.  When you describe your snapshot resource, this field is visible only if it has a non-empty value.</summary>
@@ -450,6 +468,7 @@ public enum V1beta1SnapshotSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SnapshotSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -463,6 +482,7 @@ public partial class V1beta1SnapshotSpecProviderConfigRefPolicy
     public V1beta1SnapshotSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1SnapshotSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -494,6 +514,7 @@ public enum V1beta1SnapshotSpecPublishConnectionDetailsToConfigRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SnapshotSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -507,6 +528,7 @@ public partial class V1beta1SnapshotSpecPublishConnectionDetailsToConfigRefPolic
     public V1beta1SnapshotSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1SnapshotSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -518,6 +540,7 @@ public partial class V1beta1SnapshotSpecPublishConnectionDetailsToConfigRef
     public V1beta1SnapshotSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1SnapshotSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -533,6 +556,7 @@ public partial class V1beta1SnapshotSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1SnapshotSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -548,6 +572,7 @@ public partial class V1beta1SnapshotSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1SnapshotSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -559,6 +584,7 @@ public partial class V1beta1SnapshotSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>SnapshotSpec defines the desired state of Snapshot</summary>
 public partial class V1beta1SnapshotSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -591,6 +617,7 @@ public partial class V1beta1SnapshotSpec
     public V1beta1SnapshotSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SnapshotStatusAtProviderSnapshotEncryptionKey
 {
     /// <summary>The name of the encryption key that is stored in Google Cloud KMS.</summary>
@@ -606,6 +633,7 @@ public partial class V1beta1SnapshotStatusAtProviderSnapshotEncryptionKey
     public string? Sha256 { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SnapshotStatusAtProviderSourceDiskEncryptionKey
 {
     /// <summary>The service account used for the encryption request for the given KMS key. If absent, the Compute Engine Service Agent service account is used.</summary>
@@ -613,6 +641,7 @@ public partial class V1beta1SnapshotStatusAtProviderSourceDiskEncryptionKey
     public string? KmsKeyServiceAccount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SnapshotStatusAtProvider
 {
     /// <summary>Creates the new snapshot in the snapshot chain labeled with the specified name. The chain name must be 1-63 characters long and comply with RFC1035. This is an uncommon option only for advanced service owners who needs to create separate snapshot chains, for example, for chargeback tracking.  When you describe your snapshot resource, this field is visible only if it has a non-empty value.</summary>
@@ -692,6 +721,7 @@ public partial class V1beta1SnapshotStatusAtProvider
     public string? Zone { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1SnapshotStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -719,6 +749,7 @@ public partial class V1beta1SnapshotStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>SnapshotStatus defines the observed state of Snapshot.</summary>
 public partial class V1beta1SnapshotStatus
 {
     /// <summary></summary>
@@ -735,6 +766,7 @@ public partial class V1beta1SnapshotStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Snapshot is the Schema for the Snapshots API. Represents a Persistent Disk Snapshot resource.</summary>
 public partial class V1beta1Snapshot : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SnapshotSpec>, IStatus<V1beta1SnapshotStatus>
 {
     public const string KubeApiVersion = "v1beta1";

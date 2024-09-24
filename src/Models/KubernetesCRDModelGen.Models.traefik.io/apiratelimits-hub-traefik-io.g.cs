@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.hub.traefik.io;
+/// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1APIRateLimitSpecApiSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1APIRateLimitSpecApiSelectorMatchExpressions
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>APISelector selects the APIs that will be rate limited. Multiple APIRateLimits can select the same set of APIs. This field is optional and follows standard label selector semantics. An empty APISelector matches any API.</summary>
 public partial class V1alpha1APIRateLimitSpecApiSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -34,6 +36,7 @@ public partial class V1alpha1APIRateLimitSpecApiSelector
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>APIReference references an API.</summary>
 public partial class V1alpha1APIRateLimitSpecApis
 {
     /// <summary>Name of the API.</summary>
@@ -51,6 +54,7 @@ public enum V1alpha1APIRateLimitSpecStrategyEnum
     Distributed
 }
 
+/// <summary>The desired behavior of this APIRateLimit.</summary>
 public partial class V1alpha1APIRateLimitSpec
 {
     /// <summary>APISelector selects the APIs that will be rate limited. Multiple APIRateLimits can select the same set of APIs. This field is optional and follows standard label selector semantics. An empty APISelector matches any API.</summary>
@@ -83,6 +87,7 @@ public partial class V1alpha1APIRateLimitSpec
     public V1alpha1APIRateLimitSpecStrategyEnum? Strategy { get; set; }
 }
 
+/// <summary>The current status of this APIRateLimit.</summary>
 public partial class V1alpha1APIRateLimitStatus
 {
     /// <summary>Hash is a hash representing the APIRateLimit.</summary>
@@ -99,6 +104,7 @@ public partial class V1alpha1APIRateLimitStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>APIRateLimit defines how group of consumers are rate limited on a set of APIs.</summary>
 public partial class V1alpha1APIRateLimit : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1APIRateLimitSpec>, IStatus<V1alpha1APIRateLimitStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

@@ -18,6 +18,7 @@ public enum V1beta1EcsClusterLayerSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1EcsClusterLayerSpecForProviderCloudwatchConfigurationLogStreams
 {
     /// <summary></summary>
@@ -65,6 +66,7 @@ public partial class V1beta1EcsClusterLayerSpecForProviderCloudwatchConfiguratio
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EcsClusterLayerSpecForProviderCloudwatchConfiguration
 {
     /// <summary></summary>
@@ -96,6 +98,7 @@ public enum V1beta1EcsClusterLayerSpecForProviderCustomSecurityGroupIdRefsPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EcsClusterLayerSpecForProviderCustomSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -109,6 +112,7 @@ public partial class V1beta1EcsClusterLayerSpecForProviderCustomSecurityGroupIdR
     public V1beta1EcsClusterLayerSpecForProviderCustomSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1EcsClusterLayerSpecForProviderCustomSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -140,6 +144,7 @@ public enum V1beta1EcsClusterLayerSpecForProviderCustomSecurityGroupIdSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EcsClusterLayerSpecForProviderCustomSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -153,6 +158,7 @@ public partial class V1beta1EcsClusterLayerSpecForProviderCustomSecurityGroupIdS
     public V1beta1EcsClusterLayerSpecForProviderCustomSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate customSecurityGroupIds.</summary>
 public partial class V1beta1EcsClusterLayerSpecForProviderCustomSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -168,6 +174,7 @@ public partial class V1beta1EcsClusterLayerSpecForProviderCustomSecurityGroupIdS
     public V1beta1EcsClusterLayerSpecForProviderCustomSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EcsClusterLayerSpecForProviderEbsVolume
 {
     /// <summary></summary>
@@ -219,6 +226,7 @@ public enum V1beta1EcsClusterLayerSpecForProviderEcsClusterArnRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EcsClusterLayerSpecForProviderEcsClusterArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -232,6 +240,7 @@ public partial class V1beta1EcsClusterLayerSpecForProviderEcsClusterArnRefPolicy
     public V1beta1EcsClusterLayerSpecForProviderEcsClusterArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in ecs to populate ecsClusterArn.</summary>
 public partial class V1beta1EcsClusterLayerSpecForProviderEcsClusterArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -263,6 +272,7 @@ public enum V1beta1EcsClusterLayerSpecForProviderEcsClusterArnSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EcsClusterLayerSpecForProviderEcsClusterArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -276,6 +286,7 @@ public partial class V1beta1EcsClusterLayerSpecForProviderEcsClusterArnSelectorP
     public V1beta1EcsClusterLayerSpecForProviderEcsClusterArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in ecs to populate ecsClusterArn.</summary>
 public partial class V1beta1EcsClusterLayerSpecForProviderEcsClusterArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -291,6 +302,7 @@ public partial class V1beta1EcsClusterLayerSpecForProviderEcsClusterArnSelector
     public V1beta1EcsClusterLayerSpecForProviderEcsClusterArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EcsClusterLayerSpecForProviderLoadBasedAutoScalingDownscaling
 {
     /// <summary></summary>
@@ -322,6 +334,7 @@ public partial class V1beta1EcsClusterLayerSpecForProviderLoadBasedAutoScalingDo
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EcsClusterLayerSpecForProviderLoadBasedAutoScalingUpscaling
 {
     /// <summary></summary>
@@ -353,6 +366,7 @@ public partial class V1beta1EcsClusterLayerSpecForProviderLoadBasedAutoScalingUp
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EcsClusterLayerSpecForProviderLoadBasedAutoScaling
 {
     /// <summary></summary>
@@ -388,6 +402,7 @@ public enum V1beta1EcsClusterLayerSpecForProviderStackIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EcsClusterLayerSpecForProviderStackIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -401,6 +416,7 @@ public partial class V1beta1EcsClusterLayerSpecForProviderStackIdRefPolicy
     public V1beta1EcsClusterLayerSpecForProviderStackIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Stack in opsworks to populate stackId.</summary>
 public partial class V1beta1EcsClusterLayerSpecForProviderStackIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -432,6 +448,7 @@ public enum V1beta1EcsClusterLayerSpecForProviderStackIdSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EcsClusterLayerSpecForProviderStackIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -445,6 +462,7 @@ public partial class V1beta1EcsClusterLayerSpecForProviderStackIdSelectorPolicy
     public V1beta1EcsClusterLayerSpecForProviderStackIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Stack in opsworks to populate stackId.</summary>
 public partial class V1beta1EcsClusterLayerSpecForProviderStackIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -460,6 +478,7 @@ public partial class V1beta1EcsClusterLayerSpecForProviderStackIdSelector
     public V1beta1EcsClusterLayerSpecForProviderStackIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EcsClusterLayerSpecForProvider
 {
     /// <summary>Whether to automatically assign an elastic IP address to the layer's instances.</summary>
@@ -583,6 +602,7 @@ public partial class V1beta1EcsClusterLayerSpecForProvider
     public bool? UseEbsOptimizedInstances { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EcsClusterLayerSpecInitProviderCloudwatchConfigurationLogStreams
 {
     /// <summary></summary>
@@ -630,6 +650,7 @@ public partial class V1beta1EcsClusterLayerSpecInitProviderCloudwatchConfigurati
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EcsClusterLayerSpecInitProviderCloudwatchConfiguration
 {
     /// <summary></summary>
@@ -661,6 +682,7 @@ public enum V1beta1EcsClusterLayerSpecInitProviderCustomSecurityGroupIdRefsPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EcsClusterLayerSpecInitProviderCustomSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -674,6 +696,7 @@ public partial class V1beta1EcsClusterLayerSpecInitProviderCustomSecurityGroupId
     public V1beta1EcsClusterLayerSpecInitProviderCustomSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1EcsClusterLayerSpecInitProviderCustomSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -705,6 +728,7 @@ public enum V1beta1EcsClusterLayerSpecInitProviderCustomSecurityGroupIdSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EcsClusterLayerSpecInitProviderCustomSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -718,6 +742,7 @@ public partial class V1beta1EcsClusterLayerSpecInitProviderCustomSecurityGroupId
     public V1beta1EcsClusterLayerSpecInitProviderCustomSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate customSecurityGroupIds.</summary>
 public partial class V1beta1EcsClusterLayerSpecInitProviderCustomSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -733,6 +758,7 @@ public partial class V1beta1EcsClusterLayerSpecInitProviderCustomSecurityGroupId
     public V1beta1EcsClusterLayerSpecInitProviderCustomSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EcsClusterLayerSpecInitProviderEbsVolume
 {
     /// <summary></summary>
@@ -784,6 +810,7 @@ public enum V1beta1EcsClusterLayerSpecInitProviderEcsClusterArnRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EcsClusterLayerSpecInitProviderEcsClusterArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -797,6 +824,7 @@ public partial class V1beta1EcsClusterLayerSpecInitProviderEcsClusterArnRefPolic
     public V1beta1EcsClusterLayerSpecInitProviderEcsClusterArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in ecs to populate ecsClusterArn.</summary>
 public partial class V1beta1EcsClusterLayerSpecInitProviderEcsClusterArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -828,6 +856,7 @@ public enum V1beta1EcsClusterLayerSpecInitProviderEcsClusterArnSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EcsClusterLayerSpecInitProviderEcsClusterArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -841,6 +870,7 @@ public partial class V1beta1EcsClusterLayerSpecInitProviderEcsClusterArnSelector
     public V1beta1EcsClusterLayerSpecInitProviderEcsClusterArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in ecs to populate ecsClusterArn.</summary>
 public partial class V1beta1EcsClusterLayerSpecInitProviderEcsClusterArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -856,6 +886,7 @@ public partial class V1beta1EcsClusterLayerSpecInitProviderEcsClusterArnSelector
     public V1beta1EcsClusterLayerSpecInitProviderEcsClusterArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EcsClusterLayerSpecInitProviderLoadBasedAutoScalingDownscaling
 {
     /// <summary></summary>
@@ -887,6 +918,7 @@ public partial class V1beta1EcsClusterLayerSpecInitProviderLoadBasedAutoScalingD
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EcsClusterLayerSpecInitProviderLoadBasedAutoScalingUpscaling
 {
     /// <summary></summary>
@@ -918,6 +950,7 @@ public partial class V1beta1EcsClusterLayerSpecInitProviderLoadBasedAutoScalingU
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EcsClusterLayerSpecInitProviderLoadBasedAutoScaling
 {
     /// <summary></summary>
@@ -953,6 +986,7 @@ public enum V1beta1EcsClusterLayerSpecInitProviderStackIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EcsClusterLayerSpecInitProviderStackIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -966,6 +1000,7 @@ public partial class V1beta1EcsClusterLayerSpecInitProviderStackIdRefPolicy
     public V1beta1EcsClusterLayerSpecInitProviderStackIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Stack in opsworks to populate stackId.</summary>
 public partial class V1beta1EcsClusterLayerSpecInitProviderStackIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -997,6 +1032,7 @@ public enum V1beta1EcsClusterLayerSpecInitProviderStackIdSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EcsClusterLayerSpecInitProviderStackIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1010,6 +1046,7 @@ public partial class V1beta1EcsClusterLayerSpecInitProviderStackIdSelectorPolicy
     public V1beta1EcsClusterLayerSpecInitProviderStackIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Stack in opsworks to populate stackId.</summary>
 public partial class V1beta1EcsClusterLayerSpecInitProviderStackIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1025,6 +1062,7 @@ public partial class V1beta1EcsClusterLayerSpecInitProviderStackIdSelector
     public V1beta1EcsClusterLayerSpecInitProviderStackIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1EcsClusterLayerSpecInitProvider
 {
     /// <summary>Whether to automatically assign an elastic IP address to the layer's instances.</summary>
@@ -1190,6 +1228,7 @@ public enum V1beta1EcsClusterLayerSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EcsClusterLayerSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1203,6 +1242,7 @@ public partial class V1beta1EcsClusterLayerSpecProviderConfigRefPolicy
     public V1beta1EcsClusterLayerSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1EcsClusterLayerSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1234,6 +1274,7 @@ public enum V1beta1EcsClusterLayerSpecPublishConnectionDetailsToConfigRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EcsClusterLayerSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1247,6 +1288,7 @@ public partial class V1beta1EcsClusterLayerSpecPublishConnectionDetailsToConfigR
     public V1beta1EcsClusterLayerSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1EcsClusterLayerSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1258,6 +1300,7 @@ public partial class V1beta1EcsClusterLayerSpecPublishConnectionDetailsToConfigR
     public V1beta1EcsClusterLayerSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1EcsClusterLayerSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1273,6 +1316,7 @@ public partial class V1beta1EcsClusterLayerSpecPublishConnectionDetailsToMetadat
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1EcsClusterLayerSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1288,6 +1332,7 @@ public partial class V1beta1EcsClusterLayerSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1EcsClusterLayerSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1299,6 +1344,7 @@ public partial class V1beta1EcsClusterLayerSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>EcsClusterLayerSpec defines the desired state of EcsClusterLayer</summary>
 public partial class V1beta1EcsClusterLayerSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1331,6 +1377,7 @@ public partial class V1beta1EcsClusterLayerSpec
     public V1beta1EcsClusterLayerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EcsClusterLayerStatusAtProviderCloudwatchConfigurationLogStreams
 {
     /// <summary></summary>
@@ -1378,6 +1425,7 @@ public partial class V1beta1EcsClusterLayerStatusAtProviderCloudwatchConfigurati
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EcsClusterLayerStatusAtProviderCloudwatchConfiguration
 {
     /// <summary></summary>
@@ -1389,6 +1437,7 @@ public partial class V1beta1EcsClusterLayerStatusAtProviderCloudwatchConfigurati
     public IList<V1beta1EcsClusterLayerStatusAtProviderCloudwatchConfigurationLogStreams>? LogStreams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EcsClusterLayerStatusAtProviderEbsVolume
 {
     /// <summary></summary>
@@ -1420,6 +1469,7 @@ public partial class V1beta1EcsClusterLayerStatusAtProviderEbsVolume
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EcsClusterLayerStatusAtProviderLoadBasedAutoScalingDownscaling
 {
     /// <summary></summary>
@@ -1451,6 +1501,7 @@ public partial class V1beta1EcsClusterLayerStatusAtProviderLoadBasedAutoScalingD
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EcsClusterLayerStatusAtProviderLoadBasedAutoScalingUpscaling
 {
     /// <summary></summary>
@@ -1482,6 +1533,7 @@ public partial class V1beta1EcsClusterLayerStatusAtProviderLoadBasedAutoScalingU
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EcsClusterLayerStatusAtProviderLoadBasedAutoScaling
 {
     /// <summary></summary>
@@ -1497,6 +1549,7 @@ public partial class V1beta1EcsClusterLayerStatusAtProviderLoadBasedAutoScaling
     public IList<V1beta1EcsClusterLayerStatusAtProviderLoadBasedAutoScalingUpscaling>? Upscaling { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EcsClusterLayerStatusAtProvider
 {
     /// <summary>The Amazon Resource Name(ARN) of the layer.</summary>
@@ -1608,6 +1661,7 @@ public partial class V1beta1EcsClusterLayerStatusAtProvider
     public bool? UseEbsOptimizedInstances { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1EcsClusterLayerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1635,6 +1689,7 @@ public partial class V1beta1EcsClusterLayerStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>EcsClusterLayerStatus defines the observed state of EcsClusterLayer.</summary>
 public partial class V1beta1EcsClusterLayerStatus
 {
     /// <summary></summary>
@@ -1651,6 +1706,7 @@ public partial class V1beta1EcsClusterLayerStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>EcsClusterLayer is the Schema for the EcsClusterLayers API. Provides an OpsWorks HAProxy layer resource.</summary>
 public partial class V1beta1EcsClusterLayer : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1EcsClusterLayerSpec>, IStatus<V1beta1EcsClusterLayerStatus>
 {
     public const string KubeApiVersion = "v1beta1";

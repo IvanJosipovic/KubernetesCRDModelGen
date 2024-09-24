@@ -18,6 +18,7 @@ public enum V1beta1VPNServerConfigurationSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNServerConfigurationSpecForProviderAzureActiveDirectoryAuthentication
 {
     /// <summary>The Audience which should be used for authentication.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1VPNServerConfigurationSpecForProviderAzureActiveDire
     public string? Tenant { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNServerConfigurationSpecForProviderClientRevokedCertificate
 {
     /// <summary>A name used to uniquely identify this certificate.</summary>
@@ -44,6 +46,7 @@ public partial class V1beta1VPNServerConfigurationSpecForProviderClientRevokedCe
     public string? Thumbprint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNServerConfigurationSpecForProviderClientRootCertificate
 {
     /// <summary>A name used to uniquely identify this certificate.</summary>
@@ -55,6 +58,7 @@ public partial class V1beta1VPNServerConfigurationSpecForProviderClientRootCerti
     public string? PublicCertData { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNServerConfigurationSpecForProviderIpsecPolicy
 {
     /// <summary>The DH Group, used in IKE Phase 1. Possible values include DHGroup1, DHGroup2, DHGroup14, DHGroup24, DHGroup2048, ECP256, ECP384 and None.</summary>
@@ -90,6 +94,7 @@ public partial class V1beta1VPNServerConfigurationSpecForProviderIpsecPolicy
     public double? SaLifetimeSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNServerConfigurationSpecForProviderRadiusClientRootCertificate
 {
     /// <summary>A name used to uniquely identify this certificate.</summary>
@@ -101,6 +106,7 @@ public partial class V1beta1VPNServerConfigurationSpecForProviderRadiusClientRoo
     public string? Thumbprint { get; set; }
 }
 
+/// <summary>The Secret used to communicate with the Radius Server.</summary>
 public partial class V1beta1VPNServerConfigurationSpecForProviderRadiusServerSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -116,6 +122,7 @@ public partial class V1beta1VPNServerConfigurationSpecForProviderRadiusServerSec
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNServerConfigurationSpecForProviderRadiusServer
 {
     /// <summary>The Address of the Radius Server.</summary>
@@ -131,6 +138,7 @@ public partial class V1beta1VPNServerConfigurationSpecForProviderRadiusServer
     public V1beta1VPNServerConfigurationSpecForProviderRadiusServerSecretSecretRef SecretSecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNServerConfigurationSpecForProviderRadiusServerRootCertificate
 {
     /// <summary>A name used to uniquely identify this certificate.</summary>
@@ -142,6 +150,7 @@ public partial class V1beta1VPNServerConfigurationSpecForProviderRadiusServerRoo
     public string? PublicCertData { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNServerConfigurationSpecForProviderRadius
 {
     /// <summary>One or more client_root_certificate blocks as defined below.</summary>
@@ -177,6 +186,7 @@ public enum V1beta1VPNServerConfigurationSpecForProviderResourceGroupNameRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPNServerConfigurationSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -190,6 +200,7 @@ public partial class V1beta1VPNServerConfigurationSpecForProviderResourceGroupNa
     public V1beta1VPNServerConfigurationSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1VPNServerConfigurationSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -221,6 +232,7 @@ public enum V1beta1VPNServerConfigurationSpecForProviderResourceGroupNameSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VPNServerConfigurationSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -234,6 +246,7 @@ public partial class V1beta1VPNServerConfigurationSpecForProviderResourceGroupNa
     public V1beta1VPNServerConfigurationSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1VPNServerConfigurationSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -249,6 +262,7 @@ public partial class V1beta1VPNServerConfigurationSpecForProviderResourceGroupNa
     public V1beta1VPNServerConfigurationSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNServerConfigurationSpecForProvider
 {
     /// <summary>A azure_active_directory_authentication block as defined below.</summary>
@@ -300,6 +314,7 @@ public partial class V1beta1VPNServerConfigurationSpecForProvider
     public IList<string>? VpnProtocols { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNServerConfigurationSpecInitProviderAzureActiveDirectoryAuthentication
 {
     /// <summary>The Audience which should be used for authentication.</summary>
@@ -315,6 +330,7 @@ public partial class V1beta1VPNServerConfigurationSpecInitProviderAzureActiveDir
     public string? Tenant { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNServerConfigurationSpecInitProviderClientRevokedCertificate
 {
     /// <summary>A name used to uniquely identify this certificate.</summary>
@@ -326,6 +342,7 @@ public partial class V1beta1VPNServerConfigurationSpecInitProviderClientRevokedC
     public string? Thumbprint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNServerConfigurationSpecInitProviderClientRootCertificate
 {
     /// <summary>A name used to uniquely identify this certificate.</summary>
@@ -337,6 +354,7 @@ public partial class V1beta1VPNServerConfigurationSpecInitProviderClientRootCert
     public string? PublicCertData { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNServerConfigurationSpecInitProviderIpsecPolicy
 {
     /// <summary>The DH Group, used in IKE Phase 1. Possible values include DHGroup1, DHGroup2, DHGroup14, DHGroup24, DHGroup2048, ECP256, ECP384 and None.</summary>
@@ -372,6 +390,7 @@ public partial class V1beta1VPNServerConfigurationSpecInitProviderIpsecPolicy
     public double? SaLifetimeSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNServerConfigurationSpecInitProviderRadiusClientRootCertificate
 {
     /// <summary>A name used to uniquely identify this certificate.</summary>
@@ -383,6 +402,7 @@ public partial class V1beta1VPNServerConfigurationSpecInitProviderRadiusClientRo
     public string? Thumbprint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNServerConfigurationSpecInitProviderRadiusServer
 {
     /// <summary>The Address of the Radius Server.</summary>
@@ -394,6 +414,7 @@ public partial class V1beta1VPNServerConfigurationSpecInitProviderRadiusServer
     public double? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNServerConfigurationSpecInitProviderRadiusServerRootCertificate
 {
     /// <summary>A name used to uniquely identify this certificate.</summary>
@@ -405,6 +426,7 @@ public partial class V1beta1VPNServerConfigurationSpecInitProviderRadiusServerRo
     public string? PublicCertData { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNServerConfigurationSpecInitProviderRadius
 {
     /// <summary>One or more client_root_certificate blocks as defined below.</summary>
@@ -420,6 +442,7 @@ public partial class V1beta1VPNServerConfigurationSpecInitProviderRadius
     public IList<V1beta1VPNServerConfigurationSpecInitProviderRadiusServerRootCertificate>? ServerRootCertificate { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1VPNServerConfigurationSpecInitProvider
 {
     /// <summary>A azure_active_directory_authentication block as defined below.</summary>
@@ -501,6 +524,7 @@ public enum V1beta1VPNServerConfigurationSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPNServerConfigurationSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -514,6 +538,7 @@ public partial class V1beta1VPNServerConfigurationSpecProviderConfigRefPolicy
     public V1beta1VPNServerConfigurationSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1VPNServerConfigurationSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -545,6 +570,7 @@ public enum V1beta1VPNServerConfigurationSpecPublishConnectionDetailsToConfigRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPNServerConfigurationSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -558,6 +584,7 @@ public partial class V1beta1VPNServerConfigurationSpecPublishConnectionDetailsTo
     public V1beta1VPNServerConfigurationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1VPNServerConfigurationSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -569,6 +596,7 @@ public partial class V1beta1VPNServerConfigurationSpecPublishConnectionDetailsTo
     public V1beta1VPNServerConfigurationSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1VPNServerConfigurationSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -584,6 +612,7 @@ public partial class V1beta1VPNServerConfigurationSpecPublishConnectionDetailsTo
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1VPNServerConfigurationSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -599,6 +628,7 @@ public partial class V1beta1VPNServerConfigurationSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1VPNServerConfigurationSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -610,6 +640,7 @@ public partial class V1beta1VPNServerConfigurationSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>VPNServerConfigurationSpec defines the desired state of VPNServerConfiguration</summary>
 public partial class V1beta1VPNServerConfigurationSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -642,6 +673,7 @@ public partial class V1beta1VPNServerConfigurationSpec
     public V1beta1VPNServerConfigurationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNServerConfigurationStatusAtProviderAzureActiveDirectoryAuthentication
 {
     /// <summary>The Audience which should be used for authentication.</summary>
@@ -657,6 +689,7 @@ public partial class V1beta1VPNServerConfigurationStatusAtProviderAzureActiveDir
     public string? Tenant { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNServerConfigurationStatusAtProviderClientRevokedCertificate
 {
     /// <summary>A name used to uniquely identify this certificate.</summary>
@@ -668,6 +701,7 @@ public partial class V1beta1VPNServerConfigurationStatusAtProviderClientRevokedC
     public string? Thumbprint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNServerConfigurationStatusAtProviderClientRootCertificate
 {
     /// <summary>A name used to uniquely identify this certificate.</summary>
@@ -679,6 +713,7 @@ public partial class V1beta1VPNServerConfigurationStatusAtProviderClientRootCert
     public string? PublicCertData { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNServerConfigurationStatusAtProviderIpsecPolicy
 {
     /// <summary>The DH Group, used in IKE Phase 1. Possible values include DHGroup1, DHGroup2, DHGroup14, DHGroup24, DHGroup2048, ECP256, ECP384 and None.</summary>
@@ -714,6 +749,7 @@ public partial class V1beta1VPNServerConfigurationStatusAtProviderIpsecPolicy
     public double? SaLifetimeSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNServerConfigurationStatusAtProviderRadiusClientRootCertificate
 {
     /// <summary>A name used to uniquely identify this certificate.</summary>
@@ -725,6 +761,7 @@ public partial class V1beta1VPNServerConfigurationStatusAtProviderRadiusClientRo
     public string? Thumbprint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNServerConfigurationStatusAtProviderRadiusServer
 {
     /// <summary>The Address of the Radius Server.</summary>
@@ -736,6 +773,7 @@ public partial class V1beta1VPNServerConfigurationStatusAtProviderRadiusServer
     public double? Score { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNServerConfigurationStatusAtProviderRadiusServerRootCertificate
 {
     /// <summary>A name used to uniquely identify this certificate.</summary>
@@ -747,6 +785,7 @@ public partial class V1beta1VPNServerConfigurationStatusAtProviderRadiusServerRo
     public string? PublicCertData { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNServerConfigurationStatusAtProviderRadius
 {
     /// <summary>One or more client_root_certificate blocks as defined below.</summary>
@@ -762,6 +801,7 @@ public partial class V1beta1VPNServerConfigurationStatusAtProviderRadius
     public IList<V1beta1VPNServerConfigurationStatusAtProviderRadiusServerRootCertificate>? ServerRootCertificate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPNServerConfigurationStatusAtProvider
 {
     /// <summary>A azure_active_directory_authentication block as defined below.</summary>
@@ -809,6 +849,7 @@ public partial class V1beta1VPNServerConfigurationStatusAtProvider
     public IList<string>? VpnProtocols { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1VPNServerConfigurationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -836,6 +877,7 @@ public partial class V1beta1VPNServerConfigurationStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>VPNServerConfigurationStatus defines the observed state of VPNServerConfiguration.</summary>
 public partial class V1beta1VPNServerConfigurationStatus
 {
     /// <summary></summary>
@@ -852,6 +894,7 @@ public partial class V1beta1VPNServerConfigurationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>VPNServerConfiguration is the Schema for the VPNServerConfigurations API. Manages a VPN Server Configuration.</summary>
 public partial class V1beta1VPNServerConfiguration : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1VPNServerConfigurationSpec>, IStatus<V1beta1VPNServerConfigurationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

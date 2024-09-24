@@ -38,6 +38,7 @@ public enum V1beta1MethodSpecForProviderAuthorizerIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MethodSpecForProviderAuthorizerIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1MethodSpecForProviderAuthorizerIdRefPolicy
     public V1beta1MethodSpecForProviderAuthorizerIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Authorizer in apigateway to populate authorizerId.</summary>
 public partial class V1beta1MethodSpecForProviderAuthorizerIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1MethodSpecForProviderAuthorizerIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MethodSpecForProviderAuthorizerIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1MethodSpecForProviderAuthorizerIdSelectorPolicy
     public V1beta1MethodSpecForProviderAuthorizerIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Authorizer in apigateway to populate authorizerId.</summary>
 public partial class V1beta1MethodSpecForProviderAuthorizerIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1MethodSpecForProviderResourceIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MethodSpecForProviderResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1MethodSpecForProviderResourceIdRefPolicy
     public V1beta1MethodSpecForProviderResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Resource in apigateway to populate resourceId.</summary>
 public partial class V1beta1MethodSpecForProviderResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1MethodSpecForProviderResourceIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MethodSpecForProviderResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1MethodSpecForProviderResourceIdSelectorPolicy
     public V1beta1MethodSpecForProviderResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Resource in apigateway to populate resourceId.</summary>
 public partial class V1beta1MethodSpecForProviderResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1MethodSpecForProviderRestApiIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MethodSpecForProviderRestApiIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1MethodSpecForProviderRestApiIdRefPolicy
     public V1beta1MethodSpecForProviderRestApiIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RestAPI in apigateway to populate restApiId.</summary>
 public partial class V1beta1MethodSpecForProviderRestApiIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1MethodSpecForProviderRestApiIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MethodSpecForProviderRestApiIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1MethodSpecForProviderRestApiIdSelectorPolicy
     public V1beta1MethodSpecForProviderRestApiIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RestAPI in apigateway to populate restApiId.</summary>
 public partial class V1beta1MethodSpecForProviderRestApiIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1MethodSpecForProviderRestApiIdSelector
     public V1beta1MethodSpecForProviderRestApiIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MethodSpecForProvider
 {
     /// <summary>Specify if the method requires an API key</summary>
@@ -389,6 +402,7 @@ public enum V1beta1MethodSpecInitProviderAuthorizerIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MethodSpecInitProviderAuthorizerIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -402,6 +416,7 @@ public partial class V1beta1MethodSpecInitProviderAuthorizerIdRefPolicy
     public V1beta1MethodSpecInitProviderAuthorizerIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Authorizer in apigateway to populate authorizerId.</summary>
 public partial class V1beta1MethodSpecInitProviderAuthorizerIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -433,6 +448,7 @@ public enum V1beta1MethodSpecInitProviderAuthorizerIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MethodSpecInitProviderAuthorizerIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -446,6 +462,7 @@ public partial class V1beta1MethodSpecInitProviderAuthorizerIdSelectorPolicy
     public V1beta1MethodSpecInitProviderAuthorizerIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Authorizer in apigateway to populate authorizerId.</summary>
 public partial class V1beta1MethodSpecInitProviderAuthorizerIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -481,6 +498,7 @@ public enum V1beta1MethodSpecInitProviderResourceIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MethodSpecInitProviderResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -494,6 +512,7 @@ public partial class V1beta1MethodSpecInitProviderResourceIdRefPolicy
     public V1beta1MethodSpecInitProviderResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Resource in apigateway to populate resourceId.</summary>
 public partial class V1beta1MethodSpecInitProviderResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -525,6 +544,7 @@ public enum V1beta1MethodSpecInitProviderResourceIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MethodSpecInitProviderResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -538,6 +558,7 @@ public partial class V1beta1MethodSpecInitProviderResourceIdSelectorPolicy
     public V1beta1MethodSpecInitProviderResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Resource in apigateway to populate resourceId.</summary>
 public partial class V1beta1MethodSpecInitProviderResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -573,6 +594,7 @@ public enum V1beta1MethodSpecInitProviderRestApiIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MethodSpecInitProviderRestApiIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -586,6 +608,7 @@ public partial class V1beta1MethodSpecInitProviderRestApiIdRefPolicy
     public V1beta1MethodSpecInitProviderRestApiIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a RestAPI in apigateway to populate restApiId.</summary>
 public partial class V1beta1MethodSpecInitProviderRestApiIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -617,6 +640,7 @@ public enum V1beta1MethodSpecInitProviderRestApiIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MethodSpecInitProviderRestApiIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -630,6 +654,7 @@ public partial class V1beta1MethodSpecInitProviderRestApiIdSelectorPolicy
     public V1beta1MethodSpecInitProviderRestApiIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a RestAPI in apigateway to populate restApiId.</summary>
 public partial class V1beta1MethodSpecInitProviderRestApiIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -645,6 +670,7 @@ public partial class V1beta1MethodSpecInitProviderRestApiIdSelector
     public V1beta1MethodSpecInitProviderRestApiIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1MethodSpecInitProvider
 {
     /// <summary>Specify if the method requires an API key</summary>
@@ -758,6 +784,7 @@ public enum V1beta1MethodSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MethodSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -771,6 +798,7 @@ public partial class V1beta1MethodSpecProviderConfigRefPolicy
     public V1beta1MethodSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1MethodSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -802,6 +830,7 @@ public enum V1beta1MethodSpecPublishConnectionDetailsToConfigRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MethodSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -815,6 +844,7 @@ public partial class V1beta1MethodSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1MethodSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1MethodSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -826,6 +856,7 @@ public partial class V1beta1MethodSpecPublishConnectionDetailsToConfigRef
     public V1beta1MethodSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1MethodSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -841,6 +872,7 @@ public partial class V1beta1MethodSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1MethodSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -856,6 +888,7 @@ public partial class V1beta1MethodSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1MethodSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -867,6 +900,7 @@ public partial class V1beta1MethodSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>MethodSpec defines the desired state of Method</summary>
 public partial class V1beta1MethodSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -899,6 +933,7 @@ public partial class V1beta1MethodSpec
     public V1beta1MethodSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MethodStatusAtProvider
 {
     /// <summary>Specify if the method requires an API key</summary>
@@ -950,6 +985,7 @@ public partial class V1beta1MethodStatusAtProvider
     public string? RestApiId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1MethodStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -977,6 +1013,7 @@ public partial class V1beta1MethodStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>MethodStatus defines the observed state of Method.</summary>
 public partial class V1beta1MethodStatus
 {
     /// <summary></summary>
@@ -993,6 +1030,7 @@ public partial class V1beta1MethodStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Method is the Schema for the Methods API. Provides a HTTP Method for an API Gateway Resource.</summary>
 public partial class V1beta1Method : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MethodSpec>, IStatus<V1beta1MethodStatus>
 {
     public const string KubeApiVersion = "v1beta1";

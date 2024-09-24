@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apimanagement.azure.com;
+/// <summary>PublicIpAddressReference: Public Standard SKU IP V4 based IP address to be associated with Virtual Network deployed service in the location. Supported only for Premium SKU being deployed in Virtual Network.</summary>
 public partial class V1api20220801storageServiceSpecAdditionalLocationsPublicIpAddressReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -27,6 +28,7 @@ public partial class V1api20220801storageServiceSpecAdditionalLocationsPublicIpA
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.ApiManagementServiceSkuProperties API Management service resource SKU properties.</summary>
 public partial class V1api20220801storageServiceSpecAdditionalLocationsSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -42,6 +44,7 @@ public partial class V1api20220801storageServiceSpecAdditionalLocationsSku
     public string? Name { get; set; }
 }
 
+/// <summary>SubnetResourceReference: The full resource ID of a subnet in a virtual network to deploy the API Management service in.</summary>
 public partial class V1api20220801storageServiceSpecAdditionalLocationsVirtualNetworkConfigurationSubnetResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -61,6 +64,7 @@ public partial class V1api20220801storageServiceSpecAdditionalLocationsVirtualNe
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.VirtualNetworkConfiguration Configuration of a virtual network to which API Management service is deployed.</summary>
 public partial class V1api20220801storageServiceSpecAdditionalLocationsVirtualNetworkConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -72,6 +76,7 @@ public partial class V1api20220801storageServiceSpecAdditionalLocationsVirtualNe
     public V1api20220801storageServiceSpecAdditionalLocationsVirtualNetworkConfigurationSubnetResourceReference? SubnetResourceReference { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.AdditionalLocation Description of an additional API Management resource location.</summary>
 public partial class V1api20220801storageServiceSpecAdditionalLocations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -107,6 +112,7 @@ public partial class V1api20220801storageServiceSpecAdditionalLocations
     public IList<string>? Zones { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.ApiVersionConstraint Control Plane Apis version constraint for the API Management service.</summary>
 public partial class V1api20220801storageServiceSpecApiVersionConstraint
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -118,6 +124,7 @@ public partial class V1api20220801storageServiceSpecApiVersionConstraint
     public string? MinApiVersion { get; set; }
 }
 
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20220801storageServiceSpecCertificatesCertificateExpiryFromConfig
 {
     /// <summary>Key is the key in the Kubernetes configmap being referenced</summary>
@@ -129,6 +136,7 @@ public partial class V1api20220801storageServiceSpecCertificatesCertificateExpir
     public string Name { get; set; }
 }
 
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20220801storageServiceSpecCertificatesCertificateSubjectFromConfig
 {
     /// <summary>Key is the key in the Kubernetes configmap being referenced</summary>
@@ -140,6 +148,7 @@ public partial class V1api20220801storageServiceSpecCertificatesCertificateSubje
     public string Name { get; set; }
 }
 
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20220801storageServiceSpecCertificatesCertificateThumbprintFromConfig
 {
     /// <summary>Key is the key in the Kubernetes configmap being referenced</summary>
@@ -151,6 +160,7 @@ public partial class V1api20220801storageServiceSpecCertificatesCertificateThumb
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.CertificateInformation SSL certificate information.</summary>
 public partial class V1api20220801storageServiceSpecCertificatesCertificate
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -182,6 +192,7 @@ public partial class V1api20220801storageServiceSpecCertificatesCertificate
     public V1api20220801storageServiceSpecCertificatesCertificateThumbprintFromConfig? ThumbprintFromConfig { get; set; }
 }
 
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20220801storageServiceSpecCertificatesCertificatePassword
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -193,6 +204,7 @@ public partial class V1api20220801storageServiceSpecCertificatesCertificatePassw
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.CertificateConfiguration Certificate configuration which consist of non-trusted intermediates and root certificates.</summary>
 public partial class V1api20220801storageServiceSpecCertificates
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -216,6 +228,7 @@ public partial class V1api20220801storageServiceSpecCertificates
     public string? StoreName { get; set; }
 }
 
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20220801storageServiceSpecHostnameConfigurationsCertificateExpiryFromConfig
 {
     /// <summary>Key is the key in the Kubernetes configmap being referenced</summary>
@@ -227,6 +240,7 @@ public partial class V1api20220801storageServiceSpecHostnameConfigurationsCertif
     public string Name { get; set; }
 }
 
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20220801storageServiceSpecHostnameConfigurationsCertificateSubjectFromConfig
 {
     /// <summary>Key is the key in the Kubernetes configmap being referenced</summary>
@@ -238,6 +252,7 @@ public partial class V1api20220801storageServiceSpecHostnameConfigurationsCertif
     public string Name { get; set; }
 }
 
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20220801storageServiceSpecHostnameConfigurationsCertificateThumbprintFromConfig
 {
     /// <summary>Key is the key in the Kubernetes configmap being referenced</summary>
@@ -249,6 +264,7 @@ public partial class V1api20220801storageServiceSpecHostnameConfigurationsCertif
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.CertificateInformation SSL certificate information.</summary>
 public partial class V1api20220801storageServiceSpecHostnameConfigurationsCertificate
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -280,6 +296,7 @@ public partial class V1api20220801storageServiceSpecHostnameConfigurationsCertif
     public V1api20220801storageServiceSpecHostnameConfigurationsCertificateThumbprintFromConfig? ThumbprintFromConfig { get; set; }
 }
 
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20220801storageServiceSpecHostnameConfigurationsCertificatePassword
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -291,6 +308,7 @@ public partial class V1api20220801storageServiceSpecHostnameConfigurationsCertif
     public string Name { get; set; }
 }
 
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20220801storageServiceSpecHostnameConfigurationsIdentityClientIdFromConfig
 {
     /// <summary>Key is the key in the Kubernetes configmap being referenced</summary>
@@ -302,6 +320,7 @@ public partial class V1api20220801storageServiceSpecHostnameConfigurationsIdenti
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.HostnameConfiguration Custom hostname configuration.</summary>
 public partial class V1api20220801storageServiceSpecHostnameConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -357,6 +376,7 @@ public partial class V1api20220801storageServiceSpecHostnameConfigurations
     public string? Type { get; set; }
 }
 
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 public partial class V1api20220801storageServiceSpecIdentityUserAssignedIdentitiesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -376,6 +396,7 @@ public partial class V1api20220801storageServiceSpecIdentityUserAssignedIdentiti
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
 public partial class V1api20220801storageServiceSpecIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -387,6 +408,7 @@ public partial class V1api20220801storageServiceSpecIdentityUserAssignedIdentiti
     public V1api20220801storageServiceSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.ApiManagementServiceIdentity Identity properties of the Api Management service resource.</summary>
 public partial class V1api20220801storageServiceSpecIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -402,6 +424,7 @@ public partial class V1api20220801storageServiceSpecIdentity
     public IList<V1api20220801storageServiceSpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20220801storageServiceSpecOwner
 {
     /// <summary></summary>
@@ -413,6 +436,7 @@ public partial class V1api20220801storageServiceSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>PublicIpAddressReference: Public Standard SKU IP V4 based IP address to be associated with Virtual Network deployed service in the region. Supported only for Developer and Premium SKU being deployed in Virtual Network.</summary>
 public partial class V1api20220801storageServiceSpecPublicIpAddressReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -432,6 +456,7 @@ public partial class V1api20220801storageServiceSpecPublicIpAddressReference
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.ApiManagementServiceSkuProperties API Management service resource SKU properties.</summary>
 public partial class V1api20220801storageServiceSpecSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -447,6 +472,7 @@ public partial class V1api20220801storageServiceSpecSku
     public string? Name { get; set; }
 }
 
+/// <summary>SubnetResourceReference: The full resource ID of a subnet in a virtual network to deploy the API Management service in.</summary>
 public partial class V1api20220801storageServiceSpecVirtualNetworkConfigurationSubnetResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -466,6 +492,7 @@ public partial class V1api20220801storageServiceSpecVirtualNetworkConfigurationS
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.VirtualNetworkConfiguration Configuration of a virtual network to which API Management service is deployed.</summary>
 public partial class V1api20220801storageServiceSpecVirtualNetworkConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -477,6 +504,7 @@ public partial class V1api20220801storageServiceSpecVirtualNetworkConfiguration
     public V1api20220801storageServiceSpecVirtualNetworkConfigurationSubnetResourceReference? SubnetResourceReference { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.Service_Spec</summary>
 public partial class V1api20220801storageServiceSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -580,6 +608,7 @@ public partial class V1api20220801storageServiceSpec
     public IList<string>? Zones { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.ApiManagementServiceSkuProperties_STATUS API Management service resource SKU properties.</summary>
 public partial class V1api20220801storageServiceStatusAdditionalLocationsSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -595,6 +624,7 @@ public partial class V1api20220801storageServiceStatusAdditionalLocationsSku
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.VirtualNetworkConfiguration_STATUS Configuration of a virtual network to which API Management service is deployed.</summary>
 public partial class V1api20220801storageServiceStatusAdditionalLocationsVirtualNetworkConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -614,6 +644,7 @@ public partial class V1api20220801storageServiceStatusAdditionalLocationsVirtual
     public string? Vnetid { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.AdditionalLocation_STATUS Description of an additional API Management resource location.</summary>
 public partial class V1api20220801storageServiceStatusAdditionalLocations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -669,6 +700,7 @@ public partial class V1api20220801storageServiceStatusAdditionalLocations
     public IList<string>? Zones { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.ApiVersionConstraint_STATUS Control Plane Apis version constraint for the API Management service.</summary>
 public partial class V1api20220801storageServiceStatusApiVersionConstraint
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -680,6 +712,7 @@ public partial class V1api20220801storageServiceStatusApiVersionConstraint
     public string? MinApiVersion { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.CertificateInformation_STATUS SSL certificate information.</summary>
 public partial class V1api20220801storageServiceStatusCertificatesCertificate
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -699,6 +732,7 @@ public partial class V1api20220801storageServiceStatusCertificatesCertificate
     public string? Thumbprint { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.CertificateConfiguration_STATUS Certificate configuration which consist of non-trusted intermediates and root certificates.</summary>
 public partial class V1api20220801storageServiceStatusCertificates
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -718,6 +752,7 @@ public partial class V1api20220801storageServiceStatusCertificates
     public string? StoreName { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20220801storageServiceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -749,6 +784,7 @@ public partial class V1api20220801storageServiceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.CertificateInformation_STATUS SSL certificate information.</summary>
 public partial class V1api20220801storageServiceStatusHostnameConfigurationsCertificate
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -768,6 +804,7 @@ public partial class V1api20220801storageServiceStatusHostnameConfigurationsCert
     public string? Thumbprint { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.HostnameConfiguration_STATUS Custom hostname configuration.</summary>
 public partial class V1api20220801storageServiceStatusHostnameConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -815,6 +852,7 @@ public partial class V1api20220801storageServiceStatusHostnameConfigurations
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.UserIdentityProperties_STATUS</summary>
 public partial class V1api20220801storageServiceStatusIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -830,6 +868,7 @@ public partial class V1api20220801storageServiceStatusIdentityUserAssignedIdenti
     public string? PrincipalId { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.ApiManagementServiceIdentity_STATUS Identity properties of the Api Management service resource.</summary>
 public partial class V1api20220801storageServiceStatusIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -853,6 +892,7 @@ public partial class V1api20220801storageServiceStatusIdentity
     public IDictionary<string, V1api20220801storageServiceStatusIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.ArmIdWrapper_STATUS A wrapper for an ARM resource id</summary>
 public partial class V1api20220801storageServiceStatusPrivateEndpointConnectionsPrivateEndpoint
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -864,6 +904,7 @@ public partial class V1api20220801storageServiceStatusPrivateEndpointConnections
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.PrivateLinkServiceConnectionState_STATUS A collection of information about the state of the connection between service consumer and provider.</summary>
 public partial class V1api20220801storageServiceStatusPrivateEndpointConnectionsPrivateLinkServiceConnectionState
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -883,6 +924,7 @@ public partial class V1api20220801storageServiceStatusPrivateEndpointConnections
     public string? Status { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.RemotePrivateEndpointConnectionWrapper_STATUS Remote Private Endpoint Connection resource.</summary>
 public partial class V1api20220801storageServiceStatusPrivateEndpointConnections
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -918,6 +960,7 @@ public partial class V1api20220801storageServiceStatusPrivateEndpointConnections
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.ApiManagementServiceSkuProperties_STATUS API Management service resource SKU properties.</summary>
 public partial class V1api20220801storageServiceStatusSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -933,6 +976,7 @@ public partial class V1api20220801storageServiceStatusSku
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 public partial class V1api20220801storageServiceStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -964,6 +1008,7 @@ public partial class V1api20220801storageServiceStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.VirtualNetworkConfiguration_STATUS Configuration of a virtual network to which API Management service is deployed.</summary>
 public partial class V1api20220801storageServiceStatusVirtualNetworkConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -983,6 +1028,7 @@ public partial class V1api20220801storageServiceStatusVirtualNetworkConfiguratio
     public string? Vnetid { get; set; }
 }
 
+/// <summary>Storage version of v1api20220801.Service_STATUS</summary>
 public partial class V1api20220801storageServiceStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1155,6 +1201,7 @@ public partial class V1api20220801storageServiceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20220801.Service Generator information: - Generated from: /apimanagement/resource-manager/Microsoft.ApiManagement/stable/2022-08-01/apimdeployment.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}</summary>
 public partial class V1api20220801storageService : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20220801storageServiceSpec>, IStatus<V1api20220801storageServiceStatus>
 {
     public const string KubeApiVersion = "v1api20220801storage";

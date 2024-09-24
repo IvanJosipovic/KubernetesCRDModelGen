@@ -47,6 +47,7 @@ public enum V1alpha1WasmPluginSpecMatchModeEnum
     CLIENTANDSERVER
 }
 
+/// <summary></summary>
 public partial class V1alpha1WasmPluginSpecMatchPorts
 {
     /// <summary></summary>
@@ -54,6 +55,7 @@ public partial class V1alpha1WasmPluginSpecMatchPorts
     public int Number { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WasmPluginSpecMatch
 {
     /// <summary>Criteria for selecting traffic by their direction.  Valid Options: CLIENT, SERVER, CLIENT_AND_SERVER</summary>
@@ -82,6 +84,7 @@ public enum V1alpha1WasmPluginSpecPhaseEnum
     STATS
 }
 
+/// <summary>Criteria used to select the specific set of pods/VMs on which this plugin configuration should be applied.</summary>
 public partial class V1alpha1WasmPluginSpecSelector
 {
     /// <summary>One or more labels that indicate a specific set of pods/VMs on which a policy should be applied.</summary>
@@ -89,6 +92,7 @@ public partial class V1alpha1WasmPluginSpecSelector
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WasmPluginSpecTargetRef
 {
     /// <summary>group is the group of the target resource.</summary>
@@ -108,6 +112,7 @@ public partial class V1alpha1WasmPluginSpecTargetRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WasmPluginSpecTargetRefs
 {
     /// <summary>group is the group of the target resource.</summary>
@@ -150,6 +155,7 @@ public enum V1alpha1WasmPluginSpecVmConfigEnvValueFromEnum
     HOST
 }
 
+/// <summary></summary>
 public partial class V1alpha1WasmPluginSpecVmConfigEnv
 {
     /// <summary>Name of the environment variable.</summary>
@@ -166,6 +172,7 @@ public partial class V1alpha1WasmPluginSpecVmConfigEnv
     public V1alpha1WasmPluginSpecVmConfigEnvValueFromEnum? ValueFrom { get; set; }
 }
 
+/// <summary>Configuration for a Wasm VM.</summary>
 public partial class V1alpha1WasmPluginSpecVmConfig
 {
     /// <summary>Specifies environment variables to be injected to this VM.</summary>
@@ -173,6 +180,7 @@ public partial class V1alpha1WasmPluginSpecVmConfig
     public IList<V1alpha1WasmPluginSpecVmConfigEnv>? Env { get; set; }
 }
 
+/// <summary>Extend the functionality provided by the Istio proxy through WebAssembly filters. See more details at: https://istio.io/docs/reference/config/proxy_extensions/wasm-plugin.html</summary>
 public partial class V1alpha1WasmPluginSpec
 {
     /// <summary>Specifies the failure behavior for the plugin due to fatal errors.  Valid Options: FAIL_CLOSE, FAIL_OPEN</summary>
@@ -245,6 +253,7 @@ public partial class V1alpha1WasmPluginSpec
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1WasmPlugin : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1WasmPluginSpec>, IStatus<JsonNode>
 {
     public const string KubeApiVersion = "v1alpha1";

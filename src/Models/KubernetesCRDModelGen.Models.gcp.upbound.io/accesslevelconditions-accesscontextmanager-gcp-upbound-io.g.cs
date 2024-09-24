@@ -38,6 +38,7 @@ public enum V1beta1AccessLevelConditionSpecForProviderAccessLevelRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AccessLevelConditionSpecForProviderAccessLevelRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1AccessLevelConditionSpecForProviderAccessLevelRefPol
     public V1beta1AccessLevelConditionSpecForProviderAccessLevelRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a AccessLevel in accesscontextmanager to populate accessLevel.</summary>
 public partial class V1beta1AccessLevelConditionSpecForProviderAccessLevelRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1AccessLevelConditionSpecForProviderAccessLevelSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AccessLevelConditionSpecForProviderAccessLevelSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1AccessLevelConditionSpecForProviderAccessLevelSelect
     public V1beta1AccessLevelConditionSpecForProviderAccessLevelSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a AccessLevel in accesscontextmanager to populate accessLevel.</summary>
 public partial class V1beta1AccessLevelConditionSpecForProviderAccessLevelSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1AccessLevelConditionSpecForProviderAccessLevelSelect
     public V1beta1AccessLevelConditionSpecForProviderAccessLevelSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelConditionSpecForProviderDevicePolicyOsConstraints
 {
     /// <summary>The minimum allowed OS version. If not set, any version of this OS satisfies the constraint. Format: "major.minor.patch" such as "10.5.301", "9.2.1".</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1AccessLevelConditionSpecForProviderDevicePolicyOsCon
     public string? OsType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelConditionSpecForProviderDevicePolicy
 {
     /// <summary>A list of allowed device management levels. An empty list allows all management levels. Each value may be one of: MANAGEMENT_UNSPECIFIED, NONE, BASIC, COMPLETE.</summary>
@@ -148,6 +154,7 @@ public partial class V1beta1AccessLevelConditionSpecForProviderDevicePolicy
     public bool? RequireScreenLock { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelConditionSpecForProviderVpcNetworkSourcesVpcSubnetwork
 {
     /// <summary>Required. Network name to be allowed by this Access Level. Networks of foreign organizations requires compute.network.get permission to be granted to caller.</summary>
@@ -159,6 +166,7 @@ public partial class V1beta1AccessLevelConditionSpecForProviderVpcNetworkSources
     public IList<string>? VpcIpSubnetworks { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelConditionSpecForProviderVpcNetworkSources
 {
     /// <summary>Sub networks within a VPC network. Structure is documented below.</summary>
@@ -166,6 +174,7 @@ public partial class V1beta1AccessLevelConditionSpecForProviderVpcNetworkSources
     public IList<V1beta1AccessLevelConditionSpecForProviderVpcNetworkSourcesVpcSubnetwork>? VpcSubnetwork { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelConditionSpecForProvider
 {
     /// <summary>The name of the Access Level to add this condition to.</summary>
@@ -229,6 +238,7 @@ public enum V1beta1AccessLevelConditionSpecInitProviderAccessLevelRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AccessLevelConditionSpecInitProviderAccessLevelRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -242,6 +252,7 @@ public partial class V1beta1AccessLevelConditionSpecInitProviderAccessLevelRefPo
     public V1beta1AccessLevelConditionSpecInitProviderAccessLevelRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a AccessLevel in accesscontextmanager to populate accessLevel.</summary>
 public partial class V1beta1AccessLevelConditionSpecInitProviderAccessLevelRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -273,6 +284,7 @@ public enum V1beta1AccessLevelConditionSpecInitProviderAccessLevelSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AccessLevelConditionSpecInitProviderAccessLevelSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -286,6 +298,7 @@ public partial class V1beta1AccessLevelConditionSpecInitProviderAccessLevelSelec
     public V1beta1AccessLevelConditionSpecInitProviderAccessLevelSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a AccessLevel in accesscontextmanager to populate accessLevel.</summary>
 public partial class V1beta1AccessLevelConditionSpecInitProviderAccessLevelSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -301,6 +314,7 @@ public partial class V1beta1AccessLevelConditionSpecInitProviderAccessLevelSelec
     public V1beta1AccessLevelConditionSpecInitProviderAccessLevelSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelConditionSpecInitProviderDevicePolicyOsConstraints
 {
     /// <summary>The minimum allowed OS version. If not set, any version of this OS satisfies the constraint. Format: "major.minor.patch" such as "10.5.301", "9.2.1".</summary>
@@ -312,6 +326,7 @@ public partial class V1beta1AccessLevelConditionSpecInitProviderDevicePolicyOsCo
     public string? OsType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelConditionSpecInitProviderDevicePolicy
 {
     /// <summary>A list of allowed device management levels. An empty list allows all management levels. Each value may be one of: MANAGEMENT_UNSPECIFIED, NONE, BASIC, COMPLETE.</summary>
@@ -339,6 +354,7 @@ public partial class V1beta1AccessLevelConditionSpecInitProviderDevicePolicy
     public bool? RequireScreenLock { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelConditionSpecInitProviderVpcNetworkSourcesVpcSubnetwork
 {
     /// <summary>Required. Network name to be allowed by this Access Level. Networks of foreign organizations requires compute.network.get permission to be granted to caller.</summary>
@@ -350,6 +366,7 @@ public partial class V1beta1AccessLevelConditionSpecInitProviderVpcNetworkSource
     public IList<string>? VpcIpSubnetworks { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelConditionSpecInitProviderVpcNetworkSources
 {
     /// <summary>Sub networks within a VPC network. Structure is documented below.</summary>
@@ -357,6 +374,7 @@ public partial class V1beta1AccessLevelConditionSpecInitProviderVpcNetworkSource
     public IList<V1beta1AccessLevelConditionSpecInitProviderVpcNetworkSourcesVpcSubnetwork>? VpcSubnetwork { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1AccessLevelConditionSpecInitProvider
 {
     /// <summary>The name of the Access Level to add this condition to.</summary>
@@ -442,6 +460,7 @@ public enum V1beta1AccessLevelConditionSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AccessLevelConditionSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -455,6 +474,7 @@ public partial class V1beta1AccessLevelConditionSpecProviderConfigRefPolicy
     public V1beta1AccessLevelConditionSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1AccessLevelConditionSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -486,6 +506,7 @@ public enum V1beta1AccessLevelConditionSpecPublishConnectionDetailsToConfigRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AccessLevelConditionSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -499,6 +520,7 @@ public partial class V1beta1AccessLevelConditionSpecPublishConnectionDetailsToCo
     public V1beta1AccessLevelConditionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1AccessLevelConditionSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -510,6 +532,7 @@ public partial class V1beta1AccessLevelConditionSpecPublishConnectionDetailsToCo
     public V1beta1AccessLevelConditionSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1AccessLevelConditionSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -525,6 +548,7 @@ public partial class V1beta1AccessLevelConditionSpecPublishConnectionDetailsToMe
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1AccessLevelConditionSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -540,6 +564,7 @@ public partial class V1beta1AccessLevelConditionSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1AccessLevelConditionSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -551,6 +576,7 @@ public partial class V1beta1AccessLevelConditionSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>AccessLevelConditionSpec defines the desired state of AccessLevelCondition</summary>
 public partial class V1beta1AccessLevelConditionSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -583,6 +609,7 @@ public partial class V1beta1AccessLevelConditionSpec
     public V1beta1AccessLevelConditionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelConditionStatusAtProviderDevicePolicyOsConstraints
 {
     /// <summary>The minimum allowed OS version. If not set, any version of this OS satisfies the constraint. Format: "major.minor.patch" such as "10.5.301", "9.2.1".</summary>
@@ -594,6 +621,7 @@ public partial class V1beta1AccessLevelConditionStatusAtProviderDevicePolicyOsCo
     public string? OsType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelConditionStatusAtProviderDevicePolicy
 {
     /// <summary>A list of allowed device management levels. An empty list allows all management levels. Each value may be one of: MANAGEMENT_UNSPECIFIED, NONE, BASIC, COMPLETE.</summary>
@@ -621,6 +649,7 @@ public partial class V1beta1AccessLevelConditionStatusAtProviderDevicePolicy
     public bool? RequireScreenLock { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelConditionStatusAtProviderVpcNetworkSourcesVpcSubnetwork
 {
     /// <summary>Required. Network name to be allowed by this Access Level. Networks of foreign organizations requires compute.network.get permission to be granted to caller.</summary>
@@ -632,6 +661,7 @@ public partial class V1beta1AccessLevelConditionStatusAtProviderVpcNetworkSource
     public IList<string>? VpcIpSubnetworks { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelConditionStatusAtProviderVpcNetworkSources
 {
     /// <summary>Sub networks within a VPC network. Structure is documented below.</summary>
@@ -639,6 +669,7 @@ public partial class V1beta1AccessLevelConditionStatusAtProviderVpcNetworkSource
     public IList<V1beta1AccessLevelConditionStatusAtProviderVpcNetworkSourcesVpcSubnetwork>? VpcSubnetwork { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessLevelConditionStatusAtProvider
 {
     /// <summary>The name of the Access Level to add this condition to.</summary>
@@ -678,6 +709,7 @@ public partial class V1beta1AccessLevelConditionStatusAtProvider
     public IList<V1beta1AccessLevelConditionStatusAtProviderVpcNetworkSources>? VpcNetworkSources { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1AccessLevelConditionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -705,6 +737,7 @@ public partial class V1beta1AccessLevelConditionStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>AccessLevelConditionStatus defines the observed state of AccessLevelCondition.</summary>
 public partial class V1beta1AccessLevelConditionStatus
 {
     /// <summary></summary>
@@ -721,6 +754,7 @@ public partial class V1beta1AccessLevelConditionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>AccessLevelCondition is the Schema for the AccessLevelConditions API. Allows configuring a single access level condition to be appended to an access level's conditions.</summary>
 public partial class V1beta1AccessLevelCondition : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AccessLevelConditionSpec>, IStatus<V1beta1AccessLevelConditionStatus>
 {
     public const string KubeApiVersion = "v1beta1";

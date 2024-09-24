@@ -38,6 +38,7 @@ public enum V1beta1FeaturestoreEntitytypeSpecForProviderFeaturestoreRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FeaturestoreEntitytypeSpecForProviderFeaturestoreRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1FeaturestoreEntitytypeSpecForProviderFeaturestoreRef
     public V1beta1FeaturestoreEntitytypeSpecForProviderFeaturestoreRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Featurestore in vertexai to populate featurestore.</summary>
 public partial class V1beta1FeaturestoreEntitytypeSpecForProviderFeaturestoreRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1FeaturestoreEntitytypeSpecForProviderFeaturestoreSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FeaturestoreEntitytypeSpecForProviderFeaturestoreSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1FeaturestoreEntitytypeSpecForProviderFeaturestoreSel
     public V1beta1FeaturestoreEntitytypeSpecForProviderFeaturestoreSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Featurestore in vertexai to populate featurestore.</summary>
 public partial class V1beta1FeaturestoreEntitytypeSpecForProviderFeaturestoreSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1FeaturestoreEntitytypeSpecForProviderFeaturestoreSel
     public V1beta1FeaturestoreEntitytypeSpecForProviderFeaturestoreSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FeaturestoreEntitytypeSpecForProviderMonitoringConfigCategoricalThresholdConfig
 {
     /// <summary>Specify a threshold value that can trigger the alert. For numerical feature, the distribution distance is calculated by Jensen–Shannon divergence. Each feature must have a non-zero threshold if they need to be monitored. Otherwise no alert will be triggered for that feature. The default value is 0.3.</summary>
@@ -117,6 +122,7 @@ public partial class V1beta1FeaturestoreEntitytypeSpecForProviderMonitoringConfi
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FeaturestoreEntitytypeSpecForProviderMonitoringConfigImportFeaturesAnalysis
 {
     /// <summary>Defines the baseline to do anomaly detection for feature values imported by each [entityTypes.importFeatureValues][] operation. The value must be one of the values below:</summary>
@@ -128,6 +134,7 @@ public partial class V1beta1FeaturestoreEntitytypeSpecForProviderMonitoringConfi
     public string? State { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FeaturestoreEntitytypeSpecForProviderMonitoringConfigNumericalThresholdConfig
 {
     /// <summary>Specify a threshold value that can trigger the alert. For numerical feature, the distribution distance is calculated by Jensen–Shannon divergence. Each feature must have a non-zero threshold if they need to be monitored. Otherwise no alert will be triggered for that feature. The default value is 0.3.</summary>
@@ -135,6 +142,7 @@ public partial class V1beta1FeaturestoreEntitytypeSpecForProviderMonitoringConfi
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FeaturestoreEntitytypeSpecForProviderMonitoringConfigSnapshotAnalysis
 {
     /// <summary>The monitoring schedule for snapshot analysis. For EntityType-level config: unset / disabled = true indicates disabled by default for Features under it; otherwise by default enable snapshot analysis monitoring with monitoringInterval for Features under it.</summary>
@@ -150,6 +158,7 @@ public partial class V1beta1FeaturestoreEntitytypeSpecForProviderMonitoringConfi
     public double? StalenessDays { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FeaturestoreEntitytypeSpecForProviderMonitoringConfig
 {
     /// <summary>Threshold for categorical features of anomaly detection. This is shared by all types of Featurestore Monitoring for categorical features (i.e. Features with type (Feature.ValueType) BOOL or STRING). Structure is documented below.</summary>
@@ -169,6 +178,7 @@ public partial class V1beta1FeaturestoreEntitytypeSpecForProviderMonitoringConfi
     public IList<V1beta1FeaturestoreEntitytypeSpecForProviderMonitoringConfigSnapshotAnalysis>? SnapshotAnalysis { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FeaturestoreEntitytypeSpecForProvider
 {
     /// <summary>Optional. Description of the EntityType.</summary>
@@ -220,6 +230,7 @@ public enum V1beta1FeaturestoreEntitytypeSpecInitProviderFeaturestoreRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FeaturestoreEntitytypeSpecInitProviderFeaturestoreRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -233,6 +244,7 @@ public partial class V1beta1FeaturestoreEntitytypeSpecInitProviderFeaturestoreRe
     public V1beta1FeaturestoreEntitytypeSpecInitProviderFeaturestoreRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Featurestore in vertexai to populate featurestore.</summary>
 public partial class V1beta1FeaturestoreEntitytypeSpecInitProviderFeaturestoreRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -264,6 +276,7 @@ public enum V1beta1FeaturestoreEntitytypeSpecInitProviderFeaturestoreSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FeaturestoreEntitytypeSpecInitProviderFeaturestoreSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -277,6 +290,7 @@ public partial class V1beta1FeaturestoreEntitytypeSpecInitProviderFeaturestoreSe
     public V1beta1FeaturestoreEntitytypeSpecInitProviderFeaturestoreSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Featurestore in vertexai to populate featurestore.</summary>
 public partial class V1beta1FeaturestoreEntitytypeSpecInitProviderFeaturestoreSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -292,6 +306,7 @@ public partial class V1beta1FeaturestoreEntitytypeSpecInitProviderFeaturestoreSe
     public V1beta1FeaturestoreEntitytypeSpecInitProviderFeaturestoreSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FeaturestoreEntitytypeSpecInitProviderMonitoringConfigCategoricalThresholdConfig
 {
     /// <summary>Specify a threshold value that can trigger the alert. For numerical feature, the distribution distance is calculated by Jensen–Shannon divergence. Each feature must have a non-zero threshold if they need to be monitored. Otherwise no alert will be triggered for that feature. The default value is 0.3.</summary>
@@ -299,6 +314,7 @@ public partial class V1beta1FeaturestoreEntitytypeSpecInitProviderMonitoringConf
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FeaturestoreEntitytypeSpecInitProviderMonitoringConfigImportFeaturesAnalysis
 {
     /// <summary>Defines the baseline to do anomaly detection for feature values imported by each [entityTypes.importFeatureValues][] operation. The value must be one of the values below:</summary>
@@ -310,6 +326,7 @@ public partial class V1beta1FeaturestoreEntitytypeSpecInitProviderMonitoringConf
     public string? State { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FeaturestoreEntitytypeSpecInitProviderMonitoringConfigNumericalThresholdConfig
 {
     /// <summary>Specify a threshold value that can trigger the alert. For numerical feature, the distribution distance is calculated by Jensen–Shannon divergence. Each feature must have a non-zero threshold if they need to be monitored. Otherwise no alert will be triggered for that feature. The default value is 0.3.</summary>
@@ -317,6 +334,7 @@ public partial class V1beta1FeaturestoreEntitytypeSpecInitProviderMonitoringConf
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FeaturestoreEntitytypeSpecInitProviderMonitoringConfigSnapshotAnalysis
 {
     /// <summary>The monitoring schedule for snapshot analysis. For EntityType-level config: unset / disabled = true indicates disabled by default for Features under it; otherwise by default enable snapshot analysis monitoring with monitoringInterval for Features under it.</summary>
@@ -332,6 +350,7 @@ public partial class V1beta1FeaturestoreEntitytypeSpecInitProviderMonitoringConf
     public double? StalenessDays { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FeaturestoreEntitytypeSpecInitProviderMonitoringConfig
 {
     /// <summary>Threshold for categorical features of anomaly detection. This is shared by all types of Featurestore Monitoring for categorical features (i.e. Features with type (Feature.ValueType) BOOL or STRING). Structure is documented below.</summary>
@@ -351,6 +370,7 @@ public partial class V1beta1FeaturestoreEntitytypeSpecInitProviderMonitoringConf
     public IList<V1beta1FeaturestoreEntitytypeSpecInitProviderMonitoringConfigSnapshotAnalysis>? SnapshotAnalysis { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1FeaturestoreEntitytypeSpecInitProvider
 {
     /// <summary>Optional. Description of the EntityType.</summary>
@@ -424,6 +444,7 @@ public enum V1beta1FeaturestoreEntitytypeSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FeaturestoreEntitytypeSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -437,6 +458,7 @@ public partial class V1beta1FeaturestoreEntitytypeSpecProviderConfigRefPolicy
     public V1beta1FeaturestoreEntitytypeSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1FeaturestoreEntitytypeSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -468,6 +490,7 @@ public enum V1beta1FeaturestoreEntitytypeSpecPublishConnectionDetailsToConfigRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FeaturestoreEntitytypeSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -481,6 +504,7 @@ public partial class V1beta1FeaturestoreEntitytypeSpecPublishConnectionDetailsTo
     public V1beta1FeaturestoreEntitytypeSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1FeaturestoreEntitytypeSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -492,6 +516,7 @@ public partial class V1beta1FeaturestoreEntitytypeSpecPublishConnectionDetailsTo
     public V1beta1FeaturestoreEntitytypeSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1FeaturestoreEntitytypeSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -507,6 +532,7 @@ public partial class V1beta1FeaturestoreEntitytypeSpecPublishConnectionDetailsTo
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1FeaturestoreEntitytypeSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -522,6 +548,7 @@ public partial class V1beta1FeaturestoreEntitytypeSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1FeaturestoreEntitytypeSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -533,6 +560,7 @@ public partial class V1beta1FeaturestoreEntitytypeSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>FeaturestoreEntitytypeSpec defines the desired state of FeaturestoreEntitytype</summary>
 public partial class V1beta1FeaturestoreEntitytypeSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -565,6 +593,7 @@ public partial class V1beta1FeaturestoreEntitytypeSpec
     public V1beta1FeaturestoreEntitytypeSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FeaturestoreEntitytypeStatusAtProviderMonitoringConfigCategoricalThresholdConfig
 {
     /// <summary>Specify a threshold value that can trigger the alert. For numerical feature, the distribution distance is calculated by Jensen–Shannon divergence. Each feature must have a non-zero threshold if they need to be monitored. Otherwise no alert will be triggered for that feature. The default value is 0.3.</summary>
@@ -572,6 +601,7 @@ public partial class V1beta1FeaturestoreEntitytypeStatusAtProviderMonitoringConf
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FeaturestoreEntitytypeStatusAtProviderMonitoringConfigImportFeaturesAnalysis
 {
     /// <summary>Defines the baseline to do anomaly detection for feature values imported by each [entityTypes.importFeatureValues][] operation. The value must be one of the values below:</summary>
@@ -583,6 +613,7 @@ public partial class V1beta1FeaturestoreEntitytypeStatusAtProviderMonitoringConf
     public string? State { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FeaturestoreEntitytypeStatusAtProviderMonitoringConfigNumericalThresholdConfig
 {
     /// <summary>Specify a threshold value that can trigger the alert. For numerical feature, the distribution distance is calculated by Jensen–Shannon divergence. Each feature must have a non-zero threshold if they need to be monitored. Otherwise no alert will be triggered for that feature. The default value is 0.3.</summary>
@@ -590,6 +621,7 @@ public partial class V1beta1FeaturestoreEntitytypeStatusAtProviderMonitoringConf
     public double? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FeaturestoreEntitytypeStatusAtProviderMonitoringConfigSnapshotAnalysis
 {
     /// <summary>The monitoring schedule for snapshot analysis. For EntityType-level config: unset / disabled = true indicates disabled by default for Features under it; otherwise by default enable snapshot analysis monitoring with monitoringInterval for Features under it.</summary>
@@ -605,6 +637,7 @@ public partial class V1beta1FeaturestoreEntitytypeStatusAtProviderMonitoringConf
     public double? StalenessDays { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FeaturestoreEntitytypeStatusAtProviderMonitoringConfig
 {
     /// <summary>Threshold for categorical features of anomaly detection. This is shared by all types of Featurestore Monitoring for categorical features (i.e. Features with type (Feature.ValueType) BOOL or STRING). Structure is documented below.</summary>
@@ -624,6 +657,7 @@ public partial class V1beta1FeaturestoreEntitytypeStatusAtProviderMonitoringConf
     public IList<V1beta1FeaturestoreEntitytypeStatusAtProviderMonitoringConfigSnapshotAnalysis>? SnapshotAnalysis { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FeaturestoreEntitytypeStatusAtProvider
 {
     /// <summary>The timestamp of when the featurestore was created in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.</summary>
@@ -675,6 +709,7 @@ public partial class V1beta1FeaturestoreEntitytypeStatusAtProvider
     public string? UpdateTime { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1FeaturestoreEntitytypeStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -702,6 +737,7 @@ public partial class V1beta1FeaturestoreEntitytypeStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>FeaturestoreEntitytypeStatus defines the observed state of FeaturestoreEntitytype.</summary>
 public partial class V1beta1FeaturestoreEntitytypeStatus
 {
     /// <summary></summary>
@@ -718,6 +754,7 @@ public partial class V1beta1FeaturestoreEntitytypeStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>FeaturestoreEntitytype is the Schema for the FeaturestoreEntitytypes API. An entity type is a type of object in a system that needs to be modeled and have stored information about.</summary>
 public partial class V1beta1FeaturestoreEntitytype : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FeaturestoreEntitytypeSpec>, IStatus<V1beta1FeaturestoreEntitytypeStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -38,6 +38,7 @@ public enum V1beta1MonitorSmartDetectorAlertRuleSpecForProviderActionGroupIdsRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderActionGroupIdsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderActionGr
     public V1beta1MonitorSmartDetectorAlertRuleSpecForProviderActionGroupIdsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderActionGroupIdsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1MonitorSmartDetectorAlertRuleSpecForProviderActionGroupIdsSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderActionGroupIdsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderActionGr
     public V1beta1MonitorSmartDetectorAlertRuleSpecForProviderActionGroupIdsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of MonitorActionGroup in insights to populate ids.</summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderActionGroupIdsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderActionGr
     public V1beta1MonitorSmartDetectorAlertRuleSpecForProviderActionGroupIdsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderActionGroup
 {
     /// <summary>Specifies a custom email subject if Email Receiver is specified in Monitor Action Group resource.</summary>
@@ -153,6 +158,7 @@ public enum V1beta1MonitorSmartDetectorAlertRuleSpecForProviderResourceGroupName
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -166,6 +172,7 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderResource
     public V1beta1MonitorSmartDetectorAlertRuleSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -197,6 +204,7 @@ public enum V1beta1MonitorSmartDetectorAlertRuleSpecForProviderResourceGroupName
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -210,6 +218,7 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderResource
     public V1beta1MonitorSmartDetectorAlertRuleSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -245,6 +254,7 @@ public enum V1beta1MonitorSmartDetectorAlertRuleSpecForProviderScopeResourceIdsR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderScopeResourceIdsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -258,6 +268,7 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderScopeRes
     public V1beta1MonitorSmartDetectorAlertRuleSpecForProviderScopeResourceIdsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderScopeResourceIdsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -289,6 +300,7 @@ public enum V1beta1MonitorSmartDetectorAlertRuleSpecForProviderScopeResourceIdsS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderScopeResourceIdsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -302,6 +314,7 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderScopeRes
     public V1beta1MonitorSmartDetectorAlertRuleSpecForProviderScopeResourceIdsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of ApplicationInsights in insights to populate scopeResourceIds.</summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderScopeResourceIdsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -317,6 +330,7 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProviderScopeRes
     public V1beta1MonitorSmartDetectorAlertRuleSpecForProviderScopeResourceIdsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecForProvider
 {
     /// <summary>An action_group block as defined below.</summary>
@@ -400,6 +414,7 @@ public enum V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderActionGroupIdsRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderActionGroupIdsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -413,6 +428,7 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderActionG
     public V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderActionGroupIdsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderActionGroupIdsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -444,6 +460,7 @@ public enum V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderActionGroupIdsSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderActionGroupIdsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -457,6 +474,7 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderActionG
     public V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderActionGroupIdsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of MonitorActionGroup in insights to populate ids.</summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderActionGroupIdsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -472,6 +490,7 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderActionG
     public V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderActionGroupIdsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderActionGroup
 {
     /// <summary>Specifies a custom email subject if Email Receiver is specified in Monitor Action Group resource.</summary>
@@ -515,6 +534,7 @@ public enum V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderResourceGroupNam
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -528,6 +548,7 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderResourc
     public V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -559,6 +580,7 @@ public enum V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderResourceGroupNam
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -572,6 +594,7 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderResourc
     public V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -607,6 +630,7 @@ public enum V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderScopeResourceIds
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderScopeResourceIdsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -620,6 +644,7 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderScopeRe
     public V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderScopeResourceIdsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderScopeResourceIdsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -651,6 +676,7 @@ public enum V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderScopeResourceIds
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderScopeResourceIdsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -664,6 +690,7 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderScopeRe
     public V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderScopeResourceIdsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of ApplicationInsights in insights to populate scopeResourceIds.</summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderScopeResourceIdsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -679,6 +706,7 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderScopeRe
     public V1beta1MonitorSmartDetectorAlertRuleSpecInitProviderScopeResourceIdsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecInitProvider
 {
     /// <summary>An action_group block as defined below.</summary>
@@ -784,6 +812,7 @@ public enum V1beta1MonitorSmartDetectorAlertRuleSpecProviderConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -797,6 +826,7 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecProviderConfigRefPo
     public V1beta1MonitorSmartDetectorAlertRuleSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -828,6 +858,7 @@ public enum V1beta1MonitorSmartDetectorAlertRuleSpecPublishConnectionDetailsToCo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -841,6 +872,7 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecPublishConnectionDe
     public V1beta1MonitorSmartDetectorAlertRuleSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -852,6 +884,7 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecPublishConnectionDe
     public V1beta1MonitorSmartDetectorAlertRuleSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -867,6 +900,7 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecPublishConnectionDe
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -882,6 +916,7 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecPublishConnectionDe
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -893,6 +928,7 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpecWriteConnectionSecr
     public string Namespace { get; set; }
 }
 
+/// <summary>MonitorSmartDetectorAlertRuleSpec defines the desired state of MonitorSmartDetectorAlertRule</summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -925,6 +961,7 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleSpec
     public V1beta1MonitorSmartDetectorAlertRuleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleStatusAtProviderActionGroup
 {
     /// <summary>Specifies a custom email subject if Email Receiver is specified in Monitor Action Group resource.</summary>
@@ -940,6 +977,7 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleStatusAtProviderActionG
     public string? WebhookPayload { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleStatusAtProvider
 {
     /// <summary>An action_group block as defined below.</summary>
@@ -991,6 +1029,7 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleStatusAtProvider
     public string? ThrottlingDuration { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1018,6 +1057,7 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>MonitorSmartDetectorAlertRuleStatus defines the observed state of MonitorSmartDetectorAlertRule.</summary>
 public partial class V1beta1MonitorSmartDetectorAlertRuleStatus
 {
     /// <summary></summary>
@@ -1034,6 +1074,7 @@ public partial class V1beta1MonitorSmartDetectorAlertRuleStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>MonitorSmartDetectorAlertRule is the Schema for the MonitorSmartDetectorAlertRules API. Manages an Monitor Smart Detector Alert Rule.</summary>
 public partial class V1beta1MonitorSmartDetectorAlertRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MonitorSmartDetectorAlertRuleSpec>, IStatus<V1beta1MonitorSmartDetectorAlertRuleStatus>
 {
     public const string KubeApiVersion = "v1beta1";

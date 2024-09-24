@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storagetransfer.cnrm.cloud.google.com;
+/// <summary>The PubSubTopic to which to publish notifications.</summary>
 public partial class V1beta1StorageTransferJobSpecNotificationConfigTopicRef
 {
     /// <summary>Allowed value: string of the format `projects/{{project}}/topics/{{value}}`, where {{value}} is the `name` field of a `PubSubTopic` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1StorageTransferJobSpecNotificationConfigTopicRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Notification configuration.</summary>
 public partial class V1beta1StorageTransferJobSpecNotificationConfig
 {
     /// <summary>Event types for which a notification is desired. If empty, send notifications for all event types. The valid types are "TRANSFER_OPERATION_SUCCESS", "TRANSFER_OPERATION_FAILED", "TRANSFER_OPERATION_ABORTED".</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1StorageTransferJobSpecNotificationConfig
     public V1beta1StorageTransferJobSpecNotificationConfigTopicRef TopicRef { get; set; }
 }
 
+/// <summary>The last day the recurring transfer will be run. If schedule_end_date is the same as schedule_start_date, the transfer will be executed only once.</summary>
 public partial class V1beta1StorageTransferJobSpecScheduleScheduleEndDate
 {
     /// <summary>Day of month. Must be from 1 to 31 and valid for the year and month.</summary>
@@ -53,6 +56,7 @@ public partial class V1beta1StorageTransferJobSpecScheduleScheduleEndDate
     public int Year { get; set; }
 }
 
+/// <summary>The first day the recurring transfer is scheduled to run. If schedule_start_date is in the past, the transfer will run for the first time on the following day.</summary>
 public partial class V1beta1StorageTransferJobSpecScheduleScheduleStartDate
 {
     /// <summary>Day of month. Must be from 1 to 31 and valid for the year and month.</summary>
@@ -68,6 +72,7 @@ public partial class V1beta1StorageTransferJobSpecScheduleScheduleStartDate
     public int Year { get; set; }
 }
 
+/// <summary>The time in UTC at which the transfer will be scheduled to start in a day. Transfers may start later than this time. If not specified, recurring and one-time transfers that are scheduled to run today will run immediately; recurring transfers that are scheduled to run on a future date will start at approximately midnight UTC on that date. Note that when configuring a transfer with the Cloud Platform Console, the transfer's start time in a day is specified in your local timezone.</summary>
 public partial class V1beta1StorageTransferJobSpecScheduleStartTimeOfDay
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23.</summary>
@@ -87,6 +92,7 @@ public partial class V1beta1StorageTransferJobSpecScheduleStartTimeOfDay
     public int Seconds { get; set; }
 }
 
+/// <summary>Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run.</summary>
 public partial class V1beta1StorageTransferJobSpecSchedule
 {
     /// <summary>Interval between the start of each scheduled transfer. If unspecified, the default value is 24 hours. This value may not be less than 1 hour. A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".</summary>
@@ -106,6 +112,7 @@ public partial class V1beta1StorageTransferJobSpecSchedule
     public V1beta1StorageTransferJobSpecScheduleStartTimeOfDay? StartTimeOfDay { get; set; }
 }
 
+/// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeyAccessKeyIdValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -117,6 +124,7 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAws
     public string Name { get; set; }
 }
 
+/// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeyAccessKeyIdValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -124,6 +132,7 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAws
     public V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeyAccessKeyIdValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary>AWS Key ID.</summary>
 public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeyAccessKeyId
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -135,6 +144,7 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAws
     public V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeyAccessKeyIdValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeySecretAccessKeyValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -146,6 +156,7 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAws
     public string Name { get; set; }
 }
 
+/// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeySecretAccessKeyValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -153,6 +164,7 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAws
     public V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeySecretAccessKeyValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary>AWS Secret Access Key.</summary>
 public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeySecretAccessKey
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -164,6 +176,7 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAws
     public V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeySecretAccessKeyValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary>AWS credentials block.</summary>
 public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKey
 {
     /// <summary>AWS Key ID.</summary>
@@ -175,6 +188,7 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAws
     public V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeySecretAccessKey SecretAccessKey { get; set; }
 }
 
+/// <summary>An AWS S3 data source.</summary>
 public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSource
 {
     /// <summary>AWS credentials block.</summary>
@@ -194,6 +208,7 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSource
     public string? RoleArn { get; set; }
 }
 
+/// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 public partial class V1beta1StorageTransferJobSpecTransferSpecAzureBlobStorageDataSourceAzureCredentialsSasTokenValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -205,6 +220,7 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecAzureBlobStorageDa
     public string Name { get; set; }
 }
 
+/// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 public partial class V1beta1StorageTransferJobSpecTransferSpecAzureBlobStorageDataSourceAzureCredentialsSasTokenValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -212,6 +228,7 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecAzureBlobStorageDa
     public V1beta1StorageTransferJobSpecTransferSpecAzureBlobStorageDataSourceAzureCredentialsSasTokenValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary>Azure shared access signature.</summary>
 public partial class V1beta1StorageTransferJobSpecTransferSpecAzureBlobStorageDataSourceAzureCredentialsSasToken
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -223,6 +240,7 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecAzureBlobStorageDa
     public V1beta1StorageTransferJobSpecTransferSpecAzureBlobStorageDataSourceAzureCredentialsSasTokenValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary> Credentials used to authenticate API requests to Azure.</summary>
 public partial class V1beta1StorageTransferJobSpecTransferSpecAzureBlobStorageDataSourceAzureCredentials
 {
     /// <summary>Azure shared access signature.</summary>
@@ -230,6 +248,7 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecAzureBlobStorageDa
     public V1beta1StorageTransferJobSpecTransferSpecAzureBlobStorageDataSourceAzureCredentialsSasToken SasToken { get; set; }
 }
 
+/// <summary>An Azure Blob Storage data source.</summary>
 public partial class V1beta1StorageTransferJobSpecTransferSpecAzureBlobStorageDataSource
 {
     /// <summary> Credentials used to authenticate API requests to Azure.</summary>
@@ -249,6 +268,7 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecAzureBlobStorageDa
     public string StorageAccount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StorageTransferJobSpecTransferSpecGcsDataSinkBucketRef
 {
     /// <summary>Allowed value: The `name` field of a `StorageBucket` resource.</summary>
@@ -264,6 +284,7 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecGcsDataSinkBucketR
     public string? Namespace { get; set; }
 }
 
+/// <summary>A Google Cloud Storage data sink.</summary>
 public partial class V1beta1StorageTransferJobSpecTransferSpecGcsDataSink
 {
     /// <summary></summary>
@@ -275,6 +296,7 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecGcsDataSink
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StorageTransferJobSpecTransferSpecGcsDataSourceBucketRef
 {
     /// <summary>Allowed value: The `name` field of a `StorageBucket` resource.</summary>
@@ -290,6 +312,7 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecGcsDataSourceBucke
     public string? Namespace { get; set; }
 }
 
+/// <summary>A Google Cloud Storage data source.</summary>
 public partial class V1beta1StorageTransferJobSpecTransferSpecGcsDataSource
 {
     /// <summary></summary>
@@ -301,6 +324,7 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecGcsDataSource
     public string? Path { get; set; }
 }
 
+/// <summary>A HTTP URL data source.</summary>
 public partial class V1beta1StorageTransferJobSpecTransferSpecHttpDataSource
 {
     /// <summary>The URL that points to the file that stores the object list entries. This file must allow public access. Currently, only URLs with HTTP and HTTPS schemes are supported.</summary>
@@ -308,6 +332,7 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecHttpDataSource
     public string ListUrl { get; set; }
 }
 
+/// <summary>Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects' last_modification_time do not exclude objects in a data sink.</summary>
 public partial class V1beta1StorageTransferJobSpecTransferSpecObjectConditions
 {
     /// <summary>exclude_prefixes must follow the requirements described for include_prefixes.</summary>
@@ -335,6 +360,7 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecObjectConditions
     public string? MinTimeElapsedSinceLastModification { get; set; }
 }
 
+/// <summary>A POSIX filesystem data sink.</summary>
 public partial class V1beta1StorageTransferJobSpecTransferSpecPosixDataSink
 {
     /// <summary>Root directory path to the filesystem.</summary>
@@ -342,6 +368,7 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecPosixDataSink
     public string RootDirectory { get; set; }
 }
 
+/// <summary>A POSIX filesystem data source.</summary>
 public partial class V1beta1StorageTransferJobSpecTransferSpecPosixDataSource
 {
     /// <summary>Root directory path to the filesystem.</summary>
@@ -349,6 +376,7 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecPosixDataSource
     public string RootDirectory { get; set; }
 }
 
+/// <summary>Characteristics of how to treat files from datasource and sink during job. If the option delete_objects_unique_in_sink is true, object conditions based on objects' last_modification_time are ignored and do not exclude objects in a data source or a data sink.</summary>
 public partial class V1beta1StorageTransferJobSpecTransferSpecTransferOptions
 {
     /// <summary>Whether objects should be deleted from the source after they are transferred to the sink. Note that this option and delete_objects_unique_in_sink are mutually exclusive.</summary>
@@ -368,6 +396,7 @@ public partial class V1beta1StorageTransferJobSpecTransferSpecTransferOptions
     public string? OverwriteWhen { get; set; }
 }
 
+/// <summary>Transfer specification.</summary>
 public partial class V1beta1StorageTransferJobSpecTransferSpec
 {
     /// <summary>An AWS S3 data source.</summary>
@@ -415,6 +444,7 @@ public partial class V1beta1StorageTransferJobSpecTransferSpec
     public V1beta1StorageTransferJobSpecTransferSpecTransferOptions? TransferOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StorageTransferJobSpec
 {
     /// <summary>Unique description to identify the Transfer Job.</summary>
@@ -442,6 +472,7 @@ public partial class V1beta1StorageTransferJobSpec
     public V1beta1StorageTransferJobSpecTransferSpec TransferSpec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StorageTransferJobStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -465,6 +496,7 @@ public partial class V1beta1StorageTransferJobStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StorageTransferJobStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -493,6 +525,7 @@ public partial class V1beta1StorageTransferJobStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1StorageTransferJob : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1StorageTransferJobSpec>, IStatus<V1beta1StorageTransferJobStatus>
 {
     public const string KubeApiVersion = "v1beta1";

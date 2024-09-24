@@ -38,6 +38,7 @@ public enum V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProviderIdentit
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProviderIdentityPoolIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProvid
     public V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProviderIdentityPoolIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Pool in cognitoidentity to populate identityPoolId.</summary>
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProviderIdentityPoolIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProviderIdentit
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProviderIdentityPoolIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProvid
     public V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProviderIdentityPoolIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Pool in cognitoidentity to populate identityPoolId.</summary>
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProviderIdentityPoolIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProviderIdentit
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProviderIdentityProviderNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProvid
     public V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProviderIdentityProviderNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserPool in cognitoidp to populate identityProviderName.</summary>
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProviderIdentityProviderNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProviderIdentit
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProviderIdentityProviderNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProvid
     public V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProviderIdentityProviderNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserPool in cognitoidp to populate identityProviderName.</summary>
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProviderIdentityProviderNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProvid
     public V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProviderIdentityProviderNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProvider
 {
     /// <summary>An identity pool ID.</summary>
@@ -261,6 +270,7 @@ public enum V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProviderIdenti
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProviderIdentityPoolIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -274,6 +284,7 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProvi
     public V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProviderIdentityPoolIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Pool in cognitoidentity to populate identityPoolId.</summary>
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProviderIdentityPoolIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -305,6 +316,7 @@ public enum V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProviderIdenti
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProviderIdentityPoolIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -318,6 +330,7 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProvi
     public V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProviderIdentityPoolIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Pool in cognitoidentity to populate identityPoolId.</summary>
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProviderIdentityPoolIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -353,6 +366,7 @@ public enum V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProviderIdenti
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProviderIdentityProviderNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -366,6 +380,7 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProvi
     public V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProviderIdentityProviderNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserPool in cognitoidp to populate identityProviderName.</summary>
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProviderIdentityProviderNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -397,6 +412,7 @@ public enum V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProviderIdenti
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProviderIdentityProviderNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -410,6 +426,7 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProvi
     public V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProviderIdentityProviderNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserPool in cognitoidp to populate identityProviderName.</summary>
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProviderIdentityProviderNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -425,6 +442,7 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProvi
     public V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProviderIdentityProviderNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecInitProvider
 {
     /// <summary>An identity pool ID.</summary>
@@ -502,6 +520,7 @@ public enum V1beta1CognitoIdentityPoolProviderPrincipalTagSpecProviderConfigRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -515,6 +534,7 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecProviderC
     public V1beta1CognitoIdentityPoolProviderPrincipalTagSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -546,6 +566,7 @@ public enum V1beta1CognitoIdentityPoolProviderPrincipalTagSpecPublishConnectionD
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -559,6 +580,7 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecPublishCo
     public V1beta1CognitoIdentityPoolProviderPrincipalTagSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -570,6 +592,7 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecPublishCo
     public V1beta1CognitoIdentityPoolProviderPrincipalTagSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -585,6 +608,7 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecPublishCo
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -600,6 +624,7 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecPublishCo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -611,6 +636,7 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecWriteConn
     public string Namespace { get; set; }
 }
 
+/// <summary>CognitoIdentityPoolProviderPrincipalTagSpec defines the desired state of CognitoIdentityPoolProviderPrincipalTag</summary>
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -643,6 +669,7 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpec
     public V1beta1CognitoIdentityPoolProviderPrincipalTagSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagStatusAtProvider
 {
     /// <summary></summary>
@@ -666,6 +693,7 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagStatusAtProvi
     public bool? UseDefaults { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -693,6 +721,7 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagStatusConditi
     public string Type { get; set; }
 }
 
+/// <summary>CognitoIdentityPoolProviderPrincipalTagStatus defines the observed state of CognitoIdentityPoolProviderPrincipalTag.</summary>
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagStatus
 {
     /// <summary></summary>
@@ -709,6 +738,7 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>CognitoIdentityPoolProviderPrincipalTag is the Schema for the CognitoIdentityPoolProviderPrincipalTags API. Provides an AWS Cognito Identity Principal Mapping.</summary>
 public partial class V1beta1CognitoIdentityPoolProviderPrincipalTag : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1CognitoIdentityPoolProviderPrincipalTagSpec>, IStatus<V1beta1CognitoIdentityPoolProviderPrincipalTagStatus>
 {
     public const string KubeApiVersion = "v1beta1";

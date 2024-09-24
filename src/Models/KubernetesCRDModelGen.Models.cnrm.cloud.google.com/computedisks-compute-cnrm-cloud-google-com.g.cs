@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary>Immutable. Primary disk for asynchronous disk replication.</summary>
 public partial class V1beta1ComputeDiskSpecAsyncPrimaryDiskDiskRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeDisk` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1ComputeDiskSpecAsyncPrimaryDiskDiskRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. A nested object resource.</summary>
 public partial class V1beta1ComputeDiskSpecAsyncPrimaryDisk
 {
     /// <summary>Immutable. Primary disk for asynchronous disk replication.</summary>
@@ -30,6 +32,7 @@ public partial class V1beta1ComputeDiskSpecAsyncPrimaryDisk
     public V1beta1ComputeDiskSpecAsyncPrimaryDiskDiskRef DiskRef { get; set; }
 }
 
+/// <summary>The encryption key used to encrypt the disk. Your project's Compute Engine System service account ('service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com') must have 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature. See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys</summary>
 public partial class V1beta1ComputeDiskSpecDiskEncryptionKeyKmsKeyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
@@ -45,6 +48,7 @@ public partial class V1beta1ComputeDiskSpecDiskEncryptionKeyKmsKeyRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The service account used for the encryption request for the given KMS key. If absent, the Compute Engine Service Agent service account is used.</summary>
 public partial class V1beta1ComputeDiskSpecDiskEncryptionKeyKmsKeyServiceAccountRef
 {
     /// <summary>Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
@@ -60,6 +64,7 @@ public partial class V1beta1ComputeDiskSpecDiskEncryptionKeyKmsKeyServiceAccount
     public string? Namespace { get; set; }
 }
 
+/// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 public partial class V1beta1ComputeDiskSpecDiskEncryptionKeyRawKeyValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -71,6 +76,7 @@ public partial class V1beta1ComputeDiskSpecDiskEncryptionKeyRawKeyValueFromSecre
     public string Name { get; set; }
 }
 
+/// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 public partial class V1beta1ComputeDiskSpecDiskEncryptionKeyRawKeyValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -78,6 +84,7 @@ public partial class V1beta1ComputeDiskSpecDiskEncryptionKeyRawKeyValueFrom
     public V1beta1ComputeDiskSpecDiskEncryptionKeyRawKeyValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary>Immutable. Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource.</summary>
 public partial class V1beta1ComputeDiskSpecDiskEncryptionKeyRawKey
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -89,6 +96,7 @@ public partial class V1beta1ComputeDiskSpecDiskEncryptionKeyRawKey
     public V1beta1ComputeDiskSpecDiskEncryptionKeyRawKeyValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 public partial class V1beta1ComputeDiskSpecDiskEncryptionKeyRsaEncryptedKeyValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -100,6 +108,7 @@ public partial class V1beta1ComputeDiskSpecDiskEncryptionKeyRsaEncryptedKeyValue
     public string Name { get; set; }
 }
 
+/// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 public partial class V1beta1ComputeDiskSpecDiskEncryptionKeyRsaEncryptedKeyValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -107,6 +116,7 @@ public partial class V1beta1ComputeDiskSpecDiskEncryptionKeyRsaEncryptedKeyValue
     public V1beta1ComputeDiskSpecDiskEncryptionKeyRsaEncryptedKeyValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary>Immutable. Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey.</summary>
 public partial class V1beta1ComputeDiskSpecDiskEncryptionKeyRsaEncryptedKey
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -118,6 +128,7 @@ public partial class V1beta1ComputeDiskSpecDiskEncryptionKeyRsaEncryptedKey
     public V1beta1ComputeDiskSpecDiskEncryptionKeyRsaEncryptedKeyValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary>Immutable. Encrypts the disk using a customer-supplied encryption key.  After you encrypt a disk with a customer-supplied key, you must provide the same key if you use the disk later (e.g. to create a disk snapshot or an image, or to attach the disk to a virtual machine).  Customer-supplied encryption keys do not protect access to metadata of the disk.  If you do not provide an encryption key when creating the disk, then the disk will be encrypted using an automatically generated key and you do not need to provide a key to use the disk later.</summary>
 public partial class V1beta1ComputeDiskSpecDiskEncryptionKey
 {
     /// <summary>The encryption key used to encrypt the disk. Your project's Compute Engine System service account ('service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com') must have 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature. See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys</summary>
@@ -141,6 +152,7 @@ public partial class V1beta1ComputeDiskSpecDiskEncryptionKey
     public string? Sha256 { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeDiskSpecGuestOsFeatures
 {
     /// <summary>Immutable. The type of supported feature. Read [Enabling guest operating system features](https://cloud.google.com/compute/docs/images/create-delete-deprecate-private-images#guest-os-features) to see a list of available options. Possible values: ["MULTI_IP_SUBNET", "SECURE_BOOT", "SEV_CAPABLE", "UEFI_COMPATIBLE", "VIRTIO_SCSI_MULTIQUEUE", "WINDOWS", "GVNIC", "SEV_LIVE_MIGRATABLE", "SEV_SNP_CAPABLE", "SUSPEND_RESUME_COMPATIBLE", "TDX_CAPABLE"].</summary>
@@ -148,6 +160,7 @@ public partial class V1beta1ComputeDiskSpecGuestOsFeatures
     public string Type { get; set; }
 }
 
+/// <summary>The image from which to initialize this disk.</summary>
 public partial class V1beta1ComputeDiskSpecImageRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeImage` resource.</summary>
@@ -163,6 +176,7 @@ public partial class V1beta1ComputeDiskSpecImageRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1beta1ComputeDiskSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -178,6 +192,7 @@ public partial class V1beta1ComputeDiskSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Resource policies applied to this disk for automatic snapshot creations. This field only applies for zonal compute disk resources.</summary>
 public partial class V1beta1ComputeDiskSpecResourcePolicies
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeResourcePolicy` resource.</summary>
@@ -193,6 +208,7 @@ public partial class V1beta1ComputeDiskSpecResourcePolicies
     public string? Namespace { get; set; }
 }
 
+/// <summary>The source snapshot used to create this disk.</summary>
 public partial class V1beta1ComputeDiskSpecSnapshotRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeSnapshot` resource.</summary>
@@ -208,6 +224,7 @@ public partial class V1beta1ComputeDiskSpecSnapshotRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The source disk used to create this disk.</summary>
 public partial class V1beta1ComputeDiskSpecSourceDiskRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeDisk` resource.</summary>
@@ -223,6 +240,7 @@ public partial class V1beta1ComputeDiskSpecSourceDiskRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The encryption key used to encrypt the disk. Your project's Compute Engine System service account ('service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com') must have 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature. See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys</summary>
 public partial class V1beta1ComputeDiskSpecSourceImageEncryptionKeyKmsKeyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
@@ -238,6 +256,7 @@ public partial class V1beta1ComputeDiskSpecSourceImageEncryptionKeyKmsKeyRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The service account used for the encryption request for the given KMS key. If absent, the Compute Engine Service Agent service account is used.</summary>
 public partial class V1beta1ComputeDiskSpecSourceImageEncryptionKeyKmsKeyServiceAccountRef
 {
     /// <summary>Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
@@ -253,6 +272,7 @@ public partial class V1beta1ComputeDiskSpecSourceImageEncryptionKeyKmsKeyService
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. The customer-supplied encryption key of the source image. Required if the source image is protected by a customer-supplied encryption key.</summary>
 public partial class V1beta1ComputeDiskSpecSourceImageEncryptionKey
 {
     /// <summary>The encryption key used to encrypt the disk. Your project's Compute Engine System service account ('service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com') must have 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature. See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys</summary>
@@ -272,6 +292,7 @@ public partial class V1beta1ComputeDiskSpecSourceImageEncryptionKey
     public string? Sha256 { get; set; }
 }
 
+/// <summary>The encryption key used to encrypt the disk. Your project's Compute Engine System service account ('service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com') must have 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature. See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys</summary>
 public partial class V1beta1ComputeDiskSpecSourceSnapshotEncryptionKeyKmsKeyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
@@ -287,6 +308,7 @@ public partial class V1beta1ComputeDiskSpecSourceSnapshotEncryptionKeyKmsKeyRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The service account used for the encryption request for the given KMS key. If absent, the Compute Engine Service Agent service account is used.</summary>
 public partial class V1beta1ComputeDiskSpecSourceSnapshotEncryptionKeyKmsKeyServiceAccountRef
 {
     /// <summary>Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
@@ -302,6 +324,7 @@ public partial class V1beta1ComputeDiskSpecSourceSnapshotEncryptionKeyKmsKeyServ
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a customer-supplied encryption key.</summary>
 public partial class V1beta1ComputeDiskSpecSourceSnapshotEncryptionKey
 {
     /// <summary>The encryption key used to encrypt the disk. Your project's Compute Engine System service account ('service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com') must have 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature. See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys</summary>
@@ -321,6 +344,7 @@ public partial class V1beta1ComputeDiskSpecSourceSnapshotEncryptionKey
     public string? Sha256 { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeDiskSpec
 {
     /// <summary>Immutable. A nested object resource.</summary>
@@ -416,6 +440,7 @@ public partial class V1beta1ComputeDiskSpec
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeDiskStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -439,6 +464,7 @@ public partial class V1beta1ComputeDiskStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeDiskStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -487,6 +513,7 @@ public partial class V1beta1ComputeDiskStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ComputeDisk : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeDiskSpec>, IStatus<V1beta1ComputeDiskStatus>
 {
     public const string KubeApiVersion = "v1beta1";

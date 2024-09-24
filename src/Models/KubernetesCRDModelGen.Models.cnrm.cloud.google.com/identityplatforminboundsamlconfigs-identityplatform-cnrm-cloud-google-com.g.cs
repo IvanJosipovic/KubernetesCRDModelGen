@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.identityplatform.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1alpha1IdentityPlatformInboundSAMLConfigSpecIdpConfigIdpCertificates
 {
     /// <summary>The IdP's x509 certificate.</summary>
@@ -15,6 +16,7 @@ public partial class V1alpha1IdentityPlatformInboundSAMLConfigSpecIdpConfigIdpCe
     public string? X509Certificate { get; set; }
 }
 
+/// <summary>SAML IdP configuration when the project acts as the relying party.</summary>
 public partial class V1alpha1IdentityPlatformInboundSAMLConfigSpecIdpConfig
 {
     /// <summary>The IdP's certificate data to verify the signature in the SAMLResponse issued by the IDP.</summary>
@@ -34,6 +36,7 @@ public partial class V1alpha1IdentityPlatformInboundSAMLConfigSpecIdpConfig
     public string SsoUrl { get; set; }
 }
 
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1IdentityPlatformInboundSAMLConfigSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -49,6 +52,7 @@ public partial class V1alpha1IdentityPlatformInboundSAMLConfigSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1IdentityPlatformInboundSAMLConfigSpecSpConfigSpCertificates
 {
     /// <summary>The x509 certificate.</summary>
@@ -56,6 +60,7 @@ public partial class V1alpha1IdentityPlatformInboundSAMLConfigSpecSpConfigSpCert
     public string? X509Certificate { get; set; }
 }
 
+/// <summary>SAML SP (Service Provider) configuration when the project acts as the relying party to receive and accept an authentication assertion issued by a SAML identity provider.</summary>
 public partial class V1alpha1IdentityPlatformInboundSAMLConfigSpecSpConfig
 {
     /// <summary>Callback URI where responses from IDP are handled. Must start with 'https://'.</summary>
@@ -71,6 +76,7 @@ public partial class V1alpha1IdentityPlatformInboundSAMLConfigSpecSpConfig
     public string? SpEntityId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1IdentityPlatformInboundSAMLConfigSpec
 {
     /// <summary>Human friendly display name.</summary>
@@ -98,6 +104,7 @@ public partial class V1alpha1IdentityPlatformInboundSAMLConfigSpec
     public V1alpha1IdentityPlatformInboundSAMLConfigSpecSpConfig SpConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1IdentityPlatformInboundSAMLConfigStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -121,6 +128,7 @@ public partial class V1alpha1IdentityPlatformInboundSAMLConfigStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1IdentityPlatformInboundSAMLConfigStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -133,6 +141,7 @@ public partial class V1alpha1IdentityPlatformInboundSAMLConfigStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1IdentityPlatformInboundSAMLConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1IdentityPlatformInboundSAMLConfigSpec>, IStatus<V1alpha1IdentityPlatformInboundSAMLConfigStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

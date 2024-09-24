@@ -38,6 +38,7 @@ public enum V1beta1BucketLifecycleConfigurationSpecForProviderBucketRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketLifecycleConfigurationSpecForProviderBucketRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecForProviderBucketRef
     public V1beta1BucketLifecycleConfigurationSpecForProviderBucketRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1BucketLifecycleConfigurationSpecForProviderBucketRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1BucketLifecycleConfigurationSpecForProviderBucketSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BucketLifecycleConfigurationSpecForProviderBucketSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecForProviderBucketSel
     public V1beta1BucketLifecycleConfigurationSpecForProviderBucketSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1BucketLifecycleConfigurationSpecForProviderBucketSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecForProviderBucketSel
     public V1beta1BucketLifecycleConfigurationSpecForProviderBucketSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketLifecycleConfigurationSpecForProviderRuleAbortIncompleteMultipartUpload
 {
     /// <summary>Number of days after which Amazon S3 aborts an incomplete multipart upload.</summary>
@@ -117,6 +122,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecForProviderRuleAbort
     public double? DaysAfterInitiation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketLifecycleConfigurationSpecForProviderRuleExpiration
 {
     /// <summary>Date objects are transitioned to the specified storage class. The date value must be in RFC3339 full-date format e.g. 2023-08-22.</summary>
@@ -132,6 +138,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecForProviderRuleExpir
     public bool? ExpiredObjectDeleteMarker { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketLifecycleConfigurationSpecForProviderRuleFilterAnd
 {
     /// <summary>Minimum object size (in bytes) to which the rule applies.</summary>
@@ -151,6 +158,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecForProviderRuleFilte
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketLifecycleConfigurationSpecForProviderRuleFilterTag
 {
     /// <summary>Name of the object key.</summary>
@@ -162,6 +170,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecForProviderRuleFilte
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketLifecycleConfigurationSpecForProviderRuleFilter
 {
     /// <summary>Configuration block used to apply a logical AND to two or more predicates. See below. The Lifecycle Rule will apply to any object matching all the predicates configured inside the and block.</summary>
@@ -185,6 +194,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecForProviderRuleFilte
     public IList<V1beta1BucketLifecycleConfigurationSpecForProviderRuleFilterTag>? Tag { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketLifecycleConfigurationSpecForProviderRuleNoncurrentVersionExpiration
 {
     /// <summary>Number of noncurrent versions Amazon S3 will retain. Must be a non-zero positive integer.</summary>
@@ -196,6 +206,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecForProviderRuleNoncu
     public double? NoncurrentDays { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketLifecycleConfigurationSpecForProviderRuleNoncurrentVersionTransition
 {
     /// <summary>Number of noncurrent versions Amazon S3 will retain. Must be a non-zero positive integer.</summary>
@@ -211,6 +222,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecForProviderRuleNoncu
     public string? StorageClass { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketLifecycleConfigurationSpecForProviderRuleTransition
 {
     /// <summary>Date objects are transitioned to the specified storage class. The date value must be in RFC3339 full-date format e.g. 2023-08-22.</summary>
@@ -226,6 +238,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecForProviderRuleTrans
     public string? StorageClass { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketLifecycleConfigurationSpecForProviderRule
 {
     /// <summary>Configuration block that specifies the days since the initiation of an incomplete multipart upload that Amazon S3 will wait before permanently removing all parts of the upload. See below.</summary>
@@ -265,6 +278,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecForProviderRule
     public IList<V1beta1BucketLifecycleConfigurationSpecForProviderRuleTransition>? Transition { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketLifecycleConfigurationSpecForProvider
 {
     /// <summary>Name of the source S3 bucket you want Amazon S3 to monitor.</summary>
@@ -312,6 +326,7 @@ public enum V1beta1BucketLifecycleConfigurationSpecInitProviderBucketRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketLifecycleConfigurationSpecInitProviderBucketRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -325,6 +340,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecInitProviderBucketRe
     public V1beta1BucketLifecycleConfigurationSpecInitProviderBucketRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1BucketLifecycleConfigurationSpecInitProviderBucketRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -356,6 +372,7 @@ public enum V1beta1BucketLifecycleConfigurationSpecInitProviderBucketSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BucketLifecycleConfigurationSpecInitProviderBucketSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -369,6 +386,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecInitProviderBucketSe
     public V1beta1BucketLifecycleConfigurationSpecInitProviderBucketSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1BucketLifecycleConfigurationSpecInitProviderBucketSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -384,6 +402,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecInitProviderBucketSe
     public V1beta1BucketLifecycleConfigurationSpecInitProviderBucketSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketLifecycleConfigurationSpecInitProviderRuleAbortIncompleteMultipartUpload
 {
     /// <summary>Number of days after which Amazon S3 aborts an incomplete multipart upload.</summary>
@@ -391,6 +410,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecInitProviderRuleAbor
     public double? DaysAfterInitiation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketLifecycleConfigurationSpecInitProviderRuleExpiration
 {
     /// <summary>Date objects are transitioned to the specified storage class. The date value must be in RFC3339 full-date format e.g. 2023-08-22.</summary>
@@ -406,6 +426,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecInitProviderRuleExpi
     public bool? ExpiredObjectDeleteMarker { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketLifecycleConfigurationSpecInitProviderRuleFilterAnd
 {
     /// <summary>Minimum object size (in bytes) to which the rule applies.</summary>
@@ -425,6 +446,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecInitProviderRuleFilt
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketLifecycleConfigurationSpecInitProviderRuleFilterTag
 {
     /// <summary>Name of the object key.</summary>
@@ -436,6 +458,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecInitProviderRuleFilt
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketLifecycleConfigurationSpecInitProviderRuleFilter
 {
     /// <summary>Configuration block used to apply a logical AND to two or more predicates. See below. The Lifecycle Rule will apply to any object matching all the predicates configured inside the and block.</summary>
@@ -459,6 +482,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecInitProviderRuleFilt
     public IList<V1beta1BucketLifecycleConfigurationSpecInitProviderRuleFilterTag>? Tag { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketLifecycleConfigurationSpecInitProviderRuleNoncurrentVersionExpiration
 {
     /// <summary>Number of noncurrent versions Amazon S3 will retain. Must be a non-zero positive integer.</summary>
@@ -470,6 +494,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecInitProviderRuleNonc
     public double? NoncurrentDays { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketLifecycleConfigurationSpecInitProviderRuleNoncurrentVersionTransition
 {
     /// <summary>Number of noncurrent versions Amazon S3 will retain. Must be a non-zero positive integer.</summary>
@@ -485,6 +510,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecInitProviderRuleNonc
     public string? StorageClass { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketLifecycleConfigurationSpecInitProviderRuleTransition
 {
     /// <summary>Date objects are transitioned to the specified storage class. The date value must be in RFC3339 full-date format e.g. 2023-08-22.</summary>
@@ -500,6 +526,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecInitProviderRuleTran
     public string? StorageClass { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketLifecycleConfigurationSpecInitProviderRule
 {
     /// <summary>Configuration block that specifies the days since the initiation of an incomplete multipart upload that Amazon S3 will wait before permanently removing all parts of the upload. See below.</summary>
@@ -539,6 +566,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecInitProviderRule
     public IList<V1beta1BucketLifecycleConfigurationSpecInitProviderRuleTransition>? Transition { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1BucketLifecycleConfigurationSpecInitProvider
 {
     /// <summary>Name of the source S3 bucket you want Amazon S3 to monitor.</summary>
@@ -604,6 +632,7 @@ public enum V1beta1BucketLifecycleConfigurationSpecProviderConfigRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketLifecycleConfigurationSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -617,6 +646,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecProviderConfigRefPol
     public V1beta1BucketLifecycleConfigurationSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1BucketLifecycleConfigurationSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -648,6 +678,7 @@ public enum V1beta1BucketLifecycleConfigurationSpecPublishConnectionDetailsToCon
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketLifecycleConfigurationSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -661,6 +692,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecPublishConnectionDet
     public V1beta1BucketLifecycleConfigurationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1BucketLifecycleConfigurationSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -672,6 +704,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecPublishConnectionDet
     public V1beta1BucketLifecycleConfigurationSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1BucketLifecycleConfigurationSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -687,6 +720,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecPublishConnectionDet
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1BucketLifecycleConfigurationSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -702,6 +736,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecPublishConnectionDet
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1BucketLifecycleConfigurationSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -713,6 +748,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecWriteConnectionSecre
     public string Namespace { get; set; }
 }
 
+/// <summary>BucketLifecycleConfigurationSpec defines the desired state of BucketLifecycleConfiguration</summary>
 public partial class V1beta1BucketLifecycleConfigurationSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -745,6 +781,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpec
     public V1beta1BucketLifecycleConfigurationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketLifecycleConfigurationStatusAtProviderRuleAbortIncompleteMultipartUpload
 {
     /// <summary>Number of days after which Amazon S3 aborts an incomplete multipart upload.</summary>
@@ -752,6 +789,7 @@ public partial class V1beta1BucketLifecycleConfigurationStatusAtProviderRuleAbor
     public double? DaysAfterInitiation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketLifecycleConfigurationStatusAtProviderRuleExpiration
 {
     /// <summary>Date objects are transitioned to the specified storage class. The date value must be in RFC3339 full-date format e.g. 2023-08-22.</summary>
@@ -767,6 +805,7 @@ public partial class V1beta1BucketLifecycleConfigurationStatusAtProviderRuleExpi
     public bool? ExpiredObjectDeleteMarker { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketLifecycleConfigurationStatusAtProviderRuleFilterAnd
 {
     /// <summary>Minimum object size (in bytes) to which the rule applies.</summary>
@@ -786,6 +825,7 @@ public partial class V1beta1BucketLifecycleConfigurationStatusAtProviderRuleFilt
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketLifecycleConfigurationStatusAtProviderRuleFilterTag
 {
     /// <summary>Name of the object key.</summary>
@@ -797,6 +837,7 @@ public partial class V1beta1BucketLifecycleConfigurationStatusAtProviderRuleFilt
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketLifecycleConfigurationStatusAtProviderRuleFilter
 {
     /// <summary>Configuration block used to apply a logical AND to two or more predicates. See below. The Lifecycle Rule will apply to any object matching all the predicates configured inside the and block.</summary>
@@ -820,6 +861,7 @@ public partial class V1beta1BucketLifecycleConfigurationStatusAtProviderRuleFilt
     public IList<V1beta1BucketLifecycleConfigurationStatusAtProviderRuleFilterTag>? Tag { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketLifecycleConfigurationStatusAtProviderRuleNoncurrentVersionExpiration
 {
     /// <summary>Number of noncurrent versions Amazon S3 will retain. Must be a non-zero positive integer.</summary>
@@ -831,6 +873,7 @@ public partial class V1beta1BucketLifecycleConfigurationStatusAtProviderRuleNonc
     public double? NoncurrentDays { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketLifecycleConfigurationStatusAtProviderRuleNoncurrentVersionTransition
 {
     /// <summary>Number of noncurrent versions Amazon S3 will retain. Must be a non-zero positive integer.</summary>
@@ -846,6 +889,7 @@ public partial class V1beta1BucketLifecycleConfigurationStatusAtProviderRuleNonc
     public string? StorageClass { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketLifecycleConfigurationStatusAtProviderRuleTransition
 {
     /// <summary>Date objects are transitioned to the specified storage class. The date value must be in RFC3339 full-date format e.g. 2023-08-22.</summary>
@@ -861,6 +905,7 @@ public partial class V1beta1BucketLifecycleConfigurationStatusAtProviderRuleTran
     public string? StorageClass { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketLifecycleConfigurationStatusAtProviderRule
 {
     /// <summary>Configuration block that specifies the days since the initiation of an incomplete multipart upload that Amazon S3 will wait before permanently removing all parts of the upload. See below.</summary>
@@ -900,6 +945,7 @@ public partial class V1beta1BucketLifecycleConfigurationStatusAtProviderRule
     public IList<V1beta1BucketLifecycleConfigurationStatusAtProviderRuleTransition>? Transition { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketLifecycleConfigurationStatusAtProvider
 {
     /// <summary>Name of the source S3 bucket you want Amazon S3 to monitor.</summary>
@@ -919,6 +965,7 @@ public partial class V1beta1BucketLifecycleConfigurationStatusAtProvider
     public IList<V1beta1BucketLifecycleConfigurationStatusAtProviderRule>? Rule { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1BucketLifecycleConfigurationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -946,6 +993,7 @@ public partial class V1beta1BucketLifecycleConfigurationStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>BucketLifecycleConfigurationStatus defines the observed state of BucketLifecycleConfiguration.</summary>
 public partial class V1beta1BucketLifecycleConfigurationStatus
 {
     /// <summary></summary>
@@ -962,6 +1010,7 @@ public partial class V1beta1BucketLifecycleConfigurationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>BucketLifecycleConfiguration is the Schema for the BucketLifecycleConfigurations API. Provides a S3 bucket lifecycle configuration resource.</summary>
 public partial class V1beta1BucketLifecycleConfiguration : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BucketLifecycleConfigurationSpec>, IStatus<V1beta1BucketLifecycleConfigurationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

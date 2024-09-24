@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.cnrm.cloud.google.com;
+/// <summary>Reference to the bucket.</summary>
 public partial class V1beta1StorageBucketAccessControlSpecBucketRef
 {
     /// <summary>Allowed value: The `name` field of a `StorageBucket` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1StorageBucketAccessControlSpecBucketRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StorageBucketAccessControlSpec
 {
     /// <summary>Reference to the bucket.</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1StorageBucketAccessControlSpec
     public string? Role { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StorageBucketAccessControlStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -61,6 +64,7 @@ public partial class V1beta1StorageBucketAccessControlStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1StorageBucketAccessControlStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -81,6 +85,7 @@ public partial class V1beta1StorageBucketAccessControlStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1StorageBucketAccessControl : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1StorageBucketAccessControlSpec>, IStatus<V1beta1StorageBucketAccessControlStatus>
 {
     public const string KubeApiVersion = "v1beta1";

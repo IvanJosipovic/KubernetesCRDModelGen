@@ -38,6 +38,7 @@ public enum V1beta1WindowsFileSystemSpecForProviderActiveDirectoryIdRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsFileSystemSpecForProviderActiveDirectoryIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1WindowsFileSystemSpecForProviderActiveDirectoryIdRef
     public V1beta1WindowsFileSystemSpecForProviderActiveDirectoryIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Directory in ds to populate activeDirectoryId.</summary>
 public partial class V1beta1WindowsFileSystemSpecForProviderActiveDirectoryIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1WindowsFileSystemSpecForProviderActiveDirectoryIdSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsFileSystemSpecForProviderActiveDirectoryIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1WindowsFileSystemSpecForProviderActiveDirectoryIdSel
     public V1beta1WindowsFileSystemSpecForProviderActiveDirectoryIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Directory in ds to populate activeDirectoryId.</summary>
 public partial class V1beta1WindowsFileSystemSpecForProviderActiveDirectoryIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1WindowsFileSystemSpecForProviderActiveDirectoryIdSel
     public V1beta1WindowsFileSystemSpecForProviderActiveDirectoryIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFileSystemSpecForProviderAuditLogConfiguration
 {
     /// <summary>The Amazon Resource Name (ARN) for the destination of the audit logs. The destination can be any Amazon CloudWatch Logs log group ARN or Amazon Kinesis Data Firehose delivery stream ARN. Can be specified when file_access_audit_log_level and file_share_access_audit_log_level are not set to DISABLED. The name of the Amazon CloudWatch Logs log group must begin with the /aws/fsx prefix. The name of the Amazon Kinesis Data Firehouse delivery stream must begin with the aws-fsx prefix. If you do not provide a destination in audit_log_destionation, Amazon FSx will create and use a log stream in the CloudWatch Logs /aws/fsx/windows log group.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1WindowsFileSystemSpecForProviderAuditLogConfiguratio
     public string? FileShareAccessAuditLogLevel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFileSystemSpecForProviderDiskIopsConfiguration
 {
     /// <summary>- The total number of SSD IOPS provisioned for the file system.</summary>
@@ -156,6 +162,7 @@ public enum V1beta1WindowsFileSystemSpecForProviderKmsKeyIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsFileSystemSpecForProviderKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -169,6 +176,7 @@ public partial class V1beta1WindowsFileSystemSpecForProviderKmsKeyIdRefPolicy
     public V1beta1WindowsFileSystemSpecForProviderKmsKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1WindowsFileSystemSpecForProviderKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -200,6 +208,7 @@ public enum V1beta1WindowsFileSystemSpecForProviderKmsKeyIdSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsFileSystemSpecForProviderKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -213,6 +222,7 @@ public partial class V1beta1WindowsFileSystemSpecForProviderKmsKeyIdSelectorPoli
     public V1beta1WindowsFileSystemSpecForProviderKmsKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1WindowsFileSystemSpecForProviderKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -248,6 +258,7 @@ public enum V1beta1WindowsFileSystemSpecForProviderSecurityGroupIdRefsPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsFileSystemSpecForProviderSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -261,6 +272,7 @@ public partial class V1beta1WindowsFileSystemSpecForProviderSecurityGroupIdRefsP
     public V1beta1WindowsFileSystemSpecForProviderSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1WindowsFileSystemSpecForProviderSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -292,6 +304,7 @@ public enum V1beta1WindowsFileSystemSpecForProviderSecurityGroupIdSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsFileSystemSpecForProviderSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -305,6 +318,7 @@ public partial class V1beta1WindowsFileSystemSpecForProviderSecurityGroupIdSelec
     public V1beta1WindowsFileSystemSpecForProviderSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 public partial class V1beta1WindowsFileSystemSpecForProviderSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -320,6 +334,7 @@ public partial class V1beta1WindowsFileSystemSpecForProviderSecurityGroupIdSelec
     public V1beta1WindowsFileSystemSpecForProviderSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>The password for the service account on your self-managed AD domain that Amazon FSx will use to join to your AD domain.</summary>
 public partial class V1beta1WindowsFileSystemSpecForProviderSelfManagedActiveDirectoryPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -335,6 +350,7 @@ public partial class V1beta1WindowsFileSystemSpecForProviderSelfManagedActiveDir
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFileSystemSpecForProviderSelfManagedActiveDirectory
 {
     /// <summary>A list of up to two IP addresses of DNS servers or domain controllers in the self-managed AD directory. The IP addresses need to be either in the same VPC CIDR range as the file system or in the private IP version 4 (IPv4) address ranges as specified in RFC 1918.</summary>
@@ -382,6 +398,7 @@ public enum V1beta1WindowsFileSystemSpecForProviderSubnetIdRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsFileSystemSpecForProviderSubnetIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -395,6 +412,7 @@ public partial class V1beta1WindowsFileSystemSpecForProviderSubnetIdRefsPolicy
     public V1beta1WindowsFileSystemSpecForProviderSubnetIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1WindowsFileSystemSpecForProviderSubnetIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -426,6 +444,7 @@ public enum V1beta1WindowsFileSystemSpecForProviderSubnetIdSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsFileSystemSpecForProviderSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -439,6 +458,7 @@ public partial class V1beta1WindowsFileSystemSpecForProviderSubnetIdSelectorPoli
     public V1beta1WindowsFileSystemSpecForProviderSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 public partial class V1beta1WindowsFileSystemSpecForProviderSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -454,6 +474,7 @@ public partial class V1beta1WindowsFileSystemSpecForProviderSubnetIdSelector
     public V1beta1WindowsFileSystemSpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFileSystemSpecForProvider
 {
     /// <summary>The ID for an existing Microsoft Active Directory instance that the file system should join when it's created. Cannot be specified with self_managed_active_directory.</summary>
@@ -593,6 +614,7 @@ public enum V1beta1WindowsFileSystemSpecInitProviderActiveDirectoryIdRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsFileSystemSpecInitProviderActiveDirectoryIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -606,6 +628,7 @@ public partial class V1beta1WindowsFileSystemSpecInitProviderActiveDirectoryIdRe
     public V1beta1WindowsFileSystemSpecInitProviderActiveDirectoryIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Directory in ds to populate activeDirectoryId.</summary>
 public partial class V1beta1WindowsFileSystemSpecInitProviderActiveDirectoryIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -637,6 +660,7 @@ public enum V1beta1WindowsFileSystemSpecInitProviderActiveDirectoryIdSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsFileSystemSpecInitProviderActiveDirectoryIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -650,6 +674,7 @@ public partial class V1beta1WindowsFileSystemSpecInitProviderActiveDirectoryIdSe
     public V1beta1WindowsFileSystemSpecInitProviderActiveDirectoryIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Directory in ds to populate activeDirectoryId.</summary>
 public partial class V1beta1WindowsFileSystemSpecInitProviderActiveDirectoryIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -665,6 +690,7 @@ public partial class V1beta1WindowsFileSystemSpecInitProviderActiveDirectoryIdSe
     public V1beta1WindowsFileSystemSpecInitProviderActiveDirectoryIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFileSystemSpecInitProviderAuditLogConfiguration
 {
     /// <summary>The Amazon Resource Name (ARN) for the destination of the audit logs. The destination can be any Amazon CloudWatch Logs log group ARN or Amazon Kinesis Data Firehose delivery stream ARN. Can be specified when file_access_audit_log_level and file_share_access_audit_log_level are not set to DISABLED. The name of the Amazon CloudWatch Logs log group must begin with the /aws/fsx prefix. The name of the Amazon Kinesis Data Firehouse delivery stream must begin with the aws-fsx prefix. If you do not provide a destination in audit_log_destionation, Amazon FSx will create and use a log stream in the CloudWatch Logs /aws/fsx/windows log group.</summary>
@@ -680,6 +706,7 @@ public partial class V1beta1WindowsFileSystemSpecInitProviderAuditLogConfigurati
     public string? FileShareAccessAuditLogLevel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFileSystemSpecInitProviderDiskIopsConfiguration
 {
     /// <summary>- The total number of SSD IOPS provisioned for the file system.</summary>
@@ -711,6 +738,7 @@ public enum V1beta1WindowsFileSystemSpecInitProviderKmsKeyIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsFileSystemSpecInitProviderKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -724,6 +752,7 @@ public partial class V1beta1WindowsFileSystemSpecInitProviderKmsKeyIdRefPolicy
     public V1beta1WindowsFileSystemSpecInitProviderKmsKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1WindowsFileSystemSpecInitProviderKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -755,6 +784,7 @@ public enum V1beta1WindowsFileSystemSpecInitProviderKmsKeyIdSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsFileSystemSpecInitProviderKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -768,6 +798,7 @@ public partial class V1beta1WindowsFileSystemSpecInitProviderKmsKeyIdSelectorPol
     public V1beta1WindowsFileSystemSpecInitProviderKmsKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1WindowsFileSystemSpecInitProviderKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -803,6 +834,7 @@ public enum V1beta1WindowsFileSystemSpecInitProviderSecurityGroupIdRefsPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsFileSystemSpecInitProviderSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -816,6 +848,7 @@ public partial class V1beta1WindowsFileSystemSpecInitProviderSecurityGroupIdRefs
     public V1beta1WindowsFileSystemSpecInitProviderSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1WindowsFileSystemSpecInitProviderSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -847,6 +880,7 @@ public enum V1beta1WindowsFileSystemSpecInitProviderSecurityGroupIdSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsFileSystemSpecInitProviderSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -860,6 +894,7 @@ public partial class V1beta1WindowsFileSystemSpecInitProviderSecurityGroupIdSele
     public V1beta1WindowsFileSystemSpecInitProviderSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 public partial class V1beta1WindowsFileSystemSpecInitProviderSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -875,6 +910,7 @@ public partial class V1beta1WindowsFileSystemSpecInitProviderSecurityGroupIdSele
     public V1beta1WindowsFileSystemSpecInitProviderSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>The password for the service account on your self-managed AD domain that Amazon FSx will use to join to your AD domain.</summary>
 public partial class V1beta1WindowsFileSystemSpecInitProviderSelfManagedActiveDirectoryPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -890,6 +926,7 @@ public partial class V1beta1WindowsFileSystemSpecInitProviderSelfManagedActiveDi
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFileSystemSpecInitProviderSelfManagedActiveDirectory
 {
     /// <summary>A list of up to two IP addresses of DNS servers or domain controllers in the self-managed AD directory. The IP addresses need to be either in the same VPC CIDR range as the file system or in the private IP version 4 (IPv4) address ranges as specified in RFC 1918.</summary>
@@ -937,6 +974,7 @@ public enum V1beta1WindowsFileSystemSpecInitProviderSubnetIdRefsPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsFileSystemSpecInitProviderSubnetIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -950,6 +988,7 @@ public partial class V1beta1WindowsFileSystemSpecInitProviderSubnetIdRefsPolicy
     public V1beta1WindowsFileSystemSpecInitProviderSubnetIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1WindowsFileSystemSpecInitProviderSubnetIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -981,6 +1020,7 @@ public enum V1beta1WindowsFileSystemSpecInitProviderSubnetIdSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsFileSystemSpecInitProviderSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -994,6 +1034,7 @@ public partial class V1beta1WindowsFileSystemSpecInitProviderSubnetIdSelectorPol
     public V1beta1WindowsFileSystemSpecInitProviderSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 public partial class V1beta1WindowsFileSystemSpecInitProviderSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1009,6 +1050,7 @@ public partial class V1beta1WindowsFileSystemSpecInitProviderSubnetIdSelector
     public V1beta1WindowsFileSystemSpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1WindowsFileSystemSpecInitProvider
 {
     /// <summary>The ID for an existing Microsoft Active Directory instance that the file system should join when it's created. Cannot be specified with self_managed_active_directory.</summary>
@@ -1166,6 +1208,7 @@ public enum V1beta1WindowsFileSystemSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsFileSystemSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1179,6 +1222,7 @@ public partial class V1beta1WindowsFileSystemSpecProviderConfigRefPolicy
     public V1beta1WindowsFileSystemSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1WindowsFileSystemSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1210,6 +1254,7 @@ public enum V1beta1WindowsFileSystemSpecPublishConnectionDetailsToConfigRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsFileSystemSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1223,6 +1268,7 @@ public partial class V1beta1WindowsFileSystemSpecPublishConnectionDetailsToConfi
     public V1beta1WindowsFileSystemSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1WindowsFileSystemSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1234,6 +1280,7 @@ public partial class V1beta1WindowsFileSystemSpecPublishConnectionDetailsToConfi
     public V1beta1WindowsFileSystemSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1WindowsFileSystemSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1249,6 +1296,7 @@ public partial class V1beta1WindowsFileSystemSpecPublishConnectionDetailsToMetad
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1WindowsFileSystemSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1264,6 +1312,7 @@ public partial class V1beta1WindowsFileSystemSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1WindowsFileSystemSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1275,6 +1324,7 @@ public partial class V1beta1WindowsFileSystemSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>WindowsFileSystemSpec defines the desired state of WindowsFileSystem</summary>
 public partial class V1beta1WindowsFileSystemSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1307,6 +1357,7 @@ public partial class V1beta1WindowsFileSystemSpec
     public V1beta1WindowsFileSystemSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFileSystemStatusAtProviderAuditLogConfiguration
 {
     /// <summary>The Amazon Resource Name (ARN) for the destination of the audit logs. The destination can be any Amazon CloudWatch Logs log group ARN or Amazon Kinesis Data Firehose delivery stream ARN. Can be specified when file_access_audit_log_level and file_share_access_audit_log_level are not set to DISABLED. The name of the Amazon CloudWatch Logs log group must begin with the /aws/fsx prefix. The name of the Amazon Kinesis Data Firehouse delivery stream must begin with the aws-fsx prefix. If you do not provide a destination in audit_log_destionation, Amazon FSx will create and use a log stream in the CloudWatch Logs /aws/fsx/windows log group.</summary>
@@ -1322,6 +1373,7 @@ public partial class V1beta1WindowsFileSystemStatusAtProviderAuditLogConfigurati
     public string? FileShareAccessAuditLogLevel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFileSystemStatusAtProviderDiskIopsConfiguration
 {
     /// <summary>- The total number of SSD IOPS provisioned for the file system.</summary>
@@ -1333,6 +1385,7 @@ public partial class V1beta1WindowsFileSystemStatusAtProviderDiskIopsConfigurati
     public string? Mode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFileSystemStatusAtProviderSelfManagedActiveDirectory
 {
     /// <summary>A list of up to two IP addresses of DNS servers or domain controllers in the self-managed AD directory. The IP addresses need to be either in the same VPC CIDR range as the file system or in the private IP version 4 (IPv4) address ranges as specified in RFC 1918.</summary>
@@ -1356,6 +1409,7 @@ public partial class V1beta1WindowsFileSystemStatusAtProviderSelfManagedActiveDi
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsFileSystemStatusAtProvider
 {
     /// <summary>The ID for an existing Microsoft Active Directory instance that the file system should join when it's created. Cannot be specified with self_managed_active_directory.</summary>
@@ -1475,6 +1529,7 @@ public partial class V1beta1WindowsFileSystemStatusAtProvider
     public string? WeeklyMaintenanceStartTime { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1WindowsFileSystemStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1502,6 +1557,7 @@ public partial class V1beta1WindowsFileSystemStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>WindowsFileSystemStatus defines the observed state of WindowsFileSystem.</summary>
 public partial class V1beta1WindowsFileSystemStatus
 {
     /// <summary></summary>
@@ -1518,6 +1574,7 @@ public partial class V1beta1WindowsFileSystemStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>WindowsFileSystem is the Schema for the WindowsFileSystems API. Manages a FSx Windows File System.</summary>
 public partial class V1beta1WindowsFileSystem : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1WindowsFileSystemSpec>, IStatus<V1beta1WindowsFileSystemStatus>
 {
     public const string KubeApiVersion = "v1beta1";

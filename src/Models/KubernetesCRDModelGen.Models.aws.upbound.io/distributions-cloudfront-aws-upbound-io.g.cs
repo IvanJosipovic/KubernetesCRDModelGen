@@ -18,6 +18,7 @@ public enum V1beta1DistributionSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecForProviderCustomErrorResponse
 {
     /// <summary>Minimum amount of time you want HTTP error codes to stay in CloudFront caches before CloudFront queries your origin to see whether the object has been updated.</summary>
@@ -37,6 +38,7 @@ public partial class V1beta1DistributionSpecForProviderCustomErrorResponse
     public string? ResponsePagePath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecForProviderDefaultCacheBehaviorForwardedValuesCookies
 {
     /// <summary>Whether you want CloudFront to forward cookies to the origin that is associated with this cache behavior. You can specify all, none or whitelist. If whitelist, you must include the subsequent whitelisted_names.</summary>
@@ -48,6 +50,7 @@ public partial class V1beta1DistributionSpecForProviderDefaultCacheBehaviorForwa
     public IList<string>? WhitelistedNames { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecForProviderDefaultCacheBehaviorForwardedValues
 {
     /// <summary>The forwarded values cookies that specifies how CloudFront handles cookies (maximum one).</summary>
@@ -67,6 +70,7 @@ public partial class V1beta1DistributionSpecForProviderDefaultCacheBehaviorForwa
     public IList<string>? QueryStringCacheKeys { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecForProviderDefaultCacheBehaviorFunctionAssociation
 {
     /// <summary>Specific event to trigger this function. Valid values: viewer-request, origin-request, viewer-response, origin-response.</summary>
@@ -78,6 +82,7 @@ public partial class V1beta1DistributionSpecForProviderDefaultCacheBehaviorFunct
     public string? FunctionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecForProviderDefaultCacheBehaviorLambdaFunctionAssociation
 {
     /// <summary>Specific event to trigger this function. Valid values: viewer-request, origin-request, viewer-response, origin-response.</summary>
@@ -93,6 +98,7 @@ public partial class V1beta1DistributionSpecForProviderDefaultCacheBehaviorLambd
     public string? LambdaArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecForProviderDefaultCacheBehavior
 {
     /// <summary>Controls which HTTP methods CloudFront processes and forwards to your Amazon S3 bucket or your custom origin.</summary>
@@ -172,6 +178,7 @@ public partial class V1beta1DistributionSpecForProviderDefaultCacheBehavior
     public string? ViewerProtocolPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecForProviderLoggingConfig
 {
     /// <summary>Amazon S3 bucket to store the access logs in, for example, myawslogbucket.s3.amazonaws.com.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1DistributionSpecForProviderLoggingConfig
     public string? Prefix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorForwardedValuesCookies
 {
     /// <summary>Whether you want CloudFront to forward cookies to the origin that is associated with this cache behavior. You can specify all, none or whitelist. If whitelist, you must include the subsequent whitelisted_names.</summary>
@@ -198,6 +206,7 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorForwa
     public IList<string>? WhitelistedNames { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorForwardedValues
 {
     /// <summary>The forwarded values cookies that specifies how CloudFront handles cookies (maximum one).</summary>
@@ -237,6 +246,7 @@ public enum V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunctionAssoci
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunctionAssociationFunctionArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -250,6 +260,7 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunct
     public V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunctionAssociationFunctionArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in cloudfront to populate functionArn.</summary>
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunctionAssociationFunctionArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -281,6 +292,7 @@ public enum V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunctionAssoci
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunctionAssociationFunctionArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunct
     public V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunctionAssociationFunctionArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in cloudfront to populate functionArn.</summary>
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunctionAssociationFunctionArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -309,6 +322,7 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunct
     public V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunctionAssociationFunctionArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunctionAssociation
 {
     /// <summary>Specific event to trigger this function. Valid values: viewer-request, origin-request, viewer-response, origin-response.</summary>
@@ -348,6 +362,7 @@ public enum V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambdaFunction
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -361,6 +376,7 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambd
     public V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in lambda to populate lambdaArn.</summary>
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -392,6 +408,7 @@ public enum V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambdaFunction
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -405,6 +422,7 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambd
     public V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in lambda to populate lambdaArn.</summary>
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -420,6 +438,7 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambd
     public V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambdaFunctionAssociation
 {
     /// <summary>Specific event to trigger this function. Valid values: viewer-request, origin-request, viewer-response, origin-response.</summary>
@@ -443,6 +462,7 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambd
     public V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnSelector? LambdaArnSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehavior
 {
     /// <summary>Controls which HTTP methods CloudFront processes and forwards to your Amazon S3 bucket or your custom origin.</summary>
@@ -526,6 +546,7 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehavior
     public string? ViewerProtocolPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecForProviderOriginCustomHeader
 {
     /// <summary></summary>
@@ -537,6 +558,7 @@ public partial class V1beta1DistributionSpecForProviderOriginCustomHeader
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecForProviderOriginCustomOriginConfig
 {
     /// <summary>HTTP port the custom origin listens on.</summary>
@@ -584,6 +606,7 @@ public enum V1beta1DistributionSpecForProviderOriginOriginAccessControlIdRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DistributionSpecForProviderOriginOriginAccessControlIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -597,6 +620,7 @@ public partial class V1beta1DistributionSpecForProviderOriginOriginAccessControl
     public V1beta1DistributionSpecForProviderOriginOriginAccessControlIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a OriginAccessControl in cloudfront to populate originAccessControlId.</summary>
 public partial class V1beta1DistributionSpecForProviderOriginOriginAccessControlIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -628,6 +652,7 @@ public enum V1beta1DistributionSpecForProviderOriginOriginAccessControlIdSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DistributionSpecForProviderOriginOriginAccessControlIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -641,6 +666,7 @@ public partial class V1beta1DistributionSpecForProviderOriginOriginAccessControl
     public V1beta1DistributionSpecForProviderOriginOriginAccessControlIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a OriginAccessControl in cloudfront to populate originAccessControlId.</summary>
 public partial class V1beta1DistributionSpecForProviderOriginOriginAccessControlIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -656,6 +682,7 @@ public partial class V1beta1DistributionSpecForProviderOriginOriginAccessControl
     public V1beta1DistributionSpecForProviderOriginOriginAccessControlIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecForProviderOriginOriginShield
 {
     /// <summary>Whether the distribution is enabled to accept end user requests for content.</summary>
@@ -687,6 +714,7 @@ public enum V1beta1DistributionSpecForProviderOriginS3OriginConfigOriginAccessId
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DistributionSpecForProviderOriginS3OriginConfigOriginAccessIdentityRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -700,6 +728,7 @@ public partial class V1beta1DistributionSpecForProviderOriginS3OriginConfigOrigi
     public V1beta1DistributionSpecForProviderOriginS3OriginConfigOriginAccessIdentityRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a OriginAccessIdentity in cloudfront to populate originAccessIdentity.</summary>
 public partial class V1beta1DistributionSpecForProviderOriginS3OriginConfigOriginAccessIdentityRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -731,6 +760,7 @@ public enum V1beta1DistributionSpecForProviderOriginS3OriginConfigOriginAccessId
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DistributionSpecForProviderOriginS3OriginConfigOriginAccessIdentitySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -744,6 +774,7 @@ public partial class V1beta1DistributionSpecForProviderOriginS3OriginConfigOrigi
     public V1beta1DistributionSpecForProviderOriginS3OriginConfigOriginAccessIdentitySelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a OriginAccessIdentity in cloudfront to populate originAccessIdentity.</summary>
 public partial class V1beta1DistributionSpecForProviderOriginS3OriginConfigOriginAccessIdentitySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -759,6 +790,7 @@ public partial class V1beta1DistributionSpecForProviderOriginS3OriginConfigOrigi
     public V1beta1DistributionSpecForProviderOriginS3OriginConfigOriginAccessIdentitySelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecForProviderOriginS3OriginConfig
 {
     /// <summary>The CloudFront origin access identity to associate with the origin.</summary>
@@ -774,6 +806,7 @@ public partial class V1beta1DistributionSpecForProviderOriginS3OriginConfig
     public V1beta1DistributionSpecForProviderOriginS3OriginConfigOriginAccessIdentitySelector? OriginAccessIdentitySelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecForProviderOrigin
 {
     /// <summary>Number of times that CloudFront attempts to connect to the origin. Must be between 1-3. Defaults to 3.</summary>
@@ -825,6 +858,7 @@ public partial class V1beta1DistributionSpecForProviderOrigin
     public IList<V1beta1DistributionSpecForProviderOriginS3OriginConfig>? S3OriginConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecForProviderOriginGroupFailoverCriteria
 {
     /// <summary>List of HTTP status codes for the origin group.</summary>
@@ -832,6 +866,7 @@ public partial class V1beta1DistributionSpecForProviderOriginGroupFailoverCriter
     public IList<double>? StatusCodes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecForProviderOriginGroupMember
 {
     /// <summary>Unique identifier for the origin.</summary>
@@ -839,6 +874,7 @@ public partial class V1beta1DistributionSpecForProviderOriginGroupMember
     public string? OriginId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecForProviderOriginGroup
 {
     /// <summary>The failover criteria for when to failover to the secondary origin.</summary>
@@ -854,6 +890,7 @@ public partial class V1beta1DistributionSpecForProviderOriginGroup
     public string? OriginId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecForProviderRestrictionsGeoRestriction
 {
     /// <summary>ISO 3166-1-alpha-2 codes for which you want CloudFront either to distribute your content (whitelist) or not distribute your content (blacklist). If the type is specified as none an empty array can be used.</summary>
@@ -865,6 +902,7 @@ public partial class V1beta1DistributionSpecForProviderRestrictionsGeoRestrictio
     public string? RestrictionType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecForProviderRestrictions
 {
     /// <summary></summary>
@@ -872,6 +910,7 @@ public partial class V1beta1DistributionSpecForProviderRestrictions
     public IList<V1beta1DistributionSpecForProviderRestrictionsGeoRestriction>? GeoRestriction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecForProviderViewerCertificate
 {
     /// <summary>ARN of the AWS Certificate Manager certificate that you wish to use with this distribution. Specify this, cloudfront_default_certificate, or iam_certificate_id.  The ACM certificate must be in  US-EAST-1.</summary>
@@ -895,6 +934,7 @@ public partial class V1beta1DistributionSpecForProviderViewerCertificate
     public string? SslSupportMethod { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecForProvider
 {
     /// <summary>Extra CNAMEs (alternate domain names), if any, for this distribution.</summary>
@@ -986,6 +1026,7 @@ public partial class V1beta1DistributionSpecForProvider
     public string? WebAclId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecInitProviderCustomErrorResponse
 {
     /// <summary>Minimum amount of time you want HTTP error codes to stay in CloudFront caches before CloudFront queries your origin to see whether the object has been updated.</summary>
@@ -1005,6 +1046,7 @@ public partial class V1beta1DistributionSpecInitProviderCustomErrorResponse
     public string? ResponsePagePath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecInitProviderDefaultCacheBehaviorForwardedValuesCookies
 {
     /// <summary>Whether you want CloudFront to forward cookies to the origin that is associated with this cache behavior. You can specify all, none or whitelist. If whitelist, you must include the subsequent whitelisted_names.</summary>
@@ -1016,6 +1058,7 @@ public partial class V1beta1DistributionSpecInitProviderDefaultCacheBehaviorForw
     public IList<string>? WhitelistedNames { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecInitProviderDefaultCacheBehaviorForwardedValues
 {
     /// <summary>The forwarded values cookies that specifies how CloudFront handles cookies (maximum one).</summary>
@@ -1035,6 +1078,7 @@ public partial class V1beta1DistributionSpecInitProviderDefaultCacheBehaviorForw
     public IList<string>? QueryStringCacheKeys { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecInitProviderDefaultCacheBehaviorFunctionAssociation
 {
     /// <summary>Specific event to trigger this function. Valid values: viewer-request, origin-request, viewer-response, origin-response.</summary>
@@ -1046,6 +1090,7 @@ public partial class V1beta1DistributionSpecInitProviderDefaultCacheBehaviorFunc
     public string? FunctionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecInitProviderDefaultCacheBehaviorLambdaFunctionAssociation
 {
     /// <summary>Specific event to trigger this function. Valid values: viewer-request, origin-request, viewer-response, origin-response.</summary>
@@ -1061,6 +1106,7 @@ public partial class V1beta1DistributionSpecInitProviderDefaultCacheBehaviorLamb
     public string? LambdaArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecInitProviderDefaultCacheBehavior
 {
     /// <summary>Controls which HTTP methods CloudFront processes and forwards to your Amazon S3 bucket or your custom origin.</summary>
@@ -1140,6 +1186,7 @@ public partial class V1beta1DistributionSpecInitProviderDefaultCacheBehavior
     public string? ViewerProtocolPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecInitProviderLoggingConfig
 {
     /// <summary>Amazon S3 bucket to store the access logs in, for example, myawslogbucket.s3.amazonaws.com.</summary>
@@ -1155,6 +1202,7 @@ public partial class V1beta1DistributionSpecInitProviderLoggingConfig
     public string? Prefix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorForwardedValuesCookies
 {
     /// <summary>Whether you want CloudFront to forward cookies to the origin that is associated with this cache behavior. You can specify all, none or whitelist. If whitelist, you must include the subsequent whitelisted_names.</summary>
@@ -1166,6 +1214,7 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorForw
     public IList<string>? WhitelistedNames { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorForwardedValues
 {
     /// <summary>The forwarded values cookies that specifies how CloudFront handles cookies (maximum one).</summary>
@@ -1205,6 +1254,7 @@ public enum V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunctionAssoc
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunctionAssociationFunctionArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1218,6 +1268,7 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunc
     public V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunctionAssociationFunctionArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in cloudfront to populate functionArn.</summary>
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunctionAssociationFunctionArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1249,6 +1300,7 @@ public enum V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunctionAssoc
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunctionAssociationFunctionArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1262,6 +1314,7 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunc
     public V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunctionAssociationFunctionArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in cloudfront to populate functionArn.</summary>
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunctionAssociationFunctionArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1277,6 +1330,7 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunc
     public V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunctionAssociationFunctionArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunctionAssociation
 {
     /// <summary>Specific event to trigger this function. Valid values: viewer-request, origin-request, viewer-response, origin-response.</summary>
@@ -1316,6 +1370,7 @@ public enum V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLambdaFunctio
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1329,6 +1384,7 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLamb
     public V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in lambda to populate lambdaArn.</summary>
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1360,6 +1416,7 @@ public enum V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLambdaFunctio
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1373,6 +1430,7 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLamb
     public V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in lambda to populate lambdaArn.</summary>
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1388,6 +1446,7 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLamb
     public V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLambdaFunctionAssociation
 {
     /// <summary>Specific event to trigger this function. Valid values: viewer-request, origin-request, viewer-response, origin-response.</summary>
@@ -1411,6 +1470,7 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLamb
     public V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnSelector? LambdaArnSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehavior
 {
     /// <summary>Controls which HTTP methods CloudFront processes and forwards to your Amazon S3 bucket or your custom origin.</summary>
@@ -1494,6 +1554,7 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehavior
     public string? ViewerProtocolPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecInitProviderOriginCustomHeader
 {
     /// <summary></summary>
@@ -1505,6 +1566,7 @@ public partial class V1beta1DistributionSpecInitProviderOriginCustomHeader
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecInitProviderOriginCustomOriginConfig
 {
     /// <summary>HTTP port the custom origin listens on.</summary>
@@ -1552,6 +1614,7 @@ public enum V1beta1DistributionSpecInitProviderOriginOriginAccessControlIdRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DistributionSpecInitProviderOriginOriginAccessControlIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1565,6 +1628,7 @@ public partial class V1beta1DistributionSpecInitProviderOriginOriginAccessContro
     public V1beta1DistributionSpecInitProviderOriginOriginAccessControlIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a OriginAccessControl in cloudfront to populate originAccessControlId.</summary>
 public partial class V1beta1DistributionSpecInitProviderOriginOriginAccessControlIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1596,6 +1660,7 @@ public enum V1beta1DistributionSpecInitProviderOriginOriginAccessControlIdSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DistributionSpecInitProviderOriginOriginAccessControlIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1609,6 +1674,7 @@ public partial class V1beta1DistributionSpecInitProviderOriginOriginAccessContro
     public V1beta1DistributionSpecInitProviderOriginOriginAccessControlIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a OriginAccessControl in cloudfront to populate originAccessControlId.</summary>
 public partial class V1beta1DistributionSpecInitProviderOriginOriginAccessControlIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1624,6 +1690,7 @@ public partial class V1beta1DistributionSpecInitProviderOriginOriginAccessContro
     public V1beta1DistributionSpecInitProviderOriginOriginAccessControlIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecInitProviderOriginOriginShield
 {
     /// <summary>Whether the distribution is enabled to accept end user requests for content.</summary>
@@ -1655,6 +1722,7 @@ public enum V1beta1DistributionSpecInitProviderOriginS3OriginConfigOriginAccessI
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DistributionSpecInitProviderOriginS3OriginConfigOriginAccessIdentityRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1668,6 +1736,7 @@ public partial class V1beta1DistributionSpecInitProviderOriginS3OriginConfigOrig
     public V1beta1DistributionSpecInitProviderOriginS3OriginConfigOriginAccessIdentityRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a OriginAccessIdentity in cloudfront to populate originAccessIdentity.</summary>
 public partial class V1beta1DistributionSpecInitProviderOriginS3OriginConfigOriginAccessIdentityRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1699,6 +1768,7 @@ public enum V1beta1DistributionSpecInitProviderOriginS3OriginConfigOriginAccessI
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DistributionSpecInitProviderOriginS3OriginConfigOriginAccessIdentitySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1712,6 +1782,7 @@ public partial class V1beta1DistributionSpecInitProviderOriginS3OriginConfigOrig
     public V1beta1DistributionSpecInitProviderOriginS3OriginConfigOriginAccessIdentitySelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a OriginAccessIdentity in cloudfront to populate originAccessIdentity.</summary>
 public partial class V1beta1DistributionSpecInitProviderOriginS3OriginConfigOriginAccessIdentitySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1727,6 +1798,7 @@ public partial class V1beta1DistributionSpecInitProviderOriginS3OriginConfigOrig
     public V1beta1DistributionSpecInitProviderOriginS3OriginConfigOriginAccessIdentitySelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecInitProviderOriginS3OriginConfig
 {
     /// <summary>The CloudFront origin access identity to associate with the origin.</summary>
@@ -1742,6 +1814,7 @@ public partial class V1beta1DistributionSpecInitProviderOriginS3OriginConfig
     public V1beta1DistributionSpecInitProviderOriginS3OriginConfigOriginAccessIdentitySelector? OriginAccessIdentitySelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecInitProviderOrigin
 {
     /// <summary>Number of times that CloudFront attempts to connect to the origin. Must be between 1-3. Defaults to 3.</summary>
@@ -1793,6 +1866,7 @@ public partial class V1beta1DistributionSpecInitProviderOrigin
     public IList<V1beta1DistributionSpecInitProviderOriginS3OriginConfig>? S3OriginConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecInitProviderOriginGroupFailoverCriteria
 {
     /// <summary>List of HTTP status codes for the origin group.</summary>
@@ -1800,6 +1874,7 @@ public partial class V1beta1DistributionSpecInitProviderOriginGroupFailoverCrite
     public IList<double>? StatusCodes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecInitProviderOriginGroupMember
 {
     /// <summary>Unique identifier for the origin.</summary>
@@ -1807,6 +1882,7 @@ public partial class V1beta1DistributionSpecInitProviderOriginGroupMember
     public string? OriginId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecInitProviderOriginGroup
 {
     /// <summary>The failover criteria for when to failover to the secondary origin.</summary>
@@ -1822,6 +1898,7 @@ public partial class V1beta1DistributionSpecInitProviderOriginGroup
     public string? OriginId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecInitProviderRestrictionsGeoRestriction
 {
     /// <summary>ISO 3166-1-alpha-2 codes for which you want CloudFront either to distribute your content (whitelist) or not distribute your content (blacklist). If the type is specified as none an empty array can be used.</summary>
@@ -1833,6 +1910,7 @@ public partial class V1beta1DistributionSpecInitProviderRestrictionsGeoRestricti
     public string? RestrictionType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecInitProviderRestrictions
 {
     /// <summary></summary>
@@ -1840,6 +1918,7 @@ public partial class V1beta1DistributionSpecInitProviderRestrictions
     public IList<V1beta1DistributionSpecInitProviderRestrictionsGeoRestriction>? GeoRestriction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionSpecInitProviderViewerCertificate
 {
     /// <summary>ARN of the AWS Certificate Manager certificate that you wish to use with this distribution. Specify this, cloudfront_default_certificate, or iam_certificate_id.  The ACM certificate must be in  US-EAST-1.</summary>
@@ -1863,6 +1942,7 @@ public partial class V1beta1DistributionSpecInitProviderViewerCertificate
     public string? SslSupportMethod { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1DistributionSpecInitProvider
 {
     /// <summary>Extra CNAMEs (alternate domain names), if any, for this distribution.</summary>
@@ -1992,6 +2072,7 @@ public enum V1beta1DistributionSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DistributionSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2005,6 +2086,7 @@ public partial class V1beta1DistributionSpecProviderConfigRefPolicy
     public V1beta1DistributionSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1DistributionSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2036,6 +2118,7 @@ public enum V1beta1DistributionSpecPublishConnectionDetailsToConfigRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DistributionSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2049,6 +2132,7 @@ public partial class V1beta1DistributionSpecPublishConnectionDetailsToConfigRefP
     public V1beta1DistributionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1DistributionSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2060,6 +2144,7 @@ public partial class V1beta1DistributionSpecPublishConnectionDetailsToConfigRef
     public V1beta1DistributionSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1DistributionSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -2075,6 +2160,7 @@ public partial class V1beta1DistributionSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1DistributionSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -2090,6 +2176,7 @@ public partial class V1beta1DistributionSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1DistributionSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -2101,6 +2188,7 @@ public partial class V1beta1DistributionSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>DistributionSpec defines the desired state of Distribution</summary>
 public partial class V1beta1DistributionSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -2133,6 +2221,7 @@ public partial class V1beta1DistributionSpec
     public V1beta1DistributionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionStatusAtProviderCustomErrorResponse
 {
     /// <summary>Minimum amount of time you want HTTP error codes to stay in CloudFront caches before CloudFront queries your origin to see whether the object has been updated.</summary>
@@ -2152,6 +2241,7 @@ public partial class V1beta1DistributionStatusAtProviderCustomErrorResponse
     public string? ResponsePagePath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionStatusAtProviderDefaultCacheBehaviorForwardedValuesCookies
 {
     /// <summary>Whether you want CloudFront to forward cookies to the origin that is associated with this cache behavior. You can specify all, none or whitelist. If whitelist, you must include the subsequent whitelisted_names.</summary>
@@ -2163,6 +2253,7 @@ public partial class V1beta1DistributionStatusAtProviderDefaultCacheBehaviorForw
     public IList<string>? WhitelistedNames { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionStatusAtProviderDefaultCacheBehaviorForwardedValues
 {
     /// <summary>The forwarded values cookies that specifies how CloudFront handles cookies (maximum one).</summary>
@@ -2182,6 +2273,7 @@ public partial class V1beta1DistributionStatusAtProviderDefaultCacheBehaviorForw
     public IList<string>? QueryStringCacheKeys { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionStatusAtProviderDefaultCacheBehaviorFunctionAssociation
 {
     /// <summary>Specific event to trigger this function. Valid values: viewer-request, origin-request, viewer-response, origin-response.</summary>
@@ -2193,6 +2285,7 @@ public partial class V1beta1DistributionStatusAtProviderDefaultCacheBehaviorFunc
     public string? FunctionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionStatusAtProviderDefaultCacheBehaviorLambdaFunctionAssociation
 {
     /// <summary>Specific event to trigger this function. Valid values: viewer-request, origin-request, viewer-response, origin-response.</summary>
@@ -2208,6 +2301,7 @@ public partial class V1beta1DistributionStatusAtProviderDefaultCacheBehaviorLamb
     public string? LambdaArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionStatusAtProviderDefaultCacheBehavior
 {
     /// <summary>Controls which HTTP methods CloudFront processes and forwards to your Amazon S3 bucket or your custom origin.</summary>
@@ -2287,6 +2381,7 @@ public partial class V1beta1DistributionStatusAtProviderDefaultCacheBehavior
     public string? ViewerProtocolPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionStatusAtProviderLoggingConfig
 {
     /// <summary>Amazon S3 bucket to store the access logs in, for example, myawslogbucket.s3.amazonaws.com.</summary>
@@ -2302,6 +2397,7 @@ public partial class V1beta1DistributionStatusAtProviderLoggingConfig
     public string? Prefix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionStatusAtProviderOrderedCacheBehaviorForwardedValuesCookies
 {
     /// <summary>Whether you want CloudFront to forward cookies to the origin that is associated with this cache behavior. You can specify all, none or whitelist. If whitelist, you must include the subsequent whitelisted_names.</summary>
@@ -2313,6 +2409,7 @@ public partial class V1beta1DistributionStatusAtProviderOrderedCacheBehaviorForw
     public IList<string>? WhitelistedNames { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionStatusAtProviderOrderedCacheBehaviorForwardedValues
 {
     /// <summary>The forwarded values cookies that specifies how CloudFront handles cookies (maximum one).</summary>
@@ -2332,6 +2429,7 @@ public partial class V1beta1DistributionStatusAtProviderOrderedCacheBehaviorForw
     public IList<string>? QueryStringCacheKeys { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionStatusAtProviderOrderedCacheBehaviorFunctionAssociation
 {
     /// <summary>Specific event to trigger this function. Valid values: viewer-request, origin-request, viewer-response, origin-response.</summary>
@@ -2343,6 +2441,7 @@ public partial class V1beta1DistributionStatusAtProviderOrderedCacheBehaviorFunc
     public string? FunctionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionStatusAtProviderOrderedCacheBehaviorLambdaFunctionAssociation
 {
     /// <summary>Specific event to trigger this function. Valid values: viewer-request, origin-request, viewer-response, origin-response.</summary>
@@ -2358,6 +2457,7 @@ public partial class V1beta1DistributionStatusAtProviderOrderedCacheBehaviorLamb
     public string? LambdaArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionStatusAtProviderOrderedCacheBehavior
 {
     /// <summary>Controls which HTTP methods CloudFront processes and forwards to your Amazon S3 bucket or your custom origin.</summary>
@@ -2441,6 +2541,7 @@ public partial class V1beta1DistributionStatusAtProviderOrderedCacheBehavior
     public string? ViewerProtocolPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionStatusAtProviderOriginCustomHeader
 {
     /// <summary></summary>
@@ -2452,6 +2553,7 @@ public partial class V1beta1DistributionStatusAtProviderOriginCustomHeader
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionStatusAtProviderOriginCustomOriginConfig
 {
     /// <summary>HTTP port the custom origin listens on.</summary>
@@ -2479,6 +2581,7 @@ public partial class V1beta1DistributionStatusAtProviderOriginCustomOriginConfig
     public IList<string>? OriginSslProtocols { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionStatusAtProviderOriginOriginShield
 {
     /// <summary>Whether the distribution is enabled to accept end user requests for content.</summary>
@@ -2490,6 +2593,7 @@ public partial class V1beta1DistributionStatusAtProviderOriginOriginShield
     public string? OriginShieldRegion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionStatusAtProviderOriginS3OriginConfig
 {
     /// <summary>The CloudFront origin access identity to associate with the origin.</summary>
@@ -2497,6 +2601,7 @@ public partial class V1beta1DistributionStatusAtProviderOriginS3OriginConfig
     public string? OriginAccessIdentity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionStatusAtProviderOrigin
 {
     /// <summary>Number of times that CloudFront attempts to connect to the origin. Must be between 1-3. Defaults to 3.</summary>
@@ -2540,6 +2645,7 @@ public partial class V1beta1DistributionStatusAtProviderOrigin
     public IList<V1beta1DistributionStatusAtProviderOriginS3OriginConfig>? S3OriginConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionStatusAtProviderOriginGroupFailoverCriteria
 {
     /// <summary>List of HTTP status codes for the origin group.</summary>
@@ -2547,6 +2653,7 @@ public partial class V1beta1DistributionStatusAtProviderOriginGroupFailoverCrite
     public IList<double>? StatusCodes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionStatusAtProviderOriginGroupMember
 {
     /// <summary>Unique identifier for the origin.</summary>
@@ -2554,6 +2661,7 @@ public partial class V1beta1DistributionStatusAtProviderOriginGroupMember
     public string? OriginId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionStatusAtProviderOriginGroup
 {
     /// <summary>The failover criteria for when to failover to the secondary origin.</summary>
@@ -2569,6 +2677,7 @@ public partial class V1beta1DistributionStatusAtProviderOriginGroup
     public string? OriginId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionStatusAtProviderRestrictionsGeoRestriction
 {
     /// <summary>ISO 3166-1-alpha-2 codes for which you want CloudFront either to distribute your content (whitelist) or not distribute your content (blacklist). If the type is specified as none an empty array can be used.</summary>
@@ -2580,6 +2689,7 @@ public partial class V1beta1DistributionStatusAtProviderRestrictionsGeoRestricti
     public string? RestrictionType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionStatusAtProviderRestrictions
 {
     /// <summary></summary>
@@ -2587,6 +2697,7 @@ public partial class V1beta1DistributionStatusAtProviderRestrictions
     public IList<V1beta1DistributionStatusAtProviderRestrictionsGeoRestriction>? GeoRestriction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionStatusAtProviderTrustedKeyGroupsItems
 {
     /// <summary>ID of the key group that contains the public keys.</summary>
@@ -2598,6 +2709,7 @@ public partial class V1beta1DistributionStatusAtProviderTrustedKeyGroupsItems
     public IList<string>? KeyPairIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionStatusAtProviderTrustedKeyGroups
 {
     /// <summary>Whether the distribution is enabled to accept end user requests for content.</summary>
@@ -2609,6 +2721,7 @@ public partial class V1beta1DistributionStatusAtProviderTrustedKeyGroups
     public IList<V1beta1DistributionStatusAtProviderTrustedKeyGroupsItems>? Items { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionStatusAtProviderTrustedSignersItems
 {
     /// <summary>AWS account ID or self</summary>
@@ -2620,6 +2733,7 @@ public partial class V1beta1DistributionStatusAtProviderTrustedSignersItems
     public IList<string>? KeyPairIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionStatusAtProviderTrustedSigners
 {
     /// <summary>Whether the distribution is enabled to accept end user requests for content.</summary>
@@ -2631,6 +2745,7 @@ public partial class V1beta1DistributionStatusAtProviderTrustedSigners
     public IList<V1beta1DistributionStatusAtProviderTrustedSignersItems>? Items { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionStatusAtProviderViewerCertificate
 {
     /// <summary>ARN of the AWS Certificate Manager certificate that you wish to use with this distribution. Specify this, cloudfront_default_certificate, or iam_certificate_id.  The ACM certificate must be in  US-EAST-1.</summary>
@@ -2654,6 +2769,7 @@ public partial class V1beta1DistributionStatusAtProviderViewerCertificate
     public string? SslSupportMethod { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DistributionStatusAtProvider
 {
     /// <summary>Extra CNAMEs (alternate domain names), if any, for this distribution.</summary>
@@ -2789,6 +2905,7 @@ public partial class V1beta1DistributionStatusAtProvider
     public string? WebAclId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1DistributionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2816,6 +2933,7 @@ public partial class V1beta1DistributionStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>DistributionStatus defines the observed state of Distribution.</summary>
 public partial class V1beta1DistributionStatus
 {
     /// <summary></summary>
@@ -2832,6 +2950,7 @@ public partial class V1beta1DistributionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Distribution is the Schema for the Distributions API. Provides a CloudFront web distribution resource.</summary>
 public partial class V1beta1Distribution : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DistributionSpec>, IStatus<V1beta1DistributionStatus>
 {
     public const string KubeApiVersion = "v1beta1";

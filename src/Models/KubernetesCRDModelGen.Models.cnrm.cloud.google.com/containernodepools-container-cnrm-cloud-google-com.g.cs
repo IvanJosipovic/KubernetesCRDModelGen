@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.container.cnrm.cloud.google.com;
+/// <summary>Configuration required by cluster autoscaler to adjust the size of the node pool to the current cluster usage. To disable autoscaling, set minNodeCount and maxNodeCount to 0.</summary>
 public partial class V1beta1ContainerNodePoolSpecAutoscaling
 {
     /// <summary>Location policy specifies the algorithm used when scaling-up the node pool. "BALANCED" - Is a best effort policy that aims to balance the sizes of available zones. "ANY" - Instructs the cluster autoscaler to prioritize utilization of unused reservations, and reduces preemption risk for Spot VMs.</summary>
@@ -31,6 +32,7 @@ public partial class V1beta1ContainerNodePoolSpecAutoscaling
     public int? TotalMinNodeCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerNodePoolSpecClusterRef
 {
     /// <summary>Allowed value: The `name` field of a `ContainerCluster` resource.</summary>
@@ -46,6 +48,7 @@ public partial class V1beta1ContainerNodePoolSpecClusterRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Node management configuration, wherein auto-repair and auto-upgrade is configured.</summary>
 public partial class V1beta1ContainerNodePoolSpecManagement
 {
     /// <summary>Whether the nodes will be automatically repaired.</summary>
@@ -57,6 +60,7 @@ public partial class V1beta1ContainerNodePoolSpecManagement
     public bool? AutoUpgrade { get; set; }
 }
 
+/// <summary>Immutable. Name of the VPC where the additional interface belongs.</summary>
 public partial class V1beta1ContainerNodePoolSpecNetworkConfigAdditionalNodeNetworkConfigsNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
@@ -72,6 +76,7 @@ public partial class V1beta1ContainerNodePoolSpecNetworkConfigAdditionalNodeNetw
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. Name of the subnetwork where the additional interface belongs.</summary>
 public partial class V1beta1ContainerNodePoolSpecNetworkConfigAdditionalNodeNetworkConfigsSubnetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeSubnetwork` resource.</summary>
@@ -87,6 +92,7 @@ public partial class V1beta1ContainerNodePoolSpecNetworkConfigAdditionalNodeNetw
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerNodePoolSpecNetworkConfigAdditionalNodeNetworkConfigs
 {
     /// <summary>Immutable. Name of the VPC where the additional interface belongs.</summary>
@@ -98,6 +104,7 @@ public partial class V1beta1ContainerNodePoolSpecNetworkConfigAdditionalNodeNetw
     public V1beta1ContainerNodePoolSpecNetworkConfigAdditionalNodeNetworkConfigsSubnetworkRef? SubnetworkRef { get; set; }
 }
 
+/// <summary>Immutable. Name of the subnetwork where the additional pod network belongs.</summary>
 public partial class V1beta1ContainerNodePoolSpecNetworkConfigAdditionalPodNetworkConfigsSubnetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeSubnetwork` resource.</summary>
@@ -113,6 +120,7 @@ public partial class V1beta1ContainerNodePoolSpecNetworkConfigAdditionalPodNetwo
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerNodePoolSpecNetworkConfigAdditionalPodNetworkConfigs
 {
     /// <summary>Immutable. The maximum number of pods per node which use this pod network.</summary>
@@ -128,6 +136,7 @@ public partial class V1beta1ContainerNodePoolSpecNetworkConfigAdditionalPodNetwo
     public V1beta1ContainerNodePoolSpecNetworkConfigAdditionalPodNetworkConfigsSubnetworkRef? SubnetworkRef { get; set; }
 }
 
+/// <summary>Immutable. Configuration for node-pool level pod cidr overprovision. If not set, the cluster level setting will be inherited.</summary>
 public partial class V1beta1ContainerNodePoolSpecNetworkConfigPodCidrOverprovisionConfig
 {
     /// <summary></summary>
@@ -135,6 +144,7 @@ public partial class V1beta1ContainerNodePoolSpecNetworkConfigPodCidrOverprovisi
     public bool Disabled { get; set; }
 }
 
+/// <summary>Networking configuration for this NodePool. If specified, it overrides the cluster-level defaults.</summary>
 public partial class V1beta1ContainerNodePoolSpecNetworkConfig
 {
     /// <summary>Immutable. We specify the additional node networks for this node pool using this list. Each node network corresponds to an additional interface.</summary>
@@ -166,6 +176,7 @@ public partial class V1beta1ContainerNodePoolSpecNetworkConfig
     public string? PodRange { get; set; }
 }
 
+/// <summary>Immutable. Specifies options for controlling advanced machine features.</summary>
 public partial class V1beta1ContainerNodePoolSpecNodeConfigAdvancedMachineFeatures
 {
     /// <summary>Immutable. The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.</summary>
@@ -173,6 +184,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigAdvancedMachineFeatur
     public int ThreadsPerCore { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerNodePoolSpecNodeConfigBootDiskKMSCryptoKeyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
@@ -188,6 +200,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigBootDiskKMSCryptoKeyR
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. Configuration for the confidential nodes feature, which makes nodes run on confidential VMs. Warning: This configuration can't be changed (or added/removed) after pool creation without deleting and recreating the entire pool.</summary>
 public partial class V1beta1ContainerNodePoolSpecNodeConfigConfidentialNodes
 {
     /// <summary>Immutable. Whether Confidential Nodes feature is enabled for all nodes in this pool.</summary>
@@ -195,6 +208,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigConfidentialNodes
     public bool Enabled { get; set; }
 }
 
+/// <summary>Immutable. Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk.</summary>
 public partial class V1beta1ContainerNodePoolSpecNodeConfigEphemeralStorageConfig
 {
     /// <summary>Immutable. Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD must be 375 or 3000 GB in size, and all local SSDs must share the same size.</summary>
@@ -202,6 +216,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigEphemeralStorageConfi
     public int LocalSsdCount { get; set; }
 }
 
+/// <summary>Immutable. Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk.</summary>
 public partial class V1beta1ContainerNodePoolSpecNodeConfigEphemeralStorageLocalSsdConfig
 {
     /// <summary>Immutable. Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD must be 375 or 3000 GB in size, and all local SSDs must share the same size.</summary>
@@ -209,6 +224,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigEphemeralStorageLocal
     public int LocalSsdCount { get; set; }
 }
 
+/// <summary>Enable or disable NCCL Fast Socket in the node pool.</summary>
 public partial class V1beta1ContainerNodePoolSpecNodeConfigFastSocket
 {
     /// <summary>Whether or not NCCL Fast Socket is enabled.</summary>
@@ -216,6 +232,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigFastSocket
     public bool Enabled { get; set; }
 }
 
+/// <summary>Immutable. GCFS configuration for this node.</summary>
 public partial class V1beta1ContainerNodePoolSpecNodeConfigGcfsConfig
 {
     /// <summary>Immutable. Whether or not GCFS is enabled.</summary>
@@ -223,6 +240,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigGcfsConfig
     public bool Enabled { get; set; }
 }
 
+/// <summary>Immutable. Configuration for auto installation of GPU driver.</summary>
 public partial class V1beta1ContainerNodePoolSpecNodeConfigGuestAcceleratorGpuDriverInstallationConfig
 {
     /// <summary>Immutable. Mode for how the GPU driver is installed.</summary>
@@ -230,6 +248,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigGuestAcceleratorGpuDr
     public string GpuDriverVersion { get; set; }
 }
 
+/// <summary>Immutable. Configuration for GPU sharing.</summary>
 public partial class V1beta1ContainerNodePoolSpecNodeConfigGuestAcceleratorGpuSharingConfig
 {
     /// <summary>Immutable. The type of GPU sharing strategy to enable on the GPU node. Possible values are described in the API package (https://pkg.go.dev/google.golang.org/api/container/v1#GPUSharingConfig).</summary>
@@ -241,6 +260,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigGuestAcceleratorGpuSh
     public int MaxSharedClientsPerGpu { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerNodePoolSpecNodeConfigGuestAccelerator
 {
     /// <summary>Immutable. The number of the accelerator cards exposed to an instance.</summary>
@@ -264,6 +284,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigGuestAccelerator
     public string Type { get; set; }
 }
 
+/// <summary>Immutable. Enable or disable gvnic in the node pool.</summary>
 public partial class V1beta1ContainerNodePoolSpecNodeConfigGvnic
 {
     /// <summary>Immutable. Whether or not gvnic is enabled.</summary>
@@ -271,6 +292,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigGvnic
     public bool Enabled { get; set; }
 }
 
+/// <summary>Immutable. The maintenance policy for the hosts on which the GKE VMs run on.</summary>
 public partial class V1beta1ContainerNodePoolSpecNodeConfigHostMaintenancePolicy
 {
     /// <summary>Immutable. .</summary>
@@ -278,6 +300,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigHostMaintenancePolicy
     public string MaintenanceInterval { get; set; }
 }
 
+/// <summary>Node kubelet configs.</summary>
 public partial class V1beta1ContainerNodePoolSpecNodeConfigKubeletConfig
 {
     /// <summary>Enable CPU CFS quota enforcement for containers that specify CPU limits.</summary>
@@ -297,6 +320,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigKubeletConfig
     public int? PodPidsLimit { get; set; }
 }
 
+/// <summary>Parameters that can be configured on Linux nodes.</summary>
 public partial class V1beta1ContainerNodePoolSpecNodeConfigLinuxNodeConfig
 {
     /// <summary>cgroupMode specifies the cgroup mode to be used on the node.</summary>
@@ -308,6 +332,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigLinuxNodeConfig
     public IDictionary<string, string>? Sysctls { get; set; }
 }
 
+/// <summary>Immutable. Parameters for raw-block local NVMe SSDs.</summary>
 public partial class V1beta1ContainerNodePoolSpecNodeConfigLocalNvmeSsdBlockConfig
 {
     /// <summary>Immutable. Number of raw-block local NVMe SSD disks to be attached to the node. Each local SSD is 375 GB in size.</summary>
@@ -315,6 +340,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigLocalNvmeSsdBlockConf
     public int LocalSsdCount { get; set; }
 }
 
+/// <summary>Immutable. Setting this field will assign instances of this pool to run on the specified node group. This is useful for running workloads on sole tenant nodes.</summary>
 public partial class V1beta1ContainerNodePoolSpecNodeConfigNodeGroupRef
 {
     /// <summary>Allowed value: The `name` field of a `ComputeNodeGroup` resource.</summary>
@@ -330,6 +356,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigNodeGroupRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. The reservation affinity configuration for the node pool.</summary>
 public partial class V1beta1ContainerNodePoolSpecNodeConfigReservationAffinity
 {
     /// <summary>Immutable. Corresponds to the type of reservation consumption.</summary>
@@ -345,6 +372,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigReservationAffinity
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>Immutable. Sandbox configuration for this node.</summary>
 public partial class V1beta1ContainerNodePoolSpecNodeConfigSandboxConfig
 {
     /// <summary>Type of the sandbox to use for the node (e.g. 'gvisor').</summary>
@@ -352,6 +380,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigSandboxConfig
     public string SandboxType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerNodePoolSpecNodeConfigServiceAccountRef
 {
     /// <summary>Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
@@ -367,6 +396,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigServiceAccountRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. Shielded Instance options.</summary>
 public partial class V1beta1ContainerNodePoolSpecNodeConfigShieldedInstanceConfig
 {
     /// <summary>Immutable. Defines whether the instance has integrity monitoring enabled.</summary>
@@ -378,6 +408,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigShieldedInstanceConfi
     public bool? EnableSecureBoot { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerNodePoolSpecNodeConfigSoleTenantConfigNodeAffinity
 {
     /// <summary>Immutable. .</summary>
@@ -393,6 +424,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigSoleTenantConfigNodeA
     public IList<string> Values { get; set; }
 }
 
+/// <summary>Immutable. Node affinity options for sole tenant node pools.</summary>
 public partial class V1beta1ContainerNodePoolSpecNodeConfigSoleTenantConfig
 {
     /// <summary>Immutable. .</summary>
@@ -400,6 +432,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigSoleTenantConfig
     public IList<V1beta1ContainerNodePoolSpecNodeConfigSoleTenantConfigNodeAffinity> NodeAffinity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerNodePoolSpecNodeConfigTaint
 {
     /// <summary>Effect for taint.</summary>
@@ -415,6 +448,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigTaint
     public string Value { get; set; }
 }
 
+/// <summary>The workload metadata configuration for this node.</summary>
 public partial class V1beta1ContainerNodePoolSpecNodeConfigWorkloadMetadataConfig
 {
     /// <summary>Mode is the configuration for how to expose metadata to workloads running on the node.</summary>
@@ -426,6 +460,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfigWorkloadMetadataConfi
     public string? NodeMetadata { get; set; }
 }
 
+/// <summary>Immutable. The configuration of the nodepool.</summary>
 public partial class V1beta1ContainerNodePoolSpecNodeConfig
 {
     /// <summary>Immutable. Specifies options for controlling advanced machine features.</summary>
@@ -569,6 +604,7 @@ public partial class V1beta1ContainerNodePoolSpecNodeConfig
     public V1beta1ContainerNodePoolSpecNodeConfigWorkloadMetadataConfig? WorkloadMetadataConfig { get; set; }
 }
 
+/// <summary>Immutable. If set, refers to the name of a custom resource policy supplied by the user. The resource policy must be in the same project and region as the node pool. If not found, InvalidArgument error is returned.</summary>
 public partial class V1beta1ContainerNodePoolSpecPlacementPolicyPolicyNameRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeResourcePolicy` resource.</summary>
@@ -584,6 +620,7 @@ public partial class V1beta1ContainerNodePoolSpecPlacementPolicyPolicyNameRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. Specifies the node placement policy.</summary>
 public partial class V1beta1ContainerNodePoolSpecPlacementPolicy
 {
     /// <summary>Immutable. If set, refers to the name of a custom resource policy supplied by the user. The resource policy must be in the same project and region as the node pool. If not found, InvalidArgument error is returned.</summary>
@@ -599,6 +636,7 @@ public partial class V1beta1ContainerNodePoolSpecPlacementPolicy
     public string Type { get; set; }
 }
 
+/// <summary>Standard rollout policy is the default policy for blue-green.</summary>
 public partial class V1beta1ContainerNodePoolSpecUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy
 {
     /// <summary>Number of blue nodes to drain in a batch.</summary>
@@ -614,6 +652,7 @@ public partial class V1beta1ContainerNodePoolSpecUpgradeSettingsBlueGreenSetting
     public string? BatchSoakDuration { get; set; }
 }
 
+/// <summary>Settings for BlueGreen node pool upgrade.</summary>
 public partial class V1beta1ContainerNodePoolSpecUpgradeSettingsBlueGreenSettings
 {
     /// <summary>Time needed after draining entire blue pool. After this period, blue pool will be cleaned up.</summary>
@@ -625,6 +664,7 @@ public partial class V1beta1ContainerNodePoolSpecUpgradeSettingsBlueGreenSetting
     public V1beta1ContainerNodePoolSpecUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy StandardRolloutPolicy { get; set; }
 }
 
+/// <summary>Specify node upgrade settings to change how many nodes GKE attempts to upgrade at once. The number of nodes upgraded simultaneously is the sum of max_surge and max_unavailable. The maximum number of nodes upgraded simultaneously is limited to 20.</summary>
 public partial class V1beta1ContainerNodePoolSpecUpgradeSettings
 {
     /// <summary>Settings for BlueGreen node pool upgrade.</summary>
@@ -644,6 +684,7 @@ public partial class V1beta1ContainerNodePoolSpecUpgradeSettings
     public string? Strategy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerNodePoolSpec
 {
     /// <summary>Configuration required by cluster autoscaler to adjust the size of the node pool to the current cluster usage. To disable autoscaling, set minNodeCount and maxNodeCount to 0.</summary>
@@ -707,6 +748,7 @@ public partial class V1beta1ContainerNodePoolSpec
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerNodePoolStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -730,6 +772,7 @@ public partial class V1beta1ContainerNodePoolStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary>The observed state of the underlying GCP resource.</summary>
 public partial class V1beta1ContainerNodePoolStatusObservedState
 {
     /// <summary></summary>
@@ -737,6 +780,7 @@ public partial class V1beta1ContainerNodePoolStatusObservedState
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerNodePoolStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -765,6 +809,7 @@ public partial class V1beta1ContainerNodePoolStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ContainerNodePool : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ContainerNodePoolSpec>, IStatus<V1beta1ContainerNodePoolStatus>
 {
     public const string KubeApiVersion = "v1beta1";

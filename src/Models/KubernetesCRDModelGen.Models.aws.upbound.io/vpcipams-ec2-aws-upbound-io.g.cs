@@ -18,6 +18,7 @@ public enum V1beta1VPCIpamSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1VPCIpamSpecForProviderOperatingRegions
 {
     /// <summary>The name of the Region you want to add to the IPAM.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1VPCIpamSpecForProviderOperatingRegions
     public string? RegionName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPCIpamSpecForProvider
 {
     /// <summary>Enables you to quickly delete an IPAM, private scopes, pools in private scopes, and any allocations in the pools in private scopes.</summary>
@@ -52,6 +54,7 @@ public partial class V1beta1VPCIpamSpecForProvider
     public string? Tier { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPCIpamSpecInitProviderOperatingRegions
 {
     /// <summary>The name of the Region you want to add to the IPAM.</summary>
@@ -59,6 +62,7 @@ public partial class V1beta1VPCIpamSpecInitProviderOperatingRegions
     public string? RegionName { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1VPCIpamSpecInitProvider
 {
     /// <summary>Enables you to quickly delete an IPAM, private scopes, pools in private scopes, and any allocations in the pools in private scopes.</summary>
@@ -124,6 +128,7 @@ public enum V1beta1VPCIpamSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPCIpamSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -137,6 +142,7 @@ public partial class V1beta1VPCIpamSpecProviderConfigRefPolicy
     public V1beta1VPCIpamSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1VPCIpamSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -168,6 +174,7 @@ public enum V1beta1VPCIpamSpecPublishConnectionDetailsToConfigRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VPCIpamSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -181,6 +188,7 @@ public partial class V1beta1VPCIpamSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1VPCIpamSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1VPCIpamSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -192,6 +200,7 @@ public partial class V1beta1VPCIpamSpecPublishConnectionDetailsToConfigRef
     public V1beta1VPCIpamSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1VPCIpamSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -207,6 +216,7 @@ public partial class V1beta1VPCIpamSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1VPCIpamSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -222,6 +232,7 @@ public partial class V1beta1VPCIpamSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1VPCIpamSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -233,6 +244,7 @@ public partial class V1beta1VPCIpamSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>VPCIpamSpec defines the desired state of VPCIpam</summary>
 public partial class V1beta1VPCIpamSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -265,6 +277,7 @@ public partial class V1beta1VPCIpamSpec
     public V1beta1VPCIpamSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPCIpamStatusAtProviderOperatingRegions
 {
     /// <summary>The name of the Region you want to add to the IPAM.</summary>
@@ -272,6 +285,7 @@ public partial class V1beta1VPCIpamStatusAtProviderOperatingRegions
     public string? RegionName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VPCIpamStatusAtProvider
 {
     /// <summary>Amazon Resource Name (ARN) of IPAM</summary>
@@ -327,6 +341,7 @@ public partial class V1beta1VPCIpamStatusAtProvider
     public string? Tier { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1VPCIpamStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -354,6 +369,7 @@ public partial class V1beta1VPCIpamStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>VPCIpamStatus defines the observed state of VPCIpam.</summary>
 public partial class V1beta1VPCIpamStatus
 {
     /// <summary></summary>
@@ -370,6 +386,7 @@ public partial class V1beta1VPCIpamStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>VPCIpam is the Schema for the VPCIpams API. Provides an IPAM resource.</summary>
 public partial class V1beta1VPCIpam : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1VPCIpamSpec>, IStatus<V1beta1VPCIpamStatus>
 {
     public const string KubeApiVersion = "v1beta1";

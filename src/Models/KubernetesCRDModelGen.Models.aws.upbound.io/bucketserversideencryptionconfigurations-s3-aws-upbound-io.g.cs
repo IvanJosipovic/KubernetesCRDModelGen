@@ -38,6 +38,7 @@ public enum V1beta1BucketServerSideEncryptionConfigurationSpecForProviderBucketR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProviderBucketRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProvid
     public V1beta1BucketServerSideEncryptionConfigurationSpecForProviderBucketRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProviderBucketRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1BucketServerSideEncryptionConfigurationSpecForProviderBucketS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProviderBucketSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProvid
     public V1beta1BucketServerSideEncryptionConfigurationSpecForProviderBucketSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProviderBucketSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1BucketServerSideEncryptionConfigurationSpecForProviderRuleApp
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProviderRuleApplyServerSideEncryptionByDefaultKmsMasterKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProvid
     public V1beta1BucketServerSideEncryptionConfigurationSpecForProviderRuleApplyServerSideEncryptionByDefaultKmsMasterKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsMasterKeyId.</summary>
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProviderRuleApplyServerSideEncryptionByDefaultKmsMasterKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1BucketServerSideEncryptionConfigurationSpecForProviderRuleApp
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProviderRuleApplyServerSideEncryptionByDefaultKmsMasterKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProvid
     public V1beta1BucketServerSideEncryptionConfigurationSpecForProviderRuleApplyServerSideEncryptionByDefaultKmsMasterKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsMasterKeyId.</summary>
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProviderRuleApplyServerSideEncryptionByDefaultKmsMasterKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProvid
     public V1beta1BucketServerSideEncryptionConfigurationSpecForProviderRuleApplyServerSideEncryptionByDefaultKmsMasterKeyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProviderRuleApplyServerSideEncryptionByDefault
 {
     /// <summary>AWS KMS master key ID used for the SSE-KMS encryption. This can only be used when you set the value of sse_algorithm as aws:kms. The default aws/s3 AWS KMS master key is used if this element is absent while the sse_algorithm is aws:kms.</summary>
@@ -221,6 +230,7 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProvid
     public string? SseAlgorithm { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProviderRule
 {
     /// <summary>Single object for setting server-side encryption by default. See below.</summary>
@@ -232,6 +242,7 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProvid
     public bool? BucketKeyEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProvider
 {
     /// <summary>ID (name) of the bucket.</summary>
@@ -279,6 +290,7 @@ public enum V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderBucket
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderBucketRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -292,6 +304,7 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProvi
     public V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderBucketRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderBucketRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -323,6 +336,7 @@ public enum V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderBucket
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderBucketSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -336,6 +350,7 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProvi
     public V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderBucketSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderBucketSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -371,6 +386,7 @@ public enum V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderRuleAp
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderRuleApplyServerSideEncryptionByDefaultKmsMasterKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -384,6 +400,7 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProvi
     public V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderRuleApplyServerSideEncryptionByDefaultKmsMasterKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsMasterKeyId.</summary>
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderRuleApplyServerSideEncryptionByDefaultKmsMasterKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -415,6 +432,7 @@ public enum V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderRuleAp
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderRuleApplyServerSideEncryptionByDefaultKmsMasterKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -428,6 +446,7 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProvi
     public V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderRuleApplyServerSideEncryptionByDefaultKmsMasterKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsMasterKeyId.</summary>
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderRuleApplyServerSideEncryptionByDefaultKmsMasterKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -443,6 +462,7 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProvi
     public V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderRuleApplyServerSideEncryptionByDefaultKmsMasterKeyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderRuleApplyServerSideEncryptionByDefault
 {
     /// <summary>AWS KMS master key ID used for the SSE-KMS encryption. This can only be used when you set the value of sse_algorithm as aws:kms. The default aws/s3 AWS KMS master key is used if this element is absent while the sse_algorithm is aws:kms.</summary>
@@ -462,6 +482,7 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProvi
     public string? SseAlgorithm { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderRule
 {
     /// <summary>Single object for setting server-side encryption by default. See below.</summary>
@@ -473,6 +494,7 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProvi
     public bool? BucketKeyEnabled { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProvider
 {
     /// <summary>ID (name) of the bucket.</summary>
@@ -538,6 +560,7 @@ public enum V1beta1BucketServerSideEncryptionConfigurationSpecProviderConfigRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -551,6 +574,7 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecProviderC
     public V1beta1BucketServerSideEncryptionConfigurationSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -582,6 +606,7 @@ public enum V1beta1BucketServerSideEncryptionConfigurationSpecPublishConnectionD
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -595,6 +620,7 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecPublishCo
     public V1beta1BucketServerSideEncryptionConfigurationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -606,6 +632,7 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecPublishCo
     public V1beta1BucketServerSideEncryptionConfigurationSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -621,6 +648,7 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecPublishCo
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -636,6 +664,7 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecPublishCo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -647,6 +676,7 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecWriteConn
     public string Namespace { get; set; }
 }
 
+/// <summary>BucketServerSideEncryptionConfigurationSpec defines the desired state of BucketServerSideEncryptionConfiguration</summary>
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -679,6 +709,7 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpec
     public V1beta1BucketServerSideEncryptionConfigurationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketServerSideEncryptionConfigurationStatusAtProviderRuleApplyServerSideEncryptionByDefault
 {
     /// <summary>AWS KMS master key ID used for the SSE-KMS encryption. This can only be used when you set the value of sse_algorithm as aws:kms. The default aws/s3 AWS KMS master key is used if this element is absent while the sse_algorithm is aws:kms.</summary>
@@ -690,6 +721,7 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationStatusAtProvi
     public string? SseAlgorithm { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketServerSideEncryptionConfigurationStatusAtProviderRule
 {
     /// <summary>Single object for setting server-side encryption by default. See below.</summary>
@@ -701,6 +733,7 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationStatusAtProvi
     public bool? BucketKeyEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketServerSideEncryptionConfigurationStatusAtProvider
 {
     /// <summary>ID (name) of the bucket.</summary>
@@ -720,6 +753,7 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationStatusAtProvi
     public IList<V1beta1BucketServerSideEncryptionConfigurationStatusAtProviderRule>? Rule { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1BucketServerSideEncryptionConfigurationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -747,6 +781,7 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationStatusConditi
     public string Type { get; set; }
 }
 
+/// <summary>BucketServerSideEncryptionConfigurationStatus defines the observed state of BucketServerSideEncryptionConfiguration.</summary>
 public partial class V1beta1BucketServerSideEncryptionConfigurationStatus
 {
     /// <summary></summary>
@@ -763,6 +798,7 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>BucketServerSideEncryptionConfiguration is the Schema for the BucketServerSideEncryptionConfigurations API. Provides a S3 bucket server-side encryption configuration resource.</summary>
 public partial class V1beta1BucketServerSideEncryptionConfiguration : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BucketServerSideEncryptionConfigurationSpec>, IStatus<V1beta1BucketServerSideEncryptionConfigurationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

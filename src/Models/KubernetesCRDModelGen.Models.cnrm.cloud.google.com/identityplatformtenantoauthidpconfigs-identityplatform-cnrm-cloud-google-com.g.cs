@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.identityplatform.cnrm.cloud.google.com;
+/// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigSpecClientSecretValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -19,6 +20,7 @@ public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigSpecClientSecret
     public string Name { get; set; }
 }
 
+/// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigSpecClientSecretValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -26,6 +28,7 @@ public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigSpecClientSecret
     public V1beta1IdentityPlatformTenantOAuthIDPConfigSpecClientSecretValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary>The client secret of the OAuth client, to enable OIDC code flow.</summary>
 public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigSpecClientSecret
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -37,6 +40,7 @@ public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigSpecClientSecret
     public V1beta1IdentityPlatformTenantOAuthIDPConfigSpecClientSecretValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary>The multiple response type to request for in the OAuth authorization flow. This can possibly be a combination of set bits (e.g.: {id\_token, token}).</summary>
 public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigSpecResponseType
 {
     /// <summary>If true, authorization code is returned from IdP's authorization endpoint.</summary>
@@ -52,6 +56,7 @@ public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigSpecResponseType
     public bool? Token { get; set; }
 }
 
+/// <summary>Immutable.</summary>
 public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigSpecTenantRef
 {
     /// <summary>The tenant for the resource  Allowed value: The Google Cloud resource name of an `IdentityPlatformTenant` resource (format: `projects/{{project}}/tenants/{{name}}`).</summary>
@@ -67,6 +72,7 @@ public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigSpecTenantRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigSpec
 {
     /// <summary>The client id of an OAuth client.</summary>
@@ -102,6 +108,7 @@ public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigSpec
     public V1beta1IdentityPlatformTenantOAuthIDPConfigSpecTenantRef TenantRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -125,6 +132,7 @@ public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -137,6 +145,7 @@ public partial class V1beta1IdentityPlatformTenantOAuthIDPConfigStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1IdentityPlatformTenantOAuthIDPConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IdentityPlatformTenantOAuthIDPConfigSpec>, IStatus<V1beta1IdentityPlatformTenantOAuthIDPConfigStatus>
 {
     public const string KubeApiVersion = "v1beta1";

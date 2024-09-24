@@ -18,6 +18,7 @@ public enum V1beta1IndexSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1IndexSpecForProviderCapacityUnits
 {
     /// <summary>The amount of extra query capacity for an index and GetQuerySuggestions capacity. For more information, refer to QueryCapacityUnits.</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1IndexSpecForProviderCapacityUnits
     public double? StorageCapacityUnits { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IndexSpecForProviderDocumentMetadataConfigurationUpdatesRelevance
 {
     /// <summary>Specifies the time period that the boost applies to. For more information, refer to Duration.</summary>
@@ -52,6 +54,7 @@ public partial class V1beta1IndexSpecForProviderDocumentMetadataConfigurationUpd
     public IDictionary<string, double>? ValuesImportanceMap { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IndexSpecForProviderDocumentMetadataConfigurationUpdatesSearch
 {
     /// <summary>Determines whether the field is returned in the query response. The default is true.</summary>
@@ -71,6 +74,7 @@ public partial class V1beta1IndexSpecForProviderDocumentMetadataConfigurationUpd
     public bool? Sortable { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IndexSpecForProviderDocumentMetadataConfigurationUpdates
 {
     /// <summary>The name of the index field. Minimum length of 1. Maximum length of 30.</summary>
@@ -110,6 +114,7 @@ public enum V1beta1IndexSpecForProviderRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IndexSpecForProviderRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -123,6 +128,7 @@ public partial class V1beta1IndexSpecForProviderRoleArnRefPolicy
     public V1beta1IndexSpecForProviderRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1IndexSpecForProviderRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -154,6 +160,7 @@ public enum V1beta1IndexSpecForProviderRoleArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IndexSpecForProviderRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -167,6 +174,7 @@ public partial class V1beta1IndexSpecForProviderRoleArnSelectorPolicy
     public V1beta1IndexSpecForProviderRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1IndexSpecForProviderRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -182,6 +190,7 @@ public partial class V1beta1IndexSpecForProviderRoleArnSelector
     public V1beta1IndexSpecForProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IndexSpecForProviderServerSideEncryptionConfiguration
 {
     /// <summary>The identifier of the AWS KMScustomer master key (CMK). Amazon Kendra doesn't support asymmetric CMKs.</summary>
@@ -189,6 +198,7 @@ public partial class V1beta1IndexSpecForProviderServerSideEncryptionConfiguratio
     public string? KmsKeyId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IndexSpecForProviderUserGroupResolutionConfiguration
 {
     /// <summary>The identity store provider (mode) you want to use to fetch access levels of groups and users. AWS Single Sign-On is currently the only available mode. Your users and groups must exist in an AWS SSO identity source in order to use this mode. Valid Values are AWS_SSO or NONE.</summary>
@@ -196,6 +206,7 @@ public partial class V1beta1IndexSpecForProviderUserGroupResolutionConfiguration
     public string? UserGroupResolutionMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IndexSpecForProviderUserTokenConfigurationsJsonTokenTypeConfiguration
 {
     /// <summary>The group attribute field. Minimum length of 1. Maximum length of 2048.</summary>
@@ -207,6 +218,7 @@ public partial class V1beta1IndexSpecForProviderUserTokenConfigurationsJsonToken
     public string? UserNameAttributeField { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IndexSpecForProviderUserTokenConfigurationsJwtTokenTypeConfiguration
 {
     /// <summary>The regular expression that identifies the claim. Minimum length of 1. Maximum length of 100.</summary>
@@ -238,6 +250,7 @@ public partial class V1beta1IndexSpecForProviderUserTokenConfigurationsJwtTokenT
     public string? UserNameAttributeField { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IndexSpecForProviderUserTokenConfigurations
 {
     /// <summary>A block that specifies the information about the JSON token type configuration. Detailed below.</summary>
@@ -249,6 +262,7 @@ public partial class V1beta1IndexSpecForProviderUserTokenConfigurations
     public IList<V1beta1IndexSpecForProviderUserTokenConfigurationsJwtTokenTypeConfiguration>? JwtTokenTypeConfiguration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IndexSpecForProvider
 {
     /// <summary>A block that sets the number of additional document storage and query capacity units that should be used by the index. Detailed below.</summary>
@@ -308,6 +322,7 @@ public partial class V1beta1IndexSpecForProvider
     public IList<V1beta1IndexSpecForProviderUserTokenConfigurations>? UserTokenConfigurations { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IndexSpecInitProviderCapacityUnits
 {
     /// <summary>The amount of extra query capacity for an index and GetQuerySuggestions capacity. For more information, refer to QueryCapacityUnits.</summary>
@@ -319,6 +334,7 @@ public partial class V1beta1IndexSpecInitProviderCapacityUnits
     public double? StorageCapacityUnits { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IndexSpecInitProviderDocumentMetadataConfigurationUpdatesRelevance
 {
     /// <summary>Specifies the time period that the boost applies to. For more information, refer to Duration.</summary>
@@ -342,6 +358,7 @@ public partial class V1beta1IndexSpecInitProviderDocumentMetadataConfigurationUp
     public IDictionary<string, double>? ValuesImportanceMap { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IndexSpecInitProviderDocumentMetadataConfigurationUpdatesSearch
 {
     /// <summary>Determines whether the field is returned in the query response. The default is true.</summary>
@@ -361,6 +378,7 @@ public partial class V1beta1IndexSpecInitProviderDocumentMetadataConfigurationUp
     public bool? Sortable { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IndexSpecInitProviderDocumentMetadataConfigurationUpdates
 {
     /// <summary>The name of the index field. Minimum length of 1. Maximum length of 30.</summary>
@@ -400,6 +418,7 @@ public enum V1beta1IndexSpecInitProviderRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IndexSpecInitProviderRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -413,6 +432,7 @@ public partial class V1beta1IndexSpecInitProviderRoleArnRefPolicy
     public V1beta1IndexSpecInitProviderRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1IndexSpecInitProviderRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -444,6 +464,7 @@ public enum V1beta1IndexSpecInitProviderRoleArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IndexSpecInitProviderRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -457,6 +478,7 @@ public partial class V1beta1IndexSpecInitProviderRoleArnSelectorPolicy
     public V1beta1IndexSpecInitProviderRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1IndexSpecInitProviderRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -472,6 +494,7 @@ public partial class V1beta1IndexSpecInitProviderRoleArnSelector
     public V1beta1IndexSpecInitProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IndexSpecInitProviderServerSideEncryptionConfiguration
 {
     /// <summary>The identifier of the AWS KMScustomer master key (CMK). Amazon Kendra doesn't support asymmetric CMKs.</summary>
@@ -479,6 +502,7 @@ public partial class V1beta1IndexSpecInitProviderServerSideEncryptionConfigurati
     public string? KmsKeyId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IndexSpecInitProviderUserGroupResolutionConfiguration
 {
     /// <summary>The identity store provider (mode) you want to use to fetch access levels of groups and users. AWS Single Sign-On is currently the only available mode. Your users and groups must exist in an AWS SSO identity source in order to use this mode. Valid Values are AWS_SSO or NONE.</summary>
@@ -486,6 +510,7 @@ public partial class V1beta1IndexSpecInitProviderUserGroupResolutionConfiguratio
     public string? UserGroupResolutionMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IndexSpecInitProviderUserTokenConfigurationsJsonTokenTypeConfiguration
 {
     /// <summary>The group attribute field. Minimum length of 1. Maximum length of 2048.</summary>
@@ -497,6 +522,7 @@ public partial class V1beta1IndexSpecInitProviderUserTokenConfigurationsJsonToke
     public string? UserNameAttributeField { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IndexSpecInitProviderUserTokenConfigurationsJwtTokenTypeConfiguration
 {
     /// <summary>The regular expression that identifies the claim. Minimum length of 1. Maximum length of 100.</summary>
@@ -528,6 +554,7 @@ public partial class V1beta1IndexSpecInitProviderUserTokenConfigurationsJwtToken
     public string? UserNameAttributeField { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IndexSpecInitProviderUserTokenConfigurations
 {
     /// <summary>A block that specifies the information about the JSON token type configuration. Detailed below.</summary>
@@ -539,6 +566,7 @@ public partial class V1beta1IndexSpecInitProviderUserTokenConfigurations
     public IList<V1beta1IndexSpecInitProviderUserTokenConfigurationsJwtTokenTypeConfiguration>? JwtTokenTypeConfiguration { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1IndexSpecInitProvider
 {
     /// <summary>A block that sets the number of additional document storage and query capacity units that should be used by the index. Detailed below.</summary>
@@ -636,6 +664,7 @@ public enum V1beta1IndexSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IndexSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -649,6 +678,7 @@ public partial class V1beta1IndexSpecProviderConfigRefPolicy
     public V1beta1IndexSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1IndexSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -680,6 +710,7 @@ public enum V1beta1IndexSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IndexSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -693,6 +724,7 @@ public partial class V1beta1IndexSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1IndexSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1IndexSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -704,6 +736,7 @@ public partial class V1beta1IndexSpecPublishConnectionDetailsToConfigRef
     public V1beta1IndexSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1IndexSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -719,6 +752,7 @@ public partial class V1beta1IndexSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1IndexSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -734,6 +768,7 @@ public partial class V1beta1IndexSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1IndexSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -745,6 +780,7 @@ public partial class V1beta1IndexSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>IndexSpec defines the desired state of Index</summary>
 public partial class V1beta1IndexSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -777,6 +813,7 @@ public partial class V1beta1IndexSpec
     public V1beta1IndexSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IndexStatusAtProviderCapacityUnits
 {
     /// <summary>The amount of extra query capacity for an index and GetQuerySuggestions capacity. For more information, refer to QueryCapacityUnits.</summary>
@@ -788,6 +825,7 @@ public partial class V1beta1IndexStatusAtProviderCapacityUnits
     public double? StorageCapacityUnits { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IndexStatusAtProviderDocumentMetadataConfigurationUpdatesRelevance
 {
     /// <summary>Specifies the time period that the boost applies to. For more information, refer to Duration.</summary>
@@ -811,6 +849,7 @@ public partial class V1beta1IndexStatusAtProviderDocumentMetadataConfigurationUp
     public IDictionary<string, double>? ValuesImportanceMap { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IndexStatusAtProviderDocumentMetadataConfigurationUpdatesSearch
 {
     /// <summary>Determines whether the field is returned in the query response. The default is true.</summary>
@@ -830,6 +869,7 @@ public partial class V1beta1IndexStatusAtProviderDocumentMetadataConfigurationUp
     public bool? Sortable { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IndexStatusAtProviderDocumentMetadataConfigurationUpdates
 {
     /// <summary>The name of the index field. Minimum length of 1. Maximum length of 30.</summary>
@@ -849,6 +889,7 @@ public partial class V1beta1IndexStatusAtProviderDocumentMetadataConfigurationUp
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IndexStatusAtProviderIndexStatisticsFaqStatistics
 {
     /// <summary>The total number of FAQ questions and answers contained in the index.</summary>
@@ -856,6 +897,7 @@ public partial class V1beta1IndexStatusAtProviderIndexStatisticsFaqStatistics
     public double? IndexedQuestionAnswersCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IndexStatusAtProviderIndexStatisticsTextDocumentStatistics
 {
     /// <summary>The total size, in bytes, of the indexed documents.</summary>
@@ -867,6 +909,7 @@ public partial class V1beta1IndexStatusAtProviderIndexStatisticsTextDocumentStat
     public double? IndexedTextDocumentsCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IndexStatusAtProviderIndexStatistics
 {
     /// <summary>A block that specifies the number of question and answer topics in the index. Detailed below.</summary>
@@ -878,6 +921,7 @@ public partial class V1beta1IndexStatusAtProviderIndexStatistics
     public IList<V1beta1IndexStatusAtProviderIndexStatisticsTextDocumentStatistics>? TextDocumentStatistics { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IndexStatusAtProviderServerSideEncryptionConfiguration
 {
     /// <summary>The identifier of the AWS KMScustomer master key (CMK). Amazon Kendra doesn't support asymmetric CMKs.</summary>
@@ -885,6 +929,7 @@ public partial class V1beta1IndexStatusAtProviderServerSideEncryptionConfigurati
     public string? KmsKeyId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IndexStatusAtProviderUserGroupResolutionConfiguration
 {
     /// <summary>The identity store provider (mode) you want to use to fetch access levels of groups and users. AWS Single Sign-On is currently the only available mode. Your users and groups must exist in an AWS SSO identity source in order to use this mode. Valid Values are AWS_SSO or NONE.</summary>
@@ -892,6 +937,7 @@ public partial class V1beta1IndexStatusAtProviderUserGroupResolutionConfiguratio
     public string? UserGroupResolutionMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IndexStatusAtProviderUserTokenConfigurationsJsonTokenTypeConfiguration
 {
     /// <summary>The group attribute field. Minimum length of 1. Maximum length of 2048.</summary>
@@ -903,6 +949,7 @@ public partial class V1beta1IndexStatusAtProviderUserTokenConfigurationsJsonToke
     public string? UserNameAttributeField { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IndexStatusAtProviderUserTokenConfigurationsJwtTokenTypeConfiguration
 {
     /// <summary>The regular expression that identifies the claim. Minimum length of 1. Maximum length of 100.</summary>
@@ -934,6 +981,7 @@ public partial class V1beta1IndexStatusAtProviderUserTokenConfigurationsJwtToken
     public string? UserNameAttributeField { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IndexStatusAtProviderUserTokenConfigurations
 {
     /// <summary>A block that specifies the information about the JSON token type configuration. Detailed below.</summary>
@@ -945,6 +993,7 @@ public partial class V1beta1IndexStatusAtProviderUserTokenConfigurations
     public IList<V1beta1IndexStatusAtProviderUserTokenConfigurationsJwtTokenTypeConfiguration>? JwtTokenTypeConfiguration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IndexStatusAtProvider
 {
     /// <summary>The Amazon Resource Name (ARN) of the Index.</summary>
@@ -1024,6 +1073,7 @@ public partial class V1beta1IndexStatusAtProvider
     public IList<V1beta1IndexStatusAtProviderUserTokenConfigurations>? UserTokenConfigurations { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1IndexStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1051,6 +1101,7 @@ public partial class V1beta1IndexStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>IndexStatus defines the observed state of Index.</summary>
 public partial class V1beta1IndexStatus
 {
     /// <summary></summary>
@@ -1067,6 +1118,7 @@ public partial class V1beta1IndexStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Index is the Schema for the Indexs API. Provides an Amazon Kendra Index resource.</summary>
 public partial class V1beta1Index : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IndexSpec>, IStatus<V1beta1IndexStatus>
 {
     public const string KubeApiVersion = "v1beta1";

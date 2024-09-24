@@ -18,6 +18,7 @@ public enum V1beta1MemcachedLayerSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1MemcachedLayerSpecForProviderCloudwatchConfigurationLogStreams
 {
     /// <summary></summary>
@@ -65,6 +66,7 @@ public partial class V1beta1MemcachedLayerSpecForProviderCloudwatchConfiguration
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MemcachedLayerSpecForProviderCloudwatchConfiguration
 {
     /// <summary></summary>
@@ -96,6 +98,7 @@ public enum V1beta1MemcachedLayerSpecForProviderCustomSecurityGroupIdRefsPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MemcachedLayerSpecForProviderCustomSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -109,6 +112,7 @@ public partial class V1beta1MemcachedLayerSpecForProviderCustomSecurityGroupIdRe
     public V1beta1MemcachedLayerSpecForProviderCustomSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1MemcachedLayerSpecForProviderCustomSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -140,6 +144,7 @@ public enum V1beta1MemcachedLayerSpecForProviderCustomSecurityGroupIdSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MemcachedLayerSpecForProviderCustomSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -153,6 +158,7 @@ public partial class V1beta1MemcachedLayerSpecForProviderCustomSecurityGroupIdSe
     public V1beta1MemcachedLayerSpecForProviderCustomSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate customSecurityGroupIds.</summary>
 public partial class V1beta1MemcachedLayerSpecForProviderCustomSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -168,6 +174,7 @@ public partial class V1beta1MemcachedLayerSpecForProviderCustomSecurityGroupIdSe
     public V1beta1MemcachedLayerSpecForProviderCustomSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MemcachedLayerSpecForProviderEbsVolume
 {
     /// <summary></summary>
@@ -199,6 +206,7 @@ public partial class V1beta1MemcachedLayerSpecForProviderEbsVolume
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MemcachedLayerSpecForProviderLoadBasedAutoScalingDownscaling
 {
     /// <summary></summary>
@@ -230,6 +238,7 @@ public partial class V1beta1MemcachedLayerSpecForProviderLoadBasedAutoScalingDow
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MemcachedLayerSpecForProviderLoadBasedAutoScalingUpscaling
 {
     /// <summary></summary>
@@ -261,6 +270,7 @@ public partial class V1beta1MemcachedLayerSpecForProviderLoadBasedAutoScalingUps
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MemcachedLayerSpecForProviderLoadBasedAutoScaling
 {
     /// <summary></summary>
@@ -296,6 +306,7 @@ public enum V1beta1MemcachedLayerSpecForProviderStackIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MemcachedLayerSpecForProviderStackIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -309,6 +320,7 @@ public partial class V1beta1MemcachedLayerSpecForProviderStackIdRefPolicy
     public V1beta1MemcachedLayerSpecForProviderStackIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Stack in opsworks to populate stackId.</summary>
 public partial class V1beta1MemcachedLayerSpecForProviderStackIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -340,6 +352,7 @@ public enum V1beta1MemcachedLayerSpecForProviderStackIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MemcachedLayerSpecForProviderStackIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -353,6 +366,7 @@ public partial class V1beta1MemcachedLayerSpecForProviderStackIdSelectorPolicy
     public V1beta1MemcachedLayerSpecForProviderStackIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Stack in opsworks to populate stackId.</summary>
 public partial class V1beta1MemcachedLayerSpecForProviderStackIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -368,6 +382,7 @@ public partial class V1beta1MemcachedLayerSpecForProviderStackIdSelector
     public V1beta1MemcachedLayerSpecForProviderStackIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MemcachedLayerSpecForProvider
 {
     /// <summary>Amount of memory to allocate for the cache on each instance, in megabytes. Defaults to 512MB.</summary>
@@ -483,6 +498,7 @@ public partial class V1beta1MemcachedLayerSpecForProvider
     public bool? UseEbsOptimizedInstances { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MemcachedLayerSpecInitProviderCloudwatchConfigurationLogStreams
 {
     /// <summary></summary>
@@ -530,6 +546,7 @@ public partial class V1beta1MemcachedLayerSpecInitProviderCloudwatchConfiguratio
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MemcachedLayerSpecInitProviderCloudwatchConfiguration
 {
     /// <summary></summary>
@@ -561,6 +578,7 @@ public enum V1beta1MemcachedLayerSpecInitProviderCustomSecurityGroupIdRefsPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MemcachedLayerSpecInitProviderCustomSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -574,6 +592,7 @@ public partial class V1beta1MemcachedLayerSpecInitProviderCustomSecurityGroupIdR
     public V1beta1MemcachedLayerSpecInitProviderCustomSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1MemcachedLayerSpecInitProviderCustomSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -605,6 +624,7 @@ public enum V1beta1MemcachedLayerSpecInitProviderCustomSecurityGroupIdSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MemcachedLayerSpecInitProviderCustomSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -618,6 +638,7 @@ public partial class V1beta1MemcachedLayerSpecInitProviderCustomSecurityGroupIdS
     public V1beta1MemcachedLayerSpecInitProviderCustomSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate customSecurityGroupIds.</summary>
 public partial class V1beta1MemcachedLayerSpecInitProviderCustomSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -633,6 +654,7 @@ public partial class V1beta1MemcachedLayerSpecInitProviderCustomSecurityGroupIdS
     public V1beta1MemcachedLayerSpecInitProviderCustomSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MemcachedLayerSpecInitProviderEbsVolume
 {
     /// <summary></summary>
@@ -664,6 +686,7 @@ public partial class V1beta1MemcachedLayerSpecInitProviderEbsVolume
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MemcachedLayerSpecInitProviderLoadBasedAutoScalingDownscaling
 {
     /// <summary></summary>
@@ -695,6 +718,7 @@ public partial class V1beta1MemcachedLayerSpecInitProviderLoadBasedAutoScalingDo
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MemcachedLayerSpecInitProviderLoadBasedAutoScalingUpscaling
 {
     /// <summary></summary>
@@ -726,6 +750,7 @@ public partial class V1beta1MemcachedLayerSpecInitProviderLoadBasedAutoScalingUp
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MemcachedLayerSpecInitProviderLoadBasedAutoScaling
 {
     /// <summary></summary>
@@ -761,6 +786,7 @@ public enum V1beta1MemcachedLayerSpecInitProviderStackIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MemcachedLayerSpecInitProviderStackIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -774,6 +800,7 @@ public partial class V1beta1MemcachedLayerSpecInitProviderStackIdRefPolicy
     public V1beta1MemcachedLayerSpecInitProviderStackIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Stack in opsworks to populate stackId.</summary>
 public partial class V1beta1MemcachedLayerSpecInitProviderStackIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -805,6 +832,7 @@ public enum V1beta1MemcachedLayerSpecInitProviderStackIdSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MemcachedLayerSpecInitProviderStackIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -818,6 +846,7 @@ public partial class V1beta1MemcachedLayerSpecInitProviderStackIdSelectorPolicy
     public V1beta1MemcachedLayerSpecInitProviderStackIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Stack in opsworks to populate stackId.</summary>
 public partial class V1beta1MemcachedLayerSpecInitProviderStackIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -833,6 +862,7 @@ public partial class V1beta1MemcachedLayerSpecInitProviderStackIdSelector
     public V1beta1MemcachedLayerSpecInitProviderStackIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1MemcachedLayerSpecInitProvider
 {
     /// <summary>Amount of memory to allocate for the cache on each instance, in megabytes. Defaults to 512MB.</summary>
@@ -990,6 +1020,7 @@ public enum V1beta1MemcachedLayerSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MemcachedLayerSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1003,6 +1034,7 @@ public partial class V1beta1MemcachedLayerSpecProviderConfigRefPolicy
     public V1beta1MemcachedLayerSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1MemcachedLayerSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1034,6 +1066,7 @@ public enum V1beta1MemcachedLayerSpecPublishConnectionDetailsToConfigRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MemcachedLayerSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1047,6 +1080,7 @@ public partial class V1beta1MemcachedLayerSpecPublishConnectionDetailsToConfigRe
     public V1beta1MemcachedLayerSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1MemcachedLayerSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1058,6 +1092,7 @@ public partial class V1beta1MemcachedLayerSpecPublishConnectionDetailsToConfigRe
     public V1beta1MemcachedLayerSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1MemcachedLayerSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1073,6 +1108,7 @@ public partial class V1beta1MemcachedLayerSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1MemcachedLayerSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1088,6 +1124,7 @@ public partial class V1beta1MemcachedLayerSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1MemcachedLayerSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1099,6 +1136,7 @@ public partial class V1beta1MemcachedLayerSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>MemcachedLayerSpec defines the desired state of MemcachedLayer</summary>
 public partial class V1beta1MemcachedLayerSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1131,6 +1169,7 @@ public partial class V1beta1MemcachedLayerSpec
     public V1beta1MemcachedLayerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MemcachedLayerStatusAtProviderCloudwatchConfigurationLogStreams
 {
     /// <summary></summary>
@@ -1178,6 +1217,7 @@ public partial class V1beta1MemcachedLayerStatusAtProviderCloudwatchConfiguratio
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MemcachedLayerStatusAtProviderCloudwatchConfiguration
 {
     /// <summary></summary>
@@ -1189,6 +1229,7 @@ public partial class V1beta1MemcachedLayerStatusAtProviderCloudwatchConfiguratio
     public IList<V1beta1MemcachedLayerStatusAtProviderCloudwatchConfigurationLogStreams>? LogStreams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MemcachedLayerStatusAtProviderEbsVolume
 {
     /// <summary></summary>
@@ -1220,6 +1261,7 @@ public partial class V1beta1MemcachedLayerStatusAtProviderEbsVolume
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MemcachedLayerStatusAtProviderLoadBasedAutoScalingDownscaling
 {
     /// <summary></summary>
@@ -1251,6 +1293,7 @@ public partial class V1beta1MemcachedLayerStatusAtProviderLoadBasedAutoScalingDo
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MemcachedLayerStatusAtProviderLoadBasedAutoScalingUpscaling
 {
     /// <summary></summary>
@@ -1282,6 +1325,7 @@ public partial class V1beta1MemcachedLayerStatusAtProviderLoadBasedAutoScalingUp
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MemcachedLayerStatusAtProviderLoadBasedAutoScaling
 {
     /// <summary></summary>
@@ -1297,6 +1341,7 @@ public partial class V1beta1MemcachedLayerStatusAtProviderLoadBasedAutoScaling
     public IList<V1beta1MemcachedLayerStatusAtProviderLoadBasedAutoScalingUpscaling>? Upscaling { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MemcachedLayerStatusAtProvider
 {
     /// <summary>Amount of memory to allocate for the cache on each instance, in megabytes. Defaults to 512MB.</summary>
@@ -1408,6 +1453,7 @@ public partial class V1beta1MemcachedLayerStatusAtProvider
     public bool? UseEbsOptimizedInstances { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1MemcachedLayerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1435,6 +1481,7 @@ public partial class V1beta1MemcachedLayerStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>MemcachedLayerStatus defines the observed state of MemcachedLayer.</summary>
 public partial class V1beta1MemcachedLayerStatus
 {
     /// <summary></summary>
@@ -1451,6 +1498,7 @@ public partial class V1beta1MemcachedLayerStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>MemcachedLayer is the Schema for the MemcachedLayers API. Provides an OpsWorks memcached layer resource.</summary>
 public partial class V1beta1MemcachedLayer : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MemcachedLayerSpec>, IStatus<V1beta1MemcachedLayerStatus>
 {
     public const string KubeApiVersion = "v1beta1";

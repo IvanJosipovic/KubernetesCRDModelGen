@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dialogflow.cnrm.cloud.google.com;
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1DialogflowIntentSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1DialogflowIntentSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DialogflowIntentSpec
 {
     /// <summary>The name of the action associated with the intent. Note: The action name must not contain whitespaces.</summary>
@@ -78,6 +80,7 @@ public partial class V1alpha1DialogflowIntentSpec
     public string? WebhookState { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DialogflowIntentStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -101,6 +104,7 @@ public partial class V1alpha1DialogflowIntentStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DialogflowIntentStatusFollowupIntentInfo
 {
     /// <summary>The unique identifier of the followup intent. Format: projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;.</summary>
@@ -112,6 +116,7 @@ public partial class V1alpha1DialogflowIntentStatusFollowupIntentInfo
     public string? ParentFollowupIntentName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DialogflowIntentStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -136,6 +141,7 @@ public partial class V1alpha1DialogflowIntentStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1DialogflowIntent : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DialogflowIntentSpec>, IStatus<V1alpha1DialogflowIntentStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

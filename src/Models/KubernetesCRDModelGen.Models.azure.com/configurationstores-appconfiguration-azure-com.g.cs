@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appconfiguration.azure.com;
+/// <summary>Storage version of v1api20220501.KeyVaultProperties Settings concerning key vault encryption for a configuration store.</summary>
 public partial class V1api20220501storageConfigurationStoreSpecEncryptionKeyVaultProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -23,6 +24,7 @@ public partial class V1api20220501storageConfigurationStoreSpecEncryptionKeyVaul
     public string? KeyIdentifier { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.EncryptionProperties The encryption settings for a configuration store.</summary>
 public partial class V1api20220501storageConfigurationStoreSpecEncryption
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -34,6 +36,7 @@ public partial class V1api20220501storageConfigurationStoreSpecEncryption
     public V1api20220501storageConfigurationStoreSpecEncryptionKeyVaultProperties? KeyVaultProperties { get; set; }
 }
 
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 public partial class V1api20220501storageConfigurationStoreSpecIdentityUserAssignedIdentitiesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -53,6 +56,7 @@ public partial class V1api20220501storageConfigurationStoreSpecIdentityUserAssig
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
 public partial class V1api20220501storageConfigurationStoreSpecIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -64,6 +68,7 @@ public partial class V1api20220501storageConfigurationStoreSpecIdentityUserAssig
     public V1api20220501storageConfigurationStoreSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.ResourceIdentity An identity that can be associated with a resource.</summary>
 public partial class V1api20220501storageConfigurationStoreSpecIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -79,6 +84,7 @@ public partial class V1api20220501storageConfigurationStoreSpecIdentity
     public IList<V1api20220501storageConfigurationStoreSpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecretsPrimaryConnectionString
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -90,6 +96,7 @@ public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecre
     public string Name { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecretsPrimaryKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -101,6 +108,7 @@ public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecre
     public string Name { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecretsPrimaryKeyID
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -112,6 +120,7 @@ public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecre
     public string Name { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecretsPrimaryReadOnlyConnectionString
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -123,6 +132,7 @@ public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecre
     public string Name { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecretsPrimaryReadOnlyKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -134,6 +144,7 @@ public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecre
     public string Name { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecretsPrimaryReadOnlyKeyID
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -145,6 +156,7 @@ public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecre
     public string Name { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecretsSecondaryConnectionString
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -156,6 +168,7 @@ public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecre
     public string Name { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecretsSecondaryKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -167,6 +180,7 @@ public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecre
     public string Name { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecretsSecondaryKeyID
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -178,6 +192,7 @@ public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecre
     public string Name { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecretsSecondaryReadOnlyConnectionString
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -189,6 +204,7 @@ public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecre
     public string Name { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecretsSecondaryReadOnlyKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -200,6 +216,7 @@ public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecre
     public string Name { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecretsSecondaryReadOnlyKeyID
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -211,6 +228,7 @@ public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecre
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.ConfigurationStoreOperatorSecrets</summary>
 public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecrets
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -266,6 +284,7 @@ public partial class V1api20220501storageConfigurationStoreSpecOperatorSpecSecre
     public V1api20220501storageConfigurationStoreSpecOperatorSpecSecretsSecondaryReadOnlyKeyID? SecondaryReadOnlyKeyID { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.ConfigurationStoreOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 public partial class V1api20220501storageConfigurationStoreSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -277,6 +296,7 @@ public partial class V1api20220501storageConfigurationStoreSpecOperatorSpec
     public V1api20220501storageConfigurationStoreSpecOperatorSpecSecrets? Secrets { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20220501storageConfigurationStoreSpecOwner
 {
     /// <summary></summary>
@@ -288,6 +308,7 @@ public partial class V1api20220501storageConfigurationStoreSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.Sku Describes a configuration store SKU.</summary>
 public partial class V1api20220501storageConfigurationStoreSpecSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -299,6 +320,7 @@ public partial class V1api20220501storageConfigurationStoreSpecSku
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.SystemData Metadata pertaining to creation and last modification of the resource.</summary>
 public partial class V1api20220501storageConfigurationStoreSpecSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -330,6 +352,7 @@ public partial class V1api20220501storageConfigurationStoreSpecSystemData
     public string? LastModifiedByType { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.ConfigurationStore_Spec</summary>
 public partial class V1api20220501storageConfigurationStoreSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -397,6 +420,7 @@ public partial class V1api20220501storageConfigurationStoreSpec
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20220501storageConfigurationStoreStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -428,6 +452,7 @@ public partial class V1api20220501storageConfigurationStoreStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.KeyVaultProperties_STATUS Settings concerning key vault encryption for a configuration store.</summary>
 public partial class V1api20220501storageConfigurationStoreStatusEncryptionKeyVaultProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -443,6 +468,7 @@ public partial class V1api20220501storageConfigurationStoreStatusEncryptionKeyVa
     public string? KeyIdentifier { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.EncryptionProperties_STATUS The encryption settings for a configuration store.</summary>
 public partial class V1api20220501storageConfigurationStoreStatusEncryption
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -454,6 +480,7 @@ public partial class V1api20220501storageConfigurationStoreStatusEncryption
     public V1api20220501storageConfigurationStoreStatusEncryptionKeyVaultProperties? KeyVaultProperties { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.UserIdentity_STATUS A resource identity that is managed by the user of the service.</summary>
 public partial class V1api20220501storageConfigurationStoreStatusIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -469,6 +496,7 @@ public partial class V1api20220501storageConfigurationStoreStatusIdentityUserAss
     public string? PrincipalId { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.ResourceIdentity_STATUS An identity that can be associated with a resource.</summary>
 public partial class V1api20220501storageConfigurationStoreStatusIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -492,6 +520,7 @@ public partial class V1api20220501storageConfigurationStoreStatusIdentity
     public IDictionary<string, V1api20220501storageConfigurationStoreStatusIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.PrivateEndpointConnectionReference_STATUS A reference to a related private endpoint connection.</summary>
 public partial class V1api20220501storageConfigurationStoreStatusPrivateEndpointConnections
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -503,6 +532,7 @@ public partial class V1api20220501storageConfigurationStoreStatusPrivateEndpoint
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.Sku_STATUS Describes a configuration store SKU.</summary>
 public partial class V1api20220501storageConfigurationStoreStatusSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -514,6 +544,7 @@ public partial class V1api20220501storageConfigurationStoreStatusSku
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 public partial class V1api20220501storageConfigurationStoreStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -545,6 +576,7 @@ public partial class V1api20220501storageConfigurationStoreStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
+/// <summary>Storage version of v1api20220501.ConfigurationStore_STATUS The configuration store along with all resource properties. The Configuration Store will have all information to begin utilizing it.</summary>
 public partial class V1api20220501storageConfigurationStoreStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -629,6 +661,7 @@ public partial class V1api20220501storageConfigurationStoreStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20220501.ConfigurationStore Generator information: - Generated from: /appconfiguration/resource-manager/Microsoft.AppConfiguration/stable/2022-05-01/appconfiguration.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AppConfiguration/configurationStores/{configStoreName}</summary>
 public partial class V1api20220501storageConfigurationStore : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20220501storageConfigurationStoreSpec>, IStatus<V1api20220501storageConfigurationStoreStatus>
 {
     public const string KubeApiVersion = "v1api20220501storage";

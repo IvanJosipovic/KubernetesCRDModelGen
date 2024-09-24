@@ -18,6 +18,7 @@ public enum V1beta1ServiceSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderEncryptionConfiguration
 {
     /// <summary>ARN of the KMS key used for encryption.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1ServiceSpecForProviderEncryptionConfiguration
     public string? KmsKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderHealthCheckConfiguration
 {
     /// <summary>Number of consecutive checks that must succeed before App Runner decides that the service is healthy. Defaults to 1. Minimum value of 1. Maximum value of 20.</summary>
@@ -52,6 +54,7 @@ public partial class V1beta1ServiceSpecForProviderHealthCheckConfiguration
     public double? UnhealthyThreshold { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderInstanceConfiguration
 {
     /// <summary>Number of CPU units reserved for each instance of your App Runner service represented as a String. Defaults to 1024. Valid values: 256|512|1024|2048|4096|(0.25|0.5|1|2|4) vCPU.</summary>
@@ -87,6 +90,7 @@ public enum V1beta1ServiceSpecForProviderNetworkConfigurationEgressConfiguration
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceSpecForProviderNetworkConfigurationEgressConfigurationVpcConnectorArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -100,6 +104,7 @@ public partial class V1beta1ServiceSpecForProviderNetworkConfigurationEgressConf
     public V1beta1ServiceSpecForProviderNetworkConfigurationEgressConfigurationVpcConnectorArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPCConnector in apprunner to populate vpcConnectorArn.</summary>
 public partial class V1beta1ServiceSpecForProviderNetworkConfigurationEgressConfigurationVpcConnectorArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -131,6 +136,7 @@ public enum V1beta1ServiceSpecForProviderNetworkConfigurationEgressConfiguration
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServiceSpecForProviderNetworkConfigurationEgressConfigurationVpcConnectorArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -144,6 +150,7 @@ public partial class V1beta1ServiceSpecForProviderNetworkConfigurationEgressConf
     public V1beta1ServiceSpecForProviderNetworkConfigurationEgressConfigurationVpcConnectorArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPCConnector in apprunner to populate vpcConnectorArn.</summary>
 public partial class V1beta1ServiceSpecForProviderNetworkConfigurationEgressConfigurationVpcConnectorArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -159,6 +166,7 @@ public partial class V1beta1ServiceSpecForProviderNetworkConfigurationEgressConf
     public V1beta1ServiceSpecForProviderNetworkConfigurationEgressConfigurationVpcConnectorArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderNetworkConfigurationEgressConfiguration
 {
     /// <summary>The type of egress configuration. Valid values are: DEFAULT and VPC.</summary>
@@ -178,6 +186,7 @@ public partial class V1beta1ServiceSpecForProviderNetworkConfigurationEgressConf
     public V1beta1ServiceSpecForProviderNetworkConfigurationEgressConfigurationVpcConnectorArnSelector? VpcConnectorArnSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderNetworkConfigurationIngressConfiguration
 {
     /// <summary>Specifies whether your App Runner service is publicly accessible. To make the service publicly accessible set it to True. To make the service privately accessible, from only within an Amazon VPC set it to False.</summary>
@@ -185,6 +194,7 @@ public partial class V1beta1ServiceSpecForProviderNetworkConfigurationIngressCon
     public bool? IsPubliclyAccessible { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderNetworkConfiguration
 {
     /// <summary>Network configuration settings for outbound message traffic. See Egress Configuration below for more details.</summary>
@@ -220,6 +230,7 @@ public enum V1beta1ServiceSpecForProviderObservabilityConfigurationObservability
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceSpecForProviderObservabilityConfigurationObservabilityConfigurationArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -233,6 +244,7 @@ public partial class V1beta1ServiceSpecForProviderObservabilityConfigurationObse
     public V1beta1ServiceSpecForProviderObservabilityConfigurationObservabilityConfigurationArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ObservabilityConfiguration in apprunner to populate observabilityConfigurationArn.</summary>
 public partial class V1beta1ServiceSpecForProviderObservabilityConfigurationObservabilityConfigurationArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -264,6 +276,7 @@ public enum V1beta1ServiceSpecForProviderObservabilityConfigurationObservability
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServiceSpecForProviderObservabilityConfigurationObservabilityConfigurationArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -277,6 +290,7 @@ public partial class V1beta1ServiceSpecForProviderObservabilityConfigurationObse
     public V1beta1ServiceSpecForProviderObservabilityConfigurationObservabilityConfigurationArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ObservabilityConfiguration in apprunner to populate observabilityConfigurationArn.</summary>
 public partial class V1beta1ServiceSpecForProviderObservabilityConfigurationObservabilityConfigurationArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -292,6 +306,7 @@ public partial class V1beta1ServiceSpecForProviderObservabilityConfigurationObse
     public V1beta1ServiceSpecForProviderObservabilityConfigurationObservabilityConfigurationArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderObservabilityConfiguration
 {
     /// <summary>ARN of the observability configuration that is associated with the service. Specified only when observability_enabled is true.</summary>
@@ -331,6 +346,7 @@ public enum V1beta1ServiceSpecForProviderSourceConfigurationAuthenticationConfig
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceSpecForProviderSourceConfigurationAuthenticationConfigurationConnectionArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -344,6 +360,7 @@ public partial class V1beta1ServiceSpecForProviderSourceConfigurationAuthenticat
     public V1beta1ServiceSpecForProviderSourceConfigurationAuthenticationConfigurationConnectionArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Connection in apprunner to populate connectionArn.</summary>
 public partial class V1beta1ServiceSpecForProviderSourceConfigurationAuthenticationConfigurationConnectionArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -375,6 +392,7 @@ public enum V1beta1ServiceSpecForProviderSourceConfigurationAuthenticationConfig
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServiceSpecForProviderSourceConfigurationAuthenticationConfigurationConnectionArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -388,6 +406,7 @@ public partial class V1beta1ServiceSpecForProviderSourceConfigurationAuthenticat
     public V1beta1ServiceSpecForProviderSourceConfigurationAuthenticationConfigurationConnectionArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Connection in apprunner to populate connectionArn.</summary>
 public partial class V1beta1ServiceSpecForProviderSourceConfigurationAuthenticationConfigurationConnectionArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -403,6 +422,7 @@ public partial class V1beta1ServiceSpecForProviderSourceConfigurationAuthenticat
     public V1beta1ServiceSpecForProviderSourceConfigurationAuthenticationConfigurationConnectionArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderSourceConfigurationAuthenticationConfiguration
 {
     /// <summary>ARN of the IAM role that grants the App Runner service access to a source repository. Required for ECR image repositories (but not for ECR Public)</summary>
@@ -422,6 +442,7 @@ public partial class V1beta1ServiceSpecForProviderSourceConfigurationAuthenticat
     public V1beta1ServiceSpecForProviderSourceConfigurationAuthenticationConfigurationConnectionArnSelector? ConnectionArnSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValues
 {
     /// <summary>Command App Runner runs to build your application.</summary>
@@ -449,6 +470,7 @@ public partial class V1beta1ServiceSpecForProviderSourceConfigurationCodeReposit
     public string? StartCommand { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderSourceConfigurationCodeRepositoryCodeConfiguration
 {
     /// <summary>Basic configuration for building and running the App Runner service. Use this parameter to quickly launch an App Runner service without providing an apprunner.yaml file in the source code repository (or ignoring the file if it exists). See Code Configuration Values below for more details.</summary>
@@ -460,6 +482,7 @@ public partial class V1beta1ServiceSpecForProviderSourceConfigurationCodeReposit
     public string? ConfigurationSource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderSourceConfigurationCodeRepositorySourceCodeVersion
 {
     /// <summary>Type of version identifier. For a git-based repository, branches represent versions. Valid values: BRANCH.</summary>
@@ -471,6 +494,7 @@ public partial class V1beta1ServiceSpecForProviderSourceConfigurationCodeReposit
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderSourceConfigurationCodeRepository
 {
     /// <summary>Configuration for building and running the service from a source code repository. See Code Configuration below for more details.</summary>
@@ -490,6 +514,7 @@ public partial class V1beta1ServiceSpecForProviderSourceConfigurationCodeReposit
     public string? SourceDirectory { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderSourceConfigurationImageRepositoryImageConfiguration
 {
     /// <summary>Port that your application listens to in the container. Defaults to "8080".</summary>
@@ -509,6 +534,7 @@ public partial class V1beta1ServiceSpecForProviderSourceConfigurationImageReposi
     public string? StartCommand { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderSourceConfigurationImageRepository
 {
     /// <summary>Configuration for running the identified image. See Image Configuration below for more details.</summary>
@@ -524,6 +550,7 @@ public partial class V1beta1ServiceSpecForProviderSourceConfigurationImageReposi
     public string? ImageRepositoryType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderSourceConfiguration
 {
     /// <summary>Describes resources needed to authenticate access to some source repositories. See Authentication Configuration below for more details.</summary>
@@ -543,6 +570,7 @@ public partial class V1beta1ServiceSpecForProviderSourceConfiguration
     public IList<V1beta1ServiceSpecForProviderSourceConfigurationImageRepository>? ImageRepository { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProvider
 {
     /// <summary>ARN of an App Runner automatic scaling configuration resource that you want to associate with your service. If not provided, App Runner associates the latest revision of a default auto scaling configuration.</summary>
@@ -586,6 +614,7 @@ public partial class V1beta1ServiceSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderEncryptionConfiguration
 {
     /// <summary>ARN of the KMS key used for encryption.</summary>
@@ -593,6 +622,7 @@ public partial class V1beta1ServiceSpecInitProviderEncryptionConfiguration
     public string? KmsKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderHealthCheckConfiguration
 {
     /// <summary>Number of consecutive checks that must succeed before App Runner decides that the service is healthy. Defaults to 1. Minimum value of 1. Maximum value of 20.</summary>
@@ -620,6 +650,7 @@ public partial class V1beta1ServiceSpecInitProviderHealthCheckConfiguration
     public double? UnhealthyThreshold { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderInstanceConfiguration
 {
     /// <summary>Number of CPU units reserved for each instance of your App Runner service represented as a String. Defaults to 1024. Valid values: 256|512|1024|2048|4096|(0.25|0.5|1|2|4) vCPU.</summary>
@@ -655,6 +686,7 @@ public enum V1beta1ServiceSpecInitProviderNetworkConfigurationEgressConfiguratio
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceSpecInitProviderNetworkConfigurationEgressConfigurationVpcConnectorArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -668,6 +700,7 @@ public partial class V1beta1ServiceSpecInitProviderNetworkConfigurationEgressCon
     public V1beta1ServiceSpecInitProviderNetworkConfigurationEgressConfigurationVpcConnectorArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPCConnector in apprunner to populate vpcConnectorArn.</summary>
 public partial class V1beta1ServiceSpecInitProviderNetworkConfigurationEgressConfigurationVpcConnectorArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -699,6 +732,7 @@ public enum V1beta1ServiceSpecInitProviderNetworkConfigurationEgressConfiguratio
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServiceSpecInitProviderNetworkConfigurationEgressConfigurationVpcConnectorArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -712,6 +746,7 @@ public partial class V1beta1ServiceSpecInitProviderNetworkConfigurationEgressCon
     public V1beta1ServiceSpecInitProviderNetworkConfigurationEgressConfigurationVpcConnectorArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPCConnector in apprunner to populate vpcConnectorArn.</summary>
 public partial class V1beta1ServiceSpecInitProviderNetworkConfigurationEgressConfigurationVpcConnectorArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -727,6 +762,7 @@ public partial class V1beta1ServiceSpecInitProviderNetworkConfigurationEgressCon
     public V1beta1ServiceSpecInitProviderNetworkConfigurationEgressConfigurationVpcConnectorArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderNetworkConfigurationEgressConfiguration
 {
     /// <summary>The type of egress configuration. Valid values are: DEFAULT and VPC.</summary>
@@ -746,6 +782,7 @@ public partial class V1beta1ServiceSpecInitProviderNetworkConfigurationEgressCon
     public V1beta1ServiceSpecInitProviderNetworkConfigurationEgressConfigurationVpcConnectorArnSelector? VpcConnectorArnSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderNetworkConfigurationIngressConfiguration
 {
     /// <summary>Specifies whether your App Runner service is publicly accessible. To make the service publicly accessible set it to True. To make the service privately accessible, from only within an Amazon VPC set it to False.</summary>
@@ -753,6 +790,7 @@ public partial class V1beta1ServiceSpecInitProviderNetworkConfigurationIngressCo
     public bool? IsPubliclyAccessible { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderNetworkConfiguration
 {
     /// <summary>Network configuration settings for outbound message traffic. See Egress Configuration below for more details.</summary>
@@ -788,6 +826,7 @@ public enum V1beta1ServiceSpecInitProviderObservabilityConfigurationObservabilit
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceSpecInitProviderObservabilityConfigurationObservabilityConfigurationArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -801,6 +840,7 @@ public partial class V1beta1ServiceSpecInitProviderObservabilityConfigurationObs
     public V1beta1ServiceSpecInitProviderObservabilityConfigurationObservabilityConfigurationArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ObservabilityConfiguration in apprunner to populate observabilityConfigurationArn.</summary>
 public partial class V1beta1ServiceSpecInitProviderObservabilityConfigurationObservabilityConfigurationArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -832,6 +872,7 @@ public enum V1beta1ServiceSpecInitProviderObservabilityConfigurationObservabilit
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServiceSpecInitProviderObservabilityConfigurationObservabilityConfigurationArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -845,6 +886,7 @@ public partial class V1beta1ServiceSpecInitProviderObservabilityConfigurationObs
     public V1beta1ServiceSpecInitProviderObservabilityConfigurationObservabilityConfigurationArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ObservabilityConfiguration in apprunner to populate observabilityConfigurationArn.</summary>
 public partial class V1beta1ServiceSpecInitProviderObservabilityConfigurationObservabilityConfigurationArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -860,6 +902,7 @@ public partial class V1beta1ServiceSpecInitProviderObservabilityConfigurationObs
     public V1beta1ServiceSpecInitProviderObservabilityConfigurationObservabilityConfigurationArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderObservabilityConfiguration
 {
     /// <summary>ARN of the observability configuration that is associated with the service. Specified only when observability_enabled is true.</summary>
@@ -899,6 +942,7 @@ public enum V1beta1ServiceSpecInitProviderSourceConfigurationAuthenticationConfi
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceSpecInitProviderSourceConfigurationAuthenticationConfigurationConnectionArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -912,6 +956,7 @@ public partial class V1beta1ServiceSpecInitProviderSourceConfigurationAuthentica
     public V1beta1ServiceSpecInitProviderSourceConfigurationAuthenticationConfigurationConnectionArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Connection in apprunner to populate connectionArn.</summary>
 public partial class V1beta1ServiceSpecInitProviderSourceConfigurationAuthenticationConfigurationConnectionArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -943,6 +988,7 @@ public enum V1beta1ServiceSpecInitProviderSourceConfigurationAuthenticationConfi
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServiceSpecInitProviderSourceConfigurationAuthenticationConfigurationConnectionArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -956,6 +1002,7 @@ public partial class V1beta1ServiceSpecInitProviderSourceConfigurationAuthentica
     public V1beta1ServiceSpecInitProviderSourceConfigurationAuthenticationConfigurationConnectionArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Connection in apprunner to populate connectionArn.</summary>
 public partial class V1beta1ServiceSpecInitProviderSourceConfigurationAuthenticationConfigurationConnectionArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -971,6 +1018,7 @@ public partial class V1beta1ServiceSpecInitProviderSourceConfigurationAuthentica
     public V1beta1ServiceSpecInitProviderSourceConfigurationAuthenticationConfigurationConnectionArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderSourceConfigurationAuthenticationConfiguration
 {
     /// <summary>ARN of the IAM role that grants the App Runner service access to a source repository. Required for ECR image repositories (but not for ECR Public)</summary>
@@ -990,6 +1038,7 @@ public partial class V1beta1ServiceSpecInitProviderSourceConfigurationAuthentica
     public V1beta1ServiceSpecInitProviderSourceConfigurationAuthenticationConfigurationConnectionArnSelector? ConnectionArnSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValues
 {
     /// <summary>Command App Runner runs to build your application.</summary>
@@ -1017,6 +1066,7 @@ public partial class V1beta1ServiceSpecInitProviderSourceConfigurationCodeReposi
     public string? StartCommand { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderSourceConfigurationCodeRepositoryCodeConfiguration
 {
     /// <summary>Basic configuration for building and running the App Runner service. Use this parameter to quickly launch an App Runner service without providing an apprunner.yaml file in the source code repository (or ignoring the file if it exists). See Code Configuration Values below for more details.</summary>
@@ -1028,6 +1078,7 @@ public partial class V1beta1ServiceSpecInitProviderSourceConfigurationCodeReposi
     public string? ConfigurationSource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderSourceConfigurationCodeRepositorySourceCodeVersion
 {
     /// <summary>Type of version identifier. For a git-based repository, branches represent versions. Valid values: BRANCH.</summary>
@@ -1039,6 +1090,7 @@ public partial class V1beta1ServiceSpecInitProviderSourceConfigurationCodeReposi
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderSourceConfigurationCodeRepository
 {
     /// <summary>Configuration for building and running the service from a source code repository. See Code Configuration below for more details.</summary>
@@ -1058,6 +1110,7 @@ public partial class V1beta1ServiceSpecInitProviderSourceConfigurationCodeReposi
     public string? SourceDirectory { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderSourceConfigurationImageRepositoryImageConfiguration
 {
     /// <summary>Port that your application listens to in the container. Defaults to "8080".</summary>
@@ -1077,6 +1130,7 @@ public partial class V1beta1ServiceSpecInitProviderSourceConfigurationImageRepos
     public string? StartCommand { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderSourceConfigurationImageRepository
 {
     /// <summary>Configuration for running the identified image. See Image Configuration below for more details.</summary>
@@ -1092,6 +1146,7 @@ public partial class V1beta1ServiceSpecInitProviderSourceConfigurationImageRepos
     public string? ImageRepositoryType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderSourceConfiguration
 {
     /// <summary>Describes resources needed to authenticate access to some source repositories. See Authentication Configuration below for more details.</summary>
@@ -1111,6 +1166,7 @@ public partial class V1beta1ServiceSpecInitProviderSourceConfiguration
     public IList<V1beta1ServiceSpecInitProviderSourceConfigurationImageRepository>? ImageRepository { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ServiceSpecInitProvider
 {
     /// <summary>ARN of an App Runner automatic scaling configuration resource that you want to associate with your service. If not provided, App Runner associates the latest revision of a default auto scaling configuration.</summary>
@@ -1192,6 +1248,7 @@ public enum V1beta1ServiceSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1205,6 +1262,7 @@ public partial class V1beta1ServiceSpecProviderConfigRefPolicy
     public V1beta1ServiceSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ServiceSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1236,6 +1294,7 @@ public enum V1beta1ServiceSpecPublishConnectionDetailsToConfigRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1249,6 +1308,7 @@ public partial class V1beta1ServiceSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1ServiceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ServiceSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1260,6 +1320,7 @@ public partial class V1beta1ServiceSpecPublishConnectionDetailsToConfigRef
     public V1beta1ServiceSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ServiceSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1275,6 +1336,7 @@ public partial class V1beta1ServiceSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ServiceSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1290,6 +1352,7 @@ public partial class V1beta1ServiceSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ServiceSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1301,6 +1364,7 @@ public partial class V1beta1ServiceSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ServiceSpec defines the desired state of Service</summary>
 public partial class V1beta1ServiceSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1333,6 +1397,7 @@ public partial class V1beta1ServiceSpec
     public V1beta1ServiceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderEncryptionConfiguration
 {
     /// <summary>ARN of the KMS key used for encryption.</summary>
@@ -1340,6 +1405,7 @@ public partial class V1beta1ServiceStatusAtProviderEncryptionConfiguration
     public string? KmsKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderHealthCheckConfiguration
 {
     /// <summary>Number of consecutive checks that must succeed before App Runner decides that the service is healthy. Defaults to 1. Minimum value of 1. Maximum value of 20.</summary>
@@ -1367,6 +1433,7 @@ public partial class V1beta1ServiceStatusAtProviderHealthCheckConfiguration
     public double? UnhealthyThreshold { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderInstanceConfiguration
 {
     /// <summary>Number of CPU units reserved for each instance of your App Runner service represented as a String. Defaults to 1024. Valid values: 256|512|1024|2048|4096|(0.25|0.5|1|2|4) vCPU.</summary>
@@ -1382,6 +1449,7 @@ public partial class V1beta1ServiceStatusAtProviderInstanceConfiguration
     public string? Memory { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderNetworkConfigurationEgressConfiguration
 {
     /// <summary>The type of egress configuration. Valid values are: DEFAULT and VPC.</summary>
@@ -1393,6 +1461,7 @@ public partial class V1beta1ServiceStatusAtProviderNetworkConfigurationEgressCon
     public string? VpcConnectorArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderNetworkConfigurationIngressConfiguration
 {
     /// <summary>Specifies whether your App Runner service is publicly accessible. To make the service publicly accessible set it to True. To make the service privately accessible, from only within an Amazon VPC set it to False.</summary>
@@ -1400,6 +1469,7 @@ public partial class V1beta1ServiceStatusAtProviderNetworkConfigurationIngressCo
     public bool? IsPubliclyAccessible { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderNetworkConfiguration
 {
     /// <summary>Network configuration settings for outbound message traffic. See Egress Configuration below for more details.</summary>
@@ -1415,6 +1485,7 @@ public partial class V1beta1ServiceStatusAtProviderNetworkConfiguration
     public string? IpAddressType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderObservabilityConfiguration
 {
     /// <summary>ARN of the observability configuration that is associated with the service. Specified only when observability_enabled is true.</summary>
@@ -1426,6 +1497,7 @@ public partial class V1beta1ServiceStatusAtProviderObservabilityConfiguration
     public bool? ObservabilityEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderSourceConfigurationAuthenticationConfiguration
 {
     /// <summary>ARN of the IAM role that grants the App Runner service access to a source repository. Required for ECR image repositories (but not for ECR Public)</summary>
@@ -1437,6 +1509,7 @@ public partial class V1beta1ServiceStatusAtProviderSourceConfigurationAuthentica
     public string? ConnectionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValues
 {
     /// <summary>Command App Runner runs to build your application.</summary>
@@ -1464,6 +1537,7 @@ public partial class V1beta1ServiceStatusAtProviderSourceConfigurationCodeReposi
     public string? StartCommand { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderSourceConfigurationCodeRepositoryCodeConfiguration
 {
     /// <summary>Basic configuration for building and running the App Runner service. Use this parameter to quickly launch an App Runner service without providing an apprunner.yaml file in the source code repository (or ignoring the file if it exists). See Code Configuration Values below for more details.</summary>
@@ -1475,6 +1549,7 @@ public partial class V1beta1ServiceStatusAtProviderSourceConfigurationCodeReposi
     public string? ConfigurationSource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderSourceConfigurationCodeRepositorySourceCodeVersion
 {
     /// <summary>Type of version identifier. For a git-based repository, branches represent versions. Valid values: BRANCH.</summary>
@@ -1486,6 +1561,7 @@ public partial class V1beta1ServiceStatusAtProviderSourceConfigurationCodeReposi
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderSourceConfigurationCodeRepository
 {
     /// <summary>Configuration for building and running the service from a source code repository. See Code Configuration below for more details.</summary>
@@ -1505,6 +1581,7 @@ public partial class V1beta1ServiceStatusAtProviderSourceConfigurationCodeReposi
     public string? SourceDirectory { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderSourceConfigurationImageRepositoryImageConfiguration
 {
     /// <summary>Port that your application listens to in the container. Defaults to "8080".</summary>
@@ -1524,6 +1601,7 @@ public partial class V1beta1ServiceStatusAtProviderSourceConfigurationImageRepos
     public string? StartCommand { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderSourceConfigurationImageRepository
 {
     /// <summary>Configuration for running the identified image. See Image Configuration below for more details.</summary>
@@ -1539,6 +1617,7 @@ public partial class V1beta1ServiceStatusAtProviderSourceConfigurationImageRepos
     public string? ImageRepositoryType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderSourceConfiguration
 {
     /// <summary>Describes resources needed to authenticate access to some source repositories. See Authentication Configuration below for more details.</summary>
@@ -1558,6 +1637,7 @@ public partial class V1beta1ServiceStatusAtProviderSourceConfiguration
     public IList<V1beta1ServiceStatusAtProviderSourceConfigurationImageRepository>? ImageRepository { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProvider
 {
     /// <summary>ARN of the App Runner service.</summary>
@@ -1621,6 +1701,7 @@ public partial class V1beta1ServiceStatusAtProvider
     public IDictionary<string, string>? TagsAll { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ServiceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1648,6 +1729,7 @@ public partial class V1beta1ServiceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ServiceStatus defines the observed state of Service.</summary>
 public partial class V1beta1ServiceStatus
 {
     /// <summary></summary>
@@ -1664,6 +1746,7 @@ public partial class V1beta1ServiceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Service is the Schema for the Services API. Manages an App Runner Service.</summary>
 public partial class V1beta1Service : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ServiceSpec>, IStatus<V1beta1ServiceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

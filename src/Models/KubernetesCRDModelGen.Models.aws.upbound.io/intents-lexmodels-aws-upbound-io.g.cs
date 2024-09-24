@@ -18,6 +18,7 @@ public enum V1beta1IntentSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentSpecForProviderConclusionStatementMessage
 {
     /// <summary>The text of the message. Must be less than or equal to 1000 characters in length.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1IntentSpecForProviderConclusionStatementMessage
     public double? GroupNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentSpecForProviderConclusionStatement
 {
     /// <summary>A set of messages, each of which provides a message string and its type. You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML). Attributes are documented under message. Must contain between 1 and 15 messages.</summary>
@@ -44,6 +46,7 @@ public partial class V1beta1IntentSpecForProviderConclusionStatement
     public string? ResponseCard { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentSpecForProviderConfirmationPromptMessage
 {
     /// <summary>The text of the message. Must be less than or equal to 1000 characters in length.</summary>
@@ -59,6 +62,7 @@ public partial class V1beta1IntentSpecForProviderConfirmationPromptMessage
     public double? GroupNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentSpecForProviderConfirmationPrompt
 {
     /// <summary>The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).</summary>
@@ -74,6 +78,7 @@ public partial class V1beta1IntentSpecForProviderConfirmationPrompt
     public string? ResponseCard { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentSpecForProviderDialogCodeHook
 {
     /// <summary>The version of the request-response that you want Amazon Lex to use to invoke your Lambda function. For more information, see Using Lambda Functions. Must be less than or equal to 5 characters in length.</summary>
@@ -85,6 +90,7 @@ public partial class V1beta1IntentSpecForProviderDialogCodeHook
     public string? Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentSpecForProviderFollowUpPromptPromptMessage
 {
     /// <summary>The text of the message. Must be less than or equal to 1000 characters in length.</summary>
@@ -100,6 +106,7 @@ public partial class V1beta1IntentSpecForProviderFollowUpPromptPromptMessage
     public double? GroupNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentSpecForProviderFollowUpPromptPrompt
 {
     /// <summary>The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).</summary>
@@ -115,6 +122,7 @@ public partial class V1beta1IntentSpecForProviderFollowUpPromptPrompt
     public string? ResponseCard { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentSpecForProviderFollowUpPromptRejectionStatementMessage
 {
     /// <summary>The text of the message. Must be less than or equal to 1000 characters in length.</summary>
@@ -130,6 +138,7 @@ public partial class V1beta1IntentSpecForProviderFollowUpPromptRejectionStatemen
     public double? GroupNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentSpecForProviderFollowUpPromptRejectionStatement
 {
     /// <summary>A set of messages, each of which provides a message string and its type. You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML). Attributes are documented under message. Must contain between 1 and 15 messages.</summary>
@@ -141,6 +150,7 @@ public partial class V1beta1IntentSpecForProviderFollowUpPromptRejectionStatemen
     public string? ResponseCard { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentSpecForProviderFollowUpPrompt
 {
     /// <summary>Prompts for information from the user. Attributes are documented under prompt.</summary>
@@ -152,6 +162,7 @@ public partial class V1beta1IntentSpecForProviderFollowUpPrompt
     public IList<V1beta1IntentSpecForProviderFollowUpPromptRejectionStatement>? RejectionStatement { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentSpecForProviderFulfillmentActivityCodeHook
 {
     /// <summary>The version of the request-response that you want Amazon Lex to use to invoke your Lambda function. For more information, see Using Lambda Functions. Must be less than or equal to 5 characters in length.</summary>
@@ -163,6 +174,7 @@ public partial class V1beta1IntentSpecForProviderFulfillmentActivityCodeHook
     public string? Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentSpecForProviderFulfillmentActivity
 {
     /// <summary>A description of the Lambda function that is run to fulfill the intent. Required if type is CodeHook. Attributes are documented under code_hook.</summary>
@@ -174,6 +186,7 @@ public partial class V1beta1IntentSpecForProviderFulfillmentActivity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentSpecForProviderRejectionStatementMessage
 {
     /// <summary>The text of the message. Must be less than or equal to 1000 characters in length.</summary>
@@ -189,6 +202,7 @@ public partial class V1beta1IntentSpecForProviderRejectionStatementMessage
     public double? GroupNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentSpecForProviderRejectionStatement
 {
     /// <summary>A set of messages, each of which provides a message string and its type. You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML). Attributes are documented under message. Must contain between 1 and 15 messages.</summary>
@@ -200,6 +214,7 @@ public partial class V1beta1IntentSpecForProviderRejectionStatement
     public string? ResponseCard { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentSpecForProviderSlotValueElicitationPromptMessage
 {
     /// <summary>The text of the message. Must be less than or equal to 1000 characters in length.</summary>
@@ -215,6 +230,7 @@ public partial class V1beta1IntentSpecForProviderSlotValueElicitationPromptMessa
     public double? GroupNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentSpecForProviderSlotValueElicitationPrompt
 {
     /// <summary>The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).</summary>
@@ -230,6 +246,7 @@ public partial class V1beta1IntentSpecForProviderSlotValueElicitationPrompt
     public string? ResponseCard { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentSpecForProviderSlot
 {
     /// <summary>A description of the bot. Must be less than or equal to 200 characters in length.</summary>
@@ -269,6 +286,7 @@ public partial class V1beta1IntentSpecForProviderSlot
     public IList<V1beta1IntentSpecForProviderSlotValueElicitationPrompt>? ValueElicitationPrompt { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentSpecForProvider
 {
     /// <summary>The statement that you want Amazon Lex to convey to the user after the intent is successfully fulfilled by the Lambda function. This element is relevant only if you provide a Lambda function in the fulfillment_activity. If you return the intent to the client application, you can't specify this element. The follow_up_prompt and conclusion_statement are mutually exclusive. You can specify only one. Attributes are documented under statement.</summary>
@@ -320,6 +338,7 @@ public partial class V1beta1IntentSpecForProvider
     public IList<V1beta1IntentSpecForProviderSlot>? Slot { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentSpecInitProviderConclusionStatementMessage
 {
     /// <summary>The text of the message. Must be less than or equal to 1000 characters in length.</summary>
@@ -335,6 +354,7 @@ public partial class V1beta1IntentSpecInitProviderConclusionStatementMessage
     public double? GroupNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentSpecInitProviderConclusionStatement
 {
     /// <summary>A set of messages, each of which provides a message string and its type. You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML). Attributes are documented under message. Must contain between 1 and 15 messages.</summary>
@@ -346,6 +366,7 @@ public partial class V1beta1IntentSpecInitProviderConclusionStatement
     public string? ResponseCard { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentSpecInitProviderConfirmationPromptMessage
 {
     /// <summary>The text of the message. Must be less than or equal to 1000 characters in length.</summary>
@@ -361,6 +382,7 @@ public partial class V1beta1IntentSpecInitProviderConfirmationPromptMessage
     public double? GroupNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentSpecInitProviderConfirmationPrompt
 {
     /// <summary>The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).</summary>
@@ -376,6 +398,7 @@ public partial class V1beta1IntentSpecInitProviderConfirmationPrompt
     public string? ResponseCard { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentSpecInitProviderDialogCodeHook
 {
     /// <summary>The version of the request-response that you want Amazon Lex to use to invoke your Lambda function. For more information, see Using Lambda Functions. Must be less than or equal to 5 characters in length.</summary>
@@ -387,6 +410,7 @@ public partial class V1beta1IntentSpecInitProviderDialogCodeHook
     public string? Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentSpecInitProviderFollowUpPromptPromptMessage
 {
     /// <summary>The text of the message. Must be less than or equal to 1000 characters in length.</summary>
@@ -402,6 +426,7 @@ public partial class V1beta1IntentSpecInitProviderFollowUpPromptPromptMessage
     public double? GroupNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentSpecInitProviderFollowUpPromptPrompt
 {
     /// <summary>The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).</summary>
@@ -417,6 +442,7 @@ public partial class V1beta1IntentSpecInitProviderFollowUpPromptPrompt
     public string? ResponseCard { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentSpecInitProviderFollowUpPromptRejectionStatementMessage
 {
     /// <summary>The text of the message. Must be less than or equal to 1000 characters in length.</summary>
@@ -432,6 +458,7 @@ public partial class V1beta1IntentSpecInitProviderFollowUpPromptRejectionStateme
     public double? GroupNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentSpecInitProviderFollowUpPromptRejectionStatement
 {
     /// <summary>A set of messages, each of which provides a message string and its type. You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML). Attributes are documented under message. Must contain between 1 and 15 messages.</summary>
@@ -443,6 +470,7 @@ public partial class V1beta1IntentSpecInitProviderFollowUpPromptRejectionStateme
     public string? ResponseCard { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentSpecInitProviderFollowUpPrompt
 {
     /// <summary>Prompts for information from the user. Attributes are documented under prompt.</summary>
@@ -454,6 +482,7 @@ public partial class V1beta1IntentSpecInitProviderFollowUpPrompt
     public IList<V1beta1IntentSpecInitProviderFollowUpPromptRejectionStatement>? RejectionStatement { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentSpecInitProviderFulfillmentActivityCodeHook
 {
     /// <summary>The version of the request-response that you want Amazon Lex to use to invoke your Lambda function. For more information, see Using Lambda Functions. Must be less than or equal to 5 characters in length.</summary>
@@ -465,6 +494,7 @@ public partial class V1beta1IntentSpecInitProviderFulfillmentActivityCodeHook
     public string? Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentSpecInitProviderFulfillmentActivity
 {
     /// <summary>A description of the Lambda function that is run to fulfill the intent. Required if type is CodeHook. Attributes are documented under code_hook.</summary>
@@ -476,6 +506,7 @@ public partial class V1beta1IntentSpecInitProviderFulfillmentActivity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentSpecInitProviderRejectionStatementMessage
 {
     /// <summary>The text of the message. Must be less than or equal to 1000 characters in length.</summary>
@@ -491,6 +522,7 @@ public partial class V1beta1IntentSpecInitProviderRejectionStatementMessage
     public double? GroupNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentSpecInitProviderRejectionStatement
 {
     /// <summary>A set of messages, each of which provides a message string and its type. You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML). Attributes are documented under message. Must contain between 1 and 15 messages.</summary>
@@ -502,6 +534,7 @@ public partial class V1beta1IntentSpecInitProviderRejectionStatement
     public string? ResponseCard { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentSpecInitProviderSlotValueElicitationPromptMessage
 {
     /// <summary>The text of the message. Must be less than or equal to 1000 characters in length.</summary>
@@ -517,6 +550,7 @@ public partial class V1beta1IntentSpecInitProviderSlotValueElicitationPromptMess
     public double? GroupNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentSpecInitProviderSlotValueElicitationPrompt
 {
     /// <summary>The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).</summary>
@@ -532,6 +566,7 @@ public partial class V1beta1IntentSpecInitProviderSlotValueElicitationPrompt
     public string? ResponseCard { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentSpecInitProviderSlot
 {
     /// <summary>A description of the bot. Must be less than or equal to 200 characters in length.</summary>
@@ -571,6 +606,7 @@ public partial class V1beta1IntentSpecInitProviderSlot
     public IList<V1beta1IntentSpecInitProviderSlotValueElicitationPrompt>? ValueElicitationPrompt { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1IntentSpecInitProvider
 {
     /// <summary>The statement that you want Amazon Lex to convey to the user after the intent is successfully fulfilled by the Lambda function. This element is relevant only if you provide a Lambda function in the fulfillment_activity. If you return the intent to the client application, you can't specify this element. The follow_up_prompt and conclusion_statement are mutually exclusive. You can specify only one. Attributes are documented under statement.</summary>
@@ -660,6 +696,7 @@ public enum V1beta1IntentSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IntentSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -673,6 +710,7 @@ public partial class V1beta1IntentSpecProviderConfigRefPolicy
     public V1beta1IntentSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1IntentSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -704,6 +742,7 @@ public enum V1beta1IntentSpecPublishConnectionDetailsToConfigRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IntentSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -717,6 +756,7 @@ public partial class V1beta1IntentSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1IntentSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1IntentSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -728,6 +768,7 @@ public partial class V1beta1IntentSpecPublishConnectionDetailsToConfigRef
     public V1beta1IntentSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1IntentSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -743,6 +784,7 @@ public partial class V1beta1IntentSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1IntentSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -758,6 +800,7 @@ public partial class V1beta1IntentSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1IntentSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -769,6 +812,7 @@ public partial class V1beta1IntentSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>IntentSpec defines the desired state of Intent</summary>
 public partial class V1beta1IntentSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -801,6 +845,7 @@ public partial class V1beta1IntentSpec
     public V1beta1IntentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentStatusAtProviderConclusionStatementMessage
 {
     /// <summary>The text of the message. Must be less than or equal to 1000 characters in length.</summary>
@@ -816,6 +861,7 @@ public partial class V1beta1IntentStatusAtProviderConclusionStatementMessage
     public double? GroupNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentStatusAtProviderConclusionStatement
 {
     /// <summary>A set of messages, each of which provides a message string and its type. You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML). Attributes are documented under message. Must contain between 1 and 15 messages.</summary>
@@ -827,6 +873,7 @@ public partial class V1beta1IntentStatusAtProviderConclusionStatement
     public string? ResponseCard { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentStatusAtProviderConfirmationPromptMessage
 {
     /// <summary>The text of the message. Must be less than or equal to 1000 characters in length.</summary>
@@ -842,6 +889,7 @@ public partial class V1beta1IntentStatusAtProviderConfirmationPromptMessage
     public double? GroupNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentStatusAtProviderConfirmationPrompt
 {
     /// <summary>The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).</summary>
@@ -857,6 +905,7 @@ public partial class V1beta1IntentStatusAtProviderConfirmationPrompt
     public string? ResponseCard { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentStatusAtProviderDialogCodeHook
 {
     /// <summary>The version of the request-response that you want Amazon Lex to use to invoke your Lambda function. For more information, see Using Lambda Functions. Must be less than or equal to 5 characters in length.</summary>
@@ -868,6 +917,7 @@ public partial class V1beta1IntentStatusAtProviderDialogCodeHook
     public string? Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentStatusAtProviderFollowUpPromptPromptMessage
 {
     /// <summary>The text of the message. Must be less than or equal to 1000 characters in length.</summary>
@@ -883,6 +933,7 @@ public partial class V1beta1IntentStatusAtProviderFollowUpPromptPromptMessage
     public double? GroupNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentStatusAtProviderFollowUpPromptPrompt
 {
     /// <summary>The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).</summary>
@@ -898,6 +949,7 @@ public partial class V1beta1IntentStatusAtProviderFollowUpPromptPrompt
     public string? ResponseCard { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentStatusAtProviderFollowUpPromptRejectionStatementMessage
 {
     /// <summary>The text of the message. Must be less than or equal to 1000 characters in length.</summary>
@@ -913,6 +965,7 @@ public partial class V1beta1IntentStatusAtProviderFollowUpPromptRejectionStateme
     public double? GroupNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentStatusAtProviderFollowUpPromptRejectionStatement
 {
     /// <summary>A set of messages, each of which provides a message string and its type. You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML). Attributes are documented under message. Must contain between 1 and 15 messages.</summary>
@@ -924,6 +977,7 @@ public partial class V1beta1IntentStatusAtProviderFollowUpPromptRejectionStateme
     public string? ResponseCard { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentStatusAtProviderFollowUpPrompt
 {
     /// <summary>Prompts for information from the user. Attributes are documented under prompt.</summary>
@@ -935,6 +989,7 @@ public partial class V1beta1IntentStatusAtProviderFollowUpPrompt
     public IList<V1beta1IntentStatusAtProviderFollowUpPromptRejectionStatement>? RejectionStatement { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentStatusAtProviderFulfillmentActivityCodeHook
 {
     /// <summary>The version of the request-response that you want Amazon Lex to use to invoke your Lambda function. For more information, see Using Lambda Functions. Must be less than or equal to 5 characters in length.</summary>
@@ -946,6 +1001,7 @@ public partial class V1beta1IntentStatusAtProviderFulfillmentActivityCodeHook
     public string? Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentStatusAtProviderFulfillmentActivity
 {
     /// <summary>A description of the Lambda function that is run to fulfill the intent. Required if type is CodeHook. Attributes are documented under code_hook.</summary>
@@ -957,6 +1013,7 @@ public partial class V1beta1IntentStatusAtProviderFulfillmentActivity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentStatusAtProviderRejectionStatementMessage
 {
     /// <summary>The text of the message. Must be less than or equal to 1000 characters in length.</summary>
@@ -972,6 +1029,7 @@ public partial class V1beta1IntentStatusAtProviderRejectionStatementMessage
     public double? GroupNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentStatusAtProviderRejectionStatement
 {
     /// <summary>A set of messages, each of which provides a message string and its type. You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML). Attributes are documented under message. Must contain between 1 and 15 messages.</summary>
@@ -983,6 +1041,7 @@ public partial class V1beta1IntentStatusAtProviderRejectionStatement
     public string? ResponseCard { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentStatusAtProviderSlotValueElicitationPromptMessage
 {
     /// <summary>The text of the message. Must be less than or equal to 1000 characters in length.</summary>
@@ -998,6 +1057,7 @@ public partial class V1beta1IntentStatusAtProviderSlotValueElicitationPromptMess
     public double? GroupNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentStatusAtProviderSlotValueElicitationPrompt
 {
     /// <summary>The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).</summary>
@@ -1013,6 +1073,7 @@ public partial class V1beta1IntentStatusAtProviderSlotValueElicitationPrompt
     public string? ResponseCard { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentStatusAtProviderSlot
 {
     /// <summary>A description of the bot. Must be less than or equal to 200 characters in length.</summary>
@@ -1052,6 +1113,7 @@ public partial class V1beta1IntentStatusAtProviderSlot
     public IList<V1beta1IntentStatusAtProviderSlotValueElicitationPrompt>? ValueElicitationPrompt { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IntentStatusAtProvider
 {
     /// <summary>The ARN of the Lex intent.</summary>
@@ -1123,6 +1185,7 @@ public partial class V1beta1IntentStatusAtProvider
     public string? Version { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1IntentStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1150,6 +1213,7 @@ public partial class V1beta1IntentStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>IntentStatus defines the observed state of Intent.</summary>
 public partial class V1beta1IntentStatus
 {
     /// <summary></summary>
@@ -1166,6 +1230,7 @@ public partial class V1beta1IntentStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Intent is the Schema for the Intents API. Provides an Amazon Lex intent resource.</summary>
 public partial class V1beta1Intent : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IntentSpec>, IStatus<V1beta1IntentStatus>
 {
     public const string KubeApiVersion = "v1beta1";

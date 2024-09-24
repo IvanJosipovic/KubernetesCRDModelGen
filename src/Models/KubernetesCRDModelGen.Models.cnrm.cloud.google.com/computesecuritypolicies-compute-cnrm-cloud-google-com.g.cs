@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary>Auto Deploy Config of this security policy.</summary>
 public partial class V1beta1ComputeSecurityPolicySpecAdaptiveProtectionConfigAutoDeployConfig
 {
     /// <summary>Rules are only automatically deployed for alerts on potential attacks with confidence scores greater than this threshold.</summary>
@@ -27,6 +28,7 @@ public partial class V1beta1ComputeSecurityPolicySpecAdaptiveProtectionConfigAut
     public double? LoadThreshold { get; set; }
 }
 
+/// <summary>Layer 7 DDoS Defense Config of this security policy.</summary>
 public partial class V1beta1ComputeSecurityPolicySpecAdaptiveProtectionConfigLayer7DdosDefenseConfig
 {
     /// <summary>If set to true, enables CAAP for L7 DDoS detection.</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1ComputeSecurityPolicySpecAdaptiveProtectionConfigLay
     public string? RuleVisibility { get; set; }
 }
 
+/// <summary>Adaptive Protection Config of this security policy.</summary>
 public partial class V1beta1ComputeSecurityPolicySpecAdaptiveProtectionConfig
 {
     /// <summary>Auto Deploy Config of this security policy.</summary>
@@ -49,6 +52,7 @@ public partial class V1beta1ComputeSecurityPolicySpecAdaptiveProtectionConfig
     public V1beta1ComputeSecurityPolicySpecAdaptiveProtectionConfigLayer7DdosDefenseConfig? Layer7DdosDefenseConfig { get; set; }
 }
 
+/// <summary>Custom configuration to apply the JSON parsing. Only applicable when JSON parsing is set to STANDARD.</summary>
 public partial class V1beta1ComputeSecurityPolicySpecAdvancedOptionsConfigJsonCustomConfig
 {
     /// <summary>A list of custom Content-Type header values to apply the JSON parsing.</summary>
@@ -56,6 +60,7 @@ public partial class V1beta1ComputeSecurityPolicySpecAdvancedOptionsConfigJsonCu
     public IList<string> ContentTypes { get; set; }
 }
 
+/// <summary>Advanced Options Config of this security policy.</summary>
 public partial class V1beta1ComputeSecurityPolicySpecAdvancedOptionsConfig
 {
     /// <summary>Custom configuration to apply the JSON parsing. Only applicable when JSON parsing is set to STANDARD.</summary>
@@ -75,6 +80,7 @@ public partial class V1beta1ComputeSecurityPolicySpecAdvancedOptionsConfig
     public IList<string>? UserIpRequestHeaders { get; set; }
 }
 
+/// <summary>A field to supply a reCAPTCHA site key to be used for all the rules using the redirect action with the type of GOOGLE_RECAPTCHA under the security policy. The specified site key needs to be created from the reCAPTCHA API. The user is responsible for the validity of the specified site key. If not specified, a Google-managed site key is used.</summary>
 public partial class V1beta1ComputeSecurityPolicySpecRecaptchaOptionsConfigRedirectSiteKeyRef
 {
     /// <summary>Allowed value: The `name` field of a `RecaptchaEnterpriseKey` resource.</summary>
@@ -90,6 +96,7 @@ public partial class V1beta1ComputeSecurityPolicySpecRecaptchaOptionsConfigRedir
     public string? Namespace { get; set; }
 }
 
+/// <summary>reCAPTCHA configuration options to be applied for the security policy.</summary>
 public partial class V1beta1ComputeSecurityPolicySpecRecaptchaOptionsConfig
 {
     /// <summary>A field to supply a reCAPTCHA site key to be used for all the rules using the redirect action with the type of GOOGLE_RECAPTCHA under the security policy. The specified site key needs to be created from the reCAPTCHA API. The user is responsible for the validity of the specified site key. If not specified, a Google-managed site key is used.</summary>
@@ -97,6 +104,7 @@ public partial class V1beta1ComputeSecurityPolicySpecRecaptchaOptionsConfig
     public V1beta1ComputeSecurityPolicySpecRecaptchaOptionsConfigRedirectSiteKeyRef RedirectSiteKeyRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeSecurityPolicySpecRuleHeaderActionRequestHeadersToAdds
 {
     /// <summary>The name of the header to set.</summary>
@@ -108,6 +116,7 @@ public partial class V1beta1ComputeSecurityPolicySpecRuleHeaderActionRequestHead
     public string? HeaderValue { get; set; }
 }
 
+/// <summary>Additional actions that are performed on headers.</summary>
 public partial class V1beta1ComputeSecurityPolicySpecRuleHeaderAction
 {
     /// <summary>The list of request headers to add or overwrite if they're already present.</summary>
@@ -115,6 +124,7 @@ public partial class V1beta1ComputeSecurityPolicySpecRuleHeaderAction
     public IList<V1beta1ComputeSecurityPolicySpecRuleHeaderActionRequestHeadersToAdds> RequestHeadersToAdds { get; set; }
 }
 
+/// <summary>The configuration options available when specifying versioned_expr. This field must be specified if versioned_expr is specified and cannot be specified if versioned_expr is not specified.</summary>
 public partial class V1beta1ComputeSecurityPolicySpecRuleMatchConfig
 {
     /// <summary>Set of IP addresses or ranges (IPV4 or IPV6) in CIDR notation to match against inbound traffic. There is a limit of 10 IP ranges per rule. A value of '*' matches all IPs (can be used to override the default behavior).</summary>
@@ -122,6 +132,7 @@ public partial class V1beta1ComputeSecurityPolicySpecRuleMatchConfig
     public IList<string> SrcIpRanges { get; set; }
 }
 
+/// <summary>User defined CEVAL expression. A CEVAL expression is used to specify match criteria such as origin.ip, source.region_code and contents in the request header.</summary>
 public partial class V1beta1ComputeSecurityPolicySpecRuleMatchExpr
 {
     /// <summary>Textual representation of an expression in Common Expression Language syntax. The application context of the containing message determines which well-known feature set of CEL is supported.</summary>
@@ -129,6 +140,7 @@ public partial class V1beta1ComputeSecurityPolicySpecRuleMatchExpr
     public string Expression { get; set; }
 }
 
+/// <summary>A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding action is enforced.</summary>
 public partial class V1beta1ComputeSecurityPolicySpecRuleMatch
 {
     /// <summary>The configuration options available when specifying versioned_expr. This field must be specified if versioned_expr is specified and cannot be specified if versioned_expr is not specified.</summary>
@@ -144,6 +156,7 @@ public partial class V1beta1ComputeSecurityPolicySpecRuleMatch
     public string? VersionedExpr { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeSecurityPolicySpecRulePreconfiguredWafConfigExclusionRequestCookie
 {
     /// <summary>You can specify an exact match or a partial match by using a field operator and a field value. Available options: EQUALS: The operator matches if the field value equals the specified value. STARTS_WITH: The operator matches if the field value starts with the specified value. ENDS_WITH: The operator matches if the field value ends with the specified value. CONTAINS: The operator matches if the field value contains the specified value. EQUALS_ANY: The operator matches if the field value is any value.</summary>
@@ -155,6 +168,7 @@ public partial class V1beta1ComputeSecurityPolicySpecRulePreconfiguredWafConfigE
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeSecurityPolicySpecRulePreconfiguredWafConfigExclusionRequestHeader
 {
     /// <summary>You can specify an exact match or a partial match by using a field operator and a field value. Available options: EQUALS: The operator matches if the field value equals the specified value. STARTS_WITH: The operator matches if the field value starts with the specified value. ENDS_WITH: The operator matches if the field value ends with the specified value. CONTAINS: The operator matches if the field value contains the specified value. EQUALS_ANY: The operator matches if the field value is any value.</summary>
@@ -166,6 +180,7 @@ public partial class V1beta1ComputeSecurityPolicySpecRulePreconfiguredWafConfigE
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeSecurityPolicySpecRulePreconfiguredWafConfigExclusionRequestQueryParam
 {
     /// <summary>You can specify an exact match or a partial match by using a field operator and a field value. Available options: EQUALS: The operator matches if the field value equals the specified value. STARTS_WITH: The operator matches if the field value starts with the specified value. ENDS_WITH: The operator matches if the field value ends with the specified value. CONTAINS: The operator matches if the field value contains the specified value. EQUALS_ANY: The operator matches if the field value is any value.</summary>
@@ -177,6 +192,7 @@ public partial class V1beta1ComputeSecurityPolicySpecRulePreconfiguredWafConfigE
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeSecurityPolicySpecRulePreconfiguredWafConfigExclusionRequestUri
 {
     /// <summary>You can specify an exact match or a partial match by using a field operator and a field value. Available options: EQUALS: The operator matches if the field value equals the specified value. STARTS_WITH: The operator matches if the field value starts with the specified value. ENDS_WITH: The operator matches if the field value ends with the specified value. CONTAINS: The operator matches if the field value contains the specified value. EQUALS_ANY: The operator matches if the field value is any value.</summary>
@@ -188,6 +204,7 @@ public partial class V1beta1ComputeSecurityPolicySpecRulePreconfiguredWafConfigE
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeSecurityPolicySpecRulePreconfiguredWafConfigExclusion
 {
     /// <summary>Request cookie whose value will be excluded from inspection during preconfigured WAF evaluation.</summary>
@@ -215,6 +232,7 @@ public partial class V1beta1ComputeSecurityPolicySpecRulePreconfiguredWafConfigE
     public string TargetRuleSet { get; set; }
 }
 
+/// <summary>Preconfigured WAF configuration to be applied for the rule. If the rule does not evaluate preconfigured WAF rules, i.e., if evaluatePreconfiguredWaf() is not used, this field will have no effect.</summary>
 public partial class V1beta1ComputeSecurityPolicySpecRulePreconfiguredWafConfig
 {
     /// <summary>An exclusion to apply during preconfigured WAF evaluation.</summary>
@@ -222,6 +240,7 @@ public partial class V1beta1ComputeSecurityPolicySpecRulePreconfiguredWafConfig
     public IList<V1beta1ComputeSecurityPolicySpecRulePreconfiguredWafConfigExclusion>? Exclusion { get; set; }
 }
 
+/// <summary>Can only be specified if the action for the rule is "rate_based_ban". If specified, the key will be banned for the configured 'banDurationSec' when the number of requests that exceed the 'rateLimitThreshold' also exceed this 'banThreshold'.</summary>
 public partial class V1beta1ComputeSecurityPolicySpecRuleRateLimitOptionsBanThreshold
 {
     /// <summary>Number of HTTP(S) requests for calculating the threshold.</summary>
@@ -233,6 +252,7 @@ public partial class V1beta1ComputeSecurityPolicySpecRuleRateLimitOptionsBanThre
     public int IntervalSec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeSecurityPolicySpecRuleRateLimitOptionsEnforceOnKeyConfigs
 {
     /// <summary>Rate limit key name applicable only for the following key types: HTTP_HEADER -- Name of the HTTP header whose value is taken as the key value. HTTP_COOKIE -- Name of the HTTP cookie whose value is taken as the key value.</summary>
@@ -244,6 +264,7 @@ public partial class V1beta1ComputeSecurityPolicySpecRuleRateLimitOptionsEnforce
     public string? EnforceOnKeyType { get; set; }
 }
 
+/// <summary>Parameters defining the redirect action that is used as the exceed action. Cannot be specified if the exceed action is not redirect.</summary>
 public partial class V1beta1ComputeSecurityPolicySpecRuleRateLimitOptionsExceedRedirectOptions
 {
     /// <summary>Target for the redirect action. This is required if the type is EXTERNAL_302 and cannot be specified for GOOGLE_RECAPTCHA.</summary>
@@ -255,6 +276,7 @@ public partial class V1beta1ComputeSecurityPolicySpecRuleRateLimitOptionsExceedR
     public string Type { get; set; }
 }
 
+/// <summary>Threshold at which to begin ratelimiting.</summary>
 public partial class V1beta1ComputeSecurityPolicySpecRuleRateLimitOptionsRateLimitThreshold
 {
     /// <summary>Number of HTTP(S) requests for calculating the threshold.</summary>
@@ -266,6 +288,7 @@ public partial class V1beta1ComputeSecurityPolicySpecRuleRateLimitOptionsRateLim
     public int IntervalSec { get; set; }
 }
 
+/// <summary>Rate limit threshold for this security policy. Must be specified if the action is "rate_based_ban" or "throttle". Cannot be specified for any other actions.</summary>
 public partial class V1beta1ComputeSecurityPolicySpecRuleRateLimitOptions
 {
     /// <summary>Can only be specified if the action for the rule is "rate_based_ban". If specified, determines the time (in seconds) the traffic will continue to be banned by the rate limit after the rate falls below the threshold.</summary>
@@ -305,6 +328,7 @@ public partial class V1beta1ComputeSecurityPolicySpecRuleRateLimitOptions
     public V1beta1ComputeSecurityPolicySpecRuleRateLimitOptionsRateLimitThreshold RateLimitThreshold { get; set; }
 }
 
+/// <summary>Parameters defining the redirect action. Cannot be specified for any other actions.</summary>
 public partial class V1beta1ComputeSecurityPolicySpecRuleRedirectOptions
 {
     /// <summary>Target for the redirect action. This is required if the type is EXTERNAL_302 and cannot be specified for GOOGLE_RECAPTCHA.</summary>
@@ -316,6 +340,7 @@ public partial class V1beta1ComputeSecurityPolicySpecRuleRedirectOptions
     public string Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeSecurityPolicySpecRule
 {
     /// <summary>Action to take when match matches the request.</summary>
@@ -355,6 +380,7 @@ public partial class V1beta1ComputeSecurityPolicySpecRule
     public V1beta1ComputeSecurityPolicySpecRuleRedirectOptions? RedirectOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeSecurityPolicySpec
 {
     /// <summary>Adaptive Protection Config of this security policy.</summary>
@@ -386,6 +412,7 @@ public partial class V1beta1ComputeSecurityPolicySpec
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeSecurityPolicyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -409,6 +436,7 @@ public partial class V1beta1ComputeSecurityPolicyStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeSecurityPolicyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -429,6 +457,7 @@ public partial class V1beta1ComputeSecurityPolicyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ComputeSecurityPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeSecurityPolicySpec>, IStatus<V1beta1ComputeSecurityPolicyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

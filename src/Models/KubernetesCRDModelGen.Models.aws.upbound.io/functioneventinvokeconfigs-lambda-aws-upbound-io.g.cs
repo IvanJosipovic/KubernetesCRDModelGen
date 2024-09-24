@@ -38,6 +38,7 @@ public enum V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnFa
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnFailureDestinationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationC
     public V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnFailureDestinationRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Queue in sqs to populate destination.</summary>
 public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnFailureDestinationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnFa
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnFailureDestinationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationC
     public V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnFailureDestinationSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Queue in sqs to populate destination.</summary>
 public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnFailureDestinationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationC
     public V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnFailureDestinationSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnFailure
 {
     /// <summary>Amazon Resource Name (ARN) of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.</summary>
@@ -145,6 +150,7 @@ public enum V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnSu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnSuccessDestinationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -158,6 +164,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationC
     public V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnSuccessDestinationRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Topic in sns to populate destination.</summary>
 public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnSuccessDestinationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -189,6 +196,7 @@ public enum V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnSu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnSuccessDestinationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationC
     public V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnSuccessDestinationSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Topic in sns to populate destination.</summary>
 public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnSuccessDestinationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -217,6 +226,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationC
     public V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnSuccessDestinationSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnSuccess
 {
     /// <summary>Amazon Resource Name (ARN) of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.</summary>
@@ -232,6 +242,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationC
     public V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnSuccessDestinationSelector? DestinationSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfig
 {
     /// <summary>Configuration block with destination configuration for failed asynchronous invocations. See below for details.</summary>
@@ -243,6 +254,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationC
     public IList<V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnSuccess>? OnSuccess { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionEventInvokeConfigSpecForProvider
 {
     /// <summary>Configuration block with destination configuration. See below for details.</summary>
@@ -290,6 +302,7 @@ public enum V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnF
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnFailureDestinationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -303,6 +316,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestination
     public V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnFailureDestinationRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Queue in sqs to populate destination.</summary>
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnFailureDestinationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -334,6 +348,7 @@ public enum V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnF
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnFailureDestinationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -347,6 +362,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestination
     public V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnFailureDestinationSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Queue in sqs to populate destination.</summary>
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnFailureDestinationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -362,6 +378,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestination
     public V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnFailureDestinationSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnFailure
 {
     /// <summary>Amazon Resource Name (ARN) of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.</summary>
@@ -397,6 +414,7 @@ public enum V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnS
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnSuccessDestinationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -410,6 +428,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestination
     public V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnSuccessDestinationRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Topic in sns to populate destination.</summary>
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnSuccessDestinationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -441,6 +460,7 @@ public enum V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnSuccessDestinationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -454,6 +474,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestination
     public V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnSuccessDestinationSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Topic in sns to populate destination.</summary>
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnSuccessDestinationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -469,6 +490,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestination
     public V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnSuccessDestinationSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnSuccess
 {
     /// <summary>Amazon Resource Name (ARN) of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.</summary>
@@ -484,6 +506,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestination
     public V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnSuccessDestinationSelector? DestinationSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfig
 {
     /// <summary>Configuration block with destination configuration for failed asynchronous invocations. See below for details.</summary>
@@ -495,6 +518,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestination
     public IList<V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnSuccess>? OnSuccess { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProvider
 {
     /// <summary>Configuration block with destination configuration. See below for details.</summary>
@@ -560,6 +584,7 @@ public enum V1beta1FunctionEventInvokeConfigSpecProviderConfigRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionEventInvokeConfigSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -573,6 +598,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecProviderConfigRefPolicy
     public V1beta1FunctionEventInvokeConfigSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1FunctionEventInvokeConfigSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -604,6 +630,7 @@ public enum V1beta1FunctionEventInvokeConfigSpecPublishConnectionDetailsToConfig
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionEventInvokeConfigSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -617,6 +644,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecPublishConnectionDetail
     public V1beta1FunctionEventInvokeConfigSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1FunctionEventInvokeConfigSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -628,6 +656,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecPublishConnectionDetail
     public V1beta1FunctionEventInvokeConfigSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1FunctionEventInvokeConfigSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -643,6 +672,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecPublishConnectionDetail
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1FunctionEventInvokeConfigSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -658,6 +688,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecPublishConnectionDetail
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1FunctionEventInvokeConfigSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -669,6 +700,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecWriteConnectionSecretTo
     public string Namespace { get; set; }
 }
 
+/// <summary>FunctionEventInvokeConfigSpec defines the desired state of FunctionEventInvokeConfig</summary>
 public partial class V1beta1FunctionEventInvokeConfigSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -701,6 +733,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpec
     public V1beta1FunctionEventInvokeConfigSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionEventInvokeConfigStatusAtProviderDestinationConfigOnFailure
 {
     /// <summary>Amazon Resource Name (ARN) of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.</summary>
@@ -708,6 +741,7 @@ public partial class V1beta1FunctionEventInvokeConfigStatusAtProviderDestination
     public string? Destination { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionEventInvokeConfigStatusAtProviderDestinationConfigOnSuccess
 {
     /// <summary>Amazon Resource Name (ARN) of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.</summary>
@@ -715,6 +749,7 @@ public partial class V1beta1FunctionEventInvokeConfigStatusAtProviderDestination
     public string? Destination { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionEventInvokeConfigStatusAtProviderDestinationConfig
 {
     /// <summary>Configuration block with destination configuration for failed asynchronous invocations. See below for details.</summary>
@@ -726,6 +761,7 @@ public partial class V1beta1FunctionEventInvokeConfigStatusAtProviderDestination
     public IList<V1beta1FunctionEventInvokeConfigStatusAtProviderDestinationConfigOnSuccess>? OnSuccess { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionEventInvokeConfigStatusAtProvider
 {
     /// <summary>Configuration block with destination configuration. See below for details.</summary>
@@ -753,6 +789,7 @@ public partial class V1beta1FunctionEventInvokeConfigStatusAtProvider
     public string? Qualifier { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1FunctionEventInvokeConfigStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -780,6 +817,7 @@ public partial class V1beta1FunctionEventInvokeConfigStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>FunctionEventInvokeConfigStatus defines the observed state of FunctionEventInvokeConfig.</summary>
 public partial class V1beta1FunctionEventInvokeConfigStatus
 {
     /// <summary></summary>
@@ -796,6 +834,7 @@ public partial class V1beta1FunctionEventInvokeConfigStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>FunctionEventInvokeConfig is the Schema for the FunctionEventInvokeConfigs API. Manages an asynchronous invocation configuration for a Lambda Function or Alias.</summary>
 public partial class V1beta1FunctionEventInvokeConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FunctionEventInvokeConfigSpec>, IStatus<V1beta1FunctionEventInvokeConfigStatus>
 {
     public const string KubeApiVersion = "v1beta1";

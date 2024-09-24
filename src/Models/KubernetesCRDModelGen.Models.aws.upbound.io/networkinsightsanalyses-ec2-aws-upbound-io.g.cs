@@ -38,6 +38,7 @@ public enum V1beta1NetworkInsightsAnalysisSpecForProviderNetworkInsightsPathIdRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NetworkInsightsAnalysisSpecForProviderNetworkInsightsPathIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1NetworkInsightsAnalysisSpecForProviderNetworkInsight
     public V1beta1NetworkInsightsAnalysisSpecForProviderNetworkInsightsPathIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a NetworkInsightsPath in ec2 to populate networkInsightsPathId.</summary>
 public partial class V1beta1NetworkInsightsAnalysisSpecForProviderNetworkInsightsPathIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1NetworkInsightsAnalysisSpecForProviderNetworkInsightsPathIdSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NetworkInsightsAnalysisSpecForProviderNetworkInsightsPathIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1NetworkInsightsAnalysisSpecForProviderNetworkInsight
     public V1beta1NetworkInsightsAnalysisSpecForProviderNetworkInsightsPathIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a NetworkInsightsPath in ec2 to populate networkInsightsPathId.</summary>
 public partial class V1beta1NetworkInsightsAnalysisSpecForProviderNetworkInsightsPathIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1NetworkInsightsAnalysisSpecForProviderNetworkInsight
     public V1beta1NetworkInsightsAnalysisSpecForProviderNetworkInsightsPathIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisSpecForProvider
 {
     /// <summary>A list of ARNs for resources the path must traverse.</summary>
@@ -161,6 +166,7 @@ public enum V1beta1NetworkInsightsAnalysisSpecInitProviderNetworkInsightsPathIdR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NetworkInsightsAnalysisSpecInitProviderNetworkInsightsPathIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -174,6 +180,7 @@ public partial class V1beta1NetworkInsightsAnalysisSpecInitProviderNetworkInsigh
     public V1beta1NetworkInsightsAnalysisSpecInitProviderNetworkInsightsPathIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a NetworkInsightsPath in ec2 to populate networkInsightsPathId.</summary>
 public partial class V1beta1NetworkInsightsAnalysisSpecInitProviderNetworkInsightsPathIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -205,6 +212,7 @@ public enum V1beta1NetworkInsightsAnalysisSpecInitProviderNetworkInsightsPathIdS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NetworkInsightsAnalysisSpecInitProviderNetworkInsightsPathIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -218,6 +226,7 @@ public partial class V1beta1NetworkInsightsAnalysisSpecInitProviderNetworkInsigh
     public V1beta1NetworkInsightsAnalysisSpecInitProviderNetworkInsightsPathIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a NetworkInsightsPath in ec2 to populate networkInsightsPathId.</summary>
 public partial class V1beta1NetworkInsightsAnalysisSpecInitProviderNetworkInsightsPathIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -233,6 +242,7 @@ public partial class V1beta1NetworkInsightsAnalysisSpecInitProviderNetworkInsigh
     public V1beta1NetworkInsightsAnalysisSpecInitProviderNetworkInsightsPathIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1NetworkInsightsAnalysisSpecInitProvider
 {
     /// <summary>A list of ARNs for resources the path must traverse.</summary>
@@ -302,6 +312,7 @@ public enum V1beta1NetworkInsightsAnalysisSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NetworkInsightsAnalysisSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -315,6 +326,7 @@ public partial class V1beta1NetworkInsightsAnalysisSpecProviderConfigRefPolicy
     public V1beta1NetworkInsightsAnalysisSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1NetworkInsightsAnalysisSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -346,6 +358,7 @@ public enum V1beta1NetworkInsightsAnalysisSpecPublishConnectionDetailsToConfigRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NetworkInsightsAnalysisSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -359,6 +372,7 @@ public partial class V1beta1NetworkInsightsAnalysisSpecPublishConnectionDetailsT
     public V1beta1NetworkInsightsAnalysisSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1NetworkInsightsAnalysisSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -370,6 +384,7 @@ public partial class V1beta1NetworkInsightsAnalysisSpecPublishConnectionDetailsT
     public V1beta1NetworkInsightsAnalysisSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1NetworkInsightsAnalysisSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -385,6 +400,7 @@ public partial class V1beta1NetworkInsightsAnalysisSpecPublishConnectionDetailsT
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1NetworkInsightsAnalysisSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -400,6 +416,7 @@ public partial class V1beta1NetworkInsightsAnalysisSpecPublishConnectionDetailsT
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1NetworkInsightsAnalysisSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -411,6 +428,7 @@ public partial class V1beta1NetworkInsightsAnalysisSpecWriteConnectionSecretToRe
     public string Namespace { get; set; }
 }
 
+/// <summary>NetworkInsightsAnalysisSpec defines the desired state of NetworkInsightsAnalysis</summary>
 public partial class V1beta1NetworkInsightsAnalysisSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -443,6 +461,7 @@ public partial class V1beta1NetworkInsightsAnalysisSpec
     public V1beta1NetworkInsightsAnalysisSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderAlternatePathHints
 {
     /// <summary>The Amazon Resource Name (ARN) of the component.</summary>
@@ -454,6 +473,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderAlternatePath
     public string? ComponentId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsAcl
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -469,6 +489,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsA
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsAclRulePortRange
 {
     /// <summary></summary>
@@ -480,6 +501,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsA
     public double? To { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsAclRule
 {
     /// <summary></summary>
@@ -507,6 +529,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsA
     public double? RuleNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsAttachedTo
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -522,6 +545,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsA
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsClassicLoadBalancerListener
 {
     /// <summary></summary>
@@ -533,6 +557,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsC
     public double? LoadBalancerPort { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsComponent
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -548,6 +573,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsC
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsCustomerGateway
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -563,6 +589,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsC
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsDestination
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -578,6 +605,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsD
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsDestinationVpc
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -593,6 +621,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsD
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsElasticLoadBalancerListener
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -608,6 +637,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsE
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsIngressRouteTable
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -623,6 +653,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsI
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsInternetGateway
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -638,6 +669,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsI
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsLoadBalancerTargetGroup
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -653,6 +685,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsL
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsLoadBalancerTargetGroups
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -668,6 +701,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsL
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsNatGateway
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -683,6 +717,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsN
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsNetworkInterface
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -698,6 +733,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsN
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsPortRanges
 {
     /// <summary></summary>
@@ -709,6 +745,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsP
     public double? To { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsPrefixList
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -724,6 +761,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsP
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsRouteTable
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -739,6 +777,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsR
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsRouteTableRoute
 {
     /// <summary></summary>
@@ -782,6 +821,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsR
     public string? VpcPeeringConnectionId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsSecurityGroup
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -797,6 +837,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsS
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsSecurityGroupRulePortRange
 {
     /// <summary></summary>
@@ -808,6 +849,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsS
     public double? To { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsSecurityGroupRule
 {
     /// <summary></summary>
@@ -835,6 +877,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsS
     public string? SecurityGroupId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsSecurityGroups
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -850,6 +893,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsS
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsSourceVpc
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -865,6 +909,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsS
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsSubnet
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -880,6 +925,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsS
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsSubnetRouteTable
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -895,6 +941,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsS
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsTransitGateway
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -910,6 +957,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsT
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsTransitGatewayAttachment
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -925,6 +973,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsT
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsTransitGatewayRouteTable
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -940,6 +989,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsT
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsTransitGatewayRouteTableRoute
 {
     /// <summary>ID of the Network Insights Analysis.</summary>
@@ -971,6 +1021,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsT
     public string? State { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsVpc
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -986,6 +1037,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsV
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsVpcEndpoint
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -1001,6 +1053,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsV
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsVpcPeeringConnection
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -1016,6 +1069,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsV
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsVpnConnection
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -1031,6 +1085,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsV
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsVpnGateway
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -1046,6 +1101,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsV
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanations
 {
     /// <summary></summary>
@@ -1241,6 +1297,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderExplanations
     public IList<V1beta1NetworkInsightsAnalysisStatusAtProviderExplanationsVpnGateway>? VpnGateway { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsAclRulePortRange
 {
     /// <summary></summary>
@@ -1252,6 +1309,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
     public double? To { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsAclRule
 {
     /// <summary></summary>
@@ -1279,6 +1337,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
     public double? RuleNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsAdditionalDetailsComponent
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -1294,6 +1353,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsAdditionalDetails
 {
     /// <summary></summary>
@@ -1305,6 +1365,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
     public IList<V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsAdditionalDetailsComponent>? Component { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsAttachedTo
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -1320,6 +1381,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsComponent
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -1335,6 +1397,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsDestinationVpc
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -1350,6 +1413,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsInboundHeaderDestinationPortRanges
 {
     /// <summary></summary>
@@ -1361,6 +1425,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
     public double? To { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsInboundHeaderSourcePortRanges
 {
     /// <summary></summary>
@@ -1372,6 +1437,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
     public double? To { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsInboundHeader
 {
     /// <summary></summary>
@@ -1395,6 +1461,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
     public IList<V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsInboundHeaderSourcePortRanges>? SourcePortRanges { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsOutboundHeaderDestinationPortRanges
 {
     /// <summary></summary>
@@ -1406,6 +1473,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
     public double? To { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsOutboundHeaderSourcePortRanges
 {
     /// <summary></summary>
@@ -1417,6 +1485,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
     public double? To { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsOutboundHeader
 {
     /// <summary></summary>
@@ -1440,6 +1509,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
     public IList<V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsOutboundHeaderSourcePortRanges>? SourcePortRanges { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsRouteTableRoute
 {
     /// <summary></summary>
@@ -1483,6 +1553,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
     public string? VpcPeeringConnectionId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsSecurityGroupRulePortRange
 {
     /// <summary></summary>
@@ -1494,6 +1565,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
     public double? To { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsSecurityGroupRule
 {
     /// <summary></summary>
@@ -1521,6 +1593,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
     public string? SecurityGroupId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsSourceVpc
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -1536,6 +1609,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsSubnet
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -1551,6 +1625,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsTransitGateway
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -1566,6 +1641,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsTransitGatewayRouteTableRoute
 {
     /// <summary>ID of the Network Insights Analysis.</summary>
@@ -1597,6 +1673,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
     public string? State { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsVpc
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -1612,6 +1689,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponents
 {
     /// <summary></summary>
@@ -1675,6 +1753,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathCo
     public IList<V1beta1NetworkInsightsAnalysisStatusAtProviderForwardPathComponentsVpc>? Vpc { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsAclRulePortRange
 {
     /// <summary></summary>
@@ -1686,6 +1765,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
     public double? To { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsAclRule
 {
     /// <summary></summary>
@@ -1713,6 +1793,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
     public double? RuleNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsAdditionalDetailsComponent
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -1728,6 +1809,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsAdditionalDetails
 {
     /// <summary></summary>
@@ -1739,6 +1821,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
     public IList<V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsAdditionalDetailsComponent>? Component { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsAttachedTo
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -1754,6 +1837,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsComponent
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -1769,6 +1853,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsDestinationVpc
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -1784,6 +1869,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsInboundHeaderDestinationPortRanges
 {
     /// <summary></summary>
@@ -1795,6 +1881,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
     public double? To { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsInboundHeaderSourcePortRanges
 {
     /// <summary></summary>
@@ -1806,6 +1893,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
     public double? To { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsInboundHeader
 {
     /// <summary></summary>
@@ -1829,6 +1917,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
     public IList<V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsInboundHeaderSourcePortRanges>? SourcePortRanges { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsOutboundHeaderDestinationPortRanges
 {
     /// <summary></summary>
@@ -1840,6 +1929,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
     public double? To { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsOutboundHeaderSourcePortRanges
 {
     /// <summary></summary>
@@ -1851,6 +1941,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
     public double? To { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsOutboundHeader
 {
     /// <summary></summary>
@@ -1874,6 +1965,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
     public IList<V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsOutboundHeaderSourcePortRanges>? SourcePortRanges { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsRouteTableRoute
 {
     /// <summary></summary>
@@ -1917,6 +2009,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
     public string? VpcPeeringConnectionId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsSecurityGroupRulePortRange
 {
     /// <summary></summary>
@@ -1928,6 +2021,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
     public double? To { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsSecurityGroupRule
 {
     /// <summary></summary>
@@ -1955,6 +2049,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
     public string? SecurityGroupId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsSourceVpc
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -1970,6 +2065,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsSubnet
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -1985,6 +2081,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsTransitGateway
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -2000,6 +2097,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsTransitGatewayRouteTableRoute
 {
     /// <summary>ID of the Network Insights Analysis.</summary>
@@ -2031,6 +2129,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
     public string? State { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsVpc
 {
     /// <summary>ARN of the Network Insights Analysis.</summary>
@@ -2046,6 +2145,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponents
 {
     /// <summary></summary>
@@ -2109,6 +2209,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathCom
     public IList<V1beta1NetworkInsightsAnalysisStatusAtProviderReturnPathComponentsVpc>? Vpc { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusAtProvider
 {
     /// <summary>Potential intermediate components of a feasible path. Described below.</summary>
@@ -2176,6 +2277,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusAtProvider
     public string? WarningMessage { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1NetworkInsightsAnalysisStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2203,6 +2305,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>NetworkInsightsAnalysisStatus defines the observed state of NetworkInsightsAnalysis.</summary>
 public partial class V1beta1NetworkInsightsAnalysisStatus
 {
     /// <summary></summary>
@@ -2219,6 +2322,7 @@ public partial class V1beta1NetworkInsightsAnalysisStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>NetworkInsightsAnalysis is the Schema for the NetworkInsightsAnalysiss API. Provides a Network Insights Analysis resource.</summary>
 public partial class V1beta1NetworkInsightsAnalysis : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1NetworkInsightsAnalysisSpec>, IStatus<V1beta1NetworkInsightsAnalysisStatus>
 {
     public const string KubeApiVersion = "v1beta1";

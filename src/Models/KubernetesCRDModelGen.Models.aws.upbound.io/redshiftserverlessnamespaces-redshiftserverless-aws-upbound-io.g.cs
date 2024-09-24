@@ -18,6 +18,7 @@ public enum V1beta1RedshiftServerlessNamespaceSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>The password of the administrator for the first database created in the namespace. Conflicts with manage_admin_password.</summary>
 public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderAdminUserPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderAdminUserP
     public string Namespace { get; set; }
 }
 
+/// <summary>The username of the administrator for the first database created in the namespace.</summary>
 public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderAdminUsernameSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -68,6 +70,7 @@ public enum V1beta1RedshiftServerlessNamespaceSpecForProviderDefaultIamRoleArnRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderDefaultIamRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -81,6 +84,7 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderDefaultIam
     public V1beta1RedshiftServerlessNamespaceSpecForProviderDefaultIamRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate defaultIamRoleArn.</summary>
 public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderDefaultIamRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -112,6 +116,7 @@ public enum V1beta1RedshiftServerlessNamespaceSpecForProviderDefaultIamRoleArnSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderDefaultIamRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderDefaultIam
     public V1beta1RedshiftServerlessNamespaceSpecForProviderDefaultIamRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate defaultIamRoleArn.</summary>
 public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderDefaultIamRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -160,6 +166,7 @@ public enum V1beta1RedshiftServerlessNamespaceSpecForProviderIamRoleRefsPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderIamRoleRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -173,6 +180,7 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderIamRoleRef
     public V1beta1RedshiftServerlessNamespaceSpecForProviderIamRoleRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderIamRoleRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -204,6 +212,7 @@ public enum V1beta1RedshiftServerlessNamespaceSpecForProviderIamRoleSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderIamRoleSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -217,6 +226,7 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderIamRoleSel
     public V1beta1RedshiftServerlessNamespaceSpecForProviderIamRoleSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Role in iam to populate iamRoles.</summary>
 public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderIamRoleSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -252,6 +262,7 @@ public enum V1beta1RedshiftServerlessNamespaceSpecForProviderKmsKeyIdRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -265,6 +276,7 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderKmsKeyIdRe
     public V1beta1RedshiftServerlessNamespaceSpecForProviderKmsKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -296,6 +308,7 @@ public enum V1beta1RedshiftServerlessNamespaceSpecForProviderKmsKeyIdSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -309,6 +322,7 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderKmsKeyIdSe
     public V1beta1RedshiftServerlessNamespaceSpecForProviderKmsKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -324,6 +338,7 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderKmsKeyIdSe
     public V1beta1RedshiftServerlessNamespaceSpecForProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RedshiftServerlessNamespaceSpecForProvider
 {
     /// <summary>ID of the KMS key used to encrypt the namespace's admin credentials secret.</summary>
@@ -395,6 +410,7 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>The password of the administrator for the first database created in the namespace. Conflicts with manage_admin_password.</summary>
 public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderAdminUserPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -410,6 +426,7 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderAdminUser
     public string Namespace { get; set; }
 }
 
+/// <summary>The username of the administrator for the first database created in the namespace.</summary>
 public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderAdminUsernameSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -445,6 +462,7 @@ public enum V1beta1RedshiftServerlessNamespaceSpecInitProviderDefaultIamRoleArnR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderDefaultIamRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -458,6 +476,7 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderDefaultIa
     public V1beta1RedshiftServerlessNamespaceSpecInitProviderDefaultIamRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate defaultIamRoleArn.</summary>
 public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderDefaultIamRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -489,6 +508,7 @@ public enum V1beta1RedshiftServerlessNamespaceSpecInitProviderDefaultIamRoleArnS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderDefaultIamRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -502,6 +522,7 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderDefaultIa
     public V1beta1RedshiftServerlessNamespaceSpecInitProviderDefaultIamRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate defaultIamRoleArn.</summary>
 public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderDefaultIamRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -537,6 +558,7 @@ public enum V1beta1RedshiftServerlessNamespaceSpecInitProviderIamRoleRefsPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderIamRoleRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -550,6 +572,7 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderIamRoleRe
     public V1beta1RedshiftServerlessNamespaceSpecInitProviderIamRoleRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderIamRoleRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -581,6 +604,7 @@ public enum V1beta1RedshiftServerlessNamespaceSpecInitProviderIamRoleSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderIamRoleSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -594,6 +618,7 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderIamRoleSe
     public V1beta1RedshiftServerlessNamespaceSpecInitProviderIamRoleSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Role in iam to populate iamRoles.</summary>
 public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderIamRoleSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -629,6 +654,7 @@ public enum V1beta1RedshiftServerlessNamespaceSpecInitProviderKmsKeyIdRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -642,6 +668,7 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderKmsKeyIdR
     public V1beta1RedshiftServerlessNamespaceSpecInitProviderKmsKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -673,6 +700,7 @@ public enum V1beta1RedshiftServerlessNamespaceSpecInitProviderKmsKeyIdSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -686,6 +714,7 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderKmsKeyIdS
     public V1beta1RedshiftServerlessNamespaceSpecInitProviderKmsKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -701,6 +730,7 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderKmsKeyIdS
     public V1beta1RedshiftServerlessNamespaceSpecInitProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1RedshiftServerlessNamespaceSpecInitProvider
 {
     /// <summary>ID of the KMS key used to encrypt the namespace's admin credentials secret.</summary>
@@ -810,6 +840,7 @@ public enum V1beta1RedshiftServerlessNamespaceSpecProviderConfigRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RedshiftServerlessNamespaceSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -823,6 +854,7 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecProviderConfigRefPoli
     public V1beta1RedshiftServerlessNamespaceSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1RedshiftServerlessNamespaceSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -854,6 +886,7 @@ public enum V1beta1RedshiftServerlessNamespaceSpecPublishConnectionDetailsToConf
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RedshiftServerlessNamespaceSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -867,6 +900,7 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecPublishConnectionDeta
     public V1beta1RedshiftServerlessNamespaceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1RedshiftServerlessNamespaceSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -878,6 +912,7 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecPublishConnectionDeta
     public V1beta1RedshiftServerlessNamespaceSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1RedshiftServerlessNamespaceSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -893,6 +928,7 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecPublishConnectionDeta
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1RedshiftServerlessNamespaceSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -908,6 +944,7 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecPublishConnectionDeta
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1RedshiftServerlessNamespaceSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -919,6 +956,7 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecWriteConnectionSecret
     public string Namespace { get; set; }
 }
 
+/// <summary>RedshiftServerlessNamespaceSpec defines the desired state of RedshiftServerlessNamespace</summary>
 public partial class V1beta1RedshiftServerlessNamespaceSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -951,6 +989,7 @@ public partial class V1beta1RedshiftServerlessNamespaceSpec
     public V1beta1RedshiftServerlessNamespaceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RedshiftServerlessNamespaceStatusAtProvider
 {
     /// <summary>Amazon Resource Name (ARN) of the Redshift Serverless Namespace.</summary>
@@ -1006,6 +1045,7 @@ public partial class V1beta1RedshiftServerlessNamespaceStatusAtProvider
     public IDictionary<string, string>? TagsAll { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1RedshiftServerlessNamespaceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1033,6 +1073,7 @@ public partial class V1beta1RedshiftServerlessNamespaceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>RedshiftServerlessNamespaceStatus defines the observed state of RedshiftServerlessNamespace.</summary>
 public partial class V1beta1RedshiftServerlessNamespaceStatus
 {
     /// <summary></summary>
@@ -1049,6 +1090,7 @@ public partial class V1beta1RedshiftServerlessNamespaceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>RedshiftServerlessNamespace is the Schema for the RedshiftServerlessNamespaces API. Provides a Redshift Serverless Namespace resource.</summary>
 public partial class V1beta1RedshiftServerlessNamespace : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1RedshiftServerlessNamespaceSpec>, IStatus<V1beta1RedshiftServerlessNamespaceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

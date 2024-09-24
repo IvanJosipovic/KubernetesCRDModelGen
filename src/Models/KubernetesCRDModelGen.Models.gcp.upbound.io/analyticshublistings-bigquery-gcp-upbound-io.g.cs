@@ -38,6 +38,7 @@ public enum V1beta1AnalyticsHubListingSpecForProviderBigqueryDatasetDatasetRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AnalyticsHubListingSpecForProviderBigqueryDatasetDatasetRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1AnalyticsHubListingSpecForProviderBigqueryDatasetDat
     public V1beta1AnalyticsHubListingSpecForProviderBigqueryDatasetDatasetRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Dataset in bigquery to populate dataset.</summary>
 public partial class V1beta1AnalyticsHubListingSpecForProviderBigqueryDatasetDatasetRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1AnalyticsHubListingSpecForProviderBigqueryDatasetDatasetSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AnalyticsHubListingSpecForProviderBigqueryDatasetDatasetSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1AnalyticsHubListingSpecForProviderBigqueryDatasetDat
     public V1beta1AnalyticsHubListingSpecForProviderBigqueryDatasetDatasetSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Dataset in bigquery to populate dataset.</summary>
 public partial class V1beta1AnalyticsHubListingSpecForProviderBigqueryDatasetDatasetSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1AnalyticsHubListingSpecForProviderBigqueryDatasetDat
     public V1beta1AnalyticsHubListingSpecForProviderBigqueryDatasetDatasetSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AnalyticsHubListingSpecForProviderBigqueryDataset
 {
     /// <summary>Resource name of the dataset source for this listing. e.g. projects/myproject/datasets/123</summary>
@@ -145,6 +150,7 @@ public enum V1beta1AnalyticsHubListingSpecForProviderDataExchangeIdRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AnalyticsHubListingSpecForProviderDataExchangeIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -158,6 +164,7 @@ public partial class V1beta1AnalyticsHubListingSpecForProviderDataExchangeIdRefP
     public V1beta1AnalyticsHubListingSpecForProviderDataExchangeIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a AnalyticsHubDataExchange in bigquery to populate dataExchangeId.</summary>
 public partial class V1beta1AnalyticsHubListingSpecForProviderDataExchangeIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -189,6 +196,7 @@ public enum V1beta1AnalyticsHubListingSpecForProviderDataExchangeIdSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AnalyticsHubListingSpecForProviderDataExchangeIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1AnalyticsHubListingSpecForProviderDataExchangeIdSele
     public V1beta1AnalyticsHubListingSpecForProviderDataExchangeIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a AnalyticsHubDataExchange in bigquery to populate dataExchangeId.</summary>
 public partial class V1beta1AnalyticsHubListingSpecForProviderDataExchangeIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -217,6 +226,7 @@ public partial class V1beta1AnalyticsHubListingSpecForProviderDataExchangeIdSele
     public V1beta1AnalyticsHubListingSpecForProviderDataExchangeIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AnalyticsHubListingSpecForProviderDataProvider
 {
     /// <summary>Name of the data provider.</summary>
@@ -228,6 +238,7 @@ public partial class V1beta1AnalyticsHubListingSpecForProviderDataProvider
     public string? PrimaryContact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AnalyticsHubListingSpecForProviderPublisher
 {
     /// <summary>Name of the listing publisher.</summary>
@@ -239,6 +250,7 @@ public partial class V1beta1AnalyticsHubListingSpecForProviderPublisher
     public string? PrimaryContact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AnalyticsHubListingSpecForProviderRestrictedExportConfig
 {
     /// <summary>If true, enable restricted export.</summary>
@@ -250,6 +262,7 @@ public partial class V1beta1AnalyticsHubListingSpecForProviderRestrictedExportCo
     public bool? RestrictQueryResult { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AnalyticsHubListingSpecForProvider
 {
     /// <summary>Shared dataset i.e. BigQuery dataset source. Structure is documented below.</summary>
@@ -337,6 +350,7 @@ public enum V1beta1AnalyticsHubListingSpecInitProviderBigqueryDatasetDatasetRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AnalyticsHubListingSpecInitProviderBigqueryDatasetDatasetRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -350,6 +364,7 @@ public partial class V1beta1AnalyticsHubListingSpecInitProviderBigqueryDatasetDa
     public V1beta1AnalyticsHubListingSpecInitProviderBigqueryDatasetDatasetRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Dataset in bigquery to populate dataset.</summary>
 public partial class V1beta1AnalyticsHubListingSpecInitProviderBigqueryDatasetDatasetRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -381,6 +396,7 @@ public enum V1beta1AnalyticsHubListingSpecInitProviderBigqueryDatasetDatasetSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AnalyticsHubListingSpecInitProviderBigqueryDatasetDatasetSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -394,6 +410,7 @@ public partial class V1beta1AnalyticsHubListingSpecInitProviderBigqueryDatasetDa
     public V1beta1AnalyticsHubListingSpecInitProviderBigqueryDatasetDatasetSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Dataset in bigquery to populate dataset.</summary>
 public partial class V1beta1AnalyticsHubListingSpecInitProviderBigqueryDatasetDatasetSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -409,6 +426,7 @@ public partial class V1beta1AnalyticsHubListingSpecInitProviderBigqueryDatasetDa
     public V1beta1AnalyticsHubListingSpecInitProviderBigqueryDatasetDatasetSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AnalyticsHubListingSpecInitProviderBigqueryDataset
 {
     /// <summary>Resource name of the dataset source for this listing. e.g. projects/myproject/datasets/123</summary>
@@ -424,6 +442,7 @@ public partial class V1beta1AnalyticsHubListingSpecInitProviderBigqueryDataset
     public V1beta1AnalyticsHubListingSpecInitProviderBigqueryDatasetDatasetSelector? DatasetSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AnalyticsHubListingSpecInitProviderDataProvider
 {
     /// <summary>Name of the data provider.</summary>
@@ -435,6 +454,7 @@ public partial class V1beta1AnalyticsHubListingSpecInitProviderDataProvider
     public string? PrimaryContact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AnalyticsHubListingSpecInitProviderPublisher
 {
     /// <summary>Name of the listing publisher.</summary>
@@ -446,6 +466,7 @@ public partial class V1beta1AnalyticsHubListingSpecInitProviderPublisher
     public string? PrimaryContact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AnalyticsHubListingSpecInitProviderRestrictedExportConfig
 {
     /// <summary>If true, enable restricted export.</summary>
@@ -457,6 +478,7 @@ public partial class V1beta1AnalyticsHubListingSpecInitProviderRestrictedExportC
     public bool? RestrictQueryResult { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1AnalyticsHubListingSpecInitProvider
 {
     /// <summary>Shared dataset i.e. BigQuery dataset source. Structure is documented below.</summary>
@@ -550,6 +572,7 @@ public enum V1beta1AnalyticsHubListingSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AnalyticsHubListingSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -563,6 +586,7 @@ public partial class V1beta1AnalyticsHubListingSpecProviderConfigRefPolicy
     public V1beta1AnalyticsHubListingSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1AnalyticsHubListingSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -594,6 +618,7 @@ public enum V1beta1AnalyticsHubListingSpecPublishConnectionDetailsToConfigRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AnalyticsHubListingSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -607,6 +632,7 @@ public partial class V1beta1AnalyticsHubListingSpecPublishConnectionDetailsToCon
     public V1beta1AnalyticsHubListingSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1AnalyticsHubListingSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -618,6 +644,7 @@ public partial class V1beta1AnalyticsHubListingSpecPublishConnectionDetailsToCon
     public V1beta1AnalyticsHubListingSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1AnalyticsHubListingSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -633,6 +660,7 @@ public partial class V1beta1AnalyticsHubListingSpecPublishConnectionDetailsToMet
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1AnalyticsHubListingSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -648,6 +676,7 @@ public partial class V1beta1AnalyticsHubListingSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1AnalyticsHubListingSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -659,6 +688,7 @@ public partial class V1beta1AnalyticsHubListingSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>AnalyticsHubListingSpec defines the desired state of AnalyticsHubListing</summary>
 public partial class V1beta1AnalyticsHubListingSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -691,6 +721,7 @@ public partial class V1beta1AnalyticsHubListingSpec
     public V1beta1AnalyticsHubListingSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AnalyticsHubListingStatusAtProviderBigqueryDataset
 {
     /// <summary>Resource name of the dataset source for this listing. e.g. projects/myproject/datasets/123</summary>
@@ -698,6 +729,7 @@ public partial class V1beta1AnalyticsHubListingStatusAtProviderBigqueryDataset
     public string? Dataset { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AnalyticsHubListingStatusAtProviderDataProvider
 {
     /// <summary>Name of the data provider.</summary>
@@ -709,6 +741,7 @@ public partial class V1beta1AnalyticsHubListingStatusAtProviderDataProvider
     public string? PrimaryContact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AnalyticsHubListingStatusAtProviderPublisher
 {
     /// <summary>Name of the listing publisher.</summary>
@@ -720,6 +753,7 @@ public partial class V1beta1AnalyticsHubListingStatusAtProviderPublisher
     public string? PrimaryContact { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AnalyticsHubListingStatusAtProviderRestrictedExportConfig
 {
     /// <summary>If true, enable restricted export.</summary>
@@ -731,6 +765,7 @@ public partial class V1beta1AnalyticsHubListingStatusAtProviderRestrictedExportC
     public bool? RestrictQueryResult { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AnalyticsHubListingStatusAtProvider
 {
     /// <summary>Shared dataset i.e. BigQuery dataset source. Structure is documented below.</summary>
@@ -798,6 +833,7 @@ public partial class V1beta1AnalyticsHubListingStatusAtProvider
     public IList<V1beta1AnalyticsHubListingStatusAtProviderRestrictedExportConfig>? RestrictedExportConfig { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1AnalyticsHubListingStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -825,6 +861,7 @@ public partial class V1beta1AnalyticsHubListingStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>AnalyticsHubListingStatus defines the observed state of AnalyticsHubListing.</summary>
 public partial class V1beta1AnalyticsHubListingStatus
 {
     /// <summary></summary>
@@ -841,6 +878,7 @@ public partial class V1beta1AnalyticsHubListingStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>AnalyticsHubListing is the Schema for the AnalyticsHubListings API. A Bigquery Analytics Hub data exchange listing</summary>
 public partial class V1beta1AnalyticsHubListing : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AnalyticsHubListingSpec>, IStatus<V1beta1AnalyticsHubListingStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.oslogin.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1alpha1OSLoginSSHPublicKeySpec
 {
     /// <summary>An expiration time in microseconds since epoch.</summary>
@@ -31,6 +32,7 @@ public partial class V1alpha1OSLoginSSHPublicKeySpec
     public string User { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1OSLoginSSHPublicKeyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -54,6 +56,7 @@ public partial class V1alpha1OSLoginSSHPublicKeyStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1OSLoginSSHPublicKeyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -70,6 +73,7 @@ public partial class V1alpha1OSLoginSSHPublicKeyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1OSLoginSSHPublicKey : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1OSLoginSSHPublicKeySpec>, IStatus<V1alpha1OSLoginSSHPublicKeyStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

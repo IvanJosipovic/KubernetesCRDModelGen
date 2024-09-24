@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkservices.cnrm.cloud.google.com;
+/// <summary>Immutable. The Project that this resource belongs to.</summary>
 public partial class V1beta1NetworkServicesGatewaySpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1NetworkServicesGatewaySpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkServicesGatewaySpecServerTlsPolicyRef
 {
     /// <summary>Optional. A fully-qualified ServerTLSPolicy URL reference. Specifies how TLS traffic is terminated. If empty, TLS termination is disabled.  Allowed value: The Google Cloud resource name of a `NetworkSecurityServerTLSPolicy` resource (format: `projects/{{project}}/locations/{{location}}/serverTlsPolicies/{{name}}`).</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1NetworkServicesGatewaySpecServerTlsPolicyRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkServicesGatewaySpec
 {
     /// <summary>One or more addresses with ports in format of ":" that the Gateway must receive traffic on. The proxy binds to the ports specified. IP address can be anything that is allowed by the underlying infrastructure (auto-allocation, static IP, BYOIP).</summary>
@@ -77,6 +80,7 @@ public partial class V1beta1NetworkServicesGatewaySpec
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkServicesGatewayStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -100,6 +104,7 @@ public partial class V1beta1NetworkServicesGatewayStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkServicesGatewayStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -124,6 +129,7 @@ public partial class V1beta1NetworkServicesGatewayStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1NetworkServicesGateway : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1NetworkServicesGatewaySpec>, IStatus<V1beta1NetworkServicesGatewayStatus>
 {
     public const string KubeApiVersion = "v1beta1";

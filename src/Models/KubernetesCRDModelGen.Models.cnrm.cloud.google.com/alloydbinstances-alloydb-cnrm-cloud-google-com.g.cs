@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.alloydb.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1alpha1AlloyDBInstanceSpecClusterRef
 {
     /// <summary>Allowed value: The `name` field of an `AlloyDBCluster` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1AlloyDBInstanceSpecClusterRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The type of instance. Possible values: ["PRIMARY", "READ_POOL", "SECONDARY"] For PRIMARY and SECONDARY instances, set the value to refer to the name of the associated cluster. This is recommended because the instance type of primary and secondary instances is tied to the cluster type of the associated cluster. If the secondary cluster is promoted to primary cluster, then the associated secondary instance also becomes primary instance. Example: instanceTypeRef:   name: clusterName For instances of type READ_POOL, set the value using external keyword. Example: instanceTypeRef:   external: READ_POOL If the instance type is SECONDARY, the delete instance operation does not delete the secondary instance but abandons it instead. Use deletionPolicy = "FORCE" in the associated secondary cluster and delete the cluster forcefully to delete the secondary cluster as well its associated secondary instance.</summary>
 public partial class V1alpha1AlloyDBInstanceSpecInstanceTypeRef
 {
     /// <summary>Allowed value: The `clusterType` field of an `AlloyDBCluster` resource.</summary>
@@ -38,6 +40,7 @@ public partial class V1alpha1AlloyDBInstanceSpecInstanceTypeRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Configurations for the machines that host the underlying database engine.</summary>
 public partial class V1alpha1AlloyDBInstanceSpecMachineConfig
 {
     /// <summary>The number of CPU's in the VM instance.</summary>
@@ -45,6 +48,7 @@ public partial class V1alpha1AlloyDBInstanceSpecMachineConfig
     public int? CpuCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AlloyDBInstanceSpecNetworkConfigAuthorizedExternalNetworks
 {
     /// <summary>CIDR range for one authorized network of the instance.</summary>
@@ -52,6 +56,7 @@ public partial class V1alpha1AlloyDBInstanceSpecNetworkConfigAuthorizedExternalN
     public string? CidrRange { get; set; }
 }
 
+/// <summary>Instance level network configuration.</summary>
 public partial class V1alpha1AlloyDBInstanceSpecNetworkConfig
 {
     /// <summary>A list of external networks authorized to access this instance. This field is only allowed to be set when 'enable_public_ip' is set to true.</summary>
@@ -63,6 +68,7 @@ public partial class V1alpha1AlloyDBInstanceSpecNetworkConfig
     public bool? EnablePublicIp { get; set; }
 }
 
+/// <summary>Read pool specific config. If the instance type is READ_POOL, this configuration must be provided.</summary>
 public partial class V1alpha1AlloyDBInstanceSpecReadPoolConfig
 {
     /// <summary>Read capacity, i.e. number of nodes in a read pool instance.</summary>
@@ -70,6 +76,7 @@ public partial class V1alpha1AlloyDBInstanceSpecReadPoolConfig
     public int? NodeCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AlloyDBInstanceSpec
 {
     /// <summary>Annotations to allow client tools to store small amount of arbitrary data. This is distinct from labels.</summary>
@@ -121,6 +128,7 @@ public partial class V1alpha1AlloyDBInstanceSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AlloyDBInstanceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -144,6 +152,7 @@ public partial class V1alpha1AlloyDBInstanceStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1AlloyDBInstanceStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -188,6 +197,7 @@ public partial class V1alpha1AlloyDBInstanceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1AlloyDBInstance : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1AlloyDBInstanceSpec>, IStatus<V1alpha1AlloyDBInstanceStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

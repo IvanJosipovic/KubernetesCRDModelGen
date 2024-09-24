@@ -38,6 +38,7 @@ public enum V1beta1NetworkEndpointSpecForProviderInstanceRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NetworkEndpointSpecForProviderInstanceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1NetworkEndpointSpecForProviderInstanceRefPolicy
     public V1beta1NetworkEndpointSpecForProviderInstanceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Instance in compute to populate instance.</summary>
 public partial class V1beta1NetworkEndpointSpecForProviderInstanceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1NetworkEndpointSpecForProviderInstanceSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NetworkEndpointSpecForProviderInstanceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1NetworkEndpointSpecForProviderInstanceSelectorPolicy
     public V1beta1NetworkEndpointSpecForProviderInstanceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Instance in compute to populate instance.</summary>
 public partial class V1beta1NetworkEndpointSpecForProviderInstanceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1NetworkEndpointSpecForProviderNetworkEndpointGroupRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NetworkEndpointSpecForProviderNetworkEndpointGroupRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1NetworkEndpointSpecForProviderNetworkEndpointGroupRe
     public V1beta1NetworkEndpointSpecForProviderNetworkEndpointGroupRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a NetworkEndpointGroup in compute to populate networkEndpointGroup.</summary>
 public partial class V1beta1NetworkEndpointSpecForProviderNetworkEndpointGroupRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1NetworkEndpointSpecForProviderNetworkEndpointGroupSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NetworkEndpointSpecForProviderNetworkEndpointGroupSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1NetworkEndpointSpecForProviderNetworkEndpointGroupSe
     public V1beta1NetworkEndpointSpecForProviderNetworkEndpointGroupSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a NetworkEndpointGroup in compute to populate networkEndpointGroup.</summary>
 public partial class V1beta1NetworkEndpointSpecForProviderNetworkEndpointGroupSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1NetworkEndpointSpecForProviderNetworkEndpointGroupSe
     public V1beta1NetworkEndpointSpecForProviderNetworkEndpointGroupSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkEndpointSpecForProvider
 {
     /// <summary>The name for a specific VM instance that the IP address belongs to. This is required for network endpoints of type GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group.</summary>
@@ -265,6 +274,7 @@ public enum V1beta1NetworkEndpointSpecInitProviderInstanceRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NetworkEndpointSpecInitProviderInstanceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -278,6 +288,7 @@ public partial class V1beta1NetworkEndpointSpecInitProviderInstanceRefPolicy
     public V1beta1NetworkEndpointSpecInitProviderInstanceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Instance in compute to populate instance.</summary>
 public partial class V1beta1NetworkEndpointSpecInitProviderInstanceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -309,6 +320,7 @@ public enum V1beta1NetworkEndpointSpecInitProviderInstanceSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NetworkEndpointSpecInitProviderInstanceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -322,6 +334,7 @@ public partial class V1beta1NetworkEndpointSpecInitProviderInstanceSelectorPolic
     public V1beta1NetworkEndpointSpecInitProviderInstanceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Instance in compute to populate instance.</summary>
 public partial class V1beta1NetworkEndpointSpecInitProviderInstanceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -357,6 +370,7 @@ public enum V1beta1NetworkEndpointSpecInitProviderNetworkEndpointGroupRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NetworkEndpointSpecInitProviderNetworkEndpointGroupRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -370,6 +384,7 @@ public partial class V1beta1NetworkEndpointSpecInitProviderNetworkEndpointGroupR
     public V1beta1NetworkEndpointSpecInitProviderNetworkEndpointGroupRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a NetworkEndpointGroup in compute to populate networkEndpointGroup.</summary>
 public partial class V1beta1NetworkEndpointSpecInitProviderNetworkEndpointGroupRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -401,6 +416,7 @@ public enum V1beta1NetworkEndpointSpecInitProviderNetworkEndpointGroupSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NetworkEndpointSpecInitProviderNetworkEndpointGroupSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -414,6 +430,7 @@ public partial class V1beta1NetworkEndpointSpecInitProviderNetworkEndpointGroupS
     public V1beta1NetworkEndpointSpecInitProviderNetworkEndpointGroupSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a NetworkEndpointGroup in compute to populate networkEndpointGroup.</summary>
 public partial class V1beta1NetworkEndpointSpecInitProviderNetworkEndpointGroupSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -429,6 +446,7 @@ public partial class V1beta1NetworkEndpointSpecInitProviderNetworkEndpointGroupS
     public V1beta1NetworkEndpointSpecInitProviderNetworkEndpointGroupSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1NetworkEndpointSpecInitProvider
 {
     /// <summary>The name for a specific VM instance that the IP address belongs to. This is required for network endpoints of type GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group.</summary>
@@ -514,6 +532,7 @@ public enum V1beta1NetworkEndpointSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NetworkEndpointSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -527,6 +546,7 @@ public partial class V1beta1NetworkEndpointSpecProviderConfigRefPolicy
     public V1beta1NetworkEndpointSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1NetworkEndpointSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -558,6 +578,7 @@ public enum V1beta1NetworkEndpointSpecPublishConnectionDetailsToConfigRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NetworkEndpointSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -571,6 +592,7 @@ public partial class V1beta1NetworkEndpointSpecPublishConnectionDetailsToConfigR
     public V1beta1NetworkEndpointSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1NetworkEndpointSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -582,6 +604,7 @@ public partial class V1beta1NetworkEndpointSpecPublishConnectionDetailsToConfigR
     public V1beta1NetworkEndpointSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1NetworkEndpointSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -597,6 +620,7 @@ public partial class V1beta1NetworkEndpointSpecPublishConnectionDetailsToMetadat
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1NetworkEndpointSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -612,6 +636,7 @@ public partial class V1beta1NetworkEndpointSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1NetworkEndpointSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -623,6 +648,7 @@ public partial class V1beta1NetworkEndpointSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>NetworkEndpointSpec defines the desired state of NetworkEndpoint</summary>
 public partial class V1beta1NetworkEndpointSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -655,6 +681,7 @@ public partial class V1beta1NetworkEndpointSpec
     public V1beta1NetworkEndpointSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkEndpointStatusAtProvider
 {
     /// <summary>an identifier for the resource with format {{project}}/{{zone}}/{{network_endpoint_group}}/{{instance}}/{{ip_address}}/{{port}}</summary>
@@ -686,6 +713,7 @@ public partial class V1beta1NetworkEndpointStatusAtProvider
     public string? Zone { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1NetworkEndpointStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -713,6 +741,7 @@ public partial class V1beta1NetworkEndpointStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>NetworkEndpointStatus defines the observed state of NetworkEndpoint.</summary>
 public partial class V1beta1NetworkEndpointStatus
 {
     /// <summary></summary>
@@ -729,6 +758,7 @@ public partial class V1beta1NetworkEndpointStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>NetworkEndpoint is the Schema for the NetworkEndpoints API. A Network endpoint represents a IP address and port combination that is part of a specific network endpoint group (NEG).</summary>
 public partial class V1beta1NetworkEndpoint : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1NetworkEndpointSpec>, IStatus<V1beta1NetworkEndpointStatus>
 {
     public const string KubeApiVersion = "v1beta1";

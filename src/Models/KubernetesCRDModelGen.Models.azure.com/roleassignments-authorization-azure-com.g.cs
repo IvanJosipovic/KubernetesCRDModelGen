@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.authorization.azure.com;
+/// <summary>DelegatedManagedIdentityResourceReference: Id of the delegated managed identity resource</summary>
 public partial class V1api20220401storageRoleAssignmentSpecDelegatedManagedIdentityResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -27,6 +28,7 @@ public partial class V1api20220401storageRoleAssignmentSpecDelegatedManagedIdent
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220401.RoleAssignmentOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 public partial class V1api20220401storageRoleAssignmentSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -38,6 +40,7 @@ public partial class V1api20220401storageRoleAssignmentSpecOperatorSpec
     public string? NamingConvention { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. This resource is an extension resource, which means that any other Azure resource can be its owner.</summary>
 public partial class V1api20220401storageRoleAssignmentSpecOwner
 {
     /// <summary>Ownership across namespaces is not supported.</summary>
@@ -57,6 +60,7 @@ public partial class V1api20220401storageRoleAssignmentSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20220401storageRoleAssignmentSpecPrincipalIdFromConfig
 {
     /// <summary>Key is the key in the Kubernetes configmap being referenced</summary>
@@ -68,6 +72,7 @@ public partial class V1api20220401storageRoleAssignmentSpecPrincipalIdFromConfig
     public string Name { get; set; }
 }
 
+/// <summary>RoleDefinitionReference: The role definition ID.</summary>
 public partial class V1api20220401storageRoleAssignmentSpecRoleDefinitionReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -87,6 +92,7 @@ public partial class V1api20220401storageRoleAssignmentSpecRoleDefinitionReferen
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220401.RoleAssignment_Spec</summary>
 public partial class V1api20220401storageRoleAssignmentSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -142,6 +148,7 @@ public partial class V1api20220401storageRoleAssignmentSpec
     public V1api20220401storageRoleAssignmentSpecRoleDefinitionReference RoleDefinitionReference { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20220401storageRoleAssignmentStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -173,6 +180,7 @@ public partial class V1api20220401storageRoleAssignmentStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20220401.RoleAssignment_STATUS Role Assignments</summary>
 public partial class V1api20220401storageRoleAssignmentStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -245,6 +253,7 @@ public partial class V1api20220401storageRoleAssignmentStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20220401.RoleAssignment Generator information: - Generated from: /authorization/resource-manager/Microsoft.Authorization/stable/2022-04-01/authorization-RoleAssignmentsCalls.json - ARM URI: /{scope}/providers/Microsoft.Authorization/roleAssignments/{roleAssignmentName}</summary>
 public partial class V1api20220401storageRoleAssignment : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20220401storageRoleAssignmentSpec>, IStatus<V1api20220401storageRoleAssignmentStatus>
 {
     public const string KubeApiVersion = "v1api20220401storage";

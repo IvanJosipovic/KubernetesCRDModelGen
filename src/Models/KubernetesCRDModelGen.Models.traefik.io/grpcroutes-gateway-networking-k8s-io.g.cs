@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.gateway.networking.k8s.io;
+/// <summary>ParentReference identifies an API object (usually a Gateway) that can be considered a parent of this resource (usually a route). There are two kinds of parent resources with "Core" support:   * Gateway (Gateway conformance profile) * Service (Mesh conformance profile, ClusterIP Services only)   This API may be extended in the future to support additional kinds of parent resources.   The API object must be valid in the cluster; the Group and Kind must be registered in the cluster for this reference to be valid.</summary>
 public partial class V1GRPCRouteSpecParentRefs
 {
     /// <summary>Group is the group of the referent. When unspecified, "gateway.networking.k8s.io" is inferred. To set the core API group (such as for a "Service" kind referent), Group must be explicitly set to "" (empty string).   Support: Core</summary>
@@ -35,6 +36,7 @@ public partial class V1GRPCRouteSpecParentRefs
     public string? SectionName { get; set; }
 }
 
+/// <summary>ExtensionRef is an optional, implementation-specific extension to the "filter" behavior.  For example, resource "myroutefilter" in group "networking.example.net"). ExtensionRef MUST NOT be used for core and extended filters.   Support: Implementation-specific   This filter can be used multiple times within the same rule.</summary>
 public partial class V1GRPCRouteSpecRulesBackendRefsFiltersExtensionRef
 {
     /// <summary>Group is the group of the referent. For example, "gateway.networking.k8s.io". When unspecified or empty string, core API group is inferred.</summary>
@@ -50,6 +52,7 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFiltersExtensionRef
     public string Name { get; set; }
 }
 
+/// <summary>HTTPHeader represents an HTTP Header name and value as defined by RFC 7230.</summary>
 public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestHeaderModifierAdd
 {
     /// <summary>Name is the name of the HTTP Header to be matched. Name matching MUST be case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).   If multiple entries specify equivalent header names, the first entry with an equivalent name MUST be considered for a match. Subsequent entries with an equivalent header name MUST be ignored. Due to the case-insensitivity of header names, "foo" and "Foo" are considered equivalent.</summary>
@@ -61,6 +64,7 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestHeaderModifier
     public string Value { get; set; }
 }
 
+/// <summary>HTTPHeader represents an HTTP Header name and value as defined by RFC 7230.</summary>
 public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestHeaderModifierSet
 {
     /// <summary>Name is the name of the HTTP Header to be matched. Name matching MUST be case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).   If multiple entries specify equivalent header names, the first entry with an equivalent name MUST be considered for a match. Subsequent entries with an equivalent header name MUST be ignored. Due to the case-insensitivity of header names, "foo" and "Foo" are considered equivalent.</summary>
@@ -72,6 +76,7 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestHeaderModifier
     public string Value { get; set; }
 }
 
+/// <summary>RequestHeaderModifier defines a schema for a filter that modifies request headers.   Support: Core</summary>
 public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestHeaderModifier
 {
     /// <summary>Add adds the given header(s) (name, value) to the request before the action. It appends to any existing values associated with the header name.   Input:   GET /foo HTTP/1.1   my-header: foo   Config:   add:   - name: "my-header"     value: "bar,baz"   Output:   GET /foo HTTP/1.1   my-header: foo,bar,baz</summary>
@@ -87,6 +92,7 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestHeaderModifier
     public IList<V1GRPCRouteSpecRulesBackendRefsFiltersRequestHeaderModifierSet>? Set { get; set; }
 }
 
+/// <summary>BackendRef references a resource where mirrored requests are sent.   Mirrored requests must be sent only to a single destination endpoint within this BackendRef, irrespective of how many endpoints are present within this BackendRef.   If the referent cannot be found, this BackendRef is invalid and must be dropped from the Gateway. The controller must ensure the "ResolvedRefs" condition on the Route status is set to `status: False` and not configure this backend in the underlying implementation.   If there is a cross-namespace reference to an *existing* object that is not allowed by a ReferenceGrant, the controller must ensure the "ResolvedRefs"  condition on the Route is set to `status: False`, with the "RefNotPermitted" reason and not configure this backend in the underlying implementation.   In either error case, the Message of the `ResolvedRefs` Condition should be used to provide more detail about the problem.   Support: Extended for Kubernetes Service   Support: Implementation-specific for any other resource</summary>
 public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestMirrorBackendRef
 {
     /// <summary>Group is the group of the referent. For example, "gateway.networking.k8s.io". When unspecified or empty string, core API group is inferred.</summary>
@@ -110,6 +116,7 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestMirrorBackendR
     public int? Port { get; set; }
 }
 
+/// <summary>RequestMirror defines a schema for a filter that mirrors requests. Requests are sent to the specified destination, but responses from that destination are ignored.   This filter can be used multiple times within the same rule. Note that not all implementations will be able to support mirroring to multiple backends.   Support: Extended</summary>
 public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestMirror
 {
     /// <summary>BackendRef references a resource where mirrored requests are sent.   Mirrored requests must be sent only to a single destination endpoint within this BackendRef, irrespective of how many endpoints are present within this BackendRef.   If the referent cannot be found, this BackendRef is invalid and must be dropped from the Gateway. The controller must ensure the "ResolvedRefs" condition on the Route status is set to `status: False` and not configure this backend in the underlying implementation.   If there is a cross-namespace reference to an *existing* object that is not allowed by a ReferenceGrant, the controller must ensure the "ResolvedRefs"  condition on the Route is set to `status: False`, with the "RefNotPermitted" reason and not configure this backend in the underlying implementation.   In either error case, the Message of the `ResolvedRefs` Condition should be used to provide more detail about the problem.   Support: Extended for Kubernetes Service   Support: Implementation-specific for any other resource</summary>
@@ -117,6 +124,7 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestMirror
     public V1GRPCRouteSpecRulesBackendRefsFiltersRequestMirrorBackendRef BackendRef { get; set; }
 }
 
+/// <summary>HTTPHeader represents an HTTP Header name and value as defined by RFC 7230.</summary>
 public partial class V1GRPCRouteSpecRulesBackendRefsFiltersResponseHeaderModifierAdd
 {
     /// <summary>Name is the name of the HTTP Header to be matched. Name matching MUST be case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).   If multiple entries specify equivalent header names, the first entry with an equivalent name MUST be considered for a match. Subsequent entries with an equivalent header name MUST be ignored. Due to the case-insensitivity of header names, "foo" and "Foo" are considered equivalent.</summary>
@@ -128,6 +136,7 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFiltersResponseHeaderModifie
     public string Value { get; set; }
 }
 
+/// <summary>HTTPHeader represents an HTTP Header name and value as defined by RFC 7230.</summary>
 public partial class V1GRPCRouteSpecRulesBackendRefsFiltersResponseHeaderModifierSet
 {
     /// <summary>Name is the name of the HTTP Header to be matched. Name matching MUST be case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).   If multiple entries specify equivalent header names, the first entry with an equivalent name MUST be considered for a match. Subsequent entries with an equivalent header name MUST be ignored. Due to the case-insensitivity of header names, "foo" and "Foo" are considered equivalent.</summary>
@@ -139,6 +148,7 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFiltersResponseHeaderModifie
     public string Value { get; set; }
 }
 
+/// <summary>ResponseHeaderModifier defines a schema for a filter that modifies response headers.   Support: Extended</summary>
 public partial class V1GRPCRouteSpecRulesBackendRefsFiltersResponseHeaderModifier
 {
     /// <summary>Add adds the given header(s) (name, value) to the request before the action. It appends to any existing values associated with the header name.   Input:   GET /foo HTTP/1.1   my-header: foo   Config:   add:   - name: "my-header"     value: "bar,baz"   Output:   GET /foo HTTP/1.1   my-header: foo,bar,baz</summary>
@@ -170,6 +180,7 @@ public enum V1GRPCRouteSpecRulesBackendRefsFiltersTypeEnum
     ExtensionRef
 }
 
+/// <summary>GRPCRouteFilter defines processing steps that must be completed during the request or response lifecycle. GRPCRouteFilters are meant as an extension point to express processing that may be done in Gateway implementations. Some examples include request or response modification, implementing authentication strategies, rate-limiting, and traffic shaping. API guarantee/conformance is defined based on the type of the filter.</summary>
 public partial class V1GRPCRouteSpecRulesBackendRefsFilters
 {
     /// <summary>ExtensionRef is an optional, implementation-specific extension to the "filter" behavior.  For example, resource "myroutefilter" in group "networking.example.net"). ExtensionRef MUST NOT be used for core and extended filters.   Support: Implementation-specific   This filter can be used multiple times within the same rule.</summary>
@@ -194,6 +205,7 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFilters
     public V1GRPCRouteSpecRulesBackendRefsFiltersTypeEnum Type { get; set; }
 }
 
+/// <summary>GRPCBackendRef defines how a GRPCRoute forwards a gRPC request.   Note that when a namespace different than the local namespace is specified, a ReferenceGrant object is required in the referent namespace to allow that namespace's owner to accept the reference. See the ReferenceGrant documentation for details.   &lt;gateway:experimental:description&gt;   When the BackendRef points to a Kubernetes Service, implementations SHOULD honor the appProtocol field if it is set for the target Service Port.   Implementations supporting appProtocol SHOULD recognize the Kubernetes Standard Application Protocols defined in KEP-3726.   If a Service appProtocol isn't specified, an implementation MAY infer the backend protocol through its own means. Implementations MAY infer the protocol from the Route type referring to the backend Service.   If a Route is not able to send traffic to the backend using the specified protocol then the backend is considered invalid. Implementations MUST set the "ResolvedRefs" condition to "False" with the "UnsupportedProtocol" reason.   &lt;/gateway:experimental:description&gt;</summary>
 public partial class V1GRPCRouteSpecRulesBackendRefs
 {
     /// <summary>Filters defined at this level MUST be executed if and only if the request is being forwarded to the backend defined here.   Support: Implementation-specific (For broader support of filters, use the Filters field in GRPCRouteRule.)</summary>
@@ -225,6 +237,7 @@ public partial class V1GRPCRouteSpecRulesBackendRefs
     public int? Weight { get; set; }
 }
 
+/// <summary>ExtensionRef is an optional, implementation-specific extension to the "filter" behavior.  For example, resource "myroutefilter" in group "networking.example.net"). ExtensionRef MUST NOT be used for core and extended filters.   Support: Implementation-specific   This filter can be used multiple times within the same rule.</summary>
 public partial class V1GRPCRouteSpecRulesFiltersExtensionRef
 {
     /// <summary>Group is the group of the referent. For example, "gateway.networking.k8s.io". When unspecified or empty string, core API group is inferred.</summary>
@@ -240,6 +253,7 @@ public partial class V1GRPCRouteSpecRulesFiltersExtensionRef
     public string Name { get; set; }
 }
 
+/// <summary>HTTPHeader represents an HTTP Header name and value as defined by RFC 7230.</summary>
 public partial class V1GRPCRouteSpecRulesFiltersRequestHeaderModifierAdd
 {
     /// <summary>Name is the name of the HTTP Header to be matched. Name matching MUST be case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).   If multiple entries specify equivalent header names, the first entry with an equivalent name MUST be considered for a match. Subsequent entries with an equivalent header name MUST be ignored. Due to the case-insensitivity of header names, "foo" and "Foo" are considered equivalent.</summary>
@@ -251,6 +265,7 @@ public partial class V1GRPCRouteSpecRulesFiltersRequestHeaderModifierAdd
     public string Value { get; set; }
 }
 
+/// <summary>HTTPHeader represents an HTTP Header name and value as defined by RFC 7230.</summary>
 public partial class V1GRPCRouteSpecRulesFiltersRequestHeaderModifierSet
 {
     /// <summary>Name is the name of the HTTP Header to be matched. Name matching MUST be case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).   If multiple entries specify equivalent header names, the first entry with an equivalent name MUST be considered for a match. Subsequent entries with an equivalent header name MUST be ignored. Due to the case-insensitivity of header names, "foo" and "Foo" are considered equivalent.</summary>
@@ -262,6 +277,7 @@ public partial class V1GRPCRouteSpecRulesFiltersRequestHeaderModifierSet
     public string Value { get; set; }
 }
 
+/// <summary>RequestHeaderModifier defines a schema for a filter that modifies request headers.   Support: Core</summary>
 public partial class V1GRPCRouteSpecRulesFiltersRequestHeaderModifier
 {
     /// <summary>Add adds the given header(s) (name, value) to the request before the action. It appends to any existing values associated with the header name.   Input:   GET /foo HTTP/1.1   my-header: foo   Config:   add:   - name: "my-header"     value: "bar,baz"   Output:   GET /foo HTTP/1.1   my-header: foo,bar,baz</summary>
@@ -277,6 +293,7 @@ public partial class V1GRPCRouteSpecRulesFiltersRequestHeaderModifier
     public IList<V1GRPCRouteSpecRulesFiltersRequestHeaderModifierSet>? Set { get; set; }
 }
 
+/// <summary>BackendRef references a resource where mirrored requests are sent.   Mirrored requests must be sent only to a single destination endpoint within this BackendRef, irrespective of how many endpoints are present within this BackendRef.   If the referent cannot be found, this BackendRef is invalid and must be dropped from the Gateway. The controller must ensure the "ResolvedRefs" condition on the Route status is set to `status: False` and not configure this backend in the underlying implementation.   If there is a cross-namespace reference to an *existing* object that is not allowed by a ReferenceGrant, the controller must ensure the "ResolvedRefs"  condition on the Route is set to `status: False`, with the "RefNotPermitted" reason and not configure this backend in the underlying implementation.   In either error case, the Message of the `ResolvedRefs` Condition should be used to provide more detail about the problem.   Support: Extended for Kubernetes Service   Support: Implementation-specific for any other resource</summary>
 public partial class V1GRPCRouteSpecRulesFiltersRequestMirrorBackendRef
 {
     /// <summary>Group is the group of the referent. For example, "gateway.networking.k8s.io". When unspecified or empty string, core API group is inferred.</summary>
@@ -300,6 +317,7 @@ public partial class V1GRPCRouteSpecRulesFiltersRequestMirrorBackendRef
     public int? Port { get; set; }
 }
 
+/// <summary>RequestMirror defines a schema for a filter that mirrors requests. Requests are sent to the specified destination, but responses from that destination are ignored.   This filter can be used multiple times within the same rule. Note that not all implementations will be able to support mirroring to multiple backends.   Support: Extended</summary>
 public partial class V1GRPCRouteSpecRulesFiltersRequestMirror
 {
     /// <summary>BackendRef references a resource where mirrored requests are sent.   Mirrored requests must be sent only to a single destination endpoint within this BackendRef, irrespective of how many endpoints are present within this BackendRef.   If the referent cannot be found, this BackendRef is invalid and must be dropped from the Gateway. The controller must ensure the "ResolvedRefs" condition on the Route status is set to `status: False` and not configure this backend in the underlying implementation.   If there is a cross-namespace reference to an *existing* object that is not allowed by a ReferenceGrant, the controller must ensure the "ResolvedRefs"  condition on the Route is set to `status: False`, with the "RefNotPermitted" reason and not configure this backend in the underlying implementation.   In either error case, the Message of the `ResolvedRefs` Condition should be used to provide more detail about the problem.   Support: Extended for Kubernetes Service   Support: Implementation-specific for any other resource</summary>
@@ -307,6 +325,7 @@ public partial class V1GRPCRouteSpecRulesFiltersRequestMirror
     public V1GRPCRouteSpecRulesFiltersRequestMirrorBackendRef BackendRef { get; set; }
 }
 
+/// <summary>HTTPHeader represents an HTTP Header name and value as defined by RFC 7230.</summary>
 public partial class V1GRPCRouteSpecRulesFiltersResponseHeaderModifierAdd
 {
     /// <summary>Name is the name of the HTTP Header to be matched. Name matching MUST be case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).   If multiple entries specify equivalent header names, the first entry with an equivalent name MUST be considered for a match. Subsequent entries with an equivalent header name MUST be ignored. Due to the case-insensitivity of header names, "foo" and "Foo" are considered equivalent.</summary>
@@ -318,6 +337,7 @@ public partial class V1GRPCRouteSpecRulesFiltersResponseHeaderModifierAdd
     public string Value { get; set; }
 }
 
+/// <summary>HTTPHeader represents an HTTP Header name and value as defined by RFC 7230.</summary>
 public partial class V1GRPCRouteSpecRulesFiltersResponseHeaderModifierSet
 {
     /// <summary>Name is the name of the HTTP Header to be matched. Name matching MUST be case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).   If multiple entries specify equivalent header names, the first entry with an equivalent name MUST be considered for a match. Subsequent entries with an equivalent header name MUST be ignored. Due to the case-insensitivity of header names, "foo" and "Foo" are considered equivalent.</summary>
@@ -329,6 +349,7 @@ public partial class V1GRPCRouteSpecRulesFiltersResponseHeaderModifierSet
     public string Value { get; set; }
 }
 
+/// <summary>ResponseHeaderModifier defines a schema for a filter that modifies response headers.   Support: Extended</summary>
 public partial class V1GRPCRouteSpecRulesFiltersResponseHeaderModifier
 {
     /// <summary>Add adds the given header(s) (name, value) to the request before the action. It appends to any existing values associated with the header name.   Input:   GET /foo HTTP/1.1   my-header: foo   Config:   add:   - name: "my-header"     value: "bar,baz"   Output:   GET /foo HTTP/1.1   my-header: foo,bar,baz</summary>
@@ -360,6 +381,7 @@ public enum V1GRPCRouteSpecRulesFiltersTypeEnum
     ExtensionRef
 }
 
+/// <summary>GRPCRouteFilter defines processing steps that must be completed during the request or response lifecycle. GRPCRouteFilters are meant as an extension point to express processing that may be done in Gateway implementations. Some examples include request or response modification, implementing authentication strategies, rate-limiting, and traffic shaping. API guarantee/conformance is defined based on the type of the filter.</summary>
 public partial class V1GRPCRouteSpecRulesFilters
 {
     /// <summary>ExtensionRef is an optional, implementation-specific extension to the "filter" behavior.  For example, resource "myroutefilter" in group "networking.example.net"). ExtensionRef MUST NOT be used for core and extended filters.   Support: Implementation-specific   This filter can be used multiple times within the same rule.</summary>
@@ -394,6 +416,7 @@ public enum V1GRPCRouteSpecRulesMatchesHeadersTypeEnum
     RegularExpression
 }
 
+/// <summary>GRPCHeaderMatch describes how to select a gRPC route by matching gRPC request headers.</summary>
 public partial class V1GRPCRouteSpecRulesMatchesHeaders
 {
     /// <summary>Name is the name of the gRPC Header to be matched.   If multiple entries specify equivalent header names, only the first entry with an equivalent name MUST be considered for a match. Subsequent entries with an equivalent header name MUST be ignored. Due to the case-insensitivity of header names, "foo" and "Foo" are considered equivalent.</summary>
@@ -420,6 +443,7 @@ public enum V1GRPCRouteSpecRulesMatchesMethodTypeEnum
     RegularExpression
 }
 
+/// <summary>Method specifies a gRPC request service/method matcher. If this field is not specified, all services and methods will match.</summary>
 public partial class V1GRPCRouteSpecRulesMatchesMethod
 {
     /// <summary>Value of the method to match against. If left empty or omitted, will match all services.   At least one of Service and Method MUST be a non-empty string.</summary>
@@ -436,6 +460,7 @@ public partial class V1GRPCRouteSpecRulesMatchesMethod
     public V1GRPCRouteSpecRulesMatchesMethodTypeEnum? Type { get; set; }
 }
 
+/// <summary>GRPCRouteMatch defines the predicate used to match requests to a given action. Multiple match types are ANDed together, i.e. the match will evaluate to true only if all conditions are satisfied.   For example, the match below will match a gRPC request only if its service is `foo` AND it contains the `version: v1` header:   ``` matches:   - method:     type: Exact     service: "foo"     headers:   - name: "version"     value "v1"   ```</summary>
 public partial class V1GRPCRouteSpecRulesMatches
 {
     /// <summary>Headers specifies gRPC request header matchers. Multiple match values are ANDed together, meaning, a request MUST match all the specified headers to select the route.</summary>
@@ -447,6 +472,7 @@ public partial class V1GRPCRouteSpecRulesMatches
     public V1GRPCRouteSpecRulesMatchesMethod? Method { get; set; }
 }
 
+/// <summary>GRPCRouteRule defines the semantics for matching a gRPC request based on conditions (matches), processing it (filters), and forwarding the request to an API object (backendRefs).</summary>
 public partial class V1GRPCRouteSpecRules
 {
     /// <summary>BackendRefs defines the backend(s) where matching requests should be sent.   Failure behavior here depends on how many BackendRefs are specified and how many are invalid.   If *all* entries in BackendRefs are invalid, and there are also no filters specified in this route rule, *all* traffic which matches this rule MUST receive an `UNAVAILABLE` status.   See the GRPCBackendRef definition for the rules about what makes a single GRPCBackendRef invalid.   When a GRPCBackendRef is invalid, `UNAVAILABLE` statuses MUST be returned for requests that would have otherwise been routed to an invalid backend. If multiple backends are specified, and some are invalid, the proportion of requests that would otherwise have been routed to an invalid backend MUST receive an `UNAVAILABLE` status.   For example, if two backends are specified with equal weights, and one is invalid, 50 percent of traffic MUST receive an `UNAVAILABLE` status. Implementations may choose how that 50 percent is determined.   Support: Core for Kubernetes Service   Support: Implementation-specific for any other resource   Support for weight: Core</summary>
@@ -462,6 +488,7 @@ public partial class V1GRPCRouteSpecRules
     public IList<V1GRPCRouteSpecRulesMatches>? Matches { get; set; }
 }
 
+/// <summary>Spec defines the desired state of GRPCRoute.</summary>
 public partial class V1GRPCRouteSpec
 {
     /// <summary>Hostnames defines a set of hostnames to match against the GRPC Host header to select a GRPCRoute to process the request. This matches the RFC 1123 definition of a hostname with 2 notable exceptions:   1. IPs are not allowed. 2. A hostname may be prefixed with a wildcard label (`*.`). The wildcard    label MUST appear by itself as the first label.   If a hostname is specified by both the Listener and GRPCRoute, there MUST be at least one intersecting hostname for the GRPCRoute to be attached to the Listener. For example:   * A Listener with `test.example.com` as the hostname matches GRPCRoutes   that have either not specified any hostnames, or have specified at   least one of `test.example.com` or `*.example.com`. * A Listener with `*.example.com` as the hostname matches GRPCRoutes   that have either not specified any hostnames or have specified at least   one hostname that matches the Listener hostname. For example,   `test.example.com` and `*.example.com` would both match. On the other   hand, `example.com` and `test.example.net` would not match.   Hostnames that are prefixed with a wildcard label (`*.`) are interpreted as a suffix match. That means that a match for `*.example.com` would match both `test.example.com`, and `foo.test.example.com`, but not `example.com`.   If both the Listener and GRPCRoute have specified hostnames, any GRPCRoute hostnames that do not match the Listener hostname MUST be ignored. For example, if a Listener specified `*.example.com`, and the GRPCRoute specified `test.example.com` and `test.example.net`, `test.example.net` MUST NOT be considered for a match.   If both the Listener and GRPCRoute have specified hostnames, and none match with the criteria above, then the GRPCRoute MUST NOT be accepted by the implementation. The implementation MUST raise an 'Accepted' Condition with a status of `False` in the corresponding RouteParentStatus.   If a Route (A) of type HTTPRoute or GRPCRoute is attached to a Listener and that listener already has another Route (B) of the other type attached and the intersection of the hostnames of A and B is non-empty, then the implementation MUST accept exactly one of these two routes, determined by the following criteria, in order:   * The oldest Route based on creation timestamp. * The Route appearing first in alphabetical order by   "{namespace}/{name}".   The rejected Route MUST raise an 'Accepted' condition with a status of 'False' in the corresponding RouteParentStatus.   Support: Core</summary>
@@ -490,6 +517,7 @@ public enum V1GRPCRouteStatusParentsConditionsStatusEnum
     Unknown
 }
 
+/// <summary>Condition contains details for one aspect of the current state of this API Resource. --- This struct is intended for direct use as an array at the field path .status.conditions.  For example,   	type FooStatus struct{ 	    // Represents the observations of a foo's current state. 	    // Known .status.conditions.type are: "Available", "Progressing", and "Degraded" 	    // +patchMergeKey=type 	    // +patchStrategy=merge 	    // +listType=map 	    // +listMapKey=type 	    Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`   	    // other fields 	}</summary>
 public partial class V1GRPCRouteStatusParentsConditions
 {
     /// <summary>lastTransitionTime is the last time the condition transitioned from one status to another. This should be when the underlying condition changed.  If that is not known, then using the time when the API field changed is acceptable.</summary>
@@ -518,6 +546,7 @@ public partial class V1GRPCRouteStatusParentsConditions
     public string Type { get; set; }
 }
 
+/// <summary>ParentRef corresponds with a ParentRef in the spec that this RouteParentStatus struct describes the status of.</summary>
 public partial class V1GRPCRouteStatusParentsParentRef
 {
     /// <summary>Group is the group of the referent. When unspecified, "gateway.networking.k8s.io" is inferred. To set the core API group (such as for a "Service" kind referent), Group must be explicitly set to "" (empty string).   Support: Core</summary>
@@ -545,6 +574,7 @@ public partial class V1GRPCRouteStatusParentsParentRef
     public string? SectionName { get; set; }
 }
 
+/// <summary>RouteParentStatus describes the status of a route with respect to an associated Parent.</summary>
 public partial class V1GRPCRouteStatusParents
 {
     /// <summary>Conditions describes the status of the route with respect to the Gateway. Note that the route's availability is also subject to the Gateway's own status conditions and listener status.   If the Route's ParentRef specifies an existing Gateway that supports Routes of this kind AND that Gateway's controller has sufficient access, then that Gateway's controller MUST set the "Accepted" condition on the Route, to indicate whether the route has been accepted or rejected by the Gateway, and why.   A Route MUST be considered "Accepted" if at least one of the Route's rules is implemented by the Gateway.   There are a number of cases where the "Accepted" condition may not be set due to lack of controller visibility, that includes when:   * The Route refers to a non-existent parent. * The Route is of a type that the controller does not support. * The Route is in a namespace the controller does not have access to.</summary>
@@ -560,6 +590,7 @@ public partial class V1GRPCRouteStatusParents
     public V1GRPCRouteStatusParentsParentRef ParentRef { get; set; }
 }
 
+/// <summary>Status defines the current state of GRPCRoute.</summary>
 public partial class V1GRPCRouteStatus
 {
     /// <summary>Parents is a list of parent resources (usually Gateways) that are associated with the route, and the status of the route with respect to each parent. When this route attaches to a parent, the controller that manages the parent must add an entry to this list when the controller first sees the route and should update the entry as appropriate when the route or gateway is modified.   Note that parent references that cannot be resolved by an implementation of this API will not be added to this list. Implementations of this API can only populate Route status for the Gateways/parent resources they are responsible for.   A maximum of 32 Gateways will be represented in this list. An empty list means the route has not been attached to any Gateway.</summary>
@@ -568,6 +599,7 @@ public partial class V1GRPCRouteStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>GRPCRoute provides a way to route gRPC requests. This includes the capability to match requests by hostname, gRPC service, gRPC method, or HTTP/2 header. Filters can be used to specify additional processing steps. Backends specify where matching requests will be routed.   GRPCRoute falls under extended support within the Gateway API. Within the following specification, the word "MUST" indicates that an implementation supporting GRPCRoute must conform to the indicated requirement, but an implementation not supporting this route type need not follow the requirement unless explicitly indicated.   Implementations supporting `GRPCRoute` with the `HTTPS` `ProtocolType` MUST accept HTTP/2 connections without an initial upgrade from HTTP/1.1, i.e. via ALPN. If the implementation does not support this, then it MUST set the "Accepted" condition to "False" for the affected listener with a reason of "UnsupportedProtocol".  Implementations MAY also accept HTTP/2 connections with an upgrade from HTTP/1.   Implementations supporting `GRPCRoute` with the `HTTP` `ProtocolType` MUST support HTTP/2 over cleartext TCP (h2c, https://www.rfc-editor.org/rfc/rfc7540#section-3.1) without an initial upgrade from HTTP/1.1, i.e. with prior knowledge (https://www.rfc-editor.org/rfc/rfc7540#section-3.4). If the implementation does not support this, then it MUST set the "Accepted" condition to "False" for the affected listener with a reason of "UnsupportedProtocol". Implementations MAY also accept HTTP/2 connections with an upgrade from HTTP/1, i.e. without prior knowledge.</summary>
 public partial class V1GRPCRoute : IKubernetesObject<V1ObjectMeta>, ISpec<V1GRPCRouteSpec>, IStatus<V1GRPCRouteStatus>
 {
     public const string KubeApiVersion = "v1";

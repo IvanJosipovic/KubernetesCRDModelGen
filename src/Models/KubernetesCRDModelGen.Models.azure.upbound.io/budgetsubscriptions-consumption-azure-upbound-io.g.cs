@@ -18,6 +18,7 @@ public enum V1beta1BudgetSubscriptionSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSubscriptionSpecForProviderFilterDimension
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1BudgetSubscriptionSpecForProviderFilterDimension
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSubscriptionSpecForProviderFilterNotDimension
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -48,6 +50,7 @@ public partial class V1beta1BudgetSubscriptionSpecForProviderFilterNotDimension
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSubscriptionSpecForProviderFilterNotTag
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -63,6 +66,7 @@ public partial class V1beta1BudgetSubscriptionSpecForProviderFilterNotTag
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSubscriptionSpecForProviderFilterNot
 {
     /// <summary>One dimension block as defined below to filter the budget on. Conflicts with tag.</summary>
@@ -74,6 +78,7 @@ public partial class V1beta1BudgetSubscriptionSpecForProviderFilterNot
     public IList<V1beta1BudgetSubscriptionSpecForProviderFilterNotTag>? Tag { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSubscriptionSpecForProviderFilterTag
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -89,6 +94,7 @@ public partial class V1beta1BudgetSubscriptionSpecForProviderFilterTag
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSubscriptionSpecForProviderFilter
 {
     /// <summary>One or more dimension blocks as defined below to filter the budget on.</summary>
@@ -124,6 +130,7 @@ public enum V1beta1BudgetSubscriptionSpecForProviderNotificationContactGroupsRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BudgetSubscriptionSpecForProviderNotificationContactGroupsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -137,6 +144,7 @@ public partial class V1beta1BudgetSubscriptionSpecForProviderNotificationContact
     public V1beta1BudgetSubscriptionSpecForProviderNotificationContactGroupsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1BudgetSubscriptionSpecForProviderNotificationContactGroupsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -168,6 +176,7 @@ public enum V1beta1BudgetSubscriptionSpecForProviderNotificationContactGroupsSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BudgetSubscriptionSpecForProviderNotificationContactGroupsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -181,6 +190,7 @@ public partial class V1beta1BudgetSubscriptionSpecForProviderNotificationContact
     public V1beta1BudgetSubscriptionSpecForProviderNotificationContactGroupsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of MonitorActionGroup in insights to populate contactGroups.</summary>
 public partial class V1beta1BudgetSubscriptionSpecForProviderNotificationContactGroupsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -196,6 +206,7 @@ public partial class V1beta1BudgetSubscriptionSpecForProviderNotificationContact
     public V1beta1BudgetSubscriptionSpecForProviderNotificationContactGroupsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSubscriptionSpecForProviderNotification
 {
     /// <summary>Specifies a list of email addresses to send the budget notification to when the threshold is exceeded.</summary>
@@ -235,6 +246,7 @@ public partial class V1beta1BudgetSubscriptionSpecForProviderNotification
     public string? ThresholdType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSubscriptionSpecForProviderTimePeriod
 {
     /// <summary>The end date for the budget. If not set this will be 10 years after the start date.</summary>
@@ -246,6 +258,7 @@ public partial class V1beta1BudgetSubscriptionSpecForProviderTimePeriod
     public string? StartDate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSubscriptionSpecForProvider
 {
     /// <summary>The total amount of cost to track with the budget.</summary>
@@ -277,6 +290,7 @@ public partial class V1beta1BudgetSubscriptionSpecForProvider
     public IList<V1beta1BudgetSubscriptionSpecForProviderTimePeriod>? TimePeriod { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSubscriptionSpecInitProviderFilterDimension
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -292,6 +306,7 @@ public partial class V1beta1BudgetSubscriptionSpecInitProviderFilterDimension
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSubscriptionSpecInitProviderFilterNotDimension
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -307,6 +322,7 @@ public partial class V1beta1BudgetSubscriptionSpecInitProviderFilterNotDimension
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSubscriptionSpecInitProviderFilterNotTag
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -322,6 +338,7 @@ public partial class V1beta1BudgetSubscriptionSpecInitProviderFilterNotTag
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSubscriptionSpecInitProviderFilterNot
 {
     /// <summary>One dimension block as defined below to filter the budget on. Conflicts with tag.</summary>
@@ -333,6 +350,7 @@ public partial class V1beta1BudgetSubscriptionSpecInitProviderFilterNot
     public IList<V1beta1BudgetSubscriptionSpecInitProviderFilterNotTag>? Tag { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSubscriptionSpecInitProviderFilterTag
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -348,6 +366,7 @@ public partial class V1beta1BudgetSubscriptionSpecInitProviderFilterTag
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSubscriptionSpecInitProviderFilter
 {
     /// <summary>One or more dimension blocks as defined below to filter the budget on.</summary>
@@ -383,6 +402,7 @@ public enum V1beta1BudgetSubscriptionSpecInitProviderNotificationContactGroupsRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BudgetSubscriptionSpecInitProviderNotificationContactGroupsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -396,6 +416,7 @@ public partial class V1beta1BudgetSubscriptionSpecInitProviderNotificationContac
     public V1beta1BudgetSubscriptionSpecInitProviderNotificationContactGroupsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1BudgetSubscriptionSpecInitProviderNotificationContactGroupsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -427,6 +448,7 @@ public enum V1beta1BudgetSubscriptionSpecInitProviderNotificationContactGroupsSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BudgetSubscriptionSpecInitProviderNotificationContactGroupsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -440,6 +462,7 @@ public partial class V1beta1BudgetSubscriptionSpecInitProviderNotificationContac
     public V1beta1BudgetSubscriptionSpecInitProviderNotificationContactGroupsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of MonitorActionGroup in insights to populate contactGroups.</summary>
 public partial class V1beta1BudgetSubscriptionSpecInitProviderNotificationContactGroupsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -455,6 +478,7 @@ public partial class V1beta1BudgetSubscriptionSpecInitProviderNotificationContac
     public V1beta1BudgetSubscriptionSpecInitProviderNotificationContactGroupsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSubscriptionSpecInitProviderNotification
 {
     /// <summary>Specifies a list of email addresses to send the budget notification to when the threshold is exceeded.</summary>
@@ -494,6 +518,7 @@ public partial class V1beta1BudgetSubscriptionSpecInitProviderNotification
     public string? ThresholdType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSubscriptionSpecInitProviderTimePeriod
 {
     /// <summary>The end date for the budget. If not set this will be 10 years after the start date.</summary>
@@ -505,6 +530,7 @@ public partial class V1beta1BudgetSubscriptionSpecInitProviderTimePeriod
     public string? StartDate { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1BudgetSubscriptionSpecInitProvider
 {
     /// <summary>The total amount of cost to track with the budget.</summary>
@@ -578,6 +604,7 @@ public enum V1beta1BudgetSubscriptionSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BudgetSubscriptionSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -591,6 +618,7 @@ public partial class V1beta1BudgetSubscriptionSpecProviderConfigRefPolicy
     public V1beta1BudgetSubscriptionSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1BudgetSubscriptionSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -622,6 +650,7 @@ public enum V1beta1BudgetSubscriptionSpecPublishConnectionDetailsToConfigRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BudgetSubscriptionSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -635,6 +664,7 @@ public partial class V1beta1BudgetSubscriptionSpecPublishConnectionDetailsToConf
     public V1beta1BudgetSubscriptionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1BudgetSubscriptionSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -646,6 +676,7 @@ public partial class V1beta1BudgetSubscriptionSpecPublishConnectionDetailsToConf
     public V1beta1BudgetSubscriptionSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1BudgetSubscriptionSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -661,6 +692,7 @@ public partial class V1beta1BudgetSubscriptionSpecPublishConnectionDetailsToMeta
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1BudgetSubscriptionSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -676,6 +708,7 @@ public partial class V1beta1BudgetSubscriptionSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1BudgetSubscriptionSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -687,6 +720,7 @@ public partial class V1beta1BudgetSubscriptionSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>BudgetSubscriptionSpec defines the desired state of BudgetSubscription</summary>
 public partial class V1beta1BudgetSubscriptionSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -719,6 +753,7 @@ public partial class V1beta1BudgetSubscriptionSpec
     public V1beta1BudgetSubscriptionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSubscriptionStatusAtProviderFilterDimension
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -734,6 +769,7 @@ public partial class V1beta1BudgetSubscriptionStatusAtProviderFilterDimension
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSubscriptionStatusAtProviderFilterNotDimension
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -749,6 +785,7 @@ public partial class V1beta1BudgetSubscriptionStatusAtProviderFilterNotDimension
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSubscriptionStatusAtProviderFilterNotTag
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -764,6 +801,7 @@ public partial class V1beta1BudgetSubscriptionStatusAtProviderFilterNotTag
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSubscriptionStatusAtProviderFilterNot
 {
     /// <summary>One dimension block as defined below to filter the budget on. Conflicts with tag.</summary>
@@ -775,6 +813,7 @@ public partial class V1beta1BudgetSubscriptionStatusAtProviderFilterNot
     public IList<V1beta1BudgetSubscriptionStatusAtProviderFilterNotTag>? Tag { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSubscriptionStatusAtProviderFilterTag
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -790,6 +829,7 @@ public partial class V1beta1BudgetSubscriptionStatusAtProviderFilterTag
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSubscriptionStatusAtProviderFilter
 {
     /// <summary>One or more dimension blocks as defined below to filter the budget on.</summary>
@@ -805,6 +845,7 @@ public partial class V1beta1BudgetSubscriptionStatusAtProviderFilter
     public IList<V1beta1BudgetSubscriptionStatusAtProviderFilterTag>? Tag { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSubscriptionStatusAtProviderNotification
 {
     /// <summary>Specifies a list of email addresses to send the budget notification to when the threshold is exceeded.</summary>
@@ -836,6 +877,7 @@ public partial class V1beta1BudgetSubscriptionStatusAtProviderNotification
     public string? ThresholdType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSubscriptionStatusAtProviderTimePeriod
 {
     /// <summary>The end date for the budget. If not set this will be 10 years after the start date.</summary>
@@ -847,6 +889,7 @@ public partial class V1beta1BudgetSubscriptionStatusAtProviderTimePeriod
     public string? StartDate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSubscriptionStatusAtProvider
 {
     /// <summary>The total amount of cost to track with the budget.</summary>
@@ -882,6 +925,7 @@ public partial class V1beta1BudgetSubscriptionStatusAtProvider
     public IList<V1beta1BudgetSubscriptionStatusAtProviderTimePeriod>? TimePeriod { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1BudgetSubscriptionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -909,6 +953,7 @@ public partial class V1beta1BudgetSubscriptionStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>BudgetSubscriptionStatus defines the observed state of BudgetSubscription.</summary>
 public partial class V1beta1BudgetSubscriptionStatus
 {
     /// <summary></summary>
@@ -925,6 +970,7 @@ public partial class V1beta1BudgetSubscriptionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>BudgetSubscription is the Schema for the BudgetSubscriptions API. Manages a Subscription Consumption Budget.</summary>
 public partial class V1beta1BudgetSubscription : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BudgetSubscriptionSpec>, IStatus<V1beta1BudgetSubscriptionStatus>
 {
     public const string KubeApiVersion = "v1beta1";

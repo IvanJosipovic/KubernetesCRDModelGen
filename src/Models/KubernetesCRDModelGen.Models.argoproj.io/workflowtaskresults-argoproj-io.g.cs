@@ -8,10 +8,12 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.argoproj.io;
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsArchiveNone
 {
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsArchiveTar
 {
     /// <summary></summary>
@@ -19,10 +21,12 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsArchiveTar
     public int? CompressionLevel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsArchiveZip
 {
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsArchive
 {
     /// <summary></summary>
@@ -38,6 +42,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsArchive
     public V1alpha1WorkflowTaskResultOutputsArtifactsArchiveZip? Zip { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsArtifactGCPodMetadata
 {
     /// <summary></summary>
@@ -65,6 +70,7 @@ public enum V1alpha1WorkflowTaskResultOutputsArtifactsArtifactGCStrategyEnum
     Never
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsArtifactGC
 {
     /// <summary></summary>
@@ -81,6 +87,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsArtifactGC
     public V1alpha1WorkflowTaskResultOutputsArtifactsArtifactGCStrategyEnum? Strategy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsArtifactoryPasswordSecret
 {
     /// <summary></summary>
@@ -96,6 +103,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsArtifactoryPasswo
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsArtifactoryUsernameSecret
 {
     /// <summary></summary>
@@ -111,6 +119,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsArtifactoryUserna
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsArtifactory
 {
     /// <summary></summary>
@@ -126,6 +135,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsArtifactory
     public V1alpha1WorkflowTaskResultOutputsArtifactsArtifactoryUsernameSecret? UsernameSecret { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsAzureAccountKeySecret
 {
     /// <summary></summary>
@@ -141,6 +151,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsAzureAccountKeySe
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsAzure
 {
     /// <summary></summary>
@@ -164,6 +175,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsAzure
     public bool? UseSDKCreds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsGcsServiceAccountKeySecret
 {
     /// <summary></summary>
@@ -179,6 +191,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsGcsServiceAccount
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsGcs
 {
     /// <summary></summary>
@@ -194,6 +207,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsGcs
     public V1alpha1WorkflowTaskResultOutputsArtifactsGcsServiceAccountKeySecret? ServiceAccountKeySecret { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsGitPasswordSecret
 {
     /// <summary></summary>
@@ -209,6 +223,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsGitPasswordSecret
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsGitSshPrivateKeySecret
 {
     /// <summary></summary>
@@ -224,6 +239,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsGitSshPrivateKeyS
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsGitUsernameSecret
 {
     /// <summary></summary>
@@ -239,6 +255,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsGitUsernameSecret
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsGit
 {
     /// <summary></summary>
@@ -286,6 +303,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsGit
     public V1alpha1WorkflowTaskResultOutputsArtifactsGitUsernameSecret? UsernameSecret { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsHdfsKrbCCacheSecret
 {
     /// <summary></summary>
@@ -301,6 +319,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsHdfsKrbCCacheSecr
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsHdfsKrbConfigConfigMap
 {
     /// <summary></summary>
@@ -316,6 +335,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsHdfsKrbConfigConf
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsHdfsKrbKeytabSecret
 {
     /// <summary></summary>
@@ -331,6 +351,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsHdfsKrbKeytabSecr
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsHdfs
 {
     /// <summary></summary>
@@ -374,6 +395,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsHdfs
     public string Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsHttpAuthBasicAuthPasswordSecret
 {
     /// <summary></summary>
@@ -389,6 +411,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsHttpAuthBasicAuth
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsHttpAuthBasicAuthUsernameSecret
 {
     /// <summary></summary>
@@ -404,6 +427,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsHttpAuthBasicAuth
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsHttpAuthBasicAuth
 {
     /// <summary></summary>
@@ -415,6 +439,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsHttpAuthBasicAuth
     public V1alpha1WorkflowTaskResultOutputsArtifactsHttpAuthBasicAuthUsernameSecret? UsernameSecret { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsHttpAuthClientCertClientCertSecret
 {
     /// <summary></summary>
@@ -430,6 +455,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsHttpAuthClientCer
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsHttpAuthClientCertClientKeySecret
 {
     /// <summary></summary>
@@ -445,6 +471,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsHttpAuthClientCer
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsHttpAuthClientCert
 {
     /// <summary></summary>
@@ -456,6 +483,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsHttpAuthClientCer
     public V1alpha1WorkflowTaskResultOutputsArtifactsHttpAuthClientCertClientKeySecret? ClientKeySecret { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsHttpAuthOauth2ClientIDSecret
 {
     /// <summary></summary>
@@ -471,6 +499,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsHttpAuthOauth2Cli
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsHttpAuthOauth2ClientSecretSecret
 {
     /// <summary></summary>
@@ -486,6 +515,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsHttpAuthOauth2Cli
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsHttpAuthOauth2EndpointParams
 {
     /// <summary></summary>
@@ -497,6 +527,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsHttpAuthOauth2End
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsHttpAuthOauth2TokenURLSecret
 {
     /// <summary></summary>
@@ -512,6 +543,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsHttpAuthOauth2Tok
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsHttpAuthOauth2
 {
     /// <summary></summary>
@@ -535,6 +567,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsHttpAuthOauth2
     public V1alpha1WorkflowTaskResultOutputsArtifactsHttpAuthOauth2TokenURLSecret? TokenURLSecret { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsHttpAuth
 {
     /// <summary></summary>
@@ -550,6 +583,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsHttpAuth
     public V1alpha1WorkflowTaskResultOutputsArtifactsHttpAuthOauth2? Oauth2 { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsHttpHeaders
 {
     /// <summary></summary>
@@ -561,6 +595,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsHttpHeaders
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsHttp
 {
     /// <summary></summary>
@@ -576,6 +611,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsHttp
     public string Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsOssAccessKeySecret
 {
     /// <summary></summary>
@@ -591,6 +627,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsOssAccessKeySecre
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsOssLifecycleRule
 {
     /// <summary></summary>
@@ -602,6 +639,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsOssLifecycleRule
     public int? MarkInfrequentAccessAfterDays { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsOssSecretKeySecret
 {
     /// <summary></summary>
@@ -617,6 +655,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsOssSecretKeySecre
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsOss
 {
     /// <summary></summary>
@@ -656,6 +695,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsOss
     public bool? UseSDKCreds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsRaw
 {
     /// <summary></summary>
@@ -663,6 +703,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsRaw
     public string Data { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsS3AccessKeySecret
 {
     /// <summary></summary>
@@ -678,6 +719,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsS3AccessKeySecret
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsS3CaSecret
 {
     /// <summary></summary>
@@ -693,6 +735,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsS3CaSecret
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsS3CreateBucketIfNotPresent
 {
     /// <summary></summary>
@@ -700,6 +743,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsS3CreateBucketIfN
     public bool? ObjectLocking { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsS3EncryptionOptionsServerSideCustomerKeySecret
 {
     /// <summary></summary>
@@ -715,6 +759,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsS3EncryptionOptio
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsS3EncryptionOptions
 {
     /// <summary></summary>
@@ -734,6 +779,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsS3EncryptionOptio
     public V1alpha1WorkflowTaskResultOutputsArtifactsS3EncryptionOptionsServerSideCustomerKeySecret? ServerSideCustomerKeySecret { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsS3SecretKeySecret
 {
     /// <summary></summary>
@@ -749,6 +795,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsS3SecretKeySecret
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsS3
 {
     /// <summary></summary>
@@ -800,6 +847,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsS3
     public bool? UseSDKCreds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsArtifacts
 {
     /// <summary></summary>
@@ -891,6 +939,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifacts
     public string? SubPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsParametersValueFromConfigMapKeyRef
 {
     /// <summary></summary>
@@ -906,10 +955,12 @@ public partial class V1alpha1WorkflowTaskResultOutputsParametersValueFromConfigM
     public bool? Optional { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsParametersValueFromSupplied
 {
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsParametersValueFrom
 {
     /// <summary></summary>
@@ -949,6 +1000,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsParametersValueFrom
     public V1alpha1WorkflowTaskResultOutputsParametersValueFromSupplied? Supplied { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputsParameters
 {
     /// <summary></summary>
@@ -980,6 +1032,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsParameters
     public V1alpha1WorkflowTaskResultOutputsParametersValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResultOutputs
 {
     /// <summary></summary>
@@ -1000,6 +1053,7 @@ public partial class V1alpha1WorkflowTaskResultOutputs
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1WorkflowTaskResult : IKubernetesObject<V1ObjectMeta>
 {
     public const string KubeApiVersion = "v1alpha1";

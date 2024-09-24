@@ -18,6 +18,7 @@ public enum V1beta1InstanceFromTemplateSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecForProviderAdvancedMachineFeatures
 {
     /// <summary></summary>
@@ -33,6 +34,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderAdvancedMachineFe
     public double? VisibleCoreCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecForProviderAttachedDisk
 {
     /// <summary>A unique name for the resource, required by GCE. Changing this forces a new resource to be created.</summary>
@@ -60,6 +62,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderAttachedDisk
     public string? Source { get; set; }
 }
 
+/// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
 public partial class V1beta1InstanceFromTemplateSpecForProviderBootDiskDiskEncryptionKeyRawSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -75,6 +78,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderBootDiskDiskEncry
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecForProviderBootDiskInitializeParams
 {
     /// <summary></summary>
@@ -114,6 +118,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderBootDiskInitializ
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecForProviderBootDisk
 {
     /// <summary>Default is 6 minutes.</summary>
@@ -145,6 +150,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderBootDisk
     public string? Source { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecForProviderConfidentialInstanceConfig
 {
     /// <summary></summary>
@@ -156,6 +162,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderConfidentialInsta
     public bool? EnableConfidentialCompute { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecForProviderGuestAccelerator
 {
     /// <summary></summary>
@@ -167,6 +174,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderGuestAccelerator
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceAccessConfig
 {
     /// <summary></summary>
@@ -182,6 +190,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceA
     public string? PublicPtrDomainName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceAliasIpRange
 {
     /// <summary></summary>
@@ -193,6 +202,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceA
     public string? SubnetworkRangeName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceIpv6AccessConfig
 {
     /// <summary></summary>
@@ -236,6 +246,7 @@ public enum V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceNetworkRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceNetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -249,6 +260,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceN
     public V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceNetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate network.</summary>
 public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceNetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -280,6 +292,7 @@ public enum V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceNetworkSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceNetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -293,6 +306,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceN
     public V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceNetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate network.</summary>
 public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceNetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -328,6 +342,7 @@ public enum V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceSubnetwork
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceSubnetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -341,6 +356,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceS
     public V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceSubnetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnetwork in compute to populate subnetwork.</summary>
 public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceSubnetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -372,6 +388,7 @@ public enum V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceSubnetwork
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceSubnetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -385,6 +402,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceS
     public V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceSubnetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnetwork in compute to populate subnetwork.</summary>
 public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceSubnetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -400,6 +418,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceS
     public V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceSubnetworkSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterface
 {
     /// <summary></summary>
@@ -467,6 +486,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterface
     public V1beta1InstanceFromTemplateSpecForProviderNetworkInterfaceSubnetworkSelector? SubnetworkSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkPerformanceConfig
 {
     /// <summary></summary>
@@ -474,6 +494,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkPerformanc
     public string? TotalEgressBandwidthTier { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecForProviderParams
 {
     /// <summary></summary>
@@ -481,6 +502,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderParams
     public IDictionary<string, string>? ResourceManagerTags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecForProviderReservationAffinitySpecificReservation
 {
     /// <summary></summary>
@@ -492,6 +514,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderReservationAffini
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecForProviderReservationAffinity
 {
     /// <summary></summary>
@@ -503,6 +526,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderReservationAffini
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecForProviderSchedulingLocalSsdRecoveryTimeout
 {
     /// <summary></summary>
@@ -514,6 +538,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderSchedulingLocalSs
     public double? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecForProviderSchedulingMaxRunDuration
 {
     /// <summary></summary>
@@ -525,6 +550,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderSchedulingMaxRunD
     public double? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecForProviderSchedulingNodeAffinities
 {
     /// <summary></summary>
@@ -540,6 +566,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderSchedulingNodeAff
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecForProviderSchedulingOnInstanceStopAction
 {
     /// <summary></summary>
@@ -547,6 +574,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderSchedulingOnInsta
     public bool? DiscardLocalSsd { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecForProviderScheduling
 {
     /// <summary></summary>
@@ -590,6 +618,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderScheduling
     public string? ProvisioningModel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecForProviderScratchDisk
 {
     /// <summary>A unique name for the resource, required by GCE. Changing this forces a new resource to be created.</summary>
@@ -605,6 +634,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderScratchDisk
     public double? Size { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecForProviderServiceAccount
 {
     /// <summary></summary>
@@ -616,6 +646,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderServiceAccount
     public IList<string>? Scopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecForProviderShieldedInstanceConfig
 {
     /// <summary></summary>
@@ -651,6 +682,7 @@ public enum V1beta1InstanceFromTemplateSpecForProviderSourceInstanceTemplateRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceFromTemplateSpecForProviderSourceInstanceTemplateRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -664,6 +696,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderSourceInstanceTem
     public V1beta1InstanceFromTemplateSpecForProviderSourceInstanceTemplateRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a InstanceTemplate in compute to populate sourceInstanceTemplate.</summary>
 public partial class V1beta1InstanceFromTemplateSpecForProviderSourceInstanceTemplateRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -695,6 +728,7 @@ public enum V1beta1InstanceFromTemplateSpecForProviderSourceInstanceTemplateSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceFromTemplateSpecForProviderSourceInstanceTemplateSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -708,6 +742,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderSourceInstanceTem
     public V1beta1InstanceFromTemplateSpecForProviderSourceInstanceTemplateSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a InstanceTemplate in compute to populate sourceInstanceTemplate.</summary>
 public partial class V1beta1InstanceFromTemplateSpecForProviderSourceInstanceTemplateSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -723,6 +758,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderSourceInstanceTem
     public V1beta1InstanceFromTemplateSpecForProviderSourceInstanceTemplateSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecForProvider
 {
     /// <summary></summary>
@@ -858,6 +894,7 @@ public partial class V1beta1InstanceFromTemplateSpecForProvider
     public string? Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecInitProviderAdvancedMachineFeatures
 {
     /// <summary></summary>
@@ -873,6 +910,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderAdvancedMachineF
     public double? VisibleCoreCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecInitProviderAttachedDisk
 {
     /// <summary>A unique name for the resource, required by GCE. Changing this forces a new resource to be created.</summary>
@@ -900,6 +938,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderAttachedDisk
     public string? Source { get; set; }
 }
 
+/// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
 public partial class V1beta1InstanceFromTemplateSpecInitProviderBootDiskDiskEncryptionKeyRawSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -915,6 +954,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderBootDiskDiskEncr
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecInitProviderBootDiskInitializeParams
 {
     /// <summary></summary>
@@ -954,6 +994,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderBootDiskInitiali
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecInitProviderBootDisk
 {
     /// <summary>Default is 6 minutes.</summary>
@@ -985,6 +1026,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderBootDisk
     public string? Source { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecInitProviderConfidentialInstanceConfig
 {
     /// <summary></summary>
@@ -996,6 +1038,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderConfidentialInst
     public bool? EnableConfidentialCompute { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecInitProviderGuestAccelerator
 {
     /// <summary></summary>
@@ -1007,6 +1050,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderGuestAccelerator
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceAccessConfig
 {
     /// <summary></summary>
@@ -1022,6 +1066,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterface
     public string? PublicPtrDomainName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceAliasIpRange
 {
     /// <summary></summary>
@@ -1033,6 +1078,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterface
     public string? SubnetworkRangeName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceIpv6AccessConfig
 {
     /// <summary></summary>
@@ -1076,6 +1122,7 @@ public enum V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceNetworkRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceNetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1089,6 +1136,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterface
     public V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceNetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate network.</summary>
 public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceNetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1120,6 +1168,7 @@ public enum V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceNetworkSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceNetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1133,6 +1182,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterface
     public V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceNetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate network.</summary>
 public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceNetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1168,6 +1218,7 @@ public enum V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceSubnetwor
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceSubnetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1181,6 +1232,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterface
     public V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceSubnetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnetwork in compute to populate subnetwork.</summary>
 public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceSubnetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1212,6 +1264,7 @@ public enum V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceSubnetwor
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceSubnetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1225,6 +1278,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterface
     public V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceSubnetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnetwork in compute to populate subnetwork.</summary>
 public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceSubnetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1240,6 +1294,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterface
     public V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceSubnetworkSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterface
 {
     /// <summary></summary>
@@ -1307,6 +1362,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterface
     public V1beta1InstanceFromTemplateSpecInitProviderNetworkInterfaceSubnetworkSelector? SubnetworkSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkPerformanceConfig
 {
     /// <summary></summary>
@@ -1314,6 +1370,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkPerforman
     public string? TotalEgressBandwidthTier { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecInitProviderParams
 {
     /// <summary></summary>
@@ -1321,6 +1378,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderParams
     public IDictionary<string, string>? ResourceManagerTags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecInitProviderReservationAffinitySpecificReservation
 {
     /// <summary></summary>
@@ -1332,6 +1390,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderReservationAffin
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecInitProviderReservationAffinity
 {
     /// <summary></summary>
@@ -1343,6 +1402,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderReservationAffin
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecInitProviderSchedulingLocalSsdRecoveryTimeout
 {
     /// <summary></summary>
@@ -1354,6 +1414,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderSchedulingLocalS
     public double? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecInitProviderSchedulingMaxRunDuration
 {
     /// <summary></summary>
@@ -1365,6 +1426,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderSchedulingMaxRun
     public double? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecInitProviderSchedulingNodeAffinities
 {
     /// <summary></summary>
@@ -1380,6 +1442,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderSchedulingNodeAf
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecInitProviderSchedulingOnInstanceStopAction
 {
     /// <summary></summary>
@@ -1387,6 +1450,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderSchedulingOnInst
     public bool? DiscardLocalSsd { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecInitProviderScheduling
 {
     /// <summary></summary>
@@ -1430,6 +1494,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderScheduling
     public string? ProvisioningModel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecInitProviderScratchDisk
 {
     /// <summary>A unique name for the resource, required by GCE. Changing this forces a new resource to be created.</summary>
@@ -1445,6 +1510,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderScratchDisk
     public double? Size { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecInitProviderServiceAccount
 {
     /// <summary></summary>
@@ -1456,6 +1522,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderServiceAccount
     public IList<string>? Scopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateSpecInitProviderShieldedInstanceConfig
 {
     /// <summary></summary>
@@ -1491,6 +1558,7 @@ public enum V1beta1InstanceFromTemplateSpecInitProviderSourceInstanceTemplateRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceFromTemplateSpecInitProviderSourceInstanceTemplateRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1504,6 +1572,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderSourceInstanceTe
     public V1beta1InstanceFromTemplateSpecInitProviderSourceInstanceTemplateRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a InstanceTemplate in compute to populate sourceInstanceTemplate.</summary>
 public partial class V1beta1InstanceFromTemplateSpecInitProviderSourceInstanceTemplateRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1535,6 +1604,7 @@ public enum V1beta1InstanceFromTemplateSpecInitProviderSourceInstanceTemplateSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1InstanceFromTemplateSpecInitProviderSourceInstanceTemplateSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1548,6 +1618,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderSourceInstanceTe
     public V1beta1InstanceFromTemplateSpecInitProviderSourceInstanceTemplateSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a InstanceTemplate in compute to populate sourceInstanceTemplate.</summary>
 public partial class V1beta1InstanceFromTemplateSpecInitProviderSourceInstanceTemplateSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1563,6 +1634,7 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderSourceInstanceTe
     public V1beta1InstanceFromTemplateSpecInitProviderSourceInstanceTemplateSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1InstanceFromTemplateSpecInitProvider
 {
     /// <summary></summary>
@@ -1740,6 +1812,7 @@ public enum V1beta1InstanceFromTemplateSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceFromTemplateSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1753,6 +1826,7 @@ public partial class V1beta1InstanceFromTemplateSpecProviderConfigRefPolicy
     public V1beta1InstanceFromTemplateSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1InstanceFromTemplateSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1784,6 +1858,7 @@ public enum V1beta1InstanceFromTemplateSpecPublishConnectionDetailsToConfigRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1InstanceFromTemplateSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1797,6 +1872,7 @@ public partial class V1beta1InstanceFromTemplateSpecPublishConnectionDetailsToCo
     public V1beta1InstanceFromTemplateSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1InstanceFromTemplateSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1808,6 +1884,7 @@ public partial class V1beta1InstanceFromTemplateSpecPublishConnectionDetailsToCo
     public V1beta1InstanceFromTemplateSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1InstanceFromTemplateSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1823,6 +1900,7 @@ public partial class V1beta1InstanceFromTemplateSpecPublishConnectionDetailsToMe
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1InstanceFromTemplateSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1838,6 +1916,7 @@ public partial class V1beta1InstanceFromTemplateSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1InstanceFromTemplateSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1849,6 +1928,7 @@ public partial class V1beta1InstanceFromTemplateSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>InstanceFromTemplateSpec defines the desired state of InstanceFromTemplate</summary>
 public partial class V1beta1InstanceFromTemplateSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1881,6 +1961,7 @@ public partial class V1beta1InstanceFromTemplateSpec
     public V1beta1InstanceFromTemplateSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateStatusAtProviderAdvancedMachineFeatures
 {
     /// <summary></summary>
@@ -1896,6 +1977,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderAdvancedMachineF
     public double? VisibleCoreCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateStatusAtProviderAttachedDisk
 {
     /// <summary>A unique name for the resource, required by GCE. Changing this forces a new resource to be created.</summary>
@@ -1923,6 +2005,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderAttachedDisk
     public string? Source { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateStatusAtProviderBootDiskInitializeParams
 {
     /// <summary></summary>
@@ -1962,6 +2045,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderBootDiskInitiali
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateStatusAtProviderBootDisk
 {
     /// <summary>Default is 6 minutes.</summary>
@@ -1993,6 +2077,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderBootDisk
     public string? Source { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateStatusAtProviderConfidentialInstanceConfig
 {
     /// <summary></summary>
@@ -2004,6 +2089,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderConfidentialInst
     public bool? EnableConfidentialCompute { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateStatusAtProviderGuestAccelerator
 {
     /// <summary></summary>
@@ -2015,6 +2101,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderGuestAccelerator
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateStatusAtProviderNetworkInterfaceAccessConfig
 {
     /// <summary></summary>
@@ -2030,6 +2117,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderNetworkInterface
     public string? PublicPtrDomainName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateStatusAtProviderNetworkInterfaceAliasIpRange
 {
     /// <summary></summary>
@@ -2041,6 +2129,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderNetworkInterface
     public string? SubnetworkRangeName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateStatusAtProviderNetworkInterfaceIpv6AccessConfig
 {
     /// <summary></summary>
@@ -2064,6 +2153,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderNetworkInterface
     public string? PublicPtrDomainName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateStatusAtProviderNetworkInterface
 {
     /// <summary></summary>
@@ -2123,6 +2213,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderNetworkInterface
     public string? SubnetworkProject { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateStatusAtProviderNetworkPerformanceConfig
 {
     /// <summary></summary>
@@ -2130,6 +2221,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderNetworkPerforman
     public string? TotalEgressBandwidthTier { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateStatusAtProviderParams
 {
     /// <summary></summary>
@@ -2137,6 +2229,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderParams
     public IDictionary<string, string>? ResourceManagerTags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateStatusAtProviderReservationAffinitySpecificReservation
 {
     /// <summary></summary>
@@ -2148,6 +2241,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderReservationAffin
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateStatusAtProviderReservationAffinity
 {
     /// <summary></summary>
@@ -2159,6 +2253,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderReservationAffin
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateStatusAtProviderSchedulingLocalSsdRecoveryTimeout
 {
     /// <summary></summary>
@@ -2170,6 +2265,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderSchedulingLocalS
     public double? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateStatusAtProviderSchedulingMaxRunDuration
 {
     /// <summary></summary>
@@ -2181,6 +2277,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderSchedulingMaxRun
     public double? Seconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateStatusAtProviderSchedulingNodeAffinities
 {
     /// <summary></summary>
@@ -2196,6 +2293,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderSchedulingNodeAf
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateStatusAtProviderSchedulingOnInstanceStopAction
 {
     /// <summary></summary>
@@ -2203,6 +2301,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderSchedulingOnInst
     public bool? DiscardLocalSsd { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateStatusAtProviderScheduling
 {
     /// <summary></summary>
@@ -2246,6 +2345,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderScheduling
     public string? ProvisioningModel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateStatusAtProviderScratchDisk
 {
     /// <summary>A unique name for the resource, required by GCE. Changing this forces a new resource to be created.</summary>
@@ -2261,6 +2361,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderScratchDisk
     public double? Size { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateStatusAtProviderServiceAccount
 {
     /// <summary></summary>
@@ -2272,6 +2373,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderServiceAccount
     public IList<string>? Scopes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateStatusAtProviderShieldedInstanceConfig
 {
     /// <summary></summary>
@@ -2287,6 +2389,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderShieldedInstance
     public bool? EnableVtpm { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1InstanceFromTemplateStatusAtProvider
 {
     /// <summary></summary>
@@ -2454,6 +2557,7 @@ public partial class V1beta1InstanceFromTemplateStatusAtProvider
     public string? Zone { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1InstanceFromTemplateStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2481,6 +2585,7 @@ public partial class V1beta1InstanceFromTemplateStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>InstanceFromTemplateStatus defines the observed state of InstanceFromTemplate.</summary>
 public partial class V1beta1InstanceFromTemplateStatus
 {
     /// <summary></summary>
@@ -2497,6 +2602,7 @@ public partial class V1beta1InstanceFromTemplateStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>InstanceFromTemplate is the Schema for the InstanceFromTemplates API. Manages a VM instance resource within GCE.</summary>
 public partial class V1beta1InstanceFromTemplate : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1InstanceFromTemplateSpec>, IStatus<V1beta1InstanceFromTemplateStatus>
 {
     public const string KubeApiVersion = "v1beta1";

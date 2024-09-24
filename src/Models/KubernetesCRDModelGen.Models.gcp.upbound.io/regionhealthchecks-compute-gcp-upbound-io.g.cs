@@ -18,6 +18,7 @@ public enum V1beta1RegionHealthCheckSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionHealthCheckSpecForProviderGrpcHealthCheck
 {
     /// <summary>The gRPC service name for the health check. The value of grpcServiceName has the following meanings by convention:</summary>
@@ -37,6 +38,7 @@ public partial class V1beta1RegionHealthCheckSpecForProviderGrpcHealthCheck
     public string? PortSpecification { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionHealthCheckSpecForProviderHttp2HealthCheck
 {
     /// <summary>The value of the host header in the HTTP2 health check request. If left empty (default value), the public IP on behalf of which this health check is performed will be used.</summary>
@@ -68,6 +70,7 @@ public partial class V1beta1RegionHealthCheckSpecForProviderHttp2HealthCheck
     public string? Response { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionHealthCheckSpecForProviderHttpHealthCheck
 {
     /// <summary>The value of the host header in the HTTP health check request. If left empty (default value), the public IP on behalf of which this health check is performed will be used.</summary>
@@ -99,6 +102,7 @@ public partial class V1beta1RegionHealthCheckSpecForProviderHttpHealthCheck
     public string? Response { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionHealthCheckSpecForProviderHttpsHealthCheck
 {
     /// <summary>The value of the host header in the HTTPS health check request. If left empty (default value), the public IP on behalf of which this health check is performed will be used.</summary>
@@ -130,6 +134,7 @@ public partial class V1beta1RegionHealthCheckSpecForProviderHttpsHealthCheck
     public string? Response { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionHealthCheckSpecForProviderLogConfig
 {
     /// <summary>Indicates whether or not to export logs. This is false by default, which means no health check logging will be done.</summary>
@@ -137,6 +142,7 @@ public partial class V1beta1RegionHealthCheckSpecForProviderLogConfig
     public bool? Enable { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionHealthCheckSpecForProviderSslHealthCheck
 {
     /// <summary>The TCP port number for the SSL health check request. The default value is 443.</summary>
@@ -164,6 +170,7 @@ public partial class V1beta1RegionHealthCheckSpecForProviderSslHealthCheck
     public string? Response { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionHealthCheckSpecForProviderTcpHealthCheck
 {
     /// <summary>The TCP port number for the TCP health check request. The default value is 80.</summary>
@@ -191,6 +198,7 @@ public partial class V1beta1RegionHealthCheckSpecForProviderTcpHealthCheck
     public string? Response { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionHealthCheckSpecForProvider
 {
     /// <summary>How often (in seconds) to send a health check. The default value is 5 seconds.</summary>
@@ -250,6 +258,7 @@ public partial class V1beta1RegionHealthCheckSpecForProvider
     public double? UnhealthyThreshold { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionHealthCheckSpecInitProviderGrpcHealthCheck
 {
     /// <summary>The gRPC service name for the health check. The value of grpcServiceName has the following meanings by convention:</summary>
@@ -269,6 +278,7 @@ public partial class V1beta1RegionHealthCheckSpecInitProviderGrpcHealthCheck
     public string? PortSpecification { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionHealthCheckSpecInitProviderHttp2HealthCheck
 {
     /// <summary>The value of the host header in the HTTP2 health check request. If left empty (default value), the public IP on behalf of which this health check is performed will be used.</summary>
@@ -300,6 +310,7 @@ public partial class V1beta1RegionHealthCheckSpecInitProviderHttp2HealthCheck
     public string? Response { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionHealthCheckSpecInitProviderHttpHealthCheck
 {
     /// <summary>The value of the host header in the HTTP health check request. If left empty (default value), the public IP on behalf of which this health check is performed will be used.</summary>
@@ -331,6 +342,7 @@ public partial class V1beta1RegionHealthCheckSpecInitProviderHttpHealthCheck
     public string? Response { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionHealthCheckSpecInitProviderHttpsHealthCheck
 {
     /// <summary>The value of the host header in the HTTPS health check request. If left empty (default value), the public IP on behalf of which this health check is performed will be used.</summary>
@@ -362,6 +374,7 @@ public partial class V1beta1RegionHealthCheckSpecInitProviderHttpsHealthCheck
     public string? Response { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionHealthCheckSpecInitProviderLogConfig
 {
     /// <summary>Indicates whether or not to export logs. This is false by default, which means no health check logging will be done.</summary>
@@ -369,6 +382,7 @@ public partial class V1beta1RegionHealthCheckSpecInitProviderLogConfig
     public bool? Enable { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionHealthCheckSpecInitProviderSslHealthCheck
 {
     /// <summary>The TCP port number for the SSL health check request. The default value is 443.</summary>
@@ -396,6 +410,7 @@ public partial class V1beta1RegionHealthCheckSpecInitProviderSslHealthCheck
     public string? Response { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionHealthCheckSpecInitProviderTcpHealthCheck
 {
     /// <summary>The TCP port number for the TCP health check request. The default value is 80.</summary>
@@ -423,6 +438,7 @@ public partial class V1beta1RegionHealthCheckSpecInitProviderTcpHealthCheck
     public string? Response { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1RegionHealthCheckSpecInitProvider
 {
     /// <summary>How often (in seconds) to send a health check. The default value is 5 seconds.</summary>
@@ -520,6 +536,7 @@ public enum V1beta1RegionHealthCheckSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionHealthCheckSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -533,6 +550,7 @@ public partial class V1beta1RegionHealthCheckSpecProviderConfigRefPolicy
     public V1beta1RegionHealthCheckSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1RegionHealthCheckSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -564,6 +582,7 @@ public enum V1beta1RegionHealthCheckSpecPublishConnectionDetailsToConfigRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionHealthCheckSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -577,6 +596,7 @@ public partial class V1beta1RegionHealthCheckSpecPublishConnectionDetailsToConfi
     public V1beta1RegionHealthCheckSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1RegionHealthCheckSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -588,6 +608,7 @@ public partial class V1beta1RegionHealthCheckSpecPublishConnectionDetailsToConfi
     public V1beta1RegionHealthCheckSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1RegionHealthCheckSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -603,6 +624,7 @@ public partial class V1beta1RegionHealthCheckSpecPublishConnectionDetailsToMetad
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1RegionHealthCheckSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -618,6 +640,7 @@ public partial class V1beta1RegionHealthCheckSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1RegionHealthCheckSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -629,6 +652,7 @@ public partial class V1beta1RegionHealthCheckSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>RegionHealthCheckSpec defines the desired state of RegionHealthCheck</summary>
 public partial class V1beta1RegionHealthCheckSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -661,6 +685,7 @@ public partial class V1beta1RegionHealthCheckSpec
     public V1beta1RegionHealthCheckSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionHealthCheckStatusAtProviderGrpcHealthCheck
 {
     /// <summary>The gRPC service name for the health check. The value of grpcServiceName has the following meanings by convention:</summary>
@@ -680,6 +705,7 @@ public partial class V1beta1RegionHealthCheckStatusAtProviderGrpcHealthCheck
     public string? PortSpecification { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionHealthCheckStatusAtProviderHttp2HealthCheck
 {
     /// <summary>The value of the host header in the HTTP2 health check request. If left empty (default value), the public IP on behalf of which this health check is performed will be used.</summary>
@@ -711,6 +737,7 @@ public partial class V1beta1RegionHealthCheckStatusAtProviderHttp2HealthCheck
     public string? Response { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionHealthCheckStatusAtProviderHttpHealthCheck
 {
     /// <summary>The value of the host header in the HTTP health check request. If left empty (default value), the public IP on behalf of which this health check is performed will be used.</summary>
@@ -742,6 +769,7 @@ public partial class V1beta1RegionHealthCheckStatusAtProviderHttpHealthCheck
     public string? Response { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionHealthCheckStatusAtProviderHttpsHealthCheck
 {
     /// <summary>The value of the host header in the HTTPS health check request. If left empty (default value), the public IP on behalf of which this health check is performed will be used.</summary>
@@ -773,6 +801,7 @@ public partial class V1beta1RegionHealthCheckStatusAtProviderHttpsHealthCheck
     public string? Response { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionHealthCheckStatusAtProviderLogConfig
 {
     /// <summary>Indicates whether or not to export logs. This is false by default, which means no health check logging will be done.</summary>
@@ -780,6 +809,7 @@ public partial class V1beta1RegionHealthCheckStatusAtProviderLogConfig
     public bool? Enable { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionHealthCheckStatusAtProviderSslHealthCheck
 {
     /// <summary>The TCP port number for the SSL health check request. The default value is 443.</summary>
@@ -807,6 +837,7 @@ public partial class V1beta1RegionHealthCheckStatusAtProviderSslHealthCheck
     public string? Response { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionHealthCheckStatusAtProviderTcpHealthCheck
 {
     /// <summary>The TCP port number for the TCP health check request. The default value is 80.</summary>
@@ -834,6 +865,7 @@ public partial class V1beta1RegionHealthCheckStatusAtProviderTcpHealthCheck
     public string? Response { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionHealthCheckStatusAtProvider
 {
     /// <summary>How often (in seconds) to send a health check. The default value is 5 seconds.</summary>
@@ -909,6 +941,7 @@ public partial class V1beta1RegionHealthCheckStatusAtProvider
     public double? UnhealthyThreshold { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1RegionHealthCheckStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -936,6 +969,7 @@ public partial class V1beta1RegionHealthCheckStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>RegionHealthCheckStatus defines the observed state of RegionHealthCheck.</summary>
 public partial class V1beta1RegionHealthCheckStatus
 {
     /// <summary></summary>
@@ -952,6 +986,7 @@ public partial class V1beta1RegionHealthCheckStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>RegionHealthCheck is the Schema for the RegionHealthChecks API. Health Checks determine whether instances are responsive and able to do work.</summary>
 public partial class V1beta1RegionHealthCheck : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1RegionHealthCheckSpec>, IStatus<V1beta1RegionHealthCheckStatus>
 {
     public const string KubeApiVersion = "v1beta1";

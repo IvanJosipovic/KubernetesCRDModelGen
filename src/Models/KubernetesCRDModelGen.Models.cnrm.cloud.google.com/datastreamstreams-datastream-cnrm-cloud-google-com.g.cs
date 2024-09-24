@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datastream.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1alpha1DatastreamStreamSpecBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns
 {
     /// <summary>Column collation.</summary>
@@ -39,6 +40,7 @@ public partial class V1alpha1DatastreamStreamSpecBackfillAllMysqlExcludedObjects
     public bool? PrimaryKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DatastreamStreamSpecBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables
 {
     /// <summary>MySQL columns in the schema. When unspecified as part of include/exclude objects, includes/excludes everything.</summary>
@@ -50,6 +52,7 @@ public partial class V1alpha1DatastreamStreamSpecBackfillAllMysqlExcludedObjects
     public string Table { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DatastreamStreamSpecBackfillAllMysqlExcludedObjectsMysqlDatabases
 {
     /// <summary>Database name.</summary>
@@ -61,6 +64,7 @@ public partial class V1alpha1DatastreamStreamSpecBackfillAllMysqlExcludedObjects
     public IList<V1alpha1DatastreamStreamSpecBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables>? MysqlTables { get; set; }
 }
 
+/// <summary>MySQL data source objects to avoid backfilling.</summary>
 public partial class V1alpha1DatastreamStreamSpecBackfillAllMysqlExcludedObjects
 {
     /// <summary>MySQL databases on the server.</summary>
@@ -68,6 +72,7 @@ public partial class V1alpha1DatastreamStreamSpecBackfillAllMysqlExcludedObjects
     public IList<V1alpha1DatastreamStreamSpecBackfillAllMysqlExcludedObjectsMysqlDatabases> MysqlDatabases { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DatastreamStreamSpecBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns
 {
     /// <summary>Column name.</summary>
@@ -107,6 +112,7 @@ public partial class V1alpha1DatastreamStreamSpecBackfillAllOracleExcludedObject
     public int? Scale { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DatastreamStreamSpecBackfillAllOracleExcludedObjectsOracleSchemasOracleTables
 {
     /// <summary>Oracle columns in the schema. When unspecified as part of include/exclude objects, includes/excludes everything.</summary>
@@ -118,6 +124,7 @@ public partial class V1alpha1DatastreamStreamSpecBackfillAllOracleExcludedObject
     public string Table { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DatastreamStreamSpecBackfillAllOracleExcludedObjectsOracleSchemas
 {
     /// <summary>Tables in the database.</summary>
@@ -129,6 +136,7 @@ public partial class V1alpha1DatastreamStreamSpecBackfillAllOracleExcludedObject
     public string Schema { get; set; }
 }
 
+/// <summary>PostgreSQL data source objects to avoid backfilling.</summary>
 public partial class V1alpha1DatastreamStreamSpecBackfillAllOracleExcludedObjects
 {
     /// <summary>Oracle schemas/databases in the database server.</summary>
@@ -136,6 +144,7 @@ public partial class V1alpha1DatastreamStreamSpecBackfillAllOracleExcludedObject
     public IList<V1alpha1DatastreamStreamSpecBackfillAllOracleExcludedObjectsOracleSchemas> OracleSchemas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DatastreamStreamSpecBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns
 {
     /// <summary>Column name.</summary>
@@ -171,6 +180,7 @@ public partial class V1alpha1DatastreamStreamSpecBackfillAllPostgresqlExcludedOb
     public int? Scale { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DatastreamStreamSpecBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables
 {
     /// <summary>PostgreSQL columns in the schema. When unspecified as part of include/exclude objects, includes/excludes everything.</summary>
@@ -182,6 +192,7 @@ public partial class V1alpha1DatastreamStreamSpecBackfillAllPostgresqlExcludedOb
     public string Table { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DatastreamStreamSpecBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas
 {
     /// <summary>Tables in the schema.</summary>
@@ -193,6 +204,7 @@ public partial class V1alpha1DatastreamStreamSpecBackfillAllPostgresqlExcludedOb
     public string Schema { get; set; }
 }
 
+/// <summary>PostgreSQL data source objects to avoid backfilling.</summary>
 public partial class V1alpha1DatastreamStreamSpecBackfillAllPostgresqlExcludedObjects
 {
     /// <summary>PostgreSQL schemas on the server.</summary>
@@ -200,6 +212,7 @@ public partial class V1alpha1DatastreamStreamSpecBackfillAllPostgresqlExcludedOb
     public IList<V1alpha1DatastreamStreamSpecBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas> PostgresqlSchemas { get; set; }
 }
 
+/// <summary>Backfill strategy to automatically backfill the Stream's objects. Specific objects can be excluded.</summary>
 public partial class V1alpha1DatastreamStreamSpecBackfillAll
 {
     /// <summary>MySQL data source objects to avoid backfilling.</summary>
@@ -215,6 +228,7 @@ public partial class V1alpha1DatastreamStreamSpecBackfillAll
     public V1alpha1DatastreamStreamSpecBackfillAllPostgresqlExcludedObjects? PostgresqlExcludedObjects { get; set; }
 }
 
+/// <summary>A single target dataset to which all data will be streamed.</summary>
 public partial class V1alpha1DatastreamStreamSpecDestinationConfigBigqueryDestinationConfigSingleTargetDataset
 {
     /// <summary>Dataset ID in the format projects/{project}/datasets/{dataset_id} or {project}:{dataset_id}.</summary>
@@ -222,6 +236,7 @@ public partial class V1alpha1DatastreamStreamSpecDestinationConfigBigqueryDestin
     public string DatasetId { get; set; }
 }
 
+/// <summary>Dataset template used for dynamic dataset creation.</summary>
 public partial class V1alpha1DatastreamStreamSpecDestinationConfigBigqueryDestinationConfigSourceHierarchyDatasetsDatasetTemplate
 {
     /// <summary>If supplied, every created dataset will have its name prefixed by the provided value. The prefix and name will be separated by an underscore. i.e. _.</summary>
@@ -237,6 +252,7 @@ public partial class V1alpha1DatastreamStreamSpecDestinationConfigBigqueryDestin
     public string Location { get; set; }
 }
 
+/// <summary>Destination datasets are created so that hierarchy of the destination data objects matches the source hierarchy.</summary>
 public partial class V1alpha1DatastreamStreamSpecDestinationConfigBigqueryDestinationConfigSourceHierarchyDatasets
 {
     /// <summary>Dataset template used for dynamic dataset creation.</summary>
@@ -244,6 +260,7 @@ public partial class V1alpha1DatastreamStreamSpecDestinationConfigBigqueryDestin
     public V1alpha1DatastreamStreamSpecDestinationConfigBigqueryDestinationConfigSourceHierarchyDatasetsDatasetTemplate DatasetTemplate { get; set; }
 }
 
+/// <summary>A configuration for how data should be loaded to Cloud Storage.</summary>
 public partial class V1alpha1DatastreamStreamSpecDestinationConfigBigqueryDestinationConfig
 {
     /// <summary>The guaranteed data freshness (in seconds) when querying tables created by the stream. Editing this field will only affect new tables created in the future, but existing tables will not be impacted. Lower values mean that queries will return fresher data, but may result in higher cost. A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". Defaults to 900s.</summary>
@@ -259,6 +276,7 @@ public partial class V1alpha1DatastreamStreamSpecDestinationConfigBigqueryDestin
     public V1alpha1DatastreamStreamSpecDestinationConfigBigqueryDestinationConfigSourceHierarchyDatasets? SourceHierarchyDatasets { get; set; }
 }
 
+/// <summary>JSON file format configuration.</summary>
 public partial class V1alpha1DatastreamStreamSpecDestinationConfigGcsDestinationConfigJsonFileFormat
 {
     /// <summary>Compression of the loaded JSON file. Possible values: ["NO_COMPRESSION", "GZIP"].</summary>
@@ -270,6 +288,7 @@ public partial class V1alpha1DatastreamStreamSpecDestinationConfigGcsDestination
     public string? SchemaFileFormat { get; set; }
 }
 
+/// <summary>A configuration for how data should be loaded to Cloud Storage.</summary>
 public partial class V1alpha1DatastreamStreamSpecDestinationConfigGcsDestinationConfig
 {
     /// <summary>AVRO file format configuration.</summary>
@@ -293,6 +312,7 @@ public partial class V1alpha1DatastreamStreamSpecDestinationConfigGcsDestination
     public string? Path { get; set; }
 }
 
+/// <summary>Destination connection profile configuration.</summary>
 public partial class V1alpha1DatastreamStreamSpecDestinationConfig
 {
     /// <summary>A configuration for how data should be loaded to Cloud Storage.</summary>
@@ -308,6 +328,7 @@ public partial class V1alpha1DatastreamStreamSpecDestinationConfig
     public V1alpha1DatastreamStreamSpecDestinationConfigGcsDestinationConfig? GcsDestinationConfig { get; set; }
 }
 
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1DatastreamStreamSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -323,6 +344,7 @@ public partial class V1alpha1DatastreamStreamSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns
 {
     /// <summary>Column collation.</summary>
@@ -354,6 +376,7 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigEx
     public bool? PrimaryKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables
 {
     /// <summary>MySQL columns in the schema. When unspecified as part of include/exclude objects, includes/excludes everything.</summary>
@@ -365,6 +388,7 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigEx
     public string Table { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases
 {
     /// <summary>Database name.</summary>
@@ -376,6 +400,7 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigEx
     public IList<V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables>? MysqlTables { get; set; }
 }
 
+/// <summary>MySQL objects to exclude from the stream.</summary>
 public partial class V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigExcludeObjects
 {
     /// <summary>MySQL databases on the server.</summary>
@@ -383,6 +408,7 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigEx
     public IList<V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases> MysqlDatabases { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns
 {
     /// <summary>Column collation.</summary>
@@ -414,6 +440,7 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigIn
     public bool? PrimaryKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables
 {
     /// <summary>MySQL columns in the schema. When unspecified as part of include/exclude objects, includes/excludes everything.</summary>
@@ -425,6 +452,7 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigIn
     public string Table { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases
 {
     /// <summary>Database name.</summary>
@@ -436,6 +464,7 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigIn
     public IList<V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables>? MysqlTables { get; set; }
 }
 
+/// <summary>MySQL objects to retrieve from the source.</summary>
 public partial class V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigIncludeObjects
 {
     /// <summary>MySQL databases on the server.</summary>
@@ -443,6 +472,7 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigIn
     public IList<V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases> MysqlDatabases { get; set; }
 }
 
+/// <summary>MySQL data source configuration.</summary>
 public partial class V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfig
 {
     /// <summary>MySQL objects to exclude from the stream.</summary>
@@ -462,6 +492,7 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfig
     public int? MaxConcurrentCdcTasks { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns
 {
     /// <summary>Column name.</summary>
@@ -501,6 +532,7 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigE
     public int? Scale { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables
 {
     /// <summary>Oracle columns in the schema. When unspecified as part of include/exclude objects, includes/excludes everything.</summary>
@@ -512,6 +544,7 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigE
     public string Table { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas
 {
     /// <summary>Tables in the database.</summary>
@@ -523,6 +556,7 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigE
     public string Schema { get; set; }
 }
 
+/// <summary>Oracle objects to exclude from the stream.</summary>
 public partial class V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigExcludeObjects
 {
     /// <summary>Oracle schemas/databases in the database server.</summary>
@@ -530,6 +564,7 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigE
     public IList<V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas> OracleSchemas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns
 {
     /// <summary>Column name.</summary>
@@ -569,6 +604,7 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigI
     public int? Scale { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables
 {
     /// <summary>Oracle columns in the schema. When unspecified as part of include/exclude objects, includes/excludes everything.</summary>
@@ -580,6 +616,7 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigI
     public string Table { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas
 {
     /// <summary>Tables in the database.</summary>
@@ -591,6 +628,7 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigI
     public string Schema { get; set; }
 }
 
+/// <summary>Oracle objects to retrieve from the source.</summary>
 public partial class V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigIncludeObjects
 {
     /// <summary>Oracle schemas/databases in the database server.</summary>
@@ -598,6 +636,7 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigI
     public IList<V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas> OracleSchemas { get; set; }
 }
 
+/// <summary>MySQL data source configuration.</summary>
 public partial class V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfig
 {
     /// <summary>Configuration to drop large object values.</summary>
@@ -625,6 +664,7 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfig
     public JsonNode? StreamLargeObjects { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns
 {
     /// <summary>Column name.</summary>
@@ -660,6 +700,7 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceCon
     public int? Scale { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables
 {
     /// <summary>PostgreSQL columns in the schema. When unspecified as part of include/exclude objects, includes/excludes everything.</summary>
@@ -671,6 +712,7 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceCon
     public string Table { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas
 {
     /// <summary>Tables in the schema.</summary>
@@ -682,6 +724,7 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceCon
     public string Schema { get; set; }
 }
 
+/// <summary>PostgreSQL objects to exclude from the stream.</summary>
 public partial class V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceConfigExcludeObjects
 {
     /// <summary>PostgreSQL schemas on the server.</summary>
@@ -689,6 +732,7 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceCon
     public IList<V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas> PostgresqlSchemas { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns
 {
     /// <summary>Column name.</summary>
@@ -724,6 +768,7 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceCon
     public int? Scale { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables
 {
     /// <summary>PostgreSQL columns in the schema. When unspecified as part of include/exclude objects, includes/excludes everything.</summary>
@@ -735,6 +780,7 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceCon
     public string Table { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas
 {
     /// <summary>Tables in the schema.</summary>
@@ -746,6 +792,7 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceCon
     public string Schema { get; set; }
 }
 
+/// <summary>PostgreSQL objects to retrieve from the source.</summary>
 public partial class V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceConfigIncludeObjects
 {
     /// <summary>PostgreSQL schemas on the server.</summary>
@@ -753,6 +800,7 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceCon
     public IList<V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas> PostgresqlSchemas { get; set; }
 }
 
+/// <summary>PostgreSQL data source configuration.</summary>
 public partial class V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceConfig
 {
     /// <summary>PostgreSQL objects to exclude from the stream.</summary>
@@ -776,6 +824,7 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceCon
     public string ReplicationSlot { get; set; }
 }
 
+/// <summary>Source connection profile configuration.</summary>
 public partial class V1alpha1DatastreamStreamSpecSourceConfig
 {
     /// <summary>MySQL data source configuration.</summary>
@@ -795,6 +844,7 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfig
     public string SourceConnectionProfile { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DatastreamStreamSpec
 {
     /// <summary>Backfill strategy to automatically backfill the Stream's objects. Specific objects can be excluded.</summary>
@@ -838,6 +888,7 @@ public partial class V1alpha1DatastreamStreamSpec
     public V1alpha1DatastreamStreamSpecSourceConfig SourceConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DatastreamStreamStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -861,6 +912,7 @@ public partial class V1alpha1DatastreamStreamStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DatastreamStreamStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -881,6 +933,7 @@ public partial class V1alpha1DatastreamStreamStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1DatastreamStream : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DatastreamStreamSpec>, IStatus<V1alpha1DatastreamStreamStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

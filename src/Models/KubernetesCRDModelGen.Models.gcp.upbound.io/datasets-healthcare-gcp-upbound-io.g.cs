@@ -38,6 +38,7 @@ public enum V1beta1DatasetSpecForProviderEncryptionSpecKmsKeyNameRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DatasetSpecForProviderEncryptionSpecKmsKeyNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1DatasetSpecForProviderEncryptionSpecKmsKeyNameRefPol
     public V1beta1DatasetSpecForProviderEncryptionSpecKmsKeyNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a CryptoKey in kms to populate kmsKeyName.</summary>
 public partial class V1beta1DatasetSpecForProviderEncryptionSpecKmsKeyNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1DatasetSpecForProviderEncryptionSpecKmsKeyNameSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DatasetSpecForProviderEncryptionSpecKmsKeyNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1DatasetSpecForProviderEncryptionSpecKmsKeyNameSelect
     public V1beta1DatasetSpecForProviderEncryptionSpecKmsKeyNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a CryptoKey in kms to populate kmsKeyName.</summary>
 public partial class V1beta1DatasetSpecForProviderEncryptionSpecKmsKeyNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1DatasetSpecForProviderEncryptionSpecKmsKeyNameSelect
     public V1beta1DatasetSpecForProviderEncryptionSpecKmsKeyNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>A nested object resource Structure is documented below.</summary>
 public partial class V1beta1DatasetSpecForProviderEncryptionSpec
 {
     /// <summary>KMS encryption key that is used to secure this dataset and its sub-resources. The key used for encryption and the dataset must be in the same location. If empty, the default Google encryption key will be used to secure this dataset. The format is projects/{projectId}/locations/{locationId}/keyRings/{keyRingId}/cryptoKeys/{keyId}.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1DatasetSpecForProviderEncryptionSpec
     public V1beta1DatasetSpecForProviderEncryptionSpecKmsKeyNameSelector? KmsKeyNameSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasetSpecForProvider
 {
     /// <summary>A nested object resource Structure is documented below.</summary>
@@ -168,6 +174,7 @@ public enum V1beta1DatasetSpecInitProviderEncryptionSpecKmsKeyNameRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DatasetSpecInitProviderEncryptionSpecKmsKeyNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -181,6 +188,7 @@ public partial class V1beta1DatasetSpecInitProviderEncryptionSpecKmsKeyNameRefPo
     public V1beta1DatasetSpecInitProviderEncryptionSpecKmsKeyNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a CryptoKey in kms to populate kmsKeyName.</summary>
 public partial class V1beta1DatasetSpecInitProviderEncryptionSpecKmsKeyNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -212,6 +220,7 @@ public enum V1beta1DatasetSpecInitProviderEncryptionSpecKmsKeyNameSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DatasetSpecInitProviderEncryptionSpecKmsKeyNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -225,6 +234,7 @@ public partial class V1beta1DatasetSpecInitProviderEncryptionSpecKmsKeyNameSelec
     public V1beta1DatasetSpecInitProviderEncryptionSpecKmsKeyNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a CryptoKey in kms to populate kmsKeyName.</summary>
 public partial class V1beta1DatasetSpecInitProviderEncryptionSpecKmsKeyNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -240,6 +250,7 @@ public partial class V1beta1DatasetSpecInitProviderEncryptionSpecKmsKeyNameSelec
     public V1beta1DatasetSpecInitProviderEncryptionSpecKmsKeyNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>A nested object resource Structure is documented below.</summary>
 public partial class V1beta1DatasetSpecInitProviderEncryptionSpec
 {
     /// <summary>KMS encryption key that is used to secure this dataset and its sub-resources. The key used for encryption and the dataset must be in the same location. If empty, the default Google encryption key will be used to secure this dataset. The format is projects/{projectId}/locations/{locationId}/keyRings/{keyRingId}/cryptoKeys/{keyId}.</summary>
@@ -255,6 +266,7 @@ public partial class V1beta1DatasetSpecInitProviderEncryptionSpec
     public V1beta1DatasetSpecInitProviderEncryptionSpecKmsKeyNameSelector? KmsKeyNameSelector { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1DatasetSpecInitProvider
 {
     /// <summary>A nested object resource Structure is documented below.</summary>
@@ -320,6 +332,7 @@ public enum V1beta1DatasetSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DatasetSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -333,6 +346,7 @@ public partial class V1beta1DatasetSpecProviderConfigRefPolicy
     public V1beta1DatasetSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1DatasetSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -364,6 +378,7 @@ public enum V1beta1DatasetSpecPublishConnectionDetailsToConfigRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DatasetSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -377,6 +392,7 @@ public partial class V1beta1DatasetSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1DatasetSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1DatasetSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -388,6 +404,7 @@ public partial class V1beta1DatasetSpecPublishConnectionDetailsToConfigRef
     public V1beta1DatasetSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1DatasetSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -403,6 +420,7 @@ public partial class V1beta1DatasetSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1DatasetSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -418,6 +436,7 @@ public partial class V1beta1DatasetSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1DatasetSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -429,6 +448,7 @@ public partial class V1beta1DatasetSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>DatasetSpec defines the desired state of Dataset</summary>
 public partial class V1beta1DatasetSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -461,6 +481,7 @@ public partial class V1beta1DatasetSpec
     public V1beta1DatasetSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary>A nested object resource Structure is documented below.</summary>
 public partial class V1beta1DatasetStatusAtProviderEncryptionSpec
 {
     /// <summary>KMS encryption key that is used to secure this dataset and its sub-resources. The key used for encryption and the dataset must be in the same location. If empty, the default Google encryption key will be used to secure this dataset. The format is projects/{projectId}/locations/{locationId}/keyRings/{keyRingId}/cryptoKeys/{keyId}.</summary>
@@ -468,6 +489,7 @@ public partial class V1beta1DatasetStatusAtProviderEncryptionSpec
     public string? KmsKeyName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasetStatusAtProvider
 {
     /// <summary>A nested object resource Structure is documented below.</summary>
@@ -499,6 +521,7 @@ public partial class V1beta1DatasetStatusAtProvider
     public string? TimeZone { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1DatasetStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -526,6 +549,7 @@ public partial class V1beta1DatasetStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>DatasetStatus defines the observed state of Dataset.</summary>
 public partial class V1beta1DatasetStatus
 {
     /// <summary></summary>
@@ -542,6 +566,7 @@ public partial class V1beta1DatasetStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Dataset is the Schema for the Datasets API. A Healthcare</summary>
 public partial class V1beta1Dataset : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DatasetSpec>, IStatus<V1beta1DatasetStatus>
 {
     public const string KubeApiVersion = "v1beta1";

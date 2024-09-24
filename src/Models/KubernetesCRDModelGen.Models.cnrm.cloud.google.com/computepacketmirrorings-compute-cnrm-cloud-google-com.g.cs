@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1ComputePacketMirroringSpecCollectorIlbUrlRef
 {
     /// <summary>Resource URL to the forwarding rule representing the ILB configured as destination of the mirrored traffic.  Allowed value: The `selfLink` field of a `ComputeForwardingRule` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1ComputePacketMirroringSpecCollectorIlbUrlRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The Forwarding Rule resource of type `loadBalancingScheme=INTERNAL` that will be used as collector for mirrored traffic. The specified forwarding rule must have `isMirroringCollector` set to true.</summary>
 public partial class V1beta1ComputePacketMirroringSpecCollectorIlb
 {
     /// <summary></summary>
@@ -30,6 +32,7 @@ public partial class V1beta1ComputePacketMirroringSpecCollectorIlb
     public V1beta1ComputePacketMirroringSpecCollectorIlbUrlRef UrlRef { get; set; }
 }
 
+/// <summary>Filter for mirrored traffic. If unspecified, all traffic is mirrored.</summary>
 public partial class V1beta1ComputePacketMirroringSpecFilter
 {
     /// <summary>IP CIDR ranges that apply as filter on the source (ingress) or destination (egress) IP in the IP header. Only IPv4 is supported. If no ranges are specified, all traffic that matches the specified IPProtocols is mirrored. If neither cidrRanges nor IPProtocols is specified, all traffic is mirrored.</summary>
@@ -45,6 +48,7 @@ public partial class V1beta1ComputePacketMirroringSpecFilter
     public IList<string>? IpProtocols { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputePacketMirroringSpecMirroredResourcesInstancesUrlRef
 {
     /// <summary>Resource URL to the virtual machine instance which is being mirrored.  Allowed value: The `selfLink` field of a `ComputeInstance` resource.</summary>
@@ -60,6 +64,7 @@ public partial class V1beta1ComputePacketMirroringSpecMirroredResourcesInstances
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputePacketMirroringSpecMirroredResourcesInstances
 {
     /// <summary>Immutable. Output only. Unique identifier for the instance; defined by the server.</summary>
@@ -71,6 +76,7 @@ public partial class V1beta1ComputePacketMirroringSpecMirroredResourcesInstances
     public V1beta1ComputePacketMirroringSpecMirroredResourcesInstancesUrlRef? UrlRef { get; set; }
 }
 
+/// <summary>Immutable.</summary>
 public partial class V1beta1ComputePacketMirroringSpecMirroredResourcesSubnetworksUrlRef
 {
     /// <summary>Resource URL to the subnetwork for which traffic from/to all VM instances will be mirrored.  Allowed value: The `selfLink` field of a `ComputeSubnetwork` resource.</summary>
@@ -86,6 +92,7 @@ public partial class V1beta1ComputePacketMirroringSpecMirroredResourcesSubnetwor
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputePacketMirroringSpecMirroredResourcesSubnetworks
 {
     /// <summary>Immutable. Output only. Unique identifier for the subnetwork; defined by the server.</summary>
@@ -97,6 +104,7 @@ public partial class V1beta1ComputePacketMirroringSpecMirroredResourcesSubnetwor
     public V1beta1ComputePacketMirroringSpecMirroredResourcesSubnetworksUrlRef? UrlRef { get; set; }
 }
 
+/// <summary>PacketMirroring mirroredResourceInfos. MirroredResourceInfo specifies a set of mirrored VM instances, subnetworks and/or tags for which traffic from/to all VM instances will be mirrored.</summary>
 public partial class V1beta1ComputePacketMirroringSpecMirroredResources
 {
     /// <summary>A set of virtual machine instances that are being mirrored. They must live in zones contained in the same region as this packetMirroring. Note that this config will apply only to those network interfaces of the Instances that belong to the network specified in this packetMirroring. You may specify a maximum of 50 Instances.</summary>
@@ -112,6 +120,7 @@ public partial class V1beta1ComputePacketMirroringSpecMirroredResources
     public IList<string>? Tags { get; set; }
 }
 
+/// <summary>Immutable.</summary>
 public partial class V1beta1ComputePacketMirroringSpecNetworkUrlRef
 {
     /// <summary>URL of the network resource.  Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
@@ -127,6 +136,7 @@ public partial class V1beta1ComputePacketMirroringSpecNetworkUrlRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. Specifies the mirrored VPC network. Only packets in this network will be mirrored. All mirrored VMs should have a NIC in the given network. All mirrored subnetworks should belong to the given network.</summary>
 public partial class V1beta1ComputePacketMirroringSpecNetwork
 {
     /// <summary>Immutable.</summary>
@@ -134,6 +144,7 @@ public partial class V1beta1ComputePacketMirroringSpecNetwork
     public V1beta1ComputePacketMirroringSpecNetworkUrlRef UrlRef { get; set; }
 }
 
+/// <summary>Immutable. The Project that this resource belongs to.</summary>
 public partial class V1beta1ComputePacketMirroringSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -149,6 +160,7 @@ public partial class V1beta1ComputePacketMirroringSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputePacketMirroringSpec
 {
     /// <summary>The Forwarding Rule resource of type `loadBalancingScheme=INTERNAL` that will be used as collector for mirrored traffic. The specified forwarding rule must have `isMirroringCollector` set to true.</summary>
@@ -192,6 +204,7 @@ public partial class V1beta1ComputePacketMirroringSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputePacketMirroringStatusCollectorIlb
 {
     /// <summary>Output only. Unique identifier for the forwarding rule; defined by the server.</summary>
@@ -199,6 +212,7 @@ public partial class V1beta1ComputePacketMirroringStatusCollectorIlb
     public string? CanonicalUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputePacketMirroringStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -222,6 +236,7 @@ public partial class V1beta1ComputePacketMirroringStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputePacketMirroringStatusNetwork
 {
     /// <summary>Output only. Unique identifier for the network; defined by the server.</summary>
@@ -229,6 +244,7 @@ public partial class V1beta1ComputePacketMirroringStatusNetwork
     public string? CanonicalUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputePacketMirroringStatus
 {
     /// <summary></summary>
@@ -261,6 +277,7 @@ public partial class V1beta1ComputePacketMirroringStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ComputePacketMirroring : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputePacketMirroringSpec>, IStatus<V1beta1ComputePacketMirroringStatus>
 {
     public const string KubeApiVersion = "v1beta1";

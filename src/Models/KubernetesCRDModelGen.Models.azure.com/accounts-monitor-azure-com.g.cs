@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.monitor.azure.com;
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20230403storageAccountSpecOwner
 {
     /// <summary></summary>
@@ -19,6 +20,7 @@ public partial class V1api20230403storageAccountSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230403.Account_Spec</summary>
 public partial class V1api20230403storageAccountSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -50,6 +52,7 @@ public partial class V1api20230403storageAccountSpec
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20230403storageAccountStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -81,6 +84,7 @@ public partial class V1api20230403storageAccountStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230403.IngestionSettings_STATUS Settings for data ingestion</summary>
 public partial class V1api20230403storageAccountStatusDefaultIngestionSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -96,6 +100,7 @@ public partial class V1api20230403storageAccountStatusDefaultIngestionSettings
     public string? DataCollectionRuleResourceId { get; set; }
 }
 
+/// <summary>Storage version of v1api20230403.Metrics_STATUS Properties related to the metrics container in the Azure Monitor Workspace</summary>
 public partial class V1api20230403storageAccountStatusMetrics
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -111,6 +116,7 @@ public partial class V1api20230403storageAccountStatusMetrics
     public string? PrometheusQueryEndpoint { get; set; }
 }
 
+/// <summary>Storage version of v1api20230403.PrivateEndpointConnection_STATUS The private endpoint connection resource.</summary>
 public partial class V1api20230403storageAccountStatusPrivateEndpointConnections
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -122,6 +128,7 @@ public partial class V1api20230403storageAccountStatusPrivateEndpointConnections
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20230403.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 public partial class V1api20230403storageAccountStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -153,6 +160,7 @@ public partial class V1api20230403storageAccountStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
+/// <summary>Storage version of v1api20230403.Account_STATUS</summary>
 public partial class V1api20230403storageAccountStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -217,6 +225,7 @@ public partial class V1api20230403storageAccountStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20230403.Account Generator information: - Generated from: /monitor/resource-manager/Microsoft.Monitor/stable/2023-04-03/monitoringAccounts_API.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Monitor/accounts/{azureMonitorWorkspaceName}</summary>
 public partial class V1api20230403storageAccount : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230403storageAccountSpec>, IStatus<V1api20230403storageAccountStatus>
 {
     public const string KubeApiVersion = "v1api20230403storage";

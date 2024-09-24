@@ -38,6 +38,7 @@ public enum V1beta1RateBasedRuleSpecForProviderPredicatesDataIdRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RateBasedRuleSpecForProviderPredicatesDataIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1RateBasedRuleSpecForProviderPredicatesDataIdRefPolic
     public V1beta1RateBasedRuleSpecForProviderPredicatesDataIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a IPSet in waf to populate dataId.</summary>
 public partial class V1beta1RateBasedRuleSpecForProviderPredicatesDataIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1RateBasedRuleSpecForProviderPredicatesDataIdSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RateBasedRuleSpecForProviderPredicatesDataIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1RateBasedRuleSpecForProviderPredicatesDataIdSelector
     public V1beta1RateBasedRuleSpecForProviderPredicatesDataIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a IPSet in waf to populate dataId.</summary>
 public partial class V1beta1RateBasedRuleSpecForProviderPredicatesDataIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1RateBasedRuleSpecForProviderPredicatesDataIdSelector
     public V1beta1RateBasedRuleSpecForProviderPredicatesDataIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RateBasedRuleSpecForProviderPredicates
 {
     /// <summary>A unique identifier for a predicate in the rule, such as Byte Match Set ID or IPSet ID.</summary>
@@ -133,6 +138,7 @@ public partial class V1beta1RateBasedRuleSpecForProviderPredicates
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RateBasedRuleSpecForProvider
 {
     /// <summary>The name or description for the Amazon CloudWatch metric of this rule.</summary>
@@ -184,6 +190,7 @@ public enum V1beta1RateBasedRuleSpecInitProviderPredicatesDataIdRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RateBasedRuleSpecInitProviderPredicatesDataIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -197,6 +204,7 @@ public partial class V1beta1RateBasedRuleSpecInitProviderPredicatesDataIdRefPoli
     public V1beta1RateBasedRuleSpecInitProviderPredicatesDataIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a IPSet in waf to populate dataId.</summary>
 public partial class V1beta1RateBasedRuleSpecInitProviderPredicatesDataIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -228,6 +236,7 @@ public enum V1beta1RateBasedRuleSpecInitProviderPredicatesDataIdSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RateBasedRuleSpecInitProviderPredicatesDataIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -241,6 +250,7 @@ public partial class V1beta1RateBasedRuleSpecInitProviderPredicatesDataIdSelecto
     public V1beta1RateBasedRuleSpecInitProviderPredicatesDataIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a IPSet in waf to populate dataId.</summary>
 public partial class V1beta1RateBasedRuleSpecInitProviderPredicatesDataIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -256,6 +266,7 @@ public partial class V1beta1RateBasedRuleSpecInitProviderPredicatesDataIdSelecto
     public V1beta1RateBasedRuleSpecInitProviderPredicatesDataIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RateBasedRuleSpecInitProviderPredicates
 {
     /// <summary>A unique identifier for a predicate in the rule, such as Byte Match Set ID or IPSet ID.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1RateBasedRuleSpecInitProviderPredicates
     public string? Type { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1RateBasedRuleSpecInitProvider
 {
     /// <summary>The name or description for the Amazon CloudWatch metric of this rule.</summary>
@@ -348,6 +360,7 @@ public enum V1beta1RateBasedRuleSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RateBasedRuleSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -361,6 +374,7 @@ public partial class V1beta1RateBasedRuleSpecProviderConfigRefPolicy
     public V1beta1RateBasedRuleSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1RateBasedRuleSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -392,6 +406,7 @@ public enum V1beta1RateBasedRuleSpecPublishConnectionDetailsToConfigRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RateBasedRuleSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -405,6 +420,7 @@ public partial class V1beta1RateBasedRuleSpecPublishConnectionDetailsToConfigRef
     public V1beta1RateBasedRuleSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1RateBasedRuleSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -416,6 +432,7 @@ public partial class V1beta1RateBasedRuleSpecPublishConnectionDetailsToConfigRef
     public V1beta1RateBasedRuleSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1RateBasedRuleSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -431,6 +448,7 @@ public partial class V1beta1RateBasedRuleSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1RateBasedRuleSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -446,6 +464,7 @@ public partial class V1beta1RateBasedRuleSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1RateBasedRuleSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -457,6 +476,7 @@ public partial class V1beta1RateBasedRuleSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>RateBasedRuleSpec defines the desired state of RateBasedRule</summary>
 public partial class V1beta1RateBasedRuleSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -489,6 +509,7 @@ public partial class V1beta1RateBasedRuleSpec
     public V1beta1RateBasedRuleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RateBasedRuleStatusAtProviderPredicates
 {
     /// <summary>A unique identifier for a predicate in the rule, such as Byte Match Set ID or IPSet ID.</summary>
@@ -504,6 +525,7 @@ public partial class V1beta1RateBasedRuleStatusAtProviderPredicates
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RateBasedRuleStatusAtProvider
 {
     /// <summary>Amazon Resource Name (ARN)</summary>
@@ -543,6 +565,7 @@ public partial class V1beta1RateBasedRuleStatusAtProvider
     public IDictionary<string, string>? TagsAll { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1RateBasedRuleStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -570,6 +593,7 @@ public partial class V1beta1RateBasedRuleStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>RateBasedRuleStatus defines the observed state of RateBasedRule.</summary>
 public partial class V1beta1RateBasedRuleStatus
 {
     /// <summary></summary>
@@ -586,6 +610,7 @@ public partial class V1beta1RateBasedRuleStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>RateBasedRule is the Schema for the RateBasedRules API. Provides a AWS WAF rule resource.</summary>
 public partial class V1beta1RateBasedRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1RateBasedRuleSpec>, IStatus<V1beta1RateBasedRuleStatus>
 {
     public const string KubeApiVersion = "v1beta1";

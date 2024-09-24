@@ -38,6 +38,7 @@ public enum V1beta1BucketWebsiteConfigurationSpecForProviderBucketRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketWebsiteConfigurationSpecForProviderBucketRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1BucketWebsiteConfigurationSpecForProviderBucketRefPo
     public V1beta1BucketWebsiteConfigurationSpecForProviderBucketRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1BucketWebsiteConfigurationSpecForProviderBucketRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1BucketWebsiteConfigurationSpecForProviderBucketSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BucketWebsiteConfigurationSpecForProviderBucketSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1BucketWebsiteConfigurationSpecForProviderBucketSelec
     public V1beta1BucketWebsiteConfigurationSpecForProviderBucketSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1BucketWebsiteConfigurationSpecForProviderBucketSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1BucketWebsiteConfigurationSpecForProviderBucketSelec
     public V1beta1BucketWebsiteConfigurationSpecForProviderBucketSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketWebsiteConfigurationSpecForProviderErrorDocument
 {
     /// <summary>Object key name to use when a 4XX class error occurs.</summary>
@@ -117,6 +122,7 @@ public partial class V1beta1BucketWebsiteConfigurationSpecForProviderErrorDocume
     public string? Key { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketWebsiteConfigurationSpecForProviderIndexDocument
 {
     /// <summary>Suffix that is appended to a request that is for a directory on the website endpoint. For example, if the suffix is index.html and you make a request to samplebucket/images/, the data that is returned will be for the object with the key name images/index.html. The suffix must not be empty and must not include a slash character.</summary>
@@ -124,6 +130,7 @@ public partial class V1beta1BucketWebsiteConfigurationSpecForProviderIndexDocume
     public string? Suffix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketWebsiteConfigurationSpecForProviderRedirectAllRequestsTo
 {
     /// <summary>Name of the host where requests are redirected.</summary>
@@ -135,6 +142,7 @@ public partial class V1beta1BucketWebsiteConfigurationSpecForProviderRedirectAll
     public string? Protocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketWebsiteConfigurationSpecForProviderRoutingRuleCondition
 {
     /// <summary>HTTP error code when the redirect is applied. If specified with key_prefix_equals, then both must be true for the redirect to be applied.</summary>
@@ -146,6 +154,7 @@ public partial class V1beta1BucketWebsiteConfigurationSpecForProviderRoutingRule
     public string? KeyPrefixEquals { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketWebsiteConfigurationSpecForProviderRoutingRuleRedirect
 {
     /// <summary>Name of the host where requests are redirected.</summary>
@@ -169,6 +178,7 @@ public partial class V1beta1BucketWebsiteConfigurationSpecForProviderRoutingRule
     public string? ReplaceKeyWith { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketWebsiteConfigurationSpecForProviderRoutingRule
 {
     /// <summary>Configuration block for describing a condition that must be met for the specified redirect to apply. See below.</summary>
@@ -180,6 +190,7 @@ public partial class V1beta1BucketWebsiteConfigurationSpecForProviderRoutingRule
     public IList<V1beta1BucketWebsiteConfigurationSpecForProviderRoutingRuleRedirect>? Redirect { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketWebsiteConfigurationSpecForProvider
 {
     /// <summary>Name of the bucket.</summary>
@@ -243,6 +254,7 @@ public enum V1beta1BucketWebsiteConfigurationSpecInitProviderBucketRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderBucketRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -256,6 +268,7 @@ public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderBucketRefP
     public V1beta1BucketWebsiteConfigurationSpecInitProviderBucketRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderBucketRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -287,6 +300,7 @@ public enum V1beta1BucketWebsiteConfigurationSpecInitProviderBucketSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderBucketSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -300,6 +314,7 @@ public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderBucketSele
     public V1beta1BucketWebsiteConfigurationSpecInitProviderBucketSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderBucketSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -315,6 +330,7 @@ public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderBucketSele
     public V1beta1BucketWebsiteConfigurationSpecInitProviderBucketSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderErrorDocument
 {
     /// <summary>Object key name to use when a 4XX class error occurs.</summary>
@@ -322,6 +338,7 @@ public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderErrorDocum
     public string? Key { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderIndexDocument
 {
     /// <summary>Suffix that is appended to a request that is for a directory on the website endpoint. For example, if the suffix is index.html and you make a request to samplebucket/images/, the data that is returned will be for the object with the key name images/index.html. The suffix must not be empty and must not include a slash character.</summary>
@@ -329,6 +346,7 @@ public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderIndexDocum
     public string? Suffix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderRedirectAllRequestsTo
 {
     /// <summary>Name of the host where requests are redirected.</summary>
@@ -340,6 +358,7 @@ public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderRedirectAl
     public string? Protocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderRoutingRuleCondition
 {
     /// <summary>HTTP error code when the redirect is applied. If specified with key_prefix_equals, then both must be true for the redirect to be applied.</summary>
@@ -351,6 +370,7 @@ public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderRoutingRul
     public string? KeyPrefixEquals { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderRoutingRuleRedirect
 {
     /// <summary>Name of the host where requests are redirected.</summary>
@@ -374,6 +394,7 @@ public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderRoutingRul
     public string? ReplaceKeyWith { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderRoutingRule
 {
     /// <summary>Configuration block for describing a condition that must be met for the specified redirect to apply. See below.</summary>
@@ -385,6 +406,7 @@ public partial class V1beta1BucketWebsiteConfigurationSpecInitProviderRoutingRul
     public IList<V1beta1BucketWebsiteConfigurationSpecInitProviderRoutingRuleRedirect>? Redirect { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1BucketWebsiteConfigurationSpecInitProvider
 {
     /// <summary>Name of the bucket.</summary>
@@ -466,6 +488,7 @@ public enum V1beta1BucketWebsiteConfigurationSpecProviderConfigRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketWebsiteConfigurationSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -479,6 +502,7 @@ public partial class V1beta1BucketWebsiteConfigurationSpecProviderConfigRefPolic
     public V1beta1BucketWebsiteConfigurationSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1BucketWebsiteConfigurationSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -510,6 +534,7 @@ public enum V1beta1BucketWebsiteConfigurationSpecPublishConnectionDetailsToConfi
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketWebsiteConfigurationSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -523,6 +548,7 @@ public partial class V1beta1BucketWebsiteConfigurationSpecPublishConnectionDetai
     public V1beta1BucketWebsiteConfigurationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1BucketWebsiteConfigurationSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -534,6 +560,7 @@ public partial class V1beta1BucketWebsiteConfigurationSpecPublishConnectionDetai
     public V1beta1BucketWebsiteConfigurationSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1BucketWebsiteConfigurationSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -549,6 +576,7 @@ public partial class V1beta1BucketWebsiteConfigurationSpecPublishConnectionDetai
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1BucketWebsiteConfigurationSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -564,6 +592,7 @@ public partial class V1beta1BucketWebsiteConfigurationSpecPublishConnectionDetai
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1BucketWebsiteConfigurationSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -575,6 +604,7 @@ public partial class V1beta1BucketWebsiteConfigurationSpecWriteConnectionSecretT
     public string Namespace { get; set; }
 }
 
+/// <summary>BucketWebsiteConfigurationSpec defines the desired state of BucketWebsiteConfiguration</summary>
 public partial class V1beta1BucketWebsiteConfigurationSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -607,6 +637,7 @@ public partial class V1beta1BucketWebsiteConfigurationSpec
     public V1beta1BucketWebsiteConfigurationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketWebsiteConfigurationStatusAtProviderErrorDocument
 {
     /// <summary>Object key name to use when a 4XX class error occurs.</summary>
@@ -614,6 +645,7 @@ public partial class V1beta1BucketWebsiteConfigurationStatusAtProviderErrorDocum
     public string? Key { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketWebsiteConfigurationStatusAtProviderIndexDocument
 {
     /// <summary>Suffix that is appended to a request that is for a directory on the website endpoint. For example, if the suffix is index.html and you make a request to samplebucket/images/, the data that is returned will be for the object with the key name images/index.html. The suffix must not be empty and must not include a slash character.</summary>
@@ -621,6 +653,7 @@ public partial class V1beta1BucketWebsiteConfigurationStatusAtProviderIndexDocum
     public string? Suffix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketWebsiteConfigurationStatusAtProviderRedirectAllRequestsTo
 {
     /// <summary>Name of the host where requests are redirected.</summary>
@@ -632,6 +665,7 @@ public partial class V1beta1BucketWebsiteConfigurationStatusAtProviderRedirectAl
     public string? Protocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketWebsiteConfigurationStatusAtProviderRoutingRuleCondition
 {
     /// <summary>HTTP error code when the redirect is applied. If specified with key_prefix_equals, then both must be true for the redirect to be applied.</summary>
@@ -643,6 +677,7 @@ public partial class V1beta1BucketWebsiteConfigurationStatusAtProviderRoutingRul
     public string? KeyPrefixEquals { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketWebsiteConfigurationStatusAtProviderRoutingRuleRedirect
 {
     /// <summary>Name of the host where requests are redirected.</summary>
@@ -666,6 +701,7 @@ public partial class V1beta1BucketWebsiteConfigurationStatusAtProviderRoutingRul
     public string? ReplaceKeyWith { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketWebsiteConfigurationStatusAtProviderRoutingRule
 {
     /// <summary>Configuration block for describing a condition that must be met for the specified redirect to apply. See below.</summary>
@@ -677,6 +713,7 @@ public partial class V1beta1BucketWebsiteConfigurationStatusAtProviderRoutingRul
     public IList<V1beta1BucketWebsiteConfigurationStatusAtProviderRoutingRuleRedirect>? Redirect { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketWebsiteConfigurationStatusAtProvider
 {
     /// <summary>Name of the bucket.</summary>
@@ -720,6 +757,7 @@ public partial class V1beta1BucketWebsiteConfigurationStatusAtProvider
     public string? WebsiteEndpoint { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1BucketWebsiteConfigurationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -747,6 +785,7 @@ public partial class V1beta1BucketWebsiteConfigurationStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>BucketWebsiteConfigurationStatus defines the observed state of BucketWebsiteConfiguration.</summary>
 public partial class V1beta1BucketWebsiteConfigurationStatus
 {
     /// <summary></summary>
@@ -763,6 +802,7 @@ public partial class V1beta1BucketWebsiteConfigurationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>BucketWebsiteConfiguration is the Schema for the BucketWebsiteConfigurations API. Provides an S3 bucket website configuration resource.</summary>
 public partial class V1beta1BucketWebsiteConfiguration : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BucketWebsiteConfigurationSpec>, IStatus<V1beta1BucketWebsiteConfigurationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

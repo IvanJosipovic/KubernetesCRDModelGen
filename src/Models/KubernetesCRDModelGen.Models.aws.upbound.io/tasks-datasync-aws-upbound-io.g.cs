@@ -38,6 +38,7 @@ public enum V1beta1TaskSpecForProviderCloudwatchLogGroupArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TaskSpecForProviderCloudwatchLogGroupArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1TaskSpecForProviderCloudwatchLogGroupArnRefPolicy
     public V1beta1TaskSpecForProviderCloudwatchLogGroupArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Group in cloudwatchlogs to populate cloudwatchLogGroupArn.</summary>
 public partial class V1beta1TaskSpecForProviderCloudwatchLogGroupArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1TaskSpecForProviderCloudwatchLogGroupArnSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TaskSpecForProviderCloudwatchLogGroupArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1TaskSpecForProviderCloudwatchLogGroupArnSelectorPoli
     public V1beta1TaskSpecForProviderCloudwatchLogGroupArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Group in cloudwatchlogs to populate cloudwatchLogGroupArn.</summary>
 public partial class V1beta1TaskSpecForProviderCloudwatchLogGroupArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1TaskSpecForProviderDestinationLocationArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TaskSpecForProviderDestinationLocationArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1TaskSpecForProviderDestinationLocationArnRefPolicy
     public V1beta1TaskSpecForProviderDestinationLocationArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LocationS3 in datasync to populate destinationLocationArn.</summary>
 public partial class V1beta1TaskSpecForProviderDestinationLocationArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1TaskSpecForProviderDestinationLocationArnSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TaskSpecForProviderDestinationLocationArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1TaskSpecForProviderDestinationLocationArnSelectorPol
     public V1beta1TaskSpecForProviderDestinationLocationArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LocationS3 in datasync to populate destinationLocationArn.</summary>
 public partial class V1beta1TaskSpecForProviderDestinationLocationArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1TaskSpecForProviderDestinationLocationArnSelector
     public V1beta1TaskSpecForProviderDestinationLocationArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskSpecForProviderExcludes
 {
     /// <summary>The type of filter rule to apply. Valid values: SIMPLE_PATTERN.</summary>
@@ -213,6 +222,7 @@ public partial class V1beta1TaskSpecForProviderExcludes
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskSpecForProviderIncludes
 {
     /// <summary>The type of filter rule to apply. Valid values: SIMPLE_PATTERN.</summary>
@@ -224,6 +234,7 @@ public partial class V1beta1TaskSpecForProviderIncludes
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskSpecForProviderOptions
 {
     /// <summary>A file metadata that shows the last time a file was accessed (that is when the file was read or written to). If set to BEST_EFFORT, the DataSync Task attempts to preserve the original (that is, the version before sync PREPARING phase) atime attribute on all source files. Valid values: BEST_EFFORT, NONE. Default: BEST_EFFORT.</summary>
@@ -287,6 +298,7 @@ public partial class V1beta1TaskSpecForProviderOptions
     public string? VerifyMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskSpecForProviderSchedule
 {
     /// <summary>Specifies the schedule you want your task to use for repeated executions. For more information, see Schedule Expressions for Rules.</summary>
@@ -314,6 +326,7 @@ public enum V1beta1TaskSpecForProviderSourceLocationArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TaskSpecForProviderSourceLocationArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -327,6 +340,7 @@ public partial class V1beta1TaskSpecForProviderSourceLocationArnRefPolicy
     public V1beta1TaskSpecForProviderSourceLocationArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LocationS3 in datasync to populate sourceLocationArn.</summary>
 public partial class V1beta1TaskSpecForProviderSourceLocationArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -358,6 +372,7 @@ public enum V1beta1TaskSpecForProviderSourceLocationArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TaskSpecForProviderSourceLocationArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -371,6 +386,7 @@ public partial class V1beta1TaskSpecForProviderSourceLocationArnSelectorPolicy
     public V1beta1TaskSpecForProviderSourceLocationArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LocationS3 in datasync to populate sourceLocationArn.</summary>
 public partial class V1beta1TaskSpecForProviderSourceLocationArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -386,6 +402,7 @@ public partial class V1beta1TaskSpecForProviderSourceLocationArnSelector
     public V1beta1TaskSpecForProviderSourceLocationArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskSpecForProviderTaskReportConfigReportOverrides
 {
     /// <summary>Specifies the level of reporting for the files, objects, and directories that DataSync attempted to delete in your destination location. This only applies if you configure your task to delete data in the destination that isn't in the source. Valid values: ERRORS_ONLY and SUCCESSES_AND_ERRORS.</summary>
@@ -405,6 +422,7 @@ public partial class V1beta1TaskSpecForProviderTaskReportConfigReportOverrides
     public string? VerifiedOverride { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskSpecForProviderTaskReportConfigS3Destination
 {
     /// <summary>Specifies the Amazon Resource Name (ARN) of the IAM policy that allows DataSync to upload a task report to your S3 bucket.</summary>
@@ -420,6 +438,7 @@ public partial class V1beta1TaskSpecForProviderTaskReportConfigS3Destination
     public string? Subdirectory { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskSpecForProviderTaskReportConfig
 {
     /// <summary>Specifies the type of task report you'd like. Valid values: SUMMARY_ONLY and STANDARD.</summary>
@@ -443,6 +462,7 @@ public partial class V1beta1TaskSpecForProviderTaskReportConfig
     public string? S3ObjectVersioning { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskSpecForProvider
 {
     /// <summary>Amazon Resource Name (ARN) of the CloudWatch Log Group that is used to monitor and log events in the sync task.</summary>
@@ -534,6 +554,7 @@ public enum V1beta1TaskSpecInitProviderCloudwatchLogGroupArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TaskSpecInitProviderCloudwatchLogGroupArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -547,6 +568,7 @@ public partial class V1beta1TaskSpecInitProviderCloudwatchLogGroupArnRefPolicy
     public V1beta1TaskSpecInitProviderCloudwatchLogGroupArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Group in cloudwatchlogs to populate cloudwatchLogGroupArn.</summary>
 public partial class V1beta1TaskSpecInitProviderCloudwatchLogGroupArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -578,6 +600,7 @@ public enum V1beta1TaskSpecInitProviderCloudwatchLogGroupArnSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TaskSpecInitProviderCloudwatchLogGroupArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -591,6 +614,7 @@ public partial class V1beta1TaskSpecInitProviderCloudwatchLogGroupArnSelectorPol
     public V1beta1TaskSpecInitProviderCloudwatchLogGroupArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Group in cloudwatchlogs to populate cloudwatchLogGroupArn.</summary>
 public partial class V1beta1TaskSpecInitProviderCloudwatchLogGroupArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -626,6 +650,7 @@ public enum V1beta1TaskSpecInitProviderDestinationLocationArnRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TaskSpecInitProviderDestinationLocationArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -639,6 +664,7 @@ public partial class V1beta1TaskSpecInitProviderDestinationLocationArnRefPolicy
     public V1beta1TaskSpecInitProviderDestinationLocationArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LocationS3 in datasync to populate destinationLocationArn.</summary>
 public partial class V1beta1TaskSpecInitProviderDestinationLocationArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -670,6 +696,7 @@ public enum V1beta1TaskSpecInitProviderDestinationLocationArnSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TaskSpecInitProviderDestinationLocationArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -683,6 +710,7 @@ public partial class V1beta1TaskSpecInitProviderDestinationLocationArnSelectorPo
     public V1beta1TaskSpecInitProviderDestinationLocationArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LocationS3 in datasync to populate destinationLocationArn.</summary>
 public partial class V1beta1TaskSpecInitProviderDestinationLocationArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -698,6 +726,7 @@ public partial class V1beta1TaskSpecInitProviderDestinationLocationArnSelector
     public V1beta1TaskSpecInitProviderDestinationLocationArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskSpecInitProviderExcludes
 {
     /// <summary>The type of filter rule to apply. Valid values: SIMPLE_PATTERN.</summary>
@@ -709,6 +738,7 @@ public partial class V1beta1TaskSpecInitProviderExcludes
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskSpecInitProviderIncludes
 {
     /// <summary>The type of filter rule to apply. Valid values: SIMPLE_PATTERN.</summary>
@@ -720,6 +750,7 @@ public partial class V1beta1TaskSpecInitProviderIncludes
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskSpecInitProviderOptions
 {
     /// <summary>A file metadata that shows the last time a file was accessed (that is when the file was read or written to). If set to BEST_EFFORT, the DataSync Task attempts to preserve the original (that is, the version before sync PREPARING phase) atime attribute on all source files. Valid values: BEST_EFFORT, NONE. Default: BEST_EFFORT.</summary>
@@ -783,6 +814,7 @@ public partial class V1beta1TaskSpecInitProviderOptions
     public string? VerifyMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskSpecInitProviderSchedule
 {
     /// <summary>Specifies the schedule you want your task to use for repeated executions. For more information, see Schedule Expressions for Rules.</summary>
@@ -810,6 +842,7 @@ public enum V1beta1TaskSpecInitProviderSourceLocationArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TaskSpecInitProviderSourceLocationArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -823,6 +856,7 @@ public partial class V1beta1TaskSpecInitProviderSourceLocationArnRefPolicy
     public V1beta1TaskSpecInitProviderSourceLocationArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LocationS3 in datasync to populate sourceLocationArn.</summary>
 public partial class V1beta1TaskSpecInitProviderSourceLocationArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -854,6 +888,7 @@ public enum V1beta1TaskSpecInitProviderSourceLocationArnSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TaskSpecInitProviderSourceLocationArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -867,6 +902,7 @@ public partial class V1beta1TaskSpecInitProviderSourceLocationArnSelectorPolicy
     public V1beta1TaskSpecInitProviderSourceLocationArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LocationS3 in datasync to populate sourceLocationArn.</summary>
 public partial class V1beta1TaskSpecInitProviderSourceLocationArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -882,6 +918,7 @@ public partial class V1beta1TaskSpecInitProviderSourceLocationArnSelector
     public V1beta1TaskSpecInitProviderSourceLocationArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskSpecInitProviderTaskReportConfigReportOverrides
 {
     /// <summary>Specifies the level of reporting for the files, objects, and directories that DataSync attempted to delete in your destination location. This only applies if you configure your task to delete data in the destination that isn't in the source. Valid values: ERRORS_ONLY and SUCCESSES_AND_ERRORS.</summary>
@@ -901,6 +938,7 @@ public partial class V1beta1TaskSpecInitProviderTaskReportConfigReportOverrides
     public string? VerifiedOverride { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskSpecInitProviderTaskReportConfigS3Destination
 {
     /// <summary>Specifies the Amazon Resource Name (ARN) of the IAM policy that allows DataSync to upload a task report to your S3 bucket.</summary>
@@ -916,6 +954,7 @@ public partial class V1beta1TaskSpecInitProviderTaskReportConfigS3Destination
     public string? Subdirectory { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskSpecInitProviderTaskReportConfig
 {
     /// <summary>Specifies the type of task report you'd like. Valid values: SUMMARY_ONLY and STANDARD.</summary>
@@ -939,6 +978,7 @@ public partial class V1beta1TaskSpecInitProviderTaskReportConfig
     public string? S3ObjectVersioning { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1TaskSpecInitProvider
 {
     /// <summary>Amazon Resource Name (ARN) of the CloudWatch Log Group that is used to monitor and log events in the sync task.</summary>
@@ -1048,6 +1088,7 @@ public enum V1beta1TaskSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TaskSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1061,6 +1102,7 @@ public partial class V1beta1TaskSpecProviderConfigRefPolicy
     public V1beta1TaskSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1TaskSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1092,6 +1134,7 @@ public enum V1beta1TaskSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TaskSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1105,6 +1148,7 @@ public partial class V1beta1TaskSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1TaskSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1TaskSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1116,6 +1160,7 @@ public partial class V1beta1TaskSpecPublishConnectionDetailsToConfigRef
     public V1beta1TaskSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1TaskSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1131,6 +1176,7 @@ public partial class V1beta1TaskSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1TaskSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1146,6 +1192,7 @@ public partial class V1beta1TaskSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1TaskSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1157,6 +1204,7 @@ public partial class V1beta1TaskSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>TaskSpec defines the desired state of Task</summary>
 public partial class V1beta1TaskSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1189,6 +1237,7 @@ public partial class V1beta1TaskSpec
     public V1beta1TaskSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskStatusAtProviderExcludes
 {
     /// <summary>The type of filter rule to apply. Valid values: SIMPLE_PATTERN.</summary>
@@ -1200,6 +1249,7 @@ public partial class V1beta1TaskStatusAtProviderExcludes
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskStatusAtProviderIncludes
 {
     /// <summary>The type of filter rule to apply. Valid values: SIMPLE_PATTERN.</summary>
@@ -1211,6 +1261,7 @@ public partial class V1beta1TaskStatusAtProviderIncludes
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskStatusAtProviderOptions
 {
     /// <summary>A file metadata that shows the last time a file was accessed (that is when the file was read or written to). If set to BEST_EFFORT, the DataSync Task attempts to preserve the original (that is, the version before sync PREPARING phase) atime attribute on all source files. Valid values: BEST_EFFORT, NONE. Default: BEST_EFFORT.</summary>
@@ -1274,6 +1325,7 @@ public partial class V1beta1TaskStatusAtProviderOptions
     public string? VerifyMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskStatusAtProviderSchedule
 {
     /// <summary>Specifies the schedule you want your task to use for repeated executions. For more information, see Schedule Expressions for Rules.</summary>
@@ -1281,6 +1333,7 @@ public partial class V1beta1TaskStatusAtProviderSchedule
     public string? ScheduleExpression { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskStatusAtProviderTaskReportConfigReportOverrides
 {
     /// <summary>Specifies the level of reporting for the files, objects, and directories that DataSync attempted to delete in your destination location. This only applies if you configure your task to delete data in the destination that isn't in the source. Valid values: ERRORS_ONLY and SUCCESSES_AND_ERRORS.</summary>
@@ -1300,6 +1353,7 @@ public partial class V1beta1TaskStatusAtProviderTaskReportConfigReportOverrides
     public string? VerifiedOverride { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskStatusAtProviderTaskReportConfigS3Destination
 {
     /// <summary>Specifies the Amazon Resource Name (ARN) of the IAM policy that allows DataSync to upload a task report to your S3 bucket.</summary>
@@ -1315,6 +1369,7 @@ public partial class V1beta1TaskStatusAtProviderTaskReportConfigS3Destination
     public string? Subdirectory { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskStatusAtProviderTaskReportConfig
 {
     /// <summary>Specifies the type of task report you'd like. Valid values: SUMMARY_ONLY and STANDARD.</summary>
@@ -1338,6 +1393,7 @@ public partial class V1beta1TaskStatusAtProviderTaskReportConfig
     public string? S3ObjectVersioning { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TaskStatusAtProvider
 {
     /// <summary>Amazon Resource Name (ARN) of the DataSync Task.</summary>
@@ -1393,6 +1449,7 @@ public partial class V1beta1TaskStatusAtProvider
     public IList<V1beta1TaskStatusAtProviderTaskReportConfig>? TaskReportConfig { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1TaskStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1420,6 +1477,7 @@ public partial class V1beta1TaskStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>TaskStatus defines the observed state of Task.</summary>
 public partial class V1beta1TaskStatus
 {
     /// <summary></summary>
@@ -1436,6 +1494,7 @@ public partial class V1beta1TaskStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Task is the Schema for the Tasks API. Manages an AWS DataSync Task</summary>
 public partial class V1beta1Task : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1TaskSpec>, IStatus<V1beta1TaskStatus>
 {
     public const string KubeApiVersion = "v1beta1";

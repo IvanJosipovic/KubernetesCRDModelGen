@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dns.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1DNSPolicySpecAlternativeNameServerConfigTargetNameServers
 {
     /// <summary>Forwarding path for this TargetNameServer. If unset or 'default' Cloud DNS will make forwarding decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go to the Internet. When set to 'private', Cloud DNS will always send queries through VPC for this target Possible values: ["default", "private"].</summary>
@@ -19,6 +20,7 @@ public partial class V1beta1DNSPolicySpecAlternativeNameServerConfigTargetNameSe
     public string Ipv4Address { get; set; }
 }
 
+/// <summary>Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified.</summary>
 public partial class V1beta1DNSPolicySpecAlternativeNameServerConfig
 {
     /// <summary>Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified.</summary>
@@ -26,6 +28,7 @@ public partial class V1beta1DNSPolicySpecAlternativeNameServerConfig
     public IList<V1beta1DNSPolicySpecAlternativeNameServerConfigTargetNameServers> TargetNameServers { get; set; }
 }
 
+/// <summary>VPC network to bind to.</summary>
 public partial class V1beta1DNSPolicySpecNetworksNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
@@ -41,6 +44,7 @@ public partial class V1beta1DNSPolicySpecNetworksNetworkRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSPolicySpecNetworks
 {
     /// <summary>VPC network to bind to.</summary>
@@ -48,6 +52,7 @@ public partial class V1beta1DNSPolicySpecNetworks
     public V1beta1DNSPolicySpecNetworksNetworkRef NetworkRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSPolicySpec
 {
     /// <summary>Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified.</summary>
@@ -75,6 +80,7 @@ public partial class V1beta1DNSPolicySpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSPolicyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -98,6 +104,7 @@ public partial class V1beta1DNSPolicyStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSPolicyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -110,6 +117,7 @@ public partial class V1beta1DNSPolicyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1DNSPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DNSPolicySpec>, IStatus<V1beta1DNSPolicyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

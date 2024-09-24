@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1ComputeExternalVPNGatewaySpecInterface
 {
     /// <summary>Immutable. The numeric ID for this interface. Allowed values are based on the redundancy type of this external VPN gateway * '0 - SINGLE_IP_INTERNALLY_REDUNDANT' * '0, 1 - TWO_IPS_REDUNDANCY' * '0, 1, 2, 3 - FOUR_IPS_REDUNDANCY'.</summary>
@@ -19,6 +20,7 @@ public partial class V1beta1ComputeExternalVPNGatewaySpecInterface
     public string? IpAddress { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeExternalVPNGatewaySpec
 {
     /// <summary>Immutable. An optional description of this resource.</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1ComputeExternalVPNGatewaySpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeExternalVPNGatewayStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -61,6 +64,7 @@ public partial class V1beta1ComputeExternalVPNGatewayStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeExternalVPNGatewayStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -81,6 +85,7 @@ public partial class V1beta1ComputeExternalVPNGatewayStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ComputeExternalVPNGateway : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeExternalVPNGatewaySpec>, IStatus<V1beta1ComputeExternalVPNGatewayStatus>
 {
     public const string KubeApiVersion = "v1beta1";

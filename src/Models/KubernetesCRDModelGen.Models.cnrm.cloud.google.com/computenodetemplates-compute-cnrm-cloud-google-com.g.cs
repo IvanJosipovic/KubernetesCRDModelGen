@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary>Immutable. Flexible properties for the desired node type. Node groups that use this node template will create nodes of a type that matches these properties. Only one of nodeTypeFlexibility and nodeType can be specified.</summary>
 public partial class V1beta1ComputeNodeTemplateSpecNodeTypeFlexibility
 {
     /// <summary>Immutable. Number of virtual CPUs to use.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1ComputeNodeTemplateSpecNodeTypeFlexibility
     public string? Memory { get; set; }
 }
 
+/// <summary>Immutable. The server binding policy for nodes using this template. Determines where the nodes should restart following a maintenance event.</summary>
 public partial class V1beta1ComputeNodeTemplateSpecServerBinding
 {
     /// <summary>Immutable. Type of server binding policy. If 'RESTART_NODE_ON_ANY_SERVER', nodes using this template will restart on any physical server following a maintenance event.  If 'RESTART_NODE_ON_MINIMAL_SERVER', nodes using this template will restart on the same physical server following a maintenance event, instead of being live migrated to or restarted on a new physical server. This option may be useful if you are using software licenses tied to the underlying server characteristics such as physical sockets or cores, to avoid the need for additional licenses when maintenance occurs. However, VMs on such nodes will experience outages while maintenance is applied. Possible values: ["RESTART_NODE_ON_ANY_SERVER", "RESTART_NODE_ON_MINIMAL_SERVERS"].</summary>
@@ -30,6 +32,7 @@ public partial class V1beta1ComputeNodeTemplateSpecServerBinding
     public string Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeNodeTemplateSpec
 {
     /// <summary>Immutable. CPU overcommit. Default value: "NONE" Possible values: ["ENABLED", "NONE"].</summary>
@@ -61,6 +64,7 @@ public partial class V1beta1ComputeNodeTemplateSpec
     public V1beta1ComputeNodeTemplateSpecServerBinding? ServerBinding { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeNodeTemplateStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -84,6 +88,7 @@ public partial class V1beta1ComputeNodeTemplateStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeNodeTemplateStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -104,6 +109,7 @@ public partial class V1beta1ComputeNodeTemplateStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ComputeNodeTemplate : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeNodeTemplateSpec>, IStatus<V1beta1ComputeNodeTemplateStatus>
 {
     public const string KubeApiVersion = "v1beta1";

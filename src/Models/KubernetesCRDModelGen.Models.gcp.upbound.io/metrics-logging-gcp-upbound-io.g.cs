@@ -38,6 +38,7 @@ public enum V1beta1MetricSpecForProviderBucketNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MetricSpecForProviderBucketNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1MetricSpecForProviderBucketNameRefPolicy
     public V1beta1MetricSpecForProviderBucketNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ProjectBucketConfig in logging to populate bucketName.</summary>
 public partial class V1beta1MetricSpecForProviderBucketNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1MetricSpecForProviderBucketNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MetricSpecForProviderBucketNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1MetricSpecForProviderBucketNameSelectorPolicy
     public V1beta1MetricSpecForProviderBucketNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ProjectBucketConfig in logging to populate bucketName.</summary>
 public partial class V1beta1MetricSpecForProviderBucketNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1MetricSpecForProviderBucketNameSelector
     public V1beta1MetricSpecForProviderBucketNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetricSpecForProviderBucketOptionsExplicitBuckets
 {
     /// <summary>The values must be monotonically increasing.</summary>
@@ -117,6 +122,7 @@ public partial class V1beta1MetricSpecForProviderBucketOptionsExplicitBuckets
     public IList<double>? Bounds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetricSpecForProviderBucketOptionsExponentialBuckets
 {
     /// <summary>Must be greater than 1.</summary>
@@ -132,6 +138,7 @@ public partial class V1beta1MetricSpecForProviderBucketOptionsExponentialBuckets
     public double? Scale { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetricSpecForProviderBucketOptionsLinearBuckets
 {
     /// <summary>Must be greater than 0.</summary>
@@ -147,6 +154,7 @@ public partial class V1beta1MetricSpecForProviderBucketOptionsLinearBuckets
     public double? Width { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetricSpecForProviderBucketOptions
 {
     /// <summary>Specifies a set of buckets with arbitrary widths. Structure is documented below.</summary>
@@ -162,6 +170,7 @@ public partial class V1beta1MetricSpecForProviderBucketOptions
     public IList<V1beta1MetricSpecForProviderBucketOptionsLinearBuckets>? LinearBuckets { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetricSpecForProviderMetricDescriptorLabels
 {
     /// <summary>A human-readable description for the label.</summary>
@@ -177,6 +186,7 @@ public partial class V1beta1MetricSpecForProviderMetricDescriptorLabels
     public string? ValueType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetricSpecForProviderMetricDescriptor
 {
     /// <summary>A concise name for the metric, which can be displayed in user interfaces. Use sentence case without an ending period, for example "Request count". This field is optional but it is recommended to be set for any metrics associated with user-visible concepts, such as Quota.</summary>
@@ -200,6 +210,7 @@ public partial class V1beta1MetricSpecForProviderMetricDescriptor
     public string? ValueType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetricSpecForProvider
 {
     /// <summary>The resource name of the Log Bucket that owns the Log Metric. Only Log Buckets in projects are supported. The bucket has to be in the same project as the metric.</summary>
@@ -267,6 +278,7 @@ public enum V1beta1MetricSpecInitProviderBucketNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MetricSpecInitProviderBucketNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -280,6 +292,7 @@ public partial class V1beta1MetricSpecInitProviderBucketNameRefPolicy
     public V1beta1MetricSpecInitProviderBucketNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ProjectBucketConfig in logging to populate bucketName.</summary>
 public partial class V1beta1MetricSpecInitProviderBucketNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -311,6 +324,7 @@ public enum V1beta1MetricSpecInitProviderBucketNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MetricSpecInitProviderBucketNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -324,6 +338,7 @@ public partial class V1beta1MetricSpecInitProviderBucketNameSelectorPolicy
     public V1beta1MetricSpecInitProviderBucketNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ProjectBucketConfig in logging to populate bucketName.</summary>
 public partial class V1beta1MetricSpecInitProviderBucketNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -339,6 +354,7 @@ public partial class V1beta1MetricSpecInitProviderBucketNameSelector
     public V1beta1MetricSpecInitProviderBucketNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetricSpecInitProviderBucketOptionsExplicitBuckets
 {
     /// <summary>The values must be monotonically increasing.</summary>
@@ -346,6 +362,7 @@ public partial class V1beta1MetricSpecInitProviderBucketOptionsExplicitBuckets
     public IList<double>? Bounds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetricSpecInitProviderBucketOptionsExponentialBuckets
 {
     /// <summary>Must be greater than 1.</summary>
@@ -361,6 +378,7 @@ public partial class V1beta1MetricSpecInitProviderBucketOptionsExponentialBucket
     public double? Scale { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetricSpecInitProviderBucketOptionsLinearBuckets
 {
     /// <summary>Must be greater than 0.</summary>
@@ -376,6 +394,7 @@ public partial class V1beta1MetricSpecInitProviderBucketOptionsLinearBuckets
     public double? Width { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetricSpecInitProviderBucketOptions
 {
     /// <summary>Specifies a set of buckets with arbitrary widths. Structure is documented below.</summary>
@@ -391,6 +410,7 @@ public partial class V1beta1MetricSpecInitProviderBucketOptions
     public IList<V1beta1MetricSpecInitProviderBucketOptionsLinearBuckets>? LinearBuckets { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetricSpecInitProviderMetricDescriptorLabels
 {
     /// <summary>A human-readable description for the label.</summary>
@@ -406,6 +426,7 @@ public partial class V1beta1MetricSpecInitProviderMetricDescriptorLabels
     public string? ValueType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetricSpecInitProviderMetricDescriptor
 {
     /// <summary>A concise name for the metric, which can be displayed in user interfaces. Use sentence case without an ending period, for example "Request count". This field is optional but it is recommended to be set for any metrics associated with user-visible concepts, such as Quota.</summary>
@@ -429,6 +450,7 @@ public partial class V1beta1MetricSpecInitProviderMetricDescriptor
     public string? ValueType { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1MetricSpecInitProvider
 {
     /// <summary>The resource name of the Log Bucket that owns the Log Metric. Only Log Buckets in projects are supported. The bucket has to be in the same project as the metric.</summary>
@@ -518,6 +540,7 @@ public enum V1beta1MetricSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MetricSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -531,6 +554,7 @@ public partial class V1beta1MetricSpecProviderConfigRefPolicy
     public V1beta1MetricSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1MetricSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -562,6 +586,7 @@ public enum V1beta1MetricSpecPublishConnectionDetailsToConfigRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MetricSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -575,6 +600,7 @@ public partial class V1beta1MetricSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1MetricSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1MetricSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -586,6 +612,7 @@ public partial class V1beta1MetricSpecPublishConnectionDetailsToConfigRef
     public V1beta1MetricSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1MetricSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -601,6 +628,7 @@ public partial class V1beta1MetricSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1MetricSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -616,6 +644,7 @@ public partial class V1beta1MetricSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1MetricSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -627,6 +656,7 @@ public partial class V1beta1MetricSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>MetricSpec defines the desired state of Metric</summary>
 public partial class V1beta1MetricSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -659,6 +689,7 @@ public partial class V1beta1MetricSpec
     public V1beta1MetricSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetricStatusAtProviderBucketOptionsExplicitBuckets
 {
     /// <summary>The values must be monotonically increasing.</summary>
@@ -666,6 +697,7 @@ public partial class V1beta1MetricStatusAtProviderBucketOptionsExplicitBuckets
     public IList<double>? Bounds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetricStatusAtProviderBucketOptionsExponentialBuckets
 {
     /// <summary>Must be greater than 1.</summary>
@@ -681,6 +713,7 @@ public partial class V1beta1MetricStatusAtProviderBucketOptionsExponentialBucket
     public double? Scale { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetricStatusAtProviderBucketOptionsLinearBuckets
 {
     /// <summary>Must be greater than 0.</summary>
@@ -696,6 +729,7 @@ public partial class V1beta1MetricStatusAtProviderBucketOptionsLinearBuckets
     public double? Width { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetricStatusAtProviderBucketOptions
 {
     /// <summary>Specifies a set of buckets with arbitrary widths. Structure is documented below.</summary>
@@ -711,6 +745,7 @@ public partial class V1beta1MetricStatusAtProviderBucketOptions
     public IList<V1beta1MetricStatusAtProviderBucketOptionsLinearBuckets>? LinearBuckets { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetricStatusAtProviderMetricDescriptorLabels
 {
     /// <summary>A human-readable description for the label.</summary>
@@ -726,6 +761,7 @@ public partial class V1beta1MetricStatusAtProviderMetricDescriptorLabels
     public string? ValueType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetricStatusAtProviderMetricDescriptor
 {
     /// <summary>A concise name for the metric, which can be displayed in user interfaces. Use sentence case without an ending period, for example "Request count". This field is optional but it is recommended to be set for any metrics associated with user-visible concepts, such as Quota.</summary>
@@ -749,6 +785,7 @@ public partial class V1beta1MetricStatusAtProviderMetricDescriptor
     public string? ValueType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetricStatusAtProvider
 {
     /// <summary>The resource name of the Log Bucket that owns the Log Metric. Only Log Buckets in projects are supported. The bucket has to be in the same project as the metric.</summary>
@@ -792,6 +829,7 @@ public partial class V1beta1MetricStatusAtProvider
     public string? ValueExtractor { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1MetricStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -819,6 +857,7 @@ public partial class V1beta1MetricStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>MetricStatus defines the observed state of Metric.</summary>
 public partial class V1beta1MetricStatus
 {
     /// <summary></summary>
@@ -835,6 +874,7 @@ public partial class V1beta1MetricStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Metric is the Schema for the Metrics API. Logs-based metric can also be used to extract values from logs and create a a distribution of the values.</summary>
 public partial class V1beta1Metric : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MetricSpec>, IStatus<V1beta1MetricStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -38,6 +38,7 @@ public enum V1beta1BackupContainerStorageAccountSpecForProviderRecoveryVaultName
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupContainerStorageAccountSpecForProviderRecoveryVaultNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1BackupContainerStorageAccountSpecForProviderRecovery
     public V1beta1BackupContainerStorageAccountSpecForProviderRecoveryVaultNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Vault in recoveryservices to populate recoveryVaultName.</summary>
 public partial class V1beta1BackupContainerStorageAccountSpecForProviderRecoveryVaultNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1BackupContainerStorageAccountSpecForProviderRecoveryVaultName
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupContainerStorageAccountSpecForProviderRecoveryVaultNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1BackupContainerStorageAccountSpecForProviderRecovery
     public V1beta1BackupContainerStorageAccountSpecForProviderRecoveryVaultNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Vault in recoveryservices to populate recoveryVaultName.</summary>
 public partial class V1beta1BackupContainerStorageAccountSpecForProviderRecoveryVaultNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1BackupContainerStorageAccountSpecForProviderResourceGroupName
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupContainerStorageAccountSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1BackupContainerStorageAccountSpecForProviderResource
     public V1beta1BackupContainerStorageAccountSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1BackupContainerStorageAccountSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1BackupContainerStorageAccountSpecForProviderResourceGroupName
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupContainerStorageAccountSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1BackupContainerStorageAccountSpecForProviderResource
     public V1beta1BackupContainerStorageAccountSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1BackupContainerStorageAccountSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1BackupContainerStorageAccountSpecForProviderStorageAccountIdR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupContainerStorageAccountSpecForProviderStorageAccountIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1BackupContainerStorageAccountSpecForProviderStorageA
     public V1beta1BackupContainerStorageAccountSpecForProviderStorageAccountIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
 public partial class V1beta1BackupContainerStorageAccountSpecForProviderStorageAccountIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1BackupContainerStorageAccountSpecForProviderStorageAccountIdS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupContainerStorageAccountSpecForProviderStorageAccountIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1BackupContainerStorageAccountSpecForProviderStorageA
     public V1beta1BackupContainerStorageAccountSpecForProviderStorageAccountIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
 public partial class V1beta1BackupContainerStorageAccountSpecForProviderStorageAccountIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1BackupContainerStorageAccountSpecForProviderStorageA
     public V1beta1BackupContainerStorageAccountSpecForProviderStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupContainerStorageAccountSpecForProvider
 {
     /// <summary>The name of the vault where the storage account will be registered. Changing this forces a new resource to be created.</summary>
@@ -353,6 +366,7 @@ public enum V1beta1BackupContainerStorageAccountSpecInitProviderRecoveryVaultNam
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupContainerStorageAccountSpecInitProviderRecoveryVaultNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -366,6 +380,7 @@ public partial class V1beta1BackupContainerStorageAccountSpecInitProviderRecover
     public V1beta1BackupContainerStorageAccountSpecInitProviderRecoveryVaultNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Vault in recoveryservices to populate recoveryVaultName.</summary>
 public partial class V1beta1BackupContainerStorageAccountSpecInitProviderRecoveryVaultNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -397,6 +412,7 @@ public enum V1beta1BackupContainerStorageAccountSpecInitProviderRecoveryVaultNam
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupContainerStorageAccountSpecInitProviderRecoveryVaultNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -410,6 +426,7 @@ public partial class V1beta1BackupContainerStorageAccountSpecInitProviderRecover
     public V1beta1BackupContainerStorageAccountSpecInitProviderRecoveryVaultNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Vault in recoveryservices to populate recoveryVaultName.</summary>
 public partial class V1beta1BackupContainerStorageAccountSpecInitProviderRecoveryVaultNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -445,6 +462,7 @@ public enum V1beta1BackupContainerStorageAccountSpecInitProviderResourceGroupNam
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupContainerStorageAccountSpecInitProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -458,6 +476,7 @@ public partial class V1beta1BackupContainerStorageAccountSpecInitProviderResourc
     public V1beta1BackupContainerStorageAccountSpecInitProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1BackupContainerStorageAccountSpecInitProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -489,6 +508,7 @@ public enum V1beta1BackupContainerStorageAccountSpecInitProviderResourceGroupNam
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupContainerStorageAccountSpecInitProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -502,6 +522,7 @@ public partial class V1beta1BackupContainerStorageAccountSpecInitProviderResourc
     public V1beta1BackupContainerStorageAccountSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1BackupContainerStorageAccountSpecInitProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -537,6 +558,7 @@ public enum V1beta1BackupContainerStorageAccountSpecInitProviderStorageAccountId
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupContainerStorageAccountSpecInitProviderStorageAccountIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -550,6 +572,7 @@ public partial class V1beta1BackupContainerStorageAccountSpecInitProviderStorage
     public V1beta1BackupContainerStorageAccountSpecInitProviderStorageAccountIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
 public partial class V1beta1BackupContainerStorageAccountSpecInitProviderStorageAccountIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -581,6 +604,7 @@ public enum V1beta1BackupContainerStorageAccountSpecInitProviderStorageAccountId
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BackupContainerStorageAccountSpecInitProviderStorageAccountIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -594,6 +618,7 @@ public partial class V1beta1BackupContainerStorageAccountSpecInitProviderStorage
     public V1beta1BackupContainerStorageAccountSpecInitProviderStorageAccountIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
 public partial class V1beta1BackupContainerStorageAccountSpecInitProviderStorageAccountIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -609,6 +634,7 @@ public partial class V1beta1BackupContainerStorageAccountSpecInitProviderStorage
     public V1beta1BackupContainerStorageAccountSpecInitProviderStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1BackupContainerStorageAccountSpecInitProvider
 {
     /// <summary>The name of the vault where the storage account will be registered. Changing this forces a new resource to be created.</summary>
@@ -690,6 +716,7 @@ public enum V1beta1BackupContainerStorageAccountSpecProviderConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupContainerStorageAccountSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -703,6 +730,7 @@ public partial class V1beta1BackupContainerStorageAccountSpecProviderConfigRefPo
     public V1beta1BackupContainerStorageAccountSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1BackupContainerStorageAccountSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -734,6 +762,7 @@ public enum V1beta1BackupContainerStorageAccountSpecPublishConnectionDetailsToCo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BackupContainerStorageAccountSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -747,6 +776,7 @@ public partial class V1beta1BackupContainerStorageAccountSpecPublishConnectionDe
     public V1beta1BackupContainerStorageAccountSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1BackupContainerStorageAccountSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -758,6 +788,7 @@ public partial class V1beta1BackupContainerStorageAccountSpecPublishConnectionDe
     public V1beta1BackupContainerStorageAccountSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1BackupContainerStorageAccountSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -773,6 +804,7 @@ public partial class V1beta1BackupContainerStorageAccountSpecPublishConnectionDe
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1BackupContainerStorageAccountSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -788,6 +820,7 @@ public partial class V1beta1BackupContainerStorageAccountSpecPublishConnectionDe
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1BackupContainerStorageAccountSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -799,6 +832,7 @@ public partial class V1beta1BackupContainerStorageAccountSpecWriteConnectionSecr
     public string Namespace { get; set; }
 }
 
+/// <summary>BackupContainerStorageAccountSpec defines the desired state of BackupContainerStorageAccount</summary>
 public partial class V1beta1BackupContainerStorageAccountSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -831,6 +865,7 @@ public partial class V1beta1BackupContainerStorageAccountSpec
     public V1beta1BackupContainerStorageAccountSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BackupContainerStorageAccountStatusAtProvider
 {
     /// <summary>The ID of the Backup Storage Account Container.</summary>
@@ -850,6 +885,7 @@ public partial class V1beta1BackupContainerStorageAccountStatusAtProvider
     public string? StorageAccountId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1BackupContainerStorageAccountStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -877,6 +913,7 @@ public partial class V1beta1BackupContainerStorageAccountStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>BackupContainerStorageAccountStatus defines the observed state of BackupContainerStorageAccount.</summary>
 public partial class V1beta1BackupContainerStorageAccountStatus
 {
     /// <summary></summary>
@@ -893,6 +930,7 @@ public partial class V1beta1BackupContainerStorageAccountStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>BackupContainerStorageAccount is the Schema for the BackupContainerStorageAccounts API. Manages a storage account container in an Azure Recovery Vault</summary>
 public partial class V1beta1BackupContainerStorageAccount : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BackupContainerStorageAccountSpec>, IStatus<V1beta1BackupContainerStorageAccountStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -38,6 +38,7 @@ public enum V1beta1TriggerScheduleSpecForProviderDataFactoryIdRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TriggerScheduleSpecForProviderDataFactoryIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1TriggerScheduleSpecForProviderDataFactoryIdRefPolicy
     public V1beta1TriggerScheduleSpecForProviderDataFactoryIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Factory in datafactory to populate dataFactoryId.</summary>
 public partial class V1beta1TriggerScheduleSpecForProviderDataFactoryIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1TriggerScheduleSpecForProviderDataFactoryIdSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TriggerScheduleSpecForProviderDataFactoryIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1TriggerScheduleSpecForProviderDataFactoryIdSelectorP
     public V1beta1TriggerScheduleSpecForProviderDataFactoryIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Factory in datafactory to populate dataFactoryId.</summary>
 public partial class V1beta1TriggerScheduleSpecForProviderDataFactoryIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1TriggerScheduleSpecForProviderDataFactoryIdSelector
     public V1beta1TriggerScheduleSpecForProviderDataFactoryIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerScheduleSpecForProviderPipeline
 {
     /// <summary>Reference pipeline name.</summary>
@@ -141,6 +146,7 @@ public enum V1beta1TriggerScheduleSpecForProviderPipelineNameRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TriggerScheduleSpecForProviderPipelineNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -154,6 +160,7 @@ public partial class V1beta1TriggerScheduleSpecForProviderPipelineNameRefPolicy
     public V1beta1TriggerScheduleSpecForProviderPipelineNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Pipeline in datafactory to populate pipelineName.</summary>
 public partial class V1beta1TriggerScheduleSpecForProviderPipelineNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -185,6 +192,7 @@ public enum V1beta1TriggerScheduleSpecForProviderPipelineNameSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TriggerScheduleSpecForProviderPipelineNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -198,6 +206,7 @@ public partial class V1beta1TriggerScheduleSpecForProviderPipelineNameSelectorPo
     public V1beta1TriggerScheduleSpecForProviderPipelineNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Pipeline in datafactory to populate pipelineName.</summary>
 public partial class V1beta1TriggerScheduleSpecForProviderPipelineNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -213,6 +222,7 @@ public partial class V1beta1TriggerScheduleSpecForProviderPipelineNameSelector
     public V1beta1TriggerScheduleSpecForProviderPipelineNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerScheduleSpecForProviderScheduleMonthly
 {
     /// <summary>The occurrence of the specified day during the month. For example, a monthly property with weekday and week values of Sunday, -1 means the last Sunday of the month.</summary>
@@ -224,6 +234,7 @@ public partial class V1beta1TriggerScheduleSpecForProviderScheduleMonthly
     public string? Weekday { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerScheduleSpecForProviderSchedule
 {
     /// <summary>Day(s) of the month on which the trigger is scheduled. This value can be specified with a monthly frequency only.</summary>
@@ -247,6 +258,7 @@ public partial class V1beta1TriggerScheduleSpecForProviderSchedule
     public IList<V1beta1TriggerScheduleSpecForProviderScheduleMonthly>? Monthly { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerScheduleSpecForProvider
 {
     /// <summary>Specifies if the Data Factory Schedule Trigger is activated. Defaults to true.</summary>
@@ -318,6 +330,7 @@ public partial class V1beta1TriggerScheduleSpecForProvider
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerScheduleSpecInitProviderPipeline
 {
     /// <summary>Reference pipeline name.</summary>
@@ -349,6 +362,7 @@ public enum V1beta1TriggerScheduleSpecInitProviderPipelineNameRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TriggerScheduleSpecInitProviderPipelineNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -362,6 +376,7 @@ public partial class V1beta1TriggerScheduleSpecInitProviderPipelineNameRefPolicy
     public V1beta1TriggerScheduleSpecInitProviderPipelineNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Pipeline in datafactory to populate pipelineName.</summary>
 public partial class V1beta1TriggerScheduleSpecInitProviderPipelineNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -393,6 +408,7 @@ public enum V1beta1TriggerScheduleSpecInitProviderPipelineNameSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TriggerScheduleSpecInitProviderPipelineNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -406,6 +422,7 @@ public partial class V1beta1TriggerScheduleSpecInitProviderPipelineNameSelectorP
     public V1beta1TriggerScheduleSpecInitProviderPipelineNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Pipeline in datafactory to populate pipelineName.</summary>
 public partial class V1beta1TriggerScheduleSpecInitProviderPipelineNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -421,6 +438,7 @@ public partial class V1beta1TriggerScheduleSpecInitProviderPipelineNameSelector
     public V1beta1TriggerScheduleSpecInitProviderPipelineNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerScheduleSpecInitProviderScheduleMonthly
 {
     /// <summary>The occurrence of the specified day during the month. For example, a monthly property with weekday and week values of Sunday, -1 means the last Sunday of the month.</summary>
@@ -432,6 +450,7 @@ public partial class V1beta1TriggerScheduleSpecInitProviderScheduleMonthly
     public string? Weekday { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerScheduleSpecInitProviderSchedule
 {
     /// <summary>Day(s) of the month on which the trigger is scheduled. This value can be specified with a monthly frequency only.</summary>
@@ -455,6 +474,7 @@ public partial class V1beta1TriggerScheduleSpecInitProviderSchedule
     public IList<V1beta1TriggerScheduleSpecInitProviderScheduleMonthly>? Monthly { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1TriggerScheduleSpecInitProvider
 {
     /// <summary>Specifies if the Data Factory Schedule Trigger is activated. Defaults to true.</summary>
@@ -556,6 +576,7 @@ public enum V1beta1TriggerScheduleSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TriggerScheduleSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -569,6 +590,7 @@ public partial class V1beta1TriggerScheduleSpecProviderConfigRefPolicy
     public V1beta1TriggerScheduleSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1TriggerScheduleSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -600,6 +622,7 @@ public enum V1beta1TriggerScheduleSpecPublishConnectionDetailsToConfigRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TriggerScheduleSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -613,6 +636,7 @@ public partial class V1beta1TriggerScheduleSpecPublishConnectionDetailsToConfigR
     public V1beta1TriggerScheduleSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1TriggerScheduleSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -624,6 +648,7 @@ public partial class V1beta1TriggerScheduleSpecPublishConnectionDetailsToConfigR
     public V1beta1TriggerScheduleSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1TriggerScheduleSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -639,6 +664,7 @@ public partial class V1beta1TriggerScheduleSpecPublishConnectionDetailsToMetadat
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1TriggerScheduleSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -654,6 +680,7 @@ public partial class V1beta1TriggerScheduleSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1TriggerScheduleSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -665,6 +692,7 @@ public partial class V1beta1TriggerScheduleSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>TriggerScheduleSpec defines the desired state of TriggerSchedule</summary>
 public partial class V1beta1TriggerScheduleSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -697,6 +725,7 @@ public partial class V1beta1TriggerScheduleSpec
     public V1beta1TriggerScheduleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerScheduleStatusAtProviderPipeline
 {
     /// <summary>Reference pipeline name.</summary>
@@ -708,6 +737,7 @@ public partial class V1beta1TriggerScheduleStatusAtProviderPipeline
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerScheduleStatusAtProviderScheduleMonthly
 {
     /// <summary>The occurrence of the specified day during the month. For example, a monthly property with weekday and week values of Sunday, -1 means the last Sunday of the month.</summary>
@@ -719,6 +749,7 @@ public partial class V1beta1TriggerScheduleStatusAtProviderScheduleMonthly
     public string? Weekday { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerScheduleStatusAtProviderSchedule
 {
     /// <summary>Day(s) of the month on which the trigger is scheduled. This value can be specified with a monthly frequency only.</summary>
@@ -742,6 +773,7 @@ public partial class V1beta1TriggerScheduleStatusAtProviderSchedule
     public IList<V1beta1TriggerScheduleStatusAtProviderScheduleMonthly>? Monthly { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TriggerScheduleStatusAtProvider
 {
     /// <summary>Specifies if the Data Factory Schedule Trigger is activated. Defaults to true.</summary>
@@ -801,6 +833,7 @@ public partial class V1beta1TriggerScheduleStatusAtProvider
     public string? TimeZone { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1TriggerScheduleStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -828,6 +861,7 @@ public partial class V1beta1TriggerScheduleStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>TriggerScheduleStatus defines the observed state of TriggerSchedule.</summary>
 public partial class V1beta1TriggerScheduleStatus
 {
     /// <summary></summary>
@@ -844,6 +878,7 @@ public partial class V1beta1TriggerScheduleStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>TriggerSchedule is the Schema for the TriggerSchedules API. Manages a Trigger Schedule inside a Azure Data Factory.</summary>
 public partial class V1beta1TriggerSchedule : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1TriggerScheduleSpec>, IStatus<V1beta1TriggerScheduleStatus>
 {
     public const string KubeApiVersion = "v1beta1";

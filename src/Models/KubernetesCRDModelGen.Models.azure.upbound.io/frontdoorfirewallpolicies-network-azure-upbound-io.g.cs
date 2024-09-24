@@ -18,6 +18,7 @@ public enum V1beta1FrontdoorFirewallPolicySpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorFirewallPolicySpecForProviderCustomRuleMatchCondition
 {
     /// <summary>Up to 600 possible values to match. Limit is in total across all match_condition blocks and match_values arguments. String value itself can be up to 256 characters long.</summary>
@@ -45,6 +46,7 @@ public partial class V1beta1FrontdoorFirewallPolicySpecForProviderCustomRuleMatc
     public IList<string>? Transforms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorFirewallPolicySpecForProviderCustomRule
 {
     /// <summary>The action to perform when the rule is matched. Possible values are Allow, Block, Log, or Redirect.</summary>
@@ -80,6 +82,7 @@ public partial class V1beta1FrontdoorFirewallPolicySpecForProviderCustomRule
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorFirewallPolicySpecForProviderManagedRuleExclusion
 {
     /// <summary>The request variable to compare with. Possible values are Cookies, PostArgs, QueryString, RemoteAddr, RequestBody, RequestHeader, RequestMethod, RequestUri, or SocketAddr.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1FrontdoorFirewallPolicySpecForProviderManagedRuleExc
     public string? Selector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorFirewallPolicySpecForProviderManagedRuleOverrideExclusion
 {
     /// <summary>The request variable to compare with. Possible values are Cookies, PostArgs, QueryString, RemoteAddr, RequestBody, RequestHeader, RequestMethod, RequestUri, or SocketAddr.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1FrontdoorFirewallPolicySpecForProviderManagedRuleOve
     public string? Selector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorFirewallPolicySpecForProviderManagedRuleOverrideRuleExclusion
 {
     /// <summary>The request variable to compare with. Possible values are Cookies, PostArgs, QueryString, RemoteAddr, RequestBody, RequestHeader, RequestMethod, RequestUri, or SocketAddr.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1FrontdoorFirewallPolicySpecForProviderManagedRuleOve
     public string? Selector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorFirewallPolicySpecForProviderManagedRuleOverrideRule
 {
     /// <summary>The action to be applied when the rule matches. Possible values are Allow, Block, Log, or Redirect.</summary>
@@ -144,6 +150,7 @@ public partial class V1beta1FrontdoorFirewallPolicySpecForProviderManagedRuleOve
     public string? RuleId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorFirewallPolicySpecForProviderManagedRuleOverride
 {
     /// <summary>One or more exclusion blocks as defined below.</summary>
@@ -159,6 +166,7 @@ public partial class V1beta1FrontdoorFirewallPolicySpecForProviderManagedRuleOve
     public string? RuleGroupName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorFirewallPolicySpecForProviderManagedRule
 {
     /// <summary>One or more exclusion blocks as defined below.</summary>
@@ -198,6 +206,7 @@ public enum V1beta1FrontdoorFirewallPolicySpecForProviderResourceGroupNameRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FrontdoorFirewallPolicySpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -211,6 +220,7 @@ public partial class V1beta1FrontdoorFirewallPolicySpecForProviderResourceGroupN
     public V1beta1FrontdoorFirewallPolicySpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1FrontdoorFirewallPolicySpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -242,6 +252,7 @@ public enum V1beta1FrontdoorFirewallPolicySpecForProviderResourceGroupNameSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FrontdoorFirewallPolicySpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -255,6 +266,7 @@ public partial class V1beta1FrontdoorFirewallPolicySpecForProviderResourceGroupN
     public V1beta1FrontdoorFirewallPolicySpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1FrontdoorFirewallPolicySpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -270,6 +282,7 @@ public partial class V1beta1FrontdoorFirewallPolicySpecForProviderResourceGroupN
     public V1beta1FrontdoorFirewallPolicySpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorFirewallPolicySpecForProvider
 {
     /// <summary>If a custom_rule block's action type is block, this is the response body. The body must be specified in base64 encoding.</summary>
@@ -317,6 +330,7 @@ public partial class V1beta1FrontdoorFirewallPolicySpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorFirewallPolicySpecInitProviderCustomRuleMatchCondition
 {
     /// <summary>Up to 600 possible values to match. Limit is in total across all match_condition blocks and match_values arguments. String value itself can be up to 256 characters long.</summary>
@@ -344,6 +358,7 @@ public partial class V1beta1FrontdoorFirewallPolicySpecInitProviderCustomRuleMat
     public IList<string>? Transforms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorFirewallPolicySpecInitProviderCustomRule
 {
     /// <summary>The action to perform when the rule is matched. Possible values are Allow, Block, Log, or Redirect.</summary>
@@ -379,6 +394,7 @@ public partial class V1beta1FrontdoorFirewallPolicySpecInitProviderCustomRule
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorFirewallPolicySpecInitProviderManagedRuleExclusion
 {
     /// <summary>The request variable to compare with. Possible values are Cookies, PostArgs, QueryString, RemoteAddr, RequestBody, RequestHeader, RequestMethod, RequestUri, or SocketAddr.</summary>
@@ -394,6 +410,7 @@ public partial class V1beta1FrontdoorFirewallPolicySpecInitProviderManagedRuleEx
     public string? Selector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorFirewallPolicySpecInitProviderManagedRuleOverrideExclusion
 {
     /// <summary>The request variable to compare with. Possible values are Cookies, PostArgs, QueryString, RemoteAddr, RequestBody, RequestHeader, RequestMethod, RequestUri, or SocketAddr.</summary>
@@ -409,6 +426,7 @@ public partial class V1beta1FrontdoorFirewallPolicySpecInitProviderManagedRuleOv
     public string? Selector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorFirewallPolicySpecInitProviderManagedRuleOverrideRuleExclusion
 {
     /// <summary>The request variable to compare with. Possible values are Cookies, PostArgs, QueryString, RemoteAddr, RequestBody, RequestHeader, RequestMethod, RequestUri, or SocketAddr.</summary>
@@ -424,6 +442,7 @@ public partial class V1beta1FrontdoorFirewallPolicySpecInitProviderManagedRuleOv
     public string? Selector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorFirewallPolicySpecInitProviderManagedRuleOverrideRule
 {
     /// <summary>The action to be applied when the rule matches. Possible values are Allow, Block, Log, or Redirect.</summary>
@@ -443,6 +462,7 @@ public partial class V1beta1FrontdoorFirewallPolicySpecInitProviderManagedRuleOv
     public string? RuleId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorFirewallPolicySpecInitProviderManagedRuleOverride
 {
     /// <summary>One or more exclusion blocks as defined below.</summary>
@@ -458,6 +478,7 @@ public partial class V1beta1FrontdoorFirewallPolicySpecInitProviderManagedRuleOv
     public string? RuleGroupName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorFirewallPolicySpecInitProviderManagedRule
 {
     /// <summary>One or more exclusion blocks as defined below.</summary>
@@ -477,6 +498,7 @@ public partial class V1beta1FrontdoorFirewallPolicySpecInitProviderManagedRule
     public string? Version { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1FrontdoorFirewallPolicySpecInitProvider
 {
     /// <summary>If a custom_rule block's action type is block, this is the response body. The body must be specified in base64 encoding.</summary>
@@ -554,6 +576,7 @@ public enum V1beta1FrontdoorFirewallPolicySpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FrontdoorFirewallPolicySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -567,6 +590,7 @@ public partial class V1beta1FrontdoorFirewallPolicySpecProviderConfigRefPolicy
     public V1beta1FrontdoorFirewallPolicySpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1FrontdoorFirewallPolicySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -598,6 +622,7 @@ public enum V1beta1FrontdoorFirewallPolicySpecPublishConnectionDetailsToConfigRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FrontdoorFirewallPolicySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -611,6 +636,7 @@ public partial class V1beta1FrontdoorFirewallPolicySpecPublishConnectionDetailsT
     public V1beta1FrontdoorFirewallPolicySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1FrontdoorFirewallPolicySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -622,6 +648,7 @@ public partial class V1beta1FrontdoorFirewallPolicySpecPublishConnectionDetailsT
     public V1beta1FrontdoorFirewallPolicySpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1FrontdoorFirewallPolicySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -637,6 +664,7 @@ public partial class V1beta1FrontdoorFirewallPolicySpecPublishConnectionDetailsT
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1FrontdoorFirewallPolicySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -652,6 +680,7 @@ public partial class V1beta1FrontdoorFirewallPolicySpecPublishConnectionDetailsT
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1FrontdoorFirewallPolicySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -663,6 +692,7 @@ public partial class V1beta1FrontdoorFirewallPolicySpecWriteConnectionSecretToRe
     public string Namespace { get; set; }
 }
 
+/// <summary>FrontdoorFirewallPolicySpec defines the desired state of FrontdoorFirewallPolicy</summary>
 public partial class V1beta1FrontdoorFirewallPolicySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -695,6 +725,7 @@ public partial class V1beta1FrontdoorFirewallPolicySpec
     public V1beta1FrontdoorFirewallPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorFirewallPolicyStatusAtProviderCustomRuleMatchCondition
 {
     /// <summary>Up to 600 possible values to match. Limit is in total across all match_condition blocks and match_values arguments. String value itself can be up to 256 characters long.</summary>
@@ -722,6 +753,7 @@ public partial class V1beta1FrontdoorFirewallPolicyStatusAtProviderCustomRuleMat
     public IList<string>? Transforms { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorFirewallPolicyStatusAtProviderCustomRule
 {
     /// <summary>The action to perform when the rule is matched. Possible values are Allow, Block, Log, or Redirect.</summary>
@@ -757,6 +789,7 @@ public partial class V1beta1FrontdoorFirewallPolicyStatusAtProviderCustomRule
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorFirewallPolicyStatusAtProviderManagedRuleExclusion
 {
     /// <summary>The request variable to compare with. Possible values are Cookies, PostArgs, QueryString, RemoteAddr, RequestBody, RequestHeader, RequestMethod, RequestUri, or SocketAddr.</summary>
@@ -772,6 +805,7 @@ public partial class V1beta1FrontdoorFirewallPolicyStatusAtProviderManagedRuleEx
     public string? Selector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorFirewallPolicyStatusAtProviderManagedRuleOverrideExclusion
 {
     /// <summary>The request variable to compare with. Possible values are Cookies, PostArgs, QueryString, RemoteAddr, RequestBody, RequestHeader, RequestMethod, RequestUri, or SocketAddr.</summary>
@@ -787,6 +821,7 @@ public partial class V1beta1FrontdoorFirewallPolicyStatusAtProviderManagedRuleOv
     public string? Selector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorFirewallPolicyStatusAtProviderManagedRuleOverrideRuleExclusion
 {
     /// <summary>The request variable to compare with. Possible values are Cookies, PostArgs, QueryString, RemoteAddr, RequestBody, RequestHeader, RequestMethod, RequestUri, or SocketAddr.</summary>
@@ -802,6 +837,7 @@ public partial class V1beta1FrontdoorFirewallPolicyStatusAtProviderManagedRuleOv
     public string? Selector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorFirewallPolicyStatusAtProviderManagedRuleOverrideRule
 {
     /// <summary>The action to be applied when the rule matches. Possible values are Allow, Block, Log, or Redirect.</summary>
@@ -821,6 +857,7 @@ public partial class V1beta1FrontdoorFirewallPolicyStatusAtProviderManagedRuleOv
     public string? RuleId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorFirewallPolicyStatusAtProviderManagedRuleOverride
 {
     /// <summary>One or more exclusion blocks as defined below.</summary>
@@ -836,6 +873,7 @@ public partial class V1beta1FrontdoorFirewallPolicyStatusAtProviderManagedRuleOv
     public string? RuleGroupName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorFirewallPolicyStatusAtProviderManagedRule
 {
     /// <summary>One or more exclusion blocks as defined below.</summary>
@@ -855,6 +893,7 @@ public partial class V1beta1FrontdoorFirewallPolicyStatusAtProviderManagedRule
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorFirewallPolicyStatusAtProvider
 {
     /// <summary>If a custom_rule block's action type is block, this is the response body. The body must be specified in base64 encoding.</summary>
@@ -906,6 +945,7 @@ public partial class V1beta1FrontdoorFirewallPolicyStatusAtProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1FrontdoorFirewallPolicyStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -933,6 +973,7 @@ public partial class V1beta1FrontdoorFirewallPolicyStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>FrontdoorFirewallPolicyStatus defines the observed state of FrontdoorFirewallPolicy.</summary>
 public partial class V1beta1FrontdoorFirewallPolicyStatus
 {
     /// <summary></summary>
@@ -949,6 +990,7 @@ public partial class V1beta1FrontdoorFirewallPolicyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>FrontdoorFirewallPolicy is the Schema for the FrontdoorFirewallPolicys API. Manages an Azure Front Door (classic) Web Application Firewall Policy instance.</summary>
 public partial class V1beta1FrontdoorFirewallPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FrontdoorFirewallPolicySpec>, IStatus<V1beta1FrontdoorFirewallPolicyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

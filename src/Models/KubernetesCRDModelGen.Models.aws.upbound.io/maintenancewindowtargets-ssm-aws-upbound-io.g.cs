@@ -18,6 +18,7 @@ public enum V1beta1MaintenanceWindowTargetSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1MaintenanceWindowTargetSpecForProviderTargets
 {
     /// <summary></summary>
@@ -49,6 +50,7 @@ public enum V1beta1MaintenanceWindowTargetSpecForProviderWindowIdRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MaintenanceWindowTargetSpecForProviderWindowIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -62,6 +64,7 @@ public partial class V1beta1MaintenanceWindowTargetSpecForProviderWindowIdRefPol
     public V1beta1MaintenanceWindowTargetSpecForProviderWindowIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a MaintenanceWindow in ssm to populate windowId.</summary>
 public partial class V1beta1MaintenanceWindowTargetSpecForProviderWindowIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -93,6 +96,7 @@ public enum V1beta1MaintenanceWindowTargetSpecForProviderWindowIdSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MaintenanceWindowTargetSpecForProviderWindowIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -106,6 +110,7 @@ public partial class V1beta1MaintenanceWindowTargetSpecForProviderWindowIdSelect
     public V1beta1MaintenanceWindowTargetSpecForProviderWindowIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a MaintenanceWindow in ssm to populate windowId.</summary>
 public partial class V1beta1MaintenanceWindowTargetSpecForProviderWindowIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1MaintenanceWindowTargetSpecForProviderWindowIdSelect
     public V1beta1MaintenanceWindowTargetSpecForProviderWindowIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MaintenanceWindowTargetSpecForProvider
 {
     /// <summary>The description of the maintenance window target.</summary>
@@ -160,6 +166,7 @@ public partial class V1beta1MaintenanceWindowTargetSpecForProvider
     public V1beta1MaintenanceWindowTargetSpecForProviderWindowIdSelector? WindowIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MaintenanceWindowTargetSpecInitProviderTargets
 {
     /// <summary></summary>
@@ -191,6 +198,7 @@ public enum V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -204,6 +212,7 @@ public partial class V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdRefPo
     public V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a MaintenanceWindow in ssm to populate windowId.</summary>
 public partial class V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -235,6 +244,7 @@ public enum V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -248,6 +258,7 @@ public partial class V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdSelec
     public V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a MaintenanceWindow in ssm to populate windowId.</summary>
 public partial class V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -263,6 +274,7 @@ public partial class V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdSelec
     public V1beta1MaintenanceWindowTargetSpecInitProviderWindowIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1MaintenanceWindowTargetSpecInitProvider
 {
     /// <summary>The description of the maintenance window target.</summary>
@@ -340,6 +352,7 @@ public enum V1beta1MaintenanceWindowTargetSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MaintenanceWindowTargetSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -353,6 +366,7 @@ public partial class V1beta1MaintenanceWindowTargetSpecProviderConfigRefPolicy
     public V1beta1MaintenanceWindowTargetSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1MaintenanceWindowTargetSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -384,6 +398,7 @@ public enum V1beta1MaintenanceWindowTargetSpecPublishConnectionDetailsToConfigRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MaintenanceWindowTargetSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -397,6 +412,7 @@ public partial class V1beta1MaintenanceWindowTargetSpecPublishConnectionDetailsT
     public V1beta1MaintenanceWindowTargetSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1MaintenanceWindowTargetSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -408,6 +424,7 @@ public partial class V1beta1MaintenanceWindowTargetSpecPublishConnectionDetailsT
     public V1beta1MaintenanceWindowTargetSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1MaintenanceWindowTargetSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -423,6 +440,7 @@ public partial class V1beta1MaintenanceWindowTargetSpecPublishConnectionDetailsT
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1MaintenanceWindowTargetSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -438,6 +456,7 @@ public partial class V1beta1MaintenanceWindowTargetSpecPublishConnectionDetailsT
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1MaintenanceWindowTargetSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -449,6 +468,7 @@ public partial class V1beta1MaintenanceWindowTargetSpecWriteConnectionSecretToRe
     public string Namespace { get; set; }
 }
 
+/// <summary>MaintenanceWindowTargetSpec defines the desired state of MaintenanceWindowTarget</summary>
 public partial class V1beta1MaintenanceWindowTargetSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -481,6 +501,7 @@ public partial class V1beta1MaintenanceWindowTargetSpec
     public V1beta1MaintenanceWindowTargetSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MaintenanceWindowTargetStatusAtProviderTargets
 {
     /// <summary></summary>
@@ -492,6 +513,7 @@ public partial class V1beta1MaintenanceWindowTargetStatusAtProviderTargets
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MaintenanceWindowTargetStatusAtProvider
 {
     /// <summary>The description of the maintenance window target.</summary>
@@ -523,6 +545,7 @@ public partial class V1beta1MaintenanceWindowTargetStatusAtProvider
     public string? WindowId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1MaintenanceWindowTargetStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -550,6 +573,7 @@ public partial class V1beta1MaintenanceWindowTargetStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>MaintenanceWindowTargetStatus defines the observed state of MaintenanceWindowTarget.</summary>
 public partial class V1beta1MaintenanceWindowTargetStatus
 {
     /// <summary></summary>
@@ -566,6 +590,7 @@ public partial class V1beta1MaintenanceWindowTargetStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>MaintenanceWindowTarget is the Schema for the MaintenanceWindowTargets API. Provides an SSM Maintenance Window Target resource</summary>
 public partial class V1beta1MaintenanceWindowTarget : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MaintenanceWindowTargetSpec>, IStatus<V1beta1MaintenanceWindowTargetStatus>
 {
     public const string KubeApiVersion = "v1beta1";

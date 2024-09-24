@@ -38,6 +38,7 @@ public enum V1beta1AccessPointSpecForProviderBucketRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AccessPointSpecForProviderBucketRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1AccessPointSpecForProviderBucketRefPolicy
     public V1beta1AccessPointSpecForProviderBucketRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1AccessPointSpecForProviderBucketRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1AccessPointSpecForProviderBucketSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AccessPointSpecForProviderBucketSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1AccessPointSpecForProviderBucketSelectorPolicy
     public V1beta1AccessPointSpecForProviderBucketSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1AccessPointSpecForProviderBucketSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1AccessPointSpecForProviderBucketSelector
     public V1beta1AccessPointSpecForProviderBucketSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPointSpecForProviderPublicAccessBlockConfiguration
 {
     /// <summary>Whether Amazon S3 should block public ACLs for buckets in this account. Defaults to true. Enabling this setting does not affect existing policies or ACLs. When set to true causes the following behavior:</summary>
@@ -149,6 +154,7 @@ public enum V1beta1AccessPointSpecForProviderVpcConfigurationVpcIdRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AccessPointSpecForProviderVpcConfigurationVpcIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -162,6 +168,7 @@ public partial class V1beta1AccessPointSpecForProviderVpcConfigurationVpcIdRefPo
     public V1beta1AccessPointSpecForProviderVpcConfigurationVpcIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1AccessPointSpecForProviderVpcConfigurationVpcIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -193,6 +200,7 @@ public enum V1beta1AccessPointSpecForProviderVpcConfigurationVpcIdSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AccessPointSpecForProviderVpcConfigurationVpcIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -206,6 +214,7 @@ public partial class V1beta1AccessPointSpecForProviderVpcConfigurationVpcIdSelec
     public V1beta1AccessPointSpecForProviderVpcConfigurationVpcIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1AccessPointSpecForProviderVpcConfigurationVpcIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -221,6 +230,7 @@ public partial class V1beta1AccessPointSpecForProviderVpcConfigurationVpcIdSelec
     public V1beta1AccessPointSpecForProviderVpcConfigurationVpcIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPointSpecForProviderVpcConfiguration
 {
     /// <summary>This access point will only allow connections from the specified VPC ID.</summary>
@@ -236,6 +246,7 @@ public partial class V1beta1AccessPointSpecForProviderVpcConfiguration
     public V1beta1AccessPointSpecForProviderVpcConfigurationVpcIdSelector? VpcIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPointSpecForProvider
 {
     /// <summary>AWS account ID for the owner of the bucket for which you want to create an access point.</summary>
@@ -299,6 +310,7 @@ public enum V1beta1AccessPointSpecInitProviderBucketRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AccessPointSpecInitProviderBucketRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -312,6 +324,7 @@ public partial class V1beta1AccessPointSpecInitProviderBucketRefPolicy
     public V1beta1AccessPointSpecInitProviderBucketRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1AccessPointSpecInitProviderBucketRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -343,6 +356,7 @@ public enum V1beta1AccessPointSpecInitProviderBucketSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AccessPointSpecInitProviderBucketSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -356,6 +370,7 @@ public partial class V1beta1AccessPointSpecInitProviderBucketSelectorPolicy
     public V1beta1AccessPointSpecInitProviderBucketSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1AccessPointSpecInitProviderBucketSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -371,6 +386,7 @@ public partial class V1beta1AccessPointSpecInitProviderBucketSelector
     public V1beta1AccessPointSpecInitProviderBucketSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPointSpecInitProviderPublicAccessBlockConfiguration
 {
     /// <summary>Whether Amazon S3 should block public ACLs for buckets in this account. Defaults to true. Enabling this setting does not affect existing policies or ACLs. When set to true causes the following behavior:</summary>
@@ -410,6 +426,7 @@ public enum V1beta1AccessPointSpecInitProviderVpcConfigurationVpcIdRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AccessPointSpecInitProviderVpcConfigurationVpcIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -423,6 +440,7 @@ public partial class V1beta1AccessPointSpecInitProviderVpcConfigurationVpcIdRefP
     public V1beta1AccessPointSpecInitProviderVpcConfigurationVpcIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1AccessPointSpecInitProviderVpcConfigurationVpcIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -454,6 +472,7 @@ public enum V1beta1AccessPointSpecInitProviderVpcConfigurationVpcIdSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AccessPointSpecInitProviderVpcConfigurationVpcIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -467,6 +486,7 @@ public partial class V1beta1AccessPointSpecInitProviderVpcConfigurationVpcIdSele
     public V1beta1AccessPointSpecInitProviderVpcConfigurationVpcIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1AccessPointSpecInitProviderVpcConfigurationVpcIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -482,6 +502,7 @@ public partial class V1beta1AccessPointSpecInitProviderVpcConfigurationVpcIdSele
     public V1beta1AccessPointSpecInitProviderVpcConfigurationVpcIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPointSpecInitProviderVpcConfiguration
 {
     /// <summary>This access point will only allow connections from the specified VPC ID.</summary>
@@ -497,6 +518,7 @@ public partial class V1beta1AccessPointSpecInitProviderVpcConfiguration
     public V1beta1AccessPointSpecInitProviderVpcConfigurationVpcIdSelector? VpcIdSelector { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1AccessPointSpecInitProvider
 {
     /// <summary>AWS account ID for the owner of the bucket for which you want to create an access point.</summary>
@@ -578,6 +600,7 @@ public enum V1beta1AccessPointSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AccessPointSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -591,6 +614,7 @@ public partial class V1beta1AccessPointSpecProviderConfigRefPolicy
     public V1beta1AccessPointSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1AccessPointSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -622,6 +646,7 @@ public enum V1beta1AccessPointSpecPublishConnectionDetailsToConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AccessPointSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -635,6 +660,7 @@ public partial class V1beta1AccessPointSpecPublishConnectionDetailsToConfigRefPo
     public V1beta1AccessPointSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1AccessPointSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -646,6 +672,7 @@ public partial class V1beta1AccessPointSpecPublishConnectionDetailsToConfigRef
     public V1beta1AccessPointSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1AccessPointSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -661,6 +688,7 @@ public partial class V1beta1AccessPointSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1AccessPointSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -676,6 +704,7 @@ public partial class V1beta1AccessPointSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1AccessPointSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -687,6 +716,7 @@ public partial class V1beta1AccessPointSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>AccessPointSpec defines the desired state of AccessPoint</summary>
 public partial class V1beta1AccessPointSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -719,6 +749,7 @@ public partial class V1beta1AccessPointSpec
     public V1beta1AccessPointSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPointStatusAtProviderPublicAccessBlockConfiguration
 {
     /// <summary>Whether Amazon S3 should block public ACLs for buckets in this account. Defaults to true. Enabling this setting does not affect existing policies or ACLs. When set to true causes the following behavior:</summary>
@@ -738,6 +769,7 @@ public partial class V1beta1AccessPointStatusAtProviderPublicAccessBlockConfigur
     public bool? RestrictPublicBuckets { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPointStatusAtProviderVpcConfiguration
 {
     /// <summary>This access point will only allow connections from the specified VPC ID.</summary>
@@ -745,6 +777,7 @@ public partial class V1beta1AccessPointStatusAtProviderVpcConfiguration
     public string? VpcId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccessPointStatusAtProvider
 {
     /// <summary>AWS account ID for the owner of the bucket for which you want to create an access point.</summary>
@@ -804,6 +837,7 @@ public partial class V1beta1AccessPointStatusAtProvider
     public IList<V1beta1AccessPointStatusAtProviderVpcConfiguration>? VpcConfiguration { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1AccessPointStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -831,6 +865,7 @@ public partial class V1beta1AccessPointStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>AccessPointStatus defines the observed state of AccessPoint.</summary>
 public partial class V1beta1AccessPointStatus
 {
     /// <summary></summary>
@@ -847,6 +882,7 @@ public partial class V1beta1AccessPointStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>AccessPoint is the Schema for the AccessPoints API. Manages an S3 Access Point.</summary>
 public partial class V1beta1AccessPoint : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AccessPointSpec>, IStatus<V1beta1AccessPointStatus>
 {
     public const string KubeApiVersion = "v1beta1";

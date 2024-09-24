@@ -18,6 +18,7 @@ public enum V1beta1WindowsVirtualMachineSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderAdditionalCapabilities
 {
     /// <summary>Should the capacity to enable Data Disks of the UltraSSD_LRS storage account type be supported on this Virtual Machine? Defaults to false.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProviderAdditionalCapabi
     public bool? UltraSsdEnabled { get; set; }
 }
 
+/// <summary>The XML formatted content that is added to the unattend.xml file for the specified path and component. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderAdditionalUnattendContentContentSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -40,6 +42,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProviderAdditionalUnatte
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderAdditionalUnattendContent
 {
     /// <summary>The XML formatted content that is added to the unattend.xml file for the specified path and component. Changing this forces a new resource to be created.</summary>
@@ -51,6 +54,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProviderAdditionalUnatte
     public string? Setting { get; set; }
 }
 
+/// <summary>The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderAdminPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -66,6 +70,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProviderAdminPasswordSec
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderBootDiagnostics
 {
     /// <summary>The Primary/Secondary Endpoint for the Azure Storage Account which should be used to store Boot Diagnostics, including Console Output and Screenshots from the Hypervisor.</summary>
@@ -73,6 +78,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProviderBootDiagnostics
     public string? StorageAccountUri { get; set; }
 }
 
+/// <summary>The Base64-Encoded Custom Data which should be used for this Virtual Machine. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderCustomDataSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -88,6 +94,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProviderCustomDataSecret
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderGalleryApplication
 {
     /// <summary>Specifies whether the version will be automatically updated for the VM when a new Gallery Application version is available in PIR/SIG. Defaults to false.</summary>
@@ -115,6 +122,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProviderGalleryApplicati
     public string? VersionId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Windows Virtual Machine.</summary>
@@ -146,6 +154,7 @@ public enum V1beta1WindowsVirtualMachineSpecForProviderNetworkInterfaceIdsRefsPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderNetworkInterfaceIdsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -159,6 +168,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProviderNetworkInterface
     public V1beta1WindowsVirtualMachineSpecForProviderNetworkInterfaceIdsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderNetworkInterfaceIdsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -190,6 +200,7 @@ public enum V1beta1WindowsVirtualMachineSpecForProviderNetworkInterfaceIdsSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderNetworkInterfaceIdsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -203,6 +214,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProviderNetworkInterface
     public V1beta1WindowsVirtualMachineSpecForProviderNetworkInterfaceIdsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of NetworkInterface in network to populate networkInterfaceIds.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderNetworkInterfaceIdsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -218,6 +230,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProviderNetworkInterface
     public V1beta1WindowsVirtualMachineSpecForProviderNetworkInterfaceIdsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderOsDiskDiffDiskSettings
 {
     /// <summary>Specifies the Ephemeral Disk Settings for the OS Disk. At this time the only possible value is Local. Changing this forces a new resource to be created.</summary>
@@ -229,6 +242,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProviderOsDiskDiffDiskSe
     public string? Placement { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderOsDisk
 {
     /// <summary>The Type of Caching which should be used for the Internal OS Disk. Possible values are None, ReadOnly and ReadWrite.</summary>
@@ -268,6 +282,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProviderOsDisk
     public bool? WriteAcceleratorEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderOsImageNotification
 {
     /// <summary>Length of time a notification to be sent to the VM on the instance metadata server till the VM gets OS upgraded. The only possible value is PT15M. Defaults to PT15M.</summary>
@@ -275,6 +290,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProviderOsImageNotificat
     public string? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderPlan
 {
     /// <summary>Specifies the Name of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.</summary>
@@ -310,6 +326,7 @@ public enum V1beta1WindowsVirtualMachineSpecForProviderResourceGroupNameRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -323,6 +340,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProviderResourceGroupNam
     public V1beta1WindowsVirtualMachineSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -354,6 +372,7 @@ public enum V1beta1WindowsVirtualMachineSpecForProviderResourceGroupNameSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -367,6 +386,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProviderResourceGroupNam
     public V1beta1WindowsVirtualMachineSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -382,6 +402,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProviderResourceGroupNam
     public V1beta1WindowsVirtualMachineSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderSecretCertificate
 {
     /// <summary>The certificate store on the Virtual Machine where the certificate should be added.</summary>
@@ -393,6 +414,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProviderSecretCertificat
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderSecret
 {
     /// <summary>One or more certificate blocks as defined above.</summary>
@@ -404,6 +426,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProviderSecret
     public string? KeyVaultId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderSourceImageReference
 {
     /// <summary>Specifies the offer of the image used to create the virtual machines. Changing this forces a new resource to be created.</summary>
@@ -423,6 +446,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProviderSourceImageRefer
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderTerminationNotification
 {
     /// <summary>Should the termination notification be enabled on this Virtual Machine?</summary>
@@ -434,6 +458,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProviderTerminationNotif
     public string? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProviderWinrmListener
 {
     /// <summary>The Secret URL of a Key Vault Certificate, which must be specified when protocol is set to Https. Changing this forces a new resource to be created.</summary>
@@ -445,6 +470,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProviderWinrmListener
     public string? Protocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineSpecForProvider
 {
     /// <summary>A additional_capabilities block as defined below.</summary>
@@ -668,6 +694,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProvider
     public string? Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineSpecInitProviderAdditionalCapabilities
 {
     /// <summary>Should the capacity to enable Data Disks of the UltraSSD_LRS storage account type be supported on this Virtual Machine? Defaults to false.</summary>
@@ -675,6 +702,7 @@ public partial class V1beta1WindowsVirtualMachineSpecInitProviderAdditionalCapab
     public bool? UltraSsdEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineSpecInitProviderAdditionalUnattendContent
 {
     /// <summary>The name of the setting to which the content applies. Possible values are AutoLogon and FirstLogonCommands. Changing this forces a new resource to be created.</summary>
@@ -682,6 +710,7 @@ public partial class V1beta1WindowsVirtualMachineSpecInitProviderAdditionalUnatt
     public string? Setting { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineSpecInitProviderBootDiagnostics
 {
     /// <summary>The Primary/Secondary Endpoint for the Azure Storage Account which should be used to store Boot Diagnostics, including Console Output and Screenshots from the Hypervisor.</summary>
@@ -689,6 +718,7 @@ public partial class V1beta1WindowsVirtualMachineSpecInitProviderBootDiagnostics
     public string? StorageAccountUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineSpecInitProviderGalleryApplication
 {
     /// <summary>Specifies whether the version will be automatically updated for the VM when a new Gallery Application version is available in PIR/SIG. Defaults to false.</summary>
@@ -716,6 +746,7 @@ public partial class V1beta1WindowsVirtualMachineSpecInitProviderGalleryApplicat
     public string? VersionId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineSpecInitProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Windows Virtual Machine.</summary>
@@ -747,6 +778,7 @@ public enum V1beta1WindowsVirtualMachineSpecInitProviderNetworkInterfaceIdsRefsP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecInitProviderNetworkInterfaceIdsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -760,6 +792,7 @@ public partial class V1beta1WindowsVirtualMachineSpecInitProviderNetworkInterfac
     public V1beta1WindowsVirtualMachineSpecInitProviderNetworkInterfaceIdsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecInitProviderNetworkInterfaceIdsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -791,6 +824,7 @@ public enum V1beta1WindowsVirtualMachineSpecInitProviderNetworkInterfaceIdsSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecInitProviderNetworkInterfaceIdsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -804,6 +838,7 @@ public partial class V1beta1WindowsVirtualMachineSpecInitProviderNetworkInterfac
     public V1beta1WindowsVirtualMachineSpecInitProviderNetworkInterfaceIdsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of NetworkInterface in network to populate networkInterfaceIds.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecInitProviderNetworkInterfaceIdsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -819,6 +854,7 @@ public partial class V1beta1WindowsVirtualMachineSpecInitProviderNetworkInterfac
     public V1beta1WindowsVirtualMachineSpecInitProviderNetworkInterfaceIdsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineSpecInitProviderOsDiskDiffDiskSettings
 {
     /// <summary>Specifies the Ephemeral Disk Settings for the OS Disk. At this time the only possible value is Local. Changing this forces a new resource to be created.</summary>
@@ -830,6 +866,7 @@ public partial class V1beta1WindowsVirtualMachineSpecInitProviderOsDiskDiffDiskS
     public string? Placement { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineSpecInitProviderOsDisk
 {
     /// <summary>The Type of Caching which should be used for the Internal OS Disk. Possible values are None, ReadOnly and ReadWrite.</summary>
@@ -869,6 +906,7 @@ public partial class V1beta1WindowsVirtualMachineSpecInitProviderOsDisk
     public bool? WriteAcceleratorEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineSpecInitProviderOsImageNotification
 {
     /// <summary>Length of time a notification to be sent to the VM on the instance metadata server till the VM gets OS upgraded. The only possible value is PT15M. Defaults to PT15M.</summary>
@@ -876,6 +914,7 @@ public partial class V1beta1WindowsVirtualMachineSpecInitProviderOsImageNotifica
     public string? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineSpecInitProviderPlan
 {
     /// <summary>Specifies the Name of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.</summary>
@@ -891,6 +930,7 @@ public partial class V1beta1WindowsVirtualMachineSpecInitProviderPlan
     public string? Publisher { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineSpecInitProviderSecretCertificate
 {
     /// <summary>The certificate store on the Virtual Machine where the certificate should be added.</summary>
@@ -902,6 +942,7 @@ public partial class V1beta1WindowsVirtualMachineSpecInitProviderSecretCertifica
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineSpecInitProviderSecret
 {
     /// <summary>One or more certificate blocks as defined above.</summary>
@@ -913,6 +954,7 @@ public partial class V1beta1WindowsVirtualMachineSpecInitProviderSecret
     public string? KeyVaultId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineSpecInitProviderSourceImageReference
 {
     /// <summary>Specifies the offer of the image used to create the virtual machines. Changing this forces a new resource to be created.</summary>
@@ -932,6 +974,7 @@ public partial class V1beta1WindowsVirtualMachineSpecInitProviderSourceImageRefe
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineSpecInitProviderTerminationNotification
 {
     /// <summary>Should the termination notification be enabled on this Virtual Machine?</summary>
@@ -943,6 +986,7 @@ public partial class V1beta1WindowsVirtualMachineSpecInitProviderTerminationNoti
     public string? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineSpecInitProviderWinrmListener
 {
     /// <summary>The Secret URL of a Key Vault Certificate, which must be specified when protocol is set to Https. Changing this forces a new resource to be created.</summary>
@@ -954,6 +998,7 @@ public partial class V1beta1WindowsVirtualMachineSpecInitProviderWinrmListener
     public string? Protocol { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecInitProvider
 {
     /// <summary>A additional_capabilities block as defined below.</summary>
@@ -1199,6 +1244,7 @@ public enum V1beta1WindowsVirtualMachineSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1212,6 +1258,7 @@ public partial class V1beta1WindowsVirtualMachineSpecProviderConfigRefPolicy
     public V1beta1WindowsVirtualMachineSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1243,6 +1290,7 @@ public enum V1beta1WindowsVirtualMachineSpecPublishConnectionDetailsToConfigRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1256,6 +1304,7 @@ public partial class V1beta1WindowsVirtualMachineSpecPublishConnectionDetailsToC
     public V1beta1WindowsVirtualMachineSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1267,6 +1316,7 @@ public partial class V1beta1WindowsVirtualMachineSpecPublishConnectionDetailsToC
     public V1beta1WindowsVirtualMachineSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1282,6 +1332,7 @@ public partial class V1beta1WindowsVirtualMachineSpecPublishConnectionDetailsToM
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1297,6 +1348,7 @@ public partial class V1beta1WindowsVirtualMachineSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1WindowsVirtualMachineSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1308,6 +1360,7 @@ public partial class V1beta1WindowsVirtualMachineSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>WindowsVirtualMachineSpec defines the desired state of WindowsVirtualMachine</summary>
 public partial class V1beta1WindowsVirtualMachineSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1340,6 +1393,7 @@ public partial class V1beta1WindowsVirtualMachineSpec
     public V1beta1WindowsVirtualMachineSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineStatusAtProviderAdditionalCapabilities
 {
     /// <summary>Should the capacity to enable Data Disks of the UltraSSD_LRS storage account type be supported on this Virtual Machine? Defaults to false.</summary>
@@ -1347,6 +1401,7 @@ public partial class V1beta1WindowsVirtualMachineStatusAtProviderAdditionalCapab
     public bool? UltraSsdEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineStatusAtProviderAdditionalUnattendContent
 {
     /// <summary>The name of the setting to which the content applies. Possible values are AutoLogon and FirstLogonCommands. Changing this forces a new resource to be created.</summary>
@@ -1354,6 +1409,7 @@ public partial class V1beta1WindowsVirtualMachineStatusAtProviderAdditionalUnatt
     public string? Setting { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineStatusAtProviderBootDiagnostics
 {
     /// <summary>The Primary/Secondary Endpoint for the Azure Storage Account which should be used to store Boot Diagnostics, including Console Output and Screenshots from the Hypervisor.</summary>
@@ -1361,6 +1417,7 @@ public partial class V1beta1WindowsVirtualMachineStatusAtProviderBootDiagnostics
     public string? StorageAccountUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineStatusAtProviderGalleryApplication
 {
     /// <summary>Specifies whether the version will be automatically updated for the VM when a new Gallery Application version is available in PIR/SIG. Defaults to false.</summary>
@@ -1388,6 +1445,7 @@ public partial class V1beta1WindowsVirtualMachineStatusAtProviderGalleryApplicat
     public string? VersionId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineStatusAtProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Windows Virtual Machine.</summary>
@@ -1407,6 +1465,7 @@ public partial class V1beta1WindowsVirtualMachineStatusAtProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineStatusAtProviderOsDiskDiffDiskSettings
 {
     /// <summary>Specifies the Ephemeral Disk Settings for the OS Disk. At this time the only possible value is Local. Changing this forces a new resource to be created.</summary>
@@ -1418,6 +1477,7 @@ public partial class V1beta1WindowsVirtualMachineStatusAtProviderOsDiskDiffDiskS
     public string? Placement { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineStatusAtProviderOsDisk
 {
     /// <summary>The Type of Caching which should be used for the Internal OS Disk. Possible values are None, ReadOnly and ReadWrite.</summary>
@@ -1457,6 +1517,7 @@ public partial class V1beta1WindowsVirtualMachineStatusAtProviderOsDisk
     public bool? WriteAcceleratorEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineStatusAtProviderOsImageNotification
 {
     /// <summary>Length of time a notification to be sent to the VM on the instance metadata server till the VM gets OS upgraded. The only possible value is PT15M. Defaults to PT15M.</summary>
@@ -1464,6 +1525,7 @@ public partial class V1beta1WindowsVirtualMachineStatusAtProviderOsImageNotifica
     public string? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineStatusAtProviderPlan
 {
     /// <summary>Specifies the Name of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.</summary>
@@ -1479,6 +1541,7 @@ public partial class V1beta1WindowsVirtualMachineStatusAtProviderPlan
     public string? Publisher { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineStatusAtProviderSecretCertificate
 {
     /// <summary>The certificate store on the Virtual Machine where the certificate should be added.</summary>
@@ -1490,6 +1553,7 @@ public partial class V1beta1WindowsVirtualMachineStatusAtProviderSecretCertifica
     public string? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineStatusAtProviderSecret
 {
     /// <summary>One or more certificate blocks as defined above.</summary>
@@ -1501,6 +1565,7 @@ public partial class V1beta1WindowsVirtualMachineStatusAtProviderSecret
     public string? KeyVaultId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineStatusAtProviderSourceImageReference
 {
     /// <summary>Specifies the offer of the image used to create the virtual machines. Changing this forces a new resource to be created.</summary>
@@ -1520,6 +1585,7 @@ public partial class V1beta1WindowsVirtualMachineStatusAtProviderSourceImageRefe
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineStatusAtProviderTerminationNotification
 {
     /// <summary>Should the termination notification be enabled on this Virtual Machine?</summary>
@@ -1531,6 +1597,7 @@ public partial class V1beta1WindowsVirtualMachineStatusAtProviderTerminationNoti
     public string? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineStatusAtProviderWinrmListener
 {
     /// <summary>The Secret URL of a Key Vault Certificate, which must be specified when protocol is set to Https. Changing this forces a new resource to be created.</summary>
@@ -1542,6 +1609,7 @@ public partial class V1beta1WindowsVirtualMachineStatusAtProviderWinrmListener
     public string? Protocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WindowsVirtualMachineStatusAtProvider
 {
     /// <summary>A additional_capabilities block as defined below.</summary>
@@ -1765,6 +1833,7 @@ public partial class V1beta1WindowsVirtualMachineStatusAtProvider
     public string? Zone { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1WindowsVirtualMachineStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1792,6 +1861,7 @@ public partial class V1beta1WindowsVirtualMachineStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>WindowsVirtualMachineStatus defines the observed state of WindowsVirtualMachine.</summary>
 public partial class V1beta1WindowsVirtualMachineStatus
 {
     /// <summary></summary>
@@ -1808,6 +1878,7 @@ public partial class V1beta1WindowsVirtualMachineStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>WindowsVirtualMachine is the Schema for the WindowsVirtualMachines API. Manages a Windows Virtual Machine.</summary>
 public partial class V1beta1WindowsVirtualMachine : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1WindowsVirtualMachineSpec>, IStatus<V1beta1WindowsVirtualMachineStatus>
 {
     public const string KubeApiVersion = "v1beta1";

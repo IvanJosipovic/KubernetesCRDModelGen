@@ -18,6 +18,7 @@ public enum V1beta1MetricDescriptorSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1MetricDescriptorSpecForProviderLabels
 {
     /// <summary>A human-readable description for the label.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1MetricDescriptorSpecForProviderLabels
     public string? ValueType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetricDescriptorSpecForProviderMetadata
 {
     /// <summary>The delay of data points caused by ingestion. Data points older than this age are guaranteed to be ingested and available to be read, excluding data loss due to errors. In [duration format](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf?&amp;_ga=2.264881487.1507873253.1593446723-935052455.1591817775#google.protobuf.Duration).</summary>
@@ -44,6 +46,7 @@ public partial class V1beta1MetricDescriptorSpecForProviderMetadata
     public string? SamplePeriod { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetricDescriptorSpecForProvider
 {
     /// <summary>A detailed description of the metric, which can be used in documentation.</summary>
@@ -87,6 +90,7 @@ public partial class V1beta1MetricDescriptorSpecForProvider
     public string? ValueType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetricDescriptorSpecInitProviderLabels
 {
     /// <summary>A human-readable description for the label.</summary>
@@ -102,6 +106,7 @@ public partial class V1beta1MetricDescriptorSpecInitProviderLabels
     public string? ValueType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetricDescriptorSpecInitProviderMetadata
 {
     /// <summary>The delay of data points caused by ingestion. Data points older than this age are guaranteed to be ingested and available to be read, excluding data loss due to errors. In [duration format](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf?&amp;_ga=2.264881487.1507873253.1593446723-935052455.1591817775#google.protobuf.Duration).</summary>
@@ -113,6 +118,7 @@ public partial class V1beta1MetricDescriptorSpecInitProviderMetadata
     public string? SamplePeriod { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1MetricDescriptorSpecInitProvider
 {
     /// <summary>A detailed description of the metric, which can be used in documentation.</summary>
@@ -198,6 +204,7 @@ public enum V1beta1MetricDescriptorSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MetricDescriptorSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -211,6 +218,7 @@ public partial class V1beta1MetricDescriptorSpecProviderConfigRefPolicy
     public V1beta1MetricDescriptorSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1MetricDescriptorSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -242,6 +250,7 @@ public enum V1beta1MetricDescriptorSpecPublishConnectionDetailsToConfigRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MetricDescriptorSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -255,6 +264,7 @@ public partial class V1beta1MetricDescriptorSpecPublishConnectionDetailsToConfig
     public V1beta1MetricDescriptorSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1MetricDescriptorSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public partial class V1beta1MetricDescriptorSpecPublishConnectionDetailsToConfig
     public V1beta1MetricDescriptorSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1MetricDescriptorSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -281,6 +292,7 @@ public partial class V1beta1MetricDescriptorSpecPublishConnectionDetailsToMetada
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1MetricDescriptorSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -296,6 +308,7 @@ public partial class V1beta1MetricDescriptorSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1MetricDescriptorSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -307,6 +320,7 @@ public partial class V1beta1MetricDescriptorSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>MetricDescriptorSpec defines the desired state of MetricDescriptor</summary>
 public partial class V1beta1MetricDescriptorSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -339,6 +353,7 @@ public partial class V1beta1MetricDescriptorSpec
     public V1beta1MetricDescriptorSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetricDescriptorStatusAtProviderLabels
 {
     /// <summary>A human-readable description for the label.</summary>
@@ -354,6 +369,7 @@ public partial class V1beta1MetricDescriptorStatusAtProviderLabels
     public string? ValueType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetricDescriptorStatusAtProviderMetadata
 {
     /// <summary>The delay of data points caused by ingestion. Data points older than this age are guaranteed to be ingested and available to be read, excluding data loss due to errors. In [duration format](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf?&amp;_ga=2.264881487.1507873253.1593446723-935052455.1591817775#google.protobuf.Duration).</summary>
@@ -365,6 +381,7 @@ public partial class V1beta1MetricDescriptorStatusAtProviderMetadata
     public string? SamplePeriod { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MetricDescriptorStatusAtProvider
 {
     /// <summary>A detailed description of the metric, which can be used in documentation.</summary>
@@ -420,6 +437,7 @@ public partial class V1beta1MetricDescriptorStatusAtProvider
     public string? ValueType { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1MetricDescriptorStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -447,6 +465,7 @@ public partial class V1beta1MetricDescriptorStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>MetricDescriptorStatus defines the observed state of MetricDescriptor.</summary>
 public partial class V1beta1MetricDescriptorStatus
 {
     /// <summary></summary>
@@ -463,6 +482,7 @@ public partial class V1beta1MetricDescriptorStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>MetricDescriptor is the Schema for the MetricDescriptors API. Defines a metric type and its schema.</summary>
 public partial class V1beta1MetricDescriptor : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MetricDescriptorSpec>, IStatus<V1beta1MetricDescriptorStatus>
 {
     public const string KubeApiVersion = "v1beta1";

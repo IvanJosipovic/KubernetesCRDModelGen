@@ -38,6 +38,7 @@ public enum V1beta1FrontdoorOriginSpecForProviderCdnFrontdoorOriginGroupIdRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FrontdoorOriginSpecForProviderCdnFrontdoorOriginGroupIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1FrontdoorOriginSpecForProviderCdnFrontdoorOriginGrou
     public V1beta1FrontdoorOriginSpecForProviderCdnFrontdoorOriginGroupIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a FrontdoorOriginGroup in cdn to populate cdnFrontdoorOriginGroupId.</summary>
 public partial class V1beta1FrontdoorOriginSpecForProviderCdnFrontdoorOriginGroupIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1FrontdoorOriginSpecForProviderCdnFrontdoorOriginGroupIdSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FrontdoorOriginSpecForProviderCdnFrontdoorOriginGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1FrontdoorOriginSpecForProviderCdnFrontdoorOriginGrou
     public V1beta1FrontdoorOriginSpecForProviderCdnFrontdoorOriginGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a FrontdoorOriginGroup in cdn to populate cdnFrontdoorOriginGroupId.</summary>
 public partial class V1beta1FrontdoorOriginSpecForProviderCdnFrontdoorOriginGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1FrontdoorOriginSpecForProviderHostNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FrontdoorOriginSpecForProviderHostNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1FrontdoorOriginSpecForProviderHostNameRefPolicy
     public V1beta1FrontdoorOriginSpecForProviderHostNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in storage to populate hostName.</summary>
 public partial class V1beta1FrontdoorOriginSpecForProviderHostNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1FrontdoorOriginSpecForProviderHostNameSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FrontdoorOriginSpecForProviderHostNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1FrontdoorOriginSpecForProviderHostNameSelectorPolicy
     public V1beta1FrontdoorOriginSpecForProviderHostNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in storage to populate hostName.</summary>
 public partial class V1beta1FrontdoorOriginSpecForProviderHostNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1FrontdoorOriginSpecForProviderOriginHostHeaderRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FrontdoorOriginSpecForProviderOriginHostHeaderRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1FrontdoorOriginSpecForProviderOriginHostHeaderRefPol
     public V1beta1FrontdoorOriginSpecForProviderOriginHostHeaderRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in storage to populate originHostHeader.</summary>
 public partial class V1beta1FrontdoorOriginSpecForProviderOriginHostHeaderRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1FrontdoorOriginSpecForProviderOriginHostHeaderSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FrontdoorOriginSpecForProviderOriginHostHeaderSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1FrontdoorOriginSpecForProviderOriginHostHeaderSelect
     public V1beta1FrontdoorOriginSpecForProviderOriginHostHeaderSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in storage to populate originHostHeader.</summary>
 public partial class V1beta1FrontdoorOriginSpecForProviderOriginHostHeaderSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -314,6 +326,7 @@ public enum V1beta1FrontdoorOriginSpecForProviderPrivateLinkLocationRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FrontdoorOriginSpecForProviderPrivateLinkLocationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -327,6 +340,7 @@ public partial class V1beta1FrontdoorOriginSpecForProviderPrivateLinkLocationRef
     public V1beta1FrontdoorOriginSpecForProviderPrivateLinkLocationRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in storage to populate location.</summary>
 public partial class V1beta1FrontdoorOriginSpecForProviderPrivateLinkLocationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -358,6 +372,7 @@ public enum V1beta1FrontdoorOriginSpecForProviderPrivateLinkLocationSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FrontdoorOriginSpecForProviderPrivateLinkLocationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -371,6 +386,7 @@ public partial class V1beta1FrontdoorOriginSpecForProviderPrivateLinkLocationSel
     public V1beta1FrontdoorOriginSpecForProviderPrivateLinkLocationSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in storage to populate location.</summary>
 public partial class V1beta1FrontdoorOriginSpecForProviderPrivateLinkLocationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -406,6 +422,7 @@ public enum V1beta1FrontdoorOriginSpecForProviderPrivateLinkPrivateLinkTargetIdR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FrontdoorOriginSpecForProviderPrivateLinkPrivateLinkTargetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -419,6 +436,7 @@ public partial class V1beta1FrontdoorOriginSpecForProviderPrivateLinkPrivateLink
     public V1beta1FrontdoorOriginSpecForProviderPrivateLinkPrivateLinkTargetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in storage to populate privateLinkTargetId.</summary>
 public partial class V1beta1FrontdoorOriginSpecForProviderPrivateLinkPrivateLinkTargetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -450,6 +468,7 @@ public enum V1beta1FrontdoorOriginSpecForProviderPrivateLinkPrivateLinkTargetIdS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FrontdoorOriginSpecForProviderPrivateLinkPrivateLinkTargetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -463,6 +482,7 @@ public partial class V1beta1FrontdoorOriginSpecForProviderPrivateLinkPrivateLink
     public V1beta1FrontdoorOriginSpecForProviderPrivateLinkPrivateLinkTargetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in storage to populate privateLinkTargetId.</summary>
 public partial class V1beta1FrontdoorOriginSpecForProviderPrivateLinkPrivateLinkTargetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -478,6 +498,7 @@ public partial class V1beta1FrontdoorOriginSpecForProviderPrivateLinkPrivateLink
     public V1beta1FrontdoorOriginSpecForProviderPrivateLinkPrivateLinkTargetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorOriginSpecForProviderPrivateLink
 {
     /// <summary>Specifies the location where the Private Link resource should exist. Changing this forces a new resource to be created.</summary>
@@ -513,6 +534,7 @@ public partial class V1beta1FrontdoorOriginSpecForProviderPrivateLink
     public string? TargetType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorOriginSpecForProvider
 {
     /// <summary>The ID of the Front Door Origin Group within which this Front Door Origin should exist. Changing this forces a new Front Door Origin to be created.</summary>
@@ -604,6 +626,7 @@ public enum V1beta1FrontdoorOriginSpecInitProviderHostNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FrontdoorOriginSpecInitProviderHostNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -617,6 +640,7 @@ public partial class V1beta1FrontdoorOriginSpecInitProviderHostNameRefPolicy
     public V1beta1FrontdoorOriginSpecInitProviderHostNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in storage to populate hostName.</summary>
 public partial class V1beta1FrontdoorOriginSpecInitProviderHostNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -648,6 +672,7 @@ public enum V1beta1FrontdoorOriginSpecInitProviderHostNameSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FrontdoorOriginSpecInitProviderHostNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -661,6 +686,7 @@ public partial class V1beta1FrontdoorOriginSpecInitProviderHostNameSelectorPolic
     public V1beta1FrontdoorOriginSpecInitProviderHostNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in storage to populate hostName.</summary>
 public partial class V1beta1FrontdoorOriginSpecInitProviderHostNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -696,6 +722,7 @@ public enum V1beta1FrontdoorOriginSpecInitProviderOriginHostHeaderRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FrontdoorOriginSpecInitProviderOriginHostHeaderRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -709,6 +736,7 @@ public partial class V1beta1FrontdoorOriginSpecInitProviderOriginHostHeaderRefPo
     public V1beta1FrontdoorOriginSpecInitProviderOriginHostHeaderRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in storage to populate originHostHeader.</summary>
 public partial class V1beta1FrontdoorOriginSpecInitProviderOriginHostHeaderRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -740,6 +768,7 @@ public enum V1beta1FrontdoorOriginSpecInitProviderOriginHostHeaderSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FrontdoorOriginSpecInitProviderOriginHostHeaderSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -753,6 +782,7 @@ public partial class V1beta1FrontdoorOriginSpecInitProviderOriginHostHeaderSelec
     public V1beta1FrontdoorOriginSpecInitProviderOriginHostHeaderSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in storage to populate originHostHeader.</summary>
 public partial class V1beta1FrontdoorOriginSpecInitProviderOriginHostHeaderSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -788,6 +818,7 @@ public enum V1beta1FrontdoorOriginSpecInitProviderPrivateLinkLocationRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FrontdoorOriginSpecInitProviderPrivateLinkLocationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -801,6 +832,7 @@ public partial class V1beta1FrontdoorOriginSpecInitProviderPrivateLinkLocationRe
     public V1beta1FrontdoorOriginSpecInitProviderPrivateLinkLocationRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in storage to populate location.</summary>
 public partial class V1beta1FrontdoorOriginSpecInitProviderPrivateLinkLocationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -832,6 +864,7 @@ public enum V1beta1FrontdoorOriginSpecInitProviderPrivateLinkLocationSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FrontdoorOriginSpecInitProviderPrivateLinkLocationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -845,6 +878,7 @@ public partial class V1beta1FrontdoorOriginSpecInitProviderPrivateLinkLocationSe
     public V1beta1FrontdoorOriginSpecInitProviderPrivateLinkLocationSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in storage to populate location.</summary>
 public partial class V1beta1FrontdoorOriginSpecInitProviderPrivateLinkLocationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -880,6 +914,7 @@ public enum V1beta1FrontdoorOriginSpecInitProviderPrivateLinkPrivateLinkTargetId
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FrontdoorOriginSpecInitProviderPrivateLinkPrivateLinkTargetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -893,6 +928,7 @@ public partial class V1beta1FrontdoorOriginSpecInitProviderPrivateLinkPrivateLin
     public V1beta1FrontdoorOriginSpecInitProviderPrivateLinkPrivateLinkTargetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in storage to populate privateLinkTargetId.</summary>
 public partial class V1beta1FrontdoorOriginSpecInitProviderPrivateLinkPrivateLinkTargetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -924,6 +960,7 @@ public enum V1beta1FrontdoorOriginSpecInitProviderPrivateLinkPrivateLinkTargetId
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FrontdoorOriginSpecInitProviderPrivateLinkPrivateLinkTargetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -937,6 +974,7 @@ public partial class V1beta1FrontdoorOriginSpecInitProviderPrivateLinkPrivateLin
     public V1beta1FrontdoorOriginSpecInitProviderPrivateLinkPrivateLinkTargetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in storage to populate privateLinkTargetId.</summary>
 public partial class V1beta1FrontdoorOriginSpecInitProviderPrivateLinkPrivateLinkTargetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -952,6 +990,7 @@ public partial class V1beta1FrontdoorOriginSpecInitProviderPrivateLinkPrivateLin
     public V1beta1FrontdoorOriginSpecInitProviderPrivateLinkPrivateLinkTargetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorOriginSpecInitProviderPrivateLink
 {
     /// <summary>Specifies the location where the Private Link resource should exist. Changing this forces a new resource to be created.</summary>
@@ -987,6 +1026,7 @@ public partial class V1beta1FrontdoorOriginSpecInitProviderPrivateLink
     public string? TargetType { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1FrontdoorOriginSpecInitProvider
 {
     /// <summary>Specifies whether certificate name checks are enabled for this origin.</summary>
@@ -1088,6 +1128,7 @@ public enum V1beta1FrontdoorOriginSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FrontdoorOriginSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1101,6 +1142,7 @@ public partial class V1beta1FrontdoorOriginSpecProviderConfigRefPolicy
     public V1beta1FrontdoorOriginSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1FrontdoorOriginSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1132,6 +1174,7 @@ public enum V1beta1FrontdoorOriginSpecPublishConnectionDetailsToConfigRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FrontdoorOriginSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1145,6 +1188,7 @@ public partial class V1beta1FrontdoorOriginSpecPublishConnectionDetailsToConfigR
     public V1beta1FrontdoorOriginSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1FrontdoorOriginSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1156,6 +1200,7 @@ public partial class V1beta1FrontdoorOriginSpecPublishConnectionDetailsToConfigR
     public V1beta1FrontdoorOriginSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1FrontdoorOriginSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1171,6 +1216,7 @@ public partial class V1beta1FrontdoorOriginSpecPublishConnectionDetailsToMetadat
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1FrontdoorOriginSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1186,6 +1232,7 @@ public partial class V1beta1FrontdoorOriginSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1FrontdoorOriginSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1197,6 +1244,7 @@ public partial class V1beta1FrontdoorOriginSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>FrontdoorOriginSpec defines the desired state of FrontdoorOrigin</summary>
 public partial class V1beta1FrontdoorOriginSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1229,6 +1277,7 @@ public partial class V1beta1FrontdoorOriginSpec
     public V1beta1FrontdoorOriginSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorOriginStatusAtProviderPrivateLink
 {
     /// <summary>Specifies the location where the Private Link resource should exist. Changing this forces a new resource to be created.</summary>
@@ -1248,6 +1297,7 @@ public partial class V1beta1FrontdoorOriginStatusAtProviderPrivateLink
     public string? TargetType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontdoorOriginStatusAtProvider
 {
     /// <summary>The ID of the Front Door Origin Group within which this Front Door Origin should exist. Changing this forces a new Front Door Origin to be created.</summary>
@@ -1299,6 +1349,7 @@ public partial class V1beta1FrontdoorOriginStatusAtProvider
     public double? Weight { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1FrontdoorOriginStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1326,6 +1377,7 @@ public partial class V1beta1FrontdoorOriginStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>FrontdoorOriginStatus defines the observed state of FrontdoorOrigin.</summary>
 public partial class V1beta1FrontdoorOriginStatus
 {
     /// <summary></summary>
@@ -1342,6 +1394,7 @@ public partial class V1beta1FrontdoorOriginStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>FrontdoorOrigin is the Schema for the FrontdoorOrigins API. Manages a Front Door (standard/premium) Origin.</summary>
 public partial class V1beta1FrontdoorOrigin : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FrontdoorOriginSpec>, IStatus<V1beta1FrontdoorOriginStatus>
 {
     public const string KubeApiVersion = "v1beta1";

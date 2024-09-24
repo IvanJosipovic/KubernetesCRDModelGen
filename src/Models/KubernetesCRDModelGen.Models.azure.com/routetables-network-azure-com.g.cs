@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20201101storageRouteTableSpecOwner
 {
     /// <summary></summary>
@@ -19,6 +20,7 @@ public partial class V1api20201101storageRouteTableSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.RouteTable_Spec</summary>
 public partial class V1api20201101storageRouteTableSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -50,6 +52,7 @@ public partial class V1api20201101storageRouteTableSpec
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20201101storageRouteTableStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -81,6 +84,7 @@ public partial class V1api20201101storageRouteTableStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.RouteTable_STATUS Route table resource.</summary>
 public partial class V1api20201101storageRouteTableStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -129,6 +133,7 @@ public partial class V1api20201101storageRouteTableStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20201101.RouteTable Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/routeTable.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/routeTables/{routeTableName}</summary>
 public partial class V1api20201101storageRouteTable : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20201101storageRouteTableSpec>, IStatus<V1api20201101storageRouteTableStatus>
 {
     public const string KubeApiVersion = "v1api20201101storage";

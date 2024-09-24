@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containerservice.azure.com;
+/// <summary>Storage version of v1api20230315preview.FleetHubProfile The FleetHubProfile configures the fleet hub.</summary>
 public partial class V1api20230315previewstorageFleetSpecHubProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -19,6 +20,7 @@ public partial class V1api20230315previewstorageFleetSpecHubProfile
     public string? DnsPrefix { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20230315previewstorageFleetSpecOperatorSpecSecretsUserCredentials
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -30,6 +32,7 @@ public partial class V1api20230315previewstorageFleetSpecOperatorSpecSecretsUser
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.FleetOperatorSecrets</summary>
 public partial class V1api20230315previewstorageFleetSpecOperatorSpecSecrets
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -41,6 +44,7 @@ public partial class V1api20230315previewstorageFleetSpecOperatorSpecSecrets
     public V1api20230315previewstorageFleetSpecOperatorSpecSecretsUserCredentials? UserCredentials { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.FleetOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 public partial class V1api20230315previewstorageFleetSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -52,6 +56,7 @@ public partial class V1api20230315previewstorageFleetSpecOperatorSpec
     public V1api20230315previewstorageFleetSpecOperatorSpecSecrets? Secrets { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20230315previewstorageFleetSpecOwner
 {
     /// <summary></summary>
@@ -63,6 +68,7 @@ public partial class V1api20230315previewstorageFleetSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.Fleet_Spec</summary>
 public partial class V1api20230315previewstorageFleetSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -98,6 +104,7 @@ public partial class V1api20230315previewstorageFleetSpec
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20230315previewstorageFleetStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -129,6 +136,7 @@ public partial class V1api20230315previewstorageFleetStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.FleetHubProfile_STATUS The FleetHubProfile configures the fleet hub.</summary>
 public partial class V1api20230315previewstorageFleetStatusHubProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -148,6 +156,7 @@ public partial class V1api20230315previewstorageFleetStatusHubProfile
     public string? KubernetesVersion { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 public partial class V1api20230315previewstorageFleetStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -179,6 +188,7 @@ public partial class V1api20230315previewstorageFleetStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
+/// <summary>Storage version of v1api20230315preview.Fleet_STATUS The Fleet resource.</summary>
 public partial class V1api20230315previewstorageFleetStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -227,6 +237,7 @@ public partial class V1api20230315previewstorageFleetStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20230315preview.Fleet Generator information: - Generated from: /containerservice/resource-manager/Microsoft.ContainerService/fleet/preview/2023-03-15-preview/fleets.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/fleets/{fleetName}</summary>
 public partial class V1api20230315previewstorageFleet : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230315previewstorageFleetSpec>, IStatus<V1api20230315previewstorageFleetStatus>
 {
     public const string KubeApiVersion = "v1api20230315previewstorage";

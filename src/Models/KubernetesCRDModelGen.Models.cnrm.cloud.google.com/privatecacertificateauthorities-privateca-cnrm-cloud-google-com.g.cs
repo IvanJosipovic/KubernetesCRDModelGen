@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.privateca.cnrm.cloud.google.com;
+/// <summary>Immutable.</summary>
 public partial class V1beta1PrivateCACertificateAuthoritySpecCaPoolRef
 {
     /// <summary>The caPool for the resource  Allowed value: The Google Cloud resource name of a `PrivateCACAPool` resource (format: `projects/{{project}}/locations/{{location}}/caPools/{{name}}`).</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecCaPoolRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. Required. Contains distinguished name fields such as the common name, location and organization.</summary>
 public partial class V1beta1PrivateCACertificateAuthoritySpecConfigSubjectConfigSubject
 {
     /// <summary>Immutable. The "common name" of the subject.</summary>
@@ -58,6 +60,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecConfigSubjectConfig
     public string? StreetAddress { get; set; }
 }
 
+/// <summary>Immutable. Required. The OID for this X.509 extension.</summary>
 public partial class V1beta1PrivateCACertificateAuthoritySpecConfigSubjectConfigSubjectAltNameCustomSansObjectId
 {
     /// <summary>Immutable. Required. The parts of an OID path. The most significant parts of the path come first.</summary>
@@ -65,6 +68,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecConfigSubjectConfig
     public IList<long> ObjectIdPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateCACertificateAuthoritySpecConfigSubjectConfigSubjectAltNameCustomSans
 {
     /// <summary>Immutable. Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).</summary>
@@ -80,6 +84,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecConfigSubjectConfig
     public string Value { get; set; }
 }
 
+/// <summary>Immutable. Optional. The subject alternative name fields.</summary>
 public partial class V1beta1PrivateCACertificateAuthoritySpecConfigSubjectConfigSubjectAltName
 {
     /// <summary>Immutable. Contains additional subject alternative name values.</summary>
@@ -103,6 +108,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecConfigSubjectConfig
     public IList<string>? Uris { get; set; }
 }
 
+/// <summary>Immutable. Required. Specifies some of the values in a certificate that are related to the subject.</summary>
 public partial class V1beta1PrivateCACertificateAuthoritySpecConfigSubjectConfig
 {
     /// <summary>Immutable. Required. Contains distinguished name fields such as the common name, location and organization.</summary>
@@ -114,6 +120,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecConfigSubjectConfig
     public V1beta1PrivateCACertificateAuthoritySpecConfigSubjectConfigSubjectAltName? SubjectAltName { get; set; }
 }
 
+/// <summary>Immutable. Required. The OID for this X.509 extension.</summary>
 public partial class V1beta1PrivateCACertificateAuthoritySpecConfigX509ConfigAdditionalExtensionsObjectId
 {
     /// <summary>Immutable. Required. The parts of an OID path. The most significant parts of the path come first.</summary>
@@ -121,6 +128,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecConfigX509ConfigAdd
     public IList<long> ObjectIdPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateCACertificateAuthoritySpecConfigX509ConfigAdditionalExtensions
 {
     /// <summary>Immutable. Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).</summary>
@@ -136,6 +144,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecConfigX509ConfigAdd
     public string Value { get; set; }
 }
 
+/// <summary>Immutable. Optional. Describes options in this X509Parameters that are relevant in a CA certificate.</summary>
 public partial class V1beta1PrivateCACertificateAuthoritySpecConfigX509ConfigCaOptions
 {
     /// <summary>Immutable. Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.</summary>
@@ -151,6 +160,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecConfigX509ConfigCaO
     public bool? ZeroMaxIssuerPathLength { get; set; }
 }
 
+/// <summary>Immutable. Describes high-level ways in which a key may be used.</summary>
 public partial class V1beta1PrivateCACertificateAuthoritySpecConfigX509ConfigKeyUsageBaseKeyUsage
 {
     /// <summary>Immutable. The key may be used to sign certificates.</summary>
@@ -190,6 +200,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecConfigX509ConfigKey
     public bool? KeyEncipherment { get; set; }
 }
 
+/// <summary>Immutable. Detailed scenarios in which a key may be used.</summary>
 public partial class V1beta1PrivateCACertificateAuthoritySpecConfigX509ConfigKeyUsageExtendedKeyUsage
 {
     /// <summary>Immutable. Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.</summary>
@@ -217,6 +228,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecConfigX509ConfigKey
     public bool? TimeStamping { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateCACertificateAuthoritySpecConfigX509ConfigKeyUsageUnknownExtendedKeyUsages
 {
     /// <summary>Immutable. Required. The parts of an OID path. The most significant parts of the path come first.</summary>
@@ -224,6 +236,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecConfigX509ConfigKey
     public IList<long> ObjectIdPath { get; set; }
 }
 
+/// <summary>Immutable. Optional. Indicates the intended use for keys that correspond to a certificate.</summary>
 public partial class V1beta1PrivateCACertificateAuthoritySpecConfigX509ConfigKeyUsage
 {
     /// <summary>Immutable. Describes high-level ways in which a key may be used.</summary>
@@ -239,6 +252,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecConfigX509ConfigKey
     public IList<V1beta1PrivateCACertificateAuthoritySpecConfigX509ConfigKeyUsageUnknownExtendedKeyUsages>? UnknownExtendedKeyUsages { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateCACertificateAuthoritySpecConfigX509ConfigPolicyIds
 {
     /// <summary>Immutable. Required. The parts of an OID path. The most significant parts of the path come first.</summary>
@@ -246,6 +260,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecConfigX509ConfigPol
     public IList<long> ObjectIdPath { get; set; }
 }
 
+/// <summary>Immutable. Required. Describes how some of the technical X.509 fields in a certificate should be populated.</summary>
 public partial class V1beta1PrivateCACertificateAuthoritySpecConfigX509Config
 {
     /// <summary>Immutable. Optional. Describes custom X.509 extensions.</summary>
@@ -265,6 +280,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecConfigX509Config
     public IList<V1beta1PrivateCACertificateAuthoritySpecConfigX509ConfigPolicyIds>? PolicyIds { get; set; }
 }
 
+/// <summary>Immutable. Required. Immutable. The config used to create a self-signed X.509 certificate or CSR.</summary>
 public partial class V1beta1PrivateCACertificateAuthoritySpecConfig
 {
     /// <summary>Immutable. Required. Specifies some of the values in a certificate that are related to the subject.</summary>
@@ -276,6 +292,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecConfig
     public V1beta1PrivateCACertificateAuthoritySpecConfigX509Config X509Config { get; set; }
 }
 
+/// <summary>Immutable.</summary>
 public partial class V1beta1PrivateCACertificateAuthoritySpecGcsBucketRef
 {
     /// <summary>Immutable. The name of a Cloud Storage bucket where this CertificateAuthority will publish content, such as the CA certificate and CRLs. This must be a bucket name, without any prefixes (such as `gs://`) or suffixes (such as `.googleapis.com`). For example, to use a bucket named `my-bucket`, you would simply specify `my-bucket`. If not specified, a managed bucket will be created.  Allowed value: The Google Cloud resource name of a `StorageBucket` resource (format: `{{name}}`).</summary>
@@ -291,6 +308,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecGcsBucketRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable.</summary>
 public partial class V1beta1PrivateCACertificateAuthoritySpecKeySpecCloudKmsKeyVersionRef
 {
     /// <summary>The resource name for an existing Cloud KMS CryptoKeyVersion in the format `projects/*/locations/*/keyRings/*/cryptoKeys/*/cryptoKeyVersions/*`. This option enables full flexibility in the key's capabilities and properties.</summary>
@@ -306,6 +324,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecKeySpecCloudKmsKeyV
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. Required. Immutable. Used when issuing certificates for this CertificateAuthority. If this CertificateAuthority is a self-signed CertificateAuthority, this key is also used to sign the self-signed CA certificate. Otherwise, it is used to sign a CSR.</summary>
 public partial class V1beta1PrivateCACertificateAuthoritySpecKeySpec
 {
     /// <summary>Immutable. The algorithm to use for creating a managed Cloud KMS key for a for a simplified experience. All managed keys will be have their ProtectionLevel as `HSM`. Possible values: RSA_PSS_2048_SHA256, RSA_PSS_3072_SHA256, RSA_PSS_4096_SHA256, RSA_PKCS1_2048_SHA256, RSA_PKCS1_3072_SHA256, RSA_PKCS1_4096_SHA256, EC_P256_SHA256, EC_P384_SHA384</summary>
@@ -317,6 +336,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecKeySpec
     public V1beta1PrivateCACertificateAuthoritySpecKeySpecCloudKmsKeyVersionRef? CloudKmsKeyVersionRef { get; set; }
 }
 
+/// <summary>Immutable. The Project that this resource belongs to.</summary>
 public partial class V1beta1PrivateCACertificateAuthoritySpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -332,6 +352,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateCACertificateAuthoritySpec
 {
     /// <summary>Immutable.</summary>
@@ -371,6 +392,7 @@ public partial class V1beta1PrivateCACertificateAuthoritySpec
     public string Type { get; set; }
 }
 
+/// <summary>Output only. URLs for accessing content published by this CA, such as the CA certificate and CRLs.</summary>
 public partial class V1beta1PrivateCACertificateAuthorityStatusAccessUrls
 {
     /// <summary>The URL where this CertificateAuthority's CA certificate is published. This will only be set for CAs that have been activated.</summary>
@@ -382,6 +404,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusAccessUrls
     public IList<string>? CrlAccessUrls { get; set; }
 }
 
+/// <summary>Identifies the subject_key_id of the parent certificate, per https://tools.ietf.org/html/rfc5280#section-4.2.1.1</summary>
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsAuthorityKeyId
 {
     /// <summary>Optional. The value of this KeyId encoded in lowercase hexadecimal. This is most likely the 160 bit SHA-1 hash of the public key.</summary>
@@ -389,6 +412,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
     public string? KeyId { get; set; }
 }
 
+/// <summary>The hash of the x.509 certificate.</summary>
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsCertFingerprint
 {
     /// <summary>The SHA 256 hash, encoded in hexadecimal, of the DER x509 certificate.</summary>
@@ -396,6 +420,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
     public string? Sha256Hash { get; set; }
 }
 
+/// <summary>The public key that corresponds to an issued certificate.</summary>
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsPublicKey
 {
     /// <summary>Required. The format of the public key. Possible values: PEM</summary>
@@ -407,6 +432,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
     public string? Key { get; set; }
 }
 
+/// <summary>Contains distinguished name fields such as the common name, location and organization.</summary>
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsSubjectDescriptionSubject
 {
     /// <summary>The "common name" of the subject.</summary>
@@ -442,6 +468,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
     public string? StreetAddress { get; set; }
 }
 
+/// <summary>Required. The OID for this X.509 extension.</summary>
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsSubjectDescriptionSubjectAltNameCustomSansObjectId
 {
     /// <summary>Required. The parts of an OID path. The most significant parts of the path come first.</summary>
@@ -449,6 +476,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
     public IList<long>? ObjectIdPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsSubjectDescriptionSubjectAltNameCustomSans
 {
     /// <summary>Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).</summary>
@@ -464,6 +492,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
     public string? Value { get; set; }
 }
 
+/// <summary>The subject alternative name fields.</summary>
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsSubjectDescriptionSubjectAltName
 {
     /// <summary>Contains additional subject alternative name values.</summary>
@@ -487,6 +516,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
     public IList<string>? Uris { get; set; }
 }
 
+/// <summary>Describes some of the values in a certificate that are related to the subject and lifetime.</summary>
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsSubjectDescription
 {
     /// <summary>The serial number encoded in lowercase hexadecimal.</summary>
@@ -514,6 +544,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
     public V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsSubjectDescriptionSubjectAltName? SubjectAltName { get; set; }
 }
 
+/// <summary>Provides a means of identifiying certificates that contain a particular public key, per https://tools.ietf.org/html/rfc5280#section-4.2.1.2.</summary>
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsSubjectKeyId
 {
     /// <summary>Optional. The value of this KeyId encoded in lowercase hexadecimal. This is most likely the 160 bit SHA-1 hash of the public key.</summary>
@@ -521,6 +552,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
     public string? KeyId { get; set; }
 }
 
+/// <summary>Required. The OID for this X.509 extension.</summary>
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsX509DescriptionAdditionalExtensionsObjectId
 {
     /// <summary>Required. The parts of an OID path. The most significant parts of the path come first.</summary>
@@ -528,6 +560,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
     public IList<long>? ObjectIdPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsX509DescriptionAdditionalExtensions
 {
     /// <summary>Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).</summary>
@@ -543,6 +576,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
     public string? Value { get; set; }
 }
 
+/// <summary>Optional. Describes options in this X509Parameters that are relevant in a CA certificate.</summary>
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsX509DescriptionCaOptions
 {
     /// <summary>Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.</summary>
@@ -554,6 +588,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
     public long? MaxIssuerPathLength { get; set; }
 }
 
+/// <summary>Describes high-level ways in which a key may be used.</summary>
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsX509DescriptionKeyUsageBaseKeyUsage
 {
     /// <summary>The key may be used to sign certificates.</summary>
@@ -593,6 +628,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
     public bool? KeyEncipherment { get; set; }
 }
 
+/// <summary>Detailed scenarios in which a key may be used.</summary>
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsX509DescriptionKeyUsageExtendedKeyUsage
 {
     /// <summary>Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.</summary>
@@ -620,6 +656,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
     public bool? TimeStamping { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsX509DescriptionKeyUsageUnknownExtendedKeyUsages
 {
     /// <summary>Required. The parts of an OID path. The most significant parts of the path come first.</summary>
@@ -627,6 +664,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
     public IList<long>? ObjectIdPath { get; set; }
 }
 
+/// <summary>Optional. Indicates the intended use for keys that correspond to a certificate.</summary>
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsX509DescriptionKeyUsage
 {
     /// <summary>Describes high-level ways in which a key may be used.</summary>
@@ -642,6 +680,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
     public IList<V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsX509DescriptionKeyUsageUnknownExtendedKeyUsages>? UnknownExtendedKeyUsages { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsX509DescriptionPolicyIds
 {
     /// <summary>Required. The parts of an OID path. The most significant parts of the path come first.</summary>
@@ -649,6 +688,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
     public IList<long>? ObjectIdPath { get; set; }
 }
 
+/// <summary>Describes some of the technical X.509 fields in a certificate.</summary>
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsX509Description
 {
     /// <summary>Optional. Describes custom X.509 extensions.</summary>
@@ -672,6 +712,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
     public IList<V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsX509DescriptionPolicyIds>? PolicyIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptions
 {
     /// <summary>Describes lists of issuer CA certificate URLs that appear in the "Authority Information Access" extension in the certificate.</summary>
@@ -707,6 +748,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
     public V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsX509Description? X509Description { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateCACertificateAuthorityStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -730,6 +772,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary>Optional. The public key that corresponds to this config. This is, for example, used when issuing Certificates, but not when creating a self-signed CertificateAuthority or CertificateAuthority CSR.</summary>
 public partial class V1beta1PrivateCACertificateAuthorityStatusConfigPublicKey
 {
     /// <summary>Required. The format of the public key. Possible values: PEM</summary>
@@ -741,6 +784,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusConfigPublicKey
     public string? Key { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateCACertificateAuthorityStatusConfigX509Config
 {
     /// <summary>Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the "Authority Information Access" extension in the certificate.</summary>
@@ -748,6 +792,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusConfigX509Config
     public IList<string>? AiaOcspServers { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateCACertificateAuthorityStatusConfig
 {
     /// <summary>Optional. The public key that corresponds to this config. This is, for example, used when issuing Certificates, but not when creating a self-signed CertificateAuthority or CertificateAuthority CSR.</summary>
@@ -759,6 +804,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusConfig
     public V1beta1PrivateCACertificateAuthorityStatusConfigX509Config? X509Config { get; set; }
 }
 
+/// <summary>Required. Contains the PEM certificate chain for the issuers of this CertificateAuthority, but not pem certificate for this CA itself.</summary>
 public partial class V1beta1PrivateCACertificateAuthorityStatusSubordinateConfigPemIssuerChain
 {
     /// <summary>Required. Expected to be in leaf-to-root order according to RFC 5246.</summary>
@@ -766,6 +812,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusSubordinateConfig
     public IList<string>? PemCertificates { get; set; }
 }
 
+/// <summary>Optional. If this is a subordinate CertificateAuthority, this field will be set with the subordinate configuration, which describes its issuers. This may be updated, but this CertificateAuthority must continue to validate.</summary>
 public partial class V1beta1PrivateCACertificateAuthorityStatusSubordinateConfig
 {
     /// <summary>Required. This can refer to a CertificateAuthority in the same project that was used to create a subordinate CertificateAuthority. This field is used for information and usability purposes only. The resource name is in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.</summary>
@@ -777,6 +824,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusSubordinateConfig
     public V1beta1PrivateCACertificateAuthorityStatusSubordinateConfigPemIssuerChain? PemIssuerChain { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateCACertificateAuthorityStatus
 {
     /// <summary>Output only. URLs for accessing content published by this CA, such as the CA certificate and CRLs.</summary>
@@ -833,6 +881,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1PrivateCACertificateAuthority : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1PrivateCACertificateAuthoritySpec>, IStatus<V1beta1PrivateCACertificateAuthorityStatus>
 {
     public const string KubeApiVersion = "v1beta1";

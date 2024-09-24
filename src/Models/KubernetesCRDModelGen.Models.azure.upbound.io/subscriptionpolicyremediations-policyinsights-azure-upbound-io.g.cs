@@ -38,6 +38,7 @@ public enum V1beta1SubscriptionPolicyRemediationSpecForProviderPolicyAssignmentI
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SubscriptionPolicyRemediationSpecForProviderPolicyAssignmentIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1SubscriptionPolicyRemediationSpecForProviderPolicyAs
     public V1beta1SubscriptionPolicyRemediationSpecForProviderPolicyAssignmentIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SubscriptionPolicyAssignment in authorization to populate policyAssignmentId.</summary>
 public partial class V1beta1SubscriptionPolicyRemediationSpecForProviderPolicyAssignmentIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1SubscriptionPolicyRemediationSpecForProviderPolicyAssignmentI
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SubscriptionPolicyRemediationSpecForProviderPolicyAssignmentIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1SubscriptionPolicyRemediationSpecForProviderPolicyAs
     public V1beta1SubscriptionPolicyRemediationSpecForProviderPolicyAssignmentIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SubscriptionPolicyAssignment in authorization to populate policyAssignmentId.</summary>
 public partial class V1beta1SubscriptionPolicyRemediationSpecForProviderPolicyAssignmentIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1SubscriptionPolicyRemediationSpecForProviderPolicyAs
     public V1beta1SubscriptionPolicyRemediationSpecForProviderPolicyAssignmentIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubscriptionPolicyRemediationSpecForProvider
 {
     /// <summary>A number between 0.0 to 1.0 representing the percentage failure threshold. The remediation will fail if the percentage of failed remediation operations (i.e. failed deployments) exceeds this threshold.</summary>
@@ -177,6 +182,7 @@ public enum V1beta1SubscriptionPolicyRemediationSpecInitProviderPolicyAssignment
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SubscriptionPolicyRemediationSpecInitProviderPolicyAssignmentIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -190,6 +196,7 @@ public partial class V1beta1SubscriptionPolicyRemediationSpecInitProviderPolicyA
     public V1beta1SubscriptionPolicyRemediationSpecInitProviderPolicyAssignmentIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SubscriptionPolicyAssignment in authorization to populate policyAssignmentId.</summary>
 public partial class V1beta1SubscriptionPolicyRemediationSpecInitProviderPolicyAssignmentIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -221,6 +228,7 @@ public enum V1beta1SubscriptionPolicyRemediationSpecInitProviderPolicyAssignment
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SubscriptionPolicyRemediationSpecInitProviderPolicyAssignmentIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -234,6 +242,7 @@ public partial class V1beta1SubscriptionPolicyRemediationSpecInitProviderPolicyA
     public V1beta1SubscriptionPolicyRemediationSpecInitProviderPolicyAssignmentIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SubscriptionPolicyAssignment in authorization to populate policyAssignmentId.</summary>
 public partial class V1beta1SubscriptionPolicyRemediationSpecInitProviderPolicyAssignmentIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -249,6 +258,7 @@ public partial class V1beta1SubscriptionPolicyRemediationSpecInitProviderPolicyA
     public V1beta1SubscriptionPolicyRemediationSpecInitProviderPolicyAssignmentIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1SubscriptionPolicyRemediationSpecInitProvider
 {
     /// <summary>A number between 0.0 to 1.0 representing the percentage failure threshold. The remediation will fail if the percentage of failed remediation operations (i.e. failed deployments) exceeds this threshold.</summary>
@@ -338,6 +348,7 @@ public enum V1beta1SubscriptionPolicyRemediationSpecProviderConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SubscriptionPolicyRemediationSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -351,6 +362,7 @@ public partial class V1beta1SubscriptionPolicyRemediationSpecProviderConfigRefPo
     public V1beta1SubscriptionPolicyRemediationSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1SubscriptionPolicyRemediationSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -382,6 +394,7 @@ public enum V1beta1SubscriptionPolicyRemediationSpecPublishConnectionDetailsToCo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SubscriptionPolicyRemediationSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -395,6 +408,7 @@ public partial class V1beta1SubscriptionPolicyRemediationSpecPublishConnectionDe
     public V1beta1SubscriptionPolicyRemediationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1SubscriptionPolicyRemediationSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -406,6 +420,7 @@ public partial class V1beta1SubscriptionPolicyRemediationSpecPublishConnectionDe
     public V1beta1SubscriptionPolicyRemediationSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1SubscriptionPolicyRemediationSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -421,6 +436,7 @@ public partial class V1beta1SubscriptionPolicyRemediationSpecPublishConnectionDe
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1SubscriptionPolicyRemediationSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -436,6 +452,7 @@ public partial class V1beta1SubscriptionPolicyRemediationSpecPublishConnectionDe
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1SubscriptionPolicyRemediationSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -447,6 +464,7 @@ public partial class V1beta1SubscriptionPolicyRemediationSpecWriteConnectionSecr
     public string Namespace { get; set; }
 }
 
+/// <summary>SubscriptionPolicyRemediationSpec defines the desired state of SubscriptionPolicyRemediation</summary>
 public partial class V1beta1SubscriptionPolicyRemediationSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -479,6 +497,7 @@ public partial class V1beta1SubscriptionPolicyRemediationSpec
     public V1beta1SubscriptionPolicyRemediationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SubscriptionPolicyRemediationStatusAtProvider
 {
     /// <summary>A number between 0.0 to 1.0 representing the percentage failure threshold. The remediation will fail if the percentage of failed remediation operations (i.e. failed deployments) exceeds this threshold.</summary>
@@ -522,6 +541,7 @@ public partial class V1beta1SubscriptionPolicyRemediationStatusAtProvider
     public string? SubscriptionId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1SubscriptionPolicyRemediationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -549,6 +569,7 @@ public partial class V1beta1SubscriptionPolicyRemediationStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>SubscriptionPolicyRemediationStatus defines the observed state of SubscriptionPolicyRemediation.</summary>
 public partial class V1beta1SubscriptionPolicyRemediationStatus
 {
     /// <summary></summary>
@@ -565,6 +586,7 @@ public partial class V1beta1SubscriptionPolicyRemediationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>SubscriptionPolicyRemediation is the Schema for the SubscriptionPolicyRemediations API. Manages an Azure Subscription Policy Remediation.</summary>
 public partial class V1beta1SubscriptionPolicyRemediation : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SubscriptionPolicyRemediationSpec>, IStatus<V1beta1SubscriptionPolicyRemediationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

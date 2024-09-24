@@ -18,6 +18,7 @@ public enum V1beta1EnvironmentSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>The airflow_configuration_options parameter specifies airflow override options. Check the Official documentation for all possible configuration options.</summary>
 public partial class V1beta1EnvironmentSpecForProviderAirflowConfigurationOptionsSecretRef
 {
     /// <summary>Name of the secret.</summary>
@@ -49,6 +50,7 @@ public enum V1beta1EnvironmentSpecForProviderExecutionRoleArnRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EnvironmentSpecForProviderExecutionRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -62,6 +64,7 @@ public partial class V1beta1EnvironmentSpecForProviderExecutionRoleArnRefPolicy
     public V1beta1EnvironmentSpecForProviderExecutionRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate executionRoleArn.</summary>
 public partial class V1beta1EnvironmentSpecForProviderExecutionRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -93,6 +96,7 @@ public enum V1beta1EnvironmentSpecForProviderExecutionRoleArnSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EnvironmentSpecForProviderExecutionRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -106,6 +110,7 @@ public partial class V1beta1EnvironmentSpecForProviderExecutionRoleArnSelectorPo
     public V1beta1EnvironmentSpecForProviderExecutionRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate executionRoleArn.</summary>
 public partial class V1beta1EnvironmentSpecForProviderExecutionRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -141,6 +146,7 @@ public enum V1beta1EnvironmentSpecForProviderKmsKeyRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EnvironmentSpecForProviderKmsKeyRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -154,6 +160,7 @@ public partial class V1beta1EnvironmentSpecForProviderKmsKeyRefPolicy
     public V1beta1EnvironmentSpecForProviderKmsKeyRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKey.</summary>
 public partial class V1beta1EnvironmentSpecForProviderKmsKeyRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -185,6 +192,7 @@ public enum V1beta1EnvironmentSpecForProviderKmsKeySelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EnvironmentSpecForProviderKmsKeySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -198,6 +206,7 @@ public partial class V1beta1EnvironmentSpecForProviderKmsKeySelectorPolicy
     public V1beta1EnvironmentSpecForProviderKmsKeySelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKey.</summary>
 public partial class V1beta1EnvironmentSpecForProviderKmsKeySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -213,6 +222,7 @@ public partial class V1beta1EnvironmentSpecForProviderKmsKeySelector
     public V1beta1EnvironmentSpecForProviderKmsKeySelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Log configuration options for processing DAGs. See Module logging configuration for more information. Disabled by default.</summary>
 public partial class V1beta1EnvironmentSpecForProviderLoggingConfigurationDagProcessingLogs
 {
     /// <summary>Enabling or disabling the collection of logs</summary>
@@ -224,6 +234,7 @@ public partial class V1beta1EnvironmentSpecForProviderLoggingConfigurationDagPro
     public string? LogLevel { get; set; }
 }
 
+/// <summary>Log configuration options for the schedulers. See Module logging configuration for more information. Disabled by default.</summary>
 public partial class V1beta1EnvironmentSpecForProviderLoggingConfigurationSchedulerLogs
 {
     /// <summary>Enabling or disabling the collection of logs</summary>
@@ -235,6 +246,7 @@ public partial class V1beta1EnvironmentSpecForProviderLoggingConfigurationSchedu
     public string? LogLevel { get; set; }
 }
 
+/// <summary>Log configuration options for DAG tasks. See Module logging configuration for more information. Enabled by default with INFO log level.</summary>
 public partial class V1beta1EnvironmentSpecForProviderLoggingConfigurationTaskLogs
 {
     /// <summary>Enabling or disabling the collection of logs</summary>
@@ -246,6 +258,7 @@ public partial class V1beta1EnvironmentSpecForProviderLoggingConfigurationTaskLo
     public string? LogLevel { get; set; }
 }
 
+/// <summary>Log configuration options for the webservers. See Module logging configuration for more information. Disabled by default.</summary>
 public partial class V1beta1EnvironmentSpecForProviderLoggingConfigurationWebserverLogs
 {
     /// <summary>Enabling or disabling the collection of logs</summary>
@@ -257,6 +270,7 @@ public partial class V1beta1EnvironmentSpecForProviderLoggingConfigurationWebser
     public string? LogLevel { get; set; }
 }
 
+/// <summary>Log configuration options for the workers. See Module logging configuration for more information. Disabled by default.</summary>
 public partial class V1beta1EnvironmentSpecForProviderLoggingConfigurationWorkerLogs
 {
     /// <summary>Enabling or disabling the collection of logs</summary>
@@ -268,6 +282,7 @@ public partial class V1beta1EnvironmentSpecForProviderLoggingConfigurationWorker
     public string? LogLevel { get; set; }
 }
 
+/// <summary>The Apache Airflow logs you want to send to Amazon CloudWatch Logs.</summary>
 public partial class V1beta1EnvironmentSpecForProviderLoggingConfiguration
 {
     /// <summary>Log configuration options for processing DAGs. See Module logging configuration for more information. Disabled by default.</summary>
@@ -311,6 +326,7 @@ public enum V1beta1EnvironmentSpecForProviderNetworkConfigurationSecurityGroupId
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EnvironmentSpecForProviderNetworkConfigurationSecurityGroupIdsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -324,6 +340,7 @@ public partial class V1beta1EnvironmentSpecForProviderNetworkConfigurationSecuri
     public V1beta1EnvironmentSpecForProviderNetworkConfigurationSecurityGroupIdsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1EnvironmentSpecForProviderNetworkConfigurationSecurityGroupIdsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -355,6 +372,7 @@ public enum V1beta1EnvironmentSpecForProviderNetworkConfigurationSecurityGroupId
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EnvironmentSpecForProviderNetworkConfigurationSecurityGroupIdsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -368,6 +386,7 @@ public partial class V1beta1EnvironmentSpecForProviderNetworkConfigurationSecuri
     public V1beta1EnvironmentSpecForProviderNetworkConfigurationSecurityGroupIdsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 public partial class V1beta1EnvironmentSpecForProviderNetworkConfigurationSecurityGroupIdsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -403,6 +422,7 @@ public enum V1beta1EnvironmentSpecForProviderNetworkConfigurationSubnetIdsRefsPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EnvironmentSpecForProviderNetworkConfigurationSubnetIdsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -416,6 +436,7 @@ public partial class V1beta1EnvironmentSpecForProviderNetworkConfigurationSubnet
     public V1beta1EnvironmentSpecForProviderNetworkConfigurationSubnetIdsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1EnvironmentSpecForProviderNetworkConfigurationSubnetIdsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -447,6 +468,7 @@ public enum V1beta1EnvironmentSpecForProviderNetworkConfigurationSubnetIdsSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EnvironmentSpecForProviderNetworkConfigurationSubnetIdsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -460,6 +482,7 @@ public partial class V1beta1EnvironmentSpecForProviderNetworkConfigurationSubnet
     public V1beta1EnvironmentSpecForProviderNetworkConfigurationSubnetIdsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 public partial class V1beta1EnvironmentSpecForProviderNetworkConfigurationSubnetIdsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -475,6 +498,7 @@ public partial class V1beta1EnvironmentSpecForProviderNetworkConfigurationSubnet
     public V1beta1EnvironmentSpecForProviderNetworkConfigurationSubnetIdsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Specifies the network configuration for your Apache Airflow Environment. This includes two private subnets as well as security groups for the Airflow environment. Each subnet requires internet connection, otherwise the deployment will fail. See Network configuration below for details.</summary>
 public partial class V1beta1EnvironmentSpecForProviderNetworkConfiguration
 {
     /// <summary>Security groups IDs for the environment. At least one of the security group needs to allow MWAA resources to talk to each other, otherwise MWAA cannot be provisioned.</summary>
@@ -522,6 +546,7 @@ public enum V1beta1EnvironmentSpecForProviderSourceBucketArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EnvironmentSpecForProviderSourceBucketArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -535,6 +560,7 @@ public partial class V1beta1EnvironmentSpecForProviderSourceBucketArnRefPolicy
     public V1beta1EnvironmentSpecForProviderSourceBucketArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate sourceBucketArn.</summary>
 public partial class V1beta1EnvironmentSpecForProviderSourceBucketArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -566,6 +592,7 @@ public enum V1beta1EnvironmentSpecForProviderSourceBucketArnSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EnvironmentSpecForProviderSourceBucketArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -579,6 +606,7 @@ public partial class V1beta1EnvironmentSpecForProviderSourceBucketArnSelectorPol
     public V1beta1EnvironmentSpecForProviderSourceBucketArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate sourceBucketArn.</summary>
 public partial class V1beta1EnvironmentSpecForProviderSourceBucketArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -594,6 +622,7 @@ public partial class V1beta1EnvironmentSpecForProviderSourceBucketArnSelector
     public V1beta1EnvironmentSpecForProviderSourceBucketArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentSpecForProvider
 {
     /// <summary>The airflow_configuration_options parameter specifies airflow override options. Check the Official documentation for all possible configuration options.</summary>
@@ -741,6 +770,7 @@ public enum V1beta1EnvironmentSpecInitProviderExecutionRoleArnRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderExecutionRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -754,6 +784,7 @@ public partial class V1beta1EnvironmentSpecInitProviderExecutionRoleArnRefPolicy
     public V1beta1EnvironmentSpecInitProviderExecutionRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate executionRoleArn.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderExecutionRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -785,6 +816,7 @@ public enum V1beta1EnvironmentSpecInitProviderExecutionRoleArnSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderExecutionRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -798,6 +830,7 @@ public partial class V1beta1EnvironmentSpecInitProviderExecutionRoleArnSelectorP
     public V1beta1EnvironmentSpecInitProviderExecutionRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate executionRoleArn.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderExecutionRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -833,6 +866,7 @@ public enum V1beta1EnvironmentSpecInitProviderKmsKeyRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderKmsKeyRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -846,6 +880,7 @@ public partial class V1beta1EnvironmentSpecInitProviderKmsKeyRefPolicy
     public V1beta1EnvironmentSpecInitProviderKmsKeyRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKey.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderKmsKeyRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -877,6 +912,7 @@ public enum V1beta1EnvironmentSpecInitProviderKmsKeySelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderKmsKeySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -890,6 +926,7 @@ public partial class V1beta1EnvironmentSpecInitProviderKmsKeySelectorPolicy
     public V1beta1EnvironmentSpecInitProviderKmsKeySelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKey.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderKmsKeySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -905,6 +942,7 @@ public partial class V1beta1EnvironmentSpecInitProviderKmsKeySelector
     public V1beta1EnvironmentSpecInitProviderKmsKeySelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Log configuration options for processing DAGs. See Module logging configuration for more information. Disabled by default.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderLoggingConfigurationDagProcessingLogs
 {
     /// <summary>Enabling or disabling the collection of logs</summary>
@@ -916,6 +954,7 @@ public partial class V1beta1EnvironmentSpecInitProviderLoggingConfigurationDagPr
     public string? LogLevel { get; set; }
 }
 
+/// <summary>Log configuration options for the schedulers. See Module logging configuration for more information. Disabled by default.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderLoggingConfigurationSchedulerLogs
 {
     /// <summary>Enabling or disabling the collection of logs</summary>
@@ -927,6 +966,7 @@ public partial class V1beta1EnvironmentSpecInitProviderLoggingConfigurationSched
     public string? LogLevel { get; set; }
 }
 
+/// <summary>Log configuration options for DAG tasks. See Module logging configuration for more information. Enabled by default with INFO log level.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderLoggingConfigurationTaskLogs
 {
     /// <summary>Enabling or disabling the collection of logs</summary>
@@ -938,6 +978,7 @@ public partial class V1beta1EnvironmentSpecInitProviderLoggingConfigurationTaskL
     public string? LogLevel { get; set; }
 }
 
+/// <summary>Log configuration options for the webservers. See Module logging configuration for more information. Disabled by default.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderLoggingConfigurationWebserverLogs
 {
     /// <summary>Enabling or disabling the collection of logs</summary>
@@ -949,6 +990,7 @@ public partial class V1beta1EnvironmentSpecInitProviderLoggingConfigurationWebse
     public string? LogLevel { get; set; }
 }
 
+/// <summary>Log configuration options for the workers. See Module logging configuration for more information. Disabled by default.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderLoggingConfigurationWorkerLogs
 {
     /// <summary>Enabling or disabling the collection of logs</summary>
@@ -960,6 +1002,7 @@ public partial class V1beta1EnvironmentSpecInitProviderLoggingConfigurationWorke
     public string? LogLevel { get; set; }
 }
 
+/// <summary>The Apache Airflow logs you want to send to Amazon CloudWatch Logs.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderLoggingConfiguration
 {
     /// <summary>Log configuration options for processing DAGs. See Module logging configuration for more information. Disabled by default.</summary>
@@ -1003,6 +1046,7 @@ public enum V1beta1EnvironmentSpecInitProviderNetworkConfigurationSecurityGroupI
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderNetworkConfigurationSecurityGroupIdsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1016,6 +1060,7 @@ public partial class V1beta1EnvironmentSpecInitProviderNetworkConfigurationSecur
     public V1beta1EnvironmentSpecInitProviderNetworkConfigurationSecurityGroupIdsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderNetworkConfigurationSecurityGroupIdsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1047,6 +1092,7 @@ public enum V1beta1EnvironmentSpecInitProviderNetworkConfigurationSecurityGroupI
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderNetworkConfigurationSecurityGroupIdsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1060,6 +1106,7 @@ public partial class V1beta1EnvironmentSpecInitProviderNetworkConfigurationSecur
     public V1beta1EnvironmentSpecInitProviderNetworkConfigurationSecurityGroupIdsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderNetworkConfigurationSecurityGroupIdsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1095,6 +1142,7 @@ public enum V1beta1EnvironmentSpecInitProviderNetworkConfigurationSubnetIdsRefsP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderNetworkConfigurationSubnetIdsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1108,6 +1156,7 @@ public partial class V1beta1EnvironmentSpecInitProviderNetworkConfigurationSubne
     public V1beta1EnvironmentSpecInitProviderNetworkConfigurationSubnetIdsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderNetworkConfigurationSubnetIdsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1139,6 +1188,7 @@ public enum V1beta1EnvironmentSpecInitProviderNetworkConfigurationSubnetIdsSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderNetworkConfigurationSubnetIdsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1152,6 +1202,7 @@ public partial class V1beta1EnvironmentSpecInitProviderNetworkConfigurationSubne
     public V1beta1EnvironmentSpecInitProviderNetworkConfigurationSubnetIdsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderNetworkConfigurationSubnetIdsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1167,6 +1218,7 @@ public partial class V1beta1EnvironmentSpecInitProviderNetworkConfigurationSubne
     public V1beta1EnvironmentSpecInitProviderNetworkConfigurationSubnetIdsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Specifies the network configuration for your Apache Airflow Environment. This includes two private subnets as well as security groups for the Airflow environment. Each subnet requires internet connection, otherwise the deployment will fail. See Network configuration below for details.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderNetworkConfiguration
 {
     /// <summary>Security groups IDs for the environment. At least one of the security group needs to allow MWAA resources to talk to each other, otherwise MWAA cannot be provisioned.</summary>
@@ -1214,6 +1266,7 @@ public enum V1beta1EnvironmentSpecInitProviderSourceBucketArnRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderSourceBucketArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1227,6 +1280,7 @@ public partial class V1beta1EnvironmentSpecInitProviderSourceBucketArnRefPolicy
     public V1beta1EnvironmentSpecInitProviderSourceBucketArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate sourceBucketArn.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderSourceBucketArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1258,6 +1312,7 @@ public enum V1beta1EnvironmentSpecInitProviderSourceBucketArnSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderSourceBucketArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1271,6 +1326,7 @@ public partial class V1beta1EnvironmentSpecInitProviderSourceBucketArnSelectorPo
     public V1beta1EnvironmentSpecInitProviderSourceBucketArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate sourceBucketArn.</summary>
 public partial class V1beta1EnvironmentSpecInitProviderSourceBucketArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1286,6 +1342,7 @@ public partial class V1beta1EnvironmentSpecInitProviderSourceBucketArnSelector
     public V1beta1EnvironmentSpecInitProviderSourceBucketArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1EnvironmentSpecInitProvider
 {
     /// <summary></summary>
@@ -1451,6 +1508,7 @@ public enum V1beta1EnvironmentSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EnvironmentSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1464,6 +1522,7 @@ public partial class V1beta1EnvironmentSpecProviderConfigRefPolicy
     public V1beta1EnvironmentSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1EnvironmentSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1495,6 +1554,7 @@ public enum V1beta1EnvironmentSpecPublishConnectionDetailsToConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EnvironmentSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1508,6 +1568,7 @@ public partial class V1beta1EnvironmentSpecPublishConnectionDetailsToConfigRefPo
     public V1beta1EnvironmentSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1EnvironmentSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1519,6 +1580,7 @@ public partial class V1beta1EnvironmentSpecPublishConnectionDetailsToConfigRef
     public V1beta1EnvironmentSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1EnvironmentSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1534,6 +1596,7 @@ public partial class V1beta1EnvironmentSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1EnvironmentSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1549,6 +1612,7 @@ public partial class V1beta1EnvironmentSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1EnvironmentSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1560,6 +1624,7 @@ public partial class V1beta1EnvironmentSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>EnvironmentSpec defines the desired state of Environment</summary>
 public partial class V1beta1EnvironmentSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1592,6 +1657,7 @@ public partial class V1beta1EnvironmentSpec
     public V1beta1EnvironmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentStatusAtProviderLastUpdatedError
 {
     /// <summary></summary>
@@ -1603,6 +1669,7 @@ public partial class V1beta1EnvironmentStatusAtProviderLastUpdatedError
     public string? ErrorMessage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentStatusAtProviderLastUpdated
 {
     /// <summary>The Created At date of the MWAA Environment</summary>
@@ -1618,6 +1685,7 @@ public partial class V1beta1EnvironmentStatusAtProviderLastUpdated
     public string? Status { get; set; }
 }
 
+/// <summary>Log configuration options for processing DAGs. See Module logging configuration for more information. Disabled by default.</summary>
 public partial class V1beta1EnvironmentStatusAtProviderLoggingConfigurationDagProcessingLogs
 {
     /// <summary>Provides the ARN for the CloudWatch group where the logs will be published</summary>
@@ -1633,6 +1701,7 @@ public partial class V1beta1EnvironmentStatusAtProviderLoggingConfigurationDagPr
     public string? LogLevel { get; set; }
 }
 
+/// <summary>Log configuration options for the schedulers. See Module logging configuration for more information. Disabled by default.</summary>
 public partial class V1beta1EnvironmentStatusAtProviderLoggingConfigurationSchedulerLogs
 {
     /// <summary>Provides the ARN for the CloudWatch group where the logs will be published</summary>
@@ -1648,6 +1717,7 @@ public partial class V1beta1EnvironmentStatusAtProviderLoggingConfigurationSched
     public string? LogLevel { get; set; }
 }
 
+/// <summary>Log configuration options for DAG tasks. See Module logging configuration for more information. Enabled by default with INFO log level.</summary>
 public partial class V1beta1EnvironmentStatusAtProviderLoggingConfigurationTaskLogs
 {
     /// <summary>Provides the ARN for the CloudWatch group where the logs will be published</summary>
@@ -1663,6 +1733,7 @@ public partial class V1beta1EnvironmentStatusAtProviderLoggingConfigurationTaskL
     public string? LogLevel { get; set; }
 }
 
+/// <summary>Log configuration options for the webservers. See Module logging configuration for more information. Disabled by default.</summary>
 public partial class V1beta1EnvironmentStatusAtProviderLoggingConfigurationWebserverLogs
 {
     /// <summary>Provides the ARN for the CloudWatch group where the logs will be published</summary>
@@ -1678,6 +1749,7 @@ public partial class V1beta1EnvironmentStatusAtProviderLoggingConfigurationWebse
     public string? LogLevel { get; set; }
 }
 
+/// <summary>Log configuration options for the workers. See Module logging configuration for more information. Disabled by default.</summary>
 public partial class V1beta1EnvironmentStatusAtProviderLoggingConfigurationWorkerLogs
 {
     /// <summary>Provides the ARN for the CloudWatch group where the logs will be published</summary>
@@ -1693,6 +1765,7 @@ public partial class V1beta1EnvironmentStatusAtProviderLoggingConfigurationWorke
     public string? LogLevel { get; set; }
 }
 
+/// <summary>The Apache Airflow logs you want to send to Amazon CloudWatch Logs.</summary>
 public partial class V1beta1EnvironmentStatusAtProviderLoggingConfiguration
 {
     /// <summary>Log configuration options for processing DAGs. See Module logging configuration for more information. Disabled by default.</summary>
@@ -1716,6 +1789,7 @@ public partial class V1beta1EnvironmentStatusAtProviderLoggingConfiguration
     public V1beta1EnvironmentStatusAtProviderLoggingConfigurationWorkerLogs? WorkerLogs { get; set; }
 }
 
+/// <summary>Specifies the network configuration for your Apache Airflow Environment. This includes two private subnets as well as security groups for the Airflow environment. Each subnet requires internet connection, otherwise the deployment will fail. See Network configuration below for details.</summary>
 public partial class V1beta1EnvironmentStatusAtProviderNetworkConfiguration
 {
     /// <summary>Security groups IDs for the environment. At least one of the security group needs to allow MWAA resources to talk to each other, otherwise MWAA cannot be provisioned.</summary>
@@ -1727,6 +1801,7 @@ public partial class V1beta1EnvironmentStatusAtProviderNetworkConfiguration
     public IList<string>? SubnetIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EnvironmentStatusAtProvider
 {
     /// <summary>Airflow version of your environment, will be set by default to the latest version that MWAA supports.</summary>
@@ -1862,6 +1937,7 @@ public partial class V1beta1EnvironmentStatusAtProvider
     public string? WeeklyMaintenanceWindowStart { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1EnvironmentStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1889,6 +1965,7 @@ public partial class V1beta1EnvironmentStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>EnvironmentStatus defines the observed state of Environment.</summary>
 public partial class V1beta1EnvironmentStatus
 {
     /// <summary></summary>
@@ -1905,6 +1982,7 @@ public partial class V1beta1EnvironmentStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Environment is the Schema for the Environments API. Creates a MWAA Environment</summary>
 public partial class V1beta1Environment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1EnvironmentSpec>, IStatus<V1beta1EnvironmentStatus>
 {
     public const string KubeApiVersion = "v1beta1";

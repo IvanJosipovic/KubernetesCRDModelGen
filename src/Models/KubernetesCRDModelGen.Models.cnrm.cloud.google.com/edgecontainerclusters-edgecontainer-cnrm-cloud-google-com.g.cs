@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.edgecontainer.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1EdgeContainerClusterSpecAuthorizationAdminUsersUsernameRef
 {
     /// <summary>Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1EdgeContainerClusterSpecAuthorizationAdminUsersUsern
     public string? Namespace { get; set; }
 }
 
+/// <summary>User that will be granted the cluster-admin role on the cluster, providing full access to the cluster. Currently, this is a singular field, but will be expanded to allow multiple admins in the future.</summary>
 public partial class V1beta1EdgeContainerClusterSpecAuthorizationAdminUsers
 {
     /// <summary></summary>
@@ -30,6 +32,7 @@ public partial class V1beta1EdgeContainerClusterSpecAuthorizationAdminUsers
     public V1beta1EdgeContainerClusterSpecAuthorizationAdminUsersUsernameRef UsernameRef { get; set; }
 }
 
+/// <summary>Immutable. RBAC policy that will be applied and managed by GEC.</summary>
 public partial class V1beta1EdgeContainerClusterSpecAuthorization
 {
     /// <summary>User that will be granted the cluster-admin role on the cluster, providing full access to the cluster. Currently, this is a singular field, but will be expanded to allow multiple admins in the future.</summary>
@@ -37,6 +40,7 @@ public partial class V1beta1EdgeContainerClusterSpecAuthorization
     public V1beta1EdgeContainerClusterSpecAuthorizationAdminUsers AdminUsers { get; set; }
 }
 
+/// <summary>Immutable. Local control plane configuration.</summary>
 public partial class V1beta1EdgeContainerClusterSpecControlPlaneLocal
 {
     /// <summary>Only machines matching this filter will be allowed to host control plane nodes. The filtering language accepts strings like "name=&lt;name&gt;", and is documented here: [AIP-160](https://google.aip.dev/160).</summary>
@@ -56,6 +60,7 @@ public partial class V1beta1EdgeContainerClusterSpecControlPlaneLocal
     public string? SharedDeploymentPolicy { get; set; }
 }
 
+/// <summary>Immutable. Remote control plane configuration.</summary>
 public partial class V1beta1EdgeContainerClusterSpecControlPlaneRemote
 {
     /// <summary>Immutable. Name of the Google Distributed Cloud Edge zones where this node pool will be created. For example: 'us-central1-edge-customer-a'.</summary>
@@ -63,6 +68,7 @@ public partial class V1beta1EdgeContainerClusterSpecControlPlaneRemote
     public string? NodeLocation { get; set; }
 }
 
+/// <summary>The configuration of the cluster control plane.</summary>
 public partial class V1beta1EdgeContainerClusterSpecControlPlane
 {
     /// <summary>Immutable. Local control plane configuration.</summary>
@@ -74,6 +80,7 @@ public partial class V1beta1EdgeContainerClusterSpecControlPlane
     public V1beta1EdgeContainerClusterSpecControlPlaneRemote? Remote { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EdgeContainerClusterSpecControlPlaneEncryptionKmsKeyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
@@ -89,6 +96,7 @@ public partial class V1beta1EdgeContainerClusterSpecControlPlaneEncryptionKmsKey
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EdgeContainerClusterSpecControlPlaneEncryptionKmsStatus
 {
     /// <summary>The status code, which should be an enum value of google.rpc.Code.</summary>
@@ -100,6 +108,7 @@ public partial class V1beta1EdgeContainerClusterSpecControlPlaneEncryptionKmsSta
     public string? Message { get; set; }
 }
 
+/// <summary>Remote control plane disk encryption options. This field is only used when enabling CMEK support.</summary>
 public partial class V1beta1EdgeContainerClusterSpecControlPlaneEncryption
 {
     /// <summary>The Cloud KMS CryptoKeyVersion currently in use for protecting control plane disks. Only applicable if kms_key is set.</summary>
@@ -119,6 +128,7 @@ public partial class V1beta1EdgeContainerClusterSpecControlPlaneEncryption
     public IList<V1beta1EdgeContainerClusterSpecControlPlaneEncryptionKmsStatus>? KmsStatus { get; set; }
 }
 
+/// <summary>The number of the Fleet host project where this cluster will be registered.</summary>
 public partial class V1beta1EdgeContainerClusterSpecFleetProjectRef
 {
     /// <summary>Allowed value: string of the format `projects/{{value}}`, where {{value}} is the `number` field of a `Project` resource.</summary>
@@ -134,6 +144,7 @@ public partial class V1beta1EdgeContainerClusterSpecFleetProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. Fleet related configuration. Fleets are a Google Cloud concept for logically organizing clusters, letting you use and manage multi-cluster capabilities and apply consistent policies across your systems.</summary>
 public partial class V1beta1EdgeContainerClusterSpecFleet
 {
     /// <summary>The name of the managed Hub Membership resource associated to this cluster. Membership names are formatted as 'projects/&lt;project-number&gt;/locations/global/membership/&lt;cluster-id&gt;'.</summary>
@@ -145,6 +156,7 @@ public partial class V1beta1EdgeContainerClusterSpecFleet
     public V1beta1EdgeContainerClusterSpecFleetProjectRef ProjectRef { get; set; }
 }
 
+/// <summary>Represents an arbitrary window of time.</summary>
 public partial class V1beta1EdgeContainerClusterSpecMaintenancePolicyWindowRecurringWindowWindow
 {
     /// <summary>The time that the window ends. The end time must take place after the start time.</summary>
@@ -156,6 +168,7 @@ public partial class V1beta1EdgeContainerClusterSpecMaintenancePolicyWindowRecur
     public string? StartTime { get; set; }
 }
 
+/// <summary>Represents an arbitrary window of time that recurs.</summary>
 public partial class V1beta1EdgeContainerClusterSpecMaintenancePolicyWindowRecurringWindow
 {
     /// <summary>An RRULE (https://tools.ietf.org/html/rfc5545#section-3.8.5.3) for how this window recurs. They go on for the span of time between the start and end time.</summary>
@@ -167,6 +180,7 @@ public partial class V1beta1EdgeContainerClusterSpecMaintenancePolicyWindowRecur
     public V1beta1EdgeContainerClusterSpecMaintenancePolicyWindowRecurringWindowWindow? Window { get; set; }
 }
 
+/// <summary>Specifies the maintenance window in which maintenance may be performed.</summary>
 public partial class V1beta1EdgeContainerClusterSpecMaintenancePolicyWindow
 {
     /// <summary>Represents an arbitrary window of time that recurs.</summary>
@@ -174,6 +188,7 @@ public partial class V1beta1EdgeContainerClusterSpecMaintenancePolicyWindow
     public V1beta1EdgeContainerClusterSpecMaintenancePolicyWindowRecurringWindow RecurringWindow { get; set; }
 }
 
+/// <summary>Cluster-wide maintenance policy configuration.</summary>
 public partial class V1beta1EdgeContainerClusterSpecMaintenancePolicy
 {
     /// <summary>Specifies the maintenance window in which maintenance may be performed.</summary>
@@ -181,6 +196,7 @@ public partial class V1beta1EdgeContainerClusterSpecMaintenancePolicy
     public V1beta1EdgeContainerClusterSpecMaintenancePolicyWindow Window { get; set; }
 }
 
+/// <summary>Fleet related configuration. Fleets are a Google Cloud concept for logically organizing clusters, letting you use and manage multi-cluster capabilities and apply consistent policies across your systems.</summary>
 public partial class V1beta1EdgeContainerClusterSpecNetworking
 {
     /// <summary>Immutable. All pods in the cluster are assigned an RFC1918 IPv4 address from these blocks. Only a single block is supported. This field cannot be changed after creation.</summary>
@@ -204,6 +220,7 @@ public partial class V1beta1EdgeContainerClusterSpecNetworking
     public IList<string>? ServicesIpv6CidrBlocks { get; set; }
 }
 
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1beta1EdgeContainerClusterSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -219,6 +236,7 @@ public partial class V1beta1EdgeContainerClusterSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Config for the Ingress add-on which allows customers to create an Ingress object to manage external access to the servers in a cluster. The add-on consists of istiod and istio-ingress.</summary>
 public partial class V1beta1EdgeContainerClusterSpecSystemAddonsConfigIngress
 {
     /// <summary>Whether Ingress is disabled.</summary>
@@ -230,6 +248,7 @@ public partial class V1beta1EdgeContainerClusterSpecSystemAddonsConfigIngress
     public string? Ipv4Vip { get; set; }
 }
 
+/// <summary>Config that customers are allowed to define for GDCE system add-ons.</summary>
 public partial class V1beta1EdgeContainerClusterSpecSystemAddonsConfig
 {
     /// <summary>Config for the Ingress add-on which allows customers to create an Ingress object to manage external access to the servers in a cluster. The add-on consists of istiod and istio-ingress.</summary>
@@ -237,6 +256,7 @@ public partial class V1beta1EdgeContainerClusterSpecSystemAddonsConfig
     public V1beta1EdgeContainerClusterSpecSystemAddonsConfigIngress? Ingress { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EdgeContainerClusterSpec
 {
     /// <summary>Immutable. RBAC policy that will be applied and managed by GEC.</summary>
@@ -296,6 +316,7 @@ public partial class V1beta1EdgeContainerClusterSpec
     public string? TargetVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EdgeContainerClusterStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -319,6 +340,7 @@ public partial class V1beta1EdgeContainerClusterStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EdgeContainerClusterStatusMaintenanceEvents
 {
     /// <summary>The time when the maintenance event request was created.</summary>
@@ -362,6 +384,7 @@ public partial class V1beta1EdgeContainerClusterStatusMaintenanceEvents
     public string? Uuid { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EdgeContainerClusterStatus
 {
     /// <summary>The PEM-encoded public certificate of the cluster's CA.</summary>
@@ -410,6 +433,7 @@ public partial class V1beta1EdgeContainerClusterStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1EdgeContainerCluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1EdgeContainerClusterSpec>, IStatus<V1beta1EdgeContainerClusterStatus>
 {
     public const string KubeApiVersion = "v1beta1";

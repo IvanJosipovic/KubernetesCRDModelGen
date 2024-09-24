@@ -18,6 +18,7 @@ public enum V1beta1ReservationSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1ReservationSpecForProviderAutoscale
 {
     /// <summary>Number of slots to be scaled when needed.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1ReservationSpecForProviderAutoscale
     public double? MaxSlots { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ReservationSpecForProvider
 {
     /// <summary>The configuration parameters for the auto scaling feature. Structure is documented below.</summary>
@@ -60,6 +62,7 @@ public partial class V1beta1ReservationSpecForProvider
     public double? SlotCapacity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ReservationSpecInitProviderAutoscale
 {
     /// <summary>Number of slots to be scaled when needed.</summary>
@@ -67,6 +70,7 @@ public partial class V1beta1ReservationSpecInitProviderAutoscale
     public double? MaxSlots { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ReservationSpecInitProvider
 {
     /// <summary>The configuration parameters for the auto scaling feature. Structure is documented below.</summary>
@@ -136,6 +140,7 @@ public enum V1beta1ReservationSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ReservationSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -149,6 +154,7 @@ public partial class V1beta1ReservationSpecProviderConfigRefPolicy
     public V1beta1ReservationSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ReservationSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -180,6 +186,7 @@ public enum V1beta1ReservationSpecPublishConnectionDetailsToConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ReservationSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -193,6 +200,7 @@ public partial class V1beta1ReservationSpecPublishConnectionDetailsToConfigRefPo
     public V1beta1ReservationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ReservationSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -204,6 +212,7 @@ public partial class V1beta1ReservationSpecPublishConnectionDetailsToConfigRef
     public V1beta1ReservationSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ReservationSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -219,6 +228,7 @@ public partial class V1beta1ReservationSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ReservationSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -234,6 +244,7 @@ public partial class V1beta1ReservationSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ReservationSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -245,6 +256,7 @@ public partial class V1beta1ReservationSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ReservationSpec defines the desired state of Reservation</summary>
 public partial class V1beta1ReservationSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -277,6 +289,7 @@ public partial class V1beta1ReservationSpec
     public V1beta1ReservationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ReservationStatusAtProviderAutoscale
 {
     /// <summary>(Output) The slot capacity added to this reservation when autoscale happens. Will be between [0, max_slots].</summary>
@@ -288,6 +301,7 @@ public partial class V1beta1ReservationStatusAtProviderAutoscale
     public double? MaxSlots { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ReservationStatusAtProvider
 {
     /// <summary>The configuration parameters for the auto scaling feature. Structure is documented below.</summary>
@@ -327,6 +341,7 @@ public partial class V1beta1ReservationStatusAtProvider
     public double? SlotCapacity { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ReservationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -354,6 +369,7 @@ public partial class V1beta1ReservationStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ReservationStatus defines the observed state of Reservation.</summary>
 public partial class V1beta1ReservationStatus
 {
     /// <summary></summary>
@@ -370,6 +386,7 @@ public partial class V1beta1ReservationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Reservation is the Schema for the Reservations API. A reservation is a mechanism used to guarantee BigQuery slots to users.</summary>
 public partial class V1beta1Reservation : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ReservationSpec>, IStatus<V1beta1ReservationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

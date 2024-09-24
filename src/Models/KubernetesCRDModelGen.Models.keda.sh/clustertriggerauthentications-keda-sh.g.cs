@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.keda.sh;
+/// <summary></summary>
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCredentialsAccessKeyValueFromSecretKeyRef
 {
     /// <summary></summary>
@@ -19,6 +20,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCre
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCredentialsAccessKeyValueFrom
 {
     /// <summary></summary>
@@ -26,6 +28,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCre
     public V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCredentialsAccessKeyValueFromSecretKeyRef SecretKeyRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCredentialsAccessKey
 {
     /// <summary></summary>
@@ -33,6 +36,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCre
     public V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCredentialsAccessKeyValueFrom ValueFrom { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCredentialsAccessSecretKeyValueFromSecretKeyRef
 {
     /// <summary></summary>
@@ -44,6 +48,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCre
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCredentialsAccessSecretKeyValueFrom
 {
     /// <summary></summary>
@@ -51,6 +56,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCre
     public V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCredentialsAccessSecretKeyValueFromSecretKeyRef SecretKeyRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCredentialsAccessSecretKey
 {
     /// <summary></summary>
@@ -58,6 +64,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCre
     public V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCredentialsAccessSecretKeyValueFrom ValueFrom { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCredentialsAccessTokenValueFromSecretKeyRef
 {
     /// <summary></summary>
@@ -69,6 +76,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCre
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCredentialsAccessTokenValueFrom
 {
     /// <summary></summary>
@@ -76,6 +84,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCre
     public V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCredentialsAccessTokenValueFromSecretKeyRef SecretKeyRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCredentialsAccessToken
 {
     /// <summary></summary>
@@ -83,6 +92,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCre
     public V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCredentialsAccessTokenValueFrom ValueFrom { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCredentials
 {
     /// <summary></summary>
@@ -127,6 +137,7 @@ public enum V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerPodIdentityP
     None
 }
 
+/// <summary>AuthPodIdentity allows users to select the platform native identity mechanism</summary>
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerPodIdentity
 {
     /// <summary>Set identityAuthorityHost to override the default Azure authority host. If this is set, then the IdentityTenantID must also be set</summary>
@@ -156,6 +167,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerPod
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerSecrets
 {
     /// <summary></summary>
@@ -175,6 +187,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerSec
     public string? VersionStage { get; set; }
 }
 
+/// <summary>AwsSecretManager is used to authenticate using AwsSecretManager</summary>
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManager
 {
     /// <summary></summary>
@@ -194,6 +207,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManager
     public IList<V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerSecrets> Secrets { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVaultCloud
 {
     /// <summary></summary>
@@ -209,6 +223,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVaultCloud
     public string Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVaultCredentialsClientSecretValueFromSecretKeyRef
 {
     /// <summary></summary>
@@ -220,6 +235,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVaultCreden
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVaultCredentialsClientSecretValueFrom
 {
     /// <summary></summary>
@@ -227,6 +243,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVaultCreden
     public V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVaultCredentialsClientSecretValueFromSecretKeyRef SecretKeyRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVaultCredentialsClientSecret
 {
     /// <summary></summary>
@@ -234,6 +251,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVaultCreden
     public V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVaultCredentialsClientSecretValueFrom ValueFrom { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVaultCredentials
 {
     /// <summary></summary>
@@ -278,6 +296,7 @@ public enum V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVaultPodIdentityProv
     None
 }
 
+/// <summary>AuthPodIdentity allows users to select the platform native identity mechanism</summary>
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVaultPodIdentity
 {
     /// <summary>Set identityAuthorityHost to override the default Azure authority host. If this is set, then the IdentityTenantID must also be set</summary>
@@ -307,6 +326,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVaultPodIde
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVaultSecrets
 {
     /// <summary></summary>
@@ -322,6 +342,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVaultSecret
     public string? Version { get; set; }
 }
 
+/// <summary>AzureKeyVault is used to authenticate using Azure Key Vault</summary>
 public partial class V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVault
 {
     /// <summary></summary>
@@ -345,6 +366,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVault
     public string VaultUri { get; set; }
 }
 
+/// <summary>AuthConfigMapTargetRef is used to authenticate using a reference to a config map</summary>
 public partial class V1alpha1ClusterTriggerAuthenticationSpecConfigMapTargetRef
 {
     /// <summary></summary>
@@ -360,6 +382,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecConfigMapTargetRef
     public string Parameter { get; set; }
 }
 
+/// <summary>AuthEnvironment is used to authenticate using environment variables in the destination ScaleTarget spec</summary>
 public partial class V1alpha1ClusterTriggerAuthenticationSpecEnv
 {
     /// <summary></summary>
@@ -375,6 +398,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecEnv
     public string Parameter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManagerCredentialsClientSecretValueFromSecretKeyRef
 {
     /// <summary></summary>
@@ -386,6 +410,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManagerCre
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManagerCredentialsClientSecretValueFrom
 {
     /// <summary></summary>
@@ -393,6 +418,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManagerCre
     public V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManagerCredentialsClientSecretValueFromSecretKeyRef SecretKeyRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManagerCredentialsClientSecret
 {
     /// <summary></summary>
@@ -400,6 +426,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManagerCre
     public V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManagerCredentialsClientSecretValueFrom ValueFrom { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManagerCredentials
 {
     /// <summary></summary>
@@ -436,6 +463,7 @@ public enum V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManagerPodIdentityP
     None
 }
 
+/// <summary>AuthPodIdentity allows users to select the platform native identity mechanism</summary>
 public partial class V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManagerPodIdentity
 {
     /// <summary>Set identityAuthorityHost to override the default Azure authority host. If this is set, then the IdentityTenantID must also be set</summary>
@@ -465,6 +493,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManagerPod
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManagerSecrets
 {
     /// <summary></summary>
@@ -480,6 +509,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManagerSec
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManager
 {
     /// <summary></summary>
@@ -495,6 +525,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManager
     public IList<V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManagerSecrets> Secrets { get; set; }
 }
 
+/// <summary>Credential defines the Hashicorp Vault credentials depending on the authentication method</summary>
 public partial class V1alpha1ClusterTriggerAuthenticationSpecHashiCorpVaultCredential
 {
     /// <summary></summary>
@@ -506,6 +537,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecHashiCorpVaultCrede
     public string? Token { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ClusterTriggerAuthenticationSpecHashiCorpVaultSecretsPkiData
 {
     /// <summary></summary>
@@ -537,6 +569,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecHashiCorpVaultSecre
     public string? UriSans { get; set; }
 }
 
+/// <summary>VaultSecret defines the mapping between the path of the secret in Vault to the parameter</summary>
 public partial class V1alpha1ClusterTriggerAuthenticationSpecHashiCorpVaultSecrets
 {
     /// <summary></summary>
@@ -560,6 +593,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecHashiCorpVaultSecre
     public string? Type { get; set; }
 }
 
+/// <summary>HashiCorpVault is used to authenticate using Hashicorp Vault</summary>
 public partial class V1alpha1ClusterTriggerAuthenticationSpecHashiCorpVault
 {
     /// <summary></summary>
@@ -620,6 +654,7 @@ public enum V1alpha1ClusterTriggerAuthenticationSpecPodIdentityProviderEnum
     None
 }
 
+/// <summary>AuthPodIdentity allows users to select the platform native identity mechanism</summary>
 public partial class V1alpha1ClusterTriggerAuthenticationSpecPodIdentity
 {
     /// <summary>Set identityAuthorityHost to override the default Azure authority host. If this is set, then the IdentityTenantID must also be set</summary>
@@ -649,6 +684,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecPodIdentity
     public string? RoleArn { get; set; }
 }
 
+/// <summary>AuthSecretTargetRef is used to authenticate using a reference to a secret</summary>
 public partial class V1alpha1ClusterTriggerAuthenticationSpecSecretTargetRef
 {
     /// <summary></summary>
@@ -664,6 +700,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecSecretTargetRef
     public string Parameter { get; set; }
 }
 
+/// <summary>TriggerAuthenticationSpec defines the various ways to authenticate</summary>
 public partial class V1alpha1ClusterTriggerAuthenticationSpec
 {
     /// <summary>AwsSecretManager is used to authenticate using AwsSecretManager</summary>
@@ -699,6 +736,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpec
     public IList<V1alpha1ClusterTriggerAuthenticationSpecSecretTargetRef>? SecretTargetRef { get; set; }
 }
 
+/// <summary>TriggerAuthenticationStatus defines the observed state of TriggerAuthentication</summary>
 public partial class V1alpha1ClusterTriggerAuthenticationStatus
 {
     /// <summary></summary>
@@ -711,6 +749,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ClusterTriggerAuthentication defines how a trigger can authenticate globally</summary>
 public partial class V1alpha1ClusterTriggerAuthentication : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ClusterTriggerAuthenticationSpec>, IStatus<V1alpha1ClusterTriggerAuthenticationStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

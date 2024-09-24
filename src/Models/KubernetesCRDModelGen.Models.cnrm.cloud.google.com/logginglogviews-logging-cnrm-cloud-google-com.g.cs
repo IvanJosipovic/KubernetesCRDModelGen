@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.logging.cnrm.cloud.google.com;
+/// <summary>Immutable. The BillingAccount that this resource belongs to. Only one of [billingAccountRef, folderRef, organizationRef, projectRef] may be specified.</summary>
 public partial class V1beta1LoggingLogViewSpecBillingAccountRef
 {
     /// <summary>Allowed value: The Google Cloud resource name of a Google Cloud Billing Account (format: `billingAccounts/{{name}}`).</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1LoggingLogViewSpecBillingAccountRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable.</summary>
 public partial class V1beta1LoggingLogViewSpecBucketRef
 {
     /// <summary>The bucket of the resource  Allowed value: The Google Cloud resource name of a `LoggingLogBucket` resource (format: `{{parent}}/locations/{{location}}/buckets/{{name}}`).</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1LoggingLogViewSpecBucketRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. The Folder that this resource belongs to. Only one of [billingAccountRef, folderRef, organizationRef, projectRef] may be specified.</summary>
 public partial class V1beta1LoggingLogViewSpecFolderRef
 {
     /// <summary>Allowed value: The Google Cloud resource name of a `Folder` resource (format: `folders/{{name}}`).</summary>
@@ -53,6 +56,7 @@ public partial class V1beta1LoggingLogViewSpecFolderRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. The Organization that this resource belongs to. Only one of [billingAccountRef, folderRef, organizationRef, projectRef] may be specified.</summary>
 public partial class V1beta1LoggingLogViewSpecOrganizationRef
 {
     /// <summary>Allowed value: The Google Cloud resource name of a Google Cloud Organization (format: `organizations/{{name}}`).</summary>
@@ -68,6 +72,7 @@ public partial class V1beta1LoggingLogViewSpecOrganizationRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. The Project that this resource belongs to. Only one of [billingAccountRef, folderRef, organizationRef, projectRef] may be specified.</summary>
 public partial class V1beta1LoggingLogViewSpecProjectRef
 {
     /// <summary>Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -83,6 +88,7 @@ public partial class V1beta1LoggingLogViewSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LoggingLogViewSpec
 {
     /// <summary>Immutable. The BillingAccount that this resource belongs to. Only one of [billingAccountRef, folderRef, organizationRef, projectRef] may be specified.</summary>
@@ -122,6 +128,7 @@ public partial class V1beta1LoggingLogViewSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LoggingLogViewStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -145,6 +152,7 @@ public partial class V1beta1LoggingLogViewStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LoggingLogViewStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -165,6 +173,7 @@ public partial class V1beta1LoggingLogViewStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1LoggingLogView : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LoggingLogViewSpec>, IStatus<V1beta1LoggingLogViewStatus>
 {
     public const string KubeApiVersion = "v1beta1";

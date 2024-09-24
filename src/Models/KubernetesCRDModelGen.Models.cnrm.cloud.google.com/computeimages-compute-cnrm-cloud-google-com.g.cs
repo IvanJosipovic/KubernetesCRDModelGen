@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary>The source disk to create this image based on. You must provide either this property or the rawDisk.source property but not both to create an image.</summary>
 public partial class V1beta1ComputeImageSpecDiskRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeDisk` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1ComputeImageSpecDiskRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeImageSpecGuestOsFeatures
 {
     /// <summary>Immutable. The type of supported feature. Read [Enabling guest operating system features](https://cloud.google.com/compute/docs/images/create-delete-deprecate-private-images#guest-os-features) to see a list of available options. Possible values: ["MULTI_IP_SUBNET", "SECURE_BOOT", "SEV_CAPABLE", "UEFI_COMPATIBLE", "VIRTIO_SCSI_MULTIQUEUE", "WINDOWS", "GVNIC", "SEV_LIVE_MIGRATABLE", "SEV_SNP_CAPABLE", "SUSPEND_RESUME_COMPATIBLE", "TDX_CAPABLE"].</summary>
@@ -30,6 +32,7 @@ public partial class V1beta1ComputeImageSpecGuestOsFeatures
     public string Type { get; set; }
 }
 
+/// <summary>The self link of the encryption key that is stored in Google Cloud KMS.</summary>
 public partial class V1beta1ComputeImageSpecImageEncryptionKeyKmsKeySelfLinkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
@@ -45,6 +48,7 @@ public partial class V1beta1ComputeImageSpecImageEncryptionKeyKmsKeySelfLinkRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.</summary>
 public partial class V1beta1ComputeImageSpecImageEncryptionKeyKmsKeyServiceAccountRef
 {
     /// <summary>Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
@@ -60,6 +64,7 @@ public partial class V1beta1ComputeImageSpecImageEncryptionKeyKmsKeyServiceAccou
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. Encrypts the image using a customer-supplied encryption key.  After you encrypt an image with a customer-supplied key, you must provide the same key if you use the image later (e.g. to create a disk from the image).</summary>
 public partial class V1beta1ComputeImageSpecImageEncryptionKey
 {
     /// <summary>The self link of the encryption key that is stored in Google Cloud KMS.</summary>
@@ -71,6 +76,7 @@ public partial class V1beta1ComputeImageSpecImageEncryptionKey
     public V1beta1ComputeImageSpecImageEncryptionKeyKmsKeyServiceAccountRef? KmsKeyServiceAccountRef { get; set; }
 }
 
+/// <summary>Immutable. The parameters of the raw disk image.</summary>
 public partial class V1beta1ComputeImageSpecRawDisk
 {
     /// <summary>Immutable. The format used to encode and transmit the block device, which should be TAR. This is just a container and transmission format and not a runtime format. Provided by the client when the disk image is created. Default value: "TAR" Possible values: ["TAR"].</summary>
@@ -86,6 +92,7 @@ public partial class V1beta1ComputeImageSpecRawDisk
     public string Source { get; set; }
 }
 
+/// <summary>The source image used to create this image.</summary>
 public partial class V1beta1ComputeImageSpecSourceImageRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeImage` resource.</summary>
@@ -101,6 +108,7 @@ public partial class V1beta1ComputeImageSpecSourceImageRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The source snapshot used to create this image.</summary>
 public partial class V1beta1ComputeImageSpecSourceSnapshotRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeSnapshot` resource.</summary>
@@ -116,6 +124,7 @@ public partial class V1beta1ComputeImageSpecSourceSnapshotRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeImageSpec
 {
     /// <summary>Immutable. An optional description of this resource. Provide this property when you create the resource.</summary>
@@ -167,6 +176,7 @@ public partial class V1beta1ComputeImageSpec
     public IList<string>? StorageLocations { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeImageStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -190,6 +200,7 @@ public partial class V1beta1ComputeImageStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeImageStatus
 {
     /// <summary>Size of the image tar.gz archive stored in Google Cloud Storage (in bytes).</summary>
@@ -218,6 +229,7 @@ public partial class V1beta1ComputeImageStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ComputeImage : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeImageSpec>, IStatus<V1beta1ComputeImageStatus>
 {
     public const string KubeApiVersion = "v1beta1";

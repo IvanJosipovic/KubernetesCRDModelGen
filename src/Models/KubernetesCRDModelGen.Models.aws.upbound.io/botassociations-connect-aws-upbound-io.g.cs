@@ -38,6 +38,7 @@ public enum V1beta1BotAssociationSpecForProviderInstanceIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BotAssociationSpecForProviderInstanceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1BotAssociationSpecForProviderInstanceIdRefPolicy
     public V1beta1BotAssociationSpecForProviderInstanceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Instance in connect to populate instanceId.</summary>
 public partial class V1beta1BotAssociationSpecForProviderInstanceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1BotAssociationSpecForProviderInstanceIdSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BotAssociationSpecForProviderInstanceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1BotAssociationSpecForProviderInstanceIdSelectorPolic
     public V1beta1BotAssociationSpecForProviderInstanceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Instance in connect to populate instanceId.</summary>
 public partial class V1beta1BotAssociationSpecForProviderInstanceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1BotAssociationSpecForProviderLexBotNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BotAssociationSpecForProviderLexBotNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1BotAssociationSpecForProviderLexBotNameRefPolicy
     public V1beta1BotAssociationSpecForProviderLexBotNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bot in lexmodels to populate name.</summary>
 public partial class V1beta1BotAssociationSpecForProviderLexBotNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1BotAssociationSpecForProviderLexBotNameSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BotAssociationSpecForProviderLexBotNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1BotAssociationSpecForProviderLexBotNameSelectorPolic
     public V1beta1BotAssociationSpecForProviderLexBotNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bot in lexmodels to populate name.</summary>
 public partial class V1beta1BotAssociationSpecForProviderLexBotNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1BotAssociationSpecForProviderLexBotNameSelector
     public V1beta1BotAssociationSpecForProviderLexBotNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BotAssociationSpecForProviderLexBot
 {
     /// <summary>The Region that the Amazon Lex (V1) bot was created in. Defaults to current region.</summary>
@@ -221,6 +230,7 @@ public partial class V1beta1BotAssociationSpecForProviderLexBot
     public V1beta1BotAssociationSpecForProviderLexBotNameSelector? NameSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BotAssociationSpecForProvider
 {
     /// <summary>The identifier of the Amazon Connect instance. You can find the instanceId in the ARN of the instance.</summary>
@@ -264,6 +274,7 @@ public enum V1beta1BotAssociationSpecInitProviderLexBotNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BotAssociationSpecInitProviderLexBotNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -277,6 +288,7 @@ public partial class V1beta1BotAssociationSpecInitProviderLexBotNameRefPolicy
     public V1beta1BotAssociationSpecInitProviderLexBotNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bot in lexmodels to populate name.</summary>
 public partial class V1beta1BotAssociationSpecInitProviderLexBotNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -308,6 +320,7 @@ public enum V1beta1BotAssociationSpecInitProviderLexBotNameSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BotAssociationSpecInitProviderLexBotNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -321,6 +334,7 @@ public partial class V1beta1BotAssociationSpecInitProviderLexBotNameSelectorPoli
     public V1beta1BotAssociationSpecInitProviderLexBotNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bot in lexmodels to populate name.</summary>
 public partial class V1beta1BotAssociationSpecInitProviderLexBotNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -336,6 +350,7 @@ public partial class V1beta1BotAssociationSpecInitProviderLexBotNameSelector
     public V1beta1BotAssociationSpecInitProviderLexBotNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BotAssociationSpecInitProviderLexBot
 {
     /// <summary>The Region that the Amazon Lex (V1) bot was created in. Defaults to current region.</summary>
@@ -355,6 +370,7 @@ public partial class V1beta1BotAssociationSpecInitProviderLexBot
     public V1beta1BotAssociationSpecInitProviderLexBotNameSelector? NameSelector { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1BotAssociationSpecInitProvider
 {
     /// <summary>Configuration information of an Amazon Lex (V1) bot. Detailed below.</summary>
@@ -404,6 +420,7 @@ public enum V1beta1BotAssociationSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BotAssociationSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -417,6 +434,7 @@ public partial class V1beta1BotAssociationSpecProviderConfigRefPolicy
     public V1beta1BotAssociationSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1BotAssociationSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -448,6 +466,7 @@ public enum V1beta1BotAssociationSpecPublishConnectionDetailsToConfigRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BotAssociationSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -461,6 +480,7 @@ public partial class V1beta1BotAssociationSpecPublishConnectionDetailsToConfigRe
     public V1beta1BotAssociationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1BotAssociationSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -472,6 +492,7 @@ public partial class V1beta1BotAssociationSpecPublishConnectionDetailsToConfigRe
     public V1beta1BotAssociationSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1BotAssociationSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -487,6 +508,7 @@ public partial class V1beta1BotAssociationSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1BotAssociationSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -502,6 +524,7 @@ public partial class V1beta1BotAssociationSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1BotAssociationSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -513,6 +536,7 @@ public partial class V1beta1BotAssociationSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>BotAssociationSpec defines the desired state of BotAssociation</summary>
 public partial class V1beta1BotAssociationSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -545,6 +569,7 @@ public partial class V1beta1BotAssociationSpec
     public V1beta1BotAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BotAssociationStatusAtProviderLexBot
 {
     /// <summary>The Region that the Amazon Lex (V1) bot was created in. Defaults to current region.</summary>
@@ -556,6 +581,7 @@ public partial class V1beta1BotAssociationStatusAtProviderLexBot
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BotAssociationStatusAtProvider
 {
     /// <summary>The Amazon Connect instance ID, Lex (V1) bot name, and Lex (V1) bot region separated by colons (:).</summary>
@@ -571,6 +597,7 @@ public partial class V1beta1BotAssociationStatusAtProvider
     public IList<V1beta1BotAssociationStatusAtProviderLexBot>? LexBot { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1BotAssociationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -598,6 +625,7 @@ public partial class V1beta1BotAssociationStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>BotAssociationStatus defines the observed state of BotAssociation.</summary>
 public partial class V1beta1BotAssociationStatus
 {
     /// <summary></summary>
@@ -614,6 +642,7 @@ public partial class V1beta1BotAssociationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>BotAssociation is the Schema for the BotAssociations API. Associates an Amazon Connect instance to an Amazon Lex (V1) bot</summary>
 public partial class V1beta1BotAssociation : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BotAssociationSpec>, IStatus<V1beta1BotAssociationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

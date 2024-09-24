@@ -38,6 +38,7 @@ public enum V1beta1RouteResponseSpecForProviderApiIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RouteResponseSpecForProviderApiIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1RouteResponseSpecForProviderApiIdRefPolicy
     public V1beta1RouteResponseSpecForProviderApiIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a API in apigatewayv2 to populate apiId.</summary>
 public partial class V1beta1RouteResponseSpecForProviderApiIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1RouteResponseSpecForProviderApiIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RouteResponseSpecForProviderApiIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1RouteResponseSpecForProviderApiIdSelectorPolicy
     public V1beta1RouteResponseSpecForProviderApiIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a API in apigatewayv2 to populate apiId.</summary>
 public partial class V1beta1RouteResponseSpecForProviderApiIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1RouteResponseSpecForProviderRouteIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RouteResponseSpecForProviderRouteIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1RouteResponseSpecForProviderRouteIdRefPolicy
     public V1beta1RouteResponseSpecForProviderRouteIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Route in apigatewayv2 to populate routeId.</summary>
 public partial class V1beta1RouteResponseSpecForProviderRouteIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1RouteResponseSpecForProviderRouteIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RouteResponseSpecForProviderRouteIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1RouteResponseSpecForProviderRouteIdSelectorPolicy
     public V1beta1RouteResponseSpecForProviderRouteIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Route in apigatewayv2 to populate routeId.</summary>
 public partial class V1beta1RouteResponseSpecForProviderRouteIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1RouteResponseSpecForProviderRouteIdSelector
     public V1beta1RouteResponseSpecForProviderRouteIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteResponseSpecForProvider
 {
     /// <summary>API identifier.</summary>
@@ -265,6 +274,7 @@ public enum V1beta1RouteResponseSpecInitProviderApiIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RouteResponseSpecInitProviderApiIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -278,6 +288,7 @@ public partial class V1beta1RouteResponseSpecInitProviderApiIdRefPolicy
     public V1beta1RouteResponseSpecInitProviderApiIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a API in apigatewayv2 to populate apiId.</summary>
 public partial class V1beta1RouteResponseSpecInitProviderApiIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -309,6 +320,7 @@ public enum V1beta1RouteResponseSpecInitProviderApiIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RouteResponseSpecInitProviderApiIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -322,6 +334,7 @@ public partial class V1beta1RouteResponseSpecInitProviderApiIdSelectorPolicy
     public V1beta1RouteResponseSpecInitProviderApiIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a API in apigatewayv2 to populate apiId.</summary>
 public partial class V1beta1RouteResponseSpecInitProviderApiIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -357,6 +370,7 @@ public enum V1beta1RouteResponseSpecInitProviderRouteIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RouteResponseSpecInitProviderRouteIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -370,6 +384,7 @@ public partial class V1beta1RouteResponseSpecInitProviderRouteIdRefPolicy
     public V1beta1RouteResponseSpecInitProviderRouteIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Route in apigatewayv2 to populate routeId.</summary>
 public partial class V1beta1RouteResponseSpecInitProviderRouteIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -401,6 +416,7 @@ public enum V1beta1RouteResponseSpecInitProviderRouteIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RouteResponseSpecInitProviderRouteIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -414,6 +430,7 @@ public partial class V1beta1RouteResponseSpecInitProviderRouteIdSelectorPolicy
     public V1beta1RouteResponseSpecInitProviderRouteIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Route in apigatewayv2 to populate routeId.</summary>
 public partial class V1beta1RouteResponseSpecInitProviderRouteIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -429,6 +446,7 @@ public partial class V1beta1RouteResponseSpecInitProviderRouteIdSelector
     public V1beta1RouteResponseSpecInitProviderRouteIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1RouteResponseSpecInitProvider
 {
     /// <summary>API identifier.</summary>
@@ -510,6 +528,7 @@ public enum V1beta1RouteResponseSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RouteResponseSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -523,6 +542,7 @@ public partial class V1beta1RouteResponseSpecProviderConfigRefPolicy
     public V1beta1RouteResponseSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1RouteResponseSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -554,6 +574,7 @@ public enum V1beta1RouteResponseSpecPublishConnectionDetailsToConfigRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RouteResponseSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -567,6 +588,7 @@ public partial class V1beta1RouteResponseSpecPublishConnectionDetailsToConfigRef
     public V1beta1RouteResponseSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1RouteResponseSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -578,6 +600,7 @@ public partial class V1beta1RouteResponseSpecPublishConnectionDetailsToConfigRef
     public V1beta1RouteResponseSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1RouteResponseSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -593,6 +616,7 @@ public partial class V1beta1RouteResponseSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1RouteResponseSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -608,6 +632,7 @@ public partial class V1beta1RouteResponseSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1RouteResponseSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -619,6 +644,7 @@ public partial class V1beta1RouteResponseSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>RouteResponseSpec defines the desired state of RouteResponse</summary>
 public partial class V1beta1RouteResponseSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -651,6 +677,7 @@ public partial class V1beta1RouteResponseSpec
     public V1beta1RouteResponseSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RouteResponseStatusAtProvider
 {
     /// <summary>API identifier.</summary>
@@ -678,6 +705,7 @@ public partial class V1beta1RouteResponseStatusAtProvider
     public string? RouteResponseKey { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1RouteResponseStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -705,6 +733,7 @@ public partial class V1beta1RouteResponseStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>RouteResponseStatus defines the observed state of RouteResponse.</summary>
 public partial class V1beta1RouteResponseStatus
 {
     /// <summary></summary>
@@ -721,6 +750,7 @@ public partial class V1beta1RouteResponseStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>RouteResponse is the Schema for the RouteResponses API. Manages an Amazon API Gateway Version 2 route response.</summary>
 public partial class V1beta1RouteResponse : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1RouteResponseSpec>, IStatus<V1beta1RouteResponseStatus>
 {
     public const string KubeApiVersion = "v1beta1";

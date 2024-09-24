@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+/// <summary>Storage version of v1api20201101.AddressSpace AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.</summary>
 public partial class V1api20201101storageVirtualNetworkSpecAddressSpace
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -19,6 +20,7 @@ public partial class V1api20201101storageVirtualNetworkSpecAddressSpace
     public IList<string>? AddressPrefixes { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.VirtualNetworkBgpCommunities Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.</summary>
 public partial class V1api20201101storageVirtualNetworkSpecBgpCommunities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -30,6 +32,7 @@ public partial class V1api20201101storageVirtualNetworkSpecBgpCommunities
     public string? VirtualNetworkCommunity { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20201101storageVirtualNetworkSpecDdosProtectionPlanReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -49,6 +52,7 @@ public partial class V1api20201101storageVirtualNetworkSpecDdosProtectionPlanRef
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
 public partial class V1api20201101storageVirtualNetworkSpecDdosProtectionPlan
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -60,6 +64,7 @@ public partial class V1api20201101storageVirtualNetworkSpecDdosProtectionPlan
     public V1api20201101storageVirtualNetworkSpecDdosProtectionPlanReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.DhcpOptions DhcpOptions contains an array of DNS servers available to VMs deployed in the virtual network. Standard DHCP option for a subnet overrides VNET DHCP options.</summary>
 public partial class V1api20201101storageVirtualNetworkSpecDhcpOptions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -71,6 +76,7 @@ public partial class V1api20201101storageVirtualNetworkSpecDhcpOptions
     public IList<string>? DnsServers { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.ExtendedLocation ExtendedLocation complex type.</summary>
 public partial class V1api20201101storageVirtualNetworkSpecExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -86,6 +92,7 @@ public partial class V1api20201101storageVirtualNetworkSpecExtendedLocation
     public string? Type { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20201101storageVirtualNetworkSpecIpAllocationsReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -105,6 +112,7 @@ public partial class V1api20201101storageVirtualNetworkSpecIpAllocationsReferenc
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
 public partial class V1api20201101storageVirtualNetworkSpecIpAllocations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -116,6 +124,7 @@ public partial class V1api20201101storageVirtualNetworkSpecIpAllocations
     public V1api20201101storageVirtualNetworkSpecIpAllocationsReference? Reference { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20201101storageVirtualNetworkSpecOwner
 {
     /// <summary></summary>
@@ -127,6 +136,7 @@ public partial class V1api20201101storageVirtualNetworkSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.VirtualNetwork_Spec</summary>
 public partial class V1api20201101storageVirtualNetworkSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -186,6 +196,7 @@ public partial class V1api20201101storageVirtualNetworkSpec
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.AddressSpace_STATUS AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.</summary>
 public partial class V1api20201101storageVirtualNetworkStatusAddressSpace
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -197,6 +208,7 @@ public partial class V1api20201101storageVirtualNetworkStatusAddressSpace
     public IList<string>? AddressPrefixes { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.VirtualNetworkBgpCommunities_STATUS Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.</summary>
 public partial class V1api20201101storageVirtualNetworkStatusBgpCommunities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -212,6 +224,7 @@ public partial class V1api20201101storageVirtualNetworkStatusBgpCommunities
     public string? VirtualNetworkCommunity { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20201101storageVirtualNetworkStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -243,6 +256,7 @@ public partial class V1api20201101storageVirtualNetworkStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
 public partial class V1api20201101storageVirtualNetworkStatusDdosProtectionPlan
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -254,6 +268,7 @@ public partial class V1api20201101storageVirtualNetworkStatusDdosProtectionPlan
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.DhcpOptions_STATUS DhcpOptions contains an array of DNS servers available to VMs deployed in the virtual network. Standard DHCP option for a subnet overrides VNET DHCP options.</summary>
 public partial class V1api20201101storageVirtualNetworkStatusDhcpOptions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -265,6 +280,7 @@ public partial class V1api20201101storageVirtualNetworkStatusDhcpOptions
     public IList<string>? DnsServers { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.ExtendedLocation_STATUS ExtendedLocation complex type.</summary>
 public partial class V1api20201101storageVirtualNetworkStatusExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -280,6 +296,7 @@ public partial class V1api20201101storageVirtualNetworkStatusExtendedLocation
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
 public partial class V1api20201101storageVirtualNetworkStatusIpAllocations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -291,6 +308,7 @@ public partial class V1api20201101storageVirtualNetworkStatusIpAllocations
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.VirtualNetwork_STATUS Virtual Network resource.</summary>
 public partial class V1api20201101storageVirtualNetworkStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -367,6 +385,7 @@ public partial class V1api20201101storageVirtualNetworkStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20201101.VirtualNetwork Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/virtualNetwork.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}</summary>
 public partial class V1api20201101storageVirtualNetwork : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20201101storageVirtualNetworkSpec>, IStatus<V1api20201101storageVirtualNetworkStatus>
 {
     public const string KubeApiVersion = "v1api20201101storage";

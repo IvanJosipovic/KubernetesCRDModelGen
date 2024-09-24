@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.azure.com;
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20211101storageServerSpecAdministratorLoginPassword
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -19,6 +20,7 @@ public partial class V1api20211101storageServerSpecAdministratorLoginPassword
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.ServerExternalAdministrator Properties of a active directory administrator.</summary>
 public partial class V1api20211101storageServerSpecAdministrators
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -50,6 +52,7 @@ public partial class V1api20211101storageServerSpecAdministrators
     public string? TenantId { get; set; }
 }
 
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 public partial class V1api20211101storageServerSpecIdentityUserAssignedIdentitiesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -69,6 +72,7 @@ public partial class V1api20211101storageServerSpecIdentityUserAssignedIdentitie
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
 public partial class V1api20211101storageServerSpecIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -80,6 +84,7 @@ public partial class V1api20211101storageServerSpecIdentityUserAssignedIdentitie
     public V1api20211101storageServerSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.ResourceIdentity Azure Active Directory identity configuration for a resource.</summary>
 public partial class V1api20211101storageServerSpecIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -95,6 +100,7 @@ public partial class V1api20211101storageServerSpecIdentity
     public IList<V1api20211101storageServerSpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
+/// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20211101storageServerSpecOperatorSpecConfigMapsFullyQualifiedDomainName
 {
     /// <summary>Key is the key in the ConfigMap being referenced</summary>
@@ -106,6 +112,7 @@ public partial class V1api20211101storageServerSpecOperatorSpecConfigMapsFullyQu
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.ServerOperatorConfigMaps</summary>
 public partial class V1api20211101storageServerSpecOperatorSpecConfigMaps
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -117,6 +124,7 @@ public partial class V1api20211101storageServerSpecOperatorSpecConfigMaps
     public V1api20211101storageServerSpecOperatorSpecConfigMapsFullyQualifiedDomainName? FullyQualifiedDomainName { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.ServerOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 public partial class V1api20211101storageServerSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -128,6 +136,7 @@ public partial class V1api20211101storageServerSpecOperatorSpec
     public V1api20211101storageServerSpecOperatorSpecConfigMaps? ConfigMaps { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20211101storageServerSpecOwner
 {
     /// <summary></summary>
@@ -139,6 +148,7 @@ public partial class V1api20211101storageServerSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>PrimaryUserAssignedIdentityReference: The resource id of a user assigned identity to be used by default.</summary>
 public partial class V1api20211101storageServerSpecPrimaryUserAssignedIdentityReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -158,6 +168,7 @@ public partial class V1api20211101storageServerSpecPrimaryUserAssignedIdentityRe
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.Server_Spec</summary>
 public partial class V1api20211101storageServerSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -233,6 +244,7 @@ public partial class V1api20211101storageServerSpec
     public string? Version { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.ServerExternalAdministrator_STATUS Properties of a active directory administrator.</summary>
 public partial class V1api20211101storageServerStatusAdministrators
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -264,6 +276,7 @@ public partial class V1api20211101storageServerStatusAdministrators
     public string? TenantId { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20211101storageServerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -295,6 +308,7 @@ public partial class V1api20211101storageServerStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.UserIdentity_STATUS Azure Active Directory identity configuration for a resource.</summary>
 public partial class V1api20211101storageServerStatusIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -310,6 +324,7 @@ public partial class V1api20211101storageServerStatusIdentityUserAssignedIdentit
     public string? PrincipalId { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.ResourceIdentity_STATUS Azure Active Directory identity configuration for a resource.</summary>
 public partial class V1api20211101storageServerStatusIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -333,6 +348,7 @@ public partial class V1api20211101storageServerStatusIdentity
     public IDictionary<string, V1api20211101storageServerStatusIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.PrivateEndpointProperty_STATUS</summary>
 public partial class V1api20211101storageServerStatusPrivateEndpointConnectionsPropertiesPrivateEndpoint
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -344,6 +360,7 @@ public partial class V1api20211101storageServerStatusPrivateEndpointConnectionsP
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.PrivateLinkServiceConnectionStateProperty_STATUS</summary>
 public partial class V1api20211101storageServerStatusPrivateEndpointConnectionsPropertiesPrivateLinkServiceConnectionState
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -363,6 +380,7 @@ public partial class V1api20211101storageServerStatusPrivateEndpointConnectionsP
     public string? Status { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.PrivateEndpointConnectionProperties_STATUS Properties of a private endpoint connection.</summary>
 public partial class V1api20211101storageServerStatusPrivateEndpointConnectionsProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -386,6 +404,7 @@ public partial class V1api20211101storageServerStatusPrivateEndpointConnectionsP
     public string? ProvisioningState { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.ServerPrivateEndpointConnection_STATUS A private endpoint connection under a server</summary>
 public partial class V1api20211101storageServerStatusPrivateEndpointConnections
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -401,6 +420,7 @@ public partial class V1api20211101storageServerStatusPrivateEndpointConnections
     public V1api20211101storageServerStatusPrivateEndpointConnectionsProperties? Properties { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.Server_STATUS An Azure SQL Database server.</summary>
 public partial class V1api20211101storageServerStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -493,6 +513,7 @@ public partial class V1api20211101storageServerStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20211101.Server Generator information: - Generated from: /sql/resource-manager/Microsoft.Sql/stable/2021-11-01/Servers.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}</summary>
 public partial class V1api20211101storageServer : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20211101storageServerSpec>, IStatus<V1api20211101storageServerStatus>
 {
     public const string KubeApiVersion = "v1api20211101storage";

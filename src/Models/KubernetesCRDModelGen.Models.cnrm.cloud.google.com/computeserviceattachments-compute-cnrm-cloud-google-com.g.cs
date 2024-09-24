@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1ComputeServiceAttachmentSpecConsumerAcceptListsProjectRef
 {
     /// <summary>The project id or number for the project to set the limit for.  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1ComputeServiceAttachmentSpecConsumerAcceptListsProje
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeServiceAttachmentSpecConsumerAcceptLists
 {
     /// <summary>The value of the limit to set.</summary>
@@ -34,6 +36,7 @@ public partial class V1beta1ComputeServiceAttachmentSpecConsumerAcceptLists
     public V1beta1ComputeServiceAttachmentSpecConsumerAcceptListsProjectRef ProjectRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeServiceAttachmentSpecConsumerRejectLists
 {
     /// <summary>Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -49,6 +52,7 @@ public partial class V1beta1ComputeServiceAttachmentSpecConsumerRejectLists
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeServiceAttachmentSpecNatSubnets
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeSubnetwork` resource.</summary>
@@ -64,6 +68,7 @@ public partial class V1beta1ComputeServiceAttachmentSpecNatSubnets
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. The Project that this resource belongs to.</summary>
 public partial class V1beta1ComputeServiceAttachmentSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -79,6 +84,7 @@ public partial class V1beta1ComputeServiceAttachmentSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable.</summary>
 public partial class V1beta1ComputeServiceAttachmentSpecTargetServiceRef
 {
     /// <summary>The URL of a service serving the endpoint identified by this service attachment.  Allowed value: The `selfLink` field of a `ComputeForwardingRule` resource.</summary>
@@ -94,6 +100,7 @@ public partial class V1beta1ComputeServiceAttachmentSpecTargetServiceRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeServiceAttachmentSpec
 {
     /// <summary>The connection preference of service attachment. The value can be set to `ACCEPT_AUTOMATIC`. An `ACCEPT_AUTOMATIC` service attachment is one that always accepts the connection from consumer forwarding rules. Possible values: CONNECTION_PREFERENCE_UNSPECIFIED, ACCEPT_AUTOMATIC, ACCEPT_MANUAL</summary>
@@ -137,6 +144,7 @@ public partial class V1beta1ComputeServiceAttachmentSpec
     public V1beta1ComputeServiceAttachmentSpecTargetServiceRef TargetServiceRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeServiceAttachmentStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -160,6 +168,7 @@ public partial class V1beta1ComputeServiceAttachmentStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeServiceAttachmentStatusConnectedEndpoints
 {
     /// <summary>The url of a connected endpoint.</summary>
@@ -175,6 +184,7 @@ public partial class V1beta1ComputeServiceAttachmentStatusConnectedEndpoints
     public string? Status { get; set; }
 }
 
+/// <summary>An 128-bit global unique ID of the PSC service attachment.</summary>
 public partial class V1beta1ComputeServiceAttachmentStatusPscServiceAttachmentId
 {
     /// <summary></summary>
@@ -186,6 +196,7 @@ public partial class V1beta1ComputeServiceAttachmentStatusPscServiceAttachmentId
     public long? Low { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeServiceAttachmentStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -222,6 +233,7 @@ public partial class V1beta1ComputeServiceAttachmentStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ComputeServiceAttachment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeServiceAttachmentSpec>, IStatus<V1beta1ComputeServiceAttachmentStatus>
 {
     public const string KubeApiVersion = "v1beta1";

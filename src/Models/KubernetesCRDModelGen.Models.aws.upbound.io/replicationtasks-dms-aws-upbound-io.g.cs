@@ -38,6 +38,7 @@ public enum V1beta1ReplicationTaskSpecForProviderReplicationInstanceArnRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ReplicationTaskSpecForProviderReplicationInstanceArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ReplicationTaskSpecForProviderReplicationInstanceArn
     public V1beta1ReplicationTaskSpecForProviderReplicationInstanceArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ReplicationInstance in dms to populate replicationInstanceArn.</summary>
 public partial class V1beta1ReplicationTaskSpecForProviderReplicationInstanceArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ReplicationTaskSpecForProviderReplicationInstanceArnSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ReplicationTaskSpecForProviderReplicationInstanceArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ReplicationTaskSpecForProviderReplicationInstanceArn
     public V1beta1ReplicationTaskSpecForProviderReplicationInstanceArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ReplicationInstance in dms to populate replicationInstanceArn.</summary>
 public partial class V1beta1ReplicationTaskSpecForProviderReplicationInstanceArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1ReplicationTaskSpecForProviderSourceEndpointArnRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ReplicationTaskSpecForProviderSourceEndpointArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1ReplicationTaskSpecForProviderSourceEndpointArnRefPo
     public V1beta1ReplicationTaskSpecForProviderSourceEndpointArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Endpoint in dms to populate sourceEndpointArn.</summary>
 public partial class V1beta1ReplicationTaskSpecForProviderSourceEndpointArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1ReplicationTaskSpecForProviderSourceEndpointArnSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ReplicationTaskSpecForProviderSourceEndpointArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1ReplicationTaskSpecForProviderSourceEndpointArnSelec
     public V1beta1ReplicationTaskSpecForProviderSourceEndpointArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Endpoint in dms to populate sourceEndpointArn.</summary>
 public partial class V1beta1ReplicationTaskSpecForProviderSourceEndpointArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1ReplicationTaskSpecForProviderTargetEndpointArnRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ReplicationTaskSpecForProviderTargetEndpointArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1ReplicationTaskSpecForProviderTargetEndpointArnRefPo
     public V1beta1ReplicationTaskSpecForProviderTargetEndpointArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Endpoint in dms to populate targetEndpointArn.</summary>
 public partial class V1beta1ReplicationTaskSpecForProviderTargetEndpointArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1ReplicationTaskSpecForProviderTargetEndpointArnSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ReplicationTaskSpecForProviderTargetEndpointArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1ReplicationTaskSpecForProviderTargetEndpointArnSelec
     public V1beta1ReplicationTaskSpecForProviderTargetEndpointArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Endpoint in dms to populate targetEndpointArn.</summary>
 public partial class V1beta1ReplicationTaskSpecForProviderTargetEndpointArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1ReplicationTaskSpecForProviderTargetEndpointArnSelec
     public V1beta1ReplicationTaskSpecForProviderTargetEndpointArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ReplicationTaskSpecForProvider
 {
     /// <summary>Indicates when you want a change data capture (CDC) operation to start. The value can be a RFC3339 formatted date, a checkpoint, or a LSN/SCN format depending on the source engine. For more information see Determining a CDC native start point.</summary>
@@ -389,6 +402,7 @@ public enum V1beta1ReplicationTaskSpecInitProviderReplicationInstanceArnRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ReplicationTaskSpecInitProviderReplicationInstanceArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -402,6 +416,7 @@ public partial class V1beta1ReplicationTaskSpecInitProviderReplicationInstanceAr
     public V1beta1ReplicationTaskSpecInitProviderReplicationInstanceArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ReplicationInstance in dms to populate replicationInstanceArn.</summary>
 public partial class V1beta1ReplicationTaskSpecInitProviderReplicationInstanceArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -433,6 +448,7 @@ public enum V1beta1ReplicationTaskSpecInitProviderReplicationInstanceArnSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ReplicationTaskSpecInitProviderReplicationInstanceArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -446,6 +462,7 @@ public partial class V1beta1ReplicationTaskSpecInitProviderReplicationInstanceAr
     public V1beta1ReplicationTaskSpecInitProviderReplicationInstanceArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ReplicationInstance in dms to populate replicationInstanceArn.</summary>
 public partial class V1beta1ReplicationTaskSpecInitProviderReplicationInstanceArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -481,6 +498,7 @@ public enum V1beta1ReplicationTaskSpecInitProviderSourceEndpointArnRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ReplicationTaskSpecInitProviderSourceEndpointArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -494,6 +512,7 @@ public partial class V1beta1ReplicationTaskSpecInitProviderSourceEndpointArnRefP
     public V1beta1ReplicationTaskSpecInitProviderSourceEndpointArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Endpoint in dms to populate sourceEndpointArn.</summary>
 public partial class V1beta1ReplicationTaskSpecInitProviderSourceEndpointArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -525,6 +544,7 @@ public enum V1beta1ReplicationTaskSpecInitProviderSourceEndpointArnSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ReplicationTaskSpecInitProviderSourceEndpointArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -538,6 +558,7 @@ public partial class V1beta1ReplicationTaskSpecInitProviderSourceEndpointArnSele
     public V1beta1ReplicationTaskSpecInitProviderSourceEndpointArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Endpoint in dms to populate sourceEndpointArn.</summary>
 public partial class V1beta1ReplicationTaskSpecInitProviderSourceEndpointArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -573,6 +594,7 @@ public enum V1beta1ReplicationTaskSpecInitProviderTargetEndpointArnRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ReplicationTaskSpecInitProviderTargetEndpointArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -586,6 +608,7 @@ public partial class V1beta1ReplicationTaskSpecInitProviderTargetEndpointArnRefP
     public V1beta1ReplicationTaskSpecInitProviderTargetEndpointArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Endpoint in dms to populate targetEndpointArn.</summary>
 public partial class V1beta1ReplicationTaskSpecInitProviderTargetEndpointArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -617,6 +640,7 @@ public enum V1beta1ReplicationTaskSpecInitProviderTargetEndpointArnSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ReplicationTaskSpecInitProviderTargetEndpointArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -630,6 +654,7 @@ public partial class V1beta1ReplicationTaskSpecInitProviderTargetEndpointArnSele
     public V1beta1ReplicationTaskSpecInitProviderTargetEndpointArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Endpoint in dms to populate targetEndpointArn.</summary>
 public partial class V1beta1ReplicationTaskSpecInitProviderTargetEndpointArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -645,6 +670,7 @@ public partial class V1beta1ReplicationTaskSpecInitProviderTargetEndpointArnSele
     public V1beta1ReplicationTaskSpecInitProviderTargetEndpointArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ReplicationTaskSpecInitProvider
 {
     /// <summary>Indicates when you want a change data capture (CDC) operation to start. The value can be a RFC3339 formatted date, a checkpoint, or a LSN/SCN format depending on the source engine. For more information see Determining a CDC native start point.</summary>
@@ -758,6 +784,7 @@ public enum V1beta1ReplicationTaskSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ReplicationTaskSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -771,6 +798,7 @@ public partial class V1beta1ReplicationTaskSpecProviderConfigRefPolicy
     public V1beta1ReplicationTaskSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ReplicationTaskSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -802,6 +830,7 @@ public enum V1beta1ReplicationTaskSpecPublishConnectionDetailsToConfigRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ReplicationTaskSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -815,6 +844,7 @@ public partial class V1beta1ReplicationTaskSpecPublishConnectionDetailsToConfigR
     public V1beta1ReplicationTaskSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ReplicationTaskSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -826,6 +856,7 @@ public partial class V1beta1ReplicationTaskSpecPublishConnectionDetailsToConfigR
     public V1beta1ReplicationTaskSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ReplicationTaskSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -841,6 +872,7 @@ public partial class V1beta1ReplicationTaskSpecPublishConnectionDetailsToMetadat
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ReplicationTaskSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -856,6 +888,7 @@ public partial class V1beta1ReplicationTaskSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ReplicationTaskSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -867,6 +900,7 @@ public partial class V1beta1ReplicationTaskSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ReplicationTaskSpec defines the desired state of ReplicationTask</summary>
 public partial class V1beta1ReplicationTaskSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -899,6 +933,7 @@ public partial class V1beta1ReplicationTaskSpec
     public V1beta1ReplicationTaskSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ReplicationTaskStatusAtProvider
 {
     /// <summary>Indicates when you want a change data capture (CDC) operation to start. The value can be a RFC3339 formatted date, a checkpoint, or a LSN/SCN format depending on the source engine. For more information see Determining a CDC native start point.</summary>
@@ -962,6 +997,7 @@ public partial class V1beta1ReplicationTaskStatusAtProvider
     public string? TargetEndpointArn { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ReplicationTaskStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -989,6 +1025,7 @@ public partial class V1beta1ReplicationTaskStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ReplicationTaskStatus defines the observed state of ReplicationTask.</summary>
 public partial class V1beta1ReplicationTaskStatus
 {
     /// <summary></summary>
@@ -1005,6 +1042,7 @@ public partial class V1beta1ReplicationTaskStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ReplicationTask is the Schema for the ReplicationTasks API. Provides a DMS (Data Migration Service) replication task resource.</summary>
 public partial class V1beta1ReplicationTask : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ReplicationTaskSpec>, IStatus<V1beta1ReplicationTaskStatus>
 {
     public const string KubeApiVersion = "v1beta1";

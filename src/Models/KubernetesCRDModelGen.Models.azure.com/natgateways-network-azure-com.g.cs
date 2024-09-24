@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20220701storageNatGatewaySpecOwner
 {
     /// <summary></summary>
@@ -19,6 +20,7 @@ public partial class V1api20220701storageNatGatewaySpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20220701storageNatGatewaySpecPublicIpAddressesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -38,6 +40,7 @@ public partial class V1api20220701storageNatGatewaySpecPublicIpAddressesReferenc
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.ApplicationGatewaySubResource Reference to another subresource.</summary>
 public partial class V1api20220701storageNatGatewaySpecPublicIpAddresses
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -49,6 +52,7 @@ public partial class V1api20220701storageNatGatewaySpecPublicIpAddresses
     public V1api20220701storageNatGatewaySpecPublicIpAddressesReference? Reference { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20220701storageNatGatewaySpecPublicIpPrefixesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -68,6 +72,7 @@ public partial class V1api20220701storageNatGatewaySpecPublicIpPrefixesReference
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.ApplicationGatewaySubResource Reference to another subresource.</summary>
 public partial class V1api20220701storageNatGatewaySpecPublicIpPrefixes
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -79,6 +84,7 @@ public partial class V1api20220701storageNatGatewaySpecPublicIpPrefixes
     public V1api20220701storageNatGatewaySpecPublicIpPrefixesReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.NatGatewaySku SKU of nat gateway.</summary>
 public partial class V1api20220701storageNatGatewaySpecSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -90,6 +96,7 @@ public partial class V1api20220701storageNatGatewaySpecSku
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.NatGateway_Spec</summary>
 public partial class V1api20220701storageNatGatewaySpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -137,6 +144,7 @@ public partial class V1api20220701storageNatGatewaySpec
     public IList<string>? Zones { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20220701storageNatGatewayStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -168,6 +176,7 @@ public partial class V1api20220701storageNatGatewayStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.ApplicationGatewaySubResource_STATUS Reference to another subresource.</summary>
 public partial class V1api20220701storageNatGatewayStatusPublicIpAddresses
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -179,6 +188,7 @@ public partial class V1api20220701storageNatGatewayStatusPublicIpAddresses
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.ApplicationGatewaySubResource_STATUS Reference to another subresource.</summary>
 public partial class V1api20220701storageNatGatewayStatusPublicIpPrefixes
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -190,6 +200,7 @@ public partial class V1api20220701storageNatGatewayStatusPublicIpPrefixes
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.NatGatewaySku_STATUS SKU of nat gateway.</summary>
 public partial class V1api20220701storageNatGatewayStatusSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -201,6 +212,7 @@ public partial class V1api20220701storageNatGatewayStatusSku
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.ApplicationGatewaySubResource_STATUS Reference to another subresource.</summary>
 public partial class V1api20220701storageNatGatewayStatusSubnets
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -212,6 +224,7 @@ public partial class V1api20220701storageNatGatewayStatusSubnets
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.NatGateway_STATUS Nat Gateway resource.</summary>
 public partial class V1api20220701storageNatGatewayStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -280,6 +293,7 @@ public partial class V1api20220701storageNatGatewayStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20220701.NatGateway Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2022-07-01/natGateway.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/natGateways/{natGatewayName}</summary>
 public partial class V1api20220701storageNatGateway : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20220701storageNatGatewaySpec>, IStatus<V1api20220701storageNatGatewayStatus>
 {
     public const string KubeApiVersion = "v1api20220701storage";

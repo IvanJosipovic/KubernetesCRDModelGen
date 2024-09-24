@@ -18,6 +18,7 @@ public enum V1beta1XSSMatchSetSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1XSSMatchSetSpecForProviderXssMatchTupleFieldToMatch
 {
     /// <summary>When the value of type is HEADER, enter the name of the header that you want the WAF to search, for example, User-Agent or Referer. If the value of type is any other value, omit data.</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1XSSMatchSetSpecForProviderXssMatchTupleFieldToMatch
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1XSSMatchSetSpecForProviderXssMatchTuple
 {
     /// <summary>Specifies where in a web request to look for cross-site scripting attacks.</summary>
@@ -40,6 +42,7 @@ public partial class V1beta1XSSMatchSetSpecForProviderXssMatchTuple
     public string? TextTransformation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1XSSMatchSetSpecForProvider
 {
     /// <summary>The name of the set</summary>
@@ -55,6 +58,7 @@ public partial class V1beta1XSSMatchSetSpecForProvider
     public IList<V1beta1XSSMatchSetSpecForProviderXssMatchTuple>? XssMatchTuple { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1XSSMatchSetSpecInitProviderXssMatchTupleFieldToMatch
 {
     /// <summary>When the value of type is HEADER, enter the name of the header that you want the WAF to search, for example, User-Agent or Referer. If the value of type is any other value, omit data.</summary>
@@ -66,6 +70,7 @@ public partial class V1beta1XSSMatchSetSpecInitProviderXssMatchTupleFieldToMatch
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1XSSMatchSetSpecInitProviderXssMatchTuple
 {
     /// <summary>Specifies where in a web request to look for cross-site scripting attacks.</summary>
@@ -77,6 +82,7 @@ public partial class V1beta1XSSMatchSetSpecInitProviderXssMatchTuple
     public string? TextTransformation { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1XSSMatchSetSpecInitProvider
 {
     /// <summary>The name of the set</summary>
@@ -130,6 +136,7 @@ public enum V1beta1XSSMatchSetSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1XSSMatchSetSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +150,7 @@ public partial class V1beta1XSSMatchSetSpecProviderConfigRefPolicy
     public V1beta1XSSMatchSetSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1XSSMatchSetSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +182,7 @@ public enum V1beta1XSSMatchSetSpecPublishConnectionDetailsToConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1XSSMatchSetSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +196,7 @@ public partial class V1beta1XSSMatchSetSpecPublishConnectionDetailsToConfigRefPo
     public V1beta1XSSMatchSetSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1XSSMatchSetSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -198,6 +208,7 @@ public partial class V1beta1XSSMatchSetSpecPublishConnectionDetailsToConfigRef
     public V1beta1XSSMatchSetSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1XSSMatchSetSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -213,6 +224,7 @@ public partial class V1beta1XSSMatchSetSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1XSSMatchSetSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -228,6 +240,7 @@ public partial class V1beta1XSSMatchSetSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1XSSMatchSetSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -239,6 +252,7 @@ public partial class V1beta1XSSMatchSetSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>XSSMatchSetSpec defines the desired state of XSSMatchSet</summary>
 public partial class V1beta1XSSMatchSetSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -271,6 +285,7 @@ public partial class V1beta1XSSMatchSetSpec
     public V1beta1XSSMatchSetSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1XSSMatchSetStatusAtProviderXssMatchTupleFieldToMatch
 {
     /// <summary>When the value of type is HEADER, enter the name of the header that you want the WAF to search, for example, User-Agent or Referer. If the value of type is any other value, omit data.</summary>
@@ -282,6 +297,7 @@ public partial class V1beta1XSSMatchSetStatusAtProviderXssMatchTupleFieldToMatch
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1XSSMatchSetStatusAtProviderXssMatchTuple
 {
     /// <summary>Specifies where in a web request to look for cross-site scripting attacks.</summary>
@@ -293,6 +309,7 @@ public partial class V1beta1XSSMatchSetStatusAtProviderXssMatchTuple
     public string? TextTransformation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1XSSMatchSetStatusAtProvider
 {
     /// <summary>The ID of the Regional WAF XSS Match Set.</summary>
@@ -308,6 +325,7 @@ public partial class V1beta1XSSMatchSetStatusAtProvider
     public IList<V1beta1XSSMatchSetStatusAtProviderXssMatchTuple>? XssMatchTuple { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1XSSMatchSetStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -335,6 +353,7 @@ public partial class V1beta1XSSMatchSetStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>XSSMatchSetStatus defines the observed state of XSSMatchSet.</summary>
 public partial class V1beta1XSSMatchSetStatus
 {
     /// <summary></summary>
@@ -351,6 +370,7 @@ public partial class V1beta1XSSMatchSetStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>XSSMatchSet is the Schema for the XSSMatchSets API. Provides an AWS WAF Regional XSS Match Set resource for use with ALB.</summary>
 public partial class V1beta1XSSMatchSet : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1XSSMatchSetSpec>, IStatus<V1beta1XSSMatchSetStatus>
 {
     public const string KubeApiVersion = "v1beta1";

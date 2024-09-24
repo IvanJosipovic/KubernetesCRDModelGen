@@ -18,6 +18,7 @@ public enum V1beta1AccountLocalUserSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountLocalUserSpecForProviderPermissionScopePermissions
 {
     /// <summary>(Defaults to 30 minutes) Used when creating the Storage Account Local User.</summary>
@@ -61,6 +62,7 @@ public enum V1beta1AccountLocalUserSpecForProviderPermissionScopeResourceNameRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AccountLocalUserSpecForProviderPermissionScopeResourceNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -74,6 +76,7 @@ public partial class V1beta1AccountLocalUserSpecForProviderPermissionScopeResour
     public V1beta1AccountLocalUserSpecForProviderPermissionScopeResourceNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Container in storage to populate resourceName.</summary>
 public partial class V1beta1AccountLocalUserSpecForProviderPermissionScopeResourceNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -105,6 +108,7 @@ public enum V1beta1AccountLocalUserSpecForProviderPermissionScopeResourceNameSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AccountLocalUserSpecForProviderPermissionScopeResourceNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -118,6 +122,7 @@ public partial class V1beta1AccountLocalUserSpecForProviderPermissionScopeResour
     public V1beta1AccountLocalUserSpecForProviderPermissionScopeResourceNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Container in storage to populate resourceName.</summary>
 public partial class V1beta1AccountLocalUserSpecForProviderPermissionScopeResourceNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -133,6 +138,7 @@ public partial class V1beta1AccountLocalUserSpecForProviderPermissionScopeResour
     public V1beta1AccountLocalUserSpecForProviderPermissionScopeResourceNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountLocalUserSpecForProviderPermissionScope
 {
     /// <summary>A permissions block as defined below.</summary>
@@ -156,6 +162,7 @@ public partial class V1beta1AccountLocalUserSpecForProviderPermissionScope
     public string? Service { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountLocalUserSpecForProviderSshAuthorizedKey
 {
     /// <summary>The description of this SSH authorized key.</summary>
@@ -187,6 +194,7 @@ public enum V1beta1AccountLocalUserSpecForProviderStorageAccountIdRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AccountLocalUserSpecForProviderStorageAccountIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -200,6 +208,7 @@ public partial class V1beta1AccountLocalUserSpecForProviderStorageAccountIdRefPo
     public V1beta1AccountLocalUserSpecForProviderStorageAccountIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
 public partial class V1beta1AccountLocalUserSpecForProviderStorageAccountIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -231,6 +240,7 @@ public enum V1beta1AccountLocalUserSpecForProviderStorageAccountIdSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AccountLocalUserSpecForProviderStorageAccountIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -244,6 +254,7 @@ public partial class V1beta1AccountLocalUserSpecForProviderStorageAccountIdSelec
     public V1beta1AccountLocalUserSpecForProviderStorageAccountIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
 public partial class V1beta1AccountLocalUserSpecForProviderStorageAccountIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -259,6 +270,7 @@ public partial class V1beta1AccountLocalUserSpecForProviderStorageAccountIdSelec
     public V1beta1AccountLocalUserSpecForProviderStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountLocalUserSpecForProvider
 {
     /// <summary>The home directory of the Storage Account Local User.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1AccountLocalUserSpecForProvider
     public V1beta1AccountLocalUserSpecForProviderStorageAccountIdSelector? StorageAccountIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountLocalUserSpecInitProviderPermissionScopePermissions
 {
     /// <summary>(Defaults to 30 minutes) Used when creating the Storage Account Local User.</summary>
@@ -337,6 +350,7 @@ public enum V1beta1AccountLocalUserSpecInitProviderPermissionScopeResourceNameRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AccountLocalUserSpecInitProviderPermissionScopeResourceNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -350,6 +364,7 @@ public partial class V1beta1AccountLocalUserSpecInitProviderPermissionScopeResou
     public V1beta1AccountLocalUserSpecInitProviderPermissionScopeResourceNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Container in storage to populate resourceName.</summary>
 public partial class V1beta1AccountLocalUserSpecInitProviderPermissionScopeResourceNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -381,6 +396,7 @@ public enum V1beta1AccountLocalUserSpecInitProviderPermissionScopeResourceNameSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AccountLocalUserSpecInitProviderPermissionScopeResourceNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -394,6 +410,7 @@ public partial class V1beta1AccountLocalUserSpecInitProviderPermissionScopeResou
     public V1beta1AccountLocalUserSpecInitProviderPermissionScopeResourceNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Container in storage to populate resourceName.</summary>
 public partial class V1beta1AccountLocalUserSpecInitProviderPermissionScopeResourceNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -409,6 +426,7 @@ public partial class V1beta1AccountLocalUserSpecInitProviderPermissionScopeResou
     public V1beta1AccountLocalUserSpecInitProviderPermissionScopeResourceNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountLocalUserSpecInitProviderPermissionScope
 {
     /// <summary>A permissions block as defined below.</summary>
@@ -432,6 +450,7 @@ public partial class V1beta1AccountLocalUserSpecInitProviderPermissionScope
     public string? Service { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountLocalUserSpecInitProviderSshAuthorizedKey
 {
     /// <summary>The description of this SSH authorized key.</summary>
@@ -443,6 +462,7 @@ public partial class V1beta1AccountLocalUserSpecInitProviderSshAuthorizedKey
     public string? Key { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1AccountLocalUserSpecInitProvider
 {
     /// <summary>The home directory of the Storage Account Local User.</summary>
@@ -508,6 +528,7 @@ public enum V1beta1AccountLocalUserSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AccountLocalUserSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -521,6 +542,7 @@ public partial class V1beta1AccountLocalUserSpecProviderConfigRefPolicy
     public V1beta1AccountLocalUserSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1AccountLocalUserSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -552,6 +574,7 @@ public enum V1beta1AccountLocalUserSpecPublishConnectionDetailsToConfigRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AccountLocalUserSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -565,6 +588,7 @@ public partial class V1beta1AccountLocalUserSpecPublishConnectionDetailsToConfig
     public V1beta1AccountLocalUserSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1AccountLocalUserSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -576,6 +600,7 @@ public partial class V1beta1AccountLocalUserSpecPublishConnectionDetailsToConfig
     public V1beta1AccountLocalUserSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1AccountLocalUserSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -591,6 +616,7 @@ public partial class V1beta1AccountLocalUserSpecPublishConnectionDetailsToMetada
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1AccountLocalUserSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -606,6 +632,7 @@ public partial class V1beta1AccountLocalUserSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1AccountLocalUserSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -617,6 +644,7 @@ public partial class V1beta1AccountLocalUserSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>AccountLocalUserSpec defines the desired state of AccountLocalUser</summary>
 public partial class V1beta1AccountLocalUserSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -649,6 +677,7 @@ public partial class V1beta1AccountLocalUserSpec
     public V1beta1AccountLocalUserSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountLocalUserStatusAtProviderPermissionScopePermissions
 {
     /// <summary>(Defaults to 30 minutes) Used when creating the Storage Account Local User.</summary>
@@ -672,6 +701,7 @@ public partial class V1beta1AccountLocalUserStatusAtProviderPermissionScopePermi
     public bool? Write { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountLocalUserStatusAtProviderPermissionScope
 {
     /// <summary>A permissions block as defined below.</summary>
@@ -687,6 +717,7 @@ public partial class V1beta1AccountLocalUserStatusAtProviderPermissionScope
     public string? Service { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountLocalUserStatusAtProviderSshAuthorizedKey
 {
     /// <summary>The description of this SSH authorized key.</summary>
@@ -698,6 +729,7 @@ public partial class V1beta1AccountLocalUserStatusAtProviderSshAuthorizedKey
     public string? Key { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AccountLocalUserStatusAtProvider
 {
     /// <summary>The home directory of the Storage Account Local User.</summary>
@@ -729,6 +761,7 @@ public partial class V1beta1AccountLocalUserStatusAtProvider
     public string? StorageAccountId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1AccountLocalUserStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -756,6 +789,7 @@ public partial class V1beta1AccountLocalUserStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>AccountLocalUserStatus defines the observed state of AccountLocalUser.</summary>
 public partial class V1beta1AccountLocalUserStatus
 {
     /// <summary></summary>
@@ -772,6 +806,7 @@ public partial class V1beta1AccountLocalUserStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>AccountLocalUser is the Schema for the AccountLocalUsers API. Manages a Storage Account Local User.</summary>
 public partial class V1beta1AccountLocalUser : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AccountLocalUserSpec>, IStatus<V1beta1AccountLocalUserStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -38,6 +38,7 @@ public enum V1beta1CatalogTableSpecForProviderDatabaseNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CatalogTableSpecForProviderDatabaseNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1CatalogTableSpecForProviderDatabaseNameRefPolicy
     public V1beta1CatalogTableSpecForProviderDatabaseNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a CatalogDatabase in glue to populate databaseName.</summary>
 public partial class V1beta1CatalogTableSpecForProviderDatabaseNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1CatalogTableSpecForProviderDatabaseNameSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CatalogTableSpecForProviderDatabaseNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1CatalogTableSpecForProviderDatabaseNameSelectorPolic
     public V1beta1CatalogTableSpecForProviderDatabaseNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a CatalogDatabase in glue to populate databaseName.</summary>
 public partial class V1beta1CatalogTableSpecForProviderDatabaseNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1CatalogTableSpecForProviderDatabaseNameSelector
     public V1beta1CatalogTableSpecForProviderDatabaseNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CatalogTableSpecForProviderOpenTableFormatInputIcebergInput
 {
     /// <summary>A required metadata operation. Can only be set to CREATE.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1CatalogTableSpecForProviderOpenTableFormatInputIcebe
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CatalogTableSpecForProviderOpenTableFormatInput
 {
     /// <summary>Configuration block for iceberg table config. See iceberg_input below.</summary>
@@ -128,6 +134,7 @@ public partial class V1beta1CatalogTableSpecForProviderOpenTableFormatInput
     public IList<V1beta1CatalogTableSpecForProviderOpenTableFormatInputIcebergInput>? IcebergInput { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CatalogTableSpecForProviderPartitionIndex
 {
     /// <summary>Name of the partition index.</summary>
@@ -139,6 +146,7 @@ public partial class V1beta1CatalogTableSpecForProviderPartitionIndex
     public IList<string>? Keys { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CatalogTableSpecForProviderPartitionKeys
 {
     /// <summary>Free-form text comment.</summary>
@@ -154,6 +162,7 @@ public partial class V1beta1CatalogTableSpecForProviderPartitionKeys
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CatalogTableSpecForProviderStorageDescriptorColumns
 {
     /// <summary>Free-form text comment.</summary>
@@ -173,6 +182,7 @@ public partial class V1beta1CatalogTableSpecForProviderStorageDescriptorColumns
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CatalogTableSpecForProviderStorageDescriptorSchemaReferenceSchemaId
 {
     /// <summary>Name of the schema registry that contains the schema. Must be provided when schema_name is specified and conflicts with schema_arn.</summary>
@@ -188,6 +198,7 @@ public partial class V1beta1CatalogTableSpecForProviderStorageDescriptorSchemaRe
     public string? SchemaName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CatalogTableSpecForProviderStorageDescriptorSchemaReference
 {
     /// <summary>Configuration block that contains schema identity fields. Either this or the schema_version_id has to be provided. See schema_id below.</summary>
@@ -203,6 +214,7 @@ public partial class V1beta1CatalogTableSpecForProviderStorageDescriptorSchemaRe
     public double? SchemaVersionNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CatalogTableSpecForProviderStorageDescriptorSerDeInfo
 {
     /// <summary>Name of the SerDe.</summary>
@@ -218,6 +230,7 @@ public partial class V1beta1CatalogTableSpecForProviderStorageDescriptorSerDeInf
     public string? SerializationLibrary { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CatalogTableSpecForProviderStorageDescriptorSkewedInfo
 {
     /// <summary>List of names of columns that contain skewed values.</summary>
@@ -233,6 +246,7 @@ public partial class V1beta1CatalogTableSpecForProviderStorageDescriptorSkewedIn
     public IList<string>? SkewedColumnValues { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CatalogTableSpecForProviderStorageDescriptorSortColumns
 {
     /// <summary>Name of the column.</summary>
@@ -244,6 +258,7 @@ public partial class V1beta1CatalogTableSpecForProviderStorageDescriptorSortColu
     public double? SortOrder { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CatalogTableSpecForProviderStorageDescriptor
 {
     /// <summary>List of locations that point to the path where a Delta table is located.</summary>
@@ -303,6 +318,7 @@ public partial class V1beta1CatalogTableSpecForProviderStorageDescriptor
     public bool? StoredAsSubDirectories { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CatalogTableSpecForProviderTargetTable
 {
     /// <summary>ID of the Data Catalog in which the table resides.</summary>
@@ -322,6 +338,7 @@ public partial class V1beta1CatalogTableSpecForProviderTargetTable
     public string? Region { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CatalogTableSpecForProvider
 {
     /// <summary>ID of the Glue Catalog and database to create the table in. If omitted, this defaults to the AWS Account ID plus the database name.</summary>
@@ -393,6 +410,7 @@ public partial class V1beta1CatalogTableSpecForProvider
     public string? ViewOriginalText { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CatalogTableSpecInitProviderOpenTableFormatInputIcebergInput
 {
     /// <summary>A required metadata operation. Can only be set to CREATE.</summary>
@@ -404,6 +422,7 @@ public partial class V1beta1CatalogTableSpecInitProviderOpenTableFormatInputIceb
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CatalogTableSpecInitProviderOpenTableFormatInput
 {
     /// <summary>Configuration block for iceberg table config. See iceberg_input below.</summary>
@@ -411,6 +430,7 @@ public partial class V1beta1CatalogTableSpecInitProviderOpenTableFormatInput
     public IList<V1beta1CatalogTableSpecInitProviderOpenTableFormatInputIcebergInput>? IcebergInput { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CatalogTableSpecInitProviderPartitionIndex
 {
     /// <summary>Name of the partition index.</summary>
@@ -422,6 +442,7 @@ public partial class V1beta1CatalogTableSpecInitProviderPartitionIndex
     public IList<string>? Keys { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CatalogTableSpecInitProviderPartitionKeys
 {
     /// <summary>Free-form text comment.</summary>
@@ -437,6 +458,7 @@ public partial class V1beta1CatalogTableSpecInitProviderPartitionKeys
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CatalogTableSpecInitProviderStorageDescriptorColumns
 {
     /// <summary>Free-form text comment.</summary>
@@ -456,6 +478,7 @@ public partial class V1beta1CatalogTableSpecInitProviderStorageDescriptorColumns
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CatalogTableSpecInitProviderStorageDescriptorSchemaReferenceSchemaId
 {
     /// <summary>Name of the schema registry that contains the schema. Must be provided when schema_name is specified and conflicts with schema_arn.</summary>
@@ -471,6 +494,7 @@ public partial class V1beta1CatalogTableSpecInitProviderStorageDescriptorSchemaR
     public string? SchemaName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CatalogTableSpecInitProviderStorageDescriptorSchemaReference
 {
     /// <summary>Configuration block that contains schema identity fields. Either this or the schema_version_id has to be provided. See schema_id below.</summary>
@@ -486,6 +510,7 @@ public partial class V1beta1CatalogTableSpecInitProviderStorageDescriptorSchemaR
     public double? SchemaVersionNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CatalogTableSpecInitProviderStorageDescriptorSerDeInfo
 {
     /// <summary>Name of the SerDe.</summary>
@@ -501,6 +526,7 @@ public partial class V1beta1CatalogTableSpecInitProviderStorageDescriptorSerDeIn
     public string? SerializationLibrary { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CatalogTableSpecInitProviderStorageDescriptorSkewedInfo
 {
     /// <summary>List of names of columns that contain skewed values.</summary>
@@ -516,6 +542,7 @@ public partial class V1beta1CatalogTableSpecInitProviderStorageDescriptorSkewedI
     public IList<string>? SkewedColumnValues { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CatalogTableSpecInitProviderStorageDescriptorSortColumns
 {
     /// <summary>Name of the column.</summary>
@@ -527,6 +554,7 @@ public partial class V1beta1CatalogTableSpecInitProviderStorageDescriptorSortCol
     public double? SortOrder { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CatalogTableSpecInitProviderStorageDescriptor
 {
     /// <summary>List of locations that point to the path where a Delta table is located.</summary>
@@ -586,6 +614,7 @@ public partial class V1beta1CatalogTableSpecInitProviderStorageDescriptor
     public bool? StoredAsSubDirectories { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CatalogTableSpecInitProviderTargetTable
 {
     /// <summary>Name of the target table.</summary>
@@ -593,6 +622,7 @@ public partial class V1beta1CatalogTableSpecInitProviderTargetTable
     public string? Name { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1CatalogTableSpecInitProvider
 {
     /// <summary>Description of the table.</summary>
@@ -686,6 +716,7 @@ public enum V1beta1CatalogTableSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CatalogTableSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -699,6 +730,7 @@ public partial class V1beta1CatalogTableSpecProviderConfigRefPolicy
     public V1beta1CatalogTableSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1CatalogTableSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -730,6 +762,7 @@ public enum V1beta1CatalogTableSpecPublishConnectionDetailsToConfigRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CatalogTableSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -743,6 +776,7 @@ public partial class V1beta1CatalogTableSpecPublishConnectionDetailsToConfigRefP
     public V1beta1CatalogTableSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1CatalogTableSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -754,6 +788,7 @@ public partial class V1beta1CatalogTableSpecPublishConnectionDetailsToConfigRef
     public V1beta1CatalogTableSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1CatalogTableSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -769,6 +804,7 @@ public partial class V1beta1CatalogTableSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1CatalogTableSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -784,6 +820,7 @@ public partial class V1beta1CatalogTableSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1CatalogTableSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -795,6 +832,7 @@ public partial class V1beta1CatalogTableSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>CatalogTableSpec defines the desired state of CatalogTable</summary>
 public partial class V1beta1CatalogTableSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -827,6 +865,7 @@ public partial class V1beta1CatalogTableSpec
     public V1beta1CatalogTableSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CatalogTableStatusAtProviderOpenTableFormatInputIcebergInput
 {
     /// <summary>A required metadata operation. Can only be set to CREATE.</summary>
@@ -838,6 +877,7 @@ public partial class V1beta1CatalogTableStatusAtProviderOpenTableFormatInputIceb
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CatalogTableStatusAtProviderOpenTableFormatInput
 {
     /// <summary>Configuration block for iceberg table config. See iceberg_input below.</summary>
@@ -845,6 +885,7 @@ public partial class V1beta1CatalogTableStatusAtProviderOpenTableFormatInput
     public IList<V1beta1CatalogTableStatusAtProviderOpenTableFormatInputIcebergInput>? IcebergInput { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CatalogTableStatusAtProviderPartitionIndex
 {
     /// <summary>Name of the partition index.</summary>
@@ -860,6 +901,7 @@ public partial class V1beta1CatalogTableStatusAtProviderPartitionIndex
     public IList<string>? Keys { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CatalogTableStatusAtProviderPartitionKeys
 {
     /// <summary>Free-form text comment.</summary>
@@ -875,6 +917,7 @@ public partial class V1beta1CatalogTableStatusAtProviderPartitionKeys
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CatalogTableStatusAtProviderStorageDescriptorColumns
 {
     /// <summary>Free-form text comment.</summary>
@@ -894,6 +937,7 @@ public partial class V1beta1CatalogTableStatusAtProviderStorageDescriptorColumns
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CatalogTableStatusAtProviderStorageDescriptorSchemaReferenceSchemaId
 {
     /// <summary>Name of the schema registry that contains the schema. Must be provided when schema_name is specified and conflicts with schema_arn.</summary>
@@ -909,6 +953,7 @@ public partial class V1beta1CatalogTableStatusAtProviderStorageDescriptorSchemaR
     public string? SchemaName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CatalogTableStatusAtProviderStorageDescriptorSchemaReference
 {
     /// <summary>Configuration block that contains schema identity fields. Either this or the schema_version_id has to be provided. See schema_id below.</summary>
@@ -924,6 +969,7 @@ public partial class V1beta1CatalogTableStatusAtProviderStorageDescriptorSchemaR
     public double? SchemaVersionNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CatalogTableStatusAtProviderStorageDescriptorSerDeInfo
 {
     /// <summary>Name of the SerDe.</summary>
@@ -939,6 +985,7 @@ public partial class V1beta1CatalogTableStatusAtProviderStorageDescriptorSerDeIn
     public string? SerializationLibrary { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CatalogTableStatusAtProviderStorageDescriptorSkewedInfo
 {
     /// <summary>List of names of columns that contain skewed values.</summary>
@@ -954,6 +1001,7 @@ public partial class V1beta1CatalogTableStatusAtProviderStorageDescriptorSkewedI
     public IList<string>? SkewedColumnValues { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CatalogTableStatusAtProviderStorageDescriptorSortColumns
 {
     /// <summary>Name of the column.</summary>
@@ -965,6 +1013,7 @@ public partial class V1beta1CatalogTableStatusAtProviderStorageDescriptorSortCol
     public double? SortOrder { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CatalogTableStatusAtProviderStorageDescriptor
 {
     /// <summary>List of locations that point to the path where a Delta table is located.</summary>
@@ -1024,6 +1073,7 @@ public partial class V1beta1CatalogTableStatusAtProviderStorageDescriptor
     public bool? StoredAsSubDirectories { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CatalogTableStatusAtProviderTargetTable
 {
     /// <summary>ID of the Data Catalog in which the table resides.</summary>
@@ -1043,6 +1093,7 @@ public partial class V1beta1CatalogTableStatusAtProviderTargetTable
     public string? Region { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CatalogTableStatusAtProvider
 {
     /// <summary>The ARN of the Glue Table.</summary>
@@ -1110,6 +1161,7 @@ public partial class V1beta1CatalogTableStatusAtProvider
     public string? ViewOriginalText { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1CatalogTableStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1137,6 +1189,7 @@ public partial class V1beta1CatalogTableStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>CatalogTableStatus defines the observed state of CatalogTable.</summary>
 public partial class V1beta1CatalogTableStatus
 {
     /// <summary></summary>
@@ -1153,6 +1206,7 @@ public partial class V1beta1CatalogTableStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>CatalogTable is the Schema for the CatalogTables API. Provides a Glue Catalog Table.</summary>
 public partial class V1beta1CatalogTable : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1CatalogTableSpec>, IStatus<V1beta1CatalogTableStatus>
 {
     public const string KubeApiVersion = "v1beta1";

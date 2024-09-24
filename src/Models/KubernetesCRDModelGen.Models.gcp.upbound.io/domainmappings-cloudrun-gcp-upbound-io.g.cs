@@ -38,6 +38,7 @@ public enum V1beta1DomainMappingSpecForProviderMetadataNamespaceRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DomainMappingSpecForProviderMetadataNamespaceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1DomainMappingSpecForProviderMetadataNamespaceRefPoli
     public V1beta1DomainMappingSpecForProviderMetadataNamespaceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Project in cloudplatform to populate namespace.</summary>
 public partial class V1beta1DomainMappingSpecForProviderMetadataNamespaceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1DomainMappingSpecForProviderMetadataNamespaceSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DomainMappingSpecForProviderMetadataNamespaceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1DomainMappingSpecForProviderMetadataNamespaceSelecto
     public V1beta1DomainMappingSpecForProviderMetadataNamespaceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Project in cloudplatform to populate namespace.</summary>
 public partial class V1beta1DomainMappingSpecForProviderMetadataNamespaceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1DomainMappingSpecForProviderMetadataNamespaceSelecto
     public V1beta1DomainMappingSpecForProviderMetadataNamespaceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainMappingSpecForProviderMetadata
 {
     /// <summary>Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field. Note: This field is non-authoritative, and will only manage the annotations present in your configuration. Please refer to the field effective_annotations for all of the annotations present on the resource.</summary>
@@ -153,6 +158,7 @@ public enum V1beta1DomainMappingSpecForProviderSpecRouteNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DomainMappingSpecForProviderSpecRouteNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -166,6 +172,7 @@ public partial class V1beta1DomainMappingSpecForProviderSpecRouteNameRefPolicy
     public V1beta1DomainMappingSpecForProviderSpecRouteNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Service in cloudrun to populate routeName.</summary>
 public partial class V1beta1DomainMappingSpecForProviderSpecRouteNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -197,6 +204,7 @@ public enum V1beta1DomainMappingSpecForProviderSpecRouteNameSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DomainMappingSpecForProviderSpecRouteNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -210,6 +218,7 @@ public partial class V1beta1DomainMappingSpecForProviderSpecRouteNameSelectorPol
     public V1beta1DomainMappingSpecForProviderSpecRouteNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Service in cloudrun to populate routeName.</summary>
 public partial class V1beta1DomainMappingSpecForProviderSpecRouteNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -225,6 +234,7 @@ public partial class V1beta1DomainMappingSpecForProviderSpecRouteNameSelector
     public V1beta1DomainMappingSpecForProviderSpecRouteNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainMappingSpecForProviderSpec
 {
     /// <summary>The mode of the certificate. Default value is AUTOMATIC. Possible values are: NONE, AUTOMATIC.</summary>
@@ -248,6 +258,7 @@ public partial class V1beta1DomainMappingSpecForProviderSpec
     public V1beta1DomainMappingSpecForProviderSpecRouteNameSelector? RouteNameSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainMappingSpecForProvider
 {
     /// <summary>The location of the cloud run instance. eg us-central1</summary>
@@ -291,6 +302,7 @@ public enum V1beta1DomainMappingSpecInitProviderMetadataNamespaceRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DomainMappingSpecInitProviderMetadataNamespaceRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -304,6 +316,7 @@ public partial class V1beta1DomainMappingSpecInitProviderMetadataNamespaceRefPol
     public V1beta1DomainMappingSpecInitProviderMetadataNamespaceRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Project in cloudplatform to populate namespace.</summary>
 public partial class V1beta1DomainMappingSpecInitProviderMetadataNamespaceRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -335,6 +348,7 @@ public enum V1beta1DomainMappingSpecInitProviderMetadataNamespaceSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DomainMappingSpecInitProviderMetadataNamespaceSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -348,6 +362,7 @@ public partial class V1beta1DomainMappingSpecInitProviderMetadataNamespaceSelect
     public V1beta1DomainMappingSpecInitProviderMetadataNamespaceSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Project in cloudplatform to populate namespace.</summary>
 public partial class V1beta1DomainMappingSpecInitProviderMetadataNamespaceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -363,6 +378,7 @@ public partial class V1beta1DomainMappingSpecInitProviderMetadataNamespaceSelect
     public V1beta1DomainMappingSpecInitProviderMetadataNamespaceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainMappingSpecInitProviderMetadata
 {
     /// <summary>Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field. Note: This field is non-authoritative, and will only manage the annotations present in your configuration. Please refer to the field effective_annotations for all of the annotations present on the resource.</summary>
@@ -406,6 +422,7 @@ public enum V1beta1DomainMappingSpecInitProviderSpecRouteNameRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DomainMappingSpecInitProviderSpecRouteNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -419,6 +436,7 @@ public partial class V1beta1DomainMappingSpecInitProviderSpecRouteNameRefPolicy
     public V1beta1DomainMappingSpecInitProviderSpecRouteNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Service in cloudrun to populate routeName.</summary>
 public partial class V1beta1DomainMappingSpecInitProviderSpecRouteNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -450,6 +468,7 @@ public enum V1beta1DomainMappingSpecInitProviderSpecRouteNameSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DomainMappingSpecInitProviderSpecRouteNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -463,6 +482,7 @@ public partial class V1beta1DomainMappingSpecInitProviderSpecRouteNameSelectorPo
     public V1beta1DomainMappingSpecInitProviderSpecRouteNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Service in cloudrun to populate routeName.</summary>
 public partial class V1beta1DomainMappingSpecInitProviderSpecRouteNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -478,6 +498,7 @@ public partial class V1beta1DomainMappingSpecInitProviderSpecRouteNameSelector
     public V1beta1DomainMappingSpecInitProviderSpecRouteNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainMappingSpecInitProviderSpec
 {
     /// <summary>The mode of the certificate. Default value is AUTOMATIC. Possible values are: NONE, AUTOMATIC.</summary>
@@ -501,6 +522,7 @@ public partial class V1beta1DomainMappingSpecInitProviderSpec
     public V1beta1DomainMappingSpecInitProviderSpecRouteNameSelector? RouteNameSelector { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1DomainMappingSpecInitProvider
 {
     /// <summary>The location of the cloud run instance. eg us-central1</summary>
@@ -566,6 +588,7 @@ public enum V1beta1DomainMappingSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DomainMappingSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -579,6 +602,7 @@ public partial class V1beta1DomainMappingSpecProviderConfigRefPolicy
     public V1beta1DomainMappingSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1DomainMappingSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -610,6 +634,7 @@ public enum V1beta1DomainMappingSpecPublishConnectionDetailsToConfigRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DomainMappingSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -623,6 +648,7 @@ public partial class V1beta1DomainMappingSpecPublishConnectionDetailsToConfigRef
     public V1beta1DomainMappingSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1DomainMappingSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -634,6 +660,7 @@ public partial class V1beta1DomainMappingSpecPublishConnectionDetailsToConfigRef
     public V1beta1DomainMappingSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1DomainMappingSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -649,6 +676,7 @@ public partial class V1beta1DomainMappingSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1DomainMappingSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -664,6 +692,7 @@ public partial class V1beta1DomainMappingSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1DomainMappingSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -675,6 +704,7 @@ public partial class V1beta1DomainMappingSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>DomainMappingSpec defines the desired state of DomainMapping</summary>
 public partial class V1beta1DomainMappingSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -707,6 +737,7 @@ public partial class V1beta1DomainMappingSpec
     public V1beta1DomainMappingSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainMappingStatusAtProviderMetadata
 {
     /// <summary>Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field. Note: This field is non-authoritative, and will only manage the annotations present in your configuration. Please refer to the field effective_annotations for all of the annotations present on the resource.</summary>
@@ -750,6 +781,7 @@ public partial class V1beta1DomainMappingStatusAtProviderMetadata
     public string? Uid { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainMappingStatusAtProviderSpec
 {
     /// <summary>The mode of the certificate. Default value is AUTOMATIC. Possible values are: NONE, AUTOMATIC.</summary>
@@ -765,6 +797,7 @@ public partial class V1beta1DomainMappingStatusAtProviderSpec
     public string? RouteName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainMappingStatusAtProviderStatusConditions
 {
     /// <summary>(Output) Human readable message indicating details about the current status.</summary>
@@ -784,6 +817,7 @@ public partial class V1beta1DomainMappingStatusAtProviderStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainMappingStatusAtProviderStatusResourceRecords
 {
     /// <summary>(Output) Relative name of the object affected by this record. Only applicable for CNAME records. Example: 'www'.</summary>
@@ -799,6 +833,7 @@ public partial class V1beta1DomainMappingStatusAtProviderStatusResourceRecords
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainMappingStatusAtProviderStatus
 {
     /// <summary>(Output) Array of observed DomainMappingConditions, indicating the current state of the DomainMapping. Structure is documented below.</summary>
@@ -818,6 +853,7 @@ public partial class V1beta1DomainMappingStatusAtProviderStatus
     public IList<V1beta1DomainMappingStatusAtProviderStatusResourceRecords>? ResourceRecords { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DomainMappingStatusAtProvider
 {
     /// <summary>an identifier for the resource with format locations/{{location}}/namespaces/{{project}}/domainmappings/{{name}}</summary>
@@ -849,6 +885,7 @@ public partial class V1beta1DomainMappingStatusAtProvider
     public IList<V1beta1DomainMappingStatusAtProviderStatus>? Status { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1DomainMappingStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -876,6 +913,7 @@ public partial class V1beta1DomainMappingStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>DomainMappingStatus defines the observed state of DomainMapping.</summary>
 public partial class V1beta1DomainMappingStatus
 {
     /// <summary></summary>
@@ -892,6 +930,7 @@ public partial class V1beta1DomainMappingStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>DomainMapping is the Schema for the DomainMappings API. Resource to hold the state and status of a user's domain mapping.</summary>
 public partial class V1beta1DomainMapping : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DomainMappingSpec>, IStatus<V1beta1DomainMappingStatus>
 {
     public const string KubeApiVersion = "v1beta1";

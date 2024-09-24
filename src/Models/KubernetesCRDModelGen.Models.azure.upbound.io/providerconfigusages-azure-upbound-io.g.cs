@@ -28,6 +28,7 @@ public enum V1beta1ProviderConfigUsageProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ProviderConfigUsageProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -41,6 +42,7 @@ public partial class V1beta1ProviderConfigUsageProviderConfigRefPolicy
     public V1beta1ProviderConfigUsageProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference to the provider config being used.</summary>
 public partial class V1beta1ProviderConfigUsageProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -52,6 +54,7 @@ public partial class V1beta1ProviderConfigUsageProviderConfigRef
     public V1beta1ProviderConfigUsageProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>ResourceReference to the managed resource using the provider config.</summary>
 public partial class V1beta1ProviderConfigUsageResourceRef
 {
     /// <summary>APIVersion of the referenced object.</summary>
@@ -72,6 +75,7 @@ public partial class V1beta1ProviderConfigUsageResourceRef
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>A ProviderConfigUsage indicates that a resource is using a ProviderConfig. Please replace `PROVIDER-NAME` with your actual provider name, like `aws`, `azure`, `gcp`, `alibaba`</summary>
 public partial class V1beta1ProviderConfigUsage : IKubernetesObject<V1ObjectMeta>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary>Reference to the bucket.</summary>
 public partial class V1beta1ComputeBackendBucketSpecBucketRef
 {
     /// <summary>Allowed value: The `name` field of a `StorageBucket` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1ComputeBackendBucketSpecBucketRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeBackendBucketSpecCdnPolicyBypassCacheOnRequestHeaders
 {
     /// <summary>The header field name to match on when bypassing cache. Values are case-insensitive.</summary>
@@ -30,6 +32,7 @@ public partial class V1beta1ComputeBackendBucketSpecCdnPolicyBypassCacheOnReques
     public string? HeaderName { get; set; }
 }
 
+/// <summary>The CacheKeyPolicy for this CdnPolicy.</summary>
 public partial class V1beta1ComputeBackendBucketSpecCdnPolicyCacheKeyPolicy
 {
     /// <summary>Allows HTTP request headers (by name) to be used in the cache key.</summary>
@@ -41,6 +44,7 @@ public partial class V1beta1ComputeBackendBucketSpecCdnPolicyCacheKeyPolicy
     public IList<string>? QueryStringWhitelist { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeBackendBucketSpecCdnPolicyNegativeCachingPolicy
 {
     /// <summary>The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 308, 404, 405, 410, 421, 451 and 501 can be specified as values, and you cannot specify a status code more than once.</summary>
@@ -52,6 +56,7 @@ public partial class V1beta1ComputeBackendBucketSpecCdnPolicyNegativeCachingPoli
     public int? Ttl { get; set; }
 }
 
+/// <summary>Cloud CDN configuration for this Backend Bucket.</summary>
 public partial class V1beta1ComputeBackendBucketSpecCdnPolicy
 {
     /// <summary>Bypass the cache when the specified request headers are matched - e.g. Pragma or Authorization headers. Up to 5 headers can be specified. The cache is bypassed for all cdnPolicy.cacheMode settings.</summary>
@@ -99,6 +104,7 @@ public partial class V1beta1ComputeBackendBucketSpecCdnPolicy
     public int? SignedUrlCacheMaxAgeSec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeBackendBucketSpec
 {
     /// <summary>Reference to the bucket.</summary>
@@ -134,6 +140,7 @@ public partial class V1beta1ComputeBackendBucketSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeBackendBucketStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -157,6 +164,7 @@ public partial class V1beta1ComputeBackendBucketStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeBackendBucketStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -177,6 +185,7 @@ public partial class V1beta1ComputeBackendBucketStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ComputeBackendBucket : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeBackendBucketSpec>, IStatus<V1beta1ComputeBackendBucketStatus>
 {
     public const string KubeApiVersion = "v1beta1";

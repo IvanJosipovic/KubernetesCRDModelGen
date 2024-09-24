@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.flows.knative.dev;
+/// <summary>ChannelTemplate specifies which Channel CRD to use. If left unspecified, it is set to the default Channel CRD for the namespace (or cluster, in case there are no defaults for the namespace).</summary>
 public partial class V1ParallelSpecChannelTemplate
 {
     /// <summary>APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources</summary>
@@ -23,6 +24,7 @@ public partial class V1ParallelSpecChannelTemplate
     public JsonNode? Spec { get; set; }
 }
 
+/// <summary>Ref points to an Addressable.</summary>
 public partial class V1ParallelSpecReplyRef
 {
     /// <summary>API version of the referent.</summary>
@@ -42,6 +44,7 @@ public partial class V1ParallelSpecReplyRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Reply is a Reference to where the result of a case Subscriber gets sent to when the case does not have a Reply</summary>
 public partial class V1ParallelSpecReply
 {
     /// <summary>Ref points to an Addressable.</summary>
@@ -61,6 +64,7 @@ public partial class V1ParallelSpecReply
     public string? Audience { get; set; }
 }
 
+/// <summary>Spec defines the desired state of the Parallel.</summary>
 public partial class V1ParallelSpec
 {
     /// <summary>Branches is the list of Filter/Subscribers pairs.</summary>
@@ -76,6 +80,7 @@ public partial class V1ParallelSpec
     public V1ParallelSpecReply? Reply { get; set; }
 }
 
+/// <summary>Parallel is Addressable. It exposes the endpoint as an URI to get events delivered into the Parallel.</summary>
 public partial class V1ParallelStatusAddress
 {
     /// <summary></summary>
@@ -95,6 +100,7 @@ public partial class V1ParallelStatusAddress
     public string? Audience { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1ParallelStatusAddresses
 {
     /// <summary></summary>
@@ -114,6 +120,7 @@ public partial class V1ParallelStatusAddresses
     public string? Audience { get; set; }
 }
 
+/// <summary>Auth provides the relevant information for OIDC authentication.</summary>
 public partial class V1ParallelStatusAuth
 {
     /// <summary>ServiceAccountName is the name of the generated service account used for this components OIDC authentication.</summary>
@@ -125,6 +132,7 @@ public partial class V1ParallelStatusAuth
     public IList<string>? ServiceAccountNames { get; set; }
 }
 
+/// <summary>Channel is the reference to the underlying channel.</summary>
 public partial class V1ParallelStatusBranchStatusesFilterChannelStatusChannel
 {
     /// <summary>API version of the referent.</summary>
@@ -156,6 +164,7 @@ public partial class V1ParallelStatusBranchStatusesFilterChannelStatusChannel
     public string? Uid { get; set; }
 }
 
+/// <summary>FilterChannelStatus corresponds to the filter channel status.</summary>
 public partial class V1ParallelStatusBranchStatusesFilterChannelStatus
 {
     /// <summary>Channel is the reference to the underlying channel.</summary>
@@ -167,6 +176,7 @@ public partial class V1ParallelStatusBranchStatusesFilterChannelStatus
     public JsonNode? Ready { get; set; }
 }
 
+/// <summary>ReadyCondition indicates whether the Subscription is ready or not.</summary>
 public partial class V1ParallelStatusBranchStatusesFilterSubscriptionStatusReady
 {
     /// <summary>A human readable message indicating details about the transition.</summary>
@@ -190,6 +200,7 @@ public partial class V1ParallelStatusBranchStatusesFilterSubscriptionStatusReady
     public string? Type { get; set; }
 }
 
+/// <summary>Subscription is the reference to the underlying Subscription.</summary>
 public partial class V1ParallelStatusBranchStatusesFilterSubscriptionStatusSubscription
 {
     /// <summary>API version of the referent.</summary>
@@ -221,6 +232,7 @@ public partial class V1ParallelStatusBranchStatusesFilterSubscriptionStatusSubsc
     public string? Uid { get; set; }
 }
 
+/// <summary>FilterSubscriptionStatus corresponds to the filter subscription status.</summary>
 public partial class V1ParallelStatusBranchStatusesFilterSubscriptionStatus
 {
     /// <summary>ReadyCondition indicates whether the Subscription is ready or not.</summary>
@@ -232,6 +244,7 @@ public partial class V1ParallelStatusBranchStatusesFilterSubscriptionStatus
     public V1ParallelStatusBranchStatusesFilterSubscriptionStatusSubscription? Subscription { get; set; }
 }
 
+/// <summary>ReadyCondition indicates whether the Subscription is ready or not.</summary>
 public partial class V1ParallelStatusBranchStatusesSubscriberSubscriptionStatusReady
 {
     /// <summary>A human readable message indicating details about the transition.</summary>
@@ -255,6 +268,7 @@ public partial class V1ParallelStatusBranchStatusesSubscriberSubscriptionStatusR
     public string? Type { get; set; }
 }
 
+/// <summary>Subscription is the reference to the underlying Subscription.</summary>
 public partial class V1ParallelStatusBranchStatusesSubscriberSubscriptionStatusSubscription
 {
     /// <summary>API version of the referent.</summary>
@@ -286,6 +300,7 @@ public partial class V1ParallelStatusBranchStatusesSubscriberSubscriptionStatusS
     public string? Uid { get; set; }
 }
 
+/// <summary>SubscriptionStatus corresponds to the subscriber subscription status.</summary>
 public partial class V1ParallelStatusBranchStatusesSubscriberSubscriptionStatus
 {
     /// <summary>ReadyCondition indicates whether the Subscription is ready or not.</summary>
@@ -297,6 +312,7 @@ public partial class V1ParallelStatusBranchStatusesSubscriberSubscriptionStatus
     public V1ParallelStatusBranchStatusesSubscriberSubscriptionStatusSubscription? Subscription { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1ParallelStatusBranchStatuses
 {
     /// <summary>FilterChannelStatus corresponds to the filter channel status.</summary>
@@ -312,6 +328,7 @@ public partial class V1ParallelStatusBranchStatuses
     public V1ParallelStatusBranchStatusesSubscriberSubscriptionStatus? SubscriberSubscriptionStatus { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1ParallelStatusPolicies
 {
     /// <summary>The API version of the applied EventPolicy. This indicates, which version of EventPolicy is supported by the resource.</summary>
@@ -323,6 +340,7 @@ public partial class V1ParallelStatusPolicies
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1ParallelStatusConditions
 {
     /// <summary>A human readable message indicating details about the transition.</summary>
@@ -346,6 +364,7 @@ public partial class V1ParallelStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary>Channel is the reference to the underlying channel.</summary>
 public partial class V1ParallelStatusIngressChannelStatusChannel
 {
     /// <summary>API version of the referent.</summary>
@@ -377,6 +396,7 @@ public partial class V1ParallelStatusIngressChannelStatusChannel
     public string? Uid { get; set; }
 }
 
+/// <summary>IngressChannelStatus corresponds to the ingress channel status.</summary>
 public partial class V1ParallelStatusIngressChannelStatus
 {
     /// <summary>Channel is the reference to the underlying channel.</summary>
@@ -388,6 +408,7 @@ public partial class V1ParallelStatusIngressChannelStatus
     public JsonNode? Ready { get; set; }
 }
 
+/// <summary>Status represents the current state of the Parallel. This data may be out of date.</summary>
 public partial class V1ParallelStatus
 {
     /// <summary>Parallel is Addressable. It exposes the endpoint as an URI to get events delivered into the Parallel.</summary>
@@ -428,6 +449,7 @@ public partial class V1ParallelStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Parallel defines conditional branches that will be wired in series through Channels and Subscriptions.</summary>
 public partial class V1Parallel : IKubernetesObject<V1ObjectMeta>, ISpec<V1ParallelSpec>, IStatus<V1ParallelStatus>
 {
     public const string KubeApiVersion = "v1";

@@ -18,6 +18,7 @@ public enum V1beta1LinuxVirtualMachineSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderGalleryImageReference
 {
     /// <summary>The Offer of the Gallery Image. Changing this forces a new resource to be created.</summary>
@@ -37,6 +38,7 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderGalleryImageRefere
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderInboundNatRule
 {
     /// <summary>The Backend Port associated with this NAT Rule. Changing this forces a new resource to be created.</summary>
@@ -68,6 +70,7 @@ public enum V1beta1LinuxVirtualMachineSpecForProviderLabNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderLabNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -81,6 +84,7 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderLabNameRefPolicy
     public V1beta1LinuxVirtualMachineSpecForProviderLabNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Lab in devtestlab to populate labName.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderLabNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -112,6 +116,7 @@ public enum V1beta1LinuxVirtualMachineSpecForProviderLabNameSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderLabNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderLabNameSelectorPol
     public V1beta1LinuxVirtualMachineSpecForProviderLabNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Lab in devtestlab to populate labName.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderLabNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -160,6 +166,7 @@ public enum V1beta1LinuxVirtualMachineSpecForProviderLabSubnetNameRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderLabSubnetNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -173,6 +180,7 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderLabSubnetNameRefPo
     public V1beta1LinuxVirtualMachineSpecForProviderLabSubnetNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate labSubnetName.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderLabSubnetNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -204,6 +212,7 @@ public enum V1beta1LinuxVirtualMachineSpecForProviderLabSubnetNameSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderLabSubnetNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -217,6 +226,7 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderLabSubnetNameSelec
     public V1beta1LinuxVirtualMachineSpecForProviderLabSubnetNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate labSubnetName.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderLabSubnetNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -252,6 +262,7 @@ public enum V1beta1LinuxVirtualMachineSpecForProviderLabVirtualNetworkIdRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderLabVirtualNetworkIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -265,6 +276,7 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderLabVirtualNetworkI
     public V1beta1LinuxVirtualMachineSpecForProviderLabVirtualNetworkIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VirtualNetwork in devtestlab to populate labVirtualNetworkId.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderLabVirtualNetworkIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -296,6 +308,7 @@ public enum V1beta1LinuxVirtualMachineSpecForProviderLabVirtualNetworkIdSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderLabVirtualNetworkIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -309,6 +322,7 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderLabVirtualNetworkI
     public V1beta1LinuxVirtualMachineSpecForProviderLabVirtualNetworkIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VirtualNetwork in devtestlab to populate labVirtualNetworkId.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderLabVirtualNetworkIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -324,6 +338,7 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderLabVirtualNetworkI
     public V1beta1LinuxVirtualMachineSpecForProviderLabVirtualNetworkIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>The Password associated with the username used to login to this Virtual Machine. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -359,6 +374,7 @@ public enum V1beta1LinuxVirtualMachineSpecForProviderResourceGroupNameRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -372,6 +388,7 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderResourceGroupNameR
     public V1beta1LinuxVirtualMachineSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -403,6 +420,7 @@ public enum V1beta1LinuxVirtualMachineSpecForProviderResourceGroupNameSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -416,6 +434,7 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderResourceGroupNameS
     public V1beta1LinuxVirtualMachineSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -431,6 +450,7 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderResourceGroupNameS
     public V1beta1LinuxVirtualMachineSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineSpecForProvider
 {
     /// <summary>Can this Virtual Machine be claimed by users? Defaults to true.</summary>
@@ -534,6 +554,7 @@ public partial class V1beta1LinuxVirtualMachineSpecForProvider
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderGalleryImageReference
 {
     /// <summary>The Offer of the Gallery Image. Changing this forces a new resource to be created.</summary>
@@ -553,6 +574,7 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderGalleryImageRefer
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderInboundNatRule
 {
     /// <summary>The Backend Port associated with this NAT Rule. Changing this forces a new resource to be created.</summary>
@@ -584,6 +606,7 @@ public enum V1beta1LinuxVirtualMachineSpecInitProviderLabNameRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderLabNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -597,6 +620,7 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderLabNameRefPolicy
     public V1beta1LinuxVirtualMachineSpecInitProviderLabNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Lab in devtestlab to populate labName.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderLabNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -628,6 +652,7 @@ public enum V1beta1LinuxVirtualMachineSpecInitProviderLabNameSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderLabNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -641,6 +666,7 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderLabNameSelectorPo
     public V1beta1LinuxVirtualMachineSpecInitProviderLabNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Lab in devtestlab to populate labName.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderLabNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -676,6 +702,7 @@ public enum V1beta1LinuxVirtualMachineSpecInitProviderLabSubnetNameRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderLabSubnetNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -689,6 +716,7 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderLabSubnetNameRefP
     public V1beta1LinuxVirtualMachineSpecInitProviderLabSubnetNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate labSubnetName.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderLabSubnetNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -720,6 +748,7 @@ public enum V1beta1LinuxVirtualMachineSpecInitProviderLabSubnetNameSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderLabSubnetNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -733,6 +762,7 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderLabSubnetNameSele
     public V1beta1LinuxVirtualMachineSpecInitProviderLabSubnetNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate labSubnetName.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderLabSubnetNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -768,6 +798,7 @@ public enum V1beta1LinuxVirtualMachineSpecInitProviderLabVirtualNetworkIdRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderLabVirtualNetworkIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -781,6 +812,7 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderLabVirtualNetwork
     public V1beta1LinuxVirtualMachineSpecInitProviderLabVirtualNetworkIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VirtualNetwork in devtestlab to populate labVirtualNetworkId.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderLabVirtualNetworkIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -812,6 +844,7 @@ public enum V1beta1LinuxVirtualMachineSpecInitProviderLabVirtualNetworkIdSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderLabVirtualNetworkIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -825,6 +858,7 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderLabVirtualNetwork
     public V1beta1LinuxVirtualMachineSpecInitProviderLabVirtualNetworkIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VirtualNetwork in devtestlab to populate labVirtualNetworkId.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderLabVirtualNetworkIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -860,6 +894,7 @@ public enum V1beta1LinuxVirtualMachineSpecInitProviderResourceGroupNameRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -873,6 +908,7 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderResourceGroupName
     public V1beta1LinuxVirtualMachineSpecInitProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -904,6 +940,7 @@ public enum V1beta1LinuxVirtualMachineSpecInitProviderResourceGroupNameSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -917,6 +954,7 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderResourceGroupName
     public V1beta1LinuxVirtualMachineSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -932,6 +970,7 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderResourceGroupName
     public V1beta1LinuxVirtualMachineSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecInitProvider
 {
     /// <summary>Can this Virtual Machine be claimed by users? Defaults to true.</summary>
@@ -1073,6 +1112,7 @@ public enum V1beta1LinuxVirtualMachineSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1086,6 +1126,7 @@ public partial class V1beta1LinuxVirtualMachineSpecProviderConfigRefPolicy
     public V1beta1LinuxVirtualMachineSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1117,6 +1158,7 @@ public enum V1beta1LinuxVirtualMachineSpecPublishConnectionDetailsToConfigRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1130,6 +1172,7 @@ public partial class V1beta1LinuxVirtualMachineSpecPublishConnectionDetailsToCon
     public V1beta1LinuxVirtualMachineSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1141,6 +1184,7 @@ public partial class V1beta1LinuxVirtualMachineSpecPublishConnectionDetailsToCon
     public V1beta1LinuxVirtualMachineSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1156,6 +1200,7 @@ public partial class V1beta1LinuxVirtualMachineSpecPublishConnectionDetailsToMet
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1171,6 +1216,7 @@ public partial class V1beta1LinuxVirtualMachineSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1LinuxVirtualMachineSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1182,6 +1228,7 @@ public partial class V1beta1LinuxVirtualMachineSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>LinuxVirtualMachineSpec defines the desired state of LinuxVirtualMachine</summary>
 public partial class V1beta1LinuxVirtualMachineSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1214,6 +1261,7 @@ public partial class V1beta1LinuxVirtualMachineSpec
     public V1beta1LinuxVirtualMachineSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineStatusAtProviderGalleryImageReference
 {
     /// <summary>The Offer of the Gallery Image. Changing this forces a new resource to be created.</summary>
@@ -1233,6 +1281,7 @@ public partial class V1beta1LinuxVirtualMachineStatusAtProviderGalleryImageRefer
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineStatusAtProviderInboundNatRule
 {
     /// <summary>The Backend Port associated with this NAT Rule. Changing this forces a new resource to be created.</summary>
@@ -1248,6 +1297,7 @@ public partial class V1beta1LinuxVirtualMachineStatusAtProviderInboundNatRule
     public string? Protocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinuxVirtualMachineStatusAtProvider
 {
     /// <summary>Can this Virtual Machine be claimed by users? Defaults to true.</summary>
@@ -1327,6 +1377,7 @@ public partial class V1beta1LinuxVirtualMachineStatusAtProvider
     public string? Username { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1LinuxVirtualMachineStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1354,6 +1405,7 @@ public partial class V1beta1LinuxVirtualMachineStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>LinuxVirtualMachineStatus defines the observed state of LinuxVirtualMachine.</summary>
 public partial class V1beta1LinuxVirtualMachineStatus
 {
     /// <summary></summary>
@@ -1370,6 +1422,7 @@ public partial class V1beta1LinuxVirtualMachineStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>LinuxVirtualMachine is the Schema for the LinuxVirtualMachines API. Manages a Linux Virtual Machine within a Dev Test Lab.</summary>
 public partial class V1beta1LinuxVirtualMachine : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LinuxVirtualMachineSpec>, IStatus<V1beta1LinuxVirtualMachineStatus>
 {
     public const string KubeApiVersion = "v1beta1";

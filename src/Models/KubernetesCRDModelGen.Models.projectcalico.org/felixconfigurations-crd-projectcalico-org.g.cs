@@ -44,6 +44,7 @@ public enum V1FelixConfigurationSpecBpfHostNetworkedNATWithoutCTLBEnum
     Disabled
 }
 
+/// <summary>ProtoPort is combination of protocol, port, and CIDR. Protocol and port must be specified.</summary>
 public partial class V1FelixConfigurationSpecFailsafeInboundHostPorts
 {
     /// <summary></summary>
@@ -59,6 +60,7 @@ public partial class V1FelixConfigurationSpecFailsafeInboundHostPorts
     public string Protocol { get; set; }
 }
 
+/// <summary>ProtoPort is combination of protocol, port, and CIDR. Protocol and port must be specified.</summary>
 public partial class V1FelixConfigurationSpecFailsafeOutboundHostPorts
 {
     /// <summary></summary>
@@ -84,6 +86,7 @@ public enum V1FelixConfigurationSpecFloatingIPsEnum
     Disabled
 }
 
+/// <summary></summary>
 public partial class V1FelixConfigurationSpecHealthTimeoutOverrides
 {
     /// <summary></summary>
@@ -95,6 +98,7 @@ public partial class V1FelixConfigurationSpecHealthTimeoutOverrides
     public string Timeout { get; set; }
 }
 
+/// <summary>Deprecated in favor of RouteTableRanges. Calico programs additional Linux route tables for various purposes. RouteTableRange specifies the indices of the route tables that Calico should use.</summary>
 public partial class V1FelixConfigurationSpecRouteTableRange
 {
     /// <summary></summary>
@@ -106,6 +110,7 @@ public partial class V1FelixConfigurationSpecRouteTableRange
     public int Min { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1FelixConfigurationSpecRouteTableRanges
 {
     /// <summary></summary>
@@ -127,6 +132,7 @@ public enum V1FelixConfigurationSpecWindowsManageFirewallRulesEnum
     Disabled
 }
 
+/// <summary>FelixConfigurationSpec contains the values of the Felix configuration.</summary>
 public partial class V1FelixConfigurationSpec
 {
     /// <summary>AllowIPIPPacketsFromWorkloads controls whether Felix will add a rule to drop IPIP encapsulated traffic from workloads [Default: false]</summary>
@@ -720,6 +726,7 @@ public partial class V1FelixConfigurationSpec
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Felix Configuration contains the configuration for Felix.</summary>
 public partial class V1FelixConfiguration : IKubernetesObject<V1ObjectMeta>, ISpec<V1FelixConfigurationSpec>
 {
     public const string KubeApiVersion = "v1";

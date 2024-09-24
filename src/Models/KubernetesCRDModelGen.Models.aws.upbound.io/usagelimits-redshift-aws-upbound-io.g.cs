@@ -38,6 +38,7 @@ public enum V1beta1UsageLimitSpecForProviderClusterIdentifierRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UsageLimitSpecForProviderClusterIdentifierRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1UsageLimitSpecForProviderClusterIdentifierRefPolicy
     public V1beta1UsageLimitSpecForProviderClusterIdentifierRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in redshift to populate clusterIdentifier.</summary>
 public partial class V1beta1UsageLimitSpecForProviderClusterIdentifierRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1UsageLimitSpecForProviderClusterIdentifierSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UsageLimitSpecForProviderClusterIdentifierSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1UsageLimitSpecForProviderClusterIdentifierSelectorPo
     public V1beta1UsageLimitSpecForProviderClusterIdentifierSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in redshift to populate clusterIdentifier.</summary>
 public partial class V1beta1UsageLimitSpecForProviderClusterIdentifierSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1UsageLimitSpecForProviderClusterIdentifierSelector
     public V1beta1UsageLimitSpecForProviderClusterIdentifierSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UsageLimitSpecForProvider
 {
     /// <summary>The limit amount. If time-based, this amount is in minutes. If data-based, this amount is in terabytes (TB). The value must be a positive number.</summary>
@@ -173,6 +178,7 @@ public enum V1beta1UsageLimitSpecInitProviderClusterIdentifierRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UsageLimitSpecInitProviderClusterIdentifierRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -186,6 +192,7 @@ public partial class V1beta1UsageLimitSpecInitProviderClusterIdentifierRefPolicy
     public V1beta1UsageLimitSpecInitProviderClusterIdentifierRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in redshift to populate clusterIdentifier.</summary>
 public partial class V1beta1UsageLimitSpecInitProviderClusterIdentifierRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -217,6 +224,7 @@ public enum V1beta1UsageLimitSpecInitProviderClusterIdentifierSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UsageLimitSpecInitProviderClusterIdentifierSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -230,6 +238,7 @@ public partial class V1beta1UsageLimitSpecInitProviderClusterIdentifierSelectorP
     public V1beta1UsageLimitSpecInitProviderClusterIdentifierSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in redshift to populate clusterIdentifier.</summary>
 public partial class V1beta1UsageLimitSpecInitProviderClusterIdentifierSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -245,6 +254,7 @@ public partial class V1beta1UsageLimitSpecInitProviderClusterIdentifierSelector
     public V1beta1UsageLimitSpecInitProviderClusterIdentifierSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1UsageLimitSpecInitProvider
 {
     /// <summary>The limit amount. If time-based, this amount is in minutes. If data-based, this amount is in terabytes (TB). The value must be a positive number.</summary>
@@ -326,6 +336,7 @@ public enum V1beta1UsageLimitSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UsageLimitSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -339,6 +350,7 @@ public partial class V1beta1UsageLimitSpecProviderConfigRefPolicy
     public V1beta1UsageLimitSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1UsageLimitSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -370,6 +382,7 @@ public enum V1beta1UsageLimitSpecPublishConnectionDetailsToConfigRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UsageLimitSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -383,6 +396,7 @@ public partial class V1beta1UsageLimitSpecPublishConnectionDetailsToConfigRefPol
     public V1beta1UsageLimitSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1UsageLimitSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -394,6 +408,7 @@ public partial class V1beta1UsageLimitSpecPublishConnectionDetailsToConfigRef
     public V1beta1UsageLimitSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1UsageLimitSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -409,6 +424,7 @@ public partial class V1beta1UsageLimitSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1UsageLimitSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -424,6 +440,7 @@ public partial class V1beta1UsageLimitSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1UsageLimitSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -435,6 +452,7 @@ public partial class V1beta1UsageLimitSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>UsageLimitSpec defines the desired state of UsageLimit</summary>
 public partial class V1beta1UsageLimitSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -467,6 +485,7 @@ public partial class V1beta1UsageLimitSpec
     public V1beta1UsageLimitSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UsageLimitStatusAtProvider
 {
     /// <summary>The limit amount. If time-based, this amount is in minutes. If data-based, this amount is in terabytes (TB). The value must be a positive number.</summary>
@@ -510,6 +529,7 @@ public partial class V1beta1UsageLimitStatusAtProvider
     public IDictionary<string, string>? TagsAll { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1UsageLimitStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -537,6 +557,7 @@ public partial class V1beta1UsageLimitStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>UsageLimitStatus defines the observed state of UsageLimit.</summary>
 public partial class V1beta1UsageLimitStatus
 {
     /// <summary></summary>
@@ -553,6 +574,7 @@ public partial class V1beta1UsageLimitStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>UsageLimit is the Schema for the UsageLimits API. Provides a Redshift Usage Limit resource.</summary>
 public partial class V1beta1UsageLimit : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1UsageLimitSpec>, IStatus<V1beta1UsageLimitStatus>
 {
     public const string KubeApiVersion = "v1beta1";

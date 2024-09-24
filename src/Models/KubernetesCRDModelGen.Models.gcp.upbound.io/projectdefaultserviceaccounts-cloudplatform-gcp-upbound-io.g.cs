@@ -38,6 +38,7 @@ public enum V1beta1ProjectDefaultServiceAccountsSpecForProviderProjectRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ProjectDefaultServiceAccountsSpecForProviderProjectRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ProjectDefaultServiceAccountsSpecForProviderProjectR
     public V1beta1ProjectDefaultServiceAccountsSpecForProviderProjectRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Project in cloudplatform to populate project.</summary>
 public partial class V1beta1ProjectDefaultServiceAccountsSpecForProviderProjectRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ProjectDefaultServiceAccountsSpecForProviderProjectSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ProjectDefaultServiceAccountsSpecForProviderProjectSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ProjectDefaultServiceAccountsSpecForProviderProjectS
     public V1beta1ProjectDefaultServiceAccountsSpecForProviderProjectSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Project in cloudplatform to populate project.</summary>
 public partial class V1beta1ProjectDefaultServiceAccountsSpecForProviderProjectSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1ProjectDefaultServiceAccountsSpecForProviderProjectS
     public V1beta1ProjectDefaultServiceAccountsSpecForProviderProjectSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ProjectDefaultServiceAccountsSpecForProvider
 {
     /// <summary>The action to be performed in the default service accounts. Valid values are: DEPRIVILEGE, DELETE, DISABLE. Note that DEPRIVILEGE action will ignore the REVERT configuration in the restore_policy</summary>
@@ -153,6 +158,7 @@ public enum V1beta1ProjectDefaultServiceAccountsSpecInitProviderProjectRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ProjectDefaultServiceAccountsSpecInitProviderProjectRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -166,6 +172,7 @@ public partial class V1beta1ProjectDefaultServiceAccountsSpecInitProviderProject
     public V1beta1ProjectDefaultServiceAccountsSpecInitProviderProjectRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Project in cloudplatform to populate project.</summary>
 public partial class V1beta1ProjectDefaultServiceAccountsSpecInitProviderProjectRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -197,6 +204,7 @@ public enum V1beta1ProjectDefaultServiceAccountsSpecInitProviderProjectSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ProjectDefaultServiceAccountsSpecInitProviderProjectSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -210,6 +218,7 @@ public partial class V1beta1ProjectDefaultServiceAccountsSpecInitProviderProject
     public V1beta1ProjectDefaultServiceAccountsSpecInitProviderProjectSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Project in cloudplatform to populate project.</summary>
 public partial class V1beta1ProjectDefaultServiceAccountsSpecInitProviderProjectSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -225,6 +234,7 @@ public partial class V1beta1ProjectDefaultServiceAccountsSpecInitProviderProject
     public V1beta1ProjectDefaultServiceAccountsSpecInitProviderProjectSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ProjectDefaultServiceAccountsSpecInitProvider
 {
     /// <summary>The action to be performed in the default service accounts. Valid values are: DEPRIVILEGE, DELETE, DISABLE. Note that DEPRIVILEGE action will ignore the REVERT configuration in the restore_policy</summary>
@@ -290,6 +300,7 @@ public enum V1beta1ProjectDefaultServiceAccountsSpecProviderConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ProjectDefaultServiceAccountsSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -303,6 +314,7 @@ public partial class V1beta1ProjectDefaultServiceAccountsSpecProviderConfigRefPo
     public V1beta1ProjectDefaultServiceAccountsSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ProjectDefaultServiceAccountsSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -334,6 +346,7 @@ public enum V1beta1ProjectDefaultServiceAccountsSpecPublishConnectionDetailsToCo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ProjectDefaultServiceAccountsSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -347,6 +360,7 @@ public partial class V1beta1ProjectDefaultServiceAccountsSpecPublishConnectionDe
     public V1beta1ProjectDefaultServiceAccountsSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ProjectDefaultServiceAccountsSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -358,6 +372,7 @@ public partial class V1beta1ProjectDefaultServiceAccountsSpecPublishConnectionDe
     public V1beta1ProjectDefaultServiceAccountsSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ProjectDefaultServiceAccountsSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -373,6 +388,7 @@ public partial class V1beta1ProjectDefaultServiceAccountsSpecPublishConnectionDe
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ProjectDefaultServiceAccountsSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -388,6 +404,7 @@ public partial class V1beta1ProjectDefaultServiceAccountsSpecPublishConnectionDe
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ProjectDefaultServiceAccountsSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -399,6 +416,7 @@ public partial class V1beta1ProjectDefaultServiceAccountsSpecWriteConnectionSecr
     public string Namespace { get; set; }
 }
 
+/// <summary>ProjectDefaultServiceAccountsSpec defines the desired state of ProjectDefaultServiceAccounts</summary>
 public partial class V1beta1ProjectDefaultServiceAccountsSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -431,6 +449,7 @@ public partial class V1beta1ProjectDefaultServiceAccountsSpec
     public V1beta1ProjectDefaultServiceAccountsSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ProjectDefaultServiceAccountsStatusAtProvider
 {
     /// <summary>The action to be performed in the default service accounts. Valid values are: DEPRIVILEGE, DELETE, DISABLE. Note that DEPRIVILEGE action will ignore the REVERT configuration in the restore_policy</summary>
@@ -454,6 +473,7 @@ public partial class V1beta1ProjectDefaultServiceAccountsStatusAtProvider
     public IDictionary<string, string>? ServiceAccounts { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ProjectDefaultServiceAccountsStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -481,6 +501,7 @@ public partial class V1beta1ProjectDefaultServiceAccountsStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ProjectDefaultServiceAccountsStatus defines the observed state of ProjectDefaultServiceAccounts.</summary>
 public partial class V1beta1ProjectDefaultServiceAccountsStatus
 {
     /// <summary></summary>
@@ -497,6 +518,7 @@ public partial class V1beta1ProjectDefaultServiceAccountsStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ProjectDefaultServiceAccounts is the Schema for the ProjectDefaultServiceAccountss API. Allows management of Google Cloud Platform project default service accounts.</summary>
 public partial class V1beta1ProjectDefaultServiceAccounts : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ProjectDefaultServiceAccountsSpec>, IStatus<V1beta1ProjectDefaultServiceAccountsStatus>
 {
     public const string KubeApiVersion = "v1beta1";

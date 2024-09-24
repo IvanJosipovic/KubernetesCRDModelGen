@@ -34,6 +34,18 @@ jobs:
       with:
         global-json-file: global.json
 
+    - name: Generate Models
+      shell: pwsh
+      run: |
+        $projects = Get-ChildItem -Path $PWD\src\Models -Recurse -Filter *.csproj
+        foreach($project in $projects){
+
+          dotnet run -c Release --project src\KubernetesCRDModelGen.Tool\KubernetesCRDModelGen.Tool.csproj --FolderPath $($project.Directory)
+            if (-not $?) {
+              throw "CRD Generation Failed"
+            }
+        }
+
     - name: .NET Build
       run: dotnet build -c Release
 

@@ -38,6 +38,7 @@ public enum V1beta1ClaimsMappingPolicyAssignmentSpecForProviderClaimsMappingPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClaimsMappingPolicyAssignmentSpecForProviderClaimsMappingPolicyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ClaimsMappingPolicyAssignmentSpecForProviderClaimsMa
     public V1beta1ClaimsMappingPolicyAssignmentSpecForProviderClaimsMappingPolicyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ClaimsMappingPolicy in policies to populate claimsMappingPolicyId.</summary>
 public partial class V1beta1ClaimsMappingPolicyAssignmentSpecForProviderClaimsMappingPolicyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ClaimsMappingPolicyAssignmentSpecForProviderClaimsMappingPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ClaimsMappingPolicyAssignmentSpecForProviderClaimsMappingPolicyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ClaimsMappingPolicyAssignmentSpecForProviderClaimsMa
     public V1beta1ClaimsMappingPolicyAssignmentSpecForProviderClaimsMappingPolicyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ClaimsMappingPolicy in policies to populate claimsMappingPolicyId.</summary>
 public partial class V1beta1ClaimsMappingPolicyAssignmentSpecForProviderClaimsMappingPolicyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1ClaimsMappingPolicyAssignmentSpecForProviderServicePrincipalI
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClaimsMappingPolicyAssignmentSpecForProviderServicePrincipalIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1ClaimsMappingPolicyAssignmentSpecForProviderServiceP
     public V1beta1ClaimsMappingPolicyAssignmentSpecForProviderServicePrincipalIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Principal in serviceprincipals to populate servicePrincipalId.</summary>
 public partial class V1beta1ClaimsMappingPolicyAssignmentSpecForProviderServicePrincipalIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1ClaimsMappingPolicyAssignmentSpecForProviderServicePrincipalI
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ClaimsMappingPolicyAssignmentSpecForProviderServicePrincipalIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1ClaimsMappingPolicyAssignmentSpecForProviderServiceP
     public V1beta1ClaimsMappingPolicyAssignmentSpecForProviderServicePrincipalIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Principal in serviceprincipals to populate servicePrincipalId.</summary>
 public partial class V1beta1ClaimsMappingPolicyAssignmentSpecForProviderServicePrincipalIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1ClaimsMappingPolicyAssignmentSpecForProviderServiceP
     public V1beta1ClaimsMappingPolicyAssignmentSpecForProviderServicePrincipalIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClaimsMappingPolicyAssignmentSpecForProvider
 {
     /// <summary>The ID of the claims mapping policy to assign. ID of the claims mapping policy to assign</summary>
@@ -249,6 +258,7 @@ public enum V1beta1ClaimsMappingPolicyAssignmentSpecInitProviderClaimsMappingPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClaimsMappingPolicyAssignmentSpecInitProviderClaimsMappingPolicyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -262,6 +272,7 @@ public partial class V1beta1ClaimsMappingPolicyAssignmentSpecInitProviderClaimsM
     public V1beta1ClaimsMappingPolicyAssignmentSpecInitProviderClaimsMappingPolicyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ClaimsMappingPolicy in policies to populate claimsMappingPolicyId.</summary>
 public partial class V1beta1ClaimsMappingPolicyAssignmentSpecInitProviderClaimsMappingPolicyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -293,6 +304,7 @@ public enum V1beta1ClaimsMappingPolicyAssignmentSpecInitProviderClaimsMappingPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ClaimsMappingPolicyAssignmentSpecInitProviderClaimsMappingPolicyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -306,6 +318,7 @@ public partial class V1beta1ClaimsMappingPolicyAssignmentSpecInitProviderClaimsM
     public V1beta1ClaimsMappingPolicyAssignmentSpecInitProviderClaimsMappingPolicyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ClaimsMappingPolicy in policies to populate claimsMappingPolicyId.</summary>
 public partial class V1beta1ClaimsMappingPolicyAssignmentSpecInitProviderClaimsMappingPolicyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -341,6 +354,7 @@ public enum V1beta1ClaimsMappingPolicyAssignmentSpecInitProviderServicePrincipal
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClaimsMappingPolicyAssignmentSpecInitProviderServicePrincipalIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -354,6 +368,7 @@ public partial class V1beta1ClaimsMappingPolicyAssignmentSpecInitProviderService
     public V1beta1ClaimsMappingPolicyAssignmentSpecInitProviderServicePrincipalIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Principal in serviceprincipals to populate servicePrincipalId.</summary>
 public partial class V1beta1ClaimsMappingPolicyAssignmentSpecInitProviderServicePrincipalIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -385,6 +400,7 @@ public enum V1beta1ClaimsMappingPolicyAssignmentSpecInitProviderServicePrincipal
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ClaimsMappingPolicyAssignmentSpecInitProviderServicePrincipalIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -398,6 +414,7 @@ public partial class V1beta1ClaimsMappingPolicyAssignmentSpecInitProviderService
     public V1beta1ClaimsMappingPolicyAssignmentSpecInitProviderServicePrincipalIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Principal in serviceprincipals to populate servicePrincipalId.</summary>
 public partial class V1beta1ClaimsMappingPolicyAssignmentSpecInitProviderServicePrincipalIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -413,6 +430,7 @@ public partial class V1beta1ClaimsMappingPolicyAssignmentSpecInitProviderService
     public V1beta1ClaimsMappingPolicyAssignmentSpecInitProviderServicePrincipalIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ClaimsMappingPolicyAssignmentSpecInitProvider
 {
     /// <summary>The ID of the claims mapping policy to assign. ID of the claims mapping policy to assign</summary>
@@ -482,6 +500,7 @@ public enum V1beta1ClaimsMappingPolicyAssignmentSpecProviderConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClaimsMappingPolicyAssignmentSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -495,6 +514,7 @@ public partial class V1beta1ClaimsMappingPolicyAssignmentSpecProviderConfigRefPo
     public V1beta1ClaimsMappingPolicyAssignmentSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ClaimsMappingPolicyAssignmentSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -526,6 +546,7 @@ public enum V1beta1ClaimsMappingPolicyAssignmentSpecPublishConnectionDetailsToCo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClaimsMappingPolicyAssignmentSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -539,6 +560,7 @@ public partial class V1beta1ClaimsMappingPolicyAssignmentSpecPublishConnectionDe
     public V1beta1ClaimsMappingPolicyAssignmentSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ClaimsMappingPolicyAssignmentSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -550,6 +572,7 @@ public partial class V1beta1ClaimsMappingPolicyAssignmentSpecPublishConnectionDe
     public V1beta1ClaimsMappingPolicyAssignmentSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ClaimsMappingPolicyAssignmentSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -565,6 +588,7 @@ public partial class V1beta1ClaimsMappingPolicyAssignmentSpecPublishConnectionDe
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ClaimsMappingPolicyAssignmentSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -580,6 +604,7 @@ public partial class V1beta1ClaimsMappingPolicyAssignmentSpecPublishConnectionDe
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ClaimsMappingPolicyAssignmentSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -591,6 +616,7 @@ public partial class V1beta1ClaimsMappingPolicyAssignmentSpecWriteConnectionSecr
     public string Namespace { get; set; }
 }
 
+/// <summary>ClaimsMappingPolicyAssignmentSpec defines the desired state of ClaimsMappingPolicyAssignment</summary>
 public partial class V1beta1ClaimsMappingPolicyAssignmentSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -623,6 +649,7 @@ public partial class V1beta1ClaimsMappingPolicyAssignmentSpec
     public V1beta1ClaimsMappingPolicyAssignmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClaimsMappingPolicyAssignmentStatusAtProvider
 {
     /// <summary>The ID of the claims mapping policy to assign. ID of the claims mapping policy to assign</summary>
@@ -638,6 +665,7 @@ public partial class V1beta1ClaimsMappingPolicyAssignmentStatusAtProvider
     public string? ServicePrincipalId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ClaimsMappingPolicyAssignmentStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -665,6 +693,7 @@ public partial class V1beta1ClaimsMappingPolicyAssignmentStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ClaimsMappingPolicyAssignmentStatus defines the observed state of ClaimsMappingPolicyAssignment.</summary>
 public partial class V1beta1ClaimsMappingPolicyAssignmentStatus
 {
     /// <summary></summary>
@@ -681,6 +710,7 @@ public partial class V1beta1ClaimsMappingPolicyAssignmentStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ClaimsMappingPolicyAssignment is the Schema for the ClaimsMappingPolicyAssignments API.</summary>
 public partial class V1beta1ClaimsMappingPolicyAssignment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ClaimsMappingPolicyAssignmentSpec>, IStatus<V1beta1ClaimsMappingPolicyAssignmentStatus>
 {
     public const string KubeApiVersion = "v1beta1";

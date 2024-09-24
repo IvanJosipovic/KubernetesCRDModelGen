@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datacatalog.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1alpha1DataCatalogTagSpecFields
 {
     /// <summary>Holds the value for a tag field with boolean type.</summary>
@@ -43,6 +44,7 @@ public partial class V1alpha1DataCatalogTagSpecFields
     public string? TimestampValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DataCatalogTagSpec
 {
     /// <summary>Resources like Entry can have schemas associated with them. This scope allows users to attach tags to an individual column based on that schema.  For attaching a tag to a nested column, use '.' to separate the column names. Example: 'outer_column.inner_column'.</summary>
@@ -66,6 +68,7 @@ public partial class V1alpha1DataCatalogTagSpec
     public string Template { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DataCatalogTagStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -89,6 +92,7 @@ public partial class V1alpha1DataCatalogTagStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DataCatalogTagStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -109,6 +113,7 @@ public partial class V1alpha1DataCatalogTagStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1DataCatalogTag : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DataCatalogTagSpec>, IStatus<V1alpha1DataCatalogTagStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

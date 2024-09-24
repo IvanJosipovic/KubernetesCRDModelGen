@@ -18,6 +18,7 @@ public enum V1beta1NodeJSAppLayerSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeJSAppLayerSpecForProviderCloudwatchConfigurationLogStreams
 {
     /// <summary></summary>
@@ -65,6 +66,7 @@ public partial class V1beta1NodeJSAppLayerSpecForProviderCloudwatchConfiguration
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeJSAppLayerSpecForProviderCloudwatchConfiguration
 {
     /// <summary></summary>
@@ -96,6 +98,7 @@ public enum V1beta1NodeJSAppLayerSpecForProviderCustomSecurityGroupIdRefsPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NodeJSAppLayerSpecForProviderCustomSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -109,6 +112,7 @@ public partial class V1beta1NodeJSAppLayerSpecForProviderCustomSecurityGroupIdRe
     public V1beta1NodeJSAppLayerSpecForProviderCustomSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1NodeJSAppLayerSpecForProviderCustomSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -140,6 +144,7 @@ public enum V1beta1NodeJSAppLayerSpecForProviderCustomSecurityGroupIdSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NodeJSAppLayerSpecForProviderCustomSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -153,6 +158,7 @@ public partial class V1beta1NodeJSAppLayerSpecForProviderCustomSecurityGroupIdSe
     public V1beta1NodeJSAppLayerSpecForProviderCustomSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate customSecurityGroupIds.</summary>
 public partial class V1beta1NodeJSAppLayerSpecForProviderCustomSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -168,6 +174,7 @@ public partial class V1beta1NodeJSAppLayerSpecForProviderCustomSecurityGroupIdSe
     public V1beta1NodeJSAppLayerSpecForProviderCustomSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeJSAppLayerSpecForProviderEbsVolume
 {
     /// <summary></summary>
@@ -199,6 +206,7 @@ public partial class V1beta1NodeJSAppLayerSpecForProviderEbsVolume
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeJSAppLayerSpecForProviderLoadBasedAutoScalingDownscaling
 {
     /// <summary></summary>
@@ -230,6 +238,7 @@ public partial class V1beta1NodeJSAppLayerSpecForProviderLoadBasedAutoScalingDow
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeJSAppLayerSpecForProviderLoadBasedAutoScalingUpscaling
 {
     /// <summary></summary>
@@ -261,6 +270,7 @@ public partial class V1beta1NodeJSAppLayerSpecForProviderLoadBasedAutoScalingUps
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeJSAppLayerSpecForProviderLoadBasedAutoScaling
 {
     /// <summary></summary>
@@ -296,6 +306,7 @@ public enum V1beta1NodeJSAppLayerSpecForProviderStackIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NodeJSAppLayerSpecForProviderStackIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -309,6 +320,7 @@ public partial class V1beta1NodeJSAppLayerSpecForProviderStackIdRefPolicy
     public V1beta1NodeJSAppLayerSpecForProviderStackIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Stack in opsworks to populate stackId.</summary>
 public partial class V1beta1NodeJSAppLayerSpecForProviderStackIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -340,6 +352,7 @@ public enum V1beta1NodeJSAppLayerSpecForProviderStackIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NodeJSAppLayerSpecForProviderStackIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -353,6 +366,7 @@ public partial class V1beta1NodeJSAppLayerSpecForProviderStackIdSelectorPolicy
     public V1beta1NodeJSAppLayerSpecForProviderStackIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Stack in opsworks to populate stackId.</summary>
 public partial class V1beta1NodeJSAppLayerSpecForProviderStackIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -368,6 +382,7 @@ public partial class V1beta1NodeJSAppLayerSpecForProviderStackIdSelector
     public V1beta1NodeJSAppLayerSpecForProviderStackIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeJSAppLayerSpecForProvider
 {
     /// <summary>Whether to automatically assign an elastic IP address to the layer's instances.</summary>
@@ -483,6 +498,7 @@ public partial class V1beta1NodeJSAppLayerSpecForProvider
     public bool? UseEbsOptimizedInstances { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeJSAppLayerSpecInitProviderCloudwatchConfigurationLogStreams
 {
     /// <summary></summary>
@@ -530,6 +546,7 @@ public partial class V1beta1NodeJSAppLayerSpecInitProviderCloudwatchConfiguratio
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeJSAppLayerSpecInitProviderCloudwatchConfiguration
 {
     /// <summary></summary>
@@ -561,6 +578,7 @@ public enum V1beta1NodeJSAppLayerSpecInitProviderCustomSecurityGroupIdRefsPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NodeJSAppLayerSpecInitProviderCustomSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -574,6 +592,7 @@ public partial class V1beta1NodeJSAppLayerSpecInitProviderCustomSecurityGroupIdR
     public V1beta1NodeJSAppLayerSpecInitProviderCustomSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1NodeJSAppLayerSpecInitProviderCustomSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -605,6 +624,7 @@ public enum V1beta1NodeJSAppLayerSpecInitProviderCustomSecurityGroupIdSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NodeJSAppLayerSpecInitProviderCustomSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -618,6 +638,7 @@ public partial class V1beta1NodeJSAppLayerSpecInitProviderCustomSecurityGroupIdS
     public V1beta1NodeJSAppLayerSpecInitProviderCustomSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate customSecurityGroupIds.</summary>
 public partial class V1beta1NodeJSAppLayerSpecInitProviderCustomSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -633,6 +654,7 @@ public partial class V1beta1NodeJSAppLayerSpecInitProviderCustomSecurityGroupIdS
     public V1beta1NodeJSAppLayerSpecInitProviderCustomSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeJSAppLayerSpecInitProviderEbsVolume
 {
     /// <summary></summary>
@@ -664,6 +686,7 @@ public partial class V1beta1NodeJSAppLayerSpecInitProviderEbsVolume
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeJSAppLayerSpecInitProviderLoadBasedAutoScalingDownscaling
 {
     /// <summary></summary>
@@ -695,6 +718,7 @@ public partial class V1beta1NodeJSAppLayerSpecInitProviderLoadBasedAutoScalingDo
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeJSAppLayerSpecInitProviderLoadBasedAutoScalingUpscaling
 {
     /// <summary></summary>
@@ -726,6 +750,7 @@ public partial class V1beta1NodeJSAppLayerSpecInitProviderLoadBasedAutoScalingUp
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeJSAppLayerSpecInitProviderLoadBasedAutoScaling
 {
     /// <summary></summary>
@@ -761,6 +786,7 @@ public enum V1beta1NodeJSAppLayerSpecInitProviderStackIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NodeJSAppLayerSpecInitProviderStackIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -774,6 +800,7 @@ public partial class V1beta1NodeJSAppLayerSpecInitProviderStackIdRefPolicy
     public V1beta1NodeJSAppLayerSpecInitProviderStackIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Stack in opsworks to populate stackId.</summary>
 public partial class V1beta1NodeJSAppLayerSpecInitProviderStackIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -805,6 +832,7 @@ public enum V1beta1NodeJSAppLayerSpecInitProviderStackIdSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1NodeJSAppLayerSpecInitProviderStackIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -818,6 +846,7 @@ public partial class V1beta1NodeJSAppLayerSpecInitProviderStackIdSelectorPolicy
     public V1beta1NodeJSAppLayerSpecInitProviderStackIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Stack in opsworks to populate stackId.</summary>
 public partial class V1beta1NodeJSAppLayerSpecInitProviderStackIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -833,6 +862,7 @@ public partial class V1beta1NodeJSAppLayerSpecInitProviderStackIdSelector
     public V1beta1NodeJSAppLayerSpecInitProviderStackIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1NodeJSAppLayerSpecInitProvider
 {
     /// <summary>Whether to automatically assign an elastic IP address to the layer's instances.</summary>
@@ -990,6 +1020,7 @@ public enum V1beta1NodeJSAppLayerSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NodeJSAppLayerSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1003,6 +1034,7 @@ public partial class V1beta1NodeJSAppLayerSpecProviderConfigRefPolicy
     public V1beta1NodeJSAppLayerSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1NodeJSAppLayerSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1034,6 +1066,7 @@ public enum V1beta1NodeJSAppLayerSpecPublishConnectionDetailsToConfigRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1NodeJSAppLayerSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1047,6 +1080,7 @@ public partial class V1beta1NodeJSAppLayerSpecPublishConnectionDetailsToConfigRe
     public V1beta1NodeJSAppLayerSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1NodeJSAppLayerSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1058,6 +1092,7 @@ public partial class V1beta1NodeJSAppLayerSpecPublishConnectionDetailsToConfigRe
     public V1beta1NodeJSAppLayerSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1NodeJSAppLayerSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1073,6 +1108,7 @@ public partial class V1beta1NodeJSAppLayerSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1NodeJSAppLayerSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1088,6 +1124,7 @@ public partial class V1beta1NodeJSAppLayerSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1NodeJSAppLayerSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1099,6 +1136,7 @@ public partial class V1beta1NodeJSAppLayerSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>NodeJSAppLayerSpec defines the desired state of NodeJSAppLayer</summary>
 public partial class V1beta1NodeJSAppLayerSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1131,6 +1169,7 @@ public partial class V1beta1NodeJSAppLayerSpec
     public V1beta1NodeJSAppLayerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeJSAppLayerStatusAtProviderCloudwatchConfigurationLogStreams
 {
     /// <summary></summary>
@@ -1178,6 +1217,7 @@ public partial class V1beta1NodeJSAppLayerStatusAtProviderCloudwatchConfiguratio
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeJSAppLayerStatusAtProviderCloudwatchConfiguration
 {
     /// <summary></summary>
@@ -1189,6 +1229,7 @@ public partial class V1beta1NodeJSAppLayerStatusAtProviderCloudwatchConfiguratio
     public IList<V1beta1NodeJSAppLayerStatusAtProviderCloudwatchConfigurationLogStreams>? LogStreams { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeJSAppLayerStatusAtProviderEbsVolume
 {
     /// <summary></summary>
@@ -1220,6 +1261,7 @@ public partial class V1beta1NodeJSAppLayerStatusAtProviderEbsVolume
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeJSAppLayerStatusAtProviderLoadBasedAutoScalingDownscaling
 {
     /// <summary></summary>
@@ -1251,6 +1293,7 @@ public partial class V1beta1NodeJSAppLayerStatusAtProviderLoadBasedAutoScalingDo
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeJSAppLayerStatusAtProviderLoadBasedAutoScalingUpscaling
 {
     /// <summary></summary>
@@ -1282,6 +1325,7 @@ public partial class V1beta1NodeJSAppLayerStatusAtProviderLoadBasedAutoScalingUp
     public double? ThresholdsWaitTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeJSAppLayerStatusAtProviderLoadBasedAutoScaling
 {
     /// <summary></summary>
@@ -1297,6 +1341,7 @@ public partial class V1beta1NodeJSAppLayerStatusAtProviderLoadBasedAutoScaling
     public IList<V1beta1NodeJSAppLayerStatusAtProviderLoadBasedAutoScalingUpscaling>? Upscaling { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NodeJSAppLayerStatusAtProvider
 {
     /// <summary>The Amazon Resource Name(ARN) of the layer.</summary>
@@ -1408,6 +1453,7 @@ public partial class V1beta1NodeJSAppLayerStatusAtProvider
     public bool? UseEbsOptimizedInstances { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1NodeJSAppLayerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1435,6 +1481,7 @@ public partial class V1beta1NodeJSAppLayerStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>NodeJSAppLayerStatus defines the observed state of NodeJSAppLayer.</summary>
 public partial class V1beta1NodeJSAppLayerStatus
 {
     /// <summary></summary>
@@ -1451,6 +1498,7 @@ public partial class V1beta1NodeJSAppLayerStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>NodeJSAppLayer is the Schema for the NodeJSAppLayers API. Provides an OpsWorks NodeJS application layer resource.</summary>
 public partial class V1beta1NodeJSAppLayer : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1NodeJSAppLayerSpec>, IStatus<V1beta1NodeJSAppLayerStatus>
 {
     public const string KubeApiVersion = "v1beta1";

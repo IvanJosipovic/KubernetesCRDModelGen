@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary>Immutable. Properties relevant to a managed certificate.  These will be used if the certificate is managed (as indicated by a value of 'MANAGED' in 'type').</summary>
 public partial class V1alpha1ComputeManagedSSLCertificateSpecManaged
 {
     /// <summary>Immutable. Domains for which a managed SSL certificate will be valid.  Currently, there can be up to 100 domains in this list.</summary>
@@ -15,6 +16,7 @@ public partial class V1alpha1ComputeManagedSSLCertificateSpecManaged
     public IList<string> Domains { get; set; }
 }
 
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1ComputeManagedSSLCertificateSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -30,6 +32,7 @@ public partial class V1alpha1ComputeManagedSSLCertificateSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputeManagedSSLCertificateSpec
 {
     /// <summary>Immutable. An optional description of this resource.</summary>
@@ -53,6 +56,7 @@ public partial class V1alpha1ComputeManagedSSLCertificateSpec
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputeManagedSSLCertificateStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -76,6 +80,7 @@ public partial class V1alpha1ComputeManagedSSLCertificateStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary>The observed state of the underlying GCP resource.</summary>
 public partial class V1alpha1ComputeManagedSSLCertificateStatusObservedState
 {
     /// <summary>The unique identifier for the resource.</summary>
@@ -99,6 +104,7 @@ public partial class V1alpha1ComputeManagedSSLCertificateStatusObservedState
     public IList<string>? SubjectAlternativeNames { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputeManagedSSLCertificateStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -115,6 +121,7 @@ public partial class V1alpha1ComputeManagedSSLCertificateStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1ComputeManagedSSLCertificate : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ComputeManagedSSLCertificateSpec>, IStatus<V1alpha1ComputeManagedSSLCertificateStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

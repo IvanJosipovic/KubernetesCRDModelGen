@@ -18,6 +18,7 @@ public enum V1beta1OutputSynapseSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>The password that will be used to connect to the Azure SQL database.</summary>
 public partial class V1beta1OutputSynapseSpecForProviderPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -53,6 +54,7 @@ public enum V1beta1OutputSynapseSpecForProviderResourceGroupNameRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OutputSynapseSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -66,6 +68,7 @@ public partial class V1beta1OutputSynapseSpecForProviderResourceGroupNameRefPoli
     public V1beta1OutputSynapseSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1OutputSynapseSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -97,6 +100,7 @@ public enum V1beta1OutputSynapseSpecForProviderResourceGroupNameSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1OutputSynapseSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1OutputSynapseSpecForProviderResourceGroupNameSelecto
     public V1beta1OutputSynapseSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1OutputSynapseSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -145,6 +150,7 @@ public enum V1beta1OutputSynapseSpecForProviderStreamAnalyticsJobNameRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OutputSynapseSpecForProviderStreamAnalyticsJobNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -158,6 +164,7 @@ public partial class V1beta1OutputSynapseSpecForProviderStreamAnalyticsJobNameRe
     public V1beta1OutputSynapseSpecForProviderStreamAnalyticsJobNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Job in streamanalytics to populate streamAnalyticsJobName.</summary>
 public partial class V1beta1OutputSynapseSpecForProviderStreamAnalyticsJobNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -189,6 +196,7 @@ public enum V1beta1OutputSynapseSpecForProviderStreamAnalyticsJobNameSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1OutputSynapseSpecForProviderStreamAnalyticsJobNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1OutputSynapseSpecForProviderStreamAnalyticsJobNameSe
     public V1beta1OutputSynapseSpecForProviderStreamAnalyticsJobNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Job in streamanalytics to populate streamAnalyticsJobName.</summary>
 public partial class V1beta1OutputSynapseSpecForProviderStreamAnalyticsJobNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -237,6 +246,7 @@ public enum V1beta1OutputSynapseSpecForProviderUserRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OutputSynapseSpecForProviderUserRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -250,6 +260,7 @@ public partial class V1beta1OutputSynapseSpecForProviderUserRefPolicy
     public V1beta1OutputSynapseSpecForProviderUserRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Workspace in synapse to populate user.</summary>
 public partial class V1beta1OutputSynapseSpecForProviderUserRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -281,6 +292,7 @@ public enum V1beta1OutputSynapseSpecForProviderUserSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1OutputSynapseSpecForProviderUserSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1OutputSynapseSpecForProviderUserSelectorPolicy
     public V1beta1OutputSynapseSpecForProviderUserSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Workspace in synapse to populate user.</summary>
 public partial class V1beta1OutputSynapseSpecForProviderUserSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -309,6 +322,7 @@ public partial class V1beta1OutputSynapseSpecForProviderUserSelector
     public V1beta1OutputSynapseSpecForProviderUserSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OutputSynapseSpecForProvider
 {
     /// <summary>The name of the Azure SQL database. Changing this forces a new resource to be created.</summary>
@@ -364,6 +378,7 @@ public partial class V1beta1OutputSynapseSpecForProvider
     public V1beta1OutputSynapseSpecForProviderUserSelector? UserSelector { get; set; }
 }
 
+/// <summary>The password that will be used to connect to the Azure SQL database.</summary>
 public partial class V1beta1OutputSynapseSpecInitProviderPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -399,6 +414,7 @@ public enum V1beta1OutputSynapseSpecInitProviderUserRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OutputSynapseSpecInitProviderUserRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -412,6 +428,7 @@ public partial class V1beta1OutputSynapseSpecInitProviderUserRefPolicy
     public V1beta1OutputSynapseSpecInitProviderUserRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Workspace in synapse to populate user.</summary>
 public partial class V1beta1OutputSynapseSpecInitProviderUserRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -443,6 +460,7 @@ public enum V1beta1OutputSynapseSpecInitProviderUserSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1OutputSynapseSpecInitProviderUserSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -456,6 +474,7 @@ public partial class V1beta1OutputSynapseSpecInitProviderUserSelectorPolicy
     public V1beta1OutputSynapseSpecInitProviderUserSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Workspace in synapse to populate user.</summary>
 public partial class V1beta1OutputSynapseSpecInitProviderUserSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -471,6 +490,7 @@ public partial class V1beta1OutputSynapseSpecInitProviderUserSelector
     public V1beta1OutputSynapseSpecInitProviderUserSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1OutputSynapseSpecInitProvider
 {
     /// <summary>The name of the Azure SQL database. Changing this forces a new resource to be created.</summary>
@@ -544,6 +564,7 @@ public enum V1beta1OutputSynapseSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OutputSynapseSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -557,6 +578,7 @@ public partial class V1beta1OutputSynapseSpecProviderConfigRefPolicy
     public V1beta1OutputSynapseSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1OutputSynapseSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -588,6 +610,7 @@ public enum V1beta1OutputSynapseSpecPublishConnectionDetailsToConfigRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1OutputSynapseSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -601,6 +624,7 @@ public partial class V1beta1OutputSynapseSpecPublishConnectionDetailsToConfigRef
     public V1beta1OutputSynapseSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1OutputSynapseSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -612,6 +636,7 @@ public partial class V1beta1OutputSynapseSpecPublishConnectionDetailsToConfigRef
     public V1beta1OutputSynapseSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1OutputSynapseSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -627,6 +652,7 @@ public partial class V1beta1OutputSynapseSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1OutputSynapseSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -642,6 +668,7 @@ public partial class V1beta1OutputSynapseSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1OutputSynapseSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -653,6 +680,7 @@ public partial class V1beta1OutputSynapseSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>OutputSynapseSpec defines the desired state of OutputSynapse</summary>
 public partial class V1beta1OutputSynapseSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -685,6 +713,7 @@ public partial class V1beta1OutputSynapseSpec
     public V1beta1OutputSynapseSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1OutputSynapseStatusAtProvider
 {
     /// <summary>The name of the Azure SQL database. Changing this forces a new resource to be created.</summary>
@@ -716,6 +745,7 @@ public partial class V1beta1OutputSynapseStatusAtProvider
     public string? User { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1OutputSynapseStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -743,6 +773,7 @@ public partial class V1beta1OutputSynapseStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>OutputSynapseStatus defines the observed state of OutputSynapse.</summary>
 public partial class V1beta1OutputSynapseStatus
 {
     /// <summary></summary>
@@ -759,6 +790,7 @@ public partial class V1beta1OutputSynapseStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>OutputSynapse is the Schema for the OutputSynapses API. Manages a Stream Analytics Output to an Azure Synapse Analytics Workspace.</summary>
 public partial class V1beta1OutputSynapse : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1OutputSynapseSpec>, IStatus<V1beta1OutputSynapseStatus>
 {
     public const string KubeApiVersion = "v1beta1";

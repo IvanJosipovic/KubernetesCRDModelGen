@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1alpha1ComputeOrganizationSecurityPolicyAssociationSpec
 {
     /// <summary>Immutable. The resource that the security policy is attached to.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1ComputeOrganizationSecurityPolicyAssociationSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputeOrganizationSecurityPolicyAssociationStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -46,6 +48,7 @@ public partial class V1alpha1ComputeOrganizationSecurityPolicyAssociationStatusC
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputeOrganizationSecurityPolicyAssociationStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -62,6 +65,7 @@ public partial class V1alpha1ComputeOrganizationSecurityPolicyAssociationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1ComputeOrganizationSecurityPolicyAssociation : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ComputeOrganizationSecurityPolicyAssociationSpec>, IStatus<V1alpha1ComputeOrganizationSecurityPolicyAssociationStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

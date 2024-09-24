@@ -18,6 +18,7 @@ public enum V1beta1DNSCAARecordSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSCAARecordSpecForProviderRecord
 {
     /// <summary>Extensible CAA flags, currently only 1 is implemented to set the issuer critical flag.</summary>
@@ -53,6 +54,7 @@ public enum V1beta1DNSCAARecordSpecForProviderResourceGroupNameRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DNSCAARecordSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -66,6 +68,7 @@ public partial class V1beta1DNSCAARecordSpecForProviderResourceGroupNameRefPolic
     public V1beta1DNSCAARecordSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1DNSCAARecordSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -97,6 +100,7 @@ public enum V1beta1DNSCAARecordSpecForProviderResourceGroupNameSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DNSCAARecordSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1DNSCAARecordSpecForProviderResourceGroupNameSelector
     public V1beta1DNSCAARecordSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1DNSCAARecordSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -145,6 +150,7 @@ public enum V1beta1DNSCAARecordSpecForProviderZoneNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DNSCAARecordSpecForProviderZoneNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -158,6 +164,7 @@ public partial class V1beta1DNSCAARecordSpecForProviderZoneNameRefPolicy
     public V1beta1DNSCAARecordSpecForProviderZoneNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a DNSZone in network to populate zoneName.</summary>
 public partial class V1beta1DNSCAARecordSpecForProviderZoneNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -189,6 +196,7 @@ public enum V1beta1DNSCAARecordSpecForProviderZoneNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DNSCAARecordSpecForProviderZoneNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1DNSCAARecordSpecForProviderZoneNameSelectorPolicy
     public V1beta1DNSCAARecordSpecForProviderZoneNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a DNSZone in network to populate zoneName.</summary>
 public partial class V1beta1DNSCAARecordSpecForProviderZoneNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -217,6 +226,7 @@ public partial class V1beta1DNSCAARecordSpecForProviderZoneNameSelector
     public V1beta1DNSCAARecordSpecForProviderZoneNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSCAARecordSpecForProvider
 {
     /// <summary>A list of values that make up the CAA record. Each record block supports fields documented below.</summary>
@@ -256,6 +266,7 @@ public partial class V1beta1DNSCAARecordSpecForProvider
     public V1beta1DNSCAARecordSpecForProviderZoneNameSelector? ZoneNameSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSCAARecordSpecInitProviderRecord
 {
     /// <summary>Extensible CAA flags, currently only 1 is implemented to set the issuer critical flag.</summary>
@@ -271,6 +282,7 @@ public partial class V1beta1DNSCAARecordSpecInitProviderRecord
     public string? Value { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1DNSCAARecordSpecInitProvider
 {
     /// <summary>A list of values that make up the CAA record. Each record block supports fields documented below.</summary>
@@ -328,6 +340,7 @@ public enum V1beta1DNSCAARecordSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DNSCAARecordSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -341,6 +354,7 @@ public partial class V1beta1DNSCAARecordSpecProviderConfigRefPolicy
     public V1beta1DNSCAARecordSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1DNSCAARecordSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -372,6 +386,7 @@ public enum V1beta1DNSCAARecordSpecPublishConnectionDetailsToConfigRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DNSCAARecordSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -385,6 +400,7 @@ public partial class V1beta1DNSCAARecordSpecPublishConnectionDetailsToConfigRefP
     public V1beta1DNSCAARecordSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1DNSCAARecordSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -396,6 +412,7 @@ public partial class V1beta1DNSCAARecordSpecPublishConnectionDetailsToConfigRef
     public V1beta1DNSCAARecordSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1DNSCAARecordSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -411,6 +428,7 @@ public partial class V1beta1DNSCAARecordSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1DNSCAARecordSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -426,6 +444,7 @@ public partial class V1beta1DNSCAARecordSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1DNSCAARecordSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -437,6 +456,7 @@ public partial class V1beta1DNSCAARecordSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>DNSCAARecordSpec defines the desired state of DNSCAARecord</summary>
 public partial class V1beta1DNSCAARecordSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -469,6 +489,7 @@ public partial class V1beta1DNSCAARecordSpec
     public V1beta1DNSCAARecordSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSCAARecordStatusAtProviderRecord
 {
     /// <summary>Extensible CAA flags, currently only 1 is implemented to set the issuer critical flag.</summary>
@@ -484,6 +505,7 @@ public partial class V1beta1DNSCAARecordStatusAtProviderRecord
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DNSCAARecordStatusAtProvider
 {
     /// <summary>The FQDN of the DNS CAA Record.</summary>
@@ -515,6 +537,7 @@ public partial class V1beta1DNSCAARecordStatusAtProvider
     public string? ZoneName { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1DNSCAARecordStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -542,6 +565,7 @@ public partial class V1beta1DNSCAARecordStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>DNSCAARecordStatus defines the observed state of DNSCAARecord.</summary>
 public partial class V1beta1DNSCAARecordStatus
 {
     /// <summary></summary>
@@ -558,6 +582,7 @@ public partial class V1beta1DNSCAARecordStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>DNSCAARecord is the Schema for the DNSCAARecords API. Manages a DNS CAA Record.</summary>
 public partial class V1beta1DNSCAARecord : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DNSCAARecordSpec>, IStatus<V1beta1DNSCAARecordStatus>
 {
     public const string KubeApiVersion = "v1beta1";

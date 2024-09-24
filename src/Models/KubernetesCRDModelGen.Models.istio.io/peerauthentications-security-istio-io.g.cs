@@ -24,6 +24,7 @@ public enum V1beta1PeerAuthenticationSpecMtlsModeEnum
     STRICT
 }
 
+/// <summary>Mutual TLS settings for workload.</summary>
 public partial class V1beta1PeerAuthenticationSpecMtls
 {
     /// <summary>Defines the mTLS mode used for peer authentication.  Valid Options: DISABLE, PERMISSIVE, STRICT</summary>
@@ -48,6 +49,7 @@ public enum V1beta1PeerAuthenticationSpecPortLevelMtlsModeEnum
     STRICT
 }
 
+/// <summary></summary>
 public partial class V1beta1PeerAuthenticationSpecPortLevelMtls
 {
     /// <summary>Defines the mTLS mode used for peer authentication.  Valid Options: DISABLE, PERMISSIVE, STRICT</summary>
@@ -56,6 +58,7 @@ public partial class V1beta1PeerAuthenticationSpecPortLevelMtls
     public V1beta1PeerAuthenticationSpecPortLevelMtlsModeEnum? Mode { get; set; }
 }
 
+/// <summary>The selector determines the workloads to apply the PeerAuthentication on.</summary>
 public partial class V1beta1PeerAuthenticationSpecSelector
 {
     /// <summary>One or more labels that indicate a specific set of pods/VMs on which a policy should be applied.</summary>
@@ -63,6 +66,7 @@ public partial class V1beta1PeerAuthenticationSpecSelector
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>Peer authentication configuration for workloads. See more details at: https://istio.io/docs/reference/config/security/peer_authentication.html</summary>
 public partial class V1beta1PeerAuthenticationSpec
 {
     /// <summary>Mutual TLS settings for workload.</summary>
@@ -79,6 +83,7 @@ public partial class V1beta1PeerAuthenticationSpec
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1PeerAuthentication : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1PeerAuthenticationSpec>, IStatus<JsonNode>
 {
     public const string KubeApiVersion = "v1beta1";

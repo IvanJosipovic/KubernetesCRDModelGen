@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.filestore.cnrm.cloud.google.com;
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1FilestoreSnapshotSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1FilestoreSnapshotSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1FilestoreSnapshotSpec
 {
     /// <summary>A description of the snapshot with 2048 characters or less. Requests with longer descriptions will be rejected.</summary>
@@ -46,6 +48,7 @@ public partial class V1alpha1FilestoreSnapshotSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1FilestoreSnapshotStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -69,6 +72,7 @@ public partial class V1alpha1FilestoreSnapshotStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1FilestoreSnapshotStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -93,6 +97,7 @@ public partial class V1alpha1FilestoreSnapshotStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1FilestoreSnapshot : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1FilestoreSnapshotSpec>, IStatus<V1alpha1FilestoreSnapshotStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

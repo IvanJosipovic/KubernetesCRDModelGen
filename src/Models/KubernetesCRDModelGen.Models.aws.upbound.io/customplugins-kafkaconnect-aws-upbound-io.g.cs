@@ -38,6 +38,7 @@ public enum V1beta1CustomPluginSpecForProviderLocationS3BucketArnRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CustomPluginSpecForProviderLocationS3BucketArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1CustomPluginSpecForProviderLocationS3BucketArnRefPol
     public V1beta1CustomPluginSpecForProviderLocationS3BucketArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate bucketArn.</summary>
 public partial class V1beta1CustomPluginSpecForProviderLocationS3BucketArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1CustomPluginSpecForProviderLocationS3BucketArnSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CustomPluginSpecForProviderLocationS3BucketArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1CustomPluginSpecForProviderLocationS3BucketArnSelect
     public V1beta1CustomPluginSpecForProviderLocationS3BucketArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate bucketArn.</summary>
 public partial class V1beta1CustomPluginSpecForProviderLocationS3BucketArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1CustomPluginSpecForProviderLocationS3FileKeyRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CustomPluginSpecForProviderLocationS3FileKeyRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1CustomPluginSpecForProviderLocationS3FileKeyRefPolic
     public V1beta1CustomPluginSpecForProviderLocationS3FileKeyRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Object in s3 to populate fileKey.</summary>
 public partial class V1beta1CustomPluginSpecForProviderLocationS3FileKeyRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1CustomPluginSpecForProviderLocationS3FileKeySelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CustomPluginSpecForProviderLocationS3FileKeySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1CustomPluginSpecForProviderLocationS3FileKeySelector
     public V1beta1CustomPluginSpecForProviderLocationS3FileKeySelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Object in s3 to populate fileKey.</summary>
 public partial class V1beta1CustomPluginSpecForProviderLocationS3FileKeySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1CustomPluginSpecForProviderLocationS3FileKeySelector
     public V1beta1CustomPluginSpecForProviderLocationS3FileKeySelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomPluginSpecForProviderLocationS3
 {
     /// <summary>The Amazon Resource Name (ARN) of an S3 bucket.</summary>
@@ -233,6 +242,7 @@ public partial class V1beta1CustomPluginSpecForProviderLocationS3
     public string? ObjectVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomPluginSpecForProviderLocation
 {
     /// <summary>Information of the plugin file stored in Amazon S3. See below.</summary>
@@ -240,6 +250,7 @@ public partial class V1beta1CustomPluginSpecForProviderLocation
     public IList<V1beta1CustomPluginSpecForProviderLocationS3>? S3 { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomPluginSpecForProvider
 {
     /// <summary>The type of the plugin file. Allowed values are ZIP and JAR.</summary>
@@ -287,6 +298,7 @@ public enum V1beta1CustomPluginSpecInitProviderLocationS3BucketArnRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CustomPluginSpecInitProviderLocationS3BucketArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -300,6 +312,7 @@ public partial class V1beta1CustomPluginSpecInitProviderLocationS3BucketArnRefPo
     public V1beta1CustomPluginSpecInitProviderLocationS3BucketArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate bucketArn.</summary>
 public partial class V1beta1CustomPluginSpecInitProviderLocationS3BucketArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -331,6 +344,7 @@ public enum V1beta1CustomPluginSpecInitProviderLocationS3BucketArnSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CustomPluginSpecInitProviderLocationS3BucketArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -344,6 +358,7 @@ public partial class V1beta1CustomPluginSpecInitProviderLocationS3BucketArnSelec
     public V1beta1CustomPluginSpecInitProviderLocationS3BucketArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate bucketArn.</summary>
 public partial class V1beta1CustomPluginSpecInitProviderLocationS3BucketArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -379,6 +394,7 @@ public enum V1beta1CustomPluginSpecInitProviderLocationS3FileKeyRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CustomPluginSpecInitProviderLocationS3FileKeyRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -392,6 +408,7 @@ public partial class V1beta1CustomPluginSpecInitProviderLocationS3FileKeyRefPoli
     public V1beta1CustomPluginSpecInitProviderLocationS3FileKeyRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Object in s3 to populate fileKey.</summary>
 public partial class V1beta1CustomPluginSpecInitProviderLocationS3FileKeyRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -423,6 +440,7 @@ public enum V1beta1CustomPluginSpecInitProviderLocationS3FileKeySelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CustomPluginSpecInitProviderLocationS3FileKeySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -436,6 +454,7 @@ public partial class V1beta1CustomPluginSpecInitProviderLocationS3FileKeySelecto
     public V1beta1CustomPluginSpecInitProviderLocationS3FileKeySelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Object in s3 to populate fileKey.</summary>
 public partial class V1beta1CustomPluginSpecInitProviderLocationS3FileKeySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -451,6 +470,7 @@ public partial class V1beta1CustomPluginSpecInitProviderLocationS3FileKeySelecto
     public V1beta1CustomPluginSpecInitProviderLocationS3FileKeySelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomPluginSpecInitProviderLocationS3
 {
     /// <summary>The Amazon Resource Name (ARN) of an S3 bucket.</summary>
@@ -482,6 +502,7 @@ public partial class V1beta1CustomPluginSpecInitProviderLocationS3
     public string? ObjectVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomPluginSpecInitProviderLocation
 {
     /// <summary>Information of the plugin file stored in Amazon S3. See below.</summary>
@@ -489,6 +510,7 @@ public partial class V1beta1CustomPluginSpecInitProviderLocation
     public IList<V1beta1CustomPluginSpecInitProviderLocationS3>? S3 { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1CustomPluginSpecInitProvider
 {
     /// <summary>The type of the plugin file. Allowed values are ZIP and JAR.</summary>
@@ -550,6 +572,7 @@ public enum V1beta1CustomPluginSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CustomPluginSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -563,6 +586,7 @@ public partial class V1beta1CustomPluginSpecProviderConfigRefPolicy
     public V1beta1CustomPluginSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1CustomPluginSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -594,6 +618,7 @@ public enum V1beta1CustomPluginSpecPublishConnectionDetailsToConfigRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CustomPluginSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -607,6 +632,7 @@ public partial class V1beta1CustomPluginSpecPublishConnectionDetailsToConfigRefP
     public V1beta1CustomPluginSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1CustomPluginSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -618,6 +644,7 @@ public partial class V1beta1CustomPluginSpecPublishConnectionDetailsToConfigRef
     public V1beta1CustomPluginSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1CustomPluginSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -633,6 +660,7 @@ public partial class V1beta1CustomPluginSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1CustomPluginSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -648,6 +676,7 @@ public partial class V1beta1CustomPluginSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1CustomPluginSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -659,6 +688,7 @@ public partial class V1beta1CustomPluginSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>CustomPluginSpec defines the desired state of CustomPlugin</summary>
 public partial class V1beta1CustomPluginSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -691,6 +721,7 @@ public partial class V1beta1CustomPluginSpec
     public V1beta1CustomPluginSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomPluginStatusAtProviderLocationS3
 {
     /// <summary>The Amazon Resource Name (ARN) of an S3 bucket.</summary>
@@ -706,6 +737,7 @@ public partial class V1beta1CustomPluginStatusAtProviderLocationS3
     public string? ObjectVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomPluginStatusAtProviderLocation
 {
     /// <summary>Information of the plugin file stored in Amazon S3. See below.</summary>
@@ -713,6 +745,7 @@ public partial class V1beta1CustomPluginStatusAtProviderLocation
     public IList<V1beta1CustomPluginStatusAtProviderLocationS3>? S3 { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CustomPluginStatusAtProvider
 {
     /// <summary>the Amazon Resource Name (ARN) of the custom plugin.</summary>
@@ -756,6 +789,7 @@ public partial class V1beta1CustomPluginStatusAtProvider
     public IDictionary<string, string>? TagsAll { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1CustomPluginStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -783,6 +817,7 @@ public partial class V1beta1CustomPluginStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>CustomPluginStatus defines the observed state of CustomPlugin.</summary>
 public partial class V1beta1CustomPluginStatus
 {
     /// <summary></summary>
@@ -799,6 +834,7 @@ public partial class V1beta1CustomPluginStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>CustomPlugin is the Schema for the CustomPlugins API. Provides an Amazon MSK Connect custom plugin resource. This resource can be Created, Observed and Deleted, but not Updated. AWS does not currently provide update APIs.</summary>
 public partial class V1beta1CustomPlugin : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1CustomPluginSpec>, IStatus<V1beta1CustomPluginStatus>
 {
     public const string KubeApiVersion = "v1beta1";

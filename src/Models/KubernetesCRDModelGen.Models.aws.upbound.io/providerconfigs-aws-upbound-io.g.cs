@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.aws.upbound.io;
+/// <summary>Tag is session tag that can be used to assume an IAM Role</summary>
 public partial class V1beta1ProviderConfigSpecAssumeRoleChainTags
 {
     /// <summary>Name of the tag. Key is a required field</summary>
@@ -19,6 +20,7 @@ public partial class V1beta1ProviderConfigSpecAssumeRoleChainTags
     public string Value { get; set; }
 }
 
+/// <summary>AssumeRoleOptions define the options for assuming an IAM Role Fields are similar to the STS AssumeRoleOptions in the AWS SDK</summary>
 public partial class V1beta1ProviderConfigSpecAssumeRoleChain
 {
     /// <summary>ExternalID is the external ID used when assuming role.</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1ProviderConfigSpecAssumeRoleChain
     public IList<string>? TransitiveTagKeys { get; set; }
 }
 
+/// <summary>Env is a reference to an environment variable that contains credentials that must be used to connect to the provider.</summary>
 public partial class V1beta1ProviderConfigSpecCredentialsEnv
 {
     /// <summary>Name is the name of an environment variable.</summary>
@@ -45,6 +48,7 @@ public partial class V1beta1ProviderConfigSpecCredentialsEnv
     public string Name { get; set; }
 }
 
+/// <summary>Fs is a reference to a filesystem location that contains credentials that must be used to connect to the provider.</summary>
 public partial class V1beta1ProviderConfigSpecCredentialsFs
 {
     /// <summary>Path is a filesystem path.</summary>
@@ -52,6 +56,7 @@ public partial class V1beta1ProviderConfigSpecCredentialsFs
     public string Path { get; set; }
 }
 
+/// <summary>A SecretRef is a reference to a secret key that contains the credentials that must be used to connect to the provider.</summary>
 public partial class V1beta1ProviderConfigSpecCredentialsSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -89,6 +94,7 @@ public enum V1beta1ProviderConfigSpecCredentialsSourceEnum
     Upbound
 }
 
+/// <summary>Fs is a reference to a filesystem location that contains credentials that must be used to obtain the web identity token.</summary>
 public partial class V1beta1ProviderConfigSpecCredentialsUpboundWebIdentityTokenConfigFs
 {
     /// <summary>Path is a filesystem path.</summary>
@@ -96,6 +102,7 @@ public partial class V1beta1ProviderConfigSpecCredentialsUpboundWebIdentityToken
     public string Path { get; set; }
 }
 
+/// <summary>A SecretRef is a reference to a secret key that contains the credentials that must be used to obtain the web identity token.</summary>
 public partial class V1beta1ProviderConfigSpecCredentialsUpboundWebIdentityTokenConfigSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -121,6 +128,7 @@ public enum V1beta1ProviderConfigSpecCredentialsUpboundWebIdentityTokenConfigSou
     Filesystem
 }
 
+/// <summary>TokenConfig is the Web Identity Token config to assume the role.</summary>
 public partial class V1beta1ProviderConfigSpecCredentialsUpboundWebIdentityTokenConfig
 {
     /// <summary>Fs is a reference to a filesystem location that contains credentials that must be used to obtain the web identity token.</summary>
@@ -137,6 +145,7 @@ public partial class V1beta1ProviderConfigSpecCredentialsUpboundWebIdentityToken
     public V1beta1ProviderConfigSpecCredentialsUpboundWebIdentityTokenConfigSourceEnum Source { get; set; }
 }
 
+/// <summary>WebIdentity defines the options for assuming an IAM role with a Web Identity.</summary>
 public partial class V1beta1ProviderConfigSpecCredentialsUpboundWebIdentity
 {
     /// <summary>AssumeRoleARN to assume with provider credentials</summary>
@@ -152,6 +161,7 @@ public partial class V1beta1ProviderConfigSpecCredentialsUpboundWebIdentity
     public V1beta1ProviderConfigSpecCredentialsUpboundWebIdentityTokenConfig? TokenConfig { get; set; }
 }
 
+/// <summary>Upbound defines the options for authenticating using Upbound as an identity provider.</summary>
 public partial class V1beta1ProviderConfigSpecCredentialsUpbound
 {
     /// <summary>WebIdentity defines the options for assuming an IAM role with a Web Identity.</summary>
@@ -159,6 +169,7 @@ public partial class V1beta1ProviderConfigSpecCredentialsUpbound
     public V1beta1ProviderConfigSpecCredentialsUpboundWebIdentity? WebIdentity { get; set; }
 }
 
+/// <summary>Fs is a reference to a filesystem location that contains credentials that must be used to obtain the web identity token.</summary>
 public partial class V1beta1ProviderConfigSpecCredentialsWebIdentityTokenConfigFs
 {
     /// <summary>Path is a filesystem path.</summary>
@@ -166,6 +177,7 @@ public partial class V1beta1ProviderConfigSpecCredentialsWebIdentityTokenConfigF
     public string Path { get; set; }
 }
 
+/// <summary>A SecretRef is a reference to a secret key that contains the credentials that must be used to obtain the web identity token.</summary>
 public partial class V1beta1ProviderConfigSpecCredentialsWebIdentityTokenConfigSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -191,6 +203,7 @@ public enum V1beta1ProviderConfigSpecCredentialsWebIdentityTokenConfigSourceEnum
     Filesystem
 }
 
+/// <summary>TokenConfig is the Web Identity Token config to assume the role.</summary>
 public partial class V1beta1ProviderConfigSpecCredentialsWebIdentityTokenConfig
 {
     /// <summary>Fs is a reference to a filesystem location that contains credentials that must be used to obtain the web identity token.</summary>
@@ -207,6 +220,7 @@ public partial class V1beta1ProviderConfigSpecCredentialsWebIdentityTokenConfig
     public V1beta1ProviderConfigSpecCredentialsWebIdentityTokenConfigSourceEnum Source { get; set; }
 }
 
+/// <summary>WebIdentity defines the options for assuming an IAM role with a Web Identity.</summary>
 public partial class V1beta1ProviderConfigSpecCredentialsWebIdentity
 {
     /// <summary>AssumeRoleARN to assume with provider credentials</summary>
@@ -222,6 +236,7 @@ public partial class V1beta1ProviderConfigSpecCredentialsWebIdentity
     public V1beta1ProviderConfigSpecCredentialsWebIdentityTokenConfig? TokenConfig { get; set; }
 }
 
+/// <summary>Credentials required to authenticate to this provider.</summary>
 public partial class V1beta1ProviderConfigSpecCredentials
 {
     /// <summary>Env is a reference to an environment variable that contains credentials that must be used to connect to the provider.</summary>
@@ -270,6 +285,7 @@ public enum V1beta1ProviderConfigSpecEndpointUrlDynamicProtocolEnum
     Https
 }
 
+/// <summary>Dynamic lets you configure the behavior of endpoint URL resolver.</summary>
 public partial class V1beta1ProviderConfigSpecEndpointUrlDynamic
 {
     /// <summary>Host is the address of the main host that the resolver will use to prepend protocol, service and region configurations. For example, the final URL for EC2 in us-east-1 looks like https://ec2.us-east-1.amazonaws.com You would need to use "amazonaws.com" as Host and "https" as protocol to have the resolver construct it.</summary>
@@ -292,6 +308,7 @@ public enum V1beta1ProviderConfigSpecEndpointUrlTypeEnum
     Dynamic
 }
 
+/// <summary>URL lets you configure the endpoint URL to be used in SDK calls.</summary>
 public partial class V1beta1ProviderConfigSpecEndpointUrl
 {
     /// <summary>Dynamic lets you configure the behavior of endpoint URL resolver.</summary>
@@ -308,6 +325,7 @@ public partial class V1beta1ProviderConfigSpecEndpointUrl
     public V1beta1ProviderConfigSpecEndpointUrlTypeEnum Type { get; set; }
 }
 
+/// <summary>Endpoint is where you can override the default endpoint configuration of AWS calls made by the provider.</summary>
 public partial class V1beta1ProviderConfigSpecEndpoint
 {
     /// <summary>Specifies if the endpoint's hostname can be modified by the SDK's API client.   If the hostname is mutable the SDK API clients may modify any part of the hostname based on the requirements of the API, (e.g. adding, or removing content in the hostname). Such as, Amazon S3 API client prefixing "bucketname" to the hostname, or changing the hostname service name component from "s3." to "s3-accesspoint.dualstack." for the dualstack endpoint of an S3 Accesspoint resource.   Care should be taken when providing a custom endpoint for an API. If the endpoint hostname is mutable, and the client cannot modify the endpoint correctly, the operation call will most likely fail, or have undefined behavior.   If hostname is immutable, the SDK API clients will not modify the hostname of the URL. This may cause the API client not to function correctly if the API requires the operation specific hostname values to be used by the client.   This flag does not modify the API client's behavior if this endpoint will be used instead of Endpoint Discovery, or if the endpoint will be used to perform Endpoint Discovery. That behavior is configured via the API Client's Options. Note that this is effective only for resources that use AWS SDK v2.</summary>
@@ -344,6 +362,7 @@ public partial class V1beta1ProviderConfigSpecEndpoint
     public V1beta1ProviderConfigSpecEndpointUrl Url { get; set; }
 }
 
+/// <summary>A ProviderConfigSpec defines the desired state of a ProviderConfig.</summary>
 public partial class V1beta1ProviderConfigSpec
 {
     /// <summary>AssumeRoleChain defines the options for assuming an IAM role</summary>
@@ -379,6 +398,7 @@ public partial class V1beta1ProviderConfigSpec
     public bool? SkipRequestingAccountId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ProviderConfigStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -406,6 +426,7 @@ public partial class V1beta1ProviderConfigStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>A ProviderConfigStatus reflects the observed state of a ProviderConfig.</summary>
 public partial class V1beta1ProviderConfigStatus
 {
     /// <summary>Conditions of the resource.</summary>
@@ -418,6 +439,7 @@ public partial class V1beta1ProviderConfigStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>A ProviderConfig configures the AWS provider.</summary>
 public partial class V1beta1ProviderConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ProviderConfigSpec>, IStatus<V1beta1ProviderConfigStatus>
 {
     public const string KubeApiVersion = "v1beta1";

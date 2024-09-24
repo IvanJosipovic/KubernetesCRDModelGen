@@ -18,6 +18,7 @@ public enum V1beta1AddonsConfigSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
 public partial class V1beta1AddonsConfigSpecForProviderAddonsConfigAdvancedApiOpsConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1AddonsConfigSpecForProviderAddonsConfigAdvancedApiOp
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
 public partial class V1beta1AddonsConfigSpecForProviderAddonsConfigApiSecurityConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -32,6 +34,7 @@ public partial class V1beta1AddonsConfigSpecForProviderAddonsConfigApiSecurityCo
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
 public partial class V1beta1AddonsConfigSpecForProviderAddonsConfigConnectorsPlatformConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -39,6 +42,7 @@ public partial class V1beta1AddonsConfigSpecForProviderAddonsConfigConnectorsPla
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
 public partial class V1beta1AddonsConfigSpecForProviderAddonsConfigIntegrationConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -46,6 +50,7 @@ public partial class V1beta1AddonsConfigSpecForProviderAddonsConfigIntegrationCo
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
 public partial class V1beta1AddonsConfigSpecForProviderAddonsConfigMonetizationConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -53,6 +58,7 @@ public partial class V1beta1AddonsConfigSpecForProviderAddonsConfigMonetizationC
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Addon configurations of the Apigee organization. Structure is documented below.</summary>
 public partial class V1beta1AddonsConfigSpecForProviderAddonsConfig
 {
     /// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
@@ -96,6 +102,7 @@ public enum V1beta1AddonsConfigSpecForProviderOrgRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AddonsConfigSpecForProviderOrgRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -109,6 +116,7 @@ public partial class V1beta1AddonsConfigSpecForProviderOrgRefPolicy
     public V1beta1AddonsConfigSpecForProviderOrgRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Organization in apigee to populate org.</summary>
 public partial class V1beta1AddonsConfigSpecForProviderOrgRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -140,6 +148,7 @@ public enum V1beta1AddonsConfigSpecForProviderOrgSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AddonsConfigSpecForProviderOrgSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -153,6 +162,7 @@ public partial class V1beta1AddonsConfigSpecForProviderOrgSelectorPolicy
     public V1beta1AddonsConfigSpecForProviderOrgSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Organization in apigee to populate org.</summary>
 public partial class V1beta1AddonsConfigSpecForProviderOrgSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -168,6 +178,7 @@ public partial class V1beta1AddonsConfigSpecForProviderOrgSelector
     public V1beta1AddonsConfigSpecForProviderOrgSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AddonsConfigSpecForProvider
 {
     /// <summary>Addon configurations of the Apigee organization. Structure is documented below.</summary>
@@ -187,6 +198,7 @@ public partial class V1beta1AddonsConfigSpecForProvider
     public V1beta1AddonsConfigSpecForProviderOrgSelector? OrgSelector { get; set; }
 }
 
+/// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
 public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfigAdvancedApiOpsConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -194,6 +206,7 @@ public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfigAdvancedApiO
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
 public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfigApiSecurityConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -201,6 +214,7 @@ public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfigApiSecurityC
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
 public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfigConnectorsPlatformConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -208,6 +222,7 @@ public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfigConnectorsPl
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
 public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfigIntegrationConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -215,6 +230,7 @@ public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfigIntegrationC
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
 public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfigMonetizationConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -222,6 +238,7 @@ public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfigMonetization
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Addon configurations of the Apigee organization. Structure is documented below.</summary>
 public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfig
 {
     /// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
@@ -265,6 +282,7 @@ public enum V1beta1AddonsConfigSpecInitProviderOrgRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AddonsConfigSpecInitProviderOrgRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -278,6 +296,7 @@ public partial class V1beta1AddonsConfigSpecInitProviderOrgRefPolicy
     public V1beta1AddonsConfigSpecInitProviderOrgRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Organization in apigee to populate org.</summary>
 public partial class V1beta1AddonsConfigSpecInitProviderOrgRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -309,6 +328,7 @@ public enum V1beta1AddonsConfigSpecInitProviderOrgSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AddonsConfigSpecInitProviderOrgSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -322,6 +342,7 @@ public partial class V1beta1AddonsConfigSpecInitProviderOrgSelectorPolicy
     public V1beta1AddonsConfigSpecInitProviderOrgSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Organization in apigee to populate org.</summary>
 public partial class V1beta1AddonsConfigSpecInitProviderOrgSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -337,6 +358,7 @@ public partial class V1beta1AddonsConfigSpecInitProviderOrgSelector
     public V1beta1AddonsConfigSpecInitProviderOrgSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1AddonsConfigSpecInitProvider
 {
     /// <summary>Addon configurations of the Apigee organization. Structure is documented below.</summary>
@@ -398,6 +420,7 @@ public enum V1beta1AddonsConfigSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AddonsConfigSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -411,6 +434,7 @@ public partial class V1beta1AddonsConfigSpecProviderConfigRefPolicy
     public V1beta1AddonsConfigSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1AddonsConfigSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -442,6 +466,7 @@ public enum V1beta1AddonsConfigSpecPublishConnectionDetailsToConfigRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AddonsConfigSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -455,6 +480,7 @@ public partial class V1beta1AddonsConfigSpecPublishConnectionDetailsToConfigRefP
     public V1beta1AddonsConfigSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1AddonsConfigSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -466,6 +492,7 @@ public partial class V1beta1AddonsConfigSpecPublishConnectionDetailsToConfigRef
     public V1beta1AddonsConfigSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1AddonsConfigSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -481,6 +508,7 @@ public partial class V1beta1AddonsConfigSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1AddonsConfigSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -496,6 +524,7 @@ public partial class V1beta1AddonsConfigSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1AddonsConfigSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -507,6 +536,7 @@ public partial class V1beta1AddonsConfigSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>AddonsConfigSpec defines the desired state of AddonsConfig</summary>
 public partial class V1beta1AddonsConfigSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -539,6 +569,7 @@ public partial class V1beta1AddonsConfigSpec
     public V1beta1AddonsConfigSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
 public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfigAdvancedApiOpsConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -546,6 +577,7 @@ public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfigAdvancedApiO
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
 public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfigApiSecurityConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -557,6 +589,7 @@ public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfigApiSecurityC
     public string? ExpiresAt { get; set; }
 }
 
+/// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
 public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfigConnectorsPlatformConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -568,6 +601,7 @@ public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfigConnectorsPl
     public string? ExpiresAt { get; set; }
 }
 
+/// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
 public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfigIntegrationConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -575,6 +609,7 @@ public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfigIntegrationC
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
 public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfigMonetizationConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
@@ -582,6 +617,7 @@ public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfigMonetization
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Addon configurations of the Apigee organization. Structure is documented below.</summary>
 public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfig
 {
     /// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
@@ -605,6 +641,7 @@ public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfig
     public V1beta1AddonsConfigStatusAtProviderAddonsConfigMonetizationConfig? MonetizationConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AddonsConfigStatusAtProvider
 {
     /// <summary>Addon configurations of the Apigee organization. Structure is documented below.</summary>
@@ -620,6 +657,7 @@ public partial class V1beta1AddonsConfigStatusAtProvider
     public string? Org { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1AddonsConfigStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -647,6 +685,7 @@ public partial class V1beta1AddonsConfigStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>AddonsConfigStatus defines the observed state of AddonsConfig.</summary>
 public partial class V1beta1AddonsConfigStatus
 {
     /// <summary></summary>
@@ -663,6 +702,7 @@ public partial class V1beta1AddonsConfigStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>AddonsConfig is the Schema for the AddonsConfigs API. Configures the add-ons for the Apigee organization.</summary>
 public partial class V1beta1AddonsConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AddonsConfigSpec>, IStatus<V1beta1AddonsConfigStatus>
 {
     public const string KubeApiVersion = "v1beta1";

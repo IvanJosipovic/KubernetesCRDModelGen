@@ -38,6 +38,7 @@ public enum V1beta1AssessmentTemplateSpecForProviderEventSubscriptionTopicArnRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AssessmentTemplateSpecForProviderEventSubscriptionTopicArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1AssessmentTemplateSpecForProviderEventSubscriptionTo
     public V1beta1AssessmentTemplateSpecForProviderEventSubscriptionTopicArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Topic in sns to populate topicArn.</summary>
 public partial class V1beta1AssessmentTemplateSpecForProviderEventSubscriptionTopicArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1AssessmentTemplateSpecForProviderEventSubscriptionTopicArnSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AssessmentTemplateSpecForProviderEventSubscriptionTopicArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1AssessmentTemplateSpecForProviderEventSubscriptionTo
     public V1beta1AssessmentTemplateSpecForProviderEventSubscriptionTopicArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Topic in sns to populate topicArn.</summary>
 public partial class V1beta1AssessmentTemplateSpecForProviderEventSubscriptionTopicArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1AssessmentTemplateSpecForProviderEventSubscriptionTo
     public V1beta1AssessmentTemplateSpecForProviderEventSubscriptionTopicArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AssessmentTemplateSpecForProviderEventSubscription
 {
     /// <summary>The event for which you want to receive SNS notifications. Valid values are ASSESSMENT_RUN_STARTED, ASSESSMENT_RUN_COMPLETED, ASSESSMENT_RUN_STATE_CHANGED, and FINDING_REPORTED.</summary>
@@ -149,6 +154,7 @@ public enum V1beta1AssessmentTemplateSpecForProviderTargetArnRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AssessmentTemplateSpecForProviderTargetArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -162,6 +168,7 @@ public partial class V1beta1AssessmentTemplateSpecForProviderTargetArnRefPolicy
     public V1beta1AssessmentTemplateSpecForProviderTargetArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a AssessmentTarget in inspector to populate targetArn.</summary>
 public partial class V1beta1AssessmentTemplateSpecForProviderTargetArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -193,6 +200,7 @@ public enum V1beta1AssessmentTemplateSpecForProviderTargetArnSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AssessmentTemplateSpecForProviderTargetArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -206,6 +214,7 @@ public partial class V1beta1AssessmentTemplateSpecForProviderTargetArnSelectorPo
     public V1beta1AssessmentTemplateSpecForProviderTargetArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a AssessmentTarget in inspector to populate targetArn.</summary>
 public partial class V1beta1AssessmentTemplateSpecForProviderTargetArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -221,6 +230,7 @@ public partial class V1beta1AssessmentTemplateSpecForProviderTargetArnSelector
     public V1beta1AssessmentTemplateSpecForProviderTargetArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AssessmentTemplateSpecForProvider
 {
     /// <summary>The duration of the inspector run.</summary>
@@ -280,6 +290,7 @@ public enum V1beta1AssessmentTemplateSpecInitProviderEventSubscriptionTopicArnRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AssessmentTemplateSpecInitProviderEventSubscriptionTopicArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -293,6 +304,7 @@ public partial class V1beta1AssessmentTemplateSpecInitProviderEventSubscriptionT
     public V1beta1AssessmentTemplateSpecInitProviderEventSubscriptionTopicArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Topic in sns to populate topicArn.</summary>
 public partial class V1beta1AssessmentTemplateSpecInitProviderEventSubscriptionTopicArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -324,6 +336,7 @@ public enum V1beta1AssessmentTemplateSpecInitProviderEventSubscriptionTopicArnSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AssessmentTemplateSpecInitProviderEventSubscriptionTopicArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -337,6 +350,7 @@ public partial class V1beta1AssessmentTemplateSpecInitProviderEventSubscriptionT
     public V1beta1AssessmentTemplateSpecInitProviderEventSubscriptionTopicArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Topic in sns to populate topicArn.</summary>
 public partial class V1beta1AssessmentTemplateSpecInitProviderEventSubscriptionTopicArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -352,6 +366,7 @@ public partial class V1beta1AssessmentTemplateSpecInitProviderEventSubscriptionT
     public V1beta1AssessmentTemplateSpecInitProviderEventSubscriptionTopicArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AssessmentTemplateSpecInitProviderEventSubscription
 {
     /// <summary>The event for which you want to receive SNS notifications. Valid values are ASSESSMENT_RUN_STARTED, ASSESSMENT_RUN_COMPLETED, ASSESSMENT_RUN_STATE_CHANGED, and FINDING_REPORTED.</summary>
@@ -391,6 +406,7 @@ public enum V1beta1AssessmentTemplateSpecInitProviderTargetArnRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AssessmentTemplateSpecInitProviderTargetArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -404,6 +420,7 @@ public partial class V1beta1AssessmentTemplateSpecInitProviderTargetArnRefPolicy
     public V1beta1AssessmentTemplateSpecInitProviderTargetArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a AssessmentTarget in inspector to populate targetArn.</summary>
 public partial class V1beta1AssessmentTemplateSpecInitProviderTargetArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -435,6 +452,7 @@ public enum V1beta1AssessmentTemplateSpecInitProviderTargetArnSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AssessmentTemplateSpecInitProviderTargetArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -448,6 +466,7 @@ public partial class V1beta1AssessmentTemplateSpecInitProviderTargetArnSelectorP
     public V1beta1AssessmentTemplateSpecInitProviderTargetArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a AssessmentTarget in inspector to populate targetArn.</summary>
 public partial class V1beta1AssessmentTemplateSpecInitProviderTargetArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -463,6 +482,7 @@ public partial class V1beta1AssessmentTemplateSpecInitProviderTargetArnSelector
     public V1beta1AssessmentTemplateSpecInitProviderTargetArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1AssessmentTemplateSpecInitProvider
 {
     /// <summary>The duration of the inspector run.</summary>
@@ -540,6 +560,7 @@ public enum V1beta1AssessmentTemplateSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AssessmentTemplateSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -553,6 +574,7 @@ public partial class V1beta1AssessmentTemplateSpecProviderConfigRefPolicy
     public V1beta1AssessmentTemplateSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1AssessmentTemplateSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -584,6 +606,7 @@ public enum V1beta1AssessmentTemplateSpecPublishConnectionDetailsToConfigRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AssessmentTemplateSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -597,6 +620,7 @@ public partial class V1beta1AssessmentTemplateSpecPublishConnectionDetailsToConf
     public V1beta1AssessmentTemplateSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1AssessmentTemplateSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -608,6 +632,7 @@ public partial class V1beta1AssessmentTemplateSpecPublishConnectionDetailsToConf
     public V1beta1AssessmentTemplateSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1AssessmentTemplateSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -623,6 +648,7 @@ public partial class V1beta1AssessmentTemplateSpecPublishConnectionDetailsToMeta
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1AssessmentTemplateSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -638,6 +664,7 @@ public partial class V1beta1AssessmentTemplateSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1AssessmentTemplateSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -649,6 +676,7 @@ public partial class V1beta1AssessmentTemplateSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>AssessmentTemplateSpec defines the desired state of AssessmentTemplate</summary>
 public partial class V1beta1AssessmentTemplateSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -681,6 +709,7 @@ public partial class V1beta1AssessmentTemplateSpec
     public V1beta1AssessmentTemplateSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AssessmentTemplateStatusAtProviderEventSubscription
 {
     /// <summary>The event for which you want to receive SNS notifications. Valid values are ASSESSMENT_RUN_STARTED, ASSESSMENT_RUN_COMPLETED, ASSESSMENT_RUN_STATE_CHANGED, and FINDING_REPORTED.</summary>
@@ -692,6 +721,7 @@ public partial class V1beta1AssessmentTemplateStatusAtProviderEventSubscription
     public string? TopicArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AssessmentTemplateStatusAtProvider
 {
     /// <summary>The template assessment ARN.</summary>
@@ -731,6 +761,7 @@ public partial class V1beta1AssessmentTemplateStatusAtProvider
     public string? TargetArn { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1AssessmentTemplateStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -758,6 +789,7 @@ public partial class V1beta1AssessmentTemplateStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>AssessmentTemplateStatus defines the observed state of AssessmentTemplate.</summary>
 public partial class V1beta1AssessmentTemplateStatus
 {
     /// <summary></summary>
@@ -774,6 +806,7 @@ public partial class V1beta1AssessmentTemplateStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>AssessmentTemplate is the Schema for the AssessmentTemplates API. Provides an Inspector Classic Assessment Template.</summary>
 public partial class V1beta1AssessmentTemplate : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AssessmentTemplateSpec>, IStatus<V1beta1AssessmentTemplateStatus>
 {
     public const string KubeApiVersion = "v1beta1";

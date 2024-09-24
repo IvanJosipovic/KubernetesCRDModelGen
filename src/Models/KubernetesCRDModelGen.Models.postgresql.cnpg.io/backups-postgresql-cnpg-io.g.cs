@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.postgresql.cnpg.io;
+/// <summary>The cluster to backup</summary>
 public partial class V1BackupSpecCluster
 {
     /// <summary>Name of the referent.</summary>
@@ -28,6 +29,7 @@ public enum V1BackupSpecMethodEnum
     Plugin
 }
 
+/// <summary>Configuration parameters to control the online/hot backup with volume snapshots Overrides the default settings specified in the cluster '.backup.volumeSnapshot.onlineConfiguration' stanza</summary>
 public partial class V1BackupSpecOnlineConfiguration
 {
     /// <summary>Control whether the I/O workload for the backup initial checkpoint will be limited, according to the `checkpoint_completion_target` setting on the PostgreSQL server. If set to true, an immediate checkpoint will be used, meaning PostgreSQL will complete the checkpoint as soon as possible. `false` by default.</summary>
@@ -39,6 +41,7 @@ public partial class V1BackupSpecOnlineConfiguration
     public bool? WaitForArchive { get; set; }
 }
 
+/// <summary>Configuration parameters passed to the plugin managing this backup</summary>
 public partial class V1BackupSpecPluginConfiguration
 {
     /// <summary>Name is the name of the plugin managing this backup</summary>
@@ -60,6 +63,7 @@ public enum V1BackupSpecTargetEnum
     PreferStandby
 }
 
+/// <summary>Specification of the desired behavior of the backup. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
 public partial class V1BackupSpec
 {
     /// <summary>The cluster to backup</summary>
@@ -89,6 +93,7 @@ public partial class V1BackupSpec
     public V1BackupSpecTargetEnum? Target { get; set; }
 }
 
+/// <summary>The connection string to be used</summary>
 public partial class V1BackupStatusAzureCredentialsConnectionString
 {
     /// <summary>The key to select</summary>
@@ -100,6 +105,7 @@ public partial class V1BackupStatusAzureCredentialsConnectionString
     public string Name { get; set; }
 }
 
+/// <summary>The storage account where to upload data</summary>
 public partial class V1BackupStatusAzureCredentialsStorageAccount
 {
     /// <summary>The key to select</summary>
@@ -111,6 +117,7 @@ public partial class V1BackupStatusAzureCredentialsStorageAccount
     public string Name { get; set; }
 }
 
+/// <summary>The storage account key to be used in conjunction with the storage account name</summary>
 public partial class V1BackupStatusAzureCredentialsStorageKey
 {
     /// <summary>The key to select</summary>
@@ -122,6 +129,7 @@ public partial class V1BackupStatusAzureCredentialsStorageKey
     public string Name { get; set; }
 }
 
+/// <summary>A shared-access-signature to be used in conjunction with the storage account name</summary>
 public partial class V1BackupStatusAzureCredentialsStorageSasToken
 {
     /// <summary>The key to select</summary>
@@ -133,6 +141,7 @@ public partial class V1BackupStatusAzureCredentialsStorageSasToken
     public string Name { get; set; }
 }
 
+/// <summary>The credentials to use to upload data to Azure Blob Storage</summary>
 public partial class V1BackupStatusAzureCredentials
 {
     /// <summary>The connection string to be used</summary>
@@ -156,6 +165,7 @@ public partial class V1BackupStatusAzureCredentials
     public V1BackupStatusAzureCredentialsStorageSasToken? StorageSasToken { get; set; }
 }
 
+/// <summary>EndpointCA store the CA bundle of the barman endpoint. Useful when using self-signed certificates to avoid errors with certificate issuer and barman-cloud-wal-archive.</summary>
 public partial class V1BackupStatusEndpointCA
 {
     /// <summary>The key to select</summary>
@@ -167,6 +177,7 @@ public partial class V1BackupStatusEndpointCA
     public string Name { get; set; }
 }
 
+/// <summary>The secret containing the Google Cloud Storage JSON file with the credentials</summary>
 public partial class V1BackupStatusGoogleCredentialsApplicationCredentials
 {
     /// <summary>The key to select</summary>
@@ -178,6 +189,7 @@ public partial class V1BackupStatusGoogleCredentialsApplicationCredentials
     public string Name { get; set; }
 }
 
+/// <summary>The credentials to use to upload data to Google Cloud Storage</summary>
 public partial class V1BackupStatusGoogleCredentials
 {
     /// <summary>The secret containing the Google Cloud Storage JSON file with the credentials</summary>
@@ -189,6 +201,7 @@ public partial class V1BackupStatusGoogleCredentials
     public bool? GkeEnvironment { get; set; }
 }
 
+/// <summary>Information to identify the instance where the backup has been taken from</summary>
 public partial class V1BackupStatusInstanceID
 {
     /// <summary>The container ID</summary>
@@ -200,6 +213,7 @@ public partial class V1BackupStatusInstanceID
     public string? PodName { get; set; }
 }
 
+/// <summary>The reference to the access key id</summary>
 public partial class V1BackupStatusS3CredentialsAccessKeyId
 {
     /// <summary>The key to select</summary>
@@ -211,6 +225,7 @@ public partial class V1BackupStatusS3CredentialsAccessKeyId
     public string Name { get; set; }
 }
 
+/// <summary>The reference to the secret containing the region name</summary>
 public partial class V1BackupStatusS3CredentialsRegion
 {
     /// <summary>The key to select</summary>
@@ -222,6 +237,7 @@ public partial class V1BackupStatusS3CredentialsRegion
     public string Name { get; set; }
 }
 
+/// <summary>The reference to the secret access key</summary>
 public partial class V1BackupStatusS3CredentialsSecretAccessKey
 {
     /// <summary>The key to select</summary>
@@ -233,6 +249,7 @@ public partial class V1BackupStatusS3CredentialsSecretAccessKey
     public string Name { get; set; }
 }
 
+/// <summary>The references to the session key</summary>
 public partial class V1BackupStatusS3CredentialsSessionToken
 {
     /// <summary>The key to select</summary>
@@ -244,6 +261,7 @@ public partial class V1BackupStatusS3CredentialsSessionToken
     public string Name { get; set; }
 }
 
+/// <summary>The credentials to use to upload data to S3</summary>
 public partial class V1BackupStatusS3Credentials
 {
     /// <summary>The reference to the access key id</summary>
@@ -267,6 +285,7 @@ public partial class V1BackupStatusS3Credentials
     public V1BackupStatusS3CredentialsSessionToken? SessionToken { get; set; }
 }
 
+/// <summary>BackupSnapshotElementStatus is a volume snapshot that is part of a volume snapshot method backup</summary>
 public partial class V1BackupStatusSnapshotBackupStatusElements
 {
     /// <summary>Name is the snapshot resource name</summary>
@@ -282,6 +301,7 @@ public partial class V1BackupStatusSnapshotBackupStatusElements
     public string Type { get; set; }
 }
 
+/// <summary>Status of the volumeSnapshot backup</summary>
 public partial class V1BackupStatusSnapshotBackupStatus
 {
     /// <summary>The elements list, populated with the gathered volume snapshots</summary>
@@ -289,6 +309,7 @@ public partial class V1BackupStatusSnapshotBackupStatus
     public IList<V1BackupStatusSnapshotBackupStatusElements>? Elements { get; set; }
 }
 
+/// <summary>Most recently observed status of the backup. This data may not be up to date. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
 public partial class V1BackupStatus
 {
     /// <summary>The credentials to use to upload data to Azure Blob Storage</summary>
@@ -397,6 +418,7 @@ public partial class V1BackupStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Backup is the Schema for the backups API</summary>
 public partial class V1Backup : IKubernetesObject<V1ObjectMeta>, ISpec<V1BackupSpec>, IStatus<V1BackupStatus>
 {
     public const string KubeApiVersion = "v1";

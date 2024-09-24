@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datastream.cnrm.cloud.google.com;
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1DatastreamPrivateConnectionSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1DatastreamPrivateConnectionSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. The VPC Peering configuration is used to create VPC peering between Datastream and the consumer's VPC.</summary>
 public partial class V1alpha1DatastreamPrivateConnectionSpecVpcPeeringConfig
 {
     /// <summary>Immutable. A free subnet for peering. (CIDR of /29).</summary>
@@ -34,6 +36,7 @@ public partial class V1alpha1DatastreamPrivateConnectionSpecVpcPeeringConfig
     public string Vpc { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DatastreamPrivateConnectionSpec
 {
     /// <summary>Immutable. Display name.</summary>
@@ -57,6 +60,7 @@ public partial class V1alpha1DatastreamPrivateConnectionSpec
     public V1alpha1DatastreamPrivateConnectionSpecVpcPeeringConfig VpcPeeringConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DatastreamPrivateConnectionStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -80,6 +84,7 @@ public partial class V1alpha1DatastreamPrivateConnectionStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DatastreamPrivateConnectionStatusError
 {
     /// <summary>A list of messages that carry the error details.</summary>
@@ -91,6 +96,7 @@ public partial class V1alpha1DatastreamPrivateConnectionStatusError
     public string? Message { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DatastreamPrivateConnectionStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -115,6 +121,7 @@ public partial class V1alpha1DatastreamPrivateConnectionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1DatastreamPrivateConnection : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DatastreamPrivateConnectionSpec>, IStatus<V1alpha1DatastreamPrivateConnectionStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

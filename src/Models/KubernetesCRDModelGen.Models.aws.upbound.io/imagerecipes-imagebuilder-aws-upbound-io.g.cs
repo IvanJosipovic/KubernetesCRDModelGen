@@ -18,6 +18,7 @@ public enum V1beta1ImageRecipeSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageRecipeSpecForProviderBlockDeviceMappingEbs
 {
     /// <summary>Whether to delete the volume on termination. Defaults to unset, which is the value inherited from the parent image.</summary>
@@ -53,6 +54,7 @@ public partial class V1beta1ImageRecipeSpecForProviderBlockDeviceMappingEbs
     public string? VolumeType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageRecipeSpecForProviderBlockDeviceMapping
 {
     /// <summary>Name of the device. For example, /dev/sda or /dev/xvdb.</summary>
@@ -92,6 +94,7 @@ public enum V1beta1ImageRecipeSpecForProviderComponentComponentArnRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ImageRecipeSpecForProviderComponentComponentArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -105,6 +108,7 @@ public partial class V1beta1ImageRecipeSpecForProviderComponentComponentArnRefPo
     public V1beta1ImageRecipeSpecForProviderComponentComponentArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Component in imagebuilder to populate componentArn.</summary>
 public partial class V1beta1ImageRecipeSpecForProviderComponentComponentArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -136,6 +140,7 @@ public enum V1beta1ImageRecipeSpecForProviderComponentComponentArnSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ImageRecipeSpecForProviderComponentComponentArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -149,6 +154,7 @@ public partial class V1beta1ImageRecipeSpecForProviderComponentComponentArnSelec
     public V1beta1ImageRecipeSpecForProviderComponentComponentArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Component in imagebuilder to populate componentArn.</summary>
 public partial class V1beta1ImageRecipeSpecForProviderComponentComponentArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -164,6 +170,7 @@ public partial class V1beta1ImageRecipeSpecForProviderComponentComponentArnSelec
     public V1beta1ImageRecipeSpecForProviderComponentComponentArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageRecipeSpecForProviderComponentParameter
 {
     /// <summary>The name of the component parameter.</summary>
@@ -175,6 +182,7 @@ public partial class V1beta1ImageRecipeSpecForProviderComponentParameter
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageRecipeSpecForProviderComponent
 {
     /// <summary>Amazon Resource Name (ARN) of the Image Builder Component to associate.</summary>
@@ -194,6 +202,7 @@ public partial class V1beta1ImageRecipeSpecForProviderComponent
     public IList<V1beta1ImageRecipeSpecForProviderComponentParameter>? Parameter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageRecipeSpecForProviderSystemsManagerAgent
 {
     /// <summary>Whether to remove the Systems Manager Agent after the image has been built. Defaults to false.</summary>
@@ -201,6 +210,7 @@ public partial class V1beta1ImageRecipeSpecForProviderSystemsManagerAgent
     public bool? UninstallAfterBuild { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageRecipeSpecForProvider
 {
     /// <summary>Configuration block(s) with block device mappings for the image recipe. Detailed below.</summary>
@@ -248,6 +258,7 @@ public partial class V1beta1ImageRecipeSpecForProvider
     public string? WorkingDirectory { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageRecipeSpecInitProviderBlockDeviceMappingEbs
 {
     /// <summary>Whether to delete the volume on termination. Defaults to unset, which is the value inherited from the parent image.</summary>
@@ -283,6 +294,7 @@ public partial class V1beta1ImageRecipeSpecInitProviderBlockDeviceMappingEbs
     public string? VolumeType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageRecipeSpecInitProviderBlockDeviceMapping
 {
     /// <summary>Name of the device. For example, /dev/sda or /dev/xvdb.</summary>
@@ -322,6 +334,7 @@ public enum V1beta1ImageRecipeSpecInitProviderComponentComponentArnRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ImageRecipeSpecInitProviderComponentComponentArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -335,6 +348,7 @@ public partial class V1beta1ImageRecipeSpecInitProviderComponentComponentArnRefP
     public V1beta1ImageRecipeSpecInitProviderComponentComponentArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Component in imagebuilder to populate componentArn.</summary>
 public partial class V1beta1ImageRecipeSpecInitProviderComponentComponentArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -366,6 +380,7 @@ public enum V1beta1ImageRecipeSpecInitProviderComponentComponentArnSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ImageRecipeSpecInitProviderComponentComponentArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -379,6 +394,7 @@ public partial class V1beta1ImageRecipeSpecInitProviderComponentComponentArnSele
     public V1beta1ImageRecipeSpecInitProviderComponentComponentArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Component in imagebuilder to populate componentArn.</summary>
 public partial class V1beta1ImageRecipeSpecInitProviderComponentComponentArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -394,6 +410,7 @@ public partial class V1beta1ImageRecipeSpecInitProviderComponentComponentArnSele
     public V1beta1ImageRecipeSpecInitProviderComponentComponentArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageRecipeSpecInitProviderComponentParameter
 {
     /// <summary>The name of the component parameter.</summary>
@@ -405,6 +422,7 @@ public partial class V1beta1ImageRecipeSpecInitProviderComponentParameter
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageRecipeSpecInitProviderComponent
 {
     /// <summary>Amazon Resource Name (ARN) of the Image Builder Component to associate.</summary>
@@ -424,6 +442,7 @@ public partial class V1beta1ImageRecipeSpecInitProviderComponent
     public IList<V1beta1ImageRecipeSpecInitProviderComponentParameter>? Parameter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageRecipeSpecInitProviderSystemsManagerAgent
 {
     /// <summary>Whether to remove the Systems Manager Agent after the image has been built. Defaults to false.</summary>
@@ -431,6 +450,7 @@ public partial class V1beta1ImageRecipeSpecInitProviderSystemsManagerAgent
     public bool? UninstallAfterBuild { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ImageRecipeSpecInitProvider
 {
     /// <summary>Configuration block(s) with block device mappings for the image recipe. Detailed below.</summary>
@@ -516,6 +536,7 @@ public enum V1beta1ImageRecipeSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ImageRecipeSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -529,6 +550,7 @@ public partial class V1beta1ImageRecipeSpecProviderConfigRefPolicy
     public V1beta1ImageRecipeSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ImageRecipeSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -560,6 +582,7 @@ public enum V1beta1ImageRecipeSpecPublishConnectionDetailsToConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ImageRecipeSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -573,6 +596,7 @@ public partial class V1beta1ImageRecipeSpecPublishConnectionDetailsToConfigRefPo
     public V1beta1ImageRecipeSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ImageRecipeSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -584,6 +608,7 @@ public partial class V1beta1ImageRecipeSpecPublishConnectionDetailsToConfigRef
     public V1beta1ImageRecipeSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ImageRecipeSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -599,6 +624,7 @@ public partial class V1beta1ImageRecipeSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ImageRecipeSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -614,6 +640,7 @@ public partial class V1beta1ImageRecipeSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ImageRecipeSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -625,6 +652,7 @@ public partial class V1beta1ImageRecipeSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ImageRecipeSpec defines the desired state of ImageRecipe</summary>
 public partial class V1beta1ImageRecipeSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -657,6 +685,7 @@ public partial class V1beta1ImageRecipeSpec
     public V1beta1ImageRecipeSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageRecipeStatusAtProviderBlockDeviceMappingEbs
 {
     /// <summary>Whether to delete the volume on termination. Defaults to unset, which is the value inherited from the parent image.</summary>
@@ -692,6 +721,7 @@ public partial class V1beta1ImageRecipeStatusAtProviderBlockDeviceMappingEbs
     public string? VolumeType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageRecipeStatusAtProviderBlockDeviceMapping
 {
     /// <summary>Name of the device. For example, /dev/sda or /dev/xvdb.</summary>
@@ -711,6 +741,7 @@ public partial class V1beta1ImageRecipeStatusAtProviderBlockDeviceMapping
     public string? VirtualName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageRecipeStatusAtProviderComponentParameter
 {
     /// <summary>The name of the component parameter.</summary>
@@ -722,6 +753,7 @@ public partial class V1beta1ImageRecipeStatusAtProviderComponentParameter
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageRecipeStatusAtProviderComponent
 {
     /// <summary>Amazon Resource Name (ARN) of the Image Builder Component to associate.</summary>
@@ -733,6 +765,7 @@ public partial class V1beta1ImageRecipeStatusAtProviderComponent
     public IList<V1beta1ImageRecipeStatusAtProviderComponentParameter>? Parameter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageRecipeStatusAtProviderSystemsManagerAgent
 {
     /// <summary>Whether to remove the Systems Manager Agent after the image has been built. Defaults to false.</summary>
@@ -740,6 +773,7 @@ public partial class V1beta1ImageRecipeStatusAtProviderSystemsManagerAgent
     public bool? UninstallAfterBuild { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageRecipeStatusAtProvider
 {
     /// <summary>Amazon Resource Name (ARN) of the image recipe.</summary>
@@ -807,6 +841,7 @@ public partial class V1beta1ImageRecipeStatusAtProvider
     public string? WorkingDirectory { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ImageRecipeStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -834,6 +869,7 @@ public partial class V1beta1ImageRecipeStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ImageRecipeStatus defines the observed state of ImageRecipe.</summary>
 public partial class V1beta1ImageRecipeStatus
 {
     /// <summary></summary>
@@ -850,6 +886,7 @@ public partial class V1beta1ImageRecipeStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ImageRecipe is the Schema for the ImageRecipes API. Manage an Image Builder Image Recipe</summary>
 public partial class V1beta1ImageRecipe : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ImageRecipeSpec>, IStatus<V1beta1ImageRecipeStatus>
 {
     public const string KubeApiVersion = "v1beta1";

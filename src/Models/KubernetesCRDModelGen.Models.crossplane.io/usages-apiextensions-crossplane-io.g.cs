@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apiextensions.crossplane.io;
+/// <summary>Reference to the resource.</summary>
 public partial class V1alpha1UsageSpecByResourceRef
 {
     /// <summary>Name of the referent.</summary>
@@ -15,6 +16,7 @@ public partial class V1alpha1UsageSpecByResourceRef
     public string Name { get; set; }
 }
 
+/// <summary>Selector to the resource. This field will be ignored if ResourceRef is set.</summary>
 public partial class V1alpha1UsageSpecByResourceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -26,6 +28,7 @@ public partial class V1alpha1UsageSpecByResourceSelector
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>By is the resource that is "using the other resource".</summary>
 public partial class V1alpha1UsageSpecBy
 {
     /// <summary>API version of the referent.</summary>
@@ -45,6 +48,7 @@ public partial class V1alpha1UsageSpecBy
     public V1alpha1UsageSpecByResourceSelector? ResourceSelector { get; set; }
 }
 
+/// <summary>Reference to the resource.</summary>
 public partial class V1alpha1UsageSpecOfResourceRef
 {
     /// <summary>Name of the referent.</summary>
@@ -52,6 +56,7 @@ public partial class V1alpha1UsageSpecOfResourceRef
     public string Name { get; set; }
 }
 
+/// <summary>Selector to the resource. This field will be ignored if ResourceRef is set.</summary>
 public partial class V1alpha1UsageSpecOfResourceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -63,6 +68,7 @@ public partial class V1alpha1UsageSpecOfResourceSelector
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>Of is the resource that is "being used".</summary>
 public partial class V1alpha1UsageSpecOf
 {
     /// <summary>API version of the referent.</summary>
@@ -82,6 +88,7 @@ public partial class V1alpha1UsageSpecOf
     public V1alpha1UsageSpecOfResourceSelector? ResourceSelector { get; set; }
 }
 
+/// <summary>UsageSpec defines the desired state of Usage.</summary>
 public partial class V1alpha1UsageSpec
 {
     /// <summary>By is the resource that is "using the other resource".</summary>
@@ -101,6 +108,7 @@ public partial class V1alpha1UsageSpec
     public bool? ReplayDeletion { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1alpha1UsageStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -128,6 +136,7 @@ public partial class V1alpha1UsageStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>UsageStatus defines the observed state of Usage.</summary>
 public partial class V1alpha1UsageStatus
 {
     /// <summary>Conditions of the resource.</summary>
@@ -136,6 +145,7 @@ public partial class V1alpha1UsageStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>A Usage defines a deletion blocking relationship between two resources.   Usages prevent accidental deletion of a single resource or deletion of resources with dependent resources.   Read the Crossplane documentation for [more information about Compositions](https://docs.crossplane.io/latest/concepts/usages).</summary>
 public partial class V1alpha1Usage : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1UsageSpec>, IStatus<V1alpha1UsageStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

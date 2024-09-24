@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.eventhub.azure.com;
+/// <summary>ClusterArmReference: Cluster ARM ID of the Namespace.</summary>
 public partial class V1api20211101storageNamespaceSpecClusterArmReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -27,6 +28,7 @@ public partial class V1api20211101storageNamespaceSpecClusterArmReference
     public string? Name { get; set; }
 }
 
+/// <summary>UserAssignedIdentityReference: ARM ID of user Identity selected for encryption</summary>
 public partial class V1api20211101storageNamespaceSpecEncryptionKeyVaultPropertiesIdentityUserAssignedIdentityReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -46,6 +48,7 @@ public partial class V1api20211101storageNamespaceSpecEncryptionKeyVaultProperti
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.UserAssignedIdentityProperties</summary>
 public partial class V1api20211101storageNamespaceSpecEncryptionKeyVaultPropertiesIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -57,6 +60,7 @@ public partial class V1api20211101storageNamespaceSpecEncryptionKeyVaultProperti
     public V1api20211101storageNamespaceSpecEncryptionKeyVaultPropertiesIdentityUserAssignedIdentityReference? UserAssignedIdentityReference { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.KeyVaultProperties Properties to configure keyVault Properties</summary>
 public partial class V1api20211101storageNamespaceSpecEncryptionKeyVaultProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -80,6 +84,7 @@ public partial class V1api20211101storageNamespaceSpecEncryptionKeyVaultProperti
     public string? KeyVersion { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.Encryption Properties to configure Encryption</summary>
 public partial class V1api20211101storageNamespaceSpecEncryption
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -99,6 +104,7 @@ public partial class V1api20211101storageNamespaceSpecEncryption
     public bool? RequireInfrastructureEncryption { get; set; }
 }
 
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 public partial class V1api20211101storageNamespaceSpecIdentityUserAssignedIdentitiesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -118,6 +124,7 @@ public partial class V1api20211101storageNamespaceSpecIdentityUserAssignedIdenti
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
 public partial class V1api20211101storageNamespaceSpecIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -129,6 +136,7 @@ public partial class V1api20211101storageNamespaceSpecIdentityUserAssignedIdenti
     public V1api20211101storageNamespaceSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.Identity Properties to configure Identity for Bring your Own Keys</summary>
 public partial class V1api20211101storageNamespaceSpecIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -144,6 +152,7 @@ public partial class V1api20211101storageNamespaceSpecIdentity
     public IList<V1api20211101storageNamespaceSpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20211101storageNamespaceSpecOperatorSpecSecretsPrimaryConnectionString
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -155,6 +164,7 @@ public partial class V1api20211101storageNamespaceSpecOperatorSpecSecretsPrimary
     public string Name { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20211101storageNamespaceSpecOperatorSpecSecretsPrimaryKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -166,6 +176,7 @@ public partial class V1api20211101storageNamespaceSpecOperatorSpecSecretsPrimary
     public string Name { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20211101storageNamespaceSpecOperatorSpecSecretsSecondaryConnectionString
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -177,6 +188,7 @@ public partial class V1api20211101storageNamespaceSpecOperatorSpecSecretsSeconda
     public string Name { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20211101storageNamespaceSpecOperatorSpecSecretsSecondaryKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -188,6 +200,7 @@ public partial class V1api20211101storageNamespaceSpecOperatorSpecSecretsSeconda
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.NamespaceOperatorSecrets</summary>
 public partial class V1api20211101storageNamespaceSpecOperatorSpecSecrets
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -211,6 +224,7 @@ public partial class V1api20211101storageNamespaceSpecOperatorSpecSecrets
     public V1api20211101storageNamespaceSpecOperatorSpecSecretsSecondaryKey? SecondaryKey { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.NamespaceOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 public partial class V1api20211101storageNamespaceSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -222,6 +236,7 @@ public partial class V1api20211101storageNamespaceSpecOperatorSpec
     public V1api20211101storageNamespaceSpecOperatorSpecSecrets? Secrets { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20211101storageNamespaceSpecOwner
 {
     /// <summary></summary>
@@ -233,6 +248,7 @@ public partial class V1api20211101storageNamespaceSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.Sku SKU parameters supplied to the create namespace operation</summary>
 public partial class V1api20211101storageNamespaceSpecSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -252,6 +268,7 @@ public partial class V1api20211101storageNamespaceSpecSku
     public string? Tier { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.Namespace_Spec</summary>
 public partial class V1api20211101storageNamespaceSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -323,6 +340,7 @@ public partial class V1api20211101storageNamespaceSpec
     public bool? ZoneRedundant { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20211101storageNamespaceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -354,6 +372,7 @@ public partial class V1api20211101storageNamespaceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.UserAssignedIdentityProperties_STATUS</summary>
 public partial class V1api20211101storageNamespaceStatusEncryptionKeyVaultPropertiesIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -365,6 +384,7 @@ public partial class V1api20211101storageNamespaceStatusEncryptionKeyVaultProper
     public string? UserAssignedIdentity { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.KeyVaultProperties_STATUS Properties to configure keyVault Properties</summary>
 public partial class V1api20211101storageNamespaceStatusEncryptionKeyVaultProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -388,6 +408,7 @@ public partial class V1api20211101storageNamespaceStatusEncryptionKeyVaultProper
     public string? KeyVersion { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.Encryption_STATUS Properties to configure Encryption</summary>
 public partial class V1api20211101storageNamespaceStatusEncryption
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -407,6 +428,7 @@ public partial class V1api20211101storageNamespaceStatusEncryption
     public bool? RequireInfrastructureEncryption { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.UserAssignedIdentity_STATUS Recognized Dictionary value.</summary>
 public partial class V1api20211101storageNamespaceStatusIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -422,6 +444,7 @@ public partial class V1api20211101storageNamespaceStatusIdentityUserAssignedIden
     public string? PrincipalId { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.Identity_STATUS Properties to configure Identity for Bring your Own Keys</summary>
 public partial class V1api20211101storageNamespaceStatusIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -445,6 +468,7 @@ public partial class V1api20211101storageNamespaceStatusIdentity
     public IDictionary<string, V1api20211101storageNamespaceStatusIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.PrivateEndpointConnection_STATUS Properties of the PrivateEndpointConnection.</summary>
 public partial class V1api20211101storageNamespaceStatusPrivateEndpointConnections
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -456,6 +480,7 @@ public partial class V1api20211101storageNamespaceStatusPrivateEndpointConnectio
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.Sku_STATUS SKU parameters supplied to the create namespace operation</summary>
 public partial class V1api20211101storageNamespaceStatusSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -475,6 +500,7 @@ public partial class V1api20211101storageNamespaceStatusSku
     public string? Tier { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 public partial class V1api20211101storageNamespaceStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -506,6 +532,7 @@ public partial class V1api20211101storageNamespaceStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
+/// <summary>Storage version of v1api20211101.Namespace_STATUS</summary>
 public partial class V1api20211101storageNamespaceStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -610,6 +637,7 @@ public partial class V1api20211101storageNamespaceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20211101.Namespace Generator information: - Generated from: /eventhub/resource-manager/Microsoft.EventHub/stable/2021-11-01/namespaces-preview.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}</summary>
 public partial class V1api20211101storageNamespace : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20211101storageNamespaceSpec>, IStatus<V1api20211101storageNamespaceStatus>
 {
     public const string KubeApiVersion = "v1api20211101storage";

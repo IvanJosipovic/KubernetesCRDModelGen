@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.azure.com;
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a storage.azure.com/StorageAccount resource</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecOwner
 {
     /// <summary></summary>
@@ -19,6 +20,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecOwne
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.DateAfterModification Object to define the base blob action conditions. Properties daysAfterModificationGreaterThan, daysAfterLastAccessTimeGreaterThan and daysAfterCreationGreaterThan are mutually exclusive. The daysAfterLastTierChangeGreaterThan property is only applicable for tierToArchive actions which requires daysAfterModificationGreaterThan to be set, also it cannot be used in conjunction with daysAfterLastAccessTimeGreaterThan or daysAfterCreationGreaterThan.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsBaseBlobDelete
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -42,6 +44,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     public int? DaysAfterModificationGreaterThan { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.DateAfterModification Object to define the base blob action conditions. Properties daysAfterModificationGreaterThan, daysAfterLastAccessTimeGreaterThan and daysAfterCreationGreaterThan are mutually exclusive. The daysAfterLastTierChangeGreaterThan property is only applicable for tierToArchive actions which requires daysAfterModificationGreaterThan to be set, also it cannot be used in conjunction with daysAfterLastAccessTimeGreaterThan or daysAfterCreationGreaterThan.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsBaseBlobTierToArchive
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -65,6 +68,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     public int? DaysAfterModificationGreaterThan { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.DateAfterModification Object to define the base blob action conditions. Properties daysAfterModificationGreaterThan, daysAfterLastAccessTimeGreaterThan and daysAfterCreationGreaterThan are mutually exclusive. The daysAfterLastTierChangeGreaterThan property is only applicable for tierToArchive actions which requires daysAfterModificationGreaterThan to be set, also it cannot be used in conjunction with daysAfterLastAccessTimeGreaterThan or daysAfterCreationGreaterThan.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsBaseBlobTierToCold
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -88,6 +92,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     public int? DaysAfterModificationGreaterThan { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.DateAfterModification Object to define the base blob action conditions. Properties daysAfterModificationGreaterThan, daysAfterLastAccessTimeGreaterThan and daysAfterCreationGreaterThan are mutually exclusive. The daysAfterLastTierChangeGreaterThan property is only applicable for tierToArchive actions which requires daysAfterModificationGreaterThan to be set, also it cannot be used in conjunction with daysAfterLastAccessTimeGreaterThan or daysAfterCreationGreaterThan.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsBaseBlobTierToCool
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -111,6 +116,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     public int? DaysAfterModificationGreaterThan { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.DateAfterModification Object to define the base blob action conditions. Properties daysAfterModificationGreaterThan, daysAfterLastAccessTimeGreaterThan and daysAfterCreationGreaterThan are mutually exclusive. The daysAfterLastTierChangeGreaterThan property is only applicable for tierToArchive actions which requires daysAfterModificationGreaterThan to be set, also it cannot be used in conjunction with daysAfterLastAccessTimeGreaterThan or daysAfterCreationGreaterThan.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsBaseBlobTierToHot
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -134,6 +140,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     public int? DaysAfterModificationGreaterThan { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.ManagementPolicyBaseBlob Management policy action for base blob.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsBaseBlob
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -165,6 +172,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     public V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsBaseBlobTierToHot? TierToHot { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.DateAfterCreation Object to define snapshot and version action conditions.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsSnapshotDelete
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -180,6 +188,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     public int? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.DateAfterCreation Object to define snapshot and version action conditions.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsSnapshotTierToArchive
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -195,6 +204,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     public int? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.DateAfterCreation Object to define snapshot and version action conditions.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsSnapshotTierToCold
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -210,6 +220,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     public int? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.DateAfterCreation Object to define snapshot and version action conditions.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsSnapshotTierToCool
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -225,6 +236,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     public int? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.DateAfterCreation Object to define snapshot and version action conditions.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsSnapshotTierToHot
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -240,6 +252,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     public int? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.ManagementPolicySnapShot Management policy action for snapshot.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsSnapshot
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -267,6 +280,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     public V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsSnapshotTierToHot? TierToHot { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.DateAfterCreation Object to define snapshot and version action conditions.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsVersionDelete
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -282,6 +296,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     public int? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.DateAfterCreation Object to define snapshot and version action conditions.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsVersionTierToArchive
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -297,6 +312,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     public int? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.DateAfterCreation Object to define snapshot and version action conditions.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsVersionTierToCold
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -312,6 +328,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     public int? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.DateAfterCreation Object to define snapshot and version action conditions.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsVersionTierToCool
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -327,6 +344,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     public int? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.DateAfterCreation Object to define snapshot and version action conditions.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsVersionTierToHot
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -342,6 +360,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     public int? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.ManagementPolicyVersion Management policy action for blob version.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsVersion
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -369,6 +388,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     public V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsVersionTierToHot? TierToHot { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.ManagementPolicyAction Actions are applied to the filtered blobs when the execution condition is met.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -388,6 +408,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     public V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionActionsVersion? Version { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.TagFilter Blob index tag based filtering for blob objects</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionFiltersBlobIndexMatch
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -407,6 +428,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     public string? Value { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.ManagementPolicyFilter Filters limit rule actions to a subset of blobs within the storage account. If multiple filters are defined, a logical AND is performed on all filters.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionFilters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -426,6 +448,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     public IList<string>? PrefixMatch { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.ManagementPolicyDefinition An object that defines the Lifecycle rule. Each definition is made up with a filters set and an actions set.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinition
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -441,6 +464,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     public V1api20230101storageStorageAccountsManagementPolicySpecPolicyRulesDefinitionFilters? Filters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.ManagementPolicyRule An object that wraps the Lifecycle rule. Each rule is uniquely defined by name.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicyRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -464,6 +488,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.ManagementPolicySchema The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicySpecPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -475,6 +500,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     public IList<V1api20230101storageStorageAccountsManagementPolicySpecPolicyRules>? Rules { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.StorageAccounts_ManagementPolicy_Spec</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicySpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -494,6 +520,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpec
     public V1api20230101storageStorageAccountsManagementPolicySpecPolicy? Policy { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -525,6 +552,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusCo
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.DateAfterModification_STATUS Object to define the base blob action conditions. Properties daysAfterModificationGreaterThan, daysAfterLastAccessTimeGreaterThan and daysAfterCreationGreaterThan are mutually exclusive. The daysAfterLastTierChangeGreaterThan property is only applicable for tierToArchive actions which requires daysAfterModificationGreaterThan to be set, also it cannot be used in conjunction with daysAfterLastAccessTimeGreaterThan or daysAfterCreationGreaterThan.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsBaseBlobDelete
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -548,6 +576,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     public double? DaysAfterModificationGreaterThan { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.DateAfterModification_STATUS Object to define the base blob action conditions. Properties daysAfterModificationGreaterThan, daysAfterLastAccessTimeGreaterThan and daysAfterCreationGreaterThan are mutually exclusive. The daysAfterLastTierChangeGreaterThan property is only applicable for tierToArchive actions which requires daysAfterModificationGreaterThan to be set, also it cannot be used in conjunction with daysAfterLastAccessTimeGreaterThan or daysAfterCreationGreaterThan.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsBaseBlobTierToArchive
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -571,6 +600,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     public double? DaysAfterModificationGreaterThan { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.DateAfterModification_STATUS Object to define the base blob action conditions. Properties daysAfterModificationGreaterThan, daysAfterLastAccessTimeGreaterThan and daysAfterCreationGreaterThan are mutually exclusive. The daysAfterLastTierChangeGreaterThan property is only applicable for tierToArchive actions which requires daysAfterModificationGreaterThan to be set, also it cannot be used in conjunction with daysAfterLastAccessTimeGreaterThan or daysAfterCreationGreaterThan.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsBaseBlobTierToCold
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -594,6 +624,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     public double? DaysAfterModificationGreaterThan { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.DateAfterModification_STATUS Object to define the base blob action conditions. Properties daysAfterModificationGreaterThan, daysAfterLastAccessTimeGreaterThan and daysAfterCreationGreaterThan are mutually exclusive. The daysAfterLastTierChangeGreaterThan property is only applicable for tierToArchive actions which requires daysAfterModificationGreaterThan to be set, also it cannot be used in conjunction with daysAfterLastAccessTimeGreaterThan or daysAfterCreationGreaterThan.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsBaseBlobTierToCool
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -617,6 +648,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     public double? DaysAfterModificationGreaterThan { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.DateAfterModification_STATUS Object to define the base blob action conditions. Properties daysAfterModificationGreaterThan, daysAfterLastAccessTimeGreaterThan and daysAfterCreationGreaterThan are mutually exclusive. The daysAfterLastTierChangeGreaterThan property is only applicable for tierToArchive actions which requires daysAfterModificationGreaterThan to be set, also it cannot be used in conjunction with daysAfterLastAccessTimeGreaterThan or daysAfterCreationGreaterThan.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsBaseBlobTierToHot
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -640,6 +672,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     public double? DaysAfterModificationGreaterThan { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.ManagementPolicyBaseBlob_STATUS Management policy action for base blob.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsBaseBlob
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -671,6 +704,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     public V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsBaseBlobTierToHot? TierToHot { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.DateAfterCreation_STATUS Object to define snapshot and version action conditions.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsSnapshotDelete
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -686,6 +720,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     public double? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.DateAfterCreation_STATUS Object to define snapshot and version action conditions.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsSnapshotTierToArchive
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -701,6 +736,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     public double? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.DateAfterCreation_STATUS Object to define snapshot and version action conditions.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsSnapshotTierToCold
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -716,6 +752,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     public double? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.DateAfterCreation_STATUS Object to define snapshot and version action conditions.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsSnapshotTierToCool
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -731,6 +768,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     public double? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.DateAfterCreation_STATUS Object to define snapshot and version action conditions.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsSnapshotTierToHot
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -746,6 +784,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     public double? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.ManagementPolicySnapShot_STATUS Management policy action for snapshot.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsSnapshot
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -773,6 +812,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     public V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsSnapshotTierToHot? TierToHot { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.DateAfterCreation_STATUS Object to define snapshot and version action conditions.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsVersionDelete
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -788,6 +828,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     public double? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.DateAfterCreation_STATUS Object to define snapshot and version action conditions.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsVersionTierToArchive
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -803,6 +844,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     public double? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.DateAfterCreation_STATUS Object to define snapshot and version action conditions.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsVersionTierToCold
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -818,6 +860,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     public double? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.DateAfterCreation_STATUS Object to define snapshot and version action conditions.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsVersionTierToCool
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -833,6 +876,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     public double? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.DateAfterCreation_STATUS Object to define snapshot and version action conditions.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsVersionTierToHot
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -848,6 +892,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     public double? DaysAfterLastTierChangeGreaterThan { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.ManagementPolicyVersion_STATUS Management policy action for blob version.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsVersion
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -875,6 +920,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     public V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsVersionTierToHot? TierToHot { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.ManagementPolicyAction_STATUS Actions are applied to the filtered blobs when the execution condition is met.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -894,6 +940,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     public V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionActionsVersion? Version { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.TagFilter_STATUS Blob index tag based filtering for blob objects</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionFiltersBlobIndexMatch
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -913,6 +960,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     public string? Value { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.ManagementPolicyFilter_STATUS Filters limit rule actions to a subset of blobs within the storage account. If multiple filters are defined, a logical AND is performed on all filters.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionFilters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -932,6 +980,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     public IList<string>? PrefixMatch { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.ManagementPolicyDefinition_STATUS An object that defines the Lifecycle rule. Each definition is made up with a filters set and an actions set.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinition
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -947,6 +996,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     public V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRulesDefinitionFilters? Filters { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.ManagementPolicyRule_STATUS An object that wraps the Lifecycle rule. Each rule is uniquely defined by name.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -970,6 +1020,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.ManagementPolicySchema_STATUS The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -981,6 +1032,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     public IList<V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRules>? Rules { get; set; }
 }
 
+/// <summary>Storage version of v1api20230101.StorageAccounts_ManagementPolicy_STATUS</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -1013,6 +1065,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20230101.StorageAccountsManagementPolicy Generator information: - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2023-01-01/storage.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/managementPolicies/default</summary>
 public partial class V1api20230101storageStorageAccountsManagementPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230101storageStorageAccountsManagementPolicySpec>, IStatus<V1api20230101storageStorageAccountsManagementPolicyStatus>
 {
     public const string KubeApiVersion = "v1api20230101storage";

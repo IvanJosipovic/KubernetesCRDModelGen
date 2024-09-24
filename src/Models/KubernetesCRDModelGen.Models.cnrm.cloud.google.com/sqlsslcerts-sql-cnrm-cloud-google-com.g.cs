@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.cnrm.cloud.google.com;
+/// <summary>The Cloud SQL instance.</summary>
 public partial class V1beta1SQLSSLCertSpecInstanceRef
 {
     /// <summary>Allowed value: The `name` field of a `SQLInstance` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1SQLSSLCertSpecInstanceRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLSSLCertSpec
 {
     /// <summary>Immutable. The common name to be used in the certificate to identify the client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be created.</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1SQLSSLCertSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLSSLCertStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -61,6 +64,7 @@ public partial class V1beta1SQLSSLCertStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLSSLCertStatus
 {
     /// <summary>The actual certificate data for this client certificate.</summary>
@@ -101,6 +105,7 @@ public partial class V1beta1SQLSSLCertStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1SQLSSLCert : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SQLSSLCertSpec>, IStatus<V1beta1SQLSSLCertStatus>
 {
     public const string KubeApiVersion = "v1beta1";

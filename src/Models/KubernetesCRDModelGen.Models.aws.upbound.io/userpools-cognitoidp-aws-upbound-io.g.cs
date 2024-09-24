@@ -18,6 +18,7 @@ public enum V1beta1UserPoolSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecForProviderAccountRecoverySettingRecoveryMechanism
 {
     /// <summary>Name of the user pool.</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1UserPoolSpecForProviderAccountRecoverySettingRecover
     public double? Priority { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecForProviderAccountRecoverySetting
 {
     /// <summary>List of Account Recovery Options of the following structure:</summary>
@@ -36,6 +38,7 @@ public partial class V1beta1UserPoolSpecForProviderAccountRecoverySetting
     public IList<V1beta1UserPoolSpecForProviderAccountRecoverySettingRecoveryMechanism>? RecoveryMechanism { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecForProviderAdminCreateUserConfigInviteMessageTemplate
 {
     /// <summary>Message template for email messages. Must contain {username} and {####} placeholders, for username and temporary password, respectively.</summary>
@@ -51,6 +54,7 @@ public partial class V1beta1UserPoolSpecForProviderAdminCreateUserConfigInviteMe
     public string? SmsMessage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecForProviderAdminCreateUserConfig
 {
     /// <summary>Set to True if only the administrator is allowed to create user profiles. Set to False if users can sign themselves up via an app.</summary>
@@ -62,6 +66,7 @@ public partial class V1beta1UserPoolSpecForProviderAdminCreateUserConfig
     public IList<V1beta1UserPoolSpecForProviderAdminCreateUserConfigInviteMessageTemplate>? InviteMessageTemplate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecForProviderDeviceConfiguration
 {
     /// <summary>Whether a challenge is required on a new device. Only applicable to a new device.</summary>
@@ -73,6 +78,7 @@ public partial class V1beta1UserPoolSpecForProviderDeviceConfiguration
     public bool? DeviceOnlyRememberedOnUserPrompt { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecForProviderEmailConfiguration
 {
     /// <summary>Email configuration set name from SES.</summary>
@@ -116,6 +122,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallengeRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallengeRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -129,6 +136,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallen
     public V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallengeRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in lambda to populate createAuthChallenge.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallengeRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -160,6 +168,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallengeSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallengeSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -173,6 +182,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallen
     public V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallengeSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in lambda to populate createAuthChallenge.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallengeSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -208,6 +218,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSenderLambdaArn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSenderLambdaArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -221,6 +232,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSender
     public V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSenderLambdaArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in lambda to populate lambdaArn.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSenderLambdaArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -252,6 +264,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSenderLambdaArn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSenderLambdaArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -265,6 +278,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSender
     public V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSenderLambdaArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in lambda to populate lambdaArn.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSenderLambdaArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -280,6 +294,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSender
     public V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSenderLambdaArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomEmailSender
 {
     /// <summary>The Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send email notifications to users.</summary>
@@ -319,6 +334,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigCustomMessageRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomMessageRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -332,6 +348,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomMessageRefP
     public V1beta1UserPoolSpecForProviderLambdaConfigCustomMessageRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in lambda to populate customMessage.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomMessageRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -363,6 +380,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigCustomMessageSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomMessageSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -376,6 +394,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomMessageSele
     public V1beta1UserPoolSpecForProviderLambdaConfigCustomMessageSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in lambda to populate customMessage.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomMessageSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -411,6 +430,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLambdaArnRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLambdaArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -424,6 +444,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLa
     public V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLambdaArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in lambda to populate lambdaArn.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLambdaArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -455,6 +476,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLambdaArnSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLambdaArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -468,6 +490,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLa
     public V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLambdaArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in lambda to populate lambdaArn.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLambdaArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -483,6 +506,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLa
     public V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSenderLambdaArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCustomSmsSender
 {
     /// <summary>The Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send SMS notifications to users.</summary>
@@ -522,6 +546,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigDefineAuthChallengeRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigDefineAuthChallengeRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -535,6 +560,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigDefineAuthChallen
     public V1beta1UserPoolSpecForProviderLambdaConfigDefineAuthChallengeRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in lambda to populate defineAuthChallenge.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigDefineAuthChallengeRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -566,6 +592,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigDefineAuthChallengeSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigDefineAuthChallengeSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -579,6 +606,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigDefineAuthChallen
     public V1beta1UserPoolSpecForProviderLambdaConfigDefineAuthChallengeSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in lambda to populate defineAuthChallenge.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigDefineAuthChallengeSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -614,6 +642,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigKmsKeyIdRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -627,6 +656,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigKmsKeyIdRefPolicy
     public V1beta1UserPoolSpecForProviderLambdaConfigKmsKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -658,6 +688,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigKmsKeyIdSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -671,6 +702,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigKmsKeyIdSelectorP
     public V1beta1UserPoolSpecForProviderLambdaConfigKmsKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -706,6 +738,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigPostAuthenticationRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostAuthenticationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -719,6 +752,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostAuthenticatio
     public V1beta1UserPoolSpecForProviderLambdaConfigPostAuthenticationRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in lambda to populate postAuthentication.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostAuthenticationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -750,6 +784,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigPostAuthenticationSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostAuthenticationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -763,6 +798,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostAuthenticatio
     public V1beta1UserPoolSpecForProviderLambdaConfigPostAuthenticationSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in lambda to populate postAuthentication.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostAuthenticationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -798,6 +834,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigPostConfirmationRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostConfirmationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -811,6 +848,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostConfirmationR
     public V1beta1UserPoolSpecForProviderLambdaConfigPostConfirmationRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in lambda to populate postConfirmation.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostConfirmationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -842,6 +880,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigPostConfirmationSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostConfirmationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -855,6 +894,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostConfirmationS
     public V1beta1UserPoolSpecForProviderLambdaConfigPostConfirmationSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in lambda to populate postConfirmation.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPostConfirmationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -890,6 +930,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigPreAuthenticationRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreAuthenticationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -903,6 +944,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreAuthentication
     public V1beta1UserPoolSpecForProviderLambdaConfigPreAuthenticationRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in lambda to populate preAuthentication.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreAuthenticationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -934,6 +976,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigPreAuthenticationSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreAuthenticationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -947,6 +990,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreAuthentication
     public V1beta1UserPoolSpecForProviderLambdaConfigPreAuthenticationSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in lambda to populate preAuthentication.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreAuthenticationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -982,6 +1026,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -995,6 +1040,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpRefPolic
     public V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in lambda to populate preSignUp.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1026,6 +1072,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1039,6 +1086,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpSelector
     public V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in lambda to populate preSignUp.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1054,6 +1102,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpSelector
     public V1beta1UserPoolSpecForProviderLambdaConfigPreSignUpSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGenerationConfig
 {
     /// <summary>The Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send SMS notifications to users.</summary>
@@ -1085,6 +1134,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGenerationRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGenerationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1098,6 +1148,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGeneratio
     public V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGenerationRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in lambda to populate preTokenGeneration.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGenerationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1129,6 +1180,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGenerationSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGenerationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1142,6 +1194,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGeneratio
     public V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGenerationSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in lambda to populate preTokenGeneration.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGenerationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1177,6 +1230,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigUserMigrationRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigUserMigrationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1190,6 +1244,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigUserMigrationRefP
     public V1beta1UserPoolSpecForProviderLambdaConfigUserMigrationRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in lambda to populate userMigration.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigUserMigrationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1221,6 +1276,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigUserMigrationSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigUserMigrationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1234,6 +1290,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigUserMigrationSele
     public V1beta1UserPoolSpecForProviderLambdaConfigUserMigrationSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in lambda to populate userMigration.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigUserMigrationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1269,6 +1326,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallengeRespons
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallengeResponseRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1282,6 +1340,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallen
     public V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallengeResponseRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in lambda to populate verifyAuthChallengeResponse.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallengeResponseRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1313,6 +1372,7 @@ public enum V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallengeRespons
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallengeResponseSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1326,6 +1386,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallen
     public V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallengeResponseSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in lambda to populate verifyAuthChallengeResponse.</summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallengeResponseSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1341,6 +1402,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallen
     public V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallengeResponseSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecForProviderLambdaConfig
 {
     /// <summary>ARN of the lambda creating an authentication challenge.</summary>
@@ -1488,6 +1550,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfig
     public V1beta1UserPoolSpecForProviderLambdaConfigVerifyAuthChallengeResponseSelector? VerifyAuthChallengeResponseSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecForProviderPasswordPolicy
 {
     /// <summary>Minimum length of the password policy that you have set.</summary>
@@ -1515,6 +1578,7 @@ public partial class V1beta1UserPoolSpecForProviderPasswordPolicy
     public double? TemporaryPasswordValidityDays { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecForProviderSchemaNumberAttributeConstraints
 {
     /// <summary>Maximum value of an attribute that is of the number data type.</summary>
@@ -1526,6 +1590,7 @@ public partial class V1beta1UserPoolSpecForProviderSchemaNumberAttributeConstrai
     public string? MinValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecForProviderSchemaStringAttributeConstraints
 {
     /// <summary>Maximum length of an attribute value of the string type.</summary>
@@ -1537,6 +1602,7 @@ public partial class V1beta1UserPoolSpecForProviderSchemaStringAttributeConstrai
     public string? MinLength { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecForProviderSchema
 {
     /// <summary>Attribute data type. Must be one of Boolean, Number, String, DateTime.</summary>
@@ -1588,6 +1654,7 @@ public enum V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1601,6 +1668,7 @@ public partial class V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnR
     public V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate snsCallerArn.</summary>
 public partial class V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1632,6 +1700,7 @@ public enum V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1645,6 +1714,7 @@ public partial class V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnS
     public V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate snsCallerArn.</summary>
 public partial class V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1660,6 +1730,7 @@ public partial class V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnS
     public V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecForProviderSmsConfiguration
 {
     /// <summary>External ID used in IAM role trust relationships. For more information about using external IDs, see How to Use an External ID When Granting Access to Your AWS Resources to a Third Party.</summary>
@@ -1683,6 +1754,7 @@ public partial class V1beta1UserPoolSpecForProviderSmsConfiguration
     public string? SnsRegion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecForProviderSoftwareTokenMfaConfiguration
 {
     /// <summary>Boolean whether to enable software token Multi-Factor (MFA) tokens, such as Time-based One-Time Password (TOTP). To disable software token MFA When sms_configuration is not present, the mfa_configuration argument must be set to OFF and the software_token_mfa_configuration configuration block must be fully removed.</summary>
@@ -1690,6 +1762,7 @@ public partial class V1beta1UserPoolSpecForProviderSoftwareTokenMfaConfiguration
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecForProviderUserAttributeUpdateSettings
 {
     /// <summary>A list of attributes requiring verification before update. If set, the provided value(s) must also be set in auto_verified_attributes. Valid values: email, phone_number.</summary>
@@ -1697,6 +1770,7 @@ public partial class V1beta1UserPoolSpecForProviderUserAttributeUpdateSettings
     public IList<string>? AttributesRequireVerificationBeforeUpdate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecForProviderUserPoolAddOns
 {
     /// <summary>Mode for advanced security, must be one of OFF, AUDIT or ENFORCED.</summary>
@@ -1704,6 +1778,7 @@ public partial class V1beta1UserPoolSpecForProviderUserPoolAddOns
     public string? AdvancedSecurityMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecForProviderUsernameConfiguration
 {
     /// <summary>Whether username case sensitivity will be applied for all users in the user pool through Cognito APIs.</summary>
@@ -1711,6 +1786,7 @@ public partial class V1beta1UserPoolSpecForProviderUsernameConfiguration
     public bool? CaseSensitive { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecForProviderVerificationMessageTemplate
 {
     /// <summary>Default email option. Must be either CONFIRM_WITH_CODE or CONFIRM_WITH_LINK. Defaults to CONFIRM_WITH_CODE.</summary>
@@ -1738,6 +1814,7 @@ public partial class V1beta1UserPoolSpecForProviderVerificationMessageTemplate
     public string? SmsMessage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecForProvider
 {
     /// <summary>Configuration block to define which verified available method a user can use to recover their forgotten password. Detailed below.</summary>
@@ -1841,6 +1918,7 @@ public partial class V1beta1UserPoolSpecForProvider
     public IList<V1beta1UserPoolSpecForProviderVerificationMessageTemplate>? VerificationMessageTemplate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecInitProviderAccountRecoverySettingRecoveryMechanism
 {
     /// <summary>Name of the user pool.</summary>
@@ -1852,6 +1930,7 @@ public partial class V1beta1UserPoolSpecInitProviderAccountRecoverySettingRecove
     public double? Priority { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecInitProviderAccountRecoverySetting
 {
     /// <summary>List of Account Recovery Options of the following structure:</summary>
@@ -1859,6 +1938,7 @@ public partial class V1beta1UserPoolSpecInitProviderAccountRecoverySetting
     public IList<V1beta1UserPoolSpecInitProviderAccountRecoverySettingRecoveryMechanism>? RecoveryMechanism { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecInitProviderAdminCreateUserConfigInviteMessageTemplate
 {
     /// <summary>Message template for email messages. Must contain {username} and {####} placeholders, for username and temporary password, respectively.</summary>
@@ -1874,6 +1954,7 @@ public partial class V1beta1UserPoolSpecInitProviderAdminCreateUserConfigInviteM
     public string? SmsMessage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecInitProviderAdminCreateUserConfig
 {
     /// <summary>Set to True if only the administrator is allowed to create user profiles. Set to False if users can sign themselves up via an app.</summary>
@@ -1885,6 +1966,7 @@ public partial class V1beta1UserPoolSpecInitProviderAdminCreateUserConfig
     public IList<V1beta1UserPoolSpecInitProviderAdminCreateUserConfigInviteMessageTemplate>? InviteMessageTemplate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecInitProviderDeviceConfiguration
 {
     /// <summary>Whether a challenge is required on a new device. Only applicable to a new device.</summary>
@@ -1896,6 +1978,7 @@ public partial class V1beta1UserPoolSpecInitProviderDeviceConfiguration
     public bool? DeviceOnlyRememberedOnUserPrompt { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecInitProviderEmailConfiguration
 {
     /// <summary>Email configuration set name from SES.</summary>
@@ -1939,6 +2022,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigCreateAuthChallengeRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCreateAuthChallengeRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1952,6 +2036,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCreateAuthChalle
     public V1beta1UserPoolSpecInitProviderLambdaConfigCreateAuthChallengeRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in lambda to populate createAuthChallenge.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCreateAuthChallengeRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1983,6 +2068,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigCreateAuthChallengeSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCreateAuthChallengeSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1996,6 +2082,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCreateAuthChalle
     public V1beta1UserPoolSpecInitProviderLambdaConfigCreateAuthChallengeSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in lambda to populate createAuthChallenge.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCreateAuthChallengeSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2031,6 +2118,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSenderLambdaAr
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSenderLambdaArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2044,6 +2132,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSende
     public V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSenderLambdaArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in lambda to populate lambdaArn.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSenderLambdaArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2075,6 +2164,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSenderLambdaAr
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSenderLambdaArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2088,6 +2178,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSende
     public V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSenderLambdaArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in lambda to populate lambdaArn.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSenderLambdaArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2103,6 +2194,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSende
     public V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSenderLambdaArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomEmailSender
 {
     /// <summary>The Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send email notifications to users.</summary>
@@ -2142,6 +2234,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigCustomMessageRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomMessageRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2155,6 +2248,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomMessageRef
     public V1beta1UserPoolSpecInitProviderLambdaConfigCustomMessageRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in lambda to populate customMessage.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomMessageRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2186,6 +2280,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigCustomMessageSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomMessageSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2199,6 +2294,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomMessageSel
     public V1beta1UserPoolSpecInitProviderLambdaConfigCustomMessageSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in lambda to populate customMessage.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomMessageSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2234,6 +2330,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderLambdaArnR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderLambdaArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2247,6 +2344,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderL
     public V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderLambdaArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in lambda to populate lambdaArn.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderLambdaArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2278,6 +2376,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderLambdaArnS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderLambdaArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2291,6 +2390,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderL
     public V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderLambdaArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in lambda to populate lambdaArn.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderLambdaArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2306,6 +2406,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderL
     public V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSenderLambdaArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigCustomSmsSender
 {
     /// <summary>The Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send SMS notifications to users.</summary>
@@ -2345,6 +2446,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigDefineAuthChallengeRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigDefineAuthChallengeRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2358,6 +2460,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigDefineAuthChalle
     public V1beta1UserPoolSpecInitProviderLambdaConfigDefineAuthChallengeRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in lambda to populate defineAuthChallenge.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigDefineAuthChallengeRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2389,6 +2492,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigDefineAuthChallengeSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigDefineAuthChallengeSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2402,6 +2506,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigDefineAuthChalle
     public V1beta1UserPoolSpecInitProviderLambdaConfigDefineAuthChallengeSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in lambda to populate defineAuthChallenge.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigDefineAuthChallengeSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2437,6 +2542,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigKmsKeyIdRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2450,6 +2556,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigKmsKeyIdRefPolic
     public V1beta1UserPoolSpecInitProviderLambdaConfigKmsKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2481,6 +2588,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigKmsKeyIdSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2494,6 +2602,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigKmsKeyIdSelector
     public V1beta1UserPoolSpecInitProviderLambdaConfigKmsKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2529,6 +2638,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigPostAuthenticationRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostAuthenticationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2542,6 +2652,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostAuthenticati
     public V1beta1UserPoolSpecInitProviderLambdaConfigPostAuthenticationRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in lambda to populate postAuthentication.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostAuthenticationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2573,6 +2684,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigPostAuthenticationSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostAuthenticationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2586,6 +2698,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostAuthenticati
     public V1beta1UserPoolSpecInitProviderLambdaConfigPostAuthenticationSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in lambda to populate postAuthentication.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostAuthenticationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2621,6 +2734,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigPostConfirmationRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostConfirmationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2634,6 +2748,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostConfirmation
     public V1beta1UserPoolSpecInitProviderLambdaConfigPostConfirmationRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in lambda to populate postConfirmation.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostConfirmationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2665,6 +2780,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigPostConfirmationSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostConfirmationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2678,6 +2794,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostConfirmation
     public V1beta1UserPoolSpecInitProviderLambdaConfigPostConfirmationSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in lambda to populate postConfirmation.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPostConfirmationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2713,6 +2830,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigPreAuthenticationRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreAuthenticationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2726,6 +2844,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreAuthenticatio
     public V1beta1UserPoolSpecInitProviderLambdaConfigPreAuthenticationRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in lambda to populate preAuthentication.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreAuthenticationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2757,6 +2876,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigPreAuthenticationSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreAuthenticationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2770,6 +2890,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreAuthenticatio
     public V1beta1UserPoolSpecInitProviderLambdaConfigPreAuthenticationSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in lambda to populate preAuthentication.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreAuthenticationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2805,6 +2926,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2818,6 +2940,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpRefPoli
     public V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in lambda to populate preSignUp.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2849,6 +2972,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2862,6 +2986,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpSelecto
     public V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in lambda to populate preSignUp.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2877,6 +3002,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpSelecto
     public V1beta1UserPoolSpecInitProviderLambdaConfigPreSignUpSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerationConfig
 {
     /// <summary>The Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send SMS notifications to users.</summary>
@@ -2908,6 +3034,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerationRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2921,6 +3048,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerati
     public V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerationRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in lambda to populate preTokenGeneration.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2952,6 +3080,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerationSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2965,6 +3094,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerati
     public V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerationSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in lambda to populate preTokenGeneration.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -3000,6 +3130,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigUserMigrationRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigUserMigrationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3013,6 +3144,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigUserMigrationRef
     public V1beta1UserPoolSpecInitProviderLambdaConfigUserMigrationRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in lambda to populate userMigration.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigUserMigrationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3044,6 +3176,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigUserMigrationSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigUserMigrationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3057,6 +3190,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigUserMigrationSel
     public V1beta1UserPoolSpecInitProviderLambdaConfigUserMigrationSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in lambda to populate userMigration.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigUserMigrationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -3092,6 +3226,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChallengeRespon
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChallengeResponseRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3105,6 +3240,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChalle
     public V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChallengeResponseRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Function in lambda to populate verifyAuthChallengeResponse.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChallengeResponseRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3136,6 +3272,7 @@ public enum V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChallengeRespon
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChallengeResponseSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3149,6 +3286,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChalle
     public V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChallengeResponseSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Function in lambda to populate verifyAuthChallengeResponse.</summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChallengeResponseSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -3164,6 +3302,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChalle
     public V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChallengeResponseSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecInitProviderLambdaConfig
 {
     /// <summary>ARN of the lambda creating an authentication challenge.</summary>
@@ -3311,6 +3450,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfig
     public V1beta1UserPoolSpecInitProviderLambdaConfigVerifyAuthChallengeResponseSelector? VerifyAuthChallengeResponseSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecInitProviderPasswordPolicy
 {
     /// <summary>Minimum length of the password policy that you have set.</summary>
@@ -3338,6 +3478,7 @@ public partial class V1beta1UserPoolSpecInitProviderPasswordPolicy
     public double? TemporaryPasswordValidityDays { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecInitProviderSchemaNumberAttributeConstraints
 {
     /// <summary>Maximum value of an attribute that is of the number data type.</summary>
@@ -3349,6 +3490,7 @@ public partial class V1beta1UserPoolSpecInitProviderSchemaNumberAttributeConstra
     public string? MinValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecInitProviderSchemaStringAttributeConstraints
 {
     /// <summary>Maximum length of an attribute value of the string type.</summary>
@@ -3360,6 +3502,7 @@ public partial class V1beta1UserPoolSpecInitProviderSchemaStringAttributeConstra
     public string? MinLength { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecInitProviderSchema
 {
     /// <summary>Attribute data type. Must be one of Boolean, Number, String, DateTime.</summary>
@@ -3411,6 +3554,7 @@ public enum V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArnRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3424,6 +3568,7 @@ public partial class V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArn
     public V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate snsCallerArn.</summary>
 public partial class V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3455,6 +3600,7 @@ public enum V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArnSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3468,6 +3614,7 @@ public partial class V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArn
     public V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate snsCallerArn.</summary>
 public partial class V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -3483,6 +3630,7 @@ public partial class V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArn
     public V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecInitProviderSmsConfiguration
 {
     /// <summary>External ID used in IAM role trust relationships. For more information about using external IDs, see How to Use an External ID When Granting Access to Your AWS Resources to a Third Party.</summary>
@@ -3506,6 +3654,7 @@ public partial class V1beta1UserPoolSpecInitProviderSmsConfiguration
     public string? SnsRegion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecInitProviderSoftwareTokenMfaConfiguration
 {
     /// <summary>Boolean whether to enable software token Multi-Factor (MFA) tokens, such as Time-based One-Time Password (TOTP). To disable software token MFA When sms_configuration is not present, the mfa_configuration argument must be set to OFF and the software_token_mfa_configuration configuration block must be fully removed.</summary>
@@ -3513,6 +3662,7 @@ public partial class V1beta1UserPoolSpecInitProviderSoftwareTokenMfaConfiguratio
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecInitProviderUserAttributeUpdateSettings
 {
     /// <summary>A list of attributes requiring verification before update. If set, the provided value(s) must also be set in auto_verified_attributes. Valid values: email, phone_number.</summary>
@@ -3520,6 +3670,7 @@ public partial class V1beta1UserPoolSpecInitProviderUserAttributeUpdateSettings
     public IList<string>? AttributesRequireVerificationBeforeUpdate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecInitProviderUserPoolAddOns
 {
     /// <summary>Mode for advanced security, must be one of OFF, AUDIT or ENFORCED.</summary>
@@ -3527,6 +3678,7 @@ public partial class V1beta1UserPoolSpecInitProviderUserPoolAddOns
     public string? AdvancedSecurityMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecInitProviderUsernameConfiguration
 {
     /// <summary>Whether username case sensitivity will be applied for all users in the user pool through Cognito APIs.</summary>
@@ -3534,6 +3686,7 @@ public partial class V1beta1UserPoolSpecInitProviderUsernameConfiguration
     public bool? CaseSensitive { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolSpecInitProviderVerificationMessageTemplate
 {
     /// <summary>Default email option. Must be either CONFIRM_WITH_CODE or CONFIRM_WITH_LINK. Defaults to CONFIRM_WITH_CODE.</summary>
@@ -3561,6 +3714,7 @@ public partial class V1beta1UserPoolSpecInitProviderVerificationMessageTemplate
     public string? SmsMessage { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1UserPoolSpecInitProvider
 {
     /// <summary>Configuration block to define which verified available method a user can use to recover their forgotten password. Detailed below.</summary>
@@ -3702,6 +3856,7 @@ public enum V1beta1UserPoolSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserPoolSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3715,6 +3870,7 @@ public partial class V1beta1UserPoolSpecProviderConfigRefPolicy
     public V1beta1UserPoolSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1UserPoolSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3746,6 +3902,7 @@ public enum V1beta1UserPoolSpecPublishConnectionDetailsToConfigRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1UserPoolSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3759,6 +3916,7 @@ public partial class V1beta1UserPoolSpecPublishConnectionDetailsToConfigRefPolic
     public V1beta1UserPoolSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1UserPoolSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3770,6 +3928,7 @@ public partial class V1beta1UserPoolSpecPublishConnectionDetailsToConfigRef
     public V1beta1UserPoolSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1UserPoolSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -3785,6 +3944,7 @@ public partial class V1beta1UserPoolSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1UserPoolSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -3800,6 +3960,7 @@ public partial class V1beta1UserPoolSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1UserPoolSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -3811,6 +3972,7 @@ public partial class V1beta1UserPoolSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>UserPoolSpec defines the desired state of UserPool</summary>
 public partial class V1beta1UserPoolSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -3843,6 +4005,7 @@ public partial class V1beta1UserPoolSpec
     public V1beta1UserPoolSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolStatusAtProviderAccountRecoverySettingRecoveryMechanism
 {
     /// <summary>Name of the user pool.</summary>
@@ -3854,6 +4017,7 @@ public partial class V1beta1UserPoolStatusAtProviderAccountRecoverySettingRecove
     public double? Priority { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolStatusAtProviderAccountRecoverySetting
 {
     /// <summary>List of Account Recovery Options of the following structure:</summary>
@@ -3861,6 +4025,7 @@ public partial class V1beta1UserPoolStatusAtProviderAccountRecoverySetting
     public IList<V1beta1UserPoolStatusAtProviderAccountRecoverySettingRecoveryMechanism>? RecoveryMechanism { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolStatusAtProviderAdminCreateUserConfigInviteMessageTemplate
 {
     /// <summary>Message template for email messages. Must contain {username} and {####} placeholders, for username and temporary password, respectively.</summary>
@@ -3876,6 +4041,7 @@ public partial class V1beta1UserPoolStatusAtProviderAdminCreateUserConfigInviteM
     public string? SmsMessage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolStatusAtProviderAdminCreateUserConfig
 {
     /// <summary>Set to True if only the administrator is allowed to create user profiles. Set to False if users can sign themselves up via an app.</summary>
@@ -3887,6 +4053,7 @@ public partial class V1beta1UserPoolStatusAtProviderAdminCreateUserConfig
     public IList<V1beta1UserPoolStatusAtProviderAdminCreateUserConfigInviteMessageTemplate>? InviteMessageTemplate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolStatusAtProviderDeviceConfiguration
 {
     /// <summary>Whether a challenge is required on a new device. Only applicable to a new device.</summary>
@@ -3898,6 +4065,7 @@ public partial class V1beta1UserPoolStatusAtProviderDeviceConfiguration
     public bool? DeviceOnlyRememberedOnUserPrompt { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolStatusAtProviderEmailConfiguration
 {
     /// <summary>Email configuration set name from SES.</summary>
@@ -3921,6 +4089,7 @@ public partial class V1beta1UserPoolStatusAtProviderEmailConfiguration
     public string? SourceArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolStatusAtProviderLambdaConfigCustomEmailSender
 {
     /// <summary>The Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send email notifications to users.</summary>
@@ -3932,6 +4101,7 @@ public partial class V1beta1UserPoolStatusAtProviderLambdaConfigCustomEmailSende
     public string? LambdaVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolStatusAtProviderLambdaConfigCustomSmsSender
 {
     /// <summary>The Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send SMS notifications to users.</summary>
@@ -3943,6 +4113,7 @@ public partial class V1beta1UserPoolStatusAtProviderLambdaConfigCustomSmsSender
     public string? LambdaVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolStatusAtProviderLambdaConfigPreTokenGenerationConfig
 {
     /// <summary>The Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send SMS notifications to users.</summary>
@@ -3954,6 +4125,7 @@ public partial class V1beta1UserPoolStatusAtProviderLambdaConfigPreTokenGenerati
     public string? LambdaVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolStatusAtProviderLambdaConfig
 {
     /// <summary>ARN of the lambda creating an authentication challenge.</summary>
@@ -4013,6 +4185,7 @@ public partial class V1beta1UserPoolStatusAtProviderLambdaConfig
     public string? VerifyAuthChallengeResponse { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolStatusAtProviderPasswordPolicy
 {
     /// <summary>Minimum length of the password policy that you have set.</summary>
@@ -4040,6 +4213,7 @@ public partial class V1beta1UserPoolStatusAtProviderPasswordPolicy
     public double? TemporaryPasswordValidityDays { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolStatusAtProviderSchemaNumberAttributeConstraints
 {
     /// <summary>Maximum value of an attribute that is of the number data type.</summary>
@@ -4051,6 +4225,7 @@ public partial class V1beta1UserPoolStatusAtProviderSchemaNumberAttributeConstra
     public string? MinValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolStatusAtProviderSchemaStringAttributeConstraints
 {
     /// <summary>Maximum length of an attribute value of the string type.</summary>
@@ -4062,6 +4237,7 @@ public partial class V1beta1UserPoolStatusAtProviderSchemaStringAttributeConstra
     public string? MinLength { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolStatusAtProviderSchema
 {
     /// <summary>Attribute data type. Must be one of Boolean, Number, String, DateTime.</summary>
@@ -4093,6 +4269,7 @@ public partial class V1beta1UserPoolStatusAtProviderSchema
     public IList<V1beta1UserPoolStatusAtProviderSchemaStringAttributeConstraints>? StringAttributeConstraints { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolStatusAtProviderSmsConfiguration
 {
     /// <summary>External ID used in IAM role trust relationships. For more information about using external IDs, see How to Use an External ID When Granting Access to Your AWS Resources to a Third Party.</summary>
@@ -4108,6 +4285,7 @@ public partial class V1beta1UserPoolStatusAtProviderSmsConfiguration
     public string? SnsRegion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolStatusAtProviderSoftwareTokenMfaConfiguration
 {
     /// <summary>Boolean whether to enable software token Multi-Factor (MFA) tokens, such as Time-based One-Time Password (TOTP). To disable software token MFA When sms_configuration is not present, the mfa_configuration argument must be set to OFF and the software_token_mfa_configuration configuration block must be fully removed.</summary>
@@ -4115,6 +4293,7 @@ public partial class V1beta1UserPoolStatusAtProviderSoftwareTokenMfaConfiguratio
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolStatusAtProviderUserAttributeUpdateSettings
 {
     /// <summary>A list of attributes requiring verification before update. If set, the provided value(s) must also be set in auto_verified_attributes. Valid values: email, phone_number.</summary>
@@ -4122,6 +4301,7 @@ public partial class V1beta1UserPoolStatusAtProviderUserAttributeUpdateSettings
     public IList<string>? AttributesRequireVerificationBeforeUpdate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolStatusAtProviderUserPoolAddOns
 {
     /// <summary>Mode for advanced security, must be one of OFF, AUDIT or ENFORCED.</summary>
@@ -4129,6 +4309,7 @@ public partial class V1beta1UserPoolStatusAtProviderUserPoolAddOns
     public string? AdvancedSecurityMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolStatusAtProviderUsernameConfiguration
 {
     /// <summary>Whether username case sensitivity will be applied for all users in the user pool through Cognito APIs.</summary>
@@ -4136,6 +4317,7 @@ public partial class V1beta1UserPoolStatusAtProviderUsernameConfiguration
     public bool? CaseSensitive { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolStatusAtProviderVerificationMessageTemplate
 {
     /// <summary>Default email option. Must be either CONFIRM_WITH_CODE or CONFIRM_WITH_LINK. Defaults to CONFIRM_WITH_CODE.</summary>
@@ -4163,6 +4345,7 @@ public partial class V1beta1UserPoolStatusAtProviderVerificationMessageTemplate
     public string? SmsMessage { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1UserPoolStatusAtProvider
 {
     /// <summary>Configuration block to define which verified available method a user can use to recover their forgotten password. Detailed below.</summary>
@@ -4298,6 +4481,7 @@ public partial class V1beta1UserPoolStatusAtProvider
     public IList<V1beta1UserPoolStatusAtProviderVerificationMessageTemplate>? VerificationMessageTemplate { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1UserPoolStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -4325,6 +4509,7 @@ public partial class V1beta1UserPoolStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>UserPoolStatus defines the observed state of UserPool.</summary>
 public partial class V1beta1UserPoolStatus
 {
     /// <summary></summary>
@@ -4341,6 +4526,7 @@ public partial class V1beta1UserPoolStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>UserPool is the Schema for the UserPools API. Provides a Cognito User Pool resource.</summary>
 public partial class V1beta1UserPool : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1UserPoolSpec>, IStatus<V1beta1UserPoolStatus>
 {
     public const string KubeApiVersion = "v1beta1";

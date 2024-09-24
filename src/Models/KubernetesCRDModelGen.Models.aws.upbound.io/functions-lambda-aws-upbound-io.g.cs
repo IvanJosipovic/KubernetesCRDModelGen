@@ -18,6 +18,7 @@ public enum V1beta1FunctionSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecForProviderDeadLetterConfig
 {
     /// <summary>ARN of an SNS topic or SQS queue to notify when an invocation fails. If this option is used, the function's IAM role must be granted suitable access to write to the target object, which means allowing either the sns:Publish or sqs:SendMessage action on this ARN, depending on which service is targeted.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1FunctionSpecForProviderDeadLetterConfig
     public string? TargetArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecForProviderEnvironment
 {
     /// <summary>Map of environment variables that are accessible from the function code during execution. If provided at least one key must be present.</summary>
@@ -32,6 +34,7 @@ public partial class V1beta1FunctionSpecForProviderEnvironment
     public IDictionary<string, string>? Variables { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecForProviderEphemeralStorage
 {
     /// <summary>The size of the Lambda function Ephemeral storage(/tmp) represented in MB. The minimum supported ephemeral_storage value defaults to 512MB and the maximum supported value is 10240MB.</summary>
@@ -59,6 +62,7 @@ public enum V1beta1FunctionSpecForProviderFileSystemConfigArnRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecForProviderFileSystemConfigArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -72,6 +76,7 @@ public partial class V1beta1FunctionSpecForProviderFileSystemConfigArnRefPolicy
     public V1beta1FunctionSpecForProviderFileSystemConfigArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a AccessPoint in efs to populate arn.</summary>
 public partial class V1beta1FunctionSpecForProviderFileSystemConfigArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -103,6 +108,7 @@ public enum V1beta1FunctionSpecForProviderFileSystemConfigArnSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionSpecForProviderFileSystemConfigArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -116,6 +122,7 @@ public partial class V1beta1FunctionSpecForProviderFileSystemConfigArnSelectorPo
     public V1beta1FunctionSpecForProviderFileSystemConfigArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a AccessPoint in efs to populate arn.</summary>
 public partial class V1beta1FunctionSpecForProviderFileSystemConfigArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -131,6 +138,7 @@ public partial class V1beta1FunctionSpecForProviderFileSystemConfigArnSelector
     public V1beta1FunctionSpecForProviderFileSystemConfigArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecForProviderFileSystemConfig
 {
     /// <summary>Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.</summary>
@@ -150,6 +158,7 @@ public partial class V1beta1FunctionSpecForProviderFileSystemConfig
     public string? LocalMountPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecForProviderImageConfig
 {
     /// <summary>Parameters that you want to pass in with entry_point.</summary>
@@ -185,6 +194,7 @@ public enum V1beta1FunctionSpecForProviderKmsKeyArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecForProviderKmsKeyArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -198,6 +208,7 @@ public partial class V1beta1FunctionSpecForProviderKmsKeyArnRefPolicy
     public V1beta1FunctionSpecForProviderKmsKeyArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyArn.</summary>
 public partial class V1beta1FunctionSpecForProviderKmsKeyArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -229,6 +240,7 @@ public enum V1beta1FunctionSpecForProviderKmsKeyArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionSpecForProviderKmsKeyArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -242,6 +254,7 @@ public partial class V1beta1FunctionSpecForProviderKmsKeyArnSelectorPolicy
     public V1beta1FunctionSpecForProviderKmsKeyArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyArn.</summary>
 public partial class V1beta1FunctionSpecForProviderKmsKeyArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -257,6 +270,7 @@ public partial class V1beta1FunctionSpecForProviderKmsKeyArnSelector
     public V1beta1FunctionSpecForProviderKmsKeyArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecForProviderLoggingConfig
 {
     /// <summary>for JSON structured logs, choose the detail level of the logs your application sends to CloudWatch when using supported logging libraries.</summary>
@@ -296,6 +310,7 @@ public enum V1beta1FunctionSpecForProviderReplacementSecurityGroupIdRefsPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecForProviderReplacementSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -309,6 +324,7 @@ public partial class V1beta1FunctionSpecForProviderReplacementSecurityGroupIdRef
     public V1beta1FunctionSpecForProviderReplacementSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1FunctionSpecForProviderReplacementSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -340,6 +356,7 @@ public enum V1beta1FunctionSpecForProviderReplacementSecurityGroupIdSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionSpecForProviderReplacementSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -353,6 +370,7 @@ public partial class V1beta1FunctionSpecForProviderReplacementSecurityGroupIdSel
     public V1beta1FunctionSpecForProviderReplacementSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate replacementSecurityGroupIds.</summary>
 public partial class V1beta1FunctionSpecForProviderReplacementSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -388,6 +406,7 @@ public enum V1beta1FunctionSpecForProviderRoleRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecForProviderRoleRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -401,6 +420,7 @@ public partial class V1beta1FunctionSpecForProviderRoleRefPolicy
     public V1beta1FunctionSpecForProviderRoleRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate role.</summary>
 public partial class V1beta1FunctionSpecForProviderRoleRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -432,6 +452,7 @@ public enum V1beta1FunctionSpecForProviderRoleSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionSpecForProviderRoleSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -445,6 +466,7 @@ public partial class V1beta1FunctionSpecForProviderRoleSelectorPolicy
     public V1beta1FunctionSpecForProviderRoleSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate role.</summary>
 public partial class V1beta1FunctionSpecForProviderRoleSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -480,6 +502,7 @@ public enum V1beta1FunctionSpecForProviderS3BucketRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecForProviderS3BucketRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -493,6 +516,7 @@ public partial class V1beta1FunctionSpecForProviderS3BucketRefPolicy
     public V1beta1FunctionSpecForProviderS3BucketRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate s3Bucket.</summary>
 public partial class V1beta1FunctionSpecForProviderS3BucketRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -524,6 +548,7 @@ public enum V1beta1FunctionSpecForProviderS3BucketSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionSpecForProviderS3BucketSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -537,6 +562,7 @@ public partial class V1beta1FunctionSpecForProviderS3BucketSelectorPolicy
     public V1beta1FunctionSpecForProviderS3BucketSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate s3Bucket.</summary>
 public partial class V1beta1FunctionSpecForProviderS3BucketSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -552,6 +578,7 @@ public partial class V1beta1FunctionSpecForProviderS3BucketSelector
     public V1beta1FunctionSpecForProviderS3BucketSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecForProviderSnapStart
 {
     /// <summary>Conditions where snap start is enabled. Valid values are PublishedVersions.</summary>
@@ -559,6 +586,7 @@ public partial class V1beta1FunctionSpecForProviderSnapStart
     public string? ApplyOn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecForProviderTracingConfig
 {
     /// <summary>Whether to sample and trace a subset of incoming requests with AWS X-Ray. Valid values are PassThrough and Active. If PassThrough, Lambda will only trace the request from an upstream service if it contains a tracing header with "sampled=1". If Active, Lambda will respect any tracing header it receives from an upstream service. If no tracing header is received, Lambda will call X-Ray for a tracing decision.</summary>
@@ -586,6 +614,7 @@ public enum V1beta1FunctionSpecForProviderVpcConfigSecurityGroupIdRefsPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecForProviderVpcConfigSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -599,6 +628,7 @@ public partial class V1beta1FunctionSpecForProviderVpcConfigSecurityGroupIdRefsP
     public V1beta1FunctionSpecForProviderVpcConfigSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1FunctionSpecForProviderVpcConfigSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -630,6 +660,7 @@ public enum V1beta1FunctionSpecForProviderVpcConfigSecurityGroupIdSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionSpecForProviderVpcConfigSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -643,6 +674,7 @@ public partial class V1beta1FunctionSpecForProviderVpcConfigSecurityGroupIdSelec
     public V1beta1FunctionSpecForProviderVpcConfigSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 public partial class V1beta1FunctionSpecForProviderVpcConfigSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -678,6 +710,7 @@ public enum V1beta1FunctionSpecForProviderVpcConfigSubnetIdRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecForProviderVpcConfigSubnetIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -691,6 +724,7 @@ public partial class V1beta1FunctionSpecForProviderVpcConfigSubnetIdRefsPolicy
     public V1beta1FunctionSpecForProviderVpcConfigSubnetIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1FunctionSpecForProviderVpcConfigSubnetIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -722,6 +756,7 @@ public enum V1beta1FunctionSpecForProviderVpcConfigSubnetIdSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionSpecForProviderVpcConfigSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -735,6 +770,7 @@ public partial class V1beta1FunctionSpecForProviderVpcConfigSubnetIdSelectorPoli
     public V1beta1FunctionSpecForProviderVpcConfigSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 public partial class V1beta1FunctionSpecForProviderVpcConfigSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -750,6 +786,7 @@ public partial class V1beta1FunctionSpecForProviderVpcConfigSubnetIdSelector
     public V1beta1FunctionSpecForProviderVpcConfigSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecForProviderVpcConfig
 {
     /// <summary>Allows outbound IPv6 traffic on VPC functions that are connected to dual-stack subnets. Default is false.</summary>
@@ -781,6 +818,7 @@ public partial class V1beta1FunctionSpecForProviderVpcConfig
     public IList<string>? SubnetIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecForProvider
 {
     /// <summary>Instruction set architecture for your Lambda function. Valid values are ["x86_64"] and ["arm64"]. Default is ["x86_64"]. Removing this attribute, function's architecture stay the same.</summary>
@@ -944,6 +982,7 @@ public partial class V1beta1FunctionSpecForProvider
     public IList<V1beta1FunctionSpecForProviderVpcConfig>? VpcConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecInitProviderDeadLetterConfig
 {
     /// <summary>ARN of an SNS topic or SQS queue to notify when an invocation fails. If this option is used, the function's IAM role must be granted suitable access to write to the target object, which means allowing either the sns:Publish or sqs:SendMessage action on this ARN, depending on which service is targeted.</summary>
@@ -951,6 +990,7 @@ public partial class V1beta1FunctionSpecInitProviderDeadLetterConfig
     public string? TargetArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecInitProviderEnvironment
 {
     /// <summary>Map of environment variables that are accessible from the function code during execution. If provided at least one key must be present.</summary>
@@ -958,6 +998,7 @@ public partial class V1beta1FunctionSpecInitProviderEnvironment
     public IDictionary<string, string>? Variables { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecInitProviderEphemeralStorage
 {
     /// <summary>The size of the Lambda function Ephemeral storage(/tmp) represented in MB. The minimum supported ephemeral_storage value defaults to 512MB and the maximum supported value is 10240MB.</summary>
@@ -985,6 +1026,7 @@ public enum V1beta1FunctionSpecInitProviderFileSystemConfigArnRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecInitProviderFileSystemConfigArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -998,6 +1040,7 @@ public partial class V1beta1FunctionSpecInitProviderFileSystemConfigArnRefPolicy
     public V1beta1FunctionSpecInitProviderFileSystemConfigArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a AccessPoint in efs to populate arn.</summary>
 public partial class V1beta1FunctionSpecInitProviderFileSystemConfigArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1029,6 +1072,7 @@ public enum V1beta1FunctionSpecInitProviderFileSystemConfigArnSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionSpecInitProviderFileSystemConfigArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1042,6 +1086,7 @@ public partial class V1beta1FunctionSpecInitProviderFileSystemConfigArnSelectorP
     public V1beta1FunctionSpecInitProviderFileSystemConfigArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a AccessPoint in efs to populate arn.</summary>
 public partial class V1beta1FunctionSpecInitProviderFileSystemConfigArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1057,6 +1102,7 @@ public partial class V1beta1FunctionSpecInitProviderFileSystemConfigArnSelector
     public V1beta1FunctionSpecInitProviderFileSystemConfigArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecInitProviderFileSystemConfig
 {
     /// <summary>Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.</summary>
@@ -1076,6 +1122,7 @@ public partial class V1beta1FunctionSpecInitProviderFileSystemConfig
     public string? LocalMountPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecInitProviderImageConfig
 {
     /// <summary>Parameters that you want to pass in with entry_point.</summary>
@@ -1111,6 +1158,7 @@ public enum V1beta1FunctionSpecInitProviderKmsKeyArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecInitProviderKmsKeyArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1124,6 +1172,7 @@ public partial class V1beta1FunctionSpecInitProviderKmsKeyArnRefPolicy
     public V1beta1FunctionSpecInitProviderKmsKeyArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyArn.</summary>
 public partial class V1beta1FunctionSpecInitProviderKmsKeyArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1155,6 +1204,7 @@ public enum V1beta1FunctionSpecInitProviderKmsKeyArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionSpecInitProviderKmsKeyArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1168,6 +1218,7 @@ public partial class V1beta1FunctionSpecInitProviderKmsKeyArnSelectorPolicy
     public V1beta1FunctionSpecInitProviderKmsKeyArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyArn.</summary>
 public partial class V1beta1FunctionSpecInitProviderKmsKeyArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1183,6 +1234,7 @@ public partial class V1beta1FunctionSpecInitProviderKmsKeyArnSelector
     public V1beta1FunctionSpecInitProviderKmsKeyArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecInitProviderLoggingConfig
 {
     /// <summary>for JSON structured logs, choose the detail level of the logs your application sends to CloudWatch when using supported logging libraries.</summary>
@@ -1222,6 +1274,7 @@ public enum V1beta1FunctionSpecInitProviderReplacementSecurityGroupIdRefsPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecInitProviderReplacementSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1235,6 +1288,7 @@ public partial class V1beta1FunctionSpecInitProviderReplacementSecurityGroupIdRe
     public V1beta1FunctionSpecInitProviderReplacementSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1FunctionSpecInitProviderReplacementSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1266,6 +1320,7 @@ public enum V1beta1FunctionSpecInitProviderReplacementSecurityGroupIdSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionSpecInitProviderReplacementSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1279,6 +1334,7 @@ public partial class V1beta1FunctionSpecInitProviderReplacementSecurityGroupIdSe
     public V1beta1FunctionSpecInitProviderReplacementSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate replacementSecurityGroupIds.</summary>
 public partial class V1beta1FunctionSpecInitProviderReplacementSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1314,6 +1370,7 @@ public enum V1beta1FunctionSpecInitProviderRoleRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecInitProviderRoleRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1327,6 +1384,7 @@ public partial class V1beta1FunctionSpecInitProviderRoleRefPolicy
     public V1beta1FunctionSpecInitProviderRoleRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate role.</summary>
 public partial class V1beta1FunctionSpecInitProviderRoleRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1358,6 +1416,7 @@ public enum V1beta1FunctionSpecInitProviderRoleSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionSpecInitProviderRoleSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1371,6 +1430,7 @@ public partial class V1beta1FunctionSpecInitProviderRoleSelectorPolicy
     public V1beta1FunctionSpecInitProviderRoleSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate role.</summary>
 public partial class V1beta1FunctionSpecInitProviderRoleSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1406,6 +1466,7 @@ public enum V1beta1FunctionSpecInitProviderS3BucketRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecInitProviderS3BucketRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1419,6 +1480,7 @@ public partial class V1beta1FunctionSpecInitProviderS3BucketRefPolicy
     public V1beta1FunctionSpecInitProviderS3BucketRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate s3Bucket.</summary>
 public partial class V1beta1FunctionSpecInitProviderS3BucketRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1450,6 +1512,7 @@ public enum V1beta1FunctionSpecInitProviderS3BucketSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionSpecInitProviderS3BucketSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1463,6 +1526,7 @@ public partial class V1beta1FunctionSpecInitProviderS3BucketSelectorPolicy
     public V1beta1FunctionSpecInitProviderS3BucketSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate s3Bucket.</summary>
 public partial class V1beta1FunctionSpecInitProviderS3BucketSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1478,6 +1542,7 @@ public partial class V1beta1FunctionSpecInitProviderS3BucketSelector
     public V1beta1FunctionSpecInitProviderS3BucketSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecInitProviderSnapStart
 {
     /// <summary>Conditions where snap start is enabled. Valid values are PublishedVersions.</summary>
@@ -1485,6 +1550,7 @@ public partial class V1beta1FunctionSpecInitProviderSnapStart
     public string? ApplyOn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecInitProviderTracingConfig
 {
     /// <summary>Whether to sample and trace a subset of incoming requests with AWS X-Ray. Valid values are PassThrough and Active. If PassThrough, Lambda will only trace the request from an upstream service if it contains a tracing header with "sampled=1". If Active, Lambda will respect any tracing header it receives from an upstream service. If no tracing header is received, Lambda will call X-Ray for a tracing decision.</summary>
@@ -1512,6 +1578,7 @@ public enum V1beta1FunctionSpecInitProviderVpcConfigSecurityGroupIdRefsPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecInitProviderVpcConfigSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1525,6 +1592,7 @@ public partial class V1beta1FunctionSpecInitProviderVpcConfigSecurityGroupIdRefs
     public V1beta1FunctionSpecInitProviderVpcConfigSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1FunctionSpecInitProviderVpcConfigSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1556,6 +1624,7 @@ public enum V1beta1FunctionSpecInitProviderVpcConfigSecurityGroupIdSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionSpecInitProviderVpcConfigSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1569,6 +1638,7 @@ public partial class V1beta1FunctionSpecInitProviderVpcConfigSecurityGroupIdSele
     public V1beta1FunctionSpecInitProviderVpcConfigSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 public partial class V1beta1FunctionSpecInitProviderVpcConfigSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1604,6 +1674,7 @@ public enum V1beta1FunctionSpecInitProviderVpcConfigSubnetIdRefsPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecInitProviderVpcConfigSubnetIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1617,6 +1688,7 @@ public partial class V1beta1FunctionSpecInitProviderVpcConfigSubnetIdRefsPolicy
     public V1beta1FunctionSpecInitProviderVpcConfigSubnetIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1FunctionSpecInitProviderVpcConfigSubnetIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1648,6 +1720,7 @@ public enum V1beta1FunctionSpecInitProviderVpcConfigSubnetIdSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FunctionSpecInitProviderVpcConfigSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1661,6 +1734,7 @@ public partial class V1beta1FunctionSpecInitProviderVpcConfigSubnetIdSelectorPol
     public V1beta1FunctionSpecInitProviderVpcConfigSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 public partial class V1beta1FunctionSpecInitProviderVpcConfigSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1676,6 +1750,7 @@ public partial class V1beta1FunctionSpecInitProviderVpcConfigSubnetIdSelector
     public V1beta1FunctionSpecInitProviderVpcConfigSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionSpecInitProviderVpcConfig
 {
     /// <summary>Allows outbound IPv6 traffic on VPC functions that are connected to dual-stack subnets. Default is false.</summary>
@@ -1707,6 +1782,7 @@ public partial class V1beta1FunctionSpecInitProviderVpcConfig
     public IList<string>? SubnetIds { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1FunctionSpecInitProvider
 {
     /// <summary>Instruction set architecture for your Lambda function. Valid values are ["x86_64"] and ["arm64"]. Default is ["x86_64"]. Removing this attribute, function's architecture stay the same.</summary>
@@ -1908,6 +1984,7 @@ public enum V1beta1FunctionSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1921,6 +1998,7 @@ public partial class V1beta1FunctionSpecProviderConfigRefPolicy
     public V1beta1FunctionSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1FunctionSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1952,6 +2030,7 @@ public enum V1beta1FunctionSpecPublishConnectionDetailsToConfigRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FunctionSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1965,6 +2044,7 @@ public partial class V1beta1FunctionSpecPublishConnectionDetailsToConfigRefPolic
     public V1beta1FunctionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1FunctionSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1976,6 +2056,7 @@ public partial class V1beta1FunctionSpecPublishConnectionDetailsToConfigRef
     public V1beta1FunctionSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1FunctionSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1991,6 +2072,7 @@ public partial class V1beta1FunctionSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1FunctionSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -2006,6 +2088,7 @@ public partial class V1beta1FunctionSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1FunctionSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -2017,6 +2100,7 @@ public partial class V1beta1FunctionSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>FunctionSpec defines the desired state of Function</summary>
 public partial class V1beta1FunctionSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -2049,6 +2133,7 @@ public partial class V1beta1FunctionSpec
     public V1beta1FunctionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionStatusAtProviderDeadLetterConfig
 {
     /// <summary>ARN of an SNS topic or SQS queue to notify when an invocation fails. If this option is used, the function's IAM role must be granted suitable access to write to the target object, which means allowing either the sns:Publish or sqs:SendMessage action on this ARN, depending on which service is targeted.</summary>
@@ -2056,6 +2141,7 @@ public partial class V1beta1FunctionStatusAtProviderDeadLetterConfig
     public string? TargetArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionStatusAtProviderEnvironment
 {
     /// <summary>Map of environment variables that are accessible from the function code during execution. If provided at least one key must be present.</summary>
@@ -2063,6 +2149,7 @@ public partial class V1beta1FunctionStatusAtProviderEnvironment
     public IDictionary<string, string>? Variables { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionStatusAtProviderEphemeralStorage
 {
     /// <summary>The size of the Lambda function Ephemeral storage(/tmp) represented in MB. The minimum supported ephemeral_storage value defaults to 512MB and the maximum supported value is 10240MB.</summary>
@@ -2070,6 +2157,7 @@ public partial class V1beta1FunctionStatusAtProviderEphemeralStorage
     public double? Size { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionStatusAtProviderFileSystemConfig
 {
     /// <summary>Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.</summary>
@@ -2081,6 +2169,7 @@ public partial class V1beta1FunctionStatusAtProviderFileSystemConfig
     public string? LocalMountPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionStatusAtProviderImageConfig
 {
     /// <summary>Parameters that you want to pass in with entry_point.</summary>
@@ -2096,6 +2185,7 @@ public partial class V1beta1FunctionStatusAtProviderImageConfig
     public string? WorkingDirectory { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionStatusAtProviderLoggingConfig
 {
     /// <summary>for JSON structured logs, choose the detail level of the logs your application sends to CloudWatch when using supported logging libraries.</summary>
@@ -2115,6 +2205,7 @@ public partial class V1beta1FunctionStatusAtProviderLoggingConfig
     public string? SystemLogLevel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionStatusAtProviderSnapStart
 {
     /// <summary>Conditions where snap start is enabled. Valid values are PublishedVersions.</summary>
@@ -2126,6 +2217,7 @@ public partial class V1beta1FunctionStatusAtProviderSnapStart
     public string? OptimizationStatus { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionStatusAtProviderTracingConfig
 {
     /// <summary>Whether to sample and trace a subset of incoming requests with AWS X-Ray. Valid values are PassThrough and Active. If PassThrough, Lambda will only trace the request from an upstream service if it contains a tracing header with "sampled=1". If Active, Lambda will respect any tracing header it receives from an upstream service. If no tracing header is received, Lambda will call X-Ray for a tracing decision.</summary>
@@ -2133,6 +2225,7 @@ public partial class V1beta1FunctionStatusAtProviderTracingConfig
     public string? Mode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionStatusAtProviderVpcConfig
 {
     /// <summary>Allows outbound IPv6 traffic on VPC functions that are connected to dual-stack subnets. Default is false.</summary>
@@ -2152,6 +2245,7 @@ public partial class V1beta1FunctionStatusAtProviderVpcConfig
     public string? VpcId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FunctionStatusAtProvider
 {
     /// <summary>Instruction set architecture for your Lambda function. Valid values are ["x86_64"] and ["arm64"]. Default is ["x86_64"]. Removing this attribute, function's architecture stay the same.</summary>
@@ -2327,6 +2421,7 @@ public partial class V1beta1FunctionStatusAtProvider
     public IList<V1beta1FunctionStatusAtProviderVpcConfig>? VpcConfig { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1FunctionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2354,6 +2449,7 @@ public partial class V1beta1FunctionStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>FunctionStatus defines the observed state of Function.</summary>
 public partial class V1beta1FunctionStatus
 {
     /// <summary></summary>
@@ -2370,6 +2466,7 @@ public partial class V1beta1FunctionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Function is the Schema for the Functions API. Provides a Lambda Function resource. Lambda allows you to trigger execution of code in response to events in AWS, enabling serverless backend solutions. The Lambda Function itself includes source code and runtime configuration.</summary>
 public partial class V1beta1Function : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FunctionSpec>, IStatus<V1beta1FunctionStatus>
 {
     public const string KubeApiVersion = "v1beta1";

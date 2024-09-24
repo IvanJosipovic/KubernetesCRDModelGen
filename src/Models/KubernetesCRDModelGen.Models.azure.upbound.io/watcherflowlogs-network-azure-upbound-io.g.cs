@@ -38,6 +38,7 @@ public enum V1beta1WatcherFlowLogSpecForProviderNetworkSecurityGroupIdRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WatcherFlowLogSpecForProviderNetworkSecurityGroupIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1WatcherFlowLogSpecForProviderNetworkSecurityGroupIdR
     public V1beta1WatcherFlowLogSpecForProviderNetworkSecurityGroupIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SecurityGroup in network to populate networkSecurityGroupId.</summary>
 public partial class V1beta1WatcherFlowLogSpecForProviderNetworkSecurityGroupIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1WatcherFlowLogSpecForProviderNetworkSecurityGroupIdSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WatcherFlowLogSpecForProviderNetworkSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1WatcherFlowLogSpecForProviderNetworkSecurityGroupIdS
     public V1beta1WatcherFlowLogSpecForProviderNetworkSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SecurityGroup in network to populate networkSecurityGroupId.</summary>
 public partial class V1beta1WatcherFlowLogSpecForProviderNetworkSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1WatcherFlowLogSpecForProviderNetworkWatcherNameRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WatcherFlowLogSpecForProviderNetworkWatcherNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1WatcherFlowLogSpecForProviderNetworkWatcherNameRefPo
     public V1beta1WatcherFlowLogSpecForProviderNetworkWatcherNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Watcher in network to populate networkWatcherName.</summary>
 public partial class V1beta1WatcherFlowLogSpecForProviderNetworkWatcherNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1WatcherFlowLogSpecForProviderNetworkWatcherNameSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WatcherFlowLogSpecForProviderNetworkWatcherNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1WatcherFlowLogSpecForProviderNetworkWatcherNameSelec
     public V1beta1WatcherFlowLogSpecForProviderNetworkWatcherNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Watcher in network to populate networkWatcherName.</summary>
 public partial class V1beta1WatcherFlowLogSpecForProviderNetworkWatcherNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1WatcherFlowLogSpecForProviderResourceGroupNameRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WatcherFlowLogSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1WatcherFlowLogSpecForProviderResourceGroupNameRefPol
     public V1beta1WatcherFlowLogSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1WatcherFlowLogSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1WatcherFlowLogSpecForProviderResourceGroupNameSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WatcherFlowLogSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1WatcherFlowLogSpecForProviderResourceGroupNameSelect
     public V1beta1WatcherFlowLogSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1WatcherFlowLogSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1WatcherFlowLogSpecForProviderResourceGroupNameSelect
     public V1beta1WatcherFlowLogSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WatcherFlowLogSpecForProviderRetentionPolicy
 {
     /// <summary>The number of days to retain flow log records.</summary>
@@ -325,6 +338,7 @@ public enum V1beta1WatcherFlowLogSpecForProviderStorageAccountIdRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WatcherFlowLogSpecForProviderStorageAccountIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -338,6 +352,7 @@ public partial class V1beta1WatcherFlowLogSpecForProviderStorageAccountIdRefPoli
     public V1beta1WatcherFlowLogSpecForProviderStorageAccountIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
 public partial class V1beta1WatcherFlowLogSpecForProviderStorageAccountIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -369,6 +384,7 @@ public enum V1beta1WatcherFlowLogSpecForProviderStorageAccountIdSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WatcherFlowLogSpecForProviderStorageAccountIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -382,6 +398,7 @@ public partial class V1beta1WatcherFlowLogSpecForProviderStorageAccountIdSelecto
     public V1beta1WatcherFlowLogSpecForProviderStorageAccountIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
 public partial class V1beta1WatcherFlowLogSpecForProviderStorageAccountIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -417,6 +434,7 @@ public enum V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspaceIdRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspaceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -430,6 +448,7 @@ public partial class V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspa
     public V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspaceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Workspace in operationalinsights to populate workspaceId.</summary>
 public partial class V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspaceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -461,6 +480,7 @@ public enum V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspaceIdSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspaceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -474,6 +494,7 @@ public partial class V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspa
     public V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspaceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Workspace in operationalinsights to populate workspaceId.</summary>
 public partial class V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspaceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -509,6 +530,7 @@ public enum V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspaceResourc
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspaceResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -522,6 +544,7 @@ public partial class V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspa
     public V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspaceResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Workspace in operationalinsights to populate workspaceResourceId.</summary>
 public partial class V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspaceResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -553,6 +576,7 @@ public enum V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspaceResourc
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspaceResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -566,6 +590,7 @@ public partial class V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspa
     public V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspaceResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Workspace in operationalinsights to populate workspaceResourceId.</summary>
 public partial class V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspaceResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -581,6 +606,7 @@ public partial class V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspa
     public V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspaceResourceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WatcherFlowLogSpecForProviderTrafficAnalytics
 {
     /// <summary>Boolean flag to enable/disable traffic analytics.</summary>
@@ -620,6 +646,7 @@ public partial class V1beta1WatcherFlowLogSpecForProviderTrafficAnalytics
     public V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspaceResourceIdSelector? WorkspaceResourceIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WatcherFlowLogSpecForProvider
 {
     /// <summary>Should Network Flow Logging be Enabled?</summary>
@@ -715,6 +742,7 @@ public enum V1beta1WatcherFlowLogSpecInitProviderNetworkSecurityGroupIdRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WatcherFlowLogSpecInitProviderNetworkSecurityGroupIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -728,6 +756,7 @@ public partial class V1beta1WatcherFlowLogSpecInitProviderNetworkSecurityGroupId
     public V1beta1WatcherFlowLogSpecInitProviderNetworkSecurityGroupIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SecurityGroup in network to populate networkSecurityGroupId.</summary>
 public partial class V1beta1WatcherFlowLogSpecInitProviderNetworkSecurityGroupIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -759,6 +788,7 @@ public enum V1beta1WatcherFlowLogSpecInitProviderNetworkSecurityGroupIdSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WatcherFlowLogSpecInitProviderNetworkSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -772,6 +802,7 @@ public partial class V1beta1WatcherFlowLogSpecInitProviderNetworkSecurityGroupId
     public V1beta1WatcherFlowLogSpecInitProviderNetworkSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SecurityGroup in network to populate networkSecurityGroupId.</summary>
 public partial class V1beta1WatcherFlowLogSpecInitProviderNetworkSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -787,6 +818,7 @@ public partial class V1beta1WatcherFlowLogSpecInitProviderNetworkSecurityGroupId
     public V1beta1WatcherFlowLogSpecInitProviderNetworkSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WatcherFlowLogSpecInitProviderRetentionPolicy
 {
     /// <summary>The number of days to retain flow log records.</summary>
@@ -818,6 +850,7 @@ public enum V1beta1WatcherFlowLogSpecInitProviderStorageAccountIdRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WatcherFlowLogSpecInitProviderStorageAccountIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -831,6 +864,7 @@ public partial class V1beta1WatcherFlowLogSpecInitProviderStorageAccountIdRefPol
     public V1beta1WatcherFlowLogSpecInitProviderStorageAccountIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
 public partial class V1beta1WatcherFlowLogSpecInitProviderStorageAccountIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -862,6 +896,7 @@ public enum V1beta1WatcherFlowLogSpecInitProviderStorageAccountIdSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WatcherFlowLogSpecInitProviderStorageAccountIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -875,6 +910,7 @@ public partial class V1beta1WatcherFlowLogSpecInitProviderStorageAccountIdSelect
     public V1beta1WatcherFlowLogSpecInitProviderStorageAccountIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
 public partial class V1beta1WatcherFlowLogSpecInitProviderStorageAccountIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -910,6 +946,7 @@ public enum V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorkspaceIdRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorkspaceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -923,6 +960,7 @@ public partial class V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorksp
     public V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorkspaceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Workspace in operationalinsights to populate workspaceId.</summary>
 public partial class V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorkspaceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -954,6 +992,7 @@ public enum V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorkspaceIdSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorkspaceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -967,6 +1006,7 @@ public partial class V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorksp
     public V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorkspaceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Workspace in operationalinsights to populate workspaceId.</summary>
 public partial class V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorkspaceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1002,6 +1042,7 @@ public enum V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorkspaceResour
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorkspaceResourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1015,6 +1056,7 @@ public partial class V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorksp
     public V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorkspaceResourceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Workspace in operationalinsights to populate workspaceResourceId.</summary>
 public partial class V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorkspaceResourceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1046,6 +1088,7 @@ public enum V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorkspaceResour
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorkspaceResourceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1059,6 +1102,7 @@ public partial class V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorksp
     public V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorkspaceResourceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Workspace in operationalinsights to populate workspaceResourceId.</summary>
 public partial class V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorkspaceResourceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1074,6 +1118,7 @@ public partial class V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorksp
     public V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorkspaceResourceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WatcherFlowLogSpecInitProviderTrafficAnalytics
 {
     /// <summary>Boolean flag to enable/disable traffic analytics.</summary>
@@ -1113,6 +1158,7 @@ public partial class V1beta1WatcherFlowLogSpecInitProviderTrafficAnalytics
     public V1beta1WatcherFlowLogSpecInitProviderTrafficAnalyticsWorkspaceResourceIdSelector? WorkspaceResourceIdSelector { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1WatcherFlowLogSpecInitProvider
 {
     /// <summary>Should Network Flow Logging be Enabled?</summary>
@@ -1206,6 +1252,7 @@ public enum V1beta1WatcherFlowLogSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WatcherFlowLogSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1219,6 +1266,7 @@ public partial class V1beta1WatcherFlowLogSpecProviderConfigRefPolicy
     public V1beta1WatcherFlowLogSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1WatcherFlowLogSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1250,6 +1298,7 @@ public enum V1beta1WatcherFlowLogSpecPublishConnectionDetailsToConfigRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WatcherFlowLogSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1263,6 +1312,7 @@ public partial class V1beta1WatcherFlowLogSpecPublishConnectionDetailsToConfigRe
     public V1beta1WatcherFlowLogSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1WatcherFlowLogSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1274,6 +1324,7 @@ public partial class V1beta1WatcherFlowLogSpecPublishConnectionDetailsToConfigRe
     public V1beta1WatcherFlowLogSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1WatcherFlowLogSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1289,6 +1340,7 @@ public partial class V1beta1WatcherFlowLogSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1WatcherFlowLogSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1304,6 +1356,7 @@ public partial class V1beta1WatcherFlowLogSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1WatcherFlowLogSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1315,6 +1368,7 @@ public partial class V1beta1WatcherFlowLogSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>WatcherFlowLogSpec defines the desired state of WatcherFlowLog</summary>
 public partial class V1beta1WatcherFlowLogSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1347,6 +1401,7 @@ public partial class V1beta1WatcherFlowLogSpec
     public V1beta1WatcherFlowLogSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WatcherFlowLogStatusAtProviderRetentionPolicy
 {
     /// <summary>The number of days to retain flow log records.</summary>
@@ -1358,6 +1413,7 @@ public partial class V1beta1WatcherFlowLogStatusAtProviderRetentionPolicy
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WatcherFlowLogStatusAtProviderTrafficAnalytics
 {
     /// <summary>Boolean flag to enable/disable traffic analytics.</summary>
@@ -1381,6 +1437,7 @@ public partial class V1beta1WatcherFlowLogStatusAtProviderTrafficAnalytics
     public string? WorkspaceResourceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WatcherFlowLogStatusAtProvider
 {
     /// <summary>Should Network Flow Logging be Enabled?</summary>
@@ -1428,6 +1485,7 @@ public partial class V1beta1WatcherFlowLogStatusAtProvider
     public double? Version { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1WatcherFlowLogStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1455,6 +1513,7 @@ public partial class V1beta1WatcherFlowLogStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>WatcherFlowLogStatus defines the observed state of WatcherFlowLog.</summary>
 public partial class V1beta1WatcherFlowLogStatus
 {
     /// <summary></summary>
@@ -1471,6 +1530,7 @@ public partial class V1beta1WatcherFlowLogStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>WatcherFlowLog is the Schema for the WatcherFlowLogs API. Manages a Network Watcher Flow Log.</summary>
 public partial class V1beta1WatcherFlowLog : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1WatcherFlowLogSpec>, IStatus<V1beta1WatcherFlowLogStatus>
 {
     public const string KubeApiVersion = "v1beta1";

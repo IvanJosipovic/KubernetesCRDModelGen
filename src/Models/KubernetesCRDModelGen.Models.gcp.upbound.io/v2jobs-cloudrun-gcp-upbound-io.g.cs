@@ -18,6 +18,7 @@ public enum V1beta1V2JobSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobSpecForProviderBinaryAuthorization
 {
     /// <summary>If present, indicates to use Breakglass using this justification. If useDefault is False, then it must be empty. For more information on breakglass, see https://cloud.google.com/binary-authorization/docs/using-breakglass</summary>
@@ -49,6 +50,7 @@ public enum V1beta1V2JobSpecForProviderTemplateTemplateContainersEnvValueSourceS
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1V2JobSpecForProviderTemplateTemplateContainersEnvValueSourceSecretKeyRefSecretRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -62,6 +64,7 @@ public partial class V1beta1V2JobSpecForProviderTemplateTemplateContainersEnvVal
     public V1beta1V2JobSpecForProviderTemplateTemplateContainersEnvValueSourceSecretKeyRefSecretRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Secret in secretmanager to populate secret.</summary>
 public partial class V1beta1V2JobSpecForProviderTemplateTemplateContainersEnvValueSourceSecretKeyRefSecretRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -93,6 +96,7 @@ public enum V1beta1V2JobSpecForProviderTemplateTemplateContainersEnvValueSourceS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1V2JobSpecForProviderTemplateTemplateContainersEnvValueSourceSecretKeyRefSecretSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -106,6 +110,7 @@ public partial class V1beta1V2JobSpecForProviderTemplateTemplateContainersEnvVal
     public V1beta1V2JobSpecForProviderTemplateTemplateContainersEnvValueSourceSecretKeyRefSecretSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Secret in secretmanager to populate secret.</summary>
 public partial class V1beta1V2JobSpecForProviderTemplateTemplateContainersEnvValueSourceSecretKeyRefSecretSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1V2JobSpecForProviderTemplateTemplateContainersEnvVal
     public V1beta1V2JobSpecForProviderTemplateTemplateContainersEnvValueSourceSecretKeyRefSecretSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobSpecForProviderTemplateTemplateContainersEnvValueSourceSecretKeyRef
 {
     /// <summary>Secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret Structure is documented below.</summary>
@@ -140,6 +146,7 @@ public partial class V1beta1V2JobSpecForProviderTemplateTemplateContainersEnvVal
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobSpecForProviderTemplateTemplateContainersEnvValueSource
 {
     /// <summary>Selects a secret and a specific version from Cloud Secret Manager. Structure is documented below.</summary>
@@ -147,6 +154,7 @@ public partial class V1beta1V2JobSpecForProviderTemplateTemplateContainersEnvVal
     public IList<V1beta1V2JobSpecForProviderTemplateTemplateContainersEnvValueSourceSecretKeyRef>? SecretKeyRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobSpecForProviderTemplateTemplateContainersEnv
 {
     /// <summary>Volume's name.</summary>
@@ -162,6 +170,7 @@ public partial class V1beta1V2JobSpecForProviderTemplateTemplateContainersEnv
     public IList<V1beta1V2JobSpecForProviderTemplateTemplateContainersEnvValueSource>? ValueSource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobSpecForProviderTemplateTemplateContainersPorts
 {
     /// <summary>Port number the container listens on. This must be a valid TCP port number, 0 &lt; containerPort &lt; 65536.</summary>
@@ -173,6 +182,7 @@ public partial class V1beta1V2JobSpecForProviderTemplateTemplateContainersPorts
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobSpecForProviderTemplateTemplateContainersResources
 {
     /// <summary>Only memory and CPU are supported. Use key cpu for CPU limit and memory for memory limit. Note: The only supported values for CPU are '1', '2', '4', and '8'. Setting 4 CPU requires at least 2Gi of memory. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go</summary>
@@ -180,6 +190,7 @@ public partial class V1beta1V2JobSpecForProviderTemplateTemplateContainersResour
     public IDictionary<string, string>? Limits { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobSpecForProviderTemplateTemplateContainersVolumeMounts
 {
     /// <summary>Path within the container at which the volume should be mounted. Must not contain ':'. For Cloud SQL volumes, it can be left empty, or must otherwise be /cloudsql. All instances defined in the Volume will be available as /cloudsql/[instance]. For more information on Cloud SQL volumes, visit https://cloud.google.com/sql/docs/mysql/connect-run</summary>
@@ -191,6 +202,7 @@ public partial class V1beta1V2JobSpecForProviderTemplateTemplateContainersVolume
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobSpecForProviderTemplateTemplateContainers
 {
     /// <summary>Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell</summary>
@@ -230,6 +242,7 @@ public partial class V1beta1V2JobSpecForProviderTemplateTemplateContainers
     public string? WorkingDir { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobSpecForProviderTemplateTemplateVolumesCloudSqlInstance
 {
     /// <summary>The Cloud SQL instance connection names, as can be found in https://console.cloud.google.com/sql/instances. Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect Cloud SQL and Cloud Run. Format: {project}:{location}:{instance}</summary>
@@ -237,6 +250,7 @@ public partial class V1beta1V2JobSpecForProviderTemplateTemplateVolumesCloudSqlI
     public IList<string>? Instances { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobSpecForProviderTemplateTemplateVolumesSecretItems
 {
     /// <summary>Integer octal mode bits to use on this file, must be a value between 01 and 0777 (octal). If 0 or not set, the Volume's default mode will be used.</summary>
@@ -272,6 +286,7 @@ public enum V1beta1V2JobSpecForProviderTemplateTemplateVolumesSecretSecretRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1V2JobSpecForProviderTemplateTemplateVolumesSecretSecretRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -285,6 +300,7 @@ public partial class V1beta1V2JobSpecForProviderTemplateTemplateVolumesSecretSec
     public V1beta1V2JobSpecForProviderTemplateTemplateVolumesSecretSecretRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Secret in secretmanager to populate secret.</summary>
 public partial class V1beta1V2JobSpecForProviderTemplateTemplateVolumesSecretSecretRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -316,6 +332,7 @@ public enum V1beta1V2JobSpecForProviderTemplateTemplateVolumesSecretSecretSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1V2JobSpecForProviderTemplateTemplateVolumesSecretSecretSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -329,6 +346,7 @@ public partial class V1beta1V2JobSpecForProviderTemplateTemplateVolumesSecretSec
     public V1beta1V2JobSpecForProviderTemplateTemplateVolumesSecretSecretSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Secret in secretmanager to populate secret.</summary>
 public partial class V1beta1V2JobSpecForProviderTemplateTemplateVolumesSecretSecretSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -344,6 +362,7 @@ public partial class V1beta1V2JobSpecForProviderTemplateTemplateVolumesSecretSec
     public V1beta1V2JobSpecForProviderTemplateTemplateVolumesSecretSecretSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobSpecForProviderTemplateTemplateVolumesSecret
 {
     /// <summary>Integer representation of mode bits to use on created files by default. Must be a value between 0000 and 0777 (octal), defaulting to 0444. Directories within the path are not affected by this setting.</summary>
@@ -367,6 +386,7 @@ public partial class V1beta1V2JobSpecForProviderTemplateTemplateVolumesSecret
     public V1beta1V2JobSpecForProviderTemplateTemplateVolumesSecretSecretSelector? SecretSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobSpecForProviderTemplateTemplateVolumes
 {
     /// <summary>For Cloud SQL volumes, contains the specific instances that should be mounted. Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect Cloud SQL and Cloud Run. Structure is documented below.</summary>
@@ -382,6 +402,7 @@ public partial class V1beta1V2JobSpecForProviderTemplateTemplateVolumes
     public IList<V1beta1V2JobSpecForProviderTemplateTemplateVolumesSecret>? Secret { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobSpecForProviderTemplateTemplateVpcAccessNetworkInterfaces
 {
     /// <summary>The VPC network that the Cloud Run resource will be able to send traffic to. At least one of network or subnetwork must be specified. If both network and subnetwork are specified, the given VPC subnetwork must belong to the given VPC network. If network is not specified, it will be looked up from the subnetwork.</summary>
@@ -397,6 +418,7 @@ public partial class V1beta1V2JobSpecForProviderTemplateTemplateVpcAccessNetwork
     public IList<string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobSpecForProviderTemplateTemplateVpcAccess
 {
     /// <summary>VPC Access connector name. Format: projects/{project}/locations/{location}/connectors/{connector}, where {project} can be project id or number.</summary>
@@ -412,6 +434,7 @@ public partial class V1beta1V2JobSpecForProviderTemplateTemplateVpcAccess
     public IList<V1beta1V2JobSpecForProviderTemplateTemplateVpcAccessNetworkInterfaces>? NetworkInterfaces { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobSpecForProviderTemplateTemplate
 {
     /// <summary>Holds the single container that defines the unit of execution for this task. Structure is documented below.</summary>
@@ -447,6 +470,7 @@ public partial class V1beta1V2JobSpecForProviderTemplateTemplate
     public IList<V1beta1V2JobSpecForProviderTemplateTemplateVpcAccess>? VpcAccess { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobSpecForProviderTemplate
 {
     /// <summary>Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run API v2 does not support annotations with run.googleapis.com, cloud.googleapis.com, serving.knative.dev, or autoscaling.knative.dev namespaces, and they will be rejected. All system annotations in v1 now have a corresponding field in v2 ExecutionTemplate. This field follows Kubernetes annotations' namespacing, limits, and rules.</summary>
@@ -470,6 +494,7 @@ public partial class V1beta1V2JobSpecForProviderTemplate
     public IList<V1beta1V2JobSpecForProviderTemplateTemplate>? Template { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobSpecForProvider
 {
     /// <summary>Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run API v2 does not support annotations with run.googleapis.com, cloud.googleapis.com, serving.knative.dev, or autoscaling.knative.dev namespaces, and they will be rejected. All system annotations in v1 now have a corresponding field in v2 ExecutionTemplate. This field follows Kubernetes annotations' namespacing, limits, and rules.</summary>
@@ -509,6 +534,7 @@ public partial class V1beta1V2JobSpecForProvider
     public IList<V1beta1V2JobSpecForProviderTemplate>? Template { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobSpecInitProviderBinaryAuthorization
 {
     /// <summary>If present, indicates to use Breakglass using this justification. If useDefault is False, then it must be empty. For more information on breakglass, see https://cloud.google.com/binary-authorization/docs/using-breakglass</summary>
@@ -540,6 +566,7 @@ public enum V1beta1V2JobSpecInitProviderTemplateTemplateContainersEnvValueSource
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1V2JobSpecInitProviderTemplateTemplateContainersEnvValueSourceSecretKeyRefSecretRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -553,6 +580,7 @@ public partial class V1beta1V2JobSpecInitProviderTemplateTemplateContainersEnvVa
     public V1beta1V2JobSpecInitProviderTemplateTemplateContainersEnvValueSourceSecretKeyRefSecretRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Secret in secretmanager to populate secret.</summary>
 public partial class V1beta1V2JobSpecInitProviderTemplateTemplateContainersEnvValueSourceSecretKeyRefSecretRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -584,6 +612,7 @@ public enum V1beta1V2JobSpecInitProviderTemplateTemplateContainersEnvValueSource
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1V2JobSpecInitProviderTemplateTemplateContainersEnvValueSourceSecretKeyRefSecretSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -597,6 +626,7 @@ public partial class V1beta1V2JobSpecInitProviderTemplateTemplateContainersEnvVa
     public V1beta1V2JobSpecInitProviderTemplateTemplateContainersEnvValueSourceSecretKeyRefSecretSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Secret in secretmanager to populate secret.</summary>
 public partial class V1beta1V2JobSpecInitProviderTemplateTemplateContainersEnvValueSourceSecretKeyRefSecretSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -612,6 +642,7 @@ public partial class V1beta1V2JobSpecInitProviderTemplateTemplateContainersEnvVa
     public V1beta1V2JobSpecInitProviderTemplateTemplateContainersEnvValueSourceSecretKeyRefSecretSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobSpecInitProviderTemplateTemplateContainersEnvValueSourceSecretKeyRef
 {
     /// <summary>Secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret Structure is documented below.</summary>
@@ -631,6 +662,7 @@ public partial class V1beta1V2JobSpecInitProviderTemplateTemplateContainersEnvVa
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobSpecInitProviderTemplateTemplateContainersEnvValueSource
 {
     /// <summary>Selects a secret and a specific version from Cloud Secret Manager. Structure is documented below.</summary>
@@ -638,6 +670,7 @@ public partial class V1beta1V2JobSpecInitProviderTemplateTemplateContainersEnvVa
     public IList<V1beta1V2JobSpecInitProviderTemplateTemplateContainersEnvValueSourceSecretKeyRef>? SecretKeyRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobSpecInitProviderTemplateTemplateContainersEnv
 {
     /// <summary>Volume's name.</summary>
@@ -653,6 +686,7 @@ public partial class V1beta1V2JobSpecInitProviderTemplateTemplateContainersEnv
     public IList<V1beta1V2JobSpecInitProviderTemplateTemplateContainersEnvValueSource>? ValueSource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobSpecInitProviderTemplateTemplateContainersPorts
 {
     /// <summary>Port number the container listens on. This must be a valid TCP port number, 0 &lt; containerPort &lt; 65536.</summary>
@@ -664,6 +698,7 @@ public partial class V1beta1V2JobSpecInitProviderTemplateTemplateContainersPorts
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobSpecInitProviderTemplateTemplateContainersResources
 {
     /// <summary>Only memory and CPU are supported. Use key cpu for CPU limit and memory for memory limit. Note: The only supported values for CPU are '1', '2', '4', and '8'. Setting 4 CPU requires at least 2Gi of memory. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go</summary>
@@ -671,6 +706,7 @@ public partial class V1beta1V2JobSpecInitProviderTemplateTemplateContainersResou
     public IDictionary<string, string>? Limits { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobSpecInitProviderTemplateTemplateContainersVolumeMounts
 {
     /// <summary>Path within the container at which the volume should be mounted. Must not contain ':'. For Cloud SQL volumes, it can be left empty, or must otherwise be /cloudsql. All instances defined in the Volume will be available as /cloudsql/[instance]. For more information on Cloud SQL volumes, visit https://cloud.google.com/sql/docs/mysql/connect-run</summary>
@@ -682,6 +718,7 @@ public partial class V1beta1V2JobSpecInitProviderTemplateTemplateContainersVolum
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobSpecInitProviderTemplateTemplateContainers
 {
     /// <summary>Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell</summary>
@@ -721,6 +758,7 @@ public partial class V1beta1V2JobSpecInitProviderTemplateTemplateContainers
     public string? WorkingDir { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobSpecInitProviderTemplateTemplateVolumesCloudSqlInstance
 {
     /// <summary>The Cloud SQL instance connection names, as can be found in https://console.cloud.google.com/sql/instances. Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect Cloud SQL and Cloud Run. Format: {project}:{location}:{instance}</summary>
@@ -728,6 +766,7 @@ public partial class V1beta1V2JobSpecInitProviderTemplateTemplateVolumesCloudSql
     public IList<string>? Instances { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobSpecInitProviderTemplateTemplateVolumesSecretItems
 {
     /// <summary>Integer octal mode bits to use on this file, must be a value between 01 and 0777 (octal). If 0 or not set, the Volume's default mode will be used.</summary>
@@ -763,6 +802,7 @@ public enum V1beta1V2JobSpecInitProviderTemplateTemplateVolumesSecretSecretRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1V2JobSpecInitProviderTemplateTemplateVolumesSecretSecretRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -776,6 +816,7 @@ public partial class V1beta1V2JobSpecInitProviderTemplateTemplateVolumesSecretSe
     public V1beta1V2JobSpecInitProviderTemplateTemplateVolumesSecretSecretRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Secret in secretmanager to populate secret.</summary>
 public partial class V1beta1V2JobSpecInitProviderTemplateTemplateVolumesSecretSecretRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -807,6 +848,7 @@ public enum V1beta1V2JobSpecInitProviderTemplateTemplateVolumesSecretSecretSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1V2JobSpecInitProviderTemplateTemplateVolumesSecretSecretSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -820,6 +862,7 @@ public partial class V1beta1V2JobSpecInitProviderTemplateTemplateVolumesSecretSe
     public V1beta1V2JobSpecInitProviderTemplateTemplateVolumesSecretSecretSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Secret in secretmanager to populate secret.</summary>
 public partial class V1beta1V2JobSpecInitProviderTemplateTemplateVolumesSecretSecretSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -835,6 +878,7 @@ public partial class V1beta1V2JobSpecInitProviderTemplateTemplateVolumesSecretSe
     public V1beta1V2JobSpecInitProviderTemplateTemplateVolumesSecretSecretSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobSpecInitProviderTemplateTemplateVolumesSecret
 {
     /// <summary>Integer representation of mode bits to use on created files by default. Must be a value between 0000 and 0777 (octal), defaulting to 0444. Directories within the path are not affected by this setting.</summary>
@@ -858,6 +902,7 @@ public partial class V1beta1V2JobSpecInitProviderTemplateTemplateVolumesSecret
     public V1beta1V2JobSpecInitProviderTemplateTemplateVolumesSecretSecretSelector? SecretSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobSpecInitProviderTemplateTemplateVolumes
 {
     /// <summary>For Cloud SQL volumes, contains the specific instances that should be mounted. Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect Cloud SQL and Cloud Run. Structure is documented below.</summary>
@@ -873,6 +918,7 @@ public partial class V1beta1V2JobSpecInitProviderTemplateTemplateVolumes
     public IList<V1beta1V2JobSpecInitProviderTemplateTemplateVolumesSecret>? Secret { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobSpecInitProviderTemplateTemplateVpcAccessNetworkInterfaces
 {
     /// <summary>The VPC network that the Cloud Run resource will be able to send traffic to. At least one of network or subnetwork must be specified. If both network and subnetwork are specified, the given VPC subnetwork must belong to the given VPC network. If network is not specified, it will be looked up from the subnetwork.</summary>
@@ -888,6 +934,7 @@ public partial class V1beta1V2JobSpecInitProviderTemplateTemplateVpcAccessNetwor
     public IList<string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobSpecInitProviderTemplateTemplateVpcAccess
 {
     /// <summary>VPC Access connector name. Format: projects/{project}/locations/{location}/connectors/{connector}, where {project} can be project id or number.</summary>
@@ -903,6 +950,7 @@ public partial class V1beta1V2JobSpecInitProviderTemplateTemplateVpcAccess
     public IList<V1beta1V2JobSpecInitProviderTemplateTemplateVpcAccessNetworkInterfaces>? NetworkInterfaces { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobSpecInitProviderTemplateTemplate
 {
     /// <summary>Holds the single container that defines the unit of execution for this task. Structure is documented below.</summary>
@@ -938,6 +986,7 @@ public partial class V1beta1V2JobSpecInitProviderTemplateTemplate
     public IList<V1beta1V2JobSpecInitProviderTemplateTemplateVpcAccess>? VpcAccess { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobSpecInitProviderTemplate
 {
     /// <summary>Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run API v2 does not support annotations with run.googleapis.com, cloud.googleapis.com, serving.knative.dev, or autoscaling.knative.dev namespaces, and they will be rejected. All system annotations in v1 now have a corresponding field in v2 ExecutionTemplate. This field follows Kubernetes annotations' namespacing, limits, and rules.</summary>
@@ -961,6 +1010,7 @@ public partial class V1beta1V2JobSpecInitProviderTemplate
     public IList<V1beta1V2JobSpecInitProviderTemplateTemplate>? Template { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1V2JobSpecInitProvider
 {
     /// <summary>Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run API v2 does not support annotations with run.googleapis.com, cloud.googleapis.com, serving.knative.dev, or autoscaling.knative.dev namespaces, and they will be rejected. All system annotations in v1 now have a corresponding field in v2 ExecutionTemplate. This field follows Kubernetes annotations' namespacing, limits, and rules.</summary>
@@ -1038,6 +1088,7 @@ public enum V1beta1V2JobSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1V2JobSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1051,6 +1102,7 @@ public partial class V1beta1V2JobSpecProviderConfigRefPolicy
     public V1beta1V2JobSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1V2JobSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1082,6 +1134,7 @@ public enum V1beta1V2JobSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1V2JobSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1095,6 +1148,7 @@ public partial class V1beta1V2JobSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1V2JobSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1V2JobSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1106,6 +1160,7 @@ public partial class V1beta1V2JobSpecPublishConnectionDetailsToConfigRef
     public V1beta1V2JobSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1V2JobSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1121,6 +1176,7 @@ public partial class V1beta1V2JobSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1V2JobSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1136,6 +1192,7 @@ public partial class V1beta1V2JobSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1V2JobSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1147,6 +1204,7 @@ public partial class V1beta1V2JobSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>V2JobSpec defines the desired state of V2Job</summary>
 public partial class V1beta1V2JobSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1179,6 +1237,7 @@ public partial class V1beta1V2JobSpec
     public V1beta1V2JobSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobStatusAtProviderBinaryAuthorization
 {
     /// <summary>If present, indicates to use Breakglass using this justification. If useDefault is False, then it must be empty. For more information on breakglass, see https://cloud.google.com/binary-authorization/docs/using-breakglass</summary>
@@ -1190,6 +1249,7 @@ public partial class V1beta1V2JobStatusAtProviderBinaryAuthorization
     public bool? UseDefault { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobStatusAtProviderConditions
 {
     /// <summary>(Output) A reason for the execution condition.</summary>
@@ -1225,6 +1285,7 @@ public partial class V1beta1V2JobStatusAtProviderConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobStatusAtProviderLatestCreatedExecution
 {
     /// <summary>(Output) Completion timestamp of the execution. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".</summary>
@@ -1240,6 +1301,7 @@ public partial class V1beta1V2JobStatusAtProviderLatestCreatedExecution
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobStatusAtProviderTemplateTemplateContainersEnvValueSourceSecretKeyRef
 {
     /// <summary>Secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret Structure is documented below.</summary>
@@ -1251,6 +1313,7 @@ public partial class V1beta1V2JobStatusAtProviderTemplateTemplateContainersEnvVa
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobStatusAtProviderTemplateTemplateContainersEnvValueSource
 {
     /// <summary>Selects a secret and a specific version from Cloud Secret Manager. Structure is documented below.</summary>
@@ -1258,6 +1321,7 @@ public partial class V1beta1V2JobStatusAtProviderTemplateTemplateContainersEnvVa
     public IList<V1beta1V2JobStatusAtProviderTemplateTemplateContainersEnvValueSourceSecretKeyRef>? SecretKeyRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobStatusAtProviderTemplateTemplateContainersEnv
 {
     /// <summary>Volume's name.</summary>
@@ -1273,6 +1337,7 @@ public partial class V1beta1V2JobStatusAtProviderTemplateTemplateContainersEnv
     public IList<V1beta1V2JobStatusAtProviderTemplateTemplateContainersEnvValueSource>? ValueSource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobStatusAtProviderTemplateTemplateContainersPorts
 {
     /// <summary>Port number the container listens on. This must be a valid TCP port number, 0 &lt; containerPort &lt; 65536.</summary>
@@ -1284,6 +1349,7 @@ public partial class V1beta1V2JobStatusAtProviderTemplateTemplateContainersPorts
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobStatusAtProviderTemplateTemplateContainersResources
 {
     /// <summary>Only memory and CPU are supported. Use key cpu for CPU limit and memory for memory limit. Note: The only supported values for CPU are '1', '2', '4', and '8'. Setting 4 CPU requires at least 2Gi of memory. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go</summary>
@@ -1291,6 +1357,7 @@ public partial class V1beta1V2JobStatusAtProviderTemplateTemplateContainersResou
     public IDictionary<string, string>? Limits { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobStatusAtProviderTemplateTemplateContainersVolumeMounts
 {
     /// <summary>Path within the container at which the volume should be mounted. Must not contain ':'. For Cloud SQL volumes, it can be left empty, or must otherwise be /cloudsql. All instances defined in the Volume will be available as /cloudsql/[instance]. For more information on Cloud SQL volumes, visit https://cloud.google.com/sql/docs/mysql/connect-run</summary>
@@ -1302,6 +1369,7 @@ public partial class V1beta1V2JobStatusAtProviderTemplateTemplateContainersVolum
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobStatusAtProviderTemplateTemplateContainers
 {
     /// <summary>Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell</summary>
@@ -1341,6 +1409,7 @@ public partial class V1beta1V2JobStatusAtProviderTemplateTemplateContainers
     public string? WorkingDir { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobStatusAtProviderTemplateTemplateVolumesCloudSqlInstance
 {
     /// <summary>The Cloud SQL instance connection names, as can be found in https://console.cloud.google.com/sql/instances. Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect Cloud SQL and Cloud Run. Format: {project}:{location}:{instance}</summary>
@@ -1348,6 +1417,7 @@ public partial class V1beta1V2JobStatusAtProviderTemplateTemplateVolumesCloudSql
     public IList<string>? Instances { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobStatusAtProviderTemplateTemplateVolumesSecretItems
 {
     /// <summary>Integer octal mode bits to use on this file, must be a value between 01 and 0777 (octal). If 0 or not set, the Volume's default mode will be used.</summary>
@@ -1363,6 +1433,7 @@ public partial class V1beta1V2JobStatusAtProviderTemplateTemplateVolumesSecretIt
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobStatusAtProviderTemplateTemplateVolumesSecret
 {
     /// <summary>Integer representation of mode bits to use on created files by default. Must be a value between 0000 and 0777 (octal), defaulting to 0444. Directories within the path are not affected by this setting.</summary>
@@ -1378,6 +1449,7 @@ public partial class V1beta1V2JobStatusAtProviderTemplateTemplateVolumesSecret
     public string? Secret { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobStatusAtProviderTemplateTemplateVolumes
 {
     /// <summary>For Cloud SQL volumes, contains the specific instances that should be mounted. Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect Cloud SQL and Cloud Run. Structure is documented below.</summary>
@@ -1393,6 +1465,7 @@ public partial class V1beta1V2JobStatusAtProviderTemplateTemplateVolumes
     public IList<V1beta1V2JobStatusAtProviderTemplateTemplateVolumesSecret>? Secret { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobStatusAtProviderTemplateTemplateVpcAccessNetworkInterfaces
 {
     /// <summary>The VPC network that the Cloud Run resource will be able to send traffic to. At least one of network or subnetwork must be specified. If both network and subnetwork are specified, the given VPC subnetwork must belong to the given VPC network. If network is not specified, it will be looked up from the subnetwork.</summary>
@@ -1408,6 +1481,7 @@ public partial class V1beta1V2JobStatusAtProviderTemplateTemplateVpcAccessNetwor
     public IList<string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobStatusAtProviderTemplateTemplateVpcAccess
 {
     /// <summary>VPC Access connector name. Format: projects/{project}/locations/{location}/connectors/{connector}, where {project} can be project id or number.</summary>
@@ -1423,6 +1497,7 @@ public partial class V1beta1V2JobStatusAtProviderTemplateTemplateVpcAccess
     public IList<V1beta1V2JobStatusAtProviderTemplateTemplateVpcAccessNetworkInterfaces>? NetworkInterfaces { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobStatusAtProviderTemplateTemplate
 {
     /// <summary>Holds the single container that defines the unit of execution for this task. Structure is documented below.</summary>
@@ -1458,6 +1533,7 @@ public partial class V1beta1V2JobStatusAtProviderTemplateTemplate
     public IList<V1beta1V2JobStatusAtProviderTemplateTemplateVpcAccess>? VpcAccess { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobStatusAtProviderTemplate
 {
     /// <summary>Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run API v2 does not support annotations with run.googleapis.com, cloud.googleapis.com, serving.knative.dev, or autoscaling.knative.dev namespaces, and they will be rejected. All system annotations in v1 now have a corresponding field in v2 ExecutionTemplate. This field follows Kubernetes annotations' namespacing, limits, and rules.</summary>
@@ -1481,6 +1557,7 @@ public partial class V1beta1V2JobStatusAtProviderTemplate
     public IList<V1beta1V2JobStatusAtProviderTemplateTemplate>? Template { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobStatusAtProviderTerminalCondition
 {
     /// <summary>(Output) A reason for the execution condition.</summary>
@@ -1516,6 +1593,7 @@ public partial class V1beta1V2JobStatusAtProviderTerminalCondition
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1V2JobStatusAtProvider
 {
     /// <summary>Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run API v2 does not support annotations with run.googleapis.com, cloud.googleapis.com, serving.knative.dev, or autoscaling.knative.dev namespaces, and they will be rejected. All system annotations in v1 now have a corresponding field in v2 ExecutionTemplate. This field follows Kubernetes annotations' namespacing, limits, and rules.</summary>
@@ -1631,6 +1709,7 @@ public partial class V1beta1V2JobStatusAtProvider
     public string? UpdateTime { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1V2JobStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1658,6 +1737,7 @@ public partial class V1beta1V2JobStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>V2JobStatus defines the observed state of V2Job.</summary>
 public partial class V1beta1V2JobStatus
 {
     /// <summary></summary>
@@ -1674,6 +1754,7 @@ public partial class V1beta1V2JobStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>V2Job is the Schema for the V2Jobs API. A Cloud Run Job resource that references a container image which is run to completion.</summary>
 public partial class V1beta1V2Job : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1V2JobSpec>, IStatus<V1beta1V2JobStatus>
 {
     public const string KubeApiVersion = "v1beta1";

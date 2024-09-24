@@ -18,6 +18,7 @@ public enum V1beta1BudgetActionSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetActionSpecForProviderActionThreshold
 {
     /// <summary>The type of threshold for a notification. Valid values are PERCENTAGE or ABSOLUTE_VALUE.</summary>
@@ -49,6 +50,7 @@ public enum V1beta1BudgetActionSpecForProviderBudgetNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BudgetActionSpecForProviderBudgetNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -62,6 +64,7 @@ public partial class V1beta1BudgetActionSpecForProviderBudgetNameRefPolicy
     public V1beta1BudgetActionSpecForProviderBudgetNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Budget in budgets to populate budgetName.</summary>
 public partial class V1beta1BudgetActionSpecForProviderBudgetNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -93,6 +96,7 @@ public enum V1beta1BudgetActionSpecForProviderBudgetNameSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BudgetActionSpecForProviderBudgetNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -106,6 +110,7 @@ public partial class V1beta1BudgetActionSpecForProviderBudgetNameSelectorPolicy
     public V1beta1BudgetActionSpecForProviderBudgetNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Budget in budgets to populate budgetName.</summary>
 public partial class V1beta1BudgetActionSpecForProviderBudgetNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -141,6 +146,7 @@ public enum V1beta1BudgetActionSpecForProviderDefinitionIamActionDefinitionPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BudgetActionSpecForProviderDefinitionIamActionDefinitionPolicyArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -154,6 +160,7 @@ public partial class V1beta1BudgetActionSpecForProviderDefinitionIamActionDefini
     public V1beta1BudgetActionSpecForProviderDefinitionIamActionDefinitionPolicyArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Policy in iam to populate policyArn.</summary>
 public partial class V1beta1BudgetActionSpecForProviderDefinitionIamActionDefinitionPolicyArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -185,6 +192,7 @@ public enum V1beta1BudgetActionSpecForProviderDefinitionIamActionDefinitionPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BudgetActionSpecForProviderDefinitionIamActionDefinitionPolicyArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -198,6 +206,7 @@ public partial class V1beta1BudgetActionSpecForProviderDefinitionIamActionDefini
     public V1beta1BudgetActionSpecForProviderDefinitionIamActionDefinitionPolicyArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Policy in iam to populate policyArn.</summary>
 public partial class V1beta1BudgetActionSpecForProviderDefinitionIamActionDefinitionPolicyArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -213,6 +222,7 @@ public partial class V1beta1BudgetActionSpecForProviderDefinitionIamActionDefini
     public V1beta1BudgetActionSpecForProviderDefinitionIamActionDefinitionPolicyArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetActionSpecForProviderDefinitionIamActionDefinition
 {
     /// <summary>A list of groups to be attached. There must be at least one group.</summary>
@@ -240,6 +250,7 @@ public partial class V1beta1BudgetActionSpecForProviderDefinitionIamActionDefini
     public IList<string>? Users { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetActionSpecForProviderDefinitionScpActionDefinition
 {
     /// <summary>The policy ID attached.</summary>
@@ -251,6 +262,7 @@ public partial class V1beta1BudgetActionSpecForProviderDefinitionScpActionDefini
     public IList<string>? TargetIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetActionSpecForProviderDefinitionSsmActionDefinition
 {
     /// <summary>The action subType. Valid values are STOP_EC2_INSTANCES or STOP_RDS_INSTANCES.</summary>
@@ -266,6 +278,7 @@ public partial class V1beta1BudgetActionSpecForProviderDefinitionSsmActionDefini
     public string Region { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetActionSpecForProviderDefinition
 {
     /// <summary>The AWS Identity and Access Management (IAM) action definition details. See IAM Action Definition.</summary>
@@ -301,6 +314,7 @@ public enum V1beta1BudgetActionSpecForProviderExecutionRoleArnRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BudgetActionSpecForProviderExecutionRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -314,6 +328,7 @@ public partial class V1beta1BudgetActionSpecForProviderExecutionRoleArnRefPolicy
     public V1beta1BudgetActionSpecForProviderExecutionRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate executionRoleArn.</summary>
 public partial class V1beta1BudgetActionSpecForProviderExecutionRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -345,6 +360,7 @@ public enum V1beta1BudgetActionSpecForProviderExecutionRoleArnSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BudgetActionSpecForProviderExecutionRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -358,6 +374,7 @@ public partial class V1beta1BudgetActionSpecForProviderExecutionRoleArnSelectorP
     public V1beta1BudgetActionSpecForProviderExecutionRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate executionRoleArn.</summary>
 public partial class V1beta1BudgetActionSpecForProviderExecutionRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -373,6 +390,7 @@ public partial class V1beta1BudgetActionSpecForProviderExecutionRoleArnSelector
     public V1beta1BudgetActionSpecForProviderExecutionRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetActionSpecForProviderSubscriber
 {
     /// <summary>The address that AWS sends budget notifications to, either an SNS topic or an email.</summary>
@@ -384,6 +402,7 @@ public partial class V1beta1BudgetActionSpecForProviderSubscriber
     public string? SubscriptionType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetActionSpecForProvider
 {
     /// <summary>The ID of the target account for budget. Will use current user's account_id by default if omitted.</summary>
@@ -447,6 +466,7 @@ public partial class V1beta1BudgetActionSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetActionSpecInitProviderActionThreshold
 {
     /// <summary>The type of threshold for a notification. Valid values are PERCENTAGE or ABSOLUTE_VALUE.</summary>
@@ -478,6 +498,7 @@ public enum V1beta1BudgetActionSpecInitProviderBudgetNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BudgetActionSpecInitProviderBudgetNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -491,6 +512,7 @@ public partial class V1beta1BudgetActionSpecInitProviderBudgetNameRefPolicy
     public V1beta1BudgetActionSpecInitProviderBudgetNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Budget in budgets to populate budgetName.</summary>
 public partial class V1beta1BudgetActionSpecInitProviderBudgetNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -522,6 +544,7 @@ public enum V1beta1BudgetActionSpecInitProviderBudgetNameSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BudgetActionSpecInitProviderBudgetNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -535,6 +558,7 @@ public partial class V1beta1BudgetActionSpecInitProviderBudgetNameSelectorPolicy
     public V1beta1BudgetActionSpecInitProviderBudgetNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Budget in budgets to populate budgetName.</summary>
 public partial class V1beta1BudgetActionSpecInitProviderBudgetNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -570,6 +594,7 @@ public enum V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefinitionPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefinitionPolicyArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -583,6 +608,7 @@ public partial class V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefin
     public V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefinitionPolicyArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Policy in iam to populate policyArn.</summary>
 public partial class V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefinitionPolicyArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -614,6 +640,7 @@ public enum V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefinitionPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefinitionPolicyArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -627,6 +654,7 @@ public partial class V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefin
     public V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefinitionPolicyArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Policy in iam to populate policyArn.</summary>
 public partial class V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefinitionPolicyArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -642,6 +670,7 @@ public partial class V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefin
     public V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefinitionPolicyArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefinition
 {
     /// <summary>A list of groups to be attached. There must be at least one group.</summary>
@@ -669,6 +698,7 @@ public partial class V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefin
     public IList<string>? Users { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetActionSpecInitProviderDefinitionScpActionDefinition
 {
     /// <summary>The policy ID attached.</summary>
@@ -680,6 +710,7 @@ public partial class V1beta1BudgetActionSpecInitProviderDefinitionScpActionDefin
     public IList<string>? TargetIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetActionSpecInitProviderDefinitionSsmActionDefinition
 {
     /// <summary>The action subType. Valid values are STOP_EC2_INSTANCES or STOP_RDS_INSTANCES.</summary>
@@ -691,6 +722,7 @@ public partial class V1beta1BudgetActionSpecInitProviderDefinitionSsmActionDefin
     public IList<string>? InstanceIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetActionSpecInitProviderDefinition
 {
     /// <summary>The AWS Identity and Access Management (IAM) action definition details. See IAM Action Definition.</summary>
@@ -726,6 +758,7 @@ public enum V1beta1BudgetActionSpecInitProviderExecutionRoleArnRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BudgetActionSpecInitProviderExecutionRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -739,6 +772,7 @@ public partial class V1beta1BudgetActionSpecInitProviderExecutionRoleArnRefPolic
     public V1beta1BudgetActionSpecInitProviderExecutionRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate executionRoleArn.</summary>
 public partial class V1beta1BudgetActionSpecInitProviderExecutionRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -770,6 +804,7 @@ public enum V1beta1BudgetActionSpecInitProviderExecutionRoleArnSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BudgetActionSpecInitProviderExecutionRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -783,6 +818,7 @@ public partial class V1beta1BudgetActionSpecInitProviderExecutionRoleArnSelector
     public V1beta1BudgetActionSpecInitProviderExecutionRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate executionRoleArn.</summary>
 public partial class V1beta1BudgetActionSpecInitProviderExecutionRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -798,6 +834,7 @@ public partial class V1beta1BudgetActionSpecInitProviderExecutionRoleArnSelector
     public V1beta1BudgetActionSpecInitProviderExecutionRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetActionSpecInitProviderSubscriber
 {
     /// <summary>The address that AWS sends budget notifications to, either an SNS topic or an email.</summary>
@@ -809,6 +846,7 @@ public partial class V1beta1BudgetActionSpecInitProviderSubscriber
     public string? SubscriptionType { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1BudgetActionSpecInitProvider
 {
     /// <summary>The ID of the target account for budget. Will use current user's account_id by default if omitted.</summary>
@@ -910,6 +948,7 @@ public enum V1beta1BudgetActionSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BudgetActionSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -923,6 +962,7 @@ public partial class V1beta1BudgetActionSpecProviderConfigRefPolicy
     public V1beta1BudgetActionSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1BudgetActionSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -954,6 +994,7 @@ public enum V1beta1BudgetActionSpecPublishConnectionDetailsToConfigRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BudgetActionSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -967,6 +1008,7 @@ public partial class V1beta1BudgetActionSpecPublishConnectionDetailsToConfigRefP
     public V1beta1BudgetActionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1BudgetActionSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -978,6 +1020,7 @@ public partial class V1beta1BudgetActionSpecPublishConnectionDetailsToConfigRef
     public V1beta1BudgetActionSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1BudgetActionSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -993,6 +1036,7 @@ public partial class V1beta1BudgetActionSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1BudgetActionSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1008,6 +1052,7 @@ public partial class V1beta1BudgetActionSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1BudgetActionSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1019,6 +1064,7 @@ public partial class V1beta1BudgetActionSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>BudgetActionSpec defines the desired state of BudgetAction</summary>
 public partial class V1beta1BudgetActionSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1051,6 +1097,7 @@ public partial class V1beta1BudgetActionSpec
     public V1beta1BudgetActionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetActionStatusAtProviderActionThreshold
 {
     /// <summary>The type of threshold for a notification. Valid values are PERCENTAGE or ABSOLUTE_VALUE.</summary>
@@ -1062,6 +1109,7 @@ public partial class V1beta1BudgetActionStatusAtProviderActionThreshold
     public double? ActionThresholdValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetActionStatusAtProviderDefinitionIamActionDefinition
 {
     /// <summary>A list of groups to be attached. There must be at least one group.</summary>
@@ -1081,6 +1129,7 @@ public partial class V1beta1BudgetActionStatusAtProviderDefinitionIamActionDefin
     public IList<string>? Users { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetActionStatusAtProviderDefinitionScpActionDefinition
 {
     /// <summary>The policy ID attached.</summary>
@@ -1092,6 +1141,7 @@ public partial class V1beta1BudgetActionStatusAtProviderDefinitionScpActionDefin
     public IList<string>? TargetIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetActionStatusAtProviderDefinitionSsmActionDefinition
 {
     /// <summary>The action subType. Valid values are STOP_EC2_INSTANCES or STOP_RDS_INSTANCES.</summary>
@@ -1107,6 +1157,7 @@ public partial class V1beta1BudgetActionStatusAtProviderDefinitionSsmActionDefin
     public string? Region { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetActionStatusAtProviderDefinition
 {
     /// <summary>The AWS Identity and Access Management (IAM) action definition details. See IAM Action Definition.</summary>
@@ -1122,6 +1173,7 @@ public partial class V1beta1BudgetActionStatusAtProviderDefinition
     public IList<V1beta1BudgetActionStatusAtProviderDefinitionSsmActionDefinition>? SsmActionDefinition { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetActionStatusAtProviderSubscriber
 {
     /// <summary>The address that AWS sends budget notifications to, either an SNS topic or an email.</summary>
@@ -1133,6 +1185,7 @@ public partial class V1beta1BudgetActionStatusAtProviderSubscriber
     public string? SubscriptionType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetActionStatusAtProvider
 {
     /// <summary>The ID of the target account for budget. Will use current user's account_id by default if omitted.</summary>
@@ -1196,6 +1249,7 @@ public partial class V1beta1BudgetActionStatusAtProvider
     public IDictionary<string, string>? TagsAll { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1BudgetActionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1223,6 +1277,7 @@ public partial class V1beta1BudgetActionStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>BudgetActionStatus defines the observed state of BudgetAction.</summary>
 public partial class V1beta1BudgetActionStatus
 {
     /// <summary></summary>
@@ -1239,6 +1294,7 @@ public partial class V1beta1BudgetActionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>BudgetAction is the Schema for the BudgetActions API. Provides a budget action resource.</summary>
 public partial class V1beta1BudgetAction : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BudgetActionSpec>, IStatus<V1beta1BudgetActionStatus>
 {
     public const string KubeApiVersion = "v1beta1";

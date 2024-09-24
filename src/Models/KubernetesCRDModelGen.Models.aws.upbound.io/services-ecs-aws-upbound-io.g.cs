@@ -18,6 +18,7 @@ public enum V1beta1ServiceSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderAlarms
 {
     /// <summary>One or more CloudWatch alarm names.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1ServiceSpecForProviderAlarms
     public bool? Rollback { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderCapacityProviderStrategy
 {
     /// <summary>Number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.</summary>
@@ -68,6 +70,7 @@ public enum V1beta1ServiceSpecForProviderClusterRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceSpecForProviderClusterRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -81,6 +84,7 @@ public partial class V1beta1ServiceSpecForProviderClusterRefPolicy
     public V1beta1ServiceSpecForProviderClusterRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in ecs to populate cluster.</summary>
 public partial class V1beta1ServiceSpecForProviderClusterRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -112,6 +116,7 @@ public enum V1beta1ServiceSpecForProviderClusterSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServiceSpecForProviderClusterSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1ServiceSpecForProviderClusterSelectorPolicy
     public V1beta1ServiceSpecForProviderClusterSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in ecs to populate cluster.</summary>
 public partial class V1beta1ServiceSpecForProviderClusterSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -140,6 +146,7 @@ public partial class V1beta1ServiceSpecForProviderClusterSelector
     public V1beta1ServiceSpecForProviderClusterSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderDeploymentCircuitBreaker
 {
     /// <summary>Whether to enable the deployment circuit breaker logic for the service.</summary>
@@ -151,6 +158,7 @@ public partial class V1beta1ServiceSpecForProviderDeploymentCircuitBreaker
     public bool? Rollback { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderDeploymentController
 {
     /// <summary>Type of deployment controller. Valid values: CODE_DEPLOY, ECS, EXTERNAL. Default: ECS.</summary>
@@ -178,6 +186,7 @@ public enum V1beta1ServiceSpecForProviderIamRoleRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceSpecForProviderIamRoleRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -191,6 +200,7 @@ public partial class V1beta1ServiceSpecForProviderIamRoleRefPolicy
     public V1beta1ServiceSpecForProviderIamRoleRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate iamRole.</summary>
 public partial class V1beta1ServiceSpecForProviderIamRoleRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -222,6 +232,7 @@ public enum V1beta1ServiceSpecForProviderIamRoleSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServiceSpecForProviderIamRoleSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +246,7 @@ public partial class V1beta1ServiceSpecForProviderIamRoleSelectorPolicy
     public V1beta1ServiceSpecForProviderIamRoleSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate iamRole.</summary>
 public partial class V1beta1ServiceSpecForProviderIamRoleSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -270,6 +282,7 @@ public enum V1beta1ServiceSpecForProviderLoadBalancerTargetGroupArnRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceSpecForProviderLoadBalancerTargetGroupArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -283,6 +296,7 @@ public partial class V1beta1ServiceSpecForProviderLoadBalancerTargetGroupArnRefP
     public V1beta1ServiceSpecForProviderLoadBalancerTargetGroupArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LBTargetGroup in elbv2 to populate targetGroupArn.</summary>
 public partial class V1beta1ServiceSpecForProviderLoadBalancerTargetGroupArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -314,6 +328,7 @@ public enum V1beta1ServiceSpecForProviderLoadBalancerTargetGroupArnSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServiceSpecForProviderLoadBalancerTargetGroupArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -327,6 +342,7 @@ public partial class V1beta1ServiceSpecForProviderLoadBalancerTargetGroupArnSele
     public V1beta1ServiceSpecForProviderLoadBalancerTargetGroupArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LBTargetGroup in elbv2 to populate targetGroupArn.</summary>
 public partial class V1beta1ServiceSpecForProviderLoadBalancerTargetGroupArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -342,6 +358,7 @@ public partial class V1beta1ServiceSpecForProviderLoadBalancerTargetGroupArnSele
     public V1beta1ServiceSpecForProviderLoadBalancerTargetGroupArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderLoadBalancer
 {
     /// <summary>Name of the container to associate with the load balancer (as it appears in a container definition).</summary>
@@ -389,6 +406,7 @@ public enum V1beta1ServiceSpecForProviderNetworkConfigurationSecurityGroupRefsPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceSpecForProviderNetworkConfigurationSecurityGroupRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -402,6 +420,7 @@ public partial class V1beta1ServiceSpecForProviderNetworkConfigurationSecurityGr
     public V1beta1ServiceSpecForProviderNetworkConfigurationSecurityGroupRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1ServiceSpecForProviderNetworkConfigurationSecurityGroupRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -433,6 +452,7 @@ public enum V1beta1ServiceSpecForProviderNetworkConfigurationSecurityGroupSelect
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServiceSpecForProviderNetworkConfigurationSecurityGroupSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -446,6 +466,7 @@ public partial class V1beta1ServiceSpecForProviderNetworkConfigurationSecurityGr
     public V1beta1ServiceSpecForProviderNetworkConfigurationSecurityGroupSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroups.</summary>
 public partial class V1beta1ServiceSpecForProviderNetworkConfigurationSecurityGroupSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -481,6 +502,7 @@ public enum V1beta1ServiceSpecForProviderNetworkConfigurationSubnetRefsPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceSpecForProviderNetworkConfigurationSubnetRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -494,6 +516,7 @@ public partial class V1beta1ServiceSpecForProviderNetworkConfigurationSubnetRefs
     public V1beta1ServiceSpecForProviderNetworkConfigurationSubnetRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1ServiceSpecForProviderNetworkConfigurationSubnetRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -525,6 +548,7 @@ public enum V1beta1ServiceSpecForProviderNetworkConfigurationSubnetSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServiceSpecForProviderNetworkConfigurationSubnetSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -538,6 +562,7 @@ public partial class V1beta1ServiceSpecForProviderNetworkConfigurationSubnetSele
     public V1beta1ServiceSpecForProviderNetworkConfigurationSubnetSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnets.</summary>
 public partial class V1beta1ServiceSpecForProviderNetworkConfigurationSubnetSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -553,6 +578,7 @@ public partial class V1beta1ServiceSpecForProviderNetworkConfigurationSubnetSele
     public V1beta1ServiceSpecForProviderNetworkConfigurationSubnetSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderNetworkConfiguration
 {
     /// <summary>Assign a public IP address to the ENI (Fargate launch type only). Valid values are true or false. Default false.</summary>
@@ -584,6 +610,7 @@ public partial class V1beta1ServiceSpecForProviderNetworkConfiguration
     public IList<string>? Subnets { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderOrderedPlacementStrategy
 {
     /// <summary>For the spread placement strategy, valid values are instanceId (or host, which has the same effect), or any platform or custom attribute that is applied to a container instance. For the binpack type, valid values are memory and cpu. For the random type, this attribute is not needed. For more information, see Placement Strategy.</summary>
@@ -595,6 +622,7 @@ public partial class V1beta1ServiceSpecForProviderOrderedPlacementStrategy
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderPlacementConstraints
 {
     /// <summary>Cluster Query Language expression to apply to the constraint. Does not need to be specified for the distinctInstance type. For more information, see Cluster Query Language in the Amazon EC2 Container Service Developer Guide.</summary>
@@ -606,6 +634,7 @@ public partial class V1beta1ServiceSpecForProviderPlacementConstraints
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderServiceConnectConfigurationLogConfigurationSecretOption
 {
     /// <summary>The name of the secret.</summary>
@@ -617,6 +646,7 @@ public partial class V1beta1ServiceSpecForProviderServiceConnectConfigurationLog
     public string? ValueFrom { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderServiceConnectConfigurationLogConfiguration
 {
     /// <summary>The log driver to use for the container.</summary>
@@ -632,6 +662,7 @@ public partial class V1beta1ServiceSpecForProviderServiceConnectConfigurationLog
     public IList<V1beta1ServiceSpecForProviderServiceConnectConfigurationLogConfigurationSecretOption>? SecretOption { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderServiceConnectConfigurationServiceClientAlias
 {
     /// <summary>The name that you use in the applications of client tasks to connect to this service.</summary>
@@ -643,6 +674,7 @@ public partial class V1beta1ServiceSpecForProviderServiceConnectConfigurationSer
     public double? Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderServiceConnectConfigurationServiceTimeout
 {
     /// <summary>The amount of time in seconds a connection will stay active while idle. A value of 0 can be set to disable idleTimeout.</summary>
@@ -654,6 +686,7 @@ public partial class V1beta1ServiceSpecForProviderServiceConnectConfigurationSer
     public double? PerRequestTimeoutSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderServiceConnectConfigurationServiceTlsIssuerCertAuthority
 {
     /// <summary>The ARN of the aws_acmpca_certificate_authority used to create the TLS Certificates.</summary>
@@ -661,6 +694,7 @@ public partial class V1beta1ServiceSpecForProviderServiceConnectConfigurationSer
     public string? AwsPcaAuthorityArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderServiceConnectConfigurationServiceTls
 {
     /// <summary>The details of the certificate authority which will issue the certificate.</summary>
@@ -676,6 +710,7 @@ public partial class V1beta1ServiceSpecForProviderServiceConnectConfigurationSer
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderServiceConnectConfigurationService
 {
     /// <summary>The list of client aliases for this Service Connect service. You use these to assign names that can be used by client applications. The maximum number of client aliases that you can have in this list is 1. See below.</summary>
@@ -703,6 +738,7 @@ public partial class V1beta1ServiceSpecForProviderServiceConnectConfigurationSer
     public IList<V1beta1ServiceSpecForProviderServiceConnectConfigurationServiceTls>? Tls { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderServiceConnectConfiguration
 {
     /// <summary>Specifies whether to use Service Connect with this service.</summary>
@@ -722,6 +758,7 @@ public partial class V1beta1ServiceSpecForProviderServiceConnectConfiguration
     public IList<V1beta1ServiceSpecForProviderServiceConnectConfigurationService>? Service { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProviderServiceRegistries
 {
     /// <summary>Container name value, already specified in the task definition, to be used for your service discovery service.</summary>
@@ -761,6 +798,7 @@ public enum V1beta1ServiceSpecForProviderTaskDefinitionRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceSpecForProviderTaskDefinitionRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -774,6 +812,7 @@ public partial class V1beta1ServiceSpecForProviderTaskDefinitionRefPolicy
     public V1beta1ServiceSpecForProviderTaskDefinitionRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a TaskDefinition in ecs to populate taskDefinition.</summary>
 public partial class V1beta1ServiceSpecForProviderTaskDefinitionRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -805,6 +844,7 @@ public enum V1beta1ServiceSpecForProviderTaskDefinitionSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServiceSpecForProviderTaskDefinitionSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -818,6 +858,7 @@ public partial class V1beta1ServiceSpecForProviderTaskDefinitionSelectorPolicy
     public V1beta1ServiceSpecForProviderTaskDefinitionSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a TaskDefinition in ecs to populate taskDefinition.</summary>
 public partial class V1beta1ServiceSpecForProviderTaskDefinitionSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -833,6 +874,7 @@ public partial class V1beta1ServiceSpecForProviderTaskDefinitionSelector
     public V1beta1ServiceSpecForProviderTaskDefinitionSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Configuration for the Amazon EBS volume that Amazon ECS creates and manages on your behalf. See below.</summary>
 public partial class V1beta1ServiceSpecForProviderVolumeConfigurationManagedEbsVolume
 {
     /// <summary>Whether the volume should be encrypted. Default value is true.</summary>
@@ -872,6 +914,7 @@ public partial class V1beta1ServiceSpecForProviderVolumeConfigurationManagedEbsV
     public string? VolumeType { get; set; }
 }
 
+/// <summary>Configuration for a volume specified in the task definition as a volume that is configured at launch time. Currently, the only supported volume type is an Amazon EBS volume. See below.</summary>
 public partial class V1beta1ServiceSpecForProviderVolumeConfiguration
 {
     /// <summary>Configuration for the Amazon EBS volume that Amazon ECS creates and manages on your behalf. See below.</summary>
@@ -883,6 +926,7 @@ public partial class V1beta1ServiceSpecForProviderVolumeConfiguration
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecForProvider
 {
     /// <summary>Information about the CloudWatch alarms. See below.</summary>
@@ -1026,6 +1070,7 @@ public partial class V1beta1ServiceSpecForProvider
     public bool? WaitForSteadyState { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderAlarms
 {
     /// <summary>One or more CloudWatch alarm names.</summary>
@@ -1041,6 +1086,7 @@ public partial class V1beta1ServiceSpecInitProviderAlarms
     public bool? Rollback { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderCapacityProviderStrategy
 {
     /// <summary>Number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.</summary>
@@ -1076,6 +1122,7 @@ public enum V1beta1ServiceSpecInitProviderClusterRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceSpecInitProviderClusterRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1089,6 +1136,7 @@ public partial class V1beta1ServiceSpecInitProviderClusterRefPolicy
     public V1beta1ServiceSpecInitProviderClusterRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in ecs to populate cluster.</summary>
 public partial class V1beta1ServiceSpecInitProviderClusterRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1120,6 +1168,7 @@ public enum V1beta1ServiceSpecInitProviderClusterSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServiceSpecInitProviderClusterSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1133,6 +1182,7 @@ public partial class V1beta1ServiceSpecInitProviderClusterSelectorPolicy
     public V1beta1ServiceSpecInitProviderClusterSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in ecs to populate cluster.</summary>
 public partial class V1beta1ServiceSpecInitProviderClusterSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1148,6 +1198,7 @@ public partial class V1beta1ServiceSpecInitProviderClusterSelector
     public V1beta1ServiceSpecInitProviderClusterSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderDeploymentCircuitBreaker
 {
     /// <summary>Whether to enable the deployment circuit breaker logic for the service.</summary>
@@ -1159,6 +1210,7 @@ public partial class V1beta1ServiceSpecInitProviderDeploymentCircuitBreaker
     public bool? Rollback { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderDeploymentController
 {
     /// <summary>Type of deployment controller. Valid values: CODE_DEPLOY, ECS, EXTERNAL. Default: ECS.</summary>
@@ -1186,6 +1238,7 @@ public enum V1beta1ServiceSpecInitProviderIamRoleRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceSpecInitProviderIamRoleRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1199,6 +1252,7 @@ public partial class V1beta1ServiceSpecInitProviderIamRoleRefPolicy
     public V1beta1ServiceSpecInitProviderIamRoleRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate iamRole.</summary>
 public partial class V1beta1ServiceSpecInitProviderIamRoleRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1230,6 +1284,7 @@ public enum V1beta1ServiceSpecInitProviderIamRoleSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServiceSpecInitProviderIamRoleSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1243,6 +1298,7 @@ public partial class V1beta1ServiceSpecInitProviderIamRoleSelectorPolicy
     public V1beta1ServiceSpecInitProviderIamRoleSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate iamRole.</summary>
 public partial class V1beta1ServiceSpecInitProviderIamRoleSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1278,6 +1334,7 @@ public enum V1beta1ServiceSpecInitProviderLoadBalancerTargetGroupArnRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceSpecInitProviderLoadBalancerTargetGroupArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1291,6 +1348,7 @@ public partial class V1beta1ServiceSpecInitProviderLoadBalancerTargetGroupArnRef
     public V1beta1ServiceSpecInitProviderLoadBalancerTargetGroupArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a LBTargetGroup in elbv2 to populate targetGroupArn.</summary>
 public partial class V1beta1ServiceSpecInitProviderLoadBalancerTargetGroupArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1322,6 +1380,7 @@ public enum V1beta1ServiceSpecInitProviderLoadBalancerTargetGroupArnSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServiceSpecInitProviderLoadBalancerTargetGroupArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1335,6 +1394,7 @@ public partial class V1beta1ServiceSpecInitProviderLoadBalancerTargetGroupArnSel
     public V1beta1ServiceSpecInitProviderLoadBalancerTargetGroupArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a LBTargetGroup in elbv2 to populate targetGroupArn.</summary>
 public partial class V1beta1ServiceSpecInitProviderLoadBalancerTargetGroupArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1350,6 +1410,7 @@ public partial class V1beta1ServiceSpecInitProviderLoadBalancerTargetGroupArnSel
     public V1beta1ServiceSpecInitProviderLoadBalancerTargetGroupArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderLoadBalancer
 {
     /// <summary>Name of the container to associate with the load balancer (as it appears in a container definition).</summary>
@@ -1397,6 +1458,7 @@ public enum V1beta1ServiceSpecInitProviderNetworkConfigurationSecurityGroupRefsP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceSpecInitProviderNetworkConfigurationSecurityGroupRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1410,6 +1472,7 @@ public partial class V1beta1ServiceSpecInitProviderNetworkConfigurationSecurityG
     public V1beta1ServiceSpecInitProviderNetworkConfigurationSecurityGroupRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1ServiceSpecInitProviderNetworkConfigurationSecurityGroupRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1441,6 +1504,7 @@ public enum V1beta1ServiceSpecInitProviderNetworkConfigurationSecurityGroupSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServiceSpecInitProviderNetworkConfigurationSecurityGroupSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1454,6 +1518,7 @@ public partial class V1beta1ServiceSpecInitProviderNetworkConfigurationSecurityG
     public V1beta1ServiceSpecInitProviderNetworkConfigurationSecurityGroupSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroups.</summary>
 public partial class V1beta1ServiceSpecInitProviderNetworkConfigurationSecurityGroupSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1489,6 +1554,7 @@ public enum V1beta1ServiceSpecInitProviderNetworkConfigurationSubnetRefsPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceSpecInitProviderNetworkConfigurationSubnetRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1502,6 +1568,7 @@ public partial class V1beta1ServiceSpecInitProviderNetworkConfigurationSubnetRef
     public V1beta1ServiceSpecInitProviderNetworkConfigurationSubnetRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1ServiceSpecInitProviderNetworkConfigurationSubnetRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1533,6 +1600,7 @@ public enum V1beta1ServiceSpecInitProviderNetworkConfigurationSubnetSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServiceSpecInitProviderNetworkConfigurationSubnetSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1546,6 +1614,7 @@ public partial class V1beta1ServiceSpecInitProviderNetworkConfigurationSubnetSel
     public V1beta1ServiceSpecInitProviderNetworkConfigurationSubnetSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnets.</summary>
 public partial class V1beta1ServiceSpecInitProviderNetworkConfigurationSubnetSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1561,6 +1630,7 @@ public partial class V1beta1ServiceSpecInitProviderNetworkConfigurationSubnetSel
     public V1beta1ServiceSpecInitProviderNetworkConfigurationSubnetSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderNetworkConfiguration
 {
     /// <summary>Assign a public IP address to the ENI (Fargate launch type only). Valid values are true or false. Default false.</summary>
@@ -1592,6 +1662,7 @@ public partial class V1beta1ServiceSpecInitProviderNetworkConfiguration
     public IList<string>? Subnets { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderOrderedPlacementStrategy
 {
     /// <summary>For the spread placement strategy, valid values are instanceId (or host, which has the same effect), or any platform or custom attribute that is applied to a container instance. For the binpack type, valid values are memory and cpu. For the random type, this attribute is not needed. For more information, see Placement Strategy.</summary>
@@ -1603,6 +1674,7 @@ public partial class V1beta1ServiceSpecInitProviderOrderedPlacementStrategy
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderPlacementConstraints
 {
     /// <summary>Cluster Query Language expression to apply to the constraint. Does not need to be specified for the distinctInstance type. For more information, see Cluster Query Language in the Amazon EC2 Container Service Developer Guide.</summary>
@@ -1614,6 +1686,7 @@ public partial class V1beta1ServiceSpecInitProviderPlacementConstraints
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderServiceConnectConfigurationLogConfigurationSecretOption
 {
     /// <summary>The name of the secret.</summary>
@@ -1625,6 +1698,7 @@ public partial class V1beta1ServiceSpecInitProviderServiceConnectConfigurationLo
     public string? ValueFrom { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderServiceConnectConfigurationLogConfiguration
 {
     /// <summary>The log driver to use for the container.</summary>
@@ -1640,6 +1714,7 @@ public partial class V1beta1ServiceSpecInitProviderServiceConnectConfigurationLo
     public IList<V1beta1ServiceSpecInitProviderServiceConnectConfigurationLogConfigurationSecretOption>? SecretOption { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderServiceConnectConfigurationServiceClientAlias
 {
     /// <summary>The name that you use in the applications of client tasks to connect to this service.</summary>
@@ -1651,6 +1726,7 @@ public partial class V1beta1ServiceSpecInitProviderServiceConnectConfigurationSe
     public double? Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderServiceConnectConfigurationServiceTimeout
 {
     /// <summary>The amount of time in seconds a connection will stay active while idle. A value of 0 can be set to disable idleTimeout.</summary>
@@ -1662,6 +1738,7 @@ public partial class V1beta1ServiceSpecInitProviderServiceConnectConfigurationSe
     public double? PerRequestTimeoutSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderServiceConnectConfigurationServiceTlsIssuerCertAuthority
 {
     /// <summary>The ARN of the aws_acmpca_certificate_authority used to create the TLS Certificates.</summary>
@@ -1669,6 +1746,7 @@ public partial class V1beta1ServiceSpecInitProviderServiceConnectConfigurationSe
     public string? AwsPcaAuthorityArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderServiceConnectConfigurationServiceTls
 {
     /// <summary>The details of the certificate authority which will issue the certificate.</summary>
@@ -1684,6 +1762,7 @@ public partial class V1beta1ServiceSpecInitProviderServiceConnectConfigurationSe
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderServiceConnectConfigurationService
 {
     /// <summary>The list of client aliases for this Service Connect service. You use these to assign names that can be used by client applications. The maximum number of client aliases that you can have in this list is 1. See below.</summary>
@@ -1711,6 +1790,7 @@ public partial class V1beta1ServiceSpecInitProviderServiceConnectConfigurationSe
     public IList<V1beta1ServiceSpecInitProviderServiceConnectConfigurationServiceTls>? Tls { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderServiceConnectConfiguration
 {
     /// <summary>Specifies whether to use Service Connect with this service.</summary>
@@ -1730,6 +1810,7 @@ public partial class V1beta1ServiceSpecInitProviderServiceConnectConfiguration
     public IList<V1beta1ServiceSpecInitProviderServiceConnectConfigurationService>? Service { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceSpecInitProviderServiceRegistries
 {
     /// <summary>Container name value, already specified in the task definition, to be used for your service discovery service.</summary>
@@ -1769,6 +1850,7 @@ public enum V1beta1ServiceSpecInitProviderTaskDefinitionRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceSpecInitProviderTaskDefinitionRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1782,6 +1864,7 @@ public partial class V1beta1ServiceSpecInitProviderTaskDefinitionRefPolicy
     public V1beta1ServiceSpecInitProviderTaskDefinitionRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a TaskDefinition in ecs to populate taskDefinition.</summary>
 public partial class V1beta1ServiceSpecInitProviderTaskDefinitionRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1813,6 +1896,7 @@ public enum V1beta1ServiceSpecInitProviderTaskDefinitionSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ServiceSpecInitProviderTaskDefinitionSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1826,6 +1910,7 @@ public partial class V1beta1ServiceSpecInitProviderTaskDefinitionSelectorPolicy
     public V1beta1ServiceSpecInitProviderTaskDefinitionSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a TaskDefinition in ecs to populate taskDefinition.</summary>
 public partial class V1beta1ServiceSpecInitProviderTaskDefinitionSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1841,6 +1926,7 @@ public partial class V1beta1ServiceSpecInitProviderTaskDefinitionSelector
     public V1beta1ServiceSpecInitProviderTaskDefinitionSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Configuration for the Amazon EBS volume that Amazon ECS creates and manages on your behalf. See below.</summary>
 public partial class V1beta1ServiceSpecInitProviderVolumeConfigurationManagedEbsVolume
 {
     /// <summary>Whether the volume should be encrypted. Default value is true.</summary>
@@ -1880,6 +1966,7 @@ public partial class V1beta1ServiceSpecInitProviderVolumeConfigurationManagedEbs
     public string? VolumeType { get; set; }
 }
 
+/// <summary>Configuration for a volume specified in the task definition as a volume that is configured at launch time. Currently, the only supported volume type is an Amazon EBS volume. See below.</summary>
 public partial class V1beta1ServiceSpecInitProviderVolumeConfiguration
 {
     /// <summary>Configuration for the Amazon EBS volume that Amazon ECS creates and manages on your behalf. See below.</summary>
@@ -1891,6 +1978,7 @@ public partial class V1beta1ServiceSpecInitProviderVolumeConfiguration
     public string? Name { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ServiceSpecInitProvider
 {
     /// <summary>Information about the CloudWatch alarms. See below.</summary>
@@ -2072,6 +2160,7 @@ public enum V1beta1ServiceSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2085,6 +2174,7 @@ public partial class V1beta1ServiceSpecProviderConfigRefPolicy
     public V1beta1ServiceSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ServiceSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2116,6 +2206,7 @@ public enum V1beta1ServiceSpecPublishConnectionDetailsToConfigRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ServiceSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2129,6 +2220,7 @@ public partial class V1beta1ServiceSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1ServiceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ServiceSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2140,6 +2232,7 @@ public partial class V1beta1ServiceSpecPublishConnectionDetailsToConfigRef
     public V1beta1ServiceSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ServiceSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -2155,6 +2248,7 @@ public partial class V1beta1ServiceSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ServiceSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -2170,6 +2264,7 @@ public partial class V1beta1ServiceSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ServiceSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -2181,6 +2276,7 @@ public partial class V1beta1ServiceSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ServiceSpec defines the desired state of Service</summary>
 public partial class V1beta1ServiceSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -2213,6 +2309,7 @@ public partial class V1beta1ServiceSpec
     public V1beta1ServiceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderAlarms
 {
     /// <summary>One or more CloudWatch alarm names.</summary>
@@ -2228,6 +2325,7 @@ public partial class V1beta1ServiceStatusAtProviderAlarms
     public bool? Rollback { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderCapacityProviderStrategy
 {
     /// <summary>Number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.</summary>
@@ -2243,6 +2341,7 @@ public partial class V1beta1ServiceStatusAtProviderCapacityProviderStrategy
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderDeploymentCircuitBreaker
 {
     /// <summary>Whether to enable the deployment circuit breaker logic for the service.</summary>
@@ -2254,6 +2353,7 @@ public partial class V1beta1ServiceStatusAtProviderDeploymentCircuitBreaker
     public bool? Rollback { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderDeploymentController
 {
     /// <summary>Type of deployment controller. Valid values: CODE_DEPLOY, ECS, EXTERNAL. Default: ECS.</summary>
@@ -2261,6 +2361,7 @@ public partial class V1beta1ServiceStatusAtProviderDeploymentController
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderLoadBalancer
 {
     /// <summary>Name of the container to associate with the load balancer (as it appears in a container definition).</summary>
@@ -2280,6 +2381,7 @@ public partial class V1beta1ServiceStatusAtProviderLoadBalancer
     public string? TargetGroupArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderNetworkConfiguration
 {
     /// <summary>Assign a public IP address to the ENI (Fargate launch type only). Valid values are true or false. Default false.</summary>
@@ -2295,6 +2397,7 @@ public partial class V1beta1ServiceStatusAtProviderNetworkConfiguration
     public IList<string>? Subnets { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderOrderedPlacementStrategy
 {
     /// <summary>For the spread placement strategy, valid values are instanceId (or host, which has the same effect), or any platform or custom attribute that is applied to a container instance. For the binpack type, valid values are memory and cpu. For the random type, this attribute is not needed. For more information, see Placement Strategy.</summary>
@@ -2306,6 +2409,7 @@ public partial class V1beta1ServiceStatusAtProviderOrderedPlacementStrategy
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderPlacementConstraints
 {
     /// <summary>Cluster Query Language expression to apply to the constraint. Does not need to be specified for the distinctInstance type. For more information, see Cluster Query Language in the Amazon EC2 Container Service Developer Guide.</summary>
@@ -2317,6 +2421,7 @@ public partial class V1beta1ServiceStatusAtProviderPlacementConstraints
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderServiceConnectConfigurationLogConfigurationSecretOption
 {
     /// <summary>The name of the secret.</summary>
@@ -2328,6 +2433,7 @@ public partial class V1beta1ServiceStatusAtProviderServiceConnectConfigurationLo
     public string? ValueFrom { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderServiceConnectConfigurationLogConfiguration
 {
     /// <summary>The log driver to use for the container.</summary>
@@ -2343,6 +2449,7 @@ public partial class V1beta1ServiceStatusAtProviderServiceConnectConfigurationLo
     public IList<V1beta1ServiceStatusAtProviderServiceConnectConfigurationLogConfigurationSecretOption>? SecretOption { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderServiceConnectConfigurationServiceClientAlias
 {
     /// <summary>The name that you use in the applications of client tasks to connect to this service.</summary>
@@ -2354,6 +2461,7 @@ public partial class V1beta1ServiceStatusAtProviderServiceConnectConfigurationSe
     public double? Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderServiceConnectConfigurationServiceTimeout
 {
     /// <summary>The amount of time in seconds a connection will stay active while idle. A value of 0 can be set to disable idleTimeout.</summary>
@@ -2365,6 +2473,7 @@ public partial class V1beta1ServiceStatusAtProviderServiceConnectConfigurationSe
     public double? PerRequestTimeoutSeconds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderServiceConnectConfigurationServiceTlsIssuerCertAuthority
 {
     /// <summary>The ARN of the aws_acmpca_certificate_authority used to create the TLS Certificates.</summary>
@@ -2372,6 +2481,7 @@ public partial class V1beta1ServiceStatusAtProviderServiceConnectConfigurationSe
     public string? AwsPcaAuthorityArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderServiceConnectConfigurationServiceTls
 {
     /// <summary>The details of the certificate authority which will issue the certificate.</summary>
@@ -2387,6 +2497,7 @@ public partial class V1beta1ServiceStatusAtProviderServiceConnectConfigurationSe
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderServiceConnectConfigurationService
 {
     /// <summary>The list of client aliases for this Service Connect service. You use these to assign names that can be used by client applications. The maximum number of client aliases that you can have in this list is 1. See below.</summary>
@@ -2414,6 +2525,7 @@ public partial class V1beta1ServiceStatusAtProviderServiceConnectConfigurationSe
     public IList<V1beta1ServiceStatusAtProviderServiceConnectConfigurationServiceTls>? Tls { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderServiceConnectConfiguration
 {
     /// <summary>Specifies whether to use Service Connect with this service.</summary>
@@ -2433,6 +2545,7 @@ public partial class V1beta1ServiceStatusAtProviderServiceConnectConfiguration
     public IList<V1beta1ServiceStatusAtProviderServiceConnectConfigurationService>? Service { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProviderServiceRegistries
 {
     /// <summary>Container name value, already specified in the task definition, to be used for your service discovery service.</summary>
@@ -2452,6 +2565,7 @@ public partial class V1beta1ServiceStatusAtProviderServiceRegistries
     public string? RegistryArn { get; set; }
 }
 
+/// <summary>Configuration for the Amazon EBS volume that Amazon ECS creates and manages on your behalf. See below.</summary>
 public partial class V1beta1ServiceStatusAtProviderVolumeConfigurationManagedEbsVolume
 {
     /// <summary>Whether the volume should be encrypted. Default value is true.</summary>
@@ -2491,6 +2605,7 @@ public partial class V1beta1ServiceStatusAtProviderVolumeConfigurationManagedEbs
     public string? VolumeType { get; set; }
 }
 
+/// <summary>Configuration for a volume specified in the task definition as a volume that is configured at launch time. Currently, the only supported volume type is an Amazon EBS volume. See below.</summary>
 public partial class V1beta1ServiceStatusAtProviderVolumeConfiguration
 {
     /// <summary>Configuration for the Amazon EBS volume that Amazon ECS creates and manages on your behalf. See below.</summary>
@@ -2502,6 +2617,7 @@ public partial class V1beta1ServiceStatusAtProviderVolumeConfiguration
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceStatusAtProvider
 {
     /// <summary>Information about the CloudWatch alarms. See below.</summary>
@@ -2625,6 +2741,7 @@ public partial class V1beta1ServiceStatusAtProvider
     public bool? WaitForSteadyState { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ServiceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2652,6 +2769,7 @@ public partial class V1beta1ServiceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ServiceStatus defines the observed state of Service.</summary>
 public partial class V1beta1ServiceStatus
 {
     /// <summary></summary>
@@ -2668,6 +2786,7 @@ public partial class V1beta1ServiceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Service is the Schema for the Services API. Provides an ECS service.</summary>
 public partial class V1beta1Service : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ServiceSpec>, IStatus<V1beta1ServiceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

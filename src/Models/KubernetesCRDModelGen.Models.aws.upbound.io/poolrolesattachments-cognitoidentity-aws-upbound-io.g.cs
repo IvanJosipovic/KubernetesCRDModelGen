@@ -38,6 +38,7 @@ public enum V1beta1PoolRolesAttachmentSpecForProviderIdentityPoolIdRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PoolRolesAttachmentSpecForProviderIdentityPoolIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1PoolRolesAttachmentSpecForProviderIdentityPoolIdRefP
     public V1beta1PoolRolesAttachmentSpecForProviderIdentityPoolIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Pool in cognitoidentity to populate identityPoolId.</summary>
 public partial class V1beta1PoolRolesAttachmentSpecForProviderIdentityPoolIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1PoolRolesAttachmentSpecForProviderIdentityPoolIdSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PoolRolesAttachmentSpecForProviderIdentityPoolIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1PoolRolesAttachmentSpecForProviderIdentityPoolIdSele
     public V1beta1PoolRolesAttachmentSpecForProviderIdentityPoolIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Pool in cognitoidentity to populate identityPoolId.</summary>
 public partial class V1beta1PoolRolesAttachmentSpecForProviderIdentityPoolIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1PoolRolesAttachmentSpecForProviderRoleMappingMappingRuleRoleA
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PoolRolesAttachmentSpecForProviderRoleMappingMappingRuleRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1PoolRolesAttachmentSpecForProviderRoleMappingMapping
     public V1beta1PoolRolesAttachmentSpecForProviderRoleMappingMappingRuleRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1PoolRolesAttachmentSpecForProviderRoleMappingMappingRuleRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1PoolRolesAttachmentSpecForProviderRoleMappingMappingRuleRoleA
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PoolRolesAttachmentSpecForProviderRoleMappingMappingRuleRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1PoolRolesAttachmentSpecForProviderRoleMappingMapping
     public V1beta1PoolRolesAttachmentSpecForProviderRoleMappingMappingRuleRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1PoolRolesAttachmentSpecForProviderRoleMappingMappingRuleRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1PoolRolesAttachmentSpecForProviderRoleMappingMapping
     public V1beta1PoolRolesAttachmentSpecForProviderRoleMappingMappingRuleRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PoolRolesAttachmentSpecForProviderRoleMappingMappingRule
 {
     /// <summary>The claim name that must be present in the token, for example, "isAdmin" or "paid".</summary>
@@ -229,6 +238,7 @@ public partial class V1beta1PoolRolesAttachmentSpecForProviderRoleMappingMapping
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PoolRolesAttachmentSpecForProviderRoleMapping
 {
     /// <summary>Specifies the action to be taken if either no rules match the claim value for the Rules type, or there is no cognito:preferred_role claim and there are multiple cognito:roles matches for the Token type. Required if you specify Token or Rules as the Type.</summary>
@@ -248,6 +258,7 @@ public partial class V1beta1PoolRolesAttachmentSpecForProviderRoleMapping
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PoolRolesAttachmentSpecForProvider
 {
     /// <summary>An identity pool ID in the format REGION_GUID.</summary>
@@ -295,6 +306,7 @@ public enum V1beta1PoolRolesAttachmentSpecInitProviderIdentityPoolIdRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PoolRolesAttachmentSpecInitProviderIdentityPoolIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -308,6 +320,7 @@ public partial class V1beta1PoolRolesAttachmentSpecInitProviderIdentityPoolIdRef
     public V1beta1PoolRolesAttachmentSpecInitProviderIdentityPoolIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Pool in cognitoidentity to populate identityPoolId.</summary>
 public partial class V1beta1PoolRolesAttachmentSpecInitProviderIdentityPoolIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -339,6 +352,7 @@ public enum V1beta1PoolRolesAttachmentSpecInitProviderIdentityPoolIdSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PoolRolesAttachmentSpecInitProviderIdentityPoolIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -352,6 +366,7 @@ public partial class V1beta1PoolRolesAttachmentSpecInitProviderIdentityPoolIdSel
     public V1beta1PoolRolesAttachmentSpecInitProviderIdentityPoolIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Pool in cognitoidentity to populate identityPoolId.</summary>
 public partial class V1beta1PoolRolesAttachmentSpecInitProviderIdentityPoolIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -387,6 +402,7 @@ public enum V1beta1PoolRolesAttachmentSpecInitProviderRoleMappingMappingRuleRole
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PoolRolesAttachmentSpecInitProviderRoleMappingMappingRuleRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -400,6 +416,7 @@ public partial class V1beta1PoolRolesAttachmentSpecInitProviderRoleMappingMappin
     public V1beta1PoolRolesAttachmentSpecInitProviderRoleMappingMappingRuleRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1PoolRolesAttachmentSpecInitProviderRoleMappingMappingRuleRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -431,6 +448,7 @@ public enum V1beta1PoolRolesAttachmentSpecInitProviderRoleMappingMappingRuleRole
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PoolRolesAttachmentSpecInitProviderRoleMappingMappingRuleRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -444,6 +462,7 @@ public partial class V1beta1PoolRolesAttachmentSpecInitProviderRoleMappingMappin
     public V1beta1PoolRolesAttachmentSpecInitProviderRoleMappingMappingRuleRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1PoolRolesAttachmentSpecInitProviderRoleMappingMappingRuleRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -459,6 +478,7 @@ public partial class V1beta1PoolRolesAttachmentSpecInitProviderRoleMappingMappin
     public V1beta1PoolRolesAttachmentSpecInitProviderRoleMappingMappingRuleRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PoolRolesAttachmentSpecInitProviderRoleMappingMappingRule
 {
     /// <summary>The claim name that must be present in the token, for example, "isAdmin" or "paid".</summary>
@@ -486,6 +506,7 @@ public partial class V1beta1PoolRolesAttachmentSpecInitProviderRoleMappingMappin
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PoolRolesAttachmentSpecInitProviderRoleMapping
 {
     /// <summary>Specifies the action to be taken if either no rules match the claim value for the Rules type, or there is no cognito:preferred_role claim and there are multiple cognito:roles matches for the Token type. Required if you specify Token or Rules as the Type.</summary>
@@ -505,6 +526,7 @@ public partial class V1beta1PoolRolesAttachmentSpecInitProviderRoleMapping
     public string? Type { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1PoolRolesAttachmentSpecInitProvider
 {
     /// <summary>An identity pool ID in the format REGION_GUID.</summary>
@@ -570,6 +592,7 @@ public enum V1beta1PoolRolesAttachmentSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PoolRolesAttachmentSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -583,6 +606,7 @@ public partial class V1beta1PoolRolesAttachmentSpecProviderConfigRefPolicy
     public V1beta1PoolRolesAttachmentSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1PoolRolesAttachmentSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -614,6 +638,7 @@ public enum V1beta1PoolRolesAttachmentSpecPublishConnectionDetailsToConfigRefPol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PoolRolesAttachmentSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -627,6 +652,7 @@ public partial class V1beta1PoolRolesAttachmentSpecPublishConnectionDetailsToCon
     public V1beta1PoolRolesAttachmentSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1PoolRolesAttachmentSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -638,6 +664,7 @@ public partial class V1beta1PoolRolesAttachmentSpecPublishConnectionDetailsToCon
     public V1beta1PoolRolesAttachmentSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1PoolRolesAttachmentSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -653,6 +680,7 @@ public partial class V1beta1PoolRolesAttachmentSpecPublishConnectionDetailsToMet
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1PoolRolesAttachmentSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -668,6 +696,7 @@ public partial class V1beta1PoolRolesAttachmentSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1PoolRolesAttachmentSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -679,6 +708,7 @@ public partial class V1beta1PoolRolesAttachmentSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>PoolRolesAttachmentSpec defines the desired state of PoolRolesAttachment</summary>
 public partial class V1beta1PoolRolesAttachmentSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -711,6 +741,7 @@ public partial class V1beta1PoolRolesAttachmentSpec
     public V1beta1PoolRolesAttachmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PoolRolesAttachmentStatusAtProviderRoleMappingMappingRule
 {
     /// <summary>The claim name that must be present in the token, for example, "isAdmin" or "paid".</summary>
@@ -730,6 +761,7 @@ public partial class V1beta1PoolRolesAttachmentStatusAtProviderRoleMappingMappin
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PoolRolesAttachmentStatusAtProviderRoleMapping
 {
     /// <summary>Specifies the action to be taken if either no rules match the claim value for the Rules type, or there is no cognito:preferred_role claim and there are multiple cognito:roles matches for the Token type. Required if you specify Token or Rules as the Type.</summary>
@@ -749,6 +781,7 @@ public partial class V1beta1PoolRolesAttachmentStatusAtProviderRoleMapping
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PoolRolesAttachmentStatusAtProvider
 {
     /// <summary>The identity pool ID.</summary>
@@ -768,6 +801,7 @@ public partial class V1beta1PoolRolesAttachmentStatusAtProvider
     public IDictionary<string, string>? Roles { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1PoolRolesAttachmentStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -795,6 +829,7 @@ public partial class V1beta1PoolRolesAttachmentStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>PoolRolesAttachmentStatus defines the observed state of PoolRolesAttachment.</summary>
 public partial class V1beta1PoolRolesAttachmentStatus
 {
     /// <summary></summary>
@@ -811,6 +846,7 @@ public partial class V1beta1PoolRolesAttachmentStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>PoolRolesAttachment is the Schema for the PoolRolesAttachments API. Provides an AWS Cognito Identity Pool Roles Attachment.</summary>
 public partial class V1beta1PoolRolesAttachment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1PoolRolesAttachmentSpec>, IStatus<V1beta1PoolRolesAttachmentStatus>
 {
     public const string KubeApiVersion = "v1beta1";

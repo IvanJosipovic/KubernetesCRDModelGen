@@ -21,6 +21,7 @@ public enum V1alpha1AdminNetworkPolicySpecEgressActionEnum
     Pass
 }
 
+/// <summary>Port selects a port on a pod(s) based on number.   Support: Core</summary>
 public partial class V1alpha1AdminNetworkPolicySpecEgressPortsPortNumber
 {
     /// <summary>Number defines a network port value.   Support: Core</summary>
@@ -32,6 +33,7 @@ public partial class V1alpha1AdminNetworkPolicySpecEgressPortsPortNumber
     public string Protocol { get; set; }
 }
 
+/// <summary>PortRange selects a port range on a pod(s) based on provided start and end values.   Support: Core</summary>
 public partial class V1alpha1AdminNetworkPolicySpecEgressPortsPortRange
 {
     /// <summary>End defines a network port that is the end of a port range, the End value must be greater than Start.   Support: Core</summary>
@@ -47,6 +49,7 @@ public partial class V1alpha1AdminNetworkPolicySpecEgressPortsPortRange
     public int Start { get; set; }
 }
 
+/// <summary>AdminNetworkPolicyPort describes how to select network ports on pod(s). Exactly one field must be set.</summary>
 public partial class V1alpha1AdminNetworkPolicySpecEgressPorts
 {
     /// <summary>Port selects a port on a pod(s) based on number.   Support: Core</summary>
@@ -58,6 +61,7 @@ public partial class V1alpha1AdminNetworkPolicySpecEgressPorts
     public V1alpha1AdminNetworkPolicySpecEgressPortsPortRange? PortRange { get; set; }
 }
 
+/// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1AdminNetworkPolicySpecEgressToNamespacesMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -73,6 +77,7 @@ public partial class V1alpha1AdminNetworkPolicySpecEgressToNamespacesMatchExpres
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>Namespaces defines a way to select all pods within a set of Namespaces. Note that host-networked pods are not included in this type of peer.   Support: Core</summary>
 public partial class V1alpha1AdminNetworkPolicySpecEgressToNamespaces
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -84,6 +89,7 @@ public partial class V1alpha1AdminNetworkPolicySpecEgressToNamespaces
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1AdminNetworkPolicySpecEgressToPodsNamespaceSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -99,6 +105,7 @@ public partial class V1alpha1AdminNetworkPolicySpecEgressToPodsNamespaceSelector
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>NamespaceSelector follows standard label selector semantics; if empty, it selects all Namespaces.</summary>
 public partial class V1alpha1AdminNetworkPolicySpecEgressToPodsNamespaceSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -110,6 +117,7 @@ public partial class V1alpha1AdminNetworkPolicySpecEgressToPodsNamespaceSelector
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1AdminNetworkPolicySpecEgressToPodsPodSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -125,6 +133,7 @@ public partial class V1alpha1AdminNetworkPolicySpecEgressToPodsPodSelectorMatchE
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>PodSelector is used to explicitly select pods within a namespace; if empty, it selects all Pods.</summary>
 public partial class V1alpha1AdminNetworkPolicySpecEgressToPodsPodSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -136,6 +145,7 @@ public partial class V1alpha1AdminNetworkPolicySpecEgressToPodsPodSelector
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>Pods defines a way to select a set of pods in a set of namespaces. Note that host-networked pods are not included in this type of peer.   Support: Core</summary>
 public partial class V1alpha1AdminNetworkPolicySpecEgressToPods
 {
     /// <summary>NamespaceSelector follows standard label selector semantics; if empty, it selects all Namespaces.</summary>
@@ -147,6 +157,7 @@ public partial class V1alpha1AdminNetworkPolicySpecEgressToPods
     public V1alpha1AdminNetworkPolicySpecEgressToPodsPodSelector PodSelector { get; set; }
 }
 
+/// <summary>AdminNetworkPolicyEgressPeer defines a peer to allow traffic to. Exactly one of the selector pointers must be set for a given peer. If a consumer observes none of its fields are set, they must assume an unknown option has been specified and fail closed.</summary>
 public partial class V1alpha1AdminNetworkPolicySpecEgressTo
 {
     /// <summary>Namespaces defines a way to select all pods within a set of Namespaces. Note that host-networked pods are not included in this type of peer.   Support: Core</summary>
@@ -158,6 +169,7 @@ public partial class V1alpha1AdminNetworkPolicySpecEgressTo
     public V1alpha1AdminNetworkPolicySpecEgressToPods? Pods { get; set; }
 }
 
+/// <summary>AdminNetworkPolicyEgressRule describes an action to take on a particular set of traffic originating from pods selected by a AdminNetworkPolicy's Subject field. &lt;network-policy-api:experimental:validation&gt;</summary>
 public partial class V1alpha1AdminNetworkPolicySpecEgress
 {
     /// <summary>Action specifies the effect this rule will have on matching traffic. Currently the following actions are supported: Allow: allows the selected traffic (even if it would otherwise have been denied by NetworkPolicy) Deny: denies the selected traffic Pass: instructs the selected traffic to skip any remaining ANP rules, and then pass execution to any NetworkPolicies that select the pod. If the pod is not selected by any NetworkPolicies then execution is passed to any BaselineAdminNetworkPolicies that select the pod.   Support: Core</summary>
@@ -191,6 +203,7 @@ public enum V1alpha1AdminNetworkPolicySpecIngressActionEnum
     Pass
 }
 
+/// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1AdminNetworkPolicySpecIngressFromNamespacesMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -206,6 +219,7 @@ public partial class V1alpha1AdminNetworkPolicySpecIngressFromNamespacesMatchExp
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>Namespaces defines a way to select all pods within a set of Namespaces. Note that host-networked pods are not included in this type of peer.   Support: Core</summary>
 public partial class V1alpha1AdminNetworkPolicySpecIngressFromNamespaces
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -217,6 +231,7 @@ public partial class V1alpha1AdminNetworkPolicySpecIngressFromNamespaces
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1AdminNetworkPolicySpecIngressFromPodsNamespaceSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -232,6 +247,7 @@ public partial class V1alpha1AdminNetworkPolicySpecIngressFromPodsNamespaceSelec
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>NamespaceSelector follows standard label selector semantics; if empty, it selects all Namespaces.</summary>
 public partial class V1alpha1AdminNetworkPolicySpecIngressFromPodsNamespaceSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -243,6 +259,7 @@ public partial class V1alpha1AdminNetworkPolicySpecIngressFromPodsNamespaceSelec
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1AdminNetworkPolicySpecIngressFromPodsPodSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -258,6 +275,7 @@ public partial class V1alpha1AdminNetworkPolicySpecIngressFromPodsPodSelectorMat
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>PodSelector is used to explicitly select pods within a namespace; if empty, it selects all Pods.</summary>
 public partial class V1alpha1AdminNetworkPolicySpecIngressFromPodsPodSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -269,6 +287,7 @@ public partial class V1alpha1AdminNetworkPolicySpecIngressFromPodsPodSelector
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>Pods defines a way to select a set of pods in a set of namespaces. Note that host-networked pods are not included in this type of peer.   Support: Core</summary>
 public partial class V1alpha1AdminNetworkPolicySpecIngressFromPods
 {
     /// <summary>NamespaceSelector follows standard label selector semantics; if empty, it selects all Namespaces.</summary>
@@ -280,6 +299,7 @@ public partial class V1alpha1AdminNetworkPolicySpecIngressFromPods
     public V1alpha1AdminNetworkPolicySpecIngressFromPodsPodSelector PodSelector { get; set; }
 }
 
+/// <summary>AdminNetworkPolicyIngressPeer defines an in-cluster peer to allow traffic from. Exactly one of the selector pointers must be set for a given peer. If a consumer observes none of its fields are set, they must assume an unknown option has been specified and fail closed.</summary>
 public partial class V1alpha1AdminNetworkPolicySpecIngressFrom
 {
     /// <summary>Namespaces defines a way to select all pods within a set of Namespaces. Note that host-networked pods are not included in this type of peer.   Support: Core</summary>
@@ -291,6 +311,7 @@ public partial class V1alpha1AdminNetworkPolicySpecIngressFrom
     public V1alpha1AdminNetworkPolicySpecIngressFromPods? Pods { get; set; }
 }
 
+/// <summary>Port selects a port on a pod(s) based on number.   Support: Core</summary>
 public partial class V1alpha1AdminNetworkPolicySpecIngressPortsPortNumber
 {
     /// <summary>Number defines a network port value.   Support: Core</summary>
@@ -302,6 +323,7 @@ public partial class V1alpha1AdminNetworkPolicySpecIngressPortsPortNumber
     public string Protocol { get; set; }
 }
 
+/// <summary>PortRange selects a port range on a pod(s) based on provided start and end values.   Support: Core</summary>
 public partial class V1alpha1AdminNetworkPolicySpecIngressPortsPortRange
 {
     /// <summary>End defines a network port that is the end of a port range, the End value must be greater than Start.   Support: Core</summary>
@@ -317,6 +339,7 @@ public partial class V1alpha1AdminNetworkPolicySpecIngressPortsPortRange
     public int Start { get; set; }
 }
 
+/// <summary>AdminNetworkPolicyPort describes how to select network ports on pod(s). Exactly one field must be set.</summary>
 public partial class V1alpha1AdminNetworkPolicySpecIngressPorts
 {
     /// <summary>Port selects a port on a pod(s) based on number.   Support: Core</summary>
@@ -328,6 +351,7 @@ public partial class V1alpha1AdminNetworkPolicySpecIngressPorts
     public V1alpha1AdminNetworkPolicySpecIngressPortsPortRange? PortRange { get; set; }
 }
 
+/// <summary>AdminNetworkPolicyIngressRule describes an action to take on a particular set of traffic destined for pods selected by an AdminNetworkPolicy's Subject field.</summary>
 public partial class V1alpha1AdminNetworkPolicySpecIngress
 {
     /// <summary>Action specifies the effect this rule will have on matching traffic. Currently the following actions are supported: Allow: allows the selected traffic (even if it would otherwise have been denied by NetworkPolicy) Deny: denies the selected traffic Pass: instructs the selected traffic to skip any remaining ANP rules, and then pass execution to any NetworkPolicies that select the pod. If the pod is not selected by any NetworkPolicies then execution is passed to any BaselineAdminNetworkPolicies that select the pod.   Support: Core</summary>
@@ -348,6 +372,7 @@ public partial class V1alpha1AdminNetworkPolicySpecIngress
     public IList<V1alpha1AdminNetworkPolicySpecIngressPorts>? Ports { get; set; }
 }
 
+/// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1AdminNetworkPolicySpecSubjectNamespacesMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -363,6 +388,7 @@ public partial class V1alpha1AdminNetworkPolicySpecSubjectNamespacesMatchExpress
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>Namespaces is used to select pods via namespace selectors.</summary>
 public partial class V1alpha1AdminNetworkPolicySpecSubjectNamespaces
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -374,6 +400,7 @@ public partial class V1alpha1AdminNetworkPolicySpecSubjectNamespaces
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1AdminNetworkPolicySpecSubjectPodsNamespaceSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -389,6 +416,7 @@ public partial class V1alpha1AdminNetworkPolicySpecSubjectPodsNamespaceSelectorM
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>NamespaceSelector follows standard label selector semantics; if empty, it selects all Namespaces.</summary>
 public partial class V1alpha1AdminNetworkPolicySpecSubjectPodsNamespaceSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -400,6 +428,7 @@ public partial class V1alpha1AdminNetworkPolicySpecSubjectPodsNamespaceSelector
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1AdminNetworkPolicySpecSubjectPodsPodSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -415,6 +444,7 @@ public partial class V1alpha1AdminNetworkPolicySpecSubjectPodsPodSelectorMatchEx
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>PodSelector is used to explicitly select pods within a namespace; if empty, it selects all Pods.</summary>
 public partial class V1alpha1AdminNetworkPolicySpecSubjectPodsPodSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -426,6 +456,7 @@ public partial class V1alpha1AdminNetworkPolicySpecSubjectPodsPodSelector
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>Pods is used to select pods via namespace AND pod selectors.</summary>
 public partial class V1alpha1AdminNetworkPolicySpecSubjectPods
 {
     /// <summary>NamespaceSelector follows standard label selector semantics; if empty, it selects all Namespaces.</summary>
@@ -437,6 +468,7 @@ public partial class V1alpha1AdminNetworkPolicySpecSubjectPods
     public V1alpha1AdminNetworkPolicySpecSubjectPodsPodSelector PodSelector { get; set; }
 }
 
+/// <summary>Subject defines the pods to which this AdminNetworkPolicy applies. Note that host-networked pods are not included in subject selection.   Support: Core</summary>
 public partial class V1alpha1AdminNetworkPolicySpecSubject
 {
     /// <summary>Namespaces is used to select pods via namespace selectors.</summary>
@@ -448,6 +480,7 @@ public partial class V1alpha1AdminNetworkPolicySpecSubject
     public V1alpha1AdminNetworkPolicySpecSubjectPods? Pods { get; set; }
 }
 
+/// <summary>Specification of the desired behavior of AdminNetworkPolicy.</summary>
 public partial class V1alpha1AdminNetworkPolicySpec
 {
     /// <summary>Egress is the list of Egress rules to be applied to the selected pods. A total of 100 rules will be allowed in each ANP instance. The relative precedence of egress rules within a single ANP object (all of which share the priority) will be determined by the order in which the rule is written. Thus, a rule that appears at the top of the egress rules would take the highest precedence. ANPs with no egress rules do not affect egress traffic.   Support: Core</summary>
@@ -480,6 +513,7 @@ public enum V1alpha1AdminNetworkPolicyStatusConditionsStatusEnum
     Unknown
 }
 
+/// <summary>Condition contains details for one aspect of the current state of this API Resource. --- This struct is intended for direct use as an array at the field path .status.conditions.  For example,   	type FooStatus struct{ 	    // Represents the observations of a foo's current state. 	    // Known .status.conditions.type are: "Available", "Progressing", and "Degraded" 	    // +patchMergeKey=type 	    // +patchStrategy=merge 	    // +listType=map 	    // +listMapKey=type 	    Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`   	    // other fields 	}</summary>
 public partial class V1alpha1AdminNetworkPolicyStatusConditions
 {
     /// <summary>lastTransitionTime is the last time the condition transitioned from one status to another. This should be when the underlying condition changed.  If that is not known, then using the time when the API field changed is acceptable.</summary>
@@ -508,6 +542,7 @@ public partial class V1alpha1AdminNetworkPolicyStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Status is the status to be reported by the implementation.</summary>
 public partial class V1alpha1AdminNetworkPolicyStatus
 {
     /// <summary></summary>
@@ -516,6 +551,7 @@ public partial class V1alpha1AdminNetworkPolicyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>AdminNetworkPolicy is  a cluster level resource that is part of the AdminNetworkPolicy API.</summary>
 public partial class V1alpha1AdminNetworkPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1AdminNetworkPolicySpec>, IStatus<V1alpha1AdminNetworkPolicyStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

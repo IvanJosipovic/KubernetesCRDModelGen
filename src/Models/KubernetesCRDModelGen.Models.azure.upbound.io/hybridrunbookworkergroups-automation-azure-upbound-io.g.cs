@@ -38,6 +38,7 @@ public enum V1beta1HybridRunBookWorkerGroupSpecForProviderAutomationAccountNameR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HybridRunBookWorkerGroupSpecForProviderAutomationAccountNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecForProviderAutomationAcc
     public V1beta1HybridRunBookWorkerGroupSpecForProviderAutomationAccountNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in automation to populate automationAccountName.</summary>
 public partial class V1beta1HybridRunBookWorkerGroupSpecForProviderAutomationAccountNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1HybridRunBookWorkerGroupSpecForProviderAutomationAccountNameS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1HybridRunBookWorkerGroupSpecForProviderAutomationAccountNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecForProviderAutomationAcc
     public V1beta1HybridRunBookWorkerGroupSpecForProviderAutomationAccountNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in automation to populate automationAccountName.</summary>
 public partial class V1beta1HybridRunBookWorkerGroupSpecForProviderAutomationAccountNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1HybridRunBookWorkerGroupSpecForProviderResourceGroupNameRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HybridRunBookWorkerGroupSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecForProviderResourceGroup
     public V1beta1HybridRunBookWorkerGroupSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1HybridRunBookWorkerGroupSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1HybridRunBookWorkerGroupSpecForProviderResourceGroupNameSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1HybridRunBookWorkerGroupSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecForProviderResourceGroup
     public V1beta1HybridRunBookWorkerGroupSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1HybridRunBookWorkerGroupSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecForProviderResourceGroup
     public V1beta1HybridRunBookWorkerGroupSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HybridRunBookWorkerGroupSpecForProvider
 {
     /// <summary>The name of the Automation Account in which the Runbook Worker Group is created. Changing this forces a new resource to be created.</summary>
@@ -257,6 +266,7 @@ public enum V1beta1HybridRunBookWorkerGroupSpecInitProviderAutomationAccountName
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HybridRunBookWorkerGroupSpecInitProviderAutomationAccountNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -270,6 +280,7 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecInitProviderAutomationAc
     public V1beta1HybridRunBookWorkerGroupSpecInitProviderAutomationAccountNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in automation to populate automationAccountName.</summary>
 public partial class V1beta1HybridRunBookWorkerGroupSpecInitProviderAutomationAccountNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -301,6 +312,7 @@ public enum V1beta1HybridRunBookWorkerGroupSpecInitProviderAutomationAccountName
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1HybridRunBookWorkerGroupSpecInitProviderAutomationAccountNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -314,6 +326,7 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecInitProviderAutomationAc
     public V1beta1HybridRunBookWorkerGroupSpecInitProviderAutomationAccountNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in automation to populate automationAccountName.</summary>
 public partial class V1beta1HybridRunBookWorkerGroupSpecInitProviderAutomationAccountNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -349,6 +362,7 @@ public enum V1beta1HybridRunBookWorkerGroupSpecInitProviderResourceGroupNameRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HybridRunBookWorkerGroupSpecInitProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -362,6 +376,7 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecInitProviderResourceGrou
     public V1beta1HybridRunBookWorkerGroupSpecInitProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1HybridRunBookWorkerGroupSpecInitProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -393,6 +408,7 @@ public enum V1beta1HybridRunBookWorkerGroupSpecInitProviderResourceGroupNameSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1HybridRunBookWorkerGroupSpecInitProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -406,6 +422,7 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecInitProviderResourceGrou
     public V1beta1HybridRunBookWorkerGroupSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1HybridRunBookWorkerGroupSpecInitProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -421,6 +438,7 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecInitProviderResourceGrou
     public V1beta1HybridRunBookWorkerGroupSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1HybridRunBookWorkerGroupSpecInitProvider
 {
     /// <summary>The name of the Automation Account in which the Runbook Worker Group is created. Changing this forces a new resource to be created.</summary>
@@ -498,6 +516,7 @@ public enum V1beta1HybridRunBookWorkerGroupSpecProviderConfigRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HybridRunBookWorkerGroupSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -511,6 +530,7 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecProviderConfigRefPolicy
     public V1beta1HybridRunBookWorkerGroupSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1HybridRunBookWorkerGroupSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -542,6 +562,7 @@ public enum V1beta1HybridRunBookWorkerGroupSpecPublishConnectionDetailsToConfigR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1HybridRunBookWorkerGroupSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -555,6 +576,7 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecPublishConnectionDetails
     public V1beta1HybridRunBookWorkerGroupSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1HybridRunBookWorkerGroupSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -566,6 +588,7 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecPublishConnectionDetails
     public V1beta1HybridRunBookWorkerGroupSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1HybridRunBookWorkerGroupSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -581,6 +604,7 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecPublishConnectionDetails
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1HybridRunBookWorkerGroupSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -596,6 +620,7 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecPublishConnectionDetails
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1HybridRunBookWorkerGroupSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -607,6 +632,7 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecWriteConnectionSecretToR
     public string Namespace { get; set; }
 }
 
+/// <summary>HybridRunBookWorkerGroupSpec defines the desired state of HybridRunBookWorkerGroup</summary>
 public partial class V1beta1HybridRunBookWorkerGroupSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -639,6 +665,7 @@ public partial class V1beta1HybridRunBookWorkerGroupSpec
     public V1beta1HybridRunBookWorkerGroupSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1HybridRunBookWorkerGroupStatusAtProvider
 {
     /// <summary>The name of the Automation Account in which the Runbook Worker Group is created. Changing this forces a new resource to be created.</summary>
@@ -662,6 +689,7 @@ public partial class V1beta1HybridRunBookWorkerGroupStatusAtProvider
     public string? ResourceGroupName { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1HybridRunBookWorkerGroupStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -689,6 +717,7 @@ public partial class V1beta1HybridRunBookWorkerGroupStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>HybridRunBookWorkerGroupStatus defines the observed state of HybridRunBookWorkerGroup.</summary>
 public partial class V1beta1HybridRunBookWorkerGroupStatus
 {
     /// <summary></summary>
@@ -705,6 +734,7 @@ public partial class V1beta1HybridRunBookWorkerGroupStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>HybridRunBookWorkerGroup is the Schema for the HybridRunBookWorkerGroups API. Manages a Automation Account Runbook Worker Group.</summary>
 public partial class V1beta1HybridRunBookWorkerGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1HybridRunBookWorkerGroupSpec>, IStatus<V1beta1HybridRunBookWorkerGroupStatus>
 {
     public const string KubeApiVersion = "v1beta1";

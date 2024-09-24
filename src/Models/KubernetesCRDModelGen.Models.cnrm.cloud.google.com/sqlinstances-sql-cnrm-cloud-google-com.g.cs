@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.cnrm.cloud.google.com;
+/// <summary>Binary log coordinates, if specified, identify the position up to which the source instance is cloned. If not specified, the source instance is cloned up to the most recent binary log coordinates.</summary>
 public partial class V1beta1SQLInstanceSpecCloneSourceBinLogCoordinates
 {
     /// <summary>Name of the binary log file for a Cloud SQL instance.</summary>
@@ -19,6 +20,7 @@ public partial class V1beta1SQLInstanceSpecCloneSourceBinLogCoordinates
     public long? BinLogPosition { get; set; }
 }
 
+/// <summary>The source SQLInstance to clone</summary>
 public partial class V1beta1SQLInstanceSpecCloneSourceSqlInstanceRef
 {
     /// <summary>The SQLInstance selfLink, when not managed by Config Connector.</summary>
@@ -34,6 +36,7 @@ public partial class V1beta1SQLInstanceSpecCloneSourceSqlInstanceRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Create this database as a clone of a source instance. Immutable.</summary>
 public partial class V1beta1SQLInstanceSpecCloneSource
 {
     /// <summary>Binary log coordinates, if specified, identify the position up to which the source instance is cloned. If not specified, the source instance is cloned up to the most recent binary log coordinates.</summary>
@@ -53,6 +56,7 @@ public partial class V1beta1SQLInstanceSpecCloneSource
     public V1beta1SQLInstanceSpecCloneSourceSqlInstanceRef? SqlInstanceRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLInstanceSpecEncryptionKMSCryptoKeyRef
 {
     /// <summary>A reference to an externally managed KMSCryptoKey. Should be in the format `projects/[kms_project_id]/locations/[region]/keyRings/[key_ring_id]/cryptoKeys/[key]`.</summary>
@@ -68,6 +72,7 @@ public partial class V1beta1SQLInstanceSpecEncryptionKMSCryptoKeyRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLInstanceSpecMasterInstanceRef
 {
     /// <summary>The SQLInstance selfLink, when not managed by Config Connector.</summary>
@@ -83,6 +88,7 @@ public partial class V1beta1SQLInstanceSpecMasterInstanceRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 public partial class V1beta1SQLInstanceSpecReplicaConfigurationPasswordValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -94,6 +100,7 @@ public partial class V1beta1SQLInstanceSpecReplicaConfigurationPasswordValueFrom
     public string Name { get; set; }
 }
 
+/// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 public partial class V1beta1SQLInstanceSpecReplicaConfigurationPasswordValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -101,6 +108,7 @@ public partial class V1beta1SQLInstanceSpecReplicaConfigurationPasswordValueFrom
     public V1beta1SQLInstanceSpecReplicaConfigurationPasswordValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary>Immutable. Password for the replication connection.</summary>
 public partial class V1beta1SQLInstanceSpecReplicaConfigurationPassword
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -112,6 +120,7 @@ public partial class V1beta1SQLInstanceSpecReplicaConfigurationPassword
     public V1beta1SQLInstanceSpecReplicaConfigurationPasswordValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary>The configuration for replication.</summary>
 public partial class V1beta1SQLInstanceSpecReplicaConfiguration
 {
     /// <summary>Immutable. PEM representation of the trusted CA's x509 certificate.</summary>
@@ -159,6 +168,7 @@ public partial class V1beta1SQLInstanceSpecReplicaConfiguration
     public bool? VerifyServerCertificate { get; set; }
 }
 
+/// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 public partial class V1beta1SQLInstanceSpecRootPasswordValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
@@ -170,6 +180,7 @@ public partial class V1beta1SQLInstanceSpecRootPasswordValueFromSecretKeyRef
     public string Name { get; set; }
 }
 
+/// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 public partial class V1beta1SQLInstanceSpecRootPasswordValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
@@ -177,6 +188,7 @@ public partial class V1beta1SQLInstanceSpecRootPasswordValueFrom
     public V1beta1SQLInstanceSpecRootPasswordValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary>Initial root password. Required for MS SQL Server.</summary>
 public partial class V1beta1SQLInstanceSpecRootPassword
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
@@ -188,6 +200,7 @@ public partial class V1beta1SQLInstanceSpecRootPassword
     public V1beta1SQLInstanceSpecRootPasswordValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLInstanceSpecSettingsActiveDirectoryConfig
 {
     /// <summary>Domain name of the Active Directory for SQL Server (e.g., mydomain.com).</summary>
@@ -195,6 +208,7 @@ public partial class V1beta1SQLInstanceSpecSettingsActiveDirectoryConfig
     public string Domain { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLInstanceSpecSettingsAdvancedMachineFeatures
 {
     /// <summary>The number of threads per physical core. Can be 1 or 2.</summary>
@@ -202,6 +216,7 @@ public partial class V1beta1SQLInstanceSpecSettingsAdvancedMachineFeatures
     public long? ThreadsPerCore { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLInstanceSpecSettingsBackupConfigurationBackupRetentionSettings
 {
     /// <summary>Number of backups to retain.</summary>
@@ -213,6 +228,7 @@ public partial class V1beta1SQLInstanceSpecSettingsBackupConfigurationBackupRete
     public string? RetentionUnit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLInstanceSpecSettingsBackupConfiguration
 {
     /// <summary></summary>
@@ -244,6 +260,7 @@ public partial class V1beta1SQLInstanceSpecSettingsBackupConfiguration
     public long? TransactionLogRetentionDays { get; set; }
 }
 
+/// <summary>Data cache configurations.</summary>
 public partial class V1beta1SQLInstanceSpecSettingsDataCacheConfig
 {
     /// <summary>Whether data cache is enabled for the instance.</summary>
@@ -251,6 +268,7 @@ public partial class V1beta1SQLInstanceSpecSettingsDataCacheConfig
     public bool? DataCacheEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLInstanceSpecSettingsDatabaseFlags
 {
     /// <summary>Name of the flag.</summary>
@@ -262,6 +280,7 @@ public partial class V1beta1SQLInstanceSpecSettingsDatabaseFlags
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLInstanceSpecSettingsDenyMaintenancePeriod
 {
     /// <summary>End date before which maintenance will not take place. The date is in format yyyy-mm-dd i.e., 2020-11-01, or mm-dd, i.e., 11-01.</summary>
@@ -277,6 +296,7 @@ public partial class V1beta1SQLInstanceSpecSettingsDenyMaintenancePeriod
     public string Time { get; set; }
 }
 
+/// <summary>Configuration of Query Insights.</summary>
 public partial class V1beta1SQLInstanceSpecSettingsInsightsConfig
 {
     /// <summary>True if Query Insights feature is enabled.</summary>
@@ -300,6 +320,7 @@ public partial class V1beta1SQLInstanceSpecSettingsInsightsConfig
     public bool? RecordClientAddress { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLInstanceSpecSettingsIpConfigurationAuthorizedNetworks
 {
     /// <summary></summary>
@@ -315,6 +336,7 @@ public partial class V1beta1SQLInstanceSpecSettingsIpConfigurationAuthorizedNetw
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLInstanceSpecSettingsIpConfigurationPrivateNetworkRef
 {
     /// <summary>A reference to an externally managed Compute Network resource. Should be in the format `projects/&lt;projectID&gt;/global/networks/&lt;network&gt;`.</summary>
@@ -330,6 +352,7 @@ public partial class V1beta1SQLInstanceSpecSettingsIpConfigurationPrivateNetwork
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLInstanceSpecSettingsIpConfigurationPscConfig
 {
     /// <summary>List of consumer projects that are allow-listed for PSC connections to this instance. This instance can be connected to with PSC from any network in these projects. Each consumer project in this list may be represented by a project number (numeric) or by a project id (alphanumeric).</summary>
@@ -341,6 +364,7 @@ public partial class V1beta1SQLInstanceSpecSettingsIpConfigurationPscConfig
     public bool? PscEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLInstanceSpecSettingsIpConfiguration
 {
     /// <summary>The name of the allocated ip range for the private ip CloudSQL instance. For example: "google-managed-services-default". If set, the instance ip will be created in the allocated range. The range name must comply with RFC 1035. Specifically, the name must be 1-63 characters long and match the regular expression [a-z]([-a-z0-9]*[a-z0-9])?.</summary>
@@ -376,6 +400,7 @@ public partial class V1beta1SQLInstanceSpecSettingsIpConfiguration
     public string? SslMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLInstanceSpecSettingsLocationPreference
 {
     /// <summary>A Google App Engine application whose zone to remain in. Must be in the same region as this instance.</summary>
@@ -391,6 +416,7 @@ public partial class V1beta1SQLInstanceSpecSettingsLocationPreference
     public string? Zone { get; set; }
 }
 
+/// <summary>Declares a one-hour maintenance window when an Instance can automatically restart to apply updates. The maintenance window is specified in UTC time.</summary>
 public partial class V1beta1SQLInstanceSpecSettingsMaintenanceWindow
 {
     /// <summary>Day of week (1-7), starting on Monday.</summary>
@@ -406,6 +432,7 @@ public partial class V1beta1SQLInstanceSpecSettingsMaintenanceWindow
     public string? UpdateTrack { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLInstanceSpecSettingsPasswordValidationPolicy
 {
     /// <summary>Password complexity.</summary>
@@ -433,6 +460,7 @@ public partial class V1beta1SQLInstanceSpecSettingsPasswordValidationPolicy
     public long? ReuseInterval { get; set; }
 }
 
+/// <summary>The name of the destination bucket (e.g., gs://mybucket).</summary>
 public partial class V1beta1SQLInstanceSpecSettingsSqlServerAuditConfigBucketRef
 {
     /// <summary>The StorageBucket selfLink, when not managed by Config Connector.</summary>
@@ -448,6 +476,7 @@ public partial class V1beta1SQLInstanceSpecSettingsSqlServerAuditConfigBucketRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLInstanceSpecSettingsSqlServerAuditConfig
 {
     /// <summary>The name of the destination bucket (e.g., gs://mybucket).</summary>
@@ -463,6 +492,7 @@ public partial class V1beta1SQLInstanceSpecSettingsSqlServerAuditConfig
     public string? UploadInterval { get; set; }
 }
 
+/// <summary>The settings to use for the database. The configuration is detailed below.</summary>
 public partial class V1beta1SQLInstanceSpecSettings
 {
     /// <summary>This specifies when the instance should be active. Can be either ALWAYS, NEVER or ON_DEMAND.</summary>
@@ -578,6 +608,7 @@ public partial class V1beta1SQLInstanceSpecSettings
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLInstanceSpec
 {
     /// <summary>Create this database as a clone of a source instance. Immutable.</summary>
@@ -625,6 +656,7 @@ public partial class V1beta1SQLInstanceSpec
     public V1beta1SQLInstanceSpecSettings Settings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLInstanceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -648,6 +680,7 @@ public partial class V1beta1SQLInstanceStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLInstanceStatusIpAddress
 {
     /// <summary></summary>
@@ -663,6 +696,7 @@ public partial class V1beta1SQLInstanceStatusIpAddress
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLInstanceStatusServerCaCert
 {
     /// <summary>The CA Certificate used to connect to the SQL Instance via SSL.</summary>
@@ -686,6 +720,7 @@ public partial class V1beta1SQLInstanceStatusServerCaCert
     public string? Sha1Fingerprint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLInstanceStatus
 {
     /// <summary>Available Maintenance versions.</summary>
@@ -746,6 +781,7 @@ public partial class V1beta1SQLInstanceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>SQLInstance is the Schema for the sql API</summary>
 public partial class V1beta1SQLInstance : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SQLInstanceSpec>, IStatus<V1beta1SQLInstanceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

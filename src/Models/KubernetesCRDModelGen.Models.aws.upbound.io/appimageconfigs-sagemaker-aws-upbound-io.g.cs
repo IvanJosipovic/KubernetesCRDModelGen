@@ -18,6 +18,7 @@ public enum V1beta1AppImageConfigSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1AppImageConfigSpecForProviderCodeEditorAppImageConfigContainerConfig
 {
     /// <summary>The arguments for the container when you're running the application.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1AppImageConfigSpecForProviderCodeEditorAppImageConfi
     public IDictionary<string, string>? ContainerEnvironmentVariables { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppImageConfigSpecForProviderCodeEditorAppImageConfigFileSystemConfig
 {
     /// <summary>The default POSIX group ID (GID). If not specified, defaults to 100. Valid values are 0 and 100.</summary>
@@ -48,6 +50,7 @@ public partial class V1beta1AppImageConfigSpecForProviderCodeEditorAppImageConfi
     public string? MountPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppImageConfigSpecForProviderCodeEditorAppImageConfig
 {
     /// <summary>The configuration used to run the application image container. See Container Config details below.</summary>
@@ -59,6 +62,7 @@ public partial class V1beta1AppImageConfigSpecForProviderCodeEditorAppImageConfi
     public IList<V1beta1AppImageConfigSpecForProviderCodeEditorAppImageConfigFileSystemConfig>? FileSystemConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppImageConfigSpecForProviderJupyterLabImageConfigContainerConfig
 {
     /// <summary>The arguments for the container when you're running the application.</summary>
@@ -74,6 +78,7 @@ public partial class V1beta1AppImageConfigSpecForProviderJupyterLabImageConfigCo
     public IDictionary<string, string>? ContainerEnvironmentVariables { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppImageConfigSpecForProviderJupyterLabImageConfigFileSystemConfig
 {
     /// <summary>The default POSIX group ID (GID). If not specified, defaults to 100. Valid values are 0 and 100.</summary>
@@ -89,6 +94,7 @@ public partial class V1beta1AppImageConfigSpecForProviderJupyterLabImageConfigFi
     public string? MountPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppImageConfigSpecForProviderJupyterLabImageConfig
 {
     /// <summary>The configuration used to run the application image container. See Container Config details below.</summary>
@@ -100,6 +106,7 @@ public partial class V1beta1AppImageConfigSpecForProviderJupyterLabImageConfig
     public IList<V1beta1AppImageConfigSpecForProviderJupyterLabImageConfigFileSystemConfig>? FileSystemConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppImageConfigSpecForProviderKernelGatewayImageConfigFileSystemConfig
 {
     /// <summary>The default POSIX group ID (GID). If not specified, defaults to 100. Valid values are 0 and 100.</summary>
@@ -115,6 +122,7 @@ public partial class V1beta1AppImageConfigSpecForProviderKernelGatewayImageConfi
     public string? MountPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppImageConfigSpecForProviderKernelGatewayImageConfigKernelSpec
 {
     /// <summary>The display name of the kernel.</summary>
@@ -126,6 +134,7 @@ public partial class V1beta1AppImageConfigSpecForProviderKernelGatewayImageConfi
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppImageConfigSpecForProviderKernelGatewayImageConfig
 {
     /// <summary>The URL where the Git repository is located. See File System Config details below.</summary>
@@ -137,6 +146,7 @@ public partial class V1beta1AppImageConfigSpecForProviderKernelGatewayImageConfi
     public IList<V1beta1AppImageConfigSpecForProviderKernelGatewayImageConfigKernelSpec>? KernelSpec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppImageConfigSpecForProvider
 {
     /// <summary>The CodeEditorAppImageConfig. You can only specify one image kernel in the AppImageConfig API. This kernel is shown to users before the image starts. After the image runs, all kernels are visible in Code Editor. See Code Editor App Image Config details below.</summary>
@@ -160,6 +170,7 @@ public partial class V1beta1AppImageConfigSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppImageConfigSpecInitProviderCodeEditorAppImageConfigContainerConfig
 {
     /// <summary>The arguments for the container when you're running the application.</summary>
@@ -175,6 +186,7 @@ public partial class V1beta1AppImageConfigSpecInitProviderCodeEditorAppImageConf
     public IDictionary<string, string>? ContainerEnvironmentVariables { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppImageConfigSpecInitProviderCodeEditorAppImageConfigFileSystemConfig
 {
     /// <summary>The default POSIX group ID (GID). If not specified, defaults to 100. Valid values are 0 and 100.</summary>
@@ -190,6 +202,7 @@ public partial class V1beta1AppImageConfigSpecInitProviderCodeEditorAppImageConf
     public string? MountPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppImageConfigSpecInitProviderCodeEditorAppImageConfig
 {
     /// <summary>The configuration used to run the application image container. See Container Config details below.</summary>
@@ -201,6 +214,7 @@ public partial class V1beta1AppImageConfigSpecInitProviderCodeEditorAppImageConf
     public IList<V1beta1AppImageConfigSpecInitProviderCodeEditorAppImageConfigFileSystemConfig>? FileSystemConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppImageConfigSpecInitProviderJupyterLabImageConfigContainerConfig
 {
     /// <summary>The arguments for the container when you're running the application.</summary>
@@ -216,6 +230,7 @@ public partial class V1beta1AppImageConfigSpecInitProviderJupyterLabImageConfigC
     public IDictionary<string, string>? ContainerEnvironmentVariables { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppImageConfigSpecInitProviderJupyterLabImageConfigFileSystemConfig
 {
     /// <summary>The default POSIX group ID (GID). If not specified, defaults to 100. Valid values are 0 and 100.</summary>
@@ -231,6 +246,7 @@ public partial class V1beta1AppImageConfigSpecInitProviderJupyterLabImageConfigF
     public string? MountPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppImageConfigSpecInitProviderJupyterLabImageConfig
 {
     /// <summary>The configuration used to run the application image container. See Container Config details below.</summary>
@@ -242,6 +258,7 @@ public partial class V1beta1AppImageConfigSpecInitProviderJupyterLabImageConfig
     public IList<V1beta1AppImageConfigSpecInitProviderJupyterLabImageConfigFileSystemConfig>? FileSystemConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppImageConfigSpecInitProviderKernelGatewayImageConfigFileSystemConfig
 {
     /// <summary>The default POSIX group ID (GID). If not specified, defaults to 100. Valid values are 0 and 100.</summary>
@@ -257,6 +274,7 @@ public partial class V1beta1AppImageConfigSpecInitProviderKernelGatewayImageConf
     public string? MountPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppImageConfigSpecInitProviderKernelGatewayImageConfigKernelSpec
 {
     /// <summary>The display name of the kernel.</summary>
@@ -268,6 +286,7 @@ public partial class V1beta1AppImageConfigSpecInitProviderKernelGatewayImageConf
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppImageConfigSpecInitProviderKernelGatewayImageConfig
 {
     /// <summary>The URL where the Git repository is located. See File System Config details below.</summary>
@@ -279,6 +298,7 @@ public partial class V1beta1AppImageConfigSpecInitProviderKernelGatewayImageConf
     public IList<V1beta1AppImageConfigSpecInitProviderKernelGatewayImageConfigKernelSpec>? KernelSpec { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1AppImageConfigSpecInitProvider
 {
     /// <summary>The CodeEditorAppImageConfig. You can only specify one image kernel in the AppImageConfig API. This kernel is shown to users before the image starts. After the image runs, all kernels are visible in Code Editor. See Code Editor App Image Config details below.</summary>
@@ -340,6 +360,7 @@ public enum V1beta1AppImageConfigSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AppImageConfigSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -353,6 +374,7 @@ public partial class V1beta1AppImageConfigSpecProviderConfigRefPolicy
     public V1beta1AppImageConfigSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1AppImageConfigSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -384,6 +406,7 @@ public enum V1beta1AppImageConfigSpecPublishConnectionDetailsToConfigRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AppImageConfigSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -397,6 +420,7 @@ public partial class V1beta1AppImageConfigSpecPublishConnectionDetailsToConfigRe
     public V1beta1AppImageConfigSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1AppImageConfigSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -408,6 +432,7 @@ public partial class V1beta1AppImageConfigSpecPublishConnectionDetailsToConfigRe
     public V1beta1AppImageConfigSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1AppImageConfigSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -423,6 +448,7 @@ public partial class V1beta1AppImageConfigSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1AppImageConfigSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -438,6 +464,7 @@ public partial class V1beta1AppImageConfigSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1AppImageConfigSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -449,6 +476,7 @@ public partial class V1beta1AppImageConfigSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>AppImageConfigSpec defines the desired state of AppImageConfig</summary>
 public partial class V1beta1AppImageConfigSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -481,6 +509,7 @@ public partial class V1beta1AppImageConfigSpec
     public V1beta1AppImageConfigSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppImageConfigStatusAtProviderCodeEditorAppImageConfigContainerConfig
 {
     /// <summary>The arguments for the container when you're running the application.</summary>
@@ -496,6 +525,7 @@ public partial class V1beta1AppImageConfigStatusAtProviderCodeEditorAppImageConf
     public IDictionary<string, string>? ContainerEnvironmentVariables { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppImageConfigStatusAtProviderCodeEditorAppImageConfigFileSystemConfig
 {
     /// <summary>The default POSIX group ID (GID). If not specified, defaults to 100. Valid values are 0 and 100.</summary>
@@ -511,6 +541,7 @@ public partial class V1beta1AppImageConfigStatusAtProviderCodeEditorAppImageConf
     public string? MountPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppImageConfigStatusAtProviderCodeEditorAppImageConfig
 {
     /// <summary>The configuration used to run the application image container. See Container Config details below.</summary>
@@ -522,6 +553,7 @@ public partial class V1beta1AppImageConfigStatusAtProviderCodeEditorAppImageConf
     public IList<V1beta1AppImageConfigStatusAtProviderCodeEditorAppImageConfigFileSystemConfig>? FileSystemConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppImageConfigStatusAtProviderJupyterLabImageConfigContainerConfig
 {
     /// <summary>The arguments for the container when you're running the application.</summary>
@@ -537,6 +569,7 @@ public partial class V1beta1AppImageConfigStatusAtProviderJupyterLabImageConfigC
     public IDictionary<string, string>? ContainerEnvironmentVariables { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppImageConfigStatusAtProviderJupyterLabImageConfigFileSystemConfig
 {
     /// <summary>The default POSIX group ID (GID). If not specified, defaults to 100. Valid values are 0 and 100.</summary>
@@ -552,6 +585,7 @@ public partial class V1beta1AppImageConfigStatusAtProviderJupyterLabImageConfigF
     public string? MountPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppImageConfigStatusAtProviderJupyterLabImageConfig
 {
     /// <summary>The configuration used to run the application image container. See Container Config details below.</summary>
@@ -563,6 +597,7 @@ public partial class V1beta1AppImageConfigStatusAtProviderJupyterLabImageConfig
     public IList<V1beta1AppImageConfigStatusAtProviderJupyterLabImageConfigFileSystemConfig>? FileSystemConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppImageConfigStatusAtProviderKernelGatewayImageConfigFileSystemConfig
 {
     /// <summary>The default POSIX group ID (GID). If not specified, defaults to 100. Valid values are 0 and 100.</summary>
@@ -578,6 +613,7 @@ public partial class V1beta1AppImageConfigStatusAtProviderKernelGatewayImageConf
     public string? MountPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppImageConfigStatusAtProviderKernelGatewayImageConfigKernelSpec
 {
     /// <summary>The display name of the kernel.</summary>
@@ -589,6 +625,7 @@ public partial class V1beta1AppImageConfigStatusAtProviderKernelGatewayImageConf
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppImageConfigStatusAtProviderKernelGatewayImageConfig
 {
     /// <summary>The URL where the Git repository is located. See File System Config details below.</summary>
@@ -600,6 +637,7 @@ public partial class V1beta1AppImageConfigStatusAtProviderKernelGatewayImageConf
     public IList<V1beta1AppImageConfigStatusAtProviderKernelGatewayImageConfigKernelSpec>? KernelSpec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AppImageConfigStatusAtProvider
 {
     /// <summary>The Amazon Resource Name (ARN) assigned by AWS to this App Image Config.</summary>
@@ -631,6 +669,7 @@ public partial class V1beta1AppImageConfigStatusAtProvider
     public IDictionary<string, string>? TagsAll { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1AppImageConfigStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -658,6 +697,7 @@ public partial class V1beta1AppImageConfigStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>AppImageConfigStatus defines the observed state of AppImageConfig.</summary>
 public partial class V1beta1AppImageConfigStatus
 {
     /// <summary></summary>
@@ -674,6 +714,7 @@ public partial class V1beta1AppImageConfigStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>AppImageConfig is the Schema for the AppImageConfigs API. Provides a SageMaker App Image Config resource.</summary>
 public partial class V1beta1AppImageConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AppImageConfigSpec>, IStatus<V1beta1AppImageConfigStatus>
 {
     public const string KubeApiVersion = "v1beta1";

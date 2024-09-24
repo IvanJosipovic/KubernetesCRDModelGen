@@ -18,6 +18,7 @@ public enum V1beta1AutoscalerSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1AutoscalerSpecForProviderAutoscalingPolicyCpuUtilization
 {
     /// <summary>Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1AutoscalerSpecForProviderAutoscalingPolicyCpuUtiliza
     public double? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AutoscalerSpecForProviderAutoscalingPolicyLoadBalancingUtilization
 {
     /// <summary>URL of the managed instance group that this autoscaler will scale.</summary>
@@ -36,6 +38,7 @@ public partial class V1beta1AutoscalerSpecForProviderAutoscalingPolicyLoadBalanc
     public double? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AutoscalerSpecForProviderAutoscalingPolicyMetric
 {
     /// <summary>The identifier for this object. Format specified above.</summary>
@@ -51,6 +54,7 @@ public partial class V1beta1AutoscalerSpecForProviderAutoscalingPolicyMetric
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AutoscalerSpecForProviderAutoscalingPolicyScaleInControlMaxScaledInReplicas
 {
     /// <summary>Specifies a fixed number of VM instances. This must be a positive integer.</summary>
@@ -62,6 +66,7 @@ public partial class V1beta1AutoscalerSpecForProviderAutoscalingPolicyScaleInCon
     public double? Percent { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AutoscalerSpecForProviderAutoscalingPolicyScaleInControl
 {
     /// <summary>A nested object resource Structure is documented below.</summary>
@@ -73,6 +78,7 @@ public partial class V1beta1AutoscalerSpecForProviderAutoscalingPolicyScaleInCon
     public double? TimeWindowSec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AutoscalerSpecForProviderAutoscalingPolicyScalingSchedules
 {
     /// <summary>A description of a scaling schedule.</summary>
@@ -104,6 +110,7 @@ public partial class V1beta1AutoscalerSpecForProviderAutoscalingPolicyScalingSch
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AutoscalerSpecForProviderAutoscalingPolicy
 {
     /// <summary>The number of seconds that the autoscaler should wait before it starts collecting information from a new instance. This prevents the autoscaler from collecting information when the instance is initializing, during which the collected usage would not be reliable. The default time autoscaler waits is 60 seconds. Virtual machine initialization times might vary because of numerous factors. We recommend that you test how long an instance may take to initialize. To do this, create an instance and time the startup process.</summary>
@@ -163,6 +170,7 @@ public enum V1beta1AutoscalerSpecForProviderTargetRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AutoscalerSpecForProviderTargetRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -176,6 +184,7 @@ public partial class V1beta1AutoscalerSpecForProviderTargetRefPolicy
     public V1beta1AutoscalerSpecForProviderTargetRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a InstanceGroupManager in compute to populate target.</summary>
 public partial class V1beta1AutoscalerSpecForProviderTargetRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -207,6 +216,7 @@ public enum V1beta1AutoscalerSpecForProviderTargetSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AutoscalerSpecForProviderTargetSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -220,6 +230,7 @@ public partial class V1beta1AutoscalerSpecForProviderTargetSelectorPolicy
     public V1beta1AutoscalerSpecForProviderTargetSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a InstanceGroupManager in compute to populate target.</summary>
 public partial class V1beta1AutoscalerSpecForProviderTargetSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -235,6 +246,7 @@ public partial class V1beta1AutoscalerSpecForProviderTargetSelector
     public V1beta1AutoscalerSpecForProviderTargetSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AutoscalerSpecForProvider
 {
     /// <summary>The configuration parameters for the autoscaling algorithm. You can define one or more of the policies for an autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization. If none of these are specified, the default will be to autoscale based on cpuUtilization to 0.6 or 60%. Structure is documented below.</summary>
@@ -266,6 +278,7 @@ public partial class V1beta1AutoscalerSpecForProvider
     public string Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AutoscalerSpecInitProviderAutoscalingPolicyCpuUtilization
 {
     /// <summary>Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:</summary>
@@ -277,6 +290,7 @@ public partial class V1beta1AutoscalerSpecInitProviderAutoscalingPolicyCpuUtiliz
     public double? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AutoscalerSpecInitProviderAutoscalingPolicyLoadBalancingUtilization
 {
     /// <summary>URL of the managed instance group that this autoscaler will scale.</summary>
@@ -284,6 +298,7 @@ public partial class V1beta1AutoscalerSpecInitProviderAutoscalingPolicyLoadBalan
     public double? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AutoscalerSpecInitProviderAutoscalingPolicyMetric
 {
     /// <summary>The identifier for this object. Format specified above.</summary>
@@ -299,6 +314,7 @@ public partial class V1beta1AutoscalerSpecInitProviderAutoscalingPolicyMetric
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AutoscalerSpecInitProviderAutoscalingPolicyScaleInControlMaxScaledInReplicas
 {
     /// <summary>Specifies a fixed number of VM instances. This must be a positive integer.</summary>
@@ -310,6 +326,7 @@ public partial class V1beta1AutoscalerSpecInitProviderAutoscalingPolicyScaleInCo
     public double? Percent { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AutoscalerSpecInitProviderAutoscalingPolicyScaleInControl
 {
     /// <summary>A nested object resource Structure is documented below.</summary>
@@ -321,6 +338,7 @@ public partial class V1beta1AutoscalerSpecInitProviderAutoscalingPolicyScaleInCo
     public double? TimeWindowSec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AutoscalerSpecInitProviderAutoscalingPolicyScalingSchedules
 {
     /// <summary>A description of a scaling schedule.</summary>
@@ -352,6 +370,7 @@ public partial class V1beta1AutoscalerSpecInitProviderAutoscalingPolicyScalingSc
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AutoscalerSpecInitProviderAutoscalingPolicy
 {
     /// <summary>The number of seconds that the autoscaler should wait before it starts collecting information from a new instance. This prevents the autoscaler from collecting information when the instance is initializing, during which the collected usage would not be reliable. The default time autoscaler waits is 60 seconds. Virtual machine initialization times might vary because of numerous factors. We recommend that you test how long an instance may take to initialize. To do this, create an instance and time the startup process.</summary>
@@ -411,6 +430,7 @@ public enum V1beta1AutoscalerSpecInitProviderTargetRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AutoscalerSpecInitProviderTargetRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -424,6 +444,7 @@ public partial class V1beta1AutoscalerSpecInitProviderTargetRefPolicy
     public V1beta1AutoscalerSpecInitProviderTargetRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a InstanceGroupManager in compute to populate target.</summary>
 public partial class V1beta1AutoscalerSpecInitProviderTargetRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -455,6 +476,7 @@ public enum V1beta1AutoscalerSpecInitProviderTargetSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1AutoscalerSpecInitProviderTargetSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -468,6 +490,7 @@ public partial class V1beta1AutoscalerSpecInitProviderTargetSelectorPolicy
     public V1beta1AutoscalerSpecInitProviderTargetSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a InstanceGroupManager in compute to populate target.</summary>
 public partial class V1beta1AutoscalerSpecInitProviderTargetSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -483,6 +506,7 @@ public partial class V1beta1AutoscalerSpecInitProviderTargetSelector
     public V1beta1AutoscalerSpecInitProviderTargetSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1AutoscalerSpecInitProvider
 {
     /// <summary>The configuration parameters for the autoscaling algorithm. You can define one or more of the policies for an autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization. If none of these are specified, the default will be to autoscale based on cpuUtilization to 0.6 or 60%. Structure is documented below.</summary>
@@ -552,6 +576,7 @@ public enum V1beta1AutoscalerSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AutoscalerSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -565,6 +590,7 @@ public partial class V1beta1AutoscalerSpecProviderConfigRefPolicy
     public V1beta1AutoscalerSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1AutoscalerSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -596,6 +622,7 @@ public enum V1beta1AutoscalerSpecPublishConnectionDetailsToConfigRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1AutoscalerSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -609,6 +636,7 @@ public partial class V1beta1AutoscalerSpecPublishConnectionDetailsToConfigRefPol
     public V1beta1AutoscalerSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1AutoscalerSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -620,6 +648,7 @@ public partial class V1beta1AutoscalerSpecPublishConnectionDetailsToConfigRef
     public V1beta1AutoscalerSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1AutoscalerSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -635,6 +664,7 @@ public partial class V1beta1AutoscalerSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1AutoscalerSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -650,6 +680,7 @@ public partial class V1beta1AutoscalerSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1AutoscalerSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -661,6 +692,7 @@ public partial class V1beta1AutoscalerSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>AutoscalerSpec defines the desired state of Autoscaler</summary>
 public partial class V1beta1AutoscalerSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -693,6 +725,7 @@ public partial class V1beta1AutoscalerSpec
     public V1beta1AutoscalerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AutoscalerStatusAtProviderAutoscalingPolicyCpuUtilization
 {
     /// <summary>Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:</summary>
@@ -704,6 +737,7 @@ public partial class V1beta1AutoscalerStatusAtProviderAutoscalingPolicyCpuUtiliz
     public double? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AutoscalerStatusAtProviderAutoscalingPolicyLoadBalancingUtilization
 {
     /// <summary>URL of the managed instance group that this autoscaler will scale.</summary>
@@ -711,6 +745,7 @@ public partial class V1beta1AutoscalerStatusAtProviderAutoscalingPolicyLoadBalan
     public double? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AutoscalerStatusAtProviderAutoscalingPolicyMetric
 {
     /// <summary>The identifier for this object. Format specified above.</summary>
@@ -726,6 +761,7 @@ public partial class V1beta1AutoscalerStatusAtProviderAutoscalingPolicyMetric
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AutoscalerStatusAtProviderAutoscalingPolicyScaleInControlMaxScaledInReplicas
 {
     /// <summary>Specifies a fixed number of VM instances. This must be a positive integer.</summary>
@@ -737,6 +773,7 @@ public partial class V1beta1AutoscalerStatusAtProviderAutoscalingPolicyScaleInCo
     public double? Percent { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AutoscalerStatusAtProviderAutoscalingPolicyScaleInControl
 {
     /// <summary>A nested object resource Structure is documented below.</summary>
@@ -748,6 +785,7 @@ public partial class V1beta1AutoscalerStatusAtProviderAutoscalingPolicyScaleInCo
     public double? TimeWindowSec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AutoscalerStatusAtProviderAutoscalingPolicyScalingSchedules
 {
     /// <summary>A description of a scaling schedule.</summary>
@@ -779,6 +817,7 @@ public partial class V1beta1AutoscalerStatusAtProviderAutoscalingPolicyScalingSc
     public string? TimeZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AutoscalerStatusAtProviderAutoscalingPolicy
 {
     /// <summary>The number of seconds that the autoscaler should wait before it starts collecting information from a new instance. This prevents the autoscaler from collecting information when the instance is initializing, during which the collected usage would not be reliable. The default time autoscaler waits is 60 seconds. Virtual machine initialization times might vary because of numerous factors. We recommend that you test how long an instance may take to initialize. To do this, create an instance and time the startup process.</summary>
@@ -818,6 +857,7 @@ public partial class V1beta1AutoscalerStatusAtProviderAutoscalingPolicy
     public IList<V1beta1AutoscalerStatusAtProviderAutoscalingPolicyScalingSchedules>? ScalingSchedules { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1AutoscalerStatusAtProvider
 {
     /// <summary>The configuration parameters for the autoscaling algorithm. You can define one or more of the policies for an autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization. If none of these are specified, the default will be to autoscale based on cpuUtilization to 0.6 or 60%. Structure is documented below.</summary>
@@ -853,6 +893,7 @@ public partial class V1beta1AutoscalerStatusAtProvider
     public string? Zone { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1AutoscalerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -880,6 +921,7 @@ public partial class V1beta1AutoscalerStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>AutoscalerStatus defines the observed state of Autoscaler.</summary>
 public partial class V1beta1AutoscalerStatus
 {
     /// <summary></summary>
@@ -896,6 +938,7 @@ public partial class V1beta1AutoscalerStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Autoscaler is the Schema for the Autoscalers API. Represents an Autoscaler resource.</summary>
 public partial class V1beta1Autoscaler : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AutoscalerSpec>, IStatus<V1beta1AutoscalerStatus>
 {
     public const string KubeApiVersion = "v1beta1";

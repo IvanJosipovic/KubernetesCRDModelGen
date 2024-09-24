@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.secretmanager.cnrm.cloud.google.com;
+/// <summary>The customer-managed encryption configuration of the Secret. If no configuration is provided, Google-managed default encryption is used.</summary>
 public partial class V1beta1SecretManagerSecretSpecReplicationAutoCustomerManagedEncryptionKmsKeyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1SecretManagerSecretSpecReplicationAutoCustomerManage
     public string? Namespace { get; set; }
 }
 
+/// <summary>The customer-managed encryption configuration of the Secret. If no configuration is provided, Google-managed default encryption is used.</summary>
 public partial class V1beta1SecretManagerSecretSpecReplicationAutoCustomerManagedEncryption
 {
     /// <summary>The customer-managed encryption configuration of the Secret. If no configuration is provided, Google-managed default encryption is used.</summary>
@@ -30,6 +32,7 @@ public partial class V1beta1SecretManagerSecretSpecReplicationAutoCustomerManage
     public V1beta1SecretManagerSecretSpecReplicationAutoCustomerManagedEncryptionKmsKeyRef KmsKeyRef { get; set; }
 }
 
+/// <summary>The Secret will automatically be replicated without any restrictions.</summary>
 public partial class V1beta1SecretManagerSecretSpecReplicationAuto
 {
     /// <summary>The customer-managed encryption configuration of the Secret. If no configuration is provided, Google-managed default encryption is used.</summary>
@@ -37,6 +40,7 @@ public partial class V1beta1SecretManagerSecretSpecReplicationAuto
     public V1beta1SecretManagerSecretSpecReplicationAutoCustomerManagedEncryption? CustomerManagedEncryption { get; set; }
 }
 
+/// <summary>Customer Managed Encryption for the secret.</summary>
 public partial class V1beta1SecretManagerSecretSpecReplicationUserManagedReplicasCustomerManagedEncryptionKmsKeyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
@@ -52,6 +56,7 @@ public partial class V1beta1SecretManagerSecretSpecReplicationUserManagedReplica
     public string? Namespace { get; set; }
 }
 
+/// <summary>Customer Managed Encryption for the secret.</summary>
 public partial class V1beta1SecretManagerSecretSpecReplicationUserManagedReplicasCustomerManagedEncryption
 {
     /// <summary>Customer Managed Encryption for the secret.</summary>
@@ -59,6 +64,7 @@ public partial class V1beta1SecretManagerSecretSpecReplicationUserManagedReplica
     public V1beta1SecretManagerSecretSpecReplicationUserManagedReplicasCustomerManagedEncryptionKmsKeyRef KmsKeyRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SecretManagerSecretSpecReplicationUserManagedReplicas
 {
     /// <summary>Customer Managed Encryption for the secret.</summary>
@@ -70,6 +76,7 @@ public partial class V1beta1SecretManagerSecretSpecReplicationUserManagedReplica
     public string Location { get; set; }
 }
 
+/// <summary>Immutable. The Secret will be replicated to the regions specified by the user.</summary>
 public partial class V1beta1SecretManagerSecretSpecReplicationUserManaged
 {
     /// <summary>Immutable. The list of Replicas for this Secret. Cannot be empty.</summary>
@@ -77,6 +84,7 @@ public partial class V1beta1SecretManagerSecretSpecReplicationUserManaged
     public IList<V1beta1SecretManagerSecretSpecReplicationUserManagedReplicas> Replicas { get; set; }
 }
 
+/// <summary>Immutable. The replication policy of the secret data attached to the Secret. It cannot be changed after the Secret has been created.</summary>
 public partial class V1beta1SecretManagerSecretSpecReplication
 {
     /// <summary>The Secret will automatically be replicated without any restrictions.</summary>
@@ -92,6 +100,7 @@ public partial class V1beta1SecretManagerSecretSpecReplication
     public V1beta1SecretManagerSecretSpecReplicationUserManaged? UserManaged { get; set; }
 }
 
+/// <summary>The rotation time and period for a Secret. At 'next_rotation_time', Secret Manager will send a Pub/Sub notification to the topics configured on the Secret. 'topics' must be set to configure rotation.</summary>
 public partial class V1beta1SecretManagerSecretSpecRotation
 {
     /// <summary>Timestamp in UTC at which the Secret is scheduled to rotate. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".</summary>
@@ -103,6 +112,7 @@ public partial class V1beta1SecretManagerSecretSpecRotation
     public string? RotationPeriod { get; set; }
 }
 
+/// <summary>A list of up to 10 Pub/Sub topics to which messages are published when control plane operations are called on the secret or its versions.</summary>
 public partial class V1beta1SecretManagerSecretSpecTopicsTopicRef
 {
     /// <summary>Allowed value: string of the format `projects/{{project}}/topics/{{value}}`, where {{value}} is the `name` field of a `PubSubTopic` resource.</summary>
@@ -118,6 +128,7 @@ public partial class V1beta1SecretManagerSecretSpecTopicsTopicRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SecretManagerSecretSpecTopics
 {
     /// <summary>A list of up to 10 Pub/Sub topics to which messages are published when control plane operations are called on the secret or its versions.</summary>
@@ -125,6 +136,7 @@ public partial class V1beta1SecretManagerSecretSpecTopics
     public V1beta1SecretManagerSecretSpecTopicsTopicRef TopicRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SecretManagerSecretSpec
 {
     /// <summary>Custom metadata about the secret.  Annotations are distinct from various forms of labels. Annotations exist to allow client tools to store their own state information without requiring a database.  Annotation keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, begin and end with an alphanumeric character ([a-z0-9A-Z]), and may have dashes (-), underscores (_), dots (.), and alphanumerics in between these symbols.  The total size of annotation keys and values must be less than 16KiB.  An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.</summary>
@@ -160,6 +172,7 @@ public partial class V1beta1SecretManagerSecretSpec
     public IDictionary<string, string>? VersionAliases { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SecretManagerSecretStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -183,6 +196,7 @@ public partial class V1beta1SecretManagerSecretStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SecretManagerSecretStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -203,6 +217,7 @@ public partial class V1beta1SecretManagerSecretStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1SecretManagerSecret : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SecretManagerSecretSpec>, IStatus<V1beta1SecretManagerSecretStatus>
 {
     public const string KubeApiVersion = "v1beta1";

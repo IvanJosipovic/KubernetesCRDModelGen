@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.argoproj.io;
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1WorkflowEventBinding : IKubernetesObject<V1ObjectMeta>, ISpec<JsonNode>
 {
     public const string KubeApiVersion = "v1alpha1";

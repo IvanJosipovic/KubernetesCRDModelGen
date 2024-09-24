@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.identityplatform.cnrm.cloud.google.com;
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1IdentityPlatformProjectDefaultConfigSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1IdentityPlatformProjectDefaultConfigSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Configuration options related to authenticating an anonymous user.</summary>
 public partial class V1alpha1IdentityPlatformProjectDefaultConfigSpecSignInAnonymous
 {
     /// <summary>Whether anonymous user auth is enabled for the project or not.</summary>
@@ -30,6 +32,7 @@ public partial class V1alpha1IdentityPlatformProjectDefaultConfigSpecSignInAnony
     public bool Enabled { get; set; }
 }
 
+/// <summary>Configuration options related to authenticating a user by their email address.</summary>
 public partial class V1alpha1IdentityPlatformProjectDefaultConfigSpecSignInEmail
 {
     /// <summary>Whether email auth is enabled for the project or not.</summary>
@@ -41,6 +44,7 @@ public partial class V1alpha1IdentityPlatformProjectDefaultConfigSpecSignInEmail
     public bool? PasswordRequired { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1IdentityPlatformProjectDefaultConfigSpecSignInHashConfig
 {
     /// <summary>Different password hash algorithms used in Identity Toolkit.</summary>
@@ -64,6 +68,7 @@ public partial class V1alpha1IdentityPlatformProjectDefaultConfigSpecSignInHashC
     public string? SignerKey { get; set; }
 }
 
+/// <summary>Configuration options related to authenticated a user by their phone number.</summary>
 public partial class V1alpha1IdentityPlatformProjectDefaultConfigSpecSignInPhoneNumber
 {
     /// <summary>Whether phone number auth is enabled for the project or not.</summary>
@@ -75,6 +80,7 @@ public partial class V1alpha1IdentityPlatformProjectDefaultConfigSpecSignInPhone
     public IDictionary<string, string>? TestPhoneNumbers { get; set; }
 }
 
+/// <summary>Configuration related to local sign in methods.</summary>
 public partial class V1alpha1IdentityPlatformProjectDefaultConfigSpecSignIn
 {
     /// <summary>Whether to allow more than one account to have the same email.</summary>
@@ -98,6 +104,7 @@ public partial class V1alpha1IdentityPlatformProjectDefaultConfigSpecSignIn
     public V1alpha1IdentityPlatformProjectDefaultConfigSpecSignInPhoneNumber? PhoneNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1IdentityPlatformProjectDefaultConfigSpec
 {
     /// <summary>The project that this resource belongs to.</summary>
@@ -113,6 +120,7 @@ public partial class V1alpha1IdentityPlatformProjectDefaultConfigSpec
     public V1alpha1IdentityPlatformProjectDefaultConfigSpecSignIn? SignIn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1IdentityPlatformProjectDefaultConfigStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -136,6 +144,7 @@ public partial class V1alpha1IdentityPlatformProjectDefaultConfigStatusCondition
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1IdentityPlatformProjectDefaultConfigStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -152,6 +161,7 @@ public partial class V1alpha1IdentityPlatformProjectDefaultConfigStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1IdentityPlatformProjectDefaultConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1IdentityPlatformProjectDefaultConfigSpec>, IStatus<V1alpha1IdentityPlatformProjectDefaultConfigStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

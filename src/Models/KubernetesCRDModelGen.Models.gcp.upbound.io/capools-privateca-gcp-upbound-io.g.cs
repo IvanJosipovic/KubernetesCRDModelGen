@@ -18,6 +18,7 @@ public enum V1beta1CAPoolSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolSpecForProviderIssuancePolicyAllowedIssuanceModes
 {
     /// <summary>When true, allows callers to create Certificates by specifying a CertificateConfig.</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1CAPoolSpecForProviderIssuancePolicyAllowedIssuanceMo
     public bool? AllowCsrBasedIssuance { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolSpecForProviderIssuancePolicyAllowedKeyTypesEllipticCurve
 {
     /// <summary>The algorithm used. Possible values are: ECDSA_P256, ECDSA_P384, EDDSA_25519.</summary>
@@ -36,6 +38,7 @@ public partial class V1beta1CAPoolSpecForProviderIssuancePolicyAllowedKeyTypesEl
     public string? SignatureAlgorithm { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolSpecForProviderIssuancePolicyAllowedKeyTypesRsa
 {
     /// <summary>The maximum allowed RSA modulus size, in bits. If this is not set, or if set to zero, the service will not enforce an explicit upper bound on RSA modulus sizes.</summary>
@@ -47,6 +50,7 @@ public partial class V1beta1CAPoolSpecForProviderIssuancePolicyAllowedKeyTypesRs
     public string? MinModulusSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolSpecForProviderIssuancePolicyAllowedKeyTypes
 {
     /// <summary>Represents an allowed Elliptic Curve key type. Structure is documented below.</summary>
@@ -58,6 +62,7 @@ public partial class V1beta1CAPoolSpecForProviderIssuancePolicyAllowedKeyTypes
     public IList<V1beta1CAPoolSpecForProviderIssuancePolicyAllowedKeyTypesRsa>? Rsa { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolSpecForProviderIssuancePolicyBaselineValuesAdditionalExtensionsObjectId
 {
     /// <summary>An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.</summary>
@@ -65,6 +70,7 @@ public partial class V1beta1CAPoolSpecForProviderIssuancePolicyBaselineValuesAdd
     public IList<double>? ObjectIdPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolSpecForProviderIssuancePolicyBaselineValuesAdditionalExtensions
 {
     /// <summary>Indicates whether or not the name constraints are marked critical.</summary>
@@ -80,6 +86,7 @@ public partial class V1beta1CAPoolSpecForProviderIssuancePolicyBaselineValuesAdd
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolSpecForProviderIssuancePolicyBaselineValuesCaOptions
 {
     /// <summary>When true, the "CA" in Basic Constraints extension will be set to true.</summary>
@@ -99,6 +106,7 @@ public partial class V1beta1CAPoolSpecForProviderIssuancePolicyBaselineValuesCaO
     public bool? ZeroMaxIssuerPathLength { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolSpecForProviderIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage
 {
     /// <summary>The key may be used to sign certificates.</summary>
@@ -138,6 +146,7 @@ public partial class V1beta1CAPoolSpecForProviderIssuancePolicyBaselineValuesKey
     public bool? KeyEncipherment { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolSpecForProviderIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage
 {
     /// <summary>Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.</summary>
@@ -165,6 +174,7 @@ public partial class V1beta1CAPoolSpecForProviderIssuancePolicyBaselineValuesKey
     public bool? TimeStamping { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolSpecForProviderIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsages
 {
     /// <summary>An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.</summary>
@@ -172,6 +182,7 @@ public partial class V1beta1CAPoolSpecForProviderIssuancePolicyBaselineValuesKey
     public IList<double>? ObjectIdPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolSpecForProviderIssuancePolicyBaselineValuesKeyUsage
 {
     /// <summary>Describes high-level ways in which a key may be used. Structure is documented below.</summary>
@@ -187,6 +198,7 @@ public partial class V1beta1CAPoolSpecForProviderIssuancePolicyBaselineValuesKey
     public IList<V1beta1CAPoolSpecForProviderIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsages>? UnknownExtendedKeyUsages { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolSpecForProviderIssuancePolicyBaselineValuesNameConstraints
 {
     /// <summary>Indicates whether or not the name constraints are marked critical.</summary>
@@ -226,6 +238,7 @@ public partial class V1beta1CAPoolSpecForProviderIssuancePolicyBaselineValuesNam
     public IList<string>? PermittedUris { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolSpecForProviderIssuancePolicyBaselineValuesPolicyIds
 {
     /// <summary>An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.</summary>
@@ -233,6 +246,7 @@ public partial class V1beta1CAPoolSpecForProviderIssuancePolicyBaselineValuesPol
     public IList<double>? ObjectIdPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolSpecForProviderIssuancePolicyBaselineValues
 {
     /// <summary>Specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs. Structure is documented below.</summary>
@@ -260,6 +274,7 @@ public partial class V1beta1CAPoolSpecForProviderIssuancePolicyBaselineValues
     public IList<V1beta1CAPoolSpecForProviderIssuancePolicyBaselineValuesPolicyIds>? PolicyIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolSpecForProviderIssuancePolicyIdentityConstraintsCelExpression
 {
     /// <summary>Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.</summary>
@@ -279,6 +294,7 @@ public partial class V1beta1CAPoolSpecForProviderIssuancePolicyIdentityConstrain
     public string? Title { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolSpecForProviderIssuancePolicyIdentityConstraints
 {
     /// <summary>If this is set, the SubjectAltNames extension may be copied from a certificate request into the signed certificate. Otherwise, the requested SubjectAltNames will be discarded.</summary>
@@ -294,6 +310,7 @@ public partial class V1beta1CAPoolSpecForProviderIssuancePolicyIdentityConstrain
     public IList<V1beta1CAPoolSpecForProviderIssuancePolicyIdentityConstraintsCelExpression>? CelExpression { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolSpecForProviderIssuancePolicy
 {
     /// <summary>IssuanceModes specifies the allowed ways in which Certificates may be requested from this CaPool. Structure is documented below.</summary>
@@ -317,6 +334,7 @@ public partial class V1beta1CAPoolSpecForProviderIssuancePolicy
     public string? MaximumLifetime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolSpecForProviderPublishingOptions
 {
     /// <summary>Specifies the encoding format of each CertificateAuthority's CA certificate and CRLs. If this is omitted, CA certificates and CRLs will be published in PEM. Possible values are: PEM, DER.</summary>
@@ -332,6 +350,7 @@ public partial class V1beta1CAPoolSpecForProviderPublishingOptions
     public bool? PublishCrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolSpecForProvider
 {
     /// <summary>The IssuancePolicy to control how Certificates will be issued from this CaPool. Structure is documented below.</summary>
@@ -359,6 +378,7 @@ public partial class V1beta1CAPoolSpecForProvider
     public string? Tier { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolSpecInitProviderIssuancePolicyAllowedIssuanceModes
 {
     /// <summary>When true, allows callers to create Certificates by specifying a CertificateConfig.</summary>
@@ -370,6 +390,7 @@ public partial class V1beta1CAPoolSpecInitProviderIssuancePolicyAllowedIssuanceM
     public bool? AllowCsrBasedIssuance { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolSpecInitProviderIssuancePolicyAllowedKeyTypesEllipticCurve
 {
     /// <summary>The algorithm used. Possible values are: ECDSA_P256, ECDSA_P384, EDDSA_25519.</summary>
@@ -377,6 +398,7 @@ public partial class V1beta1CAPoolSpecInitProviderIssuancePolicyAllowedKeyTypesE
     public string? SignatureAlgorithm { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolSpecInitProviderIssuancePolicyAllowedKeyTypesRsa
 {
     /// <summary>The maximum allowed RSA modulus size, in bits. If this is not set, or if set to zero, the service will not enforce an explicit upper bound on RSA modulus sizes.</summary>
@@ -388,6 +410,7 @@ public partial class V1beta1CAPoolSpecInitProviderIssuancePolicyAllowedKeyTypesR
     public string? MinModulusSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolSpecInitProviderIssuancePolicyAllowedKeyTypes
 {
     /// <summary>Represents an allowed Elliptic Curve key type. Structure is documented below.</summary>
@@ -399,6 +422,7 @@ public partial class V1beta1CAPoolSpecInitProviderIssuancePolicyAllowedKeyTypes
     public IList<V1beta1CAPoolSpecInitProviderIssuancePolicyAllowedKeyTypesRsa>? Rsa { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolSpecInitProviderIssuancePolicyBaselineValuesAdditionalExtensionsObjectId
 {
     /// <summary>An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.</summary>
@@ -406,6 +430,7 @@ public partial class V1beta1CAPoolSpecInitProviderIssuancePolicyBaselineValuesAd
     public IList<double>? ObjectIdPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolSpecInitProviderIssuancePolicyBaselineValuesAdditionalExtensions
 {
     /// <summary>Indicates whether or not the name constraints are marked critical.</summary>
@@ -421,6 +446,7 @@ public partial class V1beta1CAPoolSpecInitProviderIssuancePolicyBaselineValuesAd
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolSpecInitProviderIssuancePolicyBaselineValuesCaOptions
 {
     /// <summary>When true, the "CA" in Basic Constraints extension will be set to true.</summary>
@@ -440,6 +466,7 @@ public partial class V1beta1CAPoolSpecInitProviderIssuancePolicyBaselineValuesCa
     public bool? ZeroMaxIssuerPathLength { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolSpecInitProviderIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage
 {
     /// <summary>The key may be used to sign certificates.</summary>
@@ -479,6 +506,7 @@ public partial class V1beta1CAPoolSpecInitProviderIssuancePolicyBaselineValuesKe
     public bool? KeyEncipherment { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolSpecInitProviderIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage
 {
     /// <summary>Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.</summary>
@@ -506,6 +534,7 @@ public partial class V1beta1CAPoolSpecInitProviderIssuancePolicyBaselineValuesKe
     public bool? TimeStamping { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolSpecInitProviderIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsages
 {
     /// <summary>An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.</summary>
@@ -513,6 +542,7 @@ public partial class V1beta1CAPoolSpecInitProviderIssuancePolicyBaselineValuesKe
     public IList<double>? ObjectIdPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolSpecInitProviderIssuancePolicyBaselineValuesKeyUsage
 {
     /// <summary>Describes high-level ways in which a key may be used. Structure is documented below.</summary>
@@ -528,6 +558,7 @@ public partial class V1beta1CAPoolSpecInitProviderIssuancePolicyBaselineValuesKe
     public IList<V1beta1CAPoolSpecInitProviderIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsages>? UnknownExtendedKeyUsages { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolSpecInitProviderIssuancePolicyBaselineValuesNameConstraints
 {
     /// <summary>Indicates whether or not the name constraints are marked critical.</summary>
@@ -567,6 +598,7 @@ public partial class V1beta1CAPoolSpecInitProviderIssuancePolicyBaselineValuesNa
     public IList<string>? PermittedUris { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolSpecInitProviderIssuancePolicyBaselineValuesPolicyIds
 {
     /// <summary>An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.</summary>
@@ -574,6 +606,7 @@ public partial class V1beta1CAPoolSpecInitProviderIssuancePolicyBaselineValuesPo
     public IList<double>? ObjectIdPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolSpecInitProviderIssuancePolicyBaselineValues
 {
     /// <summary>Specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs. Structure is documented below.</summary>
@@ -601,6 +634,7 @@ public partial class V1beta1CAPoolSpecInitProviderIssuancePolicyBaselineValues
     public IList<V1beta1CAPoolSpecInitProviderIssuancePolicyBaselineValuesPolicyIds>? PolicyIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolSpecInitProviderIssuancePolicyIdentityConstraintsCelExpression
 {
     /// <summary>Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.</summary>
@@ -616,6 +650,7 @@ public partial class V1beta1CAPoolSpecInitProviderIssuancePolicyIdentityConstrai
     public string? Title { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolSpecInitProviderIssuancePolicyIdentityConstraints
 {
     /// <summary>If this is set, the SubjectAltNames extension may be copied from a certificate request into the signed certificate. Otherwise, the requested SubjectAltNames will be discarded.</summary>
@@ -631,6 +666,7 @@ public partial class V1beta1CAPoolSpecInitProviderIssuancePolicyIdentityConstrai
     public IList<V1beta1CAPoolSpecInitProviderIssuancePolicyIdentityConstraintsCelExpression>? CelExpression { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolSpecInitProviderIssuancePolicy
 {
     /// <summary>IssuanceModes specifies the allowed ways in which Certificates may be requested from this CaPool. Structure is documented below.</summary>
@@ -654,6 +690,7 @@ public partial class V1beta1CAPoolSpecInitProviderIssuancePolicy
     public string? MaximumLifetime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolSpecInitProviderPublishingOptions
 {
     /// <summary>Specifies the encoding format of each CertificateAuthority's CA certificate and CRLs. If this is omitted, CA certificates and CRLs will be published in PEM. Possible values are: PEM, DER.</summary>
@@ -669,6 +706,7 @@ public partial class V1beta1CAPoolSpecInitProviderPublishingOptions
     public bool? PublishCrl { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1CAPoolSpecInitProvider
 {
     /// <summary>The IssuancePolicy to control how Certificates will be issued from this CaPool. Structure is documented below.</summary>
@@ -734,6 +772,7 @@ public enum V1beta1CAPoolSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CAPoolSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -747,6 +786,7 @@ public partial class V1beta1CAPoolSpecProviderConfigRefPolicy
     public V1beta1CAPoolSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1CAPoolSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -778,6 +818,7 @@ public enum V1beta1CAPoolSpecPublishConnectionDetailsToConfigRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CAPoolSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -791,6 +832,7 @@ public partial class V1beta1CAPoolSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1CAPoolSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1CAPoolSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -802,6 +844,7 @@ public partial class V1beta1CAPoolSpecPublishConnectionDetailsToConfigRef
     public V1beta1CAPoolSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1CAPoolSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -817,6 +860,7 @@ public partial class V1beta1CAPoolSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1CAPoolSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -832,6 +876,7 @@ public partial class V1beta1CAPoolSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1CAPoolSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -843,6 +888,7 @@ public partial class V1beta1CAPoolSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>CAPoolSpec defines the desired state of CAPool</summary>
 public partial class V1beta1CAPoolSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -875,6 +921,7 @@ public partial class V1beta1CAPoolSpec
     public V1beta1CAPoolSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolStatusAtProviderIssuancePolicyAllowedIssuanceModes
 {
     /// <summary>When true, allows callers to create Certificates by specifying a CertificateConfig.</summary>
@@ -886,6 +933,7 @@ public partial class V1beta1CAPoolStatusAtProviderIssuancePolicyAllowedIssuanceM
     public bool? AllowCsrBasedIssuance { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolStatusAtProviderIssuancePolicyAllowedKeyTypesEllipticCurve
 {
     /// <summary>The algorithm used. Possible values are: ECDSA_P256, ECDSA_P384, EDDSA_25519.</summary>
@@ -893,6 +941,7 @@ public partial class V1beta1CAPoolStatusAtProviderIssuancePolicyAllowedKeyTypesE
     public string? SignatureAlgorithm { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolStatusAtProviderIssuancePolicyAllowedKeyTypesRsa
 {
     /// <summary>The maximum allowed RSA modulus size, in bits. If this is not set, or if set to zero, the service will not enforce an explicit upper bound on RSA modulus sizes.</summary>
@@ -904,6 +953,7 @@ public partial class V1beta1CAPoolStatusAtProviderIssuancePolicyAllowedKeyTypesR
     public string? MinModulusSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolStatusAtProviderIssuancePolicyAllowedKeyTypes
 {
     /// <summary>Represents an allowed Elliptic Curve key type. Structure is documented below.</summary>
@@ -915,6 +965,7 @@ public partial class V1beta1CAPoolStatusAtProviderIssuancePolicyAllowedKeyTypes
     public IList<V1beta1CAPoolStatusAtProviderIssuancePolicyAllowedKeyTypesRsa>? Rsa { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolStatusAtProviderIssuancePolicyBaselineValuesAdditionalExtensionsObjectId
 {
     /// <summary>An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.</summary>
@@ -922,6 +973,7 @@ public partial class V1beta1CAPoolStatusAtProviderIssuancePolicyBaselineValuesAd
     public IList<double>? ObjectIdPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolStatusAtProviderIssuancePolicyBaselineValuesAdditionalExtensions
 {
     /// <summary>Indicates whether or not the name constraints are marked critical.</summary>
@@ -937,6 +989,7 @@ public partial class V1beta1CAPoolStatusAtProviderIssuancePolicyBaselineValuesAd
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolStatusAtProviderIssuancePolicyBaselineValuesCaOptions
 {
     /// <summary>When true, the "CA" in Basic Constraints extension will be set to true.</summary>
@@ -956,6 +1009,7 @@ public partial class V1beta1CAPoolStatusAtProviderIssuancePolicyBaselineValuesCa
     public bool? ZeroMaxIssuerPathLength { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolStatusAtProviderIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage
 {
     /// <summary>The key may be used to sign certificates.</summary>
@@ -995,6 +1049,7 @@ public partial class V1beta1CAPoolStatusAtProviderIssuancePolicyBaselineValuesKe
     public bool? KeyEncipherment { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolStatusAtProviderIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage
 {
     /// <summary>Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.</summary>
@@ -1022,6 +1077,7 @@ public partial class V1beta1CAPoolStatusAtProviderIssuancePolicyBaselineValuesKe
     public bool? TimeStamping { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolStatusAtProviderIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsages
 {
     /// <summary>An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.</summary>
@@ -1029,6 +1085,7 @@ public partial class V1beta1CAPoolStatusAtProviderIssuancePolicyBaselineValuesKe
     public IList<double>? ObjectIdPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolStatusAtProviderIssuancePolicyBaselineValuesKeyUsage
 {
     /// <summary>Describes high-level ways in which a key may be used. Structure is documented below.</summary>
@@ -1044,6 +1101,7 @@ public partial class V1beta1CAPoolStatusAtProviderIssuancePolicyBaselineValuesKe
     public IList<V1beta1CAPoolStatusAtProviderIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsages>? UnknownExtendedKeyUsages { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolStatusAtProviderIssuancePolicyBaselineValuesNameConstraints
 {
     /// <summary>Indicates whether or not the name constraints are marked critical.</summary>
@@ -1083,6 +1141,7 @@ public partial class V1beta1CAPoolStatusAtProviderIssuancePolicyBaselineValuesNa
     public IList<string>? PermittedUris { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolStatusAtProviderIssuancePolicyBaselineValuesPolicyIds
 {
     /// <summary>An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.</summary>
@@ -1090,6 +1149,7 @@ public partial class V1beta1CAPoolStatusAtProviderIssuancePolicyBaselineValuesPo
     public IList<double>? ObjectIdPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolStatusAtProviderIssuancePolicyBaselineValues
 {
     /// <summary>Specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs. Structure is documented below.</summary>
@@ -1117,6 +1177,7 @@ public partial class V1beta1CAPoolStatusAtProviderIssuancePolicyBaselineValues
     public IList<V1beta1CAPoolStatusAtProviderIssuancePolicyBaselineValuesPolicyIds>? PolicyIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolStatusAtProviderIssuancePolicyIdentityConstraintsCelExpression
 {
     /// <summary>Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.</summary>
@@ -1136,6 +1197,7 @@ public partial class V1beta1CAPoolStatusAtProviderIssuancePolicyIdentityConstrai
     public string? Title { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolStatusAtProviderIssuancePolicyIdentityConstraints
 {
     /// <summary>If this is set, the SubjectAltNames extension may be copied from a certificate request into the signed certificate. Otherwise, the requested SubjectAltNames will be discarded.</summary>
@@ -1151,6 +1213,7 @@ public partial class V1beta1CAPoolStatusAtProviderIssuancePolicyIdentityConstrai
     public IList<V1beta1CAPoolStatusAtProviderIssuancePolicyIdentityConstraintsCelExpression>? CelExpression { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolStatusAtProviderIssuancePolicy
 {
     /// <summary>IssuanceModes specifies the allowed ways in which Certificates may be requested from this CaPool. Structure is documented below.</summary>
@@ -1174,6 +1237,7 @@ public partial class V1beta1CAPoolStatusAtProviderIssuancePolicy
     public string? MaximumLifetime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolStatusAtProviderPublishingOptions
 {
     /// <summary>Specifies the encoding format of each CertificateAuthority's CA certificate and CRLs. If this is omitted, CA certificates and CRLs will be published in PEM. Possible values are: PEM, DER.</summary>
@@ -1189,6 +1253,7 @@ public partial class V1beta1CAPoolStatusAtProviderPublishingOptions
     public bool? PublishCrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CAPoolStatusAtProvider
 {
     /// <summary>for all of the labels present on the resource.</summary>
@@ -1228,6 +1293,7 @@ public partial class V1beta1CAPoolStatusAtProvider
     public string? Tier { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1CAPoolStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1255,6 +1321,7 @@ public partial class V1beta1CAPoolStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>CAPoolStatus defines the observed state of CAPool.</summary>
 public partial class V1beta1CAPoolStatus
 {
     /// <summary></summary>
@@ -1271,6 +1338,7 @@ public partial class V1beta1CAPoolStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>CAPool is the Schema for the CAPools API. A CaPool represents a group of CertificateAuthorities that form a trust anchor.</summary>
 public partial class V1beta1CAPool : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1CAPoolSpec>, IStatus<V1beta1CAPoolStatus>
 {
     public const string KubeApiVersion = "v1beta1";

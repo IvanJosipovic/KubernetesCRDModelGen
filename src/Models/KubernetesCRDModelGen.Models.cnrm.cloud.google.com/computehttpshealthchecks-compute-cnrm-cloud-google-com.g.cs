@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1ComputeHTTPSHealthCheckSpec
 {
     /// <summary>How often (in seconds) to send a health check. The default value is 5 seconds.</summary>
@@ -47,6 +48,7 @@ public partial class V1beta1ComputeHTTPSHealthCheckSpec
     public int? UnhealthyThreshold { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeHTTPSHealthCheckStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -70,6 +72,7 @@ public partial class V1beta1ComputeHTTPSHealthCheckStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeHTTPSHealthCheckStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -90,6 +93,7 @@ public partial class V1beta1ComputeHTTPSHealthCheckStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ComputeHTTPSHealthCheck : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeHTTPSHealthCheckSpec>, IStatus<V1beta1ComputeHTTPSHealthCheckStatus>
 {
     public const string KubeApiVersion = "v1beta1";

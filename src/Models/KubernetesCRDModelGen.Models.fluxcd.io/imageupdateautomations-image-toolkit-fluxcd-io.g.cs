@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.image.toolkit.fluxcd.io;
+/// <summary>Reference gives a branch, tag or commit to clone from the Git repository.</summary>
 public partial class V1beta2ImageUpdateAutomationSpecGitCheckoutRef
 {
     /// <summary>Branch to check out, defaults to 'master' if no other field is defined.</summary>
@@ -31,6 +32,7 @@ public partial class V1beta2ImageUpdateAutomationSpecGitCheckoutRef
     public string? Tag { get; set; }
 }
 
+/// <summary>Checkout gives the parameters for cloning the git repository, ready to make changes. If not present, the `spec.ref` field from the referenced `GitRepository` or its default will be used.</summary>
 public partial class V1beta2ImageUpdateAutomationSpecGitCheckout
 {
     /// <summary>Reference gives a branch, tag or commit to clone from the Git repository.</summary>
@@ -38,6 +40,7 @@ public partial class V1beta2ImageUpdateAutomationSpecGitCheckout
     public V1beta2ImageUpdateAutomationSpecGitCheckoutRef Ref { get; set; }
 }
 
+/// <summary>Author gives the email and optionally the name to use as the author of commits.</summary>
 public partial class V1beta2ImageUpdateAutomationSpecGitCommitAuthor
 {
     /// <summary>Email gives the email to provide when making a commit.</summary>
@@ -49,6 +52,7 @@ public partial class V1beta2ImageUpdateAutomationSpecGitCommitAuthor
     public string? Name { get; set; }
 }
 
+/// <summary>SecretRef holds the name to a secret that contains a 'git.asc' key corresponding to the ASCII Armored file containing the GPG signing keypair as the value. It must be in the same namespace as the ImageUpdateAutomation.</summary>
 public partial class V1beta2ImageUpdateAutomationSpecGitCommitSigningKeySecretRef
 {
     /// <summary>Name of the referent.</summary>
@@ -56,6 +60,7 @@ public partial class V1beta2ImageUpdateAutomationSpecGitCommitSigningKeySecretRe
     public string Name { get; set; }
 }
 
+/// <summary>SigningKey provides the option to sign commits with a GPG key</summary>
 public partial class V1beta2ImageUpdateAutomationSpecGitCommitSigningKey
 {
     /// <summary>SecretRef holds the name to a secret that contains a 'git.asc' key corresponding to the ASCII Armored file containing the GPG signing keypair as the value. It must be in the same namespace as the ImageUpdateAutomation.</summary>
@@ -63,6 +68,7 @@ public partial class V1beta2ImageUpdateAutomationSpecGitCommitSigningKey
     public V1beta2ImageUpdateAutomationSpecGitCommitSigningKeySecretRef? SecretRef { get; set; }
 }
 
+/// <summary>Commit specifies how to commit to the git repository.</summary>
 public partial class V1beta2ImageUpdateAutomationSpecGitCommit
 {
     /// <summary>Author gives the email and optionally the name to use as the author of commits.</summary>
@@ -78,6 +84,7 @@ public partial class V1beta2ImageUpdateAutomationSpecGitCommit
     public V1beta2ImageUpdateAutomationSpecGitCommitSigningKey? SigningKey { get; set; }
 }
 
+/// <summary>Push specifies how and where to push commits made by the automation. If missing, commits are pushed (back) to `.spec.checkout.branch` or its default.</summary>
 public partial class V1beta2ImageUpdateAutomationSpecGitPush
 {
     /// <summary>Branch specifies that commits should be pushed to the branch named. The branch is created using `.spec.checkout.branch` as the starting point, if it doesn't already exist.</summary>
@@ -93,6 +100,7 @@ public partial class V1beta2ImageUpdateAutomationSpecGitPush
     public string? Refspec { get; set; }
 }
 
+/// <summary>GitSpec contains all the git-specific definitions. This is technically optional, but in practice mandatory until there are other kinds of source allowed.</summary>
 public partial class V1beta2ImageUpdateAutomationSpecGit
 {
     /// <summary>Checkout gives the parameters for cloning the git repository, ready to make changes. If not present, the `spec.ref` field from the referenced `GitRepository` or its default will be used.</summary>
@@ -108,6 +116,7 @@ public partial class V1beta2ImageUpdateAutomationSpecGit
     public V1beta2ImageUpdateAutomationSpecGitPush? Push { get; set; }
 }
 
+/// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1beta2ImageUpdateAutomationSpecPolicySelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -123,6 +132,7 @@ public partial class V1beta2ImageUpdateAutomationSpecPolicySelectorMatchExpressi
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>PolicySelector allows to filter applied policies based on labels. By default includes all policies in namespace.</summary>
 public partial class V1beta2ImageUpdateAutomationSpecPolicySelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -141,6 +151,7 @@ public enum V1beta2ImageUpdateAutomationSpecSourceRefKindEnum
     GitRepository
 }
 
+/// <summary>SourceRef refers to the resource giving access details to a git repository.</summary>
 public partial class V1beta2ImageUpdateAutomationSpecSourceRef
 {
     /// <summary>API version of the referent.</summary>
@@ -168,6 +179,7 @@ public enum V1beta2ImageUpdateAutomationSpecUpdateStrategyEnum
     Setters
 }
 
+/// <summary>Update gives the specification for how to update the files in the repository. This can be left empty, to use the default value.</summary>
 public partial class V1beta2ImageUpdateAutomationSpecUpdate
 {
     /// <summary>Path to the directory containing the manifests to be updated. Defaults to 'None', which translates to the root path of the GitRepositoryRef.</summary>
@@ -180,6 +192,7 @@ public partial class V1beta2ImageUpdateAutomationSpecUpdate
     public V1beta2ImageUpdateAutomationSpecUpdateStrategyEnum Strategy { get; set; }
 }
 
+/// <summary>ImageUpdateAutomationSpec defines the desired state of ImageUpdateAutomation</summary>
 public partial class V1beta2ImageUpdateAutomationSpec
 {
     /// <summary>GitSpec contains all the git-specific definitions. This is technically optional, but in practice mandatory until there are other kinds of source allowed.</summary>
@@ -220,6 +233,7 @@ public enum V1beta2ImageUpdateAutomationStatusConditionsStatusEnum
     Unknown
 }
 
+/// <summary>Condition contains details for one aspect of the current state of this API Resource. --- This struct is intended for direct use as an array at the field path .status.conditions.  For example,   	type FooStatus struct{ 	    // Represents the observations of a foo's current state. 	    // Known .status.conditions.type are: "Available", "Progressing", and "Degraded" 	    // +patchMergeKey=type 	    // +patchStrategy=merge 	    // +listType=map 	    // +listMapKey=type 	    Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`   	    // other fields 	}</summary>
 public partial class V1beta2ImageUpdateAutomationStatusConditions
 {
     /// <summary>lastTransitionTime is the last time the condition transitioned from one status to another. This should be when the underlying condition changed.  If that is not known, then using the time when the API field changed is acceptable.</summary>
@@ -248,6 +262,7 @@ public partial class V1beta2ImageUpdateAutomationStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ImageRef represents an image reference.</summary>
 public partial class V1beta2ImageUpdateAutomationStatusObservedPolicies
 {
     /// <summary>Name is the bare image's name.</summary>
@@ -259,6 +274,7 @@ public partial class V1beta2ImageUpdateAutomationStatusObservedPolicies
     public string Tag { get; set; }
 }
 
+/// <summary>ImageUpdateAutomationStatus defines the observed state of ImageUpdateAutomation</summary>
 public partial class V1beta2ImageUpdateAutomationStatus
 {
     /// <summary></summary>
@@ -295,6 +311,7 @@ public partial class V1beta2ImageUpdateAutomationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ImageUpdateAutomation is the Schema for the imageupdateautomations API</summary>
 public partial class V1beta2ImageUpdateAutomation : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta2ImageUpdateAutomationSpec>, IStatus<V1beta2ImageUpdateAutomationStatus>
 {
     public const string KubeApiVersion = "v1beta2";

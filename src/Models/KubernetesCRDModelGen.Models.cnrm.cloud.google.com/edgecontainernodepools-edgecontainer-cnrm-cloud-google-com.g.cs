@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.edgecontainer.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1EdgeContainerNodePoolSpecClusterRef
 {
     /// <summary>Allowed value: The `name` field of an `EdgeContainerCluster` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1EdgeContainerNodePoolSpecClusterRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EdgeContainerNodePoolSpecLocalDiskEncryptionKmsKeyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1EdgeContainerNodePoolSpecLocalDiskEncryptionKmsKeyRe
     public string? Namespace { get; set; }
 }
 
+/// <summary>Local disk encryption options. This field is only used when enabling CMEK support.</summary>
 public partial class V1beta1EdgeContainerNodePoolSpecLocalDiskEncryption
 {
     /// <summary>The Cloud KMS CryptoKeyVersion currently in use for protecting node local disks. Only applicable if kmsKey is set.</summary>
@@ -53,6 +56,7 @@ public partial class V1beta1EdgeContainerNodePoolSpecLocalDiskEncryption
     public string? KmsKeyState { get; set; }
 }
 
+/// <summary>Configuration for each node in the NodePool.</summary>
 public partial class V1beta1EdgeContainerNodePoolSpecNodeConfig
 {
     /// <summary>"The Kubernetes node labels".</summary>
@@ -60,6 +64,7 @@ public partial class V1beta1EdgeContainerNodePoolSpecNodeConfig
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1beta1EdgeContainerNodePoolSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -75,6 +80,7 @@ public partial class V1beta1EdgeContainerNodePoolSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EdgeContainerNodePoolSpec
 {
     /// <summary></summary>
@@ -114,6 +120,7 @@ public partial class V1beta1EdgeContainerNodePoolSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EdgeContainerNodePoolStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -137,6 +144,7 @@ public partial class V1beta1EdgeContainerNodePoolStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EdgeContainerNodePoolStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -161,6 +169,7 @@ public partial class V1beta1EdgeContainerNodePoolStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1EdgeContainerNodePool : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1EdgeContainerNodePoolSpec>, IStatus<V1beta1EdgeContainerNodePoolStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -18,6 +18,7 @@ public enum V1beta1IOTHubDPSCertificateSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>The Base-64 representation of the X509 leaf certificate .cer file or just a .pem file content.</summary>
 public partial class V1beta1IOTHubDPSCertificateSpecForProviderCertificateContentSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -53,6 +54,7 @@ public enum V1beta1IOTHubDPSCertificateSpecForProviderIotDpsNameRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTHubDPSCertificateSpecForProviderIotDpsNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -66,6 +68,7 @@ public partial class V1beta1IOTHubDPSCertificateSpecForProviderIotDpsNameRefPoli
     public V1beta1IOTHubDPSCertificateSpecForProviderIotDpsNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a IOTHubDPS in devices to populate iotDpsName.</summary>
 public partial class V1beta1IOTHubDPSCertificateSpecForProviderIotDpsNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -97,6 +100,7 @@ public enum V1beta1IOTHubDPSCertificateSpecForProviderIotDpsNameSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IOTHubDPSCertificateSpecForProviderIotDpsNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1IOTHubDPSCertificateSpecForProviderIotDpsNameSelecto
     public V1beta1IOTHubDPSCertificateSpecForProviderIotDpsNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a IOTHubDPS in devices to populate iotDpsName.</summary>
 public partial class V1beta1IOTHubDPSCertificateSpecForProviderIotDpsNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -145,6 +150,7 @@ public enum V1beta1IOTHubDPSCertificateSpecForProviderResourceGroupNameRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTHubDPSCertificateSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -158,6 +164,7 @@ public partial class V1beta1IOTHubDPSCertificateSpecForProviderResourceGroupName
     public V1beta1IOTHubDPSCertificateSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1IOTHubDPSCertificateSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -189,6 +196,7 @@ public enum V1beta1IOTHubDPSCertificateSpecForProviderResourceGroupNameSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IOTHubDPSCertificateSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1IOTHubDPSCertificateSpecForProviderResourceGroupName
     public V1beta1IOTHubDPSCertificateSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1IOTHubDPSCertificateSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -217,6 +226,7 @@ public partial class V1beta1IOTHubDPSCertificateSpecForProviderResourceGroupName
     public V1beta1IOTHubDPSCertificateSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IOTHubDPSCertificateSpecForProvider
 {
     /// <summary>The Base-64 representation of the X509 leaf certificate .cer file or just a .pem file content.</summary>
@@ -252,6 +262,7 @@ public partial class V1beta1IOTHubDPSCertificateSpecForProvider
     public V1beta1IOTHubDPSCertificateSpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 }
 
+/// <summary>The Base-64 representation of the X509 leaf certificate .cer file or just a .pem file content.</summary>
 public partial class V1beta1IOTHubDPSCertificateSpecInitProviderCertificateContentSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -287,6 +298,7 @@ public enum V1beta1IOTHubDPSCertificateSpecInitProviderIotDpsNameRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTHubDPSCertificateSpecInitProviderIotDpsNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -300,6 +312,7 @@ public partial class V1beta1IOTHubDPSCertificateSpecInitProviderIotDpsNameRefPol
     public V1beta1IOTHubDPSCertificateSpecInitProviderIotDpsNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a IOTHubDPS in devices to populate iotDpsName.</summary>
 public partial class V1beta1IOTHubDPSCertificateSpecInitProviderIotDpsNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -331,6 +344,7 @@ public enum V1beta1IOTHubDPSCertificateSpecInitProviderIotDpsNameSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IOTHubDPSCertificateSpecInitProviderIotDpsNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -344,6 +358,7 @@ public partial class V1beta1IOTHubDPSCertificateSpecInitProviderIotDpsNameSelect
     public V1beta1IOTHubDPSCertificateSpecInitProviderIotDpsNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a IOTHubDPS in devices to populate iotDpsName.</summary>
 public partial class V1beta1IOTHubDPSCertificateSpecInitProviderIotDpsNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -359,6 +374,7 @@ public partial class V1beta1IOTHubDPSCertificateSpecInitProviderIotDpsNameSelect
     public V1beta1IOTHubDPSCertificateSpecInitProviderIotDpsNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1IOTHubDPSCertificateSpecInitProvider
 {
     /// <summary>The Base-64 representation of the X509 leaf certificate .cer file or just a .pem file content.</summary>
@@ -424,6 +440,7 @@ public enum V1beta1IOTHubDPSCertificateSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTHubDPSCertificateSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -437,6 +454,7 @@ public partial class V1beta1IOTHubDPSCertificateSpecProviderConfigRefPolicy
     public V1beta1IOTHubDPSCertificateSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1IOTHubDPSCertificateSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -468,6 +486,7 @@ public enum V1beta1IOTHubDPSCertificateSpecPublishConnectionDetailsToConfigRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IOTHubDPSCertificateSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -481,6 +500,7 @@ public partial class V1beta1IOTHubDPSCertificateSpecPublishConnectionDetailsToCo
     public V1beta1IOTHubDPSCertificateSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1IOTHubDPSCertificateSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -492,6 +512,7 @@ public partial class V1beta1IOTHubDPSCertificateSpecPublishConnectionDetailsToCo
     public V1beta1IOTHubDPSCertificateSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1IOTHubDPSCertificateSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -507,6 +528,7 @@ public partial class V1beta1IOTHubDPSCertificateSpecPublishConnectionDetailsToMe
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1IOTHubDPSCertificateSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -522,6 +544,7 @@ public partial class V1beta1IOTHubDPSCertificateSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1IOTHubDPSCertificateSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -533,6 +556,7 @@ public partial class V1beta1IOTHubDPSCertificateSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>IOTHubDPSCertificateSpec defines the desired state of IOTHubDPSCertificate</summary>
 public partial class V1beta1IOTHubDPSCertificateSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -565,6 +589,7 @@ public partial class V1beta1IOTHubDPSCertificateSpec
     public V1beta1IOTHubDPSCertificateSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IOTHubDPSCertificateStatusAtProvider
 {
     /// <summary>The ID of the IoTHub Device Provisioning Service Certificate.</summary>
@@ -584,6 +609,7 @@ public partial class V1beta1IOTHubDPSCertificateStatusAtProvider
     public string? ResourceGroupName { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1IOTHubDPSCertificateStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -611,6 +637,7 @@ public partial class V1beta1IOTHubDPSCertificateStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>IOTHubDPSCertificateStatus defines the observed state of IOTHubDPSCertificate.</summary>
 public partial class V1beta1IOTHubDPSCertificateStatus
 {
     /// <summary></summary>
@@ -627,6 +654,7 @@ public partial class V1beta1IOTHubDPSCertificateStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>IOTHubDPSCertificate is the Schema for the IOTHubDPSCertificates API. Manages an IoT Device Provisioning Service Certificate.</summary>
 public partial class V1beta1IOTHubDPSCertificate : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IOTHubDPSCertificateSpec>, IStatus<V1beta1IOTHubDPSCertificateStatus>
 {
     public const string KubeApiVersion = "v1beta1";

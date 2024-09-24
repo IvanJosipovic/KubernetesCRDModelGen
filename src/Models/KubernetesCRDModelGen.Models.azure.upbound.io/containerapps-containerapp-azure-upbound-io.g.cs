@@ -38,6 +38,7 @@ public enum V1beta1ContainerAppSpecForProviderContainerAppEnvironmentIdRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ContainerAppSpecForProviderContainerAppEnvironmentIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ContainerAppSpecForProviderContainerAppEnvironmentId
     public V1beta1ContainerAppSpecForProviderContainerAppEnvironmentIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Environment in containerapp to populate containerAppEnvironmentId.</summary>
 public partial class V1beta1ContainerAppSpecForProviderContainerAppEnvironmentIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ContainerAppSpecForProviderContainerAppEnvironmentIdSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ContainerAppSpecForProviderContainerAppEnvironmentIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ContainerAppSpecForProviderContainerAppEnvironmentId
     public V1beta1ContainerAppSpecForProviderContainerAppEnvironmentIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Environment in containerapp to populate containerAppEnvironmentId.</summary>
 public partial class V1beta1ContainerAppSpecForProviderContainerAppEnvironmentIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1ContainerAppSpecForProviderContainerAppEnvironmentId
     public V1beta1ContainerAppSpecForProviderContainerAppEnvironmentIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecForProviderDapr
 {
     /// <summary>The Dapr Application Identifier. The Dapr Application Identifier.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1ContainerAppSpecForProviderDapr
     public string? AppProtocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecForProviderIdentity
 {
     /// <summary>- A list of one or more Resource IDs for User Assigned Managed identities to assign. Required when type is set to UserAssigned or SystemAssigned, UserAssigned.</summary>
@@ -136,6 +142,7 @@ public partial class V1beta1ContainerAppSpecForProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecForProviderIngressCustomDomain
 {
     /// <summary>The Binding type. Possible values include Disabled and SniEnabled. Defaults to Disabled. The Binding type. Possible values include `Disabled` and `SniEnabled`. Defaults to `Disabled`</summary>
@@ -151,6 +158,7 @@ public partial class V1beta1ContainerAppSpecForProviderIngressCustomDomain
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecForProviderIngressIpSecurityRestriction
 {
     /// <summary>The IP-filter action. Allow or Deny. The action. Allow or Deny.</summary>
@@ -170,6 +178,7 @@ public partial class V1beta1ContainerAppSpecForProviderIngressIpSecurityRestrict
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecForProviderIngressTrafficWeight
 {
     /// <summary>The label to apply to the revision as a name prefix for routing traffic. The label to apply to the revision as a name prefix for routing traffic.</summary>
@@ -189,6 +198,7 @@ public partial class V1beta1ContainerAppSpecForProviderIngressTrafficWeight
     public string? RevisionSuffix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecForProviderIngress
 {
     /// <summary>Should this ingress allow insecure connections? Should this ingress allow insecure connections?</summary>
@@ -224,6 +234,7 @@ public partial class V1beta1ContainerAppSpecForProviderIngress
     public string? Transport { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecForProviderRegistry
 {
     /// <summary>Resource ID for the User Assigned Managed identity to use when pulling from the Container Registry. ID of the System or User Managed Identity used to pull images from the Container Registry</summary>
@@ -263,6 +274,7 @@ public enum V1beta1ContainerAppSpecForProviderResourceGroupNameRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ContainerAppSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -276,6 +288,7 @@ public partial class V1beta1ContainerAppSpecForProviderResourceGroupNameRefPolic
     public V1beta1ContainerAppSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1ContainerAppSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -307,6 +320,7 @@ public enum V1beta1ContainerAppSpecForProviderResourceGroupNameSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ContainerAppSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -320,6 +334,7 @@ public partial class V1beta1ContainerAppSpecForProviderResourceGroupNameSelector
     public V1beta1ContainerAppSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1ContainerAppSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -335,6 +350,7 @@ public partial class V1beta1ContainerAppSpecForProviderResourceGroupNameSelector
     public V1beta1ContainerAppSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>The Secret name. The Secret name.</summary>
 public partial class V1beta1ContainerAppSpecForProviderSecretNameSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -350,6 +366,7 @@ public partial class V1beta1ContainerAppSpecForProviderSecretNameSecretRef
     public string Namespace { get; set; }
 }
 
+/// <summary>The value for this secret. The value for this secret.</summary>
 public partial class V1beta1ContainerAppSpecForProviderSecretValueSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -365,6 +382,7 @@ public partial class V1beta1ContainerAppSpecForProviderSecretValueSecretRef
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecForProviderSecret
 {
     /// <summary>The Secret name. The Secret name.</summary>
@@ -376,6 +394,7 @@ public partial class V1beta1ContainerAppSpecForProviderSecret
     public V1beta1ContainerAppSpecForProviderSecretValueSecretRef ValueSecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecForProviderTemplateAzureQueueScaleRuleAuthentication
 {
     /// <summary>The name of the secret that contains the value for this environment variable.</summary>
@@ -387,6 +406,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateAzureQueueScaleRu
     public string? TriggerParameter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecForProviderTemplateAzureQueueScaleRule
 {
     /// <summary>Zero or more authentication blocks as defined below.</summary>
@@ -406,6 +426,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateAzureQueueScaleRu
     public string? QueueName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecForProviderTemplateContainerEnv
 {
     /// <summary>The name of the Volume to be mounted in the container. The name of the environment variable for the container.</summary>
@@ -421,6 +442,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateContainerEnv
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecForProviderTemplateContainerLivenessProbeHeader
 {
     /// <summary>The name of the Volume to be mounted in the container. The HTTP Header Name.</summary>
@@ -432,6 +454,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateContainerLiveness
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecForProviderTemplateContainerLivenessProbe
 {
     /// <summary>The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3. The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.</summary>
@@ -471,6 +494,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateContainerLiveness
     public string? Transport { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecForProviderTemplateContainerReadinessProbeHeader
 {
     /// <summary>The name of the Volume to be mounted in the container. The HTTP Header Name.</summary>
@@ -482,6 +506,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateContainerReadines
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecForProviderTemplateContainerReadinessProbe
 {
     /// <summary>The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3. The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.</summary>
@@ -521,6 +546,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateContainerReadines
     public string? Transport { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecForProviderTemplateContainerStartupProbeHeader
 {
     /// <summary>The name of the Volume to be mounted in the container. The HTTP Header Name.</summary>
@@ -532,6 +558,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateContainerStartupP
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecForProviderTemplateContainerStartupProbe
 {
     /// <summary>The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3. The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.</summary>
@@ -567,6 +594,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateContainerStartupP
     public string? Transport { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecForProviderTemplateContainerVolumeMounts
 {
     /// <summary>The name of the Volume to be mounted in the container. The name of the Volume to be mounted in the container.</summary>
@@ -578,6 +606,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateContainerVolumeMo
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecForProviderTemplateContainer
 {
     /// <summary>A list of extra arguments to pass to the container. A list of args to pass to the container.</summary>
@@ -625,6 +654,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateContainer
     public IList<V1beta1ContainerAppSpecForProviderTemplateContainerVolumeMounts>? VolumeMounts { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecForProviderTemplateCustomScaleRuleAuthentication
 {
     /// <summary>The name of the secret that contains the value for this environment variable.</summary>
@@ -636,6 +666,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateCustomScaleRuleAu
     public string? TriggerParameter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecForProviderTemplateCustomScaleRule
 {
     /// <summary>Zero or more authentication blocks as defined below.</summary>
@@ -655,6 +686,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateCustomScaleRule
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecForProviderTemplateHttpScaleRuleAuthentication
 {
     /// <summary>The name of the secret that contains the value for this environment variable.</summary>
@@ -666,6 +698,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateHttpScaleRuleAuth
     public string? TriggerParameter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecForProviderTemplateHttpScaleRule
 {
     /// <summary>Zero or more authentication blocks as defined below.</summary>
@@ -681,6 +714,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateHttpScaleRule
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecForProviderTemplateInitContainerEnv
 {
     /// <summary>The name of the Volume to be mounted in the container. The name of the environment variable for the container.</summary>
@@ -696,6 +730,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateInitContainerEnv
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecForProviderTemplateInitContainerVolumeMounts
 {
     /// <summary>The name of the Volume to be mounted in the container. The name of the Volume to be mounted in the container.</summary>
@@ -707,6 +742,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateInitContainerVolu
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecForProviderTemplateInitContainer
 {
     /// <summary>A list of extra arguments to pass to the container. A list of args to pass to the container.</summary>
@@ -742,6 +778,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateInitContainer
     public IList<V1beta1ContainerAppSpecForProviderTemplateInitContainerVolumeMounts>? VolumeMounts { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecForProviderTemplateTcpScaleRuleAuthentication
 {
     /// <summary>The name of the secret that contains the value for this environment variable.</summary>
@@ -753,6 +790,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateTcpScaleRuleAuthe
     public string? TriggerParameter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecForProviderTemplateTcpScaleRule
 {
     /// <summary>Zero or more authentication blocks as defined below.</summary>
@@ -768,6 +806,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateTcpScaleRule
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecForProviderTemplateVolume
 {
     /// <summary>The name of the Volume to be mounted in the container. The name of the volume.</summary>
@@ -783,6 +822,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateVolume
     public string? StorageType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecForProviderTemplate
 {
     /// <summary>One or more azure_queue_scale_rule blocks as defined below.</summary>
@@ -826,6 +866,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplate
     public IList<V1beta1ContainerAppSpecForProviderTemplateVolume>? Volume { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecForProvider
 {
     /// <summary>The ID of the Container App Environment within which this Container App should exist. Changing this forces a new resource to be created. The ID of the Container App Environment to host this Container App.</summary>
@@ -909,6 +950,7 @@ public enum V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentIdRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -922,6 +964,7 @@ public partial class V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentI
     public V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Environment in containerapp to populate containerAppEnvironmentId.</summary>
 public partial class V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -953,6 +996,7 @@ public enum V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentIdSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -966,6 +1010,7 @@ public partial class V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentI
     public V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Environment in containerapp to populate containerAppEnvironmentId.</summary>
 public partial class V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -981,6 +1026,7 @@ public partial class V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentI
     public V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecInitProviderDapr
 {
     /// <summary>The Dapr Application Identifier. The Dapr Application Identifier.</summary>
@@ -996,6 +1042,7 @@ public partial class V1beta1ContainerAppSpecInitProviderDapr
     public string? AppProtocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecInitProviderIdentity
 {
     /// <summary>- A list of one or more Resource IDs for User Assigned Managed identities to assign. Required when type is set to UserAssigned or SystemAssigned, UserAssigned.</summary>
@@ -1007,6 +1054,7 @@ public partial class V1beta1ContainerAppSpecInitProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecInitProviderIngressCustomDomain
 {
     /// <summary>The Binding type. Possible values include Disabled and SniEnabled. Defaults to Disabled. The Binding type. Possible values include `Disabled` and `SniEnabled`. Defaults to `Disabled`</summary>
@@ -1022,6 +1070,7 @@ public partial class V1beta1ContainerAppSpecInitProviderIngressCustomDomain
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecInitProviderIngressIpSecurityRestriction
 {
     /// <summary>The IP-filter action. Allow or Deny. The action. Allow or Deny.</summary>
@@ -1041,6 +1090,7 @@ public partial class V1beta1ContainerAppSpecInitProviderIngressIpSecurityRestric
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecInitProviderIngressTrafficWeight
 {
     /// <summary>The label to apply to the revision as a name prefix for routing traffic. The label to apply to the revision as a name prefix for routing traffic.</summary>
@@ -1060,6 +1110,7 @@ public partial class V1beta1ContainerAppSpecInitProviderIngressTrafficWeight
     public string? RevisionSuffix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecInitProviderIngress
 {
     /// <summary>Should this ingress allow insecure connections? Should this ingress allow insecure connections?</summary>
@@ -1095,6 +1146,7 @@ public partial class V1beta1ContainerAppSpecInitProviderIngress
     public string? Transport { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecInitProviderRegistry
 {
     /// <summary>Resource ID for the User Assigned Managed identity to use when pulling from the Container Registry. ID of the System or User Managed Identity used to pull images from the Container Registry</summary>
@@ -1114,10 +1166,12 @@ public partial class V1beta1ContainerAppSpecInitProviderRegistry
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecInitProviderSecret
 {
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecInitProviderTemplateAzureQueueScaleRuleAuthentication
 {
     /// <summary>The name of the secret that contains the value for this environment variable.</summary>
@@ -1129,6 +1183,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateAzureQueueScaleR
     public string? TriggerParameter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecInitProviderTemplateAzureQueueScaleRule
 {
     /// <summary>Zero or more authentication blocks as defined below.</summary>
@@ -1148,6 +1203,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateAzureQueueScaleR
     public string? QueueName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerEnv
 {
     /// <summary>The name of the Volume to be mounted in the container. The name of the environment variable for the container.</summary>
@@ -1163,6 +1219,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerEnv
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerLivenessProbeHeader
 {
     /// <summary>The name of the Volume to be mounted in the container. The HTTP Header Name.</summary>
@@ -1174,6 +1231,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerLivenes
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerLivenessProbe
 {
     /// <summary>The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3. The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.</summary>
@@ -1213,6 +1271,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerLivenes
     public string? Transport { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerReadinessProbeHeader
 {
     /// <summary>The name of the Volume to be mounted in the container. The HTTP Header Name.</summary>
@@ -1224,6 +1283,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerReadine
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerReadinessProbe
 {
     /// <summary>The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3. The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.</summary>
@@ -1263,6 +1323,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerReadine
     public string? Transport { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerStartupProbeHeader
 {
     /// <summary>The name of the Volume to be mounted in the container. The HTTP Header Name.</summary>
@@ -1274,6 +1335,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerStartup
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerStartupProbe
 {
     /// <summary>The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3. The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.</summary>
@@ -1309,6 +1371,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerStartup
     public string? Transport { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerVolumeMounts
 {
     /// <summary>The name of the Volume to be mounted in the container. The name of the Volume to be mounted in the container.</summary>
@@ -1320,6 +1383,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerVolumeM
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecInitProviderTemplateContainer
 {
     /// <summary>A list of extra arguments to pass to the container. A list of args to pass to the container.</summary>
@@ -1367,6 +1431,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateContainer
     public IList<V1beta1ContainerAppSpecInitProviderTemplateContainerVolumeMounts>? VolumeMounts { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecInitProviderTemplateCustomScaleRuleAuthentication
 {
     /// <summary>The name of the secret that contains the value for this environment variable.</summary>
@@ -1378,6 +1443,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateCustomScaleRuleA
     public string? TriggerParameter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecInitProviderTemplateCustomScaleRule
 {
     /// <summary>Zero or more authentication blocks as defined below.</summary>
@@ -1397,6 +1463,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateCustomScaleRule
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecInitProviderTemplateHttpScaleRuleAuthentication
 {
     /// <summary>The name of the secret that contains the value for this environment variable.</summary>
@@ -1408,6 +1475,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateHttpScaleRuleAut
     public string? TriggerParameter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecInitProviderTemplateHttpScaleRule
 {
     /// <summary>Zero or more authentication blocks as defined below.</summary>
@@ -1423,6 +1491,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateHttpScaleRule
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecInitProviderTemplateInitContainerEnv
 {
     /// <summary>The name of the Volume to be mounted in the container. The name of the environment variable for the container.</summary>
@@ -1438,6 +1507,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateInitContainerEnv
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecInitProviderTemplateInitContainerVolumeMounts
 {
     /// <summary>The name of the Volume to be mounted in the container. The name of the Volume to be mounted in the container.</summary>
@@ -1449,6 +1519,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateInitContainerVol
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecInitProviderTemplateInitContainer
 {
     /// <summary>A list of extra arguments to pass to the container. A list of args to pass to the container.</summary>
@@ -1484,6 +1555,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateInitContainer
     public IList<V1beta1ContainerAppSpecInitProviderTemplateInitContainerVolumeMounts>? VolumeMounts { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecInitProviderTemplateTcpScaleRuleAuthentication
 {
     /// <summary>The name of the secret that contains the value for this environment variable.</summary>
@@ -1495,6 +1567,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateTcpScaleRuleAuth
     public string? TriggerParameter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecInitProviderTemplateTcpScaleRule
 {
     /// <summary>Zero or more authentication blocks as defined below.</summary>
@@ -1510,6 +1583,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateTcpScaleRule
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecInitProviderTemplateVolume
 {
     /// <summary>The name of the Volume to be mounted in the container. The name of the volume.</summary>
@@ -1525,6 +1599,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateVolume
     public string? StorageType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppSpecInitProviderTemplate
 {
     /// <summary>One or more azure_queue_scale_rule blocks as defined below.</summary>
@@ -1568,6 +1643,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplate
     public IList<V1beta1ContainerAppSpecInitProviderTemplateVolume>? Volume { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ContainerAppSpecInitProvider
 {
     /// <summary>The ID of the Container App Environment within which this Container App should exist. Changing this forces a new resource to be created. The ID of the Container App Environment to host this Container App.</summary>
@@ -1661,6 +1737,7 @@ public enum V1beta1ContainerAppSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ContainerAppSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1674,6 +1751,7 @@ public partial class V1beta1ContainerAppSpecProviderConfigRefPolicy
     public V1beta1ContainerAppSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ContainerAppSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1705,6 +1783,7 @@ public enum V1beta1ContainerAppSpecPublishConnectionDetailsToConfigRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ContainerAppSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1718,6 +1797,7 @@ public partial class V1beta1ContainerAppSpecPublishConnectionDetailsToConfigRefP
     public V1beta1ContainerAppSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ContainerAppSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1729,6 +1809,7 @@ public partial class V1beta1ContainerAppSpecPublishConnectionDetailsToConfigRef
     public V1beta1ContainerAppSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ContainerAppSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1744,6 +1825,7 @@ public partial class V1beta1ContainerAppSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ContainerAppSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1759,6 +1841,7 @@ public partial class V1beta1ContainerAppSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ContainerAppSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1770,6 +1853,7 @@ public partial class V1beta1ContainerAppSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ContainerAppSpec defines the desired state of ContainerApp</summary>
 public partial class V1beta1ContainerAppSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1802,6 +1886,7 @@ public partial class V1beta1ContainerAppSpec
     public V1beta1ContainerAppSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppStatusAtProviderDapr
 {
     /// <summary>The Dapr Application Identifier. The Dapr Application Identifier.</summary>
@@ -1817,6 +1902,7 @@ public partial class V1beta1ContainerAppStatusAtProviderDapr
     public string? AppProtocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppStatusAtProviderIdentity
 {
     /// <summary>- A list of one or more Resource IDs for User Assigned Managed identities to assign. Required when type is set to UserAssigned or SystemAssigned, UserAssigned.</summary>
@@ -1836,6 +1922,7 @@ public partial class V1beta1ContainerAppStatusAtProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppStatusAtProviderIngressCustomDomain
 {
     /// <summary>The Binding type. Possible values include Disabled and SniEnabled. Defaults to Disabled. The Binding type. Possible values include `Disabled` and `SniEnabled`. Defaults to `Disabled`</summary>
@@ -1851,6 +1938,7 @@ public partial class V1beta1ContainerAppStatusAtProviderIngressCustomDomain
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppStatusAtProviderIngressIpSecurityRestriction
 {
     /// <summary>The IP-filter action. Allow or Deny. The action. Allow or Deny.</summary>
@@ -1870,6 +1958,7 @@ public partial class V1beta1ContainerAppStatusAtProviderIngressIpSecurityRestric
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppStatusAtProviderIngressTrafficWeight
 {
     /// <summary>The label to apply to the revision as a name prefix for routing traffic. The label to apply to the revision as a name prefix for routing traffic.</summary>
@@ -1889,6 +1978,7 @@ public partial class V1beta1ContainerAppStatusAtProviderIngressTrafficWeight
     public string? RevisionSuffix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppStatusAtProviderIngress
 {
     /// <summary>Should this ingress allow insecure connections? Should this ingress allow insecure connections?</summary>
@@ -1928,6 +2018,7 @@ public partial class V1beta1ContainerAppStatusAtProviderIngress
     public string? Transport { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppStatusAtProviderRegistry
 {
     /// <summary>Resource ID for the User Assigned Managed identity to use when pulling from the Container Registry. ID of the System or User Managed Identity used to pull images from the Container Registry</summary>
@@ -1947,6 +2038,7 @@ public partial class V1beta1ContainerAppStatusAtProviderRegistry
     public string? Username { get; set; }
 }
 
+/// <summary>The Secret name. The Secret name.</summary>
 public partial class V1beta1ContainerAppStatusAtProviderSecretNameSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1962,6 +2054,7 @@ public partial class V1beta1ContainerAppStatusAtProviderSecretNameSecretRef
     public string Namespace { get; set; }
 }
 
+/// <summary>The value for this secret. The value for this secret.</summary>
 public partial class V1beta1ContainerAppStatusAtProviderSecretValueSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1977,6 +2070,7 @@ public partial class V1beta1ContainerAppStatusAtProviderSecretValueSecretRef
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppStatusAtProviderSecret
 {
     /// <summary>The Secret name. The Secret name.</summary>
@@ -1988,6 +2082,7 @@ public partial class V1beta1ContainerAppStatusAtProviderSecret
     public V1beta1ContainerAppStatusAtProviderSecretValueSecretRef ValueSecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppStatusAtProviderTemplateAzureQueueScaleRuleAuthentication
 {
     /// <summary>The name of the secret that contains the value for this environment variable.</summary>
@@ -1999,6 +2094,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateAzureQueueScaleR
     public string? TriggerParameter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppStatusAtProviderTemplateAzureQueueScaleRule
 {
     /// <summary>Zero or more authentication blocks as defined below.</summary>
@@ -2018,6 +2114,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateAzureQueueScaleR
     public string? QueueName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerEnv
 {
     /// <summary>The name of the Volume to be mounted in the container. The name of the environment variable for the container.</summary>
@@ -2033,6 +2130,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerEnv
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerLivenessProbeHeader
 {
     /// <summary>The name of the Volume to be mounted in the container. The HTTP Header Name.</summary>
@@ -2044,6 +2142,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerLivenes
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerLivenessProbe
 {
     /// <summary>The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3. The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.</summary>
@@ -2087,6 +2186,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerLivenes
     public string? Transport { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerReadinessProbeHeader
 {
     /// <summary>The name of the Volume to be mounted in the container. The HTTP Header Name.</summary>
@@ -2098,6 +2198,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerReadine
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerReadinessProbe
 {
     /// <summary>The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3. The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.</summary>
@@ -2137,6 +2238,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerReadine
     public string? Transport { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerStartupProbeHeader
 {
     /// <summary>The name of the Volume to be mounted in the container. The HTTP Header Name.</summary>
@@ -2148,6 +2250,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerStartup
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerStartupProbe
 {
     /// <summary>The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3. The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.</summary>
@@ -2187,6 +2290,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerStartup
     public string? Transport { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerVolumeMounts
 {
     /// <summary>The name of the Volume to be mounted in the container. The name of the Volume to be mounted in the container.</summary>
@@ -2198,6 +2302,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerVolumeM
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppStatusAtProviderTemplateContainer
 {
     /// <summary>A list of extra arguments to pass to the container. A list of args to pass to the container.</summary>
@@ -2249,6 +2354,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateContainer
     public IList<V1beta1ContainerAppStatusAtProviderTemplateContainerVolumeMounts>? VolumeMounts { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppStatusAtProviderTemplateCustomScaleRuleAuthentication
 {
     /// <summary>The name of the secret that contains the value for this environment variable.</summary>
@@ -2260,6 +2366,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateCustomScaleRuleA
     public string? TriggerParameter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppStatusAtProviderTemplateCustomScaleRule
 {
     /// <summary>Zero or more authentication blocks as defined below.</summary>
@@ -2279,6 +2386,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateCustomScaleRule
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppStatusAtProviderTemplateHttpScaleRuleAuthentication
 {
     /// <summary>The name of the secret that contains the value for this environment variable.</summary>
@@ -2290,6 +2398,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateHttpScaleRuleAut
     public string? TriggerParameter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppStatusAtProviderTemplateHttpScaleRule
 {
     /// <summary>Zero or more authentication blocks as defined below.</summary>
@@ -2305,6 +2414,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateHttpScaleRule
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppStatusAtProviderTemplateInitContainerEnv
 {
     /// <summary>The name of the Volume to be mounted in the container. The name of the environment variable for the container.</summary>
@@ -2320,6 +2430,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateInitContainerEnv
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppStatusAtProviderTemplateInitContainerVolumeMounts
 {
     /// <summary>The name of the Volume to be mounted in the container. The name of the Volume to be mounted in the container.</summary>
@@ -2331,6 +2442,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateInitContainerVol
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppStatusAtProviderTemplateInitContainer
 {
     /// <summary>A list of extra arguments to pass to the container. A list of args to pass to the container.</summary>
@@ -2370,6 +2482,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateInitContainer
     public IList<V1beta1ContainerAppStatusAtProviderTemplateInitContainerVolumeMounts>? VolumeMounts { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppStatusAtProviderTemplateTcpScaleRuleAuthentication
 {
     /// <summary>The name of the secret that contains the value for this environment variable.</summary>
@@ -2381,6 +2494,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateTcpScaleRuleAuth
     public string? TriggerParameter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppStatusAtProviderTemplateTcpScaleRule
 {
     /// <summary>Zero or more authentication blocks as defined below.</summary>
@@ -2396,6 +2510,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateTcpScaleRule
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppStatusAtProviderTemplateVolume
 {
     /// <summary>The name of the Volume to be mounted in the container. The name of the volume.</summary>
@@ -2411,6 +2526,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateVolume
     public string? StorageType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppStatusAtProviderTemplate
 {
     /// <summary>One or more azure_queue_scale_rule blocks as defined below.</summary>
@@ -2454,6 +2570,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplate
     public IList<V1beta1ContainerAppStatusAtProviderTemplateVolume>? Volume { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ContainerAppStatusAtProvider
 {
     /// <summary>The ID of the Container App Environment within which this Container App should exist. Changing this forces a new resource to be created. The ID of the Container App Environment to host this Container App.</summary>
@@ -2521,6 +2638,7 @@ public partial class V1beta1ContainerAppStatusAtProvider
     public string? WorkloadProfileName { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ContainerAppStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2548,6 +2666,7 @@ public partial class V1beta1ContainerAppStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ContainerAppStatus defines the observed state of ContainerApp.</summary>
 public partial class V1beta1ContainerAppStatus
 {
     /// <summary></summary>
@@ -2564,6 +2683,7 @@ public partial class V1beta1ContainerAppStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ContainerApp is the Schema for the ContainerApps API. Manages a Container App.</summary>
 public partial class V1beta1ContainerApp : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ContainerAppSpec>, IStatus<V1beta1ContainerAppStatus>
 {
     public const string KubeApiVersion = "v1beta1";

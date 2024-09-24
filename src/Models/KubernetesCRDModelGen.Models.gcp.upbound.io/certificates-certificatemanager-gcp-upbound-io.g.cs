@@ -18,6 +18,7 @@ public enum V1beta1CertificateSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateSpecForProviderManaged
 {
     /// <summary>Authorizations that will be used for performing domain authorization. Either issuanceConfig or dnsAuthorizations should be specificed, but not both.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1CertificateSpecForProviderManaged
     public string? IssuanceConfig { get; set; }
 }
 
+/// <summary>The certificate chain in PEM-encoded form. Leaf certificate comes first, followed by intermediate ones if any. Note: This property is sensitive and will not be displayed in the plan.</summary>
 public partial class V1beta1CertificateSpecForProviderSelfManagedCertificatePemSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -48,6 +50,7 @@ public partial class V1beta1CertificateSpecForProviderSelfManagedCertificatePemS
     public string Namespace { get; set; }
 }
 
+/// <summary>The private key of the leaf certificate in PEM-encoded form. Note: This property is sensitive and will not be displayed in the plan.</summary>
 public partial class V1beta1CertificateSpecForProviderSelfManagedPemPrivateKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -63,6 +66,7 @@ public partial class V1beta1CertificateSpecForProviderSelfManagedPemPrivateKeySe
     public string Namespace { get; set; }
 }
 
+/// <summary>The private key of the leaf certificate in PEM-encoded form. Note: This property is sensitive and will not be displayed in the plan.</summary>
 public partial class V1beta1CertificateSpecForProviderSelfManagedPrivateKeyPemSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -78,6 +82,7 @@ public partial class V1beta1CertificateSpecForProviderSelfManagedPrivateKeyPemSe
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateSpecForProviderSelfManaged
 {
     /// <summary>The certificate chain in PEM-encoded form. Leaf certificate comes first, followed by intermediate ones if any. Note: This property is sensitive and will not be displayed in the plan.</summary>
@@ -97,6 +102,7 @@ public partial class V1beta1CertificateSpecForProviderSelfManaged
     public V1beta1CertificateSpecForProviderSelfManagedPrivateKeyPemSecretRef? PrivateKeyPemSecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateSpecForProvider
 {
     /// <summary>A human-readable description of the resource.</summary>
@@ -128,6 +134,7 @@ public partial class V1beta1CertificateSpecForProvider
     public IList<V1beta1CertificateSpecForProviderSelfManaged>? SelfManaged { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateSpecInitProviderManaged
 {
     /// <summary>Authorizations that will be used for performing domain authorization. Either issuanceConfig or dnsAuthorizations should be specificed, but not both.</summary>
@@ -143,6 +150,7 @@ public partial class V1beta1CertificateSpecInitProviderManaged
     public string? IssuanceConfig { get; set; }
 }
 
+/// <summary>The certificate chain in PEM-encoded form. Leaf certificate comes first, followed by intermediate ones if any. Note: This property is sensitive and will not be displayed in the plan.</summary>
 public partial class V1beta1CertificateSpecInitProviderSelfManagedCertificatePemSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -158,6 +166,7 @@ public partial class V1beta1CertificateSpecInitProviderSelfManagedCertificatePem
     public string Namespace { get; set; }
 }
 
+/// <summary>The private key of the leaf certificate in PEM-encoded form. Note: This property is sensitive and will not be displayed in the plan.</summary>
 public partial class V1beta1CertificateSpecInitProviderSelfManagedPemPrivateKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -173,6 +182,7 @@ public partial class V1beta1CertificateSpecInitProviderSelfManagedPemPrivateKeyS
     public string Namespace { get; set; }
 }
 
+/// <summary>The private key of the leaf certificate in PEM-encoded form. Note: This property is sensitive and will not be displayed in the plan.</summary>
 public partial class V1beta1CertificateSpecInitProviderSelfManagedPrivateKeyPemSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -188,6 +198,7 @@ public partial class V1beta1CertificateSpecInitProviderSelfManagedPrivateKeyPemS
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateSpecInitProviderSelfManaged
 {
     /// <summary>The certificate chain in PEM-encoded form. Leaf certificate comes first, followed by intermediate ones if any. Note: This property is sensitive and will not be displayed in the plan.</summary>
@@ -207,6 +218,7 @@ public partial class V1beta1CertificateSpecInitProviderSelfManaged
     public V1beta1CertificateSpecInitProviderSelfManagedPrivateKeyPemSecretRef? PrivateKeyPemSecretRef { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1CertificateSpecInitProvider
 {
     /// <summary>A human-readable description of the resource.</summary>
@@ -276,6 +288,7 @@ public enum V1beta1CertificateSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CertificateSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -289,6 +302,7 @@ public partial class V1beta1CertificateSpecProviderConfigRefPolicy
     public V1beta1CertificateSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1CertificateSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -320,6 +334,7 @@ public enum V1beta1CertificateSpecPublishConnectionDetailsToConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CertificateSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -333,6 +348,7 @@ public partial class V1beta1CertificateSpecPublishConnectionDetailsToConfigRefPo
     public V1beta1CertificateSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1CertificateSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -344,6 +360,7 @@ public partial class V1beta1CertificateSpecPublishConnectionDetailsToConfigRef
     public V1beta1CertificateSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1CertificateSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -359,6 +376,7 @@ public partial class V1beta1CertificateSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1CertificateSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -374,6 +392,7 @@ public partial class V1beta1CertificateSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1CertificateSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -385,6 +404,7 @@ public partial class V1beta1CertificateSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>CertificateSpec defines the desired state of Certificate</summary>
 public partial class V1beta1CertificateSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -417,6 +437,7 @@ public partial class V1beta1CertificateSpec
     public V1beta1CertificateSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateStatusAtProviderManagedAuthorizationAttemptInfo
 {
     /// <summary>(Output) Human readable explanation about the issue. Provided to help address the configuration issues. Not guaranteed to be stable. For programmatic access use reason field.</summary>
@@ -436,6 +457,7 @@ public partial class V1beta1CertificateStatusAtProviderManagedAuthorizationAttem
     public string? State { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateStatusAtProviderManagedProvisioningIssue
 {
     /// <summary>(Output) Human readable explanation about the issue. Provided to help address the configuration issues. Not guaranteed to be stable. For programmatic access use reason field.</summary>
@@ -447,6 +469,7 @@ public partial class V1beta1CertificateStatusAtProviderManagedProvisioningIssue
     public string? Reason { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateStatusAtProviderManaged
 {
     /// <summary>(Output) Detailed state of the latest authorization attempt for each domain specified for this Managed Certificate. Structure is documented below.</summary>
@@ -474,6 +497,7 @@ public partial class V1beta1CertificateStatusAtProviderManaged
     public string? State { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateStatusAtProviderSelfManaged
 {
     /// <summary>The certificate chain in PEM-encoded form. Leaf certificate comes first, followed by intermediate ones if any.</summary>
@@ -481,6 +505,7 @@ public partial class V1beta1CertificateStatusAtProviderSelfManaged
     public string? PemCertificate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CertificateStatusAtProvider
 {
     /// <summary>A human-readable description of the resource.</summary>
@@ -524,6 +549,7 @@ public partial class V1beta1CertificateStatusAtProvider
     public IDictionary<string, string>? TerraformLabels { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1CertificateStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -551,6 +577,7 @@ public partial class V1beta1CertificateStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>CertificateStatus defines the observed state of Certificate.</summary>
 public partial class V1beta1CertificateStatus
 {
     /// <summary></summary>
@@ -567,6 +594,7 @@ public partial class V1beta1CertificateStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Certificate is the Schema for the Certificates API. Certificate represents a HTTP-reachable backend for a Certificate.</summary>
 public partial class V1beta1Certificate : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1CertificateSpec>, IStatus<V1beta1CertificateStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -18,6 +18,7 @@ public enum V1beta1SpringCloudAppSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudAppSpecForProviderCustomPersistentDisk
 {
     /// <summary>These are the mount options for a persistent disk.</summary>
@@ -41,6 +42,7 @@ public partial class V1beta1SpringCloudAppSpecForProviderCustomPersistentDisk
     public string? StorageName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudAppSpecForProviderIdentity
 {
     /// <summary>A list of User Assigned Managed Identity IDs to be assigned to this Spring Cloud Application.</summary>
@@ -52,6 +54,7 @@ public partial class V1beta1SpringCloudAppSpecForProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudAppSpecForProviderIngressSettings
 {
     /// <summary>Specifies how ingress should communicate with this app backend service. Allowed values are GRPC and Default. Defaults to Default.</summary>
@@ -75,6 +78,7 @@ public partial class V1beta1SpringCloudAppSpecForProviderIngressSettings
     public double? SessionCookieMaxAge { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudAppSpecForProviderPersistentDisk
 {
     /// <summary>Specifies the mount path of the persistent disk. Defaults to /persistent.</summary>
@@ -106,6 +110,7 @@ public enum V1beta1SpringCloudAppSpecForProviderResourceGroupNameRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpringCloudAppSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -119,6 +124,7 @@ public partial class V1beta1SpringCloudAppSpecForProviderResourceGroupNameRefPol
     public V1beta1SpringCloudAppSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1SpringCloudAppSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -150,6 +156,7 @@ public enum V1beta1SpringCloudAppSpecForProviderResourceGroupNameSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SpringCloudAppSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -163,6 +170,7 @@ public partial class V1beta1SpringCloudAppSpecForProviderResourceGroupNameSelect
     public V1beta1SpringCloudAppSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1SpringCloudAppSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -198,6 +206,7 @@ public enum V1beta1SpringCloudAppSpecForProviderServiceNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpringCloudAppSpecForProviderServiceNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -211,6 +220,7 @@ public partial class V1beta1SpringCloudAppSpecForProviderServiceNameRefPolicy
     public V1beta1SpringCloudAppSpecForProviderServiceNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SpringCloudService in appplatform to populate serviceName.</summary>
 public partial class V1beta1SpringCloudAppSpecForProviderServiceNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -242,6 +252,7 @@ public enum V1beta1SpringCloudAppSpecForProviderServiceNameSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SpringCloudAppSpecForProviderServiceNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -255,6 +266,7 @@ public partial class V1beta1SpringCloudAppSpecForProviderServiceNameSelectorPoli
     public V1beta1SpringCloudAppSpecForProviderServiceNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SpringCloudService in appplatform to populate serviceName.</summary>
 public partial class V1beta1SpringCloudAppSpecForProviderServiceNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -270,6 +282,7 @@ public partial class V1beta1SpringCloudAppSpecForProviderServiceNameSelector
     public V1beta1SpringCloudAppSpecForProviderServiceNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudAppSpecForProvider
 {
     /// <summary>A JSON object that contains the addon configurations of the Spring Cloud Service.</summary>
@@ -333,6 +346,7 @@ public partial class V1beta1SpringCloudAppSpecForProvider
     public bool? TlsEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudAppSpecInitProviderCustomPersistentDisk
 {
     /// <summary>These are the mount options for a persistent disk.</summary>
@@ -356,6 +370,7 @@ public partial class V1beta1SpringCloudAppSpecInitProviderCustomPersistentDisk
     public string? StorageName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudAppSpecInitProviderIdentity
 {
     /// <summary>A list of User Assigned Managed Identity IDs to be assigned to this Spring Cloud Application.</summary>
@@ -367,6 +382,7 @@ public partial class V1beta1SpringCloudAppSpecInitProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudAppSpecInitProviderIngressSettings
 {
     /// <summary>Specifies how ingress should communicate with this app backend service. Allowed values are GRPC and Default. Defaults to Default.</summary>
@@ -390,6 +406,7 @@ public partial class V1beta1SpringCloudAppSpecInitProviderIngressSettings
     public double? SessionCookieMaxAge { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudAppSpecInitProviderPersistentDisk
 {
     /// <summary>Specifies the mount path of the persistent disk. Defaults to /persistent.</summary>
@@ -401,6 +418,7 @@ public partial class V1beta1SpringCloudAppSpecInitProviderPersistentDisk
     public double? SizeInGb { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1SpringCloudAppSpecInitProvider
 {
     /// <summary>A JSON object that contains the addon configurations of the Spring Cloud Service.</summary>
@@ -482,6 +500,7 @@ public enum V1beta1SpringCloudAppSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpringCloudAppSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -495,6 +514,7 @@ public partial class V1beta1SpringCloudAppSpecProviderConfigRefPolicy
     public V1beta1SpringCloudAppSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1SpringCloudAppSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -526,6 +546,7 @@ public enum V1beta1SpringCloudAppSpecPublishConnectionDetailsToConfigRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SpringCloudAppSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -539,6 +560,7 @@ public partial class V1beta1SpringCloudAppSpecPublishConnectionDetailsToConfigRe
     public V1beta1SpringCloudAppSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1SpringCloudAppSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -550,6 +572,7 @@ public partial class V1beta1SpringCloudAppSpecPublishConnectionDetailsToConfigRe
     public V1beta1SpringCloudAppSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1SpringCloudAppSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -565,6 +588,7 @@ public partial class V1beta1SpringCloudAppSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1SpringCloudAppSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -580,6 +604,7 @@ public partial class V1beta1SpringCloudAppSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1SpringCloudAppSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -591,6 +616,7 @@ public partial class V1beta1SpringCloudAppSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>SpringCloudAppSpec defines the desired state of SpringCloudApp</summary>
 public partial class V1beta1SpringCloudAppSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -623,6 +649,7 @@ public partial class V1beta1SpringCloudAppSpec
     public V1beta1SpringCloudAppSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudAppStatusAtProviderCustomPersistentDisk
 {
     /// <summary>These are the mount options for a persistent disk.</summary>
@@ -646,6 +673,7 @@ public partial class V1beta1SpringCloudAppStatusAtProviderCustomPersistentDisk
     public string? StorageName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudAppStatusAtProviderIdentity
 {
     /// <summary>A list of User Assigned Managed Identity IDs to be assigned to this Spring Cloud Application.</summary>
@@ -665,6 +693,7 @@ public partial class V1beta1SpringCloudAppStatusAtProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudAppStatusAtProviderIngressSettings
 {
     /// <summary>Specifies how ingress should communicate with this app backend service. Allowed values are GRPC and Default. Defaults to Default.</summary>
@@ -688,6 +717,7 @@ public partial class V1beta1SpringCloudAppStatusAtProviderIngressSettings
     public double? SessionCookieMaxAge { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudAppStatusAtProviderPersistentDisk
 {
     /// <summary>Specifies the mount path of the persistent disk. Defaults to /persistent.</summary>
@@ -699,6 +729,7 @@ public partial class V1beta1SpringCloudAppStatusAtProviderPersistentDisk
     public double? SizeInGb { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SpringCloudAppStatusAtProvider
 {
     /// <summary>A JSON object that contains the addon configurations of the Spring Cloud Service.</summary>
@@ -758,6 +789,7 @@ public partial class V1beta1SpringCloudAppStatusAtProvider
     public string? Url { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1SpringCloudAppStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -785,6 +817,7 @@ public partial class V1beta1SpringCloudAppStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>SpringCloudAppStatus defines the observed state of SpringCloudApp.</summary>
 public partial class V1beta1SpringCloudAppStatus
 {
     /// <summary></summary>
@@ -801,6 +834,7 @@ public partial class V1beta1SpringCloudAppStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>SpringCloudApp is the Schema for the SpringCloudApps API. Manage an Azure Spring Cloud Application.</summary>
 public partial class V1beta1SpringCloudApp : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SpringCloudAppSpec>, IStatus<V1beta1SpringCloudAppStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -18,6 +18,7 @@ public enum V1beta1ScalingPlanSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1ScalingPlanSpecForProviderApplicationSourceTagFilter
 {
     /// <summary>Tag key.</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1ScalingPlanSpecForProviderApplicationSourceTagFilter
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScalingPlanSpecForProviderApplicationSource
 {
     /// <summary>ARN of a AWS CloudFormation stack.</summary>
@@ -40,6 +42,7 @@ public partial class V1beta1ScalingPlanSpecForProviderApplicationSource
     public IList<V1beta1ScalingPlanSpecForProviderApplicationSourceTagFilter>? TagFilter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScalingPlanSpecForProviderScalingInstructionCustomizedLoadMetricSpecification
 {
     /// <summary>Dimensions of the metric.</summary>
@@ -63,6 +66,7 @@ public partial class V1beta1ScalingPlanSpecForProviderScalingInstructionCustomiz
     public string? Unit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScalingPlanSpecForProviderScalingInstructionPredefinedLoadMetricSpecification
 {
     /// <summary>Metric type. Valid values: ALBTargetGroupRequestCount, ASGTotalCPUUtilization, ASGTotalNetworkIn, ASGTotalNetworkOut.</summary>
@@ -74,6 +78,7 @@ public partial class V1beta1ScalingPlanSpecForProviderScalingInstructionPredefin
     public string? ResourceLabel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScalingPlanSpecForProviderScalingInstructionTargetTrackingConfigurationCustomizedScalingMetricSpecification
 {
     /// <summary>Dimensions of the metric.</summary>
@@ -97,6 +102,7 @@ public partial class V1beta1ScalingPlanSpecForProviderScalingInstructionTargetTr
     public string? Unit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScalingPlanSpecForProviderScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecification
 {
     /// <summary>Metric type. Valid values: ALBRequestCountPerTarget, ASGAverageCPUUtilization, ASGAverageNetworkIn, ASGAverageNetworkOut, DynamoDBReadCapacityUtilization, DynamoDBWriteCapacityUtilization, ECSServiceAverageCPUUtilization, ECSServiceAverageMemoryUtilization, EC2SpotFleetRequestAverageCPUUtilization, EC2SpotFleetRequestAverageNetworkIn, EC2SpotFleetRequestAverageNetworkOut, RDSReaderAverageCPUUtilization, RDSReaderAverageDatabaseConnections.</summary>
@@ -108,6 +114,7 @@ public partial class V1beta1ScalingPlanSpecForProviderScalingInstructionTargetTr
     public string? ResourceLabel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScalingPlanSpecForProviderScalingInstructionTargetTrackingConfiguration
 {
     /// <summary>Customized metric. You can specify either customized_scaling_metric_specification or predefined_scaling_metric_specification. More details can be found in the AWS Auto Scaling API Reference.</summary>
@@ -139,6 +146,7 @@ public partial class V1beta1ScalingPlanSpecForProviderScalingInstructionTargetTr
     public double? TargetValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScalingPlanSpecForProviderScalingInstruction
 {
     /// <summary>Customized load metric to use for predictive scaling. You must specify either customized_load_metric_specification or predefined_load_metric_specification when configuring predictive scaling. More details can be found in the AWS Auto Scaling API Reference.</summary>
@@ -198,6 +206,7 @@ public partial class V1beta1ScalingPlanSpecForProviderScalingInstruction
     public IList<V1beta1ScalingPlanSpecForProviderScalingInstructionTargetTrackingConfiguration>? TargetTrackingConfiguration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScalingPlanSpecForProvider
 {
     /// <summary>CloudFormation stack or set of tags. You can create one scaling plan per application source.</summary>
@@ -217,6 +226,7 @@ public partial class V1beta1ScalingPlanSpecForProvider
     public IList<V1beta1ScalingPlanSpecForProviderScalingInstruction>? ScalingInstruction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScalingPlanSpecInitProviderApplicationSourceTagFilter
 {
     /// <summary>Tag key.</summary>
@@ -228,6 +238,7 @@ public partial class V1beta1ScalingPlanSpecInitProviderApplicationSourceTagFilte
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScalingPlanSpecInitProviderApplicationSource
 {
     /// <summary>ARN of a AWS CloudFormation stack.</summary>
@@ -239,6 +250,7 @@ public partial class V1beta1ScalingPlanSpecInitProviderApplicationSource
     public IList<V1beta1ScalingPlanSpecInitProviderApplicationSourceTagFilter>? TagFilter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScalingPlanSpecInitProviderScalingInstructionCustomizedLoadMetricSpecification
 {
     /// <summary>Dimensions of the metric.</summary>
@@ -262,6 +274,7 @@ public partial class V1beta1ScalingPlanSpecInitProviderScalingInstructionCustomi
     public string? Unit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScalingPlanSpecInitProviderScalingInstructionPredefinedLoadMetricSpecification
 {
     /// <summary>Metric type. Valid values: ALBTargetGroupRequestCount, ASGTotalCPUUtilization, ASGTotalNetworkIn, ASGTotalNetworkOut.</summary>
@@ -273,6 +286,7 @@ public partial class V1beta1ScalingPlanSpecInitProviderScalingInstructionPredefi
     public string? ResourceLabel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScalingPlanSpecInitProviderScalingInstructionTargetTrackingConfigurationCustomizedScalingMetricSpecification
 {
     /// <summary>Dimensions of the metric.</summary>
@@ -296,6 +310,7 @@ public partial class V1beta1ScalingPlanSpecInitProviderScalingInstructionTargetT
     public string? Unit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScalingPlanSpecInitProviderScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecification
 {
     /// <summary>Metric type. Valid values: ALBRequestCountPerTarget, ASGAverageCPUUtilization, ASGAverageNetworkIn, ASGAverageNetworkOut, DynamoDBReadCapacityUtilization, DynamoDBWriteCapacityUtilization, ECSServiceAverageCPUUtilization, ECSServiceAverageMemoryUtilization, EC2SpotFleetRequestAverageCPUUtilization, EC2SpotFleetRequestAverageNetworkIn, EC2SpotFleetRequestAverageNetworkOut, RDSReaderAverageCPUUtilization, RDSReaderAverageDatabaseConnections.</summary>
@@ -307,6 +322,7 @@ public partial class V1beta1ScalingPlanSpecInitProviderScalingInstructionTargetT
     public string? ResourceLabel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScalingPlanSpecInitProviderScalingInstructionTargetTrackingConfiguration
 {
     /// <summary>Customized metric. You can specify either customized_scaling_metric_specification or predefined_scaling_metric_specification. More details can be found in the AWS Auto Scaling API Reference.</summary>
@@ -338,6 +354,7 @@ public partial class V1beta1ScalingPlanSpecInitProviderScalingInstructionTargetT
     public double? TargetValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScalingPlanSpecInitProviderScalingInstruction
 {
     /// <summary>Customized load metric to use for predictive scaling. You must specify either customized_load_metric_specification or predefined_load_metric_specification when configuring predictive scaling. More details can be found in the AWS Auto Scaling API Reference.</summary>
@@ -397,6 +414,7 @@ public partial class V1beta1ScalingPlanSpecInitProviderScalingInstruction
     public IList<V1beta1ScalingPlanSpecInitProviderScalingInstructionTargetTrackingConfiguration>? TargetTrackingConfiguration { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ScalingPlanSpecInitProvider
 {
     /// <summary>CloudFormation stack or set of tags. You can create one scaling plan per application source.</summary>
@@ -454,6 +472,7 @@ public enum V1beta1ScalingPlanSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ScalingPlanSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -467,6 +486,7 @@ public partial class V1beta1ScalingPlanSpecProviderConfigRefPolicy
     public V1beta1ScalingPlanSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ScalingPlanSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -498,6 +518,7 @@ public enum V1beta1ScalingPlanSpecPublishConnectionDetailsToConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ScalingPlanSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -511,6 +532,7 @@ public partial class V1beta1ScalingPlanSpecPublishConnectionDetailsToConfigRefPo
     public V1beta1ScalingPlanSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ScalingPlanSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -522,6 +544,7 @@ public partial class V1beta1ScalingPlanSpecPublishConnectionDetailsToConfigRef
     public V1beta1ScalingPlanSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ScalingPlanSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -537,6 +560,7 @@ public partial class V1beta1ScalingPlanSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ScalingPlanSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -552,6 +576,7 @@ public partial class V1beta1ScalingPlanSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ScalingPlanSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -563,6 +588,7 @@ public partial class V1beta1ScalingPlanSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ScalingPlanSpec defines the desired state of ScalingPlan</summary>
 public partial class V1beta1ScalingPlanSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -595,6 +621,7 @@ public partial class V1beta1ScalingPlanSpec
     public V1beta1ScalingPlanSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScalingPlanStatusAtProviderApplicationSourceTagFilter
 {
     /// <summary>Tag key.</summary>
@@ -606,6 +633,7 @@ public partial class V1beta1ScalingPlanStatusAtProviderApplicationSourceTagFilte
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScalingPlanStatusAtProviderApplicationSource
 {
     /// <summary>ARN of a AWS CloudFormation stack.</summary>
@@ -617,6 +645,7 @@ public partial class V1beta1ScalingPlanStatusAtProviderApplicationSource
     public IList<V1beta1ScalingPlanStatusAtProviderApplicationSourceTagFilter>? TagFilter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScalingPlanStatusAtProviderScalingInstructionCustomizedLoadMetricSpecification
 {
     /// <summary>Dimensions of the metric.</summary>
@@ -640,6 +669,7 @@ public partial class V1beta1ScalingPlanStatusAtProviderScalingInstructionCustomi
     public string? Unit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScalingPlanStatusAtProviderScalingInstructionPredefinedLoadMetricSpecification
 {
     /// <summary>Metric type. Valid values: ALBTargetGroupRequestCount, ASGTotalCPUUtilization, ASGTotalNetworkIn, ASGTotalNetworkOut.</summary>
@@ -651,6 +681,7 @@ public partial class V1beta1ScalingPlanStatusAtProviderScalingInstructionPredefi
     public string? ResourceLabel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScalingPlanStatusAtProviderScalingInstructionTargetTrackingConfigurationCustomizedScalingMetricSpecification
 {
     /// <summary>Dimensions of the metric.</summary>
@@ -674,6 +705,7 @@ public partial class V1beta1ScalingPlanStatusAtProviderScalingInstructionTargetT
     public string? Unit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScalingPlanStatusAtProviderScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecification
 {
     /// <summary>Metric type. Valid values: ALBRequestCountPerTarget, ASGAverageCPUUtilization, ASGAverageNetworkIn, ASGAverageNetworkOut, DynamoDBReadCapacityUtilization, DynamoDBWriteCapacityUtilization, ECSServiceAverageCPUUtilization, ECSServiceAverageMemoryUtilization, EC2SpotFleetRequestAverageCPUUtilization, EC2SpotFleetRequestAverageNetworkIn, EC2SpotFleetRequestAverageNetworkOut, RDSReaderAverageCPUUtilization, RDSReaderAverageDatabaseConnections.</summary>
@@ -685,6 +717,7 @@ public partial class V1beta1ScalingPlanStatusAtProviderScalingInstructionTargetT
     public string? ResourceLabel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScalingPlanStatusAtProviderScalingInstructionTargetTrackingConfiguration
 {
     /// <summary>Customized metric. You can specify either customized_scaling_metric_specification or predefined_scaling_metric_specification. More details can be found in the AWS Auto Scaling API Reference.</summary>
@@ -716,6 +749,7 @@ public partial class V1beta1ScalingPlanStatusAtProviderScalingInstructionTargetT
     public double? TargetValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScalingPlanStatusAtProviderScalingInstruction
 {
     /// <summary>Customized load metric to use for predictive scaling. You must specify either customized_load_metric_specification or predefined_load_metric_specification when configuring predictive scaling. More details can be found in the AWS Auto Scaling API Reference.</summary>
@@ -775,6 +809,7 @@ public partial class V1beta1ScalingPlanStatusAtProviderScalingInstruction
     public IList<V1beta1ScalingPlanStatusAtProviderScalingInstructionTargetTrackingConfiguration>? TargetTrackingConfiguration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScalingPlanStatusAtProvider
 {
     /// <summary>CloudFormation stack or set of tags. You can create one scaling plan per application source.</summary>
@@ -798,6 +833,7 @@ public partial class V1beta1ScalingPlanStatusAtProvider
     public double? ScalingPlanVersion { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ScalingPlanStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -825,6 +861,7 @@ public partial class V1beta1ScalingPlanStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ScalingPlanStatus defines the observed state of ScalingPlan.</summary>
 public partial class V1beta1ScalingPlanStatus
 {
     /// <summary></summary>
@@ -841,6 +878,7 @@ public partial class V1beta1ScalingPlanStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ScalingPlan is the Schema for the ScalingPlans API. Manages an AWS Auto Scaling scaling plan.</summary>
 public partial class V1beta1ScalingPlan : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ScalingPlanSpec>, IStatus<V1beta1ScalingPlanStatus>
 {
     public const string KubeApiVersion = "v1beta1";

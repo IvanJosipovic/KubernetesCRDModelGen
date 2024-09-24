@@ -18,6 +18,7 @@ public enum V1beta1ResourcePolicyAssignmentSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourcePolicyAssignmentSpecForProviderIdentity
 {
     /// <summary>A list of User Managed Identity IDs which should be assigned to the Policy Definition.</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1ResourcePolicyAssignmentSpecForProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourcePolicyAssignmentSpecForProviderNonComplianceMessage
 {
     /// <summary>The non-compliance message text. When assigning policy sets (initiatives), unless policy_definition_reference_id is specified then this message will be the default for all policies.</summary>
@@ -40,6 +42,7 @@ public partial class V1beta1ResourcePolicyAssignmentSpecForProviderNonCompliance
     public string? PolicyDefinitionReferenceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourcePolicyAssignmentSpecForProviderOverridesSelectors
 {
     /// <summary>The list of allowed values for the specified kind. Cannot be used with not_in. Can contain up to 50 values.</summary>
@@ -51,6 +54,7 @@ public partial class V1beta1ResourcePolicyAssignmentSpecForProviderOverridesSele
     public IList<string>? NotIn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourcePolicyAssignmentSpecForProviderOverrides
 {
     /// <summary>One or more override_selector block as defined below.</summary>
@@ -82,6 +86,7 @@ public enum V1beta1ResourcePolicyAssignmentSpecForProviderPolicyDefinitionIdRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ResourcePolicyAssignmentSpecForProviderPolicyDefinitionIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +100,7 @@ public partial class V1beta1ResourcePolicyAssignmentSpecForProviderPolicyDefinit
     public V1beta1ResourcePolicyAssignmentSpecForProviderPolicyDefinitionIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a PolicyDefinition in authorization to populate policyDefinitionId.</summary>
 public partial class V1beta1ResourcePolicyAssignmentSpecForProviderPolicyDefinitionIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -126,6 +132,7 @@ public enum V1beta1ResourcePolicyAssignmentSpecForProviderPolicyDefinitionIdSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ResourcePolicyAssignmentSpecForProviderPolicyDefinitionIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -139,6 +146,7 @@ public partial class V1beta1ResourcePolicyAssignmentSpecForProviderPolicyDefinit
     public V1beta1ResourcePolicyAssignmentSpecForProviderPolicyDefinitionIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a PolicyDefinition in authorization to populate policyDefinitionId.</summary>
 public partial class V1beta1ResourcePolicyAssignmentSpecForProviderPolicyDefinitionIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -154,6 +162,7 @@ public partial class V1beta1ResourcePolicyAssignmentSpecForProviderPolicyDefinit
     public V1beta1ResourcePolicyAssignmentSpecForProviderPolicyDefinitionIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourcePolicyAssignmentSpecForProviderResourceSelectorsSelectors
 {
     /// <summary>The list of allowed values for the specified kind. Cannot be used with not_in. Can contain up to 50 values.</summary>
@@ -169,6 +178,7 @@ public partial class V1beta1ResourcePolicyAssignmentSpecForProviderResourceSelec
     public IList<string>? NotIn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourcePolicyAssignmentSpecForProviderResourceSelectors
 {
     /// <summary>Specifies a name for the resource selector.</summary>
@@ -180,6 +190,7 @@ public partial class V1beta1ResourcePolicyAssignmentSpecForProviderResourceSelec
     public IList<V1beta1ResourcePolicyAssignmentSpecForProviderResourceSelectorsSelectors>? Selectors { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourcePolicyAssignmentSpecForProvider
 {
     /// <summary>A description which should be used for this Policy Assignment.</summary>
@@ -247,6 +258,7 @@ public partial class V1beta1ResourcePolicyAssignmentSpecForProvider
     public IList<V1beta1ResourcePolicyAssignmentSpecForProviderResourceSelectors>? ResourceSelectors { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourcePolicyAssignmentSpecInitProviderIdentity
 {
     /// <summary>A list of User Managed Identity IDs which should be assigned to the Policy Definition.</summary>
@@ -258,6 +270,7 @@ public partial class V1beta1ResourcePolicyAssignmentSpecInitProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourcePolicyAssignmentSpecInitProviderNonComplianceMessage
 {
     /// <summary>The non-compliance message text. When assigning policy sets (initiatives), unless policy_definition_reference_id is specified then this message will be the default for all policies.</summary>
@@ -269,6 +282,7 @@ public partial class V1beta1ResourcePolicyAssignmentSpecInitProviderNonComplianc
     public string? PolicyDefinitionReferenceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourcePolicyAssignmentSpecInitProviderOverridesSelectors
 {
     /// <summary>The list of allowed values for the specified kind. Cannot be used with not_in. Can contain up to 50 values.</summary>
@@ -280,6 +294,7 @@ public partial class V1beta1ResourcePolicyAssignmentSpecInitProviderOverridesSel
     public IList<string>? NotIn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourcePolicyAssignmentSpecInitProviderOverrides
 {
     /// <summary>One or more override_selector block as defined below.</summary>
@@ -311,6 +326,7 @@ public enum V1beta1ResourcePolicyAssignmentSpecInitProviderPolicyDefinitionIdRef
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ResourcePolicyAssignmentSpecInitProviderPolicyDefinitionIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -324,6 +340,7 @@ public partial class V1beta1ResourcePolicyAssignmentSpecInitProviderPolicyDefini
     public V1beta1ResourcePolicyAssignmentSpecInitProviderPolicyDefinitionIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a PolicyDefinition in authorization to populate policyDefinitionId.</summary>
 public partial class V1beta1ResourcePolicyAssignmentSpecInitProviderPolicyDefinitionIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -355,6 +372,7 @@ public enum V1beta1ResourcePolicyAssignmentSpecInitProviderPolicyDefinitionIdSel
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ResourcePolicyAssignmentSpecInitProviderPolicyDefinitionIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -368,6 +386,7 @@ public partial class V1beta1ResourcePolicyAssignmentSpecInitProviderPolicyDefini
     public V1beta1ResourcePolicyAssignmentSpecInitProviderPolicyDefinitionIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a PolicyDefinition in authorization to populate policyDefinitionId.</summary>
 public partial class V1beta1ResourcePolicyAssignmentSpecInitProviderPolicyDefinitionIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -383,6 +402,7 @@ public partial class V1beta1ResourcePolicyAssignmentSpecInitProviderPolicyDefini
     public V1beta1ResourcePolicyAssignmentSpecInitProviderPolicyDefinitionIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourcePolicyAssignmentSpecInitProviderResourceSelectorsSelectors
 {
     /// <summary>The list of allowed values for the specified kind. Cannot be used with not_in. Can contain up to 50 values.</summary>
@@ -398,6 +418,7 @@ public partial class V1beta1ResourcePolicyAssignmentSpecInitProviderResourceSele
     public IList<string>? NotIn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourcePolicyAssignmentSpecInitProviderResourceSelectors
 {
     /// <summary>Specifies a name for the resource selector.</summary>
@@ -409,6 +430,7 @@ public partial class V1beta1ResourcePolicyAssignmentSpecInitProviderResourceSele
     public IList<V1beta1ResourcePolicyAssignmentSpecInitProviderResourceSelectorsSelectors>? Selectors { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ResourcePolicyAssignmentSpecInitProvider
 {
     /// <summary>A description which should be used for this Policy Assignment.</summary>
@@ -518,6 +540,7 @@ public enum V1beta1ResourcePolicyAssignmentSpecProviderConfigRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ResourcePolicyAssignmentSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -531,6 +554,7 @@ public partial class V1beta1ResourcePolicyAssignmentSpecProviderConfigRefPolicy
     public V1beta1ResourcePolicyAssignmentSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ResourcePolicyAssignmentSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -562,6 +586,7 @@ public enum V1beta1ResourcePolicyAssignmentSpecPublishConnectionDetailsToConfigR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ResourcePolicyAssignmentSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -575,6 +600,7 @@ public partial class V1beta1ResourcePolicyAssignmentSpecPublishConnectionDetails
     public V1beta1ResourcePolicyAssignmentSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ResourcePolicyAssignmentSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -586,6 +612,7 @@ public partial class V1beta1ResourcePolicyAssignmentSpecPublishConnectionDetails
     public V1beta1ResourcePolicyAssignmentSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ResourcePolicyAssignmentSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -601,6 +628,7 @@ public partial class V1beta1ResourcePolicyAssignmentSpecPublishConnectionDetails
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ResourcePolicyAssignmentSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -616,6 +644,7 @@ public partial class V1beta1ResourcePolicyAssignmentSpecPublishConnectionDetails
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ResourcePolicyAssignmentSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -627,6 +656,7 @@ public partial class V1beta1ResourcePolicyAssignmentSpecWriteConnectionSecretToR
     public string Namespace { get; set; }
 }
 
+/// <summary>ResourcePolicyAssignmentSpec defines the desired state of ResourcePolicyAssignment</summary>
 public partial class V1beta1ResourcePolicyAssignmentSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -659,6 +689,7 @@ public partial class V1beta1ResourcePolicyAssignmentSpec
     public V1beta1ResourcePolicyAssignmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourcePolicyAssignmentStatusAtProviderIdentity
 {
     /// <summary>A list of User Managed Identity IDs which should be assigned to the Policy Definition.</summary>
@@ -678,6 +709,7 @@ public partial class V1beta1ResourcePolicyAssignmentStatusAtProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourcePolicyAssignmentStatusAtProviderNonComplianceMessage
 {
     /// <summary>The non-compliance message text. When assigning policy sets (initiatives), unless policy_definition_reference_id is specified then this message will be the default for all policies.</summary>
@@ -689,6 +721,7 @@ public partial class V1beta1ResourcePolicyAssignmentStatusAtProviderNonComplianc
     public string? PolicyDefinitionReferenceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourcePolicyAssignmentStatusAtProviderOverridesSelectors
 {
     /// <summary>The list of allowed values for the specified kind. Cannot be used with not_in. Can contain up to 50 values.</summary>
@@ -704,6 +737,7 @@ public partial class V1beta1ResourcePolicyAssignmentStatusAtProviderOverridesSel
     public IList<string>? NotIn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourcePolicyAssignmentStatusAtProviderOverrides
 {
     /// <summary>One or more override_selector block as defined below.</summary>
@@ -715,6 +749,7 @@ public partial class V1beta1ResourcePolicyAssignmentStatusAtProviderOverrides
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourcePolicyAssignmentStatusAtProviderResourceSelectorsSelectors
 {
     /// <summary>The list of allowed values for the specified kind. Cannot be used with not_in. Can contain up to 50 values.</summary>
@@ -730,6 +765,7 @@ public partial class V1beta1ResourcePolicyAssignmentStatusAtProviderResourceSele
     public IList<string>? NotIn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourcePolicyAssignmentStatusAtProviderResourceSelectors
 {
     /// <summary>Specifies a name for the resource selector.</summary>
@@ -741,6 +777,7 @@ public partial class V1beta1ResourcePolicyAssignmentStatusAtProviderResourceSele
     public IList<V1beta1ResourcePolicyAssignmentStatusAtProviderResourceSelectorsSelectors>? Selectors { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourcePolicyAssignmentStatusAtProvider
 {
     /// <summary>A description which should be used for this Policy Assignment.</summary>
@@ -804,6 +841,7 @@ public partial class V1beta1ResourcePolicyAssignmentStatusAtProvider
     public IList<V1beta1ResourcePolicyAssignmentStatusAtProviderResourceSelectors>? ResourceSelectors { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ResourcePolicyAssignmentStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -831,6 +869,7 @@ public partial class V1beta1ResourcePolicyAssignmentStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ResourcePolicyAssignmentStatus defines the observed state of ResourcePolicyAssignment.</summary>
 public partial class V1beta1ResourcePolicyAssignmentStatus
 {
     /// <summary></summary>
@@ -847,6 +886,7 @@ public partial class V1beta1ResourcePolicyAssignmentStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ResourcePolicyAssignment is the Schema for the ResourcePolicyAssignments API. Manages a Policy Assignment to a Resource.</summary>
 public partial class V1beta1ResourcePolicyAssignment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ResourcePolicyAssignmentSpec>, IStatus<V1beta1ResourcePolicyAssignmentStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -38,6 +38,7 @@ public enum V1beta1BucketPublicAccessBlockSpecForProviderBucketRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketPublicAccessBlockSpecForProviderBucketRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1BucketPublicAccessBlockSpecForProviderBucketRefPolic
     public V1beta1BucketPublicAccessBlockSpecForProviderBucketRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1BucketPublicAccessBlockSpecForProviderBucketRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1BucketPublicAccessBlockSpecForProviderBucketSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BucketPublicAccessBlockSpecForProviderBucketSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1BucketPublicAccessBlockSpecForProviderBucketSelector
     public V1beta1BucketPublicAccessBlockSpecForProviderBucketSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1BucketPublicAccessBlockSpecForProviderBucketSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1BucketPublicAccessBlockSpecForProviderBucketSelector
     public V1beta1BucketPublicAccessBlockSpecForProviderBucketSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketPublicAccessBlockSpecForProvider
 {
     /// <summary>Whether Amazon S3 should block public ACLs for this bucket. Defaults to false. Enabling this setting does not affect existing policies or ACLs. When set to true causes the following behavior:</summary>
@@ -165,6 +170,7 @@ public enum V1beta1BucketPublicAccessBlockSpecInitProviderBucketRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketPublicAccessBlockSpecInitProviderBucketRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -178,6 +184,7 @@ public partial class V1beta1BucketPublicAccessBlockSpecInitProviderBucketRefPoli
     public V1beta1BucketPublicAccessBlockSpecInitProviderBucketRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1BucketPublicAccessBlockSpecInitProviderBucketRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -209,6 +216,7 @@ public enum V1beta1BucketPublicAccessBlockSpecInitProviderBucketSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BucketPublicAccessBlockSpecInitProviderBucketSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -222,6 +230,7 @@ public partial class V1beta1BucketPublicAccessBlockSpecInitProviderBucketSelecto
     public V1beta1BucketPublicAccessBlockSpecInitProviderBucketSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1BucketPublicAccessBlockSpecInitProviderBucketSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -237,6 +246,7 @@ public partial class V1beta1BucketPublicAccessBlockSpecInitProviderBucketSelecto
     public V1beta1BucketPublicAccessBlockSpecInitProviderBucketSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1BucketPublicAccessBlockSpecInitProvider
 {
     /// <summary>Whether Amazon S3 should block public ACLs for this bucket. Defaults to false. Enabling this setting does not affect existing policies or ACLs. When set to true causes the following behavior:</summary>
@@ -310,6 +320,7 @@ public enum V1beta1BucketPublicAccessBlockSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketPublicAccessBlockSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -323,6 +334,7 @@ public partial class V1beta1BucketPublicAccessBlockSpecProviderConfigRefPolicy
     public V1beta1BucketPublicAccessBlockSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1BucketPublicAccessBlockSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -354,6 +366,7 @@ public enum V1beta1BucketPublicAccessBlockSpecPublishConnectionDetailsToConfigRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketPublicAccessBlockSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -367,6 +380,7 @@ public partial class V1beta1BucketPublicAccessBlockSpecPublishConnectionDetailsT
     public V1beta1BucketPublicAccessBlockSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1BucketPublicAccessBlockSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -378,6 +392,7 @@ public partial class V1beta1BucketPublicAccessBlockSpecPublishConnectionDetailsT
     public V1beta1BucketPublicAccessBlockSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1BucketPublicAccessBlockSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -393,6 +408,7 @@ public partial class V1beta1BucketPublicAccessBlockSpecPublishConnectionDetailsT
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1BucketPublicAccessBlockSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -408,6 +424,7 @@ public partial class V1beta1BucketPublicAccessBlockSpecPublishConnectionDetailsT
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1BucketPublicAccessBlockSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -419,6 +436,7 @@ public partial class V1beta1BucketPublicAccessBlockSpecWriteConnectionSecretToRe
     public string Namespace { get; set; }
 }
 
+/// <summary>BucketPublicAccessBlockSpec defines the desired state of BucketPublicAccessBlock</summary>
 public partial class V1beta1BucketPublicAccessBlockSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -451,6 +469,7 @@ public partial class V1beta1BucketPublicAccessBlockSpec
     public V1beta1BucketPublicAccessBlockSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketPublicAccessBlockStatusAtProvider
 {
     /// <summary>Whether Amazon S3 should block public ACLs for this bucket. Defaults to false. Enabling this setting does not affect existing policies or ACLs. When set to true causes the following behavior:</summary>
@@ -478,6 +497,7 @@ public partial class V1beta1BucketPublicAccessBlockStatusAtProvider
     public bool? RestrictPublicBuckets { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1BucketPublicAccessBlockStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -505,6 +525,7 @@ public partial class V1beta1BucketPublicAccessBlockStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>BucketPublicAccessBlockStatus defines the observed state of BucketPublicAccessBlock.</summary>
 public partial class V1beta1BucketPublicAccessBlockStatus
 {
     /// <summary></summary>
@@ -521,6 +542,7 @@ public partial class V1beta1BucketPublicAccessBlockStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>BucketPublicAccessBlock is the Schema for the BucketPublicAccessBlocks API. Manages S3 bucket-level Public Access Block Configuration</summary>
 public partial class V1beta1BucketPublicAccessBlock : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BucketPublicAccessBlockSpec>, IStatus<V1beta1BucketPublicAccessBlockStatus>
 {
     public const string KubeApiVersion = "v1beta1";

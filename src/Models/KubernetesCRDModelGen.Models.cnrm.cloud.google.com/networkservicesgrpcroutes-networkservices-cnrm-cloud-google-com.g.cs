@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkservices.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1NetworkServicesGRPCRouteSpecGateways
 {
     /// <summary>Allowed value: The `selfLink` field of a `NetworkServicesGateway` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecGateways
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkServicesGRPCRouteSpecMeshes
 {
     /// <summary>Allowed value: The `selfLink` field of a `NetworkServicesMesh` resource.</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecMeshes
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. The Project that this resource belongs to.</summary>
 public partial class V1beta1NetworkServicesGRPCRouteSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -53,6 +56,7 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkServicesGRPCRouteSpecRulesActionDestinationsServiceRef
 {
     /// <summary>Required. The URL of a destination service to which to route traffic. Must refer to either a BackendService or ServiceDirectoryService.  Allowed value: The Google Cloud resource name of a `ComputeBackendService` resource (format: `projects/{{project}}/global/backendServices/{{name}}`).</summary>
@@ -68,6 +72,7 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecRulesActionDestinationsS
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkServicesGRPCRouteSpecRulesActionDestinations
 {
     /// <summary></summary>
@@ -79,6 +84,7 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecRulesActionDestinations
     public long? Weight { get; set; }
 }
 
+/// <summary>The specification for aborting to client requests.</summary>
 public partial class V1beta1NetworkServicesGRPCRouteSpecRulesActionFaultInjectionPolicyAbort
 {
     /// <summary>The HTTP status code used to abort the request. The value must be between 200 and 599 inclusive.</summary>
@@ -90,6 +96,7 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecRulesActionFaultInjectio
     public long? Percentage { get; set; }
 }
 
+/// <summary>The specification for injecting delay to client requests.</summary>
 public partial class V1beta1NetworkServicesGRPCRouteSpecRulesActionFaultInjectionPolicyDelay
 {
     /// <summary>Specify a fixed delay before forwarding the request.</summary>
@@ -101,6 +108,7 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecRulesActionFaultInjectio
     public long? Percentage { get; set; }
 }
 
+/// <summary>Optional. The specification for fault injection introduced into traffic to test the resiliency of clients to destination service failure. As part of fault injection, when clients send requests to a destination, delays can be introduced on a percentage of requests before sending those requests to the destination service. Similarly requests from clients can be aborted by for a percentage of requests. timeout and retry_policy will be ignored by clients that are configured with a fault_injection_policy</summary>
 public partial class V1beta1NetworkServicesGRPCRouteSpecRulesActionFaultInjectionPolicy
 {
     /// <summary>The specification for aborting to client requests.</summary>
@@ -112,6 +120,7 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecRulesActionFaultInjectio
     public V1beta1NetworkServicesGRPCRouteSpecRulesActionFaultInjectionPolicyDelay? Delay { get; set; }
 }
 
+/// <summary>Optional. Specifies the retry policy associated with this route.</summary>
 public partial class V1beta1NetworkServicesGRPCRouteSpecRulesActionRetryPolicy
 {
     /// <summary>Specifies the allowed number of retries. This number must be &gt; 0. If not specpfied, default to 1.</summary>
@@ -123,6 +132,7 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecRulesActionRetryPolicy
     public IList<string>? RetryConditions { get; set; }
 }
 
+/// <summary>Required. A detailed rule defining how to route traffic. This field is required.</summary>
 public partial class V1beta1NetworkServicesGRPCRouteSpecRulesAction
 {
     /// <summary>Optional. The destination services to which traffic should be forwarded. If multiple destinations are specified, traffic will be split between Backend Service(s) according to the weight field of these destinations.</summary>
@@ -142,6 +152,7 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecRulesAction
     public string? Timeout { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkServicesGRPCRouteSpecRulesMatchesHeaders
 {
     /// <summary>Required. The key of the header.</summary>
@@ -157,6 +168,7 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecRulesMatchesHeaders
     public string Value { get; set; }
 }
 
+/// <summary>Optional. A gRPC method to match against. If this field is empty or omitted, will match all methods.</summary>
 public partial class V1beta1NetworkServicesGRPCRouteSpecRulesMatchesMethod
 {
     /// <summary>Optional. Specifies that matches are case sensitive. The default value is true. case_sensitive must not be used with a type of REGULAR_EXPRESSION.</summary>
@@ -176,6 +188,7 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecRulesMatchesMethod
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkServicesGRPCRouteSpecRulesMatches
 {
     /// <summary>Optional. Specifies a collection of headers to match.</summary>
@@ -187,6 +200,7 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecRulesMatches
     public V1beta1NetworkServicesGRPCRouteSpecRulesMatchesMethod? Method { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkServicesGRPCRouteSpecRules
 {
     /// <summary>Required. A detailed rule defining how to route traffic. This field is required.</summary>
@@ -198,6 +212,7 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecRules
     public IList<V1beta1NetworkServicesGRPCRouteSpecRulesMatches>? Matches { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkServicesGRPCRouteSpec
 {
     /// <summary>Optional. A free-text description of the resource. Max length 1024 characters.</summary>
@@ -233,6 +248,7 @@ public partial class V1beta1NetworkServicesGRPCRouteSpec
     public IList<V1beta1NetworkServicesGRPCRouteSpecRules> Rules { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkServicesGRPCRouteStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -256,6 +272,7 @@ public partial class V1beta1NetworkServicesGRPCRouteStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkServicesGRPCRouteStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -280,6 +297,7 @@ public partial class V1beta1NetworkServicesGRPCRouteStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1NetworkServicesGRPCRoute : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1NetworkServicesGRPCRouteSpec>, IStatus<V1beta1NetworkServicesGRPCRouteStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -38,6 +38,7 @@ public enum V1beta1IdentityNotificationTopicSpecForProviderIdentityRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IdentityNotificationTopicSpecForProviderIdentityRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1IdentityNotificationTopicSpecForProviderIdentityRefP
     public V1beta1IdentityNotificationTopicSpecForProviderIdentityRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a DomainIdentity in ses to populate identity.</summary>
 public partial class V1beta1IdentityNotificationTopicSpecForProviderIdentityRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1IdentityNotificationTopicSpecForProviderIdentitySelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IdentityNotificationTopicSpecForProviderIdentitySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1IdentityNotificationTopicSpecForProviderIdentitySele
     public V1beta1IdentityNotificationTopicSpecForProviderIdentitySelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a DomainIdentity in ses to populate identity.</summary>
 public partial class V1beta1IdentityNotificationTopicSpecForProviderIdentitySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1IdentityNotificationTopicSpecForProviderTopicArnRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IdentityNotificationTopicSpecForProviderTopicArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1IdentityNotificationTopicSpecForProviderTopicArnRefP
     public V1beta1IdentityNotificationTopicSpecForProviderTopicArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Topic in sns to populate topicArn.</summary>
 public partial class V1beta1IdentityNotificationTopicSpecForProviderTopicArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1IdentityNotificationTopicSpecForProviderTopicArnSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IdentityNotificationTopicSpecForProviderTopicArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1IdentityNotificationTopicSpecForProviderTopicArnSele
     public V1beta1IdentityNotificationTopicSpecForProviderTopicArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Topic in sns to populate topicArn.</summary>
 public partial class V1beta1IdentityNotificationTopicSpecForProviderTopicArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1IdentityNotificationTopicSpecForProviderTopicArnSele
     public V1beta1IdentityNotificationTopicSpecForProviderTopicArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IdentityNotificationTopicSpecForProvider
 {
     /// <summary>The identity for which the Amazon SNS topic will be set. You can specify an identity by using its name or by using its Amazon Resource Name (ARN).</summary>
@@ -261,6 +270,7 @@ public enum V1beta1IdentityNotificationTopicSpecInitProviderIdentityRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IdentityNotificationTopicSpecInitProviderIdentityRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -274,6 +284,7 @@ public partial class V1beta1IdentityNotificationTopicSpecInitProviderIdentityRef
     public V1beta1IdentityNotificationTopicSpecInitProviderIdentityRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a DomainIdentity in ses to populate identity.</summary>
 public partial class V1beta1IdentityNotificationTopicSpecInitProviderIdentityRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -305,6 +316,7 @@ public enum V1beta1IdentityNotificationTopicSpecInitProviderIdentitySelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IdentityNotificationTopicSpecInitProviderIdentitySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -318,6 +330,7 @@ public partial class V1beta1IdentityNotificationTopicSpecInitProviderIdentitySel
     public V1beta1IdentityNotificationTopicSpecInitProviderIdentitySelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a DomainIdentity in ses to populate identity.</summary>
 public partial class V1beta1IdentityNotificationTopicSpecInitProviderIdentitySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -353,6 +366,7 @@ public enum V1beta1IdentityNotificationTopicSpecInitProviderTopicArnRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IdentityNotificationTopicSpecInitProviderTopicArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -366,6 +380,7 @@ public partial class V1beta1IdentityNotificationTopicSpecInitProviderTopicArnRef
     public V1beta1IdentityNotificationTopicSpecInitProviderTopicArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Topic in sns to populate topicArn.</summary>
 public partial class V1beta1IdentityNotificationTopicSpecInitProviderTopicArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -397,6 +412,7 @@ public enum V1beta1IdentityNotificationTopicSpecInitProviderTopicArnSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1IdentityNotificationTopicSpecInitProviderTopicArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -410,6 +426,7 @@ public partial class V1beta1IdentityNotificationTopicSpecInitProviderTopicArnSel
     public V1beta1IdentityNotificationTopicSpecInitProviderTopicArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Topic in sns to populate topicArn.</summary>
 public partial class V1beta1IdentityNotificationTopicSpecInitProviderTopicArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -425,6 +442,7 @@ public partial class V1beta1IdentityNotificationTopicSpecInitProviderTopicArnSel
     public V1beta1IdentityNotificationTopicSpecInitProviderTopicArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1IdentityNotificationTopicSpecInitProvider
 {
     /// <summary>The identity for which the Amazon SNS topic will be set. You can specify an identity by using its name or by using its Amazon Resource Name (ARN).</summary>
@@ -502,6 +520,7 @@ public enum V1beta1IdentityNotificationTopicSpecProviderConfigRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IdentityNotificationTopicSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -515,6 +534,7 @@ public partial class V1beta1IdentityNotificationTopicSpecProviderConfigRefPolicy
     public V1beta1IdentityNotificationTopicSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1IdentityNotificationTopicSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -546,6 +566,7 @@ public enum V1beta1IdentityNotificationTopicSpecPublishConnectionDetailsToConfig
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1IdentityNotificationTopicSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -559,6 +580,7 @@ public partial class V1beta1IdentityNotificationTopicSpecPublishConnectionDetail
     public V1beta1IdentityNotificationTopicSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1IdentityNotificationTopicSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -570,6 +592,7 @@ public partial class V1beta1IdentityNotificationTopicSpecPublishConnectionDetail
     public V1beta1IdentityNotificationTopicSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1IdentityNotificationTopicSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -585,6 +608,7 @@ public partial class V1beta1IdentityNotificationTopicSpecPublishConnectionDetail
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1IdentityNotificationTopicSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -600,6 +624,7 @@ public partial class V1beta1IdentityNotificationTopicSpecPublishConnectionDetail
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1IdentityNotificationTopicSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -611,6 +636,7 @@ public partial class V1beta1IdentityNotificationTopicSpecWriteConnectionSecretTo
     public string Namespace { get; set; }
 }
 
+/// <summary>IdentityNotificationTopicSpec defines the desired state of IdentityNotificationTopic</summary>
 public partial class V1beta1IdentityNotificationTopicSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -643,6 +669,7 @@ public partial class V1beta1IdentityNotificationTopicSpec
     public V1beta1IdentityNotificationTopicSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IdentityNotificationTopicStatusAtProvider
 {
     /// <summary></summary>
@@ -666,6 +693,7 @@ public partial class V1beta1IdentityNotificationTopicStatusAtProvider
     public string? TopicArn { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1IdentityNotificationTopicStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -693,6 +721,7 @@ public partial class V1beta1IdentityNotificationTopicStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>IdentityNotificationTopicStatus defines the observed state of IdentityNotificationTopic.</summary>
 public partial class V1beta1IdentityNotificationTopicStatus
 {
     /// <summary></summary>
@@ -709,6 +738,7 @@ public partial class V1beta1IdentityNotificationTopicStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>IdentityNotificationTopic is the Schema for the IdentityNotificationTopics API. Setting AWS SES Identity Notification Topic</summary>
 public partial class V1beta1IdentityNotificationTopic : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IdentityNotificationTopicSpec>, IStatus<V1beta1IdentityNotificationTopicStatus>
 {
     public const string KubeApiVersion = "v1beta1";

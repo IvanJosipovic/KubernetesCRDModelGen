@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary>Defines the CPU utilization policy that allows the autoscaler to scale based on the average CPU utilization of a managed instance group.</summary>
 public partial class V1alpha1ComputeAutoscalerSpecAutoscalingPolicyCpuUtilization
 {
     /// <summary>Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:  - NONE (default). No predictive method is used. The autoscaler scales the group to meet current demand based on real-time metrics.  - OPTIMIZE_AVAILABILITY. Predictive autoscaling improves availability by monitoring daily and weekly load patterns and scaling out ahead of anticipated demand.</summary>
@@ -19,6 +20,7 @@ public partial class V1alpha1ComputeAutoscalerSpecAutoscalingPolicyCpuUtilizatio
     public double Target { get; set; }
 }
 
+/// <summary>Configuration parameters of autoscaling based on a load balancer.</summary>
 public partial class V1alpha1ComputeAutoscalerSpecAutoscalingPolicyLoadBalancingUtilization
 {
     /// <summary>Fraction of backend capacity utilization (set in HTTP(s) load balancing configuration) that autoscaler should maintain. Must be a positive float value. If not defined, the default is 0.8.</summary>
@@ -26,6 +28,7 @@ public partial class V1alpha1ComputeAutoscalerSpecAutoscalingPolicyLoadBalancing
     public double Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputeAutoscalerSpecAutoscalingPolicyMetric
 {
     /// <summary>A filter string to be used as the filter string for a Stackdriver Monitoring TimeSeries.list API call. This filter is used to select a specific TimeSeries for the purpose of autoscaling and to determine whether the metric is exporting per-instance or per-group data.  You can only use the AND operator for joining selectors. You can only use direct equality comparison operator (=) without any functions for each selector. You can specify the metric in both the filter string and in the metric field. However, if specified in both places, the metric must be identical.  The monitored resource type determines what kind of values are expected for the metric. If it is a gce_instance, the autoscaler expects the metric to include a separate TimeSeries for each instance in a group. In such a case, you cannot filter on resource labels.  If the resource type is any other value, the autoscaler expects this metric to contain values that apply to the entire autoscaled instance group and resource label filtering can be performed to point autoscaler at the correct TimeSeries to scale upon. This is called a per-group metric for the purpose of autoscaling.  If not specified, the type defaults to gce_instance.  You should provide a filter that is selective enough to pick just one TimeSeries for the autoscaled group or for each of the instances (if you are using gce_instance resource type). If multiple TimeSeries are returned upon the query execution, the autoscaler will sum their respective values to obtain its scaling value.</summary>
@@ -49,6 +52,7 @@ public partial class V1alpha1ComputeAutoscalerSpecAutoscalingPolicyMetric
     public string? Type { get; set; }
 }
 
+/// <summary>A nested object resource.</summary>
 public partial class V1alpha1ComputeAutoscalerSpecAutoscalingPolicyScaleDownControlMaxScaledDownReplicas
 {
     /// <summary>Specifies a fixed number of VM instances. This must be a positive integer.</summary>
@@ -60,6 +64,7 @@ public partial class V1alpha1ComputeAutoscalerSpecAutoscalingPolicyScaleDownCont
     public int? Percent { get; set; }
 }
 
+/// <summary>Defines scale down controls to reduce the risk of response latency and outages due to abrupt scale-in events.</summary>
 public partial class V1alpha1ComputeAutoscalerSpecAutoscalingPolicyScaleDownControl
 {
     /// <summary>A nested object resource.</summary>
@@ -71,6 +76,7 @@ public partial class V1alpha1ComputeAutoscalerSpecAutoscalingPolicyScaleDownCont
     public int? TimeWindowSec { get; set; }
 }
 
+/// <summary>A nested object resource.</summary>
 public partial class V1alpha1ComputeAutoscalerSpecAutoscalingPolicyScaleInControlMaxScaledInReplicas
 {
     /// <summary>Specifies a fixed number of VM instances. This must be a positive integer.</summary>
@@ -82,6 +88,7 @@ public partial class V1alpha1ComputeAutoscalerSpecAutoscalingPolicyScaleInContro
     public int? Percent { get; set; }
 }
 
+/// <summary>Defines scale in controls to reduce the risk of response latency and outages due to abrupt scale-in events.</summary>
 public partial class V1alpha1ComputeAutoscalerSpecAutoscalingPolicyScaleInControl
 {
     /// <summary>A nested object resource.</summary>
@@ -93,6 +100,7 @@ public partial class V1alpha1ComputeAutoscalerSpecAutoscalingPolicyScaleInContro
     public int? TimeWindowSec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputeAutoscalerSpecAutoscalingPolicyScalingSchedules
 {
     /// <summary>A description of a scaling schedule.</summary>
@@ -124,6 +132,7 @@ public partial class V1alpha1ComputeAutoscalerSpecAutoscalingPolicyScalingSchedu
     public string? TimeZone { get; set; }
 }
 
+/// <summary>The configuration parameters for the autoscaling algorithm. You can define one or more of the policies for an autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization.  If none of these are specified, the default will be to autoscale based on cpuUtilization to 0.6 or 60%.</summary>
 public partial class V1alpha1ComputeAutoscalerSpecAutoscalingPolicy
 {
     /// <summary>The number of seconds that the autoscaler should wait before it starts collecting information from a new instance. This prevents the autoscaler from collecting information when the instance is initializing, during which the collected usage would not be reliable. The default time autoscaler waits is 60 seconds.  Virtual machine initialization times might vary because of numerous factors. We recommend that you test how long an instance may take to initialize. To do this, create an instance and time the startup process.</summary>
@@ -167,6 +176,7 @@ public partial class V1alpha1ComputeAutoscalerSpecAutoscalingPolicy
     public IList<V1alpha1ComputeAutoscalerSpecAutoscalingPolicyScalingSchedules>? ScalingSchedules { get; set; }
 }
 
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1ComputeAutoscalerSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -182,6 +192,7 @@ public partial class V1alpha1ComputeAutoscalerSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputeAutoscalerSpecTargetRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeInstanceGroupManager` resource.</summary>
@@ -197,6 +208,7 @@ public partial class V1alpha1ComputeAutoscalerSpecTargetRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputeAutoscalerSpec
 {
     /// <summary>The configuration parameters for the autoscaling algorithm. You can define one or more of the policies for an autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization.  If none of these are specified, the default will be to autoscale based on cpuUtilization to 0.6 or 60%.</summary>
@@ -224,6 +236,7 @@ public partial class V1alpha1ComputeAutoscalerSpec
     public string Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputeAutoscalerStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -247,6 +260,7 @@ public partial class V1alpha1ComputeAutoscalerStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputeAutoscalerStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -267,6 +281,7 @@ public partial class V1alpha1ComputeAutoscalerStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1ComputeAutoscaler : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ComputeAutoscalerSpec>, IStatus<V1alpha1ComputeAutoscalerStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

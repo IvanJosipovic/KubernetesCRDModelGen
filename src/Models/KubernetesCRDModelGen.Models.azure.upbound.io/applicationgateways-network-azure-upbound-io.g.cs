@@ -18,6 +18,7 @@ public enum V1beta1ApplicationGatewaySpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>The contents of the Authentication Certificate which should be used.</summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderAuthenticationCertificateDataSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderAuthenticationCerti
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderAuthenticationCertificate
 {
     /// <summary>The contents of the Authentication Certificate which should be used.</summary>
@@ -44,6 +46,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderAuthenticationCerti
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderAutoscaleConfiguration
 {
     /// <summary>Maximum capacity for autoscaling. Accepted values are in the range 2 to 125.</summary>
@@ -55,6 +58,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderAutoscaleConfigurat
     public double? MinCapacity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderBackendAddressPool
 {
     /// <summary>A list of FQDN's which should be part of the Backend Address Pool.</summary>
@@ -70,6 +74,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderBackendAddressPool
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderBackendHttpSettingsAuthenticationCertificate
 {
     /// <summary>The Name of the URL Path Map.</summary>
@@ -77,6 +82,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderBackendHttpSettings
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderBackendHttpSettingsConnectionDraining
 {
     /// <summary>The number of seconds connection draining is active. Acceptable values are from 1 second to 3600 seconds.</summary>
@@ -88,6 +94,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderBackendHttpSettings
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderBackendHttpSettings
 {
     /// <summary>The name of the affinity cookie.</summary>
@@ -143,6 +150,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderBackendHttpSettings
     public IList<string>? TrustedRootCertificateNames { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderCustomErrorConfiguration
 {
     /// <summary>Error page URL of the application gateway customer error.</summary>
@@ -174,6 +182,7 @@ public enum V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigurationPubli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigurationPublicIpAddressIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +196,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigura
     public V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigurationPublicIpAddressIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a PublicIP in network to populate publicIpAddressId.</summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigurationPublicIpAddressIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -218,6 +228,7 @@ public enum V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigurationPubli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigurationPublicIpAddressIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -231,6 +242,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigura
     public V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigurationPublicIpAddressIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a PublicIP in network to populate publicIpAddressId.</summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigurationPublicIpAddressIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -266,6 +278,7 @@ public enum V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigurationSubne
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigurationSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +292,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigura
     public V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigurationSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigurationSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -310,6 +324,7 @@ public enum V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigurationSubne
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigurationSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -323,6 +338,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigura
     public V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigurationSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigurationSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -338,6 +354,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigura
     public V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderFrontendIpConfiguration
 {
     /// <summary>The name of the Frontend IP Configuration.</summary>
@@ -381,6 +398,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigura
     public V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigurationSubnetIdSelector? SubnetIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderFrontendPort
 {
     /// <summary>The name of the Frontend Port.</summary>
@@ -412,6 +430,7 @@ public enum V1beta1ApplicationGatewaySpecForProviderGatewayIpConfigurationSubnet
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderGatewayIpConfigurationSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -425,6 +444,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderGatewayIpConfigurat
     public V1beta1ApplicationGatewaySpecForProviderGatewayIpConfigurationSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderGatewayIpConfigurationSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -456,6 +476,7 @@ public enum V1beta1ApplicationGatewaySpecForProviderGatewayIpConfigurationSubnet
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderGatewayIpConfigurationSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -469,6 +490,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderGatewayIpConfigurat
     public V1beta1ApplicationGatewaySpecForProviderGatewayIpConfigurationSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderGatewayIpConfigurationSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -484,6 +506,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderGatewayIpConfigurat
     public V1beta1ApplicationGatewaySpecForProviderGatewayIpConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderGatewayIpConfiguration
 {
     /// <summary>The Name of this Gateway IP Configuration.</summary>
@@ -503,6 +526,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderGatewayIpConfigurat
     public V1beta1ApplicationGatewaySpecForProviderGatewayIpConfigurationSubnetIdSelector? SubnetIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderGlobal
 {
     /// <summary>Whether Application Gateway's Request buffer is enabled.</summary>
@@ -514,6 +538,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderGlobal
     public bool? ResponseBufferingEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderHttpListenerCustomErrorConfiguration
 {
     /// <summary>Error page URL of the application gateway customer error.</summary>
@@ -525,6 +550,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderHttpListenerCustomE
     public string? StatusCode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderHttpListener
 {
     /// <summary>One or more custom_error_configuration blocks as defined below.</summary>
@@ -572,6 +598,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderHttpListener
     public string? SslProfileName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Application Gateway.</summary>
@@ -603,6 +630,7 @@ public enum V1beta1ApplicationGatewaySpecForProviderPrivateLinkConfigurationIpCo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderPrivateLinkConfigurationIpConfigurationSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -616,6 +644,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderPrivateLinkConfigur
     public V1beta1ApplicationGatewaySpecForProviderPrivateLinkConfigurationIpConfigurationSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderPrivateLinkConfigurationIpConfigurationSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -647,6 +676,7 @@ public enum V1beta1ApplicationGatewaySpecForProviderPrivateLinkConfigurationIpCo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderPrivateLinkConfigurationIpConfigurationSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -660,6 +690,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderPrivateLinkConfigur
     public V1beta1ApplicationGatewaySpecForProviderPrivateLinkConfigurationIpConfigurationSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderPrivateLinkConfigurationIpConfigurationSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -675,6 +706,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderPrivateLinkConfigur
     public V1beta1ApplicationGatewaySpecForProviderPrivateLinkConfigurationIpConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderPrivateLinkConfigurationIpConfiguration
 {
     /// <summary>The Name of the URL Path Map.</summary>
@@ -706,6 +738,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderPrivateLinkConfigur
     public V1beta1ApplicationGatewaySpecForProviderPrivateLinkConfigurationIpConfigurationSubnetIdSelector? SubnetIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderPrivateLinkConfiguration
 {
     /// <summary>One or more ip_configuration blocks as defined below.</summary>
@@ -717,6 +750,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderPrivateLinkConfigur
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderProbeMatch
 {
     /// <summary>A snippet from the Response Body which must be present in the Response.</summary>
@@ -728,6 +762,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderProbeMatch
     public IList<string>? StatusCode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderProbe
 {
     /// <summary>The Hostname used for this Probe. If the Application Gateway is configured for a single site, by default the Host name should be specified as 127.0.0.1, unless otherwise configured in custom probe. Cannot be set if pick_host_name_from_backend_http_settings is set to true.</summary>
@@ -775,6 +810,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderProbe
     public double? UnhealthyThreshold { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderRedirectConfiguration
 {
     /// <summary>Whether to include the path in the redirected URL. Defaults to false</summary>
@@ -802,6 +838,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderRedirectConfigurati
     public string? TargetUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderRequestRoutingRule
 {
     /// <summary>The Name of the Backend Address Pool which should be used for this Routing Rule. Cannot be set if redirect_configuration_name is set.</summary>
@@ -861,6 +898,7 @@ public enum V1beta1ApplicationGatewaySpecForProviderResourceGroupNameRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -874,6 +912,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderResourceGroupNameRe
     public V1beta1ApplicationGatewaySpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -905,6 +944,7 @@ public enum V1beta1ApplicationGatewaySpecForProviderResourceGroupNameSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -918,6 +958,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderResourceGroupNameSe
     public V1beta1ApplicationGatewaySpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -933,6 +974,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderResourceGroupNameSe
     public V1beta1ApplicationGatewaySpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderRewriteRuleSetRewriteRuleCondition
 {
     /// <summary>Perform a case in-sensitive comparison. Defaults to false</summary>
@@ -952,6 +994,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderRewriteRuleSetRewri
     public string? Variable { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderRewriteRuleSetRewriteRuleRequestHeaderConfiguration
 {
     /// <summary>Header name of the header configuration.</summary>
@@ -963,6 +1006,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderRewriteRuleSetRewri
     public string? HeaderValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderRewriteRuleSetRewriteRuleResponseHeaderConfiguration
 {
     /// <summary>Header name of the header configuration.</summary>
@@ -974,6 +1018,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderRewriteRuleSetRewri
     public string? HeaderValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderRewriteRuleSetRewriteRuleUrl
 {
     /// <summary>The components used to rewrite the URL. Possible values are path_only and query_string_only to limit the rewrite to the URL Path or URL Query String only.</summary>
@@ -993,6 +1038,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderRewriteRuleSetRewri
     public bool? Reroute { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderRewriteRuleSetRewriteRule
 {
     /// <summary>One or more condition blocks as defined above.</summary>
@@ -1020,6 +1066,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderRewriteRuleSetRewri
     public IList<V1beta1ApplicationGatewaySpecForProviderRewriteRuleSetRewriteRuleUrl>? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderRewriteRuleSet
 {
     /// <summary>Unique name of the rewrite rule set block</summary>
@@ -1031,6 +1078,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderRewriteRuleSet
     public IList<V1beta1ApplicationGatewaySpecForProviderRewriteRuleSetRewriteRule>? RewriteRule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderSku
 {
     /// <summary>The Capacity of the SKU to use for this Application Gateway. When using a V1 SKU this value must be between 1 and 32, and 1 to 125 for a V2 SKU. This property is optional if autoscale_configuration is set.</summary>
@@ -1046,6 +1094,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderSku
     public string? Tier { get; set; }
 }
 
+/// <summary>The base64-encoded PFX certificate data. Required if key_vault_secret_id is not set.</summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderSslCertificateDataSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1061,6 +1110,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderSslCertificateDataS
     public string Namespace { get; set; }
 }
 
+/// <summary>Password for the pfx file specified in data. Required if data is set.</summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderSslCertificatePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1076,6 +1126,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderSslCertificatePassw
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderSslCertificate
 {
     /// <summary>The base64-encoded PFX certificate data. Required if key_vault_secret_id is not set.</summary>
@@ -1095,6 +1146,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderSslCertificate
     public V1beta1ApplicationGatewaySpecForProviderSslCertificatePasswordSecretRef? PasswordSecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderSslPolicy
 {
     /// <summary>A List of accepted cipher suites. Possible values are: TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_3DES_EDE_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA256 and TLS_RSA_WITH_AES_256_GCM_SHA384.</summary>
@@ -1118,6 +1170,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderSslPolicy
     public string? PolicyType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderSslProfileSslPolicy
 {
     /// <summary>A List of accepted cipher suites. Possible values are: TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_3DES_EDE_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA256 and TLS_RSA_WITH_AES_256_GCM_SHA384.</summary>
@@ -1141,6 +1194,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderSslProfileSslPolicy
     public string? PolicyType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderSslProfile
 {
     /// <summary>The name of the SSL Profile that is unique within this Application Gateway.</summary>
@@ -1164,6 +1218,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderSslProfile
     public string? VerifyClientCertificateRevocation { get; set; }
 }
 
+/// <summary>The base-64 encoded certificate.</summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderTrustedClientCertificateDataSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1179,6 +1234,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderTrustedClientCertif
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderTrustedClientCertificate
 {
     /// <summary>The base-64 encoded certificate.</summary>
@@ -1190,6 +1246,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderTrustedClientCertif
     public string? Name { get; set; }
 }
 
+/// <summary>The contents of the Trusted Root Certificate which should be used. Required if key_vault_secret_id is not set.</summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderTrustedRootCertificateDataSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -1205,6 +1262,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderTrustedRootCertific
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderTrustedRootCertificate
 {
     /// <summary>The contents of the Trusted Root Certificate which should be used. Required if key_vault_secret_id is not set.</summary>
@@ -1220,6 +1278,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderTrustedRootCertific
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderUrlPathMapPathRule
 {
     /// <summary>The Name of the Backend Address Pool which should be used for this Routing Rule. Cannot be set if redirect_configuration_name is set.</summary>
@@ -1251,6 +1310,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderUrlPathMapPathRule
     public string? RewriteRuleSetName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderUrlPathMap
 {
     /// <summary>The Name of the Default Backend Address Pool which should be used for this URL Path Map. Cannot be set if default_redirect_configuration_name is set.</summary>
@@ -1278,6 +1338,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderUrlPathMap
     public IList<V1beta1ApplicationGatewaySpecForProviderUrlPathMapPathRule>? PathRule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderWafConfigurationDisabledRuleGroup
 {
     /// <summary>The rule group where specific rules should be disabled. Possible values are BadBots, crs_20_protocol_violations, crs_21_protocol_anomalies, crs_23_request_limits, crs_30_http_policy, crs_35_bad_robots, crs_40_generic_attacks, crs_41_sql_injection_attacks, crs_41_xss_attacks, crs_42_tight_security, crs_45_trojans, crs_49_inbound_blocking, General, GoodBots, KnownBadBots, Known-CVEs, REQUEST-911-METHOD-ENFORCEMENT, REQUEST-913-SCANNER-DETECTION, REQUEST-920-PROTOCOL-ENFORCEMENT, REQUEST-921-PROTOCOL-ATTACK, REQUEST-930-APPLICATION-ATTACK-LFI, REQUEST-931-APPLICATION-ATTACK-RFI, REQUEST-932-APPLICATION-ATTACK-RCE, REQUEST-933-APPLICATION-ATTACK-PHP, REQUEST-941-APPLICATION-ATTACK-XSS, REQUEST-942-APPLICATION-ATTACK-SQLI, REQUEST-943-APPLICATION-ATTACK-SESSION-FIXATION, REQUEST-944-APPLICATION-ATTACK-JAVA, UnknownBots, METHOD-ENFORCEMENT, PROTOCOL-ENFORCEMENT, PROTOCOL-ATTACK, LFI, RFI, RCE, PHP, NODEJS, XSS, SQLI, FIX, JAVA, MS-ThreatIntel-WebShells, MS-ThreatIntel-AppSec, MS-ThreatIntel-SQLI and MS-ThreatIntel-CVEs.</summary>
@@ -1289,6 +1350,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderWafConfigurationDis
     public IList<double>? Rules { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderWafConfigurationExclusion
 {
     /// <summary>Match variable of the exclusion rule to exclude header, cookie or GET arguments. Possible values are RequestArgKeys, RequestArgNames, RequestArgValues, RequestCookieKeys, RequestCookieNames, RequestCookieValues, RequestHeaderKeys, RequestHeaderNames and RequestHeaderValues</summary>
@@ -1304,6 +1366,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderWafConfigurationExc
     public string? SelectorMatchOperator { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProviderWafConfiguration
 {
     /// <summary>One or more disabled_rule_group blocks as defined below.</summary>
@@ -1343,6 +1406,7 @@ public partial class V1beta1ApplicationGatewaySpecForProviderWafConfiguration
     public string? RuleSetVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecForProvider
 {
     /// <summary>One or more authentication_certificate blocks as defined below.</summary>
@@ -1482,6 +1546,7 @@ public partial class V1beta1ApplicationGatewaySpecForProvider
     public IList<string>? Zones { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderAuthenticationCertificate
 {
     /// <summary>The Name of the Authentication Certificate to use.</summary>
@@ -1489,6 +1554,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderAuthenticationCert
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderAutoscaleConfiguration
 {
     /// <summary>Maximum capacity for autoscaling. Accepted values are in the range 2 to 125.</summary>
@@ -1500,6 +1566,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderAutoscaleConfigura
     public double? MinCapacity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderBackendAddressPool
 {
     /// <summary>A list of FQDN's which should be part of the Backend Address Pool.</summary>
@@ -1515,6 +1582,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderBackendAddressPool
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderBackendHttpSettingsAuthenticationCertificate
 {
     /// <summary>The Name of the URL Path Map.</summary>
@@ -1522,6 +1590,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderBackendHttpSetting
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderBackendHttpSettingsConnectionDraining
 {
     /// <summary>The number of seconds connection draining is active. Acceptable values are from 1 second to 3600 seconds.</summary>
@@ -1533,6 +1602,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderBackendHttpSetting
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderBackendHttpSettings
 {
     /// <summary>The name of the affinity cookie.</summary>
@@ -1588,6 +1658,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderBackendHttpSetting
     public IList<string>? TrustedRootCertificateNames { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderCustomErrorConfiguration
 {
     /// <summary>Error page URL of the application gateway customer error.</summary>
@@ -1619,6 +1690,7 @@ public enum V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigurationPubl
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigurationPublicIpAddressIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1632,6 +1704,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigur
     public V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigurationPublicIpAddressIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a PublicIP in network to populate publicIpAddressId.</summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigurationPublicIpAddressIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1663,6 +1736,7 @@ public enum V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigurationPubl
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigurationPublicIpAddressIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1676,6 +1750,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigur
     public V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigurationPublicIpAddressIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a PublicIP in network to populate publicIpAddressId.</summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigurationPublicIpAddressIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1711,6 +1786,7 @@ public enum V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigurationSubn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigurationSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1724,6 +1800,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigur
     public V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigurationSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigurationSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1755,6 +1832,7 @@ public enum V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigurationSubn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigurationSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1768,6 +1846,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigur
     public V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigurationSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigurationSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1783,6 +1862,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigur
     public V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfiguration
 {
     /// <summary>The name of the Frontend IP Configuration.</summary>
@@ -1826,6 +1906,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigur
     public V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigurationSubnetIdSelector? SubnetIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderFrontendPort
 {
     /// <summary>The name of the Frontend Port.</summary>
@@ -1857,6 +1938,7 @@ public enum V1beta1ApplicationGatewaySpecInitProviderGatewayIpConfigurationSubne
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderGatewayIpConfigurationSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1870,6 +1952,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderGatewayIpConfigura
     public V1beta1ApplicationGatewaySpecInitProviderGatewayIpConfigurationSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderGatewayIpConfigurationSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1901,6 +1984,7 @@ public enum V1beta1ApplicationGatewaySpecInitProviderGatewayIpConfigurationSubne
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderGatewayIpConfigurationSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1914,6 +1998,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderGatewayIpConfigura
     public V1beta1ApplicationGatewaySpecInitProviderGatewayIpConfigurationSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderGatewayIpConfigurationSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1929,6 +2014,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderGatewayIpConfigura
     public V1beta1ApplicationGatewaySpecInitProviderGatewayIpConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderGatewayIpConfiguration
 {
     /// <summary>The Name of this Gateway IP Configuration.</summary>
@@ -1948,6 +2034,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderGatewayIpConfigura
     public V1beta1ApplicationGatewaySpecInitProviderGatewayIpConfigurationSubnetIdSelector? SubnetIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderGlobal
 {
     /// <summary>Whether Application Gateway's Request buffer is enabled.</summary>
@@ -1959,6 +2046,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderGlobal
     public bool? ResponseBufferingEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderHttpListenerCustomErrorConfiguration
 {
     /// <summary>Error page URL of the application gateway customer error.</summary>
@@ -1970,6 +2058,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderHttpListenerCustom
     public string? StatusCode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderHttpListener
 {
     /// <summary>One or more custom_error_configuration blocks as defined below.</summary>
@@ -2017,6 +2106,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderHttpListener
     public string? SslProfileName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Application Gateway.</summary>
@@ -2048,6 +2138,7 @@ public enum V1beta1ApplicationGatewaySpecInitProviderPrivateLinkConfigurationIpC
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderPrivateLinkConfigurationIpConfigurationSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2061,6 +2152,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderPrivateLinkConfigu
     public V1beta1ApplicationGatewaySpecInitProviderPrivateLinkConfigurationIpConfigurationSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderPrivateLinkConfigurationIpConfigurationSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2092,6 +2184,7 @@ public enum V1beta1ApplicationGatewaySpecInitProviderPrivateLinkConfigurationIpC
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderPrivateLinkConfigurationIpConfigurationSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2105,6 +2198,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderPrivateLinkConfigu
     public V1beta1ApplicationGatewaySpecInitProviderPrivateLinkConfigurationIpConfigurationSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderPrivateLinkConfigurationIpConfigurationSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2120,6 +2214,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderPrivateLinkConfigu
     public V1beta1ApplicationGatewaySpecInitProviderPrivateLinkConfigurationIpConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderPrivateLinkConfigurationIpConfiguration
 {
     /// <summary>The Name of the URL Path Map.</summary>
@@ -2151,6 +2246,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderPrivateLinkConfigu
     public V1beta1ApplicationGatewaySpecInitProviderPrivateLinkConfigurationIpConfigurationSubnetIdSelector? SubnetIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderPrivateLinkConfiguration
 {
     /// <summary>One or more ip_configuration blocks as defined below.</summary>
@@ -2162,6 +2258,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderPrivateLinkConfigu
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderProbeMatch
 {
     /// <summary>A snippet from the Response Body which must be present in the Response.</summary>
@@ -2173,6 +2270,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderProbeMatch
     public IList<string>? StatusCode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderProbe
 {
     /// <summary>The Hostname used for this Probe. If the Application Gateway is configured for a single site, by default the Host name should be specified as 127.0.0.1, unless otherwise configured in custom probe. Cannot be set if pick_host_name_from_backend_http_settings is set to true.</summary>
@@ -2220,6 +2318,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderProbe
     public double? UnhealthyThreshold { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderRedirectConfiguration
 {
     /// <summary>Whether to include the path in the redirected URL. Defaults to false</summary>
@@ -2247,6 +2346,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderRedirectConfigurat
     public string? TargetUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderRequestRoutingRule
 {
     /// <summary>The Name of the Backend Address Pool which should be used for this Routing Rule. Cannot be set if redirect_configuration_name is set.</summary>
@@ -2286,6 +2386,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderRequestRoutingRule
     public string? UrlPathMapName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderRewriteRuleSetRewriteRuleCondition
 {
     /// <summary>Perform a case in-sensitive comparison. Defaults to false</summary>
@@ -2305,6 +2406,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderRewriteRuleSetRewr
     public string? Variable { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderRewriteRuleSetRewriteRuleRequestHeaderConfiguration
 {
     /// <summary>Header name of the header configuration.</summary>
@@ -2316,6 +2418,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderRewriteRuleSetRewr
     public string? HeaderValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderRewriteRuleSetRewriteRuleResponseHeaderConfiguration
 {
     /// <summary>Header name of the header configuration.</summary>
@@ -2327,6 +2430,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderRewriteRuleSetRewr
     public string? HeaderValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderRewriteRuleSetRewriteRuleUrl
 {
     /// <summary>The components used to rewrite the URL. Possible values are path_only and query_string_only to limit the rewrite to the URL Path or URL Query String only.</summary>
@@ -2346,6 +2450,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderRewriteRuleSetRewr
     public bool? Reroute { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderRewriteRuleSetRewriteRule
 {
     /// <summary>One or more condition blocks as defined above.</summary>
@@ -2373,6 +2478,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderRewriteRuleSetRewr
     public IList<V1beta1ApplicationGatewaySpecInitProviderRewriteRuleSetRewriteRuleUrl>? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderRewriteRuleSet
 {
     /// <summary>Unique name of the rewrite rule set block</summary>
@@ -2384,6 +2490,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderRewriteRuleSet
     public IList<V1beta1ApplicationGatewaySpecInitProviderRewriteRuleSetRewriteRule>? RewriteRule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderSku
 {
     /// <summary>The Capacity of the SKU to use for this Application Gateway. When using a V1 SKU this value must be between 1 and 32, and 1 to 125 for a V2 SKU. This property is optional if autoscale_configuration is set.</summary>
@@ -2399,6 +2506,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderSku
     public string? Tier { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderSslCertificate
 {
     /// <summary>The Secret ID of (base-64 encoded unencrypted pfx) the Secret or Certificate object stored in Azure KeyVault. You need to enable soft delete for Key Vault to use this feature. Required if data is not set.</summary>
@@ -2410,6 +2518,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderSslCertificate
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderSslPolicy
 {
     /// <summary>A List of accepted cipher suites. Possible values are: TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_3DES_EDE_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA256 and TLS_RSA_WITH_AES_256_GCM_SHA384.</summary>
@@ -2433,6 +2542,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderSslPolicy
     public string? PolicyType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderSslProfileSslPolicy
 {
     /// <summary>A List of accepted cipher suites. Possible values are: TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_3DES_EDE_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA256 and TLS_RSA_WITH_AES_256_GCM_SHA384.</summary>
@@ -2456,6 +2566,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderSslProfileSslPolic
     public string? PolicyType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderSslProfile
 {
     /// <summary>The name of the SSL Profile that is unique within this Application Gateway.</summary>
@@ -2479,6 +2590,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderSslProfile
     public string? VerifyClientCertificateRevocation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderTrustedClientCertificate
 {
     /// <summary>The name of the Trusted Client Certificate that is unique within this Application Gateway.</summary>
@@ -2486,6 +2598,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderTrustedClientCerti
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderTrustedRootCertificate
 {
     /// <summary>The Secret ID of (base-64 encoded unencrypted pfx) Secret or Certificate object stored in Azure KeyVault. You need to enable soft delete for the Key Vault to use this feature. Required if data is not set.</summary>
@@ -2497,6 +2610,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderTrustedRootCertifi
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderUrlPathMapPathRule
 {
     /// <summary>The Name of the Backend Address Pool which should be used for this Routing Rule. Cannot be set if redirect_configuration_name is set.</summary>
@@ -2528,6 +2642,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderUrlPathMapPathRule
     public string? RewriteRuleSetName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderUrlPathMap
 {
     /// <summary>The Name of the Default Backend Address Pool which should be used for this URL Path Map. Cannot be set if default_redirect_configuration_name is set.</summary>
@@ -2555,6 +2670,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderUrlPathMap
     public IList<V1beta1ApplicationGatewaySpecInitProviderUrlPathMapPathRule>? PathRule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderWafConfigurationDisabledRuleGroup
 {
     /// <summary>The rule group where specific rules should be disabled. Possible values are BadBots, crs_20_protocol_violations, crs_21_protocol_anomalies, crs_23_request_limits, crs_30_http_policy, crs_35_bad_robots, crs_40_generic_attacks, crs_41_sql_injection_attacks, crs_41_xss_attacks, crs_42_tight_security, crs_45_trojans, crs_49_inbound_blocking, General, GoodBots, KnownBadBots, Known-CVEs, REQUEST-911-METHOD-ENFORCEMENT, REQUEST-913-SCANNER-DETECTION, REQUEST-920-PROTOCOL-ENFORCEMENT, REQUEST-921-PROTOCOL-ATTACK, REQUEST-930-APPLICATION-ATTACK-LFI, REQUEST-931-APPLICATION-ATTACK-RFI, REQUEST-932-APPLICATION-ATTACK-RCE, REQUEST-933-APPLICATION-ATTACK-PHP, REQUEST-941-APPLICATION-ATTACK-XSS, REQUEST-942-APPLICATION-ATTACK-SQLI, REQUEST-943-APPLICATION-ATTACK-SESSION-FIXATION, REQUEST-944-APPLICATION-ATTACK-JAVA, UnknownBots, METHOD-ENFORCEMENT, PROTOCOL-ENFORCEMENT, PROTOCOL-ATTACK, LFI, RFI, RCE, PHP, NODEJS, XSS, SQLI, FIX, JAVA, MS-ThreatIntel-WebShells, MS-ThreatIntel-AppSec, MS-ThreatIntel-SQLI and MS-ThreatIntel-CVEs.</summary>
@@ -2566,6 +2682,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderWafConfigurationDi
     public IList<double>? Rules { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderWafConfigurationExclusion
 {
     /// <summary>Match variable of the exclusion rule to exclude header, cookie or GET arguments. Possible values are RequestArgKeys, RequestArgNames, RequestArgValues, RequestCookieKeys, RequestCookieNames, RequestCookieValues, RequestHeaderKeys, RequestHeaderNames and RequestHeaderValues</summary>
@@ -2581,6 +2698,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderWafConfigurationEx
     public string? SelectorMatchOperator { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewaySpecInitProviderWafConfiguration
 {
     /// <summary>One or more disabled_rule_group blocks as defined below.</summary>
@@ -2620,6 +2738,7 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderWafConfiguration
     public string? RuleSetVersion { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ApplicationGatewaySpecInitProvider
 {
     /// <summary>One or more authentication_certificate blocks as defined below.</summary>
@@ -2789,6 +2908,7 @@ public enum V1beta1ApplicationGatewaySpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationGatewaySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2802,6 +2922,7 @@ public partial class V1beta1ApplicationGatewaySpecProviderConfigRefPolicy
     public V1beta1ApplicationGatewaySpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ApplicationGatewaySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2833,6 +2954,7 @@ public enum V1beta1ApplicationGatewaySpecPublishConnectionDetailsToConfigRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ApplicationGatewaySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2846,6 +2968,7 @@ public partial class V1beta1ApplicationGatewaySpecPublishConnectionDetailsToConf
     public V1beta1ApplicationGatewaySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ApplicationGatewaySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2857,6 +2980,7 @@ public partial class V1beta1ApplicationGatewaySpecPublishConnectionDetailsToConf
     public V1beta1ApplicationGatewaySpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ApplicationGatewaySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -2872,6 +2996,7 @@ public partial class V1beta1ApplicationGatewaySpecPublishConnectionDetailsToMeta
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ApplicationGatewaySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -2887,6 +3012,7 @@ public partial class V1beta1ApplicationGatewaySpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ApplicationGatewaySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -2898,6 +3024,7 @@ public partial class V1beta1ApplicationGatewaySpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ApplicationGatewaySpec defines the desired state of ApplicationGateway</summary>
 public partial class V1beta1ApplicationGatewaySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -2930,6 +3057,7 @@ public partial class V1beta1ApplicationGatewaySpec
     public V1beta1ApplicationGatewaySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderAuthenticationCertificate
 {
     /// <summary>The ID of the Authentication Certificate.</summary>
@@ -2941,6 +3069,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderAuthenticationCert
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderAutoscaleConfiguration
 {
     /// <summary>Maximum capacity for autoscaling. Accepted values are in the range 2 to 125.</summary>
@@ -2952,6 +3081,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderAutoscaleConfigura
     public double? MinCapacity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderBackendAddressPool
 {
     /// <summary>A list of FQDN's which should be part of the Backend Address Pool.</summary>
@@ -2971,6 +3101,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderBackendAddressPool
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderBackendHttpSettingsAuthenticationCertificate
 {
     /// <summary>The ID of the URL Path Map.</summary>
@@ -2982,6 +3113,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderBackendHttpSetting
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderBackendHttpSettingsConnectionDraining
 {
     /// <summary>The number of seconds connection draining is active. Acceptable values are from 1 second to 3600 seconds.</summary>
@@ -2993,6 +3125,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderBackendHttpSetting
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderBackendHttpSettings
 {
     /// <summary>The name of the affinity cookie.</summary>
@@ -3056,6 +3189,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderBackendHttpSetting
     public IList<string>? TrustedRootCertificateNames { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderCustomErrorConfiguration
 {
     /// <summary>Error page URL of the application gateway customer error.</summary>
@@ -3071,6 +3205,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderCustomErrorConfigu
     public string? StatusCode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderFrontendIpConfiguration
 {
     /// <summary>The ID of the Frontend IP Configuration.</summary>
@@ -3106,6 +3241,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderFrontendIpConfigur
     public string? SubnetId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderFrontendPort
 {
     /// <summary>The ID of the Frontend Port.</summary>
@@ -3121,6 +3257,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderFrontendPort
     public double? Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderGatewayIpConfiguration
 {
     /// <summary>The ID of the Gateway IP Configuration.</summary>
@@ -3136,6 +3273,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderGatewayIpConfigura
     public string? SubnetId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderGlobal
 {
     /// <summary>Whether Application Gateway's Request buffer is enabled.</summary>
@@ -3147,6 +3285,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderGlobal
     public bool? ResponseBufferingEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderHttpListenerCustomErrorConfiguration
 {
     /// <summary>Error page URL of the application gateway customer error.</summary>
@@ -3162,6 +3301,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderHttpListenerCustom
     public string? StatusCode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderHttpListener
 {
     /// <summary>One or more custom_error_configuration blocks as defined below.</summary>
@@ -3229,6 +3369,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderHttpListener
     public string? SslProfileName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Application Gateway.</summary>
@@ -3240,6 +3381,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderPrivateEndpointConnection
 {
     /// <summary>The ID of the private endpoint connection.</summary>
@@ -3251,6 +3393,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderPrivateEndpointCon
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderPrivateLinkConfigurationIpConfiguration
 {
     /// <summary>The Name of the URL Path Map.</summary>
@@ -3274,6 +3417,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderPrivateLinkConfigu
     public string? SubnetId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderPrivateLinkConfiguration
 {
     /// <summary>The ID of the private link configuration.</summary>
@@ -3289,6 +3433,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderPrivateLinkConfigu
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderProbeMatch
 {
     /// <summary>A snippet from the Response Body which must be present in the Response.</summary>
@@ -3300,6 +3445,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderProbeMatch
     public IList<string>? StatusCode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderProbe
 {
     /// <summary>The Hostname used for this Probe. If the Application Gateway is configured for a single site, by default the Host name should be specified as 127.0.0.1, unless otherwise configured in custom probe. Cannot be set if pick_host_name_from_backend_http_settings is set to true.</summary>
@@ -3351,6 +3497,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderProbe
     public double? UnhealthyThreshold { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderRedirectConfiguration
 {
     /// <summary>The ID of the Redirect Configuration.</summary>
@@ -3386,6 +3533,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderRedirectConfigurat
     public string? TargetUrl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderRequestRoutingRule
 {
     /// <summary>The ID of the associated Backend Address Pool.</summary>
@@ -3453,6 +3601,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderRequestRoutingRule
     public string? UrlPathMapName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderRewriteRuleSetRewriteRuleCondition
 {
     /// <summary>Perform a case in-sensitive comparison. Defaults to false</summary>
@@ -3472,6 +3621,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderRewriteRuleSetRewr
     public string? Variable { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderRewriteRuleSetRewriteRuleRequestHeaderConfiguration
 {
     /// <summary>Header name of the header configuration.</summary>
@@ -3483,6 +3633,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderRewriteRuleSetRewr
     public string? HeaderValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderRewriteRuleSetRewriteRuleResponseHeaderConfiguration
 {
     /// <summary>Header name of the header configuration.</summary>
@@ -3494,6 +3645,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderRewriteRuleSetRewr
     public string? HeaderValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderRewriteRuleSetRewriteRuleUrl
 {
     /// <summary>The components used to rewrite the URL. Possible values are path_only and query_string_only to limit the rewrite to the URL Path or URL Query String only.</summary>
@@ -3513,6 +3665,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderRewriteRuleSetRewr
     public bool? Reroute { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderRewriteRuleSetRewriteRule
 {
     /// <summary>One or more condition blocks as defined above.</summary>
@@ -3540,6 +3693,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderRewriteRuleSetRewr
     public IList<V1beta1ApplicationGatewayStatusAtProviderRewriteRuleSetRewriteRuleUrl>? Url { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderRewriteRuleSet
 {
     /// <summary>The ID of the Rewrite Rule Set</summary>
@@ -3555,6 +3709,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderRewriteRuleSet
     public IList<V1beta1ApplicationGatewayStatusAtProviderRewriteRuleSetRewriteRule>? RewriteRule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderSku
 {
     /// <summary>The Capacity of the SKU to use for this Application Gateway. When using a V1 SKU this value must be between 1 and 32, and 1 to 125 for a V2 SKU. This property is optional if autoscale_configuration is set.</summary>
@@ -3570,6 +3725,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderSku
     public string? Tier { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderSslCertificate
 {
     /// <summary>The ID of the SSL Certificate.</summary>
@@ -3589,6 +3745,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderSslCertificate
     public string? PublicCertData { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderSslPolicy
 {
     /// <summary>A List of accepted cipher suites. Possible values are: TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_3DES_EDE_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA256 and TLS_RSA_WITH_AES_256_GCM_SHA384.</summary>
@@ -3612,6 +3769,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderSslPolicy
     public string? PolicyType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderSslProfileSslPolicy
 {
     /// <summary>A List of accepted cipher suites. Possible values are: TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_3DES_EDE_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA256 and TLS_RSA_WITH_AES_256_GCM_SHA384.</summary>
@@ -3635,6 +3793,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderSslProfileSslPolic
     public string? PolicyType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderSslProfile
 {
     /// <summary>The ID of the URL Path Map.</summary>
@@ -3662,6 +3821,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderSslProfile
     public string? VerifyClientCertificateRevocation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderTrustedClientCertificate
 {
     /// <summary>The ID of the URL Path Map.</summary>
@@ -3673,6 +3833,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderTrustedClientCerti
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderTrustedRootCertificate
 {
     /// <summary>The ID of the URL Path Map.</summary>
@@ -3688,6 +3849,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderTrustedRootCertifi
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderUrlPathMapPathRule
 {
     /// <summary>The ID of the associated Backend Address Pool.</summary>
@@ -3739,6 +3901,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderUrlPathMapPathRule
     public string? RewriteRuleSetName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderUrlPathMap
 {
     /// <summary>The ID of the Default Backend Address Pool.</summary>
@@ -3786,6 +3949,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderUrlPathMap
     public IList<V1beta1ApplicationGatewayStatusAtProviderUrlPathMapPathRule>? PathRule { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderWafConfigurationDisabledRuleGroup
 {
     /// <summary>The rule group where specific rules should be disabled. Possible values are BadBots, crs_20_protocol_violations, crs_21_protocol_anomalies, crs_23_request_limits, crs_30_http_policy, crs_35_bad_robots, crs_40_generic_attacks, crs_41_sql_injection_attacks, crs_41_xss_attacks, crs_42_tight_security, crs_45_trojans, crs_49_inbound_blocking, General, GoodBots, KnownBadBots, Known-CVEs, REQUEST-911-METHOD-ENFORCEMENT, REQUEST-913-SCANNER-DETECTION, REQUEST-920-PROTOCOL-ENFORCEMENT, REQUEST-921-PROTOCOL-ATTACK, REQUEST-930-APPLICATION-ATTACK-LFI, REQUEST-931-APPLICATION-ATTACK-RFI, REQUEST-932-APPLICATION-ATTACK-RCE, REQUEST-933-APPLICATION-ATTACK-PHP, REQUEST-941-APPLICATION-ATTACK-XSS, REQUEST-942-APPLICATION-ATTACK-SQLI, REQUEST-943-APPLICATION-ATTACK-SESSION-FIXATION, REQUEST-944-APPLICATION-ATTACK-JAVA, UnknownBots, METHOD-ENFORCEMENT, PROTOCOL-ENFORCEMENT, PROTOCOL-ATTACK, LFI, RFI, RCE, PHP, NODEJS, XSS, SQLI, FIX, JAVA, MS-ThreatIntel-WebShells, MS-ThreatIntel-AppSec, MS-ThreatIntel-SQLI and MS-ThreatIntel-CVEs.</summary>
@@ -3797,6 +3961,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderWafConfigurationDi
     public IList<double>? Rules { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderWafConfigurationExclusion
 {
     /// <summary>Match variable of the exclusion rule to exclude header, cookie or GET arguments. Possible values are RequestArgKeys, RequestArgNames, RequestArgValues, RequestCookieKeys, RequestCookieNames, RequestCookieValues, RequestHeaderKeys, RequestHeaderNames and RequestHeaderValues</summary>
@@ -3812,6 +3977,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderWafConfigurationEx
     public string? SelectorMatchOperator { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProviderWafConfiguration
 {
     /// <summary>One or more disabled_rule_group blocks as defined below.</summary>
@@ -3851,6 +4017,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderWafConfiguration
     public string? RuleSetVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ApplicationGatewayStatusAtProvider
 {
     /// <summary>One or more authentication_certificate blocks as defined below.</summary>
@@ -3990,6 +4157,7 @@ public partial class V1beta1ApplicationGatewayStatusAtProvider
     public IList<string>? Zones { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ApplicationGatewayStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -4017,6 +4185,7 @@ public partial class V1beta1ApplicationGatewayStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ApplicationGatewayStatus defines the observed state of ApplicationGateway.</summary>
 public partial class V1beta1ApplicationGatewayStatus
 {
     /// <summary></summary>
@@ -4033,6 +4202,7 @@ public partial class V1beta1ApplicationGatewayStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ApplicationGateway is the Schema for the ApplicationGateways API. Manages an Application Gateway.</summary>
 public partial class V1beta1ApplicationGateway : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ApplicationGatewaySpec>, IStatus<V1beta1ApplicationGatewayStatus>
 {
     public const string KubeApiVersion = "v1beta1";

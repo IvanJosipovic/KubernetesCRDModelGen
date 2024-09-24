@@ -38,6 +38,7 @@ public enum V1beta1ProxySpecForProviderAuthSecretArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ProxySpecForProviderAuthSecretArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ProxySpecForProviderAuthSecretArnRefPolicy
     public V1beta1ProxySpecForProviderAuthSecretArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Secret in secretsmanager to populate secretArn.</summary>
 public partial class V1beta1ProxySpecForProviderAuthSecretArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ProxySpecForProviderAuthSecretArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ProxySpecForProviderAuthSecretArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ProxySpecForProviderAuthSecretArnSelectorPolicy
     public V1beta1ProxySpecForProviderAuthSecretArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Secret in secretsmanager to populate secretArn.</summary>
 public partial class V1beta1ProxySpecForProviderAuthSecretArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1ProxySpecForProviderAuthSecretArnSelector
     public V1beta1ProxySpecForProviderAuthSecretArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ProxySpecForProviderAuth
 {
     /// <summary>The type of authentication that the proxy uses for connections from the proxy to the underlying database. One of SECRETS.</summary>
@@ -165,6 +170,7 @@ public enum V1beta1ProxySpecForProviderRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ProxySpecForProviderRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -178,6 +184,7 @@ public partial class V1beta1ProxySpecForProviderRoleArnRefPolicy
     public V1beta1ProxySpecForProviderRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ProxySpecForProviderRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -209,6 +216,7 @@ public enum V1beta1ProxySpecForProviderRoleArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ProxySpecForProviderRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -222,6 +230,7 @@ public partial class V1beta1ProxySpecForProviderRoleArnSelectorPolicy
     public V1beta1ProxySpecForProviderRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ProxySpecForProviderRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -257,6 +266,7 @@ public enum V1beta1ProxySpecForProviderVpcSecurityGroupIdRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ProxySpecForProviderVpcSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -270,6 +280,7 @@ public partial class V1beta1ProxySpecForProviderVpcSecurityGroupIdRefsPolicy
     public V1beta1ProxySpecForProviderVpcSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1ProxySpecForProviderVpcSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -301,6 +312,7 @@ public enum V1beta1ProxySpecForProviderVpcSecurityGroupIdSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ProxySpecForProviderVpcSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -314,6 +326,7 @@ public partial class V1beta1ProxySpecForProviderVpcSecurityGroupIdSelectorPolicy
     public V1beta1ProxySpecForProviderVpcSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate vpcSecurityGroupIds.</summary>
 public partial class V1beta1ProxySpecForProviderVpcSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -329,6 +342,7 @@ public partial class V1beta1ProxySpecForProviderVpcSecurityGroupIdSelector
     public V1beta1ProxySpecForProviderVpcSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ProxySpecForProvider
 {
     /// <summary>Configuration block(s) with authorization mechanisms to connect to the associated instances or clusters. Described below.</summary>
@@ -408,6 +422,7 @@ public enum V1beta1ProxySpecInitProviderAuthSecretArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ProxySpecInitProviderAuthSecretArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -421,6 +436,7 @@ public partial class V1beta1ProxySpecInitProviderAuthSecretArnRefPolicy
     public V1beta1ProxySpecInitProviderAuthSecretArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Secret in secretsmanager to populate secretArn.</summary>
 public partial class V1beta1ProxySpecInitProviderAuthSecretArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -452,6 +468,7 @@ public enum V1beta1ProxySpecInitProviderAuthSecretArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ProxySpecInitProviderAuthSecretArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -465,6 +482,7 @@ public partial class V1beta1ProxySpecInitProviderAuthSecretArnSelectorPolicy
     public V1beta1ProxySpecInitProviderAuthSecretArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Secret in secretsmanager to populate secretArn.</summary>
 public partial class V1beta1ProxySpecInitProviderAuthSecretArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -480,6 +498,7 @@ public partial class V1beta1ProxySpecInitProviderAuthSecretArnSelector
     public V1beta1ProxySpecInitProviderAuthSecretArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ProxySpecInitProviderAuth
 {
     /// <summary>The type of authentication that the proxy uses for connections from the proxy to the underlying database. One of SECRETS.</summary>
@@ -535,6 +554,7 @@ public enum V1beta1ProxySpecInitProviderRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ProxySpecInitProviderRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -548,6 +568,7 @@ public partial class V1beta1ProxySpecInitProviderRoleArnRefPolicy
     public V1beta1ProxySpecInitProviderRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ProxySpecInitProviderRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -579,6 +600,7 @@ public enum V1beta1ProxySpecInitProviderRoleArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ProxySpecInitProviderRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -592,6 +614,7 @@ public partial class V1beta1ProxySpecInitProviderRoleArnSelectorPolicy
     public V1beta1ProxySpecInitProviderRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ProxySpecInitProviderRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -627,6 +650,7 @@ public enum V1beta1ProxySpecInitProviderVpcSecurityGroupIdRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ProxySpecInitProviderVpcSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -640,6 +664,7 @@ public partial class V1beta1ProxySpecInitProviderVpcSecurityGroupIdRefsPolicy
     public V1beta1ProxySpecInitProviderVpcSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1ProxySpecInitProviderVpcSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -671,6 +696,7 @@ public enum V1beta1ProxySpecInitProviderVpcSecurityGroupIdSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ProxySpecInitProviderVpcSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -684,6 +710,7 @@ public partial class V1beta1ProxySpecInitProviderVpcSecurityGroupIdSelectorPolic
     public V1beta1ProxySpecInitProviderVpcSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate vpcSecurityGroupIds.</summary>
 public partial class V1beta1ProxySpecInitProviderVpcSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -699,6 +726,7 @@ public partial class V1beta1ProxySpecInitProviderVpcSecurityGroupIdSelector
     public V1beta1ProxySpecInitProviderVpcSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ProxySpecInitProvider
 {
     /// <summary>Configuration block(s) with authorization mechanisms to connect to the associated instances or clusters. Described below.</summary>
@@ -796,6 +824,7 @@ public enum V1beta1ProxySpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ProxySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -809,6 +838,7 @@ public partial class V1beta1ProxySpecProviderConfigRefPolicy
     public V1beta1ProxySpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ProxySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -840,6 +870,7 @@ public enum V1beta1ProxySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ProxySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -853,6 +884,7 @@ public partial class V1beta1ProxySpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1ProxySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ProxySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -864,6 +896,7 @@ public partial class V1beta1ProxySpecPublishConnectionDetailsToConfigRef
     public V1beta1ProxySpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ProxySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -879,6 +912,7 @@ public partial class V1beta1ProxySpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ProxySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -894,6 +928,7 @@ public partial class V1beta1ProxySpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ProxySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -905,6 +940,7 @@ public partial class V1beta1ProxySpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ProxySpec defines the desired state of Proxy</summary>
 public partial class V1beta1ProxySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -937,6 +973,7 @@ public partial class V1beta1ProxySpec
     public V1beta1ProxySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ProxyStatusAtProviderAuth
 {
     /// <summary>The type of authentication that the proxy uses for connections from the proxy to the underlying database. One of SECRETS.</summary>
@@ -964,6 +1001,7 @@ public partial class V1beta1ProxyStatusAtProviderAuth
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ProxyStatusAtProvider
 {
     /// <summary>The Amazon Resource Name (ARN) for the proxy.</summary>
@@ -1019,6 +1057,7 @@ public partial class V1beta1ProxyStatusAtProvider
     public IList<string>? VpcSubnetIds { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ProxyStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1046,6 +1085,7 @@ public partial class V1beta1ProxyStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ProxyStatus defines the observed state of Proxy.</summary>
 public partial class V1beta1ProxyStatus
 {
     /// <summary></summary>
@@ -1062,6 +1102,7 @@ public partial class V1beta1ProxyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Proxy is the Schema for the Proxys API. Provides an RDS DB proxy resource.</summary>
 public partial class V1beta1Proxy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ProxySpec>, IStatus<V1beta1ProxyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

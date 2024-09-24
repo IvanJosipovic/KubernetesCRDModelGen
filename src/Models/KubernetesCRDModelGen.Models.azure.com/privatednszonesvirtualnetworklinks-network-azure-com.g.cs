@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a network.azure.com/PrivateDnsZone resource</summary>
 public partial class V1api20200601storagePrivateDnsZonesVirtualNetworkLinkSpecOwner
 {
     /// <summary></summary>
@@ -19,6 +20,7 @@ public partial class V1api20200601storagePrivateDnsZonesVirtualNetworkLinkSpecOw
     public string? Name { get; set; }
 }
 
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20200601storagePrivateDnsZonesVirtualNetworkLinkSpecVirtualNetworkReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -38,6 +40,7 @@ public partial class V1api20200601storagePrivateDnsZonesVirtualNetworkLinkSpecVi
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.SubResource Reference to another subresource.</summary>
 public partial class V1api20200601storagePrivateDnsZonesVirtualNetworkLinkSpecVirtualNetwork
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -49,6 +52,7 @@ public partial class V1api20200601storagePrivateDnsZonesVirtualNetworkLinkSpecVi
     public V1api20200601storagePrivateDnsZonesVirtualNetworkLinkSpecVirtualNetworkReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.PrivateDnsZones_VirtualNetworkLink_Spec</summary>
 public partial class V1api20200601storagePrivateDnsZonesVirtualNetworkLinkSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -88,6 +92,7 @@ public partial class V1api20200601storagePrivateDnsZonesVirtualNetworkLinkSpec
     public V1api20200601storagePrivateDnsZonesVirtualNetworkLinkSpecVirtualNetwork? VirtualNetwork { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20200601storagePrivateDnsZonesVirtualNetworkLinkStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -119,6 +124,7 @@ public partial class V1api20200601storagePrivateDnsZonesVirtualNetworkLinkStatus
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.SubResource_STATUS Reference to another subresource.</summary>
 public partial class V1api20200601storagePrivateDnsZonesVirtualNetworkLinkStatusVirtualNetwork
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -130,6 +136,7 @@ public partial class V1api20200601storagePrivateDnsZonesVirtualNetworkLinkStatus
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.PrivateDnsZones_VirtualNetworkLink_STATUS</summary>
 public partial class V1api20200601storagePrivateDnsZonesVirtualNetworkLinkStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -182,6 +189,7 @@ public partial class V1api20200601storagePrivateDnsZonesVirtualNetworkLinkStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20200601.PrivateDnsZonesVirtualNetworkLink Generator information: - Generated from: /privatedns/resource-manager/Microsoft.Network/stable/2020-06-01/privatedns.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateZoneName}/virtualNetworkLinks/{virtualNetworkLinkName}</summary>
 public partial class V1api20200601storagePrivateDnsZonesVirtualNetworkLink : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20200601storagePrivateDnsZonesVirtualNetworkLinkSpec>, IStatus<V1api20200601storagePrivateDnsZonesVirtualNetworkLinkStatus>
 {
     public const string KubeApiVersion = "v1api20200601storage";

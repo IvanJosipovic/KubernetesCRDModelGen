@@ -18,6 +18,7 @@ public enum V1beta1SparkClusterSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecForProviderComponentVersion
 {
     /// <summary>The version of Spark which should be used for this HDInsight Spark Cluster. Changing this forces a new resource to be created.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1SparkClusterSpecForProviderComponentVersion
     public string? Spark { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecForProviderComputeIsolation
 {
     /// <summary>This field indicates whether enable compute isolation or not. Possible values are true or false.</summary>
@@ -36,6 +38,7 @@ public partial class V1beta1SparkClusterSpecForProviderComputeIsolation
     public string? HostSku { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecForProviderDiskEncryption
 {
     /// <summary>This is an algorithm identifier for encryption. Possible values are RSA1_5, RSA-OAEP, RSA-OAEP-256.</summary>
@@ -55,6 +58,7 @@ public partial class V1beta1SparkClusterSpecForProviderDiskEncryption
     public string? KeyVaultManagedIdentityId { get; set; }
 }
 
+/// <summary>The workspace key of the log analytics extension.</summary>
 public partial class V1beta1SparkClusterSpecForProviderExtensionPrimaryKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -70,6 +74,7 @@ public partial class V1beta1SparkClusterSpecForProviderExtensionPrimaryKeySecret
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecForProviderExtension
 {
     /// <summary>The workspace ID of the log analytics extension.</summary>
@@ -81,6 +86,7 @@ public partial class V1beta1SparkClusterSpecForProviderExtension
     public V1beta1SparkClusterSpecForProviderExtensionPrimaryKeySecretRef PrimaryKeySecretRef { get; set; }
 }
 
+/// <summary>The password used for the Ambari Portal.</summary>
 public partial class V1beta1SparkClusterSpecForProviderGatewayPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -96,6 +102,7 @@ public partial class V1beta1SparkClusterSpecForProviderGatewayPasswordSecretRef
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecForProviderGateway
 {
     /// <summary>The password used for the Ambari Portal.</summary>
@@ -107,6 +114,7 @@ public partial class V1beta1SparkClusterSpecForProviderGateway
     public string? Username { get; set; }
 }
 
+/// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1SparkClusterSpecForProviderMetastoresAmbariPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -122,6 +130,7 @@ public partial class V1beta1SparkClusterSpecForProviderMetastoresAmbariPasswordS
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecForProviderMetastoresAmbari
 {
     /// <summary>The external Oozie metastore's existing SQL database. Changing this forces a new resource to be created.</summary>
@@ -141,6 +150,7 @@ public partial class V1beta1SparkClusterSpecForProviderMetastoresAmbari
     public string? Username { get; set; }
 }
 
+/// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1SparkClusterSpecForProviderMetastoresHivePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -156,6 +166,7 @@ public partial class V1beta1SparkClusterSpecForProviderMetastoresHivePasswordSec
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecForProviderMetastoresHive
 {
     /// <summary>The external Oozie metastore's existing SQL database. Changing this forces a new resource to be created.</summary>
@@ -175,6 +186,7 @@ public partial class V1beta1SparkClusterSpecForProviderMetastoresHive
     public string? Username { get; set; }
 }
 
+/// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1SparkClusterSpecForProviderMetastoresOoziePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -190,6 +202,7 @@ public partial class V1beta1SparkClusterSpecForProviderMetastoresOoziePasswordSe
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecForProviderMetastoresOozie
 {
     /// <summary>The external Oozie metastore's existing SQL database. Changing this forces a new resource to be created.</summary>
@@ -209,6 +222,7 @@ public partial class V1beta1SparkClusterSpecForProviderMetastoresOozie
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecForProviderMetastores
 {
     /// <summary>An ambari block as defined below.</summary>
@@ -224,6 +238,7 @@ public partial class V1beta1SparkClusterSpecForProviderMetastores
     public IList<V1beta1SparkClusterSpecForProviderMetastoresOozie>? Oozie { get; set; }
 }
 
+/// <summary>The Operations Management Suite (OMS) workspace key.</summary>
 public partial class V1beta1SparkClusterSpecForProviderMonitorPrimaryKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -239,6 +254,7 @@ public partial class V1beta1SparkClusterSpecForProviderMonitorPrimaryKeySecretRe
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecForProviderMonitor
 {
     /// <summary>The Operations Management Suite (OMS) workspace ID.</summary>
@@ -250,6 +266,7 @@ public partial class V1beta1SparkClusterSpecForProviderMonitor
     public V1beta1SparkClusterSpecForProviderMonitorPrimaryKeySecretRef PrimaryKeySecretRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecForProviderNetwork
 {
     /// <summary>The direction of the resource provider connection. Possible values include Inbound or Outbound. Defaults to Inbound. Changing this forces a new resource to be created.</summary>
@@ -281,6 +298,7 @@ public enum V1beta1SparkClusterSpecForProviderResourceGroupNameRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SparkClusterSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -294,6 +312,7 @@ public partial class V1beta1SparkClusterSpecForProviderResourceGroupNameRefPolic
     public V1beta1SparkClusterSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1SparkClusterSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -325,6 +344,7 @@ public enum V1beta1SparkClusterSpecForProviderResourceGroupNameSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SparkClusterSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -338,6 +358,7 @@ public partial class V1beta1SparkClusterSpecForProviderResourceGroupNameSelector
     public V1beta1SparkClusterSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1SparkClusterSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -353,6 +374,7 @@ public partial class V1beta1SparkClusterSpecForProviderResourceGroupNameSelector
     public V1beta1SparkClusterSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1SparkClusterSpecForProviderRolesHeadNodePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -368,6 +390,7 @@ public partial class V1beta1SparkClusterSpecForProviderRolesHeadNodePasswordSecr
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecForProviderRolesHeadNodeScriptActions
 {
     /// <summary>The name of the script action.</summary>
@@ -403,6 +426,7 @@ public enum V1beta1SparkClusterSpecForProviderRolesHeadNodeSubnetIdRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SparkClusterSpecForProviderRolesHeadNodeSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -416,6 +440,7 @@ public partial class V1beta1SparkClusterSpecForProviderRolesHeadNodeSubnetIdRefP
     public V1beta1SparkClusterSpecForProviderRolesHeadNodeSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1SparkClusterSpecForProviderRolesHeadNodeSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -447,6 +472,7 @@ public enum V1beta1SparkClusterSpecForProviderRolesHeadNodeSubnetIdSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SparkClusterSpecForProviderRolesHeadNodeSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -460,6 +486,7 @@ public partial class V1beta1SparkClusterSpecForProviderRolesHeadNodeSubnetIdSele
     public V1beta1SparkClusterSpecForProviderRolesHeadNodeSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1SparkClusterSpecForProviderRolesHeadNodeSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -475,6 +502,7 @@ public partial class V1beta1SparkClusterSpecForProviderRolesHeadNodeSubnetIdSele
     public V1beta1SparkClusterSpecForProviderRolesHeadNodeSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecForProviderRolesHeadNode
 {
     /// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
@@ -514,6 +542,7 @@ public partial class V1beta1SparkClusterSpecForProviderRolesHeadNode
     public string? VmSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecForProviderRolesWorkerNodeAutoscaleCapacity
 {
     /// <summary>The maximum number of worker nodes to autoscale to based on the cluster's activity.</summary>
@@ -525,6 +554,7 @@ public partial class V1beta1SparkClusterSpecForProviderRolesWorkerNodeAutoscaleC
     public double? MinInstanceCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecForProviderRolesWorkerNodeAutoscaleRecurrenceSchedule
 {
     /// <summary>The days of the week to perform autoscale. Possible values are Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday.</summary>
@@ -540,6 +570,7 @@ public partial class V1beta1SparkClusterSpecForProviderRolesWorkerNodeAutoscaleR
     public string? Time { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecForProviderRolesWorkerNodeAutoscaleRecurrence
 {
     /// <summary>A list of schedule blocks as defined below.</summary>
@@ -551,6 +582,7 @@ public partial class V1beta1SparkClusterSpecForProviderRolesWorkerNodeAutoscaleR
     public string? Timezone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecForProviderRolesWorkerNodeAutoscale
 {
     /// <summary>A capacity block as defined below.</summary>
@@ -562,6 +594,7 @@ public partial class V1beta1SparkClusterSpecForProviderRolesWorkerNodeAutoscale
     public IList<V1beta1SparkClusterSpecForProviderRolesWorkerNodeAutoscaleRecurrence>? Recurrence { get; set; }
 }
 
+/// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1SparkClusterSpecForProviderRolesWorkerNodePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -577,6 +610,7 @@ public partial class V1beta1SparkClusterSpecForProviderRolesWorkerNodePasswordSe
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecForProviderRolesWorkerNodeScriptActions
 {
     /// <summary>The name of the script action.</summary>
@@ -612,6 +646,7 @@ public enum V1beta1SparkClusterSpecForProviderRolesWorkerNodeSubnetIdRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SparkClusterSpecForProviderRolesWorkerNodeSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -625,6 +660,7 @@ public partial class V1beta1SparkClusterSpecForProviderRolesWorkerNodeSubnetIdRe
     public V1beta1SparkClusterSpecForProviderRolesWorkerNodeSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1SparkClusterSpecForProviderRolesWorkerNodeSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -656,6 +692,7 @@ public enum V1beta1SparkClusterSpecForProviderRolesWorkerNodeSubnetIdSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SparkClusterSpecForProviderRolesWorkerNodeSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -669,6 +706,7 @@ public partial class V1beta1SparkClusterSpecForProviderRolesWorkerNodeSubnetIdSe
     public V1beta1SparkClusterSpecForProviderRolesWorkerNodeSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1SparkClusterSpecForProviderRolesWorkerNodeSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -684,6 +722,7 @@ public partial class V1beta1SparkClusterSpecForProviderRolesWorkerNodeSubnetIdSe
     public V1beta1SparkClusterSpecForProviderRolesWorkerNodeSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecForProviderRolesWorkerNode
 {
     /// <summary>A autoscale block as defined below.</summary>
@@ -731,6 +770,7 @@ public partial class V1beta1SparkClusterSpecForProviderRolesWorkerNode
     public string? VmSize { get; set; }
 }
 
+/// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1SparkClusterSpecForProviderRolesZookeeperNodePasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -746,6 +786,7 @@ public partial class V1beta1SparkClusterSpecForProviderRolesZookeeperNodePasswor
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecForProviderRolesZookeeperNodeScriptActions
 {
     /// <summary>The name of the script action.</summary>
@@ -781,6 +822,7 @@ public enum V1beta1SparkClusterSpecForProviderRolesZookeeperNodeSubnetIdRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SparkClusterSpecForProviderRolesZookeeperNodeSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -794,6 +836,7 @@ public partial class V1beta1SparkClusterSpecForProviderRolesZookeeperNodeSubnetI
     public V1beta1SparkClusterSpecForProviderRolesZookeeperNodeSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1SparkClusterSpecForProviderRolesZookeeperNodeSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -825,6 +868,7 @@ public enum V1beta1SparkClusterSpecForProviderRolesZookeeperNodeSubnetIdSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SparkClusterSpecForProviderRolesZookeeperNodeSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -838,6 +882,7 @@ public partial class V1beta1SparkClusterSpecForProviderRolesZookeeperNodeSubnetI
     public V1beta1SparkClusterSpecForProviderRolesZookeeperNodeSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1SparkClusterSpecForProviderRolesZookeeperNodeSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -853,6 +898,7 @@ public partial class V1beta1SparkClusterSpecForProviderRolesZookeeperNodeSubnetI
     public V1beta1SparkClusterSpecForProviderRolesZookeeperNodeSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecForProviderRolesZookeeperNode
 {
     /// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
@@ -892,6 +938,7 @@ public partial class V1beta1SparkClusterSpecForProviderRolesZookeeperNode
     public string? VmSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecForProviderRoles
 {
     /// <summary>A head_node block as defined above.</summary>
@@ -907,6 +954,7 @@ public partial class V1beta1SparkClusterSpecForProviderRoles
     public IList<V1beta1SparkClusterSpecForProviderRolesZookeeperNode>? ZookeeperNode { get; set; }
 }
 
+/// <summary>The user password of the Azure Active Directory Domain. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1SparkClusterSpecForProviderSecurityProfileDomainUserPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -922,6 +970,7 @@ public partial class V1beta1SparkClusterSpecForProviderSecurityProfileDomainUser
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecForProviderSecurityProfile
 {
     /// <summary>The resource ID of the Azure Active Directory Domain Service. Changing this forces a new resource to be created.</summary>
@@ -953,6 +1002,7 @@ public partial class V1beta1SparkClusterSpecForProviderSecurityProfile
     public string? MsiResourceId { get; set; }
 }
 
+/// <summary>The Access Key which should be used to connect to the Storage Account. Changing this forces a new resource to be created.</summary>
 public partial class V1beta1SparkClusterSpecForProviderStorageAccountStorageAccountKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -988,6 +1038,7 @@ public enum V1beta1SparkClusterSpecForProviderStorageAccountStorageContainerIdRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SparkClusterSpecForProviderStorageAccountStorageContainerIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1001,6 +1052,7 @@ public partial class V1beta1SparkClusterSpecForProviderStorageAccountStorageCont
     public V1beta1SparkClusterSpecForProviderStorageAccountStorageContainerIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Container in storage to populate storageContainerId.</summary>
 public partial class V1beta1SparkClusterSpecForProviderStorageAccountStorageContainerIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1032,6 +1084,7 @@ public enum V1beta1SparkClusterSpecForProviderStorageAccountStorageContainerIdSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SparkClusterSpecForProviderStorageAccountStorageContainerIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1045,6 +1098,7 @@ public partial class V1beta1SparkClusterSpecForProviderStorageAccountStorageCont
     public V1beta1SparkClusterSpecForProviderStorageAccountStorageContainerIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Container in storage to populate storageContainerId.</summary>
 public partial class V1beta1SparkClusterSpecForProviderStorageAccountStorageContainerIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1060,6 +1114,7 @@ public partial class V1beta1SparkClusterSpecForProviderStorageAccountStorageCont
     public V1beta1SparkClusterSpecForProviderStorageAccountStorageContainerIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecForProviderStorageAccount
 {
     /// <summary>Is this the Default Storage Account for the HDInsight Hadoop Cluster? Changing this forces a new resource to be created.</summary>
@@ -1087,6 +1142,7 @@ public partial class V1beta1SparkClusterSpecForProviderStorageAccount
     public string? StorageResourceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecForProviderStorageAccountGen2
 {
     /// <summary>The ID of the Gen2 Filesystem. Changing this forces a new resource to be created.</summary>
@@ -1106,6 +1162,7 @@ public partial class V1beta1SparkClusterSpecForProviderStorageAccountGen2
     public string? StorageResourceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecForProvider
 {
     /// <summary>Specifies the Version of HDInsights which should be used for this Cluster. Changing this forces a new resource to be created.</summary>
@@ -1193,6 +1250,7 @@ public partial class V1beta1SparkClusterSpecForProvider
     public string? TlsMinVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecInitProviderComponentVersion
 {
     /// <summary>The version of Spark which should be used for this HDInsight Spark Cluster. Changing this forces a new resource to be created.</summary>
@@ -1200,6 +1258,7 @@ public partial class V1beta1SparkClusterSpecInitProviderComponentVersion
     public string? Spark { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecInitProviderComputeIsolation
 {
     /// <summary>This field indicates whether enable compute isolation or not. Possible values are true or false.</summary>
@@ -1211,6 +1270,7 @@ public partial class V1beta1SparkClusterSpecInitProviderComputeIsolation
     public string? HostSku { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecInitProviderDiskEncryption
 {
     /// <summary>This is an algorithm identifier for encryption. Possible values are RSA1_5, RSA-OAEP, RSA-OAEP-256.</summary>
@@ -1230,6 +1290,7 @@ public partial class V1beta1SparkClusterSpecInitProviderDiskEncryption
     public string? KeyVaultManagedIdentityId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecInitProviderExtension
 {
     /// <summary>The workspace ID of the log analytics extension.</summary>
@@ -1237,6 +1298,7 @@ public partial class V1beta1SparkClusterSpecInitProviderExtension
     public string? LogAnalyticsWorkspaceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecInitProviderGateway
 {
     /// <summary>The username used for the Ambari Portal. Changing this forces a new resource to be created.</summary>
@@ -1244,6 +1306,7 @@ public partial class V1beta1SparkClusterSpecInitProviderGateway
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecInitProviderMetastoresAmbari
 {
     /// <summary>The external Oozie metastore's existing SQL database. Changing this forces a new resource to be created.</summary>
@@ -1259,6 +1322,7 @@ public partial class V1beta1SparkClusterSpecInitProviderMetastoresAmbari
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecInitProviderMetastoresHive
 {
     /// <summary>The external Oozie metastore's existing SQL database. Changing this forces a new resource to be created.</summary>
@@ -1274,6 +1338,7 @@ public partial class V1beta1SparkClusterSpecInitProviderMetastoresHive
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecInitProviderMetastoresOozie
 {
     /// <summary>The external Oozie metastore's existing SQL database. Changing this forces a new resource to be created.</summary>
@@ -1289,6 +1354,7 @@ public partial class V1beta1SparkClusterSpecInitProviderMetastoresOozie
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecInitProviderMetastores
 {
     /// <summary>An ambari block as defined below.</summary>
@@ -1304,6 +1370,7 @@ public partial class V1beta1SparkClusterSpecInitProviderMetastores
     public IList<V1beta1SparkClusterSpecInitProviderMetastoresOozie>? Oozie { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecInitProviderMonitor
 {
     /// <summary>The Operations Management Suite (OMS) workspace ID.</summary>
@@ -1311,6 +1378,7 @@ public partial class V1beta1SparkClusterSpecInitProviderMonitor
     public string? LogAnalyticsWorkspaceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecInitProviderNetwork
 {
     /// <summary>The direction of the resource provider connection. Possible values include Inbound or Outbound. Defaults to Inbound. Changing this forces a new resource to be created.</summary>
@@ -1322,6 +1390,7 @@ public partial class V1beta1SparkClusterSpecInitProviderNetwork
     public bool? PrivateLinkEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecInitProviderRolesHeadNodeScriptActions
 {
     /// <summary>The name of the script action.</summary>
@@ -1357,6 +1426,7 @@ public enum V1beta1SparkClusterSpecInitProviderRolesHeadNodeSubnetIdRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SparkClusterSpecInitProviderRolesHeadNodeSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1370,6 +1440,7 @@ public partial class V1beta1SparkClusterSpecInitProviderRolesHeadNodeSubnetIdRef
     public V1beta1SparkClusterSpecInitProviderRolesHeadNodeSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1SparkClusterSpecInitProviderRolesHeadNodeSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1401,6 +1472,7 @@ public enum V1beta1SparkClusterSpecInitProviderRolesHeadNodeSubnetIdSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SparkClusterSpecInitProviderRolesHeadNodeSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1414,6 +1486,7 @@ public partial class V1beta1SparkClusterSpecInitProviderRolesHeadNodeSubnetIdSel
     public V1beta1SparkClusterSpecInitProviderRolesHeadNodeSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1SparkClusterSpecInitProviderRolesHeadNodeSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1429,6 +1502,7 @@ public partial class V1beta1SparkClusterSpecInitProviderRolesHeadNodeSubnetIdSel
     public V1beta1SparkClusterSpecInitProviderRolesHeadNodeSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecInitProviderRolesHeadNode
 {
     /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined above.</summary>
@@ -1464,6 +1538,7 @@ public partial class V1beta1SparkClusterSpecInitProviderRolesHeadNode
     public string? VmSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecInitProviderRolesWorkerNodeAutoscaleCapacity
 {
     /// <summary>The maximum number of worker nodes to autoscale to based on the cluster's activity.</summary>
@@ -1475,6 +1550,7 @@ public partial class V1beta1SparkClusterSpecInitProviderRolesWorkerNodeAutoscale
     public double? MinInstanceCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecInitProviderRolesWorkerNodeAutoscaleRecurrenceSchedule
 {
     /// <summary>The days of the week to perform autoscale. Possible values are Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday.</summary>
@@ -1490,6 +1566,7 @@ public partial class V1beta1SparkClusterSpecInitProviderRolesWorkerNodeAutoscale
     public string? Time { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecInitProviderRolesWorkerNodeAutoscaleRecurrence
 {
     /// <summary>A list of schedule blocks as defined below.</summary>
@@ -1501,6 +1578,7 @@ public partial class V1beta1SparkClusterSpecInitProviderRolesWorkerNodeAutoscale
     public string? Timezone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecInitProviderRolesWorkerNodeAutoscale
 {
     /// <summary>A capacity block as defined below.</summary>
@@ -1512,6 +1590,7 @@ public partial class V1beta1SparkClusterSpecInitProviderRolesWorkerNodeAutoscale
     public IList<V1beta1SparkClusterSpecInitProviderRolesWorkerNodeAutoscaleRecurrence>? Recurrence { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecInitProviderRolesWorkerNodeScriptActions
 {
     /// <summary>The name of the script action.</summary>
@@ -1547,6 +1626,7 @@ public enum V1beta1SparkClusterSpecInitProviderRolesWorkerNodeSubnetIdRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SparkClusterSpecInitProviderRolesWorkerNodeSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1560,6 +1640,7 @@ public partial class V1beta1SparkClusterSpecInitProviderRolesWorkerNodeSubnetIdR
     public V1beta1SparkClusterSpecInitProviderRolesWorkerNodeSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1SparkClusterSpecInitProviderRolesWorkerNodeSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1591,6 +1672,7 @@ public enum V1beta1SparkClusterSpecInitProviderRolesWorkerNodeSubnetIdSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SparkClusterSpecInitProviderRolesWorkerNodeSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1604,6 +1686,7 @@ public partial class V1beta1SparkClusterSpecInitProviderRolesWorkerNodeSubnetIdS
     public V1beta1SparkClusterSpecInitProviderRolesWorkerNodeSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1SparkClusterSpecInitProviderRolesWorkerNodeSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1619,6 +1702,7 @@ public partial class V1beta1SparkClusterSpecInitProviderRolesWorkerNodeSubnetIdS
     public V1beta1SparkClusterSpecInitProviderRolesWorkerNodeSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecInitProviderRolesWorkerNode
 {
     /// <summary>A autoscale block as defined below.</summary>
@@ -1662,6 +1746,7 @@ public partial class V1beta1SparkClusterSpecInitProviderRolesWorkerNode
     public string? VmSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecInitProviderRolesZookeeperNodeScriptActions
 {
     /// <summary>The name of the script action.</summary>
@@ -1697,6 +1782,7 @@ public enum V1beta1SparkClusterSpecInitProviderRolesZookeeperNodeSubnetIdRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SparkClusterSpecInitProviderRolesZookeeperNodeSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1710,6 +1796,7 @@ public partial class V1beta1SparkClusterSpecInitProviderRolesZookeeperNodeSubnet
     public V1beta1SparkClusterSpecInitProviderRolesZookeeperNodeSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1SparkClusterSpecInitProviderRolesZookeeperNodeSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1741,6 +1828,7 @@ public enum V1beta1SparkClusterSpecInitProviderRolesZookeeperNodeSubnetIdSelecto
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SparkClusterSpecInitProviderRolesZookeeperNodeSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1754,6 +1842,7 @@ public partial class V1beta1SparkClusterSpecInitProviderRolesZookeeperNodeSubnet
     public V1beta1SparkClusterSpecInitProviderRolesZookeeperNodeSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1SparkClusterSpecInitProviderRolesZookeeperNodeSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1769,6 +1858,7 @@ public partial class V1beta1SparkClusterSpecInitProviderRolesZookeeperNodeSubnet
     public V1beta1SparkClusterSpecInitProviderRolesZookeeperNodeSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecInitProviderRolesZookeeperNode
 {
     /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined above.</summary>
@@ -1804,6 +1894,7 @@ public partial class V1beta1SparkClusterSpecInitProviderRolesZookeeperNode
     public string? VmSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecInitProviderRoles
 {
     /// <summary>A head_node block as defined above.</summary>
@@ -1819,6 +1910,7 @@ public partial class V1beta1SparkClusterSpecInitProviderRoles
     public IList<V1beta1SparkClusterSpecInitProviderRolesZookeeperNode>? ZookeeperNode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecInitProviderSecurityProfile
 {
     /// <summary>The resource ID of the Azure Active Directory Domain Service. Changing this forces a new resource to be created.</summary>
@@ -1866,6 +1958,7 @@ public enum V1beta1SparkClusterSpecInitProviderStorageAccountStorageContainerIdR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SparkClusterSpecInitProviderStorageAccountStorageContainerIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1879,6 +1972,7 @@ public partial class V1beta1SparkClusterSpecInitProviderStorageAccountStorageCon
     public V1beta1SparkClusterSpecInitProviderStorageAccountStorageContainerIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Container in storage to populate storageContainerId.</summary>
 public partial class V1beta1SparkClusterSpecInitProviderStorageAccountStorageContainerIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1910,6 +2004,7 @@ public enum V1beta1SparkClusterSpecInitProviderStorageAccountStorageContainerIdS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SparkClusterSpecInitProviderStorageAccountStorageContainerIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1923,6 +2018,7 @@ public partial class V1beta1SparkClusterSpecInitProviderStorageAccountStorageCon
     public V1beta1SparkClusterSpecInitProviderStorageAccountStorageContainerIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Container in storage to populate storageContainerId.</summary>
 public partial class V1beta1SparkClusterSpecInitProviderStorageAccountStorageContainerIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1938,6 +2034,7 @@ public partial class V1beta1SparkClusterSpecInitProviderStorageAccountStorageCon
     public V1beta1SparkClusterSpecInitProviderStorageAccountStorageContainerIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecInitProviderStorageAccount
 {
     /// <summary>Is this the Default Storage Account for the HDInsight Hadoop Cluster? Changing this forces a new resource to be created.</summary>
@@ -1961,6 +2058,7 @@ public partial class V1beta1SparkClusterSpecInitProviderStorageAccount
     public string? StorageResourceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterSpecInitProviderStorageAccountGen2
 {
     /// <summary>The ID of the Gen2 Filesystem. Changing this forces a new resource to be created.</summary>
@@ -1980,6 +2078,7 @@ public partial class V1beta1SparkClusterSpecInitProviderStorageAccountGen2
     public string? StorageResourceId { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1SparkClusterSpecInitProvider
 {
     /// <summary>Specifies the Version of HDInsights which should be used for this Cluster. Changing this forces a new resource to be created.</summary>
@@ -2097,6 +2196,7 @@ public enum V1beta1SparkClusterSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SparkClusterSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2110,6 +2210,7 @@ public partial class V1beta1SparkClusterSpecProviderConfigRefPolicy
     public V1beta1SparkClusterSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1SparkClusterSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2141,6 +2242,7 @@ public enum V1beta1SparkClusterSpecPublishConnectionDetailsToConfigRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SparkClusterSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2154,6 +2256,7 @@ public partial class V1beta1SparkClusterSpecPublishConnectionDetailsToConfigRefP
     public V1beta1SparkClusterSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1SparkClusterSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2165,6 +2268,7 @@ public partial class V1beta1SparkClusterSpecPublishConnectionDetailsToConfigRef
     public V1beta1SparkClusterSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1SparkClusterSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -2180,6 +2284,7 @@ public partial class V1beta1SparkClusterSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1SparkClusterSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -2195,6 +2300,7 @@ public partial class V1beta1SparkClusterSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1SparkClusterSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -2206,6 +2312,7 @@ public partial class V1beta1SparkClusterSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>SparkClusterSpec defines the desired state of SparkCluster</summary>
 public partial class V1beta1SparkClusterSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -2238,6 +2345,7 @@ public partial class V1beta1SparkClusterSpec
     public V1beta1SparkClusterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterStatusAtProviderComponentVersion
 {
     /// <summary>The version of Spark which should be used for this HDInsight Spark Cluster. Changing this forces a new resource to be created.</summary>
@@ -2245,6 +2353,7 @@ public partial class V1beta1SparkClusterStatusAtProviderComponentVersion
     public string? Spark { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterStatusAtProviderComputeIsolation
 {
     /// <summary>This field indicates whether enable compute isolation or not. Possible values are true or false.</summary>
@@ -2256,6 +2365,7 @@ public partial class V1beta1SparkClusterStatusAtProviderComputeIsolation
     public string? HostSku { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterStatusAtProviderDiskEncryption
 {
     /// <summary>This is an algorithm identifier for encryption. Possible values are RSA1_5, RSA-OAEP, RSA-OAEP-256.</summary>
@@ -2275,6 +2385,7 @@ public partial class V1beta1SparkClusterStatusAtProviderDiskEncryption
     public string? KeyVaultManagedIdentityId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterStatusAtProviderExtension
 {
     /// <summary>The workspace ID of the log analytics extension.</summary>
@@ -2282,6 +2393,7 @@ public partial class V1beta1SparkClusterStatusAtProviderExtension
     public string? LogAnalyticsWorkspaceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterStatusAtProviderGateway
 {
     /// <summary>The username used for the Ambari Portal. Changing this forces a new resource to be created.</summary>
@@ -2289,6 +2401,7 @@ public partial class V1beta1SparkClusterStatusAtProviderGateway
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterStatusAtProviderMetastoresAmbari
 {
     /// <summary>The external Oozie metastore's existing SQL database. Changing this forces a new resource to be created.</summary>
@@ -2304,6 +2417,7 @@ public partial class V1beta1SparkClusterStatusAtProviderMetastoresAmbari
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterStatusAtProviderMetastoresHive
 {
     /// <summary>The external Oozie metastore's existing SQL database. Changing this forces a new resource to be created.</summary>
@@ -2319,6 +2433,7 @@ public partial class V1beta1SparkClusterStatusAtProviderMetastoresHive
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterStatusAtProviderMetastoresOozie
 {
     /// <summary>The external Oozie metastore's existing SQL database. Changing this forces a new resource to be created.</summary>
@@ -2334,6 +2449,7 @@ public partial class V1beta1SparkClusterStatusAtProviderMetastoresOozie
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterStatusAtProviderMetastores
 {
     /// <summary>An ambari block as defined below.</summary>
@@ -2349,6 +2465,7 @@ public partial class V1beta1SparkClusterStatusAtProviderMetastores
     public IList<V1beta1SparkClusterStatusAtProviderMetastoresOozie>? Oozie { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterStatusAtProviderMonitor
 {
     /// <summary>The Operations Management Suite (OMS) workspace ID.</summary>
@@ -2356,6 +2473,7 @@ public partial class V1beta1SparkClusterStatusAtProviderMonitor
     public string? LogAnalyticsWorkspaceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterStatusAtProviderNetwork
 {
     /// <summary>The direction of the resource provider connection. Possible values include Inbound or Outbound. Defaults to Inbound. Changing this forces a new resource to be created.</summary>
@@ -2367,6 +2485,7 @@ public partial class V1beta1SparkClusterStatusAtProviderNetwork
     public bool? PrivateLinkEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterStatusAtProviderRolesHeadNodeScriptActions
 {
     /// <summary>The name of the script action.</summary>
@@ -2382,6 +2501,7 @@ public partial class V1beta1SparkClusterStatusAtProviderRolesHeadNodeScriptActio
     public string? Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterStatusAtProviderRolesHeadNode
 {
     /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined above.</summary>
@@ -2409,6 +2529,7 @@ public partial class V1beta1SparkClusterStatusAtProviderRolesHeadNode
     public string? VmSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterStatusAtProviderRolesWorkerNodeAutoscaleCapacity
 {
     /// <summary>The maximum number of worker nodes to autoscale to based on the cluster's activity.</summary>
@@ -2420,6 +2541,7 @@ public partial class V1beta1SparkClusterStatusAtProviderRolesWorkerNodeAutoscale
     public double? MinInstanceCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterStatusAtProviderRolesWorkerNodeAutoscaleRecurrenceSchedule
 {
     /// <summary>The days of the week to perform autoscale. Possible values are Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday.</summary>
@@ -2435,6 +2557,7 @@ public partial class V1beta1SparkClusterStatusAtProviderRolesWorkerNodeAutoscale
     public string? Time { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterStatusAtProviderRolesWorkerNodeAutoscaleRecurrence
 {
     /// <summary>A list of schedule blocks as defined below.</summary>
@@ -2446,6 +2569,7 @@ public partial class V1beta1SparkClusterStatusAtProviderRolesWorkerNodeAutoscale
     public string? Timezone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterStatusAtProviderRolesWorkerNodeAutoscale
 {
     /// <summary>A capacity block as defined below.</summary>
@@ -2457,6 +2581,7 @@ public partial class V1beta1SparkClusterStatusAtProviderRolesWorkerNodeAutoscale
     public IList<V1beta1SparkClusterStatusAtProviderRolesWorkerNodeAutoscaleRecurrence>? Recurrence { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterStatusAtProviderRolesWorkerNodeScriptActions
 {
     /// <summary>The name of the script action.</summary>
@@ -2472,6 +2597,7 @@ public partial class V1beta1SparkClusterStatusAtProviderRolesWorkerNodeScriptAct
     public string? Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterStatusAtProviderRolesWorkerNode
 {
     /// <summary>A autoscale block as defined below.</summary>
@@ -2507,6 +2633,7 @@ public partial class V1beta1SparkClusterStatusAtProviderRolesWorkerNode
     public string? VmSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterStatusAtProviderRolesZookeeperNodeScriptActions
 {
     /// <summary>The name of the script action.</summary>
@@ -2522,6 +2649,7 @@ public partial class V1beta1SparkClusterStatusAtProviderRolesZookeeperNodeScript
     public string? Uri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterStatusAtProviderRolesZookeeperNode
 {
     /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined above.</summary>
@@ -2549,6 +2677,7 @@ public partial class V1beta1SparkClusterStatusAtProviderRolesZookeeperNode
     public string? VmSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterStatusAtProviderRoles
 {
     /// <summary>A head_node block as defined above.</summary>
@@ -2564,6 +2693,7 @@ public partial class V1beta1SparkClusterStatusAtProviderRoles
     public IList<V1beta1SparkClusterStatusAtProviderRolesZookeeperNode>? ZookeeperNode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterStatusAtProviderSecurityProfile
 {
     /// <summary>The resource ID of the Azure Active Directory Domain Service. Changing this forces a new resource to be created.</summary>
@@ -2591,6 +2721,7 @@ public partial class V1beta1SparkClusterStatusAtProviderSecurityProfile
     public string? MsiResourceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterStatusAtProviderStorageAccount
 {
     /// <summary>Is this the Default Storage Account for the HDInsight Hadoop Cluster? Changing this forces a new resource to be created.</summary>
@@ -2606,6 +2737,7 @@ public partial class V1beta1SparkClusterStatusAtProviderStorageAccount
     public string? StorageResourceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterStatusAtProviderStorageAccountGen2
 {
     /// <summary>The ID of the Gen2 Filesystem. Changing this forces a new resource to be created.</summary>
@@ -2625,6 +2757,7 @@ public partial class V1beta1SparkClusterStatusAtProviderStorageAccountGen2
     public string? StorageResourceId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SparkClusterStatusAtProvider
 {
     /// <summary>Specifies the Version of HDInsights which should be used for this Cluster. Changing this forces a new resource to be created.</summary>
@@ -2716,6 +2849,7 @@ public partial class V1beta1SparkClusterStatusAtProvider
     public string? TlsMinVersion { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1SparkClusterStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2743,6 +2877,7 @@ public partial class V1beta1SparkClusterStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>SparkClusterStatus defines the observed state of SparkCluster.</summary>
 public partial class V1beta1SparkClusterStatus
 {
     /// <summary></summary>
@@ -2759,6 +2894,7 @@ public partial class V1beta1SparkClusterStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>SparkCluster is the Schema for the SparkClusters API. Manages a HDInsight Spark Cluster.</summary>
 public partial class V1beta1SparkCluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SparkClusterSpec>, IStatus<V1beta1SparkClusterStatus>
 {
     public const string KubeApiVersion = "v1beta1";

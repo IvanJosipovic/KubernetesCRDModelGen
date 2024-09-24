@@ -18,6 +18,7 @@ public enum V1beta1DeploymentStrategySpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1DeploymentStrategySpecForProvider
 {
     /// <summary>Total amount of time for a deployment to last. Minimum value of 0, maximum value of 1440.</summary>
@@ -57,6 +58,7 @@ public partial class V1beta1DeploymentStrategySpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1DeploymentStrategySpecInitProvider
 {
     /// <summary>Total amount of time for a deployment to last. Minimum value of 0, maximum value of 1440.</summary>
@@ -134,6 +136,7 @@ public enum V1beta1DeploymentStrategySpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DeploymentStrategySpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -147,6 +150,7 @@ public partial class V1beta1DeploymentStrategySpecProviderConfigRefPolicy
     public V1beta1DeploymentStrategySpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1DeploymentStrategySpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -178,6 +182,7 @@ public enum V1beta1DeploymentStrategySpecPublishConnectionDetailsToConfigRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DeploymentStrategySpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -191,6 +196,7 @@ public partial class V1beta1DeploymentStrategySpecPublishConnectionDetailsToConf
     public V1beta1DeploymentStrategySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1DeploymentStrategySpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -202,6 +208,7 @@ public partial class V1beta1DeploymentStrategySpecPublishConnectionDetailsToConf
     public V1beta1DeploymentStrategySpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1DeploymentStrategySpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -217,6 +224,7 @@ public partial class V1beta1DeploymentStrategySpecPublishConnectionDetailsToMeta
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1DeploymentStrategySpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -232,6 +240,7 @@ public partial class V1beta1DeploymentStrategySpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1DeploymentStrategySpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -243,6 +252,7 @@ public partial class V1beta1DeploymentStrategySpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>DeploymentStrategySpec defines the desired state of DeploymentStrategy</summary>
 public partial class V1beta1DeploymentStrategySpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -275,6 +285,7 @@ public partial class V1beta1DeploymentStrategySpec
     public V1beta1DeploymentStrategySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DeploymentStrategyStatusAtProvider
 {
     /// <summary>ARN of the AppConfig Deployment Strategy.</summary>
@@ -322,6 +333,7 @@ public partial class V1beta1DeploymentStrategyStatusAtProvider
     public IDictionary<string, string>? TagsAll { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1DeploymentStrategyStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -349,6 +361,7 @@ public partial class V1beta1DeploymentStrategyStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>DeploymentStrategyStatus defines the observed state of DeploymentStrategy.</summary>
 public partial class V1beta1DeploymentStrategyStatus
 {
     /// <summary></summary>
@@ -365,6 +378,7 @@ public partial class V1beta1DeploymentStrategyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>DeploymentStrategy is the Schema for the DeploymentStrategys API. Provides an AppConfig Deployment Strategy resource.</summary>
 public partial class V1beta1DeploymentStrategy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DeploymentStrategySpec>, IStatus<V1beta1DeploymentStrategyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigee.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1alpha1ApigeeInstanceAttachmentSpec
 {
     /// <summary>Immutable. The resource ID of the environment.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1ApigeeInstanceAttachmentSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApigeeInstanceAttachmentStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -46,6 +48,7 @@ public partial class V1alpha1ApigeeInstanceAttachmentStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ApigeeInstanceAttachmentStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -62,6 +65,7 @@ public partial class V1alpha1ApigeeInstanceAttachmentStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1ApigeeInstanceAttachment : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ApigeeInstanceAttachmentSpec>, IStatus<V1alpha1ApigeeInstanceAttachmentStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

@@ -18,6 +18,7 @@ public enum V1beta1EndpointConfigurationSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationSpecForProviderAsyncInferenceConfigClientConfig
 {
     /// <summary>The maximum number of concurrent requests sent by the SageMaker client to the model container. If no value is provided, Amazon SageMaker will choose an optimal value for you.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1EndpointConfigurationSpecForProviderAsyncInferenceCo
     public double? MaxConcurrentInvocationsPerInstance { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationSpecForProviderAsyncInferenceConfigOutputConfigNotificationConfig
 {
     /// <summary>Amazon SNS topic to post a notification to when inference fails. If no topic is provided, no notification is sent on failure.</summary>
@@ -40,6 +42,7 @@ public partial class V1beta1EndpointConfigurationSpecForProviderAsyncInferenceCo
     public string? SuccessTopic { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationSpecForProviderAsyncInferenceConfigOutputConfig
 {
     /// <summary>The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that Amazon SageMaker uses to encrypt the asynchronous inference output in Amazon S3.</summary>
@@ -59,6 +62,7 @@ public partial class V1beta1EndpointConfigurationSpecForProviderAsyncInferenceCo
     public string? S3OutputPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationSpecForProviderAsyncInferenceConfig
 {
     /// <summary>Configures the behavior of the client used by Amazon SageMaker to interact with the model container during asynchronous inference.</summary>
@@ -70,6 +74,7 @@ public partial class V1beta1EndpointConfigurationSpecForProviderAsyncInferenceCo
     public IList<V1beta1EndpointConfigurationSpecForProviderAsyncInferenceConfigOutputConfig>? OutputConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationSpecForProviderDataCaptureConfigCaptureContentTypeHeader
 {
     /// <summary>The CSV content type headers to capture.</summary>
@@ -81,6 +86,7 @@ public partial class V1beta1EndpointConfigurationSpecForProviderDataCaptureConfi
     public IList<string>? JsonContentTypes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationSpecForProviderDataCaptureConfigCaptureOptions
 {
     /// <summary>Specifies the data to be captured. Should be one of Input or Output.</summary>
@@ -88,6 +94,7 @@ public partial class V1beta1EndpointConfigurationSpecForProviderDataCaptureConfi
     public string? CaptureMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationSpecForProviderDataCaptureConfig
 {
     /// <summary>The content type headers to capture. Fields are documented below.</summary>
@@ -135,6 +142,7 @@ public enum V1beta1EndpointConfigurationSpecForProviderKmsKeyArnRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EndpointConfigurationSpecForProviderKmsKeyArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -148,6 +156,7 @@ public partial class V1beta1EndpointConfigurationSpecForProviderKmsKeyArnRefPoli
     public V1beta1EndpointConfigurationSpecForProviderKmsKeyArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyArn.</summary>
 public partial class V1beta1EndpointConfigurationSpecForProviderKmsKeyArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -179,6 +188,7 @@ public enum V1beta1EndpointConfigurationSpecForProviderKmsKeyArnSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EndpointConfigurationSpecForProviderKmsKeyArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -192,6 +202,7 @@ public partial class V1beta1EndpointConfigurationSpecForProviderKmsKeyArnSelecto
     public V1beta1EndpointConfigurationSpecForProviderKmsKeyArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyArn.</summary>
 public partial class V1beta1EndpointConfigurationSpecForProviderKmsKeyArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -207,6 +218,7 @@ public partial class V1beta1EndpointConfigurationSpecForProviderKmsKeyArnSelecto
     public V1beta1EndpointConfigurationSpecForProviderKmsKeyArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationSpecForProviderProductionVariantsCoreDumpConfig
 {
     /// <summary>The Amazon S3 bucket to send the core dump to.</summary>
@@ -238,6 +250,7 @@ public enum V1beta1EndpointConfigurationSpecForProviderProductionVariantsModelNa
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EndpointConfigurationSpecForProviderProductionVariantsModelNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -251,6 +264,7 @@ public partial class V1beta1EndpointConfigurationSpecForProviderProductionVarian
     public V1beta1EndpointConfigurationSpecForProviderProductionVariantsModelNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Model in sagemaker to populate modelName.</summary>
 public partial class V1beta1EndpointConfigurationSpecForProviderProductionVariantsModelNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -282,6 +296,7 @@ public enum V1beta1EndpointConfigurationSpecForProviderProductionVariantsModelNa
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EndpointConfigurationSpecForProviderProductionVariantsModelNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -295,6 +310,7 @@ public partial class V1beta1EndpointConfigurationSpecForProviderProductionVarian
     public V1beta1EndpointConfigurationSpecForProviderProductionVariantsModelNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Model in sagemaker to populate modelName.</summary>
 public partial class V1beta1EndpointConfigurationSpecForProviderProductionVariantsModelNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -310,6 +326,7 @@ public partial class V1beta1EndpointConfigurationSpecForProviderProductionVarian
     public V1beta1EndpointConfigurationSpecForProviderProductionVariantsModelNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationSpecForProviderProductionVariantsRoutingConfig
 {
     /// <summary>Sets how the endpoint routes incoming traffic. Valid values are LEAST_OUTSTANDING_REQUESTS and RANDOM. LEAST_OUTSTANDING_REQUESTS routes requests to the specific instances that have more capacity to process them. RANDOM routes each request to a randomly chosen instance.</summary>
@@ -317,6 +334,7 @@ public partial class V1beta1EndpointConfigurationSpecForProviderProductionVarian
     public string? RoutingStrategy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationSpecForProviderProductionVariantsServerlessConfig
 {
     /// <summary>The maximum number of concurrent invocations your serverless endpoint can process. Valid values are between 1 and 200.</summary>
@@ -332,6 +350,7 @@ public partial class V1beta1EndpointConfigurationSpecForProviderProductionVarian
     public double? ProvisionedConcurrency { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationSpecForProviderProductionVariants
 {
     /// <summary>The size of the Elastic Inference (EI) instance to use for the production variant.</summary>
@@ -399,6 +418,7 @@ public partial class V1beta1EndpointConfigurationSpecForProviderProductionVarian
     public double? VolumeSizeInGb { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationSpecForProviderShadowProductionVariantsCoreDumpConfig
 {
     /// <summary>The Amazon S3 bucket to send the core dump to.</summary>
@@ -410,6 +430,7 @@ public partial class V1beta1EndpointConfigurationSpecForProviderShadowProduction
     public string? KmsKeyId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationSpecForProviderShadowProductionVariantsRoutingConfig
 {
     /// <summary>Sets how the endpoint routes incoming traffic. Valid values are LEAST_OUTSTANDING_REQUESTS and RANDOM. LEAST_OUTSTANDING_REQUESTS routes requests to the specific instances that have more capacity to process them. RANDOM routes each request to a randomly chosen instance.</summary>
@@ -417,6 +438,7 @@ public partial class V1beta1EndpointConfigurationSpecForProviderShadowProduction
     public string? RoutingStrategy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationSpecForProviderShadowProductionVariantsServerlessConfig
 {
     /// <summary>The maximum number of concurrent invocations your serverless endpoint can process. Valid values are between 1 and 200.</summary>
@@ -432,6 +454,7 @@ public partial class V1beta1EndpointConfigurationSpecForProviderShadowProduction
     public double? ProvisionedConcurrency { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationSpecForProviderShadowProductionVariants
 {
     /// <summary>The size of the Elastic Inference (EI) instance to use for the production variant.</summary>
@@ -491,6 +514,7 @@ public partial class V1beta1EndpointConfigurationSpecForProviderShadowProduction
     public double? VolumeSizeInGb { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationSpecForProvider
 {
     /// <summary>Specifies configuration for how an endpoint performs asynchronous inference.</summary>
@@ -530,6 +554,7 @@ public partial class V1beta1EndpointConfigurationSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationSpecInitProviderAsyncInferenceConfigClientConfig
 {
     /// <summary>The maximum number of concurrent requests sent by the SageMaker client to the model container. If no value is provided, Amazon SageMaker will choose an optimal value for you.</summary>
@@ -537,6 +562,7 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderAsyncInferenceC
     public double? MaxConcurrentInvocationsPerInstance { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationSpecInitProviderAsyncInferenceConfigOutputConfigNotificationConfig
 {
     /// <summary>Amazon SNS topic to post a notification to when inference fails. If no topic is provided, no notification is sent on failure.</summary>
@@ -552,6 +578,7 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderAsyncInferenceC
     public string? SuccessTopic { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationSpecInitProviderAsyncInferenceConfigOutputConfig
 {
     /// <summary>The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that Amazon SageMaker uses to encrypt the asynchronous inference output in Amazon S3.</summary>
@@ -571,6 +598,7 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderAsyncInferenceC
     public string? S3OutputPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationSpecInitProviderAsyncInferenceConfig
 {
     /// <summary>Configures the behavior of the client used by Amazon SageMaker to interact with the model container during asynchronous inference.</summary>
@@ -582,6 +610,7 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderAsyncInferenceC
     public IList<V1beta1EndpointConfigurationSpecInitProviderAsyncInferenceConfigOutputConfig>? OutputConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationSpecInitProviderDataCaptureConfigCaptureContentTypeHeader
 {
     /// <summary>The CSV content type headers to capture.</summary>
@@ -593,6 +622,7 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderDataCaptureConf
     public IList<string>? JsonContentTypes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationSpecInitProviderDataCaptureConfigCaptureOptions
 {
     /// <summary>Specifies the data to be captured. Should be one of Input or Output.</summary>
@@ -600,6 +630,7 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderDataCaptureConf
     public string? CaptureMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationSpecInitProviderDataCaptureConfig
 {
     /// <summary>The content type headers to capture. Fields are documented below.</summary>
@@ -647,6 +678,7 @@ public enum V1beta1EndpointConfigurationSpecInitProviderKmsKeyArnRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EndpointConfigurationSpecInitProviderKmsKeyArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -660,6 +692,7 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderKmsKeyArnRefPol
     public V1beta1EndpointConfigurationSpecInitProviderKmsKeyArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyArn.</summary>
 public partial class V1beta1EndpointConfigurationSpecInitProviderKmsKeyArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -691,6 +724,7 @@ public enum V1beta1EndpointConfigurationSpecInitProviderKmsKeyArnSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EndpointConfigurationSpecInitProviderKmsKeyArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -704,6 +738,7 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderKmsKeyArnSelect
     public V1beta1EndpointConfigurationSpecInitProviderKmsKeyArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyArn.</summary>
 public partial class V1beta1EndpointConfigurationSpecInitProviderKmsKeyArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -719,6 +754,7 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderKmsKeyArnSelect
     public V1beta1EndpointConfigurationSpecInitProviderKmsKeyArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationSpecInitProviderProductionVariantsCoreDumpConfig
 {
     /// <summary>The Amazon S3 bucket to send the core dump to.</summary>
@@ -750,6 +786,7 @@ public enum V1beta1EndpointConfigurationSpecInitProviderProductionVariantsModelN
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EndpointConfigurationSpecInitProviderProductionVariantsModelNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -763,6 +800,7 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderProductionVaria
     public V1beta1EndpointConfigurationSpecInitProviderProductionVariantsModelNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Model in sagemaker to populate modelName.</summary>
 public partial class V1beta1EndpointConfigurationSpecInitProviderProductionVariantsModelNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -794,6 +832,7 @@ public enum V1beta1EndpointConfigurationSpecInitProviderProductionVariantsModelN
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1EndpointConfigurationSpecInitProviderProductionVariantsModelNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -807,6 +846,7 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderProductionVaria
     public V1beta1EndpointConfigurationSpecInitProviderProductionVariantsModelNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Model in sagemaker to populate modelName.</summary>
 public partial class V1beta1EndpointConfigurationSpecInitProviderProductionVariantsModelNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -822,6 +862,7 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderProductionVaria
     public V1beta1EndpointConfigurationSpecInitProviderProductionVariantsModelNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationSpecInitProviderProductionVariantsRoutingConfig
 {
     /// <summary>Sets how the endpoint routes incoming traffic. Valid values are LEAST_OUTSTANDING_REQUESTS and RANDOM. LEAST_OUTSTANDING_REQUESTS routes requests to the specific instances that have more capacity to process them. RANDOM routes each request to a randomly chosen instance.</summary>
@@ -829,6 +870,7 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderProductionVaria
     public string? RoutingStrategy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationSpecInitProviderProductionVariantsServerlessConfig
 {
     /// <summary>The maximum number of concurrent invocations your serverless endpoint can process. Valid values are between 1 and 200.</summary>
@@ -844,6 +886,7 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderProductionVaria
     public double? ProvisionedConcurrency { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationSpecInitProviderProductionVariants
 {
     /// <summary>The size of the Elastic Inference (EI) instance to use for the production variant.</summary>
@@ -911,6 +954,7 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderProductionVaria
     public double? VolumeSizeInGb { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationSpecInitProviderShadowProductionVariantsCoreDumpConfig
 {
     /// <summary>The Amazon S3 bucket to send the core dump to.</summary>
@@ -922,6 +966,7 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderShadowProductio
     public string? KmsKeyId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationSpecInitProviderShadowProductionVariantsRoutingConfig
 {
     /// <summary>Sets how the endpoint routes incoming traffic. Valid values are LEAST_OUTSTANDING_REQUESTS and RANDOM. LEAST_OUTSTANDING_REQUESTS routes requests to the specific instances that have more capacity to process them. RANDOM routes each request to a randomly chosen instance.</summary>
@@ -929,6 +974,7 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderShadowProductio
     public string? RoutingStrategy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationSpecInitProviderShadowProductionVariantsServerlessConfig
 {
     /// <summary>The maximum number of concurrent invocations your serverless endpoint can process. Valid values are between 1 and 200.</summary>
@@ -944,6 +990,7 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderShadowProductio
     public double? ProvisionedConcurrency { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationSpecInitProviderShadowProductionVariants
 {
     /// <summary>The size of the Elastic Inference (EI) instance to use for the production variant.</summary>
@@ -1003,6 +1050,7 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderShadowProductio
     public double? VolumeSizeInGb { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1EndpointConfigurationSpecInitProvider
 {
     /// <summary>Specifies configuration for how an endpoint performs asynchronous inference.</summary>
@@ -1080,6 +1128,7 @@ public enum V1beta1EndpointConfigurationSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EndpointConfigurationSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1093,6 +1142,7 @@ public partial class V1beta1EndpointConfigurationSpecProviderConfigRefPolicy
     public V1beta1EndpointConfigurationSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1EndpointConfigurationSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1124,6 +1174,7 @@ public enum V1beta1EndpointConfigurationSpecPublishConnectionDetailsToConfigRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1EndpointConfigurationSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1137,6 +1188,7 @@ public partial class V1beta1EndpointConfigurationSpecPublishConnectionDetailsToC
     public V1beta1EndpointConfigurationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1EndpointConfigurationSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1148,6 +1200,7 @@ public partial class V1beta1EndpointConfigurationSpecPublishConnectionDetailsToC
     public V1beta1EndpointConfigurationSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1EndpointConfigurationSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1163,6 +1216,7 @@ public partial class V1beta1EndpointConfigurationSpecPublishConnectionDetailsToM
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1EndpointConfigurationSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1178,6 +1232,7 @@ public partial class V1beta1EndpointConfigurationSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1EndpointConfigurationSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1189,6 +1244,7 @@ public partial class V1beta1EndpointConfigurationSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>EndpointConfigurationSpec defines the desired state of EndpointConfiguration</summary>
 public partial class V1beta1EndpointConfigurationSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1221,6 +1277,7 @@ public partial class V1beta1EndpointConfigurationSpec
     public V1beta1EndpointConfigurationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationStatusAtProviderAsyncInferenceConfigClientConfig
 {
     /// <summary>The maximum number of concurrent requests sent by the SageMaker client to the model container. If no value is provided, Amazon SageMaker will choose an optimal value for you.</summary>
@@ -1228,6 +1285,7 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderAsyncInferenceC
     public double? MaxConcurrentInvocationsPerInstance { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationStatusAtProviderAsyncInferenceConfigOutputConfigNotificationConfig
 {
     /// <summary>Amazon SNS topic to post a notification to when inference fails. If no topic is provided, no notification is sent on failure.</summary>
@@ -1243,6 +1301,7 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderAsyncInferenceC
     public string? SuccessTopic { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationStatusAtProviderAsyncInferenceConfigOutputConfig
 {
     /// <summary>The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that Amazon SageMaker uses to encrypt the asynchronous inference output in Amazon S3.</summary>
@@ -1262,6 +1321,7 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderAsyncInferenceC
     public string? S3OutputPath { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationStatusAtProviderAsyncInferenceConfig
 {
     /// <summary>Configures the behavior of the client used by Amazon SageMaker to interact with the model container during asynchronous inference.</summary>
@@ -1273,6 +1333,7 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderAsyncInferenceC
     public IList<V1beta1EndpointConfigurationStatusAtProviderAsyncInferenceConfigOutputConfig>? OutputConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationStatusAtProviderDataCaptureConfigCaptureContentTypeHeader
 {
     /// <summary>The CSV content type headers to capture.</summary>
@@ -1284,6 +1345,7 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderDataCaptureConf
     public IList<string>? JsonContentTypes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationStatusAtProviderDataCaptureConfigCaptureOptions
 {
     /// <summary>Specifies the data to be captured. Should be one of Input or Output.</summary>
@@ -1291,6 +1353,7 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderDataCaptureConf
     public string? CaptureMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationStatusAtProviderDataCaptureConfig
 {
     /// <summary>The content type headers to capture. Fields are documented below.</summary>
@@ -1318,6 +1381,7 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderDataCaptureConf
     public string? KmsKeyId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationStatusAtProviderProductionVariantsCoreDumpConfig
 {
     /// <summary>The Amazon S3 bucket to send the core dump to.</summary>
@@ -1329,6 +1393,7 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderProductionVaria
     public string? KmsKeyId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationStatusAtProviderProductionVariantsRoutingConfig
 {
     /// <summary>Sets how the endpoint routes incoming traffic. Valid values are LEAST_OUTSTANDING_REQUESTS and RANDOM. LEAST_OUTSTANDING_REQUESTS routes requests to the specific instances that have more capacity to process them. RANDOM routes each request to a randomly chosen instance.</summary>
@@ -1336,6 +1401,7 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderProductionVaria
     public string? RoutingStrategy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationStatusAtProviderProductionVariantsServerlessConfig
 {
     /// <summary>The maximum number of concurrent invocations your serverless endpoint can process. Valid values are between 1 and 200.</summary>
@@ -1351,6 +1417,7 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderProductionVaria
     public double? ProvisionedConcurrency { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationStatusAtProviderProductionVariants
 {
     /// <summary>The size of the Elastic Inference (EI) instance to use for the production variant.</summary>
@@ -1410,6 +1477,7 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderProductionVaria
     public double? VolumeSizeInGb { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationStatusAtProviderShadowProductionVariantsCoreDumpConfig
 {
     /// <summary>The Amazon S3 bucket to send the core dump to.</summary>
@@ -1421,6 +1489,7 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderShadowProductio
     public string? KmsKeyId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationStatusAtProviderShadowProductionVariantsRoutingConfig
 {
     /// <summary>Sets how the endpoint routes incoming traffic. Valid values are LEAST_OUTSTANDING_REQUESTS and RANDOM. LEAST_OUTSTANDING_REQUESTS routes requests to the specific instances that have more capacity to process them. RANDOM routes each request to a randomly chosen instance.</summary>
@@ -1428,6 +1497,7 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderShadowProductio
     public string? RoutingStrategy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationStatusAtProviderShadowProductionVariantsServerlessConfig
 {
     /// <summary>The maximum number of concurrent invocations your serverless endpoint can process. Valid values are between 1 and 200.</summary>
@@ -1443,6 +1513,7 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderShadowProductio
     public double? ProvisionedConcurrency { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationStatusAtProviderShadowProductionVariants
 {
     /// <summary>The size of the Elastic Inference (EI) instance to use for the production variant.</summary>
@@ -1502,6 +1573,7 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderShadowProductio
     public double? VolumeSizeInGb { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1EndpointConfigurationStatusAtProvider
 {
     /// <summary>The Amazon Resource Name (ARN) assigned by AWS to this endpoint configuration.</summary>
@@ -1541,6 +1613,7 @@ public partial class V1beta1EndpointConfigurationStatusAtProvider
     public IDictionary<string, string>? TagsAll { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1EndpointConfigurationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1568,6 +1641,7 @@ public partial class V1beta1EndpointConfigurationStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>EndpointConfigurationStatus defines the observed state of EndpointConfiguration.</summary>
 public partial class V1beta1EndpointConfigurationStatus
 {
     /// <summary></summary>
@@ -1584,6 +1658,7 @@ public partial class V1beta1EndpointConfigurationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>EndpointConfiguration is the Schema for the EndpointConfigurations API. Provides a SageMaker Endpoint Configuration resource.</summary>
 public partial class V1beta1EndpointConfiguration : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1EndpointConfigurationSpec>, IStatus<V1beta1EndpointConfigurationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

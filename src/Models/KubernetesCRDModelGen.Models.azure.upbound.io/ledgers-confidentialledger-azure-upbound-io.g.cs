@@ -18,6 +18,7 @@ public enum V1beta1LedgerSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1LedgerSpecForProviderAzureadBasedServicePrincipal
 {
     /// <summary>Specifies the Ledger Role to grant this AzureAD Service Principal. Possible values are Administrator, Contributor and Reader.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1LedgerSpecForProviderAzureadBasedServicePrincipal
     public string? TenantId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LedgerSpecForProviderCertificateBasedSecurityPrincipal
 {
     /// <summary>Specifies the Ledger Role to grant this Certificate Security Principal. Possible values are Administrator, Contributor and Reader.</summary>
@@ -64,6 +66,7 @@ public enum V1beta1LedgerSpecForProviderResourceGroupNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LedgerSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -77,6 +80,7 @@ public partial class V1beta1LedgerSpecForProviderResourceGroupNameRefPolicy
     public V1beta1LedgerSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1LedgerSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -108,6 +112,7 @@ public enum V1beta1LedgerSpecForProviderResourceGroupNameSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LedgerSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1LedgerSpecForProviderResourceGroupNameSelectorPolicy
     public V1beta1LedgerSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1LedgerSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -136,6 +142,7 @@ public partial class V1beta1LedgerSpecForProviderResourceGroupNameSelector
     public V1beta1LedgerSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LedgerSpecForProvider
 {
     /// <summary>A list of azuread_based_service_principal blocks as defined below.</summary>
@@ -171,6 +178,7 @@ public partial class V1beta1LedgerSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LedgerSpecInitProviderAzureadBasedServicePrincipal
 {
     /// <summary>Specifies the Ledger Role to grant this AzureAD Service Principal. Possible values are Administrator, Contributor and Reader.</summary>
@@ -186,6 +194,7 @@ public partial class V1beta1LedgerSpecInitProviderAzureadBasedServicePrincipal
     public string? TenantId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LedgerSpecInitProviderCertificateBasedSecurityPrincipal
 {
     /// <summary>Specifies the Ledger Role to grant this Certificate Security Principal. Possible values are Administrator, Contributor and Reader.</summary>
@@ -197,6 +206,7 @@ public partial class V1beta1LedgerSpecInitProviderCertificateBasedSecurityPrinci
     public string? PemPublicKey { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1LedgerSpecInitProvider
 {
     /// <summary>A list of azuread_based_service_principal blocks as defined below.</summary>
@@ -262,6 +272,7 @@ public enum V1beta1LedgerSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LedgerSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -275,6 +286,7 @@ public partial class V1beta1LedgerSpecProviderConfigRefPolicy
     public V1beta1LedgerSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1LedgerSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -306,6 +318,7 @@ public enum V1beta1LedgerSpecPublishConnectionDetailsToConfigRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LedgerSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -319,6 +332,7 @@ public partial class V1beta1LedgerSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1LedgerSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1LedgerSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -330,6 +344,7 @@ public partial class V1beta1LedgerSpecPublishConnectionDetailsToConfigRef
     public V1beta1LedgerSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1LedgerSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -345,6 +360,7 @@ public partial class V1beta1LedgerSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1LedgerSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -360,6 +376,7 @@ public partial class V1beta1LedgerSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1LedgerSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -371,6 +388,7 @@ public partial class V1beta1LedgerSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>LedgerSpec defines the desired state of Ledger</summary>
 public partial class V1beta1LedgerSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -403,6 +421,7 @@ public partial class V1beta1LedgerSpec
     public V1beta1LedgerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LedgerStatusAtProviderAzureadBasedServicePrincipal
 {
     /// <summary>Specifies the Ledger Role to grant this AzureAD Service Principal. Possible values are Administrator, Contributor and Reader.</summary>
@@ -418,6 +437,7 @@ public partial class V1beta1LedgerStatusAtProviderAzureadBasedServicePrincipal
     public string? TenantId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LedgerStatusAtProviderCertificateBasedSecurityPrincipal
 {
     /// <summary>Specifies the Ledger Role to grant this Certificate Security Principal. Possible values are Administrator, Contributor and Reader.</summary>
@@ -429,6 +449,7 @@ public partial class V1beta1LedgerStatusAtProviderCertificateBasedSecurityPrinci
     public string? PemPublicKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LedgerStatusAtProvider
 {
     /// <summary>A list of azuread_based_service_principal blocks as defined below.</summary>
@@ -468,6 +489,7 @@ public partial class V1beta1LedgerStatusAtProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1LedgerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -495,6 +517,7 @@ public partial class V1beta1LedgerStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>LedgerStatus defines the observed state of Ledger.</summary>
 public partial class V1beta1LedgerStatus
 {
     /// <summary></summary>
@@ -511,6 +534,7 @@ public partial class V1beta1LedgerStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Ledger is the Schema for the Ledgers API. Manages a Confidential Ledger.</summary>
 public partial class V1beta1Ledger : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LedgerSpec>, IStatus<V1beta1LedgerStatus>
 {
     public const string KubeApiVersion = "v1beta1";

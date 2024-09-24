@@ -38,6 +38,7 @@ public enum V1beta1LinkedServiceKustoSpecForProviderDataFactoryIdRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinkedServiceKustoSpecForProviderDataFactoryIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1LinkedServiceKustoSpecForProviderDataFactoryIdRefPol
     public V1beta1LinkedServiceKustoSpecForProviderDataFactoryIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Factory in datafactory to populate dataFactoryId.</summary>
 public partial class V1beta1LinkedServiceKustoSpecForProviderDataFactoryIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1LinkedServiceKustoSpecForProviderDataFactoryIdSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinkedServiceKustoSpecForProviderDataFactoryIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1LinkedServiceKustoSpecForProviderDataFactoryIdSelect
     public V1beta1LinkedServiceKustoSpecForProviderDataFactoryIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Factory in datafactory to populate dataFactoryId.</summary>
 public partial class V1beta1LinkedServiceKustoSpecForProviderDataFactoryIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1LinkedServiceKustoSpecForProviderKustoDatabaseNameRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinkedServiceKustoSpecForProviderKustoDatabaseNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1LinkedServiceKustoSpecForProviderKustoDatabaseNameRe
     public V1beta1LinkedServiceKustoSpecForProviderKustoDatabaseNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Database in kusto to populate kustoDatabaseName.</summary>
 public partial class V1beta1LinkedServiceKustoSpecForProviderKustoDatabaseNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1LinkedServiceKustoSpecForProviderKustoDatabaseNameSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinkedServiceKustoSpecForProviderKustoDatabaseNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1LinkedServiceKustoSpecForProviderKustoDatabaseNameSe
     public V1beta1LinkedServiceKustoSpecForProviderKustoDatabaseNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Database in kusto to populate kustoDatabaseName.</summary>
 public partial class V1beta1LinkedServiceKustoSpecForProviderKustoDatabaseNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1LinkedServiceKustoSpecForProviderKustoEndpointRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinkedServiceKustoSpecForProviderKustoEndpointRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1LinkedServiceKustoSpecForProviderKustoEndpointRefPol
     public V1beta1LinkedServiceKustoSpecForProviderKustoEndpointRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in kusto to populate kustoEndpoint.</summary>
 public partial class V1beta1LinkedServiceKustoSpecForProviderKustoEndpointRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1LinkedServiceKustoSpecForProviderKustoEndpointSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinkedServiceKustoSpecForProviderKustoEndpointSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1LinkedServiceKustoSpecForProviderKustoEndpointSelect
     public V1beta1LinkedServiceKustoSpecForProviderKustoEndpointSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in kusto to populate kustoEndpoint.</summary>
 public partial class V1beta1LinkedServiceKustoSpecForProviderKustoEndpointSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1LinkedServiceKustoSpecForProviderKustoEndpointSelect
     public V1beta1LinkedServiceKustoSpecForProviderKustoEndpointSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>The service principal key in which to authenticate against the Kusto Database.</summary>
 public partial class V1beta1LinkedServiceKustoSpecForProviderServicePrincipalKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -309,6 +322,7 @@ public partial class V1beta1LinkedServiceKustoSpecForProviderServicePrincipalKey
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinkedServiceKustoSpecForProvider
 {
     /// <summary>A map of additional properties to associate with the Data Factory Linked Service.</summary>
@@ -404,6 +418,7 @@ public enum V1beta1LinkedServiceKustoSpecInitProviderKustoDatabaseNameRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinkedServiceKustoSpecInitProviderKustoDatabaseNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -417,6 +432,7 @@ public partial class V1beta1LinkedServiceKustoSpecInitProviderKustoDatabaseNameR
     public V1beta1LinkedServiceKustoSpecInitProviderKustoDatabaseNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Database in kusto to populate kustoDatabaseName.</summary>
 public partial class V1beta1LinkedServiceKustoSpecInitProviderKustoDatabaseNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -448,6 +464,7 @@ public enum V1beta1LinkedServiceKustoSpecInitProviderKustoDatabaseNameSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinkedServiceKustoSpecInitProviderKustoDatabaseNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -461,6 +478,7 @@ public partial class V1beta1LinkedServiceKustoSpecInitProviderKustoDatabaseNameS
     public V1beta1LinkedServiceKustoSpecInitProviderKustoDatabaseNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Database in kusto to populate kustoDatabaseName.</summary>
 public partial class V1beta1LinkedServiceKustoSpecInitProviderKustoDatabaseNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -496,6 +514,7 @@ public enum V1beta1LinkedServiceKustoSpecInitProviderKustoEndpointRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinkedServiceKustoSpecInitProviderKustoEndpointRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -509,6 +528,7 @@ public partial class V1beta1LinkedServiceKustoSpecInitProviderKustoEndpointRefPo
     public V1beta1LinkedServiceKustoSpecInitProviderKustoEndpointRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Cluster in kusto to populate kustoEndpoint.</summary>
 public partial class V1beta1LinkedServiceKustoSpecInitProviderKustoEndpointRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -540,6 +560,7 @@ public enum V1beta1LinkedServiceKustoSpecInitProviderKustoEndpointSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinkedServiceKustoSpecInitProviderKustoEndpointSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -553,6 +574,7 @@ public partial class V1beta1LinkedServiceKustoSpecInitProviderKustoEndpointSelec
     public V1beta1LinkedServiceKustoSpecInitProviderKustoEndpointSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Cluster in kusto to populate kustoEndpoint.</summary>
 public partial class V1beta1LinkedServiceKustoSpecInitProviderKustoEndpointSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -568,6 +590,7 @@ public partial class V1beta1LinkedServiceKustoSpecInitProviderKustoEndpointSelec
     public V1beta1LinkedServiceKustoSpecInitProviderKustoEndpointSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>The service principal key in which to authenticate against the Kusto Database.</summary>
 public partial class V1beta1LinkedServiceKustoSpecInitProviderServicePrincipalKeySecretRef
 {
     /// <summary>The key to select.</summary>
@@ -583,6 +606,7 @@ public partial class V1beta1LinkedServiceKustoSpecInitProviderServicePrincipalKe
     public string Namespace { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1LinkedServiceKustoSpecInitProvider
 {
     /// <summary>A map of additional properties to associate with the Data Factory Linked Service.</summary>
@@ -688,6 +712,7 @@ public enum V1beta1LinkedServiceKustoSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinkedServiceKustoSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -701,6 +726,7 @@ public partial class V1beta1LinkedServiceKustoSpecProviderConfigRefPolicy
     public V1beta1LinkedServiceKustoSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1LinkedServiceKustoSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -732,6 +758,7 @@ public enum V1beta1LinkedServiceKustoSpecPublishConnectionDetailsToConfigRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinkedServiceKustoSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -745,6 +772,7 @@ public partial class V1beta1LinkedServiceKustoSpecPublishConnectionDetailsToConf
     public V1beta1LinkedServiceKustoSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1LinkedServiceKustoSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -756,6 +784,7 @@ public partial class V1beta1LinkedServiceKustoSpecPublishConnectionDetailsToConf
     public V1beta1LinkedServiceKustoSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1LinkedServiceKustoSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -771,6 +800,7 @@ public partial class V1beta1LinkedServiceKustoSpecPublishConnectionDetailsToMeta
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1LinkedServiceKustoSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -786,6 +816,7 @@ public partial class V1beta1LinkedServiceKustoSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1LinkedServiceKustoSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -797,6 +828,7 @@ public partial class V1beta1LinkedServiceKustoSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>LinkedServiceKustoSpec defines the desired state of LinkedServiceKusto</summary>
 public partial class V1beta1LinkedServiceKustoSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -829,6 +861,7 @@ public partial class V1beta1LinkedServiceKustoSpec
     public V1beta1LinkedServiceKustoSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinkedServiceKustoStatusAtProvider
 {
     /// <summary>A map of additional properties to associate with the Data Factory Linked Service.</summary>
@@ -880,6 +913,7 @@ public partial class V1beta1LinkedServiceKustoStatusAtProvider
     public bool? UseManagedIdentity { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1LinkedServiceKustoStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -907,6 +941,7 @@ public partial class V1beta1LinkedServiceKustoStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>LinkedServiceKustoStatus defines the observed state of LinkedServiceKusto.</summary>
 public partial class V1beta1LinkedServiceKustoStatus
 {
     /// <summary></summary>
@@ -923,6 +958,7 @@ public partial class V1beta1LinkedServiceKustoStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>LinkedServiceKusto is the Schema for the LinkedServiceKustos API. Manages a Linked Service (connection) between a Kusto Cluster and Azure Data Factory.</summary>
 public partial class V1beta1LinkedServiceKusto : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LinkedServiceKustoSpec>, IStatus<V1beta1LinkedServiceKustoStatus>
 {
     public const string KubeApiVersion = "v1beta1";

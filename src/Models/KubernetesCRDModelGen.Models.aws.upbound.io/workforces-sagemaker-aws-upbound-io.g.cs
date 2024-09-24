@@ -38,6 +38,7 @@ public enum V1beta1WorkforceSpecForProviderCognitoConfigClientIdRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkforceSpecForProviderCognitoConfigClientIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1WorkforceSpecForProviderCognitoConfigClientIdRefPoli
     public V1beta1WorkforceSpecForProviderCognitoConfigClientIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserPoolClient in cognitoidp to populate clientId.</summary>
 public partial class V1beta1WorkforceSpecForProviderCognitoConfigClientIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1WorkforceSpecForProviderCognitoConfigClientIdSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkforceSpecForProviderCognitoConfigClientIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1WorkforceSpecForProviderCognitoConfigClientIdSelecto
     public V1beta1WorkforceSpecForProviderCognitoConfigClientIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserPoolClient in cognitoidp to populate clientId.</summary>
 public partial class V1beta1WorkforceSpecForProviderCognitoConfigClientIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1WorkforceSpecForProviderCognitoConfigUserPoolRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkforceSpecForProviderCognitoConfigUserPoolRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1WorkforceSpecForProviderCognitoConfigUserPoolRefPoli
     public V1beta1WorkforceSpecForProviderCognitoConfigUserPoolRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserPoolDomain in cognitoidp to populate userPool.</summary>
 public partial class V1beta1WorkforceSpecForProviderCognitoConfigUserPoolRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1WorkforceSpecForProviderCognitoConfigUserPoolSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkforceSpecForProviderCognitoConfigUserPoolSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1WorkforceSpecForProviderCognitoConfigUserPoolSelecto
     public V1beta1WorkforceSpecForProviderCognitoConfigUserPoolSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserPoolDomain in cognitoidp to populate userPool.</summary>
 public partial class V1beta1WorkforceSpecForProviderCognitoConfigUserPoolSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1WorkforceSpecForProviderCognitoConfigUserPoolSelecto
     public V1beta1WorkforceSpecForProviderCognitoConfigUserPoolSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkforceSpecForProviderCognitoConfig
 {
     /// <summary>The client ID for your Amazon Cognito user pool.</summary>
@@ -229,6 +238,7 @@ public partial class V1beta1WorkforceSpecForProviderCognitoConfig
     public V1beta1WorkforceSpecForProviderCognitoConfigUserPoolSelector? UserPoolSelector { get; set; }
 }
 
+/// <summary>The OIDC IdP client secret used to configure your private workforce.</summary>
 public partial class V1beta1WorkforceSpecForProviderOidcConfigClientSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -244,6 +254,7 @@ public partial class V1beta1WorkforceSpecForProviderOidcConfigClientSecretSecret
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkforceSpecForProviderOidcConfig
 {
     /// <summary>A string to string map of identifiers specific to the custom identity provider (IdP) being used.</summary>
@@ -287,6 +298,7 @@ public partial class V1beta1WorkforceSpecForProviderOidcConfig
     public string? UserInfoEndpoint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkforceSpecForProviderSourceIpConfig
 {
     /// <summary>A list of up to 10 CIDR values.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1WorkforceSpecForProviderSourceIpConfig
     public IList<string>? Cidrs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkforceSpecForProviderWorkforceVpcConfig
 {
     /// <summary>The VPC security group IDs. The security groups must be for the same VPC as specified in the subnet.</summary>
@@ -309,6 +322,7 @@ public partial class V1beta1WorkforceSpecForProviderWorkforceVpcConfig
     public string? VpcId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkforceSpecForProvider
 {
     /// <summary>Use this parameter to configure an Amazon Cognito private workforce. A single Cognito workforce is created using and corresponds to a single Amazon Cognito user pool. Conflicts with oidc_config. see Cognito Config details below.</summary>
@@ -352,6 +366,7 @@ public enum V1beta1WorkforceSpecInitProviderCognitoConfigClientIdRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkforceSpecInitProviderCognitoConfigClientIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -365,6 +380,7 @@ public partial class V1beta1WorkforceSpecInitProviderCognitoConfigClientIdRefPol
     public V1beta1WorkforceSpecInitProviderCognitoConfigClientIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserPoolClient in cognitoidp to populate clientId.</summary>
 public partial class V1beta1WorkforceSpecInitProviderCognitoConfigClientIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -396,6 +412,7 @@ public enum V1beta1WorkforceSpecInitProviderCognitoConfigClientIdSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkforceSpecInitProviderCognitoConfigClientIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -409,6 +426,7 @@ public partial class V1beta1WorkforceSpecInitProviderCognitoConfigClientIdSelect
     public V1beta1WorkforceSpecInitProviderCognitoConfigClientIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserPoolClient in cognitoidp to populate clientId.</summary>
 public partial class V1beta1WorkforceSpecInitProviderCognitoConfigClientIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -444,6 +462,7 @@ public enum V1beta1WorkforceSpecInitProviderCognitoConfigUserPoolRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkforceSpecInitProviderCognitoConfigUserPoolRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -457,6 +476,7 @@ public partial class V1beta1WorkforceSpecInitProviderCognitoConfigUserPoolRefPol
     public V1beta1WorkforceSpecInitProviderCognitoConfigUserPoolRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserPoolDomain in cognitoidp to populate userPool.</summary>
 public partial class V1beta1WorkforceSpecInitProviderCognitoConfigUserPoolRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -488,6 +508,7 @@ public enum V1beta1WorkforceSpecInitProviderCognitoConfigUserPoolSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1WorkforceSpecInitProviderCognitoConfigUserPoolSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -501,6 +522,7 @@ public partial class V1beta1WorkforceSpecInitProviderCognitoConfigUserPoolSelect
     public V1beta1WorkforceSpecInitProviderCognitoConfigUserPoolSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserPoolDomain in cognitoidp to populate userPool.</summary>
 public partial class V1beta1WorkforceSpecInitProviderCognitoConfigUserPoolSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -516,6 +538,7 @@ public partial class V1beta1WorkforceSpecInitProviderCognitoConfigUserPoolSelect
     public V1beta1WorkforceSpecInitProviderCognitoConfigUserPoolSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkforceSpecInitProviderCognitoConfig
 {
     /// <summary>The client ID for your Amazon Cognito user pool.</summary>
@@ -543,6 +566,7 @@ public partial class V1beta1WorkforceSpecInitProviderCognitoConfig
     public V1beta1WorkforceSpecInitProviderCognitoConfigUserPoolSelector? UserPoolSelector { get; set; }
 }
 
+/// <summary>The OIDC IdP client secret used to configure your private workforce.</summary>
 public partial class V1beta1WorkforceSpecInitProviderOidcConfigClientSecretSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -558,6 +582,7 @@ public partial class V1beta1WorkforceSpecInitProviderOidcConfigClientSecretSecre
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkforceSpecInitProviderOidcConfig
 {
     /// <summary>A string to string map of identifiers specific to the custom identity provider (IdP) being used.</summary>
@@ -601,6 +626,7 @@ public partial class V1beta1WorkforceSpecInitProviderOidcConfig
     public string? UserInfoEndpoint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkforceSpecInitProviderSourceIpConfig
 {
     /// <summary>A list of up to 10 CIDR values.</summary>
@@ -608,6 +634,7 @@ public partial class V1beta1WorkforceSpecInitProviderSourceIpConfig
     public IList<string>? Cidrs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkforceSpecInitProviderWorkforceVpcConfig
 {
     /// <summary>The VPC security group IDs. The security groups must be for the same VPC as specified in the subnet.</summary>
@@ -623,6 +650,7 @@ public partial class V1beta1WorkforceSpecInitProviderWorkforceVpcConfig
     public string? VpcId { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1WorkforceSpecInitProvider
 {
     /// <summary>Use this parameter to configure an Amazon Cognito private workforce. A single Cognito workforce is created using and corresponds to a single Amazon Cognito user pool. Conflicts with oidc_config. see Cognito Config details below.</summary>
@@ -684,6 +712,7 @@ public enum V1beta1WorkforceSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkforceSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -697,6 +726,7 @@ public partial class V1beta1WorkforceSpecProviderConfigRefPolicy
     public V1beta1WorkforceSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1WorkforceSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -728,6 +758,7 @@ public enum V1beta1WorkforceSpecPublishConnectionDetailsToConfigRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1WorkforceSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -741,6 +772,7 @@ public partial class V1beta1WorkforceSpecPublishConnectionDetailsToConfigRefPoli
     public V1beta1WorkforceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1WorkforceSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -752,6 +784,7 @@ public partial class V1beta1WorkforceSpecPublishConnectionDetailsToConfigRef
     public V1beta1WorkforceSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1WorkforceSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -767,6 +800,7 @@ public partial class V1beta1WorkforceSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1WorkforceSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -782,6 +816,7 @@ public partial class V1beta1WorkforceSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1WorkforceSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -793,6 +828,7 @@ public partial class V1beta1WorkforceSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>WorkforceSpec defines the desired state of Workforce</summary>
 public partial class V1beta1WorkforceSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -825,6 +861,7 @@ public partial class V1beta1WorkforceSpec
     public V1beta1WorkforceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkforceStatusAtProviderCognitoConfig
 {
     /// <summary>The client ID for your Amazon Cognito user pool.</summary>
@@ -836,6 +873,7 @@ public partial class V1beta1WorkforceStatusAtProviderCognitoConfig
     public string? UserPool { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkforceStatusAtProviderOidcConfig
 {
     /// <summary>A string to string map of identifiers specific to the custom identity provider (IdP) being used.</summary>
@@ -875,6 +913,7 @@ public partial class V1beta1WorkforceStatusAtProviderOidcConfig
     public string? UserInfoEndpoint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkforceStatusAtProviderSourceIpConfig
 {
     /// <summary>A list of up to 10 CIDR values.</summary>
@@ -882,6 +921,7 @@ public partial class V1beta1WorkforceStatusAtProviderSourceIpConfig
     public IList<string>? Cidrs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkforceStatusAtProviderWorkforceVpcConfig
 {
     /// <summary>The VPC security group IDs. The security groups must be for the same VPC as specified in the subnet.</summary>
@@ -901,6 +941,7 @@ public partial class V1beta1WorkforceStatusAtProviderWorkforceVpcConfig
     public string? VpcId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1WorkforceStatusAtProvider
 {
     /// <summary>The Amazon Resource Name (ARN) assigned by AWS to this Workforce.</summary>
@@ -932,6 +973,7 @@ public partial class V1beta1WorkforceStatusAtProvider
     public IList<V1beta1WorkforceStatusAtProviderWorkforceVpcConfig>? WorkforceVpcConfig { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1WorkforceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -959,6 +1001,7 @@ public partial class V1beta1WorkforceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>WorkforceStatus defines the observed state of Workforce.</summary>
 public partial class V1beta1WorkforceStatus
 {
     /// <summary></summary>
@@ -975,6 +1018,7 @@ public partial class V1beta1WorkforceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Workforce is the Schema for the Workforces API. Provides a SageMaker Workforce resource.</summary>
 public partial class V1beta1Workforce : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1WorkforceSpec>, IStatus<V1beta1WorkforceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

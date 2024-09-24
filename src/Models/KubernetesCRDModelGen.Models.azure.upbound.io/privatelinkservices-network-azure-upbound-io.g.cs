@@ -38,6 +38,7 @@ public enum V1beta1PrivateLinkServiceSpecForProviderNatIpConfigurationSubnetIdRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PrivateLinkServiceSpecForProviderNatIpConfigurationSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1PrivateLinkServiceSpecForProviderNatIpConfigurationS
     public V1beta1PrivateLinkServiceSpecForProviderNatIpConfigurationSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1PrivateLinkServiceSpecForProviderNatIpConfigurationSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1PrivateLinkServiceSpecForProviderNatIpConfigurationSubnetIdSe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PrivateLinkServiceSpecForProviderNatIpConfigurationSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1PrivateLinkServiceSpecForProviderNatIpConfigurationS
     public V1beta1PrivateLinkServiceSpecForProviderNatIpConfigurationSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1PrivateLinkServiceSpecForProviderNatIpConfigurationSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1PrivateLinkServiceSpecForProviderNatIpConfigurationS
     public V1beta1PrivateLinkServiceSpecForProviderNatIpConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateLinkServiceSpecForProviderNatIpConfiguration
 {
     /// <summary>Specifies the name which should be used for the NAT IP Configuration. Changing this forces a new resource to be created.</summary>
@@ -161,6 +166,7 @@ public enum V1beta1PrivateLinkServiceSpecForProviderResourceGroupNameRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PrivateLinkServiceSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -174,6 +180,7 @@ public partial class V1beta1PrivateLinkServiceSpecForProviderResourceGroupNameRe
     public V1beta1PrivateLinkServiceSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1PrivateLinkServiceSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -205,6 +212,7 @@ public enum V1beta1PrivateLinkServiceSpecForProviderResourceGroupNameSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PrivateLinkServiceSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -218,6 +226,7 @@ public partial class V1beta1PrivateLinkServiceSpecForProviderResourceGroupNameSe
     public V1beta1PrivateLinkServiceSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1PrivateLinkServiceSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -233,6 +242,7 @@ public partial class V1beta1PrivateLinkServiceSpecForProviderResourceGroupNameSe
     public V1beta1PrivateLinkServiceSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateLinkServiceSpecForProvider
 {
     /// <summary>A list of Subscription UUID/GUID's that will be automatically be able to use this Private Link Service.</summary>
@@ -300,6 +310,7 @@ public enum V1beta1PrivateLinkServiceSpecInitProviderNatIpConfigurationSubnetIdR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PrivateLinkServiceSpecInitProviderNatIpConfigurationSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -313,6 +324,7 @@ public partial class V1beta1PrivateLinkServiceSpecInitProviderNatIpConfiguration
     public V1beta1PrivateLinkServiceSpecInitProviderNatIpConfigurationSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1PrivateLinkServiceSpecInitProviderNatIpConfigurationSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -344,6 +356,7 @@ public enum V1beta1PrivateLinkServiceSpecInitProviderNatIpConfigurationSubnetIdS
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PrivateLinkServiceSpecInitProviderNatIpConfigurationSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -357,6 +370,7 @@ public partial class V1beta1PrivateLinkServiceSpecInitProviderNatIpConfiguration
     public V1beta1PrivateLinkServiceSpecInitProviderNatIpConfigurationSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 public partial class V1beta1PrivateLinkServiceSpecInitProviderNatIpConfigurationSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -372,6 +386,7 @@ public partial class V1beta1PrivateLinkServiceSpecInitProviderNatIpConfiguration
     public V1beta1PrivateLinkServiceSpecInitProviderNatIpConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateLinkServiceSpecInitProviderNatIpConfiguration
 {
     /// <summary>Specifies the name which should be used for the NAT IP Configuration. Changing this forces a new resource to be created.</summary>
@@ -403,6 +418,7 @@ public partial class V1beta1PrivateLinkServiceSpecInitProviderNatIpConfiguration
     public V1beta1PrivateLinkServiceSpecInitProviderNatIpConfigurationSubnetIdSelector? SubnetIdSelector { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1PrivateLinkServiceSpecInitProvider
 {
     /// <summary>A list of Subscription UUID/GUID's that will be automatically be able to use this Private Link Service.</summary>
@@ -480,6 +496,7 @@ public enum V1beta1PrivateLinkServiceSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PrivateLinkServiceSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -493,6 +510,7 @@ public partial class V1beta1PrivateLinkServiceSpecProviderConfigRefPolicy
     public V1beta1PrivateLinkServiceSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1PrivateLinkServiceSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -524,6 +542,7 @@ public enum V1beta1PrivateLinkServiceSpecPublishConnectionDetailsToConfigRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PrivateLinkServiceSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -537,6 +556,7 @@ public partial class V1beta1PrivateLinkServiceSpecPublishConnectionDetailsToConf
     public V1beta1PrivateLinkServiceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1PrivateLinkServiceSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -548,6 +568,7 @@ public partial class V1beta1PrivateLinkServiceSpecPublishConnectionDetailsToConf
     public V1beta1PrivateLinkServiceSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1PrivateLinkServiceSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -563,6 +584,7 @@ public partial class V1beta1PrivateLinkServiceSpecPublishConnectionDetailsToMeta
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1PrivateLinkServiceSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -578,6 +600,7 @@ public partial class V1beta1PrivateLinkServiceSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1PrivateLinkServiceSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -589,6 +612,7 @@ public partial class V1beta1PrivateLinkServiceSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>PrivateLinkServiceSpec defines the desired state of PrivateLinkService</summary>
 public partial class V1beta1PrivateLinkServiceSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -621,6 +645,7 @@ public partial class V1beta1PrivateLinkServiceSpec
     public V1beta1PrivateLinkServiceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateLinkServiceStatusAtProviderNatIpConfiguration
 {
     /// <summary>Specifies the name which should be used for the NAT IP Configuration. Changing this forces a new resource to be created.</summary>
@@ -644,6 +669,7 @@ public partial class V1beta1PrivateLinkServiceStatusAtProviderNatIpConfiguration
     public string? SubnetId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PrivateLinkServiceStatusAtProvider
 {
     /// <summary>A globally unique DNS Name for your Private Link Service. You can use this alias to request a connection to your Private Link Service.</summary>
@@ -691,6 +717,7 @@ public partial class V1beta1PrivateLinkServiceStatusAtProvider
     public IList<string>? VisibilitySubscriptionIds { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1PrivateLinkServiceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -718,6 +745,7 @@ public partial class V1beta1PrivateLinkServiceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>PrivateLinkServiceStatus defines the observed state of PrivateLinkService.</summary>
 public partial class V1beta1PrivateLinkServiceStatus
 {
     /// <summary></summary>
@@ -734,6 +762,7 @@ public partial class V1beta1PrivateLinkServiceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>PrivateLinkService is the Schema for the PrivateLinkServices API. Manages a Private Link Service.</summary>
 public partial class V1beta1PrivateLinkService : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1PrivateLinkServiceSpec>, IStatus<V1beta1PrivateLinkServiceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

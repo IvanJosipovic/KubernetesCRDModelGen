@@ -18,6 +18,7 @@ public enum V1beta1FindingsFilterSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1FindingsFilterSpecForProviderFindingCriteriaCriterion
 {
     /// <summary>The value for the property matches (equals) the specified value. If you specify multiple values, Amazon Macie uses OR logic to join the values.</summary>
@@ -53,6 +54,7 @@ public partial class V1beta1FindingsFilterSpecForProviderFindingCriteriaCriterio
     public IList<string>? Neq { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FindingsFilterSpecForProviderFindingCriteria
 {
     /// <summary>A condition that specifies the property, operator, and one or more values to use to filter the results.  (documented below)</summary>
@@ -60,6 +62,7 @@ public partial class V1beta1FindingsFilterSpecForProviderFindingCriteria
     public IList<V1beta1FindingsFilterSpecForProviderFindingCriteriaCriterion>? Criterion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FindingsFilterSpecForProvider
 {
     /// <summary>The action to perform on findings that meet the filter criteria (finding_criteria). Valid values are: ARCHIVE, suppress (automatically archive) the findings; and, NOOP, don't perform any action on the findings.</summary>
@@ -91,6 +94,7 @@ public partial class V1beta1FindingsFilterSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FindingsFilterSpecInitProviderFindingCriteriaCriterion
 {
     /// <summary>The value for the property matches (equals) the specified value. If you specify multiple values, Amazon Macie uses OR logic to join the values.</summary>
@@ -126,6 +130,7 @@ public partial class V1beta1FindingsFilterSpecInitProviderFindingCriteriaCriteri
     public IList<string>? Neq { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FindingsFilterSpecInitProviderFindingCriteria
 {
     /// <summary>A condition that specifies the property, operator, and one or more values to use to filter the results.  (documented below)</summary>
@@ -133,6 +138,7 @@ public partial class V1beta1FindingsFilterSpecInitProviderFindingCriteria
     public IList<V1beta1FindingsFilterSpecInitProviderFindingCriteriaCriterion>? Criterion { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1FindingsFilterSpecInitProvider
 {
     /// <summary>The action to perform on findings that meet the filter criteria (finding_criteria). Valid values are: ARCHIVE, suppress (automatically archive) the findings; and, NOOP, don't perform any action on the findings.</summary>
@@ -202,6 +208,7 @@ public enum V1beta1FindingsFilterSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FindingsFilterSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -215,6 +222,7 @@ public partial class V1beta1FindingsFilterSpecProviderConfigRefPolicy
     public V1beta1FindingsFilterSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1FindingsFilterSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -246,6 +254,7 @@ public enum V1beta1FindingsFilterSpecPublishConnectionDetailsToConfigRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FindingsFilterSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -259,6 +268,7 @@ public partial class V1beta1FindingsFilterSpecPublishConnectionDetailsToConfigRe
     public V1beta1FindingsFilterSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1FindingsFilterSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -270,6 +280,7 @@ public partial class V1beta1FindingsFilterSpecPublishConnectionDetailsToConfigRe
     public V1beta1FindingsFilterSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1FindingsFilterSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -285,6 +296,7 @@ public partial class V1beta1FindingsFilterSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1FindingsFilterSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -300,6 +312,7 @@ public partial class V1beta1FindingsFilterSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1FindingsFilterSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -311,6 +324,7 @@ public partial class V1beta1FindingsFilterSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>FindingsFilterSpec defines the desired state of FindingsFilter</summary>
 public partial class V1beta1FindingsFilterSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -343,6 +357,7 @@ public partial class V1beta1FindingsFilterSpec
     public V1beta1FindingsFilterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FindingsFilterStatusAtProviderFindingCriteriaCriterion
 {
     /// <summary>The value for the property matches (equals) the specified value. If you specify multiple values, Amazon Macie uses OR logic to join the values.</summary>
@@ -378,6 +393,7 @@ public partial class V1beta1FindingsFilterStatusAtProviderFindingCriteriaCriteri
     public IList<string>? Neq { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FindingsFilterStatusAtProviderFindingCriteria
 {
     /// <summary>A condition that specifies the property, operator, and one or more values to use to filter the results.  (documented below)</summary>
@@ -385,6 +401,7 @@ public partial class V1beta1FindingsFilterStatusAtProviderFindingCriteria
     public IList<V1beta1FindingsFilterStatusAtProviderFindingCriteriaCriterion>? Criterion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FindingsFilterStatusAtProvider
 {
     /// <summary>The action to perform on findings that meet the filter criteria (finding_criteria). Valid values are: ARCHIVE, suppress (automatically archive) the findings; and, NOOP, don't perform any action on the findings.</summary>
@@ -424,6 +441,7 @@ public partial class V1beta1FindingsFilterStatusAtProvider
     public IDictionary<string, string>? TagsAll { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1FindingsFilterStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -451,6 +469,7 @@ public partial class V1beta1FindingsFilterStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>FindingsFilterStatus defines the observed state of FindingsFilter.</summary>
 public partial class V1beta1FindingsFilterStatus
 {
     /// <summary></summary>
@@ -467,6 +486,7 @@ public partial class V1beta1FindingsFilterStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>FindingsFilter is the Schema for the FindingsFilters API. Provides a resource to manage an Amazon Macie Findings Filter.</summary>
 public partial class V1beta1FindingsFilter : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FindingsFilterSpec>, IStatus<V1beta1FindingsFilterStatus>
 {
     public const string KubeApiVersion = "v1beta1";

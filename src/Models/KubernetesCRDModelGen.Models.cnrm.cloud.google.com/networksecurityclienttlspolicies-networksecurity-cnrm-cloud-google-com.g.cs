@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networksecurity.cnrm.cloud.google.com;
+/// <summary>The certificate provider instance specification that will be passed to the data plane, which will be used to load necessary credential information.</summary>
 public partial class V1beta1NetworkSecurityClientTLSPolicySpecClientCertificateCertificateProviderInstance
 {
     /// <summary>Required. Plugin instance name, used to locate and load CertificateProvider instance configuration. Set to "google_cloud_private_spiffe" to use Certificate Authority Service certificate provider instance.</summary>
@@ -15,6 +16,7 @@ public partial class V1beta1NetworkSecurityClientTLSPolicySpecClientCertificateC
     public string PluginInstance { get; set; }
 }
 
+/// <summary>gRPC specific configuration to access the gRPC server to obtain the cert and private key.</summary>
 public partial class V1beta1NetworkSecurityClientTLSPolicySpecClientCertificateGrpcEndpoint
 {
     /// <summary>Required. The target URI of the gRPC endpoint. Only UDS path is supported, and should start with “unix:”.</summary>
@@ -22,6 +24,7 @@ public partial class V1beta1NetworkSecurityClientTLSPolicySpecClientCertificateG
     public string TargetUri { get; set; }
 }
 
+/// <summary>Optional. Defines a mechanism to provision client identity (public and private keys) for peer to peer authentication. The presence of this dictates mTLS.</summary>
 public partial class V1beta1NetworkSecurityClientTLSPolicySpecClientCertificate
 {
     /// <summary>The certificate provider instance specification that will be passed to the data plane, which will be used to load necessary credential information.</summary>
@@ -33,6 +36,7 @@ public partial class V1beta1NetworkSecurityClientTLSPolicySpecClientCertificate
     public V1beta1NetworkSecurityClientTLSPolicySpecClientCertificateGrpcEndpoint? GrpcEndpoint { get; set; }
 }
 
+/// <summary>Immutable. The Project that this resource belongs to.</summary>
 public partial class V1beta1NetworkSecurityClientTLSPolicySpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -48,6 +52,7 @@ public partial class V1beta1NetworkSecurityClientTLSPolicySpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The certificate provider instance specification that will be passed to the data plane, which will be used to load necessary credential information.</summary>
 public partial class V1beta1NetworkSecurityClientTLSPolicySpecServerValidationCaCertificateProviderInstance
 {
     /// <summary>Required. Plugin instance name, used to locate and load CertificateProvider instance configuration. Set to "google_cloud_private_spiffe" to use Certificate Authority Service certificate provider instance.</summary>
@@ -55,6 +60,7 @@ public partial class V1beta1NetworkSecurityClientTLSPolicySpecServerValidationCa
     public string PluginInstance { get; set; }
 }
 
+/// <summary>gRPC specific configuration to access the gRPC server to obtain the CA certificate.</summary>
 public partial class V1beta1NetworkSecurityClientTLSPolicySpecServerValidationCaGrpcEndpoint
 {
     /// <summary>Required. The target URI of the gRPC endpoint. Only UDS path is supported, and should start with “unix:”.</summary>
@@ -62,6 +68,7 @@ public partial class V1beta1NetworkSecurityClientTLSPolicySpecServerValidationCa
     public string TargetUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkSecurityClientTLSPolicySpecServerValidationCa
 {
     /// <summary>The certificate provider instance specification that will be passed to the data plane, which will be used to load necessary credential information.</summary>
@@ -73,6 +80,7 @@ public partial class V1beta1NetworkSecurityClientTLSPolicySpecServerValidationCa
     public V1beta1NetworkSecurityClientTLSPolicySpecServerValidationCaGrpcEndpoint? GrpcEndpoint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkSecurityClientTLSPolicySpec
 {
     /// <summary>Optional. Defines a mechanism to provision client identity (public and private keys) for peer to peer authentication. The presence of this dictates mTLS.</summary>
@@ -104,6 +112,7 @@ public partial class V1beta1NetworkSecurityClientTLSPolicySpec
     public string? Sni { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkSecurityClientTLSPolicyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -127,6 +136,7 @@ public partial class V1beta1NetworkSecurityClientTLSPolicyStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkSecurityClientTLSPolicyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -147,6 +157,7 @@ public partial class V1beta1NetworkSecurityClientTLSPolicyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1NetworkSecurityClientTLSPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1NetworkSecurityClientTLSPolicySpec>, IStatus<V1beta1NetworkSecurityClientTLSPolicyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

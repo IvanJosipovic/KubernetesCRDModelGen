@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datafusion.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1DataFusionInstanceSpecDataprocServiceAccountRef
 {
     /// <summary>User-managed service account to set on Dataproc when Cloud Data Fusion creates Dataproc to run data processing pipelines. This allows users to have fine-grained access control on Dataproc's accesses to cloud resources.  Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1DataFusionInstanceSpecDataprocServiceAccountRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable.</summary>
 public partial class V1beta1DataFusionInstanceSpecNetworkConfigNetworkRef
 {
     /// <summary>Name of the network in the customer project with which the Tenant Project will be peered for executing pipelines. In case of shared VPC where the network resides in another host project the network should specified in the form of projects/{host-project-id}/global/networks/{network}  Allowed value: The Google Cloud resource name of a `ComputeNetwork` resource (format: `projects/{{project}}/global/networks/{{name}}`).</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1DataFusionInstanceSpecNetworkConfigNetworkRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. Network configuration options. These are required when a private Data Fusion instance is to be created.</summary>
 public partial class V1beta1DataFusionInstanceSpecNetworkConfig
 {
     /// <summary>Immutable. The IP range in CIDR notation to use for the managed Data Fusion instance nodes. This range must not overlap with any other ranges used in the customer network.</summary>
@@ -49,6 +52,7 @@ public partial class V1beta1DataFusionInstanceSpecNetworkConfig
     public V1beta1DataFusionInstanceSpecNetworkConfigNetworkRef? NetworkRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFusionInstanceSpec
 {
     /// <summary></summary>
@@ -104,6 +108,7 @@ public partial class V1beta1DataFusionInstanceSpec
     public string? Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFusionInstanceStatusAvailableVersion
 {
     /// <summary>Represents a list of available feature names for a given version.</summary>
@@ -119,6 +124,7 @@ public partial class V1beta1DataFusionInstanceStatusAvailableVersion
     public string? VersionNumber { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFusionInstanceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -142,6 +148,7 @@ public partial class V1beta1DataFusionInstanceStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DataFusionInstanceStatus
 {
     /// <summary>Output only. Endpoint on which the REST APIs is accessible.</summary>
@@ -194,6 +201,7 @@ public partial class V1beta1DataFusionInstanceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1DataFusionInstance : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DataFusionInstanceSpec>, IStatus<V1beta1DataFusionInstanceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

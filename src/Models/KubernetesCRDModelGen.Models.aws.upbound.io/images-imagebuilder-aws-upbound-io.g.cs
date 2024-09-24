@@ -38,6 +38,7 @@ public enum V1beta1ImageSpecForProviderDistributionConfigurationArnRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ImageSpecForProviderDistributionConfigurationArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ImageSpecForProviderDistributionConfigurationArnRefP
     public V1beta1ImageSpecForProviderDistributionConfigurationArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a DistributionConfiguration in imagebuilder to populate distributionConfigurationArn.</summary>
 public partial class V1beta1ImageSpecForProviderDistributionConfigurationArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ImageSpecForProviderDistributionConfigurationArnSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ImageSpecForProviderDistributionConfigurationArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ImageSpecForProviderDistributionConfigurationArnSele
     public V1beta1ImageSpecForProviderDistributionConfigurationArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a DistributionConfiguration in imagebuilder to populate distributionConfigurationArn.</summary>
 public partial class V1beta1ImageSpecForProviderDistributionConfigurationArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1ImageSpecForProviderImageRecipeArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ImageSpecForProviderImageRecipeArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1ImageSpecForProviderImageRecipeArnRefPolicy
     public V1beta1ImageSpecForProviderImageRecipeArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ImageRecipe in imagebuilder to populate imageRecipeArn.</summary>
 public partial class V1beta1ImageSpecForProviderImageRecipeArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1ImageSpecForProviderImageRecipeArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ImageSpecForProviderImageRecipeArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1ImageSpecForProviderImageRecipeArnSelectorPolicy
     public V1beta1ImageSpecForProviderImageRecipeArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ImageRecipe in imagebuilder to populate imageRecipeArn.</summary>
 public partial class V1beta1ImageSpecForProviderImageRecipeArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1ImageSpecForProviderImageRecipeArnSelector
     public V1beta1ImageSpecForProviderImageRecipeArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageSpecForProviderImageScanningConfigurationEcrConfiguration
 {
     /// <summary>Set of tags for Image Builder to apply to the output container image that that Amazon Inspector scans.</summary>
@@ -213,6 +222,7 @@ public partial class V1beta1ImageSpecForProviderImageScanningConfigurationEcrCon
     public string? RepositoryName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageSpecForProviderImageScanningConfiguration
 {
     /// <summary>Configuration block with ECR configuration. Detailed below.</summary>
@@ -224,6 +234,7 @@ public partial class V1beta1ImageSpecForProviderImageScanningConfiguration
     public bool? ImageScanningEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageSpecForProviderImageTestsConfiguration
 {
     /// <summary>Whether image tests are enabled. Defaults to true.</summary>
@@ -255,6 +266,7 @@ public enum V1beta1ImageSpecForProviderInfrastructureConfigurationArnRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ImageSpecForProviderInfrastructureConfigurationArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -268,6 +280,7 @@ public partial class V1beta1ImageSpecForProviderInfrastructureConfigurationArnRe
     public V1beta1ImageSpecForProviderInfrastructureConfigurationArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a InfrastructureConfiguration in imagebuilder to populate infrastructureConfigurationArn.</summary>
 public partial class V1beta1ImageSpecForProviderInfrastructureConfigurationArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -299,6 +312,7 @@ public enum V1beta1ImageSpecForProviderInfrastructureConfigurationArnSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ImageSpecForProviderInfrastructureConfigurationArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -312,6 +326,7 @@ public partial class V1beta1ImageSpecForProviderInfrastructureConfigurationArnSe
     public V1beta1ImageSpecForProviderInfrastructureConfigurationArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a InfrastructureConfiguration in imagebuilder to populate infrastructureConfigurationArn.</summary>
 public partial class V1beta1ImageSpecForProviderInfrastructureConfigurationArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -327,6 +342,7 @@ public partial class V1beta1ImageSpecForProviderInfrastructureConfigurationArnSe
     public V1beta1ImageSpecForProviderInfrastructureConfigurationArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageSpecForProviderWorkflowParameter
 {
     /// <summary>The name of the Workflow parameter.</summary>
@@ -338,6 +354,7 @@ public partial class V1beta1ImageSpecForProviderWorkflowParameter
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageSpecForProviderWorkflow
 {
     /// <summary>The action to take if the workflow fails. Must be one of CONTINUE or ABORT.</summary>
@@ -357,6 +374,7 @@ public partial class V1beta1ImageSpecForProviderWorkflow
     public string? WorkflowArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageSpecForProvider
 {
     /// <summary>- Amazon Resource Name (ARN) of the container recipe.</summary>
@@ -448,6 +466,7 @@ public enum V1beta1ImageSpecInitProviderDistributionConfigurationArnRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ImageSpecInitProviderDistributionConfigurationArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -461,6 +480,7 @@ public partial class V1beta1ImageSpecInitProviderDistributionConfigurationArnRef
     public V1beta1ImageSpecInitProviderDistributionConfigurationArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a DistributionConfiguration in imagebuilder to populate distributionConfigurationArn.</summary>
 public partial class V1beta1ImageSpecInitProviderDistributionConfigurationArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -492,6 +512,7 @@ public enum V1beta1ImageSpecInitProviderDistributionConfigurationArnSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ImageSpecInitProviderDistributionConfigurationArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -505,6 +526,7 @@ public partial class V1beta1ImageSpecInitProviderDistributionConfigurationArnSel
     public V1beta1ImageSpecInitProviderDistributionConfigurationArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a DistributionConfiguration in imagebuilder to populate distributionConfigurationArn.</summary>
 public partial class V1beta1ImageSpecInitProviderDistributionConfigurationArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -540,6 +562,7 @@ public enum V1beta1ImageSpecInitProviderImageRecipeArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ImageSpecInitProviderImageRecipeArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -553,6 +576,7 @@ public partial class V1beta1ImageSpecInitProviderImageRecipeArnRefPolicy
     public V1beta1ImageSpecInitProviderImageRecipeArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ImageRecipe in imagebuilder to populate imageRecipeArn.</summary>
 public partial class V1beta1ImageSpecInitProviderImageRecipeArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -584,6 +608,7 @@ public enum V1beta1ImageSpecInitProviderImageRecipeArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ImageSpecInitProviderImageRecipeArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -597,6 +622,7 @@ public partial class V1beta1ImageSpecInitProviderImageRecipeArnSelectorPolicy
     public V1beta1ImageSpecInitProviderImageRecipeArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ImageRecipe in imagebuilder to populate imageRecipeArn.</summary>
 public partial class V1beta1ImageSpecInitProviderImageRecipeArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -612,6 +638,7 @@ public partial class V1beta1ImageSpecInitProviderImageRecipeArnSelector
     public V1beta1ImageSpecInitProviderImageRecipeArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageSpecInitProviderImageScanningConfigurationEcrConfiguration
 {
     /// <summary>Set of tags for Image Builder to apply to the output container image that that Amazon Inspector scans.</summary>
@@ -623,6 +650,7 @@ public partial class V1beta1ImageSpecInitProviderImageScanningConfigurationEcrCo
     public string? RepositoryName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageSpecInitProviderImageScanningConfiguration
 {
     /// <summary>Configuration block with ECR configuration. Detailed below.</summary>
@@ -634,6 +662,7 @@ public partial class V1beta1ImageSpecInitProviderImageScanningConfiguration
     public bool? ImageScanningEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageSpecInitProviderImageTestsConfiguration
 {
     /// <summary>Whether image tests are enabled. Defaults to true.</summary>
@@ -665,6 +694,7 @@ public enum V1beta1ImageSpecInitProviderInfrastructureConfigurationArnRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ImageSpecInitProviderInfrastructureConfigurationArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -678,6 +708,7 @@ public partial class V1beta1ImageSpecInitProviderInfrastructureConfigurationArnR
     public V1beta1ImageSpecInitProviderInfrastructureConfigurationArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a InfrastructureConfiguration in imagebuilder to populate infrastructureConfigurationArn.</summary>
 public partial class V1beta1ImageSpecInitProviderInfrastructureConfigurationArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -709,6 +740,7 @@ public enum V1beta1ImageSpecInitProviderInfrastructureConfigurationArnSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ImageSpecInitProviderInfrastructureConfigurationArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -722,6 +754,7 @@ public partial class V1beta1ImageSpecInitProviderInfrastructureConfigurationArnS
     public V1beta1ImageSpecInitProviderInfrastructureConfigurationArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a InfrastructureConfiguration in imagebuilder to populate infrastructureConfigurationArn.</summary>
 public partial class V1beta1ImageSpecInitProviderInfrastructureConfigurationArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -737,6 +770,7 @@ public partial class V1beta1ImageSpecInitProviderInfrastructureConfigurationArnS
     public V1beta1ImageSpecInitProviderInfrastructureConfigurationArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageSpecInitProviderWorkflowParameter
 {
     /// <summary>The name of the Workflow parameter.</summary>
@@ -748,6 +782,7 @@ public partial class V1beta1ImageSpecInitProviderWorkflowParameter
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageSpecInitProviderWorkflow
 {
     /// <summary>The action to take if the workflow fails. Must be one of CONTINUE or ABORT.</summary>
@@ -767,6 +802,7 @@ public partial class V1beta1ImageSpecInitProviderWorkflow
     public string? WorkflowArn { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ImageSpecInitProvider
 {
     /// <summary>- Amazon Resource Name (ARN) of the container recipe.</summary>
@@ -876,6 +912,7 @@ public enum V1beta1ImageSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ImageSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -889,6 +926,7 @@ public partial class V1beta1ImageSpecProviderConfigRefPolicy
     public V1beta1ImageSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ImageSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -920,6 +958,7 @@ public enum V1beta1ImageSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ImageSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -933,6 +972,7 @@ public partial class V1beta1ImageSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1ImageSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ImageSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -944,6 +984,7 @@ public partial class V1beta1ImageSpecPublishConnectionDetailsToConfigRef
     public V1beta1ImageSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ImageSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -959,6 +1000,7 @@ public partial class V1beta1ImageSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ImageSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -974,6 +1016,7 @@ public partial class V1beta1ImageSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ImageSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -985,6 +1028,7 @@ public partial class V1beta1ImageSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ImageSpec defines the desired state of Image</summary>
 public partial class V1beta1ImageSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1017,6 +1061,7 @@ public partial class V1beta1ImageSpec
     public V1beta1ImageSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageStatusAtProviderImageScanningConfigurationEcrConfiguration
 {
     /// <summary>Set of tags for Image Builder to apply to the output container image that that Amazon Inspector scans.</summary>
@@ -1028,6 +1073,7 @@ public partial class V1beta1ImageStatusAtProviderImageScanningConfigurationEcrCo
     public string? RepositoryName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageStatusAtProviderImageScanningConfiguration
 {
     /// <summary>Configuration block with ECR configuration. Detailed below.</summary>
@@ -1039,6 +1085,7 @@ public partial class V1beta1ImageStatusAtProviderImageScanningConfiguration
     public bool? ImageScanningEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageStatusAtProviderImageTestsConfiguration
 {
     /// <summary>Whether image tests are enabled. Defaults to true.</summary>
@@ -1050,6 +1097,7 @@ public partial class V1beta1ImageStatusAtProviderImageTestsConfiguration
     public double? TimeoutMinutes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageStatusAtProviderOutputResourcesAmis
 {
     /// <summary>Account identifier of the AMI.</summary>
@@ -1073,6 +1121,7 @@ public partial class V1beta1ImageStatusAtProviderOutputResourcesAmis
     public string? Region { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageStatusAtProviderOutputResourcesContainers
 {
     /// <summary>Set of URIs for created containers.</summary>
@@ -1084,6 +1133,7 @@ public partial class V1beta1ImageStatusAtProviderOutputResourcesContainers
     public string? Region { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageStatusAtProviderOutputResources
 {
     /// <summary>Set of objects with each Amazon Machine Image (AMI) created.</summary>
@@ -1095,6 +1145,7 @@ public partial class V1beta1ImageStatusAtProviderOutputResources
     public IList<V1beta1ImageStatusAtProviderOutputResourcesContainers>? Containers { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageStatusAtProviderWorkflowParameter
 {
     /// <summary>The name of the Workflow parameter.</summary>
@@ -1106,6 +1157,7 @@ public partial class V1beta1ImageStatusAtProviderWorkflowParameter
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageStatusAtProviderWorkflow
 {
     /// <summary>The action to take if the workflow fails. Must be one of CONTINUE or ABORT.</summary>
@@ -1125,6 +1177,7 @@ public partial class V1beta1ImageStatusAtProviderWorkflow
     public string? WorkflowArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ImageStatusAtProvider
 {
     /// <summary>Amazon Resource Name (ARN) of the image.</summary>
@@ -1204,6 +1257,7 @@ public partial class V1beta1ImageStatusAtProvider
     public IList<V1beta1ImageStatusAtProviderWorkflow>? Workflow { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ImageStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1231,6 +1285,7 @@ public partial class V1beta1ImageStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ImageStatus defines the observed state of Image.</summary>
 public partial class V1beta1ImageStatus
 {
     /// <summary></summary>
@@ -1247,6 +1302,7 @@ public partial class V1beta1ImageStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Image is the Schema for the Images API. Manages an Image Builder Image</summary>
 public partial class V1beta1Image : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ImageSpec>, IStatus<V1beta1ImageStatus>
 {
     public const string KubeApiVersion = "v1beta1";

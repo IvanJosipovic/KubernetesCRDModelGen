@@ -38,6 +38,7 @@ public enum V1beta1DatasourceSpecForProviderApiIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DatasourceSpecForProviderApiIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1DatasourceSpecForProviderApiIdRefPolicy
     public V1beta1DatasourceSpecForProviderApiIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a GraphQLAPI in appsync to populate apiId.</summary>
 public partial class V1beta1DatasourceSpecForProviderApiIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1DatasourceSpecForProviderApiIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DatasourceSpecForProviderApiIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1DatasourceSpecForProviderApiIdSelectorPolicy
     public V1beta1DatasourceSpecForProviderApiIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a GraphQLAPI in appsync to populate apiId.</summary>
 public partial class V1beta1DatasourceSpecForProviderApiIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1DatasourceSpecForProviderApiIdSelector
     public V1beta1DatasourceSpecForProviderApiIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasourceSpecForProviderDynamodbConfigDeltaSyncConfig
 {
     /// <summary>The number of minutes that an Item is stored in the data source.</summary>
@@ -145,6 +150,7 @@ public enum V1beta1DatasourceSpecForProviderDynamodbConfigTableNameRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DatasourceSpecForProviderDynamodbConfigTableNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -158,6 +164,7 @@ public partial class V1beta1DatasourceSpecForProviderDynamodbConfigTableNameRefP
     public V1beta1DatasourceSpecForProviderDynamodbConfigTableNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Table in dynamodb to populate tableName.</summary>
 public partial class V1beta1DatasourceSpecForProviderDynamodbConfigTableNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -189,6 +196,7 @@ public enum V1beta1DatasourceSpecForProviderDynamodbConfigTableNameSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DatasourceSpecForProviderDynamodbConfigTableNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1DatasourceSpecForProviderDynamodbConfigTableNameSele
     public V1beta1DatasourceSpecForProviderDynamodbConfigTableNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Table in dynamodb to populate tableName.</summary>
 public partial class V1beta1DatasourceSpecForProviderDynamodbConfigTableNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -217,6 +226,7 @@ public partial class V1beta1DatasourceSpecForProviderDynamodbConfigTableNameSele
     public V1beta1DatasourceSpecForProviderDynamodbConfigTableNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasourceSpecForProviderDynamodbConfig
 {
     /// <summary>The DeltaSyncConfig for a versioned data source. See Delta Sync Config</summary>
@@ -248,6 +258,7 @@ public partial class V1beta1DatasourceSpecForProviderDynamodbConfig
     public bool? Versioned { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasourceSpecForProviderElasticsearchConfig
 {
     /// <summary>HTTP endpoint of the Elasticsearch domain.</summary>
@@ -259,6 +270,7 @@ public partial class V1beta1DatasourceSpecForProviderElasticsearchConfig
     public string? Region { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasourceSpecForProviderEventBridgeConfig
 {
     /// <summary>ARN for the EventBridge bus.</summary>
@@ -266,6 +278,7 @@ public partial class V1beta1DatasourceSpecForProviderEventBridgeConfig
     public string? EventBusArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasourceSpecForProviderHttpConfigAuthorizationConfigAwsIamConfig
 {
     /// <summary>Signing Amazon Web Services Region for IAM authorization.</summary>
@@ -277,6 +290,7 @@ public partial class V1beta1DatasourceSpecForProviderHttpConfigAuthorizationConf
     public string? SigningServiceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasourceSpecForProviderHttpConfigAuthorizationConfig
 {
     /// <summary>Authorization type that the HTTP endpoint requires. Default values is AWS_IAM.</summary>
@@ -288,6 +302,7 @@ public partial class V1beta1DatasourceSpecForProviderHttpConfigAuthorizationConf
     public IList<V1beta1DatasourceSpecForProviderHttpConfigAuthorizationConfigAwsIamConfig>? AwsIamConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasourceSpecForProviderHttpConfig
 {
     /// <summary>Authorization configuration in case the HTTP endpoint requires authorization. See Authorization Config.</summary>
@@ -299,6 +314,7 @@ public partial class V1beta1DatasourceSpecForProviderHttpConfig
     public string? Endpoint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasourceSpecForProviderLambdaConfig
 {
     /// <summary>ARN for the Lambda function.</summary>
@@ -306,6 +322,7 @@ public partial class V1beta1DatasourceSpecForProviderLambdaConfig
     public string? FunctionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasourceSpecForProviderOpensearchserviceConfig
 {
     /// <summary>HTTP endpoint of the Elasticsearch domain.</summary>
@@ -317,6 +334,7 @@ public partial class V1beta1DatasourceSpecForProviderOpensearchserviceConfig
     public string? Region { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasourceSpecForProviderRelationalDatabaseConfigHttpEndpointConfig
 {
     /// <summary>AWS secret store ARN for database credentials.</summary>
@@ -340,6 +358,7 @@ public partial class V1beta1DatasourceSpecForProviderRelationalDatabaseConfigHtt
     public string? Schema { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasourceSpecForProviderRelationalDatabaseConfig
 {
     /// <summary>Amazon RDS HTTP endpoint configuration. See HTTP Endpoint Config.</summary>
@@ -371,6 +390,7 @@ public enum V1beta1DatasourceSpecForProviderServiceRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DatasourceSpecForProviderServiceRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -384,6 +404,7 @@ public partial class V1beta1DatasourceSpecForProviderServiceRoleArnRefPolicy
     public V1beta1DatasourceSpecForProviderServiceRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate serviceRoleArn.</summary>
 public partial class V1beta1DatasourceSpecForProviderServiceRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -415,6 +436,7 @@ public enum V1beta1DatasourceSpecForProviderServiceRoleArnSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DatasourceSpecForProviderServiceRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -428,6 +450,7 @@ public partial class V1beta1DatasourceSpecForProviderServiceRoleArnSelectorPolic
     public V1beta1DatasourceSpecForProviderServiceRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate serviceRoleArn.</summary>
 public partial class V1beta1DatasourceSpecForProviderServiceRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -443,6 +466,7 @@ public partial class V1beta1DatasourceSpecForProviderServiceRoleArnSelector
     public V1beta1DatasourceSpecForProviderServiceRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasourceSpecForProvider
 {
     /// <summary>API ID for the GraphQL API for the data source.</summary>
@@ -510,6 +534,7 @@ public partial class V1beta1DatasourceSpecForProvider
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasourceSpecInitProviderDynamodbConfigDeltaSyncConfig
 {
     /// <summary>The number of minutes that an Item is stored in the data source.</summary>
@@ -545,6 +570,7 @@ public enum V1beta1DatasourceSpecInitProviderDynamodbConfigTableNameRefPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DatasourceSpecInitProviderDynamodbConfigTableNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -558,6 +584,7 @@ public partial class V1beta1DatasourceSpecInitProviderDynamodbConfigTableNameRef
     public V1beta1DatasourceSpecInitProviderDynamodbConfigTableNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Table in dynamodb to populate tableName.</summary>
 public partial class V1beta1DatasourceSpecInitProviderDynamodbConfigTableNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -589,6 +616,7 @@ public enum V1beta1DatasourceSpecInitProviderDynamodbConfigTableNameSelectorPoli
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DatasourceSpecInitProviderDynamodbConfigTableNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -602,6 +630,7 @@ public partial class V1beta1DatasourceSpecInitProviderDynamodbConfigTableNameSel
     public V1beta1DatasourceSpecInitProviderDynamodbConfigTableNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Table in dynamodb to populate tableName.</summary>
 public partial class V1beta1DatasourceSpecInitProviderDynamodbConfigTableNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -617,6 +646,7 @@ public partial class V1beta1DatasourceSpecInitProviderDynamodbConfigTableNameSel
     public V1beta1DatasourceSpecInitProviderDynamodbConfigTableNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasourceSpecInitProviderDynamodbConfig
 {
     /// <summary>The DeltaSyncConfig for a versioned data source. See Delta Sync Config</summary>
@@ -644,6 +674,7 @@ public partial class V1beta1DatasourceSpecInitProviderDynamodbConfig
     public bool? Versioned { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasourceSpecInitProviderElasticsearchConfig
 {
     /// <summary>HTTP endpoint of the Elasticsearch domain.</summary>
@@ -651,6 +682,7 @@ public partial class V1beta1DatasourceSpecInitProviderElasticsearchConfig
     public string? Endpoint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasourceSpecInitProviderEventBridgeConfig
 {
     /// <summary>ARN for the EventBridge bus.</summary>
@@ -658,6 +690,7 @@ public partial class V1beta1DatasourceSpecInitProviderEventBridgeConfig
     public string? EventBusArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasourceSpecInitProviderHttpConfigAuthorizationConfigAwsIamConfig
 {
     /// <summary>Signing Amazon Web Services Region for IAM authorization.</summary>
@@ -669,6 +702,7 @@ public partial class V1beta1DatasourceSpecInitProviderHttpConfigAuthorizationCon
     public string? SigningServiceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasourceSpecInitProviderHttpConfigAuthorizationConfig
 {
     /// <summary>Authorization type that the HTTP endpoint requires. Default values is AWS_IAM.</summary>
@@ -680,6 +714,7 @@ public partial class V1beta1DatasourceSpecInitProviderHttpConfigAuthorizationCon
     public IList<V1beta1DatasourceSpecInitProviderHttpConfigAuthorizationConfigAwsIamConfig>? AwsIamConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasourceSpecInitProviderHttpConfig
 {
     /// <summary>Authorization configuration in case the HTTP endpoint requires authorization. See Authorization Config.</summary>
@@ -691,6 +726,7 @@ public partial class V1beta1DatasourceSpecInitProviderHttpConfig
     public string? Endpoint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasourceSpecInitProviderLambdaConfig
 {
     /// <summary>ARN for the Lambda function.</summary>
@@ -698,6 +734,7 @@ public partial class V1beta1DatasourceSpecInitProviderLambdaConfig
     public string? FunctionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasourceSpecInitProviderOpensearchserviceConfig
 {
     /// <summary>HTTP endpoint of the Elasticsearch domain.</summary>
@@ -705,6 +742,7 @@ public partial class V1beta1DatasourceSpecInitProviderOpensearchserviceConfig
     public string? Endpoint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasourceSpecInitProviderRelationalDatabaseConfigHttpEndpointConfig
 {
     /// <summary>AWS secret store ARN for database credentials.</summary>
@@ -724,6 +762,7 @@ public partial class V1beta1DatasourceSpecInitProviderRelationalDatabaseConfigHt
     public string? Schema { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasourceSpecInitProviderRelationalDatabaseConfig
 {
     /// <summary>Amazon RDS HTTP endpoint configuration. See HTTP Endpoint Config.</summary>
@@ -755,6 +794,7 @@ public enum V1beta1DatasourceSpecInitProviderServiceRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DatasourceSpecInitProviderServiceRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -768,6 +808,7 @@ public partial class V1beta1DatasourceSpecInitProviderServiceRoleArnRefPolicy
     public V1beta1DatasourceSpecInitProviderServiceRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate serviceRoleArn.</summary>
 public partial class V1beta1DatasourceSpecInitProviderServiceRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -799,6 +840,7 @@ public enum V1beta1DatasourceSpecInitProviderServiceRoleArnSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DatasourceSpecInitProviderServiceRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -812,6 +854,7 @@ public partial class V1beta1DatasourceSpecInitProviderServiceRoleArnSelectorPoli
     public V1beta1DatasourceSpecInitProviderServiceRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate serviceRoleArn.</summary>
 public partial class V1beta1DatasourceSpecInitProviderServiceRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -827,6 +870,7 @@ public partial class V1beta1DatasourceSpecInitProviderServiceRoleArnSelector
     public V1beta1DatasourceSpecInitProviderServiceRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1DatasourceSpecInitProvider
 {
     /// <summary>Description of the data source.</summary>
@@ -920,6 +964,7 @@ public enum V1beta1DatasourceSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DatasourceSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -933,6 +978,7 @@ public partial class V1beta1DatasourceSpecProviderConfigRefPolicy
     public V1beta1DatasourceSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1DatasourceSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -964,6 +1010,7 @@ public enum V1beta1DatasourceSpecPublishConnectionDetailsToConfigRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DatasourceSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -977,6 +1024,7 @@ public partial class V1beta1DatasourceSpecPublishConnectionDetailsToConfigRefPol
     public V1beta1DatasourceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1DatasourceSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -988,6 +1036,7 @@ public partial class V1beta1DatasourceSpecPublishConnectionDetailsToConfigRef
     public V1beta1DatasourceSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1DatasourceSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1003,6 +1052,7 @@ public partial class V1beta1DatasourceSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1DatasourceSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1018,6 +1068,7 @@ public partial class V1beta1DatasourceSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1DatasourceSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1029,6 +1080,7 @@ public partial class V1beta1DatasourceSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>DatasourceSpec defines the desired state of Datasource</summary>
 public partial class V1beta1DatasourceSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1061,6 +1113,7 @@ public partial class V1beta1DatasourceSpec
     public V1beta1DatasourceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasourceStatusAtProviderDynamodbConfigDeltaSyncConfig
 {
     /// <summary>The number of minutes that an Item is stored in the data source.</summary>
@@ -1076,6 +1129,7 @@ public partial class V1beta1DatasourceStatusAtProviderDynamodbConfigDeltaSyncCon
     public double? DeltaSyncTableTtl { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasourceStatusAtProviderDynamodbConfig
 {
     /// <summary>The DeltaSyncConfig for a versioned data source. See Delta Sync Config</summary>
@@ -1099,6 +1153,7 @@ public partial class V1beta1DatasourceStatusAtProviderDynamodbConfig
     public bool? Versioned { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasourceStatusAtProviderElasticsearchConfig
 {
     /// <summary>HTTP endpoint of the Elasticsearch domain.</summary>
@@ -1110,6 +1165,7 @@ public partial class V1beta1DatasourceStatusAtProviderElasticsearchConfig
     public string? Region { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasourceStatusAtProviderEventBridgeConfig
 {
     /// <summary>ARN for the EventBridge bus.</summary>
@@ -1117,6 +1173,7 @@ public partial class V1beta1DatasourceStatusAtProviderEventBridgeConfig
     public string? EventBusArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasourceStatusAtProviderHttpConfigAuthorizationConfigAwsIamConfig
 {
     /// <summary>Signing Amazon Web Services Region for IAM authorization.</summary>
@@ -1128,6 +1185,7 @@ public partial class V1beta1DatasourceStatusAtProviderHttpConfigAuthorizationCon
     public string? SigningServiceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasourceStatusAtProviderHttpConfigAuthorizationConfig
 {
     /// <summary>Authorization type that the HTTP endpoint requires. Default values is AWS_IAM.</summary>
@@ -1139,6 +1197,7 @@ public partial class V1beta1DatasourceStatusAtProviderHttpConfigAuthorizationCon
     public IList<V1beta1DatasourceStatusAtProviderHttpConfigAuthorizationConfigAwsIamConfig>? AwsIamConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasourceStatusAtProviderHttpConfig
 {
     /// <summary>Authorization configuration in case the HTTP endpoint requires authorization. See Authorization Config.</summary>
@@ -1150,6 +1209,7 @@ public partial class V1beta1DatasourceStatusAtProviderHttpConfig
     public string? Endpoint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasourceStatusAtProviderLambdaConfig
 {
     /// <summary>ARN for the Lambda function.</summary>
@@ -1157,6 +1217,7 @@ public partial class V1beta1DatasourceStatusAtProviderLambdaConfig
     public string? FunctionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasourceStatusAtProviderOpensearchserviceConfig
 {
     /// <summary>HTTP endpoint of the Elasticsearch domain.</summary>
@@ -1168,6 +1229,7 @@ public partial class V1beta1DatasourceStatusAtProviderOpensearchserviceConfig
     public string? Region { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasourceStatusAtProviderRelationalDatabaseConfigHttpEndpointConfig
 {
     /// <summary>AWS secret store ARN for database credentials.</summary>
@@ -1191,6 +1253,7 @@ public partial class V1beta1DatasourceStatusAtProviderRelationalDatabaseConfigHt
     public string? Schema { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasourceStatusAtProviderRelationalDatabaseConfig
 {
     /// <summary>Amazon RDS HTTP endpoint configuration. See HTTP Endpoint Config.</summary>
@@ -1202,6 +1265,7 @@ public partial class V1beta1DatasourceStatusAtProviderRelationalDatabaseConfig
     public string? SourceType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatasourceStatusAtProvider
 {
     /// <summary>API ID for the GraphQL API for the data source.</summary>
@@ -1257,6 +1321,7 @@ public partial class V1beta1DatasourceStatusAtProvider
     public string? Type { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1DatasourceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1284,6 +1349,7 @@ public partial class V1beta1DatasourceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>DatasourceStatus defines the observed state of Datasource.</summary>
 public partial class V1beta1DatasourceStatus
 {
     /// <summary></summary>
@@ -1300,6 +1366,7 @@ public partial class V1beta1DatasourceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Datasource is the Schema for the Datasources API. Provides an AppSync Data Source.</summary>
 public partial class V1beta1Datasource : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DatasourceSpec>, IStatus<V1beta1DatasourceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

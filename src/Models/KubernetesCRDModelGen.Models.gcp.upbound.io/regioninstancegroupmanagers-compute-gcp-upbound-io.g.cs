@@ -18,6 +18,7 @@ public enum V1beta1RegionInstanceGroupManagerSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderAllInstancesConfig
 {
     /// <summary>, The label key-value pairs that you want to patch onto the instance.</summary>
@@ -49,6 +50,7 @@ public enum V1beta1RegionInstanceGroupManagerSpecForProviderAutoHealingPoliciesH
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderAutoHealingPoliciesHealthCheckRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -62,6 +64,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderAutoHealing
     public V1beta1RegionInstanceGroupManagerSpecForProviderAutoHealingPoliciesHealthCheckRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a HealthCheck in compute to populate healthCheck.</summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderAutoHealingPoliciesHealthCheckRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -93,6 +96,7 @@ public enum V1beta1RegionInstanceGroupManagerSpecForProviderAutoHealingPoliciesH
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderAutoHealingPoliciesHealthCheckSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -106,6 +110,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderAutoHealing
     public V1beta1RegionInstanceGroupManagerSpecForProviderAutoHealingPoliciesHealthCheckSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a HealthCheck in compute to populate healthCheck.</summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderAutoHealingPoliciesHealthCheckSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderAutoHealing
     public V1beta1RegionInstanceGroupManagerSpecForProviderAutoHealingPoliciesHealthCheckSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderAutoHealingPolicies
 {
     /// <summary>The health check resource that signals autohealing.</summary>
@@ -140,6 +146,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderAutoHealing
     public double? InitialDelaySec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderInstanceLifecyclePolicy
 {
     /// <summary>, Default behavior for all instance or health check failures. Valid options are: REPAIR, DO_NOTHING. If DO_NOTHING then instances will not be repaired. If REPAIR (default), then failed instances will be repaired.</summary>
@@ -151,6 +158,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderInstanceLif
     public string? ForceUpdateOnRepair { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderNamedPort
 {
     /// <summary>The name of the port.</summary>
@@ -162,6 +170,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderNamedPort
     public double? Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderStatefulDisk
 {
     /// <summary>, A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are NEVER and ON_PERMANENT_INSTANCE_DELETION. NEVER - detach the disk when the VM is deleted, but do not delete the disk. ON_PERMANENT_INSTANCE_DELETION will delete the stateful disk when the VM is permanently deleted from the instance group. The default is NEVER.</summary>
@@ -173,6 +182,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderStatefulDis
     public string? DeviceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderStatefulExternalIp
 {
     /// <summary>, A value that prescribes what should happen to the external ip when the VM instance is deleted. The available options are NEVER and ON_PERMANENT_INSTANCE_DELETION. NEVER - detach the ip when the VM is deleted, but do not delete the ip. ON_PERMANENT_INSTANCE_DELETION will delete the external ip when the VM is permanently deleted from the instance group.</summary>
@@ -184,6 +194,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderStatefulExt
     public string? InterfaceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderStatefulInternalIp
 {
     /// <summary>, A value that prescribes what should happen to the internal ip when the VM instance is deleted. The available options are NEVER and ON_PERMANENT_INSTANCE_DELETION. NEVER - detach the ip when the VM is deleted, but do not delete the ip. ON_PERMANENT_INSTANCE_DELETION will delete the internal ip when the VM is permanently deleted from the instance group.</summary>
@@ -215,6 +226,7 @@ public enum V1beta1RegionInstanceGroupManagerSpecForProviderTargetPoolsRefsPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderTargetPoolsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -228,6 +240,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderTargetPools
     public V1beta1RegionInstanceGroupManagerSpecForProviderTargetPoolsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderTargetPoolsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -259,6 +272,7 @@ public enum V1beta1RegionInstanceGroupManagerSpecForProviderTargetPoolsSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderTargetPoolsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -272,6 +286,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderTargetPools
     public V1beta1RegionInstanceGroupManagerSpecForProviderTargetPoolsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of TargetPool in compute to populate targetPools.</summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderTargetPoolsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -287,6 +302,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderTargetPools
     public V1beta1RegionInstanceGroupManagerSpecForProviderTargetPoolsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderUpdatePolicy
 {
     /// <summary>- The instance redistribution policy for regional managed instance groups. Valid values are: "PROACTIVE", "NONE". If PROACTIVE (default), the group attempts to maintain an even distribution of VM instances across zones in the region. If NONE, proactive redistribution is disabled.</summary>
@@ -346,6 +362,7 @@ public enum V1beta1RegionInstanceGroupManagerSpecForProviderVersionInstanceTempl
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderVersionInstanceTemplateRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -359,6 +376,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderVersionInst
     public V1beta1RegionInstanceGroupManagerSpecForProviderVersionInstanceTemplateRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a InstanceTemplate in compute to populate instanceTemplate.</summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderVersionInstanceTemplateRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -390,6 +408,7 @@ public enum V1beta1RegionInstanceGroupManagerSpecForProviderVersionInstanceTempl
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderVersionInstanceTemplateSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -403,6 +422,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderVersionInst
     public V1beta1RegionInstanceGroupManagerSpecForProviderVersionInstanceTemplateSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a InstanceTemplate in compute to populate instanceTemplate.</summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderVersionInstanceTemplateSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -418,6 +438,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderVersionInst
     public V1beta1RegionInstanceGroupManagerSpecForProviderVersionInstanceTemplateSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderVersionTargetSize
 {
     /// <summary>, The number of instances which are managed for this version. Conflicts with percent.</summary>
@@ -429,6 +450,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderVersionTarg
     public double? Percent { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderVersion
 {
     /// <summary>- The full URL to an instance template from which all new instances of this version will be created.</summary>
@@ -452,6 +474,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderVersion
     public IList<V1beta1RegionInstanceGroupManagerSpecForProviderVersionTargetSize>? TargetSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecForProvider
 {
     /// <summary>Properties to set on all instances in the group. After setting allInstancesConfig on the group, you must update the group's instances to apply the configuration.</summary>
@@ -547,6 +570,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProvider
     public string? WaitForInstancesStatus { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderAllInstancesConfig
 {
     /// <summary>, The label key-value pairs that you want to patch onto the instance.</summary>
@@ -578,6 +602,7 @@ public enum V1beta1RegionInstanceGroupManagerSpecInitProviderAutoHealingPolicies
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderAutoHealingPoliciesHealthCheckRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -591,6 +616,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderAutoHealin
     public V1beta1RegionInstanceGroupManagerSpecInitProviderAutoHealingPoliciesHealthCheckRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a HealthCheck in compute to populate healthCheck.</summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderAutoHealingPoliciesHealthCheckRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -622,6 +648,7 @@ public enum V1beta1RegionInstanceGroupManagerSpecInitProviderAutoHealingPolicies
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderAutoHealingPoliciesHealthCheckSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -635,6 +662,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderAutoHealin
     public V1beta1RegionInstanceGroupManagerSpecInitProviderAutoHealingPoliciesHealthCheckSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a HealthCheck in compute to populate healthCheck.</summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderAutoHealingPoliciesHealthCheckSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -650,6 +678,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderAutoHealin
     public V1beta1RegionInstanceGroupManagerSpecInitProviderAutoHealingPoliciesHealthCheckSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderAutoHealingPolicies
 {
     /// <summary>The health check resource that signals autohealing.</summary>
@@ -669,6 +698,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderAutoHealin
     public double? InitialDelaySec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderInstanceLifecyclePolicy
 {
     /// <summary>, Default behavior for all instance or health check failures. Valid options are: REPAIR, DO_NOTHING. If DO_NOTHING then instances will not be repaired. If REPAIR (default), then failed instances will be repaired.</summary>
@@ -680,6 +710,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderInstanceLi
     public string? ForceUpdateOnRepair { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderNamedPort
 {
     /// <summary>The name of the port.</summary>
@@ -691,6 +722,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderNamedPort
     public double? Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderStatefulDisk
 {
     /// <summary>, A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are NEVER and ON_PERMANENT_INSTANCE_DELETION. NEVER - detach the disk when the VM is deleted, but do not delete the disk. ON_PERMANENT_INSTANCE_DELETION will delete the stateful disk when the VM is permanently deleted from the instance group. The default is NEVER.</summary>
@@ -702,6 +734,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderStatefulDi
     public string? DeviceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderStatefulExternalIp
 {
     /// <summary>, A value that prescribes what should happen to the external ip when the VM instance is deleted. The available options are NEVER and ON_PERMANENT_INSTANCE_DELETION. NEVER - detach the ip when the VM is deleted, but do not delete the ip. ON_PERMANENT_INSTANCE_DELETION will delete the external ip when the VM is permanently deleted from the instance group.</summary>
@@ -713,6 +746,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderStatefulEx
     public string? InterfaceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderStatefulInternalIp
 {
     /// <summary>, A value that prescribes what should happen to the internal ip when the VM instance is deleted. The available options are NEVER and ON_PERMANENT_INSTANCE_DELETION. NEVER - detach the ip when the VM is deleted, but do not delete the ip. ON_PERMANENT_INSTANCE_DELETION will delete the internal ip when the VM is permanently deleted from the instance group.</summary>
@@ -744,6 +778,7 @@ public enum V1beta1RegionInstanceGroupManagerSpecInitProviderTargetPoolsRefsPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderTargetPoolsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -757,6 +792,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderTargetPool
     public V1beta1RegionInstanceGroupManagerSpecInitProviderTargetPoolsRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderTargetPoolsRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -788,6 +824,7 @@ public enum V1beta1RegionInstanceGroupManagerSpecInitProviderTargetPoolsSelector
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderTargetPoolsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -801,6 +838,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderTargetPool
     public V1beta1RegionInstanceGroupManagerSpecInitProviderTargetPoolsSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of TargetPool in compute to populate targetPools.</summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderTargetPoolsSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -816,6 +854,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderTargetPool
     public V1beta1RegionInstanceGroupManagerSpecInitProviderTargetPoolsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderUpdatePolicy
 {
     /// <summary>- The instance redistribution policy for regional managed instance groups. Valid values are: "PROACTIVE", "NONE". If PROACTIVE (default), the group attempts to maintain an even distribution of VM instances across zones in the region. If NONE, proactive redistribution is disabled.</summary>
@@ -875,6 +914,7 @@ public enum V1beta1RegionInstanceGroupManagerSpecInitProviderVersionInstanceTemp
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderVersionInstanceTemplateRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -888,6 +928,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderVersionIns
     public V1beta1RegionInstanceGroupManagerSpecInitProviderVersionInstanceTemplateRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a InstanceTemplate in compute to populate instanceTemplate.</summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderVersionInstanceTemplateRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -919,6 +960,7 @@ public enum V1beta1RegionInstanceGroupManagerSpecInitProviderVersionInstanceTemp
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderVersionInstanceTemplateSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -932,6 +974,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderVersionIns
     public V1beta1RegionInstanceGroupManagerSpecInitProviderVersionInstanceTemplateSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a InstanceTemplate in compute to populate instanceTemplate.</summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderVersionInstanceTemplateSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -947,6 +990,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderVersionIns
     public V1beta1RegionInstanceGroupManagerSpecInitProviderVersionInstanceTemplateSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderVersionTargetSize
 {
     /// <summary>, The number of instances which are managed for this version. Conflicts with percent.</summary>
@@ -958,6 +1002,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderVersionTar
     public double? Percent { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderVersion
 {
     /// <summary>- The full URL to an instance template from which all new instances of this version will be created.</summary>
@@ -981,6 +1026,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderVersion
     public IList<V1beta1RegionInstanceGroupManagerSpecInitProviderVersionTargetSize>? TargetSize { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProvider
 {
     /// <summary>Properties to set on all instances in the group. After setting allInstancesConfig on the group, you must update the group's instances to apply the configuration.</summary>
@@ -1118,6 +1164,7 @@ public enum V1beta1RegionInstanceGroupManagerSpecProviderConfigRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1131,6 +1178,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecProviderConfigRefPolic
     public V1beta1RegionInstanceGroupManagerSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1162,6 +1210,7 @@ public enum V1beta1RegionInstanceGroupManagerSpecPublishConnectionDetailsToConfi
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1175,6 +1224,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecPublishConnectionDetai
     public V1beta1RegionInstanceGroupManagerSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1186,6 +1236,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecPublishConnectionDetai
     public V1beta1RegionInstanceGroupManagerSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1201,6 +1252,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecPublishConnectionDetai
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1216,6 +1268,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecPublishConnectionDetai
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1RegionInstanceGroupManagerSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1227,6 +1280,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpecWriteConnectionSecretT
     public string Namespace { get; set; }
 }
 
+/// <summary>RegionInstanceGroupManagerSpec defines the desired state of RegionInstanceGroupManager</summary>
 public partial class V1beta1RegionInstanceGroupManagerSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1259,6 +1313,7 @@ public partial class V1beta1RegionInstanceGroupManagerSpec
     public V1beta1RegionInstanceGroupManagerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderAllInstancesConfig
 {
     /// <summary>, The label key-value pairs that you want to patch onto the instance.</summary>
@@ -1270,6 +1325,7 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderAllInstanc
     public IDictionary<string, string>? Metadata { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderAutoHealingPolicies
 {
     /// <summary>The health check resource that signals autohealing.</summary>
@@ -1281,6 +1337,7 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderAutoHealin
     public double? InitialDelaySec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderInstanceLifecyclePolicy
 {
     /// <summary>, Default behavior for all instance or health check failures. Valid options are: REPAIR, DO_NOTHING. If DO_NOTHING then instances will not be repaired. If REPAIR (default), then failed instances will be repaired.</summary>
@@ -1292,6 +1349,7 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderInstanceLi
     public string? ForceUpdateOnRepair { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderNamedPort
 {
     /// <summary>The name of the port.</summary>
@@ -1303,6 +1361,7 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderNamedPort
     public double? Port { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderStatefulDisk
 {
     /// <summary>, A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are NEVER and ON_PERMANENT_INSTANCE_DELETION. NEVER - detach the disk when the VM is deleted, but do not delete the disk. ON_PERMANENT_INSTANCE_DELETION will delete the stateful disk when the VM is permanently deleted from the instance group. The default is NEVER.</summary>
@@ -1314,6 +1373,7 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderStatefulDi
     public string? DeviceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderStatefulExternalIp
 {
     /// <summary>, A value that prescribes what should happen to the external ip when the VM instance is deleted. The available options are NEVER and ON_PERMANENT_INSTANCE_DELETION. NEVER - detach the ip when the VM is deleted, but do not delete the ip. ON_PERMANENT_INSTANCE_DELETION will delete the external ip when the VM is permanently deleted from the instance group.</summary>
@@ -1325,6 +1385,7 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderStatefulEx
     public string? InterfaceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderStatefulInternalIp
 {
     /// <summary>, A value that prescribes what should happen to the internal ip when the VM instance is deleted. The available options are NEVER and ON_PERMANENT_INSTANCE_DELETION. NEVER - detach the ip when the VM is deleted, but do not delete the ip. ON_PERMANENT_INSTANCE_DELETION will delete the internal ip when the VM is permanently deleted from the instance group.</summary>
@@ -1336,6 +1397,7 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderStatefulIn
     public string? InterfaceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderStatusAllInstancesConfig
 {
     /// <summary>Current all-instances configuration revision. This value is in RFC3339 text format.</summary>
@@ -1347,6 +1409,7 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderStatusAllI
     public bool? Effective { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderStatusStatefulPerInstanceConfigs
 {
     /// <summary>A bit indicating if all of the group's per-instance configs (listed in the output of a listPerInstanceConfigs API call) have status EFFECTIVE or there are no per-instance-configs.</summary>
@@ -1354,6 +1417,7 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderStatusStat
     public bool? AllEffective { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderStatusStateful
 {
     /// <summary>A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions.</summary>
@@ -1365,6 +1429,7 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderStatusStat
     public IList<V1beta1RegionInstanceGroupManagerStatusAtProviderStatusStatefulPerInstanceConfigs>? PerInstanceConfigs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderStatusVersionTarget
 {
     /// <summary></summary>
@@ -1372,6 +1437,7 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderStatusVers
     public bool? IsReached { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderStatus
 {
     /// <summary>Properties to set on all instances in the group. After setting allInstancesConfig on the group, you must update the group's instances to apply the configuration.</summary>
@@ -1391,6 +1457,7 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderStatus
     public IList<V1beta1RegionInstanceGroupManagerStatusAtProviderStatusVersionTarget>? VersionTarget { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderUpdatePolicy
 {
     /// <summary>- The instance redistribution policy for regional managed instance groups. Valid values are: "PROACTIVE", "NONE". If PROACTIVE (default), the group attempts to maintain an even distribution of VM instances across zones in the region. If NONE, proactive redistribution is disabled.</summary>
@@ -1430,6 +1497,7 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderUpdatePoli
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderVersionTargetSize
 {
     /// <summary>, The number of instances which are managed for this version. Conflicts with percent.</summary>
@@ -1441,6 +1509,7 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderVersionTar
     public double? Percent { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderVersion
 {
     /// <summary>- The full URL to an instance template from which all new instances of this version will be created.</summary>
@@ -1456,6 +1525,7 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderVersion
     public IList<V1beta1RegionInstanceGroupManagerStatusAtProviderVersionTargetSize>? TargetSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RegionInstanceGroupManagerStatusAtProvider
 {
     /// <summary>Properties to set on all instances in the group. After setting allInstancesConfig on the group, you must update the group's instances to apply the configuration.</summary>
@@ -1567,6 +1637,7 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProvider
     public string? WaitForInstancesStatus { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1RegionInstanceGroupManagerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1594,6 +1665,7 @@ public partial class V1beta1RegionInstanceGroupManagerStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>RegionInstanceGroupManagerStatus defines the observed state of RegionInstanceGroupManager.</summary>
 public partial class V1beta1RegionInstanceGroupManagerStatus
 {
     /// <summary></summary>
@@ -1610,6 +1682,7 @@ public partial class V1beta1RegionInstanceGroupManagerStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>RegionInstanceGroupManager is the Schema for the RegionInstanceGroupManagers API. Manages an Regional Instance Group within GCE.</summary>
 public partial class V1beta1RegionInstanceGroupManager : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1RegionInstanceGroupManagerSpec>, IStatus<V1beta1RegionInstanceGroupManagerStatus>
 {
     public const string KubeApiVersion = "v1beta1";

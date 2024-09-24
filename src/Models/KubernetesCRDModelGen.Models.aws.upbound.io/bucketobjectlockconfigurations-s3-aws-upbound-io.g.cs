@@ -38,6 +38,7 @@ public enum V1beta1BucketObjectLockConfigurationSpecForProviderBucketRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketObjectLockConfigurationSpecForProviderBucketRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1BucketObjectLockConfigurationSpecForProviderBucketRe
     public V1beta1BucketObjectLockConfigurationSpecForProviderBucketRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1BucketObjectLockConfigurationSpecForProviderBucketRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1BucketObjectLockConfigurationSpecForProviderBucketSelectorPol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BucketObjectLockConfigurationSpecForProviderBucketSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1BucketObjectLockConfigurationSpecForProviderBucketSe
     public V1beta1BucketObjectLockConfigurationSpecForProviderBucketSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1BucketObjectLockConfigurationSpecForProviderBucketSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1BucketObjectLockConfigurationSpecForProviderBucketSe
     public V1beta1BucketObjectLockConfigurationSpecForProviderBucketSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketObjectLockConfigurationSpecForProviderRuleDefaultRetention
 {
     /// <summary>Number of days that you want to specify for the default retention period.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1BucketObjectLockConfigurationSpecForProviderRuleDefa
     public double? Years { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketObjectLockConfigurationSpecForProviderRule
 {
     /// <summary>Configuration block for specifying the default Object Lock retention settings for new objects placed in the specified bucket. See below.</summary>
@@ -132,6 +138,7 @@ public partial class V1beta1BucketObjectLockConfigurationSpecForProviderRule
     public IList<V1beta1BucketObjectLockConfigurationSpecForProviderRuleDefaultRetention>? DefaultRetention { get; set; }
 }
 
+/// <summary>Token to allow Object Lock to be enabled for an existing bucket. You must contact AWS support for the bucket's "Object Lock token". The token is generated in the back-end when versioning is enabled on a bucket. For more details on versioning, see the aws_s3_bucket_versioning resource.</summary>
 public partial class V1beta1BucketObjectLockConfigurationSpecForProviderTokenSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -147,6 +154,7 @@ public partial class V1beta1BucketObjectLockConfigurationSpecForProviderTokenSec
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketObjectLockConfigurationSpecForProvider
 {
     /// <summary>Name of the bucket.</summary>
@@ -202,6 +210,7 @@ public enum V1beta1BucketObjectLockConfigurationSpecInitProviderBucketRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketObjectLockConfigurationSpecInitProviderBucketRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -215,6 +224,7 @@ public partial class V1beta1BucketObjectLockConfigurationSpecInitProviderBucketR
     public V1beta1BucketObjectLockConfigurationSpecInitProviderBucketRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1BucketObjectLockConfigurationSpecInitProviderBucketRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -246,6 +256,7 @@ public enum V1beta1BucketObjectLockConfigurationSpecInitProviderBucketSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1BucketObjectLockConfigurationSpecInitProviderBucketSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -259,6 +270,7 @@ public partial class V1beta1BucketObjectLockConfigurationSpecInitProviderBucketS
     public V1beta1BucketObjectLockConfigurationSpecInitProviderBucketSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1BucketObjectLockConfigurationSpecInitProviderBucketSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -274,6 +286,7 @@ public partial class V1beta1BucketObjectLockConfigurationSpecInitProviderBucketS
     public V1beta1BucketObjectLockConfigurationSpecInitProviderBucketSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketObjectLockConfigurationSpecInitProviderRuleDefaultRetention
 {
     /// <summary>Number of days that you want to specify for the default retention period.</summary>
@@ -289,6 +302,7 @@ public partial class V1beta1BucketObjectLockConfigurationSpecInitProviderRuleDef
     public double? Years { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketObjectLockConfigurationSpecInitProviderRule
 {
     /// <summary>Configuration block for specifying the default Object Lock retention settings for new objects placed in the specified bucket. See below.</summary>
@@ -296,6 +310,7 @@ public partial class V1beta1BucketObjectLockConfigurationSpecInitProviderRule
     public IList<V1beta1BucketObjectLockConfigurationSpecInitProviderRuleDefaultRetention>? DefaultRetention { get; set; }
 }
 
+/// <summary>Token to allow Object Lock to be enabled for an existing bucket. You must contact AWS support for the bucket's "Object Lock token". The token is generated in the back-end when versioning is enabled on a bucket. For more details on versioning, see the aws_s3_bucket_versioning resource.</summary>
 public partial class V1beta1BucketObjectLockConfigurationSpecInitProviderTokenSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -311,6 +326,7 @@ public partial class V1beta1BucketObjectLockConfigurationSpecInitProviderTokenSe
     public string Namespace { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1BucketObjectLockConfigurationSpecInitProvider
 {
     /// <summary>Name of the bucket.</summary>
@@ -384,6 +400,7 @@ public enum V1beta1BucketObjectLockConfigurationSpecProviderConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketObjectLockConfigurationSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -397,6 +414,7 @@ public partial class V1beta1BucketObjectLockConfigurationSpecProviderConfigRefPo
     public V1beta1BucketObjectLockConfigurationSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1BucketObjectLockConfigurationSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -428,6 +446,7 @@ public enum V1beta1BucketObjectLockConfigurationSpecPublishConnectionDetailsToCo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BucketObjectLockConfigurationSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -441,6 +460,7 @@ public partial class V1beta1BucketObjectLockConfigurationSpecPublishConnectionDe
     public V1beta1BucketObjectLockConfigurationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1BucketObjectLockConfigurationSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -452,6 +472,7 @@ public partial class V1beta1BucketObjectLockConfigurationSpecPublishConnectionDe
     public V1beta1BucketObjectLockConfigurationSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1BucketObjectLockConfigurationSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -467,6 +488,7 @@ public partial class V1beta1BucketObjectLockConfigurationSpecPublishConnectionDe
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1BucketObjectLockConfigurationSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -482,6 +504,7 @@ public partial class V1beta1BucketObjectLockConfigurationSpecPublishConnectionDe
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1BucketObjectLockConfigurationSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -493,6 +516,7 @@ public partial class V1beta1BucketObjectLockConfigurationSpecWriteConnectionSecr
     public string Namespace { get; set; }
 }
 
+/// <summary>BucketObjectLockConfigurationSpec defines the desired state of BucketObjectLockConfiguration</summary>
 public partial class V1beta1BucketObjectLockConfigurationSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -525,6 +549,7 @@ public partial class V1beta1BucketObjectLockConfigurationSpec
     public V1beta1BucketObjectLockConfigurationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketObjectLockConfigurationStatusAtProviderRuleDefaultRetention
 {
     /// <summary>Number of days that you want to specify for the default retention period.</summary>
@@ -540,6 +565,7 @@ public partial class V1beta1BucketObjectLockConfigurationStatusAtProviderRuleDef
     public double? Years { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketObjectLockConfigurationStatusAtProviderRule
 {
     /// <summary>Configuration block for specifying the default Object Lock retention settings for new objects placed in the specified bucket. See below.</summary>
@@ -547,6 +573,7 @@ public partial class V1beta1BucketObjectLockConfigurationStatusAtProviderRule
     public IList<V1beta1BucketObjectLockConfigurationStatusAtProviderRuleDefaultRetention>? DefaultRetention { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BucketObjectLockConfigurationStatusAtProvider
 {
     /// <summary>Name of the bucket.</summary>
@@ -570,6 +597,7 @@ public partial class V1beta1BucketObjectLockConfigurationStatusAtProvider
     public IList<V1beta1BucketObjectLockConfigurationStatusAtProviderRule>? Rule { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1BucketObjectLockConfigurationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -597,6 +625,7 @@ public partial class V1beta1BucketObjectLockConfigurationStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>BucketObjectLockConfigurationStatus defines the observed state of BucketObjectLockConfiguration.</summary>
 public partial class V1beta1BucketObjectLockConfigurationStatus
 {
     /// <summary></summary>
@@ -613,6 +642,7 @@ public partial class V1beta1BucketObjectLockConfigurationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>BucketObjectLockConfiguration is the Schema for the BucketObjectLockConfigurations API. Provides an S3 bucket Object Lock configuration resource.</summary>
 public partial class V1beta1BucketObjectLockConfiguration : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BucketObjectLockConfigurationSpec>, IStatus<V1beta1BucketObjectLockConfigurationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

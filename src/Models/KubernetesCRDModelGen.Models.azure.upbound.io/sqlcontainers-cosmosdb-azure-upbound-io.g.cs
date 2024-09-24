@@ -38,6 +38,7 @@ public enum V1beta1SQLContainerSpecForProviderAccountNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SQLContainerSpecForProviderAccountNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1SQLContainerSpecForProviderAccountNameRefPolicy
     public V1beta1SQLContainerSpecForProviderAccountNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in cosmosdb to populate accountName.</summary>
 public partial class V1beta1SQLContainerSpecForProviderAccountNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1SQLContainerSpecForProviderAccountNameSelectorPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SQLContainerSpecForProviderAccountNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1SQLContainerSpecForProviderAccountNameSelectorPolicy
     public V1beta1SQLContainerSpecForProviderAccountNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in cosmosdb to populate accountName.</summary>
 public partial class V1beta1SQLContainerSpecForProviderAccountNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1SQLContainerSpecForProviderAccountNameSelector
     public V1beta1SQLContainerSpecForProviderAccountNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLContainerSpecForProviderAutoscaleSettings
 {
     /// <summary>The maximum throughput of the SQL container (RU/s). Must be between 1,000 and 1,000,000. Must be set in increments of 1,000. Conflicts with throughput.</summary>
@@ -117,6 +122,7 @@ public partial class V1beta1SQLContainerSpecForProviderAutoscaleSettings
     public double? MaxThroughput { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLContainerSpecForProviderConflictResolutionPolicy
 {
     /// <summary>The conflict resolution path in the case of LastWriterWins mode.</summary>
@@ -152,6 +158,7 @@ public enum V1beta1SQLContainerSpecForProviderDatabaseNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SQLContainerSpecForProviderDatabaseNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -165,6 +172,7 @@ public partial class V1beta1SQLContainerSpecForProviderDatabaseNameRefPolicy
     public V1beta1SQLContainerSpecForProviderDatabaseNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a SQLDatabase in cosmosdb to populate databaseName.</summary>
 public partial class V1beta1SQLContainerSpecForProviderDatabaseNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -196,6 +204,7 @@ public enum V1beta1SQLContainerSpecForProviderDatabaseNameSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SQLContainerSpecForProviderDatabaseNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -209,6 +218,7 @@ public partial class V1beta1SQLContainerSpecForProviderDatabaseNameSelectorPolic
     public V1beta1SQLContainerSpecForProviderDatabaseNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a SQLDatabase in cosmosdb to populate databaseName.</summary>
 public partial class V1beta1SQLContainerSpecForProviderDatabaseNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -224,6 +234,7 @@ public partial class V1beta1SQLContainerSpecForProviderDatabaseNameSelector
     public V1beta1SQLContainerSpecForProviderDatabaseNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLContainerSpecForProviderIndexingPolicyCompositeIndexIndex
 {
     /// <summary>Order of the index. Possible values are Ascending or Descending.</summary>
@@ -235,6 +246,7 @@ public partial class V1beta1SQLContainerSpecForProviderIndexingPolicyCompositeIn
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLContainerSpecForProviderIndexingPolicyCompositeIndex
 {
     /// <summary>One or more index blocks as defined below.</summary>
@@ -242,6 +254,7 @@ public partial class V1beta1SQLContainerSpecForProviderIndexingPolicyCompositeIn
     public IList<V1beta1SQLContainerSpecForProviderIndexingPolicyCompositeIndexIndex>? Index { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLContainerSpecForProviderIndexingPolicyExcludedPath
 {
     /// <summary>Path for which the indexing behaviour applies to. According to the service design, all spatial types including LineString, MultiPolygon, Point, and Polygon will be applied to the path.</summary>
@@ -249,6 +262,7 @@ public partial class V1beta1SQLContainerSpecForProviderIndexingPolicyExcludedPat
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLContainerSpecForProviderIndexingPolicyIncludedPath
 {
     /// <summary>Path for which the indexing behaviour applies to. According to the service design, all spatial types including LineString, MultiPolygon, Point, and Polygon will be applied to the path.</summary>
@@ -256,6 +270,7 @@ public partial class V1beta1SQLContainerSpecForProviderIndexingPolicyIncludedPat
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLContainerSpecForProviderIndexingPolicySpatialIndex
 {
     /// <summary>Path for which the indexing behaviour applies to. According to the service design, all spatial types including LineString, MultiPolygon, Point, and Polygon will be applied to the path.</summary>
@@ -263,6 +278,7 @@ public partial class V1beta1SQLContainerSpecForProviderIndexingPolicySpatialInde
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLContainerSpecForProviderIndexingPolicy
 {
     /// <summary>One or more composite_index blocks as defined below.</summary>
@@ -306,6 +322,7 @@ public enum V1beta1SQLContainerSpecForProviderResourceGroupNameRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SQLContainerSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -319,6 +336,7 @@ public partial class V1beta1SQLContainerSpecForProviderResourceGroupNameRefPolic
     public V1beta1SQLContainerSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1SQLContainerSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -350,6 +368,7 @@ public enum V1beta1SQLContainerSpecForProviderResourceGroupNameSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1SQLContainerSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -363,6 +382,7 @@ public partial class V1beta1SQLContainerSpecForProviderResourceGroupNameSelector
     public V1beta1SQLContainerSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1SQLContainerSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -378,6 +398,7 @@ public partial class V1beta1SQLContainerSpecForProviderResourceGroupNameSelector
     public V1beta1SQLContainerSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLContainerSpecForProviderUniqueKey
 {
     /// <summary>A list of paths to use for this unique key. Changing this forces a new resource to be created.</summary>
@@ -385,6 +406,7 @@ public partial class V1beta1SQLContainerSpecForProviderUniqueKey
     public IList<string>? Paths { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLContainerSpecForProvider
 {
     /// <summary>The name of the Cosmos DB Account to create the container within. Changing this forces a new resource to be created.</summary>
@@ -460,6 +482,7 @@ public partial class V1beta1SQLContainerSpecForProvider
     public IList<V1beta1SQLContainerSpecForProviderUniqueKey>? UniqueKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLContainerSpecInitProviderAutoscaleSettings
 {
     /// <summary>The maximum throughput of the SQL container (RU/s). Must be between 1,000 and 1,000,000. Must be set in increments of 1,000. Conflicts with throughput.</summary>
@@ -467,6 +490,7 @@ public partial class V1beta1SQLContainerSpecInitProviderAutoscaleSettings
     public double? MaxThroughput { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLContainerSpecInitProviderConflictResolutionPolicy
 {
     /// <summary>The conflict resolution path in the case of LastWriterWins mode.</summary>
@@ -482,6 +506,7 @@ public partial class V1beta1SQLContainerSpecInitProviderConflictResolutionPolicy
     public string? Mode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLContainerSpecInitProviderIndexingPolicyCompositeIndexIndex
 {
     /// <summary>Order of the index. Possible values are Ascending or Descending.</summary>
@@ -493,6 +518,7 @@ public partial class V1beta1SQLContainerSpecInitProviderIndexingPolicyCompositeI
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLContainerSpecInitProviderIndexingPolicyCompositeIndex
 {
     /// <summary>One or more index blocks as defined below.</summary>
@@ -500,6 +526,7 @@ public partial class V1beta1SQLContainerSpecInitProviderIndexingPolicyCompositeI
     public IList<V1beta1SQLContainerSpecInitProviderIndexingPolicyCompositeIndexIndex>? Index { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLContainerSpecInitProviderIndexingPolicyExcludedPath
 {
     /// <summary>Path for which the indexing behaviour applies to. According to the service design, all spatial types including LineString, MultiPolygon, Point, and Polygon will be applied to the path.</summary>
@@ -507,6 +534,7 @@ public partial class V1beta1SQLContainerSpecInitProviderIndexingPolicyExcludedPa
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLContainerSpecInitProviderIndexingPolicyIncludedPath
 {
     /// <summary>Path for which the indexing behaviour applies to. According to the service design, all spatial types including LineString, MultiPolygon, Point, and Polygon will be applied to the path.</summary>
@@ -514,6 +542,7 @@ public partial class V1beta1SQLContainerSpecInitProviderIndexingPolicyIncludedPa
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLContainerSpecInitProviderIndexingPolicySpatialIndex
 {
     /// <summary>Path for which the indexing behaviour applies to. According to the service design, all spatial types including LineString, MultiPolygon, Point, and Polygon will be applied to the path.</summary>
@@ -521,6 +550,7 @@ public partial class V1beta1SQLContainerSpecInitProviderIndexingPolicySpatialInd
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLContainerSpecInitProviderIndexingPolicy
 {
     /// <summary>One or more composite_index blocks as defined below.</summary>
@@ -544,6 +574,7 @@ public partial class V1beta1SQLContainerSpecInitProviderIndexingPolicy
     public IList<V1beta1SQLContainerSpecInitProviderIndexingPolicySpatialIndex>? SpatialIndex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLContainerSpecInitProviderUniqueKey
 {
     /// <summary>A list of paths to use for this unique key. Changing this forces a new resource to be created.</summary>
@@ -551,6 +582,7 @@ public partial class V1beta1SQLContainerSpecInitProviderUniqueKey
     public IList<string>? Paths { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1SQLContainerSpecInitProvider
 {
     /// <summary>The default time to live of Analytical Storage for this SQL container. If present and the value is set to -1, it is equal to infinity, and items don’t expire by default. If present and the value is set to some number n – items will expire n seconds after their last modified time.</summary>
@@ -632,6 +664,7 @@ public enum V1beta1SQLContainerSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SQLContainerSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -645,6 +678,7 @@ public partial class V1beta1SQLContainerSpecProviderConfigRefPolicy
     public V1beta1SQLContainerSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1SQLContainerSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -676,6 +710,7 @@ public enum V1beta1SQLContainerSpecPublishConnectionDetailsToConfigRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1SQLContainerSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -689,6 +724,7 @@ public partial class V1beta1SQLContainerSpecPublishConnectionDetailsToConfigRefP
     public V1beta1SQLContainerSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1SQLContainerSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -700,6 +736,7 @@ public partial class V1beta1SQLContainerSpecPublishConnectionDetailsToConfigRef
     public V1beta1SQLContainerSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1SQLContainerSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -715,6 +752,7 @@ public partial class V1beta1SQLContainerSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1SQLContainerSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -730,6 +768,7 @@ public partial class V1beta1SQLContainerSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1SQLContainerSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -741,6 +780,7 @@ public partial class V1beta1SQLContainerSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>SQLContainerSpec defines the desired state of SQLContainer</summary>
 public partial class V1beta1SQLContainerSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -773,6 +813,7 @@ public partial class V1beta1SQLContainerSpec
     public V1beta1SQLContainerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLContainerStatusAtProviderAutoscaleSettings
 {
     /// <summary>The maximum throughput of the SQL container (RU/s). Must be between 1,000 and 1,000,000. Must be set in increments of 1,000. Conflicts with throughput.</summary>
@@ -780,6 +821,7 @@ public partial class V1beta1SQLContainerStatusAtProviderAutoscaleSettings
     public double? MaxThroughput { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLContainerStatusAtProviderConflictResolutionPolicy
 {
     /// <summary>The conflict resolution path in the case of LastWriterWins mode.</summary>
@@ -795,6 +837,7 @@ public partial class V1beta1SQLContainerStatusAtProviderConflictResolutionPolicy
     public string? Mode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLContainerStatusAtProviderIndexingPolicyCompositeIndexIndex
 {
     /// <summary>Order of the index. Possible values are Ascending or Descending.</summary>
@@ -806,6 +849,7 @@ public partial class V1beta1SQLContainerStatusAtProviderIndexingPolicyCompositeI
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLContainerStatusAtProviderIndexingPolicyCompositeIndex
 {
     /// <summary>One or more index blocks as defined below.</summary>
@@ -813,6 +857,7 @@ public partial class V1beta1SQLContainerStatusAtProviderIndexingPolicyCompositeI
     public IList<V1beta1SQLContainerStatusAtProviderIndexingPolicyCompositeIndexIndex>? Index { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLContainerStatusAtProviderIndexingPolicyExcludedPath
 {
     /// <summary>Path for which the indexing behaviour applies to. According to the service design, all spatial types including LineString, MultiPolygon, Point, and Polygon will be applied to the path.</summary>
@@ -820,6 +865,7 @@ public partial class V1beta1SQLContainerStatusAtProviderIndexingPolicyExcludedPa
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLContainerStatusAtProviderIndexingPolicyIncludedPath
 {
     /// <summary>Path for which the indexing behaviour applies to. According to the service design, all spatial types including LineString, MultiPolygon, Point, and Polygon will be applied to the path.</summary>
@@ -827,6 +873,7 @@ public partial class V1beta1SQLContainerStatusAtProviderIndexingPolicyIncludedPa
     public string? Path { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLContainerStatusAtProviderIndexingPolicySpatialIndex
 {
     /// <summary>Path for which the indexing behaviour applies to. According to the service design, all spatial types including LineString, MultiPolygon, Point, and Polygon will be applied to the path.</summary>
@@ -838,6 +885,7 @@ public partial class V1beta1SQLContainerStatusAtProviderIndexingPolicySpatialInd
     public IList<string>? Types { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLContainerStatusAtProviderIndexingPolicy
 {
     /// <summary>One or more composite_index blocks as defined below.</summary>
@@ -861,6 +909,7 @@ public partial class V1beta1SQLContainerStatusAtProviderIndexingPolicy
     public IList<V1beta1SQLContainerStatusAtProviderIndexingPolicySpatialIndex>? SpatialIndex { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLContainerStatusAtProviderUniqueKey
 {
     /// <summary>A list of paths to use for this unique key. Changing this forces a new resource to be created.</summary>
@@ -868,6 +917,7 @@ public partial class V1beta1SQLContainerStatusAtProviderUniqueKey
     public IList<string>? Paths { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1SQLContainerStatusAtProvider
 {
     /// <summary>The name of the Cosmos DB Account to create the container within. Changing this forces a new resource to be created.</summary>
@@ -923,6 +973,7 @@ public partial class V1beta1SQLContainerStatusAtProvider
     public IList<V1beta1SQLContainerStatusAtProviderUniqueKey>? UniqueKey { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1SQLContainerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -950,6 +1001,7 @@ public partial class V1beta1SQLContainerStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>SQLContainerStatus defines the observed state of SQLContainer.</summary>
 public partial class V1beta1SQLContainerStatus
 {
     /// <summary></summary>
@@ -966,6 +1018,7 @@ public partial class V1beta1SQLContainerStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>SQLContainer is the Schema for the SQLContainers API. Manages a SQL Container within a Cosmos DB Account.</summary>
 public partial class V1beta1SQLContainer : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SQLContainerSpec>, IStatus<V1beta1SQLContainerStatus>
 {
     public const string KubeApiVersion = "v1beta1";

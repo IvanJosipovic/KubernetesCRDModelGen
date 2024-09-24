@@ -21,6 +21,7 @@ public enum V1beta1DestinationRuleSpecSubsetsTrafficPolicyConnectionPoolHttpH2Up
     UPGRADE
 }
 
+/// <summary>HTTP connection pool settings.</summary>
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyConnectionPoolHttp
 {
     /// <summary>Specify if http1.1 connection should be upgraded to http2 for the associated destination.  Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE</summary>
@@ -57,6 +58,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyConnectionPoo
     public bool? UseClientProtocol { get; set; }
 }
 
+/// <summary>If set then set SO_KEEPALIVE on the socket to enable TCP Keepalives.</summary>
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyConnectionPoolTcpTcpKeepalive
 {
     /// <summary>The time duration between keep-alive probes.</summary>
@@ -72,6 +74,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyConnectionPoo
     public string? Time { get; set; }
 }
 
+/// <summary>Settings common to both HTTP and TCP upstream connections.</summary>
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyConnectionPoolTcp
 {
     /// <summary>TCP connection timeout.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyConnectionPoo
     public V1beta1DestinationRuleSpecSubsetsTrafficPolicyConnectionPoolTcpTcpKeepalive? TcpKeepalive { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyConnectionPool
 {
     /// <summary>HTTP connection pool settings.</summary>
@@ -106,6 +110,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyConnectionPoo
     public V1beta1DestinationRuleSpecSubsetsTrafficPolicyConnectionPoolTcp? Tcp { get; set; }
 }
 
+/// <summary>Hash based on HTTP cookie.</summary>
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerConsistentHashHttpCookie
 {
     /// <summary>Name of the cookie.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerC
     public string? Ttl { get; set; }
 }
 
+/// <summary>The Maglev load balancer implements consistent hashing to backend hosts.</summary>
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerConsistentHashMaglev
 {
     /// <summary>The table size for Maglev hashing.</summary>
@@ -128,6 +134,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerC
     public int? TableSize { get; set; }
 }
 
+/// <summary>The ring/modulo hash load balancer implements consistent hashing to backend hosts.</summary>
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerConsistentHashRingHash
 {
     /// <summary>The minimum number of virtual nodes to use for the hash ring.</summary>
@@ -135,6 +142,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerC
     public int? MinimumRingSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerConsistentHash
 {
     /// <summary>Hash based on HTTP cookie.</summary>
@@ -166,6 +174,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerC
     public bool? UseSourceIp { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerLocalityLbSettingDistribute
 {
     /// <summary>Originating locality, '/' separated, e.g.</summary>
@@ -177,6 +186,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerL
     public IDictionary<string, int>? To { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerLocalityLbSettingFailover
 {
     /// <summary>Originating region.</summary>
@@ -188,6 +198,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerL
     public string? To { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerLocalityLbSetting
 {
     /// <summary>Optional: only one of distribute, failover or failoverPriority can be set.</summary>
@@ -229,6 +240,7 @@ public enum V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerSimpleEnum
     LEASTREQUEST
 }
 
+/// <summary>Settings controlling the load balancer algorithms.</summary>
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancer
 {
     /// <summary></summary>
@@ -249,6 +261,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancer
     public string? WarmupDurationSecs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyOutlierDetection
 {
     /// <summary>Minimum ejection duration.</summary>
@@ -301,6 +314,7 @@ public enum V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsConne
     UPGRADE
 }
 
+/// <summary>HTTP connection pool settings.</summary>
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsConnectionPoolHttp
 {
     /// <summary>Specify if http1.1 connection should be upgraded to http2 for the associated destination.  Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE</summary>
@@ -337,6 +351,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
     public bool? UseClientProtocol { get; set; }
 }
 
+/// <summary>If set then set SO_KEEPALIVE on the socket to enable TCP Keepalives.</summary>
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsConnectionPoolTcpTcpKeepalive
 {
     /// <summary>The time duration between keep-alive probes.</summary>
@@ -352,6 +367,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
     public string? Time { get; set; }
 }
 
+/// <summary>Settings common to both HTTP and TCP upstream connections.</summary>
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsConnectionPoolTcp
 {
     /// <summary>TCP connection timeout.</summary>
@@ -375,6 +391,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
     public V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsConnectionPoolTcpTcpKeepalive? TcpKeepalive { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsConnectionPool
 {
     /// <summary>HTTP connection pool settings.</summary>
@@ -386,6 +403,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
     public V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsConnectionPoolTcp? Tcp { get; set; }
 }
 
+/// <summary>Hash based on HTTP cookie.</summary>
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerConsistentHashHttpCookie
 {
     /// <summary>Name of the cookie.</summary>
@@ -401,6 +419,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
     public string? Ttl { get; set; }
 }
 
+/// <summary>The Maglev load balancer implements consistent hashing to backend hosts.</summary>
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerConsistentHashMaglev
 {
     /// <summary>The table size for Maglev hashing.</summary>
@@ -408,6 +427,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
     public int? TableSize { get; set; }
 }
 
+/// <summary>The ring/modulo hash load balancer implements consistent hashing to backend hosts.</summary>
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerConsistentHashRingHash
 {
     /// <summary>The minimum number of virtual nodes to use for the hash ring.</summary>
@@ -415,6 +435,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
     public int? MinimumRingSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerConsistentHash
 {
     /// <summary>Hash based on HTTP cookie.</summary>
@@ -446,6 +467,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
     public bool? UseSourceIp { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerLocalityLbSettingDistribute
 {
     /// <summary>Originating locality, '/' separated, e.g.</summary>
@@ -457,6 +479,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
     public IDictionary<string, int>? To { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerLocalityLbSettingFailover
 {
     /// <summary>Originating region.</summary>
@@ -468,6 +491,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
     public string? To { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerLocalityLbSetting
 {
     /// <summary>Optional: only one of distribute, failover or failoverPriority can be set.</summary>
@@ -509,6 +533,7 @@ public enum V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadB
     LEASTREQUEST
 }
 
+/// <summary>Settings controlling the load balancer algorithms.</summary>
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancer
 {
     /// <summary></summary>
@@ -529,6 +554,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
     public string? WarmupDurationSecs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsOutlierDetection
 {
     /// <summary>Minimum ejection duration.</summary>
@@ -568,6 +594,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
     public bool? SplitExternalLocalOriginErrors { get; set; }
 }
 
+/// <summary>Specifies the number of a port on the destination service on which this policy is being applied.</summary>
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsPort
 {
     /// <summary></summary>
@@ -591,6 +618,7 @@ public enum V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsTlsMo
     ISTIOMUTUAL
 }
 
+/// <summary>TLS related settings for connections to the upstream service.</summary>
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsTls
 {
     /// <summary>OPTIONAL: The path to the file containing certificate authority certificates to use in verifying a presented server certificate.</summary>
@@ -631,6 +659,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
     public IList<string>? SubjectAltNames { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettings
 {
     /// <summary></summary>
@@ -664,6 +693,7 @@ public enum V1beta1DestinationRuleSpecSubsetsTrafficPolicyProxyProtocolVersionEn
     V2
 }
 
+/// <summary>The upstream PROXY protocol settings.</summary>
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyProxyProtocol
 {
     /// <summary>The PROXY protocol version to use.  Valid Options: V1, V2</summary>
@@ -688,6 +718,7 @@ public enum V1beta1DestinationRuleSpecSubsetsTrafficPolicyTlsModeEnum
     ISTIOMUTUAL
 }
 
+/// <summary>TLS related settings for connections to the upstream service.</summary>
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyTls
 {
     /// <summary>OPTIONAL: The path to the file containing certificate authority certificates to use in verifying a presented server certificate.</summary>
@@ -728,6 +759,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyTls
     public IList<string>? SubjectAltNames { get; set; }
 }
 
+/// <summary>Configuration of tunneling TCP over other transport or application layers for the host configured in the DestinationRule.</summary>
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyTunnel
 {
     /// <summary>Specifies which protocol to use for tunneling the downstream connection.</summary>
@@ -743,6 +775,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyTunnel
     public int TargetPort { get; set; }
 }
 
+/// <summary>Traffic policies that apply to this subset.</summary>
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicy
 {
     /// <summary></summary>
@@ -774,6 +807,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicy
     public V1beta1DestinationRuleSpecSubsetsTrafficPolicyTunnel? Tunnel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DestinationRuleSpecSubsets
 {
     /// <summary>Labels apply a filter over the endpoints of a service in the service registry.</summary>
@@ -802,6 +836,7 @@ public enum V1beta1DestinationRuleSpecTrafficPolicyConnectionPoolHttpH2UpgradePo
     UPGRADE
 }
 
+/// <summary>HTTP connection pool settings.</summary>
 public partial class V1beta1DestinationRuleSpecTrafficPolicyConnectionPoolHttp
 {
     /// <summary>Specify if http1.1 connection should be upgraded to http2 for the associated destination.  Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE</summary>
@@ -838,6 +873,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyConnectionPoolHttp
     public bool? UseClientProtocol { get; set; }
 }
 
+/// <summary>If set then set SO_KEEPALIVE on the socket to enable TCP Keepalives.</summary>
 public partial class V1beta1DestinationRuleSpecTrafficPolicyConnectionPoolTcpTcpKeepalive
 {
     /// <summary>The time duration between keep-alive probes.</summary>
@@ -853,6 +889,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyConnectionPoolTcpTcp
     public string? Time { get; set; }
 }
 
+/// <summary>Settings common to both HTTP and TCP upstream connections.</summary>
 public partial class V1beta1DestinationRuleSpecTrafficPolicyConnectionPoolTcp
 {
     /// <summary>TCP connection timeout.</summary>
@@ -876,6 +913,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyConnectionPoolTcp
     public V1beta1DestinationRuleSpecTrafficPolicyConnectionPoolTcpTcpKeepalive? TcpKeepalive { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DestinationRuleSpecTrafficPolicyConnectionPool
 {
     /// <summary>HTTP connection pool settings.</summary>
@@ -887,6 +925,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyConnectionPool
     public V1beta1DestinationRuleSpecTrafficPolicyConnectionPoolTcp? Tcp { get; set; }
 }
 
+/// <summary>Hash based on HTTP cookie.</summary>
 public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerConsistentHashHttpCookie
 {
     /// <summary>Name of the cookie.</summary>
@@ -902,6 +941,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerConsiste
     public string? Ttl { get; set; }
 }
 
+/// <summary>The Maglev load balancer implements consistent hashing to backend hosts.</summary>
 public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerConsistentHashMaglev
 {
     /// <summary>The table size for Maglev hashing.</summary>
@@ -909,6 +949,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerConsiste
     public int? TableSize { get; set; }
 }
 
+/// <summary>The ring/modulo hash load balancer implements consistent hashing to backend hosts.</summary>
 public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerConsistentHashRingHash
 {
     /// <summary>The minimum number of virtual nodes to use for the hash ring.</summary>
@@ -916,6 +957,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerConsiste
     public int? MinimumRingSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerConsistentHash
 {
     /// <summary>Hash based on HTTP cookie.</summary>
@@ -947,6 +989,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerConsiste
     public bool? UseSourceIp { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerLocalityLbSettingDistribute
 {
     /// <summary>Originating locality, '/' separated, e.g.</summary>
@@ -958,6 +1001,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerLocality
     public IDictionary<string, int>? To { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerLocalityLbSettingFailover
 {
     /// <summary>Originating region.</summary>
@@ -969,6 +1013,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerLocality
     public string? To { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerLocalityLbSetting
 {
     /// <summary>Optional: only one of distribute, failover or failoverPriority can be set.</summary>
@@ -1010,6 +1055,7 @@ public enum V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerSimpleEnum
     LEASTREQUEST
 }
 
+/// <summary>Settings controlling the load balancer algorithms.</summary>
 public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancer
 {
     /// <summary></summary>
@@ -1030,6 +1076,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancer
     public string? WarmupDurationSecs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DestinationRuleSpecTrafficPolicyOutlierDetection
 {
     /// <summary>Minimum ejection duration.</summary>
@@ -1082,6 +1129,7 @@ public enum V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsConnectionPo
     UPGRADE
 }
 
+/// <summary>HTTP connection pool settings.</summary>
 public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsConnectionPoolHttp
 {
     /// <summary>Specify if http1.1 connection should be upgraded to http2 for the associated destination.  Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE</summary>
@@ -1118,6 +1166,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsCon
     public bool? UseClientProtocol { get; set; }
 }
 
+/// <summary>If set then set SO_KEEPALIVE on the socket to enable TCP Keepalives.</summary>
 public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsConnectionPoolTcpTcpKeepalive
 {
     /// <summary>The time duration between keep-alive probes.</summary>
@@ -1133,6 +1182,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsCon
     public string? Time { get; set; }
 }
 
+/// <summary>Settings common to both HTTP and TCP upstream connections.</summary>
 public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsConnectionPoolTcp
 {
     /// <summary>TCP connection timeout.</summary>
@@ -1156,6 +1206,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsCon
     public V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsConnectionPoolTcpTcpKeepalive? TcpKeepalive { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsConnectionPool
 {
     /// <summary>HTTP connection pool settings.</summary>
@@ -1167,6 +1218,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsCon
     public V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsConnectionPoolTcp? Tcp { get; set; }
 }
 
+/// <summary>Hash based on HTTP cookie.</summary>
 public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerConsistentHashHttpCookie
 {
     /// <summary>Name of the cookie.</summary>
@@ -1182,6 +1234,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoa
     public string? Ttl { get; set; }
 }
 
+/// <summary>The Maglev load balancer implements consistent hashing to backend hosts.</summary>
 public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerConsistentHashMaglev
 {
     /// <summary>The table size for Maglev hashing.</summary>
@@ -1189,6 +1242,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoa
     public int? TableSize { get; set; }
 }
 
+/// <summary>The ring/modulo hash load balancer implements consistent hashing to backend hosts.</summary>
 public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerConsistentHashRingHash
 {
     /// <summary>The minimum number of virtual nodes to use for the hash ring.</summary>
@@ -1196,6 +1250,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoa
     public int? MinimumRingSize { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerConsistentHash
 {
     /// <summary>Hash based on HTTP cookie.</summary>
@@ -1227,6 +1282,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoa
     public bool? UseSourceIp { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerLocalityLbSettingDistribute
 {
     /// <summary>Originating locality, '/' separated, e.g.</summary>
@@ -1238,6 +1294,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoa
     public IDictionary<string, int>? To { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerLocalityLbSettingFailover
 {
     /// <summary>Originating region.</summary>
@@ -1249,6 +1306,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoa
     public string? To { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerLocalityLbSetting
 {
     /// <summary>Optional: only one of distribute, failover or failoverPriority can be set.</summary>
@@ -1290,6 +1348,7 @@ public enum V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancer
     LEASTREQUEST
 }
 
+/// <summary>Settings controlling the load balancer algorithms.</summary>
 public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancer
 {
     /// <summary></summary>
@@ -1310,6 +1369,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoa
     public string? WarmupDurationSecs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsOutlierDetection
 {
     /// <summary>Minimum ejection duration.</summary>
@@ -1349,6 +1409,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsOut
     public bool? SplitExternalLocalOriginErrors { get; set; }
 }
 
+/// <summary>Specifies the number of a port on the destination service on which this policy is being applied.</summary>
 public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsPort
 {
     /// <summary></summary>
@@ -1372,6 +1433,7 @@ public enum V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsTlsModeEnum
     ISTIOMUTUAL
 }
 
+/// <summary>TLS related settings for connections to the upstream service.</summary>
 public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsTls
 {
     /// <summary>OPTIONAL: The path to the file containing certificate authority certificates to use in verifying a presented server certificate.</summary>
@@ -1412,6 +1474,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsTls
     public IList<string>? SubjectAltNames { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettings
 {
     /// <summary></summary>
@@ -1445,6 +1508,7 @@ public enum V1beta1DestinationRuleSpecTrafficPolicyProxyProtocolVersionEnum
     V2
 }
 
+/// <summary>The upstream PROXY protocol settings.</summary>
 public partial class V1beta1DestinationRuleSpecTrafficPolicyProxyProtocol
 {
     /// <summary>The PROXY protocol version to use.  Valid Options: V1, V2</summary>
@@ -1469,6 +1533,7 @@ public enum V1beta1DestinationRuleSpecTrafficPolicyTlsModeEnum
     ISTIOMUTUAL
 }
 
+/// <summary>TLS related settings for connections to the upstream service.</summary>
 public partial class V1beta1DestinationRuleSpecTrafficPolicyTls
 {
     /// <summary>OPTIONAL: The path to the file containing certificate authority certificates to use in verifying a presented server certificate.</summary>
@@ -1509,6 +1574,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyTls
     public IList<string>? SubjectAltNames { get; set; }
 }
 
+/// <summary>Configuration of tunneling TCP over other transport or application layers for the host configured in the DestinationRule.</summary>
 public partial class V1beta1DestinationRuleSpecTrafficPolicyTunnel
 {
     /// <summary>Specifies which protocol to use for tunneling the downstream connection.</summary>
@@ -1524,6 +1590,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyTunnel
     public int TargetPort { get; set; }
 }
 
+/// <summary>Traffic policies to apply (load balancing policy, connection pool sizes, outlier detection).</summary>
 public partial class V1beta1DestinationRuleSpecTrafficPolicy
 {
     /// <summary></summary>
@@ -1555,6 +1622,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicy
     public V1beta1DestinationRuleSpecTrafficPolicyTunnel? Tunnel { get; set; }
 }
 
+/// <summary>Criteria used to select the specific set of pods/VMs on which this `DestinationRule` configuration should be applied.</summary>
 public partial class V1beta1DestinationRuleSpecWorkloadSelector
 {
     /// <summary>One or more labels that indicate a specific set of pods/VMs on which a policy should be applied.</summary>
@@ -1562,6 +1630,7 @@ public partial class V1beta1DestinationRuleSpecWorkloadSelector
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>Configuration affecting load balancing, outlier detection, etc. See more details at: https://istio.io/docs/reference/config/networking/destination-rule.html</summary>
 public partial class V1beta1DestinationRuleSpec
 {
     /// <summary>A list of namespaces to which this destination rule is exported.</summary>
@@ -1586,6 +1655,7 @@ public partial class V1beta1DestinationRuleSpec
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1DestinationRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DestinationRuleSpec>, IStatus<JsonNode>
 {
     public const string KubeApiVersion = "v1beta1";

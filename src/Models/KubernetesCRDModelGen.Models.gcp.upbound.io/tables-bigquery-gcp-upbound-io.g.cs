@@ -38,6 +38,7 @@ public enum V1beta1TableSpecForProviderDatasetIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TableSpecForProviderDatasetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1TableSpecForProviderDatasetIdRefPolicy
     public V1beta1TableSpecForProviderDatasetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Dataset in bigquery to populate datasetId.</summary>
 public partial class V1beta1TableSpecForProviderDatasetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1TableSpecForProviderDatasetIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TableSpecForProviderDatasetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1TableSpecForProviderDatasetIdSelectorPolicy
     public V1beta1TableSpecForProviderDatasetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Dataset in bigquery to populate datasetId.</summary>
 public partial class V1beta1TableSpecForProviderDatasetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1TableSpecForProviderDatasetIdSelector
     public V1beta1TableSpecForProviderDatasetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecForProviderEncryptionConfiguration
 {
     /// <summary>The self link or full name of a key which should be used to encrypt this table.  Note that the default bigquery service account will need to have encrypt/decrypt permissions on this key - you may want to see the google_bigquery_default_service_account datasource and the google_kms_crypto_key_iam_binding resource.</summary>
@@ -117,6 +122,7 @@ public partial class V1beta1TableSpecForProviderEncryptionConfiguration
     public string? KmsKeyName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecForProviderExternalDataConfigurationAvroOptions
 {
     /// <summary>If is set to true, indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).</summary>
@@ -124,6 +130,7 @@ public partial class V1beta1TableSpecForProviderExternalDataConfigurationAvroOpt
     public bool? UseAvroLogicalTypes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecForProviderExternalDataConfigurationBigtableOptionsColumnFamilyColumn
 {
     /// <summary>The character encoding of the data. The supported values are UTF-8, UTF-16BE, UTF-16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8.</summary>
@@ -151,6 +158,7 @@ public partial class V1beta1TableSpecForProviderExternalDataConfigurationBigtabl
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecForProviderExternalDataConfigurationBigtableOptionsColumnFamily
 {
     /// <summary>A List of columns that should be exposed as individual fields as opposed to a list of (column name, value) pairs. All columns whose qualifier matches a qualifier in this list can be accessed as Other columns can be accessed as a list through column field.  Structure is documented below.</summary>
@@ -174,6 +182,7 @@ public partial class V1beta1TableSpecForProviderExternalDataConfigurationBigtabl
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecForProviderExternalDataConfigurationBigtableOptions
 {
     /// <summary>A list of column families to expose in the table schema along with their types. This list restricts the column families that can be referenced in queries and specifies their value types. You can use this list to do type conversions - see the 'type' field for more details. If you leave this list empty, all column families are present in the table schema and their values are read as BYTES. During a query only the column families referenced in that query are read from Bigtable.  Structure is documented below.</summary>
@@ -193,6 +202,7 @@ public partial class V1beta1TableSpecForProviderExternalDataConfigurationBigtabl
     public bool? ReadRowkeyAsString { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecForProviderExternalDataConfigurationCsvOptions
 {
     /// <summary>Indicates if BigQuery should accept rows that are missing trailing optional columns.</summary>
@@ -220,6 +230,7 @@ public partial class V1beta1TableSpecForProviderExternalDataConfigurationCsvOpti
     public double? SkipLeadingRows { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecForProviderExternalDataConfigurationGoogleSheetsOptions
 {
     /// <summary>Information required to partition based on ranges. Structure is documented below.</summary>
@@ -231,6 +242,7 @@ public partial class V1beta1TableSpecForProviderExternalDataConfigurationGoogleS
     public double? SkipLeadingRows { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecForProviderExternalDataConfigurationHivePartitioningOptions
 {
     /// <summary>When set, what mode of hive partitioning to use when reading data. The following modes are supported.</summary>
@@ -246,6 +258,7 @@ public partial class V1beta1TableSpecForProviderExternalDataConfigurationHivePar
     public string? SourceUriPrefix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecForProviderExternalDataConfigurationJsonOptions
 {
     /// <summary>The character encoding of the data. The supported values are UTF-8, UTF-16BE, UTF-16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8.</summary>
@@ -253,6 +266,7 @@ public partial class V1beta1TableSpecForProviderExternalDataConfigurationJsonOpt
     public string? Encoding { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecForProviderExternalDataConfigurationParquetOptions
 {
     /// <summary>Indicates whether to use schema inference specifically for Parquet LIST logical type.</summary>
@@ -264,6 +278,7 @@ public partial class V1beta1TableSpecForProviderExternalDataConfigurationParquet
     public bool? EnumAsString { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecForProviderExternalDataConfiguration
 {
     /// <summary>- Let BigQuery try to autodetect the schema and format of the table.</summary>
@@ -347,6 +362,7 @@ public partial class V1beta1TableSpecForProviderExternalDataConfiguration
     public IList<string>? SourceUris { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecForProviderMaterializedView
 {
     /// <summary>Allow non incremental materialized view definition. The default value is false.</summary>
@@ -366,6 +382,7 @@ public partial class V1beta1TableSpecForProviderMaterializedView
     public double? RefreshIntervalMs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecForProviderRangePartitioningRange
 {
     /// <summary>End of the range partitioning, exclusive.</summary>
@@ -381,6 +398,7 @@ public partial class V1beta1TableSpecForProviderRangePartitioningRange
     public double? Start { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecForProviderRangePartitioning
 {
     /// <summary>The field used to determine how to create a range-based partition.</summary>
@@ -392,6 +410,7 @@ public partial class V1beta1TableSpecForProviderRangePartitioning
     public IList<V1beta1TableSpecForProviderRangePartitioningRange>? Range { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecForProviderTableConstraintsForeignKeysColumnReferences
 {
     /// <summary>:  The column in the primary key that are referenced by the referencingColumn</summary>
@@ -403,6 +422,7 @@ public partial class V1beta1TableSpecForProviderTableConstraintsForeignKeysColum
     public string? ReferencingColumn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecForProviderTableConstraintsForeignKeysReferencedTable
 {
     /// <summary>:  The ID of the dataset containing this table.</summary>
@@ -418,6 +438,7 @@ public partial class V1beta1TableSpecForProviderTableConstraintsForeignKeysRefer
     public string? TableId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecForProviderTableConstraintsForeignKeys
 {
     /// <summary>:  The pair of the foreign key column and primary key column. Structure is documented below.</summary>
@@ -433,6 +454,7 @@ public partial class V1beta1TableSpecForProviderTableConstraintsForeignKeys
     public IList<V1beta1TableSpecForProviderTableConstraintsForeignKeysReferencedTable>? ReferencedTable { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecForProviderTableConstraintsPrimaryKey
 {
     /// <summary>:  The columns that are composed of the primary key constraint.</summary>
@@ -440,6 +462,7 @@ public partial class V1beta1TableSpecForProviderTableConstraintsPrimaryKey
     public IList<string>? Columns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecForProviderTableConstraints
 {
     /// <summary>Present only if the table has a foreign key. The foreign key is not enforced. Structure is documented below.</summary>
@@ -451,6 +474,7 @@ public partial class V1beta1TableSpecForProviderTableConstraints
     public IList<V1beta1TableSpecForProviderTableConstraintsPrimaryKey>? PrimaryKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecForProviderTableReplicationInfo
 {
     /// <summary></summary>
@@ -470,6 +494,7 @@ public partial class V1beta1TableSpecForProviderTableReplicationInfo
     public string? SourceTableId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecForProviderTimePartitioning
 {
     /// <summary>Number of milliseconds for which to keep the storage for a partition.</summary>
@@ -489,6 +514,7 @@ public partial class V1beta1TableSpecForProviderTimePartitioning
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecForProviderView
 {
     /// <summary>A query that BigQuery executes when the view is referenced.</summary>
@@ -500,6 +526,7 @@ public partial class V1beta1TableSpecForProviderView
     public bool? UseLegacySql { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecForProvider
 {
     /// <summary>If set to true, it allows table deletion when there are still resource tags attached. The default value is false.</summary>
@@ -595,6 +622,7 @@ public partial class V1beta1TableSpecForProvider
     public IList<V1beta1TableSpecForProviderView>? View { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecInitProviderEncryptionConfiguration
 {
     /// <summary>The self link or full name of a key which should be used to encrypt this table.  Note that the default bigquery service account will need to have encrypt/decrypt permissions on this key - you may want to see the google_bigquery_default_service_account datasource and the google_kms_crypto_key_iam_binding resource.</summary>
@@ -602,6 +630,7 @@ public partial class V1beta1TableSpecInitProviderEncryptionConfiguration
     public string? KmsKeyName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecInitProviderExternalDataConfigurationAvroOptions
 {
     /// <summary>If is set to true, indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).</summary>
@@ -609,6 +638,7 @@ public partial class V1beta1TableSpecInitProviderExternalDataConfigurationAvroOp
     public bool? UseAvroLogicalTypes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecInitProviderExternalDataConfigurationBigtableOptionsColumnFamilyColumn
 {
     /// <summary>The character encoding of the data. The supported values are UTF-8, UTF-16BE, UTF-16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8.</summary>
@@ -636,6 +666,7 @@ public partial class V1beta1TableSpecInitProviderExternalDataConfigurationBigtab
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecInitProviderExternalDataConfigurationBigtableOptionsColumnFamily
 {
     /// <summary>A List of columns that should be exposed as individual fields as opposed to a list of (column name, value) pairs. All columns whose qualifier matches a qualifier in this list can be accessed as Other columns can be accessed as a list through column field.  Structure is documented below.</summary>
@@ -659,6 +690,7 @@ public partial class V1beta1TableSpecInitProviderExternalDataConfigurationBigtab
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecInitProviderExternalDataConfigurationBigtableOptions
 {
     /// <summary>A list of column families to expose in the table schema along with their types. This list restricts the column families that can be referenced in queries and specifies their value types. You can use this list to do type conversions - see the 'type' field for more details. If you leave this list empty, all column families are present in the table schema and their values are read as BYTES. During a query only the column families referenced in that query are read from Bigtable.  Structure is documented below.</summary>
@@ -678,6 +710,7 @@ public partial class V1beta1TableSpecInitProviderExternalDataConfigurationBigtab
     public bool? ReadRowkeyAsString { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecInitProviderExternalDataConfigurationCsvOptions
 {
     /// <summary>Indicates if BigQuery should accept rows that are missing trailing optional columns.</summary>
@@ -705,6 +738,7 @@ public partial class V1beta1TableSpecInitProviderExternalDataConfigurationCsvOpt
     public double? SkipLeadingRows { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecInitProviderExternalDataConfigurationGoogleSheetsOptions
 {
     /// <summary>Information required to partition based on ranges. Structure is documented below.</summary>
@@ -716,6 +750,7 @@ public partial class V1beta1TableSpecInitProviderExternalDataConfigurationGoogle
     public double? SkipLeadingRows { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecInitProviderExternalDataConfigurationHivePartitioningOptions
 {
     /// <summary>When set, what mode of hive partitioning to use when reading data. The following modes are supported.</summary>
@@ -731,6 +766,7 @@ public partial class V1beta1TableSpecInitProviderExternalDataConfigurationHivePa
     public string? SourceUriPrefix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecInitProviderExternalDataConfigurationJsonOptions
 {
     /// <summary>The character encoding of the data. The supported values are UTF-8, UTF-16BE, UTF-16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8.</summary>
@@ -738,6 +774,7 @@ public partial class V1beta1TableSpecInitProviderExternalDataConfigurationJsonOp
     public string? Encoding { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecInitProviderExternalDataConfigurationParquetOptions
 {
     /// <summary>Indicates whether to use schema inference specifically for Parquet LIST logical type.</summary>
@@ -749,6 +786,7 @@ public partial class V1beta1TableSpecInitProviderExternalDataConfigurationParque
     public bool? EnumAsString { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecInitProviderExternalDataConfiguration
 {
     /// <summary>- Let BigQuery try to autodetect the schema and format of the table.</summary>
@@ -832,6 +870,7 @@ public partial class V1beta1TableSpecInitProviderExternalDataConfiguration
     public IList<string>? SourceUris { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecInitProviderMaterializedView
 {
     /// <summary>Allow non incremental materialized view definition. The default value is false.</summary>
@@ -851,6 +890,7 @@ public partial class V1beta1TableSpecInitProviderMaterializedView
     public double? RefreshIntervalMs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecInitProviderRangePartitioningRange
 {
     /// <summary>End of the range partitioning, exclusive.</summary>
@@ -866,6 +906,7 @@ public partial class V1beta1TableSpecInitProviderRangePartitioningRange
     public double? Start { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecInitProviderRangePartitioning
 {
     /// <summary>The field used to determine how to create a range-based partition.</summary>
@@ -877,6 +918,7 @@ public partial class V1beta1TableSpecInitProviderRangePartitioning
     public IList<V1beta1TableSpecInitProviderRangePartitioningRange>? Range { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecInitProviderTableConstraintsForeignKeysColumnReferences
 {
     /// <summary>:  The column in the primary key that are referenced by the referencingColumn</summary>
@@ -888,6 +930,7 @@ public partial class V1beta1TableSpecInitProviderTableConstraintsForeignKeysColu
     public string? ReferencingColumn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecInitProviderTableConstraintsForeignKeysReferencedTable
 {
     /// <summary>:  The ID of the project containing this table.</summary>
@@ -899,6 +942,7 @@ public partial class V1beta1TableSpecInitProviderTableConstraintsForeignKeysRefe
     public string? TableId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecInitProviderTableConstraintsForeignKeys
 {
     /// <summary>:  The pair of the foreign key column and primary key column. Structure is documented below.</summary>
@@ -914,6 +958,7 @@ public partial class V1beta1TableSpecInitProviderTableConstraintsForeignKeys
     public IList<V1beta1TableSpecInitProviderTableConstraintsForeignKeysReferencedTable>? ReferencedTable { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecInitProviderTableConstraintsPrimaryKey
 {
     /// <summary>:  The columns that are composed of the primary key constraint.</summary>
@@ -921,6 +966,7 @@ public partial class V1beta1TableSpecInitProviderTableConstraintsPrimaryKey
     public IList<string>? Columns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecInitProviderTableConstraints
 {
     /// <summary>Present only if the table has a foreign key. The foreign key is not enforced. Structure is documented below.</summary>
@@ -932,6 +978,7 @@ public partial class V1beta1TableSpecInitProviderTableConstraints
     public IList<V1beta1TableSpecInitProviderTableConstraintsPrimaryKey>? PrimaryKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecInitProviderTableReplicationInfo
 {
     /// <summary></summary>
@@ -951,6 +998,7 @@ public partial class V1beta1TableSpecInitProviderTableReplicationInfo
     public string? SourceTableId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecInitProviderTimePartitioning
 {
     /// <summary>Number of milliseconds for which to keep the storage for a partition.</summary>
@@ -970,6 +1018,7 @@ public partial class V1beta1TableSpecInitProviderTimePartitioning
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableSpecInitProviderView
 {
     /// <summary>A query that BigQuery executes when the view is referenced.</summary>
@@ -981,6 +1030,7 @@ public partial class V1beta1TableSpecInitProviderView
     public bool? UseLegacySql { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1TableSpecInitProvider
 {
     /// <summary>If set to true, it allows table deletion when there are still resource tags attached. The default value is false.</summary>
@@ -1102,6 +1152,7 @@ public enum V1beta1TableSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TableSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1115,6 +1166,7 @@ public partial class V1beta1TableSpecProviderConfigRefPolicy
     public V1beta1TableSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1TableSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1146,6 +1198,7 @@ public enum V1beta1TableSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TableSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1159,6 +1212,7 @@ public partial class V1beta1TableSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1TableSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1TableSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1170,6 +1224,7 @@ public partial class V1beta1TableSpecPublishConnectionDetailsToConfigRef
     public V1beta1TableSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1TableSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1185,6 +1240,7 @@ public partial class V1beta1TableSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1TableSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1200,6 +1256,7 @@ public partial class V1beta1TableSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1TableSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1211,6 +1268,7 @@ public partial class V1beta1TableSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>TableSpec defines the desired state of Table</summary>
 public partial class V1beta1TableSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1243,6 +1301,7 @@ public partial class V1beta1TableSpec
     public V1beta1TableSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableStatusAtProviderEncryptionConfiguration
 {
     /// <summary>The self link or full name of a key which should be used to encrypt this table.  Note that the default bigquery service account will need to have encrypt/decrypt permissions on this key - you may want to see the google_bigquery_default_service_account datasource and the google_kms_crypto_key_iam_binding resource.</summary>
@@ -1254,6 +1313,7 @@ public partial class V1beta1TableStatusAtProviderEncryptionConfiguration
     public string? KmsKeyVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableStatusAtProviderExternalDataConfigurationAvroOptions
 {
     /// <summary>If is set to true, indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).</summary>
@@ -1261,6 +1321,7 @@ public partial class V1beta1TableStatusAtProviderExternalDataConfigurationAvroOp
     public bool? UseAvroLogicalTypes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableStatusAtProviderExternalDataConfigurationBigtableOptionsColumnFamilyColumn
 {
     /// <summary>The character encoding of the data. The supported values are UTF-8, UTF-16BE, UTF-16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8.</summary>
@@ -1288,6 +1349,7 @@ public partial class V1beta1TableStatusAtProviderExternalDataConfigurationBigtab
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableStatusAtProviderExternalDataConfigurationBigtableOptionsColumnFamily
 {
     /// <summary>A List of columns that should be exposed as individual fields as opposed to a list of (column name, value) pairs. All columns whose qualifier matches a qualifier in this list can be accessed as Other columns can be accessed as a list through column field.  Structure is documented below.</summary>
@@ -1311,6 +1373,7 @@ public partial class V1beta1TableStatusAtProviderExternalDataConfigurationBigtab
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableStatusAtProviderExternalDataConfigurationBigtableOptions
 {
     /// <summary>A list of column families to expose in the table schema along with their types. This list restricts the column families that can be referenced in queries and specifies their value types. You can use this list to do type conversions - see the 'type' field for more details. If you leave this list empty, all column families are present in the table schema and their values are read as BYTES. During a query only the column families referenced in that query are read from Bigtable.  Structure is documented below.</summary>
@@ -1330,6 +1393,7 @@ public partial class V1beta1TableStatusAtProviderExternalDataConfigurationBigtab
     public bool? ReadRowkeyAsString { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableStatusAtProviderExternalDataConfigurationCsvOptions
 {
     /// <summary>Indicates if BigQuery should accept rows that are missing trailing optional columns.</summary>
@@ -1357,6 +1421,7 @@ public partial class V1beta1TableStatusAtProviderExternalDataConfigurationCsvOpt
     public double? SkipLeadingRows { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableStatusAtProviderExternalDataConfigurationGoogleSheetsOptions
 {
     /// <summary>Information required to partition based on ranges. Structure is documented below.</summary>
@@ -1368,6 +1433,7 @@ public partial class V1beta1TableStatusAtProviderExternalDataConfigurationGoogle
     public double? SkipLeadingRows { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableStatusAtProviderExternalDataConfigurationHivePartitioningOptions
 {
     /// <summary>When set, what mode of hive partitioning to use when reading data. The following modes are supported.</summary>
@@ -1383,6 +1449,7 @@ public partial class V1beta1TableStatusAtProviderExternalDataConfigurationHivePa
     public string? SourceUriPrefix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableStatusAtProviderExternalDataConfigurationJsonOptions
 {
     /// <summary>The character encoding of the data. The supported values are UTF-8, UTF-16BE, UTF-16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8.</summary>
@@ -1390,6 +1457,7 @@ public partial class V1beta1TableStatusAtProviderExternalDataConfigurationJsonOp
     public string? Encoding { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableStatusAtProviderExternalDataConfigurationParquetOptions
 {
     /// <summary>Indicates whether to use schema inference specifically for Parquet LIST logical type.</summary>
@@ -1401,6 +1469,7 @@ public partial class V1beta1TableStatusAtProviderExternalDataConfigurationParque
     public bool? EnumAsString { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableStatusAtProviderExternalDataConfiguration
 {
     /// <summary>- Let BigQuery try to autodetect the schema and format of the table.</summary>
@@ -1484,6 +1553,7 @@ public partial class V1beta1TableStatusAtProviderExternalDataConfiguration
     public IList<string>? SourceUris { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableStatusAtProviderMaterializedView
 {
     /// <summary>Allow non incremental materialized view definition. The default value is false.</summary>
@@ -1503,6 +1573,7 @@ public partial class V1beta1TableStatusAtProviderMaterializedView
     public double? RefreshIntervalMs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableStatusAtProviderRangePartitioningRange
 {
     /// <summary>End of the range partitioning, exclusive.</summary>
@@ -1518,6 +1589,7 @@ public partial class V1beta1TableStatusAtProviderRangePartitioningRange
     public double? Start { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableStatusAtProviderRangePartitioning
 {
     /// <summary>The field used to determine how to create a range-based partition.</summary>
@@ -1529,6 +1601,7 @@ public partial class V1beta1TableStatusAtProviderRangePartitioning
     public IList<V1beta1TableStatusAtProviderRangePartitioningRange>? Range { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableStatusAtProviderTableConstraintsForeignKeysColumnReferences
 {
     /// <summary>:  The column in the primary key that are referenced by the referencingColumn</summary>
@@ -1540,6 +1613,7 @@ public partial class V1beta1TableStatusAtProviderTableConstraintsForeignKeysColu
     public string? ReferencingColumn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableStatusAtProviderTableConstraintsForeignKeysReferencedTable
 {
     /// <summary>:  The ID of the dataset containing this table.</summary>
@@ -1555,6 +1629,7 @@ public partial class V1beta1TableStatusAtProviderTableConstraintsForeignKeysRefe
     public string? TableId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableStatusAtProviderTableConstraintsForeignKeys
 {
     /// <summary>:  The pair of the foreign key column and primary key column. Structure is documented below.</summary>
@@ -1570,6 +1645,7 @@ public partial class V1beta1TableStatusAtProviderTableConstraintsForeignKeys
     public IList<V1beta1TableStatusAtProviderTableConstraintsForeignKeysReferencedTable>? ReferencedTable { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableStatusAtProviderTableConstraintsPrimaryKey
 {
     /// <summary>:  The columns that are composed of the primary key constraint.</summary>
@@ -1577,6 +1653,7 @@ public partial class V1beta1TableStatusAtProviderTableConstraintsPrimaryKey
     public IList<string>? Columns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableStatusAtProviderTableConstraints
 {
     /// <summary>Present only if the table has a foreign key. The foreign key is not enforced. Structure is documented below.</summary>
@@ -1588,6 +1665,7 @@ public partial class V1beta1TableStatusAtProviderTableConstraints
     public IList<V1beta1TableStatusAtProviderTableConstraintsPrimaryKey>? PrimaryKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableStatusAtProviderTableReplicationInfo
 {
     /// <summary></summary>
@@ -1607,6 +1685,7 @@ public partial class V1beta1TableStatusAtProviderTableReplicationInfo
     public string? SourceTableId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableStatusAtProviderTimePartitioning
 {
     /// <summary>Number of milliseconds for which to keep the storage for a partition.</summary>
@@ -1626,6 +1705,7 @@ public partial class V1beta1TableStatusAtProviderTimePartitioning
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableStatusAtProviderView
 {
     /// <summary>A query that BigQuery executes when the view is referenced.</summary>
@@ -1637,6 +1717,7 @@ public partial class V1beta1TableStatusAtProviderView
     public bool? UseLegacySql { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TableStatusAtProvider
 {
     /// <summary>If set to true, it allows table deletion when there are still resource tags attached. The default value is false.</summary>
@@ -1772,6 +1853,7 @@ public partial class V1beta1TableStatusAtProvider
     public IList<V1beta1TableStatusAtProviderView>? View { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1TableStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1799,6 +1881,7 @@ public partial class V1beta1TableStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>TableStatus defines the observed state of Table.</summary>
 public partial class V1beta1TableStatus
 {
     /// <summary></summary>
@@ -1815,6 +1898,7 @@ public partial class V1beta1TableStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Table is the Schema for the Tables API. Creates a table resource in a dataset for Google BigQuery.</summary>
 public partial class V1beta1Table : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1TableSpec>, IStatus<V1beta1TableStatus>
 {
     public const string KubeApiVersion = "v1beta1";

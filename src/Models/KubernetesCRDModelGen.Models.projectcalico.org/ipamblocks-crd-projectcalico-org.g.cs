@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.crd.projectcalico.org;
+/// <summary></summary>
 public partial class V1IPAMBlockSpecAttributes
 {
     /// <summary></summary>
@@ -19,6 +20,7 @@ public partial class V1IPAMBlockSpecAttributes
     public IDictionary<string, string>? Secondary { get; set; }
 }
 
+/// <summary>IPAMBlockSpec contains the specification for an IPAMBlock resource.</summary>
 public partial class V1IPAMBlockSpec
 {
     /// <summary>Affinity of the block, if this block has one. If set, it will be of the form "host:&lt;hostname&gt;". If not set, this block is not affine to a host.</summary>
@@ -59,6 +61,7 @@ public partial class V1IPAMBlockSpec
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1IPAMBlock : IKubernetesObject<V1ObjectMeta>, ISpec<V1IPAMBlockSpec>
 {
     public const string KubeApiVersion = "v1";

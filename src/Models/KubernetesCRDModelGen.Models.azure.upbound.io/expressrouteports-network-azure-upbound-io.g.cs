@@ -18,6 +18,7 @@ public enum V1beta1ExpressRoutePortSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1ExpressRoutePortSpecForProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Express Route Port.</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1ExpressRoutePortSpecForProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExpressRoutePortSpecForProviderLink1
 {
     /// <summary>Whether enable administration state on the Express Route Port Link? Defaults to false.</summary>
@@ -52,6 +54,7 @@ public partial class V1beta1ExpressRoutePortSpecForProviderLink1
     public bool? MacsecSciEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExpressRoutePortSpecForProviderLink2
 {
     /// <summary>Whether enable administration state on the Express Route Port Link? Defaults to false.</summary>
@@ -95,6 +98,7 @@ public enum V1beta1ExpressRoutePortSpecForProviderResourceGroupNameRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ExpressRoutePortSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -108,6 +112,7 @@ public partial class V1beta1ExpressRoutePortSpecForProviderResourceGroupNameRefP
     public V1beta1ExpressRoutePortSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1ExpressRoutePortSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -139,6 +144,7 @@ public enum V1beta1ExpressRoutePortSpecForProviderResourceGroupNameSelectorPolic
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ExpressRoutePortSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -152,6 +158,7 @@ public partial class V1beta1ExpressRoutePortSpecForProviderResourceGroupNameSele
     public V1beta1ExpressRoutePortSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1ExpressRoutePortSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -167,6 +174,7 @@ public partial class V1beta1ExpressRoutePortSpecForProviderResourceGroupNameSele
     public V1beta1ExpressRoutePortSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExpressRoutePortSpecForProvider
 {
     /// <summary>Bandwidth of the Express Route Port in Gbps. Changing this forces a new Express Route Port to be created.</summary>
@@ -218,6 +226,7 @@ public partial class V1beta1ExpressRoutePortSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExpressRoutePortSpecInitProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Express Route Port.</summary>
@@ -229,6 +238,7 @@ public partial class V1beta1ExpressRoutePortSpecInitProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExpressRoutePortSpecInitProviderLink1
 {
     /// <summary>Whether enable administration state on the Express Route Port Link? Defaults to false.</summary>
@@ -252,6 +262,7 @@ public partial class V1beta1ExpressRoutePortSpecInitProviderLink1
     public bool? MacsecSciEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExpressRoutePortSpecInitProviderLink2
 {
     /// <summary>Whether enable administration state on the Express Route Port Link? Defaults to false.</summary>
@@ -275,6 +286,7 @@ public partial class V1beta1ExpressRoutePortSpecInitProviderLink2
     public bool? MacsecSciEnabled { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ExpressRoutePortSpecInitProvider
 {
     /// <summary>Bandwidth of the Express Route Port in Gbps. Changing this forces a new Express Route Port to be created.</summary>
@@ -356,6 +368,7 @@ public enum V1beta1ExpressRoutePortSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ExpressRoutePortSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -369,6 +382,7 @@ public partial class V1beta1ExpressRoutePortSpecProviderConfigRefPolicy
     public V1beta1ExpressRoutePortSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ExpressRoutePortSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -400,6 +414,7 @@ public enum V1beta1ExpressRoutePortSpecPublishConnectionDetailsToConfigRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ExpressRoutePortSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -413,6 +428,7 @@ public partial class V1beta1ExpressRoutePortSpecPublishConnectionDetailsToConfig
     public V1beta1ExpressRoutePortSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ExpressRoutePortSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -424,6 +440,7 @@ public partial class V1beta1ExpressRoutePortSpecPublishConnectionDetailsToConfig
     public V1beta1ExpressRoutePortSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ExpressRoutePortSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -439,6 +456,7 @@ public partial class V1beta1ExpressRoutePortSpecPublishConnectionDetailsToMetada
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ExpressRoutePortSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -454,6 +472,7 @@ public partial class V1beta1ExpressRoutePortSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ExpressRoutePortSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -465,6 +484,7 @@ public partial class V1beta1ExpressRoutePortSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ExpressRoutePortSpec defines the desired state of ExpressRoutePort</summary>
 public partial class V1beta1ExpressRoutePortSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -497,6 +517,7 @@ public partial class V1beta1ExpressRoutePortSpec
     public V1beta1ExpressRoutePortSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExpressRoutePortStatusAtProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Express Route Port.</summary>
@@ -508,6 +529,7 @@ public partial class V1beta1ExpressRoutePortStatusAtProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExpressRoutePortStatusAtProviderLink1
 {
     /// <summary>Whether enable administration state on the Express Route Port Link? Defaults to false.</summary>
@@ -555,6 +577,7 @@ public partial class V1beta1ExpressRoutePortStatusAtProviderLink1
     public string? RouterName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExpressRoutePortStatusAtProviderLink2
 {
     /// <summary>Whether enable administration state on the Express Route Port Link? Defaults to false.</summary>
@@ -602,6 +625,7 @@ public partial class V1beta1ExpressRoutePortStatusAtProviderLink2
     public string? RouterName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ExpressRoutePortStatusAtProvider
 {
     /// <summary>Bandwidth of the Express Route Port in Gbps. Changing this forces a new Express Route Port to be created.</summary>
@@ -661,6 +685,7 @@ public partial class V1beta1ExpressRoutePortStatusAtProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ExpressRoutePortStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -688,6 +713,7 @@ public partial class V1beta1ExpressRoutePortStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ExpressRoutePortStatus defines the observed state of ExpressRoutePort.</summary>
 public partial class V1beta1ExpressRoutePortStatus
 {
     /// <summary></summary>
@@ -704,6 +730,7 @@ public partial class V1beta1ExpressRoutePortStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ExpressRoutePort is the Schema for the ExpressRoutePorts API. Manages a Express Route Port.</summary>
 public partial class V1beta1ExpressRoutePort : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ExpressRoutePortSpec>, IStatus<V1beta1ExpressRoutePortStatus>
 {
     public const string KubeApiVersion = "v1beta1";

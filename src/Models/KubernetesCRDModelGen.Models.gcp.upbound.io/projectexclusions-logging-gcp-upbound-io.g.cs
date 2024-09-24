@@ -18,6 +18,7 @@ public enum V1beta1ProjectExclusionSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1ProjectExclusionSpecForProvider
 {
     /// <summary>A human-readable description.</summary>
@@ -37,6 +38,7 @@ public partial class V1beta1ProjectExclusionSpecForProvider
     public string? Project { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ProjectExclusionSpecInitProvider
 {
     /// <summary>A human-readable description.</summary>
@@ -98,6 +100,7 @@ public enum V1beta1ProjectExclusionSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ProjectExclusionSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -111,6 +114,7 @@ public partial class V1beta1ProjectExclusionSpecProviderConfigRefPolicy
     public V1beta1ProjectExclusionSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ProjectExclusionSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -142,6 +146,7 @@ public enum V1beta1ProjectExclusionSpecPublishConnectionDetailsToConfigRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ProjectExclusionSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -155,6 +160,7 @@ public partial class V1beta1ProjectExclusionSpecPublishConnectionDetailsToConfig
     public V1beta1ProjectExclusionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ProjectExclusionSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -166,6 +172,7 @@ public partial class V1beta1ProjectExclusionSpecPublishConnectionDetailsToConfig
     public V1beta1ProjectExclusionSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ProjectExclusionSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -181,6 +188,7 @@ public partial class V1beta1ProjectExclusionSpecPublishConnectionDetailsToMetada
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ProjectExclusionSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -196,6 +204,7 @@ public partial class V1beta1ProjectExclusionSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ProjectExclusionSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -207,6 +216,7 @@ public partial class V1beta1ProjectExclusionSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ProjectExclusionSpec defines the desired state of ProjectExclusion</summary>
 public partial class V1beta1ProjectExclusionSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -239,6 +249,7 @@ public partial class V1beta1ProjectExclusionSpec
     public V1beta1ProjectExclusionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ProjectExclusionStatusAtProvider
 {
     /// <summary>A human-readable description.</summary>
@@ -262,6 +273,7 @@ public partial class V1beta1ProjectExclusionStatusAtProvider
     public string? Project { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ProjectExclusionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -289,6 +301,7 @@ public partial class V1beta1ProjectExclusionStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ProjectExclusionStatus defines the observed state of ProjectExclusion.</summary>
 public partial class V1beta1ProjectExclusionStatus
 {
     /// <summary></summary>
@@ -305,6 +318,7 @@ public partial class V1beta1ProjectExclusionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ProjectExclusion is the Schema for the ProjectExclusions API. Manages a project-level logging exclusion.</summary>
 public partial class V1beta1ProjectExclusion : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ProjectExclusionSpec>, IStatus<V1beta1ProjectExclusionStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -18,6 +18,7 @@ public enum V1beta1RiskConfigurationSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskConfigurationActionsHighAction
 {
     /// <summary>The action to take in response to the account takeover action. Valid values are BLOCK, MFA_IF_CONFIGURED, MFA_REQUIRED and NO_ACTION.</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskC
     public bool? Notify { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskConfigurationActionsLowAction
 {
     /// <summary>The action to take in response to the account takeover action. Valid values are BLOCK, MFA_IF_CONFIGURED, MFA_REQUIRED and NO_ACTION.</summary>
@@ -40,6 +42,7 @@ public partial class V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskC
     public bool? Notify { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskConfigurationActionsMediumAction
 {
     /// <summary>The action to take in response to the account takeover action. Valid values are BLOCK, MFA_IF_CONFIGURED, MFA_REQUIRED and NO_ACTION.</summary>
@@ -51,6 +54,7 @@ public partial class V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskC
     public bool? Notify { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskConfigurationActions
 {
     /// <summary>Action to take for a high risk. See action block below.</summary>
@@ -66,6 +70,7 @@ public partial class V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskC
     public IList<V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskConfigurationActionsMediumAction>? MediumAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskConfigurationNotifyConfigurationBlockEmail
 {
     /// <summary>The email HTML body.</summary>
@@ -81,6 +86,7 @@ public partial class V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskC
     public string? TextBody { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskConfigurationNotifyConfigurationMfaEmail
 {
     /// <summary>The email HTML body.</summary>
@@ -96,6 +102,7 @@ public partial class V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskC
     public string? TextBody { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskConfigurationNotifyConfigurationNoActionEmail
 {
     /// <summary>The email HTML body.</summary>
@@ -111,6 +118,7 @@ public partial class V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskC
     public string? TextBody { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskConfigurationNotifyConfiguration
 {
     /// <summary>Email template used when a detected risk event is blocked. See notify email type below.</summary>
@@ -138,6 +146,7 @@ public partial class V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskC
     public string? SourceArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskConfiguration
 {
     /// <summary>Account takeover risk configuration actions. See details below.</summary>
@@ -149,6 +158,7 @@ public partial class V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskC
     public IList<V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskConfigurationNotifyConfiguration>? NotifyConfiguration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RiskConfigurationSpecForProviderCompromisedCredentialsRiskConfigurationActions
 {
     /// <summary>The action to take in response to the account takeover action. Valid values are BLOCK, MFA_IF_CONFIGURED, MFA_REQUIRED and NO_ACTION.</summary>
@@ -156,6 +166,7 @@ public partial class V1beta1RiskConfigurationSpecForProviderCompromisedCredentia
     public string? EventAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RiskConfigurationSpecForProviderCompromisedCredentialsRiskConfiguration
 {
     /// <summary>The compromised credentials risk configuration actions. See details below.</summary>
@@ -167,6 +178,7 @@ public partial class V1beta1RiskConfigurationSpecForProviderCompromisedCredentia
     public IList<string>? EventFilter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RiskConfigurationSpecForProviderRiskExceptionConfiguration
 {
     /// <summary>Overrides the risk decision to always block the pre-authentication requests. The IP range is in CIDR notation, a compact representation of an IP address and its routing prefix. Can contain a maximum of 200 items.</summary>
@@ -198,6 +210,7 @@ public enum V1beta1RiskConfigurationSpecForProviderUserPoolIdRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RiskConfigurationSpecForProviderUserPoolIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -211,6 +224,7 @@ public partial class V1beta1RiskConfigurationSpecForProviderUserPoolIdRefPolicy
     public V1beta1RiskConfigurationSpecForProviderUserPoolIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserPool in cognitoidp to populate userPoolId.</summary>
 public partial class V1beta1RiskConfigurationSpecForProviderUserPoolIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -242,6 +256,7 @@ public enum V1beta1RiskConfigurationSpecForProviderUserPoolIdSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RiskConfigurationSpecForProviderUserPoolIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -255,6 +270,7 @@ public partial class V1beta1RiskConfigurationSpecForProviderUserPoolIdSelectorPo
     public V1beta1RiskConfigurationSpecForProviderUserPoolIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserPool in cognitoidp to populate userPoolId.</summary>
 public partial class V1beta1RiskConfigurationSpecForProviderUserPoolIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -270,6 +286,7 @@ public partial class V1beta1RiskConfigurationSpecForProviderUserPoolIdSelector
     public V1beta1RiskConfigurationSpecForProviderUserPoolIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RiskConfigurationSpecForProvider
 {
     /// <summary>The account takeover risk configuration. See details below.</summary>
@@ -305,6 +322,7 @@ public partial class V1beta1RiskConfigurationSpecForProvider
     public V1beta1RiskConfigurationSpecForProviderUserPoolIdSelector? UserPoolIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRiskConfigurationActionsHighAction
 {
     /// <summary>The action to take in response to the account takeover action. Valid values are BLOCK, MFA_IF_CONFIGURED, MFA_REQUIRED and NO_ACTION.</summary>
@@ -316,6 +334,7 @@ public partial class V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRisk
     public bool? Notify { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRiskConfigurationActionsLowAction
 {
     /// <summary>The action to take in response to the account takeover action. Valid values are BLOCK, MFA_IF_CONFIGURED, MFA_REQUIRED and NO_ACTION.</summary>
@@ -327,6 +346,7 @@ public partial class V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRisk
     public bool? Notify { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRiskConfigurationActionsMediumAction
 {
     /// <summary>The action to take in response to the account takeover action. Valid values are BLOCK, MFA_IF_CONFIGURED, MFA_REQUIRED and NO_ACTION.</summary>
@@ -338,6 +358,7 @@ public partial class V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRisk
     public bool? Notify { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRiskConfigurationActions
 {
     /// <summary>Action to take for a high risk. See action block below.</summary>
@@ -353,6 +374,7 @@ public partial class V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRisk
     public IList<V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRiskConfigurationActionsMediumAction>? MediumAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRiskConfigurationNotifyConfigurationBlockEmail
 {
     /// <summary>The email HTML body.</summary>
@@ -368,6 +390,7 @@ public partial class V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRisk
     public string? TextBody { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRiskConfigurationNotifyConfigurationMfaEmail
 {
     /// <summary>The email HTML body.</summary>
@@ -383,6 +406,7 @@ public partial class V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRisk
     public string? TextBody { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRiskConfigurationNotifyConfigurationNoActionEmail
 {
     /// <summary>The email HTML body.</summary>
@@ -398,6 +422,7 @@ public partial class V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRisk
     public string? TextBody { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRiskConfigurationNotifyConfiguration
 {
     /// <summary>Email template used when a detected risk event is blocked. See notify email type below.</summary>
@@ -425,6 +450,7 @@ public partial class V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRisk
     public string? SourceArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRiskConfiguration
 {
     /// <summary>Account takeover risk configuration actions. See details below.</summary>
@@ -436,6 +462,7 @@ public partial class V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRisk
     public IList<V1beta1RiskConfigurationSpecInitProviderAccountTakeoverRiskConfigurationNotifyConfiguration>? NotifyConfiguration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RiskConfigurationSpecInitProviderCompromisedCredentialsRiskConfigurationActions
 {
     /// <summary>The action to take in response to the account takeover action. Valid values are BLOCK, MFA_IF_CONFIGURED, MFA_REQUIRED and NO_ACTION.</summary>
@@ -443,6 +470,7 @@ public partial class V1beta1RiskConfigurationSpecInitProviderCompromisedCredenti
     public string? EventAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RiskConfigurationSpecInitProviderCompromisedCredentialsRiskConfiguration
 {
     /// <summary>The compromised credentials risk configuration actions. See details below.</summary>
@@ -454,6 +482,7 @@ public partial class V1beta1RiskConfigurationSpecInitProviderCompromisedCredenti
     public IList<string>? EventFilter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RiskConfigurationSpecInitProviderRiskExceptionConfiguration
 {
     /// <summary>Overrides the risk decision to always block the pre-authentication requests. The IP range is in CIDR notation, a compact representation of an IP address and its routing prefix. Can contain a maximum of 200 items.</summary>
@@ -485,6 +514,7 @@ public enum V1beta1RiskConfigurationSpecInitProviderUserPoolIdRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RiskConfigurationSpecInitProviderUserPoolIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -498,6 +528,7 @@ public partial class V1beta1RiskConfigurationSpecInitProviderUserPoolIdRefPolicy
     public V1beta1RiskConfigurationSpecInitProviderUserPoolIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a UserPool in cognitoidp to populate userPoolId.</summary>
 public partial class V1beta1RiskConfigurationSpecInitProviderUserPoolIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -529,6 +560,7 @@ public enum V1beta1RiskConfigurationSpecInitProviderUserPoolIdSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1RiskConfigurationSpecInitProviderUserPoolIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -542,6 +574,7 @@ public partial class V1beta1RiskConfigurationSpecInitProviderUserPoolIdSelectorP
     public V1beta1RiskConfigurationSpecInitProviderUserPoolIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a UserPool in cognitoidp to populate userPoolId.</summary>
 public partial class V1beta1RiskConfigurationSpecInitProviderUserPoolIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -557,6 +590,7 @@ public partial class V1beta1RiskConfigurationSpecInitProviderUserPoolIdSelector
     public V1beta1RiskConfigurationSpecInitProviderUserPoolIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1RiskConfigurationSpecInitProvider
 {
     /// <summary>The account takeover risk configuration. See details below.</summary>
@@ -630,6 +664,7 @@ public enum V1beta1RiskConfigurationSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RiskConfigurationSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -643,6 +678,7 @@ public partial class V1beta1RiskConfigurationSpecProviderConfigRefPolicy
     public V1beta1RiskConfigurationSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1RiskConfigurationSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -674,6 +710,7 @@ public enum V1beta1RiskConfigurationSpecPublishConnectionDetailsToConfigRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RiskConfigurationSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -687,6 +724,7 @@ public partial class V1beta1RiskConfigurationSpecPublishConnectionDetailsToConfi
     public V1beta1RiskConfigurationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1RiskConfigurationSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -698,6 +736,7 @@ public partial class V1beta1RiskConfigurationSpecPublishConnectionDetailsToConfi
     public V1beta1RiskConfigurationSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1RiskConfigurationSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -713,6 +752,7 @@ public partial class V1beta1RiskConfigurationSpecPublishConnectionDetailsToMetad
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1RiskConfigurationSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -728,6 +768,7 @@ public partial class V1beta1RiskConfigurationSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1RiskConfigurationSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -739,6 +780,7 @@ public partial class V1beta1RiskConfigurationSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>RiskConfigurationSpec defines the desired state of RiskConfiguration</summary>
 public partial class V1beta1RiskConfigurationSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -771,6 +813,7 @@ public partial class V1beta1RiskConfigurationSpec
     public V1beta1RiskConfigurationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRiskConfigurationActionsHighAction
 {
     /// <summary>The action to take in response to the account takeover action. Valid values are BLOCK, MFA_IF_CONFIGURED, MFA_REQUIRED and NO_ACTION.</summary>
@@ -782,6 +825,7 @@ public partial class V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRisk
     public bool? Notify { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRiskConfigurationActionsLowAction
 {
     /// <summary>The action to take in response to the account takeover action. Valid values are BLOCK, MFA_IF_CONFIGURED, MFA_REQUIRED and NO_ACTION.</summary>
@@ -793,6 +837,7 @@ public partial class V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRisk
     public bool? Notify { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRiskConfigurationActionsMediumAction
 {
     /// <summary>The action to take in response to the account takeover action. Valid values are BLOCK, MFA_IF_CONFIGURED, MFA_REQUIRED and NO_ACTION.</summary>
@@ -804,6 +849,7 @@ public partial class V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRisk
     public bool? Notify { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRiskConfigurationActions
 {
     /// <summary>Action to take for a high risk. See action block below.</summary>
@@ -819,6 +865,7 @@ public partial class V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRisk
     public IList<V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRiskConfigurationActionsMediumAction>? MediumAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRiskConfigurationNotifyConfigurationBlockEmail
 {
     /// <summary>The email HTML body.</summary>
@@ -834,6 +881,7 @@ public partial class V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRisk
     public string? TextBody { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRiskConfigurationNotifyConfigurationMfaEmail
 {
     /// <summary>The email HTML body.</summary>
@@ -849,6 +897,7 @@ public partial class V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRisk
     public string? TextBody { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRiskConfigurationNotifyConfigurationNoActionEmail
 {
     /// <summary>The email HTML body.</summary>
@@ -864,6 +913,7 @@ public partial class V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRisk
     public string? TextBody { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRiskConfigurationNotifyConfiguration
 {
     /// <summary>Email template used when a detected risk event is blocked. See notify email type below.</summary>
@@ -891,6 +941,7 @@ public partial class V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRisk
     public string? SourceArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRiskConfiguration
 {
     /// <summary>Account takeover risk configuration actions. See details below.</summary>
@@ -902,6 +953,7 @@ public partial class V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRisk
     public IList<V1beta1RiskConfigurationStatusAtProviderAccountTakeoverRiskConfigurationNotifyConfiguration>? NotifyConfiguration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RiskConfigurationStatusAtProviderCompromisedCredentialsRiskConfigurationActions
 {
     /// <summary>The action to take in response to the account takeover action. Valid values are BLOCK, MFA_IF_CONFIGURED, MFA_REQUIRED and NO_ACTION.</summary>
@@ -909,6 +961,7 @@ public partial class V1beta1RiskConfigurationStatusAtProviderCompromisedCredenti
     public string? EventAction { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RiskConfigurationStatusAtProviderCompromisedCredentialsRiskConfiguration
 {
     /// <summary>The compromised credentials risk configuration actions. See details below.</summary>
@@ -920,6 +973,7 @@ public partial class V1beta1RiskConfigurationStatusAtProviderCompromisedCredenti
     public IList<string>? EventFilter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RiskConfigurationStatusAtProviderRiskExceptionConfiguration
 {
     /// <summary>Overrides the risk decision to always block the pre-authentication requests. The IP range is in CIDR notation, a compact representation of an IP address and its routing prefix. Can contain a maximum of 200 items.</summary>
@@ -931,6 +985,7 @@ public partial class V1beta1RiskConfigurationStatusAtProviderRiskExceptionConfig
     public IList<string>? SkippedIpRangeList { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RiskConfigurationStatusAtProvider
 {
     /// <summary>The account takeover risk configuration. See details below.</summary>
@@ -958,6 +1013,7 @@ public partial class V1beta1RiskConfigurationStatusAtProvider
     public string? UserPoolId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1RiskConfigurationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -985,6 +1041,7 @@ public partial class V1beta1RiskConfigurationStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>RiskConfigurationStatus defines the observed state of RiskConfiguration.</summary>
 public partial class V1beta1RiskConfigurationStatus
 {
     /// <summary></summary>
@@ -1001,6 +1058,7 @@ public partial class V1beta1RiskConfigurationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>RiskConfiguration is the Schema for the RiskConfigurations API. Provides a Cognito Risk Configuration resource.</summary>
 public partial class V1beta1RiskConfiguration : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1RiskConfigurationSpec>, IStatus<V1beta1RiskConfigurationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

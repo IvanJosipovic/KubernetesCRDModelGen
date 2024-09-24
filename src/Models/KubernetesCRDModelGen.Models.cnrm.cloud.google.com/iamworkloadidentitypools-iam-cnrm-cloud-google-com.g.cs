@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iam.cnrm.cloud.google.com;
+/// <summary>Immutable. The Project that this resource belongs to.</summary>
 public partial class V1beta1IAMWorkloadIdentityPoolSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1IAMWorkloadIdentityPoolSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IAMWorkloadIdentityPoolSpec
 {
     /// <summary>A description of the pool. Cannot exceed 256 characters.</summary>
@@ -50,6 +52,7 @@ public partial class V1beta1IAMWorkloadIdentityPoolSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IAMWorkloadIdentityPoolStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -73,6 +76,7 @@ public partial class V1beta1IAMWorkloadIdentityPoolStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1IAMWorkloadIdentityPoolStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -89,6 +93,7 @@ public partial class V1beta1IAMWorkloadIdentityPoolStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1IAMWorkloadIdentityPool : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IAMWorkloadIdentityPoolSpec>, IStatus<V1beta1IAMWorkloadIdentityPoolStatus>
 {
     public const string KubeApiVersion = "v1beta1";

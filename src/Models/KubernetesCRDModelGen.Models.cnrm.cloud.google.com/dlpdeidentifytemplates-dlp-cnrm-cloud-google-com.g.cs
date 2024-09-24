@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dlp.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsInfoTypes
 {
     /// <summary>Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.</summary>
@@ -15,6 +16,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public string? Name { get; set; }
 }
 
+/// <summary>date</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMaxDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
@@ -30,6 +32,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public long? Year { get; set; }
 }
 
+/// <summary>time of day</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMaxTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
@@ -49,6 +52,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public long? Seconds { get; set; }
 }
 
+/// <summary>Upper bound of the range, exclusive; type must match min.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMax
 {
     /// <summary>boolean</summary>
@@ -84,6 +88,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public string? TimestampValue { get; set; }
 }
 
+/// <summary>date</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMinDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
@@ -99,6 +104,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public long? Year { get; set; }
 }
 
+/// <summary>time of day</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMinTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
@@ -118,6 +124,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public long? Seconds { get; set; }
 }
 
+/// <summary>Lower bound of the range, inclusive. Type should be the same as max if used.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMin
 {
     /// <summary>boolean</summary>
@@ -153,6 +160,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public string? TimestampValue { get; set; }
 }
 
+/// <summary>date</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
@@ -168,6 +176,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public long? Year { get; set; }
 }
 
+/// <summary>time of day</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
@@ -187,6 +196,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public long? Seconds { get; set; }
 }
 
+/// <summary>Required. Replacement value for this bucket.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue
 {
     /// <summary>boolean</summary>
@@ -222,6 +232,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public string? TimestampValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBuckets
 {
     /// <summary>Upper bound of the range, exclusive; type must match min.</summary>
@@ -237,6 +248,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue ReplacementValue { get; set; }
 }
 
+/// <summary>Bucketing</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfig
 {
     /// <summary>Set of buckets. Ranges must be non-overlapping.</summary>
@@ -244,6 +256,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public IList<V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBuckets>? Buckets { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnore
 {
     /// <summary>Characters to not transform when masking.</summary>
@@ -255,6 +268,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public string? CommonCharactersToIgnore { get; set; }
 }
 
+/// <summary>Mask</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfig
 {
     /// <summary>When masking a string, items in this list will be skipped when replacing characters. For example, if the input string is `555-555-5555` and you instruct Cloud DLP to skip `-` and mask 5 characters with `*`, Cloud DLP returns `***-**5-5555`.</summary>
@@ -274,6 +288,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public bool? ReverseOrder { get; set; }
 }
 
+/// <summary>A context may be used for higher security and maintaining referential integrity such that the same identifier in two different contexts will be given a distinct surrogate. The context is appended to plaintext value being encrypted. On decryption the provided context is validated against the value used during encryption. If a context was provided during encryption, same context must be provided during decryption as well. If the context is not set, plaintext would be used as is for encryption. If the context is set but: 1. there is no record present when transforming a given value or 2. the field is not present when transforming a given value, plaintext would be used as is for encryption. Note that case (1) is expected when an `InfoTypeTransformation` is applied to both structured and non-structured `ContentItem`s.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContext
 {
     /// <summary>Name describing the field.</summary>
@@ -281,6 +296,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedCryptoKeyRef
 {
     /// <summary>Required. The resource name of the KMS CryptoKey to use for unwrapping.  Allowed value: The Google Cloud resource name of a `KMSCryptoKey` resource (format: `{{selfLink}}`).</summary>
@@ -296,6 +312,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public string? Namespace { get; set; }
 }
 
+/// <summary>Key wrapped using Cloud KMS</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped
 {
     /// <summary></summary>
@@ -307,6 +324,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public string WrappedKey { get; set; }
 }
 
+/// <summary>Transient crypto key</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient
 {
     /// <summary>Required. Name of the key. This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate `TransientCryptoKey` protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).</summary>
@@ -314,6 +332,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public string Name { get; set; }
 }
 
+/// <summary>Unwrapped crypto key</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped
 {
     /// <summary>Required. A 128/192/256 bit key.</summary>
@@ -321,6 +340,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public string Key { get; set; }
 }
 
+/// <summary>The key used by the encryption function. For deterministic encryption using AES-SIV, the provided key is internally expanded to 64 bytes prior to use.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey
 {
     /// <summary>Key wrapped using Cloud KMS</summary>
@@ -336,6 +356,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
 
+/// <summary>The custom info type to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom info type followed by the number of characters comprising the surrogate. The following scheme defines the format: {info type name}({surrogate character count}):{surrogate} For example, if the name of custom info type is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content using the custom info type 'Surrogate'. This facilitates reversal of the surrogate when it occurs in free text. Note: For record transformations where the entire cell in a table is being transformed, surrogates are not mandatory. Surrogates are used to denote the location of the token and are necessary for re-identification in free form text. In order for inspection to work properly, the name of this info type must not occur naturally anywhere in your data; otherwise, inspection may either - reverse a surrogate that does not correspond to an actual identifier - be unable to parse the surrogate and result in an error Therefore, choose your custom info type name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType
 {
     /// <summary>Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.</summary>
@@ -343,6 +364,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public string? Name { get; set; }
 }
 
+/// <summary>Deterministic Crypto</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfig
 {
     /// <summary>A context may be used for higher security and maintaining referential integrity such that the same identifier in two different contexts will be given a distinct surrogate. The context is appended to plaintext value being encrypted. On decryption the provided context is validated against the value used during encryption. If a context was provided during encryption, same context must be provided during decryption as well. If the context is not set, plaintext would be used as is for encryption. If the context is set but: 1. there is no record present when transforming a given value or 2. the field is not present when transforming a given value, plaintext would be used as is for encryption. Note that case (1) is expected when an `InfoTypeTransformation` is applied to both structured and non-structured `ContentItem`s.</summary>
@@ -358,6 +380,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType? SurrogateInfoType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrappedCryptoKeyRef
 {
     /// <summary>Required. The resource name of the KMS CryptoKey to use for unwrapping.  Allowed value: The Google Cloud resource name of a `KMSCryptoKey` resource (format: `{{selfLink}}`).</summary>
@@ -373,6 +396,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public string? Namespace { get; set; }
 }
 
+/// <summary>Key wrapped using Cloud KMS</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrapped
 {
     /// <summary></summary>
@@ -384,6 +408,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public string WrappedKey { get; set; }
 }
 
+/// <summary>Transient crypto key</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyTransient
 {
     /// <summary>Required. Name of the key. This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate `TransientCryptoKey` protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).</summary>
@@ -391,6 +416,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public string Name { get; set; }
 }
 
+/// <summary>Unwrapped crypto key</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped
 {
     /// <summary>Required. A 128/192/256 bit key.</summary>
@@ -398,6 +424,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public string Key { get; set; }
 }
 
+/// <summary>The key used by the hash function.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey
 {
     /// <summary>Key wrapped using Cloud KMS</summary>
@@ -413,6 +440,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
 
+/// <summary>Crypto</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfig
 {
     /// <summary>The key used by the hash function.</summary>
@@ -420,6 +448,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey? CryptoKey { get; set; }
 }
 
+/// <summary>The 'tweak', a context may be used for higher security since the same identifier in two different contexts won't be given the same surrogate. If the context is not set, a default tweak will be used. If the context is set but: 1. there is no record present when transforming a given value or 1. the field is not present when transforming a given value, a default tweak will be used. Note that case (1) is expected when an `InfoTypeTransformation` is applied to both structured and non-structured `ContentItem`s. Currently, the referenced field may be of value type integer or string. The tweak is constructed as a sequence of bytes in big endian byte order such that: - a 64 bit integer is encoded followed by a single byte of value 1 - a string is encoded in UTF-8 format followed by a single byte of value 2</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext
 {
     /// <summary>Name describing the field.</summary>
@@ -427,6 +456,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedCryptoKeyRef
 {
     /// <summary>Required. The resource name of the KMS CryptoKey to use for unwrapping.  Allowed value: The Google Cloud resource name of a `KMSCryptoKey` resource (format: `{{selfLink}}`).</summary>
@@ -442,6 +472,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public string? Namespace { get; set; }
 }
 
+/// <summary>Key wrapped using Cloud KMS</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped
 {
     /// <summary></summary>
@@ -453,6 +484,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public string WrappedKey { get; set; }
 }
 
+/// <summary>Transient crypto key</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient
 {
     /// <summary>Required. Name of the key. This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate `TransientCryptoKey` protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).</summary>
@@ -460,6 +492,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public string Name { get; set; }
 }
 
+/// <summary>Unwrapped crypto key</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped
 {
     /// <summary>Required. A 128/192/256 bit key.</summary>
@@ -467,6 +500,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public string Key { get; set; }
 }
 
+/// <summary>Required. The key used by the encryption algorithm.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey
 {
     /// <summary>Key wrapped using Cloud KMS</summary>
@@ -482,6 +516,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
 
+/// <summary>The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info_type_name(surrogate_character_count):surrogate For example, if the name of custom infoType is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content using the custom infoType [`SurrogateType`](https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#surrogatetype). This facilitates reversal of the surrogate when it occurs in free text. In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType
 {
     /// <summary>Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.</summary>
@@ -489,6 +524,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public string? Name { get; set; }
 }
 
+/// <summary>Ffx-Fpe</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig
 {
     /// <summary>Common alphabets. Possible values: FFX_COMMON_NATIVE_ALPHABET_UNSPECIFIED, NUMERIC, HEXADECIMAL, UPPER_CASE_ALPHA_NUMERIC, ALPHA_NUMERIC</summary>
@@ -516,6 +552,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType? SurrogateInfoType { get; set; }
 }
 
+/// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigContext
 {
     /// <summary>Name describing the field.</summary>
@@ -523,6 +560,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrappedCryptoKeyRef
 {
     /// <summary>Required. The resource name of the KMS CryptoKey to use for unwrapping.  Allowed value: The Google Cloud resource name of a `KMSCryptoKey` resource (format: `{{selfLink}}`).</summary>
@@ -538,6 +576,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public string? Namespace { get; set; }
 }
 
+/// <summary>Key wrapped using Cloud KMS</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrapped
 {
     /// <summary></summary>
@@ -549,6 +588,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public string WrappedKey { get; set; }
 }
 
+/// <summary>Transient crypto key</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyTransient
 {
     /// <summary>Required. Name of the key. This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate `TransientCryptoKey` protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).</summary>
@@ -556,6 +596,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public string Name { get; set; }
 }
 
+/// <summary>Unwrapped crypto key</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped
 {
     /// <summary>Required. A 128/192/256 bit key.</summary>
@@ -563,6 +604,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public string Key { get; set; }
 }
 
+/// <summary>Causes the shift to be computed based on this key and the context. This results in the same shift for the same context and crypto_key. If set, must also set context. Can only be applied to table items.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKey
 {
     /// <summary>Key wrapped using Cloud KMS</summary>
@@ -578,6 +620,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
 
+/// <summary>Date Shift</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfig
 {
     /// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context.</summary>
@@ -597,6 +640,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public long UpperBoundDays { get; set; }
 }
 
+/// <summary>date</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
@@ -612,6 +656,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public long? Year { get; set; }
 }
 
+/// <summary>time of day</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
@@ -631,6 +676,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public long? Seconds { get; set; }
 }
 
+/// <summary>Required. Lower bound value of buckets. All values less than `lower_bound` are grouped together into a single bucket; for example if `lower_bound` = 10, then all values less than 10 are replaced with the value "-10".</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBound
 {
     /// <summary>boolean</summary>
@@ -666,6 +712,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public string? TimestampValue { get; set; }
 }
 
+/// <summary>date</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
@@ -681,6 +728,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public long? Year { get; set; }
 }
 
+/// <summary>time of day</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
@@ -700,6 +748,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public long? Seconds { get; set; }
 }
 
+/// <summary>Required. Upper bound value of buckets. All values greater than upper_bound are grouped together into a single bucket; for example if `upper_bound` = 89, then all values greater than 89 are replaced with the value "89+".</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound
 {
     /// <summary>boolean</summary>
@@ -735,6 +784,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public string? TimestampValue { get; set; }
 }
 
+/// <summary>Fixed size bucketing</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfig
 {
     /// <summary>Required. Size of each bucket (except for minimum and maximum buckets). So if `lower_bound` = 10, `upper_bound` = 89, and `bucket_size` = 10, then the following buckets would be used: -10, 10-20, 20-30, 30-40, 40-50, 50-60, 60-70, 70-80, 80-89, 89+. Precision up to 2 decimals works.</summary>
@@ -750,6 +800,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound UpperBound { get; set; }
 }
 
+/// <summary>date</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
@@ -765,6 +816,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public long? Year { get; set; }
 }
 
+/// <summary>time of day</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
@@ -784,6 +836,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public long? Seconds { get; set; }
 }
 
+/// <summary>Value to replace it with.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue
 {
     /// <summary>boolean</summary>
@@ -819,6 +872,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public string? TimestampValue { get; set; }
 }
 
+/// <summary>Replace with a specified value.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfig
 {
     /// <summary>Value to replace it with.</summary>
@@ -826,6 +880,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue? NewValue { get; set; }
 }
 
+/// <summary>Time extraction</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationTimePartConfig
 {
     /// <summary>The part of the time to keep. Possible values: TIME_PART_UNSPECIFIED, YEAR, MONTH, DAY_OF_MONTH, DAY_OF_WEEK, WEEK_OF_YEAR, HOUR_OF_DAY</summary>
@@ -833,6 +888,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public string? PartToExtract { get; set; }
 }
 
+/// <summary>Required. Primitive transformation to apply to the infoType.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformation
 {
     /// <summary>Bucketing</summary>
@@ -880,6 +936,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationTimePartConfig? TimePartConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformations
 {
     /// <summary>InfoTypes to apply the transformation to. An empty list will cause this transformation to apply to all findings that correspond to infoTypes that were requested in `InspectConfig`.</summary>
@@ -891,6 +948,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformation PrimitiveTransformation { get; set; }
 }
 
+/// <summary>Treat the dataset as free-form text and apply the same free text transformation everywhere.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformations
 {
     /// <summary>Required. Transformation for each infoType. Cannot specify more than one for a given infoType.</summary>
@@ -898,6 +956,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
     public IList<V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformations> Transformations { get; set; }
 }
 
+/// <summary>Required. Field within the record this condition is evaluated against.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsField
 {
     /// <summary>Name describing the field.</summary>
@@ -905,6 +964,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? Name { get; set; }
 }
 
+/// <summary>date</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValueDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
@@ -920,6 +980,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public long? Year { get; set; }
 }
 
+/// <summary>time of day</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValueTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
@@ -939,6 +1000,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public long? Seconds { get; set; }
 }
 
+/// <summary>Value to compare against. [Mandatory, except for `EXISTS` tests.]</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValue
 {
     /// <summary>boolean</summary>
@@ -974,6 +1036,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? TimestampValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditions
 {
     /// <summary>Required. Field within the record this condition is evaluated against.</summary>
@@ -989,6 +1052,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValue? Value { get; set; }
 }
 
+/// <summary>Conditions to apply to the expression.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditions
 {
     /// <summary>A collection of conditions.</summary>
@@ -996,6 +1060,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public IList<V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditions>? Conditions { get; set; }
 }
 
+/// <summary>An expression.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressions
 {
     /// <summary>Conditions to apply to the expression.</summary>
@@ -1007,6 +1072,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? LogicalOperator { get; set; }
 }
 
+/// <summary>Only apply the transformation if the condition evaluates to true for the given `RecordCondition`. The conditions are allowed to reference fields that are not used in the actual transformation. Example Use Cases: - Apply a different bucket transformation to an age column if the zip code column for the same record is within a specific range. - Redact a field if the date of birth field is greater than 85.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsCondition
 {
     /// <summary>An expression.</summary>
@@ -1014,6 +1080,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressions? Expressions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsFields
 {
     /// <summary>Name describing the field.</summary>
@@ -1021,6 +1088,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsInfoTypes
 {
     /// <summary>Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.</summary>
@@ -1028,6 +1096,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? Name { get; set; }
 }
 
+/// <summary>date</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMaxDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
@@ -1043,6 +1112,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public long? Year { get; set; }
 }
 
+/// <summary>time of day</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMaxTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
@@ -1062,6 +1132,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public long? Seconds { get; set; }
 }
 
+/// <summary>Upper bound of the range, exclusive; type must match min.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMax
 {
     /// <summary>boolean</summary>
@@ -1097,6 +1168,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? TimestampValue { get; set; }
 }
 
+/// <summary>date</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMinDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
@@ -1112,6 +1184,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public long? Year { get; set; }
 }
 
+/// <summary>time of day</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMinTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
@@ -1131,6 +1204,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public long? Seconds { get; set; }
 }
 
+/// <summary>Lower bound of the range, inclusive. Type should be the same as max if used.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMin
 {
     /// <summary>boolean</summary>
@@ -1166,6 +1240,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? TimestampValue { get; set; }
 }
 
+/// <summary>date</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
@@ -1181,6 +1256,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public long? Year { get; set; }
 }
 
+/// <summary>time of day</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
@@ -1200,6 +1276,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public long? Seconds { get; set; }
 }
 
+/// <summary>Required. Replacement value for this bucket.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue
 {
     /// <summary>boolean</summary>
@@ -1235,6 +1312,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? TimestampValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBuckets
 {
     /// <summary>Upper bound of the range, exclusive; type must match min.</summary>
@@ -1250,6 +1328,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue ReplacementValue { get; set; }
 }
 
+/// <summary>Bucketing</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfig
 {
     /// <summary>Set of buckets. Ranges must be non-overlapping.</summary>
@@ -1257,6 +1336,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public IList<V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBuckets>? Buckets { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnore
 {
     /// <summary>Characters to not transform when masking.</summary>
@@ -1268,6 +1348,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? CommonCharactersToIgnore { get; set; }
 }
 
+/// <summary>Mask</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfig
 {
     /// <summary>When masking a string, items in this list will be skipped when replacing characters. For example, if the input string is `555-555-5555` and you instruct Cloud DLP to skip `-` and mask 5 characters with `*`, Cloud DLP returns `***-**5-5555`.</summary>
@@ -1287,6 +1368,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public bool? ReverseOrder { get; set; }
 }
 
+/// <summary>A context may be used for higher security and maintaining referential integrity such that the same identifier in two different contexts will be given a distinct surrogate. The context is appended to plaintext value being encrypted. On decryption the provided context is validated against the value used during encryption. If a context was provided during encryption, same context must be provided during decryption as well. If the context is not set, plaintext would be used as is for encryption. If the context is set but: 1. there is no record present when transforming a given value or 2. the field is not present when transforming a given value, plaintext would be used as is for encryption. Note that case (1) is expected when an `InfoTypeTransformation` is applied to both structured and non-structured `ContentItem`s.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContext
 {
     /// <summary>Name describing the field.</summary>
@@ -1294,6 +1376,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedCryptoKeyRef
 {
     /// <summary>Required. The resource name of the KMS CryptoKey to use for unwrapping.  Allowed value: The Google Cloud resource name of a `KMSCryptoKey` resource (format: `{{selfLink}}`).</summary>
@@ -1309,6 +1392,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? Namespace { get; set; }
 }
 
+/// <summary>Key wrapped using Cloud KMS</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped
 {
     /// <summary></summary>
@@ -1320,6 +1404,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string WrappedKey { get; set; }
 }
 
+/// <summary>Transient crypto key</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient
 {
     /// <summary>Required. Name of the key. This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate `TransientCryptoKey` protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).</summary>
@@ -1327,6 +1412,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string Name { get; set; }
 }
 
+/// <summary>Unwrapped crypto key</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped
 {
     /// <summary>Required. A 128/192/256 bit key.</summary>
@@ -1334,6 +1420,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string Key { get; set; }
 }
 
+/// <summary>The key used by the encryption function. For deterministic encryption using AES-SIV, the provided key is internally expanded to 64 bytes prior to use.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey
 {
     /// <summary>Key wrapped using Cloud KMS</summary>
@@ -1349,6 +1436,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
 
+/// <summary>The custom info type to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom info type followed by the number of characters comprising the surrogate. The following scheme defines the format: {info type name}({surrogate character count}):{surrogate} For example, if the name of custom info type is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content using the custom info type 'Surrogate'. This facilitates reversal of the surrogate when it occurs in free text. Note: For record transformations where the entire cell in a table is being transformed, surrogates are not mandatory. Surrogates are used to denote the location of the token and are necessary for re-identification in free form text. In order for inspection to work properly, the name of this info type must not occur naturally anywhere in your data; otherwise, inspection may either - reverse a surrogate that does not correspond to an actual identifier - be unable to parse the surrogate and result in an error Therefore, choose your custom info type name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType
 {
     /// <summary>Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.</summary>
@@ -1356,6 +1444,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? Name { get; set; }
 }
 
+/// <summary>Deterministic Crypto</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfig
 {
     /// <summary>A context may be used for higher security and maintaining referential integrity such that the same identifier in two different contexts will be given a distinct surrogate. The context is appended to plaintext value being encrypted. On decryption the provided context is validated against the value used during encryption. If a context was provided during encryption, same context must be provided during decryption as well. If the context is not set, plaintext would be used as is for encryption. If the context is set but: 1. there is no record present when transforming a given value or 2. the field is not present when transforming a given value, plaintext would be used as is for encryption. Note that case (1) is expected when an `InfoTypeTransformation` is applied to both structured and non-structured `ContentItem`s.</summary>
@@ -1371,6 +1460,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType? SurrogateInfoType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrappedCryptoKeyRef
 {
     /// <summary>Required. The resource name of the KMS CryptoKey to use for unwrapping.  Allowed value: The Google Cloud resource name of a `KMSCryptoKey` resource (format: `{{selfLink}}`).</summary>
@@ -1386,6 +1476,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? Namespace { get; set; }
 }
 
+/// <summary>Key wrapped using Cloud KMS</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrapped
 {
     /// <summary></summary>
@@ -1397,6 +1488,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string WrappedKey { get; set; }
 }
 
+/// <summary>Transient crypto key</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyTransient
 {
     /// <summary>Required. Name of the key. This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate `TransientCryptoKey` protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).</summary>
@@ -1404,6 +1496,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string Name { get; set; }
 }
 
+/// <summary>Unwrapped crypto key</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped
 {
     /// <summary>Required. A 128/192/256 bit key.</summary>
@@ -1411,6 +1504,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string Key { get; set; }
 }
 
+/// <summary>The key used by the hash function.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey
 {
     /// <summary>Key wrapped using Cloud KMS</summary>
@@ -1426,6 +1520,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
 
+/// <summary>Crypto</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfig
 {
     /// <summary>The key used by the hash function.</summary>
@@ -1433,6 +1528,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey? CryptoKey { get; set; }
 }
 
+/// <summary>The 'tweak', a context may be used for higher security since the same identifier in two different contexts won't be given the same surrogate. If the context is not set, a default tweak will be used. If the context is set but: 1. there is no record present when transforming a given value or 1. the field is not present when transforming a given value, a default tweak will be used. Note that case (1) is expected when an `InfoTypeTransformation` is applied to both structured and non-structured `ContentItem`s. Currently, the referenced field may be of value type integer or string. The tweak is constructed as a sequence of bytes in big endian byte order such that: - a 64 bit integer is encoded followed by a single byte of value 1 - a string is encoded in UTF-8 format followed by a single byte of value 2</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext
 {
     /// <summary>Name describing the field.</summary>
@@ -1440,6 +1536,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedCryptoKeyRef
 {
     /// <summary>Required. The resource name of the KMS CryptoKey to use for unwrapping.  Allowed value: The Google Cloud resource name of a `KMSCryptoKey` resource (format: `{{selfLink}}`).</summary>
@@ -1455,6 +1552,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? Namespace { get; set; }
 }
 
+/// <summary>Key wrapped using Cloud KMS</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped
 {
     /// <summary></summary>
@@ -1466,6 +1564,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string WrappedKey { get; set; }
 }
 
+/// <summary>Transient crypto key</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient
 {
     /// <summary>Required. Name of the key. This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate `TransientCryptoKey` protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).</summary>
@@ -1473,6 +1572,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string Name { get; set; }
 }
 
+/// <summary>Unwrapped crypto key</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped
 {
     /// <summary>Required. A 128/192/256 bit key.</summary>
@@ -1480,6 +1580,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string Key { get; set; }
 }
 
+/// <summary>Required. The key used by the encryption algorithm.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey
 {
     /// <summary>Key wrapped using Cloud KMS</summary>
@@ -1495,6 +1596,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
 
+/// <summary>The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info_type_name(surrogate_character_count):surrogate For example, if the name of custom infoType is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content using the custom infoType [`SurrogateType`](https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#surrogatetype). This facilitates reversal of the surrogate when it occurs in free text. In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType
 {
     /// <summary>Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.</summary>
@@ -1502,6 +1604,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? Name { get; set; }
 }
 
+/// <summary>Ffx-Fpe</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig
 {
     /// <summary>Common alphabets. Possible values: FFX_COMMON_NATIVE_ALPHABET_UNSPECIFIED, NUMERIC, HEXADECIMAL, UPPER_CASE_ALPHA_NUMERIC, ALPHA_NUMERIC</summary>
@@ -1529,6 +1632,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType? SurrogateInfoType { get; set; }
 }
 
+/// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigContext
 {
     /// <summary>Name describing the field.</summary>
@@ -1536,6 +1640,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrappedCryptoKeyRef
 {
     /// <summary>Required. The resource name of the KMS CryptoKey to use for unwrapping.  Allowed value: The Google Cloud resource name of a `KMSCryptoKey` resource (format: `{{selfLink}}`).</summary>
@@ -1551,6 +1656,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? Namespace { get; set; }
 }
 
+/// <summary>Key wrapped using Cloud KMS</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrapped
 {
     /// <summary></summary>
@@ -1562,6 +1668,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string WrappedKey { get; set; }
 }
 
+/// <summary>Transient crypto key</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyTransient
 {
     /// <summary>Required. Name of the key. This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate `TransientCryptoKey` protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).</summary>
@@ -1569,6 +1676,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string Name { get; set; }
 }
 
+/// <summary>Unwrapped crypto key</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped
 {
     /// <summary>Required. A 128/192/256 bit key.</summary>
@@ -1576,6 +1684,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string Key { get; set; }
 }
 
+/// <summary>Causes the shift to be computed based on this key and the context. This results in the same shift for the same context and crypto_key. If set, must also set context. Can only be applied to table items.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKey
 {
     /// <summary>Key wrapped using Cloud KMS</summary>
@@ -1591,6 +1700,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
 
+/// <summary>Date Shift</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfig
 {
     /// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context.</summary>
@@ -1610,6 +1720,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public long UpperBoundDays { get; set; }
 }
 
+/// <summary>date</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
@@ -1625,6 +1736,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public long? Year { get; set; }
 }
 
+/// <summary>time of day</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
@@ -1644,6 +1756,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public long? Seconds { get; set; }
 }
 
+/// <summary>Required. Lower bound value of buckets. All values less than `lower_bound` are grouped together into a single bucket; for example if `lower_bound` = 10, then all values less than 10 are replaced with the value "-10".</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBound
 {
     /// <summary>boolean</summary>
@@ -1679,6 +1792,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? TimestampValue { get; set; }
 }
 
+/// <summary>date</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
@@ -1694,6 +1808,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public long? Year { get; set; }
 }
 
+/// <summary>time of day</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
@@ -1713,6 +1828,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public long? Seconds { get; set; }
 }
 
+/// <summary>Required. Upper bound value of buckets. All values greater than upper_bound are grouped together into a single bucket; for example if `upper_bound` = 89, then all values greater than 89 are replaced with the value "89+".</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound
 {
     /// <summary>boolean</summary>
@@ -1748,6 +1864,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? TimestampValue { get; set; }
 }
 
+/// <summary>Fixed size bucketing</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfig
 {
     /// <summary>Required. Size of each bucket (except for minimum and maximum buckets). So if `lower_bound` = 10, `upper_bound` = 89, and `bucket_size` = 10, then the following buckets would be used: -10, 10-20, 20-30, 30-40, 40-50, 50-60, 60-70, 70-80, 80-89, 89+. Precision up to 2 decimals works.</summary>
@@ -1763,6 +1880,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound UpperBound { get; set; }
 }
 
+/// <summary>date</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
@@ -1778,6 +1896,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public long? Year { get; set; }
 }
 
+/// <summary>time of day</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
@@ -1797,6 +1916,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public long? Seconds { get; set; }
 }
 
+/// <summary>Value to replace it with.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue
 {
     /// <summary>boolean</summary>
@@ -1832,6 +1952,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? TimestampValue { get; set; }
 }
 
+/// <summary>Replace with a specified value.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfig
 {
     /// <summary>Value to replace it with.</summary>
@@ -1839,6 +1960,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue? NewValue { get; set; }
 }
 
+/// <summary>Time extraction</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationTimePartConfig
 {
     /// <summary>The part of the time to keep. Possible values: TIME_PART_UNSPECIFIED, YEAR, MONTH, DAY_OF_MONTH, DAY_OF_WEEK, WEEK_OF_YEAR, HOUR_OF_DAY</summary>
@@ -1846,6 +1968,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? PartToExtract { get; set; }
 }
 
+/// <summary>Required. Primitive transformation to apply to the infoType.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformation
 {
     /// <summary>Bucketing</summary>
@@ -1893,6 +2016,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationTimePartConfig? TimePartConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformations
 {
     /// <summary>InfoTypes to apply the transformation to. An empty list will cause this transformation to apply to all findings that correspond to infoTypes that were requested in `InspectConfig`.</summary>
@@ -1904,6 +2028,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformation PrimitiveTransformation { get; set; }
 }
 
+/// <summary>Treat the contents of the field as free text, and selectively transform content that matches an `InfoType`.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformations
 {
     /// <summary>Required. Transformation for each infoType. Cannot specify more than one for a given infoType.</summary>
@@ -1911,6 +2036,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public IList<V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformations> Transformations { get; set; }
 }
 
+/// <summary>date</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
@@ -1926,6 +2052,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public long? Year { get; set; }
 }
 
+/// <summary>time of day</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
@@ -1945,6 +2072,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public long? Seconds { get; set; }
 }
 
+/// <summary>Upper bound of the range, exclusive; type must match min.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMax
 {
     /// <summary>boolean</summary>
@@ -1980,6 +2108,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? TimestampValue { get; set; }
 }
 
+/// <summary>date</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
@@ -1995,6 +2124,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public long? Year { get; set; }
 }
 
+/// <summary>time of day</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
@@ -2014,6 +2144,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public long? Seconds { get; set; }
 }
 
+/// <summary>Lower bound of the range, inclusive. Type should be the same as max if used.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMin
 {
     /// <summary>boolean</summary>
@@ -2049,6 +2180,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? TimestampValue { get; set; }
 }
 
+/// <summary>date</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
@@ -2064,6 +2196,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public long? Year { get; set; }
 }
 
+/// <summary>time of day</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
@@ -2083,6 +2216,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public long? Seconds { get; set; }
 }
 
+/// <summary>Required. Replacement value for this bucket.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue
 {
     /// <summary>boolean</summary>
@@ -2118,6 +2252,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? TimestampValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBuckets
 {
     /// <summary>Upper bound of the range, exclusive; type must match min.</summary>
@@ -2133,6 +2268,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue ReplacementValue { get; set; }
 }
 
+/// <summary>Bucketing</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfig
 {
     /// <summary>Set of buckets. Ranges must be non-overlapping.</summary>
@@ -2140,6 +2276,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public IList<V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBuckets>? Buckets { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnore
 {
     /// <summary>Characters to not transform when masking.</summary>
@@ -2151,6 +2288,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? CommonCharactersToIgnore { get; set; }
 }
 
+/// <summary>Mask</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfig
 {
     /// <summary>When masking a string, items in this list will be skipped when replacing characters. For example, if the input string is `555-555-5555` and you instruct Cloud DLP to skip `-` and mask 5 characters with `*`, Cloud DLP returns `***-**5-5555`.</summary>
@@ -2170,6 +2308,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public bool? ReverseOrder { get; set; }
 }
 
+/// <summary>A context may be used for higher security and maintaining referential integrity such that the same identifier in two different contexts will be given a distinct surrogate. The context is appended to plaintext value being encrypted. On decryption the provided context is validated against the value used during encryption. If a context was provided during encryption, same context must be provided during decryption as well. If the context is not set, plaintext would be used as is for encryption. If the context is set but: 1. there is no record present when transforming a given value or 2. the field is not present when transforming a given value, plaintext would be used as is for encryption. Note that case (1) is expected when an `InfoTypeTransformation` is applied to both structured and non-structured `ContentItem`s.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigContext
 {
     /// <summary>Name describing the field.</summary>
@@ -2177,6 +2316,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedCryptoKeyRef
 {
     /// <summary>Required. The resource name of the KMS CryptoKey to use for unwrapping.  Allowed value: The Google Cloud resource name of a `KMSCryptoKey` resource (format: `{{selfLink}}`).</summary>
@@ -2192,6 +2332,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? Namespace { get; set; }
 }
 
+/// <summary>Key wrapped using Cloud KMS</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped
 {
     /// <summary></summary>
@@ -2203,6 +2344,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string WrappedKey { get; set; }
 }
 
+/// <summary>Transient crypto key</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient
 {
     /// <summary>Required. Name of the key. This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate `TransientCryptoKey` protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).</summary>
@@ -2210,6 +2352,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string Name { get; set; }
 }
 
+/// <summary>Unwrapped crypto key</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped
 {
     /// <summary>Required. A 128/192/256 bit key.</summary>
@@ -2217,6 +2360,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string Key { get; set; }
 }
 
+/// <summary>The key used by the encryption function. For deterministic encryption using AES-SIV, the provided key is internally expanded to 64 bytes prior to use.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey
 {
     /// <summary>Key wrapped using Cloud KMS</summary>
@@ -2232,6 +2376,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
 
+/// <summary>The custom info type to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom info type followed by the number of characters comprising the surrogate. The following scheme defines the format: {info type name}({surrogate character count}):{surrogate} For example, if the name of custom info type is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content using the custom info type 'Surrogate'. This facilitates reversal of the surrogate when it occurs in free text. Note: For record transformations where the entire cell in a table is being transformed, surrogates are not mandatory. Surrogates are used to denote the location of the token and are necessary for re-identification in free form text. In order for inspection to work properly, the name of this info type must not occur naturally anywhere in your data; otherwise, inspection may either - reverse a surrogate that does not correspond to an actual identifier - be unable to parse the surrogate and result in an error Therefore, choose your custom info type name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType
 {
     /// <summary>Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.</summary>
@@ -2239,6 +2384,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? Name { get; set; }
 }
 
+/// <summary>Deterministic Crypto</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfig
 {
     /// <summary>A context may be used for higher security and maintaining referential integrity such that the same identifier in two different contexts will be given a distinct surrogate. The context is appended to plaintext value being encrypted. On decryption the provided context is validated against the value used during encryption. If a context was provided during encryption, same context must be provided during decryption as well. If the context is not set, plaintext would be used as is for encryption. If the context is set but: 1. there is no record present when transforming a given value or 2. the field is not present when transforming a given value, plaintext would be used as is for encryption. Note that case (1) is expected when an `InfoTypeTransformation` is applied to both structured and non-structured `ContentItem`s.</summary>
@@ -2254,6 +2400,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType? SurrogateInfoType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrappedCryptoKeyRef
 {
     /// <summary>Required. The resource name of the KMS CryptoKey to use for unwrapping.  Allowed value: The Google Cloud resource name of a `KMSCryptoKey` resource (format: `{{selfLink}}`).</summary>
@@ -2269,6 +2416,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? Namespace { get; set; }
 }
 
+/// <summary>Key wrapped using Cloud KMS</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrapped
 {
     /// <summary></summary>
@@ -2280,6 +2428,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string WrappedKey { get; set; }
 }
 
+/// <summary>Transient crypto key</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyTransient
 {
     /// <summary>Required. Name of the key. This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate `TransientCryptoKey` protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).</summary>
@@ -2287,6 +2436,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string Name { get; set; }
 }
 
+/// <summary>Unwrapped crypto key</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped
 {
     /// <summary>Required. A 128/192/256 bit key.</summary>
@@ -2294,6 +2444,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string Key { get; set; }
 }
 
+/// <summary>The key used by the hash function.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey
 {
     /// <summary>Key wrapped using Cloud KMS</summary>
@@ -2309,6 +2460,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
 
+/// <summary>Crypto</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfig
 {
     /// <summary>The key used by the hash function.</summary>
@@ -2316,6 +2468,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey? CryptoKey { get; set; }
 }
 
+/// <summary>The 'tweak', a context may be used for higher security since the same identifier in two different contexts won't be given the same surrogate. If the context is not set, a default tweak will be used. If the context is set but: 1. there is no record present when transforming a given value or 1. the field is not present when transforming a given value, a default tweak will be used. Note that case (1) is expected when an `InfoTypeTransformation` is applied to both structured and non-structured `ContentItem`s. Currently, the referenced field may be of value type integer or string. The tweak is constructed as a sequence of bytes in big endian byte order such that: - a 64 bit integer is encoded followed by a single byte of value 1 - a string is encoded in UTF-8 format followed by a single byte of value 2</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext
 {
     /// <summary>Name describing the field.</summary>
@@ -2323,6 +2476,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedCryptoKeyRef
 {
     /// <summary>Required. The resource name of the KMS CryptoKey to use for unwrapping.  Allowed value: The Google Cloud resource name of a `KMSCryptoKey` resource (format: `{{selfLink}}`).</summary>
@@ -2338,6 +2492,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? Namespace { get; set; }
 }
 
+/// <summary>Key wrapped using Cloud KMS</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped
 {
     /// <summary></summary>
@@ -2349,6 +2504,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string WrappedKey { get; set; }
 }
 
+/// <summary>Transient crypto key</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient
 {
     /// <summary>Required. Name of the key. This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate `TransientCryptoKey` protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).</summary>
@@ -2356,6 +2512,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string Name { get; set; }
 }
 
+/// <summary>Unwrapped crypto key</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped
 {
     /// <summary>Required. A 128/192/256 bit key.</summary>
@@ -2363,6 +2520,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string Key { get; set; }
 }
 
+/// <summary>Required. The key used by the encryption algorithm.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey
 {
     /// <summary>Key wrapped using Cloud KMS</summary>
@@ -2378,6 +2536,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
 
+/// <summary>The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info_type_name(surrogate_character_count):surrogate For example, if the name of custom infoType is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content using the custom infoType [`SurrogateType`](https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#surrogatetype). This facilitates reversal of the surrogate when it occurs in free text. In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType
 {
     /// <summary>Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.</summary>
@@ -2385,6 +2544,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? Name { get; set; }
 }
 
+/// <summary>Ffx-Fpe</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig
 {
     /// <summary>Common alphabets. Possible values: FFX_COMMON_NATIVE_ALPHABET_UNSPECIFIED, NUMERIC, HEXADECIMAL, UPPER_CASE_ALPHA_NUMERIC, ALPHA_NUMERIC</summary>
@@ -2412,6 +2572,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType? SurrogateInfoType { get; set; }
 }
 
+/// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigContext
 {
     /// <summary>Name describing the field.</summary>
@@ -2419,6 +2580,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrappedCryptoKeyRef
 {
     /// <summary>Required. The resource name of the KMS CryptoKey to use for unwrapping.  Allowed value: The Google Cloud resource name of a `KMSCryptoKey` resource (format: `{{selfLink}}`).</summary>
@@ -2434,6 +2596,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? Namespace { get; set; }
 }
 
+/// <summary>Key wrapped using Cloud KMS</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrapped
 {
     /// <summary></summary>
@@ -2445,6 +2608,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string WrappedKey { get; set; }
 }
 
+/// <summary>Transient crypto key</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyTransient
 {
     /// <summary>Required. Name of the key. This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate `TransientCryptoKey` protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).</summary>
@@ -2452,6 +2616,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string Name { get; set; }
 }
 
+/// <summary>Unwrapped crypto key</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped
 {
     /// <summary>Required. A 128/192/256 bit key.</summary>
@@ -2459,6 +2624,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string Key { get; set; }
 }
 
+/// <summary>Causes the shift to be computed based on this key and the context. This results in the same shift for the same context and crypto_key. If set, must also set context. Can only be applied to table items.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKey
 {
     /// <summary>Key wrapped using Cloud KMS</summary>
@@ -2474,6 +2640,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
 
+/// <summary>Date Shift</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfig
 {
     /// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context.</summary>
@@ -2493,6 +2660,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public long UpperBoundDays { get; set; }
 }
 
+/// <summary>date</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
@@ -2508,6 +2676,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public long? Year { get; set; }
 }
 
+/// <summary>time of day</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
@@ -2527,6 +2696,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public long? Seconds { get; set; }
 }
 
+/// <summary>Required. Lower bound value of buckets. All values less than `lower_bound` are grouped together into a single bucket; for example if `lower_bound` = 10, then all values less than 10 are replaced with the value "-10".</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBound
 {
     /// <summary>boolean</summary>
@@ -2562,6 +2732,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? TimestampValue { get; set; }
 }
 
+/// <summary>date</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
@@ -2577,6 +2748,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public long? Year { get; set; }
 }
 
+/// <summary>time of day</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
@@ -2596,6 +2768,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public long? Seconds { get; set; }
 }
 
+/// <summary>Required. Upper bound value of buckets. All values greater than upper_bound are grouped together into a single bucket; for example if `upper_bound` = 89, then all values greater than 89 are replaced with the value "89+".</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound
 {
     /// <summary>boolean</summary>
@@ -2631,6 +2804,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? TimestampValue { get; set; }
 }
 
+/// <summary>Fixed size bucketing</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfig
 {
     /// <summary>Required. Size of each bucket (except for minimum and maximum buckets). So if `lower_bound` = 10, `upper_bound` = 89, and `bucket_size` = 10, then the following buckets would be used: -10, 10-20, 20-30, 30-40, 40-50, 50-60, 60-70, 70-80, 80-89, 89+. Precision up to 2 decimals works.</summary>
@@ -2646,6 +2820,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound UpperBound { get; set; }
 }
 
+/// <summary>date</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
@@ -2661,6 +2836,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public long? Year { get; set; }
 }
 
+/// <summary>time of day</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
@@ -2680,6 +2856,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public long? Seconds { get; set; }
 }
 
+/// <summary>Value to replace it with.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValue
 {
     /// <summary>boolean</summary>
@@ -2715,6 +2892,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? TimestampValue { get; set; }
 }
 
+/// <summary>Replace with a specified value.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfig
 {
     /// <summary>Value to replace it with.</summary>
@@ -2722,6 +2900,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValue? NewValue { get; set; }
 }
 
+/// <summary>Time extraction</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationTimePartConfig
 {
     /// <summary>The part of the time to keep. Possible values: TIME_PART_UNSPECIFIED, YEAR, MONTH, DAY_OF_MONTH, DAY_OF_WEEK, WEEK_OF_YEAR, HOUR_OF_DAY</summary>
@@ -2729,6 +2908,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? PartToExtract { get; set; }
 }
 
+/// <summary>Apply the transformation to the entire field.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformation
 {
     /// <summary>Bucketing</summary>
@@ -2776,6 +2956,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationTimePartConfig? TimePartConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformations
 {
     /// <summary>Only apply the transformation if the condition evaluates to true for the given `RecordCondition`. The conditions are allowed to reference fields that are not used in the actual transformation. Example Use Cases: - Apply a different bucket transformation to an age column if the zip code column for the same record is within a specific range. - Redact a field if the date of birth field is greater than 85.</summary>
@@ -2795,6 +2976,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformation? PrimitiveTransformation { get; set; }
 }
 
+/// <summary>Required. Field within the record this condition is evaluated against.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsField
 {
     /// <summary>Name describing the field.</summary>
@@ -2802,6 +2984,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? Name { get; set; }
 }
 
+/// <summary>date</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
@@ -2817,6 +3000,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public long? Year { get; set; }
 }
 
+/// <summary>time of day</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
@@ -2836,6 +3020,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public long? Seconds { get; set; }
 }
 
+/// <summary>Value to compare against. [Mandatory, except for `EXISTS` tests.]</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValue
 {
     /// <summary>boolean</summary>
@@ -2871,6 +3056,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? TimestampValue { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditions
 {
     /// <summary>Required. Field within the record this condition is evaluated against.</summary>
@@ -2886,6 +3072,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValue? Value { get; set; }
 }
 
+/// <summary>Conditions to apply to the expression.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditions
 {
     /// <summary>A collection of conditions.</summary>
@@ -2893,6 +3080,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public IList<V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditions>? Conditions { get; set; }
 }
 
+/// <summary>An expression.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressions
 {
     /// <summary>Conditions to apply to the expression.</summary>
@@ -2904,6 +3092,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public string? LogicalOperator { get; set; }
 }
 
+/// <summary>A condition that when it evaluates to true will result in the record being evaluated to be suppressed from the transformed content.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsCondition
 {
     /// <summary>An expression.</summary>
@@ -2911,6 +3100,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressions? Expressions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressions
 {
     /// <summary>A condition that when it evaluates to true will result in the record being evaluated to be suppressed from the transformed content.</summary>
@@ -2918,6 +3108,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsCondition? Condition { get; set; }
 }
 
+/// <summary>Treat the dataset as structured. Transformations can be applied to specific locations within structured datasets, such as transforming a column within a table.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformations
 {
     /// <summary>Transform the record by applying various field transformations.</summary>
@@ -2929,6 +3120,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
     public IList<V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressions>? RecordSuppressions { get; set; }
 }
 
+/// <summary>Mode for handling transformation errors. If left unspecified, the default mode is `TransformationErrorHandling.ThrowError`.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigTransformationErrorHandling
 {
     /// <summary>Ignore errors</summary>
@@ -2940,6 +3132,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigTransformat
     public JsonNode? ThrowError { get; set; }
 }
 
+/// <summary>The core content of the template.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfig
 {
     /// <summary>Treat the dataset as free-form text and apply the same free text transformation everywhere.</summary>
@@ -2955,6 +3148,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfig
     public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigTransformationErrorHandling? TransformationErrorHandling { get; set; }
 }
 
+/// <summary>Immutable. The Organization that this resource belongs to. Only one of [organizationRef, projectRef] may be specified.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecOrganizationRef
 {
     /// <summary>Allowed value: The Google Cloud resource name of a Google Cloud Organization (format: `organizations/{{name}}`).</summary>
@@ -2970,6 +3164,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecOrganizationRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. The Project that this resource belongs to. Only one of [organizationRef, projectRef] may be specified.</summary>
 public partial class V1beta1DLPDeidentifyTemplateSpecProjectRef
 {
     /// <summary>Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -2985,6 +3180,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPDeidentifyTemplateSpec
 {
     /// <summary>The core content of the template.</summary>
@@ -3016,6 +3212,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPDeidentifyTemplateStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -3039,6 +3236,7 @@ public partial class V1beta1DLPDeidentifyTemplateStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DLPDeidentifyTemplateStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -3063,6 +3261,7 @@ public partial class V1beta1DLPDeidentifyTemplateStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1DLPDeidentifyTemplate : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DLPDeidentifyTemplateSpec>, IStatus<V1beta1DLPDeidentifyTemplateStatus>
 {
     public const string KubeApiVersion = "v1beta1";

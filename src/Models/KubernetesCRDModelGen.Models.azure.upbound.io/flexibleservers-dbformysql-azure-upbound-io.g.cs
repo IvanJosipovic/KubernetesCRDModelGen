@@ -18,6 +18,7 @@ public enum V1beta1FlexibleServerSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>The Password associated with the administrator_login for the MySQL Flexible Server. Required when create_mode is Default.</summary>
 public partial class V1beta1FlexibleServerSpecForProviderAdministratorPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1FlexibleServerSpecForProviderAdministratorPasswordSe
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlexibleServerSpecForProviderCustomerManagedKey
 {
     /// <summary>The ID of the geo backup Key Vault Key. It can't cross region and need Customer Managed Key in same region as geo backup.</summary>
@@ -72,6 +74,7 @@ public enum V1beta1FlexibleServerSpecForProviderDelegatedSubnetIdRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FlexibleServerSpecForProviderDelegatedSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -85,6 +88,7 @@ public partial class V1beta1FlexibleServerSpecForProviderDelegatedSubnetIdRefPol
     public V1beta1FlexibleServerSpecForProviderDelegatedSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate delegatedSubnetId.</summary>
 public partial class V1beta1FlexibleServerSpecForProviderDelegatedSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -116,6 +120,7 @@ public enum V1beta1FlexibleServerSpecForProviderDelegatedSubnetIdSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FlexibleServerSpecForProviderDelegatedSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -129,6 +134,7 @@ public partial class V1beta1FlexibleServerSpecForProviderDelegatedSubnetIdSelect
     public V1beta1FlexibleServerSpecForProviderDelegatedSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate delegatedSubnetId.</summary>
 public partial class V1beta1FlexibleServerSpecForProviderDelegatedSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -144,6 +150,7 @@ public partial class V1beta1FlexibleServerSpecForProviderDelegatedSubnetIdSelect
     public V1beta1FlexibleServerSpecForProviderDelegatedSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlexibleServerSpecForProviderHighAvailability
 {
     /// <summary>The high availability mode for the MySQL Flexible Server. Possibles values are SameZone and ZoneRedundant.</summary>
@@ -155,6 +162,7 @@ public partial class V1beta1FlexibleServerSpecForProviderHighAvailability
     public string? StandbyAvailabilityZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlexibleServerSpecForProviderIdentity
 {
     /// <summary>A list of User Assigned Managed Identity IDs to be assigned to this MySQL Flexible Server.</summary>
@@ -166,6 +174,7 @@ public partial class V1beta1FlexibleServerSpecForProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlexibleServerSpecForProviderMaintenanceWindow
 {
     /// <summary>The day of week for maintenance window. Defaults to 0.</summary>
@@ -201,6 +210,7 @@ public enum V1beta1FlexibleServerSpecForProviderPrivateDnsZoneIdRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FlexibleServerSpecForProviderPrivateDnsZoneIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -214,6 +224,7 @@ public partial class V1beta1FlexibleServerSpecForProviderPrivateDnsZoneIdRefPoli
     public V1beta1FlexibleServerSpecForProviderPrivateDnsZoneIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a PrivateDNSZone in network to populate privateDnsZoneId.</summary>
 public partial class V1beta1FlexibleServerSpecForProviderPrivateDnsZoneIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -245,6 +256,7 @@ public enum V1beta1FlexibleServerSpecForProviderPrivateDnsZoneIdSelectorPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FlexibleServerSpecForProviderPrivateDnsZoneIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -258,6 +270,7 @@ public partial class V1beta1FlexibleServerSpecForProviderPrivateDnsZoneIdSelecto
     public V1beta1FlexibleServerSpecForProviderPrivateDnsZoneIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a PrivateDNSZone in network to populate privateDnsZoneId.</summary>
 public partial class V1beta1FlexibleServerSpecForProviderPrivateDnsZoneIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -293,6 +306,7 @@ public enum V1beta1FlexibleServerSpecForProviderResourceGroupNameRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FlexibleServerSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -306,6 +320,7 @@ public partial class V1beta1FlexibleServerSpecForProviderResourceGroupNameRefPol
     public V1beta1FlexibleServerSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1FlexibleServerSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -337,6 +352,7 @@ public enum V1beta1FlexibleServerSpecForProviderResourceGroupNameSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FlexibleServerSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -350,6 +366,7 @@ public partial class V1beta1FlexibleServerSpecForProviderResourceGroupNameSelect
     public V1beta1FlexibleServerSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1FlexibleServerSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -365,6 +382,7 @@ public partial class V1beta1FlexibleServerSpecForProviderResourceGroupNameSelect
     public V1beta1FlexibleServerSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlexibleServerSpecForProviderStorage
 {
     /// <summary>Should Storage Auto Grow be enabled? Defaults to true.</summary>
@@ -384,6 +402,7 @@ public partial class V1beta1FlexibleServerSpecForProviderStorage
     public double? SizeGb { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlexibleServerSpecForProvider
 {
     /// <summary>The Administrator login for the MySQL Flexible Server. Required when create_mode is Default. Changing this forces a new MySQL Flexible Server to be created.</summary>
@@ -495,6 +514,7 @@ public partial class V1beta1FlexibleServerSpecForProvider
     public string? Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlexibleServerSpecInitProviderCustomerManagedKey
 {
     /// <summary>The ID of the geo backup Key Vault Key. It can't cross region and need Customer Managed Key in same region as geo backup.</summary>
@@ -534,6 +554,7 @@ public enum V1beta1FlexibleServerSpecInitProviderDelegatedSubnetIdRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FlexibleServerSpecInitProviderDelegatedSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -547,6 +568,7 @@ public partial class V1beta1FlexibleServerSpecInitProviderDelegatedSubnetIdRefPo
     public V1beta1FlexibleServerSpecInitProviderDelegatedSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in network to populate delegatedSubnetId.</summary>
 public partial class V1beta1FlexibleServerSpecInitProviderDelegatedSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -578,6 +600,7 @@ public enum V1beta1FlexibleServerSpecInitProviderDelegatedSubnetIdSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FlexibleServerSpecInitProviderDelegatedSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -591,6 +614,7 @@ public partial class V1beta1FlexibleServerSpecInitProviderDelegatedSubnetIdSelec
     public V1beta1FlexibleServerSpecInitProviderDelegatedSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in network to populate delegatedSubnetId.</summary>
 public partial class V1beta1FlexibleServerSpecInitProviderDelegatedSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -606,6 +630,7 @@ public partial class V1beta1FlexibleServerSpecInitProviderDelegatedSubnetIdSelec
     public V1beta1FlexibleServerSpecInitProviderDelegatedSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlexibleServerSpecInitProviderHighAvailability
 {
     /// <summary>The high availability mode for the MySQL Flexible Server. Possibles values are SameZone and ZoneRedundant.</summary>
@@ -617,6 +642,7 @@ public partial class V1beta1FlexibleServerSpecInitProviderHighAvailability
     public string? StandbyAvailabilityZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlexibleServerSpecInitProviderIdentity
 {
     /// <summary>A list of User Assigned Managed Identity IDs to be assigned to this MySQL Flexible Server.</summary>
@@ -628,6 +654,7 @@ public partial class V1beta1FlexibleServerSpecInitProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlexibleServerSpecInitProviderMaintenanceWindow
 {
     /// <summary>The day of week for maintenance window. Defaults to 0.</summary>
@@ -663,6 +690,7 @@ public enum V1beta1FlexibleServerSpecInitProviderPrivateDnsZoneIdRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FlexibleServerSpecInitProviderPrivateDnsZoneIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -676,6 +704,7 @@ public partial class V1beta1FlexibleServerSpecInitProviderPrivateDnsZoneIdRefPol
     public V1beta1FlexibleServerSpecInitProviderPrivateDnsZoneIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a PrivateDNSZone in network to populate privateDnsZoneId.</summary>
 public partial class V1beta1FlexibleServerSpecInitProviderPrivateDnsZoneIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -707,6 +736,7 @@ public enum V1beta1FlexibleServerSpecInitProviderPrivateDnsZoneIdSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FlexibleServerSpecInitProviderPrivateDnsZoneIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -720,6 +750,7 @@ public partial class V1beta1FlexibleServerSpecInitProviderPrivateDnsZoneIdSelect
     public V1beta1FlexibleServerSpecInitProviderPrivateDnsZoneIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a PrivateDNSZone in network to populate privateDnsZoneId.</summary>
 public partial class V1beta1FlexibleServerSpecInitProviderPrivateDnsZoneIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -735,6 +766,7 @@ public partial class V1beta1FlexibleServerSpecInitProviderPrivateDnsZoneIdSelect
     public V1beta1FlexibleServerSpecInitProviderPrivateDnsZoneIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlexibleServerSpecInitProviderStorage
 {
     /// <summary>Should Storage Auto Grow be enabled? Defaults to true.</summary>
@@ -754,6 +786,7 @@ public partial class V1beta1FlexibleServerSpecInitProviderStorage
     public double? SizeGb { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1FlexibleServerSpecInitProvider
 {
     /// <summary>The Administrator login for the MySQL Flexible Server. Required when create_mode is Default. Changing this forces a new MySQL Flexible Server to be created.</summary>
@@ -891,6 +924,7 @@ public enum V1beta1FlexibleServerSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FlexibleServerSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -904,6 +938,7 @@ public partial class V1beta1FlexibleServerSpecProviderConfigRefPolicy
     public V1beta1FlexibleServerSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1FlexibleServerSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -935,6 +970,7 @@ public enum V1beta1FlexibleServerSpecPublishConnectionDetailsToConfigRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FlexibleServerSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -948,6 +984,7 @@ public partial class V1beta1FlexibleServerSpecPublishConnectionDetailsToConfigRe
     public V1beta1FlexibleServerSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1FlexibleServerSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -959,6 +996,7 @@ public partial class V1beta1FlexibleServerSpecPublishConnectionDetailsToConfigRe
     public V1beta1FlexibleServerSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1FlexibleServerSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -974,6 +1012,7 @@ public partial class V1beta1FlexibleServerSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1FlexibleServerSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -989,6 +1028,7 @@ public partial class V1beta1FlexibleServerSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1FlexibleServerSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1000,6 +1040,7 @@ public partial class V1beta1FlexibleServerSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>FlexibleServerSpec defines the desired state of FlexibleServer</summary>
 public partial class V1beta1FlexibleServerSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1032,6 +1073,7 @@ public partial class V1beta1FlexibleServerSpec
     public V1beta1FlexibleServerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlexibleServerStatusAtProviderCustomerManagedKey
 {
     /// <summary>The ID of the geo backup Key Vault Key. It can't cross region and need Customer Managed Key in same region as geo backup.</summary>
@@ -1051,6 +1093,7 @@ public partial class V1beta1FlexibleServerStatusAtProviderCustomerManagedKey
     public string? PrimaryUserAssignedIdentityId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlexibleServerStatusAtProviderHighAvailability
 {
     /// <summary>The high availability mode for the MySQL Flexible Server. Possibles values are SameZone and ZoneRedundant.</summary>
@@ -1062,6 +1105,7 @@ public partial class V1beta1FlexibleServerStatusAtProviderHighAvailability
     public string? StandbyAvailabilityZone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlexibleServerStatusAtProviderIdentity
 {
     /// <summary>A list of User Assigned Managed Identity IDs to be assigned to this MySQL Flexible Server.</summary>
@@ -1073,6 +1117,7 @@ public partial class V1beta1FlexibleServerStatusAtProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlexibleServerStatusAtProviderMaintenanceWindow
 {
     /// <summary>The day of week for maintenance window. Defaults to 0.</summary>
@@ -1088,6 +1133,7 @@ public partial class V1beta1FlexibleServerStatusAtProviderMaintenanceWindow
     public double? StartMinute { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlexibleServerStatusAtProviderStorage
 {
     /// <summary>Should Storage Auto Grow be enabled? Defaults to true.</summary>
@@ -1107,6 +1153,7 @@ public partial class V1beta1FlexibleServerStatusAtProviderStorage
     public double? SizeGb { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlexibleServerStatusAtProvider
 {
     /// <summary>The Administrator login for the MySQL Flexible Server. Required when create_mode is Default. Changing this forces a new MySQL Flexible Server to be created.</summary>
@@ -1206,6 +1253,7 @@ public partial class V1beta1FlexibleServerStatusAtProvider
     public string? Zone { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1FlexibleServerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1233,6 +1281,7 @@ public partial class V1beta1FlexibleServerStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>FlexibleServerStatus defines the observed state of FlexibleServer.</summary>
 public partial class V1beta1FlexibleServerStatus
 {
     /// <summary></summary>
@@ -1249,6 +1298,7 @@ public partial class V1beta1FlexibleServerStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>FlexibleServer is the Schema for the FlexibleServers API. Manages a MySQL Flexible Server.</summary>
 public partial class V1beta1FlexibleServer : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FlexibleServerSpec>, IStatus<V1beta1FlexibleServerStatus>
 {
     public const string KubeApiVersion = "v1beta1";

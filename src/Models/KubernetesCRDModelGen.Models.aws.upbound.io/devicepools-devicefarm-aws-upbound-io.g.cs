@@ -38,6 +38,7 @@ public enum V1beta1DevicePoolSpecForProviderProjectArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DevicePoolSpecForProviderProjectArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1DevicePoolSpecForProviderProjectArnRefPolicy
     public V1beta1DevicePoolSpecForProviderProjectArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Project in devicefarm to populate projectArn.</summary>
 public partial class V1beta1DevicePoolSpecForProviderProjectArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1DevicePoolSpecForProviderProjectArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DevicePoolSpecForProviderProjectArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1DevicePoolSpecForProviderProjectArnSelectorPolicy
     public V1beta1DevicePoolSpecForProviderProjectArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Project in devicefarm to populate projectArn.</summary>
 public partial class V1beta1DevicePoolSpecForProviderProjectArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1DevicePoolSpecForProviderProjectArnSelector
     public V1beta1DevicePoolSpecForProviderProjectArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DevicePoolSpecForProviderRule
 {
     /// <summary>The rule's stringified attribute. Valid values are: APPIUM_VERSION, ARN, AVAILABILITY, FLEET_TYPE, FORM_FACTOR, INSTANCE_ARN, INSTANCE_LABELS, MANUFACTURER, MODEL, OS_VERSION, PLATFORM, REMOTE_ACCESS_ENABLED, REMOTE_DEBUG_ENABLED.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1DevicePoolSpecForProviderRule
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DevicePoolSpecForProvider
 {
     /// <summary>The device pool's description.</summary>
@@ -184,6 +190,7 @@ public enum V1beta1DevicePoolSpecInitProviderProjectArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DevicePoolSpecInitProviderProjectArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -197,6 +204,7 @@ public partial class V1beta1DevicePoolSpecInitProviderProjectArnRefPolicy
     public V1beta1DevicePoolSpecInitProviderProjectArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Project in devicefarm to populate projectArn.</summary>
 public partial class V1beta1DevicePoolSpecInitProviderProjectArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -228,6 +236,7 @@ public enum V1beta1DevicePoolSpecInitProviderProjectArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DevicePoolSpecInitProviderProjectArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -241,6 +250,7 @@ public partial class V1beta1DevicePoolSpecInitProviderProjectArnSelectorPolicy
     public V1beta1DevicePoolSpecInitProviderProjectArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Project in devicefarm to populate projectArn.</summary>
 public partial class V1beta1DevicePoolSpecInitProviderProjectArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -256,6 +266,7 @@ public partial class V1beta1DevicePoolSpecInitProviderProjectArnSelector
     public V1beta1DevicePoolSpecInitProviderProjectArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DevicePoolSpecInitProviderRule
 {
     /// <summary>The rule's stringified attribute. Valid values are: APPIUM_VERSION, ARN, AVAILABILITY, FLEET_TYPE, FORM_FACTOR, INSTANCE_ARN, INSTANCE_LABELS, MANUFACTURER, MODEL, OS_VERSION, PLATFORM, REMOTE_ACCESS_ENABLED, REMOTE_DEBUG_ENABLED.</summary>
@@ -271,6 +282,7 @@ public partial class V1beta1DevicePoolSpecInitProviderRule
     public string? Value { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1DevicePoolSpecInitProvider
 {
     /// <summary>The device pool's description.</summary>
@@ -348,6 +360,7 @@ public enum V1beta1DevicePoolSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DevicePoolSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -361,6 +374,7 @@ public partial class V1beta1DevicePoolSpecProviderConfigRefPolicy
     public V1beta1DevicePoolSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1DevicePoolSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -392,6 +406,7 @@ public enum V1beta1DevicePoolSpecPublishConnectionDetailsToConfigRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DevicePoolSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -405,6 +420,7 @@ public partial class V1beta1DevicePoolSpecPublishConnectionDetailsToConfigRefPol
     public V1beta1DevicePoolSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1DevicePoolSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -416,6 +432,7 @@ public partial class V1beta1DevicePoolSpecPublishConnectionDetailsToConfigRef
     public V1beta1DevicePoolSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1DevicePoolSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -431,6 +448,7 @@ public partial class V1beta1DevicePoolSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1DevicePoolSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -446,6 +464,7 @@ public partial class V1beta1DevicePoolSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1DevicePoolSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -457,6 +476,7 @@ public partial class V1beta1DevicePoolSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>DevicePoolSpec defines the desired state of DevicePool</summary>
 public partial class V1beta1DevicePoolSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -489,6 +509,7 @@ public partial class V1beta1DevicePoolSpec
     public V1beta1DevicePoolSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DevicePoolStatusAtProviderRule
 {
     /// <summary>The rule's stringified attribute. Valid values are: APPIUM_VERSION, ARN, AVAILABILITY, FLEET_TYPE, FORM_FACTOR, INSTANCE_ARN, INSTANCE_LABELS, MANUFACTURER, MODEL, OS_VERSION, PLATFORM, REMOTE_ACCESS_ENABLED, REMOTE_DEBUG_ENABLED.</summary>
@@ -504,6 +525,7 @@ public partial class V1beta1DevicePoolStatusAtProviderRule
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DevicePoolStatusAtProvider
 {
     /// <summary>The Amazon Resource Name of this Device Pool</summary>
@@ -547,6 +569,7 @@ public partial class V1beta1DevicePoolStatusAtProvider
     public string? Type { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1DevicePoolStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -574,6 +597,7 @@ public partial class V1beta1DevicePoolStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>DevicePoolStatus defines the observed state of DevicePool.</summary>
 public partial class V1beta1DevicePoolStatus
 {
     /// <summary></summary>
@@ -590,6 +614,7 @@ public partial class V1beta1DevicePoolStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>DevicePool is the Schema for the DevicePools API. Provides a Devicefarm device_pool</summary>
 public partial class V1beta1DevicePool : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DevicePoolSpec>, IStatus<V1beta1DevicePoolStatus>
 {
     public const string KubeApiVersion = "v1beta1";

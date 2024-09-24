@@ -38,6 +38,7 @@ public enum V1beta1ThingGroupSpecForProviderParentGroupNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ThingGroupSpecForProviderParentGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ThingGroupSpecForProviderParentGroupNameRefPolicy
     public V1beta1ThingGroupSpecForProviderParentGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ThingGroup in iot to populate parentGroupName.</summary>
 public partial class V1beta1ThingGroupSpecForProviderParentGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ThingGroupSpecForProviderParentGroupNameSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ThingGroupSpecForProviderParentGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ThingGroupSpecForProviderParentGroupNameSelectorPoli
     public V1beta1ThingGroupSpecForProviderParentGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ThingGroup in iot to populate parentGroupName.</summary>
 public partial class V1beta1ThingGroupSpecForProviderParentGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1ThingGroupSpecForProviderParentGroupNameSelector
     public V1beta1ThingGroupSpecForProviderParentGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ThingGroupSpecForProviderPropertiesAttributePayload
 {
     /// <summary>Key-value map.</summary>
@@ -117,6 +122,7 @@ public partial class V1beta1ThingGroupSpecForProviderPropertiesAttributePayload
     public IDictionary<string, string>? Attributes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ThingGroupSpecForProviderProperties
 {
     /// <summary>The Thing Group attributes. Defined below.</summary>
@@ -128,6 +134,7 @@ public partial class V1beta1ThingGroupSpecForProviderProperties
     public string? Description { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ThingGroupSpecForProvider
 {
     /// <summary>The name of the parent Thing Group.</summary>
@@ -175,6 +182,7 @@ public enum V1beta1ThingGroupSpecInitProviderParentGroupNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ThingGroupSpecInitProviderParentGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -188,6 +196,7 @@ public partial class V1beta1ThingGroupSpecInitProviderParentGroupNameRefPolicy
     public V1beta1ThingGroupSpecInitProviderParentGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ThingGroup in iot to populate parentGroupName.</summary>
 public partial class V1beta1ThingGroupSpecInitProviderParentGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -219,6 +228,7 @@ public enum V1beta1ThingGroupSpecInitProviderParentGroupNameSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ThingGroupSpecInitProviderParentGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -232,6 +242,7 @@ public partial class V1beta1ThingGroupSpecInitProviderParentGroupNameSelectorPol
     public V1beta1ThingGroupSpecInitProviderParentGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ThingGroup in iot to populate parentGroupName.</summary>
 public partial class V1beta1ThingGroupSpecInitProviderParentGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -247,6 +258,7 @@ public partial class V1beta1ThingGroupSpecInitProviderParentGroupNameSelector
     public V1beta1ThingGroupSpecInitProviderParentGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ThingGroupSpecInitProviderPropertiesAttributePayload
 {
     /// <summary>Key-value map.</summary>
@@ -254,6 +266,7 @@ public partial class V1beta1ThingGroupSpecInitProviderPropertiesAttributePayload
     public IDictionary<string, string>? Attributes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ThingGroupSpecInitProviderProperties
 {
     /// <summary>The Thing Group attributes. Defined below.</summary>
@@ -265,6 +278,7 @@ public partial class V1beta1ThingGroupSpecInitProviderProperties
     public string? Description { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ThingGroupSpecInitProvider
 {
     /// <summary>The name of the parent Thing Group.</summary>
@@ -330,6 +344,7 @@ public enum V1beta1ThingGroupSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ThingGroupSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -343,6 +358,7 @@ public partial class V1beta1ThingGroupSpecProviderConfigRefPolicy
     public V1beta1ThingGroupSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ThingGroupSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -374,6 +390,7 @@ public enum V1beta1ThingGroupSpecPublishConnectionDetailsToConfigRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ThingGroupSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -387,6 +404,7 @@ public partial class V1beta1ThingGroupSpecPublishConnectionDetailsToConfigRefPol
     public V1beta1ThingGroupSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ThingGroupSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -398,6 +416,7 @@ public partial class V1beta1ThingGroupSpecPublishConnectionDetailsToConfigRef
     public V1beta1ThingGroupSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ThingGroupSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -413,6 +432,7 @@ public partial class V1beta1ThingGroupSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ThingGroupSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -428,6 +448,7 @@ public partial class V1beta1ThingGroupSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ThingGroupSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -439,6 +460,7 @@ public partial class V1beta1ThingGroupSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ThingGroupSpec defines the desired state of ThingGroup</summary>
 public partial class V1beta1ThingGroupSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -471,6 +493,7 @@ public partial class V1beta1ThingGroupSpec
     public V1beta1ThingGroupSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ThingGroupStatusAtProviderMetadataRootToParentGroups
 {
     /// <summary>The ARN of the Thing Group.</summary>
@@ -482,6 +505,7 @@ public partial class V1beta1ThingGroupStatusAtProviderMetadataRootToParentGroups
     public string? GroupName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ThingGroupStatusAtProviderMetadata
 {
     /// <summary></summary>
@@ -497,6 +521,7 @@ public partial class V1beta1ThingGroupStatusAtProviderMetadata
     public IList<V1beta1ThingGroupStatusAtProviderMetadataRootToParentGroups>? RootToParentGroups { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ThingGroupStatusAtProviderPropertiesAttributePayload
 {
     /// <summary>Key-value map.</summary>
@@ -504,6 +529,7 @@ public partial class V1beta1ThingGroupStatusAtProviderPropertiesAttributePayload
     public IDictionary<string, string>? Attributes { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ThingGroupStatusAtProviderProperties
 {
     /// <summary>The Thing Group attributes. Defined below.</summary>
@@ -515,6 +541,7 @@ public partial class V1beta1ThingGroupStatusAtProviderProperties
     public string? Description { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ThingGroupStatusAtProvider
 {
     /// <summary>The ARN of the Thing Group.</summary>
@@ -550,6 +577,7 @@ public partial class V1beta1ThingGroupStatusAtProvider
     public double? Version { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ThingGroupStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -577,6 +605,7 @@ public partial class V1beta1ThingGroupStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ThingGroupStatus defines the observed state of ThingGroup.</summary>
 public partial class V1beta1ThingGroupStatus
 {
     /// <summary></summary>
@@ -593,6 +622,7 @@ public partial class V1beta1ThingGroupStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>ThingGroup is the Schema for the ThingGroups API. Manages an AWS IoT Thing Group.</summary>
 public partial class V1beta1ThingGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ThingGroupSpec>, IStatus<V1beta1ThingGroupStatus>
 {
     public const string KubeApiVersion = "v1beta1";

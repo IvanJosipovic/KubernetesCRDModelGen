@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.pkg.crossplane.io;
+/// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1ControllerConfigSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchExpressions
 {
     /// <summary>The label key that the selector applies to.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1ControllerConfigSpecAffinityNodeAffinityPreferredDu
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1ControllerConfigSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchFields
 {
     /// <summary>The label key that the selector applies to.</summary>
@@ -38,6 +40,7 @@ public partial class V1alpha1ControllerConfigSpecAffinityNodeAffinityPreferredDu
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>A node selector term, associated with the corresponding weight.</summary>
 public partial class V1alpha1ControllerConfigSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreference
 {
     /// <summary>A list of node selector requirements by node's labels.</summary>
@@ -49,6 +52,7 @@ public partial class V1alpha1ControllerConfigSpecAffinityNodeAffinityPreferredDu
     public IList<V1alpha1ControllerConfigSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchFields>? MatchFields { get; set; }
 }
 
+/// <summary>An empty preferred scheduling term matches all objects with implicit weight 0 (i.e. it's a no-op). A null preferred scheduling term matches no objects (i.e. is also a no-op).</summary>
 public partial class V1alpha1ControllerConfigSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>A node selector term, associated with the corresponding weight.</summary>
@@ -60,6 +64,7 @@ public partial class V1alpha1ControllerConfigSpecAffinityNodeAffinityPreferredDu
     public int Weight { get; set; }
 }
 
+/// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1ControllerConfigSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchExpressions
 {
     /// <summary>The label key that the selector applies to.</summary>
@@ -75,6 +80,7 @@ public partial class V1alpha1ControllerConfigSpecAffinityNodeAffinityRequiredDur
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1ControllerConfigSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchFields
 {
     /// <summary>The label key that the selector applies to.</summary>
@@ -90,6 +96,7 @@ public partial class V1alpha1ControllerConfigSpecAffinityNodeAffinityRequiredDur
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>A null or empty node selector term matches no objects. The requirements of them are ANDed. The TopologySelectorTerm type implements a subset of the NodeSelectorTerm.</summary>
 public partial class V1alpha1ControllerConfigSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTerms
 {
     /// <summary>A list of node selector requirements by node's labels.</summary>
@@ -101,6 +108,7 @@ public partial class V1alpha1ControllerConfigSpecAffinityNodeAffinityRequiredDur
     public IList<V1alpha1ControllerConfigSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchFields>? MatchFields { get; set; }
 }
 
+/// <summary>If the affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to an update), the system may or may not try to eventually evict the pod from its node.</summary>
 public partial class V1alpha1ControllerConfigSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>Required. A list of node selector terms. The terms are ORed.</summary>
@@ -108,6 +116,7 @@ public partial class V1alpha1ControllerConfigSpecAffinityNodeAffinityRequiredDur
     public IList<V1alpha1ControllerConfigSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTerms> NodeSelectorTerms { get; set; }
 }
 
+/// <summary>Describes node affinity scheduling rules for the pod.</summary>
 public partial class V1alpha1ControllerConfigSpecAffinityNodeAffinity
 {
     /// <summary>The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding "weight" to the sum if the node matches the corresponding matchExpressions; the node(s) with the highest sum are the most preferred.</summary>
@@ -119,6 +128,7 @@ public partial class V1alpha1ControllerConfigSpecAffinityNodeAffinity
     public V1alpha1ControllerConfigSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecution? RequiredDuringSchedulingIgnoredDuringExecution { get; set; }
 }
 
+/// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1ControllerConfigSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -134,6 +144,7 @@ public partial class V1alpha1ControllerConfigSpecAffinityPodAffinityPreferredDur
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
 public partial class V1alpha1ControllerConfigSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -145,6 +156,7 @@ public partial class V1alpha1ControllerConfigSpecAffinityPodAffinityPreferredDur
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1ControllerConfigSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -160,6 +172,7 @@ public partial class V1alpha1ControllerConfigSpecAffinityPodAffinityPreferredDur
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
 public partial class V1alpha1ControllerConfigSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -171,6 +184,7 @@ public partial class V1alpha1ControllerConfigSpecAffinityPodAffinityPreferredDur
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>Required. A pod affinity term, associated with the corresponding weight.</summary>
 public partial class V1alpha1ControllerConfigSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm
 {
     /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
@@ -198,6 +212,7 @@ public partial class V1alpha1ControllerConfigSpecAffinityPodAffinityPreferredDur
     public string TopologyKey { get; set; }
 }
 
+/// <summary>The weights of all of the matched WeightedPodAffinityTerm fields are added per-node to find the most preferred node(s)</summary>
 public partial class V1alpha1ControllerConfigSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>Required. A pod affinity term, associated with the corresponding weight.</summary>
@@ -209,6 +224,7 @@ public partial class V1alpha1ControllerConfigSpecAffinityPodAffinityPreferredDur
     public int Weight { get; set; }
 }
 
+/// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1ControllerConfigSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -224,6 +240,7 @@ public partial class V1alpha1ControllerConfigSpecAffinityPodAffinityRequiredDuri
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
 public partial class V1alpha1ControllerConfigSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -235,6 +252,7 @@ public partial class V1alpha1ControllerConfigSpecAffinityPodAffinityRequiredDuri
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1ControllerConfigSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -250,6 +268,7 @@ public partial class V1alpha1ControllerConfigSpecAffinityPodAffinityRequiredDuri
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
 public partial class V1alpha1ControllerConfigSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -261,6 +280,7 @@ public partial class V1alpha1ControllerConfigSpecAffinityPodAffinityRequiredDuri
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>Defines a set of pods (namely those matching the labelSelector relative to the given namespace(s)) that this pod should be co-located (affinity) or not co-located (anti-affinity) with, where co-located is defined as running on a node whose value of the label with key &lt;topologyKey&gt; matches that of any node on which a pod of the set of pods is running</summary>
 public partial class V1alpha1ControllerConfigSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
@@ -288,6 +308,7 @@ public partial class V1alpha1ControllerConfigSpecAffinityPodAffinityRequiredDuri
     public string TopologyKey { get; set; }
 }
 
+/// <summary>Describes pod affinity scheduling rules (e.g. co-locate this pod in the same node, zone, etc. as some other pod(s)).</summary>
 public partial class V1alpha1ControllerConfigSpecAffinityPodAffinity
 {
     /// <summary>The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding "weight" to the sum if the node has pods which matches the corresponding podAffinityTerm; the node(s) with the highest sum are the most preferred.</summary>
@@ -299,6 +320,7 @@ public partial class V1alpha1ControllerConfigSpecAffinityPodAffinity
     public IList<V1alpha1ControllerConfigSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecution>? RequiredDuringSchedulingIgnoredDuringExecution { get; set; }
 }
 
+/// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1ControllerConfigSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -314,6 +336,7 @@ public partial class V1alpha1ControllerConfigSpecAffinityPodAntiAffinityPreferre
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
 public partial class V1alpha1ControllerConfigSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -325,6 +348,7 @@ public partial class V1alpha1ControllerConfigSpecAffinityPodAntiAffinityPreferre
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1ControllerConfigSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -340,6 +364,7 @@ public partial class V1alpha1ControllerConfigSpecAffinityPodAntiAffinityPreferre
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
 public partial class V1alpha1ControllerConfigSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -351,6 +376,7 @@ public partial class V1alpha1ControllerConfigSpecAffinityPodAntiAffinityPreferre
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>Required. A pod affinity term, associated with the corresponding weight.</summary>
 public partial class V1alpha1ControllerConfigSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm
 {
     /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
@@ -378,6 +404,7 @@ public partial class V1alpha1ControllerConfigSpecAffinityPodAntiAffinityPreferre
     public string TopologyKey { get; set; }
 }
 
+/// <summary>The weights of all of the matched WeightedPodAffinityTerm fields are added per-node to find the most preferred node(s)</summary>
 public partial class V1alpha1ControllerConfigSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>Required. A pod affinity term, associated with the corresponding weight.</summary>
@@ -389,6 +416,7 @@ public partial class V1alpha1ControllerConfigSpecAffinityPodAntiAffinityPreferre
     public int Weight { get; set; }
 }
 
+/// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1ControllerConfigSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -404,6 +432,7 @@ public partial class V1alpha1ControllerConfigSpecAffinityPodAntiAffinityRequired
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
 public partial class V1alpha1ControllerConfigSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -415,6 +444,7 @@ public partial class V1alpha1ControllerConfigSpecAffinityPodAntiAffinityRequired
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1ControllerConfigSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -430,6 +460,7 @@ public partial class V1alpha1ControllerConfigSpecAffinityPodAntiAffinityRequired
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
 public partial class V1alpha1ControllerConfigSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -441,6 +472,7 @@ public partial class V1alpha1ControllerConfigSpecAffinityPodAntiAffinityRequired
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>Defines a set of pods (namely those matching the labelSelector relative to the given namespace(s)) that this pod should be co-located (affinity) or not co-located (anti-affinity) with, where co-located is defined as running on a node whose value of the label with key &lt;topologyKey&gt; matches that of any node on which a pod of the set of pods is running</summary>
 public partial class V1alpha1ControllerConfigSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
@@ -468,6 +500,7 @@ public partial class V1alpha1ControllerConfigSpecAffinityPodAntiAffinityRequired
     public string TopologyKey { get; set; }
 }
 
+/// <summary>Describes pod anti-affinity scheduling rules (e.g. avoid putting this pod in the same node, zone, etc. as some other pod(s)).</summary>
 public partial class V1alpha1ControllerConfigSpecAffinityPodAntiAffinity
 {
     /// <summary>The scheduler will prefer to schedule pods to nodes that satisfy the anti-affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling anti-affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding "weight" to the sum if the node has pods which matches the corresponding podAffinityTerm; the node(s) with the highest sum are the most preferred.</summary>
@@ -479,6 +512,7 @@ public partial class V1alpha1ControllerConfigSpecAffinityPodAntiAffinity
     public IList<V1alpha1ControllerConfigSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecution>? RequiredDuringSchedulingIgnoredDuringExecution { get; set; }
 }
 
+/// <summary>If specified, the pod's scheduling constraints</summary>
 public partial class V1alpha1ControllerConfigSpecAffinity
 {
     /// <summary>Describes node affinity scheduling rules for the pod.</summary>
@@ -494,6 +528,7 @@ public partial class V1alpha1ControllerConfigSpecAffinity
     public V1alpha1ControllerConfigSpecAffinityPodAntiAffinity? PodAntiAffinity { get; set; }
 }
 
+/// <summary>Selects a key of a ConfigMap.</summary>
 public partial class V1alpha1ControllerConfigSpecEnvValueFromConfigMapKeyRef
 {
     /// <summary>The key to select.</summary>
@@ -509,6 +544,7 @@ public partial class V1alpha1ControllerConfigSpecEnvValueFromConfigMapKeyRef
     public bool? Optional { get; set; }
 }
 
+/// <summary>Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['&lt;KEY&gt;']`, `metadata.annotations['&lt;KEY&gt;']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.</summary>
 public partial class V1alpha1ControllerConfigSpecEnvValueFromFieldRef
 {
     /// <summary>Version of the schema the FieldPath is written in terms of, defaults to "v1".</summary>
@@ -520,6 +556,7 @@ public partial class V1alpha1ControllerConfigSpecEnvValueFromFieldRef
     public string FieldPath { get; set; }
 }
 
+/// <summary>Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported.</summary>
 public partial class V1alpha1ControllerConfigSpecEnvValueFromResourceFieldRef
 {
     /// <summary>Container name: required for volumes, optional for env vars</summary>
@@ -535,6 +572,7 @@ public partial class V1alpha1ControllerConfigSpecEnvValueFromResourceFieldRef
     public string Resource { get; set; }
 }
 
+/// <summary>Selects a key of a secret in the pod's namespace</summary>
 public partial class V1alpha1ControllerConfigSpecEnvValueFromSecretKeyRef
 {
     /// <summary>The key of the secret to select from.  Must be a valid secret key.</summary>
@@ -550,6 +588,7 @@ public partial class V1alpha1ControllerConfigSpecEnvValueFromSecretKeyRef
     public bool? Optional { get; set; }
 }
 
+/// <summary>Source for the environment variable's value. Cannot be used if value is not empty.</summary>
 public partial class V1alpha1ControllerConfigSpecEnvValueFrom
 {
     /// <summary>Selects a key of a ConfigMap.</summary>
@@ -569,6 +608,7 @@ public partial class V1alpha1ControllerConfigSpecEnvValueFrom
     public V1alpha1ControllerConfigSpecEnvValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary>EnvVar represents an environment variable present in a Container.</summary>
 public partial class V1alpha1ControllerConfigSpecEnv
 {
     /// <summary>Name of the environment variable. Must be a C_IDENTIFIER.</summary>
@@ -584,6 +624,7 @@ public partial class V1alpha1ControllerConfigSpecEnv
     public V1alpha1ControllerConfigSpecEnvValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary>The ConfigMap to select from</summary>
 public partial class V1alpha1ControllerConfigSpecEnvFromConfigMapRef
 {
     /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. TODO: Add other useful fields. apiVersion, kind, uid? More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Drop `kubebuilder:default` when controller-gen doesn't need it https://github.com/kubernetes-sigs/kubebuilder/issues/3896.</summary>
@@ -595,6 +636,7 @@ public partial class V1alpha1ControllerConfigSpecEnvFromConfigMapRef
     public bool? Optional { get; set; }
 }
 
+/// <summary>The Secret to select from</summary>
 public partial class V1alpha1ControllerConfigSpecEnvFromSecretRef
 {
     /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. TODO: Add other useful fields. apiVersion, kind, uid? More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Drop `kubebuilder:default` when controller-gen doesn't need it https://github.com/kubernetes-sigs/kubebuilder/issues/3896.</summary>
@@ -606,6 +648,7 @@ public partial class V1alpha1ControllerConfigSpecEnvFromSecretRef
     public bool? Optional { get; set; }
 }
 
+/// <summary>EnvFromSource represents the source of a set of ConfigMaps</summary>
 public partial class V1alpha1ControllerConfigSpecEnvFrom
 {
     /// <summary>The ConfigMap to select from</summary>
@@ -621,6 +664,7 @@ public partial class V1alpha1ControllerConfigSpecEnvFrom
     public V1alpha1ControllerConfigSpecEnvFromSecretRef? SecretRef { get; set; }
 }
 
+/// <summary>LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.</summary>
 public partial class V1alpha1ControllerConfigSpecImagePullSecrets
 {
     /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. TODO: Add other useful fields. apiVersion, kind, uid? More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Drop `kubebuilder:default` when controller-gen doesn't need it https://github.com/kubernetes-sigs/kubebuilder/issues/3896.</summary>
@@ -628,6 +672,7 @@ public partial class V1alpha1ControllerConfigSpecImagePullSecrets
     public string? Name { get; set; }
 }
 
+/// <summary>Metadata that will be added to the provider Pod.</summary>
 public partial class V1alpha1ControllerConfigSpecMetadata
 {
     /// <summary>Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http:https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/</summary>
@@ -639,6 +684,7 @@ public partial class V1alpha1ControllerConfigSpecMetadata
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary>appArmorProfile is the AppArmor options to use by the containers in this pod. Note that this field cannot be set when spec.os.name is windows.</summary>
 public partial class V1alpha1ControllerConfigSpecPodSecurityContextAppArmorProfile
 {
     /// <summary>localhostProfile indicates a profile loaded on the node that should be used. The profile must be preconfigured on the node to work. Must match the loaded name of the profile. Must be set if and only if type is "Localhost".</summary>
@@ -650,6 +696,7 @@ public partial class V1alpha1ControllerConfigSpecPodSecurityContextAppArmorProfi
     public string Type { get; set; }
 }
 
+/// <summary>The SELinux context to be applied to all containers. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in SecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence for that container. Note that this field cannot be set when spec.os.name is windows.</summary>
 public partial class V1alpha1ControllerConfigSpecPodSecurityContextSeLinuxOptions
 {
     /// <summary>Level is SELinux level label that applies to the container.</summary>
@@ -669,6 +716,7 @@ public partial class V1alpha1ControllerConfigSpecPodSecurityContextSeLinuxOption
     public string? User { get; set; }
 }
 
+/// <summary>The seccomp options to use by the containers in this pod. Note that this field cannot be set when spec.os.name is windows.</summary>
 public partial class V1alpha1ControllerConfigSpecPodSecurityContextSeccompProfile
 {
     /// <summary>localhostProfile indicates a profile defined in a file on the node should be used. The profile must be preconfigured on the node to work. Must be a descending path, relative to the kubelet's configured seccomp profile location. Must be set if type is "Localhost". Must NOT be set for any other type.</summary>
@@ -680,6 +728,7 @@ public partial class V1alpha1ControllerConfigSpecPodSecurityContextSeccompProfil
     public string Type { get; set; }
 }
 
+/// <summary>Sysctl defines a kernel parameter to be set</summary>
 public partial class V1alpha1ControllerConfigSpecPodSecurityContextSysctls
 {
     /// <summary>Name of a property to set</summary>
@@ -691,6 +740,7 @@ public partial class V1alpha1ControllerConfigSpecPodSecurityContextSysctls
     public string Value { get; set; }
 }
 
+/// <summary>The Windows specific settings applied to all containers. If unspecified, the options within a container's SecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is linux.</summary>
 public partial class V1alpha1ControllerConfigSpecPodSecurityContextWindowsOptions
 {
     /// <summary>GMSACredentialSpec is where the GMSA admission webhook (https://github.com/kubernetes-sigs/windows-gmsa) inlines the contents of the GMSA credential spec named by the GMSACredentialSpecName field.</summary>
@@ -710,6 +760,7 @@ public partial class V1alpha1ControllerConfigSpecPodSecurityContextWindowsOption
     public string? RunAsUserName { get; set; }
 }
 
+/// <summary>PodSecurityContext holds pod-level security attributes and common container settings. Optional: Defaults to empty.  See type description for default values of each field.</summary>
 public partial class V1alpha1ControllerConfigSpecPodSecurityContext
 {
     /// <summary>appArmorProfile is the AppArmor options to use by the containers in this pod. Note that this field cannot be set when spec.os.name is windows.</summary>
@@ -757,6 +808,7 @@ public partial class V1alpha1ControllerConfigSpecPodSecurityContext
     public V1alpha1ControllerConfigSpecPodSecurityContextWindowsOptions? WindowsOptions { get; set; }
 }
 
+/// <summary>ContainerPort represents a network port in a single container.</summary>
 public partial class V1alpha1ControllerConfigSpecPorts
 {
     /// <summary>Number of port to expose on the pod's IP address. This must be a valid port number, 0 &lt; x &lt; 65536.</summary>
@@ -780,6 +832,7 @@ public partial class V1alpha1ControllerConfigSpecPorts
     public string? Protocol { get; set; }
 }
 
+/// <summary>ResourceClaim references one entry in PodSpec.ResourceClaims.</summary>
 public partial class V1alpha1ControllerConfigSpecResourcesClaims
 {
     /// <summary>Name must match the name of one entry in pod.spec.resourceClaims of the Pod where this field is used. It makes that resource available inside a container.</summary>
@@ -787,6 +840,7 @@ public partial class V1alpha1ControllerConfigSpecResourcesClaims
     public string Name { get; set; }
 }
 
+/// <summary>Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/</summary>
 public partial class V1alpha1ControllerConfigSpecResources
 {
     /// <summary>Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container.   This is an alpha field and requires enabling the DynamicResourceAllocation feature gate.   This field is immutable. It can only be set for containers.</summary>
@@ -802,6 +856,7 @@ public partial class V1alpha1ControllerConfigSpecResources
     public IDictionary<string, IntstrIntOrString>? Requests { get; set; }
 }
 
+/// <summary>appArmorProfile is the AppArmor options to use by this container. If set, this profile overrides the pod's appArmorProfile. Note that this field cannot be set when spec.os.name is windows.</summary>
 public partial class V1alpha1ControllerConfigSpecSecurityContextAppArmorProfile
 {
     /// <summary>localhostProfile indicates a profile loaded on the node that should be used. The profile must be preconfigured on the node to work. Must match the loaded name of the profile. Must be set if and only if type is "Localhost".</summary>
@@ -813,6 +868,7 @@ public partial class V1alpha1ControllerConfigSpecSecurityContextAppArmorProfile
     public string Type { get; set; }
 }
 
+/// <summary>The capabilities to add/drop when running containers. Defaults to the default set of capabilities granted by the container runtime. Note that this field cannot be set when spec.os.name is windows.</summary>
 public partial class V1alpha1ControllerConfigSpecSecurityContextCapabilities
 {
     /// <summary>Added capabilities</summary>
@@ -824,6 +880,7 @@ public partial class V1alpha1ControllerConfigSpecSecurityContextCapabilities
     public IList<string>? Drop { get; set; }
 }
 
+/// <summary>The SELinux context to be applied to the container. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is windows.</summary>
 public partial class V1alpha1ControllerConfigSpecSecurityContextSeLinuxOptions
 {
     /// <summary>Level is SELinux level label that applies to the container.</summary>
@@ -843,6 +900,7 @@ public partial class V1alpha1ControllerConfigSpecSecurityContextSeLinuxOptions
     public string? User { get; set; }
 }
 
+/// <summary>The seccomp options to use by this container. If seccomp options are provided at both the pod &amp; container level, the container options override the pod options. Note that this field cannot be set when spec.os.name is windows.</summary>
 public partial class V1alpha1ControllerConfigSpecSecurityContextSeccompProfile
 {
     /// <summary>localhostProfile indicates a profile defined in a file on the node should be used. The profile must be preconfigured on the node to work. Must be a descending path, relative to the kubelet's configured seccomp profile location. Must be set if type is "Localhost". Must NOT be set for any other type.</summary>
@@ -854,6 +912,7 @@ public partial class V1alpha1ControllerConfigSpecSecurityContextSeccompProfile
     public string Type { get; set; }
 }
 
+/// <summary>The Windows specific settings applied to all containers. If unspecified, the options from the PodSecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is linux.</summary>
 public partial class V1alpha1ControllerConfigSpecSecurityContextWindowsOptions
 {
     /// <summary>GMSACredentialSpec is where the GMSA admission webhook (https://github.com/kubernetes-sigs/windows-gmsa) inlines the contents of the GMSA credential spec named by the GMSACredentialSpecName field.</summary>
@@ -873,6 +932,7 @@ public partial class V1alpha1ControllerConfigSpecSecurityContextWindowsOptions
     public string? RunAsUserName { get; set; }
 }
 
+/// <summary>SecurityContext holds container-level security attributes and common container settings. Optional: Defaults to empty.  See type description for default values of each field.</summary>
 public partial class V1alpha1ControllerConfigSpecSecurityContext
 {
     /// <summary>AllowPrivilegeEscalation controls whether a process can gain more privileges than its parent process. This bool directly controls if the no_new_privs flag will be set on the container process. AllowPrivilegeEscalation is true always when the container is: 1) run as Privileged 2) has CAP_SYS_ADMIN Note that this field cannot be set when spec.os.name is windows.</summary>
@@ -924,6 +984,7 @@ public partial class V1alpha1ControllerConfigSpecSecurityContext
     public V1alpha1ControllerConfigSpecSecurityContextWindowsOptions? WindowsOptions { get; set; }
 }
 
+/// <summary>The pod this Toleration is attached to tolerates any taint that matches the triple &lt;key,value,effect&gt; using the matching operator &lt;operator&gt;.</summary>
 public partial class V1alpha1ControllerConfigSpecTolerations
 {
     /// <summary>Effect indicates the taint effect to match. Empty means match all taint effects. When specified, allowed values are NoSchedule, PreferNoSchedule and NoExecute.</summary>
@@ -947,6 +1008,7 @@ public partial class V1alpha1ControllerConfigSpecTolerations
     public string? Value { get; set; }
 }
 
+/// <summary>VolumeMount describes a mounting of a Volume within a container.</summary>
 public partial class V1alpha1ControllerConfigSpecVolumeMounts
 {
     /// <summary>Path within the container at which the volume should be mounted.  Must not contain ':'.</summary>
@@ -978,6 +1040,7 @@ public partial class V1alpha1ControllerConfigSpecVolumeMounts
     public string? SubPathExpr { get; set; }
 }
 
+/// <summary>awsElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesAwsElasticBlockStore
 {
     /// <summary>fsType is the filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore TODO: how do we prevent errors in the filesystem from compromising the machine</summary>
@@ -997,6 +1060,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesAwsElasticBlockStore
     public string VolumeID { get; set; }
 }
 
+/// <summary>azureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesAzureDisk
 {
     /// <summary>cachingMode is the Host Caching mode: None, Read Only, Read Write.</summary>
@@ -1024,6 +1088,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesAzureDisk
     public bool? ReadOnly { get; set; }
 }
 
+/// <summary>azureFile represents an Azure File Service mount on the host and bind mount to the pod.</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesAzureFile
 {
     /// <summary>readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.</summary>
@@ -1039,6 +1104,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesAzureFile
     public string ShareName { get; set; }
 }
 
+/// <summary>secretRef is Optional: SecretRef is reference to the authentication secret for User, default is empty. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesCephfsSecretRef
 {
     /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. TODO: Add other useful fields. apiVersion, kind, uid? More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Drop `kubebuilder:default` when controller-gen doesn't need it https://github.com/kubernetes-sigs/kubebuilder/issues/3896.</summary>
@@ -1046,6 +1112,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesCephfsSecretRef
     public string? Name { get; set; }
 }
 
+/// <summary>cephFS represents a Ceph FS mount on the host that shares a pod's lifetime</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesCephfs
 {
     /// <summary>monitors is Required: Monitors is a collection of Ceph monitors More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it</summary>
@@ -1073,6 +1140,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesCephfs
     public string? User { get; set; }
 }
 
+/// <summary>secretRef is optional: points to a secret object containing parameters used to connect to OpenStack.</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesCinderSecretRef
 {
     /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. TODO: Add other useful fields. apiVersion, kind, uid? More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Drop `kubebuilder:default` when controller-gen doesn't need it https://github.com/kubernetes-sigs/kubebuilder/issues/3896.</summary>
@@ -1080,6 +1148,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesCinderSecretRef
     public string? Name { get; set; }
 }
 
+/// <summary>cinder represents a cinder volume attached and mounted on kubelets host machine. More info: https://examples.k8s.io/mysql-cinder-pd/README.md</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesCinder
 {
     /// <summary>fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://examples.k8s.io/mysql-cinder-pd/README.md</summary>
@@ -1099,6 +1168,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesCinder
     public string VolumeID { get; set; }
 }
 
+/// <summary>Maps a string key to a path within a volume.</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesConfigMapItems
 {
     /// <summary>key is the key to project.</summary>
@@ -1114,6 +1184,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesConfigMapItems
     public string Path { get; set; }
 }
 
+/// <summary>configMap represents a configMap that should populate this volume</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesConfigMap
 {
     /// <summary>defaultMode is optional: mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.</summary>
@@ -1133,6 +1204,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesConfigMap
     public bool? Optional { get; set; }
 }
 
+/// <summary>nodePublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodePublishVolume and NodeUnpublishVolume calls. This field is optional, and  may be empty if no secret is required. If the secret object contains more than one secret, all secret references are passed.</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesCsiNodePublishSecretRef
 {
     /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. TODO: Add other useful fields. apiVersion, kind, uid? More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Drop `kubebuilder:default` when controller-gen doesn't need it https://github.com/kubernetes-sigs/kubebuilder/issues/3896.</summary>
@@ -1140,6 +1212,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesCsiNodePublishSecretRef
     public string? Name { get; set; }
 }
 
+/// <summary>csi (Container Storage Interface) represents ephemeral storage that is handled by certain external CSI drivers (Beta feature).</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesCsi
 {
     /// <summary>driver is the name of the CSI driver that handles this volume. Consult with your admin for the correct name as registered in the cluster.</summary>
@@ -1163,6 +1236,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesCsi
     public IDictionary<string, string>? VolumeAttributes { get; set; }
 }
 
+/// <summary>Required: Selects a field of the pod: only annotations, labels, name, namespace and uid are supported.</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesDownwardAPIItemsFieldRef
 {
     /// <summary>Version of the schema the FieldPath is written in terms of, defaults to "v1".</summary>
@@ -1174,6 +1248,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesDownwardAPIItemsFieldRef
     public string FieldPath { get; set; }
 }
 
+/// <summary>Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, requests.cpu and requests.memory) are currently supported.</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesDownwardAPIItemsResourceFieldRef
 {
     /// <summary>Container name: required for volumes, optional for env vars</summary>
@@ -1189,6 +1264,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesDownwardAPIItemsResource
     public string Resource { get; set; }
 }
 
+/// <summary>DownwardAPIVolumeFile represents information to create the file containing the pod field</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesDownwardAPIItems
 {
     /// <summary>Required: Selects a field of the pod: only annotations, labels, name, namespace and uid are supported.</summary>
@@ -1208,6 +1284,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesDownwardAPIItems
     public V1alpha1ControllerConfigSpecVolumesDownwardAPIItemsResourceFieldRef? ResourceFieldRef { get; set; }
 }
 
+/// <summary>downwardAPI represents downward API about the pod that should populate this volume</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesDownwardAPI
 {
     /// <summary>Optional: mode bits to use on created files by default. Must be a Optional: mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.</summary>
@@ -1219,6 +1296,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesDownwardAPI
     public IList<V1alpha1ControllerConfigSpecVolumesDownwardAPIItems>? Items { get; set; }
 }
 
+/// <summary>emptyDir represents a temporary directory that shares a pod's lifetime. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesEmptyDir
 {
     /// <summary>medium represents what type of storage medium should back this directory. The default is "" which means to use the node's default medium. Must be an empty string (default) or Memory. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir</summary>
@@ -1230,6 +1308,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesEmptyDir
     public IntstrIntOrString? SizeLimit { get; set; }
 }
 
+/// <summary>May contain labels and annotations that will be copied into the PVC when creating it. No other fields are allowed and will be rejected during validation.</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesEphemeralVolumeClaimTemplateMetadata
 {
     /// <summary></summary>
@@ -1253,6 +1332,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesEphemeralVolumeClaimTemp
     public string? Namespace { get; set; }
 }
 
+/// <summary>dataSource field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. When the AnyVolumeDataSource feature gate is enabled, dataSource contents will be copied to dataSourceRef, and dataSourceRef contents will be copied to dataSource when dataSourceRef.namespace is not specified. If the namespace is specified, then dataSourceRef will not be copied to dataSource.</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesEphemeralVolumeClaimTemplateSpecDataSource
 {
     /// <summary>APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required.</summary>
@@ -1268,6 +1348,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesEphemeralVolumeClaimTemp
     public string Name { get; set; }
 }
 
+/// <summary>dataSourceRef specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the dataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, when namespace isn't specified in dataSourceRef, both fields (dataSource and dataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. When namespace is specified in dataSourceRef, dataSource isn't set to the same value and must be empty. There are three important differences between dataSource and dataSourceRef: * While dataSource only allows two specific types of objects, dataSourceRef   allows any non-core object, as well as PersistentVolumeClaim objects. * While dataSource ignores disallowed values (dropping them), dataSourceRef   preserves all values, and generates an error if a disallowed value is   specified. * While dataSource only allows local objects, dataSourceRef allows objects   in any namespaces. (Beta) Using this field requires the AnyVolumeDataSource feature gate to be enabled. (Alpha) Using the namespace field of dataSourceRef requires the CrossNamespaceVolumeDataSource feature gate to be enabled.</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesEphemeralVolumeClaimTemplateSpecDataSourceRef
 {
     /// <summary>APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required.</summary>
@@ -1287,6 +1368,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesEphemeralVolumeClaimTemp
     public string? Namespace { get; set; }
 }
 
+/// <summary>resources represents the minimum resources the volume should have. If RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements that are lower than previous value but must still be higher than capacity recorded in the status field of the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesEphemeralVolumeClaimTemplateSpecResources
 {
     /// <summary>Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/</summary>
@@ -1298,6 +1380,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesEphemeralVolumeClaimTemp
     public IDictionary<string, IntstrIntOrString>? Requests { get; set; }
 }
 
+/// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesEphemeralVolumeClaimTemplateSpecSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -1313,6 +1396,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesEphemeralVolumeClaimTemp
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>selector is a label query over volumes to consider for binding.</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesEphemeralVolumeClaimTemplateSpecSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -1324,6 +1408,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesEphemeralVolumeClaimTemp
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>The specification for the PersistentVolumeClaim. The entire content is copied unchanged into the PVC that gets created from this template. The same fields as in a PersistentVolumeClaim are also valid here.</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesEphemeralVolumeClaimTemplateSpec
 {
     /// <summary>accessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1</summary>
@@ -1363,6 +1448,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesEphemeralVolumeClaimTemp
     public string? VolumeName { get; set; }
 }
 
+/// <summary>Will be used to create a stand-alone PVC to provision the volume. The pod in which this EphemeralVolumeSource is embedded will be the owner of the PVC, i.e. the PVC will be deleted together with the pod.  The name of the PVC will be `&lt;pod name&gt;-&lt;volume name&gt;` where `&lt;volume name&gt;` is the name from the `PodSpec.Volumes` array entry. Pod validation will reject the pod if the concatenated name is not valid for a PVC (for example, too long).   An existing PVC with that name that is not owned by the pod will *not* be used for the pod to avoid using an unrelated volume by mistake. Starting the pod is then blocked until the unrelated PVC is removed. If such a pre-created PVC is meant to be used by the pod, the PVC has to updated with an owner reference to the pod once the pod exists. Normally this should not be necessary, but it may be useful when manually reconstructing a broken cluster.   This field is read-only and no changes will be made by Kubernetes to the PVC after it has been created.   Required, must not be nil.</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesEphemeralVolumeClaimTemplate
 {
     /// <summary>May contain labels and annotations that will be copied into the PVC when creating it. No other fields are allowed and will be rejected during validation.</summary>
@@ -1374,6 +1460,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesEphemeralVolumeClaimTemp
     public V1alpha1ControllerConfigSpecVolumesEphemeralVolumeClaimTemplateSpec Spec { get; set; }
 }
 
+/// <summary>ephemeral represents a volume that is handled by a cluster storage driver. The volume's lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.   Use this if: a) the volume is only needed while the pod runs, b) features of normal volumes like restoring from snapshot or capacity    tracking are needed, c) the storage driver is specified through a storage class, and d) the storage driver supports dynamic volume provisioning through    a PersistentVolumeClaim (see EphemeralVolumeSource for more    information on the connection between this volume type    and PersistentVolumeClaim).   Use PersistentVolumeClaim or one of the vendor-specific APIs for volumes that persist for longer than the lifecycle of an individual pod.   Use CSI for light-weight local ephemeral volumes if the CSI driver is meant to be used that way - see the documentation of the driver for more information.   A pod can use both types of ephemeral volumes and persistent volumes at the same time.</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesEphemeral
 {
     /// <summary>Will be used to create a stand-alone PVC to provision the volume. The pod in which this EphemeralVolumeSource is embedded will be the owner of the PVC, i.e. the PVC will be deleted together with the pod.  The name of the PVC will be `&lt;pod name&gt;-&lt;volume name&gt;` where `&lt;volume name&gt;` is the name from the `PodSpec.Volumes` array entry. Pod validation will reject the pod if the concatenated name is not valid for a PVC (for example, too long).   An existing PVC with that name that is not owned by the pod will *not* be used for the pod to avoid using an unrelated volume by mistake. Starting the pod is then blocked until the unrelated PVC is removed. If such a pre-created PVC is meant to be used by the pod, the PVC has to updated with an owner reference to the pod once the pod exists. Normally this should not be necessary, but it may be useful when manually reconstructing a broken cluster.   This field is read-only and no changes will be made by Kubernetes to the PVC after it has been created.   Required, must not be nil.</summary>
@@ -1381,6 +1468,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesEphemeral
     public V1alpha1ControllerConfigSpecVolumesEphemeralVolumeClaimTemplate? VolumeClaimTemplate { get; set; }
 }
 
+/// <summary>fc represents a Fibre Channel resource that is attached to a kubelet's host machine and then exposed to the pod.</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesFc
 {
     /// <summary>fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. TODO: how do we prevent errors in the filesystem from compromising the machine</summary>
@@ -1404,6 +1492,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesFc
     public IList<string>? Wwids { get; set; }
 }
 
+/// <summary>secretRef is Optional: secretRef is reference to the secret object containing sensitive information to pass to the plugin scripts. This may be empty if no secret object is specified. If the secret object contains more than one secret, all secrets are passed to the plugin scripts.</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesFlexVolumeSecretRef
 {
     /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. TODO: Add other useful fields. apiVersion, kind, uid? More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Drop `kubebuilder:default` when controller-gen doesn't need it https://github.com/kubernetes-sigs/kubebuilder/issues/3896.</summary>
@@ -1411,6 +1500,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesFlexVolumeSecretRef
     public string? Name { get; set; }
 }
 
+/// <summary>flexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin.</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesFlexVolume
 {
     /// <summary>driver is the name of the driver to use for this volume.</summary>
@@ -1434,6 +1524,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesFlexVolume
     public V1alpha1ControllerConfigSpecVolumesFlexVolumeSecretRef? SecretRef { get; set; }
 }
 
+/// <summary>flocker represents a Flocker volume attached to a kubelet's host machine. This depends on the Flocker control service being running</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesFlocker
 {
     /// <summary>datasetName is Name of the dataset stored as metadata -&gt; name on the dataset for Flocker should be considered as deprecated</summary>
@@ -1445,6 +1536,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesFlocker
     public string? DatasetUUID { get; set; }
 }
 
+/// <summary>gcePersistentDisk represents a GCE Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesGcePersistentDisk
 {
     /// <summary>fsType is filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk TODO: how do we prevent errors in the filesystem from compromising the machine</summary>
@@ -1464,6 +1556,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesGcePersistentDisk
     public bool? ReadOnly { get; set; }
 }
 
+/// <summary>gitRepo represents a git repository at a particular revision. DEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir into the Pod's container.</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesGitRepo
 {
     /// <summary>directory is the target directory name. Must not contain or start with '..'.  If '.' is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.</summary>
@@ -1479,6 +1572,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesGitRepo
     public string? Revision { get; set; }
 }
 
+/// <summary>glusterfs represents a Glusterfs mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/glusterfs/README.md</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesGlusterfs
 {
     /// <summary>endpoints is the endpoint name that details Glusterfs topology. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod</summary>
@@ -1494,6 +1588,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesGlusterfs
     public bool? ReadOnly { get; set; }
 }
 
+/// <summary>hostPath represents a pre-existing file or directory on the host machine that is directly exposed to the container. This is generally used for system agents or other privileged things that are allowed to see the host machine. Most containers will NOT need this. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath --- TODO(jonesdl) We need to restrict who can use host directory mounts and who can/can not mount host directories as read/write.</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesHostPath
 {
     /// <summary>path of the directory on the host. If the path is a symlink, it will follow the link to the real path. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath</summary>
@@ -1505,6 +1600,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesHostPath
     public string? Type { get; set; }
 }
 
+/// <summary>secretRef is the CHAP Secret for iSCSI target and initiator authentication</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesIscsiSecretRef
 {
     /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. TODO: Add other useful fields. apiVersion, kind, uid? More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Drop `kubebuilder:default` when controller-gen doesn't need it https://github.com/kubernetes-sigs/kubebuilder/issues/3896.</summary>
@@ -1512,6 +1608,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesIscsiSecretRef
     public string? Name { get; set; }
 }
 
+/// <summary>iscsi represents an ISCSI Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://examples.k8s.io/volumes/iscsi/README.md</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesIscsi
 {
     /// <summary>chapAuthDiscovery defines whether support iSCSI Discovery CHAP authentication</summary>
@@ -1559,6 +1656,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesIscsi
     public string TargetPortal { get; set; }
 }
 
+/// <summary>nfs represents an NFS mount on the host that shares a pod's lifetime More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesNfs
 {
     /// <summary>path that is exported by the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs</summary>
@@ -1574,6 +1672,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesNfs
     public string Server { get; set; }
 }
 
+/// <summary>persistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesPersistentVolumeClaim
 {
     /// <summary>claimName is the name of a PersistentVolumeClaim in the same namespace as the pod using this volume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims</summary>
@@ -1585,6 +1684,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesPersistentVolumeClaim
     public bool? ReadOnly { get; set; }
 }
 
+/// <summary>photonPersistentDisk represents a PhotonController persistent disk attached and mounted on kubelets host machine</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesPhotonPersistentDisk
 {
     /// <summary>fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.</summary>
@@ -1596,6 +1696,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesPhotonPersistentDisk
     public string PdID { get; set; }
 }
 
+/// <summary>portworxVolume represents a portworx volume attached and mounted on kubelets host machine</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesPortworxVolume
 {
     /// <summary>fSType represents the filesystem type to mount Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs". Implicitly inferred to be "ext4" if unspecified.</summary>
@@ -1611,6 +1712,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesPortworxVolume
     public string VolumeID { get; set; }
 }
 
+/// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesProjectedSourcesClusterTrustBundleLabelSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
@@ -1626,6 +1728,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesProjectedSourcesClusterT
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>Select all ClusterTrustBundles that match this label selector.  Only has effect if signerName is set.  Mutually-exclusive with name.  If unset, interpreted as "match nothing".  If set but empty, interpreted as "match everything".</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesProjectedSourcesClusterTrustBundleLabelSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
@@ -1637,6 +1740,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesProjectedSourcesClusterT
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>ClusterTrustBundle allows a pod to access the `.spec.trustBundle` field of ClusterTrustBundle objects in an auto-updating file.   Alpha, gated by the ClusterTrustBundleProjection feature gate.   ClusterTrustBundle objects can either be selected by name, or by the combination of signer name and a label selector.   Kubelet performs aggressive normalization of the PEM contents written into the pod filesystem.  Esoteric PEM features such as inter-block comments and block headers are stripped.  Certificates are deduplicated. The ordering of certificates within the file is arbitrary, and Kubelet may change the order over time.</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesProjectedSourcesClusterTrustBundle
 {
     /// <summary>Select all ClusterTrustBundles that match this label selector.  Only has effect if signerName is set.  Mutually-exclusive with name.  If unset, interpreted as "match nothing".  If set but empty, interpreted as "match everything".</summary>
@@ -1660,6 +1764,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesProjectedSourcesClusterT
     public string? SignerName { get; set; }
 }
 
+/// <summary>Maps a string key to a path within a volume.</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesProjectedSourcesConfigMapItems
 {
     /// <summary>key is the key to project.</summary>
@@ -1675,6 +1780,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesProjectedSourcesConfigMa
     public string Path { get; set; }
 }
 
+/// <summary>configMap information about the configMap data to project</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesProjectedSourcesConfigMap
 {
     /// <summary>items if unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'.</summary>
@@ -1690,6 +1796,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesProjectedSourcesConfigMa
     public bool? Optional { get; set; }
 }
 
+/// <summary>Required: Selects a field of the pod: only annotations, labels, name, namespace and uid are supported.</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesProjectedSourcesDownwardAPIItemsFieldRef
 {
     /// <summary>Version of the schema the FieldPath is written in terms of, defaults to "v1".</summary>
@@ -1701,6 +1808,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesProjectedSourcesDownward
     public string FieldPath { get; set; }
 }
 
+/// <summary>Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, requests.cpu and requests.memory) are currently supported.</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesProjectedSourcesDownwardAPIItemsResourceFieldRef
 {
     /// <summary>Container name: required for volumes, optional for env vars</summary>
@@ -1716,6 +1824,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesProjectedSourcesDownward
     public string Resource { get; set; }
 }
 
+/// <summary>DownwardAPIVolumeFile represents information to create the file containing the pod field</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesProjectedSourcesDownwardAPIItems
 {
     /// <summary>Required: Selects a field of the pod: only annotations, labels, name, namespace and uid are supported.</summary>
@@ -1735,6 +1844,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesProjectedSourcesDownward
     public V1alpha1ControllerConfigSpecVolumesProjectedSourcesDownwardAPIItemsResourceFieldRef? ResourceFieldRef { get; set; }
 }
 
+/// <summary>downwardAPI information about the downwardAPI data to project</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesProjectedSourcesDownwardAPI
 {
     /// <summary>Items is a list of DownwardAPIVolume file</summary>
@@ -1742,6 +1852,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesProjectedSourcesDownward
     public IList<V1alpha1ControllerConfigSpecVolumesProjectedSourcesDownwardAPIItems>? Items { get; set; }
 }
 
+/// <summary>Maps a string key to a path within a volume.</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesProjectedSourcesSecretItems
 {
     /// <summary>key is the key to project.</summary>
@@ -1757,6 +1868,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesProjectedSourcesSecretIt
     public string Path { get; set; }
 }
 
+/// <summary>secret information about the secret data to project</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesProjectedSourcesSecret
 {
     /// <summary>items if unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'.</summary>
@@ -1772,6 +1884,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesProjectedSourcesSecret
     public bool? Optional { get; set; }
 }
 
+/// <summary>serviceAccountToken is information about the serviceAccountToken data to project</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesProjectedSourcesServiceAccountToken
 {
     /// <summary>audience is the intended audience of the token. A recipient of a token must identify itself with an identifier specified in the audience of the token, and otherwise should reject the token. The audience defaults to the identifier of the apiserver.</summary>
@@ -1787,6 +1900,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesProjectedSourcesServiceA
     public string Path { get; set; }
 }
 
+/// <summary>Projection that may be projected along with other supported volume types</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesProjectedSources
 {
     /// <summary>ClusterTrustBundle allows a pod to access the `.spec.trustBundle` field of ClusterTrustBundle objects in an auto-updating file.   Alpha, gated by the ClusterTrustBundleProjection feature gate.   ClusterTrustBundle objects can either be selected by name, or by the combination of signer name and a label selector.   Kubelet performs aggressive normalization of the PEM contents written into the pod filesystem.  Esoteric PEM features such as inter-block comments and block headers are stripped.  Certificates are deduplicated. The ordering of certificates within the file is arbitrary, and Kubelet may change the order over time.</summary>
@@ -1810,6 +1924,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesProjectedSources
     public V1alpha1ControllerConfigSpecVolumesProjectedSourcesServiceAccountToken? ServiceAccountToken { get; set; }
 }
 
+/// <summary>projected items for all in one resources secrets, configmaps, and downward API</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesProjected
 {
     /// <summary>defaultMode are the mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.</summary>
@@ -1821,6 +1936,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesProjected
     public IList<V1alpha1ControllerConfigSpecVolumesProjectedSources>? Sources { get; set; }
 }
 
+/// <summary>quobyte represents a Quobyte mount on the host that shares a pod's lifetime</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesQuobyte
 {
     /// <summary>group to map volume access to Default is no group</summary>
@@ -1848,6 +1964,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesQuobyte
     public string Volume { get; set; }
 }
 
+/// <summary>secretRef is name of the authentication secret for RBDUser. If provided overrides keyring. Default is nil. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesRbdSecretRef
 {
     /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. TODO: Add other useful fields. apiVersion, kind, uid? More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Drop `kubebuilder:default` when controller-gen doesn't need it https://github.com/kubernetes-sigs/kubebuilder/issues/3896.</summary>
@@ -1855,6 +1972,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesRbdSecretRef
     public string? Name { get; set; }
 }
 
+/// <summary>rbd represents a Rados Block Device mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesRbd
 {
     /// <summary>fsType is the filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#rbd TODO: how do we prevent errors in the filesystem from compromising the machine</summary>
@@ -1890,6 +2008,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesRbd
     public string? User { get; set; }
 }
 
+/// <summary>secretRef references to the secret for ScaleIO user and other sensitive information. If this is not provided, Login operation will fail.</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesScaleIOSecretRef
 {
     /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. TODO: Add other useful fields. apiVersion, kind, uid? More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Drop `kubebuilder:default` when controller-gen doesn't need it https://github.com/kubernetes-sigs/kubebuilder/issues/3896.</summary>
@@ -1897,6 +2016,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesScaleIOSecretRef
     public string? Name { get; set; }
 }
 
+/// <summary>scaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes.</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesScaleIO
 {
     /// <summary>fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Default is "xfs".</summary>
@@ -1940,6 +2060,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesScaleIO
     public string? VolumeName { get; set; }
 }
 
+/// <summary>Maps a string key to a path within a volume.</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesSecretItems
 {
     /// <summary>key is the key to project.</summary>
@@ -1955,6 +2076,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesSecretItems
     public string Path { get; set; }
 }
 
+/// <summary>secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesSecret
 {
     /// <summary>defaultMode is Optional: mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.</summary>
@@ -1974,6 +2096,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesSecret
     public string? SecretName { get; set; }
 }
 
+/// <summary>secretRef specifies the secret to use for obtaining the StorageOS API credentials.  If not specified, default values will be attempted.</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesStorageosSecretRef
 {
     /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. TODO: Add other useful fields. apiVersion, kind, uid? More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Drop `kubebuilder:default` when controller-gen doesn't need it https://github.com/kubernetes-sigs/kubebuilder/issues/3896.</summary>
@@ -1981,6 +2104,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesStorageosSecretRef
     public string? Name { get; set; }
 }
 
+/// <summary>storageOS represents a StorageOS volume attached and mounted on Kubernetes nodes.</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesStorageos
 {
     /// <summary>fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.</summary>
@@ -2004,6 +2128,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesStorageos
     public string? VolumeNamespace { get; set; }
 }
 
+/// <summary>vsphereVolume represents a vSphere volume attached and mounted on kubelets host machine</summary>
 public partial class V1alpha1ControllerConfigSpecVolumesVsphereVolume
 {
     /// <summary>fsType is filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.</summary>
@@ -2023,6 +2148,7 @@ public partial class V1alpha1ControllerConfigSpecVolumesVsphereVolume
     public string VolumePath { get; set; }
 }
 
+/// <summary>Volume represents a named volume in a pod that may be accessed by any container in the pod.</summary>
 public partial class V1alpha1ControllerConfigSpecVolumes
 {
     /// <summary>awsElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore</summary>
@@ -2146,6 +2272,7 @@ public partial class V1alpha1ControllerConfigSpecVolumes
     public V1alpha1ControllerConfigSpecVolumesVsphereVolume? VsphereVolume { get; set; }
 }
 
+/// <summary>ControllerConfigSpec specifies the configuration for a packaged controller. Values provided will override package manager defaults. Labels and annotations are passed to both the controller Deployment and ServiceAccount.</summary>
 public partial class V1alpha1ControllerConfigSpec
 {
     /// <summary>If specified, the pod's scheduling constraints</summary>
@@ -2234,6 +2361,7 @@ public partial class V1alpha1ControllerConfigSpec
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>A ControllerConfig applies settings to controllers like Provider pods. Deprecated: Use the [DeploymentRuntimeConfig](https://docs.crossplane.io/latest/concepts/providers#runtime-configuration) instead.   Read the [Package Runtime Configuration](https://github.com/crossplane/crossplane/blob/11bbe13ea3604928cc4e24e8d0d18f3f5f7e847c/design/one-pager-package-runtime-config.md) design document for more details.</summary>
 public partial class V1alpha1ControllerConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ControllerConfigSpec>
 {
     public const string KubeApiVersion = "v1alpha1";

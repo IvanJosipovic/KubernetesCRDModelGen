@@ -18,6 +18,7 @@ public enum V1beta1FlowLogSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowLogSpecForProviderDestinationOptions
 {
     /// <summary>The format for the flow log. Default value: plain-text. Valid values: plain-text, parquet.</summary>
@@ -53,6 +54,7 @@ public enum V1beta1FlowLogSpecForProviderIamRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FlowLogSpecForProviderIamRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -66,6 +68,7 @@ public partial class V1beta1FlowLogSpecForProviderIamRoleArnRefPolicy
     public V1beta1FlowLogSpecForProviderIamRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate iamRoleArn.</summary>
 public partial class V1beta1FlowLogSpecForProviderIamRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -97,6 +100,7 @@ public enum V1beta1FlowLogSpecForProviderIamRoleArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FlowLogSpecForProviderIamRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1FlowLogSpecForProviderIamRoleArnSelectorPolicy
     public V1beta1FlowLogSpecForProviderIamRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate iamRoleArn.</summary>
 public partial class V1beta1FlowLogSpecForProviderIamRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -145,6 +150,7 @@ public enum V1beta1FlowLogSpecForProviderLogDestinationRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FlowLogSpecForProviderLogDestinationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -158,6 +164,7 @@ public partial class V1beta1FlowLogSpecForProviderLogDestinationRefPolicy
     public V1beta1FlowLogSpecForProviderLogDestinationRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Group in cloudwatchlogs to populate logDestination.</summary>
 public partial class V1beta1FlowLogSpecForProviderLogDestinationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -189,6 +196,7 @@ public enum V1beta1FlowLogSpecForProviderLogDestinationSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FlowLogSpecForProviderLogDestinationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1FlowLogSpecForProviderLogDestinationSelectorPolicy
     public V1beta1FlowLogSpecForProviderLogDestinationSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Group in cloudwatchlogs to populate logDestination.</summary>
 public partial class V1beta1FlowLogSpecForProviderLogDestinationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -237,6 +246,7 @@ public enum V1beta1FlowLogSpecForProviderSubnetIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FlowLogSpecForProviderSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -250,6 +260,7 @@ public partial class V1beta1FlowLogSpecForProviderSubnetIdRefPolicy
     public V1beta1FlowLogSpecForProviderSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
 public partial class V1beta1FlowLogSpecForProviderSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -281,6 +292,7 @@ public enum V1beta1FlowLogSpecForProviderSubnetIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FlowLogSpecForProviderSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1FlowLogSpecForProviderSubnetIdSelectorPolicy
     public V1beta1FlowLogSpecForProviderSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
 public partial class V1beta1FlowLogSpecForProviderSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -329,6 +342,7 @@ public enum V1beta1FlowLogSpecForProviderVpcIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FlowLogSpecForProviderVpcIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -342,6 +356,7 @@ public partial class V1beta1FlowLogSpecForProviderVpcIdRefPolicy
     public V1beta1FlowLogSpecForProviderVpcIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1FlowLogSpecForProviderVpcIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -373,6 +388,7 @@ public enum V1beta1FlowLogSpecForProviderVpcIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FlowLogSpecForProviderVpcIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -386,6 +402,7 @@ public partial class V1beta1FlowLogSpecForProviderVpcIdSelectorPolicy
     public V1beta1FlowLogSpecForProviderVpcIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1FlowLogSpecForProviderVpcIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -401,6 +418,7 @@ public partial class V1beta1FlowLogSpecForProviderVpcIdSelector
     public V1beta1FlowLogSpecForProviderVpcIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowLogSpecForProvider
 {
     /// <summary>ARN of the IAM role that allows Amazon EC2 to publish flow logs across accounts.</summary>
@@ -500,6 +518,7 @@ public partial class V1beta1FlowLogSpecForProvider
     public V1beta1FlowLogSpecForProviderVpcIdSelector? VpcIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowLogSpecInitProviderDestinationOptions
 {
     /// <summary>The format for the flow log. Default value: plain-text. Valid values: plain-text, parquet.</summary>
@@ -535,6 +554,7 @@ public enum V1beta1FlowLogSpecInitProviderIamRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FlowLogSpecInitProviderIamRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -548,6 +568,7 @@ public partial class V1beta1FlowLogSpecInitProviderIamRoleArnRefPolicy
     public V1beta1FlowLogSpecInitProviderIamRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate iamRoleArn.</summary>
 public partial class V1beta1FlowLogSpecInitProviderIamRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -579,6 +600,7 @@ public enum V1beta1FlowLogSpecInitProviderIamRoleArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FlowLogSpecInitProviderIamRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -592,6 +614,7 @@ public partial class V1beta1FlowLogSpecInitProviderIamRoleArnSelectorPolicy
     public V1beta1FlowLogSpecInitProviderIamRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate iamRoleArn.</summary>
 public partial class V1beta1FlowLogSpecInitProviderIamRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -627,6 +650,7 @@ public enum V1beta1FlowLogSpecInitProviderLogDestinationRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FlowLogSpecInitProviderLogDestinationRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -640,6 +664,7 @@ public partial class V1beta1FlowLogSpecInitProviderLogDestinationRefPolicy
     public V1beta1FlowLogSpecInitProviderLogDestinationRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Group in cloudwatchlogs to populate logDestination.</summary>
 public partial class V1beta1FlowLogSpecInitProviderLogDestinationRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -671,6 +696,7 @@ public enum V1beta1FlowLogSpecInitProviderLogDestinationSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FlowLogSpecInitProviderLogDestinationSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -684,6 +710,7 @@ public partial class V1beta1FlowLogSpecInitProviderLogDestinationSelectorPolicy
     public V1beta1FlowLogSpecInitProviderLogDestinationSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Group in cloudwatchlogs to populate logDestination.</summary>
 public partial class V1beta1FlowLogSpecInitProviderLogDestinationSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -719,6 +746,7 @@ public enum V1beta1FlowLogSpecInitProviderSubnetIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FlowLogSpecInitProviderSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -732,6 +760,7 @@ public partial class V1beta1FlowLogSpecInitProviderSubnetIdRefPolicy
     public V1beta1FlowLogSpecInitProviderSubnetIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
 public partial class V1beta1FlowLogSpecInitProviderSubnetIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -763,6 +792,7 @@ public enum V1beta1FlowLogSpecInitProviderSubnetIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FlowLogSpecInitProviderSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -776,6 +806,7 @@ public partial class V1beta1FlowLogSpecInitProviderSubnetIdSelectorPolicy
     public V1beta1FlowLogSpecInitProviderSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
 public partial class V1beta1FlowLogSpecInitProviderSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -811,6 +842,7 @@ public enum V1beta1FlowLogSpecInitProviderVpcIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FlowLogSpecInitProviderVpcIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -824,6 +856,7 @@ public partial class V1beta1FlowLogSpecInitProviderVpcIdRefPolicy
     public V1beta1FlowLogSpecInitProviderVpcIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1FlowLogSpecInitProviderVpcIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -855,6 +888,7 @@ public enum V1beta1FlowLogSpecInitProviderVpcIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FlowLogSpecInitProviderVpcIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -868,6 +902,7 @@ public partial class V1beta1FlowLogSpecInitProviderVpcIdSelectorPolicy
     public V1beta1FlowLogSpecInitProviderVpcIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 public partial class V1beta1FlowLogSpecInitProviderVpcIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -883,6 +918,7 @@ public partial class V1beta1FlowLogSpecInitProviderVpcIdSelector
     public V1beta1FlowLogSpecInitProviderVpcIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1FlowLogSpecInitProvider
 {
     /// <summary>ARN of the IAM role that allows Amazon EC2 to publish flow logs across accounts.</summary>
@@ -1020,6 +1056,7 @@ public enum V1beta1FlowLogSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FlowLogSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1033,6 +1070,7 @@ public partial class V1beta1FlowLogSpecProviderConfigRefPolicy
     public V1beta1FlowLogSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1FlowLogSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1064,6 +1102,7 @@ public enum V1beta1FlowLogSpecPublishConnectionDetailsToConfigRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FlowLogSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1077,6 +1116,7 @@ public partial class V1beta1FlowLogSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1FlowLogSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1FlowLogSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1088,6 +1128,7 @@ public partial class V1beta1FlowLogSpecPublishConnectionDetailsToConfigRef
     public V1beta1FlowLogSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1FlowLogSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1103,6 +1144,7 @@ public partial class V1beta1FlowLogSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1FlowLogSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1118,6 +1160,7 @@ public partial class V1beta1FlowLogSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1FlowLogSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1129,6 +1172,7 @@ public partial class V1beta1FlowLogSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>FlowLogSpec defines the desired state of FlowLog</summary>
 public partial class V1beta1FlowLogSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1161,6 +1205,7 @@ public partial class V1beta1FlowLogSpec
     public V1beta1FlowLogSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowLogStatusAtProviderDestinationOptions
 {
     /// <summary>The format for the flow log. Default value: plain-text. Valid values: plain-text, parquet.</summary>
@@ -1176,6 +1221,7 @@ public partial class V1beta1FlowLogStatusAtProviderDestinationOptions
     public bool? PerHourPartition { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FlowLogStatusAtProvider
 {
     /// <summary>The ARN of the Flow Log.</summary>
@@ -1251,6 +1297,7 @@ public partial class V1beta1FlowLogStatusAtProvider
     public string? VpcId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1FlowLogStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1278,6 +1325,7 @@ public partial class V1beta1FlowLogStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>FlowLogStatus defines the observed state of FlowLog.</summary>
 public partial class V1beta1FlowLogStatus
 {
     /// <summary></summary>
@@ -1294,6 +1342,7 @@ public partial class V1beta1FlowLogStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>FlowLog is the Schema for the FlowLogs API. Provides a VPC/Subnet/ENI Flow Log</summary>
 public partial class V1beta1FlowLog : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FlowLogSpec>, IStatus<V1beta1FlowLogStatus>
 {
     public const string KubeApiVersion = "v1beta1";

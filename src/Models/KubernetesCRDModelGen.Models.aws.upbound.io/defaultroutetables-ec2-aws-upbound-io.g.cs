@@ -38,6 +38,7 @@ public enum V1beta1DefaultRouteTableSpecForProviderDefaultRouteTableIdRefPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DefaultRouteTableSpecForProviderDefaultRouteTableIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1DefaultRouteTableSpecForProviderDefaultRouteTableIdR
     public V1beta1DefaultRouteTableSpecForProviderDefaultRouteTableIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPC in ec2 to populate defaultRouteTableId.</summary>
 public partial class V1beta1DefaultRouteTableSpecForProviderDefaultRouteTableIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1DefaultRouteTableSpecForProviderDefaultRouteTableIdSelectorPo
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DefaultRouteTableSpecForProviderDefaultRouteTableIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1DefaultRouteTableSpecForProviderDefaultRouteTableIdS
     public V1beta1DefaultRouteTableSpecForProviderDefaultRouteTableIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPC in ec2 to populate defaultRouteTableId.</summary>
 public partial class V1beta1DefaultRouteTableSpecForProviderDefaultRouteTableIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1DefaultRouteTableSpecForProviderRouteEgressOnlyGatewayIdRefPo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DefaultRouteTableSpecForProviderRouteEgressOnlyGatewayIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1DefaultRouteTableSpecForProviderRouteEgressOnlyGatew
     public V1beta1DefaultRouteTableSpecForProviderRouteEgressOnlyGatewayIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a EgressOnlyInternetGateway in ec2 to populate egressOnlyGatewayId.</summary>
 public partial class V1beta1DefaultRouteTableSpecForProviderRouteEgressOnlyGatewayIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1DefaultRouteTableSpecForProviderRouteEgressOnlyGatewayIdSelec
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DefaultRouteTableSpecForProviderRouteEgressOnlyGatewayIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1DefaultRouteTableSpecForProviderRouteEgressOnlyGatew
     public V1beta1DefaultRouteTableSpecForProviderRouteEgressOnlyGatewayIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a EgressOnlyInternetGateway in ec2 to populate egressOnlyGatewayId.</summary>
 public partial class V1beta1DefaultRouteTableSpecForProviderRouteEgressOnlyGatewayIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1DefaultRouteTableSpecForProviderRouteGatewayIdRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DefaultRouteTableSpecForProviderRouteGatewayIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1DefaultRouteTableSpecForProviderRouteGatewayIdRefPol
     public V1beta1DefaultRouteTableSpecForProviderRouteGatewayIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a InternetGateway in ec2 to populate gatewayId.</summary>
 public partial class V1beta1DefaultRouteTableSpecForProviderRouteGatewayIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1DefaultRouteTableSpecForProviderRouteGatewayIdSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DefaultRouteTableSpecForProviderRouteGatewayIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1DefaultRouteTableSpecForProviderRouteGatewayIdSelect
     public V1beta1DefaultRouteTableSpecForProviderRouteGatewayIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a InternetGateway in ec2 to populate gatewayId.</summary>
 public partial class V1beta1DefaultRouteTableSpecForProviderRouteGatewayIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1DefaultRouteTableSpecForProviderRouteGatewayIdSelect
     public V1beta1DefaultRouteTableSpecForProviderRouteGatewayIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DefaultRouteTableSpecForProviderRoute
 {
     /// <summary>The CIDR block of the route.</summary>
@@ -361,6 +374,7 @@ public partial class V1beta1DefaultRouteTableSpecForProviderRoute
     public string? VpcPeeringConnectionId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DefaultRouteTableSpecForProvider
 {
     /// <summary>ID of the default route table.</summary>
@@ -412,6 +426,7 @@ public enum V1beta1DefaultRouteTableSpecInitProviderDefaultRouteTableIdRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DefaultRouteTableSpecInitProviderDefaultRouteTableIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -425,6 +440,7 @@ public partial class V1beta1DefaultRouteTableSpecInitProviderDefaultRouteTableId
     public V1beta1DefaultRouteTableSpecInitProviderDefaultRouteTableIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VPC in ec2 to populate defaultRouteTableId.</summary>
 public partial class V1beta1DefaultRouteTableSpecInitProviderDefaultRouteTableIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -456,6 +472,7 @@ public enum V1beta1DefaultRouteTableSpecInitProviderDefaultRouteTableIdSelectorP
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DefaultRouteTableSpecInitProviderDefaultRouteTableIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -469,6 +486,7 @@ public partial class V1beta1DefaultRouteTableSpecInitProviderDefaultRouteTableId
     public V1beta1DefaultRouteTableSpecInitProviderDefaultRouteTableIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VPC in ec2 to populate defaultRouteTableId.</summary>
 public partial class V1beta1DefaultRouteTableSpecInitProviderDefaultRouteTableIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -504,6 +522,7 @@ public enum V1beta1DefaultRouteTableSpecInitProviderRouteEgressOnlyGatewayIdRefP
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DefaultRouteTableSpecInitProviderRouteEgressOnlyGatewayIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -517,6 +536,7 @@ public partial class V1beta1DefaultRouteTableSpecInitProviderRouteEgressOnlyGate
     public V1beta1DefaultRouteTableSpecInitProviderRouteEgressOnlyGatewayIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a EgressOnlyInternetGateway in ec2 to populate egressOnlyGatewayId.</summary>
 public partial class V1beta1DefaultRouteTableSpecInitProviderRouteEgressOnlyGatewayIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -548,6 +568,7 @@ public enum V1beta1DefaultRouteTableSpecInitProviderRouteEgressOnlyGatewayIdSele
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DefaultRouteTableSpecInitProviderRouteEgressOnlyGatewayIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -561,6 +582,7 @@ public partial class V1beta1DefaultRouteTableSpecInitProviderRouteEgressOnlyGate
     public V1beta1DefaultRouteTableSpecInitProviderRouteEgressOnlyGatewayIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a EgressOnlyInternetGateway in ec2 to populate egressOnlyGatewayId.</summary>
 public partial class V1beta1DefaultRouteTableSpecInitProviderRouteEgressOnlyGatewayIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -596,6 +618,7 @@ public enum V1beta1DefaultRouteTableSpecInitProviderRouteGatewayIdRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DefaultRouteTableSpecInitProviderRouteGatewayIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -609,6 +632,7 @@ public partial class V1beta1DefaultRouteTableSpecInitProviderRouteGatewayIdRefPo
     public V1beta1DefaultRouteTableSpecInitProviderRouteGatewayIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a InternetGateway in ec2 to populate gatewayId.</summary>
 public partial class V1beta1DefaultRouteTableSpecInitProviderRouteGatewayIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -640,6 +664,7 @@ public enum V1beta1DefaultRouteTableSpecInitProviderRouteGatewayIdSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DefaultRouteTableSpecInitProviderRouteGatewayIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -653,6 +678,7 @@ public partial class V1beta1DefaultRouteTableSpecInitProviderRouteGatewayIdSelec
     public V1beta1DefaultRouteTableSpecInitProviderRouteGatewayIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a InternetGateway in ec2 to populate gatewayId.</summary>
 public partial class V1beta1DefaultRouteTableSpecInitProviderRouteGatewayIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -668,6 +694,7 @@ public partial class V1beta1DefaultRouteTableSpecInitProviderRouteGatewayIdSelec
     public V1beta1DefaultRouteTableSpecInitProviderRouteGatewayIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DefaultRouteTableSpecInitProviderRoute
 {
     /// <summary>The CIDR block of the route.</summary>
@@ -735,6 +762,7 @@ public partial class V1beta1DefaultRouteTableSpecInitProviderRoute
     public string? VpcPeeringConnectionId { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1DefaultRouteTableSpecInitProvider
 {
     /// <summary>ID of the default route table.</summary>
@@ -804,6 +832,7 @@ public enum V1beta1DefaultRouteTableSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DefaultRouteTableSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -817,6 +846,7 @@ public partial class V1beta1DefaultRouteTableSpecProviderConfigRefPolicy
     public V1beta1DefaultRouteTableSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1DefaultRouteTableSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -848,6 +878,7 @@ public enum V1beta1DefaultRouteTableSpecPublishConnectionDetailsToConfigRefPolic
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DefaultRouteTableSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -861,6 +892,7 @@ public partial class V1beta1DefaultRouteTableSpecPublishConnectionDetailsToConfi
     public V1beta1DefaultRouteTableSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1DefaultRouteTableSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -872,6 +904,7 @@ public partial class V1beta1DefaultRouteTableSpecPublishConnectionDetailsToConfi
     public V1beta1DefaultRouteTableSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1DefaultRouteTableSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -887,6 +920,7 @@ public partial class V1beta1DefaultRouteTableSpecPublishConnectionDetailsToMetad
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1DefaultRouteTableSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -902,6 +936,7 @@ public partial class V1beta1DefaultRouteTableSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1DefaultRouteTableSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -913,6 +948,7 @@ public partial class V1beta1DefaultRouteTableSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>DefaultRouteTableSpec defines the desired state of DefaultRouteTable</summary>
 public partial class V1beta1DefaultRouteTableSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -945,6 +981,7 @@ public partial class V1beta1DefaultRouteTableSpec
     public V1beta1DefaultRouteTableSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DefaultRouteTableStatusAtProviderRoute
 {
     /// <summary>The CIDR block of the route.</summary>
@@ -996,6 +1033,7 @@ public partial class V1beta1DefaultRouteTableStatusAtProviderRoute
     public string? VpcPeeringConnectionId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DefaultRouteTableStatusAtProvider
 {
     /// <summary>The ARN of the route table.</summary>
@@ -1035,6 +1073,7 @@ public partial class V1beta1DefaultRouteTableStatusAtProvider
     public string? VpcId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1DefaultRouteTableStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1062,6 +1101,7 @@ public partial class V1beta1DefaultRouteTableStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>DefaultRouteTableStatus defines the observed state of DefaultRouteTable.</summary>
 public partial class V1beta1DefaultRouteTableStatus
 {
     /// <summary></summary>
@@ -1078,6 +1118,7 @@ public partial class V1beta1DefaultRouteTableStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>DefaultRouteTable is the Schema for the DefaultRouteTables API. Provides a resource to manage a default route table of a VPC.</summary>
 public partial class V1beta1DefaultRouteTable : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DefaultRouteTableSpec>, IStatus<V1beta1DefaultRouteTableStatus>
 {
     public const string KubeApiVersion = "v1beta1";

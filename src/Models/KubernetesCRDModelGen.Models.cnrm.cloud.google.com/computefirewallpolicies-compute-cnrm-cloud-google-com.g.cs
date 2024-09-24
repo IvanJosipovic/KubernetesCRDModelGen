@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary>Immutable. The Folder that this resource belongs to. Only one of [folderRef, organizationRef] may be specified.</summary>
 public partial class V1beta1ComputeFirewallPolicySpecFolderRef
 {
     /// <summary>Allowed value: The Google Cloud resource name of a `Folder` resource (format: `folders/{{name}}`).</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1ComputeFirewallPolicySpecFolderRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. The Organization that this resource belongs to. Only one of [folderRef, organizationRef] may be specified.</summary>
 public partial class V1beta1ComputeFirewallPolicySpecOrganizationRef
 {
     /// <summary>Allowed value: The Google Cloud resource name of a Google Cloud Organization (format: `organizations/{{name}}`).</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1ComputeFirewallPolicySpecOrganizationRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeFirewallPolicySpec
 {
     /// <summary>An optional description of this resource. Provide this property when you create the resource.</summary>
@@ -61,6 +64,7 @@ public partial class V1beta1ComputeFirewallPolicySpec
     public string ShortName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeFirewallPolicyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -84,6 +88,7 @@ public partial class V1beta1ComputeFirewallPolicyStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeFirewallPolicyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -120,6 +125,7 @@ public partial class V1beta1ComputeFirewallPolicyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ComputeFirewallPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeFirewallPolicySpec>, IStatus<V1beta1ComputeFirewallPolicyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

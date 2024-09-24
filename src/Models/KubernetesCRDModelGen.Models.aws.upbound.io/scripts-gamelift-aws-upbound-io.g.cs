@@ -38,6 +38,7 @@ public enum V1beta1ScriptSpecForProviderStorageLocationBucketRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ScriptSpecForProviderStorageLocationBucketRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ScriptSpecForProviderStorageLocationBucketRefPolicy
     public V1beta1ScriptSpecForProviderStorageLocationBucketRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1ScriptSpecForProviderStorageLocationBucketRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ScriptSpecForProviderStorageLocationBucketSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ScriptSpecForProviderStorageLocationBucketSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ScriptSpecForProviderStorageLocationBucketSelectorPo
     public V1beta1ScriptSpecForProviderStorageLocationBucketSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1ScriptSpecForProviderStorageLocationBucketSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1ScriptSpecForProviderStorageLocationKeyRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ScriptSpecForProviderStorageLocationKeyRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1ScriptSpecForProviderStorageLocationKeyRefPolicy
     public V1beta1ScriptSpecForProviderStorageLocationKeyRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Object in s3 to populate key.</summary>
 public partial class V1beta1ScriptSpecForProviderStorageLocationKeyRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1ScriptSpecForProviderStorageLocationKeySelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ScriptSpecForProviderStorageLocationKeySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1ScriptSpecForProviderStorageLocationKeySelectorPolic
     public V1beta1ScriptSpecForProviderStorageLocationKeySelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Object in s3 to populate key.</summary>
 public partial class V1beta1ScriptSpecForProviderStorageLocationKeySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -222,6 +230,7 @@ public enum V1beta1ScriptSpecForProviderStorageLocationRoleArnRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ScriptSpecForProviderStorageLocationRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1ScriptSpecForProviderStorageLocationRoleArnRefPolicy
     public V1beta1ScriptSpecForProviderStorageLocationRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ScriptSpecForProviderStorageLocationRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -266,6 +276,7 @@ public enum V1beta1ScriptSpecForProviderStorageLocationRoleArnSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ScriptSpecForProviderStorageLocationRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -279,6 +290,7 @@ public partial class V1beta1ScriptSpecForProviderStorageLocationRoleArnSelectorP
     public V1beta1ScriptSpecForProviderStorageLocationRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ScriptSpecForProviderStorageLocationRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -294,6 +306,7 @@ public partial class V1beta1ScriptSpecForProviderStorageLocationRoleArnSelector
     public V1beta1ScriptSpecForProviderStorageLocationRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScriptSpecForProviderStorageLocation
 {
     /// <summary>Name of your S3 bucket.</summary>
@@ -337,6 +350,7 @@ public partial class V1beta1ScriptSpecForProviderStorageLocation
     public V1beta1ScriptSpecForProviderStorageLocationRoleArnSelector? RoleArnSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScriptSpecForProvider
 {
     /// <summary>Name of the script</summary>
@@ -384,6 +398,7 @@ public enum V1beta1ScriptSpecInitProviderStorageLocationBucketRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ScriptSpecInitProviderStorageLocationBucketRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -397,6 +412,7 @@ public partial class V1beta1ScriptSpecInitProviderStorageLocationBucketRefPolicy
     public V1beta1ScriptSpecInitProviderStorageLocationBucketRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1ScriptSpecInitProviderStorageLocationBucketRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -428,6 +444,7 @@ public enum V1beta1ScriptSpecInitProviderStorageLocationBucketSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ScriptSpecInitProviderStorageLocationBucketSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -441,6 +458,7 @@ public partial class V1beta1ScriptSpecInitProviderStorageLocationBucketSelectorP
     public V1beta1ScriptSpecInitProviderStorageLocationBucketSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 public partial class V1beta1ScriptSpecInitProviderStorageLocationBucketSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -476,6 +494,7 @@ public enum V1beta1ScriptSpecInitProviderStorageLocationKeyRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ScriptSpecInitProviderStorageLocationKeyRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -489,6 +508,7 @@ public partial class V1beta1ScriptSpecInitProviderStorageLocationKeyRefPolicy
     public V1beta1ScriptSpecInitProviderStorageLocationKeyRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Object in s3 to populate key.</summary>
 public partial class V1beta1ScriptSpecInitProviderStorageLocationKeyRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -520,6 +540,7 @@ public enum V1beta1ScriptSpecInitProviderStorageLocationKeySelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ScriptSpecInitProviderStorageLocationKeySelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -533,6 +554,7 @@ public partial class V1beta1ScriptSpecInitProviderStorageLocationKeySelectorPoli
     public V1beta1ScriptSpecInitProviderStorageLocationKeySelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Object in s3 to populate key.</summary>
 public partial class V1beta1ScriptSpecInitProviderStorageLocationKeySelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -568,6 +590,7 @@ public enum V1beta1ScriptSpecInitProviderStorageLocationRoleArnRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ScriptSpecInitProviderStorageLocationRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -581,6 +604,7 @@ public partial class V1beta1ScriptSpecInitProviderStorageLocationRoleArnRefPolic
     public V1beta1ScriptSpecInitProviderStorageLocationRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ScriptSpecInitProviderStorageLocationRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -612,6 +636,7 @@ public enum V1beta1ScriptSpecInitProviderStorageLocationRoleArnSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ScriptSpecInitProviderStorageLocationRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -625,6 +650,7 @@ public partial class V1beta1ScriptSpecInitProviderStorageLocationRoleArnSelector
     public V1beta1ScriptSpecInitProviderStorageLocationRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ScriptSpecInitProviderStorageLocationRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -640,6 +666,7 @@ public partial class V1beta1ScriptSpecInitProviderStorageLocationRoleArnSelector
     public V1beta1ScriptSpecInitProviderStorageLocationRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScriptSpecInitProviderStorageLocation
 {
     /// <summary>Name of your S3 bucket.</summary>
@@ -683,6 +710,7 @@ public partial class V1beta1ScriptSpecInitProviderStorageLocation
     public V1beta1ScriptSpecInitProviderStorageLocationRoleArnSelector? RoleArnSelector { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ScriptSpecInitProvider
 {
     /// <summary>Name of the script</summary>
@@ -748,6 +776,7 @@ public enum V1beta1ScriptSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ScriptSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -761,6 +790,7 @@ public partial class V1beta1ScriptSpecProviderConfigRefPolicy
     public V1beta1ScriptSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ScriptSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -792,6 +822,7 @@ public enum V1beta1ScriptSpecPublishConnectionDetailsToConfigRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ScriptSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -805,6 +836,7 @@ public partial class V1beta1ScriptSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1ScriptSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ScriptSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -816,6 +848,7 @@ public partial class V1beta1ScriptSpecPublishConnectionDetailsToConfigRef
     public V1beta1ScriptSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ScriptSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -831,6 +864,7 @@ public partial class V1beta1ScriptSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ScriptSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -846,6 +880,7 @@ public partial class V1beta1ScriptSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ScriptSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -857,6 +892,7 @@ public partial class V1beta1ScriptSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ScriptSpec defines the desired state of Script</summary>
 public partial class V1beta1ScriptSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -889,6 +925,7 @@ public partial class V1beta1ScriptSpec
     public V1beta1ScriptSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScriptStatusAtProviderStorageLocation
 {
     /// <summary>Name of your S3 bucket.</summary>
@@ -908,6 +945,7 @@ public partial class V1beta1ScriptStatusAtProviderStorageLocation
     public string? RoleArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScriptStatusAtProvider
 {
     /// <summary>GameLift Script ARN.</summary>
@@ -943,6 +981,7 @@ public partial class V1beta1ScriptStatusAtProvider
     public string? ZipFile { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ScriptStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -970,6 +1009,7 @@ public partial class V1beta1ScriptStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ScriptStatus defines the observed state of Script.</summary>
 public partial class V1beta1ScriptStatus
 {
     /// <summary></summary>
@@ -986,6 +1026,7 @@ public partial class V1beta1ScriptStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Script is the Schema for the Scripts API. Provides a GameLift Script resource.</summary>
 public partial class V1beta1Script : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ScriptSpec>, IStatus<V1beta1ScriptStatus>
 {
     public const string KubeApiVersion = "v1beta1";

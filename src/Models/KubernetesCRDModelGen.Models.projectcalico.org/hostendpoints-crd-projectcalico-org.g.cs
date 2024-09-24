@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.crd.projectcalico.org;
+/// <summary></summary>
 public partial class V1HostEndpointSpecPorts
 {
     /// <summary></summary>
@@ -23,6 +24,7 @@ public partial class V1HostEndpointSpecPorts
     public IntstrIntOrString Protocol { get; set; }
 }
 
+/// <summary>HostEndpointSpec contains the specification for a HostEndpoint resource.</summary>
 public partial class V1HostEndpointSpec
 {
     /// <summary>The expected IP addresses (IPv4 and IPv6) of the endpoint. If "InterfaceName" is not present, Calico will look for an interface matching any of the IPs in the list and apply policy to that. Note: 	When using the selector match criteria in an ingress or egress security Policy 	or Profile, Calico converts the selector into a set of IP addresses. For host 	endpoints, the ExpectedIPs field is used for that purpose. (If only the interface 	name is specified, Calico does not learn the IPs of the interface for use in match 	criteria.)</summary>
@@ -47,6 +49,7 @@ public partial class V1HostEndpointSpec
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1HostEndpoint : IKubernetesObject<V1ObjectMeta>, ISpec<V1HostEndpointSpec>
 {
     public const string KubeApiVersion = "v1";

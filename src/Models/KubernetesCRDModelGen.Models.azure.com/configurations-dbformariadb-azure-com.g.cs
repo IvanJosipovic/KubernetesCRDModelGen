@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dbformariadb.azure.com;
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a dbformariadb.azure.com/Server resource</summary>
 public partial class V1api20180601storageConfigurationSpecOwner
 {
     /// <summary></summary>
@@ -19,6 +20,7 @@ public partial class V1api20180601storageConfigurationSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.Servers_Configuration_Spec</summary>
 public partial class V1api20180601storageConfigurationSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -46,6 +48,7 @@ public partial class V1api20180601storageConfigurationSpec
     public string? Value { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20180601storageConfigurationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -77,6 +80,7 @@ public partial class V1api20180601storageConfigurationStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20180601.Servers_Configuration_STATUS</summary>
 public partial class V1api20180601storageConfigurationStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -125,6 +129,7 @@ public partial class V1api20180601storageConfigurationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20180601.Configuration Generator information: - Generated from: /mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMariaDB/servers/{serverName}/configurations/{configurationName}</summary>
 public partial class V1api20180601storageConfiguration : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20180601storageConfigurationSpec>, IStatus<V1api20180601storageConfigurationStatus>
 {
     public const string KubeApiVersion = "v1api20180601storage";

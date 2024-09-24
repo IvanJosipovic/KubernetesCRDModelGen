@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkservices.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1NetworkServicesHTTPRouteSpecGateways
 {
     /// <summary>Allowed value: The `selfLink` field of a `NetworkServicesGateway` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecGateways
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkServicesHTTPRouteSpecMeshes
 {
     /// <summary>Allowed value: The `selfLink` field of a `NetworkServicesMesh` resource.</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecMeshes
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. The Project that this resource belongs to.</summary>
 public partial class V1beta1NetworkServicesHTTPRouteSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -53,6 +56,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The specification for allowing client side cross-origin requests.</summary>
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionCorsPolicy
 {
     /// <summary>In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This translates to the Access-Control-Allow-Credentials header. Default value is false.</summary>
@@ -88,6 +92,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionCorsPolicy
     public string? MaxAge { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionDestinationsServiceRef
 {
     /// <summary>The URL of a BackendService to route traffic to.  Allowed value: The Google Cloud resource name of a `ComputeBackendService` resource (format: `projects/{{project}}/global/backendServices/{{name}}`).</summary>
@@ -103,6 +108,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionDestinationsS
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionDestinations
 {
     /// <summary></summary>
@@ -114,6 +120,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionDestinations
     public long? Weight { get; set; }
 }
 
+/// <summary>The specification for aborting to client requests.</summary>
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionFaultInjectionPolicyAbort
 {
     /// <summary>The HTTP status code used to abort the request. The value must be between 200 and 599 inclusive.</summary>
@@ -125,6 +132,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionFaultInjectio
     public long? Percentage { get; set; }
 }
 
+/// <summary>The specification for injecting delay to client requests.</summary>
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionFaultInjectionPolicyDelay
 {
     /// <summary>Specify a fixed delay before forwarding the request.</summary>
@@ -136,6 +144,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionFaultInjectio
     public long? Percentage { get; set; }
 }
 
+/// <summary>The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure. As part of fault injection, when clients send requests to a backend service, delays can be introduced on a percentage of requests before sending those requests to the backend service. Similarly requests from clients can be aborted for a percentage of requests. timeout and retry_policy will be ignored by clients that are configured with a fault_injection_policy</summary>
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionFaultInjectionPolicy
 {
     /// <summary>The specification for aborting to client requests.</summary>
@@ -147,6 +156,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionFaultInjectio
     public V1beta1NetworkServicesHTTPRouteSpecRulesActionFaultInjectionPolicyDelay? Delay { get; set; }
 }
 
+/// <summary>If set, the request is directed as configured by this field.</summary>
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionRedirect
 {
     /// <summary>The host that will be used in the redirect response instead of the one that was supplied in the request.</summary>
@@ -178,6 +188,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionRedirect
     public bool? StripQuery { get; set; }
 }
 
+/// <summary>The specification for modifying the headers of a matching request prior to delivery of the request to the destination.</summary>
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionRequestHeaderModifier
 {
     /// <summary>Add the headers with given map where key is the name of the header, value is the value of the header.</summary>
@@ -193,6 +204,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionRequestHeader
     public IDictionary<string, string>? Set { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionRequestMirrorPolicyDestinationServiceRef
 {
     /// <summary>The URL of a BackendService to route traffic to.  Allowed value: The Google Cloud resource name of a `ComputeBackendService` resource (format: `projects/{{project}}/global/backendServices/{{name}}`).</summary>
@@ -208,6 +220,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionRequestMirror
     public string? Namespace { get; set; }
 }
 
+/// <summary>The destination the requests will be mirrored to. The weight of the destination will be ignored.</summary>
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionRequestMirrorPolicyDestination
 {
     /// <summary></summary>
@@ -219,6 +232,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionRequestMirror
     public long? Weight { get; set; }
 }
 
+/// <summary>Specifies the policy on how requests intended for the routes destination are shadowed to a separate mirrored destination. Proxy will not wait for the shadow destination to respond before returning the response. Prior to sending traffic to the shadow service, the host/authority header is suffixed with -shadow.</summary>
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionRequestMirrorPolicy
 {
     /// <summary>The destination the requests will be mirrored to. The weight of the destination will be ignored.</summary>
@@ -226,6 +240,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionRequestMirror
     public V1beta1NetworkServicesHTTPRouteSpecRulesActionRequestMirrorPolicyDestination? Destination { get; set; }
 }
 
+/// <summary>The specification for modifying the headers of a response prior to sending the response back to the client.</summary>
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionResponseHeaderModifier
 {
     /// <summary>Add the headers with given map where key is the name of the header, value is the value of the header.</summary>
@@ -241,6 +256,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionResponseHeade
     public IDictionary<string, string>? Set { get; set; }
 }
 
+/// <summary>Specifies the retry policy associated with this route.</summary>
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionRetryPolicy
 {
     /// <summary>Specifies the allowed number of retries. This number must be &gt; 0. If not specified, default to 1.</summary>
@@ -256,6 +272,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionRetryPolicy
     public IList<string>? RetryConditions { get; set; }
 }
 
+/// <summary>The specification for rewrite URL before forwarding requests to the destination.</summary>
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionUrlRewrite
 {
     /// <summary>Prior to forwarding the request to the selected destination, the requests host header is replaced by this value.</summary>
@@ -267,6 +284,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionUrlRewrite
     public string? PathPrefixRewrite { get; set; }
 }
 
+/// <summary>The detailed rule defining how to route matched traffic.</summary>
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesAction
 {
     /// <summary>The specification for allowing client side cross-origin requests.</summary>
@@ -310,6 +328,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesAction
     public V1beta1NetworkServicesHTTPRouteSpecRulesActionUrlRewrite? UrlRewrite { get; set; }
 }
 
+/// <summary>If specified, the rule will match if the request header value is within the range.</summary>
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesMatchesHeadersRangeMatch
 {
     /// <summary>End of the range (exclusive)</summary>
@@ -321,6 +340,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesMatchesHeadersRange
     public long? Start { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesMatchesHeaders
 {
     /// <summary>The value of the header should match exactly the content of exact_match.</summary>
@@ -356,6 +376,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesMatchesHeaders
     public string? SuffixMatch { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesMatchesQueryParameters
 {
     /// <summary>The value of the query parameter must exactly match the contents of exact_match. Only one of exact_match, regex_match, or present_match must be set.</summary>
@@ -375,6 +396,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesMatchesQueryParamet
     public string? RegexMatch { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkServicesHTTPRouteSpecRulesMatches
 {
     /// <summary>The HTTP request path value should exactly match this value. Only one of full_path_match, prefix_match, or regex_match should be used.</summary>
@@ -402,6 +424,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesMatches
     public string? RegexMatch { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkServicesHTTPRouteSpecRules
 {
     /// <summary>The detailed rule defining how to route matched traffic.</summary>
@@ -413,6 +436,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRules
     public IList<V1beta1NetworkServicesHTTPRouteSpecRulesMatches>? Matches { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkServicesHTTPRouteSpec
 {
     /// <summary>Optional. A free-text description of the resource. Max length 1024 characters.</summary>
@@ -448,6 +472,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpec
     public IList<V1beta1NetworkServicesHTTPRouteSpecRules> Rules { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkServicesHTTPRouteStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -471,6 +496,7 @@ public partial class V1beta1NetworkServicesHTTPRouteStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1NetworkServicesHTTPRouteStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -495,6 +521,7 @@ public partial class V1beta1NetworkServicesHTTPRouteStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1NetworkServicesHTTPRoute : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1NetworkServicesHTTPRouteSpec>, IStatus<V1beta1NetworkServicesHTTPRouteStatus>
 {
     public const string KubeApiVersion = "v1beta1";

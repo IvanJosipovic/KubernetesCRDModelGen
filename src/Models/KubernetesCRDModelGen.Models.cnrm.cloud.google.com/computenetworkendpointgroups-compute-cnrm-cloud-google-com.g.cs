@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary>The network to which all network endpoints in the NEG belong. Uses "default" project network if unspecified.</summary>
 public partial class V1beta1ComputeNetworkEndpointGroupSpecNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1ComputeNetworkEndpointGroupSpecNetworkRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Optional subnetwork to which all network endpoints in the NEG belong.</summary>
 public partial class V1beta1ComputeNetworkEndpointGroupSpecSubnetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeSubnetwork` resource.</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1ComputeNetworkEndpointGroupSpecSubnetworkRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeNetworkEndpointGroupSpec
 {
     /// <summary>Immutable. The default port used if the port number is not specified in the network endpoint.</summary>
@@ -69,6 +72,7 @@ public partial class V1beta1ComputeNetworkEndpointGroupSpec
     public V1beta1ComputeNetworkEndpointGroupSpecSubnetworkRef? SubnetworkRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeNetworkEndpointGroupStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -92,6 +96,7 @@ public partial class V1beta1ComputeNetworkEndpointGroupStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeNetworkEndpointGroupStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -112,6 +117,7 @@ public partial class V1beta1ComputeNetworkEndpointGroupStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ComputeNetworkEndpointGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeNetworkEndpointGroupSpec>, IStatus<V1beta1ComputeNetworkEndpointGroupStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigquery.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1BigQueryTableSpecDatasetRef
 {
     /// <summary>Allowed value: The `name` field of a `BigQueryDataset` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1BigQueryTableSpecDatasetRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BigQueryTableSpecEncryptionConfigurationKmsKeyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1BigQueryTableSpecEncryptionConfigurationKmsKeyRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. Specifies how the table should be encrypted. If left blank, the table will be encrypted with a Google-managed key; that process is transparent to the user.</summary>
 public partial class V1beta1BigQueryTableSpecEncryptionConfiguration
 {
     /// <summary></summary>
@@ -49,6 +52,7 @@ public partial class V1beta1BigQueryTableSpecEncryptionConfiguration
     public string? KmsKeyVersion { get; set; }
 }
 
+/// <summary>Additional options if source_format is set to "AVRO".</summary>
 public partial class V1beta1BigQueryTableSpecExternalDataConfigurationAvroOptions
 {
     /// <summary>If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).</summary>
@@ -56,6 +60,7 @@ public partial class V1beta1BigQueryTableSpecExternalDataConfigurationAvroOption
     public bool UseAvroLogicalTypes { get; set; }
 }
 
+/// <summary>Additional properties to set if source_format is set to "CSV".</summary>
 public partial class V1beta1BigQueryTableSpecExternalDataConfigurationCsvOptions
 {
     /// <summary>Indicates if BigQuery should accept rows that are missing trailing optional columns.</summary>
@@ -83,6 +88,7 @@ public partial class V1beta1BigQueryTableSpecExternalDataConfigurationCsvOptions
     public int? SkipLeadingRows { get; set; }
 }
 
+/// <summary>Additional options if source_format is set to "GOOGLE_SHEETS".</summary>
 public partial class V1beta1BigQueryTableSpecExternalDataConfigurationGoogleSheetsOptions
 {
     /// <summary>Range of a sheet to query from. Only used when non-empty. At least one of range or skip_leading_rows must be set. Typical format: "sheet_name!top_left_cell_id:bottom_right_cell_id" For example: "sheet1!A1:B20".</summary>
@@ -94,6 +100,7 @@ public partial class V1beta1BigQueryTableSpecExternalDataConfigurationGoogleShee
     public int? SkipLeadingRows { get; set; }
 }
 
+/// <summary>When set, configures hive partitioning support. Not all storage formats support hive partitioning -- requesting hive partitioning on an unsupported format will lead to an error, as will providing an invalid specification.</summary>
 public partial class V1beta1BigQueryTableSpecExternalDataConfigurationHivePartitioningOptions
 {
     /// <summary>When set, what mode of hive partitioning to use when reading data.</summary>
@@ -109,6 +116,7 @@ public partial class V1beta1BigQueryTableSpecExternalDataConfigurationHivePartit
     public string? SourceUriPrefix { get; set; }
 }
 
+/// <summary>Additional properties to set if sourceFormat is set to JSON.".</summary>
 public partial class V1beta1BigQueryTableSpecExternalDataConfigurationJsonOptions
 {
     /// <summary>The character encoding of the data. The supported values are UTF-8, UTF-16BE, UTF-16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8.</summary>
@@ -116,6 +124,7 @@ public partial class V1beta1BigQueryTableSpecExternalDataConfigurationJsonOption
     public string? Encoding { get; set; }
 }
 
+/// <summary>Additional properties to set if sourceFormat is set to PARQUET.".</summary>
 public partial class V1beta1BigQueryTableSpecExternalDataConfigurationParquetOptions
 {
     /// <summary>Indicates whether to use schema inference specifically for Parquet LIST logical type.</summary>
@@ -127,6 +136,7 @@ public partial class V1beta1BigQueryTableSpecExternalDataConfigurationParquetOpt
     public bool? EnumAsString { get; set; }
 }
 
+/// <summary>Describes the data format, location, and other properties of a table stored outside of BigQuery. By defining these properties, the data source can then be queried as if it were a standard BigQuery table.</summary>
 public partial class V1beta1BigQueryTableSpecExternalDataConfiguration
 {
     /// <summary>Let BigQuery try to autodetect the schema and format of the table.</summary>
@@ -202,6 +212,7 @@ public partial class V1beta1BigQueryTableSpecExternalDataConfiguration
     public IList<string> SourceUris { get; set; }
 }
 
+/// <summary>If specified, configures this table as a materialized view.</summary>
 public partial class V1beta1BigQueryTableSpecMaterializedView
 {
     /// <summary>Immutable. Allow non incremental materialized view definition. The default value is false.</summary>
@@ -221,6 +232,7 @@ public partial class V1beta1BigQueryTableSpecMaterializedView
     public int? RefreshIntervalMs { get; set; }
 }
 
+/// <summary>Information required to partition based on ranges. Structure is documented below.</summary>
 public partial class V1beta1BigQueryTableSpecRangePartitioningRange
 {
     /// <summary>End of the range partitioning, exclusive.</summary>
@@ -236,6 +248,7 @@ public partial class V1beta1BigQueryTableSpecRangePartitioningRange
     public int Start { get; set; }
 }
 
+/// <summary>If specified, configures range-based partitioning for this table.</summary>
 public partial class V1beta1BigQueryTableSpecRangePartitioning
 {
     /// <summary>Immutable. The field used to determine how to create a range-based partition.</summary>
@@ -247,6 +260,7 @@ public partial class V1beta1BigQueryTableSpecRangePartitioning
     public V1beta1BigQueryTableSpecRangePartitioningRange Range { get; set; }
 }
 
+/// <summary>The pair of the foreign key column and primary key column.</summary>
 public partial class V1beta1BigQueryTableSpecTableConstraintsForeignKeysColumnReferences
 {
     /// <summary>The column in the primary key that are referenced by the referencingColumn.</summary>
@@ -258,6 +272,7 @@ public partial class V1beta1BigQueryTableSpecTableConstraintsForeignKeysColumnRe
     public string ReferencingColumn { get; set; }
 }
 
+/// <summary>The table that holds the primary key and is referenced by this foreign key.</summary>
 public partial class V1beta1BigQueryTableSpecTableConstraintsForeignKeysReferencedTable
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -273,6 +288,7 @@ public partial class V1beta1BigQueryTableSpecTableConstraintsForeignKeysReferenc
     public string TableId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BigQueryTableSpecTableConstraintsForeignKeys
 {
     /// <summary>The pair of the foreign key column and primary key column.</summary>
@@ -288,6 +304,7 @@ public partial class V1beta1BigQueryTableSpecTableConstraintsForeignKeys
     public V1beta1BigQueryTableSpecTableConstraintsForeignKeysReferencedTable ReferencedTable { get; set; }
 }
 
+/// <summary>Represents a primary key constraint on a table's columns. Present only if the table has a primary key. The primary key is not enforced.</summary>
 public partial class V1beta1BigQueryTableSpecTableConstraintsPrimaryKey
 {
     /// <summary>The columns that are composed of the primary key constraint.</summary>
@@ -295,6 +312,7 @@ public partial class V1beta1BigQueryTableSpecTableConstraintsPrimaryKey
     public IList<string> Columns { get; set; }
 }
 
+/// <summary>Defines the primary key and foreign keys.</summary>
 public partial class V1beta1BigQueryTableSpecTableConstraints
 {
     /// <summary>Present only if the table has a foreign key. The foreign key is not enforced.</summary>
@@ -306,6 +324,7 @@ public partial class V1beta1BigQueryTableSpecTableConstraints
     public V1beta1BigQueryTableSpecTableConstraintsPrimaryKey? PrimaryKey { get; set; }
 }
 
+/// <summary>If specified, configures time-based partitioning for this table.</summary>
 public partial class V1beta1BigQueryTableSpecTimePartitioning
 {
     /// <summary>Number of milliseconds for which to keep the storage for a partition.</summary>
@@ -325,6 +344,7 @@ public partial class V1beta1BigQueryTableSpecTimePartitioning
     public string Type { get; set; }
 }
 
+/// <summary>If specified, configures this table as a view.</summary>
 public partial class V1beta1BigQueryTableSpecView
 {
     /// <summary>A query that BigQuery executes when the view is referenced.</summary>
@@ -336,6 +356,7 @@ public partial class V1beta1BigQueryTableSpecView
     public bool? UseLegacySql { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BigQueryTableSpec
 {
     /// <summary>Specifies column names to use for data clustering. Up to four top-level columns are allowed, and should be specified in descending priority order.</summary>
@@ -403,6 +424,7 @@ public partial class V1beta1BigQueryTableSpec
     public V1beta1BigQueryTableSpecView? View { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BigQueryTableStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -426,6 +448,7 @@ public partial class V1beta1BigQueryTableStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BigQueryTableStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -474,6 +497,7 @@ public partial class V1beta1BigQueryTableStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1BigQueryTable : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BigQueryTableSpec>, IStatus<V1beta1BigQueryTableStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -18,6 +18,7 @@ public enum V1beta1PimActiveRoleAssignmentSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>A expiration block as defined above.</summary>
 public partial class V1beta1PimActiveRoleAssignmentSpecForProviderScheduleExpiration
 {
     /// <summary>The duration of the role assignment in days. Conflicts with schedule[0].expiration[0].duration_hours,schedule[0].expiration[0].end_date_time Changing this forces a new Pim Active Role Assignment to be created. The duration of the assignment in days.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1PimActiveRoleAssignmentSpecForProviderScheduleExpira
     public string? EndDateTime { get; set; }
 }
 
+/// <summary>A schedule block as defined below. Changing this forces a new Pim Active Role Assignment to be created. The schedule details of this role assignment.</summary>
 public partial class V1beta1PimActiveRoleAssignmentSpecForProviderSchedule
 {
     /// <summary>A expiration block as defined above.</summary>
@@ -64,6 +66,7 @@ public enum V1beta1PimActiveRoleAssignmentSpecForProviderScopeRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PimActiveRoleAssignmentSpecForProviderScopeRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -77,6 +80,7 @@ public partial class V1beta1PimActiveRoleAssignmentSpecForProviderScopeRefPolicy
     public V1beta1PimActiveRoleAssignmentSpecForProviderScopeRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ManagementGroup in management to populate scope.</summary>
 public partial class V1beta1PimActiveRoleAssignmentSpecForProviderScopeRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -108,6 +112,7 @@ public enum V1beta1PimActiveRoleAssignmentSpecForProviderScopeSelectorPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PimActiveRoleAssignmentSpecForProviderScopeSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1PimActiveRoleAssignmentSpecForProviderScopeSelectorP
     public V1beta1PimActiveRoleAssignmentSpecForProviderScopeSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ManagementGroup in management to populate scope.</summary>
 public partial class V1beta1PimActiveRoleAssignmentSpecForProviderScopeSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -136,6 +142,7 @@ public partial class V1beta1PimActiveRoleAssignmentSpecForProviderScopeSelector
     public V1beta1PimActiveRoleAssignmentSpecForProviderScopeSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>A ticket block as defined below. Changing this forces a new Pim Active Role Assignment to be created. The ticket details.</summary>
 public partial class V1beta1PimActiveRoleAssignmentSpecForProviderTicket
 {
     /// <summary>The ticket number. The ticket number.</summary>
@@ -147,6 +154,7 @@ public partial class V1beta1PimActiveRoleAssignmentSpecForProviderTicket
     public string? System { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PimActiveRoleAssignmentSpecForProvider
 {
     /// <summary>The justification of the role assignment. Changing this forces a new Pim Active Role Assignment to be created. The justification of the role assignment.</summary>
@@ -182,6 +190,7 @@ public partial class V1beta1PimActiveRoleAssignmentSpecForProvider
     public V1beta1PimActiveRoleAssignmentSpecForProviderTicket? Ticket { get; set; }
 }
 
+/// <summary>A expiration block as defined above.</summary>
 public partial class V1beta1PimActiveRoleAssignmentSpecInitProviderScheduleExpiration
 {
     /// <summary>The duration of the role assignment in days. Conflicts with schedule[0].expiration[0].duration_hours,schedule[0].expiration[0].end_date_time Changing this forces a new Pim Active Role Assignment to be created. The duration of the assignment in days.</summary>
@@ -197,6 +206,7 @@ public partial class V1beta1PimActiveRoleAssignmentSpecInitProviderScheduleExpir
     public string? EndDateTime { get; set; }
 }
 
+/// <summary>A schedule block as defined below. Changing this forces a new Pim Active Role Assignment to be created. The schedule details of this role assignment.</summary>
 public partial class V1beta1PimActiveRoleAssignmentSpecInitProviderSchedule
 {
     /// <summary>A expiration block as defined above.</summary>
@@ -228,6 +238,7 @@ public enum V1beta1PimActiveRoleAssignmentSpecInitProviderScopeRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PimActiveRoleAssignmentSpecInitProviderScopeRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -241,6 +252,7 @@ public partial class V1beta1PimActiveRoleAssignmentSpecInitProviderScopeRefPolic
     public V1beta1PimActiveRoleAssignmentSpecInitProviderScopeRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ManagementGroup in management to populate scope.</summary>
 public partial class V1beta1PimActiveRoleAssignmentSpecInitProviderScopeRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -272,6 +284,7 @@ public enum V1beta1PimActiveRoleAssignmentSpecInitProviderScopeSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1PimActiveRoleAssignmentSpecInitProviderScopeSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -285,6 +298,7 @@ public partial class V1beta1PimActiveRoleAssignmentSpecInitProviderScopeSelector
     public V1beta1PimActiveRoleAssignmentSpecInitProviderScopeSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ManagementGroup in management to populate scope.</summary>
 public partial class V1beta1PimActiveRoleAssignmentSpecInitProviderScopeSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -300,6 +314,7 @@ public partial class V1beta1PimActiveRoleAssignmentSpecInitProviderScopeSelector
     public V1beta1PimActiveRoleAssignmentSpecInitProviderScopeSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>A ticket block as defined below. Changing this forces a new Pim Active Role Assignment to be created. The ticket details.</summary>
 public partial class V1beta1PimActiveRoleAssignmentSpecInitProviderTicket
 {
     /// <summary>The ticket number. The ticket number.</summary>
@@ -311,6 +326,7 @@ public partial class V1beta1PimActiveRoleAssignmentSpecInitProviderTicket
     public string? System { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1PimActiveRoleAssignmentSpecInitProvider
 {
     /// <summary>The justification of the role assignment. Changing this forces a new Pim Active Role Assignment to be created. The justification of the role assignment.</summary>
@@ -388,6 +404,7 @@ public enum V1beta1PimActiveRoleAssignmentSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PimActiveRoleAssignmentSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -401,6 +418,7 @@ public partial class V1beta1PimActiveRoleAssignmentSpecProviderConfigRefPolicy
     public V1beta1PimActiveRoleAssignmentSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1PimActiveRoleAssignmentSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -432,6 +450,7 @@ public enum V1beta1PimActiveRoleAssignmentSpecPublishConnectionDetailsToConfigRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1PimActiveRoleAssignmentSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -445,6 +464,7 @@ public partial class V1beta1PimActiveRoleAssignmentSpecPublishConnectionDetailsT
     public V1beta1PimActiveRoleAssignmentSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1PimActiveRoleAssignmentSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -456,6 +476,7 @@ public partial class V1beta1PimActiveRoleAssignmentSpecPublishConnectionDetailsT
     public V1beta1PimActiveRoleAssignmentSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1PimActiveRoleAssignmentSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -471,6 +492,7 @@ public partial class V1beta1PimActiveRoleAssignmentSpecPublishConnectionDetailsT
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1PimActiveRoleAssignmentSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -486,6 +508,7 @@ public partial class V1beta1PimActiveRoleAssignmentSpecPublishConnectionDetailsT
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1PimActiveRoleAssignmentSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -497,6 +520,7 @@ public partial class V1beta1PimActiveRoleAssignmentSpecWriteConnectionSecretToRe
     public string Namespace { get; set; }
 }
 
+/// <summary>PimActiveRoleAssignmentSpec defines the desired state of PimActiveRoleAssignment</summary>
 public partial class V1beta1PimActiveRoleAssignmentSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -529,6 +553,7 @@ public partial class V1beta1PimActiveRoleAssignmentSpec
     public V1beta1PimActiveRoleAssignmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary>A expiration block as defined above.</summary>
 public partial class V1beta1PimActiveRoleAssignmentStatusAtProviderScheduleExpiration
 {
     /// <summary>The duration of the role assignment in days. Conflicts with schedule[0].expiration[0].duration_hours,schedule[0].expiration[0].end_date_time Changing this forces a new Pim Active Role Assignment to be created. The duration of the assignment in days.</summary>
@@ -544,6 +569,7 @@ public partial class V1beta1PimActiveRoleAssignmentStatusAtProviderScheduleExpir
     public string? EndDateTime { get; set; }
 }
 
+/// <summary>A schedule block as defined below. Changing this forces a new Pim Active Role Assignment to be created. The schedule details of this role assignment.</summary>
 public partial class V1beta1PimActiveRoleAssignmentStatusAtProviderSchedule
 {
     /// <summary>A expiration block as defined above.</summary>
@@ -555,6 +581,7 @@ public partial class V1beta1PimActiveRoleAssignmentStatusAtProviderSchedule
     public string? StartDateTime { get; set; }
 }
 
+/// <summary>A ticket block as defined below. Changing this forces a new Pim Active Role Assignment to be created. The ticket details.</summary>
 public partial class V1beta1PimActiveRoleAssignmentStatusAtProviderTicket
 {
     /// <summary>The ticket number. The ticket number.</summary>
@@ -566,6 +593,7 @@ public partial class V1beta1PimActiveRoleAssignmentStatusAtProviderTicket
     public string? System { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1PimActiveRoleAssignmentStatusAtProvider
 {
     /// <summary>The ID of the Pim Active Role Assignment.</summary>
@@ -601,6 +629,7 @@ public partial class V1beta1PimActiveRoleAssignmentStatusAtProvider
     public V1beta1PimActiveRoleAssignmentStatusAtProviderTicket? Ticket { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1PimActiveRoleAssignmentStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -628,6 +657,7 @@ public partial class V1beta1PimActiveRoleAssignmentStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>PimActiveRoleAssignmentStatus defines the observed state of PimActiveRoleAssignment.</summary>
 public partial class V1beta1PimActiveRoleAssignmentStatus
 {
     /// <summary></summary>
@@ -644,6 +674,7 @@ public partial class V1beta1PimActiveRoleAssignmentStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>PimActiveRoleAssignment is the Schema for the PimActiveRoleAssignments API. Manages a Pim Active Role Assignment.</summary>
 public partial class V1beta1PimActiveRoleAssignment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1PimActiveRoleAssignmentSpec>, IStatus<V1beta1PimActiveRoleAssignmentStatus>
 {
     public const string KubeApiVersion = "v1beta1";

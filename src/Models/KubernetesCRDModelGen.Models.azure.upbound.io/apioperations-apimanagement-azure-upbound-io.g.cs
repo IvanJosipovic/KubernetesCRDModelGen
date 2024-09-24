@@ -38,6 +38,7 @@ public enum V1beta1APIOperationSpecForProviderApiManagementNameRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1APIOperationSpecForProviderApiManagementNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1APIOperationSpecForProviderApiManagementNameRefPolic
     public V1beta1APIOperationSpecForProviderApiManagementNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Management in apimanagement to populate apiManagementName.</summary>
 public partial class V1beta1APIOperationSpecForProviderApiManagementNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1APIOperationSpecForProviderApiManagementNameSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1APIOperationSpecForProviderApiManagementNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1APIOperationSpecForProviderApiManagementNameSelector
     public V1beta1APIOperationSpecForProviderApiManagementNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Management in apimanagement to populate apiManagementName.</summary>
 public partial class V1beta1APIOperationSpecForProviderApiManagementNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -130,6 +134,7 @@ public enum V1beta1APIOperationSpecForProviderApiNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1APIOperationSpecForProviderApiNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -143,6 +148,7 @@ public partial class V1beta1APIOperationSpecForProviderApiNameRefPolicy
     public V1beta1APIOperationSpecForProviderApiNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a API in apimanagement to populate apiName.</summary>
 public partial class V1beta1APIOperationSpecForProviderApiNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -174,6 +180,7 @@ public enum V1beta1APIOperationSpecForProviderApiNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1APIOperationSpecForProviderApiNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -187,6 +194,7 @@ public partial class V1beta1APIOperationSpecForProviderApiNameSelectorPolicy
     public V1beta1APIOperationSpecForProviderApiNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a API in apimanagement to populate apiName.</summary>
 public partial class V1beta1APIOperationSpecForProviderApiNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1APIOperationSpecForProviderApiNameSelector
     public V1beta1APIOperationSpecForProviderApiNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationSpecForProviderRequestHeaderExample
 {
     /// <summary>A description of this Template Parameter.</summary>
@@ -225,6 +234,7 @@ public partial class V1beta1APIOperationSpecForProviderRequestHeaderExample
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationSpecForProviderRequestHeader
 {
     /// <summary>The default value for this Template Parameter.</summary>
@@ -264,6 +274,7 @@ public partial class V1beta1APIOperationSpecForProviderRequestHeader
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationSpecForProviderRequestQueryParameterExample
 {
     /// <summary>A description of this Template Parameter.</summary>
@@ -287,6 +298,7 @@ public partial class V1beta1APIOperationSpecForProviderRequestQueryParameterExam
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationSpecForProviderRequestQueryParameter
 {
     /// <summary>The default value for this Template Parameter.</summary>
@@ -326,6 +338,7 @@ public partial class V1beta1APIOperationSpecForProviderRequestQueryParameter
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationSpecForProviderRequestRepresentationExample
 {
     /// <summary>A description of this Template Parameter.</summary>
@@ -349,6 +362,7 @@ public partial class V1beta1APIOperationSpecForProviderRequestRepresentationExam
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationSpecForProviderRequestRepresentationFormParameterExample
 {
     /// <summary>A description of this Template Parameter.</summary>
@@ -372,6 +386,7 @@ public partial class V1beta1APIOperationSpecForProviderRequestRepresentationForm
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationSpecForProviderRequestRepresentationFormParameter
 {
     /// <summary>The default value for this Template Parameter.</summary>
@@ -411,6 +426,7 @@ public partial class V1beta1APIOperationSpecForProviderRequestRepresentationForm
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationSpecForProviderRequestRepresentation
 {
     /// <summary>The Content Type of this representation, such as application/json.</summary>
@@ -434,6 +450,7 @@ public partial class V1beta1APIOperationSpecForProviderRequestRepresentation
     public string? TypeName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationSpecForProviderRequest
 {
     /// <summary>A description of the HTTP Request, which may include HTML tags.</summary>
@@ -473,6 +490,7 @@ public enum V1beta1APIOperationSpecForProviderResourceGroupNameRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1APIOperationSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -486,6 +504,7 @@ public partial class V1beta1APIOperationSpecForProviderResourceGroupNameRefPolic
     public V1beta1APIOperationSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1APIOperationSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -517,6 +536,7 @@ public enum V1beta1APIOperationSpecForProviderResourceGroupNameSelectorPolicyRes
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1APIOperationSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -530,6 +550,7 @@ public partial class V1beta1APIOperationSpecForProviderResourceGroupNameSelector
     public V1beta1APIOperationSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1APIOperationSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -545,6 +566,7 @@ public partial class V1beta1APIOperationSpecForProviderResourceGroupNameSelector
     public V1beta1APIOperationSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationSpecForProviderResponseHeaderExample
 {
     /// <summary>A description of this Template Parameter.</summary>
@@ -568,6 +590,7 @@ public partial class V1beta1APIOperationSpecForProviderResponseHeaderExample
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationSpecForProviderResponseHeader
 {
     /// <summary>The default value for this Template Parameter.</summary>
@@ -607,6 +630,7 @@ public partial class V1beta1APIOperationSpecForProviderResponseHeader
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationSpecForProviderResponseRepresentationExample
 {
     /// <summary>A description of this Template Parameter.</summary>
@@ -630,6 +654,7 @@ public partial class V1beta1APIOperationSpecForProviderResponseRepresentationExa
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationSpecForProviderResponseRepresentationFormParameterExample
 {
     /// <summary>A description of this Template Parameter.</summary>
@@ -653,6 +678,7 @@ public partial class V1beta1APIOperationSpecForProviderResponseRepresentationFor
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationSpecForProviderResponseRepresentationFormParameter
 {
     /// <summary>The default value for this Template Parameter.</summary>
@@ -692,6 +718,7 @@ public partial class V1beta1APIOperationSpecForProviderResponseRepresentationFor
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationSpecForProviderResponseRepresentation
 {
     /// <summary>The Content Type of this representation, such as application/json.</summary>
@@ -715,6 +742,7 @@ public partial class V1beta1APIOperationSpecForProviderResponseRepresentation
     public string? TypeName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationSpecForProviderResponse
 {
     /// <summary>A description of the HTTP Response, which may include HTML tags.</summary>
@@ -734,6 +762,7 @@ public partial class V1beta1APIOperationSpecForProviderResponse
     public double? StatusCode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationSpecForProviderTemplateParameterExample
 {
     /// <summary>A description of this Template Parameter.</summary>
@@ -757,6 +786,7 @@ public partial class V1beta1APIOperationSpecForProviderTemplateParameterExample
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationSpecForProviderTemplateParameter
 {
     /// <summary>The default value for this Template Parameter.</summary>
@@ -796,6 +826,7 @@ public partial class V1beta1APIOperationSpecForProviderTemplateParameter
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationSpecForProvider
 {
     /// <summary>The Name of the API Management Service where the API exists. Changing this forces a new resource to be created.</summary>
@@ -863,6 +894,7 @@ public partial class V1beta1APIOperationSpecForProvider
     public string? UrlTemplate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationSpecInitProviderRequestHeaderExample
 {
     /// <summary>A description of this Template Parameter.</summary>
@@ -886,6 +918,7 @@ public partial class V1beta1APIOperationSpecInitProviderRequestHeaderExample
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationSpecInitProviderRequestHeader
 {
     /// <summary>The default value for this Template Parameter.</summary>
@@ -925,6 +958,7 @@ public partial class V1beta1APIOperationSpecInitProviderRequestHeader
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationSpecInitProviderRequestQueryParameterExample
 {
     /// <summary>A description of this Template Parameter.</summary>
@@ -948,6 +982,7 @@ public partial class V1beta1APIOperationSpecInitProviderRequestQueryParameterExa
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationSpecInitProviderRequestQueryParameter
 {
     /// <summary>The default value for this Template Parameter.</summary>
@@ -987,6 +1022,7 @@ public partial class V1beta1APIOperationSpecInitProviderRequestQueryParameter
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationSpecInitProviderRequestRepresentationExample
 {
     /// <summary>A description of this Template Parameter.</summary>
@@ -1010,6 +1046,7 @@ public partial class V1beta1APIOperationSpecInitProviderRequestRepresentationExa
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationSpecInitProviderRequestRepresentationFormParameterExample
 {
     /// <summary>A description of this Template Parameter.</summary>
@@ -1033,6 +1070,7 @@ public partial class V1beta1APIOperationSpecInitProviderRequestRepresentationFor
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationSpecInitProviderRequestRepresentationFormParameter
 {
     /// <summary>The default value for this Template Parameter.</summary>
@@ -1072,6 +1110,7 @@ public partial class V1beta1APIOperationSpecInitProviderRequestRepresentationFor
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationSpecInitProviderRequestRepresentation
 {
     /// <summary>The Content Type of this representation, such as application/json.</summary>
@@ -1095,6 +1134,7 @@ public partial class V1beta1APIOperationSpecInitProviderRequestRepresentation
     public string? TypeName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationSpecInitProviderRequest
 {
     /// <summary>A description of the HTTP Request, which may include HTML tags.</summary>
@@ -1114,6 +1154,7 @@ public partial class V1beta1APIOperationSpecInitProviderRequest
     public IList<V1beta1APIOperationSpecInitProviderRequestRepresentation>? Representation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationSpecInitProviderResponseHeaderExample
 {
     /// <summary>A description of this Template Parameter.</summary>
@@ -1137,6 +1178,7 @@ public partial class V1beta1APIOperationSpecInitProviderResponseHeaderExample
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationSpecInitProviderResponseHeader
 {
     /// <summary>The default value for this Template Parameter.</summary>
@@ -1176,6 +1218,7 @@ public partial class V1beta1APIOperationSpecInitProviderResponseHeader
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationSpecInitProviderResponseRepresentationExample
 {
     /// <summary>A description of this Template Parameter.</summary>
@@ -1199,6 +1242,7 @@ public partial class V1beta1APIOperationSpecInitProviderResponseRepresentationEx
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationSpecInitProviderResponseRepresentationFormParameterExample
 {
     /// <summary>A description of this Template Parameter.</summary>
@@ -1222,6 +1266,7 @@ public partial class V1beta1APIOperationSpecInitProviderResponseRepresentationFo
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationSpecInitProviderResponseRepresentationFormParameter
 {
     /// <summary>The default value for this Template Parameter.</summary>
@@ -1261,6 +1306,7 @@ public partial class V1beta1APIOperationSpecInitProviderResponseRepresentationFo
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationSpecInitProviderResponseRepresentation
 {
     /// <summary>The Content Type of this representation, such as application/json.</summary>
@@ -1284,6 +1330,7 @@ public partial class V1beta1APIOperationSpecInitProviderResponseRepresentation
     public string? TypeName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationSpecInitProviderResponse
 {
     /// <summary>A description of the HTTP Response, which may include HTML tags.</summary>
@@ -1303,6 +1350,7 @@ public partial class V1beta1APIOperationSpecInitProviderResponse
     public double? StatusCode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationSpecInitProviderTemplateParameterExample
 {
     /// <summary>A description of this Template Parameter.</summary>
@@ -1326,6 +1374,7 @@ public partial class V1beta1APIOperationSpecInitProviderTemplateParameterExample
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationSpecInitProviderTemplateParameter
 {
     /// <summary>The default value for this Template Parameter.</summary>
@@ -1365,6 +1414,7 @@ public partial class V1beta1APIOperationSpecInitProviderTemplateParameter
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1APIOperationSpecInitProvider
 {
     /// <summary>A description for this API Operation, which may include HTML formatting tags.</summary>
@@ -1438,6 +1488,7 @@ public enum V1beta1APIOperationSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1APIOperationSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1451,6 +1502,7 @@ public partial class V1beta1APIOperationSpecProviderConfigRefPolicy
     public V1beta1APIOperationSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1APIOperationSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1482,6 +1534,7 @@ public enum V1beta1APIOperationSpecPublishConnectionDetailsToConfigRefPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1APIOperationSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1495,6 +1548,7 @@ public partial class V1beta1APIOperationSpecPublishConnectionDetailsToConfigRefP
     public V1beta1APIOperationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1APIOperationSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1506,6 +1560,7 @@ public partial class V1beta1APIOperationSpecPublishConnectionDetailsToConfigRef
     public V1beta1APIOperationSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1APIOperationSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1521,6 +1576,7 @@ public partial class V1beta1APIOperationSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1APIOperationSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1536,6 +1592,7 @@ public partial class V1beta1APIOperationSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1APIOperationSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1547,6 +1604,7 @@ public partial class V1beta1APIOperationSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>APIOperationSpec defines the desired state of APIOperation</summary>
 public partial class V1beta1APIOperationSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1579,6 +1637,7 @@ public partial class V1beta1APIOperationSpec
     public V1beta1APIOperationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationStatusAtProviderRequestHeaderExample
 {
     /// <summary>A description of this Template Parameter.</summary>
@@ -1602,6 +1661,7 @@ public partial class V1beta1APIOperationStatusAtProviderRequestHeaderExample
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationStatusAtProviderRequestHeader
 {
     /// <summary>The default value for this Template Parameter.</summary>
@@ -1641,6 +1701,7 @@ public partial class V1beta1APIOperationStatusAtProviderRequestHeader
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationStatusAtProviderRequestQueryParameterExample
 {
     /// <summary>A description of this Template Parameter.</summary>
@@ -1664,6 +1725,7 @@ public partial class V1beta1APIOperationStatusAtProviderRequestQueryParameterExa
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationStatusAtProviderRequestQueryParameter
 {
     /// <summary>The default value for this Template Parameter.</summary>
@@ -1703,6 +1765,7 @@ public partial class V1beta1APIOperationStatusAtProviderRequestQueryParameter
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationStatusAtProviderRequestRepresentationExample
 {
     /// <summary>A description of this Template Parameter.</summary>
@@ -1726,6 +1789,7 @@ public partial class V1beta1APIOperationStatusAtProviderRequestRepresentationExa
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationStatusAtProviderRequestRepresentationFormParameterExample
 {
     /// <summary>A description of this Template Parameter.</summary>
@@ -1749,6 +1813,7 @@ public partial class V1beta1APIOperationStatusAtProviderRequestRepresentationFor
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationStatusAtProviderRequestRepresentationFormParameter
 {
     /// <summary>The default value for this Template Parameter.</summary>
@@ -1788,6 +1853,7 @@ public partial class V1beta1APIOperationStatusAtProviderRequestRepresentationFor
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationStatusAtProviderRequestRepresentation
 {
     /// <summary>The Content Type of this representation, such as application/json.</summary>
@@ -1811,6 +1877,7 @@ public partial class V1beta1APIOperationStatusAtProviderRequestRepresentation
     public string? TypeName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationStatusAtProviderRequest
 {
     /// <summary>A description of the HTTP Request, which may include HTML tags.</summary>
@@ -1830,6 +1897,7 @@ public partial class V1beta1APIOperationStatusAtProviderRequest
     public IList<V1beta1APIOperationStatusAtProviderRequestRepresentation>? Representation { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationStatusAtProviderResponseHeaderExample
 {
     /// <summary>A description of this Template Parameter.</summary>
@@ -1853,6 +1921,7 @@ public partial class V1beta1APIOperationStatusAtProviderResponseHeaderExample
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationStatusAtProviderResponseHeader
 {
     /// <summary>The default value for this Template Parameter.</summary>
@@ -1892,6 +1961,7 @@ public partial class V1beta1APIOperationStatusAtProviderResponseHeader
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationStatusAtProviderResponseRepresentationExample
 {
     /// <summary>A description of this Template Parameter.</summary>
@@ -1915,6 +1985,7 @@ public partial class V1beta1APIOperationStatusAtProviderResponseRepresentationEx
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationStatusAtProviderResponseRepresentationFormParameterExample
 {
     /// <summary>A description of this Template Parameter.</summary>
@@ -1938,6 +2009,7 @@ public partial class V1beta1APIOperationStatusAtProviderResponseRepresentationFo
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationStatusAtProviderResponseRepresentationFormParameter
 {
     /// <summary>The default value for this Template Parameter.</summary>
@@ -1977,6 +2049,7 @@ public partial class V1beta1APIOperationStatusAtProviderResponseRepresentationFo
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationStatusAtProviderResponseRepresentation
 {
     /// <summary>The Content Type of this representation, such as application/json.</summary>
@@ -2000,6 +2073,7 @@ public partial class V1beta1APIOperationStatusAtProviderResponseRepresentation
     public string? TypeName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationStatusAtProviderResponse
 {
     /// <summary>A description of the HTTP Response, which may include HTML tags.</summary>
@@ -2019,6 +2093,7 @@ public partial class V1beta1APIOperationStatusAtProviderResponse
     public double? StatusCode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationStatusAtProviderTemplateParameterExample
 {
     /// <summary>A description of this Template Parameter.</summary>
@@ -2042,6 +2117,7 @@ public partial class V1beta1APIOperationStatusAtProviderTemplateParameterExample
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationStatusAtProviderTemplateParameter
 {
     /// <summary>The default value for this Template Parameter.</summary>
@@ -2081,6 +2157,7 @@ public partial class V1beta1APIOperationStatusAtProviderTemplateParameter
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1APIOperationStatusAtProvider
 {
     /// <summary>The Name of the API Management Service where the API exists. Changing this forces a new resource to be created.</summary>
@@ -2128,6 +2205,7 @@ public partial class V1beta1APIOperationStatusAtProvider
     public string? UrlTemplate { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1APIOperationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2155,6 +2233,7 @@ public partial class V1beta1APIOperationStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>APIOperationStatus defines the observed state of APIOperation.</summary>
 public partial class V1beta1APIOperationStatus
 {
     /// <summary></summary>
@@ -2171,6 +2250,7 @@ public partial class V1beta1APIOperationStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>APIOperation is the Schema for the APIOperations API. Manages an API Operation within an API Management Service.</summary>
 public partial class V1beta1APIOperation : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1APIOperationSpec>, IStatus<V1beta1APIOperationStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -18,6 +18,7 @@ public enum V1beta1DatabaseInstanceSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecForProviderClone
 {
     /// <summary>The name of the allocated ip range for the private ip CloudSQL instance. For example: "google-managed-services-default". If set, the cloned instance ip will be created in the allocated range. The range name must comply with RFC 1035. Specifically, the name must be 1-63 characters long and match the regular expression a-z?.</summary>
@@ -41,6 +42,7 @@ public partial class V1beta1DatabaseInstanceSpecForProviderClone
     public string? SourceInstanceName { get; set; }
 }
 
+/// <summary>Password for the replication connection.</summary>
 public partial class V1beta1DatabaseInstanceSpecForProviderReplicaConfigurationPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -56,6 +58,7 @@ public partial class V1beta1DatabaseInstanceSpecForProviderReplicaConfigurationP
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecForProviderReplicaConfiguration
 {
     /// <summary>PEM representation of the trusted CA's x509 certificate.</summary>
@@ -103,6 +106,7 @@ public partial class V1beta1DatabaseInstanceSpecForProviderReplicaConfiguration
     public bool? VerifyServerCertificate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecForProviderRestoreBackupContext
 {
     /// <summary>The ID of the backup run to restore from.</summary>
@@ -118,6 +122,7 @@ public partial class V1beta1DatabaseInstanceSpecForProviderRestoreBackupContext
     public string? Project { get; set; }
 }
 
+/// <summary>Initial root password. Can be updated. Required for MS SQL Server.</summary>
 public partial class V1beta1DatabaseInstanceSpecForProviderRootPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -133,6 +138,7 @@ public partial class V1beta1DatabaseInstanceSpecForProviderRootPasswordSecretRef
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsActiveDirectoryConfig
 {
     /// <summary>The domain name for the active directory (e.g., mydomain.com). Can only be used with SQL Server.</summary>
@@ -140,6 +146,7 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsActiveDirecto
     public string? Domain { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsAdvancedMachineFeatures
 {
     /// <summary>The number of threads per core. The value of this flag can be 1 or 2. To disable SMT, set this flag to 1. Only available in Cloud SQL for SQL Server instances. See smt for more details.</summary>
@@ -147,6 +154,7 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsAdvancedMachi
     public double? ThreadsPerCore { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsBackupConfigurationBackupRetentionSettings
 {
     /// <summary>Depending on the value of retention_unit, this is used to determine if a backup needs to be deleted. If retention_unit is 'COUNT', we will retain this many backups.</summary>
@@ -158,6 +166,7 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsBackupConfigu
     public string? RetentionUnit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsBackupConfiguration
 {
     /// <summary>Backup retention settings. The configuration is detailed below.</summary>
@@ -189,6 +198,7 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsBackupConfigu
     public double? TransactionLogRetentionDays { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsDataCacheConfig
 {
     /// <summary>Whether data cache is enabled for the instance. Defaults to false. Can be used with MYSQL and PostgreSQL only.</summary>
@@ -196,6 +206,7 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsDataCacheConf
     public bool? DataCacheEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsDatabaseFlags
 {
     /// <summary>A name for this whitelist entry.</summary>
@@ -207,6 +218,7 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsDatabaseFlags
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsDenyMaintenancePeriod
 {
     /// <summary>"deny maintenance period" end date. If the year of the end date is empty, the year of the start date also must be empty. In this case, it means the no maintenance interval recurs every year. The date is in format yyyy-mm-dd i.e., 2020-11-01, or mm-dd, i.e., 11-01</summary>
@@ -222,6 +234,7 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsDenyMaintenan
     public string? Time { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsInsightsConfig
 {
     /// <summary>True if Query Insights feature is enabled.</summary>
@@ -245,6 +258,7 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsInsightsConfi
     public bool? RecordClientAddress { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurationAuthorizedNetworks
 {
     /// <summary>The RFC 3339 formatted date time string indicating when this whitelist expires.</summary>
@@ -280,6 +294,7 @@ public enum V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurationPrivate
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurationPrivateNetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -293,6 +308,7 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurati
     public V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurationPrivateNetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate privateNetwork.</summary>
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurationPrivateNetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -324,6 +340,7 @@ public enum V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurationPrivate
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurationPrivateNetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -337,6 +354,7 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurati
     public V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurationPrivateNetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate privateNetwork.</summary>
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurationPrivateNetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -352,6 +370,7 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurati
     public V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurationPrivateNetworkSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurationPscConfig
 {
     /// <summary>List of consumer projects that are allow-listed for PSC connections to this instance. This instance can be connected to with PSC from any network in these projects. Each consumer project in this list may be represented by a project number (numeric) or by a project id (alphanumeric).</summary>
@@ -363,6 +382,7 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurati
     public bool? PscEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsIpConfiguration
 {
     /// <summary>The name of the allocated ip range for the private ip CloudSQL instance. For example: "google-managed-services-default". If set, the instance ip will be created in the allocated range. The range name must comply with RFC 1035. Specifically, the name must be 1-63 characters long and match the regular expression a-z?.</summary>
@@ -406,6 +426,7 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurati
     public string? SslMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsLocationPreference
 {
     /// <summary>A GAE application whose zone to remain in. Must be in the same region as this instance.</summary>
@@ -421,6 +442,7 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsLocationPrefe
     public string? Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsMaintenanceWindow
 {
     /// <summary>Day of week (1-7), starting on Monday</summary>
@@ -436,6 +458,7 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsMaintenanceWi
     public string? UpdateTrack { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsPasswordValidationPolicy
 {
     /// <summary>Checks if the password is a combination of lowercase, uppercase, numeric, and non-alphanumeric characters.</summary>
@@ -463,6 +486,7 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsPasswordValid
     public double? ReuseInterval { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsSqlServerAuditConfig
 {
     /// <summary>The name of the destination bucket (e.g., gs://mybucket).</summary>
@@ -478,6 +502,7 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsSqlServerAudi
     public string? UploadInterval { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecForProviderSettings
 {
     /// <summary>This specifies when the instance should be active. Can be either ALWAYS, NEVER or ON_DEMAND.</summary>
@@ -589,6 +614,7 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettings
     public IDictionary<string, string>? UserLabels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecForProvider
 {
     /// <summary>The context needed to create this instance as a clone of another instance. The configuration is detailed below.</summary>
@@ -640,6 +666,7 @@ public partial class V1beta1DatabaseInstanceSpecForProvider
     public IList<V1beta1DatabaseInstanceSpecForProviderSettings>? Settings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecInitProviderClone
 {
     /// <summary>The name of the allocated ip range for the private ip CloudSQL instance. For example: "google-managed-services-default". If set, the cloned instance ip will be created in the allocated range. The range name must comply with RFC 1035. Specifically, the name must be 1-63 characters long and match the regular expression a-z?.</summary>
@@ -663,6 +690,7 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderClone
     public string? SourceInstanceName { get; set; }
 }
 
+/// <summary>Password for the replication connection.</summary>
 public partial class V1beta1DatabaseInstanceSpecInitProviderReplicaConfigurationPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -678,6 +706,7 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderReplicaConfiguration
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecInitProviderReplicaConfiguration
 {
     /// <summary>PEM representation of the trusted CA's x509 certificate.</summary>
@@ -725,6 +754,7 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderReplicaConfiguration
     public bool? VerifyServerCertificate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecInitProviderRestoreBackupContext
 {
     /// <summary>The ID of the backup run to restore from.</summary>
@@ -740,6 +770,7 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderRestoreBackupContext
     public string? Project { get; set; }
 }
 
+/// <summary>Initial root password. Can be updated. Required for MS SQL Server.</summary>
 public partial class V1beta1DatabaseInstanceSpecInitProviderRootPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -755,6 +786,7 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderRootPasswordSecretRe
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsActiveDirectoryConfig
 {
     /// <summary>The domain name for the active directory (e.g., mydomain.com). Can only be used with SQL Server.</summary>
@@ -762,6 +794,7 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsActiveDirect
     public string? Domain { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsAdvancedMachineFeatures
 {
     /// <summary>The number of threads per core. The value of this flag can be 1 or 2. To disable SMT, set this flag to 1. Only available in Cloud SQL for SQL Server instances. See smt for more details.</summary>
@@ -769,6 +802,7 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsAdvancedMach
     public double? ThreadsPerCore { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsBackupConfigurationBackupRetentionSettings
 {
     /// <summary>Depending on the value of retention_unit, this is used to determine if a backup needs to be deleted. If retention_unit is 'COUNT', we will retain this many backups.</summary>
@@ -780,6 +814,7 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsBackupConfig
     public string? RetentionUnit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsBackupConfiguration
 {
     /// <summary>Backup retention settings. The configuration is detailed below.</summary>
@@ -811,6 +846,7 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsBackupConfig
     public double? TransactionLogRetentionDays { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsDataCacheConfig
 {
     /// <summary>Whether data cache is enabled for the instance. Defaults to false. Can be used with MYSQL and PostgreSQL only.</summary>
@@ -818,6 +854,7 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsDataCacheCon
     public bool? DataCacheEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsDatabaseFlags
 {
     /// <summary>A name for this whitelist entry.</summary>
@@ -829,6 +866,7 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsDatabaseFlag
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsDenyMaintenancePeriod
 {
     /// <summary>"deny maintenance period" end date. If the year of the end date is empty, the year of the start date also must be empty. In this case, it means the no maintenance interval recurs every year. The date is in format yyyy-mm-dd i.e., 2020-11-01, or mm-dd, i.e., 11-01</summary>
@@ -844,6 +882,7 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsDenyMaintena
     public string? Time { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsInsightsConfig
 {
     /// <summary>True if Query Insights feature is enabled.</summary>
@@ -867,6 +906,7 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsInsightsConf
     public bool? RecordClientAddress { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurationAuthorizedNetworks
 {
     /// <summary>The RFC 3339 formatted date time string indicating when this whitelist expires.</summary>
@@ -902,6 +942,7 @@ public enum V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurationPrivat
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurationPrivateNetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -915,6 +956,7 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurat
     public V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurationPrivateNetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate privateNetwork.</summary>
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurationPrivateNetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -946,6 +988,7 @@ public enum V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurationPrivat
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurationPrivateNetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -959,6 +1002,7 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurat
     public V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurationPrivateNetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate privateNetwork.</summary>
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurationPrivateNetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -974,6 +1018,7 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurat
     public V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurationPrivateNetworkSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurationPscConfig
 {
     /// <summary>List of consumer projects that are allow-listed for PSC connections to this instance. This instance can be connected to with PSC from any network in these projects. Each consumer project in this list may be represented by a project number (numeric) or by a project id (alphanumeric).</summary>
@@ -985,6 +1030,7 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurat
     public bool? PscEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfiguration
 {
     /// <summary>The name of the allocated ip range for the private ip CloudSQL instance. For example: "google-managed-services-default". If set, the instance ip will be created in the allocated range. The range name must comply with RFC 1035. Specifically, the name must be 1-63 characters long and match the regular expression a-z?.</summary>
@@ -1028,6 +1074,7 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurat
     public string? SslMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsLocationPreference
 {
     /// <summary>A GAE application whose zone to remain in. Must be in the same region as this instance.</summary>
@@ -1043,6 +1090,7 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsLocationPref
     public string? Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsMaintenanceWindow
 {
     /// <summary>Day of week (1-7), starting on Monday</summary>
@@ -1058,6 +1106,7 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsMaintenanceW
     public string? UpdateTrack { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsPasswordValidationPolicy
 {
     /// <summary>Checks if the password is a combination of lowercase, uppercase, numeric, and non-alphanumeric characters.</summary>
@@ -1085,6 +1134,7 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsPasswordVali
     public double? ReuseInterval { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsSqlServerAuditConfig
 {
     /// <summary>The name of the destination bucket (e.g., gs://mybucket).</summary>
@@ -1100,6 +1150,7 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsSqlServerAud
     public string? UploadInterval { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettings
 {
     /// <summary>This specifies when the instance should be active. Can be either ALWAYS, NEVER or ON_DEMAND.</summary>
@@ -1211,6 +1262,7 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettings
     public IDictionary<string, string>? UserLabels { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1DatabaseInstanceSpecInitProvider
 {
     /// <summary>The context needed to create this instance as a clone of another instance. The configuration is detailed below.</summary>
@@ -1304,6 +1356,7 @@ public enum V1beta1DatabaseInstanceSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DatabaseInstanceSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1317,6 +1370,7 @@ public partial class V1beta1DatabaseInstanceSpecProviderConfigRefPolicy
     public V1beta1DatabaseInstanceSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1DatabaseInstanceSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1348,6 +1402,7 @@ public enum V1beta1DatabaseInstanceSpecPublishConnectionDetailsToConfigRefPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1DatabaseInstanceSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1361,6 +1416,7 @@ public partial class V1beta1DatabaseInstanceSpecPublishConnectionDetailsToConfig
     public V1beta1DatabaseInstanceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1DatabaseInstanceSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1372,6 +1428,7 @@ public partial class V1beta1DatabaseInstanceSpecPublishConnectionDetailsToConfig
     public V1beta1DatabaseInstanceSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1DatabaseInstanceSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1387,6 +1444,7 @@ public partial class V1beta1DatabaseInstanceSpecPublishConnectionDetailsToMetada
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1DatabaseInstanceSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1402,6 +1460,7 @@ public partial class V1beta1DatabaseInstanceSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1DatabaseInstanceSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1413,6 +1472,7 @@ public partial class V1beta1DatabaseInstanceSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>DatabaseInstanceSpec defines the desired state of DatabaseInstance</summary>
 public partial class V1beta1DatabaseInstanceSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1445,6 +1505,7 @@ public partial class V1beta1DatabaseInstanceSpec
     public V1beta1DatabaseInstanceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceStatusAtProviderClone
 {
     /// <summary>The name of the allocated ip range for the private ip CloudSQL instance. For example: "google-managed-services-default". If set, the cloned instance ip will be created in the allocated range. The range name must comply with RFC 1035. Specifically, the name must be 1-63 characters long and match the regular expression a-z?.</summary>
@@ -1468,6 +1529,7 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderClone
     public string? SourceInstanceName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceStatusAtProviderIpAddress
 {
     /// <summary>The IPv4 address assigned.</summary>
@@ -1483,6 +1545,7 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderIpAddress
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceStatusAtProviderReplicaConfiguration
 {
     /// <summary>PEM representation of the trusted CA's x509 certificate.</summary>
@@ -1526,6 +1589,7 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderReplicaConfiguration
     public bool? VerifyServerCertificate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceStatusAtProviderRestoreBackupContext
 {
     /// <summary>The ID of the backup run to restore from.</summary>
@@ -1541,6 +1605,7 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderRestoreBackupContext
     public string? Project { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsActiveDirectoryConfig
 {
     /// <summary>The domain name for the active directory (e.g., mydomain.com). Can only be used with SQL Server.</summary>
@@ -1548,6 +1613,7 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsActiveDirect
     public string? Domain { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsAdvancedMachineFeatures
 {
     /// <summary>The number of threads per core. The value of this flag can be 1 or 2. To disable SMT, set this flag to 1. Only available in Cloud SQL for SQL Server instances. See smt for more details.</summary>
@@ -1555,6 +1621,7 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsAdvancedMach
     public double? ThreadsPerCore { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsBackupConfigurationBackupRetentionSettings
 {
     /// <summary>Depending on the value of retention_unit, this is used to determine if a backup needs to be deleted. If retention_unit is 'COUNT', we will retain this many backups.</summary>
@@ -1566,6 +1633,7 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsBackupConfig
     public string? RetentionUnit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsBackupConfiguration
 {
     /// <summary>Backup retention settings. The configuration is detailed below.</summary>
@@ -1597,6 +1665,7 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsBackupConfig
     public double? TransactionLogRetentionDays { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsDataCacheConfig
 {
     /// <summary>Whether data cache is enabled for the instance. Defaults to false. Can be used with MYSQL and PostgreSQL only.</summary>
@@ -1604,6 +1673,7 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsDataCacheCon
     public bool? DataCacheEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsDatabaseFlags
 {
     /// <summary>A name for this whitelist entry.</summary>
@@ -1615,6 +1685,7 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsDatabaseFlag
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsDenyMaintenancePeriod
 {
     /// <summary>"deny maintenance period" end date. If the year of the end date is empty, the year of the start date also must be empty. In this case, it means the no maintenance interval recurs every year. The date is in format yyyy-mm-dd i.e., 2020-11-01, or mm-dd, i.e., 11-01</summary>
@@ -1630,6 +1701,7 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsDenyMaintena
     public string? Time { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsInsightsConfig
 {
     /// <summary>True if Query Insights feature is enabled.</summary>
@@ -1653,6 +1725,7 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsInsightsConf
     public bool? RecordClientAddress { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsIpConfigurationAuthorizedNetworks
 {
     /// <summary>The RFC 3339 formatted date time string indicating when this whitelist expires.</summary>
@@ -1668,6 +1741,7 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsIpConfigurat
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsIpConfigurationPscConfig
 {
     /// <summary>List of consumer projects that are allow-listed for PSC connections to this instance. This instance can be connected to with PSC from any network in these projects. Each consumer project in this list may be represented by a project number (numeric) or by a project id (alphanumeric).</summary>
@@ -1679,6 +1753,7 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsIpConfigurat
     public bool? PscEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsIpConfiguration
 {
     /// <summary>The name of the allocated ip range for the private ip CloudSQL instance. For example: "google-managed-services-default". If set, the instance ip will be created in the allocated range. The range name must comply with RFC 1035. Specifically, the name must be 1-63 characters long and match the regular expression a-z?.</summary>
@@ -1714,6 +1789,7 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsIpConfigurat
     public string? SslMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsLocationPreference
 {
     /// <summary>A GAE application whose zone to remain in. Must be in the same region as this instance.</summary>
@@ -1729,6 +1805,7 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsLocationPref
     public string? Zone { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsMaintenanceWindow
 {
     /// <summary>Day of week (1-7), starting on Monday</summary>
@@ -1744,6 +1821,7 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsMaintenanceW
     public string? UpdateTrack { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsPasswordValidationPolicy
 {
     /// <summary>Checks if the password is a combination of lowercase, uppercase, numeric, and non-alphanumeric characters.</summary>
@@ -1771,6 +1849,7 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsPasswordVali
     public double? ReuseInterval { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsSqlServerAuditConfig
 {
     /// <summary>The name of the destination bucket (e.g., gs://mybucket).</summary>
@@ -1786,6 +1865,7 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsSqlServerAud
     public string? UploadInterval { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceStatusAtProviderSettings
 {
     /// <summary>This specifies when the instance should be active. Can be either ALWAYS, NEVER or ON_DEMAND.</summary>
@@ -1901,6 +1981,7 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettings
     public double? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1DatabaseInstanceStatusAtProvider
 {
     /// <summary>The list of all maintenance versions applicable on the instance.</summary>
@@ -1996,6 +2077,7 @@ public partial class V1beta1DatabaseInstanceStatusAtProvider
     public IList<V1beta1DatabaseInstanceStatusAtProviderSettings>? Settings { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1DatabaseInstanceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -2023,6 +2105,7 @@ public partial class V1beta1DatabaseInstanceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>DatabaseInstanceStatus defines the observed state of DatabaseInstance.</summary>
 public partial class V1beta1DatabaseInstanceStatus
 {
     /// <summary></summary>
@@ -2039,6 +2122,7 @@ public partial class V1beta1DatabaseInstanceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>DatabaseInstance is the Schema for the DatabaseInstances API. Creates a new SQL database instance in Google Cloud SQL.</summary>
 public partial class V1beta1DatabaseInstance : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DatabaseInstanceSpec>, IStatus<V1beta1DatabaseInstanceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

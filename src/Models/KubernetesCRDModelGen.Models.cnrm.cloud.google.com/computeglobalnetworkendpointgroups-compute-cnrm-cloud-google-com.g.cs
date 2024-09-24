@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1ComputeGlobalNetworkEndpointGroupSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1ComputeGlobalNetworkEndpointGroupSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputeGlobalNetworkEndpointGroupSpec
 {
     /// <summary>Immutable. The default port used if the port number is not specified in the network endpoint.</summary>
@@ -46,6 +48,7 @@ public partial class V1alpha1ComputeGlobalNetworkEndpointGroupSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputeGlobalNetworkEndpointGroupStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -69,6 +72,7 @@ public partial class V1alpha1ComputeGlobalNetworkEndpointGroupStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1ComputeGlobalNetworkEndpointGroupStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -85,6 +89,7 @@ public partial class V1alpha1ComputeGlobalNetworkEndpointGroupStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1ComputeGlobalNetworkEndpointGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ComputeGlobalNetworkEndpointGroupSpec>, IStatus<V1alpha1ComputeGlobalNetworkEndpointGroupStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

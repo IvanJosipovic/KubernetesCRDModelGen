@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.servicedirectory.cnrm.cloud.google.com;
+/// <summary>The ServiceDirectoryNamespace that this service belongs to.</summary>
 public partial class V1beta1ServiceDirectoryServiceSpecNamespaceRef
 {
     /// <summary>Allowed value: The `name` field of a `ServiceDirectoryNamespace` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1ServiceDirectoryServiceSpecNamespaceRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceDirectoryServiceSpec
 {
     /// <summary>The ServiceDirectoryNamespace that this service belongs to.</summary>
@@ -34,6 +36,7 @@ public partial class V1beta1ServiceDirectoryServiceSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceDirectoryServiceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -57,6 +60,7 @@ public partial class V1beta1ServiceDirectoryServiceStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ServiceDirectoryServiceStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -73,6 +77,7 @@ public partial class V1beta1ServiceDirectoryServiceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ServiceDirectoryService : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ServiceDirectoryServiceSpec>, IStatus<V1beta1ServiceDirectoryServiceStatus>
 {
     public const string KubeApiVersion = "v1beta1";

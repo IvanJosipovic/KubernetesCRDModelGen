@@ -18,6 +18,7 @@ public enum V1beta1BudgetSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSpecForProviderAutoAdjustDataHistoricalOptions
 {
     /// <summary>The number of budget periods included in the moving-average calculation that determines your auto-adjusted budget amount.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1BudgetSpecForProviderAutoAdjustDataHistoricalOptions
     public double? BudgetAdjustmentPeriod { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSpecForProviderAutoAdjustData
 {
     /// <summary>The string that defines whether your budget auto-adjusts based on historical or forecasted data. Valid values: FORECAST,HISTORICAL</summary>
@@ -36,6 +38,7 @@ public partial class V1beta1BudgetSpecForProviderAutoAdjustData
     public IList<V1beta1BudgetSpecForProviderAutoAdjustDataHistoricalOptions>? HistoricalOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSpecForProviderCostFilter
 {
     /// <summary>The name of a budget. Unique within accounts.</summary>
@@ -47,6 +50,7 @@ public partial class V1beta1BudgetSpecForProviderCostFilter
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSpecForProviderCostTypes
 {
     /// <summary>A boolean value whether to include credits in the cost budget. Defaults to true</summary>
@@ -94,6 +98,7 @@ public partial class V1beta1BudgetSpecForProviderCostTypes
     public bool? UseBlended { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSpecForProviderNotification
 {
     /// <summary>Comparison operator to use to evaluate the condition. Can be LESS_THAN, EQUAL_TO or GREATER_THAN.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1BudgetSpecForProviderNotification
     public string? ThresholdType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSpecForProviderPlannedLimit
 {
     /// <summary>The amount of cost or usage being measured for a budget.</summary>
@@ -136,6 +142,7 @@ public partial class V1beta1BudgetSpecForProviderPlannedLimit
     public string? Unit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSpecForProvider
 {
     /// <summary>The ID of the target account for budget. Will use current user's account_id by default if omitted.</summary>
@@ -195,6 +202,7 @@ public partial class V1beta1BudgetSpecForProvider
     public string? TimeUnit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSpecInitProviderAutoAdjustDataHistoricalOptions
 {
     /// <summary>The number of budget periods included in the moving-average calculation that determines your auto-adjusted budget amount.</summary>
@@ -202,6 +210,7 @@ public partial class V1beta1BudgetSpecInitProviderAutoAdjustDataHistoricalOption
     public double? BudgetAdjustmentPeriod { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSpecInitProviderAutoAdjustData
 {
     /// <summary>The string that defines whether your budget auto-adjusts based on historical or forecasted data. Valid values: FORECAST,HISTORICAL</summary>
@@ -213,6 +222,7 @@ public partial class V1beta1BudgetSpecInitProviderAutoAdjustData
     public IList<V1beta1BudgetSpecInitProviderAutoAdjustDataHistoricalOptions>? HistoricalOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSpecInitProviderCostFilter
 {
     /// <summary>The name of a budget. Unique within accounts.</summary>
@@ -224,6 +234,7 @@ public partial class V1beta1BudgetSpecInitProviderCostFilter
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSpecInitProviderCostTypes
 {
     /// <summary>A boolean value whether to include credits in the cost budget. Defaults to true</summary>
@@ -271,6 +282,7 @@ public partial class V1beta1BudgetSpecInitProviderCostTypes
     public bool? UseBlended { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSpecInitProviderNotification
 {
     /// <summary>Comparison operator to use to evaluate the condition. Can be LESS_THAN, EQUAL_TO or GREATER_THAN.</summary>
@@ -298,6 +310,7 @@ public partial class V1beta1BudgetSpecInitProviderNotification
     public string? ThresholdType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetSpecInitProviderPlannedLimit
 {
     /// <summary>The amount of cost or usage being measured for a budget.</summary>
@@ -313,6 +326,7 @@ public partial class V1beta1BudgetSpecInitProviderPlannedLimit
     public string? Unit { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1BudgetSpecInitProvider
 {
     /// <summary>The ID of the target account for budget. Will use current user's account_id by default if omitted.</summary>
@@ -410,6 +424,7 @@ public enum V1beta1BudgetSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BudgetSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -423,6 +438,7 @@ public partial class V1beta1BudgetSpecProviderConfigRefPolicy
     public V1beta1BudgetSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1BudgetSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -454,6 +470,7 @@ public enum V1beta1BudgetSpecPublishConnectionDetailsToConfigRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1BudgetSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -467,6 +484,7 @@ public partial class V1beta1BudgetSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1BudgetSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1BudgetSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -478,6 +496,7 @@ public partial class V1beta1BudgetSpecPublishConnectionDetailsToConfigRef
     public V1beta1BudgetSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1BudgetSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -493,6 +512,7 @@ public partial class V1beta1BudgetSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1BudgetSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -508,6 +528,7 @@ public partial class V1beta1BudgetSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1BudgetSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -519,6 +540,7 @@ public partial class V1beta1BudgetSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>BudgetSpec defines the desired state of Budget</summary>
 public partial class V1beta1BudgetSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -551,6 +573,7 @@ public partial class V1beta1BudgetSpec
     public V1beta1BudgetSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetStatusAtProviderAutoAdjustDataHistoricalOptions
 {
     /// <summary>The number of budget periods included in the moving-average calculation that determines your auto-adjusted budget amount.</summary>
@@ -562,6 +585,7 @@ public partial class V1beta1BudgetStatusAtProviderAutoAdjustDataHistoricalOption
     public double? LookbackAvailablePeriods { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetStatusAtProviderAutoAdjustData
 {
     /// <summary>The string that defines whether your budget auto-adjusts based on historical or forecasted data. Valid values: FORECAST,HISTORICAL</summary>
@@ -577,6 +601,7 @@ public partial class V1beta1BudgetStatusAtProviderAutoAdjustData
     public string? LastAutoAdjustTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetStatusAtProviderCostFilter
 {
     /// <summary>The name of a budget. Unique within accounts.</summary>
@@ -588,6 +613,7 @@ public partial class V1beta1BudgetStatusAtProviderCostFilter
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetStatusAtProviderCostTypes
 {
     /// <summary>A boolean value whether to include credits in the cost budget. Defaults to true</summary>
@@ -635,6 +661,7 @@ public partial class V1beta1BudgetStatusAtProviderCostTypes
     public bool? UseBlended { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetStatusAtProviderNotification
 {
     /// <summary>Comparison operator to use to evaluate the condition. Can be LESS_THAN, EQUAL_TO or GREATER_THAN.</summary>
@@ -662,6 +689,7 @@ public partial class V1beta1BudgetStatusAtProviderNotification
     public string? ThresholdType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetStatusAtProviderPlannedLimit
 {
     /// <summary>The amount of cost or usage being measured for a budget.</summary>
@@ -677,6 +705,7 @@ public partial class V1beta1BudgetStatusAtProviderPlannedLimit
     public string? Unit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1BudgetStatusAtProvider
 {
     /// <summary>The ID of the target account for budget. Will use current user's account_id by default if omitted.</summary>
@@ -744,6 +773,7 @@ public partial class V1beta1BudgetStatusAtProvider
     public string? TimeUnit { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1BudgetStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -771,6 +801,7 @@ public partial class V1beta1BudgetStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>BudgetStatus defines the observed state of Budget.</summary>
 public partial class V1beta1BudgetStatus
 {
     /// <summary></summary>
@@ -787,6 +818,7 @@ public partial class V1beta1BudgetStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Budget is the Schema for the Budgets API. Provides a budgets budget resource.</summary>
 public partial class V1beta1Budget : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BudgetSpec>, IStatus<V1beta1BudgetStatus>
 {
     public const string KubeApiVersion = "v1beta1";

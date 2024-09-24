@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+/// <summary>Storage version of v1api20220401.DnsConfig Class containing DNS settings in a Traffic Manager profile.</summary>
 public partial class V1api20220401storageTrafficManagerProfileSpecDnsConfig
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -23,6 +24,7 @@ public partial class V1api20220401storageTrafficManagerProfileSpecDnsConfig
     public int? Ttl { get; set; }
 }
 
+/// <summary>Storage version of v1api20220401.MonitorConfig_CustomHeaders</summary>
 public partial class V1api20220401storageTrafficManagerProfileSpecMonitorConfigCustomHeaders
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -38,6 +40,7 @@ public partial class V1api20220401storageTrafficManagerProfileSpecMonitorConfigC
     public string? Value { get; set; }
 }
 
+/// <summary>Storage version of v1api20220401.MonitorConfig_ExpectedStatusCodeRanges</summary>
 public partial class V1api20220401storageTrafficManagerProfileSpecMonitorConfigExpectedStatusCodeRanges
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -53,6 +56,7 @@ public partial class V1api20220401storageTrafficManagerProfileSpecMonitorConfigE
     public int? Min { get; set; }
 }
 
+/// <summary>Storage version of v1api20220401.MonitorConfig Class containing endpoint monitoring settings in a Traffic Manager profile.</summary>
 public partial class V1api20220401storageTrafficManagerProfileSpecMonitorConfig
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -96,6 +100,7 @@ public partial class V1api20220401storageTrafficManagerProfileSpecMonitorConfig
     public int? ToleratedNumberOfFailures { get; set; }
 }
 
+/// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.</summary>
 public partial class V1api20220401storageTrafficManagerProfileSpecOperatorSpecConfigMapsDnsConfigFqdn
 {
     /// <summary>Key is the key in the ConfigMap being referenced</summary>
@@ -107,6 +112,7 @@ public partial class V1api20220401storageTrafficManagerProfileSpecOperatorSpecCo
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220401.TrafficManagerProfileOperatorConfigMaps</summary>
 public partial class V1api20220401storageTrafficManagerProfileSpecOperatorSpecConfigMaps
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -118,6 +124,7 @@ public partial class V1api20220401storageTrafficManagerProfileSpecOperatorSpecCo
     public V1api20220401storageTrafficManagerProfileSpecOperatorSpecConfigMapsDnsConfigFqdn? DnsConfigFqdn { get; set; }
 }
 
+/// <summary>Storage version of v1api20220401.TrafficManagerProfileOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 public partial class V1api20220401storageTrafficManagerProfileSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -129,6 +136,7 @@ public partial class V1api20220401storageTrafficManagerProfileSpecOperatorSpec
     public V1api20220401storageTrafficManagerProfileSpecOperatorSpecConfigMaps? ConfigMaps { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20220401storageTrafficManagerProfileSpecOwner
 {
     /// <summary></summary>
@@ -140,6 +148,7 @@ public partial class V1api20220401storageTrafficManagerProfileSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220401.Trafficmanagerprofile_Spec</summary>
 public partial class V1api20220401storageTrafficManagerProfileSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -203,6 +212,7 @@ public partial class V1api20220401storageTrafficManagerProfileSpec
     public string? Type { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20220401storageTrafficManagerProfileStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -234,6 +244,7 @@ public partial class V1api20220401storageTrafficManagerProfileStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20220401.DnsConfig_STATUS Class containing DNS settings in a Traffic Manager profile.</summary>
 public partial class V1api20220401storageTrafficManagerProfileStatusDnsConfig
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -253,6 +264,7 @@ public partial class V1api20220401storageTrafficManagerProfileStatusDnsConfig
     public int? Ttl { get; set; }
 }
 
+/// <summary>Storage version of v1api20220401.Endpoint_STATUS Class representing a Traffic Manager endpoint.</summary>
 public partial class V1api20220401storageTrafficManagerProfileStatusEndpoints
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -264,6 +276,7 @@ public partial class V1api20220401storageTrafficManagerProfileStatusEndpoints
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20220401.MonitorConfig_CustomHeaders_STATUS</summary>
 public partial class V1api20220401storageTrafficManagerProfileStatusMonitorConfigCustomHeaders
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -279,6 +292,7 @@ public partial class V1api20220401storageTrafficManagerProfileStatusMonitorConfi
     public string? Value { get; set; }
 }
 
+/// <summary>Storage version of v1api20220401.MonitorConfig_ExpectedStatusCodeRanges_STATUS</summary>
 public partial class V1api20220401storageTrafficManagerProfileStatusMonitorConfigExpectedStatusCodeRanges
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -294,6 +308,7 @@ public partial class V1api20220401storageTrafficManagerProfileStatusMonitorConfi
     public int? Min { get; set; }
 }
 
+/// <summary>Storage version of v1api20220401.MonitorConfig_STATUS Class containing endpoint monitoring settings in a Traffic Manager profile.</summary>
 public partial class V1api20220401storageTrafficManagerProfileStatusMonitorConfig
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -337,6 +352,7 @@ public partial class V1api20220401storageTrafficManagerProfileStatusMonitorConfi
     public int? ToleratedNumberOfFailures { get; set; }
 }
 
+/// <summary>Storage version of v1api20220401.Trafficmanagerprofile_STATUS</summary>
 public partial class V1api20220401storageTrafficManagerProfileStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -401,6 +417,7 @@ public partial class V1api20220401storageTrafficManagerProfileStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20220401.TrafficManagerProfile Generator information: - Generated from: /trafficmanager/resource-manager/Microsoft.Network/stable/2022-04-01/trafficmanager.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}</summary>
 public partial class V1api20220401storageTrafficManagerProfile : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20220401storageTrafficManagerProfileSpec>, IStatus<V1api20220401storageTrafficManagerProfileStatus>
 {
     public const string KubeApiVersion = "v1api20220401storage";

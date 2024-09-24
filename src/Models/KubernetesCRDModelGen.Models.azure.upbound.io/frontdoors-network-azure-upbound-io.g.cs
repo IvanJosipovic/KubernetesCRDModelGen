@@ -18,6 +18,7 @@ public enum V1beta1FrontDoorSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontDoorSpecForProviderBackendPoolBackend
 {
     /// <summary>Location of the backend (IP address or FQDN)</summary>
@@ -49,6 +50,7 @@ public partial class V1beta1FrontDoorSpecForProviderBackendPoolBackend
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontDoorSpecForProviderBackendPool
 {
     /// <summary>A backend block as defined below.</summary>
@@ -68,6 +70,7 @@ public partial class V1beta1FrontDoorSpecForProviderBackendPool
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontDoorSpecForProviderBackendPoolHealthProbe
 {
     /// <summary>Is this health probe enabled? Defaults to true.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1FrontDoorSpecForProviderBackendPoolHealthProbe
     public string? Protocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontDoorSpecForProviderBackendPoolLoadBalancing
 {
     /// <summary>The additional latency in milliseconds for probes to fall into the lowest latency bucket. Defaults to 0.</summary>
@@ -114,6 +118,7 @@ public partial class V1beta1FrontDoorSpecForProviderBackendPoolLoadBalancing
     public double? SuccessfulSamplesRequired { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontDoorSpecForProviderBackendPoolSettings
 {
     /// <summary>Specifies the send and receive timeout on forwarding request to the backend. When the timeout is reached, the request fails and returns. Possible values are between 0 - 240. Defaults to 60.</summary>
@@ -125,6 +130,7 @@ public partial class V1beta1FrontDoorSpecForProviderBackendPoolSettings
     public bool? EnforceBackendPoolsCertificateNameCheck { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontDoorSpecForProviderFrontendEndpoint
 {
     /// <summary>Specifies the host name of the frontend_endpoint. Must be a domain name. In order to use a name.azurefd.net domain, the name value must match the Front Door name.</summary>
@@ -168,6 +174,7 @@ public enum V1beta1FrontDoorSpecForProviderResourceGroupNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FrontDoorSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -181,6 +188,7 @@ public partial class V1beta1FrontDoorSpecForProviderResourceGroupNameRefPolicy
     public V1beta1FrontDoorSpecForProviderResourceGroupNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1FrontDoorSpecForProviderResourceGroupNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -212,6 +220,7 @@ public enum V1beta1FrontDoorSpecForProviderResourceGroupNameSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1FrontDoorSpecForProviderResourceGroupNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -225,6 +234,7 @@ public partial class V1beta1FrontDoorSpecForProviderResourceGroupNameSelectorPol
     public V1beta1FrontDoorSpecForProviderResourceGroupNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 public partial class V1beta1FrontDoorSpecForProviderResourceGroupNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -240,6 +250,7 @@ public partial class V1beta1FrontDoorSpecForProviderResourceGroupNameSelector
     public V1beta1FrontDoorSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontDoorSpecForProviderRoutingRuleForwardingConfiguration
 {
     /// <summary>Specifies the name of the Backend Pool to forward the incoming traffic to.</summary>
@@ -275,6 +286,7 @@ public partial class V1beta1FrontDoorSpecForProviderRoutingRuleForwardingConfigu
     public string? ForwardingProtocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontDoorSpecForProviderRoutingRuleRedirectConfiguration
 {
     /// <summary>The destination fragment in the portion of URL after '#'. Set this to add a fragment to the redirect URL.</summary>
@@ -302,6 +314,7 @@ public partial class V1beta1FrontDoorSpecForProviderRoutingRuleRedirectConfigura
     public string? RedirectType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontDoorSpecForProviderRoutingRule
 {
     /// <summary>Protocol schemes to match for the Backend Routing Rule. Possible values are Http and Https.</summary>
@@ -333,6 +346,7 @@ public partial class V1beta1FrontDoorSpecForProviderRoutingRule
     public IList<V1beta1FrontDoorSpecForProviderRoutingRuleRedirectConfiguration>? RedirectConfiguration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontDoorSpecForProvider
 {
     /// <summary>A backend_pool block as defined below.</summary>
@@ -384,6 +398,7 @@ public partial class V1beta1FrontDoorSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontDoorSpecInitProviderBackendPoolBackend
 {
     /// <summary>Location of the backend (IP address or FQDN)</summary>
@@ -415,6 +430,7 @@ public partial class V1beta1FrontDoorSpecInitProviderBackendPoolBackend
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontDoorSpecInitProviderBackendPool
 {
     /// <summary>A backend block as defined below.</summary>
@@ -434,6 +450,7 @@ public partial class V1beta1FrontDoorSpecInitProviderBackendPool
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontDoorSpecInitProviderBackendPoolHealthProbe
 {
     /// <summary>Is this health probe enabled? Defaults to true.</summary>
@@ -461,6 +478,7 @@ public partial class V1beta1FrontDoorSpecInitProviderBackendPoolHealthProbe
     public string? Protocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontDoorSpecInitProviderBackendPoolLoadBalancing
 {
     /// <summary>The additional latency in milliseconds for probes to fall into the lowest latency bucket. Defaults to 0.</summary>
@@ -480,6 +498,7 @@ public partial class V1beta1FrontDoorSpecInitProviderBackendPoolLoadBalancing
     public double? SuccessfulSamplesRequired { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontDoorSpecInitProviderBackendPoolSettings
 {
     /// <summary>Specifies the send and receive timeout on forwarding request to the backend. When the timeout is reached, the request fails and returns. Possible values are between 0 - 240. Defaults to 60.</summary>
@@ -491,6 +510,7 @@ public partial class V1beta1FrontDoorSpecInitProviderBackendPoolSettings
     public bool? EnforceBackendPoolsCertificateNameCheck { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontDoorSpecInitProviderFrontendEndpoint
 {
     /// <summary>Specifies the host name of the frontend_endpoint. Must be a domain name. In order to use a name.azurefd.net domain, the name value must match the Front Door name.</summary>
@@ -514,6 +534,7 @@ public partial class V1beta1FrontDoorSpecInitProviderFrontendEndpoint
     public string? WebApplicationFirewallPolicyLinkId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontDoorSpecInitProviderRoutingRuleForwardingConfiguration
 {
     /// <summary>Specifies the name of the Backend Pool to forward the incoming traffic to.</summary>
@@ -549,6 +570,7 @@ public partial class V1beta1FrontDoorSpecInitProviderRoutingRuleForwardingConfig
     public string? ForwardingProtocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontDoorSpecInitProviderRoutingRuleRedirectConfiguration
 {
     /// <summary>The destination fragment in the portion of URL after '#'. Set this to add a fragment to the redirect URL.</summary>
@@ -576,6 +598,7 @@ public partial class V1beta1FrontDoorSpecInitProviderRoutingRuleRedirectConfigur
     public string? RedirectType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontDoorSpecInitProviderRoutingRule
 {
     /// <summary>Protocol schemes to match for the Backend Routing Rule. Possible values are Http and Https.</summary>
@@ -607,6 +630,7 @@ public partial class V1beta1FrontDoorSpecInitProviderRoutingRule
     public IList<V1beta1FrontDoorSpecInitProviderRoutingRuleRedirectConfiguration>? RedirectConfiguration { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1FrontDoorSpecInitProvider
 {
     /// <summary>A backend_pool block as defined below.</summary>
@@ -688,6 +712,7 @@ public enum V1beta1FrontDoorSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FrontDoorSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -701,6 +726,7 @@ public partial class V1beta1FrontDoorSpecProviderConfigRefPolicy
     public V1beta1FrontDoorSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1FrontDoorSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -732,6 +758,7 @@ public enum V1beta1FrontDoorSpecPublishConnectionDetailsToConfigRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1FrontDoorSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -745,6 +772,7 @@ public partial class V1beta1FrontDoorSpecPublishConnectionDetailsToConfigRefPoli
     public V1beta1FrontDoorSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1FrontDoorSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -756,6 +784,7 @@ public partial class V1beta1FrontDoorSpecPublishConnectionDetailsToConfigRef
     public V1beta1FrontDoorSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1FrontDoorSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -771,6 +800,7 @@ public partial class V1beta1FrontDoorSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1FrontDoorSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -786,6 +816,7 @@ public partial class V1beta1FrontDoorSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1FrontDoorSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -797,6 +828,7 @@ public partial class V1beta1FrontDoorSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>FrontDoorSpec defines the desired state of FrontDoor</summary>
 public partial class V1beta1FrontDoorSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -829,6 +861,7 @@ public partial class V1beta1FrontDoorSpec
     public V1beta1FrontDoorSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontDoorStatusAtProviderBackendPoolBackend
 {
     /// <summary>Location of the backend (IP address or FQDN)</summary>
@@ -860,6 +893,7 @@ public partial class V1beta1FrontDoorStatusAtProviderBackendPoolBackend
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontDoorStatusAtProviderBackendPool
 {
     /// <summary>A backend block as defined below.</summary>
@@ -883,6 +917,7 @@ public partial class V1beta1FrontDoorStatusAtProviderBackendPool
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontDoorStatusAtProviderBackendPoolHealthProbe
 {
     /// <summary>Is this health probe enabled? Defaults to true.</summary>
@@ -914,6 +949,7 @@ public partial class V1beta1FrontDoorStatusAtProviderBackendPoolHealthProbe
     public string? Protocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontDoorStatusAtProviderBackendPoolLoadBalancing
 {
     /// <summary>The additional latency in milliseconds for probes to fall into the lowest latency bucket. Defaults to 0.</summary>
@@ -937,6 +973,7 @@ public partial class V1beta1FrontDoorStatusAtProviderBackendPoolLoadBalancing
     public double? SuccessfulSamplesRequired { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontDoorStatusAtProviderBackendPoolSettings
 {
     /// <summary>Specifies the send and receive timeout on forwarding request to the backend. When the timeout is reached, the request fails and returns. Possible values are between 0 - 240. Defaults to 60.</summary>
@@ -948,6 +985,7 @@ public partial class V1beta1FrontDoorStatusAtProviderBackendPoolSettings
     public bool? EnforceBackendPoolsCertificateNameCheck { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontDoorStatusAtProviderExplicitResourceOrder
 {
     /// <summary></summary>
@@ -971,6 +1009,7 @@ public partial class V1beta1FrontDoorStatusAtProviderExplicitResourceOrder
     public IList<string>? RoutingRuleIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontDoorStatusAtProviderFrontendEndpoint
 {
     /// <summary>Specifies the host name of the frontend_endpoint. Must be a domain name. In order to use a name.azurefd.net domain, the name value must match the Front Door name.</summary>
@@ -998,6 +1037,7 @@ public partial class V1beta1FrontDoorStatusAtProviderFrontendEndpoint
     public string? WebApplicationFirewallPolicyLinkId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontDoorStatusAtProviderRoutingRuleForwardingConfiguration
 {
     /// <summary>Specifies the name of the Backend Pool to forward the incoming traffic to.</summary>
@@ -1033,6 +1073,7 @@ public partial class V1beta1FrontDoorStatusAtProviderRoutingRuleForwardingConfig
     public string? ForwardingProtocol { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontDoorStatusAtProviderRoutingRuleRedirectConfiguration
 {
     /// <summary>The destination fragment in the portion of URL after '#'. Set this to add a fragment to the redirect URL.</summary>
@@ -1060,6 +1101,7 @@ public partial class V1beta1FrontDoorStatusAtProviderRoutingRuleRedirectConfigur
     public string? RedirectType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontDoorStatusAtProviderRoutingRule
 {
     /// <summary>Protocol schemes to match for the Backend Routing Rule. Possible values are Http and Https.</summary>
@@ -1095,6 +1137,7 @@ public partial class V1beta1FrontDoorStatusAtProviderRoutingRule
     public IList<V1beta1FrontDoorStatusAtProviderRoutingRuleRedirectConfiguration>? RedirectConfiguration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1FrontDoorStatusAtProvider
 {
     /// <summary>A backend_pool block as defined below.</summary>
@@ -1174,6 +1217,7 @@ public partial class V1beta1FrontDoorStatusAtProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1FrontDoorStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1201,6 +1245,7 @@ public partial class V1beta1FrontDoorStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>FrontDoorStatus defines the observed state of FrontDoor.</summary>
 public partial class V1beta1FrontDoorStatus
 {
     /// <summary></summary>
@@ -1217,6 +1262,7 @@ public partial class V1beta1FrontDoorStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>FrontDoor is the Schema for the FrontDoors API. Manages an Azure Front Door (classic) instance.</summary>
 public partial class V1beta1FrontDoor : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FrontDoorSpec>, IStatus<V1beta1FrontDoorStatus>
 {
     public const string KubeApiVersion = "v1beta1";

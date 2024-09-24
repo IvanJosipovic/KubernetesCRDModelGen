@@ -38,6 +38,7 @@ public enum V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorSpecForProvid
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorSpecForProviderManagedInstanceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorSpec
     public V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorSpecForProviderManagedInstanceIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a MSSQLManagedInstance in sql to populate managedInstanceId.</summary>
 public partial class V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorSpecForProviderManagedInstanceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorSpecForProvid
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorSpecForProviderManagedInstanceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorSpec
     public V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorSpecForProviderManagedInstanceIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a MSSQLManagedInstance in sql to populate managedInstanceId.</summary>
 public partial class V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorSpecForProviderManagedInstanceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorSpec
     public V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorSpecForProviderManagedInstanceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorSpecForProvider
 {
     /// <summary>When true, only permit logins from AAD users and administrators. When false, also allow local database users.</summary>
@@ -141,6 +146,7 @@ public partial class V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorSpec
     public string? TenantId { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorSpecInitProvider
 {
     /// <summary>When true, only permit logins from AAD users and administrators. When false, also allow local database users.</summary>
@@ -202,6 +208,7 @@ public enum V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorSpecProviderC
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -215,6 +222,7 @@ public partial class V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorSpec
     public V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -246,6 +254,7 @@ public enum V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorSpecPublishCo
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -259,6 +268,7 @@ public partial class V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorSpec
     public V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -270,6 +280,7 @@ public partial class V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorSpec
     public V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -285,6 +296,7 @@ public partial class V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorSpec
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -300,6 +312,7 @@ public partial class V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorSpec
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -311,6 +324,7 @@ public partial class V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorSpec
     public string Namespace { get; set; }
 }
 
+/// <summary>MSSQLManagedInstanceActiveDirectoryAdministratorSpec defines the desired state of MSSQLManagedInstanceActiveDirectoryAdministrator</summary>
 public partial class V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -343,6 +357,7 @@ public partial class V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorSpec
     public V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorStatusAtProvider
 {
     /// <summary>When true, only permit logins from AAD users and administrators. When false, also allow local database users.</summary>
@@ -370,6 +385,7 @@ public partial class V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorStat
     public string? TenantId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -397,6 +413,7 @@ public partial class V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorStat
     public string Type { get; set; }
 }
 
+/// <summary>MSSQLManagedInstanceActiveDirectoryAdministratorStatus defines the observed state of MSSQLManagedInstanceActiveDirectoryAdministrator.</summary>
 public partial class V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorStatus
 {
     /// <summary></summary>
@@ -413,6 +430,7 @@ public partial class V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorStat
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>MSSQLManagedInstanceActiveDirectoryAdministrator is the Schema for the MSSQLManagedInstanceActiveDirectoryAdministrators API. Manages an Active Directory Administrator on a Microsoft Azure SQL Managed Instance</summary>
 public partial class V1beta1MSSQLManagedInstanceActiveDirectoryAdministrator : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorSpec>, IStatus<V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorStatus>
 {
     public const string KubeApiVersion = "v1beta1";

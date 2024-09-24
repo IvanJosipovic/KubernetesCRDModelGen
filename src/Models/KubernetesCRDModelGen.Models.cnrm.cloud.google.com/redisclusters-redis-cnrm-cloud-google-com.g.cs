@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.redis.cnrm.cloud.google.com;
+/// <summary>Optional. AOF configuration. This field will be ignored if mode is not AOF.</summary>
 public partial class V1alpha1RedisClusterSpecPersistenceConfigAofConfig
 {
     /// <summary>Optional. fsync configuration.</summary>
@@ -15,6 +16,7 @@ public partial class V1alpha1RedisClusterSpecPersistenceConfigAofConfig
     public string? AppendFsync { get; set; }
 }
 
+/// <summary>Optional. RDB configuration. This field will be ignored if mode is not RDB.</summary>
 public partial class V1alpha1RedisClusterSpecPersistenceConfigRdbConfig
 {
     /// <summary>Optional. Period between RDB snapshots.</summary>
@@ -26,6 +28,7 @@ public partial class V1alpha1RedisClusterSpecPersistenceConfigRdbConfig
     public string? RdbSnapshotStartTime { get; set; }
 }
 
+/// <summary>Optional. Persistence config (RDB, AOF) for the cluster.</summary>
 public partial class V1alpha1RedisClusterSpecPersistenceConfig
 {
     /// <summary>Optional. AOF configuration. This field will be ignored if mode is not AOF.</summary>
@@ -41,6 +44,7 @@ public partial class V1alpha1RedisClusterSpecPersistenceConfig
     public V1alpha1RedisClusterSpecPersistenceConfigRdbConfig? RdbConfig { get; set; }
 }
 
+/// <summary>Immutable. The Project that this resource belongs to.</summary>
 public partial class V1alpha1RedisClusterSpecProjectRef
 {
     /// <summary>The `projectID` field of a project, when not managed by Config Connector.</summary>
@@ -60,6 +64,7 @@ public partial class V1alpha1RedisClusterSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Required. The network where the IP address of the discovery endpoint will be reserved, in the form of projects/{network_project}/global/networks/{network_id}.</summary>
 public partial class V1alpha1RedisClusterSpecPscConfigsNetworkRef
 {
     /// <summary>A reference to an externally managed Compute Network resource. Should be in the format `projects/&lt;projectID&gt;/global/networks/&lt;network&gt;`.</summary>
@@ -75,6 +80,7 @@ public partial class V1alpha1RedisClusterSpecPscConfigsNetworkRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1RedisClusterSpecPscConfigs
 {
     /// <summary>Required. The network where the IP address of the discovery endpoint will be reserved, in the form of projects/{network_project}/global/networks/{network_id}.</summary>
@@ -82,6 +88,7 @@ public partial class V1alpha1RedisClusterSpecPscConfigs
     public V1alpha1RedisClusterSpecPscConfigsNetworkRef NetworkRef { get; set; }
 }
 
+/// <summary>Optional. This config will be used to determine how the customer wants us to distribute cluster resources within the region.</summary>
 public partial class V1alpha1RedisClusterSpecZoneDistributionConfig
 {
     /// <summary>Optional. The mode of zone distribution. Defaults to MULTI_ZONE, when not specified.</summary>
@@ -93,6 +100,7 @@ public partial class V1alpha1RedisClusterSpecZoneDistributionConfig
     public string? Zone { get; set; }
 }
 
+/// <summary>RedisClusterSpec defines the desired state of RedisCluster</summary>
 public partial class V1alpha1RedisClusterSpec
 {
     /// <summary>Optional. The authorization mode of the Redis cluster. If not provided, auth feature is disabled for the cluster.</summary>
@@ -148,6 +156,7 @@ public partial class V1alpha1RedisClusterSpec
     public V1alpha1RedisClusterSpecZoneDistributionConfig? ZoneDistributionConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1RedisClusterStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -171,6 +180,7 @@ public partial class V1alpha1RedisClusterStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary>Output only. Customer configuration for where the endpoint is created and accessed from.</summary>
 public partial class V1alpha1RedisClusterStatusObservedStateDiscoveryEndpointsPscConfig
 {
     /// <summary>Required. The network where the IP address of the discovery endpoint will be reserved, in the form of projects/{network_project}/global/networks/{network_id}.</summary>
@@ -178,6 +188,7 @@ public partial class V1alpha1RedisClusterStatusObservedStateDiscoveryEndpointsPs
     public string? Network { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1RedisClusterStatusObservedStateDiscoveryEndpoints
 {
     /// <summary>Output only. Address of the exposed Redis endpoint used by clients to connect to the service. The address could be either IP or hostname.</summary>
@@ -193,6 +204,7 @@ public partial class V1alpha1RedisClusterStatusObservedStateDiscoveryEndpoints
     public V1alpha1RedisClusterStatusObservedStateDiscoveryEndpointsPscConfig? PscConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1RedisClusterStatusObservedStatePscConnections
 {
     /// <summary>Output only. The IP allocated on the consumer network for the PSC forwarding rule.</summary>
@@ -216,6 +228,7 @@ public partial class V1alpha1RedisClusterStatusObservedStatePscConnections
     public string? PscConnectionID { get; set; }
 }
 
+/// <summary>Describes ongoing update on the cluster when cluster state is UPDATING.</summary>
 public partial class V1alpha1RedisClusterStatusObservedStateStateInfoUpdateInfo
 {
     /// <summary>Target number of replica nodes per shard.</summary>
@@ -227,6 +240,7 @@ public partial class V1alpha1RedisClusterStatusObservedStateStateInfoUpdateInfo
     public int? TargetShardCount { get; set; }
 }
 
+/// <summary>Output only. Additional information about the current state of the cluster.</summary>
 public partial class V1alpha1RedisClusterStatusObservedStateStateInfo
 {
     /// <summary>Describes ongoing update on the cluster when cluster state is UPDATING.</summary>
@@ -234,6 +248,7 @@ public partial class V1alpha1RedisClusterStatusObservedStateStateInfo
     public V1alpha1RedisClusterStatusObservedStateStateInfoUpdateInfo? UpdateInfo { get; set; }
 }
 
+/// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 public partial class V1alpha1RedisClusterStatusObservedState
 {
     /// <summary>Output only. The timestamp associated with the cluster creation request.</summary>
@@ -269,6 +284,7 @@ public partial class V1alpha1RedisClusterStatusObservedState
     public string? Uid { get; set; }
 }
 
+/// <summary>RedisClusterStatus defines the config connector machine state of RedisCluster</summary>
 public partial class V1alpha1RedisClusterStatus
 {
     /// <summary>Conditions represent the latest available observations of the object's current state.</summary>
@@ -289,6 +305,7 @@ public partial class V1alpha1RedisClusterStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>RedisCluster is the Schema for the RedisCluster API</summary>
 public partial class V1alpha1RedisCluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1RedisClusterSpec>, IStatus<V1alpha1RedisClusterStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

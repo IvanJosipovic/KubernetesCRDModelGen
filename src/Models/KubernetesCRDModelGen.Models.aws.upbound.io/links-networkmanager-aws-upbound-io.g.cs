@@ -18,6 +18,7 @@ public enum V1beta1LinkSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1LinkSpecForProviderBandwidth
 {
     /// <summary>Download speed in Mbps.</summary>
@@ -49,6 +50,7 @@ public enum V1beta1LinkSpecForProviderGlobalNetworkIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinkSpecForProviderGlobalNetworkIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -62,6 +64,7 @@ public partial class V1beta1LinkSpecForProviderGlobalNetworkIdRefPolicy
     public V1beta1LinkSpecForProviderGlobalNetworkIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a GlobalNetwork in networkmanager to populate globalNetworkId.</summary>
 public partial class V1beta1LinkSpecForProviderGlobalNetworkIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -93,6 +96,7 @@ public enum V1beta1LinkSpecForProviderGlobalNetworkIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinkSpecForProviderGlobalNetworkIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -106,6 +110,7 @@ public partial class V1beta1LinkSpecForProviderGlobalNetworkIdSelectorPolicy
     public V1beta1LinkSpecForProviderGlobalNetworkIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a GlobalNetwork in networkmanager to populate globalNetworkId.</summary>
 public partial class V1beta1LinkSpecForProviderGlobalNetworkIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -141,6 +146,7 @@ public enum V1beta1LinkSpecForProviderSiteIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinkSpecForProviderSiteIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -154,6 +160,7 @@ public partial class V1beta1LinkSpecForProviderSiteIdRefPolicy
     public V1beta1LinkSpecForProviderSiteIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Site in networkmanager to populate siteId.</summary>
 public partial class V1beta1LinkSpecForProviderSiteIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -185,6 +192,7 @@ public enum V1beta1LinkSpecForProviderSiteIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinkSpecForProviderSiteIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -198,6 +206,7 @@ public partial class V1beta1LinkSpecForProviderSiteIdSelectorPolicy
     public V1beta1LinkSpecForProviderSiteIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Site in networkmanager to populate siteId.</summary>
 public partial class V1beta1LinkSpecForProviderSiteIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -213,6 +222,7 @@ public partial class V1beta1LinkSpecForProviderSiteIdSelector
     public V1beta1LinkSpecForProviderSiteIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinkSpecForProvider
 {
     /// <summary>The upload speed and download speed in Mbps. Documented below.</summary>
@@ -264,6 +274,7 @@ public partial class V1beta1LinkSpecForProvider
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinkSpecInitProviderBandwidth
 {
     /// <summary>Download speed in Mbps.</summary>
@@ -295,6 +306,7 @@ public enum V1beta1LinkSpecInitProviderGlobalNetworkIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinkSpecInitProviderGlobalNetworkIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -308,6 +320,7 @@ public partial class V1beta1LinkSpecInitProviderGlobalNetworkIdRefPolicy
     public V1beta1LinkSpecInitProviderGlobalNetworkIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a GlobalNetwork in networkmanager to populate globalNetworkId.</summary>
 public partial class V1beta1LinkSpecInitProviderGlobalNetworkIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -339,6 +352,7 @@ public enum V1beta1LinkSpecInitProviderGlobalNetworkIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinkSpecInitProviderGlobalNetworkIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -352,6 +366,7 @@ public partial class V1beta1LinkSpecInitProviderGlobalNetworkIdSelectorPolicy
     public V1beta1LinkSpecInitProviderGlobalNetworkIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a GlobalNetwork in networkmanager to populate globalNetworkId.</summary>
 public partial class V1beta1LinkSpecInitProviderGlobalNetworkIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -387,6 +402,7 @@ public enum V1beta1LinkSpecInitProviderSiteIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinkSpecInitProviderSiteIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -400,6 +416,7 @@ public partial class V1beta1LinkSpecInitProviderSiteIdRefPolicy
     public V1beta1LinkSpecInitProviderSiteIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Site in networkmanager to populate siteId.</summary>
 public partial class V1beta1LinkSpecInitProviderSiteIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -431,6 +448,7 @@ public enum V1beta1LinkSpecInitProviderSiteIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1LinkSpecInitProviderSiteIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -444,6 +462,7 @@ public partial class V1beta1LinkSpecInitProviderSiteIdSelectorPolicy
     public V1beta1LinkSpecInitProviderSiteIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Site in networkmanager to populate siteId.</summary>
 public partial class V1beta1LinkSpecInitProviderSiteIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -459,6 +478,7 @@ public partial class V1beta1LinkSpecInitProviderSiteIdSelector
     public V1beta1LinkSpecInitProviderSiteIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1LinkSpecInitProvider
 {
     /// <summary>The upload speed and download speed in Mbps. Documented below.</summary>
@@ -548,6 +568,7 @@ public enum V1beta1LinkSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinkSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -561,6 +582,7 @@ public partial class V1beta1LinkSpecProviderConfigRefPolicy
     public V1beta1LinkSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1LinkSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -592,6 +614,7 @@ public enum V1beta1LinkSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1LinkSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -605,6 +628,7 @@ public partial class V1beta1LinkSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1LinkSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1LinkSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -616,6 +640,7 @@ public partial class V1beta1LinkSpecPublishConnectionDetailsToConfigRef
     public V1beta1LinkSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1LinkSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -631,6 +656,7 @@ public partial class V1beta1LinkSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1LinkSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -646,6 +672,7 @@ public partial class V1beta1LinkSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1LinkSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -657,6 +684,7 @@ public partial class V1beta1LinkSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>LinkSpec defines the desired state of Link</summary>
 public partial class V1beta1LinkSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -689,6 +717,7 @@ public partial class V1beta1LinkSpec
     public V1beta1LinkSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinkStatusAtProviderBandwidth
 {
     /// <summary>Download speed in Mbps.</summary>
@@ -700,6 +729,7 @@ public partial class V1beta1LinkStatusAtProviderBandwidth
     public double? UploadSpeed { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1LinkStatusAtProvider
 {
     /// <summary>Link Amazon Resource Name (ARN).</summary>
@@ -743,6 +773,7 @@ public partial class V1beta1LinkStatusAtProvider
     public string? Type { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1LinkStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -770,6 +801,7 @@ public partial class V1beta1LinkStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>LinkStatus defines the observed state of Link.</summary>
 public partial class V1beta1LinkStatus
 {
     /// <summary></summary>
@@ -786,6 +818,7 @@ public partial class V1beta1LinkStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Link is the Schema for the Links API. Creates a link for a site.</summary>
 public partial class V1beta1Link : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LinkSpec>, IStatus<V1beta1LinkStatus>
 {
     public const string KubeApiVersion = "v1beta1";

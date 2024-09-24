@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.resourcemanager.cnrm.cloud.google.com;
+/// <summary>A boolean policy is a constraint that is either enforced or not.</summary>
 public partial class V1beta1ResourceManagerPolicySpecBooleanPolicy
 {
     /// <summary>If true, then the Policy is enforced. If false, then any configuration is acceptable.</summary>
@@ -15,6 +16,7 @@ public partial class V1beta1ResourceManagerPolicySpecBooleanPolicy
     public bool Enforced { get; set; }
 }
 
+/// <summary>The folder on which to configure the constraint. Only one of projectRef, folderRef, or organizationRef may be specified.</summary>
 public partial class V1beta1ResourceManagerPolicySpecFolderRef
 {
     /// <summary>Allowed value: The `name` field of a `Folder` resource.</summary>
@@ -30,6 +32,7 @@ public partial class V1beta1ResourceManagerPolicySpecFolderRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>One or the other must be set.</summary>
 public partial class V1beta1ResourceManagerPolicySpecListPolicyAllow
 {
     /// <summary>The policy allows or denies all values.</summary>
@@ -41,6 +44,7 @@ public partial class V1beta1ResourceManagerPolicySpecListPolicyAllow
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>One or the other must be set.</summary>
 public partial class V1beta1ResourceManagerPolicySpecListPolicyDeny
 {
     /// <summary>The policy allows or denies all values.</summary>
@@ -52,6 +56,7 @@ public partial class V1beta1ResourceManagerPolicySpecListPolicyDeny
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values. .</summary>
 public partial class V1beta1ResourceManagerPolicySpecListPolicy
 {
     /// <summary>One or the other must be set.</summary>
@@ -71,6 +76,7 @@ public partial class V1beta1ResourceManagerPolicySpecListPolicy
     public string? SuggestedValue { get; set; }
 }
 
+/// <summary>The organization on which to configure the constraint. Only one of projectRef, folderRef, or organizationRef may be specified.</summary>
 public partial class V1beta1ResourceManagerPolicySpecOrganizationRef
 {
     /// <summary>Allowed value: The `name` field of an `Organization` resource.</summary>
@@ -86,6 +92,7 @@ public partial class V1beta1ResourceManagerPolicySpecOrganizationRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>The project on which to configure the constraint. Only one of projectRef, folderRef, or organizationRef may be specified.</summary>
 public partial class V1beta1ResourceManagerPolicySpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -101,6 +108,7 @@ public partial class V1beta1ResourceManagerPolicySpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>A restore policy is a constraint to restore the default policy.</summary>
 public partial class V1beta1ResourceManagerPolicySpecRestorePolicy
 {
     /// <summary>May only be set to true. If set, then the default Policy is restored.</summary>
@@ -108,6 +116,7 @@ public partial class V1beta1ResourceManagerPolicySpecRestorePolicy
     public bool Default { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceManagerPolicySpec
 {
     /// <summary>A boolean policy is a constraint that is either enforced or not.</summary>
@@ -143,6 +152,7 @@ public partial class V1beta1ResourceManagerPolicySpec
     public int? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceManagerPolicyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -166,6 +176,7 @@ public partial class V1beta1ResourceManagerPolicyStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ResourceManagerPolicyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -186,6 +197,7 @@ public partial class V1beta1ResourceManagerPolicyStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ResourceManagerPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ResourceManagerPolicySpec>, IStatus<V1beta1ResourceManagerPolicyStatus>
 {
     public const string KubeApiVersion = "v1beta1";

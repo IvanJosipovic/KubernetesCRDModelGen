@@ -18,6 +18,7 @@ public enum V1beta1ClusterSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderAccessConfig
 {
     /// <summary>The authentication mode for the cluster. Valid values are CONFIG_MAP, API or API_AND_CONFIG_MAP</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1ClusterSpecForProviderAccessConfig
     public bool? BootstrapClusterCreatorAdminPermissions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderEncryptionConfigProvider
 {
     /// <summary>ARN of the Key Management Service (KMS) customer master key (CMK). The CMK must be symmetric, created in the same region as the cluster, and if the CMK was created in a different account, the user must have access to the CMK. For more information, see Allowing Users in Other Accounts to Use a CMK in the AWS Key Management Service Developer Guide.</summary>
@@ -36,6 +38,7 @@ public partial class V1beta1ClusterSpecForProviderEncryptionConfigProvider
     public string? KeyArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderEncryptionConfig
 {
     /// <summary>Configuration block with provider for encryption. Detailed below.</summary>
@@ -47,6 +50,7 @@ public partial class V1beta1ClusterSpecForProviderEncryptionConfig
     public IList<string>? Resources { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderKubernetesNetworkConfig
 {
     /// <summary>The IP family used to assign Kubernetes pod and service addresses. Valid values are ipv4 (default) and ipv6. You can only specify an IP family when you create a cluster, changing this value will force a new cluster to be created.</summary>
@@ -58,6 +62,7 @@ public partial class V1beta1ClusterSpecForProviderKubernetesNetworkConfig
     public string? ServiceIpv4Cidr { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderOutpostConfigControlPlanePlacement
 {
     /// <summary>The name of the placement group for the Kubernetes control plane instances. This setting can't be changed after cluster creation.</summary>
@@ -65,6 +70,7 @@ public partial class V1beta1ClusterSpecForProviderOutpostConfigControlPlanePlace
     public string? GroupName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderOutpostConfig
 {
     /// <summary>The Amazon EC2 instance type that you want to use for your local Amazon EKS cluster on Outposts. The instance type that you specify is used for all Kubernetes control plane instances. The instance type can't be changed after cluster creation. Choose an instance type based on the number of nodes that your cluster will have. If your cluster will have:</summary>
@@ -100,6 +106,7 @@ public enum V1beta1ClusterSpecForProviderRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClusterSpecForProviderRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -113,6 +120,7 @@ public partial class V1beta1ClusterSpecForProviderRoleArnRefPolicy
     public V1beta1ClusterSpecForProviderRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ClusterSpecForProviderRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -144,6 +152,7 @@ public enum V1beta1ClusterSpecForProviderRoleArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ClusterSpecForProviderRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -157,6 +166,7 @@ public partial class V1beta1ClusterSpecForProviderRoleArnSelectorPolicy
     public V1beta1ClusterSpecForProviderRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ClusterSpecForProviderRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -192,6 +202,7 @@ public enum V1beta1ClusterSpecForProviderVpcConfigSecurityGroupIdRefsPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClusterSpecForProviderVpcConfigSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -205,6 +216,7 @@ public partial class V1beta1ClusterSpecForProviderVpcConfigSecurityGroupIdRefsPo
     public V1beta1ClusterSpecForProviderVpcConfigSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1ClusterSpecForProviderVpcConfigSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -236,6 +248,7 @@ public enum V1beta1ClusterSpecForProviderVpcConfigSecurityGroupIdSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ClusterSpecForProviderVpcConfigSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -249,6 +262,7 @@ public partial class V1beta1ClusterSpecForProviderVpcConfigSecurityGroupIdSelect
     public V1beta1ClusterSpecForProviderVpcConfigSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 public partial class V1beta1ClusterSpecForProviderVpcConfigSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -284,6 +298,7 @@ public enum V1beta1ClusterSpecForProviderVpcConfigSubnetIdRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClusterSpecForProviderVpcConfigSubnetIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -297,6 +312,7 @@ public partial class V1beta1ClusterSpecForProviderVpcConfigSubnetIdRefsPolicy
     public V1beta1ClusterSpecForProviderVpcConfigSubnetIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1ClusterSpecForProviderVpcConfigSubnetIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -328,6 +344,7 @@ public enum V1beta1ClusterSpecForProviderVpcConfigSubnetIdSelectorPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ClusterSpecForProviderVpcConfigSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -341,6 +358,7 @@ public partial class V1beta1ClusterSpecForProviderVpcConfigSubnetIdSelectorPolic
     public V1beta1ClusterSpecForProviderVpcConfigSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 public partial class V1beta1ClusterSpecForProviderVpcConfigSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -356,6 +374,7 @@ public partial class V1beta1ClusterSpecForProviderVpcConfigSubnetIdSelector
     public V1beta1ClusterSpecForProviderVpcConfigSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderVpcConfig
 {
     /// <summary>Whether the Amazon EKS private API server endpoint is enabled. Default is false.</summary>
@@ -399,6 +418,7 @@ public partial class V1beta1ClusterSpecForProviderVpcConfig
     public IList<string>? SubnetIds { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProvider
 {
     /// <summary>Configuration block for the access config associated with your cluster, see Amazon EKS Access Entries.</summary>
@@ -454,6 +474,7 @@ public partial class V1beta1ClusterSpecForProvider
     public IList<V1beta1ClusterSpecForProviderVpcConfig>? VpcConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderAccessConfig
 {
     /// <summary>The authentication mode for the cluster. Valid values are CONFIG_MAP, API or API_AND_CONFIG_MAP</summary>
@@ -465,6 +486,7 @@ public partial class V1beta1ClusterSpecInitProviderAccessConfig
     public bool? BootstrapClusterCreatorAdminPermissions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderEncryptionConfigProvider
 {
     /// <summary>ARN of the Key Management Service (KMS) customer master key (CMK). The CMK must be symmetric, created in the same region as the cluster, and if the CMK was created in a different account, the user must have access to the CMK. For more information, see Allowing Users in Other Accounts to Use a CMK in the AWS Key Management Service Developer Guide.</summary>
@@ -472,6 +494,7 @@ public partial class V1beta1ClusterSpecInitProviderEncryptionConfigProvider
     public string? KeyArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderEncryptionConfig
 {
     /// <summary>Configuration block with provider for encryption. Detailed below.</summary>
@@ -483,6 +506,7 @@ public partial class V1beta1ClusterSpecInitProviderEncryptionConfig
     public IList<string>? Resources { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderKubernetesNetworkConfig
 {
     /// <summary>The IP family used to assign Kubernetes pod and service addresses. Valid values are ipv4 (default) and ipv6. You can only specify an IP family when you create a cluster, changing this value will force a new cluster to be created.</summary>
@@ -494,6 +518,7 @@ public partial class V1beta1ClusterSpecInitProviderKubernetesNetworkConfig
     public string? ServiceIpv4Cidr { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderOutpostConfigControlPlanePlacement
 {
     /// <summary>The name of the placement group for the Kubernetes control plane instances. This setting can't be changed after cluster creation.</summary>
@@ -501,6 +526,7 @@ public partial class V1beta1ClusterSpecInitProviderOutpostConfigControlPlanePlac
     public string? GroupName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderOutpostConfig
 {
     /// <summary>The Amazon EC2 instance type that you want to use for your local Amazon EKS cluster on Outposts. The instance type that you specify is used for all Kubernetes control plane instances. The instance type can't be changed after cluster creation. Choose an instance type based on the number of nodes that your cluster will have. If your cluster will have:</summary>
@@ -536,6 +562,7 @@ public enum V1beta1ClusterSpecInitProviderRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClusterSpecInitProviderRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -549,6 +576,7 @@ public partial class V1beta1ClusterSpecInitProviderRoleArnRefPolicy
     public V1beta1ClusterSpecInitProviderRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ClusterSpecInitProviderRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -580,6 +608,7 @@ public enum V1beta1ClusterSpecInitProviderRoleArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ClusterSpecInitProviderRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -593,6 +622,7 @@ public partial class V1beta1ClusterSpecInitProviderRoleArnSelectorPolicy
     public V1beta1ClusterSpecInitProviderRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ClusterSpecInitProviderRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -628,6 +658,7 @@ public enum V1beta1ClusterSpecInitProviderVpcConfigSecurityGroupIdRefsPolicyReso
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClusterSpecInitProviderVpcConfigSecurityGroupIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -641,6 +672,7 @@ public partial class V1beta1ClusterSpecInitProviderVpcConfigSecurityGroupIdRefsP
     public V1beta1ClusterSpecInitProviderVpcConfigSecurityGroupIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1ClusterSpecInitProviderVpcConfigSecurityGroupIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -672,6 +704,7 @@ public enum V1beta1ClusterSpecInitProviderVpcConfigSecurityGroupIdSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ClusterSpecInitProviderVpcConfigSecurityGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -685,6 +718,7 @@ public partial class V1beta1ClusterSpecInitProviderVpcConfigSecurityGroupIdSelec
     public V1beta1ClusterSpecInitProviderVpcConfigSecurityGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 public partial class V1beta1ClusterSpecInitProviderVpcConfigSecurityGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -720,6 +754,7 @@ public enum V1beta1ClusterSpecInitProviderVpcConfigSubnetIdRefsPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClusterSpecInitProviderVpcConfigSubnetIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -733,6 +768,7 @@ public partial class V1beta1ClusterSpecInitProviderVpcConfigSubnetIdRefsPolicy
     public V1beta1ClusterSpecInitProviderVpcConfigSubnetIdRefsPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>A Reference to a named object.</summary>
 public partial class V1beta1ClusterSpecInitProviderVpcConfigSubnetIdRefs
 {
     /// <summary>Name of the referenced object.</summary>
@@ -764,6 +800,7 @@ public enum V1beta1ClusterSpecInitProviderVpcConfigSubnetIdSelectorPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ClusterSpecInitProviderVpcConfigSubnetIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -777,6 +814,7 @@ public partial class V1beta1ClusterSpecInitProviderVpcConfigSubnetIdSelectorPoli
     public V1beta1ClusterSpecInitProviderVpcConfigSubnetIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 public partial class V1beta1ClusterSpecInitProviderVpcConfigSubnetIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -792,6 +830,7 @@ public partial class V1beta1ClusterSpecInitProviderVpcConfigSubnetIdSelector
     public V1beta1ClusterSpecInitProviderVpcConfigSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderVpcConfig
 {
     /// <summary>Whether the Amazon EKS private API server endpoint is enabled. Default is false.</summary>
@@ -835,6 +874,7 @@ public partial class V1beta1ClusterSpecInitProviderVpcConfig
     public IList<string>? SubnetIds { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ClusterSpecInitProvider
 {
     /// <summary>Configuration block for the access config associated with your cluster, see Amazon EKS Access Entries.</summary>
@@ -928,6 +968,7 @@ public enum V1beta1ClusterSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClusterSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -941,6 +982,7 @@ public partial class V1beta1ClusterSpecProviderConfigRefPolicy
     public V1beta1ClusterSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ClusterSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -972,6 +1014,7 @@ public enum V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -985,6 +1028,7 @@ public partial class V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ClusterSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -996,6 +1040,7 @@ public partial class V1beta1ClusterSpecPublishConnectionDetailsToConfigRef
     public V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ClusterSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1011,6 +1056,7 @@ public partial class V1beta1ClusterSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ClusterSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1026,6 +1072,7 @@ public partial class V1beta1ClusterSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ClusterSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1037,6 +1084,7 @@ public partial class V1beta1ClusterSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ClusterSpec defines the desired state of Cluster</summary>
 public partial class V1beta1ClusterSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1069,6 +1117,7 @@ public partial class V1beta1ClusterSpec
     public V1beta1ClusterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderAccessConfig
 {
     /// <summary>The authentication mode for the cluster. Valid values are CONFIG_MAP, API or API_AND_CONFIG_MAP</summary>
@@ -1080,6 +1129,7 @@ public partial class V1beta1ClusterStatusAtProviderAccessConfig
     public bool? BootstrapClusterCreatorAdminPermissions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderCertificateAuthority
 {
     /// <summary>Base64 encoded certificate data required to communicate with your cluster. Add this to the certificate-authority-data section of the kubeconfig file for your cluster.</summary>
@@ -1087,6 +1137,7 @@ public partial class V1beta1ClusterStatusAtProviderCertificateAuthority
     public string? Data { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderEncryptionConfigProvider
 {
     /// <summary>ARN of the Key Management Service (KMS) customer master key (CMK). The CMK must be symmetric, created in the same region as the cluster, and if the CMK was created in a different account, the user must have access to the CMK. For more information, see Allowing Users in Other Accounts to Use a CMK in the AWS Key Management Service Developer Guide.</summary>
@@ -1094,6 +1145,7 @@ public partial class V1beta1ClusterStatusAtProviderEncryptionConfigProvider
     public string? KeyArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderEncryptionConfig
 {
     /// <summary>Configuration block with provider for encryption. Detailed below.</summary>
@@ -1105,6 +1157,7 @@ public partial class V1beta1ClusterStatusAtProviderEncryptionConfig
     public IList<string>? Resources { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderIdentityOidc
 {
     /// <summary>Issuer URL for the OpenID Connect identity provider.</summary>
@@ -1112,6 +1165,7 @@ public partial class V1beta1ClusterStatusAtProviderIdentityOidc
     public string? Issuer { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderIdentity
 {
     /// <summary>Nested block containing OpenID Connect identity provider information for the cluster. Detailed below.</summary>
@@ -1119,6 +1173,7 @@ public partial class V1beta1ClusterStatusAtProviderIdentity
     public IList<V1beta1ClusterStatusAtProviderIdentityOidc>? Oidc { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderKubernetesNetworkConfig
 {
     /// <summary>The IP family used to assign Kubernetes pod and service addresses. Valid values are ipv4 (default) and ipv6. You can only specify an IP family when you create a cluster, changing this value will force a new cluster to be created.</summary>
@@ -1134,6 +1189,7 @@ public partial class V1beta1ClusterStatusAtProviderKubernetesNetworkConfig
     public string? ServiceIpv6Cidr { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderOutpostConfigControlPlanePlacement
 {
     /// <summary>The name of the placement group for the Kubernetes control plane instances. This setting can't be changed after cluster creation.</summary>
@@ -1141,6 +1197,7 @@ public partial class V1beta1ClusterStatusAtProviderOutpostConfigControlPlanePlac
     public string? GroupName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderOutpostConfig
 {
     /// <summary>The Amazon EC2 instance type that you want to use for your local Amazon EKS cluster on Outposts. The instance type that you specify is used for all Kubernetes control plane instances. The instance type can't be changed after cluster creation. Choose an instance type based on the number of nodes that your cluster will have. If your cluster will have:</summary>
@@ -1156,6 +1213,7 @@ public partial class V1beta1ClusterStatusAtProviderOutpostConfig
     public IList<string>? OutpostArns { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderVpcConfig
 {
     /// <summary>Cluster security group that was created by Amazon EKS for the cluster. Managed node groups use this security group for control-plane-to-data-plane communication.</summary>
@@ -1191,6 +1249,7 @@ public partial class V1beta1ClusterStatusAtProviderVpcConfig
     public string? VpcId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProvider
 {
     /// <summary>Configuration block for the access config associated with your cluster, see Amazon EKS Access Entries.</summary>
@@ -1274,6 +1333,7 @@ public partial class V1beta1ClusterStatusAtProvider
     public IList<V1beta1ClusterStatusAtProviderVpcConfig>? VpcConfig { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ClusterStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1301,6 +1361,7 @@ public partial class V1beta1ClusterStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ClusterStatus defines the observed state of Cluster.</summary>
 public partial class V1beta1ClusterStatus
 {
     /// <summary></summary>
@@ -1317,6 +1378,7 @@ public partial class V1beta1ClusterStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Cluster is the Schema for the Clusters API. Manages an EKS Cluster</summary>
 public partial class V1beta1Cluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ClusterSpec>, IStatus<V1beta1ClusterStatus>
 {
     public const string KubeApiVersion = "v1beta1";

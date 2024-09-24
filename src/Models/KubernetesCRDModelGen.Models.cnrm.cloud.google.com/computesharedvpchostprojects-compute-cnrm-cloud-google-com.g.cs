@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1ComputeSharedVPCHostProjectStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -31,6 +32,7 @@ public partial class V1beta1ComputeSharedVPCHostProjectStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ComputeSharedVPCHostProjectStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -43,6 +45,7 @@ public partial class V1beta1ComputeSharedVPCHostProjectStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1ComputeSharedVPCHostProject : IKubernetesObject<V1ObjectMeta>, IStatus<V1beta1ComputeSharedVPCHostProjectStatus>
 {
     public const string KubeApiVersion = "v1beta1";

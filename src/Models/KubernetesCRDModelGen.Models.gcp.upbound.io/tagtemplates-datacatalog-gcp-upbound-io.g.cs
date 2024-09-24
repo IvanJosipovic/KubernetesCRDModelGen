@@ -18,6 +18,7 @@ public enum V1beta1TagTemplateSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1TagTemplateSpecForProviderFieldsTypeEnumTypeAllowedValues
 {
     /// <summary>The display name for this field.</summary>
@@ -25,6 +26,7 @@ public partial class V1beta1TagTemplateSpecForProviderFieldsTypeEnumTypeAllowedV
     public string? DisplayName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TagTemplateSpecForProviderFieldsTypeEnumType
 {
     /// <summary>The set of allowed values for this enum. The display names of the values must be case-insensitively unique within this set. Currently, enum values can only be added to the list of allowed values. Deletion and renaming of enum values are not supported. Can have up to 500 allowed values. Structure is documented below.</summary>
@@ -32,6 +34,7 @@ public partial class V1beta1TagTemplateSpecForProviderFieldsTypeEnumType
     public IList<V1beta1TagTemplateSpecForProviderFieldsTypeEnumTypeAllowedValues>? AllowedValues { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TagTemplateSpecForProviderFieldsType
 {
     /// <summary>Represents an enum type. Exactly one of primitive_type or enum_type must be set Structure is documented below.</summary>
@@ -43,6 +46,7 @@ public partial class V1beta1TagTemplateSpecForProviderFieldsType
     public string? PrimitiveType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TagTemplateSpecForProviderFields
 {
     /// <summary>A description for this field.</summary>
@@ -70,6 +74,7 @@ public partial class V1beta1TagTemplateSpecForProviderFields
     public IList<V1beta1TagTemplateSpecForProviderFieldsType>? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TagTemplateSpecForProvider
 {
     /// <summary>The display name for this field.</summary>
@@ -93,6 +98,7 @@ public partial class V1beta1TagTemplateSpecForProvider
     public string? Region { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TagTemplateSpecInitProviderFieldsTypeEnumTypeAllowedValues
 {
     /// <summary>The display name for this field.</summary>
@@ -100,6 +106,7 @@ public partial class V1beta1TagTemplateSpecInitProviderFieldsTypeEnumTypeAllowed
     public string? DisplayName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TagTemplateSpecInitProviderFieldsTypeEnumType
 {
     /// <summary>The set of allowed values for this enum. The display names of the values must be case-insensitively unique within this set. Currently, enum values can only be added to the list of allowed values. Deletion and renaming of enum values are not supported. Can have up to 500 allowed values. Structure is documented below.</summary>
@@ -107,6 +114,7 @@ public partial class V1beta1TagTemplateSpecInitProviderFieldsTypeEnumType
     public IList<V1beta1TagTemplateSpecInitProviderFieldsTypeEnumTypeAllowedValues>? AllowedValues { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TagTemplateSpecInitProviderFieldsType
 {
     /// <summary>Represents an enum type. Exactly one of primitive_type or enum_type must be set Structure is documented below.</summary>
@@ -118,6 +126,7 @@ public partial class V1beta1TagTemplateSpecInitProviderFieldsType
     public string? PrimitiveType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TagTemplateSpecInitProviderFields
 {
     /// <summary>A description for this field.</summary>
@@ -145,6 +154,7 @@ public partial class V1beta1TagTemplateSpecInitProviderFields
     public IList<V1beta1TagTemplateSpecInitProviderFieldsType>? Type { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1TagTemplateSpecInitProvider
 {
     /// <summary>The display name for this field.</summary>
@@ -206,6 +216,7 @@ public enum V1beta1TagTemplateSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TagTemplateSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -219,6 +230,7 @@ public partial class V1beta1TagTemplateSpecProviderConfigRefPolicy
     public V1beta1TagTemplateSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1TagTemplateSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -250,6 +262,7 @@ public enum V1beta1TagTemplateSpecPublishConnectionDetailsToConfigRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TagTemplateSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -263,6 +276,7 @@ public partial class V1beta1TagTemplateSpecPublishConnectionDetailsToConfigRefPo
     public V1beta1TagTemplateSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1TagTemplateSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -274,6 +288,7 @@ public partial class V1beta1TagTemplateSpecPublishConnectionDetailsToConfigRef
     public V1beta1TagTemplateSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1TagTemplateSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -289,6 +304,7 @@ public partial class V1beta1TagTemplateSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1TagTemplateSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -304,6 +320,7 @@ public partial class V1beta1TagTemplateSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1TagTemplateSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -315,6 +332,7 @@ public partial class V1beta1TagTemplateSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>TagTemplateSpec defines the desired state of TagTemplate</summary>
 public partial class V1beta1TagTemplateSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -347,6 +365,7 @@ public partial class V1beta1TagTemplateSpec
     public V1beta1TagTemplateSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TagTemplateStatusAtProviderFieldsTypeEnumTypeAllowedValues
 {
     /// <summary>The display name for this field.</summary>
@@ -354,6 +373,7 @@ public partial class V1beta1TagTemplateStatusAtProviderFieldsTypeEnumTypeAllowed
     public string? DisplayName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TagTemplateStatusAtProviderFieldsTypeEnumType
 {
     /// <summary>The set of allowed values for this enum. The display names of the values must be case-insensitively unique within this set. Currently, enum values can only be added to the list of allowed values. Deletion and renaming of enum values are not supported. Can have up to 500 allowed values. Structure is documented below.</summary>
@@ -361,6 +381,7 @@ public partial class V1beta1TagTemplateStatusAtProviderFieldsTypeEnumType
     public IList<V1beta1TagTemplateStatusAtProviderFieldsTypeEnumTypeAllowedValues>? AllowedValues { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TagTemplateStatusAtProviderFieldsType
 {
     /// <summary>Represents an enum type. Exactly one of primitive_type or enum_type must be set Structure is documented below.</summary>
@@ -372,6 +393,7 @@ public partial class V1beta1TagTemplateStatusAtProviderFieldsType
     public string? PrimitiveType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TagTemplateStatusAtProviderFields
 {
     /// <summary>A description for this field.</summary>
@@ -403,6 +425,7 @@ public partial class V1beta1TagTemplateStatusAtProviderFields
     public IList<V1beta1TagTemplateStatusAtProviderFieldsType>? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TagTemplateStatusAtProvider
 {
     /// <summary>The display name for this field.</summary>
@@ -434,6 +457,7 @@ public partial class V1beta1TagTemplateStatusAtProvider
     public string? Region { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1TagTemplateStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -461,6 +485,7 @@ public partial class V1beta1TagTemplateStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>TagTemplateStatus defines the observed state of TagTemplate.</summary>
 public partial class V1beta1TagTemplateStatus
 {
     /// <summary></summary>
@@ -477,6 +502,7 @@ public partial class V1beta1TagTemplateStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>TagTemplate is the Schema for the TagTemplates API. A tag template defines a tag, which can have one or more typed fields.</summary>
 public partial class V1beta1TagTemplate : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1TagTemplateSpec>, IStatus<V1beta1TagTemplateStatus>
 {
     public const string KubeApiVersion = "v1beta1";

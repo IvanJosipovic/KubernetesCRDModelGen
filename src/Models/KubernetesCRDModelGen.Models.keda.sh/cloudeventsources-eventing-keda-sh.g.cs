@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.eventing.keda.sh;
+/// <summary>AuthenticationRef points to the TriggerAuthentication or ClusterTriggerAuthentication object that is used to authenticate the scaler with the environment</summary>
 public partial class V1alpha1CloudEventSourceSpecAuthenticationRef
 {
     /// <summary>Kind of the resource being referred to. Defaults to TriggerAuthentication.</summary>
@@ -19,6 +20,7 @@ public partial class V1alpha1CloudEventSourceSpecAuthenticationRef
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1CloudEventSourceSpecDestinationAzureEventGridTopic
 {
     /// <summary></summary>
@@ -26,6 +28,7 @@ public partial class V1alpha1CloudEventSourceSpecDestinationAzureEventGridTopic
     public string Endpoint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1CloudEventSourceSpecDestinationHttp
 {
     /// <summary></summary>
@@ -33,6 +36,7 @@ public partial class V1alpha1CloudEventSourceSpecDestinationHttp
     public string Uri { get; set; }
 }
 
+/// <summary>Destination defines the various ways to emit events</summary>
 public partial class V1alpha1CloudEventSourceSpecDestination
 {
     /// <summary></summary>
@@ -64,6 +68,7 @@ public enum V1alpha1CloudEventSourceSpecEventSubscriptionIncludedEventTypesEnum
     KedaScaledobjectFailedV1
 }
 
+/// <summary>EventSubscription defines filters for events</summary>
 public partial class V1alpha1CloudEventSourceSpecEventSubscription
 {
     /// <summary></summary>
@@ -75,6 +80,7 @@ public partial class V1alpha1CloudEventSourceSpecEventSubscription
     public IList<V1alpha1CloudEventSourceSpecEventSubscriptionIncludedEventTypesEnum>? IncludedEventTypes { get; set; }
 }
 
+/// <summary>CloudEventSourceSpec defines the spec of CloudEventSource</summary>
 public partial class V1alpha1CloudEventSourceSpec
 {
     /// <summary>AuthenticationRef points to the TriggerAuthentication or ClusterTriggerAuthentication object that is used to authenticate the scaler with the environment</summary>
@@ -94,6 +100,7 @@ public partial class V1alpha1CloudEventSourceSpec
     public V1alpha1CloudEventSourceSpecEventSubscription? EventSubscription { get; set; }
 }
 
+/// <summary>Condition to store the condition state</summary>
 public partial class V1alpha1CloudEventSourceStatusConditions
 {
     /// <summary>A human readable message indicating details about the transition.</summary>
@@ -113,6 +120,7 @@ public partial class V1alpha1CloudEventSourceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>CloudEventSourceStatus defines the observed state of CloudEventSource</summary>
 public partial class V1alpha1CloudEventSourceStatus
 {
     /// <summary>Conditions an array representation to store multiple Conditions</summary>
@@ -121,6 +129,7 @@ public partial class V1alpha1CloudEventSourceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>CloudEventSource defines how a KEDA event will be sent to event sink</summary>
 public partial class V1alpha1CloudEventSource : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1CloudEventSourceSpec>, IStatus<V1alpha1CloudEventSourceStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

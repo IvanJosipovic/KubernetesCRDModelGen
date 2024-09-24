@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.telemetry.istio.io;
+/// <summary>Optional.</summary>
 public partial class V1alpha1TelemetrySpecAccessLoggingFilter
 {
     /// <summary>CEL expression for selecting when requests/connections should be logged.</summary>
@@ -28,6 +29,7 @@ public enum V1alpha1TelemetrySpecAccessLoggingMatchModeEnum
     SERVER
 }
 
+/// <summary>Allows tailoring of logging behavior to specific conditions.</summary>
 public partial class V1alpha1TelemetrySpecAccessLoggingMatch
 {
     /// <summary>This determines whether or not to apply the access logging configuration based on the direction of traffic relative to the proxied workload.  Valid Options: CLIENT_AND_SERVER, CLIENT, SERVER</summary>
@@ -36,6 +38,7 @@ public partial class V1alpha1TelemetrySpecAccessLoggingMatch
     public V1alpha1TelemetrySpecAccessLoggingMatchModeEnum? Mode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1TelemetrySpecAccessLoggingProviders
 {
     /// <summary>Required.</summary>
@@ -43,6 +46,7 @@ public partial class V1alpha1TelemetrySpecAccessLoggingProviders
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1TelemetrySpecAccessLogging
 {
     /// <summary>Controls logging.</summary>
@@ -112,6 +116,7 @@ public enum V1alpha1TelemetrySpecMetricsOverridesMatchModeEnum
     SERVER
 }
 
+/// <summary>Match allows providing the scope of the override.</summary>
 public partial class V1alpha1TelemetrySpecMetricsOverridesMatch
 {
     /// <summary>Allows free-form specification of a metric.</summary>
@@ -139,6 +144,7 @@ public enum V1alpha1TelemetrySpecMetricsOverridesTagOverridesOperationEnum
     REMOVE
 }
 
+/// <summary></summary>
 public partial class V1alpha1TelemetrySpecMetricsOverridesTagOverrides
 {
     /// <summary>Operation controls whether or not to update/add a tag, or to remove it.  Valid Options: UPSERT, REMOVE</summary>
@@ -151,6 +157,7 @@ public partial class V1alpha1TelemetrySpecMetricsOverridesTagOverrides
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1TelemetrySpecMetricsOverrides
 {
     /// <summary>Optional.</summary>
@@ -166,6 +173,7 @@ public partial class V1alpha1TelemetrySpecMetricsOverrides
     public IDictionary<string, V1alpha1TelemetrySpecMetricsOverridesTagOverrides>? TagOverrides { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1TelemetrySpecMetricsProviders
 {
     /// <summary>Required.</summary>
@@ -173,6 +181,7 @@ public partial class V1alpha1TelemetrySpecMetricsProviders
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1TelemetrySpecMetrics
 {
     /// <summary>Optional.</summary>
@@ -188,6 +197,7 @@ public partial class V1alpha1TelemetrySpecMetrics
     public string? ReportingInterval { get; set; }
 }
 
+/// <summary>Optional.</summary>
 public partial class V1alpha1TelemetrySpecSelector
 {
     /// <summary>One or more labels that indicate a specific set of pods/VMs on which a policy should be applied.</summary>
@@ -195,6 +205,7 @@ public partial class V1alpha1TelemetrySpecSelector
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1TelemetrySpecTargetRef
 {
     /// <summary>group is the group of the target resource.</summary>
@@ -214,6 +225,7 @@ public partial class V1alpha1TelemetrySpecTargetRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1TelemetrySpecTargetRefs
 {
     /// <summary>group is the group of the target resource.</summary>
@@ -233,6 +245,7 @@ public partial class V1alpha1TelemetrySpecTargetRefs
     public string? Namespace { get; set; }
 }
 
+/// <summary>Environment adds the value of an environment variable to each span.</summary>
 public partial class V1alpha1TelemetrySpecTracingCustomTagsEnvironment
 {
     /// <summary>Optional.</summary>
@@ -244,6 +257,7 @@ public partial class V1alpha1TelemetrySpecTracingCustomTagsEnvironment
     public string Name { get; set; }
 }
 
+/// <summary>RequestHeader adds the value of an header from the request to each span.</summary>
 public partial class V1alpha1TelemetrySpecTracingCustomTagsHeader
 {
     /// <summary>Optional.</summary>
@@ -255,6 +269,7 @@ public partial class V1alpha1TelemetrySpecTracingCustomTagsHeader
     public string Name { get; set; }
 }
 
+/// <summary>Literal adds the same, hard-coded value to each span.</summary>
 public partial class V1alpha1TelemetrySpecTracingCustomTagsLiteral
 {
     /// <summary>The tag value to use.</summary>
@@ -262,6 +277,7 @@ public partial class V1alpha1TelemetrySpecTracingCustomTagsLiteral
     public string Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1TelemetrySpecTracingCustomTags
 {
     /// <summary>Environment adds the value of an environment variable to each span.</summary>
@@ -290,6 +306,7 @@ public enum V1alpha1TelemetrySpecTracingMatchModeEnum
     SERVER
 }
 
+/// <summary>Allows tailoring of behavior to specific conditions.</summary>
 public partial class V1alpha1TelemetrySpecTracingMatch
 {
     /// <summary>This determines whether or not to apply the tracing configuration based on the direction of traffic relative to the proxied workload.  Valid Options: CLIENT_AND_SERVER, CLIENT, SERVER</summary>
@@ -298,6 +315,7 @@ public partial class V1alpha1TelemetrySpecTracingMatch
     public V1alpha1TelemetrySpecTracingMatchModeEnum? Mode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1TelemetrySpecTracingProviders
 {
     /// <summary>Required.</summary>
@@ -305,6 +323,7 @@ public partial class V1alpha1TelemetrySpecTracingProviders
     public string Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1TelemetrySpecTracing
 {
     /// <summary>Optional.</summary>
@@ -332,6 +351,7 @@ public partial class V1alpha1TelemetrySpecTracing
     public bool? UseRequestIdForTraceSampling { get; set; }
 }
 
+/// <summary>Telemetry configuration for workloads. See more details at: https://istio.io/docs/reference/config/telemetry.html</summary>
 public partial class V1alpha1TelemetrySpec
 {
     /// <summary>Optional.</summary>
@@ -360,6 +380,7 @@ public partial class V1alpha1TelemetrySpec
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1Telemetry : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1TelemetrySpec>, IStatus<JsonNode>
 {
     public const string KubeApiVersion = "v1alpha1";

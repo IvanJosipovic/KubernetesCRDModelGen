@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.helm.crossplane.io;
+/// <summary>ConnectionDetail todo</summary>
 public partial class V1beta1ReleaseSpecConnectionDetails
 {
     /// <summary>API version of the referent.</summary>
@@ -57,6 +58,7 @@ public enum V1beta1ReleaseSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>PullSecretRef is reference to the secret containing credentials to helm repository</summary>
 public partial class V1beta1ReleaseSpecForProviderChartPullSecretRef
 {
     /// <summary>Name of the secret.</summary>
@@ -68,6 +70,7 @@ public partial class V1beta1ReleaseSpecForProviderChartPullSecretRef
     public string Namespace { get; set; }
 }
 
+/// <summary>A ChartSpec defines the chart spec for a Release</summary>
 public partial class V1beta1ReleaseSpecForProviderChart
 {
     /// <summary>Name of Helm chart, required if ChartSpec.URL not set</summary>
@@ -91,6 +94,7 @@ public partial class V1beta1ReleaseSpecForProviderChart
     public string? Version { get; set; }
 }
 
+/// <summary>DataKeySelector defines required spec to access a key of a configmap or secret</summary>
 public partial class V1beta1ReleaseSpecForProviderPatchesFromConfigMapKeyRef
 {
     /// <summary></summary>
@@ -110,6 +114,7 @@ public partial class V1beta1ReleaseSpecForProviderPatchesFromConfigMapKeyRef
     public bool? Optional { get; set; }
 }
 
+/// <summary>DataKeySelector defines required spec to access a key of a configmap or secret</summary>
 public partial class V1beta1ReleaseSpecForProviderPatchesFromSecretKeyRef
 {
     /// <summary></summary>
@@ -129,6 +134,7 @@ public partial class V1beta1ReleaseSpecForProviderPatchesFromSecretKeyRef
     public bool? Optional { get; set; }
 }
 
+/// <summary>ValueFromSource represents source of a value</summary>
 public partial class V1beta1ReleaseSpecForProviderPatchesFrom
 {
     /// <summary>DataKeySelector defines required spec to access a key of a configmap or secret</summary>
@@ -140,6 +146,7 @@ public partial class V1beta1ReleaseSpecForProviderPatchesFrom
     public V1beta1ReleaseSpecForProviderPatchesFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary>DataKeySelector defines required spec to access a key of a configmap or secret</summary>
 public partial class V1beta1ReleaseSpecForProviderSetValueFromConfigMapKeyRef
 {
     /// <summary></summary>
@@ -159,6 +166,7 @@ public partial class V1beta1ReleaseSpecForProviderSetValueFromConfigMapKeyRef
     public bool? Optional { get; set; }
 }
 
+/// <summary>DataKeySelector defines required spec to access a key of a configmap or secret</summary>
 public partial class V1beta1ReleaseSpecForProviderSetValueFromSecretKeyRef
 {
     /// <summary></summary>
@@ -178,6 +186,7 @@ public partial class V1beta1ReleaseSpecForProviderSetValueFromSecretKeyRef
     public bool? Optional { get; set; }
 }
 
+/// <summary>ValueFromSource represents source of a value</summary>
 public partial class V1beta1ReleaseSpecForProviderSetValueFrom
 {
     /// <summary>DataKeySelector defines required spec to access a key of a configmap or secret</summary>
@@ -189,6 +198,7 @@ public partial class V1beta1ReleaseSpecForProviderSetValueFrom
     public V1beta1ReleaseSpecForProviderSetValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary>SetVal represents a "set" value override in a Release</summary>
 public partial class V1beta1ReleaseSpecForProviderSet
 {
     /// <summary></summary>
@@ -204,6 +214,7 @@ public partial class V1beta1ReleaseSpecForProviderSet
     public V1beta1ReleaseSpecForProviderSetValueFrom? ValueFrom { get; set; }
 }
 
+/// <summary>DataKeySelector defines required spec to access a key of a configmap or secret</summary>
 public partial class V1beta1ReleaseSpecForProviderValuesFromConfigMapKeyRef
 {
     /// <summary></summary>
@@ -223,6 +234,7 @@ public partial class V1beta1ReleaseSpecForProviderValuesFromConfigMapKeyRef
     public bool? Optional { get; set; }
 }
 
+/// <summary>DataKeySelector defines required spec to access a key of a configmap or secret</summary>
 public partial class V1beta1ReleaseSpecForProviderValuesFromSecretKeyRef
 {
     /// <summary></summary>
@@ -242,6 +254,7 @@ public partial class V1beta1ReleaseSpecForProviderValuesFromSecretKeyRef
     public bool? Optional { get; set; }
 }
 
+/// <summary>ValueFromSource represents source of a value</summary>
 public partial class V1beta1ReleaseSpecForProviderValuesFrom
 {
     /// <summary>DataKeySelector defines required spec to access a key of a configmap or secret</summary>
@@ -253,6 +266,7 @@ public partial class V1beta1ReleaseSpecForProviderValuesFrom
     public V1beta1ReleaseSpecForProviderValuesFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
+/// <summary>ReleaseParameters are the configurable fields of a Release.</summary>
 public partial class V1beta1ReleaseSpecForProvider
 {
     /// <summary>A ChartSpec defines the chart spec for a Release</summary>
@@ -342,6 +356,7 @@ public enum V1beta1ReleaseSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ReleaseSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -355,6 +370,7 @@ public partial class V1beta1ReleaseSpecProviderConfigRefPolicy
     public V1beta1ReleaseSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ReleaseSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -386,6 +402,7 @@ public enum V1beta1ReleaseSpecPublishConnectionDetailsToConfigRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ReleaseSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -399,6 +416,7 @@ public partial class V1beta1ReleaseSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1ReleaseSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ReleaseSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -410,6 +428,7 @@ public partial class V1beta1ReleaseSpecPublishConnectionDetailsToConfigRef
     public V1beta1ReleaseSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ReleaseSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -425,6 +444,7 @@ public partial class V1beta1ReleaseSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ReleaseSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -440,6 +460,7 @@ public partial class V1beta1ReleaseSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ReleaseSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -451,6 +472,7 @@ public partial class V1beta1ReleaseSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>A ReleaseSpec defines the desired state of a Release.</summary>
 public partial class V1beta1ReleaseSpec
 {
     /// <summary></summary>
@@ -487,6 +509,7 @@ public partial class V1beta1ReleaseSpec
     public V1beta1ReleaseSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary>ReleaseObservation are the observable fields of a Release.</summary>
 public partial class V1beta1ReleaseStatusAtProvider
 {
     /// <summary></summary>
@@ -502,6 +525,7 @@ public partial class V1beta1ReleaseStatusAtProvider
     public string? State { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ReleaseStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -529,6 +553,7 @@ public partial class V1beta1ReleaseStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>A ReleaseStatus represents the observed state of a Release.</summary>
 public partial class V1beta1ReleaseStatus
 {
     /// <summary>ReleaseObservation are the observable fields of a Release.</summary>
@@ -557,6 +582,7 @@ public partial class V1beta1ReleaseStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>A Release is an example API type</summary>
 public partial class V1beta1Release : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ReleaseSpec>, IStatus<V1beta1ReleaseStatus>
 {
     public const string KubeApiVersion = "v1beta1";

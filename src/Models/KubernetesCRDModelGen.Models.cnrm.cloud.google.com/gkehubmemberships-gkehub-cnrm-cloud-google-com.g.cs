@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.gkehub.cnrm.cloud.google.com;
+/// <summary>Optional. How to identify workloads from this Membership. See the documentation on Workload Identity for more details: https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity</summary>
 public partial class V1beta1GKEHubMembershipSpecAuthority
 {
     /// <summary>Optional. A JSON Web Token (JWT) issuer URI. `issuer` must start with `https://` and be a valid URL with length &lt;2000 characters. If set, then Google will allow valid OIDC tokens from this issuer to authenticate within the workload_identity_pool. OIDC discovery will be performed on this URI to validate tokens from the issuer. Clearing `issuer` disables Workload Identity. `issuer` cannot be directly modified; it must be cleared (and Workload Identity disabled) before using a new issuer (and re-enabling Workload Identity).</summary>
@@ -15,6 +16,7 @@ public partial class V1beta1GKEHubMembershipSpecAuthority
     public string? Issuer { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GKEHubMembershipSpecEndpointGkeClusterResourceRef
 {
     /// <summary>Immutable. Self-link of the GCP resource for the GKE cluster. For example: //container.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster Zonal clusters are also supported.  Allowed value: The `selfLink` field of a `ContainerCluster` resource.</summary>
@@ -30,6 +32,7 @@ public partial class V1beta1GKEHubMembershipSpecEndpointGkeClusterResourceRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Optional. GKE-specific information. Only present if this Membership is a GKE cluster.</summary>
 public partial class V1beta1GKEHubMembershipSpecEndpointGkeCluster
 {
     /// <summary></summary>
@@ -37,6 +40,7 @@ public partial class V1beta1GKEHubMembershipSpecEndpointGkeCluster
     public V1beta1GKEHubMembershipSpecEndpointGkeClusterResourceRef? ResourceRef { get; set; }
 }
 
+/// <summary>Optional. Options for Kubernetes resource generation.</summary>
 public partial class V1beta1GKEHubMembershipSpecEndpointKubernetesResourceResourceOptions
 {
     /// <summary>Optional. The Connect agent version to use for connect_resources. Defaults to the latest GKE Connect version. The version must be a currently supported version, obsolete versions will be rejected.</summary>
@@ -48,6 +52,7 @@ public partial class V1beta1GKEHubMembershipSpecEndpointKubernetesResourceResour
     public bool? V1beta1Crd { get; set; }
 }
 
+/// <summary>Optional. The in-cluster Kubernetes Resources that should be applied for a correctly registered cluster, in the steady state. These resources: * Ensure that the cluster is exclusively registered to one and only one Hub Membership. * Propagate Workload Pool Information available in the Membership Authority field. * Ensure proper initial configuration of default Hub Features.</summary>
 public partial class V1beta1GKEHubMembershipSpecEndpointKubernetesResource
 {
     /// <summary>Input only. The YAML representation of the Membership CR. This field is ignored for GKE clusters where Hub can read the CR directly. Callers should provide the CR that is currently present in the cluster during CreateMembership or UpdateMembership, or leave this field empty if none exists. The CR manifest is used to validate the cluster has not been registered with another Membership.</summary>
@@ -59,6 +64,7 @@ public partial class V1beta1GKEHubMembershipSpecEndpointKubernetesResource
     public V1beta1GKEHubMembershipSpecEndpointKubernetesResourceResourceOptions? ResourceOptions { get; set; }
 }
 
+/// <summary>Optional. Endpoint information to reach this member.</summary>
 public partial class V1beta1GKEHubMembershipSpecEndpoint
 {
     /// <summary>Optional. GKE-specific information. Only present if this Membership is a GKE cluster.</summary>
@@ -70,6 +76,7 @@ public partial class V1beta1GKEHubMembershipSpecEndpoint
     public V1beta1GKEHubMembershipSpecEndpointKubernetesResource? KubernetesResource { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GKEHubMembershipSpec
 {
     /// <summary>Optional. How to identify workloads from this Membership. See the documentation on Workload Identity for more details: https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity</summary>
@@ -101,6 +108,7 @@ public partial class V1beta1GKEHubMembershipSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GKEHubMembershipStatusAuthority
 {
     /// <summary>Output only. An identity provider that reflects the `issuer` in the workload identity pool.</summary>
@@ -112,6 +120,7 @@ public partial class V1beta1GKEHubMembershipStatusAuthority
     public string? WorkloadIdentityPool { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GKEHubMembershipStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -135,6 +144,7 @@ public partial class V1beta1GKEHubMembershipStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary>Output only. Useful Kubernetes-specific metadata.</summary>
 public partial class V1beta1GKEHubMembershipStatusEndpointKubernetesMetadata
 {
     /// <summary>Output only. Kubernetes API server version string as reported by `/version`.</summary>
@@ -162,6 +172,7 @@ public partial class V1beta1GKEHubMembershipStatusEndpointKubernetesMetadata
     public long? VcpuCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GKEHubMembershipStatusEndpointKubernetesResourceConnectResources
 {
     /// <summary>Whether the resource provided in the manifest is `cluster_scoped`. If unset, the manifest is assumed to be namespace scoped. This field is used for REST mapping when applying the resource in a cluster.</summary>
@@ -173,6 +184,7 @@ public partial class V1beta1GKEHubMembershipStatusEndpointKubernetesResourceConn
     public string? Manifest { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GKEHubMembershipStatusEndpointKubernetesResourceMembershipResources
 {
     /// <summary>Whether the resource provided in the manifest is `cluster_scoped`. If unset, the manifest is assumed to be namespace scoped. This field is used for REST mapping when applying the resource in a cluster.</summary>
@@ -184,6 +196,7 @@ public partial class V1beta1GKEHubMembershipStatusEndpointKubernetesResourceMemb
     public string? Manifest { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GKEHubMembershipStatusEndpointKubernetesResource
 {
     /// <summary>Output only. The Kubernetes resources for installing the GKE Connect agent This field is only populated in the Membership returned from a successful long-running operation from CreateMembership or UpdateMembership. It is not populated during normal GetMembership or ListMemberships requests. To get the resource manifest after the initial registration, the caller should make a UpdateMembership call with an empty field mask.</summary>
@@ -195,6 +208,7 @@ public partial class V1beta1GKEHubMembershipStatusEndpointKubernetesResource
     public IList<V1beta1GKEHubMembershipStatusEndpointKubernetesResourceMembershipResources>? MembershipResources { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GKEHubMembershipStatusEndpoint
 {
     /// <summary>Output only. Useful Kubernetes-specific metadata.</summary>
@@ -206,6 +220,7 @@ public partial class V1beta1GKEHubMembershipStatusEndpoint
     public V1beta1GKEHubMembershipStatusEndpointKubernetesResource? KubernetesResource { get; set; }
 }
 
+/// <summary>Output only. State of the Membership resource.</summary>
 public partial class V1beta1GKEHubMembershipStatusState
 {
     /// <summary>Output only. The current state of the Membership resource. Possible values: CODE_UNSPECIFIED, CREATING, READY, DELETING, UPDATING, SERVICE_UPDATING</summary>
@@ -213,6 +228,7 @@ public partial class V1beta1GKEHubMembershipStatusState
     public string? Code { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1GKEHubMembershipStatus
 {
     /// <summary></summary>
@@ -257,6 +273,7 @@ public partial class V1beta1GKEHubMembershipStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1GKEHubMembership : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1GKEHubMembershipSpec>, IStatus<V1beta1GKEHubMembershipStatus>
 {
     public const string KubeApiVersion = "v1beta1";

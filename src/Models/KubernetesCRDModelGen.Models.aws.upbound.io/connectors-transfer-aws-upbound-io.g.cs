@@ -38,6 +38,7 @@ public enum V1beta1ConnectorSpecForProviderAccessRoleRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectorSpecForProviderAccessRoleRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1ConnectorSpecForProviderAccessRoleRefPolicy
     public V1beta1ConnectorSpecForProviderAccessRoleRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate accessRole.</summary>
 public partial class V1beta1ConnectorSpecForProviderAccessRoleRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1ConnectorSpecForProviderAccessRoleSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectorSpecForProviderAccessRoleSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1ConnectorSpecForProviderAccessRoleSelectorPolicy
     public V1beta1ConnectorSpecForProviderAccessRoleSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate accessRole.</summary>
 public partial class V1beta1ConnectorSpecForProviderAccessRoleSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1ConnectorSpecForProviderAccessRoleSelector
     public V1beta1ConnectorSpecForProviderAccessRoleSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecForProviderAs2Config
 {
     /// <summary>Specifies weather AS2 file is compressed. The valud values are ZLIB and  DISABLED.</summary>
@@ -165,6 +170,7 @@ public enum V1beta1ConnectorSpecForProviderSftpConfigUserSecretIdRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectorSpecForProviderSftpConfigUserSecretIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -178,6 +184,7 @@ public partial class V1beta1ConnectorSpecForProviderSftpConfigUserSecretIdRefPol
     public V1beta1ConnectorSpecForProviderSftpConfigUserSecretIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Secret in secretsmanager to populate userSecretId.</summary>
 public partial class V1beta1ConnectorSpecForProviderSftpConfigUserSecretIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -209,6 +216,7 @@ public enum V1beta1ConnectorSpecForProviderSftpConfigUserSecretIdSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectorSpecForProviderSftpConfigUserSecretIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -222,6 +230,7 @@ public partial class V1beta1ConnectorSpecForProviderSftpConfigUserSecretIdSelect
     public V1beta1ConnectorSpecForProviderSftpConfigUserSecretIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Secret in secretsmanager to populate userSecretId.</summary>
 public partial class V1beta1ConnectorSpecForProviderSftpConfigUserSecretIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -237,6 +246,7 @@ public partial class V1beta1ConnectorSpecForProviderSftpConfigUserSecretIdSelect
     public V1beta1ConnectorSpecForProviderSftpConfigUserSecretIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecForProviderSftpConfig
 {
     /// <summary>A list of public portion of the host key, or keys, that are used to authenticate the user to the external server to which you are connecting.(https://docs.aws.amazon.com/transfer/latest/userguide/API_SftpConnectorConfig.html)</summary>
@@ -256,6 +266,7 @@ public partial class V1beta1ConnectorSpecForProviderSftpConfig
     public V1beta1ConnectorSpecForProviderSftpConfigUserSecretIdSelector? UserSecretIdSelector { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecForProvider
 {
     /// <summary>The IAM Role which provides read and write access to the parent directory of the file location mentioned in the StartFileTransfer request.</summary>
@@ -319,6 +330,7 @@ public enum V1beta1ConnectorSpecInitProviderAccessRoleRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectorSpecInitProviderAccessRoleRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -332,6 +344,7 @@ public partial class V1beta1ConnectorSpecInitProviderAccessRoleRefPolicy
     public V1beta1ConnectorSpecInitProviderAccessRoleRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate accessRole.</summary>
 public partial class V1beta1ConnectorSpecInitProviderAccessRoleRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -363,6 +376,7 @@ public enum V1beta1ConnectorSpecInitProviderAccessRoleSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectorSpecInitProviderAccessRoleSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -376,6 +390,7 @@ public partial class V1beta1ConnectorSpecInitProviderAccessRoleSelectorPolicy
     public V1beta1ConnectorSpecInitProviderAccessRoleSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate accessRole.</summary>
 public partial class V1beta1ConnectorSpecInitProviderAccessRoleSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -391,6 +406,7 @@ public partial class V1beta1ConnectorSpecInitProviderAccessRoleSelector
     public V1beta1ConnectorSpecInitProviderAccessRoleSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecInitProviderAs2Config
 {
     /// <summary>Specifies weather AS2 file is compressed. The valud values are ZLIB and  DISABLED.</summary>
@@ -446,6 +462,7 @@ public enum V1beta1ConnectorSpecInitProviderSftpConfigUserSecretIdRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectorSpecInitProviderSftpConfigUserSecretIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -459,6 +476,7 @@ public partial class V1beta1ConnectorSpecInitProviderSftpConfigUserSecretIdRefPo
     public V1beta1ConnectorSpecInitProviderSftpConfigUserSecretIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Secret in secretsmanager to populate userSecretId.</summary>
 public partial class V1beta1ConnectorSpecInitProviderSftpConfigUserSecretIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -490,6 +508,7 @@ public enum V1beta1ConnectorSpecInitProviderSftpConfigUserSecretIdSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ConnectorSpecInitProviderSftpConfigUserSecretIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -503,6 +522,7 @@ public partial class V1beta1ConnectorSpecInitProviderSftpConfigUserSecretIdSelec
     public V1beta1ConnectorSpecInitProviderSftpConfigUserSecretIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Secret in secretsmanager to populate userSecretId.</summary>
 public partial class V1beta1ConnectorSpecInitProviderSftpConfigUserSecretIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -518,6 +538,7 @@ public partial class V1beta1ConnectorSpecInitProviderSftpConfigUserSecretIdSelec
     public V1beta1ConnectorSpecInitProviderSftpConfigUserSecretIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorSpecInitProviderSftpConfig
 {
     /// <summary>A list of public portion of the host key, or keys, that are used to authenticate the user to the external server to which you are connecting.(https://docs.aws.amazon.com/transfer/latest/userguide/API_SftpConnectorConfig.html)</summary>
@@ -537,6 +558,7 @@ public partial class V1beta1ConnectorSpecInitProviderSftpConfig
     public V1beta1ConnectorSpecInitProviderSftpConfigUserSecretIdSelector? UserSecretIdSelector { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ConnectorSpecInitProvider
 {
     /// <summary>The IAM Role which provides read and write access to the parent directory of the file location mentioned in the StartFileTransfer request.</summary>
@@ -618,6 +640,7 @@ public enum V1beta1ConnectorSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectorSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -631,6 +654,7 @@ public partial class V1beta1ConnectorSpecProviderConfigRefPolicy
     public V1beta1ConnectorSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ConnectorSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -662,6 +686,7 @@ public enum V1beta1ConnectorSpecPublishConnectionDetailsToConfigRefPolicyResolve
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ConnectorSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -675,6 +700,7 @@ public partial class V1beta1ConnectorSpecPublishConnectionDetailsToConfigRefPoli
     public V1beta1ConnectorSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ConnectorSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -686,6 +712,7 @@ public partial class V1beta1ConnectorSpecPublishConnectionDetailsToConfigRef
     public V1beta1ConnectorSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ConnectorSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -701,6 +728,7 @@ public partial class V1beta1ConnectorSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ConnectorSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -716,6 +744,7 @@ public partial class V1beta1ConnectorSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ConnectorSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -727,6 +756,7 @@ public partial class V1beta1ConnectorSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ConnectorSpec defines the desired state of Connector</summary>
 public partial class V1beta1ConnectorSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -759,6 +789,7 @@ public partial class V1beta1ConnectorSpec
     public V1beta1ConnectorSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorStatusAtProviderAs2Config
 {
     /// <summary>Specifies weather AS2 file is compressed. The valud values are ZLIB and  DISABLED.</summary>
@@ -794,6 +825,7 @@ public partial class V1beta1ConnectorStatusAtProviderAs2Config
     public string? SigningAlgorithm { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorStatusAtProviderSftpConfig
 {
     /// <summary>A list of public portion of the host key, or keys, that are used to authenticate the user to the external server to which you are connecting.(https://docs.aws.amazon.com/transfer/latest/userguide/API_SftpConnectorConfig.html)</summary>
@@ -805,6 +837,7 @@ public partial class V1beta1ConnectorStatusAtProviderSftpConfig
     public string? UserSecretId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ConnectorStatusAtProvider
 {
     /// <summary>The IAM Role which provides read and write access to the parent directory of the file location mentioned in the StartFileTransfer request.</summary>
@@ -852,6 +885,7 @@ public partial class V1beta1ConnectorStatusAtProvider
     public string? Url { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ConnectorStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -879,6 +913,7 @@ public partial class V1beta1ConnectorStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ConnectorStatus defines the observed state of Connector.</summary>
 public partial class V1beta1ConnectorStatus
 {
     /// <summary></summary>
@@ -895,6 +930,7 @@ public partial class V1beta1ConnectorStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Connector is the Schema for the Connectors API. Provides a AWS Transfer AS2 Connector Resource</summary>
 public partial class V1beta1Connector : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ConnectorSpec>, IStatus<V1beta1ConnectorStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -18,6 +18,7 @@ public enum V1beta1VoiceConnectorTerminationCredentialsSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>RFC2617 compliant password associated with the SIP credentials.</summary>
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpecForProviderCredentialsPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -33,6 +34,7 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsSpecForProviderC
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpecForProviderCredentials
 {
     /// <summary>RFC2617 compliant password associated with the SIP credentials.</summary>
@@ -64,6 +66,7 @@ public enum V1beta1VoiceConnectorTerminationCredentialsSpecForProviderVoiceConne
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpecForProviderVoiceConnectorIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -77,6 +80,7 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsSpecForProviderV
     public V1beta1VoiceConnectorTerminationCredentialsSpecForProviderVoiceConnectorIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VoiceConnector in chime to populate voiceConnectorId.</summary>
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpecForProviderVoiceConnectorIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -108,6 +112,7 @@ public enum V1beta1VoiceConnectorTerminationCredentialsSpecForProviderVoiceConne
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpecForProviderVoiceConnectorIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -121,6 +126,7 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsSpecForProviderV
     public V1beta1VoiceConnectorTerminationCredentialsSpecForProviderVoiceConnectorIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VoiceConnector in chime to populate voiceConnectorId.</summary>
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpecForProviderVoiceConnectorIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -136,6 +142,7 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsSpecForProviderV
     public V1beta1VoiceConnectorTerminationCredentialsSpecForProviderVoiceConnectorIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpecForProvider
 {
     /// <summary>List of termination SIP credentials.</summary>
@@ -159,6 +166,7 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsSpecForProvider
     public V1beta1VoiceConnectorTerminationCredentialsSpecForProviderVoiceConnectorIdSelector? VoiceConnectorIdSelector { get; set; }
 }
 
+/// <summary>RFC2617 compliant password associated with the SIP credentials.</summary>
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpecInitProviderCredentialsPasswordSecretRef
 {
     /// <summary>The key to select.</summary>
@@ -174,6 +182,7 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsSpecInitProvider
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpecInitProviderCredentials
 {
     /// <summary>RFC2617 compliant password associated with the SIP credentials.</summary>
@@ -205,6 +214,7 @@ public enum V1beta1VoiceConnectorTerminationCredentialsSpecInitProviderVoiceConn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpecInitProviderVoiceConnectorIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -218,6 +228,7 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsSpecInitProvider
     public V1beta1VoiceConnectorTerminationCredentialsSpecInitProviderVoiceConnectorIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a VoiceConnector in chime to populate voiceConnectorId.</summary>
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpecInitProviderVoiceConnectorIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -249,6 +260,7 @@ public enum V1beta1VoiceConnectorTerminationCredentialsSpecInitProviderVoiceConn
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpecInitProviderVoiceConnectorIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -262,6 +274,7 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsSpecInitProvider
     public V1beta1VoiceConnectorTerminationCredentialsSpecInitProviderVoiceConnectorIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a VoiceConnector in chime to populate voiceConnectorId.</summary>
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpecInitProviderVoiceConnectorIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -277,6 +290,7 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsSpecInitProvider
     public V1beta1VoiceConnectorTerminationCredentialsSpecInitProviderVoiceConnectorIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpecInitProvider
 {
     /// <summary>List of termination SIP credentials.</summary>
@@ -338,6 +352,7 @@ public enum V1beta1VoiceConnectorTerminationCredentialsSpecProviderConfigRefPoli
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -351,6 +366,7 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsSpecProviderConf
     public V1beta1VoiceConnectorTerminationCredentialsSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -382,6 +398,7 @@ public enum V1beta1VoiceConnectorTerminationCredentialsSpecPublishConnectionDeta
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -395,6 +412,7 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsSpecPublishConne
     public V1beta1VoiceConnectorTerminationCredentialsSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -406,6 +424,7 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsSpecPublishConne
     public V1beta1VoiceConnectorTerminationCredentialsSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -421,6 +440,7 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsSpecPublishConne
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -436,6 +456,7 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsSpecPublishConne
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -447,6 +468,7 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsSpecWriteConnect
     public string Namespace { get; set; }
 }
 
+/// <summary>VoiceConnectorTerminationCredentialsSpec defines the desired state of VoiceConnectorTerminationCredentials</summary>
 public partial class V1beta1VoiceConnectorTerminationCredentialsSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -479,6 +501,7 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsSpec
     public V1beta1VoiceConnectorTerminationCredentialsSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VoiceConnectorTerminationCredentialsStatusAtProviderCredentials
 {
     /// <summary>RFC2617 compliant username associated with the SIP credentials.</summary>
@@ -486,6 +509,7 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsStatusAtProvider
     public string? Username { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1VoiceConnectorTerminationCredentialsStatusAtProvider
 {
     /// <summary>List of termination SIP credentials.</summary>
@@ -501,6 +525,7 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsStatusAtProvider
     public string? VoiceConnectorId { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1VoiceConnectorTerminationCredentialsStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -528,6 +553,7 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>VoiceConnectorTerminationCredentialsStatus defines the observed state of VoiceConnectorTerminationCredentials.</summary>
 public partial class V1beta1VoiceConnectorTerminationCredentialsStatus
 {
     /// <summary></summary>
@@ -544,6 +570,7 @@ public partial class V1beta1VoiceConnectorTerminationCredentialsStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>VoiceConnectorTerminationCredentials is the Schema for the VoiceConnectorTerminationCredentialss API. Adds termination SIP credentials for the specified Amazon Chime Voice Connector.</summary>
 public partial class V1beta1VoiceConnectorTerminationCredentials : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1VoiceConnectorTerminationCredentialsSpec>, IStatus<V1beta1VoiceConnectorTerminationCredentialsStatus>
 {
     public const string KubeApiVersion = "v1beta1";

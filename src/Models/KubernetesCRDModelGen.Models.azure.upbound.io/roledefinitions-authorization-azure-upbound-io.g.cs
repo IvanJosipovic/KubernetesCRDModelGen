@@ -18,6 +18,7 @@ public enum V1beta1RoleDefinitionSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1RoleDefinitionSpecForProviderPermissions
 {
     /// <summary>One or more Allowed Actions, such as *, Microsoft.Resources/subscriptions/resourceGroups/read. See 'Azure Resource Manager resource provider operations' for details.</summary>
@@ -37,6 +38,7 @@ public partial class V1beta1RoleDefinitionSpecForProviderPermissions
     public IList<string>? NotDataActions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RoleDefinitionSpecForProvider
 {
     /// <summary>One or more assignable scopes for this Role Definition, such as /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM.</summary>
@@ -64,6 +66,7 @@ public partial class V1beta1RoleDefinitionSpecForProvider
     public string? Scope { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RoleDefinitionSpecInitProviderPermissions
 {
     /// <summary>One or more Allowed Actions, such as *, Microsoft.Resources/subscriptions/resourceGroups/read. See 'Azure Resource Manager resource provider operations' for details.</summary>
@@ -83,6 +86,7 @@ public partial class V1beta1RoleDefinitionSpecInitProviderPermissions
     public IList<string>? NotDataActions { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1RoleDefinitionSpecInitProvider
 {
     /// <summary>One or more assignable scopes for this Role Definition, such as /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM.</summary>
@@ -152,6 +156,7 @@ public enum V1beta1RoleDefinitionSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RoleDefinitionSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -165,6 +170,7 @@ public partial class V1beta1RoleDefinitionSpecProviderConfigRefPolicy
     public V1beta1RoleDefinitionSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1RoleDefinitionSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -196,6 +202,7 @@ public enum V1beta1RoleDefinitionSpecPublishConnectionDetailsToConfigRefPolicyRe
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1RoleDefinitionSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -209,6 +216,7 @@ public partial class V1beta1RoleDefinitionSpecPublishConnectionDetailsToConfigRe
     public V1beta1RoleDefinitionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1RoleDefinitionSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -220,6 +228,7 @@ public partial class V1beta1RoleDefinitionSpecPublishConnectionDetailsToConfigRe
     public V1beta1RoleDefinitionSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1RoleDefinitionSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -235,6 +244,7 @@ public partial class V1beta1RoleDefinitionSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1RoleDefinitionSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -250,6 +260,7 @@ public partial class V1beta1RoleDefinitionSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1RoleDefinitionSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -261,6 +272,7 @@ public partial class V1beta1RoleDefinitionSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>RoleDefinitionSpec defines the desired state of RoleDefinition</summary>
 public partial class V1beta1RoleDefinitionSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -293,6 +305,7 @@ public partial class V1beta1RoleDefinitionSpec
     public V1beta1RoleDefinitionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RoleDefinitionStatusAtProviderPermissions
 {
     /// <summary>One or more Allowed Actions, such as *, Microsoft.Resources/subscriptions/resourceGroups/read. See 'Azure Resource Manager resource provider operations' for details.</summary>
@@ -312,6 +325,7 @@ public partial class V1beta1RoleDefinitionStatusAtProviderPermissions
     public IList<string>? NotDataActions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1RoleDefinitionStatusAtProvider
 {
     /// <summary>One or more assignable scopes for this Role Definition, such as /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM.</summary>
@@ -347,6 +361,7 @@ public partial class V1beta1RoleDefinitionStatusAtProvider
     public string? Scope { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1RoleDefinitionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -374,6 +389,7 @@ public partial class V1beta1RoleDefinitionStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>RoleDefinitionStatus defines the observed state of RoleDefinition.</summary>
 public partial class V1beta1RoleDefinitionStatus
 {
     /// <summary></summary>
@@ -390,6 +406,7 @@ public partial class V1beta1RoleDefinitionStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>RoleDefinition is the Schema for the RoleDefinitions API. Manages a custom Role Definition.</summary>
 public partial class V1beta1RoleDefinition : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1RoleDefinitionSpec>, IStatus<V1beta1RoleDefinitionStatus>
 {
     public const string KubeApiVersion = "v1beta1";

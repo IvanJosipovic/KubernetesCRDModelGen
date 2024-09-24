@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.monitoring.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1beta1MonitoringGroupSpecParentRef
 {
     /// <summary>The name of the group's parent, if it has one. The format is: projects/ For groups with no parent, `parent_name` is the empty string, ``.  Allowed value: The Google Cloud resource name of a `MonitoringGroup` resource (format: `projects/{{project}}/groups/{{name}}`).</summary>
@@ -23,6 +24,7 @@ public partial class V1beta1MonitoringGroupSpecParentRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Immutable. The Project that this resource belongs to.</summary>
 public partial class V1beta1MonitoringGroupSpecProjectRef
 {
     /// <summary>The project of the group  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
@@ -38,6 +40,7 @@ public partial class V1beta1MonitoringGroupSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringGroupSpec
 {
     /// <summary>A user-assigned name for this group, used only for display purposes.</summary>
@@ -65,6 +68,7 @@ public partial class V1beta1MonitoringGroupSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringGroupStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -88,6 +92,7 @@ public partial class V1beta1MonitoringGroupStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1MonitoringGroupStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -100,6 +105,7 @@ public partial class V1beta1MonitoringGroupStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1beta1MonitoringGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MonitoringGroupSpec>, IStatus<V1beta1MonitoringGroupStatus>
 {
     public const string KubeApiVersion = "v1beta1";

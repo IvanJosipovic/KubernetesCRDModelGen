@@ -18,6 +18,7 @@ public enum V1beta1TrailSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1TrailSpecForProviderAdvancedEventSelectorFieldSelector
 {
     /// <summary>A list of values that includes events that match the last few characters of the event record field specified as the value of field.</summary>
@@ -49,6 +50,7 @@ public partial class V1beta1TrailSpecForProviderAdvancedEventSelectorFieldSelect
     public IList<string>? StartsWith { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TrailSpecForProviderAdvancedEventSelector
 {
     /// <summary>Specifies the selector statements in an advanced event selector. Fields documented below.</summary>
@@ -80,6 +82,7 @@ public enum V1beta1TrailSpecForProviderCloudWatchLogsRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TrailSpecForProviderCloudWatchLogsRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -93,6 +96,7 @@ public partial class V1beta1TrailSpecForProviderCloudWatchLogsRoleArnRefPolicy
     public V1beta1TrailSpecForProviderCloudWatchLogsRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate cloudWatchLogsRoleArn.</summary>
 public partial class V1beta1TrailSpecForProviderCloudWatchLogsRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -124,6 +128,7 @@ public enum V1beta1TrailSpecForProviderCloudWatchLogsRoleArnSelectorPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TrailSpecForProviderCloudWatchLogsRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -137,6 +142,7 @@ public partial class V1beta1TrailSpecForProviderCloudWatchLogsRoleArnSelectorPol
     public V1beta1TrailSpecForProviderCloudWatchLogsRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate cloudWatchLogsRoleArn.</summary>
 public partial class V1beta1TrailSpecForProviderCloudWatchLogsRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -152,6 +158,7 @@ public partial class V1beta1TrailSpecForProviderCloudWatchLogsRoleArnSelector
     public V1beta1TrailSpecForProviderCloudWatchLogsRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TrailSpecForProviderEventSelectorDataResource
 {
     /// <summary>Resource type in which you want to log data events. You can specify only the following value: "AWS::S3::Object", "AWS::Lambda::Function" and "AWS::DynamoDB::Table".</summary>
@@ -163,6 +170,7 @@ public partial class V1beta1TrailSpecForProviderEventSelectorDataResource
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TrailSpecForProviderEventSelector
 {
     /// <summary>Configuration block for data events. See details below.</summary>
@@ -182,6 +190,7 @@ public partial class V1beta1TrailSpecForProviderEventSelector
     public string? ReadWriteType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TrailSpecForProviderInsightSelector
 {
     /// <summary>Type of insights to log on a trail. Valid values are: ApiCallRateInsight and ApiErrorRateInsight.</summary>
@@ -209,6 +218,7 @@ public enum V1beta1TrailSpecForProviderKmsKeyIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TrailSpecForProviderKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -222,6 +232,7 @@ public partial class V1beta1TrailSpecForProviderKmsKeyIdRefPolicy
     public V1beta1TrailSpecForProviderKmsKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1TrailSpecForProviderKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -253,6 +264,7 @@ public enum V1beta1TrailSpecForProviderKmsKeyIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TrailSpecForProviderKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -266,6 +278,7 @@ public partial class V1beta1TrailSpecForProviderKmsKeyIdSelectorPolicy
     public V1beta1TrailSpecForProviderKmsKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1TrailSpecForProviderKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -301,6 +314,7 @@ public enum V1beta1TrailSpecForProviderS3BucketNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TrailSpecForProviderS3BucketNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -314,6 +328,7 @@ public partial class V1beta1TrailSpecForProviderS3BucketNameRefPolicy
     public V1beta1TrailSpecForProviderS3BucketNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate s3BucketName.</summary>
 public partial class V1beta1TrailSpecForProviderS3BucketNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -345,6 +360,7 @@ public enum V1beta1TrailSpecForProviderS3BucketNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TrailSpecForProviderS3BucketNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -358,6 +374,7 @@ public partial class V1beta1TrailSpecForProviderS3BucketNameSelectorPolicy
     public V1beta1TrailSpecForProviderS3BucketNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate s3BucketName.</summary>
 public partial class V1beta1TrailSpecForProviderS3BucketNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -373,6 +390,7 @@ public partial class V1beta1TrailSpecForProviderS3BucketNameSelector
     public V1beta1TrailSpecForProviderS3BucketNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TrailSpecForProvider
 {
     /// <summary>Specifies an advanced event selector for enabling data event logging. Fields documented below. Conflicts with event_selector.</summary>
@@ -464,6 +482,7 @@ public partial class V1beta1TrailSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TrailSpecInitProviderAdvancedEventSelectorFieldSelector
 {
     /// <summary>A list of values that includes events that match the last few characters of the event record field specified as the value of field.</summary>
@@ -495,6 +514,7 @@ public partial class V1beta1TrailSpecInitProviderAdvancedEventSelectorFieldSelec
     public IList<string>? StartsWith { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TrailSpecInitProviderAdvancedEventSelector
 {
     /// <summary>Specifies the selector statements in an advanced event selector. Fields documented below.</summary>
@@ -526,6 +546,7 @@ public enum V1beta1TrailSpecInitProviderCloudWatchLogsRoleArnRefPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TrailSpecInitProviderCloudWatchLogsRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -539,6 +560,7 @@ public partial class V1beta1TrailSpecInitProviderCloudWatchLogsRoleArnRefPolicy
     public V1beta1TrailSpecInitProviderCloudWatchLogsRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate cloudWatchLogsRoleArn.</summary>
 public partial class V1beta1TrailSpecInitProviderCloudWatchLogsRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -570,6 +592,7 @@ public enum V1beta1TrailSpecInitProviderCloudWatchLogsRoleArnSelectorPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TrailSpecInitProviderCloudWatchLogsRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -583,6 +606,7 @@ public partial class V1beta1TrailSpecInitProviderCloudWatchLogsRoleArnSelectorPo
     public V1beta1TrailSpecInitProviderCloudWatchLogsRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate cloudWatchLogsRoleArn.</summary>
 public partial class V1beta1TrailSpecInitProviderCloudWatchLogsRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -598,6 +622,7 @@ public partial class V1beta1TrailSpecInitProviderCloudWatchLogsRoleArnSelector
     public V1beta1TrailSpecInitProviderCloudWatchLogsRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TrailSpecInitProviderEventSelectorDataResource
 {
     /// <summary>Resource type in which you want to log data events. You can specify only the following value: "AWS::S3::Object", "AWS::Lambda::Function" and "AWS::DynamoDB::Table".</summary>
@@ -609,6 +634,7 @@ public partial class V1beta1TrailSpecInitProviderEventSelectorDataResource
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TrailSpecInitProviderEventSelector
 {
     /// <summary>Configuration block for data events. See details below.</summary>
@@ -628,6 +654,7 @@ public partial class V1beta1TrailSpecInitProviderEventSelector
     public string? ReadWriteType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TrailSpecInitProviderInsightSelector
 {
     /// <summary>Type of insights to log on a trail. Valid values are: ApiCallRateInsight and ApiErrorRateInsight.</summary>
@@ -655,6 +682,7 @@ public enum V1beta1TrailSpecInitProviderKmsKeyIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TrailSpecInitProviderKmsKeyIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -668,6 +696,7 @@ public partial class V1beta1TrailSpecInitProviderKmsKeyIdRefPolicy
     public V1beta1TrailSpecInitProviderKmsKeyIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1TrailSpecInitProviderKmsKeyIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -699,6 +728,7 @@ public enum V1beta1TrailSpecInitProviderKmsKeyIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TrailSpecInitProviderKmsKeyIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -712,6 +742,7 @@ public partial class V1beta1TrailSpecInitProviderKmsKeyIdSelectorPolicy
     public V1beta1TrailSpecInitProviderKmsKeyIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 public partial class V1beta1TrailSpecInitProviderKmsKeyIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -747,6 +778,7 @@ public enum V1beta1TrailSpecInitProviderS3BucketNameRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TrailSpecInitProviderS3BucketNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -760,6 +792,7 @@ public partial class V1beta1TrailSpecInitProviderS3BucketNameRefPolicy
     public V1beta1TrailSpecInitProviderS3BucketNameRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Bucket in s3 to populate s3BucketName.</summary>
 public partial class V1beta1TrailSpecInitProviderS3BucketNameRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -791,6 +824,7 @@ public enum V1beta1TrailSpecInitProviderS3BucketNameSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1TrailSpecInitProviderS3BucketNameSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -804,6 +838,7 @@ public partial class V1beta1TrailSpecInitProviderS3BucketNameSelectorPolicy
     public V1beta1TrailSpecInitProviderS3BucketNameSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Bucket in s3 to populate s3BucketName.</summary>
 public partial class V1beta1TrailSpecInitProviderS3BucketNameSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -819,6 +854,7 @@ public partial class V1beta1TrailSpecInitProviderS3BucketNameSelector
     public V1beta1TrailSpecInitProviderS3BucketNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1TrailSpecInitProvider
 {
     /// <summary>Specifies an advanced event selector for enabling data event logging. Fields documented below. Conflicts with event_selector.</summary>
@@ -948,6 +984,7 @@ public enum V1beta1TrailSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TrailSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -961,6 +998,7 @@ public partial class V1beta1TrailSpecProviderConfigRefPolicy
     public V1beta1TrailSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1TrailSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -992,6 +1030,7 @@ public enum V1beta1TrailSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1TrailSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1005,6 +1044,7 @@ public partial class V1beta1TrailSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1TrailSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1TrailSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1016,6 +1056,7 @@ public partial class V1beta1TrailSpecPublishConnectionDetailsToConfigRef
     public V1beta1TrailSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1TrailSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1031,6 +1072,7 @@ public partial class V1beta1TrailSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1TrailSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1046,6 +1088,7 @@ public partial class V1beta1TrailSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1TrailSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1057,6 +1100,7 @@ public partial class V1beta1TrailSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>TrailSpec defines the desired state of Trail</summary>
 public partial class V1beta1TrailSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1089,6 +1133,7 @@ public partial class V1beta1TrailSpec
     public V1beta1TrailSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TrailStatusAtProviderAdvancedEventSelectorFieldSelector
 {
     /// <summary>A list of values that includes events that match the last few characters of the event record field specified as the value of field.</summary>
@@ -1120,6 +1165,7 @@ public partial class V1beta1TrailStatusAtProviderAdvancedEventSelectorFieldSelec
     public IList<string>? StartsWith { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TrailStatusAtProviderAdvancedEventSelector
 {
     /// <summary>Specifies the selector statements in an advanced event selector. Fields documented below.</summary>
@@ -1131,6 +1177,7 @@ public partial class V1beta1TrailStatusAtProviderAdvancedEventSelector
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TrailStatusAtProviderEventSelectorDataResource
 {
     /// <summary>Resource type in which you want to log data events. You can specify only the following value: "AWS::S3::Object", "AWS::Lambda::Function" and "AWS::DynamoDB::Table".</summary>
@@ -1142,6 +1189,7 @@ public partial class V1beta1TrailStatusAtProviderEventSelectorDataResource
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TrailStatusAtProviderEventSelector
 {
     /// <summary>Configuration block for data events. See details below.</summary>
@@ -1161,6 +1209,7 @@ public partial class V1beta1TrailStatusAtProviderEventSelector
     public string? ReadWriteType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TrailStatusAtProviderInsightSelector
 {
     /// <summary>Type of insights to log on a trail. Valid values are: ApiCallRateInsight and ApiErrorRateInsight.</summary>
@@ -1168,6 +1217,7 @@ public partial class V1beta1TrailStatusAtProviderInsightSelector
     public string? InsightType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1TrailStatusAtProvider
 {
     /// <summary>Specifies an advanced event selector for enabling data event logging. Fields documented below. Conflicts with event_selector.</summary>
@@ -1247,6 +1297,7 @@ public partial class V1beta1TrailStatusAtProvider
     public IDictionary<string, string>? TagsAll { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1TrailStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1274,6 +1325,7 @@ public partial class V1beta1TrailStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>TrailStatus defines the observed state of Trail.</summary>
 public partial class V1beta1TrailStatus
 {
     /// <summary></summary>
@@ -1290,6 +1342,7 @@ public partial class V1beta1TrailStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Trail is the Schema for the Trails API. Provides a CloudTrail resource.</summary>
 public partial class V1beta1Trail : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1TrailSpec>, IStatus<V1beta1TrailStatus>
 {
     public const string KubeApiVersion = "v1beta1";

@@ -38,6 +38,7 @@ public enum V1beta1CreatorSpecForProviderMapsAccountIdRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CreatorSpecForProviderMapsAccountIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -51,6 +52,7 @@ public partial class V1beta1CreatorSpecForProviderMapsAccountIdRefPolicy
     public V1beta1CreatorSpecForProviderMapsAccountIdRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Account in maps to populate mapsAccountId.</summary>
 public partial class V1beta1CreatorSpecForProviderMapsAccountIdRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -82,6 +84,7 @@ public enum V1beta1CreatorSpecForProviderMapsAccountIdSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1CreatorSpecForProviderMapsAccountIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -95,6 +98,7 @@ public partial class V1beta1CreatorSpecForProviderMapsAccountIdSelectorPolicy
     public V1beta1CreatorSpecForProviderMapsAccountIdSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Account in maps to populate mapsAccountId.</summary>
 public partial class V1beta1CreatorSpecForProviderMapsAccountIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -110,6 +114,7 @@ public partial class V1beta1CreatorSpecForProviderMapsAccountIdSelector
     public V1beta1CreatorSpecForProviderMapsAccountIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CreatorSpecForProvider
 {
     /// <summary>The Azure Region where the Azure Maps Creator should exist. Changing this forces a new resource to be created.</summary>
@@ -137,6 +142,7 @@ public partial class V1beta1CreatorSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1CreatorSpecInitProvider
 {
     /// <summary>The Azure Region where the Azure Maps Creator should exist. Changing this forces a new resource to be created.</summary>
@@ -194,6 +200,7 @@ public enum V1beta1CreatorSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CreatorSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -207,6 +214,7 @@ public partial class V1beta1CreatorSpecProviderConfigRefPolicy
     public V1beta1CreatorSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1CreatorSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -238,6 +246,7 @@ public enum V1beta1CreatorSpecPublishConnectionDetailsToConfigRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1CreatorSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -251,6 +260,7 @@ public partial class V1beta1CreatorSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1CreatorSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1CreatorSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -262,6 +272,7 @@ public partial class V1beta1CreatorSpecPublishConnectionDetailsToConfigRef
     public V1beta1CreatorSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1CreatorSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -277,6 +288,7 @@ public partial class V1beta1CreatorSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1CreatorSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -292,6 +304,7 @@ public partial class V1beta1CreatorSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1CreatorSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -303,6 +316,7 @@ public partial class V1beta1CreatorSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>CreatorSpec defines the desired state of Creator</summary>
 public partial class V1beta1CreatorSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -335,6 +349,7 @@ public partial class V1beta1CreatorSpec
     public V1beta1CreatorSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1CreatorStatusAtProvider
 {
     /// <summary>The ID of the Azure Maps Creator.</summary>
@@ -358,6 +373,7 @@ public partial class V1beta1CreatorStatusAtProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1CreatorStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -385,6 +401,7 @@ public partial class V1beta1CreatorStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>CreatorStatus defines the observed state of Creator.</summary>
 public partial class V1beta1CreatorStatus
 {
     /// <summary></summary>
@@ -401,6 +418,7 @@ public partial class V1beta1CreatorStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Creator is the Schema for the Creators API. Manages an Azure Maps Creator.</summary>
 public partial class V1beta1Creator : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1CreatorSpec>, IStatus<V1beta1CreatorStatus>
 {
     public const string KubeApiVersion = "v1beta1";

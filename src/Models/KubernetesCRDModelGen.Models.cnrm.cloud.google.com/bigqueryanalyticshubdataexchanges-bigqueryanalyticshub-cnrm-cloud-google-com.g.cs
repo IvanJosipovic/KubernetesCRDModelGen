@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigqueryanalyticshub.cnrm.cloud.google.com;
+/// <summary>The project that this resource belongs to.</summary>
 public partial class V1alpha1BigQueryAnalyticsHubDataExchangeSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
@@ -23,6 +24,7 @@ public partial class V1alpha1BigQueryAnalyticsHubDataExchangeSpecProjectRef
     public string? Namespace { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1BigQueryAnalyticsHubDataExchangeSpec
 {
     /// <summary>Description of the data exchange.</summary>
@@ -58,6 +60,7 @@ public partial class V1alpha1BigQueryAnalyticsHubDataExchangeSpec
     public string? ResourceID { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1BigQueryAnalyticsHubDataExchangeStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -81,6 +84,7 @@ public partial class V1alpha1BigQueryAnalyticsHubDataExchangeStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1BigQueryAnalyticsHubDataExchangeStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
@@ -101,6 +105,7 @@ public partial class V1alpha1BigQueryAnalyticsHubDataExchangeStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1BigQueryAnalyticsHubDataExchange : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1BigQueryAnalyticsHubDataExchangeSpec>, IStatus<V1alpha1BigQueryAnalyticsHubDataExchangeStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

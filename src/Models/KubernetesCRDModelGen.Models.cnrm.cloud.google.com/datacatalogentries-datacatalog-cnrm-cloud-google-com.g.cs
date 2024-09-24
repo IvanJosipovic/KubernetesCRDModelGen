@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datacatalog.cnrm.cloud.google.com;
+/// <summary></summary>
 public partial class V1alpha1DataCatalogEntrySpecGcsFilesetSpecSampleGcsFileSpecs
 {
     /// <summary>The full file path.</summary>
@@ -19,6 +20,7 @@ public partial class V1alpha1DataCatalogEntrySpecGcsFilesetSpecSampleGcsFileSpec
     public int? SizeBytes { get; set; }
 }
 
+/// <summary>Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.</summary>
 public partial class V1alpha1DataCatalogEntrySpecGcsFilesetSpec
 {
     /// <summary>Patterns to identify a set of files in Google Cloud Storage. See [Cloud Storage documentation](https://cloud.google.com/storage/docs/gsutil/addlhelp/WildcardNames) for more information. Note that bucket wildcards are currently not supported. Examples of valid filePatterns:  * gs://bucket_name/dir/*: matches all files within bucket_name/dir directory. * gs://bucket_name/dir/**: matches all files in bucket_name/dir spanning all subdirectories. * gs://bucket_name/file*: matches files prefixed by file in bucket_name * gs://bucket_name/??.txt: matches files with two characters followed by .txt in bucket_name * gs://bucket_name/[aeiou].txt: matches files that contain a single vowel character followed by .txt in bucket_name * gs://bucket_name/[a-m].txt: matches files that contain a, b, ... or m followed by .txt in bucket_name * gs://bucket_name/a/*/b: matches all files in bucket_name that match a/*/b pattern, such as a/c/b, a/d/b * gs://another_bucket/a.txt: matches gs://another_bucket/a.txt.</summary>
@@ -30,6 +32,7 @@ public partial class V1alpha1DataCatalogEntrySpecGcsFilesetSpec
     public IList<V1alpha1DataCatalogEntrySpecGcsFilesetSpecSampleGcsFileSpecs>? SampleGcsFileSpecs { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DataCatalogEntrySpec
 {
     /// <summary>Entry description, which can consist of several sentences or paragraphs that describe entry contents.</summary>
@@ -77,6 +80,7 @@ public partial class V1alpha1DataCatalogEntrySpec
     public string? UserSpecifiedType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DataCatalogEntryStatusBigqueryDateShardedSpec
 {
     /// <summary>The Data Catalog resource name of the dataset entry the current table belongs to, for example, projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/entries/{entryId}.</summary>
@@ -92,6 +96,7 @@ public partial class V1alpha1DataCatalogEntryStatusBigqueryDateShardedSpec
     public string? TablePrefix { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DataCatalogEntryStatusBigqueryTableSpecTableSpec
 {
     /// <summary>If the table is a dated shard, i.e., with name pattern [prefix]YYYYMMDD, groupedEntry is the Data Catalog resource name of the date sharded grouped entry, for example, projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/entries/{entryId}. Otherwise, groupedEntry is empty.</summary>
@@ -99,6 +104,7 @@ public partial class V1alpha1DataCatalogEntryStatusBigqueryTableSpecTableSpec
     public string? GroupedEntry { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DataCatalogEntryStatusBigqueryTableSpecViewSpec
 {
     /// <summary>The query that defines the table view.</summary>
@@ -106,6 +112,7 @@ public partial class V1alpha1DataCatalogEntryStatusBigqueryTableSpecViewSpec
     public string? ViewQuery { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DataCatalogEntryStatusBigqueryTableSpec
 {
     /// <summary>The table source type.</summary>
@@ -121,6 +128,7 @@ public partial class V1alpha1DataCatalogEntryStatusBigqueryTableSpec
     public IList<V1alpha1DataCatalogEntryStatusBigqueryTableSpecViewSpec>? ViewSpec { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DataCatalogEntryStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
@@ -144,6 +152,7 @@ public partial class V1alpha1DataCatalogEntryStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1alpha1DataCatalogEntryStatus
 {
     /// <summary>Specification for a group of BigQuery tables with name pattern [prefix]YYYYMMDD. Context: https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.</summary>
@@ -172,6 +181,7 @@ public partial class V1alpha1DataCatalogEntryStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary></summary>
 public partial class V1alpha1DataCatalogEntry : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DataCatalogEntrySpec>, IStatus<V1alpha1DataCatalogEntryStatus>
 {
     public const string KubeApiVersion = "v1alpha1";

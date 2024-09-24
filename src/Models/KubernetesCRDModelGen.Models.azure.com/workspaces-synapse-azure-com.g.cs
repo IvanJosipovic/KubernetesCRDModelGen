@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.synapse.azure.com;
+/// <summary>Storage version of v1api20210601.CspWorkspaceAdminProperties Initial workspace AAD admin properties for a CSP subscription</summary>
 public partial class V1api20210601storageWorkspaceSpecCspWorkspaceAdminProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -19,6 +20,7 @@ public partial class V1api20210601storageWorkspaceSpecCspWorkspaceAdminPropertie
     public string? InitialWorkspaceAdminObjectId { get; set; }
 }
 
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20210601storageWorkspaceSpecDefaultDataLakeStorageAccountUrlFromConfig
 {
     /// <summary>Key is the key in the Kubernetes configmap being referenced</summary>
@@ -30,6 +32,7 @@ public partial class V1api20210601storageWorkspaceSpecDefaultDataLakeStorageAcco
     public string Name { get; set; }
 }
 
+/// <summary>ResourceReference: ARM resource Id of this storage account</summary>
 public partial class V1api20210601storageWorkspaceSpecDefaultDataLakeStorageResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -49,6 +52,7 @@ public partial class V1api20210601storageWorkspaceSpecDefaultDataLakeStorageReso
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.DataLakeStorageAccountDetails Details of the data lake storage account associated with the workspace</summary>
 public partial class V1api20210601storageWorkspaceSpecDefaultDataLakeStorage
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -76,6 +80,7 @@ public partial class V1api20210601storageWorkspaceSpecDefaultDataLakeStorage
     public V1api20210601storageWorkspaceSpecDefaultDataLakeStorageResourceReference? ResourceReference { get; set; }
 }
 
+/// <summary>UserAssignedIdentityReference: User assigned identity resource Id</summary>
 public partial class V1api20210601storageWorkspaceSpecEncryptionCmkKekIdentityUserAssignedIdentityReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -95,6 +100,7 @@ public partial class V1api20210601storageWorkspaceSpecEncryptionCmkKekIdentityUs
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.KekIdentityProperties Key encryption key properties</summary>
 public partial class V1api20210601storageWorkspaceSpecEncryptionCmkKekIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -110,6 +116,7 @@ public partial class V1api20210601storageWorkspaceSpecEncryptionCmkKekIdentity
     public V1api20210601storageWorkspaceSpecEncryptionCmkKekIdentityUserAssignedIdentityReference? UserAssignedIdentityReference { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.WorkspaceKeyDetails Details of the customer managed key associated with the workspace</summary>
 public partial class V1api20210601storageWorkspaceSpecEncryptionCmkKey
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -125,6 +132,7 @@ public partial class V1api20210601storageWorkspaceSpecEncryptionCmkKey
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.CustomerManagedKeyDetails Details of the customer managed key associated with the workspace</summary>
 public partial class V1api20210601storageWorkspaceSpecEncryptionCmk
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -140,6 +148,7 @@ public partial class V1api20210601storageWorkspaceSpecEncryptionCmk
     public V1api20210601storageWorkspaceSpecEncryptionCmkKey? Key { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.EncryptionDetails Details of the encryption associated with the workspace</summary>
 public partial class V1api20210601storageWorkspaceSpecEncryption
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -151,6 +160,7 @@ public partial class V1api20210601storageWorkspaceSpecEncryption
     public V1api20210601storageWorkspaceSpecEncryptionCmk? Cmk { get; set; }
 }
 
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 public partial class V1api20210601storageWorkspaceSpecIdentityUserAssignedIdentitiesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -170,6 +180,7 @@ public partial class V1api20210601storageWorkspaceSpecIdentityUserAssignedIdenti
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
 public partial class V1api20210601storageWorkspaceSpecIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -181,6 +192,7 @@ public partial class V1api20210601storageWorkspaceSpecIdentityUserAssignedIdenti
     public V1api20210601storageWorkspaceSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.ManagedIdentity The workspace managed identity</summary>
 public partial class V1api20210601storageWorkspaceSpecIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -196,6 +208,7 @@ public partial class V1api20210601storageWorkspaceSpecIdentity
     public IList<V1api20210601storageWorkspaceSpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.ManagedVirtualNetworkSettings Managed Virtual Network Settings</summary>
 public partial class V1api20210601storageWorkspaceSpecManagedVirtualNetworkSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -215,6 +228,7 @@ public partial class V1api20210601storageWorkspaceSpecManagedVirtualNetworkSetti
     public bool? PreventDataExfiltration { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 public partial class V1api20210601storageWorkspaceSpecOwner
 {
     /// <summary></summary>
@@ -226,6 +240,7 @@ public partial class V1api20210601storageWorkspaceSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>PurviewResourceReference: Purview Resource ID</summary>
 public partial class V1api20210601storageWorkspaceSpecPurviewConfigurationPurviewResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -245,6 +260,7 @@ public partial class V1api20210601storageWorkspaceSpecPurviewConfigurationPurvie
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.PurviewConfiguration Purview Configuration</summary>
 public partial class V1api20210601storageWorkspaceSpecPurviewConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -256,6 +272,7 @@ public partial class V1api20210601storageWorkspaceSpecPurviewConfiguration
     public V1api20210601storageWorkspaceSpecPurviewConfigurationPurviewResourceReference? PurviewResourceReference { get; set; }
 }
 
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 public partial class V1api20210601storageWorkspaceSpecSqlAdministratorLoginPassword
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
@@ -267,6 +284,7 @@ public partial class V1api20210601storageWorkspaceSpecSqlAdministratorLoginPassw
     public string Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.VirtualNetworkProfile Virtual Network Profile</summary>
 public partial class V1api20210601storageWorkspaceSpecVirtualNetworkProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -278,6 +296,7 @@ public partial class V1api20210601storageWorkspaceSpecVirtualNetworkProfile
     public string? ComputeSubnetId { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.WorkspaceRepositoryConfiguration Git integration settings</summary>
 public partial class V1api20210601storageWorkspaceSpecWorkspaceRepositoryConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -321,6 +340,7 @@ public partial class V1api20210601storageWorkspaceSpecWorkspaceRepositoryConfigu
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.Workspace_Spec</summary>
 public partial class V1api20210601storageWorkspaceSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -408,6 +428,7 @@ public partial class V1api20210601storageWorkspaceSpec
     public V1api20210601storageWorkspaceSpecWorkspaceRepositoryConfiguration? WorkspaceRepositoryConfiguration { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20210601storageWorkspaceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -439,6 +460,7 @@ public partial class V1api20210601storageWorkspaceStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.CspWorkspaceAdminProperties_STATUS Initial workspace AAD admin properties for a CSP subscription</summary>
 public partial class V1api20210601storageWorkspaceStatusCspWorkspaceAdminProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -450,6 +472,7 @@ public partial class V1api20210601storageWorkspaceStatusCspWorkspaceAdminPropert
     public string? InitialWorkspaceAdminObjectId { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.DataLakeStorageAccountDetails_STATUS Details of the data lake storage account associated with the workspace</summary>
 public partial class V1api20210601storageWorkspaceStatusDefaultDataLakeStorage
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -473,6 +496,7 @@ public partial class V1api20210601storageWorkspaceStatusDefaultDataLakeStorage
     public string? ResourceId { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.KekIdentityProperties_STATUS Key encryption key properties</summary>
 public partial class V1api20210601storageWorkspaceStatusEncryptionCmkKekIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -488,6 +512,7 @@ public partial class V1api20210601storageWorkspaceStatusEncryptionCmkKekIdentity
     public string? UserAssignedIdentity { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.WorkspaceKeyDetails_STATUS Details of the customer managed key associated with the workspace</summary>
 public partial class V1api20210601storageWorkspaceStatusEncryptionCmkKey
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -503,6 +528,7 @@ public partial class V1api20210601storageWorkspaceStatusEncryptionCmkKey
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.CustomerManagedKeyDetails_STATUS Details of the customer managed key associated with the workspace</summary>
 public partial class V1api20210601storageWorkspaceStatusEncryptionCmk
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -522,6 +548,7 @@ public partial class V1api20210601storageWorkspaceStatusEncryptionCmk
     public string? Status { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.EncryptionDetails_STATUS Details of the encryption associated with the workspace</summary>
 public partial class V1api20210601storageWorkspaceStatusEncryption
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -537,6 +564,7 @@ public partial class V1api20210601storageWorkspaceStatusEncryption
     public bool? DoubleEncryptionEnabled { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.UserAssignedManagedIdentity_STATUS User Assigned Managed Identity</summary>
 public partial class V1api20210601storageWorkspaceStatusIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -552,6 +580,7 @@ public partial class V1api20210601storageWorkspaceStatusIdentityUserAssignedIden
     public string? PrincipalId { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.ManagedIdentity_STATUS The workspace managed identity</summary>
 public partial class V1api20210601storageWorkspaceStatusIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -575,6 +604,7 @@ public partial class V1api20210601storageWorkspaceStatusIdentity
     public IDictionary<string, V1api20210601storageWorkspaceStatusIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.ManagedVirtualNetworkSettings_STATUS Managed Virtual Network Settings</summary>
 public partial class V1api20210601storageWorkspaceStatusManagedVirtualNetworkSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -594,6 +624,7 @@ public partial class V1api20210601storageWorkspaceStatusManagedVirtualNetworkSet
     public bool? PreventDataExfiltration { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.PrivateEndpointConnection_STATUS A private endpoint connection</summary>
 public partial class V1api20210601storageWorkspaceStatusPrivateEndpointConnections
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -605,6 +636,7 @@ public partial class V1api20210601storageWorkspaceStatusPrivateEndpointConnectio
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.PurviewConfiguration_STATUS Purview Configuration</summary>
 public partial class V1api20210601storageWorkspaceStatusPurviewConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -616,6 +648,7 @@ public partial class V1api20210601storageWorkspaceStatusPurviewConfiguration
     public string? PurviewResourceId { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.VirtualNetworkProfile_STATUS Virtual Network Profile</summary>
 public partial class V1api20210601storageWorkspaceStatusVirtualNetworkProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -627,6 +660,7 @@ public partial class V1api20210601storageWorkspaceStatusVirtualNetworkProfile
     public string? ComputeSubnetId { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.WorkspaceRepositoryConfiguration_STATUS Git integration settings</summary>
 public partial class V1api20210601storageWorkspaceStatusWorkspaceRepositoryConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -670,6 +704,7 @@ public partial class V1api20210601storageWorkspaceStatusWorkspaceRepositoryConfi
     public string? Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20210601.Workspace_STATUS A workspace</summary>
 public partial class V1api20210601storageWorkspaceStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -786,6 +821,7 @@ public partial class V1api20210601storageWorkspaceStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20210601.Workspace Generator information: - Generated from: /synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/workspace.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Synapse/workspaces/{workspaceName}</summary>
 public partial class V1api20210601storageWorkspace : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20210601storageWorkspaceSpec>, IStatus<V1api20210601storageWorkspaceStatus>
 {
     public const string KubeApiVersion = "v1api20210601storage";

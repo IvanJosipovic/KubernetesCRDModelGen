@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+/// <summary>Reference: Resource ID.</summary>
 public partial class V1api20201101storageLoadBalancersInboundNatRuleSpecFrontendIPConfigurationReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
@@ -27,6 +28,7 @@ public partial class V1api20201101storageLoadBalancersInboundNatRuleSpecFrontend
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
 public partial class V1api20201101storageLoadBalancersInboundNatRuleSpecFrontendIPConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -38,6 +40,7 @@ public partial class V1api20201101storageLoadBalancersInboundNatRuleSpecFrontend
     public V1api20201101storageLoadBalancersInboundNatRuleSpecFrontendIPConfigurationReference? Reference { get; set; }
 }
 
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a network.azure.com/LoadBalancer resource</summary>
 public partial class V1api20201101storageLoadBalancersInboundNatRuleSpecOwner
 {
     /// <summary></summary>
@@ -49,6 +52,7 @@ public partial class V1api20201101storageLoadBalancersInboundNatRuleSpecOwner
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.LoadBalancers_InboundNatRule_Spec</summary>
 public partial class V1api20201101storageLoadBalancersInboundNatRuleSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -96,6 +100,7 @@ public partial class V1api20201101storageLoadBalancersInboundNatRuleSpec
     public string? Protocol { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.NetworkInterfaceIPConfiguration_STATUS_LoadBalancers_InboundNatRule_SubResourceEmbedded IPConfiguration in a network interface.</summary>
 public partial class V1api20201101storageLoadBalancersInboundNatRuleStatusBackendIPConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -107,6 +112,7 @@ public partial class V1api20201101storageLoadBalancersInboundNatRuleStatusBacken
     public string? Id { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20201101storageLoadBalancersInboundNatRuleStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -138,6 +144,7 @@ public partial class V1api20201101storageLoadBalancersInboundNatRuleStatusCondit
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
 public partial class V1api20201101storageLoadBalancersInboundNatRuleStatusFrontendIPConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -149,6 +156,7 @@ public partial class V1api20201101storageLoadBalancersInboundNatRuleStatusFronte
     public string? Id { get; set; }
 }
 
+/// <summary>Storage version of v1api20201101.LoadBalancers_InboundNatRule_STATUS</summary>
 public partial class V1api20201101storageLoadBalancersInboundNatRuleStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -213,6 +221,7 @@ public partial class V1api20201101storageLoadBalancersInboundNatRuleStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20201101.LoadBalancersInboundNatRule Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/loadBalancer.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/inboundNatRules/{inboundNatRuleName}</summary>
 public partial class V1api20201101storageLoadBalancersInboundNatRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20201101storageLoadBalancersInboundNatRuleSpec>, IStatus<V1api20201101storageLoadBalancersInboundNatRuleStatus>
 {
     public const string KubeApiVersion = "v1api20201101storage";

@@ -18,6 +18,7 @@ public enum V1beta1ScheduleSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleSpecForProviderFlexibleTimeWindow
 {
     /// <summary>Maximum time window during which a schedule can be invoked. Ranges from 1 to 1440 minutes.</summary>
@@ -49,6 +50,7 @@ public enum V1beta1ScheduleSpecForProviderKmsKeyArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ScheduleSpecForProviderKmsKeyArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -62,6 +64,7 @@ public partial class V1beta1ScheduleSpecForProviderKmsKeyArnRefPolicy
     public V1beta1ScheduleSpecForProviderKmsKeyArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyArn.</summary>
 public partial class V1beta1ScheduleSpecForProviderKmsKeyArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -93,6 +96,7 @@ public enum V1beta1ScheduleSpecForProviderKmsKeyArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ScheduleSpecForProviderKmsKeyArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -106,6 +110,7 @@ public partial class V1beta1ScheduleSpecForProviderKmsKeyArnSelectorPolicy
     public V1beta1ScheduleSpecForProviderKmsKeyArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyArn.</summary>
 public partial class V1beta1ScheduleSpecForProviderKmsKeyArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -141,6 +146,7 @@ public enum V1beta1ScheduleSpecForProviderTargetArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ScheduleSpecForProviderTargetArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -154,6 +160,7 @@ public partial class V1beta1ScheduleSpecForProviderTargetArnRefPolicy
     public V1beta1ScheduleSpecForProviderTargetArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Queue in sqs to populate arn.</summary>
 public partial class V1beta1ScheduleSpecForProviderTargetArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -185,6 +192,7 @@ public enum V1beta1ScheduleSpecForProviderTargetArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ScheduleSpecForProviderTargetArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -198,6 +206,7 @@ public partial class V1beta1ScheduleSpecForProviderTargetArnSelectorPolicy
     public V1beta1ScheduleSpecForProviderTargetArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Queue in sqs to populate arn.</summary>
 public partial class V1beta1ScheduleSpecForProviderTargetArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -213,6 +222,7 @@ public partial class V1beta1ScheduleSpecForProviderTargetArnSelector
     public V1beta1ScheduleSpecForProviderTargetArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleSpecForProviderTargetDeadLetterConfig
 {
     /// <summary>ARN of the target of this schedule, such as a SQS queue or ECS cluster. For universal targets, this is a Service ARN specific to the target service.</summary>
@@ -220,6 +230,7 @@ public partial class V1beta1ScheduleSpecForProviderTargetDeadLetterConfig
     public string? Arn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleSpecForProviderTargetEcsParametersCapacityProviderStrategy
 {
     /// <summary>How many tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined. Ranges from 0 (default) to 100000.</summary>
@@ -235,6 +246,7 @@ public partial class V1beta1ScheduleSpecForProviderTargetEcsParametersCapacityPr
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleSpecForProviderTargetEcsParametersNetworkConfiguration
 {
     /// <summary>Specifies whether the task's elastic network interface receives a public IP address. This attribute is a boolean type, where true maps to ENABLED and false to DISABLED. You can specify true only when the launch_type is set to FARGATE.</summary>
@@ -250,6 +262,7 @@ public partial class V1beta1ScheduleSpecForProviderTargetEcsParametersNetworkCon
     public IList<string>? Subnets { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleSpecForProviderTargetEcsParametersPlacementConstraints
 {
     /// <summary>A cluster query language expression to apply to the constraint. You cannot specify an expression if the constraint type is distinctInstance. For more information, see Cluster query language in the Amazon ECS Developer Guide.</summary>
@@ -261,6 +274,7 @@ public partial class V1beta1ScheduleSpecForProviderTargetEcsParametersPlacementC
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleSpecForProviderTargetEcsParametersPlacementStrategy
 {
     /// <summary>The field to apply the placement strategy against.</summary>
@@ -272,6 +286,7 @@ public partial class V1beta1ScheduleSpecForProviderTargetEcsParametersPlacementS
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleSpecForProviderTargetEcsParameters
 {
     /// <summary>Up to 6 capacity provider strategies to use for the task. Detailed below.</summary>
@@ -331,6 +346,7 @@ public partial class V1beta1ScheduleSpecForProviderTargetEcsParameters
     public string? TaskDefinitionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleSpecForProviderTargetEventbridgeParameters
 {
     /// <summary>Free-form string used to decide what fields to expect in the event detail. Up to 128 characters.</summary>
@@ -342,6 +358,7 @@ public partial class V1beta1ScheduleSpecForProviderTargetEventbridgeParameters
     public string? Source { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleSpecForProviderTargetKinesisParameters
 {
     /// <summary>Specifies the shard to which EventBridge Scheduler sends the event. Up to 256 characters.</summary>
@@ -349,6 +366,7 @@ public partial class V1beta1ScheduleSpecForProviderTargetKinesisParameters
     public string? PartitionKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleSpecForProviderTargetRetryPolicy
 {
     /// <summary>Maximum amount of time, in seconds, to continue to make retry attempts. Ranges from 60 to 86400 (default).</summary>
@@ -380,6 +398,7 @@ public enum V1beta1ScheduleSpecForProviderTargetRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ScheduleSpecForProviderTargetRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -393,6 +412,7 @@ public partial class V1beta1ScheduleSpecForProviderTargetRoleArnRefPolicy
     public V1beta1ScheduleSpecForProviderTargetRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ScheduleSpecForProviderTargetRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -424,6 +444,7 @@ public enum V1beta1ScheduleSpecForProviderTargetRoleArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ScheduleSpecForProviderTargetRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -437,6 +458,7 @@ public partial class V1beta1ScheduleSpecForProviderTargetRoleArnSelectorPolicy
     public V1beta1ScheduleSpecForProviderTargetRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ScheduleSpecForProviderTargetRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -452,6 +474,7 @@ public partial class V1beta1ScheduleSpecForProviderTargetRoleArnSelector
     public V1beta1ScheduleSpecForProviderTargetRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleSpecForProviderTargetSagemakerPipelineParametersPipelineParameter
 {
     /// <summary>Name of parameter to start execution of a SageMaker Model Building Pipeline.</summary>
@@ -463,6 +486,7 @@ public partial class V1beta1ScheduleSpecForProviderTargetSagemakerPipelineParame
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleSpecForProviderTargetSagemakerPipelineParameters
 {
     /// <summary>Set of up to 200 parameter names and values to use when executing the SageMaker Model Building Pipeline. Detailed below.</summary>
@@ -470,6 +494,7 @@ public partial class V1beta1ScheduleSpecForProviderTargetSagemakerPipelineParame
     public IList<V1beta1ScheduleSpecForProviderTargetSagemakerPipelineParametersPipelineParameter>? PipelineParameter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleSpecForProviderTargetSqsParameters
 {
     /// <summary>FIFO message group ID to use as the target.</summary>
@@ -477,6 +502,7 @@ public partial class V1beta1ScheduleSpecForProviderTargetSqsParameters
     public string? MessageGroupId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleSpecForProviderTarget
 {
     /// <summary>ARN of the target of this schedule, such as a SQS queue or ECS cluster. For universal targets, this is a Service ARN specific to the target service.</summary>
@@ -536,6 +562,7 @@ public partial class V1beta1ScheduleSpecForProviderTarget
     public IList<V1beta1ScheduleSpecForProviderTargetSqsParameters>? SqsParameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleSpecForProvider
 {
     /// <summary>Brief description of the schedule.</summary>
@@ -595,6 +622,7 @@ public partial class V1beta1ScheduleSpecForProvider
     public IList<V1beta1ScheduleSpecForProviderTarget>? Target { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleSpecInitProviderFlexibleTimeWindow
 {
     /// <summary>Maximum time window during which a schedule can be invoked. Ranges from 1 to 1440 minutes.</summary>
@@ -626,6 +654,7 @@ public enum V1beta1ScheduleSpecInitProviderKmsKeyArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ScheduleSpecInitProviderKmsKeyArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -639,6 +668,7 @@ public partial class V1beta1ScheduleSpecInitProviderKmsKeyArnRefPolicy
     public V1beta1ScheduleSpecInitProviderKmsKeyArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Key in kms to populate kmsKeyArn.</summary>
 public partial class V1beta1ScheduleSpecInitProviderKmsKeyArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -670,6 +700,7 @@ public enum V1beta1ScheduleSpecInitProviderKmsKeyArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ScheduleSpecInitProviderKmsKeyArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -683,6 +714,7 @@ public partial class V1beta1ScheduleSpecInitProviderKmsKeyArnSelectorPolicy
     public V1beta1ScheduleSpecInitProviderKmsKeyArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Key in kms to populate kmsKeyArn.</summary>
 public partial class V1beta1ScheduleSpecInitProviderKmsKeyArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -718,6 +750,7 @@ public enum V1beta1ScheduleSpecInitProviderTargetArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ScheduleSpecInitProviderTargetArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -731,6 +764,7 @@ public partial class V1beta1ScheduleSpecInitProviderTargetArnRefPolicy
     public V1beta1ScheduleSpecInitProviderTargetArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Queue in sqs to populate arn.</summary>
 public partial class V1beta1ScheduleSpecInitProviderTargetArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -762,6 +796,7 @@ public enum V1beta1ScheduleSpecInitProviderTargetArnSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ScheduleSpecInitProviderTargetArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -775,6 +810,7 @@ public partial class V1beta1ScheduleSpecInitProviderTargetArnSelectorPolicy
     public V1beta1ScheduleSpecInitProviderTargetArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Queue in sqs to populate arn.</summary>
 public partial class V1beta1ScheduleSpecInitProviderTargetArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -790,6 +826,7 @@ public partial class V1beta1ScheduleSpecInitProviderTargetArnSelector
     public V1beta1ScheduleSpecInitProviderTargetArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleSpecInitProviderTargetDeadLetterConfig
 {
     /// <summary>ARN of the target of this schedule, such as a SQS queue or ECS cluster. For universal targets, this is a Service ARN specific to the target service.</summary>
@@ -797,6 +834,7 @@ public partial class V1beta1ScheduleSpecInitProviderTargetDeadLetterConfig
     public string? Arn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleSpecInitProviderTargetEcsParametersCapacityProviderStrategy
 {
     /// <summary>How many tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined. Ranges from 0 (default) to 100000.</summary>
@@ -812,6 +850,7 @@ public partial class V1beta1ScheduleSpecInitProviderTargetEcsParametersCapacityP
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleSpecInitProviderTargetEcsParametersNetworkConfiguration
 {
     /// <summary>Specifies whether the task's elastic network interface receives a public IP address. This attribute is a boolean type, where true maps to ENABLED and false to DISABLED. You can specify true only when the launch_type is set to FARGATE.</summary>
@@ -827,6 +866,7 @@ public partial class V1beta1ScheduleSpecInitProviderTargetEcsParametersNetworkCo
     public IList<string>? Subnets { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleSpecInitProviderTargetEcsParametersPlacementConstraints
 {
     /// <summary>A cluster query language expression to apply to the constraint. You cannot specify an expression if the constraint type is distinctInstance. For more information, see Cluster query language in the Amazon ECS Developer Guide.</summary>
@@ -838,6 +878,7 @@ public partial class V1beta1ScheduleSpecInitProviderTargetEcsParametersPlacement
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleSpecInitProviderTargetEcsParametersPlacementStrategy
 {
     /// <summary>The field to apply the placement strategy against.</summary>
@@ -849,6 +890,7 @@ public partial class V1beta1ScheduleSpecInitProviderTargetEcsParametersPlacement
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleSpecInitProviderTargetEcsParameters
 {
     /// <summary>Up to 6 capacity provider strategies to use for the task. Detailed below.</summary>
@@ -908,6 +950,7 @@ public partial class V1beta1ScheduleSpecInitProviderTargetEcsParameters
     public string? TaskDefinitionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleSpecInitProviderTargetEventbridgeParameters
 {
     /// <summary>Free-form string used to decide what fields to expect in the event detail. Up to 128 characters.</summary>
@@ -919,6 +962,7 @@ public partial class V1beta1ScheduleSpecInitProviderTargetEventbridgeParameters
     public string? Source { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleSpecInitProviderTargetKinesisParameters
 {
     /// <summary>Specifies the shard to which EventBridge Scheduler sends the event. Up to 256 characters.</summary>
@@ -926,6 +970,7 @@ public partial class V1beta1ScheduleSpecInitProviderTargetKinesisParameters
     public string? PartitionKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleSpecInitProviderTargetRetryPolicy
 {
     /// <summary>Maximum amount of time, in seconds, to continue to make retry attempts. Ranges from 60 to 86400 (default).</summary>
@@ -957,6 +1002,7 @@ public enum V1beta1ScheduleSpecInitProviderTargetRoleArnRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ScheduleSpecInitProviderTargetRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -970,6 +1016,7 @@ public partial class V1beta1ScheduleSpecInitProviderTargetRoleArnRefPolicy
     public V1beta1ScheduleSpecInitProviderTargetRoleArnRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ScheduleSpecInitProviderTargetRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1001,6 +1048,7 @@ public enum V1beta1ScheduleSpecInitProviderTargetRoleArnSelectorPolicyResolveEnu
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ScheduleSpecInitProviderTargetRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1014,6 +1062,7 @@ public partial class V1beta1ScheduleSpecInitProviderTargetRoleArnSelectorPolicy
     public V1beta1ScheduleSpecInitProviderTargetRoleArnSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 public partial class V1beta1ScheduleSpecInitProviderTargetRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1029,6 +1078,7 @@ public partial class V1beta1ScheduleSpecInitProviderTargetRoleArnSelector
     public V1beta1ScheduleSpecInitProviderTargetRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleSpecInitProviderTargetSagemakerPipelineParametersPipelineParameter
 {
     /// <summary>Name of parameter to start execution of a SageMaker Model Building Pipeline.</summary>
@@ -1040,6 +1090,7 @@ public partial class V1beta1ScheduleSpecInitProviderTargetSagemakerPipelineParam
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleSpecInitProviderTargetSagemakerPipelineParameters
 {
     /// <summary>Set of up to 200 parameter names and values to use when executing the SageMaker Model Building Pipeline. Detailed below.</summary>
@@ -1047,6 +1098,7 @@ public partial class V1beta1ScheduleSpecInitProviderTargetSagemakerPipelineParam
     public IList<V1beta1ScheduleSpecInitProviderTargetSagemakerPipelineParametersPipelineParameter>? PipelineParameter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleSpecInitProviderTargetSqsParameters
 {
     /// <summary>FIFO message group ID to use as the target.</summary>
@@ -1054,6 +1106,7 @@ public partial class V1beta1ScheduleSpecInitProviderTargetSqsParameters
     public string? MessageGroupId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleSpecInitProviderTarget
 {
     /// <summary>ARN of the target of this schedule, such as a SQS queue or ECS cluster. For universal targets, this is a Service ARN specific to the target service.</summary>
@@ -1113,6 +1166,7 @@ public partial class V1beta1ScheduleSpecInitProviderTarget
     public IList<V1beta1ScheduleSpecInitProviderTargetSqsParameters>? SqsParameters { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ScheduleSpecInitProvider
 {
     /// <summary>Brief description of the schedule.</summary>
@@ -1210,6 +1264,7 @@ public enum V1beta1ScheduleSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ScheduleSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1223,6 +1278,7 @@ public partial class V1beta1ScheduleSpecProviderConfigRefPolicy
     public V1beta1ScheduleSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ScheduleSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1254,6 +1310,7 @@ public enum V1beta1ScheduleSpecPublishConnectionDetailsToConfigRefPolicyResolveE
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ScheduleSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1267,6 +1324,7 @@ public partial class V1beta1ScheduleSpecPublishConnectionDetailsToConfigRefPolic
     public V1beta1ScheduleSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ScheduleSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1278,6 +1336,7 @@ public partial class V1beta1ScheduleSpecPublishConnectionDetailsToConfigRef
     public V1beta1ScheduleSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ScheduleSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -1293,6 +1352,7 @@ public partial class V1beta1ScheduleSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ScheduleSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1308,6 +1368,7 @@ public partial class V1beta1ScheduleSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ScheduleSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -1319,6 +1380,7 @@ public partial class V1beta1ScheduleSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ScheduleSpec defines the desired state of Schedule</summary>
 public partial class V1beta1ScheduleSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -1351,6 +1413,7 @@ public partial class V1beta1ScheduleSpec
     public V1beta1ScheduleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleStatusAtProviderFlexibleTimeWindow
 {
     /// <summary>Maximum time window during which a schedule can be invoked. Ranges from 1 to 1440 minutes.</summary>
@@ -1362,6 +1425,7 @@ public partial class V1beta1ScheduleStatusAtProviderFlexibleTimeWindow
     public string? Mode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleStatusAtProviderTargetDeadLetterConfig
 {
     /// <summary>ARN of the target of this schedule, such as a SQS queue or ECS cluster. For universal targets, this is a Service ARN specific to the target service.</summary>
@@ -1369,6 +1433,7 @@ public partial class V1beta1ScheduleStatusAtProviderTargetDeadLetterConfig
     public string? Arn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleStatusAtProviderTargetEcsParametersCapacityProviderStrategy
 {
     /// <summary>How many tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined. Ranges from 0 (default) to 100000.</summary>
@@ -1384,6 +1449,7 @@ public partial class V1beta1ScheduleStatusAtProviderTargetEcsParametersCapacityP
     public double? Weight { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleStatusAtProviderTargetEcsParametersNetworkConfiguration
 {
     /// <summary>Specifies whether the task's elastic network interface receives a public IP address. This attribute is a boolean type, where true maps to ENABLED and false to DISABLED. You can specify true only when the launch_type is set to FARGATE.</summary>
@@ -1399,6 +1465,7 @@ public partial class V1beta1ScheduleStatusAtProviderTargetEcsParametersNetworkCo
     public IList<string>? Subnets { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleStatusAtProviderTargetEcsParametersPlacementConstraints
 {
     /// <summary>A cluster query language expression to apply to the constraint. You cannot specify an expression if the constraint type is distinctInstance. For more information, see Cluster query language in the Amazon ECS Developer Guide.</summary>
@@ -1410,6 +1477,7 @@ public partial class V1beta1ScheduleStatusAtProviderTargetEcsParametersPlacement
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleStatusAtProviderTargetEcsParametersPlacementStrategy
 {
     /// <summary>The field to apply the placement strategy against.</summary>
@@ -1421,6 +1489,7 @@ public partial class V1beta1ScheduleStatusAtProviderTargetEcsParametersPlacement
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleStatusAtProviderTargetEcsParameters
 {
     /// <summary>Up to 6 capacity provider strategies to use for the task. Detailed below.</summary>
@@ -1480,6 +1549,7 @@ public partial class V1beta1ScheduleStatusAtProviderTargetEcsParameters
     public string? TaskDefinitionArn { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleStatusAtProviderTargetEventbridgeParameters
 {
     /// <summary>Free-form string used to decide what fields to expect in the event detail. Up to 128 characters.</summary>
@@ -1491,6 +1561,7 @@ public partial class V1beta1ScheduleStatusAtProviderTargetEventbridgeParameters
     public string? Source { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleStatusAtProviderTargetKinesisParameters
 {
     /// <summary>Specifies the shard to which EventBridge Scheduler sends the event. Up to 256 characters.</summary>
@@ -1498,6 +1569,7 @@ public partial class V1beta1ScheduleStatusAtProviderTargetKinesisParameters
     public string? PartitionKey { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleStatusAtProviderTargetRetryPolicy
 {
     /// <summary>Maximum amount of time, in seconds, to continue to make retry attempts. Ranges from 60 to 86400 (default).</summary>
@@ -1509,6 +1581,7 @@ public partial class V1beta1ScheduleStatusAtProviderTargetRetryPolicy
     public double? MaximumRetryAttempts { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleStatusAtProviderTargetSagemakerPipelineParametersPipelineParameter
 {
     /// <summary>Name of parameter to start execution of a SageMaker Model Building Pipeline.</summary>
@@ -1520,6 +1593,7 @@ public partial class V1beta1ScheduleStatusAtProviderTargetSagemakerPipelineParam
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleStatusAtProviderTargetSagemakerPipelineParameters
 {
     /// <summary>Set of up to 200 parameter names and values to use when executing the SageMaker Model Building Pipeline. Detailed below.</summary>
@@ -1527,6 +1601,7 @@ public partial class V1beta1ScheduleStatusAtProviderTargetSagemakerPipelineParam
     public IList<V1beta1ScheduleStatusAtProviderTargetSagemakerPipelineParametersPipelineParameter>? PipelineParameter { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleStatusAtProviderTargetSqsParameters
 {
     /// <summary>FIFO message group ID to use as the target.</summary>
@@ -1534,6 +1609,7 @@ public partial class V1beta1ScheduleStatusAtProviderTargetSqsParameters
     public string? MessageGroupId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleStatusAtProviderTarget
 {
     /// <summary>ARN of the target of this schedule, such as a SQS queue or ECS cluster. For universal targets, this is a Service ARN specific to the target service.</summary>
@@ -1577,6 +1653,7 @@ public partial class V1beta1ScheduleStatusAtProviderTarget
     public IList<V1beta1ScheduleStatusAtProviderTargetSqsParameters>? SqsParameters { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ScheduleStatusAtProvider
 {
     /// <summary>ARN of the SQS queue specified as the destination for the dead-letter queue.</summary>
@@ -1632,6 +1709,7 @@ public partial class V1beta1ScheduleStatusAtProvider
     public IList<V1beta1ScheduleStatusAtProviderTarget>? Target { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ScheduleStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -1659,6 +1737,7 @@ public partial class V1beta1ScheduleStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ScheduleStatus defines the observed state of Schedule.</summary>
 public partial class V1beta1ScheduleStatus
 {
     /// <summary></summary>
@@ -1675,6 +1754,7 @@ public partial class V1beta1ScheduleStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Schedule is the Schema for the Schedules API. Provides an EventBridge Scheduler Schedule resource.</summary>
 public partial class V1beta1Schedule : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ScheduleSpec>, IStatus<V1beta1ScheduleStatus>
 {
     public const string KubeApiVersion = "v1beta1";

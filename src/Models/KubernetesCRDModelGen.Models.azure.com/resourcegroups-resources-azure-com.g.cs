@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.resources.azure.com;
+/// <summary>Storage version of v1api20200601.ResourceGroup_Spec</summary>
 public partial class V1api20200601storageResourceGroupSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -35,6 +36,7 @@ public partial class V1api20200601storageResourceGroupSpec
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 public partial class V1api20200601storageResourceGroupStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
@@ -66,6 +68,7 @@ public partial class V1api20200601storageResourceGroupStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.ResourceGroupProperties_STATUS The resource group properties.</summary>
 public partial class V1api20200601storageResourceGroupStatusProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -77,6 +80,7 @@ public partial class V1api20200601storageResourceGroupStatusProperties
     public string? ProvisioningState { get; set; }
 }
 
+/// <summary>Storage version of v1api20200601.ResourceGroup_STATUS Resource group information.</summary>
 public partial class V1api20200601storageResourceGroupStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
@@ -117,6 +121,7 @@ public partial class V1api20200601storageResourceGroupStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Storage version of v1api20200601.ResourceGroup Generator information: - Generated from: /resources/resource-manager/Microsoft.Resources/stable/2020-06-01/resources.json - ARM URI: /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}</summary>
 public partial class V1api20200601storageResourceGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20200601storageResourceGroupSpec>, IStatus<V1api20200601storageResourceGroupStatus>
 {
     public const string KubeApiVersion = "v1api20200601storage";

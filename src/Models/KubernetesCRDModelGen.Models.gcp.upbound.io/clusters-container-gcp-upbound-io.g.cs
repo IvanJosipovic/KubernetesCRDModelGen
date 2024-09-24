@@ -18,6 +18,7 @@ public enum V1beta1ClusterSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderAddonsConfigCloudrunConfig
 {
     /// <summary>The status of the Istio addon, which makes it easy to set up Istio for services in a cluster. It is disabled by default. Set disabled = false to enable.</summary>
@@ -29,6 +30,7 @@ public partial class V1beta1ClusterSpecForProviderAddonsConfigCloudrunConfig
     public string? LoadBalancerType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderAddonsConfigConfigConnectorConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -36,6 +38,7 @@ public partial class V1beta1ClusterSpecForProviderAddonsConfigConfigConnectorCon
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderAddonsConfigDnsCacheConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -43,6 +46,7 @@ public partial class V1beta1ClusterSpecForProviderAddonsConfigDnsCacheConfig
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderAddonsConfigGcePersistentDiskCsiDriverConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -50,6 +54,7 @@ public partial class V1beta1ClusterSpecForProviderAddonsConfigGcePersistentDiskC
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderAddonsConfigGcpFilestoreCsiDriverConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -57,6 +62,7 @@ public partial class V1beta1ClusterSpecForProviderAddonsConfigGcpFilestoreCsiDri
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderAddonsConfigGcsFuseCsiDriverConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -64,6 +70,7 @@ public partial class V1beta1ClusterSpecForProviderAddonsConfigGcsFuseCsiDriverCo
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderAddonsConfigGkeBackupAgentConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -71,6 +78,7 @@ public partial class V1beta1ClusterSpecForProviderAddonsConfigGkeBackupAgentConf
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderAddonsConfigHorizontalPodAutoscaling
 {
     /// <summary>The status of the Istio addon, which makes it easy to set up Istio for services in a cluster. It is disabled by default. Set disabled = false to enable.</summary>
@@ -78,6 +86,7 @@ public partial class V1beta1ClusterSpecForProviderAddonsConfigHorizontalPodAutos
     public bool? Disabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderAddonsConfigHttpLoadBalancing
 {
     /// <summary>The status of the Istio addon, which makes it easy to set up Istio for services in a cluster. It is disabled by default. Set disabled = false to enable.</summary>
@@ -85,6 +94,7 @@ public partial class V1beta1ClusterSpecForProviderAddonsConfigHttpLoadBalancing
     public bool? Disabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderAddonsConfigNetworkPolicyConfig
 {
     /// <summary>The status of the Istio addon, which makes it easy to set up Istio for services in a cluster. It is disabled by default. Set disabled = false to enable.</summary>
@@ -92,6 +102,7 @@ public partial class V1beta1ClusterSpecForProviderAddonsConfigNetworkPolicyConfi
     public bool? Disabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderAddonsConfigRayOperatorConfigRayClusterLoggingConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -99,6 +110,7 @@ public partial class V1beta1ClusterSpecForProviderAddonsConfigRayOperatorConfigR
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderAddonsConfigRayOperatorConfigRayClusterMonitoringConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -106,6 +118,7 @@ public partial class V1beta1ClusterSpecForProviderAddonsConfigRayOperatorConfigR
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderAddonsConfigRayOperatorConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -121,6 +134,7 @@ public partial class V1beta1ClusterSpecForProviderAddonsConfigRayOperatorConfig
     public IList<V1beta1ClusterSpecForProviderAddonsConfigRayOperatorConfigRayClusterMonitoringConfig>? RayClusterMonitoringConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderAddonsConfigStatefulHaConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -128,6 +142,7 @@ public partial class V1beta1ClusterSpecForProviderAddonsConfigStatefulHaConfig
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderAddonsConfig
 {
     /// <summary>. Structure is documented below.</summary>
@@ -179,6 +194,7 @@ public partial class V1beta1ClusterSpecForProviderAddonsConfig
     public IList<V1beta1ClusterSpecForProviderAddonsConfigStatefulHaConfig>? StatefulHaConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderAuthenticatorGroupsConfig
 {
     /// <summary>The name of the RBAC security group for use with Google security groups in Kubernetes RBAC. Group name must be in format gke-security-groups@yourdomain.com.</summary>
@@ -186,6 +202,7 @@ public partial class V1beta1ClusterSpecForProviderAuthenticatorGroupsConfig
     public string? SecurityGroup { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderBinaryAuthorization
 {
     /// <summary>(DEPRECATED) Enable Binary Authorization for this cluster. Deprecated in favor of evaluation_mode.</summary>
@@ -197,6 +214,7 @@ public partial class V1beta1ClusterSpecForProviderBinaryAuthorization
     public string? EvaluationMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderClusterAutoscalingAutoProvisioningDefaultsManagement
 {
     /// <summary>Specifies whether the node auto-repair is enabled for the node pool. If enabled, the nodes in this node pool will be monitored and, if they fail health checks too many times, an automatic repair action will be triggered.</summary>
@@ -208,6 +226,7 @@ public partial class V1beta1ClusterSpecForProviderClusterAutoscalingAutoProvisio
     public bool? AutoUpgrade { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderClusterAutoscalingAutoProvisioningDefaultsShieldedInstanceConfig
 {
     /// <summary>Defines if the instance has integrity monitoring enabled.</summary>
@@ -219,6 +238,7 @@ public partial class V1beta1ClusterSpecForProviderClusterAutoscalingAutoProvisio
     public bool? EnableSecureBoot { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy
 {
     /// <summary>Number of blue nodes to drain in a batch. Only one of the batch_percentage or batch_node_count can be specified.</summary>
@@ -234,6 +254,7 @@ public partial class V1beta1ClusterSpecForProviderClusterAutoscalingAutoProvisio
     public string? BatchSoakDuration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettings
 {
     /// <summary>Time needed after draining entire blue pool. After this period, blue pool will be cleaned up. A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.5s".</summary>
@@ -245,6 +266,7 @@ public partial class V1beta1ClusterSpecForProviderClusterAutoscalingAutoProvisio
     public IList<V1beta1ClusterSpecForProviderClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy>? StandardRolloutPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderClusterAutoscalingAutoProvisioningDefaultsUpgradeSettings
 {
     /// <summary>Settings for blue-green upgrade strategy. To be specified when strategy is set to BLUE_GREEN. Structure is documented below.</summary>
@@ -264,6 +286,7 @@ public partial class V1beta1ClusterSpecForProviderClusterAutoscalingAutoProvisio
     public string? Strategy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderClusterAutoscalingAutoProvisioningDefaults
 {
     /// <summary>The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: https://cloud.google.com/compute/docs/disks/customer-managed-encryption</summary>
@@ -307,6 +330,7 @@ public partial class V1beta1ClusterSpecForProviderClusterAutoscalingAutoProvisio
     public IList<V1beta1ClusterSpecForProviderClusterAutoscalingAutoProvisioningDefaultsUpgradeSettings>? UpgradeSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderClusterAutoscalingResourceLimits
 {
     /// <summary>Maximum amount of the resource in the cluster.</summary>
@@ -322,6 +346,7 @@ public partial class V1beta1ClusterSpecForProviderClusterAutoscalingResourceLimi
     public string? ResourceType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderClusterAutoscaling
 {
     /// <summary>Contains defaults for a node pool created by NAP. A subset of fields also apply to GKE Autopilot clusters. Structure is documented below.</summary>
@@ -341,6 +366,7 @@ public partial class V1beta1ClusterSpecForProviderClusterAutoscaling
     public IList<V1beta1ClusterSpecForProviderClusterAutoscalingResourceLimits>? ResourceLimits { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderConfidentialNodes
 {
     /// <summary>Enable Confidential GKE Nodes for this cluster, to enforce encryption of data in-use.</summary>
@@ -348,6 +374,7 @@ public partial class V1beta1ClusterSpecForProviderConfidentialNodes
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderCostManagementConfig
 {
     /// <summary>Whether to enable the cost allocation feature.</summary>
@@ -355,6 +382,7 @@ public partial class V1beta1ClusterSpecForProviderCostManagementConfig
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderDatabaseEncryption
 {
     /// <summary>the key to use to encrypt/decrypt secrets.  See the DatabaseEncryption definition for more information.</summary>
@@ -366,6 +394,7 @@ public partial class V1beta1ClusterSpecForProviderDatabaseEncryption
     public string? State { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderDefaultSnatStatus
 {
     /// <summary>Whether the cluster disables default in-node sNAT rules. In-node sNAT rules will be disabled when defaultSnatStatus is disabled.When disabled is set to false, default IP masquerade rules will be applied to the nodes to prevent sNAT on cluster internal traffic</summary>
@@ -373,6 +402,7 @@ public partial class V1beta1ClusterSpecForProviderDefaultSnatStatus
     public bool? Disabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderDnsConfig
 {
     /// <summary>Which in-cluster DNS provider should be used. PROVIDER_UNSPECIFIED (default) or PLATFORM_DEFAULT or CLOUD_DNS.</summary>
@@ -388,6 +418,7 @@ public partial class V1beta1ClusterSpecForProviderDnsConfig
     public string? ClusterDnsScope { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderEnableK8SBetaApis
 {
     /// <summary>Enabled Kubernetes Beta APIs. To list a Beta API resource, use the representation {group}/{version}/{resource}. The version must be a Beta version. Note that you cannot disable beta APIs that are already enabled on a cluster without recreating it. See the Configure beta APIs for more information.</summary>
@@ -395,6 +426,7 @@ public partial class V1beta1ClusterSpecForProviderEnableK8SBetaApis
     public IList<string>? EnabledApis { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderFleet
 {
     /// <summary>The name of the Fleet host project where this cluster will be registered.</summary>
@@ -402,6 +434,7 @@ public partial class V1beta1ClusterSpecForProviderFleet
     public string? Project { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderGatewayApiConfig
 {
     /// <summary>Which Gateway Api channel should be used. CHANNEL_DISABLED, CHANNEL_EXPERIMENTAL or CHANNEL_STANDARD.</summary>
@@ -409,6 +442,7 @@ public partial class V1beta1ClusterSpecForProviderGatewayApiConfig
     public string? Channel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderIdentityServiceConfig
 {
     /// <summary>Whether to enable the Identity Service component. It is disabled by default. Set enabled=true to enable.</summary>
@@ -416,6 +450,7 @@ public partial class V1beta1ClusterSpecForProviderIdentityServiceConfig
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderIpAllocationPolicyAdditionalPodRangesConfig
 {
     /// <summary>The names of the Pod ranges to add to the cluster.</summary>
@@ -423,6 +458,7 @@ public partial class V1beta1ClusterSpecForProviderIpAllocationPolicyAdditionalPo
     public IList<string>? PodRangeNames { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderIpAllocationPolicyPodCidrOverprovisionConfig
 {
     /// <summary>The status of the Istio addon, which makes it easy to set up Istio for services in a cluster. It is disabled by default. Set disabled = false to enable.</summary>
@@ -430,6 +466,7 @@ public partial class V1beta1ClusterSpecForProviderIpAllocationPolicyPodCidrOverp
     public bool? Disabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderIpAllocationPolicy
 {
     /// <summary>The configuration for additional pod secondary ranges at the cluster level. Used for Autopilot clusters and Standard clusters with which control of the secondary Pod IP address assignment to node pools isn't needed. Structure is documented below.</summary>
@@ -461,6 +498,7 @@ public partial class V1beta1ClusterSpecForProviderIpAllocationPolicy
     public string? StackType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderLoggingConfig
 {
     /// <summary>The GKE components exposing logs. Supported values include: SYSTEM_COMPONENTS, APISERVER, CONTROLLER_MANAGER, SCHEDULER, and WORKLOADS.</summary>
@@ -468,6 +506,7 @@ public partial class V1beta1ClusterSpecForProviderLoggingConfig
     public IList<string>? EnableComponents { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderMaintenancePolicyDailyMaintenanceWindow
 {
     /// <summary></summary>
@@ -475,6 +514,7 @@ public partial class V1beta1ClusterSpecForProviderMaintenancePolicyDailyMaintena
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderMaintenancePolicyMaintenanceExclusionExclusionOptions
 {
     /// <summary>The scope of automatic upgrades to restrict in the exclusion window. One of: NO_UPGRADES | NO_MINOR_UPGRADES | NO_MINOR_OR_NODE_UPGRADES</summary>
@@ -482,6 +522,7 @@ public partial class V1beta1ClusterSpecForProviderMaintenancePolicyMaintenanceEx
     public string? Scope { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderMaintenancePolicyMaintenanceExclusion
 {
     /// <summary></summary>
@@ -501,6 +542,7 @@ public partial class V1beta1ClusterSpecForProviderMaintenancePolicyMaintenanceEx
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderMaintenancePolicyRecurringWindow
 {
     /// <summary></summary>
@@ -516,6 +558,7 @@ public partial class V1beta1ClusterSpecForProviderMaintenancePolicyRecurringWind
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderMaintenancePolicy
 {
     /// <summary>structure documented below.</summary>
@@ -531,6 +574,7 @@ public partial class V1beta1ClusterSpecForProviderMaintenancePolicy
     public IList<V1beta1ClusterSpecForProviderMaintenancePolicyRecurringWindow>? RecurringWindow { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderMasterAuthClientCertificateConfig
 {
     /// <summary></summary>
@@ -538,6 +582,7 @@ public partial class V1beta1ClusterSpecForProviderMasterAuthClientCertificateCon
     public bool? IssueClientCertificate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderMasterAuth
 {
     /// <summary>Whether client certificate authorization is enabled for this cluster.  For example:</summary>
@@ -545,6 +590,7 @@ public partial class V1beta1ClusterSpecForProviderMasterAuth
     public IList<V1beta1ClusterSpecForProviderMasterAuthClientCertificateConfig>? ClientCertificateConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderMasterAuthorizedNetworksConfigCidrBlocks
 {
     /// <summary>External network that can access Kubernetes master through HTTPS. Must be specified in CIDR notation.</summary>
@@ -556,6 +602,7 @@ public partial class V1beta1ClusterSpecForProviderMasterAuthorizedNetworksConfig
     public string? DisplayName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderMasterAuthorizedNetworksConfig
 {
     /// <summary>External networks that can access the Kubernetes cluster master through HTTPS.</summary>
@@ -567,6 +614,7 @@ public partial class V1beta1ClusterSpecForProviderMasterAuthorizedNetworksConfig
     public bool? GcpPublicCidrsAccessEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderMeshCertificates
 {
     /// <summary>Controls the issuance of workload mTLS certificates. It is enabled by default. Workload Identity is required, see workload_config.</summary>
@@ -574,6 +622,7 @@ public partial class V1beta1ClusterSpecForProviderMeshCertificates
     public bool? EnableCertificates { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderMonitoringConfigAdvancedDatapathObservabilityConfig
 {
     /// <summary>Whether or not to enable advanced datapath metrics.</summary>
@@ -589,6 +638,7 @@ public partial class V1beta1ClusterSpecForProviderMonitoringConfigAdvancedDatapa
     public string? RelayMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderMonitoringConfigManagedPrometheus
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -596,6 +646,7 @@ public partial class V1beta1ClusterSpecForProviderMonitoringConfigManagedPrometh
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderMonitoringConfig
 {
     /// <summary>Configuration for Advanced Datapath Monitoring. Structure is documented below.</summary>
@@ -611,6 +662,7 @@ public partial class V1beta1ClusterSpecForProviderMonitoringConfig
     public IList<V1beta1ClusterSpecForProviderMonitoringConfigManagedPrometheus>? ManagedPrometheus { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNetworkPolicy
 {
     /// <summary>Whether network policy is enabled on the cluster.</summary>
@@ -642,6 +694,7 @@ public enum V1beta1ClusterSpecForProviderNetworkRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClusterSpecForProviderNetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -655,6 +708,7 @@ public partial class V1beta1ClusterSpecForProviderNetworkRefPolicy
     public V1beta1ClusterSpecForProviderNetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate network.</summary>
 public partial class V1beta1ClusterSpecForProviderNetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -686,6 +740,7 @@ public enum V1beta1ClusterSpecForProviderNetworkSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ClusterSpecForProviderNetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -699,6 +754,7 @@ public partial class V1beta1ClusterSpecForProviderNetworkSelectorPolicy
     public V1beta1ClusterSpecForProviderNetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate network.</summary>
 public partial class V1beta1ClusterSpecForProviderNetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -714,6 +770,7 @@ public partial class V1beta1ClusterSpecForProviderNetworkSelector
     public V1beta1ClusterSpecForProviderNetworkSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNodeConfigAdvancedMachineFeatures
 {
     /// <summary>Defines whether the instance should have nested virtualization enabled. Defaults to false.</summary>
@@ -725,6 +782,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigAdvancedMachineFeatu
     public double? ThreadsPerCore { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNodeConfigConfidentialNodes
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -732,6 +790,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigConfidentialNodes
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigGcpSecretManagerCertificateConfig
 {
     /// <summary></summary>
@@ -739,6 +798,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigContainerdConfigPriv
     public string? SecretUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig
 {
     /// <summary></summary>
@@ -750,6 +810,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigContainerdConfigPriv
     public IList<V1beta1ClusterSpecForProviderNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigGcpSecretManagerCertificateConfig>? GcpSecretManagerCertificateConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNodeConfigContainerdConfigPrivateRegistryAccessConfig
 {
     /// <summary>List of configuration objects for CA and domains. Each object identifies a certificate and its assigned domains. See how to configure for private container registries for more detail. Example:</summary>
@@ -761,6 +822,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigContainerdConfigPriv
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNodeConfigContainerdConfig
 {
     /// <summary>Configuration for private container registries. There are two fields in this config:</summary>
@@ -768,6 +830,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigContainerdConfig
     public IList<V1beta1ClusterSpecForProviderNodeConfigContainerdConfigPrivateRegistryAccessConfig>? PrivateRegistryAccessConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNodeConfigEphemeralStorageLocalSsdConfig
 {
     /// <summary>The amount of local SSD disks that will be attached to each cluster node. Defaults to 0.</summary>
@@ -775,6 +838,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigEphemeralStorageLoca
     public double? LocalSsdCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNodeConfigFastSocket
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -782,6 +846,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigFastSocket
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNodeConfigGcfsConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -789,6 +854,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigGcfsConfig
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNodeConfigGuestAcceleratorGpuDriverInstallationConfig
 {
     /// <summary>Mode for how the GPU driver is installed. Accepted values are:</summary>
@@ -796,6 +862,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigGuestAcceleratorGpuD
     public string? GpuDriverVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNodeConfigGuestAcceleratorGpuSharingConfig
 {
     /// <summary>The type of GPU sharing strategy to enable on the GPU node. Accepted values are:</summary>
@@ -807,6 +874,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigGuestAcceleratorGpuS
     public double? MaxSharedClientsPerGpu { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNodeConfigGuestAccelerator
 {
     /// <summary>The number of the guest accelerator cards exposed to this instance.</summary>
@@ -830,6 +898,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigGuestAccelerator
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNodeConfigGvnic
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -837,6 +906,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigGvnic
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNodeConfigHostMaintenancePolicy
 {
     /// <summary></summary>
@@ -844,6 +914,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigHostMaintenancePolic
     public string? MaintenanceInterval { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNodeConfigKubeletConfig
 {
     /// <summary>If true, enables CPU CFS quota enforcement for containers that specify CPU limits.</summary>
@@ -863,6 +934,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigKubeletConfig
     public double? PodPidsLimit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNodeConfigLinuxNodeConfig
 {
     /// <summary>Possible cgroup modes that can be used. Accepted values are:</summary>
@@ -874,6 +946,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigLinuxNodeConfig
     public IDictionary<string, string>? Sysctls { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNodeConfigLocalNvmeSsdBlockConfig
 {
     /// <summary>The amount of local SSD disks that will be attached to each cluster node. Defaults to 0.</summary>
@@ -881,6 +954,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigLocalNvmeSsdBlockCon
     public double? LocalSsdCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNodeConfigReservationAffinity
 {
     /// <summary>The type of reservation consumption Accepted values are:</summary>
@@ -896,6 +970,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigReservationAffinity
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNodeConfigSecondaryBootDisks
 {
     /// <summary>Path to disk image to create the secondary boot disk from. After using the gke-disk-image-builder, this argument should be global/images/DISK_IMAGE_NAME.</summary>
@@ -927,6 +1002,7 @@ public enum V1beta1ClusterSpecForProviderNodeConfigServiceAccountRefPolicyResolv
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClusterSpecForProviderNodeConfigServiceAccountRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -940,6 +1016,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigServiceAccountRefPol
     public V1beta1ClusterSpecForProviderNodeConfigServiceAccountRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
 public partial class V1beta1ClusterSpecForProviderNodeConfigServiceAccountRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -971,6 +1048,7 @@ public enum V1beta1ClusterSpecForProviderNodeConfigServiceAccountSelectorPolicyR
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ClusterSpecForProviderNodeConfigServiceAccountSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -984,6 +1062,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigServiceAccountSelect
     public V1beta1ClusterSpecForProviderNodeConfigServiceAccountSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
 public partial class V1beta1ClusterSpecForProviderNodeConfigServiceAccountSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -999,6 +1078,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigServiceAccountSelect
     public V1beta1ClusterSpecForProviderNodeConfigServiceAccountSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNodeConfigShieldedInstanceConfig
 {
     /// <summary>Defines if the instance has integrity monitoring enabled.</summary>
@@ -1010,6 +1090,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigShieldedInstanceConf
     public bool? EnableSecureBoot { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNodeConfigSoleTenantConfigNodeAffinity
 {
     /// <summary>Key for taint.</summary>
@@ -1025,6 +1106,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigSoleTenantConfigNode
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNodeConfigSoleTenantConfig
 {
     /// <summary></summary>
@@ -1032,6 +1114,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigSoleTenantConfig
     public IList<V1beta1ClusterSpecForProviderNodeConfigSoleTenantConfigNodeAffinity>? NodeAffinity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNodeConfigTaint
 {
     /// <summary>Effect for taint. Accepted values are NO_SCHEDULE, PREFER_NO_SCHEDULE, and NO_EXECUTE.</summary>
@@ -1047,6 +1130,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigTaint
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNodeConfigWorkloadMetadataConfig
 {
     /// <summary>How to expose the node metadata to the workload running on the node. Accepted values are:</summary>
@@ -1054,6 +1138,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigWorkloadMetadataConf
     public string? Mode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNodeConfig
 {
     /// <summary>Specifies options for controlling advanced machine features. Structure is documented below.</summary>
@@ -1217,6 +1302,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfig
     public IList<V1beta1ClusterSpecForProviderNodeConfigWorkloadMetadataConfig>? WorkloadMetadataConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNodePoolAutoConfigNetworkTags
 {
     /// <summary>List of network tags applied to auto-provisioned node pools.</summary>
@@ -1224,6 +1310,7 @@ public partial class V1beta1ClusterSpecForProviderNodePoolAutoConfigNetworkTags
     public IList<string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNodePoolAutoConfig
 {
     /// <summary>The network tag config for the cluster's automatically provisioned node pools.</summary>
@@ -1235,6 +1322,7 @@ public partial class V1beta1ClusterSpecForProviderNodePoolAutoConfig
     public IDictionary<string, string>? ResourceManagerTags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNodePoolDefaultsNodeConfigDefaultsContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigGcpSecretManagerCertificateConfig
 {
     /// <summary></summary>
@@ -1242,6 +1330,7 @@ public partial class V1beta1ClusterSpecForProviderNodePoolDefaultsNodeConfigDefa
     public string? SecretUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNodePoolDefaultsNodeConfigDefaultsContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig
 {
     /// <summary></summary>
@@ -1253,6 +1342,7 @@ public partial class V1beta1ClusterSpecForProviderNodePoolDefaultsNodeConfigDefa
     public IList<V1beta1ClusterSpecForProviderNodePoolDefaultsNodeConfigDefaultsContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigGcpSecretManagerCertificateConfig>? GcpSecretManagerCertificateConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNodePoolDefaultsNodeConfigDefaultsContainerdConfigPrivateRegistryAccessConfig
 {
     /// <summary>List of configuration objects for CA and domains. Each object identifies a certificate and its assigned domains. See how to configure for private container registries for more detail. Example:</summary>
@@ -1264,6 +1354,7 @@ public partial class V1beta1ClusterSpecForProviderNodePoolDefaultsNodeConfigDefa
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNodePoolDefaultsNodeConfigDefaultsContainerdConfig
 {
     /// <summary>Configuration for private container registries. There are two fields in this config:</summary>
@@ -1271,6 +1362,7 @@ public partial class V1beta1ClusterSpecForProviderNodePoolDefaultsNodeConfigDefa
     public IList<V1beta1ClusterSpecForProviderNodePoolDefaultsNodeConfigDefaultsContainerdConfigPrivateRegistryAccessConfig>? PrivateRegistryAccessConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNodePoolDefaultsNodeConfigDefaults
 {
     /// <summary>Parameters to customize containerd runtime. Structure is documented below.</summary>
@@ -1282,6 +1374,7 @@ public partial class V1beta1ClusterSpecForProviderNodePoolDefaultsNodeConfigDefa
     public string? LoggingVariant { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNodePoolDefaults
 {
     /// <summary>Subset of NodeConfig message that has defaults.</summary>
@@ -1289,6 +1382,7 @@ public partial class V1beta1ClusterSpecForProviderNodePoolDefaults
     public IList<V1beta1ClusterSpecForProviderNodePoolDefaultsNodeConfigDefaults>? NodeConfigDefaults { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNotificationConfigPubsubFilter
 {
     /// <summary>Can be used to filter what notifications are sent. Accepted values are UPGRADE_AVAILABLE_EVENT, UPGRADE_EVENT and SECURITY_BULLETIN_EVENT. See Filtering notifications for more details.</summary>
@@ -1296,6 +1390,7 @@ public partial class V1beta1ClusterSpecForProviderNotificationConfigPubsubFilter
     public IList<string>? EventType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNotificationConfigPubsub
 {
     /// <summary>Whether or not the notification config is enabled</summary>
@@ -1311,6 +1406,7 @@ public partial class V1beta1ClusterSpecForProviderNotificationConfigPubsub
     public string? Topic { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderNotificationConfig
 {
     /// <summary>The pubsub config for the cluster's upgrade notifications.</summary>
@@ -1318,6 +1414,7 @@ public partial class V1beta1ClusterSpecForProviderNotificationConfig
     public IList<V1beta1ClusterSpecForProviderNotificationConfigPubsub>? Pubsub { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderPrivateClusterConfigMasterGlobalAccessConfig
 {
     /// <summary>Whether the cluster master is accessible globally or not.</summary>
@@ -1325,6 +1422,7 @@ public partial class V1beta1ClusterSpecForProviderPrivateClusterConfigMasterGlob
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderPrivateClusterConfig
 {
     /// <summary>When true, the cluster's private endpoint is used as the cluster endpoint and access through the public endpoint is disabled. When false, either endpoint can be used. This field only applies to private clusters, when enable_private_nodes is true.</summary>
@@ -1348,6 +1446,7 @@ public partial class V1beta1ClusterSpecForProviderPrivateClusterConfig
     public string? PrivateEndpointSubnetwork { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderReleaseChannel
 {
     /// <summary>The selected release channel. Accepted values are:</summary>
@@ -1355,6 +1454,7 @@ public partial class V1beta1ClusterSpecForProviderReleaseChannel
     public string? Channel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderResourceUsageExportConfigBigqueryDestination
 {
     /// <summary>The ID of a BigQuery Dataset. For Example:</summary>
@@ -1362,6 +1462,7 @@ public partial class V1beta1ClusterSpecForProviderResourceUsageExportConfigBigqu
     public string? DatasetId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderResourceUsageExportConfig
 {
     /// <summary>Parameters for using BigQuery as the destination of resource usage export.</summary>
@@ -1377,6 +1478,7 @@ public partial class V1beta1ClusterSpecForProviderResourceUsageExportConfig
     public bool? EnableResourceConsumptionMetering { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderSecurityPostureConfig
 {
     /// <summary>Sets the mode of the Kubernetes security posture API's off-cluster features. Available options include DISABLED and BASIC.</summary>
@@ -1388,6 +1490,7 @@ public partial class V1beta1ClusterSpecForProviderSecurityPostureConfig
     public string? VulnerabilityMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderServiceExternalIpsConfig
 {
     /// <summary>Controls whether external ips specified by a service will be allowed. It is enabled by default.</summary>
@@ -1415,6 +1518,7 @@ public enum V1beta1ClusterSpecForProviderSubnetworkRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClusterSpecForProviderSubnetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1428,6 +1532,7 @@ public partial class V1beta1ClusterSpecForProviderSubnetworkRefPolicy
     public V1beta1ClusterSpecForProviderSubnetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnetwork in compute to populate subnetwork.</summary>
 public partial class V1beta1ClusterSpecForProviderSubnetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -1459,6 +1564,7 @@ public enum V1beta1ClusterSpecForProviderSubnetworkSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ClusterSpecForProviderSubnetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1472,6 +1578,7 @@ public partial class V1beta1ClusterSpecForProviderSubnetworkSelectorPolicy
     public V1beta1ClusterSpecForProviderSubnetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnetwork in compute to populate subnetwork.</summary>
 public partial class V1beta1ClusterSpecForProviderSubnetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -1487,6 +1594,7 @@ public partial class V1beta1ClusterSpecForProviderSubnetworkSelector
     public V1beta1ClusterSpecForProviderSubnetworkSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderVerticalPodAutoscaling
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -1494,6 +1602,7 @@ public partial class V1beta1ClusterSpecForProviderVerticalPodAutoscaling
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProviderWorkloadIdentityConfig
 {
     /// <summary>The workload pool to attach all Kubernetes service accounts to.</summary>
@@ -1501,6 +1610,7 @@ public partial class V1beta1ClusterSpecForProviderWorkloadIdentityConfig
     public string? WorkloadPool { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecForProvider
 {
     /// <summary>The configuration for addons supported by GKE. Structure is documented below.</summary>
@@ -1760,6 +1870,7 @@ public partial class V1beta1ClusterSpecForProvider
     public IList<V1beta1ClusterSpecForProviderWorkloadIdentityConfig>? WorkloadIdentityConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderAddonsConfigCloudrunConfig
 {
     /// <summary>The status of the Istio addon, which makes it easy to set up Istio for services in a cluster. It is disabled by default. Set disabled = false to enable.</summary>
@@ -1771,6 +1882,7 @@ public partial class V1beta1ClusterSpecInitProviderAddonsConfigCloudrunConfig
     public string? LoadBalancerType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderAddonsConfigConfigConnectorConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -1778,6 +1890,7 @@ public partial class V1beta1ClusterSpecInitProviderAddonsConfigConfigConnectorCo
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderAddonsConfigDnsCacheConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -1785,6 +1898,7 @@ public partial class V1beta1ClusterSpecInitProviderAddonsConfigDnsCacheConfig
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderAddonsConfigGcePersistentDiskCsiDriverConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -1792,6 +1906,7 @@ public partial class V1beta1ClusterSpecInitProviderAddonsConfigGcePersistentDisk
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderAddonsConfigGcpFilestoreCsiDriverConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -1799,6 +1914,7 @@ public partial class V1beta1ClusterSpecInitProviderAddonsConfigGcpFilestoreCsiDr
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderAddonsConfigGcsFuseCsiDriverConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -1806,6 +1922,7 @@ public partial class V1beta1ClusterSpecInitProviderAddonsConfigGcsFuseCsiDriverC
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderAddonsConfigGkeBackupAgentConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -1813,6 +1930,7 @@ public partial class V1beta1ClusterSpecInitProviderAddonsConfigGkeBackupAgentCon
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderAddonsConfigHorizontalPodAutoscaling
 {
     /// <summary>The status of the Istio addon, which makes it easy to set up Istio for services in a cluster. It is disabled by default. Set disabled = false to enable.</summary>
@@ -1820,6 +1938,7 @@ public partial class V1beta1ClusterSpecInitProviderAddonsConfigHorizontalPodAuto
     public bool? Disabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderAddonsConfigHttpLoadBalancing
 {
     /// <summary>The status of the Istio addon, which makes it easy to set up Istio for services in a cluster. It is disabled by default. Set disabled = false to enable.</summary>
@@ -1827,6 +1946,7 @@ public partial class V1beta1ClusterSpecInitProviderAddonsConfigHttpLoadBalancing
     public bool? Disabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderAddonsConfigNetworkPolicyConfig
 {
     /// <summary>The status of the Istio addon, which makes it easy to set up Istio for services in a cluster. It is disabled by default. Set disabled = false to enable.</summary>
@@ -1834,6 +1954,7 @@ public partial class V1beta1ClusterSpecInitProviderAddonsConfigNetworkPolicyConf
     public bool? Disabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderAddonsConfigRayOperatorConfigRayClusterLoggingConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -1841,6 +1962,7 @@ public partial class V1beta1ClusterSpecInitProviderAddonsConfigRayOperatorConfig
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderAddonsConfigRayOperatorConfigRayClusterMonitoringConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -1848,6 +1970,7 @@ public partial class V1beta1ClusterSpecInitProviderAddonsConfigRayOperatorConfig
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderAddonsConfigRayOperatorConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -1863,6 +1986,7 @@ public partial class V1beta1ClusterSpecInitProviderAddonsConfigRayOperatorConfig
     public IList<V1beta1ClusterSpecInitProviderAddonsConfigRayOperatorConfigRayClusterMonitoringConfig>? RayClusterMonitoringConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderAddonsConfigStatefulHaConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -1870,6 +1994,7 @@ public partial class V1beta1ClusterSpecInitProviderAddonsConfigStatefulHaConfig
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderAddonsConfig
 {
     /// <summary>. Structure is documented below.</summary>
@@ -1921,6 +2046,7 @@ public partial class V1beta1ClusterSpecInitProviderAddonsConfig
     public IList<V1beta1ClusterSpecInitProviderAddonsConfigStatefulHaConfig>? StatefulHaConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderAuthenticatorGroupsConfig
 {
     /// <summary>The name of the RBAC security group for use with Google security groups in Kubernetes RBAC. Group name must be in format gke-security-groups@yourdomain.com.</summary>
@@ -1928,6 +2054,7 @@ public partial class V1beta1ClusterSpecInitProviderAuthenticatorGroupsConfig
     public string? SecurityGroup { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderBinaryAuthorization
 {
     /// <summary>(DEPRECATED) Enable Binary Authorization for this cluster. Deprecated in favor of evaluation_mode.</summary>
@@ -1939,6 +2066,7 @@ public partial class V1beta1ClusterSpecInitProviderBinaryAuthorization
     public string? EvaluationMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderClusterAutoscalingAutoProvisioningDefaultsManagement
 {
     /// <summary>Specifies whether the node auto-repair is enabled for the node pool. If enabled, the nodes in this node pool will be monitored and, if they fail health checks too many times, an automatic repair action will be triggered.</summary>
@@ -1950,6 +2078,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterAutoscalingAutoProvisi
     public bool? AutoUpgrade { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderClusterAutoscalingAutoProvisioningDefaultsShieldedInstanceConfig
 {
     /// <summary>Defines if the instance has integrity monitoring enabled.</summary>
@@ -1961,6 +2090,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterAutoscalingAutoProvisi
     public bool? EnableSecureBoot { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy
 {
     /// <summary>Number of blue nodes to drain in a batch. Only one of the batch_percentage or batch_node_count can be specified.</summary>
@@ -1976,6 +2106,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterAutoscalingAutoProvisi
     public string? BatchSoakDuration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettings
 {
     /// <summary>Time needed after draining entire blue pool. After this period, blue pool will be cleaned up. A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.5s".</summary>
@@ -1987,6 +2118,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterAutoscalingAutoProvisi
     public IList<V1beta1ClusterSpecInitProviderClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy>? StandardRolloutPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderClusterAutoscalingAutoProvisioningDefaultsUpgradeSettings
 {
     /// <summary>Settings for blue-green upgrade strategy. To be specified when strategy is set to BLUE_GREEN. Structure is documented below.</summary>
@@ -2006,6 +2138,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterAutoscalingAutoProvisi
     public string? Strategy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderClusterAutoscalingAutoProvisioningDefaults
 {
     /// <summary>The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: https://cloud.google.com/compute/docs/disks/customer-managed-encryption</summary>
@@ -2049,6 +2182,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterAutoscalingAutoProvisi
     public IList<V1beta1ClusterSpecInitProviderClusterAutoscalingAutoProvisioningDefaultsUpgradeSettings>? UpgradeSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderClusterAutoscalingResourceLimits
 {
     /// <summary>Maximum amount of the resource in the cluster.</summary>
@@ -2064,6 +2198,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterAutoscalingResourceLim
     public string? ResourceType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderClusterAutoscaling
 {
     /// <summary>Contains defaults for a node pool created by NAP. A subset of fields also apply to GKE Autopilot clusters. Structure is documented below.</summary>
@@ -2083,6 +2218,7 @@ public partial class V1beta1ClusterSpecInitProviderClusterAutoscaling
     public IList<V1beta1ClusterSpecInitProviderClusterAutoscalingResourceLimits>? ResourceLimits { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderConfidentialNodes
 {
     /// <summary>Enable Confidential GKE Nodes for this cluster, to enforce encryption of data in-use.</summary>
@@ -2090,6 +2226,7 @@ public partial class V1beta1ClusterSpecInitProviderConfidentialNodes
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderCostManagementConfig
 {
     /// <summary>Whether to enable the cost allocation feature.</summary>
@@ -2097,6 +2234,7 @@ public partial class V1beta1ClusterSpecInitProviderCostManagementConfig
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderDatabaseEncryption
 {
     /// <summary>the key to use to encrypt/decrypt secrets.  See the DatabaseEncryption definition for more information.</summary>
@@ -2108,6 +2246,7 @@ public partial class V1beta1ClusterSpecInitProviderDatabaseEncryption
     public string? State { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderDefaultSnatStatus
 {
     /// <summary>Whether the cluster disables default in-node sNAT rules. In-node sNAT rules will be disabled when defaultSnatStatus is disabled.When disabled is set to false, default IP masquerade rules will be applied to the nodes to prevent sNAT on cluster internal traffic</summary>
@@ -2115,6 +2254,7 @@ public partial class V1beta1ClusterSpecInitProviderDefaultSnatStatus
     public bool? Disabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderDnsConfig
 {
     /// <summary>Which in-cluster DNS provider should be used. PROVIDER_UNSPECIFIED (default) or PLATFORM_DEFAULT or CLOUD_DNS.</summary>
@@ -2130,6 +2270,7 @@ public partial class V1beta1ClusterSpecInitProviderDnsConfig
     public string? ClusterDnsScope { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderEnableK8SBetaApis
 {
     /// <summary>Enabled Kubernetes Beta APIs. To list a Beta API resource, use the representation {group}/{version}/{resource}. The version must be a Beta version. Note that you cannot disable beta APIs that are already enabled on a cluster without recreating it. See the Configure beta APIs for more information.</summary>
@@ -2137,6 +2278,7 @@ public partial class V1beta1ClusterSpecInitProviderEnableK8SBetaApis
     public IList<string>? EnabledApis { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderFleet
 {
     /// <summary>The name of the Fleet host project where this cluster will be registered.</summary>
@@ -2144,6 +2286,7 @@ public partial class V1beta1ClusterSpecInitProviderFleet
     public string? Project { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderGatewayApiConfig
 {
     /// <summary>Which Gateway Api channel should be used. CHANNEL_DISABLED, CHANNEL_EXPERIMENTAL or CHANNEL_STANDARD.</summary>
@@ -2151,6 +2294,7 @@ public partial class V1beta1ClusterSpecInitProviderGatewayApiConfig
     public string? Channel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderIdentityServiceConfig
 {
     /// <summary>Whether to enable the Identity Service component. It is disabled by default. Set enabled=true to enable.</summary>
@@ -2158,6 +2302,7 @@ public partial class V1beta1ClusterSpecInitProviderIdentityServiceConfig
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderIpAllocationPolicyAdditionalPodRangesConfig
 {
     /// <summary>The names of the Pod ranges to add to the cluster.</summary>
@@ -2165,6 +2310,7 @@ public partial class V1beta1ClusterSpecInitProviderIpAllocationPolicyAdditionalP
     public IList<string>? PodRangeNames { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderIpAllocationPolicyPodCidrOverprovisionConfig
 {
     /// <summary>The status of the Istio addon, which makes it easy to set up Istio for services in a cluster. It is disabled by default. Set disabled = false to enable.</summary>
@@ -2172,6 +2318,7 @@ public partial class V1beta1ClusterSpecInitProviderIpAllocationPolicyPodCidrOver
     public bool? Disabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderIpAllocationPolicy
 {
     /// <summary>The configuration for additional pod secondary ranges at the cluster level. Used for Autopilot clusters and Standard clusters with which control of the secondary Pod IP address assignment to node pools isn't needed. Structure is documented below.</summary>
@@ -2203,6 +2350,7 @@ public partial class V1beta1ClusterSpecInitProviderIpAllocationPolicy
     public string? StackType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderLoggingConfig
 {
     /// <summary>The GKE components exposing logs. Supported values include: SYSTEM_COMPONENTS, APISERVER, CONTROLLER_MANAGER, SCHEDULER, and WORKLOADS.</summary>
@@ -2210,6 +2358,7 @@ public partial class V1beta1ClusterSpecInitProviderLoggingConfig
     public IList<string>? EnableComponents { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderMaintenancePolicyDailyMaintenanceWindow
 {
     /// <summary></summary>
@@ -2217,6 +2366,7 @@ public partial class V1beta1ClusterSpecInitProviderMaintenancePolicyDailyMainten
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderMaintenancePolicyMaintenanceExclusionExclusionOptions
 {
     /// <summary>The scope of automatic upgrades to restrict in the exclusion window. One of: NO_UPGRADES | NO_MINOR_UPGRADES | NO_MINOR_OR_NODE_UPGRADES</summary>
@@ -2224,6 +2374,7 @@ public partial class V1beta1ClusterSpecInitProviderMaintenancePolicyMaintenanceE
     public string? Scope { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderMaintenancePolicyMaintenanceExclusion
 {
     /// <summary></summary>
@@ -2243,6 +2394,7 @@ public partial class V1beta1ClusterSpecInitProviderMaintenancePolicyMaintenanceE
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderMaintenancePolicyRecurringWindow
 {
     /// <summary></summary>
@@ -2258,6 +2410,7 @@ public partial class V1beta1ClusterSpecInitProviderMaintenancePolicyRecurringWin
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderMaintenancePolicy
 {
     /// <summary>structure documented below.</summary>
@@ -2273,6 +2426,7 @@ public partial class V1beta1ClusterSpecInitProviderMaintenancePolicy
     public IList<V1beta1ClusterSpecInitProviderMaintenancePolicyRecurringWindow>? RecurringWindow { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderMasterAuthClientCertificateConfig
 {
     /// <summary></summary>
@@ -2280,6 +2434,7 @@ public partial class V1beta1ClusterSpecInitProviderMasterAuthClientCertificateCo
     public bool? IssueClientCertificate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderMasterAuth
 {
     /// <summary>Whether client certificate authorization is enabled for this cluster.  For example:</summary>
@@ -2287,6 +2442,7 @@ public partial class V1beta1ClusterSpecInitProviderMasterAuth
     public IList<V1beta1ClusterSpecInitProviderMasterAuthClientCertificateConfig>? ClientCertificateConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderMasterAuthorizedNetworksConfigCidrBlocks
 {
     /// <summary>External network that can access Kubernetes master through HTTPS. Must be specified in CIDR notation.</summary>
@@ -2298,6 +2454,7 @@ public partial class V1beta1ClusterSpecInitProviderMasterAuthorizedNetworksConfi
     public string? DisplayName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderMasterAuthorizedNetworksConfig
 {
     /// <summary>External networks that can access the Kubernetes cluster master through HTTPS.</summary>
@@ -2309,6 +2466,7 @@ public partial class V1beta1ClusterSpecInitProviderMasterAuthorizedNetworksConfi
     public bool? GcpPublicCidrsAccessEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderMeshCertificates
 {
     /// <summary>Controls the issuance of workload mTLS certificates. It is enabled by default. Workload Identity is required, see workload_config.</summary>
@@ -2316,6 +2474,7 @@ public partial class V1beta1ClusterSpecInitProviderMeshCertificates
     public bool? EnableCertificates { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderMonitoringConfigAdvancedDatapathObservabilityConfig
 {
     /// <summary>Whether or not to enable advanced datapath metrics.</summary>
@@ -2331,6 +2490,7 @@ public partial class V1beta1ClusterSpecInitProviderMonitoringConfigAdvancedDatap
     public string? RelayMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderMonitoringConfigManagedPrometheus
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -2338,6 +2498,7 @@ public partial class V1beta1ClusterSpecInitProviderMonitoringConfigManagedPromet
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderMonitoringConfig
 {
     /// <summary>Configuration for Advanced Datapath Monitoring. Structure is documented below.</summary>
@@ -2353,6 +2514,7 @@ public partial class V1beta1ClusterSpecInitProviderMonitoringConfig
     public IList<V1beta1ClusterSpecInitProviderMonitoringConfigManagedPrometheus>? ManagedPrometheus { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNetworkPolicy
 {
     /// <summary>Whether network policy is enabled on the cluster.</summary>
@@ -2384,6 +2546,7 @@ public enum V1beta1ClusterSpecInitProviderNetworkRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClusterSpecInitProviderNetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2397,6 +2560,7 @@ public partial class V1beta1ClusterSpecInitProviderNetworkRefPolicy
     public V1beta1ClusterSpecInitProviderNetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Network in compute to populate network.</summary>
 public partial class V1beta1ClusterSpecInitProviderNetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2428,6 +2592,7 @@ public enum V1beta1ClusterSpecInitProviderNetworkSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ClusterSpecInitProviderNetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2441,6 +2606,7 @@ public partial class V1beta1ClusterSpecInitProviderNetworkSelectorPolicy
     public V1beta1ClusterSpecInitProviderNetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Network in compute to populate network.</summary>
 public partial class V1beta1ClusterSpecInitProviderNetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2456,6 +2622,7 @@ public partial class V1beta1ClusterSpecInitProviderNetworkSelector
     public V1beta1ClusterSpecInitProviderNetworkSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNodeConfigAdvancedMachineFeatures
 {
     /// <summary>Defines whether the instance should have nested virtualization enabled. Defaults to false.</summary>
@@ -2467,6 +2634,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigAdvancedMachineFeat
     public double? ThreadsPerCore { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNodeConfigConfidentialNodes
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -2474,6 +2642,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigConfidentialNodes
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigGcpSecretManagerCertificateConfig
 {
     /// <summary></summary>
@@ -2481,6 +2650,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigContainerdConfigPri
     public string? SecretUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig
 {
     /// <summary></summary>
@@ -2492,6 +2662,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigContainerdConfigPri
     public IList<V1beta1ClusterSpecInitProviderNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigGcpSecretManagerCertificateConfig>? GcpSecretManagerCertificateConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNodeConfigContainerdConfigPrivateRegistryAccessConfig
 {
     /// <summary>List of configuration objects for CA and domains. Each object identifies a certificate and its assigned domains. See how to configure for private container registries for more detail. Example:</summary>
@@ -2503,6 +2674,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigContainerdConfigPri
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNodeConfigContainerdConfig
 {
     /// <summary>Configuration for private container registries. There are two fields in this config:</summary>
@@ -2510,6 +2682,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigContainerdConfig
     public IList<V1beta1ClusterSpecInitProviderNodeConfigContainerdConfigPrivateRegistryAccessConfig>? PrivateRegistryAccessConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNodeConfigEphemeralStorageLocalSsdConfig
 {
     /// <summary>The amount of local SSD disks that will be attached to each cluster node. Defaults to 0.</summary>
@@ -2517,6 +2690,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigEphemeralStorageLoc
     public double? LocalSsdCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNodeConfigFastSocket
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -2524,6 +2698,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigFastSocket
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNodeConfigGcfsConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -2531,6 +2706,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigGcfsConfig
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNodeConfigGuestAcceleratorGpuDriverInstallationConfig
 {
     /// <summary>Mode for how the GPU driver is installed. Accepted values are:</summary>
@@ -2538,6 +2714,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigGuestAcceleratorGpu
     public string? GpuDriverVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNodeConfigGuestAcceleratorGpuSharingConfig
 {
     /// <summary>The type of GPU sharing strategy to enable on the GPU node. Accepted values are:</summary>
@@ -2549,6 +2726,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigGuestAcceleratorGpu
     public double? MaxSharedClientsPerGpu { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNodeConfigGuestAccelerator
 {
     /// <summary>The number of the guest accelerator cards exposed to this instance.</summary>
@@ -2572,6 +2750,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigGuestAccelerator
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNodeConfigGvnic
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -2579,6 +2758,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigGvnic
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNodeConfigHostMaintenancePolicy
 {
     /// <summary></summary>
@@ -2586,6 +2766,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigHostMaintenancePoli
     public string? MaintenanceInterval { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNodeConfigKubeletConfig
 {
     /// <summary>If true, enables CPU CFS quota enforcement for containers that specify CPU limits.</summary>
@@ -2605,6 +2786,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigKubeletConfig
     public double? PodPidsLimit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNodeConfigLinuxNodeConfig
 {
     /// <summary>Possible cgroup modes that can be used. Accepted values are:</summary>
@@ -2616,6 +2798,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigLinuxNodeConfig
     public IDictionary<string, string>? Sysctls { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNodeConfigLocalNvmeSsdBlockConfig
 {
     /// <summary>The amount of local SSD disks that will be attached to each cluster node. Defaults to 0.</summary>
@@ -2623,6 +2806,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigLocalNvmeSsdBlockCo
     public double? LocalSsdCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNodeConfigReservationAffinity
 {
     /// <summary>The type of reservation consumption Accepted values are:</summary>
@@ -2638,6 +2822,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigReservationAffinity
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNodeConfigSecondaryBootDisks
 {
     /// <summary>Path to disk image to create the secondary boot disk from. After using the gke-disk-image-builder, this argument should be global/images/DISK_IMAGE_NAME.</summary>
@@ -2669,6 +2854,7 @@ public enum V1beta1ClusterSpecInitProviderNodeConfigServiceAccountRefPolicyResol
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClusterSpecInitProviderNodeConfigServiceAccountRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2682,6 +2868,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigServiceAccountRefPo
     public V1beta1ClusterSpecInitProviderNodeConfigServiceAccountRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
 public partial class V1beta1ClusterSpecInitProviderNodeConfigServiceAccountRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -2713,6 +2900,7 @@ public enum V1beta1ClusterSpecInitProviderNodeConfigServiceAccountSelectorPolicy
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ClusterSpecInitProviderNodeConfigServiceAccountSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -2726,6 +2914,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigServiceAccountSelec
     public V1beta1ClusterSpecInitProviderNodeConfigServiceAccountSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
 public partial class V1beta1ClusterSpecInitProviderNodeConfigServiceAccountSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -2741,6 +2930,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigServiceAccountSelec
     public V1beta1ClusterSpecInitProviderNodeConfigServiceAccountSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNodeConfigShieldedInstanceConfig
 {
     /// <summary>Defines if the instance has integrity monitoring enabled.</summary>
@@ -2752,6 +2942,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigShieldedInstanceCon
     public bool? EnableSecureBoot { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNodeConfigSoleTenantConfigNodeAffinity
 {
     /// <summary>Key for taint.</summary>
@@ -2767,6 +2958,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigSoleTenantConfigNod
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNodeConfigSoleTenantConfig
 {
     /// <summary></summary>
@@ -2774,6 +2966,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigSoleTenantConfig
     public IList<V1beta1ClusterSpecInitProviderNodeConfigSoleTenantConfigNodeAffinity>? NodeAffinity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNodeConfigTaint
 {
     /// <summary>Effect for taint. Accepted values are NO_SCHEDULE, PREFER_NO_SCHEDULE, and NO_EXECUTE.</summary>
@@ -2789,6 +2982,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigTaint
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNodeConfigWorkloadMetadataConfig
 {
     /// <summary>How to expose the node metadata to the workload running on the node. Accepted values are:</summary>
@@ -2796,6 +2990,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigWorkloadMetadataCon
     public string? Mode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNodeConfig
 {
     /// <summary>Specifies options for controlling advanced machine features. Structure is documented below.</summary>
@@ -2959,6 +3154,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfig
     public IList<V1beta1ClusterSpecInitProviderNodeConfigWorkloadMetadataConfig>? WorkloadMetadataConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNodePoolAutoConfigNetworkTags
 {
     /// <summary>List of network tags applied to auto-provisioned node pools.</summary>
@@ -2966,6 +3162,7 @@ public partial class V1beta1ClusterSpecInitProviderNodePoolAutoConfigNetworkTags
     public IList<string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNodePoolAutoConfig
 {
     /// <summary>The network tag config for the cluster's automatically provisioned node pools.</summary>
@@ -2977,6 +3174,7 @@ public partial class V1beta1ClusterSpecInitProviderNodePoolAutoConfig
     public IDictionary<string, string>? ResourceManagerTags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNodePoolDefaultsNodeConfigDefaultsContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigGcpSecretManagerCertificateConfig
 {
     /// <summary></summary>
@@ -2984,6 +3182,7 @@ public partial class V1beta1ClusterSpecInitProviderNodePoolDefaultsNodeConfigDef
     public string? SecretUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNodePoolDefaultsNodeConfigDefaultsContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig
 {
     /// <summary></summary>
@@ -2995,6 +3194,7 @@ public partial class V1beta1ClusterSpecInitProviderNodePoolDefaultsNodeConfigDef
     public IList<V1beta1ClusterSpecInitProviderNodePoolDefaultsNodeConfigDefaultsContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigGcpSecretManagerCertificateConfig>? GcpSecretManagerCertificateConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNodePoolDefaultsNodeConfigDefaultsContainerdConfigPrivateRegistryAccessConfig
 {
     /// <summary>List of configuration objects for CA and domains. Each object identifies a certificate and its assigned domains. See how to configure for private container registries for more detail. Example:</summary>
@@ -3006,6 +3206,7 @@ public partial class V1beta1ClusterSpecInitProviderNodePoolDefaultsNodeConfigDef
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNodePoolDefaultsNodeConfigDefaultsContainerdConfig
 {
     /// <summary>Configuration for private container registries. There are two fields in this config:</summary>
@@ -3013,6 +3214,7 @@ public partial class V1beta1ClusterSpecInitProviderNodePoolDefaultsNodeConfigDef
     public IList<V1beta1ClusterSpecInitProviderNodePoolDefaultsNodeConfigDefaultsContainerdConfigPrivateRegistryAccessConfig>? PrivateRegistryAccessConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNodePoolDefaultsNodeConfigDefaults
 {
     /// <summary>Parameters to customize containerd runtime. Structure is documented below.</summary>
@@ -3024,6 +3226,7 @@ public partial class V1beta1ClusterSpecInitProviderNodePoolDefaultsNodeConfigDef
     public string? LoggingVariant { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNodePoolDefaults
 {
     /// <summary>Subset of NodeConfig message that has defaults.</summary>
@@ -3031,6 +3234,7 @@ public partial class V1beta1ClusterSpecInitProviderNodePoolDefaults
     public IList<V1beta1ClusterSpecInitProviderNodePoolDefaultsNodeConfigDefaults>? NodeConfigDefaults { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNotificationConfigPubsubFilter
 {
     /// <summary>Can be used to filter what notifications are sent. Accepted values are UPGRADE_AVAILABLE_EVENT, UPGRADE_EVENT and SECURITY_BULLETIN_EVENT. See Filtering notifications for more details.</summary>
@@ -3038,6 +3242,7 @@ public partial class V1beta1ClusterSpecInitProviderNotificationConfigPubsubFilte
     public IList<string>? EventType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNotificationConfigPubsub
 {
     /// <summary>Whether or not the notification config is enabled</summary>
@@ -3053,6 +3258,7 @@ public partial class V1beta1ClusterSpecInitProviderNotificationConfigPubsub
     public string? Topic { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderNotificationConfig
 {
     /// <summary>The pubsub config for the cluster's upgrade notifications.</summary>
@@ -3060,6 +3266,7 @@ public partial class V1beta1ClusterSpecInitProviderNotificationConfig
     public IList<V1beta1ClusterSpecInitProviderNotificationConfigPubsub>? Pubsub { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderPrivateClusterConfigMasterGlobalAccessConfig
 {
     /// <summary>Whether the cluster master is accessible globally or not.</summary>
@@ -3067,6 +3274,7 @@ public partial class V1beta1ClusterSpecInitProviderPrivateClusterConfigMasterGlo
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderPrivateClusterConfig
 {
     /// <summary>When true, the cluster's private endpoint is used as the cluster endpoint and access through the public endpoint is disabled. When false, either endpoint can be used. This field only applies to private clusters, when enable_private_nodes is true.</summary>
@@ -3090,6 +3298,7 @@ public partial class V1beta1ClusterSpecInitProviderPrivateClusterConfig
     public string? PrivateEndpointSubnetwork { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderReleaseChannel
 {
     /// <summary>The selected release channel. Accepted values are:</summary>
@@ -3097,6 +3306,7 @@ public partial class V1beta1ClusterSpecInitProviderReleaseChannel
     public string? Channel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderResourceUsageExportConfigBigqueryDestination
 {
     /// <summary>The ID of a BigQuery Dataset. For Example:</summary>
@@ -3104,6 +3314,7 @@ public partial class V1beta1ClusterSpecInitProviderResourceUsageExportConfigBigq
     public string? DatasetId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderResourceUsageExportConfig
 {
     /// <summary>Parameters for using BigQuery as the destination of resource usage export.</summary>
@@ -3119,6 +3330,7 @@ public partial class V1beta1ClusterSpecInitProviderResourceUsageExportConfig
     public bool? EnableResourceConsumptionMetering { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderSecurityPostureConfig
 {
     /// <summary>Sets the mode of the Kubernetes security posture API's off-cluster features. Available options include DISABLED and BASIC.</summary>
@@ -3130,6 +3342,7 @@ public partial class V1beta1ClusterSpecInitProviderSecurityPostureConfig
     public string? VulnerabilityMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderServiceExternalIpsConfig
 {
     /// <summary>Controls whether external ips specified by a service will be allowed. It is enabled by default.</summary>
@@ -3157,6 +3370,7 @@ public enum V1beta1ClusterSpecInitProviderSubnetworkRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClusterSpecInitProviderSubnetworkRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3170,6 +3384,7 @@ public partial class V1beta1ClusterSpecInitProviderSubnetworkRefPolicy
     public V1beta1ClusterSpecInitProviderSubnetworkRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Reference to a Subnetwork in compute to populate subnetwork.</summary>
 public partial class V1beta1ClusterSpecInitProviderSubnetworkRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3201,6 +3416,7 @@ public enum V1beta1ClusterSpecInitProviderSubnetworkSelectorPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for selection.</summary>
 public partial class V1beta1ClusterSpecInitProviderSubnetworkSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3214,6 +3430,7 @@ public partial class V1beta1ClusterSpecInitProviderSubnetworkSelectorPolicy
     public V1beta1ClusterSpecInitProviderSubnetworkSelectorPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>Selector for a Subnetwork in compute to populate subnetwork.</summary>
 public partial class V1beta1ClusterSpecInitProviderSubnetworkSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
@@ -3229,6 +3446,7 @@ public partial class V1beta1ClusterSpecInitProviderSubnetworkSelector
     public V1beta1ClusterSpecInitProviderSubnetworkSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderVerticalPodAutoscaling
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -3236,6 +3454,7 @@ public partial class V1beta1ClusterSpecInitProviderVerticalPodAutoscaling
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterSpecInitProviderWorkloadIdentityConfig
 {
     /// <summary>The workload pool to attach all Kubernetes service accounts to.</summary>
@@ -3243,6 +3462,7 @@ public partial class V1beta1ClusterSpecInitProviderWorkloadIdentityConfig
     public string? WorkloadPool { get; set; }
 }
 
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 public partial class V1beta1ClusterSpecInitProvider
 {
     /// <summary>The configuration for addons supported by GKE. Structure is documented below.</summary>
@@ -3540,6 +3760,7 @@ public enum V1beta1ClusterSpecProviderConfigRefPolicyResolveEnum
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClusterSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3553,6 +3774,7 @@ public partial class V1beta1ClusterSpecProviderConfigRefPolicy
     public V1beta1ClusterSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 public partial class V1beta1ClusterSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3584,6 +3806,7 @@ public enum V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicyResolveEn
     IfNotPresent
 }
 
+/// <summary>Policies for referencing.</summary>
 public partial class V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -3597,6 +3820,7 @@ public partial class V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicy
     public V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
 }
 
+/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 public partial class V1beta1ClusterSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
@@ -3608,6 +3832,7 @@ public partial class V1beta1ClusterSpecPublishConnectionDetailsToConfigRef
     public V1beta1ClusterSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Metadata is the metadata for connection secret.</summary>
 public partial class V1beta1ClusterSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
@@ -3623,6 +3848,7 @@ public partial class V1beta1ClusterSpecPublishConnectionDetailsToMetadata
     public string? Type { get; set; }
 }
 
+/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 public partial class V1beta1ClusterSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -3638,6 +3864,7 @@ public partial class V1beta1ClusterSpecPublishConnectionDetailsTo
     public string Name { get; set; }
 }
 
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 public partial class V1beta1ClusterSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
@@ -3649,6 +3876,7 @@ public partial class V1beta1ClusterSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
+/// <summary>ClusterSpec defines the desired state of Cluster</summary>
 public partial class V1beta1ClusterSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
@@ -3681,6 +3909,7 @@ public partial class V1beta1ClusterSpec
     public V1beta1ClusterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderAddonsConfigCloudrunConfig
 {
     /// <summary>The status of the Istio addon, which makes it easy to set up Istio for services in a cluster. It is disabled by default. Set disabled = false to enable.</summary>
@@ -3692,6 +3921,7 @@ public partial class V1beta1ClusterStatusAtProviderAddonsConfigCloudrunConfig
     public string? LoadBalancerType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderAddonsConfigConfigConnectorConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -3699,6 +3929,7 @@ public partial class V1beta1ClusterStatusAtProviderAddonsConfigConfigConnectorCo
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderAddonsConfigDnsCacheConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -3706,6 +3937,7 @@ public partial class V1beta1ClusterStatusAtProviderAddonsConfigDnsCacheConfig
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderAddonsConfigGcePersistentDiskCsiDriverConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -3713,6 +3945,7 @@ public partial class V1beta1ClusterStatusAtProviderAddonsConfigGcePersistentDisk
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderAddonsConfigGcpFilestoreCsiDriverConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -3720,6 +3953,7 @@ public partial class V1beta1ClusterStatusAtProviderAddonsConfigGcpFilestoreCsiDr
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderAddonsConfigGcsFuseCsiDriverConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -3727,6 +3961,7 @@ public partial class V1beta1ClusterStatusAtProviderAddonsConfigGcsFuseCsiDriverC
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderAddonsConfigGkeBackupAgentConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -3734,6 +3969,7 @@ public partial class V1beta1ClusterStatusAtProviderAddonsConfigGkeBackupAgentCon
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderAddonsConfigHorizontalPodAutoscaling
 {
     /// <summary>The status of the Istio addon, which makes it easy to set up Istio for services in a cluster. It is disabled by default. Set disabled = false to enable.</summary>
@@ -3741,6 +3977,7 @@ public partial class V1beta1ClusterStatusAtProviderAddonsConfigHorizontalPodAuto
     public bool? Disabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderAddonsConfigHttpLoadBalancing
 {
     /// <summary>The status of the Istio addon, which makes it easy to set up Istio for services in a cluster. It is disabled by default. Set disabled = false to enable.</summary>
@@ -3748,6 +3985,7 @@ public partial class V1beta1ClusterStatusAtProviderAddonsConfigHttpLoadBalancing
     public bool? Disabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderAddonsConfigNetworkPolicyConfig
 {
     /// <summary>The status of the Istio addon, which makes it easy to set up Istio for services in a cluster. It is disabled by default. Set disabled = false to enable.</summary>
@@ -3755,6 +3993,7 @@ public partial class V1beta1ClusterStatusAtProviderAddonsConfigNetworkPolicyConf
     public bool? Disabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderAddonsConfigRayOperatorConfigRayClusterLoggingConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -3762,6 +4001,7 @@ public partial class V1beta1ClusterStatusAtProviderAddonsConfigRayOperatorConfig
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderAddonsConfigRayOperatorConfigRayClusterMonitoringConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -3769,6 +4009,7 @@ public partial class V1beta1ClusterStatusAtProviderAddonsConfigRayOperatorConfig
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderAddonsConfigRayOperatorConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -3784,6 +4025,7 @@ public partial class V1beta1ClusterStatusAtProviderAddonsConfigRayOperatorConfig
     public IList<V1beta1ClusterStatusAtProviderAddonsConfigRayOperatorConfigRayClusterMonitoringConfig>? RayClusterMonitoringConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderAddonsConfigStatefulHaConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -3791,6 +4033,7 @@ public partial class V1beta1ClusterStatusAtProviderAddonsConfigStatefulHaConfig
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderAddonsConfig
 {
     /// <summary>. Structure is documented below.</summary>
@@ -3842,6 +4085,7 @@ public partial class V1beta1ClusterStatusAtProviderAddonsConfig
     public IList<V1beta1ClusterStatusAtProviderAddonsConfigStatefulHaConfig>? StatefulHaConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderAuthenticatorGroupsConfig
 {
     /// <summary>The name of the RBAC security group for use with Google security groups in Kubernetes RBAC. Group name must be in format gke-security-groups@yourdomain.com.</summary>
@@ -3849,6 +4093,7 @@ public partial class V1beta1ClusterStatusAtProviderAuthenticatorGroupsConfig
     public string? SecurityGroup { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderBinaryAuthorization
 {
     /// <summary>(DEPRECATED) Enable Binary Authorization for this cluster. Deprecated in favor of evaluation_mode.</summary>
@@ -3860,6 +4105,7 @@ public partial class V1beta1ClusterStatusAtProviderBinaryAuthorization
     public string? EvaluationMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderClusterAutoscalingAutoProvisioningDefaultsManagementUpgradeOptions
 {
     /// <summary></summary>
@@ -3871,6 +4117,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterAutoscalingAutoProvisi
     public string? Description { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderClusterAutoscalingAutoProvisioningDefaultsManagement
 {
     /// <summary>Specifies whether the node auto-repair is enabled for the node pool. If enabled, the nodes in this node pool will be monitored and, if they fail health checks too many times, an automatic repair action will be triggered.</summary>
@@ -3886,6 +4133,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterAutoscalingAutoProvisi
     public IList<V1beta1ClusterStatusAtProviderClusterAutoscalingAutoProvisioningDefaultsManagementUpgradeOptions>? UpgradeOptions { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderClusterAutoscalingAutoProvisioningDefaultsShieldedInstanceConfig
 {
     /// <summary>Defines if the instance has integrity monitoring enabled.</summary>
@@ -3897,6 +4145,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterAutoscalingAutoProvisi
     public bool? EnableSecureBoot { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy
 {
     /// <summary>Number of blue nodes to drain in a batch. Only one of the batch_percentage or batch_node_count can be specified.</summary>
@@ -3912,6 +4161,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterAutoscalingAutoProvisi
     public string? BatchSoakDuration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettings
 {
     /// <summary>Time needed after draining entire blue pool. After this period, blue pool will be cleaned up. A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.5s".</summary>
@@ -3923,6 +4173,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterAutoscalingAutoProvisi
     public IList<V1beta1ClusterStatusAtProviderClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy>? StandardRolloutPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderClusterAutoscalingAutoProvisioningDefaultsUpgradeSettings
 {
     /// <summary>Settings for blue-green upgrade strategy. To be specified when strategy is set to BLUE_GREEN. Structure is documented below.</summary>
@@ -3942,6 +4193,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterAutoscalingAutoProvisi
     public string? Strategy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderClusterAutoscalingAutoProvisioningDefaults
 {
     /// <summary>The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: https://cloud.google.com/compute/docs/disks/customer-managed-encryption</summary>
@@ -3985,6 +4237,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterAutoscalingAutoProvisi
     public IList<V1beta1ClusterStatusAtProviderClusterAutoscalingAutoProvisioningDefaultsUpgradeSettings>? UpgradeSettings { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderClusterAutoscalingResourceLimits
 {
     /// <summary>Maximum amount of the resource in the cluster.</summary>
@@ -4000,6 +4253,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterAutoscalingResourceLim
     public string? ResourceType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderClusterAutoscaling
 {
     /// <summary>Contains defaults for a node pool created by NAP. A subset of fields also apply to GKE Autopilot clusters. Structure is documented below.</summary>
@@ -4019,6 +4273,7 @@ public partial class V1beta1ClusterStatusAtProviderClusterAutoscaling
     public IList<V1beta1ClusterStatusAtProviderClusterAutoscalingResourceLimits>? ResourceLimits { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderConfidentialNodes
 {
     /// <summary>Enable Confidential GKE Nodes for this cluster, to enforce encryption of data in-use.</summary>
@@ -4026,6 +4281,7 @@ public partial class V1beta1ClusterStatusAtProviderConfidentialNodes
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderCostManagementConfig
 {
     /// <summary>Whether to enable the cost allocation feature.</summary>
@@ -4033,6 +4289,7 @@ public partial class V1beta1ClusterStatusAtProviderCostManagementConfig
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderDatabaseEncryption
 {
     /// <summary>the key to use to encrypt/decrypt secrets.  See the DatabaseEncryption definition for more information.</summary>
@@ -4044,6 +4301,7 @@ public partial class V1beta1ClusterStatusAtProviderDatabaseEncryption
     public string? State { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderDefaultSnatStatus
 {
     /// <summary>Whether the cluster disables default in-node sNAT rules. In-node sNAT rules will be disabled when defaultSnatStatus is disabled.When disabled is set to false, default IP masquerade rules will be applied to the nodes to prevent sNAT on cluster internal traffic</summary>
@@ -4051,6 +4309,7 @@ public partial class V1beta1ClusterStatusAtProviderDefaultSnatStatus
     public bool? Disabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderDnsConfig
 {
     /// <summary>Which in-cluster DNS provider should be used. PROVIDER_UNSPECIFIED (default) or PLATFORM_DEFAULT or CLOUD_DNS.</summary>
@@ -4066,6 +4325,7 @@ public partial class V1beta1ClusterStatusAtProviderDnsConfig
     public string? ClusterDnsScope { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderEnableK8SBetaApis
 {
     /// <summary>Enabled Kubernetes Beta APIs. To list a Beta API resource, use the representation {group}/{version}/{resource}. The version must be a Beta version. Note that you cannot disable beta APIs that are already enabled on a cluster without recreating it. See the Configure beta APIs for more information.</summary>
@@ -4073,6 +4333,7 @@ public partial class V1beta1ClusterStatusAtProviderEnableK8SBetaApis
     public IList<string>? EnabledApis { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderFleet
 {
     /// <summary>The resource name of the fleet Membership resource associated to this cluster with format //gkehub.googleapis.com/projects/{{project}}/locations/{{location}}/memberships/{{name}}. See the official doc for fleet management.</summary>
@@ -4096,6 +4357,7 @@ public partial class V1beta1ClusterStatusAtProviderFleet
     public string? Project { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderGatewayApiConfig
 {
     /// <summary>Which Gateway Api channel should be used. CHANNEL_DISABLED, CHANNEL_EXPERIMENTAL or CHANNEL_STANDARD.</summary>
@@ -4103,6 +4365,7 @@ public partial class V1beta1ClusterStatusAtProviderGatewayApiConfig
     public string? Channel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderIdentityServiceConfig
 {
     /// <summary>Whether to enable the Identity Service component. It is disabled by default. Set enabled=true to enable.</summary>
@@ -4110,6 +4373,7 @@ public partial class V1beta1ClusterStatusAtProviderIdentityServiceConfig
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderIpAllocationPolicyAdditionalPodRangesConfig
 {
     /// <summary>The names of the Pod ranges to add to the cluster.</summary>
@@ -4117,6 +4381,7 @@ public partial class V1beta1ClusterStatusAtProviderIpAllocationPolicyAdditionalP
     public IList<string>? PodRangeNames { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderIpAllocationPolicyPodCidrOverprovisionConfig
 {
     /// <summary>The status of the Istio addon, which makes it easy to set up Istio for services in a cluster. It is disabled by default. Set disabled = false to enable.</summary>
@@ -4124,6 +4389,7 @@ public partial class V1beta1ClusterStatusAtProviderIpAllocationPolicyPodCidrOver
     public bool? Disabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderIpAllocationPolicy
 {
     /// <summary>The configuration for additional pod secondary ranges at the cluster level. Used for Autopilot clusters and Standard clusters with which control of the secondary Pod IP address assignment to node pools isn't needed. Structure is documented below.</summary>
@@ -4155,6 +4421,7 @@ public partial class V1beta1ClusterStatusAtProviderIpAllocationPolicy
     public string? StackType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderLoggingConfig
 {
     /// <summary>The GKE components exposing logs. Supported values include: SYSTEM_COMPONENTS, APISERVER, CONTROLLER_MANAGER, SCHEDULER, and WORKLOADS.</summary>
@@ -4162,6 +4429,7 @@ public partial class V1beta1ClusterStatusAtProviderLoggingConfig
     public IList<string>? EnableComponents { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderMaintenancePolicyDailyMaintenanceWindow
 {
     /// <summary>Duration of the time window, automatically chosen to be smallest possible in the given scenario. Duration will be in RFC3339 format "PTnHnMnS".</summary>
@@ -4173,6 +4441,7 @@ public partial class V1beta1ClusterStatusAtProviderMaintenancePolicyDailyMainten
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderMaintenancePolicyMaintenanceExclusionExclusionOptions
 {
     /// <summary>The scope of automatic upgrades to restrict in the exclusion window. One of: NO_UPGRADES | NO_MINOR_UPGRADES | NO_MINOR_OR_NODE_UPGRADES</summary>
@@ -4180,6 +4449,7 @@ public partial class V1beta1ClusterStatusAtProviderMaintenancePolicyMaintenanceE
     public string? Scope { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderMaintenancePolicyMaintenanceExclusion
 {
     /// <summary></summary>
@@ -4199,6 +4469,7 @@ public partial class V1beta1ClusterStatusAtProviderMaintenancePolicyMaintenanceE
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderMaintenancePolicyRecurringWindow
 {
     /// <summary></summary>
@@ -4214,6 +4485,7 @@ public partial class V1beta1ClusterStatusAtProviderMaintenancePolicyRecurringWin
     public string? StartTime { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderMaintenancePolicy
 {
     /// <summary>structure documented below.</summary>
@@ -4229,6 +4501,7 @@ public partial class V1beta1ClusterStatusAtProviderMaintenancePolicy
     public IList<V1beta1ClusterStatusAtProviderMaintenancePolicyRecurringWindow>? RecurringWindow { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderMasterAuthClientCertificateConfig
 {
     /// <summary></summary>
@@ -4236,6 +4509,7 @@ public partial class V1beta1ClusterStatusAtProviderMasterAuthClientCertificateCo
     public bool? IssueClientCertificate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderMasterAuth
 {
     /// <summary>Base64 encoded public certificate used by clients to authenticate to the cluster endpoint.</summary>
@@ -4251,6 +4525,7 @@ public partial class V1beta1ClusterStatusAtProviderMasterAuth
     public string? ClusterCaCertificate { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderMasterAuthorizedNetworksConfigCidrBlocks
 {
     /// <summary>External network that can access Kubernetes master through HTTPS. Must be specified in CIDR notation.</summary>
@@ -4262,6 +4537,7 @@ public partial class V1beta1ClusterStatusAtProviderMasterAuthorizedNetworksConfi
     public string? DisplayName { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderMasterAuthorizedNetworksConfig
 {
     /// <summary>External networks that can access the Kubernetes cluster master through HTTPS.</summary>
@@ -4273,6 +4549,7 @@ public partial class V1beta1ClusterStatusAtProviderMasterAuthorizedNetworksConfi
     public bool? GcpPublicCidrsAccessEnabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderMeshCertificates
 {
     /// <summary>Controls the issuance of workload mTLS certificates. It is enabled by default. Workload Identity is required, see workload_config.</summary>
@@ -4280,6 +4557,7 @@ public partial class V1beta1ClusterStatusAtProviderMeshCertificates
     public bool? EnableCertificates { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderMonitoringConfigAdvancedDatapathObservabilityConfig
 {
     /// <summary>Whether or not to enable advanced datapath metrics.</summary>
@@ -4295,6 +4573,7 @@ public partial class V1beta1ClusterStatusAtProviderMonitoringConfigAdvancedDatap
     public string? RelayMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderMonitoringConfigManagedPrometheus
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -4302,6 +4581,7 @@ public partial class V1beta1ClusterStatusAtProviderMonitoringConfigManagedPromet
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderMonitoringConfig
 {
     /// <summary>Configuration for Advanced Datapath Monitoring. Structure is documented below.</summary>
@@ -4317,6 +4597,7 @@ public partial class V1beta1ClusterStatusAtProviderMonitoringConfig
     public IList<V1beta1ClusterStatusAtProviderMonitoringConfigManagedPrometheus>? ManagedPrometheus { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNetworkPolicy
 {
     /// <summary>Whether network policy is enabled on the cluster.</summary>
@@ -4328,6 +4609,7 @@ public partial class V1beta1ClusterStatusAtProviderNetworkPolicy
     public string? Provider { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodeConfigAdvancedMachineFeatures
 {
     /// <summary>Defines whether the instance should have nested virtualization enabled. Defaults to false.</summary>
@@ -4339,6 +4621,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigAdvancedMachineFeat
     public double? ThreadsPerCore { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodeConfigConfidentialNodes
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -4346,6 +4629,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigConfidentialNodes
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigGcpSecretManagerCertificateConfig
 {
     /// <summary></summary>
@@ -4353,6 +4637,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigContainerdConfigPri
     public string? SecretUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig
 {
     /// <summary></summary>
@@ -4364,6 +4649,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigContainerdConfigPri
     public IList<V1beta1ClusterStatusAtProviderNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigGcpSecretManagerCertificateConfig>? GcpSecretManagerCertificateConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodeConfigContainerdConfigPrivateRegistryAccessConfig
 {
     /// <summary>List of configuration objects for CA and domains. Each object identifies a certificate and its assigned domains. See how to configure for private container registries for more detail. Example:</summary>
@@ -4375,6 +4661,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigContainerdConfigPri
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodeConfigContainerdConfig
 {
     /// <summary>Configuration for private container registries. There are two fields in this config:</summary>
@@ -4382,6 +4669,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigContainerdConfig
     public IList<V1beta1ClusterStatusAtProviderNodeConfigContainerdConfigPrivateRegistryAccessConfig>? PrivateRegistryAccessConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodeConfigEffectiveTaints
 {
     /// <summary>Effect for taint. Accepted values are NO_SCHEDULE, PREFER_NO_SCHEDULE, and NO_EXECUTE.</summary>
@@ -4397,6 +4685,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigEffectiveTaints
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodeConfigEphemeralStorageLocalSsdConfig
 {
     /// <summary>The amount of local SSD disks that will be attached to each cluster node. Defaults to 0.</summary>
@@ -4404,6 +4693,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigEphemeralStorageLoc
     public double? LocalSsdCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodeConfigFastSocket
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -4411,6 +4701,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigFastSocket
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodeConfigGcfsConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -4418,6 +4709,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigGcfsConfig
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodeConfigGuestAcceleratorGpuDriverInstallationConfig
 {
     /// <summary>Mode for how the GPU driver is installed. Accepted values are:</summary>
@@ -4425,6 +4717,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigGuestAcceleratorGpu
     public string? GpuDriverVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodeConfigGuestAcceleratorGpuSharingConfig
 {
     /// <summary>The type of GPU sharing strategy to enable on the GPU node. Accepted values are:</summary>
@@ -4436,6 +4729,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigGuestAcceleratorGpu
     public double? MaxSharedClientsPerGpu { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodeConfigGuestAccelerator
 {
     /// <summary>The number of the guest accelerator cards exposed to this instance.</summary>
@@ -4459,6 +4753,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigGuestAccelerator
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodeConfigGvnic
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -4466,6 +4761,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigGvnic
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodeConfigHostMaintenancePolicy
 {
     /// <summary></summary>
@@ -4473,6 +4769,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigHostMaintenancePoli
     public string? MaintenanceInterval { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodeConfigKubeletConfig
 {
     /// <summary>If true, enables CPU CFS quota enforcement for containers that specify CPU limits.</summary>
@@ -4492,6 +4789,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigKubeletConfig
     public double? PodPidsLimit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodeConfigLinuxNodeConfig
 {
     /// <summary>Possible cgroup modes that can be used. Accepted values are:</summary>
@@ -4503,6 +4801,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigLinuxNodeConfig
     public IDictionary<string, string>? Sysctls { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodeConfigLocalNvmeSsdBlockConfig
 {
     /// <summary>The amount of local SSD disks that will be attached to each cluster node. Defaults to 0.</summary>
@@ -4510,6 +4809,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigLocalNvmeSsdBlockCo
     public double? LocalSsdCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodeConfigReservationAffinity
 {
     /// <summary>The type of reservation consumption Accepted values are:</summary>
@@ -4525,6 +4825,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigReservationAffinity
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodeConfigSecondaryBootDisks
 {
     /// <summary>Path to disk image to create the secondary boot disk from. After using the gke-disk-image-builder, this argument should be global/images/DISK_IMAGE_NAME.</summary>
@@ -4536,6 +4837,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigSecondaryBootDisks
     public string? Mode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodeConfigShieldedInstanceConfig
 {
     /// <summary>Defines if the instance has integrity monitoring enabled.</summary>
@@ -4547,6 +4849,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigShieldedInstanceCon
     public bool? EnableSecureBoot { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodeConfigSoleTenantConfigNodeAffinity
 {
     /// <summary>Key for taint.</summary>
@@ -4562,6 +4865,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigSoleTenantConfigNod
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodeConfigSoleTenantConfig
 {
     /// <summary></summary>
@@ -4569,6 +4873,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigSoleTenantConfig
     public IList<V1beta1ClusterStatusAtProviderNodeConfigSoleTenantConfigNodeAffinity>? NodeAffinity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodeConfigTaint
 {
     /// <summary>Effect for taint. Accepted values are NO_SCHEDULE, PREFER_NO_SCHEDULE, and NO_EXECUTE.</summary>
@@ -4584,6 +4889,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigTaint
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodeConfigWorkloadMetadataConfig
 {
     /// <summary>How to expose the node metadata to the workload running on the node. Accepted values are:</summary>
@@ -4591,6 +4897,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigWorkloadMetadataCon
     public string? Mode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodeConfig
 {
     /// <summary>Specifies options for controlling advanced machine features. Structure is documented below.</summary>
@@ -4750,6 +5057,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfig
     public IList<V1beta1ClusterStatusAtProviderNodeConfigWorkloadMetadataConfig>? WorkloadMetadataConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolAutoscaling
 {
     /// <summary></summary>
@@ -4773,6 +5081,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolAutoscaling
     public double? TotalMinNodeCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolManagement
 {
     /// <summary>Specifies whether the node auto-repair is enabled for the node pool. If enabled, the nodes in this node pool will be monitored and, if they fail health checks too many times, an automatic repair action will be triggered.</summary>
@@ -4784,6 +5093,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolManagement
     public bool? AutoUpgrade { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolNetworkConfigNetworkPerformanceConfig
 {
     /// <summary>Specifies the total network bandwidth tier for the NodePool.</summary>
@@ -4791,6 +5101,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNetworkConfigNetworkP
     public string? TotalEgressBandwidthTier { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolNetworkConfigPodCidrOverprovisionConfig
 {
     /// <summary>The status of the Istio addon, which makes it easy to set up Istio for services in a cluster. It is disabled by default. Set disabled = false to enable.</summary>
@@ -4798,6 +5109,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNetworkConfigPodCidrO
     public bool? Disabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolNetworkConfig
 {
     /// <summary></summary>
@@ -4825,6 +5137,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNetworkConfig
     public string? PodRange { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigAdvancedMachineFeatures
 {
     /// <summary>Defines whether the instance should have nested virtualization enabled. Defaults to false.</summary>
@@ -4836,6 +5149,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigAdvancedMac
     public double? ThreadsPerCore { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigConfidentialNodes
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -4843,6 +5157,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigConfidentia
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigGcpSecretManagerCertificateConfig
 {
     /// <summary></summary>
@@ -4850,6 +5165,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigContainerdC
     public string? SecretUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig
 {
     /// <summary></summary>
@@ -4861,6 +5177,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigContainerdC
     public IList<V1beta1ClusterStatusAtProviderNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigGcpSecretManagerCertificateConfig>? GcpSecretManagerCertificateConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfig
 {
     /// <summary>List of configuration objects for CA and domains. Each object identifies a certificate and its assigned domains. See how to configure for private container registries for more detail. Example:</summary>
@@ -4872,6 +5189,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigContainerdC
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigContainerdConfig
 {
     /// <summary>Configuration for private container registries. There are two fields in this config:</summary>
@@ -4879,6 +5197,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigContainerdC
     public IList<V1beta1ClusterStatusAtProviderNodePoolNodeConfigContainerdConfigPrivateRegistryAccessConfig>? PrivateRegistryAccessConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigEffectiveTaints
 {
     /// <summary>Effect for taint. Accepted values are NO_SCHEDULE, PREFER_NO_SCHEDULE, and NO_EXECUTE.</summary>
@@ -4894,6 +5213,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigEffectiveTa
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigEphemeralStorageLocalSsdConfig
 {
     /// <summary>The amount of local SSD disks that will be attached to each cluster node. Defaults to 0.</summary>
@@ -4901,6 +5221,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigEphemeralSt
     public double? LocalSsdCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigFastSocket
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -4908,6 +5229,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigFastSocket
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigGcfsConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -4915,6 +5237,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigGcfsConfig
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigGuestAcceleratorGpuDriverInstallationConfig
 {
     /// <summary>Mode for how the GPU driver is installed. Accepted values are:</summary>
@@ -4922,6 +5245,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigGuestAccele
     public string? GpuDriverVersion { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigGuestAcceleratorGpuSharingConfig
 {
     /// <summary>The type of GPU sharing strategy to enable on the GPU node. Accepted values are:</summary>
@@ -4933,6 +5257,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigGuestAccele
     public double? MaxSharedClientsPerGpu { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigGuestAccelerator
 {
     /// <summary>The number of the guest accelerator cards exposed to this instance.</summary>
@@ -4956,6 +5281,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigGuestAccele
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigGvnic
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -4963,6 +5289,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigGvnic
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigHostMaintenancePolicy
 {
     /// <summary></summary>
@@ -4970,6 +5297,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigHostMainten
     public string? MaintenanceInterval { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigKubeletConfig
 {
     /// <summary>If true, enables CPU CFS quota enforcement for containers that specify CPU limits.</summary>
@@ -4989,6 +5317,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigKubeletConf
     public double? PodPidsLimit { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigLinuxNodeConfig
 {
     /// <summary>Possible cgroup modes that can be used. Accepted values are:</summary>
@@ -5000,6 +5329,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigLinuxNodeCo
     public IDictionary<string, string>? Sysctls { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigLocalNvmeSsdBlockConfig
 {
     /// <summary>The amount of local SSD disks that will be attached to each cluster node. Defaults to 0.</summary>
@@ -5007,6 +5337,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigLocalNvmeSs
     public double? LocalSsdCount { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigReservationAffinity
 {
     /// <summary>The type of reservation consumption Accepted values are:</summary>
@@ -5022,6 +5353,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigReservation
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigSecondaryBootDisks
 {
     /// <summary>Path to disk image to create the secondary boot disk from. After using the gke-disk-image-builder, this argument should be global/images/DISK_IMAGE_NAME.</summary>
@@ -5033,6 +5365,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigSecondaryBo
     public string? Mode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigShieldedInstanceConfig
 {
     /// <summary>Defines if the instance has integrity monitoring enabled.</summary>
@@ -5044,6 +5377,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigShieldedIns
     public bool? EnableSecureBoot { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigSoleTenantConfigNodeAffinity
 {
     /// <summary>Key for taint.</summary>
@@ -5059,6 +5393,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigSoleTenantC
     public IList<string>? Values { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigSoleTenantConfig
 {
     /// <summary></summary>
@@ -5066,6 +5401,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigSoleTenantC
     public IList<V1beta1ClusterStatusAtProviderNodePoolNodeConfigSoleTenantConfigNodeAffinity>? NodeAffinity { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigTaint
 {
     /// <summary>Effect for taint. Accepted values are NO_SCHEDULE, PREFER_NO_SCHEDULE, and NO_EXECUTE.</summary>
@@ -5081,6 +5417,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigTaint
     public string? Value { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigWorkloadMetadataConfig
 {
     /// <summary>How to expose the node metadata to the workload running on the node. Accepted values are:</summary>
@@ -5088,6 +5425,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigWorkloadMet
     public string? Mode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfig
 {
     /// <summary>Specifies options for controlling advanced machine features. Structure is documented below.</summary>
@@ -5243,6 +5581,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfig
     public IList<V1beta1ClusterStatusAtProviderNodePoolNodeConfigWorkloadMetadataConfig>? WorkloadMetadataConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolPlacementPolicy
 {
     /// <summary>The name of the cluster, unique within the project and location.</summary>
@@ -5258,6 +5597,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolPlacementPolicy
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolQueuedProvisioning
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -5265,6 +5605,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolQueuedProvisioning
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy
 {
     /// <summary>Number of blue nodes to drain in a batch. Only one of the batch_percentage or batch_node_count can be specified.</summary>
@@ -5280,6 +5621,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolUpgradeSettingsBlueGr
     public string? BatchSoakDuration { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolUpgradeSettingsBlueGreenSettings
 {
     /// <summary>Time needed after draining entire blue pool. After this period, blue pool will be cleaned up. A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.5s".</summary>
@@ -5291,6 +5633,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolUpgradeSettingsBlueGr
     public IList<V1beta1ClusterStatusAtProviderNodePoolUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy>? StandardRolloutPolicy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolUpgradeSettings
 {
     /// <summary>Settings for blue-green upgrade strategy. To be specified when strategy is set to BLUE_GREEN. Structure is documented below.</summary>
@@ -5310,6 +5653,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolUpgradeSettings
     public string? Strategy { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePool
 {
     /// <summary></summary>
@@ -5377,6 +5721,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePool
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolAutoConfigNetworkTags
 {
     /// <summary>List of network tags applied to auto-provisioned node pools.</summary>
@@ -5384,6 +5729,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolAutoConfigNetworkTags
     public IList<string>? Tags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolAutoConfig
 {
     /// <summary>The network tag config for the cluster's automatically provisioned node pools.</summary>
@@ -5395,6 +5741,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolAutoConfig
     public IDictionary<string, string>? ResourceManagerTags { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolDefaultsNodeConfigDefaultsContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigGcpSecretManagerCertificateConfig
 {
     /// <summary></summary>
@@ -5402,6 +5749,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolDefaultsNodeConfigDef
     public string? SecretUri { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolDefaultsNodeConfigDefaultsContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfig
 {
     /// <summary></summary>
@@ -5413,6 +5761,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolDefaultsNodeConfigDef
     public IList<V1beta1ClusterStatusAtProviderNodePoolDefaultsNodeConfigDefaultsContainerdConfigPrivateRegistryAccessConfigCertificateAuthorityDomainConfigGcpSecretManagerCertificateConfig>? GcpSecretManagerCertificateConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolDefaultsNodeConfigDefaultsContainerdConfigPrivateRegistryAccessConfig
 {
     /// <summary>List of configuration objects for CA and domains. Each object identifies a certificate and its assigned domains. See how to configure for private container registries for more detail. Example:</summary>
@@ -5424,6 +5773,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolDefaultsNodeConfigDef
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolDefaultsNodeConfigDefaultsContainerdConfig
 {
     /// <summary>Configuration for private container registries. There are two fields in this config:</summary>
@@ -5431,6 +5781,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolDefaultsNodeConfigDef
     public IList<V1beta1ClusterStatusAtProviderNodePoolDefaultsNodeConfigDefaultsContainerdConfigPrivateRegistryAccessConfig>? PrivateRegistryAccessConfig { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolDefaultsNodeConfigDefaults
 {
     /// <summary>Parameters to customize containerd runtime. Structure is documented below.</summary>
@@ -5442,6 +5793,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolDefaultsNodeConfigDef
     public string? LoggingVariant { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNodePoolDefaults
 {
     /// <summary>Subset of NodeConfig message that has defaults.</summary>
@@ -5449,6 +5801,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolDefaults
     public IList<V1beta1ClusterStatusAtProviderNodePoolDefaultsNodeConfigDefaults>? NodeConfigDefaults { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNotificationConfigPubsubFilter
 {
     /// <summary>Can be used to filter what notifications are sent. Accepted values are UPGRADE_AVAILABLE_EVENT, UPGRADE_EVENT and SECURITY_BULLETIN_EVENT. See Filtering notifications for more details.</summary>
@@ -5456,6 +5809,7 @@ public partial class V1beta1ClusterStatusAtProviderNotificationConfigPubsubFilte
     public IList<string>? EventType { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNotificationConfigPubsub
 {
     /// <summary>Whether or not the notification config is enabled</summary>
@@ -5471,6 +5825,7 @@ public partial class V1beta1ClusterStatusAtProviderNotificationConfigPubsub
     public string? Topic { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderNotificationConfig
 {
     /// <summary>The pubsub config for the cluster's upgrade notifications.</summary>
@@ -5478,6 +5833,7 @@ public partial class V1beta1ClusterStatusAtProviderNotificationConfig
     public IList<V1beta1ClusterStatusAtProviderNotificationConfigPubsub>? Pubsub { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderPrivateClusterConfigMasterGlobalAccessConfig
 {
     /// <summary>Whether the cluster master is accessible globally or not.</summary>
@@ -5485,6 +5841,7 @@ public partial class V1beta1ClusterStatusAtProviderPrivateClusterConfigMasterGlo
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderPrivateClusterConfig
 {
     /// <summary>When true, the cluster's private endpoint is used as the cluster endpoint and access through the public endpoint is disabled. When false, either endpoint can be used. This field only applies to private clusters, when enable_private_nodes is true.</summary>
@@ -5520,6 +5877,7 @@ public partial class V1beta1ClusterStatusAtProviderPrivateClusterConfig
     public string? PublicEndpoint { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderReleaseChannel
 {
     /// <summary>The selected release channel. Accepted values are:</summary>
@@ -5527,6 +5885,7 @@ public partial class V1beta1ClusterStatusAtProviderReleaseChannel
     public string? Channel { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderResourceUsageExportConfigBigqueryDestination
 {
     /// <summary>The ID of a BigQuery Dataset. For Example:</summary>
@@ -5534,6 +5893,7 @@ public partial class V1beta1ClusterStatusAtProviderResourceUsageExportConfigBigq
     public string? DatasetId { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderResourceUsageExportConfig
 {
     /// <summary>Parameters for using BigQuery as the destination of resource usage export.</summary>
@@ -5549,6 +5909,7 @@ public partial class V1beta1ClusterStatusAtProviderResourceUsageExportConfig
     public bool? EnableResourceConsumptionMetering { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderSecurityPostureConfig
 {
     /// <summary>Sets the mode of the Kubernetes security posture API's off-cluster features. Available options include DISABLED and BASIC.</summary>
@@ -5560,6 +5921,7 @@ public partial class V1beta1ClusterStatusAtProviderSecurityPostureConfig
     public string? VulnerabilityMode { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderServiceExternalIpsConfig
 {
     /// <summary>Controls whether external ips specified by a service will be allowed. It is enabled by default.</summary>
@@ -5567,6 +5929,7 @@ public partial class V1beta1ClusterStatusAtProviderServiceExternalIpsConfig
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderVerticalPodAutoscaling
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -5574,6 +5937,7 @@ public partial class V1beta1ClusterStatusAtProviderVerticalPodAutoscaling
     public bool? Enabled { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProviderWorkloadIdentityConfig
 {
     /// <summary>The workload pool to attach all Kubernetes service accounts to.</summary>
@@ -5581,6 +5945,7 @@ public partial class V1beta1ClusterStatusAtProviderWorkloadIdentityConfig
     public string? WorkloadPool { get; set; }
 }
 
+/// <summary></summary>
 public partial class V1beta1ClusterStatusAtProvider
 {
     /// <summary>The configuration for addons supported by GKE. Structure is documented below.</summary>
@@ -5860,6 +6225,7 @@ public partial class V1beta1ClusterStatusAtProvider
     public IList<V1beta1ClusterStatusAtProviderWorkloadIdentityConfig>? WorkloadIdentityConfig { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
 public partial class V1beta1ClusterStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
@@ -5887,6 +6253,7 @@ public partial class V1beta1ClusterStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>ClusterStatus defines the observed state of Cluster.</summary>
 public partial class V1beta1ClusterStatus
 {
     /// <summary></summary>
@@ -5903,6 +6270,7 @@ public partial class V1beta1ClusterStatus
 }
 
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+/// <summary>Cluster is the Schema for the Clusters API. Creates a Google Kubernetes Engine (GKE) cluster.</summary>
 public partial class V1beta1Cluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ClusterSpec>, IStatus<V1beta1ClusterStatus>
 {
     public const string KubeApiVersion = "v1beta1";
